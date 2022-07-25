@@ -209,7 +209,7 @@ onUnmounted(() => {
       </OCard>
     </div>
     <NotFound v-if="total === 0" />
-    <div class="page-box" v-if="isShow">
+    <div v-if="isShow" class="page-box">
       <OPagination
         v-model:currentPage="currentPage1"
         v-model:page-size="pageSize4"
@@ -282,7 +282,7 @@ onUnmounted(() => {
     .tag-h5 {
       display: none;
       width: 100%;
-      box-shadow:var(--o-shadow-base);
+      box-shadow: var(--o-shadow-base);
       padding: 0 16px;
       @media (max-width: 768px) {
         display: block;
