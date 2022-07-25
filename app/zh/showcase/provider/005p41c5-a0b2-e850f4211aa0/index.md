@@ -17,7 +17,7 @@ img: /img/showcase/provider.png
 
 ## 解决方案
 
-<div align="center"><img src="./p3.jpg"/></div>
+<div align="center" class="case-img"><img src="./p3.jpg"/></div>
 
 ## 客户价值
 
@@ -29,6 +29,6 @@ img: /img/showcase/provider.png
 
 ## 伙伴
 
-<div align="left"><img src="./tongxin.png"/></div>
+<div ><img src="./tongxin.png"/></div>
 
 </div>

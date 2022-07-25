@@ -17,7 +17,7 @@ img: /img/showcase/provider.png
 
 ## 解决方案
 
-<div align="center"><img src="./p1.jpg"/></div>
+<div align="center" class="case-img"><img src="./p1.jpg"/></div>
 
 - **服务器：** 使用 x86 服务器和华为鲲鹏服务器；
 - **操作系统：** 银河麒麟高级服务器操作系统 V10；
@@ -33,6 +33,6 @@ img: /img/showcase/provider.png
 
 ## 伙伴
 
-<div align="left"><img src="./qiling.png"/></div>
+<div ><img src="./qiling.png"/></div>
 
 </div>

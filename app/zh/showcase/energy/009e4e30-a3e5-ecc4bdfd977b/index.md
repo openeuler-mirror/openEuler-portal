@@ -17,7 +17,7 @@ img: /img/showcase/energy.png
 
 ## 解决方案
 
-<div align="center"><img src="./e4.jpg"/></div>
+<div align="center" class="case-img"><img src="./e4.jpg"/></div>
 
 - 麒麟与博微携手，历时 2 个月时间，将智慧工地解决方案整体迁移到银河麒麟高级服务器操作系统 V10 上，并于近期在“河北 110 千伏裕翔城市智慧标杆站”项目上实现升级上线 。
 
@@ -29,6 +29,6 @@ img: /img/showcase/energy.png
 
 ## 伙伴
 
-<div align="left"><img src="./qiling.png"/></div>
+<div ><img src="./qiling.png"/></div>
 
 </div>

@@ -136,7 +136,7 @@ function setImg(type: string) {
 
 function getUrlParam() {
   const industry: any = decodeURI(window.location.href.split('=')[1]);
-  if (!industry) {
+  if (industry==="undefined") {
     activeIndex.value = 0;
   } else {
     activeIndex.value = industry * 1;
@@ -157,6 +157,8 @@ function getUrlParam() {
 onMounted(() => {
   window.addEventListener('scroll', onscroll);
   getUrlParam();
+  console.log(activeIndex.value);
+  
   getCaseTagData().then((res: any) => {
     const orderArr: any = [];
     let countAll = 0;

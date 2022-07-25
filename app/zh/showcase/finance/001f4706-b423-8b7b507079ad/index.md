@@ -17,7 +17,7 @@ img: /img/showcase/finance.png
 
 ## 解决方案
 
-<div align="center"><img src="./f1.jpg"/></div>
+<div align="center" class="case-img"><img src="./f1.jpg"/></div>
 
 - 基于银河麒麟高级服务器操作系统 V10 ， GaussDB 作为数据底座，TaiShan 200 服务器作为算力底座，对原有基础设施（x86+Redhat+Oracle）升级；
 
@@ -33,6 +33,6 @@ img: /img/showcase/finance.png
 
 ## 伙伴
 
-<div align="left"><img src="./qiling.png"/></div>
+<div ><img src="./qiling.png"/></div>
 
 </div>
