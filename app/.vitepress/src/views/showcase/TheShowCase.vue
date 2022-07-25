@@ -28,6 +28,8 @@ const tagClick = (i: number, type: string) => {
 // tag筛选及搜索传输的参数
 const data = ref({
   keyword: '',
+  page: 1,
+  pageSize: 10000,
   type: '',
 });
 // 根据tag筛选需要显示的案例
@@ -98,7 +100,14 @@ function goDetail(link: string, item: any) {
 function setCurrentCaseListAll() {
   getUserCaseData(data.value).then((res: any) => {
     if (res.status === 200 && res.obj.records) {
-      currentCaseListAll.value = res.obj.records;
+      const CaseListAll = res.obj.records;
+      CaseListAll.forEach((item: any, index: number) => {
+        if (item.summary === '') {
+          CaseListAll.splice(index, 1);
+          index--;
+        }
+      });
+      currentCaseListAll.value = CaseListAll;
     } else {
       currentCaseListAll.value = [];
     }
@@ -110,6 +119,19 @@ function searchCase() {
   data.value.type = '';
   activeIndex.value = 0;
   setCurrentCaseListAll();
+}
+function typeImgUrl(type: string) {
+  if (type === '金融') {
+    return '/img/showcase/finance.png';
+  } else if (type === '运营商') {
+    return '/img/showcase/provider.png';
+  } else if (type === '能源') {
+    return '/img/showcase/energy.png';
+  } else if (type === '物流') {
+    return '/img/showcase/logistics.png';
+  } else if (type === '其他') {
+    return '/img/showcase/others.png';
+  }
 }
 onMounted(() => {
   window.addEventListener('scroll', onscroll);
@@ -195,7 +217,7 @@ onUnmounted(() => {
           </a>
         </div>
         <div class="card-type-img">
-          <img :src="item.img" alt="" />
+          <img :src="typeImgUrl(item.industry)" alt="" />
         </div>
       </OCard>
     </div>
