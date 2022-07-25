@@ -441,6 +441,9 @@ $color: #fff;
         gap: 12px;
         .links-logo {
           height: 14px;
+          &:first-child {
+            height: 20px;
+          }
         }
         @media (max-width: 800px) {
           display: grid;
