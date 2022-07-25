@@ -119,13 +119,43 @@ function searchCase() {
   activeIndex.value = 0;
   setCurrentCaseListAll();
 }
+// 根据案例类型设置图片
+function setImg(type: string) {
+  if (type === '金融') {
+    return '/img/showcase/others.png';
+  } else if (type === '运营商') {
+    return '/img/showcase/provider.png';
+  } else if (type === '能源') {
+    return '/img/showcase/energy.png';
+  } else if (type === '物流') {
+    return '/img/showcase/logistics.png';
+  } else if (type === '其他') {
+    return '/img/showcase/others.png';
+  }
+}
+
+function getUrlParam() {
+  const industry: any = decodeURI(window.location.href.split('=')[1]);
+  activeIndex.value = industry * 1;
+  if (industry === '1') {
+    data.value.type = '金融';
+  } else if (industry === '2') {
+    data.value.type = '运营商';
+  } else if (industry === '3') {
+    data.value.type = '能源';
+  } else if (industry === '4') {
+    data.value.type = '物流';
+  } else if (industry === '5') {
+    data.value.type = '其他';
+  }
+}
 // 获取所有案例及设置当前需要显示的案例
 onMounted(() => {
   window.addEventListener('scroll', onscroll);
+  getUrlParam();
   getCaseTagData().then((res: any) => {
     const orderArr: any = [];
     let countAll = 0;
-    tagArr.value = res.obj.totalNum;
     res.obj.totalNum.forEach((item: any) => {
       countAll = countAll + item.count;
       if (item.key === '金融') {
@@ -204,7 +234,7 @@ onUnmounted(() => {
           </a>
         </div>
         <div class="card-type-img">
-          <img :src="item.img" alt="" />
+          <img :src="setImg(item.industry)" alt="" />
         </div>
       </OCard>
     </div>
@@ -305,6 +335,8 @@ onUnmounted(() => {
   }
   .search {
     height: 48px;
+    margin-top: var(--o-spacing-h2) !important;
+    margin-bottom: 0 !important;
     @media (max-width: 768px) {
       display: none;
     }

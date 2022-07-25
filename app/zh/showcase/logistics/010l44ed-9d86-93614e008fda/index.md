@@ -27,6 +27,6 @@ img: /img/showcase/logistics.png
 
 ## 伙伴
 
-<div align="center"><img src="./tongxin.png"/></div>
+<div align="left"><img src="./tongxin.png"/></div>
 
 </div>

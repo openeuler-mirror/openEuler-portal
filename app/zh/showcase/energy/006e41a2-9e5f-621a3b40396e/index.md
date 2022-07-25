@@ -33,6 +33,6 @@ img: /img/showcase/energy.png
 
 ## 伙伴
 
-<div align="center"><img src="./xinan.png"/></div>
+<div align="left"><img src="./xinan.png"/></div>
 
 </div>

@@ -31,6 +31,6 @@ img: /img/showcase/provider.png
 
 ## 伙伴
 
-<div align="center"><img src="./qiling.png"/></div>
+<div align="left"><img src="./qiling.png"/></div>
 
 </div>
