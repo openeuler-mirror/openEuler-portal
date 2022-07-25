@@ -28,6 +28,6 @@ img: /img/showcase/provider.png
 
 ## 伙伴
 
-<div align="center"><img src="./tongxin.png"/></div>
+<div align="left"><img src="./tongxin.png"/></div>
 
 </div>
