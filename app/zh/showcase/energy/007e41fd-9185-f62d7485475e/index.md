@@ -1,4 +1,5 @@
 ---
+title: 中国南方电网
 module: showcase
 industry: 能源
 company: 中国南方电网

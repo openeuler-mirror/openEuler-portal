@@ -1,4 +1,5 @@
 ---
+title: 国家电网
 module: showcase
 industry: 能源
 company: 国家电网
@@ -9,7 +10,6 @@ img: /img/showcase/energy.png
 ---
 
 <div class="markdown">
-
 
 ## 应用场景
 

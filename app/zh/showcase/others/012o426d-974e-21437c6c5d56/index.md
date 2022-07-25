@@ -1,4 +1,5 @@
 ---
+title: 黑龙江省烟草公司
 module: showcase
 industry: 其他
 company: 黑龙江省烟草公司

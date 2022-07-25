@@ -1,4 +1,5 @@
 ---
+title: 中国移动
 module: showcase
 industry: 运营商
 company: 中国移动

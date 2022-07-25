@@ -1,4 +1,5 @@
 ---
+title: 兴业银行
 module: showcase
 industry: 金融
 company: 兴业银行

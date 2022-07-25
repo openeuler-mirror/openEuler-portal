@@ -1,4 +1,5 @@
 ---
+title: 华润集团
 module: showcase
 industry: 其他
 company: 华润集团

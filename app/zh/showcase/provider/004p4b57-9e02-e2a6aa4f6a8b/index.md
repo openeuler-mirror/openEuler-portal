@@ -1,4 +1,5 @@
 ---
+title: 中国联通
 module: showcase
 industry: 运营商
 company: 中国联通

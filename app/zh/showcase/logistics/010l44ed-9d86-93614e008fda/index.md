@@ -1,4 +1,5 @@
 ---
+title: 中国邮政
 module: showcase
 industry: 物流
 company: 中国邮政
