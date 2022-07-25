@@ -72,7 +72,7 @@ const totalPage = computed(() => {
 //控制移动端导航栏吸顶
 const isTopNavMo = ref(false);
 const isShow = computed(() => {
-  return totalPage.value === 1 ? false : true;
+  return totalPage.value > 1 ? true : false;
 });
 // 根据滚动位置移动端tag吸顶
 const onscroll = () => {
@@ -136,7 +136,11 @@ function setImg(type: string) {
 
 function getUrlParam() {
   const industry: any = decodeURI(window.location.href.split('=')[1]);
-  activeIndex.value = industry * 1;
+  if (!industry) {
+    activeIndex.value = 0;
+  } else {
+    activeIndex.value = industry * 1;
+  }
   if (industry === '1') {
     data.value.type = '金融';
   } else if (industry === '2') {
@@ -188,12 +192,7 @@ onUnmounted(() => {
     :illustration="search"
   />
   <div class="user-case">
-    <OSearch
-      v-model="keyWord"
-      :style="{ marginBottom: '50px', marginTop: '100px' }"
-      class="search"
-      @change="searchCase"
-    ></OSearch>
+    <OSearch v-model="keyWord" class="search" @change="searchCase"></OSearch>
     <div class="tag-box" :class="isTopNavMo ? 'tag-top' : ''">
       <TagFilter :label="userCaseData.type" class="tag-pc">
         <OTag
@@ -333,10 +332,10 @@ onUnmounted(() => {
       }
     }
   }
-  .search {
+  :deep(.search) {
     height: 48px;
-    margin-top: var(--o-spacing-h2) !important;
-    margin-bottom: 0 !important;
+    margin-top: var(--o-spacing-h2);
+    margin-bottom: 0;
     @media (max-width: 768px) {
       display: none;
     }
