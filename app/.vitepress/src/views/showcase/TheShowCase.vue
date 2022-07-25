@@ -104,7 +104,6 @@ function setCurrentCaseListAll() {
       CaseListAll.forEach((item: any, index: number) => {
         if (item.summary === '') {
           CaseListAll.splice(index, 1);
-          index--;
         }
       });
       currentCaseListAll.value = CaseListAll;
@@ -120,19 +119,7 @@ function searchCase() {
   activeIndex.value = 0;
   setCurrentCaseListAll();
 }
-function typeImgUrl(type: string) {
-  if (type === '金融') {
-    return '/img/showcase/finance.png';
-  } else if (type === '运营商') {
-    return '/img/showcase/provider.png';
-  } else if (type === '能源') {
-    return '/img/showcase/energy.png';
-  } else if (type === '物流') {
-    return '/img/showcase/logistics.png';
-  } else if (type === '其他') {
-    return '/img/showcase/others.png';
-  }
-}
+// 获取所有案例及设置当前需要显示的案例
 onMounted(() => {
   window.addEventListener('scroll', onscroll);
   getCaseTagData().then((res: any) => {
@@ -217,12 +204,12 @@ onUnmounted(() => {
           </a>
         </div>
         <div class="card-type-img">
-          <img :src="typeImgUrl(item.industry)" alt="" />
+          <img :src="item.img" alt="" />
         </div>
       </OCard>
     </div>
     <NotFound v-if="total === 0" />
-    <div class="page-box">
+    <div class="page-box" v-if="isShow">
       <OPagination
         v-model:currentPage="currentPage1"
         v-model:page-size="pageSize4"
@@ -235,7 +222,7 @@ onUnmounted(() => {
       >
         <span>{{ currentPage1 }}/{{ totalPage }}</span>
       </OPagination>
-      <div v-if="isShow" class="pagination-h5">
+      <div class="pagination-h5">
         <OIcon class="icon-prev">
           <IconChevronLeft />
         </OIcon>
@@ -266,7 +253,6 @@ onUnmounted(() => {
 <style lang="scss" scoped>
 .user-case {
   max-width: 1504px;
-  min-height: 63.9vh;
   padding: 0 44px;
   margin: 0 auto;
   @media (max-width: 768px) {
@@ -277,7 +263,6 @@ onUnmounted(() => {
     width: 100%;
     display: flex;
     @media (max-width: 768px) {
-      padding: 0 16px;
       background-color: #ffffff;
       position: sticky;
       top: 48px;
@@ -296,9 +281,11 @@ onUnmounted(() => {
     }
     .tag-h5 {
       display: none;
+      width: 100%;
+      box-shadow:var(--o-shadow-base);
+      padding: 0 16px;
       @media (max-width: 768px) {
         display: block;
-        padding: 0;
       }
       .tag-filter-box {
         span {

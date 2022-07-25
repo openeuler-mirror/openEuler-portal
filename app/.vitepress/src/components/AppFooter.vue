@@ -179,7 +179,8 @@ const handleNavClick = (path: string) => {
             <a
               v-for="link in i18n.common.FOOTER.RIGHT_LIST"
               :key="link.URL"
-              href="javascript:;"
+              :href="link.URL"
+              target="_blank"
               class="link"
               @click="handleNavClick(link.URL)"
               >{{ link.NAME }}</a
