@@ -17,7 +17,7 @@ img: /img/showcase/energy.png
 
 ## 解决方案
 
-<div align="center"><img src="./e3.jpg"/></div>
+<div align="center" class="case-img"><img src="./e3.jpg"/></div>
 
 - 项目中使用飞腾处理器、中国长城服务器以及银河麒麟高级服务器操作系统 V10（工作站版）；
 - 搭载达梦数据库+华电睿蓝 DCS 平台软件。
@@ -30,6 +30,6 @@ img: /img/showcase/energy.png
 
 ## 伙伴
 
-<div align="left"><img src="./qiling.png"/></div>
+<div ><img src="./qiling.png"/></div>
 
 </div>

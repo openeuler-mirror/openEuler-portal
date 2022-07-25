@@ -17,7 +17,7 @@ img: /img/showcase/provider.png
 
 ## 解决方案
 
-<div align="center"><img src="./p2.jpg"/></div>
+<div align="center" class="case-img"><img src="./p2.jpg"/></div>
 
 - **服务器：** 长城服务器（飞腾）；
 - **操作系统：** 银河麒麟高级服务器操作系统 V10 ；
@@ -32,6 +32,6 @@ img: /img/showcase/provider.png
 
 ## 伙伴
 
-<div align="left"><img src="./qiling.png"/></div>
+<div ><img src="./qiling.png"/></div>
 
 </div>

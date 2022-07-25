@@ -18,7 +18,7 @@ img: /img/showcase/energy.png
 
 ## 解决方案
 
-<div align="center"><img src="./e1.jpg"/></div>
+<div align="center" class="case-img"><img src="./e1.jpg"/></div>
 
 - 操作系统：麒麟信安操作系统（欧拉版）
 - 硬件平台：TaiShan 200 鲲鹏 920 服务器
@@ -34,6 +34,6 @@ img: /img/showcase/energy.png
 
 ## 伙伴
 
-<div align="left"><img src="./xinan.png"/></div>
+<div ><img src="./xinan.png"/></div>
 
 </div>

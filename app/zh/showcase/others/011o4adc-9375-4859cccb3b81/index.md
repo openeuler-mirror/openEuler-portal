@@ -17,7 +17,7 @@ img: /img/showcase/others.png
 
 ## 解决方案
 
-<div align="center"><img src="./er1.jpg"/></div>
+<div align="center" class="case-img"><img src="./er1.jpg"/></div>
 
 - **芯片：** ARM（FT-2000+/64）
 - **整机：** 紫光恒越服务器
@@ -32,6 +32,6 @@ img: /img/showcase/others.png
 
 ## 伙伴
 
-<div align="left"><img src="./qiling.png"/></div>
+<div ><img src="./qiling.png"/></div>
 
 </div>
