@@ -3,6 +3,9 @@ module: showcase
 industry: 能源
 company: 国家电网
 summary: “国家电网河北智慧标杆站” 智慧工地系统，平滑完成操作系统创新，实现业务高效稳定运行
+customLayout: true
+banner: /img/showcase/case-detail-bg.jpg
+img: /img/showcase/energy.png
 ---
 
 <div class="markdown">

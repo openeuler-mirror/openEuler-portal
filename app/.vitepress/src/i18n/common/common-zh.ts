@@ -300,15 +300,15 @@ export default {
     RIGHT_LIST: [
       {
         NAME: '品牌',
-        URL: '/other/brand/',
+        URL: 'https://www.openeuler.org/zh/other/brand/',
       },
       {
         NAME: '隐私政策',
-        URL: '/other/privacy/',
+        URL: 'https://www.openeuler.org/zh/other/privacy/',
       },
       {
         NAME: '法律声明',
-        URL: '/other/legal/',
+        URL: 'https://www.openeuler.org/zh/other/legal/',
       },
       {
         NAME: '服务状态',
