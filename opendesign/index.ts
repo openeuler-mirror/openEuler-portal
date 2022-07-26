@@ -28,7 +28,6 @@ const components = [
   TableColumn,
   Tag,
   Timeline,
-  Input,
   Tabs,
   TabPane,
   Tree,
