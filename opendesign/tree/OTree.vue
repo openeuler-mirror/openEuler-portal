@@ -13,11 +13,8 @@ defineExpose({
 
 <style lang="scss">
 .o-tree {
-  --o-font-color: var(--o-color-text2);
-  --o-card-bg-color: var(--o-color-bg);
-  --o-card-border-color: var(--o-color-border);
   &.el-tree-node {
-    color: var(--o-font-color);
+    color: var(--o-color-text2);
     border-radius: 0;
     background-color: var(--o-color-bg);
     border: none;
