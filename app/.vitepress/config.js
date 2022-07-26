@@ -19,7 +19,7 @@ module.exports = {
     ],
   ],
   appearance: true, // enable dynamic scripts from dark mode
-  titleTemplate: "案例中心", //  vitepress supports pageTitileTemplate since 1.0.0
+  titleTemplate: false, //  vitepress supports pageTitileTemplate since 1.0.0
   locales: {
     '/': {
       lang: 'zh',
