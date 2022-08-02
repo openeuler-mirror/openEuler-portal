@@ -1,6 +1,6 @@
 ---
 title: 江西省医保局
-module: showcase
+category: showcase
 industry: 其他
 company: 江西省医保局
 summary: 江西省医保局云平台建设项目

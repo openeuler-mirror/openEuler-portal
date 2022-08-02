@@ -1,6 +1,6 @@
 ---
 title: 中国邮政
-module: showcase
+category: showcase
 industry: 物流
 company: 中国邮政
 summary: OA 业务系统迁移改造

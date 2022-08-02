@@ -1,6 +1,6 @@
 ---
 title: 国家电网
-module: showcase
+category: showcase
 industry: 能源
 company: 国家电网
 summary: 华电芜湖电厂 DCS 核心控制系统，平滑完成操作系统迁移，实现业务高效稳定运行

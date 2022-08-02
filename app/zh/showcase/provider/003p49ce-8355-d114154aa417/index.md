@@ -1,6 +1,6 @@
 ---
 title: 浙江移动
-module: showcase
+category: showcase
 industry: 运营商
 company: 浙江移动
 summary: 客户中心、业务大厅等核心系统，平滑完成操作系统无感知迁移，实现业务高效稳定运行
