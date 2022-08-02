@@ -1,6 +1,6 @@
 ---
 title: 黑龙江省烟草公司
-module: showcase
+category: showcase
 industry: 其他
 company: 黑龙江省烟草公司
 summary: 安全邮件系统建设项目

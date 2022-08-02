@@ -1,6 +1,6 @@
 ---
 title: 中国建设银行
-module: showcase
+category: showcase
 industry: 金融
 company: 中国建设银行
 summary: 分布式信用卡核心业务系统，单日交易量超过 1 亿笔，峰值TPS超过 6000
