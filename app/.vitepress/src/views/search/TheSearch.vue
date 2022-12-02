@@ -2,7 +2,12 @@
 import { computed, ref, onMounted } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
-import { getSearchData, getSearchCount, getSearchRpm } from '@/api/api-search';
+import {
+  getSearchData,
+  getSearchCount,
+  getSearchRpm,
+  getRelevant,
+} from '@/api/api-search';
 
 import NotFound from '@/NotFound.vue';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
@@ -63,6 +68,8 @@ const total = computed(() => {
 const totalPage = computed(() => {
   return Math.ceil(total.value / pageSize.value);
 });
+// 关联词
+const suggestList = ref([]);
 
 // 点击搜索框的删除图标
 function donShowSearchBox() {
@@ -98,11 +105,12 @@ function searRpm() {
   }
 }
 // 获取搜索结果各类型的数量
-function searchCountAll() {
+async function searchCountAll() {
   try {
-    getSearchCount(searchCount.value).then((res) => {
+    await getSearchCount(searchCount.value).then((res) => {
       if (res.status === 200 && res.obj.total[0]) {
         searchNumber.value = res.obj.total;
+        getSussageData();
       } else {
         searchNumber.value = [];
       }
@@ -110,6 +118,12 @@ function searchCountAll() {
   } catch (error: any) {
     throw Error(error);
   }
+}
+// 联想搜索
+function getSussageData() {
+  getRelevant(searchData.value).then((res) => {
+    suggestList.value = res?.obj?.suggestList;
+  });
 }
 // 获取搜索结果的数据
 function searchDataAll() {
@@ -138,6 +152,10 @@ function searchAll() {
     searchDataAll();
     searRpm();
   }
+}
+function handleSelect(val: string) {
+  searchInput.value = val.replace(/<[^>]+>/g, '');
+  searchAll();
 }
 // 设置搜索结果的跳转路径
 function goLink(data: any, index: number) {
@@ -207,6 +225,18 @@ onMounted(() => {
           <OIcon class="close" @click="donShowSearchBox"><IconCancel /></OIcon>
         </template>
       </OSearch>
+      <div v-show="suggestList.length" class="suggest-list-box">
+        <span>{{ i18n.search.suggest }}</span>
+        <ul class="suggest-list">
+          <li
+            v-for="suggest in suggestList"
+            :key="suggest"
+            v-html="suggest"
+            class="suggest"
+            @click="handleSelect(suggest)"
+          ></li>
+        </ul>
+      </div>
       <div class="search-content">
         <ul class="type">
           <li
@@ -297,6 +327,23 @@ onMounted(() => {
   display: grid;
   grid-template-columns: 1fr minmax(150px, 320px);
   grid-gap: 32px;
+  .suggest-list-box {
+    position: absolute;
+    display: flex;
+    margin-top: 10px;
+    font-size: var(--o-font-size-text);
+    .suggest-list {
+      display: flex;
+      .suggest {
+        margin-right: 8px;
+        cursor: pointer;
+        :deep(em) {
+          color: var(--o-color-brand1);
+          font-style: normal;
+        }
+      }
+    }
+  }
   .pagination-slot {
     font-size: var(--o-font-size-text);
     font-weight: 400;

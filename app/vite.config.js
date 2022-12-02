@@ -68,8 +68,8 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/certification/, ''),
       },
       '/api-search': {
-        target: 'https://doc-search.openeuler.org',
-        // target: 'https://doc-search.test.osinfra.cn',
+        // target: 'https://doc-search.openeuler.org',
+        target: 'https://doc-search.test.osinfra.cn',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-search/, ''),
       },
