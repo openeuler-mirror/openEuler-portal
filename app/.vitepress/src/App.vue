@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useData } from 'vitepress';
+import { useData, useRoute } from 'vitepress';
 import type { Component } from 'vue';
 import { computed, onMounted, ref } from 'vue';
 
@@ -23,6 +23,18 @@ const compMapping: {
   showcase: LayoutShowcase,
   migration: LayoutMigration,
 };
+
+const route = useRoute();
+const isBigEvent = computed(() => {
+  return (
+    route.path === '/zh' ||
+    route.path === '/zh/' ||
+    route.path === '/en' ||
+    route.path === '/en/'
+  );
+});
+
+console.log(isBigEvent.value);
 
 const isCustomLayout = computed(() => {
   return (
@@ -48,12 +60,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <AppHeader />
-  <main>
+  <AppHeader :class="{ 'big-event': isBigEvent }" />
+  <main :class="{ 'big-event': isBigEvent }">
     <component :is="comp" v-if="isCustomLayout"></component>
     <Content v-else />
   </main>
-  <AppFooter :is-cookie-tip="isCookieTip" @click-close="clickCookieClose" />
+  <AppFooter
+    :is-cookie-tip="isCookieTip"
+    @click-close="clickCookieClose"
+    :class="{ 'big-event': isBigEvent }"
+  />
 </template>
 
 <style lang="scss" scoped>
