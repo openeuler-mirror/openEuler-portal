@@ -42,7 +42,8 @@ watch(
     } else {
       isBigEvent.value = false;
     }
-  }
+  },
+  { immediate: true }
 );
 
 const isCustomLayout = computed(() => {
