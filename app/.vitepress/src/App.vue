@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData, useRoute } from 'vitepress';
 import type { Component } from 'vue';
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 
 import AppHeader from '@/components/AppHeader.vue';
 import AppFooter from '@/components/AppFooter.vue';
@@ -12,7 +12,6 @@ import LayoutMigration from '@/layouts/LayoutMigration.vue';
 
 import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
-
 const { frontmatter } = useData();
 
 const compMapping: {
@@ -25,16 +24,26 @@ const compMapping: {
 };
 
 const route = useRoute();
-const isBigEvent = computed(() => {
-  return (
-    route.path === '/zh' ||
-    route.path === '/zh/' ||
-    route.path === '/en' ||
-    route.path === '/en/'
-  );
-});
 
-console.log(isBigEvent.value);
+const isBigEvent = ref(false);
+
+watch(
+  () => {
+    return route.path;
+  },
+  (val) => {
+    if (
+      route.path === '/zh' ||
+      route.path === '/zh/' ||
+      route.path === '/en' ||
+      route.path === '/en/'
+    ) {
+      isBigEvent.value = true;
+    } else {
+      isBigEvent.value = false;
+    }
+  }
+);
 
 const isCustomLayout = computed(() => {
   return (
