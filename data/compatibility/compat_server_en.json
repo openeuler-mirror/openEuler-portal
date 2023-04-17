@@ -9358,5 +9358,85 @@
       "hostBusAdapter": "Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA (rev 21)",
       "hardDiskDrive": "Micro_5300_MTFD  U001"
     }
+  },
+  {
+    "hardwareFactory": "Lenovo",
+    "hardwareModel": "ThinkSystem SR950",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "x86_64",
+    "date": "2023/04/06",
+    "friendlyLink": "https://biz.lenovo.com.cn/product/01205092P.html",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "37d1",
+        "svID": "17aa",
+        "ssID": "4021",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "i40e",
+        "version": "",
+        "type": "NIC",
+        "date": "2023/4/06",
+        "sha256": "e1e59a1e6cc2652454caf85356f92fa4fc75ee14eaa71181c84950b7555b427e",
+        "driverSize": "935K",
+        "chipVendor": "Intel",
+        "boardModel": "Ethernet Connection X722",
+        "chipModel": "X722",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "15b3",
+        "deviceID": "101b",
+        "svID": "15b3",
+        "ssID": "0035",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "mlx5_core",
+        "version": "5.0-0",
+        "type": "IB",
+        "date": "2023/4/06",
+        "sha256": "b908a33f5b0261ea5b04d49669091975e1bd43a20e427fe9eeacd18d3151b3b2",
+        "driverSize": "2.3M",
+        "chipVendor": "Mellanox",
+        "boardModel": "QSFP56",
+        "chipModel": "ConnectX-6",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1d49",
+        "ssID": "060a",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2023/4/06",
+        "sha256": "abf3ad2595702e635fb07be307414d9df4baccd8ad1a1c369d28be61a46c93b6",
+        "driverSize": "343K",
+        "chipVendor": "avago",
+        "boardModel": "940-8i",
+        "chipModel": "SAS39xx",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://biz.lenovo.com.cn/product/01205092P.html",
+      "certificationTime": "2022/04/06",
+      "commitID": "I6PB6A",
+      "mainboardModel": "7X12CTO1WW",
+      "biosUefi": "2.61",
+      "cpu": "Cascade Lake",
+      "ram": "48*32G DIMMs",
+      "portsBusTypes": "x16 PCI Express 3 x16",
+      "videoAdapter": "MGA G200e",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "960GB 6Gbps SATA 2.5 SSD"
+    }
   }
 ]
