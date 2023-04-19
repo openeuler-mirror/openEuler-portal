@@ -438,9 +438,23 @@ oss-review-toolkit：基于SBOM提供完整解决方案并对接主流第三方�
 
   SBOM可随发布包一起交付给第三方
 
+  ![](./trend-4.png)
+
   ![](./trend-5.png)
 
-# 5. 下一步计划
+# 5. 整体服务体系、参考指导
+
+| 能力       | 开源社区SBOM                                                               | 服务/源代码                                                                                                                                 |
+|----------|------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| 数据规范     | 同时支持SPDX、CycloneDX、其它                                                  |                                                                                                                                        |
+| 数据字段     | 基于NTIA最小集扩展7个，一共17个字段                                                  |                                                                                                                                        |
+| SBOM生成工具 | 基于开源工具增强：主流包管理依赖解析(ORT-based)、文件系统镜像解析(syft-based)、网络/进程监控(eBPF-based) | https://github.com/opensourceways/sbom-tools                                                                                           |
+| SBOM服务   | SBOM Service: 代码开源/社区部署                                                | https://sbom-service.osinfra.cn<br/>https://github.com/opensourceways/sbom-service <br/>https://github.com/opensourceways/sbom-website |
+| 开源软件元数据  | License服务（貂蝉）+ 社区信息采集，对标libraries.io（开源License在线库）                     | https://github.com/openComplianceCode/issue-scanner                                                                                    |
+| 漏洞库      | UVP(整合开源漏洞库、商业漏洞库)，对标OSV（开源漏洞库）                                        | https://github.com/opensourceways/uvp                                                                                                  |
+| 漏洞感知与推送  | CVE Manager(推送到gitee issue)                                            | https://gitee.com/openeuler/cve-manager                                                                                                |
+
+# 6. 下一步计划
 
 当前整个SBOM软件生态处在起步阶段，展望未来基于SBOM可扩展点比较多、其配套的服务生态也会逐步完善。
 
