@@ -1,6 +1,7 @@
 ---
 title: 'Download'
 category: download-detail
+class: download-page
 ---
 
 <script setup lang="ts">

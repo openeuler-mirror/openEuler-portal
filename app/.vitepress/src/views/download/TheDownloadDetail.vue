@@ -63,12 +63,12 @@ onMounted(() => {
 </template>
 <style lang="scss" scoped>
 .download-detail {
-  :deep(.bread){
-    .bread-icon{
+  :deep(.bread) {
+    .bread-icon {
       color: var(--o-color-text4);
     }
   }
-  .bread-icon-detail{
+  .bread-icon-detail {
     color: var(--o-color-text1);
     font-size: 16px;
   }
@@ -86,6 +86,7 @@ onMounted(() => {
       margin-right: var(--o-spacing-h5);
       color: var(--o-color-text1);
       @media (max-width: 1100px) {
+        min-width: 40px;
         margin-right: var(--o-spacing-h6);
         font-size: var(--o-font-size-tip);
       }

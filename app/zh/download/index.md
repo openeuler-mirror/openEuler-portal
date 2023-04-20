@@ -1,6 +1,7 @@
 ---
 title: "openEuler下载 | 欧拉系统ISO镜像"
 category: download
+class: download-page
 titleTemplate: openEuler社区官网
 head:
   - - meta

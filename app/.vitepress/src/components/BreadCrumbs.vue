@@ -47,7 +47,7 @@ const { bread1, bread2, link1, link2 } = toRefs(props);
   // @media (max-width: 768px) {
   //   height: var(--o-spacing-h4);
   // }
-  .bread-icon{
+  .bread-icon {
     color: var(--o-color-text1);
   }
   span {

@@ -64,7 +64,7 @@ onMounted(() => {
 <template>
   <AppHeader />
   <el-config-provider :locale="locale">
-    <main>
+    <main :class="frontmatter.class ? frontmatter.class : ''">
       <component :is="comp" v-if="isCustomLayout"></component>
       <Content v-else />
     </main>
@@ -87,6 +87,11 @@ main {
 
   @media (max-width: 1100px) {
     padding-top: 48px;
+  }
+  &.download-page {
+    @media (max-width: 1100px) {
+      overflow: visible;
+    }
   }
 }
 </style>

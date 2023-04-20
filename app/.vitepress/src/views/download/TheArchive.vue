@@ -450,7 +450,6 @@ const changeCurrentPageMoblie = (val: string) => {
 
 <style lang="scss" scoped>
 .download {
-  
   .filter-card {
     margin: var(--o-spacing-h4) 0;
     background-color: var(--o-color-bg2);
