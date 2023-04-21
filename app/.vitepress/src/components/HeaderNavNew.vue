@@ -212,10 +212,6 @@ watch(
     }
     .nav-dropdown-top {
       display: flex;
-      gap: 120px;
-      @media (max-width: 1439px) {
-        gap: 48px;
-      }
       @media (max-width: 1100px) {
         display: block;
       }
@@ -224,10 +220,8 @@ watch(
       border-top: 1px solid var(--o-color-border2);
       margin-top: 24px;
       display: flex;
-      gap: 120px;
       padding: 16px 0 0;
       @media (max-width: 1439px) {
-        gap: 48px;
         margin-top: 16px;
       }
       @media (max-width: 1100px) {
@@ -236,11 +230,17 @@ watch(
       }
       .nav-bottom-item {
         display: flex;
-        gap: 24px;
+        &:not(:last-child) {
+          margin-right: 120px;
+        }
         @media (max-width: 1439px) {
+          &:not(:last-child) {
+            margin-right: 48px;
+          }
         }
         @media (max-width: 1100px) {
           display: block;
+          margin-right: 0px !important;
         }
         .title {
           font-size: 14px;
@@ -259,12 +259,16 @@ watch(
           line-height: 24px;
           display: inline-block;
           cursor: pointer;
+          margin-left: 24px;
           &:hover {
             color: var(--o-color-brand2);
           }
           @media (max-width: 1100px) {
             display: block;
             margin-bottom: 12px;
+            margin-left: 0;
+            line-height: var(--o-line-height-text);
+            font-size: var(--o-font-size-text);
           }
         }
       }
@@ -274,8 +278,17 @@ watch(
       display: block;
       flex: 1;
       flex: 0 1 190px;
+      &:not(:last-child) {
+        margin-right: 120px;
+      }
+      @media (max-width: 1439px) {
+        &:not(:last-child) {
+          margin-right: 48px;
+        }
+      }
       @media (max-width: 1100px) {
         &:not(:last-child) {
+          margin-right: 0;
           margin-bottom: 12px;
           border-bottom: 1px solid var(--o-color-border2);
           padding-bottom: 12px;
@@ -283,12 +296,14 @@ watch(
       }
       .nav-dropdown-box {
         display: grid;
-        gap: 16px 0;
         @media (max-width: 1100px) {
           display: block;
         }
         .item-box {
           max-width: 190px;
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
           @media (max-width: 1100px) {
             max-width: 100%;
             &:not(:last-child) {
@@ -362,7 +377,14 @@ watch(
         flex-basis: 420px;
         .nav-dropdown-box {
           grid-template-columns: repeat(2, 1fr);
-          gap: 16px 40px;
+          .item-box {
+            &:not(:nth-of-type(2)) {
+              margin-right: 40px;
+              @media (max-width: 1100px) {
+                margin-right: 0px;
+              }
+            }
+          }
         }
       }
     }
