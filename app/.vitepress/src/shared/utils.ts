@@ -155,7 +155,7 @@ export function getUrlParam(paraName: string) {
 }
 
 export function isTestEmail(str: string) {
-  return /^([0-9a-zA-Z_\.\-\u4e00-\u9fa5])+\@([0-9a-zA-Z_\.\-\])+\.([a-zA-Z]{2,8})$/.test(
+  return /^[a-zA-Z0-9]+([-_.][A-Za-zd]+)*@([a-zA-Z0-9]+[-.])+[A-Za-zd]{2,5}$/.test(
     str
   );
 }
