@@ -155,6 +155,12 @@ const isShowBox = ref(false);
 const searchControl = (val: boolean) => {
   isShowBox.value = val;
 };
+
+
+const navItemClick = ()=>{
+  mobileMenuIcon.value = false;
+  document.documentElement.classList.remove('overflow');
+}
 </script>
 
 <template>
@@ -179,13 +185,13 @@ const searchControl = (val: boolean) => {
                 :nav-items="navRouterNew"
                 :is-switch="mobileMenuIcon"
                 :nav-info="navRouterNewInfo"
-                @nav-click="mobileMenuIcon = false"
+                @nav-click="navItemClick"
               />
             </template>
             <div v-if="isMobile" class="header-tool">
               <AppLanguage
                 :show="langShow"
-                @language-click="mobileMenuIcon = false"
+                @language-click="navItemClick"
               />
               <AppTheme />
             </div>
@@ -214,7 +220,7 @@ const searchControl = (val: boolean) => {
             <div class="mobile-tools">
               <AppLanguage
                 :show="langShow"
-                @language-click="mobileMenuIcon = false"
+                @language-click="navItemClick"
               />
               <AppTheme />
             </div>
