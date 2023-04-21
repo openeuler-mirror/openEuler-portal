@@ -121,6 +121,7 @@ watch(
 .lang-menu {
   position: relative;
   height: 100%;
+  margin-right: var(--o-spacing-h5);
   &-link {
     display: flex;
     align-items: center;

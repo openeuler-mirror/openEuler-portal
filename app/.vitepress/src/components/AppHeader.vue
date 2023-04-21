@@ -371,8 +371,7 @@ const navItemClick = ()=>{
   }
 }
 .header-tool {
-  display: flex;
-  gap: var(--o-spacing-h5);
+  display: flex; 
   align-items: center;
   height: 100%;
   margin-left: var(--o-spacing-h5);
