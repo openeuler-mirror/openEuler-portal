@@ -8,6 +8,9 @@
     color: var(--o-color-brand1);
   }
   li{
+    &.el-select-dropdown__item{
+      color: var(--o-color-text1);
+    }
     @media screen and (max-width: 768px) {
       font-size: var(--o-font-size-tip);
     }

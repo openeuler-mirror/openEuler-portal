@@ -17,6 +17,7 @@ import IconCopy from '~icons/app/icon-copy.svg';
 import IconDownload from '~icons/app/icon-download.svg';
 import IconTips from '~icons/app/icon-tips.svg';
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
+import IconChevronDown from '~icons/app/icon-chevron-down.svg';
 
 const router = useRouter();
 const commonStore = useCommon();
@@ -118,7 +119,7 @@ const onArchTagClick = (i: number, select: string) => {
 const onScenarioTagClick = (select: string) => {
   activeScenario.value = select;
 };
-//TODO: 控制不能组合的tag的禁用
+//控制不能组合的tag的禁用
 const tempTag = ref('');
 function setTempTag() {
   let flag = true;
@@ -215,6 +216,7 @@ async function getMirrorList() {
       mirrorList.value = [];
       moreMirrorList.value = [];
     }
+    setActiveMirror();
   } catch (e: any) {
     throw new Error(e);
   }
@@ -257,6 +259,20 @@ function setMirrorLink(index: number) {
 const showIndex = ref(-1);
 function setShowIndex(index: number) {
   showIndex.value = index;
+}
+// 控制移动端镜像选择
+const mirrorIndex = ref(-1);
+function setMirrorIndex(index: number) {
+  if (mirrorIndex.value === index) {
+    mirrorIndex.value = -1;
+  } else {
+    mirrorIndex.value = index;
+  }
+}
+function setActiveMirrorMobile(index: number, item: string) {
+  activeMirror.value[index] = item;
+  mirrorIndex.value = -1;
+  setMirrorLink(index);
 }
 </script>
 
@@ -323,137 +339,138 @@ function setShowIndex(index: number) {
     </div>
     <div class="content-item">
       <!-- pc  -->
-      <OTable
-        v-if="screenWidth > 1100"
-        :data="tableData"
-        class="download-pc"
-        style="width: 100%"
-      >
-        <el-table-column
-          :width="screenWidth > 1310 ? '280' : '230'"
-          :label="i18n.download.TABLE_HEAD[0]"
-          prop="name"
-        >
-          <template #default="scope">
-            <div class="name-info">
-              {{ scope.row.TYPE }}
-              <template v-if="scope.row.TIPS">
-                <el-tooltip
-                  placement="right-start"
-                  :offset-y="60"
-                  :effect="commonStore.theme"
+      <div v-if="screenWidth > 1100" class="download-pc">
+        <OTable :data="tableData" style="width: 100%">
+          <el-table-column
+            :width="screenWidth > 1310 ? '280' : '230'"
+            :label="i18n.download.TABLE_HEAD[0]"
+            prop="name"
+          >
+            <template #default="scope">
+              <div class="name-info">
+                {{ scope.row.TYPE }}
+                <template v-if="scope.row.TIPS">
+                  <el-tooltip
+                    placement="right-start"
+                    :offset-y="60"
+                    :effect="commonStore.theme"
+                  >
+                    <template #content>
+                      <p class="tips-text">
+                        {{ scope.row.TIPS }}
+                      </p>
+                    </template>
+                    <IconTips class="server-tips" />
+                  </el-tooltip>
+                </template>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column
+            :width="screenWidth > 1310 ? '200' : '130'"
+            :label="i18n.download.TABLE_HEAD[1]"
+            prop="size"
+          >
+            <template #default="scope">
+              {{ scope.row.SIZE }}
+            </template>
+          </el-table-column>
+          <el-table-column :label="i18n.download.TABLE_HEAD[2]" prop="down_url">
+            <template #default="scope">
+              <ClientOnly>
+                <el-select
+                  v-model="activeMirror[scope.$index]"
+                  placeholder="Select"
+                  placement="bottom-end"
+                  class="mirror-select"
+                  @change="setMirrorLink(scope.$index)"
                 >
-                  <template #content>
-                    <p class="tips-text">
-                      {{ scope.row.TIPS }}
+                  <li>
+                    <p class="select-text">
+                      {{ i18n.download.APPROVE_MIRROR }}
                     </p>
-                  </template>
-                  <IconTips class="server-tips" />
-                </el-tooltip>
-              </template>
-            </div>
-          </template>
-        </el-table-column>
-        <el-table-column
-          :width="screenWidth > 1310 ? '200' : '130'"
-          :label="i18n.download.TABLE_HEAD[1]"
-          prop="size"
-        >
-          <template #default="scope">
-            {{ scope.row.SIZE }}
-          </template>
-        </el-table-column>
-        <el-table-column :label="i18n.download.TABLE_HEAD[2]" prop="down_url">
-          <template #default="scope">
-            <ClientOnly>
-              <el-select
-                v-model="activeMirror[scope.$index]"
-                placeholder="Select"
-                placement="bottom-end"
-                class="mirror-select"
-                @change="setMirrorLink(scope.$index)"
-              >
-                <li>
-                  <p class="select-text">{{ i18n.download.APPROVE_MIRROR }}</p>
-                </li>
-                <el-option
-                  v-for="item in mirrorList"
-                  :key="item.Name"
-                  :label="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
-                  :value="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
-                >
-                </el-option>
-                <li>
-                  <p class="select-text">{{ i18n.download.MORE_MIRROR }}</p>
-                </li>
+                  </li>
+                  <el-option
+                    v-for="item in mirrorList"
+                    :key="item.Name"
+                    :label="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
+                    :value="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
+                  >
+                  </el-option>
+                  <li>
+                    <p class="select-text">{{ i18n.download.MORE_MIRROR }}</p>
+                  </li>
 
-                <el-option
-                  v-for="item in moreMirrorList"
-                  :key="item.Name"
-                  :label="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
-                  :value="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
+                  <el-option
+                    v-for="item in moreMirrorList"
+                    :key="item.Name"
+                    :label="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
+                    :value="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
+                  >
+                  </el-option>
+                  <li>
+                    <div class="all-mirror">
+                      <a :href="'/' + lang + '/mirror/list/'">
+                        <OButton size="mini" type="text" animation>
+                          {{ i18n.download.ALL_MIRROR }}
+                          <template #suffixIcon>
+                            <OIcon
+                              ><IconArrowRight class="download-button-icon"
+                            /></OIcon>
+                          </template>
+                        </OButton>
+                      </a>
+                    </div>
+                  </li>
+                </el-select>
+              </ClientOnly>
+            </template>
+          </el-table-column>
+          <el-table-column
+            :width="screenWidth > 1310 ? '200' : '150'"
+            :label="i18n.download.TABLE_HEAD[3]"
+            prop="sha_code"
+          >
+            <template #default="scope">
+              <div v-if="scope.row.SHACODE" class="down-action">
+                <OButton
+                  class="down-copy"
+                  size="mini"
+                  type="text"
+                  @click="handleUrlCopy(scope.row.SHACODE)"
                 >
-                </el-option>
-                <li>
-                  <div class="all-mirror">
-                    <a :href="'/' + lang + '/mirror/list/'">
-                      <OButton size="mini" type="text" animation>
-                        {{ i18n.download.ALL_MIRROR }}
-                        <template #suffixIcon>
-                          <OIcon
-                            ><IconArrowRight class="download-button-icon"
-                          /></OIcon>
-                        </template>
-                      </OButton>
-                    </a>
-                  </div>
-                </li>
-              </el-select>
-            </ClientOnly>
-          </template>
-        </el-table-column>
-        <el-table-column
-          :width="screenWidth > 1310 ? '200' : '150'"
-          :label="i18n.download.TABLE_HEAD[3]"
-          prop="sha_code"
-        >
-          <template #default="scope">
-            <div v-if="scope.row.SHACODE" class="down-action">
-              <OButton
-                class="down-copy"
-                size="mini"
-                type="text"
-                @click="handleUrlCopy(scope.row.SHACODE)"
+                  {{ shaText }}
+                  <template #suffixIcon>
+                    <IconCopy />
+                  </template>
+                </OButton>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column
+            :width="screenWidth > 1310 ? '200' : '160'"
+            :label="i18n.download.TABLE_HEAD[4]"
+            prop="docsName"
+          >
+            <template #default="scope">
+              <a
+                class="down-link"
+                :href="activeMirrorLink[scope.$index] + scope.row.DOWNLOAD_LINK"
               >
-                {{ shaText }}
-                <template #suffixIcon>
-                  <IconCopy />
-                </template>
-              </OButton>
-            </div>
-          </template>
-        </el-table-column>
-        <el-table-column
-          :width="screenWidth > 1310 ? '200' : '160'"
-          :label="i18n.download.TABLE_HEAD[4]"
-          prop="docsName"
-        >
-          <template #default="scope">
-            <a
-              class="down-link"
-              :href="activeMirrorLink[scope.$index] + scope.row.DOWNLOAD_LINK"
-            >
-              <OButton size="mini" type="primary">
-                {{ i18n.download.DOWNLOAD_BTN_NAME }}
-                <template #suffixIcon>
-                  <IconDownload />
-                </template>
-              </OButton>
-            </a>
-          </template>
-        </el-table-column>
-      </OTable>
+                <OButton size="mini" type="primary">
+                  {{ i18n.download.DOWNLOAD_BTN_NAME }}
+                  <template #suffixIcon>
+                    <IconDownload />
+                  </template>
+                </OButton>
+              </a>
+            </template>
+          </el-table-column>
+        </OTable>
+      </div>
+
       <!-- mobild -->
+
       <ul v-else class="download-mobile">
         <li
           v-for="(item, index) in tableData"
@@ -483,34 +500,42 @@ function setShowIndex(index: number) {
           </div>
           <div class="item-text">
             <span>{{ i18n.download.TABLE_HEAD[2] + ':' }}</span>
-            <ClientOnly>
-              <el-select
-                v-model="activeMirror[index]"
-                placeholder="Select"
-                fit-input-width
-                placement="bottom-end"
-                @change="setMirrorLink(index)"
+            <div class="select-mirror">
+              <div class="select" @click="setMirrorIndex(index)">
+                <p>{{ activeMirror[index] }}</p>
+                <OIcon
+                  ><IconChevronDown
+                    :class="{ 'mirror-show-icon': mirrorIndex === index }"
+                    class="chevron-icon"
+                /></OIcon>
+              </div>
+              <ul
+                v-if="mirrorList[0]"
+                class="mirror-box"
+                :class="{ 'mirror-show': mirrorIndex === index }"
               >
                 <li>
-                  <p class="select-text">{{ i18n.download.APPROVE_MIRROR }}</p>
+                  {{ i18n.download.APPROVE_MIRROR }}
                 </li>
-                <el-option
-                  v-for="item in mirrorList"
-                  :key="item.Name"
-                  :label="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
-                  :value="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
+                <li
+                  v-for="itemMirror in mirrorList"
+                  :key="itemMirror.Name"
+                  class="mirror-item"
+                  @click="setActiveMirrorMobile(index, itemMirror.NameSpend)"
                 >
-                </el-option>
+                  {{ itemMirror.NameSpend }}
+                </li>
                 <li>
-                  <p class="select-text">{{ i18n.download.MORE_MIRROR }}</p>
+                  {{ i18n.download.MORE_MIRROR }}
                 </li>
-                <el-option
-                  v-for="item in moreMirrorList"
-                  :key="item.Name"
-                  :label="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
-                  :value="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
+                <li
+                  v-for="itemMirror in moreMirrorList"
+                  :key="itemMirror.Name"
+                  class="mirror-item"
+                  @click="setActiveMirrorMobile(index, itemMirror.NameSpend)"
                 >
-                </el-option>
+                  {{ itemMirror.NameSpend }}
+                </li>
                 <li>
                   <div class="all-mirror">
                     <a :href="'/' + lang + '/mirror/list/'">
@@ -525,8 +550,20 @@ function setShowIndex(index: number) {
                     </a>
                   </div>
                 </li>
-              </el-select>
-            </ClientOnly>
+              </ul>
+              <ul
+                v-else
+                class="mirror-box"
+                :class="{ 'mirror-show': mirrorIndex === index }"
+              >
+                <li>{{ i18n.download.EMPTY_TIP }}</li>
+              </ul>
+              <div
+                v-show="mirrorIndex !== -1"
+                class="mirror-mask"
+                @click="setMirrorIndex(-1)"
+              ></div>
+            </div>
           </div>
           <div v-if="item.SHACODE" class="item-text">
             <span>{{ i18n.download.TABLE_HEAD[3] + ':' }}</span>
@@ -634,12 +671,14 @@ function setShowIndex(index: number) {
         color: var(--o-color-text1);
         @media screen and (max-width: 768px) {
           width: 26px;
+          white-space: nowrap;
           font-size: var(--o-font-size-tip);
         }
       }
       .tag-filter-box {
         flex-grow: 1;
         display: flex;
+        flex-wrap: wrap;
       }
       .o-tag {
         padding: 0 12px;
@@ -651,11 +690,16 @@ function setShowIndex(index: number) {
         @media screen and (max-width: 768px) {
           padding: 0 6px;
           font-size: var(--o-font-size-tip) !important;
+          height: 24px;
           line-height: 24px;
+          margin-bottom: 2px;
         }
       }
       &.os-box {
         margin-top: var(--o-spacing-h5);
+        @media screen and (max-width: 768px) {
+          margin-top: var(--o-spacing-h8);
+        }
       }
     }
     .disable {
@@ -716,6 +760,9 @@ function setShowIndex(index: number) {
             width: 12px;
           }
         }
+        &:hover {
+          color: var(--o-color-brand2);
+        }
       }
       .down-link {
         display: inline-block;
@@ -728,27 +775,47 @@ function setShowIndex(index: number) {
           color: #fff;
         }
       }
-      :deep(.cell) {
-        line-height: 46px;
-        overflow: visible;
-        padding-left: var(--o-spacing-h2);
-        a {
-          word-break: normal;
+      :deep(.el-table) {
+        box-shadow: none !important;
+        .el-table__inner-wrapper::before {
+          display: none;
         }
-        .o-select:hover {
-          background-color: red;
-        }
-        .el-input__wrapper {
-          box-shadow: none;
-          background-color: transparent;
-          padding: 0;
-          width: 200px;
-          input,
-          i {
-            color: var(--o-color-brand1);
+        .cell {
+          line-height: 46px;
+          overflow: visible;
+          padding-left: var(--o-spacing-h2);
+          a {
+            word-break: normal;
+          }
+          .el-input__wrapper {
+            box-shadow: none;
+            background-color: transparent;
+            padding: 0;
+            width: 200px;
+            input,
+            i {
+              color: var(--o-color-brand1);
+            }
           }
         }
+        table {
+          position: relative;
+          .el-table__row {
+            &:hover {
+              > td.el-table__cell {
+                background-color: transparent;
+              }
+            }
+          }
+        }
+        .el-table__body-wrapper {
+          border-bottom: 1px solid var(--o-color-border2);
+        }
+        tr::after {
+          width: 100%;
+        }
       }
+
       :deep(.el-select) {
         width: 230px;
         .el-input .el-input__wrapper {
@@ -790,6 +857,83 @@ function setShowIndex(index: number) {
             color: var(--o-color-brand1);
             padding: 0;
             line-height: 0;
+          }
+          .select-mirror {
+            position: relative;
+            .select {
+              display: flex;
+              p {
+                width: 160px;
+                overflow: scroll;
+                white-space: nowrap;
+                margin-right: var(--o-spacing-h7);
+                &::-webkit-scrollbar {
+                  display: none;
+                }
+              }
+              .o-icon {
+                .chevron-icon {
+                  transition: all 0.3s;
+                }
+                .mirror-show-icon {
+                  transform: rotateZ(180deg);
+                }
+              }
+            }
+            .mirror-box {
+              position: absolute;
+              top: calc(100% + 6px);
+              left: 0;
+              width: 210px;
+              background-color: var(--o-color-bg2);
+              z-index: 2147483647;
+              overflow: hidden;
+              transition: all 0.3s;
+              max-height: 0;
+              box-sizing: border-box;
+              box-shadow: var(--o-shadow-l5);
+              &.mirror-show {
+                padding: var(--o-spacing-h8) 0;
+                max-height: 800px;
+              }
+              li {
+                padding: 0 var(--o-spacing-h8);
+                line-height: var(--o-line-height-h8);
+                color: var(--o-color-text3);
+                &.mirror-item {
+                  width: 210px;
+                  color: var(--o-color-text1);
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  &:hover {
+                    background-color: var(--o-color-bg4);
+                  }
+                }
+                .all-mirror {
+                  a {
+                    display: inline-block;
+                    .o-button {
+                      white-space: nowrap;
+                      padding: 0;
+                      :deep(.suffix-icon) {
+                        width: 20px;
+                        display: flex;
+                        flex-grow: 0;
+                        color: var(--o-color-brand1);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .mirror-mask {
+              position: fixed;
+              width: 100vw;
+              height: 100vh;
+              left: 0;
+              top: 0;
+            }
           }
           .tips-box {
             display: flex;
