@@ -208,7 +208,7 @@ const changeCurrentPageMoblie = (val: string) => {
     <div class="download">
       <OSearch
         v-model="searchContent"
-        class="o-search"
+        class="archive-search"
         :placeholder="i18n.download.PLACEHOLDER"
         @change="changeSearchVal"
       ></OSearch>
@@ -505,7 +505,7 @@ const changeCurrentPageMoblie = (val: string) => {
       color: var(--o-color-text5);
     }
   }
-  .o-search {
+  .archive-search {
     margin-top: var(--o-spacing-h2);
     @media (max-width: 1100px) {
       margin-top: var(--o-spacing-h4);
