@@ -13,8 +13,7 @@ export default {
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler-whitepaper-2303.pdf',
-        // WEBSITE_SELECT: '/zh/mirror/select/?version=23.03',
-
+        WEBSITE_SELECT: '/zh/mirror/select/?version=23.03',
         CLOUD_IMAGE:
           'https://repo.openeuler.org/openEuler-23.03/virtual_machine_img/',
         EDGE_IMAGE: 'https://repo.openeuler.org/openEuler-23.03/edge_img/',
@@ -23,12 +22,10 @@ export default {
         MANUFACTURER: 'openEuler社区',
         PUBLISH_DATE: '2023/03',
         LTS: false,
-        // 新增 start
         /* VERSION参数是为了获取推荐镜像，根据上面的WEBSITE_SELECT的version填写*/
         VERSION: '23.03',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -62,7 +59,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -96,7 +92,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/edge_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -112,7 +107,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/edge_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -128,7 +122,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/virtual_machine_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -144,7 +137,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/virtual_machine_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -160,7 +152,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/embedded_img/arm64/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -212,7 +203,6 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/embedded_img/arm32/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -265,7 +255,6 @@ export default {
           },
         ],
         PLANNED_EOL: '2023/09',
-        // 新增 end
       },
       {
         NAME: 'openEuler 22.03 LTS SP1',
@@ -289,11 +278,10 @@ export default {
         MANUFACTURER: 'openEuler社区',
         PUBLISH_DATE: '2022/12',
         LTS: true,
-        // 新增 start
+
         VERSION: '22.03-LTS-SP1',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -327,7 +315,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -361,7 +348,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/edge_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -377,7 +363,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/edge_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -393,7 +378,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/virtual_machine_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -409,7 +393,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/virtual_machine_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -425,7 +408,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/embedded_img/arm64/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -477,7 +459,6 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/embedded_img/arm32/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -555,7 +536,6 @@ export default {
         VERSION: '22.09',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -589,7 +569,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -623,7 +602,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/RISC-V/openEuler-22.09-riscv64/',
             LINK_LIST: [
               {
                 TYPE: 'riscv64',
@@ -638,7 +616,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/edge_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -654,7 +631,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/edge_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -670,7 +646,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/virtual_machine_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -686,7 +661,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/virtual_machine_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -702,7 +676,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/embedded_img/arm64/aarch64-std/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -754,7 +727,6 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/embedded_img/arm32/arm-std/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -832,7 +804,6 @@ export default {
         VERSION: '22.03-LTS',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -866,7 +837,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -900,7 +870,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/RISC-V/openEuler-22.03-V1-riscv64/',
             LINK_LIST: [
               {
                 TYPE: 'riscv64',
@@ -915,7 +884,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/loongarch/ISO/',
             LINK_LIST: [
               {
                 TYPE: 'loongarch',
@@ -930,7 +898,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/power/ISO/',
             LINK_LIST: [
               {
                 TYPE: 'preview-ppc',
@@ -945,7 +912,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/sw_arch/openEuler-22.03-LTS/ISO/',
             LINK_LIST: [
               {
                 TYPE: 'OS-isoe',
@@ -978,7 +944,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/edge_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -994,7 +959,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/edge_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1010,7 +974,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/virtual_machine_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -1026,7 +989,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/virtual_machine_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -1042,7 +1004,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/embedded_img/arm64/aarch64-std/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -1094,7 +1055,6 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/embedded_img/arm32/arm-std/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -1166,7 +1126,6 @@ export default {
         VERSION: '20.03-LTS-SP3',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP3/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1200,7 +1159,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP3/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1256,7 +1214,6 @@ export default {
         VERSION: '21.09',
         DETAILED_LINK: [
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-21.09/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1290,7 +1247,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-21.09/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1344,7 +1300,6 @@ export default {
         VERSION: '20.03-LTS-SP2',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1378,7 +1333,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1433,7 +1387,6 @@ export default {
         VERSION: '21.03',
         DETAILED_LINK: [
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-21.03/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1467,7 +1420,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-21.03/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1521,7 +1473,6 @@ export default {
         VERSION: '20.03-LTS-SP1',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1555,7 +1506,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1610,7 +1560,6 @@ export default {
         VERSION: '20.09',
         DETAILED_LINK: [
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-20.09/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1635,7 +1584,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-20.09/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1680,7 +1628,6 @@ export default {
         VERSION: '20.03-LTS',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1705,7 +1652,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -1730,7 +1676,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/RISC-V/openEuler-20.03-riscv64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2',
@@ -1762,7 +1707,6 @@ export default {
         PREVIEW: true,
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'openEuler Preview',
@@ -1884,26 +1828,6 @@ export default {
           },
           {
             LINK: 'https://mirrors.cmecloud.cn/bclinux/oe21.10/ISO/aarch64/',
-            ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
-          },
-        ],
-      },
-      {
-        NAME: '红旗Asianux服务器操作系统V8.1',
-        DOWNLOAD_URL: 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
-        DESC: '红旗Asianux服务器操作系统（欧拉版）是基于openEuler20.03 LTS SP1进行二次开发的商业发行版，目前内核版本为4.19。',
-        RELEASE_DESC_URL: 'http://www.linuxsir.cn/?product.htm&pid=2',
-        INSTALL_GUIDENCE_URL: 'http://www.linuxsir.cn/?product.htm&pid=2',
-        SEEK_HELP_URL: '',
-        GET_ISO_URL: 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
-        LIFE_CYCLE_URL: '',
-        MANUFACTURER: '中科红旗（北京）信息科技有限公司',
-        PUBLISH_DATE: '2021/03',
-        LTS: false,
-        DETAILED_LINK: [
-          {
-            LINK: 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
             ARCH: 'AArch64',
             SCENARIO: 'SERVER',
           },
@@ -2197,7 +2121,6 @@ export default {
         VERSION: '23.03',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -2231,7 +2154,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -2263,7 +2185,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/edge_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -2279,7 +2200,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/edge_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -2294,7 +2214,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/virtual_machine_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -2310,7 +2229,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/virtual_machine_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -2326,7 +2244,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/embedded_img/arm64/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -2376,7 +2293,6 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/embedded_img/arm32/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -2426,9 +2342,8 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
         ],
-        // 新增 start
+
         PLANNED_EOL: '2023/09',
-        // 新增 end
       },
       {
         NAME: 'openEuler 22.03 LTS SP1',
@@ -2454,7 +2369,6 @@ export default {
         VERSION: '22.03-LTS-SP1',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -2487,7 +2401,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -2519,7 +2432,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/edge_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -2535,7 +2447,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/edge_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -2550,7 +2461,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/virtual_machine_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -2566,7 +2476,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/virtual_machine_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -2582,7 +2491,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/embedded_img/arm64/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -2632,7 +2540,6 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/embedded_img/arm32/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -2709,7 +2616,6 @@ export default {
         VERSION: '22.09',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -2742,7 +2648,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -2774,7 +2679,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/RISC-V/openEuler-22.09-riscv64/',
             LINK_LIST: [
               {
                 TYPE: 'riscv64',
@@ -2788,7 +2692,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/edge_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -2804,7 +2707,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/edge_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -2819,7 +2721,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/virtual_machine_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -2835,7 +2736,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/virtual_machine_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -2851,7 +2751,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/embedded_img/arm64/aarch64-std/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -2901,7 +2800,6 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/embedded_img/arm32/arm-std/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -2977,7 +2875,6 @@ export default {
         VERSION: '22.03-LTS',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3010,7 +2907,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3042,7 +2938,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/RISC-V/openEuler-22.03-V1-riscv64/',
             LINK_LIST: [
               {
                 TYPE: 'riscv64',
@@ -3056,7 +2951,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/loongarch/ISO/',
             LINK_LIST: [
               {
                 TYPE: 'loongarch',
@@ -3070,7 +2964,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/power/ISO/',
             LINK_LIST: [
               {
                 TYPE: 'preview-ppc',
@@ -3084,7 +2977,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/sw_arch/openEuler-22.03-LTS/ISO/',
             LINK_LIST: [
               {
                 TYPE: 'OS-isoe',
@@ -3115,7 +3007,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/edge_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3131,7 +3022,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/edge_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3146,7 +3036,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/virtual_machine_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -3162,7 +3051,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/virtual_machine_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -3178,7 +3066,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/embedded_img/arm64/aarch64-std/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -3228,7 +3115,6 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/embedded_img/arm32/arm-std/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -3299,7 +3185,6 @@ export default {
         VERSION: '20.03-LTS-SP3',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP3/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3333,7 +3218,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP3/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3390,7 +3274,6 @@ export default {
         VERSION: '21.09',
         DETAILED_LINK: [
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-21.09/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3423,7 +3306,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-21.09/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3476,7 +3358,6 @@ export default {
         VERSION: '20.03-LTS-SP2',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3509,7 +3390,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3563,7 +3443,6 @@ export default {
         VERSION: '21.03',
         DETAILED_LINK: [
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-21.03/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3596,7 +3475,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-21.03/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3649,7 +3527,6 @@ export default {
         VERSION: '20.03-LTS-SP1',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3682,7 +3559,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3735,7 +3611,6 @@ export default {
         VERSION: '20.09',
         DETAILED_LINK: [
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-20.09/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3760,7 +3635,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-20.09/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3805,7 +3679,6 @@ export default {
         VERSION: '20.03-LTS',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3830,7 +3703,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -3854,7 +3726,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/RISC-V/openEuler-20.03-riscv64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2',
@@ -3883,7 +3754,6 @@ export default {
         LTS: false,
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'openEuler Preview',
@@ -4114,7 +3984,6 @@ export default {
         VERSION: '23.03',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4148,7 +4017,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4180,7 +4048,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/edge_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4196,7 +4063,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/edge_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4211,7 +4077,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/virtual_machine_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -4227,7 +4092,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/virtual_machine_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -4243,7 +4107,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/embedded_img/arm64/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -4293,7 +4156,6 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-23.03/embedded_img/arm32/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -4343,9 +4205,8 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
         ],
-        // 新增 start
+
         PLANNED_EOL: '2023/09',
-        // 新增 end
       },
       {
         NAME: 'openEuler 22.03 LTS SP1',
@@ -4371,7 +4232,6 @@ export default {
         VERSION: '22.03-LTS-SP1',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4404,7 +4264,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4436,7 +4295,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/edge_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4452,7 +4310,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/edge_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4467,7 +4324,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/virtual_machine_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -4483,7 +4339,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/virtual_machine_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -4499,7 +4354,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/embedded_img/arm64/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -4549,7 +4403,6 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP1/embedded_img/arm32/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -4626,7 +4479,6 @@ export default {
         VERSION: '22.09',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4659,7 +4511,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4691,7 +4542,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/RISC-V/openEuler-22.09-riscv64/',
             LINK_LIST: [
               {
                 TYPE: 'riscv64',
@@ -4705,7 +4555,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/edge_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4721,7 +4570,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/edge_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4736,7 +4584,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/virtual_machine_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -4752,7 +4599,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/virtual_machine_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -4768,7 +4614,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/embedded_img/arm64/aarch64-std/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -4818,7 +4663,6 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.09/embedded_img/arm32/arm-std/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -4894,7 +4738,6 @@ export default {
         VERSION: '22.03-LTS',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4927,7 +4770,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -4959,7 +4801,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/RISC-V/openEuler-22.03-V1-riscv64/',
             LINK_LIST: [
               {
                 TYPE: 'riscv64',
@@ -4973,7 +4814,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/loongarch/ISO/',
             LINK_LIST: [
               {
                 TYPE: 'loongarch',
@@ -4987,7 +4827,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/power/ISO/',
             LINK_LIST: [
               {
                 TYPE: 'preview-ppc',
@@ -5001,7 +4840,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/sw_arch/openEuler-22.03-LTS/ISO/',
             LINK_LIST: [
               {
                 TYPE: 'OS-isoe',
@@ -5032,7 +4870,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/edge_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5048,7 +4885,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/edge_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5063,7 +4899,6 @@ export default {
             SCENARIO: 'EDGE_CLOUD',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/virtual_machine_img/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -5079,7 +4914,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/virtual_machine_img/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2.xz',
@@ -5095,7 +4929,6 @@ export default {
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/embedded_img/arm64/aarch64-std/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -5145,7 +4978,6 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-22.03-LTS/embedded_img/arm32/arm-std/',
             LINK_LIST: [
               {
                 TYPE: 'Image',
@@ -5218,7 +5050,6 @@ export default {
         VERSION: '21.09',
         DETAILED_LINK: [
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-21.09/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5251,7 +5082,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-21.09/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5304,7 +5134,6 @@ export default {
         VERSION: '20.03-LTS-SP2',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5337,7 +5166,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5391,7 +5219,6 @@ export default {
         VERSION: '21.03',
         DETAILED_LINK: [
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-21.03/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5424,7 +5251,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-21.03/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5477,7 +5303,6 @@ export default {
         VERSION: '20.03-LTS-SP1',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5510,7 +5335,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5563,7 +5387,6 @@ export default {
         VERSION: '20.09',
         DETAILED_LINK: [
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-20.09/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5588,7 +5411,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://archives.openeuler.openatom.cn/openEuler-20.09/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5633,7 +5455,6 @@ export default {
         VERSION: '20.03-LTS',
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5658,7 +5479,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS/ISO/aarch64/',
             LINK_LIST: [
               {
                 TYPE: 'Offline Standard ISO',
@@ -5682,7 +5502,6 @@ export default {
             SCENARIO: 'SERVER',
           },
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-preview/RISC-V/openEuler-20.03-riscv64/',
             LINK_LIST: [
               {
                 TYPE: 'qcow2',
@@ -5711,7 +5530,6 @@ export default {
         LTS: false,
         DETAILED_LINK: [
           {
-            // LINK: 'https://repo.openeuler.org/openEuler-20.03-LTS/ISO/x86_64/',
             LINK_LIST: [
               {
                 TYPE: 'openEuler Preview',
