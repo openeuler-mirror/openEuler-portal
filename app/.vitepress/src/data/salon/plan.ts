@@ -84,6 +84,13 @@ export default {
               className: 'linaro',
             },
           },
+          {
+            activeName: 'openEuler Developer Day 2023',
+            activelink: {
+              url: 'https://www.openeuler.org/zh/interaction/summit-list/devday2023/',
+              className: 'odd-2023',
+            },
+          },
         ],
       },
     ],
