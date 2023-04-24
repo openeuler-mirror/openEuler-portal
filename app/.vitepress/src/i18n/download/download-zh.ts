@@ -20,7 +20,7 @@ export default {
   ARCHIVE_LINK: '/zh/download/archive/',
   DETAIL3:
     '我们会根据访问的IP地址为您推荐最优镜像仓下载源，如果您需要寻找特定的镜像仓、或者您在考虑为openEuler社区创建一个新的公共镜像仓，请',
-  CLICK_LIST: '点此访问openEuler镜像仓列表',
+  CLICK_LIST: '点此访问openEuler镜像仓列表。',
   MIRROR_LIST_LINK: '/zh/mirror/list/',
   HISTORY: '历史版本下载',
   ARCHITECTURE2: '架构',
