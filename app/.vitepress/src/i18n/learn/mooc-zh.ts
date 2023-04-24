@@ -13,7 +13,7 @@ export default {
       CHILDREN: [
         {
           NAME: '课程学习',
-          PATH: 'https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=383&authenticationLevel=CTYPE_CARE_HCIA&technicalField=PSC&version=1.0 ',
+          PATH: '/zh/learn/mooc/detail/',
         },
         {
           NAME: '考试报名',
