@@ -2022,14 +2022,14 @@ export default {
       },
       {
         NAME: '拓林思企业级服务器操作系统',
-        DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8011/',
-        DESC: ' 拓林思企业级服务器操作系统是一款基于openEuler操作系统打造的针对AArch64处理器架构的操作系统发行版，适用于数据库、云计算、大数据、分布式计算等多种应用场景，为客户提供安全、可靠的解决系统方案，为各类应用提供标准、稳定的运行环境。',
+        DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8013/',
+        DESC: '拓林思企业级服务器操作系统是一款基于openEuler操作系统打造的针对x86_64、AArch64处理器架构的操作系统发行版，适用于数据库、云计算、大数据、分布式计算等多种应用场景，为客户提供安全、可靠的解决系统方案，为各类应用提供标准、稳定的运行环境。',
         INSTALL_GUIDENCE_URL:
           'http://download.turbolinux.com.cn:8011/docs/TurboLinux16-Installation-AArch64.pdf',
         SEEK_HELP_URL: 'http://forum.turbolinux.com.cn/',
-        GET_ISO_URL: 'http://download.turbolinux.com.cn:8011/',
-        MANUFACTURER: 'TurboLinux',
-        PUBLISH_DATE: '2020/04',
+        GET_ISO_URL: 'http://download.turbolinux.com.cn:8013/',
+        MANUFACTURER: '北京拓林思软件有限公司',
+        PUBLISH_DATE: '2022/06',
         LIFE_CYCLE_URL:
           'http://download.turbolinux.com.cn:8011/docs/TLES-OS-PLANNING.pdf',
         RELEASE_DESC_URL:
@@ -2037,7 +2037,10 @@ export default {
         LTS: false,
         DETAILED_LINK: [
           {
-            LINK: 'http://download.turbolinux.com.cn:8011/iso/',
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
             ARCH: 'AArch64',
             SCENARIO: 'SERVER',
           },
@@ -4005,22 +4008,19 @@ export default {
       },
       {
         NAME: 'TurboLinux Enterprise server v15',
-        DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8011/',
-        DESC: 'Turbolinux Enterprise Server 15 (TLES15) is the enterprise commercial Linux distribution based on the openEuler community, designed for the AArch64 processor architecture.',
-        INSTALL_GUIDENCE_URL:
-          'http://download.turbolinux.com.cn:8011/docs/TurboLinux16-Installation-AArch64.pdf',
+        DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8013/',
+        DESC: 'Turbolinux Enterprise Server 15 (TLES15) is the enterprise commercial Linux distribution based on the openEuler community, designed for the x86_64 and AArch64 processor architecture.',
         SEEK_HELP_URL: 'http://forum.turbolinux.com.cn/ ',
         GET_ISO_URL: 'http://download.turbolinux.com.cn:8011/',
         MANUFACTURER: 'TurboLinux',
-        PUBLISH_DATE: '2020/04',
-        LIFE_CYCLE_URL:
-          'http://download.turbolinux.com.cn:8011/docs/TLES-OS-PLANNING.pdf',
-        RELEASE_DESC_URL:
-          'http://www.turbolinux.com.cn/index.php/pages/cat_id/2.html',
+        PUBLISH_DATE: '2022/06',
         LTS: false,
         DETAILED_LINK: [
           {
-            LINK: 'http://download.turbolinux.com.cn:8011/iso/',
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
             ARCH: 'AArch64',
             SCENARIO: 'SERVER',
           },
@@ -5833,14 +5833,11 @@ export default {
       },
       {
         NAME: 'TurboLinux Enterprise server v15',
-        DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8011/',
-        DESC: 'Turbolinux Enterprise Server 15 (TLES15) is the enterprise commercial Linux distribution based on the openEuler community, designed for the AArch64 processor architecture.',
-        INSTALL_GUIDENCE_URL:
-          'http://download.turbolinux.com.cn:8011/docs/TurboLinux16-Installation-AArch64.pdf',
-        SEEK_HELP_URL: 'http://forum.turbolinux.com.cn/ ',
-        GET_ISO_URL: 'http://download.turbolinux.com.cn:8011/',
+        DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8013/',
+        DESC: 'Turbolinux Enterprise Server 15 (TLES15) is the enterprise commercial Linux distribution based on the openEuler community, designed for the x86_64 and AArch64 processor architecture.',
+
         MANUFACTURER: 'TurboLinux',
-        PUBLISH_DATE: '2020/04',
+        PUBLISH_DATE: '2022/06',
         LIFE_CYCLE_URL:
           'http://download.turbolinux.com.cn:8011/docs/TLES-OS-PLANNING.pdf',
         RELEASE_DESC_URL:
@@ -5848,7 +5845,10 @@ export default {
         LTS: false,
         DETAILED_LINK: [
           {
-            LINK: 'http://download.turbolinux.com.cn:8011/iso/',
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
             ARCH: 'AArch64',
             SCENARIO: 'SERVER',
           },
