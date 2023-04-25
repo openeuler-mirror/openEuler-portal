@@ -16385,5 +16385,43 @@
     "chipModel": "LPe35000/LPe36000",
     "item": "",
     "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "10df",
+    "deviceID": "e300",
+    "svID": "10df",
+    "ssID": "e300",
+    "architecture": "x86_64",
+    "os": "openEuler 22.03 LTS",
+    "driverName": "lpfc",
+    "version": "0:14.0.639.23",
+    "type": "FC",
+    "date": "2023.04.20",
+    "sha256": "ce8e2f9804cf23b2eff95007b7299d6192681b2a3da6c3ef3c63c89bb778d508",
+    "driverSize": "8.2M",
+    "chipVendor": "Emulex",
+    "boardModel": "LPe32002-M2",
+    "chipModel": "LPe31000/LPe32000",
+    "item": "06030393",
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS/contrib/drivers/source/Packages/elx-lpfc-dd-openEuler22-14.0.639.23-ds-1.tar.gz"
+  },
+  {
+    "vendorID": "10df",
+    "deviceID": "e300",
+    "svID": "10df",
+    "ssID": "e300",
+    "architecture": "x86_64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "lpfc",
+    "version": "0:14.0.639.23",
+    "type": "FC",
+    "date": "2023.04.21",
+    "sha256": "9414ea596711499d59a94cf000a9483d77949b53c0010510ac40f16f34546689",
+    "driverSize": "6.2M",
+    "chipVendor": "Emulex",
+    "boardModel": "LPe32002-M2",
+    "chipModel": "LPe31000/LPe32000",
+    "item": "06030393",
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/elx-lpfc-dd-openEuler20-14.0.639.23-ds-1.tar.gz"
   }
 ]
