@@ -421,7 +421,7 @@ export default {
             {
               NAME: 'QuickIssue',
               LABEL: 'Query and submit issues',
-              PATH: 'https://quickissue.openeuler.org/en/',
+              PATH: 'https://quickissue.openeuler.org/en/issues/',
             },
             {
               NAME: 'Pkgship',
@@ -677,6 +677,8 @@ export default {
     ATOM_MO: '/atom-mo.png',
     MAIL: 'contact@openeuler.io',
     COPY_RIGHT: 'Copyright © 2023 openEuler. All rights reserved.',
+    LICENSED_1: 'Licensed under',
+    LICENSED_2: 'the Mulan PSL',
     RIGHT_LIST: [
       {
         NAME: 'Trademark',

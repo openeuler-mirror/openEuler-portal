@@ -31,7 +31,7 @@ const handleDownloadUrl = (url: string) => {
 //分页与数据项目
 const currentPage = ref(1);
 const pageSize = ref(12);
-const total = ref(i18n.value.download.BUSINESS_LIST.length);
+const total = ref(i18n.value.download.COMMERCIAL_RELEASE_LIST.length);
 const filterList: Ref<DownloadData[]> = ref([]);
 
 const dataList = computed(() => {
@@ -64,7 +64,9 @@ const activeManufacturer: Ref<string[]> = ref([]);
 const tagArch: Ref<string[]> = ref([]);
 const archAll = ref(true);
 const activeArch: Ref<string[]> = ref([]);
-const allList: any = cloneTool.cloneDeep(i18n.value.download.BUSINESS_LIST);
+const allList: any = cloneTool.cloneDeep(
+  i18n.value.download.COMMERCIAL_RELEASE_LIST
+);
 const setTagArch = () => {
   allList.forEach((item: any) => {
     if (item.DETAILED_LINK) {

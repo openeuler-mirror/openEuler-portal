@@ -312,6 +312,10 @@ onMounted(() => {
               >
             </div>
             <p class="copy-right">{{ i18n.common.FOOTER.COPY_RIGHT }}</p>
+            <p class="license">
+              <span>{{ i18n.common.FOOTER.LICENSED_1 }}</span>
+              {{ i18n.common.FOOTER.LICENSED_2 }}
+            </p>
           </div>
           <div class="footer-right">
             <div v-if="lang === 'zh'" class="code-box">
@@ -523,8 +527,21 @@ $color: #fff;
 
   .copy-right {
     font-size: var(--o-font-size-text);
+    color: var(--o-color-text-secondary);
+    margin-top: var(--o-spacing-h5);
+    @media (max-width: 1400px) {
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
+      margin-top: var(--o-spacing-h8);
+    }
+  }
+  .license {
+    font-size: var(--o-font-size-text);
     color: $color;
     margin-top: var(--o-spacing-h5);
+    span {
+      color: var(--o-color-text-secondary);
+    }
     @media (max-width: 1400px) {
       font-size: var(--o-font-size-tip);
       line-height: var(--o-line-height-tip);

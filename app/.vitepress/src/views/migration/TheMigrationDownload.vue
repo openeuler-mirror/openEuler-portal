@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import seoConfig from '@/data/common/seo';
+import { useRouter } from 'vitepress';
 
 import downloadInfo from '@/data/migration/migration-download';
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
+import IconDownload from '~icons/app/icon-download.svg';
 
 const { lang } = useData();
+const router = useRouter();
 
 interface LinkItem {
   name: string;
@@ -14,7 +17,11 @@ interface LinkItem {
 
 function handleClick(item: LinkItem) {
   if (item.link) {
-    window.open(item.link);
+    if (item.link.includes('http')) {
+      window.open(item.link);
+    } else {
+      router.go(item.link);
+    }
   }
 }
 </script>
@@ -69,7 +76,15 @@ function handleClick(item: LinkItem) {
                     </li>
                   </ul>
                   <template #suffixIcon
-                    ><OIcon><IconArrowRight /></OIcon
+                    ><OIcon>
+                      <component
+                        :is="
+                          buttons.softLinks?.length
+                            ? IconDownload
+                            : IconArrowRight
+                        "
+                      >
+                      </component> </OIcon
                   ></template>
                 </OButton>
               </div>
@@ -218,8 +233,9 @@ function handleClick(item: LinkItem) {
                 color: var(--o-color-brand1);
               }
             }
-            @media screen and (max-width: 440px) {
-              margin-right: 5px;
+            @media screen and (max-width: 768px) {
+              margin-right: 4px;
+              margin-bottom: 4px;
             }
             &:last-child {
               margin-right: var(--o-spacing-h3);
@@ -229,9 +245,6 @@ function handleClick(item: LinkItem) {
             }
           }
           .hover {
-            .o-icon {
-              transform: rotate(90deg) translateY(-3px);
-            }
             &:hover {
               :deep(.suffix-icon) {
                 transform: none;

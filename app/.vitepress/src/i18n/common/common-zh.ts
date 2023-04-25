@@ -586,7 +586,7 @@ export default {
             {
               NAME: 'EulerLauncher',
               LABEL: '跨平台openEuler虚拟机管理工具',
-              PATH: 'https://gitee.com/openeuler/omnivirt',
+              PATH: 'https://gitee.com/openeuler/eulerlauncher',
             },
             {
               NAME: '用户软件仓(EUR)',
@@ -823,6 +823,8 @@ export default {
     ATOM_MO: '/atom-mo.png',
     MAIL: 'contact@openeuler.io',
     COPY_RIGHT: '版权所有 © 2023 openEuler 保留一切权利',
+    LICENSED_1: '遵循',
+    LICENSED_2: '木兰宽松许可证（MulanPSL）',
     RIGHT_LIST: [
       {
         NAME: '品牌',

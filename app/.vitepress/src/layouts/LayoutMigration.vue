@@ -39,10 +39,13 @@ const isCustomLayout = computed(() => {
 watch(
   () => {
     const routeList = router.route.path.split('/');
-    return routeList[routeList.length - 2];
+    return routeList[3] ? routeList[3] : routeList[2];
   },
   (val) => {
     activeId.value = val;
+  },
+  {
+    immediate: true,
   }
 );
 
@@ -329,6 +332,9 @@ const handleNodeClick = (node: any) => {
   .migration-content {
     max-width: 1380px;
     margin: 0 auto;
+    & > :deep(div) > *:first-child {
+      margin-top: 0;
+    }
     @media screen and (max-width: 768px) {
       background-color: var(--o-color-bg2);
       padding: 24px 16px 16px 16px;

@@ -6,6 +6,7 @@ import { computed } from 'vue';
 import portalInfo from '@/data/migration/migration-portal';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
+import IconDownload from '~icons/app/icon-download.svg';
 
 const commonStore = useCommon();
 
@@ -68,7 +69,15 @@ function handleClick(item: LinkItem) {
                   </li>
                 </ul>
                 <template #suffixIcon
-                  ><OIcon><IconArrowRight /></OIcon
+                  ><OIcon>
+                    <component
+                      :is="
+                        buttons.softLinks?.length
+                          ? IconDownload
+                          : IconArrowRight
+                      "
+                    >
+                    </component> </OIcon
                 ></template>
               </OButton>
             </div>
@@ -237,9 +246,6 @@ function handleClick(item: LinkItem) {
             }
           }
           .hover {
-            .o-icon {
-              transform: rotate(90deg) translateY(-3px);
-            }
             &:hover {
               :deep(.suffix-icon) {
                 transform: none;
