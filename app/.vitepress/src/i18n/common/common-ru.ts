@@ -288,6 +288,8 @@ export default {
       'openEuler - это проект с открытым исходным кодом, созданный и управляемый фондом OpenAtom.',
     ATOM_PC: '/atom-pc.png',
     ATOM_MO: '/atom-mo.png',
+    LICENSED_1: 'Licensed under',
+    LICENSED_2: 'the Mulan PSL',
     MAIL: 'contact@openeuler.io',
     COPY_RIGHT: 'Авторские права © openEuler 2023. Все права защищены.',
     RIGHT_LIST: [

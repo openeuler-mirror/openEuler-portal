@@ -69,7 +69,7 @@ export default {
   BTNRESET: 'сбросить',
   COMMUNITY_LIST: data.ru.COMMUNITY_LIST,
   SCENARIO_LIST: data.ru.SCENARIO_LIST,
-  BUSINESS_LIST: data.ru.BUSINESS_LIST,
+  COMMERCIAL_RELEASE_LIST: data.ru.COMMERCIAL_RELEASE_LIST,
   PAGINATION: ['已显示', '条记录/共', '条', '加载更多'],
   MIRROR_SELECT: {
     TITLE: 'Получить ISO',

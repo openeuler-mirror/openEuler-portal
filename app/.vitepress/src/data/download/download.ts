@@ -1722,7 +1722,7 @@ export default {
         ],
       },
     ],
-    BUSINESS_LIST: [
+    COMMERCIAL_RELEASE_LIST: [
       {
         NAME: '超聚变服务器操作系统 FusionOS 22 （免费使用授权）',
         DOWNLOAD_URL:
@@ -1773,6 +1773,32 @@ export default {
           },
           {
             LINK: 'https://www.linx-info.com/download/os/el/arm64/',
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+        ],
+      },
+      {
+        NAME: '拓林思企业级服务器操作系统',
+        DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8013/',
+        DESC: '拓林思企业级服务器操作系统是一款基于openEuler操作系统打造的针对x86_64、AArch64处理器架构的操作系统发行版，适用于数据库、云计算、大数据、分布式计算等多种应用场景，为客户提供安全、可靠的解决系统方案，为各类应用提供标准、稳定的运行环境。',
+        INSTALL_GUIDENCE_URL:
+          'http://download.turbolinux.com.cn:8011/docs/TurboLinux16-Installation-AArch64.pdf',
+        SEEK_HELP_URL: 'http://forum.turbolinux.com.cn/',
+        GET_ISO_URL: 'http://download.turbolinux.com.cn:8013/',
+        MANUFACTURER: '北京拓林思软件有限公司',
+        PUBLISH_DATE: '2022/06',
+        LIFE_CYCLE_URL:
+          'http://download.turbolinux.com.cn:8011/docs/TLES-OS-PLANNING.pdf',
+        RELEASE_DESC_URL:
+          'http://www.turbolinux.com.cn/index.php/pages/cat_id/2.html',
+        LTS: false,
+        DETAILED_LINK: [
+          {
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
             ARCH: 'AArch64',
             SCENARIO: 'SERVER',
           },
@@ -1891,99 +1917,6 @@ export default {
         LTS: false,
       },
       {
-        NAME: 'HopeEdge',
-        DOWNLOAD_URL: 'http://webapp.hoperun.com:8007/HopeEdge/',
-        DESC: '物联网边缘计算操作系统HopeEdge是基于openEuler构建的、面向IoT场景的边缘计算操作系统，具备轻量安全、自主创新、高效互联、快速部署四大关键特性；提供设备管理、数据采集、云边协同、人工智能等功能。',
-        RELEASE_DESC_URL:
-          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_ReleaseNote.pdf',
-        INSTALL_GUIDENCE_URL:
-          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_Installation_Guide.pdf',
-        SEEK_HELP_URL: 'http://www.hopeinfra.com/contactus.html',
-        GET_ISO_URL: 'http://webapp.hoperun.com:8007/HopeEdge/',
-        LIFE_CYCLE_URL: '',
-        MANUFACTURER: '江苏润和',
-        PUBLISH_DATE: '2020/07',
-        LTS: false,
-        DETAILED_LINK: [
-          {
-            LINK: 'http://webapp.hoperun.com:8007/HopeStage/x86_64/',
-            ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
-          },
-          {
-            LINK: 'http://webapp.hoperun.com:8007/HopeStage/aarch64/',
-            ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
-          },
-        ],
-      },
-      {
-        NAME: '中科傲来服务器操作系统',
-        DOWNLOAD_URL: 'https://eulixos.com/#/download',
-        DESC: '中科傲来服务器操作系统是一款基于openEuler操作系统打造的服务器操作系统发行版，支持X86_64、AArch64、RISC-V等多种处理器架构，适用于数据库、云计算、大数据、人工智能、分布式计算等多种应用场景，具备高安全、高可靠、高性能、跨平台等特点，旨在为各类应用及解决方案提供标准、安全、可靠的操作系统及服务。',
-        RELEASE_DESC_URL:
-          'https://eulixos.com/userguide/%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E/%E7%89%88%E6%9C%AC%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E.html',
-        INSTALL_GUIDENCE_URL:
-          'https://eulixos.com/userguide/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E5%89%8D%E8%A8%80.html',
-        SEEK_HELP_URL: 'https://eulixos.com/#/feedback',
-        GET_ISO_URL: 'https://eulixos.com/#/download',
-        LIFE_CYCLE_URL: '',
-        MANUFACTURER: '中科院软件所',
-        PUBLISH_DATE: '2020/05',
-        LTS: false,
-        DETAILED_LINK: [
-          {
-            LINK: 'https://eulixos.com/#/download',
-            ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
-          },
-          {
-            LINK: 'https://eulixos.com/#/download',
-            ARCH: 'RISC-V',
-            SCENARIO: 'SERVER',
-          },
-        ],
-      },
-      {
-        NAME: '拓林思企业级服务器操作系统',
-        DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8013/',
-        DESC: '拓林思企业级服务器操作系统是一款基于openEuler操作系统打造的针对x86_64、AArch64处理器架构的操作系统发行版，适用于数据库、云计算、大数据、分布式计算等多种应用场景，为客户提供安全、可靠的解决系统方案，为各类应用提供标准、稳定的运行环境。',
-        INSTALL_GUIDENCE_URL:
-          'http://download.turbolinux.com.cn:8011/docs/TurboLinux16-Installation-AArch64.pdf',
-        SEEK_HELP_URL: 'http://forum.turbolinux.com.cn/',
-        GET_ISO_URL: 'http://download.turbolinux.com.cn:8013/',
-        MANUFACTURER: '北京拓林思软件有限公司',
-        PUBLISH_DATE: '2022/06',
-        LIFE_CYCLE_URL:
-          'http://download.turbolinux.com.cn:8011/docs/TLES-OS-PLANNING.pdf',
-        RELEASE_DESC_URL:
-          'http://www.turbolinux.com.cn/index.php/pages/cat_id/2.html',
-        LTS: false,
-        DETAILED_LINK: [
-          {
-            ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
-          },
-          {
-            ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
-          },
-        ],
-      },
-      {
-        NAME: '同源OS 8.1欧拉发行版',
-        DOWNLOAD_URL: 'http://repo.tongyuanos.com/TongyuanOS8.1-euler/',
-        DESC: '内核源码来自于欧拉开源社区中，其它软件包来自于CentOS8.1的aarch64版，完全兼容CentOS8.1，产品发布物为标准启动安装ISO。',
-        INSTALL_GUIDENCE_URL: 'http://repo.tongyuanos.com/TongyuanOS8.1-euler/',
-        SEEK_HELP_URL: 'mailto:youliang.wu@tongyuanos.com',
-        GET_ISO_URL: 'http://repo.tongyuanos.com/TongyuanOS8.1-euler/',
-        MANUFACTURER: '同源OS',
-        PUBLISH_DATE: '2020/04',
-        LIFE_CYCLE_URL: '',
-        RELEASE_DESC_URL: 'http://repo.tongyuanos.com/TongyuanOS8.1-euler/',
-        LTS: false,
-      },
-      {
         NAME: '麒麟信安 Kylinsec V3.5.1',
         DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.5-1/',
         DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
@@ -2065,6 +1998,60 @@ export default {
         ],
       },
       {
+        NAME: 'HopeEdge',
+        DOWNLOAD_URL: 'http://webapp.hoperun.com:8007/HopeEdge/',
+        DESC: '物联网边缘计算操作系统HopeEdge是基于openEuler构建的、面向IoT场景的边缘计算操作系统，具备轻量安全、自主创新、高效互联、快速部署四大关键特性；提供设备管理、数据采集、云边协同、人工智能等功能。',
+        RELEASE_DESC_URL:
+          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_ReleaseNote.pdf',
+        INSTALL_GUIDENCE_URL:
+          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_Installation_Guide.pdf',
+        SEEK_HELP_URL: 'http://www.hopeinfra.com/contactus.html',
+        GET_ISO_URL: 'http://webapp.hoperun.com:8007/HopeEdge/',
+        LIFE_CYCLE_URL: '',
+        MANUFACTURER: '江苏润和',
+        PUBLISH_DATE: '2020/07',
+        LTS: false,
+        DETAILED_LINK: [
+          {
+            LINK: 'http://webapp.hoperun.com:8007/HopeStage/x86_64/',
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK: 'http://webapp.hoperun.com:8007/HopeStage/aarch64/',
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+        ],
+      },
+      {
+        NAME: '中科傲来服务器操作系统',
+        DOWNLOAD_URL: 'https://eulixos.com/#/download',
+        DESC: '中科傲来服务器操作系统是一款基于openEuler操作系统打造的服务器操作系统发行版，支持X86_64、AArch64、RISC-V等多种处理器架构，适用于数据库、云计算、大数据、人工智能、分布式计算等多种应用场景，具备高安全、高可靠、高性能、跨平台等特点，旨在为各类应用及解决方案提供标准、安全、可靠的操作系统及服务。',
+        RELEASE_DESC_URL:
+          'https://eulixos.com/userguide/%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E/%E7%89%88%E6%9C%AC%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E.html',
+        INSTALL_GUIDENCE_URL:
+          'https://eulixos.com/userguide/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E5%89%8D%E8%A8%80.html',
+        SEEK_HELP_URL: 'https://eulixos.com/#/feedback',
+        GET_ISO_URL: 'https://eulixos.com/#/download',
+        LIFE_CYCLE_URL: '',
+        MANUFACTURER: '中科院软件所',
+        PUBLISH_DATE: '2020/05',
+        LTS: false,
+        DETAILED_LINK: [
+          {
+            LINK: 'https://eulixos.com/#/download',
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK: 'https://eulixos.com/#/download',
+            ARCH: 'RISC-V',
+            SCENARIO: 'SERVER',
+          },
+        ],
+      },
+      {
         NAME: '普华服务器操作系统v5.1',
         DOWNLOAD_URL: 'https://www.i-soft.com.cn/type/4/714.jhtml/',
         DESC: '暂无描述',
@@ -2089,6 +2076,19 @@ export default {
             SCENARIO: 'SERVER',
           },
         ],
+      },
+      {
+        NAME: '同源OS 8.1欧拉发行版',
+        DOWNLOAD_URL: 'http://repo.tongyuanos.com/TongyuanOS8.1-euler/',
+        DESC: '内核源码来自于欧拉开源社区中，其它软件包来自于CentOS8.1的aarch64版，完全兼容CentOS8.1，产品发布物为标准启动安装ISO。',
+        INSTALL_GUIDENCE_URL: 'http://repo.tongyuanos.com/TongyuanOS8.1-euler/',
+        SEEK_HELP_URL: 'mailto:youliang.wu@tongyuanos.com',
+        GET_ISO_URL: 'http://repo.tongyuanos.com/TongyuanOS8.1-euler/',
+        MANUFACTURER: '同源OS',
+        PUBLISH_DATE: '2020/04',
+        LIFE_CYCLE_URL: '',
+        RELEASE_DESC_URL: 'http://repo.tongyuanos.com/TongyuanOS8.1-euler/',
+        LTS: false,
       },
     ],
     SCENARIO_LIST: [
@@ -3773,7 +3773,30 @@ export default {
         PLANNED_EOL: '',
       },
     ],
-    BUSINESS_LIST: [
+    COMMERCIAL_RELEASE_LIST: [
+      {
+        NAME: 'TurboLinux Enterprise server v15',
+        DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8013/',
+        DESC: 'Turbolinux Enterprise Server 15 (TLES15) is the enterprise commercial Linux distribution based on the openEuler community, designed for the x86_64 and AArch64 processor architecture.',
+
+        MANUFACTURER: 'TurboLinux',
+        PUBLISH_DATE: '2022/06',
+        LIFE_CYCLE_URL:
+          'http://download.turbolinux.com.cn:8011/docs/TLES-OS-PLANNING.pdf',
+        RELEASE_DESC_URL:
+          'http://www.turbolinux.com.cn/index.php/pages/cat_id/2.html',
+        LTS: false,
+        DETAILED_LINK: [
+          {
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+        ],
+      },
       {
         NAME: 'RedFlag Asianux Server - 8.1',
         DOWNLOAD_URL: 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
@@ -3821,82 +3844,6 @@ export default {
           },
         ],
       },
-
-      {
-        NAME: 'HopeEdge',
-        DESC: 'HopeEdge Linux for Edge Computing is an edge computing operating system based on openEuler, which is oriented to IoT scenarios. It has four key characteristics: lightweight security, independent innovation, efficient interconnection and rapid deployment. HopeEdge also provides equipment management, data acquisition, cloud-edge collaboration, artificial intelligence and other characteristics.',
-        DOWNLOAD_URL: 'http://webapp.hoperun.com:8007/',
-        RELEASE_DESC_URL:
-          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_ReleaseNote.pdf',
-        INSTALL_GUIDENCE_URL:
-          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_Installation_Guide.pdf',
-        SEEK_HELP_URL: 'http://www.hopeinfra.com/contactus.html',
-        GET_ISO_URL: 'http://webapp.hoperun.com:8007/HopeEdge/',
-        LIFE_CYCLE_URL: '',
-        MANUFACTURER: 'HOPERUN',
-        PUBLISH_DATE: '2020/07',
-        LTS: false,
-        DETAILED_LINK: [
-          {
-            LINK: 'http://webapp.hoperun.com:8007/HopeStage/x86_64/',
-            ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
-          },
-          {
-            LINK: 'http://webapp.hoperun.com:8007/HopeStage/aarch64/',
-            ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
-          },
-        ],
-      },
-      {
-        NAME: 'EulixOS Server',
-        DOWNLOAD_URL: 'https://eulixos.com/#/download',
-        DESC: 'The EulixOS is a server OS distribution based on the openEuler OS. The EulixOS supports multiple processor architectures, such as x86_64, AArch64, and RISC-V, and is ideal for various application scenarios, including databases, cloud computing, big data, AI, and distributed computing. It combines high security and reliability with the ultimate performance across platforms, aiming to provide a standard, secure, and reliable operating system and quality services for diverse applications and solutions.',
-        RELEASE_DESC_URL:
-          'https://eulixos.com/userguide/%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E/%E7%89%88%E6%9C%AC%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E.html',
-        INSTALL_GUIDENCE_URL:
-          'https://eulixos.com/userguide/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E5%89%8D%E8%A8%80.html',
-        SEEK_HELP_URL: 'https://eulixos.com/#/feedback',
-        GET_ISO_URL: 'https://eulixos.com/#/download',
-        LIFE_CYCLE_URL: '',
-        MANUFACTURER: 'ISCAS',
-        PUBLISH_DATE: '2020/05',
-        LTS: false,
-        DETAILED_LINK: [
-          {
-            LINK: 'https://eulixos.com/#/download',
-            ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
-          },
-          {
-            LINK: 'https://eulixos.com/#/download',
-            ARCH: 'RISC-V',
-            SCENARIO: 'SERVER',
-          },
-        ],
-      },
-      {
-        NAME: 'TurboLinux Enterprise server v15',
-        DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8013/',
-        DESC: 'Turbolinux Enterprise Server 15 (TLES15) is the enterprise commercial Linux distribution based on the openEuler community, designed for the x86_64 and AArch64 processor architecture.',
-        SEEK_HELP_URL: 'http://forum.turbolinux.com.cn/ ',
-        GET_ISO_URL: 'http://download.turbolinux.com.cn:8011/',
-        MANUFACTURER: 'TurboLinux',
-        PUBLISH_DATE: '2022/06',
-        LTS: false,
-        DETAILED_LINK: [
-          {
-            ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
-          },
-          {
-            ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
-          },
-        ],
-      },
-
       {
         NAME: 'Kylinsec',
         DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.4-4/',
@@ -3925,6 +3872,33 @@ export default {
         ],
       },
       {
+        NAME: 'HopeEdge',
+        DESC: 'HopeEdge Linux for Edge Computing is an edge computing operating system based on openEuler, which is oriented to IoT scenarios. It has four key characteristics: lightweight security, independent innovation, efficient interconnection and rapid deployment. HopeEdge also provides equipment management, data acquisition, cloud-edge collaboration, artificial intelligence and other characteristics.',
+        DOWNLOAD_URL: 'http://webapp.hoperun.com:8007/',
+        RELEASE_DESC_URL:
+          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_ReleaseNote.pdf',
+        INSTALL_GUIDENCE_URL:
+          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_Installation_Guide.pdf',
+        SEEK_HELP_URL: 'http://www.hopeinfra.com/contactus.html',
+        GET_ISO_URL: 'http://webapp.hoperun.com:8007/HopeEdge/',
+        LIFE_CYCLE_URL: '',
+        MANUFACTURER: 'HOPERUN',
+        PUBLISH_DATE: '2020/07',
+        LTS: false,
+        DETAILED_LINK: [
+          {
+            LINK: 'http://webapp.hoperun.com:8007/HopeStage/x86_64/',
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK: 'http://webapp.hoperun.com:8007/HopeStage/aarch64/',
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+        ],
+      },
+      {
         NAME: 'iSoftServerOS-Kunpeng-5.1',
         DOWNLOAD_URL: 'http://www.i-soft.com.cn/type/4/714.jhtml',
         DESC: 'No description available',
@@ -3946,6 +3920,33 @@ export default {
           {
             LINK: 'https://www.i-soft.com.cn/type/4/714.jhtml/',
             ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+        ],
+      },
+      {
+        NAME: 'EulixOS Server',
+        DOWNLOAD_URL: 'https://eulixos.com/#/download',
+        DESC: 'The EulixOS is a server OS distribution based on the openEuler OS. The EulixOS supports multiple processor architectures, such as x86_64, AArch64, and RISC-V, and is ideal for various application scenarios, including databases, cloud computing, big data, AI, and distributed computing. It combines high security and reliability with the ultimate performance across platforms, aiming to provide a standard, secure, and reliable operating system and quality services for diverse applications and solutions.',
+        RELEASE_DESC_URL:
+          'https://eulixos.com/userguide/%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E/%E7%89%88%E6%9C%AC%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E.html',
+        INSTALL_GUIDENCE_URL:
+          'https://eulixos.com/userguide/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E5%89%8D%E8%A8%80.html',
+        SEEK_HELP_URL: 'https://eulixos.com/#/feedback',
+        GET_ISO_URL: 'https://eulixos.com/#/download',
+        LIFE_CYCLE_URL: '',
+        MANUFACTURER: 'ISCAS',
+        PUBLISH_DATE: '2020/05',
+        LTS: false,
+        DETAILED_LINK: [
+          {
+            LINK: 'https://eulixos.com/#/download',
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK: 'https://eulixos.com/#/download',
+            ARCH: 'RISC-V',
             SCENARIO: 'SERVER',
           },
         ],
@@ -5546,7 +5547,30 @@ export default {
         PLANNED_EOL: '',
       },
     ],
-    BUSINESS_LIST: [
+    COMMERCIAL_RELEASE_LIST: [
+      {
+        NAME: 'TurboLinux Enterprise server v15',
+        DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8013/',
+        DESC: 'Turbolinux Enterprise Server 15 (TLES15) is the enterprise commercial Linux distribution based on the openEuler community, designed for the x86_64 and AArch64 processor architecture.',
+
+        MANUFACTURER: 'TurboLinux',
+        PUBLISH_DATE: '2022/06',
+        LIFE_CYCLE_URL:
+          'http://download.turbolinux.com.cn:8011/docs/TLES-OS-PLANNING.pdf',
+        RELEASE_DESC_URL:
+          'http://www.turbolinux.com.cn/index.php/pages/cat_id/2.html',
+        LTS: false,
+        DETAILED_LINK: [
+          {
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+        ],
+      },
       {
         NAME: 'RedFlag Asianux Server - 8.1',
         DOWNLOAD_URL: 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
@@ -5594,85 +5618,6 @@ export default {
           },
         ],
       },
-
-      {
-        NAME: 'HopeEdge',
-        DESC: 'HopeEdge Linux for Edge Computing is an edge computing operating system based on openEuler, which is oriented to IoT scenarios. It has four key characteristics: lightweight security, independent innovation, efficient interconnection and rapid deployment. HopeEdge also provides equipment management, data acquisition, cloud-edge collaboration, artificial intelligence and other characteristics.',
-        DOWNLOAD_URL: 'http://webapp.hoperun.com:8007/',
-        RELEASE_DESC_URL:
-          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_ReleaseNote.pdf',
-        INSTALL_GUIDENCE_URL:
-          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_Installation_Guide.pdf',
-        SEEK_HELP_URL: 'http://www.hopeinfra.com/contactus.html',
-        GET_ISO_URL: 'http://webapp.hoperun.com:8007/HopeEdge/',
-        LIFE_CYCLE_URL: '',
-        MANUFACTURER: 'HOPERUN',
-        PUBLISH_DATE: '2020/07',
-        LTS: false,
-        DETAILED_LINK: [
-          {
-            LINK: 'http://webapp.hoperun.com:8007/HopeStage/x86_64/',
-            ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
-          },
-          {
-            LINK: 'http://webapp.hoperun.com:8007/HopeStage/aarch64/',
-            ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
-          },
-        ],
-      },
-      {
-        NAME: 'EulixOS Server',
-        DOWNLOAD_URL: 'https://eulixos.com/#/download',
-        DESC: 'The EulixOS is a server OS distribution based on the openEuler OS. The EulixOS supports multiple processor architectures, such as x86_64, AArch64, and RISC-V, and is ideal for various application scenarios, including databases, cloud computing, big data, AI, and distributed computing. It combines high security and reliability with the ultimate performance across platforms, aiming to provide a standard, secure, and reliable operating system and quality services for diverse applications and solutions.',
-        RELEASE_DESC_URL:
-          'https://eulixos.com/userguide/%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E/%E7%89%88%E6%9C%AC%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E.html',
-        INSTALL_GUIDENCE_URL:
-          'https://eulixos.com/userguide/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E5%89%8D%E8%A8%80.html',
-        SEEK_HELP_URL: 'https://eulixos.com/#/feedback',
-        GET_ISO_URL: 'https://eulixos.com/#/download',
-        LIFE_CYCLE_URL: '',
-        MANUFACTURER: 'ISCAS',
-        PUBLISH_DATE: '2020/05',
-        LTS: false,
-        DETAILED_LINK: [
-          {
-            LINK: 'https://eulixos.com/#/download',
-            ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
-          },
-          {
-            LINK: 'https://eulixos.com/#/download',
-            ARCH: 'RISC-V',
-            SCENARIO: 'SERVER',
-          },
-        ],
-      },
-      {
-        NAME: 'TurboLinux Enterprise server v15',
-        DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8013/',
-        DESC: 'Turbolinux Enterprise Server 15 (TLES15) is the enterprise commercial Linux distribution based on the openEuler community, designed for the x86_64 and AArch64 processor architecture.',
-
-        MANUFACTURER: 'TurboLinux',
-        PUBLISH_DATE: '2022/06',
-        LIFE_CYCLE_URL:
-          'http://download.turbolinux.com.cn:8011/docs/TLES-OS-PLANNING.pdf',
-        RELEASE_DESC_URL:
-          'http://www.turbolinux.com.cn/index.php/pages/cat_id/2.html',
-        LTS: false,
-        DETAILED_LINK: [
-          {
-            ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
-          },
-          {
-            ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
-          },
-        ],
-      },
-
       {
         NAME: 'Kylinsec',
         DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.4-4/',
@@ -5701,6 +5646,33 @@ export default {
         ],
       },
       {
+        NAME: 'HopeEdge',
+        DESC: 'HopeEdge Linux for Edge Computing is an edge computing operating system based on openEuler, which is oriented to IoT scenarios. It has four key characteristics: lightweight security, independent innovation, efficient interconnection and rapid deployment. HopeEdge also provides equipment management, data acquisition, cloud-edge collaboration, artificial intelligence and other characteristics.',
+        DOWNLOAD_URL: 'http://webapp.hoperun.com:8007/',
+        RELEASE_DESC_URL:
+          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_ReleaseNote.pdf',
+        INSTALL_GUIDENCE_URL:
+          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_Installation_Guide.pdf',
+        SEEK_HELP_URL: 'http://www.hopeinfra.com/contactus.html',
+        GET_ISO_URL: 'http://webapp.hoperun.com:8007/HopeEdge/',
+        LIFE_CYCLE_URL: '',
+        MANUFACTURER: 'HOPERUN',
+        PUBLISH_DATE: '2020/07',
+        LTS: false,
+        DETAILED_LINK: [
+          {
+            LINK: 'http://webapp.hoperun.com:8007/HopeStage/x86_64/',
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK: 'http://webapp.hoperun.com:8007/HopeStage/aarch64/',
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+        ],
+      },
+      {
         NAME: 'iSoftServerOS-Kunpeng-5.1',
         DOWNLOAD_URL: 'http://www.i-soft.com.cn/type/4/714.jhtml',
         DESC: 'No description available',
@@ -5722,6 +5694,33 @@ export default {
           {
             LINK: 'https://www.i-soft.com.cn/type/4/714.jhtml/',
             ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+        ],
+      },
+      {
+        NAME: 'EulixOS Server',
+        DOWNLOAD_URL: 'https://eulixos.com/#/download',
+        DESC: 'The EulixOS is a server OS distribution based on the openEuler OS. The EulixOS supports multiple processor architectures, such as x86_64, AArch64, and RISC-V, and is ideal for various application scenarios, including databases, cloud computing, big data, AI, and distributed computing. It combines high security and reliability with the ultimate performance across platforms, aiming to provide a standard, secure, and reliable operating system and quality services for diverse applications and solutions.',
+        RELEASE_DESC_URL:
+          'https://eulixos.com/userguide/%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E/%E7%89%88%E6%9C%AC%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E.html',
+        INSTALL_GUIDENCE_URL:
+          'https://eulixos.com/userguide/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E5%89%8D%E8%A8%80.html',
+        SEEK_HELP_URL: 'https://eulixos.com/#/feedback',
+        GET_ISO_URL: 'https://eulixos.com/#/download',
+        LIFE_CYCLE_URL: '',
+        MANUFACTURER: 'ISCAS',
+        PUBLISH_DATE: '2020/05',
+        LTS: false,
+        DETAILED_LINK: [
+          {
+            LINK: 'https://eulixos.com/#/download',
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK: 'https://eulixos.com/#/download',
+            ARCH: 'RISC-V',
             SCENARIO: 'SERVER',
           },
         ],
