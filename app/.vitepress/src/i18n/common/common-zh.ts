@@ -647,6 +647,11 @@ export default {
               PATH: '/community/honor/',
             },
             {
+              NAME: 'oEEP',
+              LABEL: '查看openEuler社区的演进提案',
+              PATH: '/oEEP/?name=oEEP-0000 oEEP  索引',
+            },
+            {
               NAME: '贡献看板',
               LABEL: '查看openEuler社区数据',
               PATH: 'https://datastat.openeuler.org/zh/overview',
@@ -713,6 +718,11 @@ export default {
               NAME: 'StratoVirt',
               LABEL: '面向云数据中心的企业级虚拟化VMM',
               PATH: '/other/projects/stratovirt/',
+            },
+            {
+              NAME: 'NestOS',
+              LABEL: '基于欧拉开源操作系统的云底座操作系统',
+              PATH: 'https://nestos.openeuler.org/',
             },
           ],
         },
