@@ -5,6 +5,7 @@ import { useI18n } from '@/i18n';
 import lodash from 'lodash';
 
 import { getUrlParam } from '@/shared/utils';
+import { DownloadCommunityData } from '@/shared/@types/type-download';
 
 import DownloadContent from './DownloadContent.vue';
 import AppContent from '@/components/AppContent.vue';
@@ -14,7 +15,9 @@ import IconChevronRight from '~icons/app/icon-chevron-right.svg';
 
 const i18n = useI18n();
 const { lang } = useData();
-const downloadList: any = lodash.cloneDeep(i18n.value.download.COMMUNITY_LIST);
+const downloadList: DownloadCommunityData[] = lodash.cloneDeep(
+  i18n.value.download.COMMUNITY_LIST
+);
 downloadList.pop();
 const activeVersion = ref(downloadList[0].NAME);
 function handleSelectChange() {

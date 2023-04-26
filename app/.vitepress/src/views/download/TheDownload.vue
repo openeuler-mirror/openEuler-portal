@@ -15,7 +15,7 @@ const i18n = useI18n();
 const downloadList = i18n.value.download.COMMUNITY_LIST;
 const screenWidth = useWindowResize();
 const router = useRouter();
-const shownNameList: any = [];
+const shownNameList: string[] = [];
 let shownIndex = 0;
 function setShownNameList() {
   let ltsIndex = 0;

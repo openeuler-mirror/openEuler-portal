@@ -11,10 +11,10 @@ defineProps({
 <template>
   <div class="floor-box">
     <h2 v-if="floorData.title" :id="floorData.title" class="floor-title">
-      <span class="title-bg" v-html="floorData.description"></span>
-      <span class="title-text" v-html="floorData.title"></span>
+      <span v-dompurify-html="floorData.description" class="title-bg"></span>
+      <span v-dompurify-html="floorData.title" class="title-text"></span>
     </h2>
-    <div class="markdown" v-html="floorData.content"></div>
+    <div v-dompurify-html="floorData.content" class="markdown"></div>
   </div>
 </template>
 <style lang="scss" scoped>

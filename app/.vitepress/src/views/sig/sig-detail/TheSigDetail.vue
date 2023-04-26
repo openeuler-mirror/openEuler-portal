@@ -273,8 +273,8 @@ onMounted(() => {
           v-if="
             easyeditorInfo.introduction && easyeditorInfo.introduction.content
           "
+          v-dompurify-html="easyeditorInfo.introduction.content"
           class="introduction-content"
-          v-html="easyeditorInfo.introduction.content"
         ></p>
         <p v-else-if="sigMemberData.description" class="introduction-content">
           {{ sigMemberData.description }}

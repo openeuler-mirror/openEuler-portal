@@ -8,6 +8,7 @@ import '@/shared/styles/index.scss';
 
 import ElementPlus from 'element-plus';
 import OpenDesign from 'opendesign';
+import VueDOMPurifyHTML from 'vue-dompurify-html'
 
 import Layout from '@/App.vue';
 import NotFound from '@/NotFound.vue';
@@ -20,6 +21,7 @@ export default {
       // @ts-ignore
       global.window = {};
     }
+    app.use(VueDOMPurifyHTML);
     app.use(SeoBox as any);
     app.use(createPinia());
     app.use(ElementPlus);

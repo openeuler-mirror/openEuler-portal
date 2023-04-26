@@ -7,7 +7,7 @@ import { useI18n } from '@/i18n';
 import { useCommon } from '@/stores/common';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
-import type { DownloadData } from '@/shared/@types/type-download';
+import type { DownloadCommunityData } from '@/shared/@types/type-download';
 
 import AppContent from '@/components/AppContent.vue';
 import TagFilter from '@/components/TagFilter.vue';
@@ -30,7 +30,7 @@ const isMobile = computed(() => (screenWidth.value <= 1100 ? true : false));
 //分页与数据项目
 const currentPage = ref(1);
 const pageSize = ref(10);
-const filterList: Ref<DownloadData[]> = ref([]);
+const filterList: Ref<DownloadCommunityData[]> = ref([]);
 const dataList = computed(() => {
   return filterList.value.slice(
     (currentPage.value - 1) * pageSize.value,
@@ -208,7 +208,7 @@ const changeCurrentPageMoblie = (val: string) => {
     <div class="download">
       <OSearch
         v-model="searchContent"
-        class="archive-search"
+        class="o-search"
         :placeholder="i18n.download.PLACEHOLDER"
         @change="changeSearchVal"
       ></OSearch>
@@ -267,7 +267,7 @@ const changeCurrentPageMoblie = (val: string) => {
             :label="i18n.download.VERSION"
             :width="screenWidth > 1400 ? '200' : '200'"
           >
-            <template #default="scope">
+            <template #default="scope: any">
               {{ scope.row?.NAME }}
             </template>
           </el-table-column>
@@ -275,7 +275,7 @@ const changeCurrentPageMoblie = (val: string) => {
             :label="i18n.download.ARCHITECTURE"
             :width="screenWidth > 1400 ? '300' : ''"
           >
-            <template #default="scope">
+            <template #default="scope: any">
               <div class="arch-box">
                 <span
                   v-for="item in getItemList('ARCH', scope.row?.DETAILED_LINK)"
@@ -289,7 +289,7 @@ const changeCurrentPageMoblie = (val: string) => {
             :label="i18n.download.SCENARIO"
             :width="screenWidth > 1400 ? '300' : ''"
           >
-            <template #default="scope">
+            <template #default="scope: any">
               <div class="scenario-box">
                 <span
                   v-for="item in getItemList(
@@ -306,7 +306,7 @@ const changeCurrentPageMoblie = (val: string) => {
             :label="i18n.download.RELEASE_DATE"
             :width="screenWidth > 1400 ? '200' : '150'"
           >
-            <template #default="scope">
+            <template #default="scope: any">
               {{ scope.row?.PUBLISH_DATE }}
             </template>
           </el-table-column>
@@ -314,7 +314,7 @@ const changeCurrentPageMoblie = (val: string) => {
             :label="i18n.download.PLANNEDEOL"
             :width="screenWidth > 1400 ? '200' : '150'"
           >
-            <template #default="scope">
+            <template #default="scope: any">
               {{ scope.row?.PLANNED_EOL }}
             </template>
           </el-table-column>
@@ -322,7 +322,7 @@ const changeCurrentPageMoblie = (val: string) => {
             :label="i18n.download.DOWNLOAD_LINK"
             :width="screenWidth > 1400 ? '' : '200'"
           >
-            <template #default="scope">
+            <template #default="scope: any">
               <a
                 class="download-detail"
                 :href="
@@ -505,7 +505,7 @@ const changeCurrentPageMoblie = (val: string) => {
       color: var(--o-color-text5);
     }
   }
-  :deep(.archive-search) {
+  .o-search {
     margin-top: var(--o-spacing-h2);
     @media (max-width: 1100px) {
       margin-top: var(--o-spacing-h4);

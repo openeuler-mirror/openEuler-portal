@@ -221,8 +221,8 @@ function handleClickBtn(link = '') {
         </p>
         <h5 class="meeting-title">{{ sigData.MEETING_TITLE }}</h5>
         <p
+          v-dompurify-html="meetingDetail ? meetingDetail : meetingTip"
           class="meeting-tip"
-          v-html="meetingDetail ? meetingDetail : meetingTip"
         ></p>
         <OButton
           type="text"
