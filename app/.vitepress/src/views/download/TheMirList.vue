@@ -179,8 +179,8 @@ onMounted(async () => {
       />
       <el-table-column :label="i18n.download.MIRROR_ALL.SPONSOR" min-width="90">
         <template #default="scope">
-          <a :href="scope.row.sponsor" target="_blank"
-            ><img :src="scope.row.sponsorLogo" class="mirror-list-img"
+          <a :href="scope.row.sponsor" target="_blank" class="mirror-list-img"
+            ><img :src="scope.row.sponsorLogo" 
           /></a>
         </template>
       </el-table-column>
@@ -521,7 +521,14 @@ onMounted(async () => {
   }
 
   .mirror-list-img {
-    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+      max-height: 34px;
+      max-width: calc(100% - 32px);
+    }
   }
   .mirror-list-rsnc {
     cursor: pointer;

@@ -294,11 +294,9 @@ onMounted(() => {
           <div class="footer-logo">
             <img class="show-pc" :src="LogoFooter" alt="openEuler" />
             <img class="show-mo" :src="LogoFooter1" alt="openEuler" />
-            <p>
               <a class="email" :href="'mailto:' + i18n.common.FOOTER.MAIL">
                 {{ i18n.common.FOOTER.MAIL }}
               </a>
-            </p>
           </div>
           <div class="footer-option">
             <div class="footer-option-item">
@@ -527,7 +525,7 @@ $color: #fff;
 
   .copy-right {
     font-size: var(--o-font-size-text);
-    color: var(--o-color-text-secondary);
+    color: $color;
     margin-top: var(--o-spacing-h5);
     @media (max-width: 1400px) {
       font-size: var(--o-font-size-tip);
@@ -696,6 +694,8 @@ $color: #fff;
   }
 
   .email {
+    display: block;
+    margin-top: 4px;
     color: $color;
     font-size: var(--o-font-size-text);
     @media (max-width: 1400px) {
