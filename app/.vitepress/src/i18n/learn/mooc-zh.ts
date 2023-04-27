@@ -59,6 +59,18 @@ export default {
         },
       ],
     },
+    {
+      ID: '5',
+      IMG: mooc,
+      TITLE: 'openEuler直播',
+      DESC: '众多大咖精彩课程直播',
+      CHILDREN: [
+        {
+          NAME: '开始学习',
+          PATH: '/zh/interaction/live-list/',
+        },
+      ],
+    },
   ],
   BTN_LEARN: '课程学习',
   BTN_APPLY: '考试报名',
