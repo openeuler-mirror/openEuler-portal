@@ -291,9 +291,9 @@ watch(
           <li
             v-for="suggest in suggestList"
             :key="suggest"
+            v-dompurify-html="suggest"
             class="suggest"
             @click="handleSelect(suggest)"
-            v-html="suggest"
           ></li>
         </ul>
       </div>
@@ -334,11 +334,14 @@ watch(
         <div class="content-box">
           <ul v-if="searchResultList.length" class="content-list">
             <li v-for="(item, index) in searchResultList" :key="item.id">
-              <h3 @click="goLink(item, index)" v-html="item.title"></h3>
+              <h3
+                v-dompurify-html="item.title"
+                @click="goLink(item, index)"
+              ></h3>
               <p
+                v-dompurify-html="item.textContent"
                 class="detail"
                 @click="goLink(item, index)"
-                v-html="item.textContent"
               ></p>
               <p class="from">
                 <span>{{ i18n.search.form }}</span>

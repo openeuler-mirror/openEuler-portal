@@ -156,11 +156,10 @@ const searchControl = (val: boolean) => {
   isShowBox.value = val;
 };
 
-
-const navItemClick = ()=>{
+const navItemClick = () => {
   mobileMenuIcon.value = false;
   document.documentElement.classList.remove('overflow');
-}
+};
 </script>
 
 <template>
@@ -189,10 +188,7 @@ const navItemClick = ()=>{
               />
             </template>
             <div v-if="isMobile" class="header-tool">
-              <AppLanguage
-                :show="langShow"
-                @language-click="navItemClick"
-              />
+              <AppLanguage :show="langShow" @language-click="navItemClick" />
               <AppTheme />
             </div>
           </div>
@@ -218,10 +214,7 @@ const navItemClick = ()=>{
               </div>
             </div>
             <div class="mobile-tools">
-              <AppLanguage
-                :show="langShow"
-                @language-click="navItemClick"
-              />
+              <AppLanguage :show="langShow" @language-click="navItemClick" />
               <AppTheme />
             </div>
           </div>
@@ -371,7 +364,7 @@ const navItemClick = ()=>{
   }
 }
 .header-tool {
-  display: flex; 
+  display: flex;
   align-items: center;
   height: 100%;
   margin-left: var(--o-spacing-h5);

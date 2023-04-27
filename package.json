@@ -26,7 +26,8 @@
     "pinia": "^2.0.13",
     "markdown-it": "^12.3.2",
     "swiper": "6.8.1",
-    "vue": "^3.2.33"
+    "vue": "^3.2.33",
+    "vue-dompurify-html": "^4.0.0"
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",

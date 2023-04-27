@@ -10,6 +10,13 @@ import { ElMessage } from 'element-plus';
 import { selectMirror } from '@/api/api-mirror';
 import { getUrlParam } from '@/shared/utils';
 import { useCommon } from '@/stores/common';
+import type {
+  DownloadCommunityData,
+  MirrorData,
+  LinkListItem,
+  DetailedLinkItem,
+  Scenario,
+} from '@/shared/@types/type-download';
 
 import TagFilter from '@/components/TagFilter.vue';
 
@@ -35,10 +42,11 @@ const i18n = useI18n();
 const downloadList = lodash.cloneDeep(i18n.value.download.COMMUNITY_LIST);
 const { lang } = useData();
 const shaText = 'SHA256';
-const contentData: any = computed(() => {
-  return downloadList.filter((item: any) => item.NAME === version.value);
+const contentData: Ref<DownloadCommunityData[]> = computed(() => {
+  return downloadList.filter(
+    (item: DownloadCommunityData) => item.NAME === version.value
+  );
 });
-
 const screenWidth = useWindowResize();
 // 复制
 const inputDom: Ref<HTMLElement | null> = ref(null);
@@ -61,15 +69,15 @@ onMounted(() => {
 // tag筛选
 const activeArch = ref('');
 const activeScenario = ref('');
-const architectureList: any = ref([]);
-const scenarioList: any = ref([]);
+const architectureList: Ref<string[]> = ref([]);
+const scenarioList: Ref<Scenario[]> = ref([]);
 function initActiveScenario() {
   // 查看是否有携带筛选参数
   const scenario = getUrlParam('scenario');
   if (scenario) {
     activeScenario.value = scenario;
     let flag = true;
-    contentData.value[0].DETAILED_LINK.forEach((item: any) => {
+    contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItem) => {
       if (item.SCENARIO === activeScenario.value && flag) {
         activeArch.value = item.ARCH;
         flag = false;
@@ -91,10 +99,10 @@ onMounted(() => {
 });
 
 function setTagList() {
-  const temp: any = [];
+  const temp: string[] = [];
   architectureList.value = [];
   scenarioList.value = [];
-  contentData.value[0].DETAILED_LINK.forEach((item: any) => {
+  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItem) => {
     if (!architectureList.value.includes(item.ARCH)) {
       architectureList.value.push(item.ARCH);
     }
@@ -102,8 +110,8 @@ function setTagList() {
       temp.push(item.SCENARIO);
     }
   });
-  temp.forEach((item: any) => {
-    i18n.value.download.SCENARIO_LIST.forEach((itemList: any) => {
+  temp.forEach((item: string) => {
+    i18n.value.download.SCENARIO_LIST.forEach((itemList: Scenario) => {
       if (item === itemList.KEY && !scenarioList.value.includes(itemList)) {
         scenarioList.value.push(itemList);
       }
@@ -123,7 +131,7 @@ const onScenarioTagClick = (select: string) => {
 const tempTag = ref('');
 function setTempTag() {
   let flag = true;
-  contentData.value[0].DETAILED_LINK.forEach((item: any) => {
+  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItem) => {
     if (item.ARCH === activeArch.value) {
       if (flag) {
         tempTag.value = item.SCENARIO;
@@ -134,7 +142,7 @@ function setTempTag() {
 }
 function isDisable(tag: string) {
   let flag = false;
-  contentData.value[0].DETAILED_LINK.forEach((item: any) => {
+  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItem) => {
     if (item.ARCH === activeArch.value && item.SCENARIO === tag) {
       flag = true;
     }
@@ -147,11 +155,12 @@ function isDisable(tag: string) {
   return !flag;
 }
 // 获取镜像仓及表格显示数据
-const tableData: any = ref([]);
-const activeMirror: any = ref([]);
-const activeMirrorLink: any = ref([]);
-const mirrorList: any = ref([]);
-const moreMirrorList: any = ref([]);
+const tableData: Ref<LinkListItem[]> = ref([]);
+const activeMirror: Ref<string[]> = ref([]);
+const activeMirrorLink: Ref<string[]> = ref([]);
+const allMirrorList: Ref<MirrorData[]> = ref([]);
+const mirrorList: Ref<MirrorData[]> = ref([]);
+const moreMirrorList: Ref<MirrorData[]> = ref([]);
 function setActiveMirror() {
   activeMirror.value = [];
   activeMirrorLink.value = [];
@@ -172,7 +181,7 @@ function setActiveMirror() {
 }
 function getTableData() {
   tableData.value = [];
-  contentData.value[0].DETAILED_LINK.forEach((item: any) => {
+  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItem) => {
     if (
       item.ARCH === activeArch.value &&
       item.SCENARIO === activeScenario.value
@@ -207,9 +216,10 @@ async function getMirrorList() {
           }
         }
       }
-      mirrorData.MirrorList.forEach((item: any) => {
+      mirrorData.MirrorList.forEach((item: MirrorData) => {
         item.NameSpend = item.Name + ' (' + item.NetworkBandwidth + 'Mb/s)';
       });
+      allMirrorList.value = lodash.cloneDeep(mirrorData.MirrorList);
       mirrorList.value = lodash.cloneDeep(mirrorData.MirrorList.splice(0, 3));
       moreMirrorList.value = lodash.cloneDeep(mirrorData.MirrorList);
     } else {
@@ -248,7 +258,7 @@ onMounted(async () => {
 });
 
 function setMirrorLink(index: number) {
-  mirrorList.value.forEach((item: any) => {
+  allMirrorList.value.forEach((item: MirrorData) => {
     if (item.NameSpend === activeMirror.value[index]) {
       activeMirrorLink.value[index] = item.HttpURL;
     }
@@ -278,32 +288,30 @@ function setActiveMirrorMobile(index: number, item: string) {
 
 <template>
   <div class="content-wrap">
-    <h2 class="title">{{ (contentData[0] as any).NAME }}</h2>
-    <p class="subtitle">{{ (contentData[0] as any).DESC }}</p>
-    <p class="subtitle">
-      Planned EOL: {{ (contentData[0] as any).PLANNED_EOL }}
-    </p>
+    <h2 class="title">{{ contentData[0].NAME }}</h2>
+    <p class="subtitle">{{ contentData[0].DESC }}</p>
+    <p class="subtitle">Planned EOL: {{ contentData[0].PLANNED_EOL }}</p>
     <div class="other-link">
       <a
-        v-if="(contentData[0] as any).RELEASE_DESC_URL"
-        :href="(contentData[0] as any).RELEASE_DESC_URL"
+        v-if="contentData[0].RELEASE_DESC_URL"
+        :href="contentData[0].RELEASE_DESC_URL"
         target="_blank"
         >{{ i18n.download.RELEASE_DESC }}</a
       ><a
-        v-if="(contentData[0] as any).INSTALL_GUIDENCE_URL"
-        :href="(contentData[0] as any).INSTALL_GUIDENCE_URL"
+        v-if="contentData[0].INSTALL_GUIDENCE_URL"
+        :href="contentData[0].INSTALL_GUIDENCE_URL"
         target="_blank"
         >{{ i18n.download.INSTALL_GUIDENCE }}</a
       >
       <a
-        v-if="(contentData[0] as any).WHITE_PAPER"
-        :href="(contentData[0] as any).WHITE_PAPER"
+        v-if="contentData[0].WHITE_PAPER"
+        :href="contentData[0].WHITE_PAPER"
         target="_blank"
         >{{ i18n.download.WHITE_PAPER }}</a
       >
       <a
-        v-if="(contentData[0] as any).LIFE_CYCLE_URL"
-        :href="(contentData[0] as any).LIFE_CYCLE_URL"
+        v-if="contentData[0].LIFE_CYCLE_URL"
+        :href="contentData[0].LIFE_CYCLE_URL"
         target="_blank"
         >{{ i18n.download.LIFE_CYCLE }}</a
       >
@@ -346,7 +354,7 @@ function setActiveMirrorMobile(index: number, item: string) {
             :label="i18n.download.TABLE_HEAD[0]"
             prop="name"
           >
-            <template #default="scope">
+            <template #default="scope: any">
               <div class="name-info">
                 {{ scope.row.TYPE }}
                 <template v-if="scope.row.TIPS">
@@ -371,12 +379,12 @@ function setActiveMirrorMobile(index: number, item: string) {
             :label="i18n.download.TABLE_HEAD[1]"
             prop="size"
           >
-            <template #default="scope">
+            <template #default="scope: any">
               {{ scope.row.SIZE }}
             </template>
           </el-table-column>
           <el-table-column :label="i18n.download.TABLE_HEAD[2]" prop="down_url">
-            <template #default="scope">
+            <template #default="scope: any">
               <ClientOnly>
                 <el-select
                   v-model="activeMirror[scope.$index]"
@@ -393,8 +401,8 @@ function setActiveMirrorMobile(index: number, item: string) {
                   <el-option
                     v-for="item in mirrorList"
                     :key="item.Name"
-                    :label="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
-                    :value="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
+                    :label="item.Name + ' (' + item.NetworkBandwidth + 'Mb/s)'"
+                    :value="item.Name + ' (' + item.NetworkBandwidth + 'Mb/s)'"
                   >
                   </el-option>
                   <li>
@@ -404,8 +412,8 @@ function setActiveMirrorMobile(index: number, item: string) {
                   <el-option
                     v-for="item in moreMirrorList"
                     :key="item.Name"
-                    :label="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
-                    :value="item.Name + '(' + item.NetworkBandwidth + 'Mb/s)'"
+                    :label="item.Name + ' (' + item.NetworkBandwidth + 'Mb/s)'"
+                    :value="item.Name + ' (' + item.NetworkBandwidth + 'Mb/s)'"
                   >
                   </el-option>
                   <li>
@@ -431,7 +439,7 @@ function setActiveMirrorMobile(index: number, item: string) {
             :label="i18n.download.TABLE_HEAD[3]"
             prop="sha_code"
           >
-            <template #default="scope">
+            <template #default="scope: any">
               <div v-if="scope.row.SHACODE" class="down-action">
                 <OButton
                   class="down-copy"
@@ -452,7 +460,7 @@ function setActiveMirrorMobile(index: number, item: string) {
             :label="i18n.download.TABLE_HEAD[4]"
             prop="docsName"
           >
-            <template #default="scope">
+            <template #default="scope: any">
               <a
                 class="down-link"
                 :href="activeMirrorLink[scope.$index] + scope.row.DOWNLOAD_LINK"

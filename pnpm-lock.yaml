@@ -33,6 +33,7 @@ specifiers:
   unplugin-icons: ^0.14.1
   vitepress: 1.0.0-alpha.4
   vue: ^3.2.33
+  vue-dompurify-html: ^4.0.0
 
 dependencies:
   '@amap/amap-jsapi-loader': registry.npmmirror.com/@amap/amap-jsapi-loader/1.0.1
@@ -48,6 +49,7 @@ dependencies:
   pinia: registry.npmmirror.com/pinia/2.0.13_xjnrgrp243ohupsbqdj4qd3cly
   swiper: registry.npmmirror.com/swiper/6.8.1
   vue: registry.npmmirror.com/vue/3.2.33
+  vue-dompurify-html: registry.npmmirror.com/vue-dompurify-html/4.0.0_vue@3.2.33
 
 devDependencies:
   '@types/aos': 3.0.4
@@ -1596,7 +1598,7 @@ packages:
         optional: true
     dependencies:
       vue: registry.npmmirror.com/vue/3.2.33
-      vue-demi: registry.npmmirror.com/vue-demi/0.12.5_vue@3.2.33
+      vue-demi: registry.npmmirror.com/vue-demi/0.13.11_vue@3.2.33
 
   registry.npmmirror.com/acorn-jsx/5.3.2_acorn@8.7.1:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz}
@@ -2049,6 +2051,12 @@ packages:
     version: 3.0.0
     dependencies:
       ssr-window: registry.npmmirror.com/ssr-window/3.0.0
+    dev: false
+
+  registry.npmmirror.com/dompurify/3.0.2:
+    resolution: {integrity: sha512-B8c6JdiEpxAKnd8Dm++QQxJL4lfuc757scZtcapj6qjTjrQzyq5iAyznLKVvK+77eYNiFblHBlt7MM0fOeqoKw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/dompurify/-/dompurify-3.0.2.tgz}
+    name: dompurify
+    version: 3.0.2
     dev: false
 
   registry.npmmirror.com/eastasianwidth/0.2.0:
@@ -4023,6 +4031,38 @@ packages:
         optional: true
     dependencies:
       vue: registry.npmmirror.com/vue/3.2.33
+
+  registry.npmmirror.com/vue-demi/0.13.11_vue@3.2.33:
+    resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-demi/-/vue-demi-0.13.11.tgz}
+    id: registry.npmmirror.com/vue-demi/0.13.11
+    name: vue-demi
+    version: 0.13.11
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: registry.npmmirror.com/vue/3.2.33
+
+  registry.npmmirror.com/vue-dompurify-html/4.0.0_vue@3.2.33:
+    resolution: {integrity: sha512-yLxmZSoVNM+ZpRXwbrq6mwY7xidRd6W4P2/W8zLBdXSQckpmPVvmDaJALYH0jm0CgibNJbe4+E5j6wzOKwRKvg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-dompurify-html/-/vue-dompurify-html-4.0.0.tgz}
+    id: registry.npmmirror.com/vue-dompurify-html/4.0.0
+    name: vue-dompurify-html
+    version: 4.0.0
+    peerDependencies:
+      vue: ^2.7.0 || ^3.0.0
+    dependencies:
+      dompurify: registry.npmmirror.com/dompurify/3.0.2
+      vue: registry.npmmirror.com/vue/3.2.33
+      vue-demi: registry.npmmirror.com/vue-demi/0.13.11_vue@3.2.33
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+    dev: false
 
   registry.npmmirror.com/vue-eslint-parser/9.0.3_eslint@8.19.0:
     resolution: {integrity: sha512-yL+ZDb+9T0ELG4VIFo/2anAOz8SvBdlqEnQnvJ3M7Scq56DvtjY0VY88bByRZB0D4J0u8olBcfrXTVONXsh4og==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-eslint-parser/-/vue-eslint-parser-9.0.3.tgz}
