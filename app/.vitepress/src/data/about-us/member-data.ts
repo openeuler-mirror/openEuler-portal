@@ -87,6 +87,7 @@ export default {
         {
           img_light: ruantong_light,
           img_dark: ruantong_dark,
+          noIcon: true,
         },
         {
           img_light: dianxing_light,
@@ -182,12 +183,10 @@ export default {
         {
           img_light: qilinSoft_light,
           img_dark: qilinSoft_dark,
-          noIcon: true,
         },
         {
           img_light: tongxin_light,
           img_dark: tongxin_dark,
-          noIcon: true,
         },
       ],
     },
@@ -207,6 +206,7 @@ export default {
         {
           img_light: ruantong_light,
           img_dark: ruantong_dark,
+          noIcon: true,
         },
         {
           img_light: dianxing_light,
@@ -233,6 +233,11 @@ export default {
         {
           img_light: turbolinux_light,
           img_dark: turbolinux_dark,
+          noIcon: true,
+        },
+        {
+          img_light: zhongruan_light,
+          img_dark: zhongruan_dark,
         },
       ],
     },

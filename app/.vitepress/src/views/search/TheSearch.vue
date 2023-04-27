@@ -48,10 +48,15 @@ const searchData = computed(() => {
     pageSize: pageSize.value,
     lang: lang.value,
     type: searchType.value,
-    docsVersion:
-      activeVersion.value === i18n.value.search.tagList.all
-        ? ''
-        : activeVersion.value,
+    limit: [
+      {
+        type: 'docs',
+        version:
+          activeVersion.value === i18n.value.search.tagList.all
+            ? ''
+            : activeVersion.value,
+      },
+    ],
   };
 });
 const searchCount = computed(() => {
@@ -167,6 +172,11 @@ function getSussageData() {
 // 获取搜索结果的数据
 function searchDataAll() {
   try {
+    // 全部时 limit 不传
+    if (activeVersion.value === i18n.value.search.tagList.all) {
+      searchData.value.limit = [];
+    }
+
     getSearchData(searchData.value).then((res) => {
       if (res.status === 200 && res.obj.records[0]) {
         searchResultList.value = res.obj.records;
