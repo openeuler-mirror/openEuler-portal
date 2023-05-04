@@ -9,18 +9,21 @@ import IconCancel from '~icons/app/icon-cancel.svg';
 import IconSearch from '~icons/app/icon-search.svg';
 
 const { lang } = useData();
+console.log(useData().lang);
+
 const emits = defineEmits(['focus-input', 'search-click']);
 const isShowDrawer = ref(false);
 const searchInput = ref('');
 const i18n = useI18n();
-// 搜索组件跳转链接
-const searchLink = `/${lang.value}/other/search/`;
 
 const commonStore = useCommon();
 
 // 搜索事件
 function handleSearchEvent() {
-  window.open(`${searchLink}?search=${searchInput.value}`, '_self');
+  window.open(
+    `/${lang.value}/other/search/?search=${searchInput.value}`,
+    '_self'
+  );
 }
 // 点击热搜标签
 const onTopSearchItemClick = (val: any) => {

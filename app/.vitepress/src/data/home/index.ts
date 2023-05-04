@@ -84,17 +84,5 @@ export default {
         btn: 'Learn More',
       },
     ],
-    ru: [
-      {
-        pcBanner: migrationImg_pc,
-        moBanner: migrationImg_mo,
-        link: `/zh/migration/`,
-        id: '',
-        targetTap: 1,
-        title: ['Start Porting Now!'],
-        desc: ['Learn how to port to openEuler.'],
-        btn: 'Learn More',
-      },
-    ],
   },
 };

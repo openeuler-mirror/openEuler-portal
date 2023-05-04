@@ -125,7 +125,7 @@ export function getRelevant(params: any) {
  */
 
 export function getStatistic() {
-  const url = '/api-omapi/query/all?community=openEuler';
+  const url = '/api-dsapi/query/all?community=openEuler';
   return request
     .get(url, {
       $ignoreLoading: true,

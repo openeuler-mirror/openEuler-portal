@@ -29,22 +29,4 @@ export default {
     next: 'Next',
     tags: ['All', 'Finance', 'Carrier', 'Energy', 'Logistics', 'Others'],
   },
-  ru: {
-    placeHolder: 'input user case',
-    bannerTitle: 'Дело пользователя',
-    type: 'Категория',
-    find1: 'Найди',
-    find2: 'дел',
-    button: 'чтение',
-    prev: 'предыдущий',
-    next: 'Следующая ',
-    tags: [
-      'BCE',
-      'Финансы',
-      'Оператор',
-      'Энергетика',
-      'Логистика',
-      'Другие сферы',
-    ],
-  },
 };
