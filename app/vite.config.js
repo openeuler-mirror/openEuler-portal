@@ -123,6 +123,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-certification/, ''),
       },
+      '/api-gitee/': {
+        target: 'https://gitee.com/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-gitee/, ''),
+      },
     },
   },
 });

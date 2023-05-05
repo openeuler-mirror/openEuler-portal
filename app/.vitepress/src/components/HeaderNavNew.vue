@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { ref, watch, computed } from 'vue';
+import { ref, watch, computed, nextTick } from 'vue';
 import { useRouter, useData } from 'vitepress';
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { debounce } from 'lodash';
+import { useOeep } from '@/stores/oeep';
+
 import IconOutLink from '~icons/app/icon-out-link.svg';
 const props = defineProps({
   navItems: {
@@ -75,7 +77,13 @@ const goPath = (item: NavItem, flag: boolean) => {
     window.open(item.PATH);
     return;
   } else {
+    // oEEP页面url不更新特殊处理
     router.go('/' + lang.value + item.PATH);
+    if (item.PATH.includes('oEEP')) {
+      nextTick(() => {
+        useOeep().setMarkDownData();
+      });
+    }
     navActive.value = '';
   }
   emits('nav-click');
