@@ -12,43 +12,41 @@
         "date": "2023/4/26",
         "details": "详细信息",
         "tools_result": [
-            [
-                {
-                    "name": "core_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "KABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "ABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "service_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "kernel_config",
-                    "percent": "NA",
-                    "result": "pass"
-                }
-            ]
+            {
+                "name": "core_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "KABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "ABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "service_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "kernel_config",
+                "percent": "NA",
+                "result": "pass"
+            }
         ],
         "platform_result": [
             {
@@ -86,43 +84,41 @@
         "date": "2023/4/26",
         "details": "详细信息",
         "tools_result": [
-            [
-                {
-                    "name": "core_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "KABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "ABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "service_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "kernel_config",
-                    "percent": "NA",
-                    "result": "pass"
-                }
-            ]
+            {
+                "name": "core_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "KABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "ABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "service_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "kernel_config",
+                "percent": "NA",
+                "result": "pass"
+            }
         ],
         "platform_result": [
             {
@@ -160,43 +156,41 @@
         "date": "2023/4/26",
         "details": "详细信息",
         "tools_result": [
-            [
-                {
-                    "name": "core_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "KABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "ABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "service_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "kernel_config",
-                    "percent": "NA",
-                    "result": "pass"
-                }
-            ]
+            {
+                "name": "core_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "KABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "ABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "service_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "kernel_config",
+                "percent": "NA",
+                "result": "pass"
+            }
         ],
         "platform_result": [
             {
@@ -234,43 +228,41 @@
         "date": "2023/4/26",
         "details": "详细信息",
         "tools_result": [
-            [
-                {
-                    "name": "core_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "KABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "ABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "service_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "kernel_config",
-                    "percent": "NA",
-                    "result": "pass"
-                }
-            ]
+            {
+                "name": "core_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "KABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "ABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "service_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "kernel_config",
+                "percent": "NA",
+                "result": "pass"
+            }
         ],
         "platform_result": [
             {
@@ -308,43 +300,41 @@
         "date": "2023/4/26",
         "details": "详细信息",
         "tools_result": [
-            [
-                {
-                    "name": "core_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "KABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "ABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "service_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "kernel_config",
-                    "percent": "NA",
-                    "result": "pass"
-                }
-            ]
+            {
+                "name": "core_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "KABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "ABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "service_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "kernel_config",
+                "percent": "NA",
+                "result": "pass"
+            }
         ],
         "platform_result": [
             {
@@ -382,43 +372,41 @@
         "date": "2023/4/26",
         "details": "详细信息",
         "tools_result": [
-            [
-                {
-                    "name": "core_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "KABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "ABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "service_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "kernel_config",
-                    "percent": "NA",
-                    "result": "pass"
-                }
-            ]
+            {
+                "name": "core_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "KABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "ABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "service_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "kernel_config",
+                "percent": "NA",
+                "result": "pass"
+            }
         ],
         "platform_result": [
             {
@@ -456,43 +444,41 @@
         "date": "2023/4/26",
         "details": "详细信息",
         "tools_result": [
-            [
-                {
-                    "name": "core_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "KABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "ABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "service_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "kernel_config",
-                    "percent": "NA",
-                    "result": "pass"
-                }
-            ]
+            {
+                "name": "core_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "KABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "ABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "service_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "kernel_config",
+                "percent": "NA",
+                "result": "pass"
+            }
         ],
         "platform_result": [
             {
@@ -530,43 +516,41 @@
         "date": "2023/4/26",
         "details": "详细信息",
         "tools_result": [
-            [
-                {
-                    "name": "core_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_pkg",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "KABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "ABI",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "service_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "soft_config",
-                    "percent": "NA",
-                    "result": "pass"
-                },
-                {
-                    "name": "kernel_config",
-                    "percent": "NA",
-                    "result": "pass"
-                }
-            ]
+            {
+                "name": "core_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "KABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "ABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "service_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "kernel_config",
+                "percent": "NA",
+                "result": "pass"
+            }
         ],
         "platform_result": [
             {
