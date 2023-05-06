@@ -94,10 +94,10 @@ import finance from '../../assets/category/home/case/finance.svg';
 import financeDark from '../../assets/category/home/dark/case/finance.svg';
 import financeActive from '../../assets/category/home/case/finance-active.svg';
 import financeActiveDark from '../../assets/category/home/dark/case/finance-active.svg';
-import government from '../../assets/category/home/case/government.svg';
-import governmentDark from '../../assets/category/home/dark/case/government.svg';
-import governmentActive from '../../assets/category/home/case/government-active.svg';
-import governmentActiveDark from '../../assets/category/home/dark/case/government-active.svg';
+// import government from '../../assets/category/home/case/government.svg';
+// import governmentDark from '../../assets/category/home/dark/case/government.svg';
+// import governmentActive from '../../assets/category/home/case/government-active.svg';
+// import governmentActiveDark from '../../assets/category/home/dark/case/government-active.svg';
 import operator from '../../assets/category/home/case/operator.svg';
 import operatorDark from '../../assets/category/home/dark/case/operator.svg';
 import operatorActive from '../../assets/category/home/case/operator-active.svg';
@@ -275,13 +275,13 @@ export default {
         URL_DARK: operatorDark,
         ACTIVE_DARK_URL: operatorActiveDark,
       },
-      {
-        TYPE: '政府',
-        URL: government,
-        ACTIVE_URL: governmentActive,
-        URL_DARK: governmentDark,
-        ACTIVE_DARK_URL: governmentActiveDark,
-      },
+      // {
+      //   TYPE: '政府',
+      //   URL: government,
+      //   ACTIVE_URL: governmentActive,
+      //   URL_DARK: governmentDark,
+      //   ACTIVE_DARK_URL: governmentActiveDark,
+      // },
       {
         TYPE: '能源',
         URL: energy,
