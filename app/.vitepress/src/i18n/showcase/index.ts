@@ -16,7 +16,7 @@ export default {
     prev: '上一页',
     next: '下一页',
     all: '全部',
-    tags: ['全部', '金融', '运营商', '政府', '能源', '物流', '教育', '其他'],
+    tags: ['全部', '金融', '运营商', '能源', '物流', '教育', '其他'],
   },
   en: {
     placeHolder: 'input user case',
