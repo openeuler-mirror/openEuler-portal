@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>插画/light/选中/三级插画/18</title>
-    <g id="插画/light/选中/三级插画/18" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="矩形" stroke="#000000" stroke-width="2" stroke-linejoin="round" x="17" y="17" width="20" height="20"></rect>
-        <circle id="椭圆形" fill="#002FA7" opacity="0.400000006" cx="40" cy="40" r="17"></circle>
-        <rect id="矩形" stroke="#000000" stroke-width="2" stroke-linejoin="round" x="17" y="43" width="20" height="20"></rect>
-        <rect id="矩形" stroke="#000000" stroke-width="2" stroke-linejoin="round" x="43" y="43" width="20" height="20"></rect>
-        <rect id="矩形" fill="#002FA7" transform="translate(53.000000, 27.000000) rotate(-315.000000) translate(-53.000000, -27.000000) " x="46" y="20" width="14" height="14"></rect>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px" height="80px" viewBox="0 0 80 80" version="1.1">
+    <title>插画/light/选中/三级插画/23</title>
+    <g id="插画/light/选中/三级插画/23" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="椭圆形" fill="#002FA7" opacity="0.400000006" cx="25" cy="52" r="17"/>
+        <g id="编组" transform="translate(10.000000, -0.000000)" stroke-linejoin="round" stroke-width="2">
+            <path d="M42.5622616,54.9957397 C44.9694879,53.982024 47.0455233,52.4438968 48.7903679,50.3813582" id="路径-3" stroke="#002FA7" stroke-linecap="round"/>
+            <path d="M10.6066017,50.3813582 C13.6852042,54.984279 19.8939467,57.2857394 29.2328291,57.2857394 C32.1055159,57.2857394 34.7114,57.0679733 37.0504815,56.6324412" id="路径-3" stroke="#002FA7" stroke-linecap="round"/>
+            <line x1="6.36396103" y1="33.9411255" x2="6.36396103" y2="43.487067" id="路径-4" stroke="#002FA7" stroke-linecap="round"/>
+            <line x1="6.36396103" y1="47.7297077" x2="6.36396103" y2="49.8510281" id="路径-4" stroke="#002FA7" stroke-linecap="round"/>
+            <path d="M24.0842557,17.7090017 L47.4512355,10.0240377 C48.5005151,9.67894918 49.6308738,10.2498089 49.9759623,11.2990885 C50.1094439,11.704954 50.1094439,12.142899 49.9759623,12.5487645 L42.2909983,35.9157443 C41.2988104,38.932601 38.932601,41.2988104 35.9157443,42.2909983 L12.5487645,49.9759623 C11.4994849,50.3210508 10.3691262,49.7501911 10.0240377,48.7009115 C9.89055608,48.295046 9.89055608,47.857101 10.0240377,47.4512355 L17.7090017,24.0842557 C18.7011896,21.067399 21.067399,18.7011896 24.0842557,17.7090017 Z" id="矩形" stroke="#000000" transform="translate(30.000000, 30.000000) rotate(-315.000000) translate(-30.000000, -30.000000) "/>
+            <path d="M10.6066017,36.0624458 L10.6066017,56.3064253 C11.6650513,61.9023221 17.9620422,64.7002705 29.4975742,64.7002705 C41.0331062,64.7002705 47.4640374,61.9023221 48.7903679,56.3064253 L48.7903679,36.0624458" id="路径-2" stroke="#000000" stroke-linecap="round"/>
+        </g>
     </g>
 </svg>

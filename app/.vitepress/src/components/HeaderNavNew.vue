@@ -367,7 +367,7 @@ watch(
         }
       }
       &.type1 {
-        flex-basis: 420px;
+        flex-basis: 450px;
         .nav-dropdown-box {
           grid-template-columns: repeat(2, 1fr);
           gap: 16px 40px;
