@@ -1,3 +1,4 @@
+import { isBrowser } from '@/shared/utils';
 export default {
   MEETINGS_TIME: 'Time: ',
   MEETINGS_REPLAY: 'Replay',
@@ -645,7 +646,10 @@ export default {
             {
               NAME: 'Community Editions',
               LABEL: '',
-              PATH: '/download/',
+              PATH:
+                isBrowser() && window.location.pathname.endsWith('/download/')
+                  ? '/download/archive/'
+                  : '/download/',
             },
             {
               NAME: 'Commercial Editions',

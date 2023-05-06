@@ -94,6 +94,10 @@ import finance from '../../assets/category/home/case/finance.svg';
 import financeDark from '../../assets/category/home/dark/case/finance.svg';
 import financeActive from '../../assets/category/home/case/finance-active.svg';
 import financeActiveDark from '../../assets/category/home/dark/case/finance-active.svg';
+import government from '../../assets/category/home/case/government.svg';
+import governmentDark from '../../assets/category/home/dark/case/government.svg';
+import governmentActive from '../../assets/category/home/case/government-active.svg';
+import governmentActiveDark from '../../assets/category/home/dark/case/government-active.svg';
 import operator from '../../assets/category/home/case/operator.svg';
 import operatorDark from '../../assets/category/home/dark/case/operator.svg';
 import operatorActive from '../../assets/category/home/case/operator-active.svg';
@@ -110,6 +114,10 @@ import education from '../../assets/category/home/case/education.svg';
 import educationDark from '../../assets/category/home/dark/case/education.svg';
 import educationActive from '../../assets/category/home/case/education-active.svg';
 import educationActiveDark from '../../assets/category/home/dark/case/education-active.svg';
+import other from '../../assets/category/home/case/other.svg';
+import otherDark from '../../assets/category/home/dark/case/other.svg';
+import otherActive from '../../assets/category/home/case/other-active.svg';
+import otherActiveDark from '../../assets/category/home/dark/case/other-active.svg';
 
 export default {
   HOME_CALENDAR: 'openEuler 开发者日历',
@@ -268,6 +276,13 @@ export default {
         ACTIVE_DARK_URL: operatorActiveDark,
       },
       {
+        TYPE: '政府',
+        URL: government,
+        ACTIVE_URL: governmentActive,
+        URL_DARK: governmentDark,
+        ACTIVE_DARK_URL: governmentActiveDark,
+      },
+      {
         TYPE: '能源',
         URL: energy,
         ACTIVE_URL: energyActive,
@@ -282,11 +297,18 @@ export default {
         ACTIVE_DARK_URL: logisticsActiveDark,
       },
       {
-        TYPE: '其他',
+        TYPE: '教育',
         URL: education,
         ACTIVE_URL: educationActive,
         URL_DARK: educationDark,
         ACTIVE_DARK_URL: educationActiveDark,
+      },
+      {
+        TYPE: '其他',
+        URL: other,
+        ACTIVE_URL: otherActive,
+        URL_DARK: otherDark,
+        ACTIVE_DARK_URL: otherActiveDark,
       },
     ],
   },
