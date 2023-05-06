@@ -27,7 +27,7 @@ import illustration from '@/assets/illustrations/collect.png';
 
 ## 申办审核
 
-如果您的申请符合上述申办要求，我们会在 5 个工作日内审核并通过电子邮件[events@openeuler.sh](mailto:events@openeuler.sh)与您联系，以便提供 openEuler Meetup 赋能支持并与 OpenEuler 社区冠名联合主办单位；即便申请不合适，我们仍会通过电子邮件通知您，请确保申办表信息无误。
+如果您的申请符合上述申办要求，我们会在 5 个工作日内审核并通过电子邮件[events@openeuler.sh](mailto:events@openeuler.sh)与您联系，以便提供 openEuler Meetup 赋能支持并与 openEuler 社区冠名联合主办单位；即便申请不合适，我们仍会通过电子邮件通知您，请确保申办表信息无误。
 
 ## 可获得哪些赋能支持
 

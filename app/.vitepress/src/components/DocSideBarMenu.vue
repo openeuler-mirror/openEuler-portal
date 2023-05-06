@@ -5,9 +5,7 @@ import IconArrowTraingleRight from '~icons/app/icon-arrow-traingle-right.svg';
 const props = defineProps({
   info: {
     type: Object,
-    default: () => {
-      return {};
-    },
+    default: () => ({}),
   },
   activeId: {
     type: String,
@@ -23,6 +21,8 @@ const isActive = computed(() => {
 
 const isOpen = ref(isActive.value);
 
+const isOpenSecond = ref(false);
+
 const emit = defineEmits(['item-click']);
 
 const toggleVisible = (flag: boolean | undefined) => {
@@ -32,28 +32,21 @@ const toggleVisible = (flag: boolean | undefined) => {
     isOpen.value = flag;
   }
 };
+const toggleVisibleSecond = (flag: boolean | undefined) => {
+  if (flag === undefined) {
+    isOpenSecond.value = !isOpenSecond.value;
+  } else {
+    isOpenSecond.value = flag;
+  }
+};
 // 导航点击事件
 const clickMenuItem = (id: string) => {
   emit('item-click', id);
 };
-
-const beforeEnter = (el: HTMLUListElement) => {
-  el.style.height = '0px';
-};
-const enter = (el: HTMLUListElement) => {
-  const height = el.scrollHeight;
-  el.style.height = `${height}px`;
-};
-const beforeLeave = (el: HTMLUListElement) => {
-  el.style.height = `${el.offsetHeight}px`;
-};
-const leave = (el: HTMLUListElement) => {
-  el.style.height = '0px';
-};
 </script>
 
 <template>
-  <div class="sidebar-menu">
+  <div class="sidebar-menu" :class="{ open: isOpen }">
     <div
       class="menu-title"
       :class="{ open: isOpen, active: isActive }"
@@ -62,22 +55,40 @@ const leave = (el: HTMLUListElement) => {
       {{ info.label }}
       <OIcon class="menu-title-icon"> <IconArrowTraingleRight /></OIcon>
     </div>
-    <transition
-      name="menu"
-      @before-enter="beforeEnter"
-      @enter="enter"
-      @before-leave="beforeLeave"
-      @leave="leave"
-    >
-      <ul v-show="isOpen" class="menu-list">
+    <transition name="menu">
+      <ul class="menu-list">
         <li
           v-for="item in info.children"
           :key="item.link"
           class="menu-item"
-          :class="{ active: activeId === item.link }"
-          @click="clickMenuItem(item.link)"
+          :class="{ active: activeId.includes(item.link), open: isOpenSecond }"
+          @click.stop="clickMenuItem(item.link)"
         >
-          {{ item.label }}
+          <div
+            @click="item.children ? toggleVisibleSecond(!isOpenSecond) : ''"
+            :class="{
+              open: isOpenSecond,
+              active: isActive,
+              secondary: item.children,
+            }"
+          >
+            {{ item.label }}
+            <OIcon class="menu-title-icon" v-if="item.children">
+              <IconArrowTraingleRight
+            /></OIcon>
+          </div>
+
+          <ul class="menu-list">
+            <li
+              v-for="subItem in item.children"
+              :key="subItem.link"
+              class="menu-item"
+              :class="{ active: activeId[1] === subItem.link }"
+              @click.stop="clickMenuItem(subItem.link)"
+            >
+              {{ subItem.label }}
+            </li>
+          </ul>
         </li>
       </ul>
     </transition>
@@ -134,16 +145,28 @@ const leave = (el: HTMLUListElement) => {
 
   .menu-list {
     overflow-y: hidden;
-    transition: 0.3s height cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform-origin: top;
+    transition: all 0.3s;
     background-color: var(--o-color-kleinblue4);
     padding: 0 40px;
+    transform: scaleY(0);
 
     .menu-item {
-      display: flex;
+      cursor: pointer;
+      height: min-content;
+      // overflow-y: hidden;
       align-items: center;
       font-size: var(--o-font-size-text);
       line-height: var(--o-line-height-text);
-      cursor: pointer;
+      .secondary {
+        display: flex;
+        justify-content: space-between;
+      }
+      .menu-list {
+        position: absolute;
+        z-index: -1;
+        padding: 0 16px;
+      }
 
       &:first-child {
         margin-top: 32px;
@@ -164,6 +187,21 @@ const leave = (el: HTMLUListElement) => {
       &.active {
         color: var(--o-color-yellow5);
       }
+    }
+    .open {
+      .menu-list {
+        position: relative;
+
+        transform: scaleY(1);
+      }
+      .menu-title-icon {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &.open {
+    & > .menu-list {
+      transform: scaleY(1);
     }
   }
 }
