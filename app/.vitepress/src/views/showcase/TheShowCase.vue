@@ -489,6 +489,8 @@ onMounted(() => {
       }
       .card-type-img {
         img {
+          width: 100px;
+          height: 100px;
           @media (max-width: 768px) {
             width: 80px;
             height: 80px;

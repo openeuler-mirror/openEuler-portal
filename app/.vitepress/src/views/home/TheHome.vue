@@ -37,7 +37,7 @@ const paramsCase = {
   category: 'showcase',
   lang: lang.value,
   page: 1,
-  pageSize: 20,
+  pageSize: 100,
 };
 const paramsNews = {
   category: 'news',
