@@ -67,11 +67,8 @@ function messageEvent() {
       } catch (e) {
         data = event.data;
       }
-
       // data.state=2,直播结束
       setHeight(data);
-      // console.log(state.value, '收到', data);
-      // console.log('收到' + event.origin + '消息:' + data);
     },
     false
   );

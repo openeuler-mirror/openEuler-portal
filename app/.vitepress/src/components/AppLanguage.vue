@@ -23,7 +23,6 @@ const isMobile = computed(() => (screenWidth.value <= 1100 ? true : false));
 const langOptions = [
   { id: 'zh', label: '中文' },
   { id: 'en', label: 'English' },
-  { id: 'ru', label: 'Русский' },
 ];
 
 // 选择语言
@@ -35,19 +34,10 @@ const changeLanguageMobile = (newlang: string) => {
 
 function changeLanguage(newlang: string) {
   if (lang.value === newlang) return;
-  const { pathname, host, search } = window.location;
+  const { pathname, search } = window.location;
   const newHref = pathname.replace(`/${lang.value}/`, `/${newlang}/`);
-  const RU = 'ru';
   isMenu.value = false;
-  //判断是否是ru
-  if (host.includes(RU) || newlang === RU) {
-    window.open(
-      `https://${newlang === RU ? RU : 'www'}.openeuler.org` + newHref + search,
-      '_self'
-    );
-  } else {
-    router.go(newHref + search);
-  }
+  router.go(newHref + search);
 }
 
 const isMenu = ref(false);

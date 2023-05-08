@@ -121,39 +121,10 @@ const linksData = {
       id: 'youtube',
     },
   ],
-  ru: [
-    {
-      path: 'https://www.reddit.com/r/openEuler/',
-      logo: LogoRedditSquare,
-      id: 'reddit-square',
-    },
-    {
-      path: 'https://www.linkedin.com/company/openeuler',
-      logo: LogoLinkedin,
-      id: 'linkedin',
-    },
-    {
-      path: 'https://twitter.com/openEuler',
-      logo: LogoTwitter,
-      id: 'twitter',
-    },
-    {
-      path: 'https://space.bilibili.com/527064077/channel/series',
-      logo: LogoBilibili2,
-      id: 'bilibili',
-    },
-    {
-      path: 'https://www.youtube.com/channel/UCPzSqXqCgmJmdIicbY7GAeA',
-      logo: LogoYoutube,
-      id: 'youtube',
-    },
-  ],
 };
 const footerLinks = computed(() => {
   if (lang.value === 'en') {
     return linksData.en;
-  } else if (lang.value === 'ru') {
-    return linksData.ru;
   } else {
     return linksData.zh;
   }
@@ -257,11 +228,7 @@ onMounted(() => {
     :class="{ 'is-doc': isMigration || isAbout }"
   >
     <!-- 隐私政策 -->
-    <div
-      v-if="isCookieTip"
-      class="cookie-privacy"
-      :class="{ ru: lang === 'ru' }"
-    >
+    <div v-if="isCookieTip" class="cookie-privacy">
       <template v-if="lang !== 'ru'">
         <span>{{ i18n.common.COOKIE_LEGAL_TEXT }} </span>
         <a :href="'/' + lang + '/other/privacy/'">{{
@@ -294,9 +261,9 @@ onMounted(() => {
           <div class="footer-logo">
             <img class="show-pc" :src="LogoFooter" alt="openEuler" />
             <img class="show-mo" :src="LogoFooter1" alt="openEuler" />
-              <a class="email" :href="'mailto:' + i18n.common.FOOTER.MAIL">
-                {{ i18n.common.FOOTER.MAIL }}
-              </a>
+            <a class="email" :href="'mailto:' + i18n.common.FOOTER.MAIL">
+              {{ i18n.common.FOOTER.MAIL }}
+            </a>
           </div>
           <div class="footer-option">
             <div class="footer-option-item">

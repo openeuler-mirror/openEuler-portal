@@ -14,15 +14,15 @@ export function getSigList() {
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 export function getCompleteList(params?: LIST_PARAMS) {
-  const url = `/api-omapi/query/sig/info?community=openeuler&page=${params?.page}&pageSize=${params?.pageSize}&search=fuzzy`;
+  const url = `/api-dsapi/query/sig/info?community=openeuler&page=${params?.page}&pageSize=${params?.pageSize}&search=fuzzy`;
   return request.post(url).then((res: AxiosResponse) => res.data);
 }
 export function getRepoList() {
-  const url = `/api-omapi/query/sig/repo?community=openeuler&search=fuzzy`;
+  const url = `/api-dsapi/query/sig/repo?community=openeuler&search=fuzzy`;
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 export function getAllList() {
-  const url = '/api-omapi/query/sig/info?community=openeuler&search=fuzzy';
+  const url = '/api-dsapi/query/sig/info?community=openeuler&search=fuzzy';
   return request.post(url).then((res: AxiosResponse) => res.data);
 }
 export function getSigDetail(id: string) {
@@ -30,11 +30,11 @@ export function getSigDetail(id: string) {
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 export function getSigMember(params: object) {
-  const url = '/api-omapi/query/sig/info';
+  const url = '/api-dsapi/query/sig/info';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
 export function getSigRepositoryList(params: object) {
-  const url = '/api-omapi/query/sig/repo/committers';
+  const url = '/api-dsapi/query/sig/repo/committers';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
 export function getSalon() {
@@ -46,7 +46,7 @@ export function getSalon() {
  * sig用户的个人贡献
  */
 export function querySigUserContribute(params: object) {
-  const url = '/api-omapi/query/sig/usercontribute';
+  const url = '/api-dsapi/query/sig/usercontribute';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
 
@@ -55,7 +55,7 @@ export function querySigUserContribute(params: object) {
  * @returns {Promise<GroupInfo[]>}
  */
 export function getSigLandscape(lang: string): Promise<GroupInfo[]> {
-  const url = '/api-omapi/query/sig/scoreAll?community=openeuler';
+  const url = '/api-dsapi/query/sig/scoreAll?community=openeuler';
   return request.get(url).then((res: AxiosResponse) => {
     const data = res.data?.data;
     const info: GroupInfo[] = [];

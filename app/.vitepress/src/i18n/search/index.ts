@@ -33,16 +33,4 @@ export default {
     relative: 'Related software package',
     suggest: 'Are you looking for:',
   },
-  ru: {
-    form: 'От кого:',
-    tagList: {
-      all: 'Bсе',
-      blog: 'Блоги',
-      news: 'Новости',
-      docs: 'Документы',
-    },
-    no: 'нет',
-    version: 'версия:',
-    relative: 'Сопутствующий пакет программного обеспечения',
-  },
 };

@@ -33,8 +33,6 @@ const windowWidth = ref(useWindowResize());
 const homeBanner = computed(() => {
   if (lang.value === 'en') {
     return HOME_CONFIG.HOMEBANNER.en;
-  } else if (lang.value === 'ru') {
-    return HOME_CONFIG.HOMEBANNER.ru;
   } else {
     return HOME_CONFIG.HOMEBANNER.zh;
   }
