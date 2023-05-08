@@ -57,12 +57,11 @@ openEuler 项目群工作委员会（简称“openEuler 委员会”）为openEu
   </div>
 
 
+  （2） 归档途径：openEuler委员会共享空间平台。
 
-  （1） 归档途径：openEuler委员会共享空间平台。
+  （3） 查看权限：面向openEuler委员会全体委员开设只读权限。
 
-  （2） 查看权限：面向openEuler委员会全体委员开设只读权限。
-
-  （3） 归档时长：4年（两届openEuler委员会任期）。
+  （4） 归档时长：4年（两届openEuler委员会任期）。
 
   </div>
 
