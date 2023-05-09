@@ -110,6 +110,7 @@ export default {
         {
           img_light: xinhua_light,
           img_dark: xinhua_dark,
+          noIcon: true,
         },
         {
           img_light: turbolinux_light,
@@ -229,6 +230,7 @@ export default {
         {
           img_light: xinhua_light,
           img_dark: xinhua_dark,
+          noIcon: true,
         },
         {
           img_light: turbolinux_light,

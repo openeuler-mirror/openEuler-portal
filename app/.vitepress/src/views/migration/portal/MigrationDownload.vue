@@ -235,13 +235,14 @@ function handleClick(item: LinkItem) {
                 color: var(--o-color-brand1);
               }
             }
-            @media screen and (max-width: 440px) {
-              margin-right: 5px;
+            @media screen and (max-width: 768px) {
+              margin-right: 4px;
+              margin-bottom: 4px;
             }
             &:last-child {
               margin-right: var(--o-spacing-h3);
               @media screen and (max-width: 440px) {
-                margin-right: 5px;
+                margin-right: 4px;
               }
             }
           }

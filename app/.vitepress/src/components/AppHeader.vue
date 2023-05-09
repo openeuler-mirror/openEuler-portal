@@ -267,7 +267,7 @@ const navItemClick = () => {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 1009;
+  z-index: 98;
   box-shadow: var(--o-shadow-l1);
   &-body {
     display: flex;

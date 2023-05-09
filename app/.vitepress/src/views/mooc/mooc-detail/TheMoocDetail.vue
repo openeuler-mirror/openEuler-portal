@@ -140,6 +140,9 @@ function handleNodeClick(obj: NodeItem) {
 // 读取所有文档节点
 function getCoursePath(menuDataList: any) {
   menuDataList.forEach((item: any) => {
+    delete item.video_link
+    delete item.desc
+    delete item.ppt_link
     if (item.children && item.children.length) {
       getCoursePath(item.children);
     } else {

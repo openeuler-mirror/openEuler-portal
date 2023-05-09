@@ -193,7 +193,6 @@ const handleNodeClick = (node: any) => {
     display: none;
   }
   :deep(.el-tree-node .el-tree-node__content) {
-    padding: 19px var(--o-spacing-h5) !important;
     justify-content: space-between;
   }
 }
