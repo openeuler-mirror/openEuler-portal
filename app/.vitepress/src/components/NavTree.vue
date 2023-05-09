@@ -23,6 +23,7 @@ const props = defineProps({
 });
 const emits = defineEmits(['node-click']);
 const { data, defaultProps } = toRefs(props);
+
 // 导航栏点击事件
 function handleNodeClick(obj: any) {
   emits('node-click', obj);
@@ -90,15 +91,18 @@ defineExpose({
   display: none;
 }
 
-// :deep(.el-tree--highlight-current
-//     .el-tree-node.is-current
-//     > .el-tree-node__content) {
-//   background-color: var(--o-color-bg4) !important;
-// }
-:deep(.el-tree-node__children .el-tree-node__expand-icon) {
-  display: none;
+.el-tree {
+  &>:deep(.el-tree-node) {
+    &>.el-tree-node__children {
+      padding: 0;
+      .is-leaf {
+        display: none;
+      }
+    }
+  }
 }
 :deep(.el-tree-node__children) {
+  padding-left: 8px;
   background-color: var(--o-color-bg1);
 }
 :deep(.el-tree-node__children .is-current .el-tree-node__content) {
@@ -135,7 +139,7 @@ defineExpose({
   padding: 28px var(--o-spacing-h4) !important;
   justify-content: space-between;
   @media screen and (max-width: 1100px) {
-    padding: 16px var(--o-spacing-h5) !important;
+    padding: 19px var(--o-spacing-h5) !important;
   }
 }
 

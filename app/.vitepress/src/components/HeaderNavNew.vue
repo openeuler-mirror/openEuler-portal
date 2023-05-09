@@ -347,13 +347,16 @@ watch(
         font-size: var(--o-font-size-h8);
         cursor: pointer;
         display: flex;
-        align-items: center;
+
         cursor: pointer;
         @media (max-width: 1100px) {
           line-height: var(--o-line-height-text);
           font-size: var(--o-font-size-text);
         }
         .o-icon {
+          display: flex;
+          align-items: center;
+          height: 24px;
           margin-left: var(--o-spacing-h9);
           color: var(--o-color-text1);
           font-size: 14px;

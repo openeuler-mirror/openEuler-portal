@@ -95,7 +95,7 @@ watch(
   top: calc(10% + 80px);
   right: 0;
   width: 200px;
-  z-index: 999;
+  z-index: 10;
   &::after {
     position: absolute;
     content: '';
