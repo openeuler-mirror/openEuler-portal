@@ -75,8 +75,8 @@ export default defineConfig({
         changeOrigin: true,
       },
       '/api-search': {
-        target: 'https://doc-search.test.osinfra.cn/',
-        // target: 'https://doc-search.openeuler.org/',
+        // target: 'https://doc-search.test.osinfra.cn/',
+        target: 'https://doc-search.openeuler.org/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-search/, ''),
       },
