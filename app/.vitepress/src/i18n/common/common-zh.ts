@@ -1,5 +1,3 @@
-import { isBrowser } from '@/shared/utils';
-
 export default {
   MEETINGS_TIME: '会议时间：',
   MEETINGS_REPLAY: '回放链接',
@@ -803,10 +801,7 @@ export default {
             {
               NAME: '社区发行版',
               LABEL: '',
-              PATH:
-                isBrowser() && window.location.pathname.endsWith('/download/')
-                  ? '/download/archive/'
-                  : '/download/',
+              PATH: '/download/archive/',
             },
             {
               NAME: '商业发行版',
