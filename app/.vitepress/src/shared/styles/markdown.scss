@@ -40,8 +40,7 @@
   h6 {
     color: var(--o-color-text1);
     font-weight: normal;
-
-    a {
+    .header-anchor {
       display: none;
     }
   }
@@ -82,10 +81,12 @@
 
   h3 {
     margin-top: var(--o-spacing-h3);
+    margin-bottom: var(--o-spacing-h4);
     font-size: var(--o-font-size-h7);
     line-height: var(--o-line-height-h8);
     @media screen and (max-width: 768px) {
       margin-top: var(--o-spacing-h5);
+      margin-bottom: var(--o-spacing-h6);
       font-size: var(--o-font-size-text);
       line-height: var(--o-line-height-text);
     }
