@@ -175,16 +175,26 @@ onMounted(async () => {
       <OTableColumn
         prop="location"
         :label="i18n.download.MIRROR_ALL.LOCATION"
-        min-width="100"
+        min-width="90"
       />
-      <el-table-column :label="i18n.download.MIRROR_ALL.SPONSOR" min-width="90">
+      <el-table-column
+        :label="i18n.download.MIRROR_ALL.SPONSOR"
+        align="center"
+        class-name="center"
+        min-width="100"
+      >
         <template #default="scope">
           <a :href="scope.row.sponsor" target="_blank" class="mirror-list-img"
-            ><img :src="scope.row.sponsorLogo" 
+            ><img :src="scope.row.sponsorLogo"
           /></a>
         </template>
       </el-table-column>
-      <el-table-column :label="i18n.download.MIRROR_ALL.RSNC" min-width="90">
+      <el-table-column
+        :label="i18n.download.MIRROR_ALL.RSNC"
+        class-name="center"
+        align="center"
+        min-width="90"
+      >
         <template #default="scope">
           <span v-if="scope.row.rsnc === '-'">{{ scope.row.rsnc }}</span>
           <IconCpoy
@@ -194,7 +204,12 @@ onMounted(async () => {
           />
         </template>
       </el-table-column>
-      <el-table-column :label="i18n.download.MIRROR_ALL.FTP" min-width="80">
+      <el-table-column
+        :label="i18n.download.MIRROR_ALL.FTP"
+        class-name="center"
+        align="center"
+        min-width="80"
+      >
         <template #default="scope">
           <span v-if="scope.row.ftp === '-'">{{ scope.row.ftp }}</span>
           <IconCpoy
@@ -308,6 +323,12 @@ onMounted(async () => {
   display: none;
   @media (max-width: 768px) {
     display: block;
+  }
+}
+:deep(.center) {
+  .cell {
+    display: flex;
+    justify-content: center !important;
   }
 }
 .mirror-card {

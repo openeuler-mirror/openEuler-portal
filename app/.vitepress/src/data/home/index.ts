@@ -1,3 +1,6 @@
+import easyEdit_pc from '@/assets/category/home/banner/easy-edit_pc.jpg';
+import easyEdit_mo from '@/assets/category/home/banner/easy-edit_mo.jpg';
+
 import techDay_pc from '@/assets/category/home/banner/tech-day_pc.png';
 import techDay_mo from '@/assets/category/home/banner/tech-day_mo.png';
 import migrationImg_pc from '@/assets/category/home/banner/migration_pc.png';
@@ -10,22 +13,19 @@ import eur_pc from '@/assets/category/home/banner/eur-banner_pc.jpg';
 
 import internship_pc from '@/assets/category/home/banner/internship_pc.jpg';
 import internship_mo from '@/assets/category/home/banner/internship_mo.jpg';
-import devday_pc from '@/assets/category/home/banner/devday_pc.jpg';
-import devday_mo from '@/assets/category/home/banner/devday_mo.png';
-import devdayText_mo from '@/assets/category/home/banner/devday-text_mo.png';
-import devdayText_pc from '@/assets/category/home/banner/devday-text_pc.png';
 
 export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
       {
-        pcBanner: devday_pc,
-        moBanner: devday_mo,
-        textImg_pc: devdayText_pc,
-        textImg_mo: devdayText_mo,
-        link: '/zh/interaction/summit-list/devday2023/',
-        id: 'devday',
+        pcBanner: easyEdit_pc,
+        moBanner: easyEdit_mo,
+        link: '/zh/blog/20230506-EasyEditor/20230506-EasyEditor.html',
+        title: ['社区SIG主页支持自编辑'],
+        desc: ['欢迎使用EasyEditor'],
+        btn: '查看详情',
+        id: 'easy-edit',
         targetTap: 1,
       },
       {
