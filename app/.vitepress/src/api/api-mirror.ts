@@ -23,8 +23,7 @@ export function getAllMirror() {
 export const selectMirror = (version: string) => {
   // 本地使用代理解决跨域问题
   // 线上环境不使用代理，使用代理会导致 ip地址不准确
-  let url = '';
-  url =
+  const url =
     window.location.host !== 'www.openeuler.org'
       ? `/api/mirrors/openEuler-${version}/ISO/`
       : `https://api.openeuler.org/mirrors/openEuler-${version}/ISO/`;
