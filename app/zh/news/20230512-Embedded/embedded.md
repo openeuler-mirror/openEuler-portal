@@ -194,7 +194,7 @@ https://summer-ospp.ac.cn/org/prodetail/23b970522?lang=zh&list=pro
 
 **活动日程**
 
-![开源之夏活动日程](%E5%BC%80%E6%BA%90%E4%B9%8B%E5%A4%8F%E6%B4%BB%E5%8A%A8%E6%97%A5%E7%A8%8B.png)
+![开源之夏活动日程](./richen.png)
 
 
 
@@ -206,4 +206,4 @@ https://summer-ospp.ac.cn/help/student/
 
 对openEuler Embedded SIG开源之夏项目感兴趣的同学可添加小助手微信，备注“开源之夏”进入交流群。
 
-![openEuler小助手微信](openEuler%E5%B0%8F%E5%8A%A9%E6%89%8B%E5%BE%AE%E4%BF%A1.JPG)
+![openEuler小助手微信](./wechat.jpg)
