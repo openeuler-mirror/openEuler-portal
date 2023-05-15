@@ -110,6 +110,7 @@ function goBackPage() {
                 }}
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   :href="
                     i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[2].A_TEXT
                   "

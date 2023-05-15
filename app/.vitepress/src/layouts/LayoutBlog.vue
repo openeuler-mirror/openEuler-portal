@@ -29,6 +29,7 @@ const blogInfo = {
       {{ i18n.interaction.COPYRIGHT_1 }}
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://creativecommons.org/licenses/by-sa/4.0/legalcode"
         >CC-BY-SA 4.0</a
       >

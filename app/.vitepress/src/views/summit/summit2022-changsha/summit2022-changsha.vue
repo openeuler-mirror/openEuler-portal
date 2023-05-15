@@ -86,6 +86,7 @@ const scheduleList = [
     <div class="btn-warper">
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://wx.vzan.com/live/page/79AC53DBFC5436AC4716DE0D9AA85D5B?topicid=1224869310&shauid=LhgDaMCuY3kvTXNHvA7Ndg**&vprid=0&sharetstamp=1663939231852"
       >
         <OButton animation class="home-banner-btn">

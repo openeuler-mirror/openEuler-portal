@@ -401,7 +401,9 @@ watch(
       <el-scrollbar height="1915px">
         <ul>
           <li v-for="item in searchRpmList" :key="item.filename">
-            <a :href="item.path" target="_blank">{{ item.filename }}</a>
+            <a :href="item.path" target="_blank" rel="noopener noreferrer">{{
+              item.filename
+            }}</a>
             <p>{{ item.version }}</p>
           </li>
           <li v-show="!searchRpmList[0]">

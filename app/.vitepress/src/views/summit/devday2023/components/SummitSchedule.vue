@@ -35,6 +35,7 @@ const otherTabType = ref(0);
       <a
         href="https://etherpad.openeuler.org/p/odd2023-TC-Meeting"
         target="_blank"
+        rel="noopener noreferrer"
         >点击此处</a
       >按要求填写议题需求
     </span>
@@ -45,6 +46,7 @@ const otherTabType = ref(0);
       <a
         href="https://etherpad.openeuler.org/p/ODD-2023-SIG-Meeting"
         target="_blank"
+        rel="noopener noreferrer"
         >点击此处</a
       >并选择感兴趣的SIG组-Etherpad文件，按要求填写议题和参会信息
     </span>

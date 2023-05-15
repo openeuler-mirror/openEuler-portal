@@ -215,6 +215,7 @@ function handleClickBtn(link = '') {
               oldEmail || 'dev@openeuler.org'
             }/`"
             target="_blank"
+            rel="noopener noreferrer"
             class="subscribe"
             >{{ i18n.mailing.MAILING_LIST.SUBSCRIBE.BUTTON }}</a
           >
@@ -340,6 +341,7 @@ function handleClickBtn(link = '') {
                         v-else-if="keys.isLink"
                         :href="item[keys.key]"
                         target="_blank"
+                        rel="noopener noreferrer"
                         >{{ item[keys.key] }}</a
                       >
                       <p

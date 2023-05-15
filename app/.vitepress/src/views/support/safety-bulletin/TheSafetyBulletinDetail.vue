@@ -146,7 +146,12 @@ onMounted(() => {
                   :key="item"
                   class="tab-content-item-text"
                 >
-                  <a :href="item.url" target="_blank">{{ item.url }}</a>
+                  <a
+                    :href="item.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ item.url }}</a
+                  >
                 </div>
               </div>
             </div>

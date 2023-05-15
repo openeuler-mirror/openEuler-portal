@@ -91,7 +91,12 @@ onMounted(() => {
             class="top-item"
             :class="`rank` + index"
           >
-            <a class="gitee-name" target="_blank" :href="item.giteeRoom">
+            <a
+              class="gitee-name"
+              target="_blank"
+              rel="noopener noreferrer"
+              :href="item.giteeRoom"
+            >
               {{ item.GiteeId }}
             </a>
             <div class="score">
@@ -120,9 +125,13 @@ onMounted(() => {
           >
             <div class="rank-left">
               <div class="rank-class">{{ item.rank }}</div>
-              <a :href="item.giteeRoom" target="_blank" class="gitee-name">{{
-                item.GiteeId
-              }}</a>
+              <a
+                :href="item.giteeRoom"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="gitee-name"
+                >{{ item.GiteeId }}</a
+              >
             </div>
             <div class="rank-right">
               <div class="score">{{ item.integralValue }}</div>

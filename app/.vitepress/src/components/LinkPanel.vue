@@ -19,9 +19,9 @@ const props = withDefaults(
       v-for="item in props.linkList"
       :key="item.LINK"
       :href="item.LINK"
-      rel="nofollow"
       data-aos="fade-up"
       target="_blank"
+      rel="noopener noreferrer"
       class="link-item"
     >
       <img

@@ -26,9 +26,10 @@ const handleGo = (path: string) => {
         <div class="case-box">
           <a
             v-for="item in portalInfo.case.list"
-            :key="item"
+            :key="item.name"
             :href="item.link"
             target="_blank"
+            rel="noopener noreferrer"
             class="case-box-item"
           >
             <p>{{ item.name }}</p>

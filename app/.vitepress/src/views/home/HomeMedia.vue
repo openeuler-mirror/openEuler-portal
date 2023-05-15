@@ -134,6 +134,7 @@ onMounted(async () => {
                     :href="`/${item.path}.html`"
                     :title="item.title"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {{ item.title }}
                   </a>
@@ -154,6 +155,7 @@ onMounted(async () => {
                     :title="item.summary"
                     :href="`/${item.path}.html`"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {{ item.summary }}
                   </a>
@@ -176,6 +178,7 @@ onMounted(async () => {
                 :title="item.summary"
                 :href="`/${item.path}.html`"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {{ item.summary }}
               </a>
@@ -220,6 +223,7 @@ onMounted(async () => {
                     :href="`/${item.path}.html`"
                     :title="item.title"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {{ item.title }}
                   </a>
@@ -240,6 +244,7 @@ onMounted(async () => {
                     :title="item.summary"
                     :href="`/${item.path}.html`"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {{ item.summary }}
                   </a>
@@ -262,6 +267,7 @@ onMounted(async () => {
                 :title="item.summary"
                 :href="`/${item.path}.html`"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {{ item.summary }}
               </a>

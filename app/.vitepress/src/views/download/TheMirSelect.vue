@@ -200,6 +200,7 @@ onMounted(async () => {
             <a
               :href="scope.row.url"
               target="_blank"
+              rel="noopener noreferrer"
               class="mirror-select-link"
               >{{ scope.row.url }}</a
             >
@@ -247,7 +248,9 @@ onMounted(async () => {
             {{ i18n.download.MIRROR_SELECT.URL }}
           </div>
           <div class="mirror-card-word">
-            <a :href="item.url" target="_blank">{{ item.url }}</a>
+            <a :href="item.url" target="_blank" rel="noopener noreferrer">{{
+              item.url
+            }}</a>
           </div>
         </div>
         <div class="mirror-card-content">
@@ -280,7 +283,9 @@ onMounted(async () => {
         You can download desired ISO files from our official mirror source at:
       </p>
       <div class="official-source">
-        <a target="_blank" :href="officeSource">{{ officeSource }}</a>
+        <a target="_blank" rel="noopener noreferrer" :href="officeSource">{{
+          officeSource
+        }}</a>
       </div>
     </div>
   </AppContent>

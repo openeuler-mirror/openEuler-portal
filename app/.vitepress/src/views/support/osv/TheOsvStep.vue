@@ -39,7 +39,11 @@ function goBackPage() {
               </div>
               <div class="item-content">
                 {{ i18n.approve.STEP_CONTENT[0].TEXT_1 }}
-                <a :href="i18n.approve.STEP_CONTENT[0].LINK_1" target="_blank">
+                <a
+                  :href="i18n.approve.STEP_CONTENT[0].LINK_1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {{ i18n.approve.STEP_CONTENT[0].LINK_1 }} </a
                 >。
               </div>
@@ -55,7 +59,11 @@ function goBackPage() {
               </div>
               <div class="item-content">
                 {{ i18n.approve.STEP_CONTENT[1].TEXT_1 }}
-                <a :href="i18n.approve.STEP_CONTENT[1].LINK_1" target="_blank">
+                <a
+                  :href="i18n.approve.STEP_CONTENT[1].LINK_1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {{ i18n.approve.STEP_CONTENT[1].LINK_1 }} </a
                 >。
               </div>
@@ -78,6 +86,7 @@ function goBackPage() {
                   <a
                     :href="i18n.approve.STEP_CONTENT[2].LINK_2"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {{ i18n.approve.STEP_CONTENT[2].LINK_2 }}
                   </a>
@@ -93,7 +102,11 @@ function goBackPage() {
               </div>
               <div class="item-content">
                 {{ i18n.approve.STEP_CONTENT[3].TEXT_1 }}
-                <a :href="i18n.approve.STEP_CONTENT[3].LINK_1" target="_blank">
+                <a
+                  :href="i18n.approve.STEP_CONTENT[3].LINK_1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {{ i18n.approve.STEP_CONTENT[3].LINK_1 }}
                 </a>
                 {{ i18n.approve.STEP_CONTENT[3].TEXT_2 }}
@@ -108,7 +121,11 @@ function goBackPage() {
               </div>
               <div class="item-content">
                 {{ i18n.approve.STEP_CONTENT[4].TEXT_1 }}
-                <a :href="i18n.approve.STEP_CONTENT[4].LINK_1" target="_blank">
+                <a
+                  :href="i18n.approve.STEP_CONTENT[4].LINK_1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {{ i18n.approve.STEP_CONTENT[4].LINK_TEXT }}
                 </a>
                 {{ i18n.approve.STEP_CONTENT[4].TEXT_2 }}

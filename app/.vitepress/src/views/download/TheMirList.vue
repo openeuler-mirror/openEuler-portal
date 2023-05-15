@@ -177,7 +177,12 @@ onMounted(async () => {
       >
         <template #default="scope">
           <div>
-            <a :href="scope.row.http" target="_blank">{{ scope.row.name }}</a>
+            <a
+              :href="scope.row.http"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ scope.row.name }}</a
+            >
           </div>
         </template>
       </el-table-column>
@@ -193,7 +198,11 @@ onMounted(async () => {
         min-width="100"
       >
         <template #default="scope">
-          <a :href="scope.row.sponsor" target="_blank" class="mirror-list-img"
+          <a
+            :href="scope.row.sponsor"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mirror-list-img"
             ><img :src="scope.row.sponsorLogo"
           /></a>
         </template>
@@ -261,7 +270,9 @@ onMounted(async () => {
             {{ i18n.download.MIRROR_ALL.SPONSOR }}
           </div>
           <div class="mirror-card-word">
-            <a :href="item.http" target="_blank">{{ item.http }}</a>
+            <a :href="item.http" target="_blank" rel="noopener noreferrer">{{
+              item.http
+            }}</a>
           </div>
         </div>
         <div class="mirror-card-content">

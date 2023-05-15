@@ -265,7 +265,7 @@ onMounted(() => {
           class="brief-introduction-title floor-title"
         >
           {{ sigDetailName }}
-          <a :href="giteeHomeLink" target="_blank">
+          <a :href="giteeHomeLink" target="_blank" rel="noopener noreferrer">
             <OIcon class="icon"> <IconGitee /> </OIcon
           ></a>
         </h2>
@@ -283,6 +283,7 @@ onMounted(() => {
           {{ i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT1
           }}<a
             target="_blank"
+            rel="noopener noreferrer"
             :href="`https://gitee.com/openeuler/community/tree/master/sig/${sigDetailName}`"
             >{{ i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT2 }}</a
           >{{ i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT3 }}
@@ -332,7 +333,11 @@ onMounted(() => {
                 <span>Maintainer</span>
               </p>
               <div class="icon-link">
-                <a :href="`https://gitee.com/${item.gitee_id}`" target="_blank">
+                <a
+                  :href="`https://gitee.com/${item.gitee_id}`"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <OIcon class="icon"> <IconGitee /> </OIcon
                 ></a>
                 <a :href="`mailto:${item.email}`">
@@ -442,6 +447,7 @@ onMounted(() => {
               <template #default="scope">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   :href="`https://gitee.com/${scope.row.repo}`"
                 >
                   {{ scope.row.repo }}
@@ -454,6 +460,7 @@ onMounted(() => {
                   v-for="(item, index) in scope.row.maintainers"
                   :key="item"
                   target="_blank"
+                  rel="noopener noreferrer"
                   :href="`https://gitee.com/${item}`"
                 >
                   {{ item
@@ -469,6 +476,7 @@ onMounted(() => {
                   v-for="(item, index) in scope.row.gitee_id"
                   :key="item"
                   target="_blank"
+                  rel="noopener noreferrer"
                   :href="`https://gitee.com/${item}`"
                 >
                   {{ item
@@ -549,7 +557,7 @@ onMounted(() => {
                 {{ sigDetail.BLOG_EMPTY1
                 }}<a
                   :href="'/' + lang + '/interaction/post-blog/'"
-                  target="_blank"
+                  target="_blank"  rel="noopener noreferrer"
                   >{{ sigDetail.BLOG_EMPTY2 }}</a
                 >{{ sigDetail.BLOG_EMPTY3 }}
               </li>
@@ -570,7 +578,7 @@ onMounted(() => {
                 {{ sigDetail.NEWS_EMPTY
                 }}<a
                   :href="'/' + lang + '/interaction/post-news/'"
-                  target="_blank"
+                  target="_blank"  rel="noopener noreferrer"
                   >{{ sigDetail.NEWS_EMPTY3 }}</a
                 >{{ sigDetail.NEWS_EMPTY4 }}
               </li>

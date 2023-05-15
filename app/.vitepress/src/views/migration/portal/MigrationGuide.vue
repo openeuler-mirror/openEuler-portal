@@ -21,6 +21,7 @@ const handleGo = (path: string) => {
             :key="item.link"
             :href="item.link"
             target="_blank"
+            rel="noopener noreferrer"
             class="guide-box-item"
           >
             <p>{{ item.label }}</p>

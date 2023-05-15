@@ -70,9 +70,12 @@ list.value = initList();
       <h3 class="brand-title">{{ i18n.brand.MOBILETITLE }}</h3>
       <div class="brand-word">
         {{ i18n.brand.WORDS[0] }}
-        <a :href="i18n.brand.WORDS_LINK[0]" target="_blank">{{
-          i18n.brand.WORDS[1]
-        }}</a>
+        <a
+          :href="i18n.brand.WORDS_LINK[0]"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ i18n.brand.WORDS[1] }}</a
+        >
         {{ i18n.brand.WORDS[2] }}
         <br />
         {{ i18n.brand.WORDS[3] }}
@@ -110,6 +113,7 @@ list.value = initList();
             :key="item2.STYLE"
             :href="item2.URL"
             target="_blank"
+            rel="noopener noreferrer"
             download
           >
             <OButton size="mini" class="button-item"
@@ -145,6 +149,7 @@ list.value = initList();
             :key="item2.STYLE"
             :href="item2.URL"
             target="_blank"
+            rel="noopener noreferrer"
             download
           >
             <OButton size="mini" class="button-item"
@@ -165,7 +170,12 @@ list.value = initList();
           class="ppt-item"
           :style="{ padding: '0px' }"
         >
-          <a :href="ppt.LINK" target="_blank" download>
+          <a
+            :href="ppt.LINK"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
             <img :src="ppt.URL" alt="" />
             <div class="ppt-word">
               {{ i18n.brand.PPT_TEMPLATES[index] }}

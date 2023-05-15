@@ -296,23 +296,27 @@ function setActiveMirrorMobile(index: number, item: string) {
         v-if="contentData[0].RELEASE_DESC_URL"
         :href="contentData[0].RELEASE_DESC_URL"
         target="_blank"
+        rel="noopener noreferrer"
         >{{ i18n.download.RELEASE_DESC }}</a
       ><a
         v-if="contentData[0].INSTALL_GUIDENCE_URL"
         :href="contentData[0].INSTALL_GUIDENCE_URL"
         target="_blank"
+        rel="noopener noreferrer"
         >{{ i18n.download.INSTALL_GUIDENCE }}</a
       >
       <a
         v-if="contentData[0].WHITE_PAPER"
         :href="contentData[0].WHITE_PAPER"
         target="_blank"
+        rel="noopener noreferrer"
         >{{ i18n.download.WHITE_PAPER }}</a
       >
       <a
         v-if="contentData[0].LIFE_CYCLE_URL"
         :href="contentData[0].LIFE_CYCLE_URL"
         target="_blank"
+        rel="noopener noreferrer"
         >{{ i18n.download.LIFE_CYCLE }}</a
       >
     </div>

@@ -423,6 +423,7 @@ const watchData = watch(
                         v-else-if="keys.isLink"
                         :href="item[keys.key]"
                         target="_blank"
+                        rel="noopener noreferrer"
                         >{{ item[keys.key] }}</a
                       >
                       <p
