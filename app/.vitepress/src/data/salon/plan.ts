@@ -179,15 +179,10 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: '待定',
-              },
-            ],
-          },
-          {
-            activeType: '用户活动组',
-            activeEvent: [
-              {
-                activeName: '北京',
+                activeName: '北京 SDS',
+                activelink: {
+                  url: '/zh/interaction/event-list/detail/?id=90&isMini=1',
+                },
               },
             ],
           },
@@ -200,10 +195,7 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: '实时性系统',
-              },
-              {
-                activeName: '多样性算力',
+                activeName: '南京 高效运维',
               },
             ],
           },
@@ -211,7 +203,7 @@ export default {
             activeType: '用户活动组',
             activeEvent: [
               {
-                activeName: '武汉',
+                activeName: '西安',
               },
             ],
           },

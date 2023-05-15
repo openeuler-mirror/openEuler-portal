@@ -148,10 +148,19 @@ onMounted(async () => {
   />
   <AppContent class="mirror-list">
     <p>
-      {{ i18n.download.MIRROR_ALL.CONTENT[0] }}
-      <a href="mailto:mirrors@openeuler.sh">
-        {{ i18n.download.MIRROR_ALL.CONTENT[1] }}</a
-      >.
+      openEuler welcomes new mirror sites. If you are considering to set up a
+      public mirror site for openEuler, please follow the mirror guidelines to
+      make sure that your mirror is consistent with the other mirror sites. Any
+      questions, feel free to
+      <a href="mailto:mirrors@openeuler.sh"> contact us</a>.
+    </p>
+    <p class="rsync-tip">
+      <span>To synchronize openEuler images, run the following command: </span>
+      <span
+        >rsync -av --partial --progress --delete
+        rsync://root@repo.openeuler.openatom.cn/openeuler/
+        ***(localDirectory)</span
+      >
     </p>
     <OTable
       class="mirror-pc"
@@ -528,12 +537,24 @@ onMounted(async () => {
     font-size: var(--o-font-size-h7);
     font-weight: 400;
     color: var(--o-color-text1);
-    margin-bottom: var(--o-spacing-h2);
     line-height: var(--o-line-height-h7);
+    margin-bottom: 12px;
     @media (max-width: 768px) {
       font-size: var(--o-font-size-tip);
       line-height: var(--o-line-height-tip);
       margin-bottom: var(--o-spacing-h5);
+    }
+  }
+  .rsync-tip {
+    margin-bottom: var(--o-spacing-h2);
+    span {
+      display: block;
+      &:last-child {
+        font-style: italic;
+        display: inline-block;
+        word-spacing: 4px;
+        background-color: var(--o-color-bg4);
+      }
     }
   }
   a {
