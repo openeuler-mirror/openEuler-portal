@@ -4,7 +4,7 @@ date: '2023-05-11'
 category: news
 tags:
   - openEuler
-banner: 'img/banners/220230512-embedded1.png'
+banner: 'img/banners/20230512-embedded1.png'
 author: 'openEuler'
 summary: '欢迎申请openEuler Embedded SIG开发任务'
 ---
