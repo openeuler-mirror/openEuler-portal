@@ -22,6 +22,7 @@ import { Switch } from './switch';
 import { Collapse, CollapseItem } from './collapse';
 import { Container } from './container';
 import { Dialog } from './dialog';
+import { Dropdown, DropdownItem } from './dropdown';
 
 const components = [
   Button,
@@ -49,6 +50,8 @@ const components = [
   CollapseItem,
   Container,
   Dialog,
+  Dropdown,
+  DropdownItem,
 ];
 export default {
   install(app: App): void {
