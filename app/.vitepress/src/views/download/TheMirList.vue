@@ -5,6 +5,7 @@ import { useData } from 'vitepress';
 import { ElMessage } from 'element-plus';
 import { useI18n } from '@/i18n';
 import seoConfig from '@/data/common/seo';
+import repoData from '@/data/download/repo-size';
 
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppContent from '@/components/AppContent.vue';
@@ -235,6 +236,16 @@ onMounted(async () => {
       >
       </OTableColumn>
     </OTable>
+    <OTable
+      class="mirror-pc repo-pc"
+      :data="repoData"
+      header-cell-class-name="mirror-list-header"
+      cell-class-name="mirror-list-row"
+      :row-class-name="tableRowClassName"
+    >
+      <OTableColumn prop="release" label="Release" min-width="90" />
+      <OTableColumn prop="size" label="Size" min-width="90" />
+    </OTable>
 
     <div class="mirror-mobile">
       <OCard v-for="item in listData" :key="item.name" class="mirror-card">
@@ -298,6 +309,18 @@ onMounted(async () => {
         </div>
       </OCard>
     </div>
+    <div class="mirror-mobile repo-mobile">
+      <OCard v-for="item in repoData" :key="item.release" class="mirror-card">
+        <div class="mirror-card-content">
+          <div class="mirror-card-title">Release</div>
+          <div class="mirror-card-word">{{ item.release }}</div>
+        </div>
+        <div class="mirror-card-content">
+          <div class="mirror-card-title">Size</div>
+          <div class="mirror-card-word">{{ item.size }}</div>
+        </div>
+      </OCard>
+    </div>
   </AppContent>
   <div class="input-box">
     <!-- 用于复制RSNC的值 -->
@@ -324,6 +347,14 @@ onMounted(async () => {
     display: none;
   }
 }
+.repo-pc {
+  margin-top: 40px;
+  :deep(.el-table__row:last-child) {
+    .cell {
+      font-weight: 700;
+    }
+  }
+}
 .mirror-mobile {
   > :nth-child(odd) {
     background-color: var(--o-color-bg4);
@@ -334,11 +365,14 @@ onMounted(async () => {
     display: block;
   }
 }
+.repo-mobile {
+  margin-top: 24px;
+}
 :deep(.center) {
-  .cell {
-    display: flex;
-    justify-content: center !important;
-  }
+  // .cell {
+  //   display: flex;
+  //   justify-content: center !important;
+  // }
 }
 .mirror-card {
   :deep(.el-card__body) {
