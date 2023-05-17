@@ -383,13 +383,12 @@ $color: #fff;
     @media screen and (max-width: 1000px) {
       font-size: 12px;
       line-height: 20px;
-      display: inline-block;
+    }
+    @media screen and (max-width: 760px) {
+      display: block;
       padding-left: 12px;
-      padding-right: 12px;
-      &.ru {
-        line-height: 10px;
-        height: auto;
-      }
+      padding-right: 36px;
+      padding-top: 4px;
     }
     a {
       cursor: pointer;
@@ -411,10 +410,13 @@ $color: #fff;
         font-size: 20px;
         color: var(--el-color-white);
       }
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 760px) {
         width: 20px;
         height: 20px;
         margin-left: 12px;
+        position: absolute;
+        top: 12px;
+        right: 12px;
       }
     }
   }

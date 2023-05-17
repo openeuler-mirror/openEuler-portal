@@ -49,14 +49,38 @@ const comp = computed(() => {
 
 // cookies使用提示
 const isCookieTip = ref(false);
+function isCookieFn(cname: string) {
+  const name = `${cname}=`;
+  let ca: any = [];
+  try {
+    ca = document.cookie.split(';');
+  } catch {
+    ca = [];
+  }
+  for (let i = 0; i < ca.length; i++) {
+    const c = ca[i].trim();
+    if (c.indexOf(name) === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
 function onCookieClick() {
   isCookieTip.value = false;
-  localStorage.setItem('euler-cookie', 'false');
+  document.cookie =
+    'agreed-cookiepolicy=false; expires=' + getCookieExpirationDate(6);
+}
+
+function getCookieExpirationDate(months: number) {
+  const date = new Date();
+  date.setMonth(date.getMonth() + months);
+  return date.toUTCString();
 }
 
 onMounted(() => {
-  const show = localStorage.getItem('euler-cookie');
-  isCookieTip.value = show ? false : true;
+  isCookieTip.value = isCookieFn('agreed-cookiepolicy');
+
   setStoreData();
 });
 </script>

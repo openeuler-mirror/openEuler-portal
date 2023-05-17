@@ -407,7 +407,7 @@ list.value = initList();
 @media (max-width: 600px) {
   .ppt-list,
   .brand-list {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 </style>
