@@ -429,10 +429,17 @@ export default {
               PATH: 'https://pkgmanage.openeuler.org',
             },
             {
+              NAME: 'Contribute Software Package',
+              LABEL:
+                'Contribute software packages in a simple and efficient manner',
+              PATH: 'https://compliance.openeuler.org/',
+            },
+            {
               NAME: 'Compliance',
               LABEL: 'Detect license compatibility and compliance',
               PATH: 'https://compliance.openeuler.org/',
             },
+
             {
               NAME: 'EulerTest',
               LABEL: 'Testing management platform developed based on openEuler',
