@@ -549,7 +549,7 @@ export default {
             },
             {
               NAME: '软件包贡献',
-              LABEL: '为全球开发者提供简便顺畅的软件包贡献流程',
+              LABEL: '简单高效地贡献软件包',
               PATH: 'https://software-pkg.openeuler.org/zh/package',
             },
             {
