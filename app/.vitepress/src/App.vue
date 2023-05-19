@@ -18,6 +18,7 @@ import LayoutEvent from './layouts/LayoutEvent.vue';
 
 import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
+import { setCustomCookie } from './shared/utils';
 
 const { frontmatter, lang } = useData();
 
@@ -51,19 +52,12 @@ const comp = computed(() => {
 const isCookieTip = ref(false);
 function onCookieClick() {
   isCookieTip.value = false;
-  document.cookie =
-    'agreed-cookiepolicy=false; expires=' + getCookieExpirationDate(6);
-}
-
-function getCookieExpirationDate(months: number) {
-  const date = new Date();
-  date.setMonth(date.getMonth() + months);
-  return date.toUTCString();
+  setCustomCookie('agreed-cookiepolicy', 'false', 180);
 }
 
 onMounted(() => {
   isCookieTip.value =
-    document.cookie.indexOf('agreed-cookiepolicy') === 0 ? false : true;
+    document.cookie.indexOf('agreed-cookiepolicy') !== -1 ? false : true;
   localStorage.getItem('euler-cookie') &&
     localStorage.removeItem('euler-cookie');
 
