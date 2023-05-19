@@ -432,7 +432,7 @@ export default {
               NAME: 'Contribute Software Package',
               LABEL:
                 'Contribute software packages in a simple and efficient manner',
-              PATH: 'https://compliance.openeuler.org/',
+              PATH: 'https://software-pkg.openeuler.org/en/package',
             },
             {
               NAME: 'Compliance',
