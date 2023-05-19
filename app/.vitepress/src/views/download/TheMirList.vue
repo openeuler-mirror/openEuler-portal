@@ -80,7 +80,11 @@ const initTable = (data: any[]) => {
     return item.continentCode === 'EU';
   });
   euData.unshift({ name: `Europe (${euData.length}):`, area: true });
-  result = [...asData, ...euData];
+  const naData = result.filter((item) => {
+    return item.continentCode === 'NA';
+  });
+  naData.unshift({ name: `North America (${naData.length}):`, area: true });
+  result = [...asData, ...euData, ...naData];
   return result;
 };
 
@@ -185,7 +189,7 @@ onMounted(async () => {
       <OTableColumn
         prop="location"
         :label="i18n.download.MIRROR_ALL.LOCATION"
-        min-width="90"
+        min-width="110"
       />
       <el-table-column
         :label="i18n.download.MIRROR_ALL.SPONSOR"
@@ -369,10 +373,10 @@ onMounted(async () => {
   margin-top: 24px;
 }
 :deep(.center) {
-  // .cell {
-  //   display: flex;
-  //   justify-content: center !important;
-  // }
+  .cell {
+    display: flex;
+    justify-content: center !important;
+  }
 }
 .mirror-card {
   :deep(.el-card__body) {
@@ -602,8 +606,7 @@ onMounted(async () => {
     align-items: center;
     width: 100%;
     img {
-      max-height: 34px;
-      max-width: calc(100% - 32px);
+      height: 34px;
     }
   }
   .mirror-list-rsnc {
