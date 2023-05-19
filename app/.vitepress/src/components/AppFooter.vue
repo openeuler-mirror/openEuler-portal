@@ -7,7 +7,7 @@ import { useCommon } from '@/stores/common';
 
 import LogoFooter from '@/assets/common/footer/footer-logo2.png';
 import LogoFooter1 from '@/assets/common/footer/footer-logo1.png';
-import LogoAtom from '@/assets/common/footer/atom-logo.png';
+import LogoAtom from '@/assets/common/footer/atom-logo.svg';
 import FooterBg from '@/assets/common/footer/footer-bg.png';
 import FooterBgMo from '@/assets/common/footer/footer-bg-mo.png';
 
@@ -250,7 +250,7 @@ onMounted(() => {
     <AppContent :pc-top="0" :mobile-top="0">
       <div class="atom">
         <p class="atom-text">{{ i18n.common.FOOTER.ATOM_TEXT }}</p>
-        <a href="https://openatom.cn/home" target="_blank">
+        <a href="https://openatom.cn" target="_blank">
           <img :src="LogoAtom" class="atom-logo" alt="openEuler" />
         </a>
       </div>
@@ -438,10 +438,10 @@ $color: #fff;
       }
     }
     &-logo {
-      height: 40px;
+      height: 48px;
       margin-top: 16px;
       @media (max-width: 1100px) {
-        height: 30px;
+        height: 38px;
       }
     }
   }
