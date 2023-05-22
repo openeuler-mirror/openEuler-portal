@@ -834,7 +834,7 @@ export default {
     MAIL: 'contact@openeuler.io',
     COPY_RIGHT: '版权所有 © 2023 openEuler 保留一切权利',
     LICENSED_1: '遵循',
-    LICENSED_2: '木兰宽松许可证（MulanPSL）',
+    LICENSED_2: '木兰宽松许可证第2版（MulanPSL2）',
     RIGHT_LIST: [
       {
         NAME: '品牌',

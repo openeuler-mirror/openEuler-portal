@@ -685,7 +685,7 @@ export default {
     MAIL: 'contact@openeuler.io',
     COPY_RIGHT: 'Copyright © 2023 openEuler. All rights reserved.',
     LICENSED_1: 'Licensed under',
-    LICENSED_2: 'the Mulan PSL',
+    LICENSED_2: 'the MulanPSL2',
     RIGHT_LIST: [
       {
         NAME: 'Trademark',

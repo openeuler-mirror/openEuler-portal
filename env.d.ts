@@ -14,3 +14,4 @@ declare module '*.tiff';
 declare module '*.json';
 declare module '*.md';
 declare module '*.mp4';
+declare module '@liradb2000/markdown-it-mermaid';
