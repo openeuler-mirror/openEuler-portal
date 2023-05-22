@@ -49,23 +49,6 @@ const comp = computed(() => {
 
 // cookies使用提示
 const isCookieTip = ref(false);
-function isCookieFn(cname: string) {
-  const name = `${cname}=`;
-  let ca: any = [];
-  try {
-    ca = document.cookie.split(';');
-  } catch {
-    ca = [];
-  }
-  for (let i = 0; i < ca.length; i++) {
-    const c = ca[i].trim();
-    if (c.indexOf(name) === 0) {
-      return false;
-    }
-  }
-  return true;
-}
-
 function onCookieClick() {
   isCookieTip.value = false;
   document.cookie =
@@ -79,7 +62,10 @@ function getCookieExpirationDate(months: number) {
 }
 
 onMounted(() => {
-  isCookieTip.value = isCookieFn('agreed-cookiepolicy');
+  isCookieTip.value =
+    document.cookie.indexOf('agreed-cookiepolicy') === 0 ? false : true;
+  localStorage.getItem('euler-cookie') &&
+    localStorage.removeItem('euler-cookie');
 
   setStoreData();
 });

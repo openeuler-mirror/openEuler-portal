@@ -229,22 +229,10 @@ onMounted(() => {
   >
     <!-- 隐私政策 -->
     <div v-if="isCookieTip" class="cookie-privacy">
-      <template v-if="lang !== 'ru'">
-        <span>{{ i18n.common.COOKIE_LEGAL_TEXT }} </span>
-        <a :href="'/' + lang + '/other/privacy/'">{{
-          i18n.common.COOKIE_LEGAL_LINK_TEXT
-        }}</a>
-      </template>
-      <template v-else>
-        <span>{{ i18n.common.COOKIE_LEGAL_TEXT }} </span>
-        <a :href="'/' + lang + '/other/privacy/'">{{
-          i18n.common.COOKIE_LEGAL_LINK_TEXT
-        }}</a>
-        <span>{{ i18n.common.COOKIE_LEGAL_TEXT_OTHER }} </span>
-        <a :href="'/' + lang + '/other/privacy/'">{{
-          i18n.common.COOKIE_LEGAL_LINK_TEXT_OTHER
-        }}</a>
-      </template>
+      <span>{{ i18n.common.COOKIE_LEGAL_TEXT }} </span>
+      <a :href="'/' + lang + '/other/privacy/'" class="link">{{
+        i18n.common.COOKIE_LEGAL_LINK_TEXT
+      }}</a>
       <OIcon class="icon" @click="onCookieClick"><IconCancel /></OIcon>
     </div>
     <AppContent :pc-top="0" :mobile-top="0">
@@ -375,11 +363,6 @@ $color: #fff;
     z-index: 999;
     box-shadow: var(--o-shadow-l1);
     text-align: center;
-    &.ru {
-      line-height: 16px;
-      display: inline-block;
-      padding: 4px 0;
-    }
     @media screen and (max-width: 1000px) {
       font-size: 12px;
       line-height: 20px;
@@ -389,11 +372,15 @@ $color: #fff;
       padding-left: 12px;
       padding-right: 36px;
       padding-top: 4px;
+      height: auto;
     }
-    a {
+    .link {
       cursor: pointer;
       text-decoration: solid;
       white-space: pre;
+      @media screen and (max-width: 760px) {
+        display: block;
+      }
     }
     .icon {
       cursor: pointer;
