@@ -174,3 +174,14 @@ export function setCustomCookie(cname: string, cvalue: string, day = 1) {
   const date = new Date(+new Date() + expires).toUTCString();
   document.cookie = `${cname}=${cvalue};expires=${date}`;
 }
+
+// 删除cookie
+export function removeCustomCookie(cname: string, cvalue: string) {
+  const cookieArr = document.cookie.split(';');
+  for (let i = 0; i < cookieArr.length; i++) {
+    const c = cookieArr[i].trim();
+    if (c.includes(cvalue)) {
+      setCustomCookie(cname, '', -1);
+    }
+  }
+}
