@@ -1,3 +1,6 @@
+import kunpeng_pc from '@/assets/category/home/banner/kunpeng_pc.jpg';
+import kunpeng_mo from '@/assets/category/home/banner/kunpeng_mo.jpg';
+
 import easyEdit_pc from '@/assets/category/home/banner/easy-edit_pc.jpg';
 import easyEdit_mo from '@/assets/category/home/banner/easy-edit_mo.jpg';
 
@@ -18,6 +21,13 @@ export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
+      {
+        pcBanner: kunpeng_pc,
+        moBanner: kunpeng_mo,
+        link: 'https://www.hikunpeng.com/developer/contests/kunpeng-competition2023?tab=4',
+        id: '',
+        targetTap: 1,
+      },
       {
         pcBanner: easyEdit_pc,
         moBanner: easyEdit_mo,
