@@ -18,7 +18,7 @@ import LayoutEvent from './layouts/LayoutEvent.vue';
 
 import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
-import { setCustomCookie } from './shared/utils';
+import { setCustomCookie, removeCustomCookie } from './shared/utils';
 
 const { frontmatter, lang } = useData();
 
@@ -52,12 +52,15 @@ const comp = computed(() => {
 const isCookieTip = ref(false);
 function onCookieClick() {
   isCookieTip.value = false;
-  setCustomCookie('agreed-cookiepolicy', 'false', 180);
+  setCustomCookie('agreed-cookiepolicy', 'true', 180);
 }
 
 onMounted(() => {
   isCookieTip.value =
     document.cookie.indexOf('agreed-cookiepolicy') !== -1 ? false : true;
+
+  // 清除之前数据
+  removeCustomCookie('agreed-cookiepolicy', 'false');
   localStorage.getItem('euler-cookie') &&
     localStorage.removeItem('euler-cookie');
 
