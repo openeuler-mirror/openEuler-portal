@@ -9,7 +9,6 @@ import IconCancel from '~icons/app/icon-cancel.svg';
 import IconSearch from '~icons/app/icon-search.svg';
 
 const { lang } = useData();
-console.log(useData().lang);
 
 const emits = defineEmits(['focus-input', 'search-click']);
 const isShowDrawer = ref(false);
