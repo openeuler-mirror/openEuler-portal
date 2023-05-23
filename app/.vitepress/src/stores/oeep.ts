@@ -7,6 +7,7 @@ export const useOeep = defineStore('oeep', {
   state: () => {
     return {
       markdownData: '',
+      statementHtml: '',
     };
   },
   actions: {
@@ -25,6 +26,9 @@ export const useOeep = defineStore('oeep', {
       getGiteeContent(parmes).then((res) => {
         this.markdownData = convertGiteePath(res?.data);
       });
+    },
+    setStatementHtml(val: string) {
+      this.statementHtml = val;
     },
   },
 });

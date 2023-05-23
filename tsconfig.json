@@ -17,7 +17,12 @@
       "@/*": ["./app/.vitepress/src/*"],
       "opendesign": ["./opendesign"]
     },
-    "types": ["unplugin-icons/types/vue", "element-plus/global", "node", "vitepress/client"]
+    "types": [
+      "unplugin-icons/types/vue",
+      "element-plus/global",
+      "node",
+      "vitepress/client"
+    ]
   },
   "include": [
     "./env.d.ts",
@@ -26,6 +31,7 @@
     "app/.vitepress/**/*.tsx",
     "app/.vitepress/**/*.vue",
     "app/.vitepress/config.ts",
-    "app/.vitepress/theme/index.ts"
+    "app/.vitepress/theme/index.ts",
+    "app/.vitepress/src/shared/mermaid.js"
   ]
 }
