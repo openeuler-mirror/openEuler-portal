@@ -58,7 +58,7 @@ onMounted(() => {
 });
 
 watch(
-  () => useOeep().markdownData,
+  () => useOeep().statementHtml,
   () => {
     nextTick(() => {
       openSelf();
