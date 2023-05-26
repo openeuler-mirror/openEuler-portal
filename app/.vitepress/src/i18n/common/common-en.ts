@@ -429,10 +429,17 @@ export default {
               PATH: 'https://pkgmanage.openeuler.org',
             },
             {
+              NAME: 'Contribute Software Package',
+              LABEL:
+                'Contribute software packages in a simple and efficient manner',
+              PATH: 'https://software-pkg.openeuler.org/en/package',
+            },
+            {
               NAME: 'Compliance',
               LABEL: 'Detect license compatibility and compliance',
               PATH: 'https://compliance.openeuler.org/',
             },
+
             {
               NAME: 'EulerTest',
               LABEL: 'Testing management platform developed based on openEuler',
@@ -678,7 +685,7 @@ export default {
     MAIL: 'contact@openeuler.io',
     COPY_RIGHT: 'Copyright © 2023 openEuler. All rights reserved.',
     LICENSED_1: 'Licensed under',
-    LICENSED_2: 'the Mulan PSL',
+    LICENSED_2: 'the MulanPSL2',
     RIGHT_LIST: [
       {
         NAME: 'Trademark',

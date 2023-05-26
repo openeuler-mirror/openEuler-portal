@@ -162,3 +162,26 @@ export function isTestEmail(str: string) {
 export function isTestPhone(str: string) {
   return /^1[3|4|5|6|7|8|9][0-9]\d{8}$/.test(str);
 }
+
+/*
+ * setCookie 设置cookie
+ *  cname cookie的名称
+ *  cvalue cookie的值
+ *  day cookie的过期时间 默认1天
+ */
+export function setCustomCookie(cname: string, cvalue: string, day = 1) {
+  const expires = day * 24 * 60 * 60 * 1000;
+  const date = new Date(+new Date() + expires).toUTCString();
+  document.cookie = `${cname}=${cvalue};expires=${date}`;
+}
+
+// 删除cookie
+export function removeCustomCookie(cname: string, cvalue: string) {
+  const cookieArr = document.cookie.split(';');
+  for (let i = 0; i < cookieArr.length; i++) {
+    const c = cookieArr[i].trim();
+    if (c.includes(cvalue)) {
+      setCustomCookie(cname, '', -1);
+    }
+  }
+}

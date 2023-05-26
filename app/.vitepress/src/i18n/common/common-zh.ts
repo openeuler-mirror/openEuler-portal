@@ -549,7 +549,7 @@ export default {
             },
             {
               NAME: '软件包贡献',
-              LABEL: '为全球开发者提供简便顺畅的软件包贡献流程',
+              LABEL: '简单高效地贡献软件包',
               PATH: 'https://software-pkg.openeuler.org/zh/package',
             },
             {
@@ -834,7 +834,7 @@ export default {
     MAIL: 'contact@openeuler.io',
     COPY_RIGHT: '版权所有 © 2023 openEuler 保留一切权利',
     LICENSED_1: '遵循',
-    LICENSED_2: '木兰宽松许可证（MulanPSL）',
+    LICENSED_2: '木兰宽松许可证第2版（MulanPSL2）',
     RIGHT_LIST: [
       {
         NAME: '品牌',

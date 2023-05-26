@@ -56,6 +56,7 @@ watch(
   (val) => {
     if (!val.includes('oEEP')) {
       useOeep().setMarkDownData(true);
+      useOeep().setStatementHtml('');
     }
     nextTick(() => {
       goAnchor();

@@ -5,6 +5,7 @@ import { useData } from 'vitepress';
 import { ElMessage } from 'element-plus';
 import { useI18n } from '@/i18n';
 import seoConfig from '@/data/common/seo';
+import repoData from '@/data/download/repo-size';
 
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppContent from '@/components/AppContent.vue';
@@ -79,7 +80,11 @@ const initTable = (data: any[]) => {
     return item.continentCode === 'EU';
   });
   euData.unshift({ name: `Europe (${euData.length}):`, area: true });
-  result = [...asData, ...euData];
+  const naData = result.filter((item) => {
+    return item.continentCode === 'NA';
+  });
+  naData.unshift({ name: `North America (${naData.length}):`, area: true });
+  result = [...asData, ...euData, ...naData];
   return result;
 };
 
@@ -189,7 +194,7 @@ onMounted(async () => {
       <OTableColumn
         prop="location"
         :label="i18n.download.MIRROR_ALL.LOCATION"
-        min-width="90"
+        min-width="110"
       />
       <el-table-column
         :label="i18n.download.MIRROR_ALL.SPONSOR"
@@ -243,6 +248,16 @@ onMounted(async () => {
         width="260"
       >
       </OTableColumn>
+    </OTable>
+    <OTable
+      class="mirror-pc repo-pc"
+      :data="repoData"
+      header-cell-class-name="mirror-list-header"
+      cell-class-name="mirror-list-row"
+      :row-class-name="tableRowClassName"
+    >
+      <OTableColumn prop="release" label="Release" min-width="90" />
+      <OTableColumn prop="size" label="Size" min-width="90" />
     </OTable>
 
     <div class="mirror-mobile">
@@ -309,6 +324,18 @@ onMounted(async () => {
         </div>
       </OCard>
     </div>
+    <div class="mirror-mobile repo-mobile">
+      <OCard v-for="item in repoData" :key="item.release" class="mirror-card">
+        <div class="mirror-card-content">
+          <div class="mirror-card-title">Release</div>
+          <div class="mirror-card-word">{{ item.release }}</div>
+        </div>
+        <div class="mirror-card-content">
+          <div class="mirror-card-title">Size</div>
+          <div class="mirror-card-word">{{ item.size }}</div>
+        </div>
+      </OCard>
+    </div>
   </AppContent>
   <div class="input-box">
     <!-- 用于复制RSNC的值 -->
@@ -335,6 +362,14 @@ onMounted(async () => {
     display: none;
   }
 }
+.repo-pc {
+  margin-top: 40px;
+  :deep(.el-table__row:last-child) {
+    .cell {
+      font-weight: 700;
+    }
+  }
+}
 .mirror-mobile {
   > :nth-child(odd) {
     background-color: var(--o-color-bg4);
@@ -344,6 +379,9 @@ onMounted(async () => {
   @media (max-width: 768px) {
     display: block;
   }
+}
+.repo-mobile {
+  margin-top: 24px;
 }
 :deep(.center) {
   .cell {
@@ -579,8 +617,7 @@ onMounted(async () => {
     align-items: center;
     width: 100%;
     img {
-      max-height: 34px;
-      max-width: calc(100% - 32px);
+      height: 34px;
     }
   }
   .mirror-list-rsnc {

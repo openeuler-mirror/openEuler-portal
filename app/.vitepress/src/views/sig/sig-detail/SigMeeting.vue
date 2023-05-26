@@ -16,6 +16,7 @@ import { useI18n } from '@/i18n';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import IconDown from '~icons/app/icon-chevron-down.svg';
+import IconTip from '~icons/app/icon-tip.svg';
 
 import notFoundImg_light from '@/assets/illustrations/404.png';
 import notFoundImg_dark from '@/assets/illustrations/404_dark.png';
@@ -55,9 +56,11 @@ const currentDay = ref('');
 const activeName = ref('');
 const isCollapse = ref(false);
 const i18n = useI18n();
+const activeDay = ref('');
 const sigData = computed(() => {
   return i18n.value.sig.SIG_DETAIL;
 });
+
 const detailItem = [
   { text: '会议详情', key: 'detail', isLink: false },
   { text: '发起人', key: 'creator', isLink: false },
@@ -82,39 +85,47 @@ const meetingTip = ref(
 );
 const windowWidth = ref(useWindowResize());
 
-function setMeetingDay() {
+let meetingData = reactive<TableData[]>([]);
+
+function setMeetingDay(select?: string) {
   const meetingData = JSON.parse(JSON.stringify(props.tableData));
-  const recentMeeting: any = ref([]);
-  meetingData.forEach((item: any) => {
-    const startTime = new Date(item.date).getTime();
-    const newDate = new Date().getTime();
-    if (newDate < startTime) {
-      recentMeeting.value.push(item);
-    }
-  });
-  if (!recentMeeting.value[0]) {
-    currentMeet = meetingData.pop();
+  if (select) {
+    currentMeet = meetingData.find((item: TableData) => {
+      return item.date === select;
+    });
   } else {
-    currentMeet = recentMeeting.value[0];
+    // 获取距离今日最近的一条数据 优先展示未开的会议
+    currentMeet = meetingData.find((item: TableData) => {
+      const startTime = new Date(
+        `${item.date} ${item.timeData[0].endTime?.replace('-', ':')}`
+      ).getTime();
+      const newDate = new Date().getTime();
+      return newDate < startTime;
+    });
+    if (!currentMeet) {
+      currentMeet = meetingData.pop();
+    }
+    currentDay.value = currentMeet?.date;
+    activeDay.value = currentMeet?.date;
   }
-  if (currentMeet && currentMeet.date) {
+  // 会议时间
+  if (currentMeet?.date) {
     renderData.value = currentMeet;
     nextTick(() => {
-      if (meetRef.value?.length) {
+      if (meetRef.value?.length && !select) {
         meetRef.value[0].click();
       }
     });
-    currentDay.value = resolveDate(currentMeet.date);
   }
 }
 // 判断会议时间修改提示
 const isActive = ref(false);
 function handleTimeTip(item: DayData) {
   const startTime = new Date(
-    currentMeet.date + ' ' + item.startTime + ':00'
+    currentMeet?.date + ' ' + item.startTime + ':00'
   ).getTime();
   const endTime = new Date(
-    currentMeet.date + ' ' + item.endTime + ':00'
+    currentMeet?.date + ' ' + item.endTime + ':00'
   ).getTime();
   const newDate = new Date().getTime();
   if (newDate > startTime && newDate < endTime) {
@@ -139,14 +150,11 @@ function goDetail(index: number) {
 function changeCollapse() {
   isCollapse.value = !isCollapse.value;
 }
+
 const resolveDate = (date: string) => {
+  if (!date) return;
   const reg = /(\d{4})\-(\d{2})\-(\d{2})/;
   date = date.replace(reg, '$1年$2月$3日');
-  if (date.charAt(5) === '0') {
-    date = date.substring(6);
-  } else {
-    date = date.substring(5);
-  }
   return date;
 };
 const sigDetailName = ref('');
@@ -177,6 +185,10 @@ const watchData = watch(
   () => props.tableData.length,
   () => {
     if (isBrowser()) {
+      meetingData = JSON.parse(JSON.stringify(props.tableData));
+      meetingData.sort((a, b) => {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      });
       nextTick(() => {
         const activeBoxs = document.querySelector(
           '.is-today .out-box'
@@ -192,6 +204,10 @@ const watchData = watch(
 );
 function handleClickBtn(link = '') {
   window.open(link, '_blank');
+}
+function handleCommand(date: string) {
+  activeDay.value = date;
+  setMeetingDay(date);
 }
 </script>
 <template>
@@ -239,8 +255,41 @@ function handleClickBtn(link = '') {
     </div>
     <div class="detail-list">
       <div class="detail-head">
-        {{ sigData.LATEST_MEETING + ':' }}
-        <span>{{ currentDay }}</span>
+        <div v-if="currentDay">
+          <span v-show="activeDay === currentDay">{{
+            sigData.LATEST_MEETING + '：'
+          }}</span>
+          <span class="current-day">{{ resolveDate(activeDay) }}</span>
+          <ClientOnly>
+            <ODropdown
+              v-if="currentDay"
+              :max-height="200"
+              trigger="click"
+              @command="(val: string) => handleCommand(val)"
+            >
+              <span class="el-dropdown-link">
+                <OIcon>
+                  <icon-down></icon-down>
+                </OIcon>
+              </span>
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <ODropdownItem
+                    v-for="item in meetingData"
+                    :key="item.date"
+                    :class="{ active: item.date === activeDay }"
+                    :command="item.date"
+                    >{{ resolveDate(item.date) }}</ODropdownItem
+                  >
+                </el-dropdown-menu>
+              </template>
+            </ODropdown>
+          </ClientOnly>
+          <OIcon class="tip">
+            <icon-tip></icon-tip>
+            <div class="tip-text">会议系统当前仅保留最近半年会议记录</div>
+          </OIcon>
+        </div>
       </div>
       <div class="meeting-list">
         <div
@@ -455,8 +504,8 @@ function handleClickBtn(link = '') {
   &:hover {
     color: var(--o-color-brand1);
     svg {
-      color: var(--o-color-brand2);
-      fill: var(--o-color-brand2);
+      color: var(--o-color-brand1);
+      fill: var(--o-color-brand1);
     }
   }
 }
@@ -469,7 +518,7 @@ function handleClickBtn(link = '') {
       max-width: 100%;
     }
     .info-head {
-      line-height: 21px;
+      line-height: 22px;
       padding: var(--o-spacing-h6);
       text-align: center;
       color: var(--o-color-text4);
@@ -577,33 +626,6 @@ function handleClickBtn(link = '') {
       }
     }
   }
-
-  :deep(.el-calendar) {
-    --el-calendar-border: 1px solid var(--o-color-border2);
-    background-color: var(--o-color-bg1);
-    .el-collapse-item__content {
-      padding: 0;
-      background-color: transparent;
-    }
-    .el-calendar__header {
-      display: block;
-      padding: 0;
-      border: none;
-      @media screen and (max-width: 768px) {
-        background-color: var(--o-color-bg2);
-        .left-title {
-          margin: 0;
-        }
-      }
-    }
-    .el-calendar__body {
-      background-color: var(--o-color-bg2);
-      th {
-        color: var(--o-color-text4);
-      }
-    }
-  }
-
   .collapse-box-mo {
     .left-title {
       display: none;
@@ -814,11 +836,71 @@ function handleClickBtn(link = '') {
       }
     }
     .detail-head {
-      line-height: 21px;
-      padding: var(--o-spacing-h6);
+      position: relative;
+      display: flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      line-height: 22px;
       text-align: center;
       color: var(--o-color-text4);
       background-color: var(--o-color-bg4);
+      .el-dropdown {
+        color: var(--o-color-text4);
+        font-size: var(--o-font-size-h8);
+        .el-dropdown-link {
+          display: flex;
+          align-items: center;
+        }
+        .o-icon {
+          margin-left: 8px;
+          font-size: var(--o-font-size-h5);
+        }
+      }
+      .tip {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 24px;
+        font-size: var(--o-font-size-h5);
+        &:hover {
+          .tip-text {
+            display: block;
+          }
+        }
+        .tip-text {
+          display: none;
+          position: absolute;
+          width: max-content;
+          font-size: 12px;
+          top: -40px;
+          right: -24px;
+          padding: 8px 16px;
+          color: var(--o-color-text4);
+          background-color: var(--o-color-bg2);
+          border: 1px solid var(--o-color-brand1);
+          &::after {
+            content: ' ';
+            position: absolute;
+            border-top: 8px solid var(--o-color-brand1);
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            bottom: -8px;
+            right: 27px;
+          }
+          &::before {
+            content: ' ';
+            position: absolute;
+            border-top: 8px solid var(--o-color-brand1);
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid var(--o-color-bg2);
+            right: 27px;
+            bottom: -7px;
+            z-index: 1;
+          }
+        }
+      }
       @media screen and (max-width: 768px) {
         padding: var(--o-spacing-h8) 0;
         font-size: var(--o-font-size-tip);

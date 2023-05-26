@@ -67,6 +67,15 @@ const searchCount = computed(() => {
       activeVersion.value === i18n.value.search.tagList.all
         ? ''
         : activeVersion.value,
+    limit: [
+      {
+        type: 'docs',
+        version:
+          activeVersion.value === i18n.value.search.tagList.all
+            ? ''
+            : activeVersion.value,
+      },
+    ],
   };
 });
 
@@ -144,6 +153,9 @@ function searchRpm() {
 }
 // 获取搜索结果各类型的数量
 async function searchCountAll(key?: string) {
+  if (activeVersion.value === i18n.value.search.tagList.all) {
+    searchCount.value.limit = [];
+  }
   try {
     await getSearchCount(searchCount.value).then((res) => {
       if (res.status === 200 && res.obj.total[0]) {
