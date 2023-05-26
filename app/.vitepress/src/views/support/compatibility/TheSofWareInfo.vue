@@ -57,6 +57,7 @@ onMounted(() => {
           :href="configurationInfo.friendlyLink"
           class="link"
           target="_blank"
+          rel="noopener noreferrer"
           >{{ configurationInfo.friendlyLink }}</a
         >
       </div>

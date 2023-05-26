@@ -198,6 +198,7 @@ onUnmounted(() => {
               :key="item2.summary"
               :href="'/' + item2.path.replace(/(index)$/g, '')"
               target="_blank"
+              rel="noopener noreferrer"
               class="user-card"
             >
               <div class="user-title">{{ item2.company }}</div>

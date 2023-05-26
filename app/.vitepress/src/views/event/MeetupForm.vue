@@ -409,7 +409,12 @@ onMounted(() => {
             <OCheckboxGroup v-model="meetupPrivacy">
               <OCheckbox value="1"
                 >您理解并同意，请填写并提交的内容，即视为您已充分阅读并理解openEuler的
-                <a href="/zh/other/privacy/" target="_blank">隐私声明</a>
+                <a
+                  href="/zh/other/privacy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >隐私声明</a
+                >
               </OCheckbox>
             </OCheckboxGroup>
           </el-form-item>

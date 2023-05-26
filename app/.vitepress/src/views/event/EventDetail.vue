@@ -282,6 +282,7 @@ watch(windowWidth, () => {
               type="primary"
               animation
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-detail"
               @click="clickTab({ index: 1 })"
             >

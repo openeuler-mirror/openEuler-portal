@@ -593,6 +593,7 @@ onMounted(() => {
                 class="friendly-link"
                 :href="scope.row.friendlyLink"
                 target="_blank"
+                rel="noopener noreferrer"
                 >link</a
               >
             </template>
@@ -796,6 +797,7 @@ onMounted(() => {
                 class="friendly-link"
                 :href="scope.row.downloadLink"
                 target="_blank"
+                rel="noopener noreferrer"
                 >link</a
               >
             </template>
@@ -1353,8 +1355,8 @@ onMounted(() => {
                   <a
                     :href="item.downloadLink"
                     target="_blank"
-                    class="friendly-link"
                     rel="noopener noreferrer"
+                    class="friendly-link"
                     >link</a
                   >
                 </li>

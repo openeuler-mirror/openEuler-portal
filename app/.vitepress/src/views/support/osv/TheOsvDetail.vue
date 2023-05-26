@@ -152,9 +152,12 @@ onMounted(() => {
               <p class="item-name">
                 {{ i18n.approve.ASSESS_LIST.PUBLISH_ADDRESS }}
               </p>
-              <a :href="approveList.friendlyLink" target="_blank">{{
-                approveList.friendlyLink
-              }}</a>
+              <a
+                :href="approveList.friendlyLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ approveList.friendlyLink }}</a
+              >
             </li>
             <li>
               <p class="item-name">{{ i18n.approve.ASSESS_LIST.CHECKSUM }}</p>

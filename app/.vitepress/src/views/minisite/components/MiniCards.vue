@@ -84,6 +84,7 @@ const isDark = computed(() => {
               class="menu-item"
               :href="i.LINK"
               target="_blank"
+              rel="noopener noreferrer"
             >
               {{ i.TEXT }}
             </a>

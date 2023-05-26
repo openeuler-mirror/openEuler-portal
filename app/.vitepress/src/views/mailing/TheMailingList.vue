@@ -144,6 +144,7 @@ const isMobile = computed(() => {
                   class="subscribe-mail"
                   :href="`https://mailweb.openeuler.org/postorius/lists/${scope.row.fqdn_listname}/`"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {{ i18n.mailing.MAILING_LIST.SUBSCRIBE.BUTTON }}
                 </a>
@@ -151,6 +152,7 @@ const isMobile = computed(() => {
                   class="subscribe-mail-mo"
                   :href="`https://mailweb.openeuler.org/postorius/lists/${scope.row.fqdn_listname}/`"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <OIcon class="icon">
                     <IconSubscribe />
@@ -171,6 +173,7 @@ const isMobile = computed(() => {
                   '@openeuler.org/'
                 "
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 archive
               </a>

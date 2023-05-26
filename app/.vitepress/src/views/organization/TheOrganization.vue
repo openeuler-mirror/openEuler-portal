@@ -104,6 +104,7 @@ onUnmounted(() => {
             :href="'https://gitee.com/' + item.gitee"
             class="gitee"
             target="_blank"
+            rel="noopener noreferrer"
             ><img :src="IconGit"
           /></a>
         </p>

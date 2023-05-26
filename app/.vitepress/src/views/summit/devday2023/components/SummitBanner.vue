@@ -32,6 +32,7 @@ onMounted(() => {
           href="https://e-campaign.huawei.com/m/N7V3Eb"
           data-aos="fade-up"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <OButton animation class="banner-btn">
             立即报名
@@ -48,7 +49,11 @@ onMounted(() => {
     >
       <div v-if="bannerData.img_text_mo" class="img-box">
         <img :src="bannerData.img_text_mo" alt="" />
-        <a href="https://e-campaign.huawei.com/m/N7V3Eb" target="_blank">
+        <a
+          href="https://e-campaign.huawei.com/m/N7V3Eb"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <OButton animation class="banner-btn">
             立即报名
             <template #suffixIcon

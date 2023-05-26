@@ -55,7 +55,7 @@ const initMap = (lng: number, lat: number) => {
             cardList +=
               '<a class="map-card-name" href="' +
               item.http +
-              '" target="_blank">' +
+              '" target="_blank"  rel="noopener noreferrer">' +
               item.title +
               '</a></br>';
           }
@@ -97,7 +97,7 @@ const initMap = (lng: number, lat: number) => {
           '   <div class="map-card">' +
           '<a class="map-card-name" href="' +
           context.data[0].http +
-          '" target="_blank">' +
+          '" target="_blank"  rel="noopener noreferrer">' +
           context.data[0].title +
           '</a>' +
           '<div class="map-card-location">' +

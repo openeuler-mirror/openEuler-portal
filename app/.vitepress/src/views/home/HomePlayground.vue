@@ -63,6 +63,7 @@ onMounted(() => {
           class="lets-play"
           :href="i18n.home.HOME_INTRODUCE.MOOC_URL"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <img :src="letsPlay" alt="openEuler" />
         </a>

@@ -55,6 +55,7 @@ function goBackPage() {
                     i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT
                   "
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {{
                     i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT
@@ -104,6 +105,7 @@ function goBackPage() {
                       i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT2
                     "
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {{
                       i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT2
@@ -157,6 +159,7 @@ function goBackPage() {
                 }}
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   :href="
                     i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT
                   "
@@ -187,6 +190,7 @@ function goBackPage() {
                 }}
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   :href="
                     i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].A_HREF
                   "

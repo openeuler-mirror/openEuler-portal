@@ -244,9 +244,13 @@ watch(queryData, () => getOsTableList(queryData));
 
       <el-table-column :label="i18n.approve.TABLE_COLUMN.DOWNLOAD" width="220">
         <template #default="scope">
-          <a :href="scope.row.osDownloadLink" target="_blank" class="link">{{
-            scope.row.osDownloadLink
-          }}</a>
+          <a
+            :href="scope.row.osDownloadLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link"
+            >{{ scope.row.osDownloadLink }}</a
+          >
         </template>
       </el-table-column>
 
@@ -265,9 +269,13 @@ watch(queryData, () => getOsTableList(queryData));
 
       <el-table-column :label="i18n.approve.TABLE_COLUMN.DETAILS" width="220">
         <template #default="scope">
-          <a :href="scope.row.friendlyLink" target="_blank" class="link">{{
-            i18n.approve.TABLE_COLUMN.LINK
-          }}</a>
+          <a
+            :href="scope.row.friendlyLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link"
+            >{{ i18n.approve.TABLE_COLUMN.LINK }}</a
+          >
         </template>
       </el-table-column>
     </OTable>
@@ -289,9 +297,12 @@ watch(queryData, () => getOsTableList(queryData));
           </li>
           <li>
             <span>{{ i18n.approve.TABLE_COLUMN.DOWNLOAD }}:</span>
-            <a :href="item.osDownloadLink" target="_blank">{{
-              item.osDownloadLink
-            }}</a>
+            <a
+              :href="item.osDownloadLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ item.osDownloadLink }}</a
+            >
           </li>
           <li>
             <span>{{ i18n.approve.TABLE_COLUMN.TYPE }}:</span>{{ item.type }}
@@ -307,9 +318,12 @@ watch(queryData, () => getOsTableList(queryData));
           </li>
           <li>
             <span>{{ i18n.approve.TABLE_COLUMN.LINK }}:</span
-            ><a :href="item.friendlyLink" target="_blank">{{
-              item.friendlyLink
-            }}</a>
+            ><a
+              :href="item.friendlyLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ item.friendlyLink }}</a
+            >
           </li>
         </ul>
       </li>

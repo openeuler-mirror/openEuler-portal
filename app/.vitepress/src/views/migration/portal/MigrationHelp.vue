@@ -28,9 +28,11 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
                   color: isDark ? 'var(--o-color-white)' : '',
                 }"
                 >{{ item.textLeft
-                }}<a :href="'/' + lang + item.link" target="_blank">{{
-                  item.linkText
-                }}</a
+                }}<a
+                  :href="'/' + lang + item.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >{{ item.linkText }}</a
                 >{{ item.textRight }}</span
               >
             </div>

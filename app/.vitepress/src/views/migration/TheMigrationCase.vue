@@ -21,6 +21,7 @@ const { lang } = useData();
         :key="item.label"
         :href="item.link"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <div class="migration-transplantation-card">{{ item.label }}</div>
       </a>

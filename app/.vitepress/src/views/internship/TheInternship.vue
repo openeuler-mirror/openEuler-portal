@@ -314,22 +314,30 @@ onUnmounted(() => {
         <InternshipTask v-show="tabIndex === 0" />
         <div v-show="tabIndex === 1" class="openlookeng-task task-wrap">
           <p class="title">
-            <a href="https://openlookeng.io/" target="_blank">{{
-              openLooKengTask.title
-            }}</a>
+            <a
+              href="https://openlookeng.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ openLooKengTask.title }}</a
+            >
           </p>
           <p class="intriduce">{{ openLooKengTask.intriduce }}</p>
           <div class="btn">
             <a
               href="https://gitee.com/openlookeng-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openlookeng-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=newest&state=open&target_project&skip_mobile=true"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <OButton type="primary" class="task-btn"
                 >实习任务
                 <OIcon><IconArrowRight /></OIcon>
               </OButton>
             </a>
-            <a href="https://openlookeng.io/" target="_blank">
+            <a
+              href="https://openlookeng.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <OButton class="detail-btn">
                 <span>官网详情</span>
                 <OIcon><IconArrowRight /></OIcon>
@@ -339,22 +347,30 @@ onUnmounted(() => {
         </div>
         <div v-show="tabIndex === 2" class="opengauss-task task-wrap">
           <p class="title">
-            <a href="https://opengauss.org/" target="_blank">{{
-              openGaussTask.title
-            }}</a>
+            <a
+              href="https://opengauss.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ openGaussTask.title }}</a
+            >
           </p>
           <p class="intriduce">{{ openGaussTask.intriduce }}</p>
           <div class="btn">
             <a
               href="https://gitee.com/opengauss/opensource-intership/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openlookeng-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=newest&state=open&target_project&skip_mobile=true"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <OButton type="primary" class="task-btn"
                 >实习任务
                 <OIcon><IconArrowRight /></OIcon>
               </OButton>
             </a>
-            <a href="https://opengauss.org" target="_blank">
+            <a
+              href="https://opengauss.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <OButton class="detail-btn">
                 <span>官网详情</span>
                 <OIcon><IconArrowRight /></OIcon>
@@ -364,9 +380,12 @@ onUnmounted(() => {
         </div>
         <div v-show="tabIndex === 3" class="mindspore-task task-wrap">
           <p class="title">
-            <a href="https://www.mindspore.cn/" target="_blank">{{
-              mindSporeTask.title
-            }}</a>
+            <a
+              href="https://www.mindspore.cn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ mindSporeTask.title }}</a
+            >
           </p>
           <div>
             <p
@@ -382,13 +401,18 @@ onUnmounted(() => {
             <a
               href="https://gitee.com/mindspore/community/issues/I55QGD?from=project-issue&skip_mobile=true"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <OButton class="task-btn">
                 <span>实习任务</span>
                 <OIcon><IconArrowRight /></OIcon>
               </OButton>
             </a>
-            <a href="https://www.mindspore.cn/" target="_blank">
+            <a
+              href="https://www.mindspore.cn/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <OButton class="detail-btn">
                 <span>官网详情</span>
                 <OIcon><IconArrowRight /></OIcon>
@@ -450,9 +474,12 @@ onUnmounted(() => {
               </div>
               <div v-if="item.SUPPLEMENT_LINK" class="supplement">
                 {{ item.SUPPLEMENT[0] }}
-                <a :href="item.SUPPLEMENT_LINK" target="_blank">{{
-                  item.SUPPLEMENT[1]
-                }}</a>
+                <a
+                  :href="item.SUPPLEMENT_LINK"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >{{ item.SUPPLEMENT[1] }}</a
+                >
                 {{ item.SUPPLEMENT[2] }}
               </div>
               <div v-else class="supplement">
@@ -498,6 +525,7 @@ onUnmounted(() => {
                   class="this-post"
                   href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue"
                   target="_blank"
+                  rel="noopener noreferrer"
                   >{{ RULE.MORE[1] }}</a
                 >
                 {{ RULE.MORE[2] }}

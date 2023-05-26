@@ -13,9 +13,12 @@ import IconBook from '~icons/app/icon-book.svg';
         </div>
         <div class="description">
           <span>{{ faqInfo.instruction.text_1 }}</span>
-          <a :href="faqInfo.instruction.link" target="_blank">{{
-            faqInfo.instruction.link_text
-          }}</a>
+          <a
+            :href="faqInfo.instruction.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ faqInfo.instruction.link_text }}</a
+          >
           <span>{{ faqInfo.instruction.text_2 }}</span>
         </div>
       </div>
@@ -31,9 +34,13 @@ import IconBook from '~icons/app/icon-book.svg';
         <div class="answer-text">
           <span v-for="it in item.answers" :key="it.text">
             {{ !it.isLink ? it.text : '' }}
-            <a v-if="it.isLink" :href="it.link" target="_blank">{{
-              it.text
-            }}</a>
+            <a
+              v-if="it.isLink"
+              :href="it.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ it.text }}</a
+            >
           </span>
         </div>
       </div>

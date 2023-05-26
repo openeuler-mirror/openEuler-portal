@@ -239,7 +239,7 @@ onMounted(() => {
       <div class="atom">
         <p class="atom-text">{{ i18n.common.FOOTER.ATOM_TEXT }}</p>
         <a href="https://openatom.cn" target="_blank">
-          <img :src="LogoAtom" class="atom-logo" alt="openEuler" />
+          <img :src="LogoAtom"  rel="noopener noreferrer" class="atom-logo" alt="openEuler" />
         </a>
       </div>
     </AppContent>
@@ -290,9 +290,9 @@ onMounted(() => {
                 v-for="item in footerLinks"
                 :key="item.id"
                 :href="item.path"
-                rel="nofollow"
                 class="links-logo"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img :src="item.logo" alt="openEuler" />
               </a>
@@ -305,7 +305,11 @@ onMounted(() => {
       v-show="lang === 'zh' && isQrTipVisible && isFloShow"
       class="float-left float-right"
     >
-      <a href="https://huaweicompute.wjx.cn/vm/rxE9GVe.aspx#1" target="_blank">
+      <a
+        href="https://huaweicompute.wjx.cn/vm/rxE9GVe.aspx#1"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img :src="floatQr" alt="" />
       </a>
       <span class="close" title="close" @click.stop="handleCloseQr"></span>
@@ -325,6 +329,7 @@ onMounted(() => {
         :href="item.link"
         class="nav-item"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <OIcon><component :is="item.img"></component> </OIcon>
         <div class="text">{{ item.text }}</div>

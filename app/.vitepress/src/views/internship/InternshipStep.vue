@@ -145,6 +145,7 @@ const STEP = {
             <a
               href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4A68T?from=project-issue"
               target="_blank"
+              rel="noopener noreferrer"
               >{{ STEP.STEP_ONE.LINK1 }}</a
             >
             {{ STEP.STEP_ONE.TEXT3 }}
@@ -283,9 +284,12 @@ const STEP = {
             </p>
             <p>
               {{ STEP.STEP_FOUR.ATTENTION_TEXT[1] }}
-              <a :href="STEP.STEP_FOUR.ATTENTION_LINK" target="_blank">{{
-                STEP.STEP_FOUR.ATTENTION_TEXT[2]
-              }}</a>
+              <a
+                :href="STEP.STEP_FOUR.ATTENTION_LINK"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ STEP.STEP_FOUR.ATTENTION_TEXT[2] }}</a
+              >
               {{ STEP.STEP_FOUR.ATTENTION_TEXT[3] }}
             </p>
             <p>{{ STEP.STEP_FOUR.ATTENTION_TEXT[4] }}</p>

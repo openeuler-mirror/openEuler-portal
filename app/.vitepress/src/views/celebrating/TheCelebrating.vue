@@ -207,7 +207,12 @@ onMounted(() => {
       <img :src="succeedTipImg" alt="" />
       <div>
         <span>{{ data.tip.tipText }}</span>
-        <a :href="data.tip.courseLink" target="_blank">{{ data.tip.course }}</a>
+        <a
+          :href="data.tip.courseLink"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ data.tip.course }}</a
+        >
       </div>
     </div>
     <div class="mask" @click="onMaskClick"></div>

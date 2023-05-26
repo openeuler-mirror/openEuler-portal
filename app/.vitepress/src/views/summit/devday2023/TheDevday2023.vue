@@ -193,6 +193,7 @@ onMounted(() => {
           :key="item.link"
           :href="item.link"
           target="_blank"
+          rel="noopener noreferrer"
           >{{ item.title }}</a
         >
       </div>

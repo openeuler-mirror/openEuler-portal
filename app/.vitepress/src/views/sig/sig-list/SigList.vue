@@ -380,6 +380,7 @@ onMounted(() => {
           <div class="sig-name">
             <a
               target="_blank"
+              rel="noopener noreferrer"
               style="cursor: pointer"
               class="sig-name-info"
               @click="toSigDetail(scope.row)"
@@ -392,6 +393,7 @@ onMounted(() => {
                 scope.row.sig_name
               "
               target="_blank"
+              rel="noopener noreferrer"
               class="gitee-icon"
             >
               <OIcon class="icon">
@@ -409,6 +411,7 @@ onMounted(() => {
                 <a
                   :href="'https://gitee.com/' + item"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="sig-repo"
                   >{{ item }}</a
                 >
@@ -420,6 +423,7 @@ onMounted(() => {
             <a
               :href="'https://gitee.com/' + singleInfo.trueRepo"
               target="_blank"
+              rel="noopener noreferrer"
               class="sig-repo"
               >{{ singleInfo.trueRepo }}</a
             >
@@ -435,7 +439,10 @@ onMounted(() => {
                 :key="item"
                 class="sig-maintainer-item"
               >
-                <a :href="'https://gitee.com/' + item" target="_blank"
+                <a
+                  :href="'https://gitee.com/' + item"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   >{{ item
                   }}<i v-show="index !== scope.row.maintainers.length - 1"
                     >{{ language === 'zh' ? '、' : ',&nbsp;' }}
@@ -448,6 +455,7 @@ onMounted(() => {
             <a
               :href="'https://gitee.com/' + singleInfo.trueMaintainer"
               target="_blank"
+              rel="noopener noreferrer"
             >
               {{ singleInfo.trueMaintainer }}</a
             >
@@ -468,6 +476,7 @@ onMounted(() => {
               class="subscribe-sig"
               :href="`https://mailweb.openeuler.org/postorius/lists/${scope.row.mailing_list}/`"
               target="_blank"
+              rel="noopener noreferrer"
             >
               {{ i18n.mailing.MAILING_LIST.SUBSCRIBE.BUTTON }}
             </a>
@@ -534,6 +543,7 @@ onMounted(() => {
               class="mo-subscribe-sig"
               :href="`https://mailweb.openeuler.org/postorius/lists/${item.mailing_list}/`"
               target="_blank"
+              rel="noopener noreferrer"
             >
             </a>
           </div>
@@ -544,9 +554,12 @@ onMounted(() => {
             <div v-show="!singleInfo.trueRepo">
               <div v-for="(subItem, subIndex) in item.repos" :key="subItem">
                 <div v-if="subIndex < 4" class="mo-item-repo">
-                  <a :href="'https://gitee.com/' + subItem" target="_blank">{{
-                    subItem
-                  }}</a>
+                  <a
+                    :href="'https://gitee.com/' + subItem"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ subItem }}</a
+                  >
                 </div>
               </div>
               <p v-show="item.repos.length > 4" class="ellipsis">……</p>
@@ -555,6 +568,7 @@ onMounted(() => {
               <a
                 :href="'https://gitee.com/' + singleInfo.trueRepo"
                 target="_blank"
+                rel="noopener noreferrer"
                 >{{ singleInfo.trueRepo }}</a
               >
             </div>
@@ -572,6 +586,7 @@ onMounted(() => {
                   <a
                     :href="'https://gitee.com/' + nameItem"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="mo-item-maintainer"
                     >{{ nameItem }}</a
                   >
@@ -587,6 +602,7 @@ onMounted(() => {
               <a
                 :href="'https://gitee.com/' + singleInfo.trueMaintainer"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="mo-item-maintainer"
                 >{{ singleInfo.trueMaintainer }}</a
               >
