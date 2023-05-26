@@ -498,7 +498,9 @@ watch(
       cursor: pointer;
     }
     .search-content {
-      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin-top: var(--o-spacing-h2);
 
       @media (max-width: 768px) {
@@ -509,6 +511,7 @@ watch(
         justify-content: space-between;
         align-items: center;
         padding: 0 40px;
+        width: 100%;
         background-color: var(--o-color-bg2);
         border-bottom: 1px solid var(--o-color-division1);
         @media screen and (max-width: 1620px) {
@@ -519,7 +522,7 @@ watch(
           align-items: flex-start;
           flex-direction: column;
           padding: 0;
-          margin: 0 16px;
+          width: calc(100% - 32px);
           background-color: var(--o-color-bg1);
           border: none;
         }
@@ -528,9 +531,11 @@ watch(
           flex-shrink: 0;
           background-color: var(--o-color-bg2);
           @media (max-width: 768px) {
-            // min-width: 400px;
             width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
             padding: 0 16px;
+            white-space: nowrap;
             margin-bottom: 16px;
             box-shadow: var(--o-shadow-l1);
           }
@@ -597,6 +602,7 @@ watch(
 
       .content-box {
         min-height: 1948px;
+        width: 100%;
         box-shadow: var(--o-shadow-l1);
         background-color: var(--o-color-bg2);
         @media (max-width: 768px) {
