@@ -1752,6 +1752,27 @@ export default {
         ],
       },
       {
+        NAME: '天鹤操作系统 ISSEOS V22',
+        DOWNLOAD_URL:
+          'https://www.isscloud.com/template/pc/system/isseOS.html#',
+        DESC: '天鹤操作系统（简称 ISSEOS）是软通动力基于 openEuler 自主研发、自主可控的企业级 Linux 操作系统，支持鲲鹏、海光、飞腾等多种处理器，同时也支持 SM2、SM3、SM4 等多种国密算法，具备高性能、高运维、高兼容以及高可靠等增强特性，适用于数据库、大数据、云计算、人工智能等应用场景，可以为各行业的客户提供高效、稳定、专业的技术支持和服务。',
+        MANUFACTURER: '软通动力信息技术（集团）股份有限公司',
+        PUBLISH_DATE: '2022/12',
+        LTS: false,
+        DETAILED_LINK: [
+          {
+            LINK: 'https://www.isscloud.com/template/pc/system/isseOS.html#',
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK: 'https://www.isscloud.com/template/pc/system/isseOS.html#',
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+        ],
+      },
+      {
         NAME: '凝思安全操作系统V6.0',
         DOWNLOAD_URL: 'https://www.linx-info.com/download/os/el/',
         DESC: '凝思安全操作系统V6.0基于openEuler 20.03 LTS SP3 开发，内置凝思固域安全子系统，具有高可靠、高安全、高性能和高兼容等特性，能够保障生产系统和关键业务系统的安全稳定运行。',
@@ -2112,6 +2133,7 @@ export default {
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
+        WHITE_PAPER: '/whitepaper/en/openEuler 23.03 Technical White Paper.pdf',
         WEBSITE_SELECT: '/en/mirror/select/?version=23.03',
         CLOUD_IMAGE:
           'https://repo.openeuler.org/openEuler-23.03/virtual_machine_img/',
