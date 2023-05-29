@@ -9786,7 +9786,7 @@
         "driverSize": "76k",
         "chipVendor": "Broadcom",
         "boardModel": "9560-16i",
-        "chipModel": "SAS3916",
+        "chipModel": "SAS39xx",
         "item": "",
         "downloadLink": "inbox"
       }
@@ -9847,7 +9847,7 @@
         "driverSize": "76k",
         "chipVendor": "Broadcom",
         "boardModel": "9560-16i",
-        "chipModel": "SAS3916",
+        "chipModel": "SAS39xx",
         "item": "",
         "downloadLink": "inbox"
       }
