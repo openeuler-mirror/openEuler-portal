@@ -28,23 +28,23 @@ FangTian SIG会长期专注视窗引擎的开发及技术研究，计划发布�
 欢迎对视窗引擎感兴趣的开发者加入  FangTian SIG 。   
 
 
-<center><font style="background: rgb(1,47,167)"><font color="white">FangTian SIG Maintainer</font></font></center>   
+<div style="display:flex;justify-content: center;padding:8px 0;" > <span style="background: rgb(1,47,167);color: white;">FangTian SIG Maintainer</span></div>
 
-|姓名|公司|giteeid|
-|----|----|----|
-|郑森文|中国科学院软件研究所|zhengsenwen|
-|吴圣垚|中国科学院软件研究所|shen_hua_li|
-|冯绍波|华为|ShaoboFeng|
-|宋亚南|华为|yanansong|
-|徐飞龙|华为|BruceXuXu|
-|华亚东|麒麟软件|hua_yadong|
+| 姓名   | 公司                 | giteeid     |
+| ------ | -------------------- | ----------- |
+| 郑森文 | 中国科学院软件研究所 | zhengsenwen |
+| 吴圣垚 | 中国科学院软件研究所 | shen_hua_li |
+| 冯绍波 | 华为                 | ShaoboFeng  |
+| 宋亚南 | 华为                 | yanansong   |
+| 徐飞龙 | 华为                 | BruceXuXu   |
+| 华亚东 | 麒麟软件             | hua_yadong  |
 
+<div style="display:flex;justify-content: center;padding:8px 0;" > <span style="background: rgb(1,47,167);color: white;">例会时间</span></div>
 
-<center><font style="background: rgb(1,47,167)"><font color="white">例会时间</font></font></center>   
 双周周四例会时间：上午10:00~11:00   
 
-<center><font style="background: rgb(1,47,167)"><font color="white">微信交流群</font></font></center>   
+<div style="display:flex;justify-content: center;padding:8px 0;" > <span style="background: rgb(1,47,167);color: white;">微信交流群</span></div>
 
-![weixinqun](./weixinqun.jpg)   
+<img width=400 center src='./weixinqun.jpg'>
 
-<center>或添加hxt_hhg微信，回复“FangTian”</center>
+<div style="display:flex;justify-content: center; padding:8px 0;" > <span style="background: rgb(1,47,167);color: white;">或添加hxt_hhg微信，回复“FangTian”</span></div>
