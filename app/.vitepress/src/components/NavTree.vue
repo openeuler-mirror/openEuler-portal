@@ -92,8 +92,8 @@ defineExpose({
 }
 
 .el-tree {
-  &>:deep(.el-tree-node) {
-    &>.el-tree-node__children {
+  & > :deep(.el-tree-node) {
+    & > .el-tree-node__children {
       padding: 0;
       .is-leaf {
         display: none;
