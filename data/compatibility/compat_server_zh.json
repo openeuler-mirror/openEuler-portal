@@ -9867,7 +9867,7 @@
     }
   },
   {
-    "hardwareFactory": "New H3C Technologies Co., Ltd.",
+    "hardwareFactory": "新华三",
     "hardwareModel": "H3C UniServer R5300 G5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
@@ -9966,7 +9966,7 @@
     }
   },
   {
-    "hardwareFactory": "New H3C Technologies Co., Ltd.",
+    "hardwareFactory": "新华三",
     "hardwareModel": "H3C UniServer R5300 G5",
     "osVersion": "openEuler 22.03 LTS",
     "architecture": "x86_64",
