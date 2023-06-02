@@ -75,7 +75,6 @@ export default defineConfig({
         changeOrigin: true,
       },
       '/api-search': {
-        // target: 'https://doc-search.test.osinfra.cn/',
         target: 'https://doc-search.openeuler.org/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-search/, ''),
@@ -123,11 +122,6 @@ export default defineConfig({
         target: 'https://ccs.openeuler.org/ccs/base/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-certification/, ''),
-      },
-      '/api-gitee/': {
-        target: 'https://gitee.com/',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-gitee/, ''),
       },
     },
   },

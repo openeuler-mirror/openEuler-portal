@@ -412,6 +412,11 @@ export default {
               LABEL: '',
               PATH: '/sig/sig-list/',
             },
+            {
+              NAME: 'CLA',
+              LABEL: '',
+              PATH: 'https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=',
+            },
           ],
         },
         {
@@ -659,11 +664,6 @@ export default {
               LABEL: '',
               PATH: '/download/commercial-release/',
             },
-            // {
-            //   NAME: '企业自用版',
-            //   LABEL: '',
-            //   PATH: '',
-            // },
           ],
         },
       ],

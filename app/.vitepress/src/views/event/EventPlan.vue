@@ -414,6 +414,9 @@ $lineLeft: calc($titleboxWidth + $contenML);
           line-height: 34px;
           color: var(--o-color-text1);
         }
+        a:hover {
+          color: var(--o-color-brand1);
+        }
         p {
           cursor: default;
         }
