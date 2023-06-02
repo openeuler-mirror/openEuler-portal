@@ -531,6 +531,11 @@ export default {
               LABEL: '',
               PATH: '/internship/',
             },
+            {
+              NAME: 'CLA签署',
+              LABEL: '',
+              PATH: 'https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=',
+            },
           ],
         },
         {

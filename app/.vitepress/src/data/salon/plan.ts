@@ -93,6 +93,18 @@ export default {
           },
         ],
       },
+      {
+        month: '5',
+        actives: [
+          {
+            activeName: 'GOTC 2023',
+            activelink: {
+              url: 'https://gotc.oschina.net/',
+              className: 'gotc',
+            },
+          },
+        ],
+      },
     ],
   },
   developer: {
@@ -318,6 +330,10 @@ export default {
       },
       {
         activeName: ' 6月 - 10月 开源之夏',
+        activelink: {
+          url: 'https://summer-ospp.ac.cn/org/orgdetail/b9770f4d-f586-4373-bdac-ce6389065946?lang=zh',
+          className: 'summer-ospp',
+        },
         startTime: 6,
         endTime: 10,
       },

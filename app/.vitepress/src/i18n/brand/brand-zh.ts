@@ -12,7 +12,7 @@ export default {
     '《openEuler项目商标使用规范》 。',
   ],
   WORDS_LINK: [
-    'https://openatom.cn/brandguide',
+    'https://legacy.openatom.cn/brandguide',
     'mailto:trademarks@openeuler.sh',
     '/data/brand/openEuler商标使用申请方式.docx',
     '/data/brand/openEuler商标使用规范.pdf',

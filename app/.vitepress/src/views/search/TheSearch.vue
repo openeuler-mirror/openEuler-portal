@@ -437,6 +437,7 @@ watch(
   .suggest-list-box {
     display: flex;
     margin: 16px 0 32px;
+    color: var(--o-color-text1);
     font-size: var(--o-font-size-text);
     @media (max-width: 768px) {
       padding: 0 16px;
