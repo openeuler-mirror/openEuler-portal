@@ -9743,5 +9743,127 @@
       "hostBusAdapter": "Avago 3508(9460-8i)",
       "hardDiskDrive": "TOSHIBAAL14SEB120N"
     }
+  },
+  {
+    "hardwareFactory": "Lenovo",
+    "hardwareModel": "SR650 V2",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "x86_64",
+    "date": "2023/04/04",
+    "friendlyLink": "https://lenovopress.lenovo.com/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "16d7",
+        "svID": "14e4",
+        "ssID": "1613",
+        "architecture": "x86_64",
+         "os": "openEuler 20.03 LTS SP1",
+        "driverName": "bnxt_en",
+        "version": "1.9.2",
+        "type": "ETHERNET",
+        "date": "2023.04.04",
+        "sha256": "",
+        "driverSize": "2.5k",
+        "chipVendor": "intel",
+        "boardModel": "BCM57454",
+        "chipModel": "Broadcom 57454 10GBASE-T 4-port OCP Ethernet Adapter",
+        "item": "",
+        "downloadLink": "inbox"    
+      },
+      {
+       "vendorID": "1000",
+       "deviceID": "0104",
+       "svID": "1000",
+       "ssID": "0017",
+       "architecture": "x86_64",
+       "os": "openEuler 20.03 LTS SP1",
+       "driverName": "megaraid_sas",
+       "version": "07.706.03.00-rc1",
+       "type": "raid",
+       "date": "2023.04.04",
+       "sha256": "",
+       "driverSize": "",
+       "chipVendor": "Broadcom / LSI",
+       "boardModel": "egaRAID Tri-Mode SAS3508",
+       "chipModel": "SAS3508",
+       "item": "",
+       "downloadLink": "inbox"   
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://lenovopress.lenovo.com/lp1392-thinksystem-sr650-v2-server#fibre-channel-host-bus-adapters",
+      "certificationTime": "2023/04/04",
+      "commitID": "",
+      "mainboardModel": "R1SH07D003R",
+      "biosUefi": "1.50 (Build ID: AFE121G) ",
+      "cpu": "Intel(R) Xeon(R) Platinum 8380 CPU @ 2.30GHz",
+      "ram": "32*128G 3200MHz  DIMMs",
+      "portsBusTypes": "J551,J552",
+      "videoAdapter": "J553",
+      "hostBusAdapter": "Emulex 01CV842 16Gb FC Dual-port HBA",
+      "hardDiskDrive": "530-8i-12Gb"
+    }
+  },
+  {
+    "hardwareFactory": "Lenovo",
+    "hardwareModel": "ThinkSystem SR860 V2",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "x86_64",
+    "date": "2023/04/10",
+    "friendlyLink": "https://lenovopress.lenovo.com/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "16d7",
+        "svID": "14e4",
+        "ssID": "1613",
+        "architecture": "x86_64",
+         "os": "openEuler 20.03 LTS SP1",
+        "driverName": "bnxt_en",
+        "version": "1.9.2",
+        "type": "ETHERNET",
+        "date": "2023.04.10",
+        "sha256": "",
+        "driverSize": "2.5k",
+        "chipVendor": "intel",
+        "boardModel": "BCM57454",
+        "chipModel": "Broadcom 57454 10GBASE-T 4-port OCP Ethernet Adapter",
+        "item": "",
+        "downloadLink": "inbox"    
+      },
+      {
+       "vendorID": "1000",
+       "deviceID": "0104",
+       "svID": "1000",
+       "ssID": "0017",
+       "architecture": "x86_64",
+       "os": "openEuler 20.03 LTS SP1",
+       "driverName": "megaraid_sas",
+       "version": "07.706.03.00-rc1",
+       "type": "raid",
+       "date": "2023.04.10",
+       "sha256": "",
+       "driverSize": "",
+       "chipVendor": "Broadcom / LSI",
+       "boardModel": "egaRAID Tri-Mode SAS3508",
+       "chipModel": "SAS3508",
+       "item": "",
+       "downloadLink": "inbox"   
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://lenovopress.lenovo.com/lp1302-thinksystem-sr860-v2-server",
+      "certificationTime": "2023/04/10",
+      "commitID": "",
+      "mainboardModel": "W1ZS05Y0019",
+      "biosUefi": "1.71 (Build ID: M5E122J) ",
+      "cpu": "Intel(R) Xeon(R) Platinum 8380HL CPU @ 2.90GHz",
+      "ram": "48*128G 3200MHz  DIMMs",
+      "portsBusTypes": "N36,N37",
+      "videoAdapter": "J100",
+      "hostBusAdapter": "Emulex 01CV842 16Gb FC Dual-port HBA",
+      "hardDiskDrive": "RAID 930-8i 2GB"
+    }
   }
 ]
