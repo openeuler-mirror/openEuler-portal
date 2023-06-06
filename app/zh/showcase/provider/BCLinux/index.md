@@ -3,7 +3,7 @@ title: 中国移动
 category: showcase
 industry: 运营商
 company: 中国移动
-summary: 中国移动云能力中心基于欧拉打造 BC-Linux，分布式块存储，读 IOPS 提升 100%
+summary: 中国移动云能力中心基于 openEuler 打造 BC-Linux，分布式块存储，读 IOPS 提升 100%
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/provider.png
 ---

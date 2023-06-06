@@ -3,7 +3,7 @@ title: 中国电信
 category: showcase
 industry: 运营商
 company: 中国电信
-summary: 中国电信天翼云基于欧拉打造CTyunOS，服务电信集团云改数转战略，助力数字经济发展
+summary: 中国电信天翼云基于 openEuler 打造CTyunOS，服务电信集团云改数转战略，助力数字经济发展
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/provider.png
 ---
