@@ -71,10 +71,10 @@ watch(
     <BreadCrumbs
       v-show="!getUrlParam('name')?.includes('oEEP-0000')"
       class="bread"
-      @click="handleGo(`/zh/oEEP/?name=oEEP-0000%20oEEP%20%20索引`)"
       bread1="oEEP-index"
       :bread2="decodeURI(getUrlParam('name'))?.split(' ')[0]"
       :link1="`/zh/oEEP/?name=oEEP-0000%20oEEP%20%20索引`"
+      @click="handleGo(`/zh/oEEP/?name=oEEP-0000%20oEEP%20%20索引`)"
     />
     <MarkdownRender
       class="markdown oeep-markdown"
