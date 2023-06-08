@@ -14,9 +14,6 @@ import downloadBanner_mo from '@/assets/category/home/banner/download-banner_mo.
 import eur_mo from '@/assets/category/home/banner/eur-banner_mo.jpg';
 import eur_pc from '@/assets/category/home/banner/eur-banner_pc.jpg';
 
-import internship_pc from '@/assets/category/home/banner/internship_pc.jpg';
-import internship_mo from '@/assets/category/home/banner/internship_mo.jpg';
-
 export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
@@ -46,13 +43,6 @@ export default {
         desc: ['更便捷地找到您需要的软件'],
         btn: '立即体验',
         id: 'download',
-        targetTap: 1,
-      },
-      {
-        pcBanner: internship_pc,
-        moBanner: internship_mo,
-        link: 'https://summer-ospp.ac.cn/',
-        id: '',
         targetTap: 1,
       },
       {

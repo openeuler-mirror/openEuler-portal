@@ -11,6 +11,7 @@ import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import TagFilter from '@/components/TagFilter.vue';
 import NotFound from '@/NotFound.vue';
 
+import IconRight from '~icons/app/icon-arrow-right.svg';
 import IconDownload from '~icons/app/icon-download.svg';
 import banner from '@/assets/banner/banner-community.png';
 import search from '@/assets/illustrations/search.png';
@@ -75,8 +76,7 @@ const total = computed(() => {
 const totalPage = computed(() => {
   return Math.ceil(total.value / pageSize.value);
 });
-//控制移动端导航栏吸顶
-// const isTopNavMo = ref(false);
+
 // 控制分页器显示
 const isShow = computed(() => {
   return totalPage.value > 1 ? true : false;
@@ -214,7 +214,23 @@ onMounted(() => {
     background-text="COMMNUNITY"
     :title="userCaseData.bannerTitle"
     :illustration="search"
-  />
+  >
+    <template #default>
+      <a
+        v-if="userCaseData.guideline"
+        href="https://gitee.com/openeuler/community/blob/master/zh/contributors/user-story-guideline.md"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <OButton type="outline" animation size="nomral">
+          {{ userCaseData.guideline }}
+          <template #suffixIcon>
+            <OIcon class="right-icon"><IconRight /></OIcon>
+          </template>
+        </OButton>
+      </a>
+    </template>
+  </BannerLevel2>
   <div class="user-case">
     <OSearch
       v-model="keyWord"
@@ -317,6 +333,23 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+.banner-level2 {
+  .o-button {
+    color: var(--o-color-white);
+    border-color: var(--o-color-white);
+    @media (max-width: 767px) {
+      padding: 3px 16px;
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
+    }
+    .right-icon {
+      color: var(--o-color-brand2);
+      @media (max-width: 767px) {
+        font-size: var(--o-font-size-text);
+      }
+    }
+  }
+}
 .user-case {
   max-width: 1504px;
   padding: 40px 44px 64px;
