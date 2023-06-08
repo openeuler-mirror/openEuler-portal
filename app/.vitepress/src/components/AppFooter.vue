@@ -238,8 +238,8 @@ onMounted(() => {
     <AppContent :pc-top="0" :mobile-top="0">
       <div class="atom">
         <p class="atom-text">{{ i18n.common.FOOTER.ATOM_TEXT }}</p>
-        <a href="https://openatom.cn" target="_blank">
-          <img :src="LogoAtom"  rel="noopener noreferrer" class="atom-logo" alt="openEuler" />
+        <a href="https://openatom.cn" target="_blank" rel="noopener noreferrer">
+          <img :src="LogoAtom" class="atom-logo" alt="openEuler" />
         </a>
       </div>
     </AppContent>

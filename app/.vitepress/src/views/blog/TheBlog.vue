@@ -132,28 +132,6 @@ const getListData = (params: ParamsType) => {
     });
 };
 
-// 筛选方法
-// const listFilter = (val: any) => {
-//   let paramsdate = '';
-//   let paramsauthor = '';
-//   for (let i = 0; i < val.length; i++) {
-//     if (val[i].title === '时间') {
-//       paramsdate = val[i].sele[0];
-//     }
-//     if (val[i].title === '作者') {
-//       paramsauthor = val[i].sele[0];
-//     }
-//   }
-//   const params = {
-//     page: 1,
-//     pageSize: 9,
-//     lang: lang.value,
-//     category: 'blog',
-//     archives: paramsdate,
-//     author: paramsauthor,
-//   };
-//   getListData(params);
-// };
 // pc筛选
 const selectMethod = () => {
   const params = {
