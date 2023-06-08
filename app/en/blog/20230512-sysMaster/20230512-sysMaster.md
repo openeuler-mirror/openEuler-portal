@@ -26,21 +26,21 @@ The following figure shows the **sysMaster** architecture, which includes three 
     
 -   **sysmaster-extends** provides components for key system functions, such as devMaster for device management, busMaster for bus communication, and uniMaster for unified proxy. Each component can be used independently in different scenarios.
 
-<img src="./media/image1.png" width="500" >
+>![](./media/image1.png)
 
 ## Shortcomings of Common Initializer Programs
 
 Common initializer programs include SysVinit, Upstart, and systemd. The following table lists their features.
 
-<img src="./media/image6.png" width="500" >
+>![](./media/image6.png)
 
 While systemd has greatly improved startup speed and functionality, its system architecture and implementation have become increasingly complex over time, which does not go with the Keep It Simple principle. Additionally, it lacks support for flexible usage, and may not be suitable for certain scenarios such as embedded systems and some IoT devices. Moreover, each new version of systemd introduces its own set of issues, without necessarily addressing existing problems. The accumulation of these problems can result in a system breakdown. Therefore, it is not ideal for openEuler in edge, embedded, server, and cloud-based scenarios.
 
-<img src="./media/image2.png" width="500" >
+>![](./media/image2.png)
 
 In cloud-based scenarios, service management objects are changed from processes to VMs and containers, which are managed by using agents (such as kubelet and nova) on nodes and platforms such as OpenStack and Kubernetes. Systemd is responsible for managing these agents on nodes and providing them with essential capabilities like log output. Additionally, systemd manages the lifecycle of some key services such as Ngnix. These services are designed with a distributed architecture, meaning that if a problem arises, the service is able to autonomously handle it without relying on external resources. In other words, unlike container and VM instances, these services cannot be orchestrated in a unified manner through the Kubernetes and OpenStack platforms.
 
-<img src="./media/image3.png" width="500" >
+>![](./media/image3.png)
 
 The existing, mature initializer programs, such as systemd and Upstart, do not support embedded scenarios. Systemd in particular, which is widely used, has a significant number of components with independent functionalities, intricate dependency relationships, and high resource usage, making it unsuitable for many embedded applications.
 
@@ -80,11 +80,11 @@ Our objectives for running instances (such as containers, VMs, and processes) on
 
 Since the first technically-validated version was released in September 2022, the latest version of **sysMaster** introduces the fault recovery mechanism. When a process breaks down due to the abnormal service management function of **sysMaster**, the process can be recovered in seconds instead of restarting the entire system. In addition, **sysMaster** has all init functions and core main functions, and streamlines system container/VM scenarios.
 
-<img src="./media/image4.png" width="500" >
+>![](./media/image4.png)
 
 This year, **sysMaster** will focus on the quick startup feature to improve its advantages in startup speed and running memory. This will include optimizing the job scheduler and event driver in **sysMaster-core**. In addition, **sysMaster** will focus on developing device management and other necessary components to meet the requirements of VM scenarios. For example, DevMaster, as an important component of **sysMaster**, helps users manage and monitor hardware devices, such as network interfaces, drives, and CPUs, improving the reliability and stability of the system. In the future, **sysMaster** will deliver more cloud-based applications that can cater to ever-changing requirements, while optimizing its architecture and performance to enhance the scalability and adaptability of the system. It will also endeavors to provide novel functionalities and components that can support diverse scenarios, including containerization, virtualization, and edge computing. Ultimately, it will strive to evolve into a robust system administration framework that elevates user experience and amplifies efficiency.  
 
-<img src="./media/image5.png" width="500" >
+>![](./media/image5.png)
 
 ## Join Us
 

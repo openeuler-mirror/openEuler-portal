@@ -21,7 +21,7 @@ The latest test image of openEuler RISC-V 23.03 is designed based on the firmwar
 
 According to the test of the RISC-V SIG, the basic system, wired networks, WiFi, and other peripherals of openEuler RISC-V 23.03 support basic functions and Xfce desktop, delivering a smooth experience.  
 
-<img src="./media/image1.png" width="500" >
+>![](./media/image1.png)
 
 However, the image also has some problems. First, the GPU currently supports only  the LLVMpipe mode. The TH1520 processor delivers a high performance of 200+ FPS in the glxgears test, and HDMI output and system GUI are smooth. Besides, the image can only be booted from eMMC, and requires fastboot for burning. Furthermore, the "8+8" design is capable of meeting the majority of requirements. However, it falls short in terms of storage needs. These problems will be addressed in the later versions of openEuler RISC-V with support for microSD boot and other peripheral devices. Additionally, official images of openEuler 22.0.3 LTS and 23.03 supporting more functions will be launched and updated.  
 
@@ -33,7 +33,7 @@ LicheePi 4A is the industry's first RISC-V development board with a similar perf
 LicheePi 4A also supports a range of peripherals, including GbE ports (supporting PoE), USB 3.0 type-A ports, HDMI 2.0, 3.5 mm audio ports, microSD reader, and 5 V DC power supply.  
 Furthermore, LicheePi 4A is integrated with WiFi and bluetooth adapters, and MIPI-DSI and MIPI-CSI connectors for displays and cameras. All these rich hardware features make LicheePi 4A a powerful and flexible development platform to meet developers' requirements in various fields.
 
-<img src="./media/image2.jpeg" width="500" >
+>![](./media/image2.jpeg)
 
 Figure source: Sipeed
 

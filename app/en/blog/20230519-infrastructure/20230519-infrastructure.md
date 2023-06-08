@@ -1,5 +1,5 @@
 ---
-title: 'Open Source Promotion Plan 2023 | openEuler sig-infrastructure Development Projects Call for You'
+title: Open Source Promotion Plan 2023 | openEuler sig-infrastructure Development Projects Call for You
 category: blog
 date: 2023-05-15
 tags:
