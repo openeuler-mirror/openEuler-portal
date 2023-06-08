@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { getGiteeContent } from '@/api/api-gitee';
-import { convertGiteePath } from '@/shared/markdown';
+import { convertGiteePath, convertYFMtoCodeBlock } from '@/shared/markdown';
 import { getUrlParam } from '@/shared/utils';
 
 export const useOeep = defineStore('oeep', {
@@ -24,7 +24,9 @@ export const useOeep = defineStore('oeep', {
         return false;
       }
       getGiteeContent(parmes).then((res) => {
-        this.markdownData = convertGiteePath(res?.data);
+        // gitee 相对路径转换为网页路径
+        // 将 YFM转为 代码块
+        this.markdownData = convertGiteePath(convertYFMtoCodeBlock(res?.data));
       });
     },
     setStatementHtml(val: string) {

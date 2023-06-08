@@ -49,6 +49,12 @@ img {
   outline: none;
 }
 
+pre,
+code {
+  font-family: 'Helvetica', 'Arial', 'PingFang SC', 'Microsoft YaHei',
+    sans-serif;
+}
+
 a {
   cursor: pointer;
   color: var(--o-color-link1);
