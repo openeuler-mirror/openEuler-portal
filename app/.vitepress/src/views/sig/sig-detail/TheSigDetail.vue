@@ -2,9 +2,10 @@
 import { computed, ref, onMounted, onUpdated } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
-import showMd from 'markdown-it';
 
+import showMd from 'markdown-it';
 import useWindowResize from '@/components/hooks/useWindowResize';
+import type { SigList, EasyeditorInfoDataItem } from '@/shared/@types/type-sig';
 
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import SigMeeting from './SigMeeting.vue';
@@ -25,10 +26,6 @@ import {
   getSigList,
   getSigDetailInfo,
 } from '@/api/api-sig';
-interface SIGLIST {
-  group_name: string;
-  maillist: string;
-}
 
 const { lang } = useData();
 const i18n = useI18n();
@@ -62,7 +59,7 @@ const oldEmail = ref('');
 const giteeHomeLink = ref('');
 function getOldEmail() {
   getSigList().then((res) => {
-    const targetData = res.filter((item: SIGLIST) => {
+    const targetData = res.filter((item: SigList) => {
       return item.group_name === sigDetailName.value;
     });
     if (targetData.length) {
@@ -233,11 +230,8 @@ const easyeditorInfo: any = ref({});
 function getEasyeditorInfo() {
   getSigDetailInfo(href + sigDetailName.value)
     .then((res) => {
-      if (res.statusCode === 200 && res.data && res.data[0]) {
-        res.data.forEach((item: any) => {
-          if (item.content) {
-            item.content = showMd().render(item.content);
-          }
+      if (res.statusCode === 200 && res.data?.length) {
+        res.data.forEach((item: EasyeditorInfoDataItem) => {
           easyeditorInfo.value[item.name] = item;
         });
       }
@@ -249,6 +243,10 @@ function getEasyeditorInfo() {
 onMounted(() => {
   getEasyeditorInfo();
 });
+// 转换md语法
+function convertMd(data: string) {
+  return showMd().render(data);
+}
 </script>
 <template>
   <SigAnchor :nav-ref="navRef" :active-index="activeIndex" />
@@ -273,7 +271,7 @@ onMounted(() => {
           v-if="
             easyeditorInfo.introduction && easyeditorInfo.introduction.content
           "
-          v-dompurify-html="easyeditorInfo.introduction.content"
+          v-dompurify-html="convertMd(easyeditorInfo.introduction?.content)"
           class="introduction-content"
         ></p>
         <p v-else-if="sigMemberData.description" class="introduction-content">
@@ -539,53 +537,6 @@ onMounted(() => {
         v-if="easyeditorInfo.markdown5"
         :floor-data="easyeditorInfo.markdown5"
       />
-      <!-- <div class="recent-event">
-        <h5>{{ sigDetail.LATEST_DYNAMIC }}</h5>
-        <div class="dynamic">
-          <div class="item">
-            <div class="header">
-              <span class="left">{{ sigDetail.BLOG }}</span>
-              <a :href="'/' + lang + '/interaction/blog-list/'" class="right">
-                <span>{{ sigDetail.MORE }}</span>
-                <OIcon class="icon-more">
-                  <IconChevronRight />
-                </OIcon>
-              </a>
-            </div>
-            <ul class="item-body">
-              <li class="empty">
-                {{ sigDetail.BLOG_EMPTY1
-                }}<a
-                  :href="'/' + lang + '/interaction/post-blog/'"
-                  target="_blank"  rel="noopener noreferrer"
-                  >{{ sigDetail.BLOG_EMPTY2 }}</a
-                >{{ sigDetail.BLOG_EMPTY3 }}
-              </li>
-            </ul>
-          </div>
-          <div class="item">
-            <div class="header">
-              <span class="left">{{ sigDetail.NEWS }}</span>
-              <a :href="'/' + lang + '/interaction/news-list/'" class="right">
-                <span>{{ sigDetail.MORE }}</span>
-                <OIcon class="icon-more">
-                  <IconChevronRight />
-                </OIcon>
-              </a>
-            </div>
-            <ul class="item-body">
-              <li class="empty">
-                {{ sigDetail.NEWS_EMPTY
-                }}<a
-                  :href="'/' + lang + '/interaction/post-news/'"
-                  target="_blank"  rel="noopener noreferrer"
-                  >{{ sigDetail.NEWS_EMPTY3 }}</a
-                >{{ sigDetail.NEWS_EMPTY4 }}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>
@@ -628,7 +579,6 @@ onMounted(() => {
   .content {
     width: 100%;
     margin-top: var(--o-spacing-h2);
-    // background-color: var(--o-color-bg2);
     .sig-pagination {
       margin-top: var(--o-spacing-h2);
       @media screen and (max-width: 768px) {
