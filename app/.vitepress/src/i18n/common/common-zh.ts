@@ -657,6 +657,11 @@ export default {
               PATH: '/oEEP/?name=oEEP-0000 oEEP  索引',
             },
             {
+              NAME: 'openEuler Call for X 计划',
+              LABEL: '共享 openEuler Call for X 计划多元化资源',
+              PATH: '/community/program/',
+            },
+            {
               NAME: '贡献看板',
               LABEL: '查看openEuler社区数据',
               PATH: 'https://datastat.openeuler.org/zh/overview',

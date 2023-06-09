@@ -196,9 +196,11 @@ const floatData = ref([
     link: 'https://qa-robot.openeuler.org/',
   },
   {
-    img: IconChat,
+    img: computed(() => {
+      return IconChat;
+    }),
     text: '欧拉 论坛',
-    id: 'robot',
+    id: 'forum',
     link: 'https://forum.openeuler.org/',
   },
 ]);

@@ -52,6 +52,10 @@ const { bread1, bread2, link1, link2 } = toRefs(props);
   }
   span {
     display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
   }
   span {
     a {
