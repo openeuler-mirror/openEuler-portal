@@ -3,7 +3,7 @@ title: '启科量子正式加入欧拉开源社区，聚焦前沿科技生态建
 date: '2022-11-23'
 category: news
 tags:
-  - Summit
+  - 单位成员
 banner: 'img/banners/20221125qikeliangzi.png'
 author: 'openEuler'
 summary: '近日，启科量子技术（珠海）有限公司签署 CLA（Contributor License Agreement 贡献者许可协议），正式加入欧拉开源社区。'

@@ -2,6 +2,7 @@ export default {
   zh: {
     downloadCase: '下载 《欧拉开源操作系统行业应用案例集》',
     downloadPaper: '下载白皮书',
+    guideline: '编写指南',
     caseLink:
       'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-industry/openEuler%20industry%20user%20case%20collection.pdf',
     placeHolder: '搜索用户案例',
@@ -21,6 +22,7 @@ export default {
   en: {
     placeHolder: 'input user case',
     bannerTitle: 'Success Stories',
+    guideline: '',
     type: 'Category',
     find1: 'Found',
     find2: 'Cases',
