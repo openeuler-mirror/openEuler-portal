@@ -42,9 +42,9 @@ title: '隐私政策'
 
 **i) 快速提交issue**，当您通过社区的QuickIssue服务进行邮箱验证以提交issue时，我们会向您输入的邮箱发送验证邮件，用以验证邮箱的有效性。issue成功创建后，我们会在该issue页面的描述信息以及QuickIssue的issue看板的提交者展示您邮箱的部分信息。
 
-**j) 加入 Call for openEuler Valuable Professional**，当您申请加入 Call for openEuler Valuable Professional ，通过您主动填写的申请表，社区将会收集您的姓名、手机号、邮箱、照片信息。姓名、手机号、邮箱用于通知评选结果以及与您联系；如果您成功评选为 openEuler Valuable Professional，您的姓名、照片将在官网予以公布。
+**j) 加入 openEuler Valuable Professional**，当您申请加入 openEuler Valuable Professional ，通过您主动填写的申请表，社区将会收集您的姓名、手机号、邮箱、照片信息。姓名、手机号、邮箱用于通知评选结果以及与您联系；如果您成功评选为 openEuler Valuable Professional，您的姓名、照片将在官网予以公布。
 
-**k) Call for 场地资源贡献**，当您主动为 openEuler 贡献场地资源填写表格时，社区将收集您的姓名、电话、邮箱信息，这些信息仅是为了与您联系。
+**k) 场地资源贡献**，当您主动为 openEuler 贡献场地资源填写表格时，社区将收集您的姓名、电话、邮箱信息，这些信息仅是为了与您联系。
 
 我们还可能会在您的授权同意范围内从第三方，包括其他平台或社区收集到您的个人信息，或者我们能从其他合法公开渠道获取到您的个人信息。我们保证严格依照相关法律规定处理您的个人信息，同时请您详细阅读该第三方的隐私政策及用户协议。如使用openEuler社区需要第三方提供您的个人信息，但您拒绝第三方在提供服务时收集、使用传递或者分享您的个人信息，将可能导致您无法使用openEuler社区相关服务。例如，当您使用经授权的第三方帐号登录openEuler社区时，我们会在征得您的同意后，从第三方获取您的相关个人信息。
 
