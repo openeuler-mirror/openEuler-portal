@@ -1,6 +1,6 @@
 export default {
   zh: {
-    downloadCase: '下载 《欧拉开源操作系统行业应用案例集》',
+    downloadCase: '下载 《 openEuler 开源操作系统行业应用案例集》',
     downloadPaper: '下载白皮书',
     guideline: '编写指南',
     caseLink:

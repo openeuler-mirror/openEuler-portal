@@ -42,6 +42,10 @@ Product operations and maintenance: To provide you with rich product experience,
 
 (i) Quick Issue Creation. When you use the QuickIssue service of the openEuler community to submit an issue, you will need to provide an email address, and a verification email will be sent to the email address you provided to verify the validity of the email address. After an issue is created, some information about your email address will be displayed in the description area on the issue page and in the submitter information of the QuickIssue dashboard.
 
+(j) Joining openEuler Valuable Professional. When you apply for the openEuler Valuable Professional qualification, the community will collect your name, mobile number, email address, and photo through the application form you filled in. Your name, mobile number, and email address are used to notify you of the result and contact you. If you successfully qualify as an oEVP, your name and photo will be published on the openEuler official website.
+
+(k) Venue Resource Contribution. When you proactively contribute venue resources to openEuler, the community will collect your name, phone number, and email address from the form you filled in, which will be only used to contact you.
+
 We may also supplement the personal data we collect from you with additional personal data we receive from third parties, including other platforms, communities, or legal and public channels within the scope of your authorization and consent. We promise to process your personal data in strict accordance with applicable laws and regulations. Please read the privacy statements and user agreements of the third parties carefully. If your personal data provided by a third party is required for using related services of the community, but you refuse to allow the third party to collect, use, transfer, or share your personal data when the third party provides services, you may not be able to use related services of the community. For example, when you use an authorized third-party account to log in to the community, we will obtain your personal data from the third party with your consent.
 
 
@@ -163,6 +167,6 @@ Our services are open only to enterprises and individuals over the age of 14.
 If you want to contact us or exercise your rights, please contact us at **<contact@openeuler.io>**.
 
 
-Last updated: Dec, 2022
+Last updated: June, 2023
 
 </div>

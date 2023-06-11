@@ -1,3 +1,6 @@
+import eulerSky_pc from '@/assets/category/home/banner/euler-sky_pc.jpg';
+import eulerSky_mo from '@/assets/category/home/banner/euler-sky_mo.png';
+
 import kunpeng_pc from '@/assets/category/home/banner/kunpeng_pc.jpg';
 import kunpeng_mo from '@/assets/category/home/banner/kunpeng_mo.jpg';
 
@@ -18,6 +21,16 @@ export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
+      {
+        pcBanner: eulerSky_pc,
+        moBanner: eulerSky_mo,
+        link: '/zh/community/program/',
+        id: 'euler-sky',
+        title: ['openEuler Call for X 计划'],
+        desc: ['热衷实践 乐于分享 多元贡献'],
+        btn: '查看详情',
+        targetTap: 1,
+      },
       {
         pcBanner: kunpeng_pc,
         moBanner: kunpeng_mo,

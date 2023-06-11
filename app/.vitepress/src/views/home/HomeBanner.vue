@@ -170,72 +170,13 @@ html[lang='zh'] {
     color: var(--o-color-black);
   }
 }
-#devday {
-  .box {
-    position: absolute;
-    top: 165px;
-    left: 50%;
-    @media (max-width: 767px) {
-      top: 70px;
-      width: 100%;
-      left: 0;
-      text-align: center;
+#euler-sky {
+  @media screen and (max-width: 768px) {
+    .banner-panel-content {
+      display: none;
     }
-    .title {
-      font-size: 40px;
-      line-height: var(--o-line-hight-h3);
-      font-weight: normal;
-      color: #000;
-      @media (max-width: 767px) {
-        font-size: var(--o-font-size-h7);
-        line-height: var(--o-line-hight-h7);
-      }
-      &:nth-of-type(1) {
-        font-size: var(--o-font-size-h4);
-        line-height: var(--o-line-hight-h4);
-        margin-bottom: 16px;
-        @media (max-width: 767px) {
-          font-size: var(--o-font-size-h8);
-          line-height: var(--o-line-hight-h8);
-          margin-top: var(--o-spacing-h8);
-        }
-      }
-    }
-    .desc {
-      margin-top: 32px;
-      font-size: var(--o-font-size-h5);
-      line-height: var(--o-line-hight-h5);
-      font-weight: normal;
-      color: #000;
-      @media (max-width: 767px) {
-        margin-top: 16px;
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-hight-text);
-      }
-    }
-  }
-  .img-box {
-    max-width: 1504px;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    img {
-      max-width: 548px;
-      align-self: center;
-    }
-    &.box-mo {
-      position: absolute;
-      width: 100%;
-      top: 0;
-      left: 0;
-      img {
-        max-width: 250px;
-        width: 100%;
-        position: absolute;
-        bottom: -24px;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+    .o-button {
+      display: none;
     }
   }
 }
