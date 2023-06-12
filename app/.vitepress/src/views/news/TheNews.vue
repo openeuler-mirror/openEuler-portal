@@ -31,8 +31,7 @@ const sortParams = reactive({
 // 新闻列表数据
 const newsCardData = ref<NewsData[]>([]);
 const isDataShow = ref(false);
-const isPad = computed(() => (screenWidth.value <= 768 ? true : false));
-// const isMobile = computed(() => (screenWidth.value <= 500? true : false));
+const isPc = computed(() => (screenWidth.value <= 768 ? true : false));
 
 // 分页数据
 const paginationData = ref({
@@ -326,36 +325,9 @@ const getListData = (params: ParamsType) => {
     })
     .catch((error: any) => {
       isDataShow.value = false;
-      throw new Error(error);
+      console.error(error);
     });
 };
-
-// const filterList = (val: any) => {
-//   let paramsdate = '';
-//   let paramsauthor = '';
-//   let paramstag = '';
-//   for (let i = 0; i < val.length; i++) {
-//     if (val[i].title === '时间') {
-//       paramsdate = val[i].sele[0];
-//     }
-//     if (val[i].title === '作者') {
-//       paramsauthor = val[i].sele[0];
-//     }
-//     if (val[i].title === '标签') {
-//       paramstag = val[i].sele[0];
-//     }
-//   }
-//   const params = {
-//     page: 1,
-//     pageSize: 9,
-//     lang: lang.value,
-//     category: 'news',
-//     archives: paramsdate,
-//     author: paramsauthor,
-//     tags: paramstag,
-//   };
-//   getListData(params);
-// };
 
 onMounted(() => {
   getListData(sortParams);
@@ -397,10 +369,7 @@ const changeCurrentMoblie = (val: string) => {
     :illustration="illustration"
   />
   <AppContent :mobile-top="16">
-    <template v-if="true">
-      <!-- <div class="news-tag">
-        <MobileFilter :data="selectData" :single="true" @filter="filterList" />
-      </div> -->
+    <template>
       <div class="news-select">
         <div class="news-select-item">
           <span class="news-select-item-title">{{ userCaseData.TIME }}</span>
@@ -500,7 +469,7 @@ const changeCurrentMoblie = (val: string) => {
       <div class="news-pagination">
         <ClientOnly>
           <OPagination
-            v-if="!isPad"
+            v-if="!isPc"
             v-model:currentPage="paginationData.currentpage"
             v-model:page-size="paginationData.pagesize"
             :background="true"

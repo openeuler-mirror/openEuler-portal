@@ -232,9 +232,14 @@ onMounted(() => {
     </template>
   </BannerLevel2>
   <div class="user-case">
+    <div class="contribute">
+      {{ userCaseData.contribute }}
+      <a :href="`mailto:${userCaseData.contributeLink}`">{{
+        userCaseData.contributeLink
+      }}</a>
+    </div>
     <OSearch
       v-model="keyWord"
-      class="search"
       :placeholder="userCaseData.placeHolder"
       :clearable="true"
       @change="searchCase"
@@ -266,7 +271,7 @@ onMounted(() => {
 
     <div class="case-header">
       <p class="case-number">
-        {{ userCaseData.find1 }} {{ currentCaseListAll.length }}
+        {{ userCaseData.find1 }} <span>{{ currentCaseListAll.length }}</span>
         {{ userCaseData.find2 }}
       </p>
       <OButton
@@ -395,12 +400,14 @@ onMounted(() => {
       @media (max-width: 768px) {
         display: block;
       }
-      .tag-filter-box {
-        span {
+      :deep(.tag-filter-box) {
+        overflow: scroll;
+        white-space:nowrap;
+        .o-tag {
           padding: 6px 0;
           margin-right: 28px;
-          &:nth-of-type(1) {
-            margin-right: 22px;
+          span {
+            white-space: nowrap;
           }
         }
         .o-tag-type-primary {
@@ -411,7 +418,7 @@ onMounted(() => {
       }
     }
   }
-  :deep(.search) {
+  :deep(.o-search) {
     height: 48px;
     margin-bottom: 0;
     @media (max-width: 768px) {
@@ -437,6 +444,10 @@ onMounted(() => {
       font-size: var(--o-font-size-tip);
       line-height: var(--o-line-height-tip);
       color: var(--o-color-text1);
+      span {
+        color: var(--o-color-brand1);
+        font-size: var(--o-font-size-text);
+      }
     }
   }
 
@@ -571,6 +582,16 @@ onMounted(() => {
         }
       }
     }
+  }
+}
+.contribute {
+  font-size: var(--o-font-size-text);
+  color: var(--o-color-text1);
+  margin-bottom: 40px;
+  @media (max-width: 768px) {
+    margin: 24px 0;
+    padding: 0 16px;
+    font-size: var(--o-font-size-tip);
   }
 }
 </style>

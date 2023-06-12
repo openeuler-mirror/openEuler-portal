@@ -2,7 +2,7 @@ export default {
   zh: {
     downloadCase: '下载 《 openEuler 开源操作系统行业应用案例集》',
     downloadPaper: '下载白皮书',
-    guideline: '编写指南',
+    guideline: '案例编写指南',
     caseLink:
       'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-industry/openEuler%20industry%20user%20case%20collection.pdf',
     placeHolder: '搜索用户案例',
@@ -18,6 +18,8 @@ export default {
     next: '下一页',
     all: '全部',
     tags: ['全部', '金融', '运营商', '能源', '物流', '教育', '其他'],
+    contribute:'展示各行业用户在自身业务场景中使用openEuler操作系统和openEuler社区中各技术项目的案例以及所带来的积极效果。欢迎投稿至',
+    contributeLink:'user@openeuler.sh'
   },
   en: {
     placeHolder: 'input user case',
