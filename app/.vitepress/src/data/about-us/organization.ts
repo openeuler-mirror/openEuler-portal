@@ -249,7 +249,7 @@ export default {
             img: huyadi,
             name: '胡亚弟',
             post: '委员',
-            email: 'huyd12@chinatelecom.cn',
+            email: '731229405@qq.com',
             gitee: 'huyd12',
           },
           {
