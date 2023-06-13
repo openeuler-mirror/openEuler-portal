@@ -9754,9 +9754,9 @@
     "boardCards": [
       {
         "vendorID": "14e4",
-        "deviceID": "16d7",
+        "deviceID": "1614",
         "svID": "14e4",
-        "ssID": "1402",
+        "ssID": "d340",
         "architecture": "x86_64",
          "os": "openEuler 20.03 LTS SP1",
         "driverName": "bnxt_en",
@@ -9773,9 +9773,9 @@
       },
       {
        "vendorID": "1000",
-       "deviceID": "0104",
-       "svID": "1000",
-       "ssID": "0017",
+       "deviceID": "0017",
+       "svID": "1d49",
+       "ssID": "0500",
        "architecture": "x86_64",
        "os": "openEuler 20.03 LTS SP1",
        "driverName": "megaraid_sas",
@@ -9784,8 +9784,8 @@
        "date": "2023.04.04",
        "sha256": "8869feed1be617bffa9e4a1bca38e5e1173b2f11b31e28fb1169fce36af84294",
        "driverSize": "290k",
-       "chipVendor": "Broadcom / LSI",
-       "boardModel": "egaRAID Tri-Mode SAS3508",
+       "chipVendor": "Broadcom",
+       "boardModel": "530-8i",
        "chipModel": "SAS3508",
        "item": "",
        "downloadLink": "inbox"   
@@ -9815,9 +9815,9 @@
     "boardCards": [
       {
         "vendorID": "14e4",
-        "deviceID": "16d7",
+        "deviceID": "1614",
         "svID": "14e4",
-        "ssID": "1402",
+        "ssID": "d340",
         "architecture": "x86_64",
          "os": "openEuler 20.03 LTS SP1",
         "driverName": "bnxt_en",
@@ -9834,9 +9834,9 @@
       },
       {
        "vendorID": "1000",
-       "deviceID": "0104",
-       "svID": "1000",
-       "ssID": "0017",
+       "deviceID": "0017",
+       "svID": "1d49",
+       "ssID": "0500",
        "architecture": "x86_64",
        "os": "openEuler 20.03 LTS SP1",
        "driverName": "megaraid_sas",
@@ -9845,8 +9845,8 @@
        "date": "2023.04.10",
        "sha256": "8869feed1be617bffa9e4a1bca38e5e1173b2f11b31e28fb1169fce36af84294",
        "driverSize": "290k",
-       "chipVendor": "Broadcom / LSI",
-       "boardModel": "egaRAID Tri-Mode SAS3508",
+       "chipVendor": "Broadcom",
+       "boardModel": "530-8i",
        "chipModel": "SAS3508",
        "item": "",
        "downloadLink": "inbox"   
@@ -9863,7 +9863,7 @@
       "portsBusTypes": "N36,N37",
       "videoAdapter": "J100",
       "hostBusAdapter": "Emulex 01CV842 16Gb FC Dual-port HBA",
-      "hardDiskDrive": "RAID 930-8i 2GB"
+      "hardDiskDrive": "RAID 530-8i-12Gb"
     }
   },
   {
