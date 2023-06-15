@@ -397,7 +397,7 @@ const changeCurrentPageMoblie = (val: string) => {
     </template>
   </BannerLevel2>
   <AppContent :mobile-top="16">
-    <template v-if="true">
+    <template>
       <div class="blog-select">
         <div class="blog-select-item">
           <span class="blog-select-item-title">{{ userCaseData.TIME }}</span>

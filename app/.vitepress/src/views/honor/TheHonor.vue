@@ -31,7 +31,7 @@ const honorData = {
   title: '社区荣誉',
   readNews: '查看新闻',
   viewCertificate: '查看证书',
-  timeList: ['2021', '2022'],
+  timeList: ['2021', '2022', '2023'],
   certificateList2021: [
     {
       name: '2021 软件产业发展十大事件',
@@ -68,6 +68,16 @@ const honorData = {
     {
       name: 'OSCAR尖峰开源项目及开源社区',
       certificate: certificateImg3,
+    },
+  ],
+  certificateList2023: [
+    {
+      name: '中国软协产业协会多个奖项',
+      link: '/zh/news/20230602-award/20230602-award.html',
+    },
+    {
+      name: 'risc-v获奖',
+      link: '/zh/news/20230529-riscv.html',
     },
   ],
   award: {
@@ -228,10 +238,10 @@ const honorData = {
   notice:
     '注：根据openEuler社区评奖规则，依据2021年12月1日 ~ 2022年11月30日的贡献进行评选，且展示不分先后顺序。',
 };
-const thisYear = ref('2022');
+const activeYear = ref('2023');
 const showNumber = ref(-1);
 function useClickTab(year: string) {
-  thisYear.value = year;
+  activeYear.value = year;
 }
 function clickBtn(link: string) {
   window.open(link);
@@ -252,7 +262,7 @@ function clickDetail(index: number) {
     <li
       v-for="item in honorData.timeList"
       :key="item"
-      :class="thisYear === item ? 'active' : ''"
+      :class="activeYear === item ? 'active' : ''"
       @click="useClickTab(item)"
     >
       {{ item }}
@@ -265,12 +275,12 @@ function clickDetail(index: number) {
           v-for="item in honorData.timeList"
           :key="item"
           class="o-timeline-item"
-          :class="thisYear === item ? 'active' : ''"
+          :class="activeYear === item ? 'active' : ''"
           @click="useClickTab(item)"
         >
           <p class="o-timeline-day">{{ item }}</p>
           <IconChecked
-            v-if="thisYear === item"
+            v-if="activeYear === item"
             class="o-timeline-icon"
           ></IconChecked>
           <IconUnchecked v-else class="o-timeline-icon"></IconUnchecked>
@@ -278,7 +288,7 @@ function clickDetail(index: number) {
       </ul>
     </div>
     <div class="content">
-      <div v-show="thisYear === '2022'" class="certificate-box">
+      <div v-show="activeYear === '2022'" class="certificate-box">
         <OCard
           v-for="(item, index) in honorData.certificateList2022"
           :key="item.name"
@@ -320,7 +330,7 @@ function clickDetail(index: number) {
           </div>
         </OCard>
       </div>
-      <div v-show="thisYear === '2021'" class="certificate-box">
+      <div v-show="activeYear === '2021'" class="certificate-box">
         <OCard
           v-for="item in honorData.certificateList2021"
           :key="item.name"
@@ -342,7 +352,29 @@ function clickDetail(index: number) {
           <img class="bg-right" :src="bgImg" alt="" />
         </OCard>
       </div>
-      <div v-show="thisYear === '2022'" class="award-box">
+      <div v-show="activeYear === '2023'" class="certificate-box">
+        <OCard
+          v-for="item in honorData.certificateList2023"
+          :key="item.name"
+          class="certificate-item"
+        >
+          <p>{{ item.name }}</p>
+          <OButton
+            class="detail-btn"
+            type="text"
+            animation
+            size="nomral"
+            @click="clickBtn(item.link)"
+          >
+            {{ honorData.readNews }}
+            <template #suffixIcon>
+              <OIcon class="detail-icon"><IconRight /></OIcon>
+            </template>
+          </OButton>
+          <img class="bg-right" :src="bgImg" alt="" />
+        </OCard>
+      </div>
+      <div v-show="activeYear === '2022'" class="award-box">
         <h2 v-for="item in honorData.award.title" :key="item">{{ item }}</h2>
         <div class="award-personal">
           <h5>{{ honorData.award.personal.title }}</h5>
@@ -404,7 +436,7 @@ function clickDetail(index: number) {
           </div>
         </div>
       </div>
-      <p class="notice">{{ honorData.notice }}</p>
+      <p class="notice" v-show="activeYear === '2022'">{{ honorData.notice }}</p>
     </div>
   </AppContent>
 </template>
@@ -519,7 +551,6 @@ function clickDetail(index: number) {
         padding: 0;
       }
       p {
-        max-width: 200px;
         min-height: 52px;
         font-size: var(--o-font-size-h7);
         line-height: var(--o-line-height-h7);
