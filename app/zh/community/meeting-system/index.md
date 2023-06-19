@@ -9,11 +9,11 @@ category: about-us
 
 openEuler 项目群工作委员会（简称“openEuler 委员会”）为openEuler项目群的最高决策机构。openEuler委员会定期举行会议，讨论和决策openEuler项目群重大事务。
 
-为了规范openEuler委员会会议，根据《openEuler项目群开源治理制度》制定本会议运作制度。
+为了规范openEuler委员会会议，根据[《openEuler项目群开源治理制度》](../charter/))制定本会议运作制度。
 
 ## 第二条 会议发起和召集
 
-根据《openEuler项目群开源治理制度》第10条第5款规定发起和召集。
+根据[《openEuler项目群开源治理制度》](../charter/))第10条第5款规定发起和召集。
 
 ## 第三条 会议制度
 
@@ -22,9 +22,9 @@ openEuler 项目群工作委员会（简称“openEuler 委员会”）为openEu
 
 ### 1、 参会人员
 
-  （1） 全程与会人：openEuler委员会委员（含委托）、openEuler项目群执行总监、openEuler项目群执行秘书。
+  （1）全程与会人：openEuler委员会委员（含委托）、openEuler项目群执行总监、openEuler项目群执行秘书。
 
-  （2） 全程列席人：openEuler技术委员会主席、openEuler品牌委员会主席、openEuler用户委员会主席。
+  （2）全程列席人：openEuler技术委员会主席、openEuler品牌委员会主席、openEuler用户委员会主席。
 
   （3）议题相关人：会议议题相关人员。说明：仅在该议题时间段参会，议题结束即退出会议。
 
@@ -38,9 +38,9 @@ openEuler 项目群工作委员会（简称“openEuler 委员会”）为openEu
 
   （3） 纪要审核：由openEuler项目群执行总监审核。
 
-  （4）纪要发送：审核通过后，由openEuler项目群执行秘书将会议纪要邮件发送给与会人。
+  （4） 纪要发送：审核通过后，由openEuler项目群执行秘书将会议纪要邮件发送给与会人。
 
-  （5）纪要发送范围：向openEuler委员会会议全程与会人和全程列席人发送全部会议纪要，向议题相关人发送与之相关议题的 会议纪要。
+  （5） 纪要发送范围：向openEuler委员会会议全程与会人和全程列席人发送全部会议纪要，向议题相关人发送与之相关议题的 会议纪要。
 
 ### 3、 会议材料归档
 
