@@ -16,7 +16,7 @@ img: /category/showcase/energy.png
 
 # 解决方案
 
-<img src="./media/image1.png" width="500" >
+<div class="case-img"><img src="./media/image1.png"  ></div>
 
 -   项目中使用飞腾处理器、中国长城服务器以及银河麒麟高级服务器操作系统V10（工作站版）；
 

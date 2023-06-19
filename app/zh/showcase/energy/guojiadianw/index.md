@@ -14,7 +14,7 @@ img: /category/showcase/energy.png
 
 # 解决方案
 
-<img src="./media/image1.png" width="500" >
+<div class="case-img"><img src="./media/image1.png"  ></div>
 
 -   操作系统采用基于 openEuler 发行的麒麟信安服务器操 作系统 V3 ，硬件采用鲲鹏等国内主流芯片架构的服务器。
 

@@ -1,7 +1,7 @@
 ---
 title: 北京交通大学
 category: showcase
-industry: 教育
+industry: 高校&科研
 company: 北京交通大学
 summary: 北京交通大学利用RPA智能人工系统减少人员投入 50%
 banner: /category/showcase/case-detail-bg.jpg
@@ -18,7 +18,7 @@ University）是教育部直属的全国重点大学，是教育部、交通运�
 # 解决方案
 
 
-<img src="./media/image1.png" width="500" >
+<div class="case-img"><img src="./media/image1.png"  ></div>
 
 -   系统使用新纽 RPA 一体机解决方案
 
