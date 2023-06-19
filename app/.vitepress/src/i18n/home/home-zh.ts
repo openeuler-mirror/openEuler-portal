@@ -297,7 +297,7 @@ export default {
         ACTIVE_DARK_URL: logisticsActiveDark,
       },
       {
-        TYPE: '教育',
+        TYPE: '高校&科研',
         URL: education,
         ACTIVE_URL: educationActive,
         URL_DARK: educationDark,

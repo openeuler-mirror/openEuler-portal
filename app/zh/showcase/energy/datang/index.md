@@ -19,7 +19,8 @@ SCADA 系统经过四代的发展，以其强大的数据采集能力和丰富�
 
 # 解决方案
 
-<img src="./media/image1.png" width="500" >
+<div class="case-img"><img src="./media/image1.png"  ></div>
+
 
 -   建设规模：在集控中心智能化机房和新增的站点及设备上，安装使用了服务器操作系统 60 余套，桌面操作系统 10 余套。 
 
