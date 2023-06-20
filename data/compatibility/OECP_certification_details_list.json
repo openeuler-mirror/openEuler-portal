@@ -1,87 +1,15 @@
 [
     {
-        "osv_name": "宝德计算机系统股份有限公司",
-        "os_version": "RedderStar-V1.0-x86_64-dvd.iso",
-        "arch": "x86_64",
-        "checksum": "d71f72851db22cfd897e674a4925c5a2",
-        "base_openeuler_version": "openEuler 20.03 LTS SP1",
-        "os_download_link": "http://www.powerleader.com.cn",
-        "friendly_link": "http://www.powerleader.com.cn",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/4/26",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "宝德计算机系统股份有限公司",
-        "os_version": "RedderStar-V1.0-aarch64-dvd.iso",
+        "osv_name": "超聚变数字技术有限公司",
+        "os_version": "FusionOS-23_23.0.1_everything_aarch64.iso",
         "arch": "aarch64",
-        "checksum": "1126c365c20888ab2a9f2a213386b98b",
-        "base_openeuler_version": "openEuler 20.03 LTS SP1",
-        "os_download_link": "http://www.powerleader.com.cn",
-        "friendly_link": "http://www.powerleader.com.cn",
+        "checksum": "eaef7b63c96facd291f7e0d0ac1ce2fc",
+        "base_openeuler_version": "openEuler 22.03 LTS SP1",
+        "os_download_link": "https://www.xfusion.com/",
+        "friendly_link": "https://www.xfusion.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/4/26",
+        "date": "2023/6/20",
         "details": "详细信息",
         "tools_result": [
             {
@@ -144,16 +72,16 @@
         ]
     },
     {
-        "osv_name": "联通数字科技有限公司",
-        "os_version": "CULinux-2.2-latest.x86_64.iso",
+        "osv_name": "超聚变数字技术有限公司",
+        "os_version": "FusionOS-23_23.0.1_everything_x86-64.iso",
         "arch": "x86_64",
-        "checksum": "3d4aa8a30e5ef92f6e82ac726dcdc903",
-        "base_openeuler_version": "openEuler 20.03 LTS SP3",
-        "os_download_link": "https://mirrors.cucloud.cn/culinux/2.2/isos/",
-        "friendly_link": "https://www.cucloud.cn/",
+        "checksum": "42ae408c84eb19d5536ad261d7feab19",
+        "base_openeuler_version": "openEuler 22.03 LTS SP2",
+        "os_download_link": "https://www.xfusion.com/",
+        "friendly_link": "https://www.xfusion.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/4/26",
+        "date": "2023/6/20",
         "details": "详细信息",
         "tools_result": [
             {
@@ -216,304 +144,16 @@
         ]
     },
     {
-        "osv_name": "联通数字科技有限公司",
-        "os_version": "CULinux-2.2-latest.aarch64.iso",
-        "arch": "aarch64",
-        "checksum": "d1c3a8b847e1ed81293001d2a16a798c",
-        "base_openeuler_version": "openEuler 20.03 LTS SP3",
-        "os_download_link": "https://mirrors.cucloud.cn/culinux/2.2/isos/",
-        "friendly_link": "https://www.cucloud.cn/",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/4/26",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "天翼云科技有限公司",
-        "os_version": "ctyunos-23.01-230117-x86_64-dvd.iso",
+        "osv_name": "华为云计算技术有限公司",
+        "os_version": "HCE-2.0-x86_64-dvd.iso",
         "arch": "x86_64",
-        "checksum": "c2ccfb906f8661310f5b65d73aeeab9a",
-        "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://ctyunos.ctyun.cn/",
-        "friendly_link": "https://ctyunos.ctyun.cn/",
+        "checksum": "6034f469dc9194143ee349101a770c92",
+        "base_openeuler_version": "openEuler 22.03 LTS",
+        "os_download_link": "https://www.huaweicloud.com/product/hce.html",
+        "friendly_link": "https://www.huaweicloud.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/4/26",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "天翼云科技有限公司",
-        "os_version": "ctyunos-23.01-230117-aarch64-dvd.iso",
-        "arch": "aarch64",
-        "checksum": "9ebe850471aae10ac60d4b47b2c8f958",
-        "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://ctyunos.ctyun.cn/",
-        "friendly_link": "https://ctyunos.ctyun.cn/",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/4/26",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "广东中兴新支点技术有限公司",
-        "os_version": "NewStart-CGS-Linux-MAIN.V6.02.E0-oe2203sp1-x86_64.dvd.iso",
-        "arch": "x86_64",
-        "checksum": "1b86ced2bb92a7300f21d70dd7fc3043",
-        "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://www.gd-linux.com/solutions/server/",
-        "friendly_link": "https://www.gd-linux.com/solutions/server/",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/4/26",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "广东中兴新支点技术有限公司",
-        "os_version": "NewStart-CGS-Linux-MAIN.V6.02.E0-oe2203sp1-aarch64.dvd.iso",
-        "arch": "aarch64",
-        "checksum": "a2b576b403d13424d7c406697b87b676",
-        "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://www.gd-linux.com/solutions/server/",
-        "friendly_link": "https://www.gd-linux.com/solutions/server/",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/4/26",
+        "date": "2023/6/20",
         "details": "详细信息",
         "tools_result": [
             {
