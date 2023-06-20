@@ -89,6 +89,8 @@ import openLookeng from '../../assets/category/home/link/logo-openlookeng.png';
 import openLookeng_dark from '../../assets/category/home/dark/link/logo-openlookeng_dark.png';
 import mindSpore from '../../assets/category/home/link/logo-mindspore.png';
 import mindSpore_dark from '../../assets/category/home/dark/link/logo-mindspore_dark.png';
+import hengsheng from '../../assets/category/home/link/hengsheng_light.png';
+import hengsheng_dark from '../../assets/category/home/dark/link/hengsheng_dark.png';
 
 import finance from '../../assets/category/home/case/finance.svg';
 import financeDark from '../../assets/category/home/dark/case/finance.svg';
@@ -508,6 +510,11 @@ export default {
       LINK: 'https://www.mindspore.cn/en/',
       IMG: mindSpore,
       IMG_DARK: mindSpore_dark,
+    },
+    {
+      LINK: 'https://www.hundsun.com/',
+      IMG: hengsheng,
+      IMG_DARK: hengsheng_dark,
     },
   ],
   MORE: 'Read More',

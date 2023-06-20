@@ -89,15 +89,14 @@ import openLookeng from '../../assets/category/home/link/logo-openlookeng.png';
 import openLookeng_dark from '../../assets/category/home/dark/link/logo-openlookeng_dark.png';
 import mindSpore from '../../assets/category/home/link/logo-mindspore.png';
 import mindSpore_dark from '../../assets/category/home/dark/link/logo-mindspore_dark.png';
+import hengsheng from '../../assets/category/home/link/hengsheng_light.png';
+import hengsheng_dark from '../../assets/category/home/dark/link/hengsheng_dark.png';
 
 import finance from '../../assets/category/home/case/finance.svg';
 import financeDark from '../../assets/category/home/dark/case/finance.svg';
 import financeActive from '../../assets/category/home/case/finance-active.svg';
 import financeActiveDark from '../../assets/category/home/dark/case/finance-active.svg';
-// import government from '../../assets/category/home/case/government.svg';
-// import governmentDark from '../../assets/category/home/dark/case/government.svg';
-// import governmentActive from '../../assets/category/home/case/government-active.svg';
-// import governmentActiveDark from '../../assets/category/home/dark/case/government-active.svg';
+
 import operator from '../../assets/category/home/case/operator.svg';
 import operatorDark from '../../assets/category/home/dark/case/operator.svg';
 import operatorActive from '../../assets/category/home/case/operator-active.svg';
@@ -275,13 +274,6 @@ export default {
         URL_DARK: operatorDark,
         ACTIVE_DARK_URL: operatorActiveDark,
       },
-      // {
-      //   TYPE: '政府',
-      //   URL: government,
-      //   ACTIVE_URL: governmentActive,
-      //   URL_DARK: governmentDark,
-      //   ACTIVE_DARK_URL: governmentActiveDark,
-      // },
       {
         TYPE: '能源',
         URL: energy,
@@ -473,6 +465,11 @@ export default {
       LINK: 'https://www.mindspore.cn/',
       IMG: mindSpore,
       IMG_DARK: mindSpore_dark,
+    },
+    {
+      LINK: 'https://www.hundsun.com/',
+      IMG: hengsheng,
+      IMG_DARK: hengsheng_dark,
     },
   ],
   MORE: '更多',
