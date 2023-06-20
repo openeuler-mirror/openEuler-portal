@@ -76,7 +76,7 @@
         "os_version": "FusionOS-23_23.0.1_everything_x86-64.iso",
         "arch": "x86_64",
         "checksum": "42ae408c84eb19d5536ad261d7feab19",
-        "base_openeuler_version": "openEuler 22.03 LTS SP2",
+        "base_openeuler_version": "openEuler 22.03 LTS SP1",
         "os_download_link": "https://www.xfusion.com/",
         "friendly_link": "https://www.xfusion.com/",
         "type": "服务器",
