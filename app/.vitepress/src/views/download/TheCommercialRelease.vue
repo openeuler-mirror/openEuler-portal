@@ -181,11 +181,6 @@ const changeSearchVal = (val: string) => {
   manufacturerAll.value = true;
   activeManufacturer.value = [];
   filterList.value = allList.filter((item: DownloadCommercialData) => {
-    // return (
-    //   searchReg.test(item.NAME) ||
-    //   searchReg.test(item.DESC) ||
-    //   searchReg.test(item.MANUFACTURER)
-    // );
     return searchReg.test(item.NAME);
   });
 };

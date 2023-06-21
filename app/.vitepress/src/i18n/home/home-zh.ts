@@ -329,6 +329,11 @@ export default {
       IMG_DARK: fenhuoLogo_dark,
     },
     {
+      LINK: 'https://www.hundsun.com/',
+      IMG: hengsheng,
+      IMG_DARK: hengsheng_dark,
+    },
+    {
       LINK: 'https://www.kyland.com.cn/',
       IMG: intewellLogo,
       IMG_DARK: intewellLogo_dark,
@@ -393,7 +398,6 @@ export default {
       IMG: ruantongLogo,
       IMG_DARK: ruantongLogo_dark,
     },
-
     {
       LINK: 'https://www.thundersoft.com/',
       IMG: zhongkechuangdaLogo,
@@ -465,11 +469,6 @@ export default {
       LINK: 'https://www.mindspore.cn/',
       IMG: mindSpore,
       IMG_DARK: mindSpore_dark,
-    },
-    {
-      LINK: 'https://www.hundsun.com/',
-      IMG: hengsheng,
-      IMG_DARK: hengsheng_dark,
     },
   ],
   MORE: '更多',
