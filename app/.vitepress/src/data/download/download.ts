@@ -1724,20 +1724,30 @@ export default {
     ],
     COMMERCIAL_RELEASE_LIST: [
       {
+        NAME: '恒生HUNDSUN LightOS操作系统V1.0',
+        DOWNLOAD_URL:
+          'https://uplus.hundsun.com/LightOS/LightOS1.0/index.html',
+        DESC: '恒生LightOS操作系统是基于国内openEuler开源社区构建的企业级操作系统，具备高效、稳定、安全的特性，致力于为企业级的数据库、大数据、云计算、人工智能平台提供安全稳定的运行基础。',
+        MANUFACTURER: '恒生电子股份有限公司',
+        PUBLISH_DATE: '2023/05',
+        DETAILED_LINK: [
+          {
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+        ],
+      },
+      {
         NAME: '超聚变服务器操作系统 FusionOS 22 （免费使用授权）',
         DOWNLOAD_URL:
           'https://eco.xfusion.com/solutions/market/application/419662379870064640',
         DESC: 'FusionOS 22是一款基于openEuler操作系统，面向运营商、金融、政企等行业关键业务设计开发的企业级服务器操作系统。为了让广大的用户能更便捷、更低成本地获得FusionOS 22的极致业务体验，超聚变提供了超聚变服务器操作系统FusionOS 22（免费使用授权）。',
-        RELEASE_DESC_URL:
-          'https://eco.xfusion.com/solutions/market/application/419662379870064640',
-        INSTALL_GUIDENCE_URL:
-          'https://eco.xfusion.com/solutions/market/application/419662379870064640',
-        SEEK_HELP_URL: 'https://www.xfusion.com',
-        GET_ISO_URL:
-          'https://eco.xfusion.com/solutions/market/application/419662379870064640',
         MANUFACTURER: '超聚变数字技术有限公司',
         PUBLISH_DATE: '2023/03',
-        LTS: false,
         DETAILED_LINK: [
           {
             LINK: 'https://eco.xfusion.com/solutions/market/application/419662379870064640',
@@ -1758,15 +1768,12 @@ export default {
         DESC: '天鹤操作系统（简称 ISSEOS）是软通动力基于 openEuler 自主研发、自主可控的企业级 Linux 操作系统，支持鲲鹏、海光、飞腾等多种处理器，同时也支持 SM2、SM3、SM4 等多种国密算法，具备高性能、高运维、高兼容以及高可靠等增强特性，适用于数据库、大数据、云计算、人工智能等应用场景，可以为各行业的客户提供高效、稳定、专业的技术支持和服务。',
         MANUFACTURER: '软通动力信息技术（集团）股份有限公司',
         PUBLISH_DATE: '2022/12',
-        LTS: false,
         DETAILED_LINK: [
           {
-            LINK: 'https://www.isscloud.com/template/pc/system/isseOS.html#',
             ARCH: 'x86_64',
             SCENARIO: 'SERVER',
           },
           {
-            LINK: 'https://www.isscloud.com/template/pc/system/isseOS.html#',
             ARCH: 'AArch64',
             SCENARIO: 'SERVER',
           },
@@ -1776,24 +1783,14 @@ export default {
         NAME: '凝思安全操作系统V6.0',
         DOWNLOAD_URL: 'https://www.linx-info.com/download/os/el/',
         DESC: '凝思安全操作系统V6.0基于openEuler 20.03 LTS SP3 开发，内置凝思固域安全子系统，具有高可靠、高安全、高性能和高兼容等特性，能够保障生产系统和关键业务系统的安全稳定运行。',
-        RELEASE_DESC_URL:
-          'https://www.linx-info.com/#/ServiceAndSupport/DocumentDownload',
-        INSTALL_GUIDENCE_URL:
-          'https://www.linx-info.com/#/ServiceAndSupport/DocumentDownload',
-        SEEK_HELP_URL:
-          'https://www.linx-info.com/#/ServiceAndSupport/CommonQuestions',
-        GET_ISO_URL: 'https://www.linx-info.com/download/os/el/x86_64/',
         MANUFACTURER: '北京凝思软件股份有限公司',
         PUBLISH_DATE: '2022/08',
-        LTS: false,
         DETAILED_LINK: [
           {
-            LINK: 'https://www.linx-info.com/download/os/el/x86_64/',
             ARCH: 'x86_64',
             SCENARIO: 'SERVER',
           },
           {
-            LINK: 'https://www.linx-info.com/download/os/el/arm64/',
             ARCH: 'AArch64',
             SCENARIO: 'SERVER',
           },
@@ -1803,17 +1800,8 @@ export default {
         NAME: '拓林思企业级服务器操作系统',
         DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8013/',
         DESC: '拓林思企业级服务器操作系统是一款基于openEuler操作系统打造的针对x86_64、AArch64处理器架构的操作系统发行版，适用于数据库、云计算、大数据、分布式计算等多种应用场景，为客户提供安全、可靠的解决系统方案，为各类应用提供标准、稳定的运行环境。',
-        INSTALL_GUIDENCE_URL:
-          'http://download.turbolinux.com.cn:8011/docs/TurboLinux16-Installation-AArch64.pdf',
-        SEEK_HELP_URL: 'http://forum.turbolinux.com.cn/',
-        GET_ISO_URL: 'http://download.turbolinux.com.cn:8013/',
         MANUFACTURER: '北京拓林思软件有限公司',
         PUBLISH_DATE: '2022/06',
-        LIFE_CYCLE_URL:
-          'http://download.turbolinux.com.cn:8011/docs/TLES-OS-PLANNING.pdf',
-        RELEASE_DESC_URL:
-          'http://www.turbolinux.com.cn/index.php/pages/cat_id/2.html',
-        LTS: false,
         DETAILED_LINK: [
           {
             ARCH: 'x86_64',
@@ -1829,13 +1817,8 @@ export default {
         NAME: '统信服务器操作系统V20',
         DOWNLOAD_URL: ' https://www.chinauos.com/resource/download-server',
         DESC: '统信服务器操作系统（UnionTech OS Server）是统信操作系统（统信UOS）产品家族中面向服务器端运行环境的版本，是一款用于构建信息化基础设施环境的平台级软件。该操作系统基于Linux 稳定内核研发，集成了资源管理、运维管理、和 DDE 桌面环境等标准系统组件，服务管理、中间件、WEB 服务、办公服务等应用服务组件，国密算法、安全审计等安全服务组件，虚拟化、容器、云平台、人工智能、大数据、可视化运维、集群运维、智能调优、和迁移助手等高级服务组件。产品主要面向于我国党政军、企事业单位、教育机构，以及普通的企业型用户，着重解决客户在信息化基础建设过程中，服务端基础设施的安装部署、运行维护、应用支撑等需求。',
-        RELEASE_DESC_URL:
-          'https://doc.chinauos.com/content/E34Dd38BplouMytzXa9-',
-        SEEK_HELP_URL: ' http://bbs.chinauos.com/',
-        GET_ISO_URL: ' https://www.chinauos.com/resource/download-server',
         MANUFACTURER: '统信软件技术有限公司',
         PUBLISH_DATE: '2022/03',
-        LTS: false,
         DETAILED_LINK: [
           {
             LINK: 'https://www.chinauos.com/resource/download-server',
