@@ -135,6 +135,7 @@ export default {
         {
           img_light: feiten_light,
           img_dark: feiten_dark,
+          noIcon: true,
         },
         {
           img_light: zhongyin_light,
@@ -255,6 +256,7 @@ export default {
         {
           img_light: feiten_light,
           img_dark: feiten_dark,
+          noIcon: true,
         },
         {
           img_light: zhongyin_light,
