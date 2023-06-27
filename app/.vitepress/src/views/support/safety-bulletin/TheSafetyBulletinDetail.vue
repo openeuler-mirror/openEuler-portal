@@ -164,14 +164,7 @@ onMounted(() => {
                 :key="item"
                 class="packge-item"
               >
-                <h1 class="packge-item-title">
-                  <a
-                    :href="`http://repo.openeuler.org/${item.productName}/update/`"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ item.productName }}</a
-                  >
-                </h1>
+                <h1 class="packge-item-title">{{ item.productName }}</h1>
                 <div
                   v-for="it in item.child"
                   :key="it"
