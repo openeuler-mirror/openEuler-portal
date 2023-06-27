@@ -51,7 +51,6 @@ const initData = (res: any) => {
     }
   });
   caseData.value = result;
-  console.log(caseData.value);
 };
 const getImgUrl = computed(() => (item: { URL_DARK: string; URL: string }) => {
   return commonStore.theme === 'dark' ? item.URL_DARK : item.URL;

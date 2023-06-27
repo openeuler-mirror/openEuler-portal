@@ -12,8 +12,6 @@ import techDay_mo from '@/assets/category/home/banner/tech-day_mo.png';
 import migrationImg_pc from '@/assets/category/home/banner/migration_pc.png';
 import migrationImg_mo from '@/assets/category/home/banner/migration_mo.png';
 
-import downloadBanner_pc from '@/assets/category/home/banner/download-banner_pc.jpg';
-import downloadBanner_mo from '@/assets/category/home/banner/download-banner_mo.jpg';
 import eur_mo from '@/assets/category/home/banner/eur-banner_mo.jpg';
 import eur_pc from '@/assets/category/home/banner/eur-banner_pc.jpg';
 
@@ -46,16 +44,6 @@ export default {
         desc: ['欢迎使用EasyEditor'],
         btn: '查看详情',
         id: 'easy-edit',
-        targetTap: 1,
-      },
-      {
-        pcBanner: downloadBanner_pc,
-        moBanner: downloadBanner_mo,
-        link: '/zh/download/',
-        title: ['openEuler下载体验升级'],
-        desc: ['更便捷地找到您需要的软件'],
-        btn: '立即体验',
-        id: 'download',
         targetTap: 1,
       },
       {
