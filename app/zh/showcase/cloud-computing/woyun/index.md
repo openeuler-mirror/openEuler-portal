@@ -1,11 +1,11 @@
 ---
 title: 联通
 category: showcase
-industry: 运营商
+industry: 云计算
 company: 联通
 summary: 联通沃云信创云建设项目
 banner: /category/showcase/case-detail-bg.jpg
-img: /category/showcase/provider.png
+img: /category/showcase/cloud-computing.png
 ---
 
 ## 应用场景

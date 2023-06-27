@@ -60,6 +60,22 @@ export default {
       TEXT_1:
         'openEuler团队会针对提交结果进行审核，如果通过，会将OSV技术测评结果添加到OSV技术测评列表中。',
     },
+    {
+      ID: '07',
+      TITLE: 'openEuler官网首页LOGO展示',
+      TEXT_1: '如果通过OSV技术测评，并已经在OSV技术测评列表（',
+      LINK_1: 'https://www.openeuler.org/zh/approve',
+      TEXT_2: '）中展示，您可以联系openEuler社区（',
+      LINK_2: 'public@openeuler.sh',
+      TEXT_3:
+        '），在社区官网首页“发布 openEuler 商业发行版的厂商”栏目中展示贵组织单位的LOGO。邮件标题需注明“申请在openEuler社区官网首页展示logo”，并随附下列信息：',
+      TEXT_LITS: [
+        '1.贵组织单位的全称',
+        '2.业务负责人或对接人的姓名和邮箱',
+        '3.OSV技术测评通过结果与OSV技术测评列表截图',
+      ],
+      TEXT_4: '收到邮件后，openEuler团队会与您沟通相关授权事宜。',
+    },
   ],
   TABLE_TITLE: 'OSV技术测评结果',
   SELECT_PLACEHOLDER: '请选择',
