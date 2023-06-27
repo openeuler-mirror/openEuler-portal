@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>云计算选中dark</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo更新" transform="translate(-949.000000, -1814.000000)">
+            <g id="云计算选中dark" transform="translate(949.000000, 1814.000000)">
+                <rect id="矩形备份-2" x="0" y="0" width="80" height="80"></rect>
+                <g id="hover" transform="translate(12.000000, 12.000000)">
+                    <circle id="椭圆形" fill="#5177CA" fill-rule="nonzero" opacity="0.400000006" cx="17" cy="24" r="17"></circle>
+                    <g id="编组-3">
+                        <rect id="矩形" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" x="11.2" y="37.3333333" width="44.8" height="14.9333333"></rect>
+                        <rect id="矩形" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" x="11.2" y="18.6666667" width="44.8" height="14.9333333"></rect>
+                        <rect id="矩形" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" x="11.2" y="0" width="44.8" height="14.9333333"></rect>
+                        <rect id="矩形" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" x="14.9333333" y="4.66666667" width="28" height="5.6"></rect>
+                        <circle id="椭圆形" fill="#5177CA" fill-rule="nonzero" cx="49.4666667" cy="7.46666667" r="2.8"></circle>
+                        <circle id="椭圆形" fill="#5177CA" fill-rule="nonzero" cx="49.4666667" cy="26.1333333" r="2.8"></circle>
+                        <circle id="椭圆形" fill="#5177CA" fill-rule="nonzero" cx="49.4666667" cy="44.8" r="2.8"></circle>
+                        <path d="M19.6,28 C26.301055,28 31.7333333,33.2570436 31.7333333,39.7419355 C31.7333333,39.7512783 31.7333221,39.7606185 31.7332995,39.7699562 C35.9133641,40.1058861 39.2,43.6046094 39.2,47.8709677 C39.2,52.3605083 35.5605083,56 31.0709677,56 L8.12903226,56 C3.63949171,56 0,52.3605083 0,47.8709677 C0,43.6046094 3.28663589,40.1058861 7.46613028,39.768575 L7.46666667,39.7419355 C7.46666667,33.2570436 12.898945,28 19.6,28 Z" id="形状结合" fill="#5177CA" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

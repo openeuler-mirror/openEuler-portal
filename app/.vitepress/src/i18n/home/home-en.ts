@@ -64,6 +64,8 @@ import xfusion from '../../assets/category/home/link/xfusion.png';
 import xfusionLogo_dark from '../../assets/category/home/dark/link/xfusion_dark.png';
 import fenhuoLogo from '../../assets/category/home/link/fenhuo_light.png';
 import fenhuoLogo_dark from '../../assets/category/home/dark/link/fenhuo_dark.png';
+import baodeLogo from '../../assets/category/home/link/baode_light.png';
+import baodeLogo_dark from '../../assets/category/home/dark/link/baode_dark.png';
 
 import mulan from '../../assets/category/home/link/mulan.png';
 import mulanLogo_dark from '../../assets/category/home/dark/link/mulan_dark.png';
@@ -363,6 +365,11 @@ export default {
     BLOG_NAME: 'openEuler Blog',
   },
   HOME_SOURCE_EDITION: [
+    {
+      LINK: 'http://en.powerleader.com.cn/',
+      IMG: baodeLogo,
+      IMG_DARK: baodeLogo_dark,
+    },
     {
       LINK: 'https://www.xfusion.com/en/',
       IMG: xfusion,

@@ -17,9 +17,19 @@ export default {
     prev: '上一页',
     next: '下一页',
     all: '全部',
-    tags: ['全部', '金融', '运营商', '能源', '物流', '高校&科研', '其他'],
-    contribute:'展示各行业用户在自身业务场景中使用openEuler操作系统和openEuler社区中各技术项目的案例以及所带来的积极效果。欢迎投稿至',
-    contributeLink:'user@openeuler.sh'
+    tags: [
+      '全部',
+      '金融',
+      '运营商',
+      '能源',
+      '物流',
+      '云计算',
+      '高校&科研',
+      '其他',
+    ],
+    contribute:
+      '展示各行业用户在自身业务场景中使用openEuler操作系统和openEuler社区中各技术项目的案例以及所带来的积极效果。欢迎投稿至',
+    contributeLink: 'user@openeuler.sh',
   },
   en: {
     placeHolder: 'input user case',

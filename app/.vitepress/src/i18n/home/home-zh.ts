@@ -1,122 +1,128 @@
-import useCase from '../../assets/category/home/new-home/use-case.svg';
-import useCaseHover from '../../assets/category/home/new-home/use-case-hover.svg';
-import useCaseDark from '../../assets/category/home/dark/new-home/user-case.svg';
-import useCaseDarkHover from '../../assets/category/home/dark/new-home/user-case-hover.svg';
-import migrate from '../../assets/category/home/new-home/migrate.svg';
-import migrateHover from '../../assets/category/home/new-home/migrate-hover.svg';
-import migrateDark from '../../assets/category/home/dark/new-home/migrate.svg';
-import migrateDarkHover from '../../assets/category/home/dark/new-home/migrate-hover.svg';
-import internshipSummit from '../../assets/category/home/new-home/internship-summit.svg';
-import internshipSummitHover from '../../assets/category/home/new-home/internship-summit-hover.svg';
-import internshipSummitDark from '../../assets/category/home/dark/new-home/internship-summit.svg';
-import internshipSummitDarkHover from '../../assets/category/home/dark/new-home/internship-summit-hover.svg';
-import summit from '../../assets/category/home/new-home/summit.svg';
-import summitHover from '../../assets/category/home/new-home/summit-hover.svg';
-import summitDark from '../../assets/category/home/dark/new-home/summit.svg';
-import summitDarkHover from '../../assets/category/home/dark/new-home/summit-hover.svg';
+import useCase from '@/assets/category/home/new-home/use-case.svg';
+import useCaseHover from '@/assets/category/home/new-home/use-case-hover.svg';
+import useCaseDark from '@/assets/category/home/dark/new-home/user-case.svg';
+import useCaseDarkHover from '@/assets/category/home/dark/new-home/user-case-hover.svg';
+import migrate from '@/assets/category/home/new-home/migrate.svg';
+import migrateHover from '@/assets/category/home/new-home/migrate-hover.svg';
+import migrateDark from '@/assets/category/home/dark/new-home/migrate.svg';
+import migrateDarkHover from '@/assets/category/home/dark/new-home/migrate-hover.svg';
+import internshipSummit from '@/assets/category/home/new-home/internship-summit.svg';
+import internshipSummitHover from '@/assets/category/home/new-home/internship-summit-hover.svg';
+import internshipSummitDark from '@/assets/category/home/dark/new-home/internship-summit.svg';
+import internshipSummitDarkHover from '@/assets/category/home/dark/new-home/internship-summit-hover.svg';
+import summit from '@/assets/category/home/new-home/summit.svg';
+import summitHover from '@/assets/category/home/new-home/summit-hover.svg';
+import summitDark from '@/assets/category/home/dark/new-home/summit.svg';
+import summitDarkHover from '@/assets/category/home/dark/new-home/summit-hover.svg';
 
-import imgList1 from '../../assets/category/home/carouse/img-list1.jpg';
-import imgList2 from '../../assets/category/home/carouse/img-list2.jpg';
-import imgList3 from '../../assets/category/home/carouse/img-list3.jpg';
+import imgList1 from '@/assets/category/home/carouse/img-list1.jpg';
+import imgList2 from '@/assets/category/home/carouse/img-list2.jpg';
+import imgList3 from '@/assets/category/home/carouse/img-list3.jpg';
 
-import contributer from '../../assets/category/home/round/contributer.svg';
-import contributerDark from '../../assets/category/home/round/dark/contributer.svg';
-import software from '../../assets/category/home/round/software.svg';
-import softwareDark from '../../assets/category/home/round/dark/software.svg';
-import sig from '../../assets/category/home/round/sig.svg';
-import sigDark from '../../assets/category/home/round/dark/sig.svg';
-import user from '../../assets/category/home/round/user.svg';
-import userDark from '../../assets/category/home/round/dark/user.svg';
-import osv from '../../assets/category/home/round/osv.svg';
-import osvDark from '../../assets/category/home/round/dark/osv.svg';
+import contributer from '@/assets/category/home/round/contributer.svg';
+import contributerDark from '@/assets/category/home/round/dark/contributer.svg';
+import software from '@/assets/category/home/round/software.svg';
+import softwareDark from '@/assets/category/home/round/dark/software.svg';
+import sig from '@/assets/category/home/round/sig.svg';
+import sigDark from '@/assets/category/home/round/dark/sig.svg';
+import user from '@/assets/category/home/round/user.svg';
+import userDark from '@/assets/category/home/round/dark/user.svg';
+import osv from '@/assets/category/home/round/osv.svg';
+import osvDark from '@/assets/category/home/round/dark/osv.svg';
 
-import xinan from '../../assets/category//home/link/xinan.png';
-import xinanLogo_dark from '../../assets/category/home/dark/link/xinan_dark.png';
-import tongxin from '../../assets/category/home/link/tongxin.png';
-import tongxinLogo_dark from '../../assets/category/home/dark/link/tongxin_dark.png';
-import qiling from '../../assets/category/home/link/qiling.png';
-import qilingLogo_dark from '../../assets/category/home/dark/link/qiling_dark.png';
-import iscas from '../../assets/category/home/link/iscas.png';
-import iscasLogo_dark from '../../assets/category/home/dark/link/iscas_dark.png';
-import cetc from '../../assets/category/home/link/cetc.png';
-import cetcLogo_dark from '../../assets/category/home/dark/link/cetc_dark.png';
-import turbo from '../../assets/category/home/link/turbo.png';
-import turboLogo_dark from '../../assets/category/home/dark/link/turbo_dark.png';
-import hopeRun from '../../assets/category/home/link/hopeRun.png';
-import hopeRunLogo_dark from '../../assets/category/home//dark/link/hope-run_dark.png';
-import tongYuan from '../../assets/category/home/link/tongYuan.png';
-import tongYuanLogo_dark from '../../assets/category/home//dark/link/tong-yuan_dark.png';
-import zhongkehongqi from '../../assets/category//home/link/zhongkehongqi.png';
-import zhongkehongqiLogo_dark from '../../assets/category/home//dark/link/zhongkehongqi_dark.png';
-import suse from '../../assets/category//home/link/suse.png';
-import suseLogo_dark from '../../assets/category//home/dark/link/suse_dark.png';
-import zhongkefangde from '../../assets/category/home/link/zhongkefangde.png';
-import zhongkefangdeLogo_dark from '../../assets/category/home/dark/link/zhongkefangde_dark.png';
-import h3cLogo from '../../assets/category/home/link/h3cLogo.png';
-import h3cLogo_dark from '../../assets/category/home/dark/link/h3cLogo_dark.png';
-import intewellLogo from '../../assets/category/home/link/intewellLogo.png';
-import intewellLogo_dark from '../../assets/category/home/dark/link/intewellLogo_dark.png';
-import linsiLogo from '../../assets/category/home/link/linsiLogo.png';
-import linsiLogo_dark from '../../assets/category/home/dark/link/linsiLogo_dark.png';
-import ruantongLogo from '../../assets/category/home/link/ruantong_light.png';
-import ruantongLogo_dark from '../../assets/category/home/dark/link/ruantong_dark.png';
-import zhongkechuangdaLogo from '../../assets/category/home/link/zhongkeLogo.png';
-import zhongkechuangdaLogo_dark from '../../assets/category/home/dark/link/zhongkeLogo_dark.png';
-import xfusion from '../../assets/category/home/link/xfusion.png';
-import xfusionLogo_dark from '../../assets/category/home/dark/link/xfusion_dark.png';
-import fenhuoLogo from '../../assets/category/home/link/fenhuo_light.png';
-import fenhuoLogo_dark from '../../assets/category/home/dark/link/fenhuo_dark.png';
+import xinan from '@/assets/category//home/link/xinan.png';
+import xinanLogo_dark from '@/assets/category/home/dark/link/xinan_dark.png';
+import tongxin from '@/assets/category/home/link/tongxin.png';
+import tongxinLogo_dark from '@/assets/category/home/dark/link/tongxin_dark.png';
+import qiling from '@/assets/category/home/link/qiling.png';
+import qilingLogo_dark from '@/assets/category/home/dark/link/qiling_dark.png';
+import iscas from '@/assets/category/home/link/iscas.png';
+import iscasLogo_dark from '@/assets/category/home/dark/link/iscas_dark.png';
+import cetc from '@/assets/category/home/link/cetc.png';
+import cetcLogo_dark from '@/assets/category/home/dark/link/cetc_dark.png';
+import turbo from '@/assets/category/home/link/turbo.png';
+import turboLogo_dark from '@/assets/category/home/dark/link/turbo_dark.png';
+import hopeRun from '@/assets/category/home/link/hopeRun.png';
+import hopeRunLogo_dark from '@/assets/category/home//dark/link/hope-run_dark.png';
+import tongYuan from '@/assets/category/home/link/tongYuan.png';
+import tongYuanLogo_dark from '@/assets/category/home//dark/link/tong-yuan_dark.png';
+import zhongkehongqi from '@/assets/category//home/link/zhongkehongqi.png';
+import zhongkehongqiLogo_dark from '@/assets/category/home//dark/link/zhongkehongqi_dark.png';
+import suse from '@/assets/category//home/link/suse.png';
+import suseLogo_dark from '@/assets/category//home/dark/link/suse_dark.png';
+import zhongkefangde from '@/assets/category/home/link/zhongkefangde.png';
+import zhongkefangdeLogo_dark from '@/assets/category/home/dark/link/zhongkefangde_dark.png';
+import h3cLogo from '@/assets/category/home/link/h3cLogo.png';
+import h3cLogo_dark from '@/assets/category/home/dark/link/h3cLogo_dark.png';
+import intewellLogo from '@/assets/category/home/link/intewellLogo.png';
+import intewellLogo_dark from '@/assets/category/home/dark/link/intewellLogo_dark.png';
+import linsiLogo from '@/assets/category/home/link/linsiLogo.png';
+import linsiLogo_dark from '@/assets/category/home/dark/link/linsiLogo_dark.png';
+import ruantongLogo from '@/assets/category/home/link/ruantong_light.png';
+import ruantongLogo_dark from '@/assets/category/home/dark/link/ruantong_dark.png';
+import zhongkechuangdaLogo from '@/assets/category/home/link/zhongkeLogo.png';
+import zhongkechuangdaLogo_dark from '@/assets/category/home/dark/link/zhongkeLogo_dark.png';
+import xfusion from '@/assets/category/home/link/xfusion.png';
+import xfusionLogo_dark from '@/assets/category/home/dark/link/xfusion_dark.png';
+import fenhuoLogo from '@/assets/category/home/link/fenhuo_light.png';
+import fenhuoLogo_dark from '@/assets/category/home/dark/link/fenhuo_dark.png';
+import baodeLogo from '@/assets/category/home/link/baode_light.png';
+import baodeLogo_dark from '@/assets/category/home/dark/link/baode_dark.png';
 
-import mulan from '../../assets/category/home/link/mulan.png';
-import mulanLogo_dark from '../../assets/category/home/dark/link/mulan_dark.png';
-import kunpeng from '../../assets/category/home/link/kunpeng.png';
-import kunpengLogo_dark from '../../assets/category/home/dark/link/kunpeng_dark.png';
-import xiaozhi from '../../assets/category/home/link/xiaozhi.png';
-import xiaozhiLogo_dark from '../../assets/category/home/dark/link/xiaozhi_dark.png';
-import pengcheng from '../../assets/category/home/link/pengcheng.png';
-import pengchengLogo_dark from '../../assets/category/home/dark/link/pengcheng_dark.png';
-import infoQ from '../../assets/category/home/link/infoQ.png';
-import infoQLogo_dark from '../../assets/category/home/dark/link/infoQ_dark.png';
-import kaiyuanshe from '../../assets/category/home/link/kaiyuanshe-logo.png';
-import kaiyuansheLogo_dark from '../../assets/category/home/dark/link/kaiyuanshe_dark.png';
-import zhongke from '../../assets/category/home/link/zhongke.png';
-import zhongkeLogo_dark from '../../assets/category/home/dark/link/zhongke_dark.png';
-import authing from '../../assets/category/home/link/authing.png';
-import authingLogo_dark from '../../assets/category/home/dark/link/authing_dark.png';
-import openGauss from '../../assets/category/home/link/logo-opengauss.png';
-import openGauss_dark from '../../assets/category/home/dark/link/logo-opengauss_dark.png';
-import openLookeng from '../../assets/category/home/link/logo-openlookeng.png';
-import openLookeng_dark from '../../assets/category/home/dark/link/logo-openlookeng_dark.png';
-import mindSpore from '../../assets/category/home/link/logo-mindspore.png';
-import mindSpore_dark from '../../assets/category/home/dark/link/logo-mindspore_dark.png';
-import hengsheng from '../../assets/category/home/link/hengsheng_light.png';
-import hengsheng_dark from '../../assets/category/home/dark/link/hengsheng_dark.png';
+import mulan from '@/assets/category/home/link/mulan.png';
+import mulanLogo_dark from '@/assets/category/home/dark/link/mulan_dark.png';
+import kunpeng from '@/assets/category/home/link/kunpeng.png';
+import kunpengLogo_dark from '@/assets/category/home/dark/link/kunpeng_dark.png';
+import xiaozhi from '@/assets/category/home/link/xiaozhi.png';
+import xiaozhiLogo_dark from '@/assets/category/home/dark/link/xiaozhi_dark.png';
+import pengcheng from '@/assets/category/home/link/pengcheng.png';
+import pengchengLogo_dark from '@/assets/category/home/dark/link/pengcheng_dark.png';
+import infoQ from '@/assets/category/home/link/infoQ.png';
+import infoQLogo_dark from '@/assets/category/home/dark/link/infoQ_dark.png';
+import kaiyuanshe from '@/assets/category/home/link/kaiyuanshe-logo.png';
+import kaiyuansheLogo_dark from '@/assets/category/home/dark/link/kaiyuanshe_dark.png';
+import zhongke from '@/assets/category/home/link/zhongke.png';
+import zhongkeLogo_dark from '@/assets/category/home/dark/link/zhongke_dark.png';
+import authing from '@/assets/category/home/link/authing.png';
+import authingLogo_dark from '@/assets/category/home/dark/link/authing_dark.png';
+import openGauss from '@/assets/category/home/link/logo-opengauss.png';
+import openGauss_dark from '@/assets/category/home/dark/link/logo-opengauss_dark.png';
+import openLookeng from '@/assets/category/home/link/logo-openlookeng.png';
+import openLookeng_dark from '@/assets/category/home/dark/link/logo-openlookeng_dark.png';
+import mindSpore from '@/assets/category/home/link/logo-mindspore.png';
+import mindSpore_dark from '@/assets/category/home/dark/link/logo-mindspore_dark.png';
+import hengsheng from '@/assets/category/home/link/hengsheng_light.png';
+import hengsheng_dark from '@/assets/category/home/dark/link/hengsheng_dark.png';
 
-import finance from '../../assets/category/home/case/finance.svg';
-import financeDark from '../../assets/category/home/dark/case/finance.svg';
-import financeActive from '../../assets/category/home/case/finance-active.svg';
-import financeActiveDark from '../../assets/category/home/dark/case/finance-active.svg';
+import finance from '@/assets/category/home/case/finance.svg';
+import financeDark from '@/assets/category/home/dark/case/finance.svg';
+import financeActive from '@/assets/category/home/case/finance-active.svg';
+import financeActiveDark from '@/assets/category/home/dark/case/finance-active.svg';
+import computing from '@/assets/category/home/case/computing_light.svg';
+import computingDark from '@/assets/category/home/dark/case/computing_dark.svg';
+import computingActive from '@/assets/category/home/case/computing_light_active.svg';
+import computingActiveDark from '@/assets/category/home/dark/case/computing_dark_active.svg';
 
-import operator from '../../assets/category/home/case/operator.svg';
-import operatorDark from '../../assets/category/home/dark/case/operator.svg';
-import operatorActive from '../../assets/category/home/case/operator-active.svg';
-import operatorActiveDark from '../../assets/category/home/dark/case/operator-active.svg';
-import energy from '../../assets/category/home/case/energy.svg';
-import energyDark from '../../assets/category/home/dark/case/energy.svg';
-import energyActive from '../../assets/category/home/case/energy-active.svg';
-import energyActiveDark from '../../assets/category/home/dark/case/energy-active.svg';
-import logistics from '../../assets/category/home/case/logistics.svg';
-import logisticsDark from '../../assets/category/home/dark/case/logistics.svg';
-import logisticsActive from '../../assets/category/home/case/logistics-active.svg';
-import logisticsActiveDark from '../../assets/category/home/dark/case/logistics-active.svg';
-import education from '../../assets/category/home/case/education.svg';
-import educationDark from '../../assets/category/home/dark/case/education.svg';
-import educationActive from '../../assets/category/home/case/education-active.svg';
-import educationActiveDark from '../../assets/category/home/dark/case/education-active.svg';
-import other from '../../assets/category/home/case/other.svg';
-import otherDark from '../../assets/category/home/dark/case/other.svg';
-import otherActive from '../../assets/category/home/case/other-active.svg';
-import otherActiveDark from '../../assets/category/home/dark/case/other-active.svg';
+import operator from '@/assets/category/home/case/operator.svg';
+import operatorDark from '@/assets/category/home/dark/case/operator.svg';
+import operatorActive from '@/assets/category/home/case/operator-active.svg';
+import operatorActiveDark from '@/assets/category/home/dark/case/operator-active.svg';
+import energy from '@/assets/category/home/case/energy.svg';
+import energyDark from '@/assets/category/home/dark/case/energy.svg';
+import energyActive from '@/assets/category/home/case/energy-active.svg';
+import energyActiveDark from '@/assets/category/home/dark/case/energy-active.svg';
+import logistics from '@/assets/category/home/case/logistics.svg';
+import logisticsDark from '@/assets/category/home/dark/case/logistics.svg';
+import logisticsActive from '@/assets/category/home/case/logistics-active.svg';
+import logisticsActiveDark from '@/assets/category/home/dark/case/logistics-active.svg';
+import education from '@/assets/category/home/case/education.svg';
+import educationDark from '@/assets/category/home/dark/case/education.svg';
+import educationActive from '@/assets/category/home/case/education-active.svg';
+import educationActiveDark from '@/assets/category/home/dark/case/education-active.svg';
+import other from '@/assets/category/home/case/other.svg';
+import otherDark from '@/assets/category/home/dark/case/other.svg';
+import otherActive from '@/assets/category/home/case/other-active.svg';
+import otherActiveDark from '@/assets/category/home/dark/case/other-active.svg';
 
 export default {
   HOME_CALENDAR: 'openEuler 开发者日历',
@@ -296,6 +302,13 @@ export default {
         ACTIVE_DARK_URL: educationActiveDark,
       },
       {
+        TYPE: '云计算',
+        URL: computing,
+        ACTIVE_URL: computingActive,
+        URL_DARK: computingDark,
+        ACTIVE_DARK_URL: computingActiveDark,
+      },
+      {
         TYPE: '其他',
         URL: other,
         ACTIVE_URL: otherActive,
@@ -318,6 +331,11 @@ export default {
   },
   RANK_TIP: '注：按公司名拼音首字母顺序排序',
   HOME_SOURCE_EDITION: [
+    {
+      LINK: 'http://www.powerleader.com.cn',
+      IMG: baodeLogo,
+      IMG_DARK: baodeLogo_dark,
+    },
     {
       LINK: 'https://www.xfusion.com/cn/',
       IMG: xfusion,

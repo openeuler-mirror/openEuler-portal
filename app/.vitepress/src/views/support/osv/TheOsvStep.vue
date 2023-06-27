@@ -143,6 +143,38 @@ function goBackPage() {
               </div>
             </div>
           </div>
+          <div class="content-item">
+            <div class="left">{{ i18n.approve.STEP_CONTENT[6].ID }}</div>
+            <div class="right">
+              <div class="item-title">
+                {{ i18n.approve.STEP_CONTENT[6].TITLE }}
+              </div>
+              <div class="item-content">
+                {{ i18n.approve.STEP_CONTENT[6].TEXT_1 }}
+                <a
+                  :href="i18n.approve.STEP_CONTENT[6].LINK_1"
+                  rel="noopener noreferrer"
+                  >{{ i18n.approve.STEP_CONTENT[6].LINK_1 }}</a
+                >
+                {{ i18n.approve.STEP_CONTENT[6].TEXT_2 }}
+                <a
+                  :href="`mailto:${i18n.approve.STEP_CONTENT[6].LINK_2}`"
+                  rel="noopener noreferrer"
+                  >{{ i18n.approve.STEP_CONTENT[6].LINK_2 }}</a
+                >
+                {{ i18n.approve.STEP_CONTENT[6].TEXT_3 }}
+                <ul class="content-list">
+                  <li
+                    v-for="item in i18n.approve.STEP_CONTENT[6].TEXT_LITS"
+                    :key="item"
+                  >
+                    {{ item }}
+                  </li>
+                </ul>
+                {{ i18n.approve.STEP_CONTENT[6].TEXT_4 }}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -235,6 +267,16 @@ function goBackPage() {
       padding: var(--o-spacing-h3);
       align-items: center;
       justify-content: left;
+      .content-list {
+        padding: 8px;
+        li {
+          margin-bottom: 4px;
+        }
+        @media screen and (max-width: 768px) {
+          padding: 4px;
+          margin-bottom: 2px;
+        }
+      }
       @media screen and (max-width: 768px) {
         padding: var(--o-spacing-h4) 0;
       }
