@@ -1,5 +1,5 @@
 ---
-title: 兰州大学
+title: 兰州大学超算中心
 category: showcase
 industry: 高校&科研
 company: 兰州大学
