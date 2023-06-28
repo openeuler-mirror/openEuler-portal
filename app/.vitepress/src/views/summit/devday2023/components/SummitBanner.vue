@@ -2,8 +2,6 @@
 import { onMounted } from 'vue';
 import AOS from 'aos';
 
-import IconArrowRight from '~icons/app/icon-arrow-right.svg';
-
 defineProps({
   bannerData: {
     type: Object,
@@ -34,12 +32,6 @@ onMounted(() => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <OButton animation class="banner-btn">
-            立即报名
-            <template #suffixIcon
-              ><OIcon><IconArrowRight /></OIcon
-            ></template>
-          </OButton>
         </a>
       </div>
     </div>
@@ -54,12 +46,6 @@ onMounted(() => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <OButton animation class="banner-btn">
-            立即报名
-            <template #suffixIcon
-              ><OIcon><IconArrowRight /></OIcon
-            ></template>
-          </OButton>
         </a>
       </div>
     </div>
@@ -92,7 +78,8 @@ onMounted(() => {
       max-width: 1504px;
       height: 100%;
       margin: 0 auto;
-      padding-top: 50px;
+      display: flex;
+      align-items: center;
       img {
         max-width: 548px;
         display: block;
