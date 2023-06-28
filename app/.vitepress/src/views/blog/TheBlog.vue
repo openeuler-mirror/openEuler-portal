@@ -30,7 +30,6 @@ const screenWidth = useWindowResize();
 
 const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
 
-const isDataShown = ref(false);
 // 博客列表
 const sortParams = reactive({
   page: 1,
@@ -99,7 +98,6 @@ const getTagsList = () => {
         });
       })
       .catch((error: any) => {
-        isDataShown.value = false;
         throw new Error(error);
       });
   });
@@ -108,9 +106,7 @@ const getTagsList = () => {
 const getListData = (params: ParamsType) => {
   sortBlogData(params)
     .then((res) => {
-      if (res.obj.count === 0) {
-        isDataShown.value = false;
-      } else {
+      if (res.obj?.count) {
         paginationData.value.total = res.obj.count;
         paginationData.value.currentpage = res.obj.page;
         paginationData.value.pagesize = res.obj.pageSize;
@@ -123,12 +119,10 @@ const getListData = (params: ParamsType) => {
             i
           ].archives.substring(0, 7);
         }
-        isDataShown.value = true;
       }
     })
     .catch((error: any) => {
-      isDataShown.value = false;
-      throw new Error(error);
+      console.error(error);
     });
 };
 
@@ -397,83 +391,81 @@ const changeCurrentPageMoblie = (val: string) => {
     </template>
   </BannerLevel2>
   <AppContent :mobile-top="16">
-    <template>
-      <div class="blog-select">
-        <div class="blog-select-item">
-          <span class="blog-select-item-title">{{ userCaseData.TIME }}</span>
-          <ClientOnly>
-            <OSelect
-              v-model="selectTimeVal"
-              filterable
-              clearable
-              :placeholder="userCaseData.ALL"
-              @change="changeTime"
-            >
-              <template #prefix>
-                <OIcon>
-                  <IconSearch />
-                </OIcon>
-              </template>
-              <OOption
-                v-for="item in selectData[0].select"
-                :key="item"
-                :label="item"
-                :value="item"
-              />
-            </OSelect>
-          </ClientOnly>
-        </div>
-        <div class="blog-select-item">
-          <span class="blog-select-item-title">{{ userCaseData.AUTHOR }}</span>
-          <ClientOnly>
-            <OSelect
-              v-model="selectAuthorVal"
-              filterable
-              clearable
-              :placeholder="userCaseData.ALL"
-              @change="changeAuthor"
-            >
-              <template #prefix>
-                <OIcon>
-                  <IconSearch />
-                </OIcon>
-              </template>
-              <OOption
-                v-for="item in selectData[1].select"
-                :key="item"
-                :label="item"
-                :value="item"
-              />
-            </OSelect>
-          </ClientOnly>
-        </div>
-        <div class="blog-select-item">
-          <span class="blog-select-item-title">{{ userCaseData.TAGS }}</span>
-          <ClientOnly>
-            <OSelect
-              v-model="selectTagsVal"
-              filterable
-              clearable
-              :placeholder="userCaseData.ALL"
-              @change="changeTags"
-            >
-              <template #prefix>
-                <OIcon>
-                  <IconSearch />
-                </OIcon>
-              </template>
-              <OOption
-                v-for="item in selectData[2].select"
-                :key="item"
-                :label="item"
-                :value="item"
-              />
-            </OSelect>
-          </ClientOnly>
-        </div>
+    <div class="blog-select">
+      <div class="blog-select-item">
+        <span class="blog-select-item-title">{{ userCaseData.TIME }}</span>
+        <ClientOnly>
+          <OSelect
+            v-model="selectTimeVal"
+            filterable
+            clearable
+            :placeholder="userCaseData.ALL"
+            @change="changeTime"
+          >
+            <template #prefix>
+              <OIcon>
+                <IconSearch />
+              </OIcon>
+            </template>
+            <OOption
+              v-for="item in selectData[0].select"
+              :key="item"
+              :label="item"
+              :value="item"
+            />
+          </OSelect>
+        </ClientOnly>
       </div>
-    </template>
-    <template v-if="isDataShown">
+      <div class="blog-select-item">
+        <span class="blog-select-item-title">{{ userCaseData.AUTHOR }}</span>
+        <ClientOnly>
+          <OSelect
+            v-model="selectAuthorVal"
+            filterable
+            clearable
+            :placeholder="userCaseData.ALL"
+            @change="changeAuthor"
+          >
+            <template #prefix>
+              <OIcon>
+                <IconSearch />
+              </OIcon>
+            </template>
+            <OOption
+              v-for="item in selectData[1].select"
+              :key="item"
+              :label="item"
+              :value="item"
+            />
+          </OSelect>
+        </ClientOnly>
+      </div>
+      <div class="blog-select-item">
+        <span class="blog-select-item-title">{{ userCaseData.TAGS }}</span>
+        <ClientOnly>
+          <OSelect
+            v-model="selectTagsVal"
+            filterable
+            clearable
+            :placeholder="userCaseData.ALL"
+            @change="changeTags"
+          >
+            <template #prefix>
+              <OIcon>
+                <IconSearch />
+              </OIcon>
+            </template>
+            <OOption
+              v-for="item in selectData[2].select"
+              :key="item"
+              :label="item"
+              :value="item"
+            />
+          </OSelect>
+        </ClientOnly>
+      </div>
+    </div>
+    <template v-if="blogCardData.length">
       <div class="blog-list">
         <OCard
           v-for="item in blogCardData"

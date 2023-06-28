@@ -156,7 +156,7 @@ export default {
       },
       {
         IMG: newspapperIllustration,
-        DESC: '学习毕昇IDK的使用',
+        DESC: '学习毕昇JDK的使用',
         THEME: '课程',
         LINK: [
           {
@@ -171,7 +171,7 @@ export default {
       },
       {
         IMG: fileIllustration,
-        DESC: '毕昇IDK历史版本',
+        DESC: '毕昇JDK历史版本',
         THEME: '下载',
         LINK: [
           {

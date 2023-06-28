@@ -1,5 +1,5 @@
 export default {
-  title: '峰会直播',
+  title: '精彩回顾',
   date: ['12月28日', '12月29日'],
   liveData1: [
     {
