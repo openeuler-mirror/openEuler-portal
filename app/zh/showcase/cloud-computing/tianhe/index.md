@@ -1,11 +1,11 @@
 ---
-title: XSKY星辰天合公司新华社
+title: XSKY星辰天合公司
 category: showcase
-industry: 其他
+industry: 云计算
 company: XSKY星辰天合公司
 summary: 天合翔宇系列鲲鹏计算型存储解决方案一体机
 banner: /category/showcase/case-detail-bg.jpg
-img: /category/showcase/others.png
+img: /category/showcase/cloud-computing.png
 ---
 
 ## 应用场景
