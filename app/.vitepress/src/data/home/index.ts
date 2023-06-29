@@ -9,8 +9,8 @@ import easyEdit_mo from '@/assets/category/home/banner/easy-edit_mo.jpg';
 
 import techDay_pc from '@/assets/category/home/banner/tech-day_pc.png';
 import techDay_mo from '@/assets/category/home/banner/tech-day_mo.png';
-// import base_pc from '@/assets/category/home/banner/base_pc.jpg';
-// import base_mo from '@/assets/category/home/banner/base_mo.jpg';
+import base_pc from '@/assets/category/home/banner/base_pc.jpg';
+import base_mo from '@/assets/category/home/banner/base_mo.jpg';
 
 import eur_mo from '@/assets/category/home/banner/eur-banner_mo.jpg';
 import eur_pc from '@/assets/category/home/banner/eur-banner_pc.jpg';
@@ -54,13 +54,16 @@ export default {
         title: ['openEuler', '用户软件仓（EUR）发布'],
         targetTap: 1,
       },
-      // {
-      //   pcBanner: base_pc,
-      //   moBanner: base_mo,
-      //   targetTap: 1,
-      //   link: 'https://hiss.shixizhi.huawei.com/portal/1643780836745113602?pageId=1644269448177651714&activeIndex=-1&sxz-lang=zh_CN',
-      //   id: '',
-      // },
+      {
+        pcBanner: base_pc,
+        moBanner: base_mo,
+        targetTap: 1,
+        link: 'https://hiss.shixizhi.huawei.com/portal/1643780836745113602?pageId=1644269448177651714&activeIndex=-1&sxz-lang=zh_CN',
+        id: '',
+        title: ['基础软件服务能力平台Hiss'],
+        desc: ['openEuler专区上线'],
+        btn: '点击查看',
+      },
     ],
     en: [
       {
