@@ -36,6 +36,10 @@ export default [
     size: '270G',
   },
   {
+    release: 'openEuler-22.03-LTS-SP2',
+    size: '243G',
+  },
+  {
     release: 'openEuler-22.09',
     size: '237G',
   },
@@ -57,6 +61,6 @@ export default [
   },
   {
     release: 'Total',
-    size: '2.5T',
+    size: '2.8T',
   },
 ];
