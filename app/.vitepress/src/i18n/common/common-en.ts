@@ -613,11 +613,6 @@ export default {
                   LABEL: '',
                   PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=CLOUD_COMPUTING',
                 },
-                {
-                  NAME: 'Embedded',
-                  LABEL: '',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=EMBEDDED',
-                },
               ],
             },
             {
