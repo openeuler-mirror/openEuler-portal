@@ -60,7 +60,7 @@ export default {
         targetTap: 1,
         link: 'https://hiss.shixizhi.huawei.com/portal/1643780836745113602?pageId=1644269448177651714&activeIndex=-1&sxz-lang=zh_CN',
         id: '',
-        title: ['基础软件服务能力平台Hiss'],
+        title: ['基础软件服务能力平台HiSS'],
         desc: ['openEuler专区上线'],
         btn: '点击查看',
       },

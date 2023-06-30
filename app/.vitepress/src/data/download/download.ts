@@ -2,6 +2,166 @@ export default {
   zh: {
     COMMUNITY_LIST: [
       {
+        NAME: 'openEuler 22.03 LTS SP2',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP2/',
+        DESC: 'openEuler 22.03 LTS SP2 是openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同。',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/zh/docs/22.03_LTS_SP2/docs/Releasenotes/release_notes.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/zh/docs/22.03_LTS_SP2/docs/Installation/installation.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+        WHITE_PAPER: '/whitepaper/openEuler 22.03 LTS SP2技术白皮书.pdf',
+        WEBSITE_SELECT: '/zh/mirror/select/?version=22.03-LTS-SP2',
+        CLOUD_IMAGE:
+          'https://repo.openeuler.org/openEuler-22.03-LTS-SP2/virtual_machine_img/',
+        EDGE_IMAGE:
+          'https://repo.openeuler.org/openEuler-22.03-LTS-SP2/edge_img/',
+        EMBEDDEN_IMAGE:
+          'https://repo.openeuler.org/openEuler-22.03-LTS-SP2/embedded_img/',
+        MANUFACTURER: 'openEuler社区',
+        PUBLISH_DATE: '2023/06',
+        LTS: true,
+        VERSION: '22.03-LTS-SP2',
+        DETAILED_LINK: [
+          // x86
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.5 GiB',
+                SHACODE:
+                  '69ea8e0faa1b45cf4a63bc1c3584834fcebaf292a38e4391607e61ad6047c2b2',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/ISO/x86_64/openEuler-22.03-LTS-SP2-x86_64-dvd.iso',
+                TIPS: 'x86_64架构的基础安装ISO，包含了运行最小系统的核心组件',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '16.9 GiB',
+                SHACODE:
+                  '8f00c6251c944330fc0bedbcc1085ab029cd1e49aadd14c236658fa7ac0a8b2c',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/ISO/x86_64/openEuler-22.03-LTS-SP2-everything-x86_64-dvd.iso',
+                TIPS: 'x86_64架构的全量安装ISO，包含了运行完整系统所需的全部组件',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '738.0 MiB',
+                SHACODE:
+                  'e7186579da6d16430bb8577e2989761e726af8166a08f7e02cde55a614b42d66',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/ISO/x86_64/openEuler-22.03-LTS-SP2-netinst-x86_64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          // aarch64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.1 GiB',
+                SHACODE:
+                  '2c984a51342a0cd26802e64913486ed600479a69a68f25bcad99cc0a88405316',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/ISO/aarch64/openEuler-22.03-LTS-SP2-aarch64-dvd.iso',
+                TIPS: 'AArch64架构的基础安装ISO，包含了运行最小系统的核心组件',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '	16.5 GiB',
+                SHACODE:
+                  '7e270556361c38bd66565921be5f2327d611d6d8aef5a299d029abc0f7d9a07e',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/ISO/aarch64/openEuler-22.03-LTS-SP2-everything-aarch64-dvd.iso',
+                TIPS: 'AArch64架构的全量安装ISO，包含了运行完整系统所需的全部组件',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '698.7 MiB',
+                SHACODE:
+                  'a406d2adae7ba26c0420da3ebfa7031dc09110da04b39120d055092c585eca76',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/ISO/aarch64/openEuler-22.03-LTS-SP2-netinst-aarch64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+          //EDGE_CLOUD x86_64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '1.4 GiB',
+                SHACODE:
+                  'ae0a31cf4c9d24fd42d7e24b4e50b03ab464fa4e52c0301099a8d3ed950cc797',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/edge_img/x86_64/openEuler-22.03-LTS-SP2-edge-x86_64-dvd.iso',
+                TIPS: 'x86_64架构的边缘ISO，包含了运行最小系统的核心组件',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'EDGE_CLOUD',
+          },
+          // EDGE_CLOUD AArch64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '1.3 GiB',
+                SHACODE:
+                  '1a7aa792a4247e5d0f69ddd2aa43569eafaed25ae8a15c55d22285c698e4b1ba',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/edge_img/aarch64/openEuler-22.03-LTS-SP2-edge-aarch64-dvd.iso',
+                TIPS: 'AArch64架构的边缘ISO，包含了运行最小系统的核心组件',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'EDGE_CLOUD',
+          },
+          // CLOUD_COMPUTING x86_64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '379.5 MiB',
+                SHACODE:
+                  '84705761686f7e72c545c0f28fb25d045021f930a9f39ff3f28e354fd476f9cd',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/virtual_machine_img/x86_64/openEuler-22.03-LTS-SP2-x86_64.qcow2.xz',
+                TIPS: 'x86_64架构下openEuler虚拟机镜像',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          // CLOUD_COMPUTING AArch64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '354.8 MiB',
+                SHACODE:
+                  '5c06e8e3737d9eabd693df287d50449548427946622ea393092b22be58f6252a',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/virtual_machine_img/aarch64/openEuler-22.03-LTS-SP2-aarch64.qcow2.xz',
+                TIPS: 'aarch64架构下openEuler虚拟机镜像',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          // TODO:
+        ],
+        PLANNED_EOL: '2024/03',
+      },
+      {
         NAME: 'openEuler 23.03',
         DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-23.03/',
         DESC: 'openEuler 23.03采用 Linux Kernel 6.1 内核，为未来 openEuler 长生命周期版本采用 6.x内核提前进行技术探索、硬件适配、基础技术创新和上层应用创新。',
@@ -1725,8 +1885,7 @@ export default {
     COMMERCIAL_RELEASE_LIST: [
       {
         NAME: '恒生HUNDSUN LightOS操作系统V1.0',
-        DOWNLOAD_URL:
-          'https://uplus.hundsun.com/LightOS/LightOS1.0/index.html',
+        DOWNLOAD_URL: 'https://uplus.hundsun.com/LightOS/LightOS1.0/index.html',
         DESC: '恒生LightOS操作系统是基于国内openEuler开源社区构建的企业级操作系统，具备高效、稳定、安全的特性，致力于为企业级的数据库、大数据、云计算、人工智能平台提供安全稳定的运行基础。',
         MANUFACTURER: '恒生电子股份有限公司',
         PUBLISH_DATE: '2023/05',
@@ -2105,6 +2264,155 @@ export default {
   },
   en: {
     COMMUNITY_LIST: [
+      {
+        NAME: 'openEuler 22.03 LTS SP2',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP2/',
+        DESC: 'openEuler openEuler 22.03 LTS SP2 is the patch version of openEuler 22.03 LTS, and both versions have the same lifecycle.',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/en/docs/22.03_LTS_SP2/docs/Releasenotes/release_notes.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/en/docs/22.03_LTS_SP2/docs/Releasenotes/installing-the-os.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        LIFE_CYCLE_URL: '/en/other/lifecycle/',
+        WEBSITE_SELECT: '/en/mirror/select/?version=22.03-LTS-SP2',
+        CLOUD_IMAGE:
+          'https://repo.openeuler.org/openEuler-22.03-LTS-SP2/virtual_machine_img/',
+        EDGE_IMAGE:
+          'https://repo.openeuler.org/openEuler-22.03-LTS-SP2/edge_img/',
+        EMBEDDEN_IMAGE:
+          'https://repo.openeuler.org/openEuler-22.03-LTS-SP2/embedded_img/',
+        MANUFACTURER: 'openEuler community',
+        PUBLISH_DATE: '2023/06',
+        LTS: true,
+        VERSION: '22.03-LTS-SP2',
+        DETAILED_LINK: [
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.5 GiB',
+                SHACODE:
+                  '69ea8e0faa1b45cf4a63bc1c3584834fcebaf292a38e4391607e61ad6047c2b2',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/ISO/x86_64/openEuler-22.03-LTS-SP2-x86_64-dvd.iso',
+                TIPS: 'Base installation ISO file of the x86_64 architecture, including the core components for running the minimum system.',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '16.9 GiB',
+                SHACODE:
+                  '8f00c6251c944330fc0bedbcc1085ab029cd1e49aadd14c236658fa7ac0a8b2c',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/ISO/x86_64/openEuler-22.03-LTS-SP2-everything-x86_64-dvd.iso',
+                TIPS: 'Full installation ISO file of the x86_64 architecture, including all components for running the entire system.',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '738.0 MiB',
+                SHACODE:
+                  'e7186579da6d16430bb8577e2989761e726af8166a08f7e02cde55a614b42d66',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/ISO/x86_64/openEuler-22.03-LTS-SP2-netinst-x86_64-dvd.iso',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.1 GiB',
+                SHACODE:
+                  '2c984a51342a0cd26802e64913486ed600479a69a68f25bcad99cc0a88405316',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/ISO/aarch64/openEuler-22.03-LTS-SP2-aarch64-dvd.iso',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '	16.5 GiB',
+                SHACODE:
+                  '7e270556361c38bd66565921be5f2327d611d6d8aef5a299d029abc0f7d9a07e',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/ISO/aarch64/openEuler-22.03-LTS-SP2-everything-aarch64-dvd.iso',
+                TIPS: 'Full installation ISO file of the aarch64 architecture, including all components for running the entire system.',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '698.7 MiB',
+                SHACODE:
+                  'a406d2adae7ba26c0420da3ebfa7031dc09110da04b39120d055092c585eca76',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/ISO/aarch64/openEuler-22.03-LTS-SP2-netinst-aarch64-dvd.iso',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '1.4 GiB',
+                SHACODE:
+                  'ae0a31cf4c9d24fd42d7e24b4e50b03ab464fa4e52c0301099a8d3ed950cc797',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/edge_img/x86_64/openEuler-22.03-LTS-SP2-edge-x86_64-dvd.iso',
+                TIPS: 'Base installation ISO file of the x86_64 architecture, including the core components for running the minimum system.',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'EDGE_CLOUD',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '1.3 GiB',
+                SHACODE:
+                  '1a7aa792a4247e5d0f69ddd2aa43569eafaed25ae8a15c55d22285c698e4b1ba',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/edge_img/aarch64/openEuler-22.03-LTS-SP2-edge-aarch64-dvd.iso',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'EDGE_CLOUD',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '379.5 MiB',
+                SHACODE:
+                  '84705761686f7e72c545c0f28fb25d045021f930a9f39ff3f28e354fd476f9cd',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/virtual_machine_img/x86_64/openEuler-22.03-LTS-SP2-x86_64.qcow2.xz',
+                TIPS: 'VM image of openEuler in the x86_64 architecture.',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '354.8 MiB',
+                SHACODE:
+                  '5c06e8e3737d9eabd693df287d50449548427946622ea393092b22be58f6252a',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/virtual_machine_img/aarch64/openEuler-22.03-LTS-SP2-aarch64.qcow2.xz',
+                TIPS: 'VM image of openEuler in the AArch64 architecture.',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          // TODO:
+        ],
+        PLANNED_EOL: '2024/03',
+      },
       {
         NAME: 'openEuler 23.03',
         DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-23.03/',

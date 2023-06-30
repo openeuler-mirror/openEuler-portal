@@ -595,35 +595,35 @@ export default {
             {
               NAME: 'openEuler 22.03 LTS SP1',
               LABEL:
-                'openEuler openEuler 22.03 LTS SP1 is the patch version of openEuler 22.03 LTS, and both versions have the same lifecycle.',
-              PATH: '/download/?version=openEuler 22.03 LTS SP1',
+                'openEuler openEuler 22.03 LTS SP2 is the patch version of openEuler 22.03 LTS, and both versions have the same lifecycle.',
+              PATH: '/download/?version=openEuler 22.03 LTS SP2',
               CHILDREN: [
                 {
                   NAME: 'Server',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP1&scenario=SERVER',
+                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=SERVER',
                 },
                 {
                   NAME: 'Edge Cloud',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP1&scenario=EDGE_CLOUD',
+                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=EDGE_CLOUD',
                 },
                 {
                   NAME: 'Cloud Computing',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP1&scenario=CLOUD_COMPUTING',
+                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=CLOUD_COMPUTING',
                 },
                 {
                   NAME: 'Embedded',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP1&scenario=EMBEDDED',
+                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=EMBEDDED',
                 },
               ],
             },
             {
               NAME: 'openEuler 23.03',
               LABEL:
-                'openEuler 22.03 LTS SP1 is a patch version of openEuler 22.03 LTS. Built on Linux kernel 5.10, it is designed for servers, clouds, edges, and embedded systems.',
+                'openEuler 23.03 uses Linux Kernel 6.1 to explore technologies, adapt hardware, and innovate basic technologies and upper-layer applications for future openEuler LTS versions built on Linux Kernel 6.x.',
               PATH: '/download/?version=openEuler 2023.03',
               CHILDREN: [
                 {
