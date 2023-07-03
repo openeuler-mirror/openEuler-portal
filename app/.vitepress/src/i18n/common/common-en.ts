@@ -619,7 +619,7 @@ export default {
               NAME: 'openEuler 23.03',
               LABEL:
                 'openEuler 23.03 uses Linux Kernel 6.1 to explore technologies, adapt hardware, and innovate basic technologies and upper-layer applications for future openEuler LTS versions built on Linux Kernel 6.x.',
-              PATH: '/download/?version=openEuler 2023.03',
+              PATH: '/download/?version=openEuler 23.03',
               CHILDREN: [
                 {
                   NAME: 'Server',
@@ -646,7 +646,7 @@ export default {
           ],
         },
         {
-          NAME: 'Other',
+          NAME: 'Archives',
           TYPE: 0,
           CHILDREN: [
             {
@@ -658,6 +658,16 @@ export default {
               NAME: 'Commercial Editions',
               LABEL: '',
               PATH: '/download/commercial-release/',
+            },
+          ],
+        },
+        {
+          NAME: 'Others',
+          TYPE: 0,
+          CHILDREN: [
+            {
+              NAME: 'Mirrors',
+              PATH: '/mirror/list/',
             },
           ],
         },
