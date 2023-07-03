@@ -2010,11 +2010,9 @@ export default {
         DETAILED_LINK: [
           {
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2027,14 +2025,10 @@ export default {
         PUBLISH_DATE: '2023/03',
         DETAILED_LINK: [
           {
-            LINK: 'https://eco.xfusion.com/solutions/market/application/419662379870064640',
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
-            LINK: 'https://eco.xfusion.com/solutions/market/application/419662379870064640',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2048,11 +2042,9 @@ export default {
         DETAILED_LINK: [
           {
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2065,11 +2057,9 @@ export default {
         DETAILED_LINK: [
           {
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2082,11 +2072,9 @@ export default {
         DETAILED_LINK: [
           {
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2098,19 +2086,13 @@ export default {
         PUBLISH_DATE: '2022/03',
         DETAILED_LINK: [
           {
-            LINK: 'https://www.chinauos.com/resource/download-server',
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
-            LINK: 'https://www.chinauos.com/resource/download-server',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
           {
-            LINK: 'https://www.chinauos.com/resource/download-server',
             ARCH: 'LoongArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2118,25 +2100,14 @@ export default {
         NAME: 'BCLinux for Euler V21.10',
         DOWNLOAD_URL: 'https://mirrors.cmecloud.cn/bclinux/oe21.10/',
         DESC: 'BC-Linux for Euler 是中国移动自主研发，以openEuler社区操作系统为基础，借助开源社区的开放优势，通过定制化手段研发的企业级Linux操作系统，具备专业化、本地化的Linux开发和运维服务能力，能充分满足顾客对于云计算和大数据通用场景、边缘计算、虚拟化及容器和PaaS业务场景需求。',
-        RELEASE_DESC_URL:
-          'https://ecloud.10086.cn/op-help-center/doc/article/41432',
-        INSTALL_GUIDENCE_URL:
-          'https://ecloud.10086.cn/op-help-center/doc/article/54482',
-        SEEK_HELP_URL: 'https://ecloud.10086.cn/home/about/contact',
-        GET_ISO_URL: 'https://mirrors.cmecloud.cn/bclinux/oe21.10/ISO/',
         MANUFACTURER: '中国移动云能中心',
         PUBLISH_DATE: '2021/10',
-        LTS: false,
         DETAILED_LINK: [
           {
-            LINK: 'https://mirrors.cmecloud.cn/bclinux/oe21.10/ISO/x86_64/release/',
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
-            LINK: 'https://mirrors.cmecloud.cn/bclinux/oe21.10/ISO/aarch64/',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2144,19 +2115,11 @@ export default {
         NAME: '红旗Asianux服务器操作系统V8.1',
         DOWNLOAD_URL: 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
         DESC: '红旗Asianux服务器操作系统（欧拉版）是基于openEuler20.03 LTS SP1进行二次开发的商业发行版，目前内核版本为4.19。',
-        RELEASE_DESC_URL: 'http://www.linuxsir.cn/?product.htm&pid=2',
-        INSTALL_GUIDENCE_URL: 'http://www.linuxsir.cn/?product.htm&pid=2',
-        SEEK_HELP_URL: '',
-        GET_ISO_URL: 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: '中科红旗（北京）信息科技有限公司',
         PUBLISH_DATE: '2021/03',
-        LTS: false,
         DETAILED_LINK: [
           {
-            LINK: 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2164,26 +2127,14 @@ export default {
         NAME: 'HopeStage',
         DOWNLOAD_URL: 'http://webapp.hoperun.com:8007/HopeStage/',
         DESC: '企业级通用操作系统HopeStage是基于openEuler构建的企业级Linux操作系统，具备高效、稳定、安全的特性，致力于为企业级的数据库、大数据、云计算、人工智能平台提供安全稳定的运行基础。',
-        RELEASE_DESC_URL:
-          'http://webapp.hoperun.com:8007/HopeStage/HopeStage-Enterprise-Linux_ReleaseNotes.pdf',
-        INSTALL_GUIDENCE_URL:
-          'http://webapp.hoperun.com:8007/HopeStage/HopeStage-Enterprise-Linux_Installation_Guide.pdf',
-        SEEK_HELP_URL: 'http://www.hopeinfra.com/contactus.html',
-        GET_ISO_URL: 'http://webapp.hoperun.com:8007/HopeStage/',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: '江苏润和',
         PUBLISH_DATE: '2020/09',
-        LTS: false,
         DETAILED_LINK: [
           {
-            LINK: 'http://webapp.hoperun.com:8007/HopeStage/x86_64/',
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
-            LINK: 'http://webapp.hoperun.com:8007/HopeStage/aarch64/',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2191,36 +2142,23 @@ export default {
         NAME: '银河麒麟高级服务器操作系统V10',
         DOWNLOAD_URL: 'https://kylinos.cn/scheme/server/1.html',
         DESC: '银河麒麟高级服务器操作系统V10是针对企业级关键业务，适应虚拟化、云计算、大数据、工业互联网时代对主机系统可靠性、安全性、性能、扩展性和实时性等需求，依据CMMI5级标准研制的提供内生本质安全、云原生支持、自主平台深入优化、 高性能、易管理的新一代自主服务器操作系统，同源支持飞腾、鲲鹏、龙芯、申威、海光、兆芯等自主平台；应用于政府、金融、教育、财税、公安、审计、交通、医疗、制造等领域。基于银河麒麟高级服务器操作系统，用户可轻松构建数据中心、高可用集群和负载均衡集群、虚拟化应用服务、分布式文件系统等，并实现对虚拟数据中心的跨物理系统、虚拟机集群进行统一的监控和管理。 银河麒麟高级服务器操作系统支持云原生应用，满足企业当前数据中心及下一代的虚拟化(含Docker容器)、大数据、云服务的需求，为用户提供融合、统一、自主创新的基础软件平台及灵活的管理服务。',
-        INSTALL_GUIDENCE_URL: 'https://kylinos.cn/scheme/server/1.html',
-        GET_ISO_URL: 'https://kylinos.cn/scheme/server/1.html',
         MANUFACTURER: '麒麟软件有限公司',
         PUBLISH_DATE: '2020/07',
-        LTS: false,
       },
       {
         NAME: '麒麟信安 Kylinsec V3.5.1',
         DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.5-1/',
         DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
-        RELEASE_DESC_URL:
-          'http://kylinsec.com.cn/Uploads/Pdf/2022-11-18/kylinsecpages3.5.1.pdf',
-        INSTALL_GUIDENCE_URL:
-          'http://kylinsec.com.cn/Uploads/Pdf/2022-11-18/KYJS-KY3.5.1-Server-SUM-V1.0.pdf',
-        SEEK_HELP_URL: '',
-        GET_ISO_URL: 'https://mirrors.kylinsec.com.cn/V3.5-1/isos/',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: '麒麟信安 Kylinsec',
         PUBLISH_DATE: '',
-        LTS: false,
         DETAILED_LINK: [
           {
             LINK: 'https://mirrors.kylinsec.com.cn/V3.5-1/isos/x86_64/',
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             LINK: 'https://mirrors.kylinsec.com.cn/V3.5-1/isos/aarch64/',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2228,26 +2166,16 @@ export default {
         NAME: '麒麟信安 Kylinsec V3.4-5',
         DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.4-5/',
         DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
-        RELEASE_DESC_URL:
-          'http://kylinsec.com.cn/Uploads/Pdf/2022-11-18/kylinsecpages-3.4-5.pdf',
-        INSTALL_GUIDENCE_URL:
-          'http://kylinsec.com.cn/Uploads/Pdf/2022-11-18/KYJS-KY3.4-5-SUM-V1.0.pdf',
-        SEEK_HELP_URL: '',
-        GET_ISO_URL: 'https://mirrors.kylinsec.com.cn/V3.4-5/isos/',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: '麒麟信安 Kylinsec',
         PUBLISH_DATE: '',
-        LTS: false,
         DETAILED_LINK: [
           {
             LINK: 'https://mirrors.kylinsec.com.cn/V3.4-5/isos/x86_64/',
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             LINK: 'https://mirrors.kylinsec.com.cn/V3.4-5/isos/aarch64/',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2255,26 +2183,16 @@ export default {
         NAME: '麒麟信安 Kylinsec V3.4-4',
         DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.4-4/',
         DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
-        RELEASE_DESC_URL:
-          'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846656373a.pdf',
-        INSTALL_GUIDENCE_URL:
-          'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846807a00f.pdf',
-        SEEK_HELP_URL: '',
-        GET_ISO_URL: 'https://mirrors.kylinsec.com.cn/V3.4-4/isos/',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: '麒麟信安 Kylinsec',
         PUBLISH_DATE: '',
-        LTS: false,
         DETAILED_LINK: [
           {
             LINK: 'https://mirrors.kylinsec.com.cn/V3.4-4/isos/x86_64/',
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             LINK: 'https://mirrors.kylinsec.com.cn/V3.4-4/isos/aarch64/',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2282,13 +2200,6 @@ export default {
         NAME: 'HopeEdge',
         DOWNLOAD_URL: 'http://webapp.hoperun.com:8007/HopeEdge/',
         DESC: '物联网边缘计算操作系统HopeEdge是基于openEuler构建的、面向IoT场景的边缘计算操作系统，具备轻量安全、自主创新、高效互联、快速部署四大关键特性；提供设备管理、数据采集、云边协同、人工智能等功能。',
-        RELEASE_DESC_URL:
-          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_ReleaseNote.pdf',
-        INSTALL_GUIDENCE_URL:
-          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_Installation_Guide.pdf',
-        SEEK_HELP_URL: 'http://www.hopeinfra.com/contactus.html',
-        GET_ISO_URL: 'http://webapp.hoperun.com:8007/HopeEdge/',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: '江苏润和',
         PUBLISH_DATE: '2020/07',
         LTS: false,
@@ -2296,12 +2207,10 @@ export default {
           {
             LINK: 'http://webapp.hoperun.com:8007/HopeStage/x86_64/',
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             LINK: 'http://webapp.hoperun.com:8007/HopeStage/aarch64/',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2309,26 +2218,16 @@ export default {
         NAME: '中科傲来服务器操作系统',
         DOWNLOAD_URL: 'https://eulixos.com/#/download',
         DESC: '中科傲来服务器操作系统是一款基于openEuler操作系统打造的服务器操作系统发行版，支持X86_64、AArch64、RISC-V等多种处理器架构，适用于数据库、云计算、大数据、人工智能、分布式计算等多种应用场景，具备高安全、高可靠、高性能、跨平台等特点，旨在为各类应用及解决方案提供标准、安全、可靠的操作系统及服务。',
-        RELEASE_DESC_URL:
-          'https://eulixos.com/userguide/%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E/%E7%89%88%E6%9C%AC%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E.html',
-        INSTALL_GUIDENCE_URL:
-          'https://eulixos.com/userguide/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E5%89%8D%E8%A8%80.html',
-        SEEK_HELP_URL: 'https://eulixos.com/#/feedback',
-        GET_ISO_URL: 'https://eulixos.com/#/download',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: '中科院软件所',
         PUBLISH_DATE: '2020/05',
-        LTS: false,
         DETAILED_LINK: [
           {
             LINK: 'https://eulixos.com/#/download',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
           {
             LINK: 'https://eulixos.com/#/download',
             ARCH: 'RISC-V',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2336,25 +2235,16 @@ export default {
         NAME: '普华服务器操作系统v5.1',
         DOWNLOAD_URL: 'https://www.i-soft.com.cn/type/4/714.jhtml/',
         DESC: '暂无描述',
-        RELEASE_DESC_URL: 'https://www.i-soft.com.cn/type/4/714.jhtml/',
-        INSTALL_GUIDENCE_URL: 'https://www.i-soft.com.cn/type/4/714.jhtml/',
-        SEEK_HELP_URL:
-          'https://p.qiao.baidu.com/cps4/chatIndex?siteToken=9a45f9cee67affa160b6addd06e07a8d&speedLogId=160067949693727da_1600679496937_87121&eid=30746007&reqParam=%7B%22from%22%3A0%2C%22sid%22%3A%22-100%22%2C%22tid%22%3A%22-1%22%2C%22ttype%22%3A1%2C%22siteId%22%3A%2215215804%22%2C%22userId%22%3A%2230746007%22%2C%22pageId%22%3A0%7D ',
-        GET_ISO_URL: 'https://www.i-soft.com.cn/type/4/714.jhtml/',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: '普华软件',
         PUBLISH_DATE: '',
-        LTS: false,
         DETAILED_LINK: [
           {
             LINK: 'https://www.i-soft.com.cn/type/4/714.jhtml/',
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             LINK: 'https://www.i-soft.com.cn/type/4/714.jhtml/',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -2362,14 +2252,8 @@ export default {
         NAME: '同源OS 8.1欧拉发行版',
         DOWNLOAD_URL: 'http://repo.tongyuanos.com/TongyuanOS8.1-euler/',
         DESC: '内核源码来自于欧拉开源社区中，其它软件包来自于CentOS8.1的aarch64版，完全兼容CentOS8.1，产品发布物为标准启动安装ISO。',
-        INSTALL_GUIDENCE_URL: 'http://repo.tongyuanos.com/TongyuanOS8.1-euler/',
-        SEEK_HELP_URL: 'mailto:youliang.wu@tongyuanos.com',
-        GET_ISO_URL: 'http://repo.tongyuanos.com/TongyuanOS8.1-euler/',
         MANUFACTURER: '同源OS',
         PUBLISH_DATE: '2020/04',
-        LIFE_CYCLE_URL: '',
-        RELEASE_DESC_URL: 'http://repo.tongyuanos.com/TongyuanOS8.1-euler/',
-        LTS: false,
       },
     ],
     SCENARIO_LIST: [
@@ -4327,22 +4211,14 @@ export default {
         NAME: 'TurboLinux Enterprise server v15',
         DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8013/',
         DESC: 'Turbolinux Enterprise Server 15 (TLES15) is the enterprise commercial Linux distribution based on the openEuler community, designed for the x86_64 and AArch64 processor architecture.',
-
         MANUFACTURER: 'TurboLinux',
         PUBLISH_DATE: '2022/06',
-        LIFE_CYCLE_URL:
-          'http://download.turbolinux.com.cn:8011/docs/TLES-OS-PLANNING.pdf',
-        RELEASE_DESC_URL:
-          'http://www.turbolinux.com.cn/index.php/pages/cat_id/2.html',
-        LTS: false,
         DETAILED_LINK: [
           {
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -4350,19 +4226,12 @@ export default {
         NAME: 'RedFlag Asianux Server - 8.1',
         DOWNLOAD_URL: 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
         DESC: 'Red Flag Asianux Server OS (openEuler) is a commercial release based on the secondary development of openEuler 20.03 LTS SP1. The current kernel version is 4.19.',
-        RELEASE_DESC_URL: 'http://www.linuxsir.cn/?product.htm&pid=2',
-        INSTALL_GUIDENCE_URL: 'http://www.linuxsir.cn/?product.htm&pid=2',
-        SEEK_HELP_URL: '',
-        GET_ISO_URL: 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: 'Red Flag Asianux Server',
         PUBLISH_DATE: '2021/03',
-        LTS: false,
         DETAILED_LINK: [
           {
             LINK: 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -4370,53 +4239,33 @@ export default {
         NAME: 'HopeStage',
         DOWNLOAD_URL: 'http://webapp.hoperun.com:8007/HopeStage/',
         DESC: 'HopeStage Enterprise Linux is an enterprise-level Linux operating system based on openEuler, which has the advantages of high efficiency, stability and security. HopeStage is committed to providing a safe and stable operating basis for enterprise-level databases, big data, cloud computing and artificial intelligence platforms.',
-        RELEASE_DESC_URL:
-          'http://webapp.hoperun.com:8007/HopeStage/HopeStage-Enterprise-Linux_ReleaseNotes.pdf',
-        INSTALL_GUIDENCE_URL:
-          'http://webapp.hoperun.com:8007/HopeStage/HopeStage-Enterprise-Linux_Installation_Guide.pdf',
-        SEEK_HELP_URL: 'http://www.hopeinfra.com/contactus.html',
-        GET_ISO_URL: 'http://webapp.hoperun.com:8007/HopeStage/',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: 'HOPERUN',
         PUBLISH_DATE: '2020/09',
-        LTS: false,
         DETAILED_LINK: [
           {
             LINK: 'http://webapp.hoperun.com:8007/HopeStage/x86_64/',
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             LINK: 'http://webapp.hoperun.com:8007/HopeStage/aarch64/',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
       {
         NAME: 'Kylinsec',
         DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.4-4/',
-        GET_ISO_URL: 'https://mirrors.kylinsec.com.cn/V3.4-4/isos/',
         DESC: 'No description available',
-        RELEASE_DESC_URL:
-          'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846656373a.pdf',
-        INSTALL_GUIDENCE_URL:
-          'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846807a00f.pdf',
-        SEEK_HELP_URL: '',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: 'Kylinsec',
         PUBLISH_DATE: '',
-        LTS: false,
         DETAILED_LINK: [
           {
             LINK: 'https://mirrors.kylinsec.com.cn/V3.4-4/isos/x86_64/',
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             LINK: 'https://mirrors.kylinsec.com.cn/V3.4-4/isos/aarch64/',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -4424,26 +4273,16 @@ export default {
         NAME: 'HopeEdge',
         DESC: 'HopeEdge Linux for Edge Computing is an edge computing operating system based on openEuler, which is oriented to IoT scenarios. It has four key characteristics: lightweight security, independent innovation, efficient interconnection and rapid deployment. HopeEdge also provides equipment management, data acquisition, cloud-edge collaboration, artificial intelligence and other characteristics.',
         DOWNLOAD_URL: 'http://webapp.hoperun.com:8007/',
-        RELEASE_DESC_URL:
-          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_ReleaseNote.pdf',
-        INSTALL_GUIDENCE_URL:
-          'http://webapp.hoperun.com:8007/HopeEdge/HopeEdgeOS_Installation_Guide.pdf',
-        SEEK_HELP_URL: 'http://www.hopeinfra.com/contactus.html',
-        GET_ISO_URL: 'http://webapp.hoperun.com:8007/HopeEdge/',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: 'HOPERUN',
         PUBLISH_DATE: '2020/07',
-        LTS: false,
         DETAILED_LINK: [
           {
             LINK: 'http://webapp.hoperun.com:8007/HopeStage/x86_64/',
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             LINK: 'http://webapp.hoperun.com:8007/HopeStage/aarch64/',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -4451,25 +4290,16 @@ export default {
         NAME: 'iSoftServerOS-Kunpeng-5.1',
         DOWNLOAD_URL: 'http://www.i-soft.com.cn/type/4/714.jhtml',
         DESC: 'No description available',
-        RELEASE_DESC_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml',
-        INSTALL_GUIDENCE_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml ',
-        SEEK_HELP_URL:
-          'https://p.qiao.baidu.com/cps4/chatIndex?siteToken=9a45f9cee67affa160b6addd06e07a8d&speedLogId=160067949693727da_1600679496937_87121&eid=30746007&reqParam=%7B%22from%22%3A0%2C%22sid%22%3A%22-100%22%2C%22tid%22%3A%22-1%22%2C%22ttype%22%3A1%2C%22siteId%22%3A%2215215804%22%2C%22userId%22%3A%2230746007%22%2C%22pageId%22%3A0%7D ',
-        GET_ISO_URL: 'http://www.i-soft.com.cn/type/4/714.jhtml ',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: 'iSoft',
         PUBLISH_DATE: '',
-        LTS: false,
         DETAILED_LINK: [
           {
             LINK: 'https://www.i-soft.com.cn/type/4/714.jhtml/',
             ARCH: 'x86_64',
-            SCENARIO: 'SERVER',
           },
           {
             LINK: 'https://www.i-soft.com.cn/type/4/714.jhtml/',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
         ],
       },
@@ -4477,26 +4307,16 @@ export default {
         NAME: 'EulixOS Server',
         DOWNLOAD_URL: 'https://eulixos.com/#/download',
         DESC: 'The EulixOS is a server OS distribution based on the openEuler OS. The EulixOS supports multiple processor architectures, such as x86_64, AArch64, and RISC-V, and is ideal for various application scenarios, including databases, cloud computing, big data, AI, and distributed computing. It combines high security and reliability with the ultimate performance across platforms, aiming to provide a standard, secure, and reliable operating system and quality services for diverse applications and solutions.',
-        RELEASE_DESC_URL:
-          'https://eulixos.com/userguide/%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E/%E7%89%88%E6%9C%AC%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E.html',
-        INSTALL_GUIDENCE_URL:
-          'https://eulixos.com/userguide/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E5%89%8D%E8%A8%80.html',
-        SEEK_HELP_URL: 'https://eulixos.com/#/feedback',
-        GET_ISO_URL: 'https://eulixos.com/#/download',
-        LIFE_CYCLE_URL: '',
         MANUFACTURER: 'ISCAS',
         PUBLISH_DATE: '2020/05',
-        LTS: false,
         DETAILED_LINK: [
           {
             LINK: 'https://eulixos.com/#/download',
             ARCH: 'AArch64',
-            SCENARIO: 'SERVER',
           },
           {
             LINK: 'https://eulixos.com/#/download',
             ARCH: 'RISC-V',
-            SCENARIO: 'SERVER',
           },
         ],
       },

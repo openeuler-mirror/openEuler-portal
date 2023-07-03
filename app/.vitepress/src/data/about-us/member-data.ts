@@ -68,6 +68,7 @@ export default {
         {
           img_light: tongxin_light,
           img_dark: tongxin_dark,
+          noIcon: true,
         },
       ],
     },
@@ -78,6 +79,7 @@ export default {
         {
           img_light: afusion_light,
           img_dark: afusion_dark,
+          noIcon: true,
         },
         {
           img_light: runhe_light,
@@ -189,6 +191,7 @@ export default {
         {
           img_light: tongxin_light,
           img_dark: tongxin_dark,
+          noIcon: true,
         },
       ],
     },
@@ -199,6 +202,7 @@ export default {
         {
           img_light: afusion_light,
           img_dark: afusion_dark,
+          noIcon: true,
         },
         {
           img_light: runhe_light,
