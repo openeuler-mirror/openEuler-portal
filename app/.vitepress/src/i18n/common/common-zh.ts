@@ -764,6 +764,10 @@ export default {
                   NAME: '云计算',
                   PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=CLOUD_COMPUTING',
                 },
+                {
+                  NAME: '嵌入式',
+                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=EMBEDDED',
+                },
               ],
             },
             {

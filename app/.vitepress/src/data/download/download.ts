@@ -157,7 +157,125 @@ export default {
             ARCH: 'AArch64',
             SCENARIO: 'CLOUD_COMPUTING',
           },
-          // TODO:
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qemu',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/aarch64/aarch64-qemu/',
+                TIPS: 'qemu镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/aarch64/aarch64-qemu-ros/',
+                TIPS: '包含ROS2-humble基础软件包的qemu镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/aarch64/raspberrypi4-64/',
+                TIPS: '树莓派4B镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/aarch64/raspberrypi4-64-ros/',
+                TIPS: '包含ROS2-humble基础软件包的树莓派4B镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-rt',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/aarch64/raspberrypi4-64-rt/',
+                TIPS: '启用PREEMPT_RT软实时补丁的树莓派4B镜像',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'EMBEDDED',
+          },
+          // arm32
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'openEuler glibc',
+                SIZE: '91.9 MiB',
+                SHACODE:
+                  '152f41a87f54c46f892c4b4114f739dc7afd951e52e93674e87027a771fe125f',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/arm32/arm32-qemu/openeuler-glibc-x86_64-openeuler-image-armv7a-qemu-arm-toolchain-22.03-LTS-SP2.sh',
+                TIPS: 'arm架构下对应的开发编译链',
+              },
+              {
+                TYPE: 'openEuler Image qemu',
+                SIZE: '38.7 MiB',
+                SHACODE:
+                  '01c49ef74fbc0c6bbe16ba7f1034c2e42516363403875fd381ed7e8ad6b42f79',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/arm32/arm32-qemu/openeuler-image-qemu-arm-20230630210000.rootfs.cpio.gz',
+                TIPS: 'arm架构下支持qemu的文件系统',
+              },
+              {
+                TYPE: 'vmlinux',
+                SIZE: '112.3 MiB',
+                SHACODE:
+                  'a37495a55d342cfebd995539b1f1269e6dd4469fade6c6682e76299e4d137350',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/arm32/arm32-qemu/vmlinux-5.10.0',
+                TIPS: '',
+              },
+              {
+                TYPE: 'zImage',
+                SIZE: '2.3 MiB',
+                SHACODE:
+                  '762ba413f475d13f26208a32d5252d80671ed1544f3a4e261048bb4226f15db4',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/arm32/arm32-qemu/zImage',
+                TIPS: 'arm架构下支持qemu的内核镜像',
+              },
+            ],
+            ARCH: 'ARM32',
+            SCENARIO: 'EMBEDDED',
+          },
+          // x86
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qemu',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/x86-64/x86-64-qemu/',
+                TIPS: 'qemu镜像及iso镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'rt',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/x86-64/x86-64-rt/',
+                TIPS: '启用PREEMPT_RT软实时补丁的qemu镜像及iso镜像',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'EMBEDDED',
+          },
         ],
         PLANNED_EOL: '2024/03',
       },
@@ -2409,7 +2527,125 @@ export default {
             ARCH: 'AArch64',
             SCENARIO: 'CLOUD_COMPUTING',
           },
-          // TODO:
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qemu',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/aarch64/aarch64-qemu/',
+                TIPS: 'QEMU image',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/aarch64/aarch64-qemu-ros/',
+                TIPS: 'QEMU image containing the ROS2-humble basic software package',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/aarch64/raspberrypi4-64/',
+                TIPS: 'Raspberry Pi 4B image',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/aarch64/raspberrypi4-64-ros/',
+                TIPS: 'Raspberry Pi 4B image containing the ROS2-humble basic software package',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-rt',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/aarch64/raspberrypi4-64-rt/',
+                TIPS: 'Raspberry Pi 4B image with PREEMPT_RT soft real-time patch enabled',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'EMBEDDED',
+          },
+          // arm32
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'openEuler glibc',
+                SIZE: '91.9 MiB',
+                SHACODE:
+                  '152f41a87f54c46f892c4b4114f739dc7afd951e52e93674e87027a771fe125f',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/arm32/arm32-qemu/openeuler-glibc-x86_64-openeuler-image-armv7a-qemu-arm-toolchain-22.03-LTS-SP2.sh',
+                TIPS: 'Development and compilation toolchain in the ARM architecture.',
+              },
+              {
+                TYPE: 'openEuler Image qemu',
+                SIZE: '38.7 MiB',
+                SHACODE:
+                  '01c49ef74fbc0c6bbe16ba7f1034c2e42516363403875fd381ed7e8ad6b42f79',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/arm32/arm32-qemu/openeuler-image-qemu-arm-20230630210000.rootfs.cpio.gz',
+                TIPS: 'File system that supports QEMU in the arm architecture.',
+              },
+              {
+                TYPE: 'vmlinux',
+                SIZE: '112.3 MiB',
+                SHACODE:
+                  'a37495a55d342cfebd995539b1f1269e6dd4469fade6c6682e76299e4d137350',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/arm32/arm32-qemu/vmlinux-5.10.0',
+                TIPS: '',
+              },
+              {
+                TYPE: 'zImage',
+                SIZE: '2.3 MiB',
+                SHACODE:
+                  '762ba413f475d13f26208a32d5252d80671ed1544f3a4e261048bb4226f15db4',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/arm32/arm32-qemu/zImage',
+                TIPS: 'Kernel image that supports QEMU in the ARM architecture.',
+              },
+            ],
+            ARCH: 'ARM32',
+            SCENARIO: 'EMBEDDED',
+          },
+          // x86
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qemu',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/x86-64/x86-64-qemu/',
+                TIPS: 'QEMU and ISO image',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'rt',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP2/embedded_img/x86-64/x86-64-rt/',
+                TIPS: 'QEMU and ISO images with PREEMPT_RT soft real-time patch enabled',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'EMBEDDED',
+          },
         ],
         PLANNED_EOL: '2024/03',
       },

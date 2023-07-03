@@ -593,7 +593,7 @@ export default {
           TYPE: 1,
           CHILDREN: [
             {
-              NAME: 'openEuler 22.03 LTS SP1',
+              NAME: 'openEuler 22.03 LTS SP2',
               LABEL:
                 'openEuler openEuler 22.03 LTS SP2 is the patch version of openEuler 22.03 LTS, and both versions have the same lifecycle.',
               PATH: '/download/?version=openEuler 22.03 LTS SP2',
@@ -612,6 +612,11 @@ export default {
                   NAME: 'Cloud Computing',
                   LABEL: '',
                   PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=CLOUD_COMPUTING',
+                },
+                {
+                  NAME: 'Embedded',
+                  LABEL: '',
+                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=EMBEDDED',
                 },
               ],
             },
