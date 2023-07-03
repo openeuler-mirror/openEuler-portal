@@ -770,7 +770,7 @@ export default {
               NAME: 'openEuler 23.03',
               LABEL:
                 'openEuler 23.03采用 Linux Kernel 6.1 内核，为未来 openEuler 长生命周期版本采用 6.x内核提前进行技术探索、硬件适配、基础技术创新和上层应用创新。',
-              PATH: '/download/?version=openEuler 2023.03',
+              PATH: '/download/?version=openEuler 23.03',
               CHILDREN: [
                 {
                   NAME: '服务器',
@@ -803,6 +803,16 @@ export default {
             {
               NAME: '商业发行版',
               PATH: '/download/commercial-release/',
+            },
+          ],
+        },
+        {
+          NAME: '下载服务',
+          TYPE: 0,
+          CHILDREN: [
+            {
+              NAME: '镜像仓列表',
+              PATH: '/mirror/list/',
             },
           ],
         },

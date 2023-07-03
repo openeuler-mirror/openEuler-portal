@@ -205,7 +205,14 @@ const changeCurrentPageMoblie = (val: string) => {
       :bread2="i18n.download.HISTORY"
       :link1="'/' + lang + '/download/'"
     />
+
     <div class="download">
+      <p class="detail-last">
+        {{ i18n.download.DETAIL3
+        }}<a :href="i18n.download.MIRROR_LIST_LINK">{{
+          i18n.download.CLICK_LIST
+        }}</a>
+      </p>
       <OSearch
         v-model="searchContent"
         class="o-search"
@@ -450,6 +457,17 @@ const changeCurrentPageMoblie = (val: string) => {
 
 <style lang="scss" scoped>
 .download {
+  margin-top: var(--o-spacing-h4);
+  .detail-last {
+    margin-top: var(--o-spacing-h5);
+    font-size: var(--o-font-size-text);
+    line-height: var(--o-line-height-text);
+    color: var(--o-color-text1);
+    @media (max-width: 1100px) {
+      margin-top: var(--o-spacing-h6);
+    }
+  }
+
   .filter-card {
     margin: var(--o-spacing-h4) 0;
     background-color: var(--o-color-bg2);
@@ -506,9 +524,8 @@ const changeCurrentPageMoblie = (val: string) => {
     }
   }
   :deep(.o-search) {
-    margin-top: var(--o-spacing-h2);
+    margin-top: var(--o-spacing-h4);
     @media (max-width: 1100px) {
-      margin-top: var(--o-spacing-h4);
       height: 28px;
       font-size: var(--o-font-size-text);
     }

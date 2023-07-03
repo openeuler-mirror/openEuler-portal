@@ -79,12 +79,6 @@ onMounted(() => {
             i18n.download.CLICK_VIEW
           }}</a>
         </p>
-        <p class="detail-last">
-          {{ i18n.download.DETAIL3
-          }}<a :href="i18n.download.MIRROR_LIST_LINK">{{
-            i18n.download.CLICK_LIST
-          }}</a>
-        </p>
       </div>
       <div class="download-content">
         <div class="content-selection">
@@ -114,12 +108,6 @@ onMounted(() => {
       @media (max-width: 1100px) {
         font-size: var(--o-font-size-tip);
         line-height: var(--o-line-height-tip);
-      }
-      &.detail-last {
-        margin-top: var(--o-spacing-h5);
-        @media (max-width: 1100px) {
-          margin-top: var(--o-spacing-h6);
-        }
       }
     }
   }
