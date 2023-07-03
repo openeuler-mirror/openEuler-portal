@@ -53,6 +53,7 @@ export interface LinkListItem {
   SHACODE: string;
   DOWNLOAD_LINK: string;
   TIPS: string;
+  IS_FOLDER?: boolean;
 }
 export interface DetailedLinkItem {
   LINK_LIST: LinkListItem[];

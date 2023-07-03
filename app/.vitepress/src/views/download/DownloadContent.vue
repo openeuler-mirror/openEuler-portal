@@ -124,6 +124,7 @@ function setTagList() {
 const onArchTagClick = (i: number, select: string) => {
   activeArch.value = select;
 };
+
 const onScenarioTagClick = (select: string) => {
   activeScenario.value = select;
 };
@@ -384,7 +385,7 @@ function setActiveMirrorMobile(index: number, item: string) {
             prop="size"
           >
             <template #default="scope: any">
-              {{ scope.row.SIZE }}
+              {{ scope.row.SIZE || '-' }}
             </template>
           </el-table-column>
           <el-table-column :label="i18n.download.TABLE_HEAD[2]" prop="down_url">
@@ -440,9 +441,11 @@ function setActiveMirrorMobile(index: number, item: string) {
           </el-table-column>
           <el-table-column
             :width="screenWidth > 1310 ? '200' : '150'"
-            :label="i18n.download.TABLE_HEAD[3]"
             prop="sha_code"
           >
+            <template #header>
+              {{ !tableData[0]?.IS_FOLDER ? i18n.download.TABLE_HEAD[3] : '' }}
+            </template>
             <template #default="scope: any">
               <div v-if="scope.row.SHACODE" class="down-action">
                 <OButton
@@ -468,11 +471,19 @@ function setActiveMirrorMobile(index: number, item: string) {
               <a
                 class="down-link"
                 :href="activeMirrorLink[scope.$index] + scope.row.DOWNLOAD_LINK"
+                :target="scope.row.IS_FOLDER ? '_blank' : '_self'"
+                rel="noopener noreferrer"
               >
-                <OButton size="mini" type="primary">
+                <OButton v-if="!scope.row.IS_FOLDER" size="mini" type="primary">
                   {{ i18n.download.DOWNLOAD_BTN_NAME }}
                   <template #suffixIcon>
                     <IconDownload />
+                  </template>
+                </OButton>
+                <OButton v-else type="text" animation size="mini">
+                  {{ i18n.download.DOWNLOADGO }}
+                  <template #suffixIcon>
+                    <IconArrowRight />
                   </template>
                 </OButton>
               </a>
@@ -778,13 +789,21 @@ function setActiveMirrorMobile(index: number, item: string) {
       }
       .down-link {
         display: inline-block;
-        :deep(.o-button) {
+        :deep(.o-button-type-primary) {
           color: #fff;
+          .suffix-icon {
+            width: 14px;
+            height: 18px;
+            color: #fff;
+          }
         }
-        :deep(.suffix-icon) {
-          width: 14px;
-          height: 18px;
-          color: #fff;
+        :deep(.o-button-type-text) {
+          padding: 6px 0;
+          font-size: 14px;
+          .suffix-icon {
+            width: 14px;
+            height: 18px;
+          }
         }
       }
       :deep(.el-table) {
