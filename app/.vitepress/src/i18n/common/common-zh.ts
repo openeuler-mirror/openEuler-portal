@@ -658,7 +658,7 @@ export default {
             },
             {
               NAME: 'openEuler Call for X 计划',
-              LABEL: '共享 openEuler Call for X 计划多元化资源',
+              LABEL: '共享openEuler Call for X计划多元化资源',
               PATH: '/community/program/',
             },
             {
