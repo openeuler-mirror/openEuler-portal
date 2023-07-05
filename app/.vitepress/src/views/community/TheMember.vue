@@ -57,6 +57,7 @@ onUnmounted(() => {
         >
           <img
             :src="commonStore.theme === 'light' ? img.img_light : img.img_dark"
+            loading="lazy"
             alt=""
           />
         </span>

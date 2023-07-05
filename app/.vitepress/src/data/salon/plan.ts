@@ -105,6 +105,18 @@ export default {
           },
         ],
       },
+      {
+        month: '6',
+        actives: [
+          {
+            activeName: '开放原子全球开源峰会',
+            activelink: {
+              url: 'https://www.openatom.cn/summit/2023/index/main/',
+              className: 'atom',
+            },
+          },
+        ],
+      },
     ],
   },
   developer: {

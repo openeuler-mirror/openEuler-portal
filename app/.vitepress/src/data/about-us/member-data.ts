@@ -33,6 +33,8 @@ import zhongruan_dark from '@/assets/category/member/zhongruan_dark.png';
 import zhongruan_light from '@/assets/category/member/zhongruan_light.png';
 import zuowang_dark from '@/assets/category/member/zuowang_dark.png';
 import zuowang_light from '@/assets/category/member/zuowang_light.png';
+import puhua_dark from '@/assets/category/member/puhua_dark.png';
+import puhua_light from '@/assets/category/member/puhua_light.png';
 
 import turbolinux_dark from '@/assets/category/member/turbolinux_dark.png';
 import baolande_dark from '@/assets/category/member/baolande_dark.png';
@@ -138,6 +140,10 @@ export default {
           img_light: feiten_light,
           img_dark: feiten_dark,
           noIcon: true,
+        },
+        {
+          img_light: puhua_light,
+          img_dark: puhua_dark,
         },
         {
           img_light: zhongyin_light,
@@ -261,6 +267,10 @@ export default {
           img_light: feiten_light,
           img_dark: feiten_dark,
           noIcon: true,
+        },
+        {
+          img_light: puhua_light,
+          img_dark: puhua_dark,
         },
         {
           img_light: zhongyin_light,

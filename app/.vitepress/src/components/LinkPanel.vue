@@ -25,6 +25,7 @@ const props = withDefaults(
       class="link-item"
     >
       <img
+        loading="lazy"
         :src="attrs.theme === 'light' ? item.IMG : item.IMG_DARK"
         alt="openEuler"
       />
