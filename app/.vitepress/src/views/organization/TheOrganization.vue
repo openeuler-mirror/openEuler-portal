@@ -6,7 +6,8 @@ import ORGANIZATION_DATA from '@/data/about-us/organization';
 
 import OrganizationGuests from './OrganizationGuests.vue';
 
-import emailImg from '@/assets/category/organization/email.png';
+import IconEmailFill from '~icons/app/icon-email-fill.svg';
+
 import IconGit from '@/assets/category/organization/icon-git.svg';
 
 const { lang } = useData();
@@ -92,13 +93,13 @@ onUnmounted(() => {
         :key="index"
         data-aos="fade-up"
       >
-        <img class="avatar" :src="item.img" :alt="item.name" />
+        <img class="avatar" loading="lazy" :src="item.img" :alt="item.name" />
         <p class="personal-name">{{ item.name }}</p>
         <p class="personal-post">{{ item.post }}</p>
         <p class="links">
           <a :href="'mailto:' + item.email" class="mail"
-            ><img :src="emailImg"
-          /></a>
+            ><OIcon><IconEmailFill /></OIcon
+          ></a>
           <a
             v-if="item.gitee"
             :href="'https://gitee.com/' + item.gitee"
@@ -246,6 +247,10 @@ onUnmounted(() => {
         display: flex;
         justify-content: center;
         .mail {
+          display: flex;
+          align-items: center;
+          font-size: 24px;
+          color: var(--o-color-brand1);
           margin-right: 18px;
           img {
             width: 24px;

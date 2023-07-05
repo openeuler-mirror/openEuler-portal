@@ -59,6 +59,7 @@ import huangweixu from '@/assets/category/organization/user/huangweixu.png';
 import wangjun from '@/assets/category/organization/user/wangjun.png';
 import wangyouhai from '@/assets/category/organization/user/wangyouhai.png';
 import weijiangang from '@/assets/category/organization/user/weijiangang.png';
+import zhangqingnan from '@/assets/category/organization/user/zhangqingnan.png';
 import xiuliuhua from '@/assets/category/organization/user/xiuliuhua.png';
 import zuchen from '@/assets/category/organization/user/zuchen.png';
 
@@ -455,6 +456,12 @@ export default {
             name: '谢留华',
             position: ['委员'],
             email: 'xielh2000@163.com',
+          },
+          {
+            img: zhangqingnan,
+            name: '张庆南',
+            position: ['委员'],
+            email: 'zhangqingnan001@chinasofti.com',
           },
           {
             img: zuchen,
@@ -878,6 +885,12 @@ export default {
             name: 'Xie Liuhua',
             position: ['Committee member'],
             email: 'xielh2000@163.com',
+          },
+          {
+            img: zhangqingnan,
+            name: 'Zhang Qingnan',
+            position: ['Committee member'],
+            email: 'zhangqingnan001@chinasofti.com',
           },
           {
             img: zuchen,

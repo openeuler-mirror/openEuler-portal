@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import AOS from 'aos';
 import { onMounted } from 'vue';
-import emailImg from '@/assets/category/organization/email.png';
+import IconEmailFill from '~icons/app/icon-email-fill.svg';
 
 defineProps({
   lecturerList: {
@@ -22,7 +22,7 @@ onMounted(() => {
 <template>
   <ul class="council-lis list-technologyt">
     <li v-for="(item, index) in lecturerList" :key="index" data-aos="fade-up">
-      <img class="avatar" :src="item.img" :alt="item.name" />
+      <img class="avatar" loading="lazy" :src="item.img" :alt="item.name" />
       <p class="personal-name">{{ item.name }}</p>
       <p
         v-for="itemPost in item.position"
@@ -32,7 +32,9 @@ onMounted(() => {
         {{ itemPost }}
       </p>
       <span v-if="item.email" class="mail">
-        <a :href="'mailto:' + item.email"><img :src="emailImg" /></a>
+        <a :href="'mailto:' + item.email"
+          ><OIcon><IconEmailFill /></OIcon
+        ></a>
       </span>
     </li>
   </ul>
@@ -159,11 +161,12 @@ onMounted(() => {
       margin-bottom: 8px;
     }
     .mail {
-      img {
-        margin-top: 8px;
-        margin-bottom: 0;
-        width: 24px;
-      }
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--o-color-brand1);
     }
     .personal-name {
       font-size: var(--o-font-size-h8);
