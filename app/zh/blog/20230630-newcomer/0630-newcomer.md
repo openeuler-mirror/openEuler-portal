@@ -23,11 +23,11 @@ summary: 新成员如何参与社区贡献，快来看看这份攻略吧~
 
 [https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI= ](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI= )
 
-**安装openEuler**
+# 安装openEuler
 
 请参考[[下载安装openEuler]](https://gitee.com/link?target=https%3A%2F%2Fopeneuler.org%2Fzh%2Fdownload%2F)
 
-**开始您的贡献**
+# 开始您的贡献
 
 签署好协议以后，就需要考虑在社区里具体能做点什么了。参与社区有很多种方法和形式，如果总结起来，大体有下面的三类：
 
@@ -51,7 +51,7 @@ summary: 新成员如何参与社区贡献，快来看看这份攻略吧~
 
 第一个网址是openEuler的官网，是供大家获取一些通用信息的地方。而真正我们所谓的"社区"则是体现在2，3这两个网址上。
 
-1.  **提出问题或建议（提Issue）**
+### 提出问题或建议（提Issue）
 
 -   如果您发现并想向社区上报问题或缺陷，问题提交的方式就是创建一个Issue。您只要将问题以Issue的方式提交到该项目Repository的Issue列表内，并查看[[Issue提交指南]](https://gitee.com/openeuler/community/blob/master/zh/contributors/issue-submit.md)以获取更多的信息。提交问题时，**请尽量遵守**问题提交准则。
 
@@ -60,7 +60,7 @@ summary: 新成员如何参与社区贡献，快来看看这份攻略吧~
 
 > openEuler社区的所有issue都可以通过QuickIssue提交，并且可以按图索骥找仓库，优化了查找issue归属仓库的途径。
 
--   如果您认为长时间没有得到回应，可以向[community@openeuler.org]求助。
+-   如果您认为长时间没有得到回应，可以向邮箱[community@openeuler.org]求助。
 
 ### 提交一个PR
 
@@ -90,20 +90,20 @@ Guide]](https://gitee.com/openeuler/community/blob/master/zh/contributors/Gitee-
 -   修改所属sig文件夹下的sig-info.yaml，将要新增的软件包以\"-
     src-openeuler/zip\"的形式添加到对应的sig组列表下；以zip为例，修改sig/Base-service/sig-info.yaml：
 
-<img src="./media/image2.png" width="1000" >
+<img src="./media/image2.png" width="500" >
 
 -   建仓，在 sig/{sig目录}/src-openeuler/软件名首字母
     新增下对应的yaml文件(openeuler社区维护项目:
     openeuler目录；其他社区引入包:
     src-openeuler目录。示例参考：sig/Base-service/src-openeuler/z/zip.yaml)
 
-<img src="./media/image3.png" width="1000" >
+<img src="./media/image3.png" width="500" >
 
 -   你要做的就是把文件修改了，然后提交PR就可以了。要在commit
     message里解释清楚为什么要添加这样一个包，或者为什么要创建这样一个仓库。commit
     message写的越好，越容易通过审核 。
 
-PR合入后将会在gitee建立同名仓库。查看地址：[src-openeuler](https://gitee.com/organizations/src-openeuler/projects)。
+4. PR合入后将会在gitee建立同名仓库。查看地址：[src-openeuler](https://gitee.com/organizations/src-openeuler/projects)。
 
 具体流程可参考[[如何新增软件包]](https://gitee.com/openeuler/community/blob/master/zh/contributors/create-package.md)。
 
@@ -120,7 +120,7 @@ Repo)是openEuler社区针对开发者推出的个人软件包托管平台，目
 
 **测试**
 
-测试------是所有贡献者的责任，对于社区版本来说，\[sig-qa组\](https://gitee.com/openeuler/QA)是负责测试活动的社区官方组织。如果您希望在自己的基础架构上开展测试活动，可以参考：\[社区测试体系介绍\](https://gitee.com/openeuler/QA/blob/master/社区测试体系介绍.md)。
+测试------是所有贡献者的责任，对于社区版本来说，[sig-qa组](https://gitee.com/openeuler/QA)是负责测试活动的社区官方组织。如果您希望在自己的基础架构上开展测试活动，可以参考：[社区测试体系介绍](https://gitee.com/openeuler/QA/blob/master/社区测试体系介绍.md)。
 
 为了成功发行一个社区版本，需要完成多种测试活动。不同的测试活动，测试代码的位置也有所不同，成功运行测试所需的环境的细节也会有差异，有关的信息可以参考[[测试指南]](https://gitee.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%80%85%E6%B5%8B%E8%AF%95%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97.md)。
 
@@ -134,7 +134,7 @@ Repo)是openEuler社区针对开发者推出的个人软件包托管平台，目
 
 -   [[安全披露信息]](https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md)------如果您希望报告安全漏洞，请参考此页面
 
-# 找到您感兴趣的组织 {#找到您感兴趣的组织 .unnumbered}
+# 找到您感兴趣的组织 
 
 **了解SIG**
 
@@ -169,7 +169,7 @@ Group的缩写，openEuler社区按照不同的SIG来组织，以便于更好的
 
 > 如果上述两种方式都定位不到您感兴趣的SIG，您可以向[[community@openeuler.org]](mailto:community@openeuler.org)发求助邮件。建议您在邮件列表内用"【开发过程疑问】"作为标题，在内容中写出你寻找的SIG或项目的特征，我们会为您提供帮助。
 
-**参与社区活动**
+# 参与社区活动
 
 **社区内沟通方式**
 
