@@ -10385,12 +10385,12 @@
     }
   },
   {
-    "hardwareFactory": "曙光信息",
+    "hardwareFactory": "中科曙光",
     "hardwareModel": "FortFirm-H3652",
     "osVersion": "openEuler 20.03 LTS SP3",
     "architecture": "x86_64",
     "date": "2023/06/06",
-    "friendlyLink": "http://www.sugon.com.cn",
+    "friendlyLink": "http://www.sugon.com",
     "boardCards": [
       {
         "vendorID": "8088",
@@ -10432,7 +10432,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://www.sugon.com.cn",
+      "productInformation": "http://www.sugon.com",
       "certificationTime": "2023/06/06",
       "commitID": "I7DPDB",
       "mainboardModel": "GSP-CH327-A-1",
@@ -10446,12 +10446,12 @@
     }
   },
   {
-    "hardwareFactory": "曙光信息",
+    "hardwareFactory": "中科曙光",
     "hardwareModel": "FortFirm-H6655",
     "osVersion": "openEuler 20.03 LTS SP3",
     "architecture": "x86_64",
     "date": "2023/06/05",
-    "friendlyLink": "http://www.sugon.com.cn",
+    "friendlyLink": "http://www.sugon.com",
     "boardCards": [
       {
         "vendorID": "8088",
@@ -10493,7 +10493,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://www.sugon.com.cn",
+      "productInformation": "http://www.sugon.com",
       "certificationTime": "2022/06/05",
       "commitID": "I7DQ2D",
       "mainboardModel": "GSP-CH526-A-1",
