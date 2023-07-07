@@ -29,6 +29,8 @@ CLA 是 Contributor License Agreement 的缩写，一般翻译为贡献者许可
 
 2.2 企业签署人在签署页面点击 签署企业 CLA 按钮进入到签署页面填写签署表单，在填写完公司邮箱后，点击获取验证码后，公司邮箱会受到一封包含验证码的邮件，填写在表单后提交完成签署的第一步。
 
+<font color="red">签署完成后，签署邮箱不可更改，请用相对稳定的邮箱来签署企业CLA。</font>
+
 ![images](./images/2.png)
 
  <p align=center>企业签署CLA的表单</p>
@@ -41,37 +43,21 @@ CLA 是 Contributor License Agreement 的缩写，一般翻译为贡献者许可
 
 2.4 将加盖公章以及签好名字和日期的 CLA 协议文件扫描为 PDF 文件，作为附件回复 2.2 步骤收到的邮件完成企业签署 CLA 。
 
-2.4 openEuler 系统的管理员收到邮件后，会对 PDF 进行核对检查。检查通过后会为企业开通企业员工 CLA 贡献管理系统的超级管理员帐号。签署企业 CLA 使用的邮箱会收到一封确认签署成功的邮件，其中包含了超级管理员帐号的用户名及初始密码。使用企业员工 CLA 管理系统的部分请参考章节 2.4 。
+2.4 在 openEuler 开源社区的企业员工 CLA 管理系统中存在两种管理员，分别是**超级管理员和系统管理员**。openEuler 系统的管理员收到邮件后，会对 PDF 进行核对检查。检查通过后签署企业 CLA 使用的邮箱会收到一封确认签署成功的邮件，其中包含了**超级管理员**帐号的用户名及初始密码。
+
+<font color="red">超级管理员的权限是添加和删除系统管理员，系统可以创建多名系统管理员，每名系统管理员都有相同的权限管理企业员工的贡献。超级管理员和系统管理员不能是同一个账号。</font>
+
 
 ![images](./images/4.png)
 
  <p align=center> 签署成功通知邮件</p>
 
-#### 3. 企业员工贡献前需要签署员工 CLA 
+<font color="red">如果签署遇到困难，可添加微信“openeuler123”或者是发送邮件至 【cla@public.openeuler.org】。</font>
 
-3.1 企业员工在该企业完成签署 CLA 后，在正式贡献前，需要签署员工 CLA ，签署地址 [https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI= ](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)
 
-在页面点击 "签署员工 CLA" （英文页面为 "Sign Employee CLA"）
+#### 3. 企业员工 CLA 贡献管理系统使用说明
 
-![images](./images/5.jpg)
-
- <p align=center> 选择签署不同的CLA-企业员工签署</p>
-
-3.2 企业员工在签署时应使用企业邮箱签署，在填写完公司邮箱后，点击获取验证码后，公司邮箱会受到一封包含验证码的邮件，填写在表单后提交完成签署。
-
-![images](./images/6.png)
-
- <p align=center>  企业员工签署CLA表单</p>
-
-3.3 签署后会自动通知该企业的 CLA 贡献系统管理员，由系统管理员确定是否容许该员工是否可以进行贡献。系统管理员部分的工作参考 4.3 章节。
-
-![images](./images/7.png)
-
- <p align=center> 企业CLA的管理员收到通知邮件的范本</p>
-
-#### 4. 企业员工 CLA 贡献管理系统使用说明
-
-4.1 企业员工 CLA 管理系统的登录页面地址为 [https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=) 在此页面点击 "企业管理员" 按钮（英文页面为 "Corporation Manager" ）。
+3.1 企业员工 CLA 管理系统的登录页面地址为 [https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=) 在此页面点击 "企业管理员" 按钮（英文页面为 "Corporation Manager" ）。
 
 ![images](./images/8.jpg)
 
@@ -84,13 +70,13 @@ CLA 是 Contributor License Agreement 的缩写，一般翻译为贡献者许可
 
 <p align=center>企业员工CLA贡献管理系统登录</p>
 
-4.2 超级管理员进入到系统后，需要创建系统管理员来进行管理。超级管理员在 CLA 系统的主要工作是创建和删除系统管理员，当系统管理员被创建后，他的邮箱将受到一封通知邮件。超级管理员和系统管理员两者之间的区别请参考 ***5.1 openEuler 企业员工 CLA 管理系统的超级管理员和系统管理员的区别***
+3.2 超级管理员进入到系统后，需要创建系统管理员来进行管理。超级管理员在 CLA 系统的主要工作是创建和删除系统管理员，当系统管理员被创建后，他的邮箱将受到一封通知邮件。超级管理员和系统管理员两者之间的区别请参考 ***5.1 openEuler 企业员工 CLA 管理系统的超级管理员和系统管理员的区别***
 
 ![images](./images/10.png)
 
 <p align=center>超级管理员工作界面-创建或者删除系统管理员</p>
 
-4.3 系统管理员登录后会看到当前已经签署 CLA 且未激活的员工列表，根据实际情况选择激活员工向 openEuler 社区贡献的权限或者删除员工的贡献请求。
+3.3 系统管理员登录后会看到当前已经签署 CLA 且未激活的员工列表，根据实际情况选择激活员工向 openEuler 社区贡献的权限或者删除员工的贡献请求。
 
 ![images](./images/11.png)
 
@@ -101,6 +87,30 @@ CLA 是 Contributor License Agreement 的缩写，一般翻译为贡献者许可
 ![images](./images/12.png)
 
 <p align=center> 企业员工激活列表页面</p>
+
+
+#### 4. 企业员工贡献前需要签署员工 CLA 
+
+4.1 企业员工在该企业完成签署 CLA 后，在正式贡献前，需要签署员工 CLA ，签署地址 [https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI= ](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)
+
+在页面点击 "签署员工 CLA" （英文页面为 "Sign Employee CLA"）
+
+![images](./images/5.jpg)
+
+ <p align=center> 选择签署不同的CLA-企业员工签署</p>
+
+4.2 企业员工在签署时应使用企业邮箱签署，在填写完公司邮箱后，点击获取验证码后，公司邮箱会受到一封包含验证码的邮件，填写在表单后提交完成签署。
+
+![images](./images/6.png)
+
+ <p align=center>  企业员工签署CLA表单</p>
+
+4.3 签署后会自动通知该企业的 CLA 贡献系统管理员，由系统管理员确定是否容许该员工是否可以进行贡献。系统管理员部分的工作参考 4.3 章节。
+
+![images](./images/7.png)
+
+ <p align=center> 企业CLA的管理员收到通知邮件的范本</p>
+
 
 #### 5. openEuler 社区 CLA 系统相关问题
 
