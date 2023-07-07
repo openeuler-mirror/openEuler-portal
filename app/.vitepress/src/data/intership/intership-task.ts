@@ -186,6 +186,15 @@ export default {
       GITEE: 'https://gitee.com/openeuler/community/tree/master/sig/sig-AccLib',
     },
     {
+      NAME: 'sig-FangTian',
+      NAME_LINK:
+        'https://www.openeuler.org/zh/sig/sig-detail/?name=sig-FangTian',
+      INTRODUCE:
+        '聚焦FangTian视窗引擎，包含显示服务，窗口管理，图形绘制、合成、送显等模块，同时推出新型FT显示协议',
+      TASK: 'https://gitee.com/openeuler/ft_engine/issues/I7GHA8?from=project-issue',
+      GITEE: 'https://www.openeuler.org/zh/sig/sig-detail/?name=sig-FangTian',
+    },
+    {
       NAME_LINK: '',
       INTRODUCE: '更多SIG任务，敬请期待',
       GITEE: '',
