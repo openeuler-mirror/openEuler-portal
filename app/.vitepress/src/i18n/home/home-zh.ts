@@ -439,7 +439,7 @@ export default {
       IMG_DARK: mulanLogo_dark,
     },
     {
-      LINK: 'https://kunpeng.huawei.com/',
+      LINK: 'https://www.hikunpeng.com/zh/',
       IMG: kunpeng,
       IMG_DARK: kunpengLogo_dark,
     },
