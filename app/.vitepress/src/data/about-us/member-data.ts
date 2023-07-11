@@ -124,6 +124,7 @@ export default {
         {
           img_light: zhongruan_light,
           img_dark: zhongruan_dark,
+          noIcon: true,
         },
       ],
     },
@@ -251,6 +252,7 @@ export default {
         {
           img_light: zhongruan_light,
           img_dark: zhongruan_dark,
+          noIcon: true,
         },
       ],
     },

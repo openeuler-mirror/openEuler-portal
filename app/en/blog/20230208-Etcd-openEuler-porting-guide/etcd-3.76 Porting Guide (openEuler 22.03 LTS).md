@@ -28,21 +28,21 @@ Recommended version: etcd-3.76
 
 ### Hardware Requirements
 
-| Item      | Description                                       |
-| ---------- | ------------------------------------------- |
-| Server| TaiShan 200 server (model 2280)              |
-| Processor    | Kunpeng 920 5250                            |
-| Memory size  | 16 x 32 GB 2666 MHz                          |
-| NIC      | 1 x 10GE                                     |
-| Disk      | OS: 2 x 900 GB SAS; DATA: 3.2 TB 1 x ES3000 V3|
+| Item        | Description                                    |
+| ----------- | ---------------------------------------------- |
+| Server      | TaiShan 200 server (model 2280)                |
+| Processor   | Kunpeng 920 5250                               |
+| Memory size | 16 x 32 GB 2666 MHz                            |
+| NIC         | 1 x 10GE                                       |
+| Disk        | OS: 2 x 900 GB SAS; DATA: 3.2 TB 1 x ES3000 V3 |
 
  
 
 ### OS and Software Requirements
 
-| Item         | Version                   |
-| ------------- | ----------------------- |
-| openEuler| openEuler 22.03 LTS|
+| Item      | Version             |
+| --------- | ------------------- |
+| openEuler | openEuler 22.03 LTS |
 
 
 
@@ -171,7 +171,7 @@ cd etcd-3.1.20
 
 ![](./media/image4.png)
 
-- Search for the installation path. After the compilation is successful, two executable files **etcd** and **etcdctl** are generated in the <filepath class="+ topic/ph sw-d/filepath " id="filepath770511318198">etcd-3.1.20/bin</filepath> directory.
+- Search for the installation path. After the compilation is successful, two executable files **etcd** and **etcdctl** are generated in the <div class="+ topic/ph sw-d/filepath " id="filepath770511318198">etcd-3.1.20/bin</div> directory.
 
 
 ![](./media/image5.png)
@@ -369,8 +369,8 @@ vim build
 
 ## Change History
 
-| Date| Description      |
-| -------- | -------------- |
-| 2023-2-9 | This issue is the first official release.|
+| Date     | Description                               |
+| -------- | ----------------------------------------- |
+| 2023-2-9 | This issue is the first official release. |
 
 -----------------------------------------------------------------------
