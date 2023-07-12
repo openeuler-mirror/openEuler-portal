@@ -27,10 +27,10 @@ export default {
   PPT_TEXT: 'PPT模板',
   PICTURE_TITLE: [
     'Standard',
-    'Monochrome',
-    'Black',
     'Standard',
     'Monochrome',
+    'Monochrome',
+    'Black',
     'Black',
   ],
   PPT_TEMPLATES: ['模板01', '模板02'],

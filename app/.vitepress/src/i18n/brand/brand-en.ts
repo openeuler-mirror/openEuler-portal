@@ -27,10 +27,10 @@ export default {
   PPT_TEMPLATES: ['Template 1', 'Template 2'],
   PICTURE_TITLE: [
     'Standard',
-    'Monochrome',
-    'Black',
     'Standard',
     'Monochrome',
+    'Monochrome',
+    'Black',
     'Black',
   ],
   VERTICAL_LEFT_IMAGE: [

@@ -17,29 +17,20 @@ const initList = () => {
   const result = [];
   const cndata = i18n.value.brand;
   const nameList = [
-    'VERTICAL_LEFT_IMAGE',
-    'VERTICAL_CENTER_IMAGE',
-    'VERTICAL_RIGHT_IMAGE',
     'HORIZONTAL_LEFT_IMAGE',
+    'VERTICAL_LEFT_IMAGE',
     'HORIZONTAL_CENTER_IMAGE',
+    'VERTICAL_CENTER_IMAGE',
     'HORIZONTAL_RIGHT_IMAGE',
+    'VERTICAL_RIGHT_IMAGE',
   ];
   const imageList = [
-    '/img/other/brand/standard-poster.png',
-    '/img/other/brand/mono-poster.png',
-    '/img/other/brand/black-poster.png',
     '/img/other/brand/horizontal-poster.png',
+    '/img/other/brand/standard-poster.png',
     '/img/other/brand/white-poster.png',
-    '/img/other/brand/block-hor-poster.png',
-  ];
-
-  const imageListMobile = [
-    '/img/other/brand/brand-mobile-1.png',
-    '/img/other/brand/brand-mobile-2.png',
-    '/img/other/brand/brand-mobile-3.png',
-    '/img/other/brand/brand-mobile-4.png',
-    '/img/other/brand/brand-mobile-5.png',
-    '/img/other/brand/brand-mobile-6.png',
+    '/img/other/brand/mono-poster.png',
+    '/img/other/brand/black-hor-poster.png',
+    '/img/other/brand/black-poster.png',
   ];
 
   for (let i = 0; i < imageList.length; i++) {
@@ -48,7 +39,7 @@ const initList = () => {
       name: cndata.PICTURE_TITLE[i],
       url: imageList[i],
       image: cndata[nameList[i]],
-      mobile: imageListMobile[i],
+      isBlack: imageList[i].includes('black'),
     };
     result.push(temp);
   }
@@ -104,8 +95,8 @@ list.value = initList();
         shadow="hover"
       >
         <div class="brand-item-title">{{ item.name }}</div>
-        <div class="brand-item-img">
-          <img :src="item.mobile" />
+        <div class="brand-item-img" :class="{ black: item.isBlack }">
+          <img :src="item.url" />
         </div>
         <div class="button-group">
           <a
@@ -135,13 +126,7 @@ list.value = initList();
       >
         <div class="brand-item-title">{{ item.TITLE }}</div>
         <div class="brand-item-img">
-          <img
-            :src="item.URL"
-            :style="{
-              maxWidth: item.width + 'px',
-              maxHeight: item.height + 'px',
-            }"
-          />
+          <img :src="item.URL" />
         </div>
         <div class="button-group">
           <a
@@ -195,6 +180,9 @@ list.value = initList();
 </template>
 
 <style lang="scss" scoped>
+.black {
+  background-color: var(--o-color-black) !important;
+}
 .button-group {
   display: grid;
   width: 100%;
@@ -328,11 +316,11 @@ list.value = initList();
       display: flex;
       align-items: center;
       justify-content: center;
+      background-color: var(--o-color-white);
       img {
         object-fit: contain;
-        max-width: 220px;
-        width: 100%;
-        height: 100%;
+        height: 50%;
+        width: 50%;
         @media (max-width: 768px) {
           max-width: 240px;
         }
