@@ -7,6 +7,7 @@ import BannerLevel2 from '@/components/BannerLevel2.vue'
 
 import banner from '@/assets/banner/banner-community.png';
 import illustration from '@/assets/illustrations/collect.png';
+import IconDownload from '~icons/app/icon-download.svg';
 
 </script>
 
@@ -31,11 +32,23 @@ import illustration from '@/assets/illustrations/collect.png';
 
 ## 可获得哪些赋能支持
 
+<a href='https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pdf/openEuler%20%E7%A4%BE%E5%8C%BA%E4%BB%8B%E7%BB%8D.pdf'>
+<OButton
+  class="case-download"
+  type="outline"
+  size="mini"
+>
+下载 《openEuler社区介绍》
+  <template #suffixIcon>
+    <OIcon><IconDownload /></OIcon>
+  </template>
+</OButton>
+</a>
+
 - 活动物料模板（易拉宝、宣传海报、主 KV、横幅、拍照异形牌、直播背景框等源文件）
 - 宣传资源支持（报名小程序、官网、公众号、社群等渠道宣传）
 - openEuler B 站直播间资源（如需直播）
 - 社区纪念品（支持 100 人规模以下的实际人数申请）
-- openEuler 社区介绍 PPT
 
 <p class='collect-img'>
   <img src='./material.png' class='img' />
