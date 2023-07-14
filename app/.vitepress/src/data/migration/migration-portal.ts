@@ -119,7 +119,7 @@ export default {
       },
       {
         name: '使用指南',
-        link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/thirdparty_migration/x2openEuler-Userguide.html',
+        link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
       },
       {
         name: '视频实操',
