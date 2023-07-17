@@ -14,7 +14,7 @@ summary: '近日，RISC-V SIG 发布了 Eulaceura 版本23H1，这是发行版�
 近日，RISC-V SIG 发布了 Eulaceura 版本
 23H1，这是发行版的一次重大更新，新版本搭建了 linux kernel 6.1
 版本内核，适用于矽速科技 LicheePi 4A 的映像也已公布。Eulaceura 是首个将
-RISC-V 架构纳入第一级支持范围的 openEuler 发行，与 openEuler RISC-V
+RISC-V 架构纳入第一级支持范围的 openEuler 发行版，与 openEuler RISC-V
 项目共享部分组件。项目地址：<https://gitee.com/eulaceura>
 
 ## 支持硬件
@@ -23,13 +23,13 @@ RISC-V 架构纳入第一级支持范围的 openEuler 发行，与 openEuler RIS
 
 -   LicheePi 4A
 
-LicheePi 4A 是首款性能对标树莓派 4 的 RISC-V 开发板，基于阿里巴巴平头哥
+LicheePi 4A 是首款性能对标树莓派 4 的 RISC-V 开发版，基于阿里巴巴平头哥
 TH1520 芯片，搭载 4 核 2.0GHz C910 内核、4TOPS NPU 和 50GFLOPS
 GPU，为开发者提供强大的性能，可以应对常见的桌面体验场景。
 
 ## 版本亮点
 
-Eulaceura 的桌面版本采用社区内湖南麒麟贡献的 Kiran
+Eulaceura 的桌面版本采用社区内湖南麒麟信安贡献的 Kiran
 桌面环境作为预设，初始系统语言含中文，附带一系列常用应用程序。
 
 ### 内核版本升级
