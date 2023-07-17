@@ -257,7 +257,6 @@ const watchData = watch(
               >
                 {{ data.day.split('-').slice(2)[0] }}
               </p>
-              <!-- TODO: 添加节日提醒 -->
             </div>
           </div>
         </template>
