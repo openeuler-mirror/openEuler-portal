@@ -152,16 +152,33 @@
     word-break: break-word;
     border-collapse: collapse;
     padding: 0;
+    line-height: var(--o-line-height-text);
 
     tr {
-      height: 36px;
+      height: 54px;
       color: var(--o-color-text4);
       border-bottom: 1px solid var(--o-color-table);
 
       th {
+        padding-left: var(--o-spacing-h3);
+        text-align: left;
+        font-weight: 500;
         font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h8);
         background-color: var(--o-color-bg4);
         color: var(--o-color-text1);
+        @media screen and (max-width: 768px) {
+          font-size: var(--o-font-size-text);
+          padding-left: var(--o-spacing-h5);
+        }
+      }
+      td {
+        padding-left: var(--o-spacing-h3);
+        line-height: var(--o-line-height-text);
+        @media screen and (max-width: 768px) {
+          padding-left: var(--o-spacing-h6);
+          font-size: var(--o-font-size-tip);
+        }
       }
     }
   }
