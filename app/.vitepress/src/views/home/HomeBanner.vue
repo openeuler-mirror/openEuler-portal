@@ -82,7 +82,7 @@ const jumpTo = (item: any) => {
           <div
             v-if="item.title?.length"
             class="banner-panel-content flex-column"
-            :class="item.id === 'download' ? 'download' : ''"
+            :class="item.id === 'whitepaper' ? 'whitepaper' : ''"
           >
             <div data-aos="fade-down" class="box">
               <p
@@ -158,17 +158,10 @@ html[lang='zh'] {
     display: none;
   }
 }
-.download {
-  .title {
-    color: var(--o-color-black);
-  }
-  .desc {
-    color: var(--o-color-black);
-  }
-  .o-button {
-    border: 1px solid var(--o-color-black);
-    color: var(--o-color-black);
-  }
+.whitepaper {
+  // .o-button {
+  //   margin-top: 50px;
+  // }
 }
 #euler-sky {
   @media screen and (max-width: 768px) {

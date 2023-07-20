@@ -175,7 +175,7 @@ export function getSoftwareList(params: cveQuery) {
     : '';
   const type = params.type ? `&type=${params.type}` : '';
   const keyword = params.keyword ? `&keyword=${params.keyword}` : '';
-  const url = ` /compatibility/web_backend/compat_software_info?page_size=${params.pages.size}&page_num=${params.pages.page}${keyword}${architecture}${os}${type}`;
+  const url = ` /compatibility/api/web_backend/compat_software_info?page_size=${params.pages.size}&page_num=${params.pages.page}${keyword}${architecture}${os}${type}`;
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
@@ -226,7 +226,7 @@ export function getDriveTypes(lang: string) {
  * @name getSoftFilter
  */
 export function getSoftFilter() {
-  const url = '/compatibility/web_backend/query_compat_software';
+  const url = '/compatibility/api/web_backend/query_compat_software';
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
