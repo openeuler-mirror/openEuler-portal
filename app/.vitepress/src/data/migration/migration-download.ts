@@ -21,11 +21,11 @@ export default {
         },
         {
           name: '特性说明',
-          link: '/zh/migration/download/patch_description-3.0.0/',
+          link: '/zh/migration/download/characteristic-description-3.0.0/',
         },
         {
           name: '补丁说明',
-          link: '/zh/migration/download/characteristic-description-3.0.0/',
+          link: '/zh/migration/download/patch_description-3.0.0/',
         },
         {
           name: '使用指南',
