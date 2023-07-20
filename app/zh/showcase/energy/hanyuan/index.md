@@ -42,7 +42,7 @@ img: /category/showcase/energy.png
 
 边缘服务器集无线通讯、物联接入、AI识别、边缘计算、本地可视化等多种技术为一体，是整个智慧物联体系实现云边协同、边端联动、区域自治的重要组成部分。产品具备信息采集、数据通讯、就地计算、AI推断、场景联动、云边协同等功能，可实现全天24小时自动监测及异常情况智能识别，降低故障发生率，助力实现无人值守智慧运维：整体系统架构如下：
 
-<div class="case-img"><img src="./media/image2.png" width="500" >
+<div class="case-img"><img src="./media/image2.png" width="500" ></div>
 
 ## 为什么选择 openEuler
 
@@ -65,4 +65,4 @@ openEuler为底座，利用其内核创新、场景创新能力、繁荣社区�
 ## 伙伴
 
 
-<div class="case-img"><img src="./media/logo.png" width="200" >
+<img src="./media/logo.png" width="200" >
