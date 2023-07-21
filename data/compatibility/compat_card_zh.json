@@ -16860,5 +16860,43 @@
     "chipModel": "82599ES",
     "item": "03030WSQ",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS/contrib/drivers/source/Packages/ixgbe-5.18.13.tar.gz"
+  },
+  {
+    "vendorID": "8086",
+    "deviceID": "1584",
+    "svID": "8086",
+    "ssID": "0002",
+    "architecture": "aarch64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "i40e",
+    "version": "2.22.20",
+    "type": "NIC",
+    "date": "2023.07.21",
+    "sha256": "83aed6f883021b37296114b0979cf38ccbbc9ea90964f02149a73eff365f581e",
+    "driverSize": "687K",
+    "chipVendor": "Intel",
+    "boardModel": "XL710-Q1",
+    "chipModel": "XL710",
+    "item": "06310102",
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/i40e-2.22.20.tar.gz"
+  },
+  {
+    "vendorID": "8086",
+    "deviceID": "1584",
+    "svID": "8086",
+    "ssID": "0002",
+    "architecture": "aarch64",
+    "os": "openEuler 22.03 LTS",
+    "driverName": "i40e",
+    "version": "2.22.20",
+    "type": "NIC",
+    "date": "2023.07.21",
+    "sha256": "a88bb5733bc06410e20e47ccd291c8b6b85e5e81d4b2e934dc4806d541b098fe",
+    "driverSize": "687K",
+    "chipVendor": "Intel",
+    "boardModel": "XL710-Q1",
+    "chipModel": "XL710",
+    "item": "06310102",
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS/contrib/drivers/source/Packages/i40e-2.22.20.tar.gz"
   }
 ]
