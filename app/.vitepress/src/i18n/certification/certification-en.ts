@@ -41,4 +41,8 @@ export default {
   placeholderCode: 'Enter the verification code.',
   buttonCode: 'Send a verification code',
   sure: 'Confirm',
+  agreeDeclaration:
+    'By filling and submitting the content, I fully understand and agree to the terms of the openEuler ',
+  policy: 'Privacy Policy',
+  agreeTip:'Mandatory'
 };

@@ -118,7 +118,8 @@ function getCode(params: string, lang: string) {
 const dataList: any = ref([]);
 // 输入验证码后点击确认
 function onConfirmationClick(identification: string, codeInput: string) {
-  if (emailInput.value && codeInput) {
+  isAgreeTipShow.value = isAgree.value;
+  if (emailInput.value && codeInput && isAgree.value) {
     if (identification === '') {
       resultTip.value =
         lang.value === 'zh'
@@ -154,7 +155,7 @@ function onConfirmationClick(identification: string, codeInput: string) {
         successTip.value = false;
         throw new Error(error);
       });
-  } else {
+  } else if (!emailInput.value || !codeInput) {
     successTip.value = false;
     resultTip.value =
       lang.value === 'zh'
@@ -233,6 +234,9 @@ function handleDownloadingEvent() {
     }, 500);
   }
 }
+// 是否同意隐私政策
+const isAgree = ref(false);
+const isAgreeTipShow = ref(true);
 </script>
 
 <template>
@@ -298,6 +302,17 @@ function handleDownloadingEvent() {
                 >{{ buttonText }}</OButton
               >
             </div>
+          </div>
+          <div class="agree-box">
+            <el-checkbox v-model="isAgree"
+              >{{ i18n.certification.agreeDeclaration }}
+              <a :href="'/' + lang + '/other/privacy/'">{{
+                i18n.certification.policy
+              }}</a>
+              <span v-show="!isAgreeTipShow" class="agree-tip">{{
+                i18n.certification.agreeTip
+              }}</span>
+            </el-checkbox>
           </div>
           <div class="button-box">
             <OButton
@@ -551,6 +566,37 @@ function handleDownloadingEvent() {
             border: 1px solid var(--o-color-text3);
             color: var(--o-color-text3);
           }
+        }
+      }
+      .agree-box {
+        width: 100%;
+        margin-top: var(--o-spacing-h2);
+        font-size: var(--o-font-size-text);
+        :deep(.el-checkbox) {
+          height: auto;
+          width: 100%;
+          justify-content: center;
+          .el-checkbox__inner {
+            width: 14px;
+            height: 14px;
+          }
+        }
+        :deep(.el-checkbox__label) {
+          font-size: var(--o-font-size-h9);
+          line-height: var(--o-line-height-h9);
+          color: var(--o-color-text1);
+          position: relative;
+          white-space: break-spaces;
+          .agree-tip {
+            position: absolute;
+            bottom: -24px;
+            left: -14px;
+            color: #f3524d;
+          }
+        }
+        a {
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
         }
       }
       .button-box {
