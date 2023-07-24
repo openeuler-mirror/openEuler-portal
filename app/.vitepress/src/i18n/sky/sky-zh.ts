@@ -53,7 +53,7 @@ export default {
     BREAD1: 'openEuler Call for X 计划',
     BREAD1_URL: '/zh/community/program/',
     BREAD2: 'Call for 技术教程贡献',
-    TULTORIAL_CARD_TITLE: '技术教程贡献',
+    TULTORIAL_CARD_TITLE: 'openEuler 技术教程',
     TULTORIAL_CARD_INTRODUCTION:
       '即刻分享自己的技术教程，为openEuler技术生态建设贡献一份力量。请联系',
     TULTORIAL_CARD_INTRODUCTION1: 'events@openeuler.sh',

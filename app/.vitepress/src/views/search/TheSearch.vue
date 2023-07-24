@@ -224,7 +224,7 @@ function searchAll(current?: string) {
   }
 }
 function handleSelectChange(val: string) {
-  history.pushState(null, '', `?search=${val}`);
+  history.pushState(null, '', `?search=${encodeURIComponent(val)}`);
 }
 function handleSelect(val: string) {
   searchInput.value = val.replace(/<[^>]+>/g, '');
@@ -282,8 +282,9 @@ function jumpPage(page: number) {
 }
 onMounted(async () => {
   await getVersionTag();
-  if (decodeURI(location.href.split('=')[1]) !== 'undefined') {
-    searchInput.value = decodeURI(window.location.href.split('=')[1]) + '';
+  if (location.href.split('=')[1]) {
+    searchInput.value =
+      decodeURIComponent(window.location.href.split('=')[1]);
   }
   searchAll();
 });

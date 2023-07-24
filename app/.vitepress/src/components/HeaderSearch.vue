@@ -20,7 +20,7 @@ const commonStore = useCommon();
 // 搜索事件
 function handleSearchEvent() {
   window.open(
-    `/${lang.value}/other/search/?search=${searchInput.value}`,
+    `/${lang.value}/other/search/?search=${encodeURIComponent(searchInput.value)}`,
     '_self'
   );
 }

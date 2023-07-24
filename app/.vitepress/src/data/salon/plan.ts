@@ -168,7 +168,7 @@ export default {
         month: '3',
         actives: [
           {
-            activeType: '用户活动组',
+            activeType: '用户组活动',
             activeEvent: [
               {
                 activeName: '深圳 机器人',
@@ -220,14 +220,9 @@ export default {
             activeEvent: [
               {
                 activeName: '南京 高效运维',
-              },
-            ],
-          },
-          {
-            activeType: '用户活动组',
-            activeEvent: [
-              {
-                activeName: '西安',
+                activelink: {
+                  url: '/zh/interaction/event-list/detail/?id=91&isMini=1',
+                },
               },
             ],
           },
@@ -245,7 +240,7 @@ export default {
             ],
           },
           {
-            activeType: '用户活动组',
+            activeType: '用户组活动',
             activeEvent: [
               {
                 activeName: '南京',
@@ -282,7 +277,7 @@ export default {
             ],
           },
           {
-            activeType: '用户活动组',
+            activeType: '用户组活动',
             activeEvent: [
               {
                 activeName: '广州',
@@ -303,7 +298,7 @@ export default {
             ],
           },
           {
-            activeType: '用户活动组',
+            activeType: '用户组活动',
             activeEvent: [
               {
                 activeName: '兰州',
@@ -341,17 +336,36 @@ export default {
         },
       },
       {
-        activeName: ' 6月 - 10月 开源之夏',
+        activeName: ' 4月 - 10月 第六届开源创新大赛',
+        startTime: 4,
+        endTime: 10,
+        activelink: {
+          url: 'https://www.gitlink.org.cn/competitions/index/track1_2023_openeuler',
+        },
+      },
+      {
+        activeName: ' 5月 - 10月 “互联网+”大学生创新创业大赛',
+        startTime: 5,
+        endTime: 10,
+        activelink: {
+          url: 'https://edu.hicomputing.huawei.com/InternetInnovate2023?tab=1',
+        },
+      },
+      {
+        activeName: ' 5月 - 10月 鲲鹏应用创新大赛',
+        startTime: 5,
+        endTime: 10,
+        activelink: {
+          url: 'https://www.hikunpeng.com/developer/contests/kunpeng-competition2023?tab=2',
+        },
+      },
+      {
+        activeName: ' 6月 - 10月 第四届开源之夏',
         activelink: {
           url: 'https://summer-ospp.ac.cn/org/orgdetail/b9770f4d-f586-4373-bdac-ce6389065946?lang=zh',
           className: 'summer-ospp',
         },
         startTime: 6,
-        endTime: 10,
-      },
-      {
-        activeName: ' 4月 - 10月 “互联网+”大学生创新创业大赛',
-        startTime: 4,
         endTime: 10,
       },
     ],

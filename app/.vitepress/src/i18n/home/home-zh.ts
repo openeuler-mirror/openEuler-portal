@@ -155,13 +155,13 @@ export default {
       LINK: 'internship/',
     },
     {
-      TITLE: '峰会专区',
+      TITLE: '活动专区',
       IMG: summit,
       IMG_HOVER: summitHover,
       IMG_DARK: summitDark,
       IMG_DARK_HOVER: summitDarkHover,
-      DSSCRIPTIVE: 'openEuler Developer Day 2023',
-      LINK: '/zh/interaction/summit-list/devday2023/',
+      DSSCRIPTIVE: '了解openEuler最新活动',
+      LINK: '/zh/interaction/event-list/',
     },
   ],
   IMG_CAROUSE: {
