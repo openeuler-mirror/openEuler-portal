@@ -1,4 +1,5 @@
 import data from '../../data/download/download';
+import commercialReleaseData from '../../data/download/download-commercial-release';
 export default {
   COPY_SUCCESS: 'copied successfully.',
   RELEASE_DESC: 'Release Notes',
@@ -77,7 +78,7 @@ export default {
   BTNRESET: 'Reset',
   COMMUNITY_LIST: data.en.COMMUNITY_LIST,
   SCENARIO_LIST: data.en.SCENARIO_LIST,
-  COMMERCIAL_RELEASE_LIST: data.en.COMMERCIAL_RELEASE_LIST,
+  COMMERCIAL_RELEASE_LIST: commercialReleaseData.en.COMMERCIAL_RELEASE_LIST,
   MIRROR_SELECT: {
     TITLE: 'Get ISO',
     RANK: 'Rank',
