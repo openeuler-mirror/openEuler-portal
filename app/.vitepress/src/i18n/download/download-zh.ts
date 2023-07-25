@@ -1,4 +1,6 @@
 import data from '../../data/download/download';
+import commercialReleaseData from '../../data/download/download-commercial-release';
+
 export default {
   RELEASE_DESC: '发行说明',
   COPY_SUCCESS: '复制成功',
@@ -84,7 +86,7 @@ export default {
   BTNRESET: '重置',
   COMMUNITY_LIST: data.zh.COMMUNITY_LIST,
   SCENARIO_LIST: data.zh.SCENARIO_LIST,
-  COMMERCIAL_RELEASE_LIST: data.zh.COMMERCIAL_RELEASE_LIST,
+  COMMERCIAL_RELEASE_LIST: commercialReleaseData.zh.COMMERCIAL_RELEASE_LIST,
   MIRROR_SELECT: {
     TITLE: '获取 ISO',
     RANK: 'Rank',
