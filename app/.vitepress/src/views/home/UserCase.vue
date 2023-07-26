@@ -23,8 +23,15 @@ const props = defineProps({
   },
 });
 
-const jumpTo = (path: string) => {
-  window.open(path.replace(/(index)$/g, ''), '_blank');
+const jumpTo = (path: string, industry?: number) => {
+  if (industry) {
+    window.open(
+      `${path}?industry=${industry}`.replace(/(index)$/g, ''),
+      '_blank'
+    );
+  } else {
+    window.open(path.replace(/(index)$/g, ''), '_blank');
+  }
 };
 
 const timer = ref();
@@ -210,7 +217,7 @@ onUnmounted(() => {
               animation
               type="text"
               class="case-more-item"
-              @click="jumpTo(i18n.home.USER_CASE.VIEW_MORE_LINK)"
+              @click="jumpTo(i18n.home.USER_CASE.VIEW_MORE_LINK, active + 1)"
             >
               {{ i18n.home.USER_CASE.VIEW_MORE }}
               <template #suffixIcon>

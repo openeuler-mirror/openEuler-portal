@@ -189,13 +189,15 @@ function searchCase() {
 }
 // 根据跳转时url携带的参数显示筛选内容
 function getUrlParam() {
-  const industry: any = decodeURI(window.location.href.split('=')[1]);
-  if (industry === 'undefined') {
-    activeIndex.value = 0;
-    currentTag.value = userCaseData.value.tags[0];
-  } else {
+  const industry = Number(
+    decodeURIComponent(window.location.href.split('=')[1])
+  );
+  if (industry) {
     activeIndex.value = industry * 1;
     currentTag.value = userCaseData.value.tags[activeIndex.value];
+  } else {
+    activeIndex.value = 0;
+    currentTag.value = userCaseData.value.tags[0];
   }
 }
 const downloadCase = (path: string) => {
@@ -402,7 +404,7 @@ onMounted(() => {
       }
       :deep(.tag-filter-box) {
         overflow: scroll;
-        white-space:nowrap;
+        white-space: nowrap;
         .o-tag {
           padding: 6px 0;
           margin-right: 28px;

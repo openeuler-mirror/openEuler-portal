@@ -24,10 +24,6 @@ const props = defineProps({
       return {};
     },
   },
-  isHomePage: {
-    type: Boolean,
-    default: true,
-  },
 });
 const commonStore = useCommon();
 let currentMeet = reactive<TableData>({
@@ -150,7 +146,7 @@ function setMeetingDay(day: string, event: Event) {
       }
     }
   } catch (e) {
-    throw Error();
+    console.error(e);
   }
 }
 
@@ -230,7 +226,7 @@ const watchData = watch(
 );
 </script>
 <template>
-  <div class="main-body" :class="{ 'is-home': !isHomePage }">
+  <div class="main-body">
     <div class="calendar">
       <el-calendar v-if="windowWidth > 768" ref="calendar" class="calender">
         <template #header="{ date }">
@@ -1100,17 +1096,6 @@ const watchData = watch(
           font-size: var(--o-font-size-tip);
         }
       }
-    }
-  }
-}
-.is-home {
-  .el-calendar {
-    background-color: var(--o-color-bg2);
-  }
-  .detail-list {
-    background-color: var(--o-color-bg2);
-    .right-title {
-      visibility: hidden;
     }
   }
 }
