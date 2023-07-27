@@ -12,7 +12,7 @@ The community version is divided into an LTS (long-term support) release and an 
 
 - **LTS release**: released every 2 years, and community support is provided for 4 years starting the release date. The community's first LTS version, openEuler 20.03 LTS, was officially released in March 20th.
 
-- **Community Innovation release**: released every 6 months between 2 LTS releases and 6 months' support is provided.The next version will be released in March 2023. 
+- **Community Innovation release**: released every 6 months between 2 LTS releases and 6 months' support is provided.The next version will be released in September 2023. 
 
 ![](./lifecycle.png)
 
