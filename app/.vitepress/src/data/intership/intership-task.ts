@@ -191,7 +191,7 @@ export default {
         'https://www.openeuler.org/zh/sig/sig-detail/?name=sig-FangTian',
       INTRODUCE:
         '聚焦FangTian视窗引擎，包含显示服务，窗口管理，图形绘制、合成、送显等模块，同时推出新型FT显示协议',
-      TASK: 'https://gitee.com/openeuler/ft_engine/issues/I7GHA8?from=project-issue',
+      TASK: 'https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=209709570&single_label_text=&sort=&state=&target_project=',
       GITEE: 'https://www.openeuler.org/zh/sig/sig-detail/?name=sig-FangTian',
     },
     {

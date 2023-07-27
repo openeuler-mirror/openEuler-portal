@@ -26,11 +26,12 @@ export default {
       IMG: mooc,
       TITLE: 'openEuler精品课程',
       DESC: '开源基础软件学习培训',
-      APPLY_LINK: 'https://training-assessment.osinfra.cn/ ',
+      APPLY_LINK:
+        'https://c0605e03bb6b40dca9cd34ab5b3fb1f8.shixizhi.huawei.com/portal/1643780836745113602?pageId=1650768876006805506&activeIndex=-1&sxz-lang=zh_CN',
       CHILDREN: [
         {
           NAME: '开始学习',
-          PATH: 'https://training-assessment.osinfra.cn/',
+          PATH: 'https://c0605e03bb6b40dca9cd34ab5b3fb1f8.shixizhi.huawei.com/portal/1643780836745113602?pageId=1650768876006805506&activeIndex=-1&sxz-lang=zh_CN',
         },
       ],
     },
