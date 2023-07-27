@@ -401,7 +401,7 @@ export default {
         {
           NAME: '社交媒体',
           LABEL: '',
-          PATH: '/community/honor/#footer',
+          PATH: '/#footer',
         },
       ],
     },

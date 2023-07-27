@@ -4,6 +4,7 @@ import { useRouter, useData } from 'vitepress';
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { debounce } from 'lodash';
 import { useOeep } from '@/stores/oeep';
+import { scrollToBottom } from '@/shared/utils';
 
 import IconOutLink from '~icons/app/icon-out-link.svg';
 const props = defineProps({
@@ -71,6 +72,11 @@ const goPath = (item: NavItem, flag: boolean) => {
   // 处理下载传参mac不响应问题
   if (!flag || item.PATH.startsWith('/download/')) {
     window.open('/' + lang.value + item.PATH, '_self');
+    return;
+  }
+  // 首页进入联系我们
+  if (item.PATH === '/#footer' && router.route.path === `/${lang.value}/`) {
+    scrollToBottom();
     return;
   }
   if (item.PATH.startsWith('https')) {
