@@ -28,6 +28,7 @@ export interface SecurityLists {
   securityNoticeNo: string;
   summary: string;
   type: string;
+  id: number;
 }
 export interface CveLists {
   createTime: string;

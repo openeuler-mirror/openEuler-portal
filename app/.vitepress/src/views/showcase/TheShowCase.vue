@@ -402,7 +402,7 @@ onMounted(() => {
       }
       :deep(.tag-filter-box) {
         overflow: scroll;
-        white-space:nowrap;
+        white-space: nowrap;
         .o-tag {
           padding: 6px 0;
           margin-right: 28px;

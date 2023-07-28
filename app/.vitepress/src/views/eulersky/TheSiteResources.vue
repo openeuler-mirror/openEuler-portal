@@ -47,8 +47,8 @@ function goDetail(url: string) {
         <div class="site-card-list">
           <OContainer
             v-for="item in siteList"
-            :style="{ backgroundImage: `url(${bg_4})` }"
             :key="item.scale"
+            :style="{ backgroundImage: `url(${bg_4})` }"
           >
             <div class="container-text">
               <div class="label-line">

@@ -1,0 +1,61 @@
+.el-date-editor {
+    --el-input-focus-border: none;
+    --el-input-hover-border: none;
+    --el-input-hover-border-color: none;
+    --el-input-focus-border-color: none;
+
+    &.el-input__wrapper {
+        border-radius: 0;
+        padding: 1px 8px;
+        height: 48px;
+        box-shadow: var(--o-shadow-l1);
+        background-color: var(--o-color-bg2);
+
+        &:hover {
+            box-shadow: var(--o-shadow-l1);
+        }
+    }
+
+    .el-range-input {
+        color: var(--o-color-text1);
+    }
+
+    .el-range__icon {
+        color: var(--o-color-text4);
+        font-size: var(--o-font-size-h5);
+
+        svg {
+            width: 1rem;
+            height: 1rem;
+            color: currentColor;
+            vertical-align: top;
+        }
+    }
+
+
+}
+
+.el-picker-panel {
+    background-color: var(--o-color-bg2);
+    color: var(--o-color-text1);
+    border-radius: 0;
+
+    &.el-date-range-picker {
+        --el-datepicker-header-text-color: var(--o-color-text1);
+        --el-datepicker-hover-text-color: var(--o-color-brand2);
+        --el-datepicker-active-color: var(--o-color-brand1);
+
+        svg {
+            color: var(--o-color-text1);
+        }
+
+        .el-date-table td.in-range .el-date-table-cell {
+            background-color: var(--o-color-bg3);
+        }
+    }
+
+}
+
+.el-popper {
+    --el-popper-border-radius: 0;
+}
