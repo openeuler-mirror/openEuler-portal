@@ -1,27 +1,46 @@
 .el-scrollbar {
   background-color: var(--o-color-bg2);
+
   .select-text {
     color: var(--o-color-text4);
     padding: 0 20px;
   }
+
   .suffix-icon {
     color: var(--o-color-brand1);
   }
-  li{
-    &.el-select-dropdown__item{
+
+  li {
+    &.el-select-dropdown__item {
       color: var(--o-color-text1);
+
+      &.selected {
+        color: var(--o-color-brand1);
+      }
     }
+
     @media screen and (max-width: 768px) {
       font-size: var(--o-font-size-tip);
     }
   }
 }
+
 .el-popper.is-light {
   border: 1px solid var(--o-color-border2);
 }
+
 .el-select-dropdown__item.hover {
   background-color: var(--o-color-bg1);
 }
-.el-popper{
+
+.el-popper {
   background-color: red;
+}
+
+.popper-select {
+  width: 208px;
+}
+
+.popper-dropdown {
+  width: 230px;
 }

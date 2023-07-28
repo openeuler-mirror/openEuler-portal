@@ -283,8 +283,7 @@ function jumpPage(page: number) {
 onMounted(async () => {
   await getVersionTag();
   if (location.href.split('=')[1]) {
-    searchInput.value =
-      decodeURIComponent(window.location.href.split('=')[1]);
+    searchInput.value = decodeURIComponent(window.location.href.split('=')[1]);
   }
   searchAll();
 });

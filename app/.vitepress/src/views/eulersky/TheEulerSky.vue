@@ -38,8 +38,8 @@ function goDetail(url: string) {
       <div class="sky-card-list">
         <OContainer
           v-for="item in homeI18n.CARD_DATA"
-          :style="{ backgroundImage: `url(${item.IMG})` }"
           :key="item.TITLE"
+          :style="{ backgroundImage: `url(${item.IMG})` }"
           class="item"
         >
           <div class="item-content">

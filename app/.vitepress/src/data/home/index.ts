@@ -35,7 +35,7 @@ export default {
         moBanner: banner2_mo,
         link: '/zh/blog/20230711-AMIs/AMIs.html',
         id: '',
-        title: ['openEuler 22.03 LTS','登陆 AWS Marketplace'],
+        title: ['openEuler 22.03 LTS', '登陆 AWS Marketplace'],
         btn: '查看详情',
         targetTap: 1,
       },
