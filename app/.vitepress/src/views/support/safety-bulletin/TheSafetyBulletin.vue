@@ -41,7 +41,7 @@ const currentPage = ref(1);
 const totalPage = ref(0);
 const layout = ref('sizes, prev, pager, next, slot, jumper');
 const years = ['', '2023', '2022', '2021', '2020'];
-const selectedYear = ref('2022');
+const selectedYear = ref('2023');
 const activeIndex = ref(0);
 const activeIndex1 = ref(0);
 const activeNames = ref(['1']);
@@ -89,7 +89,8 @@ function getSecurityLists(data: CveQuery) {
 
 const selectTag = (i: number, type: string) => {
   activeIndex.value = i;
-  queryData.type = type;
+  queryData.type = [];
+  queryData.type.push(type);
 };
 
 const handleSizeChange = (val: number) => {
@@ -110,10 +111,18 @@ function jumpBulletinDetail(val: any) {
   router.go(`${router.route.path}detail/?id=${val}`);
 }
 
+const dateList = [
+  ['2023-01-01', '2023-12-31'],
+  ['2022-01-01', '2022-12-31'],
+  ['2021-01-01', '2021-12-31'],
+  ['2020-01-01', '2020-12-31'],
+];
+
 const selectYear = (i: number, val: string) => {
   selectedYear.value = val;
   activeIndex1.value = i;
-  queryData.year = val;
+  // queryData.year = val;
+  queryData.date = i === 0 ? [] : dateList[i - 1];
   activeNames.value = ['2'];
 };
 
