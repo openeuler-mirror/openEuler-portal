@@ -277,15 +277,18 @@ watch(queryData, () => getSecurityLists(queryData));
 
         <div v-if="!isMobile" class="data-picker">
           <p class="data-picker-title">日期选择器</p>
-          <el-date-picker
-            v-model="queryData.date"
-            type="daterange"
-            start-placeholder="Start date"
-            end-placeholder="End date"
-            format="YYYY/MM/DD"
-            value-format="YYYY-MM-DD"
-            :default-time="[new Date(), new Date()]"
-          />
+
+          <ClientOnly>
+            <el-date-picker
+              v-model="queryData.date"
+              type="daterange"
+              start-placeholder="Start date"
+              end-placeholder="End date"
+              format="YYYY/MM/DD"
+              value-format="YYYY-MM-DD"
+              :default-time="[new Date(), new Date()]"
+            />
+          </ClientOnly>
         </div>
       </div>
 
@@ -364,25 +367,27 @@ watch(queryData, () => getSecurityLists(queryData));
               </OIcon>
 
               <template #dropdown>
-                <el-checkbox
-                  v-model="checkAll"
-                  :indeterminate="isIndeterminate"
-                  @change="selectRatingChange"
-                >
-                  {{ i18n.safetyBulletin.SELECT_ALL }}
-                </el-checkbox>
-
-                <el-checkbox-group
-                  v-model="queryData.type"
-                  @change="handleCheckedTypesChange"
-                >
+                <ClientOnly>
                   <el-checkbox
-                    v-for="risk in riskTypes"
-                    :key="risk.NAME"
-                    :label="risk.LABEL"
-                    >{{ risk.LABEL }}</el-checkbox
+                    v-model="checkAll"
+                    :indeterminate="isIndeterminate"
+                    @change="selectRatingChange"
                   >
-                </el-checkbox-group>
+                    {{ i18n.safetyBulletin.SELECT_ALL }}
+                  </el-checkbox>
+
+                  <el-checkbox-group
+                    v-model="queryData.type"
+                    @change="handleCheckedTypesChange"
+                  >
+                    <el-checkbox
+                      v-for="risk in riskTypes"
+                      :key="risk.NAME"
+                      :label="risk.LABEL"
+                      >{{ risk.LABEL }}</el-checkbox
+                    >
+                  </el-checkbox-group>
+                </ClientOnly>
               </template>
             </ODropdown>
           </template>
@@ -411,25 +416,27 @@ watch(queryData, () => getSecurityLists(queryData));
                 <IconFilter></IconFilter>
               </OIcon>
               <template #dropdown>
-                <el-checkbox
-                  v-model="isSelectAll"
-                  :indeterminate="isUnsure"
-                  @change="hanldCheckProductChange"
-                >
-                  选择全部
-                </el-checkbox>
-
-                <el-checkbox-group
-                  v-model="queryData.affectedProduct"
-                  @change="handleSelecteProductChange"
-                >
+                <ClientOnly>
                   <el-checkbox
-                    v-for="product in affectedProductList"
-                    :key="product"
-                    :label="product"
-                    >{{ product }}</el-checkbox
+                    v-model="isSelectAll"
+                    :indeterminate="isUnsure"
+                    @change="hanldCheckProductChange"
                   >
-                </el-checkbox-group>
+                    选择全部
+                  </el-checkbox>
+
+                  <el-checkbox-group
+                    v-model="queryData.affectedProduct"
+                    @change="handleSelecteProductChange"
+                  >
+                    <el-checkbox
+                      v-for="product in affectedProductList"
+                      :key="product"
+                      :label="product"
+                      >{{ product }}</el-checkbox
+                    >
+                  </el-checkbox-group>
+                </ClientOnly>
               </template>
             </ODropdown>
           </template>
