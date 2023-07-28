@@ -91,9 +91,10 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
       '/api-euler': {
-        target: 'https://www.openeuler.org',
+        // target: 'https://www.openeuler.org',
+        target: 'https://openeuler.test.osinfra.cn',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-euler/, ''),
+        // rewrite: (path) => path.replace(/^\/api-euler/, ''),
       },
       '/api-node/': {
         target: 'https://www.openeuler.org',

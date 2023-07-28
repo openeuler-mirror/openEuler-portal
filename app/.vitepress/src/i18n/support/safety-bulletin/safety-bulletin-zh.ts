@@ -3,12 +3,13 @@ export default {
   UPDATED_PACKAGES: '更新的软件包',
   SECURITY_ADVISORIES: '安全公告',
   SECURITY_ADVISORIES_DETAIL: '安全公告详情',
-  SEARCH: '搜索安全公告',
+  SEARCH: '输入关键词（多项关键词请用，隔开）',
+  SELECT_ALL: '选择全部',
   SEVERITY_LIST: [
-    {
-      NAME: '全部',
-      LABEL: '',
-    },
+    // {
+    //   NAME: '全部',
+    //   LABEL: '',
+    // },
     {
       NAME: '低',
       LABEL: 'Low',

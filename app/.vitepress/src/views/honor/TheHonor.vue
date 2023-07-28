@@ -436,7 +436,9 @@ function clickDetail(index: number) {
           </div>
         </div>
       </div>
-      <p class="notice" v-show="activeYear === '2022'">{{ honorData.notice }}</p>
+      <p v-show="activeYear === '2022'" class="notice">
+        {{ honorData.notice }}
+      </p>
     </div>
   </AppContent>
 </template>
