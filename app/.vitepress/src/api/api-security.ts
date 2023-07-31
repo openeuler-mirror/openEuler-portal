@@ -340,11 +340,17 @@ export function getProductList() {
  * 调用接口获取影响组件列表
  * @name getProductList
  */
-export function getComponentList() {
+export function getComponentList(params: { [key: string]: any }) {
+  Object.keys(params).forEach((key) => {
+    if (!params[key]) {
+      delete params[key];
+    }
+  });
+
   const url =
     '/api-euler/api-cve/cve-security-notice-server/securitynotice/getAffectedComponent';
   return request
-    .get(url)
+    .get(url, { params })
     .then((res: AxiosResponse) => res)
     .catch((e: any) => {
       throw new Error(e);
