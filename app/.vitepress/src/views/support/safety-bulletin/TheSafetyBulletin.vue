@@ -41,8 +41,8 @@ const currentPage = ref(1);
 const totalPage = ref(0);
 const layout = ref('sizes, prev, pager, next, slot, jumper');
 const years = ['', '2023', '2022', '2021', '2020'];
-const selectedYear = ref('2023');
-const activeIndex = ref(0);
+const selectedYear = ref('');
+const activeIndex = ref(-1);
 const activeIndex1 = ref(0);
 const activeNames = ref(['1']);
 
@@ -284,7 +284,7 @@ watch(queryData, () => getSecurityLists(queryData));
           @change="searchValchange"
         ></OSearch>
 
-        <div v-if="!isMobile" class="data-picker">
+        <div class="data-picker">
           <p class="data-picker-title">日期选择器</p>
 
           <ClientOnly>
@@ -653,6 +653,9 @@ watch(queryData, () => getSecurityLists(queryData));
     .data-picker {
       display: flex;
       margin-left: 32px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
       .data-picker-title {
         width: max-content;
         line-height: 48px;
