@@ -78,8 +78,7 @@ const goPath = (item: NavItem, flag: boolean) => {
   if (item.PATH === '/#footer' && router.route.path === `/${lang.value}/`) {
     scrollToBottom();
     return;
-  }
-  if (item.PATH.startsWith('https')) {
+  } else if (item.PATH.startsWith('https')) {
     window.open(item.PATH);
     return;
   } else {
