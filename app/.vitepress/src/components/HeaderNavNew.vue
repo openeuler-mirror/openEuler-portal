@@ -77,8 +77,11 @@ const goPath = (item: NavItem, flag: boolean) => {
   // 首页进入联系我们
   if (item.PATH === '/#footer' && router.route.path === `/${lang.value}/`) {
     scrollToBottom();
+    emits('nav-click');
+    isShow.value = false;
     return;
-  } else if (item.PATH.startsWith('https')) {
+  }
+  if (item.PATH.startsWith('https')) {
     window.open(item.PATH);
     return;
   } else {
