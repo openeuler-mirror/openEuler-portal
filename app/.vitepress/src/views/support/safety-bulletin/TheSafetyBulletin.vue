@@ -121,7 +121,6 @@ const dateList = [
 const selectYear = (i: number, val: string) => {
   selectedYear.value = val;
   activeIndex1.value = i;
-  // queryData.year = val;
   queryData.date = i === 0 ? [] : dateList[i - 1];
   activeNames.value = ['2'];
 };
@@ -192,8 +191,12 @@ const affectedComponentList = ref<string[]>([]);
 const componentTotalList = ref<string[]>([]);
 function getAffectedComponentList() {
   try {
-    getComponentList().then((res: AxiosResponse) => {
+    getComponentList({
+      securityLevel: queryData.type.join(','),
+      affectedProduct: queryData.affectedProduct.join(','),
+    }).then((res: AxiosResponse) => {
       componentTotalList.value = res.data.result;
+
       affectedComponentList.value = res.data.result.slice(0, 49);
     });
   } catch (e: any) {
@@ -264,7 +267,10 @@ onMounted(() => {
   getAffectedComponentList();
 });
 
-watch(queryData, () => getSecurityLists(queryData));
+watch(queryData, () => {
+  getSecurityLists(queryData);
+  getAffectedComponentList();
+});
 </script>
 
 <template>
@@ -755,7 +761,7 @@ watch(queryData, () => getSecurityLists(queryData));
     }
 
     .selected-box {
-      max-height: 52px;
+      max-height: 50px;
       overflow: hidden;
     }
     .type-selected {
