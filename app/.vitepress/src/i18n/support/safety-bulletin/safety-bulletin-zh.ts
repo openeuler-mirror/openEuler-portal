@@ -5,6 +5,10 @@ export default {
   SECURITY_ADVISORIES_DETAIL: '安全公告详情',
   SEARCH: '输入关键词',
   SELECT_ALL: '选择全部',
+  DATE_PICKER: '日期选择器',
+  START_DATE: '开始时间',
+  END_DATE: '结束时间',
+  CANCEL: '取消选项',
   SEVERITY_LIST: [
     // {
     //   NAME: '全部',

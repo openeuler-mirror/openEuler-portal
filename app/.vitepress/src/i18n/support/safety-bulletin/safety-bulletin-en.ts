@@ -4,11 +4,16 @@ export default {
   SECURITY_ADVISORIES: 'Security Advisories',
   SECURITY_ADVISORIES_DETAIL: 'Security Advisories Detail',
   SEARCH: 'Search',
+  SELECT_ALL: 'All',
+  DATE_PICKER: 'Date Picker',
+  START_DATE: 'Start date',
+  END_DATE: 'End date',
+  CANCEL: 'Cancel',
   SEVERITY_LIST: [
-    {
-      NAME: 'All',
-      LABEL: '',
-    },
+    // {
+    //   NAME: 'All',
+    //   LABEL: '',
+    // },
     {
       NAME: 'Low',
       LABEL: 'Low',
