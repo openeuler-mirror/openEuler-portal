@@ -366,13 +366,9 @@ watch(queryData, () => {
         <el-table-column width="160">
           <template #header>
             <div v-if="queryData.type.length" class="selected-box">
-              <p
-                v-for="item in queryData.type"
-                :key="item"
-                class="type-selected"
-              >
-                {{ item }}
-              </p>
+              <span class="selected-content">
+                {{ queryData.type.join(' ') }}
+              </span>
             </div>
 
             <span v-else> {{ i18n.safetyBulletin.SEVERITY }}</span>
@@ -416,13 +412,9 @@ watch(queryData, () => {
         <el-table-column width="400">
           <template #header>
             <div v-if="queryData.affectedProduct.length" class="selected-box">
-              <p
-                v-for="item in queryData.affectedProduct"
-                :key="item"
-                class="prduct-title"
-              >
-                {{ item }}
-              </p>
+              <span class="product-title">
+                {{ queryData.affectedProduct.join(' ') }}
+              </span>
             </div>
             <span v-else>{{ i18n.safetyBulletin.AFFECTED_PRODUCTS }}</span>
 
@@ -763,10 +755,19 @@ watch(queryData, () => {
     .selected-box {
       max-height: 50px;
       overflow: hidden;
+
+      .selected-content {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        word-spacing: 100vw;
+        color: var(--o-color-brand1);
+        max-width: 56px;
+      }
     }
-    .type-selected {
-      color: var(--o-color-brand1);
-    }
+
     .filter-icon {
       cursor: pointer;
       flex-shrink: 0;
@@ -774,7 +775,16 @@ watch(queryData, () => {
       color: var(--o-color-text1);
     }
 
-    .prduct-title,
+    .product-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      word-spacing: 100vw;
+      max-width: 172px;
+      color: var(--o-color-brand1);
+    }
     .component-title {
       color: var(--o-color-brand1);
       width: 108px;
