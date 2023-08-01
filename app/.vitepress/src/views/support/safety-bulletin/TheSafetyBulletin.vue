@@ -3,20 +3,31 @@ import { reactive, ref, watch, onMounted, computed } from 'vue';
 import { useRouter } from 'vitepress';
 
 import { useI18n } from '@/i18n';
+import type { AxiosResponse } from '@/shared/axios';
 
-import { getSecurityList } from '@/api/api-security';
+import {
+  getSecurityList,
+  getProductList,
+  getComponentList,
+} from '@/api/api-security';
 import { SecurityLists, CveQuery } from '@/shared/@types/type-support';
+
+import type { CheckboxValueType } from 'element-plus';
 
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
-import TagFilter from '@/components/TagFilter.vue';
 import AppContent from '@/components/AppContent.vue';
 
 import banner from '@/assets/banner/banner-security.png';
 import satetyBulletin from '@/assets/illustrations/support/safety-bulletin.png';
 import IconCalendar from '~icons/app/icon-calendar.svg';
+import IconFilter from '~icons/app/icon-filter.svg';
+
+import ODropdown from 'opendesign/dropdown/ODropdown.vue';
+import OIcon from 'opendesign/icon/OIcon.vue';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
+import { debounce } from 'lodash';
 
 const screenWidth = useWindowResize();
 const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
@@ -30,8 +41,8 @@ const currentPage = ref(1);
 const totalPage = ref(0);
 const layout = ref('sizes, prev, pager, next, slot, jumper');
 const years = ['', '2023', '2022', '2021', '2020'];
-const selectedYear = ref('2022');
-const activeIndex = ref(0);
+const selectedYear = ref('');
+const activeIndex = ref(-1);
 const activeIndex1 = ref(0);
 const activeNames = ref(['1']);
 
@@ -43,23 +54,27 @@ const tableData = ref<SecurityLists[]>([
     securityNoticeNo: '',
     summary: '',
     type: '',
+    id: 0,
   },
 ]);
 
-const queryData: CveQuery = reactive({
+const queryData: any = reactive({
   pages: {
     page: 1,
     size: 10,
   },
   keyword: '',
-  type: '',
-  year: '',
+  type: [],
+  date: [],
+  affectedProduct: [],
+  affectedComponent: '',
 });
 
 function getSecurityLists(data: CveQuery) {
   try {
     getSecurityList(data).then((res: any) => {
       tableData.value = res.result.securityNoticeList;
+
       if (res.result.totalCount) {
         total.value = res.result.totalCount;
         totalPage.value = Math.ceil(total.value / queryData.pages.size);
@@ -74,13 +89,8 @@ function getSecurityLists(data: CveQuery) {
 
 const selectTag = (i: number, type: string) => {
   activeIndex.value = i;
-  queryData.type = type;
-};
-
-const onYearTagClick = (i: number, type: string) => {
-  queryData.year = type;
-  activeIndex1.value = i;
-  selectedYear.value = type === '' ? '全部' : type;
+  queryData.type = [];
+  queryData.type.push(type);
 };
 
 const handleSizeChange = (val: number) => {
@@ -101,10 +111,17 @@ function jumpBulletinDetail(val: any) {
   router.go(`${router.route.path}detail/?id=${val}`);
 }
 
+const dateList = [
+  ['2023-01-01', '2023-12-31'],
+  ['2022-01-01', '2022-12-31'],
+  ['2021-01-01', '2021-12-31'],
+  ['2020-01-01', '2020-12-31'],
+];
+
 const selectYear = (i: number, val: string) => {
   selectedYear.value = val;
   activeIndex1.value = i;
-  queryData.year = val;
+  queryData.date = i === 0 ? [] : dateList[i - 1];
   activeNames.value = ['2'];
 };
 
@@ -116,11 +133,146 @@ function turnPage(option: string) {
   }
 }
 
+const checkAll = ref(false);
+const isIndeterminate = ref(true);
+const riskTypes = computed(() => i18n.value.safetyBulletin.SEVERITY_LIST);
+// 严重级别
+function handleCheckedTypesChange(value: CheckboxValueType[]) {
+  checkAll.value = value.length === riskTypes.value.length;
+
+  isIndeterminate.value =
+    value.length > 0 && value.length < riskTypes.value.length;
+}
+
+function selectRatingChange(val: CheckboxValueType) {
+  isIndeterminate.value = false;
+  if (val) {
+    queryData.type = riskTypes.value.map((item: any) => {
+      return item.LABEL;
+    });
+  } else {
+    queryData.type = [];
+  }
+}
+
+// 影响产品
+const isSelectAll = ref(false);
+const isUnsure = ref(true);
+const affectedProductList = ref<string[]>([]);
+function getProducts() {
+  try {
+    getProductList().then((res: AxiosResponse) => {
+      affectedProductList.value = res.data.result;
+    });
+  } catch (e: any) {
+    throw new Error(e);
+  }
+}
+
+function hanldCheckProductChange(val: CheckboxValueType) {
+  if (val) {
+    queryData.affectedProduct = affectedProductList.value;
+  } else {
+    queryData.affectedProduct = [];
+  }
+
+  isUnsure.value = false;
+}
+
+function handleSelecteProductChange(value: CheckboxValueType[]) {
+  isSelectAll.value = value.length === affectedProductList.value.length;
+
+  isUnsure.value =
+    value.length > 0 && value.length < affectedProductList.value.length;
+}
+
+//影响组件
+const affectedComponentList = ref<string[]>([]);
+const componentTotalList = ref<string[]>([]);
+function getAffectedComponentList() {
+  try {
+    getComponentList({
+      securityLevel: queryData.type.join(','),
+      affectedProduct: queryData.affectedProduct.join(','),
+    }).then((res: AxiosResponse) => {
+      componentTotalList.value = res.data.result;
+
+      affectedComponentList.value = res.data.result.slice(0, 49);
+    });
+  } catch (e: any) {
+    throw new Error(e);
+  }
+}
+
+function getNextPage() {
+  if (!isSearchList.value) {
+    affectedComponentList.value = componentTotalList.value.slice(
+      0,
+      affectedComponentList.value.length + 50
+    );
+  } else {
+    // 搜索结果的翻页
+    searchList.value = searchTotalList.value.slice(
+      0,
+      searchList.value.length + 50
+    );
+  }
+}
+
+// 搜索组件
+function searchComponent(keyword: string, data: string[]) {
+  const regex = new RegExp(keyword, 'i');
+
+  const results = [];
+  for (let i = 0; i < data.length; i++) {
+    if (regex.test(data[i])) {
+      results.push(data[i]);
+    }
+  }
+  return results;
+}
+
+const isSearchList = ref(false);
+const keyWords = ref('');
+const searchList = ref<string[]>([]);
+const searchTotalList = ref<string[]>([]);
+const searchInputComponent = debounce(
+  (val) => {
+    searchTotalList.value = searchComponent(val, componentTotalList.value);
+
+    if (keyWords.value) {
+      isSearchList.value = true;
+      searchList.value = searchTotalList.value.slice(0, 49);
+    } else {
+      isSearchList.value = false;
+
+      affectedComponentList.value = componentTotalList.value.slice(0, 49);
+    }
+  },
+  500,
+  {
+    trailing: true,
+  }
+);
+
+function handleCommand(val: string) {
+  queryData.affectedComponent = val;
+}
+
+function handleCancelSelected() {
+  queryData.affectedComponent = '';
+}
+
 onMounted(() => {
   getSecurityLists(queryData);
+  getProducts();
+  getAffectedComponentList();
 });
 
-watch(queryData, () => getSecurityLists(queryData));
+watch(queryData, () => {
+  getSecurityLists(queryData);
+  getAffectedComponentList();
+});
 </script>
 
 <template>
@@ -139,38 +291,23 @@ watch(queryData, () => getSecurityLists(queryData));
           :placeholder="i18n.safetyBulletin.SEARCH"
           @change="searchValchange"
         ></OSearch>
-      </div>
 
-      <OCard class="filter-card">
-        <template #header>
-          <div class="card-header">
-            <TagFilter :label="i18n.safetyBulletin.SEVERITY" :show="false">
-              <OTag
-                v-for="(item, index) in i18n.safetyBulletin.SEVERITY_LIST"
-                :key="'tag' + index"
-                checkable
-                :type="activeIndex === index ? 'primary' : 'text'"
-                @click="selectTag(index, item.LABEL)"
-              >
-                {{ item.NAME }}
-              </OTag>
-            </TagFilter>
-          </div>
-        </template>
-        <div class="card-body">
-          <TagFilter :show="false" :label="i18n.safetyBulletin.YEAR">
-            <OTag
-              v-for="(item, index) in years"
-              :key="'tag' + index"
-              checkable
-              :type="activeIndex1 === index ? 'primary' : 'text'"
-              @click="onYearTagClick(index, item)"
-            >
-              {{ item === '' ? i18n.safetyBulletin.ALL : item }}
-            </OTag>
-          </TagFilter>
+        <div class="data-picker">
+          <p class="data-picker-title">{{ i18n.safetyBulletin.DATE_PICKER }}</p>
+
+          <ClientOnly>
+            <el-date-picker
+              v-model="queryData.date"
+              type="daterange"
+              :start-placeholder="i18n.safetyBulletin.START_DATE"
+              :end-placeholder="i18n.safetyBulletin.END_DATE"
+              format="YYYY/MM/DD"
+              value-format="YYYY-MM-DD"
+              :default-time="[new Date(), new Date()]"
+            />
+          </ClientOnly>
         </div>
-      </OCard>
+      </div>
 
       <div class="filter-mobile">
         <div class="filter">
@@ -227,21 +364,184 @@ watch(queryData, () => getSecurityLists(queryData));
           :label="i18n.safetyBulletin.SYNOPSIS"
           prop="summary"
         ></OTableColumn>
-        <OTableColumn
-          width="160"
-          :label="i18n.safetyBulletin.SEVERITY"
-          prop="type"
-        ></OTableColumn>
-        <OTableColumn
-          :label="i18n.safetyBulletin.AFFECTED_PRODUCTS"
-          prop="affectedProduct"
-          width="400"
-        ></OTableColumn>
-        <OTableColumn
+
+        <el-table-column width="160">
+          <template #header>
+            <div v-if="queryData.type.length" class="selected-box">
+              <span class="selected-content" :title="queryData.type.join(' ')">
+                {{ queryData.type.join(' ') }}
+              </span>
+            </div>
+
+            <span v-else> {{ i18n.safetyBulletin.SEVERITY }}</span>
+            <ODropdown :max-height="250" :listener-scorll="true">
+              <OIcon class="filter-icon">
+                <IconFilter></IconFilter>
+              </OIcon>
+
+              <template #dropdown>
+                <ClientOnly>
+                  <el-checkbox
+                    v-model="checkAll"
+                    :indeterminate="isIndeterminate"
+                    @change="selectRatingChange"
+                  >
+                    {{ i18n.safetyBulletin.SELECT_ALL }}
+                  </el-checkbox>
+
+                  <el-checkbox-group
+                    v-model="queryData.type"
+                    @change="handleCheckedTypesChange"
+                  >
+                    <el-checkbox
+                      v-for="risk in riskTypes"
+                      :key="risk.NAME"
+                      :label="risk.LABEL"
+                      >{{ risk.NAME }}</el-checkbox
+                    >
+                  </el-checkbox-group>
+                </ClientOnly>
+              </template>
+            </ODropdown>
+          </template>
+          <template #default="scope">
+            <span>
+              {{ scope.row.type }}
+            </span>
+          </template>
+        </el-table-column>
+
+        <el-table-column width="400">
+          <template #header>
+            <div
+              v-if="queryData.affectedProduct.length"
+              class="selected-box"
+              :title="queryData.affectedProduct.join(' ')"
+            >
+              <span class="product-title">
+                {{ queryData.affectedProduct.join(' ') }}
+              </span>
+            </div>
+            <span v-else>{{ i18n.safetyBulletin.AFFECTED_PRODUCTS }}</span>
+
+            <ODropdown :max-height="250" :listener-scorll="true">
+              <OIcon class="filter-icon">
+                <IconFilter></IconFilter>
+              </OIcon>
+              <template #dropdown>
+                <ClientOnly>
+                  <el-checkbox
+                    v-model="isSelectAll"
+                    :indeterminate="isUnsure"
+                    @change="hanldCheckProductChange"
+                  >
+                    {{ i18n.safetyBulletin.AFFECTED_PRODUCTS }}
+                  </el-checkbox>
+
+                  <el-checkbox-group
+                    v-model="queryData.affectedProduct"
+                    @change="handleSelecteProductChange"
+                  >
+                    <el-checkbox
+                      v-for="product in affectedProductList"
+                      :key="product"
+                      :label="product"
+                      >{{ product }}</el-checkbox
+                    >
+                  </el-checkbox-group>
+                </ClientOnly>
+              </template>
+            </ODropdown>
+          </template>
+          <template #default="scope">
+            <span>
+              {{ scope.row.affectedProduct }}
+            </span>
+          </template>
+        </el-table-column>
+
+        <el-table-column
           :label="i18n.safetyBulletin.AFFECTED_COMPONENTS"
           width="160"
-          prop="affectedComponent"
-        ></OTableColumn>
+        >
+          <template #header>
+            <span
+              v-if="queryData.affectedComponent"
+              class="component-title"
+              :title="queryData.affectedComponent"
+              >{{ queryData.affectedComponent }}</span
+            >
+            <span v-else>{{ i18n.safetyBulletin.AFFECTED_COMPONENTS }}</span>
+
+            <ODropdown
+              :max-height="250"
+              :listener-scorll="true"
+              popper-class="popper-dropdown"
+              @scorll-bottom="getNextPage"
+              @command="(val: string) => handleCommand(val)"
+            >
+              <OIcon class="filter-icon">
+                <IconFilter></IconFilter>
+              </OIcon>
+
+              <template #dropdown>
+                <div class="search-box">
+                  <div
+                    v-if="queryData.affectedComponent"
+                    class="cancel-select"
+                    @click="handleCancelSelected"
+                  >
+                    {{ i18n.safetyBulletin.CANCEL }}
+                  </div>
+                  <OSearch
+                    v-model="keyWords"
+                    :placeholder="i18n.safetyBulletin.SEARCH"
+                    @input="searchInputComponent"
+                  ></OSearch>
+                </div>
+
+                <div v-if="!keyWords">
+                  <ODropdownItem
+                    v-for="component in affectedComponentList"
+                    :key="component"
+                    :command="component"
+                    :class="
+                      queryData.affectedComponent === component
+                        ? 'is-active'
+                        : ''
+                    "
+                  >
+                    {{ component }}
+                  </ODropdownItem>
+                </div>
+
+                <div v-else>
+                  <div v-if="searchList.length">
+                    <ODropdownItem
+                      v-for="component in searchList"
+                      :key="component"
+                      :command="component"
+                      :class="
+                        queryData.affectedComponent === component
+                          ? 'is-active'
+                          : ''
+                      "
+                    >
+                      {{ component }}
+                    </ODropdownItem>
+                  </div>
+
+                  <div v-else class="no-data">No Data</div>
+                </div>
+              </template>
+            </ODropdown>
+          </template>
+          <template #default="scope">
+            <span>
+              {{ scope.row.affectedComponent }}
+            </span>
+          </template>
+        </el-table-column>
         <OTableColumn
           :label="i18n.safetyBulletin.RELEASE_DATE"
           width="160"
@@ -250,7 +550,7 @@ watch(queryData, () => getSecurityLists(queryData));
       </OTable>
 
       <ul class="mobile-list">
-        <li v-for="item in tableData" :key="item.securityNoticeNo" class="item">
+        <li v-for="item in tableData" :key="item.id" class="item">
           <ul>
             <li @click="jumpBulletinDetail(item.securityNoticeNo)">
               <span>{{ i18n.safetyBulletin.ADVISORY }}:</span
@@ -310,10 +610,43 @@ watch(queryData, () => getSecurityLists(queryData));
 </template>
 
 <style lang="scss" scoped>
+.el-dropdown__popper {
+  .el-checkbox {
+    margin-right: 0;
+    padding: 4px 8px;
+    color: var(--o-color-text1);
+  }
+  .el-checkbox-group {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.no-data {
+  padding: 8px 12px;
+  text-align: center;
+  color: var(--o-color-text1);
+}
+.search-box {
+  position: sticky;
+  top: 0;
+  .o-search {
+    width: 100%;
+  }
+
+  .cancel-select {
+    padding: 4px 8px;
+    cursor: pointer;
+    &:hover {
+      color: var(--o-color-brand1);
+    }
+  }
+}
+
 .bulletin-main {
   max-width: 1504px;
   margin: 0 auto;
   .input-container {
+    display: flex;
     @media screen and (max-width: 768px) {
       margin-bottom: var(--o-spacing-h5);
     }
@@ -321,6 +654,21 @@ watch(queryData, () => getSecurityLists(queryData));
       height: 48px;
       @media screen and (max-width: 768px) {
         height: 36px;
+      }
+    }
+
+    .data-picker {
+      display: flex;
+      margin-left: 32px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+      .data-picker-title {
+        width: max-content;
+        line-height: 48px;
+        margin-right: 12px;
+        font-size: 14px;
+        color: var(--o-color-text1);
       }
     }
   }
@@ -371,49 +719,7 @@ watch(queryData, () => getSecurityLists(queryData));
       display: block;
     }
   }
-  .filter-card {
-    margin: var(--o-spacing-h4) 0;
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-    :deep(.el-card__body) {
-      padding: var(--o-spacing-h8) var(--o-spacing-h2);
-    }
-    .category {
-      display: inline-block;
-      width: 56px;
-      font-size: var(--o-font-size-text);
-      font-weight: 400;
-      color: var(--o-color-text1);
-      line-height: var(--o-line-height-text);
-      margin-right: var(--o-spacing-h4);
-    }
-    .category-item {
-      display: inline-block;
-      height: 28px;
-      border: none;
-      margin-right: var(--o-spacing-h3);
-      font-size: var(--o-font-size-text);
-      font-weight: 400;
-      color: var(--o-color-text4);
-      line-height: var(--o-line-height-text);
 
-      cursor: pointer;
-    }
-    .active {
-      display: inline-block;
-      border: 1px solid var(--o-color-link1);
-      color: var(--o-color-link1);
-      padding: 0px var(--o-spacing-h6);
-    }
-    .card-header {
-      padding-bottom: var(--o-spacing-h8);
-      border-bottom: 1px solid var(--o-color-division1);
-    }
-    .card-body {
-      padding-top: var(--o-spacing-h8);
-    }
-  }
   .filter-mobile {
     display: none;
     @media screen and (max-width: 768px) {
@@ -446,13 +752,54 @@ watch(queryData, () => getSecurityLists(queryData));
     }
   }
   .pc-list {
-    margin-bottom: var(--o-spacing-h2);
+    margin: var(--o-spacing-h2) 0;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
     .detail-page {
       color: var(--o-color-link1);
       cursor: pointer;
     }
-    @media screen and (max-width: 768px) {
-      display: none;
+
+    .selected-box {
+      max-height: 50px;
+      overflow: hidden;
+
+      .selected-content {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        word-spacing: 100vw;
+        color: var(--o-color-brand1);
+        max-width: 56px;
+      }
+    }
+
+    .filter-icon {
+      cursor: pointer;
+      flex-shrink: 0;
+      margin-left: 5px;
+      color: var(--o-color-text1);
+    }
+
+    .product-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      word-spacing: 100vw;
+      max-width: 172px;
+      color: var(--o-color-brand1);
+    }
+    .component-title {
+      color: var(--o-color-brand1);
+      max-width: 108px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
   .empty-tip {
@@ -506,6 +853,10 @@ watch(queryData, () => getSecurityLists(queryData));
       color: var(--o-color-text1);
       line-height: var(--o-spacing-h4);
     }
+  }
+  :deep(.el-table th.el-table__cell > .cell) {
+    display: flex;
+    align-items: center;
   }
 }
 </style>
