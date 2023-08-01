@@ -221,9 +221,11 @@ function getNextPage() {
 
 // 搜索组件
 function searchComponent(keyword: string, data: string[]) {
+  const regex = new RegExp(keyword, 'i');
+
   const results = [];
   for (let i = 0; i < data.length; i++) {
-    if (data[i].includes(keyword)) {
+    if (regex.test(data[i])) {
       results.push(data[i]);
     }
   }
@@ -291,14 +293,14 @@ watch(queryData, () => {
         ></OSearch>
 
         <div class="data-picker">
-          <p class="data-picker-title">日期选择器</p>
+          <p class="data-picker-title">{{ i18n.safetyBulletin.DATE_PICKER }}</p>
 
           <ClientOnly>
             <el-date-picker
               v-model="queryData.date"
               type="daterange"
-              start-placeholder="Start date"
-              end-placeholder="End date"
+              :start-placeholder="i18n.safetyBulletin.START_DATE"
+              :end-placeholder="i18n.safetyBulletin.END_DATE"
               format="YYYY/MM/DD"
               value-format="YYYY-MM-DD"
               :default-time="[new Date(), new Date()]"
@@ -366,7 +368,7 @@ watch(queryData, () => {
         <el-table-column width="160">
           <template #header>
             <div v-if="queryData.type.length" class="selected-box">
-              <span class="selected-content">
+              <span class="selected-content" :title="queryData.type.join(' ')">
                 {{ queryData.type.join(' ') }}
               </span>
             </div>
@@ -395,7 +397,7 @@ watch(queryData, () => {
                       v-for="risk in riskTypes"
                       :key="risk.NAME"
                       :label="risk.LABEL"
-                      >{{ risk.LABEL }}</el-checkbox
+                      >{{ risk.NAME }}</el-checkbox
                     >
                   </el-checkbox-group>
                 </ClientOnly>
@@ -411,7 +413,11 @@ watch(queryData, () => {
 
         <el-table-column width="400">
           <template #header>
-            <div v-if="queryData.affectedProduct.length" class="selected-box">
+            <div
+              v-if="queryData.affectedProduct.length"
+              class="selected-box"
+              :title="queryData.affectedProduct.join(' ')"
+            >
               <span class="product-title">
                 {{ queryData.affectedProduct.join(' ') }}
               </span>
@@ -429,7 +435,7 @@ watch(queryData, () => {
                     :indeterminate="isUnsure"
                     @change="hanldCheckProductChange"
                   >
-                    选择全部
+                    {{ i18n.safetyBulletin.AFFECTED_PRODUCTS }}
                   </el-checkbox>
 
                   <el-checkbox-group
@@ -459,9 +465,12 @@ watch(queryData, () => {
           width="160"
         >
           <template #header>
-            <span v-if="queryData.affectedComponent" class="component-title">{{
-              queryData.affectedComponent
-            }}</span>
+            <span
+              v-if="queryData.affectedComponent"
+              class="component-title"
+              :title="queryData.affectedComponent"
+              >{{ queryData.affectedComponent }}</span
+            >
             <span v-else>{{ i18n.safetyBulletin.AFFECTED_COMPONENTS }}</span>
 
             <ODropdown
@@ -482,11 +491,11 @@ watch(queryData, () => {
                     class="cancel-select"
                     @click="handleCancelSelected"
                   >
-                    取消选项
+                    {{ i18n.safetyBulletin.CANCEL }}
                   </div>
                   <OSearch
                     v-model="keyWords"
-                    placeholder="请输入关键词"
+                    :placeholder="i18n.safetyBulletin.SEARCH"
                     @input="searchInputComponent"
                   ></OSearch>
                 </div>
@@ -787,7 +796,7 @@ watch(queryData, () => {
     }
     .component-title {
       color: var(--o-color-brand1);
-      width: 108px;
+      max-width: 108px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
