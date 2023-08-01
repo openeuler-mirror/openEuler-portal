@@ -4680,7 +4680,7 @@
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2022/04/08",
-    "friendlyLink": "http://www.cancon.com.cn",
+    "friendlyLink": "https://www.cancon.com.cn/product/1582.html",
     "boardCards": [
       {
         "vendorID": "8086",
@@ -4722,12 +4722,12 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "R6240H0",
+      "productInformation": "https://www.cancon.com.cn/product/1582.html",
       "certificationTime": "2022/04/08",
       "commitID": "",
       "mainboardModel": "62DB32",
       "biosUefi": "0XWH001017",
-      "cpu": "Hygon 2",
+      "cpu": "Hygon 3",
       "ram": "28*16G DIMMs",
       "portsBusTypes": "x16 PCIE",
       "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
@@ -6661,9 +6661,9 @@
     "osVersion": "openEuler 22.03 LTS",
     "architecture": "x86_64",
     "date": "2022/08/17",
-    "friendlyLink": "http://www.cancon.com.cn",
+    "friendlyLink": "https://www.cancon.com.cn/product/1582.html",
     "compatibilityConfiguration": {
-        "productInformation": "http://www.cancon.com.cn",
+        "productInformation": "https://www.cancon.com.cn/product/1582.html",
         "certificationTime": "2022/08/17",
         "commitID": "I5M1NV",
         "mainboardModel": "62DB32",
@@ -10703,5 +10703,125 @@
       "hostBusAdapter": "",
       "hardDiskDrive": "Micron_5200_MTFD"
     }
+  },
+  {
+    "hardwareFactory": "Suma",
+    "hardwareModel": "R6440H0",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "x86_64",
+    "date": "2023/07/28",
+    "friendlyLink": "https://www.cancon.com.cn/product/1588.html",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "ffff",
+        "ssID": "0000",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "igb",
+        "version": "5.4.0-k",
+        "type": "NIC",
+        "date": "2022/04/08",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Intel",
+        "boardModel": "",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "005d",
+        "svID": "1000",
+        "ssID": "9361",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "",
+        "type": "RAID",
+        "date": "2022/04/08",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Avago",
+        "boardModel": "9361-8i",
+        "chipModel": "SAS-3 3108",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn/product/1582.html",
+      "certificationTime": "2023/07/28",
+      "commitID": "I7P7X1",
+      "mainboardModel": "62DB32",
+      "biosUefi": "0XWH001017",
+      "cpu": "Hygon 3",
+      "ram": "28*16G DIMMs",
+      "portsBusTypes": "x16 PCIE",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+      "hardDiskDrive": "SA MZ7KH960HAJR-5 960G 2.5SATA 6Gb M SSD"
+    }
+  }, 
+  {
+    "hardwareFactory": "Suma",
+    "hardwareModel": "R6440H0",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "x86_64",
+    "date": "2023/06/05",
+    "friendlyLink": "https://www.cancon.com.cn/product/1588.html",
+    "compatibilityConfiguration": {
+        "productInformation": "https://www.cancon.com.cn/product/1588.html",
+        "certificationTime": "2023/07/28",
+        "commitID": "I7P7Q4",
+        "mainboardModel": "62DB32",
+        "biosUefi": "CXYH051016",
+        "cpu": "Hygon 3",
+        "ram": "32*16G RDIMMs",
+        "portsBusTypes": "x16 PCIE",
+        "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+        "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+        "hardDiskDrive": "SA MZ7KH960HAJR-5 960G 2.5SATA 6Gb M SSD"
+    },
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1dcf",
+        "ssID": "0308",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "igb",
+        "version": "",
+        "type": "NIC",
+        "date": "2023/06/05",
+        "sha256": "7aaf89fad3eae542e505379cef9e6fb9ad65be587f0993f4de63a50ca9b93229",
+        "driverSize": "542K",
+        "chipVendor": "Intel",
+        "boardModel": "65MA32",
+        "chipModel": "I350",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "005d",
+        "svID": "1000",
+        "ssID": "9361",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2023/06/05",
+        "sha256": "abf3ad2595702e635fb07be307414d9df4baccd8ad1a1c369d28be61a46c93b6",
+        "driverSize": "343K",
+        "chipVendor": "Avago",
+        "boardModel": "9560-8i",
+        "chipModel": "SAS3908",
+        "downloadLink": "inbox"
+      } 
+    ]
   }
 ]
