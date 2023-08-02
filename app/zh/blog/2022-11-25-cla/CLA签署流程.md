@@ -20,7 +20,7 @@ CLA 是 Contributor License Agreement 的缩写，一般翻译为贡献者许可
 #### 2. 企业签署 openEuler 社区 CLA 的流程
 
 
-2.1 openEuler 社区 CLA 签署地址 [https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI= ](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)
+2.1 openEuler 社区 CLA 签署地址 [https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340 ](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340)
 在页面点击 "签署企业 CLA"（英文页面为 "Sign Corporation CLA" ） 按钮进入签署页面 按钮进入。
 
 ![images](./images/1.jpg)
@@ -57,7 +57,7 @@ CLA 是 Contributor License Agreement 的缩写，一般翻译为贡献者许可
 
 #### 3. 企业员工 CLA 贡献管理系统使用说明
 
-3.1 企业员工 CLA 管理系统的登录页面地址为 [https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=) 在此页面点击 "企业管理员" 按钮（英文页面为 "Corporation Manager" ）。
+3.1 企业员工 CLA 管理系统的登录页面地址为 [https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340) 在此页面点击 "企业管理员" 按钮（英文页面为 "Corporation Manager" ）。
 
 ![images](./images/8.jpg)
 
@@ -91,7 +91,7 @@ CLA 是 Contributor License Agreement 的缩写，一般翻译为贡献者许可
 
 #### 4. 企业员工贡献前需要签署员工 CLA 
 
-4.1 企业员工在该企业完成签署 CLA 后，在正式贡献前，需要签署员工 CLA ，签署地址 [https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI= ](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)
+4.1 企业员工在该企业完成签署 CLA 后，在正式贡献前，需要签署员工 CLA ，签署地址 [https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340 ](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340)
 
 在页面点击 "签署员工 CLA" （英文页面为 "Sign Employee CLA"）
 

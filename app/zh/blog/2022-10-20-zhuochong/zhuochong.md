@@ -103,7 +103,7 @@ https://docs.openeuler.org/zh/
 
 [3]
 点我签署:
-https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=
+https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340
 
 [4]
 openEuler 文档捉虫活动官网:
