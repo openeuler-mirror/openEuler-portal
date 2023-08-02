@@ -534,7 +534,7 @@ export default {
             {
               NAME: 'CLA签署',
               LABEL: '',
-              PATH: 'https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=',
+              PATH: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
             },
           ],
         },

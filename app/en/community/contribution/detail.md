@@ -50,7 +50,7 @@ Experience a range of original open source projects in the openEuler community.
 ## 2. Sign the CLA
 
 Sign the openEuler community Contributor License Agreement (CLA) before starting community contributions.
-Choose an individual CLA, employee CLA, or corporation CLA based on your participation status (click [here](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=))
+Choose an individual CLA, employee CLA, or corporation CLA based on your participation status (click [here](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340))
 
 - Individual CLA: Join the community as an individual.
 - Corporation CLA: Join the community as a corporation.
@@ -81,7 +81,7 @@ If you fail to find the SIGs you are interested in and want to start a new SIG f
 
 ### 3.3 Engage in Community Contributions
 
-Once you sign the [CLA](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=) and join a [SIG](https://www.openeuler.org/en/sig/sig-list/) you can start your contribution journey. Any contribution, big or small, are welcomed and valued by the community.
+Once you sign the [CLA](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340) and join a [SIG](https://www.openeuler.org/en/sig/sig-list/) you can start your contribution journey. Any contribution, big or small, are welcomed and valued by the community.
 
 ##### 3.3.1.Submit and Address Issues
 

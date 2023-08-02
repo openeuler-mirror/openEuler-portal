@@ -52,7 +52,7 @@ import illustration from '@/assets/illustrations/contribution.png';
 
 在参与社区贡献前，您需要签署 openEuler 社区贡献者许可协议（CLA）。   
 查看：[openEuler CLA 签署](https://www.bilibili.com/video/BV12A411o7zY/?spm_id_from=333.337.search-card.all.click&vd_source=0aa547ea87e7a7505cf544eacc2236ac)。   
-根据您的参与身份，选择签署个人 CLA、员工 CLA 或企业 CLA，请点击[这里](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)签署
+根据您的参与身份，选择签署个人 CLA、员工 CLA 或企业 CLA，请点击[这里](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340)签署
 
 - 个人 CLA：以个人身份参与社区，请签署个人 CLA
 - 企业 CLA: 以企业身份参与社区，请签署企业 CLA
@@ -83,7 +83,7 @@ SIG 就是 Special Interest Group 的缩写，openEuler 社区按照不同的 SI
 
 ### 3.3 参与社区贡献
 
-在签署了[CLA 协议](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)、找到了你想参与的[SIG 组](https://www.openeuler.org/zh/sig/sig-list/)之后，就可以开始你的社区贡献之旅啦！社区贡献的方式有很多种，每一种贡献都将受到社区的欢迎和重视。
+在签署了[CLA 协议](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340)、找到了你想参与的[SIG 组](https://www.openeuler.org/zh/sig/sig-list/)之后，就可以开始你的社区贡献之旅啦！社区贡献的方式有很多种，每一种贡献都将受到社区的欢迎和重视。
 
 ##### 3.3.1.提交 Issue/处理 issue 任务
 
