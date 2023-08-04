@@ -235,15 +235,10 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: '成都 嵌入式',
-              },
-            ],
-          },
-          {
-            activeType: '用户组活动',
-            activeEvent: [
-              {
-                activeName: '南京',
+                activeName: 'Code Camp',
+                activelink: {
+                  url: 'https://community.riscv.org/events/#/list',
+                },
               },
             ],
           },
@@ -256,10 +251,15 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: '北京 智能运维',
+                activeName: '创新技术 北京',
               },
+            ],
+          },
+          {
+            activeType: '用户组活动',
+            activeEvent: [
               {
-                activeName: '北京 云原生',
+                activeName: '西安',
               },
             ],
           },
@@ -272,7 +272,10 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: '待定',
+                activeName: '嵌入式 长沙',
+              },
+              {
+                activeName: '云原生 上海',
               },
             ],
           },
@@ -280,7 +283,7 @@ export default {
             activeType: '用户组活动',
             activeEvent: [
               {
-                activeName: '广州',
+                activeName: '成都',
               },
             ],
           },
