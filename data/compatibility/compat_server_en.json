@@ -11005,9 +11005,9 @@
         "date": "2023/07/31",
         "sha256": "b48c3280e58304fa64b73d6cb0f50ddd4106d3f3a088952175a161daf8058611",
         "driverSize": "46368k",
-        "chipVendor": "Microchip",
+        "chipVendor": "Adaptec",
         "boardModel": "P460-B2",
-        "chipModel": "PM8204",
+        "chipModel": "Smart Storage PQI",
         "item": "",
         "downloadLink": "inbox"
       }
