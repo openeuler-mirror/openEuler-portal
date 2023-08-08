@@ -17,7 +17,6 @@ import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import IconCancel from '~icons/app/icon-cancel.svg';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
-import { addSearchBuriedData } from '@/shared/utils';
 
 const screenWidth = useWindowResize();
 const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
@@ -213,7 +212,6 @@ function searchAll(current?: string) {
       currentIndex.value = 0;
     }
     currentPage.value = 1;
-    addSearchBuriedData(searchInput.value);
     searchType.value = current || '';
     searchCountAll(current);
     searchDataAll();
@@ -231,31 +229,15 @@ function handleSelect(val: string) {
   searchAll();
 }
 // 设置搜索结果的跳转路径
-function goLink(data: any, index: number) {
+function goLink(data: any) {
   let { path } = data;
   let search_result_url = '/' + path;
-  const searchKeyObj = {
-    search_tag: data.type,
-    search_rank_num: pageSize.value * (currentPage.value - 1) + (index + 1),
-    search_result_total_num: total.value,
-    search_result_url: '',
-  };
-  const sensors = (window as any)['sensorsDataAnalytic201505'];
-  const sensorObj = {
-    profileType: 'selectSearchResult',
-    ...(data || {}),
-    ...((window as any)['sensorsCustomBuriedData'] || {}),
-    ...((window as any)['addSearchBuriedData'] || {}),
-    ...searchKeyObj,
-  };
   if (data.type === 'docs') {
     // hugo 编译 路由空格会被替换为 -
     path = path.replaceAll(' ', '-');
     search_result_url = site.value.themeConfig.docsUrl + '/' + path + '.html';
-    sensorObj.search_result_url = search_result_url;
   } else if (data.type === 'forum') {
     search_result_url = `${site.value.themeConfig.forumUrl}${path}`;
-    sensorObj.search_result_url = search_result_url;
   } else {
     data.type === 'news' || data.type === 'blog'
       ? (search_result_url = `${search_result_url}.html`)
@@ -263,7 +245,6 @@ function goLink(data: any, index: number) {
     search_result_url = location.origin + search_result_url;
   }
   window.open(encodeURI(search_result_url));
-  sensors.setProfile(sensorObj);
 }
 // 移动端上下翻页事件
 function turnPage(option: string) {
@@ -355,15 +336,12 @@ watch(
 
         <div class="content-box">
           <ul v-if="searchResultList.length" class="content-list">
-            <li v-for="(item, index) in searchResultList" :key="item.id">
-              <h3
-                v-dompurify-html="item.title"
-                @click="goLink(item, index)"
-              ></h3>
+            <li v-for="item in searchResultList" :key="item.id">
+              <h3 v-dompurify-html="item.title" @click="goLink(item)"></h3>
               <p
                 v-dompurify-html="item.textContent"
                 class="detail"
-                @click="goLink(item, index)"
+                @click="goLink(item)"
               ></p>
               <p class="from">
                 <span>{{ i18n.search.form }}</span>
