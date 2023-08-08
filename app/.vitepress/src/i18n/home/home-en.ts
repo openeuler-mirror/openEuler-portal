@@ -168,7 +168,6 @@ export default {
     INTRO_DESCRIPTION:
       'As an open community, openEuler works with global developers to build an open, diverse, and architecture-inclusive software ecosystem that supports multiple processor architectures and covers a full range of digital facilities. openEuler is committed to supercharging enterprise digital infrastructure and boosting the application ecosystem.',
     INTRO_IMG_URL: '',
-    MOOC_URL: 'https://moocstudio.openeuler.org/en',
     INTRO_MAP: [
       {
         NAME: '01',
