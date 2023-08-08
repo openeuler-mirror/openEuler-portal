@@ -11028,7 +11028,7 @@
   },
   {
     "hardwareFactory": "新华三",
-    "hardwareModel": "H3C UniServer R5500 G5",
+    "hardwareModel": "H3C UniServer R5500 G5_INTEL",
     "osVersion": "openEuler 22.03 LTS",
     "architecture": "x86_64",
     "date": "2023/07/19",
@@ -11089,7 +11089,7 @@
   },
   {
     "hardwareFactory": "新华三",
-    "hardwareModel": "H3C UniServer R5500 G5",
+    "hardwareModel": "H3C UniServer R5500 G5_AMD",
     "osVersion": "openEuler 22.03 LTS",
     "architecture": "x86_64",
     "date": "2023/07/30",
