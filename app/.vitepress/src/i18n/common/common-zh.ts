@@ -298,12 +298,6 @@ export default {
           PATH: '/approve/',
         },
         {
-          NAME: '兼容性技术测评',
-          ID: 'compatibility-test',
-          PATH: 'https://certification.openeuler.org/',
-          IS_OPEN_MINISITE_WINDOW: 1,
-        },
-        {
           NAME: '兼容性列表',
           ID: 'compatibility',
           PATH: '/compatibility/',
@@ -455,11 +449,6 @@ export default {
               NAME: 'OSV技术测评',
               LABEL: '查看OSV技术测评结果',
               PATH: '/approve/',
-            },
-            {
-              NAME: '兼容性技术测评',
-              LABEL: '帮助企业快速申请兼容性技术测评',
-              PATH: 'https://certification.openeuler.org/',
             },
             {
               NAME: '兼容性列表',
