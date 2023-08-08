@@ -1,7 +1,5 @@
 FROM gplane/pnpm as Builder
 
-RUN pnpm -v
-
 RUN mkdir -p /home/openeuler/web
 WORKDIR /home/openeuler/web
 COPY . /home/openeuler/web
@@ -18,7 +16,13 @@ RUN chmod -R 755 /usr/share/nginx/html
 RUN rm -rf  /usr/share/nginx/html/ru
 COPY ./deploy/nginx/nginx.conf /etc/nginx/nginx.conf
 
-ENV RUN_USER nginx
-ENV RUN_GROUP nginx
-EXPOSE 80
+RUN touch /var/run/nginx.pid \
+    && chown -R nginx:nginx /var/log/nginx \
+    && chown -R nginx:nginx /var/run/nginx.pid \
+    && chown -R nginx:nginx /etc/nginx
+
+EXPOSE 8080
+
+USER nginx
+
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
