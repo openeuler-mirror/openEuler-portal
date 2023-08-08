@@ -60,11 +60,6 @@ watch(
     } else if (getData.value.schedule) {
       agendaData2.value = getData.value.schedule.content.content.slice(0, 1);
     }
-    // if (tabType.value === 1) {
-    //   agendaData2.value = summitData.agenda1.content.content.slice(1);
-    // } else {
-    //   agendaData2.value = summitData.agenda1.content.content.slice(0, 1);
-    // }
   },
   {
     immediate: true,
@@ -73,23 +68,7 @@ watch(
 // 控制直播
 const isLiverShow = ref(0);
 
-// 埋点统计
-function setAdvertisedData() {
-  const sensors = (window as any)['sensorsDataAnalytic201505'];
-  const { href } = window.location;
-  if (href.includes('?utm_source')) {
-    sensors?.setProfile({
-      ...(window as any)['sensorsCustomBuriedData'],
-      profileType: 'fromAdvertised',
-      origin: href,
-    });
-  }
-}
-onMounted(() => {
-  setTimeout(() => {
-    setAdvertisedData();
-  }, 300);
-});
+
 </script>
 <template>
   <SummitBanner :banner-data="summitData.banner" />

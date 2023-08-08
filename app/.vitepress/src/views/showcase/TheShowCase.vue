@@ -15,7 +15,6 @@ import IconRight from '~icons/app/icon-arrow-right.svg';
 import IconDownload from '~icons/app/icon-download.svg';
 import banner from '@/assets/banner/banner-community.png';
 import search from '@/assets/illustrations/search.png';
-import { addSearchBuriedData } from '@/shared/utils';
 
 const keyWord = ref('');
 const i18n = useI18n();
@@ -103,34 +102,9 @@ function jumpPage(page: number) {
   currentPage.value = page;
 }
 // 点击跳转案例详情页面
-function goDetail(link: string, item: any, index: number) {
+function goDetail(link: string) {
   const search_result_url = '/' + link.replace('index', '');
-  const searchKeyObj = {
-    search_tag: currentTag.value,
-    search_rank_num: pageSize.value * (currentPage.value - 1) + (index + 1),
-    search_result_total_num: total.value,
-    search_result_url: location.origin + search_result_url,
-  };
-  try {
-    const sensors = (window as any)['sensorsDataAnalytic201505'];
-    const searchResult = keyWord.value
-      ? (window as any)['addSearchBuriedData'] || {}
-      : {
-          search_key: '',
-          search_event_id: '',
-        };
-    sensors.setProfile({
-      profileType: 'selectSearchResult',
-      ...(item || {}),
-      ...((window as any)['sensorsCustomBuriedData'] || {}),
-      ...searchResult,
-      ...searchKeyObj,
-    });
-  } catch (error: any) {
-    console.error(error);
-  } finally {
-    window.open(search_result_url);
-  }
+  window.open(search_result_url);
 }
 // 设置当前tag的所有案例
 function setCurrentCaseListAll() {
@@ -176,7 +150,6 @@ function searchCase() {
   activeIndex.value = 0;
   currentTag.value = userCaseData.value.tags[0];
   if (keyWord.value) {
-    addSearchBuriedData(keyWord.value);
     getUserCaseData(searchData.value).then((res) => {
       if (res.status === 200 && res.obj.records) {
         CaseListAll.value = res.obj.records;
@@ -291,7 +264,7 @@ onMounted(() => {
     </div>
     <div class="case-list">
       <OCard
-        v-for="(item, index) in currentCaseList"
+        v-for="item in currentCaseList"
         :key="item.path"
         shadow="hover"
         class="case-card"
@@ -301,7 +274,7 @@ onMounted(() => {
           <p class="detail">
             {{ item.summary }}
           </p>
-          <a @click="goDetail(item.path, item, index)">
+          <a @click="goDetail(item.path)">
             <OButton type="primary" size="mini" class="confirm-btn">{{
               userCaseData.button
             }}</OButton>

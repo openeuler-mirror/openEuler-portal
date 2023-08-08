@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed } from 'vue';
 import { showGuard, useStoreData } from '@/shared/login';
 import { useCommon } from '@/stores/common';
-import { getUrlParams } from '@/shared/utils';
 
 import AppContext from '@/components/AppContent.vue';
 
@@ -16,7 +15,6 @@ import downIllImg1Dark from '@/assets/category/celebrating/down-ill1-dark.png';
 import downIllImg2Dark from '@/assets/category/celebrating/down-ill2-dark.png';
 import succeedTipImg from '@/assets/category/celebrating/succeed-tip.png';
 
-// const { token } = getUserAuth();
 const { guardAuthClient } = useStoreData();
 const commonStore = useCommon();
 const downIllImg1 = computed(() =>
@@ -91,23 +89,9 @@ const data = {
   },
 };
 const isTipShow = ref(false);
-// 设置下载埋点
-function setDownData() {
-  const sensors = (window as any)['sensorsDataAnalytic201505'];
-  const { href } = window.location;
-  const paramsArr = getUrlParams(href);
-  sensors?.setProfile({
-    userName: guardAuthClient.value.username,
-    profileType: 'Download',
-    downloadLink: data.down.link,
-    date: new Date().getTime(),
-    origin: href,
-    ...paramsArr,
-  });
-}
+
 function onDownBtnClick() {
   if (guardAuthClient.value.photo && guardAuthClient.value.username) {
-    setDownData();
     isTipShow.value = true;
     window.open(data.down.link, '_self');
   } else {
@@ -117,25 +101,7 @@ function onDownBtnClick() {
 function onMaskClick() {
   isTipShow.value = false;
 }
-// // 埋点统计
-function setAdvertisedData() {
-  const sensors = (window as any)['sensorsDataAnalytic201505'];
-  const { href } = window.location;
-  if (href.includes('?utm_source')) {
-    const paramsArr = getUrlParams(href);
-    sensors?.setProfile({
-      ...(window as any)['sensorsCustomBuriedData'],
-      profileType: 'fromAdvertised',
-      origin: href,
-      ...paramsArr,
-    });
-  }
-}
-onMounted(() => {
-  setTimeout(() => {
-    setAdvertisedData();
-  }, 300);
-});
+
 </script>
 
 <template>
