@@ -10,7 +10,7 @@ category: migration
 - ### 新增特性
     1.x2openEuler新增对1000节点并发的支持
 
-    2.x2openEuler后端数据库由sqlite修改为maridb，初始化脚本新增对maridb的初始化
+    2.x2openEuler后端数据库由sqlite修改为mariadb，初始化脚本新增对mariadb的初始化
 
     3.修改x2openEuler升级前检查方案，提高升级前检查准确率
 
