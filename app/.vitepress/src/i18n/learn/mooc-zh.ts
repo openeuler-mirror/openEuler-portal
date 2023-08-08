@@ -36,18 +36,6 @@ export default {
       ],
     },
     {
-      ID: '3',
-      IMG: mooc,
-      TITLE: 'Moocstudio',
-      DESC: '集计算机课程编写和学习一体的教育平台',
-      CHILDREN: [
-        {
-          NAME: '开始学习',
-          PATH: 'https://moocstudio.openeuler.org/zh',
-        },
-      ],
-    },
-    {
       ID: '4',
       IMG: mooc,
       TITLE: 'Tutorials',

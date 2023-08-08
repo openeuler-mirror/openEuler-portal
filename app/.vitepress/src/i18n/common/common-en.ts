@@ -78,17 +78,6 @@ export default {
           PATH: '/en/',
           IS_OPEN_WINDOW: 1,
         },
-        {
-          NAME: 'MoocStudio',
-          ID: 'MoocStudio',
-          PATH: 'https://moocstudio.openeuler.org/en/',
-          IS_OPEN_MINISITE_WINDOW: 1,
-        },
-        // {
-        //   NAME: 'MOOC',
-        //   ID: 'mooc',
-        //   PATH: '/learn/mooc/',
-        // },
       ],
       CLASS: ['learning', 'learn'],
     },
