@@ -113,11 +113,6 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-mail/, ''),
       },
-      '/api-certification/': {
-        target: 'https://ccs.openeuler.org/ccs/base/',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-certification/, ''),
-      },
     },
   },
 });
