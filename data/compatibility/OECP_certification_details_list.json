@@ -1,87 +1,15 @@
 [
     {
-        "osv_name": "苏大信创（青岛）信息科技有限公司",
-        "os_version": "DataSafeKitOS20.03LTS-SP3-x86_64-dvd.iso",
-        "arch": "x86_64",
-        "checksum": "2793ecd4c7458380bd85c6198bca5b22",
-        "base_openeuler_version": "openEuler 20.03 LTS SP3",
-        "os_download_link": "http://www.safekitchina.com/",
-        "friendly_link": "http://www.safekitchina.com/",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/6/30",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "中软国际科技服务有限公司",
-        "os_version": "CSIOS-1.0-LTS-aarch64-dvd.iso",
+        "osv_name": "北京锐安科技有限公司",
+        "os_version": "runOS-22.03-LTS-SP2-aarch64-dvd.iso",
         "arch": "aarch64",
-        "checksum": "a450618adc31d016b2c98d92268f84e2",
-        "base_openeuler_version": "openEuler 22.03 LTS",
-        "os_download_link": "https://www.chinasofti.com/ ",
-        "friendly_link": "https://www.chinasofti.com/ ",
+        "checksum": "81ad2107a5bf1c8bcbe8c4f84af76d08f5e148d6451cd36def8ba9cc56c28fb7",
+        "base_openeuler_version": "openEuler 22.03 LTS SP2",
+        "os_download_link": "http://www.bjrun.com/",
+        "friendly_link": "http://www.bjrun.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/6/30",
+        "date": "2023/7/30",
         "details": "详细信息",
         "tools_result": [
             {
@@ -144,16 +72,16 @@
         ]
     },
     {
-        "osv_name": "中软国际科技服务有限公司",
-        "os_version": "CSIOS-1.0-LTS-x86_64-dvd.iso",
+        "osv_name": "北京锐安科技有限公司",
+        "os_version": "runOS-22.03-LTS-SP2-x86_64-dvd.iso",
         "arch": "x86_64",
-        "checksum": "0dfe13feea620b203065f7f5df88bb91",
-        "base_openeuler_version": "openEuler 22.03 LTS",
-        "os_download_link": "https://www.chinasofti.com/ ",
-        "friendly_link": "https://www.chinasofti.com/ ",
+        "checksum": "c704bb163bda6219b4656d96a772d7c8752717dd3ce80ffd4c0d3406da71fc68",
+        "base_openeuler_version": "openEuler 22.03 LTS SP2",
+        "os_download_link": "http://www.bjrun.com/",
+        "friendly_link": "http://www.bjrun.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/6/30",
+        "date": "2023/7/30",
         "details": "详细信息",
         "tools_result": [
             {
