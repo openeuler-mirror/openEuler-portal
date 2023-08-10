@@ -28,7 +28,6 @@ import {
   driverOSOptions,
   getSoftwareList,
   getBusinessSoftwareList,
-  getTestOrganizations,
   getCpu,
   getSoftFilter,
   getDriveTypes,
@@ -439,15 +438,6 @@ onMounted(() => {
     throw new Error(e);
   }
 
-  try {
-    getTestOrganizations().then((res: any) => {
-      res.result.testOrganizations.forEach((item: string) => {
-        testOrganizationsLists.value.push(item);
-      });
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
 
   try {
     getCpu({ lang: `${lang.value}` }).then((res: any) => {
@@ -810,7 +800,7 @@ onMounted(() => {
       </OTabPane>
 
       <OTabPane
-        v-if="lang === 'zh'"
+        v-if="false"
         :label="i18n.compatibility.BUSINESS_SOFTWARE"
         name="4"
       >
@@ -1392,7 +1382,7 @@ onMounted(() => {
         </el-collapse-item>
 
         <el-collapse-item
-          v-if="lang === 'zh'"
+          v-if="false"
           :title="i18n.compatibility.BUSINESS_SOFTWARE"
           name="4"
         >

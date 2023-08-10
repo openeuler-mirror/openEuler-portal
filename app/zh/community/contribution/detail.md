@@ -120,7 +120,7 @@ SIG 就是 Special Interest Group 的缩写，openEuler 社区按照不同的 SI
 
 ##### 3.3.3.贡献软件包
 
-如果你发现 openEuler 缺失了一个软件包，可以帮 openEuler 把这个软件包补上。实际上贡献软件包的过程就是帮助 openEuler 提供更丰富功能的过程。希望随着大家的参与，openEuler 能够成为一个“无所不有”的软件生态系统。openEuler 支持在 gitee 新增软件包的同时自动在 obs 的 openEuler:Fctory 上创建同名仓库。这样在向已创建的 gitee 仓库提交代码时，会自动对代码编译进行检测。具体流程可参考 [如何新增软件包](https://gitee.com/openeuler/community/blob/master/zh/contributors/create-package.md)。
+如果你发现 openEuler 缺失了一个软件包，可以帮 openEuler 把这个软件包补上。实际上贡献软件包的过程就是帮助 openEuler 提供更丰富功能的过程。希望随着大家的参与，openEuler 能够成为一个“无所不有”的软件生态系统。openEuler 支持在 gitee 新增软件包的同时自动在 obs 的 openEuler:Factory 上创建同名仓库。这样在向已创建的 gitee 仓库提交代码时，会自动对代码编译进行检测。具体流程可参考 [如何新增软件包](https://gitee.com/openeuler/community/blob/master/zh/contributors/create-package.md)。
 
 ##### 3.3.4.贡献原创开源项目
 
