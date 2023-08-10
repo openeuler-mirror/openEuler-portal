@@ -80,7 +80,7 @@ const language = configData.lang;
                   {{ item.RIGHT.RIGHT_DESC }}
                 </span>
                 <!-- eslint-disable -->
-                <span v-html="item.RIGHT.RIGHT_INFO" class="right-info"></span>
+                <span v-dompurify-html="item.RIGHT.RIGHT_INFO" class="right-info"></span>
               </div>
             </div>
           </div>
