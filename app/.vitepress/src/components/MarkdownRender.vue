@@ -35,8 +35,7 @@ watch(
 </script>
 
 <template>
-  <!-- eslint-disable-next-line vue/no-v-html -->
-  <div class="markdown" v-html="useOeep().statementHtml"></div>
+  <div class="markdown" v-dompurify-html="useOeep().statementHtml"></div>
 </template>
 
 <style lang="scss" scoped>
