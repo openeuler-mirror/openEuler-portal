@@ -2,6 +2,21 @@ export default {
   zh: {
     COMMERCIAL_RELEASE_LIST: [
       {
+        NAME: '磐石操作系统 CSIOS V1.0.0',
+        DOWNLOAD_URL: 'http://openlab.chinasoftinc.com/official/',
+        DESC: '磐石操作系统（简称CSIOS）是中软国际基于openEuler 22.03版本，面向运营商、金融、政企等行业的关键业务而设计开发的企业级服务器操作系统软件。其在openEuler社区版的基础上，融入了众多的自研竞争力特性，完善了生态支持和专业的技术保障。CSIOS可广泛适用于数据库、大数据、云计算、WEB服务等应用场景，支持光盘、U盘和网络等多种安装方式，可部署在物理服务器、虚拟机和容器等环境中，同时可为客户提供灵活的部署、升级和迁移方案。',
+        MANUFACTURER: '中软国际科技服务有限公司',
+        PUBLISH_DATE: '2023/07',
+        DETAILED_LINK: [
+          {
+            ARCH: 'x86_64',
+          },
+          {
+            ARCH: 'AArch64',
+          },
+        ],
+      },
+      {
         NAME: '恒生HUNDSUN LightOS操作系统V1.0',
         DOWNLOAD_URL: 'https://uplus.hundsun.com/LightOS/LightOS1.0/index.html',
         DESC: '恒生LightOS操作系统是基于国内openEuler开源社区构建的企业级操作系统，具备高效、稳定、安全的特性，致力于为企业级的数据库、大数据、云计算、人工智能平台提供安全稳定的运行基础。',

@@ -93,6 +93,8 @@ import mindSpore from '../../assets/category/home/link/logo-mindspore.png';
 import mindSpore_dark from '../../assets/category/home/dark/link/logo-mindspore_dark.png';
 import hengsheng from '../../assets/category/home/link/hengsheng_light.png';
 import hengsheng_dark from '../../assets/category/home/dark/link/hengsheng_dark.png';
+import zhongruan from '../../assets/category/home/link/zhongruan_light.png';
+import zhongruan_dark from '../../assets/category/home/dark/link/zhongruan_dark.png';
 
 import finance from '../../assets/category/home/case/finance.svg';
 import financeDark from '../../assets/category/home/dark/case/finance.svg';
@@ -449,7 +451,11 @@ export default {
       IMG: ruantongLogo,
       IMG_DARK: ruantongLogo_dark,
     },
-
+    {
+      LINK: 'https://www.chinasofti.com/',
+      IMG: zhongruan,
+      IMG_DARK: zhongruan_dark,
+    },
     {
       LINK: 'https://www.thundersoft.com/',
       IMG: zhongkechuangdaLogo,
