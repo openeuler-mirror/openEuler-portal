@@ -122,7 +122,7 @@ export default [
     lang: ['zh', 'en', 'ru'],
   },
   {
-    name: 'defect-center',
+    name: 'bug-bulletins',
     lang: ['zh', 'en'],
   },
   {

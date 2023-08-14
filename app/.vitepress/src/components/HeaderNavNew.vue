@@ -327,8 +327,8 @@ watch(
       }
       .version-info {
         margin-top: 8px;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         .link {
           font-size: 12px;
           line-height: 18px;

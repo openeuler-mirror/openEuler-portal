@@ -1,5 +1,5 @@
 ---
-title: '缺陷中心'
+title: 'Security Advisories'
 ---
 
 <script setup lang="ts">

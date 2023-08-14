@@ -14,12 +14,9 @@ import { SecurityLists, CveQuery } from '@/shared/@types/type-support';
 
 import type { CheckboxValueType } from 'element-plus';
 
-import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import AppContent from '@/components/AppContent.vue';
 
-import banner from '@/assets/banner/banner-security.png';
-import satetyBulletin from '@/assets/illustrations/support/safety-bulletin.png';
 import IconCalendar from '~icons/app/icon-calendar.svg';
 import IconFilter from '~icons/app/icon-filter.svg';
 
@@ -276,13 +273,6 @@ watch(queryData, () => {
 </script>
 
 <template>
-  <!-- <BannerLevel2
-    :background-image="banner"
-    background-text="SUPPORT"
-    :title="i18n.safetyBulletin.SECURITY_ADVISORIES"
-    subtitle=""
-    :illustration="satetyBulletin"
-  /> -->
   <AppContent :mobile-top="16">
     <div class="bulletin-main">
       <div class="input-container">
