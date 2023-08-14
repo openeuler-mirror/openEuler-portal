@@ -185,3 +185,7 @@ export function removeCustomCookie(cname: string, cvalue: string) {
     }
   }
 }
+
+export function scrollToBottom() {
+  window.scrollTo(0, document.body.scrollHeight);
+}

@@ -225,7 +225,6 @@ onMounted(() => {
 
 <template>
   <footer
-    id="footer"
     class="footer"
     :class="{ 'is-doc': isMigration || isAbout }"
   >

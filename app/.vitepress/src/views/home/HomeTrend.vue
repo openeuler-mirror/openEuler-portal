@@ -76,7 +76,7 @@ onMounted(async () => {
 <template>
   <div ref="trendRef" class="home-trend">
     <h3>{{ i18n.home.COMMUNITY_ACTIVITY.TITLE }}</h3>
-    <div v-if="isShowCommunity" class="trend-list">
+    <div  class="trend-list">
       <OContainer data-aos="fade-right" class="trend-card">
         <div class="trend-title">
           {{ i18n.home.COMMUNITY_ACTIVITY.CARD.TITLE }}
@@ -118,7 +118,7 @@ onMounted(async () => {
               class="round-img"
             />
 
-            <div class="round-value">
+            <div v-if="isShowCommunity" class="round-value">
               {{ roundNumber[index].ROUND_VALUE.toFixed(0) }}
             </div>
             <div class="round-title">{{ item.ROUND_TEXT }}</div>

@@ -21,7 +21,7 @@ const STEP = {
     },
     {
       IMG: step_3,
-      TEXT: '提交任务',
+      TEXT: '提交成果',
     },
     {
       IMG: step_4,
@@ -35,7 +35,7 @@ const STEP = {
     LINK1: '实习测试任务',
     TEXT3: '并提供PR链接。',
     TEXT4: '（3）填写报名资料表。',
-    ATTENTION1: '将以上申请材料按照模板填写后发送至开源实习官方邮箱',
+    ATTENTION1: '在申请材料模板下载里仔细阅读实习报名流程，在线表单填写完毕后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。',
     ATTENTION2:
       '。发送后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。',
     DONWLOAD: '申请材料模板下载',
@@ -68,7 +68,7 @@ const STEP = {
     DONWLOAD: '任务认领邮件模板下载',
   },
   STEP_ThREE: {
-    TITLE: '提交任务',
+    TITLE: '提交成果',
     P_TEXT: [
       '（1）任务处理完成后，提交pr，在pr描述里添加 ',
       '#issue',
@@ -118,7 +118,6 @@ const STEP = {
 <template>
   <div class="step-content">
     <div class="step-nav">
-      <!-- :style="`background:url(${item.IMG}) no-repeat;`" -->
       <div
         v-for="(item, index) in STEP.STEPNAV"
         :key="item.IMG"
@@ -154,12 +153,10 @@ const STEP = {
           <div class="attention">
             <p>
               {{ STEP.STEP_ONE.ATTENTION1 }}
-              <a href="mailto:intern@openeuler.sh">intern@openeuler.sh</a>
-              {{ STEP.STEP_ONE.ATTENTION2 }}
               <span class="orange">{{ STEP.STEP_ONE.TIP }}</span>
             </p>
             <a
-              href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/01%20%E5%AE%9E%E4%B9%A0%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E6%A8%A1%E6%9D%BF.rar"
+              href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/%E5%AE%9E%E4%B9%A0%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E6%A8%A1%E6%9D%BF%20.rar"
               download
               class="download download-module"
               >{{ STEP.STEP_ONE.DONWLOAD }}</a

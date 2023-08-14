@@ -9,6 +9,8 @@ export default {
   START_DATE: 'Start date',
   END_DATE: 'End date',
   CANCEL: 'Cancel',
+  DEFECT_CENTER: 'Defect Center',
+  DEFECT_MANAGE: 'Defect Management',
   SEVERITY_LIST: [
     // {
     //   NAME: 'All',

@@ -21,7 +21,7 @@ summary: 新成员如何参与社区贡献，快来看看这份攻略吧~
 
 协议的签署地址是：
 
-[https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI= ](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI= )
+[https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340 ](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340 )
 
 # 安装openEuler
 

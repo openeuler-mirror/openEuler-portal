@@ -43,7 +43,7 @@ Talk is cheap，借助EUR和WSL的一番折腾，最后终于实现了在Windows
 ![](wsl7.png)
 下面是个人折腾的步骤，最终结果是在openEuler 23.03的WSL中使用Gnome桌面环境：
 1. 在windows server中安装WSL：
-    1. 本文步骤均在`openEuler 23.03`版本上执行，如果无法访问windows store，可以下载最新发布的[openEuler 22.03-LTS-SP2的WSL sideload安装包](https://repo.openeuler.org/openEuler-22.03-LTS-SP2/WSL/openEuler-WSL-22.03.zip)，下面的步骤通过应用商店途径安装的可以跳过
+    1. 本文步骤均在`openEuler 23.03`版本上执行，如果无法访问windows store，可以下载最新发布的[openEuler 22.03-LTS-SP2的WSL sideload安装包](https://repo.openeuler.org/openEuler-22.03-LTS-SP2/WSL/openEuler-WSL-22.03.zip)，如果是通过应用商店途径安装，则可以跳过下面2步
 
     1. 下载后首先安装证书：双击压缩包中的`DistroLauncher-Appx_2203.1.164.0_x64_ARM64.cer`，依次选择`安装证书`->`本地计算机`->`将所有的证书都放入下列存储`->`受信任的人`
 
@@ -51,13 +51,13 @@ Talk is cheap，借助EUR和WSL的一番折腾，最后终于实现了在Windows
     1. 安装sideload应用：以管理员权限开启一个powershell终端，并执行压缩包中的`Add-AppDevPackage.ps1`脚本
 
     ![](./wsl2.png)
-    1. 初始化WSL环境：安装完成后，在开始菜单即可找到openEuler 22.03的应用图标，双击即可启动，启动后跟随引导初始化账号密码即可开始体验WSL环境
+    1. 初始化WSL环境：安装完成后，在开始菜单即可找到openEuler 22.03/23.03的应用图标，双击即可启动，启动后跟随引导初始化账号密码即可开始体验WSL环境
 
     ![](./wsl3.png)
 1. 安装桌面环境：本文采用`xrdp`的方式来实现WSL中的桌面环境，由于`xrdp`包还不存在于openEuler官方仓库，笔者在[EUR](https://eur.openeuler.openatom.cn/coprs/mywaaagh_admin/xrdp/)中引入了最新的`0.9.22.1`版本：
     1. 首先获取`23.03`版本EUR仓库配置，其他版本可以到[这里](https://eur.openeuler.openatom.cn/coprs/mywaaagh_admin/xrdp/)获取
         ```
-        $ sudo curl -o /etc/yum.repos.d/xrdp.repo -L https://eur.openeuler.openatom.cn/coprs/mywaaagh_admin/xrdp/repo/openeuler-22.03/mywaaagh_admin-xrdp-openeuler-22.03.repo
+        $ sudo curl -o /etc/yum.repos.d/xrdp.repo -L https://eur.openeuler.openatom.cn/coprs/mywaaagh_admin/xrdp/repo/openeuler-23.03/mywaaagh_admin-xrdp-openeuler-23.03.repo
 
         We trust you have received the usual lecture from the local System
         Administrator. It usually boils down to these three things:

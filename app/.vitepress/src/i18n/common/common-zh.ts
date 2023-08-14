@@ -401,7 +401,7 @@ export default {
         {
           NAME: '社交媒体',
           LABEL: '',
-          PATH: '/community/honor/#footer',
+          PATH: '/#footer',
         },
       ],
     },
@@ -473,25 +473,35 @@ export default {
               PATH: '/compatibility/',
             },
             {
-              NAME: '安全中心',
+              NAME: '社区公告',
               LABEL: '查看漏洞管理、安全公告等安全问题',
               PATH: '',
               CHILDREN: [
                 {
-                  NAME: '漏洞管理',
-                  LABEL: '',
-                  PATH: '/security/vulnerability-reporting/',
-                },
-                {
-                  NAME: '安全公告',
+                  NAME: '安全中心',
                   LABEL: '',
                   PATH: '/security/security-bulletins/',
                 },
                 {
-                  NAME: 'CVE',
+                  NAME: '缺陷中心',
                   LABEL: '',
-                  PATH: '/security/cve/',
+                  PATH: '/security/defect-center/',
                 },
+                // {
+                //   NAME: '漏洞管理',
+                //   LABEL: '',
+                //   PATH: '/security/vulnerability-reporting/',
+                // },
+                // {
+                //   NAME: '安全公告',
+                //   LABEL: '',
+                //   PATH: '/security/security-bulletins/',
+                // },
+                // {
+                //   NAME: 'CVE',
+                //   LABEL: '',
+                //   PATH: '/security/cve/',
+                // },
               ],
             },
           ],
@@ -534,7 +544,7 @@ export default {
             {
               NAME: 'CLA签署',
               LABEL: '',
-              PATH: 'https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=',
+              PATH: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
             },
           ],
         },

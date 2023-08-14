@@ -111,13 +111,13 @@ onMounted(() => {
 watch(queryData, () => getCveLists(queryData));
 </script>
 <template>
-  <BannerLevel2
+  <!-- <BannerLevel2
     :background-image="banner"
     background-text="SUPPORT"
     :title="i18n.cve.CVE"
     subtitle=""
     :illustration="illustration"
-  />
+  /> -->
   <AppContent :mobile-top="16">
     <div class="o-search">
       <OSearch

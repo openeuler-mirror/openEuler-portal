@@ -122,6 +122,10 @@ export default [
     lang: ['zh', 'en', 'ru'],
   },
   {
+    name: 'defect-center',
+    lang: ['zh', 'en'],
+  },
+  {
     name: 'compatibility',
     lang: ['zh', 'en', 'ru'],
   },

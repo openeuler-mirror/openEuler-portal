@@ -509,8 +509,9 @@ function clickDetail(index: number) {
     font-size: var(--o-font-size-text);
     line-height: 34px;
     color: var(--o-color-text1);
-    &:nth-of-type(1) {
-      margin-right: 20px;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
     }
     &::after {
       content: '';

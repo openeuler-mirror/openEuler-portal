@@ -60,15 +60,16 @@ const INTEGRAL_DATA = [
       '满足以上3条，公开答辩获得评委打分80分以上后，发放优秀实习生证书。',
   },
   {
-    HEAD: '4、开源之星（仅针对openEuler与openGauss社区）',
+    HEAD: '4、欧拉&高斯人才发展加速计划',
     TEXT: [
-      '2022年内独在openEuler社区（或openGauss社区）积分满150分。 ',
-      '2022年内独在openEuler社区（或openGauss社区）满120分并在openEuler（或openGauss）公众号发布3篇以上实习项目相关文章及参与过一次实习直播主讲。',
+      '欧拉&高斯社区在线实习进步奖（仅针对openEuler与openGauss社区）',
+      '2023年内独在openEuler社区（或openGauss社区）积分满150分。',
+      '2023年内独在openEuler社区（或openGauss社区）满120分并在openEuler（或openGauss）公众号发布3篇以上实习项目相关文章及参与过一次实习直播主讲。',
     ],
     SUPPLEMENT: [
-      '满足以上一条可获得“开源之星”荣誉徽章，在openEuler（openGauss）官网展示。加入',
+      '加入',
       '“欧拉&高斯人才发展加速计划”',
-      '，有机会获得“欧拉&高斯社区在线实习进步奖”，2022年度共计200个名额，奖金10000元。',
+      '，满足以上一项条件，可参与2023年年底“欧拉&高斯社区在线实习进步奖”评选，评选上后将获得相应证书和奖金。',
     ],
     SUPPLEMENT_LINK:
       'https://edu.hicomputing.huawei.com/openeuler-opengauss-talent',
@@ -181,16 +182,12 @@ const HELP = {
   INFO: [
     '联系邮箱:',
     'intern@openeuler.sh',
-    '扫码加入“开源实习”学生QQ群，更多问题群内咨询。',
+    '扫码加入“开源实习”学生QQ群，备注高校及年级，更多问题群内咨询。',
     '群号：526089131',
   ],
   ITEM: {
     IMG: qrCode,
   },
-};
-const openLooKengTask = {
-  title: 'openLooKeng',
-  intriduce: '一款超强易用的数据虚拟化引擎，让大数据更简单',
 };
 const openGaussTask = {
   title: 'openGauss',
@@ -242,7 +239,7 @@ const navList = [
     name: '帮助咨询',
   },
 ];
-const tabList = ['openEuler', 'openLooKeng', 'openGauss', '昇思'];
+const tabList = ['openEuler', 'openGauss', '昇思'];
 const tabIndex = ref(0);
 function changeTabIndex(index: number) {
   tabIndex.value = index;
@@ -290,6 +287,17 @@ onUnmounted(() => {
         <p class="text">
           openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。由社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证明和实习工资。
         </p>
+        <p class="text">
+          盛情邀请社区各位资深开发者成为本次活动导师，点击导师报名通道填写报名表。
+        </p>
+        <p class="text">
+          <a
+            href="https://docs.qq.com/form/page/DUlZIaGFGZ0JGQmZs"
+            target="_blank"
+            rel="noopener noreferrer"
+            >导师报名通道</a
+          >
+        </p>
       </section>
       <section id="step" class="panel nav">
         <div class="step-title title">
@@ -312,40 +320,7 @@ onUnmounted(() => {
           </ul>
         </div>
         <InternshipTask v-show="tabIndex === 0" />
-        <div v-show="tabIndex === 1" class="openlookeng-task task-wrap">
-          <p class="title">
-            <a
-              href="https://openlookeng.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ openLooKengTask.title }}</a
-            >
-          </p>
-          <p class="intriduce">{{ openLooKengTask.intriduce }}</p>
-          <div class="btn">
-            <a
-              href="https://gitee.com/openlookeng-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openlookeng-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=newest&state=open&target_project&skip_mobile=true"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <OButton type="primary" class="task-btn"
-                >实习任务
-                <OIcon><IconArrowRight /></OIcon>
-              </OButton>
-            </a>
-            <a
-              href="https://openlookeng.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <OButton class="detail-btn">
-                <span>官网详情</span>
-                <OIcon><IconArrowRight /></OIcon>
-              </OButton>
-            </a>
-          </div>
-        </div>
-        <div v-show="tabIndex === 2" class="opengauss-task task-wrap">
+        <div v-show="tabIndex === 1" class="opengauss-task task-wrap">
           <p class="title">
             <a
               href="https://opengauss.org/"
@@ -378,7 +353,7 @@ onUnmounted(() => {
             </a>
           </div>
         </div>
-        <div v-show="tabIndex === 3" class="mindspore-task task-wrap">
+        <div v-show="tabIndex === 2" class="mindspore-task task-wrap">
           <p class="title">
             <a
               href="https://www.mindspore.cn/"

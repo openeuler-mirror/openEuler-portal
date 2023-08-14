@@ -15,6 +15,7 @@ import LayoutMigration from '@/layouts/LayoutMigration.vue';
 import LayoutAboutUs from '@/layouts/LayoutAboutUs.vue';
 import LayoutDownload from './layouts/LayoutDownload.vue';
 import LayoutEvent from './layouts/LayoutEvent.vue';
+import LayoutSecurity from './layouts/LayoutSecurity.vue';
 
 import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
@@ -36,6 +37,7 @@ const compMapping: {
   'about-us': LayoutAboutUs,
   download: LayoutDownload,
   event: LayoutEvent,
+  security: LayoutSecurity,
 };
 
 const isCustomLayout = computed(() => {
@@ -44,6 +46,7 @@ const isCustomLayout = computed(() => {
     categories.indexOf(frontmatter.value.category) !== -1
   );
 });
+
 const comp = computed(() => {
   return compMapping[frontmatter.value.category];
 });

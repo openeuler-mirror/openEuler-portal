@@ -1,5 +1,6 @@
 ---
 title: '安全公告'
+category: security
 ---
 
 <script setup lang="ts">

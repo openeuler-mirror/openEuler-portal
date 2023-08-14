@@ -5,6 +5,7 @@ import AOS from 'aos';
 
 import { useI18n } from '@/i18n';
 import { useCommon } from '@/stores/common';
+import { scrollToBottom } from '@/shared/utils';
 import seoConfig from '@/data/common/seo';
 
 import UserCase from './UserCase.vue';
@@ -61,7 +62,7 @@ onMounted(async () => {
   });
   try {
     // 获取会议、活动数据并合并
-    Promise.all([getActivityData(), getMeetingData()]).then((res) => {
+    await Promise.all([getActivityData(), getMeetingData()]).then((res) => {
       res[0].tableData.forEach((item: any) => {
         item.timeData.map((item2: any) => {
           item2['startTime'] = item2.start_date;
@@ -78,11 +79,7 @@ onMounted(async () => {
         return prev;
       }, []);
     });
-  } catch (e: any) {
-    console.error(e);
-  }
-  try {
-    Promise.all([
+    await Promise.all([
       getSortData(paramsCase),
       getSortData(paramsNews),
       getSortData(paramsBlog),
@@ -91,6 +88,9 @@ onMounted(async () => {
       newsData.value = res[1];
       blogData.value = res[2];
     });
+    if (window.location.hash === '#footer') {
+      scrollToBottom();
+    }
   } catch (e: any) {
     console.error(e);
   }

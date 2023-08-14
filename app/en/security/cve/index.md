@@ -1,5 +1,6 @@
 ---
 title: 'CVE'
+category: security
 ---
 
 <script setup lang="ts">

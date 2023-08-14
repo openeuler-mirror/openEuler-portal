@@ -121,7 +121,7 @@ export default {
         DESCRIPTION_2:
           '). The email subject must contain "Apply for a Hardware Compatibility Test". After receiving the email, the sig team of openEuler will contact you and sign an agreement with you offline.',
         // DESCRIPTION_3: 'tips：如果没有签署CLA，请先签署：',
-        // A_TEXT2: 'https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=',
+        // A_TEXT2: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
       },
       {
         ID: '03',

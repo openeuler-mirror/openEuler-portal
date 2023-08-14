@@ -1,5 +1,6 @@
 ---
 title: 'Security Advisories'
+category: security
 ---
 
 <script setup lang="ts">

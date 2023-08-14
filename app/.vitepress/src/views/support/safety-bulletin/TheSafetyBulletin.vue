@@ -276,13 +276,13 @@ watch(queryData, () => {
 </script>
 
 <template>
-  <BannerLevel2
+  <!-- <BannerLevel2
     :background-image="banner"
     background-text="SUPPORT"
     :title="i18n.safetyBulletin.SECURITY_ADVISORIES"
     subtitle=""
     :illustration="satetyBulletin"
-  />
+  /> -->
   <AppContent :mobile-top="16">
     <div class="bulletin-main">
       <div class="input-container">
