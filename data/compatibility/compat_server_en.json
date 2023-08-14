@@ -11147,5 +11147,66 @@
       "hostBusAdapter": "",
       "hardDiskDrive": "BROADCOM MR9560-16i"
     }
+  },
+  {
+    "hardwareFactory": "xFusion",
+    "hardwareModel": "2288H V5",
+    "osVersion": "openEuler 20.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2023/08/14",
+    "friendlyLink": "https://support.xfusion.com/support/#/zh/rack-servers/2288h-v5-pid-21872244/document",
+    "boardCards": [
+      {
+        "vendorID": "8088",
+        "deviceID": "0101",
+        "svID": "8088",
+        "ssID": "0201",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "ngbe",
+        "version": "1.2.3",
+        "type": "NIC",
+        "date": "2023.08.08",
+        "sha256": "943e89826d19af66d7839d1609ffc53f124554fefdf12ed35cb451f3196c098d",
+        "driverSize": "1.4M",
+        "chipVendor": "Netswift",
+        "boardModel": "SF200T",
+        "chipModel": "WX1860A2",
+        "item": "06310300",
+        "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/ngbe-1.2.3.tar.gz"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "10e6",
+        "svID": "1000",
+        "ssID": "40d5",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "megaraid_sas",
+        "version": "07.722.02.00",
+        "type": "RAID",
+        "date": "2023.08.08",
+        "sha256": "afadccb4594ee15f79e6c33db26dd776a72a480ae32ce4c7e2a5403d40b519e5",
+        "driverSize": "80K",
+        "chipVendor": "Avago",
+        "boardModel": "SAS38xx",
+        "chipModel": "SAS38xx",
+        "item": "",
+        "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/x86_64/Packages/kmod-megaraid_sas-07.722.02.00-2.x86_64.rpm"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://support.xfusion.com/support/#/zh/rack-servers/2288h-v5-pid-21872244/document",
+      "certificationTime": "2023/08/14",
+      "commitID": "",
+      "mainboardModel": "BC11SPSCB",
+      "biosUefi": " 8.36(U47)",
+      "cpu": "skylake",
+      "ram": "8*32 RDIMMs",
+      "portsBusTypes": "x8 PCI Express 3 x8",
+      "videoAdapter": "Huawei Technologies Co., Ltd. Hi171x Series",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "TOSHIBA  AL15SEB120N"
+    }
   }
 ]
