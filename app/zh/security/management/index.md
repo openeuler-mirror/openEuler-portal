@@ -17,9 +17,8 @@ import illustration from '@/assets/illustrations/support/vulnerability-reporting
 </ClientOnly>
 
 <div class='markdown'>
+
 # 缺陷管理
-
-
 
 ## 缺陷响应
 
@@ -37,7 +36,7 @@ openEuler 社区由 openEuler Release SIG 与 openEuler QA SIG 联合负责openE
 
 版本缺陷是由社区开发者、测试团队或用户等提出的关联版本里程碑的特定种类issue，当issue被提交到openEuler社区后对应领域SIG 组miantainer or committer 作为第一责任人负责分析和处理对应issue，openEuler 社区 QA SIG 和 Release SIG 会定期审视社区中版本缺陷的情况，依照优先级推动社区问题尽快修复，端到端社区缺陷处理流程如下图。
 
-![缺陷流程官网展示](D:\update\维护周期\质量需求\缺陷流程官网展示.png)
+![缺陷流程官网展示](./缺陷流程官网展示.png)
 
 
 
