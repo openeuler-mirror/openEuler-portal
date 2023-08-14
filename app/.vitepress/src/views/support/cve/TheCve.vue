@@ -7,13 +7,10 @@ import { useI18n } from '@/i18n';
 import { getCveList } from '@/api/api-security';
 import { CveLists, CveQuery } from '@/shared/@types/type-support';
 
-import BannerLevel2 from '@/components/BannerLevel2.vue';
 import TagFilter from '@/components/TagFilter.vue';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import AppContent from '@/components/AppContent.vue';
 
-import banner from '@/assets/banner/banner-security.png';
-import illustration from '@/assets/illustrations/support/cve.png';
 import IconCalendar from '~icons/app/icon-calendar.svg';
 
 import useWindowResize from '@/components/hooks/useWindowResize';

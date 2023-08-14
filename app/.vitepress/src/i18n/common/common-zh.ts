@@ -485,23 +485,8 @@ export default {
                 {
                   NAME: '缺陷中心',
                   LABEL: '',
-                  PATH: '/security/defect-center/',
+                  PATH: '/security/bug-bulletins/',
                 },
-                // {
-                //   NAME: '漏洞管理',
-                //   LABEL: '',
-                //   PATH: '/security/vulnerability-reporting/',
-                // },
-                // {
-                //   NAME: '安全公告',
-                //   LABEL: '',
-                //   PATH: '/security/security-bulletins/',
-                // },
-                // {
-                //   NAME: 'CVE',
-                //   LABEL: '',
-                //   PATH: '/security/cve/',
-                // },
               ],
             },
           ],

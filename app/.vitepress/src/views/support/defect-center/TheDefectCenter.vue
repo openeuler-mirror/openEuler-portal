@@ -68,6 +68,7 @@ const queryData: any = reactive({
   type: [],
   date: [],
   affectedProduct: [],
+  notice_type: 'bug',
   affectedComponent: '',
 });
 
@@ -265,7 +266,7 @@ function handleCancelSelected() {
 }
 
 function goDefectManage() {
-  // 缺陷管理
+  window.open('/zh/security/management/');
 }
 
 onMounted(() => {
