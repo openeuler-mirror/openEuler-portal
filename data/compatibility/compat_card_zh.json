@@ -17031,5 +17031,43 @@
     "chipModel": "SAS3508",
     "item": "03024JMY",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/07.726.02.00-1_Driver_Linux.tgz"
+  },
+  {
+    "vendorID": "1000",
+    "deviceID": "0016",
+    "svID": "19e5",
+    "ssID": "d215",
+    "architecture": "aarch64",
+    "os": "openEuler 22.03 LTS",
+    "driverName": "megaraid_sas",
+    "version": "07.726.02.00",
+    "type": "RAID",
+    "date": "2023.08.10",
+    "sha256": "7ed90eee70ce959c2d62ab3733c034c37fcd7fc6b7c09d45a3414e08e9cc29f3",
+    "driverSize": "24M",
+    "chipVendor": "Avago",
+    "boardModel": "SR450C-M",
+    "chipModel": "SAS3508",
+    "item": "03024JMY",
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS/contrib/drivers/source/Packages/07.726.02.00-1_Driver_Linux.tgz"
+  },
+  {
+    "vendorID": "1000",
+    "deviceID": "0016",
+    "svID": "19e5",
+    "ssID": "da15",
+    "architecture": "x86_64",
+    "os": "openEuler 22.03 LTS",
+    "driverName": "megaraid_sas",
+    "version": "07.726.02.00",
+    "type": "RAID",
+    "date": "2023.08.10",
+    "sha256": "7ed90eee70ce959c2d62ab3733c034c37fcd7fc6b7c09d45a3414e08e9cc29f3",
+    "driverSize": "24M",
+    "chipVendor": "Avago",
+    "boardModel": "SR450C-M",
+    "chipModel": "SAS3508",
+    "item": "03024JMY",
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS/contrib/drivers/source/Packages/07.726.02.00-1_Driver_Linux.tgz"
   }
 ]
