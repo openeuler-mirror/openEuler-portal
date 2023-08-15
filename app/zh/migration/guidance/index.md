@@ -42,7 +42,7 @@ openEuler 提供端到端的迁移方案，包括成立迁移保障组织、迁�
 
 ## 迁移分析
 
-迁移保障组织成立后，公司内部收集需要迁移的业务名称、迁移诉求、软件栈、业务部署形态、服务器硬件信息，形成迁移项目全景图。根据迁移项目全景图，按照业务的提供商、操作系统和硬件环境进行筛选，指定业务的迁移优先级。最后，可参考[x2openEuler 用户指南](https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/thirdparty_migration/x2openEuler-Userguide.html)对操作系统的硬件、软件和配置进行兼容性评估，对不兼容的软件包需要进行补全或者替代，给出兼容性报告供后续步骤使用。
+迁移保障组织成立后，公司内部收集需要迁移的业务名称、迁移诉求、软件栈、业务部署形态、服务器硬件信息，形成迁移项目全景图。根据迁移项目全景图，按照业务的提供商、操作系统和硬件环境进行筛选，指定业务的迁移优先级。最后，可参考[x2openEuler 用户指南](https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html)对操作系统的硬件、软件和配置进行兼容性评估，对不兼容的软件包需要进行补全或者替代，给出兼容性报告供后续步骤使用。
 
 x2openEuler 能够在升级前进行如下三个方面的评估，并生成兼容性评估报告：
 
@@ -172,7 +172,7 @@ openEuler 为用户提供两种迁移路径：
 
 <img src="./implementation.png" style="margin-bottom: 20px"/>
 
-建议用户优先使用 x2openEuler 工具对软件的兼容性进行评估，根据业务需求选择不同的迁移路径。在制定好整体的搬迁方案后，即可开始进行业务迁移，根据 x2openEuler 兼容性报告，完全兼容的业务使用 x2openEuler 工具直接进行原地升级，最大程度保留原有业务和配置不变。原地升级可参考[x2openEuler 用户指南](https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/thirdparty_migration/x2openEuler-Userguide.html)进行操作。适配迁移包括停止业务、备份隔离、系统部署、配置同步、应用部署、业务割接等步骤，请联系我们提供详细的技术指导。
+建议用户优先使用 x2openEuler 工具对软件的兼容性进行评估，根据业务需求选择不同的迁移路径。在制定好整体的搬迁方案后，即可开始进行业务迁移，根据 x2openEuler 兼容性报告，完全兼容的业务使用 x2openEuler 工具直接进行原地升级，最大程度保留原有业务和配置不变。原地升级可参考[x2openEuler 用户指南](https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html)进行操作。适配迁移包括停止业务、备份隔离、系统部署、配置同步、应用部署、业务割接等步骤，请联系我们提供详细的技术指导。
 
 <img src="./upgrade.png"/>
 
