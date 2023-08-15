@@ -21,21 +21,11 @@ Marketplace进行发布(<https://aws.amazon.com/marketplace/seller-profile?id=se
 
 | 版本     | 架构   |区域       |
 | ----------- | ----------- |----------- |
-|  openEuler 22.03  LTS SP1  | X86_64          | Middle East (UAE)  |  
-|    |           |Asia Pacific (HongKong)         |
-|    |           |Asia Pacific (Singapore)        |
-|    |           |Asia Pacific (Sydney)  |
-|    |           |Asia Pacific (Tokyo)  |
-|    |           |Asia Pacific (Osaka) |
-|    |           |Asia Pacific (Mumbai)  |
-|    |           |Canada (Central) |
-|    |           |Europe (Frankfurt) |
-|    |           |Europe (Spain) |
-|    |           |Europe (London) |
-|    |           |Europe (Paris)|
-|    |           |Africa (Cape Town) |
-|    |           |US East (N. Virginia) |
-|    |           |US West (N. California)|
+|  openEuler 22.03  LTS SP1  | X86_64          | Middle East (UAE) ，Asia Pacific (HongKong) ，Asia Pacific (Singapore)，Asia Pacific (Sydney)，Asia Pacific (Tokyo)，Asia Pacific (Osaka)，Asia Pacific (Mumbai)，Canada (Central)，Europe (Frankfurt)，Europe (Spain)，Europe (London)，Europe (Paris)，Africa (Cape Town)，US East (N. Virginia) ，US West (N. California)|  
+| openEuler 22.03  LTS SP1   |     arm64      |   Middle East (UAE) ，Asia Pacific (HongKong) ，Asia Pacific (Singapore)，Asia Pacific (Sydney)，Asia Pacific (Tokyo)，Asia Pacific (Osaka)，Asia Pacific (Mumbai)，Canada (Central)，Europe (Frankfurt)，Europe (Spain)，Europe (London)，Europe (Paris)，Africa (Cape Town)，US East (N. Virginia) ，US West (N. California)      |
+|   openEuler 22.03  LTS SP2  |    X86_64         |  Middle East (UAE) ，Asia Pacific (HongKong) ，Asia Pacific (Singapore)，Asia Pacific (Sydney)，Asia Pacific (Tokyo)，Asia Pacific (Osaka)，Asia Pacific (Mumbai)，Canada (Central)，Europe (Frankfurt)，Europe (Spain)，Europe (London)，Europe (Paris)，Africa (Cape Town)，US East (N. Virginia) ，US West (N. California)      |
+|   openEuler 22.03  LTS SP3  |     arm64       | Middle East (UAE) ，Asia Pacific (HongKong) ，Asia Pacific (Singapore)，Asia Pacific (Sydney)，Asia Pacific (Tokyo)，Asia Pacific (Osaka)，Asia Pacific (Mumbai)，Canada (Central)，Europe (Frankfurt)，Europe (Spain)，Europe (London)，Europe (Paris)，Africa (Cape Town)，US East (N. Virginia) ，US West (N. California) |
+
 
 <https://aws.amazon.com/marketplace/pp/prodview-bxuhwcmulvdmu?sr=0-1&ref_=beagle&applicationId=AWSMPContessa>
 
