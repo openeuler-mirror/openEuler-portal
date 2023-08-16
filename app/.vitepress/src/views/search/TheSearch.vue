@@ -11,11 +11,11 @@ import {
 } from '@/api/api-search';
 
 import IconSearch from '~icons/app/icon-search.svg';
-import NotFound from '@/NotFound.vue';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
-
 import IconCancel from '~icons/app/icon-cancel.svg';
 
+import NotFound from '@/NotFound.vue';
+import AppPaginationMo from '@/components/AppPaginationMo.vue';
+import SearchSevice from './SearchSevice.vue';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
 const screenWidth = useWindowResize();
@@ -36,10 +36,21 @@ const searchInput = ref<string>('');
 const searchValue = computed(() => {
   return i18n.value.common.SEARCH;
 });
+const serviceData = ref([]);
 // 接收搜索数量的数据
 const searchNumber: any = ref([]);
 // 显示的数据类型
 const searchType = ref('');
+// service tag
+const serviceParams = computed(() => {
+  return {
+    keyword: searchInput.value,
+    page: currentPage.value,
+    pageSize: pageSize.value,
+    lang: lang.value,
+    type: 'service',
+  };
+});
 const searchData = computed(() => {
   return {
     keyword: searchInput.value,
@@ -114,6 +125,16 @@ async function getVersionTag() {
       activeVersion.value = res.obj?.totalNum[0].key;
     }
     versionList.value.push(...res.obj?.totalNum);
+  });
+}
+
+function getServiceData() {
+  getSearchData(serviceParams.value).then((res) => {
+    if (res?.obj?.records) {
+      serviceData.value = res.obj.records;
+    } else {
+      serviceData.value = [];
+    }
   });
 }
 
@@ -213,6 +234,8 @@ function searchAll(current?: string) {
     }
     currentPage.value = 1;
     searchType.value = current || '';
+
+    getServiceData();
     searchCountAll(current);
     searchDataAll();
     searchRpm();
@@ -304,6 +327,7 @@ watch(
         class="search-content"
         :class="suggestList.length ? 'exist-suggest' : ''"
       >
+        <SearchSevice v-if="serviceData.length" :services="serviceData" />
         <div class="select-options">
           <ul class="type">
             <li
@@ -313,7 +337,9 @@ watch(
               @click="setCurrentType(index, item.key)"
             >
               {{ i18n.search.tagList[item.key] }}
-              <span>({{ item.doc_count }})</span>
+              <span v-show="i18n.search.tagList[item.key]"
+                >({{ item.doc_count }})</span
+              >
             </li>
           </ul>
 
