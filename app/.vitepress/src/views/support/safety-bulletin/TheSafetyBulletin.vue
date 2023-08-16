@@ -68,20 +68,16 @@ const queryData: any = reactive({
 });
 
 function getSecurityLists(data: CveQuery) {
-  try {
-    getSecurityList(data).then((res: any) => {
-      tableData.value = res.result.securityNoticeList;
+  getSecurityList(data).then((res: any) => {
+    tableData.value = res.result.securityNoticeList;
 
-      if (res.result.totalCount) {
-        total.value = res.result.totalCount;
-        totalPage.value = Math.ceil(total.value / queryData.pages.size);
-      } else {
-        total.value = 0;
-      }
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+    if (res.result.totalCount) {
+      total.value = res.result.totalCount;
+      totalPage.value = Math.ceil(total.value / queryData.pages.size);
+    } else {
+      total.value = 0;
+    }
+  });
 }
 
 const selectTag = (i: number, type: string) => {
@@ -157,13 +153,9 @@ const isSelectAll = ref(false);
 const isUnsure = ref(true);
 const affectedProductList = ref<string[]>([]);
 function getProducts() {
-  try {
-    getProductList().then((res: AxiosResponse) => {
-      affectedProductList.value = res.data.result;
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  getProductList().then((res: AxiosResponse) => {
+    affectedProductList.value = res.data.result;
+  });
 }
 
 function hanldCheckProductChange(val: CheckboxValueType) {
@@ -187,18 +179,14 @@ function handleSelecteProductChange(value: CheckboxValueType[]) {
 const affectedComponentList = ref<string[]>([]);
 const componentTotalList = ref<string[]>([]);
 function getAffectedComponentList() {
-  try {
-    getComponentList({
-      securityLevel: queryData.type.join(','),
-      affectedProduct: queryData.affectedProduct.join(','),
-    }).then((res: AxiosResponse) => {
-      componentTotalList.value = res.data.result;
+  getComponentList({
+    securityLevel: queryData.type.join(','),
+    affectedProduct: queryData.affectedProduct.join(','),
+  }).then((res: AxiosResponse) => {
+    componentTotalList.value = res.data.result;
 
-      affectedComponentList.value = res.data.result.slice(0, 49);
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+    affectedComponentList.value = res.data.result.slice(0, 49);
+  });
 }
 
 function getNextPage() {

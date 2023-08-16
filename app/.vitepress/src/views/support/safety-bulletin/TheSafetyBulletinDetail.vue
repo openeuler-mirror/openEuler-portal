@@ -21,16 +21,12 @@ const queryData: DetailParams = reactive({
 });
 
 function getSecurityDetailInfo(data: any) {
-  try {
-    getSecurityDetail(data).then((res: any) => {
-      if (res) {
-        detailData.value = res;
-        cveIdList.value = res.cveId.split(';');
-      }
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  getSecurityDetail(data).then((res: any) => {
+    if (res) {
+      detailData.value = res;
+      cveIdList.value = res.cveId.split(';');
+    }
+  });
 }
 
 function goBackPage() {

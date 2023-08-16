@@ -127,59 +127,43 @@ const tableData = ref<
 
 // 整机
 const getCompatibilityData = (data: CveQuery) => {
-  try {
-    getCompatibilityList(data).then((res: any) => {
-      total.value = res.result.totalCount;
-      totalPage.value = Math.ceil(total.value / queryData.pages.size);
-      tableData.value = res.result.hardwareCompList.sort((a: any, b: any) => {
-        return new Date(b.date).getTime() - new Date(a.date).getTime();
-      });
+  getCompatibilityList(data).then((res: any) => {
+    total.value = res.result.totalCount;
+    totalPage.value = Math.ceil(total.value / queryData.pages.size);
+    tableData.value = res.result.hardwareCompList.sort((a: any, b: any) => {
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  });
 };
 
 // 板卡
 const getDriverData = (data: CveQuery) => {
-  try {
-    getDriverList(data).then((res: any) => {
-      total.value = res.result.totalCount;
-      totalPage.value = Math.ceil(total.value / queryData.pages.size);
-      tableData.value = res.result.driverCompList.sort((a: any, b: any) => {
-        return (
-          new Date(b.driverDate).getTime() - new Date(a.driverDate).getTime()
-        );
-      });
+  getDriverList(data).then((res: any) => {
+    total.value = res.result.totalCount;
+    totalPage.value = Math.ceil(total.value / queryData.pages.size);
+    tableData.value = res.result.driverCompList.sort((a: any, b: any) => {
+      return (
+        new Date(b.driverDate).getTime() - new Date(a.driverDate).getTime()
+      );
     });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  });
 };
 
 // 开源软件
 const getSoftwareData = (data: CveQuery) => {
-  try {
-    getSoftwareList(data).then((res: any) => {
-      total.value = res.total;
-      totalPage.value = Math.ceil(total.value / queryData.pages.size);
-      tableData.value = res.info;
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  getSoftwareList(data).then((res: any) => {
+    total.value = res.total;
+    totalPage.value = Math.ceil(total.value / queryData.pages.size);
+    tableData.value = res.info;
+  });
 };
 
 // 商业软件
 const getBusinessSoftwareData = (data: CveQuery) => {
-  try {
-    getBusinessSoftwareList(data).then((res: any) => {
-      total.value = res.result.totalNum;
-      tableData.value = res.result.data;
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  getBusinessSoftwareList(data).then((res: any) => {
+    total.value = res.result.totalNum;
+    tableData.value = res.result.data;
+  });
 };
 
 function turnPage(option: string) {
@@ -387,93 +371,69 @@ const goSoftwareInfo = (id: number) => {
 onMounted(() => {
   getCompatibilityData(queryData);
 
-  try {
-    getDriveTypes(lang.value).then((res: any) => {
-      if (res.success) {
-        res.result.forEach((item: string) => {
-          typeLists.value.push(item);
-        });
-      }
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
-
-  try {
-    driverArchitectureOptions({ lang: `${lang.value}` }).then((res: any) => {
+  getDriveTypes(lang.value).then((res: any) => {
+    if (res.success) {
       res.result.forEach((item: string) => {
-        architectureSelect.value.push(item);
-        filterData.value.forEach((it) => {
-          if (it.title === '架构') {
-            it.select.push(item);
-          }
-        });
-        filterDataTwo.value.forEach((it) => {
-          if (it.title === '架构') {
-            it.select.push(item);
-          }
-        });
+        typeLists.value.push(item);
       });
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+    }
+  });
 
-  try {
-    driverOSOptions({ lang: `${lang.value}` }).then((res: any) => {
-      res.result.forEach((item: string) => {
-        osOptions.value.push(item);
-        filterData.value.forEach((it) => {
-          if (it.title === '操作系统') {
-            it.select.push(item);
-          }
-        });
-        filterDataTwo.value.forEach((it) => {
-          if (it.title === '操作系统') {
-            it.select.push(item);
-          }
-        });
+  driverArchitectureOptions({ lang: `${lang.value}` }).then((res: any) => {
+    res.result.forEach((item: string) => {
+      architectureSelect.value.push(item);
+      filterData.value.forEach((it) => {
+        if (it.title === '架构') {
+          it.select.push(item);
+        }
+      });
+      filterDataTwo.value.forEach((it) => {
+        if (it.title === '架构') {
+          it.select.push(item);
+        }
       });
     });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  });
 
-  try {
-    getTestOrganizations().then((res: any) => {
-      res.result.testOrganizations.forEach((item: string) => {
-        testOrganizationsLists.value.push(item);
+  driverOSOptions({ lang: `${lang.value}` }).then((res: any) => {
+    res.result.forEach((item: string) => {
+      osOptions.value.push(item);
+      filterData.value.forEach((it) => {
+        if (it.title === '操作系统') {
+          it.select.push(item);
+        }
+      });
+      filterDataTwo.value.forEach((it) => {
+        if (it.title === '操作系统') {
+          it.select.push(item);
+        }
       });
     });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  });
 
-  try {
-    getCpu({ lang: `${lang.value}` }).then((res: any) => {
-      res.result.forEach((item: string) => {
-        cpuList.value.push(item);
-        filterData.value.forEach((it) => {
-          if (it.title === 'CPU') {
-            it.select.push(item);
-          }
-        });
-      });
+  getTestOrganizations().then((res: any) => {
+    res.result.testOrganizations.forEach((item: string) => {
+      testOrganizationsLists.value.push(item);
     });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  });
 
-  try {
-    getSoftFilter().then((res: any) => {
-      res.Type.forEach((item: string) => {
-        softType.value.push(item);
+  getCpu({ lang: `${lang.value}` }).then((res: any) => {
+    res.result.forEach((item: string) => {
+      cpuList.value.push(item);
+      filterData.value.forEach((it) => {
+        if (it.title === 'CPU') {
+          it.select.push(item);
+        }
       });
-      osLists.value.push(res.OS[0]);
     });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  });
+
+  getSoftFilter().then((res: any) => {
+    res.Type.forEach((item: string) => {
+      softType.value.push(item);
+    });
+    osLists.value.push(res.OS[0]);
+  });
 });
 </script>
 

@@ -47,15 +47,11 @@ const queryData: CveQuery = reactive({
 });
 
 function getCveLists(data: CveQuery) {
-  try {
-    getCveList(data).then((res: any) => {
-      tableData.value = res.result.cveDatabaseList;
-      total.value = res.result.totalCount;
-      totalPage.value = Math.ceil(total.value / queryData.pages.size);
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  getCveList(data).then((res: any) => {
+    tableData.value = res.result.cveDatabaseList;
+    total.value = res.result.totalCount;
+    totalPage.value = Math.ceil(total.value / queryData.pages.size);
+  });
 }
 
 const selectTypetag = (i: number, category: string) => {
