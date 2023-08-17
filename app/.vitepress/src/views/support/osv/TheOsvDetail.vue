@@ -97,27 +97,23 @@ function goBackPage() {
 onMounted(() => {
   const index1 = decodeURIComponent(window.location.href).indexOf('=');
   queryData.id = decodeURIComponent(window.location.href).substring(index1 + 1);
-  try {
-    getOsvOne(queryData).then((res: any) => {
-      approveList.value = res.result;
-      res.result.toolsResult.forEach((item: any) => {
-        toolList.value.forEach((it: any) => {
-          if (item.name === it.key) {
-            it.result = item.result === 'pass' ? '通过' : '未通过';
-          }
-        });
-      });
-      res.result.platformResult.forEach((item: any) => {
-        platformList.value.forEach((val: any) => {
-          if (item.name === val.key) {
-            val.result = item.result === 'pass' ? '通过' : '未通过';
-          }
-        });
+  getOsvOne(queryData).then((res: any) => {
+    approveList.value = res.result;
+    res.result.toolsResult.forEach((item: any) => {
+      toolList.value.forEach((it: any) => {
+        if (item.name === it.key) {
+          it.result = item.result === 'pass' ? '通过' : '未通过';
+        }
       });
     });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+    res.result.platformResult.forEach((item: any) => {
+      platformList.value.forEach((val: any) => {
+        if (item.name === val.key) {
+          val.result = item.result === 'pass' ? '通过' : '未通过';
+        }
+      });
+    });
+  });
 });
 </script>
 <template>
