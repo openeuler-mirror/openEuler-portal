@@ -195,6 +195,15 @@ export default {
       GITEE: 'https://www.openeuler.org/zh/sig/sig-detail/?name=sig-FangTian',
     },
     {
+      NAME: 'sig-memsafety',
+      NAME_LINK:
+        'https://www.openeuler.org/zh/sig/sig-detail/?name=sig-memsafety',
+      INTRODUCE:
+        '借助编程语言的特点，打造内存更为安全的开源项目',
+      TASK: 'https://gitee.com/openeuler/easybox/issues',
+      GITEE: 'https://gitee.com/openeuler/community/tree/master/sig/sig-memsafety',
+    },
+    {
       NAME_LINK: '',
       INTRODUCE: '更多SIG任务，敬请期待',
       GITEE: '',

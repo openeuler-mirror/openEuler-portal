@@ -35,7 +35,6 @@ import CodeImgZgz from '@/assets/common/footer/code-zgz.png';
 // float
 import floatLight from '@/assets/common/footer/float_light.png';
 import floatDark from '@/assets/common/footer/float_dark.png';
-import floatQr from '@/assets/common/footer/float-img.png';
 
 import IconCancel from '~icons/app/icon-cancel.svg';
 import IconRobot_light from '~icons/footer/icon-robot_light.svg';
@@ -212,10 +211,6 @@ function onCookieClick() {
   emits('click-cookie');
 }
 
-function handleCloseQr() {
-  isQrTipVisible.value = false;
-  localStorage.setItem('euler-feedback', 'false');
-}
 // 控制issue浮窗在峰会页面不显示
 const isFloShow = computed(() => !router.route.path.includes('summit-list'));
 onMounted(() => {
@@ -301,19 +296,6 @@ onMounted(() => {
           </div>
         </div>
       </AppContent>
-    </div>
-    <div
-      v-show="lang === 'zh' && isQrTipVisible && isFloShow"
-      class="float-left float-right"
-    >
-      <a
-        href="https://huaweicompute.wjx.cn/vm/rxE9GVe.aspx#1"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img :src="floatQr" alt="" />
-      </a>
-      <span class="close" title="close" @click.stop="handleCloseQr"></span>
     </div>
     <div
       v-show="lang === 'zh' && isFloShow"

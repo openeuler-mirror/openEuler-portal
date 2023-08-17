@@ -147,26 +147,6 @@ export default {
       ],
     },
     {
-      TITLE: 'iSula',
-      URL: '/img/other/brand/iSula-logo-png.png',
-      width: 101,
-      height: 105,
-      DOWNLOAD_LINK: [
-        {
-          STYLE: 'JPG',
-          URL: '/img/other/brand/iSula-logo-jpg.jpg',
-        },
-        {
-          STYLE: 'PNG',
-          URL: '/img/other/brand/iSula-logo-png.png',
-        },
-        {
-          STYLE: 'SVG',
-          URL: '/img/other/brand/iSula-logo-svg.svg',
-        },
-      ],
-    },
-    {
       TITLE: 'StratoVirt',
       width: 114,
       height: 114,
