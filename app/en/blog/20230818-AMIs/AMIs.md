@@ -1,5 +1,5 @@
 ---
-title: Try openEuler: Multiple AMI Versions Now Available in AWS Marketplace
+title: 'Try openEuler: Multiple AMI Versions Now Available in AWS Marketplace'
 category: blog
 date: 2023-08-18
 tags:
