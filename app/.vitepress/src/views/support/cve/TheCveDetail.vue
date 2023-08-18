@@ -313,7 +313,7 @@ onMounted(() => {
         margin-bottom: var(--o-spacing-h8);
       }
     }
-    .pc-list {
+    .o-table {
       box-shadow: none;
     }
     &-content {

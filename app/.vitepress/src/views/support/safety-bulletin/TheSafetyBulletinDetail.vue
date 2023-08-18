@@ -21,16 +21,12 @@ const queryData: DetailParams = reactive({
 });
 
 function getSecurityDetailInfo(data: any) {
-  try {
-    getSecurityDetail(data).then((res: any) => {
-      if (res) {
-        detailData.value = res;
-        cveIdList.value = res.cveId.split(';');
-      }
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  getSecurityDetail(data).then((res: any) => {
+    if (res) {
+      detailData.value = res;
+      cveIdList.value = res.cveId.split(';');
+    }
+  });
 }
 
 function goBackPage() {
@@ -157,7 +153,7 @@ onMounted(() => {
             </div>
           </OTabPane>
 
-          <OTabPane :label="i18n.safetyBulletin.UPDATED_PACKAGES">
+          <OTabPane v-if="detailData?.packageHelperList?.length" :label="i18n.safetyBulletin.UPDATED_PACKAGES">
             <div class="tab-content">
               <div
                 v-for="item in detailData.packageHelperList"
@@ -179,6 +175,33 @@ onMounted(() => {
                     class="packge-item-class-rpm"
                   >
                     {{ single.packageName }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </OTabPane>
+          <OTabPane v-if="detailData?.packageHotpatchList?.length" :label="i18n.safetyBulletin.UPDATED_HOT_PATCHES">
+            <div class="tab-content">
+              <div
+                v-for="item in detailData.packageHotpatchList"
+                :key="item"
+                class="packge-item"
+              >
+                <h1 class="packge-item-title">{{ item.productName }}</h1>
+                <div
+                  v-for="it in item.child"
+                  :key="it"
+                  class="packge-item-class"
+                >
+                  <p class="packge-item-class-achitecture">
+                    {{ it.packageType }}
+                  </p>
+                  <p
+                    v-for="single in it.packageName"
+                    :key="single"
+                    class="packge-item-class-rpm"
+                  >
+                    {{ single }}
                   </p>
                 </div>
               </div>
@@ -318,6 +341,9 @@ onMounted(() => {
     .tab-content {
       padding: var(--o-spacing-h2);
       background-color: var(--o-color-bg2);
+      & > *:first-child {
+        margin-top: 0 !important;
+      }
       @media screen and (max-width: 768px) {
         margin: var(--o-spacing-h5) var(--o-spacing-h5) 0;
         padding: var(--o-spacing-h5);
@@ -375,27 +401,28 @@ onMounted(() => {
         }
       }
       .packge-item {
-        // margin-bottom: 40px;
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
         &-title {
+          margin-bottom: 4px;
           font-size: var(--o-font-size-h5);
           font-weight: 400;
           line-height: var(--o-line-height-h8);
-          margin-bottom: var(--o-spacing-h3);
           color: var(--o-color-text1);
         }
         &-class {
-          margin-bottom: var(--o-spacing-h4);
           &:last-child {
             margin-bottom: 0;
           }
           &-achitecture {
             color: var(--o-color-text1);
             font-size: var(--o-font-size-h8);
-            line-height: 64px;
+            line-height: var(--o-line-height-h3);
             border-bottom: 1px solid var(--o-color-border1);
           }
           &-rpm {
-            line-height: var(--o-line-height-h3);
+            line-height: var(--o-line-height-h4);
             font-size: var(--o-font-size-text);
             color: var(--o-color-text4);
             border-bottom: 1px solid var(--o-color-border1);
@@ -403,6 +430,13 @@ onMounted(() => {
               border: none;
             }
           }
+        }
+      }
+      .hot-patches-item {
+        margin-top: 40px;
+        & > .packge-item-title {
+          font-size: var(--o-font-size-h4);
+          margin-bottom: var(--o-spacing-h3);
         }
       }
     }
