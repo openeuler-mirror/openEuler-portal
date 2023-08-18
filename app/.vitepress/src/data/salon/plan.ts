@@ -251,7 +251,7 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: '创新技术 北京',
+                activeName: '北京 创新技术',
               },
             ],
           },
@@ -272,10 +272,10 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: '嵌入式 长沙',
+                activeName: '长沙 嵌入式',
               },
               {
-                activeName: '云原生 上海',
+                activeName: '上海 云原生',
               },
             ],
           },
@@ -296,7 +296,7 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: '待定',
+                activeName: '深圳 BigData',
               },
             ],
           },

@@ -1,6 +1,7 @@
 export default {
   OVERVIEW: '概述',
   UPDATED_PACKAGES: '更新的软件包',
+  UPDATED_HOT_PATCHES: '更新的热补丁',
   SECURITY_ADVISORIES: '安全公告',
   SECURITY_ADVISORIES_DETAIL: '安全公告详情',
   SEARCH: '输入关键词',
@@ -10,10 +11,6 @@ export default {
   END_DATE: '结束时间',
   CANCEL: '取消选项',
   SEVERITY_LIST: [
-    // {
-    //   NAME: '全部',
-    //   LABEL: '',
-    // },
     {
       NAME: '低',
       LABEL: 'Low',

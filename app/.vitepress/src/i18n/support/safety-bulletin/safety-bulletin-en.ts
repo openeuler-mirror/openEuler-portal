@@ -2,6 +2,7 @@ export default {
   OVERVIEW: 'Overview',
   UPDATED_PACKAGES: 'Updated software packages',
   SECURITY_ADVISORIES: 'Security Advisories',
+  UPDATED_HOT_PATCHES: 'Updated hotfix',
   SECURITY_ADVISORIES_DETAIL: 'Security Advisories Detail',
   SEARCH: 'Search',
   SELECT_ALL: 'All',
