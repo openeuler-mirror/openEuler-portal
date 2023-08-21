@@ -363,20 +363,22 @@ watch(
         <div class="content-box">
           <ul v-if="searchResultList.length" class="content-list">
             <li v-for="item in searchResultList" :key="item.id">
-              <h3 v-dompurify-html="item.title" @click="goLink(item)"></h3>
-              <p
-                v-dompurify-html="item.textContent"
-                class="detail"
-                @click="goLink(item)"
-              ></p>
-              <p class="from">
-                <span>{{ i18n.search.form }}</span>
-                <span>{{ i18n.search.tagList[item.type] }}</span>
-              </p>
-              <p v-if="item.version" class="from version">
-                <span>{{ i18n.search.version }}</span>
-                <span>{{ item.version }}</span>
-              </p>
+              <template v-if="i18n.search.tagList[item.type]">
+                <h3 v-dompurify-html="item.title" @click="goLink(item)"></h3>
+                <p
+                  v-dompurify-html="item.textContent"
+                  class="detail"
+                  @click="goLink(item)"
+                ></p>
+                <p class="from">
+                  <span>{{ i18n.search.form }}</span>
+                  <span>{{ i18n.search.tagList[item.type] }}</span>
+                </p>
+                <p v-if="item.version" class="from version">
+                  <span>{{ i18n.search.version }}</span>
+                  <span>{{ item.version }}</span>
+                </p>
+              </template>
             </li>
           </ul>
           <NotFound v-else />
@@ -625,6 +627,9 @@ watch(
           }
           li {
             padding-top: var(--o-spacing-h2);
+            &:empty {
+              padding: 0;
+            }
             @media (max-width: 768px) {
               padding-top: var(--o-spacing-h5);
               margin: 0 var(--o-spacing-h5);
