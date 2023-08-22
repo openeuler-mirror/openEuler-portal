@@ -369,19 +369,14 @@ export default {
               PATH: '',
               CHILDREN: [
                 {
-                  NAME: 'Vulnerability Management',
-                  LABEL: '',
-                  PATH: '/security/vulnerability-reporting/',
-                },
-                {
-                  NAME: 'Security Advisories',
+                  NAME: 'Security Center',
                   LABEL: '',
                   PATH: '/security/security-bulletins/',
                 },
                 {
-                  NAME: 'CVE',
+                  NAME: 'Defect Center',
                   LABEL: '',
-                  PATH: '/security/cve/',
+                  PATH: '/security/bug-bulletins/',
                 },
               ],
             },

@@ -44,6 +44,7 @@ const queryData: CveQuery = reactive({
   status: '',
   year: '',
   score: '',
+  noticeType: 'cve',
 });
 
 function getCveLists(data: CveQuery) {

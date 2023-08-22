@@ -338,7 +338,7 @@ export function getProductList() {
 
 /**
  * 调用接口获取影响组件列表
- * @name getProductList
+ * @name getComponentList
  */
 export function getComponentList(params: { [key: string]: any }) {
   Object.keys(params).forEach((key) => {
