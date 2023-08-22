@@ -65,6 +65,7 @@ const queryData: any = reactive({
   date: [],
   affectedProduct: [],
   affectedComponent: '',
+  noticeType: 'cve',
 });
 
 function getSecurityLists(data: CveQuery) {
@@ -182,6 +183,7 @@ function getAffectedComponentList() {
   getComponentList({
     securityLevel: queryData.type.join(','),
     affectedProduct: queryData.affectedProduct.join(','),
+    noticeType: 'cve',
   }).then((res: AxiosResponse) => {
     componentTotalList.value = res.data.result;
 
