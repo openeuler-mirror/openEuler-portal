@@ -68,7 +68,7 @@ const queryData: any = reactive({
   type: [],
   date: [],
   affectedProduct: [],
-  notice_type: 'bug',
+  noticeType: 'bug',
   affectedComponent: '',
 });
 
@@ -187,6 +187,7 @@ function getAffectedComponentList() {
   getComponentList({
     securityLevel: queryData.type.join(','),
     affectedProduct: queryData.affectedProduct.join(','),
+    noticeType: 'bug',
   }).then((res: AxiosResponse) => {
     componentTotalList.value = res.data.result;
 
