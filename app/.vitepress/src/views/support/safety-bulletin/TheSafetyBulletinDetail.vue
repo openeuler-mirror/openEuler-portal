@@ -4,10 +4,19 @@ import { useRouter, useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
+import securityNoticeNos from '@/data/security';
 import { getSecurityDetail } from '@/api/api-security';
 import { DetailParams } from '@/shared/@types/type-support';
 
 import IconChevronRight from '~icons/app/icon-chevron-right.svg';
+
+interface PackageInfo {
+  productName: string;
+  packageName: string;
+  sha256: string;
+  url?: string;
+  child: PackageInfo[];
+}
 
 const i18n = useI18n();
 const router = useRouter();
@@ -15,16 +24,19 @@ const { lang } = useData();
 
 const detailData: any = ref({});
 const cveIdList = ref<string[]>([]);
+const baseUrl = 'https://repo.openeuler.org';
 
 const queryData: DetailParams = reactive({
   securityNoticeNo: '',
 });
 
-function getSecurityDetailInfo(data: any) {
+function getSecurityDetailInfo(data: DetailParams) {
   getSecurityDetail(data).then((res: any) => {
     if (res) {
       detailData.value = res;
       cveIdList.value = res.cveId.split(';');
+      getRpmUrl(detailData.value.packageHelperList);
+      getRpmUrl(detailData.value.packageHotpatchList);
     }
   });
 }
@@ -40,6 +52,37 @@ function goCveDetail(val: string) {
   );
 }
 
+function getRpmUrl(data: PackageInfo[]) {
+  if (!data?.length) {
+    return false;
+  }
+  data.forEach((version) => {
+    version.child.forEach((product) => {
+      product.child.forEach((rpm) => {
+        let path = '';
+        // securityNoticeNos 为特殊路径
+        if (securityNoticeNos.includes(queryData.securityNoticeNo)) {
+          if (product.productName === 'src') {
+            path = `source/Packages/${rpm.packageName}`;
+          } else if (product.productName === 'noarch') {
+            path = `everything/aarch64/Packages/${rpm.packageName}`;
+          } else {
+            path = `everything/${product.productName}/Packages/${rpm.packageName}`;
+          }
+        } else {
+          if (product.productName === 'src') {
+            path = `update/source/Packages/${rpm.packageName}`;
+          } else if (product.productName === 'noarch') {
+            path = `update/aarch64/Packages/${rpm.packageName}`;
+          } else {
+            path = `update/${product.productName}/Packages/${rpm.packageName}`;
+          }
+        }
+        rpm.url = `${baseUrl}/${version.productName}/${path}`;
+      });
+    });
+  });
+}
 onMounted(() => {
   const index1 = window.location.href.indexOf('=');
   queryData.securityNoticeNo = window.location.href.substring(index1 + 1);
@@ -153,7 +196,10 @@ onMounted(() => {
             </div>
           </OTabPane>
 
-          <OTabPane :label="i18n.safetyBulletin.UPDATED_PACKAGES">
+          <OTabPane
+            v-if="detailData?.packageHelperList?.length"
+            :label="i18n.safetyBulletin.UPDATED_PACKAGES"
+          >
             <div class="tab-content">
               <div
                 v-for="item in detailData.packageHelperList"
@@ -169,12 +215,40 @@ onMounted(() => {
                   <p class="packge-item-class-achitecture">
                     {{ it.productName }}
                   </p>
-                  <p
+                  <a
+                    :href="single.url"
                     v-for="single in it.child"
                     :key="single"
                     class="packge-item-class-rpm"
                   >
                     {{ single.packageName }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </OTabPane>
+          <OTabPane v-if="detailData?.packageHotpatchList?.length" :label="i18n.safetyBulletin.UPDATED_HOT_PATCHES">
+            <div class="tab-content">
+              <div
+                v-for="item in detailData.packageHotpatchList"
+                :key="item"
+                class="packge-item"
+              >
+                <h1 class="packge-item-title">{{ item.productName }}</h1>
+                <div
+                  v-for="it in item.child"
+                  :key="it"
+                  class="packge-item-class"
+                >
+                  <p class="packge-item-class-achitecture">
+                    {{ it.packageType }}
+                  </p>
+                  <p
+                    v-for="single in it.packageName"
+                    :key="single"
+                    class="packge-item-class-rpm"
+                  >
+                    {{ single }}
                   </p>
                 </div>
               </div>
@@ -391,9 +465,8 @@ onMounted(() => {
             border-bottom: 1px solid var(--o-color-border1);
           }
           &-rpm {
-            line-height: var(--o-line-height-h3);
+            line-height: var(--o-line-height-h4);
             font-size: var(--o-font-size-text);
-            color: var(--o-color-text4);
             border-bottom: 1px solid var(--o-color-border1);
             &:last-child {
               border: none;
