@@ -2,6 +2,7 @@ export default {
   OVERVIEW: 'Overview',
   UPDATED_PACKAGES: 'Updated software packages',
   SECURITY_ADVISORIES: 'Security Advisories',
+  UPDATED_HOT_PATCHES: 'Updated hotpatch',
   SECURITY_ADVISORIES_DETAIL: 'Security Advisories Detail',
   SEARCH: 'Search',
   SELECT_ALL: 'All',
@@ -12,10 +13,6 @@ export default {
   DEFECT_CENTER: 'Defect Center',
   DEFECT_MANAGE: 'Defect Management',
   SEVERITY_LIST: [
-    // {
-    //   NAME: 'All',
-    //   LABEL: '',
-    // },
     {
       NAME: 'Low',
       LABEL: 'Low',
