@@ -229,3 +229,22 @@ export interface OsvList {
   type: string;
   updateTime?: string;
 }
+
+export interface PackageInfo {
+  productName: string;
+  packageName: string;
+  sha256: string;
+  url?: string;
+  child: PackageInfo[];
+}
+
+export interface Package {
+  packageName: string[];
+  packageType: string;
+  url?: string;
+}
+
+export interface HotPatch {
+  productName: string;
+  child: Package[];
+}

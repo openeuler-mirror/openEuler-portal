@@ -3,6 +3,7 @@ export default {
   UPDATED_PACKAGES: '更新的软件包',
   SECURITY_ADVISORIES: '安全公告',
   SECURITY_ADVISORIES_DETAIL: '安全公告详情',
+  UPDATED_HOT_PATCHES: '更新的热补丁',
   SEARCH: '输入关键词',
   SELECT_ALL: '选择全部',
   DATE_PICKER: '日期选择器',
@@ -13,10 +14,6 @@ export default {
   DEFECT_CENTER_DETAIL: '缺陷中心详情',
   DEFECT_MANAGE: '缺陷管理',
   SEVERITY_LIST: [
-    // {
-    //   NAME: '全部',
-    //   LABEL: '',
-    // },
     {
       NAME: '低',
       LABEL: 'Low',
