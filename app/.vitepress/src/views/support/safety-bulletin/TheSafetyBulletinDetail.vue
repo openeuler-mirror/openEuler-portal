@@ -6,17 +6,13 @@ import { useI18n } from '@/i18n';
 
 import securityNoticeNos from '@/data/security';
 import { getSecurityDetail } from '@/api/api-security';
-import { DetailParams } from '@/shared/@types/type-support';
+import type {
+  DetailParams,
+  PackageInfo,
+  HotPatch,
+} from '@/shared/@types/type-support';
 
 import IconChevronRight from '~icons/app/icon-chevron-right.svg';
-
-interface PackageInfo {
-  productName: string;
-  packageName: string;
-  sha256: string;
-  url?: string;
-  child: PackageInfo[];
-}
 
 const i18n = useI18n();
 const router = useRouter();
@@ -36,7 +32,7 @@ function getSecurityDetailInfo(data: DetailParams) {
       detailData.value = res;
       cveIdList.value = res.cveId.split(';');
       getRpmUrl(detailData.value.packageHelperList);
-      getRpmUrl(detailData.value.packageHotpatchList);
+      getHotPatchRpmUrl(detailData.value.packageHotpatchList);
     }
   });
 }
@@ -79,6 +75,26 @@ function getRpmUrl(data: PackageInfo[]) {
           }
         }
         rpm.url = `${baseUrl}/${version.productName}/${path}`;
+      });
+    });
+  });
+}
+function getHotPatchRpmUrl(data: HotPatch[]) {
+  if (!data?.length) {
+    return false;
+  }
+  data.forEach((version) => {
+    version.child.forEach((product) => {
+      product.packageName.forEach((rpm) => {
+        let path = '';
+        if (product.packageType === 'src') {
+          path = `update/source/Packages/${rpm}`;
+        } else if (product.packageType === 'noarch') {
+          path = `update/aarch64/Packages/${rpm}`;
+        } else {
+          path = `update/${product.packageType}/Packages/${rpm}`;
+        }
+        product.url = `${baseUrl}/${version.productName}/${path}`;
       });
     });
   });
@@ -216,8 +232,8 @@ onMounted(() => {
                     {{ it.productName }}
                   </p>
                   <a
-                    :href="single.url"
                     v-for="single in it.child"
+                    :href="single.url"
                     :key="single"
                     class="packge-item-class-rpm"
                   >
@@ -227,7 +243,10 @@ onMounted(() => {
               </div>
             </div>
           </OTabPane>
-          <OTabPane v-if="detailData?.packageHotpatchList?.length" :label="i18n.safetyBulletin.UPDATED_HOT_PATCHES">
+          <OTabPane
+            v-if="detailData?.packageHotpatchList?.length"
+            :label="i18n.safetyBulletin.UPDATED_HOT_PATCHES"
+          >
             <div class="tab-content">
               <div
                 v-for="item in detailData.packageHotpatchList"
@@ -243,13 +262,14 @@ onMounted(() => {
                   <p class="packge-item-class-achitecture">
                     {{ it.packageType }}
                   </p>
-                  <p
+                  <a
                     v-for="single in it.packageName"
+                    :href="it.url"
                     :key="single"
                     class="packge-item-class-rpm"
                   >
                     {{ single }}
-                  </p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -388,6 +408,9 @@ onMounted(() => {
     .tab-content {
       padding: var(--o-spacing-h2);
       background-color: var(--o-color-bg2);
+      & > *:first-child {
+        margin-top: 0 !important;
+      }
       @media screen and (max-width: 768px) {
         margin: var(--o-spacing-h5) var(--o-spacing-h5) 0;
         padding: var(--o-spacing-h5);
@@ -445,26 +468,28 @@ onMounted(() => {
         }
       }
       .packge-item {
-        // margin-bottom: 40px;
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
         &-title {
+          margin-bottom: 4px;
           font-size: var(--o-font-size-h5);
           font-weight: 400;
           line-height: var(--o-line-height-h8);
-          margin-bottom: var(--o-spacing-h3);
           color: var(--o-color-text1);
         }
         &-class {
-          margin-bottom: var(--o-spacing-h4);
           &:last-child {
             margin-bottom: 0;
           }
           &-achitecture {
             color: var(--o-color-text1);
             font-size: var(--o-font-size-h8);
-            line-height: 64px;
+            line-height: var(--o-line-height-h3);
             border-bottom: 1px solid var(--o-color-border1);
           }
           &-rpm {
+            display: block;
             line-height: var(--o-line-height-h4);
             font-size: var(--o-font-size-text);
             border-bottom: 1px solid var(--o-color-border1);
@@ -472,6 +497,13 @@ onMounted(() => {
               border: none;
             }
           }
+        }
+      }
+      .hot-patches-item {
+        margin-top: 40px;
+        & > .packge-item-title {
+          font-size: var(--o-font-size-h4);
+          margin-bottom: var(--o-spacing-h3);
         }
       }
     }
