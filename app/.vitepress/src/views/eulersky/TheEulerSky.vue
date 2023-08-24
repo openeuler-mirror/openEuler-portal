@@ -9,6 +9,7 @@ import AppContent from '@/components/AppContent.vue';
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import banner from '@/assets/banner/banner-interaction.png';
 import skyIllustration from '@/assets/illustrations/euler-sky.png';
+import imgCardBg from '@/assets/category/euler-sky/round-bg.png';
 
 const i18n = useI18n();
 const router = useRouter();
@@ -35,6 +36,28 @@ function goDetail(url: string) {
       <p class="sky-introduction word-style">
         {{ homeI18n.PLAN_INTRODUCE }}
       </p>
+      <div class="sky-card">
+        <OContainer
+          :style="{ backgroundImage: `url(${imgCardBg})` }"
+          class="item"
+        >
+          <div class="item-content">
+            <div class="item-title">{{ homeI18n.EVENT_COLLECTION }}</div>
+            <OButton
+              animation
+              type="text"
+              size="small"
+              class="item-link"
+              @click="goDetail(homeI18n.EVENT_COLLECTION_URL)"
+            >
+              {{ homeI18n.EVENT_COLLECTION1 }}
+              <template #suffixIcon>
+                <OIcon><IconArrowRight /></OIcon>
+              </template>
+            </OButton>
+          </div>
+        </OContainer>
+      </div>
       <div class="sky-card-list">
         <OContainer
           v-for="item in homeI18n.CARD_DATA"
@@ -59,12 +82,6 @@ function goDetail(url: string) {
           </div>
         </OContainer>
       </div>
-      <p class="sky-event-collection word-style">
-        {{ homeI18n.EVENT_COLLECTION }}
-        <a :href="homeI18n.EVENT_COLLECTION_URL">{{
-          homeI18n.EVENT_COLLECTION1
-        }}</a>
-      </p>
     </div>
   </AppContent>
 </template>
@@ -93,10 +110,11 @@ function goDetail(url: string) {
   line-height: var(--o-line-height-h8);
 }
 .sky {
-  .sky-card-list {
+  .sky-card-list,
+  .sky-card {
     display: grid;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 24px;
     max-width: 936px;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 24px;
@@ -126,9 +144,15 @@ function goDetail(url: string) {
         flex-direction: column;
         justify-content: space-between;
       }
+      .item-title {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        white-space: pre-wrap;
+      }
       .item-link {
         max-width: 256px;
-        margin-top: var(--o-spacing-h2);
         padding: 0;
         margin-right: var(--o-spacing-h5);
         font-size: var(--o-font-size-text);
@@ -140,6 +164,13 @@ function goDetail(url: string) {
       .item:hover {
         box-shadow: var(--o-shadow-l2_hover);
       }
+    }
+  }
+  .sky-card {
+    margin-top: 40px;
+    grid-template-columns: 1fr;
+    .item {
+      background-size: contain;
     }
   }
   .sky-event-collection {
