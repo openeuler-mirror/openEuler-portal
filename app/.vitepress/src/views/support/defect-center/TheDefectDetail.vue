@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { reactive, onMounted, ref } from 'vue';
-import { useRouter, useData } from 'vitepress';
+import { useRouter } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
@@ -16,7 +16,6 @@ import IconChevronRight from '~icons/app/icon-chevron-right.svg';
 
 const i18n = useI18n();
 const router = useRouter();
-const { lang } = useData();
 
 const detailData: any = ref({});
 const cveIdList = ref<string[]>([]);
@@ -40,12 +39,6 @@ function getSecurityDetailInfo(data: DetailParams) {
 function goBackPage() {
   const i = router.route.path.lastIndexOf('d');
   router.go(`${router.route.path.substring(0, i)}`);
-}
-
-function goCveDetail(val: string) {
-  router.go(
-    `/${lang.value}/security/cve/detail/?cveId=${val}&packageName=${detailData.value.affectedComponent}`
-  );
 }
 
 function getRpmUrl(data: PackageInfo[]) {
@@ -181,13 +174,12 @@ onMounted(() => {
               </div>
               <div class="tab-content-item">
                 <h5 class="tab-content-item-title">
-                  {{ i18n.safetyBulletin.CVE }}
+                  BUG
                 </h5>
                 <p
                   v-for="(item, index) in cveIdList"
                   :key="index"
-                  class="tab-content-item-link"
-                  @click="goCveDetail(item)"
+                  class="tab-content-item-text"
                 >
                   {{ item }}
                 </p>
