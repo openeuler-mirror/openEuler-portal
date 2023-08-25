@@ -219,10 +219,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <footer
-    class="footer"
-    :class="{ 'is-doc': isMigration || isAbout }"
-  >
+  <footer class="footer" :class="{ 'is-doc': isMigration || isAbout }">
     <!-- 隐私政策 -->
     <div v-if="isCookieTip" class="cookie-privacy">
       <span>{{ i18n.common.COOKIE_LEGAL_TEXT }} </span>

@@ -35,7 +35,7 @@ watch(
 </script>
 
 <template>
-  <div class="markdown" v-dompurify-html="useOeep().statementHtml"></div>
+  <div v-dompurify-html="useOeep().statementHtml" class="markdown"></div>
 </template>
 
 <style lang="scss" scoped>

@@ -438,7 +438,6 @@ onMounted(() => {
     throw new Error(e);
   }
 
-
   try {
     getCpu({ lang: `${lang.value}` }).then((res: any) => {
       res.result.forEach((item: string) => {
