@@ -101,7 +101,6 @@ function onDownBtnClick() {
 function onMaskClick() {
   isTipShow.value = false;
 }
-
 </script>
 
 <template>

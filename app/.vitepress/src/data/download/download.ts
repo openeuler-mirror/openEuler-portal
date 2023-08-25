@@ -2018,7 +2018,8 @@ export default {
           'https://docs.openeuler.org/en/docs/22.03_LTS_SP2/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/22.03_LTS_SP2/docs/Releasenotes/installing-the-os.html',
-        WHITE_PAPER: '/whitepaper/en/openEuler 22.03 LTS SP2 Technical White Paper.pdf',
+        WHITE_PAPER:
+          '/whitepaper/en/openEuler 22.03 LTS SP2 Technical White Paper.pdf',
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',

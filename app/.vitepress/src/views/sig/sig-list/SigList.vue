@@ -34,7 +34,7 @@ interface SIGLIST {
   repos: Array<string>;
   sig_name: string;
 }
-interface oldSigList {
+interface oldSigListT {
   group_name: string;
   maillist: string;
 }
@@ -42,7 +42,7 @@ interface oldSigList {
 // sig列表采用老接口数据的邮箱做渲染
 const props = defineProps({
   oldSigList: {
-    type: Array as PropType<oldSigList[]>,
+    type: Array as PropType<oldSigListT[]>,
     default: () => [],
   },
 });

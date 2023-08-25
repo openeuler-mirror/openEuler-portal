@@ -76,7 +76,7 @@ onMounted(async () => {
 <template>
   <div ref="trendRef" class="home-trend">
     <h3>{{ i18n.home.COMMUNITY_ACTIVITY.TITLE }}</h3>
-    <div  class="trend-list">
+    <div class="trend-list">
       <OContainer data-aos="fade-right" class="trend-card">
         <div class="trend-title">
           {{ i18n.home.COMMUNITY_ACTIVITY.CARD.TITLE }}

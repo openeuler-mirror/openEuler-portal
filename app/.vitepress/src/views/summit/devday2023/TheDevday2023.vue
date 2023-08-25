@@ -67,8 +67,6 @@ watch(
 );
 // 控制直播
 const isLiverShow = ref(0);
-
-
 </script>
 <template>
   <SummitBanner :banner-data="summitData.banner" />

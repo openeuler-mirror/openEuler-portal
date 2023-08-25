@@ -1,7 +1,7 @@
 export default {
   zh: {
     form: '来自：',
-    service:'查看服务',
+    service: '查看服务',
     tagList: {
       all: '全部',
       blog: '博客',
@@ -19,7 +19,7 @@ export default {
   },
   en: {
     form: 'From:',
-    service:'View More',
+    service: 'View More',
     tagList: {
       all: 'All',
       blog: 'Blog',

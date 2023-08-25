@@ -153,7 +153,10 @@ onMounted(() => {
             </div>
           </OTabPane>
 
-          <OTabPane v-if="detailData?.packageHelperList?.length" :label="i18n.safetyBulletin.UPDATED_PACKAGES">
+          <OTabPane
+            v-if="detailData?.packageHelperList?.length"
+            :label="i18n.safetyBulletin.UPDATED_PACKAGES"
+          >
             <div class="tab-content">
               <div
                 v-for="item in detailData.packageHelperList"
@@ -180,7 +183,10 @@ onMounted(() => {
               </div>
             </div>
           </OTabPane>
-          <OTabPane v-if="detailData?.packageHotpatchList?.length" :label="i18n.safetyBulletin.UPDATED_HOT_PATCHES">
+          <OTabPane
+            v-if="detailData?.packageHotpatchList?.length"
+            :label="i18n.safetyBulletin.UPDATED_HOT_PATCHES"
+          >
             <div class="tab-content">
               <div
                 v-for="item in detailData.packageHotpatchList"
