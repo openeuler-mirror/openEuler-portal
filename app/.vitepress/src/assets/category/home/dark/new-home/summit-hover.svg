@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="52px" height="60px" viewBox="0 0 52 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>编组</title>
     <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon-活动专区-dark-hover" transform="translate(-14.000000, -10.000000)">
+        <g id="icon-活动专区-dark-hover">
             <g id="编组" transform="translate(15.000000, 11.000000)">
                 <ellipse id="椭圆形" stroke="#002FA7" stroke-width="2" cx="23.015873" cy="51.5555556" rx="23.015873" ry="6.44444444"></ellipse>
                 <g id="编组-2" transform="translate(10.587302, 0.000000)" stroke="#FFFFFF" stroke-width="2">
@@ -11,7 +11,7 @@
                     <path d="M0.46031746,3.68253968 L14.1111111,3.68253968 C15.2156806,3.68253968 16.1111111,4.57797018 16.1111111,5.68253968 L16.1111111,7.23197235 C16.1111111,8.33654185 17.0065416,9.23197235 18.1111111,9.23197235 L37.1269841,9.23197235 C38.2315536,9.23197235 39.1269841,10.1274028 39.1269841,11.2319723 L39.1269841,20.2539683 L39.1269841,20.2539683" id="路径-19" stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M0.46031746,27.5286517 L14.1111111,27.5286517 C15.2156806,27.5286517 16.1111111,28.4240822 16.1111111,29.5286517 L16.1111111,30.2222222 C16.1111111,31.3267917 17.0065416,32.2222222 18.1111111,32.2222222 L18.8730159,32.2222222 L18.8730159,32.2222222 L39.1269841,32.2222222 L39.1269841,20.2539683" id="路径-20" stroke-linecap="round" stroke-linejoin="round"></path>
                 </g>
-                <circle id="椭圆形" fill="#406FE7" opacity="0.400000006" cx="31" cy="29" r="12"></circle>
+                <circle id="椭圆形" fill="#406FE7" opacity="0.400000006" cx="31" cy="29" r="17"></circle>
             </g>
         </g>
     </g>

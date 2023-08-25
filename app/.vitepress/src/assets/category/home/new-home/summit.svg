@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="52px" height="60px" viewBox="0 0 52 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>编组</title>
     <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon-活动专区-light" transform="translate(-14.000000, -10.000000)" stroke-width="2">
+        <g id="icon-活动专区-light" stroke-width="2">
             <g id="编组" transform="translate(15.000000, 11.000000)">
                 <ellipse id="椭圆形" stroke="#002FA7" cx="23.015873" cy="51.5555556" rx="23.015873" ry="6.44444444"></ellipse>
                 <g id="编组-2" transform="translate(10.587302, 0.000000)" stroke="#000000">
