@@ -6378,7 +6378,7 @@
         "boardModel": "X520-2",
         "chipModel": "82599ES",
         "downloadLink": "inbox"
-      }    
+      }
     ]
   },
   {
@@ -6498,7 +6498,7 @@
         "boardModel": "X520-2",
         "chipModel": "82599ES",
         "downloadLink": "inbox"
-      }    
+      }
     ]
   },
   {
@@ -6557,7 +6557,7 @@
         "boardModel": "9361-8i",
         "chipModel": "SAS-3 3108",
         "downloadLink": "inbox"
-      }    
+      }
     ]
   },
   {
@@ -6663,17 +6663,17 @@
     "date": "2022/08/17",
     "friendlyLink": "https://www.cancon.com.cn/product/1582.html",
     "compatibilityConfiguration": {
-        "productInformation": "https://www.cancon.com.cn/product/1582.html",
-        "certificationTime": "2022/08/17",
-        "commitID": "I5M1NV",
-        "mainboardModel": "62DB32",
-        "biosUefi": "CXYH051016",
-        "cpu": "Hygon 3",
-        "ram": "32*16G RDIMMs",
-        "portsBusTypes": "x16 PCIE",
-        "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
-        "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
-        "hardDiskDrive": "SA MZ7KH960HAJR-5 960G 2.5SATA 6Gb M SSD"
+      "productInformation": "https://www.cancon.com.cn/product/1582.html",
+      "certificationTime": "2022/08/17",
+      "commitID": "I5M1NV",
+      "mainboardModel": "62DB32",
+      "biosUefi": "CXYH051016",
+      "cpu": "Hygon 3",
+      "ram": "32*16G RDIMMs",
+      "portsBusTypes": "x16 PCIE",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+      "hardDiskDrive": "SA MZ7KH960HAJR-5 960G 2.5SATA 6Gb M SSD"
     },
     "boardCards": [
       {
@@ -6711,7 +6711,7 @@
         "boardModel": "9361-8i",
         "chipModel": "SAS-3 3108",
         "downloadLink": "inbox"
-      } 
+      }
     ]
   },
   {
@@ -6722,17 +6722,17 @@
     "date": "2022/08/08",
     "friendlyLink": "https://www.h3c.com/cn/Products___Technology/Products/NewServer/Catalog/H3CIndustrial/RackServer/Fourway_Server/R6900G5/",
     "compatibilityConfiguration": {
-        "productInformation": "https://www.h3c.com/cn/Products___Technology/Products/NewServer/Catalog/H3CIndustrial/RackServer/Fourway_Server/R6900G5/",
-        "certificationTime": "2022/08/08",
-        "commitID": "I5NG3R",
-        "mainboardModel": "",
-        "biosUefi": "5.35",
-        "cpu": "cooperlake",
-        "ram": "24*32G RDIMMs",
-        "portsBusTypes": "",
-        "videoAdapter": "",
-        "hostBusAdapter": "RAID-LSI-9361-8i(2G)-1-X",
-        "hardDiskDrive": ""
+      "productInformation": "https://www.h3c.com/cn/Products___Technology/Products/NewServer/Catalog/H3CIndustrial/RackServer/Fourway_Server/R6900G5/",
+      "certificationTime": "2022/08/08",
+      "commitID": "I5NG3R",
+      "mainboardModel": "",
+      "biosUefi": "5.35",
+      "cpu": "cooperlake",
+      "ram": "24*32G RDIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "RAID-LSI-9361-8i(2G)-1-X",
+      "hardDiskDrive": ""
     },
     "boardCards": [
       {
@@ -6806,7 +6806,7 @@
         "boardModel": "9361-8i",
         "chipModel": "SAS-3 3108",
         "downloadLink": "inbox"
-      } 
+      }
     ]
   },
   {
@@ -6817,17 +6817,17 @@
     "date": "2022/08/25",
     "friendlyLink": "https://www.h3c.com/cn/Service/Document_Software/Document_Center/Server/Catalog/Rack_server/R4930_G5/?CHID=506537&v=612",
     "compatibilityConfiguration": {
-        "productInformation": "https://www.h3c.com/cn/Service/Document_Software/Document_Center/Server/Catalog/Rack_server/R4930_G5/?CHID=506537&v=612",
-        "certificationTime": "2022/08/25",
-        "commitID": "I5NGDG",
-        "mainboardModel": "",
-        "biosUefi": "5.26",
-        "cpu": "Hygon 2",
-        "ram": "32*64G DIMMs",
-        "portsBusTypes": "",
-        "videoAdapter": "",
-        "hostBusAdapter": "SI-9361-8i(2G)-1-X",
-        "hardDiskDrive": ""
+      "productInformation": "https://www.h3c.com/cn/Service/Document_Software/Document_Center/Server/Catalog/Rack_server/R4930_G5/?CHID=506537&v=612",
+      "certificationTime": "2022/08/25",
+      "commitID": "I5NGDG",
+      "mainboardModel": "",
+      "biosUefi": "5.26",
+      "cpu": "Hygon 2",
+      "ram": "32*64G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "SI-9361-8i(2G)-1-X",
+      "hardDiskDrive": ""
     },
     "boardCards": [
       {
@@ -6865,7 +6865,7 @@
         "boardModel": "9361-8i",
         "chipModel": "SAS-3 3108",
         "downloadLink": "inbox"
-      }    
+      }
     ]
   },
   {
@@ -6876,17 +6876,17 @@
     "date": "2022/08/08",
     "friendlyLink": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Dualway_Server/R4900_G5/",
     "compatibilityConfiguration": {
-        "productInformation": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Dualway_Server/R4900_G5/",
-        "certificationTime": "2022/08/08",
-        "commitID": "I5NHC1",
-        "mainboardModel": "",
-        "biosUefi": "5.34",
-        "cpu": "icelake",
-        "ram": "2*32G RDIMMs",
-        "portsBusTypes": "",
-        "videoAdapter": "",
-        "hostBusAdapter": "RAID-LSI-9361-8i(2G)-1-X",
-        "hardDiskDrive": ""
+      "productInformation": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Dualway_Server/R4900_G5/",
+      "certificationTime": "2022/08/08",
+      "commitID": "I5NHC1",
+      "mainboardModel": "",
+      "biosUefi": "5.34",
+      "cpu": "icelake",
+      "ram": "2*32G RDIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "RAID-LSI-9361-8i(2G)-1-X",
+      "hardDiskDrive": ""
     },
     "boardCards": [
       {
@@ -6960,7 +6960,7 @@
         "boardModel": "9361-8i",
         "chipModel": "SAS-3 3108",
         "downloadLink": "inbox"
-      } 
+      }
     ]
   },
   {
@@ -6971,17 +6971,17 @@
     "date": "2022/08/08",
     "friendlyLink": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Application_Optimization_Storage/R4300_G5/",
     "compatibilityConfiguration": {
-        "productInformation": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Application_Optimization_Storage/R4300_G5/",
-        "certificationTime": "2022/08/08",
-        "commitID": "I5MVQ5",
-        "mainboardModel": "",
-        "biosUefi": "5.34",
-        "cpu": "icelake",
-        "ram": "2*32G RDIMMs",
-        "portsBusTypes": "",
-        "videoAdapter": "",
-        "hostBusAdapter": "RAID-LSI-9361-8i(2G)-1-X",
-        "hardDiskDrive": ""
+      "productInformation": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Application_Optimization_Storage/R4300_G5/",
+      "certificationTime": "2022/08/08",
+      "commitID": "I5MVQ5",
+      "mainboardModel": "",
+      "biosUefi": "5.34",
+      "cpu": "icelake",
+      "ram": "2*32G RDIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "RAID-LSI-9361-8i(2G)-1-X",
+      "hardDiskDrive": ""
     },
     "boardCards": [
       {
@@ -7055,7 +7055,7 @@
         "boardModel": "9361-8i",
         "chipModel": "SAS-3 3108",
         "downloadLink": "inbox"
-      } 
+      }
     ]
   },
   {
@@ -7161,17 +7161,17 @@
     "date": "2022/09/08",
     "friendlyLink": "http://www.cancon.com.cn",
     "compatibilityConfiguration": {
-        "productInformation": "http://www.cancon.com.cn",
-        "certificationTime": "2022/09/08",
-        "commitID": "",
-        "mainboardModel": "52DB16",
-        "biosUefi": "CSZH051012",
-        "cpu": "Hygon 3",
-        "ram": "16*16G DIMMs",
-        "portsBusTypes": "x16 PCIE",
-        "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
-        "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
-        "hardDiskDrive": "希捷 ST300MP0006 300G 15k 2.5 SAS 12Gb硬盘"
+      "productInformation": "http://www.cancon.com.cn",
+      "certificationTime": "2022/09/08",
+      "commitID": "",
+      "mainboardModel": "52DB16",
+      "biosUefi": "CSZH051012",
+      "cpu": "Hygon 3",
+      "ram": "16*16G DIMMs",
+      "portsBusTypes": "x16 PCIE",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+      "hardDiskDrive": "希捷 ST300MP0006 300G 15k 2.5 SAS 12Gb硬盘"
     },
     "boardCards": [
       {
@@ -7220,17 +7220,17 @@
     "date": "2022/09/27",
     "friendlyLink": "http://www.cancon.com.cn",
     "compatibilityConfiguration": {
-        "productInformation": "http://www.cancon.com.cn",
-        "certificationTime": "2022/09/27",
-        "commitID": "",
-        "mainboardModel": "32DB16",
-        "biosUefi": "CNSH051419",
-        "cpu": "Hygon 3",
-        "ram": "16*16G DIMMs",
-        "portsBusTypes": "x16 PCIE",
-        "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
-        "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
-        "hardDiskDrive": "SA MZ7KH960HAJR-5 960G 2.5SATA 6Gb M SSD"
+      "productInformation": "http://www.cancon.com.cn",
+      "certificationTime": "2022/09/27",
+      "commitID": "",
+      "mainboardModel": "32DB16",
+      "biosUefi": "CNSH051419",
+      "cpu": "Hygon 3",
+      "ram": "16*16G DIMMs",
+      "portsBusTypes": "x16 PCIE",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+      "hardDiskDrive": "SA MZ7KH960HAJR-5 960G 2.5SATA 6Gb M SSD"
     },
     "boardCards": [
       {
@@ -7279,17 +7279,17 @@
     "date": "2022/11/08",
     "friendlyLink": "http://www.cancon.com.cn",
     "compatibilityConfiguration": {
-        "productInformation": "http://www.cancon.com.cn",
-        "certificationTime": "2022/11/08",
-        "commitID": "",
-        "mainboardModel": "65MA32",
-        "biosUefi": "CDSH051013",
-        "cpu": "Hygon 3",
-        "ram": "32*32G DIMMs",
-        "portsBusTypes": "x16 PCIE",
-        "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
-        "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
-        "hardDiskDrive": "建兴 ER2-GD240 240G M.2 SATA 6G R SSD"
+      "productInformation": "http://www.cancon.com.cn",
+      "certificationTime": "2022/11/08",
+      "commitID": "",
+      "mainboardModel": "65MA32",
+      "biosUefi": "CDSH051013",
+      "cpu": "Hygon 3",
+      "ram": "32*32G DIMMs",
+      "portsBusTypes": "x16 PCIE",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+      "hardDiskDrive": "建兴 ER2-GD240 240G M.2 SATA 6G R SSD"
     },
     "boardCards": [
       {
@@ -7495,7 +7495,7 @@
         "chipModel": "SAS-3 3108",
         "item": "02311PCJ",
         "downloadLink": "inbox"
-      }	  
+      }
     ],
     "compatibilityConfiguration": {
       "productInformation": "https://support.xfusion.com/support/#/zh/rack-servers/2288h-v5-pid-21872244/document",
@@ -7556,7 +7556,7 @@
         "chipModel": "SAS3408",
         "item": "02312HFD",
         "downloadLink": "inbox"
-      }	  
+      }
     ],
     "compatibilityConfiguration": {
       "productInformation": "https://e.huawei.com/cn/products/servers/taishan-server",
@@ -7617,7 +7617,7 @@
         "chipModel": "SAS3508",
         "item": "",
         "downloadLink": "inbox"
-      }	  
+      }
     ],
     "compatibilityConfiguration": {
       "productInformation": "https://e.huawei.com/cn/products/servers/kunpeng/server-board/kunpeng-server-board",
@@ -8794,7 +8794,7 @@
       "hostBusAdapter": "",
       "hardDiskDrive": "Intel S4510 960G"
     }
-  }  ,
+  },
   {
     "hardwareFactory": "联想开天",
     "hardwareModel": "SR658H V2",
@@ -9006,23 +9006,23 @@
         "downloadLink": "inbox"
       },
       {
-       "vendorID": "1000",
-       "deviceID": "0097",
-       "svID": "1000",
-       "ssID": "3090",
-       "architecture": "x86_64",
-       "os": "openEuler 20.03 LTS SP3",
-       "driverName": "mpt3sas",
-       "version": "26.100.00.00",
-       "type": "RAID",
-       "date": "2022.03.23",
-       "sha256": "4830b538da0cfdfec2c008cb6002a7f520b9ba3dab8df4a7f119cadb8b6753b9",
-       "driverSize": "538KB",
-       "chipVendor": "Avago",
-       "boardModel": "SR130",
-       "chipModel": "SAS3008",
-       "item": "03022CDE",
-       "downloadLink": "inbox"
+        "vendorID": "1000",
+        "deviceID": "0097",
+        "svID": "1000",
+        "ssID": "3090",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "mpt3sas",
+        "version": "26.100.00.00",
+        "type": "RAID",
+        "date": "2022.03.23",
+        "sha256": "4830b538da0cfdfec2c008cb6002a7f520b9ba3dab8df4a7f119cadb8b6753b9",
+        "driverSize": "538KB",
+        "chipVendor": "Avago",
+        "boardModel": "SR130",
+        "chipModel": "SAS3008",
+        "item": "03022CDE",
+        "downloadLink": "inbox"
       }
     ],
     "compatibilityConfiguration": {
@@ -9038,7 +9038,7 @@
       "hostBusAdapter": "",
       "hardDiskDrive": "TOSHIBA AL14SEB060N"
     }
-  }  ,
+  },
   {
     "hardwareFactory": "河南昆仑",
     "hardwareModel": "KunLun 2280",
@@ -9758,7 +9758,7 @@
         "svID": "14e4",
         "ssID": "d340",
         "architecture": "x86_64",
-         "os": "openEuler 20.03 LTS SP1",
+        "os": "openEuler 20.03 LTS SP1",
         "driverName": "bnxt_en",
         "version": "1.9.2",
         "type": "NIC",
@@ -9769,26 +9769,26 @@
         "boardModel": "BCM57454",
         "chipModel": "Broadcom 57454 10GBASE-T 4-port OCP Ethernet Adapter",
         "item": "",
-        "downloadLink": "inbox"    
+        "downloadLink": "inbox"
       },
       {
-       "vendorID": "1000",
-       "deviceID": "0017",
-       "svID": "1d49",
-       "ssID": "0500",
-       "architecture": "x86_64",
-       "os": "openEuler 20.03 LTS SP1",
-       "driverName": "megaraid_sas",
-       "version": "07.706.03.00-rc1",
-       "type": "raid",
-       "date": "2023.04.04",
-       "sha256": "12bf7db93b721978107266e43d09404be9ad107f2565fb62bc35a3b825f56cf8",
-       "driverSize": "290k",
-       "chipVendor": "Broadcom",
-       "boardModel": "530-8i",
-       "chipModel": "SAS3408",
-       "item": "",
-       "downloadLink": "inbox"   
+        "vendorID": "1000",
+        "deviceID": "0017",
+        "svID": "1d49",
+        "ssID": "0500",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "07.706.03.00-rc1",
+        "type": "raid",
+        "date": "2023.04.04",
+        "sha256": "12bf7db93b721978107266e43d09404be9ad107f2565fb62bc35a3b825f56cf8",
+        "driverSize": "290k",
+        "chipVendor": "Broadcom",
+        "boardModel": "530-8i",
+        "chipModel": "SAS3408",
+        "item": "",
+        "downloadLink": "inbox"
       }
     ],
     "compatibilityConfiguration": {
@@ -9819,7 +9819,7 @@
         "svID": "14e4",
         "ssID": "d340",
         "architecture": "x86_64",
-         "os": "openEuler 20.03 LTS SP1",
+        "os": "openEuler 20.03 LTS SP1",
         "driverName": "bnxt_en",
         "version": "1.9.2",
         "type": "NIC",
@@ -9830,26 +9830,26 @@
         "boardModel": "BCM57454",
         "chipModel": "Broadcom 57454 10GBASE-T 4-port OCP Ethernet Adapter",
         "item": "",
-        "downloadLink": "inbox"    
+        "downloadLink": "inbox"
       },
       {
-       "vendorID": "1000",
-       "deviceID": "0017",
-       "svID": "1d49",
-       "ssID": "0500",
-       "architecture": "x86_64",
-       "os": "openEuler 20.03 LTS SP1",
-       "driverName": "megaraid_sas",
-       "version": "07.706.03.00-rc1",
-       "type": "raid",
-       "date": "2023.04.10",
-       "sha256": "8869feed1be617bffa9e4a1bca38e5e1173b2f11b31e28fb1169fce36af84294",
-       "driverSize": "290k",
-       "chipVendor": "Broadcom",
-       "boardModel": "530-8i",
-       "chipModel": "SAS3408",
-       "item": "",
-       "downloadLink": "inbox"   
+        "vendorID": "1000",
+        "deviceID": "0017",
+        "svID": "1d49",
+        "ssID": "0500",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "07.706.03.00-rc1",
+        "type": "raid",
+        "date": "2023.04.10",
+        "sha256": "8869feed1be617bffa9e4a1bca38e5e1173b2f11b31e28fb1169fce36af84294",
+        "driverSize": "290k",
+        "chipVendor": "Broadcom",
+        "boardModel": "530-8i",
+        "chipModel": "SAS3408",
+        "item": "",
+        "downloadLink": "inbox"
       }
     ],
     "compatibilityConfiguration": {
@@ -10764,7 +10764,7 @@
       "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
       "hardDiskDrive": "SA MZ7KH960HAJR-5 960G 2.5SATA 6Gb M SSD"
     }
-  }, 
+  },
   {
     "hardwareFactory": "中科可控",
     "hardwareModel": "R6440H0",
@@ -10773,17 +10773,17 @@
     "date": "2023/07/28",
     "friendlyLink": "https://www.cancon.com.cn/product/1588.html",
     "compatibilityConfiguration": {
-        "productInformation": "https://www.cancon.com.cn/product/1588.html",
-        "certificationTime": "2023/07/28",
-        "commitID": "I7P7Q4",
-        "mainboardModel": "62DB32",
-        "biosUefi": "CXYH051016",
-        "cpu": "Hygon 3",
-        "ram": "32*16G RDIMMs",
-        "portsBusTypes": "x16 PCIE",
-        "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
-        "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
-        "hardDiskDrive": "SA MZ7KH960HAJR-5 960G 2.5SATA 6Gb M SSD"
+      "productInformation": "https://www.cancon.com.cn/product/1588.html",
+      "certificationTime": "2023/07/28",
+      "commitID": "I7P7Q4",
+      "mainboardModel": "62DB32",
+      "biosUefi": "CXYH051016",
+      "cpu": "Hygon 3",
+      "ram": "32*16G RDIMMs",
+      "portsBusTypes": "x16 PCIE",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+      "hardDiskDrive": "SA MZ7KH960HAJR-5 960G 2.5SATA 6Gb M SSD"
     },
     "boardCards": [
       {
@@ -10821,7 +10821,7 @@
         "boardModel": "9560-8i",
         "chipModel": "SAS3908",
         "downloadLink": "inbox"
-      } 
+      }
     ]
   },
   {
@@ -11451,6 +11451,250 @@
       "videoAdapter": "Hi171x",
       "hostBusAdapter": "Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA (rev 21), Huawei Technologies Co., Ltd. HiSilicon AHCI HBA (rev 21)",
       "hardDiskDrive": "ST600MM0009"
+    }
+  },
+  {
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "FortFirm-R5230HA",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "x86_64",
+    "date": "2023/08/26",
+    "friendlyLink": "https://www.cancon.com.cn/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1dcf",
+        "ssID": "0308",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "igb",
+        "version": "5.10.0-60.18.0.50.oe2203.x86_64",
+        "type": "NIC",
+        "date": "2023.08.26",
+        "sha256": "27d8c33fb3db3123e71cb803ca3828ea9061ce0828e03ebfc0cd3a6775f129a9",
+        "driverSize": "106K",
+        "chipVendor": "intel",
+        "boardModel": "52DA16",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4000",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2023/08/26",
+        "sha256": "9297c2087dc2ee4bc6c245dec3adc9b7dc9ecc22b263ea05773e6c126d3f853b",
+        "driverSize": "74K",
+        "chipVendor": "Broadcom",
+        "boardModel": "9560-16i",
+        "chipModel": "SAS39XX",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn/",
+      "certificationTime": "2023/08/26",
+      "commitID": "I7W8CL",
+      "mainboardModel": "52DA16",
+      "biosUefi": "CSZH051012",
+      "cpu": "Hygon 2",
+      "ram": "8*32G DIMMs",
+      "portsBusTypes": "x8 PCIE",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+      "hardDiskDrive": "GOKE   IG7ZT016S3IMASS  Msata 16G SSD, SEAGATE  ST1000NX0313  1T  *4"
+    }
+  },
+  {
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "FortFirm-R5230HA",
+    "osVersion": "openEuler 22.03 LTS SP1",
+    "architecture": "x86_64",
+    "date": "2023/08/26",
+    "friendlyLink": "https://www.cancon.com.cn/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1dcf",
+        "ssID": "0308",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP1",
+        "driverName": "igb",
+        "version": "5.10.0-60.18.0.50.oe2203.x86_64",
+        "type": "NIC",
+        "date": "2023.08.26",
+        "sha256": "27d8c33fb3db3123e71cb803ca3828ea9061ce0828e03ebfc0cd3a6775f129a9",
+        "driverSize": "106K",
+        "chipVendor": "intel",
+        "boardModel": "52DA16",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4000",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2023/08/26",
+        "sha256": "9297c2087dc2ee4bc6c245dec3adc9b7dc9ecc22b263ea05773e6c126d3f853b",
+        "driverSize": "74K",
+        "chipVendor": "Broadcom",
+        "boardModel": "9560-16i",
+        "chipModel": "SAS39XX",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn/",
+      "certificationTime": "2023/08/26",
+      "commitID": "I7W88L",
+      "mainboardModel": "52DA16",
+      "biosUefi": "CSZH051012",
+      "cpu": "Hygon 2",
+      "ram": "8*32G DIMMs",
+      "portsBusTypes": "x8 PCIE",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+      "hardDiskDrive": "GOKE   IG7ZT016S3IMASS  Msata 16G SSD, SEAGATE  ST1000NX0313  1T  *4"
+    }
+  },
+  {
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "FortFirm-R5240H0",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "x86_64",
+    "date": "2023/08/26",
+    "friendlyLink": "https://www.cancon.com.cn/product/1587.html",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1dcf",
+        "ssID": "0308",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "igb",
+        "version": "5.10.0-60.18.0.50.oe2203.x86_64",
+        "type": "NIC",
+        "date": "2023.08.26",
+        "sha256": "27d8c33fb3db3123e71cb803ca3828ea9061ce0828e03ebfc0cd3a6775f129a9",
+        "driverSize": "106K",
+        "chipVendor": "intel",
+        "boardModel": "52DA16",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4000",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2023/08/26",
+        "sha256": "9297c2087dc2ee4bc6c245dec3adc9b7dc9ecc22b263ea05773e6c126d3f853b",
+        "driverSize": "74K",
+        "chipVendor": "Broadcom",
+        "boardModel": "9560-16i",
+        "chipModel": "SAS39XX",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn/product/1587.html",
+      "certificationTime": "2023/08/26",
+      "commitID": "I7W8CL",
+      "mainboardModel": "52DA16",
+      "biosUefi": "CSZH051012",
+      "cpu": "Hygon 2",
+      "ram": "8*32G DIMMs",
+      "portsBusTypes": "x8 PCIE",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+      "hardDiskDrive": "GOKE   IG7ZT016S3IMASS  Msata 16G SSD, SEAGATE  ST1000NX0313  1T  *4"
+    }
+  },
+  {
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "FortFirm-R5240H0",
+    "osVersion": "openEuler 22.03 LTS SP1",
+    "architecture": "x86_64",
+    "date": "2023/08/26",
+    "friendlyLink": "https://www.cancon.com.cn/product/1587.html",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1dcf",
+        "ssID": "0308",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP1",
+        "driverName": "igb",
+        "version": "5.10.0-60.18.0.50.oe2203.x86_64",
+        "type": "NIC",
+        "date": "2023.08.26",
+        "sha256": "27d8c33fb3db3123e71cb803ca3828ea9061ce0828e03ebfc0cd3a6775f129a9",
+        "driverSize": "106K",
+        "chipVendor": "intel",
+        "boardModel": "52DA16",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4000",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2023/08/26",
+        "sha256": "9297c2087dc2ee4bc6c245dec3adc9b7dc9ecc22b263ea05773e6c126d3f853b",
+        "driverSize": "74K",
+        "chipVendor": "Broadcom",
+        "boardModel": "9560-16i",
+        "chipModel": "SAS39XX",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn/product/1587.html",
+      "certificationTime": "2023/08/26",
+      "commitID": "I7W88L",
+      "mainboardModel": "52DA16",
+      "biosUefi": "CSZH051012",
+      "cpu": "Hygon 2",
+      "ram": "8*32G DIMMs",
+      "portsBusTypes": "x8 PCIE",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+      "hardDiskDrive": "GOKE   IG7ZT016S3IMASS  Msata 16G SSD, SEAGATE  ST1000NX0313  1T  *4"
     }
   }
 ]
