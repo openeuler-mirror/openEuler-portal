@@ -93,6 +93,12 @@ export default {
           PATH: 'https://training-assessment.osinfra.cn/',
           IS_OPEN_MINISITE_WINDOW: 1,
         },
+        {
+          NAME: 'MoocStudio',
+          ID: 'MoocStudio',
+          PATH: 'https://moocstudio.openeuler.org/zh',
+          IS_OPEN_MINISITE_WINDOW: 1,
+        },
       ],
       CLASS: ['learn', 'internship', 'learning'],
     },
