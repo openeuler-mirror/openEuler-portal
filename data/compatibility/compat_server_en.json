@@ -11455,7 +11455,7 @@
   },
   {
     "hardwareFactory": "Suma",
-    "hardwareModel": "FortFirm-R5230HA",
+    "hardwareModel": "R5230HA",
     "osVersion": "openEuler 22.03 LTS",
     "architecture": "x86_64",
     "date": "2023/08/26",
@@ -11475,7 +11475,7 @@
         "sha256": "7aaf89fad3eae542e505379cef9e6fb9ad65be587f0993f4de63a50ca9b93229",
         "driverSize": "542K",
         "chipVendor": "intel",
-        "boardModel": "52DA16",
+        "boardModel": "EGL2-I350-US",
         "chipModel": "I350",
         "item": "",
         "downloadLink": "inbox"
@@ -11516,7 +11516,7 @@
   },
   {
     "hardwareFactory": "Suma",
-    "hardwareModel": "FortFirm-R5230HA",
+    "hardwareModel": "R5230HA",
     "osVersion": "openEuler 22.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2023/08/26",
@@ -11536,7 +11536,7 @@
         "sha256": "27d8c33fb3db3123e71cb803ca3828ea9061ce0828e03ebfc0cd3a6775f129a9",
         "driverSize": "106K",
         "chipVendor": "intel",
-        "boardModel": "52DA16",
+        "boardModel": "EGL2-I350-US",
         "chipModel": "I350",
         "item": "",
         "downloadLink": "inbox"
@@ -11577,7 +11577,7 @@
   },
   {
     "hardwareFactory": "Suma",
-    "hardwareModel": "FortFirm-R5240H0",
+    "hardwareModel": "R5240H0",
     "osVersion": "openEuler 22.03 LTS",
     "architecture": "x86_64",
     "date": "2023/08/26",
@@ -11597,7 +11597,7 @@
         "sha256": "7aaf89fad3eae542e505379cef9e6fb9ad65be587f0993f4de63a50ca9b93229",
         "driverSize": "542K",
         "chipVendor": "intel",
-        "boardModel": "52DA16",
+        "boardModel": "EGL2-I350-US",
         "chipModel": "I350",
         "item": "",
         "downloadLink": "inbox"
@@ -11638,7 +11638,7 @@
   },
   {
     "hardwareFactory": "Suma",
-    "hardwareModel": "FortFirm-R5240H0",
+    "hardwareModel": "R5240H0",
     "osVersion": "openEuler 22.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2023/08/26",
@@ -11658,7 +11658,7 @@
         "sha256": "27d8c33fb3db3123e71cb803ca3828ea9061ce0828e03ebfc0cd3a6775f129a9",
         "driverSize": "106K",
         "chipVendor": "intel",
-        "boardModel": "52DA16",
+        "boardModel": "EGL2-I350-US",
         "chipModel": "I350",
         "item": "",
         "downloadLink": "inbox"
