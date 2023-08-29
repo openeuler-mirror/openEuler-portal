@@ -33,6 +33,18 @@ const config: UserConfig = {
       },
     ],
     [
+      'script',
+      {
+        src: '/allow_sensor/sensorsdata.min.js',
+      },
+    ],
+    [
+      'script',
+      {
+        src: '/allow_sensor/sensors.js',
+      },
+    ],
+    [
       'meta',
       {
         name: 'baidu-site-verification',
@@ -72,6 +84,12 @@ const config: UserConfig = {
     },
   },
   themeConfig: {
+    // locales: {
+    //   '/': i18n.zh,
+    //   '/zh/': i18n.zh,
+    //   '/en/': i18n.en,
+    //   '/ru/': i18n.ru,
+    // },
     docsUrl: 'https://docs.openeuler.org',
     forumUrl: 'https://forum.openeuler.org',
   },

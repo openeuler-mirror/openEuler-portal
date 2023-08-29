@@ -67,6 +67,24 @@ watch(
 );
 // 控制直播
 const isLiverShow = ref(0);
+
+// 埋点统计
+function setAdvertisedData() {
+  const sensors = (window as any)['sensorsDataAnalytic201505'];
+  const { href } = window.location;
+  if (href.includes('?utm_source')) {
+    sensors?.setProfile({
+      ...(window as any)['sensorsCustomBuriedData'],
+      profileType: 'fromAdvertised',
+      origin: href,
+    });
+  }
+}
+onMounted(() => {
+  setTimeout(() => {
+    setAdvertisedData();
+  }, 300);
+});
 </script>
 <template>
   <SummitBanner :banner-data="summitData.banner" />

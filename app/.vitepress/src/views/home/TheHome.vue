@@ -12,6 +12,7 @@ import UserCase from './UserCase.vue';
 import HomeTrend from './HomeTrend.vue';
 import HomeBanner from './HomeBanner.vue';
 import HomeIntro from './HomeIntro.vue';
+import HomePlayground from './HomePlayground.vue';
 import HomeDisplayZone from './HomeDisplayZone.vue';
 import HomeMedia from './HomeMedia.vue';
 import AppCalendar from '@/components/AppCalendar.vue';
@@ -119,6 +120,7 @@ onMounted(async () => {
         />
       </div>
     </ClientOnly>
+    <HomePlayground />
     <div class="home-source-publish">
       <h3 class="partner">
         {{ i18n.home.HOME_SOURCE.SOURCE_PUBLISH_TITLE }}

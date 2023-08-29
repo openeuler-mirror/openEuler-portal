@@ -197,6 +197,7 @@ export default {
   HOME_INTRODUCE: {
     INTRO_TITLE: 'The Most Innovative Open Source Community',
     INTRO_HEAD: '开启 openEuler 编码之旅',
+    MOOC_URL: 'https://moocstudio.openeuler.org/zh',
     INTRO_DESCRIPTION:
       'openEuler通过开放的社区形式与全球开发者共同构建一个开放、多元和架构包容的软件生态体系，孵化支持多种处理器架构、覆盖数字设施全场景，推动企业数字基础设施软硬件、应用生态繁荣发展。',
   },

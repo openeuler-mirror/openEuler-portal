@@ -114,6 +114,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-mail/, ''),
       },
+      '/ip-api/': {
+        target: 'http://ip-api.com/json/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/ip-api/, ''),
+      },
       '/api-certification/': {
         target: 'https://ccs.openeuler.org/ccs/base/',
         changeOrigin: true,
