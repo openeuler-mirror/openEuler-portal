@@ -17,7 +17,6 @@ import HomeMedia from './HomeMedia.vue';
 import AppCalendar from '@/components/AppCalendar.vue';
 import AppContent from '@/components/AppContent.vue';
 import LinkPanel from '@/components/LinkPanel.vue';
-
 import { getMeetingData, getActivityData } from '@/api/api-calendar';
 import { getSortData } from '@/api/api-search';
 

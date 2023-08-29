@@ -3,7 +3,7 @@ import { computed, toRefs, ref, onMounted } from 'vue';
 import { useRouter, useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 import AppContent from '@/components/AppContent.vue';
-import { useCommon } from '@/stores/common';
+import AppFloat from './AppFloat.vue';
 
 import LogoFooter from '@/assets/common/footer/footer-logo2.png';
 import LogoFooter1 from '@/assets/common/footer/footer-logo1.png';
@@ -32,26 +32,13 @@ import CodeTitleGzh from '@/assets/common/footer/img-gzh.png';
 import CodeImgXzs from '@/assets/common/footer/code-xzs.png';
 import CodeImgZgz from '@/assets/common/footer/code-zgz.png';
 
-// float
-import floatLight from '@/assets/common/footer/float_light.png';
-import floatDark from '@/assets/common/footer/float_dark.png';
-
 import IconCancel from '~icons/app/icon-cancel.svg';
-import IconRobot_light from '~icons/footer/icon-robot_light.svg';
-import IconRobot_dark from '~icons/footer/icon-robot_dark.svg';
-import IconQuickIssue_light from '~icons/footer/icon-quickissue_light.svg';
-import IconQuickIssue_dark from '~icons/footer/icon-quickissue_dark.svg';
-import IconChat from '~icons/footer/icon-chat.svg';
 
 const props = defineProps({
   isCookieTip: {
     type: Boolean,
     default: false,
   },
-});
-
-const isDark = computed(() => {
-  return useCommon().theme === 'dark' ? true : false;
 });
 
 const { lang, frontmatter } = useData();
@@ -167,42 +154,6 @@ const isMigration = computed(() => {
 const isAbout = computed(() => {
   return frontmatter.value.category === 'about-us';
 });
-const quickIssueUrl = computed(() => {
-  return isMigration.value
-    ? 'https://quickissue.openeuler.org/zh/new-issues/?c2lnPXNpZy1NaWdyYXRpb24mcmVwbz1vcGVuZXVsZXIvbWlncmF0aW9uLWFzc2lzdGFudCZyZXBvX2lkPTE1OTI4MzA0JnR5cGU96L+B56e75o+Q5LyYJnRpdGxlPVvmkKzov4Fd'
-    : 'https://quickissue.openeuler.org/zh/issues/';
-});
-
-const floatImg = computed(() => {
-  return isDark.value ? floatDark : floatLight;
-});
-
-const floatData = ref([
-  {
-    img: computed(() => {
-      return isDark.value ? IconQuickIssue_dark : IconQuickIssue_light;
-    }),
-    id: 'quickIssue',
-    text: 'Quick Issue',
-    link: quickIssueUrl,
-  },
-  {
-    img: computed(() => {
-      return isDark.value ? IconRobot_dark : IconRobot_light;
-    }),
-    text: '欧拉 小智',
-    id: 'robot',
-    link: 'https://qa-robot.openeuler.org/',
-  },
-  {
-    img: computed(() => {
-      return IconChat;
-    }),
-    text: '欧拉 论坛',
-    id: 'forum',
-    link: 'https://forum.openeuler.org/',
-  },
-]);
 
 // 点击关闭cookies使用提示
 const { isCookieTip } = toRefs(props);
@@ -294,27 +245,7 @@ onMounted(() => {
         </div>
       </AppContent>
     </div>
-    <div
-      v-show="lang === 'zh' && isFloShow"
-      class="float-right"
-      :class="isDark ? 'dark-nav' : ''"
-    >
-      <div
-        class="nav-item"
-        :style="{ backgroundImage: `url(${floatImg})` }"
-      ></div>
-      <a
-        v-for="item in floatData"
-        :key="item.link"
-        :href="item.link"
-        class="nav-item"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <OIcon><component :is="item.img"></component> </OIcon>
-        <div class="text">{{ item.text }}</div>
-      </a>
-    </div>
+    <AppFloat/>
   </footer>
 </template>
 

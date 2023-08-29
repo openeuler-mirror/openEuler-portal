@@ -19,7 +19,6 @@ import type {
 } from '@/shared/@types/type-download';
 
 import TagFilter from '@/components/TagFilter.vue';
-
 import IconCopy from '~icons/app/icon-copy.svg';
 import IconDownload from '~icons/app/icon-download.svg';
 import IconTips from '~icons/app/icon-tips.svg';
