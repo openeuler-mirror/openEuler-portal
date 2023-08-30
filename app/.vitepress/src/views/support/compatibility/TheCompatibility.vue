@@ -799,7 +799,7 @@ onMounted(() => {
       </OTabPane>
 
       <OTabPane
-        v-if="false"
+      v-if="lang === 'zh'"
         :label="i18n.compatibility.BUSINESS_SOFTWARE"
         name="4"
       >
@@ -1381,7 +1381,7 @@ onMounted(() => {
         </el-collapse-item>
 
         <el-collapse-item
-          v-if="false"
+          v-if="lang === 'zh'"
           :title="i18n.compatibility.BUSINESS_SOFTWARE"
           name="4"
         >
