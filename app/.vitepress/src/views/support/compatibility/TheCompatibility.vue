@@ -28,6 +28,7 @@ import {
   driverOSOptions,
   getSoftwareList,
   getBusinessSoftwareList,
+  getTestOrganizations,
   getCpu,
   getSoftFilter,
   getDriveTypes,
@@ -135,7 +136,7 @@ const getCompatibilityData = (data: CveQuery) => {
       });
     });
   } catch (e: any) {
-    throw new Error(e);
+    console.log(e)
   }
 };
 
@@ -152,7 +153,7 @@ const getDriverData = (data: CveQuery) => {
       });
     });
   } catch (e: any) {
-    throw new Error(e);
+    console.log(e)
   }
 };
 
@@ -165,7 +166,7 @@ const getSoftwareData = (data: CveQuery) => {
       tableData.value = res.info;
     });
   } catch (e: any) {
-    throw new Error(e);
+    console.log(e)
   }
 };
 
@@ -177,7 +178,7 @@ const getBusinessSoftwareData = (data: CveQuery) => {
       tableData.value = res.result.data;
     });
   } catch (e: any) {
-    throw new Error(e);
+    console.log(e)
   }
 };
 
@@ -395,7 +396,7 @@ onMounted(() => {
       }
     });
   } catch (e: any) {
-    throw new Error(e);
+    console.log(e)
   }
 
   try {
@@ -415,7 +416,7 @@ onMounted(() => {
       });
     });
   } catch (e: any) {
-    throw new Error(e);
+    console.log(e)
   }
 
   try {
@@ -435,7 +436,17 @@ onMounted(() => {
       });
     });
   } catch (e: any) {
-    throw new Error(e);
+    console.log(e)
+  }
+
+  try {
+    getTestOrganizations().then((res: any) => {
+      res.result.testOrganizations.forEach((item: string) => {
+        testOrganizationsLists.value.push(item);
+      });
+    });
+  } catch (e: any) {
+    console.log(e)
   }
 
   try {
@@ -450,7 +461,7 @@ onMounted(() => {
       });
     });
   } catch (e: any) {
-    throw new Error(e);
+    console.log(e)
   }
 
   try {
@@ -461,7 +472,7 @@ onMounted(() => {
       osLists.value.push(res.OS[0]);
     });
   } catch (e: any) {
-    throw new Error(e);
+    console.log(e)
   }
 });
 </script>
@@ -799,7 +810,7 @@ onMounted(() => {
       </OTabPane>
 
       <OTabPane
-        v-if="false"
+      v-if="lang === 'zh'"
         :label="i18n.compatibility.BUSINESS_SOFTWARE"
         name="4"
       >
@@ -1381,7 +1392,7 @@ onMounted(() => {
         </el-collapse-item>
 
         <el-collapse-item
-          v-if="false"
+          v-if="lang === 'zh'"
           :title="i18n.compatibility.BUSINESS_SOFTWARE"
           name="4"
         >
