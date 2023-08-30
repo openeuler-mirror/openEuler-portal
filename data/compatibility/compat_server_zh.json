@@ -11696,5 +11696,127 @@
       "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
       "hardDiskDrive": "GOKE   IG7ZT016S3IMASS  Msata 16G SSD, SEAGATE  ST1000NX0313  1T  *4"
     }
+  },
+  {
+    "hardwareFactory": "新华三",
+    "hardwareModel": "H3C UniServer R4960 G5",
+    "osVersion": "openEuler 22.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2023/8/23",
+    "friendlyLink": "https://www.h3c.com/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "193D",
+        "ssID": "1005",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS sp1",
+        "driverName": "igb",
+        "version": "5.10.0-136.12.0.86.oe2203sp1.aarch64",
+        "type": "NIC",
+        "date": "2023.08.23",
+        "sha256": "5f038f2c000ccd8f2ad3743a66ca97058f928815ccd9425b4d31d1d2998ffd5a",
+        "driverSize": "429K",
+        "chipVendor": "intel",
+        "boardModel": "360T-B",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "0014",
+        "svID": "1000",
+        "ssID": "9460",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2023/08/23",
+        "sha256": "e62d11a14096f7b6e584414b4403eaa92e14077454b2321087a89bf34178bf1a",
+        "driverSize": "68K",
+        "chipVendor": "Broadcom",
+        "boardModel": "9460-16i",
+        "chipModel": "SAS3516",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com/",
+      "certificationTime": "2023/08/23",
+      "commitID": "I7VCRX",
+      "mainboardModel": "",
+      "biosUefi": "6.32.1",
+      "cpu": "Kunpeng 920",
+      "ram": "6*16G RDIMMs",
+      "portsBusTypes": "x8 PCI Express x8",
+      "videoAdapter": "VGA compatible controller: Huawei Technologies Co., Ltd. Hi171x Series [iBMC Intelligent Management system chip w/VGA support] (rev 01)",
+      "hostBusAdapter": "Serial Attached SCSI controller: Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA (rev 21), SATA controller: Huawei Technologies Co., Ltd. HiSilicon AHCI HBA (rev 21)",
+      "hardDiskDrive": "AVAGO MR9460-16i"
+    }
+  },
+  {
+    "hardwareFactory": "新华三",
+    "hardwareModel": "H3C UniServer R4960 G3",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "aarch64",
+    "date": "2023/8/23",
+    "friendlyLink": "https://www.h3c.com/",
+    "boardCards": [
+      {
+        "vendorID": "19e5",
+        "deviceID": "a222",
+        "svID": "19e5",
+        "ssID": "04cc",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "hns3",
+        "version": "5.10.0-60.107.0.134.oe2203.aarch64",
+        "type": "NIC",
+        "date": "2023.08.23",
+        "sha256": "20769f62a97d19fb6d04ce667c1c6d04502423d5ef9c50f233f50bd7402a9ba7",
+        "driverSize": "47K",
+        "chipVendor": "Huawei",
+        "boardModel": "LOM",
+        "chipModel": "HNS GE/10GE/25GE",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "0016",
+        "svID": "1000",
+        "ssID": "9461",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2023/08/23",
+        "sha256": "e0f05f74eb7a34eda37d8ce4090436e606202b09747549c2c51680e945c23f92",
+        "driverSize": "68K",
+        "chipVendor": "Broadcom",
+        "boardModel": "9460-8i",
+        "chipModel": "SAS3508",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com/",
+      "certificationTime": "2023/08/23",
+      "commitID": "I7VJEG",
+      "mainboardModel": "",
+      "biosUefi": "6.32.1",
+      "cpu": "Kunpeng 920",
+      "ram": "6*16G RDIMMs",
+      "portsBusTypes": "x8 PCI Express x8",
+      "videoAdapter": "Huawei Technologies Co., Ltd. Hi171x Series [iBMC Intelligent Management system chip w/VGA support] (rev 01)",
+      "hostBusAdapter": "Huawei Technologies Co., Ltd. HiSilicon AHCI HBA (rev 21)",
+      "hardDiskDrive": "AVAGO MR9460-8i"
+    }
   }
 ]
