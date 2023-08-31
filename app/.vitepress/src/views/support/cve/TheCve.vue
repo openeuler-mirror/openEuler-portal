@@ -7,13 +7,10 @@ import { useI18n } from '@/i18n';
 import { getCveList } from '@/api/api-security';
 import { CveLists, CveQuery } from '@/shared/@types/type-support';
 
-import BannerLevel2 from '@/components/BannerLevel2.vue';
 import TagFilter from '@/components/TagFilter.vue';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import AppContent from '@/components/AppContent.vue';
 
-import banner from '@/assets/banner/banner-security.png';
-import illustration from '@/assets/illustrations/support/cve.png';
 import IconCalendar from '~icons/app/icon-calendar.svg';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
@@ -47,18 +44,15 @@ const queryData: CveQuery = reactive({
   status: '',
   year: '',
   score: '',
+  noticeType: 'cve',
 });
 
 function getCveLists(data: CveQuery) {
-  try {
-    getCveList(data).then((res: any) => {
-      tableData.value = res.result.cveDatabaseList;
-      total.value = res.result.totalCount;
-      totalPage.value = Math.ceil(total.value / queryData.pages.size);
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  getCveList(data).then((res: any) => {
+    tableData.value = res.result.cveDatabaseList;
+    total.value = res.result.totalCount;
+    totalPage.value = Math.ceil(total.value / queryData.pages.size);
+  });
 }
 
 const selectTypetag = (i: number, category: string) => {
@@ -111,13 +105,6 @@ onMounted(() => {
 watch(queryData, () => getCveLists(queryData));
 </script>
 <template>
-  <BannerLevel2
-    :background-image="banner"
-    background-text="SUPPORT"
-    :title="i18n.cve.CVE"
-    subtitle=""
-    :illustration="illustration"
-  />
   <AppContent :mobile-top="16">
     <div class="o-search">
       <OSearch

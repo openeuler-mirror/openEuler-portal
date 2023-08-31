@@ -24,20 +24,13 @@ function goBackPage() {
 onMounted(() => {
   const i = decodeURIComponent(window.location.href).indexOf('=');
   const id = decodeURIComponent(window.location.href).substring(i + 1);
-  try {
-    getConfigurationInfo(id).then((res: any) => {
-      configurationInfo.value = res.result;
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
-  try {
-    getdetailAapterList(id).then((res: any) => {
-      detailAapterList.value = res.result;
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  getConfigurationInfo(id).then((res: any) => {
+    configurationInfo.value = res.result;
+  });
+
+  getdetailAapterList(id).then((res: any) => {
+    detailAapterList.value = res.result;
+  });
 });
 </script>
 <template>

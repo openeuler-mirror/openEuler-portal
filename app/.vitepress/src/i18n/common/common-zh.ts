@@ -93,12 +93,6 @@ export default {
           PATH: 'https://training-assessment.osinfra.cn/',
           IS_OPEN_MINISITE_WINDOW: 1,
         },
-        {
-          NAME: 'MoocStudio',
-          ID: 'MoocStudio',
-          PATH: 'https://moocstudio.openeuler.org/zh',
-          IS_OPEN_MINISITE_WINDOW: 1,
-        },
       ],
       CLASS: ['learn', 'internship', 'learning'],
     },
@@ -304,12 +298,6 @@ export default {
           PATH: '/approve/',
         },
         {
-          NAME: '兼容性技术测评',
-          ID: 'compatibility-test',
-          PATH: 'https://certification.openeuler.org/',
-          IS_OPEN_MINISITE_WINDOW: 1,
-        },
-        {
           NAME: '兼容性列表',
           ID: 'compatibility',
           PATH: '/compatibility/',
@@ -463,34 +451,24 @@ export default {
               PATH: '/approve/',
             },
             {
-              NAME: '兼容性技术测评',
-              LABEL: '帮助企业快速申请兼容性技术测评',
-              PATH: 'https://certification.openeuler.org/',
-            },
-            {
               NAME: '兼容性列表',
               LABEL: '查看openEuler兼容性列表',
               PATH: '/compatibility/',
             },
             {
-              NAME: '安全中心',
+              NAME: '社区公告',
               LABEL: '查看漏洞管理、安全公告等安全问题',
               PATH: '',
               CHILDREN: [
                 {
-                  NAME: '漏洞管理',
-                  LABEL: '',
-                  PATH: '/security/vulnerability-reporting/',
-                },
-                {
-                  NAME: '安全公告',
+                  NAME: '安全中心',
                   LABEL: '',
                   PATH: '/security/security-bulletins/',
                 },
                 {
-                  NAME: 'CVE',
+                  NAME: '缺陷中心',
                   LABEL: '',
-                  PATH: '/security/cve/',
+                  PATH: '/security/bug-bulletins/',
                 },
               ],
             },

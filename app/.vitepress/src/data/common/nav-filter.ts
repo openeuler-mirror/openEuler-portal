@@ -122,6 +122,10 @@ export default [
     lang: ['zh', 'en', 'ru'],
   },
   {
+    name: 'bug-bulletins',
+    lang: ['zh', 'en'],
+  },
+  {
     name: 'compatibility',
     lang: ['zh', 'en', 'ru'],
   },

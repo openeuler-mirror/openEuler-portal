@@ -14,11 +14,15 @@ import { SecurityLists, CveQuery } from '@/shared/@types/type-support';
 
 import type { CheckboxValueType } from 'element-plus';
 
+import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import AppContent from '@/components/AppContent.vue';
 
+import banner from '@/assets/banner/banner-security.png';
+import satetyBulletin from '@/assets/illustrations/support/safety-bulletin.png';
 import IconCalendar from '~icons/app/icon-calendar.svg';
 import IconFilter from '~icons/app/icon-filter.svg';
+import IconRight from '~icons/app/icon-arrow-right.svg';
 
 import ODropdown from 'opendesign/dropdown/ODropdown.vue';
 import OIcon from 'opendesign/icon/OIcon.vue';
@@ -64,8 +68,8 @@ const queryData: any = reactive({
   type: [],
   date: [],
   affectedProduct: [],
+  noticeType: 'bug',
   affectedComponent: '',
-  noticeType: 'cve',
 });
 
 function getSecurityLists(data: CveQuery) {
@@ -183,7 +187,7 @@ function getAffectedComponentList() {
   getComponentList({
     securityLevel: queryData.type.join(','),
     affectedProduct: queryData.affectedProduct.join(','),
-    noticeType: 'cve',
+    noticeType: 'bug',
   }).then((res: AxiosResponse) => {
     componentTotalList.value = res.data.result;
 
@@ -250,6 +254,10 @@ function handleCancelSelected() {
   queryData.affectedComponent = '';
 }
 
+function goDefectManage() {
+  window.open('/zh/security/management/');
+}
+
 onMounted(() => {
   getSecurityLists(queryData);
   getProducts();
@@ -263,6 +271,28 @@ watch(queryData, () => {
 </script>
 
 <template>
+  <BannerLevel2
+    :background-image="banner"
+    background-text="SUPPORT"
+    :title="i18n.safetyBulletin.DEFECT_CENTER"
+    subtitle=""
+    :illustration="satetyBulletin"
+  >
+    <template #default>
+      <OButton
+        class="post-btn"
+        type="outline"
+        animation
+        size="nomral"
+        @click="goDefectManage"
+      >
+        {{ i18n.safetyBulletin.DEFECT_MANAGE }}
+        <template #suffixIcon>
+          <OIcon class="right-icon"><IconRight /></OIcon>
+        </template>
+      </OButton>
+    </template>
+  </BannerLevel2>
   <AppContent :mobile-top="16">
     <div class="bulletin-main">
       <div class="input-container">
@@ -618,6 +648,22 @@ watch(queryData, () => {
     cursor: pointer;
     &:hover {
       color: var(--o-color-brand1);
+    }
+  }
+}
+
+.post-btn {
+  color: var(--o-color-white);
+  border-color: var(--o-color-white);
+  @media (max-width: 767px) {
+    padding: 3px 16px;
+    font-size: var(--o-font-size-text);
+    line-height: var(--o-line-height-text);
+  }
+  .right-icon {
+    color: var(--o-color-brand2);
+    @media (max-width: 767px) {
+      font-size: var(--o-font-size-text);
     }
   }
 }

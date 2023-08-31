@@ -105,15 +105,11 @@ function turnPage(option: string) {
 }
 
 const getOsTableList = (data: CveQuery) => {
-  try {
-    getOsTableData(data).then((res: any) => {
-      osvList.value = res.result.osvList;
-      total.value = res.result.totalCount;
-      totalPage.value = Math.ceil(res.result.totalCount / queryData.pages.size);
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  getOsTableData(data).then((res: any) => {
+    osvList.value = res.result.osvList;
+    total.value = res.result.totalCount;
+    totalPage.value = Math.ceil(res.result.totalCount / queryData.pages.size);
+  });
 };
 
 const goBackPage = () => {
@@ -121,25 +117,18 @@ const goBackPage = () => {
 };
 
 onMounted(() => {
-  try {
-    getOsName().then((res: any) => {
-      res.result.forEach((item: string) => {
-        osNames.value.push(item);
-      });
+  getOsName().then((res: any) => {
+    res.result.forEach((item: string) => {
+      osNames.value.push(item);
     });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  });
 
-  try {
-    getOsType().then((res: any) => {
-      res.result.forEach((item: string) => {
-        osTypes.value.push(item);
-      });
+  getOsType().then((res: any) => {
+    res.result.forEach((item: string) => {
+      osTypes.value.push(item);
     });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  });
+
   getOsTableList(queryData);
 });
 
