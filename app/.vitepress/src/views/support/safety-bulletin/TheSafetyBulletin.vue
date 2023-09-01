@@ -55,6 +55,7 @@ const tableData = ref<SecurityLists[]>([
     summary: '',
     type: '',
     id: 0,
+    updateTime: '',
   },
 ]);
 
@@ -544,9 +545,16 @@ watch(queryData, () => {
         </el-table-column>
         <OTableColumn
           :label="i18n.safetyBulletin.RELEASE_DATE"
-          width="160"
+          width="150"
           prop="announcementTime"
         ></OTableColumn>
+        <el-table-column width="150" :label="i18n.safetyBulletin.UPDATE_TIME">
+          <template #default="scope">
+            <span>
+              {{ scope.row.updateTime?.split(' ')[0] }}
+            </span>
+          </template>
+        </el-table-column>
       </OTable>
 
       <ul class="mobile-list">
@@ -574,7 +582,10 @@ watch(queryData, () => {
               <span>{{ i18n.safetyBulletin.RELEASE_DATE }}:</span
               >{{ item.announcementTime }}
             </li>
-            <li></li>
+            <li>
+              <span>{{ i18n.safetyBulletin.UPDATE_TIME }}:</span
+              >{{ item.updateTime?.split(' ')[0] }}
+            </li>
           </ul>
         </li>
       </ul>

@@ -37,6 +37,7 @@ export default {
   AFFECTED_PRODUCTS: '影响产品',
   AFFECTED_COMPONENTS: '影响组件',
   RELEASE_DATE: '发布时间',
+  UPDATE_TIME: '更新时间',
   BRIEF_INTRODUCTION: '简介',
   THEME: '主题',
   DESCRIPTION: '描述',
