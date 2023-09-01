@@ -29,6 +29,7 @@ export interface SecurityLists {
   summary: string;
   type: string;
   id: number;
+  updateTime: string;
 }
 export interface CveLists {
   createTime: string;

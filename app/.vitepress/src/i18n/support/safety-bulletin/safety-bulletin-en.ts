@@ -41,6 +41,7 @@ export default {
   AFFECTED_PRODUCTS: 'Affected Product',
   AFFECTED_COMPONENTS: 'Affected \n Component',
   RELEASE_DATE: 'Release Date',
+  UPDATE_TIME: 'Update',
   BRIEF_INTRODUCTION: 'BriefIntroduction',
   THEME: 'theme',
   DESCRIPTION: 'description',
