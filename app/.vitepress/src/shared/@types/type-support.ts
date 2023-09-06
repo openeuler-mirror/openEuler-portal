@@ -194,6 +194,7 @@ export interface CveDetailCvss {
   scopeOE: string;
   securityNoticeNo: string;
   status: string;
+  createTime: string;
   summary: string;
   updateTime: string;
   userInteractionNVD: string;

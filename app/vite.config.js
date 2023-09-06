@@ -47,16 +47,6 @@ export default defineConfig({
         ),
       },
     }),
-    // AutoImport({
-    //   resolvers: [ElementPlusResolver()],
-    // }),
-    // Components({
-    //   resolvers: [ElementPlusResolver()],
-    // }),
-
-    // ElementPlus({
-    //   useSource: true,
-    // }),
   ],
   server: {
     proxy: {
@@ -75,7 +65,6 @@ export default defineConfig({
         changeOrigin: true,
       },
       '/api-search': {
-        // target: 'https://doc-search.test.osinfra.cn/',
         target: 'https://doc-search.openeuler.org/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-search/, ''),

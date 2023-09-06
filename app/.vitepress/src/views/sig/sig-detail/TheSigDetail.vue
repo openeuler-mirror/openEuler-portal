@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, onMounted, onUpdated } from 'vue';
-import { useData } from 'vitepress';
+import { useData, useRouter } from 'vitepress';
 import { useI18n } from '@/i18n';
 
 import showMd from 'markdown-it';
@@ -27,6 +27,7 @@ import {
   getSigDetailInfo,
 } from '@/api/api-sig';
 
+const router = useRouter();
 const { lang } = useData();
 const i18n = useI18n();
 const screenWidth = useWindowResize();
@@ -82,6 +83,8 @@ function getSigMembers() {
         if (maintainer_info) {
           memberList.value = maintainer_info;
         }
+      } else {
+        router.go(`${lang.value}/sig/sig-list/`);
       }
     })
     .catch((error) => {

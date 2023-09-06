@@ -71,6 +71,12 @@ onMounted(() => {
           <span>{{ i18n.safetyBulletin.RELEASE_DATE }}:</span>
           <p>{{ detailData.announcementTime }}</p>
         </div>
+        <div>
+          <span>{{ i18n.safetyBulletin.UPDATE_TIME }}:</span>
+          <p>
+            {{ detailData.updateTime?.split(' ')[0] }}
+          </p>
+        </div>
       </div>
     </div>
   </div>

@@ -106,6 +106,7 @@ onMounted(() => {
     throw new Error(e);
   }
 });
+
 </script>
 <template>
   <AppContent :mobile-top="16">
@@ -123,11 +124,11 @@ onMounted(() => {
       <div class="cve-intro">
         <div>
           <span>{{ i18n.cve.RELEASE_DATE }}:</span>
-          <p>{{ cveDetailData?.announcementTime }}</p>
+          <p>{{ cveDetailData?.createTime?.split(' ')[0] }}</p>
         </div>
         <div>
-          <span>{{ i18n.cve.MODIFIED_TIME }}: </span>
-          <p>{{ cveDetailData?.updateTime }}</p>
+          <span>{{ i18n.cve.UPDATE_TIME }}: </span>
+          <p>{{ cveDetailData?.updateTime?.split(' ')[0] }}</p>
         </div>
       </div>
     </div>
@@ -176,6 +177,11 @@ onMounted(() => {
 
           <OTableColumn :label="i18n.cve.RELEASE_DATE" prop="releaseTime">
           </OTableColumn>
+          <el-table-column :label="i18n.cve.UPDATE_TIME">
+            <template #default="scope">
+              {{ scope.row?.updateTime?.split(' ')[0] }}
+            </template>
+          </el-table-column>
         </OTable>
         <ul class="mobile-list">
           <li
@@ -203,6 +209,10 @@ onMounted(() => {
               </li>
               <li>
                 <span>{{ i18n.cve.RELEASE_DATE }}:</span>{{ item.releaseTime }}
+              </li>
+              <li>
+                <span>{{ i18n.cve.UPDATE_TIME }}:</span
+                >{{ item?.updateTime?.split(' ')[0] }}
               </li>
             </ul>
           </li>
