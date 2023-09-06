@@ -162,8 +162,6 @@ function onCookieClick() {
   emits('click-cookie');
 }
 
-// 控制issue浮窗在峰会页面不显示
-const isFloShow = computed(() => !router.route.path.includes('summit-list'));
 onMounted(() => {
   isQrTipVisible.value = localStorage.getItem('euler-feedback') ? false : true;
 });

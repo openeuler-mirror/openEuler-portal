@@ -269,7 +269,7 @@ watch(queryData, () => getCveLists(queryData));
       ></OTableColumn>
       <OTableColumn
         width="180"
-        :label="i18n.cve.MODIFIED_TIME"
+        :label="i18n.cve.UPDATE_TIME"
         prop="updateTime"
       ></OTableColumn>
       <OTableColumn
