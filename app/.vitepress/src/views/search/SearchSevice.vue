@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import { useI18n } from '@/i18n';
 
 defineProps({
@@ -17,84 +16,45 @@ function goDetail(url: string) {
 }
 </script>
 <template>
-  <ul class="search-service">
-    <li v-for="service in services" :key="service.path" class="service-item">
+  <div class="search-service">
+    <h3>{{ i18n.search.service }}</h3>
+    <div v-for="service in services" :key="service.path" class="service-item">
       <div class="service-left">
-        <span v-dompurify-html="service.title" class="service-title"></span
-        ><span
+        <a @click.stop="goDetail(service.path)" v-dompurify-html="service.title" class="service-title"></a>
+        <p
           v-if="service.secondaryTitle"
           v-dompurify-html="service.secondaryTitle"
           class="service-intro"
-        ></span>
+        ></p>
       </div>
-      <div class="service-right">
-        <OButton
-          animation
-          type="outline"
-          size="mini"
-          @click.stop="goDetail(service.path)"
-        >
-          {{ i18n.search.service }}
-          <template #suffixIcon>
-            <OIcon><icon-arrow-right></icon-arrow-right></OIcon>
-          </template>
-        </OButton>
-      </div>
-    </li>
-  </ul>
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
 .search-service {
-  padding: 12px 24px;
-  width: 100%;
-  margin-bottom: 24px;
   background-color: var(--o-color-bg2);
   box-shadow: var(--o-shadow-l1);
-  @media screen and (max-width: 768px) {
-    width: calc(100% - 32px);
-    padding: 4px 16px;
+  padding: var(--o-spacing-h2);
+  margin-bottom: var(--o-spacing-h3);
+  h3 {
+    font-size: var(--o-font-size-h5);
+    line-height: var(--o-line-height-h5);
+    color: var(--o-color-text1);
   }
   .service-item {
-    display: flex;
-    padding: 12px 0;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid var(--o-color-division1);
-    .service-left {
-      .service-title {
-        margin-right: 12px;
-        font-size: var(--o-font-size-h7);
-        line-height: var(--o-line-height-h7);
-        color: var(--o-color-brand1);
-      }
-      .service-intro {
-        color: var(--o-color-text1);
-        font-size: var(--o-font-size-h8);
-        line-height: var(--o-line-height-h8);
-      }
+    padding-top: var(--o-spacing-h4);
+    .service-title {
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
+      color: var(--o-color-brand1);
     }
-    @media screen and (max-width: 768px) {
-      padding: 6px 0;
-      .service-left {
-        .service-title {
-          margin-right: 8px;
-          font-size: var(--o-font-size-text);
-          line-height: var(--o-line-height-text);
-        }
-        .service-intro {
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
-        }
-      }
+    .service-intro {
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
+      margin-top: var(--o-spacing-h8);
+      color: var(--o-color-text4);
     }
-  }
-  .service-item:first-child {
-    border: none;
-  }
-  .o-button {
-    margin-left: 12px;
-    white-space: nowrap;
   }
 }
 </style>

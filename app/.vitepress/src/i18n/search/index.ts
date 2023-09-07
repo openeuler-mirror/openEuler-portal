@@ -1,7 +1,7 @@
 export default {
   zh: {
     form: '来自：',
-    service: '查看服务',
+    service: '相关服务',
     tagList: {
       all: '全部',
       blog: '博客',
@@ -16,10 +16,11 @@ export default {
     version: '版本：',
     relative: '相关软件包',
     suggest: '您是不是在寻找：',
+    copy: '复制',
   },
   en: {
     form: 'From:',
-    service: 'View More',
+    service: 'Related service',
     tagList: {
       all: 'All',
       blog: 'Blog',
@@ -34,5 +35,6 @@ export default {
     version: 'Version:',
     relative: 'Related software package',
     suggest: 'Are you looking for:',
+    copy: 'Copy',
   },
 };
