@@ -1,5 +1,7 @@
 import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
+import { fetchEventSource } from '@microsoft/fetch-event-source';
+import { getUserAuth } from '@/shared/login';
 /**
  * 通用筛选
  * @name getSortData
@@ -127,4 +129,51 @@ export function getStatistic() {
       $ignoreLoading: true,
     })
     .then((res: AxiosResponse) => res.data);
+}
+/**
+ * 搜索chat输出
+ * @name getChat
+ * @param {}
+ * @return  Array
+ */
+export function getChatapi(inputText: any, params: any) {
+  const { message, close, open, error } = params
+  const abortController = new AbortController();
+  const { token } = getUserAuth();
+  const headers = {
+    'Content-Type': 'application/json;charset=UTF-8',
+    token,
+  };
+  const body: any = JSON.stringify(
+    {
+      question: inputText,
+      history: [],
+    }
+  );
+  const signal = abortController.signal;
+  fetchEventSource('/api-chat/stream', {
+    method: 'POST',
+    headers,
+    body,
+    signal,
+    async onopen (response) {
+      if (response.ok) {
+        open();
+        return;
+      }
+    },
+    onmessage (event) {
+      message(event.data);
+    },
+    onclose () {
+      close();
+    },
+    onerror () {
+      error();
+    },
+    openWhenHidden: true,
+  });
+  return {
+    abortController,
+  }
 }

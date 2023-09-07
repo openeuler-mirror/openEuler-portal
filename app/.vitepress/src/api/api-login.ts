@@ -61,3 +61,29 @@ export function queryIDToken() {
       }
     });
 }
+
+/**
+ * 修改用户信息
+ */
+ export function modifyUser(body: any) {
+  const url = '/api-omapi/oneid/update/baseInfo';
+  const { token } = getUserAuth();
+  return request
+    .post(url, body, {
+      global: true,
+      $doException: true,
+      headers: {
+        token,
+      },
+     })
+    .then((res: AxiosResponse) => res.data)
+    .catch((err) => {
+      const message = err?.response?.data?.message || '';
+      if (message && message !== 'token expires') {
+        ElMessage({
+          type: 'error',
+          message: err.message,
+        });
+      }
+    });
+}

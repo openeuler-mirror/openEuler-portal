@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, watch, ref, onMounted, reactive } from 'vue';
+import { computed, watch, ref, onMounted, reactive, nextTick } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 import {
@@ -8,22 +8,34 @@ import {
   getSearchRpm,
   getRelevant,
   getTagsData,
+  getChatapi,
 } from '@/api/api-search';
 
 import IconSearch from '~icons/app/icon-search.svg';
 import IconCancel from '~icons/app/icon-cancel.svg';
-
+import IconLike from '~icons/app/icon-like.svg';
+import IconUnlike from '~icons/app/icon-unlike.svg';
+import IconStomp from '~icons/app/icon-stomp.svg';
+import IconUnstomp from '~icons/app/icon-unstomp.svg';
 import NotFound from '@/NotFound.vue';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import SearchSevice from './SearchSevice.vue';
+import ViewAgreeModal from './ViewAgreeModal.vue';
+import MatterTip from './MatterTip.vue';
 import useWindowResize from '@/components/hooks/useWindowResize';
+import { ElMessage } from 'element-plus';
 import { addSearchBuriedData } from '@/shared/utils';
+import { AigcPrivacyAccepted } from '@/shared/privacy-accepted.const';
+import { useStoreData, isLogined, showGuard } from '@/shared/login';
 
 const screenWidth = useWindowResize();
 const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
 
+const { guardAuthClient } = useStoreData();
 const { lang, site } = useData();
 const i18n = useI18n();
+// 隐私弹窗
+const viewAgreeVisible = ref(false);
 // 当前选择类型
 const currentIndex = ref(0);
 // 当前显示的页码
@@ -101,6 +113,17 @@ const versionList = ref([
     key: i18n.value.search.tagList.all,
   },
 ]);
+// 接收获取的搜索chat数据
+const searchChatRes: any = ref('');
+const ChatRef: any = ref();
+const showChatRes: any = ref(false);
+const showBlink: any = ref(false);
+// 点赞
+const like: any = ref(false);
+const likeIcon = computed(() => like.value ? IconUnlike : IconLike)
+// 点踩
+const stomp: any = ref(false);
+const stompIcon = computed(() => stomp.value ? IconUnstomp : IconStomp)
 // 接收获取的搜索数据
 const searchResultList: any = ref([]);
 // 接收软件包数据
@@ -144,6 +167,10 @@ function clearSearchInput() {
   searchResultList.value = '';
   searchInput.value = '';
   searchRpmList.value = '';
+  searchChatRes.value = '';
+  like.value = false;
+  stomp.value = false;
+  showChatRes.value = false;
   searchNumber.value.map((item: any) => {
     item.doc_count = 0;
   });
@@ -158,6 +185,64 @@ function setCurrentType(index: number, type: string) {
   }
   currentPage.value = 1;
   searchDataAll();
+}
+const abortController = ref()
+function searchChat() {
+  // 仅支持中文
+  if (lang.value !== 'zh') return;
+  showChatRes.value = true;
+  searchChatRes.value = '';
+  like.value = false;
+  stomp.value = false;
+  if (abortController.value) {
+    // 频繁搜索终止上一次请求
+    abortController.value.abortController.abort();
+  }
+  isLogined().then(() => {
+    if (guardAuthClient.value.aigcPrivacyAccepted !== AigcPrivacyAccepted) return;
+    abortController.value = getChatapi(searchInput.value, {
+      open: () => {
+        searchChatRes.value = '';
+      },
+      message: (res: string) => {
+        showBlink.value = true;
+        try {
+          const data = JSON.parse(res);
+          if (data?.answer) {
+            searchChatRes.value += data?.answer;
+          }
+        } catch (e) {}
+        nextTick(() => {
+          ChatRef.value?.scrollTo({
+            top: ChatRef.value?.scrollHeight,
+            behavior: 'smooth',
+          })
+        })
+      },
+      close: () => {
+        showBlink.value = false;
+        if (!searchChatRes.value) {
+          showChatRes.value = false;
+        }
+      },
+      error: () => {
+        showChatRes.value = false;
+      },
+    })
+  }).catch((err) => {
+    if (err === false) return;
+    if (err?.code !== '401') {
+      showChatRes.value = false
+    }
+  })
+}
+function clickLike() {
+  like.value = !like.value;
+  stomp.value = false;
+}
+function clickStomp() {
+  stomp.value = !stomp.value;
+  like.value = false;
 }
 function searchRpm() {
   try {
@@ -199,7 +284,7 @@ async function searchCountAll(key?: string) {
 // 联想搜索
 function getSussageData() {
   getRelevant(searchData.value).then((res) => {
-    suggestList.value = res?.obj?.suggestList;
+    suggestList.value = res?.obj?.suggestList || [];
   });
 }
 // 获取搜索结果的数据
@@ -238,6 +323,7 @@ function searchAll(current?: string) {
     searchType.value = current || '';
 
     getServiceData();
+    searchChat();
     searchCountAll(current);
     searchDataAll();
     searchRpm();
@@ -317,6 +403,15 @@ watch(
     searchAll('docs');
   }
 );
+function clipTxt(text: string) {
+  navigator.clipboard.writeText(text).then((data) => {
+    console.log('success', data);
+    ElMessage({
+      message: i18n.value.download.COPY_SUCCESS,
+      type: 'success',
+    });
+  });
+}
 </script>
 <template>
   <div class="search">
@@ -324,6 +419,7 @@ watch(
       <OSearch
         v-model="searchInput"
         :placeholder="searchValue.PLEACHOLDER"
+        :maxlength="50"
         @change="() => searchAll()"
       >
         <template #suffix>
@@ -343,10 +439,46 @@ watch(
         </ul>
       </div>
       <div
-        class="search-content"
+        v-if="showChatRes && lang === 'zh'"
+        class="gpt-block"
         :class="suggestList.length ? 'exist-suggest' : ''"
       >
-        <SearchSevice v-if="serviceData.length" :services="serviceData" />
+        <div class="gpt-content gpt-content-before" v-if="!guardAuthClient.username">
+          <div></div>
+          <OButton class="btn" type="primary" @click="showGuard" size="small">登录查看智能搜索结果</OButton>
+          <MatterTip></MatterTip>
+        </div>
+        <div class="gpt-content gpt-content-before" v-else-if="guardAuthClient.aigcPrivacyAccepted !== AigcPrivacyAccepted">
+          <div></div>
+          <OButton class="btn" type="primary" @click="viewAgreeVisible = true" size="small">获取用户协议同意</OButton>
+          <MatterTip></MatterTip>
+        </div>
+        <div v-loading="!searchChatRes" class="gpt-content" v-else>
+          <div class="gpt-text">
+            <div class="gpt-text-content" ref="ChatRef">
+              {{ searchChatRes }}
+              <span v-if="showBlink" class="blinking">|</span>
+            </div>
+          </div>
+          <div class="gtp-copy" v-if="!showBlink">
+            <MatterTip></MatterTip>
+            <div style="flex: 1"></div>
+            <span class="icons">
+              <OIcon class="like-icon" @click="clickLike">
+                <component :is="likeIcon"></component>
+              </OIcon>
+              <OIcon class="like-icon stomp-icon" @click="clickStomp">
+                <component :is="stompIcon"></component>
+              </OIcon>
+            </span>
+            <OButton size="mini" @click="clipTxt(searchChatRes)">{{
+              i18n.search.copy
+            }}</OButton>
+          </div>
+        </div>
+        <ViewAgreeModal v-model="viewAgreeVisible" @submit="searchChat"></ViewAgreeModal>
+      </div>
+      <div class="search-content">
         <div class="select-options">
           <ul class="type">
             <li
@@ -437,20 +569,24 @@ watch(
       class="search-right"
       :class="suggestList.length ? 'exist-suggest-1' : ''"
     >
-      <h3>{{ i18n.search.relative }}</h3>
-      <el-scrollbar height="1915px">
-        <ul>
-          <li v-for="item in searchRpmList" :key="item.filename">
-            <a :href="item.path" target="_blank" rel="noopener noreferrer">{{
-              item.filename
-            }}</a>
-            <p>{{ item.version }}</p>
-          </li>
-          <li v-show="!searchRpmList[0]">
-            {{ i18n.search.no }}{{ i18n.search.relative }}
-          </li>
-        </ul>
-      </el-scrollbar>
+      <SearchSevice v-if="serviceData.length" :services="serviceData" />
+      <div class="rpm-list">
+        <h3>{{ i18n.search.relative }}</h3>
+        <el-scrollbar height="1915px">
+          <ul>
+            <li v-for="item in searchRpmList" :key="item.filename">
+              <a :href="item.path" target="_blank" rel="noopener noreferrer">{{
+                item.filename
+              }}</a>
+              <p>{{ item.version }}</p>
+            </li>
+            <li v-show="!searchRpmList[0]">
+              {{ i18n.search.no }}{{ i18n.search.relative }}
+            </li>
+          </ul>
+        </el-scrollbar>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -525,6 +661,102 @@ watch(
     }
     .close {
       cursor: pointer;
+    }
+    .gpt-block {
+      width: 100%;
+      margin-top: var(--o-spacing-h2);
+      @media (max-width: 768px) {
+        margin-top: var(--o-spacing-h5);
+      }
+      .gpt-content {
+        box-shadow: var(--o-shadow-l1);
+        background-color: var(--o-color-bg2);
+        padding: var(--o-spacing-h5) var(--o-spacing-h4);
+        white-space: pre-wrap;
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
+        @media (max-width: 768px) {
+          font-size: var(--o-font-size-tip);
+          line-height: var(--o-line-height-tip);
+          padding: var(--o-spacing-h8);
+          margin-left: var(--o-spacing-h5);
+          margin-right: var(--o-spacing-h5);
+        }
+        :deep(.el-loading-mask) {
+          background-color: var(--o-color-fill5);
+        }
+        .gpt-text {
+          padding: var(--o-spacing-h5);
+          background-color: var(--o-color-bg1);
+          @media (max-width: 768px) {
+            padding: var(--o-spacing-h8);
+          }
+          .gpt-text-content {
+            color: var(--o-color-text1);
+            max-height: 300px;
+            overflow-y: auto;
+            &::-webkit-scrollbar-track {
+              border-radius: 4px;
+              background-color: var(--o-color-bg2);
+            }
+
+            &::-webkit-scrollbar {
+              width: 6px;
+              background-color: var(--o-color-bg2);
+            }
+
+            &::-webkit-scrollbar-thumb {
+              border-radius: 4px;
+              background: var(--o-color-division1);
+            }
+
+            @keyframes blink {
+              0% {
+                opacity: 1;
+              }
+              50% {
+                opacity: 0;
+              }
+              100% {
+                opacity: 1;
+              }
+            }
+
+            .blinking {
+              font-size: var(--o-font-size-h8);
+              font-weight: 900;
+              animation: blink 1s infinite;
+            }
+          }
+        }
+        .gtp-copy {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: var(--o-spacing-h5);
+          .icons {
+            margin-right: var(--o-spacing-h3);
+            color: var(--o-color-text1);
+          }
+          .like-icon {
+            font-size: var(--o-font-size-h7);
+            cursor: pointer;
+          }
+          .stomp-icon {
+            margin-left: var(--o-spacing-h6);
+          }
+        }
+      }
+      .gpt-content-before {
+        padding: var(--o-spacing-h5) var(--o-spacing-h3);
+        display: flex;
+        justify-content: space-between;
+        .btn {
+          margin-left: 84px;
+          margin-top: var(--o-spacing-h5);
+          margin-bottom: var(--o-spacing-h5);
+        }
+      } 
     }
     .search-content {
       display: flex;
@@ -751,8 +983,10 @@ watch(
     width: 320px;
     height: 2005px;
     margin-top: 78px;
-    background-color: var(--o-color-bg2);
-    box-shadow: var(--o-shadow-l1);
+    .rpm-list {
+      background-color: var(--o-color-bg2);
+      box-shadow: var(--o-shadow-l1);
+    }
     @media (max-width: 1200px) {
       display: none;
     }

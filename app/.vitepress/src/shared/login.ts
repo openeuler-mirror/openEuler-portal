@@ -96,28 +96,31 @@ export function setStoreData(community = 'openeuler') {
 }
 
 const setSessionInfo = (data: any) => {
-  const { username, photo } = data || {};
+  const { username, photo, aigcPrivacyAccepted } = data || {};
   if (username && photo) {
     sessionStorage.setItem(
       LOGIN_KEYS.USER_INFO,
-      JSON.stringify({ username, photo })
+      JSON.stringify({ username, photo, aigcPrivacyAccepted })
     );
   }
 };
 const getSessionInfo = () => {
   let username = '';
   let photo = '';
+  let aigcPrivacyAccepted = '';
   try {
     const info = sessionStorage.getItem(LOGIN_KEYS.USER_INFO);
     if (info) {
       const obj = JSON.parse(info) || {};
       username = obj.username || '';
       photo = obj.photo || '';
+      aigcPrivacyAccepted = obj.aigcPrivacyAccepted || '';
     }
   } catch (error) {}
   return {
     username,
     photo,
+    aigcPrivacyAccepted,
   };
 };
 const removeSessionInfo = () => {
@@ -151,12 +154,17 @@ export function isLogined() {
         .then((res) => {
           const { data } = res;
           if (data) {
+            if (Object.prototype.toString.call(data) === '[object Object]') {
+              const { guardAuthClient } = useStoreData();
+              guardAuthClient.value = data;
+              setSessionInfo(data);
+            }
             resolve(true);
           } else {
             reject(false);
           }
         })
-        .catch(() => reject(false));
+        .catch((err) => reject(err));
     } else {
       reject(false);
     }
