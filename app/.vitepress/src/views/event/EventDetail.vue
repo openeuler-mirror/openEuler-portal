@@ -416,8 +416,12 @@ watch(windowWidth, () => {
               </p>
             </div>
             <div class="scan-qrcode">
-              <span>{{ i18n.interaction.MEETUPSLIST.DETAIL_QRCODE_TEXT }}</span>
-              <img v-if="detailObj?.wx_code" :src="detailObj?.wx_code" />
+              <a :href="detailObj.register_url">{{
+                i18n.interaction.MEETUPSLIST.DETAIL_QRCODE_TEXT
+              }}</a>
+              <OIcon>
+                <IconArrowRight class="icon"></IconArrowRight>
+              </OIcon>
             </div>
           </div>
           <div class="map">
@@ -976,9 +980,11 @@ watch(windowWidth, () => {
         }
       }
       .scan-qrcode {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
-        span {
-          margin-top: var(--o-spacing-h9);
+        a {
           width: 100px;
           display: flex;
           flex-flow: row;
@@ -995,17 +1001,8 @@ watch(windowWidth, () => {
             line-height: var(--o-line-height-h8);
           }
         }
-        img {
-          display: block;
-          width: 100px;
-          height: 100px;
-          margin-top: var(--o-spacing-h5);
-          @media (max-width: 1080px) {
-            margin-bottom: var(--o-spacing-h5);
-          }
-          @media (max-width: 768px) {
-            margin-bottom: var(--o-spacing-h8);
-          }
+        .o-icon {
+          color: var(--o-color-brand1);
         }
       }
     }

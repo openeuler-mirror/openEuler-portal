@@ -11,7 +11,7 @@ export default {
     YEAR_PLAN: '年度规划',
     DETAIL_NEWS: '最新活动',
     MORE_VIDEO: '更多视频',
-    DETAIL_QRCODE_TEXT: '扫码报名',
+    DETAIL_QRCODE_TEXT: '前往报名',
     LIVE_ADDRESS: '直播链接',
     DETAIL_ADDRESS: '详细地址',
     ADDRESS: '地址',
