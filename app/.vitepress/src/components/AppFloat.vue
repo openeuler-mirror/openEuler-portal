@@ -208,16 +208,23 @@ function handleClickSubmit() {
     feedbackValue: score.value / 10,
   };
   postFeedback(params)
-    .then(() => {
-      ElMessage({
-        message: '提交成功，感谢您的反馈！',
-        type: 'success',
-      });
+    .then((res) => {
+      if (res.code === 200) {
+        ElMessage({
+          message: '提交成功，感谢您的反馈！',
+          type: 'success',
+        });
+      } else {
+        ElMessage({
+          message: res.msg,
+          type: 'error',
+        });
+      }
     })
     .catch(() => {
       ElMessage({
         message: '提交失败，请刷新页面后重新提交！',
-        type: 'warning',
+        type: 'error',
       });
     });
   isReasonShow.value = false;
@@ -247,14 +254,16 @@ function handleClickSubmit() {
                   {{ scoreTip }}
                 </div>
               </div>
-              <el-slider
-                v-model="score"
-                :step="10"
-                :marks="marks"
-                show-stops
-                :show-tooltip="false"
-                @input="handleInput"
-              />
+              <ClientOnly>
+                <el-slider
+                  v-model="score"
+                  :step="10"
+                  :marks="marks"
+                  show-stops
+                  :show-tooltip="false"
+                  @input="handleInput"
+                />
+              </ClientOnly>
             </div>
             <div class="grade-info">
               <span>{{

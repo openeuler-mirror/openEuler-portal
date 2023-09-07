@@ -14,8 +14,6 @@ import TagFilter from '@/components/TagFilter.vue';
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
 
-// import IconFilter from '~icons/app/icon-filter.svg';
-// import IconCancel from '~icons/app/icon-cancel.svg';
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 
 import notFoundImg_light from '@/assets/illustrations/404.png';
@@ -367,24 +365,26 @@ const changeCurrentPageMoblie = (val: string) => {
             <p class="item-text">
               <span>{{ i18n.download.ARCHITECTURE + ':' }}</span
               ><span class="arch-box content-text">
-                <span
+                <template
                   v-for="itemArch in getItemList('ARCH', item.DETAILED_LINK)"
                   :key="itemArch"
-                  >{{ itemArch }}</span
                 >
+                  <span v-if="itemArch">{{ itemArch }}</span>
+                </template>
               </span>
             </p>
             <p class="item-text">
               <span>{{ i18n.download.SCENARIO + ':' }}</span>
               <span class="scenario-box content-text">
-                <span
+                <template
                   v-for="itemScen in getItemList(
                     'SCENARIO',
                     item.DETAILED_LINK
                   )"
                   :key="itemScen"
-                  >{{ itemScen }}
-                </span>
+                >
+                  <span v-if="itemScen">{{ itemScen }} </span>
+                </template>
               </span>
             </p>
             <p class="item-text">
