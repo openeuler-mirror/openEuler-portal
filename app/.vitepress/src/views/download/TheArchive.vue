@@ -393,7 +393,7 @@ const changeCurrentPageMoblie = (val: string) => {
             </p>
             <p class="item-text">
               <span>{{ i18n.download.PLANNEDEOL + ':' }}</span>
-              <span class="content-text">{{ item.PUBLISH_DATE }}</span>
+              <span class="content-text">{{ item.PLANNED_EOL }}</span>
             </p>
             <p class="item-text">
               <span>{{ i18n.download.DOWNLOAD_LINK + ':' }}</span>
