@@ -69,47 +69,49 @@ const doValidatorForm = (
 }
 </script>
 <template>
-  <o-dialog
-    v-model="modelValue"
-    :before-close="close"
-    :draggable="true"
-    :close-on-click-modal="false"
-    :close-on-press-escape="false"
-    :show-close="false"
-    align-center
-  >
-    <h5 class="header">用户协议</h5>
-    <el-scrollbar height="400px">
-        <div v-dompurify-html="convertMd(agree)" class="markdown"></div>
-      </el-scrollbar>
-    <el-form
-      ref="formRef"
-      label-width="0"
-      :model="form"
-      class="form"
-      @submit.prevent=""
+  <div class="dialog">
+    <o-dialog
+      v-model="modelValue"
+      :before-close="close"
+      :draggable="true"
+      :close-on-click-modal="false"
+      :close-on-press-escape="false"
+      :show-close="false"
+      align-center
     >
-      <el-form-item prop="policy" :rules="policyRules">
-        <div class="checkbox">
-          <OCheckboxGroup
-            v-model="form.policy"
-            @change="doValidatorForm(formRef, 'policy')"
-          >
-            <OCheckbox value="1"></OCheckbox>
-          </OCheckboxGroup>
-          <span>
-            我已阅读并同意用户协议
-          </span>
-        </div>
-      </el-form-item>
-    </el-form>
-    <div class="footer">
-      <OButton size="small" type="primary" @click="submit(formRef)">{{
-        '确定'
-      }}</OButton>
-      <OButton size="small" @click="close">{{ '取消' }}</OButton>
-    </div>
-  </o-dialog>
+      <h5 class="header">用户协议</h5>
+      <el-scrollbar height="400px">
+          <div v-dompurify-html="convertMd(agree)" class="markdown"></div>
+        </el-scrollbar>
+      <el-form
+        ref="formRef"
+        label-width="0"
+        :model="form"
+        class="form"
+        @submit.prevent=""
+      >
+        <el-form-item prop="policy" :rules="policyRules">
+          <div class="checkbox">
+            <OCheckboxGroup
+              v-model="form.policy"
+              @change="doValidatorForm(formRef, 'policy')"
+            >
+              <OCheckbox value="1"></OCheckbox>
+            </OCheckboxGroup>
+            <span>
+              我已阅读并同意用户协议
+            </span>
+          </div>
+        </el-form-item>
+      </el-form>
+      <div class="footer">
+        <OButton size="small" type="primary" @click="submit(formRef)">{{
+          '确定'
+        }}</OButton>
+        <OButton size="small" @click="close">{{ '取消' }}</OButton>
+      </div>
+    </o-dialog>
+  </div>
 </template>
 <style lang="scss" scoped>
 .header {
@@ -142,5 +144,10 @@ const doValidatorForm = (
 .markdown {
   width: 100%;
   box-shadow: none;
+}
+.dialog {
+  :deep(.is-draggable) {
+    background-color: var(--o-color-fill2);
+  }
 }
 </style>
