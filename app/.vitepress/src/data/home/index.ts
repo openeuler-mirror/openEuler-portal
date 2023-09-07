@@ -65,6 +65,15 @@ export default {
     ],
     en: [
       {
+        pcBanner: banner1_pc,
+        moBanner: banner1_mo,
+        link: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pdf/openEuler%20OS%20Technical%20Whitepaper_Innovation%20Projects_EN.pdf',
+        id: 'whitepaper',
+        title: ['openEuler OS Technical Whitepaper','Innovation Projects'],
+        btn: 'Download',
+        targetTap: 1,
+      },
+      {
         pcBanner: techDay_pc,
         moBanner: techDay_mo,
         id: '',

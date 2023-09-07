@@ -436,10 +436,9 @@ export default {
             },
             {
               NAME: 'Compliance',
-              LABEL: 'Detect license compatibility and compliance',
+              LABEL: 'Retrieve license rights, obligations, and restrictions',
               PATH: 'https://compliance.openeuler.org/',
             },
-
             {
               NAME: 'EulerTest',
               LABEL: 'Testing management platform developed based on openEuler',

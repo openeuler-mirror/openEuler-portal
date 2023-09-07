@@ -558,8 +558,8 @@ export default {
               PATH: 'https://software-pkg.openeuler.org/zh/package',
             },
             {
-              NAME: 'License兼容性检查工具',
-              LABEL: '帮助快速检测License兼容性',
+              NAME: 'License工具门户',
+              LABEL: '帮助快速检索License权利、义务、限制',
               PATH: 'https://compliance.openeuler.org/',
             },
             {
