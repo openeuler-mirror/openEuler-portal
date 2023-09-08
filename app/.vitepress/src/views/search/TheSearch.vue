@@ -756,6 +756,9 @@ function clipTxt(text: string) {
           margin-top: var(--o-spacing-h5);
           margin-bottom: var(--o-spacing-h5);
         }
+        @media (max-width: 768px) {
+          padding: var(--o-spacing-h5) var(--o-spacing-h10);
+        }
       } 
     }
     .search-content {
