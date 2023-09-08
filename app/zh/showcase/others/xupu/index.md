@@ -42,7 +42,7 @@ img: /category/showcase/others.png
 
 ## 伙伴
 
-<img src="./logo1.png" width="500" >
+<img src="./logo1.png" width="200" >
 
 
-<img src="./logo.png" width="500" >
+<img src="./logo.png" width="200" >
