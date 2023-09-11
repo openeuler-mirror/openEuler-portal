@@ -10,9 +10,9 @@ export default {
   START_DATE: 'Start date',
   END_DATE: 'End date',
   CANCEL: 'Cancel',
-  DEFECT_CENTER: 'Defect Center',
-  DEFECT_CENTER_DETAIL: 'Defect Center Detail',
-  DEFECT_MANAGE: 'Defect Management',
+  DEFECT_CENTER: 'Bug Center',
+  DEFECT_CENTER_DETAIL: 'Bug Center Detail',
+  DEFECT_MANAGE: 'Bug Management',
   SEVERITY_LIST: [
     {
       NAME: 'Low',

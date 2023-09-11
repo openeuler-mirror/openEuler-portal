@@ -363,7 +363,7 @@ export default {
                   PATH: '/security/security-bulletins/',
                 },
                 {
-                  NAME: 'Defect Center',
+                  NAME: 'Bug Center',
                   LABEL: '',
                   PATH: '/security/bug-bulletins/',
                 },
