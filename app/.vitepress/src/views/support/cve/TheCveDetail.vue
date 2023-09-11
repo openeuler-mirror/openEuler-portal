@@ -43,68 +43,60 @@ onMounted(() => {
   const cveId = window.location.href.substring(i1 + 1, i2);
   const packageName = window.location.href.substring(i3 + 1);
 
-  try {
-    getCveDetail(cveId, packageName).then((res: any) => {
-      cveDetailData.value = res.result;
-      cvssList.value = [
-        {
-          cate: 'CVSS评分',
-          NVD: cveDetailData.value?.cvsssCoreNVD,
-          openEuler: cveDetailData.value?.cvsssCoreOE,
-        },
-        {
-          cate: 'Attack Vector',
-          NVD: cveDetailData.value?.attackVectorNVD,
-          openEuler: cveDetailData.value?.attackVectorOE,
-        },
-        {
-          cate: 'Attack Complexity',
-          NVD: cveDetailData.value?.attackComplexityNVD,
-          openEuler: cveDetailData.value?.attackComplexityOE,
-        },
-        {
-          cate: 'Privileges Required',
-          NVD: cveDetailData.value?.privilegesRequiredNVD,
-          openEuler: cveDetailData.value?.privilegesRequiredOE,
-        },
-        {
-          cate: 'User Interaction',
-          NVD: cveDetailData.value?.userInteractionNVD,
-          openEuler: cveDetailData.value?.userInteractionOE,
-        },
-        {
-          cate: 'Scope',
-          NVD: cveDetailData.value?.scopeNVD,
-          openEuler: cveDetailData.value?.scopeOE,
-        },
-        {
-          cate: 'Confidentiality',
-          NVD: cveDetailData.value?.confidentialityNVD,
-          openEuler: cveDetailData.value?.confidentialityOE,
-        },
-        {
-          cate: 'Integrity',
-          NVD: cveDetailData.value?.integrityNVD,
-          openEuler: cveDetailData.value?.integrityOE,
-        },
-        {
-          cate: 'Availability',
-          NVD: cveDetailData.value?.availabilityNVD,
-          openEuler: cveDetailData.value?.availabilityOE,
-        },
-      ];
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  getCveDetail(cveId, packageName).then((res: any) => {
+    cveDetailData.value = res.result;
+    cvssList.value = [
+      {
+        cate: i18n.value.cve.CVSS_SCORE,
+        NVD: cveDetailData.value?.cvsssCoreNVD,
+        openEuler: cveDetailData.value?.cvsssCoreOE,
+      },
+      {
+        cate: 'Attack Vector',
+        NVD: cveDetailData.value?.attackVectorNVD,
+        openEuler: cveDetailData.value?.attackVectorOE,
+      },
+      {
+        cate: 'Attack Complexity',
+        NVD: cveDetailData.value?.attackComplexityNVD,
+        openEuler: cveDetailData.value?.attackComplexityOE,
+      },
+      {
+        cate: 'Privileges Required',
+        NVD: cveDetailData.value?.privilegesRequiredNVD,
+        openEuler: cveDetailData.value?.privilegesRequiredOE,
+      },
+      {
+        cate: 'User Interaction',
+        NVD: cveDetailData.value?.userInteractionNVD,
+        openEuler: cveDetailData.value?.userInteractionOE,
+      },
+      {
+        cate: 'Scope',
+        NVD: cveDetailData.value?.scopeNVD,
+        openEuler: cveDetailData.value?.scopeOE,
+      },
+      {
+        cate: 'Confidentiality',
+        NVD: cveDetailData.value?.confidentialityNVD,
+        openEuler: cveDetailData.value?.confidentialityOE,
+      },
+      {
+        cate: 'Integrity',
+        NVD: cveDetailData.value?.integrityNVD,
+        openEuler: cveDetailData.value?.integrityOE,
+      },
+      {
+        cate: 'Availability',
+        NVD: cveDetailData.value?.availabilityNVD,
+        openEuler: cveDetailData.value?.availabilityOE,
+      },
+    ];
+  });
 
-  try {
-    getAffectedProduct(cveId, packageName).then((res: any) => {
-      affectedProductList.value = res.result;
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  getAffectedProduct(cveId, packageName).then((res: any) => {
+    affectedProductList.value = res.result;
+  });
 });
 
 </script>

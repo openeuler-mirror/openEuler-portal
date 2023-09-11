@@ -10,6 +10,9 @@ export default {
   START_DATE: '开始时间',
   END_DATE: '结束时间',
   CANCEL: '取消选项',
+  DEFECT_CENTER: '缺陷中心',
+  DEFECT_CENTER_DETAIL: '缺陷中心详情',
+  DEFECT_MANAGE: '缺陷管理',
   SEVERITY_LIST: [
     {
       NAME: '低',

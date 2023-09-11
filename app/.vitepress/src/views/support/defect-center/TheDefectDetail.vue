@@ -20,6 +20,7 @@ const { lang } = useData();
 
 const detailData: any = ref({});
 const cveIdList = ref<string[]>([]);
+const bugIdList = ref<string[]>([]);
 const baseUrl = 'https://repo.openeuler.org';
 
 const queryData: DetailParams = reactive({
@@ -30,7 +31,10 @@ function getSecurityDetailInfo(data: DetailParams) {
   getSecurityDetail(data).then((res: any) => {
     if (res) {
       detailData.value = res;
-      cveIdList.value = res.cveId.split(';');
+
+      cveIdList.value = res.cveId.match(/CVE-\w+/g) || [];
+      bugIdList.value = res.cveId.match(/BUG-\w+/g) || [];
+
       getRpmUrl(detailData.value.packageHelperList);
       getHotPatchRpmUrl(detailData.value.packageHotpatchList);
     }
@@ -42,9 +46,9 @@ function goBackPage() {
   router.go(`${router.route.path.substring(0, i)}`);
 }
 
-function goCveDetail(val: string) {
+function goCveDetail(id: string) {
   router.go(
-    `/${lang.value}/security/cve/detail/?cveId=${val}&packageName=${detailData.value.affectedComponent}`
+    `/${lang.value}/security/cve/detail/?cveId=${id}&packageName=${detailData.value.affectedComponent}`
   );
 }
 
@@ -109,13 +113,13 @@ onMounted(() => {
   <div class="wrapper">
     <div class="breadcrumb">
       <p class="last-page" @click="goBackPage">
-        {{ i18n.safetyBulletin.SECURITY_ADVISORIES }}
+        {{ i18n.safetyBulletin.DEFECT_CENTER }}
       </p>
       <span class="separtor">
         <OIcon><IconChevronRight /></OIcon>
       </span>
       <p class="current-page">
-        {{ i18n.safetyBulletin.SECURITY_ADVISORIES_DETAIL }}
+        {{ i18n.safetyBulletin.DEFECT_CENTER_DETAIL }}
       </p>
     </div>
 
@@ -129,12 +133,6 @@ onMounted(() => {
         <div>
           <span>{{ i18n.safetyBulletin.RELEASE_DATE }}:</span>
           <p>{{ detailData.announcementTime }}</p>
-        </div>
-        <div>
-          <span>{{ i18n.safetyBulletin.UPDATE_TIME }}:</span>
-          <p>
-            {{ detailData.updateTime?.split(' ')[0] }}
-          </p>
         </div>
       </div>
     </div>
@@ -185,19 +183,29 @@ onMounted(() => {
                   {{ detailData.affectedComponent }}
                 </p>
               </div>
-              <div class="tab-content-item">
-                <h5 class="tab-content-item-title">
-                  {{ i18n.safetyBulletin.CVE }}
-                </h5>
+              <div v-if="bugIdList.length" class="tab-content-item">
+                <h5 class="tab-content-item-title">BUG</h5>
+                <p
+                  v-for="(item, index) in bugIdList"
+                  :key="index"
+                  class="tab-content-item-text"
+                >
+                  {{ item }}
+                </p>
+              </div>
+
+              <div v-if="cveIdList.length" class="tab-content-item">
+                <h5 class="tab-content-item-title">CVE</h5>
                 <p
                   v-for="(item, index) in cveIdList"
                   :key="index"
-                  class="tab-content-item-link"
+                  class="tab-content-item-text tab-content-item-link"
                   @click="goCveDetail(item)"
                 >
                   {{ item }}
                 </p>
               </div>
+
               <div class="tab-content-item">
                 <h5 class="tab-content-item-title">
                   {{ i18n.safetyBulletin.REFERENCE_DOCUMENTS }}
@@ -444,18 +452,6 @@ onMounted(() => {
             line-height: var(--o-line-height-text);
           }
         }
-        &-link {
-          color: var(--o-color-link1);
-          font-size: var(--o-font-size-text);
-          font-weight: 400;
-          line-height: var(--o-line-height-text);
-          cursor: pointer;
-          @media screen and (max-width: 768px) {
-            font-size: var(--o-font-size-tip);
-            font-weight: 400;
-            line-height: var(--o-line-height-tip);
-          }
-        }
         &-text {
           white-space: pre-wrap;
           text-align: justify;
@@ -470,6 +466,18 @@ onMounted(() => {
           }
           a {
             color: var(--o-color-link1);
+          }
+        }
+        &-link {
+          color: var(--o-color-link1);
+          font-size: var(--o-font-size-text);
+          font-weight: 400;
+          line-height: var(--o-line-height-text);
+          cursor: pointer;
+          @media screen and (max-width: 768px) {
+            font-size: var(--o-font-size-tip);
+            font-weight: 400;
+            line-height: var(--o-line-height-tip);
           }
         }
       }
