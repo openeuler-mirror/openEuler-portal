@@ -92,11 +92,11 @@ function getHotPatchRpmUrl(data: HotPatch[]) {
       product.packageName.forEach((rpm) => {
         let path = '';
         if (product.packageType === 'src') {
-          path = `update/source/Packages/${rpm}`;
+          path = `hotpatch_update/source/Packages/${rpm}`;
         } else if (product.packageType === 'noarch') {
-          path = `update/aarch64/Packages/${rpm}`;
+          path = `hotpatch_update/aarch64/Packages/${rpm}`;
         } else {
-          path = `update/${product.packageType}/Packages/${rpm}`;
+          path = `hotpatch_update/${product.packageType}/Packages/${rpm}`;
         }
         product.url = `${baseUrl}/${version.productName}/${path}`;
       });
@@ -133,6 +133,12 @@ onMounted(() => {
         <div>
           <span>{{ i18n.safetyBulletin.RELEASE_DATE }}:</span>
           <p>{{ detailData.announcementTime }}</p>
+        </div>
+        <div>
+          <span>{{ i18n.safetyBulletin.UPDATE_TIME }}:</span>
+          <p>
+            {{ detailData.updateTime?.split(' ')[0] }}
+          </p>
         </div>
       </div>
     </div>

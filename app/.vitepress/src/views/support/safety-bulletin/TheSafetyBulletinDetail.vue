@@ -88,11 +88,11 @@ function getHotPatchRpmUrl(data: HotPatch[]) {
       product.packageName.forEach((rpm) => {
         let path = '';
         if (product.packageType === 'src') {
-          path = `update/source/Packages/${rpm}`;
+          path = `hotpatch_update/source/Packages/${rpm}`;
         } else if (product.packageType === 'noarch') {
-          path = `update/aarch64/Packages/${rpm}`;
+          path = `hotpatch_update/aarch64/Packages/${rpm}`;
         } else {
-          path = `update/${product.packageType}/Packages/${rpm}`;
+          path = `hotpatch_update/${product.packageType}/Packages/${rpm}`;
         }
         product.url = `${baseUrl}/${version.productName}/${path}`;
       });
