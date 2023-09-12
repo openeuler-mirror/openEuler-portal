@@ -28,6 +28,7 @@ import {
   driverOSOptions,
   getSoftwareList,
   getBusinessSoftwareList,
+  getTestOrganizations,
   getCpu,
   getSoftFilter,
   getDriveTypes,
@@ -122,7 +123,6 @@ const queryData: CveQuery = reactive({
 const tableData = ref<
   CompatibilityList[] | BoardCardList[] | BusinessSoftWareList[]
 >([]);
-// const tableData = ref<any>([]);
 
 // 整机
 const getCompatibilityData = (data: CveQuery) => {
@@ -431,6 +431,11 @@ onMounted(() => {
           if (it.title === '操作系统') {
             it.select.push(item);
           }
+        });
+        getTestOrganizations().then((res: any) => {
+          res.result.testOrganizations.forEach((item: string) => {
+            testOrganizationsLists.value.push(item);
+          });
         });
       });
     });
@@ -799,7 +804,7 @@ onMounted(() => {
       </OTabPane>
 
       <OTabPane
-        v-if="false"
+        v-if="lang === 'zh'"
         :label="i18n.compatibility.BUSINESS_SOFTWARE"
         name="4"
       >
