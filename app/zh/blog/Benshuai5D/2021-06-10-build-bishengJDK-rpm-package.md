@@ -307,7 +307,7 @@ gpgkey=http://repo.openeuler.org/openEuler-20.03-LTS/OS/$basearch/RPM-GPG-KEY-op
 
 #### 获取安装源
 
-获取openEuler 发布的树莓派镜像及其校验文件，登陆openEuler社区网站https://www.openeuler.org/en/download/，单击卡片 openEuler 20.03 LTS SP1 上的“download”按钮
+获取openEuler 发布的树莓派镜像及其校验文件，登录openEuler社区网站https://www.openeuler.org/en/download/，单击卡片 openEuler 20.03 LTS SP1 上的“download”按钮
 
 <img src="./image/2.1.png" alt= "image-get iso">
 
@@ -349,13 +349,13 @@ gpgkey=http://repo.openeuler.org/openEuler-20.03-LTS/OS/$basearch/RPM-GPG-KEY-op
 
 将写入镜像后的 SD 卡插入树莓派，通电启用
 
-#### 登陆系统
+#### 登录系统
 
-登录树莓派有以下两种方式：本地登陆和ssh远程登陆
+登录树莓派有以下两种方式：本地登录和ssh远程登录
 
-本地登陆：树莓派连接显示器、键盘、鼠标后，启动树莓派，可以看到树莓派启动日志输出到显示器上。待树莓派启动成功，输入用户名（root）和密码（openeuler）登录
+本地登录：树莓派连接显示器、键盘、鼠标后，启动树莓派，可以看到树莓派启动日志输出到显示器上。待树莓派启动成功，输入用户名（root）和密码（openeuler）登录
 
-ssh远程登陆：如果树莓派连接已知路由器，可登录路由器查看，新增的 IP 即为树莓派 IP，或者通过IP扫描工具来将树莓派IP进行扫描获取，这里以advanced_ip_scanner为例
+ssh远程登录：如果树莓派连接已知路由器，可登录路由器查看，新增的 IP 即为树莓派 IP，或者通过IP扫描工具来将树莓派IP进行扫描获取，这里以advanced_ip_scanner为例
 
 <img src="./image/2.8.png" alt="image-log in system">
 
