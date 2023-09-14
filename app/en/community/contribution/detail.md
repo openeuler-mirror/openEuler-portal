@@ -106,7 +106,7 @@ Once you sign the [CLA](https://clasign.osinfra.cn/sign/gitee_openeuler-16112988
 - Perform modification, building, and local validation.
   After the modification is complete on the local branch, build and verify the local branch by referring to [Software Package Building](https://gitee.com/openeuler/community/blob/master/en/contributors/package-install.md).
 - Create a PR.  
-  Creating a PR means that you are contributing code to the community. For details, see [Creating a Pull Request.](https://gitee.com/openeuler/community/blob/master/en/contributors/pull-requests.md)
+  Creating a PR means that you are contributing code to the community. For details, see [Creating a Pull Request.](https://gitee.com/openeuler/community/blob/master/en/contributors/pull-request.md)
   To make your PR easier to be accepted, you need to:
 
   - Follow the coding conventions (if any) of the SIG.

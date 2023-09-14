@@ -64,7 +64,7 @@ function goDetail(link: string) {
   </div>
 </template>
 
-<style lang="scss">
+<style  lang="scss">
 .case-list {
   display: grid;
   width: 100%;
@@ -108,7 +108,6 @@ function goDetail(link: string) {
       }
       .detail {
         max-width: 256px;
-        max-height: 46px;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;

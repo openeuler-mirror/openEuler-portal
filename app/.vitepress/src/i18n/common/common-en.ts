@@ -444,6 +444,16 @@ export default {
               LABEL: 'Open test service platform',
               PATH: 'https://compass-ci.openeuler.org/',
             },
+            {
+              NAME: 'EulerMaker',
+              LABEL: 'Build service platform',
+              PATH: 'https://eulermaker.compass-ci.openeuler.openatom.cn/',
+            },
+            {
+              NAME: 'oecp',
+              LABEL: 'Os compare anlyze tool',
+              PATH: 'https://gitee.com/openeuler/oecp',
+            },
           ],
         },
         {

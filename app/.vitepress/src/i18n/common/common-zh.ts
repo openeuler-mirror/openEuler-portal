@@ -430,6 +430,11 @@ export default {
               LABEL: '了解openEuler各版本的技术详情',
               PATH: '/showcase/technical-white-paper/',
             },
+            {
+              NAME: '市场研究报告',
+              LABEL: '了解openEuler在行业的市场研究情况',
+              PATH: '/showcase/market-report/',
+            },
           ],
         },
         {
@@ -576,6 +581,16 @@ export default {
               NAME: 'OEPKGS',
               LABEL: 'oepkgs软件托管平台',
               PATH: 'https://oepkgs.net/',
+            },
+            {
+              NAME: 'EulerMaker',
+              LABEL: '开放式统一构建服务',
+              PATH: 'https://eulermaker.compass-ci.openeuler.openatom.cn/',
+            },
+            {
+              NAME: 'oecp',
+              LABEL: '操作系统差异比较分析工具',
+              PATH: 'https://gitee.com/openeuler/oecp',
             },
           ],
         },
