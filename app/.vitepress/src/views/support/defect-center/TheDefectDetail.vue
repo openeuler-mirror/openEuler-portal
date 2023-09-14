@@ -32,8 +32,14 @@ function getSecurityDetailInfo(data: DetailParams) {
     if (res) {
       detailData.value = res;
 
-      cveIdList.value = res.cveId.match(/CVE-\w+/g) || [];
-      bugIdList.value = res.cveId.match(/BUG-\w+/g) || [];
+      const strList = res.cveId.split(';');
+      strList.forEach((item: string) => {
+        if (item.startsWith('BUG')) {
+          bugIdList.value.push(item);
+        } else if (item.startsWith('CVE')) {
+          cveIdList.value.push(item);
+        }
+      });
 
       getRpmUrl(detailData.value.packageHelperList);
       getHotPatchRpmUrl(detailData.value.packageHotpatchList);
