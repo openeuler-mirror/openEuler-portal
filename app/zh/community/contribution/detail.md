@@ -108,7 +108,7 @@ SIG 就是 Special Interest Group 的缩写，openEuler 社区按照不同的 SI
 - 修改、构建和本地验证  
   在本地分支上完成修改后，进行构建和本地验证，请参考[构建软件包](https://gitee.com/openeuler/community/blob/master/zh/contributors/package-install.md)。
 - 提交一个 Pull-Request  
-  当你提交一个 PR 的时候，就意味您已经开始给社区贡献代码了。请参考 openEuler 社区 PR 提交指导。  
+  当你提交一个 PR 的时候，就意味您已经开始给社区贡献代码了。请参考 [openEuler 社区 PR 提交指导](https://gitee.com/openeuler/community/blob/master/zh/contributors/pull-request.md)。  
   为了使您的提交更容易被接受，您需要：
 
   - 遵循 SIG 组的编码约定，如果有的话

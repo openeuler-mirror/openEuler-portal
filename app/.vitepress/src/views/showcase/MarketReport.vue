@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue';
 import { useI18n } from '@/i18n';
 
-import whitePaperData from '@/data/showcase/showcase';
+import whitePaperData from '@/data/showcase/market-report';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import NotFound from '@/NotFound.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
@@ -62,7 +62,7 @@ function jumpPage(page: number) {
   <BannerLevel2
     :background-image="banner"
     background-text="COMMNUNITY"
-    :title="userCaseData.whilePaper"
+    :title="userCaseData.marketReport"
     :illustration="search"
   />
   <div class="user-case">
@@ -79,7 +79,7 @@ function jumpPage(page: number) {
           </p>
           <a :href="item.path">
             <OButton type="primary" size="mini" class="confirm-btn">{{
-              userCaseData.downloadPaper
+              userCaseData.downloadMarketReport
             }}</OButton>
           </a>
         </div>
@@ -188,7 +188,6 @@ function jumpPage(page: number) {
             bottom: 14px;
           }
           :deep(.confirm-btn) {
-            width: 96px;
             display: flex;
             justify-content: center;
             color: var(--o-color-white);

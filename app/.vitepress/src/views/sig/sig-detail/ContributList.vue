@@ -347,6 +347,10 @@ const turnPage = (option: string) => {
     margin-top: var(--o-spacing-h2);
   }
 }
+
+.o-table {
+  box-shadow: none;
+}
 .pagination-slot {
   font-size: var(--o-font-size-text);
   font-weight: 400;

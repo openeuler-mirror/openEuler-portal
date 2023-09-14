@@ -49,9 +49,7 @@ function turnPage(option: string) {
 function jumpPage(page: number) {
   currentPage.value = page;
 }
-const downloadPaper = (path: string) => {
-  window.location.href = path;
-};
+
 </script>
 
 <template>
@@ -73,7 +71,7 @@ const downloadPaper = (path: string) => {
           <p class="detail">
             {{ item.summary }}
           </p>
-          <a @click="downloadPaper(item.path)">
+          <a :href="item.path">
             <OButton type="primary" size="mini" class="confirm-btn">{{
               userCaseData.downloadPaper
             }}</OButton>

@@ -256,7 +256,7 @@ function convertMd(data: string) {
   <div class="sig-detail">
     <BreadCrumbs
       bread1="SIG"
-      :bread2="sigDetailName"
+      :bread2="sigMemberData?.sig_name"
       link1="/zh/sig/sig-list/"
     />
     <div class="content">
@@ -265,7 +265,7 @@ function convertMd(data: string) {
           :id="sigDetail.INTRODUCTION"
           class="brief-introduction-title floor-title"
         >
-          {{ sigDetailName }}
+          {{ sigMemberData?.sig_name }}
           <a :href="giteeHomeLink" target="_blank" rel="noopener noreferrer">
             <OIcon class="icon"> <IconGitee /> </OIcon
           ></a>
@@ -285,7 +285,7 @@ function convertMd(data: string) {
           }}<a
             target="_blank"
             rel="noopener noreferrer"
-            :href="`https://gitee.com/openeuler/community/tree/master/sig/${sigDetailName}`"
+            :href="`https://gitee.com/openeuler/community/tree/master/sig/${sigMemberData?.sig_name}`"
             >{{ i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT2 }}</a
           >{{ i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT3 }}
         </p>
@@ -360,7 +360,7 @@ function convertMd(data: string) {
         <div class="repository-box">
           <h5>
             {{
-              `${sigDetailName} ${sigDetail.REPOSITORY_LIST} (${_totalRepositoryList.length})`
+              `${sigMemberData?.sig_name} ${sigDetail.REPOSITORY_LIST} (${_totalRepositoryList.length})`
             }}
           </h5>
           <div class="repository-filter">
@@ -528,11 +528,11 @@ function convertMd(data: string) {
         </h2>
         <div class="contribution-box">
           <h5>
-            {{ `${sigDetailName} ${sigDetail.USER_CONTRIBUTOR}` }}
+            {{ `${sigMemberData?.sig_name} ${sigDetail.USER_CONTRIBUTOR}` }}
           </h5>
           <ContributList
             class="contribution-content"
-            :sig="sigDetailName"
+            :sig="sigMemberData?.sig_name"
           ></ContributList>
         </div>
       </div>
@@ -571,6 +571,10 @@ function convertMd(data: string) {
   @media screen and (max-width: 768px) {
     margin-top: var(--o-spacing-h2);
   }
+}
+
+.o-table {
+  box-shadow: none;
 }
 .sig-detail {
   max-width: 1504px;
