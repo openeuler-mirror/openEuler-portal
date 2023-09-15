@@ -1,5 +1,5 @@
 ---
-title:'Exploring the Secrets of HPC Applications'
+title: 'Exploring the Secrets of HPC Applications'
 category: blog
 date: 2022-10-13
 tags:
