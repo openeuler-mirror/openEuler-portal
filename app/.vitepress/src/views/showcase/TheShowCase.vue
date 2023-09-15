@@ -200,9 +200,7 @@ function getUrlParam() {
     currentTag.value = userCaseData.value.tags[0];
   }
 }
-const downloadCase = (path: string) => {
-  window.location.href = path;
-};
+
 // 获取所有案例及设置当前需要显示的案例
 onMounted(() => {
   getUrlParam();
@@ -276,18 +274,14 @@ onMounted(() => {
         {{ userCaseData.find1 }} <span>{{ currentCaseListAll.length }}</span>
         {{ userCaseData.find2 }}
       </p>
-      <OButton
-        v-if="userCaseData.caseLink"
-        class="case-download"
-        type="outline"
-        size="mini"
-        @click="downloadCase(userCaseData.caseLink)"
-      >
-        {{ userCaseData.downloadCase }}
-        <template #suffixIcon>
-          <OIcon><IconDownload /></OIcon>
-        </template>
-      </OButton>
+      <a v-if="userCaseData.caseLink" :href="userCaseData.caseLink">
+        <OButton class="case-download" type="outline" size="mini">
+          {{ userCaseData.downloadCase }}
+          <template #suffixIcon>
+            <OIcon><IconDownload /></OIcon>
+          </template>
+        </OButton>
+      </a>
     </div>
     <div class="case-list">
       <OCard
