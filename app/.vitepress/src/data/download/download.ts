@@ -1484,7 +1484,7 @@ export default {
         GET_ISO_URL: 'https://archives.openeuler.openatom.cn/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER:
-          'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pdf/openEuler%2021.09%20%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf',
+          '/whitepaper/openEuler%2021.09%20%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf',
         WEBSITE_SELECT: '/zh/mirror/select/?version=21.09',
         MANUFACTURER: 'openEuler社区',
         PUBLISH_DATE: '2021/09',
@@ -3448,7 +3448,7 @@ export default {
         GET_ISO_URL: 'https://archives.openeuler.openatom.cn/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WHITE_PAPER:
-          'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pdf/openEuler%2021.09%20%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6-en.pdf',
+          '/whitepaper/en/openEuler%2021.09%20%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6-en.pdf',
         WEBSITE_SELECT: '/en/mirror/select/?version=21.09',
         MANUFACTURER: 'openEuler community',
         PUBLISH_DATE: '2021/09',
