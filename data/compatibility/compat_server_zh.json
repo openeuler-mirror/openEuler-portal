@@ -11818,5 +11818,127 @@
       "hostBusAdapter": "Huawei Technologies Co., Ltd. HiSilicon AHCI HBA (rev 21)",
       "hardDiskDrive": "AVAGO MR9460-8i"
     }
+  },
+  {
+    "hardwareFactory": "宇视科技",
+    "hardwareModel": "VX1848-V3",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "x86_64",
+    "date": "2023/05/16",
+    "friendlyLink": "https://cn.uniview.com/Products/Net_storage/IPSAN/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "15F3",
+        "svID": "8086",
+        "ssID": "0000",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "igc",
+        "version": "",
+        "type": "NIC",
+        "date": "2023.05.16",
+        "sha256": "20ca0cb7d0b4f518fea2e7db57c3cb0bc3603925bb6a86f30c2988b93f2c93a3",
+        "driverSize": "265K",
+        "chipVendor": "Intel Corporation",
+        "boardModel": "NI05IN4DG、NI05IN4XG",
+        "chipModel": "I225-V",
+        "item": "",
+        "downloadLink": "参见文档《igc模块编译说明》"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "00e6",
+        "svID": "1000",
+        "ssID": "4060",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "mpt3sas",
+        "version": "35.100.00.00",
+        "type": "raid",
+        "date": "2023.05.16",
+        "sha256": "033efcb24abc1f215071dc097f238ea5d6cda6f766d49c80708c4cbb06adc1b3",
+        "driverSize": "673K",
+        "chipVendor": "Avago",
+        "boardModel": "NI05IN2S",
+        "chipModel": "SAS3808",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://cn.uniview.com/Products/Net_storage/IPSAN/",
+      "certificationTime": "2023/05/16",
+      "commitID": "",
+      "mainboardModel": "NI05MB48S",
+      "biosUefi": "NI05MBXXX02002",
+      "cpu": "AlderLake、12th Gen Intel(R) Core(TM) i3-12100",
+      "ram": "1*8G DIMMs",
+      "portsBusTypes": "PCIExpressx16",
+      "videoAdapter": "VGA compatible controller:Intel Corporation Device 4692 (rev 0c)",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "SATA"
+    }
+  },
+  {
+    "hardwareFactory": "宇视科技",
+    "hardwareModel": "VX1824-V3",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "x86_64",
+    "date": "2023/05/16",
+    "friendlyLink": "https://cn.uniview.com/Products/Net_storage/IPSAN/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "15F3",
+        "svID": "8086",
+        "ssID": "0000",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "igc",
+        "version": "",
+        "type": "NIC",
+        "date": "2023.05.16",
+        "sha256": "20ca0cb7d0b4f518fea2e7db57c3cb0bc3603925bb6a86f30c2988b93f2c93a3",
+        "driverSize": "265K",
+        "chipVendor": "Intel Corporation",
+        "boardModel": "NI05IN4DG、NI05IN4XG",
+        "chipModel": "I225-V",
+        "item": "",
+        "downloadLink": "参见文档《igc模块编译说明》"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "00e6",
+        "svID": "1000",
+        "ssID": "4060",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "mpt3sas",
+        "version": "35.100.00.00",
+        "type": "raid",
+        "date": "2023.05.16",
+        "sha256": "033efcb24abc1f215071dc097f238ea5d6cda6f766d49c80708c4cbb06adc1b3",
+        "driverSize": "673K",
+        "chipVendor": "Avago",
+        "boardModel": "NI05IN2S",
+        "chipModel": "SAS3808",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://cn.uniview.com/Products/Net_storage/IPSAN/",
+      "certificationTime": "2023/05/16",
+      "commitID": "",
+      "mainboardModel": "NI05MB24S",
+      "biosUefi": "NI05MBXXX02002",
+      "cpu": "AlderLake、12th Gen Intel(R) Core(TM) i3-12100",
+      "ram": "1*8G DIMMs",
+      "portsBusTypes": "PCIExpressx16",
+      "videoAdapter": "VGA compatible controller:Intel Corporation Device 4692 (rev 0c)",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "SATA"
+    }
   }
 ]
