@@ -181,4 +181,20 @@ export default [
     name: 'specification',
     lang: ['zh'],
   },
+  {
+    name: 'technical-white-paper',
+    lang: ['zh'],
+  },
+  {
+    name: 'white-paper',
+    lang: ['zh'],
+  },
+  {
+    name: 'market-report',
+    lang: ['zh'],
+  },
+  {
+    name: 'event-list',
+    lang: ['zh'],
+  },
 ];
