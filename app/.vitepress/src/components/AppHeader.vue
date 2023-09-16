@@ -45,7 +45,7 @@ const logo = computed(() =>
   commonStore.theme === 'light' ? logo_light : logo_dark
 );
 
-const roterPath = ref<string>(router.route.path);
+const routerPath = ref(router.route.path);
 
 // 移动菜单事件
 const mobileMenuIcon = ref(false);
@@ -62,21 +62,44 @@ const mobileMenuPanel = () => {
   }, 200);
 };
 
-const langShow = ref([] as any);
+const langShow = ref(['zh', 'en', 'ru']);
 watch(
   () => router.route.path,
   (val: string) => {
-    roterPath.value = val;
+    // TODO:需优化代码复杂度
+    routerPath.value = val;
+    langShow.value = ['zh', 'en', 'ru'];
+
+    // 首页
+    if (val === `/${lang.value}/`) {
+      return;
+    }
 
     // 语言过滤
     for (let i = 0; i < navFilterConfig.length; i++) {
-      if (val.includes(navFilterConfig[i].name)) {
-        langShow.value = navFilterConfig[i].lang;
-        break;
-      }
-      if (val === `/${lang.value}/`) {
-        langShow.value = ['zh', 'en', 'ru'];
-        break;
+      if (/^\/(zh|en)\/(news|blog)\//g.test(routerPath.value)) {
+        // 新闻 博客
+        langShow.value = [lang.value];
+      } else {
+        // 其他
+        const routeArr = routerPath.value.split('/');
+        const routeName = routeArr[routeArr.length - 2];
+        // TODO:目前只支持一级
+        const names = navFilterConfig[i].name.split('/');
+        const name = names[0];
+
+        if (
+          // 路径后缀匹配
+          routeName === name ||
+          // 路径全匹配
+          routerPath.value === name ||
+          // 子路径匹配
+          (names[1] && names[1] === '**' && routerPath.value.includes(name))
+        ) {
+          console.log(langShow.value);
+          langShow.value = navFilterConfig[i].lang;
+          break;
+        }
       }
     }
   },
@@ -142,7 +165,7 @@ const goSubNavMobile = (item: NavItem) => {
 const handleDefaultSelectedMobile = () => {
   navRouter.value.forEach((item: any) => {
     item.CLASS.forEach((el: any) => {
-      if (roterPath.value.includes(el)) {
+      if (routerPath.value.includes(el)) {
         mobileChildMenu.value = item.CHILDREN;
         activeNav.value = item.ID;
       }
