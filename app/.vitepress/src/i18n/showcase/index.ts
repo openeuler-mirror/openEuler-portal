@@ -34,6 +34,8 @@ export default {
     contributeLink: 'user@openeuler.sh',
   },
   en: {
+    technicalWhilePaper: 'Technical White Papers',
+    downloadPaper: 'Download',
     placeHolder: 'input user case',
     bannerTitle: 'Success Stories',
     guideline: '',

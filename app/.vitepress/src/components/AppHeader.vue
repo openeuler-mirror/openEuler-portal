@@ -81,9 +81,6 @@ watch(
 
     // 首页
     if (isHome.value) {
-      console.log(
-        ['/', '/zh/', '/zh', '/en/', '/en'].includes(router.route.path)
-      );
       return;
     }
 
@@ -94,7 +91,7 @@ watch(
     }
 
     // 英文页面一定有中文
-    if (lang.value == 'en') {
+    if (lang.value === 'en') {
       return;
     }
 

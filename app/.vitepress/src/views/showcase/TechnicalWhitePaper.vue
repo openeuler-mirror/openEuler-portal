@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 
-import technicalData from '@/data/showcase/technical-while-paper';
+import technicalDataTotal from '@/data/showcase/technical-while-paper';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import NotFound from '@/NotFound.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
@@ -10,7 +11,12 @@ import BannerLevel2 from '@/components/BannerLevel2.vue';
 import banner from '@/assets/banner/banner-community.png';
 import technicalIll from '@/assets/illustrations/technical-white-paper.png';
 
+type Language = 'zh' | 'en';
+
 const i18n = useI18n();
+const { lang } = useData();
+
+const technicalData = technicalDataTotal[lang.value as Language];
 
 const userCaseData = computed(() => i18n.value.showcase);
 
@@ -45,11 +51,9 @@ function turnPage(option: string) {
     currentPage.value = currentPage.value + 1;
   }
 }
-// 移动端跳转翻页
 function jumpPage(page: number) {
   currentPage.value = page;
 }
-
 </script>
 
 <template>
@@ -68,7 +72,7 @@ function jumpPage(page: number) {
         class="case-card"
       >
         <div class="card-content-text">
-          <p class="detail">
+          <p class="detail" :title="item.summary">
             {{ item.summary }}
           </p>
           <a :href="item.path">
