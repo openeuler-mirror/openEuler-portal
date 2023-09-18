@@ -62,44 +62,61 @@ const mobileMenuPanel = () => {
   }, 200);
 };
 
-const langShow = ref(['zh', 'en', 'ru']);
+const isNewsorBlog = computed(() =>
+  /^\/(zh|en)\/(news|blog)\//g.test(router.route.path)
+);
+
+const isHome = computed(() =>
+  ['/', '/zh/', '/zh', '/en/', '/en'].includes(router.route.path)
+);
+
+const langShow = ref(['zh', 'en']);
+
 watch(
   () => router.route.path,
   (val: string) => {
     // TODO:需优化代码复杂度
     routerPath.value = val;
-    langShow.value = ['zh', 'en', 'ru'];
+    langShow.value = ['zh', 'en'];
 
     // 首页
-    if (val === `/${lang.value}/`) {
+    if (isHome.value) {
+      console.log(
+        ['/', '/zh/', '/zh', '/en/', '/en'].includes(router.route.path)
+      );
+      return;
+    }
+
+    // 新闻、博客不一定存在对应中文
+    if (isNewsorBlog.value) {
+      langShow.value = [lang.value];
+      return;
+    }
+
+    // 英文页面一定有中文
+    if (lang.value == 'en') {
       return;
     }
 
     // 语言过滤
-    for (let i = 0; i < navFilterConfig.length; i++) {
-      if (/^\/(zh|en)\/(news|blog)\//g.test(routerPath.value)) {
-        // 新闻 博客
-        langShow.value = [lang.value];
-      } else {
-        // 其他
-        const routeArr = routerPath.value.split('/');
-        const routeName = routeArr[routeArr.length - 2];
-        // TODO:目前只支持一级
-        const names = navFilterConfig[i].name.split('/');
-        const name = names[0];
+    for (let i = 0, len = navFilterConfig.length; i < len; i++) {
+      // 其他
+      const routeArr = routerPath.value.split('/');
+      const routeName = routeArr[routeArr.length - 2];
+      // TODO:目前只支持一级
+      const names = navFilterConfig[i].name.split('/');
+      const name = names[0];
 
-        if (
-          // 路径后缀匹配
-          routeName === name ||
-          // 路径全匹配
-          routerPath.value === name ||
-          // 子路径匹配
-          (names[1] && names[1] === '**' && routerPath.value.includes(name))
-        ) {
-          console.log(langShow.value);
-          langShow.value = navFilterConfig[i].lang;
-          break;
-        }
+      if (
+        // 路径后缀匹配
+        routeName === name ||
+        // 路径全匹配
+        routerPath.value === name ||
+        // 子路径匹配
+        (names[1] && names[1] === '**' && routerPath.value.includes(name))
+      ) {
+        langShow.value = navFilterConfig[i].lang;
+        break;
       }
     }
   },
