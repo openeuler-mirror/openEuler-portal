@@ -579,7 +579,7 @@ export default {
             },
             {
               NAME: 'OEPKGS',
-              LABEL: 'oepkgs软件托管平台',
+              LABEL: 'OEPKGS软件包服务',
               PATH: 'https://oepkgs.net/',
             },
             {
