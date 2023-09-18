@@ -445,6 +445,11 @@ export default {
               PATH: 'https://compass-ci.openeuler.org/',
             },
             {
+              NAME: 'OEPKGS',
+              LABEL: 'Open External Packages Service',
+              PATH: 'https://oepkgs.net/en-US',
+            },
+            {
               NAME: 'EulerMaker',
               LABEL: 'Build service platform',
               PATH: 'https://eulermaker.compass-ci.openeuler.openatom.cn/',
