@@ -336,6 +336,12 @@ export default {
                 'Best practices of openEuler for different industry projects',
               PATH: '/showcase/',
             },
+            {
+              NAME: 'Technical White Papers',
+              LABEL:
+                'Technical highlights and details of openEuler',
+              PATH: '/showcase/technical-white-paper/',
+            },
           ],
         },
         {
