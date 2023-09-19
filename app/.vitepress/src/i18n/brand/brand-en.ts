@@ -1,5 +1,10 @@
 export default {
   BRAND: 'Brand',
+  PRONUNCIARTION: 'Pronunciation',
+  BRAND_NAME: 'openEuler',
+  PHONETIC_TRANSCRIPTION: '/əʊpənˈəʊlə/',
+  MAN: 'Male',
+  WOMAN: 'Female',
   WORDS: [
     'openEuler is an open source project incubated and operated by the OpenAtom Foundation. The OpenAtom Foundation reserves trademark rights of openEuler. Before using any openEuler trademarks on this page, please see the',
     'OpenAtom Foundation Brand Use Guidelines.',
