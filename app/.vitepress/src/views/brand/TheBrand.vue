@@ -269,6 +269,7 @@ function handleFamaleClick() {
     margin-top: 40px;
     padding: 24px;
     background-color: var(--o-color-bg2);
+    box-shadow: var(--o-shadow-l2);
     display: flex;
     @media (max-width: 768px) {
       padding: 16px 12px;
@@ -303,7 +304,6 @@ function handleFamaleClick() {
       display: inline-flex;
       align-items: center;
       margin-right: 20px;
-      column-gap: 4px;
       @media (max-width: 768px) {
         margin-right: 16px;
       }
@@ -312,6 +312,7 @@ function handleFamaleClick() {
         line-height: var(--o-line-height-h7);
         color: var(--o-color-text1);
         font-weight: 400;
+        margin-right: var(--o-spacing-h10);
         @media (max-width: 768px) {
           font-size: var(--o-font-size-tip);
           line-height: var(--o-line-height-text);
