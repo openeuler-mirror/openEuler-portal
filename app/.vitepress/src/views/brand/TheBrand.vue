@@ -7,6 +7,7 @@ import BannerLevel2 from '@/components/BannerLevel2.vue';
 
 import banner from '@/assets/banner/banner-download.png';
 import illustration from '@/assets/illustrations/brand.png';
+import IconPronunciation from '~icons/app/icon-pronunciation.svg';
 
 const { lang } = useData();
 const i18n = useI18n();
@@ -47,6 +48,17 @@ const initList = () => {
 };
 
 list.value = initList();
+
+const audioRef1 = ref(null);
+const audioRef2 = ref(null);
+
+function handleMaleClick() {
+  audioRef1.value?.play();
+}
+
+function handleFamaleClick() {
+  audioRef2.value?.play();
+}
 </script>
 
 <template>
@@ -57,6 +69,32 @@ list.value = initList();
     :illustration="illustration"
   />
   <div class="brand">
+    <h3 class="brand-title">{{ i18n.brand.PRONUNCIARTION }}</h3>
+
+    <audio ref="audioRef1" src="/mp3/openEuler-man.m4a"></audio>
+    <audio ref="audioRef2" src="/mp3/openEuler-woman.m4a"></audio>
+
+    <div class="brand-pronunciation">
+      <p class="brand-name">{{ i18n.brand.BRAND_NAME }}</p>
+
+      <p class="phonetic-transcription">
+        {{ i18n.brand.PHONETIC_TRANSCRIPTION }}
+      </p>
+
+      <div class="gender-box">
+        <p class="gender-box-item">{{ i18n.brand.MAN }}</p>
+        <OIcon @click="handleMaleClick"
+          ><IconPronunciation></IconPronunciation
+        ></OIcon>
+      </div>
+      <div class="gender-box">
+        <p class="gender-box-item">{{ i18n.brand.WOMAN }}</p>
+        <OIcon @click="handleFamaleClick"
+          ><IconPronunciation></IconPronunciation
+        ></OIcon>
+      </div>
+    </div>
+
     <div class="brand-all-word">
       <h3 class="brand-title">{{ i18n.brand.MOBILETITLE }}</h3>
       <div class="brand-word">
@@ -226,6 +264,80 @@ list.value = initList();
   @media (max-width: 1100px) {
     padding: 0 var(--o-spacing-h5);
     margin: var(--o-spacing-h2) auto;
+  }
+  .brand-pronunciation {
+    margin-top: 40px;
+    padding: 24px;
+    background-color: var(--o-color-bg2);
+    display: flex;
+    @media (max-width: 768px) {
+      padding: 16px 12px;
+      margin-top: 16px;
+    }
+    .brand-name {
+      font-size: var(--o-font-size-h7);
+      line-height: var(--o-line-height-h7);
+      font-weight: 400;
+      color: var(--o-color-text1);
+      margin-right: 20px;
+      @media (max-width: 768px) {
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
+        font-weight: 500;
+        margin-right: 12px;
+      }
+    }
+    .phonetic-transcription {
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h7);
+      color: var(--o-color-text1);
+      font-weight: 400;
+      margin-right: 32px;
+      @media (max-width: 768px) {
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-text);
+        margin-right: 24px;
+      }
+    }
+    .gender-box {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 20px;
+      column-gap: 4px;
+      @media (max-width: 768px) {
+        margin-right: 16px;
+      }
+      .gender-box-item {
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h7);
+        color: var(--o-color-text1);
+        font-weight: 400;
+        @media (max-width: 768px) {
+          font-size: var(--o-font-size-tip);
+          line-height: var(--o-line-height-text);
+        }
+      }
+      .o-icon {
+        font-size: 16px;
+        color: var(--o-color-text1);
+        cursor: pointer;
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+        &:hover {
+          color: var(--o-color-brand1);
+          @media (max-width: 768px) {
+            color: var(--o-color-text1);
+          }
+        }
+      }
+    }
+  }
+  .brand-all-word {
+    margin-top: 64px;
+    @media (max-width: 768px) {
+      margin-top: 40px;
+    }
   }
   .brand-title {
     font-size: var(--o-font-size-h3);
