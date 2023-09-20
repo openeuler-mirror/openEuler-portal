@@ -1,15 +1,15 @@
 [
     {
-        "osv_name": "恒安嘉新（北京）科技股份公司",
-        "os_version": "EversecOS-3.0-oe22.03-aarch64.iso",
-        "arch": "aarch64",
-        "checksum": "0fd3fb80f3919a2538b62669dd2ef823",
+        "osv_name": "恒生电子股份有限公司",
+        "os_version": "LightOS-V1.0-x86_64-dvd.iso",
+        "arch": "x86_64",
+        "checksum": "ddf434fd9b331feb72893be9ef2b3187",
         "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "http://www.eversec.com.cn/",
-        "friendly_link": "http://www.eversec.com.cn/",
+        "os_download_link": "https://uplus.hundsun.com/LightOS/LightOS1.0/index.html",
+        "friendly_link": "https://www.hundsun.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/8/24",
+        "date": "2023/09/13",
         "details": "详细信息",
         "tools_result": [
             {
@@ -72,232 +72,16 @@
         ]
     },
     {
-        "osv_name": "联通数字科技有限公司",
-        "os_version": "CULinux-3.0-everything-latest.aarch64.iso",
+        "osv_name": "恒生电子股份有限公司",
+        "os_version": "LightOS-V1.0-aarch64-dvd.iso",
         "arch": "aarch64",
-        "checksum": "d165e1924d8b6f9ba0294be39b5f6299",
-        "base_openeuler_version": "openEuler 22.03 LTS",
-        "os_download_link": "https://www.cucloud.cn/",
-        "friendly_link": "https://www.cucloud.cn/",
+        "checksum": "541521b4acc4edc7a55be198729419b2",
+        "base_openeuler_version": "openEuler 22.03 LTS SP1",
+        "os_download_link": "https://uplus.hundsun.com/LightOS/LightOS1.0/index.html",
+        "friendly_link": "https://www.hundsun.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/8/24",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "联通数字科技有限公司",
-        "os_version": "CULinux-3.0-everything-latest.x86_64.iso",
-        "arch": "x86_64",
-        "checksum": "80b55dcc78239a4ec5525b7eeaf30b23",
-        "base_openeuler_version": "openEuler 22.03 LTS",
-        "os_download_link": "https://www.cucloud.cn/",
-        "friendly_link": "https://www.cucloud.cn/",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/8/24",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "国能信息技术有限公司",
-        "os_version": "CEOS-1.1-1686675040-x86_64.iso",
-        "arch": "x86_64",
-        "checksum": "ac677916e86dc800f443e5ad0272abe8",
-        "base_openeuler_version": "openEuler 20.03 LTS SP3",
-        "os_download_link": "https://www.ceic.com/",
-        "friendly_link": "https://www.ceic.com/",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/8/24",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "国能信息技术有限公司",
-        "os_version": "CEOS-1.1-1686640543-aarch64.iso",
-        "arch": "aarch64",
-        "checksum": "cb2fb2ad5b35668c85b60e2546bd4ca6",
-        "base_openeuler_version": "openEuler 20.03 LTS SP3",
-        "os_download_link": "https://www.ceic.com/",
-        "friendly_link": "https://www.ceic.com/",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/8/24",
+        "date": "2023/09/13",
         "details": "详细信息",
         "tools_result": [
             {
