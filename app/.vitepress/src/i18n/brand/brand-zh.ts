@@ -1,5 +1,10 @@
 export default {
   BRAND: '品牌',
+  PRONUNCIARTION: '英文发音',
+  BRAND_NAME: 'openEuler',
+  PHONETIC_TRANSCRIPTION: '/əʊpənˈəʊlə/',
+  MAN: '男',
+  WOMAN: '女',
   WORDS: [
     'openEuler是由开放原子开源基金会（OpenAtom Foundation）孵化及运营的开源项目，开放原子开源基金会享有openEuler的商标权益。在使用本页面的所有openEuler商标前，请查阅',
     '《开放原子开源基金会品牌使用指南》',
