@@ -214,6 +214,17 @@ export default {
         month: '9',
         actives: [
           {
+            activeType: 'Meetup',
+            activeEvent: [
+              {
+                activeName: '长沙 嵌入式',
+              },
+              {
+                activeName: '杭州 编译器',
+              },
+            ],
+          },
+          {
             activeType: '用户组活动',
             activeEvent: [
               {
@@ -230,7 +241,7 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: '深圳 虚列化',
+                activeName: '北京 虚列化',
               },
               {
                 activeName: '杭州 消息中间件',
