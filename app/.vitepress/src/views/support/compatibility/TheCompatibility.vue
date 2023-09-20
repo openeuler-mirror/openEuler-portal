@@ -171,14 +171,10 @@ const getSoftwareData = (data: CveQuery) => {
 
 // 商业软件
 const getBusinessSoftwareData = (data: CveQuery) => {
-  try {
-    getBusinessSoftwareList(data).then((res: any) => {
-      total.value = res.result.totalNum;
-      tableData.value = res.result.data;
-    });
-  } catch (e: any) {
-    console.log(e);
-  }
+  getBusinessSoftwareList(data).then((res: any) => {
+    total.value = res.result.totalNum;
+    tableData.value = res.result.data;
+  });
 };
 
 function turnPage(option: string) {
@@ -386,88 +382,68 @@ const goSoftwareInfo = (id: number) => {
 onMounted(() => {
   getCompatibilityData(queryData);
 
-  try {
-    getDriveTypes(lang.value).then((res: any) => {
-      if (res.success) {
-        res.result.forEach((item: string) => {
-          typeLists.value.push(item);
-        });
-      }
-    });
-  } catch (e: any) {
-    console.log(e);
-  }
-
-  try {
-    driverArchitectureOptions({ lang: `${lang.value}` }).then((res: any) => {
+  getDriveTypes(lang.value).then((res: any) => {
+    if (res.success) {
       res.result.forEach((item: string) => {
-        architectureSelect.value.push(item);
-        filterData.value.forEach((it) => {
-          if (it.title === '架构') {
-            it.select.push(item);
-          }
-        });
-        filterDataTwo.value.forEach((it) => {
-          if (it.title === '架构') {
-            it.select.push(item);
-          }
-        });
+        typeLists.value.push(item);
       });
-    });
-  } catch (e: any) {
-    console.log(e);
-  }
+    }
+  });
 
-  try {
-    driverOSOptions({ lang: `${lang.value}` }).then((res: any) => {
-      res.result.forEach((item: string) => {
-        osOptions.value.push(item);
-        filterData.value.forEach((it) => {
-          if (it.title === '操作系统') {
-            it.select.push(item);
-          }
-        });
-        filterDataTwo.value.forEach((it) => {
-          if (it.title === '操作系统') {
-            it.select.push(item);
-          }
-        });
-        getTestOrganizations().then((res: any) => {
-          res.result.testOrganizations.forEach((item: string) => {
-            testOrganizationsLists.value.push(item);
-          });
-        });
+  driverArchitectureOptions({ lang: `${lang.value}` }).then((res: any) => {
+    res.result.forEach((item: string) => {
+      architectureSelect.value.push(item);
+      filterData.value.forEach((it) => {
+        if (it.title === '架构') {
+          it.select.push(item);
+        }
+      });
+      filterDataTwo.value.forEach((it) => {
+        if (it.title === '架构') {
+          it.select.push(item);
+        }
       });
     });
-  } catch (e: any) {
-    console.log(e);
-  }
+  });
 
-  try {
-    getCpu({ lang: `${lang.value}` }).then((res: any) => {
-      res.result.forEach((item: string) => {
-        cpuList.value.push(item);
-        filterData.value.forEach((it) => {
-          if (it.title === 'CPU') {
-            it.select.push(item);
-          }
-        });
+  driverOSOptions({ lang: `${lang.value}` }).then((res: any) => {
+    res.result.forEach((item: string) => {
+      osOptions.value.push(item);
+      filterData.value.forEach((it) => {
+        if (it.title === '操作系统') {
+          it.select.push(item);
+        }
+      });
+      filterDataTwo.value.forEach((it) => {
+        if (it.title === '操作系统') {
+          it.select.push(item);
+        }
       });
     });
-  } catch (e: any) {
-    console.log(e);
-  }
+    getTestOrganizations().then((res: any) => {
+      res.result.testOrganizations.forEach((item: string) => {
+        testOrganizationsLists.value.push(item);
+      });
+    });
+  });
 
-  try {
-    getSoftFilter().then((res: any) => {
-      res.Type.forEach((item: string) => {
-        softType.value.push(item);
+  getCpu({ lang: `${lang.value}` }).then((res: any) => {
+    res.result.forEach((item: string) => {
+      cpuList.value.push(item);
+      filterData.value.forEach((it) => {
+        if (it.title === 'CPU') {
+          it.select.push(item);
+        }
       });
-      osLists.value.push(res.OS[0]);
     });
-  } catch (e: any) {
-    console.log(e);
-  }
+  });
+
+  getSoftFilter().then((res: any) => {
+    res.Type.forEach((item: string) => {
+      softType.value.push(item);
+    });
+    osLists.value.push(res.OS[0]);
+  });
 });
 </script>
 

@@ -1,51 +1,4 @@
 export default {
-  // community: {
-  //   title: '社区峰会',
-  //   id: 'community',
-  //   events: [
-  //     {
-  //       month: '5',
-  //       actives: [
-  //         {
-  //           activeName: 'openEuler Developer Day',
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       month: '12',
-  //       actives: [
-  //         {
-  //           activeName: 'openEuler Summit 2023',
-  //         },
-  //         {
-  //           activeName: '操作系统峰会',
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-  // units: {
-  //   title: '成员单位会议',
-  //   id: 'units',
-  //   events: [
-  //     {
-  //       month: '6',
-  //       actives: [
-  //         {
-  //           activeName: '华为伙伴暨开发者大会',
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       month: '11',
-  //       actives: [
-  //         {
-  //           activeName: '华为全联接大会',
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
   opensoucrce: {
     title: '开源顶会',
     id: 'opensoucrce',
@@ -255,35 +208,16 @@ export default {
               },
             ],
           },
-          {
-            activeType: '用户组活动',
-            activeEvent: [
-              {
-                activeName: '西安',
-              },
-            ],
-          },
         ],
       },
       {
         month: '9',
         actives: [
           {
-            activeType: 'Meetup',
-            activeEvent: [
-              {
-                activeName: '长沙 嵌入式',
-              },
-              {
-                activeName: '上海 云原生',
-              },
-            ],
-          },
-          {
             activeType: '用户组活动',
             activeEvent: [
               {
-                activeName: '成都',
+                activeName: '西安',
               },
             ],
           },
@@ -296,7 +230,10 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: '深圳 BigData',
+                activeName: '深圳 虚列化',
+              },
+              {
+                activeName: '杭州 消息中间件',
               },
             ],
           },
@@ -304,7 +241,7 @@ export default {
             activeType: '用户组活动',
             activeEvent: [
               {
-                activeName: '兰州',
+                activeName: '郑州',
               },
             ],
           },
