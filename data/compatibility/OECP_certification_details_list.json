@@ -1,15 +1,15 @@
 [
     {
-        "osv_name": "杭州海康威视数字技术股份有限公司",
-        "os_version": "HikOS-Enterprise-V1.1.0-x86_64-E-server.iso",
+        "osv_name": "恒生电子股份有限公司",
+        "os_version": "LightOS-V1.0-x86_64-dvd.iso",
         "arch": "x86_64",
-        "checksum": "0541f5faca81e066c56c0cae4f57d087",
+        "checksum": "ddf434fd9b331feb72893be9ef2b3187",
         "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://www.hikvision.com/",
-        "friendly_link": "https://www.hikvision.com/",
+        "os_download_link": "https://uplus.hundsun.com/LightOS/LightOS1.0/index.html",
+        "friendly_link": "https://www.hundsun.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/09/11",
+        "date": "2023/09/13",
         "details": "详细信息",
         "tools_result": [
             {
@@ -72,160 +72,16 @@
         ]
     },
     {
-        "osv_name": "杭州海康威视数字技术股份有限公司",
-        "os_version": "HikOS-Enterprise-V1.1.0-aarch64-E-server.iso",
+        "osv_name": "恒生电子股份有限公司",
+        "os_version": "LightOS-V1.0-aarch64-dvd.iso",
         "arch": "aarch64",
-        "checksum": "b31f0365cde1b696c3ee41c7d2401de9",
+        "checksum": "541521b4acc4edc7a55be198729419b2",
         "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://www.hikvision.com/",
-        "friendly_link": "https://www.hikvision.com/",
+        "os_download_link": "https://uplus.hundsun.com/LightOS/LightOS1.0/index.html",
+        "friendly_link": "https://www.hundsun.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/09/11",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "中国电建集团华东勘测设计研究院有限公司",
-        "os_version": "O-PowerOS-V1.0-x86_64-dvd.iso",
-        "arch": "x86_64",
-        "checksum": "755cc5e38538ea50f5d8daa09f94a656",
-        "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://o-poweros.owind.com.cn",
-        "friendly_link": "https://o-poweros.owind.com.cn",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/09/11",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "中国电建集团华东勘测设计研究院有限公司",
-        "os_version": "O-PowerOS-V1.0-aarch64-dvd.iso",
-        "arch": "aarch64",
-        "checksum": "a6c7f6bba65075c95949e644de570155",
-        "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://o-poweros.owind.com.cn",
-        "friendly_link": "https://o-poweros.owind.com.cn",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/09/11",
+        "date": "2023/09/13",
         "details": "详细信息",
         "tools_result": [
             {
