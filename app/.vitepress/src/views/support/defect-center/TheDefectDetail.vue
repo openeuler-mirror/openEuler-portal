@@ -31,7 +31,6 @@ function getSecurityDetailInfo(data: DetailParams) {
   getSecurityDetail(data).then((res: any) => {
     if (res) {
       detailData.value = res;
-
       const strList = res.cveId.split(';');
       strList.forEach((item: string) => {
         if (item.startsWith('BUG')) {
@@ -40,7 +39,6 @@ function getSecurityDetailInfo(data: DetailParams) {
           cveIdList.value.push(item);
         }
       });
-
       getRpmUrl(detailData.value.packageHelperList);
       getHotPatchRpmUrl(detailData.value.packageHotpatchList);
     }
@@ -50,12 +48,6 @@ function getSecurityDetailInfo(data: DetailParams) {
 function goBackPage() {
   const i = router.route.path.lastIndexOf('d');
   router.go(`${router.route.path.substring(0, i)}`);
-}
-
-function goCveDetail(id: string) {
-  router.go(
-    `/${lang.value}/security/cve/detail/?cveId=${id}&packageName=${detailData.value.affectedComponent}`
-  );
 }
 
 function getRpmUrl(data: PackageInfo[]) {
@@ -197,25 +189,28 @@ onMounted(() => {
               </div>
               <div v-if="bugIdList.length" class="tab-content-item">
                 <h5 class="tab-content-item-title">BUG</h5>
-                <p
+                <a
                   v-for="(item, index) in bugIdList"
                   :key="index"
-                  class="tab-content-item-text"
+                  :href="`https://gitee.com/src-openeuler/${
+                    detailData.affectedComponent
+                  }/issues/${item?.split('-')?.at(-1)}`"
+                  class="tab-content-item-text tab-content-item-link"
                 >
                   {{ item }}
-                </p>
+                </a>
               </div>
 
               <div v-if="cveIdList.length" class="tab-content-item">
                 <h5 class="tab-content-item-title">CVE</h5>
-                <p
+                <a
                   v-for="(item, index) in cveIdList"
                   :key="index"
+                  :href="`/${lang}/security/cve/detail/?cveId=${item}&packageName=${detailData.affectedComponent}`"
                   class="tab-content-item-text tab-content-item-link"
-                  @click="goCveDetail(item)"
                 >
                   {{ item }}
-                </p>
+                </a>
               </div>
 
               <div class="tab-content-item">
