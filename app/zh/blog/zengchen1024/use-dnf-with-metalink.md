@@ -1,13 +1,11 @@
 ---
 title: use dnf with metalink
-date: '2023-05-15'
+date: '2023-09-20'
 category: blog
 tags:
-  - Sample
-  - ABC
-  - cccc
-sig: A-Tune
-archives: '2023-05'
+  - metalink
+sig: Infrastructure
+archives: '2023-09'
 author:
   - openEuler Blog Maintainer
 summary: how can we use metalink to replace baseurl to speed up dnf downloading software package, and the configuration of each version of openEuler.
