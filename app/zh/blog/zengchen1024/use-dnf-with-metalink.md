@@ -11,8 +11,6 @@ author:
 summary: how can we use metalink to replace baseurl to speed up dnf downloading software package, and the configuration of each version of openEuler.
 ---
 
-## HTML Elements
-
 # 使用metalink提升dnf软件包安装速度
 
 ## 背景
