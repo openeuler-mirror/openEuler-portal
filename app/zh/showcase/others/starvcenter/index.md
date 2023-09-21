@@ -3,7 +3,7 @@ title: 四川中电启明星技术有限公司（StarVCenter云平台）
 category: showcase
 industry: 其他
 company: 四川中电启明星技术有限公司
-summary: ： 性能卓越，稳定可靠，环境级高可用， 智能运维，安全性，自主可控，可移植、易操作
+summary: 性能卓越，稳定可靠，环境级高可用， 智能运维，安全性，自主可控，可移植、易操作
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/others.png
 ---
@@ -56,7 +56,7 @@ StarVCenter是基于openEuler定制的自主创新云平台，帮助企业自建
 
 
 
-<img src="./logo.png" width="500" >
+<img src="./logo.png" width="200" >
 
 
-<img src="./logo1.png" width="500" >
+<img src="./logo1.png" width="200" >

@@ -31,4 +31,6 @@ img: /category/showcase/others.png
 
 ## 伙伴
 
-<img src="./zhongruan.png"/>
+
+
+<img src="./zhongruan.png" width="200" >
