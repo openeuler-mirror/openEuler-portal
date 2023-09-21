@@ -11820,6 +11820,67 @@
     }
   },
   {
+    "hardwareFactory": "宝德",
+    "hardwareModel": "PR210K",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "aarch64",
+    "date": "2023/7/31",
+    "friendlyLink": "http://www.powerleader.com.cn/product_100/1110.html",
+    "boardCards": [
+      {
+        "vendorID": "15B3",
+        "deviceID": "1015",
+        "svID": "15B3",
+        "ssID": "0102",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "mlx5_core",
+        "version": "5.1-2.5.8.0.46",
+        "type": "NIC",
+        "date": "2023/7/31",
+        "sha256": "c236b6a668f51996bfdb30ed7105b95050bfc2630466ec61a42f14794a6ee60e",
+        "driverSize": "464176",
+        "chipVendor": "Mellanox",
+        "boardModel": "MCX512A-ACUT",
+        "chipModel": "ConnectX-5",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "0015",
+        "svID": "19e5",
+        "ssID": "d214",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "megaraid_sas",
+        "version": "5.160.01-3415",
+        "type": "raid",
+        "date": "2023/7/31",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Avago",
+        "boardModel": "9460-16i",
+        "chipModel": "3416",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://www.powerleader.com.cn/product_100/1110.html",
+      "certificationTime": "2023/7/31",
+      "commitID": "",
+      "mainboardModel": "BC82AMDGK",
+      "biosUefi": "1.86",
+      "cpu": "Kunpeng 920 5220",
+      "ram": "12*32G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": " Hi171x",
+      "hostBusAdapter": "Avago 3416",
+      "hardDiskDrive": ""
+    }
+  },
+  {
     "hardwareFactory": "宇视科技",
     "hardwareModel": "VX1848-V3",
     "osVersion": "openEuler 22.03 LTS",
