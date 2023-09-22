@@ -26,6 +26,7 @@ import safetyBulletin from './support/safety-bulletin';
 import certification from './certification';
 import about from './about';
 import sky from './sky';
+import group from './group';
 
 const i18n: { [key: string]: any } = {
   zh: {
@@ -54,6 +55,7 @@ const i18n: { [key: string]: any } = {
     certification: certification.zh,
     about: about.zh,
     sky: sky.zh,
+    group: group.zh,
   },
   en: {
     sig: sig.en,
@@ -80,6 +82,7 @@ const i18n: { [key: string]: any } = {
     certification: certification.en,
     about: about.en,
     sky: sky.en,
+    group: group.en,
   },
 };
 

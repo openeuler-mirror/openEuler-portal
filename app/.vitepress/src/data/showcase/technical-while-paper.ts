@@ -5,6 +5,10 @@ export default {
       summary: 'openEuler操作系统（创新项目总览）',
     },
     {
+      path: '/whitepaper/openEuler 23.09 技术白皮书.pdf',
+      summary: 'openEuler 23.09 白皮书',
+    },
+    {
       path: '/whitepaper/openEuler-whitepaper-2303.pdf',
       summary: 'openEuler 23.03 白皮书',
     },
