@@ -1,15 +1,15 @@
 [
     {
-        "osv_name": "恒生电子股份有限公司",
-        "os_version": "LightOS-V1.0-x86_64-dvd.iso",
+        "osv_name": "联通数字科技有限公司",
+        "os_version": "CULinux-3.0-everything-latest.x86_64.iso",
         "arch": "x86_64",
-        "checksum": "ddf434fd9b331feb72893be9ef2b3187",
-        "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://uplus.hundsun.com/LightOS/LightOS1.0/index.html",
-        "friendly_link": "https://www.hundsun.com/",
+        "checksum": "80b55dcc78239a4ec5525b7eeaf30b23",
+        "base_openeuler_version": "openEuler 22.03 LTS",
+        "os_download_link": "https://mirrors.cucloud.cn/culinux/3.0/isos/",
+        "friendly_link": "https://www.cucloud.cn/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/09/13",
+        "date": "2023/09/22",
         "details": "详细信息",
         "tools_result": [
             {
@@ -72,16 +72,16 @@
         ]
     },
     {
-        "osv_name": "恒生电子股份有限公司",
-        "os_version": "LightOS-V1.0-aarch64-dvd.iso",
+        "osv_name": "联通数字科技有限公司",
+        "os_version": "CULinux-3.0-everything-latest.aarch64.iso",
         "arch": "aarch64",
-        "checksum": "541521b4acc4edc7a55be198729419b2",
-        "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://uplus.hundsun.com/LightOS/LightOS1.0/index.html",
-        "friendly_link": "https://www.hundsun.com/",
+        "checksum": "d165e1924d8b6f9ba0294be39b5f6299",
+        "base_openeuler_version": "openEuler 22.03 LTS",
+        "os_download_link": "https://mirrors.cucloud.cn/culinux/3.0/isos/",
+        "friendly_link": "https://www.cucloud.cn/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/09/13",
+        "date": "2023/09/22",
         "details": "详细信息",
         "tools_result": [
             {
