@@ -9746,7 +9746,7 @@
   },
   {
     "hardwareFactory": "联想",
-    "hardwareModel": "SR650 V2",
+    "hardwareModel": "ThinkSystem SR650 V2",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2023/04/04",
