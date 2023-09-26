@@ -12041,67 +12041,6 @@
     }
   },
   {
-    "hardwareFactory": "Lenovo",
-    "hardwareModel": "Lenovo KR722h G2",
-    "osVersion": "openEuler 20.03 LTS SP1",
-    "architecture": "x86_64",
-    "date": "2023/02/07",
-    "friendlyLink": "https://www.kt.lenovo.com/ProductThree/29",
-    "boardCards": [
-      {
-        "vendorID": "8086",
-        "deviceID": "1521",
-        "svID": "ffff",
-        "ssID": "0000",
-        "architecture": "x86_64",
-        "os": "openEuler 20.03 LTS SP1",
-        "driverName": "igb",
-        "version": "5.4.0-k",
-        "type": "ETHERNET",
-        "date": "2022.11.08",
-        "sha256": "29BF0AF545524A423FE54D9D48CD0976887A7E99",
-        "driverSize": "487K",
-        "chipVendor": "Intel",
-        "boardModel": "",
-        "chipModel": "I350",
-        "item": "",
-        "downloadLink": "inbox"
-      },
-      {
-        "vendorID": "1000",
-        "deviceID": "10E2",
-        "svID": "1D49",
-        "ssID": "0610",
-        "architecture": "x86_64",
-        "os": "openEuler 20.03 LTS SP1",
-        "driverName": "megaraid_sas",
-        "version": "5.17",
-        "type": "raid",
-        "date": "2020.12.28",
-        "sha256": "",
-        "driverSize": "",
-        "chipVendor": "megaraid_sas",
-        "boardModel": "MegaRAID 12GSAS/PCIe Secure SAS39xx",
-        "chipModel": "Broadcom SAS3916",
-        "item": "",
-        "downloadLink": "inbox"
-      }
-    ],
-    "compatibilityConfiguration": {
-      "productInformation": "https://www.kt.lenovo.com/ProductThree/29",
-      "certificationTime": "2023/2/7",
-      "commitID": "",
-      "mainboardModel": "HengShan Rev 1.0",
-      "biosUefi": "HSE152A-1.02",
-      "cpu": "Hygon C86 7265 24-core Processor",
-      "ram": "16*32G DIMMs",
-      "portsBusTypes": "J9,J69",
-      "videoAdapter": "J41,J2",
-      "hostBusAdapter": "",
-      "hardDiskDrive": "940-16"
-    }
-  },
-  {
     "hardwareFactory": "Zhejiang Uniview Technologies Co.,Ltd",
     "hardwareModel": "VX1848-V3",
     "osVersion": "openEuler 22.03 LTS",
