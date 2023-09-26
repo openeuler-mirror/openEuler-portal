@@ -12182,6 +12182,67 @@
     }
   },
   {
+    "hardwareFactory": "联想",
+    "hardwareModel": "ThinkServer SE550 V2",
+    "osVersion": "openEuler-20.03-LTS-SP1",
+    "architecture": "x86_64",
+    "date": "2023/8/1",
+    "friendlyLink": "https://biz.lenovo.com.cn/product/012051304.html",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "0016",
+        "svID": "1d49",
+        "ssID": "0601",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "07.706.03.00-rc1",
+        "type": "RAID",
+        "date": "2023/8/1",
+        "sha256": "6815765a04ee34c71bb57a14ebee4a21bc20f773faf8b020999d4c342bf69ab0",
+        "driverSize": "290K",
+        "chipVendor": "Broadcom",
+        "boardModel": "RAID 930-8i 2GB Flash PCIe 12Gb Adapter",
+        "chipModel": "LSI SAS3508",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "8086",
+        "ssID": "00a3",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "igb",
+        "version": "4.19.90-2109.1.0.0108.oe1.x86_64",
+        "type": "NIC",
+        "date": "2023/8/1",
+        "sha256": "fdc31ecc96289be03ea779edd8f44ef000be7e6029039e29e988a3d5f51dd876",
+        "driverSize": "487k",
+        "chipVendor": "Intel",
+        "boardModel": "Intel I350 1GbE RJ45 4-port OCP Ethernet Adapter",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://biz.lenovo.com.cn/product/012051304.html",
+      "certificationTime": "2023/8/1",
+      "commitID": "123456",
+      "mainboardModel": "SE550 V2",
+      "biosUefi": "XWE168B-2.62",
+      "cpu": "Intel(R) Xeon(R) Platinum 8352Y CPU @ 2.20GHz",
+      "ram": "16*64G DIMMs",
+      "portsBusTypes": "x8x16",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": "Broadcom / LSI MegaRAID Tri-Mode SAS3508 (rev 01)",
+      "hardDiskDrive": "ST1800MM0129"
+    }
+  },
+  {
     "hardwareFactory": "宇视科技",
     "hardwareModel": "VX1848-V3",
     "osVersion": "openEuler 22.03 LTS",
