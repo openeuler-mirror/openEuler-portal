@@ -118,7 +118,7 @@
     margin-bottom: var(--o-spacing-h8);
     font-size: var(--o-font-size-text);
     font-weight: normal;
-    word-break: break-all;
+    word-wrap: break-word;
     color: var(--o-color-text4);
     line-height: var(--o-line-height-text);
     @media screen and (max-width: 768px) {

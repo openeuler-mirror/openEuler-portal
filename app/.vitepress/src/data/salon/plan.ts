@@ -241,7 +241,7 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: '北京 虚列化',
+                activeName: '北京 虚拟化',
               },
               {
                 activeName: '杭州 消息中间件',
