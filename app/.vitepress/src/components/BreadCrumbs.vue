@@ -44,9 +44,6 @@ const { bread1, bread2, link1, link2 } = toRefs(props);
   line-height: var(--o-line-height-tip);
   display: flex;
   align-items: center;
-  // @media (max-width: 768px) {
-  //   height: var(--o-spacing-h4);
-  // }
   .bread-icon {
     color: var(--o-color-text1);
   }
@@ -66,16 +63,6 @@ const { bread1, bread2, link1, link2 } = toRefs(props);
     margin: 0 4px;
     font-size: var(--o-font-size-h8);
   }
-  // span:nth-of-type(2),
-  // span:nth-of-type(3) {
-  //   color: var(--o-color-text1);
-  //   a {
-  //     color: var(--o-color-text1);
-  //   }
-  //   .no-click {
-  //     cursor: default;
-  //   }
-  // }
   span:nth-last-of-type(1) {
     color: var(--o-color-text1);
     a {

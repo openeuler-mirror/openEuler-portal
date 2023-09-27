@@ -672,6 +672,11 @@ export default {
               PATH: '/community/program/',
             },
             {
+              NAME: '城市用户组',
+              LABEL: '区域用户交流圈',
+              PATH: '/community/user-group/',
+            },
+            {
               NAME: '贡献看板',
               LABEL: '查看openEuler社区数据',
               PATH: 'https://datastat.openeuler.org/zh/overview',
