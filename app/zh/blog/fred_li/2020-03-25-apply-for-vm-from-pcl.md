@@ -23,7 +23,7 @@ summary: 本文章介绍如何在鹏城实验室申请虚拟机。
 
 ##### 在openEuler社区提交申请并得到批准
 
-1. 登陆Gitee上的openEuler公共Issue，准备创建申请
+1. 登录Gitee上的openEuler公共Issue，准备创建申请
 
 链接在此<https://gitee.com/openeuler/community-issue/issues>
 
@@ -66,7 +66,7 @@ summary: 本文章介绍如何在鹏城实验室申请虚拟机。
 
 #####  到鹏城实验室进行正式申请
 
-1. 登陆<https://dw.pcl.ac.cn/cloud/login>，如果没有账号请注册
+1. 登录<https://dw.pcl.ac.cn/cloud/login>，如果没有账号请注册
 
 2. 点击`需求申请`申请VM
 
