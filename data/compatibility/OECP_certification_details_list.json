@@ -1,15 +1,15 @@
 [
     {
-        "osv_name": "联通数字科技有限公司",
-        "os_version": "CULinux-3.0-everything-latest.x86_64.iso",
+        "osv_name": "宏数通信息科技（苏州）有限公司",
+        "os_version": "DataSafeKitOS22.03LTS-SP1-x86_64-dvd.iso",
         "arch": "x86_64",
-        "checksum": "80b55dcc78239a4ec5525b7eeaf30b23",
-        "base_openeuler_version": "openEuler 22.03 LTS",
-        "os_download_link": "https://mirrors.cucloud.cn/culinux/3.0/isos/",
-        "friendly_link": "https://www.cucloud.cn/",
+        "checksum": "b8d44b7fae3456db240228c6dcd4a919",
+        "base_openeuler_version": "openEuler 22.03 LTS SP1",
+        "os_download_link": "https://www.safekitchina.com",
+        "friendly_link": "https://www.safekitchina.com",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/09/22",
+        "date": "2023/09/06",
         "details": "详细信息",
         "tools_result": [
             {
@@ -72,16 +72,160 @@
         ]
     },
     {
-        "osv_name": "联通数字科技有限公司",
-        "os_version": "CULinux-3.0-everything-latest.aarch64.iso",
+        "osv_name": "飞腾信息技术有限公司",
+        "os_version": "phytium-openEuler-22.03-LTS-SP1-aarch64-dvd.iso",
         "arch": "aarch64",
-        "checksum": "d165e1924d8b6f9ba0294be39b5f6299",
-        "base_openeuler_version": "openEuler 22.03 LTS",
-        "os_download_link": "https://mirrors.cucloud.cn/culinux/3.0/isos/",
-        "friendly_link": "https://www.cucloud.cn/",
+        "checksum": "0d1a83428c8351e7652788c4f3c5a7f3",
+        "base_openeuler_version": "openEuler 22.03 LTS SP1",
+        "os_download_link": "https://www.phytium.com.cn/",
+        "friendly_link": "https://www.phytium.com.cn/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/09/22",
+        "date": "2023/09/06",
+        "details": "详细信息",
+        "tools_result": [
+            {
+                "name": "core_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "KABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "ABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "service_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "kernel_config",
+                "percent": "NA",
+                "result": "pass"
+            }
+        ],
+        "platform_result": [
+            {
+                "name": "repo",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "base_test",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "performance_test",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "running_config",
+                "percent": "NA",
+                "result": "pass"
+            }
+        ]
+    },
+    {
+        "osv_name": "北京孔皆智能科技有限公司",
+        "os_version": "Kongjie-Server-22.03-SP1-aarch64-dvd-20230510.iso",
+        "arch": "aarch64",
+        "checksum": "698bad97964b5cc17b68f9929bcafb71",
+        "base_openeuler_version": "openEuler 22.03 LTS SP1",
+        "os_download_link": "http://39.100.104.24/iso/Kongjie-Server-22.03-SP1-aarch64-dvd-20230510.iso",
+        "friendly_link": "https://www.kj-smart.com.cn",
+        "type": "服务器",
+        "total_result": "pass",
+        "date": "2023/09/06",
+        "details": "详细信息",
+        "tools_result": [
+            {
+                "name": "core_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "KABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "ABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "service_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "kernel_config",
+                "percent": "NA",
+                "result": "pass"
+            }
+        ],
+        "platform_result": [
+            {
+                "name": "repo",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "base_test",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "performance_test",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "running_config",
+                "percent": "NA",
+                "result": "pass"
+            }
+        ]
+    },
+    {
+        "osv_name": "北京孔皆智能科技有限公司",
+        "os_version": "Kongjie-Server-22.03-SP1-x86_64-dvd-20230510.iso",
+        "arch": "x86_64",
+        "checksum": "89219605910282f8f790c65d58a74629",
+        "base_openeuler_version": "openEuler 22.03 LTS SP1",
+        "os_download_link": "http://39.100.104.24/iso/Kongjie-Server-22.03-SP1-x86_64-dvd-20230510.iso",
+        "friendly_link": "https://www.kj-smart.com.cn",
+        "type": "服务器",
+        "total_result": "pass",
+        "date": "2023/09/06",
         "details": "详细信息",
         "tools_result": [
             {
