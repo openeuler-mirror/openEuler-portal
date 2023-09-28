@@ -631,10 +631,10 @@ export default {
               ],
             },
             {
-              NAME: 'openEuler 23.03',
+              NAME: 'openEuler 23.09',
               LABEL:
-                'openEuler 23.03 uses Linux Kernel 6.1 to explore technologies, adapt hardware, and innovate basic technologies and upper-layer applications for future openEuler LTS versions built on Linux Kernel 6.x.',
-              PATH: '/download/?version=openEuler 23.03',
+                'openEuler 23.09 is an innovation version designed based on Linux kernel 6.4 and is suited for server, cloud, edge, and embedded scenarios. It provides a variety of new features and functions and brings brand-new experience to developers and users in diverse industries.',
+              PATH: '/download/?version=openEuler 23.09',
               CHILDREN: [
                 {
                   NAME: 'Server',
