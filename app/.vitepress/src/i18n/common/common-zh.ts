@@ -447,6 +447,11 @@ export default {
               PATH: 'https://docs.openeuler.org/zh/',
             },
             {
+              NAME: 'Man Pages',
+              LABEL: '提供命令、函数、系统调用等的帮助手册',
+              PATH: 'https://man.openeuler.org',
+            },
+            {
               NAME: '课程中心',
               LABEL: '',
               PATH: '/learn/mooc/',
