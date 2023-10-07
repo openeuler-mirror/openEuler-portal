@@ -19,7 +19,7 @@ openEuler 的行业解决方案。为业界充分展示 openEuler
 
 <img src="./media/image1.jpeg" width="1000" >
 
-<center>openEuler 总经理 胡正策</center> 
+<p style='text-align: center;'>openEuler 总经理 胡正策</p>
 
 首先，openEuler
 总经理胡正策为大家分享了社区的最新进展。openEuler社区目前汇聚了
@@ -35,15 +35,15 @@ AI"大颗粒创新特性。openEuler是首个广泛支持AI的开源操作系统
 
 <img src="./media/image2.jpeg" width="1000" >
 
-<center>openEuler 技术委员会主席胡欣蔚</center> 
+<p style='text-align: center;'>openEuler 技术委员会主席 胡欣蔚</p>
 
-<center>在 OSSEU2023 的主题演讲</center> 
+<p style='text-align: center;'>在 OSSEU2023 的主题演讲</p>
 
 openEuler立足中国，面向全球，在国内生态取得跨越式发展的同时，openEuler也在积极拓展海外生态，9月19日-22日，openEuler在Linux Foundation欧洲开源峰会上隆重登场，与海外的开发者见面，展现出的先进技术受到海外开发者的广泛关注。回顾历史，操作系统作为协同北向应用生态和南向芯片/硬件生态的枢纽，操作系统路线的发展节奏就是信息产业链的心跳，促进操作系统路线归一，能够极大提高社会协作效率，促进生产力发展。展望未来，作为最具创新力的开源社区，openEuler将为世界开源注入更多中国智慧，未来openEuler 将给世界带来更优选择。
 
 <img src="./media/image3.jpeg" width="1000" >
 
-<center>华为与 CFCA 合作备忘录签约仪式</center> 
+<p style='text-align: center;'>华为与 CFCA 合作备忘录签约仪式</p>
 
 来自中国金融认证中心（CFCA）副总经理张野分享了华为与 CFCA 合作进展。CFCA
 以鲲鹏为底座，结合 CFCA
@@ -53,7 +53,7 @@ openEuler 社区。会上，来自华为的 openEuler
 
 <img src="./media/image4.jpeg" width="1000" >
 
-<center>华为鲲鹏计算的openEuler开源操作系统首席架构师 李洋</center> 
+<p style='text-align: center;'>华为鲲鹏计算的openEuler开源操作系统首席架构师 李洋</p>
 
 来自华为鲲鹏计算的openEuler开源操作系统首席架构师李洋为大家分享了
 openEuler
@@ -70,7 +70,7 @@ Container，可以做到内存底噪降低 50%以上，并行启动速度大幅�
 
 <img src="./media/image5.jpeg" width="1000" >
 
-<center>麒麟软件产品与社区发展中心副总经理 杨汇成</center> 
+<p style='text-align: center;'>麒麟软件产品与社区发展中心副总经理 杨汇成</p>
 
 来自麒麟软件产品与社区发展中心副总经理杨汇成，分享了银河麒麟高级服务器操作系统
 V10 在金融、能源、交通、医疗等重点行业的创新应用。
@@ -85,7 +85,7 @@ V10 在金融、能源、交通、医疗等重点行业的创新应用。
 
 <img src="./media/image6.jpeg" width="1000" >
 
-<center>统信软件华东大区技术总监 蔡健</center> 
+<p style='text-align: center;'>统信软件华东大区技术总监 蔡健</p>
 
 来自统信软件华东大区技术总监蔡健，分享了基于 openEuler
 打造的金融行业解决方案和商业实践。统信软件携手赞同科技打造新统一支付平台解决方案，基于统信服务器操作系统
@@ -100,7 +100,8 @@ openEuler 的 20.03 的 UOSV20
 
 <img src="./media/image7.jpeg" width="1000" >
 
-<center>麒麟信安副总裁 王攀</center> 
+<p style='text-align: center;'>麒麟信安副总裁 王攀</p>
+
 
 来自麒麟信安副总裁王攀，分享了基于 openEuler
 的麒麟信安操作系统在电力行业应用实践。麒麟信安一直在电力行业里深耕，针对电力行业，基于国内主流芯片和麒麟信安操作系统，提供行业解决方案，例如高可用冗余网络、集中运维管控、云边融合边缘容器云。目前麒麟信安操作系统在电力行业累计上线
@@ -109,7 +110,7 @@ openEuler 的 20.03 的 UOSV20
 
 <img src="./media/image8.jpeg" width="1000" >
 
-<center>中国电建华东院新能源工程院副总工，正高级工程师 朱夏良</center> 
+<p style='text-align: center;'>中国电建华东院新能源工程院副总工，正高级工程师 朱夏良</p>
 
 来自中国电建华东院新能源工程院副总工，正高级工程师朱夏良，分享新能源领域操作系统创新方案与实践。中国电建华东院新能源工程院联合润和软件，基于
 openEuler
@@ -119,7 +120,7 @@ PLC 基础能力，增强了电厂内各个设备的通讯能力。
 
 <img src="./media/image9.jpeg" width="1000" >
 
-<center>软通动力基础软件事业部总裁 张先民</center> 
+<p style='text-align: center;'>软通动力基础软件事业部总裁 张先民</p>
 
 来自软通动力基础软件事业部总裁张先民分享了软通动力为使用 openEuler
 社区版的用户提供商业服务。用户使用 openEuler

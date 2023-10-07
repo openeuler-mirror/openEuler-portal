@@ -12,7 +12,7 @@ Community versions are classified into Long Term Support (LTS) versions and inno
 
 - **LTS version**: released every two years and provides community support for four years. openEuler 20.03 LTS, the first LTS version, was released in March 2020. openEuler 22.03 LTS based on kernel 5.10 was released in March 2022.
 
-- **Innovation version**: released every six months and provides community support for six months. The next innovation version will be released in September 2023.
+- **Innovation version**: released every six months and provides community support for six months. The next innovation version will be released in March 2024.
 
 ![](./lifecycle.png)
 
