@@ -12464,6 +12464,62 @@
     }
   },
   {
+    "hardwareFactory": "Suma",
+    "hardwareModel": "R6240H0",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "x86_64",
+    "date": "2022/08/17",
+    "friendlyLink": "http://www.cancon.com.cn",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "005D",
+        "svID": "1000",
+        "ssID": "9361",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2022/08/17",
+        "sha256": "d58c2f3047ba983f7dddc6d2598f97ad1eaec24d09629debce78bd930275259a",
+        "driverSize": "281K",
+        "chipVendor": "SAS-S 3108",
+        "boardModel": "9361-8i",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1DCF",
+        "ssID": "0308",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "igb",
+        "version": "5.10.0-60.18.0.50.oe2203.x86_64",
+        "type": "NIC",
+        "date": "2022/08/17",
+        "sha256": "a33f68b678cee5fafa4d326ae5dce67f7822bb19d953e56e3632681190629a36",
+        "driverSize": "413K",
+        "chipVendor": "I350",
+        "boardModel": "62DB32",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn",
+      "certificationTime": "2022/08/17",
+      "commitID": "",
+      "biosUefi": "CXYH051016",
+      "cpu": "Hygon 3",
+      "ram": "32*16G DIMMs",
+      "portsBusTypes": "x16 PCIE",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+      "hardDiskDrive": "SA MZ7KH960HAJR-5 960G 2.5SATA 6Gb M SSD"
+    }
+  },
+  {
     "hardwareFactory": "Zhejiang Uniview Technologies Co.,Ltd",
     "hardwareModel": "VX1848-V3",
     "osVersion": "openEuler 22.03 LTS",
