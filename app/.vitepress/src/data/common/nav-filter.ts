@@ -201,4 +201,8 @@ export default [
     name: 'program/**',
     lang: ['zh'],
   },
+  {
+    name: 'user-group',
+    lang: ['zh'],
+  },
 ];

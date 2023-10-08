@@ -48,6 +48,10 @@ export default [
     size: '257G',
   },
   {
+    release: 'openEuler-23.09',
+    size: '306G',
+  },
+  {
     release: 'openEuler-preview',
     size: '170G',
   },
@@ -61,6 +65,6 @@ export default [
   },
   {
     release: 'Total',
-    size: '2.8T',
+    size: '3.1T',
   },
 ];

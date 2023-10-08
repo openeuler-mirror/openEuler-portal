@@ -45,7 +45,7 @@ mugen测试框架介绍：https://gitee.com/openeuler/mugen?_from=gitee_search
 - 在虚拟机中拉取mugen后（本人通过fork openEuler/mugen后clone到本地虚拟机），配置测试套环境变量
   ```
   bash dep_install.sh   # 安装依赖软件
-  bash mugen.sh -c --ip $ip --password $passwd --user $user --port $port    # 配置测试套环境变量（ip：测试虚拟机的ip地址，user：测试机的登录用户，默认为root，password: 测试机的登录密码，port：测试机ssh登陆端口，默认为22）
+  bash mugen.sh -c --ip $ip --password $passwd --user $user --port $port    # 配置测试套环境变量（ip：测试虚拟机的ip地址，user：测试机的登录用户，默认为root，password: 测试机的登录密码，port：测试机ssh登录端口，默认为22）
   ```
 - 根据前面写的手工用例，编写用例自动化脚本
   >总的来说，mugen框架下要编写的单包测试自动化脚本主要有两个：1、`testcases/cli-test`路径下的`oe_test_xx.sh`用例执行脚本。2、`suite2cases`下的`xx.json`配置文件，指定测试套路径和执行用例

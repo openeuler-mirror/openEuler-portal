@@ -76,7 +76,7 @@ libc_hidden_def (__libc_free)
 #define mem2chunk(mem) ((mchunkptr)((char*)(mem) - 2*SIZE_SZ))
 ```
 <br>
-接下来，chunk_is_mmapped用来检查size最低三位中的标志位，判断该chunk是否是由mmap分配的，如果是，就调用munmap_chunk释放该chunk并返回，在调用munmap_chunk之前，需要更新全局的mmap阀值和收缩阀值。<br>
+接下来，chunk_is_mmapped用来检查size最低三位中的标志位，判断该chunk是否是由mmap分配的，如果是，就调用munmap_chunk释放该chunk并返回，在调用munmap_chunk之前，需要更新全局的mmap阈值和收缩阈值。<br>
 接下来又碰到MAYBE_INIT_TCACHE这个宏，其定义如下，可以看出，在开启了tcache的情况下，这部分代码是基本上不会执行到的。增加这个的目的也是为后续内存优先放入tcache做铺垫。
 
 ```
@@ -620,7 +620,7 @@ heap_trim (heap_info *heap, size_t pad)
 
 删除掉整个heap后，如果前一个heap的fencepost的前面有一个空闲chunk，就将该空闲chunk从空闲链表中脱离，然后设置fencepost或者该空闲chunk（如果存在）的地址为新的top chunk，该top chunk的大小为前面计算的new_size。
 然后返回while继续检查，如果新的top chunk指针又正好在heap_info上，就表示该heap也就只有一个chunk即top chunk，就继续释放该heap。<br>
-再往下，如果新的top chunk剩余空间top_area太小，就直接返回了。如果还有足够的空间，且top_area大于收缩阀值，就调用shrink_heap进一步将新的top chunk的大小减少extra。最后设置一些分配区的信息，并设置减少后的top chunk的大小为top_size - extra，这里其实就是减小heap_info的size变量。
+再往下，如果新的top chunk剩余空间top_area太小，就直接返回了。如果还有足够的空间，且top_area大于收缩阈值，就调用shrink_heap进一步将新的top chunk的大小减少extra。最后设置一些分配区的信息，并设置减少后的top chunk的大小为top_size - extra，这里其实就是减小heap_info的size变量。
 ```
 /* Shrink a heap.  */
 

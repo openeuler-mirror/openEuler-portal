@@ -1237,7 +1237,7 @@ static void * _int_malloc(mstate av, size_t bytes) {
 
 ## 2.6 sysmalloc
 sysmalloc顾名思义，就是在当前glibc malloc在用户态管理的内存不足的情况下从OS申请内存，因此应用场景有二：一个是初始化的时候，另一个便是内存不足的时候。考虑到sysmalloc代码量依旧庞大，这里继续分段来讲解。<br><br>
-第一部分代码如下，如果需要分配的内存大小大于实用mmap进行分配的阀值mp_.mmap_threshold，且mp_.n_mmaps判断系统还可以有可以使用mmap分配的空间时会执行try_mmap分支。<br>
+第一部分代码如下，如果需要分配的内存大小大于实用mmap进行分配的阈值mp_.mmap_threshold，且mp_.n_mmaps判断系统还可以有可以使用mmap分配的空间时会执行try_mmap分支。<br>
 首先会重新计算需要分配多少内存，因为通过使用mmap直接分配的chunk不需要添加到链表中，因此不存在前后关系，当一个chunk被使用时，不能借用后一个chunk的prev_size字段，这里需要把该字段的长度SIZE_SZ加上。并且这里假设MALLOC_ALIGNMENT == 2 * SIZE_SZ。<br>
 接下来判断需要分配的内存大小是否会溢出，然后就调用MMAP分配内存，MMAP是一个宏定义，最后就是通过系统调用来分配内存，后面来看这个函数。<br>
 再往下就是通过set_head在chunk中的size参数里设置标志位，因为chunk是按8字节对齐的，而size标识chunk占用的字节数，所以最后三位是没有用的，ptmalloc将这三位用来作为标志位，这里便是设置其中一个标志位，用来标识该chunk是直接通过mmap分配的。<br>

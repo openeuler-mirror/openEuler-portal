@@ -2,6 +2,301 @@ export default {
   zh: {
     COMMUNITY_LIST: [
       {
+        NAME: 'openEuler 23.09',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-23.09/',
+        DESC: 'openEuler 23.09 是基于6.4内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/zh/docs/23.09/docs/Releasenotes/release_notes.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/zh/docs/23.09/docs/Installation/installation.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+        WHITE_PAPER: '/whitepaper/openEuler 23.09 技术白皮书.pdf',
+        WEBSITE_SELECT: '/zh/mirror/select/?version=23.09',
+        CLOUD_IMAGE:
+          'https://repo.openeuler.org/openEuler-23.09/virtual_machine_img/',
+        EDGE_IMAGE: 'https://repo.openeuler.org/openEuler-23.09/edge_img/',
+        EMBEDDEN_IMAGE: 'https://repo.openeuler.org/openEuler-23.09/embedded_img/',
+        MANUFACTURER: 'openEuler社区',
+        PUBLISH_DATE: '2023/09',
+        LTS: false,
+        /* VERSION参数是为了获取推荐镜像，根据上面的WEBSITE_SELECT的version填写*/
+        VERSION: '23.09',
+        DETAILED_LINK: [
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '4.0 GiB',
+                SHACODE:
+                  '5b5dafeaa9953316b800e6808bb5e24424bd9f6caeabf527bdcb28fffd101068',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/x86_64/openEuler-23.09-x86_64-dvd.iso',
+                TIPS: 'x86_64架构的基础安装ISO，包含了运行最小系统的核心组件',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '19.3 GiB',
+                SHACODE:
+                  '09da797b5c4e79aed6bc4b82219d857c6f8974495ad617fdea5a38dfd9631785',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/x86_64/openEuler-23.09-everything-x86_64-dvd.iso',
+                TIPS: 'x86_64架构的全量安装ISO，包含了运行完整系统所需的全部组件',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '842.0 MiB',
+                SHACODE:
+                  '565539a16a81d64637760e98a9392c85e6a5dbd0a23dc507cbe5bd2c2b645a21',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/x86_64/openEuler-23.09-netinst-x86_64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.6 GiB',
+                SHACODE:
+                  '757ac4971d0c52e47572d233520341c894bbde708d3bf549757b5e67878521d0',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/aarch64/openEuler-23.09-aarch64-dvd.iso',
+                TIPS: 'AArch64架构的基础安装ISO，包含了运行最小系统的核心组件',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '18.7 GiB',
+                SHACODE:
+                  '95545bb2d0d7971b36c2ff09f30e57b5046dcce0b43e7722c9ceb8cec81181c3',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/aarch64/openEuler-23.09-everything-aarch64-dvd.iso',
+                TIPS: 'AArch64架构的全量安装ISO，包含了运行完整系统所需的全部组件',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '786.4 MiB',
+                SHACODE:
+                  'a415f70181e25f54ffbcf4c9b5ba1d7626c8c5003dc57560b828145a07b7e6c1',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/aarch64/openEuler-23.09-netinst-aarch64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '1.8 GiB',
+                SHACODE:
+                  '39cc32d0348a26fb9dec9a4e5cdfa6816a8ac9597b781b03e18f506bbecc3518',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/edge_img/x86_64/openEuler-23.09-edge-x86_64-dvd.iso',
+                TIPS: 'x86_64架构的边缘ISO，包含了运行最小系统的核心组件',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'EDGE_CLOUD',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '1.6 GiB',
+                SHACODE:
+                  'fd836f883dbddd78cf5774d269dd3035a54fc1fafed7c190ef9cf5695d75a170',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/edge_img/aarch64/openEuler-23.09-edge-aarch64-dvd.iso',
+                TIPS: 'AArch64架构的边缘ISO，包含了运行最小系统的核心组件',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'EDGE_CLOUD',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '467.4 MiB',
+                SHACODE:
+                  '065b3df4448d00aa53a4e379318775fb3902921d0de82f4edf9ab24587237dc5',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/virtual_machine_img/x86_64/openEuler-23.09-x86_64.qcow2.xz',
+                TIPS: 'x86_64架构下openEuler虚拟机镜像',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '427.2 MiB',
+                SHACODE:
+                  'd8c08f10634ae273e75f5ac8054c0607c27662593300cda2ac3cd263098ef56a',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/virtual_machine_img/aarch64/openEuler-23.09-aarch64.qcow2.xz',
+                TIPS: 'aarch64架构下openEuler虚拟机镜像',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'x86-64',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/x86-64/',
+                TIPS: '',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'EMBEDDED',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qemu',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/aarch64-qemu/',
+                TIPS: 'QEMU image',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/aarch64-qemu-ros/',
+                TIPS: 'QEMU image containing the ROS2-humble basic software package',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-systemd',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/aarch64-qemu-systemd/',
+                TIPS: '',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'ok3588',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/ok3588/',
+                TIPS: '',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/raspberrypi4-64/',
+                TIPS: 'Raspberry Pi 4B image',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/raspberrypi4-64-ros/',
+                TIPS: 'Raspberry Pi 4B image containing the ROS2-humble basic software package',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-rt',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/raspberrypi4-64-rt/',
+                TIPS: 'Raspberry Pi 4B image with PREEMPT_RT soft real-time patch enabled',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-systemd',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/raspberrypi4-64-systemd/',
+                TIPS: '',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'EMBEDDED',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Image',
+                SIZE: '9.4 MiB',
+                SHACODE:
+                  'c002477d2519f92359c7e9ab0894ab1cbc7b536e675389cd9613fc0912cbb6f6',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/arm32/arm32-qemu/Image-5.10.0-openeuler',
+                TIPS: '',
+              },
+              {
+                TYPE: 'openEuler glibc',
+                SIZE: '66.2 MiB',
+                SHACODE:
+                  'dc91c5b8c68b12ec4e0445648cdfd0714234e82bf0a9509708ce5173bc82afb4',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/arm32/arm32-qemu/openeuler-glibc-x86_64-openeuler-image-armv7a-qemu-arm-toolchain-23.09.sh',
+                TIPS: 'aarch64架构下对应的开发编译链',
+              },
+              {
+                TYPE: 'openEuler Image qemu',
+                SIZE: '44.0 MiB',
+                SHACODE:
+                  'c7c485541721f401b8820d07a6e98960123efed2f27e5a67c5f8ff86c0f1a834',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/arm32/arm32-qemu/openeuler-image-qemu-arm-20230927204739.rootfs.cpio.gz',
+                TIPS: 'aarch64架构下支持qemu的文件系统',
+              },
+              {
+                TYPE: 'vmlinux',
+                SIZE: '7.3 MiB',
+                SHACODE:
+                  '8cfffa8d92ba0144fb7dd45889b80a88a05f7323353c1d73fa2c52651d1e659b',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/arm32/arm32-qemu/vmlinux-5.10.0-openeuler',
+                TIPS: '',
+              },
+              {
+                TYPE: 'zImage',
+                SIZE: '2.3 MiB',
+                SHACODE:
+                  'd1336df07813276e2abf55729671a458236d640c4d0224beb013ffadc1354362',
+                DOWNLOAD_LINK: 'openEuler-23.09/embedded_img/arm32/arm32-qemu/zImage',
+                TIPS: 'aarch64架构下支持qemu的内核镜像',
+              },
+            ],
+            ARCH: 'ARM32',
+            SCENARIO: 'EMBEDDED',
+          },
+        ],
+        PLANNED_EOL: '2024/03',
+      },
+      {
         NAME: 'openEuler 22.03 LTS SP2',
         DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP2/',
         DESC: 'openEuler 22.03 LTS SP2 是openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同。',
@@ -2010,6 +2305,298 @@ export default {
   },
   en: {
     COMMUNITY_LIST: [
+      {
+        NAME: 'openEuler 23.09',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-23.09/',
+        DESC: 'openEuler 23.09 is an innovation version designed based on Linux kernel 6.4 and is suited for server, cloud, edge, and embedded scenarios. It provides a variety of new features and functions and brings brand-new experience to developers and users in diverse industries.',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/en/docs/23.09/docs/Releasenotes/release_notes.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/en/docs/23.09/docs/Installation/Installation.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        LIFE_CYCLE_URL: '/en/other/lifecycle/',
+        WHITE_PAPER: '/whitepaper/openEuler 23.09 技术白皮书.pdf',
+        WEBSITE_SELECT: '/en/mirror/select/?version=23.09',
+        CLOUD_IMAGE:
+          'https://repo.openeuler.org/openEuler-23.09/virtual_machine_img/',
+        EDGE_IMAGE: 'https://repo.openeuler.org/openEuler-23.09/edge_img/',
+        EMBEDDEN_IMAGE: 'https://repo.openeuler.org/openEuler-23.09/embedded_img/',
+        MANUFACTURER: 'openEuler社区',
+        PUBLISH_DATE: '2023/09',
+        LTS: false,
+        /* VERSION参数是为了获取推荐镜像，根据上面的WEBSITE_SELECT的version填写*/
+        VERSION: '23.09',
+        DETAILED_LINK: [
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '4.0 GiB',
+                SHACODE:
+                  '5b5dafeaa9953316b800e6808bb5e24424bd9f6caeabf527bdcb28fffd101068',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/x86_64/openEuler-23.09-x86_64-dvd.iso',
+                TIPS: 'Base installation ISO file of the x86_64 architecture, including the core components for running the minimum system.',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '19.3 GiB',
+                SHACODE:
+                  '09da797b5c4e79aed6bc4b82219d857c6f8974495ad617fdea5a38dfd9631785',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/x86_64/openEuler-23.09-everything-x86_64-dvd.iso',
+                TIPS: 'Full installation ISO file of the x86_64 architecture, including all components for running the entire system.',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '842.0 MiB',
+                SHACODE:
+                  '565539a16a81d64637760e98a9392c85e6a5dbd0a23dc507cbe5bd2c2b645a21',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/x86_64/openEuler-23.09-netinst-x86_64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.6 GiB',
+                SHACODE:
+                  '757ac4971d0c52e47572d233520341c894bbde708d3bf549757b5e67878521d0',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/aarch64/openEuler-23.09-aarch64-dvd.iso',
+                TIPS: 'Base installation ISO file of the AArch64 architecture, including the core components for running the minimum system.',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '18.7 GiB',
+                SHACODE:
+                  '95545bb2d0d7971b36c2ff09f30e57b5046dcce0b43e7722c9ceb8cec81181c3',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/aarch64/openEuler-23.09-everything-aarch64-dvd.iso',
+                TIPS: 'Full installation ISO file of the AArch64 architecture, including all components for running the entire system.',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '786.4 MiB',
+                SHACODE:
+                  'a415f70181e25f54ffbcf4c9b5ba1d7626c8c5003dc57560b828145a07b7e6c1',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/aarch64/openEuler-23.09-netinst-aarch64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '1.8 GiB',
+                SHACODE:
+                  '39cc32d0348a26fb9dec9a4e5cdfa6816a8ac9597b781b03e18f506bbecc3518',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/edge_img/x86_64/openEuler-23.09-edge-x86_64-dvd.iso',
+                TIPS: 'Base installation ISO file of the x86_64 architecture, including the core components for running the minimum system.',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'EDGE_CLOUD',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '1.6 GiB',
+                SHACODE:
+                  'fd836f883dbddd78cf5774d269dd3035a54fc1fafed7c190ef9cf5695d75a170',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/edge_img/aarch64/openEuler-23.09-edge-aarch64-dvd.iso',
+                TIPS: 'Base installation ISO file of the AArch64 architecture, including the core components for running the minimum system.',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'EDGE_CLOUD',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '467.4 MiB',
+                SHACODE:
+                  '065b3df4448d00aa53a4e379318775fb3902921d0de82f4edf9ab24587237dc5',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/virtual_machine_img/x86_64/openEuler-23.09-x86_64.qcow2.xz',
+                TIPS: 'VM image of openEuler in the x86_64 architecture.',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '427.2 MiB',
+                SHACODE:
+                  'd8c08f10634ae273e75f5ac8054c0607c27662593300cda2ac3cd263098ef56a',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/virtual_machine_img/aarch64/openEuler-23.09-aarch64.qcow2.xz',
+                TIPS: 'VM image of openEuler in the AArch64 architecture.',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'x86-64',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK: 'openEuler-23.09/embedded_img/x86-64/',
+                TIPS: '',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'EMBEDDED',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qemu',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK: 'openEuler-23.09/embedded_img/aarch64/aarch64-qemu/',
+                TIPS: 'QEMU image',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/aarch64-qemu-ros/',
+                TIPS: 'QEMU image containing the ROS2-humble basic software package',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-systemd',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/aarch64-qemu-systemd/',
+                TIPS: '',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'ok3588',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK: 'openEuler-23.09/embedded_img/aarch64/ok3588/',
+                TIPS: '',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/raspberrypi4-64/',
+                TIPS: 'Raspberry Pi 4B image',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/raspberrypi4-64-ros/',
+                TIPS: 'Raspberry Pi 4B image containing the ROS2-humble basic software package',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-rt',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/raspberrypi4-64-rt/',
+                TIPS: 'Raspberry Pi 4B image with PREEMPT_RT soft real-time patch enabled',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-systemd',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/raspberrypi4-64-systemd/',
+                TIPS: '',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'EMBEDDED',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Image',
+                SIZE: '9.4 MiB',
+                SHACODE:
+                  'c002477d2519f92359c7e9ab0894ab1cbc7b536e675389cd9613fc0912cbb6f6',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/arm32/arm32-qemu/Image-5.10.0-openeuler',
+                TIPS: '',
+              },
+              {
+                TYPE: 'openEuler glibc',
+                SIZE: '66.2 MiB',
+                SHACODE:
+                  'dc91c5b8c68b12ec4e0445648cdfd0714234e82bf0a9509708ce5173bc82afb4',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/arm32/arm32-qemu/openeuler-glibc-x86_64-openeuler-image-aarch64-qemu-aarch64-toolchain-23.09.sh',
+                TIPS: 'Development and compilation toolchain in the AArch64 architecture.',
+              },
+              {
+                TYPE: 'openEuler Image qemu',
+                SIZE: '44.0 MiB',
+                SHACODE:
+                  'c7c485541721f401b8820d07a6e98960123efed2f27e5a67c5f8ff86c0f1a834',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/arm32/arm32-qemu/openeuler-image-qemu-aarch64-20230329193643.rootfs.cpio.gz',
+                TIPS: 'File system that supports QEMU in the AArch64 architecture.',
+              },
+              {
+                TYPE: 'vmlinux',
+                SIZE: '7.3 MiB',
+                SHACODE:
+                  '8cfffa8d92ba0144fb7dd45889b80a88a05f7323353c1d73fa2c52651d1e659b',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/arm32/arm32-qemu/vmlinux-5.10.0-openeuler',
+                TIPS: '',
+              },
+              {
+                TYPE: 'zImage',
+                SIZE: '2.3 MiB',
+                SHACODE:
+                  'd1336df07813276e2abf55729671a458236d640c4d0224beb013ffadc1354362',
+                DOWNLOAD_LINK: 'openEuler-23.09/embedded_img/arm32/arm32-qemu/zImage',
+                TIPS: 'Kernel image that supports QEMU in the AArch64 architecture.',
+              },
+            ],
+            ARCH: 'ARM32',
+            SCENARIO: 'EMBEDDED',
+          },
+        ],
+        PLANNED_EOL: '2024/03',
+      },
       {
         NAME: 'openEuler 22.03 LTS SP2',
         DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP2/',
