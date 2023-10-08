@@ -12520,6 +12520,42 @@
     }
   },
   {
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "R6240H0",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "x86_64",
+    "date": "2022/04/08",
+    "friendlyLink": "www.cancon.com.cn",
+    "boardCards": [
+      {
+        "vendorID": "8680",
+        "deviceID": "2115",
+        "svID": "ffff",
+        "ssID": "0000",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "igb",
+        "version": "5.4.0-k",
+        "type": "NIC",
+        "driverSize": "",
+        "chipVendor": "SNC",
+        "boardModel": "62DB32"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "www.cancon.com.cn",
+      "certificationTime": "2022/04/08",
+      "commitID": "",
+      "biosUefi": "0XWH001017",
+      "cpu": "Hygon C86 7265 24-core Processor",
+      "ram": "28*16G DIMMs",
+      "portsBusTypes": "x16 PCIE",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+      "hardDiskDrive": "SA MZ7KH960HAJR-5 960G 2.5SATA 6Gb M SSD"
+    }
+  },
+  {
     "hardwareFactory": "宇视科技",
     "hardwareModel": "VX1848-V3",
     "osVersion": "openEuler 22.03 LTS",
