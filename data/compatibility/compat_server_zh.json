@@ -12612,6 +12612,48 @@
     }
   },
   {
+    "hardwareFactory": "XFUSION",
+    "hardwareModel": "DH122E V6",
+    "osVersion": "openEuler-22.03-LTS-SP1",
+    "architecture": "x86_64",
+    "date": "2023/06/26",
+    "friendlyLink": "https://www.xfusion.com/en/product/rack-scale-servers/dh122e-v6",
+    "boardCards": [
+      {
+        "vendorID": "15b3",
+        "deviceID": "1017",
+        "svID": "1f24",
+        "ssID": "2006",
+        "architecture": "x86_64",
+        "os": "openEuler-22.03-LTS-SP1",
+        "driverName": "mlx5_core",
+        "version": "5.0-0",
+        "type": "NIC",
+        "date": "2023.6.26",
+        "sha256": "86b69a434f39ac85d9b89a862329837ebbc9302c2d3e8d525a27bf9c09374832",
+        "driverSize": "420K",
+        "chipVendor": "Mellanox",
+        "boardModel": "XP382",
+        "chipModel": "CX5",
+        "item": "03023TYJ",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.xfusion.com/en/product/rack-scale-servers/dh122e-v6",
+      "certificationTime": "2023/06/26",
+      "commitID": "",
+      "mainboardModel": "",
+      "biosUefi": "1.32",
+      "cpu": "Intel(R) Xeon(R) Gold 6326 CPU @ 2.90GHz",
+      "ram": "2*16G DIMMs",
+      "portsBusTypes": "x16 PCI Express 4 x16",
+      "videoAdapter": "1711",
+      "hostBusAdapter": "Avago XF-SAS3508",
+      "hardDiskDrive": ""
+    }
+  },
+  {
     "hardwareFactory": "宇视科技",
     "hardwareModel": "VX1848-V3",
     "osVersion": "openEuler 22.03 LTS",
