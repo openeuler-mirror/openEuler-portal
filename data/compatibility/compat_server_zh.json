@@ -12323,6 +12323,67 @@
     }
   },
   {
+    "hardwareFactory": "中兵长智",
+    "hardwareModel": "晨月SK2961",
+    "osVersion": "KylinSec OS 3.4-5A",
+    "architecture": "aarch64",
+    "date": "2023/07/24",
+    "friendlyLink": "https://www.zbczkj.com",
+    "boardCards": [
+      {
+        "vendorID": "0x15b3",
+        "deviceID": "0xa2d6",
+        "svID": "0x15b3",
+        "ssID": "0x0157",
+        "architecture": "aarch64",
+        "os": "KylinSec OS 3.4-5A",
+        "driverName": "hns3",
+        "version": "21.12.3",
+        "type": "NIC",
+        "date": "2023/07/24",
+        "sha256": "b6a479ff9b6e51e0fab110f053ae47c8e9bca42930701d658bab25d4f640bcbd",
+        "driverSize": "171K",
+        "chipVendor": "Huawei",
+        "boardModel": "4*GE",
+        "chipModel": "CPU Integration",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "0x1000",
+        "deviceID": "0x17",
+        "svID": "0x1000",
+        "ssID": "0x9440",
+        "architecture": "aarch64",
+        "os": "KylinSec OS 3.4-5A",
+        "driverName": "megaraid_sas",
+        "version": "07.706.03.00-rc1",
+        "type": "raid",
+        "date": "2023/07/24",
+        "sha256": "7d65571f653fcd173fea1b4abc636168ea6deda84964831d644bd184ef95c1cf",
+        "driverSize": "293K",
+        "chipVendor": "LSI",
+        "boardModel": "AVAGO MegaRAID SAS 9440-8i",
+        "chipModel": "SAS3508",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.zbczkj.com",
+      "certificationTime": "2023/07/24",
+      "commitID": "",
+      "mainboardModel": "BC82AMDGK",
+      "biosUefi": "6.55",
+      "cpu": "HUAWEI Kunpeng 920 5220",
+      "ram": "4*32G DIMMs",
+      "portsBusTypes": "x8 PCI Express x16",
+      "videoAdapter": "Huawei Technologies Co., Ltd. Hi171x Series",
+      "hostBusAdapter": "Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA ",
+      "hardDiskDrive": "SAMSUNG MZ7KH480HAHQ-00005"
+    }
+  },
+  {
     "hardwareFactory": "宇视科技",
     "hardwareModel": "VX1848-V3",
     "osVersion": "openEuler 22.03 LTS",
