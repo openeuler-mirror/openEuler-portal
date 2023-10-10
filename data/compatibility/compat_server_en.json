@@ -12445,6 +12445,63 @@
     }
   },
   {
+    "hardwareFactory": "New H3C Technologies Co., Ltd.",
+    "hardwareModel": "H3C UniServer R6700 G6",
+    "osVersion": "openEuler 22.03 LTS sp2",
+    "architecture": "x86_64",
+    "date": "2023/9/14",
+    "friendlyLink": "https://www.h3c.com/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "193D",
+        "ssID": "1005",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS sp2 ",
+        "driverName": "igb",
+        "version": "5.10.0-153.12.0.92.oe2203sp2.x86_64",
+        "type": "NIC",
+        "sha256": "5f038f2c000ccd8f2ad3743a66ca97058f928815ccd9425b4d31d1d2998ffd5a",
+        "driverSize": "429k",
+        "chipVendor": "Intel",
+        "boardModel": "NIC-GE-4P-360T-B2-1-X",
+        "chipModel": "Intel I350",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "10E2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "x86_64",
+        "os": "openEuler  22.03 LTS sp2 ",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "sha256": "c2e4ac4b2481eef4fb6cfeebec54630146097ae97b49f103a74cb3665643deeb",
+        "driverSize": "75296k",
+        "chipVendor": "Broadcom",
+        "boardModel": " RAID-LSI-9560-LP-8i-4GB",
+        "chipModel": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com/",
+      "certificationTime": "2023/9/14",
+      "commitID": "",
+      "mainboardModel": "",
+      "biosUefi": "6.00.27",
+      "cpu": " Intel(R) Xeon(R) Platinum 8468H",
+      "ram": "20*16G RDIMM",
+      "portsBusTypes": "x8 PCI Express 5 x8",
+      "videoAdapter": "0000:02:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": " ",
+      "hardDiskDrive": "BROADCOM MR9560-8i"
+    }
+  },
+  {
     "hardwareFactory": "Yunke China Information Technology Limited",
     "hardwareModel": "KunTai R722",
     "osVersion": "openEuler 20.03 LTS SP3",
