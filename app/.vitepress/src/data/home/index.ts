@@ -1,13 +1,11 @@
+import projects_pc from '@/assets/category/home/banner/projects_pc.jpg';
+import projects_mo from '@/assets/category/home/banner/projects_mo.jpg';
+
 import banner1_pc from '@/assets/category/home/banner/banner1_pc.jpg';
 import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';
 
-import banner2_pc from '@/assets/category/home/banner/banner2_pc.jpg';
-import banner2_mo from '@/assets/category/home/banner/banner2_mo.jpg';
 import eulerSky_pc from '@/assets/category/home/banner/euler-sky_pc.jpg';
 import eulerSky_mo from '@/assets/category/home/banner/euler-sky_mo.jpg';
-
-import kunpeng_pc from '@/assets/category/home/banner/kunpeng_pc.jpg';
-import kunpeng_mo from '@/assets/category/home/banner/kunpeng_mo.jpg';
 
 import techDay_pc from '@/assets/category/home/banner/tech-day_pc.png';
 import techDay_mo from '@/assets/category/home/banner/tech-day_mo.png';
@@ -29,12 +27,12 @@ export default {
         targetTap: 1,
       },
       {
-        pcBanner: banner2_pc,
-        moBanner: banner2_mo,
-        link: '/zh/blog/20230711-AMIs/AMIs.html',
-        id: '',
-        title: ['openEuler 22.03 LTS', '登陆 AWS Marketplace'],
-        btn: '查看详情',
+        pcBanner: projects_pc,
+        moBanner: projects_mo,
+        link: '/zh/blog/20230928-xiangmu.html',
+        id: 'projects',
+        title: ['openEuler 2023 年度', '优秀项目评选启动'],
+        btn: '欢迎推荐',
         targetTap: 1,
       },
       {
@@ -45,13 +43,6 @@ export default {
         title: ['openEuler Call for X 计划'],
         desc: ['热衷实践 乐于分享 多元贡献'],
         btn: '查看详情',
-        targetTap: 1,
-      },
-      {
-        pcBanner: kunpeng_pc,
-        moBanner: kunpeng_mo,
-        link: 'https://www.hikunpeng.com/developer/contests/kunpeng-competition2023?tab=4',
-        id: '',
         targetTap: 1,
       },
       {
@@ -69,7 +60,7 @@ export default {
         moBanner: banner1_mo,
         link: '/whitepaper/en/openEuler%20OS%20Technical%20Whitepaper_Innovation%20Projects_EN.pdf',
         id: 'whitepaper',
-        title: ['openEuler OS Technical Whitepaper','Innovation Projects'],
+        title: ['openEuler OS Technical Whitepaper', 'Innovation Projects'],
         btn: 'Download',
         targetTap: 1,
       },
