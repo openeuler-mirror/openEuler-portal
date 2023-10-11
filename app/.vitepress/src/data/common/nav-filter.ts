@@ -183,7 +183,7 @@ export default [
   },
   {
     name: 'technical-white-paper',
-    lang: ['zh','en'],
+    lang: ['zh', 'en'],
   },
   {
     name: 'white-paper',

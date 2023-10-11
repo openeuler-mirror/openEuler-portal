@@ -107,10 +107,13 @@ const getListData = (params: ParamsType) => {
   sortBlogData(params)
     .then((res) => {
       if (res.obj?.count) {
-        paginationData.value.total = res.obj.count;
-        paginationData.value.currentpage = res.obj.page;
-        paginationData.value.pagesize = res.obj.pageSize;
-        blogCardData.value = res.obj.records;
+        const { count, page, pageSize, records } = res.obj;
+        paginationData.value = {
+          total: count,
+          currentpage: page,
+          pagesize: pageSize,
+        };
+        blogCardData.value = records;
         for (let i = 0; i < blogCardData.value.length; i++) {
           if (typeof blogCardData.value[i].author === 'string') {
             blogCardData.value[i].author = [blogCardData.value[i].author];

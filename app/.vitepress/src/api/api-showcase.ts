@@ -8,10 +8,5 @@ import type { AxiosResponse } from '@/shared/axios';
  */
 export function getUserCaseData(params: object) {
   const url = '/api-search/search/sort/showcase';
-  return request
-    .post(url, params)
-    .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
