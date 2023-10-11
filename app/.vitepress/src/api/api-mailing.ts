@@ -9,10 +9,5 @@ import type { AxiosResponse } from '@/shared/axios';
 
 export function getAllMailing() {
   const url = '/api-mail/postorius/all_lists/';
-  return request
-    .get(url)
-    .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
+  return request.get(url).then((res: AxiosResponse) => res.data);
 }

@@ -60,21 +60,11 @@ export function getTagsData(params: TagsParams) {
 }
 export function getSearchData(params: search) {
   const url = '/api-search/search/docs';
-  return request
-    .post(url, params)
-    .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 export function getSearchCount(params: any) {
   const url = '/api-search/search/count';
-  return request
-    .post(url, params)
-    .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 export function getSearchRpm(params: any) {
   const url = '/api-node/repo/search';
@@ -84,19 +74,11 @@ export function getSearchRpm(params: any) {
       $doException: true,
       params,
     })
-    .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
+    .then((res: AxiosResponse) => res.data);
 }
 export function getPop(params: any) {
   const url = `/api-search/search/pop?${params}`;
-  return request
-    .post(url)
-    .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
+  return request.post(url).then((res: AxiosResponse) => res.data);
 }
 
 /**
@@ -137,45 +119,43 @@ export function getStatistic() {
  * @return  Array
  */
 export function getChatapi(inputText: any, params: any) {
-  const { message, close, open, error } = params
+  const { message, close, open, error } = params;
   const abortController = new AbortController();
   const { token } = getUserAuth();
   const headers = {
     'Content-Type': 'application/json;charset=UTF-8',
     token,
   };
-  const body: any = JSON.stringify(
-    {
-      question: inputText,
-      history: [],
-    }
-  );
+  const body: string = JSON.stringify({
+    question: inputText,
+    history: [],
+  });
   const signal = abortController.signal;
   fetchEventSource('/api-chat/stream', {
     method: 'POST',
     headers,
     body,
     signal,
-    async onopen (response) {
+    async onopen(response) {
       if (response.ok) {
         open();
         return;
       }
     },
-    onmessage (event) {
+    onmessage(event) {
       message(event.data);
     },
-    onclose () {
+    onclose() {
       close();
     },
-    onerror () {
+    onerror() {
       error();
     },
     openWhenHidden: true,
   });
   return {
     abortController,
-  }
+  };
 }
 
 /**
@@ -184,7 +164,7 @@ export function getChatapi(inputText: any, params: any) {
  * @param {}
  * @return  Array
  */
- export function meetupApplyForm(params: any) {
+export function meetupApplyForm(params: any) {
   const url = `/api-dsapi/query/meetupApplyForm?community=openeuler`;
   const { token } = getUserAuth();
   return request
@@ -193,26 +173,5 @@ export function getChatapi(inputText: any, params: any) {
         token,
       },
     })
-    .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
-}
-
-/**
- * 查询用户信息
- */
-export function queryPersonalInfo() {
-  const url = '/api-omapi/oneid/personal/center/user?community=openeuler';
-  const { token } = getUserAuth();
-  return request
-    .get(url, {
-      headers: {
-        token,
-      },
-    })
-    .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
+    .then((res: AxiosResponse) => res.data);
 }

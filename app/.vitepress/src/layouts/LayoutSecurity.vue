@@ -3,7 +3,6 @@ import { reactive, computed, ref, onMounted, onUpdated } from 'vue';
 import { useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
-// import seoConfig from '@/data/common/seo';
 
 import AppRouterTemplate from '@/components/AppRouterTemplate.vue';
 
@@ -57,7 +56,6 @@ onMounted(() => {
 </script>
 <template>
   <div>
-    <!-- <SeoBox :seo-data="seoConfig[lang]?.download" /> -->
     <AppRouterTemplate
       :banner-data="bannerData"
       :tabs-data="tabsData"

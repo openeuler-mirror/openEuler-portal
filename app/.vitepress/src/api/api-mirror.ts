@@ -1,5 +1,5 @@
 /**
- * 调用接口获取镜像列表
+ * 获取镜像列表
  * @name getAllMirror
  * @param {boolean} mirrorstats 镜像状态 true-运行的镜像
  * @return {Array} 镜像列表
@@ -14,7 +14,7 @@ export function getAllMirror() {
 }
 
 /**
- * 调用接口获取优选镜像列表
+ * 获取优选镜像列表
  * @name getAllMirror
  * @param {string} version 镜像版本
  * @return {Array} 镜像列表
@@ -27,10 +27,5 @@ export const selectMirror = (version: string) => {
     window.location.host !== 'www.openeuler.org'
       ? `/api/mirrors/openEuler-${version}/ISO/`
       : `https://api.openeuler.org/mirrors/openEuler-${version}/ISO/`;
-  return request
-    .get(url)
-    .then((res: AxiosResponse) => res?.data)
-    .catch((err) => {
-      console.error(err);
-    });
+  return request.get(url).then((res: AxiosResponse) => res?.data);
 };

@@ -238,7 +238,7 @@ export function getSoftFilter() {
 }
 
 /**
- * 调用接口获取兼容性列表-测试机构
+ * 调用接口获取兼容性列表-商业软件筛选条件测试机构
  * @name getTestOrganizations
  */
 export function getTestOrganizations() {

@@ -9,6 +9,11 @@ export function getSigDetailInfo(params: string) {
   const url = `/api-easyeditor/api/publish/latest?path=${params}`;
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
+/**
+ * 获取sig邮箱
+ * @name getUserCaseData
+ *
+ */
 export function getSigList() {
   const url = `/api-meeting/sigs/`;
   return request.get(url).then((res: AxiosResponse) => res.data);

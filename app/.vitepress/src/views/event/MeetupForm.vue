@@ -2,7 +2,8 @@
 import { computed, ref, reactive, onMounted } from 'vue';
 import { ElMessage, FormInstance, FormRules } from 'element-plus';
 import useWindowResize from '@/components/hooks/useWindowResize';
-import { meetupApplyForm, queryPersonalInfo } from '@/api/api-search';
+import { meetupApplyForm } from '@/api/api-search';
+import { queryPersonalInfo } from '@/api/api-login';
 import { showGuard, getUserAuth } from '@/shared/login';
 import { isTestEmail, isTestPhone } from '@/shared/utils';
 

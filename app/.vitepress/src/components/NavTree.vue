@@ -85,11 +85,9 @@ defineExpose({
 :deep(.el-tree-node__expand-icon.expanded) {
   transform: rotate(180deg);
 }
-:deep(
-    .el-tree-node:nth-of-type(1)
-      > .el-tree-node__content
-      > .el-tree-node__expand-icon
-  ) {
+:deep(.el-tree-node:nth-of-type(1)
+    > .el-tree-node__content
+    > .el-tree-node__expand-icon) {
   display: none;
 }
 
@@ -149,11 +147,9 @@ defineExpose({
   :deep(.el-tree-node__expand-icon.expanded) {
     transform: rotate(180deg);
   }
-  :deep(
-      .el-tree-node:nth-of-type(1)
-        > .el-tree-node__content
-        > .el-tree-node__expand-icon
-    ) {
+  :deep(.el-tree-node:nth-of-type(1)
+      > .el-tree-node__content
+      > .el-tree-node__expand-icon) {
     display: none;
   }
   :deep(.el-tree-node__children .is-current .el-tree-node__label) {

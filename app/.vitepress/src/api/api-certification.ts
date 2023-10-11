@@ -23,12 +23,7 @@ export function getCertification(params: any, lang: string) {
  */
 export function getSendCode(identification: string, code: string) {
   const url = `/api-certification/certification/list?identification=${identification}&code=${code}`;
-  return request
-    .get(url)
-    .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
+  return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
 /**
@@ -43,8 +38,5 @@ export function downloadCard(pa: string, lang: string) {
         'Accept-Language': lang,
       },
     })
-    .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
+    .then((res: AxiosResponse) => res.data);
 }

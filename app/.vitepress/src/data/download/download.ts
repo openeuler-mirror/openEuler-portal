@@ -17,7 +17,8 @@ export default {
         CLOUD_IMAGE:
           'https://repo.openeuler.org/openEuler-23.09/virtual_machine_img/',
         EDGE_IMAGE: 'https://repo.openeuler.org/openEuler-23.09/edge_img/',
-        EMBEDDEN_IMAGE: 'https://repo.openeuler.org/openEuler-23.09/embedded_img/',
+        EMBEDDEN_IMAGE:
+          'https://repo.openeuler.org/openEuler-23.09/embedded_img/',
         MANUFACTURER: 'openEuler社区',
         PUBLISH_DATE: '2023/09',
         LTS: false,
@@ -156,8 +157,7 @@ export default {
                 TYPE: 'x86-64',
                 SIZE: '',
                 SHACODE: '',
-                DOWNLOAD_LINK:
-                  'openEuler-23.09/embedded_img/x86-64/',
+                DOWNLOAD_LINK: 'openEuler-23.09/embedded_img/x86-64/',
                 TIPS: '',
                 IS_FOLDER: true,
               },
@@ -198,8 +198,7 @@ export default {
                 TYPE: 'ok3588',
                 SIZE: '',
                 SHACODE: '',
-                DOWNLOAD_LINK:
-                  'openEuler-23.09/embedded_img/aarch64/ok3588/',
+                DOWNLOAD_LINK: 'openEuler-23.09/embedded_img/aarch64/ok3588/',
                 TIPS: '',
                 IS_FOLDER: true,
               },
@@ -286,7 +285,8 @@ export default {
                 SIZE: '2.3 MiB',
                 SHACODE:
                   'd1336df07813276e2abf55729671a458236d640c4d0224beb013ffadc1354362',
-                DOWNLOAD_LINK: 'openEuler-23.09/embedded_img/arm32/arm32-qemu/zImage',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/arm32/arm32-qemu/zImage',
                 TIPS: 'aarch64架构下支持qemu的内核镜像',
               },
             ],
@@ -2321,7 +2321,8 @@ export default {
         CLOUD_IMAGE:
           'https://repo.openeuler.org/openEuler-23.09/virtual_machine_img/',
         EDGE_IMAGE: 'https://repo.openeuler.org/openEuler-23.09/edge_img/',
-        EMBEDDEN_IMAGE: 'https://repo.openeuler.org/openEuler-23.09/embedded_img/',
+        EMBEDDEN_IMAGE:
+          'https://repo.openeuler.org/openEuler-23.09/embedded_img/',
         MANUFACTURER: 'openEuler社区',
         PUBLISH_DATE: '2023/09',
         LTS: false,
@@ -2474,7 +2475,8 @@ export default {
                 TYPE: 'qemu',
                 SIZE: '',
                 SHACODE: '',
-                DOWNLOAD_LINK: 'openEuler-23.09/embedded_img/aarch64/aarch64-qemu/',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/aarch64/aarch64-qemu/',
                 TIPS: 'QEMU image',
                 IS_FOLDER: true,
               },
@@ -2587,7 +2589,8 @@ export default {
                 SIZE: '2.3 MiB',
                 SHACODE:
                   'd1336df07813276e2abf55729671a458236d640c4d0224beb013ffadc1354362',
-                DOWNLOAD_LINK: 'openEuler-23.09/embedded_img/arm32/arm32-qemu/zImage',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/embedded_img/arm32/arm32-qemu/zImage',
                 TIPS: 'Kernel image that supports QEMU in the AArch64 architecture.',
               },
             ],

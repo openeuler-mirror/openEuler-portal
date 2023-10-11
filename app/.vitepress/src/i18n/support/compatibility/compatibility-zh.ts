@@ -120,7 +120,8 @@ export default {
         DESCRIPTION_2:
           '）发送兼容性申请，邮件标题需要注明“申请硬件兼容性测试”。收到邮件后，openEuler团队中sig组会与您沟通进行协议签署（敬请期待）。',
         DESCRIPTION_3: 'tips：如果没有签署CLA，请先签署：',
-        A_TEXT2: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
+        A_TEXT2:
+          'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
       },
       {
         ID: '03',

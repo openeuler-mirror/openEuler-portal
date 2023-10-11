@@ -38,13 +38,14 @@ export function queryPermission(params: queryPermissionParams) {
 }
 
 /**
- * 获取idtoken用于退出
+ * 修改用户信息
  */
-export function queryIDToken() {
-  const url = '/api-omapi/oneid/logout';
+export function modifyUser(body: any) {
+  const url = '/api-omapi/oneid/update/baseInfo';
   const { token } = getUserAuth();
   return request
-    .get(url, {
+    .post(url, body, {
+      global: true,
       $doException: true,
       headers: {
         token,
@@ -63,27 +64,19 @@ export function queryIDToken() {
 }
 
 /**
- * 修改用户信息
+ * 查询用户信息
  */
- export function modifyUser(body: any) {
-  const url = '/api-omapi/oneid/update/baseInfo';
+ export function queryPersonalInfo() {
+  const url = '/api-omapi/oneid/personal/center/user?community=openeuler';
   const { token } = getUserAuth();
   return request
-    .post(url, body, {
-      global: true,
-      $doException: true,
+    .get(url, {
       headers: {
         token,
       },
-     })
+    })
     .then((res: AxiosResponse) => res.data)
-    .catch((err) => {
-      const message = err?.response?.data?.message || '';
-      if (message && message !== 'token expires') {
-        ElMessage({
-          type: 'error',
-          message: err.message,
-        });
-      }
+    .catch((e: any) => {
+      throw new Error(e);
     });
 }
