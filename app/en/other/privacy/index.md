@@ -46,6 +46,8 @@ Product operations and maintenance: To provide you with rich product experience,
 
 (k) Venue Resource Contribution. When you proactively contribute venue resources to openEuler, the community will collect your name, phone number, and email address from the form you filled in, which will be only used to contact you.
 
+(l) Meetup. When you apply for an openEuler meetup, the community will collect your mobile number and email address from the application form you fill in. The collected mobile number and email address will be used to contact you later to communicate about the meetup details. Furthermore, the community will request your name and company name for the purpose of meetup sign-ins, nameplates, and other related activities.
+
 We may also supplement the personal data we collect from you with additional personal data we receive from third parties, including other platforms, communities, or legal and public channels within the scope of your authorization and consent. We promise to process your personal data in strict accordance with applicable laws and regulations. Please read the privacy statements and user agreements of the third parties carefully. If your personal data provided by a third party is required for using related services of the community, but you refuse to allow the third party to collect, use, transfer, or share your personal data when the third party provides services, you may not be able to use related services of the community. For example, when you use an authorized third-party account to log in to the community, we will obtain your personal data from the third party with your consent.
 
 
@@ -167,6 +169,6 @@ Our services are open only to enterprises and individuals over the age of 14.
 If you want to contact us or exercise your rights, please contact us at **<contact@openeuler.io>**.
 
 
-Last updated: June, 2023
+Last updated: Oct, 2023
 
 </div>
