@@ -17316,5 +17316,43 @@
     "chipModel": "ISP2532",
     "item": "06030221",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS-SP1/contrib/drivers/source/Packages/qla2xxx-src-v10.02.09.00-k.tar.gz"
+  },
+  {
+    "vendorID": "8086",
+    "deviceID": "1522",
+    "svID": "8086",
+    "ssID": "00a4",
+    "architecture": "aarch64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "igb",
+    "version": "5.14.16",
+    "type": "NIC",
+    "date": "2023.10.13",
+    "sha256": "29dbfa7d45c9e14f266325650300678ba048166cac99a6075f5276d03883b2f1",
+    "driverSize": "1.6M",
+    "chipVendor": "Intel",
+    "boardModel": "I350-F2",
+    "chipModel": "I350",
+    "item": "06310058",
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/aarch64/Packages/igb-5.14.16-1.aarch64.rpm"
+  },
+  {
+    "vendorID": "8086",
+    "deviceID": "1522",
+    "svID": "8086",
+    "ssID": "00a4",
+    "architecture": "x86_64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "igb",
+    "version": "5.14.16",
+    "type": "NIC",
+    "date": "2023.10.13",
+    "sha256": "41dad6d746be5474562c571b24eae475d22527dfa457085f66ba6d7a148fcbd2",
+    "driverSize": "1.7M",
+    "chipVendor": "Intel",
+    "boardModel": "I350-F2",
+    "chipModel": "I350",
+    "item": "06310058",
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/x86_64/Packages/igb-5.14.16-1.x86_64.rpm"
   }
 ]
