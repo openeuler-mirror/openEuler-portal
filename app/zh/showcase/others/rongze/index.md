@@ -42,8 +42,7 @@ openEuler作为面向数字基础设施的开源操作系统，其全场景适�
 
 <img src="./xh.png" width="1000" >
 
-<center>方案架构图</center>
-
+<p style="text-align:center">方案架构图</p>
 
 ## 客户价值
 

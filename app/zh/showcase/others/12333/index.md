@@ -46,7 +46,7 @@ img: /category/showcase/others.png
 
 <img src="./xh.png" width="1000" >
 
-<center>方案架构图</center>
+<p style="text-align:center">方案架构图</p>
 
 长沙市就业与社保数据服务中心新建的服务器全部采用基于openEuler 20.03 LTS 为技术底座的商业发行版麒麟信安操作系统。
 
