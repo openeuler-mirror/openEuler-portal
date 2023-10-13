@@ -16,6 +16,7 @@ import LayoutAboutUs from '@/layouts/LayoutAboutUs.vue';
 import LayoutDownload from './layouts/LayoutDownload.vue';
 import LayoutEvent from './layouts/LayoutEvent.vue';
 import LayoutSecurity from './layouts/LayoutSecurity.vue';
+import AppFloat from '@/components/AppFloat.vue';
 
 import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
@@ -77,6 +78,7 @@ onMounted(() => {
     <main :class="frontmatter.class ? frontmatter.class : ''">
       <component :is="comp" v-if="isCustomLayout"></component>
       <Content v-else />
+      <AppFloat />
     </main>
   </el-config-provider>
   <AppFooter :is-cookie-tip="isCookieTip" @click-cookie="onCookieClick" />
