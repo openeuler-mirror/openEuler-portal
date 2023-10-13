@@ -11,11 +11,15 @@ export default {
           softLinks: [
             {
               name: 'x86_64 ',
-              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-core-3.0.0-20231009.x86_64.rpm',
+              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-core-3.0.0-20231012.x86_64.rpm',
             },
             {
               name: 'aarch64 ',
-              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/aarch64/Packages/x2openEuler-core-3.0.0-20231009.aarch64.rpm',
+              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/aarch64/Packages/x2openEuler-core-3.0.0-20231012.aarch64.rpm',
+            },
+            {
+              name: 'upgrade-for6 ',
+              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-upgrade-for6-3.0.0-20231011.x86_64.rpm',
             },
           ],
         },
