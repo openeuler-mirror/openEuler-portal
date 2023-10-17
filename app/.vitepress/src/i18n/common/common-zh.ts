@@ -461,6 +461,10 @@ export default {
               LABEL: '助力企业进行操作系统迁移的指南文档',
               PATH: '/migration/',
             },
+            {
+              NAME: '运维专区',
+              PATH: '/om/',
+            },
           ],
         },
         {

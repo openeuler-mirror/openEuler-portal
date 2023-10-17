@@ -205,4 +205,8 @@ export default [
     name: 'user-group',
     lang: ['zh'],
   },
+  {
+    name: 'om',
+    lang: ['zh'],
+  }
 ];
