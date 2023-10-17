@@ -183,20 +183,15 @@ function handleClick(item: LinkItem) {
       &-right {
         display: flex;
         position: relative;
-        // @media screen and (max-width: 1410px) {
-        //   align-self: end;
-        // }
         img {
           width: 123px;
           height: 95px;
-          // align-self: flex-end;
           position: absolute;
           right: 2px;
           bottom: 0;
         }
         .card-btn {
           align-self: center;
-          z-index: 10;
           margin-right: 120px;
           @media screen and (max-width: 1410px) {
             padding: 15px 0 23px 20px;
