@@ -3,7 +3,6 @@ import { computed, toRefs, ref, onMounted } from 'vue';
 import { useRouter, useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 import AppContent from '@/components/AppContent.vue';
-import AppFloat from './AppFloat.vue';
 
 import LogoFooter from '@/assets/common/footer/footer-logo2.png';
 import LogoFooter1 from '@/assets/common/footer/footer-logo1.png';
@@ -246,7 +245,6 @@ onMounted(() => {
         </div>
       </AppContent>
     </div>
-    <AppFloat />
   </footer>
 </template>
 
