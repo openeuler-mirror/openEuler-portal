@@ -95,8 +95,10 @@ main {
   min-height: calc(100vh - 259px);
   background-color: var(--o-color-bg1);
   padding-top: 80px;
-  overflow: hidden;
-
+  &::after {
+    content: '';
+    display: table;
+  }
   @media (max-width: 1100px) {
     padding-top: 48px;
   }
