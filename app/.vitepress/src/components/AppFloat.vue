@@ -26,59 +26,76 @@ const router = useRouter();
 const isDark = computed(() => {
   return useCommon().theme === 'dark' ? true : false;
 });
-const TITLES = [
-  '您向他人推荐 openEuler社区 的可能性有多大？',
-  '您对 openEuler技术展示 的整体满意度如何？',
-  '您对 openEuler学习与贡献 的整体满意度如何？',
-  '您对 openEuler动态 的整体满意度如何？',
-  '您对 openEuler下载 的整体满意度如何？',
-  '您对 openEuler关于社区 的整体满意度如何？',
-  '您对 openEuler交流 的整体满意度如何？',
-  '您对 openEuler支持与服务 的整体满意度如何？',
-  '您对 openEuler个人中心 的整体满意度如何？',
+const TITLES1 = ['您向他人推荐 ', '您对 '];
+const TITLES2 = [
+  'openEuler社区',
+  'openEuler技术展示',
+  'openEuler学习与贡献',
+  'openEuler动态',
+  'openEuler下载',
+  'openEuler关于社区',
+  'openEuler交流',
+  'openEuler支持与服务',
+  'openEuler个人中心',
 ];
+const TITLES3 = [' 的可能性有多大？', ' 的整体满意度如何？'];
+
 interface TitleItemT {
   [url: string]: string;
 }
 const tipsObj: TitleItemT = {
-  '/zh/': TITLES[0],
-  '/showcase/': TITLES[1],
-  '/showcase/technical-white-paper/': TITLES[1],
-  '/showcase/white-paper/': TITLES[1],
-  '/learn/mooc/': TITLES[2],
-  '/community/contribution/': TITLES[2],
-  '/sig/sig-list/': TITLES[2],
-  '/internship/': TITLES[2],
-  '/interaction/news-list/': TITLES[3],
-  '/interaction/blog-list/': TITLES[3],
-  '/interaction/event-list/': TITLES[3],
-  '/interaction/summit-list/': TITLES[3],
-  '/download/': TITLES[4],
-  '/mirror/list/': TITLES[4],
-  '/community/organization/': TITLES[5],
-  '/community/charter/': TITLES[5],
-  '/oEEP/': TITLES[5],
-  '/community/member/': TITLES[5],
-  '/community/honor/': TITLES[5],
-  '/community/program/': TITLES[5],
-  '/mailing-list/': TITLES[6],
-  '/sig/meeting-guide/': TITLES[6],
-  '/migration/': TITLES[7],
-  '/approve/': TITLES[7],
-  '/compatibility/': TITLES[7],
-  '/security/': TITLES[7],
+  '/zh/': TITLES2[0],
+  '/showcase/': TITLES2[1],
+  '/showcase/technical-white-paper/': TITLES2[1],
+  '/showcase/white-paper/': TITLES2[1],
+  '/learn/mooc/': TITLES2[2],
+  '/community/contribution/': TITLES2[2],
+  '/sig/sig-list/': TITLES2[2],
+  '/internship/': TITLES2[2],
+  '/interaction/news-list/': TITLES2[3],
+  '/interaction/blog-list/': TITLES2[3],
+  '/interaction/event-list/': TITLES2[3],
+  '/interaction/summit-list/': TITLES2[3],
+  '/download/': TITLES2[4],
+  '/mirror/list/': TITLES2[4],
+  '/community/organization/': TITLES2[5],
+  '/community/charter/': TITLES2[5],
+  '/oEEP/': TITLES2[5],
+  '/community/member/': TITLES2[5],
+  '/community/honor/': TITLES2[5],
+  '/community/program/': TITLES2[5],
+  '/mailing-list/': TITLES2[6],
+  '/sig/meeting-guide/': TITLES2[6],
+  '/migration/': TITLES2[7],
+  '/approve/': TITLES2[7],
+  '/compatibility/': TITLES2[7],
+  '/security/': TITLES2[7],
 };
-const title = ref(TITLES[0]);
+const title2 = ref(TITLES2[0]);
+const title1 = computed(() => {
+  if (title2.value === TITLES2[0]) {
+    return TITLES1[0];
+  } else {
+    return TITLES1[1];
+  }
+});
+const title3 = computed(() => {
+  if (title2.value === TITLES2[0]) {
+    return TITLES3[0];
+  } else {
+    return TITLES3[1];
+  }
+});
 onMounted(() => {
   watch(
     () => router.route.path,
     () => {
       if (router.route.path === '/zh/') {
-        title.value = TITLES[0];
+        title2.value = TITLES2[0];
       } else {
         Object.keys(tipsObj).forEach((item) => {
           if (router.route.path.includes(item)) {
-            title.value = tipsObj[item];
+            title2.value = tipsObj[item];
           }
         });
       }
@@ -170,7 +187,7 @@ const infoData = {
   know: '知道了',
 };
 const placeholder = computed(() => {
-  if (title.value === TITLES[0]) {
+  if (title2.value === TITLES2[0]) {
     if (score.value / 10 < 7) {
       return '请输入您不太推荐的原因';
     } else if (score.value / 10 < 9) {
@@ -422,7 +439,11 @@ onMounted(() => {
                 <IconCancel />
               </OIcon>
               <div class="slider">
-                <p class="slider-title">{{ title }}</p>
+                <p class="slider-title">
+                  {{ title1 }}
+                  <span class="title-name">{{ title2 }}</span>
+                  {{ title3 }}
+                </p>
                 <div class="slider-body">
                   <div class="slider-tip">
                     <div v-show="isReasonShow" class="slide-btn-tip">
@@ -442,10 +463,10 @@ onMounted(() => {
                 </div>
                 <div class="grade-info">
                   <span>{{
-                    title === TITLES[0] ? infoData.grade1 : infoData.grade1_1
+                    title2 === TITLES2[0] ? infoData.grade1 : infoData.grade1_1
                   }}</span>
                   <span>{{
-                    title === TITLES[0] ? infoData.grade2 : infoData.grade2_1
+                    title2 === TITLES2[0] ? infoData.grade2 : infoData.grade2_1
                   }}</span>
                 </div>
               </div>
@@ -515,16 +536,24 @@ onMounted(() => {
             <OIcon class="icon-box"
               ><component :is="IconSmileMobile"></component>
             </OIcon>
-            {{ title }}
+            <p>
+              {{ title1 }}
+              <span class="title-name">{{ title2 }}</span>
+              {{ title3 }}
+            </p>
           </div>
-          <OIcon class="icon-box" @click="closeMobileFloat"
+          <OIcon class="icon-box icon-close" @click="closeMobileFloat"
             ><component :is="IconCancel"></component>
           </OIcon>
         </div>
         <el-dialog :show-close="false" v-model="dialogVisible">
           <div class="o-popup1">
             <div class="slider">
-              <p class="slider-title">{{ title }}</p>
+              <p class="slider-title">
+                {{ title1 }}
+                <span class="title-name">{{ title2 }}</span>
+                {{ title3 }}
+              </p>
               <ul class="score-list">
                 <li
                   v-for="item in marksMobile"
@@ -550,10 +579,10 @@ onMounted(() => {
               </div>
               <div class="grade-info">
                 <span>{{
-                  title === TITLES[0] ? infoData.grade1 : infoData.grade1_1
+                  title2 === TITLES2[0] ? infoData.grade1 : infoData.grade1_1
                 }}</span>
                 <span>{{
-                  title === TITLES[0] ? infoData.grade2 : infoData.grade2_1
+                  title2 === TITLES2[0] ? infoData.grade2 : infoData.grade2_1
                 }}</span>
               </div>
             </div>
@@ -578,12 +607,12 @@ onMounted(() => {
               </p>
             </div>
             <div class="btn-box">
-              <OButton type="outline" size="mini" @click="cancelDialog">{{
+              <OButton type="outline" size="middle" @click="cancelDialog">{{
                 infoData.cancel
               }}</OButton>
               <OButton
                 type="outline"
-                size="mini"
+                size="middle"
                 @click="postScore"
                 :class="{ forbidden: !isReasonShow }"
                 >{{ infoData.confirm }}</OButton
@@ -597,7 +626,9 @@ onMounted(() => {
 </template>
 <style lang="scss" scoped>
 .float {
-  position: relative;
+  position: sticky;
+  bottom: 16px;
+  z-index: 9;
   .float-wrap {
     position: fixed;
     display: flex;
@@ -712,6 +743,10 @@ onMounted(() => {
             line-height: 20px;
             color: var(--o-color-text1);
             text-align: center;
+            white-space: nowrap;
+            .title-name {
+              font-weight: 600;
+            }
           }
           .slider-body {
             padding-top: 30px;
@@ -922,7 +957,7 @@ onMounted(() => {
   }
   .float-mobile {
     width: 100%;
-    padding: 0 24px;
+    padding: 0 16px;
     margin-bottom: 16px;
     .float-head {
       height: 40px;
@@ -934,8 +969,15 @@ onMounted(() => {
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
       .o-icon {
         font-size: 16px;
+      }
+      .icon-close {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
       }
       .head-title {
         display: flex;
@@ -944,6 +986,9 @@ onMounted(() => {
         font-size: 12px;
         line-height: 16px;
         white-space: nowrap;
+        .title-name {
+          font-weight: 600;
+        }
         .o-icon {
           margin-right: 8px;
         }
@@ -988,6 +1033,10 @@ onMounted(() => {
           line-height: 20px;
           color: var(--o-color-text1);
           text-align: center;
+          white-space: nowrap;
+          .title-name {
+            font-weight: 600;
+          }
         }
         .score-list {
           width: 100%;
@@ -1109,6 +1158,9 @@ onMounted(() => {
           font-size: var(--o-font-size-tip);
           color: var(--o-color-text4);
           margin-top: 8px;
+          span {
+            scale: 0.84;
+          }
         }
       }
       .reason {
@@ -1117,7 +1169,8 @@ onMounted(() => {
           border: 1px solid var(--o-color-border2);
           padding: 8px 16px;
           height: 88px;
-          font-size: var(--o-font-size-tip);
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
           line-height: 18px;
           position: relative;
           border-radius: 4px;
@@ -1161,8 +1214,20 @@ onMounted(() => {
           justify-content: center;
           border: none;
           color: var(--o-color-text1);
+          position: relative;
+          padding: 0;
           &.forbidden {
             color: var(--o-color-text5);
+          }
+          &:nth-of-type(1)::after {
+            display: block;
+            content: '';
+            width: 1px;
+            height: 100%;
+            background-color: var(--o-color-text5);
+            position: absolute;
+            right: 0;
+            top: 0;
           }
         }
       }

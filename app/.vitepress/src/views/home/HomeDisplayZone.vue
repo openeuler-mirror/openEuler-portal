@@ -61,7 +61,7 @@ const getImgUrlHover = computed(
   column-gap: 0;
   row-gap: 0;
   background: var(--o-color-bg2);
-  z-index: 10;
+  z-index: 2;
   box-shadow: var(--o-shadow-l1);
 
   .display-zone-item {
