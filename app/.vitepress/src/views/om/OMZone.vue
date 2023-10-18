@@ -184,29 +184,31 @@ const tools = [
       </el-row>
     </OCard>
     <p class="om-subtitle">运维全集</p>
-    <OCard>
-      <el-row class="card-item" justify="center">
-        <div v-for="item in OMSet" :key="item.title" class="om-set-box">
-          <p class="om-set-title" :style="oMSetTitleStyle(item.height)">
-            {{ item.title }}
-          </p>
-          <om-card v-for="card in item.cardList" :title="card.title" :items="card.items" :width="card.width"
-            :height="item.height" />
-        </div>
-      </el-row>
-    </OCard>
+    <div class="scroll-box">
+      <OCard class="om-set-card">
+        <el-row class="card-item" justify="center">
+          <div v-for="item in OMSet" :key="item.title" class="om-set-box">
+            <p class="om-set-title" :style="oMSetTitleStyle(item.height)">
+              {{ item.title }}
+            </p>
+            <om-card v-for="card in item.cardList" :title="card.title" :items="card.items" :width="card.width"
+              :height="item.height" />
+          </div>
+        </el-row>
+      </OCard>
+    </div>
     <p class="om-subtitle">openEuler运维工具</p>
     <OCard class="osmind-card">
       <el-row class="card-item" justify="space-between">
         <el-row class="osmind-box" justify="space-between">
           <img class="osmind-img" :src="OSMindIll" />
-          <div>
+          <div class="osmind-info-box">
             <p class="osmind-title">OSMind</p>
             <p class="osmind-desc">OSMind是一款openEuler运维管理工具套件</p>
           </div>
         </el-row>
         <div class="jump-btns">
-          <el-dropdown>
+          <el-dropdown popper-class="om-zone-dropdown">
             <OButton size="mini">
               工具下载
               <template #suffixIcon>
@@ -263,6 +265,12 @@ const tools = [
 </template>
 
 <style lang="scss" scoped>
+@mixin mobile() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
 $descIllWidth: 160px;
 $descSpace: 40px;
 $osmindCardHeight: 145px;
@@ -271,9 +279,32 @@ $osmindCardHeight: 145px;
   padding: 40px;
 }
 
+.o-card {
+  @include mobile() {
+    :deep(.el-card__body) {
+      padding: 16px 12px;
+    }
+  }
+}
+
 .card-item {
   box-sizing: border-box;
   align-items: center;
+
+  @include mobile() {
+
+    &.is-justify-space-between {
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .om-desc {
+      width: 100%;
+      text-align: center;
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
+    }
+  }
 }
 
 .desc-ill-img {
@@ -292,11 +323,21 @@ $osmindCardHeight: 145px;
   color: var(--o-color-text1);
   text-align: center;
   margin: 64px 0 32px 0;
+
+  @include mobile() {
+    margin: 32px 0 16px 0;
+    font-size: var(--o-font-size-h6);
+    line-height: var(--o-line-height-h6);
+  }
 }
 
 .osmind-card {
   :deep(.el-card__body) {
     padding: 0 30px 0 20px;
+
+    @include mobile() {
+      padding: 0 12px;
+    }
   }
 
   .card-item {
@@ -308,22 +349,53 @@ $osmindCardHeight: 145px;
 .osmind-img {
   width: 100px;
   margin-right: 30px;
+
+  @include mobile() {
+    width: 0;
+  }
+}
+
+.osmind-info-box {
+  @include mobile() {
+    width: 100%;
+    text-align: left;
+  }
 }
 
 .osmind-title {
   font-size: var(--o-font-size-h5);
   line-height: 36px;
   margin-bottom: 8px;
+
+  @include mobile() {
+    font-size: var(--o-font-size-h7);
+    line-height: var(--o-line-height-h7);
+  }
 }
 
 .osmind-desc {
   font-size: var(--o-font-size-text);
   color: var(--o-color-text4);
   line-height: 22px;
+
+  @include mobile() {
+    margin-bottom: 5px;
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
+  }
 }
 
 .osmind-box {
   padding-top: 15px;
+
+  @include mobile() {
+    width: 100%;
+
+    &.is-justify-space-between {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
 }
 
 .o-button {
@@ -336,17 +408,41 @@ $osmindCardHeight: 145px;
 
 .jump-btns {
   margin-right: 80px;
+
+  @include mobile() {
+    display: inline-block;
+    margin: 0;
+    text-align: left;
+
+    .o-button {
+      margin: 0 4px 4px 0;
+      padding: 4px 9px;
+    }
+  }
 }
 
 .help-content {
   font-size: var(--o-font-size-h7);
   color: var(--o-color-text4);
   line-height: 38px;
+
+  @include mobile() {
+    width: 100%;
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
+    text-align: center;
+  }
 }
 
 .qr-codes {
   width: 443px;
   margin-right: 110px;
+
+  @include mobile() {
+    width: 200px;
+    margin-right: 0;
+    margin-top: 10px;
+  }
 }
 
 .qr-code-box {
@@ -356,21 +452,48 @@ $osmindCardHeight: 145px;
 
 .qr-code {
   width: 150px;
+
+  @include mobile() {
+    width: 78px;
+  }
 }
 
 .qr-code-label {
   text-align: center;
   font-size: var(--o-font-size-h7);
   margin-top: 12px;
+
+  @include mobile() {
+    width: 100%;
+    font-size: 12px;
+  }
 }
 
 .om-set-box {
   overflow: hidden;
 }
 
+.scroll-box {
+  overflow-x: auto;
+}
+
+.om-set-card {
+  min-width: 1246px;
+
+  @include mobile() {
+    min-width: 1180px;
+    line-height: var(--o-line-height-h6);
+  }
+}
+
 .om-set-title {
   float: left;
-  margin-right: 20px;
+  margin: 6px 20px 6px 0;
+
+  @include mobile() {
+    font-size: var(--o-font-size-text);
+    margin: 6px 10px 6px 0;
+  }
 }
 
 .om-card-box {
@@ -378,7 +501,9 @@ $osmindCardHeight: 145px;
 }
 </style>
 <style lang="scss">
-.el-dropdown__popper {
+.om-zone-dropdown {
+  max-width: calc(100% - 20px);
+
   .om-zone-dropdown-menu {
     background-color: var(--o-color-bg2);
     border: 1px solid var(--o-color-brand1);
@@ -386,10 +511,22 @@ $osmindCardHeight: 145px;
 
     .el-dropdown-menu__item {
       padding: 4px 30px;
+      box-sizing: border-box;
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: normal;
       color: var(--o-color-text4);
 
       &:hover {
         color: var(--el-dropdown-menuItem-hover-color);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 5px 0;
+
+      .el-dropdown-menu__item {
+        padding: 4px 10px;
       }
     }
   }
