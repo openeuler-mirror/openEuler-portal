@@ -208,6 +208,7 @@ onMounted(async () => {
   }
 }
 .home-trend {
+  overflow: hidden;
   @media (max-width: 768px) {
     margin-top: var(--o-spacing-h2);
     .o-container {

@@ -889,7 +889,8 @@ onMounted(() => {
               border-color: var(--o-color-border1);
               color: var(--o-color-text1);
               &:hover {
-                background-color: var(--o-color-border1);
+                border-color: var(--o-color-brand1);
+                background-color: var(--o-color-brand1);
                 color: var(--o-color-white);
               }
             }
