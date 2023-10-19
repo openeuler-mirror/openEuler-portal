@@ -172,7 +172,11 @@ const tools = [
 </script>
 
 <template>
-  <BannerLevel2 :background-image="banner" title="运维专区" :illustration="illustration">
+  <BannerLevel2
+    :background-image="banner"
+    title="运维专区"
+    :illustration="illustration"
+  >
   </BannerLevel2>
   <AppContent>
     <OCard>
@@ -191,8 +195,14 @@ const tools = [
             <p class="om-set-title" :style="oMSetTitleStyle(item.height)">
               {{ item.title }}
             </p>
-            <om-card v-for="card in item.cardList" :title="card.title" :items="card.items" :width="card.width"
-              :height="item.height" />
+            <om-card
+              v-for="card in item.cardList"
+              :key="card.title"
+              :title="card.title"
+              :items="card.items"
+              :width="card.width"
+              :height="item.height"
+            />
           </div>
         </el-row>
       </OCard>
@@ -217,7 +227,11 @@ const tools = [
             </OButton>
             <template #dropdown>
               <el-dropdown-menu class="om-zone-dropdown-menu">
-                <el-dropdown-item v-for="item in tools" :key="item.name" @click="downloadByUrl(item.url)">
+                <el-dropdown-item
+                  v-for="item in tools"
+                  :key="item.name"
+                  @click="downloadByUrl(item.url)"
+                >
                   {{ item.name }}
                 </el-dropdown-item>
               </el-dropdown-menu>
@@ -254,7 +268,11 @@ const tools = [
           </p>
         </div>
         <el-row class="qr-codes" justify="space-between">
-          <div v-for="{ value, label } in qrCodes" :key="value" class="qr-code-box">
+          <div
+            v-for="{ value, label } in qrCodes"
+            :key="value"
+            class="qr-code-box"
+          >
             <img class="qr-code" :src="value" />
             <p class="qr-code-label">{{ label }}</p>
           </div>
@@ -292,7 +310,6 @@ $osmindCardHeight: 145px;
   align-items: center;
 
   @include mobile() {
-
     &.is-justify-space-between {
       justify-content: center;
       flex-direction: column;
@@ -342,7 +359,8 @@ $osmindCardHeight: 145px;
 
   .card-item {
     height: $osmindCardHeight;
-    background: url('@/assets/category/om/grap-ill.png') no-repeat 100% 15px / 125px;
+    background: url('@/assets/category/om/grap-ill.png') no-repeat 100% 15px /
+      125px;
   }
 }
 

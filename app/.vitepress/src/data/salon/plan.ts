@@ -205,6 +205,9 @@ export default {
             activeEvent: [
               {
                 activeName: '北京 创新技术',
+                activelink: {
+                  url: '/zh/interaction/event-list/detail/?id=93&isMini=1',
+                },
               },
             ],
           },
@@ -218,6 +221,9 @@ export default {
             activeEvent: [
               {
                 activeName: '长沙 嵌入式',
+                activelink: {
+                  url: '/zh/interaction/event-list/detail/?id=95&isMini=1',
+                },
               },
               {
                 activeName: '杭州 编译器',
@@ -242,17 +248,21 @@ export default {
             activeEvent: [
               {
                 activeName: '北京 虚拟化',
+                activelink: {
+                  url: '/zh/interaction/event-list/detail/?id=98&isMini=1',
+                },
               },
               {
                 activeName: '杭州 消息中间件',
+                activelink: {
+                  url: '/zh/interaction/event-list/detail/?id=97&isMini=1',
+                },
               },
-            ],
-          },
-          {
-            activeType: '用户组活动',
-            activeEvent: [
               {
-                activeName: '郑州',
+                activeName: '天津 方天SIG',
+                activelink: {
+                  url: '/zh/interaction/event-list/detail/?id=100&isMini=1',
+                },
               },
             ],
           },
@@ -265,7 +275,18 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: '待定',
+                activeName: '苏州 迁移',
+              },
+            ],
+          },
+          {
+            activeType: '用户组活动',
+            activeEvent: [
+              {
+                activeName: '郑州',
+              },
+              {
+                activeName: '成都',
               },
             ],
           },

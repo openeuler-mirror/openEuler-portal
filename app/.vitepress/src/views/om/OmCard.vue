@@ -6,21 +6,23 @@ const props = defineProps<{
   items: string[];
   width: number;
   height: number;
-}>()
+}>();
 
 const cardStyle = computed(() => {
   return {
     width: `${props.width}px`,
     height: `${props.height}px`,
-  }
-})
+  };
+});
 </script>
 
 <template>
   <div class="om-card-box" :style="cardStyle">
     <p class="om-card-title">{{ title }}</p>
     <div class="om-card-content">
-      <div class="om-card-item" v-for="item in items" :key="item">{{ item }}</div>
+      <div v-for="item in items" :key="item" class="om-card-item">
+        {{ item }}
+      </div>
     </div>
   </div>
 </template>
