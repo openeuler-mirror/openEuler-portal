@@ -341,6 +341,9 @@ const liveImg = computed(() =>
     max-width: 270px;
     gap: var(--o-spacing-h4);
   }
+  @media screen and (max-width:768px) {
+    margin-top: 40px;
+  }
   .content-item {
     position: relative;
     width: 100%;
@@ -461,8 +464,13 @@ const liveImg = computed(() =>
       padding: 0 16px;
     }
     .el-dialog__footer {
+
       padding-left: 16px;
       padding-right: 16px;
+      @media screen and (max-width:768px) {
+        padding-top: 24px;
+        padding-bottom: 24px;
+      }
     }
   }
 }
