@@ -37,6 +37,9 @@ const attrs = useAttrs();
   }
   .el-dialog__footer {
     padding: 46px 62px 62px 62px;
+    &:empty {
+      display: none;
+    }
   }
 }
 </style>
