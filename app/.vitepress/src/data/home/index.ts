@@ -1,6 +1,9 @@
 import projects_pc from '@/assets/category/home/banner/projects_pc.jpg';
 import projects_mo from '@/assets/category/home/banner/projects_mo.jpg';
 
+import summit_pc from '@/assets/category/home/banner/summit_pc.jpg';
+import summit_mo from '@/assets/category/home/banner/summit_mo.jpg';
+
 import banner1_pc from '@/assets/category/home/banner/banner1_pc.jpg';
 import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';
 
@@ -17,6 +20,16 @@ export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
+      {
+        pcBanner: summit_pc,
+        moBanner: summit_mo,
+        link: '/zh/interaction/summit-list/summit2023/',
+        id: 'summit',
+        title: ['操作系统产业大会2023'],
+        desc: ['2023年12月15日-16日 北京'],
+        btn: '了解更多',
+        targetTap: 1,
+      },
       {
         pcBanner: banner1_pc,
         moBanner: banner1_mo,
@@ -55,6 +68,16 @@ export default {
       },
     ],
     en: [
+      {
+        pcBanner: summit_pc,
+        moBanner: summit_mo,
+        link: '/en/interaction/summit-list/summit2023/',
+        id: 'summit',
+        title: ['openEuler Summit 2023'],
+        desc: ['December 15-16, 2023 | Beijing'],
+        btn: 'View More',
+        targetTap: 1,
+      },
       {
         pcBanner: banner1_pc,
         moBanner: banner1_mo,

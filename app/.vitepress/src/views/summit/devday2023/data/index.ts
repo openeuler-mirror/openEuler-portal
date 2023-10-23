@@ -2,7 +2,7 @@ import bannerDevdayMo from '../img/banner-devday_mo.png';
 import bannerDevdayPc from '../img/banner-devday_pc.jpg';
 import bannerTextMo from '../img/banner-text_mo.png';
 import bannerTextPc from '../img/banner-text_pc.png';
-import liver from './liver';
+import live from './live';
 
 // 嘉宾
 import guohanjun from '../img/guest/guohanjun.png';
@@ -212,7 +212,7 @@ export default {
       ],
     },
   },
-  liver,
+  live,
   previous: {
     title: '精彩回顾',
     content: [

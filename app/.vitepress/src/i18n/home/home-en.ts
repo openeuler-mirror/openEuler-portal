@@ -569,7 +569,7 @@ export default {
       IMG_DARK: summitDark,
       IMG_DARK_HOVER: summitDarkHover,
       DSSCRIPTIVE: '2022 OpenAtom Global Open Source Summit',
-      LINK: 'https://openatom.cn/summit',
+      LINK: 'https://legacy.openatom.org/summit',
     },
   ],
   IMG_CAROUSE: {

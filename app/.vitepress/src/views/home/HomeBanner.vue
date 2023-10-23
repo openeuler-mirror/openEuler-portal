@@ -58,7 +58,7 @@ const jumpTo = (item: any) => {
       clickable: true,
     }"
     :autoplay="{
-      delay: 5000,
+      delay: 50000,
       disableOnInteraction: false,
     }"
     :navigation="true"
@@ -158,10 +158,16 @@ html[lang='zh'] {
     display: none;
   }
 }
-.whitepaper {
-  // .o-button {
-  //   margin-top: 50px;
-  // }
+#summit {
+  @media screen and (max-width: 768px) {
+    .banner-panel-content {
+      padding-bottom: 28px;
+      justify-content: flex-end;
+      .action {
+        display: none;
+      }
+    }
+  }
 }
 #euler-sky {
   @media screen and (max-width: 768px) {
