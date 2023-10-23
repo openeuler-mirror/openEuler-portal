@@ -1,15 +1,15 @@
 [
     {
-        "osv_name": "江苏润和软件股份有限公司",
-        "os_version": "HopeOS-V22-x86_64-dvd.iso",
+        "osv_name": "中科海微（北京）科技有限公司",
+        "os_version": "SeawayEdge-v1.00-LTS-x86_64-dvd.iso",
         "arch": "x86_64",
-        "checksum": "710da532c3a9c1e08bcfc8b2593bfb40",
+        "checksum": "05d1fc7b16f6c19164a9764f5d50465e",
         "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "http://www.hoperun.com/",
-        "friendly_link": "http://www.hoperun.com/",
+        "os_download_link": "https://new.haiwei.tech:27140/down/UT2xMwv4ovUU.iso",
+        "friendly_link": "http://www.haiwei.tech/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/10/18",
+        "date": "2023/10/23",
         "details": "详细信息",
         "tools_result": [
             {
@@ -72,16 +72,16 @@
         ]
     },
     {
-        "osv_name": "江苏润和软件股份有限公司",
-        "os_version": "HopeOS-V22-aarch64-dvd.iso",
+        "osv_name": "湖南麒麟信安科技股份有限公司",
+        "os_version": "KylinSec-Server-3.5.2-aarch64-dvd.iso",
         "arch": "aarch64",
-        "checksum": "686a6b8bd10b3fbd82b78dde873ea6ca",
+        "checksum": "c4bfc3ee6d4ac888dc2f3c52c27563a7",
         "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "http://www.hoperun.com/",
-        "friendly_link": "http://www.hoperun.com/",
+        "os_download_link": "https://www.kylinsec.com.cn/versionDownload",
+        "friendly_link": "https://www.kylinsec.com.cn/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/10/18",
+        "date": "2023/10/23",
         "details": "详细信息",
         "tools_result": [
             {
@@ -144,304 +144,16 @@
         ]
     },
     {
-        "osv_name": "恒安嘉新（北京）科技股份公司",
-        "os_version": "EversecOS-3.1-oe22.03-x86_64.iso",
+        "osv_name": "湖南麒麟信安科技股份有限公司",
+        "os_version": "KylinSec-Server-3.5.2-x86_64-dvd.iso",
         "arch": "x86_64",
-        "checksum": "8cb06d28ce66a3f38bf532be6d939153",
+        "checksum": "b844138e627601fc0e48c2e399b4bee5",
         "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "http://www.eversec.com.cn/",
-        "friendly_link": "http://www.eversec.com.cn/",
+        "os_download_link": "https://www.kylinsec.com.cn/versionDownload",
+        "friendly_link": "https://www.kylinsec.com.cn/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/10/18",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "浪潮云信息技术股份公司",
-        "os_version": "InLinux23.12-eu-AMD64-server.ISO",
-        "arch": "x86_64",
-        "checksum": "c0d3d8b6dfd33fbe8f7ed62662bbfdab",
-        "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://cloud.inspur.com/",
-        "friendly_link": "https://cloud.inspur.com/",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/10/18",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "浪潮云信息技术股份公司",
-        "os_version": "InLinux23.12-eu-ARM64-server.ISO",
-        "arch": "aarch64",
-        "checksum": "0b33481d6923fb0a802e482e2a274689",
-        "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://cloud.inspur.com/",
-        "friendly_link": "https://cloud.inspur.com/",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/10/18",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "福建美亚国云智能装备有限公司",
-        "os_version": "GUOYUNOS-2203-LTS-x86_64-dvd.ISO",
-        "arch": "x86_64",
-        "checksum": "d92ddd5740ed36051064bdfb2dfe5c49",
-        "base_openeuler_version": "openEuler 22.03 LTS",
-        "os_download_link": "https://www.guo-yun.cn",
-        "friendly_link": "https://www.guo-yun.cn",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/10/18",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "福建美亚国云智能装备有限公司",
-        "os_version": "GUOYUNOS-22.03-LTS-aarch64-dvd.iso",
-        "arch": "aarch64",
-        "checksum": "f3f4ce99e2bc10b00fc3055f2cee2971",
-        "base_openeuler_version": "openEuler 22.03 LTS",
-        "os_download_link": "https://www.guo-yun.cn",
-        "friendly_link": "https://www.guo-yun.cn",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/10/18",
+        "date": "2023/10/23",
         "details": "详细信息",
         "tools_result": [
             {
