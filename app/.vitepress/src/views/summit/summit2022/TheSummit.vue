@@ -176,7 +176,7 @@ const summitData: any = {
     '数字经济成为全球经济增长的主引擎，数字经济的快速发展，带来数字化、智能化的巨大发展机遇。操作系统作为数字基础设施的底座，已经成为推动产业数字化、智能化发展的核心力量。操作系统产业峰会2022旨在聚集全产业链力量，聚焦基础软件核心能力构建，引领基础软件持续创新，加快实现高水平科技自立自强。',
     'openEuler Summit 是由欧拉开源社区发起并举办的年度开源操作系统峰会。openEuler专注核心技术和全场景能力创新，构建多样性计算支持最佳的基础软件能力。充分释放开源协作的创新活力，通过开源开放，不断探索科技创新的边界，驱动物理世界与数字世界的深度融合。openEuler与社区伙伴持续构建自循环、自发展的上下游产业链。通过商业验证，提升市场占有率，成为数字基础设施的坚实底座。社区贡献者、行业用户、合作伙伴在 openEuler Summit 汇聚，驱动无止境的创新与拓展，闪耀数字时代星辰大海。',
   ],
-  liver: {
+  live: {
     title: '精彩回顾',
     date: ['12月28日', '12月29日'],
     liveData1: [
@@ -2152,12 +2152,12 @@ onMounted(() => {
     <div class="detail">
       <p v-for="item in summitData.detail" :key="item">{{ item }}</p>
     </div>
-    <div class="liver">
-      <h3>{{ summitData.liver.title }}</h3>
+    <div class="live">
+      <h3>{{ summitData.live.title }}</h3>
       <div>
         <OTabs v-model="isLiverShown" class="schedule-tabs">
           <el-tab-pane
-            v-for="(item, index) in summitData.liver.date"
+            v-for="(item, index) in summitData.live.date"
             :key="index"
             :name="index"
           >
@@ -2170,13 +2170,13 @@ onMounted(() => {
           <ClientOnly>
             <SummitLive
               v-if="isLiverShown === 0"
-              :live-data="summitData.liver.liveData1"
+              :live-data="summitData.live.liveData1"
               class-name="odd2022"
               class="summit-kv-box"
             />
             <SummitLive
               v-if="isLiverShown === 1"
-              :live-data="summitData.liver.liveData2"
+              :live-data="summitData.live.liveData2"
               class-name="odd2022"
               class="summit-box"
             />
@@ -2369,7 +2369,7 @@ onMounted(() => {
     }
   }
 }
-.liver {
+.live {
   margin-top: var(--o-spacing-h1);
   @media (max-width: 767px) {
     margin-top: var(--o-spacing-h2);

@@ -92,14 +92,14 @@ onMounted(() => {
     <div class="detail">
       <p v-for="item in summitData.detail" :key="item">{{ item }}</p>
     </div>
-    <div class="liver">
-      <h3 class="title-bar">{{ summitData.liver.title }}</h3>
+    <div class="live">
+      <h3 class="title-bar">{{ summitData.live.title }}</h3>
       <ClientOnly>
         <SummitLive
           v-if="isLiverShow === 0"
-          :live-data="summitData.liver.liveData1"
+          :live-data="summitData.live.liveData1"
           class-name="odd2022"
-          class="liver-box"
+          class="live-box"
         />
       </ClientOnly>
     </div>
@@ -229,7 +229,7 @@ onMounted(() => {
     }
   }
 }
-.liver,
+.live,
 .guest {
   margin-top: var(--o-spacing-h1);
   @media (max-width: 767px) {
@@ -259,7 +259,7 @@ onMounted(() => {
       margin-top: var(--o-spacing-h5);
     }
   }
-  .liver-box {
+  .live-box {
     margin-top: var(--o-spacing-h2);
     @media (max-width: 767px) {
       margin-top: var(--o-spacing-h4);
