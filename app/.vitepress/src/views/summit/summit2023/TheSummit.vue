@@ -109,11 +109,6 @@ const liveImg = computed(() =>
             the OpenAtom Foundation.
           </li>
           <li>
-            openEuler is an open source platform developed and operated by the
-            OpenAtom Foundation. The visa invitation letter will be processed by
-            the OpenAtom Foundation.
-          </li>
-          <li>
             Provision of a visa letter by the OpenAtom Foundation does not
             guarantee visa approval, which is made at the sole discretion of the
             government of the event's host country.
@@ -124,11 +119,6 @@ const liveImg = computed(() =>
             OpenAtom Foundation cannot guarantee that letters will be provided
             in response to requests submitted fewer than two weeks prior to an
             event, though we will make every effort to process them.
-          </li>
-          <li>
-            You must be registered for the event before requesting a visa
-            letter. Please note: it can take up to an hour for our registration
-            system and visa letter system to sync.
           </li>
           <li>
             The OpenAtom Foundation processes most visa letter requests in (3)
