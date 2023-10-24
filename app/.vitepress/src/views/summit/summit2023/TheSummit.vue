@@ -175,7 +175,7 @@ const liveImg = computed(() =>
               href="/en/other/privacy/"
               target="_blank"
               rel="noopener noreferrer"
-              >openEuler’s Privacy Policy</a
+              >openEuler’s Privacy Policy.</a
             >
           </p>
         </div>
@@ -201,6 +201,7 @@ const liveImg = computed(() =>
   color: var(--o-color-text1);
   line-height: var(--o-line-height-h6);
   font-size: var(--o-font-size-h6);
+  word-break: keep-all;
   @include mobile {
     line-height: var(--o-line-height-text);
     font-size: var(--o-font-size-text);
@@ -331,7 +332,7 @@ const liveImg = computed(() =>
     max-width: 270px;
     gap: var(--o-spacing-h4);
   }
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     margin-top: 40px;
   }
   .content-item {
@@ -454,10 +455,9 @@ const liveImg = computed(() =>
       padding: 0 16px;
     }
     .el-dialog__footer {
-
       padding-left: 16px;
       padding-right: 16px;
-      @media screen and (max-width:768px) {
+      @media screen and (max-width: 768px) {
         padding-top: 24px;
         padding-bottom: 24px;
       }
