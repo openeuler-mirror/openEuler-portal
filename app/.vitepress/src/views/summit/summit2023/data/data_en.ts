@@ -10,7 +10,7 @@ export default {
     link: '',
     id: '',
     title: ['openEuler Summit 2023'],
-    desc: ['December 15-16, 2023 | Beijing'],
+    desc: ['December 15 – 16, 2023 | Beijing'],
     btn: '',
     targetTap: 1,
   },
