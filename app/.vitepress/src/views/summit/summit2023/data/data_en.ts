@@ -9,7 +9,7 @@ export default {
     moBanner: banner_mo,
     link: '',
     id: '',
-    title: ['openEuler Summit 2023'],
+    title: ['Operating System Conference +', 'openEuler Summit 2023'],
     desc: ['December 15 – 16, 2023 | Beijing'],
     btn: '',
     targetTap: 1,

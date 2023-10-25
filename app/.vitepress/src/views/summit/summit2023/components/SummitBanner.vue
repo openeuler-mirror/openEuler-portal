@@ -25,9 +25,7 @@ const windowWidth = ref(useWindowResize());
 <template>
   <div class="home-banner">
     <div class="banner-panel">
-      <div
-        class="banner-panel-cover"
-      >
+      <div class="banner-panel-cover">
         <div
           v-if="bannerData?.title?.length"
           class="banner-panel-content flex-end"
@@ -231,6 +229,26 @@ html[lang='zh'] {
   }
   @media screen and (max-width: 824px) {
     height: 300px;
+  }
+}
+html[lang='en'] {
+  .home-banner {
+    .banner-panel {
+      .flex-end {
+        .title {
+          font-size: var(--o-font-size-h2);
+          line-height: var(--o-line-height-h2);
+          @media screen and (max-width: 824px) {
+            font-size: var(--o-font-size-h5);
+            line-height: var(--o-line-height-h5);
+          }
+        }
+        @media screen and (max-width: 768px) {
+          padding-bottom: 6px;
+          justify-content: flex-end;
+        }
+      }
+    }
   }
 }
 </style>

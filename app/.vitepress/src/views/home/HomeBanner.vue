@@ -58,7 +58,7 @@ const jumpTo = (item: any) => {
       clickable: true,
     }"
     :autoplay="{
-      delay: 50000,
+      delay: 5000,
       disableOnInteraction: false,
     }"
     :navigation="true"
@@ -165,6 +165,23 @@ html[lang='zh'] {
       justify-content: flex-end;
       .action {
         display: none;
+      }
+    }
+  }
+}
+html[lang='en'] {
+  #summit {
+    .title {
+      line-height: var(--o-line-height-h2);
+      font-size: var(--o-font-size-h2);
+    }
+    @media screen and (max-width: 768px) {
+      .banner-panel-content {
+        padding-bottom: 6px;
+        .title {
+          line-height: var(--o-line-height-h5);
+          font-size: var(--o-font-size-h5);
+        }
       }
     }
   }

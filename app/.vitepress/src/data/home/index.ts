@@ -73,7 +73,7 @@ export default {
         moBanner: summit_mo,
         link: '/en/interaction/summit-list/summit2023/',
         id: 'summit',
-        title: ['openEuler Summit 2023'],
+        title: ['Operating System Conference +', 'openEuler Summit 2023'],
         desc: ['December 15 – 16, 2023 | Beijing'],
         btn: 'View More',
         targetTap: 1,
