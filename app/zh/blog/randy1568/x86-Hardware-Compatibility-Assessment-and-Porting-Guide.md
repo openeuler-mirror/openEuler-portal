@@ -18,14 +18,7 @@ summary: Just about everything you'll need to  evaluate the compatibility of X86
 
 ## 硬件
 
-硬件如下表所示
 
-| 项目   | 说明                                             |
-| ------ | ------------------------------------------------ |
-| 服务器 | 2288H V5                                         |
-| CPU    | Inter(R) Xeon(R) Gold 6266C CPU @ 3.00GHz        |
-| NIC卡  | CX5（CX5网卡是mellanox公司生产的一款网卡）       |
-| RIAD卡 | LTS SAS 3108（3108raid卡是华为生产的一款raid卡） |
 
 ## 操作系统
 
