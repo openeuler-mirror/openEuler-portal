@@ -293,6 +293,20 @@ export default {
             ARCH: 'ARM32',
             SCENARIO: 'EMBEDDED',
           },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'riscv64',
+                SIZE: '	2.9 GiB',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/riscv64/openEuler-23.09-RISC-V-qemu-riscv64.repo.tar.gz',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'RISC-V',
+            SCENARIO: 'SERVER',
+          },
         ],
         PLANNED_EOL: '2024/03',
       },
@@ -2596,6 +2610,20 @@ export default {
             ],
             ARCH: 'ARM32',
             SCENARIO: 'EMBEDDED',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'riscv64',
+                SIZE: '2.9 GiB',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-23.09/ISO/riscv64/openEuler-23.09-RISC-V-qemu-riscv64.repo.tar.gz',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'RISC-V',
+            SCENARIO: 'SERVER',
           },
         ],
         PLANNED_EOL: '2024/03',
