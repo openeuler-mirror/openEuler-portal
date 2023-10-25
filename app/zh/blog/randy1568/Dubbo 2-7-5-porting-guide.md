@@ -35,12 +35,6 @@ Dubbo 是阿里巴巴公司开源的一个高性能优秀的服务框架，使�
 
 硬件要求如[表 1](https://support.huaweicloud.com/prtg-dubbo-kunpengwebs/kunpengdubbo268_02_0002.html#kunpengdubbo268_02_0002__d0e90)所示。
 
-| 项目 | 说明            |
-| ---- | --------------- |
-| CPU  | 鲲鹏 920 处理器 |
-| 网络 | 可访问外网      |
-| 存储 | 无要求          |
-| 内存 | 无要求          |
 
 ### 操作系统要求
 

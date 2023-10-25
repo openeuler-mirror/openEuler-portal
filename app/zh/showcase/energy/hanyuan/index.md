@@ -34,7 +34,6 @@ img: /category/showcase/energy.png
 
 -   瀚元边缘服务器 HYG800 基于openEuler的版本 openEuler22.03-LTS-SP1 ；
 
--   硬件架构：RK3588SOC，4GB内存、32GBEMMC存储，具备升级到8GB/16GB，内存、64GB/128GBEMMC存储的能力，2路RS485、2路RS232、4路DI和2路DO；
 
 -   系统架构：
 

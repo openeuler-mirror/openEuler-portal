@@ -18,7 +18,6 @@ img: /category/showcase/energy.png
 <div class="case-img"><img src="./e1.jpg"/></div>
 
 - 操作系统：麒麟信安操作系统（欧拉版）
-- 硬件平台：TaiShan 200 鲲鹏 920 服务器
 - 业务系统：智能电网调度 D5000 系统
 - 核心指标：安全身份认证、三权分立、安全
 - 探针、定制化裁剪、集群 HA、存储多路径
