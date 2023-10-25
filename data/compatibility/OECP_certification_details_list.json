@@ -1,87 +1,15 @@
 [
     {
-        "osv_name": "中科海微（北京）科技有限公司",
-        "os_version": "SeawayEdge-v1.00-LTS-x86_64-dvd.iso",
-        "arch": "x86_64",
-        "checksum": "05d1fc7b16f6c19164a9764f5d50465e",
-        "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://new.haiwei.tech:27140/down/UT2xMwv4ovUU.iso",
-        "friendly_link": "http://www.haiwei.tech/",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/10/23",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "湖南麒麟信安科技股份有限公司",
-        "os_version": "KylinSec-Server-3.5.2-aarch64-dvd.iso",
+        "osv_name": "华为技术有限公司",
+        "os_version": "EulerOS-V2.0SP11-aarch64-dvd.iso",
         "arch": "aarch64",
-        "checksum": "c4bfc3ee6d4ac888dc2f3c52c27563a7",
-        "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://www.kylinsec.com.cn/versionDownload",
-        "friendly_link": "https://www.kylinsec.com.cn/",
+        "checksum": "c3fe6fd4160cef34a97c291d249f7ef8",
+        "base_openeuler_version": "openEuler 22.03 LTS",
+        "os_download_link": "http://www.huawei.com/",
+        "friendly_link": "http://www.huawei.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/10/23",
+        "date": "2023/7/13",
         "details": "详细信息",
         "tools_result": [
             {
@@ -144,16 +72,16 @@
         ]
     },
     {
-        "osv_name": "湖南麒麟信安科技股份有限公司",
-        "os_version": "KylinSec-Server-3.5.2-x86_64-dvd.iso",
+        "osv_name": "华为技术有限公司",
+        "os_version": "EulerOS-V2.0SP11-x86_64-dvd.iso",
         "arch": "x86_64",
-        "checksum": "b844138e627601fc0e48c2e399b4bee5",
-        "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "https://www.kylinsec.com.cn/versionDownload",
-        "friendly_link": "https://www.kylinsec.com.cn/",
+        "checksum": "9e54084bc31167dcde8bd2183445d146",
+        "base_openeuler_version": "openEuler 22.03 LTS",
+        "os_download_link": "http://www.huawei.com/",
+        "friendly_link": "http://www.huawei.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/10/23",
+        "date": "2023/7/13",
         "details": "详细信息",
         "tools_result": [
             {
