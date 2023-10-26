@@ -1,270 +1,354 @@
 ---
-title: 在 QEMU 环境中启动 openEuler for RISC-V 
-date: '2023-09-26'
+title: 通过 QEMU 仿真 RISC-V 环境并启动 openEuler RISC-V 系统
+date: '2023-10-26'
 category: blog
 tags:
   - RISC-V
   - QEMU
 sig: RISC-V
-archives: '2023-09'
+archives: '2023-10'
 author:
   - openEuler Blog Maintainer
 summary: Steps to start openEuler for RISC-V in QEMU environment.
 ---
 
-# QEMU环境下启动镜像
+## 安装 QEMU
 
-## 环境要求
-- 硬件要求：x86_64架构、AArch64架构
-- 软件要求：
-  - 操作系统： 建议 openEuler 22.03 及以上版本。（原则上任何支持QEMU 5.0 及以上版本的linux发行版均可。）
-  - QEMU： QEMU 5.0 以上。
+### 系统环境
+
+目前该方案测试过的环境包括 WSL2 (Ubuntu 20.04.4 LTS and Ubuntu 22.04.1 LTS) 和 Ubuntu 22.04.1 live-server LTS。
 
 ## 安装支持 RISC-V 架构的 QEMU 模拟器
 
-### 使用发行版提供的预编译软件包安装QEMU
+安装发行版提供的 `qemu-system-riscv64` 软件包。截止本文档编写时，openEuler 23.09 x86_64 提供 QEMU 6.2.0 (qemu-system-riscv-6.2.0-80.oe2309.x86_64)：
 
-一般来说，常见 GNU/Linux 发行版软件源中都提供了包含 `qemu-system-riscv64` 的软件包。各发行版间以及其各个大小版本间对应的包名可能略有不同，详情可移步 [pkgs.org](https://pkgs.org) 进行查询。
+```
+dnf install -y qemu-system-riscv
+```
 
-> 通常可以通过 `lsb_release -a` 来查询自己正在使用哪个发行版和具体的大版本 (或与之对应的 codename)。
+由于 QEMU 8.0 及更新版本提供了大量针对 RISC-V 的修复和更新，我们推荐使用 QEMU 8.0 或更新版本以获得更佳体验。下面以 QEMU 8.1.2 为例。
 
-- Ubuntu :  `$ sudo apt install qemu-system-misc`
-  - 注: 20.04 及以前的版本过旧
-- Debian : `$ sudo apt install qemu-system-misc`
-  - 注: 10 及以前的版本过旧
-- openEuler : `$ sudo dnf install qemu-system-riscv`
-  - 注: 21.09 及以前的版本过旧
-- Fedora : `$ sudo dnf install qemu-system-riscv`
-- Arch Linux : `$ sudo pacman -Syu qemu-full`
-- openSUSE Tumbleweed : `$ sudo dnf install qemu`
+### 手动编译安装
 
-如果官方仓库 (及各种 **您信任的** 第三方仓库) 中未收录 QEMU 或版本过旧 (低于 5.0)，或者发行版提供的软件包构建时未开启本项目所需的 slirp 网络模块（如运行时出现报错：`network backend 'user' is not compiled into this binary` ），请移步下一部分从 [QEMU 项目主页](https://www.qemu.org/) 获取源代码进行手动构建。
+由于自带的包常常过旧，若软件包过旧，使用以下方案编译和安装。
 
-> QEMU 从 7.2.0 版本之后[移除了 slirp 子模块](https://wiki.qemu.org/ChangeLog/7.2#Removal_of_the_%22slirp%22_submodule_(affects_%22-netdev_user%22))，会影响用户模式的网络功能，需要提前加上依赖包和配置选项。
+```bash
+wget https://download.qemu.org/qemu-8.1.2.tar.xz
+tar -xvf qemu-8.1.2.tar.xz
+cd qemu-8.1.2
+mkdir res
+cd res
+sudo apt install libspice-protocol-dev libepoxy-dev libgtk-3-dev libspice-server-dev build-essential autoconf automake autotools-dev pkg-config bc curl gawk git bison flex texinfo gperf libtool patchutils mingw-w64 libmpc-dev libmpfr-dev libgmp-dev libexpat-dev libfdt-dev zlib1g-dev libglib2.0-dev libpixman-1-dev libncurses5-dev libncursesw5-dev meson libvirglrenderer-dev libsdl2-dev -y
+../configure --target-list=riscv64-softmmu,riscv64-linux-user --prefix=/usr/local/bin/qemu-riscv64 --enable-slirp
+make -j$(nproc)
+sudo make install
+```
 
-### 手动编译安装QEMU
+上述指令会将 QEMU 安装到 `/usr/local/bin/qemu-riscv64`。将 `/usr/local/bin/qemu-riscv64/bin` 添加至 `$PATH` 即可使用。
 
-> 建议优先考虑发行版提供的软件包或在有能力的情况下自行打包，不鼓励非必要情况的编译安装。
-> 下述内容以 Ubuntu 为例展示手动编译安装QEMU过程，供参考。
+如需在其他操作系统下，包括 openEuler 下进行编译安装，请参考 [QEMU 官方文档](https://wiki.qemu.org/Hosts/Linux)。
 
-1. 安装必要的构建工具。
-    ```
-    $ sudo apt install build-essential git libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev ninja-build libslirp-dev
-    ```
+openEuler 编译所需依赖包可参考 RHEL / CentOS，如下：
 
-2. 创建 /usr/local 下的目标目录。
-    ```
-    $ sudo mkdir -p /usr/local/bin/qemu-riscv64
-    ```
+```bash
+sudo dnf install -y git glib2-devel libfdt-devel pixman-devel zlib-devel bzip2 ninja-build python3 \
+                libaio-devel libcap-ng-devel libiscsi-devel capstone-devel \
+                gtk3-devel vte291-devel ncurses-devel \
+                libseccomp-devel nettle-devel libattr-devel libjpeg-devel \
+                brlapi-devel libgcrypt-devel lzo-devel snappy-devel \
+                librdmacm-devel libibverbs-devel cyrus-sasl-devel libpng-devel \
+                libuuid-devel pulseaudio-libs-devel curl-devel libssh-devel \
+                systemtap-sdt-devel libusbx-devel
+curl -LO https://download.qemu.org/qemu-8.1.2.tar.xz
+tar -xvf qemu-8.1.2.tar.xz
+cd qemu-8.1.2
+mkdir res
+cd res
+../configure --target-list=riscv64-softmmu,riscv64-linux-user --prefix=/usr/local/bin/qemu-riscv64
+make -j$(nproc)
+sudo make install
+```
 
-3. 下载 QEMU 源码包 (此处以 7.2 版本为例)。
-    ```
-    $ wget https://download.qemu.org/qemu-7.2.0.tar.xz
-    ```
+## 准备 openEuler RISC-V 磁盘映像
 
-4. 解压源码包并切换目录。
-    ```
-    $ tar xvJf qemu-7.2.0.tar.xz && cd qemu-7.2.0
-    ```
+### 下载磁盘映像
 
-5. 配置编译选项。
-    ```
-    $ sudo ./configure --enable-slirp --target-list=riscv64-softmmu,riscv64-linux-user --prefix=/usr/local/bin/qemu-riscv64
-    ```
-    >`riscv64-softmmu` 为系统模式，`riscv64-linux-user` 为用户模式。为了测试方便建议两个都编译，以免后续需要时重复编译。
+需要下载启动固件 (`fw_payload_oe_uboot_2304.bin`)，磁盘映像(`openEuler-23.09-RISC-V-qemu-riscv64.qcow2.xz`)和启动脚本(`start_vm.sh`)。
 
-6. 编译安装。
-    ```
-    $ sudo make && sudo make install
-    ```
+### 下载目录
 
-7. 检查是否安装成功。
-    ```
-    $ qemu-system-riscv64 --version
-    ```
-    如正常输出版本信息则表示 QEMU 成功安装并正常工作。
+目前的构建位于 [openEuler Repo](https://repo.openeuler.org/openEuler-23.09/virtual_machine_img/riscv64/) 中。您也可以访问 [openEuler 官网](https://www.openeuler.org/zh/download/)，从其他镜像源获取镜像。
+
+### 内容说明
+
+- `fw_payload_oe_uboot_2304.bin`: 启动固件
+- `openEuler-23.09-RISC-V-qemu-riscv64.qcow2.xz`: openEuler RISC-V QEMU 虚拟机磁盘映像压缩包
+- `openEuler-23.09-RISC-V-qemu-riscv64.qcow2.xz.sha256sum`: openEuler RISC-V QEMU 虚拟机磁盘映像压缩包的校验。使用 `sha256sum -c openEuler-23.09-RISC-V-qemu-riscv64.qcow2.xz.sha256sum` 校验。
+- `start_vm.sh`: 官方虚拟机启动脚本
+
+### [可选] 配置 copy-on-write（COW）磁盘
+
+> 写时复制（copy-on-write，缩写COW）技术不会对原始的映像文件做更改，变化的部分写在另外的映像文件中，这种特性在 QEMU 中只有 QCOW 格式支持，多个磁盘映像可以指向同一映像同时测试多个配置, 而不会破坏原映像。
+
+#### 创建新映像
+
+使用如下的命令创建新的映像，并在下方启动虚拟机时使用新映像。假设原映像为 `openEuler-23.09-RISC-V-qemu-riscv64.qcow2`，新映像为 `test.qcow2`。
+
+```bash
+qemu-img create -o backing_file=openEuler-23.09-RISC-V-qemu-riscv64.qcow2,backing_fmt=qcow2 -f qcow2 test.qcow2
+```
+
+#### 查看映像信息
+
+```bash
+qemu-img info --backing-chain test.qcow2
+```
+
+#### 修改基础映像位置
+
+使用如下的命令修改基础映像位置。假设新的基础映像为 `another.qcow2`，欲修改映像为 `test.qcow2`。
+
+```bash
+qemu-img rebase -b another.qcow2 test.qcow2
+```
+
+#### 合并映像
+
+将修改后的镜像合并到原来的镜像。假设新映像为 `test.qcow2`。
+
+```bash
+qemu-img commit test.qcow2
+```
+
+#### 扩容根分区
+
+为了扩大根分区以获得更大的可使用空间，按照如下操作进行。
+
+扩大磁盘镜像。
+
+```bash
+qemu-img resize test.qcow2 +100G
+```
+
+输出
+
+```text
+Image resized.
+```
+
+启动虚拟机，使用下列指令检查磁盘大小。
+
+```bash
+lsblk
+```
+
+列出分区情况。
+
+```bash
+fdisk -l
+```
+
+修改根分区。
+
+```bash
+fdisk /dev/vda
+Welcome to fdisk (util-linux 2.35.2).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
 
 
-## 准备openEuler for RISC-V 镜像
-1. 下载openEuler for RISC-V 镜像文件。
-   
-    QEMU 镜像目录下文件介绍：
-    - `openEuler-23.09-base-qemu-riscv64.qcow2.zst` 基础镜像的根文件系统。
-    - `openEuler-23.09-xfce-qemu-riscv64.qcow2.zst` 带有 xfce 桌面镜像的根文件系统。
-    - `fw_payload_oe_uboot.bin` 启动用内核。
-    - `start_vm.sh` 启动不带有桌面的镜像的根文件系统用脚本。
-    - `start_vm_xfce.sh` 启动带有 xfce 桌面镜像的根文件系统用脚本。
+Command (m for help): p # 输出分区情况
+Disk /dev/vda: 70 GiB, 75161927680 bytes, 146800640 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x247032e6
 
-2. 确认镜像文件。
-   
-   确认镜像目录内包含 `fw_payload_oe_uboot.bin`、磁盘映像压缩包、启动脚本 `start_vm.sh`和大于 5 GiB 的剩余可用空间。
+Device     Boot   Start      End  Sectors Size Id Type
+/dev/vda1          2048  4194303  4192256   2G  e W95 FAT16 (LBA)
+/dev/vda2       4194304 83886079 79691776  38G 83 Linux
 
-3. 解压映像压缩包或使用解压工具解压磁盘映像。
-   
-   使用下面的命令解压缩：
-   ```bash
-    sudo apt install zstd -y
-    unzstd openEuler-23.09-base-qemu-riscv64.qcow2.zst
-    或
-    zstd -d openEuler-23.09-base-qemu-riscv64.qcow2.zst
-   ```
-4. 镜像登录用户名和密码。
-   
-   - `root` 的用户密码是 `openEuler12#$`。
-   - 默认用户 `openeuler` 的用户密码是 `openEuler12#$`。
+Command (m for help): d # 删除原有分区
+Partition number (1,2, default 2): 2
 
-## 使用QEMU启动openEuler for RISC-V 镜像
-1. [可选]修改脚本，调整启动参数。
-   
-    针对`start_vm.sh`或`start_vm_xfce.sh`启动脚本中的参数，可以根据实际情况和需求进行调整：
-   - `vcpu`       为 qemu 运行线程数，可随需要调整，建议 vcpu 值小于或等于宿主机核心值。
-   - `memory`     为虚拟机内存大小，可随需要调整。
-   - `drive`      为虚拟磁盘路径，可随需要调整。
-   - `fw`         为启动内核，默认为fw_payload_oe_uboot.bin 文件，不需要修改。
-   - `ssh_port`   为转发的 SSH 端口，默认为 12055，可按需调整。
+Partition 2 has been deleted.
 
+Command (m for help): n # 新建分区
+Partition type
+   p   primary (1 primary, 0 extended, 3 free)
+   e   extended (container for logical partitions)
+Select (default p): p # 选择主分区
+Partition number (2-4, default 2): 2
+First sector (4194304-146800639, default 4194304): # 此处和上文的 /dev/vda2 的起始块应当一致
+Last sector, +/-sectors or +/-size{K,M,G,T,P} (4194304-146800639, default 146800639): #保持默认直接分配到最尾端
 
-2. 执行脚本启动QEMU虚拟机。
-   
-   执行启动脚本 `bash start_vm.sh` 启动虚拟机。
+Created a new partition 2 of type 'Linux' and of size 68 GiB.
+Partition #2 contains a ext4 signature.Do you want to remove the signature? [Y]es/[N]o: n
 
+Command (m for help): p #再次检查
 
-## 使用openEuler for RISC-V 系统
-### 直接登录使用
+Disk /dev/vda: 70 GiB, 75161927680 bytes, 146800640 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x247032e6
 
-可以直接在QEMU窗口中使用和体验 openEuler for RISC-V 虚拟机。
+Device     Boot   Start       End   Sectors Size Id Type
+/dev/vda1          2048   4194303   4192256   2G  e W95 FAT16 (LBA)
+/dev/vda2       4194304 146800639 142606336  68G 83 Linux
+
+Command (m for help): w # 写入到磁盘
+The partition table has been altered.
+Syncing disks.
+```
+
+更新磁盘信息。
+
+```bash
+resize2fs /dev/vda2
+```
+
+## 启动 openEuler RISC-V 虚拟机
+
+### 启动虚拟机
+
+- 确认当前目录内包含 `fw_payload_oe_uboot_2304.bin`，磁盘映像压缩包，以及启动脚本。
+- 解压映像压缩包 `xz -dk openEuler-23.09-RISC-V-qemu-riscv64.qcow2.xz`
+- 调整启动参数
+- 执行启动脚本 `$ bash start_vm.sh`
+
+### [可选] 启动参数调整
+
+- `vcpu` 为 QEMU 运行线程数，与 CPU 核数没有严格对应。当设定的 `vcpu` 值大于宿主机核心值时，可能导致运行阻塞和速度严重降低。默认为 `4`。
+- `memory` 为虚拟机内存大小，可随需要调整。默认为 `2`。
+- `drive` 为虚拟磁盘路径，如果在上文中配置了 COW 映像，此处填写创建的新映像。
+- `fw` 为 U-Boot 镜像路径。
+- `ssh_port` 为转发的 SSH 端口，默认为 `12055`。设定为空以关闭该功能。
+
+## 登录虚拟机
+
+脚本提供了 SSH 登录支持。
+
+如果这是暴露在外网的虚拟机，请在登录成功之后立即修改 root 用户密码。
 
 ### SSH 登录
 
-在宿主机的终端中输入 `ssh -p <ssh_port> root@localhost`访问 openEuler for RISC-V 虚拟机。
-按照提示输入 openEuler for RISC-V 虚拟机的用户名和密码即可完成连接。接下来，你就可以继续输入linux 命令来操作 openEuler RISC-V 虚拟机系统了。
+Secure Shell（安全外壳协议，简称 SSH）是一种加密的网络传输协议，可在不安全的网络中为网络服务提供安全的传输环境。SSH 通过在网络中创建安全隧道来实现SSH客户端与服务器之间的连接。SSH 最常见的用途是远程登录系统，人们通常利用SSH来传输命令行界面和远程执行命令。SSH 使用频率最高的场合是类 Unix 系统，但是 Windows 操作系统也能有限度地使用 SSH。2015 年，微软宣布将在未来的操作系统中提供原生SSH协议支持，Windows 10 1803 及更新版本中已提供 OpenSSH 客户端。
 
+- 用户名: `root` 或 `openeuler`
+- 默认密码: `openEuler12#$`
+- 登录方式: 参见脚本提示 (或使用您偏好的 ssh 客户端)
+
+登录成功之后，可以看到如下的信息：
+
+```bash
+Authorized users only. All activities may be monitored and reported.
+
+Authorized users only. All activities may be monitored and reported.
+Last login: Sun Oct 15 17:19:52 2023 from 10.0.2.2
+
+
+Welcome to 6.4.0-10.1.0.20.oe2309.riscv64
+
+System information as of time:  Sun Oct 15 19:40:07 CST 2023
+
+System load:    0.47
+Processes:      161
+Memory used:    .7%
+Swap used:      0.0%
+Usage On:       11%
+IP address:     10.0.2.15
+Users online:   1
+
+
+[root@openeuler ~]#
+```
 
 ### VNC 登录
 
-VNC方式支持图像传输，可以远程访问 openEuler 虚机桌面，但是没有声音，受 QEMU 原生支持。拷贝启动脚本保存为start_vm.sh文件。
-启动脚本如下：
-```bash
-#!/bin/bash
+这是一个类似于远程操作真机的方式，但是没有声音，受 QEMU 原生支持。
 
-# The script is created for starting a riscv64 qemu virtual machine with specific parameters
-
-## Configuration
-vcpu=8 # CPU 核心数。
-memory=8 # 运行存储大小，单位 GiB。
-memory_append=`expr $memory \* 1024`
-drive="openEuler-23.03-V1-xfce-qemu-preview.qcow2" # 根文件系统路径
-kernel="fw_payload_oe_uboot_2304.bin" # 内核文件路径
-bios="none" # BIOS 文件路径，设置为 none 表示 kernel 已包含相关文件。
-ssh_port=12055 # 控制端口映射：将虚拟机内部的端口 22 映射到外部的 ssh_port。设置为空表示不启用该功能。
-vnc_port=12056 # 控制 VNC 端口。设置为空表示不启用该功能。
-spice_port=12057 # 控制 Cpice 端口。设置为空表示不启用该功能。
-remoteip=localhost # 控制随后显示脚本的本机地址。
-[[ $spice_port ]] && audiobackend="spice" || audiobackend="none" # 当 Spice 启用时，设置音频后端为 spice，否则为 none。可按需改动。
-sleeptime=0 # 启动前等待时间
-
-cmd="qemu-system-riscv64 \
-  -nographic -machine virt \
-  -smp "$vcpu" -m "$memory"G \
-  -audiodev "$audiobackend",id=snd0 \
-  -kernel "$kernel" \
-  -bios "$bios" \
-  -drive file="$drive",format=qcow2,id=hd0 \
-  -object rng-random,filename=/dev/urandom,id=rng0 \
-  -device virtio-vga \
-  -device virtio-rng-device,rng=rng0 \
-  -device virtio-blk-device,drive=hd0 \
-  -device virtio-net-device,netdev=usernet \
-  -device qemu-xhci -usb -device usb-kbd -device usb-tablet -device usb-audio,audiodev=snd0 \
-  -append 'root=/dev/vda1 rw console=ttyS0 swiotlb=1 loglevel=3 systemd.default_timeout_start_sec=600 selinux=0 highres=off mem="$memory_append"M earlycon' "
-
-echo -e "\033[37mUsing the following configuration: \033[0m"
-echo ""
-echo -e "\033[37mvCPU Cores:      \033[0m \033[34m"$vcpu"\033[0m"
-echo -e "\033[37mMemory:          \033[0m \033[34m"$memory"\033[0m"
-echo -e "\033[37mDisk Path:       \033[0m \033[34m"$drive"\033[0m"
-echo -e "\033[37mKernal Path:     \033[0m \033[34m"$kernel"\033[0m"
-echo -e "\033[37mBIOS Path:       \033[0m \033[34m"$bios"\033[0m"
-
-if [ $ssh_port ]
-then
-echo -e "\033[37mSSH Port:        \033[0m \033[34m"$ssh_port"\033[0m"
-cmd="${cmd} -netdev user,id=usernet,hostfwd=tcp::"$ssh_port"-:22 "
-else
-cmd="${cmd} -netdev user,id=usernet "
-fi
-
-if [ $vnc_port ]
-then
-echo -e "\033[37mVNC Port:        \033[0m \033[34m"$vnc_port"\033[0m"
-cmd="${cmd} -vnc :"$((vnc_port-5900))
-fi
-
-if [ $spice_port ]
-then
-echo -e "\033[37mSPICE Port:      \033[0m \033[34m"$spice_port"\033[0m"
-cmd="${cmd} -device virtio-serial-pci \
--device virtserialport,chardev=spicechannel0,name=com.redhat.spice.0 \
--chardev spicevmc,id=spicechannel0,name=vdagent \
--spice port=${spice_port},disable-ticketing=on"
-fi
-echo ""
-if [ $ssh_port ]
-then
-echo -e "\033[37mUse the following command to connect SSH server:\0\033[0m\033[34m ssh root@"$remoteip" -p "$ssh_port"\033[0m"
-fi
-if [ $vnc_port ]
-then
-echo -e "\033[37mUse the following address to connect VNC server:\0\033[0m\033[34m "$remoteip":"$vnc_port"\033[0m"
-fi
-if [ $spice_port ]
-then
-echo -e "\033[37mUse the following address to connect SPICE server:\0\033[0m\033[34m spice://"$remoteip":"$spice_port"\033[0m"
-fi
-echo ""
-echo -e "\033[37mUsing the following command to start VM: \033[0m"
-echo ""
-echo $cmd
-echo ""
-sleep $sleeptime
-echo -e "\033[37mStarting VM... \033[0m"
-eval $cmd
-echo -e "Exit."
-
-``````
-
+> VNC（Virtual Network Computing），为一种使用 RFB 协议的屏幕画面分享及远程操作软件。此软件借由网络，可发送键盘与鼠标的动作及即时的屏幕画面。
+>
+> VNC 与操作系统无关，因此可跨平台使用，例如可用 Windows 连接到某 Linux 的电脑，反之亦同。甚至在没有安装客户端程序的电脑中，只要有支持 Java 的浏览器，也可使用。
 
 #### 安装 VNC Viewer
 
-点击 [此处](https://www.realvnc.com/en/connect/download/viewer/) 前往下载地址下载安装软件。
+前往 [此处](https://sourceforge.net/projects/tigervnc/files/stable/) 下载 TigerVNC，或前往 [此处](https://www.realvnc.com/en/connect/download/viewer/) 下载 VNC Viewer。
+
+#### 修改启动脚本
+
+在启动脚本 `sleep 2` 行之前中添加如下内容：
+
+```bash
+vnc_port=12056
+echo -e "\033[37mVNC Port:        \033[0m \033[34m"$vnc_port"\033[0m"
+cmd="${cmd} -vnc :"$((vnc_port-5900))
+```
 
 #### 连接到 VNC
 
-在VNC Viewer的输入框中输入VNC Server address并回车即可完成连接操作。
+启动 TigerVNC 或 VNC Viewer，粘贴地址按下回车即可。操作界面和真机类似。
 
+## 修改默认软件源配置
 
-### SPICE 登录
+openEuler 23.09 RISC-V 版本的软件源目前仅包含 [OS] 和 [source] 仓库，而默认配置文件中包含了其他 RISC-V 版本并未提供的仓库。
 
-SPICE登录是一个类似于远程桌面的方式，有声音、共享文件夹、共享剪贴板、共享 USB 设备，受 QEMU 支持。
-采用此种方式也需要修改启动脚本，脚本同VNC模式下一致。
+用户在使用包管理器安装软件包之前，需要手动编辑软件源配置，移除 [OS] 和 [source] 两节之外的内容。
 
-#### 安装 Virt-Viewer
+SSH 或 VNC 连接至虚拟机，使用 root 用户登录（若使用非特权用户登录，需要使用 sudo），在终端中进行如下操作：
 
-点击 [此处](https://virt-manager.org/download/) 前往下载地址，下载 virt-viewer 11.0 。
+### 修改 /etc/yum.repos.d/openEuler.repo
 
-#### 连接到 SPICE
-
-linux客户端：
 ```bash
-sudo apt install virt-viewer            #安装virt-viewer
-remote-viewer spice://localhost:12057   #使用spice连接虚拟机
+vi /etc/yum.repos.d/openEuler.repo
+# 或者 nano /etc/yum.repos.d/openEuler.repo
 ```
 
-windows客户端：
+删除 [everything], [EPOL], [debuginfo], [update], [update-source] 小节，仅保留 [OS] 和 [source] 两部分。
 
-在Virt-Viewer的输入框中输入Server address：`remote-viewer spice://localhost:12057`点击连接即可。
+修改完成后，您的 openEuler.repo 配置应该与下述基本一致：
 
-### 其它
+```
+#generic-repos is licensed under the Mulan PSL v2.
+#You can use this software according to the terms and conditions of the Mulan PSL v2.
+#You may obtain a copy of Mulan PSL v2 at:
+#    http://license.coscl.org.cn/MulanPSL2
+#THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT, MERCHANTABILITY OR FIT FOR A PARTICULAR
+#PURPOSE.
+#See the Mulan PSL v2 for more details.
 
-除了上述方式和客户端外，还可以有其它的方式，这里不一一列举了。
+[OS]
+name=OS
+baseurl=http://repo.openeuler.org/openEuler-23.09/OS/$basearch/
+metalink=https://mirrors.openeuler.org/metalink?repo=$releasever/OS&arch=$basearch
+metadata_expire=1h
+enabled=1
+gpgcheck=1
+gpgkey=http://repo.openeuler.org/openEuler-23.09/OS/$basearch/RPM-GPG-KEY-openEuler
 
+[source]
+name=source
+baseurl=http://repo.openeuler.org/openEuler-23.09/source/
+metalink=https://mirrors.openeuler.org/metalink?repo=$releasever&arch=source
+metadata_expire=1h
+enabled=1
+gpgcheck=1
+gpgkey=http://repo.openeuler.org/openEuler-23.09/source/RPM-GPG-KEY-openEuler
+```
+
+接下来就可以正常使用 `dnf` 包管理器进行软件包的安装了。初次安装的时候需要导入 openEuler 的 GPG key，若出现如下提示时，需输入 y 并确认，还请注意。
+
+```
+retrieving repo key for OS unencrypted from http://repo.openeuler.org/openEuler-23.09/OS/riscv64/RPM-GPG-KEY-openEuler
+OS                                               18 kB/s | 2.1 kB     00:00    
+Importing GPG key 0xB25E7F66:
+ Userid     : "private OBS (key without passphrase) <defaultkey@localobs>"
+ Fingerprint: 12EA 74AC 9DF4 8D46 C69C A0BE D557 065E B25E 7F66
+ From       : http://repo.openeuler.org/openEuler-23.09/OS/riscv64/RPM-GPG-KEY-openEuler
+Is this ok [y/N]: y
+Key imported successfully
+```
