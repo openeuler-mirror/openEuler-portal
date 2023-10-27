@@ -7,6 +7,10 @@ import { ElMessage } from 'element-plus';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { useStoreData } from '@/shared/login';
+
+import satisfactionImg from '@/assets/common/footer/satisfaction.png';
+import closeImg from '@/assets/common/footer/close.png';
+
 import IconTop from '~icons/footer/icon-top.svg';
 import IconSmile from '~icons/footer/icon-smile.svg';
 import IconHeadset from '~icons/footer/icon-headset.svg';
@@ -382,10 +386,23 @@ const setScore = (val: number) => {
   isReasonShow.value = true;
   score.value = val * 10;
 };
+
+const isSatisfactionShown = ref(true);
+
+const handleClose = function (event: Event) {
+  event.preventDefault();
+  sessionStorage.setItem('isSatisfactionShown', 'false');
+  isSatisfactionShown.value = false;
+};
+
 // 移动端用户关闭后7天不展示,提交后30日内不出现入口
 onMounted(() => {
   const lastCloseTIME = localStorage.getItem('close-float-time');
   const lastSummitTIME = localStorage.getItem('submit-time-mobile');
+  const shouldShow = sessionStorage.getItem('isSatisfactionShown');
+  if (shouldShow === 'false') {
+    isSatisfactionShown.value = false;
+  }
   const sevenDaysInMilliseconds = 7 * 24 * 60 * 60 * 1000;
   const thirtyInMilliseconds = 30 * 24 * 60 * 60 * 1000;
   const nowTime = new Date().valueOf();
@@ -426,6 +443,22 @@ onMounted(() => {
           </div>
         </div>
         <div class="nav-box1">
+          <a
+            v-show="isSatisfactionShown"
+            class="nav-item nav-box-top"
+            href="https://forum.openeuler.org/t/topic/2647"
+            target="_blank"
+            rel="noopener noreferrer"
+            :style="{ backgroundImage: `url(${satisfactionImg})` }"
+          >
+            <img
+              @click.stop="handleClose($event)"
+              class="close"
+              :src="closeImg"
+              alt="close"
+            />
+            满意度调研
+          </a>
           <div
             @mouseenter="toggleIsShow(true)"
             @mouseleave="toggleIsShow(false)"
@@ -701,7 +734,7 @@ onMounted(() => {
         }
       }
 
-      &:nth-of-type(1) + .nav-item::before {
+      &:nth-child(2) + .nav-item::before {
         display: block;
         content: '';
         height: 1px;
@@ -952,6 +985,31 @@ onMounted(() => {
         opacity: 0.6;
         &:hover {
           opacity: 1;
+        }
+      }
+    }
+    .nav-box-top {
+      height: 112px;
+      &.nav-item {
+        position: relative;
+        margin-bottom: 12px;
+        padding: 12px 16px;
+        height: fit-content;
+        background-color: var(--o-color-bg2);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
+        color: var(--o-color-white);
+        img {
+          position: absolute;
+          display: none;
+          top: -7px;
+          right: -7px;
+          width: 14px;
+        }
+        &:hover {
+          img {
+            display: block;
+          }
         }
       }
     }
