@@ -297,7 +297,7 @@ export default {
             LINK_LIST: [
               {
                 TYPE: 'riscv64',
-                SIZE: '	2.9 GiB',
+                SIZE: '702.2 MiB',
                 SHACODE: '',
                 DOWNLOAD_LINK:
                   'openEuler-23.09/virtual_machine_img/riscv64/openEuler-23.09-RISC-V-qemu-riscv64.qcow2.xz',
@@ -2615,7 +2615,7 @@ export default {
             LINK_LIST: [
               {
                 TYPE: 'riscv64',
-                SIZE: '2.9 GiB',
+                SIZE: '702.2 MiB',
                 SHACODE: '',
                 DOWNLOAD_LINK:
                   'openEuler-23.09/virtual_machine_img/riscv64/openEuler-23.09-RISC-V-qemu-riscv64.qcow2.xz',
