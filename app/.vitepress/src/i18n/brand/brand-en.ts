@@ -29,7 +29,7 @@ export default {
   FAQ_LINK: 'mailto:trademarks@openeuler.sh',
   MOBILETITLE: 'Trademark',
   PPT_TEXT: 'PPT Templates',
-  PPT_TEMPLATES: ['Template 1', 'Template 2'],
+  PPT_TEMPLATES: ['Template'],
   PICTURE_TITLE: [
     'Standard',
     'Standard',
@@ -125,11 +125,7 @@ export default {
   PPT_LIST: [
     {
       URL: '/img/other/brand/euler-ppt.png',
-      LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler_PPT_Blue.pptx',
-    },
-    {
-      URL: '/img/other/brand/euler-white-ppt.png',
-      LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler_PPT_White.pptx',
+      LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler_PPT%20Template_en.pptx',
     },
   ],
   PROJECT_TITLE:

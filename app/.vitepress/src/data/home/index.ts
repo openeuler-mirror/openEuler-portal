@@ -1,5 +1,5 @@
-import projects_pc from '@/assets/category/home/banner/projects_pc.jpg';
-import projects_mo from '@/assets/category/home/banner/projects_mo.jpg';
+import satisfaction_pc from '@/assets/category/home/banner/satisfaction_pc.jpg';
+import satisfaction_mo from '@/assets/category/home/banner/satisfaction_mo.jpg';
 
 import summit_pc from '@/assets/category/home/banner/summit_pc.jpg';
 import summit_mo from '@/assets/category/home/banner/summit_mo.jpg';
@@ -31,6 +31,15 @@ export default {
         targetTap: 1,
       },
       {
+        pcBanner: satisfaction_pc,
+        moBanner: satisfaction_mo,
+        link: 'https://forum.openeuler.org/t/topic/2647',
+        id: 'satisfaction',
+        title: ['参加满意度调研 赢惊喜大奖'],
+        btn: '查看详情',
+        targetTap: 1,
+      },
+      {
         pcBanner: banner1_pc,
         moBanner: banner1_mo,
         link: '/whitepaper/openEuler%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E5%88%9B%E6%96%B0%E9%A1%B9%E7%9B%AE%E6%80%BB%E8%A7%88%EF%BC%89.pdf',
@@ -39,15 +48,7 @@ export default {
         btn: '查看详情',
         targetTap: 1,
       },
-      {
-        pcBanner: projects_pc,
-        moBanner: projects_mo,
-        link: '/zh/blog/20230928-xiangmu.html',
-        id: 'projects',
-        title: ['openEuler 2023 年度', '优秀项目评选启动'],
-        btn: '欢迎推荐',
-        targetTap: 1,
-      },
+
       {
         pcBanner: eulerSky_pc,
         moBanner: eulerSky_mo,

@@ -186,6 +186,13 @@ html[lang='en'] {
     }
   }
 }
+#satisfaction {
+  .title {
+    @media screen and (max-width:768px) {
+      word-spacing: 100vh;
+    }
+  }
+}
 #euler-sky {
   @media screen and (max-width: 768px) {
     .banner-panel-content {
