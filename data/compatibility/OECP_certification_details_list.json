@@ -1,15 +1,15 @@
 [
     {
-        "osv_name": "华为技术有限公司",
-        "os_version": "EulerOS-V2.0SP11-aarch64-dvd.iso",
-        "arch": "aarch64",
-        "checksum": "c3fe6fd4160cef34a97c291d249f7ef8",
+        "osv_name": "浙江大华技术有限公司",
+        "os_version": "DH-EVS-OSV-22.03-LTS-SP2-x86_64-dvd.iso",
+        "arch": "x86_64",
+        "checksum": "fa935cc80e3df465a04ca9bd9cdb3b50",
         "base_openeuler_version": "openEuler 22.03 LTS",
-        "os_download_link": "http://www.huawei.com/",
-        "friendly_link": "http://www.huawei.com/",
+        "os_download_link": "https://www.dahuatech.com/",
+        "friendly_link": "https://www.dahuatech.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/7/13",
+        "date": "2023/10/27",
         "details": "详细信息",
         "tools_result": [
             {
@@ -72,16 +72,16 @@
         ]
     },
     {
-        "osv_name": "华为技术有限公司",
-        "os_version": "EulerOS-V2.0SP11-x86_64-dvd.iso",
+        "osv_name": "浙江大华技术有限公司",
+        "os_version": "DH-IVSS-OSV-22.03-LTS-SP2-x86_64-dvd.iso",
         "arch": "x86_64",
-        "checksum": "9e54084bc31167dcde8bd2183445d146",
+        "checksum": "17943403017cad07f2db59739892ff16",
         "base_openeuler_version": "openEuler 22.03 LTS",
-        "os_download_link": "http://www.huawei.com/",
-        "friendly_link": "http://www.huawei.com/",
+        "os_download_link": "https://www.dahuatech.com/",
+        "friendly_link": "https://www.dahuatech.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/7/13",
+        "date": "2023/10/27",
         "details": "详细信息",
         "tools_result": [
             {
