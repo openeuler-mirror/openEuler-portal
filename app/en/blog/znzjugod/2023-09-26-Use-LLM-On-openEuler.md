@@ -36,11 +36,11 @@ Features:
 - Implemented in GGML-based C/C++.
 - Accelerated CPU inference with int4/int8 quantization, optimized KV cache and parallel computing.
 - Streaming generation with typewriter effect.
-- No GPU is required. Only the CPU can be used.
+- Can run solely on CPUs, with no GPUs required
 
 ## Installation Guide
 ### Software and Hardware Requirements 
-Processor architecture: AArch64 and X86_64
+Processor architecture: AArch64 and x86_64
 
 OS: openEuler 23.09
 
@@ -113,9 +113,9 @@ Table 1 Test data of the ChatGLM-6B model inference speed
 # llama.cpp Usage Guide
 
 ## Introduction
-llama.cpp is a LLaMa model interface based on C/C++. It allows users to deploy and run open source models on CPUs.
+llama.cpp is a LLaMA model interface based on C/C++. It allows users to deploy and run open source models on CPUs.
 
-llama.cpp supports the deployment of multiple open source English LLMs, such as LLaMa, LLaMa2, and Vicuna.
+llama.cpp supports the deployment of multiple open source English LLMs, such as LLaMA, LLaMA2, and Vicuna.
 
 ## Software Architecture
 The llama.cpp core architecture consists of two layers:
@@ -126,7 +126,7 @@ Features:
 - Implemented in GGML-based C/C++.
 - Accelerated CPU inference with int4/int8 quantization, optimized KV cache and parallel computing.
 - Streaming generation with typewriter effect.
-- No GPU is required. Only the CPU can be used.
+- Can run solely on CPUs, with no GPUs required
 
 ## Installation Guide
 ### Software and Hardware Requirements
