@@ -133,42 +133,50 @@ const downloadByUrl = (url: string) => {
 const featuresDownloadUrl =
   'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/OSMind%20%E5%85%B3%E9%94%AE%E7%89%B9%E6%80%A7%E4%B8%8E%E4%BB%B7%E5%80%BC.pdf';
 const guideDownloadUrl =
-  'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/IT%20Service%20Tools%201.0.T3%20OS%20Mind%20%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3.pdf';
+  'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/IT%20Service%20Tools%201.0.T5%20OS%20Mind%20%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3.chm';
 
-const tools = [
-  {
-    name: 'ITServiceTools_1.0.T3.zip',
-    url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T3.zip',
-  },
-  {
-    name: 'ITServiceTools_1.0.T3_OSManager_Asset.zip',
-    url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T3_OSManager_Asset.zip',
-  },
-  {
-    name: 'ITServiceTools_1.0.T3_OSManager_Tools.zip',
-    url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T3_OSManager_Tools.zip',
-  },
-  {
-    name: 'ITServiceTools_1.0.T3_ThirdParty_EulerOS2.0SP10-aarch64.zip',
-    url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T3_ThirdParty_EulerOS2.0SP10-aarch64.zip',
-  },
-  {
-    name: 'ITServiceTools_1.0.T3_ThirdParty_EulerOS2.0SP10-x86_64.zip',
-    url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T3_ThirdParty_EulerOS2.0SP10-x86_64.zip',
-  },
-  {
-    name: 'ITServiceTools_1.0.T3_ThirdParty_openEuler20.03LTS-aarch64.zip',
-    url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T3_ThirdParty_openEuler20.03LTS-aarch64.zip',
-  },
-  {
-    name: 'ITServiceTools_1.0.T3_ThirdParty_openEuler20.03LTS-x86_64.zip',
-    url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T3_ThirdParty_openEuler20.03LTS-x86_64.zip',
-  },
-  {
-    name: 'ITServiceTools_1.0.T3_Arangodb_Any-aarch64.zip',
-    url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T3_Arangodb_Any-aarch64.zip',
-  },
-];
+const toolsUrl = {
+  base: [
+    {
+      name: 'ITServiceTools_1.0.T5.zip（系统安装包）',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T5.zip',
+    },
+    {
+      name: 'ITServiceTools_1.0.T5_OSManager_Asset.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T5_OSManager_Asset.zip',
+    },
+    {
+      name: 'ITServiceTools_1.0.T5_OSManager_Tools.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T5_OSManager_Tools.zip',
+    },
+  ],
+  feature: [
+    {
+      name: 'ITServiceTools_1.0.T5_ThirdParty_EulerOS2.0SP10-aarch64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T5_ThirdParty_EulerOS2.0SP10-aarch64.zip',
+    },
+    {
+      name: 'ITServiceTools_1.0.T5_ThirdParty_EulerOS2.0SP10-x86_64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T5_ThirdParty_EulerOS2.0SP10-x86_64.zip',
+    },
+    {
+      name: 'ITServiceTools_1.0.T5_ThirdParty_openEuler20.03LTS-aarch64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T5_ThirdParty_openEuler20.03LTS-aarch64.zip',
+    },
+    {
+      name: 'ITServiceTools_1.0.T5_ThirdParty_openEuler20.03LTS-x86_64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T5_ThirdParty_openEuler20.03LTS-x86_64.zip',
+    },
+    {
+      name: 'ITServiceTools_1.0.T5_Arangodb_Any-aarch64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T5_Arangodb_Any-aarch64.zip',
+    },
+    {
+      name: 'ITServiceTools_1.0.T5_Arangodb_Any-x86_64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T5_Arangodb_Any-x86_64.zip',
+    },
+  ]
+}
 </script>
 
 <template>
@@ -227,10 +235,19 @@ const tools = [
             </OButton>
             <template #dropdown>
               <el-dropdown-menu class="om-zone-dropdown-menu">
+                <el-dropdown-item disabled>基础能力：</el-dropdown-item>
                 <el-dropdown-item
-                  v-for="item in tools"
+                  v-for="item in toolsUrl.base"
                   :key="item.name"
                   @click="downloadByUrl(item.url)"
+                >
+                  {{ item.name }}
+                </el-dropdown-item>
+                <el-dropdown-item disabled divided>高级运维组件：</el-dropdown-item>
+                <el-dropdown-item
+                    v-for="item in toolsUrl.feature"
+                    :key="item.name"
+                    @click="downloadByUrl(item.url)"
                 >
                   {{ item.name }}
                 </el-dropdown-item>
@@ -493,6 +510,7 @@ $osmindCardHeight: 145px;
 
 .scroll-box {
   overflow-x: auto;
+  box-shadow: var(--o-shadow-l2);
 }
 
 .om-set-card {
