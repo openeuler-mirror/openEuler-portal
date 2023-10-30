@@ -16,7 +16,7 @@ summary: A brief introduction to LLM and detailed steps to use LLM on openEuler 
 
 # Introduction to LLM
 
-This article describes how to install and develop the openEuler Large Language Model (LLM). LLMs are artificial intelligence models designed to understand and generate human languages. They are trained on a large amount of text data and can perform a wide range of tasks, including text summary, translation, sentiment analysis, and so on.
+This blog describes how to install and develop a Large Language Model (LLM) on openEuler. LLMs are artificial intelligence models designed to understand and generate human languages. They are trained on a large amount of text data and can perform a wide range of tasks, including text summary, translation, sentiment analysis, and so on.
 
 This article is intended for community developers, open source enthusiasts, and partners who use the openEuler OS and want to learn and use LLM. Users must have basic knowledge of the Linux OS.
 
