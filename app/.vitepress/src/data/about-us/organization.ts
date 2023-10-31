@@ -783,7 +783,7 @@ export default {
         ],
       },
       {
-        title: 'openEuler Brand Committee',
+        title: 'openEuler Marketing Committee',
         list: [
           {
             img: liangbin,
