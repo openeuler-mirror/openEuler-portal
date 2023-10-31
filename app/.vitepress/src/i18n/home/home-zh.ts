@@ -68,6 +68,8 @@ import fenhuoLogo from '@/assets/category/home/link/fenhuo_light.png';
 import fenhuoLogo_dark from '@/assets/category/home/dark/link/fenhuo_dark.png';
 import baodeLogo from '@/assets/category/home/link/baode_light.png';
 import baodeLogo_dark from '@/assets/category/home/dark/link/baode_dark.png';
+import seaway from '@/assets/category/home/link/seaway.png';
+import seaway_dark from '@/assets/category/home/dark/link/seaway_dark.png';
 
 import mulan from '@/assets/category/home/link/mulan.png';
 import mulanLogo_dark from '@/assets/category/home/dark/link/mulan_dark.png';
@@ -95,6 +97,8 @@ import hengsheng from '@/assets/category/home/link/hengsheng_light.png';
 import hengsheng_dark from '@/assets/category/home/dark/link/hengsheng_dark.png';
 import zhongruan from '../../assets/category/home/link/zhongruan_light.png';
 import zhongruan_dark from '../../assets/category/home/dark/link/zhongruan_dark.png';
+import baina from '../../assets/category/home/link/baina.png';
+import baina_dark from '../../assets/category/home/dark/link/baina_dark.png';
 
 import finance from '@/assets/category/home/case/finance.svg';
 import financeDark from '@/assets/category/home/dark/case/finance.svg';
@@ -438,6 +442,11 @@ export default {
       IMG: zhongkehongqi,
       IMG_DARK: zhongkehongqiLogo_dark,
     },
+    {
+      LINK: 'http://new.haiwei.tech/',
+      IMG: seaway,
+      IMG_DARK: seaway_dark,
+    },
   ],
   FRIENDSHIP_LINK_LIST: [
     {
@@ -494,6 +503,11 @@ export default {
       LINK: 'https://www.mindspore.cn/',
       IMG: mindSpore,
       IMG_DARK: mindSpore_dark,
+    },
+    {
+      LINK: 'http://www.ebaina.com/',
+      IMG: baina,
+      IMG_DARK: baina_dark,
     },
   ],
   MORE: '更多',
