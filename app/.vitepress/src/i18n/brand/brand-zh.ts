@@ -38,7 +38,7 @@ export default {
     'Black',
     'Black',
   ],
-  PPT_TEMPLATES: ['模板'],
+  PPT_TEMPLATES: ['中文模板','英文模板'],
   VERTICAL_LEFT_IMAGE: [
     {
       STYLE: 'JPG',
@@ -127,6 +127,10 @@ export default {
     {
       URL: '/img/other/brand/euler-ppt.png',
       LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler_PPT%20Template_zh.pptx ',
+    },
+    {
+      URL: '/img/other/brand/euler-ppt.png',
+      LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler_PPT%20Template_en.pptx ',
     },
   ],
   PROJECT_TITLE: 'openEuler社区开源创新项目商标',
