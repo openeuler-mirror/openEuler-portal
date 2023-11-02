@@ -30,7 +30,7 @@ After the probe is enabled, flame graphs in .svg format will be generated to you
 
 2. Container support
 
-In cloud native systems, applications can be deployed as containers. During system-level performance analysis, conventional flame graphs generally display only the thread names. If the internal thread names in different containers are the same, the call stacks will be combined, making them hard to distinguish, which subsequently affects fault locating and demarcation. The gala-ops flame graph probe can automatically identify different pods and containers and add workload, container, and process ID information to the graph. If the process is a workload or container process, the pod and container are prefixed with [Pod] and [Con], respectively, and the process is prefixed with [<pid>].
+In cloud native systems, applications can be deployed as containers. During system-level performance analysis, conventional flame graphs generally display only the thread names. If the internal thread names in different containers are the same, the call stacks will be combined, making them hard to distinguish, which subsequently affects fault locating and demarcation. The gala-ops flame graph probe can automatically identify different pods and containers and add workload, container, and process ID information to the graph. If the process is a workload or container process, the pod and container are prefixed with [Pod] and [Con], respectively, and the process is prefixed with [\<pid>\].
 
 
 >![](./image/image2.png)
