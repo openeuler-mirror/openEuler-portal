@@ -1,5 +1,5 @@
 ---
-title: 'openEuler's Basic Container Image Now Supports Periodic Updates'
+title: "openEuler's Basic Container Image Now Supports Periodic Updates"
 category: blog
 date: 2023-09-01
 tags:
