@@ -208,5 +208,9 @@ export default [
   {
     name: 'om',
     lang: ['zh'],
+  },
+  {
+    name: 'monthly-summary',
+    lang: ['zh'],
   }
 ];

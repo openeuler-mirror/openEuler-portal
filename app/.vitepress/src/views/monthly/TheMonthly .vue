@@ -5,14 +5,13 @@ import { useRouter, useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
-// import MobileFilter from '@/components/MobileFilter.vue';
 import NotFound from '@/NotFound.vue';
 import AppContent from '@/components/AppContent.vue';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 
 import banner from '@/assets/banner/banner-interaction.png';
-import illustration from '@/assets/illustrations/news.png';
+import illustration from '@/assets/illustrations/the-moon.png';
 import IconSearch from '~icons/app/icon-search.svg';
 
 import { getSortData, getTagsData } from '@/api/api-search';
@@ -27,6 +26,7 @@ const sortParams = reactive({
   pageSize: 9,
   lang: lang.value,
   category: 'news',
+  tags: '社区运作报告',
 });
 // 新闻列表数据
 const newsCardData = ref<NewsData[]>([]);
@@ -43,7 +43,10 @@ const paginationData = ref({
 const tagsParams = reactive({
   lang: lang.value,
   category: 'news',
-  want: '',
+  want: 'archives',
+  condition: {
+    tags: '社区运作报告',
+  },
 });
 const i18n = useI18n();
 const userCaseData = computed(() => i18n.value.interaction);
@@ -53,252 +56,22 @@ const toNewsContent = (path: string) => {
 };
 
 //筛选数据
-const selectData = ref<any>([
-  {
-    title: '时间',
-    select: [],
-  },
-  {
-    title: '作者',
-    select: [],
-  },
-  {
-    title: '标签',
-    select: [],
-  },
-]);
+const selectData = ref<{ title: string; select: string[] }>({
+  title: '时间',
+  select: [],
+});
 const selectTimeVal = ref('');
-const selectAuthorVal = ref('');
-const selectTagsVal = ref('');
 
-// pc筛选
-const selectMethod = () => {
+const changeTime = () => {
   const params = {
     page: 1,
     pageSize: 9,
     lang: lang.value,
     category: 'news',
+    tags: '社区运作报告',
     archives: selectTimeVal.value === '' ? undefined : selectTimeVal.value,
-    author: selectAuthorVal.value === '' ? undefined : selectAuthorVal.value,
-    tags: selectTagsVal.value === '' ? undefined : selectTagsVal.value,
   };
   getListData(params);
-};
-const changeTime = () => {
-  selectMethod();
-  if (selectTimeVal.value !== '') {
-    const wantauthor = {
-      lang: lang.value,
-      category: 'news',
-      want: 'author',
-      condition: {
-        archives: selectTimeVal.value,
-        tags: selectTagsVal.value === '' ? undefined : selectTagsVal.value,
-      },
-    };
-    const wanttags = {
-      lang: lang.value,
-      category: 'news',
-      want: 'tags',
-      condition: {
-        archives: selectTimeVal.value,
-        author:
-          selectAuthorVal.value === '' ? undefined : selectAuthorVal.value,
-      },
-    };
-    getTagsData(wantauthor).then((res) => {
-      selectData.value[1].select = [];
-      res.obj.totalNum.forEach((item: any) => {
-        selectData.value[1].select.push(item.key);
-      });
-      getTagsData(wanttags)
-        .then((res) => {
-          selectData.value[2].select = [];
-          res.obj.totalNum.forEach((item: any) => {
-            selectData.value[2].select.push(item.key);
-          });
-        })
-        .catch((error) => {
-          throw new Error(error);
-        });
-    });
-  } else if (
-    selectTimeVal.value === '' &&
-    selectAuthorVal.value === '' &&
-    selectTagsVal.value === ''
-  ) {
-    getTagsList();
-  } else {
-    const params = {
-      lang: lang.value,
-      category: 'news',
-      want: 'archives',
-      condition: {
-        author:
-          selectAuthorVal.value === '' ? undefined : selectAuthorVal.value,
-        tags: selectTagsVal.value === '' ? undefined : selectTagsVal.value,
-      },
-    };
-    getTagsData(params).then((res) => {
-      selectData.value[0].select = [];
-      res.obj.totalNum.forEach((item: any) => {
-        selectData.value[0].select.push(item.key);
-      });
-    });
-  }
-};
-const changeAuthor = () => {
-  selectMethod();
-  if (selectAuthorVal.value !== '') {
-    const wantarchive = {
-      lang: lang.value,
-      category: 'news',
-      want: 'archives',
-      condition: {
-        author: selectAuthorVal.value,
-        tags: selectTagsVal.value === '' ? undefined : selectTagsVal.value,
-      },
-    };
-    const wanttags = {
-      lang: lang.value,
-      category: 'news',
-      want: 'tags',
-      condition: {
-        archives: selectTimeVal.value === '' ? undefined : selectTimeVal.value,
-        author: selectAuthorVal.value,
-      },
-    };
-    getTagsData(wantarchive).then((res) => {
-      selectData.value[0].select = [];
-      res.obj.totalNum.forEach((item: any) => {
-        selectData.value[0].select.push(item.key);
-      });
-      getTagsData(wanttags)
-        .then((res) => {
-          selectData.value[2].select = [];
-          res.obj.totalNum.forEach((item: any) => {
-            selectData.value[2].select.push(item.key);
-          });
-        })
-        .catch((error) => {
-          throw new Error(error);
-        });
-    });
-  } else if (
-    selectTimeVal.value === '' &&
-    selectAuthorVal.value === '' &&
-    selectTagsVal.value === ''
-  ) {
-    getTagsList();
-  } else {
-    const params = {
-      lang: lang.value,
-      category: 'news',
-      want: 'author',
-      condition: {
-        archives: selectTimeVal.value === '' ? undefined : selectTimeVal.value,
-        tags: selectTagsVal.value === '' ? undefined : selectTagsVal.value,
-      },
-    };
-    getTagsData(params).then((res) => {
-      selectData.value[1].select = [];
-      res.obj.totalNum.forEach((item: any) => {
-        selectData.value[1].select.push(item.key);
-      });
-    });
-  }
-};
-const changeTags = () => {
-  selectMethod();
-  if (selectTagsVal.value !== '') {
-    const wantarchive = {
-      lang: lang.value,
-      category: 'news',
-      want: 'archives',
-      condition: {
-        author:
-          selectAuthorVal.value === '' ? undefined : selectAuthorVal.value,
-        tags: selectTagsVal.value,
-      },
-    };
-    const wantauthor = {
-      lang: lang.value,
-      category: 'news',
-      want: 'author',
-      condition: {
-        archives: selectTimeVal.value === '' ? undefined : selectTimeVal.value,
-        tags: selectTagsVal.value,
-      },
-    };
-    getTagsData(wantarchive).then((res) => {
-      selectData.value[0].select = [];
-      res.obj.totalNum.forEach((item: any) => {
-        selectData.value[0].select.push(item.key);
-      });
-      getTagsData(wantauthor)
-        .then((res) => {
-          selectData.value[1].select = [];
-          res.obj.totalNum.forEach((item: any) => {
-            selectData.value[1].select.push(item.key);
-          });
-        })
-        .catch((error) => {
-          throw new Error(error);
-        });
-    });
-  } else if (
-    selectTimeVal.value === '' &&
-    selectAuthorVal.value === '' &&
-    selectTagsVal.value === ''
-  ) {
-    getTagsList();
-  } else {
-    const params = {
-      lang: lang.value,
-      category: 'news',
-      want: 'tags',
-      condition: {
-        author:
-          selectAuthorVal.value === '' ? undefined : selectAuthorVal.value,
-        archives: selectTimeVal.value === '' ? undefined : selectTimeVal.value,
-      },
-    };
-    getTagsData(params).then((res) => {
-      selectData.value[2].select = [];
-      res.obj.totalNum.forEach((item: any) => {
-        selectData.value[2].select.push(item.key);
-      });
-    });
-  }
-};
-
-// 获取标签数据
-const getTagsList = () => {
-  tagsParams.want = 'archives';
-  getTagsData(tagsParams).then((res) => {
-    selectData.value[0].select = [];
-    res.obj.totalNum.forEach((item: any) => {
-      selectData.value[0].select.push(item.key);
-    });
-    tagsParams.want = 'author';
-    getTagsData(tagsParams)
-      .then((res) => {
-        selectData.value[1].select = [];
-        res.obj.totalNum.forEach((item: any) => {
-          selectData.value[1].select.push(item.key);
-        });
-        tagsParams.want = 'tags';
-        getTagsData(tagsParams).then((res) => {
-          selectData.value[2].select = [];
-          res.obj.totalNum.forEach((item: any) => {
-            selectData.value[2].select.push(item.key);
-          });
-        });
-      })
-      .catch((error: any) => {
-        throw new Error(error);
-      });
-  });
 };
 
 //获取数据
@@ -325,20 +98,18 @@ const getListData = (params: ParamsType) => {
 
 onMounted(() => {
   getListData(sortParams);
-  getTagsList();
+  getTagsData(tagsParams).then((res) => {
+    selectData.value.select = [];
+    res.obj.totalNum.forEach((item: { key: string }) => {
+      selectData.value.select.push(item.key);
+    });
+  });
 });
 
 const changeCurrent = (val: number) => {
-  const params: ParamsType = {
-    category: 'news',
-    lang: lang.value,
-    page: val,
-    pageSize: paginationData.value.pagesize,
-  };
-  selectAuthorVal.value ? (params['author'] = selectAuthorVal.value) : '';
-  selectTagsVal.value ? (params['tags'] = selectTagsVal.value) : '';
-  selectTimeVal.value ? (params['archives'] = selectTimeVal.value) : '';
-  getListData(params);
+  sortParams.page = val;
+  sortParams.pageSize = paginationData.value.pagesize;
+  getListData(sortParams);
 };
 
 const pageTotal = computed(() =>
@@ -362,7 +133,7 @@ const changeCurrentMoblie = (val: string) => {
   <BannerLevel2
     :background-image="banner"
     background-text="CONNECT"
-    :title="userCaseData.NEWS"
+    title="月刊"
     :illustration="illustration"
   />
   <AppContent :mobile-top="16">
@@ -383,55 +154,7 @@ const changeCurrentMoblie = (val: string) => {
               </OIcon>
             </template>
             <OOption
-              v-for="item in selectData[0].select"
-              :key="item"
-              :label="item"
-              :value="item"
-            />
-          </OSelect>
-        </ClientOnly>
-      </div>
-      <div class="news-select-item">
-        <span class="news-select-item-title">{{ userCaseData.AUTHOR }}</span>
-        <ClientOnly>
-          <OSelect
-            v-model="selectAuthorVal"
-            filterable
-            clearable
-            :placeholder="userCaseData.ALL"
-            @change="changeAuthor"
-          >
-            <template #prefix>
-              <OIcon>
-                <IconSearch />
-              </OIcon>
-            </template>
-            <OOption
-              v-for="item in selectData[1].select"
-              :key="item"
-              :label="item"
-              :value="item"
-            />
-          </OSelect>
-        </ClientOnly>
-      </div>
-      <div class="news-select-item">
-        <span class="news-select-item-title">{{ userCaseData.TAGS }}</span>
-        <ClientOnly>
-          <OSelect
-            v-model="selectTagsVal"
-            filterable
-            clearable
-            :placeholder="userCaseData.ALL"
-            @change="changeTags"
-          >
-            <template #prefix>
-              <OIcon>
-                <IconSearch />
-              </OIcon>
-            </template>
-            <OOption
-              v-for="item in selectData[2].select"
+              v-for="item in selectData.select"
               :key="item"
               :label="item"
               :value="item"

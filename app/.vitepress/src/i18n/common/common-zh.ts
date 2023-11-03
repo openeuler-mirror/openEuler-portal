@@ -378,6 +378,11 @@ export default {
           LABEL: '',
           PATH: '/interaction/summit-list/summit2023/',
         },
+        {
+          NAME: '月刊',
+          LABEL: '',
+          PATH: '/monthly-summary/',
+        },
       ],
     },
     {
