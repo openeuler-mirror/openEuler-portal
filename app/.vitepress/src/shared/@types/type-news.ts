@@ -19,4 +19,7 @@ export interface ParamsType {
   pageSize: number;
   lang: string;
   category: string;
+  archives?: string;
+  author?: string;
+  tags?: string;
 }

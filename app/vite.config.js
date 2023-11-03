@@ -65,9 +65,8 @@ export default defineConfig({
         changeOrigin: true,
       },
       '/api-search': {
-        target: 'https://doc-search.openeuler.org/',
+        target: 'https://www.openeuler.org/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-search/, ''),
       },
       '/api-chat/': {
         target: 'https://modelapi.osinfra.cn/',
