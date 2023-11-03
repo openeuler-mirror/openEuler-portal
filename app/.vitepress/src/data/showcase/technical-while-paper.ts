@@ -23,6 +23,10 @@ export default {
       summary: 'openEuler OS Technical Whitepaper_Innovation Projects_EN',
     },
     {
+      path: '/whitepaper/en/openEuler%2023.09%20Technical%20White%20Paper.pdf',
+      summary: 'openEuler 23.09 Technical White Paper',
+    },
+    {
       path: '/whitepaper/en/openEuler%2022.03%20LTS%20SP2%20Technical%20White%20Paper.pdf',
       summary: 'openEuler 22.03 LTS SP2 Technical White Paper',
     },
