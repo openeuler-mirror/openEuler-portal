@@ -2330,7 +2330,7 @@ export default {
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
-        WHITE_PAPER: '/whitepaper/openEuler 23.09 技术白皮书.pdf',
+        WHITE_PAPER: '/whitepaper/en/openEuler 23.09 Technical White Paper.pdf',
         WEBSITE_SELECT: '/en/mirror/select/?version=23.09',
         CLOUD_IMAGE:
           'https://repo.openeuler.org/openEuler-23.09/virtual_machine_img/',
