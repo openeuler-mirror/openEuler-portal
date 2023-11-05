@@ -273,7 +273,7 @@ export default {
       {
         NAME: 'SeawayEdgeV1.00',
         DOWNLOAD_URL: 'https://new.haiwei.tech:27140/down/UT2xMwv4ovUU.iso',
-        DESC: 'SeawayEdge是中科海微基于openeuler开源社区构建，结合边缘、嵌入式领域场景探索，打造全场景协同的面向数字基础设施的开源操作系统。',
+        DESC: 'SeawayEdge是中科海微基于openEuler开源社区构建，结合边缘、嵌入式领域场景探索，打造全场景协同的面向数字基础设施的开源操作系统。',
         MANUFACTURER: '中科海微（北京）科技有限公司',
         PUBLISH_DATE: '2023/09',
         DETAILED_LINK: [
