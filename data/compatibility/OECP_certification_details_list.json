@@ -1,15 +1,15 @@
 [
     {
-        "osv_name": "浙江大华技术有限公司",
-        "os_version": "DH-EVS-OSV-22.03-LTS-SP2-x86_64-dvd.iso",
-        "arch": "x86_64",
-        "checksum": "fa935cc80e3df465a04ca9bd9cdb3b50",
-        "base_openeuler_version": "openEuler 22.03 LTS",
-        "os_download_link": "https://www.dahuatech.com/",
-        "friendly_link": "https://www.dahuatech.com/",
-        "type": "服务器",
+        "osv_name": "成都菁蓉联创科技有限公司",
+        "os_version": "openeuler-image-firefly-itx-3588-20230721095244.rootfs.ext4, Image-5.10.0",
+        "arch": "aarch64",
+        "checksum": "53547aa98ac10656bf6d5fc3be07ae89, 9395f78d7e5d4ca1d2624118fcf77d46",
+        "base_openeuler_version": "openEuler 22.03 LTS SP1",
+        "os_download_link": "http://www.cdjrlc.cn",
+        "friendly_link": "http://www.cdjrlc.cn",
+        "type": "嵌入式",
         "total_result": "pass",
-        "date": "2023/10/27",
+        "date": "2023/11/06",
         "details": "详细信息",
         "tools_result": [
             {
@@ -71,17 +71,18 @@
             }
         ]
     },
+
     {
-        "osv_name": "浙江大华技术有限公司",
-        "os_version": "DH-IVSS-OSV-22.03-LTS-SP2-x86_64-dvd.iso",
-        "arch": "x86_64",
-        "checksum": "17943403017cad07f2db59739892ff16",
+        "osv_name": "成都拓林思软件有限公司",
+        "os_version": "tlee_v1.img",
+        "arch": "aarch64",
+        "checksum": "00368c493f8f0b918313b889021d93bb",
         "base_openeuler_version": "openEuler 22.03 LTS",
-        "os_download_link": "https://www.dahuatech.com/",
-        "friendly_link": "https://www.dahuatech.com/",
-        "type": "服务器",
+        "os_download_link": "http://www.turbolinux.com.cn",
+        "friendly_link": "http://www.turbolinux.com.cn",
+        "type": "嵌入式",
         "total_result": "pass",
-        "date": "2023/10/27",
+        "date": "2023/11/03",
         "details": "详细信息",
         "tools_result": [
             {
