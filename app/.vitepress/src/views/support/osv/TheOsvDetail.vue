@@ -223,7 +223,7 @@ onMounted(() => {
               <div>{{ item.desc }}</div>
             </li>
             <li>
-              <span>{{ i18n.approve.TOOL_LIST.DETECTION_DESC }}:</span>
+              <span>{{ i18n.approve.TOOL_LIST.CONCLUSION }}:</span>
               <div>
                 <img src="@/assets/category/support/osv/adopt.png" alt="" />
                 <span>{{ item.result }}</span>
@@ -271,7 +271,7 @@ onMounted(() => {
               <div>{{ item.desc }}</div>
             </li>
             <li>
-              <span>{{ i18n.approve.TOOL_LIST.DETECTION_DESC }}:</span>
+              <span>{{ i18n.approve.TOOL_LIST.CONCLUSION }}:</span>
               <div>
                 <img src="@/assets/category/support/osv/adopt.png" alt="" />
                 <span>{{ item.result }}</span>

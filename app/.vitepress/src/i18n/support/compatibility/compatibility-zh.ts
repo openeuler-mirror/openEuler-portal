@@ -50,7 +50,7 @@ export default {
     VERSION: '版本',
     VENDOR: '厂家名称',
     SYSTEM: '操作系统',
-    SERVER_NAME: '服务器型号',
+    SERVER_NAME: '硬件型号',
     TESTING_ORGANIZATION: '测试机构',
     CERTIFICATE: '证书',
   },

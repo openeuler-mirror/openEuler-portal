@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, CSSProperties, watch, onMounted, Ref } from 'vue';
-import { useRouter, useData } from 'vitepress';
+import { useRouter } from 'vitepress';
 import { useCommon } from '@/stores/common';
 import { postFeedback } from '@/api/api-feedback';
 import { ElMessage } from 'element-plus';
@@ -8,46 +8,38 @@ import { ElMessage } from 'element-plus';
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { useStoreData } from '@/shared/login';
 
-import satisfactionImg from '@/assets/common/footer/satisfaction.png';
-import closeImg from '@/assets/common/footer/close.png';
-
 import IconTop from '~icons/footer/icon-top.svg';
 import IconSmile from '~icons/footer/icon-smile.svg';
-import IconHeadset from '~icons/footer/icon-headset.svg';
 import IconCancel from '~icons/app/icon-cancel.svg';
 import IconSmileMobile from '~icons/footer/icon-smile-mobile.svg';
 
-import IconRobot_light from '~icons/footer/icon-robot_light.svg';
-import IconRobot_dark from '~icons/footer/icon-robot_dark.svg';
-import IconQuickIssue_light from '~icons/footer/icon-quickissue_light.svg';
-import IconQuickIssue_dark from '~icons/footer/icon-quickissue_dark.svg';
-import IconChat from '~icons/footer/icon-chat.svg';
-
 const screenWidth = useWindowResize();
-const { lang, frontmatter } = useData();
 const { guardAuthClient } = useStoreData();
 const router = useRouter();
 const isDark = computed(() => {
   return useCommon().theme === 'dark' ? true : false;
 });
-const TITLES1 = ['您向他人推荐 ', '您对 '];
-const TITLES2 = [
-  'openEuler社区',
-  'openEuler技术展示',
-  'openEuler学习与贡献',
-  'openEuler动态',
-  'openEuler下载',
-  'openEuler关于社区',
-  'openEuler交流',
-  'openEuler支持与服务',
+const TITLES1 = [
+  'How likely are you to recommend the ',
+  'Are you satisfied with',
 ];
-const TITLES3 = [' 的可能性有多大？', ' 的整体满意度如何？'];
+const TITLES2 = [
+  'openEuler Community',
+  'openEuler Technology Highlights',
+  'openEuler Learning & Contribution',
+  'openEuler Updates',
+  'openEuler Downloads',
+  'openEuler About',
+  'openEuler Connects',
+  'openEuler Support & Services',
+];
+const TITLES3 = ['to others?', '?'];
 
 interface TitleItemT {
   [url: string]: string;
 }
 const tipsObj: TitleItemT = {
-  '/zh/': TITLES2[0],
+  '/en/': TITLES2[0],
   '/showcase/': TITLES2[1],
   '/showcase/technical-white-paper/': TITLES2[1],
   '/showcase/white-paper/': TITLES2[1],
@@ -93,7 +85,7 @@ onMounted(() => {
   watch(
     () => router.route.path,
     () => {
-      if (router.route.path === '/zh/') {
+      if (router.route.path === '/en/') {
         title2.value = TITLES2[0];
       } else {
         Object.keys(tipsObj).forEach((item) => {
@@ -107,9 +99,6 @@ onMounted(() => {
   );
 });
 
-const isFloShow = ref(true);
-
-// pop1 start
 const score = ref(0);
 const scoreTip = computed(() => {
   return score.value / 10;
@@ -172,40 +161,22 @@ const marks = computed(() => {
 });
 
 const infoData = {
-  grade1: '0-不可能',
-  grade2: '10-非常可能',
-  grade1_1: '0-不满意',
-  grade2_1: '10-非常满意',
-  placeholder1: '请输入您不太满意的原因（0-6）',
-  placeholder2: '改进哪些方面会让您更满意？（7-8）',
-  placeholder3: '请输入您满意的原因（9-10）',
-  more1: '感谢您的反馈，如需帮助，可论坛',
-  more2: '发帖求助',
-  more2Link: 'https://forum.openeuler.org/',
-  submit: '提交',
-  cancel: '取消',
-  confirm: '确认',
-  feedbackTitle: '满意度反馈',
-  welcome: '欢迎在此反馈您在社区体验中的任何建议或问题',
-  know: '知道了',
+  grade1: '0-Not likely',
+  grade2: '10-Very likely',
+  grade1_1: '0-Dissatisfied',
+  grade2_1: '10-Very satisfied',
+  submit: 'Submit',
+  cancel: 'Cancel',
+  confirm: 'Confirm',
+  feedbackTitle: 'Feedback',
+  welcome: 'Your questions and comments are welcome.',
+  know: 'Got it',
 };
 const placeholder = computed(() => {
   if (title2.value === TITLES2[0]) {
-    if (score.value / 10 < 7) {
-      return '请输入您不太推荐的原因';
-    } else if (score.value / 10 < 9) {
-      return '改进哪些方面会让您更愿意推荐？';
-    } else {
-      return '请输入您推荐的原因';
-    }
+    return 'Please leave your comment here.';
   } else {
-    if (score.value / 10 < 7) {
-      return '请输入您不太满意的原因';
-    } else if (score.value / 10 < 9) {
-      return '改进哪些方面会让您更满意？';
-    } else {
-      return '请输入您满意的原因';
-    }
+    return 'Please leave your comment here.';
   }
 });
 const isFocuse = ref(false);
@@ -220,48 +191,7 @@ onMounted(() => {
     });
   }
 });
-// pop1 end
-// pop2 start
-const isMigration = computed(() => {
-  return (
-    frontmatter.value.category === 'migration' ||
-    router.route.path.split('/')[2] === 'migration'
-  );
-});
-const quickIssueUrl = computed(() => {
-  return isMigration.value
-    ? 'https://quickissue.openeuler.org/zh/new-issues/?c2lnPXNpZy1NaWdyYXRpb24mcmVwbz1vcGVuZXVsZXIvbWlncmF0aW9uLWFzc2lzdGFudCZyZXBvX2lkPTE1OTI4MzA0JnR5cGU96L+B56e75o+Q5LyYJnRpdGxlPVvmkKzov4Fd'
-    : 'https://quickissue.openeuler.org/zh/issues/';
-});
-const floatData = ref([
-  {
-    img: computed(() => {
-      return isDark.value ? IconRobot_dark : IconRobot_light;
-    }),
-    text: '欧拉小智',
-    tip: '提供自助问答与咨询',
-    id: 'robot',
-    link: 'https://qa-robot.openeuler.org/',
-  },
-  {
-    img: computed(() => {
-      return IconChat;
-    }),
-    text: '欧拉论坛',
-    tip: '发帖互助解决各类问题',
-    id: 'forum',
-    link: 'https://forum.openeuler.org/',
-  },
-  {
-    img: computed(() => {
-      return isDark.value ? IconQuickIssue_dark : IconQuickIssue_light;
-    }),
-    id: 'quickIssue',
-    text: 'QuickIssue',
-    tip: '快捷提交/查询社区Issues',
-    link: quickIssueUrl,
-  },
-]);
+
 function handleClickTop() {
   window.scrollTo(0, 0);
 }
@@ -279,7 +209,7 @@ function postScore() {
     .then((res) => {
       if (res.code === 200) {
         ElMessage({
-          message: '提交成功，感谢您的反馈！',
+          message: 'Submitted successfully. Thanks for your feedback.',
           type: 'success',
         });
         const summitTime = new Date().valueOf();
@@ -309,7 +239,7 @@ function postScore() {
     })
     .catch(() => {
       ElMessage({
-        message: '提交失败，请刷新页面后重新提交！',
+        message: 'Submission failed. Refresh the page and try again.',
         type: 'error',
       });
     });
@@ -325,7 +255,7 @@ function handleClickSubmit() {
       postScore();
     } else {
       ElMessage({
-        message: '请不要频繁提交！',
+        message: 'Do not submit frequently.',
         type: 'warning',
       });
     }
@@ -339,7 +269,7 @@ onMounted(() => {
   watch(
     () => router.route.path,
     () => {
-      if (router.route.path === '/zh/') {
+      if (router.route.path === '/en/') {
         isFloatTipShow.value = true;
         setTimeout(() => {
           isFloatTipShow.value = false;
@@ -388,12 +318,6 @@ const setScore = (val: number) => {
 
 const isSatisfactionShown = ref(true);
 
-const handleClose = function (event: Event) {
-  event.preventDefault();
-  sessionStorage.setItem('isSatisfactionShown', 'false');
-  isSatisfactionShown.value = false;
-};
-
 // 移动端用户关闭后7天不展示,提交后30日内不出现入口
 onMounted(() => {
   const lastCloseTIME = localStorage.getItem('close-float-time');
@@ -427,11 +351,7 @@ onMounted(() => {
 <template>
   <div class="float">
     <template v-if="screenWidth > 1100">
-      <div
-        v-show="lang === 'zh' && isFloShow"
-        class="float-wrap"
-        :class="isDark ? 'dark-nav' : ''"
-      >
+      <div class="float-wrap" :class="isDark ? 'dark-nav' : ''">
         <div v-show="isFloatTipShow" class="float-tip">
           <h4 class="tip-title">{{ infoData.feedbackTitle }}</h4>
           <div class="tip-detail">{{ infoData.welcome }}</div>
@@ -442,22 +362,6 @@ onMounted(() => {
           </div>
         </div>
         <div class="nav-box1">
-          <a
-            v-show="isSatisfactionShown"
-            class="nav-item nav-box-top"
-            href="https://forum.openeuler.org/t/topic/2647"
-            target="_blank"
-            rel="noopener noreferrer"
-            :style="{ backgroundImage: `url(${satisfactionImg})` }"
-          >
-            <img
-              @click.stop="handleClose($event)"
-              class="close"
-              :src="closeImg"
-              alt="close"
-            />
-            有奖问卷
-          </a>
           <div
             @mouseenter="toggleIsShow(true)"
             @mouseleave="toggleIsShow(false)"
@@ -515,12 +419,6 @@ onMounted(() => {
                     >/500
                   </p>
                 </div>
-                <p class="more-info">
-                  {{ infoData.more1
-                  }}<a :href="infoData.more2Link" target="_blank"
-                    >{{ infoData.more2 }}
-                  </a>
-                </p>
                 <div class="submit-btn">
                   <OButton
                     type="outline"
@@ -529,27 +427,6 @@ onMounted(() => {
                   >
                     {{ infoData.submit }}
                   </OButton>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="nav-item">
-            <OIcon class="icon-box"
-              ><component :is="IconHeadset"></component>
-            </OIcon>
-            <div class="o-popup2">
-              <div
-                v-for="item in floatData"
-                :key="item.link"
-                class="pop-item"
-                rel="noopener noreferrer"
-              >
-                <OIcon><component :is="item.img"></component> </OIcon>
-                <div class="text">
-                  <p class="text-name">
-                    <a :href="item.link" target="_blank">{{ item.text }}</a>
-                  </p>
-                  <p class="text-tip">{{ item.tip }}</p>
                 </div>
               </div>
             </div>
@@ -665,17 +542,17 @@ onMounted(() => {
     position: fixed;
     display: flex;
     flex-direction: column;
-    bottom: 200px;
+    bottom: 250px;
     right: 80px;
     z-index: 10;
     .float-tip {
       position: absolute;
-      width: 200px;
+      width: 220px;
       top: 0;
       left: 0;
       background-color: var(--o-color-bg2);
       padding: 16px;
-      transform: translate(-42%, -110%);
+      transform: translate(-46%, -110%);
       .tip-title {
         color: var(--o-color-text1);
         font-size: 16px;
@@ -774,8 +651,7 @@ onMounted(() => {
             font-size: var(--o-font-size-text);
             line-height: 20px;
             color: var(--o-color-text1);
-            text-align: center;
-            white-space: nowrap;
+            text-align: left;
             .title-name {
               font-weight: 600;
             }
@@ -1018,8 +894,8 @@ onMounted(() => {
     padding: 0 16px;
     margin-bottom: 16px;
     .float-head {
-      height: 40px;
       padding: 12px;
+      padding-right: 32px;
       margin: 0 auto;
       text-align: center;
       background: linear-gradient(90deg, #d7e8f7 0%, #c4cfe8 100%);
@@ -1043,7 +919,7 @@ onMounted(() => {
         align-items: center;
         font-size: 12px;
         line-height: 16px;
-        white-space: nowrap;
+        // white-space: nowrap;
         .title-name {
           font-weight: 600;
         }
@@ -1091,8 +967,8 @@ onMounted(() => {
           line-height: 20px;
           color: var(--o-color-text1);
           text-align: center;
-          white-space: nowrap;
           .title-name {
+            word-break: keep-all;
             font-weight: 600;
           }
         }
@@ -1260,7 +1136,7 @@ onMounted(() => {
           color: var(--o-color-text4);
           font-size: var(--o-font-size-tip);
           line-height: 18px;
-          text-align: center;
+          // text-align: center;
         }
       }
       .btn-box {
