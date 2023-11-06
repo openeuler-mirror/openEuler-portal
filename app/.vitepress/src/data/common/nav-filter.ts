@@ -212,5 +212,9 @@ export default [
   {
     name: 'monthly-summary',
     lang: ['zh'],
-  }
+  },
+  {
+    name: 'approve-step',
+    lang: ['zh'],
+  },
 ];
