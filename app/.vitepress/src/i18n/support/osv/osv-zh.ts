@@ -31,9 +31,9 @@ export default {
       ID: '03',
       TITLE: '申请OSV技术测评',
       TEXT_1: '您需要向公共邮箱（ ',
-      LINK_1: 'oecompatibility@openeuler.org',
+      LINK_1: 'compatibility@openeuler.io',
       TEXT_2:
-        '）发送OSV技术测评申请，邮件标题需要注明“申请OSV技术测评”。收到邮件后，openEuler团队中sig组会与您沟通进行协议签署，如果已经签署，请忽略。',
+        '）发送OSV技术测评申请，邮件标题需要注明“申请OSV技术测评”。如您提交的是嵌入式OS，请额外提交测试报告。收到邮件后，openEuler团队中sig组会与您沟通进行协议签署，如果已经签署，请忽略。',
       TEXT_3: 'tips：如果没有签署CLA，请先签署：',
       LINK_2: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
     },
