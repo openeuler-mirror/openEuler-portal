@@ -128,6 +128,7 @@ const downloadByUrl = (url: string) => {
   a.click();
   window.URL.revokeObjectURL(url);
   document.body.removeChild(a);
+  setProfile(url);
 };
 
 const featuresDownloadUrl =
@@ -175,8 +176,16 @@ const toolsUrl = {
       name: 'ITServiceTools_1.0.T5_Arangodb_Any-x86_64.zip',
       url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T5_Arangodb_Any-x86_64.zip',
     },
-  ]
-}
+  ],
+};
+const setProfile = function (url: string) {
+  const sensors = (window as any)['sensorsDataAnalytic201505'];
+  sensors?.setProfile({
+    profileType: 'OM',
+    downloadURrl: url,
+    date: new Date().getTime(),
+  });
+};
 </script>
 
 <template>
@@ -243,11 +252,13 @@ const toolsUrl = {
                 >
                   {{ item.name }}
                 </el-dropdown-item>
-                <el-dropdown-item disabled divided>高级运维组件：</el-dropdown-item>
+                <el-dropdown-item disabled divided
+                  >高级运维组件：</el-dropdown-item
+                >
                 <el-dropdown-item
-                    v-for="item in toolsUrl.feature"
-                    :key="item.name"
-                    @click="downloadByUrl(item.url)"
+                  v-for="item in toolsUrl.feature"
+                  :key="item.name"
+                  @click="downloadByUrl(item.url)"
                 >
                   {{ item.name }}
                 </el-dropdown-item>
