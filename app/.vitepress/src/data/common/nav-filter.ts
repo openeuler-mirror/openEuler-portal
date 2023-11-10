@@ -217,4 +217,8 @@ export default [
     name: 'approve-step',
     lang: ['zh'],
   },
+  {
+    name: 'live-list',
+    lang: ['zh'],
+  },
 ];
