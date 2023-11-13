@@ -161,6 +161,30 @@ export default {
         PUBLISH_DATE: '2020/07',
       },
       {
+        NAME: '麒麟信安 Kylinsec V3.5.2',
+        DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.5.2/',
+        DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国>内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
+        MANUFACTURER: '麒麟信安 Kylinsec',
+        PUBLISH_DATE: '2023/09',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://mirrors.kylinsec.com.cn/V3.5.2/isos/x86_64/',
+            ARCH: 'x86_64',
+          },
+          {
+            LINK: 'https://mirrors.kylinsec.com.cn/V3.5.2/isos/aarch64/',
+            ARCH: 'AArch64',
+          },
+	  {
+            LINK: 'https://mirrors.kylinsec.com.cn/V3.5.2/isos/loongarch64/',
+            ARCH: 'LoongArch64',
+          },
+	  {
+            ARCH: 'sw_64',
+          },
+        ],
+      },
+      {
         NAME: '麒麟信安 Kylinsec V3.5.1',
         DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.5-1/',
         DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
