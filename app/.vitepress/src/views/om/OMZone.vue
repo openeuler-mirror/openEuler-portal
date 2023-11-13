@@ -133,7 +133,7 @@ const downloadByUrl = (url: string) => {
 const featuresDownloadUrl =
   'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/OSMind%20%E5%85%B3%E9%94%AE%E7%89%B9%E6%80%A7%E4%B8%8E%E4%BB%B7%E5%80%BC.pdf';
 const guideDownloadUrl =
-  'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/IT%20Service%20Tools%201.0.T5%20OS%20Mind%20%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3.chm';
+  'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/IT%20Service%20Tools%201.0.T5%20OS%20Mind%20%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3.zip';
 
 const toolsUrl = {
   base: [
