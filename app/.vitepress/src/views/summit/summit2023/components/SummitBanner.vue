@@ -31,6 +31,7 @@ const windowWidth = ref(useWindowResize());
           class="banner-panel-content flex-end"
         >
           <div data-aos="fade-down" class="box">
+            <img class="text-img" :src="bannerData?.img" alt="" />
             <p v-for="title in bannerData.title" :key="title" class="title">
               {{ title }}
             </p>
@@ -139,7 +140,12 @@ html[lang='zh'] {
       .box {
         color: $banner-color;
       }
-
+      .text-img {
+        max-height: 213px;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
       .desc {
         .inline-desc {
           &:nth-child(2) {

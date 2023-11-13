@@ -3,6 +3,7 @@ import satisfaction_mo from '@/assets/category/home/banner/satisfaction_mo.jpg';
 
 import summit_pc from '@/assets/category/home/banner/summit_pc.jpg';
 import summit_mo from '@/assets/category/home/banner/summit_mo.jpg';
+import textImg from '@/assets/category/home/banner/text.png';
 
 import banner1_pc from '@/assets/category/home/banner/banner1_pc.jpg';
 import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';
@@ -25,9 +26,10 @@ export default {
         moBanner: summit_mo,
         link: '/zh/interaction/summit-list/summit2023/',
         id: 'summit',
-        title: ['openEuler Summit 2023'],
-        desc: ['2023年12月15日 – 16日 北京'],
-        btn: '了解更多',
+        img: textImg,
+        title: [''],
+        desc: [],
+        btn: '',
         targetTap: 1,
       },
       {
@@ -74,9 +76,10 @@ export default {
         moBanner: summit_mo,
         link: '/en/interaction/summit-list/summit2023/',
         id: 'summit',
-        title: ['Operating System Conference +', 'openEuler Summit 2023'],
-        desc: ['December 15 – 16, 2023 | Beijing'],
-        btn: 'View More',
+        img: textImg,
+        title: [''],
+        desc: [],
+        btn: '',
         targetTap: 1,
       },
       {

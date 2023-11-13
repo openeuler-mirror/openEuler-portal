@@ -1,15 +1,18 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { useData } from 'vitepress';
 
 import { useCommon } from '@/stores/common';
 
+import SummitSchedule from './components/SummitSchedule.vue';
 import SummitBanner from './components/SummitBanner.vue';
 import AppContext from '@/components/AppContent.vue';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
 import data_zh from './data/data_zh';
 import data_en from './data/data_en';
+
+import agendaData from './data/agenda-data';
 
 import liveLight from '@/assets/category/summit/summit2022/live.png';
 import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
@@ -26,10 +29,49 @@ if (lang.value === 'zh') {
 } else {
   summitData = data_en;
 }
+
+for (let i = 0; i < agendaData.length; i++) {
+  try {
+    if (typeof agendaData[i].content === 'string') {
+      agendaData[i].content = JSON.parse(agendaData[i].content);
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 const dialogVisible = ref(false);
 const commonStore = useCommon();
 const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
+);
+const showIndex = ref(0);
+function setShowIndex(index: number) {
+  showIndex.value = index;
+  tabType.value = 0;
+}
+const getData: any = computed(() => agendaData[showIndex.value]);
+
+// 控制上下午切换
+const tabType = ref(0);
+const renderData: any = ref([]);
+const dateList = [
+  { day: 14, month: 'DEC' },
+  { day: 15, month: 'DEC' },
+  { day: 16, month: 'DEC' },
+];
+watch(
+  [tabType, showIndex],
+  () => {
+    if (tabType.value === 1) {
+      renderData.value = getData.value.content.content.slice(1);
+    } else if (getData.value) {
+      renderData.value = getData.value.content.content.slice(0, 1);
+    }
+  },
+  {
+    immediate: true,
+  }
 );
 </script>
 <template>
@@ -70,6 +112,42 @@ const liveImg = computed(() =>
           {{ item.name_en || item.name }}
         </div>
       </a>
+    </div>
+    <div
+      v-if="lang === 'zh'"
+      class="agenda"
+      :class="{ 'min-height': showIndex === 1 }"
+    >
+      <h3>会议日程</h3>
+      <div class="date">
+        <div
+          v-for="(date, index) in dateList"
+          :key="index"
+          class="date-item"
+          :class="{ active: showIndex === index }"
+          @click="setShowIndex(index)"
+        >
+          <p class="date-day">{{ date.day }}</p>
+          <p class="date-month">{{ date.month }}</p>
+        </div>
+      </div>
+      <div>
+        <el-tabs v-model.number="tabType" class="schedule-tabs">
+          <el-tab-pane :name="0">
+            <template #label>
+              <div class="time-tabs">上午</div>
+            </template>
+          </el-tab-pane>
+          <el-tab-pane :name="1">
+            <template #label>
+              <div class="time-tabs">下午</div>
+            </template>
+          </el-tab-pane>
+        </el-tabs>
+        <template v-for="item in renderData" :key="item.lable">
+          <SummitSchedule :agenda-data="item" />
+        </template>
+      </div>
     </div>
 
     <div v-if="lang === 'zh'" class="previous">
@@ -389,6 +467,125 @@ const liveImg = computed(() =>
     }
     img {
       width: 100%;
+    }
+  }
+}
+
+.agenda {
+  margin-top: var(--o-spacing-h1);
+  @media (max-width: 767px) {
+    margin-top: var(--o-spacing-h2);
+  }
+  h3 {
+    text-align: center;
+    font-size: var(--o-font-size-h3);
+    line-height: var(--o-line-height-h3);
+    color: var(--o-color-text1);
+    font-weight: 300;
+    @media (max-width: 767px) {
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
+    }
+  }
+  .date {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    .date-item {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #cbcbcb;
+      border-radius: 8px;
+      border: 1px solid #cbcbcb;
+      transition: all 0.3s ease-out;
+
+      & ~ div {
+        margin-left: 40px;
+      }
+      &.active {
+        color: #fff;
+        background-color: var(--o-color-brand1);
+        border: 1px solid #fff;
+      }
+      .date-day {
+        padding: 13px 17px 3px 15px;
+        line-height: 48px;
+        font-size: 48px;
+        font-weight: 700;
+        border-bottom: 1px solid #cbcbcb;
+        @media screen and (max-width: 1120px) {
+          padding: 6px 16px;
+          font-size: 32px;
+          line-height: 32px;
+        }
+      }
+      .date-month {
+        padding: 6px 0;
+        font-size: 24px;
+        font-weight: 100;
+        line-height: 24px;
+        @media screen and (max-width: 1120px) {
+          padding: 4px 0;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .schedule-tabs {
+    position: relative;
+    text-align: center;
+    margin-top: 24px;
+    :deep(.el-tabs__content) {
+      overflow: visible;
+      .el-button {
+        position: absolute;
+        left: 0;
+        top: -75px;
+        z-index: 1;
+      }
+    }
+    :deep(.el-tabs__nav) {
+      float: none;
+      display: inline-block;
+      .el-tabs__active-bar {
+        display: none;
+      }
+      .el-tabs__item {
+        padding: 0;
+      }
+    }
+    :deep(.el-tabs__nav-wrap) {
+      &::after {
+        display: none;
+      }
+    }
+    .time-tabs {
+      display: inline-block;
+      margin: 0 0 24px;
+      cursor: pointer;
+      border: 1px solid var(--o-color-border2);
+      color: var(--o-color-text1);
+      text-align: center;
+      background: var(--o-color-bg2);
+      font-size: 14px;
+      line-height: 38px;
+      padding: 0 16px;
+      min-width: 172px;
+      @media (max-width: 1100px) {
+        line-height: 28px;
+        font-size: 12px;
+        padding: 0 12px;
+        min-width: 100px;
+      }
+    }
+
+    .is-active .time-tabs {
+      color: #fff;
+      background: var(--o-color-brand1);
+      border-color: var(--o-color-brand1);
     }
   }
 }

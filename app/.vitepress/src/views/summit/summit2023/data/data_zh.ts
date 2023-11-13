@@ -2,6 +2,7 @@ import callFor from '../img/call-for_pc.png';
 import callFor_mo from '../img/call-for_mo.png';
 import banner_pc from '../img/banner_pc.jpg';
 import banner_mo from '../img/banner_mo.jpg';
+import textImg from '../img/text.png';
 
 export default {
   banner: {
@@ -9,8 +10,9 @@ export default {
     moBanner: banner_mo,
     link: '',
     id: '',
-    title: ['openEuler Summit 2023'],
-    desc: ['2023年12月15日 – 16日 北京'],
+    img: textImg,
+    title: [''],
+    desc: [''],
     btn: '',
     targetTap: 1,
   },

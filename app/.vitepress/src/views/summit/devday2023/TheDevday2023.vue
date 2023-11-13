@@ -133,13 +133,6 @@ onMounted(() => {
           <SummitSchedule v-show="showIndex === 0" :agenda-data="item" />
         </template>
       </template>
-
-      <!-- <template
-        v-for="item in summitData.agenda.content.content"
-        :key="item.lable"
-      >
-        <SummitSchedule v-show="showIndex === 0" :agenda-data="item" />
-      </template> -->
       <div v-show="showIndex === 1">
         <el-tabs v-model.number="tabType" class="schedule-tabs">
           <el-tab-pane :name="0">

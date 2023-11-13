@@ -58,7 +58,7 @@ const jumpTo = (item: any) => {
       clickable: true,
     }"
     :autoplay="{
-      delay: 5000,
+      delay: 500000000,
       disableOnInteraction: false,
     }"
     :navigation="true"
@@ -85,6 +85,7 @@ const jumpTo = (item: any) => {
             :class="item.id === 'whitepaper' ? 'whitepaper' : ''"
           >
             <div data-aos="fade-down" class="box">
+              <img v-if="item.img" class="text-img" :src="item?.img" alt="" />
               <p
                 v-for="title in item.title"
                 :key="title"
@@ -188,7 +189,7 @@ html[lang='en'] {
 }
 #satisfaction {
   .title {
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 768px) {
       word-spacing: 100vh;
     }
   }
@@ -249,11 +250,13 @@ html[lang='en'] {
       .box {
         color: $banner-color;
       }
-
-      .desc {
-        @media screen and (min-width: 1439px) {
-          // max-width: 500px;
+      .text-img {
+        max-height: 213px;
+        @media screen and (max-width: 768px) {
+          display: none;
         }
+      }
+      .desc {
         .inline-desc {
           &:nth-child(2) {
             padding-left: 30px;
