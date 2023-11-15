@@ -27,7 +27,7 @@ import tianjun from '@/assets/category/organization/tianjun.png';
 import wangjianmin from '@/assets/category/organization/wangjianmin.png';
 import wanglingzhuo from '@/assets/category/organization/wanglingzhuo.png';
 import wangzhigang from '@/assets/category/organization/wangzhigang.png';
-import weigang from '@/assets/category/organization/weigang.png';
+import zhujianwei from '@/assets/category/organization/zhujianwei.png';
 import wufengguang from '@/assets/category/organization/wufengguang.png';
 import xiexiuqi from '@/assets/category/organization/xiexiuqi.png';
 import xiongwei from '@/assets/category/organization/xiongwei.png';
@@ -317,13 +317,6 @@ export default {
             gitee: 'jianminw',
           },
           {
-            img: weigang,
-            name: '魏刚',
-            post: '委员',
-            email: '11015100@qq.com',
-            gitee: 'gwei3',
-          },
-          {
             img: wufengguang,
             name: '吴峰光',
             post: '委员',
@@ -350,6 +343,13 @@ export default {
             post: '委员',
             email: 'zhaochuanfeng@huawei.com',
             gitee: 'cf-zhao',
+          },
+          {
+            img: zhujianwei,
+            name: '朱健伟',
+            post: '委员',
+            email: 'zhujianwei7@huawei.com',
+            gitee: 'zhujianwei001',
           },
         ],
       },
@@ -746,13 +746,6 @@ export default {
             gitee: 'jianminw',
           },
           {
-            img: weigang,
-            name: 'Wei Gang',
-            post: 'Committee member',
-            email: '11015100@qq.com',
-            gitee: 'gwei3',
-          },
-          {
             img: wufengguang,
             name: 'Wu Fengguang',
             post: 'Committee member',
@@ -779,6 +772,13 @@ export default {
             post: 'Committee member',
             email: 'zhaochuanfeng@huawei.com',
             gitee: 'cf-zhao',
+          },
+          {
+            img: zhujianwei,
+            name: 'Zhu Jianwei',
+            post: 'Committee member',
+            email: 'zhujianwei7@huawei.com',
+            gitee: 'zhujianwei001',
           },
         ],
       },
