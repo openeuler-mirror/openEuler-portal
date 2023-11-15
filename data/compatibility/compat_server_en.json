@@ -13795,5 +13795,66 @@
       "hostBusAdapter": "HiSilicon SAS 3.0 HBA",
       "hardDiskDrive": "SageMicro SSD"
     }
+  },
+  {
+    "hardwareFactory": "xFusion",
+    "hardwareModel": "Fusionserver 2288H V5",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2023/11/04",
+    "friendlyLink": "https://support.xfusion.com/support/#/zh/rack-servers/2288h-v5-pid-21872244/document",
+    "boardCards": [
+      {
+        "vendorID": "14e4",
+        "deviceID": "16d7",
+        "svID": "14e4",
+        "ssID": "1402",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "bnxt_en",
+        "version": "1.9.2",
+        "type": "NIC",
+        "date": "2023.11.04",
+        "sha256": "dbbf0d502945f0a0b578d8c7a701e2fce9462e2694b00b52dc94144deae106eb",
+        "driverSize": "394K",
+        "chipVendor": "Broadcom",
+        "boardModel": "BCM957414A4142CC",
+        "chipModel": "BCM57414",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "0097",
+        "svID": "1000",
+        "ssID": "3090",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "mpt3sas",
+        "version": "26.100.00.00",
+        "type": "RAID",
+        "date": "2023/11/04",
+        "sha256": "453e9a4dfd7ce4b5379b90e92ada3cbacfef56d0fc88ad29ed43f24831a56f53",
+        "driverSize": "538K",
+        "chipVendor": "Avago",
+        "boardModel": "SR130",
+        "chipModel": "SAS3008",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+      "compatibilityConfiguration": {
+      "productInformation": "https://support.xfusion.com/support/#/zh/rack-servers/2288h-v5-pid-21872244/document",
+      "certificationTime": "2023/11/04",
+      "commitID": "",
+      "mainboardModel": "BC11SPSCB",
+      "biosUefi": "7.55(U47)",
+      "cpu": "cascade",
+      "ram": "8*32 RDIMMs",
+      "portsBusTypes": "x8 PCI Express 3 x8",
+      "videoAdapter": "Huawei Technologies Co., Ltd. Hi171x Series",
+      "hostBusAdapter": "QLogic Corp. ISP2532-based 8Gb Fibre Channel to PCI Express HBA",
+      "hardDiskDrive": "TOSHIBA  AL15SEB060N"
+    }
   }
 ]
