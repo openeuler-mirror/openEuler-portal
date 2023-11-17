@@ -4,7 +4,6 @@ import { useData } from 'vitepress';
 
 import { useCommon } from '@/stores/common';
 
-import SummitSchedule from './components/SummitSchedule.vue';
 import SummitBanner from './components/SummitBanner.vue';
 import AppContext from '@/components/AppContent.vue';
 import useWindowResize from '@/components/hooks/useWindowResize';
@@ -13,6 +12,7 @@ import data_zh from './data/data_zh';
 import data_en from './data/data_en';
 
 import agendaData from './data/agenda-data';
+import agendaImg from './img/agenda.png';
 
 import liveLight from '@/assets/category/summit/summit2022/live.png';
 import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
@@ -30,26 +30,13 @@ if (lang.value === 'zh') {
   summitData = data_en;
 }
 
-for (let i = 0; i < agendaData.length; i++) {
-  try {
-    if (typeof agendaData[i].content === 'string') {
-      agendaData[i].content = JSON.parse(agendaData[i].content);
-    }
-  } catch (error) {
-    console.error(error);
-  }
-}
-
 const dialogVisible = ref(false);
 const commonStore = useCommon();
 const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );
 const showIndex = ref(0);
-function setShowIndex(index: number) {
-  showIndex.value = index;
-  tabType.value = 0;
-}
+
 const getData: any = computed(() => agendaData[showIndex.value]);
 
 // 控制上下午切换
@@ -81,6 +68,14 @@ watch(
     <div class="introduce">
       <p>{{ summitData.introduce }}</p>
       <p>{{ summitData.introduce2 }}</p>
+      <p v-if="summitData.introduce3">{{ summitData.introduce3 }}</p>
+      <p v-if="summitData.introduce4">{{ summitData.introduce4 }}</p>
+      <ul v-if="summitData.list">
+        <li v-for="li in summitData.list">
+          {{ li }}
+        </li>
+      </ul>
+      <p v-if="summitData.introduce5">{{ summitData.introduce5 }}</p>
     </div>
     <div class="visa-btn-box">
       <OButton
@@ -119,35 +114,7 @@ watch(
       :class="{ 'min-height': showIndex === 1 }"
     >
       <h3>会议日程</h3>
-      <div class="date">
-        <div
-          v-for="(date, index) in dateList"
-          :key="index"
-          class="date-item"
-          :class="{ active: showIndex === index }"
-          @click="setShowIndex(index)"
-        >
-          <p class="date-day">{{ date.day }}</p>
-          <p class="date-month">{{ date.month }}</p>
-        </div>
-      </div>
-      <div>
-        <el-tabs v-model.number="tabType" class="schedule-tabs">
-          <el-tab-pane :name="0">
-            <template #label>
-              <div class="time-tabs">上午</div>
-            </template>
-          </el-tab-pane>
-          <el-tab-pane :name="1">
-            <template #label>
-              <div class="time-tabs">下午</div>
-            </template>
-          </el-tab-pane>
-        </el-tabs>
-        <template v-for="item in renderData" :key="item.lable">
-          <SummitSchedule :agenda-data="item" />
-        </template>
-      </div>
+      <img class="agenda-img" :src="agendaImg" alt="" />
     </div>
 
     <div v-if="lang === 'zh'" class="previous">
@@ -275,6 +242,14 @@ watch(
     font-size: var(--o-font-size-text);
   }
 }
+.agenda-img {
+  margin-top: 40px;
+  width: 100%;
+  box-shadow: var(--o-shadow-l1);
+  @media screen and (max-width: 768px) {
+    margin-top: 24px;
+  }
+}
 .visa-letter-request {
   color: var(--o-color-text1);
   line-height: var(--o-line-height-h6);
@@ -388,11 +363,19 @@ watch(
   line-height: var(--o-line-height-h6);
   color: var(--o-color-text1);
   p {
-    &:last-child {
-      margin-top: 24px;
-      @include mobile {
-        margin-top: 16px;
-      }
+    margin-top: 24px;
+    @include mobile {
+      margin-top: 16px;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  ul {
+    padding-left: 20px;
+    list-style: inherit;
+    li {
+      margin-top: 12px;
     }
   }
   @media screen and (max-width: 768px) {

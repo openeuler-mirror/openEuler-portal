@@ -989,6 +989,9 @@ onMounted(() => {
     }
     .nav-box-top {
       height: 112px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
       &.nav-item {
         position: relative;
         margin-bottom: 12px;
