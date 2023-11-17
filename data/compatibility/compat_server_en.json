@@ -13856,5 +13856,66 @@
       "hostBusAdapter": "QLogic Corp. ISP2532-based 8Gb Fibre Channel to PCI Express HBA",
       "hardDiskDrive": "TOSHIBA  AL15SEB060N"
     }
+  },
+  {
+    "hardwareFactory": "Huawei",
+    "hardwareModel": "TaiShan 200 2280",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "aarch64",
+    "date": "2023/11/04",
+    "friendlyLink": "https://e.huawei.com/cn/products/computing/kunpeng/taishan/taishan-200-pro-2280",
+    "boardCards": [
+      {
+        "vendorID": "15b3",
+        "deviceID": "101b",
+        "svID": "15b3",
+        "ssID": "0029",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "mlx5_core",
+        "version": "5.0-0",
+        "type": "NIC",
+        "date": "2023.11.04",
+        "sha256": "26db2e7cb2245eb31580b446af4ce494619f777e7cef2cd68625b381462c8e12",
+        "driverSize": "970K",
+        "chipVendor": "Mellanox",
+        "boardModel": "MCX653105A-EFAT",
+        "chipModel": "ConnectX-6",
+        "item": "06030438",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "0017",
+        "svID": "19e5",
+        "ssID": "d213",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "megaraid_sas",
+        "version": "07.706.03.00-rc1",
+        "type": "RAID",
+        "date": "2023.11.04",
+        "sha256": "a75db55092e67bece617a3250d7141626f7369a860c5a9d44956c1bdcddcb18a",
+        "driverSize": "295K",
+        "chipVendor": "Broadcom",
+        "boardModel": "SR150-M",
+        "chipModel": "SAS3408",
+        "item": "03024JNF",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://e.huawei.com/cn/products/computing/kunpeng/taishan/taishan-200-pro-2280",
+      "certificationTime": "2023/11/04",
+      "commitID": "I8ERQG",
+      "mainboardModel": "BC82AMDDA",
+      "biosUefi": "6.65(u75)",
+      "cpu": "Kunpeng 920",
+      "ram": "8*32G DIMMs",
+      "portsBusTypes": "PCIE X16",
+      "videoAdapter": "Hi171x",
+      "hostBusAdapter": "HiSilicon SAS 3.0 HBA",
+      "hardDiskDrive": "ST1200MM0009"
+    }
   }
 ]
