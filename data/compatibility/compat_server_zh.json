@@ -13917,5 +13917,66 @@
       "hostBusAdapter": "HiSilicon SAS 3.0 HBA",
       "hardDiskDrive": "ST1200MM0009"
     }
+  },
+  {
+    "hardwareFactory": "新华三",
+    "hardwareModel": "H3C UniServer R4950 G5",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2023.11.13",
+    "friendlyLink": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Dualway_Server/R4950_G5/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "193d",
+        "ssID": "1005",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "igb",
+        "version": "5.4.0-k",
+        "type": "NIC",
+        "date": "2023.11.13",
+        "sha256": "1557c943b19a24b48b635efcafe87dd14fc9e1c79e5dc5f217e6ab889fa3cf33",
+        "driverSize": "487K",
+        "chipVendor": "Intel",
+        "boardModel": "360T-B",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "005d",
+        "svID": "1000",
+        "ssID": "9a61",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "megaraid_sas",
+        "version": "07.706.03.00-rc1",
+        "type": "RAID",
+        "date": "2023.11.13",
+        "sha256": "3dfa96c43f618c0e8074c62cc9dd6d3581cbf4ba349c630bf6e02ea623da5b10",
+        "driverSize": "290K",
+        "chipVendor": "Avago",
+        "boardModel": "9361-8i",
+        "chipModel": "SAS-3 3108",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+      "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Dualway_Server/R4950_G5/",
+      "certificationTime": "2023.11.13",
+      "commitID": "I8G3H8",
+      "mainboardModel": "",
+      "biosUefi": "5.60",
+      "cpu": "AMD EPYC 3",
+      "ram": "2*32G 2RDIMMs",
+      "portsBusTypes": "x8 PCI Express x8",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "SEAGATE_ST300MP0005"
+    }
   }
 ]
