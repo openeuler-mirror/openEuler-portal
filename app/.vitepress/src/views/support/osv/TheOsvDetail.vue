@@ -9,6 +9,8 @@ import { getOsvOne } from '@/api/api-security';
 
 import AppContent from '@/components/AppContent.vue';
 
+import templatData from '@/data/osv';
+
 const i18n = useI18n();
 const router = useRouter();
 
@@ -17,102 +19,23 @@ const queryData: DetailQuery = reactive({
 });
 
 const approveList: any = ref({});
-const toolList = ref([
-  {
-    key: 'core_pkg',
-    name: i18n.value.approve.TOOL_NAME.CORE_PKG,
-    desc: i18n.value.approve.TOOL_DESCRIBE.CORE_PKG,
-    result: '',
-  },
-  {
-    key: 'soft_pkg',
-    name: i18n.value.approve.TOOL_NAME.SOFT_PKG,
-    desc: i18n.value.approve.TOOL_DESCRIBE.SOFT_PKG,
-    result: '',
-  },
-  {
-    key: 'KABI',
-    name: i18n.value.approve.TOOL_NAME.KABI,
-    desc: i18n.value.approve.TOOL_DESCRIBE.KABI,
-    result: '',
-  },
-  {
-    key: 'ABI',
-    name: i18n.value.approve.TOOL_NAME.ABI,
-    desc: i18n.value.approve.TOOL_DESCRIBE.ABI,
-    result: '',
-  },
-  {
-    key: 'service_config',
-    name: i18n.value.approve.TOOL_NAME.SERVICE,
-    desc: i18n.value.approve.TOOL_DESCRIBE.SERVICE,
-    result: '',
-  },
-  {
-    key: 'soft_config',
-    name: i18n.value.approve.TOOL_NAME.SOFT_CONFIG,
-    desc: i18n.value.approve.TOOL_DESCRIBE.SOFT_CONFIG,
-    result: '',
-  },
-  {
-    key: 'kernel_config',
-    name: i18n.value.approve.TOOL_NAME.KARNEL_CONFIG,
-    desc: i18n.value.approve.TOOL_DESCRIBE.KARNEL_CONFIG,
-    result: '',
-  },
-]);
-
-const platformList = ref([
-  {
-    key: 'repo',
-    name: i18n.value.approve.PLATFORM_NAME.REPO,
-    desc: i18n.value.approve.PLATFORM_DESCRIBE.REPO,
-    result: '',
-  },
-  {
-    key: 'base_test',
-    name: i18n.value.approve.PLATFORM_NAME.BASE,
-    desc: i18n.value.approve.PLATFORM_DESCRIBE.BASE,
-    result: '',
-  },
-  {
-    key: 'performance_test',
-    name: i18n.value.approve.PLATFORM_NAME.PERFORMANCE,
-    desc: i18n.value.approve.PLATFORM_DESCRIBE.PERFORMANCE,
-    result: '',
-  },
-  {
-    key: 'running_config',
-    name: i18n.value.approve.PLATFORM_NAME.RUNNING,
-    desc: i18n.value.approve.PLATFORM_DESCRIBE.RUNNING,
-    result: '',
-  },
-]);
 
 function goBackPage() {
   const i = router.route.path.lastIndexOf('a');
   router.go(`${router.route.path.substring(0, i)}`);
 }
 
+const isTemplate = ref(true); // 是否是Osv默认详情模板
 onMounted(() => {
   const index1 = decodeURIComponent(window.location.href).indexOf('=');
   queryData.id = decodeURIComponent(window.location.href).substring(index1 + 1);
   getOsvOne(queryData).then((res: any) => {
-    approveList.value = res.result;
-    res.result.toolsResult.forEach((item: any) => {
-      toolList.value.forEach((it: any) => {
-        if (item.name === it.key) {
-          it.result = item.result === 'pass' ? '通过' : '未通过';
-        }
-      });
-    });
-    res.result.platformResult.forEach((item: any) => {
-      platformList.value.forEach((val: any) => {
-        if (item.name === val.key) {
-          val.result = item.result === 'pass' ? '通过' : '未通过';
-        }
-      });
-    });
+    if (res.result) {
+      approveList.value = res.result;
+      if (res.result.type === '嵌入式') {
+        isTemplate.value = false;
+      }
+    }
   });
 });
 </script>
@@ -185,11 +108,17 @@ onMounted(() => {
       </div>
     </div>
 
-    <div class="tool-content">
+    <div
+      v-for="item in isTemplate
+        ? templatData.zh.template
+        : templatData.zh.flushbonading"
+      :key="item.title"
+      class="tool-content"
+    >
       <div class="common-title">
-        {{ i18n.approve.TOOL_LIST.TOOL_DETECT }}
+        {{ item.title }}
       </div>
-      <OTable :data="toolList" class="pc-list">
+      <OTable :data="item.lists" class="pc-list">
         <OTableColumn
           :label="i18n.approve.TOOL_LIST.TEST_ITEM"
           prop="name"
@@ -212,69 +141,21 @@ onMounted(() => {
         </el-table-column>
       </OTable>
       <ul class="mobile-list">
-        <li v-for="item in toolList" :key="item.id" class="item">
+        <li v-for="child in item.lists" :key="child.name" class="item">
           <ul>
             <li>
               <span>{{ i18n.approve.TOOL_LIST.TEST_ITEM }}:</span>
-              <div>{{ item.name }}</div>
+              <div>{{ child.name }}</div>
             </li>
             <li>
               <span>{{ i18n.approve.TOOL_LIST.DETECTION_DESC }}:</span>
-              <div>{{ item.desc }}</div>
+              <div>{{ child.desc }}</div>
             </li>
             <li>
               <span>{{ i18n.approve.TOOL_LIST.CONCLUSION }}:</span>
               <div>
                 <img src="@/assets/category/support/osv/adopt.png" alt="" />
-                <span>{{ item.result }}</span>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div class="platform-content">
-      <div class="common-title">
-        {{ i18n.approve.PLATFORM_LIST.PLATFORM_VERIFY }}
-      </div>
-      <OTable :data="platformList" class="pc-list">
-        <OTableColumn
-          :label="i18n.approve.TOOL_LIST.TEST_ITEM"
-          prop="name"
-          width="300"
-        ></OTableColumn>
-        <OTableColumn
-          :label="i18n.approve.TOOL_LIST.DETECTION_DESC"
-          prop="desc"
-        ></OTableColumn>
-        <el-table-column :label="i18n.approve.TOOL_LIST.CONCLUSION" width="300">
-          <template #default="scope">
-            <div class="pass-box">
-              <img src="@/assets/category/support/osv/adopt.png" alt="" />
-              <p>
-                {{ scope.row.result }}
-              </p>
-            </div>
-          </template>
-        </el-table-column>
-      </OTable>
-      <ul class="mobile-list">
-        <li v-for="item in platformList" :key="item.id" class="item">
-          <ul>
-            <li>
-              <span>{{ i18n.approve.TOOL_LIST.TEST_ITEM }}:</span>
-              <div>{{ item.name }}</div>
-            </li>
-            <li>
-              <span>{{ i18n.approve.TOOL_LIST.DETECTION_DESC }}:</span>
-              <div>{{ item.desc }}</div>
-            </li>
-            <li>
-              <span>{{ i18n.approve.TOOL_LIST.CONCLUSION }}:</span>
-              <div>
-                <img src="@/assets/category/support/osv/adopt.png" alt="" />
-                <span>{{ item.result }}</span>
+                <span>{{ child.result }}</span>
               </div>
             </li>
           </ul>

@@ -14,6 +14,7 @@ import AppPaginationMo from '@/components/AppPaginationMo.vue';
 
 import banner from '@/assets/banner/banner-security.png';
 import osv from '@/assets/illustrations/support/osv.png';
+import IconUp from '~icons/app/icon-chevron-up.svg';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 
@@ -133,6 +134,11 @@ onMounted(() => {
 });
 
 watch(queryData, () => getOsTableList(queryData));
+
+const isExpand = ref(false);
+const getMoreTags = () => {
+  isExpand.value = !isExpand.value;
+};
 </script>
 <template>
   <BannerLevel2
@@ -183,6 +189,7 @@ watch(queryData, () => getOsTableList(queryData));
         </ClientOnly>
       </div>
     </div>
+
     <ClientOnly>
       <OSearch
         v-model="inputName"
@@ -196,18 +203,28 @@ watch(queryData, () => getOsTableList(queryData));
       <template #header>
         <div class="card-header">
           <TagFilter :label="i18n.approve.SELECT_COMPANY" :show="false">
-            <OTag
-              v-for="(item, index) in osNames"
-              :key="'tag' + index"
-              checkable
-              :type="activeIndex === index ? 'primary' : 'text'"
-              @click="selectTypeTag(index, item)"
-            >
-              {{ item }}
-            </OTag>
+            <p class="expand-retract" @click="getMoreTags">
+              {{ isExpand ? i18n.approve.RETRACT : i18n.approve.EXPAND }}
+              <OIcon class="expand-icon" :class="isExpand ? 'rotated' : ''"
+                ><IconUp />
+              </OIcon>
+            </p>
+
+            <div class="filter-content" :class="isExpand ? 'is-expanded' : ''">
+              <OTag
+                v-for="(item, index) in osNames"
+                :key="'tag' + index"
+                checkable
+                :type="activeIndex === index ? 'primary' : 'text'"
+                @click="selectTypeTag(index, item)"
+              >
+                {{ item }}
+              </OTag>
+            </div>
           </TagFilter>
         </div>
       </template>
+
       <div class="card-body">
         <TagFilter :show="false" :label="i18n.approve.TABLE_COLUMN.TYPE">
           <OTag
@@ -248,7 +265,7 @@ watch(queryData, () => getOsTableList(queryData));
       <OTableColumn :label="i18n.approve.TABLE_COLUMN.DATE" prop="date">
       </OTableColumn>
 
-      <el-table-column :label="i18n.approve.TABLE_COLUMN.DETAILS" width="220">
+      <el-table-column :label="i18n.approve.TABLE_COLUMN.DETAILS" width="140">
         <template #default="scope">
           <span class="link" @click="goApproveInfo(scope.row.id)">{{
             scope.row.details
@@ -256,7 +273,7 @@ watch(queryData, () => getOsTableList(queryData));
         </template>
       </el-table-column>
 
-      <el-table-column :label="i18n.approve.TABLE_COLUMN.DETAILS" width="220">
+      <el-table-column :label="i18n.approve.TABLE_COLUMN.DETAILS" width="160">
         <template #default="scope">
           <a
             :href="scope.row.friendlyLink"
@@ -380,7 +397,6 @@ watch(queryData, () => getOsTableList(queryData));
 .search {
   height: 48px;
   @media screen and (max-width: 768px) {
-    // display: none;
     height: 36px;
     margin-bottom: var(--o-spacing-h6);
   }
@@ -424,10 +440,9 @@ watch(queryData, () => getOsTableList(queryData));
     border: none;
     margin-right: var(--o-spacing-h3);
     font-size: var(--o-font-size-text);
+    line-height: var(--o-line-height-text);
     font-weight: 400;
     color: var(--o-color-text4);
-    line-height: var(--o-line-height-text);
-
     cursor: pointer;
   }
   .active {
@@ -440,6 +455,49 @@ watch(queryData, () => getOsTableList(queryData));
     padding-bottom: var(--o-spacing-h8);
     border-bottom: 1px solid var(--o-color-division1);
   }
+
+  // os厂商筛选标签收起/展开，暂时隐藏
+  .expand-retract {
+    position: absolute;
+    right: 16px;
+    top: 18px;
+    cursor: pointer;
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
+    display: none;
+  }
+  .expand-icon {
+    position: absolute;
+    top: 0px;
+    right: -18px;
+    transition: all 0.3s linear;
+    font-size: var(--o-font-size-h8);
+    &.rotated {
+      transform: rotateZ(180deg);
+    }
+  }
+  .filter-content {
+    // max-height: 106px;
+    // overflow: auto;
+    // transition: all 0.3s linear;
+    &.is-expanded {
+      max-height: 1000px;
+      overflow: visible;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 4px;
+      background-color: var(--o-color-bg2);
+    }
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: var(--o-color-bg2);
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background: var(--o-color-division1);
+    }
+  }
+
   .card-body {
     padding-top: var(--o-spacing-h8);
   }
@@ -450,8 +508,8 @@ watch(queryData, () => getOsTableList(queryData));
     display: none;
   }
   .link {
-    cursor: pointer;
     color: var(--o-color-link1);
+    cursor: pointer;
   }
 }
 .empty-status {
