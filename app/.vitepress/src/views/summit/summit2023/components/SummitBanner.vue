@@ -208,7 +208,7 @@ html[lang='zh'] {
       width: 100%;
       height: 100%;
       @media screen and(max-width:768px) {
-        background-image: url(../img/banner_mo.jpg);
+        background-image: url(../img/banner_mo.png);
       }
     }
     .is-show-pc {

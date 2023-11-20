@@ -1,7 +1,7 @@
 import callFor from '../img/call-for_pc.png';
 import callFor_mo from '../img/call-for_mo.png';
 import banner_pc from '../img/banner_pc.jpg';
-import banner_mo from '../img/banner_mo.jpg';
+import banner_mo from '../img/banner_mo.png';
 import textImg from '../img/text.png';
 
 export default {

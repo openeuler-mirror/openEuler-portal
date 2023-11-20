@@ -1,7 +1,7 @@
 import callFor from '../img/call-for_pc.png';
 import callFor_mo from '../img/call-for_mo.png';
 import banner_pc from '../img/banner_pc.jpg';
-import banner_mo from '../img/banner_mo.jpg';
+import banner_mo from '../img/banner_mo.png';
 import textImg from '../img/text.png';
 
 export default {
@@ -17,9 +17,9 @@ export default {
     targetTap: 1,
   },
   introduce:
-    'The digital economy is a driving force behind global economic growth and offers incredible opportunities for digitalization and intelligence. AI, the new engine that powers tech innovation and progress, is the key to unlocking this growth. As the backbone of digital infrastructure and the bridge to AI technology, operating systems provide endless possibilities for creating an intelligent society. Against this backdrop, the Operating System Conference + openEuler Summit 2023 is a premier event that aims to bring together major global players from across the industry chain. It will focus on discussing the core capabilities of base software, leading continuous innovations, building a thriving open source community, and promoting the development of intelligent OSs for a digital future.',
+    'The digital economy is a driving force behind global economic growth and offers incredible opportunities for digitalization and intelligence. AI, the new engine that powers tech innovation and progress, is the key to unlocking this growth. As the backbone of digital infrastructure and the bridge to AI technology, operating systems provide endless possibilities for creating an intelligent society. Against this backdrop, the Operating System Conference & openEuler Summit 2023 is a premier event that aims to bring together major global players from across the industry chain. It will focus on discussing the core capabilities of base software, leading continuous innovations, building a thriving open source community, and promoting the development of intelligent OSs for a digital future.',
   introduce2:
-    'This event is the annual flagship event of the OpenAtom openEuler community. With versatile-scenario innovation on core technologies, openEuler has built base software capabilities for diversified and intelligent computing. It fully unleashes the potential of open source collaboration, merging the physical and digital worlds. openEuler and its partners are jointly building a self-sustaining and self-developing industry chain. With surging market share and commercial success, it is growing to become a solid backbone of digital infrastructure. Global open source foundations, organizations, contributors, users, and partners are all welcome to take part in this event, where they will have the opportunity to network, explore, and innovate to help build the future digital world. Register now to take part in the Operating System Conference + openEuler Summit 2023!',
+    'This event is the annual flagship event of the OpenAtom openEuler community. With versatile-scenario innovation on core technologies, openEuler has built base software capabilities for diversified and intelligent computing. It fully unleashes the potential of open source collaboration, merging the physical and digital worlds. openEuler and its partners are jointly building a self-sustaining and self-developing industry chain. With surging market share and commercial success, it is growing to become a solid backbone of digital infrastructure. Global open source foundations, organizations, contributors, users, and partners are all welcome to take part in this event, where they will have the opportunity to network, explore, and innovate to help build the future digital world. Register now to take part in the Operating System Conference & openEuler Summit 2023!',
   contentList: [
     {
       name: 'CALL FOR SPEAKER',

@@ -70,6 +70,51 @@ export default {
           },
         ],
       },
+      {
+        month: '8',
+        actives: [
+          {
+            activeName: 'OSSUMMIT EU2023',
+            activelink: {
+              url: 'https://www.openeuler.org/zh/news/OSSUMMIT1/OSSUMMIT-zh.html',
+            },
+          },
+          {
+            activeName: 'RISC-V Summit China 2023',
+            activelink: {
+              url: 'https://www.openeuler.org/zh/news/20230901-embedded/20230901-embedded.html',
+            },
+          },
+        ],
+      },
+      {
+        month: '9',
+        actives: [
+          {
+            activeName: 'HUAWEI CONNECT 2023',
+            activelink: {
+              url: 'https://www.openeuler.org/zh/news/20230928-HCopenEuler/20230928-HCopenEuler.html',
+            },
+          },
+          {
+            activeName: 'KubeCon China 2023',
+            activelink: {
+              url: 'https://www.openeuler.org/zh/news/20230928-kubecon/20230928-kubecon.html',
+            },
+          },
+        ],
+      },
+      {
+        month: '10',
+        actives: [
+          {
+            activeName: '18届中国内核开发者大会',
+            activelink: {
+              url: 'https://www.openeuler.org/zh/news/20231103-CLK/20231103-CLK.html',
+            },
+          },
+        ],
+      },
     ],
   },
   developer: {
@@ -140,7 +185,7 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: 'Compiler& Embedded',
+                activeName: '杭州 Compiler& Embedded',
                 activelink: {
                   url: '/zh/interaction/event-list/detail/?id=88&isMini=1',
                 },
@@ -209,6 +254,9 @@ export default {
                   url: '/zh/interaction/event-list/detail/?id=93&isMini=1',
                 },
               },
+              {
+                activeName: '线上 FangTian',
+              },
             ],
           },
         ],
@@ -227,6 +275,12 @@ export default {
               },
               {
                 activeName: '杭州 编译器',
+              },
+              {
+                activeName: '线上 Bigdata',
+              },
+              {
+                activeName: '线上 G11N',
               },
             ],
           },
@@ -259,10 +313,21 @@ export default {
                 },
               },
               {
-                activeName: '天津 方天SIG',
+                activeName: '天津 Fang Tian SIG',
                 activelink: {
                   url: '/zh/interaction/event-list/detail/?id=100&isMini=1',
                 },
+              },
+              {
+                activeName: '线上 Fang Tian',
+              },
+            ],
+          },
+          {
+            activeType: '用户组活动',
+            activeEvent: [
+              {
+                activeName: '郑州',
               },
             ],
           },
@@ -277,14 +342,14 @@ export default {
               {
                 activeName: '苏州 迁移',
               },
+              {
+                activeName: '线上 消息中间件',
+              },
             ],
           },
           {
             activeType: '用户组活动',
             activeEvent: [
-              {
-                activeName: '郑州',
-              },
               {
                 activeName: '成都',
               },
