@@ -76,8 +76,8 @@ export function showGuard() {
 // token失效跳转首页
 export function tokenFailIndicateLogin() {
   saveUserAuth();
-  const { guardAuthClient } = useStoreData();
-  guardAuthClient.value = {};
+  const { clearGuardAuthClient } = useLogin();
+  clearGuardAuthClient();
   goToHome();
 }
 
@@ -131,12 +131,12 @@ const removeSessionInfo = () => {
 export function refreshInfo(community = 'openeuler') {
   const { token } = getUserAuth();
   if (token) {
-    const { guardAuthClient } = useStoreData();
-    guardAuthClient.value = getSessionInfo();
+    const { setGuardAuthClient } = useLogin();
+    setGuardAuthClient(getSessionInfo());
     queryPermission({ community }).then((res) => {
       const { data } = res;
       if (Object.prototype.toString.call(data) === '[object Object]') {
-        guardAuthClient.value = data;
+        setGuardAuthClient(data);
         setSessionInfo(data);
       }
     });
@@ -155,8 +155,8 @@ export function isLogined() {
           const { data } = res;
           if (data) {
             if (Object.prototype.toString.call(data) === '[object Object]') {
-              const { guardAuthClient } = useStoreData();
-              guardAuthClient.value = data;
+              const { setGuardAuthClient } = useLogin();
+              setGuardAuthClient(data);
               setSessionInfo(data);
             }
             resolve(true);
@@ -169,14 +169,6 @@ export function isLogined() {
       reject(false);
     }
   });
-}
-
-export function hasPermission(per: string) {
-  const { guardAuthClient } = useStoreData();
-  if (Array.isArray(guardAuthClient?.value?.permissions)) {
-    return guardAuthClient.value.permissions.includes(per);
-  }
-  return false;
 }
 
 export function getLanguage() {
