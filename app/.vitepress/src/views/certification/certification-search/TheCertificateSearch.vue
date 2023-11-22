@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
+import { ref, computed, watch } from 'vue';
 import { useI18n } from '@/i18n';
 import { useCommon } from '@/stores/common';
 import { useRouter, useData } from 'vitepress';
@@ -23,7 +23,6 @@ import AppContent from '@/components/AppContent.vue';
 import hcia from '@/assets/category/certification/hcia.png';
 import hcie from '@/assets/category/certification/hcie.png';
 import hcip from '@/assets/category/certification/hcip.png';
-import { watch } from 'fs';
 
 const i18n = useI18n();
 const { lang } = useData();
@@ -49,7 +48,6 @@ const chooseList = ref([false, false]);
 const isDownloadShow = ref(false);
 // 邮箱
 const emailInput = ref('');
-
 watch(guardAuthClient.value, () => {
   // 若用户未输入邮箱，则使用登录用户的默认邮箱
   if (!emailInput.value) {
