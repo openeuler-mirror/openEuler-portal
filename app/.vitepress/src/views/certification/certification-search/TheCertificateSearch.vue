@@ -9,6 +9,7 @@ import {
   getSendCode,
   downloadCard,
 } from '@/api/api-certification';
+import { useStoreData } from '@/shared/login';
 
 import IconChevron from '~icons/app/icon-chevron-right.svg';
 import IconRequiredFields from '~icons/app/icon-required-fields.svg';
@@ -26,6 +27,7 @@ import hcip from '@/assets/category/certification/hcip.png';
 const i18n = useI18n();
 const { lang } = useData();
 const commonStore = useCommon();
+const { guardAuthClient } = useStoreData();
 
 const imgList: any = {
   OECA: hcia,
@@ -45,7 +47,7 @@ const chooseList = ref([false, false]);
 // 查询或下载显示控制
 const isDownloadShow = ref(false);
 // 邮箱
-const emailInput = ref('');
+const emailInput = ref(guardAuthClient.value.email || '');
 // 提示语
 const resultTip = ref('');
 const identification = ref('');
@@ -58,11 +60,7 @@ const emailReg = new RegExp(
 );
 const resend = computed(() => (lang.value === 'zh' ? '重新发送' : 'Resend'));
 const send = computed(() =>
-  lang.value === 'zh'
-    ? '发送验证码'
-    : lang.value === 'en'
-    ? 'Send a verification code'
-    : 'Отправить проверочный код'
+  lang.value === 'zh' ? '发送验证码' : 'Send a verification code'
 );
 const countSecond = ref(60);
 const buttonText = ref('');

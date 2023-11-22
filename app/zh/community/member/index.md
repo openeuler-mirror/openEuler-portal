@@ -6,7 +6,7 @@ anchor: true
 ---
 
 <script setup lang="ts">
-  import TheCertification from "@/views/community/TheMember.vue"
+  import TheMember from "@/views/community/TheMember.vue"
 </script>
 
-<TheCertification />
+<TheMember />
