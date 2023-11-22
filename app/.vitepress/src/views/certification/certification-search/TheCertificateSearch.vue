@@ -23,6 +23,7 @@ import AppContent from '@/components/AppContent.vue';
 import hcia from '@/assets/category/certification/hcia.png';
 import hcie from '@/assets/category/certification/hcie.png';
 import hcip from '@/assets/category/certification/hcip.png';
+import { watch } from 'fs';
 
 const i18n = useI18n();
 const { lang } = useData();
@@ -47,7 +48,14 @@ const chooseList = ref([false, false]);
 // 查询或下载显示控制
 const isDownloadShow = ref(false);
 // 邮箱
-const emailInput = ref(guardAuthClient.value.email || '');
+const emailInput = ref('');
+
+watch(guardAuthClient.value, () => {
+  // 若用户未输入邮箱，则使用登录用户的默认邮箱
+  if (!emailInput.value) {
+    emailInput.value = guardAuthClient.value.email || '';
+  }
+});
 // 提示语
 const resultTip = ref('');
 const identification = ref('');
