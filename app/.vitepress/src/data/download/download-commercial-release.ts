@@ -2,6 +2,30 @@ export default {
   zh: {
     COMMERCIAL_RELEASE_LIST: [
       {
+        NAME: '麒麟信安 Kylinsec V3.5.2',
+        DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.5.2/',
+        DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国>内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
+        MANUFACTURER: '麒麟信安 Kylinsec',
+        PUBLISH_DATE: '2023/09',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://mirrors.kylinsec.com.cn/V3.5.2/isos/x86_64/',
+            ARCH: 'x86_64',
+          },
+          {
+            LINK: 'https://mirrors.kylinsec.com.cn/V3.5.2/isos/aarch64/',
+            ARCH: 'AArch64',
+          },
+          {
+            LINK: 'https://mirrors.kylinsec.com.cn/V3.5.2/isos/loongarch64/',
+            ARCH: 'LoongArch64',
+          },
+          {
+            ARCH: 'sw_64',
+          },
+        ],
+      },
+      {
         NAME: '磐石操作系统 CSIOS V1.0.0',
         DOWNLOAD_URL: 'http://openlab.chinasoftinc.com/official/',
         DESC: '磐石操作系统（简称CSIOS）是中软国际基于openEuler 22.03版本，面向运营商、金融、政企等行业的关键业务而设计开发的企业级服务器操作系统软件。其在openEuler社区版的基础上，融入了众多的自研竞争力特性，完善了生态支持和专业的技术保障。CSIOS可广泛适用于数据库、大数据、云计算、WEB服务等应用场景，支持光盘、U盘和网络等多种安装方式，可部署在物理服务器、虚拟机和容器等环境中，同时可为客户提供灵活的部署、升级和迁移方案。',
@@ -161,30 +185,6 @@ export default {
         PUBLISH_DATE: '2020/07',
       },
       {
-        NAME: '麒麟信安 Kylinsec V3.5.2',
-        DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.5.2/',
-        DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国>内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
-        MANUFACTURER: '麒麟信安 Kylinsec',
-        PUBLISH_DATE: '2023/09',
-        DETAILED_LINK: [
-          {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.5.2/isos/x86_64/',
-            ARCH: 'x86_64',
-          },
-          {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.5.2/isos/aarch64/',
-            ARCH: 'AArch64',
-          },
-	  {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.5.2/isos/loongarch64/',
-            ARCH: 'LoongArch64',
-          },
-	  {
-            ARCH: 'sw_64',
-          },
-        ],
-      },
-      {
         NAME: '麒麟信安 Kylinsec V3.5.1',
         DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.5-1/',
         DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
@@ -294,18 +294,18 @@ export default {
         MANUFACTURER: '同源OS',
         PUBLISH_DATE: '2020/04',
       },
-    //   {
-    //     NAME: 'SeawayEdgeV1.00',
-    //     DOWNLOAD_URL: 'https://new.haiwei.tech:27140/down/UT2xMwv4ovUU.iso',
-    //     DESC: 'SeawayEdge是中科海微基于openEuler开源社区构建，结合边缘、嵌入式领域场景探索，打造全场景协同的面向数字基础设施的开源操作系统。',
-    //     MANUFACTURER: '中科海微（北京）科技有限公司',
-    //     PUBLISH_DATE: '2023/09',
-    //     DETAILED_LINK: [
-    //       {
-    //         ARCH: 'x86_64',
-    //       },
-    //     ],
-    //   },
+      //   {
+      //     NAME: 'SeawayEdgeV1.00',
+      //     DOWNLOAD_URL: 'https://new.haiwei.tech:27140/down/UT2xMwv4ovUU.iso',
+      //     DESC: 'SeawayEdge是中科海微基于openEuler开源社区构建，结合边缘、嵌入式领域场景探索，打造全场景协同的面向数字基础设施的开源操作系统。',
+      //     MANUFACTURER: '中科海微（北京）科技有限公司',
+      //     PUBLISH_DATE: '2023/09',
+      //     DETAILED_LINK: [
+      //       {
+      //         ARCH: 'x86_64',
+      //       },
+      //     ],
+      //   },
     ],
   },
   en: {
