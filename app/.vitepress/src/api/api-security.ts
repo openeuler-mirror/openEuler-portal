@@ -177,7 +177,7 @@ export function getSoftwareList(params: CveQuery) {
     : '';
   const type = params.type ? `&type=${params.type}` : '';
   const keyword = params.keyword ? `&keyword=${params.keyword}` : '';
-  const url = ` /compatibility/api/web_backend/compat_software_info?page_size=${params.pages.size}&page_num=${params.pages.page}${keyword}${architecture}${os}${type}`;
+  const url = `/compatibility/api/web_backend/compat_software_info?page_size=${params.pages.size}&page_num=${params.pages.page}${keyword}${architecture}${os}${type}`;
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
@@ -200,7 +200,7 @@ export function getBusinessSoftwareList(params: CveQuery) {
     dataSource: new Array(params.dataSource),
     productType: new Array('软件'),
   };
-  const url = ` /certification/software/communityChecklist`;
+  const url = `/certification/software/communityChecklist`;
   return request
     .post(url, queryData)
     .then((res: AxiosResponse) => res.data)
