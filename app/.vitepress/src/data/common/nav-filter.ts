@@ -146,7 +146,7 @@ export default [
     lang: ['zh', 'en', 'ru'],
   },
   {
-    name: 'approve',
+    name: 'approve/**',
     lang: ['zh'],
   },
   {
