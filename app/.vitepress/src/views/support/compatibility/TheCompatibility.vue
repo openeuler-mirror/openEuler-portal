@@ -13,13 +13,7 @@ import compatibility from '@/assets/illustrations/support/compatibility.png';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 
-import type {
-  CveQuery,
-  FilterList,
-  CompatibilityList,
-  BoardCardList,
-  BusinessSoftWareList,
-} from '@/shared/@types/type-support';
+import type { CveQuery, FilterList } from '@/shared/@types/type-support';
 
 import {
   getCompatibilityList,
@@ -120,9 +114,7 @@ const queryData: CveQuery = reactive({
   dataSource: '',
 });
 
-const tableData = ref<
-  CompatibilityList[] | BoardCardList[] | BusinessSoftWareList[]
->([]);
+const tableData: any = ref([]);
 
 // 整机
 const getCompatibilityData = (data: CveQuery) => {
