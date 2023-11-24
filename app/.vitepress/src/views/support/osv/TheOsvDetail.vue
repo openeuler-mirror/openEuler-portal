@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-import { reactive, ref, onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useRouter } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
-import { DetailQuery } from '@/shared/@types/type-support';
 import { getOsvOne } from '@/api/api-security';
 
 import AppContent from '@/components/AppContent.vue';
@@ -14,9 +13,7 @@ import templatData from '@/data/osv';
 const i18n = useI18n();
 const router = useRouter();
 
-const queryData: DetailQuery = reactive({
-  id: '',
-});
+const queryId = ref('');
 
 const approveList: any = ref({});
 
@@ -28,8 +25,8 @@ function goBackPage() {
 const isTemplate = ref(true); // 是否是Osv默认详情模板
 onMounted(() => {
   const index1 = decodeURIComponent(window.location.href).indexOf('=');
-  queryData.id = decodeURIComponent(window.location.href).substring(index1 + 1);
-  getOsvOne(queryData).then((res: any) => {
+  queryId.value = decodeURIComponent(window.location.href).substring(index1 + 1);
+  getOsvOne(queryId.value).then((res: any) => {
     if (res.result) {
       approveList.value = res.result;
       if (res.result.type === '嵌入式') {

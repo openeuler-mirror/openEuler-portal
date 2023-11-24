@@ -10,7 +10,10 @@ import {
   getProductList,
   getComponentList,
 } from '@/api/api-security';
-import { SecurityLists, CveQuery } from '@/shared/@types/type-support';
+import {
+  SecurityLists,
+  SafetyBulletinQUery,
+} from '@/shared/@types/type-support';
 
 import type { CheckboxValueType } from 'element-plus';
 
@@ -47,17 +50,7 @@ const activeIndex = ref(-1);
 const activeIndex1 = ref(0);
 const activeNames = ref(['1']);
 
-const tableData = ref<SecurityLists[]>([
-  {
-    affectedComponent: '',
-    affectedProduct: '',
-    announcementTime: '',
-    securityNoticeNo: '',
-    summary: '',
-    type: '',
-    id: 0,
-  },
-]);
+const tableData = ref<SecurityLists[]>([]);
 
 const queryData: any = reactive({
   pages: {
@@ -72,7 +65,7 @@ const queryData: any = reactive({
   affectedComponent: '',
 });
 
-function getSecurityLists(data: CveQuery) {
+function getSecurityLists(data: SafetyBulletinQUery) {
   getSecurityList(data).then((res: any) => {
     tableData.value = res.result.securityNoticeList;
 
@@ -189,6 +182,7 @@ function getAffectedComponentList() {
     affectedProduct: queryData.affectedProduct.join(','),
     noticeType: 'bug',
   }).then((res: AxiosResponse) => {
+
     componentTotalList.value = res.data.result;
 
     affectedComponentList.value = res.data.result.slice(0, 49);

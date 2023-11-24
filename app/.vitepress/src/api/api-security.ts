@@ -1,176 +1,173 @@
 import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
 import {
-  DetailQuery,
   SelectParams,
   CveQuery,
+  CompatibilityQuery,
+  SafetyBulletinQuery,
+  OsvQuery,
+  ComponentQuery,
+  SecurityDetailT,
+  TotalDataT,
+  CveDetailT,
+  AffectProductT,
+  CompatibilityListT,
+  ConfigurationInfoT,
+  AdapterListT,
+  DriverListT,
+  SoftwareListT,
+  BussinessSoftT,
+  SofoFilterT,
+  TestOrganizationsT,
+  OsvDataT,
+  OsvList
 } from '@/shared/@types/type-support';
 
 /**
- * 调用接口获取安全公告列表
- * @name getSecurityList
+ * 获取安全公告列表
+ * @param {SafetyBulletinQuery} params 列表请求参数
+ * @return {Promise<TotalDataT>} 安全公告列表
  */
-export function getSecurityList(params: CveQuery) {
+export function getSecurityList(params: SafetyBulletinQuery): Promise<TotalDataT> {
   const url =
     '/api-euler/api-cve/cve-security-notice-server/securitynotice/findAll';
   return request
     .post(url, params)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取Cve列表
- * @name getCveList
+ * 获取安全公告详情
+ * @param {string} securityNoticeNo 公告名称 
+ * @return {Promise<SecurityDetailT>} 安全公告详情
  */
-export function getCveList(pages: CveQuery) {
+export function getSecurityDetail(securityNoticeNo: string): Promise<SecurityDetailT> {
+  const url = `/api-euler/api-cve/cve-security-notice-server/securitynotice/getBySecurityNoticeNo?securityNoticeNo=${securityNoticeNo}`;
+  return request
+    .get(url)
+    .then((res: AxiosResponse) => res.data.result)
+}
+
+/**
+ * 获取Cve列表
+ * @param {CveQuery} params Cve列表请求参数
+ * @return {Promise<TotalDataT>} CVE列表
+ */
+export function getCveList(params: CveQuery): Promise<TotalDataT> {
   const url =
     '/api-euler/api-cve/cve-security-notice-server/cvedatabase/findAll';
   return request
-    .post(url, pages)
+    .post(url, params)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
+
 }
 
 /**
- * 调用接口获取Cve详情信息
- * @name getCveDetail
+ * 获取Cve详情信息
+ * @param {string} id cveId
+ * @param {string} name packageName
+ * @return {Promise<CveDetailT>} cve详情信息
  */
-export function getCveDetail(id: string, name: string) {
+export function getCveDetail(id: string, name: string): Promise<CveDetailT> {
   const url = `/api-euler/api-cve/cve-security-notice-server/cvedatabase/getByCveIdAndPackageName?cveId=${id}&packageName=${name}`;
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取Cve详情-影响产品信息
- * @name getAffectedProduct
+ * 获取Cve详情-影响产品信息
+ * @param {string} id cveId
+ * @param {string} name packageName
+ * @return {Promise<AffectProductT[]>} cve详情 - 影响产品列表
  */
-export function getAffectedProduct(id: string, name: string) {
+export function getAffectedProduct(id: string, name: string): Promise<AffectProductT[]> {
   const url = `/api-euler/api-cve/cve-security-notice-server/cvedatabase/getCVEProductPackageList?cveId=${id}&packageName=${name}`;
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取Security详情
- * @name getSecurityDetail
+ * 获取架构分类
+ * @return {Promise<string[]>} 架构分类数据
  */
-export function getSecurityDetail(params: any) {
-  const url = `/api-euler/api-cve/cve-security-notice-server/securitynotice/getBySecurityNoticeNo?securityNoticeNo=${params.securityNoticeNo}`;
+export function getDriverArchitecture(): Promise<string[]> {
+  const url =
+    '/api-euler/api-cve/cve-security-notice-server/hardwarecomp/getArchitecture';
   return request
     .get(url)
-    .then((res: AxiosResponse) => res.data.result)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
+    .then((res: AxiosResponse) => res.data)
 }
 
 /**
- * 调用接口获取兼容性列表-整机
- * @name getCompatibilityList
+ * 获取操作系统分类
+ * @return {Promise<string[]>} 操作系统分类数据
  */
-export function getCompatibilityList(params: CveQuery) {
+export function getDriverOSOptions(): Promise<string[]> {
+  const url =
+    '/api-euler/api-cve/cve-security-notice-server/hardwarecomp/getOS';
+  return request
+    .get(url)
+    .then((res: AxiosResponse) => res.data)
+}
+
+/**
+ * 获取整机列表
+ * @param {CompatibilityQuery} params 整机列表请求参数
+ * @return {Promise<CompatibilityListT[]>} 整机列表
+ */
+export function getCompatibilityList(params: CompatibilityQuery): Promise<CompatibilityListT[]> {
   const url =
     '/api-euler/api-cve/cve-security-notice-server/hardwarecomp/findAll';
   return request
     .post(url, params)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取驱动--架构的下拉列表
- * @name getCompatibilityList
+ * 获取整机-兼容性配置 详情信息
+ * @param {string} id 参数-兼容性列表id
+ * @return {Promise<ConfigurationInfoT>} 详情信息
  */
-export function driverArchitectureOptions(params: object) {
-  const url =
-    '/api-euler/api-cve/cve-security-notice-server/hardwarecomp/getArchitecture';
-  return request
-    .get(url, params)
-    .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
-}
-
-/**
- * 调用接口获取驱动--操作系统的下拉列表
- * @name getCompatibilityList
- */
-export function driverOSOptions(params: object) {
-  const url =
-    '/api-euler/api-cve/cve-security-notice-server/hardwarecomp/getOS';
-  return request
-    .get(url, params)
-    .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
-}
-
-/**
- * 调用接口获取兼容性配置信息
- * @name getConfigurationInfo
- */
-export function getConfigurationInfo(id: string) {
+export function getConfigurationInfo(id: string): Promise<ConfigurationInfoT> {
   const url = ` /api-euler/api-cve/cve-security-notice-server/hardwarecomp/getOne?id=${id}`;
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取列表信息
- * @name getdetailAapterList
+ * 获取整机->兼容性配置 详情信息->Adapter and Drivers列表
+ * @param {string} id 兼容性列表单条数据id
+ * @return {Promise<AdapterListT[]>} Adapter and Drivers列表
  */
-export function getdetailAapterList(id: string) {
+export function getdetailAapterList(id: string): Promise<AdapterListT[]> {
   const url = ` /api-euler/api-cve/cve-security-notice-server/hardwarecomp/getAdapterList?hardwareId=${id}`;
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取兼容性列表-板卡
- * @name getCompatibilityList
+ * 获取板卡列表
+ * @param {CompatibilityQuery} params 获取板卡列表请求参数
+ * @return {Promise<DriverListT[]>} {totalCount:number,driverCompList:[]} 板卡列表
  */
-export function getDriverList(params: CveQuery) {
+export function getDriverList(params: CompatibilityQuery): Promise<DriverListT[]> {
   const url =
     '/api-euler/api-cve/cve-security-notice-server/drivercomp/findAll';
   return request
     .post(url, params)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取兼容性列表-开源软件
- * @name getSoftwareList
+ * 获取开源软件列表
+ * @param {CompatibilityQuery} params 获取开源软件列表请求参数
+ * @return {Promise<SoftwareListT>} 开源软件列表
  */
-export function getSoftwareList(params: CveQuery) {
+export function getSoftwareList(params: CompatibilityQuery): Promise<SoftwareListT> {
   const os = params.os ? `&os=${params.os}` : '';
   const architecture = params.architecture
     ? `&arch=${params.architecture}`
@@ -181,16 +178,14 @@ export function getSoftwareList(params: CveQuery) {
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取兼容性列表-商业软件
- * @name businessSoftwareList
+ * 获取商业软件列表
+ * @param {CompatibilityQuery} params 商业软件列表请求参数
+ * @return {Promise<BussinessSoftT>} {totalNum:number, data:[]} 商业软件数据
  */
-export function getBusinessSoftwareList(params: CveQuery) {
+export function getBusinessSoftwareList(params: CompatibilityQuery): Promise<BussinessSoftT> {
   const queryData = {
     pageSize: params['pages'].size,
     pageNo: params['pages'].page,
@@ -204,155 +199,127 @@ export function getBusinessSoftwareList(params: CveQuery) {
   return request
     .post(url, queryData)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取兼容性列表-板卡类型筛选条件
- * @name getDriveTypes
+ * 获取板卡类型-筛选条件
+ * @param {string} lang 语言
+ * @return {Promise<string[]>} 板卡类型数据
  */
-export function getDriveTypes(lang: string) {
+export function getDriveTypes(lang: string): Promise<string[]> {
   const url = `/api-euler/api-cve/cve-security-notice-server/drivercomp/getType?lang=${lang}`;
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取兼容性列表-开源软件筛选条件
- * @name getSoftFilter
+ * 获取软件类型-筛选条件
+ * @return {Promise<SofoFilterT>} {Arch:[], Os:[], Type:[]} Type软件类型
  */
-export function getSoftFilter() {
+export function getSoftFilter(): Promise<SofoFilterT> {
   const url = '/compatibility/api/web_backend/query_compat_software';
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取兼容性列表-商业软件筛选条件测试机构
- * @name getTestOrganizations
+ * 获取测试机构-筛选条件
+ * @return {Promise<TestOrganizationsT>} 测试机构
  */
-export function getTestOrganizations() {
+export function getTestOrganizations(): Promise<TestOrganizationsT> {
   const url = '/certification/software/filterCriteria';
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取兼容性列表-CPU
- * @name getCpu
+ * 获取CPU-筛选条件
+ * @param {object} params 筛选条件请求参数
+ * @param {string} lang 语言
+ * @return {Promise<string[]>} CPU数据
  */
-export function getCpu(params: SelectParams) {
+export function getCpu(params: SelectParams): Promise<string[]> {
   const url = `/api-euler/api-cve/cve-security-notice-server/hardwarecomp/getCpu?lang=${params.lang}`;
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取OSV技术评测列表-os厂商
- * @name getOsName
+ * 获取OSV技术评测列表-os厂商（筛选项）
+ * @return {Promise<string[]>} os厂商数据
  */
-export function getOsName() {
+export function getOsName(): Promise<string[]> {
   const url = '/api-euler/api-cve/cve-security-notice-server/osv/getOsName';
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取OSV技术评测列表-分类
- * @name getOsType
+ * 获取OSV技术评测列表-分类（筛选项）
+ * @return {Promise<string[]>} 分类列表['嵌入式','服务器']
  */
-export function getOsType() {
+export function getOsType(): Promise<string[]> {
   const url = '/api-euler/api-cve/cve-security-notice-server/osv/getType';
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取OSV技术评测表格数据
- * @name getOsTableData
+ * 获取OSV技术评测列表
+ * @param {OsvQuery} params osv技术测评列表请求参数
+ * @return {Promise<OsvDataT>} {osvList: [], totalCount: number}
  */
-export function getOsTableData(params: CveQuery) {
+export function getOsTableData(params: OsvQuery): Promise<OsvDataT> {
   const url = '/api-euler/api-cve/cve-security-notice-server/osv/findAll';
   return request
     .post(url, params)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取OSV技术评测详细信息
- * @name getOsvOne
+ * 获取OSV技术评测详细信息
+ * @param {string} id osv列表单条数据id
+ * @return {Promise<OsvList>} osv详情信息
  */
-export function getOsvOne(params: DetailQuery) {
-  const url = `/api-euler/api-cve/cve-security-notice-server/osv/getOne?id=${params.id}`;
+export function getOsvOne(id: string): Promise<OsvList> {
+  const url = `/api-euler/api-cve/cve-security-notice-server/osv/getOne?id=${id}`;
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 /**
- * 调用接口获取影响产品列表
- * @name getProductList
+ * 获取影响产品-下拉列表
+ * @return {Promise<string[]>} 影响产品数据
  */
-export function getProductList() {
+export function getProductList(): Promise<string[]> {
   const url =
     '/api-euler/api-cve/cve-security-notice-server/securitynotice/getAffectedProduct';
   return request
     .get(url)
-    .then((res: AxiosResponse) => res)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
+    .then((res: AxiosResponse) => res.data)
 }
 
 /**
- * 调用接口获取影响组件列表
- * @name getProductList
+ * 获取影响组件-下拉列表
+ * @param {ComponentQuery} params 请求参数
+ * @return {Promise<string[]>} 影响组件数据
  */
-export function getComponentList(params: { [key: string]: any }) {
+export function getComponentList(params: ComponentQuery): Promise<string[]> {
   Object.keys(params).forEach((key) => {
-    if (!params[key]) {
-      delete params[key];
+    if (!params[key as keyof ComponentQuery]) {
+      delete params[key as keyof ComponentQuery];
     }
   });
-
   const url =
     '/api-euler/api-cve/cve-security-notice-server/securitynotice/getAffectedComponent';
   return request
     .get(url, { params })
-    .then((res: AxiosResponse) => res)
-    .catch((e: any) => {
-      throw new Error(e);
-    });
+    .then((res: AxiosResponse) => res.data)
 }

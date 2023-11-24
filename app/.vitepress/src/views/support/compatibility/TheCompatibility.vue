@@ -13,13 +13,16 @@ import compatibility from '@/assets/illustrations/support/compatibility.png';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 
-import type { CveQuery, FilterList } from '@/shared/@types/type-support';
+import type {
+  FilterList,
+  CompatibilityQuery,
+} from '@/shared/@types/type-support';
 
 import {
   getCompatibilityList,
   getDriverList,
-  driverArchitectureOptions,
-  driverOSOptions,
+  getDriverArchitecture,
+  getDriverOSOptions,
   getSoftwareList,
   getBusinessSoftwareList,
   getTestOrganizations,
@@ -98,7 +101,7 @@ const filterDataTwo = ref<FilterList[]>([
   },
 ]);
 
-const queryData: CveQuery = reactive({
+const queryData: CompatibilityQuery = reactive({
   pages: {
     page: 1,
     size: 10,
@@ -117,7 +120,7 @@ const queryData: CveQuery = reactive({
 const tableData: any = ref([]);
 
 // 整机
-const getCompatibilityData = (data: CveQuery) => {
+const getCompatibilityData = (data: CompatibilityQuery) => {
   try {
     getCompatibilityList(data).then((res: any) => {
       total.value = res.result.totalCount;
@@ -132,7 +135,7 @@ const getCompatibilityData = (data: CveQuery) => {
 };
 
 // 板卡
-const getDriverData = (data: CveQuery) => {
+const getDriverData = (data: CompatibilityQuery) => {
   try {
     getDriverList(data).then((res: any) => {
       total.value = res.result.totalCount;
@@ -149,7 +152,7 @@ const getDriverData = (data: CveQuery) => {
 };
 
 // 开源软件
-const getSoftwareData = (data: CveQuery) => {
+const getSoftwareData = (data: CompatibilityQuery) => {
   try {
     getSoftwareList(data).then((res: any) => {
       total.value = res.total;
@@ -162,7 +165,7 @@ const getSoftwareData = (data: CveQuery) => {
 };
 
 // 商业软件
-const getBusinessSoftwareData = (data: CveQuery) => {
+const getBusinessSoftwareData = (data: CompatibilityQuery) => {
   getBusinessSoftwareList(data).then((res: any) => {
     total.value = res.result.totalNum;
     tableData.value = res.result.data;
@@ -229,7 +232,7 @@ const handleClick = () => {
   });
 };
 
-const initMobileData = (params: CveQuery) => {
+const initMobileData = (params: CompatibilityQuery) => {
   if (activeName.value === '1') {
     getCompatibilityData(params);
   } else if (activeName.value === '2') {
@@ -241,7 +244,7 @@ const initMobileData = (params: CveQuery) => {
   }
 };
 
-const initData = (params: CveQuery) => {
+const initData = (params: CompatibilityQuery) => {
   if (activeName.value === '1') {
     getCompatibilityData(params);
   } else if (activeName.value === '2') {
@@ -382,7 +385,7 @@ onMounted(() => {
     }
   });
 
-  driverArchitectureOptions({ lang: `${lang.value}` }).then((res: any) => {
+  getDriverArchitecture().then((res: any) => {
     res.result.forEach((item: string) => {
       architectureSelect.value.push(item);
       filterData.value.forEach((it) => {
@@ -398,7 +401,7 @@ onMounted(() => {
     });
   });
 
-  driverOSOptions({ lang: `${lang.value}` }).then((res: any) => {
+  getDriverOSOptions().then((res: any) => {
     res.result.forEach((item: string) => {
       osOptions.value.push(item);
       filterData.value.forEach((it) => {

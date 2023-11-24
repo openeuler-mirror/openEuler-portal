@@ -6,20 +6,165 @@ export interface CveQuery {
   pages: BaseQuery;
   keyword?: string;
   status?: string;
-  type?: string;
   year?: string;
-  architecture?: string;
-  cpu?: string;
   score?: string;
-  os?: string;
-  lang?: string;
-  testOrganization?: string;
-  osvName?: string;
-  cardType?: string;
-  dataSource?: string;
+  noticeType: string;
 }
-export interface DetailParams {
+export interface OsvQuery {
+  pages: BaseQuery;
+  keyword: string;
+  type: string;
+  osvName: string;
+}
+export interface SafetyBulletinQuery {
+  pages: BaseQuery;
+  keyword: string;
+  type: [];
+  date: [];
+  affectedProduct: [];
+  affectedComponent: string;
+  noticeType: string;
+}
+export interface SecurityDetailT {
+  affectedComponent: string;
+  affectedProduct: string;
+  announcementTime: string;
+  cveId: string;
+  cveList: [];
+  cvrf?: null;
+  description: string;
+  id: number;
+  introduction: string;
+  notice_type: string;
+  packageHelperList: [];
+  packageHotpatchList?: null;
+  packageList: [];
+  packageName: string;
+  referenceDocuments: string;
+  referenceList: [];
+  revisionHistory: string;
   securityNoticeNo: string;
+  subject: string;
+  summary: string;
+  type: string;
+  updateTime: string;
+}
+export interface CveDetailT {
+  affectedProduct: string;
+  announcementTime: string;
+  attackComplexityNVD: string;
+  attackComplexityOE: string;
+  attackVectorNVD: string;
+  attackVectorOE: string;
+  availabilityNVD: string;
+  availabilityOE: string;
+  confidentialityNVD: string;
+  confidentialityOE: string;
+  createTime: string;
+  cveId: string;
+  cvrf?: null;
+  cvsssCoreNVD: string;
+  cvsssCoreOE: string;
+  id: number;
+  integrityNVD: string;
+  integrityOE: string;
+  nationalCyberAwarenessSystem: string;
+  packageList?: null;
+  packageName: string;
+  parserBean?: null;
+  privilegesRequiredNVD: string;
+  privilegesRequiredOE: string;
+  scopeNVD: string;
+  scopeOE: string;
+  securityNoticeNo: string;
+  status: string;
+  summary: string;
+  type: string;
+  updateTime: string;
+  userInteractionNVD: string;
+  userInteractionOE: string;
+}
+export interface AffectProductT {
+  createTime: string;
+  cveId: string;
+  id: number;
+  packageName: string;
+  productName: string;
+  releaseTime: string;
+  securityNoticeNo: string;
+  status: string;
+  updateTime: string;
+}
+export interface ConfigurationInfoT {
+  architecture: string;
+  biosUefi: string;
+  boardCards: [];
+  certificationAddr: string;
+  certificationTime: string;
+  commitID: string;
+  compatibilityConfiguration?: null;
+  computerType: string;
+  cpu: string;
+  date: string;
+  friendlyLink: string;
+  hardDiskDrive: string;
+  hardwareFactory: string;
+  hardwareModel: string;
+  hostBusAdapter: string;
+  id: number;
+  lang: string;
+  mainboardModel: string;
+  osVersion: string;
+  portsBusTypes: string;
+  productInformation: string;
+  ram: string;
+  updateTime: string;
+  videoAdapter: string;
+}
+export interface AdapterListT {
+  architecture: string;
+  boardModel: string;
+  chipModel: string;
+  chipVendor: string;
+  date: string;
+  deviceID: string;
+  downloadLink: string;
+  driverName: string;
+  driverSize: string;
+  hardwareId: number;
+  id: number;
+  item: string;
+  lang: string;
+  os: string;
+  sha256: string;
+  ssID: string;
+  svID: string;
+  type: string;
+  updateTime: string;
+  vendorID: string;
+  version: string;
+}
+export interface ResultT {
+  name: string;
+  percent: string;
+  result: string
+}
+export interface ComponentQuery {
+  securityLevel?: string;
+  affectedProduct?: string;
+  noticeType: string;
+}
+export interface CompatibilityQuery {
+  pages: BaseQuery;
+  architecture: string;
+  keyword: string;
+  cpu: string;
+  os: string;
+  testOrganization: string;
+  type: string;
+  cardType: string;
+  lang: string;
+  dataSource: string;
 }
 export interface OsvList {
   arch: string;
@@ -37,6 +182,10 @@ export interface OsvList {
   totalResult?: string;
   type: string;
   updateTime?: string;
+}
+export interface OsvDataT {
+  osvList: OsvList[];
+  totalCount: number
 }
 export interface PackageInfo {
   productName: string;
@@ -58,20 +207,166 @@ export interface SecurityLists {
   affectedComponent: string;
   affectedProduct: string;
   announcementTime: string;
+  cveId?: string;
+  cveList?: string;
+  cvrf?: null;
+  description?: string;
+  id: number;
+  introduction?: string;
+  notice_type?: string;
+  packageHelperList?: [];
+  packageHotpatchList?: null;
+  packageList?: [];
+  packageName: string;
+  referenceDocuments: string;
+  referenceList?: string;
+  revisionHistory?: string;
   securityNoticeNo: string;
+  subject?: string;
   summary: string;
   type: string;
-  id: number;
   updateTime: string;
 }
 export interface CveLists {
+  affectedProduct?: string;
+  announcementTime?: string;
+  attackComplexityNVD?: string;
+  attackComplexityOE?: string;
+  attackVectorNVD?: string;
+  attackVectorOE?: string;
+  availabilityNVD?: string;
+  availabilityOE?: string;
+  confidentialityNVD?: string;
+  confidentialityOE?: string;
   createTime: string;
   cveId: string;
+  cvrf?: null;
+  cvsssCoreNVD?: string;
   cvsssCoreOE: string;
+  id?: number;
+  integrityNVD?: string;
+  integrityOE?: string;
+  nationalCyberAwarenessSystem?: string;
+  packageList?: null;
+  packageName: string;
+  parserBean?: null;
+  privilegesRequiredNVD?: string;
+  privilegesRequiredOE?: string;
+  scopeNVD?: string;
+  scopeOE?: string;
+  securityNoticeNo?: string;
   status: string;
   summary: string;
+  type?: string;
   updateTime: string;
-  packageName: string;
+  userInteractionNVD?: string;
+  userInteractionOE?: string;
+}
+export interface CompatibilityListT {
+  id: number;
+  architecture: string;
+  biosUefi?: string;
+  certificationAddr?: string;
+  certificationTime?: string;
+  commitID?: string;
+  computerType?: string;
+  cpu: string;
+  date: string;
+  friendlyLink: string;
+  hardDiskDrive?: string;
+  hardwareFactory: string;
+  hardwareModel: string;
+  hostBusAdapter?: string;
+  lang?: string;
+  mainboardModel?: string;
+  osVersion: string;
+  portsBusTypes?: string;
+  productInformation?: string;
+  ram?: string;
+  videoAdapter?: string;
+  updateTime?: string;
+  compatibilityConfiguration?: null;
+  boardCards?: [];
+}
+export interface DriverListT {
+  architecture: string;
+  boardModel: string;
+  chipModel: string;
+  chipVendor: string;
+  deviceID: string;
+  downloadLink: string;
+  driverDate: string;
+  driverName: string;
+  driverSize: string;
+  id: number;
+  item: string;
+  lang: string;
+  os: string;
+  sha256: string;
+  ssID: string;
+  svID: string;
+  type: string;
+  updateTime: string;
+  vendorID: string;
+  version: string;
+}
+export interface TotalDataT {
+  applicationCompList?: [];
+  cveDatabaseList?: CveLists[];
+  driverCompList?: DriverListT[];
+  hardwareCompList?: CompatibilityListT[];
+  securityNoticeList?: SecurityLists[];
+  totalCount: number
+}
+export interface SoftwareListItemT {
+  arch: string,
+  bin: string,
+  category: string,
+  cmds: object,
+  downloadLink: string,
+  group: string,
+  install: string,
+  libs: string,
+  license: string,
+  os: string,
+  property: string,
+  result_root: string,
+  result_url: string,
+  src_location: string,
+  type: string,
+  uninstall: string,
+  version: string,
+}
+export interface SoftwareListT {
+  total: number;
+  info: SoftwareListItemT[]
+}
+export interface BussinessSoftItemT {
+  authenticateLink?: null;
+  certId: number;
+  companyName: string;
+  dataId?: null;
+  osName: string;
+  osVersion: string;
+  platformTypeAndServerModel?: [];
+  productName: string;
+  productVersion: string;
+  region?: null;
+  testOrganization: string;
+  type: string
+}
+export interface BussinessSoftT {
+  data: BussinessSoftItemT[];
+  totalNum: number
+}
+export interface SofoFilterT {
+  Arch: string[];
+  OS: string[];
+  Type: string[];
+}
+export interface TestOrganizationsT {
+  osNames: string[];
+  testOrganizations: string[]
 }
 export interface SelectParams {
   lang: string;
@@ -149,7 +444,3 @@ export interface AffectProduct {
   status: string;
   updateTime: string;
 }
-export interface DetailQuery {
-  id: string;
-}
-
