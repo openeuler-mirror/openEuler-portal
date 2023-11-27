@@ -100,7 +100,7 @@ onMounted(() => {
   .banner-bg {
     position: absolute;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     object-fit: fill;
     user-select: none;
   }
