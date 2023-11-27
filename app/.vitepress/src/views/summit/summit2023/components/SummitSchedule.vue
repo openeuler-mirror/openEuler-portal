@@ -65,7 +65,7 @@ const otherTabType = ref(0);
                 idSubItemShow === subItem.id && idShow === itemList.id,
             }"
           >
-            <span  class="time">
+            <span v-if="subItem.time" class="time">
               <IconTime v-show="subItem.time" />
               {{ subItem.time }}
             </span>
@@ -358,7 +358,7 @@ const otherTabType = ref(0);
   }
   .content-item {
     display: grid;
-    grid-template-columns: 0 1000px 0;
+    grid-template-columns: 192px 580px 445px;
     padding: 20px 0px;
     transition: all 0.25s ease;
     align-items: center;
@@ -371,7 +371,7 @@ const otherTabType = ref(0);
       grid-template-columns: 192px 450px 400px;
     }
     @media screen and (max-width: 1100px) {
-      grid-template-columns: 0 auto;
+      grid-template-columns: 80px auto;
       padding: 6px 0;
       min-height: 36px;
       position: static;

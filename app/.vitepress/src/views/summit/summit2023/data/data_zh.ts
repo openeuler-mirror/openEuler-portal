@@ -8,13 +8,13 @@ export default {
   banner: {
     pcBanner: banner_pc,
     moBanner: banner_mo,
-    link: '',
+    link: 'https://e-campaign.huawei.com/events3/UniversalForm/register/200908020/register.html?site=cn&formId=6155&way=onsite',
     id: '',
     img: textImg,
     title: [''],
     desc: [''],
-    btn: '',
-    targetTap: 1,
+    btn: '立即报名',
+    targetTap: "_blank",
   },
   introduce:
     '数字化、智能化浪潮正奔涌而来。操作系统作为数字基础设施的底座，已经成为推动产业数字化、智能化发展的核心力量，操作系统的发展为数智未来提供了无限可能。',
