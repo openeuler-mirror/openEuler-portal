@@ -5,6 +5,7 @@ import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
 
 import SummitBanner from './components/SummitBanner.vue';
+import SummitSchedule from './components/SummitSchedule.vue';
 import AppContext from '@/components/AppContent.vue';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
@@ -12,7 +13,6 @@ import data_zh from './data/data_zh';
 import data_en from './data/data_en';
 
 import agendaData from './data/agenda-data';
-import agendaImg from './img/agenda.png';
 
 import liveLight from '@/assets/category/summit/summit2022/live.png';
 import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
@@ -36,14 +36,16 @@ const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );
 const showIndex = ref(0);
-
+// 日期切换
+function setShowIndex(index: number) {
+  showIndex.value = index;
+}
 const getData: any = computed(() => agendaData[showIndex.value]);
 
 // 控制上下午切换
 const tabType = ref(0);
 const renderData: any = ref([]);
 const dateList = [
-  { day: 14, month: 'DEC' },
   { day: 15, month: 'DEC' },
   { day: 16, month: 'DEC' },
 ];
@@ -114,7 +116,41 @@ watch(
       :class="{ 'min-height': showIndex === 1 }"
     >
       <h3>会议日程</h3>
-      <img class="agenda-img" :src="agendaImg" alt="" />
+      <div class="date">
+        <div
+          v-for="(item, index) in dateList"
+          :key="item.day"
+          class="date-item"
+          :class="{ active: showIndex === index }"
+          @click="setShowIndex(index)"
+        >
+          <p class="date-day">{{ item.day }}</p>
+          <p class="date-month">{{ item.month }}</p>
+        </div>
+      </div>
+      <!-- <div v-show="showIndex === 0">
+        <template v-for="item in getData.content.content" :key="item.lable">
+          <SummitSchedule :agenda-data="item" />
+        </template>
+      </div> -->
+      <div>
+        <el-tabs v-model.number="tabType" class="schedule-tabs">
+          <el-tab-pane :name="0">
+            <template #label>
+              <div class="time-tabs">上午：主论坛</div>
+            </template>
+          </el-tab-pane>
+          <el-tab-pane :name="1">
+            <template #label>
+              <div class="time-tabs">下午：分论坛</div>
+            </template>
+          </el-tab-pane>
+        </el-tabs>
+        <template v-for="item in renderData" :key="item.lable">
+          <SummitSchedule :agenda-data="item" />
+        </template>
+      </div>
+      <!-- <img class="agenda-img" :src="agendaImg" alt="" /> -->
     </div>
 
     <div v-if="lang === 'zh'" class="previous">

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
+import { useData } from 'vitepress';
 import AOS from 'aos';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
@@ -19,7 +20,15 @@ onMounted(() => {
   });
 });
 
+const { lang } = useData();
 const windowWidth = ref(useWindowResize());
+
+function handleClick(link: string, target: string = '_blank') {
+  if (!link) {
+    return;
+  }
+  window.open(link, target);
+}
 </script>
 
 <template>
@@ -44,8 +53,16 @@ const windowWidth = ref(useWindowResize());
               >
             </p>
           </div>
-          <div v-if="bannerData.btn" data-aos="fade-up" class="action">
-            <OButton animation class="home-banner-btn">
+          <div
+            v-if="bannerData.btn && lang === 'zh'"
+            data-aos="fade-up"
+            class="action"
+          >
+            <OButton
+              animation
+              class="home-banner-btn"
+              @click="handleClick(bannerData.link, bannerData.targetTap)"
+            >
               {{ bannerData.btn }}
               <template #suffixIcon
                 ><OIcon><IconArrowRight /></OIcon
@@ -141,7 +158,7 @@ html[lang='zh'] {
         color: $banner-color;
       }
       .text-img {
-        max-height: 213px;
+        max-height: 186px;
         @media screen and (max-width: 768px) {
           display: none;
         }
@@ -195,7 +212,7 @@ html[lang='zh'] {
     }
     .flex-end {
       @media screen and (max-width: 768px) {
-        padding-bottom: 28px;
+        padding-bottom: 20px;
         justify-content: flex-end;
       }
     }
