@@ -4,7 +4,7 @@ import { useRouter, useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
-import { CveQuery, OsvList } from '@/shared/@types/type-support';
+import { OsvQuery, OsvList } from '@/shared/@types/type-support';
 import { getOsName, getOsType, getOsTableData } from '@/api/api-security';
 
 import AppContent from '@/components/AppContent.vue';
@@ -47,7 +47,7 @@ const layout = ref('sizes, prev, pager, next, slot, jumper');
 const osName = ref('');
 const osType = ref('');
 
-const queryData: CveQuery = reactive({
+const queryData: OsvQuery = reactive({
   pages: {
     page: 1,
     size: 10,
@@ -105,7 +105,7 @@ function turnPage(option: string) {
   }
 }
 
-const getOsTableList = (data: CveQuery) => {
+const getOsTableList = (data: OsvQuery) => {
   getOsTableData(data).then((res: any) => {
     osvList.value = res.result.osvList;
     total.value = res.result.totalCount;

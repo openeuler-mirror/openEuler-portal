@@ -7,7 +7,6 @@ import { useI18n } from '@/i18n';
 import securityNoticeNos from '@/data/security';
 import { getSecurityDetail } from '@/api/api-security';
 import type {
-  DetailParams,
   PackageInfo,
   HotPatch,
 } from '@/shared/@types/type-support';
@@ -23,11 +22,9 @@ const cveIdList = ref<string[]>([]);
 const bugIdList = ref<string[]>([]);
 const baseUrl = 'https://repo.openeuler.org';
 
-const queryData: DetailParams = reactive({
-  securityNoticeNo: '',
-});
+const securityNoticeNo = ref('');
 
-function getSecurityDetailInfo(data: DetailParams) {
+function getSecurityDetailInfo(data: string) {
   getSecurityDetail(data).then((res: any) => {
     if (res) {
       detailData.value = res;
@@ -59,7 +56,7 @@ function getRpmUrl(data: PackageInfo[]) {
       product.child.forEach((rpm) => {
         let path = '';
         // securityNoticeNos 为特殊路径
-        if (securityNoticeNos.includes(queryData.securityNoticeNo)) {
+        if (securityNoticeNos.includes(securityNoticeNo.value)) {
           if (product.productName === 'src') {
             path = `source/Packages/${rpm.packageName}`;
           } else if (product.productName === 'noarch') {
@@ -103,8 +100,8 @@ function getHotPatchRpmUrl(data: HotPatch[]) {
 }
 onMounted(() => {
   const index1 = window.location.href.indexOf('=');
-  queryData.securityNoticeNo = window.location.href.substring(index1 + 1);
-  getSecurityDetailInfo(queryData);
+  securityNoticeNo.value = window.location.href.substring(index1 + 1);
+  getSecurityDetailInfo(securityNoticeNo.value);
 });
 </script>
 <template>

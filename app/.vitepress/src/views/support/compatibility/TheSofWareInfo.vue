@@ -4,8 +4,8 @@ import { useRouter, useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
+import { AdapterListT } from '@/shared/@types/type-support';
 import { getConfigurationInfo, getdetailAapterList } from '@/api/api-security';
-import { ConfigurationInfo } from '@/shared/type-support';
 
 import AppContent from '@/components/AppContent.vue';
 
@@ -13,8 +13,8 @@ const { lang } = useData();
 const i18n = useI18n();
 const router = useRouter();
 
-const configurationInfo: ConfigurationInfo = ref({});
-const detailAapterList: any = ref([]);
+const configurationInfo: any = ref({});
+const detailAapterList = ref<AdapterListT[]>([]);
 
 function goBackPage() {
   const i = router.route.path.lastIndexOf('s');

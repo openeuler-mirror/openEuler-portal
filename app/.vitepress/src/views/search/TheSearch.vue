@@ -405,7 +405,6 @@ watch(
 );
 function clipTxt(text: string) {
   navigator.clipboard.writeText(text).then((data) => {
-    console.log('success', data);
     ElMessage({
       message: i18n.value.download.COPY_SUCCESS,
       type: 'success',

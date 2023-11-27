@@ -1,16 +1,12 @@
 <script lang="ts" setup>
-import { reactive, onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { useRouter, useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
 import securityNoticeNos from '@/data/security';
 import { getSecurityDetail } from '@/api/api-security';
-import type {
-  DetailParams,
-  PackageInfo,
-  HotPatch,
-} from '@/shared/@types/type-support';
+import type { PackageInfo, HotPatch } from '@/shared/@types/type-support';
 
 import IconChevronRight from '~icons/app/icon-chevron-right.svg';
 
@@ -22,11 +18,9 @@ const detailData: any = ref({});
 const cveIdList = ref<string[]>([]);
 const baseUrl = 'https://repo.openeuler.org';
 
-const queryData: DetailParams = reactive({
-  securityNoticeNo: '',
-});
+const securityNoticeNo = ref('');
 
-function getSecurityDetailInfo(data: DetailParams) {
+function getSecurityDetailInfo(data: string) {
   getSecurityDetail(data).then((res: any) => {
     if (res) {
       detailData.value = res;
@@ -57,7 +51,7 @@ function getRpmUrl(data: PackageInfo[]) {
       product.child.forEach((rpm) => {
         let path = '';
         // securityNoticeNos 为特殊路径
-        if (securityNoticeNos.includes(queryData.securityNoticeNo)) {
+        if (securityNoticeNos.includes(securityNoticeNo.value)) {
           if (product.productName === 'src') {
             path = `source/Packages/${rpm.packageName}`;
           } else if (product.productName === 'noarch') {
@@ -101,8 +95,8 @@ function getHotPatchRpmUrl(data: HotPatch[]) {
 }
 onMounted(() => {
   const index1 = window.location.href.indexOf('=');
-  queryData.securityNoticeNo = window.location.href.substring(index1 + 1);
-  getSecurityDetailInfo(queryData);
+  securityNoticeNo.value = window.location.href.substring(index1 + 1);
+  getSecurityDetailInfo(securityNoticeNo.value);
 });
 </script>
 <template>

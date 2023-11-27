@@ -10,7 +10,10 @@ import {
   getProductList,
   getComponentList,
 } from '@/api/api-security';
-import { SecurityLists, CveQuery } from '@/shared/@types/type-support';
+import {
+  SecurityLists,
+  SafetyBulletinQuery,
+} from '@/shared/@types/type-support';
 
 import type { CheckboxValueType } from 'element-plus';
 
@@ -43,18 +46,7 @@ const activeIndex = ref(-1);
 const activeIndex1 = ref(0);
 const activeNames = ref(['1']);
 
-const tableData = ref<SecurityLists[]>([
-  {
-    affectedComponent: '',
-    affectedProduct: '',
-    announcementTime: '',
-    securityNoticeNo: '',
-    summary: '',
-    type: '',
-    id: 0,
-    updateTime: '',
-  },
-]);
+const tableData = ref<SecurityLists[]>([]);
 
 const queryData: any = reactive({
   pages: {
@@ -69,7 +61,7 @@ const queryData: any = reactive({
   noticeType: 'cve',
 });
 
-function getSecurityLists(data: CveQuery) {
+function getSecurityLists(data: SafetyBulletinQuery) {
   getSecurityList(data).then((res: any) => {
     tableData.value = res.result.securityNoticeList;
 
@@ -155,8 +147,8 @@ const isSelectAll = ref(false);
 const isUnsure = ref(true);
 const affectedProductList = ref<string[]>([]);
 function getProducts() {
-  getProductList().then((res: AxiosResponse) => {
-    affectedProductList.value = res.data.result;
+  getProductList().then((res: any) => {
+    affectedProductList.value = res.result;
   });
 }
 
@@ -185,10 +177,10 @@ function getAffectedComponentList() {
     securityLevel: queryData.type.join(','),
     affectedProduct: queryData.affectedProduct.join(','),
     noticeType: 'cve',
-  }).then((res: AxiosResponse) => {
-    componentTotalList.value = res.data.result;
+  }).then((res: any) => {
+    componentTotalList.value = res.result;
 
-    affectedComponentList.value = res.data.result.slice(0, 49);
+    affectedComponentList.value = res.result.slice(0, 49);
   });
 }
 
