@@ -151,8 +151,8 @@ const isSelectAll = ref(false);
 const isUnsure = ref(true);
 const affectedProductList = ref<string[]>([]);
 function getProducts() {
-  getProductList().then((res: AxiosResponse) => {
-    affectedProductList.value = res.data.result;
+  getProductList().then((res: any) => {
+    affectedProductList.value = res.result;
   });
 }
 
@@ -181,11 +181,10 @@ function getAffectedComponentList() {
     securityLevel: queryData.type.join(','),
     affectedProduct: queryData.affectedProduct.join(','),
     noticeType: 'bug',
-  }).then((res: AxiosResponse) => {
+  }).then((res: any) => {
+    componentTotalList.value = res.result;
 
-    componentTotalList.value = res.data.result;
-
-    affectedComponentList.value = res.data.result.slice(0, 49);
+    affectedComponentList.value = res.result.slice(0, 49);
   });
 }
 
