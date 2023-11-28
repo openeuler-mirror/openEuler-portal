@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import { useData } from 'vitepress';
 
 import { useCommon } from '@/stores/common';
+import { getUrlParams } from '@/shared/utils';
 
 import SummitBanner from './components/SummitBanner.vue';
 import SummitSchedule from './components/SummitSchedule.vue';
@@ -62,6 +63,30 @@ watch(
     immediate: true,
   }
 );
+
+// 埋点统计投放流量
+function collectAdvertisedData() {
+  const sensors = (window as any)['sensorsDataAnalytic201505'];
+  const { href } = window.location;
+  const regex = /[\?&]utm_source=/;
+  const containsUtmSource = regex.test(href);
+  if (!containsUtmSource) {
+    return;
+  }
+  const paramsArr = getUrlParams(href);
+  sensors?.setProfile({
+    ...(window as any)['sensorsCustomBuriedData'],
+    profileType: 'fromAdvertised',
+    origin: href,
+    ...paramsArr,
+  });
+  history.pushState(null, '', location.origin + location.pathname);
+}
+onMounted(() => {
+  setTimeout(() => {
+    collectAdvertisedData();
+  }, 300);
+});
 </script>
 <template>
   <SummitBanner :banner-data="summitData.banner" />
