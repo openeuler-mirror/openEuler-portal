@@ -114,27 +114,6 @@ onMounted(() => {
         >Visa Letter Request</OButton
       >
     </div>
-    <div class="call-content">
-      <a
-        v-for="item in summitData.contentList"
-        :key="item.link"
-        class="content-item"
-        :href="item.link"
-        target="_blank"
-      >
-        <img class="pc-img" :src="item.img" :alt="item.name" />
-        <img class="mo-img" :src="item.img_mo" :alt="item.name" />
-        <div v-if="lang === 'zh'" class="cn-title call-title">
-          {{ item.name }}
-        </div>
-        <div
-          class="en-title call-title"
-          :class="{ 'in-en-lang': lang === 'en' }"
-        >
-          {{ item.name_en || item.name }}
-        </div>
-      </a>
-    </div>
     <div
       v-if="lang === 'zh'"
       class="agenda"
@@ -153,11 +132,6 @@ onMounted(() => {
           <p class="date-month">{{ item.month }}</p>
         </div>
       </div>
-      <!-- <div v-show="showIndex === 0">
-        <template v-for="item in getData.content.content" :key="item.lable">
-          <SummitSchedule :agenda-data="item" />
-        </template>
-      </div> -->
       <div>
         <el-tabs v-model.number="tabType" class="schedule-tabs">
           <el-tab-pane :name="0">
@@ -175,7 +149,6 @@ onMounted(() => {
           <SummitSchedule :agenda-data="item" />
         </template>
       </div>
-      <!-- <img class="agenda-img" :src="agendaImg" alt="" /> -->
     </div>
 
     <div v-if="lang === 'zh'" class="previous">
@@ -444,77 +417,6 @@ onMounted(() => {
     line-height: var(--o-line-height-text);
   }
 }
-.call-content {
-  display: grid;
-  margin: var(--o-spacing-h1) auto 0 auto;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--o-spacing-h4);
-  @media screen and (max-width: 968px) {
-    grid-template-columns: repeat(1, 1fr);
-    max-width: 270px;
-    gap: var(--o-spacing-h4);
-  }
-  @media screen and (max-width: 768px) {
-    margin-top: 40px;
-  }
-  .content-item {
-    position: relative;
-    width: 100%;
-    display: block;
-    width: 100%;
-    text-align: center;
-    box-shadow: var(--o-shadow-l2);
-    &:hover {
-      box-shadow: var(--o-shadow-l2_hover);
-      @media screen and (max-width: 1100px) {
-        box-shadow: var(--o-shadow-l2);
-      }
-    }
-    .call-title {
-      width: 100%;
-      max-width: 270px;
-      top: 19%;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 40px;
-      color: var(--o-color-white);
-      @media screen and (max-width: 1416px) {
-        font-size: var(--o-font-size-h3);
-      }
-      @media screen and (max-width: 768px) {
-        max-width: 160px;
-        font-size: var(--o-font-size-h5);
-      }
-    }
-    .en-title {
-      top: unset;
-      bottom: 23%;
-    }
-    .in-en-lang {
-      top: 50%;
-      left: 50%;
-      bottom: unset;
-      transform: translate(-50%, -50%);
-    }
-    .pc-img {
-      @media screen and (max-width: 768px) {
-        display: none;
-      }
-    }
-    .mo-img {
-      display: none;
-      max-width: 270px;
-      @media screen and (max-width: 768px) {
-        display: inline-block;
-      }
-    }
-    img {
-      width: 100%;
-    }
-  }
-}
-
 .agenda {
   margin-top: var(--o-spacing-h1);
   @media (max-width: 767px) {
