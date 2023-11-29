@@ -1,5 +1,3 @@
-import callFor from '../img/call-for_pc.png';
-import callFor_mo from '../img/call-for_mo.png';
 import banner_pc from '../img/banner_pc.jpg';
 import banner_mo from '../img/banner_mo.png';
 import textImg from '../img/text.png';
@@ -30,36 +28,6 @@ export default {
     '人才发展：深化产教融合，培养学术和科研人才',
   ],
   introduce5: '汇聚开源，贡献智慧，共建数智时代的操作系统，共促数字经济腾飞。',
-  contentList: [
-    {
-      name: '议题征集',
-      name_en: 'CALL FOR SPEAKER',
-      img: callFor,
-      img_mo: callFor_mo,
-      link: 'https://shimo.im/forms/0wRVVzwwWTYC5WRZ/fill',
-    },
-    {
-      name: '赞助征集',
-      name_en: 'CALL FOR SPONSOR',
-      img: callFor,
-      img_mo: callFor_mo,
-      link: 'https://shimo.im/forms/abwfafUlFusIS4iC/fill',
-    },
-    {
-      name: 'SIG 征集',
-      name_en: 'CALL FOR SIG',
-      img: callFor,
-      img_mo: callFor_mo,
-      link: 'https://shimo.im/forms/IRAgskTUxUAS2cTk/fill',
-    },
-    {
-      name: 'DEMO 征集',
-      name_en: 'CALL FOR DEMO',
-      img: callFor,
-      img_mo: callFor_mo,
-      link: 'https://shimo.im/forms/YijRjL8CtHECs01C/fill',
-    },
-  ],
   previous: {
     title: '精彩回顾',
     list: [
