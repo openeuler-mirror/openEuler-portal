@@ -294,18 +294,20 @@ export default {
         MANUFACTURER: '同源OS',
         PUBLISH_DATE: '2020/04',
       },
-      //   {
-      //     NAME: 'SeawayEdgeV1.00',
-      //     DOWNLOAD_URL: 'https://new.haiwei.tech:27140/down/UT2xMwv4ovUU.iso',
-      //     DESC: 'SeawayEdge是中科海微基于openEuler开源社区构建，结合边缘、嵌入式领域场景探索，打造全场景协同的面向数字基础设施的开源操作系统。',
-      //     MANUFACTURER: '中科海微（北京）科技有限公司',
-      //     PUBLISH_DATE: '2023/09',
-      //     DETAILED_LINK: [
-      //       {
-      //         ARCH: 'x86_64',
-      //       },
-      //     ],
-      //   },
+      {
+        NAME: 'SeawayEdgeV1.00',
+        DOWNLOAD_URL:
+          'http://new.haiwei.tech/SeawayEdge/SeawayEdge-v1.00-LTS/ISO/x86_64/SeawayEdge-v1.00-LTS-x86_64-dvd.iso',
+        DESC: 'SeawayEdge是中科海微基于openEuler开源社区构建，结合边缘、嵌入式领域场景探索，打造全场景协同的面向数字基础设施的开源操作系统。',
+        MANUFACTURER: '中科海微（北京）科技有限公司',
+        PUBLISH_DATE: '2023/09',
+        DETAILED_LINK: [
+          {
+            LINK: 'http://new.haiwei.tech/SeawayEdge/SeawayEdge-v1.00-LTS/ISO/x86_64/SeawayEdge-v1.00-LTS-x86_64-dvd.iso',
+            ARCH: 'x86_64',
+          },
+        ],
+      },
     ],
   },
   en: {
