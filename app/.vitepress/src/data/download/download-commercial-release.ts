@@ -2,6 +2,20 @@ export default {
   zh: {
     COMMERCIAL_RELEASE_LIST: [
       {
+        NAME: 'SeawayEdgeV1.00',
+        DOWNLOAD_URL:
+          'http://new.haiwei.tech/SeawayEdge/SeawayEdge-v1.00-LTS/ISO/x86_64/SeawayEdge-v1.00-LTS-x86_64-dvd.iso',
+        DESC: 'SeawayEdge是中科海微基于openEuler开源社区构建，结合边缘、嵌入式领域场景探索，打造全场景协同的面向数字基础设施的开源操作系统。',
+        MANUFACTURER: '中科海微（北京）科技有限公司',
+        PUBLISH_DATE: '2023/09',
+        DETAILED_LINK: [
+          {
+            LINK: 'http://new.haiwei.tech/SeawayEdge/SeawayEdge-v1.00-LTS/ISO/x86_64/SeawayEdge-v1.00-LTS-x86_64-dvd.iso',
+            ARCH: 'x86_64',
+          },
+        ],
+      },
+      {
         NAME: '麒麟信安 Kylinsec V3.5.2',
         DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.5.2/',
         DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国>内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
@@ -293,20 +307,6 @@ export default {
         DESC: '内核源码来自于欧拉开源社区中，其它软件包来自于CentOS8.1的aarch64版，完全兼容CentOS8.1，产品发布物为标准启动安装ISO。',
         MANUFACTURER: '同源OS',
         PUBLISH_DATE: '2020/04',
-      },
-      {
-        NAME: 'SeawayEdgeV1.00',
-        DOWNLOAD_URL:
-          'http://new.haiwei.tech/SeawayEdge/SeawayEdge-v1.00-LTS/ISO/x86_64/SeawayEdge-v1.00-LTS-x86_64-dvd.iso',
-        DESC: 'SeawayEdge是中科海微基于openEuler开源社区构建，结合边缘、嵌入式领域场景探索，打造全场景协同的面向数字基础设施的开源操作系统。',
-        MANUFACTURER: '中科海微（北京）科技有限公司',
-        PUBLISH_DATE: '2023/09',
-        DETAILED_LINK: [
-          {
-            LINK: 'http://new.haiwei.tech/SeawayEdge/SeawayEdge-v1.00-LTS/ISO/x86_64/SeawayEdge-v1.00-LTS-x86_64-dvd.iso',
-            ARCH: 'x86_64',
-          },
-        ],
       },
     ],
   },
