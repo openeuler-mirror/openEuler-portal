@@ -1432,7 +1432,7 @@ export default {
                   '8ee6e6ea6fe3af075846efb28196aac6edd50c99b663b0fc4651fa71195a68e6',
                 DOWNLOAD_LINK:
                   'openEuler-22.03-LTS/ISO/aarch64/openEuler-22.03-LTS-aarch64-dvd.iso',
-                TIPS: 'aarch64架构的边缘ISO，包含了运行最小系统的核心组件',
+                TIPS: 'aarch64架构的基础安装ISO，包含了运行最小系统的核心组件',
               },
               {
                 TYPE: 'Offline Everything ISO',
@@ -1473,11 +1473,27 @@ export default {
           {
             LINK_LIST: [
               {
-                TYPE: 'loongarch',
-                SIZE: '2.1 GiB',
-                SHACODE: '29eaf6db6702c1ce91b9ee73c58e7543',
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.0 GiB',
+                SHACODE: 'cf38eb9ab040306765a74202313d3556aaea8c3c69d1e506b32d93693c27d7af',
                 DOWNLOAD_LINK:
-                  'openEuler-preview/loongarch/ISO/openEuler-22.03-LTS-loongarch64-dvd-beta4.iso',
+                  'openEuler-22.03-LTS/ISO/loongarch64/openEuler-22.03-LTS-loongarch64-dvd.iso',
+                TIPS: 'loongarch64架构的基础安装ISO，包含了运行最小系统的核心组件',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '12.1 GiB',
+                SHACODE: 'd571ddedaf3bf5c7e0389b1a66cc0544dab236297cf356e652b6176ce2c63751',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS/ISO/loongarch64/openEuler-22.03-LTS-everything-loongarch64-dvd.iso',
+                TIPS: 'loongarch64架构的全量安装ISO，包含了运行完整系统所需的全部组件',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '718.7 MiB',
+                SHACODE: '2e2d74c9c0be76a712c3c22aab489b171ccfa7ebf99bde7b879638b5cf09ed14',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS/ISO/loongarch64/openEuler-22.03-LTS-netinst-loongarch64-dvd.iso',
                 TIPS: '',
               },
             ],
