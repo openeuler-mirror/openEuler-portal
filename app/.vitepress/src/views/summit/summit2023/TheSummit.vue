@@ -40,6 +40,7 @@ const showIndex = ref(0);
 // 日期切换
 function setShowIndex(index: number) {
   showIndex.value = index;
+  tabType.value = 0;
 }
 const getData: any = computed(() => agendaData[showIndex.value]);
 
