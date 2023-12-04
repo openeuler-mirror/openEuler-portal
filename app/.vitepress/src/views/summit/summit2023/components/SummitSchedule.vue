@@ -411,6 +411,7 @@ watch(
       display: block;
       margin-right: 36px;
       cursor: default;
+      word-wrap: break-word;
       > span {
         display: block;
         & ~ span {

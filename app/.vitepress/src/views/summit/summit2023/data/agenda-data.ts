@@ -265,7 +265,7 @@ export default [
                     {
                       id: 'agenda15_2_1_3_1',
                       name: '吴峰光',
-                      post: '欧拉技术专家',
+                      post: '欧拉社区技术专家',
                     },
                   ],
                   detail: '',
@@ -473,7 +473,12 @@ export default [
                     {
                       id: 'agenda15_2_2_4_1',
                       name: '王强',
-                      post: 'openEuler生态总监、湖南欧拉生态创新中心技术总监',
+                      post: 'openEuler生态总监',
+                    },
+                    {
+                      id: 'agenda15_2_2_4_2',
+                      name: '刘华杰',
+                      post: '湖南欧拉生态创新中心技术总监',
                     },
                   ],
                   detail:
@@ -535,7 +540,7 @@ export default [
                 {
                   id: 'agenda15_2_3_2',
                   time: '14:25-14:50',
-                  desc: '软通领导致辞+主题分享 openEuler for AI,智能化操作系统的机遇和挑战',
+                  desc: '社区领导致辞+主题分享 openEuler for AI,智能化操作系统的机遇和挑战',
                   person: [
                     {
                       id: 'agenda15_2_3_2_1',
@@ -2350,7 +2355,7 @@ export default [
                 },
                 {
                   id: 'agenda16_2_7_1',
-                  time: '',
+                  time: '14:10-14:25',
                   desc: '异构融合调度及GMEM 面向领域加速器的通用内存管理',
                   person: [
                     {
