@@ -190,7 +190,6 @@ function jumpPage(page: number) {
           :deep(.confirm-btn) {
             display: flex;
             justify-content: center;
-            color: var(--o-color-white);
 
             @media (max-width: 768px) {
               font-size: var(--o-font-size-tip);

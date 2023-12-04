@@ -19,10 +19,10 @@ const classNames = computed(() => {
 <style lang="scss">
 .o-pagination {
   --o-pagination-font-color: var(--o-color-text1);
-  --o-pagination-font-color_active: var(--o-color-brand1);
+  --o-pagination-font-color_active: var(--o-color-white);
   --o-pagination-bg-color: var(--o-color-text5);
-  --o-pagination-bg-color_hover: var(--o-color-brand5);
-  --o-pagination-bg-color_selected: var(--o-color-brand5);
+  --o-pagination-bg-color_hover: var(--o-color-brand1);
+  --o-pagination-bg-color_selected: var(--o-color-brand1);
   --o-pagination-number-border-color_active: var(--o-color-brand1);
 
   &.el-pagination {
@@ -63,13 +63,12 @@ const classNames = computed(() => {
       height: 36px;
       width: 36px;
       &:hover {
-        color: var(--o-color-text2) !important;
-        background-color: var(--o-pagination-font-color_active);
+        color: var(--o-pagination-font-color_active) !important;
+        background-color: var(--o-pagination-bg-color_hover);
       }
     }
     .el-pager li.is-active.number {
-      background: var(--o-pagination-font-color_active);
-      color: var(--o-color-text2);
+      background: var(--o-pagination-bg-color_selected);
       font-weight: 400;
       font-size: var(--o-font-size-text);
     }

@@ -189,7 +189,6 @@ function jumpPage(page: number) {
             width: 96px;
             display: flex;
             justify-content: center;
-            color: var(--o-color-white);
 
             @media (max-width: 768px) {
               font-size: var(--o-font-size-tip);
