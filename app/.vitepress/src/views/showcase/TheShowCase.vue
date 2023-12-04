@@ -512,7 +512,6 @@ onMounted(() => {
             width: 96px;
             display: flex;
             justify-content: center;
-            color: #ffffff;
 
             @media (max-width: 768px) {
               width: 88px;
