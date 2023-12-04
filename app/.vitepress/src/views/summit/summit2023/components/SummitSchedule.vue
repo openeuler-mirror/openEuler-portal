@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref,watch } from 'vue';
 import IconTime from '~icons/app/icon-time.svg';
 
-defineProps({
+const props = defineProps({
   agendaData: {
     type: Object,
     required: true,
@@ -23,11 +23,17 @@ function changeIndexShow(id: string, idItem: string) {
   idSubItemShow.value = idItem;
 }
 const otherTabType = ref(0);
+watch(
+  () => props.agendaData,
+  () => {
+    otherTabType.value=0
+  }
+);
 </script>
 
 <template>
   <div class="schedule">
-    <h4>{{ agendaData.lable }}</h4>
+    <h4 v-if="agendaData.lable">{{ agendaData.lable }}</h4>
     <div class="schedule-item other">
       <el-tabs
         v-if="agendaData.content[1]"
@@ -48,7 +54,7 @@ const otherTabType = ref(0);
       </el-tabs>
       <div
         v-for="(itemList, listIndex) in agendaData.content"
-        v-show="otherTabType == listIndex"
+        v-show="otherTabType === listIndex"
         :key="itemList.id"
         class="content"
       >
@@ -82,7 +88,7 @@ const otherTabType = ref(0);
             </span>
             <div v-if="subItem.person[0]" class="name-box">
               <div v-for="personItem in subItem.person" :key="personItem.id">
-                <span v-if="personItem.name" class="name">
+                <span class="name">
                   {{ personItem.name }}
                 </span>
                 <span v-if="personItem.post" class="post">
@@ -419,7 +425,7 @@ const otherTabType = ref(0);
     }
 
     .name {
-      min-width: 200px;
+      width: 200px;
       display: inline-block;
       color: var(--o-color-text3);
       font-size: 16px;
@@ -427,6 +433,7 @@ const otherTabType = ref(0);
       @media (max-width: 1100px) {
         font-size: 12px;
         line-height: 18px;
+        width: auto;
       }
     }
     .post {

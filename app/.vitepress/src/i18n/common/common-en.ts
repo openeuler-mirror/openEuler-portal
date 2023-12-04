@@ -338,8 +338,7 @@ export default {
             },
             {
               NAME: 'Technical White Papers',
-              LABEL:
-                'Technical highlights and details of openEuler',
+              LABEL: 'Technical highlights and details of openEuler',
               PATH: '/showcase/technical-white-paper/',
             },
           ],
@@ -718,10 +717,6 @@ export default {
       {
         NAME: 'Legal Notice',
         URL: '/other/legal/',
-      },
-      {
-        NAME: 'Service Status',
-        URL: 'https://status.openeuler.org/',
       },
     ],
     QR_CODE: 'WeChat Subscription',

@@ -882,10 +882,6 @@ export default {
         NAME: '法律声明',
         URL: '/other/legal/',
       },
-      {
-        NAME: '服务状态',
-        URL: 'https://status.openeuler.org/',
-      },
     ],
     LINKS: [],
     QR_CODE: 'openEuler公众号',
