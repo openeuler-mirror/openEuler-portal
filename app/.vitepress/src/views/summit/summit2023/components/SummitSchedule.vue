@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-import { ref,watch } from 'vue';
+import { ref, watch } from 'vue';
+import showMd from 'markdown-it';
+
 import IconTime from '~icons/app/icon-time.svg';
 
 const props = defineProps({
@@ -26,9 +28,13 @@ const otherTabType = ref(0);
 watch(
   () => props.agendaData,
   () => {
-    otherTabType.value=0
+    otherTabType.value = 0;
   }
 );
+// 转换md语法
+function convertMd(data: string) {
+  return showMd().render(data);
+}
 </script>
 
 <template>
@@ -83,8 +89,8 @@ watch(
               <span
                 v-for="item in subItem.desc.split('\n')"
                 :key="item + '1'"
-                >{{ item }}</span
-              >
+                v-dompurify-html="convertMd(item)"
+              ></span>
             </span>
             <div v-if="subItem.person[0]" class="name-box">
               <div v-for="personItem in subItem.person" :key="personItem.id">
