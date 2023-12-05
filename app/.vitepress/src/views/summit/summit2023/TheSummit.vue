@@ -13,7 +13,7 @@ import useWindowResize from '@/components/hooks/useWindowResize';
 import data_zh from './data/data_zh';
 import data_en from './data/data_en';
 
-import agendaData from './data/agenda-data';
+import { getEasyeditorInfo } from '@/api/api-easyeditor';
 
 import liveLight from '@/assets/category/summit/summit2022/live.png';
 import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
@@ -42,28 +42,34 @@ function setShowIndex(index: number) {
   showIndex.value = index;
   tabType.value = 0;
 }
-const getData: any = computed(() => agendaData[showIndex.value]);
+// 获取议程数据
+const agendaData = ref([]);
+onMounted(() => {
+  const href = `https://www.openeuler.org/${lang.value}/interaction/summit-list/summit2023/`;
+  getEasyeditorInfo(href).then((res) => {
+    if (res.data && res.data[0]) {
+      for (let i = 0; i < res.data.length; i++) {
+        res.data[i].content = JSON.parse(res.data[i].content);
+        agendaData.value = res.data;
+      }
+    }
+  });
+});
+const getData: any = computed(() => agendaData.value[showIndex.value]);
 
 // 控制上下午切换
 const tabType = ref(0);
-const renderData: any = ref([]);
+const renderData: any = computed(() => {
+  if (tabType.value === 1) {
+    return getData.value.content.content.slice(1);
+  } else if (getData.value) {
+    return getData.value.content.content.slice(0, 1);
+  }
+});
 const dateList = [
   { day: 15, month: 'DEC' },
   { day: 16, month: 'DEC' },
 ];
-watch(
-  [tabType, showIndex],
-  () => {
-    if (tabType.value === 1) {
-      renderData.value = getData.value.content.content.slice(1);
-    } else if (getData.value) {
-      renderData.value = getData.value.content.content.slice(0, 1);
-    }
-  },
-  {
-    immediate: true,
-  }
-);
 
 // 埋点统计投放流量
 function collectAdvertisedData() {
