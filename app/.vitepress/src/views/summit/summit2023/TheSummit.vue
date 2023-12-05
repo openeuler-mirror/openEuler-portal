@@ -70,7 +70,6 @@ const dateList = [
   { day: 15, month: 'DEC' },
   { day: 16, month: 'DEC' },
 ];
-
 // 埋点统计投放流量
 function collectAdvertisedData() {
   const sensors = (window as any)['sensorsDataAnalytic201505'];
