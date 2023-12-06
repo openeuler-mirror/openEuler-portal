@@ -14,7 +14,7 @@ const { lang } = useData();
 const i18n = useI18n();
 
 const btnLink = computed(() => {
-  return `${lang.value}/security/vulnerability-reporting/`;
+  return `/${lang.value}/security/vulnerability-reporting/`;
 });
 
 const router = useRouter();

@@ -211,19 +211,18 @@ const navItemClick = () => {
       </div>
       <img class="logo" alt="openEuler logo" :src="logo" @click="goHome" />
       <ClientOnly>
-        <div v-show="!isShowBox" class="header-content" :class="lang">
+        <div
+          v-show="!isShowBox || !isMobile"
+          class="header-content"
+          :class="lang"
+        >
           <div class="header-nav" :class="{ active: mobileMenuIcon }">
-            <template v-if="lang === 'ru'">
-              <HeaderNav :nav-items="navRouter" />
-            </template>
-            <template v-else>
-              <HeaderNavNew
-                :nav-items="navRouterNew"
-                :is-switch="mobileMenuIcon"
-                :nav-info="navRouterNewInfo"
-                @nav-click="navItemClick"
-              />
-            </template>
+            <HeaderNavNew
+              :nav-items="navRouterNew"
+              :is-switch="mobileMenuIcon"
+              :nav-info="navRouterNewInfo"
+              @nav-click="navItemClick"
+            />
             <div v-if="isMobile" class="header-tool">
               <AppLanguage :show="langShow" @language-click="navItemClick" />
               <AppTheme />
@@ -273,7 +272,7 @@ const navItemClick = () => {
         <!-- 搜索 -->
         <HeaderSearch @search-click="searchControl" />
         <!-- 切换语言、网站风格 -->
-        <div v-if="!isMobile" v-show="!isShowBox" class="header-tool">
+        <div v-if="!isMobile" class="header-tool">
           <AppLanguage :show="langShow" />
           <AppTheme />
         </div>
@@ -285,10 +284,6 @@ const navItemClick = () => {
   </header>
 </template>
 <style lang="scss" scoped>
-:deep(.el-input__wrapper) {
-  background-color: var(--o-color-bg-secondary) !important;
-  box-shadow: none !important;
-}
 :deep(.el-input__suffix) {
   font-size: var(--o-font-size-h7);
 }
