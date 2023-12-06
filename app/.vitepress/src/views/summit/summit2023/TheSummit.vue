@@ -625,7 +625,7 @@ onMounted(() => {
     }
   }
   .updata-tip {
-    font-size: var(--o-font-size-h5);
+    font-size: var(--o-font-size-text);
     line-height: var(--o-line-height-h5);
     color: var(--o-color-text1);
     font-weight: 400;
