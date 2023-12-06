@@ -29,10 +29,12 @@ import {
   getCpu,
   getSoftFilter,
   getDriveTypes,
+  getSolutionList,
+  getSolution,
+  getCertificationType,
 } from '@/api/api-security';
 
 const screenWidth = useWindowResize();
-const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
 const i18n = useI18n();
 const router = useRouter();
 const { lang } = useData();
@@ -63,6 +65,8 @@ const cpuList = ref<string[]>([`${all.value}`]);
 const softType = ref<string[]>([`${all.value}`]);
 const osLists = ref<string[]>([`${all.value}`]);
 const typeLists = ref<string[]>([`${all.value}`]);
+const solutionType = ref<string[]>([]);
+const authenType = ref<string[]>([]);
 
 const activeName = ref('1');
 const testOrganizationsLists = ref<string[]>([`${all.value}`]);
@@ -115,91 +119,68 @@ const queryData: CompatibilityQuery = reactive({
   cardType: '',
   lang: `${lang.value}`,
   dataSource: '',
+  solution: '',
+  certificationType: '',
 });
 
 const tableData: any = ref([]);
 
 // 整机
 const getCompatibilityData = (data: CompatibilityQuery) => {
-  try {
-    getCompatibilityList(data).then((res: any) => {
-      total.value = res.result.totalCount;
-      totalPage.value = Math.ceil(total.value / queryData.pages.size);
-      tableData.value = res.result.hardwareCompList.sort((a: any, b: any) => {
-        return new Date(b.date).getTime() - new Date(a.date).getTime();
-      });
+  getCompatibilityList(data).then((res: any) => {
+    total.value = res.result.totalCount;
+    totalPage.value = Math.ceil(total.value / queryData.pages.size);
+    tableData.value = res.result.hardwareCompList.sort((a: any, b: any) => {
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
-  } catch (e: any) {
-    console.log(e);
-  }
+  });
 };
 
 // 板卡
 const getDriverData = (data: CompatibilityQuery) => {
-  try {
-    getDriverList(data).then((res: any) => {
-      total.value = res.result.totalCount;
-      totalPage.value = Math.ceil(total.value / queryData.pages.size);
-      tableData.value = res.result.driverCompList.sort((a: any, b: any) => {
-        return (
-          new Date(b.driverDate).getTime() - new Date(a.driverDate).getTime()
-        );
-      });
+  getDriverList(data).then((res: any) => {
+    total.value = res.result.totalCount;
+    totalPage.value = Math.ceil(total.value / queryData.pages.size);
+    tableData.value = res.result.driverCompList.sort((a: any, b: any) => {
+      return (
+        new Date(b.driverDate).getTime() - new Date(a.driverDate).getTime()
+      );
     });
-  } catch (e: any) {
-    console.log(e);
-  }
+  });
 };
 
 // 开源软件
 const getSoftwareData = (data: CompatibilityQuery) => {
-  try {
-    getSoftwareList(data).then((res: any) => {
-      total.value = res.total;
-      totalPage.value = Math.ceil(total.value / queryData.pages.size);
-      tableData.value = res.info;
-    });
-  } catch (e: any) {
-    console.log(e);
-  }
+  getSoftwareList(data).then((res: any) => {
+    total.value = res.total;
+    totalPage.value = Math.ceil(total.value / queryData.pages.size);
+    tableData.value = res.info;
+  });
 };
 
 // 商业软件
 const getBusinessSoftwareData = (data: CompatibilityQuery) => {
   getBusinessSoftwareList(data).then((res: any) => {
     total.value = res.result.totalNum;
+    totalPage.value = Math.ceil(total.value / queryData.pages.size);
     tableData.value = res.result.data;
   });
 };
 
-function turnPage(option: string) {
-  if (option === 'prev' && currentPage.value > 1) {
-    currentPage.value = currentPage.value - 1;
-    queryData.pages.page = currentPage.value;
-    initMobileData(queryData);
-  } else if (option === 'next' && currentPage.value < totalPage.value) {
-    currentPage.value = currentPage.value + 1;
-    queryData.pages.page = currentPage.value;
-    initMobileData(queryData);
-  }
-}
+// 解决方案
+const getSolutionData = (data: CompatibilityQuery) => {
+  getSolutionList(data).then((res: any) => {
+    if (res.success) {
+      total.value = res.result.totalCount;
+      totalPage.value = Math.ceil(total.value / queryData.pages.size);
 
-const jumpPage = (page: number) => {
-  currentPage.value = page;
-  queryData.pages.page = currentPage.value;
-  initMobileData(queryData);
-};
-
-const handleChange = () => {
-  initQueryData();
-
-  currentPage.value = 1;
-  if (activeName.value) {
-    lastActiveName.value = activeName.value;
-  } else {
-    activeName.value = lastActiveName.value;
-  }
-  initMobileData(queryData);
+      tableData.value = res.result.solutionCompList.sort((a: any, b: any) => {
+        return (
+          new Date(b.driverDate).getTime() - new Date(a.driverDate).getTime()
+        );
+      });
+    }
+  });
 };
 
 const initQueryData = () => {
@@ -211,6 +192,7 @@ const initQueryData = () => {
   queryData.os = '';
   queryData.cardType = '';
   queryData.dataSource = 'assessment';
+  queryData.testOrganization = '';
 
   currentPage.value = 1;
 
@@ -232,28 +214,31 @@ const handleClick = () => {
   });
 };
 
-const initMobileData = (params: CompatibilityQuery) => {
-  if (activeName.value === '1') {
-    getCompatibilityData(params);
-  } else if (activeName.value === '2') {
-    getDriverData(params);
-  } else if (activeName.value === '3') {
-    getSoftwareData(params);
-  } else {
-    getBusinessSoftwareData(params);
-  }
+const methodMap: { [key: string]: (params: CompatibilityQuery) => void } = {
+  '1': getCompatibilityData,
+  '2': getDriverData,
+  '3': getSoftwareData,
+  '4': getBusinessSoftwareData,
+  '5': getSolutionData,
 };
 
 const initData = (params: CompatibilityQuery) => {
-  if (activeName.value === '1') {
-    getCompatibilityData(params);
-  } else if (activeName.value === '2') {
-    getDriverData(params);
-  } else if (activeName.value === '3') {
-    getSoftwareData(params);
-  } else {
-    getBusinessSoftwareData(params);
+  const activeMethod = methodMap[activeName.value];
+  if (activeMethod) {
+    activeMethod(params);
   }
+};
+// 解决方案筛选
+const selectSolutionTag = (i: number, item: string) => {
+  activeIndex.value = i;
+  queryData.solution = item === '全部' ? '' : item;
+  initData(queryData);
+};
+// 认证类型筛选
+const selectAuthenTypeTag = (i: number, item: string) => {
+  activeIndex1.value = i;
+  queryData.certificationType = item === '全部' ? '' : item;
+  initData(queryData);
 };
 
 const selectTypeTag = (i: number, item: string) => {
@@ -317,7 +302,7 @@ function searchDataSource(i: number, item: string) {
   initData(queryData);
 }
 
-const goBackPage = () => {
+const goDetailPage = () => {
   if (activeName.value === '1' || activeName.value === '2') {
     router.go(`/${lang.value}/compatibility/hardware/`);
   } else if (activeName.value === '3') {
@@ -327,6 +312,44 @@ const goBackPage = () => {
       'https://gitee.com/openeuler/technical-certification',
       '_blank'
     );
+  }
+};
+
+// 移动端
+function turnPage(option: string) {
+  if (option === 'prev' && currentPage.value > 1) {
+    currentPage.value = currentPage.value - 1;
+    queryData.pages.page = currentPage.value;
+    initMobileData(queryData);
+  } else if (option === 'next' && currentPage.value < totalPage.value) {
+    currentPage.value = currentPage.value + 1;
+    queryData.pages.page = currentPage.value;
+    initMobileData(queryData);
+  }
+}
+
+const jumpPage = (page: number) => {
+  currentPage.value = page;
+  queryData.pages.page = currentPage.value;
+  initMobileData(queryData);
+};
+
+const handleChange = () => {
+  initQueryData();
+
+  currentPage.value = 1;
+  if (activeName.value) {
+    lastActiveName.value = activeName.value;
+  } else {
+    activeName.value = lastActiveName.value;
+  }
+  initMobileData(queryData);
+};
+
+const initMobileData = (params: CompatibilityQuery) => {
+  const activeMethod = methodMap[activeName.value];
+  if (activeMethod) {
+    activeMethod(params);
   }
 };
 
@@ -373,7 +396,32 @@ function selectType(val: string) {
 const goSoftwareInfo = (id: number) => {
   router.go(`${router.route.path}software-info/?id=${id}`);
 };
+// 测试机构
+function selectOrganization(item: string) {
+  queryData.testOrganization = item === '全部' ? '' : item;
+  initMobileData(queryData);
+}
 
+const dataSource = ref('社区发行版');
+// 数据来源
+function selectDataSource(item: string) {
+  dataSource.value = item;
+  queryData.dataSource = item === '商业发行版' ? 'upload' : 'assessment';
+  initMobileData(queryData);
+}
+
+// 认证类型-下拉
+const selectAuthenType = (val: string) => {
+  queryData.certificationType = val === '全部' ? '' : val;
+  initMobileData(queryData);
+};
+// 解决方案-下拉
+const selectSolutionType = (val: string) => {
+  queryData.solution = val === '全部' ? '' : val;
+  initMobileData(queryData);
+};
+
+const solutionDetail: any = ref([]);
 onMounted(() => {
   getCompatibilityData(queryData);
 
@@ -438,6 +486,30 @@ onMounted(() => {
       softType.value.push(item);
     });
     osLists.value.push(res.OS[0]);
+  });
+
+  // filter-解决方案
+  getSolution().then((res: any) => {
+    solutionType.value = [all.value, ...res.result];
+  });
+
+  // filter-认证类型
+  getCertificationType().then((res: any) => {
+    authenType.value = [all.value, ...res.result];
+  });
+
+  // 获取解决方案详细信息
+  getSolutionList(queryData).then((res: any) => {
+    if (res.success) {
+      total.value = res.result.totalNum;
+      solutionDetail.value = res.result.solutionCompList.sort(
+        (a: any, b: any) => {
+          return (
+            new Date(b.driverDate).getTime() - new Date(a.driverDate).getTime()
+          );
+        }
+      );
+    }
   });
 });
 </script>
@@ -874,10 +946,184 @@ onMounted(() => {
         </OTable>
       </OTabPane>
 
+      <OTabPane
+        v-if="lang === 'zh'"
+        :label="i18n.compatibility.SOLUTION"
+        name="5"
+      >
+        <OSearch
+          v-model="searchContent"
+          class="o-search"
+          :placeholder="i18n.compatibility.SOLUTION_SEARCH_PLACEHOLDER"
+          @change="changeSearchVal"
+        ></OSearch>
+
+        <OCard class="filter-card">
+          <template #header>
+            <div class="card-header">
+              <TagFilter :label="i18n.compatibility.SOLUTION" :show="false">
+                <OTag
+                  v-for="(item, index) in solutionType"
+                  :key="'tag' + index"
+                  checkable
+                  :type="activeIndex === index ? 'primary' : 'text'"
+                  @click="selectSolutionTag(index, item)"
+                >
+                  {{ item }}
+                </OTag>
+              </TagFilter>
+            </div>
+          </template>
+          <div class="card-body">
+            <TagFilter :show="false" :label="i18n.compatibility.AUTHENTICATION">
+              <OTag
+                v-for="(item, index) in authenType"
+                :key="'tag' + index"
+                checkable
+                :type="activeIndex1 === index ? 'primary' : 'text'"
+                @click="selectAuthenTypeTag(index, item)"
+              >
+                {{ item }}
+              </OTag>
+            </TagFilter>
+          </div>
+        </OCard>
+
+        <OTable class="pc-list" :data="tableData" style="width: 100%">
+          <OTableColumn
+            :label="i18n.compatibility.SOLUTION_TABLE_COLUMN.SOLUTION"
+            prop="solution"
+          >
+          </OTableColumn>
+          <OTableColumn
+            :label="i18n.compatibility.SOLUTION_TABLE_COLUMN.TYPE"
+            prop="certificationType"
+          >
+          </OTableColumn>
+          <OTableColumn
+            :label="i18n.compatibility.SOLUTION_TABLE_COLUMN.VENDOR"
+            prop="serverVendor"
+          ></OTableColumn>
+          <OTableColumn
+            :label="i18n.compatibility.SOLUTION_TABLE_COLUMN.ARCHITECTURE"
+            prop="architecture"
+          ></OTableColumn>
+          <OTableColumn
+            :label="i18n.compatibility.SOLUTION_TABLE_COLUMN.MODEL"
+            prop="serverModel"
+          ></OTableColumn>
+          <OTableColumn
+            :label="i18n.compatibility.SOLUTION_TABLE_COLUMN.SYSTEM"
+            prop="os"
+            width="220"
+          ></OTableColumn>
+          <OTableColumn
+            :label="i18n.compatibility.SOLUTION_TABLE_COLUMN.DATE"
+            prop="date"
+          ></OTableColumn>
+          <el-table-column
+            :label="i18n.compatibility.SOLUTION_TABLE_COLUMN.INTRO"
+          >
+            <template #default="scope">
+              <a
+                :href="scope.row.introduceLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                >详细链接</a
+              >
+            </template>
+          </el-table-column>
+        </OTable>
+
+        <div class="solution-details">
+          <div class="virtual">
+            <p class="option-title">{{ i18n.compatibility.VIRTUAL_INFO }}</p>
+
+            <div
+              v-for="item in solutionDetail.slice(0, 1)"
+              :key="item.id"
+              class="virtual-info"
+            >
+              <div class="info-item">
+                <p>{{ i18n.compatibility.VIRTUAL_LABELS[0] }}</p>
+                <p>{{ item.os }}</p>
+              </div>
+              <div class="info-item">
+                <p>{{ i18n.compatibility.VIRTUAL_LABELS[1] }}</p>
+                <p>{{ item.OVSVersion }}</p>
+              </div>
+              <div class="info-item">
+                <p>{{ i18n.compatibility.VIRTUAL_LABELS[2] }}</p>
+                <p>{{ item.stratovirtVersion }}</p>
+              </div>
+              <div class="info-item">
+                <p>{{ i18n.compatibility.VIRTUAL_LABELS[3] }}</p>
+                <p>{{ item.libvirtVersion }}</p>
+              </div>
+              <div class="info-item">
+                <p>{{ i18n.compatibility.VIRTUAL_LABELS[4] }}</p>
+                <p>{{ item.qemuVersion }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service">
+            <p class="option-title">{{ i18n.compatibility.SERVICE_INFO }}</p>
+
+            <div
+              v-for="item in solutionDetail"
+              :key="item.id"
+              class="service-info"
+            >
+              <div class="info-item">
+                <p>{{ i18n.compatibility.SEVICE_LABELS[0] }}</p>
+                <p>{{ item.serverVendor }}</p>
+              </div>
+              <div class="info-item">
+                <p>{{ i18n.compatibility.SEVICE_LABELS[3] }}</p>
+                <p>{{ item.networkCard }}</p>
+              </div>
+              <div class="info-item">
+                <p>{{ i18n.compatibility.SEVICE_LABELS[2] }}</p>
+                <p>{{ item.product }}</p>
+              </div>
+              <div class="info-item">
+                <p>{{ i18n.compatibility.SEVICE_LABELS[5] }}</p>
+                <p>{{ item.driver }}</p>
+              </div>
+              <div class="info-item">
+                <p>{{ i18n.compatibility.SEVICE_LABELS[4] }}</p>
+                <p>{{ item.biosUefi }}</p>
+              </div>
+              <div class="info-item">
+                <p>{{ i18n.compatibility.SEVICE_LABELS[7] }}</p>
+                <p>{{ item.hardDiskDrive }}</p>
+              </div>
+              <div class="info-item">
+                <p>{{ i18n.compatibility.SEVICE_LABELS[8] }}</p>
+                <p>{{ item.architecture }}</p>
+              </div>
+              <div class="info-item">
+                <p>{{ i18n.compatibility.SEVICE_LABELS[9] }}</p>
+                <p>{{ item.raid }}</p>
+              </div>
+              <div class="info-item">
+                <p>{{ i18n.compatibility.SEVICE_LABELS[6] }}</p>
+                <p>{{ item.cpu }}</p>
+              </div>
+              <div class="info-item">
+                <p>{{ i18n.compatibility.SEVICE_LABELS[1] }}</p>
+                <p>{{ item.ram }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </OTabPane>
+
       <div class="bottom-wrapper">
         <ClientOnly>
           <OPagination
-            v-if="total && !isMobile"
+            v-if="totalPage > 1"
             v-model:page-size="queryData.pages.size"
             v-model:currentPage="queryData.pages.page"
             class="pagination"
@@ -898,21 +1144,21 @@ onMounted(() => {
         <p v-if="activeName === '1' || activeName === '2'" class="about">
           {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
 
-          <a href="#" @click="goBackPage">{{
+          <a href="#" @click="goDetailPage">{{
             i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
           }}</a>
         </p>
         <p v-if="activeName === '3'" class="about">
           {{ i18n.compatibility.SOFTWARE_OEC_DETAIL.TEXT }}
 
-          <a href="#" @click="goBackPage">{{
+          <a href="#" @click="goDetailPage">{{
             i18n.compatibility.SOFTWARE_OEC_DETAIL.TITLE
           }}</a>
         </p>
         <p v-if="activeName === '4'" class="about">
           {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT }}
 
-          <a href="#" @click="goBackPage">{{
+          <a href="#" @click="goDetailPage">{{
             i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TITLE
           }}</a>
           <br />
@@ -1046,7 +1292,7 @@ onMounted(() => {
           />
           <p class="mobile-about">
             {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
-            <a href="#" @click="goBackPage">{{
+            <a href="#" @click="goDetailPage">{{
               i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
             }}</a>
           </p>
@@ -1193,7 +1439,7 @@ onMounted(() => {
           />
           <p class="mobile-about">
             {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
-            <a href="#" @click="goBackPage">{{
+            <a href="#" @click="goDetailPage">{{
               i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
             }}</a>
           </p>
@@ -1350,7 +1596,7 @@ onMounted(() => {
           />
           <p class="mobile-about">
             {{ i18n.compatibility.SOFTWARE_OEC_DETAIL.TEXT }}
-            <a href="#" @click="goBackPage">{{
+            <a href="#" @click="goDetailPage">{{
               i18n.compatibility.SOFTWARE_OEC_DETAIL.TITLE
             }}</a>
           </p>
@@ -1361,6 +1607,42 @@ onMounted(() => {
           :title="i18n.compatibility.BUSINESS_SOFTWARE"
           name="4"
         >
+          <ClientOnly>
+            <OSearch
+              v-model="searchContent"
+              class="o-search"
+              @change="changeSearchVal"
+            ></OSearch>
+
+            <OSelect
+              v-model="dataSource"
+              :placeholder="i18n.compatibility.DATA_SOURCE"
+              @change="selectDataSource"
+            >
+              <OOption
+                v-for="item in dataSourceList"
+                :key="item"
+                :label="item"
+                :value="item"
+              >
+              </OOption>
+            </OSelect>
+
+            <OSelect
+              v-model="queryData.testOrganization"
+              :placeholder="i18n.compatibility.BUSINESS_TESTING_ORGANIZATION"
+              @change="selectOrganization"
+            >
+              <OOption
+                v-for="item in testOrganizationsLists"
+                :key="item"
+                :label="item"
+                :value="item"
+              >
+              </OOption>
+            </OSelect>
+          </ClientOnly>
+
           <ul v-if="totalPage !== 0" class="mobile-list">
             <li v-for="item in tableData" :key="item.id" class="item">
               <ul>
@@ -1410,6 +1692,11 @@ onMounted(() => {
               </ul>
             </li>
           </ul>
+
+          <div v-else class="empty-status">
+            {{ i18n.compatibility.EMPTY_SEARCH_RESULT }}
+          </div>
+
           <AppPaginationMo
             v-if="totalPage !== 0"
             :current-page="currentPage"
@@ -1418,12 +1705,217 @@ onMounted(() => {
           />
           <p class="mobile-about last-mobile-about">
             {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT }}
-            <a href="#" @click="goBackPage">{{
+            <a href="#" @click="goDetailPage">{{
               i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TITLE
             }}</a>
             <br />
             {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT_2 }}
           </p>
+        </el-collapse-item>
+
+        <el-collapse-item
+          v-if="lang === 'zh'"
+          :title="i18n.compatibility.SOLUTION"
+          name="5"
+        >
+          <ClientOnly>
+            <OSearch
+              v-model="searchContent"
+              class="o-search"
+              :placeholder="i18n.compatibility.SOLUTION_SEARCH_PLACEHOLDER"
+              @change="changeSearchVal"
+            ></OSearch>
+
+            <OSelect
+              v-model="osName"
+              :placeholder="i18n.compatibility.SOLUTION"
+              @change="selectSolutionType"
+            >
+              <OOption
+                v-for="item in solutionType"
+                :key="item"
+                :class="item"
+                :label="item"
+                :value="item"
+              >
+                {{ item }}
+              </OOption>
+            </OSelect>
+
+            <OSelect
+              v-model="architehture"
+              :placeholder="i18n.compatibility.AUTHENTICATION"
+              @change="selectAuthenType"
+            >
+              <OOption
+                v-for="item in authenType"
+                :key="item"
+                :class="item"
+                :label="item"
+                :value="item"
+              >
+                {{ item }}
+              </OOption>
+            </OSelect>
+          </ClientOnly>
+
+          <ul v-if="totalPage !== 0" class="mobile-list">
+            <li v-for="item in tableData" :key="item.id" class="item">
+              <ul>
+                <li>
+                  <span>
+                    {{ i18n.compatibility.SOLUTION_TABLE_COLUMN.SOLUTION }}:
+                  </span>
+                  {{ item.solution }}
+                </li>
+                <li>
+                  <span>
+                    {{ i18n.compatibility.SOLUTION_TABLE_COLUMN.TYPE }}:
+                  </span>
+                  {{ item.certificationType }}
+                </li>
+                <li>
+                  <span>
+                    {{ i18n.compatibility.SOLUTION_TABLE_COLUMN.VENDOR }}:
+                  </span>
+                  {{ item.serverVendor }}
+                </li>
+                <li>
+                  <span>
+                    {{ i18n.compatibility.SOLUTION_TABLE_COLUMN.ARCHITECTURE }}:
+                  </span>
+                  {{ item.architecture }}
+                </li>
+                <li>
+                  <span>
+                    {{ i18n.compatibility.SOLUTION_TABLE_COLUMN.MODEL }}:
+                  </span>
+                  {{ item.serverModel }}
+                </li>
+                <li>
+                  <span>
+                    {{ i18n.compatibility.SOLUTION_TABLE_COLUMN.SYSTEM }}:
+                  </span>
+                  {{ item.os }}
+                </li>
+                <li>
+                  <span>
+                    {{ i18n.compatibility.SOLUTION_TABLE_COLUMN.DATE }}:
+                  </span>
+                  {{ item.date }}
+                </li>
+                <li>
+                  <span>
+                    {{ i18n.compatibility.SOLUTION_TABLE_COLUMN.INTRO }}:
+                  </span>
+                  <a
+                    :href="item.introduceLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >详细链接</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div v-else class="empty-status">
+            {{ i18n.compatibility.EMPTY_SEARCH_RESULT }}
+          </div>
+
+          <AppPaginationMo
+            v-if="totalPage > 1"
+            :current-page="currentPage"
+            :total-page="totalPage"
+            @turn-page="turnPage"
+            @jump-page="jumpPage"
+            class="pagination-mob"
+          />
+
+          <div class="solution-details">
+            <div class="virtual">
+              <p class="option-title">{{ i18n.compatibility.VIRTUAL_INFO }}</p>
+
+              <div
+                v-for="(item, index) in solutionDetail.slice(0, 1)"
+                :key="item.id"
+                class="virtual-info"
+              >
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.VIRTUAL_LABELS[0] }}</p>
+                  <p>{{ item.os }}</p>
+                </div>
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.VIRTUAL_LABELS[1] }}</p>
+                  <p>{{ item.OVSVersion }}</p>
+                </div>
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.VIRTUAL_LABELS[2] }}</p>
+                  <p>{{ item.stratovirtVersion }}</p>
+                </div>
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.VIRTUAL_LABELS[3] }}</p>
+                  <p>{{ item.libvirtVersion }}</p>
+                </div>
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.VIRTUAL_LABELS[4] }}</p>
+                  <p>{{ item.qemuVersion }}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service">
+              <p class="option-title">{{ i18n.compatibility.SERVICE_INFO }}</p>
+
+              <div
+                v-for="item in solutionDetail"
+                :key="item.id"
+                class="service-info"
+              >
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.SEVICE_LABELS[0] }}</p>
+                  <p>{{ item.serverVendor }}</p>
+                </div>
+
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.SEVICE_LABELS[2] }}</p>
+                  <p>{{ item.product }}</p>
+                </div>
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.SEVICE_LABELS[4] }}</p>
+                  <p>{{ item.biosUefi }}</p>
+                </div>
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.SEVICE_LABELS[8] }}</p>
+                  <p>{{ item.architecture }}</p>
+                </div>
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.SEVICE_LABELS[6] }}</p>
+                  <p>{{ item.cpu }}</p>
+                </div>
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.SEVICE_LABELS[9] }}</p>
+                  <p>{{ item.raid }}</p>
+                </div>
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.SEVICE_LABELS[3] }}</p>
+                  <p>{{ item.networkCard }}</p>
+                </div>
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.SEVICE_LABELS[5] }}</p>
+                  <p>{{ item.driver }}</p>
+                </div>
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.SEVICE_LABELS[7] }}</p>
+                  <p>{{ item.hardDiskDrive }}</p>
+                </div>
+                <div class="info-item">
+                  <p>{{ i18n.compatibility.SEVICE_LABELS[1] }}</p>
+                  <p>{{ item.ram }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </el-collapse-item>
       </el-collapse>
     </div>
@@ -1431,6 +1923,59 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+.pagination-mob {
+  margin-bottom: 12px;
+}
+.solution-details {
+  padding: var(--o-spacing-h2);
+  background-color: var(--o-color-bg2);
+  box-shadow: var(--o-shadow-l2);
+  @media screen and (max-width: 768px) {
+    padding: var(--o-spacing-h5);
+  }
+  .option-title {
+    font-size: var(--o-font-size-h5);
+    color: var(--o-color-text1);
+    line-height: var(--o-line-height-h5);
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 22px;
+    }
+  }
+  .service {
+    margin-top: 24px;
+  }
+  .virtual-info,
+  .service-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 8px;
+    column-gap: 16px;
+    margin-top: 24px;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 4px;
+      margin-top: 16px;
+    }
+  }
+  .info-item {
+    display: flex;
+    font-size: var(--o-font-size-text);
+    color: var(--o-color-text1);
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    p:first-child {
+      width: 210px;
+      color: var(--o-color-text4);
+      @media screen and (max-width: 768px) {
+        width: 140px;
+      }
+    }
+  }
+}
 :deep(.el-tabs__header) {
   margin: 0;
 }
@@ -1466,6 +2011,9 @@ onMounted(() => {
       box-shadow: var(--o-shadow-l1);
       height: 34px;
     }
+    .el-collapse-item__wrap {
+      background-color: var(--o-color-bg1);
+    }
     .el-collapse-item__content {
       background-color: var(--o-color-bg1);
     }
@@ -1499,13 +2047,6 @@ onMounted(() => {
 .o-search {
   height: 48px;
 }
-
-// .blog-tag {
-//   display: none;
-//   @media screen and (max-width: 768px) {
-//     display: block;
-//   }
-// }
 .filter-card {
   margin: var(--o-spacing-h4) 0;
   @media screen and (max-width: 768px) {

@@ -165,6 +165,8 @@ export interface CompatibilityQuery {
   cardType: string;
   lang: string;
   dataSource: string;
+  solution: string;
+  certificationType: string;
 }
 export interface OsvList {
   arch: string;
@@ -316,7 +318,33 @@ export interface TotalDataT {
   driverCompList?: DriverListT[];
   hardwareCompList?: CompatibilityListT[];
   securityNoticeList?: SecurityLists[];
+  solutionCompList: SolutionDataT[],
   totalCount: number
+}
+export interface SolutionDataT {
+  OVSVersion: string;
+  architecture: string;
+  biosUefi: string;
+  certificationType: string;
+  cpu: string;
+  date: string;
+  driver: string;
+  hardDiskDrive: string;
+  id: number;
+  introduceLink: string;
+  lang: string;
+  libvirtVersion: string;
+  networkCard: string;
+  os: string;
+  product: string;
+  qemuVersion: string;
+  raid: string;
+  ram: string;
+  serverModel: string;
+  serverVendor: string;
+  solution: string;
+  stratovirtVersion: string;
+  updateTime: string;
 }
 export interface SoftwareListItemT {
   arch: string,
