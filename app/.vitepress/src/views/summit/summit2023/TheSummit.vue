@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { useData } from 'vitepress';
 
 import { useCommon } from '@/stores/common';
 import { getUrlParams } from '@/shared/utils';
 
+import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
 import SummitSchedule from './components/SummitSchedule.vue';
-import AppContext from '@/components/AppContent.vue';
+import SummitGuests from './components/SummitGuests.vue';
+import SummitLive from './components/SummitLive.vue';
+
 import useWindowResize from '@/components/hooks/useWindowResize';
 
 import data_zh from './data/data_zh';
@@ -36,8 +39,9 @@ const commonStore = useCommon();
 const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );
+const isLiverShown = ref(0);
 const showIndex = ref(0);
-// 日期切换
+// 议程日期切换
 function setShowIndex(index: number) {
   showIndex.value = index;
   tabType.value = 0;
@@ -120,6 +124,38 @@ onMounted(() => {
         >Visa Letter Request</OButton
       >
     </div>
+    <div v-if="false" class="live">
+      <h3 class="title-bar">{{ summitData.live.title }}</h3>
+      <div>
+        <OTabs v-model="isLiverShown" class="schedule-tabs">
+          <el-tab-pane
+            v-for="(item, index) in summitData.live.date"
+            :key="index"
+            :name="index"
+          >
+            <template #label>
+              <div class="time-tabs">{{ item }}</div>
+            </template>
+          </el-tab-pane>
+        </OTabs>
+        <OContainer :level-index="1">
+          <ClientOnly>
+            <SummitLive
+              v-if="isLiverShown === 0"
+              :live-data="summitData.live.liveData1"
+              class-name="odd2022"
+              class="live-box"
+            />
+            <SummitLive
+              v-if="isLiverShown === 1"
+              :live-data="summitData.live.liveData2"
+              class-name="odd2022"
+              class="live-box"
+            />
+          </ClientOnly>
+        </OContainer>
+      </div>
+    </div>
     <div
       v-if="lang === 'zh'"
       class="agenda"
@@ -156,7 +192,18 @@ onMounted(() => {
         </template>
       </div>
     </div>
+    <div v-if="lang === 'zh'" class="guest">
+      <h3 class="guest-title">{{ summitData.guest.title }}</h3>
 
+      <h4>{{ summitData.guest.guestListMain.title }}</h4>
+      <SummitGuests
+        :lecturer-list="summitData.guest.guestListMain.guestList"
+        shape="circle"
+        :web-columns-num="4"
+        :mobile-columns-num="2"
+      />
+      <p class="updata-tip">持续更新中......</p>
+    </div>
     <div v-if="lang === 'zh'" class="previous">
       <div class="previous-title">
         <h3>{{ summitData.previous.title }}</h3>
@@ -541,6 +588,114 @@ onMounted(() => {
     }
   }
 }
+.live,
+.guest {
+  margin-top: var(--o-spacing-h1);
+  @media (max-width: 767px) {
+    margin-top: var(--o-spacing-h2);
+  }
+  h3 {
+    text-align: center;
+    font-size: var(--o-font-size-h3);
+    line-height: var(--o-line-height-h3);
+    color: var(--o-color-text1);
+    font-weight: 300;
+    @media (max-width: 767px) {
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
+    }
+  }
+  h4 {
+    margin-top: 20px;
+    font-size: var(--o-font-size-h5);
+    line-height: var(--o-line-height-h5);
+    color: var(--o-color-text1);
+    font-weight: 400;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
+      margin-top: var(--o-spacing-h5);
+    }
+  }
+  .live-box {
+    margin-top: var(--o-spacing-h2);
+    @media (max-width: 767px) {
+      margin-top: var(--o-spacing-h4);
+    }
+  }
+  .updata-tip {
+    font-size: var(--o-font-size-h5);
+    line-height: var(--o-line-height-h5);
+    color: var(--o-color-text1);
+    font-weight: 400;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
+      margin-top: var(--o-spacing-h5);
+    }
+  }
+}
+.live {
+  .schedule-tabs {
+    text-align: center;
+    margin-top: 24px;
+    :deep(.el-tabs__nav) {
+      float: none;
+      display: inline-block;
+      .el-tabs__active-bar {
+        display: none;
+      }
+      .el-tabs__item {
+        padding: 0;
+      }
+    }
+    .time-tabs {
+      display: inline-block;
+      // margin: 0 0 24px;
+      cursor: pointer;
+      border: 1px solid var(--o-color-border2);
+      color: var(--o-color-text1);
+      width: 120px;
+      text-align: center;
+      background: var(--o-color-bg2);
+      font-size: var(--o-font-size-text);
+      line-height: 38px;
+      padding: 0 var(--o-spacing-h5);
+      @media (max-width: 1100px) {
+        font-size: var(--o-font-size-tip);
+        padding: 0 var(--o-spacing-h6);
+      }
+    }
+
+    .is-active .time-tabs {
+      color: #fff;
+      background: var(--o-color-brand1);
+      border-color: var(--o-color-brand2);
+    }
+    .other-tabs {
+      margin-bottom: 24px;
+      :deep(.el-tabs__nav) {
+        float: none;
+        display: inline-block;
+        @media (max-width: 1100px) {
+          line-height: 44px;
+        }
+      }
+      :deep(.el-tabs__header) {
+        text-align: center;
+        .el-tabs__item {
+          @media (max-width: 1100px) {
+            font-size: var(--o-font-size-tip);
+            line-height: var(--o-line-height-tip);
+          }
+        }
+      }
+    }
+  }
+}
+
 .previous {
   margin-top: var(--o-spacing-h1);
   @media screen and (max-width: 768px) {

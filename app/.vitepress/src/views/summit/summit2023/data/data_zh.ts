@@ -1,6 +1,8 @@
 import banner_pc from '../img/banner_pc.jpg';
 import banner_mo from '../img/banner_mo.png';
 import textImg from '../img/text.png';
+import guestData from './guest-data';
+import liveData from './live-data';
 
 export default {
   banner: {
@@ -12,7 +14,7 @@ export default {
     title: [''],
     desc: [''],
     btn: '立即报名',
-    targetTap: "_blank",
+    targetTap: '_blank',
   },
   introduce:
     '数字化、智能化浪潮正奔涌而来。操作系统作为数字基础设施的底座，已经成为推动产业数字化、智能化发展的核心力量，操作系统的发展为数智未来提供了无限可能。',
@@ -28,6 +30,8 @@ export default {
     '人才发展：深化产教融合，培养学术和科研人才',
   ],
   introduce5: '汇聚开源，贡献智慧，共建数智时代的操作系统，共促数字经济腾飞。',
+  live:liveData,
+  guest: guestData,
   previous: {
     title: '精彩回顾',
     list: [
