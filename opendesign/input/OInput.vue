@@ -9,6 +9,9 @@ const attrs = useAttrs();
     <template #prefix>
       <slot name="prefix"></slot>
     </template>
+    <template #suffix>
+      <slot name="suffix"></slot>
+    </template>
   </ElInput>
 </template>
 

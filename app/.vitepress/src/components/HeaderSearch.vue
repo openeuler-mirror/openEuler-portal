@@ -38,50 +38,47 @@ const topSearch = computed(() =>
 const searchValue = computed(() => i18n.value.common.SEARCH);
 // 显示/移除搜索框
 const isShowBox = ref(false);
-const showSearchBox = () => {
-  commonStore.iconMenuShow = false;
-  isShowBox.value = true;
-  emits('search-click', isShowBox.value);
-};
 
-// // 搜索抽屉
 const popList = ref<string[]>([]);
 const showDrawer = () => {
   //热搜
+  commonStore.iconMenuShow = false;
+  isShowBox.value = true;
+  emits('search-click', isShowBox.value);
+  isShowDrawer.value = true;
   const params = `lang=${lang.value}`;
+  if (popList.value.length) {
+    return;
+  }
   getPop(params).then((res) => {
-    if (popList.value.length === 0) {
-      res.obj.forEach((item: string) => {
-        popList.value.push(item);
-      });
-      isShowDrawer.value = true;
-    }
+    popList.value = res.obj;
   });
 };
 // 关闭搜索框
 const closeSearchBox = () => {
   isShowBox.value = false;
   searchInput.value = '';
-  popList.value = [];
   commonStore.iconMenuShow = true;
   isShowDrawer.value = false;
   emits('search-click', isShowBox.value);
 };
 </script>
 <template>
-  <div v-if="isShowBox" class="header-search">
-    <div class="header-search-box">
-      <OSearch
-        v-model="searchInput"
-        :placeholder="searchValue.PLEACHOLDER"
-        @change="handleSearchEvent"
-        @focus="showDrawer"
-      >
-        <template #suffix>
-          <OIcon class="close" @click="closeSearchBox"><IconCancel /></OIcon>
-        </template>
-      </OSearch>
-    </div>
+  <div class="header-search" :class="{ 'input-focus': isShowDrawer }">
+    <OInput
+      v-model="searchInput"
+      :placeholder="searchValue.PLEACHOLDER"
+      @change="handleSearchEvent"
+      @focus="showDrawer"
+    >
+      <template #prefix>
+        <OIcon class="icon"><IconSearch></IconSearch></OIcon>
+      </template>
+      <template v-if="isShowDrawer" #suffix>
+        <OIcon class="close icon" @click="closeSearchBox"><IconCancel /></OIcon>
+      </template>
+    </OInput>
+
     <div v-show="isShowDrawer" class="drawer">
       <div class="hots">
         <div class="hots-title">
@@ -100,24 +97,32 @@ const closeSearchBox = () => {
       </div>
     </div>
   </div>
-  <div v-else class="header-search-icon">
-    <OIcon class="icon" @click="showSearchBox">
-      <IconSearch />
-    </OIcon>
-  </div>
+  <OIcon @click="showDrawer" class="icon search-icon"
+    ><IconSearch></IconSearch
+  ></OIcon>
 </template>
 <style lang="scss" scoped>
 .icon {
+  cursor: pointer;
   font-size: var(--o-font-size-h6);
+  color: var(--o-color-text-secondary);
+}
+
+.search-icon {
   color: var(--o-color-text1);
 }
-.header-search-icon {
-  cursor: pointer;
-}
+
 .header-search {
   position: relative;
-  width: 900px;
   margin-left: var(--o-spacing-h2);
+  .o-input {
+    width: 160px;
+    transition: width 0.3s;
+    background-color: var(--o-color-bg1);
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  }
   @media (max-width: 1100px) {
     :deep(.o-search) {
       --o-search-height: 28px;
@@ -139,6 +144,8 @@ const closeSearchBox = () => {
   .drawer {
     position: absolute;
     height: auto;
+    max-height: 174px;
+    overflow: hidden;
     width: 100%;
     margin-top: 21px;
     box-shadow: var(--o-shadow-l4);
@@ -178,6 +185,25 @@ const closeSearchBox = () => {
     @media (max-width: 768px) {
       .hots-list-item {
         margin-right: var(--o-spacing-h8);
+      }
+    }
+  }
+}
+.search-icon {
+  display: none;
+  @media (max-width: 1100px) {
+    display: block;
+  }
+}
+.input-focus {
+  .o-input {
+    display: flex;
+    width: 512px;
+    @media (max-width: 1100px) {
+      width: 100%;
+      :deep(.el-input__wrapper) {
+        width: 100%;
+        height: 28px;
       }
     }
   }
