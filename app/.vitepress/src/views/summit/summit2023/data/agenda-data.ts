@@ -16,82 +16,72 @@ export default [
               content: [
                 {
                   id: 'agenda15_1_1_1',
-                  time: '09:30-09:45',
-                  desc: '大会致辞',
+                  time: '09:30-09:35',
+                  desc: '致辞',
                   person: [
                     {
                       id: 'agenda15_1_1_1_1',
-                      name: '政府领导',
-                      post: '',
+                      name: '',
+                      post: '工信部领导',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda15_1_1_2',
-                  time: '09:30-09:45',
-                  desc: '大会致辞',
+                  time: '09:35-09:40',
+                  desc: '致辞',
                   person: [
                     {
                       id: 'agenda15_1_1_2_1',
-                      name: '政府领导',
-                      post: '',
+                      name: '',
+                      post: '政府领导',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda15_1_1_3',
-                  time: '09:30-09:45',
-                  desc: '大会致辞',
+                  time: '09:40-09:45',
+                  desc: '致辞',
                   person: [
                     {
                       id: 'agenda15_1_1_3_1',
-                      name: 'openEuler社区成员代表',
-                      post: '',
+                      name: '',
+                      post: 'openEuler社区成员代表',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda15_1_1_4',
-                  time: '09:45-10:35',
-                  desc: 'openEuler领先商业实践奖',
+                  time: '09:45-09:50',
+                  desc: '2023年度openEuler领先商业实践',
                   person: [
                     {
                       id: 'agenda15_1_1_4_1',
-                      name: '获奖企业代表',
-                      post: '',
-                    },
-                    {
-                      id: 'agenda15_1_1_4_2',
-                      name: '特邀颁奖嘉宾',
-                      post: '',
+                      name: '',
+                      post: '领先商业实践用户代表',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda15_1_1_5',
-                  time: '09:45-10:35',
-                  desc: '操作系统产业优秀开源贡献奖',
+                  time: '09:50-09:55',
+                  desc: '2023年度openEuler社区突出贡献单位',
                   person: [
                     {
                       id: 'agenda15_1_1_5_1',
-                      name: '获奖企业代表',
-                      post: '',
-                    },
-                    {
-                      id: 'agenda15_1_1_5_2',
-                      name: '特邀颁奖嘉宾',
-                      post: '',
+                      name: '',
+                      post: '突出贡献单位代表',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda15_1_1_6',
-                  time: '09:45-10:35',
+                  time: '09:55-10:05',
                   desc: '开放原子开源基金会演讲',
                   person: [
                     {
@@ -104,8 +94,8 @@ export default [
                 },
                 {
                   id: 'agenda15_1_1_7',
-                  time: '09:45-10:35',
-                  desc: 'Linux 海外基金会演讲',
+                  time: '10:05-10:15',
+                  desc: 'Linux Foundation演讲',
                   person: [
                     {
                       id: 'agenda15_1_1_7_1',
@@ -117,98 +107,98 @@ export default [
                 },
                 {
                   id: 'agenda15_1_1_8',
-                  time: '09:45-10:35',
+                  time: '10:15-10:20',
                   desc: 'openEuler加速全球化',
                   person: [
                     {
                       id: 'agenda15_1_1_8_1',
-                      name: '全球8个开源基金会代表',
-                      post: '',
+                      name: '',
+                      post: '全球开源组织代表',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda15_1_1_9',
-                  time: '09:45-10:35',
-                  desc: '院士分享合作成果',
+                  time: '10:20-10:25',
+                  desc: '院士前沿展望分享',
                   person: [
                     {
                       id: 'agenda15_1_1_9_1',
-                      name: '特邀嘉宾',
-                      post: '',
+                      name: '倪光南',
+                      post: '中国工程院院士',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda15_1_1_10',
-                  time: '09:45-10:35',
-                  desc: '院士分享前沿展望',
+                  time: '10:25-10:30',
+                  desc: '院士前沿展望分享',
                   person: [
                     {
                       id: 'agenda15_1_1_10_1',
-                      name: '特邀嘉宾',
-                      post: '',
+                      name: '邬贺铨',
+                      post: '中国工程院院士',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda15_1_1_11',
-                  time: '10:35-11:25',
+                  time: '10:30-10:40',
                   desc: '2023服务器操作系统报告解读',
                   person: [
                     {
                       id: 'agenda15_1_1_11_1',
                       name: '周震刚',
-                      post: 'IDC中国助理副总裁',
+                      post: 'IDC中国区副总裁',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda15_1_1_12',
-                  time: '10:35-11:25',
+                  time: '10:40-11:10',
                   desc: 'openEuler实践案例分享',
                   person: [
                     {
                       id: 'agenda15_1_1_12_1',
-                      name: '运营商用户代表',
-                      post: '',
+                      name: '',
+                      post: '运营商用户代表',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda15_1_1_13',
-                  time: '10:35-11:25',
+                  time: '11:10-11:20',
                   desc: 'openEuler实践案例分享',
                   person: [
                     {
                       id: 'agenda15_1_1_13_1',
-                      name: '金融用户代表',
-                      post: '',
+                      name: '',
+                      post: '金融用户代表',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda15_1_1_14',
-                  time: '10:35-11:25',
+                  time: '11:20-11:30',
                   desc: 'openEuler实践案例分享',
                   person: [
                     {
                       id: 'agenda15_1_1_14_1',
-                      name: '互联网用户代表',
-                      post: '',
+                      name: '',
+                      post: '互联网用户代表',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda15_1_1_15',
-                  time: '11:25-11:40',
+                  time: '11:30-11:45',
                   desc: '崛起数字时代，引领数智未来',
                   person: [
                     {
@@ -260,12 +250,12 @@ export default [
                 {
                   id: 'agenda15_2_1_3',
                   time: '14:20-14:35',
-                  desc: '欧拉软件技术专家分享',
+                  desc: 'openEuler社区技术专家分享',
                   person: [
                     {
                       id: 'agenda15_2_1_3_1',
                       name: '吴峰光',
-                      post: '欧拉社区技术专家',
+                      post: 'openEuler社区技术专家',
                     },
                   ],
                   detail: '',
@@ -435,21 +425,20 @@ export default [
                       post: '麒麟信安操作系统产品总监',
                     },
                   ],
-                  detail:
-                    '基于openEuler技术路线的麒麟信安操作系统商业发行版对全场景的支持能力及技术创新。同步构建能力、灵活定制能力；增值创新功能（安全、可靠、实时、虚拟化、商密改造、可信等）；商业发行版构成；性能调优；软生产线等等。',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_2_3',
                   time: '14:40-15:00',
-                  desc: 'openEuler主题演讲',
+                  desc: 'openEuler社区主题演讲',
                   person: [
                     {
                       id: 'agenda15_2_2_3_1',
-                      name: '',
-                      post: 'openEuler社区专家',
+                      name: '谢秀奇',
+                      post: 'openEuler社区技术专家',
                     },
                   ],
-                  detail: 'openEuler相关成果、规划',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_2_4',
@@ -462,8 +451,7 @@ export default [
                       post: '麒麟信安解决方案总监',
                     },
                   ],
-                  detail:
-                    '麒麟信安操作系统产品及应用解决方案、应用实践案例、迁移服务能力、工具等。构建几个典型场景，从用户角度，结合公司产品方案进行能力展示。',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_2_4',
@@ -481,8 +469,7 @@ export default [
                       post: '湖南欧拉生态创新中心技术总监',
                     },
                   ],
-                  detail:
-                    'openEuler生态建设的思路、国内布局情况、取得的成绩、下一步规划。',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_2_5',
@@ -500,8 +487,7 @@ export default [
                       post: '伙伴公司高层领导',
                     },
                   ],
-                  detail:
-                    '围绕解决方案、生态建设等，麒麟信安与上下游合作伙伴战略签约',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_2_5',
@@ -514,8 +500,7 @@ export default [
                       post: '',
                     },
                   ],
-                  detail:
-                    '财政部“操作系统政府采购需求标准”征询开启了标准引领下的信创行业发展新篇章。AI如火如荼发展对操作系统发展的挑战和新机遇。建设国产操作系统统一生态，形成公共可持续积累，已进入可行和实操阶段。打穿重载系统的全栈适配，形成可部署的解决方案是下一步行业生态建设的重点。等等。',
+                  detail: '',
                 },
               ],
             },
@@ -526,7 +511,7 @@ export default [
                 {
                   id: 'agenda15_2_3_1',
                   time: '14:00-14:25',
-                  desc: '软通领导致辞+主题分享 软通动力 openEuler 产品与服务',
+                  desc: '软通动力 openEuler 产品与服务',
                   person: [
                     {
                       id: 'agenda15_2_3_1_1',
@@ -534,27 +519,25 @@ export default [
                       post: '软通动力基础软件事业部总裁',
                     },
                   ],
-                  detail:
-                    '操作系统+服务相关内容，意图向客户持续打出openEuler专业服务的标签，强化概念、突出软通服务专业性。',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_3_2',
                   time: '14:25-14:50',
-                  desc: '社区领导致辞+主题分享 openEuler for AI,智能化操作系统的机遇和挑战',
+                  desc: 'openEuler for AI,智能化操作系统的机遇和挑战',
                   person: [
                     {
                       id: 'agenda15_2_3_2_1',
                       name: '熊伟',
-                      post: '社区技术委员会委员',
+                      post: 'openEuler技术委员会委员、\n开放原子开源基金会TOC副主席',
                     },
                   ],
-                  detail:
-                    'openEuler 和 AI，在智能化时代，操作系统的挑战与机遇。',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_3_3',
                   time: '14:50-15:10',
-                  desc: '案例分享：软通动力openEuler服务助力数梦工场应用智能迁移',
+                  desc: '客户分享：软通动力openEuler服务助力数梦工场应用智能迁移',
                   person: [
                     {
                       id: 'agenda15_2_3_3_1',
@@ -562,13 +545,12 @@ export default [
                       post: '杭州数梦工场科技有限公司研发部部长',
                     },
                   ],
-                  detail:
-                    '数梦工场作为一家数据资源体系基础设施供应商，以数据资源管理为中心，建设政务、城市、产业数据资源体系。本次主要介绍一体化智能化数据平台在openeuler的迁移实践。',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_3_4',
                   time: '15:10-15:30',
-                  desc: '案例分享：软通动力openEuler服务助力武汉城市大脑迁移改造',
+                  desc: '客户分享：软通动力openEuler服务助力武汉城市大脑迁移改造',
                   person: [
                     {
                       id: 'agenda15_2_3_4_1',
@@ -576,13 +558,12 @@ export default [
                       post: '武创汉链(武汉)科技研究有限公司总经理',
                     },
                   ],
-                  detail:
-                    '应国家要求，对武汉城市大脑区块链中枢进行国产化迁移改造，其中项目部分已交付，本次主要分享改造过程中的相关解决方案。',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_3_5',
                   time: '15:30-15:50',
-                  desc: '案例分享：基于软通openEuler底座能力构建的医共体解决方案分享',
+                  desc: '基于软通openEuler底座能力构建的医共体解决方案分享',
                   person: [
                     {
                       id: 'agenda15_2_3_5_1',
@@ -590,22 +571,20 @@ export default [
                       post: '软通动力助理副总裁',
                     },
                   ],
-                  detail:
-                    '软通动力医共体解决方案以openEuler为底座，为客户提供县域医共体建设方案，加速基层医疗行业国产化改造。',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_3_6',
                   time: '15:50-16:00',
-                  desc: '发布仪式（视频形式）：软通动力国企数字化转型与创新发展白皮书发布仪式',
+                  desc: '软通动力国企数字化转型与创新发展白皮书发布仪式',
                   person: [
                     {
                       id: 'agenda15_2_3_6_1',
-                      name: '软通动力、欧拉社区、客户、伙伴',
-                      post: '',
+                      name: '',
+                      post: '软通动力、欧拉社区、客户、伙伴',
                     },
                   ],
-                  detail:
-                    '软通动力国企数字化转型与创新发展白皮书内容立足国企数字化转型和自主可控工作中的难点、痛点，系统分析并解码国企自主可控工作的创新方法论、实施路径、实践探索与未来发展。',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_3_7',
@@ -618,8 +597,7 @@ export default [
                       post: 'Intel云计算架构师',
                     },
                   ],
-                  detail:
-                    '英特尔&软通动力 共同打造了基于openEuler的至强新平台支持、全栈软件优化的技术与案例分享。',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_3_8',
@@ -632,13 +610,12 @@ export default [
                       post: '北京东方通科技股份有限公司技术咨询部总监',
                     },
                   ],
-                  detail:
-                    '作为数字化转型的关键基础软件，需要一起替换才能保障更彻底的安全。本次发言重点向听众汇报东方通&软通动力 基于中间件迁移替换过程中的经验和教训，助力建设更安全易用的数字化系统。',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_3_9',
                   time: '16:40-16:50',
-                  desc: '发布仪式（PPT+平台演示形式）：软通动力天鹤操作系统运维服务平台发布仪式',
+                  desc: '软通动力天鹤操作系统运维服务平台发布仪式',
                   person: [
                     {
                       id: 'agenda15_2_3_9_1',
@@ -646,8 +623,7 @@ export default [
                       post: '软通动力openEuler研究中心资深架构师',
                     },
                   ],
-                  detail:
-                    '针对操作系统的国产化转型， 软通动力发布操作系统运维服务平台，为客户提供openEuler系操作系统的运维服务，提升大规模场景下客户的运维管理能力。',
+                  detail: '',
                 },
               ],
             },
@@ -655,19 +631,6 @@ export default [
               id: 'agenda15_2_4',
               name: '统信软件',
               content: [
-                {
-                  id: 'agenda15_2_4_1',
-                  time: '13:30-14:00',
-                  desc: '签到',
-                  person: [
-                    {
-                      id: 'agenda15_2_4_1_1',
-                      name: '',
-                      post: '',
-                    },
-                  ],
-                  detail: '',
-                },
                 {
                   id: 'agenda15_2_4_2',
                   time: '14:00-14:05',
@@ -705,20 +668,20 @@ export default [
                       post: '统信软件服务器操作系统与云计算产线研发经理',
                     },
                   ],
-                  detail: '统信服务器产品相关技术介绍,云原生和 DPU方向',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_4_5',
                   time: '14:25-14:40',
-                  desc: 'openEuler技术演讲',
+                  desc: 'openEuler社区技术演讲',
                   person: [
                     {
                       id: 'agenda15_2_4_5_1',
                       name: '郑振宇',
-                      post: '欧拉社区技术专家',
+                      post: 'openEuler社区技术专家',
                     },
                   ],
-                  detail: '技术演讲',
+                  detail: '',
                 },
                 {
                   id: 'agenda15_2_4_6',
@@ -833,12 +796,12 @@ export default [
                 {
                   id: 'agenda15_2_5_1',
                   time: '14:00-14:10',
-                  desc: 'Intel 相关领导发言启动分论坛',
+                  desc: '英特尔领导开场致辞',
                   person: [
                     {
                       id: 'agenda15_2_5_1_1',
-                      name: '李映',
-                      post: '英特尔公司副总裁、英特尔中国软件生态事业部总经理',
+                      name: '',
+                      post: '',
                     },
                   ],
                   detail: '',
@@ -846,12 +809,12 @@ export default [
                 {
                   id: 'agenda15_2_5_2',
                   time: '14:10-14:20',
-                  desc: '开放原子开源基金会领导发言启动分论坛',
+                  desc: '开放原子开源基金会领导致辞',
                   person: [
                     {
-                      id: 'agenda15_2_5_2_1',
-                      name: '基金会领导',
-                      post: '开放原子开源基金会领导',
+                      id: '112bd3a8-74c9-4f14-96c0-00dce4eaaea6',
+                      name: '',
+                      post: '',
                     },
                   ],
                   detail: '',
@@ -872,7 +835,7 @@ export default [
                 {
                   id: 'agenda15_2_5_4',
                   time: '15:00-15:40',
-                  desc: 'XSKY: 基于 openEuler 的自研高性能分布式存储系统',
+                  desc: 'XSKY 基于 openEuler 的自研高性能分布式存储系统',
                   person: [
                     {
                       id: 'agenda15_2_5_4_1',
@@ -885,7 +848,7 @@ export default [
                 {
                   id: 'agenda15_2_5_5',
                   time: '15:40-16:20',
-                  desc: 'Kylin Server OS 牵手英特尔® 至强®处理器，赋能广阔生态市场',
+                  desc: '基于英特尔平台的银河麒麟云底座操作系统Host OS',
                   person: [
                     {
                       id: 'agenda15_2_5_5_1',
@@ -898,12 +861,12 @@ export default [
                 {
                   id: 'agenda15_2_5_6',
                   time: '16:20-17:00',
-                  desc: '基于 Kingsoft OS 和英特尔® 至强® 处理器构建高性能云计算方案',
+                  desc: '金山云基于英特尔® 至强® 处理器构建易用、可靠的计算操作系统',
                   person: [
                     {
                       id: 'agenda15_2_5_6_1',
                       name: '孙昊',
-                      post: '金山云云计算产品中心技术总监，金山云操作系统研发负责人',
+                      post: '金山云操作系统高级研发专家',
                     },
                   ],
                   detail: '',
@@ -941,8 +904,8 @@ export default [
                   person: [
                     {
                       id: 'agenda15_3_1_2_1',
-                      name: '',
-                      post: '',
+                      name: '胡欣蔚',
+                      post: 'openEuler技术委员会主席',
                     },
                   ],
                   detail: '',
@@ -950,12 +913,12 @@ export default [
                 {
                   id: 'agenda15_3_1_3',
                   time: '14:20-14:40',
-                  desc: '基于openEuler的智能机器人生态软件适配',
+                  desc: '智能工业机器人操作系统及应用探索',
                   person: [
                     {
                       id: 'agenda15_3_1_3_1',
-                      name: '',
-                      post: '',
+                      name: '牛建伟',
+                      post: '北京航空航天大学教授',
                     },
                   ],
                   detail: '',
@@ -963,12 +926,12 @@ export default [
                 {
                   id: 'agenda15_3_1_4',
                   time: '14:40-15:00',
-                  desc: '北京大学-基于openEuler的联合创新实践分享',
+                  desc: '基于溯源分析的终端防御系统研究',
                   person: [
                     {
                       id: 'agenda15_3_1_4_1',
-                      name: '',
-                      post: '',
+                      name: '李锭',
+                      post: '北京大学助理教授',
                     },
                   ],
                   detail: '',
@@ -976,12 +939,12 @@ export default [
                 {
                   id: 'agenda15_3_1_5',
                   time: '15:00-15:20',
-                  desc: '上海交通大学-基于openEuler的联合创新实践分享',
+                  desc: '云上应用QoS量化与自适应感知调度技术',
                   person: [
                     {
                       id: 'agenda15_3_1_5_1',
-                      name: '',
-                      post: '',
+                      name: '陈全',
+                      post: '上海交通大学计算机科学与工程教授',
                     },
                   ],
                   detail: '',
@@ -989,12 +952,12 @@ export default [
                 {
                   id: 'agenda15_3_1_6',
                   time: '15:20-15:40',
-                  desc: '《从课程体系到教学实践多层次多维度强化系统能力》',
+                  desc: '从课程体系到教学实践多层次多维度强化系统能力',
                   person: [
                     {
                       id: 'agenda15_3_1_6_1',
-                      name: '',
-                      post: '',
+                      name: '赵欢',
+                      post: '湖南大学教授',
                     },
                   ],
                   detail: '',
@@ -1006,8 +969,8 @@ export default [
                   person: [
                     {
                       id: 'agenda15_3_1_7_1',
-                      name: '',
-                      post: '',
+                      name: '马浚',
+                      post: '兰州大学信息科学与工程学院博士',
                     },
                   ],
                   detail: '',
@@ -1015,12 +978,12 @@ export default [
                 {
                   id: 'agenda15_3_1_7',
                   time: '16:00-16:20',
-                  desc: '应用成果分享2：复旦大学一卡通替换的探索',
+                  desc: 'openEuler生态与基础软件应用在高校实践探索',
                   person: [
                     {
                       id: 'agenda15_3_1_7_1',
-                      name: '',
-                      post: '',
+                      name: '宓詠',
+                      post: '复旦大学教授',
                     },
                   ],
                   detail: '',
@@ -1032,8 +995,8 @@ export default [
                   person: [
                     {
                       id: 'agenda15_3_1_8_1',
-                      name: '',
-                      post: '',
+                      name: '郑振宇',
+                      post: 'openEuler社区运营经理',
                     },
                   ],
                   detail: '',
@@ -1074,34 +1037,8 @@ export default [
               name: '',
               content: [
                 {
-                  id: 'agenda16_1_1_1',
-                  time: '09:30-10:30',
-                  desc: '中国基础软件发展前沿展望',
-                  person: [
-                    {
-                      id: 'agenda16_1_1_1_1',
-                      name: '倪光南院士',
-                      post: '',
-                    },
-                  ],
-                  detail: '',
-                },
-                {
-                  id: 'agenda16_1_1_2',
-                  time: '09:30-10:30',
-                  desc: '全球开源社区前沿展望',
-                  person: [
-                    {
-                      id: 'agenda16_1_1_2_1',
-                      name: '特邀嘉宾',
-                      post: '',
-                    },
-                  ],
-                  detail: '',
-                },
-                {
                   id: 'agenda16_1_1_3',
-                  time: '09:30-10:30',
+                  time: '09:30-09:35',
                   desc: 'openEuler 社区发展展望',
                   person: [
                     {
@@ -1109,30 +1046,25 @@ export default [
                       name: '江大勇',
                       post: 'openEuler 委员会主席',
                     },
-                    {
-                      id: 'agenda16_1_1_3_2',
-                      name: '特邀嘉宾',
-                      post: '',
-                    },
                   ],
                   detail: '',
                 },
                 {
-                  id: 'agenda16_1_1_4',
-                  time: '09:30-10:30',
-                  desc: '人工智能时代操作系统发展展望',
+                  id: 'agenda16_1_1_2',
+                  time: '09:35-09:40',
+                  desc: 'CCF如何推动操作系统的发展',
                   person: [
                     {
-                      id: 'agenda16_1_1_4_1',
-                      name: '特邀嘉宾',
-                      post: '',
+                      id: 'agenda16_1_1_2_1',
+                      name: '唐卫清',
+                      post: '中国计算机学会秘书长',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda16_1_1_5',
-                  time: '09:30-10:30',
+                  time: '09:40-10:00',
                   desc: 'openEuler 社区发展主题演讲',
                   person: [
                     {
@@ -1142,28 +1074,41 @@ export default [
                     },
                     {
                       id: 'agenda16_1_1_5_2',
-                      name: '特邀嘉宾',
-                      post: '',
+                      name: '',
+                      post: '特邀嘉宾',
                     },
                   ],
                   detail: '',
                 },
                 {
+                  time: '10:00-10:10',
+                  desc: 'Intel携手openEuler共建操作系统生态底座',
+                  person: [
+                    {
+                      name: '杨继国',
+                      post: 'Intel开源技术中心总监',
+                      id: 'id12',
+                    },
+                  ],
+                  detail: '',
+                  id: 'id12',
+                },
+                {
                   id: 'agenda16_1_1_6',
-                  time: '09:30-10:30',
+                  time: '10:10-10:15',
                   desc: 'openEuler 项目群捐赠意向签约',
                   person: [
                     {
                       id: 'agenda16_1_1_6_1',
-                      name: '捐赠项目代表',
-                      post: '',
+                      name: '',
+                      post: '捐赠项目代表',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda16_1_1_7',
-                  time: '10:30-11:20',
+                  time: '10:15-10:25',
                   desc: 'openEuler 技术前沿展望',
                   person: [
                     {
@@ -1175,21 +1120,8 @@ export default [
                   detail: '',
                 },
                 {
-                  id: 'agenda16_1_1_8',
-                  time: '10:30-11:20',
-                  desc: 'openEuler & Friends 4.0 全场景联合创新展示',
-                  person: [
-                    {
-                      id: 'agenda16_1_1_8_1',
-                      name: 'openEuler 社区联创用户',
-                      post: '',
-                    },
-                  ],
-                  detail: '',
-                },
-                {
                   id: 'agenda16_1_1_9',
-                  time: '10:30-11:20',
+                  time: '10:25-10:35',
                   desc: 'openEuler 社区基础设施2.0：定制化可持续发展的OS构建体系',
                   person: [
                     {
@@ -1201,91 +1133,112 @@ export default [
                   detail: '',
                 },
                 {
-                  id: 'agenda16_1_1_10',
-                  time: '10:30-11:20',
-                  desc: 'openEuler 2023年度社区优秀项目、openEuler 2023年度贡献之星',
+                  id: 'agenda16_1_1_8',
+                  time: '10:35-11:05',
+                  desc: 'openEuler & Friends 4.0 全场景联合创新展示',
                   person: [
                     {
-                      id: 'agenda16_1_1_10_1',
-                      name: '获奖代表',
-                      post: '',
-                    },
-                    {
-                      id: 'agenda16_1_1_10_2',
-                      name: '特邀颁奖嘉宾',
-                      post: '',
+                      id: 'agenda16_1_1_8_1',
+                      name: '',
+                      post: 'openEuler 社区联创用户',
                     },
                   ],
                   detail: '',
                 },
                 {
+                  id: 'agenda16_1_1_10',
+                  time: '11:05-11:15',
+                  desc: 'openEuler 2023年度优秀项目、openEuler 2023年度贡献之星颁奖',
+                  person: [
+                    {
+                      id: 'agenda16_1_1_10_1',
+                      name: '',
+                      post: '获奖代表',
+                    },
+                    {
+                      id: 'agenda16_1_1_10_2',
+                      name: '',
+                      post: '特邀颁奖嘉宾',
+                    },
+                  ],
+                  detail: '',
+                },
+                {
+                  time: '11:15-11:25',
+                  desc: '美团携手openEuler共建企业级社区 ',
+                  person: [
+                    {
+                      name: '欧阳坚',
+                      post: ' 美团基础软件中心技术总监',
+                      id: 'id13',
+                    },
+                  ],
+                  detail: '',
+                  id: 'id13',
+                },
+                {
                   id: 'agenda16_1_1_11',
-                  time: '11:20-12:00',
-                  desc: 'openEuler 行业应用实践',
+                  time: '11:25-11:35',
+                  desc: '银河麒麟操作系统V10在中信银行云原生领域的应用与实践',
                   person: [
                     {
                       id: 'agenda16_1_1_11_1',
-                      name: '麒麟软件',
-                      post: '',
+                      name: '李祥凯',
+                      post: '麒麟软件有限公司副总经理',
                     },
                     {
                       id: 'agenda16_1_1_11_2',
-                      name: '行业用户代表',
-                      post: '',
+                      name: '邓琼',
+                      post: '中信银行软件开发中心系统支撑域CTO',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda16_1_1_12',
-                  time: '11:20-12:00',
-                  desc: 'openEuler 行业应用实践',
+                  time: '11:35-11:45',
+                  desc: '麒麟信安操作系统助力新型电力系统打造自主创新安全底座',
                   person: [
                     {
                       id: 'agenda16_1_1_12_1',
-                      name: '麒麟信安',
-                      post: '',
+                      name: '王攀',
+                      post: '麒麟信安副总裁',
                     },
                     {
                       id: 'agenda16_1_1_12_2',
-                      name: '行业用户代表',
-                      post: '',
+                      name: '曾繁礼',
+                      post: '国家能源集团龙源集团蒙东公司副总经理',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda16_1_1_13',
-                  time: '11:20-12:00',
-                  desc: 'openEuler 行业应用实践',
+                  time: '11:45-11:55',
+                  desc: '华南理工与超聚变在异构加速领域的联合创新',
                   person: [
                     {
                       id: 'agenda16_1_1_13_1',
-                      name: '软通动力',
-                      post: '',
+                      name: '徐磊',
+                      post: '超聚变数字技术有限公司操作系统业务总经理',
                     },
                     {
                       id: 'agenda16_1_1_13_2',
-                      name: '行业用户代表',
-                      post: '',
+                      name: '陆璐',
+                      post: '华南理工大学计算机科学与工程学院教授，博士生导师',
                     },
                   ],
                   detail: '',
                 },
                 {
                   id: 'agenda16_1_1_14',
-                  time: '11:20-12:00',
-                  desc: 'openEuler 行业应用实践',
+                  time: '11:55-12:05',
+                  desc: '软通动力天鹤操作系统的行业应用实践',
                   person: [
                     {
                       id: 'agenda16_1_1_14_1',
-                      name: '超聚变',
-                      post: '',
-                    },
-                    {
-                      id: 'agenda16_1_1_14_2',
-                      name: '行业用户代表',
-                      post: '',
+                      name: '张先民',
+                      post: '软通动力基础软件事业部总裁',
                     },
                   ],
                   detail: '',
@@ -1310,7 +1263,7 @@ export default [
                     {
                       id: 'agenda16_2_1_1_1',
                       name: '谢秀奇',
-                      post: 'openEuler 社区Kernel SIG Maintainer',
+                      post: 'openEuler Kernel SIG Maintainer',
                     },
                   ],
                   detail: '',
@@ -1362,7 +1315,7 @@ export default [
                     {
                       id: 'agenda16_2_1_5_1',
                       name: '吴兴义',
-                      post: '联通数字科技有限公司高级工程师',
+                      post: '联通数科高级工程师',
                     },
                   ],
                   detail: '',
@@ -1383,12 +1336,12 @@ export default [
                 {
                   id: 'agenda16_2_1_7',
                   time: '14:40-14:55',
-                  desc: '基于openeuler内核的多线程亲和性调度优化',
+                  desc: '基于 openEuler 内核的多线程亲和性调度优化',
                   person: [
                     {
                       id: 'agenda16_2_1_7_1',
                       name: '李强',
-                      post: '湖南麒麟信安科技股份有限公司内核工程师',
+                      post: '麒麟信安内核工程师',
                     },
                   ],
                   detail: '',
@@ -1427,7 +1380,7 @@ export default [
                     {
                       id: 'agenda16_2_1_10_1',
                       name: '黄锦慧',
-                      post: '麒麟软件工程师',
+                      post: '麒麟软件软件工程师',
                     },
                   ],
                   detail: '',
@@ -1446,7 +1399,7 @@ export default [
                     {
                       id: 'agenda16_2_2_1_1',
                       name: '王麟',
-                      post: '中国电信天翼云 天翼云研发专家',
+                      post: '中国电信天翼云研发专家',
                     },
                   ],
                   detail: '',
@@ -1459,7 +1412,7 @@ export default [
                     {
                       id: 'agenda16_2_2_2_1',
                       name: 'Yuqi Gu',
-                      post: 'Linaro Apache Bigtop Chair and PMC at ASF',
+                      post: 'Apache Bigtop Chair and PMC at ASF',
                     },
                   ],
                   detail: '',
@@ -1485,7 +1438,7 @@ export default [
                     {
                       id: 'agenda16_2_2_4_1',
                       name: '王洪虎',
-                      post: '龙芯中科技术股份有限公司操作系统研发总监',
+                      post: '龙芯中科操作系统研发总监',
                     },
                   ],
                   detail: '',
@@ -1498,12 +1451,12 @@ export default [
                     {
                       id: 'agenda16_2_2_5_1',
                       name: '刘幸',
-                      post: '新华三技术有限公司高级软件工程师',
+                      post: '新华三高级软件工程师',
                     },
                     {
                       id: 'agenda16_2_2_5_2',
                       name: '接鹏',
-                      post: '新华三技术有限公司高级软件工程师',
+                      post: '新华三高级软件工程师',
                     },
                   ],
                   detail: '',
@@ -1516,7 +1469,7 @@ export default [
                     {
                       id: 'agenda16_2_2_6_1',
                       name: '崔慧敏',
-                      post: '中科院计算所研究员',
+                      post: '中国科学院计算所研究员',
                     },
                   ],
                   detail: '',
@@ -1529,12 +1482,12 @@ export default [
                     {
                       id: 'agenda16_2_2_7_1',
                       name: '李彦成',
-                      post: '华为技术有限公司高级软件开发工程师',
+                      post: '华为高级软件开发工程师',
                     },
                     {
                       id: 'agenda16_2_2_7_2',
                       name: '魏伟',
-                      post: '华为技术有限公司高级软件开发工程师',
+                      post: '华为高级软件开发工程师',
                     },
                   ],
                   detail: '',
@@ -1573,7 +1526,7 @@ export default [
                     {
                       id: 'agenda16_2_2_10_1',
                       name: '马晓琦',
-                      post: '华为技术有限公司高级软件开发工程师',
+                      post: '华为高级软件开发工程师',
                     },
                   ],
                   detail: '',
@@ -1586,7 +1539,7 @@ export default [
                     {
                       id: 'agenda16_2_2_11_1',
                       name: '文白林',
-                      post: '超聚变数字技术有限公司操作系统高级专家',
+                      post: '超聚变操作系统高级专家',
                     },
                   ],
                   detail: '',
@@ -1599,7 +1552,7 @@ export default [
                     {
                       id: 'agenda16_2_2_12_1',
                       name: '仇大玉',
-                      post: '安超云软件有限公司高级总监',
+                      post: '安超云高级总监',
                     },
                   ],
                   detail: '',
@@ -1612,7 +1565,7 @@ export default [
                     {
                       id: 'agenda16_2_2_13_1',
                       name: '邓广兴',
-                      post: '华为技术有限公司openEuler sig-DPU Maintainer',
+                      post: 'openEuler sig-DPU Maintainer',
                     },
                     {
                       id: 'agenda16_2_2_13_2',
@@ -1636,7 +1589,7 @@ export default [
                     {
                       id: 'agenda16_2_3_1_1',
                       name: '魏宝辉',
-                      post: 'openEuler 社区 Cloud Native SIG Maintainer',
+                      post: 'openEuler Cloud Native SIG Maintainer',
                     },
                   ],
                   detail: '',
@@ -1680,12 +1633,12 @@ export default [
                     {
                       id: 'agenda16_2_3_5_1',
                       name: '任林',
-                      post: '中国移动通信集团有限公司高级研发工程师',
+                      post: '中国移动高级研发工程师',
                     },
                     {
                       id: 'agenda16_2_3_5_1',
                       name: '刘志磊',
-                      post: '中国移动通信集团有限公司高级研发工程师',
+                      post: '中国移动高级研发工程师',
                     },
                   ],
                   detail: '',
@@ -1698,7 +1651,7 @@ export default [
                     {
                       id: 'agenda16_2_3_6_1',
                       name: '白耀伟',
-                      post: '天翼云研发专家',
+                      post: '中国电信天翼云研发专家',
                     },
                   ],
                   detail: '',
@@ -1729,7 +1682,7 @@ export default [
                     {
                       id: 'agenda16_2_3_8_1',
                       name: '李剑',
-                      post: '麒麟软件有限公司操作系统研发工程师',
+                      post: '麒麟软件操作系统研发工程师',
                     },
                   ],
                   detail: '',
@@ -1742,7 +1695,7 @@ export default [
                     {
                       id: 'agenda16_2_3_9_1',
                       name: '杜东',
-                      post: '上海交通大学并行与分布式系统研究所（IPADS实验室）教师',
+                      post: '上海交通大学并行与分布式系统研究所IPADS实验室教师',
                     },
                   ],
                   detail: '',
@@ -1781,7 +1734,7 @@ export default [
                     {
                       id: 'agenda16_2_3_12_1',
                       name: '张天阳/刘昊',
-                      post: '华为云计算公司云原生工程师',
+                      post: '华为云云原生工程师',
                     },
                   ],
                   detail: '',
@@ -1891,7 +1844,7 @@ export default [
                     {
                       id: 'agenda16_2_4_8_1',
                       name: '毛阿利',
-                      post: '超聚变数字技术有限公司架构师',
+                      post: '超聚变架构师',
                     },
                   ],
                   detail: '',
@@ -1917,7 +1870,7 @@ export default [
                     {
                       id: 'agenda16_2_4_10_1',
                       name: '谢国琪',
-                      post: '湖南大学教授/嵌入式与网络计算湖南省重点实验室主任',
+                      post: '湖南大学教授、嵌入式与网络计算湖南省重点实验室主任',
                     },
                   ],
                   detail: '',
@@ -1930,7 +1883,7 @@ export default [
                     {
                       id: 'agenda16_2_4_11_1',
                       name: '邱文博',
-                      post: '湖南麒麟信安科技股份有限公司资深操作系统工程师',
+                      post: '麒麟信安资深操作系统工程师',
                     },
                   ],
                   detail: '',
@@ -1943,12 +1896,12 @@ export default [
                     {
                       id: 'agenda16_2_4_12_1',
                       name: '田航',
-                      post: '江苏润和软件股份有限公司',
+                      post: '润和软件高级操作系统工程师',
                     },
                     {
                       id: 'agenda16_2_4_12_2',
                       name: '彭朗源',
-                      post: '江苏润和软件股份有限公司',
+                      post: '润和软件高级操作系统工程师',
                     },
                   ],
                   detail: '',
@@ -1980,7 +1933,7 @@ export default [
                     {
                       id: 'agenda16_2_1_5_1',
                       name: '门小康',
-                      post: '中软国际科技服务有限公司解决方案架构师',
+                      post: '中软国际解决方案架构师',
                     },
                   ],
                   detail: '',
@@ -1993,7 +1946,7 @@ export default [
                     {
                       id: 'agenda16_2_1_5_2',
                       name: '李超峰',
-                      post: '中移在线服务有限公司运维负责人',
+                      post: '中移在线运维负责人',
                     },
                   ],
                   detail: '',
@@ -2019,7 +1972,7 @@ export default [
                     {
                       id: 'agenda16_2_5_4_1',
                       name: '王钧琪',
-                      post: '麒麟软件有限公司研发工程师',
+                      post: '麒麟软件研发工程师',
                     },
                   ],
                   detail: '',
@@ -2032,7 +1985,7 @@ export default [
                     {
                       id: 'agenda16_2_5_5_1',
                       name: '上官栋栋',
-                      post: '华为技术有限责任公司高级工程师',
+                      post: '华为高级工程师',
                     },
                   ],
                   detail: '',
@@ -2071,7 +2024,7 @@ export default [
                     {
                       id: 'agenda16_2_5_8_1',
                       name: '高睿',
-                      post: '湖南麒麟信安科技股份有限公司操作系统研发部产品经理',
+                      post: '麒麟信安操作系统研发部产品经理',
                     },
                   ],
                   detail: '',
@@ -2084,7 +2037,7 @@ export default [
                     {
                       id: 'agenda16_2_5_9_1',
                       name: '季成科',
-                      post: '软通动力信息技术（集团）股份有限公司欧拉研究中心资深专家',
+                      post: '软通动力欧拉研究中心资深专家',
                     },
                   ],
                   detail: '',
@@ -2097,7 +2050,7 @@ export default [
                     {
                       id: 'agenda16_2_5_10_1',
                       name: '曾宏安',
-                      post: '北京凝思软件股份有限公司研发中心总经理',
+                      post: '凝思软件研发中心总经理',
                     },
                   ],
                   detail: '',
@@ -2110,7 +2063,7 @@ export default [
                     {
                       id: 'agenda16_2_5_11_1',
                       name: '门小康',
-                      post: '中软国际科技服务有限公司解决方案架构师',
+                      post: '中软国际解决方案架构师',
                     },
                   ],
                   detail: '',
@@ -2123,7 +2076,7 @@ export default [
                     {
                       id: 'agenda16_2_5_12_1',
                       name: '魏建刚',
-                      post: '江苏润和软件股份有限公司高级操作系统产品经理',
+                      post: '润和软件高级操作系统产品经理',
                     },
                   ],
                   detail: '',
@@ -2142,7 +2095,7 @@ export default [
                     {
                       id: 'agenda16_2_6_1_1',
                       name: '朱健伟',
-                      post: 'openEuler 社区安全委员会主席',
+                      post: 'openEuler 安全委员会主席',
                     },
                   ],
                   detail: '',
@@ -2155,7 +2108,7 @@ export default [
                     {
                       id: 'agenda16_2_6_1_1',
                       name: '武成岗',
-                      post: '中科院计算所研究员',
+                      post: '中国科学院计算所研究员',
                     },
                   ],
                   detail: '',
@@ -2168,7 +2121,7 @@ export default [
                     {
                       id: 'agenda16_2_6_1_1',
                       name: 'Shane Coughlan',
-                      post: 'OpenChain社区Gerneral Manager',
+                      post: 'OpenChain Gerneral Manager',
                     },
                   ],
                   detail: '',
@@ -2181,7 +2134,7 @@ export default [
                     {
                       id: 'agenda16_2_6_1_1',
                       name: '龚准',
-                      post: '北京启明星辰信息安全技术有限公司产品经理',
+                      post: '启明星辰产品经理',
                     },
                   ],
                   detail: '',
@@ -2225,7 +2178,7 @@ export default [
                     {
                       id: 'agenda16_2_6_1_1',
                       name: '杜冬冬',
-                      post: '上海交通大学 - 助理研究员',
+                      post: '上海交通大学 -助理研究员',
                     },
                   ],
                   detail: '',
@@ -2251,7 +2204,7 @@ export default [
                     {
                       id: 'agenda16_2_6_1_1',
                       name: '张国栋',
-                      post: '北京凝思软件股份有限公司研发中心总工程师',
+                      post: '凝思软件研发中心总工程师',
                     },
                   ],
                   detail: '',
@@ -2264,7 +2217,7 @@ export default [
                     {
                       id: 'agenda16_2_6_1_1',
                       name: '叶青龙',
-                      post: '湖南麒麟信安科技股份有限公司操作系统产品线经理',
+                      post: '麒麟信安操作系统产品线经理',
                     },
                   ],
                   detail: '',
@@ -2309,7 +2262,7 @@ export default [
                     {
                       id: 'agenda16_2_7_1_1',
                       name: '杜开田',
-                      post: 'openEuler 社区兼容性SIG Maintainer',
+                      post: 'openEuler 兼容性SIG Maintainer',
                     },
                   ],
                   detail: '',
@@ -2348,7 +2301,7 @@ export default [
                     {
                       id: 'agenda16_2_7_1_1',
                       name: '刘恺/张海亮',
-                      post: '超聚变数字技术有限公司操作系统首席架构师',
+                      post: '超聚变操作系统首席架构师',
                     },
                   ],
                   detail: '',
@@ -2392,7 +2345,7 @@ export default [
                     {
                       id: 'agenda16_2_7_1_1',
                       name: '商保根',
-                      post: '风河软件研发(北京)有限公司MTS软件工程师',
+                      post: '风河软件MTS软件工程师',
                     },
                   ],
                   detail: '',
@@ -2405,7 +2358,7 @@ export default [
                     {
                       id: 'agenda16_2_7_1_1',
                       name: '鲁卫军',
-                      post: '华为技术有限公司工程师',
+                      post: '华为工程师',
                     },
                   ],
                   detail: '',
@@ -2418,12 +2371,12 @@ export default [
                     {
                       id: 'agenda16_2_7_1_1',
                       name: '黄河清',
-                      post: '华为技术有限公司高级工程师',
+                      post: '华为高级工程师',
                     },
                     {
                       id: 'agenda16_2_7_1_1',
                       name: '齐国强',
-                      post: '华为技术有限公司高级工程师',
+                      post: '华为高级工程师',
                     },
                   ],
                   detail: '',
@@ -2459,8 +2412,8 @@ export default [
                   person: [
                     {
                       id: 'agenda16_2_8_1_1',
-                      name: '',
-                      post: '',
+                      name: '郑振宇',
+                      post: 'openEuler Infra SIG maintainer',
                     },
                   ],
                   detail: '',
@@ -2512,7 +2465,7 @@ export default [
                     {
                       id: 'agenda16_2_8_5_1',
                       name: '钟君',
-                      post: '华为 Infra SIG maintainer',
+                      post: 'openEuler Infra SIG maintainer',
                     },
                   ],
                   detail: '',
@@ -2564,7 +2517,7 @@ export default [
                     {
                       id: 'agenda16_2_8_9_1',
                       name: '张以正',
-                      post: '华为技术有限公司通用软件开发工程师',
+                      post: '华为通用软件开发工程师',
                     },
                   ],
                   detail: '',
@@ -2577,7 +2530,7 @@ export default [
                     {
                       id: 'agenda16_2_8_10_1',
                       name: '丁紫薇',
-                      post: '麒麟软件有限公司开源合规研发工程师',
+                      post: '麒麟软件开源合规研发工程师',
                     },
                   ],
                   detail: '',

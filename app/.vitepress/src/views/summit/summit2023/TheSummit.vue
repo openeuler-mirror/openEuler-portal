@@ -202,7 +202,13 @@ onMounted(() => {
         :web-columns-num="4"
         :mobile-columns-num="2"
       />
-      <p class="updata-tip">持续更新中......</p>
+      <h4>{{ summitData.guest.guestListTechnology.title }}</h4>
+      <SummitGuests
+        :lecturer-list="summitData.guest.guestListTechnology.guestList"
+        shape="circle"
+        :web-columns-num="4"
+        :mobile-columns-num="2"
+      />
     </div>
     <div v-if="lang === 'zh'" class="previous">
       <div class="previous-title">
@@ -622,18 +628,6 @@ onMounted(() => {
     margin-top: var(--o-spacing-h2);
     @media (max-width: 767px) {
       margin-top: var(--o-spacing-h4);
-    }
-  }
-  .updata-tip {
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-h5);
-    color: var(--o-color-text1);
-    font-weight: 400;
-    text-align: center;
-    @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
-      margin-top: var(--o-spacing-h5);
     }
   }
 }
