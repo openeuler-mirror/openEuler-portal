@@ -119,7 +119,6 @@ onMounted(async () => {
         />
       </div>
     </ClientOnly>
-    <HomePlayground />
     <div class="home-source-publish">
       <h3 class="partner">
         {{ i18n.home.HOME_SOURCE.SOURCE_PUBLISH_TITLE }}
