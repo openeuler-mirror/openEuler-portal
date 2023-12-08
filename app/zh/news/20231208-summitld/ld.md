@@ -4,7 +4,7 @@ date: '2023-12-07'
 category: news
 tags:
   - openEuler
-banner: 'img/banners/1208-summit1.png'
+banner: 'img/banners/1208-summit1.jpg'
 author: 'openEuler'
 summary: '亮点剧透，早看早知道！'
 ---
