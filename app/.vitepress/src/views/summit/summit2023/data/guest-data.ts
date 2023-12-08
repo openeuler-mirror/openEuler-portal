@@ -5,6 +5,7 @@ import shangguandongdong from '../img/guest/shangguandongdong.png';
 import xujikui from '../img/guest/xujikui.png';
 import yangbin from '../img/guest/yangbin.png';
 
+import daniel from '../img/guest/daniel.png';
 import dengqiong from '../img/guest/dengqiong.png';
 import huxinwei from '../img/guest/huxinwei.png';
 import jiangdayong from '../img/guest/jiangdayong.png';
@@ -18,6 +19,22 @@ import xiongwei from '../img/guest/xiongwei.png';
 import xulei from '../img/guest/xulei.png';
 import yangjiguo from '../img/guest/yangjiguo.png';
 import zengfanli from '../img/guest/zengfanli.png';
+
+import chenqi from '../img/guest/chenqi.png';
+import choudayu from '../img/guest/choudayu.png';
+import huangjinhui from '../img/guest/huangjinhui.png';
+import huangpeng from '../img/guest/huangpeng.png';
+import lichaofeng from '../img/guest/lichaofeng.png';
+import lijian from '../img/guest/lijian.png';
+import liuzhilei from '../img/guest/liuzhilei.png';
+import renlin from '../img/guest/renlin.png';
+import shangbaogen from '../img/guest/shangbaogen.png';
+import tianhang from '../img/guest/tianhang.png';
+import wangyi from '../img/guest/wangyi.png';
+import weijiangang from '../img/guest/weijiangang.png';
+import wenbailin from '../img/guest/wenbailin.png';
+import yangxili from '../img/guest/yangxili.png';
+import zhouqi from '../img/guest/zhouqi.png';
 
 export default {
   title: '演讲嘉宾',
@@ -43,6 +60,11 @@ export default {
         img: shane,
         name: 'Shane Coughlan',
         position: ['OpenChain Gerneral', 'Manager'],
+      },
+      {
+        img: daniel,
+        name: 'Daniel Cortazar',
+        position: ['CHAOSS Governing Board', ''],
       },
       {
         img: yangjiguo,
@@ -89,7 +111,11 @@ export default {
         name: '陆璐',
         position: ['华南理工大学计算机科学与工程学院', '教授，博士生导师'],
       },
-
+      {
+        img: huangpeng,
+        name: '黄鹏',
+        position: ['软通动力集团副总裁', '基础软件事业本部总经理'],
+      },
     ],
   },
   guestListTechnology: {
@@ -124,6 +150,76 @@ export default {
         img: yangbin,
         name: '杨斌',
         position: ['Intel', '软件架构师'],
+      },
+      {
+        img: chenqi,
+        name: '陈琦',
+        position: ['成都鼎桥通信技术有限公司副总裁', '新兴业务产品线总裁'],
+      },
+      {
+        img: choudayu,
+        name: '仇大玉',
+        position: ['安超云', '高级总监'],
+      },
+      {
+        img: huangjinhui,
+        name: '黄锦慧',
+        position: ['麒麟软件', '软件工程师'],
+      },
+      {
+        img: lichaofeng,
+        name: '李超峰',
+        position: ['中移在线', '运维负责人'],
+      },
+      {
+        img: lijian,
+        name: '李剑',
+        position: ['麒麟软件', '操作系统研发工程师'],
+      },
+      {
+        img: liuzhilei,
+        name: '刘志磊',
+        position: ['中国移动', '高级研发工程师'],
+      },
+      {
+        img: renlin,
+        name: '任林',
+        position: ['中国移动', '高级研发工程师'],
+      },
+      {
+        img: shangbaogen,
+        name: '商保根',
+        position: ['风河软件', 'MTS软件工程师'],
+      },
+      {
+        img: tianhang,
+        name: '田航',
+        position: ['润和软件', '高级操作系统工程师'],
+      },
+      {
+        img: wangyi,
+        name: '王毅',
+        position: ['Intel', '架构师'],
+      },
+      {
+        img: weijiangang,
+        name: '魏建刚',
+        position: ['润和软件高级操作系统', '产品经理'],
+      },
+      {
+        img: wenbailin,
+        name: '文白林',
+        position: ['超聚变操作系统', '高级专家'],
+      },
+      {
+        img: yangxili,
+        name: '杨西利',
+        position: ['东方通', '高级产品经理'],
+      },
+      {
+        img: zhouqi,
+        name: '周麒',
+        position: ['深圳市米尔电子有限公司', '副总经理'],
       },
     ],
   },
