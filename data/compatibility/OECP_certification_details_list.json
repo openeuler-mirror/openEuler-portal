@@ -1,15 +1,87 @@
 [
     {
-        "osv_name": "中科海微（北京）科技有限公司",
-        "os_version": "SeawayEdge-v1.00-LTS-x86_64-dvd.iso",
+        "osv_name": "上海崭元信息科技有限公司",
+        "os_version": "DataSafeKitOS22.03LTS-SP1-x86_64-dvd.iso",
         "arch": "x86_64",
-        "checksum": "05d1fc7b16f6c19164a9764f5d50465e",
+        "checksum": "b8d44b7fae3456db240228c6dcd4a919",
         "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "http://new.haiwei.tech/SeawayEdge/SeawayEdge-v1.00-LTS/ISO/x86_64/SeawayEdge-v1.00-LTS-x86_64-dvd.iso",
-        "friendly_link": "http://www.haiwei.tech/",
+        "os_download_link": "http://www.safekitchina.com",
+        "friendly_link": "http://www.safekitchina.com",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/11/27",
+        "date": "2023/12/08",
+        "details": "详细信息",
+        "tools_result": [
+            {
+                "name": "core_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "KABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "ABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "service_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "kernel_config",
+                "percent": "NA",
+                "result": "pass"
+            }
+        ],
+        "platform_result": [
+            {
+                "name": "repo",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "base_test",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "performance_test",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "running_config",
+                "percent": "NA",
+                "result": "pass"
+            }
+        ]
+    },
+    {
+        "osv_name": "超聚变数字技术有限公司",
+        "os_version": "qinggeng-image-bmc-set-aarch64-23.09-beta-001.iso",
+        "arch": "aarch64",
+        "checksum": "adef8d7a191f3fc74ba2b61e36f83d5e\n\n",
+        "base_openeuler_version": "openEuler 23.09",
+        "os_download_link": "https://www.xfusion.com/",
+        "friendly_link": "https://www.xfusion.com/",
+        "type": "嵌入式",
+        "total_result": "pass",
+        "date": "2023/12/08",
         "details": "详细信息",
         "tools_result": [
             {
