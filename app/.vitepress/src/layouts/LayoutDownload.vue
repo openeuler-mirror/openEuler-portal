@@ -22,8 +22,9 @@ const clickTab = (val: string) => {
 };
 const bannerData = {
   bannerImg: banner,
-  bannerText: 'DOWNLOAD',
-  bannerTitle: i18n.value.download.OUTSIDE_TITLE,
+  bannerTitle: computed(() => {
+    return i18n.value.download.OUTSIDE_TITLE;
+  }),
   bannerIllustration: illustration,
 };
 
@@ -43,6 +44,7 @@ const tabsData = reactive({
     },
   ],
 });
+
 const activeTab = ref('');
 onMounted(() => {
   onUpdated(() => {

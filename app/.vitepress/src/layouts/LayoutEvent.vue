@@ -18,7 +18,9 @@ const router = useRouter();
 const bannerData = {
   bannerImg: banner,
   bannerText: 'CONNECT',
-  bannerTitle: salonData.value.MEETUPS,
+  bannerTitle: computed(() => {
+    return salonData.value.MEETUPS;
+  }),
   bannerIllustration: illustration,
 };
 const tabsData = {
