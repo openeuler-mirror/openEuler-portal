@@ -64,6 +64,7 @@ import lushouqun from '../img/guest/lushouqun.png';
 import niguangnan from '../img/guest/niguangnan.png';
 import sunwenlong from '../img/guest/sunwenlong.png';
 import zhouzhengang from '../img/guest/zhouzhengang.png';
+import gopi from '../img/guest/gopi.png';
 
 export default {
   title: '演讲嘉宾',
@@ -144,6 +145,11 @@ export default {
         img: sean,
         name: 'Sean Goggins',
         position: ['CHAOSS Governing Board', ''],
+      },
+      {
+        img: gopi,
+        name: 'Gopi Krishnan Rajbahadur',
+        position: ['SPDX', 'Ambassador'],
       },
       {
         img: yangjiguo,
