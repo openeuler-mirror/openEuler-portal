@@ -13,10 +13,24 @@ import { useRouter } from 'vitepress';
 const { lang } = useData();
 const i18n = useI18n();
 
-const btnLink = computed(() => {
-  return `/${lang.value}/security/vulnerability-reporting/`;
-});
-
+const btnDatas = [
+  {
+    text: computed(() => {
+      return i18n.value.cve.VULNERABILITY;
+    }),
+    link: computed(() => {
+      return `/${lang.value}/security/vulnerability-reporting/`;
+    }),
+  },
+  {
+    text: computed(() => {
+      return i18n.value.cve.CERTIFICATE;
+    }),
+    link: computed(() => {
+      return `/zh/security/certificate-center/`;
+    }),
+  },
+];
 const router = useRouter();
 const clickTab = (val: string) => {
   val === 'cve'
@@ -26,7 +40,9 @@ const clickTab = (val: string) => {
 const bannerData = {
   bannerImg: banner,
   bannerText: 'DOWNLOAD',
-  bannerTitle: i18n.value.cve.SAFETY_CENTER,
+  bannerTitle: computed(() => {
+    return i18n.value.cve.SAFETY_CENTER;
+  }),
   bannerIllustration: illustration,
 };
 
@@ -60,8 +76,7 @@ onMounted(() => {
       :banner-data="bannerData"
       :tabs-data="tabsData"
       :active-tab="activeTab"
-      :button-text="i18n.cve.VULNERABILITY"
-      :button-link="btnLink"
+      :btn-datas="btnDatas"
       @click-tab="clickTab"
     />
     <Content />

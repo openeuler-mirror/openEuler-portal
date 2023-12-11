@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { computed, PropType } from 'vue';
 import { useRouter } from 'vitepress';
 
 import BannerLevel2 from '@/components/BannerLevel2.vue';
@@ -22,17 +22,14 @@ const props = defineProps({
     type: String,
     default: '',
   },
-  buttonText: {
-    type: String,
-    default: '',
-  },
-  buttonLink: {
-    type: String,
-    default: '',
+  btnDatas: {
+    type: Object,
+    default: () => {
+      return {};
+    },
   },
 });
 const router = useRouter();
-
 const active = router.route.path.split('/');
 
 const activeRoute = computed(() => {
@@ -48,32 +45,30 @@ const emits = defineEmits(['click-tab']);
 function handleTabClick(val: any) {
   emits('click-tab', val?.props.name);
 }
-
-function goDetail(link: string) {
-  router.go(link);
-}
 </script>
 <template>
   <div>
     <BannerLevel2
       :background-image="bannerData.bannerImg"
       :background-text="bannerData.bannerText"
-      :title="bannerData.bannerTitle"
+      :title="bannerData.bannerTitle.value"
       :illustration="bannerData.bannerIllustration"
     >
-      <OButton
-        v-if="buttonText"
-        class="post-btn"
-        type="outline"
-        animation
-        size="nomral"
-        @click="goDetail(buttonLink)"
+      <a
+        v-for="btn in btnDatas"
+        :href="btn.link.value"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        {{ buttonText }}
-        <template #suffixIcon>
-          <OIcon class="right-icon"><IconRight /></OIcon>
+        <template v-if="btn?.text?.value">
+          <OButton class="post-btn" type="outline" animation size="nomral">
+            {{ btn.text.value }}
+            <template #suffixIcon>
+              <OIcon class="right-icon"><IconRight /></OIcon>
+            </template>
+          </OButton>
         </template>
-      </OButton>
+      </a>
     </BannerLevel2>
     <div class="router-tabs">
       <OTabs v-model="activeRoute" @tab-click="handleTabClick">
@@ -98,9 +93,12 @@ function goDetail(link: string) {
   }
 }
 .post-btn {
+  margin-right: 24px;
   color: var(--o-color-white);
   border-color: var(--o-color-white);
   @media (max-width: 767px) {
+    margin-top: 12px;
+    margin-right: 0;
     padding: 3px 16px;
     font-size: var(--o-font-size-text);
     line-height: var(--o-line-height-text);

@@ -221,4 +221,8 @@ export default [
     name: 'live-list',
     lang: ['zh'],
   },
+  {
+    name: 'certificate-center',
+    lang: ['zh'],
+  },
 ];

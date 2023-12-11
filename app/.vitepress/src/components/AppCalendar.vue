@@ -341,7 +341,12 @@ const watchData = watch(
                   <div class="meet-item">
                     <div class="meet-left">
                       <div class="left-top">
-                        <p class="meet-name">{{ item.name || item.title }}</p>
+                        <p
+                          class="meet-name"
+                          :title="item.name || item.title"
+                        >
+                          {{ item.name || item.title }}
+                        </p>
                       </div>
                       <div
                         v-if="item.group_name"
