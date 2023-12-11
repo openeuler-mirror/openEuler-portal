@@ -59,7 +59,23 @@ onMounted(() => {
     }
   });
 });
-const getData: any = computed(() => agendaData.value[showIndex.value]);
+const getData: any = computed(() => {
+  let temp;
+  if (showIndex.value === 0) {
+    agendaData.value.forEach((item: any) => {
+      if (item.name === 'schedule-15') {
+        temp = item;
+      }
+    });
+  } else {
+    agendaData.value.forEach((item: any) => {
+      if (item.name === 'schedule-16') {
+        temp = item;
+      }
+    });
+  }
+  return temp;
+});
 
 // 控制上下午切换
 const tabType = ref(0);
@@ -124,7 +140,7 @@ onMounted(() => {
         >Visa Letter Request</OButton
       >
     </div>
-    <div v-if="false" class="live">
+    <div v-if="lang === 'zh'" class="live">
       <h3 class="title-bar">{{ summitData.live.title }}</h3>
       <div>
         <OTabs v-model="isLiverShown" class="schedule-tabs">
@@ -143,25 +159,23 @@ onMounted(() => {
             <SummitLive
               v-if="isLiverShown === 0"
               :live-data="summitData.live.liveData1"
-              class-name="odd2022"
+              class-name="live-btn1"
               class="live-box"
             />
             <SummitLive
               v-if="isLiverShown === 1"
               :live-data="summitData.live.liveData2"
-              class-name="odd2022"
+              class-name="live-btn2"
               class="live-box"
             />
           </ClientOnly>
         </OContainer>
       </div>
     </div>
-    <div
-      v-if="lang === 'zh'"
-      class="agenda"
-      :class="{ 'min-height': showIndex === 1 }"
-    >
-      <h3>会议日程</h3>
+    <div v-if="lang === 'zh'" class="agenda">
+      <h3>
+        {{ summitData.agenda.title }}
+      </h3>
       <div class="date">
         <div
           v-for="(item, index) in dateList"
@@ -174,27 +188,53 @@ onMounted(() => {
           <p class="date-month">{{ item.month }}</p>
         </div>
       </div>
-      <div>
+      <div class="schedule-box">
         <el-tabs v-model.number="tabType" class="schedule-tabs">
           <el-tab-pane :name="0">
             <template #label>
-              <div class="time-tabs">上午：主论坛</div>
+              <div v-if="lang === 'en'" class="time-tabs">
+                {{
+                  showIndex === 0
+                    ? summitData.agenda.tabType[0]
+                    : summitData.agenda.tabType2[0]
+                }}
+              </div>
+              <div v-else class="time-tabs">
+                {{ summitData.agenda.tabType[0] }}
+              </div>
             </template>
           </el-tab-pane>
           <el-tab-pane :name="1">
             <template #label>
-              <div class="time-tabs">下午：分论坛</div>
+              <div v-if="lang === 'en'" class="time-tabs">
+                {{
+                  showIndex === 0
+                    ? summitData.agenda.tabType[1]
+                    : summitData.agenda.tabType2[1]
+                }}
+              </div>
+              <div v-else class="time-tabs">
+                {{ summitData.agenda.tabType[1] }}
+              </div>
             </template>
           </el-tab-pane>
         </el-tabs>
+        <p v-if="lang === 'en'" class="time-tip">*Time zone: GMT+8</p>
         <template v-for="item in renderData" :key="item.lable">
           <SummitSchedule :agenda-data="item" />
         </template>
+        <p class="change-tip">{{ summitData.agenda.changeTip }}</p>
       </div>
     </div>
     <div v-if="lang === 'zh'" class="guest">
       <h3 class="guest-title">{{ summitData.guest.title }}</h3>
-
+      <h4>{{ summitData.guest.guestListOperational.title }}</h4>
+      <SummitGuests
+        :lecturer-list="summitData.guest.guestListOperational.guestList"
+        shape="circle"
+        :web-columns-num="4"
+        :mobile-columns-num="2"
+      />
       <h4>{{ summitData.guest.guestListMain.title }}</h4>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListMain.guestList"
@@ -537,6 +577,20 @@ onMounted(() => {
           font-size: 16px;
         }
       }
+    }
+  }
+  .schedule-box {
+    position: relative;
+    .time-tip {
+      position: absolute;
+      top: 24px;
+      font-size: 18px;
+      color: var(--o-color-text1);
+    }
+    .change-tip {
+      margin-top: 24px;
+      font-size: 18px;
+      color: var(--o-color-text1);
     }
   }
   .schedule-tabs {

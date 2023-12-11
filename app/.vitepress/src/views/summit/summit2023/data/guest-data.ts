@@ -36,8 +36,82 @@ import wenbailin from '../img/guest/wenbailin.png';
 import yangxili from '../img/guest/yangxili.png';
 import zhouqi from '../img/guest/zhouqi.png';
 
+import cuina from '../img/guest/cuina.png';
+import gaorui from '../img/guest/gaorui.png';
+import jiepeng from '../img/guest/jiepeng.png';
+import liuxing from '../img/guest/liuxing.png';
+import maxiaoqi from '../img/guest/maxiaoqi.png';
+import menxiaokang from '../img/guest/menxiaokang.png';
+import ouyangjian from '../img/guest/ouyangjian.png';
+import qiguoqiang from '../img/guest/qiguoqiang.png';
+import qiuwenbo from '../img/guest/qiuwenbo.png';
+import sean from '../img/guest/sean.png';
+import wangjunqi from '../img/guest/wangjunqi.png';
+import wuxingyi from '../img/guest/wuxingyi.png';
+
+import jitao from '../img/guest/jitao.png';
+import kevin from '../img/guest/kevin.png';
+import sunyi from '../img/guest/sunyi.png';
+import wuchenggang from '../img/guest/wuchenggang.png';
+import yeqinglong from '../img/guest/yeqinglong.png';
+import zhangnan from '../img/guest/zhangnan.png';
+import zhangxuzhou from '../img/guest/zhangxuzhou.png';
+
+import caopeng from '../img/guest/caopeng.png';
+import gaotongqing from '../img/guest/gaotongqing.png';
+import jim from '../img/guest/jim.png';
+import lushouqun from '../img/guest/lushouqun.png';
+import niguangnan from '../img/guest/niguangnan.png';
+import sunwenlong from '../img/guest/sunwenlong.png';
+import zhouzhengang from '../img/guest/zhouzhengang.png';
+
 export default {
   title: '演讲嘉宾',
+  guestListOperational: {
+    title: '操作系统大会主论坛嘉宾',
+    guestList: [
+      {
+        img: sunwenlong,
+        name: '孙文龙',
+        position: ['开放原子开源基金会', '理事长'],
+      },
+      {
+        img: lushouqun,
+        name: '陆首群',
+        position: ['中国开源软件推进联盟', '主席'],
+      },
+      {
+        img: jim,
+        name: 'Jim Zemlin',
+        position: ['Linux Foundation', '执行董事'],
+      },
+      {
+        img: niguangnan,
+        name: '倪光南',
+        position: ['中国工程院', '院士'],
+      },
+      {
+        img: zhouzhengang,
+        name: '周震刚',
+        position: ['IDC中国区', '副总裁'],
+      },
+      {
+        img: gaotongqing,
+        name: '高同庆',
+        position: ['中国移动通信集团有限公司', '副总经理'],
+      },
+      {
+        img: caopeng,
+        name: '曹鹏',
+        position: ['京东集团技术委员会主席', '京东云事业部总裁'],
+      },
+      {
+        img: jiangdayong,
+        name: '江大勇',
+        position: ['openEuler委员会', '主席'],
+      },
+    ],
+  },
   guestListMain: {
     title: 'openEuler Summit 2023主论坛嘉宾',
     guestList: [
@@ -67,6 +141,11 @@ export default {
         position: ['CHAOSS Governing Board', ''],
       },
       {
+        img: sean,
+        name: 'Sean Goggins',
+        position: ['CHAOSS Governing Board', ''],
+      },
+      {
         img: yangjiguo,
         name: '杨继国',
         position: ['Intel开源技术中心', '总监'],
@@ -80,6 +159,11 @@ export default {
         img: wufengguang,
         name: '吴峰光',
         position: ['openEuler技术委员会', '委员'],
+      },
+      {
+        img: ouyangjian,
+        name: '欧阳坚',
+        position: ['美团基础软件中心', '技术总监'],
       },
       {
         img: lixiangkai,
@@ -220,6 +304,91 @@ export default {
         img: zhouqi,
         name: '周麒',
         position: ['深圳市米尔电子有限公司', '副总经理'],
+      },
+      {
+        img: cuina,
+        name: 'Cui, Na',
+        position: ['Intel', 'Solution Engineer'],
+      },
+      {
+        img: gaorui,
+        name: '高睿',
+        position: ['麒麟信安操作系统研发部', '产品经理'],
+      },
+      {
+        img: jiepeng,
+        name: '接鹏',
+        position: ['新华三', '高性能计算专家'],
+      },
+      {
+        img: liuxing,
+        name: '刘幸',
+        position: ['新华三', '高性能计算专家'],
+      },
+      {
+        img: maxiaoqi,
+        name: '马晓琦',
+        position: ['华为', '高级软件开发工程师'],
+      },
+      {
+        img: menxiaokang,
+        name: '门小康',
+        position: ['中软国际', '解决方案架构师'],
+      },
+      {
+        img: qiguoqiang,
+        name: '齐国强',
+        position: ['华为', '高级工程师'],
+      },
+      {
+        img: qiuwenbo,
+        name: '邱文博',
+        position: ['麒麟信安', '资深操作系统工程师'],
+      },
+      {
+        img: wangjunqi,
+        name: '王钧琪',
+        position: ['麒麟软件', '研发工程师'],
+      },
+      {
+        img: wuxingyi,
+        name: '吴兴义',
+        position: ['联通数科', '高级工程师'],
+      },
+      {
+        img: jitao,
+        name: '纪涛',
+        position: ['中国科学院软件研究所', '产品经理'],
+      },
+      {
+        img: kevin,
+        name: 'Kevin Zhao',
+        position: ['Linaro Limited', 'Tech Lead'],
+      },
+      {
+        img: sunyi,
+        name: '孙毅',
+        position: ['Intel', 'Kernel Validation Architect'],
+      },
+      {
+        img: wuchenggang,
+        name: '武成岗',
+        position: ['中国科学院计算所', '研究员'],
+      },
+      {
+        img: yeqinglong,
+        name: '叶青龙',
+        position: ['麒麟信安', '操作系统产品线经理'],
+      },
+      {
+        img: zhangnan,
+        name: '张楠',
+        position: ['华为', '工程师'],
+      },
+      {
+        img: zhangxuzhou,
+        name: '张旭舟',
+        position: ['openEuler RISC-V SIG', 'Maintainer'],
       },
     ],
   },

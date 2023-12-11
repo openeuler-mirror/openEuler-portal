@@ -12,7 +12,7 @@ export default {
     title: [''],
     desc: [''],
     btn: '立即报名',
-    targetTap: "_blank",
+    targetTap: '_blank',
   },
   introduce:
     'The digital economy is a driving force behind global economic growth and offers incredible opportunities for digitalization and intelligence. AI, the new engine that powers tech innovation and progress, is the key to unlocking this growth. As the backbone of digital infrastructure and the bridge to AI technology, operating systems provide endless possibilities for creating an intelligent society. Against this backdrop, the Operating System Conference & openEuler Summit 2023 is a premier event that aims to bring together major global players from across the industry chain. It will focus on discussing the core capabilities of base software, leading continuous innovations, building a thriving open source community, and promoting the development of intelligent OSs for a digital future.',
@@ -54,5 +54,11 @@ export default {
         link: 'https://v1.openeuler.org/zh/interaction/summit-list/list/',
       },
     ],
+  },
+  agenda: {
+    title: 'Agenda',
+    tabType: ['Morning: Keynote', 'Afternoon: Subforums'],
+    tabType2: ['Morning: Keynote', 'Afternoon: Sessions'],
+    changeTip:'*The agenda is subject to change.'
   },
 };

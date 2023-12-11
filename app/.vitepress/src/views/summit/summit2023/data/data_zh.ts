@@ -30,7 +30,12 @@ export default {
     '人才发展：深化产教融合，培养学术和科研人才',
   ],
   introduce5: '汇聚开源，贡献智慧，共建数智时代的操作系统，共促数字经济腾飞。',
-  live:liveData,
+  agenda: {
+    title: '会议日程',
+    tabType: ['上午：主论坛','下午：分论坛'],
+    changeTip:'注：最终日程安排以会议当天实际议程为准。'
+  },
+  live: liveData,
   guest: guestData,
   previous: {
     title: '精彩回顾',

@@ -36,23 +36,28 @@ const setLiveRoom = (item: RenderData, index: number): void => {
 };
 
 function createUserId(liveId: number) {
-  let digit = Math.round(Math.random() * 10);
-  digit > 3 ? digit : (digit = 3);
-
   let returnId = '',
     userName = '';
-  const charStr =
-    '0123456789@#$%&~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  for (let i = 0; i < digit; i++) {
-    const index = Math.round(Math.random() * (charStr.length - 1));
-    returnId += charStr.substring(index, index + 1);
+  if (localStorage.getItem('live-user-name')) {
+    userName = localStorage.getItem('live-user-name') || '';
+  } else {
+    let digit = Math.round(Math.random() * 10);
+    digit > 3 ? digit : (digit = 3);
+
+    const charStr =
+      '0123456789@#$%&~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    for (let i = 0; i < digit; i++) {
+      const index = Math.round(Math.random() * (charStr.length - 1));
+      returnId += charStr.substring(index, index + 1);
+    }
+    userName = returnId;
+    localStorage.setItem('live-user-name', userName);
   }
-  userName = returnId;
+
   // landScape 是否启用 H5 直播间横屏适配
   // logout=1 增加参数 logout=1 时，页面会做退出登录处理，会以游客身份观看
   liveUrl.value = `https://hw.vhallyun.com/v2/watch/${liveId}?lang=zh&thirdId=${userName}&landScape=true`;
 }
-// const state = ref(-1);
 const height = ref(800);
 function setHeight(data: any) {
   // data.state=0,直播未开始，1正在直播，2直播结束，3回放中
@@ -71,15 +76,17 @@ function messageEvent() {
   window.addEventListener(
     'message',
     function (event) {
-      let data = {
-        state: '',
-      };
-      try {
-        data = JSON.parse(event.data);
-      } catch (e) {
-        data = event.data;
+      if (event.origin === 'https://hw.vhallyun.com') {
+        let data = {
+          state: '',
+        };
+        try {
+          data = JSON.parse(event.data);
+        } catch (e) {
+          data = event.data;
+        }
+        setHeight(data);
       }
-      setHeight(data);
     },
     false
   );
@@ -179,7 +186,7 @@ const changeLive = (val: number): void => {
       width: 100%;
       flex-wrap: wrap;
       justify-content: space-between;
-      &.odd2022 {
+      &.live-btn1 {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap: 16px;
@@ -191,14 +198,13 @@ const changeLive = (val: number): void => {
           grid-column: 1/7;
         }
       }
-      &.odd2023 {
+      &.live-btn2 {
         display: grid;
-        grid-template-columns: 300px 1fr 300px;
-        grid-template-areas: 'a b c';
+        grid-template-columns: repeat(8, 1fr);
         gap: 16px;
         width: 100%;
         .link-main {
-          grid-area: b;
+          grid-column: 1/9;
         }
       }
       .link {

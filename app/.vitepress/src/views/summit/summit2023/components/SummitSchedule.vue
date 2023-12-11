@@ -40,6 +40,17 @@ function convertMd(data: string) {
 <template>
   <div class="schedule">
     <h4 v-if="agendaData.lable">{{ agendaData.lable }}</h4>
+    <p
+      v-if="agendaData.lable.includes('SIG组开放工作会议')"
+      class="go-etherpad"
+    >
+      <a
+        href="https://etherpad.openeuler.org/p/summit2023-sig"
+        target="_blank"
+        rel="noopener noreferrer"
+        >点击此处</a
+      >并选择感兴趣的SIG组-Etherpad文件，按要求填写议题和参会信息
+    </p>
     <div class="schedule-item other">
       <el-tabs
         v-if="agendaData.content[1]"
