@@ -590,11 +590,19 @@ onMounted(() => {
       top: 24px;
       font-size: 18px;
       color: var(--o-color-text1);
+      @media (max-width: 1100px) {
+        top: 46px;
+        font-size: 12px;
+      }
     }
     .change-tip {
       margin-top: 24px;
       font-size: 18px;
       color: var(--o-color-text1);
+      @media (max-width: 1100px) {
+        margin-top: 16px;
+        font-size: 12px;
+      }
     }
   }
   .schedule-tabs {
