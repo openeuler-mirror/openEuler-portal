@@ -517,19 +517,15 @@ function initSensor() {
   sensors.init({
     server_url: 'https://dsapi.osinfra.cn/query/track?community=openEuler',
     use_client_time: true,
-    // 调试时开启
-    show_log: false,
     send_type: 'image',
     is_track_single_page: function () {
       return window['sensorsCustomBuriedData'];
     },
     heatmap: {
-      //是否开启点击图，default 表示开启，自动采集 $WebClick 事件，可以设置 'not_collect' 表示关闭。
       clickmap: 'default',
       custom_property: function () {
         return window['sensorsCustomBuriedData'];
       },
-      //是否开启触达图，not_collect 表示关闭，不会自动采集 $WebStay 事件，可以设置 'default' 表示开启。
       scroll_notice_map: 'not_collect',
     },
   });
@@ -537,10 +533,7 @@ function initSensor() {
     sensors.getPresetProperties();
   });
 
-  // 给category增加两个值
-  // sensors.appendProfile({catrgory: ['test_start_time', 'test_end_time']});
-  // sensors.appendProfile({catrgory: 'test_exist_time'});
-  sensors.quick('autoTrack', window['sensorsCustomBuriedData']); //用于采集 $pageview 事件。\
+  sensors.quick('autoTrack', window['sensorsCustomBuriedData']); //用于采集 $pageview 事件。
 }
 function startSensor(num) {
   if (!num) {
