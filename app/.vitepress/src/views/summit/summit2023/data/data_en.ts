@@ -3,6 +3,7 @@ import banner_mo from '../img/banner_mo.png';
 import textImg from '../img/text.png';
 
 import guestData from './guest-data';
+import liveData from './live-data';
 
 export default {
   banner: {
@@ -57,6 +58,7 @@ export default {
       },
     ],
   },
+  live: liveData,
   guest: guestData,
   agenda: {
     title: 'Agenda',
