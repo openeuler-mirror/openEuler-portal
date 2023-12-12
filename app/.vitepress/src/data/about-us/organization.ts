@@ -92,7 +92,7 @@ export default {
           {
             img: wuheshuan,
             name: '邬贺铨',
-            position: ['中国科学院院士'],
+            position: ['中国工程院院士'],
           },
           {
             img: zhouminghui,
@@ -512,7 +512,7 @@ export default {
           {
             img: wuheshuan,
             name: 'Wu Hequan',
-            position: ['Academician of Chinese Academy of Sciences'],
+            position: ['Academicians of Chinese Academy of Engineering'],
           },
           {
             img: zhouminghui,
