@@ -119,7 +119,7 @@ watch(
         @mouseenter="toggleSubDebounced(item)"
         @mouseleave="toggleSubDebounced(null)"
       >
-        <span class="nav-link" @click="handleMobileNavClick(index, item)">{{
+        <span class="nav-item" @click="handleMobileNavClick(index, item)">{{
           item.NAME
         }}</span>
         <div v-if="isShow" :class="['nav-dropdown', item.ID]">
@@ -496,10 +496,9 @@ html[lang='en'] .o-nav .o-nav-list > li {
           left: 16px;
         }
       }
-      .nav-link {
+      .nav-item {
         display: block;
         padding: 0 var(--o-spacing-h4);
-        cursor: pointer;
         @media screen and (max-width: 1100px) {
           padding: 0 var(--o-spacing-h6);
           font-size: var(--o-font-size-text);
