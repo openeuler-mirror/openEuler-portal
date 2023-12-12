@@ -2,6 +2,8 @@ import banner_pc from '../img/banner_pc.jpg';
 import banner_mo from '../img/banner_mo.png';
 import textImg from '../img/text.png';
 
+import guestData from './guest-data';
+
 export default {
   banner: {
     pcBanner: banner_pc,
@@ -55,6 +57,7 @@ export default {
       },
     ],
   },
+  guest: guestData,
   agenda: {
     title: 'Agenda',
     tabType: ['Morning: Keynote', 'Afternoon: Subforums'],

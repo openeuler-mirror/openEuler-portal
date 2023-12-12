@@ -172,7 +172,7 @@ onMounted(() => {
         </OContainer>
       </div>
     </div>
-    <div v-if="lang === 'zh'" class="agenda">
+    <div class="agenda">
       <h3>
         {{ summitData.agenda.title }}
       </h3>
