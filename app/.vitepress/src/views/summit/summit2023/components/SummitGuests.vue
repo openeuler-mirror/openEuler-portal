@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import AOS from 'aos';
 import { computed, onMounted } from 'vue';
+import { useData } from 'vitepress';
 
+const { lang } = useData();
 const props = defineProps({
   lecturerList: {
     type: Object,
@@ -68,11 +70,11 @@ onMounted(() => {
         </div>
       </slot>
       <slot name="name">
-        <p>{{ item.name }}</p>
+        <p>{{ lang === 'zh' ? item.name : item.nameEn }}</p>
       </slot>
       <slot name="title">
         <div
-          v-for="titleItem in item.position"
+          v-for="titleItem in lang === 'zh' ? item.position : item.positionEn"
           :key="titleItem"
           class="lecturer-list-item-title"
         >
