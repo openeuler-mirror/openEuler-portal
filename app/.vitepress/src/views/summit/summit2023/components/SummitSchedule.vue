@@ -75,8 +75,8 @@ function convertMd(data: string) {
         :key="itemList.id"
         class="content"
       >
-        <h4 v-if="itemList.title" class="other-title">
-          {{ itemList.title }}
+        <h4 v-if="!agendaData.content[1]" class="other-title">
+          {{ itemList.name }}
         </h4>
         <div class="content-list">
           <div

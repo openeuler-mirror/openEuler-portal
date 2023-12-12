@@ -140,12 +140,16 @@ onMounted(() => {
         >Visa Letter Request</OButton
       >
     </div>
-    <div v-if="lang === 'zh'" class="live">
-      <h3 class="title-bar">{{ summitData.live.title }}</h3>
+    <div class="live">
+      <h3 class="title-bar">
+        {{ lang === 'zh' ? summitData.live.title : summitData.live.titleEn }}
+      </h3>
       <div>
         <OTabs v-model="isLiverShown" class="schedule-tabs">
           <el-tab-pane
-            v-for="(item, index) in summitData.live.date"
+            v-for="(item, index) in lang === 'zh'
+              ? summitData.live.date
+              : summitData.live.dateEn"
             :key="index"
             :name="index"
           >

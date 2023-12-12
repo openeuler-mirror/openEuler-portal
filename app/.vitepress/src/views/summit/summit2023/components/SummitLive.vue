@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
+import { useData } from 'vitepress';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
 import liveActiveBg from '../img/live/live-btn.png';
@@ -10,8 +11,9 @@ interface RenderData {
   liveId: number;
   liveTestId: number;
   name: string;
+  nameEn: string;
 }
-
+const { lang } = useData();
 const props = defineProps({
   liveData: {
     required: true,
@@ -104,6 +106,16 @@ const ActiveBg = `url(${liveActiveBg})`;
 const ActiveBgLong = `url(${liveActiveBgLong})`;
 
 const liveRoom = ref(renderData[0].name);
+watch(
+  lang,
+  () => {
+    liveRoom.value =
+      lang.value === 'zh' ? renderData[0].name : renderData[0].nameEn;
+  },
+  {
+    immediate: true,
+  }
+);
 const changeLive = (val: number): void => {
   createUserId(val);
 };
@@ -116,7 +128,7 @@ const changeLive = (val: number): void => {
         <OOption
           v-for="item in renderData"
           :key="item.id"
-          :label="item.name"
+          :label="lang === 'zh' ? item.name : item.nameEn"
           :value="isTest ? item.liveTestId : item.liveId"
         />
       </OSelect>
@@ -145,7 +157,7 @@ const changeLive = (val: number): void => {
           ]"
           @click="setLiveRoom(item, index)"
         >
-          <p class="name">{{ item.name }}</p>
+          <p class="name">{{ lang === 'zh' ? item.name : item.nameEn }}</p>
         </div>
       </div>
     </div>
