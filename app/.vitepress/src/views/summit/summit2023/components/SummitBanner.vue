@@ -64,9 +64,9 @@ function handleClick(link: string, target: string = '_blank') {
               @click="handleClick(bannerData.link, bannerData.targetTap)"
             >
               {{ bannerData.btn }}
-              <template #suffixIcon
-                ><OIcon><IconArrowRight /></OIcon
-              ></template>
+              <template #suffixIcon>
+                <OIcon><IconArrowRight /></OIcon>
+              </template>
             </OButton>
           </div>
         </div>

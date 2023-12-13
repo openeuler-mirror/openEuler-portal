@@ -77,10 +77,22 @@ import wangkuntian from '../img/guest/wangkuntian.png';
 import wuhao from '../img/guest/wuhao.png';
 import zhangkun from '../img/guest/zhangkun.png';
 
+import caiqishen from '../img/guest/caiqishen.png';
+import duhui from '../img/guest/duhui.png';
+import chenquan from '../img/guest/chenquan.png';
+import liding from '../img/guest/liding.png';
+import miyong from '../img/guest/miyong.png';
+import niujianwei from '../img/guest/niujianwei.png';
+import zhaohuan from '../img/guest/zhaohuan.png';
+import guoke from '../img/guest/guoke.png';
+import liushaokai from '../img/guest/liushaokai.png';
+
 export default {
   title: '演讲嘉宾',
+  titleEn: 'Speakers',
   guestListOperational: {
     title: '操作系统大会主论坛嘉宾',
+    titleEn: 'Operating System Conference Keynote',
     guestList: [
       {
         img: sunwenlong,
@@ -142,6 +154,7 @@ export default {
   },
   guestListMain: {
     title: 'openEuler Summit 2023主论坛嘉宾',
+    titleEn: 'openEuler Summit 2023 Keynote',
     guestList: [
       {
         img: jiangdayong,
@@ -286,8 +299,65 @@ export default {
       },
     ],
   },
+  guestListEducation: {
+    title: '教育分论坛嘉宾',
+    titleEn: 'Education Subforum',
+    guestList: [
+      {
+        img: chenquan,
+        name: '陈全',
+        position: ['上海交通大学计算机科学与工程教授', '系副主任'],
+        nameEn: 'Chen Quan',
+        positionEn: [
+          'Professor & Deputy Head',
+          'Computer Science and Engineering Dept, Shanghai Jiao Tong University',
+        ],
+      },
+      {
+        img: liding,
+        name: '李锭',
+        position: ['北京大学', '助理教授'],
+        nameEn: 'Li Ding',
+        positionEn: ['Assistant Professor', 'Peking University'],
+      },
+      {
+        img: miyong,
+        name: '宓詠',
+        position: [
+          '复旦大学教授、上海教育技术学会理事长',
+          '上海市教育信息化2.0专家组长',
+        ],
+        nameEn: 'Mi Yong',
+        positionEn: [
+          'Professor, Fudan University | Chairperson',
+          'Shanghai Institute of Education and Technology | Expert Team Leader, Shanghai Education Informatization 2.0 Action Plan',
+        ],
+      },
+      {
+        img: niujianwei,
+        name: '牛建伟',
+        position: ['北京航空航空大学计算机学院长聘教授', '博士生导师'],
+        nameEn: 'Niu Jianwei',
+        positionEn: [
+          'Permanent Professor and PhD Tutor',
+          'School of Computer Science and Engineering, Beihang University',
+        ],
+      },
+      {
+        img: zhaohuan,
+        name: '赵欢',
+        position: ['湖南大学教授、博士生导师', '信息科学与工程学院副书记'],
+        nameEn: 'Zhao Huan',
+        positionEn: [
+          'Professor & PhD Tutor',
+          'College of Computer Science and Electronic Engineering, Hunan University',
+        ],
+      },
+    ],
+  },
   guestListTechnology: {
     title: '技术分论坛嘉宾',
+    titleEn: 'Technical Sessions',
     guestList: [
       {
         img: chenhongyang,
@@ -554,15 +624,15 @@ export default {
         img: zhangxuzhou,
         name: '张旭舟',
         position: ['openEuler RISC-V SIG', 'Maintainer'],
-        nameEn: '',
-        positionEn: ['', ''],
+        nameEn: 'Zhang Xuzhou',
+        positionEn: ['RISC-V SIG Maintainer', 'openEuler'],
       },
       {
         img: dingziwei,
         name: '丁紫薇',
         position: ['麒麟软件', '开源合规研发工程师'],
-        nameEn: '',
-        positionEn: ['', ''],
+        nameEn: 'Ding Ziwei',
+        positionEn: ['Open Source Compliance R&D Engineer', 'KylinSoft'],
       },
       {
         img: dufan,
@@ -626,6 +696,34 @@ export default {
         position: ['成都菁蓉联创科技有限公司', '董事长兼总经理'],
         nameEn: 'Zhang Kun',
         positionEn: ['Board Chairperson and General Manager', 'Chengdu JRLC'],
+      },
+      {
+        img: caiqishen,
+        name: '蔡启申',
+        position: ['中移（苏州）软件技术有限公司', '高级系统架构师'],
+        nameEn: '',
+        positionEn: ['', ''],
+      },
+      {
+        img: duhui,
+        name: '杜辉',
+        position: ['南京启诺信息技术有限公司总经理', '易百纳技术社区总经理'],
+        nameEn: 'Du Hui',
+        positionEn: ['General Manager', 'Ebaina'],
+      },
+      {
+        img: guoke,
+        name: '郭克',
+        position: ['统信软件', '研发主管'],
+        nameEn: 'Guo Ke',
+        positionEn: ['R&D Director', 'UnionTech'],
+      },
+      {
+        img: liushaokai,
+        name: '刘少凯',
+        position: ['北京浩瀚深度信息技术股份有限公司', '产品总监'],
+        nameEn: 'Liu Shaokai',
+        positionEn: ['Product Director', 'HAOHAN Data'],
       },
     ],
   },

@@ -3,7 +3,7 @@ import satisfaction_mo from '@/assets/category/home/banner/satisfaction_mo.jpg';
 
 import summit_pc from '@/assets/category/home/banner/summit_pc.jpg';
 import summit_mo from '@/assets/category/home/banner/summit_mo.png';
-import textImg from '@/assets/category/home/banner/text.png';
+import textImg from '@/assets/category/home/banner/summit-text_pc.png';
 
 import banner1_pc from '@/assets/category/home/banner/banner1_pc.jpg';
 import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';

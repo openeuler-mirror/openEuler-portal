@@ -54,8 +54,21 @@ export default [
                   detail: '',
                 },
                 {
-                  id: 'agenda15_1_1_4',
+                  id: 'agenda15_1_1_6',
                   time: '09:45-09:50',
+                  desc: '开放原子开源基金会演讲',
+                  person: [
+                    {
+                      id: 'agenda15_1_1_6_1',
+                      name: '孙文龙',
+                      post: '开放原子开源基金会理事长',
+                    },
+                  ],
+                  detail: '',
+                },
+                {
+                  id: 'agenda15_1_1_4',
+                  time: '09:50-10:00',
                   desc: '2023年度openEuler领先商业实践',
                   person: [
                     {
@@ -68,26 +81,13 @@ export default [
                 },
                 {
                   id: 'agenda15_1_1_5',
-                  time: '09:50-09:55',
+                  time: '10:00-1:05',
                   desc: '2023年度openEuler社区突出贡献单位',
                   person: [
                     {
                       id: 'agenda15_1_1_5_1',
                       name: '',
                       post: '突出贡献单位代表',
-                    },
-                  ],
-                  detail: '',
-                },
-                {
-                  id: 'agenda15_1_1_6',
-                  time: '09:55-10:05',
-                  desc: '开放原子开源基金会演讲',
-                  person: [
-                    {
-                      id: 'agenda15_1_1_6_1',
-                      name: '孙文龙',
-                      post: '开放原子开源基金会理事长',
                     },
                   ],
                   detail: '',
@@ -171,27 +171,27 @@ export default [
                   detail: '',
                 },
                 {
-                  id: 'agenda15_1_1_13',
-                  time: '10:45-11:15',
-                  desc: 'openEuler实践案例分享',
-                  person: [
-                    {
-                      id: 'agenda15_1_1_13_1',
-                      name: '',
-                      post: '运营商用户代表',
-                    },
-                  ],
-                  detail: '',
-                },
-                {
                   id: 'agenda15_1_1_14',
-                  time: '11:15-11:25',
+                  time: '10:45-10:55',
                   desc: 'openEuler实践案例分享',
                   person: [
                     {
                       id: 'agenda15_1_1_14_1',
                       name: '',
                       post: '金融用户代表',
+                    },
+                  ],
+                  detail: '',
+                },
+                {
+                  id: 'agenda15_1_1_13',
+                  time: '10:55-11:25',
+                  desc: 'openEuler实践案例分享',
+                  person: [
+                    {
+                      id: 'agenda15_1_1_13_1',
+                      name: '',
+                      post: '运营商用户代表',
                     },
                   ],
                   detail: '',
@@ -1110,11 +1110,11 @@ export default [
                 },
                 {
                   time: '10:05-10:15',
-                  desc: 'Intel携手openEuler共建操作系统生态底座',
+                  desc: 'Intel 携手openEuler共建操作系统生态底座',
                   person: [
                     {
                       name: '杨继国',
-                      post: 'Intel开源技术中心总监',
+                      post: '英特尔开源技术中心总监',
                       id: 'id12',
                     },
                   ],
@@ -1137,7 +1137,7 @@ export default [
                 {
                   id: 'agenda16_1_1_7',
                   time: '10:20-10:30',
-                  desc: 'openEuler 技术前沿展望',
+                  desc: 'openEuler技术展望：全场景升级，智能创新无限可能',
                   person: [
                     {
                       id: 'agenda16_1_1_7_1',
@@ -1150,7 +1150,7 @@ export default [
                 {
                   id: 'agenda16_1_1_9',
                   time: '10:30-10:40',
-                  desc: 'openEuler 社区基础设施2.0：定制化可持续发展的OS构建体系',
+                  desc: '基础设施2.0: 汇聚全球开发者，打造全场景OS',
                   person: [
                     {
                       id: 'agenda16_1_1_9_1',
@@ -1189,7 +1189,7 @@ export default [
                 {
                   id: 'agenda16_1_1_11',
                   time: '11:20-11:30',
-                  desc: '银河麒麟操作系统V10在中信银行云原生领域的应用与实践',
+                  desc: '银河麒麟操作系统在中信银行云原生领域的应用与实践',
                   person: [
                     {
                       id: 'agenda16_1_1_11_1',
@@ -1207,7 +1207,7 @@ export default [
                 {
                   id: 'agenda16_1_1_12',
                   time: '11:30-11:40',
-                  desc: '麒麟信安为新型电力系统建设提供自主创新安全底座',
+                  desc: '麒麟信安在新型电力系统中的创新实践',
                   person: [
                     {
                       id: 'agenda16_1_1_12_1',
@@ -2275,7 +2275,7 @@ export default [
                   person: [
                     {
                       id: 'agenda16_2_6_1_1',
-                      name: '蔡启坤',
+                      name: '蔡启申',
                       post: '中移（苏州）软件技术有限公司高级系统架构师',
                     },
                   ],

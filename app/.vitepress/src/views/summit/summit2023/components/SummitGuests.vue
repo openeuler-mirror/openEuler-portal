@@ -52,36 +52,66 @@ onMounted(() => {
 
 <template>
   <div class="lecturer-list" :style="(summitStyle as any)">
-    <div
-      v-for="item in lecturerList"
-      :key="item.NAME"
-      data-aos="fade-zoom-in"
-      class="lecturer-list-item"
-    >
-      <slot name="img">
-        <div
-          :class="
-            summitStyle['--shape'] === 'square'
-              ? 'lecturer-list-item-square'
-              : 'lecturer-list-item-circle'
-          "
-        >
-          <img :src="item.img" />
-        </div>
-      </slot>
-      <slot name="name">
-        <p>{{ lang === 'zh' ? item.name : item.nameEn }}</p>
-      </slot>
-      <slot name="title">
-        <div
-          v-for="titleItem in lang === 'zh' ? item.position : item.positionEn"
-          :key="titleItem"
-          class="lecturer-list-item-title"
-        >
-          <p>{{ titleItem }}</p>
-        </div>
-      </slot>
-    </div>
+    <template v-for="item in lecturerList" :key="item.NAME">
+      <div
+        v-if="lang === 'zh'"
+        data-aos="fade-zoom-in"
+        class="lecturer-list-item"
+      >
+        <slot name="img">
+          <div
+            :class="
+              summitStyle['--shape'] === 'square'
+                ? 'lecturer-list-item-square'
+                : 'lecturer-list-item-circle'
+            "
+          >
+            <img :src="item.img" />
+          </div>
+        </slot>
+        <slot name="name">
+          <p>{{ item.name }}</p>
+        </slot>
+        <slot name="title">
+          <div
+            v-for="titleItem in item.position"
+            :key="titleItem"
+            class="lecturer-list-item-title"
+          >
+            <p>{{ titleItem }}</p>
+          </div>
+        </slot>
+      </div>
+      <div
+        v-if="lang === 'en' && item.nameEn"
+        data-aos="fade-zoom-in"
+        class="lecturer-list-item"
+      >
+        <slot name="img">
+          <div
+            :class="
+              summitStyle['--shape'] === 'square'
+                ? 'lecturer-list-item-square'
+                : 'lecturer-list-item-circle'
+            "
+          >
+            <img :src="item.img" />
+          </div>
+        </slot>
+        <slot name="name">
+          <p>{{ item.nameEn }}</p>
+        </slot>
+        <slot name="title">
+          <div
+            v-for="titleItem in item.positionEn"
+            :key="titleItem"
+            class="lecturer-list-item-title"
+          >
+            <p>{{ titleItem }}</p>
+          </div>
+        </slot>
+      </div>
+    </template>
   </div>
 </template>
 
@@ -91,9 +121,6 @@ onMounted(() => {
 }
 .lecturer-list {
   margin: var(--o-spacing-h2) auto;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
   display: grid;
   grid-template-columns: repeat(4, minmax(82px, 1fr));
   column-gap: 0;
@@ -104,13 +131,12 @@ onMounted(() => {
   @media (max-width: 780px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  &-item {
-    // width: 354px;
+  .lecturer-list-item {
     @media (max-width: 780px) {
       width: 100%;
       margin: 0 auto;
     }
-    &-square {
+    .lecturer-list-item-square {
       display: block;
       height: 130px;
       width: 130px;
@@ -125,7 +151,7 @@ onMounted(() => {
         right: 25%;
       }
     }
-    &-circle {
+    .lecturer-list-item-circle {
       img {
         width: 120px;
         height: 120px;
@@ -137,9 +163,6 @@ onMounted(() => {
         }
       }
     }
-    // &:nth-of-type(1){
-    //   margin-top: 20px;
-    // }
     p {
       font-size: var(--o-spacing-h5);
       color: var(--o-color-brand1);
@@ -149,7 +172,7 @@ onMounted(() => {
         margin-top: 6px;
       }
     }
-    &-title {
+    .lecturer-list-item-title {
       margin-bottom: var(--o-spacing-h8);
       &:nth-last-of-type(1) {
         margin-bottom: var(--o-spacing-h4);

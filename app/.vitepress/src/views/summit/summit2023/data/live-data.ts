@@ -60,7 +60,7 @@ export default {
       liveTestId: 14100,
       id: 0,
       name: 'openEuler Summit 主题演讲',
-      nameEn:'openEuler Summit 2023 Keynote'
+      nameEn:'openEuler Summit Keynote'
     },
     {
       liveId: 14109,
