@@ -13978,5 +13978,66 @@
       "hostBusAdapter": "",
       "hardDiskDrive": "SEAGATE_ST300MP0005"
     }
+  },
+  {
+    "hardwareFactory": "New H3C Technologies Co., Ltd.",
+    "hardwareModel": "H3C UniServer R4970 G7",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "aarch64",
+    "date": "2023/12/11",
+    "friendlyLink": "https://www.h3c.com",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "193d",
+        "ssID": "1005",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "igb",
+        "version": "5.4.0-k",
+        "type": "NIC",
+        "date": "2023.12.11",
+        "sha256": "b39e12c3099cd99b6b442c1c91b1b31685a189ab2516ea881cbf442aa05c661a",
+        "driverSize": "429K",
+        "chipVendor": "Intel",
+        "boardModel": "360T-B",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "9005",
+        "deviceID": "028f",
+        "svID": "193d",
+        "ssID": "f461",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "smartpqi",
+        "version": "1.1.4-130",
+        "type": "RAID",
+        "date": "2023.12.11",
+        "sha256": "cb67ea66c14752637a5550c3940cacbc87ae6debe68106a711d3c332d2b8028e",
+        "driverSize": "144K",
+        "chipVendor": "Adaptec",
+        "boardModel": "P460-B4",
+        "chipModel": "Smart Storage PQI SAS",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+      "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com",
+      "certificationTime": "2023/12/11",
+      "commitID": "I8NEN1",
+      "mainboardModel": "S5000",
+      "biosUefi": "6.60.08",
+      "cpu": "S5000C-64",
+      "ram": "1*32G-2R-4800",
+      "portsBusTypes": "x16 PCI Express x16 x8 PCI Express x8",
+      "videoAdapter": "",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "Micron_5300_MTFD LOGICAL VOLUME LOGICAL VOLUME Smart Adapter"
+    }
   }
 ]
