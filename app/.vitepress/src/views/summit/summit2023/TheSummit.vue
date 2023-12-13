@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
-import { useData } from 'vitepress';
+import { useRouter, useData } from 'vitepress';
 
 import { useCommon } from '@/stores/common';
 import { getUrlParams } from '@/shared/utils';
@@ -21,7 +21,10 @@ import { getEasyeditorInfo } from '@/api/api-easyeditor';
 import liveLight from '@/assets/category/summit/summit2022/live.png';
 import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
 
+import IconArrowRight from '~icons/app/icon-arrow-right.svg';
+
 const { lang } = useData();
+const router = useRouter();
 const isMobile = computed(() =>
   useWindowResize().value <= 768 ? true : false
 );
@@ -39,9 +42,11 @@ const commonStore = useCommon();
 const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );
+// 直播面房间切换
 const isLiverShown = ref(0);
-const showIndex = ref(0);
+
 // 议程日期切换
+const showIndex = ref(0);
 function setShowIndex(index: number) {
   showIndex.value = index;
   tabType.value = 0;
@@ -113,10 +118,21 @@ onMounted(() => {
     collectAdvertisedData();
   }, 300);
 });
+// 英文页面点击按钮前往中文直播间处理
+function goLive(index: number) {
+  router.go(`/zh/interaction/summit-list/summit2023/?live=${index}`);
+}
+onMounted(() => {
+  const { href } = window.location;
+  const paramsArr = getUrlParams(href);
+  if (lang.value === 'zh' && paramsArr.live) {
+    isLiverShown.value = paramsArr.live - 1;
+    history.pushState(null, '', location.origin + location.pathname);
+  }
+});
 </script>
 <template>
   <SummitBanner :banner-data="summitData.banner" />
-
   <AppContext>
     <div class="introduce">
       <p>{{ summitData.introduce }}</p>
@@ -145,35 +161,52 @@ onMounted(() => {
         {{ lang === 'zh' ? summitData.live.title : summitData.live.titleEn }}
       </h3>
       <div>
-        <OTabs v-model="isLiverShown" class="schedule-tabs">
-          <el-tab-pane
-            v-for="(item, index) in lang === 'zh'
-              ? summitData.live.date
-              : summitData.live.dateEn"
-            :key="index"
-            :name="index"
+        <template v-if="lang === 'zh'">
+          <OTabs v-model="isLiverShown" class="schedule-tabs">
+            <el-tab-pane
+              v-for="(item, index) in summitData.live.date"
+              :key="index"
+              :name="index"
+            >
+              <template #label>
+                <div class="time-tabs">
+                  {{ item }}
+                </div>
+              </template>
+            </el-tab-pane>
+          </OTabs>
+          <OContainer :level-index="1">
+            <ClientOnly>
+              <SummitLive
+                v-if="isLiverShown === 0"
+                :live-data="summitData.live.liveData1"
+                class-name="live-btn1"
+                class="live-box"
+              />
+              <SummitLive
+                v-if="isLiverShown === 1"
+                :live-data="summitData.live.liveData2"
+                class-name="live-btn2"
+                class="live-box"
+              />
+            </ClientOnly>
+          </OContainer>
+        </template>
+        <div v-else class="time-box">
+          <OButton
+            v-for="(item, index) in summitData.live.dateEn"
+            :key="item"
+            animation
+            class="time-btn"
+            :size="isMobile ? 'mini' : ''"
+            @click="goLive(index + 1)"
           >
-            <template #label>
-              <div class="time-tabs">{{ item }}</div>
+            {{ item }}
+            <template #suffixIcon>
+              <OIcon><IconArrowRight /></OIcon>
             </template>
-          </el-tab-pane>
-        </OTabs>
-        <OContainer :level-index="1">
-          <ClientOnly>
-            <SummitLive
-              v-if="isLiverShown === 0"
-              :live-data="summitData.live.liveData1"
-              class-name="live-btn1"
-              class="live-box"
-            />
-            <SummitLive
-              v-if="isLiverShown === 1"
-              :live-data="summitData.live.liveData2"
-              class-name="live-btn2"
-              class="live-box"
-            />
-          </ClientOnly>
-        </OContainer>
+          </OButton>
+        </div>
       </div>
     </div>
     <div class="agenda">
@@ -230,23 +263,56 @@ onMounted(() => {
         <p class="change-tip">{{ summitData.agenda.changeTip }}</p>
       </div>
     </div>
-    <div v-if="lang === 'zh'" class="guest">
-      <h3 class="guest-title">{{ summitData.guest.title }}</h3>
-      <h4>{{ summitData.guest.guestListOperational.title }}</h4>
+    <div class="guest">
+      <h3 class="guest-title">
+        {{ lang === 'zh' ? summitData.guest.title : summitData.guest.titleEn }}
+      </h3>
+      <h4>
+        {{
+          lang === 'zh'
+            ? summitData.guest.guestListOperational.title
+            : summitData.guest.guestListOperational.titleEn
+        }}
+      </h4>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListOperational.guestList"
         shape="circle"
         :web-columns-num="4"
         :mobile-columns-num="2"
       />
-      <h4>{{ summitData.guest.guestListMain.title }}</h4>
+      <h4>
+        {{
+          lang === 'zh'
+            ? summitData.guest.guestListMain.title
+            : summitData.guest.guestListMain.titleEn
+        }}
+      </h4>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListMain.guestList"
         shape="circle"
         :web-columns-num="4"
         :mobile-columns-num="2"
       />
-      <h4>{{ summitData.guest.guestListTechnology.title }}</h4>
+      <h4>
+        {{
+          lang === 'zh'
+            ? summitData.guest.guestListEducation.title
+            : summitData.guest.guestListEducation.titleEn
+        }}
+      </h4>
+      <SummitGuests
+        :lecturer-list="summitData.guest.guestListEducation.guestList"
+        shape="circle"
+        :web-columns-num="4"
+        :mobile-columns-num="2"
+      />
+      <h4>
+        {{
+          lang === 'zh'
+            ? summitData.guest.guestListTechnology.title
+            : summitData.guest.guestListTechnology.titleEn
+        }}
+      </h4>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListTechnology.guestList"
         shape="circle"
@@ -712,7 +778,9 @@ onMounted(() => {
       }
     }
     .time-tabs {
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       // margin: 0 0 24px;
       cursor: pointer;
       border: 1px solid var(--o-color-border2);
@@ -723,7 +791,12 @@ onMounted(() => {
       font-size: var(--o-font-size-text);
       line-height: 38px;
       padding: 0 var(--o-spacing-h5);
+      .o-icon {
+        margin-left: 12px;
+      }
       @media (max-width: 1100px) {
+        width: 80px;
+        line-height: 28px;
         font-size: var(--o-font-size-tip);
         padding: 0 var(--o-spacing-h6);
       }
@@ -751,6 +824,18 @@ onMounted(() => {
             line-height: var(--o-line-height-tip);
           }
         }
+      }
+    }
+  }
+  .time-box {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    .o-button {
+      color: var(--o-color-text1);
+      :deep(.suffix-icon) {
+        color: var(--o-color-brand1);
       }
     }
   }
