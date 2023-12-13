@@ -4,6 +4,7 @@ import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
 import { useI18n } from '@/i18n';
 import { getPop } from '@/api/api-search';
+import useClickOutside from '@/components/hooks/useClickOutside';
 
 import IconCancel from '~icons/app/icon-cancel.svg';
 import IconSearch from '~icons/app/icon-search.svg';
@@ -38,7 +39,6 @@ const topSearch = computed(() =>
 const searchValue = computed(() => i18n.value.common.SEARCH);
 // 显示/移除搜索框
 const isShowBox = ref(false);
-
 const popList = ref<string[]>([]);
 const showDrawer = () => {
   //热搜
@@ -67,7 +67,9 @@ const closeSearchBox = () => {
   <div class="header-search" :class="{ 'input-focus': isShowDrawer }">
     <OInput
       v-model="searchInput"
-      :placeholder="searchValue.PLEACHOLDER"
+      :placeholder="
+        isShowDrawer ? searchValue.PLEACHOLDER_EXTEND : searchValue.PLEACHOLDER
+      "
       @change="handleSearchEvent"
       @focus="showDrawer"
     >

@@ -37,6 +37,8 @@ import puhua_dark from '@/assets/category/member/puhua_dark.png';
 import puhua_light from '@/assets/category/member/puhua_light.png';
 import guangfa_dark from '@/assets/category/member/guangfa_dark.png';
 import guangfa_light from '@/assets/category/member/guangfa_light.png';
+import intel_light from '@/assets/category/member/intel_light.png';
+import intel_dark from '@/assets/category/member/intel_dark.png';
 
 import turbolinux_dark from '@/assets/category/member/turbolinux_dark.png';
 import baolande_dark from '@/assets/category/member/baolande_dark.png';
@@ -106,6 +108,10 @@ export default {
         {
           img_light: yidong_light,
           img_dark: yidong_dark,
+        },
+        {
+          img_light: intel_light,
+          img_dark: intel_dark,
         },
       ],
     },
@@ -239,6 +245,10 @@ export default {
         {
           img_light: yidong_light,
           img_dark: yidong_dark,
+        },
+        {
+          img_light: intel_light,
+          img_dark: intel_dark,
         },
       ],
     },
