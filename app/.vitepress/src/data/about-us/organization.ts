@@ -11,6 +11,7 @@ import wuyanjun from '@/assets/category/organization/wuyanjun.png';
 import zujianzhong from '@/assets/category/organization/zujianzhong.png';
 import zhangshenju from '@/assets/category/organization/zhangshenju.png';
 import zhongxin from '@/assets/category/organization/zhongxin.png';
+import yangjiguo from '@/assets/category/organization/yangjiguo.png';
 
 import huxinwei from '@/assets/category/organization/huxinwei.png';
 import biannaimeng from '@/assets/category/organization/biannaimeng.png';
@@ -52,6 +53,7 @@ import majun from '@/assets/category/organization/brand/majun.png';
 import wangxinhui from '@/assets/category/organization/brand/wangxinhui.png';
 import wendan from '@/assets/category/organization/brand/wendan.png';
 import zhangyin from '@/assets/category/organization/brand/zhangyin.png';
+import humingyue from '@/assets/category/organization/brand/humingyu.png';
 
 import xiule from '@/assets/category/organization/user/xiulei.png';
 import gaohonghe from '@/assets/category/organization/user/gaohonghe.png';
@@ -62,6 +64,7 @@ import weijiangang from '@/assets/category/organization/user/weijiangang.png';
 import zhangqingnan from '@/assets/category/organization/user/zhangqingnan.png';
 import xiuliuhua from '@/assets/category/organization/user/xiuliuhua.png';
 import zuchen from '@/assets/category/organization/user/zuchen.png';
+import weibin from '@/assets/category/organization/user/weishan.png';
 
 export default {
   zh: {
@@ -166,6 +169,11 @@ export default {
                 img: lipeiyuan,
                 name: '李培源',
                 position: ['天翼云科技有限公司'],
+              },
+              {
+                img: yangjiguo,
+                name: '杨继国',
+                position: ['英特尔（中国）有限公司'],
               },
               {
                 img: zhangshenju,
@@ -375,6 +383,12 @@ export default {
             email: 'kanglifeng@uniontech.com',
           },
           {
+            img: humingyue,
+            name: '胡明月',
+            position: ['委员'],
+            email: 'Ming.yue.hu@intel.com',
+          },
+          {
             img: lina,
             name: '丽娜',
             position: ['委员'],
@@ -444,6 +458,12 @@ export default {
             name: '王友海',
             position: ['委员'],
             email: 'wangyouhai@uniontech.com',
+          },
+          {
+            img: weibin,
+            name: '魏彬',
+            position: ['委员'],
+            email: 'bin.wei@intel.com',
           },
           {
             img: weijiangang,
@@ -593,6 +613,11 @@ export default {
                 img: lipeiyuan,
                 name: 'Li Peiyuan',
                 position: ['China Telecom e-Cloud Technology Co., Ltd.'],
+              },
+              {
+                img: yangjiguo,
+                name: 'Yang Jiguo',
+                position: ['Intel China Ltd.'],
               },
               {
                 img: zhangshenju,
@@ -804,6 +829,12 @@ export default {
             email: 'kanglifeng@uniontech.com',
           },
           {
+            img: humingyue,
+            name: 'Hu Mingyue',
+            position: ['Committee member'],
+            email: 'Ming.yue.hu@intel.com',
+          },
+          {
             img: lina,
             name: 'Li Na',
             position: ['Committee member'],
@@ -873,6 +904,12 @@ export default {
             name: 'Wang Youhai',
             position: ['Committee member'],
             email: 'wangyouhai@uniontech.com',
+          },
+          {
+            img: weibin,
+            name: 'Wei Bin',
+            position: ['Committee member'],
+            email: 'bin.wei@intel.com',
           },
           {
             img: weijiangang,
