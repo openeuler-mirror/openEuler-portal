@@ -321,6 +321,19 @@ onMounted(() => {
       <h4>
         {{
           lang === 'zh'
+            ? summitData.guest.guestListProducer.title
+            : summitData.guest.guestListProducer.titleEn
+        }}
+      </h4>
+      <SummitGuests
+        :lecturer-list="summitData.guest.guestListProducer.guestList"
+        shape="circle"
+        :web-columns-num="4"
+        :mobile-columns-num="2"
+      />
+      <h4>
+        {{
+          lang === 'zh'
             ? summitData.guest.guestListTechnology.title
             : summitData.guest.guestListTechnology.titleEn
         }}

@@ -87,6 +87,24 @@ import zhaohuan from '../img/guest/zhaohuan.png';
 import guoke from '../img/guest/guoke.png';
 import liushaokai from '../img/guest/liushaokai.png';
 
+import chemingdao from '../img/guest/chemingdao.png';
+import chenyaqiang from '../img/guest/chenyaqiang.png';
+import dukaitian from '../img/guest/dukaitian.png';
+import guohanjun from '../img/guest/guohanjun.png';
+import hufeng from '../img/guest/hufeng.png';
+import liuhao from '../img/guest/liuhao.png';
+import liyushan from '../img/guest/liyushan.png';
+import luoyukai from '../img/guest/luoyukai.png';
+import luyan from '../img/guest/luyan.png';
+import renwei from '../img/guest/renwei.png';
+import wangjianmin from '../img/guest/wangjianmin.png';
+import wangzhi from '../img/guest/wangzhi.png';
+import xiexiuqi from '../img/guest/xiexiuqi.png';
+import yuyang from '../img/guest/yuyang.png';
+import zenghongan from '../img/guest/zenghongan.png';
+import zhengzhenyu from '../img/guest/zhengzhenyu.png';
+import zhujianwei from '../img/guest/zhujianwei.png';
+
 export default {
   title: '演讲嘉宾',
   titleEn: 'Speakers',
@@ -250,14 +268,11 @@ export default {
         positionEn: ['Vice President', 'KylinSoft'],
       },
       {
-        img: dengqiong,
-        name: '邓琼',
-        position: ['中信银行软件开发中心系统支撑域', 'CTO'],
-        nameEn: 'Deng Qiong',
-        positionEn: [
-          'CTO',
-          'CITIC Software Development Center System Support Domain',
-        ],
+        img: liyushan,
+        name: '李玉山',
+        position: ['中信银行软件开发中心系统支撑域', '资深技术经理'],
+        nameEn: '',
+        positionEn: ['', ''],
       },
       {
         img: wangpan,
@@ -727,6 +742,138 @@ export default {
         position: ['北京浩瀚深度信息技术股份有限公司', '产品总监'],
         nameEn: 'Liu Shaokai',
         positionEn: ['Product Director', 'HAOHAN Data'],
+      },
+    ],
+  },
+  guestListProducer: {
+    title: '技术分论坛出品人',
+    titleEn: 'Technical Sessions Produced by',
+    guestList: [
+      {
+        img: guohanjun,
+        name: '郭寒军',
+        position: ['openEuler', 'maintainer'],
+        nameEn: 'Guo Hanjun',
+        positionEn: ['openEuler', 'maintainer'],
+      },
+      {
+        img: xiexiuqi,
+        name: '谢秀奇',
+        position: ['openEuler', 'maintainer'],
+        nameEn: 'Xie Xiuqi',
+        positionEn: ['openEuler', 'maintainer'],
+      },
+      {
+        img: luyan,
+        name: '卢彦',
+        position: ['统信软件', '服务器操作系统与云计算产线技术总监'],
+        nameEn: '',
+        positionEn: ['', ''],
+      },
+      {
+        img: chenyaqiang,
+        name: '陈亚强',
+        position: ['openEuler', 'maintainer'],
+        nameEn: 'Chen Yaqiang',
+        positionEn: ['openEuler', 'maintainer'],
+      },
+      {
+        img: chemingdao,
+        name: '车明道',
+        position: ['openEuler', 'maintainer'],
+        nameEn: 'Che Mingdao',
+        positionEn: ['openEuler', 'maintainer'],
+      },
+      {
+        img: zhengzhenyu,
+        name: '郑振宇',
+        position: ['openEuler', 'maintainer'],
+        nameEn: 'Zheng Zhenyu',
+        positionEn: ['openEuler', 'maintainer'],
+      },
+      {
+        img: wufengguang,
+        name: '吴峰光',
+        position: ['openEuler技术委员会', '委员'],
+        nameEn: 'Wu Fengguang',
+        positionEn: ['openEuler Technical Committee', 'Member'],
+      },
+      {
+        img: wangjianmin,
+        name: '王建民',
+        position: ['中科院软件所', '高级工程师'],
+        nameEn: '',
+        positionEn: ['', ''],
+      },
+      {
+        img: dukaitian,
+        name: '杜开田',
+        position: ['openEuler', 'maintainer'],
+        nameEn: 'Du Kaitian',
+        positionEn: ['openEuler', 'maintainer'],
+      },
+      {
+        img: renwei,
+        name: '任慰',
+        position: ['openEuler技术委员会', '委员'],
+        nameEn: '',
+        positionEn: ['', ''],
+      },
+      {
+        img: zhujianwei,
+        name: '朱健伟',
+        position: ['openEuler 社区安全委员会', '主席'],
+        nameEn: '',
+        positionEn: ['', ''],
+      },
+      {
+        img: luoyukai,
+        name: '罗钰凯',
+        position: ['openEuler 安全委员会', '委员'],
+        nameEn: '',
+        positionEn: ['', ''],
+      },
+      {
+        img: liuhao,
+        name: '刘昊',
+        position: ['openEuler', 'maintainer'],
+        nameEn: 'Liu Hao',
+        positionEn: ['openEuler', 'maintainer'],
+      },
+      {
+        img: yuyang,
+        name: '于洋',
+        position: ['北京东方通科技股份有限公司', '研发总监'],
+        nameEn: '',
+        positionEn: ['', ''],
+      },
+      {
+        img: hufeng,
+        name: '胡峰',
+        position: ['openEuler', 'maintainer'],
+        nameEn: 'Hu Feng',
+        positionEn: ['openEuler', 'maintainer'],
+      },
+      {
+        img: wangzhi,
+        name: '王执',
+        position: ['华为', '主任工程师'],
+        nameEn: '',
+        positionEn: ['', ''],
+      },
+      {
+        img: zenghongan,
+        name: '曾宏安',
+        position: ['北京凝思软件股份有限公司', '研发中心总经理'],
+        nameEn: '',
+        positionEn: ['', ''],
+      },
+      {
+        img: menxiaokang,
+        name: '门小康',
+        position: ['中软国际', '解决方案架构师'],
+        nameEn: 'Men Xiaokang',
+        positionEn: ['Solution Architect', 'Chinasoft International'],
       },
     ],
   },
