@@ -669,6 +669,18 @@ onMounted(() => {
     bottom: 200px;
     right: 80px;
     z-index: 10;
+    @media (max-width: 1700px) {
+      right: 20px;
+    }
+    @media (max-width: 1560px) {
+      right: 2px;
+    }
+    @media (max-width: 1526px) {
+      right: 44px;
+    }
+    @media (max-width: 1439px) {
+      right: 24px;
+    }
     .float-tip {
       position: absolute;
       width: 200px;
