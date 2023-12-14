@@ -189,42 +189,46 @@ onMounted(() => {
             :key="item.title"
             class="university-item"
           >
-            <div v-if="false" class="item-logo">
-              <img :src="item.logo" alt="" />
+            <div class="item-head">
+              <div v-if="false" class="item-logo">
+                <img :src="item.logo" alt="" />
+              </div>
+              <h4 class="item-name">{{ item.name }}</h4>
+              <div class="item-detail">{{ item.detail }}</div>
             </div>
-            <h4 class="item-name">{{ item.name }}</h4>
-            <div v-if="false" class="item-detail">{{ item.detail }}</div>
-            <div class="item-tag">
-              <span class="tag-title">{{ item.contributionName }}</span>
-              <p class="tag-box">
-                <span
-                  class="tag-name"
-                  v-for="itemTag in item.contributionTagList"
-                  :key="itemTag"
-                  >{{ itemTag }}</span
+            <div class="item-footer">
+              <div class="item-tag">
+                <span class="tag-title">{{ item.contributionName }}</span>
+                <p class="tag-box">
+                  <span
+                    class="tag-name"
+                    v-for="itemTag in item.contributionTagList"
+                    :key="itemTag"
+                    >{{ itemTag }}</span
+                  >
+                </p>
+              </div>
+              <p class="item-link">
+                <a
+                  v-if="item.contributionDetail"
+                  :href="item.contributionDetailLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
+                  <span>{{ item.contributionDetail }}</span>
+                  <OIcon class="right-icon"><IconChevronRight /></OIcon>
+                </a>
+                <a
+                  v-if="item.officialWebsite"
+                  :href="item.officialWebsiteLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>{{ item.officialWebsite }}</span>
+                  <OIcon class="right-icon"><IconChevronRight /></OIcon>
+                </a>
               </p>
             </div>
-            <p class="item-link">
-              <a
-                v-if="item.contributionDetail"
-                :href="item.contributionDetailLink"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>{{ item.contributionDetail }}</span>
-                <OIcon class="right-icon"><IconChevronRight /></OIcon>
-              </a>
-              <a
-                v-if="item.officialWebsite"
-                :href="item.officialWebsiteLink"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>{{ item.officialWebsite }}</span>
-                <OIcon class="right-icon"><IconChevronRight /></OIcon>
-              </a>
-            </p>
           </OCard>
         </div>
         <div class="university-contribution-list2">
@@ -599,6 +603,11 @@ onMounted(() => {
         }
         :deep(.el-card__body) {
           padding: 32px 32px 24px;
+          height: 100%;
+          width: 100%;
+          display: flex;
+        flex-direction: column;
+        justify-content: space-between;
           @media (max-width: 767px) {
             padding: 16px;
           }
@@ -663,6 +672,11 @@ onMounted(() => {
                 font-size: var(--o-font-size-tip);
               }
             }
+          }
+          .tag-box{
+            @media (max-width: 767px) {
+              margin-top: 8px;
+          }
           }
         }
         .item-link {
