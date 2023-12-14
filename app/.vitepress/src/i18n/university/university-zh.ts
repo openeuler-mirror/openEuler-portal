@@ -103,7 +103,7 @@ export default {
     activityList: [
       {
         title: '开源实习',
-        bgImg: screenWidth.value <= 768 ?bgInternshipMb: bgInternship,
+        bgImg: screenWidth.value <= 768 ? bgInternshipMb : bgInternship,
         bgInset: '',
         detail:
           'openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。由社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证明和实习工资。',
@@ -136,26 +136,27 @@ export default {
     title: '高校贡献',
     universityContentList: [
       {
-        logo: huazhong,
-        name: '华中科技大学网络空间安全学院',
+        logo: beihang,
+        name: '北京航空航天大学杭州创新研究院',
         detail:
-          '华中科技大学网络空间安全学院贡献简介华中科技大学网络空间安全学院贡献简介华中科技大学网络空间安全学院贡献简介华中科技大学网络空间安全学院贡献简介',
+          '北京航空航天大学杭州创新研究院大数据与工业智联网研究室的开发者完成了openEuler Embedded在工业领域的软硬件适配验证以及30*24H的不间断测试，基于此研究室决定将北航全部机器人底层系统迁移到openEuler生态，同时加强与openEuler社区的深入合作，继续拓展openEuler在嵌入式领域生态和应用。',
         contributionName: 'SIG贡献',
-        contributionTagList: ['Compiler', 'Base-service'],
+        contributionTagList: ['sig-embedded'],
         contributionDetail: '',
         contributionDetailLink: '',
         officialWebsite: '前往官网',
-        officialWebsiteLink: 'https://cse.hust.edu.cn/',
+        officialWebsiteLink: 'https://hzii.buaa.edu.cn/',
       },
       {
         logo: hunan,
         name: '湖南大学',
         detail:
-          '湖南大学嵌入式与网络计算湖南省重点实验室主任谢国琪教授主导设计并开发的嵌入式实时虚拟机ZVM（Zephyr-based Virtual Machine）于2023年2月开源至openEuler社区',
+          '嵌入式实时虚拟机ZVM（Zephyr-based Virtual Machine）是由湖南大学嵌入式与网络计算湖南省重点实验室（以下简称“湖大嵌入式实验室”）主任谢国琪教授主导设计并开发的虚拟化软件。该软件基于实时操作系统（RTOS）Zephyr开发，可同时启动Linux与Zephyr 2个Guest OS，从而在同一硬件平台上实现混合内核部署。2023年2月，湖大嵌入式实验室正式将该项目开源至openEuler社区。',
         contributionName: 'SIG贡献',
         contributionTagList: ['Zephyr'],
         contributionDetail: '贡献详情',
-        contributionDetailLink: 'https://datastat.openeuler.org/zh/sig/sig-Zephyr',
+        contributionDetailLink:
+          'https://datastat.openeuler.org/zh/sig/sig-Zephyr',
         officialWebsite: '前往官网',
         officialWebsiteLink: 'https://www.hnu.edu.cn/',
       },
@@ -163,7 +164,7 @@ export default {
         logo: beihang,
         name: '北京航空航天大学计算机学院',
         detail:
-          '北京航空航天大学计算机学院王雷教授团队设计开发的虚拟机监控器 Rust-Shyper 实现了一个高可靠、嵌入式 Hypervisor，于2023年2月15日正式在openEuler社区开源',
+          'Rust-Shyper 是北京航空航天大学计算机学院王雷教授团队设计开发的虚拟机监控器，该系统基于 Rust 语言，实现了一个高可靠、嵌入式 Hypervisor。2023 年 2 月 15 日 Rust-Shyper 正式在 openEuler 社区开源。',
         contributionName: 'SIG贡献',
         contributionTagList: ['Virt'],
         contributionDetail: '贡献详情',
@@ -175,7 +176,7 @@ export default {
         logo: shangjiao,
         name: '上海交通大学',
         detail:
-          '上海交通大学贡献简介上海交通大学贡献简介上海交通大学贡献简介上海交通大学贡献简介上海交通大学贡献简介上海交通大学贡献简介上海交通大学贡献简介',
+          '上海交通大学 IPADS 实验室将“蓬莱”TEE（可信执行环境）与 openEuler 进行整合，赋予机器学习新安全属性，以保障模型开发者、数据所有者与最终用户的隐私与权益。“蓬莱”TEE 作为 openEuler 安全计算的基石之一，将与 openEuler 社区一起，不断完善对多架构、多设备、多框架的支持，持续打造高效、安全、可信的机器学习框架。',
         contributionName: 'SIG贡献',
         contributionTagList: ['sig-RISC-V', 'doc'],
         contributionDetail: '',
@@ -186,8 +187,8 @@ export default {
     ],
     universityList: [
       {
-        logo: beihang,
-        name: '北京航空航天大学杭州创新研究院',
+        logo: huazhong,
+        name: '华中科技大学网络空间安全学院',
       },
       {
         logo: beida,
