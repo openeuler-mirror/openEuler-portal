@@ -58,7 +58,7 @@ function createUserId(liveId: number) {
 
   // landScape 是否启用 H5 直播间横屏适配
   // logout=1 增加参数 logout=1 时，页面会做退出登录处理，会以游客身份观看
-  liveUrl.value = `https://hw.vhallyun.com/v2/watch/${liveId}?lang=zh&thirdId=${userName}&landScape=true&allowfullscreen=true&webkitallowfullscreen=true&mozallowfullscreen=true`;
+  liveUrl.value = `https://hw.vhallyun.com/v2/watch/${liveId}?lang=zh&thirdId=${userName}&landScape=true`;
 }
 const height = ref(800);
 function setHeight(data: any) {

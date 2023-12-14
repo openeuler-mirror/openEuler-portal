@@ -7,5 +7,7 @@ import type { AxiosResponse } from '@/shared/axios';
  */
 export function getEasyeditorInfo(params: string) {
   const url = `/api-easyeditor/api/publish/latest?path=${params}`;
-  return request.get(url).then((res: AxiosResponse) => res.data);
+  return request
+    .get(url, { $ignoreLoading: true })
+    .then((res: AxiosResponse) => res.data);
 }

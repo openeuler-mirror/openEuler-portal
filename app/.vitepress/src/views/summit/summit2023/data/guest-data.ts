@@ -133,15 +133,18 @@ export default {
         img: gaotongqing,
         name: '高同庆',
         position: ['中国移动通信集团有限公司', '副总经理'],
-        nameEn: '',
-        positionEn: ['', ''],
+        nameEn: 'Gao Tongqing',
+        positionEn: ['Vice General Manager', 'China Mobile'],
       },
       {
         img: caopeng,
         name: '曹鹏',
         position: ['京东集团技术委员会主席', '京东云事业部总裁'],
-        nameEn: '',
-        positionEn: ['', ''],
+        nameEn: 'Cao Peng',
+        positionEn: [
+          'Technology Committee Chair',
+          'JD.com | President, JD Cloud',
+        ],
       },
       {
         img: jiangdayong,

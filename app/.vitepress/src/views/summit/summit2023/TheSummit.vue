@@ -10,6 +10,7 @@ import SummitBanner from './components/SummitBanner.vue';
 import SummitSchedule from './components/SummitSchedule.vue';
 import SummitGuests from './components/SummitGuests.vue';
 import SummitLive from './components/SummitLive.vue';
+import NotFound from '@/NotFound.vue';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 
@@ -52,17 +53,23 @@ function setShowIndex(index: number) {
   tabType.value = 0;
 }
 // 获取议程数据
+const isNoData = ref(false);
 const agendaData = ref([]);
 onMounted(() => {
   const href = `https://www.openeuler.org/${lang.value}/interaction/summit-list/summit2023/`;
-  getEasyeditorInfo(href).then((res) => {
-    if (res.data && res.data[0]) {
-      for (let i = 0; i < res.data.length; i++) {
-        res.data[i].content = JSON.parse(res.data[i].content);
-        agendaData.value = res.data;
+  getEasyeditorInfo(href)
+    .then((res) => {
+      if (res.data && res.data[0]) {
+        for (let i = 0; i < res.data.length; i++) {
+          res.data[i].content = JSON.parse(res.data[i].content);
+          agendaData.value = res.data;
+          isNoData.value = false;
+        }
       }
-    }
-  });
+    })
+    .catch(() => {
+      isNoData.value = true;
+    });
 });
 const getData: any = computed(() => {
   let temp;
@@ -125,7 +132,7 @@ function goLive(index: number) {
 onMounted(() => {
   const { href } = window.location;
   const paramsArr = getUrlParams(href);
-  if (lang.value === 'zh' && paramsArr.live) {
+  if (lang.value === 'zh' && paramsArr && paramsArr.live) {
     isLiverShown.value = paramsArr.live - 1;
     history.pushState(null, '', location.origin + location.pathname);
   }
@@ -257,9 +264,14 @@ onMounted(() => {
           </el-tab-pane>
         </el-tabs>
         <p v-if="lang === 'en'" class="time-tip">*Time zone: GMT+8</p>
-        <template v-for="item in renderData" :key="item.lable">
-          <SummitSchedule :agenda-data="item" />
+        <template v-if="!isNoData">
+          <SummitSchedule
+            v-for="item in renderData"
+            :key="item.lable"
+            :agenda-data="item"
+          />
         </template>
+        <NotFound v-else></NotFound>
         <p class="change-tip">{{ summitData.agenda.changeTip }}</p>
       </div>
     </div>
