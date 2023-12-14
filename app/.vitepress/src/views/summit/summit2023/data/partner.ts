@@ -72,8 +72,8 @@ export default {
       ],
     },
     {
-      subTitle: '联合主办单位',
-      subTitleEn: 'Co-Hosts',
+      subTitle: 'openEuler Summit 2023联合主办单位',
+      subTitleEn: 'openEuler Summit 2023 Co-Hosts',
       logoList: [
         {
           img: qiling,
@@ -98,8 +98,8 @@ export default {
       ],
     },
     {
-      subTitle: '协办单位',
-      subTitleEn: 'Co-Organizers',
+      subTitle: 'openEuler Summit 2023协办单位',
+      subTitleEn: 'openEuler Summit 2023 Co-Organizers',
       logoList: [
         {
           img: tongxin,
