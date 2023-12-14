@@ -23,12 +23,6 @@ onMounted(() => {
 const { lang } = useData();
 const windowWidth = ref(useWindowResize());
 
-function handleClick(link: string, target: string = '_blank') {
-  if (!link) {
-    return;
-  }
-  window.open(link, target);
-}
 </script>
 
 <template>
@@ -58,16 +52,14 @@ function handleClick(link: string, target: string = '_blank') {
             data-aos="fade-up"
             class="action"
           >
-            <OButton
-              animation
-              class="home-banner-btn"
-              @click="handleClick(bannerData.link, bannerData.targetTap)"
-            >
-              {{ bannerData.btn }}
-              <template #suffixIcon>
-                <OIcon><IconArrowRight /></OIcon>
-              </template>
-            </OButton>
+            <a :href="'#' + bannerData.link">
+              <OButton animation class="home-banner-btn">
+                {{ bannerData.btn }}
+                <template #suffixIcon>
+                  <OIcon><IconArrowRight /></OIcon>
+                </template>
+              </OButton>
+            </a>
           </div>
         </div>
         <img
@@ -190,6 +182,9 @@ html[lang='zh'] {
       }
       .action {
         margin-top: var(--o-spacing-h3);
+        a {
+          display: inline-block;
+        }
         .o-icon {
           @media screen and (max-width: 824px) {
             font-size: 16px;

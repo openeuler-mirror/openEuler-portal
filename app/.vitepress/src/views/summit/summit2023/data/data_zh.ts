@@ -8,13 +8,12 @@ export default {
   banner: {
     pcBanner: banner_pc,
     moBanner: banner_mo,
-    link: 'https://e-campaign.huawei.com/events3/UniversalForm/register/200908020/register.html?site=cn&formId=6155&way=onsite',
+    link: 'live',
     id: '',
     img: textImg,
     title: [''],
     desc: [''],
-    btn: '立即报名',
-    targetTap: '_blank',
+    btn: '观看直播',
   },
   introduce:
     '数字化、智能化浪潮正奔涌而来。操作系统作为数字基础设施的底座，已经成为推动产业数字化、智能化发展的核心力量，操作系统的发展为数智未来提供了无限可能。',
@@ -32,8 +31,8 @@ export default {
   introduce5: '汇聚开源，贡献智慧，共建数智时代的操作系统，共促数字经济腾飞。',
   agenda: {
     title: '会议日程',
-    tabType: ['上午：主论坛','下午：分论坛'],
-    changeTip:'注：最终日程安排以会议当天实际议程为准。'
+    tabType: ['上午：主论坛', '下午：分论坛'],
+    changeTip: '注：最终日程安排以会议当天实际议程为准。',
   },
   live: liveData,
   guest: guestData,

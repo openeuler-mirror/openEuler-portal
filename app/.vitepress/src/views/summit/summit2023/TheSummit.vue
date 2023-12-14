@@ -163,7 +163,7 @@ onMounted(() => {
         >Visa Letter Request</OButton
       >
     </div>
-    <div class="live">
+    <div id="live" class="live">
       <h3 class="title-bar">
         {{ lang === 'zh' ? summitData.live.title : summitData.live.titleEn }}
       </h3>
