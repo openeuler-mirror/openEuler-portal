@@ -707,6 +707,11 @@ export default {
               PATH: 'https://docs.openeuler.org/zh/',
             },
             {
+              NAME: '高校',
+              LABEL: '了解高校技术小组与实习赛事资讯',
+              PATH: '/universities/',
+            },
+            {
               NAME: '课程中心',
               LABEL: '',
               PATH: '/learn/mooc/',
