@@ -52,6 +52,7 @@ const tipsObj: TitleItemT = {
   '/showcase/technical-white-paper/': TITLES2[1],
   '/showcase/white-paper/': TITLES2[1],
   '/learn/mooc/': TITLES2[2],
+  '/universities/': TITLES2[2],
   '/community/contribution/': TITLES2[2],
   '/sig/sig-list/': TITLES2[2],
   '/internship/': TITLES2[2],

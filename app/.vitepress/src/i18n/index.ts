@@ -27,6 +27,7 @@ import certification from './certification';
 import about from './about';
 import sky from './sky';
 import group from './group';
+import university from './university';
 
 const i18n: { [key: string]: any } = {
   zh: {
@@ -56,6 +57,7 @@ const i18n: { [key: string]: any } = {
     about: about.zh,
     sky: sky.zh,
     group: group.zh,
+    university:university.zh,
   },
   en: {
     sig: sig.en,

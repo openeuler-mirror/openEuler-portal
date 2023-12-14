@@ -225,4 +225,8 @@ export default [
     name: 'certificate-center',
     lang: ['zh'],
   },
+  {
+    name: 'universities',
+    lang: ['zh'],
+  },
 ];
