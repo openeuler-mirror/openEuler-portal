@@ -10,6 +10,7 @@ import SummitBanner from './components/SummitBanner.vue';
 import SummitSchedule from './components/SummitSchedule.vue';
 import SummitGuests from './components/SummitGuests.vue';
 import SummitLive from './components/SummitLive.vue';
+import SummitPartner from './components/SummitPartner.vue';
 import NotFound from '@/NotFound.vue';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
@@ -332,6 +333,7 @@ onMounted(() => {
         :mobile-columns-num="2"
       />
     </div>
+    <SummitPartner />
     <div v-if="lang === 'zh'" class="previous">
       <div class="previous-title">
         <h3>{{ summitData.previous.title }}</h3>
