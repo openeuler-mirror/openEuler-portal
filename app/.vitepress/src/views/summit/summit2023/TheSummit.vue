@@ -45,10 +45,10 @@ const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );
 // 直播面房间切换
-const isLiverShown = ref(0);
+const isLiverShown = ref(1);
 
 // 议程日期切换
-const showIndex = ref(0);
+const showIndex = ref(1);
 function setShowIndex(index: number) {
   showIndex.value = index;
   tabType.value = 0;
