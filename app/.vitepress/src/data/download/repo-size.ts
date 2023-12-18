@@ -5,7 +5,7 @@ export default [
   },
   {
     release: 'openEuler-20.03-LTS-SP1',
-    size: '403G',
+    size: '479G',
   },
   {
     release: 'openEuler-20.03-LTS-SP2',
@@ -13,7 +13,11 @@ export default [
   },
   {
     release: 'openEuler-20.03-LTS-SP3',
-    size: '321G',
+    size: '399G',
+  },
+  {
+    release: 'openEuler-20.03-LTS-SP4',
+    size: '184G',
   },
   {
     release: 'openEuler-20.09',
@@ -29,15 +33,15 @@ export default [
   },
   {
     release: 'openEuler-22.03-LTS',
-    size: '375G',
+    size: '551G',
   },
   {
     release: 'openEuler-22.03-LTS-SP1',
-    size: '270G',
+    size: '384G',
   },
   {
     release: 'openEuler-22.03-LTS-SP2',
-    size: '243G',
+    size: '330G',
   },
   {
     release: 'openEuler-22.09',
@@ -49,11 +53,11 @@ export default [
   },
   {
     release: 'openEuler-23.09',
-    size: '306G',
+    size: '313G',
   },
   {
     release: 'openEuler-preview',
-    size: '170G',
+    size: '174G',
   },
   {
     release: 'openeuler1.0',
@@ -61,10 +65,10 @@ export default [
   },
   {
     release: 'security',
-    size: '21M',
+    size: '33M',
   },
   {
     release: 'Total',
-    size: '3.1T',
+    size: '3.7T',
   },
 ];
