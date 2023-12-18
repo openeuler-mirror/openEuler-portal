@@ -1,5 +1,5 @@
 export default {
-  title: '峰会直播',
+  title: '精彩回顾',
   titleEn:'Live Stream',
   date: ['12月15日', '12月16日'],
   dateEn: ['Dec 15', 'Dec 16'],
