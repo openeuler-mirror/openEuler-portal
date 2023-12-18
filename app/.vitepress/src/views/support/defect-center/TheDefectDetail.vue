@@ -1,15 +1,12 @@
 <script lang="ts" setup>
-import { reactive, onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { useRouter, useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
 import securityNoticeNos from '@/data/security';
 import { getSecurityDetail } from '@/api/api-security';
-import type {
-  PackageInfo,
-  HotPatch,
-} from '@/shared/@types/type-support';
+import type { PackageInfo, HotPatch } from '@/shared/@types/type-support';
 
 import IconChevronRight from '~icons/app/icon-chevron-right.svg';
 

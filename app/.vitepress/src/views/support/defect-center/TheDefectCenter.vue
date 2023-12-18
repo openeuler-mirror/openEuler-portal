@@ -12,7 +12,7 @@ import {
 } from '@/api/api-security';
 import {
   SecurityLists,
-  SafetyBulletinQUery,
+  SafetyBulletinQuery,
 } from '@/shared/@types/type-support';
 
 import type { CheckboxValueType } from 'element-plus';
@@ -65,7 +65,7 @@ const queryData: any = reactive({
   affectedComponent: '',
 });
 
-function getSecurityLists(data: SafetyBulletinQUery) {
+function getSecurityLists(data: SafetyBulletinQuery) {
   getSecurityList(data).then((res: any) => {
     tableData.value = res.result.securityNoticeList;
 

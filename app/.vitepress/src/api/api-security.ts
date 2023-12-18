@@ -323,3 +323,53 @@ export function getComponentList(params: ComponentQuery): Promise<string[]> {
     .get(url, { params })
     .then((res: AxiosResponse) => res.data)
 }
+
+/**
+ * 获取解决方案列表
+ * @param {} params 请求参数
+ * @return {Object} 
+ */
+export function getSolutionList(params: CompatibilityQuery): Promise<{
+  code: number,
+  msg: string,
+  result: TotalDataT,
+  success: boolean,
+}> {
+  const url =
+    '/api-euler/api-cve/cve-security-notice-server/solutioncomp/findAll';
+  return request
+    .post(url, params)
+    .then((res: AxiosResponse) => res.data)
+}
+
+/**
+ * 获取解决方案数据
+ * @returns {Object}
+ */
+export function getSolution(): Promise<{
+  code: number,
+  msg: string,
+  result: string[],
+  success: boolean
+}> {
+  const url = '/api-euler/api-cve/cve-security-notice-server/solutioncomp/getSolution?lang=zh';
+  return request
+    .get(url)
+    .then((res: AxiosResponse) => res.data)
+}
+
+/**
+ * 获取认证类型数据
+ * @returns {Object}
+ */
+export function getCertificationType(): Promise<{
+  code: number,
+  msg: string,
+  result: string[],
+  success: boolean
+}> {
+  const url = '/api-euler/api-cve/cve-security-notice-server/solutioncomp/getCertificationType?lang=zh';
+  return request
+    .get(url)
+    .then((res: AxiosResponse) => res.data)
+}
