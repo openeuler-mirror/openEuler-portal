@@ -1475,7 +1475,8 @@ export default {
               {
                 TYPE: 'Offline Standard ISO',
                 SIZE: '3.0 GiB',
-                SHACODE: 'cf38eb9ab040306765a74202313d3556aaea8c3c69d1e506b32d93693c27d7af',
+                SHACODE:
+                  'cf38eb9ab040306765a74202313d3556aaea8c3c69d1e506b32d93693c27d7af',
                 DOWNLOAD_LINK:
                   'openEuler-22.03-LTS/ISO/loongarch64/openEuler-22.03-LTS-loongarch64-dvd.iso',
                 TIPS: 'loongarch64架构的基础安装ISO，包含了运行最小系统的核心组件',
@@ -1483,7 +1484,8 @@ export default {
               {
                 TYPE: 'Offline Everything ISO',
                 SIZE: '12.1 GiB',
-                SHACODE: 'd571ddedaf3bf5c7e0389b1a66cc0544dab236297cf356e652b6176ce2c63751',
+                SHACODE:
+                  'd571ddedaf3bf5c7e0389b1a66cc0544dab236297cf356e652b6176ce2c63751',
                 DOWNLOAD_LINK:
                   'openEuler-22.03-LTS/ISO/loongarch64/openEuler-22.03-LTS-everything-loongarch64-dvd.iso',
                 TIPS: 'loongarch64架构的全量安装ISO，包含了运行完整系统所需的全部组件',
@@ -1491,7 +1493,8 @@ export default {
               {
                 TYPE: 'Network Install ISO',
                 SIZE: '718.7 MiB',
-                SHACODE: '2e2d74c9c0be76a712c3c22aab489b171ccfa7ebf99bde7b879638b5cf09ed14',
+                SHACODE:
+                  '2e2d74c9c0be76a712c3c22aab489b171ccfa7ebf99bde7b879638b5cf09ed14',
                 DOWNLOAD_LINK:
                   'openEuler-22.03-LTS/ISO/loongarch64/openEuler-22.03-LTS-netinst-loongarch64-dvd.iso',
                 TIPS: '',
@@ -1710,6 +1713,92 @@ export default {
           },
         ],
         PLANNED_EOL: '2024/03',
+      },
+      {
+        NAME: 'openEuler 20.03 LTS SP4',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP4/',
+        DESC: 'openEuler 20.03 LTS SP4 是openEuler 20.03 LTS的补丁版本，生命周期与LTS版本相同',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/zh/docs/20.03_LTS_SP4/docs/Releasenotes/release_notes.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/zh/docs/20.03_LTS_SP4/docs/Installation/installation.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+        WEBSITE_SELECT: '/zh/mirror/select/?version=20.03-LTS-SP4',
+        MANUFACTURER: 'openEuler社区',
+        PUBLISH_DATE: '2023/12',
+        LTS: true,
+        VERSION: '20.03-LTS-SP4',
+        DETAILED_LINK: [
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.5 GiB',
+                SHACODE:
+                  '05eff42d57d5f91098dc58b580f57bb96f0def0927cdc4f3c26097afc0a977b6',
+                DOWNLOAD_LINK:
+                  'openEuler-20.03-LTS-SP4/ISO/x86_64/openEuler-20.03-LTS-SP4-x86_64-dvd.iso',
+                TIPS: 'x86_64架构的基础安装ISO，包含了运行最小系统的核心组件',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '16.5 GiB',
+                SHACODE:
+                  '52292368af2729b5cd8e2908db4c1fd9092db6cad0a2ad62a0e41f3ab644ab7a',
+                DOWNLOAD_LINK:
+                  'openEuler-20.03-LTS-SP4/ISO/x86_64/openEuler-20.03-LTS-SP4-everything-x86_64-dvd.iso',
+                TIPS: 'x86_64架构的全量安装ISO，包含了运行完整系统所需的全部组件',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '921.0 MiB',
+                SHACODE:
+                  'db9d733bd520fcbdd1a07efa0e139de019b12ab1b2a4f04788a37ab3f3e38af2',
+                DOWNLOAD_LINK:
+                  'openEuler-20.03-LTS-SP4/ISO/x86_64/openEuler-20.03-LTS-SP4-netinst-x86_64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.2 GiB',
+                SHACODE:
+                  '9573728fea006aa14395e6ba88a2d80a39f9cb578739031b85b07334f5cde071',
+                DOWNLOAD_LINK:
+                  'openEuler-20.03-LTS-SP4/ISO/aarch64/openEuler-20.03-LTS-SP4-aarch64-dvd.iso',
+                TIPS: 'aarch64架构的边缘ISO，包含了运行最小系统的核心组件',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '16.2 GiB',
+                SHACODE:
+                  'e9a871318144e6353d8d6a496e040b56b3feb5517b919f26ffc3e8fb53ad5ee5',
+                DOWNLOAD_LINK:
+                  'openEuler-20.03-LTS-SP4/ISO/aarch64/openEuler-20.03-LTS-SP4-everything-aarch64-dvd.iso',
+                TIPS: 'aarch64架构的全量安装ISO，包含了运行完整系统所需的全部组件',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '896.5 MiB',
+                SHACODE:
+                  '597bad137079b2b626d8d89cc4828f1e47f78dabea82daf64d315229605d7f2a',
+                DOWNLOAD_LINK:
+                  'openEuler-20.03-LTS-SP4/ISO/aarch64/openEuler-20.03-LTS-SP4-netinst-aarch64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+        ],
+        PLANNED_EOL: '2025/12',
       },
       {
         NAME: 'openEuler 20.03 LTS SP3',
@@ -3981,6 +4070,92 @@ export default {
           },
         ],
         PLANNED_EOL: '2024/03',
+      },
+      {
+        NAME: 'openEuler 20.03 LTS SP4',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP4/',
+        DESC: 'openEuler 20.03 LTS SP3 is the patch version of openEuler 20.03 LTS, and both versions have the same lifecycle.',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/en/docs/20.03_LTS_SP4/docs/Releasenotes/release_notes.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/en/docs/20.03_LTS_SP4/docs/Installation/Installation.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+        WEBSITE_SELECT: '/zh/mirror/select/?version=20.03-LTS-SP4',
+        MANUFACTURER: 'openEuler社区',
+        PUBLISH_DATE: '2023/12',
+        LTS: true,
+        VERSION: '20.03-LTS-SP4',
+        DETAILED_LINK: [
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.5 GiB',
+                SHACODE:
+                  '05eff42d57d5f91098dc58b580f57bb96f0def0927cdc4f3c26097afc0a977b6',
+                DOWNLOAD_LINK:
+                  'openEuler-20.03-LTS-SP4/ISO/x86_64/openEuler-20.03-LTS-SP4-x86_64-dvd.iso',
+                TIPS: 'Base installation ISO file of the x86_64 architecture, including the core components for running the minimum system.',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '16.5 GiB',
+                SHACODE:
+                  '52292368af2729b5cd8e2908db4c1fd9092db6cad0a2ad62a0e41f3ab644ab7a',
+                DOWNLOAD_LINK:
+                  'openEuler-20.03-LTS-SP4/ISO/x86_64/openEuler-20.03-LTS-SP4-everything-x86_64-dvd.iso',
+                TIPS: 'Full installation ISO file of the x86_64 architecture, including all components for running the entire system.',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '921.0 MiB',
+                SHACODE:
+                  'db9d733bd520fcbdd1a07efa0e139de019b12ab1b2a4f04788a37ab3f3e38af2',
+                DOWNLOAD_LINK:
+                  'openEuler-20.03-LTS-SP4/ISO/x86_64/openEuler-20.03-LTS-SP4-netinst-x86_64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.2 GiB',
+                SHACODE:
+                  '9573728fea006aa14395e6ba88a2d80a39f9cb578739031b85b07334f5cde071',
+                DOWNLOAD_LINK:
+                  'openEuler-20.03-LTS-SP4/ISO/aarch64/openEuler-20.03-LTS-SP4-aarch64-dvd.iso',
+                TIPS: 'Base installation ISO file of the aarch64 architecture, including the core components for running the minimum system.',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '16.2 GiB',
+                SHACODE:
+                  'e9a871318144e6353d8d6a496e040b56b3feb5517b919f26ffc3e8fb53ad5ee5',
+                DOWNLOAD_LINK:
+                  'openEuler-20.03-LTS-SP4/ISO/aarch64/openEuler-20.03-LTS-SP4-everything-aarch64-dvd.iso',
+                TIPS: 'Full installation ISO file of the aarch64 architecture, including all components for running the entire system.',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '896.5 MiB',
+                SHACODE:
+                  '597bad137079b2b626d8d89cc4828f1e47f78dabea82daf64d315229605d7f2a',
+                DOWNLOAD_LINK:
+                  'openEuler-20.03-LTS-SP4/ISO/aarch64/openEuler-20.03-LTS-SP4-netinst-aarch64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+        ],
+        PLANNED_EOL: '2025/12',
       },
       {
         NAME: 'openEuler 20.03 LTS SP3',
