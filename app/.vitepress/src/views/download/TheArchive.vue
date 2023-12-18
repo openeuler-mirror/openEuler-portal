@@ -270,7 +270,7 @@ const changeCurrentPageMoblie = (val: string) => {
         <OTable class="pc-list" :data="dataList">
           <el-table-column
             :label="i18n.download.VERSION"
-            :width="screenWidth > 1400 ? '200' : '200'"
+            :width="screenWidth > 1400 ? '260' : '240'"
           >
             <template #default="scope: any">
               {{ scope.row?.NAME }}
@@ -309,7 +309,7 @@ const changeCurrentPageMoblie = (val: string) => {
           </el-table-column>
           <el-table-column
             :label="i18n.download.RELEASE_DATE"
-            :width="screenWidth > 1400 ? '200' : '150'"
+            :width="screenWidth > 1400 ? '' : '150'"
           >
             <template #default="scope: any">
               {{ scope.row?.PUBLISH_DATE }}
@@ -317,7 +317,7 @@ const changeCurrentPageMoblie = (val: string) => {
           </el-table-column>
           <el-table-column
             :label="i18n.download.PLANNEDEOL"
-            :width="screenWidth > 1400 ? '200' : '150'"
+            :width="screenWidth > 1400 ? '' : '150'"
           >
             <template #default="scope: any">
               {{ scope.row?.PLANNED_EOL }}
@@ -325,7 +325,7 @@ const changeCurrentPageMoblie = (val: string) => {
           </el-table-column>
           <el-table-column
             :label="i18n.download.DOWNLOAD_LINK"
-            :width="screenWidth > 1400 ? '' : '200'"
+            :width="screenWidth > 1400 ? '200' : '160'"
           >
             <template #default="scope: any">
               <a
