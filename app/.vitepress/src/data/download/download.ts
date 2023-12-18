@@ -1612,6 +1612,21 @@ export default {
           {
             LINK_LIST: [
               {
+                TYPE: 'qcow2.xz',
+                SIZE: '364.8 MiB',
+                SHACODE:
+                  'b6c1556cbf7f00930f0d04ec4fe8f4e71c492f4272f10b9bac2d7b79cfab823b',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS/virtual_machine_img/loongarch64/openEuler-22.03-LTS-LoongArch-loongarch64.qcow2.xz',
+                TIPS: 'LoongArch64架构下openEuler虚拟机镜像',
+              },
+            ],
+            ARCH: 'LoongArch64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          {
+            LINK_LIST: [
+              {
                 TYPE: 'Image',
                 SIZE: '8.3 MiB',
                 SHACODE:
@@ -3968,6 +3983,21 @@ export default {
               },
             ],
             ARCH: 'AArch64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '364.8 MiB',
+                SHACODE:
+                  'b6c1556cbf7f00930f0d04ec4fe8f4e71c492f4272f10b9bac2d7b79cfab823b',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS/virtual_machine_img/loongarch64/openEuler-22.03-LTS-LoongArch-loongarch64.qcow2.xz',
+                TIPS: 'M image of openEuler in the LoongArch64 architecture.',
+              },
+            ],
+            ARCH: 'LoongArch64',
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
