@@ -115,6 +115,17 @@ export default {
           },
         ],
       },
+      {
+        month: '12',
+        actives: [
+          {
+            activeName: '操作系统大会＆openEuler Summit 2023',
+            activelink: {
+              url: 'https://www.openeuler.org/zh/interaction/summit-list/summit2023/',
+            },
+          },
+        ],
+      },
     ],
   },
   developer: {
@@ -341,6 +352,9 @@ export default {
             activeEvent: [
               {
                 activeName: '苏州 迁移',
+                activelink: {
+                  url: '/zh/interaction/event-list/detail/?id=101&isMini=1',
+                },
               },
               {
                 activeName: '线上 消息中间件',
@@ -352,6 +366,22 @@ export default {
             activeEvent: [
               {
                 activeName: '成都',
+                activelink: {
+                  url: '/zh/interaction/event-list/detail/?id=102&isMini=1',
+                },
+              },
+            ],
+          },
+        ],
+      },
+      {
+        month: '12',
+        actives: [
+          {
+            activeType: 'Meetup',
+            activeEvent: [
+              {
+                activeName: '新加坡 Free and Open Summit',
               },
             ],
           },

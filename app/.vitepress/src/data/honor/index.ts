@@ -277,17 +277,10 @@ export default {
             {
               name: '方林旭',
               detail: [
-                '作为openEuler Embedded嵌入式maintainer，在openEuler Embedded北向软件及中间件领域具有突破性贡献：包括嵌入式ROS2机器人运行时及交叉编译SDK（业界首开源方案）、嵌入式图形、嵌入式容器isuald、嵌入式包管理等：',
-                '1. 贡献openEuler Embedded ROS2运行时及快速交叉编译SDK，业界首开源方案实现：',
-                '    -https://gitee.com/openeuler/yocto-meta-openeuler/pulls/1080',
-                '2. 移植适配ROS2新humble版本嵌入式yocto配方支持，实现openeuler源在嵌入式yocto自动映射和构建：',
-                '    -https://gitee.com/openeuler/yocto-meta-ros/pulls/1',
-                '    -https://gitee.com/openeuler/yocto-meta-openeuler/pulls/1140',
-                '3. 贡献openEuler社区ROS2第三方代码转yocto配方工具，移植适配ROS2 SLAM典型场景在树莓派的支持（涉及依赖软件100+，含openCV、摄像头等图形处理库），移植第三方originbot机器人支持（含第三方驱动依赖，如雷达、地盘、串口等软件）；',
-                '4. 贡献了openEuler Embedded ROS2运行时及快速交叉编译SDK，业界首开源方案实现，集成了ROS humble在yocto的支持，完成在openEuler嵌入式的多项典型机器人场景的ROS应用穿刺；',
-                '5. 贡献了Wayland基于wlroots的Wayfire等多个热门组合器、集成了常用极简终端、文件管理、图形查看器、文本编辑器、任务管理器等嵌入式图形里程碑应用支持；',
-                '6. 贡献了iSulad在openEuler嵌入式标准全量功能支持、完善了glibc多字符集及嵌入式dnf包管理等用户关键需求特性；',
-                '7. 作为Maintainer长期负责嵌入式版本软件维护和升级',
+                '1.OS humble在yocto的支持，完成在openEuler嵌入式的多项典型机器人场景的ROS应用穿刺；',
+                '2. 贡献了Wayland基于wlroots的Wayfire等多个热门组合器、集成了常用极简终端、文件管理、图形查看器、文本编辑器、任务管理器等嵌入式图形里程碑应用支持；',
+                '3. 贡献了iSulad在openEuler嵌入式标准全量功能支持、完善了glibc多字符集及嵌入式dnf包管理等用户关键需求特性；',
+                '4. 作为Maintainer长期负责嵌入式版本软件维护和升级。',
               ],
               post: ['华为技术有限公司', 'fanglinxu'],
               img: fanglinxu,
@@ -381,13 +374,6 @@ export default {
                 '5. 厂商交流',
                 '    a. 作为sig Maintianer代表线下与中国传统中间件厂商东方通交流，并且邀请他们一起参与openEuler message-middleware sig组的消息相关的开源项目共同建设，',
                 '提升sig组的多元化发展和行业影响力；       ',
-                '（4）与其他开源社区合作',
-                '    a. 与Apache RocketMQ社区紧密合作，共同推进openEuler RocketMQ与上游开源Apache RocketMQ的版本协同发布；',
-                '    b. 与Apache EventMesh社区紧密合作，共同推进openEuler EventMesh与上游开源Apache EventMesh的版本协同发布；',
-                '    c. 与Apache Pulsar社区紧密合作，共同推进openEuler Pulsar与上游开源Apache Pulsar的版本协同发布, 以及联合举办线上技术分享直播；',
-                '（5）厂商交流',
-                '    a. 作为sig Maintianer代表线下与中国传统中间件厂商东方通交流，并且邀请他们一起参与openEuler message-middleware sig组的消息相关的开源项目共同建设，',
-                '提升sig组的多元化发展和行业影响力；',
               ],
               post: ['中国移动云能力中心', 'hu-zongtang '],
               img: huzongtang,
@@ -745,7 +731,9 @@ export default {
               },
               {
                 name: 'NestOS',
-                detail: ['NestOS是在openEuler社区孵化的云底座操作系统，集成了rpm-ostree支持、ignition配置等技术，采用双根文件系统、原子化更新的设计思路，使用nestos-assembler快速集成构建。并针对K8S、openStack等平台进行适配，优化容器运行底噪，使系统具备十分便捷的集群组件能力，可以更安全的运行大规模的容器化工作负载。'],
+                detail: [
+                  'NestOS是在openEuler社区孵化的云底座操作系统，集成了rpm-ostree支持、ignition配置等技术，采用双根文件系统、原子化更新的设计思路，使用nestos-assembler快速集成构建。并针对K8S、openStack等平台进行适配，优化容器运行底噪，使系统具备十分便捷的集群组件能力，可以更安全的运行大规模的容器化工作负载。',
+                ],
                 link: 'https://nestos.openeuler.org/',
               },
               {
@@ -825,7 +813,9 @@ export default {
               },
               {
                 name: 'Rust-Shyper',
-                detail: ['基于Rust编写的、面向嵌入式混合关键场景的、高安全Type-1型虚拟机监控器。'],
+                detail: [
+                  '基于Rust编写的、面向嵌入式混合关键场景的、高安全Type-1型虚拟机监控器。',
+                ],
                 link: '',
               },
               {
@@ -850,7 +840,9 @@ export default {
             awardList: [
               {
                 name: 'FangTian视窗引擎',
-                detail: ['构建openEuler视窗根技术，打造桌面环境基础底座。提供显示服务，窗口管理，图形绘制、合成、送显等。'],
+                detail: [
+                  '构建openEuler视窗根技术，打造桌面环境基础底座。提供显示服务，窗口管理，图形绘制、合成、送显等。',
+                ],
                 link: '',
               },
               {

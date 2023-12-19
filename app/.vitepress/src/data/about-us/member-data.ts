@@ -106,12 +106,12 @@ export default {
           img_dark: liantong_dark,
         },
         {
-          img_light: yidong_light,
-          img_dark: yidong_dark,
-        },
-        {
           img_light: intel_light,
           img_dark: intel_dark,
+        },
+        {
+          img_light: yidong_light,
+          img_dark: yidong_dark,
         },
       ],
     },
@@ -243,12 +243,12 @@ export default {
           img_dark: liantong_dark,
         },
         {
-          img_light: yidong_light,
-          img_dark: yidong_dark,
-        },
-        {
           img_light: intel_light,
           img_dark: intel_dark,
+        },
+        {
+          img_light: yidong_light,
+          img_dark: yidong_dark,
         },
       ],
     },
