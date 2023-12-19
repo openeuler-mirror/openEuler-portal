@@ -51,6 +51,17 @@ function convertMd(data: string) {
         >点击此处</a
       >并选择感兴趣的SIG组-Etherpad文件，按要求填写议题和参会信息
     </p>
+    <p
+      v-if="agendaData.lable.includes('技术分论坛')"
+      class="go-etherpad"
+    >
+      <a
+        href="https://gitee.com/openeuler/marketing/tree/master/events/openEuler%20Summit%202023"
+        target="_blank"
+        rel="noopener noreferrer"
+        >演讲PPT下载</a
+      >
+    </p>
     <div class="schedule-item other">
       <el-tabs
         v-if="agendaData.content[1]"
