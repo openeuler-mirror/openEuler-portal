@@ -1,3 +1,5 @@
+import Cookies from 'js-cookie';
+
 // 格式化数字
 export function formatNumber(num: number) {
   return num >= 1e3 && num < 1e4
@@ -163,29 +165,40 @@ export function isTestPhone(str: string) {
   return /^1[3|4|5|6|7|8|9][0-9]\d{8}$/.test(str);
 }
 
-/*
- * setCookie 设置cookie
- *  cname cookie的名称
- *  cvalue cookie的值
- *  day cookie的过期时间 默认1天
+/**
+ * 获取指定key的cookie值
+ * @param key
+ * @returns
  */
-export function setCustomCookie(cname: string, cvalue: string, day = 1) {
-  const expires = day * 24 * 60 * 60 * 1000;
-  const date = new Date(+new Date() + expires).toUTCString();
-  document.cookie = `${cname}=${cvalue};expires=${date}`;
+export function getCustomCookie(key: string) {
+  return Cookies.get(key);
 }
 
-// 删除cookie
-export function removeCustomCookie(cname: string, cvalue: string) {
-  const cookieArr = document.cookie.split(';');
-  for (let i = 0; i < cookieArr.length; i++) {
-    const c = cookieArr[i].trim();
-    if (c.includes(cvalue)) {
-      setCustomCookie(cname, '', -1);
-    }
-  }
+/**
+ * 设置cookie
+ * @param key cookie的key
+ * @param value cookie的值
+ * @param day cookie的过期时间 默认1天
+ */
+export function setCustomCookie(key: string, value: string, day = 1) {
+  Cookies.set(key, value, { expires: day, path: '/' });
+}
+
+/**
+ * 删除cookie
+ * @param key cookie的key
+ * @param value cookie的值
+ */
+export function removeCustomCookie(key: string) {
+  Cookies.remove(key);
 }
 
 export function scrollToBottom() {
   window.scrollTo(0, document.body.scrollHeight);
+}
+
+
+const opt = Object.prototype.toString;
+export function isBoolean(val: unknown): val is boolean {
+  return opt.call(val) === '[object Boolean]';
 }

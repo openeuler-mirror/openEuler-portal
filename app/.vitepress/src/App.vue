@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import type { Component } from 'vue';
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted } from 'vue';
 
 import zhCn from 'element-plus/lib/locale/lang/zh-cn';
 import en from 'element-plus/lib/locale/lang/en';
@@ -18,10 +18,10 @@ import LayoutEvent from './layouts/LayoutEvent.vue';
 import LayoutSecurity from './layouts/LayoutSecurity.vue';
 import AppFloat from '@/components/AppFloat.vue';
 import AppFloatEn from '@/components/AppFloatEn.vue';
+import CookieNotice from '@/components/CookieNotice.vue';
 
 import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
-import { setCustomCookie, removeCustomCookie } from './shared/utils';
 
 const { frontmatter, lang } = useData();
 
@@ -53,21 +53,8 @@ const comp = computed(() => {
   return compMapping[frontmatter.value.category];
 });
 
-// cookies使用提示
-const isCookieTip = ref(false);
-function onCookieClick() {
-  isCookieTip.value = false;
-  setCustomCookie('agreed-cookiepolicy', 'true', 180);
-}
 
 onMounted(() => {
-  isCookieTip.value =
-    document.cookie.indexOf('agreed-cookiepolicy') !== -1 ? false : true;
-
-  // 清除之前数据
-  removeCustomCookie('agreed-cookiepolicy', 'false');
-  localStorage.getItem('euler-cookie') &&
-    localStorage.removeItem('euler-cookie');
 
   setStoreData();
 });
@@ -83,7 +70,8 @@ onMounted(() => {
       <AppFloatEn v-else />
     </main>
   </el-config-provider>
-  <AppFooter :is-cookie-tip="isCookieTip" @click-cookie="onCookieClick" />
+  <CookieNotice />
+  <AppFooter />
 </template>
 
 <style lang="scss" scoped>
