@@ -710,9 +710,9 @@ function clickDetail(index: number) {
         .team-box {
           .team-item {
             height: max-content;
-            min-height: 280px;
+            min-height: 324px;
             @media (max-width: 1400px) {
-              min-height: 310px;
+              min-height: 390px;
             }
             @media (max-width: 768px) {
               min-height: 200px;
