@@ -1,15 +1,15 @@
 [
     {
-        "osv_name": "上海崭元信息科技有限公司",
-        "os_version": "DataSafeKitOS22.03LTS-SP1-x86_64-dvd.iso",
+        "osv_name": "华为技术有限公司",
+        "os_version": "EulerOS-V2.0SP12-x86_64-dvd.iso",
         "arch": "x86_64",
-        "checksum": "b8d44b7fae3456db240228c6dcd4a919",
+        "checksum": "0abca5cd5cef1a8bc1da0ec3f63378ce",
         "base_openeuler_version": "openEuler 22.03 LTS SP1",
-        "os_download_link": "http://www.safekitchina.com",
-        "friendly_link": "http://www.safekitchina.com",
+        "os_download_link": "不提供",
+        "friendly_link": "http://www.huawei.com/",
         "type": "服务器",
         "total_result": "pass",
-        "date": "2023/12/08",
+        "date": "2023/12/20",
         "details": "详细信息",
         "tools_result": [
             {
@@ -72,16 +72,160 @@
         ]
     },
     {
-        "osv_name": "超聚变数字技术有限公司",
-        "os_version": "qinggeng-image-bmc-set-aarch64-23.09-beta-001.iso",
+        "osv_name": "华为技术有限公司",
+        "os_version": "EulerOS-V2.0SP12-aarch64-dvd.iso",
         "arch": "aarch64",
-        "checksum": "adef8d7a191f3fc74ba2b61e36f83d5e\n\n",
-        "base_openeuler_version": "openEuler 23.09",
-        "os_download_link": "https://www.xfusion.com/",
-        "friendly_link": "https://www.xfusion.com/",
-        "type": "嵌入式",
+        "checksum": "7ec854b36dad5923d285c7943e4ee5e8",
+        "base_openeuler_version": "openEuler 22.03 LTS SP1",
+        "os_download_link": "不提供",
+        "friendly_link": "http://www.huawei.com/",
+        "type": "服务器",
         "total_result": "pass",
-        "date": "2023/12/08",
+        "date": "2023/12/20",
+        "details": "详细信息",
+        "tools_result": [
+            {
+                "name": "core_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "KABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "ABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "service_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "kernel_config",
+                "percent": "NA",
+                "result": "pass"
+            }
+        ],
+        "platform_result": [
+            {
+                "name": "repo",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "base_test",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "performance_test",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "running_config",
+                "percent": "NA",
+                "result": "pass"
+            }
+        ]
+    },
+    {
+        "osv_name": "中国科学院软件研究所",
+        "os_version": "EulixOS-2.1-x86_64.iso",
+        "arch": "x86_64",
+        "checksum": "b59a0441d9e9ba1c2ef2475a04b0aeb9",
+        "base_openeuler_version": "openEuler 22.03 LTS SP1",
+        "os_download_link": "https://eulixos.com",
+        "friendly_link": "http://www.iscas.ac.cn",
+        "type": "服务器",
+        "total_result": "pass",
+        "date": "2023/12/20",
+        "details": "详细信息",
+        "tools_result": [
+            {
+                "name": "core_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_pkg",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "KABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "ABI",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "service_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "soft_config",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "kernel_config",
+                "percent": "NA",
+                "result": "pass"
+            }
+        ],
+        "platform_result": [
+            {
+                "name": "repo",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "base_test",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "performance_test",
+                "percent": "NA",
+                "result": "pass"
+            },
+            {
+                "name": "running_config",
+                "percent": "NA",
+                "result": "pass"
+            }
+        ]
+    },
+    {
+        "osv_name": "中国科学院软件研究所",
+        "os_version": "EulixOS-2.1-aarch64.iso",
+        "arch": "aarch64",
+        "checksum": "7eb7b385c9b4bc1f5504de9677d21be0",
+        "base_openeuler_version": "openEuler 22.03 LTS SP1",
+        "os_download_link": "https://eulixos.com",
+        "friendly_link": "http://www.iscas.ac.cn",
+        "type": "服务器",
+        "total_result": "pass",
+        "date": "2023/12/20",
         "details": "详细信息",
         "tools_result": [
             {
