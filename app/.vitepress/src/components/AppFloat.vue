@@ -685,10 +685,13 @@ onMounted(() => {
       position: absolute;
       width: 200px;
       top: 0;
-      left: 0;
+      right: 0;
       background-color: var(--o-color-bg2);
       padding: 16px;
-      transform: translate(-42%, -110%);
+      transform: translate(34%, -110%);
+      @media (max-width: 1700px) {
+        transform: translate(0, -110%);
+      }
       .tip-title {
         color: var(--o-color-text1);
         font-size: 16px;
@@ -720,6 +723,9 @@ onMounted(() => {
         position: absolute;
         bottom: -14px;
         left: 50%;
+        @media (max-width: 1700px) {
+          left: 84%;
+        }
       }
     }
     .nav-item {
