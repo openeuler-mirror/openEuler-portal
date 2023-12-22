@@ -381,7 +381,7 @@ export default {
             activeType: 'Meetup',
             activeEvent: [
               {
-                activeName: '新加坡 Free and Open Summit',
+                activeName: '新加坡 Free and Open Source',
               },
             ],
           },

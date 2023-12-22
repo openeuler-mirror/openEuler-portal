@@ -821,7 +821,7 @@ export default {
               {
                 name: '嵌入式实时虚拟机ZVM',
                 detail: [
-                  'ZVM是一款基于Zephyr实时操作系统的虚拟化管理平台，以满足嵌入式场景下高实时与高安全的应用需求。',
+                  'ZVM是一款基于Zephyr实时操作系统的虚拟化管理平台，可在同一硬件上同时运行社区Linux、openEuler embedded及Zephyr等操作系统，满足高性能嵌入式场景对富功能与硬实时的双重需求，赋能混合关键部署。ZVM开源共享，实时性强，支持灵活的系统配置和端侧实时AI推理，适用于智能汽车、航空航天、工业控制、智能装备等场景 。ZVM同时具备实时（RTOS底座）、智能（RTOS推理）、开源（Apache 2.0）、灵活（自适应分区）四大优势。',
                 ],
                 link: 'https://gitee.com/openeuler/zvm',
               },
@@ -832,19 +832,19 @@ export default {
                 ],
                 link: 'https://gitee.com/openeuler/secGear',
               },
+              {
+                name: 'FangTian视窗引擎',
+                detail: [
+                  '构建openEuler视窗根技术，打造桌面环境基础底座。提供显示服务，窗口管理，图形绘制、合成、送显等。',
+                ],
+                link: 'https://gitee.com/openeuler/ft_engine',
+              },
             ],
           },
           {
             title: '社区活跃',
             address: '',
             awardList: [
-              {
-                name: 'FangTian视窗引擎',
-                detail: [
-                  '构建openEuler视窗根技术，打造桌面环境基础底座。提供显示服务，窗口管理，图形绘制、合成、送显等。',
-                ],
-                link: '',
-              },
               {
                 name: 'PilotGo运维管理平台',
                 detail: [
