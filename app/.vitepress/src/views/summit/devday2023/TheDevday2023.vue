@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue';
-import { useCommon } from '@/stores/common';
+import { useCommon, useCookieStatus } from '@/stores/common';
 import AOS from 'aos';
 
 import AppContext from '@/components/AppContent.vue';
@@ -68,16 +68,20 @@ watch(
 // 控制直播
 const isLiverShow = ref(0);
 
+const cookieStatus = useCookieStatus();
+
 // 埋点统计
 function setAdvertisedData() {
-  const sensors = (window as any)['sensorsDataAnalytic201505'];
-  const { href } = window.location;
-  if (href.includes('?utm_source')) {
-    sensors?.setProfile({
-      ...(window as any)['sensorsCustomBuriedData'],
-      profileType: 'fromAdvertised',
-      origin: href,
-    });
+  if(cookieStatus.isAllAgreed){
+    const sensors = (window as any)['sensorsDataAnalytic201505'];
+    const { href } = window.location;
+    if (href.includes('?utm_source')) {
+      sensors?.setProfile({
+        ...(window as any)['sensorsCustomBuriedData'],
+        profileType: 'fromAdvertised',
+        origin: href,
+      });
+    }
   }
 }
 onMounted(() => {

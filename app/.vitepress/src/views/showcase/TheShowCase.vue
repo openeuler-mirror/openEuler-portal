@@ -3,6 +3,7 @@ import { ref, computed, onMounted } from 'vue';
 import { useData } from 'vitepress';
 import { getUserCaseData } from '@/api/api-showcase';
 import { useI18n } from '@/i18n';
+import { useCookieStatus } from '@/stores/common';
 
 import useWindowScroll from '@/components/hooks/useWindowScroll';
 
@@ -20,6 +21,7 @@ import { addSearchBuriedData } from '@/shared/utils';
 const keyWord = ref('');
 const i18n = useI18n();
 const { lang } = useData();
+const cookieStatus = useCookieStatus();
 
 const userCaseData = computed(() => i18n.value.showcase);
 // 当前选中的tag
@@ -105,11 +107,18 @@ function jumpPage(page: number) {
 // 点击跳转案例详情页面
 function goDetail(link: string, item: any, index: number) {
   const search_result_url = '/' + link.replace('index', '');
+  if(cookieStatus.isAllAgreed){
+    initSensors(search_result_url,item,index);
+  }
+  window.open(search_result_url);
+}
+// 埋点
+const initSensors = (link: string, item: any, index: number)=>{
   const searchKeyObj = {
     search_tag: currentTag.value,
     search_rank_num: pageSize.value * (currentPage.value - 1) + (index + 1),
     search_result_total_num: total.value,
-    search_result_url: location.origin + search_result_url,
+    search_result_url: location.origin + link,
   };
   try {
     const sensors = (window as any)['sensorsDataAnalytic201505'];
@@ -128,10 +137,9 @@ function goDetail(link: string, item: any, index: number) {
     });
   } catch (error: any) {
     console.error(error);
-  } finally {
-    window.open(search_result_url);
   }
 }
+
 // 设置当前tag的所有案例
 function setCurrentCaseListAll() {
   try {
@@ -176,7 +184,9 @@ function searchCase() {
   activeIndex.value = 0;
   currentTag.value = userCaseData.value.tags[0];
   if (keyWord.value) {
-    addSearchBuriedData(keyWord.value);
+    if(cookieStatus.isAllAgreed){
+      addSearchBuriedData(keyWord.value);
+    }
     getUserCaseData(searchData.value).then((res) => {
       if (res.status === 200 && res.obj.records) {
         CaseListAll.value = res.obj.records;

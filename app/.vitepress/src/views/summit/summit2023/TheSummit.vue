@@ -2,7 +2,7 @@
 import { computed, onMounted, ref } from 'vue';
 import { useRouter, useData } from 'vitepress';
 
-import { useCommon } from '@/stores/common';
+import { useCommon, useCookieStatus } from '@/stores/common';
 import { getUrlParams } from '@/shared/utils';
 
 import AppContext from '@/components/AppContent.vue';
@@ -41,6 +41,7 @@ if (lang.value === 'zh') {
 
 const dialogVisible = ref(false);
 const commonStore = useCommon();
+const cookieStatus = useCookieStatus();
 const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );
@@ -105,25 +106,27 @@ const dateList = [
 ];
 // 埋点统计投放流量
 function collectAdvertisedData() {
-  const sensors = (window as any)['sensorsDataAnalytic201505'];
-  const { href } = window.location;
-  const regex = /[\?&]utm_source=/;
-  const containsUtmSource = regex.test(href);
-  if (!containsUtmSource) {
-    return;
+  if(cookieStatus.isAllAgreed){
+    const sensors = (window as any)['sensorsDataAnalytic201505'];
+    const { href } = window.location;
+    const regex = /[\?&]utm_source=/;
+    const containsUtmSource = regex.test(href);
+    if (!containsUtmSource) {
+      return;
+    }
+    const paramsArr = getUrlParams(href);
+    sensors?.setProfile({
+      ...(window as any)['sensorsCustomBuriedData'],
+      profileType: 'fromAdvertised',
+      origin: href,
+      ...paramsArr,
+    });
   }
-  const paramsArr = getUrlParams(href);
-  sensors?.setProfile({
-    ...(window as any)['sensorsCustomBuriedData'],
-    profileType: 'fromAdvertised',
-    origin: href,
-    ...paramsArr,
-  });
   history.pushState(null, '', location.origin + location.pathname);
 }
 onMounted(() => {
   setTimeout(() => {
-    collectAdvertisedData();
+      collectAdvertisedData();
   }, 300);
 });
 // 英文页面点击按钮前往中文直播间处理

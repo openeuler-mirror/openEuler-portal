@@ -31,15 +31,6 @@ import CodeTitleGzh from '@/assets/common/footer/img-gzh.png';
 import CodeImgXzs from '@/assets/common/footer/code-xzs.png';
 import CodeImgZgz from '@/assets/common/footer/code-zgz.png';
 
-import IconCancel from '~icons/app/icon-cancel.svg';
-
-const props = defineProps({
-  isCookieTip: {
-    type: Boolean,
-    default: false,
-  },
-});
-
 const { lang, frontmatter } = useData();
 const i18n = useI18n();
 const router = useRouter();
@@ -154,12 +145,6 @@ const isAbout = computed(() => {
   return frontmatter.value.category === 'about-us';
 });
 
-// 点击关闭cookies使用提示
-const { isCookieTip } = toRefs(props);
-const emits = defineEmits(['click-cookie']);
-function onCookieClick() {
-  emits('click-cookie');
-}
 
 onMounted(() => {
   isQrTipVisible.value = localStorage.getItem('euler-feedback') ? false : true;
@@ -171,14 +156,6 @@ onMounted(() => {
     class="footer"
     :class="{ 'is-doc': (isMigration && lang === 'zh') || isAbout }"
   >
-    <!-- 隐私政策 -->
-    <div v-if="isCookieTip" class="cookie-privacy">
-      <span>{{ i18n.common.COOKIE_LEGAL_TEXT }} </span>
-      <a :href="'/' + lang + '/other/privacy/'" class="link">{{
-        i18n.common.COOKIE_LEGAL_LINK_TEXT
-      }}</a>
-      <OIcon class="icon" @click="onCookieClick"><IconCancel /></OIcon>
-    </div>
     <AppContent :pc-top="0" :mobile-top="0">
       <div class="atom">
         <p class="atom-text">{{ i18n.common.FOOTER.ATOM_TEXT }}</p>

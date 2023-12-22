@@ -10,6 +10,7 @@ import {
   getTagsData,
   getChatapi,
 } from '@/api/api-search';
+import { useCookieStatus } from '@/stores/common';
 
 import IconSearch from '~icons/app/icon-search.svg';
 import IconCancel from '~icons/app/icon-cancel.svg';
@@ -142,6 +143,9 @@ const totalPage = computed(() => {
 const suggestList = ref([]);
 //
 const activeVersion = ref('');
+
+// cookie
+const cookieStatus = useCookieStatus();
 
 async function getVersionTag() {
   await getTagsData(tagsParams).then((res) => {
@@ -319,7 +323,11 @@ function searchAll(current?: string) {
       currentIndex.value = 0;
     }
     currentPage.value = 1;
-    addSearchBuriedData(searchInput.value);
+
+    if(cookieStatus.isAllAgreed){
+      addSearchBuriedData(searchInput.value);
+    }
+
     searchType.value = current || '';
 
     getServiceData();
@@ -339,15 +347,37 @@ function handleSelect(val: string) {
   searchInput.value = val.replace(/<[^>]+>/g, '');
   searchAll();
 }
+
+
 // 设置搜索结果的跳转路径
 function goLink(data: any, index: number) {
   let { path } = data;
   let search_result_url = '/' + path;
+
+  if (data.type === 'docs') {
+    // hugo 编译 路由空格会被替换为 -
+    path = path.replaceAll(' ', '-');
+    search_result_url = site.value.themeConfig.docsUrl + '/' + path + '.html';
+  } else if (data.type === 'forum') {
+    search_result_url = `${site.value.themeConfig.forumUrl}${path}`;
+  } else {
+    data.type === 'news' || data.type === 'blog'
+      ? (search_result_url = `${search_result_url}.html`)
+      : '';
+    search_result_url = location.origin + search_result_url;
+  }
+  if(cookieStatus.isAllAgreed){
+    setAdvertisedData(data,index,search_result_url);
+  }
+  window.open(encodeURI(search_result_url));
+}
+
+const setAdvertisedData = (data: any, index:number, path:string)=>{
   const searchKeyObj = {
     search_tag: data.type,
     search_rank_num: pageSize.value * (currentPage.value - 1) + (index + 1),
     search_result_total_num: total.value,
-    search_result_url: '',
+    search_result_url: path,
   };
   const sensors = (window as any)['sensorsDataAnalytic201505'];
   const sensorObj = {
@@ -357,23 +387,9 @@ function goLink(data: any, index: number) {
     ...((window as any)['addSearchBuriedData'] || {}),
     ...searchKeyObj,
   };
-  if (data.type === 'docs') {
-    // hugo 编译 路由空格会被替换为 -
-    path = path.replaceAll(' ', '-');
-    search_result_url = site.value.themeConfig.docsUrl + '/' + path + '.html';
-    sensorObj.search_result_url = search_result_url;
-  } else if (data.type === 'forum') {
-    search_result_url = `${site.value.themeConfig.forumUrl}${path}`;
-    sensorObj.search_result_url = search_result_url;
-  } else {
-    data.type === 'news' || data.type === 'blog'
-      ? (search_result_url = `${search_result_url}.html`)
-      : '';
-    search_result_url = location.origin + search_result_url;
-  }
-  window.open(encodeURI(search_result_url));
   sensors.setProfile(sensorObj);
 }
+
 // 移动端上下翻页事件
 function turnPage(option: string) {
   if (option === 'prev' && currentPage.value > 1) {

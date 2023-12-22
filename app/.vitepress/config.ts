@@ -27,24 +27,6 @@ const config: UserConfig = {
       },
     ],
     [
-      'script',
-      {
-        src: '/js/analytics.js',
-      },
-    ],
-    [
-      'script',
-      {
-        src: '/allow_sensor/sensorsdata.min.js',
-      },
-    ],
-    [
-      'script',
-      {
-        src: '/allow_sensor/sensors.js',
-      },
-    ],
-    [
       'meta',
       {
         name: 'baidu-site-verification',

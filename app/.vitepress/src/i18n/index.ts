@@ -28,6 +28,7 @@ import about from './about';
 import sky from './sky';
 import group from './group';
 import university from './university';
+import cookie from './cookie';
 
 const i18n: { [key: string]: any } = {
   zh: {
@@ -57,7 +58,8 @@ const i18n: { [key: string]: any } = {
     about: about.zh,
     sky: sky.zh,
     group: group.zh,
-    university:university.zh,
+    university: university.zh,
+    cookie: cookie.zh,
   },
   en: {
     sig: sig.en,
@@ -85,6 +87,7 @@ const i18n: { [key: string]: any } = {
     about: about.en,
     sky: sky.en,
     group: group.en,
+    cookie: cookie.en,
   },
 };
 
