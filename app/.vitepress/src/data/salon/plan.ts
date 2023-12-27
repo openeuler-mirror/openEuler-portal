@@ -124,6 +124,21 @@ export default {
               url: 'https://www.openeuler.org/zh/interaction/summit-list/summit2023/',
             },
           },
+          {
+            activeName: '2023开放原子开发者大会',
+            activelink: {
+              url: 'https://www.openatom.cn/journalism/detail/WF3XtqIdKfcW',
+            },
+          },
+          {
+            activeName: 'OpenInfra Days China 2023',
+            activelink: {
+              url: '/zh/news/20231205-OID2/20231205-OID2.html',
+            },
+          },
+          {
+            activeName: 'FICC 2023',
+          },
         ],
       },
     ],
@@ -382,6 +397,18 @@ export default {
             activeEvent: [
               {
                 activeName: '新加坡 Free and Open Source',
+              },
+              {
+                activeName: '无锡·第十三届中国开源黑客松',
+                activelink: {
+                  url: 'https://mp.weixin.qq.com/s/5cOPQ_MT2AuToUH9d_QlsA',
+                },
+              },
+              {
+                activeName: '无锡·openEuler Code Camp',
+                activelink: {
+                  url: 'https://mp.weixin.qq.com/s/bRc4sS_opNFpfHsSkYSf0A',
+                },
               },
             ],
           },
