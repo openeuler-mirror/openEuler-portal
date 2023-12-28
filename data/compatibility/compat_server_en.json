@@ -14405,5 +14405,66 @@
       "hostBusAdapter": "",
       "hardDiskDrive": "Samsung SSD 980 PRO 500GB"
     }
+  },
+  {
+    "hardwareFactory": "xFusion",
+    "hardwareModel": "2288H V5",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2023/12/13",
+    "friendlyLink": "https://support.xfusion.com/support/#/zh/rack-servers/2288h-v5-pid-21872244/document",
+    "boardCards": [
+       {
+        "vendorID": "8086",
+        "deviceID": "10fb",
+        "svID": "19e5",
+        "ssID": "d111",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "ixgbe",
+        "version": "5.10.0-176.0.0.89.oe2203sp3.x86_64",
+        "type": "NIC",
+        "date": "2023.11.13",
+        "sha256": "bafe4151af936c6de628a91993cdc0fc6970da3f4021b25c83a18911bd002ec6",
+        "driverSize": "163K",
+        "chipVendor": "Intel",
+        "boardModel": "SP310",
+        "chipModel": "82599ES",
+        "item": "03030WSQ",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "9005",
+        "deviceID": "028f",
+        "svID": "9005",
+        "ssID": "0801",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "smartpqi",
+        "version": "1.2.16-010",
+        "type": "RAID",
+        "date": "2023/12/13",
+        "sha256": "283e4e0185f666ec9f2166616eaa0eb6b4a4700cf846c3ee171e5fdcb6029be4",
+        "driverSize": "44K",
+        "chipVendor": "PMC",
+        "boardModel": "PMC3152",
+        "chipModel": "PM8204",
+        "item": "02312USW",
+        "downloadLink": "inbox"
+      }
+    ],
+      "compatibilityConfiguration": {
+      "productInformation": "https://support.xfusion.com/support/#/zh/rack-servers/2288h-v5-pid-21872244/document",
+      "certificationTime": "2023/12/13",
+      "commitID": "",
+      "mainboardModel": "BC11SPSCB",
+      "biosUefi": "7.55(U47)",
+      "cpu": "cascade",
+      "ram": "4*32 RDIMMs",
+      "portsBusTypes": "x8 PCI Express 3 x8",
+      "videoAdapter": "Huawei Technologies Co., Ltd. Hi171x Series",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "TOSHIBA  AL15SEB060N"
+    }
   }
 ]
