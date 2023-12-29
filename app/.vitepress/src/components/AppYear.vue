@@ -33,7 +33,7 @@ const yearImg = computed(() => {
   position: fixed;
   left: 80px;
   bottom: 250px;
-  z-index: 99;
+  z-index: 12;
   @media (max-width: 1700px) {
     left: 20px;
   }
