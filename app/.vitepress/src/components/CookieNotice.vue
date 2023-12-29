@@ -2,7 +2,12 @@
 import { ref, watch, onMounted, computed } from 'vue';
 import { useRoute, useData } from 'vitepress';
 import { ElDialog, ElSwitch } from 'element-plus';
-import { setCustomCookie, isBoolean, getCustomCookie } from '@/shared/utils';
+import {
+  setCustomCookie,
+  isBoolean,
+  getCustomCookie,
+  removeCustomCookie,
+} from '@/shared/utils';
 import { useCookieStatus, usePrivacyVersion } from '@/stores/common';
 import { useScreen } from '@/shared/useScreen';
 import { useI18n } from '@/i18n';
@@ -123,6 +128,7 @@ onMounted(() => {
 // 用户同意所有cookie
 const acceptAll = () => {
   cookieStatus.status = COOKIE_AGREED_STATUS.ALL_AGREED;
+  removeCustomCookie(COOKEY_KEY);
   setCustomCookie(
     COOKEY_KEY,
     `${COOKIE_AGREED_STATUS.ALL_AGREED}${privacyVersion.version}`,
@@ -135,6 +141,7 @@ const acceptAll = () => {
 // 用户拒绝所有cookie，即仅同意必要cookie
 const rejectAll = () => {
   cookieStatus.status = COOKIE_AGREED_STATUS.NECCESSARY_AGREED;
+  removeCustomCookie(COOKEY_KEY);
   setCustomCookie(
     COOKEY_KEY,
     `${COOKIE_AGREED_STATUS.NECCESSARY_AGREED}${privacyVersion.version}`,
@@ -276,12 +283,12 @@ watch(
 }
 
 .cookie-notice-content {
-  background-color:rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(5px);
   box-shadow: var(--o-shadow-l1);
 }
 .dark .cookie-notice-content {
-  background-color:rgba(0, 0, 0, .9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .cookie-notice-wrap {
@@ -364,7 +371,6 @@ watch(
   }
 }
 
-
 :deep(.el-dialog) {
   .el-dialog__header {
     text-align: center;
@@ -377,7 +383,7 @@ watch(
       font-size: 22px;
     }
   }
-  .el-dialog__body{
+  .el-dialog__body {
     padding: 0 24px;
     .content-item + .content-item {
       margin-top: 24px;
