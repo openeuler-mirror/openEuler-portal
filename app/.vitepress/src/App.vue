@@ -19,6 +19,7 @@ import LayoutSecurity from './layouts/LayoutSecurity.vue';
 import AppFloat from '@/components/AppFloat.vue';
 import AppFloatEn from '@/components/AppFloatEn.vue';
 import CookieNotice from '@/components/CookieNotice.vue';
+import AppYear from '@/components/AppYear.vue';
 
 import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
@@ -68,6 +69,7 @@ onMounted(() => {
       <Content v-else />
       <AppFloat v-if="lang === 'zh'" />
       <AppFloatEn v-else />
+      <AppYear/>
     </main>
   </el-config-provider>
   <CookieNotice />
