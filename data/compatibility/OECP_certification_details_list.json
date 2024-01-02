@@ -1,87 +1,15 @@
 [
     {
-        "osv_name": "中科方德软件有限公司",
-        "os_version": "NFSCNS-4.0-E310-20231012-x86_64-dvd.iso",
-        "arch": "x86_64",
-        "checksum": "5514e15039592cc0bce494a657cd34be",
-        "base_openeuler_version": "openEuler-22.03-LTS-SP2-x86_64-dvd.iso",
-        "os_download_link": "https://www.nfschina.com/index.php?catid=23",
-        "friendly_link": "https://www.nfschina.com/index.php",
-        "type": "服务器",
-        "total_result": "pass",
-        "date": "2023/12/28",
-        "details": "详细信息",
-        "tools_result": [
-            {
-                "name": "core_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_pkg",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "KABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "ABI",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "service_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "soft_config",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "kernel_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ],
-        "platform_result": [
-            {
-                "name": "repo",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "base_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "performance_test",
-                "percent": "NA",
-                "result": "pass"
-            },
-            {
-                "name": "running_config",
-                "percent": "NA",
-                "result": "pass"
-            }
-        ]
-    },
-    {
-        "osv_name": "中科方德软件有限公司",
-        "os_version": "NFSCNS-4.0-E310-20231012-aarch64-dvd.iso",
+        "osv_name": "江苏润和软件股份有限公司",
+        "os_version": "hopestage-image-ok3568-20231128093203.rootfs.ext4，boot.img",
         "arch": "aarch64",
-        "checksum": "11b2a0b50d05d13294fd619d81bc9bbd",
-        "base_openeuler_version": "openEuler-22.03-LTS-SP2-aarch64-dvd",
-        "os_download_link": "https://www.nfschina.com/index.php?catid=23",
-        "friendly_link": "https://www.nfschina.com/index.php",
-        "type": "服务器",
+        "checksum": "6756809e4b83c712a6641dd4ef273a18 hopestage-image-ok3568-20231128093203.rootfs.ext4\n6146c27fb5ca967ecee58145815e720c boot.img",
+        "base_openeuler_version": "openEuler Embedded 22.03 LTS SP2",
+        "os_download_link": "不提供",
+        "friendly_link": "http://www.hoperun.com/",
+        "type": "嵌入式",
         "total_result": "pass",
-        "date": "2023/12/27",
+        "date": "2024/01/02",
         "details": "详细信息",
         "tools_result": [
             {
