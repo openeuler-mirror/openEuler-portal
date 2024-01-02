@@ -8,8 +8,8 @@ import { useCommon } from '@/stores/common';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
 import type {
-  DownloadCommercialData,
-  DetailedLinkCommercialItem,
+  DownloadCommercialDataT,
+  DetailedLinkCommercialItemT,
 } from '@/shared/@types/type-download';
 
 import AppContent from '@/components/AppContent.vue';
@@ -35,7 +35,7 @@ const handleDownloadUrl = (url: string) => {
 const currentPage = ref(1);
 const pageSize = ref(12);
 const total = ref(i18n.value.download.COMMERCIAL_RELEASE_LIST.length);
-const filterList: Ref<DownloadCommercialData[]> = ref([]);
+const filterList: Ref<DownloadCommercialDataT[]> = ref([]);
 
 const dataList = computed(() => {
   if (screenWidth.value > 768) {
@@ -67,13 +67,13 @@ const activeManufacturer: Ref<string[]> = ref([]);
 const tagArch: Ref<string[]> = ref([]);
 const archAll = ref(true);
 const activeArch: Ref<string[]> = ref([]);
-const allList: DownloadCommercialData[] = cloneTool.cloneDeep(
+const allList: DownloadCommercialDataT[] = cloneTool.cloneDeep(
   i18n.value.download.COMMERCIAL_RELEASE_LIST
 );
 const setTagArch = () => {
-  allList.forEach((item: DownloadCommercialData) => {
+  allList.forEach((item: DownloadCommercialDataT) => {
     if (item.DETAILED_LINK) {
-      item.DETAILED_LINK.forEach((itemLink: DetailedLinkCommercialItem) => {
+      item.DETAILED_LINK.forEach((itemLink: DetailedLinkCommercialItemT) => {
         if (!tagArch.value.includes(itemLink.ARCH)) {
           tagArch.value.push(itemLink.ARCH);
         }
@@ -106,11 +106,11 @@ const filterTagList = () => {
     });
   }
   if (!archAll.value) {
-    const temp: DownloadCommercialData[] = [];
+    const temp: DownloadCommercialDataT[] = [];
     result.forEach((item) => {
       let flag = false;
       if (item.DETAILED_LINK) {
-        item.DETAILED_LINK.forEach((itemLink: DetailedLinkCommercialItem) => {
+        item.DETAILED_LINK.forEach((itemLink: DetailedLinkCommercialItemT) => {
           if (activeArch.value.includes(itemLink.ARCH)) {
             flag = true;
           }
@@ -180,14 +180,14 @@ const changeSearchVal = (val: string) => {
   activeArch.value = [];
   manufacturerAll.value = true;
   activeManufacturer.value = [];
-  filterList.value = allList.filter((item: DownloadCommercialData) => {
+  filterList.value = allList.filter((item: DownloadCommercialDataT) => {
     return searchReg.test(item.NAME);
   });
 };
 // 获取该软件所有支持的架构
-const getItemArchList = (link: DetailedLinkCommercialItem[]) => {
+const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
   const itemArchList: string[] = [];
-  link.forEach((item: DetailedLinkCommercialItem) => {
+  link.forEach((item: DetailedLinkCommercialItemT) => {
     if (!itemArchList.includes(item.ARCH)) {
       itemArchList.push(item.ARCH);
     }

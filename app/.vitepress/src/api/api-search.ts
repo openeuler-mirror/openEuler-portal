@@ -2,6 +2,8 @@ import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
 import { fetchEventSource } from '@microsoft/fetch-event-source';
 import { getUserAuth } from '@/shared/login';
+import type { SortObjT, TimeTagsT, SearchDrowdownT, SearchCountQueryT, SearchCountResT, SearchRamDataT, RelevantQueryT, StatisticT } from '@/shared/@types/type-search'
+import type { SearchBlogT } from '@/shared/@types/type-blog';
 /**
  * 通用筛选
  * @name getSortData
@@ -19,7 +21,7 @@ interface SortParams {
   page: number;
   pageSize: number;
 }
-interface search {
+interface Search {
   keyword: string;
   page: number;
   pageSize: number;
@@ -38,8 +40,16 @@ interface TagsParams {
   want: string;
   condition?: Condition;
 }
-
-export function getSortData(params: SortParams) {
+/**
+ * 获取用户案例
+ * @param {SortParams} params
+ * @returns {Object}
+ */
+export function getSortData(params: SortParams): Promise<{
+  msg: string,
+  obj: SortObjT,
+  status: number
+}> {
   const url = '/api-search/search/sort';
   return request
     .post(url, params, { $ignoreLoading: true })
@@ -48,25 +58,69 @@ export function getSortData(params: SortParams) {
       throw new Error(err);
     });
 }
-
-export function sortBlogData(params: SortParams) {
+/**
+ * 获取博客列表
+ * @param {SortParams} params 
+ * @returns {Object}
+ */
+export function sortBlogData(params: SortParams): Promise<{
+  msg: string,
+  obj: SearchBlogT,
+  status: number
+}> {
   const url = '/api-search/search/sort/blog';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
-
-export function getTagsData(params: TagsParams) {
+/**
+ * 获取时间筛选项
+ * @param {TagsParams} params 
+ * @returns {Object}
+ */
+export function getTagsData(params: TagsParams): Promise<{
+  msg: string,
+  obj: TimeTagsT,
+  status: number
+}> {
   const url = '/api-search/search/tags';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
-export function getSearchData(params: search) {
+/**
+ * 获取搜索结果
+ * @param {Search} params 
+ * @returns {Object}
+ */
+export function getSearchData(params: Search): Promise<{
+  msg: string,
+  obj: SearchDrowdownT,
+  status: number
+}> {
   const url = '/api-search/search/docs';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
-export function getSearchCount(params: any) {
+/**
+ * 获取搜索各类型结果数量
+ * @param {SearchCountQueryT} params
+ * @returns {Object}
+ */
+export function getSearchCount(params: SearchCountQueryT): Promise<{
+  msg: string,
+  obj: SearchCountResT,
+  status: number
+}> {
   const url = '/api-search/search/count';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
-export function getSearchRpm(params: any) {
+/**
+ * 获取相关软件包数据
+ * @param {Object} params 请求参数
+ * @param {string} params.keyword 输入关键词
+ * @returns {Object}
+ */
+export function getSearchRpm(params: { keyword: string }): Promise<{
+  data: SearchRamDataT,
+  msg: string,
+  status: number
+}> {
   const url = '/api-node/repo/search';
   return request
     .get(url, {
@@ -76,18 +130,30 @@ export function getSearchRpm(params: any) {
     })
     .then((res: AxiosResponse) => res.data);
 }
-export function getPop(params: any) {
+/**
+ * 获取热门搜索数据
+ * @param {String} params 语言
+ * @returns {Object}
+ */
+export function getPop(params: string): Promise<{
+  msg: string,
+  obj: string[],
+  status: number
+}> {
   const url = `/api-search/search/pop?${params}`;
   return request.post(url).then((res: AxiosResponse) => res.data);
 }
 
 /**
  * 联想搜索
- * @name getRelevant
- * @param {}
- * @return  Array
+ * @param {RelevantQueryT} params
+ * @return  {Object}
  */
-export function getRelevant(params: any) {
+export function getRelevant(params: RelevantQueryT): Promise<{
+  msg: string,
+  obj: any, // Arrary
+  status: number
+}> {
   const url = `/api-search/search/sugg`;
   return request
     .post(url, params)
@@ -99,12 +165,15 @@ export function getRelevant(params: any) {
 
 /**
  * 首页数据卡片筛选
- * @name getStatistic
- * @param {}
- * @return  Array
+ * @return  {Object}
  */
 
-export function getStatistic() {
+export function getStatistic(): Promise<{
+  code: number,
+  data: StatisticT,
+  msg: string,
+  update_at: string
+}> {
   const url = '/api-dsapi/query/all?community=openEuler';
   return request
     .get(url, {
@@ -114,7 +183,6 @@ export function getStatistic() {
 }
 /**
  * 搜索chat输出
- * @name getChat
  * @param {}
  * @return  Array
  */
@@ -160,11 +228,14 @@ export function getChatapi(inputText: any, params: any) {
 
 /**
  * meetup接口  申请表
- * @name meetupApplyForm
- * @param {}
- * @return  Array
+ * @param {Object} params 申请表格数据
+ * @return  {Object}
  */
-export function meetupApplyForm(params: any) {
+export function meetupApplyForm(params: any): Promise<{
+  code: number,
+  data: string,
+  msg: string,
+}> {
   const url = `/api-dsapi/query/meetupApplyForm?community=openeuler`;
   const { token } = getUserAuth();
   return request

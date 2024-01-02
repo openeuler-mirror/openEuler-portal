@@ -21,9 +21,9 @@ import video_bg_light from '@/assets/category/mooc/video-bg-light.png';
 import video_bg_dark from '@/assets/category/mooc/video-bg-dark.png';
 
 import type {
-  TeacherItem,
-  NodeItem,
-  VideoObj,
+  TeacherItemT,
+  NodeItemT,
+  VideoObjT,
 } from '@/shared/@types/type-mooc';
 
 const i18n = useI18n();
@@ -49,9 +49,9 @@ const currentNode = ref({
   video: '',
   key: '',
 });
-const teacherList = ref<TeacherItem[]>([]);
+const teacherList = ref<TeacherItemT[]>([]);
 const introductionTextList = ref([]);
-const allNodeList = ref<NodeItem[]>([]);
+const allNodeList = ref<NodeItemT[]>([]);
 const courseH1 = ref('');
 const welcomeStr = ref('');
 const courseIndex = ref(0);
@@ -61,7 +61,7 @@ const treeRef: any = ref(null);
 const playctrlEleRef: any = ref(null);
 const videoMobileRef: any = ref(null);
 // 操作视频控制对象
-const ctrlObj = ref<VideoObj>();
+const ctrlObj = ref<VideoObjT>();
 // 确定介绍文字中的标题下标
 const listTitleIndex = ref(0);
 const logo = computed(() => {
@@ -129,7 +129,7 @@ function checkStatus(status: boolean) {
   }
 }
 // 导航栏点击事件
-function handleNodeClick(obj: NodeItem) {
+function handleNodeClick(obj: NodeItemT) {
   if (obj.introduction || obj.desc) {
     if (screenWidth.value < 1100) {
       toggleMenu(false);
@@ -212,7 +212,7 @@ function setCourseData(obj: any) {
 }
 // 保存当前所在页面防止刷新从第一页渲染
 function setCourseIndex() {
-  allNodeList.value.forEach((item: NodeItem, index: number) => {
+  allNodeList.value.forEach((item: NodeItemT, index: number) => {
     if (item.key === currentNode.value.key) {
       courseIndex.value = index;
       sessionStorage.setItem('courseIndex', JSON.stringify(courseIndex.value));

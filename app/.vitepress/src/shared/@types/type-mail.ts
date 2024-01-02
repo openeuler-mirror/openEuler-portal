@@ -1,4 +1,4 @@
-export interface MailingMsg {
+export interface MailingMsgT {
   description?: string;
   display_name?: string;
   fqdn_listname?: string;

@@ -14,8 +14,8 @@ import compatibility from '@/assets/illustrations/support/compatibility.png';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
 import type {
-  FilterList,
-  CompatibilityQuery,
+  FilterListT,
+  CompatibilityQueryT,
 } from '@/shared/@types/type-support';
 
 import {
@@ -80,7 +80,7 @@ const typeName = ref('');
 const driveType = ref('');
 const dataSourceList = ref<string[]>(['社区发行版', '商业发行版']);
 
-const filterData = ref<FilterList[]>([
+const filterData = ref<FilterListT[]>([
   {
     select: [],
     title: '操作系统',
@@ -94,7 +94,7 @@ const filterData = ref<FilterList[]>([
     title: 'CPU',
   },
 ]);
-const filterDataTwo = ref<FilterList[]>([
+const filterDataTwo = ref<FilterListT[]>([
   {
     select: [],
     title: '操作系统',
@@ -105,7 +105,7 @@ const filterDataTwo = ref<FilterList[]>([
   },
 ]);
 
-const queryData: CompatibilityQuery = reactive({
+const queryData: CompatibilityQueryT = reactive({
   pages: {
     page: 1,
     size: 10,
@@ -126,7 +126,7 @@ const queryData: CompatibilityQuery = reactive({
 const tableData: any = ref([]);
 
 // 整机
-const getCompatibilityData = (data: CompatibilityQuery) => {
+const getCompatibilityData = (data: CompatibilityQueryT) => {
   getCompatibilityList(data).then((res: any) => {
     total.value = res.result.totalCount;
     totalPage.value = Math.ceil(total.value / queryData.pages.size);
@@ -137,7 +137,7 @@ const getCompatibilityData = (data: CompatibilityQuery) => {
 };
 
 // 板卡
-const getDriverData = (data: CompatibilityQuery) => {
+const getDriverData = (data: CompatibilityQueryT) => {
   getDriverList(data).then((res: any) => {
     total.value = res.result.totalCount;
     totalPage.value = Math.ceil(total.value / queryData.pages.size);
@@ -150,7 +150,7 @@ const getDriverData = (data: CompatibilityQuery) => {
 };
 
 // 开源软件
-const getSoftwareData = (data: CompatibilityQuery) => {
+const getSoftwareData = (data: CompatibilityQueryT) => {
   getSoftwareList(data).then((res: any) => {
     total.value = res.total;
     totalPage.value = Math.ceil(total.value / queryData.pages.size);
@@ -159,7 +159,7 @@ const getSoftwareData = (data: CompatibilityQuery) => {
 };
 
 // 商业软件
-const getBusinessSoftwareData = (data: CompatibilityQuery) => {
+const getBusinessSoftwareData = (data: CompatibilityQueryT) => {
   getBusinessSoftwareList(data).then((res: any) => {
     total.value = res.result.totalNum;
     totalPage.value = Math.ceil(total.value / queryData.pages.size);
@@ -168,7 +168,7 @@ const getBusinessSoftwareData = (data: CompatibilityQuery) => {
 };
 
 // 解决方案
-const getSolutionData = (data: CompatibilityQuery) => {
+const getSolutionData = (data: CompatibilityQueryT) => {
   getSolutionList(data).then((res: any) => {
     if (res.success) {
       total.value = res.result.totalCount;
@@ -214,7 +214,7 @@ const handleClick = () => {
   });
 };
 
-const methodMap: { [key: string]: (params: CompatibilityQuery) => void } = {
+const methodMap: { [key: string]: (params: CompatibilityQueryT) => void } = {
   '1': getCompatibilityData,
   '2': getDriverData,
   '3': getSoftwareData,
@@ -222,7 +222,7 @@ const methodMap: { [key: string]: (params: CompatibilityQuery) => void } = {
   '5': getSolutionData,
 };
 
-const initData = (params: CompatibilityQuery) => {
+const initData = (params: CompatibilityQueryT) => {
   const activeMethod = methodMap[activeName.value];
   if (activeMethod) {
     activeMethod(params);
@@ -346,7 +346,7 @@ const handleChange = () => {
   initMobileData(queryData);
 };
 
-const initMobileData = (params: CompatibilityQuery) => {
+const initMobileData = (params: CompatibilityQueryT) => {
   const activeMethod = methodMap[activeName.value];
   if (activeMethod) {
     activeMethod(params);

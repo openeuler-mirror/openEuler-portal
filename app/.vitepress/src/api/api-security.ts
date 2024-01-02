@@ -1,12 +1,12 @@
 import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
 import {
-  SelectParams,
-  CveQuery,
-  CompatibilityQuery,
-  SafetyBulletinQuery,
-  OsvQuery,
-  ComponentQuery,
+  SelectParamsT,
+  CveQueryT,
+  CompatibilityQueryT,
+  SafetyBulletinQueryT,
+  OsvQueryT,
+  ComponentQueryT,
   SecurityDetailT,
   TotalDataT,
   CveDetailT,
@@ -20,15 +20,15 @@ import {
   SofoFilterT,
   TestOrganizationsT,
   OsvDataT,
-  OsvList
+  OsvListT
 } from '@/shared/@types/type-support';
 
 /**
  * 获取安全公告列表
- * @param {SafetyBulletinQuery} params 列表请求参数
+ * @param {SafetyBulletinQueryT} params 列表请求参数
  * @return {Promise<TotalDataT>} 安全公告列表
  */
-export function getSecurityList(params: SafetyBulletinQuery): Promise<TotalDataT> {
+export function getSecurityList(params: SafetyBulletinQueryT): Promise<TotalDataT> {
   const url =
     '/api-euler/api-cve/cve-security-notice-server/securitynotice/findAll';
   return request
@@ -50,10 +50,10 @@ export function getSecurityDetail(securityNoticeNo: string): Promise<SecurityDet
 
 /**
  * 获取Cve列表
- * @param {CveQuery} params Cve列表请求参数
+ * @param {CveQueryT} params Cve列表请求参数
  * @return {Promise<TotalDataT>} CVE列表
  */
-export function getCveList(params: CveQuery): Promise<TotalDataT> {
+export function getCveList(params: CveQueryT): Promise<TotalDataT> {
   const url =
     '/api-euler/api-cve/cve-security-notice-server/cvedatabase/findAll';
   return request
@@ -114,10 +114,10 @@ export function getDriverOSOptions(): Promise<string[]> {
 
 /**
  * 获取整机列表
- * @param {CompatibilityQuery} params 整机列表请求参数
+ * @param {CompatibilityQueryT} params 整机列表请求参数
  * @return {Promise<CompatibilityListT[]>} 整机列表
  */
-export function getCompatibilityList(params: CompatibilityQuery): Promise<CompatibilityListT[]> {
+export function getCompatibilityList(params: CompatibilityQueryT): Promise<CompatibilityListT[]> {
   const url =
     '/api-euler/api-cve/cve-security-notice-server/hardwarecomp/findAll';
   return request
@@ -151,10 +151,10 @@ export function getdetailAapterList(id: string): Promise<AdapterListT[]> {
 
 /**
  * 获取板卡列表
- * @param {CompatibilityQuery} params 获取板卡列表请求参数
+ * @param {CompatibilityQueryT} params 获取板卡列表请求参数
  * @return {Promise<DriverListT[]>} {totalCount:number,driverCompList:[]} 板卡列表
  */
-export function getDriverList(params: CompatibilityQuery): Promise<DriverListT[]> {
+export function getDriverList(params: CompatibilityQueryT): Promise<DriverListT[]> {
   const url =
     '/api-euler/api-cve/cve-security-notice-server/drivercomp/findAll';
   return request
@@ -164,10 +164,10 @@ export function getDriverList(params: CompatibilityQuery): Promise<DriverListT[]
 
 /**
  * 获取开源软件列表
- * @param {CompatibilityQuery} params 获取开源软件列表请求参数
+ * @param {CompatibilityQueryT} params 获取开源软件列表请求参数
  * @return {Promise<SoftwareListT>} 开源软件列表
  */
-export function getSoftwareList(params: CompatibilityQuery): Promise<SoftwareListT> {
+export function getSoftwareList(params: CompatibilityQueryT): Promise<SoftwareListT> {
   const os = params.os ? `&os=${params.os}` : '';
   const architecture = params.architecture
     ? `&arch=${params.architecture}`
@@ -182,10 +182,10 @@ export function getSoftwareList(params: CompatibilityQuery): Promise<SoftwareLis
 
 /**
  * 获取商业软件列表
- * @param {CompatibilityQuery} params 商业软件列表请求参数
+ * @param {CompatibilityQueryT} params 商业软件列表请求参数
  * @return {Promise<BussinessSoftT>} {totalNum:number, data:[]} 商业软件数据
  */
-export function getBusinessSoftwareList(params: CompatibilityQuery): Promise<BussinessSoftT> {
+export function getBusinessSoftwareList(params: CompatibilityQueryT): Promise<BussinessSoftT> {
   const queryData = {
     pageSize: params['pages'].size,
     pageNo: params['pages'].page,
@@ -241,7 +241,7 @@ export function getTestOrganizations(): Promise<TestOrganizationsT> {
  * @param {string} lang 语言
  * @return {Promise<string[]>} CPU数据
  */
-export function getCpu(params: SelectParams): Promise<string[]> {
+export function getCpu(params: SelectParamsT): Promise<string[]> {
   const url = `/api-euler/api-cve/cve-security-notice-server/hardwarecomp/getCpu?lang=${params.lang}`;
   return request
     .get(url)
@@ -272,10 +272,10 @@ export function getOsType(): Promise<string[]> {
 
 /**
  * 获取OSV技术评测列表
- * @param {OsvQuery} params osv技术测评列表请求参数
- * @return {Promise<OsvDataT>} {osvList: [], totalCount: number}
+ * @param {OsvQueryT} params osv技术测评列表请求参数
+ * @return {Promise<OsvDataT>} {OsvListT: [], totalCount: number}
  */
-export function getOsTableData(params: OsvQuery): Promise<OsvDataT> {
+export function getOsTableData(params: OsvQueryT): Promise<OsvDataT> {
   const url = '/api-euler/api-cve/cve-security-notice-server/osv/findAll';
   return request
     .post(url, params)
@@ -285,9 +285,9 @@ export function getOsTableData(params: OsvQuery): Promise<OsvDataT> {
 /**
  * 获取OSV技术评测详细信息
  * @param {string} id osv列表单条数据id
- * @return {Promise<OsvList>} osv详情信息
+ * @return {Promise<OsvListT>} osv详情信息
  */
-export function getOsvOne(id: string): Promise<OsvList> {
+export function getOsvOne(id: string): Promise<OsvListT> {
   const url = `/api-euler/api-cve/cve-security-notice-server/osv/getOne?id=${id}`;
   return request
     .get(url)
@@ -308,13 +308,13 @@ export function getProductList(): Promise<string[]> {
 
 /**
  * 获取影响组件-下拉列表
- * @param {ComponentQuery} params 请求参数
+ * @param {ComponentQueryT} params 请求参数
  * @return {Promise<string[]>} 影响组件数据
  */
-export function getComponentList(params: ComponentQuery): Promise<string[]> {
+export function getComponentList(params: ComponentQueryT): Promise<string[]> {
   Object.keys(params).forEach((key) => {
-    if (!params[key as keyof ComponentQuery]) {
-      delete params[key as keyof ComponentQuery];
+    if (!params[key as keyof ComponentQueryT]) {
+      delete params[key as keyof ComponentQueryT];
     }
   });
   const url =
@@ -329,7 +329,7 @@ export function getComponentList(params: ComponentQuery): Promise<string[]> {
  * @param {} params 请求参数
  * @return {Object} 
  */
-export function getSolutionList(params: CompatibilityQuery): Promise<{
+export function getSolutionList(params: CompatibilityQueryT): Promise<{
   code: number,
   msg: string,
   result: TotalDataT,

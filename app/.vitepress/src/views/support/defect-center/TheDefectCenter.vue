@@ -11,8 +11,8 @@ import {
   getComponentList,
 } from '@/api/api-security';
 import {
-  SecurityLists,
-  SafetyBulletinQuery,
+  SecurityListsT,
+  SafetyBulletinQueryT,
 } from '@/shared/@types/type-support';
 
 import type { CheckboxValueType } from 'element-plus';
@@ -50,7 +50,7 @@ const activeIndex = ref(-1);
 const activeIndex1 = ref(0);
 const activeNames = ref(['1']);
 
-const tableData = ref<SecurityLists[]>([]);
+const tableData = ref<SecurityListsT[]>([]);
 
 const queryData: any = reactive({
   pages: {
@@ -65,7 +65,7 @@ const queryData: any = reactive({
   affectedComponent: '',
 });
 
-function getSecurityLists(data: SafetyBulletinQuery) {
+function getSecurityLists(data: SafetyBulletinQueryT) {
   getSecurityList(data).then((res: any) => {
     tableData.value = res.result.securityNoticeList;
 

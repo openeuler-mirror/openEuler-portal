@@ -6,8 +6,8 @@ import { useI18n } from '@/i18n';
 
 import { getCveDetail, getAffectedProduct } from '@/api/api-security';
 import type {
-  CveDetailCvss,
-  AffectProduct,
+  CveDetailCvssT,
+  AffectProductT,
 } from '@/shared/@types/type-support';
 
 import AppContent from '@/components/AppContent.vue';
@@ -18,8 +18,8 @@ const { lang } = useData();
 const i18n = useI18n();
 const router = useRouter();
 
-const cveDetailData = ref<CveDetailCvss>();
-const affectedProductList = ref<AffectProduct[]>([]);
+const cveDetailData = ref<CveDetailCvssT>();
+const affectedProductList = ref<AffectProductT[]>([]);
 const cvssList: any = ref([]);
 
 function goBackPage() {

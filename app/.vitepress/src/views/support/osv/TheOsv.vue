@@ -4,7 +4,7 @@ import { useRouter, useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
-import { OsvQuery, OsvList } from '@/shared/@types/type-support';
+import { OsvQueryT, OsvListT } from '@/shared/@types/type-support';
 import { getOsName, getOsType, getOsTableData } from '@/api/api-security';
 
 import AppContent from '@/components/AppContent.vue';
@@ -37,7 +37,7 @@ const all = computed(() => {
 const inputName = ref('');
 const osNames = ref([`${all.value}`]);
 const osTypes = ref([`${all.value}`]);
-const osvList = ref<OsvList[]>([]);
+const osvList = ref<OsvListT[]>([]);
 const activeIndex = ref(0);
 const activeIndex1 = ref(0);
 const total = ref(0);
@@ -47,7 +47,7 @@ const layout = ref('sizes, prev, pager, next, slot, jumper');
 const osName = ref('');
 const osType = ref('');
 
-const queryData: OsvQuery = reactive({
+const queryData: OsvQueryT = reactive({
   pages: {
     page: 1,
     size: 10,
@@ -105,7 +105,7 @@ function turnPage(option: string) {
   }
 }
 
-const getOsTableList = (data: OsvQuery) => {
+const getOsTableList = (data: OsvQueryT) => {
   getOsTableData(data).then((res: any) => {
     osvList.value = res.result.osvList;
     total.value = res.result.totalCount;

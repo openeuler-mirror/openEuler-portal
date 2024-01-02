@@ -2,7 +2,7 @@
 import { ref, nextTick, onMounted, reactive, PropType, watch } from 'vue';
 
 import { isValidKey, getNowFormatDate, isBrowser } from '@/shared/utils';
-import { TableData, DayData } from '@/shared/@types/type-calendar';
+import { TableDataT, DayDataT } from '@/shared/@types/type-calendar';
 import { useCommon } from '@/stores/common';
 
 import IconLeft from '~icons/app/icon-chevron-left.svg';
@@ -19,19 +19,19 @@ import type { TabsPaneContext } from 'element-plus';
 
 const props = defineProps({
   tableData: {
-    type: Array as PropType<TableData[]>,
+    type: Array as PropType<TableDataT[]>,
     default: () => {
       return {};
     },
   },
 });
 const commonStore = useCommon();
-let currentMeet = reactive<TableData>({
+let currentMeet = reactive<TableDataT>({
   date: '',
   timeData: [],
 });
 
-const renderData = ref<TableData>({
+const renderData = ref<TableDataT>({
   date: '',
   timeData: [],
 });
@@ -83,13 +83,13 @@ function selectTab(tab: TabsPaneContext) {
       renderData.value.timeData = currentMeet.timeData;
     } else if (index === 1) {
       renderData.value.timeData = currentMeet.timeData.filter(
-        (item: DayData) => {
+        (item: DayDataT) => {
           return item.etherpad;
         }
       );
     } else if (index === 2) {
       renderData.value.timeData = currentMeet.timeData.filter(
-        (item: DayData) => {
+        (item: DayDataT) => {
           return item.activity_type;
         }
       );
@@ -127,7 +127,7 @@ function setMeetingDay(day: string, event: Event) {
         } else {
           // 会议时间排序
           activeName.value = '';
-          renderData.value.timeData.sort((a: DayData, b: DayData) => {
+          renderData.value.timeData.sort((a: DayDataT, b: DayDataT) => {
             return (
               parseInt(a.startTime.replace(':', '')) -
               parseInt(b.startTime.replace(':', ''))

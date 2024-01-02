@@ -10,7 +10,7 @@ import {
 } from 'vue';
 
 import { isValidKey, isBrowser } from '@/shared/utils';
-import { TableData, DayData } from '@/shared/@types/type-calendar';
+import { TableDataT, DayDataT } from '@/shared/@types/type-calendar';
 import { useCommon } from '@/stores/common';
 import { useI18n } from '@/i18n';
 
@@ -25,7 +25,7 @@ import useWindowResize from '@/components/hooks/useWindowResize';
 
 const props = defineProps({
   tableData: {
-    type: Array as PropType<TableData[]>,
+    type: Array as PropType<TableDataT[]>,
     default: () => {
       return {};
     },
@@ -40,14 +40,14 @@ const props = defineProps({
   },
 });
 const commonStore = useCommon();
-let currentMeet = reactive<TableData>({
+let currentMeet = reactive<TableDataT>({
   date: '',
   timeData: [],
 });
 
 const meetRef = ref();
 
-const renderData = ref<TableData>({
+const renderData = ref<TableDataT>({
   date: '',
   timeData: [],
 });
@@ -85,17 +85,17 @@ const meetingTip = ref(
 );
 const windowWidth = ref(useWindowResize());
 
-let meetingData = reactive<TableData[]>([]);
+let meetingData = reactive<TableDataT[]>([]);
 
 function setMeetingDay(select?: string) {
   const meetingData = JSON.parse(JSON.stringify(props.tableData));
   if (select) {
-    currentMeet = meetingData.find((item: TableData) => {
+    currentMeet = meetingData.find((item: TableDataT) => {
       return item.date === select;
     });
   } else {
     // 获取距离今日最近的一条数据 优先展示未开的会议
-    currentMeet = meetingData.find((item: TableData) => {
+    currentMeet = meetingData.find((item: TableDataT) => {
       const startTime = new Date(
         `${item.date} ${item.timeData[0].endTime?.replace('-', ':')}`
       ).getTime();
@@ -120,7 +120,7 @@ function setMeetingDay(select?: string) {
 }
 // 判断会议时间修改提示
 const isActive = ref(false);
-function handleTimeTip(item: DayData) {
+function handleTimeTip(item: DayDataT) {
   const startTime = new Date(
     currentMeet?.date + ' ' + item.startTime + ':00'
   ).getTime();

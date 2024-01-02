@@ -1,4 +1,4 @@
-export interface BlogData {
+export interface BlogDataT {
   archives: string;
   articleName: string;
   author: any;
@@ -14,8 +14,13 @@ export interface BlogData {
   type: string;
   views: number;
 }
-
-export interface ParamsType {
+export interface SearchBlogT {
+  count: number;
+  page: number;
+  pageSize: number;
+  records: BlogDataT[]
+}
+export interface ParamsTypeT {
   page: number;
   pageSize: number;
   lang: string;

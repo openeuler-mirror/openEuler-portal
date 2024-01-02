@@ -5,7 +5,7 @@ import { useI18n } from '@/i18n';
 import lodash from 'lodash';
 
 import { getUrlParam } from '@/shared/utils';
-import { DownloadCommunityData } from '@/shared/@types/type-download';
+import { DownloadCommunityDataT } from '@/shared/@types/type-download';
 
 import DownloadContent from './DownloadContent.vue';
 import AppContent from '@/components/AppContent.vue';
@@ -15,7 +15,7 @@ import IconChevronRight from '~icons/app/icon-chevron-right.svg';
 
 const i18n = useI18n();
 const { lang } = useData();
-const downloadList: DownloadCommunityData[] = lodash.cloneDeep(
+const downloadList: DownloadCommunityDataT[] = lodash.cloneDeep(
   i18n.value.download.COMMUNITY_LIST
 );
 downloadList.pop();

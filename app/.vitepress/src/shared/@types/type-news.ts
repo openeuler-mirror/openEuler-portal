@@ -1,4 +1,4 @@
-export interface NewsData {
+export interface NewsDataT {
   articleName: string;
   author: any;
   banner: string;
@@ -14,7 +14,7 @@ export interface NewsData {
   type: string;
 }
 
-export interface ParamsType {
+export interface ParamsTypeT {
   page: number;
   pageSize: number;
   lang: string;

@@ -1,4 +1,4 @@
-export interface DayData {
+export interface DayDataT {
   creator: string;
   duration_time: string;
   join_url: string;
@@ -19,8 +19,11 @@ export interface DayData {
   activity_type?: number;
 }
 
-export interface TableData {
+export interface TableDataT {
   date: string;
   start_date?: string;
-  timeData: DayData[];
+  timeData: DayDataT[];
+}
+export interface TableDataObjT {
+  tableData: TableDataT[]
 }

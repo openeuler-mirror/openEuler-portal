@@ -12,7 +12,7 @@ import AppContent from '@/components/AppContent.vue';
 
 import SALON_CONFIG from '@/data/salon/salon';
 
-import type { DetailDate } from '@/shared/@types/type-salon';
+import type { DetailDateT } from '@/shared/@types/type-salon';
 import { getUrlParam, getBetweenDateStr } from '@/shared/utils';
 
 import logo_light from '@/assets/common/header/logo.png';
@@ -53,7 +53,7 @@ const isLatest = computed(() => {
 });
 const configData = _.cloneDeep(SALON_CONFIG.cn.MEETUPS_LIST);
 
-const detailObj = ref<DetailDate>();
+const detailObj = ref<DetailDateT>();
 const flowPathList = ref<any[]>([]);
 const tabTitle = ref([
   i18n.value.interaction.MEETUPSLIST.DETAIL_DESC,
@@ -85,7 +85,7 @@ function getActivitiesData() {
   activityId.value = getUrlParam('id');
   if (getUrlParam('isMini')) {
     try {
-      getActivityDetail(activityId.value).then((res: DetailDate) => {
+      getActivityDetail(activityId.value).then((res: DetailDateT) => {
         //  线上活动不加载地图，不显示tab
         !(res.latitude && res.longitude)
           ? (tabTitle.value = tabTitle.value.splice(0, 2))
