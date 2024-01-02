@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
-import { FeatureInfo } from '@/shared/@types/type-sig';
+import { FeatureInfoT } from '@/shared/@types/type-sig';
 
 defineProps({
   info: {
-    type: Array as PropType<FeatureInfo[]>,
+    type: Array as PropType<FeatureInfoT[]>,
     default: () => {
       return [];
     },

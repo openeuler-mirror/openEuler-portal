@@ -5,7 +5,10 @@ import { useI18n } from '@/i18n';
 
 import showMd from 'markdown-it';
 import useWindowResize from '@/components/hooks/useWindowResize';
-import type { SigList, EasyeditorInfoDataItem } from '@/shared/@types/type-sig';
+import type {
+  SigListT,
+  EasyeditorInfoDataItemT,
+} from '@/shared/@types/type-sig';
 
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import SigMeeting from './SigMeeting.vue';
@@ -60,7 +63,7 @@ const oldEmail = ref('');
 const giteeHomeLink = ref('');
 function getOldEmail() {
   getSigList().then((res) => {
-    const targetData = res.filter((item: SigList) => {
+    const targetData = res.filter((item: SigListT) => {
       return item.group_name === sigDetailName.value;
     });
     if (targetData.length) {
@@ -93,11 +96,11 @@ function getSigMembers() {
 }
 
 // 仓库列表过滤参数
-const repositoryNameList = ref([]);
+const repositoryNameList = ref<string[]>([]);
 const repositoryNameSelected = ref('');
-const maintainerList = ref([]);
+const maintainerList =  ref<string[]>([]);
 const maintainerSelected = ref('');
-const committerList = ref([]);
+const committerList =  ref<string[]>([]);
 const committerSelected = ref('');
 
 const filterRepositoryList = () => {
@@ -234,7 +237,7 @@ function getEasyeditorInfo() {
   getSigDetailInfo(href + sigDetailName.value)
     .then((res) => {
       if (res.statusCode === 200 && res.data?.length) {
-        res.data.forEach((item: EasyeditorInfoDataItem) => {
+        res.data.forEach((item: EasyeditorInfoDataItemT) => {
           easyeditorInfo.value[item.name] = item;
         });
       }

@@ -10,6 +10,7 @@ import NotFound from '@/NotFound.vue';
 import { IObject } from './interface';
 import useWindowResize from '@/components/hooks/useWindowResize';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
+import { SigContributeArrT } from '@/shared/@types/type-sig';
 
 const { lang } = useData();
 const i18n = useI18n();
@@ -57,7 +58,7 @@ const param = ref({
   community: 'openeuler',
   sig: computed(() => props.sig),
 } as IObject);
-const memberData = ref([]);
+const memberData = ref<SigContributeArrT[]>([]);
 const memberMax = ref(0);
 const searchInput = ref('');
 const sortExp = (key: string, isAsc: boolean) => {

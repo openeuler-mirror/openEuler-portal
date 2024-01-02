@@ -20,7 +20,7 @@ import IconRight from '~icons/app/icon-arrow-right.svg';
 import IconSearch from '~icons/app/icon-search.svg';
 
 import { getTagsData, sortBlogData } from '@/api/api-search';
-import type { BlogData, ParamsType } from '@/shared/@types/type-blog';
+import type { BlogDataT, ParamsTypeT } from '@/shared/@types/type-blog';
 
 const router = useRouter();
 const { lang } = useData();
@@ -63,7 +63,7 @@ const selectAuthorVal = ref('');
 const selectTagsVal = ref('');
 
 // 博客列表数据
-const blogCardData = ref<BlogData[]>([]);
+const blogCardData = ref<BlogDataT[]>([]);
 // 分页数据
 const paginationData = ref({
   total: 0,
@@ -103,7 +103,7 @@ const getTagsList = () => {
   });
 };
 // 获取列表数据
-const getListData = (params: ParamsType) => {
+const getListData = (params: ParamsTypeT) => {
   sortBlogData(params)
     .then((res) => {
       if (res.obj?.count) {
@@ -337,7 +337,7 @@ onMounted(() => {
 });
 // 页数改变
 const changeCurrentPage = (val: number) => {
-  const params: ParamsType = {
+  const params: ParamsTypeT = {
     category: 'blog',
     lang: lang.value,
     page: val,

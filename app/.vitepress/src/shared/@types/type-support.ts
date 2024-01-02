@@ -1,23 +1,23 @@
-export interface BaseQuery {
+export interface BaseQueryT {
   page: number;
   size: number;
 }
-export interface CveQuery {
-  pages: BaseQuery;
+export interface CveQueryT {
+  pages: BaseQueryT;
   keyword?: string;
   status?: string;
   year?: string;
   score?: string;
   noticeType: string;
 }
-export interface OsvQuery {
-  pages: BaseQuery;
+export interface OsvQueryT {
+  pages: BaseQueryT;
   keyword: string;
   type: string;
   osvName: string;
 }
-export interface SafetyBulletinQuery {
-  pages: BaseQuery;
+export interface SafetyBulletinQueryT {
+  pages: BaseQueryT;
   keyword: string;
   type: [];
   date: [];
@@ -85,7 +85,7 @@ export interface CveDetailT {
   userInteractionOE: string;
 }
 export interface AffectProductT {
-  createTime: string;
+  createTime?: string;
   cveId: string;
   id: number;
   packageName: string;
@@ -95,6 +95,7 @@ export interface AffectProductT {
   status: string;
   updateTime: string;
 }
+
 export interface ConfigurationInfoT {
   architecture: string;
   biosUefi: string;
@@ -149,13 +150,13 @@ export interface ResultT {
   percent: string;
   result: string
 }
-export interface ComponentQuery {
+export interface ComponentQueryT {
   securityLevel?: string;
   affectedProduct?: string;
   noticeType: string;
 }
-export interface CompatibilityQuery {
-  pages: BaseQuery;
+export interface CompatibilityQueryT {
+  pages: BaseQueryT;
   architecture: string;
   keyword: string;
   cpu: string;
@@ -168,7 +169,7 @@ export interface CompatibilityQuery {
   solution: string;
   certificationType: string;
 }
-export interface OsvList {
+export interface OsvListT {
   arch: string;
   baseOpeneulerVersion?: string;
   checksum?: string;
@@ -186,26 +187,26 @@ export interface OsvList {
   updateTime?: string;
 }
 export interface OsvDataT {
-  osvList: OsvList[];
+  osvList: OsvListT[];
   totalCount: number
 }
-export interface PackageInfo {
+export interface PackageInfoT {
   productName: string;
   packageName: string;
   sha256: string;
   url?: string;
-  child: PackageInfo[];
+  child: PackageInfoT[];
 }
-export interface Package {
+export interface PackageT {
   packageName: string[];
   packageType: string;
   url?: string;
 }
-export interface HotPatch {
+export interface HotPatchT {
   productName: string;
-  child: Package[];
+  child: PackageT[];
 }
-export interface SecurityLists {
+export interface SecurityListsT {
   affectedComponent: string;
   affectedProduct: string;
   announcementTime: string;
@@ -229,7 +230,7 @@ export interface SecurityLists {
   type: string;
   updateTime: string;
 }
-export interface CveLists {
+export interface CveListsT {
   affectedProduct?: string;
   announcementTime?: string;
   attackComplexityNVD?: string;
@@ -314,12 +315,37 @@ export interface DriverListT {
 }
 export interface TotalDataT {
   applicationCompList?: [];
-  cveDatabaseList?: CveLists[];
+  cveDatabaseList?: CveListsT[];
   driverCompList?: DriverListT[];
   hardwareCompList?: CompatibilityListT[];
-  securityNoticeList?: SecurityLists[];
-  solutionCompList: SolutionDataT[],
-  totalCount: number
+  securityNoticeList?: SecurityListsT[];
+  solutionCompList: SolutionDataT[];
+  totalCount: number;
+}
+export interface SolutionDataT {
+  OVSVersion: string;
+  architecture: string;
+  biosUefi: string;
+  certificationType: string;
+  cpu: string;
+  date: string;
+  driver: string;
+  hardDiskDrive: string;
+  id: number;
+  introduceLink: string;
+  lang: string;
+  libvirtVersion: string;
+  networkCard: string;
+  os: string;
+  product: string;
+  qemuVersion: string;
+  raid: string;
+  ram: string;
+  serverModel: string;
+  serverVendor: string;
+  solution: string;
+  stratovirtVersion: string;
+  updateTime: string;
 }
 export interface SolutionDataT {
   OVSVersion: string;
@@ -396,39 +422,14 @@ export interface TestOrganizationsT {
   osNames: string[];
   testOrganizations: string[]
 }
-export interface SelectParams {
+export interface SelectParamsT {
   lang: string;
 }
-export interface FilterList {
+export interface FilterListT {
   select: string[];
   title: string;
 }
-export interface ConfigurationInfo {
-  architecture: string;
-  biosUefi: string;
-  certificationAddr: string;
-  certificationTime: string;
-  commitID: string;
-  compatibilityConfiguration: null;
-  computerType: string;
-  cpu: string;
-  date: string;
-  friendlyLink: string;
-  hardDiskDrive: string;
-  hardwareFactory: string;
-  hardwareModel: string;
-  hostBusAdapter: string;
-  id: number;
-  lang: string;
-  mainboardModel: string;
-  osVersion: string;
-  portsBusTypes: string;
-  productInformation: string;
-  ram: string;
-  updateTime: string;
-  videoAdapter: string;
-}
-export interface CveDetailCvss {
+export interface CveDetailCvssT {
   affectedProduct: string;
   announcementTime: string;
   attackComplexityNVD: string;
@@ -461,14 +462,4 @@ export interface CveDetailCvss {
   updateTime: string;
   userInteractionNVD: string;
   userInteractionOE: string;
-}
-export interface AffectProduct {
-  cveId: string;
-  id: number;
-  packageName: string;
-  productName: string;
-  releaseTime: string;
-  securityNoticeNo: string;
-  status: string;
-  updateTime: string;
 }

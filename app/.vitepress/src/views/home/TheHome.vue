@@ -21,13 +21,13 @@ import LinkPanel from '@/components/LinkPanel.vue';
 import { getMeetingData, getActivityData } from '@/api/api-calendar';
 import { getSortData } from '@/api/api-search';
 
-import type { TableData } from '@/shared/@types/type-calendar';
+import type { TableDataT } from '@/shared/@types/type-calendar';
 import type { SortResponse } from '@/shared/@types/type-search';
 
 const { lang } = useData();
 const commonStore = useCommon();
 
-const calendarData = ref<TableData[]>([]);
+const calendarData = ref<TableDataT[]>([]);
 const i18n = useI18n();
 
 const caseData = ref<SortResponse>();

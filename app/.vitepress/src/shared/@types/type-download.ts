@@ -1,4 +1,4 @@
-export interface DownloadCommunityData {
+export interface DownloadCommunityDataT {
   CLOUD_IMAGE: string;
   DESC: string;
   DOWNLOAD_URL: string;
@@ -18,9 +18,9 @@ export interface DownloadCommunityData {
   SERVER_IMAGE?: string;
   VERSION: string;
   PLANNED_EOL: string;
-  DETAILED_LINK: DetailedLinkItem[];
+  DETAILED_LINK: DetailedLinkItemT[];
 }
-export interface DownloadCommercialData {
+export interface DownloadCommercialDataT {
   CLOUD_IMAGE: string;
   DESC: string;
   DOWNLOAD_URL: string;
@@ -40,14 +40,14 @@ export interface DownloadCommercialData {
   SERVER_IMAGE?: string;
   VERSION: string;
   PLANNED_EOL: string;
-  DETAILED_LINK: DetailedLinkCommercialItem[];
+  DETAILED_LINK: DetailedLinkCommercialItemT[];
 }
-export interface MirrorData {
+export interface MirrorDataT {
   Name: string;
   NetworkBandwidth: string;
   [key: string]: string;
 }
-export interface LinkListItem {
+export interface LinkListItemT {
   TYPE: string;
   SIZE: string;
   SHACODE: string;
@@ -55,17 +55,17 @@ export interface LinkListItem {
   TIPS: string;
   IS_FOLDER?: boolean;
 }
-export interface DetailedLinkItem {
-  LINK_LIST: LinkListItem[];
+export interface DetailedLinkItemT {
+  LINK_LIST: LinkListItemT[];
   ARCH: string;
   SCENARIO: string;
 }
-export interface DetailedLinkCommercialItem {
+export interface DetailedLinkCommercialItemT {
   LINK: string;
   ARCH: string;
   SCENARIO: string;
 }
-export interface Scenario {
+export interface ScenarioT {
   KEY: string;
   VALUE: string;
 }

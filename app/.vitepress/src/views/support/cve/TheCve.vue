@@ -5,7 +5,7 @@ import { useRouter } from 'vitepress';
 import { useI18n } from '@/i18n';
 
 import { getCveList } from '@/api/api-security';
-import { CveLists, CveQuery } from '@/shared/@types/type-support';
+import { CveListsT, CveQueryT } from '@/shared/@types/type-support';
 
 import TagFilter from '@/components/TagFilter.vue';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
@@ -33,9 +33,9 @@ const activeScore = ref(0);
 const activeYear = ref(0);
 const activeNames = ref(['1']);
 
-const tableData = ref<CveLists[]>([]);
+const tableData = ref<CveListsT[]>([]);
 
-const queryData: CveQuery = reactive({
+const queryData: CveQueryT = reactive({
   pages: {
     page: 1,
     size: 10,
@@ -47,7 +47,7 @@ const queryData: CveQuery = reactive({
   noticeType: 'cve',
 });
 
-function getCveLists(data: CveQuery) {
+function getCveLists(data: CveQueryT) {
   getCveList(data).then((res: any) => {
     tableData.value = res.result.cveDatabaseList;
     total.value = res.result.totalCount;

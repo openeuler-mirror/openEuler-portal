@@ -1,4 +1,4 @@
-export interface DetailDate {
+export interface DetailDateT {
   id?: number;
   title?: string;
   register_url?: string;
@@ -25,3 +25,4 @@ export interface DetailDate {
   MEETINGS_INFO?: any;
   videoLink?: string;
 }
+

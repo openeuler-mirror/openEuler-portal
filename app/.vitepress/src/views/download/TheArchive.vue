@@ -7,7 +7,7 @@ import { useI18n } from '@/i18n';
 import { useCommon } from '@/stores/common';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
-import type { DownloadCommunityData } from '@/shared/@types/type-download';
+import type { DownloadCommunityDataT } from '@/shared/@types/type-download';
 
 import AppContent from '@/components/AppContent.vue';
 import TagFilter from '@/components/TagFilter.vue';
@@ -28,7 +28,7 @@ const isMobile = computed(() => (screenWidth.value <= 1100 ? true : false));
 //分页与数据项目
 const currentPage = ref(1);
 const pageSize = ref(10);
-const filterList: Ref<DownloadCommunityData[]> = ref([]);
+const filterList: Ref<DownloadCommunityDataT[]> = ref([]);
 const dataList = computed(() => {
   return filterList.value.slice(
     (currentPage.value - 1) * pageSize.value,

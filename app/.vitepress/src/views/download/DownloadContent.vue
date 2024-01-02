@@ -11,12 +11,12 @@ import { selectMirror } from '@/api/api-mirror';
 import { getUrlParam } from '@/shared/utils';
 import { useCommon } from '@/stores/common';
 import type {
-  DownloadCommunityData,
-  MirrorData,
-  LinkListItem,
-  DetailedLinkItem,
-  Scenario,
+  DownloadCommunityDataT,
+  LinkListItemT,
+  DetailedLinkItemT,
+  ScenarioT,
 } from '@/shared/@types/type-download';
+import type { MirrorLsitT } from '@/shared/@types/type-mirror';
 
 import TagFilter from '@/components/TagFilter.vue';
 import IconCopy from '~icons/app/icon-copy.svg';
@@ -41,9 +41,9 @@ const i18n = useI18n();
 const downloadList = lodash.cloneDeep(i18n.value.download.COMMUNITY_LIST);
 const { lang } = useData();
 const shaText = 'SHA256';
-const contentData: Ref<DownloadCommunityData[]> = computed(() => {
+const contentData: Ref<DownloadCommunityDataT[]> = computed(() => {
   return downloadList.filter(
-    (item: DownloadCommunityData) => item.NAME === version.value
+    (item: DownloadCommunityDataT) => item.NAME === version.value
   );
 });
 const screenWidth = useWindowResize();
@@ -69,14 +69,14 @@ onMounted(() => {
 const activeArch = ref('');
 const activeScenario = ref('');
 const architectureList: Ref<string[]> = ref([]);
-const scenarioList: Ref<Scenario[]> = ref([]);
+const scenarioList: Ref<ScenarioT[]> = ref([]);
 function initActiveScenario() {
   // 查看是否有携带筛选参数
   const scenario = getUrlParam('scenario');
   if (scenario) {
     activeScenario.value = scenario;
     let flag = true;
-    contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItem) => {
+    contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItemT) => {
       if (item.SCENARIO === activeScenario.value && flag) {
         activeArch.value = item.ARCH;
         flag = false;
@@ -101,7 +101,7 @@ function setTagList() {
   const temp: string[] = [];
   architectureList.value = [];
   scenarioList.value = [];
-  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItem) => {
+  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItemT) => {
     if (!architectureList.value.includes(item.ARCH)) {
       architectureList.value.push(item.ARCH);
     }
@@ -110,7 +110,7 @@ function setTagList() {
     }
   });
   temp.forEach((item: string) => {
-    i18n.value.download.SCENARIO_LIST.forEach((itemList: Scenario) => {
+    i18n.value.download.SCENARIO_LIST.forEach((itemList: ScenarioT) => {
       if (item === itemList.KEY && !scenarioList.value.includes(itemList)) {
         scenarioList.value.push(itemList);
       }
@@ -131,7 +131,7 @@ const onScenarioTagClick = (select: string) => {
 const tempTag = ref('');
 function setTempTag() {
   let flag = true;
-  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItem) => {
+  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItemT) => {
     if (item.ARCH === activeArch.value) {
       if (flag) {
         tempTag.value = item.SCENARIO;
@@ -142,7 +142,7 @@ function setTempTag() {
 }
 function isDisable(tag: string) {
   let flag = false;
-  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItem) => {
+  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItemT) => {
     if (item.ARCH === activeArch.value && item.SCENARIO === tag) {
       flag = true;
     }
@@ -155,12 +155,12 @@ function isDisable(tag: string) {
   return !flag;
 }
 // 获取镜像仓及表格显示数据
-const tableData: Ref<LinkListItem[]> = ref([]);
+const tableData: Ref<LinkListItemT[]> = ref([]);
 const activeMirror: Ref<string[]> = ref([]);
 const activeMirrorLink: Ref<string[]> = ref([]);
-const allMirrorList: Ref<MirrorData[]> = ref([]);
-const mirrorList: Ref<MirrorData[]> = ref([]);
-const moreMirrorList: Ref<MirrorData[]> = ref([]);
+const allMirrorList: Ref<MirrorLsitT[]> = ref([]);
+const mirrorList: Ref<MirrorLsitT[]> = ref([]);
+const moreMirrorList: Ref<MirrorLsitT[]> = ref([]);
 function setActiveMirror() {
   activeMirror.value = [];
   activeMirrorLink.value = [];
@@ -181,7 +181,7 @@ function setActiveMirror() {
 }
 function getTableData() {
   tableData.value = [];
-  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItem) => {
+  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItemT) => {
     if (
       item.ARCH === activeArch.value &&
       item.SCENARIO === activeScenario.value
@@ -216,7 +216,7 @@ async function getMirrorList() {
           }
         }
       }
-      mirrorData.MirrorList.forEach((item: MirrorData) => {
+      mirrorData.MirrorList.forEach((item: MirrorLsitT) => {
         item.NameSpend = item.Name + ' (' + item.NetworkBandwidth + 'Mb/s)';
       });
       allMirrorList.value = lodash.cloneDeep(mirrorData.MirrorList);
@@ -258,7 +258,7 @@ onMounted(async () => {
 });
 
 function setMirrorLink(index: number) {
-  allMirrorList.value.forEach((item: MirrorData) => {
+  allMirrorList.value.forEach((item: MirrorLsitT) => {
     if (item.NameSpend === activeMirror.value[index]) {
       activeMirrorLink.value[index] = item.HttpURL;
     }

@@ -28,6 +28,7 @@ import { ElMessage } from 'element-plus';
 import { addSearchBuriedData } from '@/shared/utils';
 import { AigcPrivacyAccepted } from '@/shared/privacy-accepted.const';
 import { useStoreData, isLogined, showGuard } from '@/shared/login';
+import type { SearchDrowdownArrT } from '@/shared/@types/type-search';
 
 const screenWidth = useWindowResize();
 const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
@@ -50,7 +51,7 @@ const searchInput = ref<string>('');
 const searchValue = computed(() => {
   return i18n.value.common.SEARCH;
 });
-const serviceData = ref([]);
+const serviceData = ref<SearchDrowdownArrT[]>([]);
 // 接收搜索数量的数据
 const searchNumber: any = ref([]);
 // 显示的数据类型
@@ -121,10 +122,10 @@ const showChatRes: any = ref(false);
 const showBlink: any = ref(false);
 // 点赞
 const like: any = ref(false);
-const likeIcon = computed(() => like.value ? IconUnlike : IconLike)
+const likeIcon = computed(() => (like.value ? IconUnlike : IconLike));
 // 点踩
 const stomp: any = ref(false);
-const stompIcon = computed(() => stomp.value ? IconUnstomp : IconStomp)
+const stompIcon = computed(() => (stomp.value ? IconUnstomp : IconStomp));
 // 接收获取的搜索数据
 const searchResultList: any = ref([]);
 // 接收软件包数据
@@ -190,7 +191,7 @@ function setCurrentType(index: number, type: string) {
   currentPage.value = 1;
   searchDataAll();
 }
-const abortController = ref()
+const abortController = ref();
 function searchChat() {
   // 仅支持中文
   if (lang.value !== 'zh') return;
@@ -202,43 +203,46 @@ function searchChat() {
     // 频繁搜索终止上一次请求
     abortController.value.abortController.abort();
   }
-  isLogined().then(() => {
-    if (guardAuthClient.value.aigcPrivacyAccepted !== AigcPrivacyAccepted) return;
-    abortController.value = getChatapi(searchInput.value, {
-      open: () => {
-        searchChatRes.value = '';
-      },
-      message: (res: string) => {
-        showBlink.value = true;
-        try {
-          const data = JSON.parse(res);
-          if (data?.answer) {
-            searchChatRes.value += data?.answer;
+  isLogined()
+    .then(() => {
+      if (guardAuthClient.value.aigcPrivacyAccepted !== AigcPrivacyAccepted)
+        return;
+      abortController.value = getChatapi(searchInput.value, {
+        open: () => {
+          searchChatRes.value = '';
+        },
+        message: (res: string) => {
+          showBlink.value = true;
+          try {
+            const data = JSON.parse(res);
+            if (data?.answer) {
+              searchChatRes.value += data?.answer;
+            }
+          } catch (e) {}
+          nextTick(() => {
+            ChatRef.value?.scrollTo({
+              top: ChatRef.value?.scrollHeight,
+              behavior: 'smooth',
+            });
+          });
+        },
+        close: () => {
+          showBlink.value = false;
+          if (!searchChatRes.value) {
+            showChatRes.value = false;
           }
-        } catch (e) {}
-        nextTick(() => {
-          ChatRef.value?.scrollTo({
-            top: ChatRef.value?.scrollHeight,
-            behavior: 'smooth',
-          })
-        })
-      },
-      close: () => {
-        showBlink.value = false;
-        if (!searchChatRes.value) {
+        },
+        error: () => {
           showChatRes.value = false;
-        }
-      },
-      error: () => {
-        showChatRes.value = false;
-      },
+        },
+      });
     })
-  }).catch((err) => {
-    if (err === false) return;
-    if (err?.code !== '401') {
-      showChatRes.value = false
-    }
-  })
+    .catch((err) => {
+      if (err === false) return;
+      if (err?.code !== '401') {
+        showChatRes.value = false;
+      }
+    });
 }
 function clickLike() {
   like.value = !like.value;
@@ -324,7 +328,7 @@ function searchAll(current?: string) {
     }
     currentPage.value = 1;
 
-    if(cookieStatus.isAllAgreed){
+    if (cookieStatus.isAllAgreed) {
       addSearchBuriedData(searchInput.value);
     }
 
@@ -348,7 +352,6 @@ function handleSelect(val: string) {
   searchAll();
 }
 
-
 // 设置搜索结果的跳转路径
 function goLink(data: any, index: number) {
   let { path } = data;
@@ -366,13 +369,13 @@ function goLink(data: any, index: number) {
       : '';
     search_result_url = location.origin + search_result_url;
   }
-  if(cookieStatus.isAllAgreed){
-    setAdvertisedData(data,index,search_result_url);
+  if (cookieStatus.isAllAgreed) {
+    setAdvertisedData(data, index, search_result_url);
   }
   window.open(encodeURI(search_result_url));
 }
 
-const setAdvertisedData = (data: any, index:number, path:string)=>{
+const setAdvertisedData = (data: any, index: number, path: string) => {
   const searchKeyObj = {
     search_tag: data.type,
     search_rank_num: pageSize.value * (currentPage.value - 1) + (index + 1),
@@ -388,7 +391,7 @@ const setAdvertisedData = (data: any, index:number, path:string)=>{
     ...searchKeyObj,
   };
   sensors.setProfile(sensorObj);
-}
+};
 
 // 移动端上下翻页事件
 function turnPage(option: string) {
@@ -458,14 +461,30 @@ function clipTxt(text: string) {
         class="gpt-block"
         :class="suggestList.length ? 'exist-suggest' : ''"
       >
-        <div class="gpt-content gpt-content-before" v-if="!guardAuthClient.username">
+        <div
+          class="gpt-content gpt-content-before"
+          v-if="!guardAuthClient.username"
+        >
           <div></div>
-          <OButton class="btn" type="primary" @click="showGuard" size="small">登录查看智能搜索结果</OButton>
+          <OButton class="btn" type="primary" @click="showGuard" size="small"
+            >登录查看智能搜索结果</OButton
+          >
           <MatterTip></MatterTip>
         </div>
-        <div class="gpt-content gpt-content-before" v-else-if="guardAuthClient.aigcPrivacyAccepted !== AigcPrivacyAccepted">
+        <div
+          class="gpt-content gpt-content-before"
+          v-else-if="
+            guardAuthClient.aigcPrivacyAccepted !== AigcPrivacyAccepted
+          "
+        >
           <div></div>
-          <OButton class="btn" type="primary" @click="viewAgreeVisible = true" size="small">获取用户协议同意</OButton>
+          <OButton
+            class="btn"
+            type="primary"
+            @click="viewAgreeVisible = true"
+            size="small"
+            >获取用户协议同意</OButton
+          >
           <MatterTip></MatterTip>
         </div>
         <div v-loading="!searchChatRes" class="gpt-content" v-else>
@@ -491,7 +510,10 @@ function clipTxt(text: string) {
             }}</OButton>
           </div>
         </div>
-        <ViewAgreeModal v-model="viewAgreeVisible" @submit="searchChat"></ViewAgreeModal>
+        <ViewAgreeModal
+          v-model="viewAgreeVisible"
+          @submit="searchChat"
+        ></ViewAgreeModal>
       </div>
       <div class="search-content">
         <div class="select-options">
@@ -601,7 +623,6 @@ function clipTxt(text: string) {
           </ul>
         </el-scrollbar>
       </div>
-      
     </div>
   </div>
 </template>
@@ -774,7 +795,7 @@ function clipTxt(text: string) {
         @media (max-width: 768px) {
           padding: var(--o-spacing-h5) var(--o-spacing-h10);
         }
-      } 
+      }
     }
     .search-content {
       display: flex;

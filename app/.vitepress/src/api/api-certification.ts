@@ -1,10 +1,19 @@
 import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
+import type { CertificationT, CertificateListT, CertificateInfoT } from '@/shared/@types/type-certification'
+
 /**
  * 获取验证码
- * @name getCertification
+ * @param {string} params 邮箱
+ * @param {string} lang 语言
+ * @return {Promise<Object>} 验证码
  */
-export function getCertification(params: any, lang: string) {
+export function getCertification(params: any, lang: string): Promise<{
+  code: null,
+  data: CertificationT,
+  message: string,
+  success: boolean
+}> {
   const url = `/api-certification/certification/list/verifyCode?email=${params}`;
   return request
     .get(url, {
@@ -19,18 +28,32 @@ export function getCertification(params: any, lang: string) {
 }
 /**
  * 输入验证码后的验证接口
- * @name getSendCode
+ * @param {string} identification getCertification返回的验证码
+ * @param {string} code 邮箱收到的验证码
+ * @return {Promise<Object>} 证书信息
  */
-export function getSendCode(identification: string, code: string) {
+export function getSendCode(identification: string, code: string): Promise<{
+  code: null,
+  data: CertificateListT[],
+  message: string,
+  success: boolean
+}> {
   const url = `/api-certification/certification/list?identification=${identification}&code=${code}`;
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
 /**
  * 下载证书
- * @name getSendCode
+ * @param {string} pa 下载证书PA值
+ * @param {string} lang 语言
+ * @return {Promise<Object>} 证书名字和内容
  */
-export function downloadCard(pa: string, lang: string) {
+export function downloadCard(pa: string, lang: string): Promise<{
+  code: null,
+  data: CertificateInfoT,
+  message: string,
+  success: boolean
+}> {
   const url = `/api-certification/certification?PA=${pa}`;
   return request
     .get(url, {

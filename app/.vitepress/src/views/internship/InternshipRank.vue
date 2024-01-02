@@ -59,7 +59,7 @@ async function getRankData() {
       }
     } else {
       isRankVisible.value = false;
-      throw new Error(res.status + ' ' + res.message);
+      throw new Error(res.code + ' ' + res.message);
     }
   } catch (error: any) {
     console.error(error);

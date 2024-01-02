@@ -8,7 +8,7 @@ import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppContent from '@/components/AppContent.vue';
 
 import { getAllMailing } from '@/api/api-mailing';
-import type { MailingMsg } from '@/shared/@types/type-mail';
+import type { MailingMsgT } from '@/shared/@types/type-mail';
 
 import banner from '@/assets/banner/banner-community.png';
 import illustration from '@/assets/illustrations/mailing.png';
@@ -24,7 +24,7 @@ const RIGHT_IMG = [p3, p4];
 const i18n = useI18n();
 const screenWidth = useWindowResize();
 
-const tableData: Ref<MailingMsg[]> = ref([]);
+const tableData: Ref<MailingMsgT[]> = ref([]);
 
 onMounted(async () => {
   try {

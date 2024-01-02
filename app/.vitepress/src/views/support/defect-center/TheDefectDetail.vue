@@ -6,7 +6,7 @@ import { useI18n } from '@/i18n';
 
 import securityNoticeNos from '@/data/security';
 import { getSecurityDetail } from '@/api/api-security';
-import type { PackageInfo, HotPatch } from '@/shared/@types/type-support';
+import type { PackageInfoT, HotPatchT } from '@/shared/@types/type-support';
 
 import IconChevronRight from '~icons/app/icon-chevron-right.svg';
 
@@ -44,7 +44,7 @@ function goBackPage() {
   router.go(`${router.route.path.substring(0, i)}`);
 }
 
-function getRpmUrl(data: PackageInfo[]) {
+function getRpmUrl(data: PackageInfoT[]) {
   if (!data?.length) {
     return false;
   }
@@ -75,7 +75,7 @@ function getRpmUrl(data: PackageInfo[]) {
     });
   });
 }
-function getHotPatchRpmUrl(data: HotPatch[]) {
+function getHotPatchRpmUrl(data: HotPatchT[]) {
   if (!data?.length) {
     return false;
   }

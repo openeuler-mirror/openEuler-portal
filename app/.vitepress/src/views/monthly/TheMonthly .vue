@@ -15,7 +15,7 @@ import illustration from '@/assets/illustrations/the-moon.png';
 import IconSearch from '~icons/app/icon-search.svg';
 
 import { getSortData, getTagsData } from '@/api/api-search';
-import type { NewsData, ParamsType } from '@/shared/@types/type-news';
+import type { NewsDataT, ParamsTypeT } from '@/shared/@types/type-news';
 
 const router = useRouter();
 const { lang } = useData();
@@ -29,7 +29,7 @@ const sortParams = reactive({
   tags: '社区运作报告',
 });
 // 新闻列表数据
-const newsCardData = ref<NewsData[]>([]);
+const newsCardData = ref<NewsDataT[]>([]);
 const isPc = computed(() => (screenWidth.value <= 768 ? true : false));
 
 // 分页数据
@@ -75,7 +75,7 @@ const changeTime = () => {
 };
 
 //获取数据
-const getListData = (params: ParamsType) => {
+const getListData = (params: ParamsTypeT) => {
   getSortData(params)
     .then((res) => {
       if (res.obj.count) {

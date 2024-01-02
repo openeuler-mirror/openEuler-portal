@@ -6,7 +6,7 @@ import SigLandscapeFeature from './SigLandscapeFeature.vue';
 
 import { getSigLandscape } from '@/api/api-sig';
 
-import { GroupInfo } from '@/shared/@types/type-sig';
+import { GroupInfoT } from '@/shared/@types/type-sig';
 
 const configData = useData();
 const router = useRouter();
@@ -16,7 +16,7 @@ const toSigDetail = (name: string): void => {
   router.go(`/${language.value}/sig/sig-detail/?name=${name}`);
 };
 
-const landscapeInfo = ref<GroupInfo[]>([]);
+const landscapeInfo = ref<GroupInfoT[]>([]);
 
 onMounted(async () => {
   try {
