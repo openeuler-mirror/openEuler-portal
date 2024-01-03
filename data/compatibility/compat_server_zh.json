@@ -14466,5 +14466,89 @@
       "hostBusAdapter": "",
       "hardDiskDrive": "TOSHIBA  AL15SEB060N"
     }
+  },
+  {
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "R6240H0",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2023/12/27",
+    "friendlyLink": "https://www.cancon.com.cn/product/1582.html",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2023.12.27",
+        "sha256": "f6466498ad890946b39e22d3eb652f7a66a93f736eea4959ceed0af16a5c75fd",
+        "driverSize": "74K",
+        "chipVendor": "Avago",
+        "boardModel": "9560-8i",
+        "chipModel": "SAS39xx",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn/product/1582.html",
+      "certificationTime": "2023/12/27",
+      "commitID": "I8OAXM",
+      "mainboardModel": "62DB32",
+      "biosUefi": "0XWH001017",
+      "cpu": "Hygon 3",
+      "ram": "14*32G DIMMs",
+      "portsBusTypes": "x16 PCIE",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
+      "hardDiskDrive": "SA MZ7L3960HBLT-7 960G 2.5SATA 6Gb M SSD"
+    }
+  },
+  {
+    "hardwareFactory": "超微",
+    "hardwareModel": "AS-4124GS-TNR",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2023/12/27",
+    "friendlyLink": "https://www.supermicro.org.cn/Aplus/system/4U/4124/AS-4124GS-TNR_.cfm",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "15d9",
+        "ssID": "088e",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "igb",
+        "version": "5.10.0-173.0.0.86.oe2203sp3.x86_64",
+        "type": "NIC",
+        "date": "2023.12.27",
+        "sha256": "1781879e66bd54a8cc4c1dd4f9399b90a4fc3eb3276501cea330796900e8271b",
+        "driverSize": "106K",
+        "chipVendor": "Intel",
+        "boardModel": "I350",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.supermicro.org.cn/Aplus/system/4U/4124/AS-4124GS-TNR_.cfm",
+      "certificationTime": "2023/12/27",
+      "commitID": "I8OCWO",
+      "mainboardModel": "H12DSG-O-CPU",
+      "biosUefi": "2.4",
+      "cpu": "AMD EPYC3",
+      "ram": "16*16G DIMMS",
+      "portsBusTypes": "X16 PCI Express 4 X16",
+      "videoAdapter": "ASPEED Graphics Family",
+      "hostBusAdapter": "Marvell Technology Group Ltd. 88SE9230 PCIe SATA 6Gb/s",
+      "hardDiskDrive": "KCD61LUL3T84__1"
+    }
   }
 ]
