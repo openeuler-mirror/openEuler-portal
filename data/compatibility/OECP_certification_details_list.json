@@ -1,15 +1,15 @@
 [
     {
         "osv_name": "江苏润和软件股份有限公司",
-        "os_version": "hopestage-image-ok3568-20231128093203.rootfs.ext4，boot.img",
+        "os_version": "hopestage-image-ok3568-20231128093203.rootfs.ext4, boot.img",
         "arch": "aarch64",
-        "checksum": "6756809e4b83c712a6641dd4ef273a18 hopestage-image-ok3568-20231128093203.rootfs.ext4\n6146c27fb5ca967ecee58145815e720c boot.img",
+        "checksum": "6756809e4b83c712a6641dd4ef273a18, 6146c27fb5ca967ecee58145815e720c",
         "base_openeuler_version": "openEuler Embedded 22.03 LTS SP2",
         "os_download_link": "不提供",
         "friendly_link": "http://www.hoperun.com/",
         "type": "嵌入式",
         "total_result": "pass",
-        "date": "2024/01/02",
+        "date": "2024/01/03",
         "details": "详细信息",
         "tools_result": [
             {
