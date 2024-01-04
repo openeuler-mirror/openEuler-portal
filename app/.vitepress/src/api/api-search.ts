@@ -141,7 +141,11 @@ export function getPop(params: string): Promise<{
   status: number
 }> {
   const url = `/api-search/search/pop?${params}`;
-  return request.post(url).then((res: AxiosResponse) => res.data);
+  return request
+    .post(url, null, {
+      $ignoreLoading: true,
+    })
+    .then((res: AxiosResponse) => res.data);
 }
 
 /**
