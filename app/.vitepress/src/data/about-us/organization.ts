@@ -6,7 +6,6 @@ import jiangzhenhua from '@/assets/category/organization/jiangzhenhua.png';
 import lipeiyuan from '@/assets/category/organization/lipeiyuan.png';
 import liuwenqing from '@/assets/category/organization/liuwenqing.png';
 import liuyanfei from '@/assets/category/organization/liuyanfei.png';
-import qiuchengfeng from '@/assets/category/organization/qiuchengfeng.png';
 import wuyanjun from '@/assets/category/organization/wuyanjun.png';
 import zujianzhong from '@/assets/category/organization/zujianzhong.png';
 import zhangshenju from '@/assets/category/organization/zhangshenju.png';
@@ -191,8 +190,8 @@ export default {
             title: '执行总监',
             personalList: [
               {
-                img: qiuchengfeng,
-                name: '邱成锋',
+                img: xiongwei,
+                name: '熊伟',
                 position: ['华为技术有限公司'],
               },
             ],
@@ -637,8 +636,8 @@ export default {
             title: 'Executive Director',
             personalList: [
               {
-                img: qiuchengfeng,
-                name: 'Qiu Chengfeng',
+                img: xiongwei,
+                name: 'Xiong Wei',
                 position: ['Huawei Technologies Co., Ltd.'],
               },
             ],
