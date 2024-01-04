@@ -18,12 +18,14 @@ import IconLike from '~icons/app/icon-like.svg';
 import IconUnlike from '~icons/app/icon-unlike.svg';
 import IconStomp from '~icons/app/icon-stomp.svg';
 import IconUnstomp from '~icons/app/icon-unstomp.svg';
+
 import NotFound from '@/NotFound.vue';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import SearchSevice from './SearchSevice.vue';
 import ViewAgreeModal from './ViewAgreeModal.vue';
 import MatterTip from './MatterTip.vue';
 import useWindowResize from '@/components/hooks/useWindowResize';
+
 import { ElMessage } from 'element-plus';
 import { addSearchBuriedData } from '@/shared/utils';
 import { AigcPrivacyAccepted } from '@/shared/privacy-accepted.const';
@@ -363,6 +365,8 @@ function goLink(data: any, index: number) {
     search_result_url = site.value.themeConfig.docsUrl + '/' + path + '.html';
   } else if (data.type === 'forum') {
     search_result_url = `${site.value.themeConfig.forumUrl}${path}`;
+  } else if (data.type === 'gitee') {
+    search_result_url = path;
   } else {
     data.type === 'news' || data.type === 'blog'
       ? (search_result_url = `${search_result_url}.html`)
@@ -518,17 +522,16 @@ function clipTxt(text: string) {
       <div class="search-content">
         <div class="select-options">
           <ul class="type">
-            <li
-              v-for="(item, index) in searchNumber"
-              :key="item"
-              :class="currentIndex === index ? 'active' : ''"
-              @click="setCurrentType(index, item.key)"
-            >
-              {{ i18n.search.tagList[item.key] }}
-              <span v-show="i18n.search.tagList[item.key]"
-                >({{ item.doc_count }})</span
+            <template v-for="(item, index) in searchNumber" :key="item">
+              <li
+                v-if="i18n.search.tagList[item.key]"
+                :class="currentIndex === index ? 'active' : ''"
+                @click="setCurrentType(index, item.key)"
               >
-            </li>
+                {{ i18n.search.tagList[item.key] }}
+                <span>({{ item.doc_count }})</span>
+              </li>
+            </template>
           </ul>
 
           <ClientOnly>
