@@ -781,26 +781,26 @@ export default {
           TYPE: 1,
           CHILDREN: [
             {
-              NAME: 'openEuler 22.03 LTS SP2',
+              NAME: 'openEuler 22.03 LTS SP3',
               LABEL:
-                'openEuler 22.03 LTS SP2 是openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同。',
-              PATH: '/download/?version=openEuler 22.03 LTS SP2',
+                'openEuler 22.03 LTS SP3 是openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同。',
+              PATH: '/download/?version=openEuler 22.03 LTS SP3',
               CHILDREN: [
                 {
                   NAME: '服务器',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=SERVER',
+                  PATH: '/download/?version=openEuler 22.03 LTS SP3&scenario=SERVER',
                 },
                 {
                   NAME: '边缘计算',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=EDGE_CLOUD',
+                  PATH: '/download/?version=openEuler 22.03 LTS SP3&scenario=EDGE_CLOUD',
                 },
                 {
                   NAME: '云计算',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=CLOUD_COMPUTING',
+                  PATH: '/download/?version=openEuler 22.03 LTS SP3&scenario=CLOUD_COMPUTING',
                 },
                 {
                   NAME: '嵌入式',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=EMBEDDED',
+                  PATH: '/download/?version=openEuler 22.03 LTS SP3&scenario=EMBEDDED',
                 },
               ],
             },
