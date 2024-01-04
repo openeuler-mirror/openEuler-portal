@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted } from 'vue';
 import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
 import { useI18n } from '@/i18n';
@@ -10,6 +10,8 @@ import IconCancel from '~icons/app/icon-cancel.svg';
 import IconSearch from '~icons/app/icon-search.svg';
 
 const { lang } = useData();
+const searchRef = ref();
+const isClickOutside = useClickOutside(searchRef) || false;
 
 const emits = defineEmits(['focus-input', 'search-click']);
 const isShowDrawer = ref(false);
@@ -62,9 +64,21 @@ const closeSearchBox = () => {
   isShowDrawer.value = false;
   emits('search-click', isShowBox.value);
 };
+
+onMounted(() => {
+  window.addEventListener('click', () => {
+    if (isClickOutside.value) {
+      closeSearchBox();
+    }
+  });
+});
 </script>
 <template>
-  <div class="header-search" :class="{ 'input-focus': isShowDrawer }">
+  <div
+    ref="searchRef"
+    class="header-search"
+    :class="{ 'input-focus': isShowDrawer }"
+  >
     <OInput
       v-model="searchInput"
       :placeholder="
