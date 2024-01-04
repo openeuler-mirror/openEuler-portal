@@ -222,6 +222,15 @@ async function getMirrorList() {
       allMirrorList.value = lodash.cloneDeep(mirrorData.MirrorList);
       mirrorList.value = lodash.cloneDeep(mirrorData.MirrorList.splice(0, 3));
       moreMirrorList.value = lodash.cloneDeep(mirrorData.MirrorList);
+      if (mirrorList.value.length === 1) {
+        mirrorList.value = [
+          {
+            Name: 'openEuler-HongKong',
+            NetworkBandwidth: '500',
+            HttpURL: 'https://repo.openeuler.org/',
+          },
+        ];
+      }
     } else {
       mirrorList.value = [];
       moreMirrorList.value = [];
@@ -547,6 +556,7 @@ function setActiveMirrorMobile(index: number, item: string) {
                 >
                   {{ itemMirror.NameSpend }}
                 </li>
+
                 <li>
                   {{ i18n.download.MORE_MIRROR }}
                 </li>

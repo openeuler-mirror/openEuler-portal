@@ -2,6 +2,310 @@ export default {
   zh: {
     COMMUNITY_LIST: [
       {
+        NAME: 'openEuler 22.03 LTS SP3',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/',
+        DESC: 'openEuler 22.03 LTS SP3 是openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同。',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/zh/docs/22.03_LTS_SP3/docs/Releasenotes/release_notes.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/zh/docs/22.03_LTS_SP3/docs/Installation/installation.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+        WHITE_PAPER: '/whitepaper/openEuler 22.03 LTS SP3 技术白皮书.pdf',
+        WEBSITE_SELECT: '/zh/mirror/select/?version=22.03-LTS-SP3',
+        CLOUD_IMAGE:
+          'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/virtual_machine_img/',
+        EDGE_IMAGE: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/edge_img/',
+        EMBEDDEN_IMAGE:
+          'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/embedded_img/',
+        MANUFACTURER: 'openEuler社区',
+        PUBLISH_DATE: '2024/01',
+        LTS: true,
+        VERSION: '22.03-LTS-SP3',
+        DETAILED_LINK: [
+          // x86
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.5 GiB',
+                SHACODE:
+                  '29f143ddbe888be489d3147c3c0f11e8c6a6fb57cb19be93516b7926bdf0fd81',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/ISO/x86_64/openEuler-22.03-LTS-SP3-x86_64-dvd.iso',
+                TIPS: 'x86_64架构的基础安装ISO，包含了运行最小系统的核心组件',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '17.1 GiB',
+                SHACODE:
+                  'b874c86286a361db2a526c40244b769ae2611cdabb7967cef6b445dd7d8d3fe5',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/ISO/x86_64/openEuler-22.03-LTS-SP3-everything-x86_64-dvd.iso',
+                TIPS: 'x86_64架构的全量安装ISO，包含了运行完整系统所需的全部组件',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '740.0 MiB',
+                SHACODE:
+                  'f9e68badf359f798cc87809dd11bef24cec6e081d9403361b0a8efee3ac68a7e',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/ISO/x86_64/openEuler-22.03-LTS-SP3-netinst-x86_64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          // aarch64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.1 GiB',
+                SHACODE:
+                  '40969fac8f0adfce60477be5a52b4204b26338f296471dd54f105e5d69240cf8',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/ISO/aarch64/openEuler-22.03-LTS-SP3-aarch64-dvd.iso',
+                TIPS: 'AArch64架构的基础安装ISO，包含了运行最小系统的核心组件',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '	16.5 GiB',
+                SHACODE:
+                  'b2f52f8ed3adfa965ccfd1145077865beeb3797cdb23733a835987d9d6eed321',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/ISO/aarch64/openEuler-22.03-LTS-SP3-everything-aarch64-dvd.iso',
+                TIPS: 'AArch64架构的全量安装ISO，包含了运行完整系统所需的全部组件',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '698.7 MiB',
+                SHACODE:
+                  'aedbaf887ca330574de10e281156cadd0a2494224ffcdc06a2481e77fac48b9b',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/ISO/aarch64/openEuler-22.03-LTS-SP3-netinst-aarch64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+          //EDGE_CLOUD x86_64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '1.4 GiB',
+                SHACODE:
+                  'a48590ea42f974193df4853e5734ffa08d1f62b17540434c09df0b8b6eb256f9',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/edge_img/x86_64/openEuler-22.03-LTS-SP3-edge-x86_64-dvd.iso',
+                TIPS: 'x86_64架构的边缘ISO，包含了运行最小系统的核心组件',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'EDGE_CLOUD',
+          },
+          // EDGE_CLOUD AArch64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '1.3 GiB',
+                SHACODE:
+                  'd28466f5d0f2f7931b5557351dbf8cba8e1863a199ced450ef23d525a6204c6d',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/edge_img/aarch64/openEuler-22.03-LTS-SP3-edge-aarch64-dvd.iso',
+                TIPS: 'AArch64架构的边缘ISO，包含了运行最小系统的核心组件',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'EDGE_CLOUD',
+          },
+          // CLOUD_COMPUTING x86_64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '402.8 MiB',
+                SHACODE:
+                  'ca03b19f77c2080af9a6a28193b99c951980c5e717bca30c0a803d96985cabec',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/virtual_machine_img/x86_64/openEuler-22.03-LTS-SP3-x86_64.qcow2.xz',
+                TIPS: 'x86_64架构下openEuler虚拟机镜像',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          // CLOUD_COMPUTING AArch64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '374.7 MiB',
+                SHACODE:
+                  '202587c58c0a0189663dde48d3839ba1c721955104db5628360a2fe00de7657e',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/virtual_machine_img/aarch64/openEuler-22.03-LTS-SP3-aarch64.qcow2.xz',
+                TIPS: 'aarch64架构下openEuler虚拟机镜像',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          {
+            // AArch64
+            LINK_LIST: [
+              {
+                TYPE: 'ok3588',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK: 'openEuler-22.03-LTS-SP3/embedded_img/aarch64/ok3588/',
+                TIPS: 'ok3588镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/qemu-aarch64/',
+                TIPS: 'qemu镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/qemu-aarch64-ros/',
+                TIPS: '包含ROS2-humble基础软件包的qemu镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-systemd',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/qemu-aarch64-systemd/',
+                TIPS: '启用systemd的qemu镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/raspberrypi4-64/',
+                TIPS: '树莓派4B镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/raspberrypi4-64-ros/',
+                TIPS: '包含ROS2-humble基础软件包的树莓派4B镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-rt',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/raspberrypi4-64-rt/',
+                TIPS: '启用PREEMPT_RT软实时补丁的树莓派4B镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-systemd',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/raspberrypi4-64-systemd/',
+                TIPS: '启用systemd的Raspberry Pi 4B镜像',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'EMBEDDED',
+          },
+          // arm32
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'openEuler glibc',
+                SIZE: '91.6 MiB',
+                SHACODE:
+                  '4a25ff310dc984109f09360551b1964912872779b8b2d808f4aa252f64a30cc2',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/arm32/qemu-arm32/openeuler-glibc-x86_64-openeuler-image-armv7a-qemu-arm-toolchain-22.03-LTS-SP3.sh',
+                TIPS: 'arm架构下对应的开发编译链',
+              },
+              {
+                TYPE: 'openEuler Image qemu',
+                SIZE: '41.6 MiB',
+                SHACODE:
+                  '3b0d1f756d8457378579f50c55d6571b0d92c8dbb3a6f20fd62075cae331f518',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/arm32/qemu-arm32/openeuler-image-qemu-arm-20240101220411.rootfs.cpio.gz',
+                TIPS: 'arm架构下支持qemu的文件系统',
+              },
+              {
+                TYPE: 'vmlinux',
+                SIZE: '112.6 MiB',
+                SHACODE:
+                  'e04cba73f9313c372c50508cd44beafbdf916ffe0935e2d4ba40745400d4bdbe',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/arm32/qemu-arm32/vmlinux-5.10.0',
+                TIPS: '',
+              },
+              {
+                TYPE: 'zImage',
+                SIZE: '2.3 MiB',
+                SHACODE:
+                  '5482c665497191f7659e0549f6a052ada322ef9af7f518f72e0065f2a31b2d33',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/arm32/qemu-arm32/zImage',
+                TIPS: 'arm架构下支持qemu的内核镜像',
+              },
+            ],
+            ARCH: 'ARM32',
+            SCENARIO: 'EMBEDDED',
+          },
+          // x86
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qemu',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/x86-64/qemu-x86-64/',
+                TIPS: 'qemu镜像及iso镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'rt',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/x86-64/x86-64-rt/',
+                TIPS: '启用PREEMPT_RT软实时补丁的qemu镜像及iso镜像',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'EMBEDDED',
+          },
+        ],
+        PLANNED_EOL: '2027/12',
+      },
+      {
         NAME: 'openEuler 23.09',
         DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-23.09/',
         DESC: 'openEuler 23.09 是基于6.4内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
@@ -2439,6 +2743,310 @@ export default {
   },
   en: {
     COMMUNITY_LIST: [
+      {
+        NAME: 'openEuler 22.03 LTS SP3',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/',
+        DESC: 'openEuler 22.03 LTS SP3 是openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同。',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/zh/docs/22.03_LTS_SP3/docs/Releasenotes/release_notes.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/zh/docs/22.03_LTS_SP3/docs/Installation/installation.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+        WHITE_PAPER: '/whitepaper/openEuler 22.03 LTS SP3 技术白皮书.pdf',
+        WEBSITE_SELECT: '/en/mirror/select/?version=22.03-LTS-SP3',
+        CLOUD_IMAGE:
+          'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/virtual_machine_img/',
+        EDGE_IMAGE: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/edge_img/',
+        EMBEDDEN_IMAGE:
+          'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/embedded_img/',
+        MANUFACTURER: 'openEuler社区',
+        PUBLISH_DATE: '2024/01',
+        LTS: true,
+        VERSION: '22.03-LTS-SP3',
+        DETAILED_LINK: [
+          // x86
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.5 GiB',
+                SHACODE:
+                  '29f143ddbe888be489d3147c3c0f11e8c6a6fb57cb19be93516b7926bdf0fd81',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/ISO/x86_64/openEuler-22.03-LTS-SP3-x86_64-dvd.iso',
+                TIPS: 'Base installation ISO file of the x86_64 architecture, including the core components for running the minimum system.',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '17.1 GiB',
+                SHACODE:
+                  'b874c86286a361db2a526c40244b769ae2611cdabb7967cef6b445dd7d8d3fe5',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/ISO/x86_64/openEuler-22.03-LTS-SP3-everything-x86_64-dvd.iso',
+                TIPS: 'Full installation ISO file of the x86_64 architecture, including all components for running the entire system.',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '740.0 MiB',
+                SHACODE:
+                  'f9e68badf359f798cc87809dd11bef24cec6e081d9403361b0a8efee3ac68a7e',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/ISO/x86_64/openEuler-22.03-LTS-SP3-netinst-x86_64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'SERVER',
+          },
+          // aarch64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.1 GiB',
+                SHACODE:
+                  '40969fac8f0adfce60477be5a52b4204b26338f296471dd54f105e5d69240cf8',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/ISO/aarch64/openEuler-22.03-LTS-SP3-aarch64-dvd.iso',
+                TIPS: 'Base installation ISO file of the AArch64 architecture, including the core components for running the minimum system.',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '	16.5 GiB',
+                SHACODE:
+                  'b2f52f8ed3adfa965ccfd1145077865beeb3797cdb23733a835987d9d6eed321',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/ISO/aarch64/openEuler-22.03-LTS-SP3-everything-aarch64-dvd.iso',
+                TIPS: 'Full installation ISO file of the AArch64 architecture, including all components for running the entire system.',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '698.7 MiB',
+                SHACODE:
+                  'aedbaf887ca330574de10e281156cadd0a2494224ffcdc06a2481e77fac48b9b',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/ISO/aarch64/openEuler-22.03-LTS-SP3-netinst-aarch64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+          //EDGE_CLOUD x86_64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '1.4 GiB',
+                SHACODE:
+                  'a48590ea42f974193df4853e5734ffa08d1f62b17540434c09df0b8b6eb256f9',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/edge_img/x86_64/openEuler-22.03-LTS-SP3-edge-x86_64-dvd.iso',
+                TIPS: 'Base installation ISO file of the x86_64 architecture, including the core components for running the minimum system.',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'EDGE_CLOUD',
+          },
+          // EDGE_CLOUD AArch64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '1.3 GiB',
+                SHACODE:
+                  'd28466f5d0f2f7931b5557351dbf8cba8e1863a199ced450ef23d525a6204c6d',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/edge_img/aarch64/openEuler-22.03-LTS-SP3-edge-aarch64-dvd.iso',
+                TIPS: 'Base installation ISO file of the AArch64 architecture, including the core components for running the minimum system.',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'EDGE_CLOUD',
+          },
+          // CLOUD_COMPUTING x86_64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '402.8 MiB',
+                SHACODE:
+                  'ca03b19f77c2080af9a6a28193b99c951980c5e717bca30c0a803d96985cabec',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/virtual_machine_img/x86_64/openEuler-22.03-LTS-SP3-x86_64.qcow2.xz',
+                TIPS: 'VM image of openEuler in the x86_64 architecture.',
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          // CLOUD_COMPUTING AArch64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '374.7 MiB',
+                SHACODE:
+                  '202587c58c0a0189663dde48d3839ba1c721955104db5628360a2fe00de7657e',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/virtual_machine_img/aarch64/openEuler-22.03-LTS-SP3-aarch64.qcow2.xz',
+                TIPS: 'VM image of openEuler in the AArch64 architecture.',
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          {
+            // AArch64
+            LINK_LIST: [
+              {
+                TYPE: 'ok3588',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK: 'openEuler-22.03-LTS-SP3/embedded_img/aarch64/ok3588/',
+                TIPS: 'ok3588 image',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/qemu-aarch64/',
+                TIPS: 'QEMU image',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/qemu-aarch64-ros/',
+                TIPS: 'QEMU image containing the ROS2-humble basic software package',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-systemd',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/qemu-aarch64-systemd/',
+                TIPS: 'qemu image with systemd',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/raspberrypi4-64/',
+                TIPS: 'Raspberry Pi 4B image',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/raspberrypi4-64-ros/',
+                TIPS: 'Raspberry Pi 4B image containing the ROS2-humble basic software package',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-rt',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/raspberrypi4-64-rt/',
+                TIPS: 'Raspberry Pi 4B image with PREEMPT_RT soft real-time patch enabled',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-systemd',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/aarch64/raspberrypi4-64-systemd/',
+                TIPS: 'Raspberry Pi 4B image with systemd',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'AArch64',
+            SCENARIO: 'EMBEDDED',
+          },
+          // arm32
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'openEuler glibc',
+                SIZE: '91.6 MiB',
+                SHACODE:
+                  '4a25ff310dc984109f09360551b1964912872779b8b2d808f4aa252f64a30cc2',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/arm32/qemu-arm32/openeuler-glibc-x86_64-openeuler-image-armv7a-qemu-arm-toolchain-22.03-LTS-SP3.sh',
+                TIPS: 'Development and compilation toolchain in the AArch64 architecture.',
+              },
+              {
+                TYPE: 'openEuler Image qemu',
+                SIZE: '41.6 MiB',
+                SHACODE:
+                  '3b0d1f756d8457378579f50c55d6571b0d92c8dbb3a6f20fd62075cae331f518',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/arm32/qemu-arm32/openeuler-image-qemu-arm-20240101220411.rootfs.cpio.gz',
+                TIPS: 'File system that supports QEMU in the AArch64 architecture.',
+              },
+              {
+                TYPE: 'vmlinux',
+                SIZE: '112.6 MiB',
+                SHACODE:
+                  'e04cba73f9313c372c50508cd44beafbdf916ffe0935e2d4ba40745400d4bdbe',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/arm32/qemu-arm32/vmlinux-5.10.0',
+                TIPS: '',
+              },
+              {
+                TYPE: 'zImage',
+                SIZE: '2.3 MiB',
+                SHACODE:
+                  '5482c665497191f7659e0549f6a052ada322ef9af7f518f72e0065f2a31b2d33',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/arm32/qemu-arm32/zImage',
+                TIPS: 'Kernel image that supports QEMU in the AArch64 architecture.',
+              },
+            ],
+            ARCH: 'ARM32',
+            SCENARIO: 'EMBEDDED',
+          },
+          // x86
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qemu',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/x86-64/qemu-x86-64/',
+                TIPS: 'QEMU and ISO image',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'rt',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS-SP3/embedded_img/x86-64/x86-64-rt/',
+                TIPS: 'QEMU and ISO images with PREEMPT_RT soft real-time patch enabled',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'x86_64',
+            SCENARIO: 'EMBEDDED',
+          },
+        ],
+        PLANNED_EOL: '2024/03',
+      },
       {
         NAME: 'openEuler 23.09',
         DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-23.09/',
