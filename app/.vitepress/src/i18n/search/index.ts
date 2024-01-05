@@ -7,7 +7,7 @@ export default {
       blog: '博客',
       news: '新闻',
       docs: '文档',
-      gitee: 'GITEE',
+      gitee: '代码仓库',
       showcase: '案例',
       other: '其他',
       migration: '迁移',
