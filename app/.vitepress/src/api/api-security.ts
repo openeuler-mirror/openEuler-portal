@@ -101,12 +101,24 @@ export function getDriverArchitecture(): Promise<string[]> {
 }
 
 /**
- * 获取操作系统分类
+ * 获取整机系统版本
+ * @return {Promise<string[]>} 操作系统分类数据
+ */
+export function getHardwareOSOptions(): Promise<string[]> {
+  const url =
+    '/api-euler/api-cve/cve-security-notice-server/hardwarecomp/getOS';
+  return request
+    .get(url)
+    .then((res: AxiosResponse) => res.data)
+}
+
+/**
+ * 获取板块操作系统版本
  * @return {Promise<string[]>} 操作系统分类数据
  */
 export function getDriverOSOptions(): Promise<string[]> {
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/hardwarecomp/getOS';
+    '/api-euler/api-cve/cve-security-notice-server/drivercomp/getOS';
   return request
     .get(url)
     .then((res: AxiosResponse) => res.data)
