@@ -96,7 +96,7 @@ export default {
   },
   MIRROR_ALL: {
     TITLE: 'Mirrors',
-    NAME: 'Mirror Name',
+    NAME: 'Site',
     LOCATION: 'Location',
     SPONSOR: 'Sponsor',
     HTTPS: 'Http(s)',
@@ -104,9 +104,12 @@ export default {
     FTP: 'FTP',
     Mbs: 'NetworkBandwidth(Mb/s)',
     TIME: 'Last Sync time',
+    RELEASE: 'Release',
+    SIZE: 'Size',
     CONTENT: [
       'openEuler welcomes new mirror sites. If you are considering to set up a public mirror site for openEuler, please follow the mirror guidelines to make sure that your mirror is consistent with the other mirror sites. Any questions, feel free to',
       'contact us',
+      'To synchronize openEuler images, run the following command:',
     ],
   },
 };
