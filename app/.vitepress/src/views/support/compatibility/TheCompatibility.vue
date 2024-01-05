@@ -11,8 +11,6 @@ import AppContent from '@/components/AppContent.vue';
 import banner from '@/assets/banner/banner-security.png';
 import compatibility from '@/assets/illustrations/support/compatibility.png';
 
-import useWindowResize from '@/components/hooks/useWindowResize';
-
 import type {
   FilterListT,
   CompatibilityQueryT,
@@ -22,6 +20,7 @@ import {
   getCompatibilityList,
   getDriverList,
   getDriverArchitecture,
+  getHardwareOSOptions,
   getDriverOSOptions,
   getSoftwareList,
   getBusinessSoftwareList,
@@ -34,7 +33,6 @@ import {
   getCertificationType,
 } from '@/api/api-security';
 
-const screenWidth = useWindowResize();
 const i18n = useI18n();
 const router = useRouter();
 const { lang } = useData();
@@ -42,8 +40,6 @@ const { lang } = useData();
 const all = computed(() => {
   if (lang.value === 'en') {
     return 'All';
-  } else if (lang.value === 'ru') {
-    return 'Bсе';
   } else {
     return '全部';
   }
@@ -61,6 +57,8 @@ const total = ref(0);
 const layout = ref('sizes, prev, pager, next, slot, jumper');
 const architectureSelect = ref<string[]>([`${all.value}`]);
 const osOptions = ref<string[]>([`${all.value}`]);
+const hardwareOsOptions = ref<string[]>([`${all.value}`]);
+const driverOsOptions = ref<string[]>([`${all.value}`]);
 const cpuList = ref<string[]>([`${all.value}`]);
 const softType = ref<string[]>([`${all.value}`]);
 const osLists = ref<string[]>([`${all.value}`]);
@@ -134,6 +132,7 @@ const getCompatibilityData = (data: CompatibilityQueryT) => {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
   });
+  osOptions.value = hardwareOsOptions.value;
 };
 
 // 板卡
@@ -147,6 +146,16 @@ const getDriverData = (data: CompatibilityQueryT) => {
       );
     });
   });
+  // 只有 “全部” 时获取os数据
+  if (driverOsOptions.value.length === 1) {
+    getDriverOSOptions().then((res: any) => {
+      res.result.forEach((item: string) => {
+        driverOsOptions.value.push(item);
+      });
+    });
+  }
+  osOptions.value = driverOsOptions.value;
+
 };
 
 // 开源软件
@@ -156,6 +165,7 @@ const getSoftwareData = (data: CompatibilityQueryT) => {
     totalPage.value = Math.ceil(total.value / queryData.pages.size);
     tableData.value = res.info;
   });
+  osOptions.value = hardwareOsOptions.value;
 };
 
 // 商业软件
@@ -448,10 +458,9 @@ onMounted(() => {
       });
     });
   });
-
-  getDriverOSOptions().then((res: any) => {
+  getHardwareOSOptions().then((res: any) => {
     res.result.forEach((item: string) => {
-      osOptions.value.push(item);
+      hardwareOsOptions.value.push(item);
       filterData.value.forEach((it) => {
         if (it.title === '操作系统') {
           it.select.push(item);
@@ -463,6 +472,7 @@ onMounted(() => {
         }
       });
     });
+    osOptions.value = hardwareOsOptions.value;
     getTestOrganizations().then((res: any) => {
       res.result.testOrganizations.forEach((item: string) => {
         testOrganizationsLists.value.push(item);
@@ -485,7 +495,7 @@ onMounted(() => {
     res.Type.forEach((item: string) => {
       softType.value.push(item);
     });
-    osLists.value.push(res.OS[0]);
+    osLists.value  = res.OS;
   });
 
   // filter-解决方案
