@@ -153,14 +153,13 @@ onMounted(async () => {
   />
   <AppContent class="mirror-list">
     <p>
-      openEuler welcomes new mirror sites. If you are considering to set up a
-      public mirror site for openEuler, please follow the mirror guidelines to
-      make sure that your mirror is consistent with the other mirror sites. Any
-      questions, feel free to
-      <a href="mailto:mirrors@openeuler.sh"> contact us</a>.
+      {{ i18n.download.MIRROR_ALL.CONTENT[0] }}
+      <a href="mailto:mirrors@openeuler.sh">
+        {{ i18n.download.MIRROR_ALL.CONTENT[1] }}</a
+      >
     </p>
     <p class="rsync-tip">
-      <span>To synchronize openEuler images, run the following command: </span>
+      <span>{{ i18n.download.MIRROR_ALL.CONTENT[2] }}</span>
       <span
         >rsync -av --partial --progress --delete
         rsync://root@repo.openeuler.openatom.cn/openeuler/
@@ -256,8 +255,8 @@ onMounted(async () => {
       cell-class-name="mirror-list-row"
       :row-class-name="tableRowClassName"
     >
-      <OTableColumn prop="release" label="Release" min-width="90" />
-      <OTableColumn prop="size" label="Size" min-width="90" />
+      <OTableColumn prop="release" :label="i18n.download.MIRROR_ALL.RELEASE" min-width="90" />
+      <OTableColumn prop="size" :label="i18n.download.MIRROR_ALL.SIZE" min-width="90" />
     </OTable>
 
     <div class="mirror-mobile">
@@ -599,6 +598,7 @@ onMounted(async () => {
     span {
       display: block;
       &:last-child {
+        margin-top: 8px;
         font-style: italic;
         display: inline-block;
         word-spacing: 4px;
