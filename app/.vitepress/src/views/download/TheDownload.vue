@@ -3,7 +3,7 @@ import { ref, onMounted, watch } from 'vue';
 import { useI18n } from '@/i18n';
 
 import { getUrlParam } from '@/shared/utils';
-import { useRouter } from 'vitepress';
+import { useRouter, useData } from 'vitepress';
 
 import DownloadContent from './DownloadContent.vue';
 
@@ -11,6 +11,7 @@ import AppContent from '@/components/AppContent.vue';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 
+const { lang } = useData();
 const i18n = useI18n();
 const downloadList = i18n.value.download.COMMUNITY_LIST;
 const screenWidth = useWindowResize();
@@ -41,14 +42,25 @@ setShownNameList();
 const versionShownName = ref(shownNameList[shownIndex]);
 function setversionShownName(version: string) {
   versionShownName.value = version;
+  history.pushState(
+    null,
+    '',
+    location.origin + location.pathname + `?version=${version}`
+  );
 }
 onMounted(() => {
   watch(
     () => router.route.path,
     () => {
       const urlVersion = decodeURIComponent(getUrlParam('version'));
-      if (urlVersion && shownNameList.includes(urlVersion)) {
-        versionShownName.value = urlVersion;
+      if (!urlVersion) {
+        setversionShownName(shownNameList[0]);
+      } else {
+        if (shownNameList.includes(urlVersion)) {
+          versionShownName.value = urlVersion;
+        } else {
+          router.go(`/${lang.value}/download/archive/`);
+        }
       }
     },
     { immediate: true }
