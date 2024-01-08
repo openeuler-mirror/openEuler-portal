@@ -1,0 +1,27 @@
+@mixin in-dark {
+  [data-o-theme='dark'] {
+    @content;
+  }
+}
+
+@mixin img-in-dark {
+  filter: brightness(80%) grayscale(20%) contrast(1.2);
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background-color: var(--o-color-bg2);
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: var(--o-color-bg2);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: var(--o-color-division1);
+  }
+}

@@ -27,7 +27,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         charset: false,
-        // additionalData: `@use "@/shared/styles/element-var.scss" as *;`,
+        additionalData: `@use "@/shared/styles/mixin/common.scss" as *;`,
       },
     },
   },
