@@ -50,7 +50,7 @@ function setversionShownName(version: string) {
 }
 onMounted(() => {
   watch(
-    () => router.route.path,
+    () => versionShownName.value,
     () => {
       const urlVersion = decodeURIComponent(getUrlParam('version'));
       if (!urlVersion) {
@@ -66,6 +66,7 @@ onMounted(() => {
     { immediate: true }
   );
 });
+
 onMounted(() => {
   watch(
     () => router.route.path,
