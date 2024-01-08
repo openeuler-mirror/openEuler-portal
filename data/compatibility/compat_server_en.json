@@ -14550,5 +14550,65 @@
       "hostBusAdapter": "Marvell Technology Group Ltd. 88SE9230 PCIe SATA 6Gb/s",
       "hardDiskDrive": "KCD61LUL3T84__1"
     }
-  }
+  },
+  {
+    "hardwareFactory": "xFusion",
+    "hardwareModel": "2288H V7",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2023/12/28",
+    "friendlyLink": "https://www.xfusion.com/en/product/rack-server/fusionserver-2288h-v7",
+    "boardCards": [
+       {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1f24",
+        "ssID": "2001",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "igb",
+        "version": "5.10.0-176.0.Θ.89.oe2203sp3.x86",
+        "type": "NIC",
+        "date": "2023.11.28",
+        "sha256": "bb5eacbe9f8a3b25fb535e7bb84235a7be226728dfef05a90155aa287c3ffd40",
+        "driverSize": "106K",
+        "chipVendor": "Intel",
+        "boardModel": "GE350-T2",
+        "chipModel": "i350",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2023/12/28",
+        "sha256": "cce3cabb98682d2f34aaf3d18bfd59d7540a6ab9329611ef284e81d9d54fae2d",
+        "driverSize": "74K",
+        "chipVendor": "Avago",
+        "boardModel": "9560-8i",
+        "chipModel": "SAS3908",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+      "compatibilityConfiguration": {
+      "productInformation": "https://www.xfusion.com/en/product/rack-server/fusionserver-2288h-v7",
+      "certificationTime": "2023/12/28",
+      "commitID": "",
+      "mainboardModel": "",
+      "biosUefi": "01.01.02.05 (U6216)",
+      "cpu": "SPR",
+      "ram": "2*16G DDR5",
+      "portsBusTypes": "x8 PCI Express 5 x8",
+      "videoAdapter": "Hi171x",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "BROADCOM MR9560-8i 5.24"
+    }
 ]
