@@ -602,10 +602,10 @@ export default {
           TYPE: 1,
           CHILDREN: [
             {
-              NAME: 'openEuler 22.03 LTS SP2',
+              NAME: 'openEuler 22.03 LTS SP3',
               LABEL:
-                'openEuler openEuler 22.03 LTS SP2 is the patch version of openEuler 22.03 LTS, and both versions have the same lifecycle.',
-              PATH: '/download/?version=openEuler 22.03 LTS SP2',
+                'openEuler openEuler 22.03 LTS SP3 is the patch version of openEuler 22.03 LTS, and both versions have the same lifecycle.',
+              PATH: '/download/?version=openEuler 22.03 LTS SP3',
               CHILDREN: [
                 {
                   NAME: 'Server',

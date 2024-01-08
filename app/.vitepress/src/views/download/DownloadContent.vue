@@ -334,6 +334,7 @@ function setActiveMirrorMobile(index: number, item: string) {
         class="architecture-box"
         :label="i18n.download.ARCHITECTURE2"
         :show="false"
+        :class="'tag-' + lang"
       >
         <OTag
           v-for="(item, index) in architectureList"
@@ -345,7 +346,12 @@ function setActiveMirrorMobile(index: number, item: string) {
           {{ item }}
         </OTag>
       </TagFilter>
-      <TagFilter class="os-box" :label="i18n.download.SCENARIO2" :show="false">
+      <TagFilter
+        class="os-box"
+        :class="'tag-' + lang"
+        :label="i18n.download.SCENARIO2"
+        :show="false"
+      >
         <OTag
           v-for="(item, index) in scenarioList"
           :key="item.VALUE + index"
@@ -698,6 +704,12 @@ function setActiveMirrorMobile(index: number, item: string) {
       @media screen and (max-width: 768px) {
         display: flex;
         gap: 32px;
+        &.tag-en{
+          gap: 48px;
+          .tag-filter-box{
+            gap:6px;
+          }
+        }
       }
       .label {
         color: var(--o-color-text1);

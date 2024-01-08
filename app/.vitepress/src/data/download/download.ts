@@ -20,7 +20,7 @@ export default {
         EMBEDDEN_IMAGE:
           'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/embedded_img/',
         MANUFACTURER: 'openEuler社区',
-        PUBLISH_DATE: '2024/01',
+        PUBLISH_DATE: '2023/12',
         LTS: true,
         VERSION: '22.03-LTS-SP3',
         DETAILED_LINK: [
@@ -2762,7 +2762,7 @@ export default {
         EMBEDDEN_IMAGE:
           'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/embedded_img/',
         MANUFACTURER: 'openEuler社区',
-        PUBLISH_DATE: '2024/01',
+        PUBLISH_DATE: '2023/12',
         LTS: true,
         VERSION: '22.03-LTS-SP3',
         DETAILED_LINK: [
@@ -3045,7 +3045,7 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
         ],
-        PLANNED_EOL: '2024/03',
+        PLANNED_EOL: '2027/12',
       },
       {
         NAME: 'openEuler 23.09',
