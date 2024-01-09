@@ -21,8 +21,7 @@ PFlows是华中科技大学与武汉理工大学合作开发的可大规模高�
 
 
 
-
-<img src="./media/image1.png" width="500" >
+<img src="./media/image1.png" width="1000">
 
 
 
