@@ -255,8 +255,16 @@ onMounted(async () => {
       cell-class-name="mirror-list-row"
       :row-class-name="tableRowClassName"
     >
-      <OTableColumn prop="release" :label="i18n.download.MIRROR_ALL.RELEASE" min-width="90" />
-      <OTableColumn prop="size" :label="i18n.download.MIRROR_ALL.SIZE" min-width="90" />
+      <OTableColumn
+        prop="release"
+        :label="i18n.download.MIRROR_ALL.RELEASE"
+        min-width="90"
+      />
+      <OTableColumn
+        prop="size"
+        :label="i18n.download.MIRROR_ALL.SIZE"
+        min-width="90"
+      />
     </OTable>
 
     <div class="mirror-mobile">
@@ -326,11 +334,15 @@ onMounted(async () => {
     <div class="mirror-mobile repo-mobile">
       <OCard v-for="item in repoData" :key="item.release" class="mirror-card">
         <div class="mirror-card-content">
-          <div class="mirror-card-title">Release</div>
+          <div class="mirror-card-title">
+            {{ i18n.download.MIRROR_ALL.RELEASE }}
+          </div>
           <div class="mirror-card-word">{{ item.release }}</div>
         </div>
         <div class="mirror-card-content">
-          <div class="mirror-card-title">Size</div>
+          <div class="mirror-card-title">
+            {{ i18n.download.MIRROR_ALL.SIZE }}
+          </div>
           <div class="mirror-card-word">{{ item.size }}</div>
         </div>
       </OCard>
