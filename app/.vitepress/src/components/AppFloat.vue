@@ -8,9 +8,6 @@ import { ElMessage } from 'element-plus';
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { useStoreData } from '@/shared/login';
 
-import satisfactionImg from '@/assets/common/footer/satisfaction.png';
-import closeImg from '@/assets/common/footer/close.png';
-
 import IconTop from '~icons/footer/icon-top.svg';
 import IconSmile from '~icons/footer/icon-smile.svg';
 import IconHeadset from '~icons/footer/icon-headset.svg';
@@ -443,22 +440,6 @@ onMounted(() => {
           </div>
         </div>
         <div class="nav-box1">
-          <a
-            v-show="isSatisfactionShown"
-            class="nav-item nav-box-top"
-            href="https://forum.openeuler.org/t/topic/2647"
-            target="_blank"
-            rel="noopener noreferrer"
-            :style="{ backgroundImage: `url(${satisfactionImg})` }"
-          >
-            <img
-              @click.stop="handleClose($event)"
-              class="close"
-              :src="closeImg"
-              alt="close"
-            />
-            有奖问卷
-          </a>
           <div
             @mouseenter="toggleIsShow(true)"
             @mouseleave="toggleIsShow(false)"

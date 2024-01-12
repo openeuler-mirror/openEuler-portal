@@ -1,41 +1,11 @@
-import newYear_pc from '@/assets/category/home/banner/new-year_pc.jpg';
-import newYear_mo from '@/assets/category/home/banner/new-year_mo.jpg';
-
-import satisfaction_pc from '@/assets/category/home/banner/satisfaction_pc.jpg';
-import satisfaction_mo from '@/assets/category/home/banner/satisfaction_mo.jpg';
 
 import banner1_pc from '@/assets/category/home/banner/banner1_pc.jpg';
 import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';
-
-import techDay_pc from '@/assets/category/home/banner/tech-day_pc.png';
-import techDay_mo from '@/assets/category/home/banner/tech-day_mo.png';
-
-import eur_mo from '@/assets/category/home/banner/eur-banner_mo.jpg';
-import eur_pc from '@/assets/category/home/banner/eur-banner_pc.jpg';
 
 export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
-      {
-        pcBanner: newYear_pc,
-        moBanner: newYear_mo,
-        link: '',
-        id: '',
-        title: [''],
-        desc: [],
-        btn: '',
-        targetTap: 1,
-      },
-      {
-        pcBanner: satisfaction_pc,
-        moBanner: satisfaction_mo,
-        link: 'https://forum.openeuler.org/t/topic/2647',
-        id: 'satisfaction',
-        title: ['参加满意度调研 赢惊喜大奖'],
-        btn: '查看详情',
-        targetTap: 1,
-      },
       {
         pcBanner: banner1_pc,
         moBanner: banner1_mo,
@@ -48,29 +18,12 @@ export default {
     ],
     en: [
       {
-        pcBanner: newYear_pc,
-        moBanner: newYear_mo,
-        link: '',
-        id: '',
-        title: [''],
-        desc: [],
-        btn: '',
-        targetTap: 1,
-      },
-      {
         pcBanner: banner1_pc,
         moBanner: banner1_mo,
         link: '/whitepaper/en/openEuler%20OS%20Technical%20Whitepaper_Innovation%20Projects_EN.pdf',
         id: 'whitepaper',
         title: ['openEuler OS Technical Whitepaper', 'Innovation Projects'],
         btn: 'Download',
-        targetTap: 1,
-      },
-      {
-        pcBanner: techDay_pc,
-        moBanner: techDay_mo,
-        id: '',
-        link: `https://www.openeuler.org/en/blog/openeuler-techday/openEuler%20TechDay%20Invitation.html`,
         targetTap: 1,
       },
     ],
