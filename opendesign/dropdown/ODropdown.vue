@@ -70,6 +70,9 @@ onUnmounted(() => {
   .el-dropdown-menu__item:not(.is-disabled):focus {
     background-color: var(--o-color-bg3);
   }
+  .el-dropdown-menu {
+    background-color: var(--o-color-bg2);
+  }
   .el-dropdown-menu__item {
     padding: 4px 8px;
   }

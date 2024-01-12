@@ -8,4 +8,9 @@ const attrs = useAttrs();
   </ElDropdownItem>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.o-dropdown-item {
+  --o-dropdown-item-font-color: var(--o-color-text1);
+  color: var(--o-dropdown-item-font-color);
+}
+</style>

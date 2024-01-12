@@ -1,17 +1,29 @@
 export default {
   zh: {
-    form: '来自：',
+    from: '来自：',
     service: '相关服务',
     tagList: {
       all: '全部',
-      blog: '博客',
-      news: '新闻',
       docs: '文档',
       gitee: '代码仓库',
-      showcase: '案例',
-      other: '其他',
       migration: '迁移',
-      forum: '论坛',
+      service: '服务',
+      updates: {
+        val: '动态',
+        tags: {
+          blog: '博客',
+          news: '新闻',
+          forum: '论坛',
+        },
+      },
+      more: {
+        val: '更多',
+        tags: {
+          showcase: '案例',
+          other: '其他',
+          whitepaper: '白皮书',
+        },
+      },
     },
     no: '未有',
     version: '版本：',
@@ -24,14 +36,27 @@ export default {
     service: 'Related service',
     tagList: {
       all: 'All',
-      blog: 'Blog',
-      news: 'News',
       docs: 'Docs',
       gitee: 'GITEE',
       showcase: 'Showcase',
       other: 'Other',
+      service: 'Service',
       migration: 'Migration',
       forum: 'Forum',
+      updates: {
+        val: 'Updates',
+        tags: {
+          blog: 'Blog',
+          news: 'News',
+        },
+      },
+      more: {
+        val: 'More',
+        tags: {
+          showcase: 'Showcase',
+          other: 'Other',
+        },
+      },
     },
     no: 'No',
     version: 'Version:',

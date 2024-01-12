@@ -18,10 +18,12 @@ import IconLike from '~icons/app/icon-like.svg';
 import IconUnlike from '~icons/app/icon-unlike.svg';
 import IconStomp from '~icons/app/icon-stomp.svg';
 import IconUnstomp from '~icons/app/icon-unstomp.svg';
+import IconMore from '~icons/app/icon-more-dot.svg';
 
+import OIcon from 'opendesign/icon/OIcon.vue';
+import ODropdown from 'opendesign/dropdown/ODropdown.vue';
 import NotFound from '@/NotFound.vue';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
-import SearchSevice from './SearchSevice.vue';
 import ViewAgreeModal from './ViewAgreeModal.vue';
 import MatterTip from './MatterTip.vue';
 import useWindowResize from '@/components/hooks/useWindowResize';
@@ -46,8 +48,6 @@ const currentIndex = ref(0);
 const currentPage = ref(1);
 // 每页数据
 const pageSize = ref(12);
-// 控制分页器显示的时机
-const pageShow = ref(false);
 // 搜索内容
 const searchInput = ref<string>('');
 const searchValue = computed(() => {
@@ -136,7 +136,7 @@ const searchRpmList: any = ref([]);
 const total = computed(() => {
   return searchNumber.value[currentIndex.value]
     ? searchNumber.value[currentIndex.value].doc_count
-    : 0;
+    : activityData.value?.doc_count || 0;
 });
 // 分页器总页数
 const totalPage = computed(() => {
@@ -171,19 +171,21 @@ function getServiceData() {
 
 // 点击搜索框的删除图标
 function clearSearchInput() {
-  searchResultList.value = '';
+  searchResultList.value = [];
   searchInput.value = '';
   searchRpmList.value = '';
   searchChatRes.value = '';
   like.value = false;
   stomp.value = false;
   showChatRes.value = false;
+  activityData.value = {};
   searchNumber.value.map((item: any) => {
     item.doc_count = 0;
   });
 }
 // 点击数据的类型导航
 function setCurrentType(index: number, type: string) {
+  activityData.value = {};
   currentIndex.value = index;
   if (type === 'all') {
     searchType.value = '';
@@ -308,14 +310,12 @@ function searchDataAll() {
     getSearchData(searchData.value).then((res) => {
       if (res.status === 200 && res.obj.records[0]) {
         searchResultList.value = res.obj.records;
-        pageShow.value = true;
       } else {
         if (searchType.value === 'docs') {
           searchType.value = '';
           searchAll();
         }
         searchResultList.value = [];
-        pageShow.value = false;
       }
     });
   } catch (error: any) {
@@ -328,6 +328,7 @@ function searchAll(current?: string) {
     if (!current) {
       currentIndex.value = 0;
     }
+    activityData.value = {};
     currentPage.value = 1;
 
     if (cookieStatus.isAllAgreed) {
@@ -365,7 +366,7 @@ function goLink(data: any, index: number) {
     search_result_url = site.value.themeConfig.docsUrl + '/' + path + '.html';
   } else if (data.type === 'forum') {
     search_result_url = `${site.value.themeConfig.forumUrl}${path}`;
-  } else if (data.type === 'gitee') {
+  } else if (path.startsWith('https')) {
     search_result_url = path;
   } else {
     data.type === 'news' || data.type === 'blog'
@@ -376,7 +377,7 @@ function goLink(data: any, index: number) {
   if (cookieStatus.isAllAgreed) {
     setAdvertisedData(data, index, search_result_url);
   }
-  window.open(encodeURI(search_result_url));
+  window.open(search_result_url);
 }
 
 const setAdvertisedData = (data: any, index: number, path: string) => {
@@ -420,6 +421,11 @@ onMounted(async () => {
   searchAll();
 });
 
+const activityData = ref();
+const getActivityData = (val: { key: string; doc_count: number }) => {
+  activityData.value = val;
+};
+
 watch(
   () => activeVersion.value,
   () => {
@@ -434,6 +440,11 @@ function clipTxt(text: string) {
     });
   });
 }
+const isShowMultiple = (list: Object) => {
+  return searchNumber.value.find((item: { key: string }) => {
+    return Object.keys(list).includes(item.key);
+  });
+};
 </script>
 <template>
   <div class="search">
@@ -525,6 +536,7 @@ function clipTxt(text: string) {
             <template v-for="(item, index) in searchNumber" :key="item">
               <li
                 v-if="i18n.search.tagList[item.key]"
+                class="single-tab"
                 :class="currentIndex === index ? 'active' : ''"
                 @click="setCurrentType(index, item.key)"
               >
@@ -532,6 +544,77 @@ function clipTxt(text: string) {
                 <span>({{ item.doc_count }})</span>
               </li>
             </template>
+            <li
+              v-if="isShowMultiple(i18n.search.tagList.updates?.tags)"
+              :class="currentIndex === searchNumber.length ? 'active' : ''"
+            >
+              <ODropdown @command="getActivityData">
+                <div class="multiple">
+                  <OIcon class="filter-icon">
+                    <IconMore></IconMore>
+                  </OIcon>
+                  {{ i18n.search.tagList.updates.val }}
+                  <span
+                    v-if="i18n.search.tagList.updates.tags[activityData?.key]"
+                    >({{ i18n.search.tagList.updates.tags[activityData?.key]
+                    }}{{ activityData?.doc_count }})</span
+                  >
+                </div>
+                <template #dropdown>
+                  <ClientOnly>
+                    <template v-for="item in searchNumber" :key="item">
+                      <ODropdownItem
+                        v-if="
+                          i18n.search.tagList.updates.tags[item.key] &&
+                          item.doc_count
+                        "
+                        class="multiple-item"
+                        @click="setCurrentType(searchNumber.length, item.key)"
+                        :command="item"
+                        >{{ i18n.search.tagList.updates.tags[item.key] }}
+                        <span>({{ item.doc_count }})</span>
+                      </ODropdownItem>
+                    </template>
+                  </ClientOnly>
+                </template>
+              </ODropdown>
+            </li>
+            <li
+              v-if="isShowMultiple(i18n.search.tagList.more?.tags)"
+              :class="currentIndex === searchNumber.length + 1 ? 'active' : ''"
+            >
+              <ODropdown @command="getActivityData">
+                <div class="multiple">
+                  <OIcon class="filter-icon">
+                    <IconMore></IconMore>
+                  </OIcon>
+                  {{ i18n.search.tagList.more.val }}
+                  <span v-if="i18n.search.tagList.more.tags[activityData?.key]"
+                    >({{ i18n.search.tagList.more.tags[activityData?.key]
+                    }}{{ activityData?.doc_count }})</span
+                  >
+                </div>
+                <template #dropdown>
+                  <ClientOnly>
+                    <template v-for="item in searchNumber" :key="item">
+                      <ODropdownItem
+                        v-if="
+                          i18n.search.tagList.more.tags[item.key] &&
+                          item.doc_count
+                        "
+                        class="multiple-item"
+                        @click="
+                          setCurrentType(searchNumber.length + 1, item.key)
+                        "
+                        :command="item"
+                        >{{ i18n.search.tagList.more.tags[item.key] }}
+                        <span>({{ item.doc_count }})</span>
+                      </ODropdownItem>
+                    </template>
+                  </ClientOnly>
+                </template>
+              </ODropdown>
+            </li>
           </ul>
 
           <ClientOnly>
@@ -550,34 +633,38 @@ function clipTxt(text: string) {
             </OSelect>
           </ClientOnly>
         </div>
-
+        <!-- 搜索内容列表 -->
         <div class="content-box">
           <ul v-if="searchResultList.length" class="content-list">
             <li v-for="(item, index) in searchResultList" :key="item.id">
-              <template v-if="i18n.search.tagList[item.type]">
-                <h3
-                  v-dompurify-html="item.title"
-                  @click="goLink(item, index)"
-                ></h3>
-                <p
-                  v-dompurify-html="item.textContent"
-                  class="detail"
-                  @click="goLink(item, index)"
-                ></p>
-                <p class="from">
-                  <span>{{ i18n.search.form }}</span>
-                  <span>{{ i18n.search.tagList[item.type] }}</span>
-                </p>
-                <p v-if="item.version" class="from version">
-                  <span>{{ i18n.search.version }}</span>
-                  <span>{{ item.version }}</span>
-                </p>
-              </template>
+              <h3
+                v-dompurify-html="item.title"
+                @click="goLink(item, index)"
+              ></h3>
+              <p
+                v-dompurify-html="item.textContent"
+                class="detail"
+                @click="goLink(item, index)"
+              ></p>
+              <p class="from">
+                <span>{{ i18n.search.from }}</span>
+                <span
+                  >{{
+                    i18n.search.tagList[item.type] ||
+                    i18n.search.tagList.updates.tags[item.type] ||
+                    i18n.search.tagList.more.tags[item.type]
+                  }}
+                </span>
+              </p>
+              <p v-if="item.version" class="from version">
+                <span>{{ i18n.search.version }}</span>
+                <span>{{ item.version }}</span>
+              </p>
             </li>
           </ul>
           <NotFound v-else />
         </div>
-        <div v-if="totalPage > 1 && pageShow" class="page-box">
+        <div v-if="totalPage > 1" class="page-box">
           <ClientOnly>
             <OPagination
               v-if="!isMobile"
@@ -609,7 +696,6 @@ function clipTxt(text: string) {
       class="search-right"
       :class="suggestList.length ? 'exist-suggest-1' : ''"
     >
-      <SearchSevice v-if="serviceData.length" :services="serviceData" />
       <div class="rpm-list">
         <h3>{{ i18n.search.relative }}</h3>
         <el-scrollbar height="1915px">
@@ -680,7 +766,7 @@ function clipTxt(text: string) {
     padding-top: var(--o-spacing-h5);
   }
   .search-left {
-    max-width: 1072px;
+    overflow: hidden;
 
     @media (max-width: 768px) {
       :deep(.o-search) {
@@ -833,6 +919,7 @@ function clipTxt(text: string) {
           display: flex;
           flex-shrink: 0;
           background-color: var(--o-color-bg2);
+          @include scrollbar;
           @media (max-width: 768px) {
             width: 100%;
             overflow-x: auto;
@@ -842,16 +929,16 @@ function clipTxt(text: string) {
             margin-bottom: 16px;
             box-shadow: var(--o-shadow-l1);
           }
-          li {
+          li,
+          .multiple {
             position: relative;
             display: flex;
             align-items: center;
             height: 63px;
             min-width: 56px;
-            margin-right: var(--o-spacing-h3);
+            margin-right: 32px;
             color: var(--o-color-text1);
             font-size: var(--o-font-size-h8);
-            cursor: pointer;
             @media screen and (max-width: 1620px) {
               margin-right: 24px;
             }
@@ -880,15 +967,32 @@ function clipTxt(text: string) {
                 bottom: -1px;
               }
             }
+
+            .multiple {
+              cursor: pointer;
+              margin: 0;
+              height: max-content;
+              .o-icon {
+                font-size: 20px;
+              }
+            }
+          }
+          .single-tab {
+            cursor: pointer;
           }
           .active {
             color: var(--o-color-brand1);
+            .multiple {
+              color: var(--o-color-brand1);
+            }
             &::after {
               background-color: var(--o-color-brand1);
             }
           }
         }
         :deep(.el-select) {
+          max-width: 170px;
+          min-width: 100px;
           @media screen and (max-width: 768px) {
             width: 100%;
             padding-bottom: 8px;
@@ -1025,6 +1129,8 @@ function clipTxt(text: string) {
     width: 320px;
     height: 2005px;
     margin-top: 78px;
+    overflow-y: auto;
+    @include scrollbar;
     .rpm-list {
       background-color: var(--o-color-bg2);
       box-shadow: var(--o-shadow-l1);
@@ -1065,4 +1171,9 @@ function clipTxt(text: string) {
     margin-top: 103px;
   }
 }
+
+.multiple-item {
+  font-size: 16px;
+}
 </style>
+
