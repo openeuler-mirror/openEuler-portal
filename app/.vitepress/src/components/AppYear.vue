@@ -32,7 +32,7 @@ const yearImg = computed(() => {
 .euler-year {
   position: fixed;
   left: 80px;
-  bottom: 250px;
+  bottom: 130px;
   z-index: 12;
   @media (max-width: 1700px) {
     left: 20px;
