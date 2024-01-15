@@ -18,16 +18,15 @@ import HomeMedia from './HomeMedia.vue';
 import AppCalendar from '@/components/AppCalendar.vue';
 import AppContent from '@/components/AppContent.vue';
 import LinkPanel from '@/components/LinkPanel.vue';
-import { getMeetingData, getActivityData } from '@/api/api-calendar';
+import { getMeetingActivity } from '@/api/api-calendar';
 import { getSortData } from '@/api/api-search';
 
-import type { TableDataT } from '@/shared/@types/type-calendar';
 import type { SortResponse } from '@/shared/@types/type-search';
 
 const { lang } = useData();
 const commonStore = useCommon();
 
-const calendarData = ref<TableDataT[]>([]);
+const calendarData = ref<string[]>([]);
 const i18n = useI18n();
 
 const caseData = ref<SortResponse>();
@@ -60,23 +59,11 @@ onMounted(async () => {
     once: true,
   });
   try {
-    // 获取会议、活动数据并合并
-    await Promise.all([getActivityData(), getMeetingData()]).then((res) => {
-      res[0].tableData.forEach((item: any) => {
-        item.timeData.map((item2: any) => {
-          item2['startTime'] = item2.start_date;
-        });
-      });
-      calendarData.value = [...res[0].tableData, ...res[1].tableData];
-      calendarData.value.reduce((prev: any, current: any) => {
-        const item: any = prev.find(
-          (sameDate: any) => sameDate.start_date === current.date
-        );
-        item
-          ? (item.timeData = item.timeData.concat(current.timeData))
-          : prev.push(current);
-        return prev;
-      }, []);
+    // 获取会议活动数据
+    await getMeetingActivity({
+      type: 'all',
+    }).then((res) => {
+      calendarData.value = res.data;
     });
     await Promise.all([
       getSortData(paramsCase),

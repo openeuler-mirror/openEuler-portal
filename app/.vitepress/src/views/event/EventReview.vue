@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { computed, onMounted, Ref, ref } from 'vue';
+import { reactive, onMounted, Ref, ref, watch } from 'vue';
 import { useData, useRouter } from 'vitepress';
 
 import _ from 'lodash';
-import { getNowFormatDate } from '@/shared/utils';
 
 import { useCommon } from '@/stores/common';
 
@@ -11,7 +10,6 @@ import AppContent from '@/components/AppContent.vue';
 import AppPaginationMo from '@/components/AppPaginationMo.vue';
 
 import { getSalon } from '@/api/api-sig';
-import SALON_CONFIG from '@/data/salon/salon';
 
 import notFoundImg_light from '@/assets/illustrations/404.png';
 import notFoundImg_dark from '@/assets/illustrations/404_dark.png';
@@ -20,7 +18,6 @@ import IconCalendar from '~icons/app/icon-calendar.svg';
 import IconHome from '~icons/app/icon-home.svg';
 
 interface LatestActivity {
-  isMiniProgram: number;
   id: number;
   date: string;
   posterImg: string;
@@ -35,90 +32,76 @@ const commonStore = useCommon();
 const { lang } = useData();
 const router = useRouter();
 
-const configData = _.cloneDeep(SALON_CONFIG.cn.MEETUPS_LIST);
+const total = ref(0);
 
-// 所需日期
-const nowDate = getNowFormatDate();
-
-// 本月及以后最新活动列表
-const latestList: Ref<Array<LatestActivity>> = ref([]);
-// 精彩回顾中所有的数据
 const allReviewList: Ref<Array<LatestActivity>> = ref([]);
 
 // 精彩回顾下展示列表
 const goDetail = (item: {
-  isMiniProgram: number;
   id: number;
   windowOpen: string;
 }) => {
   if (item.windowOpen) {
     window.open(item.windowOpen);
   } else {
-    let query = '';
-    if (item.isMiniProgram) {
-      query = 'id=' + item.id + '&isMini=1';
-    } else {
-      query = 'id=' + item.id;
-    }
+    const query = 'id=' + item.id + '&isMini=1';
     router.go('/' + lang.value + `/interaction/event-list/detail/?` + query);
   }
 };
-// 精彩回顾页码
-const currentPage = ref(1);
-const pageSize = ref(6);
-const newsList = computed(() => {
-  return allReviewList.value.slice(
-    pageSize.value * (currentPage.value - 1),
-    pageSize.value * currentPage.value
-  );
+
+const params = reactive({
+  currentPage: 1,
+  pageSize: 6,
 });
+
 // 移动端翻页
 const changeCurrentPageMoblie = (val: string) => {
-  if (val === 'prev' && currentPage.value > 1) {
-    currentPage.value = currentPage.value - 1;
-  } else if (val === 'next' && currentPage.value < allReviewList.value.length) {
-    currentPage.value = currentPage.value + 1;
+  if (val === 'prev' && params.currentPage > 1) {
+    params.currentPage = params.currentPage - 1;
+  } else if (
+    val === 'next' &&
+    params.currentPage < allReviewList.value.length
+  ) {
+    params.currentPage = params.currentPage + 1;
   }
 };
 
-onMounted(async () => {
-  configData.forEach((item: any) => {
-    item.synopsis = item.synopsis[0];
-    item.address = item.MEETINGS_INFO.ADDRESS_UP;
-    if (new Date(item.date).getTime() >= new Date(nowDate).getTime()) {
-      latestList.value.push(item);
-    } else {
-      allReviewList.value.unshift(item);
-    }
-  });
-  try {
-    const responeData = await getSalon();
-    responeData.reverse();
-    responeData.forEach((item: LatestActivity) => {
-      item.isMiniProgram = 1;
+const paramsGetSalon = () => {
+  getSalon({
+    page: params.currentPage,
+    size: params.pageSize,
+    activity: 'completed',
+  }).then((res) => {
+    total.value = res.total;
+    res.data.reverse();
+    allReviewList.value = [];
+    res.data.forEach((item: LatestActivity) => {
       item.posterImg = `https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/website-meetup/website${item.poster}.png`;
-      if (new Date(item.date).getTime() >= new Date(nowDate).getTime()) {
-        latestList.value.push(item);
-      } else {
-        allReviewList.value.unshift(item);
-      }
+      allReviewList.value.unshift(item);
     });
-    allReviewList.value = allReviewList.value.sort((a, b) => {
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  });
+};
+onMounted(() => {
+  paramsGetSalon();
 });
+watch(
+  () => params,
+  () => {
+    paramsGetSalon();
+  },
+  {
+    deep: true,
+  }
+);
 </script>
 
 <template>
   <AppContent class="salon-content">
     <div class="salon-review-mian">
-      <template v-if="newsList && newsList.length != 0">
+      <template v-if="allReviewList?.length">
         <div class="salon-review">
           <OCard
-            v-for="item in newsList"
+            v-for="item in allReviewList"
             :key="item.id"
             class="salon-review-card"
             shadow="hover"
@@ -164,27 +147,27 @@ onMounted(async () => {
           </OCard>
         </div>
         <OPagination
-          v-if="newsList.length"
-          v-model:currentPage="currentPage"
-          v-model:page-size="pageSize"
+          v-if="allReviewList.length"
+          v-model:currentPage="params.currentPage"
+          v-model:page-size="params.pageSize"
           class="pagination"
           :page-sizes="[3, 6, 9, 12]"
           :background="true"
           layout="sizes, prev, pager, next, slot, jumper"
-          :total="allReviewList.length"
+          :total="total"
         >
           <span class="pagination-slot"
             >{{
-              pageSize * currentPage < allReviewList.length
-                ? pageSize * currentPage
-                : allReviewList.length
+              params.pageSize * params.currentPage < total
+                ? params.pageSize * params.currentPage
+                : total
             }}
-            / {{ allReviewList.length }}</span
+            / {{ total }}</span
           >
         </OPagination>
         <AppPaginationMo
-          :current-page="currentPage"
-          :total-page="allReviewList.length"
+          :current-page="params.currentPage"
+          :total-page="total"
           @turn-page="changeCurrentPageMoblie"
         >
         </AppPaginationMo>

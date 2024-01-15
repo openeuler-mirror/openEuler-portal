@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { ref, nextTick, onMounted, reactive, PropType, watch } from 'vue';
+import { ref, nextTick, onMounted, PropType, watch } from 'vue';
 
 import { isValidKey, getNowFormatDate, isBrowser } from '@/shared/utils';
 import { TableDataT, DayDataT } from '@/shared/@types/type-calendar';
 import { useCommon } from '@/stores/common';
+
+import { getDaysData } from '@/api/api-calendar';
 
 import IconLeft from '~icons/app/icon-chevron-left.svg';
 import IconRight from '~icons/app/icon-chevron-right.svg';
@@ -15,28 +17,25 @@ import notFoundImg_dark from '@/assets/illustrations/404_dark.png';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 
-import type { TabsPaneContext } from 'element-plus';
-
 const props = defineProps({
   tableData: {
-    type: Array as PropType<TableDataT[]>,
+    type: Array as PropType<string[]>,
     default: () => {
       return {};
     },
   },
 });
 const commonStore = useCommon();
-let currentMeet = reactive<TableDataT>({
-  date: '',
-  timeData: [],
-});
 
 const renderData = ref<TableDataT>({
   date: '',
   timeData: [],
 });
-
-const currentDay = ref('');
+const loading = ref(false);
+const currentDay = ref({
+  raw: '',
+  resolve: '',
+});
 const activeName = ref('');
 const isCollapse = ref(false);
 const i18n = {
@@ -48,55 +47,57 @@ const i18n = {
 // 日历展示时间限制
 const limitTime = '2021 年 1 月';
 const detailItem = [
-  { text: '会议详情', key: 'detail', isLink: false },
-  { text: '发起人', key: 'creator', isLink: false },
-  { text: '会议日期', key: 'date', isLink: false },
-  { text: '会议时间', key: 'duration_time', isLink: false },
-  { text: '会议ID', key: 'meeting_id', isLink: false },
-  { text: '会议链接', key: 'join_url', isLink: true },
-  { text: 'Etherpad链接', key: 'etherpad', isLink: true },
-  { text: '活动介绍', key: 'synopsis', isLink: false },
-  { text: '起始日期', key: 'start_date', isLink: false },
-  { text: '结束日期', key: 'end_date', isLink: false },
-  { text: '活动形式', key: 'activity_type', isLink: false },
-  { text: '线上链接', key: 'online_url', isLink: true },
-  { text: '报名链接', key: 'register_url', isLink: true },
-  { text: '活动地点', key: 'address', isLink: false },
-  { text: '回放链接', key: 'replay_url', isLink: true },
-  { text: '回放链接', key: 'video_url', isLink: true },
+  { text: '会议详情', key: 'detail' },
+  { text: '发起人', key: 'creator' },
+  { text: '会议日期', key: 'date' },
+  { text: '会议时间', key: 'duration_time' },
+  { text: '会议平台', key: 'platform' },
+  { text: '会议ID', key: 'meeting_id' },
+  { text: '会议链接', key: 'join_url' },
+  { text: 'Etherpad链接', key: 'etherpad' },
+  { text: '活动介绍', key: 'synopsis' },
+  { text: '起始日期', key: 'start_date' },
+  { text: '结束日期', key: 'end_date' },
+  { text: '活动形式', key: 'activity_type' },
+  { text: '线上链接', key: 'online_url' },
+  { text: '报名链接', key: 'register_url' },
+  { text: '活动地点', key: 'address' },
+  { text: '回放链接', key: 'replay_url' },
+  { text: '回放链接', key: 'video_url' },
 ];
 const activityType = ['线下', '线上', '线上 + 线下'];
-const titleList = ['全部', '会议', '活动', '峰会'];
-const tabType = ref(titleList[0]);
+const titleList = [
+  {
+    name: '全部',
+    value: 'all',
+  },
+  {
+    name: '会议',
+    value: 'meetings',
+  },
+  {
+    name: '活动',
+    value: 'activity',
+  },
+  {
+    name: '峰会',
+    value: 'summit',
+  },
+];
+const tabType = ref(titleList[0].value);
 const calendar = ref();
 const calendarHeight = ref<number | string>(335);
 const isLimit = ref(false);
 const windowWidth = ref(useWindowResize());
 
 // 活动会议筛选
-function selectTab(tab: TabsPaneContext) {
-  const index = Number(tab.index);
-  renderData.value.timeData = [];
-  try {
-    // 0-全部 1-会议 其他-活动
-    if (index === 0) {
-      renderData.value.timeData = currentMeet.timeData;
-    } else if (index === 1) {
-      renderData.value.timeData = currentMeet.timeData.filter(
-        (item: DayDataT) => {
-          return item.etherpad;
-        }
-      );
-    } else if (index === 2) {
-      renderData.value.timeData = currentMeet.timeData.filter(
-        (item: DayDataT) => {
-          return item.activity_type;
-        }
-      );
-    }
-  } catch (error: any) {
-    console.error(error);
-  }
+function selectTab() {
+  nextTick(() => {
+    paramGetDaysData({
+      date: currentDay.value.raw,
+      type: tabType.value,
+    });
+  });
 }
 
 function setMeetingDay(day: string, event: Event) {
@@ -104,62 +105,55 @@ function setMeetingDay(day: string, event: Event) {
     event.stopPropagation();
     return;
   }
-  currentDay.value = resolveDate(day);
-  tabType.value = titleList[0];
-  try {
-    for (let i = 0; i < props.tableData.length; i++) {
-      isCollapse.value = false;
-      if (
-        props.tableData[i].date === day ||
-        props.tableData[i].start_date === day
-      ) {
-        // 深拷贝
-        currentMeet = JSON.parse(JSON.stringify(props.tableData[i]));
-        renderData.value = JSON.parse(JSON.stringify(props.tableData[i]));
-        // 只有一个会议默认展开
-        if (props.tableData[i].timeData.length === 1) {
-          activeName.value = '0';
-          nextTick(() => {
-            if (document.querySelector('.meet-item')) {
-              (document.querySelector('.meet-item') as HTMLElement).click();
-            }
-          });
-        } else {
-          // 会议时间排序
-          activeName.value = '';
-          renderData.value.timeData.sort((a: DayDataT, b: DayDataT) => {
-            return (
-              parseInt(a.startTime.replace(':', '')) -
-              parseInt(b.startTime.replace(':', ''))
-            );
-          });
-          renderData.value.timeData.map((item2) => {
-            if (item2.etherpad) {
-              item2['duration_time'] = `${item2.startTime}-${item2.endTime}`;
-            }
-          });
-        }
-        return;
-      } else {
-        currentMeet.timeData = [];
-        renderData.value.timeData = [];
-      }
-    }
-  } catch (e) {
-    console.error(e);
+  if (day === currentDay.value.raw) {
+    return false;
   }
+  if (props.tableData.includes(day)) {
+    paramGetDaysData({
+      date: day,
+      type: tabType.value,
+    });
+  } else {
+    renderData.value.timeData = [];
+  }
+  currentDay.value.raw = day;
+  currentDay.value.resolve = resolveDate(day);
 }
 
-// 为日历单元格绑定会议次数 (弃用)
-function getMeetTimes(day: string): number {
-  let times = 0;
-  props.tableData.forEach((item) => {
-    if (item.date === day || item.start_date === day) {
-      times = item.timeData.length;
-      return;
-    }
-  });
-  return times;
+function paramGetDaysData(params: { date: string; type: string }) {
+  loading.value = true;
+  getDaysData(params)
+    .then((res) => {
+      renderData.value = res.data;
+      if (renderData.value.timeData.length === 1) {
+        activeName.value = '0';
+        nextTick(() => {
+          if (document.querySelector('.meet-item')) {
+            (document.querySelector('.meet-item') as HTMLElement).click();
+          }
+        });
+      } else {
+        // 会议时间排序
+        activeName.value = '';
+        renderData.value.timeData.sort((a: DayDataT, b: DayDataT) => {
+          return (
+            parseInt(a.startTime?.replace(':', '')) -
+            parseInt(b.startTime?.replace(':', ''))
+          );
+        });
+        renderData.value.timeData.map((item2) => {
+          if (item2.etherpad) {
+            item2['duration_time'] = `${item2.startTime}-${item2.endTime}`;
+          }
+          if (item2.activity_type) {
+            item2.activity_type = activityType[Number(item2.activity_type) - 1];
+          }
+        });
+      }
+    })
+    .finally(() => {
+      loading.value = false;
+    });
 }
 
 function selectDate(val: string, date: string) {
@@ -180,6 +174,20 @@ function goDetail(index: number) {
 function changeCollapse() {
   isCollapse.value = !isCollapse.value;
 }
+
+function transformKey(key: string) {
+  switch (key) {
+    case 'welink':
+      return 'WeLink';
+    case 'zoom':
+      return 'Zoom';
+    case 'tencent':
+      return '腾讯会议';
+    default:
+      return key;
+  }
+}
+
 function watchChange(element: HTMLElement) {
   const observe = new MutationObserver(function () {
     calendarHeight.value = `${element.offsetHeight - 2}px`;
@@ -243,7 +251,7 @@ const watchData = watch(
         <template #dateCell="{ data }">
           <div
             class="out-box"
-            :class="{ 'be-active': getMeetTimes(data.day) }"
+            :class="{ 'be-active': tableData.includes(data.day) }"
             @click="setMeetingDay(data.day, $event)"
           >
             <div class="day-box">
@@ -264,9 +272,9 @@ const watchData = watch(
           <OTabs v-model="tabType" @tab-click="selectTab">
             <OTab-pane
               v-for="item in titleList"
-              :key="item"
-              :label="item"
-              :name="item"
+              :key="item.value"
+              :label="item.name"
+              :name="item.value"
             ></OTab-pane>
           </OTabs>
         </div>
@@ -300,7 +308,7 @@ const watchData = watch(
                 <template #dateCell="{ data }">
                   <div
                     class="out-box"
-                    :class="{ 'be-active': getMeetTimes(data.day) }"
+                    :class="{ 'be-active': tableData.includes(data.day) }"
                     @click="setMeetingDay(data.day, $event)"
                   >
                     <div class="day-box">
@@ -320,14 +328,15 @@ const watchData = watch(
       </el-collapse>
       <div class="detail-head">
         {{ i18n.NEW_DATE }}
-        <span>{{ currentDay }}</span>
+        <span>{{ currentDay.resolve }}</span>
       </div>
-      <div class="meeting-list">
+      <div ref="meetingListRef" class="meeting-list">
         <div
           v-if="
             (renderData.timeData.length && renderData.date) ||
             (renderData.timeData.length && renderData.start_date)
           "
+          v-loading="loading"
           class="demo-collapse"
         >
           <o-collapse v-model="activeName" accordion @change="changeCollapse()">
@@ -341,12 +350,7 @@ const watchData = watch(
                   <div class="meet-item">
                     <div class="meet-left">
                       <div class="left-top">
-                        <p
-                          class="meet-name"
-                          :title="item.name || item.title"
-                        >
-                          {{ item.name || item.title }}
-                        </p>
+                        <p class="meet-name">{{ item.name || item.title }}</p>
                       </div>
                       <div
                         v-if="item.group_name"
@@ -401,39 +405,21 @@ const watchData = watch(
                       class="meeting-item"
                     >
                       <div class="item-title">{{ keys.text }}:</div>
-                      <p
-                        v-if="
-                          !keys.isLink &&
-                          keys.key !== 'activity_type' &&
-                          keys.key !== 'date'
-                        "
-                      >
-                        {{ item[keys.key] }}
-                      </p>
-                      <p
-                        v-else-if="
-                            keys.isLink &&
-                            item[keys.key] &&
-                            !(item[keys.key] as string).startsWith('http')
-                          "
-                      >
-                        {{ item[keys.key] }}
-                      </p>
                       <a
-                        v-else-if="keys.isLink"
+                        v-if="
+                          typeof item[keys.key] === 'string' &&
+                          (item[keys.key] as string).startsWith('http')
+                        "
                         :href="item[keys.key]"
-                        target="_blank"
-                        rel="noopener noreferrer"
                         >{{ item[keys.key] }}</a
                       >
-                      <p
-                        v-else-if="
-                          keys.key === 'activity_type' && item.activity_type
-                        "
-                      >
-                        {{ activityType[item.activity_type - 1] }}
+                      <p v-else>
+                        {{
+                          keys.key === 'platform'
+                            ? transformKey(item[keys.key])
+                            : item[keys.key]
+                        }}
                       </p>
-                      <p v-else>{{ currentDay }}</p>
                     </div>
                   </template>
                   <div v-if="item.schedules" class="mo-learn-more">

@@ -14,21 +14,7 @@ export function getSigDetailInfo(params: string) {
  * 获取Sig列表
  * @returns {Promise<SigListT[]>}
  */
-export function getSigList(): Promise<SigListT[]> {
-  const url = `/api-meeting/sigs/`;
-  return request.get(url).then((res: AxiosResponse) => res.data);
-}
-
-/**
- * 获取完整Sig列表
- * @param {LIST_PARAMS} params 请求参数 
- * @returns {Object}
- */
-export function getCompleteList(params?: LIST_PARAMS): Promise<{
-  code: number,
-  data: SigCompleteListT[],
-  msg: string
-}> {
+export function getCompleteList(params?: LIST_PARAMS) {
   const url = `/api-dsapi/query/sig/info?community=openeuler&page=${params?.page}&pageSize=${params?.pageSize}&search=fuzzy`;
   return request.post(url).then((res: AxiosResponse) => res.data);
 }
@@ -62,9 +48,12 @@ export function getAllList(): Promise<{
  * @param {string} sigName sig名称
  * @returns {Promise<SigDetailT>}
  */
-export function getSigDetail(sigName: string): Promise<SigDetailT> {
+export function getSigDetail(
+  sigName: string,
+  params: { size: number; page: number }
+): Promise<SigDetailT> {
   const url = `/api-meeting/sigmeetingsdata/${sigName}/`;
-  return request.get(url).then((res: AxiosResponse) => res.data);
+  return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
 /**
  * 获取sig详情核心成员信息
@@ -96,9 +85,17 @@ export function getSigRepositoryList(params: object): Promise<{
   const url = '/api-dsapi/query/sig/repo/committers';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
-export function getSalon() {
+export function getSalon(params: {
+  size: number;
+  page: number;
+  activity: string;
+}) {
   const url = '/api-meeting/activities/';
-  return request.get(url).then((res: AxiosResponse) => res.data);
+  return request
+    .get(url, {
+      params,
+    })
+    .then((res: AxiosResponse) => res.data);
 }
 
 /**
