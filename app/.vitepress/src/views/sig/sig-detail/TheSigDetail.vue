@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, onMounted, onUpdated } from 'vue';
+import { computed, ref, onMounted, onUpdated, reactive } from 'vue';
 import { useData, useRouter } from 'vitepress';
 import { useI18n } from '@/i18n';
 
@@ -26,7 +26,6 @@ import {
   getSigDetail,
   getSigMember,
   getSigRepositoryList,
-  getSigList,
   getSigDetailInfo,
 } from '@/api/api-sig';
 
@@ -49,29 +48,18 @@ const sigDetail = computed(() => {
 const sigMeetingData: any = ref('');
 const sigMemberData: any = ref('');
 const memberList: any = ref([]);
+const params = reactive({
+  size: 50,
+  page: 1,
+});
 
 function getSigDetails() {
-  getSigDetail(sigDetailName.value)
-    .then((res: any) => {
-      sigMeetingData.value = res;
-    })
-    .catch((error) => {
-      throw new Error(error);
-    });
-}
-const oldEmail = ref('');
-const giteeHomeLink = ref('');
-function getOldEmail() {
-  getSigList().then((res) => {
-    const targetData = res.filter((item: SigListT) => {
-      return item.group_name === sigDetailName.value;
-    });
-    if (targetData.length) {
-      oldEmail.value = targetData[0].maillist;
-      giteeHomeLink.value = targetData[0].home_page;
-    }
+  getSigDetail(sigDetailName.value, params).then((res: any) => {
+    sigMeetingData.value = res.data;
   });
 }
+const giteeHomeLink = ref('');
+
 function getSigMembers() {
   const param = {
     community: 'openeuler',
@@ -191,7 +179,6 @@ onMounted(() => {
   }
   sigDetailName.value = getUrlParam('name');
   getSigDetails();
-  getOldEmail();
   getSigMembers();
   getRepositoryList();
 });
@@ -302,10 +289,9 @@ function convertMd(data: string) {
           {{ sigDetail.ORGANIZING_MEETINGS }}
         </h2>
         <SigMeeting
-          v-if="sigMeetingData.tableData"
+          v-if="sigMeetingData.length"
           class="calender-box"
-          :table-data="sigMeetingData.tableData"
-          :old-email="oldEmail"
+          :table-data="sigMeetingData"
           :meeting-detail="
             easyeditorInfo.meeting ? easyeditorInfo.meeting.content : null
           "
@@ -686,7 +672,6 @@ function convertMd(data: string) {
           }
         }
         ul {
-          // display: flex;
           margin-top: var(--o-spacing-h2);
           padding: 0 var(--o-spacing-h7);
           display: flex;

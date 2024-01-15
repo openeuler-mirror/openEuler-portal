@@ -148,7 +148,6 @@ function initMap(lng: number, lat: number) {
     .then((AMap) => {
       const marker = new AMap.Marker({
         position: new AMap.LngLat(lng, lat),
-        //icon: IconMapPin,
         size: new AMap.Size(30, 35),
         anchor: 'bottom-center',
       });

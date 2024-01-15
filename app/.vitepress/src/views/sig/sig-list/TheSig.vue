@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
 import { useData, useRouter } from 'vitepress';
 import { useI18n } from '@/i18n';
 
@@ -8,38 +7,14 @@ import BannerLevel2 from '@/components/BannerLevel2.vue';
 import SigList from './SigList.vue';
 import SigLandscape from './SigLandscape.vue';
 
-import { getSigList } from '@/api/api-sig';
-
 import banner from '@/assets/banner/banner-sig.png';
 import illustration from '@/assets/illustrations/sig-list.png';
 
 import IconRight from '~icons/app/icon-arrow-right.svg';
 
-// sig 列表数据 邮件字段采用/api/meetings 接口数据，其余字段采用 omapi
-
-interface SIGLIST {
-  group_name: string;
-  home_page: string;
-  id: number;
-  irc: string;
-  maillist: string;
-  owners: string;
-}
-
 const { lang } = useData();
 const router = useRouter();
 const i18n = useI18n();
-const oldSigList = ref<SIGLIST[]>([]);
-
-onMounted(() => {
-  getSigList()
-    .then((res) => {
-      oldSigList.value = res;
-    })
-    .catch((error) => {
-      throw new Error(error);
-    });
-});
 
 const handlerSigClick = (path: string) => {
   router.go(`/${lang.value + path}`);
@@ -66,7 +41,7 @@ const handlerSigClick = (path: string) => {
       <p>SIG List</p>
       <OTabs>
         <OTabPane label="SIG List">
-          <SigList v-if="oldSigList.length" :old-sig-list="oldSigList" />
+          <SigList />
         </OTabPane>
         <OTabPane label="SIG Landscape">
           <SigLandscape />

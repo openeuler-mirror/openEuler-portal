@@ -74,7 +74,7 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api-chat/, ''),
       },
       '/api-meeting/': {
-        target: 'https://meetings.openeuler.org',
+        target: 'https://meetings.openeuler.openatom.cn/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-meeting/, ''),
       },

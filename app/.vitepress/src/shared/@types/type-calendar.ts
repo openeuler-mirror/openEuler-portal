@@ -16,7 +16,7 @@ export interface DayDataT {
   group_name?: string;
   endTime?: string;
   end_date?: string;
-  activity_type?: number;
+  activity_type?: number | string;
 }
 
 export interface TableDataT {
@@ -25,5 +25,5 @@ export interface TableDataT {
   timeData: DayDataT[];
 }
 export interface TableDataObjT {
-  tableData: TableDataT[]
+  tableData: TableDataT[];
 }

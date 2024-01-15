@@ -1,17 +1,12 @@
 <script setup lang="ts">
-import { onMounted, Ref, ref } from 'vue';
+import { reactive, watch, Ref, onMounted, ref } from 'vue';
 import { useData, useRouter } from 'vitepress';
-
-import _ from 'lodash';
-import { getNowFormatDate } from '@/shared/utils';
 
 import { useCommon } from '@/stores/common';
 
 import AppContent from '@/components/AppContent.vue';
 
 import { getSalon } from '@/api/api-sig';
-
-import SALON_CONFIG from '@/data/salon/salon';
 
 import notFoundImg_light from '@/assets/illustrations/404.png';
 import notFoundImg_dark from '@/assets/illustrations/404_dark.png';
@@ -20,7 +15,6 @@ import IconCalendar from '~icons/app/icon-calendar.svg';
 import IconHome from '~icons/app/icon-home.svg';
 
 interface LatestActivity {
-  isMiniProgram: number;
   id: number;
   date: string;
   posterImg: string;
@@ -35,117 +29,143 @@ const commonStore = useCommon();
 const { lang } = useData();
 const router = useRouter();
 
-const configData = _.cloneDeep(SALON_CONFIG.cn.MEETUPS_LIST);
-
-// 所需日期
-const nowDate = getNowFormatDate();
-
 // 本月及以后最新活动列表
 const latestList: Ref<Array<LatestActivity>> = ref([]);
-// 精彩回顾中所有的数据
-const allReviewList: Ref<Array<LatestActivity>> = ref([]);
+
+// 移动端翻页
+const changeCurrentPageMoblie = (val: string) => {
+  if (val === 'prev' && params.currentPage > 1) {
+    params.currentPage = params.currentPage - 1;
+  } else if (val === 'next' && params.currentPage < latestList.value.length) {
+    params.currentPage = params.currentPage + 1;
+  }
+};
 
 // 精彩回顾下展示列表
 const goDetail = (item: {
-  isMiniProgram: number;
   id: number;
   windowOpen: string;
 }) => {
   if (item.windowOpen) {
     window.open(item.windowOpen);
   } else {
-    let query = '';
-    if (item.isMiniProgram) {
-      query = 'id=' + item.id + '&isMini=1';
-    } else {
-      query = 'id=' + item.id;
-    }
+    const query = 'id=' + item.id + '&isMini=1';
     router.go('/' + lang.value + `/interaction/event-list/detail/?` + query);
   }
 };
-// 精彩回顾页码
 
-onMounted(async () => {
-  configData.forEach((item: any) => {
-    item.synopsis = item.synopsis[0];
-    item.address = item.MEETINGS_INFO.ADDRESS_UP;
-    if (new Date(item.date).getTime() >= new Date(nowDate).getTime()) {
-      latestList.value.push(item);
-    } else {
-      allReviewList.value.unshift(item);
-    }
-  });
-  try {
-    const responeData = await getSalon();
-    responeData.reverse();
-    responeData.forEach((item: LatestActivity) => {
-      item.isMiniProgram = 1;
-
-      item.posterImg = `https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/website-meetup/website${item.poster}.png`;
-      if (new Date(item.date).getTime() >= new Date(nowDate).getTime()) {
-        latestList.value.push(item);
-      } else {
-        allReviewList.value.unshift(item);
-      }
-    });
-    latestList.value = latestList.value.sort((a, b) => {
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    });
-  } catch (e: any) {
-    throw new Error(e);
-  }
+const params = reactive({
+  currentPage: 1,
+  pageSize: 6,
 });
+const total = ref(0);
+
+const paramsGetSalon = () => {
+  getSalon({
+    page: params.currentPage,
+    size: params.pageSize,
+    activity: 'registering',
+  }).then((res) => {
+    total.value = res.total;
+    res.data.reverse();
+    latestList.value = [];
+    res.data.forEach((item: LatestActivity) => {
+      item.posterImg = `https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/website-meetup/website${item.poster}.png`;
+      latestList.value.unshift(item);
+    });
+  });
+};
+onMounted(() => {
+  paramsGetSalon();
+});
+watch(
+  () => params,
+  () => {
+    paramsGetSalon();
+  },
+  {
+    deep: true,
+  }
+);
 </script>
 <template>
   <AppContent class="salon-content">
     <main>
-      <div v-if="latestList && latestList.length" class="salon-review">
-        <OCard
-          v-for="item in latestList"
-          :key="item.id"
-          class="salon-review-card"
-          shadow="hover"
-          @click="goDetail(item)"
-        >
-          <div class="salon-review-card-title">
-            {{ item.title }}
-          </div>
-          <div v-if="item.posterImg" class="salon-review-card-img">
-            <img :src="item.posterImg" alt="" />
-            <span v-if="item.isMiniProgram || item.visibleText">{{
-              item.title
-            }}</span>
-          </div>
-          <div
-            v-else
-            class="salon-review-card-desc"
-            :title="item.synopsis ? item.synopsis : ''"
+      <template v-if="latestList?.length">
+        <div class="salon-review">
+          <OCard
+            v-for="item in latestList"
+            :key="item.id"
+            class="salon-review-card"
+            shadow="hover"
+            @click="goDetail(item)"
           >
-            {{ item.synopsis ? item.synopsis : '' }}
-          </div>
-          <div class="salon-review-card-bottom">
-            <div class="salon-review-card-mobile">
-              <div class="salon-review-card-title-mobile">
-                {{ item.title }}
+            <div class="salon-review-card-title">
+              {{ item.title }}
+            </div>
+            <div v-if="item.posterImg" class="salon-review-card-img">
+              <img :src="item.posterImg" alt="" />
+              <span v-if="item.isMiniProgram || item.visibleText">{{
+                item.title
+              }}</span>
+            </div>
+            <div
+              v-else
+              class="salon-review-card-desc"
+              :title="item.synopsis ? item.synopsis : ''"
+            >
+              {{ item.synopsis ? item.synopsis : '' }}
+            </div>
+            <div class="salon-review-card-bottom">
+              <div class="salon-review-card-mobile">
+                <div class="salon-review-card-title-mobile">
+                  {{ item.title }}
+                </div>
+                <div
+                  class="salon-review-card-desc-mobile"
+                  :title="item.synopsis ? item.synopsis : ''"
+                >
+                  {{ item.synopsis ? item.synopsis : '' }}
+                </div>
               </div>
-              <div
-                class="salon-review-card-desc-mobile"
-                :title="item.synopsis ? item.synopsis : ''"
-              >
-                {{ item.synopsis ? item.synopsis : '' }}
+              <div class="salon-review-card-info">
+                <IconCalendar class="salon-review-card-icon"></IconCalendar>
+                <span>{{ item.date }}</span>
+                <IconHome class="home salon-review-card-icon"></IconHome>
+                <span class="address" :title="item.address">
+                  {{ item.address }}</span
+                >
               </div>
             </div>
-            <div class="salon-review-card-info">
-              <IconCalendar class="salon-review-card-icon"></IconCalendar>
-              <span>{{ item.date }}</span>
-              <IconHome class="home salon-review-card-icon"></IconHome>
-              <span class="address" :title="item.address">
-                {{ item.address }}</span
-              >
-            </div>
-          </div>
-        </OCard>
-      </div>
+          </OCard>
+        </div>
+        <OPagination
+          v-if="total / params.pageSize > 1"
+          v-model:currentPage="params.currentPage"
+          v-model:page-size="params.pageSize"
+          class="pagination"
+          :page-sizes="[3, 6, 9, 12]"
+          :background="true"
+          layout="sizes, prev, pager, next, slot, jumper"
+          :total="total"
+        >
+          <span class="pagination-slot"
+            >{{
+              params.pageSize * params.currentPage < total
+                ? params.pageSize * params.currentPage
+                : total
+            }}
+            / {{ total }}</span
+          >
+        </OPagination>
+        <AppPaginationMo
+          :current-page="params.currentPage"
+          :total-page="total"
+          @turn-page="changeCurrentPageMoblie"
+        >
+        </AppPaginationMo>
+      </template>
+
       <div v-else>
         <div class="nofound">
           <img

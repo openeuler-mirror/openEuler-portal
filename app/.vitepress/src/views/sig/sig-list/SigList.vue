@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useData, useRouter } from 'vitepress';
-import { computed, onMounted, ref, reactive, watch, PropType } from 'vue';
+import { computed, onMounted, ref, reactive, watch } from 'vue';
 import { debounce, filter, uniq } from 'lodash';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
@@ -34,18 +34,6 @@ interface SIGLIST {
   repos: Array<string>;
   sig_name: string;
 }
-interface oldSigListT {
-  group_name: string;
-  maillist: string;
-}
-
-// sig列表采用老接口数据的邮箱做渲染
-const props = defineProps({
-  oldSigList: {
-    type: Array as PropType<oldSigListT[]>,
-    default: () => [],
-  },
-});
 
 const configData = useData();
 const i18n = useI18n();
@@ -87,22 +75,11 @@ const isMobile = computed(() => {
 });
 
 const getSigList = (params: LIST_PARAMS) => {
-  try {
-    getCompleteList(params).then((res) => {
-      const { data } = res;
-      sigList.value = data[0].data;
-      props.oldSigList.forEach((oldMail) => {
-        sigList.value.map((newMail) => {
-          if (newMail.sig_name === oldMail.group_name) {
-            newMail.mailing_list = oldMail.maillist;
-          }
-        });
-      });
-      paginationData.value.total = data[0].total;
-    });
-  } catch (error) {
-    throw Error;
-  }
+  getCompleteList(params).then((res) => {
+    const { data } = res;
+    sigList.value = data[0].data;
+    paginationData.value.total = data[0].total;
+  });
 };
 const getAllRepo = () => {
   getRepoList()
@@ -124,7 +101,6 @@ const getRepositoryList = () => {
       const { code, data } = res;
       if (code === 200) {
         allList.value = data;
-        replaceMail();
         data.map((item: SIGLIST) => {
           sigSelectList.value.push(item.sig_name);
           item?.maintainers?.forEach((subItem: string) => {
@@ -231,15 +207,7 @@ function turnPage(option: string) {
   }
   changeCurrent(paginationData.value.currentPage);
 }
-function replaceMail() {
-  props.oldSigList.forEach((oldMail) => {
-    allList.value.map((newMail) => {
-      if (newMail.sig_name === oldMail.group_name) {
-        newMail.mailing_list = oldMail.maillist;
-      }
-    });
-  });
-}
+
 // 输入框防抖
 const debounceEvent = debounce(filterRope, 300, {
   trailing: true,
