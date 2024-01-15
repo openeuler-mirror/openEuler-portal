@@ -42,10 +42,7 @@ const changeCurrentPageMoblie = (val: string) => {
 };
 
 // 精彩回顾下展示列表
-const goDetail = (item: {
-  id: number;
-  windowOpen: string;
-}) => {
+const goDetail = (item: { id: number; windowOpen: string }) => {
   if (item.windowOpen) {
     window.open(item.windowOpen);
   } else {
@@ -139,25 +136,28 @@ watch(
             </div>
           </OCard>
         </div>
-        <OPagination
-          v-if="total / params.pageSize > 1"
-          v-model:currentPage="params.currentPage"
-          v-model:page-size="params.pageSize"
-          class="pagination"
-          :page-sizes="[3, 6, 9, 12]"
-          :background="true"
-          layout="sizes, prev, pager, next, slot, jumper"
-          :total="total"
-        >
-          <span class="pagination-slot"
-            >{{
-              params.pageSize * params.currentPage < total
-                ? params.pageSize * params.currentPage
-                : total
-            }}
-            / {{ total }}</span
+        <ClientOnly>
+          <OPagination
+            v-if="total / params.pageSize > 1"
+            v-model:currentPage="params.currentPage"
+            v-model:page-size="params.pageSize"
+            class="pagination"
+            :page-sizes="[3, 6, 9, 12]"
+            :background="true"
+            layout="sizes, prev, pager, next, slot, jumper"
+            :total="total"
           >
-        </OPagination>
+            <span class="pagination-slot"
+              >{{
+                params.pageSize * params.currentPage < total
+                  ? params.pageSize * params.currentPage
+                  : total
+              }}
+              / {{ total }}</span
+            >
+          </OPagination>
+        </ClientOnly>
+
         <AppPaginationMo
           :current-page="params.currentPage"
           :total-page="total"
