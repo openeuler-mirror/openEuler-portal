@@ -102,9 +102,7 @@ watch(
             </div>
             <div v-if="item.posterImg" class="salon-review-card-img">
               <img :src="item.posterImg" alt="" />
-              <span v-if="item.isMiniProgram || item.visibleText">{{
-                item.title
-              }}</span>
+              <span>{{ item.title }}</span>
             </div>
             <div
               v-else
@@ -359,6 +357,7 @@ watch(
         font-size: var(--o-font-size-h6);
         line-height: var(--o-line-height-h6);
         color: #fff;
+        max-width: 400px;
         @media (max-width: 768px) {
           font-size: var(--o-font-size-text);
           line-height: var(--o-line-height-text);
