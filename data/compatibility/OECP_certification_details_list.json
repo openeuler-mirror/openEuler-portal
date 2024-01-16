@@ -7493,7 +7493,7 @@
     "arch": "x86_64",
     "checksum": "0abca5cd5cef1a8bc1da0ec3f63378ce",
     "base_openeuler_version": "openEuler 22.03 LTS SP1",
-    "os_download_link": "不提供",
+    "os_download_link": "http://www.huawei.com/",
     "friendly_link": "http://www.huawei.com/",
     "type": "服务器",
     "total_result": "pass",
@@ -7565,7 +7565,7 @@
     "arch": "aarch64",
     "checksum": "7ec854b36dad5923d285c7943e4ee5e8",
     "base_openeuler_version": "openEuler 22.03 LTS SP1",
-    "os_download_link": "不提供",
+    "os_download_link": "http://www.huawei.com/",
     "friendly_link": "http://www.huawei.com/",
     "type": "服务器",
     "total_result": "pass",
@@ -7921,15 +7921,15 @@
   },
   {
     "osv_name": "江苏润和软件股份有限公司",
-    "os_version": "hopestage-image-ok3568-20231128093203.rootfs.ext4，boot.img",
+    "os_version": "hopestage-image-ok3568-20231128093203.rootfs.ext4, boot.img",
     "arch": "aarch64",
-    "checksum": "6756809e4b83c712a6641dd4ef273a18 hopestage-image-ok3568-20231128093203.rootfs.ext4\r\n6146c27fb5ca967ecee58145815e720c boot.img",
+    "checksum": "6756809e4b83c712a6641dd4ef273a18, 6146c27fb5ca967ecee58145815e720c",
     "base_openeuler_version": "openEuler Embedded 22.03 LTS SP2",
     "os_download_link": "不提供",
     "friendly_link": "http://www.hoperun.com/",
     "type": "嵌入式",
     "total_result": "pass",
-    "date": "2024/01/02",
+    "date": "2024/01/03",
     "details": "详细信息",
     "tools_result": [
       {
@@ -7992,16 +7992,88 @@
     ]
   },
   {
-    "osv_name": "江苏润和软件股份有限公司",
-    "os_version": "hopestage-image-ok3568-20231128093203.rootfs.ext4, boot.img",
+    "osv_name": "华为云计算有限公司",
+    "os_version": "HCE-2.0-aarch64-dvd.iso",
     "arch": "aarch64",
-    "checksum": "6756809e4b83c712a6641dd4ef273a18, 6146c27fb5ca967ecee58145815e720c",
-    "base_openeuler_version": "openEuler Embedded 22.03 LTS SP2",
-    "os_download_link": "不提供",
-    "friendly_link": "http://www.hoperun.com/",
-    "type": "嵌入式",
+    "checksum": "1b2533c1b9c077c3a0941b873ab3d7b1",
+    "base_openeuler_version": "openEuler 22.03 LTS",
+    "os_download_link": "https://www.huaweicloud.com/product/hce.html",
+    "friendly_link": "https://www.huaweicloud.com/",
+    "type": "服务器",
     "total_result": "pass",
-    "date": "2024/01/03",
+    "date": "2024/01/16",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "四川华盛起云智慧科技有限公司",
+    "os_version": "QYZH-Server-22.03-20231221-final.iso",
+    "arch": "aarch64",
+    "checksum": "bd609f57f0f0bbef8b7bf75ff853dda5",
+    "base_openeuler_version": "openEuler 22.03 LTS SP2",
+    "os_download_link": "https://huashengqiyun.cn",
+    "friendly_link": "https://huashengqiyun.cn",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/01/16",
     "details": "详细信息",
     "tools_result": [
       {
