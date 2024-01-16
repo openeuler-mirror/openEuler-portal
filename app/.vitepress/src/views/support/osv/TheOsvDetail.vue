@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, h } from 'vue';
 import { useRouter } from 'vitepress';
 
 import { useI18n } from '@/i18n';
@@ -9,6 +9,7 @@ import { getOsvOne } from '@/api/api-security';
 import AppContent from '@/components/AppContent.vue';
 
 import templatData from '@/data/osv';
+import { OsvListT } from '@/shared/@types/type-support';
 
 const i18n = useI18n();
 const router = useRouter();
@@ -23,17 +24,29 @@ function goBackPage() {
 }
 
 const isTemplate = ref(true); // 是否是Osv默认详情模板
+const OSV_TYPE = '嵌入式';
 onMounted(() => {
-  const index1 = decodeURIComponent(window.location.href).indexOf('=');
-  queryId.value = decodeURIComponent(window.location.href).substring(index1 + 1);
-  getOsvOne(queryId.value).then((res: any) => {
-    if (res.result) {
-      approveList.value = res.result;
-      if (res.result.type === '嵌入式') {
-        isTemplate.value = false;
+  // 获取osv id请求详情数据
+  const match = window.location.href.match(/\?id=([0-9a-zA-Z]+)$/);
+  if (match) {
+    queryId.value = match[1];
+    getOsvOne(queryId.value).then(
+      (res: {
+        code: number;
+        msg: string;
+        result: OsvListT;
+        success: boolean;
+      }) => {
+        if (res.success) {
+          approveList.value = res.result;
+          // 不同type显示不同的页面模板
+          if (res.result.type === OSV_TYPE) {
+            isTemplate.value = false;
+          }
+        }
       }
-    }
-  });
+    );
+  }
 });
 </script>
 <template>
@@ -219,10 +232,17 @@ onMounted(() => {
       }
       p {
         color: var(--o-color-text4);
+        &:nth-child(2) {
+          flex: 1;
+        }
       }
       .item-name {
         width: 180px;
         color: var(--o-color-text1);
+        @media screen and (max-width: 767px) {
+          width: 100px;
+          margin-right: 8px;
+        }
       }
     }
     .left {
@@ -281,7 +301,6 @@ onMounted(() => {
 }
 .mobile-list {
   display: none;
-  margin-bottom: var(--o-spacing-h5);
   box-shadow: var(--o-shadow1);
   @media screen and (max-width: 768px) {
     display: block;
@@ -329,6 +348,9 @@ onMounted(() => {
   margin-bottom: var(--o-spacing-h2);
   @media screen and (max-width: 768px) {
     margin-bottom: var(--o-spacing-h4);
+  }
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 .pass-box {

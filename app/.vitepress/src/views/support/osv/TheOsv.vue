@@ -250,7 +250,11 @@ const getMoreTags = () => {
 
       <el-table-column :label="i18n.approve.TABLE_COLUMN.DOWNLOAD" width="220">
         <template #default="scope">
+          <span v-if="!scope.row.osDownloadLink.startsWith('http')">
+            {{ scope.row.osDownloadLink }}
+          </span>
           <a
+            v-else
             :href="scope.row.osDownloadLink"
             target="_blank"
             rel="noopener noreferrer"
@@ -303,7 +307,11 @@ const getMoreTags = () => {
           </li>
           <li>
             <span>{{ i18n.approve.TABLE_COLUMN.DOWNLOAD }}:</span>
+            <template v-if="!item.osDownloadLink.startsWith('http')">
+              {{ item.osDownloadLink }}
+            </template>
             <a
+              v-else
               :href="item.osDownloadLink"
               target="_blank"
               rel="noopener noreferrer"
