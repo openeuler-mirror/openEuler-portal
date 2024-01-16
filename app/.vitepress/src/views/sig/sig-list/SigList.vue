@@ -6,8 +6,6 @@ import { debounce, filter, uniq } from 'lodash';
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { useI18n } from '@/i18n';
 
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
-
 import { getCompleteList, getAllList, getRepoList } from '@/api/api-sig';
 
 import IconGitee from '~icons/app/icon-gitee.svg';
@@ -196,15 +194,8 @@ function filterRope(val: string) {
     repoRenderList.value = repoRenderList.value.slice(0, 300);
   }
 }
-function turnPage(option: string) {
-  if (option === 'prev' && paginationData.value.currentPage > 1) {
-    paginationData.value.currentPage = paginationData.value.currentPage - 1;
-  } else if (
-    option === 'next' &&
-    paginationData.value.currentPage < paginationData.value.total
-  ) {
-    paginationData.value.currentPage = paginationData.value.currentPage + 1;
-  }
+function jumpPage(val: number) {
+  paginationData.value.currentPage = val;
   changeCurrent(paginationData.value.currentPage);
 }
 
@@ -578,12 +569,21 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <AppPaginationMo
-        :current-page="paginationData.currentPage"
-        :total-page="paginationData.total"
-        @turn-page="turnPage"
-      >
-      </AppPaginationMo>
+      <div class="sig-pagination-mo">
+        <OPagination
+          v-model:current-page="paginationData.currentPage"
+          v-model:page-size="paginationData.pageSize"
+          :page-sizes="[12, 24, 36, 48]"
+          :total="paginationData.total"
+          :background="true"
+          :hide-on-single-page="paginationShow"
+          layout="sizes, prev, pager, next, slot, jumper"
+          @current-change="changeCurrent"
+          @size-change="changeSize"
+          @jump-page="jumpPage"
+        >
+        </OPagination>
+      </div>
     </div>
   </div>
 </template>
@@ -762,11 +762,12 @@ onMounted(() => {
       margin-bottom: 0;
     }
   }
-  .pagination-mobile {
-    margin-top: var(--o-spacing-h5);
-  }
   .mo-item-odd {
     background-color: var(--o-color-bg4);
+  }
+
+  .sig-pagination-mo {
+    margin-top: var(--o-spacing-h5);
   }
 }
 </style>

@@ -37,7 +37,7 @@ function goDetail(link: string) {
 </script>
 <template>
   <div class="migration-user-case">
-    <div class="case-list">
+    <div class="user-case-list">
       <OCard
         v-for="item in currentCaseList"
         :key="item.path"
@@ -64,8 +64,8 @@ function goDetail(link: string) {
   </div>
 </template>
 
-<style  lang="scss">
-.case-list {
+<style lang="scss">
+.user-case-list {
   display: grid;
   width: 100%;
   margin: var(--o-spacing-h2) 0;

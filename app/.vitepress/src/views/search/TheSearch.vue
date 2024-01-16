@@ -23,7 +23,6 @@ import IconMore from '~icons/app/icon-more-dot.svg';
 import OIcon from 'opendesign/icon/OIcon.vue';
 import ODropdown from 'opendesign/dropdown/ODropdown.vue';
 import NotFound from '@/NotFound.vue';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import ViewAgreeModal from './ViewAgreeModal.vue';
 import MatterTip from './MatterTip.vue';
 import useWindowResize from '@/components/hooks/useWindowResize';
@@ -398,16 +397,6 @@ const setAdvertisedData = (data: any, index: number, path: string) => {
   sensors.setProfile(sensorObj);
 };
 
-// 移动端上下翻页事件
-function turnPage(option: string) {
-  if (option === 'prev' && currentPage.value > 1) {
-    currentPage.value = currentPage.value - 1;
-    searchDataAll();
-  } else if (option === 'next' && currentPage.value < totalPage.value) {
-    currentPage.value = currentPage.value + 1;
-    searchDataAll();
-  }
-}
 // 移动端跳转翻页事件
 function jumpPage(page: number) {
   currentPage.value = page;
@@ -667,28 +656,21 @@ const isShowMultiple = (list: Object) => {
         <div v-if="totalPage > 1" class="page-box">
           <ClientOnly>
             <OPagination
-              v-if="!isMobile"
-              v-model:currentPage="currentPage"
+              v-model:current-page="currentPage"
               v-model:page-size="pageSize"
-              class="pagination-pc"
               :hide-on-single-page="true"
               :page-sizes="[pageSize]"
               :background="true"
               layout="sizes, prev, pager, next, slot, jumper"
               :total="total"
               @current-change="searchDataAll"
+              @jump-page="jumpPage"
             >
               <span class="pagination-slot"
                 >{{ currentPage }}/{{ totalPage }}</span
               >
             </OPagination>
           </ClientOnly>
-          <AppPaginationMo
-            :current-page="currentPage"
-            :total-page="totalPage"
-            @turn-page="turnPage"
-            @jump-page="jumpPage"
-          />
         </div>
       </div>
     </div>
@@ -1106,18 +1088,10 @@ const isShowMultiple = (list: Object) => {
       }
 
       .page-box {
-        display: flex;
-        justify-content: center;
         width: 100%;
-        margin-top: var(--o-spacing-h4);
+        margin-top: var(--o-spacing-h2);
         @media (max-width: 768px) {
-          width: 100vw;
-        }
-
-        .pagination-pc {
-          @media (max-width: 768px) {
-            display: none;
-          }
+          margin-top: var(--o-spacing-h5);
         }
       }
     }
@@ -1176,4 +1150,3 @@ const isShowMultiple = (list: Object) => {
   font-size: 16px;
 }
 </style>
-

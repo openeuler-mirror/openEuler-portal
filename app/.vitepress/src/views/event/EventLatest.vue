@@ -32,15 +32,6 @@ const router = useRouter();
 // 本月及以后最新活动列表
 const latestList: Ref<Array<LatestActivity>> = ref([]);
 
-// 移动端翻页
-const changeCurrentPageMoblie = (val: string) => {
-  if (val === 'prev' && params.currentPage > 1) {
-    params.currentPage = params.currentPage - 1;
-  } else if (val === 'next' && params.currentPage < latestList.value.length) {
-    params.currentPage = params.currentPage + 1;
-  }
-};
-
 // 精彩回顾下展示列表
 const goDetail = (item: { id: number; windowOpen: string }) => {
   if (item.windowOpen) {
@@ -56,6 +47,11 @@ const params = reactive({
   pageSize: 6,
 });
 const total = ref(0);
+
+// 移动端翻页
+const jumpPage = (val: number) => {
+  params.currentPage = val;
+};
 
 const paramsGetSalon = () => {
   getSalon({
@@ -134,34 +130,28 @@ watch(
             </div>
           </OCard>
         </div>
-        <ClientOnly>
-          <OPagination
-            v-if="total / params.pageSize > 1"
-            v-model:currentPage="params.currentPage"
-            v-model:page-size="params.pageSize"
-            class="pagination"
-            :page-sizes="[3, 6, 9, 12]"
-            :background="true"
-            layout="sizes, prev, pager, next, slot, jumper"
-            :total="total"
-          >
-            <span class="pagination-slot"
-              >{{
-                params.pageSize * params.currentPage < total
-                  ? params.pageSize * params.currentPage
-                  : total
-              }}
-              / {{ total }}</span
+        <div v-if="total / params.pageSize > 1" class="pagination">
+          <ClientOnly>
+            <OPagination
+              v-model:current-page="params.currentPage"
+              v-model:page-size="params.pageSize"
+              :page-sizes="[3, 6, 9, 12]"
+              :background="true"
+              layout="sizes, prev, pager, next, slot, jumper"
+              :total="total"
+              @jump-page="jumpPage"
             >
-          </OPagination>
-        </ClientOnly>
-
-        <AppPaginationMo
-          :current-page="params.currentPage"
-          :total-page="total"
-          @turn-page="changeCurrentPageMoblie"
-        >
-        </AppPaginationMo>
+              <span class="pagination-slot"
+                >{{
+                  params.pageSize * params.currentPage < total
+                    ? params.pageSize * params.currentPage
+                    : total
+                }}
+                / {{ total }}</span
+              >
+            </OPagination>
+          </ClientOnly>
+        </div>
       </template>
 
       <div v-else>
@@ -206,11 +196,17 @@ watch(
     margin-top: var(--o-spacing-h5);
   }
 }
-.o-pagination {
+.pagination {
   margin-top: var(--o-spacing-h2);
+  @media screen and (max-width: 768px) {
+    margin-top: var(--o-spacing-h5);
+  }
 }
-.pagination-mobile {
-  margin-top: var(--o-spacing-h4);
+.pagination-slot {
+  font-size: var(--o-font-size-text);
+  font-weight: 400;
+  color: var(--o-color-text1);
+  line-height: var(--o-spacing-h4);
 }
 
 .split-line {

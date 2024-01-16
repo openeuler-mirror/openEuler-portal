@@ -8,7 +8,6 @@ import { getCveList } from '@/api/api-security';
 import { CveListsT, CveQueryT } from '@/shared/@types/type-support';
 
 import TagFilter from '@/components/TagFilter.vue';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import AppContent from '@/components/AppContent.vue';
 
 import IconCalendar from '~icons/app/icon-calendar.svg';
@@ -215,7 +214,7 @@ watch(queryData, () => getCveLists(queryData));
               <span>{{ i18n.cve.RELEASE_DATE }}:</span>{{ item.createTime }}
             </li>
             <li>
-              <span>{{ i18n.cve.MODIFIED_TIME }}:</span>{{ item.updateTime }}
+              <span>{{ i18n.cve.UPDATE_TIME }}:</span>{{ item.updateTime }}
             </li>
             <li>
               <span>{{ i18n.cve.STATUS }}:</span>{{ item.status }}
@@ -284,30 +283,26 @@ watch(queryData, () => getCveLists(queryData));
       {{ i18n.cve.EMPTY_SEARCH_RESULT }}
     </div>
 
-    <ClientOnly>
-      <OPagination
-        v-if="!isMobile"
-        v-model:page-size="queryData.pages.size"
-        v-model:currentPage="queryData.pages.page"
-        class="pagination"
-        :page-sizes="[10, 20, 40, 80]"
-        :layout="layout"
-        :total="total"
-        :background="true"
-        :hide-on-single-page="true"
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-      >
-        <span class="pagination-slot"> {{ currentPage }}/{{ totalPage }}</span>
-      </OPagination>
-    </ClientOnly>
-
-    <AppPaginationMo
-      v-if="Math.ceil(total) > 0 && isMobile"
-      :current-page="queryData.pages.page"
-      :total-page="Math.ceil(total / 10)"
-      @turn-page="turnPage"
-    />
+    <div class="pagination">
+      <ClientOnly>
+        <OPagination
+          v-model:page-size="queryData.pages.size"
+          v-model:current-page="queryData.pages.page"
+          :page-sizes="[10, 20, 40, 80]"
+          :layout="layout"
+          :total="total"
+          :background="true"
+          :hide-on-single-page="true"
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+          @jump-page="handleCurrentChange"
+        >
+          <span class="pagination-slot">
+            {{ currentPage }}/{{ totalPage }}</span
+          >
+        </OPagination>
+      </ClientOnly>
+    </div>
   </AppContent>
 </template>
 <style lang="scss" scoped>
@@ -433,7 +428,6 @@ watch(queryData, () => getCveLists(queryData));
 }
 .mobile-list {
   display: none;
-  margin-bottom: var(--o-spacing-h5);
   box-shadow: var(--o-shadow1);
   @media screen and (max-width: 768px) {
     display: block;
@@ -450,6 +444,7 @@ watch(queryData, () => getCveLists(queryData));
     }
     & li {
       margin-bottom: var(--o-spacing-h8);
+      word-break: break-word;
     }
     li:last-child {
       margin-bottom: 0;
@@ -470,7 +465,6 @@ watch(queryData, () => getCveLists(queryData));
   }
 }
 .pc-list {
-  margin-bottom: var(--o-spacing-h2);
   .detail-page {
     cursor: pointer;
     color: var(--o-color-link1);
@@ -480,7 +474,10 @@ watch(queryData, () => getCveLists(queryData));
   }
 }
 .pagination {
-  margin: var(--o-spacing-h2) 0 0 0;
+  margin-top: var(--o-spacing-h2);
+  @media screen and (max-width: 768px) {
+    margin-top: var(--o-spacing-h5);
+  }
   .pagination-slot {
     font-size: var(--o-font-size-text);
     font-weight: 400;

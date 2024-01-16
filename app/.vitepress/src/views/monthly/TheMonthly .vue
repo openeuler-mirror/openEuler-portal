@@ -7,7 +7,6 @@ import useWindowResize from '@/components/hooks/useWindowResize';
 
 import NotFound from '@/NotFound.vue';
 import AppContent from '@/components/AppContent.vue';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 
 import banner from '@/assets/banner/banner-interaction.png';
@@ -115,18 +114,6 @@ const changeCurrent = (val: number) => {
 const pageTotal = computed(() =>
   Math.ceil(paginationData.value.total / paginationData.value.pagesize)
 );
-const changeCurrentMoblie = (val: string) => {
-  if (val === 'prev' && paginationData.value.currentpage > 1) {
-    paginationData.value.currentpage = paginationData.value.currentpage - 1;
-    changeCurrent(paginationData.value.currentpage);
-  } else if (
-    val === 'next' &&
-    paginationData.value.currentpage < pageTotal.value
-  ) {
-    paginationData.value.currentpage = paginationData.value.currentpage + 1;
-    changeCurrent(paginationData.value.currentpage);
-  }
-};
 </script>
 
 <template>
@@ -187,27 +174,21 @@ const changeCurrentMoblie = (val: string) => {
       <div class="news-pagination">
         <ClientOnly>
           <OPagination
-            v-if="!isPc"
-            v-model:currentPage="paginationData.currentpage"
+            v-model:current-page="paginationData.currentpage"
             v-model:page-size="paginationData.pagesize"
             :background="true"
+            :hide-on-single-page="true"
             layout="sizes, prev, pager, next, slot, jumper"
             :total="paginationData.total"
             :page-sizes="[3, 6, 9]"
             @current-change="changeCurrent"
             @size-change="changeCurrent(1)"
+            @jump-page="changeCurrent"
           >
             <span class="pagination-slot"
               >{{ paginationData.currentpage }}/{{ pageTotal }}</span
             >
           </OPagination>
-          <AppPaginationMo
-            v-else
-            :current-page="paginationData.currentpage"
-            :total-page="pageTotal"
-            @turn-page="changeCurrentMoblie"
-          >
-          </AppPaginationMo>
         </ClientOnly>
       </div>
     </template>
@@ -241,6 +222,10 @@ const changeCurrentMoblie = (val: string) => {
   filter: brightness(0.8) grayscale(0.2) contrast(1.2);
 }
 .news-pagination {
+  margin-top: var(--o-spacing-h2);
+  @media (max-width: 768px) {
+    margin-top: var(--o-spacing-h5);
+  }
   .pagination-slot {
     font-size: var(--o-font-size-text);
     font-weight: 400;
@@ -294,7 +279,7 @@ const changeCurrentMoblie = (val: string) => {
 }
 .news-list {
   max-width: 1448px;
-  margin: var(--o-spacing-h2) auto;
+  margin: var(--o-spacing-h2) auto 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: var(--o-spacing-h4);
@@ -309,7 +294,6 @@ const changeCurrentMoblie = (val: string) => {
     margin-top: 0;
   }
   @media (max-width: 768px) {
-    margin-bottom: var(--o-spacing-h5);
     grid-gap: var(--o-spacing-h5);
   }
   @media (max-width: 500px) {

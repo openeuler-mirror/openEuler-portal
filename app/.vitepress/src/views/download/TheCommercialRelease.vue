@@ -439,25 +439,27 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
       </div>
       <!-- 页码 -->
       <div v-if="total" class="page-box">
-        <ClientOnly>
-          <OPagination
-            v-if="dataList.length"
-            v-model:currentPage="currentPage"
-            v-model:page-size="pageSize"
-            class="pagination"
-            :page-sizes="[12, 18, 24, 36]"
-            :background="true"
-            layout="sizes, prev, pager, next, slot, jumper"
-            :total="total"
-          >
-            <span class="pagination-slot"
-              >{{
-                pageSize * currentPage < total ? pageSize * currentPage : total
-              }}
-              / {{ total }}</span
+        <div v-if="dataList.length" class="pagination">
+          <ClientOnly>
+            <OPagination
+              v-model:currentPage="currentPage"
+              v-model:page-size="pageSize"
+              :page-sizes="[12, 18, 24, 36]"
+              :background="true"
+              layout="sizes, prev, pager, next, slot, jumper"
+              :total="total"
             >
-          </OPagination>
-        </ClientOnly>
+              <span class="pagination-slot"
+                >{{
+                  pageSize * currentPage < total
+                    ? pageSize * currentPage
+                    : total
+                }}
+                / {{ total }}</span
+              >
+            </OPagination>
+          </ClientOnly>
+        </div>
         <div v-if="dataList.length" class="page-box-mobile">
           <div>
             {{ i18n.download.PAGINATION[0]
@@ -523,6 +525,12 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
   flex-flow: row;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    .pagination {
+      display: none;
+    }
+  }
+
   .pagination-slot {
     font-size: var(--o-font-size-text);
     font-weight: 400;

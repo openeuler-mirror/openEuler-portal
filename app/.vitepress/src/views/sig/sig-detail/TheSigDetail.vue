@@ -5,16 +5,12 @@ import { useI18n } from '@/i18n';
 
 import showMd from 'markdown-it';
 import useWindowResize from '@/components/hooks/useWindowResize';
-import type {
-  SigListT,
-  EasyeditorInfoDataItemT,
-} from '@/shared/@types/type-sig';
+import type { EasyeditorInfoDataItemT } from '@/shared/@types/type-sig';
 
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import SigMeeting from './SigMeeting.vue';
 import MobileRepositoryList from './MobileRepositoryList.vue';
 import ContributList from './ContributList.vue';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import SigAnchor from './SigAnchor.vue';
 import SigFloorMd from './SigFloorMd.vue';
 
@@ -86,9 +82,9 @@ function getSigMembers() {
 // 仓库列表过滤参数
 const repositoryNameList = ref<string[]>([]);
 const repositoryNameSelected = ref('');
-const maintainerList =  ref<string[]>([]);
+const maintainerList = ref<string[]>([]);
 const maintainerSelected = ref('');
-const committerList =  ref<string[]>([]);
+const committerList = ref<string[]>([]);
 const committerSelected = ref('');
 
 const filterRepositoryList = () => {
@@ -148,13 +144,7 @@ const getRepositoryList = () => {
     }
   });
 };
-function turnPage(option: string) {
-  if (option === 'prev' && currentPage.value > 1) {
-    currentPage.value = currentPage.value - 1;
-  } else if (option === 'next' && currentPage.value < totalPage.value) {
-    currentPage.value = currentPage.value + 1;
-  }
-}
+
 function setDefaultImage(e: any) {
   if (e?.target) {
     e.target.src = 'https://gitee.com/assets/no_portrait.png';
@@ -498,12 +488,6 @@ function convertMd(data: string) {
                 >
               </OPagination>
             </ClientOnly>
-            <AppPaginationMo
-              :current-page="currentPage"
-              :total-page="totalRepositoryList.length"
-              @turn-page="turnPage"
-            >
-            </AppPaginationMo>
           </div>
         </div>
       </div>
@@ -578,7 +562,7 @@ function convertMd(data: string) {
     .sig-pagination {
       margin-top: var(--o-spacing-h2);
       @media screen and (max-width: 768px) {
-        margin-top: var(--o-spacing-h2);
+        margin-top: var(--o-spacing-h5);
       }
     }
     .pagination-slot {

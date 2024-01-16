@@ -4,7 +4,6 @@ import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 
 import technicalDataTotal from '@/data/showcase/technical-while-paper';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import NotFound from '@/NotFound.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 
@@ -40,17 +39,10 @@ const total = computed(() => technicalData.length);
 // 分页器总页数
 const totalPage = computed(() => Math.ceil(total.value / pageSize.value));
 
-const paginationVisible = computed(() => (totalPage.value > 1 ? true : false));
+const paginationVisible = computed(() => (totalPage.value > 0 ? true : false));
 // 根据滚动位置移动端tag吸顶
 
 // 移动端翻页事件
-function turnPage(option: string) {
-  if (option === 'prev' && currentPage.value > 1) {
-    currentPage.value = currentPage.value - 1;
-  } else if (option === 'next' && currentPage.value < totalPage.value) {
-    currentPage.value = currentPage.value + 1;
-  }
-}
 function jumpPage(page: number) {
   currentPage.value = page;
 }
@@ -87,24 +79,18 @@ function jumpPage(page: number) {
     <div v-if="paginationVisible" class="page-box">
       <ClientOnly>
         <OPagination
-          v-model:currentPage="currentPage"
+          v-model:current-page="currentPage"
           v-model:page-size="pageSize"
-          class="pagination-pc"
           :hide-on-single-page="true"
           :page-sizes="[pageSize]"
           :background="true"
           layout="sizes, prev, pager, next, slot, jumper"
           :total="total"
+          @jump-page="jumpPage"
         >
           <span class="pagination-slot">{{ currentPage }}/{{ totalPage }}</span>
         </OPagination>
       </ClientOnly>
-      <AppPaginationMo
-        :current-page="currentPage"
-        :total-page="totalPage"
-        @turn-page="turnPage"
-        @jump-page="jumpPage"
-      />
     </div>
   </div>
 </template>
@@ -220,36 +206,8 @@ function jumpPage(page: number) {
   }
   .page-box {
     margin-top: var(--o-spacing-h2);
-    :deep(.pagination-pc) {
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-    .pagination-mobile {
-      display: none;
-      @media (max-width: 768px) {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        font-size: var(--o-font-size-tip);
-        .icon-prev {
-          margin-right: 8px;
-          color: var(--o-color-brand1);
-        }
-        .page-number {
-          margin: 0 28px;
-          span:nth-of-type(1) {
-            color: var(--o-color-brand1);
-          }
-        }
-        .icon-next {
-          margin-left: 8px;
-          color: var(--o-color-brand1);
-        }
-        .disable-button {
-          color: var(--o-color-text5);
-        }
-      }
+    @media (max-width: 768px) {
+      margin-top: var(--o-spacing-h5);
     }
   }
 }

@@ -12,7 +12,6 @@ import type { DownloadCommunityDataT } from '@/shared/@types/type-download';
 import AppContent from '@/components/AppContent.vue';
 import TagFilter from '@/components/TagFilter.vue';
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 
@@ -23,7 +22,6 @@ const { lang } = useData();
 const i18n = useI18n();
 const commonStore = useCommon();
 const screenWidth = useWindowResize();
-const isMobile = computed(() => (screenWidth.value <= 1100 ? true : false));
 
 //分页与数据项目
 const currentPage = ref(1);
@@ -184,15 +182,8 @@ const getItemList = (type: any, linkList: any) => {
 };
 // 移动端翻页
 
-const changeCurrentPageMoblie = (val: string) => {
-  if (val === 'prev' && currentPage.value > 1) {
-    currentPage.value = currentPage.value - 1;
-  } else if (
-    val === 'next' &&
-    currentPage.value < Math.ceil(total.value / pageSize.value)
-  ) {
-    currentPage.value = currentPage.value + 1;
-  }
+const changeCurrentPageMoblie = (val: number) => {
+  currentPage.value = val;
 };
 </script>
 
@@ -424,31 +415,22 @@ const changeCurrentPageMoblie = (val: string) => {
       <!-- mobild -->
 
       <!-- 页码 -->
-      <div v-if="total" class="page-box">
+      <div class="page-box">
         <ClientOnly>
           <OPagination
-            v-if="!isMobile"
-            v-model:currentPage="currentPage"
+            v-if="total"
+            v-model:current-page="currentPage"
             v-model:page-size="pageSize"
-            class="pagination"
             :page-sizes="[10, 20, 40]"
             :background="true"
             layout="sizes, prev, pager, next, slot, jumper"
             :total="total"
+            @jump-page="changeCurrentPageMoblie"
           >
             <span class="pagination-slot"
-              >{{
-                pageSize * currentPage < total ? pageSize * currentPage : total
-              }}
-              / {{ total }}</span
+              >{{ currentPage }} / {{ Math.ceil(total / pageSize) }}</span
             >
           </OPagination>
-          <AppPaginationMo
-            v-else
-            :current-page="currentPage"
-            :total-page="Math.ceil(total / pageSize)"
-            @turn-page="changeCurrentPageMoblie"
-          />
         </ClientOnly>
       </div>
     </div>
@@ -541,7 +523,6 @@ const changeCurrentPageMoblie = (val: string) => {
 
   .download-list {
     .pc-list {
-      margin-bottom: var(--o-spacing-h2);
       .detail-page {
         cursor: pointer;
         color: var(--o-color-link1);
@@ -737,38 +718,15 @@ const changeCurrentPageMoblie = (val: string) => {
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    margin-top: var(--o-spacing-h4);
+    margin-top: var(--o-spacing-h2);
+    @media (max-width: 768px) {
+      margin-top: var(--o-spacing-h5);
+    }
     .pagination-slot {
       font-size: var(--o-font-size-text);
       font-weight: 400;
       color: var(--o-color-text1);
       line-height: var(--o-spacing-h4);
-    }
-    :deep(.o-pagination) {
-      display: flex;
-      @media (max-width: 1100px) {
-        display: none;
-      }
-    }
-    .page-box-divide {
-      width: 100%;
-      height: 1px;
-      margin-top: var(--o-spacing-h5);
-      background-color: var(--o-color-bg-secondary);
-      .page-box-divide-in {
-        height: 100%;
-        background-color: var(--o-color-brand1);
-      }
-    }
-
-    .page-box-button {
-      margin-top: var(--o-spacing-h5);
-    }
-    :deep(.pagination-mobile) {
-      display: block;
-      @media (max-width: 768px) {
-        display: flex;
-      }
     }
   }
 }
