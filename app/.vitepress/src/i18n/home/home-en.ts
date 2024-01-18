@@ -568,13 +568,13 @@ export default {
       LINK: '/zh/migration/',
     },
     {
-      TITLE: 'Opensource Internship',
+      TITLE: 'openEuler Forum',
       IMG: internshipSummit,
       IMG_HOVER: internshipSummitHover,
       IMG_DARK: internshipSummitDark,
       IMG_DARK_HOVER: internshipSummitDarkHover,
-      DSSCRIPTIVE: 'Helping University Developers Grow in the Community',
-      LINK: '/zh/internship/',
+      DSSCRIPTIVE: 'A place to connect, share, and inspire',
+      LINK: 'https://forum.openeuler.org/',
     },
     {
       TITLE: 'Summits',

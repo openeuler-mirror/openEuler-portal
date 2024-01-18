@@ -152,13 +152,13 @@ export default {
       LINK: 'migration/',
     },
     {
-      TITLE: '开源实习',
+      TITLE: '社区论坛',
       IMG: internshipSummit,
       IMG_HOVER: internshipSummitHover,
       IMG_DARK: internshipSummitDark,
       IMG_DARK_HOVER: internshipSummitDarkHover,
-      DSSCRIPTIVE: '帮助高校开发者在社区成长',
-      LINK: 'internship/',
+      DSSCRIPTIVE: '开发者、用户分享交流平台',
+      LINK: 'https://forum.openeuler.org/',
     },
     {
       TITLE: '活动专区',
