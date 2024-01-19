@@ -25,13 +25,14 @@ import ODropdown from 'opendesign/dropdown/ODropdown.vue';
 import NotFound from '@/NotFound.vue';
 import ViewAgreeModal from './ViewAgreeModal.vue';
 import MatterTip from './MatterTip.vue';
+import SearchHistory from './SearchHistory.vue';
 
 import { ElMessage } from 'element-plus';
 import { addSearchBuriedData } from '@/shared/utils';
 import { AigcPrivacyAccepted } from '@/shared/privacy-accepted.const';
 import { useStoreData, isLogined, showGuard } from '@/shared/login';
-import type { SearchDrowdownArrT } from '@/shared/@types/type-search';
 
+const searchHistoryRef = ref();
 
 const { guardAuthClient } = useStoreData();
 const { lang, site } = useData();
@@ -39,7 +40,7 @@ const i18n = useI18n();
 // 隐私弹窗
 const viewAgreeVisible = ref(false);
 // 当前选择类型
-const currentIndex = ref(0);
+const currentTab = ref('all');
 // 当前显示的页码
 const currentPage = ref(1);
 // 每页数据
@@ -49,31 +50,19 @@ const searchInput = ref<string>('');
 const searchValue = computed(() => {
   return i18n.value.common.SEARCH;
 });
-const serviceData = ref<SearchDrowdownArrT[]>([]);
 // 接收搜索数量的数据
 const searchNumber: any = ref([]);
-// 显示的数据类型
-const searchType = ref('');
-// service tag
-const serviceParams = computed(() => {
-  return {
-    keyword: searchInput.value,
-    page: currentPage.value,
-    pageSize: pageSize.value,
-    lang: lang.value,
-    type: 'service',
-  };
-});
+
 const searchData = computed(() => {
   return {
     keyword: searchInput.value,
     page: currentPage.value,
     pageSize: pageSize.value,
     lang: lang.value,
-    type: searchType.value,
+    type: currentTab.value === 'all' ? '' : currentTab.value,
     limit: [
       {
-        type: 'docs',
+        type: currentTab.value || 'docs',
         version:
           activeVersion.value === i18n.value.search.tagList.all
             ? ''
@@ -93,6 +82,13 @@ const searchCount = computed(() => {
     limit: [
       {
         type: 'docs',
+        version:
+          activeVersion.value === i18n.value.search.tagList.all
+            ? ''
+            : activeVersion.value,
+      },
+      {
+        type: 'packages',
         version:
           activeVersion.value === i18n.value.search.tagList.all
             ? ''
@@ -130,10 +126,14 @@ const searchResultList: any = ref([]);
 const searchRpmList: any = ref([]);
 // 总数据数量
 const total = computed(() => {
-  return searchNumber.value[currentIndex.value]
-    ? searchNumber.value[currentIndex.value].doc_count
-    : activityData.value?.doc_count || 0;
+  return (
+    searchNumber.value.find(
+      (item: { key: string; doc_count: number }) =>
+        item.key === currentTab.value
+    )?.doc_count || 0
+  );
 });
+
 // 分页器总页数
 const totalPage = computed(() => {
   return Math.ceil(total.value / pageSize.value);
@@ -148,20 +148,20 @@ const cookieStatus = useCookieStatus();
 
 async function getVersionTag() {
   await getTagsData(tagsParams).then((res) => {
-    if (res.obj?.totalNum.length) {
+    if (
+      res.obj?.totalNum.length &&
+      !res.obj?.totalNum.some((ver) => ver.key === activeVersion.value) &&
+      activeVersion.value !== i18n.value.search.tagList.all
+    ) {
       activeVersion.value = res.obj?.totalNum[0].key;
     }
+    versionList.value = [
+      {
+        count: 0,
+        key: i18n.value.search.tagList.all,
+      },
+    ];
     versionList.value.push(...res.obj?.totalNum);
-  });
-}
-
-function getServiceData() {
-  getSearchData(serviceParams.value).then((res) => {
-    if (res?.obj?.records) {
-      serviceData.value = res.obj.records;
-    } else {
-      serviceData.value = [];
-    }
   });
 }
 
@@ -180,14 +180,15 @@ function clearSearchInput() {
   });
 }
 // 点击数据的类型导航
-function setCurrentType(index: number, type: string) {
+function setCurrentType(type: string) {
   activityData.value = {};
-  currentIndex.value = index;
-  if (type === 'all') {
-    searchType.value = '';
-  } else {
-    searchType.value = type;
+  if (type === 'packages') {
+    tagsParams.category = 'packages';
+  } else if (currentTab.value === 'packages') {
+    tagsParams.category = 'docs';
   }
+  getVersionTag();
+  currentTab.value = type;
   currentPage.value = 1;
   searchDataAll();
 }
@@ -255,7 +256,7 @@ function clickStomp() {
 function searchRpm() {
   try {
     getSearchRpm({ keyword: searchInput.value }).then((res) => {
-      if (res.status === 200) {
+      if (res?.status === 200) {
         searchRpmList.value = res.data.records;
       } else {
         searchRpmList.value = [];
@@ -266,19 +267,13 @@ function searchRpm() {
   }
 }
 // 获取搜索结果各类型的数量
-async function searchCountAll(key?: string) {
+async function searchCountAll() {
   if (activeVersion.value === i18n.value.search.tagList.all) {
     searchCount.value.limit = [];
   }
   try {
     await getSearchCount(searchCount.value).then((res) => {
       if (res.status === 200 && res.obj.total[0]) {
-        res.obj.total.some((item: { key: string }, index: number) => {
-          if (item.key === key) {
-            currentIndex.value = index;
-            return true;
-          }
-        });
         searchNumber.value = res.obj.total;
         getSussageData();
       } else {
@@ -298,19 +293,28 @@ function getSussageData() {
 // 获取搜索结果的数据
 function searchDataAll() {
   try {
-    // 全部时 limit 不传
+    // 版本为全部时 limit 不传
     if (activeVersion.value === i18n.value.search.tagList.all) {
       searchData.value.limit = [];
     }
+    // tab 为全部时加下版本搜索限制
+    if (currentTab.value === 'all') {
+      searchData.value.limit = [
+        {
+          type: 'docs',
+          version: activeVersion.value,
+        },
+        {
+          type: 'packages',
+          version: activeVersion.value,
+        },
+      ];
+    }
 
     getSearchData(searchData.value).then((res) => {
-      if (res.status === 200 && res.obj.records[0]) {
+      if (res.status === 200 && res.obj?.records[0]) {
         searchResultList.value = res.obj.records;
       } else {
-        if (searchType.value === 'docs') {
-          searchType.value = '';
-          searchAll();
-        }
         searchResultList.value = [];
       }
     });
@@ -319,23 +323,20 @@ function searchDataAll() {
   }
 }
 // 获取搜索结果的所有内容
-function searchAll(current?: string) {
+function searchAll(valueChange?: boolean) {
   if (searchInput.value) {
-    if (!current) {
-      currentIndex.value = 0;
-    }
-    activityData.value = {};
     currentPage.value = 1;
 
     if (cookieStatus.isAllAgreed) {
       addSearchBuriedData(searchInput.value);
     }
-
-    searchType.value = current || '';
-
-    getServiceData();
+    if (valueChange) {
+      currentTab.value = 'all';
+    }
+    // TODO: 搜索历史
+    // searchHistoryRef.value(searchInput.value);
     searchChat();
-    searchCountAll(current);
+    searchCountAll();
     searchDataAll();
     searchRpm();
     handleSelectChange(searchInput.value);
@@ -348,7 +349,7 @@ function handleSelectChange(val: string) {
 }
 function handleSelect(val: string) {
   searchInput.value = val.replace(/<[^>]+>/g, '');
-  searchAll();
+  searchAll(true);
 }
 
 // 设置搜索结果的跳转路径
@@ -412,14 +413,23 @@ const getActivityData = (val: { key: string; doc_count: number }) => {
   activityData.value = val;
 };
 
+const multipleCount = computed(() => {
+  return (
+    searchNumber.value.find(
+      (item: { key: string; doc_count: number }) =>
+        item.key === activityData.value.key
+    )?.doc_count || 0
+  );
+});
+
 watch(
   () => activeVersion.value,
   () => {
-    searchAll('docs');
+    searchAll();
   }
 );
 function clipTxt(text: string) {
-  navigator.clipboard.writeText(text).then((data) => {
+  navigator.clipboard.writeText(text).then(() => {
     ElMessage({
       message: i18n.value.download.COPY_SUCCESS,
       type: 'success',
@@ -431,20 +441,36 @@ const isShowMultiple = (list: Object) => {
     return Object.keys(list).includes(item.key);
   });
 };
+const handleSearchHistory = (val: string) => {
+  if (val === searchInput.value) return false;
+  searchInput.value = val;
+  searchAll();
+};
 </script>
 <template>
   <div class="search">
     <div class="search-left">
+      <!-- 搜索框 -->
       <OSearch
+        ref="searchRef"
         v-model="searchInput"
         :placeholder="searchValue.PLEACHOLDER"
         :maxlength="50"
-        @change="() => searchAll()"
+        @change="() => searchAll(true)"
       >
         <template #suffix>
           <OIcon class="close" @click="clearSearchInput"><IconCancel /></OIcon>
         </template>
       </OSearch>
+      <ClientOnly>
+        <!-- 历史搜索记录 -->
+        <SearchHistory
+          v-if="false"
+          ref="searchHistoryRef"
+          @search-history="handleSearchHistory"
+          :search-value="searchInput"
+        />
+      </ClientOnly>
       <div v-show="suggestList.length" class="suggest-list-box">
         <span>{{ i18n.search.suggest }}</span>
         <ul class="suggest-list">
@@ -519,12 +545,12 @@ const isShowMultiple = (list: Object) => {
       <div class="search-content">
         <div class="select-options">
           <ul class="type">
-            <template v-for="(item, index) in searchNumber" :key="item">
+            <template v-for="item in searchNumber" :key="item">
               <li
                 v-if="i18n.search.tagList[item.key]"
                 class="single-tab"
-                :class="currentIndex === index ? 'active' : ''"
-                @click="setCurrentType(index, item.key)"
+                :class="currentTab === item.key ? 'active' : ''"
+                @click="setCurrentType(item.key)"
               >
                 {{ i18n.search.tagList[item.key] }}
                 <span>({{ item.doc_count }})</span>
@@ -532,7 +558,11 @@ const isShowMultiple = (list: Object) => {
             </template>
             <li
               v-if="isShowMultiple(i18n.search.tagList.updates?.tags)"
-              :class="currentIndex === searchNumber.length ? 'active' : ''"
+              :class="{
+                active: Object.keys(i18n.search.tagList.updates.tags).includes(
+                  currentTab
+                ),
+              }"
             >
               <ODropdown @command="getActivityData">
                 <div class="multiple">
@@ -555,7 +585,7 @@ const isShowMultiple = (list: Object) => {
                           item.doc_count
                         "
                         class="multiple-item"
-                        @click="setCurrentType(searchNumber.length, item.key)"
+                        @click="setCurrentType(item.key)"
                         :command="item"
                         >{{ i18n.search.tagList.updates.tags[item.key] }}
                         <span>({{ item.doc_count }})</span>
@@ -567,7 +597,11 @@ const isShowMultiple = (list: Object) => {
             </li>
             <li
               v-if="isShowMultiple(i18n.search.tagList.more?.tags)"
-              :class="currentIndex === searchNumber.length + 1 ? 'active' : ''"
+              :class="{
+                active: Object.keys(i18n.search.tagList.more.tags).includes(
+                  currentTab
+                ),
+              }"
             >
               <ODropdown @command="getActivityData">
                 <div class="multiple">
@@ -577,7 +611,7 @@ const isShowMultiple = (list: Object) => {
                   {{ i18n.search.tagList.more.val }}
                   <span v-if="i18n.search.tagList.more.tags[activityData?.key]"
                     >({{ i18n.search.tagList.more.tags[activityData?.key]
-                    }}{{ activityData?.doc_count }})</span
+                    }}{{ multipleCount }})</span
                   >
                 </div>
                 <template #dropdown>
@@ -589,9 +623,7 @@ const isShowMultiple = (list: Object) => {
                           item.doc_count
                         "
                         class="multiple-item"
-                        @click="
-                          setCurrentType(searchNumber.length + 1, item.key)
-                        "
+                        @click="setCurrentType(item.key)"
                         :command="item"
                         >{{ i18n.search.tagList.more.tags[item.key] }}
                         <span>({{ item.doc_count }})</span>
@@ -615,7 +647,12 @@ const isShowMultiple = (list: Object) => {
                 :key="item.key"
                 :label="item.key"
                 :value="item.key"
-              />
+              >
+                <!-- <div class="version" style="float: left">{{ item.key }}</div>
+                <div class="count" style="float: right">
+                  {{ item.count || '' }}
+                </div> -->
+              </OOption>
             </OSelect>
           </ClientOnly>
         </div>
@@ -628,7 +665,11 @@ const isShowMultiple = (list: Object) => {
                 @click="goLink(item, index)"
               ></h3>
               <p
-                v-dompurify-html="item.textContent"
+                v-dompurify-html="
+                  item.type === 'service'
+                    ? item.secondaryTitle || ''
+                    : item.textContent
+                "
                 class="detail"
                 @click="goLink(item, index)"
               ></p>
