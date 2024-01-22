@@ -20717,5 +20717,24 @@
     "chipModel": "PM8204",
 	"item": "02312USW",
     "downloadLink": "inbox"
-  }
+  },
+    {
+        "vendorID": "1002",
+        "deviceID": "73a3",
+        "svID": "1002",
+        "ssID": "0e1e",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP1",
+        "driverName": "amdgpu",
+        "version": "5.10.0-60.18.0",
+        "type": "GPU",
+        "date": "2024.01.18",
+        "sha256": "5a54665f87602a638869eadd795b2fb6e7910a1343382d4dd84f448598900e17",
+        "driverSize": "7.9M",
+        "chipVendor": "AMD",
+        "boardModel": "Radeon Pro W6800",
+        "chipModel": "Radeon Pro W6800",
+        "item": "",
+        "downloadLink": "inbox"
+    }
 ]

@@ -14611,4 +14611,66 @@
       "hostBusAdapter": "",
       "hardDiskDrive": "BROADCOM MR9560-8i 5.24"
     }
+  },
+  {
+    "hardwareFactory": "xFusion",
+    "hardwareModel": "2288H V6",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2023/12/06",
+    "friendlyLink": "https://www.xfusion.com/en/product/rack-server/fusionserver-2288h-v6",
+    "boardCards": [
+       {
+          "vendorID": "1000",
+          "deviceID": "10e2",
+          "svID": "1000",
+          "ssID": "4010",
+          "architecture": "x86_64",
+          "os": "openEuler 22.03 LTS SP3",
+          "driverName": "megaraid_sas",
+          "version": "07.714.04.00-rc1",
+          "type": "RAID",
+          "date": "2023.12.05",
+          "sha256": "f6466498ad890946b39e22d3eb652f7a66a93f736eea4959ceed0af16a5c75fd",
+          "driverSize": "74K",
+          "chipVendor": "Broadcom",
+          "boardModel": "9560-8i",
+          "chipModel": "SAS39xx",
+          "item": "02314EQF",
+          "downloadLink": "inbox"
+      },
+      {
+          "vendorID": "8086",
+          "deviceID": "1521",
+          "svID": "ffff",
+          "ssID": "0000",
+          "architecture": "x86_64",
+          "os": "openEuler 22.03 LTS SP3",
+          "driverName": "igb",
+          "version": "5.10.0-173.0.0.86.oe2203sp3.x86_64",
+          "type": "NIC",
+          "date": "2023.12.07",
+          "sha256": "1781879e66bd54a8cc4c1dd4f9399b90a4fc3eb3276501cea330796900e8271b",
+          "driverSize": "106K",
+          "chipVendor": "Intel",
+          "boardModel": "I350",
+          "chipModel": "I350",
+          "item": "",
+          "downloadLink": "inbox"
+      }
+    ],
+      "compatibilityConfiguration": {
+      "productInformation": "https://www.xfusion.com/en/product/rack-server/fusionserver-2288h-v6",
+      "certificationTime": "2023/12/06",
+      "commitID": "",
+      "mainboardModel": "",
+      "biosUefi": "0.37(U1007)",
+      "cpu": "icelake",
+      "ram": "2*16G DDR4",
+      "portsBusTypes": "x8 PCI Express 5 x8",
+      "videoAdapter": "Hi171x",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "Seagate ST600MM0009 HDD 0.545 TB"
+    }
+  }
 ]
