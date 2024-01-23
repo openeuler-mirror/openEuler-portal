@@ -1,4 +1,8 @@
 .specification {
+  ol,
+  li {
+    list-style: decimal;
+  }
   .header-anchor {
     display: none;
   }
