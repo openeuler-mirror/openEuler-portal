@@ -27,7 +27,7 @@ const btnDatas = [
       return i18n.value.cve.CERTIFICATE;
     }),
     link: computed(() => {
-      return `/zh/security/certificate-center/`;
+      return `/${lang.value}/security/certificate-center/`;
     }),
   },
 ];
