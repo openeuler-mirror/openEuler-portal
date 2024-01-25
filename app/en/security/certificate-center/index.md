@@ -23,18 +23,18 @@ const isDark = computed(() => {
   <BannerLevel2
     :background-image="banner"
     background-text="SUPPORT"
-    title="证书中心"
+    title="Certificate Center"
     :illustration="illustration"
 />
 </ClientOnly>
 
 <div class='markdown'>
 
-## 证书中心
-openEuler证书中心用于存放社区各个系统中具体使用的公钥及证书信息。
-|  证书/公钥 | 格式 | 证书属性 | 启用时间 | 到期时间 | 算法 | 下载地址 |
+## Certificate Center
+openEuler certificate center is used to store the public key and certificate information used in each system of the community。
+|  Certificate/Public key | Format | Certificate Properties | Generate Time | Expiration Time | Algorithm | Download Link |
 |  ----------- | --- | ------ | ------ | ----- | ------ | ------- |
-|  openEuler Shim Default CA | X509 | c813cda25ee2749e5551b8919a0537db |2023-11-14 | 2053-12-31 | RSA-4096 |下载(<a :href="withBase('/certificates/openEuler-x509ca.cer.pem')" download>pem</a> \| <a :href="withBase('/certificates/openEuler-x509ca.cer.der')" download>der</a>) |
+|  openEuler Shim Default CA | X509 | c813cda25ee2749e5551b8919a0537db |2023-11-14 | 2053-12-31 | RSA-4096 |download(<a :href="withBase('/certificates/openEuler-x509ca.cer.pem')" download>pem</a> \| <a :href="withBase('/certificates/openEuler-x509ca.cer.der')" download>der</a>) |
 
 </div>
 
