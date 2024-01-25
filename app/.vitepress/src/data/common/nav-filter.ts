@@ -223,7 +223,7 @@ export default [
   },
   {
     name: 'certificate-center',
-    lang: ['zh'],
+    lang: ['zh', 'en'],
   },
   {
     name: 'universities',

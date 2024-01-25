@@ -1,5 +1,5 @@
 ---
-title: '证书中心'
+title: 'certificate-center'
 ---
 
 <script setup lang="ts">
@@ -37,26 +37,3 @@ openEuler certificate center is used to store the public key and certificate inf
 |  openEuler Shim Default CA | X509 | c813cda25ee2749e5551b8919a0537db |2023-11-14 | 2053-12-31 | RSA-4096 |download(<a :href="withBase('/certificates/openEuler-x509ca.cer.pem')" download>pem</a> \| <a :href="withBase('/certificates/openEuler-x509ca.cer.der')" download>der</a>) |
 
 </div>
-
-<style lang="scss" scoped>
-.table-striped{
-    margin-top: 20px;
-    td,
-    th{
-        padding: 16px 0 16px 37px;
-    }
-}
-.pc{
-    margin: 20px 0;
-    width:100%;
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
-}
-.mobile{
-    display:none;
-    @media screen and (max-width: 768px) {
-        display: block;
-    }
-}
-</style>
