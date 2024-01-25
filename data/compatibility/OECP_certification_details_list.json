@@ -7925,7 +7925,7 @@
     "arch": "aarch64",
     "checksum": "6756809e4b83c712a6641dd4ef273a18, 6146c27fb5ca967ecee58145815e720c",
     "base_openeuler_version": "openEuler Embedded 22.03 LTS SP2",
-    "os_download_link": "不提供",
+    "os_download_link": "http://www.hoperun.com/",
     "friendly_link": "http://www.hoperun.com/",
     "type": "嵌入式",
     "total_result": "pass",
@@ -8074,6 +8074,78 @@
     "type": "服务器",
     "total_result": "pass",
     "date": "2024/01/16",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "上海舜源计算机科技股份有限公司",
+    "os_version": "DataSafeKitOS22.03LTS-SP1-x86_64-dvd.iso",
+    "arch": "x86_64",
+    "checksum": "b8d44b7fae3456db240228c6dcd4a919",
+    "base_openeuler_version": "openEuler 22.03 LTS SP1",
+    "os_download_link": "www.safekitchina.com",
+    "friendly_link": "www.safekitchina.com",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/01/23",
     "details": "详细信息",
     "tools_result": [
       {
