@@ -69,7 +69,7 @@ export default defineConfig({
         changeOrigin: true,
       },
       '/api-chat/': {
-        target: 'https://modelapi.osinfra.cn/',
+        target: 'https://autogpt.osinfra.cn/api/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-chat/, ''),
       },

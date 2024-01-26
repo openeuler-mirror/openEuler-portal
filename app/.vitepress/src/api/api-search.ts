@@ -196,14 +196,19 @@ export function getChatapi(inputText: any, params: any) {
   const { token } = getUserAuth();
   const headers = {
     'Content-Type': 'application/json;charset=UTF-8',
-    token,
+    Authorization: token,
   };
   const body: string = JSON.stringify({
-    question: inputText,
-    history: [],
+    messages: [
+      {
+        role: 'human',
+        content: inputText,
+      }
+    ],
+    model: 'baichuan2-13b',
   });
   const signal = abortController.signal;
-  fetchEventSource('/api-chat/stream', {
+  fetchEventSource('/api-chat/worker/generate_stream', {
     method: 'POST',
     headers,
     body,
