@@ -32,7 +32,7 @@ Product operations and maintenance: To provide you with rich product experience,
 
 (d) Service Optimization. To continuously understand the operating status of the openEuler Community and provide better services for you, we will deploy a third-party plugin in this program. The third-party plugin will collect and record information on your browser, computer, and mobile device, including your IP address, access timestamp, access source, accessed pages, access status, accessed resource size, OS, system language, browser type, browser language, browser version, and server type and version. This will form the basis of our analysis, which helps us to better understand the openEuler Community operation.
 
-(e) Contributor License Agreement ("CLA") Signing. When you participate in code contribution through the Contributor License Agreement ("CLA") signing system (click [here](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340) to learn more), you need to submit your relevant personal data to the CLA signing system. We will obtain such personal data to verify whether you have signed the CLA, and to conduct relevant statistical analysis to understand how the community is operating.
+(e) Contributor License Agreement ("CLA") Signing. When you participate in code contribution through the Contributor License Agreement ("CLA") signing system (click [here](https://clasign.osinfra.cn/privacy) to learn more), you need to submit your relevant personal data to the CLA signing system. We will obtain such personal data to verify whether you have signed the CLA, and to conduct relevant statistical analysis to understand how the community is operating.
 
 (f) Talent Assessment. After you pass the openEuler community talent assessment test, we will collect your name, email address, test partner, test score, and certification level from our test partners to generate the openEuler community talent certificate for you. In addition, we acquire such data to conduct relevant statistical analysis about talent development of the community.
 
@@ -178,8 +178,8 @@ Email: **<contact@openeuler.io>**
 
 Hotline: **+86 14775151246**
 
-Last updated: **December 22, 2023**
+Last updated: **January 26, 2024**
 
-Privacy policy version: **v20231222**
+Privacy policy version: **v20240126**
 
 </div>
