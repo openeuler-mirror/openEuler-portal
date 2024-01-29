@@ -108,6 +108,7 @@ export default {
         {
           img_light: intel_light,
           img_dark: intel_dark,
+          noIcon: true,
         },
         {
           img_light: yidong_light,
@@ -245,6 +246,7 @@ export default {
         {
           img_light: intel_light,
           img_dark: intel_dark,
+          noIcon: true,
         },
         {
           img_light: yidong_light,
