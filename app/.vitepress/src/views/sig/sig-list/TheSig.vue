@@ -37,17 +37,6 @@ const handlerSigClick = (path: string) => {
         <li>{{ i18n.sig.SIG_DESCRIPTION.LI3 }}</li>
       </ul>
     </div>
-    <div class="sig-list">
-      <p>SIG List</p>
-      <OTabs>
-        <OTabPane label="SIG List">
-          <SigList />
-        </OTabPane>
-        <OTabPane label="SIG Landscape">
-          <SigLandscape />
-        </OTabPane>
-      </OTabs>
-    </div>
     <div class="sig-center-list">
       <OCard
         v-for="item in i18n.sig.SIG_CENTER_LIST"
@@ -63,6 +52,17 @@ const handlerSigClick = (path: string) => {
         </OButton>
       </OCard>
     </div>
+    <div class="sig-list">
+      <p>SIG List</p>
+      <OTabs>
+        <OTabPane label="SIG List">
+          <SigList />
+        </OTabPane>
+        <OTabPane label="SIG Landscape">
+          <SigLandscape />
+        </OTabPane>
+      </OTabs>
+    </div>
   </AppContext>
 </template>
 <style lang="scss" scoped>
@@ -71,7 +71,7 @@ const handlerSigClick = (path: string) => {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   width: 100%;
-  margin-top: var(--o-spacing-h1);
+  margin-top: var(--o-spacing-h2);
   @media (max-width: 1100px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -89,6 +89,7 @@ const handlerSigClick = (path: string) => {
   color: var(--o-color-brand1);
 }
 .sig-ul {
+  padding-left: 16px;
   font-size: var(--o-font-size-text);
   font-weight: 400;
   line-height: var(--o-line-height-h8);
@@ -105,7 +106,7 @@ const handlerSigClick = (path: string) => {
   }
 }
 .sig-list {
-  margin: var(--o-spacing-h1) auto 0;
+  margin: var(--o-spacing-h2) auto 0;
 
   p {
     display: none;
