@@ -14,6 +14,7 @@ import {
   SafetyBulletinQueryT,
 } from '@/shared/@types/type-support';
 
+import { queryYears } from '@/data/security';
 import type { CheckboxValueType } from 'element-plus';
 
 import BannerLevel2 from '@/components/BannerLevel2.vue';
@@ -42,7 +43,6 @@ const total = ref(0);
 const currentPage = ref(1);
 const totalPage = ref(0);
 const layout = ref('sizes, prev, pager, next, slot, jumper');
-const years = ['', '2023', '2022', '2021', '2020'];
 const selectedYear = ref('');
 const activeIndex = ref(-1);
 const activeIndex1 = ref(0);
@@ -326,7 +326,7 @@ watch(queryData, () => {
             </template>
             <div class="years">
               <p
-                v-for="(item, index) in years"
+                v-for="(item, index) in queryYears"
                 :key="item"
                 class="years-item"
                 :class="selectedYear === item ? 'selected' : ''"

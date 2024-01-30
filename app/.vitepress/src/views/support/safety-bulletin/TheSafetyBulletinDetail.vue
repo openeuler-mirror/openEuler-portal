@@ -4,7 +4,7 @@ import { useRouter, useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
-import securityNoticeNos from '@/data/security';
+import { securityNoticeNos } from '@/data/security';
 import { getSecurityDetail } from '@/api/api-security';
 import type { PackageInfoT, HotPatchT } from '@/shared/@types/type-support';
 

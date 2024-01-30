@@ -472,20 +472,20 @@ const changeCurrentPageMoblie = (val: number) => {
               class="blog-list-item-info"
               :class="lang === 'en' ? 'en-blog-list' : ''"
             >
-              <div class="infodetail">
+              <div class="info-detail">
                 <OIcon class="icon"><IconUser /></OIcon>
                 <p v-for="(aut, index2) in item.author" :key="aut">
                   {{ aut
                   }}<span v-show="item.author.length !== index2 + 1">,</span>
                 </p>
               </div>
-              <div class="infodetail">
+              <div class="info-detail">
                 <OIcon class="icon"><IconCalendar /></OIcon>
                 <p>
                   {{ item.archives }}
                 </p>
               </div>
-              <div class="infodetail">
+              <div v-if="item.views" class="info-detail">
                 <OIcon class="icon"><IconBrowse /></OIcon>
                 <p>
                   {{ userCaseData.BROWSE }} {{ item.views }}
@@ -651,7 +651,7 @@ const changeCurrentPageMoblie = (val: number) => {
         @include showline();
         -webkit-line-clamp: 1;
       }
-      .infodetail {
+      .info-detail {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -660,7 +660,7 @@ const changeCurrentPageMoblie = (val: number) => {
     }
     .en-blog-list {
       justify-content: space-between;
-      .infodetail {
+      .info-detail {
         margin: 0;
       }
     }
