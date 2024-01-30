@@ -8,7 +8,6 @@ import { useCookieStatus } from '@/stores/common';
 import useWindowScroll from '@/components/hooks/useWindowScroll';
 
 import BannerLevel2 from '@/components/BannerLevel2.vue';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import TagFilter from '@/components/TagFilter.vue';
 import NotFound from '@/NotFound.vue';
 
@@ -107,13 +106,13 @@ function jumpPage(page: number) {
 // 点击跳转案例详情页面
 function goDetail(link: string, item: any, index: number) {
   const search_result_url = '/' + link.replace('index', '');
-  if(cookieStatus.isAllAgreed){
-    initSensors(search_result_url,item,index);
+  if (cookieStatus.isAllAgreed) {
+    initSensors(search_result_url, item, index);
   }
   window.open(search_result_url);
 }
 // 埋点
-const initSensors = (link: string, item: any, index: number)=>{
+const initSensors = (link: string, item: any, index: number) => {
   const searchKeyObj = {
     search_tag: currentTag.value,
     search_rank_num: pageSize.value * (currentPage.value - 1) + (index + 1),
@@ -138,7 +137,7 @@ const initSensors = (link: string, item: any, index: number)=>{
   } catch (error: any) {
     console.error(error);
   }
-}
+};
 
 // 设置当前tag的所有案例
 function setCurrentCaseListAll() {
@@ -184,7 +183,7 @@ function searchCase() {
   activeIndex.value = 0;
   currentTag.value = userCaseData.value.tags[0];
   if (keyWord.value) {
-    if(cookieStatus.isAllAgreed){
+    if (cookieStatus.isAllAgreed) {
       addSearchBuriedData(keyWord.value);
     }
     getUserCaseData(searchData.value).then((res) => {
@@ -321,24 +320,18 @@ onMounted(() => {
     <div v-if="isShow" class="page-box">
       <ClientOnly>
         <OPagination
-          v-model:currentPage="currentPage"
+          v-model:current-page="currentPage"
           v-model:page-size="pageSize"
-          class="pagination-pc"
           :hide-on-single-page="true"
           :page-sizes="[pageSize]"
           :background="true"
           layout="sizes, prev, pager, next, slot, jumper"
           :total="total"
+          @jump-page="jumpPage"
         >
           <span class="pagination-slot">{{ currentPage }}/{{ totalPage }}</span>
         </OPagination>
       </ClientOnly>
-      <AppPaginationMo
-        :current-page="currentPage"
-        :total-page="totalPage"
-        @turn-page="turnPage"
-        @jump-page="jumpPage"
-      />
     </div>
   </div>
 </template>
@@ -426,7 +419,7 @@ onMounted(() => {
   }
   :deep(.o-search) {
     height: 48px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     @media (max-width: 768px) {
       display: none;
     }
@@ -468,7 +461,8 @@ onMounted(() => {
     }
     @media (max-width: 768px) {
       grid-template-columns: repeat(1, 1fr);
-      padding: 0 16px;
+      grid-gap: var(--o-spacing-h5);
+      padding: 0px 16px;
     }
     .case-card {
       height: 198px;
@@ -556,36 +550,8 @@ onMounted(() => {
   }
   .page-box {
     margin-top: var(--o-spacing-h2);
-    :deep(.pagination-pc) {
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-    .pagination-mobile {
-      display: none;
-      @media (max-width: 768px) {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        font-size: var(--o-font-size-tip);
-        .icon-prev {
-          margin-right: 8px;
-          color: var(--o-color-brand1);
-        }
-        .page-number {
-          margin: 0 28px;
-          span:nth-of-type(1) {
-            color: var(--o-color-brand1);
-          }
-        }
-        .icon-next {
-          margin-left: 8px;
-          color: var(--o-color-brand1);
-        }
-        .disable-button {
-          color: var(--o-color-text5);
-        }
-      }
+    @media (max-width: 768px) {
+      margin-top: var(--o-spacing-h5);
     }
   }
 }
@@ -595,7 +561,7 @@ onMounted(() => {
   margin-bottom: 40px;
   @media (max-width: 768px) {
     margin: 24px 0;
-    padding: 0 16px;
+    padding: 0px 16px;
     font-size: var(--o-font-size-tip);
   }
 }

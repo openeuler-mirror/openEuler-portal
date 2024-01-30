@@ -9,7 +9,6 @@ import IconSearch from '~icons/app/icon-search.svg';
 import NotFound from '@/NotFound.vue';
 import { IObject } from './interface';
 import useWindowResize from '@/components/hooks/useWindowResize';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import { SigContributeArrT } from '@/shared/@types/type-sig';
 
 const { lang } = useData();
@@ -187,12 +186,8 @@ const paginLayout = computed(() =>
     ? 'prev, slot, jumper, next'
     : 'sizes, prev, pager, next, slot, jumper'
 );
-const turnPage = (option: string) => {
-  if (option === 'prev' && currentPage.value > 1) {
-    currentPage.value = currentPage.value - 1;
-  } else if (option === 'next' && currentPage.value < totalPage.value) {
-    currentPage.value = currentPage.value + 1;
-  }
+const jumpPage = (val: number) => {
+  currentPage.value = val;
 };
 </script>
 <template>
@@ -320,7 +315,7 @@ const turnPage = (option: string) => {
     <div class="sig-pagination">
       <ClientOnly>
         <OPagination
-          v-model:currentPage="currentPage"
+          v-model:current-page="currentPage"
           v-model:page-size="pageSize"
           class="repository-pagin"
           :hide-on-single-page="true"
@@ -328,16 +323,11 @@ const turnPage = (option: string) => {
           :background="true"
           :layout="paginLayout"
           :total="reallData.length"
+          @jump-page="jumpPage"
         >
           <span class="pagination-slot">{{ currentPage }}/{{ totalPage }}</span>
         </OPagination>
       </ClientOnly>
-      <AppPaginationMo
-        :current-page="currentPage"
-        :total-page="reallData.length"
-        @turn-page="turnPage"
-      >
-      </AppPaginationMo>
     </div>
   </div>
 </template>
@@ -345,7 +335,7 @@ const turnPage = (option: string) => {
 .sig-pagination {
   margin-top: var(--o-spacing-h2);
   @media screen and (max-width: 768px) {
-    margin-top: var(--o-spacing-h2);
+    margin-top: var(--o-spacing-h5);
   }
 }
 

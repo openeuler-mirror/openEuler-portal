@@ -7,7 +7,6 @@ import useWindowResize from '@/components/hooks/useWindowResize';
 import seoConfig from '@/data/common/seo';
 
 import AppContent from '@/components/AppContent.vue';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import NotFound from '@/NotFound.vue';
 
@@ -356,17 +355,9 @@ const goPostBlog = () => {
 const pageTotal = computed(() =>
   Math.ceil(paginationData.value.total / paginationData.value.pagesize)
 );
-const changeCurrentPageMoblie = (val: string) => {
-  if (val === 'prev' && paginationData.value.currentpage > 1) {
-    paginationData.value.currentpage = paginationData.value.currentpage - 1;
-    changeCurrentPage(paginationData.value.currentpage);
-  } else if (
-    val === 'next' &&
-    paginationData.value.currentpage < pageTotal.value
-  ) {
-    paginationData.value.currentpage = paginationData.value.currentpage + 1;
-    changeCurrentPage(paginationData.value.currentpage);
-  }
+const changeCurrentPageMoblie = (val: number) => {
+  paginationData.value.currentpage = val;
+  changeCurrentPage(paginationData.value.currentpage);
 };
 </script>
 
@@ -524,8 +515,7 @@ const changeCurrentPageMoblie = (val: string) => {
       <div class="blog-pagination">
         <ClientOnly>
           <OPagination
-            v-if="!isMobile"
-            v-model:currentPage="paginationData.currentpage"
+            v-model:current-page="paginationData.currentpage"
             v-model:page-size="paginationData.pagesize"
             :background="true"
             layout="sizes, prev, pager, next, slot, jumper"
@@ -533,17 +523,12 @@ const changeCurrentPageMoblie = (val: string) => {
             :page-sizes="[3, 6, 9]"
             @current-change="changeCurrentPage"
             @size-change="changeCurrentPage(1)"
+            @jump-page="changeCurrentPageMoblie"
           >
             <span class="pagination-slot"
               >{{ paginationData.currentpage }}/{{ pageTotal }}</span
             >
           </OPagination>
-          <AppPaginationMo
-            v-else
-            :current-page="paginationData.currentpage"
-            :total-page="pageTotal"
-            @turn-page="changeCurrentPageMoblie"
-          />
         </ClientOnly>
       </div>
     </template>
@@ -614,7 +599,7 @@ const changeCurrentPageMoblie = (val: string) => {
   }
 }
 .blog-list {
-  margin: var(--o-spacing-h2) auto;
+  margin: var(--o-spacing-h2) auto 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: var(--o-spacing-h4);
@@ -624,7 +609,7 @@ const changeCurrentPageMoblie = (val: string) => {
   }
   @media (max-width: 768px) {
     margin-top: 0;
-    margin-bottom: var(--o-spacing-h5);
+    margin-bottom: 0;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: var(--o-spacing-h5);
   }
@@ -718,6 +703,12 @@ const changeCurrentPageMoblie = (val: string) => {
         }
       }
     }
+  }
+}
+.blog-pagination {
+  margin-top: var(--o-spacing-h2);
+  @media screen and (max-width: 768px) {
+    margin-top: var(--o-spacing-h5);
   }
 }
 .pagination-slot {

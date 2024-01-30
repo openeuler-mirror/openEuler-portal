@@ -3,7 +3,6 @@ import { reactive, ref, watch, onMounted, computed } from 'vue';
 import { useRouter } from 'vitepress';
 
 import { useI18n } from '@/i18n';
-import type { AxiosResponse } from '@/shared/axios';
 
 import {
   getSecurityList,
@@ -18,7 +17,6 @@ import {
 import type { CheckboxValueType } from 'element-plus';
 
 import BannerLevel2 from '@/components/BannerLevel2.vue';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import AppContent from '@/components/AppContent.vue';
 
 import banner from '@/assets/banner/banner-security.png';
@@ -584,30 +582,23 @@ watch(queryData, () => {
 
       <div v-if="total === 0 && isMobile" class="empty-tip">未搜索到数据</div>
 
-      <ClientOnly>
-        <OPagination
-          v-if="!isMobile"
-          v-model:page-size="queryData.pages.size"
-          v-model:currentPage="queryData.pages.page"
-          class="pagination"
-          :page-sizes="[10, 20, 40, 80]"
-          :layout="layout"
-          :total="total"
-          :background="true"
-          :hide-on-single-page="true"
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-        >
-          <span class="slot-content">{{ currentPage }}/{{ totalPage }}</span>
-        </OPagination>
-      </ClientOnly>
-
-      <AppPaginationMo
-        v-if="Math.ceil(total / 10) > 0 && isMobile"
-        :current-page="queryData.pages.page"
-        :total-page="Math.ceil(total / 10)"
-        @turn-page="turnPage"
-      />
+      <div class="pagination">
+        <ClientOnly>
+          <OPagination
+            v-model:page-size="queryData.pages.size"
+            v-model:current-page="queryData.pages.page"
+            :page-sizes="[10, 20, 40, 80]"
+            :layout="layout"
+            :total="total"
+            :background="true"
+            :hide-on-single-page="true"
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+          >
+            <span class="slot-content">{{ currentPage }}/{{ totalPage }}</span>
+          </OPagination>
+        </ClientOnly>
+      </div>
     </div>
   </AppContent>
 </template>
@@ -829,7 +820,6 @@ watch(queryData, () => {
   }
   .mobile-list {
     display: none;
-    margin-bottom: var(--o-spacing-h5);
     box-shadow: var(--o-shadow1);
     @media screen and (max-width: 768px) {
       display: block;
@@ -866,6 +856,9 @@ watch(queryData, () => {
   }
   .pagination {
     margin-top: var(--o-spacing-h2);
+    @media screen and (max-width: 768px) {
+      margin-top: var(--o-spacing-h5);
+    }
     .slot-content {
       font-size: var(--o-font-size-text);
       font-weight: 400;

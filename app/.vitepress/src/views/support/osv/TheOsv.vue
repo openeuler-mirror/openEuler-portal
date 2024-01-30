@@ -10,7 +10,6 @@ import { getOsName, getOsType, getOsTableData } from '@/api/api-security';
 import AppContent from '@/components/AppContent.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import TagFilter from '@/components/TagFilter.vue';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 
 import banner from '@/assets/banner/banner-security.png';
 import osv from '@/assets/illustrations/support/osv.png';
@@ -347,31 +346,28 @@ const getMoreTags = () => {
       {{ i18n.compatibility.EMPTY_SEARCH_RESULT }}
     </div>
 
-    <OPagination
-      v-if="total > 0"
-      v-model:page-size="queryData.pages.size"
-      v-model:currentPage="queryData.pages.page"
-      :page-sizes="[10, 20, 40, 80]"
-      :layout="layout"
-      :total="total"
-      :background="true"
-      @size-change="handleSizeChange"
-      @current-change="handleCurrentChange"
-    >
-      <span class="slot-content">{{ currentPage }}/{{ totalPage }}</span>
-    </OPagination>
+    <div v-if="total > 0" class="pagination">
+      <ClientOnly>
+        <OPagination
+          v-model:page-size="queryData.pages.size"
+          v-model:current-page="queryData.pages.page"
+          :page-sizes="[10, 20, 40, 80]"
+          :layout="layout"
+          :total="total"
+          :background="true"
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+          @jump-page="handleCurrentChange"
+        >
+          <span class="slot-content">{{ currentPage }}/{{ totalPage }}</span>
+        </OPagination></ClientOnly
+      >
+    </div>
 
     <p class="about">
       {{ i18n.approve.TO_STEP.TEXT_1 }}
       <a href="#" @click="goBackPage">{{ i18n.approve.TO_STEP.LINK_1 }}</a>
     </p>
-
-    <AppPaginationMo
-      v-if="Math.ceil(total / 10) > 0 && isMobile"
-      :current-page="queryData.pages.page"
-      :total-page="Math.ceil(total / 10)"
-      @turn-page="turnPage"
-    />
   </AppContent>
 </template>
 <style lang="scss" scoped>
@@ -485,9 +481,6 @@ const getMoreTags = () => {
     }
   }
   .filter-content {
-    // max-height: 106px;
-    // overflow: auto;
-    // transition: all 0.3s linear;
     &.is-expanded {
       max-height: 1000px;
       overflow: visible;
@@ -511,7 +504,6 @@ const getMoreTags = () => {
   }
 }
 .pc-list {
-  margin-bottom: var(--o-spacing-h2);
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -527,9 +519,14 @@ const getMoreTags = () => {
   line-height: var(--o-spacing-tip);
   padding: var(--o-spacing-h2) 0 var(--o-spacing-h5);
 }
+.pagination {
+  margin-top: var(--o-spacing-h2);
+  @media screen and (max-width: 768px) {
+    margin-top: var(--o-spacing-h5);
+  }
+}
 .mobile-list {
   display: none;
-  margin-bottom: var(--o-spacing-h5);
   box-shadow: var(--o-shadow1);
   @media screen and (max-width: 768px) {
     display: block;
@@ -546,16 +543,17 @@ const getMoreTags = () => {
     }
     & li {
       margin-bottom: var(--o-spacing-h8);
+      span {
+        white-space: nowrap;
+      }
+      a {
+        word-break: break-all;
+      }
     }
     li:last-child {
       margin-bottom: 0;
     }
-    li:nth-child(4) {
-      display: flex;
-      span {
-        min-width: 52px;
-      }
-    }
+
     span {
       color: var(--o-color-text1);
       margin-right: var(--o-spacing-h8);

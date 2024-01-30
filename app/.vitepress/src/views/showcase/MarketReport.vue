@@ -3,7 +3,6 @@ import { ref, computed } from 'vue';
 import { useI18n } from '@/i18n';
 
 import whitePaperData from '@/data/showcase/market-report';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import NotFound from '@/NotFound.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 
@@ -18,16 +17,23 @@ const currentPage = ref(1);
 // 每页数据
 const pageSize = ref(12);
 
-const randerPaperList = computed(() => {
-  if (whitePaperData.length > pageSize.value) {
-    return whitePaperData.slice(
-      (currentPage.value - 1) * pageSize.value,
-      currentPage.value * pageSize.value
+interface PaperList {
+  banner: string;
+  path: string;
+  summary: string;
+}
+const randerPaperList = ref<PaperList[]>([]);
+function getRenderPaperLsit(page: number, size: number) {
+  if (whitePaperData.length > size) {
+    randerPaperList.value = whitePaperData.slice(
+      (page - 1) * size,
+      page * size
     );
   } else {
-    return whitePaperData;
+    randerPaperList.value = whitePaperData;
   }
-});
+}
+getRenderPaperLsit(currentPage.value, pageSize.value);
 
 // 数据总条数
 const total = computed(() => {
@@ -44,18 +50,10 @@ const paginationVisible = computed(() => {
 // 根据滚动位置移动端tag吸顶
 
 // 移动端翻页事件
-function turnPage(option: string) {
-  if (option === 'prev' && currentPage.value > 1) {
-    currentPage.value = currentPage.value - 1;
-  } else if (option === 'next' && currentPage.value < totalPage.value) {
-    currentPage.value = currentPage.value + 1;
-  }
-}
-// 移动端跳转翻页
-function jumpPage(page: number) {
-  currentPage.value = page;
-}
-
+const handleCurrentChange = (val: number) => {
+  currentPage.value = val;
+  getRenderPaperLsit(currentPage.value, pageSize.value);
+};
 </script>
 
 <template>
@@ -89,24 +87,19 @@ function jumpPage(page: number) {
     <div v-if="paginationVisible" class="page-box">
       <ClientOnly>
         <OPagination
-          v-model:currentPage="currentPage"
+          v-model:current-page="currentPage"
           v-model:page-size="pageSize"
-          class="pagination-pc"
           :hide-on-single-page="true"
           :page-sizes="[pageSize]"
           :background="true"
           layout="sizes, prev, pager, next, slot, jumper"
           :total="total"
+          @current-change="handleCurrentChange"
+          @jump-page="handleCurrentChange"
         >
           <span class="pagination-slot">{{ currentPage }}/{{ totalPage }}</span>
         </OPagination>
       </ClientOnly>
-      <AppPaginationMo
-        :current-page="currentPage"
-        :total-page="totalPage"
-        @turn-page="turnPage"
-        @jump-page="jumpPage"
-      />
     </div>
   </div>
 </template>
@@ -221,36 +214,8 @@ function jumpPage(page: number) {
   }
   .page-box {
     margin-top: var(--o-spacing-h2);
-    :deep(.pagination-pc) {
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-    .pagination-mobile {
-      display: none;
-      @media (max-width: 768px) {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        font-size: var(--o-font-size-tip);
-        .icon-prev {
-          margin-right: 8px;
-          color: var(--o-color-brand1);
-        }
-        .page-number {
-          margin: 0 28px;
-          span:nth-of-type(1) {
-            color: var(--o-color-brand1);
-          }
-        }
-        .icon-next {
-          margin-left: 8px;
-          color: var(--o-color-brand1);
-        }
-        .disable-button {
-          color: var(--o-color-text5);
-        }
-      }
+    @media (max-width: 768px) {
+      margin-top: var(--o-spacing-h5);
     }
   }
 }

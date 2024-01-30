@@ -7,7 +7,6 @@ import { useCommon } from '@/stores/common';
 
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppContent from '@/components/AppContent.vue';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 
 import banner from '@/assets/banner/banner-interaction.png';
 import illustration from '@/assets/illustrations/live.png';
@@ -35,6 +34,12 @@ const changePage = (val: number, pagesize: number) => {
   showLiveList.value = data.value.slice(curVal, curVal + pagesize);
 };
 
+// 移动端翻页
+const jumpPage = (val: number) => {
+  const curVal = (val - 1) * pageSize4.value;
+  showLiveList.value = data.value.slice(curVal, curVal + pageSize4.value);
+};
+
 const showLiveList = ref(data.value.slice(0, 6));
 const jumpTo = (url: string) => {
   url === ''
@@ -55,19 +60,6 @@ const liveStyleMo = ref({
   lightExtension: `url(${cardBg_light_mo_extension})`,
   darkExtension: `url(${cardBg_dark_mo_extension})`,
 });
-
-function turnPage(option: string) {
-  if (option === 'prev' && currentPage.value > 1) {
-    currentPage.value = currentPage.value - 1;
-    changePage(currentPage.value, pageSize4.value);
-  } else if (
-    option === 'next' &&
-    currentPage.value < Math.ceil(total.value / pageSize4.value)
-  ) {
-    currentPage.value = currentPage.value + 1;
-    changePage(currentPage.value, pageSize4.value);
-  }
-}
 </script>
 
 <template>
@@ -146,14 +138,16 @@ function turnPage(option: string) {
         <div class="live-pagination-pc">
           <ClientOnly>
             <OPagination
-              v-model:currentPage="currentPage"
+              v-model:current-page="currentPage"
               v-model:page-size="pageSize4"
               :page-sizes="[6, 12, 18, 24]"
               :background="true"
+              :hide-on-single-page="true"
               layout="sizes, prev, pager, next, slot, jumper"
               :total="total"
               @current-change="changePage(currentPage, pageSize4)"
               @size-change="changePage(currentPage, pageSize4)"
+              @jump-page="jumpPage"
             >
               <span class="pagination-slot">{{
                 currentPage * pageSize4 + '/' + total
@@ -161,12 +155,6 @@ function turnPage(option: string) {
             </OPagination>
           </ClientOnly>
         </div>
-        <AppPaginationMo
-          :current-page="currentPage"
-          :total-page="Math.ceil(total / pageSize4)"
-          @turn-page="turnPage"
-        >
-        </AppPaginationMo>
       </div>
     </div>
   </AppContent>
@@ -319,11 +307,11 @@ function turnPage(option: string) {
     width: auto;
     height: auto;
     margin: auto;
-    .live-pagination-pc {
-      @media screen and (max-width: 767px) {
-        display: none;
-      }
-    }
+    // .live-pagination-pc {
+    //   @media screen and (max-width: 767px) {
+    //     display: none;
+    //   }
+    // }
   }
   .smail-icon {
     font-size: var(--o-font-size-h7);

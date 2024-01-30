@@ -5,7 +5,6 @@ import { useI18n } from '@/i18n';
 
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import TagFilter from '@/components/TagFilter.vue';
-import AppPaginationMo from '@/components/AppPaginationMo.vue';
 import AppContent from '@/components/AppContent.vue';
 
 import banner from '@/assets/banner/banner-security.png';
@@ -155,7 +154,6 @@ const getDriverData = (data: CompatibilityQueryT) => {
     });
   }
   osOptions.value = driverOsOptions.value;
-
 };
 
 // 开源软件
@@ -325,25 +323,6 @@ const goDetailPage = () => {
   }
 };
 
-// 移动端
-function turnPage(option: string) {
-  if (option === 'prev' && currentPage.value > 1) {
-    currentPage.value = currentPage.value - 1;
-    queryData.pages.page = currentPage.value;
-    initMobileData(queryData);
-  } else if (option === 'next' && currentPage.value < totalPage.value) {
-    currentPage.value = currentPage.value + 1;
-    queryData.pages.page = currentPage.value;
-    initMobileData(queryData);
-  }
-}
-
-const jumpPage = (page: number) => {
-  currentPage.value = page;
-  queryData.pages.page = currentPage.value;
-  initMobileData(queryData);
-};
-
 const handleChange = () => {
   initQueryData();
 
@@ -495,7 +474,7 @@ onMounted(() => {
     res.Type.forEach((item: string) => {
       softType.value.push(item);
     });
-    osLists.value  = res.OS;
+    osLists.value = res.OS;
   });
 
   // filter-解决方案
@@ -1293,13 +1272,16 @@ onMounted(() => {
             {{ i18n.compatibility.EMPTY_SEARCH_RESULT }}
           </div>
 
-          <AppPaginationMo
-            v-if="totalPage !== 0"
-            :current-page="currentPage"
-            :total-page="totalPage"
-            @turn-page="turnPage"
-            @jump-page="jumpPage"
-          />
+          <OPagination
+            v-model:page-size="queryData.pages.size"
+            v-model:current-page="queryData.pages.page"
+            :total="total"
+            :background="true"
+            @current-change="handleCurrentChange"
+            @jump-page="handleCurrentChange"
+          >
+          </OPagination>
+
           <p class="mobile-about">
             {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
             <a href="#" @click="goDetailPage">{{
@@ -1440,13 +1422,15 @@ onMounted(() => {
             {{ i18n.compatibility.EMPTY_SEARCH_RESULT }}
           </div>
 
-          <AppPaginationMo
-            v-if="totalPage !== 0"
-            :current-page="currentPage"
-            :total-page="totalPage"
-            @turn-page="turnPage"
-            @jump-page="jumpPage"
-          />
+          <OPagination
+            v-model:page-size="queryData.pages.size"
+            v-model:current-page="queryData.pages.page"
+            :total="total"
+            :background="true"
+            @current-change="handleCurrentChange"
+            @jump-page="handleCurrentChange"
+          ></OPagination>
+
           <p class="mobile-about">
             {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
             <a href="#" @click="goDetailPage">{{
@@ -1597,13 +1581,15 @@ onMounted(() => {
             {{ i18n.compatibility.EMPTY_SEARCH_RESULT }}
           </div>
 
-          <AppPaginationMo
-            v-if="totalPage !== 0"
-            :current-page="currentPage"
-            :total-page="totalPage"
-            @turn-page="turnPage"
-            @jump-page="jumpPage"
-          />
+          <OPagination
+            v-model:page-size="queryData.pages.size"
+            v-model:current-page="queryData.pages.page"
+            :total="total"
+            :background="true"
+            @current-change="handleCurrentChange"
+            @jump-page="handleCurrentChange"
+          ></OPagination>
+
           <p class="mobile-about">
             {{ i18n.compatibility.SOFTWARE_OEC_DETAIL.TEXT }}
             <a href="#" @click="goDetailPage">{{
@@ -1707,12 +1693,15 @@ onMounted(() => {
             {{ i18n.compatibility.EMPTY_SEARCH_RESULT }}
           </div>
 
-          <AppPaginationMo
-            v-if="totalPage !== 0"
-            :current-page="currentPage"
-            :total-page="totalPage"
-            @turn-page="turnPage"
-          />
+          <OPagination
+            v-model:page-size="queryData.pages.size"
+            v-model:current-page="queryData.pages.page"
+            :total="total"
+            :background="true"
+            @current-change="handleCurrentChange"
+            @jump-page="handleCurrentChange"
+          ></OPagination>
+
           <p class="mobile-about last-mobile-about">
             {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT }}
             <a href="#" @click="goDetailPage">{{
@@ -1833,14 +1822,14 @@ onMounted(() => {
             {{ i18n.compatibility.EMPTY_SEARCH_RESULT }}
           </div>
 
-          <AppPaginationMo
-            v-if="totalPage > 1"
-            :current-page="currentPage"
-            :total-page="totalPage"
-            @turn-page="turnPage"
-            @jump-page="jumpPage"
-            class="pagination-mob"
-          />
+          <OPagination
+            v-model:page-size="queryData.pages.size"
+            v-model:current-page="queryData.pages.page"
+            :total="total"
+            :background="true"
+            @current-change="handleCurrentChange"
+            @jump-page="handleCurrentChange"
+          ></OPagination>
 
           <div class="solution-details">
             <div class="virtual">
