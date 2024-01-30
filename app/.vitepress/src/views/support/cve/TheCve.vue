@@ -73,14 +73,6 @@ function searchValchange() {
   queryData.keyword = searchContent.value;
 }
 
-function turnPage(option: string) {
-  if (option === 'prev' && queryData.pages.page > 1) {
-    queryData.pages.page = queryData.pages.page - 1;
-  } else if (option === 'next' && queryData.pages.page < total.value) {
-    queryData.pages.page = queryData.pages.page + 1;
-  }
-}
-
 function goCveDetail(id: string, name: string) {
   router.go(`${router.route.path}detail/?cveId=${id}&packageName=${name}`);
 }

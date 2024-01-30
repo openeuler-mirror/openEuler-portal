@@ -42,14 +42,6 @@ const paginationVisible = computed(() => {
 });
 // 根据滚动位置移动端tag吸顶
 
-// 移动端翻页事件
-function turnPage(option: string) {
-  if (option === 'prev' && currentPage.value > 1) {
-    currentPage.value = currentPage.value - 1;
-  } else if (option === 'next' && currentPage.value < totalPage.value) {
-    currentPage.value = currentPage.value + 1;
-  }
-}
 // 移动端跳转翻页
 function jumpPage(page: number) {
   currentPage.value = page;

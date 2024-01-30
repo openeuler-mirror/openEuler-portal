@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, onMounted, h } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useRouter } from 'vitepress';
 
 import { useI18n } from '@/i18n';

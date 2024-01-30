@@ -3,7 +3,6 @@ import { ref, computed, onMounted, reactive } from 'vue';
 import { useRouter, useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
-import useWindowResize from '@/components/hooks/useWindowResize';
 import seoConfig from '@/data/common/seo';
 
 import AppContent from '@/components/AppContent.vue';
@@ -25,9 +24,6 @@ const router = useRouter();
 const { lang } = useData();
 const i18n = useI18n();
 const userCaseData = computed(() => i18n.value.interaction);
-const screenWidth = useWindowResize();
-
-const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
 
 // 博客列表
 const sortParams = reactive({
