@@ -418,7 +418,7 @@ export default {
       IMG_DARK: iscasLogo_dark,
     },
     {
-      LINK: 'https://www.isoftstone.com/htmls/isseos/index.html',
+      LINK: 'https://www.isoftstone.com',
       IMG: ruantongLogo,
       IMG_DARK: ruantongLogo_dark,
     },

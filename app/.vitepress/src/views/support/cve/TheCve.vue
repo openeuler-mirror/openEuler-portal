@@ -1,9 +1,10 @@
 <script lang="ts" setup>
-import { reactive, ref, onMounted, watch, computed } from 'vue';
+import { reactive, ref, onMounted, watch } from 'vue';
 import { useRouter } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
+import { queryYears } from '@/data/security';
 import { getCveList } from '@/api/api-security';
 import { CveListsT, CveQueryT } from '@/shared/@types/type-support';
 
@@ -11,12 +12,6 @@ import TagFilter from '@/components/TagFilter.vue';
 import AppContent from '@/components/AppContent.vue';
 
 import IconCalendar from '~icons/app/icon-calendar.svg';
-
-import useWindowResize from '@/components/hooks/useWindowResize';
-
-const screenWidth = useWindowResize();
-
-const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
 
 const i18n = useI18n();
 const router = useRouter();
@@ -26,7 +21,6 @@ const total = ref(0);
 const layout = ref('sizes, prev, pager, next, slot, jumper');
 const searchContent = ref('');
 const activeIndex = ref(0);
-const years = ['', '2023', '2022', '2021', '2020'];
 const selectedYear = ref('');
 const activeScore = ref(0);
 const activeYear = ref(0);
@@ -120,7 +114,7 @@ watch(queryData, () => getCveLists(queryData));
 
       <TagFilter :show="false" :label="i18n.safetyBulletin.YEAR">
         <OTag
-          v-for="(item, index) in years"
+          v-for="(item, index) in queryYears"
           :key="'tag' + index"
           checkable
           :type="activeYear === index ? 'primary' : 'text'"
@@ -177,7 +171,7 @@ watch(queryData, () => getCveLists(queryData));
               </template>
               <div class="years">
                 <p
-                  v-for="(item, index) in years"
+                  v-for="(item, index) in queryYears"
                   :key="index"
                   class="years-item"
                   :class="selectedYear === item ? 'selected' : ''"
