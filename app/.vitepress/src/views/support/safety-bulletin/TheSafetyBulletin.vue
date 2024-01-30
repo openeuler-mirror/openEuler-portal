@@ -110,14 +110,6 @@ const selectYear = (i: number, val: string) => {
   activeNames.value = ['2'];
 };
 
-function turnPage(option: string) {
-  if (option === 'prev' && queryData.pages.page > 1) {
-    queryData.pages.page = queryData.pages.page - 1;
-  } else if (option === 'next' && queryData.pages.page < total.value) {
-    queryData.pages.page = queryData.pages.page + 1;
-  }
-}
-
 const checkAll = ref(false);
 const isIndeterminate = ref(true);
 const riskTypes = computed(() => i18n.value.safetyBulletin.SEVERITY_LIST);

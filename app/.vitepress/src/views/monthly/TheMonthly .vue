@@ -3,7 +3,6 @@ import { computed, ref, onMounted, reactive } from 'vue';
 import { useRouter, useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
-import useWindowResize from '@/components/hooks/useWindowResize';
 
 import NotFound from '@/NotFound.vue';
 import AppContent from '@/components/AppContent.vue';
@@ -18,7 +17,6 @@ import type { NewsDataT, ParamsTypeT } from '@/shared/@types/type-news';
 
 const router = useRouter();
 const { lang } = useData();
-const screenWidth = useWindowResize();
 
 const sortParams = reactive({
   page: 1,
@@ -29,7 +27,6 @@ const sortParams = reactive({
 });
 // 新闻列表数据
 const newsCardData = ref<NewsDataT[]>([]);
-const isPc = computed(() => (screenWidth.value <= 768 ? true : false));
 
 // 分页数据
 const paginationData = ref({

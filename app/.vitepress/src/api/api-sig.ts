@@ -1,6 +1,13 @@
 import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
-import { FeatureInfoT, GroupInfoT, SigContributeArrT, SigListT, SigCompleteListT, SigDetailT, SigCompleteItemT, SigRepoT } from '@/shared/@types/type-sig';
+import {
+  FeatureInfoT,
+  GroupInfoT,
+  SigContributeArrT,
+  SigDetailT,
+  SigCompleteItemT,
+  SigRepoT,
+} from '@/shared/@types/type-sig';
 interface LIST_PARAMS {
   page: number;
   pageSize: number;
@@ -23,10 +30,10 @@ export function getCompleteList(params?: LIST_PARAMS) {
  * @returns {Object}
  */
 export function getRepoList(): Promise<{
-  code: number,
-  data: string[],
-  msg: string,
-  update_at: string
+  code: number;
+  data: string[];
+  msg: string;
+  update_at: string;
 }> {
   const url = `/api-dsapi/query/sig/repo?community=openeuler&search=fuzzy`;
   return request.get(url).then((res: AxiosResponse) => res.data);
@@ -36,9 +43,9 @@ export function getRepoList(): Promise<{
  * @returns {Object}
  */
 export function getAllList(): Promise<{
-  code: number,
-  data: [],
-  msg: string
+  code: number;
+  data: [];
+  msg: string;
 }> {
   const url = '/api-dsapi/query/sig/info?community=openeuler&search=fuzzy';
   return request.post(url).then((res: AxiosResponse) => res.data);
@@ -57,30 +64,30 @@ export function getSigDetail(
 }
 /**
  * 获取sig详情核心成员信息
- * @param {Object} params 
+ * @param {Object} params
  * @param {string} community 社区名称openeuler
  * @param {string} sig sig名称
  * @returns {Object}
  */
 export function getSigMember(params: object): Promise<{
-  code: number,
-  data: SigCompleteItemT[],
-  msg: string,
-  update_at: string
+  code: number;
+  data: SigCompleteItemT[];
+  msg: string;
+  update_at: string;
 }> {
   const url = '/api-dsapi/query/sig/info';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
 /**
  * 获取sig详情仓库列表
- * @param params 
+ * @param params
  * @returns {Object}
  */
 export function getSigRepositoryList(params: object): Promise<{
-  code: number,
-  data: SigRepoT,
-  msg: string,
-  update_at: string
+  code: number;
+  data: SigRepoT;
+  msg: string;
+  update_at: string;
 }> {
   const url = '/api-dsapi/query/sig/repo/committers';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
@@ -108,10 +115,10 @@ export function getSalon(params: {
  * @return {Object}
  */
 export function querySigUserContribute(params: object): Promise<{
-  code: number,
-  data: SigContributeArrT[],
-  msg: string,
-  update_at: string
+  code: number;
+  data: SigContributeArrT[];
+  msg: string;
+  update_at: string;
 }> {
   const url = '/api-dsapi/query/sig/usercontribute';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
@@ -148,9 +155,11 @@ export function getSigLandscape(lang: string): Promise<GroupInfoT[]> {
         });
       }
 
-      const groupInfo: GroupInfoT | undefined = info.find((group: GroupInfoT) => {
-        return group.groupName === item.group;
-      });
+      const groupInfo: GroupInfoT | undefined = info.find(
+        (group: GroupInfoT) => {
+          return group.groupName === item.group;
+        }
+      );
 
       if (
         !groupInfo?.features.find((feature: any) => {

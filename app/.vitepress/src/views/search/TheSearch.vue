@@ -25,7 +25,6 @@ import ODropdown from 'opendesign/dropdown/ODropdown.vue';
 import NotFound from '@/NotFound.vue';
 import ViewAgreeModal from './ViewAgreeModal.vue';
 import MatterTip from './MatterTip.vue';
-import useWindowResize from '@/components/hooks/useWindowResize';
 
 import { ElMessage } from 'element-plus';
 import { addSearchBuriedData } from '@/shared/utils';
@@ -33,8 +32,6 @@ import { AigcPrivacyAccepted } from '@/shared/privacy-accepted.const';
 import { useStoreData, isLogined, showGuard } from '@/shared/login';
 import type { SearchDrowdownArrT } from '@/shared/@types/type-search';
 
-const screenWidth = useWindowResize();
-const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
 
 const { guardAuthClient } = useStoreData();
 const { lang, site } = useData();

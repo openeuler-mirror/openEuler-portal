@@ -15,13 +15,9 @@ import banner from '@/assets/banner/banner-security.png';
 import osv from '@/assets/illustrations/support/osv.png';
 import IconUp from '~icons/app/icon-chevron-up.svg';
 
-import useWindowResize from '@/components/hooks/useWindowResize';
-
 const router = useRouter();
 
-const screenWidth = useWindowResize();
 const i18n = useI18n();
-const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
 const { lang } = useData();
 const all = computed(() => {
   if (lang.value === 'en') {
@@ -95,14 +91,6 @@ const handleCurrentChange = (val: number) => {
 const goApproveInfo = (id: number) => {
   router.go(`${router.route.path}approve-info/?id=${JSON.stringify(id)}`);
 };
-
-function turnPage(option: string) {
-  if (option === 'prev' && queryData.pages.page > 1) {
-    queryData.pages.page = queryData.pages.page - 1;
-  } else if (option === 'next' && queryData.pages.page < total.value) {
-    queryData.pages.page = queryData.pages.page + 1;
-  }
-}
 
 const getOsTableList = (data: OsvQueryT) => {
   getOsTableData(data).then((res: any) => {
