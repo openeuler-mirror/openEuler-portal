@@ -113,7 +113,7 @@ export default {
             },
             {
               name: 'upgrade-for6 ',
-              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-upgrade-for6-3.0.0-20231012.x86_64.rpm',
+              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-upgrade-for6-3.0.0-20240125.x86_64.rpm',
             },
         ],
       },
