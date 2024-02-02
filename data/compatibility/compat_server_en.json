@@ -14672,5 +14672,127 @@
       "hostBusAdapter": "",
       "hardDiskDrive": "Seagate ST600MM0009 HDD 0.545 TB"
     }
+  },
+  {
+    "hardwareFactory": "TianGu",
+    "hardwareModel": "TG64_PS23_DEMO",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "aarch64",
+    "date": "2023/12/11",
+    "friendlyLink": "https://www.phytium.com.cn/homepage/production/list/0",
+    "boardCards": [
+       {
+           "vendorID": "1000",
+           "deviceID": "10e2",
+           "svID": "1000",
+           "ssID": "4010",
+           "architecture": "aarch64",
+           "os": "openEuler 22.03 LTS SP3",
+           "driverName": "megaraid_sas",
+           "version": "07.714.04.00-rc1",
+           "type": "RAID",
+           "date": "2023.12.12",
+           "sha256": "c99b570fa144c7dde7aab1ea14e1d9ac50fdc2a74bcab1e2368da19387373337",
+           "driverSize": "68K",
+           "chipVendor": "Broadcom",
+           "boardModel": "9560-8i",
+           "chipModel": "SAS39xx",
+           "item": "",
+           "downloadLink": "inbox"
+       },
+       {
+          "vendorID": "8086",
+          "deviceID": "1521",
+          "svID": "8086",
+          "ssID": "0002",
+          "architecture": "aarch64",
+          "os": "openEuler 22.03 LTS SP3",
+          "driverName": "igb",
+          "version": "5.10.0-173.0.0.86.oe2203sp3.aarch64",
+          "type": "NIC",
+          "date": "2023.12.12",
+          "sha256": "69cc6f413fa59f4c22e0b5f3693ff1304ff13182e7ce2b6db34fa45d79069ae5",
+          "driverSize": "92K",
+          "chipVendor": "Intel",
+          "boardModel": "I350-T2",
+          "chipModel": "I350",
+           "item": "",
+          "downloadLink": "inbox"
+       }
+    ],
+      "compatibilityConfiguration": {
+      "productInformation": "https://www.phytium.com.cn/homepage/production/list/0",
+      "certificationTime": "2023/12/11",
+      "commitID": "I8NGWV",
+      "mainboardModel": "Phytium 5000c",
+      "biosUefi": "1f3e3526",
+      "cpu": "S5000c",
+      "ram": "16*32G Samsung",
+      "portsBusTypes": "x16 PCI Express 3",
+      "videoAdapter": "",
+      "hostBusAdapter": "",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "xFusion",
+    "hardwareModel": "2288H V6",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2023/11/14",
+    "friendlyLink": "https://www.xfusion.com/en/product/rack-server/fusionserver-2288h-v6",
+    "boardCards": [
+      {
+          "vendorID": "1000",
+          "deviceID": "0017",
+          "svID": "1f24",
+          "ssID": "d213",
+          "architecture": "x86_64",
+          "os": "openEuler 20.03 LTS SP4",
+          "driverName": "megaraid_sas",
+          "version": "07.706.03.00-rc1",
+          "type": "RAID",
+          "date": "2023.11.14",
+          "sha256": "3dfa96c43f618c0e8074c62cc9dd6d3581cbf4ba349c630bf6e02ea623da5b10",
+          "driverSize": "290K",
+          "chipVendor": "Broadcom",
+          "boardModel": "N/A",
+          "chipModel": "SAS3408",
+          "item": "",
+          "downloadLink": "inbox"
+      },
+      {
+          "vendorID": "8086",
+          "deviceID": "1521",
+          "svID": "ffff",
+          "ssID": "0000",
+          "architecture": "x86_64",
+          "os": "openEuler 20.03 LTS SP4",
+          "driverName": "igb",
+          "version": "5.4.0-k",
+          "type": "NIC",
+          "date": "2023.11.14",
+          "sha256": "1557c943b19a24b48b635efcafe87dd14fc9e1c79e5dc5f217e6ab889fa3cf33",
+          "driverSize": "487K",
+          "chipVendor": "Intel",
+          "boardModel": "N/A",
+          "chipModel": "I350",
+          "item": "",
+          "downloadLink": "inbox"
+      }
+    ],
+      "compatibilityConfiguration": {
+      "productInformation": "https://www.xfusion.com/en/product/rack-server/fusionserver-2288h-v6",
+      "certificationTime": "2023/11/14",
+      "commitID": "I8KAQ0",
+      "mainboardModel": "BC13MBSC",
+      "biosUefi": "0.52(U1007)",
+      "cpu": "Intel(R) Xeon(R) Silver 4316 CPU @ 2.30GHz*2",
+      "ram": "16G*2 DDR4",
+      "portsBusTypes": "x8 PCI Express 5 x8",
+      "videoAdapter": "Hi171x",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "Seagate ST2400MM0129"
+    }
   }
 ]
