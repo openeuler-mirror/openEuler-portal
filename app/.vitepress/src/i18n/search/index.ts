@@ -22,6 +22,7 @@ export default {
           showcase: '案例',
           other: '其他',
           whitepaper: '白皮书',
+          packages: '软件包',
         },
       },
     },

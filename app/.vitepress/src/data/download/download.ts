@@ -2746,7 +2746,7 @@ export default {
       {
         NAME: 'openEuler 22.03 LTS SP3',
         DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/',
-        DESC: 'openEuler 22.03 LTS SP3 是openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同。',
+        DESC: 'openEuler openEuler 22.03 LTS SP3 is the patch version of openEuler 22.03 LTS, and both versions have the same lifecycle.',
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/zh/docs/22.03_LTS_SP3/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
@@ -2754,14 +2754,14 @@ export default {
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
-        WHITE_PAPER: '/whitepaper/openEuler 22.03 LTS SP3 技术白皮书.pdf',
+        WHITE_PAPER: '/whitepaper/en/openEuler 22.03 LTS SP3 Technical White Paper.pdf',
         WEBSITE_SELECT: '/en/mirror/select/?version=22.03-LTS-SP3',
         CLOUD_IMAGE:
           'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/virtual_machine_img/',
         EDGE_IMAGE: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/edge_img/',
         EMBEDDEN_IMAGE:
           'https://repo.openeuler.org/openEuler-22.03-LTS-SP3/embedded_img/',
-        MANUFACTURER: 'openEuler社区',
+        MANUFACTURER: 'openEuler community',
         PUBLISH_DATE: '2023/12',
         LTS: true,
         VERSION: '22.03-LTS-SP3',
@@ -3065,7 +3065,7 @@ export default {
         EDGE_IMAGE: 'https://repo.openeuler.org/openEuler-23.09/edge_img/',
         EMBEDDEN_IMAGE:
           'https://repo.openeuler.org/openEuler-23.09/embedded_img/',
-        MANUFACTURER: 'openEuler社区',
+        MANUFACTURER: 'openEuler community',
         PUBLISH_DATE: '2023/09',
         LTS: false,
         /* VERSION参数是为了获取推荐镜像，根据上面的WEBSITE_SELECT的version填写*/
