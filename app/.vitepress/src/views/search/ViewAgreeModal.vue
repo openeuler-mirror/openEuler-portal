@@ -79,7 +79,7 @@ const doValidatorForm = (
       :show-close="false"
       align-center
     >
-      <h5 class="header">用户协议</h5>
+      <template #header><div class="header">用户协议</div></template>
       <el-scrollbar height="400px">
           <div v-dompurify-html="convertMd(agree)" class="markdown"></div>
         </el-scrollbar>
@@ -96,16 +96,13 @@ const doValidatorForm = (
               v-model="form.policy"
               @change="doValidatorForm(formRef, 'policy')"
             >
-              <OCheckbox value="1"></OCheckbox>
+              <OCheckbox value="1">我已阅读并同意用户协议</OCheckbox>
             </OCheckboxGroup>
-            <span>
-              我已阅读并同意用户协议
-            </span>
           </div>
         </el-form-item>
       </el-form>
       <div class="footer">
-        <OButton size="small" type="primary" @click="submit(formRef)">{{
+        <OButton size="small" :disabled="!form.policy.length" @click="submit(formRef)">{{
           '确定'
         }}</OButton>
         <OButton size="small" @click="close">{{ '取消' }}</OButton>
@@ -115,15 +112,11 @@ const doValidatorForm = (
 </template>
 <style lang="scss" scoped>
 .header {
-  font-size: var(--o-font-size-h5);
-  line-height: var(--o-line-height-h5);
-  font-weight: normal;
   text-align: center;
-  margin-bottom: var(--o-spacing-h5);
   color: var(--o-color-text1);
 }
 .form {
-  padding: 16px 40px 0;
+  padding-top: 16px;
 }
 .footer {
   display: flex;
@@ -131,9 +124,6 @@ const doValidatorForm = (
   column-gap: var(--o-spacing-h5);
 }
 .checkbox {
-  display: grid;
-  grid-template-columns: auto auto;
-  align-items: start;
   color: var(--o-color-text1);
   font-size: var(--o-font-size-text);
   line-height: var(--o-line-height-text);
@@ -144,6 +134,8 @@ const doValidatorForm = (
 .markdown {
   width: 100%;
   box-shadow: none;
+  margin: 0;
+  padding: 0;
 }
 .dialog {
   :deep(.is-draggable) {

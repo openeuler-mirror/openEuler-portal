@@ -58,7 +58,7 @@ export function getUserAuth() {
 // 退出登录
 export function logout() {
   location.href = `${import.meta.env.VITE_LOGIN_ORIGIN}/logout?redirect_uri=${
-    window?.location?.origin
+    encodeURIComponent(window?.location?.origin)
   }`;
 }
 
@@ -70,7 +70,7 @@ export function goToHome() {
 export function showGuard() {
   const origin = import.meta.env.VITE_LOGIN_ORIGIN;
   const { lang } = getLanguage();
-  location.href = `${origin}/login?redirect_uri=${location.href}&lang=${lang}`;
+  location.href = `${origin}/login?redirect_uri=${encodeURIComponent(location.href)}&lang=${lang}`;
 }
 
 // token失效跳转首页
