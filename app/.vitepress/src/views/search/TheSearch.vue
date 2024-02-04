@@ -55,7 +55,9 @@ const searchNumber: any = ref([]);
 
 const searchData = computed(() => {
   return {
-    keyword: searchInput.value,
+    keyword:
+      searchInput.value ||
+      decodeURIComponent(window.location.href.split('=')[1]),
     page: currentPage.value,
     pageSize: pageSize.value,
     lang: lang.value,
@@ -167,17 +169,7 @@ async function getVersionTag() {
 
 // 点击搜索框的删除图标
 function clearSearchInput() {
-  searchResultList.value = [];
   searchInput.value = '';
-  searchRpmList.value = '';
-  searchChatRes.value = '';
-  like.value = false;
-  stomp.value = false;
-  showChatRes.value = false;
-  activityData.value = {};
-  searchNumber.value.map((item: any) => {
-    item.doc_count = 0;
-  });
 }
 // 点击数据的类型导航
 function setCurrentType(type: string) {
@@ -254,12 +246,16 @@ function clickStomp() {
   like.value = false;
 }
 function searchRpm() {
+  searchRpmList.value = [];
+  isNotRpm.value = false;
   try {
     getSearchRpm({ keyword: searchInput.value }).then((res) => {
       if (res?.status === 200) {
         searchRpmList.value = res.data.records;
+        isNotRpm.value = true;
       } else {
         searchRpmList.value = [];
+        isNotRpm.value = false;
       }
     });
   } catch (error: any) {
@@ -291,8 +287,14 @@ function getSussageData() {
   });
 }
 // 获取搜索结果的数据
+const resultRef = ref<HTMLElement | null>(null);
+const resultHeight = ref(400);
+const isLoading = ref(false);
 function searchDataAll() {
   try {
+    searchResultList.value = [];
+    resultHeight.value = 400;
+    isLoading.value=true
     // 版本为全部时 limit 不传
     if (activeVersion.value === i18n.value.search.tagList.all) {
       searchData.value.limit = [];
@@ -314,11 +316,19 @@ function searchDataAll() {
     getSearchData(searchData.value).then((res) => {
       if (res.status === 200 && res.obj?.records[0]) {
         searchResultList.value = res.obj.records;
+        isNotFound.value = false;
+        window.scrollTo(0, 0);
+        nextTick(() => {
+          resultHeight.value = resultRef.value!.offsetHeight;
+        });
       } else {
         searchResultList.value = [];
+        isNotFound.value = true;
       }
+      isLoading.value=false
     });
   } catch (error: any) {
+    isLoading.value=false
     console.error(error);
   }
 }
@@ -446,292 +456,307 @@ const handleSearchHistory = (val: string) => {
   searchInput.value = val;
   searchAll();
 };
+// 控制无数据状态显示
+const isNotFound = ref(false);
+// 控制软件包的无数据状态显示
+const isNotRpm = ref(false);
 </script>
 <template>
   <div class="search">
-    <div class="search-left">
-      <!-- 搜索框 -->
-      <OSearch
-        ref="searchRef"
-        v-model="searchInput"
-        :placeholder="searchValue.PLEACHOLDER"
-        :maxlength="50"
-        @change="() => searchAll(true)"
-      >
-        <template #suffix>
-          <OIcon class="close" @click="clearSearchInput"><IconCancel /></OIcon>
-        </template>
-      </OSearch>
-      <ClientOnly>
-        <!-- 历史搜索记录 -->
-        <SearchHistory
-          v-if="false"
-          ref="searchHistoryRef"
-          @search-history="handleSearchHistory"
-          :search-value="searchInput"
-        />
-      </ClientOnly>
-      <div v-show="suggestList.length" class="suggest-list-box">
-        <span>{{ i18n.search.suggest }}</span>
-        <ul class="suggest-list">
-          <li
-            v-for="suggest in suggestList"
-            :key="suggest"
-            v-dompurify-html="suggest"
-            class="suggest"
-            @click="handleSelect(suggest)"
-          ></li>
-        </ul>
-      </div>
-      <div
-        v-if="showChatRes && lang === 'zh'"
-        class="gpt-block"
-        :class="suggestList.length ? 'exist-suggest' : ''"
-      >
-        <div
-          class="gpt-content gpt-content-before"
-          v-if="!guardAuthClient.username"
+    <div class="search-input">
+      <div class="input-box">
+        <OSearch
+          ref="searchRef"
+          v-model="searchInput"
+          :placeholder="searchValue.PLEACHOLDER"
+          :maxlength="50"
+          @change="() => searchAll(true)"
         >
-          <div></div>
-          <OButton class="btn" type="primary" @click="showGuard" size="small"
-            >登录查看智能搜索结果</OButton
-          >
-          <MatterTip></MatterTip>
-        </div>
-        <div
-          class="gpt-content gpt-content-before"
-          v-else-if="
-            guardAuthClient.aigcPrivacyAccepted !== AigcPrivacyAccepted
-          "
-        >
-          <div></div>
-          <OButton
-            class="btn"
-            type="primary"
-            @click="viewAgreeVisible = true"
-            size="small"
-            >获取用户协议同意</OButton
-          >
-          <MatterTip></MatterTip>
-        </div>
-        <div v-loading="!searchChatRes" class="gpt-content" v-else>
-          <div class="gpt-text">
-            <div class="gpt-text-content" ref="ChatRef">
-              {{ searchChatRes }}
-              <span v-if="showBlink" class="blinking">|</span>
-            </div>
-          </div>
-          <div class="gtp-copy" v-if="!showBlink">
-            <MatterTip></MatterTip>
-            <div style="flex: 1"></div>
-            <span class="icons">
-              <OIcon class="like-icon" @click="clickLike">
-                <component :is="likeIcon"></component>
-              </OIcon>
-              <OIcon class="like-icon stomp-icon" @click="clickStomp">
-                <component :is="stompIcon"></component>
-              </OIcon>
-            </span>
-            <OButton size="mini" @click="clipTxt(searchChatRes)">{{
-              i18n.search.copy
-            }}</OButton>
-          </div>
-        </div>
-        <ViewAgreeModal
-          v-model="viewAgreeVisible"
-          @submit="searchChat"
-        ></ViewAgreeModal>
-      </div>
-      <div class="search-content">
-        <div class="select-options">
-          <ul class="type">
-            <template v-for="item in searchNumber" :key="item">
-              <li
-                v-if="i18n.search.tagList[item.key]"
-                class="single-tab"
-                :class="currentTab === item.key ? 'active' : ''"
-                @click="setCurrentType(item.key)"
-              >
-                {{ i18n.search.tagList[item.key] }}
-                <span>({{ item.doc_count }})</span>
-              </li>
-            </template>
+          <template #suffix>
+            <OIcon class="close" @click="clearSearchInput"
+              ><IconCancel
+            /></OIcon>
+          </template>
+        </OSearch>
+        <ClientOnly>
+          <!-- 历史搜索记录 -->
+          <SearchHistory
+            v-if="false"
+            ref="searchHistoryRef"
+            @search-history="handleSearchHistory"
+            :search-value="searchInput"
+          />
+        </ClientOnly>
+        <div v-show="suggestList.length" class="suggest-list-box">
+          <span>{{ i18n.search.suggest }}</span>
+          <ul class="suggest-list">
             <li
-              v-if="isShowMultiple(i18n.search.tagList.updates?.tags)"
-              :class="{
-                active: Object.keys(i18n.search.tagList.updates.tags).includes(
-                  currentTab
-                ),
-              }"
-            >
-              <ODropdown @command="getActivityData">
-                <div class="multiple">
-                  <OIcon class="filter-icon">
-                    <IconMore></IconMore>
-                  </OIcon>
-                  {{ i18n.search.tagList.updates.val }}
-                  <span
-                    v-if="i18n.search.tagList.updates.tags[activityData?.key]"
-                    >({{ i18n.search.tagList.updates.tags[activityData?.key]
-                    }}{{ activityData?.doc_count }})</span
-                  >
-                </div>
-                <template #dropdown>
-                  <ClientOnly>
-                    <template v-for="item in searchNumber" :key="item">
-                      <ODropdownItem
-                        v-if="
-                          i18n.search.tagList.updates.tags[item.key] &&
-                          item.doc_count
-                        "
-                        class="multiple-item"
-                        @click="setCurrentType(item.key)"
-                        :command="item"
-                        >{{ i18n.search.tagList.updates.tags[item.key] }}
-                        <span>({{ item.doc_count }})</span>
-                      </ODropdownItem>
-                    </template>
-                  </ClientOnly>
-                </template>
-              </ODropdown>
-            </li>
-            <li
-              v-if="isShowMultiple(i18n.search.tagList.more?.tags)"
-              :class="{
-                active: Object.keys(i18n.search.tagList.more.tags).includes(
-                  currentTab
-                ),
-              }"
-            >
-              <ODropdown @command="getActivityData">
-                <div class="multiple">
-                  <OIcon class="filter-icon">
-                    <IconMore></IconMore>
-                  </OIcon>
-                  {{ i18n.search.tagList.more.val }}
-                  <span v-if="i18n.search.tagList.more.tags[activityData?.key]"
-                    >({{ i18n.search.tagList.more.tags[activityData?.key]
-                    }}{{ multipleCount }})</span
-                  >
-                </div>
-                <template #dropdown>
-                  <ClientOnly>
-                    <template v-for="item in searchNumber" :key="item">
-                      <ODropdownItem
-                        v-if="
-                          i18n.search.tagList.more.tags[item.key] &&
-                          item.doc_count
-                        "
-                        class="multiple-item"
-                        @click="setCurrentType(item.key)"
-                        :command="item"
-                        >{{ i18n.search.tagList.more.tags[item.key] }}
-                        <span>({{ item.doc_count }})</span>
-                      </ODropdownItem>
-                    </template>
-                  </ClientOnly>
-                </template>
-              </ODropdown>
-            </li>
+              v-for="suggest in suggestList"
+              :key="suggest"
+              v-dompurify-html="suggest"
+              class="suggest"
+              @click="handleSelect(suggest)"
+            ></li>
           </ul>
-
-          <ClientOnly>
-            <OSelect v-model="activeVersion" :placeholder="i18n.sig.SIG_ALL">
-              <template #prefix>
-                <OIcon>
-                  <IconSearch />
-                </OIcon>
-              </template>
-              <OOption
-                v-for="item in versionList"
-                :key="item.key"
-                :label="item.key"
-                :value="item.key"
-              >
-                <!-- <div class="version" style="float: left">{{ item.key }}</div>
-                <div class="count" style="float: right">
-                  {{ item.count || '' }}
-                </div> -->
-              </OOption>
-            </OSelect>
-          </ClientOnly>
-        </div>
-        <!-- 搜索内容列表 -->
-        <div class="content-box">
-          <ul v-if="searchResultList.length" class="content-list">
-            <li v-for="(item, index) in searchResultList" :key="item.id">
-              <h3
-                v-dompurify-html="item.title"
-                @click="goLink(item, index)"
-              ></h3>
-              <p
-                v-dompurify-html="
-                  item.type === 'service'
-                    ? item.secondaryTitle || ''
-                    : item.textContent
-                "
-                class="detail"
-                @click="goLink(item, index)"
-              ></p>
-              <p class="from">
-                <span>{{ i18n.search.from }}</span>
-                <span
-                  >{{
-                    i18n.search.tagList[item.type] ||
-                    i18n.search.tagList.updates.tags[item.type] ||
-                    i18n.search.tagList.more.tags[item.type]
-                  }}
-                </span>
-              </p>
-              <p v-if="item.version" class="from version">
-                <span>{{ i18n.search.version }}</span>
-                <span>{{ item.version }}</span>
-              </p>
-            </li>
-          </ul>
-          <NotFound v-else />
-        </div>
-        <div v-if="totalPage > 1" class="page-box">
-          <ClientOnly>
-            <OPagination
-              v-model:current-page="currentPage"
-              v-model:page-size="pageSize"
-              :hide-on-single-page="true"
-              :page-sizes="[pageSize]"
-              :background="true"
-              layout="sizes, prev, pager, next, slot, jumper"
-              :total="total"
-              @current-change="searchDataAll"
-              @jump-page="jumpPage"
-            >
-              <span class="pagination-slot"
-                >{{ currentPage }}/{{ totalPage }}</span
-              >
-            </OPagination>
-          </ClientOnly>
         </div>
       </div>
     </div>
-    <div
-      class="search-right"
-      :class="suggestList.length ? 'exist-suggest-1' : ''"
-    >
-      <div class="rpm-list">
-        <h3>{{ i18n.search.relative }}</h3>
-        <el-scrollbar height="1915px">
-          <ul>
-            <li v-for="item in searchRpmList" :key="item.filename">
-              <a :href="item.path" target="_blank" rel="noopener noreferrer">{{
-                item.filename
-              }}</a>
-              <p>{{ item.version }}</p>
-            </li>
-            <li v-show="!searchRpmList[0]">
-              {{ i18n.search.no }}{{ i18n.search.relative }}
-            </li>
-          </ul>
-        </el-scrollbar>
+    <div class="search-result">
+      <div class="result-left">
+        <!-- 搜索框 -->
+
+        <div
+          v-if="showChatRes && lang === 'zh'"
+          class="gpt-block"
+          :class="suggestList.length ? 'exist-suggest' : ''"
+        >
+          <div
+            class="gpt-content gpt-content-before"
+            v-if="!guardAuthClient.username"
+          >
+            <div></div>
+            <OButton class="btn" type="primary" @click="showGuard" size="small"
+              >登录查看智能搜索结果</OButton
+            >
+            <MatterTip></MatterTip>
+          </div>
+          <div
+            class="gpt-content gpt-content-before"
+            v-else-if="
+              guardAuthClient.aigcPrivacyAccepted !== AigcPrivacyAccepted
+            "
+          >
+            <div></div>
+            <OButton
+              class="btn"
+              type="primary"
+              @click="viewAgreeVisible = true"
+              size="small"
+              >获取用户协议同意</OButton
+            >
+            <MatterTip></MatterTip>
+          </div>
+          <div v-loading="!searchChatRes" class="gpt-content" v-else>
+            <div class="gpt-text">
+              <div class="gpt-text-content" ref="ChatRef">
+                {{ searchChatRes }}
+                <span v-if="showBlink" class="blinking">|</span>
+              </div>
+            </div>
+            <div class="gtp-copy" v-if="!showBlink">
+              <MatterTip></MatterTip>
+              <div style="flex: 1"></div>
+              <span class="icons">
+                <OIcon class="like-icon" @click="clickLike">
+                  <component :is="likeIcon"></component>
+                </OIcon>
+                <OIcon class="like-icon stomp-icon" @click="clickStomp">
+                  <component :is="stompIcon"></component>
+                </OIcon>
+              </span>
+              <OButton size="mini" @click="clipTxt(searchChatRes)">{{
+                i18n.search.copy
+              }}</OButton>
+            </div>
+          </div>
+          <ViewAgreeModal
+            v-model="viewAgreeVisible"
+            @submit="searchChat"
+          ></ViewAgreeModal>
+        </div>
+        <div class="search-content">
+          <div class="select-options">
+            <ul class="type">
+              <template v-for="item in searchNumber" :key="item">
+                <li
+                  v-if="i18n.search.tagList[item.key]"
+                  class="single-tab"
+                  :class="currentTab === item.key ? 'active' : ''"
+                  @click="setCurrentType(item.key)"
+                >
+                  {{ i18n.search.tagList[item.key] }}
+                  <span>({{ item.doc_count }})</span>
+                </li>
+              </template>
+              <li
+                v-if="isShowMultiple(i18n.search.tagList.updates?.tags)"
+                :class="{
+                  active: Object.keys(
+                    i18n.search.tagList.updates.tags
+                  ).includes(currentTab),
+                }"
+              >
+                <ODropdown @command="getActivityData">
+                  <div class="multiple">
+                    <OIcon class="filter-icon">
+                      <IconMore></IconMore>
+                    </OIcon>
+                    {{ i18n.search.tagList.updates.val }}
+                    <span
+                      v-if="i18n.search.tagList.updates.tags[activityData?.key]"
+                      >({{ i18n.search.tagList.updates.tags[activityData?.key]
+                      }}{{ activityData?.doc_count }})</span
+                    >
+                  </div>
+                  <template #dropdown>
+                    <ClientOnly>
+                      <template v-for="item in searchNumber" :key="item">
+                        <ODropdownItem
+                          v-if="
+                            i18n.search.tagList.updates.tags[item.key] &&
+                            item.doc_count
+                          "
+                          class="multiple-item"
+                          @click="setCurrentType(item.key)"
+                          :command="item"
+                          >{{ i18n.search.tagList.updates.tags[item.key] }}
+                          <span>({{ item.doc_count }})</span>
+                        </ODropdownItem>
+                      </template>
+                    </ClientOnly>
+                  </template>
+                </ODropdown>
+              </li>
+              <li
+                v-if="isShowMultiple(i18n.search.tagList.more?.tags)"
+                :class="{
+                  active: Object.keys(i18n.search.tagList.more.tags).includes(
+                    currentTab
+                  ),
+                }"
+              >
+                <ODropdown @command="getActivityData">
+                  <div class="multiple">
+                    <OIcon class="filter-icon">
+                      <IconMore></IconMore>
+                    </OIcon>
+                    {{ i18n.search.tagList.more.val }}
+                    <span
+                      v-if="i18n.search.tagList.more.tags[activityData?.key]"
+                      >({{ i18n.search.tagList.more.tags[activityData?.key]
+                      }}{{ multipleCount }})</span
+                    >
+                  </div>
+                  <template #dropdown>
+                    <ClientOnly>
+                      <template v-for="item in searchNumber" :key="item">
+                        <ODropdownItem
+                          v-if="
+                            i18n.search.tagList.more.tags[item.key] &&
+                            item.doc_count
+                          "
+                          class="multiple-item"
+                          @click="setCurrentType(item.key)"
+                          :command="item"
+                          >{{ i18n.search.tagList.more.tags[item.key] }}
+                          <span>({{ item.doc_count }})</span>
+                        </ODropdownItem>
+                      </template>
+                    </ClientOnly>
+                  </template>
+                </ODropdown>
+              </li>
+            </ul>
+
+            <ClientOnly>
+              <OSelect v-model="activeVersion" :placeholder="i18n.sig.SIG_ALL">
+                <template #prefix>
+                  <OIcon>
+                    <IconSearch />
+                  </OIcon>
+                </template>
+                <OOption
+                  v-for="item in versionList"
+                  :key="item.key"
+                  :label="item.key"
+                  :value="item.key"
+                >
+                  <!-- <div class="version" style="float: left">{{ item.key }}</div>
+                <div class="count" style="float: right">
+                  {{ item.count || '' }}
+                </div> -->
+                </OOption>
+              </OSelect>
+            </ClientOnly>
+          </div>
+          <!-- 搜索内容列表 -->
+          <div ref="resultRef" class="content-box" v-loading="isLoading"  element-loading-text="Loading...">
+            <ul v-if="searchResultList.length" class="content-list">
+              <li v-for="(item, index) in searchResultList" :key="item.id">
+                <h3
+                  v-dompurify-html="item.title"
+                  @click="goLink(item, index)"
+                ></h3>
+                <p
+                  v-dompurify-html="
+                    item.type === 'service'
+                      ? item.secondaryTitle || ''
+                      : item.textContent
+                  "
+                  class="detail"
+                  @click="goLink(item, index)"
+                ></p>
+                <p class="from">
+                  <span>{{ i18n.search.from }}</span>
+                  <span
+                    >{{
+                      i18n.search.tagList[item.type] ||
+                      i18n.search.tagList.updates.tags[item.type] ||
+                      i18n.search.tagList.more.tags[item.type]
+                    }}
+                  </span>
+                </p>
+                <p v-if="item.version" class="from version">
+                  <span>{{ i18n.search.version }}</span>
+                  <span>{{ item.version }}</span>
+                </p>
+              </li>
+            </ul>
+            <NotFound v-if="isNotFound" />
+          </div>
+        </div>
       </div>
+      <div
+        class="result-right"
+        :class="suggestList.length ? 'exist-suggest-1' : ''"
+      >
+        <div class="rpm-list">
+          <h3>{{ i18n.search.relative }}</h3>
+          <el-scrollbar :height="resultHeight + 100">
+            <ul>
+              <li v-for="item in searchRpmList" :key="item.filename">
+                <a
+                  :href="item.path"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >{{ item.filename }}</a
+                >
+                <p>{{ item.version }}</p>
+              </li>
+              <li v-show="!searchRpmList[0] && isNotRpm">
+                {{ i18n.search.no }}{{ i18n.search.relative }}
+              </li>
+            </ul>
+          </el-scrollbar>
+        </div>
+      </div>
+    </div>
+    <div v-if="totalPage > 1" class="search-pagination">
+      <ClientOnly>
+        <OPagination
+          v-model:current-page="currentPage"
+          v-model:page-size="pageSize"
+          :hide-on-single-page="true"
+          :page-sizes="[pageSize]"
+          :background="true"
+          layout="sizes, prev, pager, next, slot, jumper"
+          :total="total"
+          @current-change="searchDataAll"
+          @jump-page="jumpPage"
+        >
+          <span class="pagination-slot">{{ currentPage }}/{{ totalPage }}</span>
+        </OPagination>
+      </ClientOnly>
     </div>
   </div>
 </template>
@@ -740,36 +765,453 @@ const handleSearchHistory = (val: string) => {
   max-width: 1504px;
   padding: var(--o-spacing-h2) 44px var(--o-spacing-h1);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr minmax(150px, 320px);
-  grid-gap: 32px;
-  .suggest-list-box {
-    display: flex;
-    margin: 16px 0 32px;
-    color: var(--o-color-text1);
-    font-size: var(--o-font-size-text);
-    @media (max-width: 768px) {
-      padding: 0 16px;
-      margin: 12px 0 24px;
-    }
-    .suggest-list {
-      display: flex;
-      .suggest {
-        margin-right: 8px;
+  .search-pagination,
+  .search-input,
+  .search-result {
+    display: grid;
+    grid-template-columns: 1fr minmax(150px, 320px);
+    grid-gap: 32px;
+  }
+  .search-input {
+    :deep(.el-input__suffix-inner) {
+      svg {
         cursor: pointer;
-        :deep(em) {
-          color: var(--o-color-brand1);
-          font-style: normal;
+      }
+    }
+    .suggest-list-box {
+      display: flex;
+      margin: 16px 0 32px;
+      color: var(--o-color-text1);
+      font-size: var(--o-font-size-text);
+      @media (max-width: 768px) {
+        padding: 0 16px;
+        margin: 12px 0 24px;
+      }
+      .suggest-list {
+        display: flex;
+        .suggest {
+          margin-right: 8px;
+          cursor: pointer;
+          :deep(em) {
+            color: var(--o-color-brand1);
+            font-style: normal;
+          }
         }
       }
     }
   }
-  .pagination-slot {
-    font-size: var(--o-font-size-text);
-    font-weight: 400;
-    color: var(--o-color-text1);
-    line-height: var(--o-spacing-h4);
+
+  .search-pagination {
+    width: 100%;
+    margin-top: var(--o-spacing-h2);
+    @media (max-width: 768px) {
+      margin-top: var(--o-spacing-h5);
+    }
   }
+  .search-result {
+    .pagination-slot {
+      font-size: var(--o-font-size-text);
+      font-weight: 400;
+      color: var(--o-color-text1);
+      line-height: var(--o-spacing-h4);
+    }
+    .result-left {
+      overflow: hidden;
+
+      @media (max-width: 768px) {
+        :deep(.o-search) {
+          height: 28px;
+          font-size: 14px;
+          width: 100vw;
+          padding: 0 16px;
+        }
+
+        :deep(.el-input__inner) {
+          font-size: 14px;
+          height: 100%;
+        }
+        :deep(.el-input__prefix-inner) {
+          font-size: 16px;
+        }
+      }
+      .close {
+        cursor: pointer;
+      }
+      .gpt-block {
+        width: 100%;
+        margin-top: var(--o-spacing-h2);
+        @media (max-width: 768px) {
+          margin-top: var(--o-spacing-h5);
+        }
+        .gpt-content {
+          box-shadow: var(--o-shadow-l1);
+          background-color: var(--o-color-bg2);
+          padding: var(--o-spacing-h5) var(--o-spacing-h4);
+          white-space: pre-wrap;
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
+          @media (max-width: 768px) {
+            font-size: var(--o-font-size-tip);
+            line-height: var(--o-line-height-tip);
+            padding: var(--o-spacing-h8);
+            margin-left: var(--o-spacing-h5);
+            margin-right: var(--o-spacing-h5);
+          }
+          :deep(.el-loading-mask) {
+            background-color: var(--o-color-fill5);
+          }
+          .gpt-text {
+            padding: var(--o-spacing-h5);
+            background-color: var(--o-color-bg1);
+            @media (max-width: 768px) {
+              padding: var(--o-spacing-h8);
+            }
+            .gpt-text-content {
+              color: var(--o-color-text1);
+              max-height: 300px;
+              overflow-y: auto;
+              &::-webkit-scrollbar-track {
+                border-radius: 4px;
+                background-color: var(--o-color-bg2);
+              }
+
+              &::-webkit-scrollbar {
+                width: 6px;
+                background-color: var(--o-color-bg2);
+              }
+
+              &::-webkit-scrollbar-thumb {
+                border-radius: 4px;
+                background: var(--o-color-division1);
+              }
+
+              @keyframes blink {
+                0% {
+                  opacity: 1;
+                }
+                50% {
+                  opacity: 0;
+                }
+                100% {
+                  opacity: 1;
+                }
+              }
+
+              .blinking {
+                font-size: var(--o-font-size-h8);
+                font-weight: 900;
+                animation: blink 1s infinite;
+              }
+            }
+          }
+          .gtp-copy {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: var(--o-spacing-h5);
+            .icons {
+              margin-right: var(--o-spacing-h3);
+              color: var(--o-color-text1);
+            }
+            .like-icon {
+              font-size: var(--o-font-size-h7);
+              cursor: pointer;
+            }
+            .stomp-icon {
+              margin-left: var(--o-spacing-h6);
+            }
+          }
+        }
+        .gpt-content-before {
+          padding: var(--o-spacing-h5) var(--o-spacing-h3);
+          display: flex;
+          justify-content: space-between;
+          .btn {
+            margin-left: 84px;
+            margin-top: var(--o-spacing-h5);
+            margin-bottom: var(--o-spacing-h5);
+          }
+          @media (max-width: 768px) {
+            padding: var(--o-spacing-h5) var(--o-spacing-h10);
+          }
+        }
+      }
+      .search-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: var(--o-spacing-h2);
+
+        @media (max-width: 768px) {
+          margin-top: var(--o-spacing-h5);
+        }
+        .select-options {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 40px;
+          width: 100%;
+          background-color: var(--o-color-bg2);
+          border-bottom: 1px solid var(--o-color-division1);
+          @media screen and (max-width: 1620px) {
+            padding: 0 24px;
+          }
+          @media screen and (max-width: 768px) {
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 0;
+            width: calc(100% - 32px);
+            background-color: var(--o-color-bg1);
+            border: none;
+          }
+          .type {
+            display: flex;
+            flex-shrink: 0;
+            background-color: var(--o-color-bg2);
+            @include scrollbar;
+            @media (max-width: 768px) {
+              width: 100%;
+              overflow-x: auto;
+              overflow-y: hidden;
+              padding: 0 16px;
+              white-space: nowrap;
+              margin-bottom: 16px;
+              box-shadow: var(--o-shadow-l1);
+            }
+            li,
+            .multiple {
+              position: relative;
+              display: flex;
+              align-items: center;
+              height: 63px;
+              min-width: 56px;
+              margin-right: 32px;
+              color: var(--o-color-text1);
+              font-size: var(--o-font-size-h8);
+              @media screen and (max-width: 1620px) {
+                margin-right: 24px;
+              }
+              @media (max-width: 768px) {
+                height: 34px;
+                line-height: 34px;
+                min-width: auto;
+                font-size: var(--o-font-size-text);
+                margin-right: 0;
+                text-align: center;
+                & + li {
+                  margin-left: 12px;
+                }
+                span {
+                  display: none;
+                }
+              }
+              &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background-color: transparent;
+                @media (max-width: 768px) {
+                  bottom: -1px;
+                }
+              }
+
+              .multiple {
+                cursor: pointer;
+                margin: 0;
+                height: max-content;
+                .o-icon {
+                  font-size: 20px;
+                }
+              }
+            }
+            .single-tab {
+              cursor: pointer;
+            }
+            .active {
+              color: var(--o-color-brand1);
+              .multiple {
+                color: var(--o-color-brand1);
+              }
+              &::after {
+                background-color: var(--o-color-brand1);
+              }
+            }
+          }
+          :deep(.el-select) {
+            max-width: 170px;
+            min-width: 100px;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+              padding-bottom: 8px;
+            }
+            &:hover {
+              box-shadow: none;
+            }
+            .el-input__wrapper {
+              padding: 0 8px;
+              box-shadow: 0 0 1px var(--o-color-border1);
+            }
+          }
+        }
+
+        .content-box {
+          min-height: 400px;
+          width: 100%;
+          height: 100%;
+          box-shadow: var(--o-shadow-l1);
+          background-color: var(--o-color-bg2);
+          @media (max-width: 768px) {
+            width: 100vw;
+            padding: var(--o-spacing-h5) var(--o-spacing-h5) 0
+              var(--o-spacing-h5);
+            min-height: 0;
+            background-color: var(--o-color-bg1);
+            box-shadow: none;
+          }
+          .content-list {
+            padding: 0 var(--o-spacing-h2) var(--o-spacing-h2)
+              var(--o-spacing-h2);
+            @media (max-width: 768px) {
+              padding: 0;
+              background-color: var(--o-color-bg2);
+            }
+            li {
+              padding-top: var(--o-spacing-h2);
+              &:empty {
+                padding: 0;
+              }
+              @media (max-width: 768px) {
+                padding-top: var(--o-spacing-h5);
+                margin: 0 var(--o-spacing-h5);
+                &::after {
+                  display: block;
+                  content: '';
+                  width: 100%;
+                  height: 1px;
+                  background-color: var(--o-color-division1);
+                  margin-top: 16px;
+                }
+                &:nth-last-of-type(1)::after {
+                  background-color: transparent;
+                }
+              }
+              h3 {
+                font-size: var(--o-font-size-h5);
+                color: var(--o-color-text1);
+                line-height: var(--o-line-height-h5);
+                font-weight: 500;
+                cursor: pointer;
+                :deep(span) {
+                  color: var(--o-color-brand1);
+                }
+                @media (max-width: 768px) {
+                  font-size: var(--o-font-size-text);
+                  line-height: var(--o-line-height-text);
+                }
+              }
+              .detail {
+                cursor: pointer;
+                margin-top: 16px;
+                font-size: var(--o-font-size-text);
+                line-height: var(--o-line-height-text);
+                color: var(--o-color-text1);
+                max-height: 110px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-overflow: -webkit-ellipsis-lastline;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                line-clamp: 5;
+                -webkit-box-orient: vertical;
+
+                :deep(span) {
+                  color: var(--o-color-brand1);
+                }
+                @media (max-width: 768px) {
+                  margin-top: 4px;
+                  -webkit-line-clamp: 6;
+                  line-clamp: 6;
+                  font-size: var(--o-font-size-tip);
+                  line-height: var(--o-line-height-tip);
+                  color: var(--o-color-text4);
+                }
+              }
+              .from {
+                margin-top: 15px;
+                font-size: var(--o-font-size-text);
+                line-height: var(--o-line-height-text);
+                color: var(--o-color-text1);
+                @media (max-width: 768px) {
+                  margin-top: 8px;
+                  font-size: var(--o-font-size-tip);
+                  line-height: var(--o-line-height-tip);
+                  color: var(--o-color-text4);
+                }
+              }
+              .version {
+                margin-top: var(--o-spacing-h8);
+              }
+            }
+          }
+        }
+      }
+      .exist-suggest {
+        margin-top: 0;
+      }
+    }
+    .result-right {
+      width: 320px;
+      overflow: hidden;
+      @include scrollbar;
+      margin-top: var(--o-spacing-h2);
+      @media (max-width: 768px) {
+        margin-top: var(--o-spacing-h5);
+      }
+      &.exist-suggest-1 {
+        margin-top: 0;
+      }
+      .rpm-list {
+        background-color: var(--o-color-bg2);
+        box-shadow: var(--o-shadow-l1);
+        height: 100%;
+      }
+      @media (max-width: 1200px) {
+        display: none;
+      }
+      h3 {
+        font-size: var(--o-font-size-h5);
+        line-height: var(--o-line-height-h5);
+        padding: var(--o-spacing-h2);
+        padding-bottom: 0;
+        color: var(--o-color-text1);
+      }
+      ul {
+        padding: 0 var(--o-spacing-h2);
+        li {
+          padding-top: var(--o-spacing-h4);
+          color: var(--o-color-text1);
+          a {
+            font-size: var(--o-font-size-text);
+            line-height: var(--o-line-height-text);
+            color: var(--o-color-brand1);
+          }
+          p {
+            font-size: var(--o-font-size-text);
+            line-height: var(--o-line-height-text);
+            margin-top: var(--o-spacing-h8);
+            color: var(--o-color-text4);
+          }
+        }
+      }
+      :deep(.is-horizontal) {
+        display: none;
+      }
+    }
+  }
+
   @media (max-width: 1439px) {
     padding-left: 24px;
   }
@@ -784,403 +1226,6 @@ const handleSearchHistory = (val: string) => {
   @media (max-width: 768px) {
     padding: 0 0 var(--o-spacing-h2) 0;
     padding-top: var(--o-spacing-h5);
-  }
-  .search-left {
-    overflow: hidden;
-
-    @media (max-width: 768px) {
-      :deep(.o-search) {
-        height: 28px;
-        font-size: 14px;
-        width: 100vw;
-        padding: 0 16px;
-      }
-
-      :deep(.el-input__inner) {
-        font-size: 14px;
-        height: 100%;
-      }
-      :deep(.el-input__prefix-inner) {
-        font-size: 16px;
-      }
-    }
-    .close {
-      cursor: pointer;
-    }
-    .gpt-block {
-      width: 100%;
-      margin-top: var(--o-spacing-h2);
-      @media (max-width: 768px) {
-        margin-top: var(--o-spacing-h5);
-      }
-      .gpt-content {
-        box-shadow: var(--o-shadow-l1);
-        background-color: var(--o-color-bg2);
-        padding: var(--o-spacing-h5) var(--o-spacing-h4);
-        white-space: pre-wrap;
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
-        @media (max-width: 768px) {
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
-          padding: var(--o-spacing-h8);
-          margin-left: var(--o-spacing-h5);
-          margin-right: var(--o-spacing-h5);
-        }
-        :deep(.el-loading-mask) {
-          background-color: var(--o-color-fill5);
-        }
-        .gpt-text {
-          padding: var(--o-spacing-h5);
-          background-color: var(--o-color-bg1);
-          @media (max-width: 768px) {
-            padding: var(--o-spacing-h8);
-          }
-          .gpt-text-content {
-            color: var(--o-color-text1);
-            max-height: 300px;
-            overflow-y: auto;
-            &::-webkit-scrollbar-track {
-              border-radius: 4px;
-              background-color: var(--o-color-bg2);
-            }
-
-            &::-webkit-scrollbar {
-              width: 6px;
-              background-color: var(--o-color-bg2);
-            }
-
-            &::-webkit-scrollbar-thumb {
-              border-radius: 4px;
-              background: var(--o-color-division1);
-            }
-
-            @keyframes blink {
-              0% {
-                opacity: 1;
-              }
-              50% {
-                opacity: 0;
-              }
-              100% {
-                opacity: 1;
-              }
-            }
-
-            .blinking {
-              font-size: var(--o-font-size-h8);
-              font-weight: 900;
-              animation: blink 1s infinite;
-            }
-          }
-        }
-        .gtp-copy {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding-top: var(--o-spacing-h5);
-          .icons {
-            margin-right: var(--o-spacing-h3);
-            color: var(--o-color-text1);
-          }
-          .like-icon {
-            font-size: var(--o-font-size-h7);
-            cursor: pointer;
-          }
-          .stomp-icon {
-            margin-left: var(--o-spacing-h6);
-          }
-        }
-      }
-      .gpt-content-before {
-        padding: var(--o-spacing-h5) var(--o-spacing-h3);
-        display: flex;
-        justify-content: space-between;
-        .btn {
-          margin-left: 84px;
-          margin-top: var(--o-spacing-h5);
-          margin-bottom: var(--o-spacing-h5);
-        }
-        @media (max-width: 768px) {
-          padding: var(--o-spacing-h5) var(--o-spacing-h10);
-        }
-      }
-    }
-    .search-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: var(--o-spacing-h2);
-
-      @media (max-width: 768px) {
-        margin-top: var(--o-spacing-h5);
-      }
-      .select-options {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 40px;
-        width: 100%;
-        background-color: var(--o-color-bg2);
-        border-bottom: 1px solid var(--o-color-division1);
-        @media screen and (max-width: 1620px) {
-          padding: 0 24px;
-        }
-        @media screen and (max-width: 768px) {
-          justify-content: center;
-          align-items: flex-start;
-          flex-direction: column;
-          padding: 0;
-          width: calc(100% - 32px);
-          background-color: var(--o-color-bg1);
-          border: none;
-        }
-        .type {
-          display: flex;
-          flex-shrink: 0;
-          background-color: var(--o-color-bg2);
-          @include scrollbar;
-          @media (max-width: 768px) {
-            width: 100%;
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding: 0 16px;
-            white-space: nowrap;
-            margin-bottom: 16px;
-            box-shadow: var(--o-shadow-l1);
-          }
-          li,
-          .multiple {
-            position: relative;
-            display: flex;
-            align-items: center;
-            height: 63px;
-            min-width: 56px;
-            margin-right: 32px;
-            color: var(--o-color-text1);
-            font-size: var(--o-font-size-h8);
-            @media screen and (max-width: 1620px) {
-              margin-right: 24px;
-            }
-            @media (max-width: 768px) {
-              height: 34px;
-              line-height: 34px;
-              min-width: auto;
-              font-size: var(--o-font-size-text);
-              margin-right: 0;
-              text-align: center;
-              & + li {
-                margin-left: 12px;
-              }
-              span {
-                display: none;
-              }
-            }
-            &::after {
-              content: '';
-              position: absolute;
-              bottom: 0;
-              width: 100%;
-              height: 2px;
-              background-color: transparent;
-              @media (max-width: 768px) {
-                bottom: -1px;
-              }
-            }
-
-            .multiple {
-              cursor: pointer;
-              margin: 0;
-              height: max-content;
-              .o-icon {
-                font-size: 20px;
-              }
-            }
-          }
-          .single-tab {
-            cursor: pointer;
-          }
-          .active {
-            color: var(--o-color-brand1);
-            .multiple {
-              color: var(--o-color-brand1);
-            }
-            &::after {
-              background-color: var(--o-color-brand1);
-            }
-          }
-        }
-        :deep(.el-select) {
-          max-width: 170px;
-          min-width: 100px;
-          @media screen and (max-width: 768px) {
-            width: 100%;
-            padding-bottom: 8px;
-          }
-          &:hover {
-            box-shadow: none;
-          }
-          .el-input__wrapper {
-            padding: 0 8px;
-            box-shadow: 0 0 1px var(--o-color-border1);
-          }
-        }
-      }
-
-      .content-box {
-        min-height: 1948px;
-        width: 100%;
-        box-shadow: var(--o-shadow-l1);
-        background-color: var(--o-color-bg2);
-        @media (max-width: 768px) {
-          width: 100vw;
-          padding: var(--o-spacing-h5) var(--o-spacing-h5) 0 var(--o-spacing-h5);
-          min-height: 0;
-          background-color: var(--o-color-bg1);
-          box-shadow: none;
-        }
-        .content-list {
-          padding: 0 var(--o-spacing-h2) var(--o-spacing-h2) var(--o-spacing-h2);
-          @media (max-width: 768px) {
-            padding: 0;
-            background-color: var(--o-color-bg2);
-          }
-          li {
-            padding-top: var(--o-spacing-h2);
-            &:empty {
-              padding: 0;
-            }
-            @media (max-width: 768px) {
-              padding-top: var(--o-spacing-h5);
-              margin: 0 var(--o-spacing-h5);
-              &::after {
-                display: block;
-                content: '';
-                width: 100%;
-                height: 1px;
-                background-color: var(--o-color-division1);
-                margin-top: 16px;
-              }
-              &:nth-last-of-type(1)::after {
-                background-color: transparent;
-              }
-            }
-            h3 {
-              font-size: var(--o-font-size-h5);
-              color: var(--o-color-text1);
-              line-height: var(--o-line-height-h5);
-              font-weight: 500;
-              cursor: pointer;
-              :deep(span) {
-                color: var(--o-color-brand1);
-              }
-              @media (max-width: 768px) {
-                font-size: var(--o-font-size-text);
-                line-height: var(--o-line-height-text);
-              }
-            }
-            .detail {
-              cursor: pointer;
-              margin-top: 16px;
-              font-size: var(--o-font-size-text);
-              line-height: var(--o-line-height-text);
-              color: var(--o-color-text1);
-              max-height: 110px;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              text-overflow: -webkit-ellipsis-lastline;
-              display: -webkit-box;
-              -webkit-line-clamp: 5;
-              line-clamp: 5;
-              -webkit-box-orient: vertical;
-
-              :deep(span) {
-                color: var(--o-color-brand1);
-              }
-              @media (max-width: 768px) {
-                margin-top: 4px;
-                -webkit-line-clamp: 6;
-                line-clamp: 6;
-                font-size: var(--o-font-size-tip);
-                line-height: var(--o-line-height-tip);
-                color: var(--o-color-text4);
-              }
-            }
-            .from {
-              margin-top: 15px;
-              font-size: var(--o-font-size-text);
-              line-height: var(--o-line-height-text);
-              color: var(--o-color-text1);
-              @media (max-width: 768px) {
-                margin-top: 8px;
-                font-size: var(--o-font-size-tip);
-                line-height: var(--o-line-height-tip);
-                color: var(--o-color-text4);
-              }
-            }
-            .version {
-              margin-top: var(--o-spacing-h8);
-            }
-          }
-        }
-      }
-
-      .page-box {
-        width: 100%;
-        margin-top: var(--o-spacing-h2);
-        @media (max-width: 768px) {
-          margin-top: var(--o-spacing-h5);
-        }
-      }
-    }
-    .exist-suggest {
-      margin-top: 0;
-    }
-  }
-  .search-right {
-    width: 320px;
-    height: 2005px;
-    margin-top: 78px;
-    overflow-y: auto;
-    @include scrollbar;
-    .rpm-list {
-      background-color: var(--o-color-bg2);
-      box-shadow: var(--o-shadow-l1);
-    }
-    @media (max-width: 1200px) {
-      display: none;
-    }
-    h3 {
-      font-size: var(--o-font-size-h5);
-      line-height: var(--o-line-height-h5);
-      padding: var(--o-spacing-h2);
-      padding-bottom: 0;
-      color: var(--o-color-text1);
-    }
-    ul {
-      padding: 0 var(--o-spacing-h2);
-      li {
-        padding-top: var(--o-spacing-h4);
-        color: var(--o-color-text1);
-        a {
-          font-size: var(--o-font-size-text);
-          line-height: var(--o-line-height-text);
-          color: var(--o-color-brand1);
-        }
-        p {
-          font-size: var(--o-font-size-text);
-          line-height: var(--o-line-height-text);
-          margin-top: var(--o-spacing-h8);
-          color: var(--o-color-text4);
-        }
-      }
-    }
-    :deep(.is-horizontal) {
-      display: none;
-    }
-  }
-  .exist-suggest-1 {
-    margin-top: 103px;
   }
 }
 
