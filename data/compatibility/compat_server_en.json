@@ -7942,12 +7942,12 @@
     }
   },
   {
-    "hardwareFactory": "sugon",
+    "hardwareFactory": "Dawning Network Technology Co.,Ltd.",
     "hardwareModel": "FortFirm-H3631",
     "osVersion": "openEuler 22.03 LTS",
     "architecture": "x86_64",
     "date": "2023/01/08",
-    "friendlyLink": "http://www.sugon.com",
+    "friendlyLink": "https://network.sugon.com/#/home",
     "boardCards": [
       {
         "vendorID": "1000",
@@ -7989,7 +7989,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "http://www.sugon.com",
+      "productInformation": "https://network.sugon.com/#/home",
       "certificationTime": "2022/01/08",
       "commitID": "",
       "mainboardModel": "GSP-CH326-REV B02",
@@ -8003,12 +8003,12 @@
     }
   },
   {
-    "hardwareFactory": "sugon",
+    "hardwareFactory": "Dawning Network Technology Co.,Ltd.",
     "hardwareModel": "FortFirm-H3651",
     "osVersion": "openEuler 20.03 LTS SP3",
     "architecture": "x86_64",
     "date": "2023/02/09",
-    "friendlyLink": "http://www.sugon.com",
+    "friendlyLink": "https://network.sugon.com/#/home",
     "boardCards": [
       {
         "vendorID": "1000",
@@ -8050,7 +8050,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "http://www.sugon.com",
+      "productInformation": "https://network.sugon.com/#/home",
       "certificationTime": "2022/02/09",
       "commitID": "",
       "mainboardModel": "GSP-CH326-REV B02",
@@ -10385,12 +10385,12 @@
     }
   },
   {
-    "hardwareFactory": "Sugon",
+    "hardwareFactory": "Dawning Network Technology Co.,Ltd.",
     "hardwareModel": "FortFirm-H3652",
     "osVersion": "openEuler 20.03 LTS SP3",
     "architecture": "x86_64",
     "date": "2023/06/06",
-    "friendlyLink": "http://www.sugon.com",
+    "friendlyLink": "https://network.sugon.com/#/home",
     "boardCards": [
       {
         "vendorID": "8088",
@@ -10432,7 +10432,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "http://www.sugon.com",
+      "productInformation": "https://network.sugon.com/#/home",
       "certificationTime": "2023/06/06",
       "commitID": "I7DPDB",
       "mainboardModel": "GSP-CH327-A-1",
@@ -10446,12 +10446,12 @@
     }
   },
   {
-    "hardwareFactory": "Sugon",
+    "hardwareFactory": "Dawning Network Technology Co.,Ltd.",
     "hardwareModel": "FortFirm-H6655",
     "osVersion": "openEuler 20.03 LTS SP3",
     "architecture": "x86_64",
     "date": "2023/06/05",
-    "friendlyLink": "http://www.sugon.com",
+    "friendlyLink": "https://network.sugon.com/#/home",
     "boardCards": [
       {
         "vendorID": "8088",
@@ -10493,7 +10493,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "http://www.sugon.com",
+      "productInformation": "https://network.sugon.com/#/home",
       "certificationTime": "2022/06/05",
       "commitID": "I7DQ2D",
       "mainboardModel": "GSP-CH526-A-1",
