@@ -1,3 +1,5 @@
+import newYear_pc from '@/assets/category/home/banner/new-year_pc.jpg';
+import newYear_mo from '@/assets/category/home/banner/new-year_mo.jpg';
 
 import banner1_pc from '@/assets/category/home/banner/banner1_pc.jpg';
 import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';
@@ -6,6 +8,16 @@ export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
+      {
+        pcBanner: newYear_pc,
+        moBanner: newYear_mo,
+        link: '',
+        id: '',
+        title: [''],
+        desc: [],
+        btn: '',
+        targetTap: 1,
+      },
       {
         pcBanner: banner1_pc,
         moBanner: banner1_mo,
@@ -17,6 +29,16 @@ export default {
       },
     ],
     en: [
+      {
+        pcBanner: newYear_pc,
+        moBanner: newYear_mo,
+        link: '',
+        id: '',
+        title: [''],
+        desc: [],
+        btn: '',
+        targetTap: 1,
+      },
       {
         pcBanner: banner1_pc,
         moBanner: banner1_mo,
