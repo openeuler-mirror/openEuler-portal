@@ -117,7 +117,7 @@ export default {
               {
                 img: jiangdayong,
                 name: '江大勇',
-                position: ['华为技术有限公司'],
+                position: ['开放原子开源基金会'],
               },
             ],
           },
@@ -557,7 +557,7 @@ export default {
               {
                 img: jiangdayong,
                 name: 'Jiang Dayong',
-                position: ['Huawei Technologies Co., Ltd.'],
+                position: ['OpenAtom Foundation'],
               },
             ],
           },
