@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import { computed, ref, onMounted } from 'vue';
+import { computed, ref, onMounted, watch, nextTick } from 'vue';
 import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
 import { useI18n } from '@/i18n';
+
+import type { SearchRecommendT } from '@/shared/@types/type-search';
+
 import { getPop } from '@/api/api-search';
+import { getSearchRecommend } from '@/api/api-search';
+
 import useClickOutside from '@/components/hooks/useClickOutside';
 
 import IconCancel from '~icons/app/icon-cancel.svg';
@@ -22,6 +27,8 @@ const commonStore = useCommon();
 
 // 搜索事件
 function handleSearchEvent() {
+  isShowDrawer.value = false;
+  handleSearch(searchInput.value);
   window.open(
     `/${lang.value}/other/search/?search=${encodeURIComponent(
       searchInput.value
@@ -30,13 +37,10 @@ function handleSearchEvent() {
   );
 }
 // 点击热搜标签
-const onTopSearchItemClick = (val: any) => {
+const onTopSearchItemClick = (val: string) => {
   searchInput.value = val;
   handleSearchEvent();
 };
-const topSearch = computed(() =>
-  lang.value === 'zh' ? '热门搜索' : 'Top search'
-);
 
 const searchValue = computed(() => i18n.value.common.SEARCH);
 // 显示/移除搜索框
@@ -72,6 +76,52 @@ onMounted(() => {
     }
   });
 });
+// ----------------- 联想搜索 -------------------------
+const recommendData = ref<SearchRecommendT[]>([]);
+
+const queryGetSearchRecommend = (val: string) => {
+  getSearchRecommend({
+    query: val,
+  }).then((res) => {
+    recommendData.value = res.obj.word;
+  });
+};
+// queryGetSearchRecommend(searchInput.value);
+
+watch(
+  () => searchInput.value,
+  (val: string) => {
+    if (val) {
+      queryGetSearchRecommend(val);
+    } else {
+      recommendData.value = [];
+    }
+  }
+);
+
+// ----------------------- 历史搜索记录 -----------------------
+const searchHistory = ref<string[]>([]);
+
+const loadSearchHistory = () => {
+  // 从 localStorage 加载搜索历史
+  const history = localStorage.getItem('searchHistory');
+  if (history) {
+    searchHistory.value = JSON.parse(history);
+  }
+};
+loadSearchHistory();
+const handleSearch = (searchValue: string) => {
+  if (searchValue && Array.isArray(searchHistory.value)) {
+    // 添加到历史记录并更新 localStorage
+    searchHistory.value.unshift(searchValue);
+    searchHistory.value = Array.from(new Set(searchHistory.value)); // 去重
+    if (searchHistory.value.length > 6) {
+      // 最多保持6条搜集记录
+      searchHistory.value.pop();
+    }
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory.value));
+  }
+};
 </script>
 <template>
   <div
@@ -84,7 +134,7 @@ onMounted(() => {
       :placeholder="
         isShowDrawer ? searchValue.PLEACHOLDER_EXTEND : searchValue.PLEACHOLDER
       "
-      @change="handleSearchEvent"
+      @keyup.enter="handleSearchEvent"
       @focus="showDrawer"
     >
       <template #prefix>
@@ -96,19 +146,41 @@ onMounted(() => {
     </OInput>
 
     <div v-show="isShowDrawer" class="drawer">
+      <div v-if="recommendData.length && searchInput" class="recommend search-recommend">
+        <div
+          v-for="item in recommendData"
+          class="recommend-item"
+          @click="onTopSearchItemClick(item.key)"
+          :key="item.key"
+        >
+          {{ item.key }}
+        </div>
+      </div>
+      <div v-else-if="searchHistory.length" class="recommend">
+        <span class="history">{{ searchValue.BROWSEHISTORY }}</span>
+        <div
+          v-for="item in searchHistory"
+          class="recommend-item"
+          @click="onTopSearchItemClick(item)"
+          :key="item"
+        >
+          {{ item }}
+        </div>
+      </div>
       <div class="hots">
         <div class="hots-title">
-          <p class="hots-text">{{ topSearch }}</p>
+          <p class="hots-text">{{ searchValue.TOPSEARCH }}</p>
         </div>
         <div class="hots-list">
-          <OTag
+          <div
             v-for="item in popList"
             :key="item"
             type="text"
             class="hots-list-item"
             @click="onTopSearchItemClick(item)"
-            >{{ item }}</OTag
           >
+            {{ item }}
+          </div>
         </div>
       </div>
     </div>
@@ -160,14 +232,13 @@ onMounted(() => {
   .drawer {
     position: absolute;
     height: auto;
-    max-height: 174px;
     overflow: hidden;
     width: 100%;
     margin-top: 21px;
     box-shadow: var(--o-shadow-l4);
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(5px);
-    padding: var(--o-spacing-h3);
+    padding: 24px 0;
 
     @media (max-width: 1100px) {
       background: rgba(255, 255, 255, 1);
@@ -176,21 +247,30 @@ onMounted(() => {
       left: -16px;
       right: 0;
       width: 100vw;
-      padding: var(--o-spacing-h5);
+      padding: var(--o-spacing-h5) 0;
     }
     .hots {
-      &-title {
+      padding: 0 var(--o-spacing-h3);
+      @media (max-width: 1100px) {
+        padding: 0 var(--o-spacing-h5);
+      }
+      .hots-title {
         font-size: var(--o-font-size-tip);
         line-height: var(--o-line-height-tip);
         color: var(--o-color-text1);
       }
-      &-list {
-        &-item {
+      .hots-list {
+        display: flex;
+        flex-wrap: wrap;
+        .hots-list-item {
           margin-top: var(--o-spacing-h5);
           margin-right: var(--o-spacing-h5);
-          background-color: var(--o-color-bg4);
+          margin-right: var(--o-spacing-h5);
           color: var(--o-color-text-secondary);
           cursor: pointer;
+          &:hover {
+            color: var(--o-color-brand1);
+          }
           @media (max-width: 1100px) {
             font-size: var(--o-font-size-tip);
             line-height: var(--o-line-height-tip);
@@ -204,6 +284,40 @@ onMounted(() => {
       }
     }
   }
+}
+
+.recommend {
+  padding-bottom: 24px;
+  & > :first-child {
+    margin-top: 0 !important;
+  }
+  .history {
+    display: flex;
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
+    color: var(--o-color-text1);
+    padding: 0 var(--o-spacing-h3);
+    @media (max-width: 1100px) {
+      padding: 0 var(--o-spacing-h5);
+    }
+  }
+  .recommend-item {
+    cursor: pointer;
+    margin-top: 8px;
+    color: var(--o-color-text-secondary);
+    font-size: var(--o-font-size-h8);
+    padding: 4px var(--o-spacing-h3);
+    @media (max-width: 1100px) {
+      padding: 0 var(--o-spacing-h5);
+    }
+    &:hover {
+      color: var(--o-color-brand1);
+      background-color: var(--o-color-bg1);
+    }
+  }
+}
+.search-recommend {
+  margin-top: -4px;
 }
 .search-icon {
   display: none;
