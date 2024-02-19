@@ -4,6 +4,7 @@ import type {
   AxiosError,
   AxiosInstance,
   AxiosRequestConfig,
+  AxiosRequestHeaders,
   AxiosResponse,
   AxiosStatic,
 } from 'axios';
@@ -16,14 +17,10 @@ import { tokenFailIndicateLogin } from '../login';
 
 interface RequestConfig<D = any> extends AxiosRequestConfig {
   data?: D;
-  $doException?: boolean; // 是否弹出错误提示框
-  $ignoreLoading?: boolean; // 是否出现loading框
+  showLoading?: boolean; // 加载时是否出现Loading框，默认为false
+  showError?: boolean; // 请求报错是否出现错误提示，默认为false
   global?: boolean; // 是否为全局请求， 全局请求在清除请求池时，不清除
 }
-
-// 全局loading
-let loadingInstance: LoadingInstance | null = null;
-let loadingCount = 0;
 
 interface RequestInstance extends AxiosInstance {
   removeRequestInterceptor(): void;
@@ -66,6 +63,14 @@ interface RequestInstance extends AxiosInstance {
   ): Promise<R>;
 }
 
+interface InternalRequestConfig extends RequestConfig {
+  headers: AxiosRequestHeaders;
+}
+
+// 全局loading
+let loadingInstance: LoadingInstance | null = null;
+let loadingCount = 0;
+
 /**
  * request是基于axios创建的实例，实例只有常见的数据请求方法，没有axios.isCancel/ axios.CancelToken等方法，
  * 也就是没有**取消请求**和**批量请求**的方法。
@@ -81,8 +86,8 @@ const pendingPool: Map<string, any> = new Map();
  * 请求拦截
  */
 const requestInterceptorId = request.interceptors.request.use(
-  (config: RequestConfig) => {
-    if (loadingCount === 0 && !config.$ignoreLoading) {
+  (config: InternalRequestConfig) => {
+    if (config.showLoading) {
       loadingInstance = ElLoading.service({
         fullscreen: true,
         target: 'body',
@@ -90,24 +95,23 @@ const requestInterceptorId = request.interceptors.request.use(
         background: 'transparent',
       });
     }
-    (config as RequestConfig).$ignoreLoading ? '' : loadingCount++;
+
     // 存储请求信息
-    // request.config = Object.assign({}, config);
     // 定义取消请求
     config.cancelToken = new axios.CancelToken((cancelFn) => {
       if (!config.url) {
         return;
       }
-      // // 如果已请求，则取消重复请求
-      // if (pendingPool.has(config.url)) {
-      //   cancelFn(`${config.url}请求重复`);
-      // } else {
-      // 存储到请求池
-      pendingPool.set(config.url, {
-        cancelFn,
-        global: (config as RequestConfig).global,
-      });
-      // }
+      // 如果已请求，则取消重复请求
+      if (pendingPool.has(config.url)) {
+        cancelFn(`${config.url}请求重复`);
+      } else {
+        // 存储到请求池
+        pendingPool.set(config.url, {
+          cancelFn,
+          global: config.global,
+        });
+      }
     });
     return config;
   },
@@ -121,10 +125,9 @@ const requestInterceptorId = request.interceptors.request.use(
  */
 const responseInterceptorId = request.interceptors.response.use(
   (response: AxiosResponse) => {
-    const { config } = response;
-    (config as RequestConfig).$ignoreLoading ? '' : loadingCount--;
+    const config = response.config as InternalRequestConfig;
 
-    if (loadingCount === 0 && loadingInstance) {
+    if (loadingInstance) {
       loadingInstance.close();
       loadingInstance = null;
     }
@@ -138,38 +141,45 @@ const responseInterceptorId = request.interceptors.response.use(
   (err: AxiosError) => {
     if (loadingInstance) {
       loadingInstance.close();
+      loadingInstance = null;
     }
-    const { config } = err;
-    // if (!(config as RequestConfig).$doException) {
-    //   ElMessage({
-    //     type: 'error',
-    //     message: err.toString(),
-    //   });
-    // }
+
+    const config = err.config as InternalRequestConfig;
+
     // 非取消请求发生异常，同样将请求移除请求池
     if (!axios.isCancel(err) && config.url) {
       pendingPool.delete(config.url);
     }
 
     if (err.response) {
-      err = handleError(err);
-      // 无效token跳转登录
-      if (err.code === '401') {
-        tokenFailIndicateLogin();
+      if (err.stack && err.stack.includes('timeout')) {
+        err.message = '请求超时!';
       }
-    }
-    // 没有response(没有状态码)的情况
-    // 如: 超时；断网；请求重复被取消；主动取消请求；
-    else {
-      // 被取消的请求
-      if (axios.isCancel(err)) {
-        throw new axios.Cancel(err.message || `请求'${config.url}'被取消`);
-      } else if (err.stack && err.stack.includes('timeout')) {
+      err = handleError(err);
+    } else {
+      if (err.stack && err.stack.includes('timeout')) {
         err.message = '请求超时!';
       } else {
         err.message = '连接服务器失败!';
       }
+
+      if (axios.isCancel(err)) {
+        throw new axios.Cancel(err.message || `请求'${config.url}'被取消`);
+      }
     }
+
+    if (config.showError) {
+      ElMessage({
+        type: 'error',
+        message: err.message.toString(),
+      });
+    }
+
+    // token过期，重新登录
+    if (err.response?.status === 401) {
+      tokenFailIndicateLogin();
+    }
+
     return Promise.reject(err).catch(() => {});
   }
 );
@@ -216,11 +226,5 @@ request.removeRequestInterceptor = removeRequestInterceptor;
 request.removeResponseInterceptor = removeResponseInterceptor;
 request.clearPendingPool = clearPendingPool;
 
-export {
-  intactRequest,
-  request,
-  // interface
-  AxiosResponse,
-  RequestConfig,
-  RequestInstance,
-};
+export { intactRequest, request };
+export type { AxiosResponse, RequestConfig, RequestInstance };

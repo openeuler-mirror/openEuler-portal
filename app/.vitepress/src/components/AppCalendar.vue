@@ -31,7 +31,6 @@ const renderData = ref<TableDataT>({
   date: '',
   timeData: [],
 });
-const loading = ref(false);
 const currentDay = ref({
   raw: '',
   resolve: '',
@@ -121,7 +120,6 @@ function setMeetingDay(day: string, event: Event) {
 }
 
 function paramGetDaysData(params: { date: string; type: string }) {
-  loading.value = true;
   getDaysData(params)
     .then((res) => {
       renderData.value = res.data;
@@ -151,9 +149,6 @@ function paramGetDaysData(params: { date: string; type: string }) {
         });
       }
     })
-    .finally(() => {
-      loading.value = false;
-    });
 }
 
 function selectDate(val: string, date: string) {
@@ -336,7 +331,6 @@ const watchData = watch(
             (renderData.timeData.length && renderData.date) ||
             (renderData.timeData.length && renderData.start_date)
           "
-          v-loading="loading"
           class="demo-collapse"
         >
           <o-collapse v-model="activeName" accordion @change="changeCollapse()">

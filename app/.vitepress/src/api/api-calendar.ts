@@ -18,7 +18,6 @@ export function getMeetingActivity(params: { type: string }): Promise<{
   return request
     .get(url, {
       params,
-      $ignoreLoading: true,
     })
     .then((res: AxiosResponse) => res.data);
 }
@@ -38,7 +37,6 @@ export function getDaysData(params: { date: string; type: string }): Promise<{
   return request
     .get(url, {
       params,
-      $ignoreLoading: true,
     })
     .then((res: AxiosResponse) => res.data);
 }

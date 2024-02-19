@@ -26,12 +26,14 @@ interface LatestActivity {
   windowOpen: string;
   [propName: string]: any;
 }
-// system variable
+
 const commonStore = useCommon();
 const { lang } = useData();
 const router = useRouter();
 
 const total = ref(0);
+
+const loading = ref(true);
 
 const allReviewList: Ref<Array<LatestActivity>> = ref([]);
 
@@ -56,19 +58,24 @@ const jumpPage = (val: number) => {
 };
 
 const paramsGetSalon = () => {
+  loading.value = true;
   getSalon({
     page: params.currentPage,
     size: params.pageSize,
     activity: 'completed',
-  }).then((res) => {
-    total.value = res.total;
-    res.data.reverse();
-    allReviewList.value = [];
-    res.data.forEach((item: LatestActivity) => {
-      item.posterImg = `https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/website-meetup/website${item.poster}.png`;
-      allReviewList.value.unshift(item);
+  })
+    .then((res) => {
+      total.value = res.total;
+      res.data.reverse();
+      allReviewList.value = [];
+      res.data.forEach((item: LatestActivity) => {
+        item.posterImg = `https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/website-meetup/website${item.poster}.png`;
+        allReviewList.value.unshift(item);
+      });
+    })
+    .finally(() => {
+      loading.value = false;
     });
-  });
 };
 onMounted(() => {
   paramsGetSalon();
@@ -86,7 +93,7 @@ watch(
 
 <template>
   <AppContent class="salon-content">
-    <div class="salon-review-mian">
+    <div v-loading="loading" element-loading-background="transparent" class="salon-review-mian">
       <template v-if="allReviewList?.length">
         <div class="salon-review">
           <OCard
@@ -157,7 +164,7 @@ watch(
           </ClientOnly>
         </div>
       </template>
-      <div v-else>
+      <div v-else-if="!loading">
         <div class="nofound">
           <img
             class="empty-img"
@@ -183,7 +190,9 @@ watch(
     transition: none;
   }
 }
-
+.salon-review-mian {
+  min-height: 420px;
+}
 .nofound {
   display: flex;
   justify-content: center;

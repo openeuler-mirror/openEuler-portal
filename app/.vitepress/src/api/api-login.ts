@@ -20,8 +20,6 @@ export function queryPermission(params: queryPermissionParams) {
     .get(url, {
       params,
       global: true,
-      $doException: true,
-      $ignoreLoading: true,
       headers: {
         token,
       },
@@ -47,8 +45,6 @@ export function modifyUser(body: any) {
   return request
     .post(url, body, {
       global: true,
-      $doException: true,
-      $ignoreLoading: true,
       headers: {
         token,
       },

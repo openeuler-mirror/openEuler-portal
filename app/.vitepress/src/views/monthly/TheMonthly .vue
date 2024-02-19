@@ -47,6 +47,8 @@ const tagsParams = reactive({
 const i18n = useI18n();
 const userCaseData = computed(() => i18n.value.interaction);
 
+const loading = ref(true);
+
 const toNewsContent = (path: string) => {
   router.go(`/${path}`);
 };
@@ -72,6 +74,7 @@ const changeTime = () => {
 
 //获取数据
 const getListData = (params: ParamsTypeT) => {
+  loading.value = true;
   getSortData(params)
     .then((res) => {
       if (res.obj.count) {
@@ -87,8 +90,8 @@ const getListData = (params: ParamsTypeT) => {
         }
       }
     })
-    .catch((error: any) => {
-      console.error(error);
+    .finally(() => {
+      loading.value = false;
     });
 };
 
@@ -147,49 +150,55 @@ const pageTotal = computed(() =>
         </ClientOnly>
       </div>
     </div>
-    <template v-if="newsCardData.length">
-      <div class="news-list">
-        <OCard
-          v-for="item in newsCardData"
-          :key="item.path"
-          class="news-list-item"
-          shadow="hover"
-          @click="toNewsContent(item.path)"
-        >
-          <div class="news-img">
-            <img :src="item.banner" :alt="item.banner" />
-          </div>
-          <div class="news-info">
-            <p class="news-title">{{ item.title }}</p>
-            <p class="news-time">{{ item.date }}</p>
-            <p class="news-content">
-              {{ item.summary }}
-            </p>
-          </div>
-        </OCard>
-      </div>
-      <div class="news-pagination">
-        <ClientOnly>
-          <OPagination
-            v-model:current-page="paginationData.currentpage"
-            v-model:page-size="paginationData.pagesize"
-            :background="true"
-            :hide-on-single-page="true"
-            layout="sizes, prev, pager, next, slot, jumper"
-            :total="paginationData.total"
-            :page-sizes="[3, 6, 9]"
-            @current-change="changeCurrent"
-            @size-change="changeCurrent(1)"
-            @jump-page="changeCurrent"
+    <div
+      v-loading="loading"
+      element-loading-background="transparent"
+      class="monthly-body"
+    >
+      <template v-if="newsCardData.length">
+        <div class="news-list">
+          <OCard
+            v-for="item in newsCardData"
+            :key="item.path"
+            class="news-list-item"
+            shadow="hover"
+            @click="toNewsContent(item.path)"
           >
-            <span class="pagination-slot"
-              >{{ paginationData.currentpage }}/{{ pageTotal }}</span
+            <div class="news-img">
+              <img :src="item.banner" :alt="item.banner" />
+            </div>
+            <div class="news-info">
+              <p class="news-title">{{ item.title }}</p>
+              <p class="news-time">{{ item.date }}</p>
+              <p class="news-content">
+                {{ item.summary }}
+              </p>
+            </div>
+          </OCard>
+        </div>
+        <div class="news-pagination">
+          <ClientOnly>
+            <OPagination
+              v-model:current-page="paginationData.currentpage"
+              v-model:page-size="paginationData.pagesize"
+              :background="true"
+              :hide-on-single-page="true"
+              layout="sizes, prev, pager, next, slot, jumper"
+              :total="paginationData.total"
+              :page-sizes="[3, 6, 9]"
+              @current-change="changeCurrent"
+              @size-change="changeCurrent(1)"
+              @jump-page="changeCurrent"
             >
-          </OPagination>
-        </ClientOnly>
-      </div>
-    </template>
-    <NotFound v-else />
+              <span class="pagination-slot"
+                >{{ paginationData.currentpage }}/{{ pageTotal }}</span
+              >
+            </OPagination>
+          </ClientOnly>
+        </div>
+      </template>
+      <NotFound v-else-if="!loading" />
+    </div>
   </AppContent>
 </template>
 
@@ -200,6 +209,10 @@ const pageTotal = computed(() =>
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+
+.monthly-body {
+  min-height: 420px;
 }
 :deep(.el-card__body) {
   padding: 0;

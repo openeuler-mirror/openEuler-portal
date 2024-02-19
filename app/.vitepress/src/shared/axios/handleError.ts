@@ -7,7 +7,7 @@ export default (err: AxiosError) => {
       err.code = '';
       err.message = '有response但没有response.status的情况';
     }
-    err.code = String(response.status);
+
     switch (response && response.status) {
       case 200:
         err.message = '错误响应也会有状态码为200的情况';

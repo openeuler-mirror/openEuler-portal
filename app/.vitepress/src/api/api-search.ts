@@ -61,7 +61,7 @@ export function getSortData(params: SortParams): Promise<{
 }> {
   const url = '/api-search/search/sort';
   return request
-    .post(url, params, { $ignoreLoading: true })
+    .post(url, params)
     .then((res: AxiosResponse) => res.data)
     .catch((err) => {
       throw new Error(err);
@@ -91,11 +91,7 @@ export function getTagsData(params: TagsParams): Promise<{
   status: number;
 }> {
   const url = '/api-search/search/tags';
-  return request
-    .post(url, params, {
-      $ignoreLoading: true,
-    })
-    .then((res: AxiosResponse) => res.data);
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 /**
  * 获取搜索结果
@@ -108,11 +104,7 @@ export function getSearchData(params: Search): Promise<{
   status: number;
 }> {
   const url = '/api-search/search/docs';
-  return request
-    .post(url, params, {
-      $ignoreLoading: true,
-    })
-    .then((res: AxiosResponse) => res.data);
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 /**
  * 获取搜索各类型结果数量
@@ -125,11 +117,7 @@ export function getSearchCount(params: SearchCountQueryT): Promise<{
   status: number;
 }> {
   const url = '/api-search/search/count';
-  return request
-    .post(url, params, {
-      $ignoreLoading: true,
-    })
-    .then((res: AxiosResponse) => res.data);
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 /**
  * 获取相关软件包数据
@@ -145,8 +133,6 @@ export function getSearchRpm(params: { keyword: string }): Promise<{
   const url = '/api-node/repo/search';
   return request
     .get(url, {
-      $ignoreLoading: true,
-      $doException: true,
       params,
     })
     .then((res: AxiosResponse) => res.data);
@@ -162,11 +148,7 @@ export function getPop(params: string): Promise<{
   status: number;
 }> {
   const url = `/api-search/search/pop?${params}`;
-  return request
-    .post(url, null, {
-      $ignoreLoading: true,
-    })
-    .then((res: AxiosResponse) => res.data);
+  return request.post(url).then((res: AxiosResponse) => res.data);
 }
 
 /**
@@ -181,9 +163,7 @@ export function getRelevant(params: RelevantQueryT): Promise<{
 }> {
   const url = `/api-search/search/sugg`;
   return request
-    .post(url, params, {
-      $ignoreLoading: true,
-    })
+    .post(url, params)
     .then((res: AxiosResponse) => res.data)
     .catch((e: any) => {
       throw new Error(e);
@@ -202,11 +182,7 @@ export function getStatistic(): Promise<{
   update_at: string;
 }> {
   const url = '/api-dsapi/query/all?community=openEuler';
-  return request
-    .get(url, {
-      $ignoreLoading: true,
-    })
-    .then((res: AxiosResponse) => res.data);
+  return request.get(url).then((res: AxiosResponse) => res.data);
 }
 /**
  * 搜索chat输出
@@ -272,6 +248,7 @@ export function meetupApplyForm(params: any): Promise<{
   const { token } = getUserAuth();
   return request
     .post(url, params, {
+      showLoading: true,
       headers: {
         token,
       },

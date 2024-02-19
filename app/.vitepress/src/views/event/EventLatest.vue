@@ -24,10 +24,12 @@ interface LatestActivity {
   windowOpen: string;
   [propName: string]: any;
 }
-// system variable
+
 const commonStore = useCommon();
 const { lang } = useData();
 const router = useRouter();
+
+const loading = ref(true);
 
 // 本月及以后最新活动列表
 const latestList: Ref<Array<LatestActivity>> = ref([]);
@@ -54,19 +56,24 @@ const jumpPage = (val: number) => {
 };
 
 const paramsGetSalon = () => {
+  loading.value = true;
   getSalon({
     page: params.currentPage,
     size: params.pageSize,
     activity: 'registering',
-  }).then((res) => {
-    total.value = res.total;
-    res.data.reverse();
-    latestList.value = [];
-    res.data.forEach((item: LatestActivity) => {
-      item.posterImg = `https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/website-meetup/website${item.poster}.png`;
-      latestList.value.unshift(item);
+  })
+    .then((res) => {
+      total.value = res.total;
+      res.data.reverse();
+      latestList.value = [];
+      res.data.forEach((item: LatestActivity) => {
+        item.posterImg = `https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/website-meetup/website${item.poster}.png`;
+        latestList.value.unshift(item);
+      });
+    })
+    .finally(() => {
+      loading.value = false;
     });
-  });
 };
 onMounted(() => {
   paramsGetSalon();
@@ -83,7 +90,7 @@ watch(
 </script>
 <template>
   <AppContent class="salon-content">
-    <main>
+    <div v-loading="loading" element-loading-background="transparent" class="event-body">
       <template v-if="latestList?.length">
         <div class="salon-review">
           <OCard
@@ -154,7 +161,7 @@ watch(
         </div>
       </template>
 
-      <div v-else>
+      <div v-else-if="!loading">
         <div class="nofound">
           <img
             class="empty-img"
@@ -170,7 +177,7 @@ watch(
           </p>
         </div>
       </div>
-    </main>
+    </div>
   </AppContent>
 </template>
 
@@ -179,6 +186,10 @@ watch(
   :deep(.el-tabs__active-bar) {
     transition: none;
   }
+}
+
+.event-body {
+  min-height: 420px;
 }
 
 .nofound {
