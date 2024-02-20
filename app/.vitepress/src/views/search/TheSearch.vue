@@ -294,7 +294,7 @@ function searchDataAll() {
   try {
     searchResultList.value = [];
     resultHeight.value = 400;
-    isLoading.value=true
+    isLoading.value = true;
     // 版本为全部时 limit 不传
     if (activeVersion.value === i18n.value.search.tagList.all) {
       searchData.value.limit = [];
@@ -325,10 +325,10 @@ function searchDataAll() {
         searchResultList.value = [];
         isNotFound.value = true;
       }
-      isLoading.value=false
+      isLoading.value = false;
     });
   } catch (error: any) {
-    isLoading.value=false
+    isLoading.value = false;
     console.error(error);
   }
 }
@@ -680,7 +680,13 @@ const isNotRpm = ref(false);
             </ClientOnly>
           </div>
           <!-- 搜索内容列表 -->
-          <div ref="resultRef" class="content-box" v-loading="isLoading"  element-loading-text="Loading...">
+          <div
+            ref="resultRef"
+            class="content-box"
+            v-loading="isLoading"
+            element-loading-text="Loading..."
+            element-loading-background="transparent"
+          >
             <ul v-if="searchResultList.length" class="content-list">
               <li v-for="(item, index) in searchResultList" :key="item.id">
                 <h3
@@ -771,8 +777,14 @@ const isNotRpm = ref(false);
     display: grid;
     grid-template-columns: 1fr minmax(150px, 320px);
     grid-gap: 32px;
+    @media (max-width: 1200px) {
+      display: block;
+    }
   }
   .search-input {
+    @media (max-width: 768px) {
+      padding: 0 16px;
+    }
     :deep(.el-input__suffix-inner) {
       svg {
         cursor: pointer;
@@ -1067,7 +1079,7 @@ const isNotRpm = ref(false);
             width: 100vw;
             padding: var(--o-spacing-h5) var(--o-spacing-h5) 0
               var(--o-spacing-h5);
-            min-height: 0;
+            min-height: 200px;
             background-color: var(--o-color-bg1);
             box-shadow: none;
           }
