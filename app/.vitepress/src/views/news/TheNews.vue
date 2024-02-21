@@ -4,7 +4,6 @@ import { useRouter, useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
-// import MobileFilter from '@/components/MobileFilter.vue';
 import NotFound from '@/NotFound.vue';
 import AppContent from '@/components/AppContent.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
@@ -43,6 +42,8 @@ const tagsParams = reactive({
 });
 const i18n = useI18n();
 const userCaseData = computed(() => i18n.value.interaction);
+
+const loading = ref(true);
 
 const toNewsContent = (path: string) => {
   router.go(`/${path}`);
@@ -299,6 +300,7 @@ const getTagsList = () => {
 
 //获取数据
 const getListData = (params: ParamsTypeT) => {
+  loading.value = true;
   getSortData(params)
     .then((res) => {
       if (res.obj.count) {
@@ -314,8 +316,8 @@ const getListData = (params: ParamsTypeT) => {
         }
       }
     })
-    .catch((error: any) => {
-      console.error(error);
+    .finally(() => {
+      loading.value = false;
     });
 };
 
@@ -424,48 +426,50 @@ const pageTotal = computed(() =>
         </ClientOnly>
       </div>
     </div>
-    <template v-if="newsCardData.length">
-      <div class="news-list">
-        <OCard
-          v-for="item in newsCardData"
-          :key="item.path"
-          class="news-list-item"
-          shadow="hover"
-          @click="toNewsContent(item.path)"
-        >
-          <div class="news-img">
-            <img :src="item.banner" :alt="item.banner" />
-          </div>
-          <div class="news-info">
-            <p class="news-title">{{ item.title }}</p>
-            <p class="news-time">{{ item.date }}</p>
-            <p class="news-content">
-              {{ item.summary }}
-            </p>
-          </div>
-        </OCard>
-      </div>
-      <div class="news-pagination">
-        <ClientOnly>
-          <OPagination
-            v-model:current-page="paginationData.currentpage"
-            v-model:page-size="paginationData.pagesize"
-            :background="true"
-            layout="sizes, prev, pager, next, slot, jumper"
-            :total="paginationData.total"
-            :page-sizes="[3, 6, 9]"
-            @current-change="changeCurrent"
-            @size-change="changeCurrent(1)"
-            @jump-page="changeCurrent"
+    <div v-loading="loading" element-loading-background="transparent" class="news-body">
+      <template v-if="newsCardData.length">
+        <div class="news-list">
+          <OCard
+            v-for="item in newsCardData"
+            :key="item.path"
+            class="news-list-item"
+            shadow="hover"
+            @click="toNewsContent(item.path)"
           >
-            <span class="pagination-slot"
-              >{{ paginationData.currentpage }}/{{ pageTotal }}</span
+            <div class="news-img">
+              <img :src="item.banner" :alt="item.banner" />
+            </div>
+            <div class="news-info">
+              <p class="news-title">{{ item.title }}</p>
+              <p class="news-time">{{ item.date }}</p>
+              <p class="news-content">
+                {{ item.summary }}
+              </p>
+            </div>
+          </OCard>
+        </div>
+        <div class="news-pagination">
+          <ClientOnly>
+            <OPagination
+              v-model:current-page="paginationData.currentpage"
+              v-model:page-size="paginationData.pagesize"
+              :background="true"
+              layout="sizes, prev, pager, next, slot, jumper"
+              :total="paginationData.total"
+              :page-sizes="[3, 6, 9]"
+              @current-change="changeCurrent"
+              @size-change="changeCurrent(1)"
+              @jump-page="changeCurrent"
             >
-          </OPagination>
-        </ClientOnly>
-      </div>
-    </template>
-    <NotFound v-else />
+              <span class="pagination-slot"
+                >{{ paginationData.currentpage }}/{{ pageTotal }}</span
+              >
+            </OPagination>
+          </ClientOnly>
+        </div>
+      </template>
+      <NotFound v-else-if="!loading" />
+    </div>
   </AppContent>
 </template>
 
@@ -493,6 +497,9 @@ const pageTotal = computed(() =>
 }
 .dark img {
   filter: brightness(0.8) grayscale(0.2) contrast(1.2);
+}
+.news-body {
+  min-height: 328px; // 只有一行卡片时的高度
 }
 .news-pagination {
   margin-top: var(--o-spacing-h2);

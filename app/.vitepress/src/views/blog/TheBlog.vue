@@ -25,6 +25,8 @@ const { lang } = useData();
 const i18n = useI18n();
 const userCaseData = computed(() => i18n.value.interaction);
 
+const loading = ref(true);
+
 // 博客列表
 const sortParams = reactive({
   page: 1,
@@ -99,6 +101,7 @@ const getTagsList = () => {
 };
 // 获取列表数据
 const getListData = (params: ParamsTypeT) => {
+  loading.value = true;
   sortBlogData(params)
     .then((res) => {
       if (res.obj?.count) {
@@ -119,8 +122,8 @@ const getListData = (params: ParamsTypeT) => {
         }
       }
     })
-    .catch((error: any) => {
-      console.error(error);
+    .finally(() => {
+      loading.value = false;
     });
 };
 
@@ -455,80 +458,82 @@ const changeCurrentPageMoblie = (val: number) => {
         </ClientOnly>
       </div>
     </div>
-    <template v-if="blogCardData.length">
-      <div class="blog-list">
-        <OCard
-          v-for="item in blogCardData"
-          :key="item"
-          shadow="hover"
-          class="blog-list-item"
-          @click="toBlogContent(item.path)"
-        >
-          <p class="blog-list-item-title">
-            {{ item.title }}
-          </p>
-          <div class="blog-list-body">
-            <div
-              class="blog-list-item-info"
-              :class="lang === 'en' ? 'en-blog-list' : ''"
-            >
-              <div class="info-detail">
-                <OIcon class="icon"><IconUser /></OIcon>
-                <p v-for="(aut, index2) in item.author" :key="aut">
-                  {{ aut
-                  }}<span v-show="item.author.length !== index2 + 1">,</span>
-                </p>
-              </div>
-              <div class="info-detail">
-                <OIcon class="icon"><IconCalendar /></OIcon>
-                <p>
-                  {{ item.archives }}
-                </p>
-              </div>
-              <div v-if="item.views" class="info-detail">
-                <OIcon class="icon"><IconBrowse /></OIcon>
-                <p>
-                  {{ userCaseData.BROWSE }} {{ item.views }}
-                  {{ userCaseData.TIMES }}
-                </p>
-              </div>
-            </div>
-            <p class="blog-list-item-content">
-              {{ item.summary }}
-            </p>
-          </div>
-          <div class="blog-list-item-tags">
-            <OTag
-              v-for="tag in item.tags"
-              :key="tag"
-              type="secondary"
-              class="tag-item"
-              >{{ tag }}</OTag
-            >
-          </div>
-        </OCard>
-      </div>
-      <div class="blog-pagination">
-        <ClientOnly>
-          <OPagination
-            v-model:current-page="paginationData.currentpage"
-            v-model:page-size="paginationData.pagesize"
-            :background="true"
-            layout="sizes, prev, pager, next, slot, jumper"
-            :total="paginationData.total"
-            :page-sizes="[3, 6, 9]"
-            @current-change="changeCurrentPage"
-            @size-change="changeCurrentPage(1)"
-            @jump-page="changeCurrentPageMoblie"
+    <div v-loading="loading" element-loading-background="transparent"  class="blog-body">
+      <template v-if="blogCardData.length">
+        <div class="blog-list">
+          <OCard
+            v-for="item in blogCardData"
+            :key="item"
+            shadow="hover"
+            class="blog-list-item"
+            @click="toBlogContent(item.path)"
           >
-            <span class="pagination-slot"
-              >{{ paginationData.currentpage }}/{{ pageTotal }}</span
+            <p class="blog-list-item-title">
+              {{ item.title }}
+            </p>
+            <div class="blog-list-body">
+              <div
+                class="blog-list-item-info"
+                :class="lang === 'en' ? 'en-blog-list' : ''"
+              >
+                <div class="info-detail">
+                  <OIcon class="icon"><IconUser /></OIcon>
+                  <p v-for="(aut, index2) in item.author" :key="aut">
+                    {{ aut
+                    }}<span v-show="item.author.length !== index2 + 1">,</span>
+                  </p>
+                </div>
+                <div class="info-detail">
+                  <OIcon class="icon"><IconCalendar /></OIcon>
+                  <p>
+                    {{ item.archives }}
+                  </p>
+                </div>
+                <div v-if="item.views" class="info-detail">
+                  <OIcon class="icon"><IconBrowse /></OIcon>
+                  <p>
+                    {{ userCaseData.BROWSE }} {{ item.views }}
+                    {{ userCaseData.TIMES }}
+                  </p>
+                </div>
+              </div>
+              <p class="blog-list-item-content">
+                {{ item.summary }}
+              </p>
+            </div>
+            <div class="blog-list-item-tags">
+              <OTag
+                v-for="tag in item.tags"
+                :key="tag"
+                type="secondary"
+                class="tag-item"
+                >{{ tag }}</OTag
+              >
+            </div>
+          </OCard>
+        </div>
+        <div class="blog-pagination">
+          <ClientOnly>
+            <OPagination
+              v-model:current-page="paginationData.currentpage"
+              v-model:page-size="paginationData.pagesize"
+              :background="true"
+              layout="sizes, prev, pager, next, slot, jumper"
+              :total="paginationData.total"
+              :page-sizes="[3, 6, 9]"
+              @current-change="changeCurrentPage"
+              @size-change="changeCurrentPage(1)"
+              @jump-page="changeCurrentPageMoblie"
             >
-          </OPagination>
-        </ClientOnly>
-      </div>
-    </template>
-    <NotFound v-else />
+              <span class="pagination-slot"
+                >{{ paginationData.currentpage }}/{{ pageTotal }}</span
+              >
+            </OPagination>
+          </ClientOnly>
+        </div>
+      </template>
+      <NotFound v-else-if="!loading" />
+    </div>
   </AppContent>
 </template>
 
@@ -570,6 +575,9 @@ const changeCurrentPageMoblie = (val: number) => {
       font-size: var(--o-font-size-text);
     }
   }
+}
+.blog-body {
+  min-height: 328px;
 }
 .blog-select {
   display: flex;

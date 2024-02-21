@@ -17,7 +17,6 @@ import banner from '@/assets/banner/banner-community.png';
 import search from '@/assets/illustrations/search.png';
 import { addSearchBuriedData } from '@/shared/utils';
 
-const keyWord = ref('');
 const i18n = useI18n();
 const { lang } = useData();
 const cookieStatus = useCookieStatus();
@@ -25,6 +24,9 @@ const cookieStatus = useCookieStatus();
 const userCaseData = computed(() => i18n.value.showcase);
 // 当前选中的tag
 const currentTag = ref(userCaseData.value.tags[0]);
+const keyWord = ref('');
+
+const loading = ref(true);
 
 const activeIndex = ref(0);
 const selectTypeTag = (i: number, type: string) => {
@@ -91,14 +93,7 @@ const isTopNavMo = computed(() => {
     return false;
   }
 });
-// 移动端翻页事件
-function turnPage(option: string) {
-  if (option === 'prev' && currentPage.value > 1) {
-    currentPage.value = currentPage.value - 1;
-  } else if (option === 'next' && currentPage.value < totalPage.value) {
-    currentPage.value = currentPage.value + 1;
-  }
-}
+
 // 移动端跳转翻页
 function jumpPage(page: number) {
   currentPage.value = page;
@@ -141,8 +136,9 @@ const initSensors = (link: string, item: any, index: number) => {
 
 // 设置当前tag的所有案例
 function setCurrentCaseListAll() {
-  try {
-    getUserCaseData(data.value).then((res: any) => {
+  loading.value = true;
+  getUserCaseData(data.value)
+    .then((res: any) => {
       currentCaseListAll.value = [];
       if (res.status === 200 && res.obj.records) {
         CaseListAll.value = res.obj.records;
@@ -159,10 +155,10 @@ function setCurrentCaseListAll() {
         currentCaseListAll.value = [];
       }
       filterCase();
+    })
+    .finally(() => {
+      loading.value = false;
     });
-  } catch (error: any) {
-    console.error(error);
-  }
 }
 // 根据tag筛选需要显示的案例
 function filterCase() {
@@ -292,31 +288,37 @@ onMounted(() => {
         </OButton>
       </a>
     </div>
-    <div class="case-list">
-      <OCard
-        v-for="(item, index) in currentCaseList"
-        :key="item.path"
-        shadow="hover"
-        class="case-card"
-      >
-        <div class="card-content-text">
-          <h4>{{ item.title }}</h4>
-          <p class="detail">
-            {{ item.summary }}
-          </p>
-          <a @click="goDetail(item.path, item, index)">
-            <OButton type="primary" size="mini" class="confirm-btn">{{
-              userCaseData.button
-            }}</OButton>
-          </a>
-        </div>
-        <div class="card-type-img">
-          <img :src="item.img" alt="" />
-          <p class="type">{{ item.industry }}</p>
-        </div>
-      </OCard>
+    <div
+      v-loading="loading"
+      element-loading-background="transparent"
+      class="case-body"
+    >
+      <div class="case-list">
+        <OCard
+          v-for="(item, index) in currentCaseList"
+          :key="item.path"
+          shadow="hover"
+          class="case-card"
+        >
+          <div class="card-content-text">
+            <h4>{{ item.title }}</h4>
+            <p class="detail">
+              {{ item.summary }}
+            </p>
+            <a @click="goDetail(item.path, item, index)">
+              <OButton type="primary" size="mini" class="confirm-btn">{{
+                userCaseData.button
+              }}</OButton>
+            </a>
+          </div>
+          <div class="card-type-img">
+            <img :src="item.img" alt="" />
+            <p class="type">{{ item.industry }}</p>
+          </div>
+        </OCard>
+      </div>
+      <NotFound v-if="!total && !loading" />
     </div>
-    <NotFound v-if="total === 0" />
     <div v-if="isShow" class="page-box">
       <ClientOnly>
         <OPagination
@@ -353,6 +355,9 @@ onMounted(() => {
       }
     }
   }
+}
+.case-body {
+  min-height: 200px;
 }
 .user-case {
   max-width: 1504px;

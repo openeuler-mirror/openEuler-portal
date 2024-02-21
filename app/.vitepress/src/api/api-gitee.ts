@@ -13,9 +13,10 @@ export function getGiteeContent(params: GiteeParamsT): Promise<{
   code: number;
   data: string;
   msg: string;
-  update_at: string
+  update_at: string;
 }> {
   const url = `/api-dsapi/query/repo/readme?community=${params.owner}&name=${params.path}`;
-  return request.get(url).then((res: AxiosResponse) => res.data);
+  return request
+    .get(url, { showLoading: true })
+    .then((res: AxiosResponse) => res.data);
 }
-

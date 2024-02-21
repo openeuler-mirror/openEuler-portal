@@ -164,29 +164,28 @@ const editionList = ref([
           </div>
         </div>
       </div>
-      <!-- openEuler Meetup 申请攻略 -->
-      <OCard class="meetup-form">
-        <div class="info">
-          <h3>openEuler Meetup 申请攻略</h3>
-          <p class="desc">
-            无论是企业、SIG 组、用户组、科研院所或其他组织，我们都欢迎与
-            openEuler
-            一起组织开发者活动，共同探讨前沿技术和开源发展趋势，分享创新成果和实践经验，与
-            openEuler 社区共同成长！
-          </p>
-        </div>
-        <div class="meetup-form-btn">
-          <a href="/zh/interaction/event-list/collect/">
-            <OButton type="outline" animation size="mini">
-              查看攻略
-              <template #suffixIcon>
-                <OIcon class="right-icon"><IconRight /></OIcon>
-              </template>
-            </OButton>
-          </a>
-        </div>
-      </OCard>
     </div>
+    <!-- openEuler Meetup 申请攻略 -->
+    <OCard class="meetup-form">
+      <div class="info">
+        <h3>openEuler Meetup 申请攻略</h3>
+        <p class="desc">
+          无论是企业、SIG 组、用户组、科研院所或其他组织，我们都欢迎与 openEuler
+          一起组织开发者活动，共同探讨前沿技术和开源发展趋势，分享创新成果和实践经验，与
+          openEuler 社区共同成长！
+        </p>
+      </div>
+      <div class="meetup-form-btn">
+        <a href="/zh/interaction/event-list/collect/">
+          <OButton type="outline" animation size="mini">
+            查看攻略
+            <template #suffixIcon>
+              <OIcon class="right-icon"><IconRight /></OIcon>
+            </template>
+          </OButton>
+        </a>
+      </div>
+    </OCard>
   </AppContent>
 </template>
 
@@ -345,6 +344,7 @@ $lineLeft: calc($titleboxWidth + $contenML);
 .year-plan {
   color: var(--o-color-text1);
   overflow: auto;
+  @include scrollbar;
   .year-plan-main {
     position: relative;
     min-width: 1416px;
