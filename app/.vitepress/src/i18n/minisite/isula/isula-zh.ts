@@ -162,7 +162,7 @@ export default {
           LINK: [
             {
               TEXT: '了解更多',
-              LINK: 'https://gitee.com/openeuler/iSulad/blob/master/docs/build_guide/build_guide_zh.md',
+              LINK: 'https://gitee.com/openeuler/iSulad/blob/master/docs/build_docs/guide/build_guide_zh.md',
             },
           ],
           BACKGROUND: {
