@@ -66,7 +66,7 @@ In CRI mode, the following three are selected as the test objects:
 
 ### Installing iSulad
 
-For details, see the [official document](https://gitee.com/openeuler/iSulad/blob/master/docs/build_guide/build_guide.md).
+For details, see the [official document](https://gitee.com/openeuler/iSulad/blob/master/docs/build_docs/guide/build_guide.md).
 
 ```bash
 $ isula version
@@ -377,4 +377,4 @@ In the architecture, the Docker container lifecycle process involves the followi
 
 - [https://stackoverflow.com/questions/46726216/kubelet-fails-to-get-cgroup-stats-for-docker-and-kubelet-services](https://stackoverflow.com/questions/46726216/kubelet-fails-to-get-cgroup-stats-for-docker-and-kubelet-services)
 - [https://github.com/cri-o/cri-o](https://github.com/cri-o/cri-o)
-- [https://gitee.com/openeuler/iSulad/blob/master/docs/build_guide/build_guide.md](https://gitee.com/openeuler/iSulad/blob/master/docs/build_guide/build_guide.md)
+- [https://gitee.com/openeuler/iSulad/blob/master/docs/build_docs/guide/build_guide.md](https://gitee.com/openeuler/iSulad/blob/master/docs/build_docs/guide/build_guide.md)
