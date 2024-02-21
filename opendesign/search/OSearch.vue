@@ -1,11 +1,16 @@
 <script setup lang="ts">
-import { useAttrs } from 'vue';
+import { ref, useAttrs } from 'vue';
 
 const attrs = useAttrs();
+const inputRef = ref();
+
+defineExpose({
+  inputRef,
+});
 </script>
 
 <template>
-  <ElInput class="o-search" v-bind="attrs">
+  <ElInput ref="inputRef" class="o-search" v-bind="attrs">
     <template #prefix>
       <svg
         version="1.1"

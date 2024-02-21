@@ -64,8 +64,8 @@ export default defineConfig({
         target: 'https://openeuler.shanhaitujian.cn/',
         changeOrigin: true,
       },
-      '/api-search': {
-        target: 'https://www.openeuler.org/',
+      '/api-search/': {
+        target: 'https://doc-search.openeuler.org/',
         changeOrigin: true,
       },
       '/api-chat/': {

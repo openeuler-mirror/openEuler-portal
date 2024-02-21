@@ -11,6 +11,7 @@ import type {
   SearchRamDataT,
   RelevantQueryT,
   StatisticT,
+  SearchRecommendT,
 } from '@/shared/@types/type-search';
 import type { SearchBlogT } from '@/shared/@types/type-blog';
 /**
@@ -148,7 +149,18 @@ export function getPop(params: string): Promise<{
   status: number;
 }> {
   const url = `/api-search/search/pop?${params}`;
-  return request.post(url).then((res: AxiosResponse) => res.data);
+  return request
+    .post(
+      url,
+      // TODO: 取消手动添加请求头
+      {},
+      {
+        headers: {
+          'Content-Type': 'application/json;charset=UTF-8',
+        },
+      }
+    )
+    .then((res: AxiosResponse) => res.data);
 }
 
 /**
@@ -254,4 +266,20 @@ export function meetupApplyForm(params: any): Promise<{
       },
     })
     .then((res: AxiosResponse) => res.data);
+}
+
+/**
+ * 关联搜索
+ * @param {Object} params 申请表格数据
+ * @return  {Object}
+ */
+export function getSearchRecommend(params: { query: string }): Promise<{
+  status: number;
+  obj: {
+    word: SearchRecommendT[];
+  };
+  msg: string;
+}> {
+  const url = `/api-search/search/word?query=${params.query}`;
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
 }

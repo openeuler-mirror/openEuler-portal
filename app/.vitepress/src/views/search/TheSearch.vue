@@ -25,14 +25,17 @@ import ODropdown from 'opendesign/dropdown/ODropdown.vue';
 import NotFound from '@/NotFound.vue';
 import ViewAgreeModal from './ViewAgreeModal.vue';
 import MatterTip from './MatterTip.vue';
-import SearchHistory from './SearchHistory.vue';
+import SearchRecommend from './SearchRecommend.vue';
 
 import { ElMessage } from 'element-plus';
 import { addSearchBuriedData } from '@/shared/utils';
 import { AigcPrivacyAccepted } from '@/shared/privacy-accepted.const';
 import { useStoreData, isLogined, showGuard } from '@/shared/login';
+import useClickOutside from '@/components/hooks/useClickOutside';
 
-const searchHistoryRef = ref();
+const searchRecommendRef = ref();
+const searchRef = ref();
+const isClickOutside = useClickOutside(searchRef) || false;
 
 const { guardAuthClient } = useStoreData();
 const { lang, site } = useData();
@@ -52,6 +55,8 @@ const searchValue = computed(() => {
 });
 // 接收搜索数量的数据
 const searchNumber: any = ref([]);
+// 搜索框是否获取焦点
+const isFocuse = ref(false);
 
 const searchData = computed(() => {
   return {
@@ -329,7 +334,6 @@ function searchDataAll() {
     });
   } catch (error: any) {
     isLoading.value = false;
-    console.error(error);
   }
 }
 // 获取搜索结果的所有内容
@@ -343,8 +347,7 @@ function searchAll(valueChange?: boolean) {
     if (valueChange) {
       currentTab.value = 'all';
     }
-    // TODO: 搜索历史
-    // searchHistoryRef.value(searchInput.value);
+    searchRecommendRef.value(searchInput.value);
     searchChat();
     searchCountAll();
     searchDataAll();
@@ -386,7 +389,7 @@ function goLink(data: any, index: number) {
   }
   window.open(search_result_url);
 }
-
+// ----------------------- 埋点相关 ----------------------------
 const setAdvertisedData = (data: any, index: number, path: string) => {
   const searchKeyObj = {
     search_tag: data.type,
@@ -415,6 +418,11 @@ onMounted(async () => {
   if (location.href.split('=')[1]) {
     searchInput.value = decodeURIComponent(window.location.href.split('=')[1]);
   }
+  window.addEventListener('click', () => {
+    if (isClickOutside.value) {
+      changeFocuseState(false);
+    }
+  });
   searchAll();
 });
 
@@ -454,23 +462,37 @@ const isShowMultiple = (list: Object) => {
 const handleSearchHistory = (val: string) => {
   if (val === searchInput.value) return false;
   searchInput.value = val;
+  changeFocuseState(false);
   searchAll();
 };
+
+const changeFocuseState = (state: boolean) => {
+  isFocuse.value = state;
+};
+
 // 控制无数据状态显示
 const isNotFound = ref(false);
 // 控制软件包的无数据状态显示
 const isNotRpm = ref(false);
+// ---------------- 处理回车搜索事件关联搜索显示 -------------------------
+const searchInputRef = ref();
+const enterEvent = () => {
+  searchInputRef.value.inputRef.blur();
+  changeFocuseState(false);
+};
 </script>
 <template>
   <div class="search">
     <div class="search-input">
-      <div class="input-box">
+      <div ref="searchRef" class="input-box">
         <OSearch
-          ref="searchRef"
+          ref="searchInputRef"
           v-model="searchInput"
           :placeholder="searchValue.PLEACHOLDER"
           :maxlength="50"
+          @focus="changeFocuseState(true)"
           @change="() => searchAll(true)"
+          @keyup.enter="enterEvent"
         >
           <template #suffix>
             <OIcon class="close" @click="clearSearchInput"
@@ -479,12 +501,12 @@ const isNotRpm = ref(false);
           </template>
         </OSearch>
         <ClientOnly>
-          <!-- 历史搜索记录 -->
-          <SearchHistory
-            v-if="false"
-            ref="searchHistoryRef"
-            @search-history="handleSearchHistory"
-            :search-value="searchInput"
+          <SearchRecommend
+            class="search-recommend"
+            v-show="isFocuse"
+            ref="searchRecommendRef"
+            @search-click="handleSearchHistory"
+            :val="searchInput"
           />
         </ClientOnly>
         <div v-show="suggestList.length" class="suggest-list-box">
@@ -771,6 +793,16 @@ const isNotRpm = ref(false);
   max-width: 1504px;
   padding: var(--o-spacing-h2) 44px var(--o-spacing-h1);
   margin: 0 auto;
+  .input-box {
+    position: relative;
+    .search-recommend {
+      position: absolute;
+      width: 100%;
+      background-color: var(--o-color-bg2);
+      box-shadow: var(--o-shadow-l1);
+      z-index: 10;
+    }
+  }
   .search-pagination,
   .search-input,
   .search-result {
