@@ -103,7 +103,10 @@ const requestInterceptorId = request.interceptors.request.use(
         return;
       }
       // 如果已请求，则取消重复请求
-      if (pendingPool.has(config.url)) {
+      if (
+        pendingPool.has(config.url) &&
+        !config.url.startsWith('/api-search')
+      ) {
         cancelFn(`${config.url}请求重复`);
       } else {
         // 存储到请求池
