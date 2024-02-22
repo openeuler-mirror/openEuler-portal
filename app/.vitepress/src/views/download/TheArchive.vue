@@ -144,7 +144,7 @@ onMounted(() => {
 const searchContent = ref('');
 const changeSearchVal = (val: string) => {
   allList.value = cloneTool.cloneDeep(i18n.value.download.COMMUNITY_LIST);
-  const searchReg = new RegExp(val, 'gi');
+  const searchReg = new RegExp(val, 'i');
   currentPage.value = 1;
   activeScenario.value = tagScenario[0].KEY;
   activeArch.value = tagArch.value[0];
