@@ -174,7 +174,7 @@ onMounted(() => {
 // 搜索功能
 const searchContent = ref('');
 const changeSearchVal = (val: string) => {
-  const searchReg = new RegExp(val, 'gi');
+  const searchReg = new RegExp(val, 'i');
   currentPage.value = 1;
   archAll.value = true;
   activeArch.value = [];
