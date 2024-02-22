@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, onMounted, watch, nextTick } from 'vue';
+import { computed, ref, onMounted, watch } from 'vue';
 import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
 import { useI18n } from '@/i18n';
@@ -10,6 +10,7 @@ import { getPop } from '@/api/api-search';
 import { getSearchRecommend } from '@/api/api-search';
 
 import useClickOutside from '@/components/hooks/useClickOutside';
+import useWindowResize from '@/components/hooks/useWindowResize';
 
 import IconCancel from '~icons/app/icon-cancel.svg';
 import IconSearch from '~icons/app/icon-search.svg';
@@ -17,6 +18,7 @@ import IconSearch from '~icons/app/icon-search.svg';
 const { lang } = useData();
 const searchRef = ref();
 const isClickOutside = useClickOutside(searchRef) || false;
+const windowWidth = ref(useWindowResize());
 
 const emits = defineEmits(['focus-input', 'search-click']);
 const isShowDrawer = ref(false);
@@ -53,6 +55,7 @@ const showDrawer = () => {
   emits('search-click', isShowBox.value);
   isShowDrawer.value = true;
   const params = `lang=${lang.value}`;
+
   if (popList.value.length) {
     return;
   }
@@ -71,7 +74,7 @@ const closeSearchBox = () => {
 
 onMounted(() => {
   window.addEventListener('click', () => {
-    if (isClickOutside.value) {
+    if (isClickOutside.value && windowWidth.value > 768) {
       closeSearchBox();
     }
   });
@@ -86,7 +89,6 @@ const queryGetSearchRecommend = (val: string) => {
     recommendData.value = res.obj.word;
   });
 };
-// queryGetSearchRecommend(searchInput.value);
 
 watch(
   () => searchInput.value,
@@ -146,7 +148,10 @@ const handleSearch = (searchValue: string) => {
     </OInput>
 
     <div v-show="isShowDrawer" class="drawer">
-      <div v-if="recommendData.length && searchInput" class="recommend search-recommend">
+      <div
+        v-if="recommendData.length && searchInput"
+        class="recommend search-recommend"
+      >
         <div
           v-for="item in recommendData"
           class="recommend-item"
