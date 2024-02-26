@@ -9,16 +9,6 @@ export default {
   HOMEBANNER: {
     zh: [
       {
-        pcBanner: newYear_pc,
-        moBanner: newYear_mo,
-        link: '',
-        id: '',
-        title: [''],
-        desc: [],
-        btn: '',
-        targetTap: 1,
-      },
-      {
         pcBanner: banner1_pc,
         moBanner: banner1_mo,
         link: '/whitepaper/openEuler%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E5%88%9B%E6%96%B0%E9%A1%B9%E7%9B%AE%E6%80%BB%E8%A7%88%EF%BC%89.pdf',
@@ -29,16 +19,6 @@ export default {
       },
     ],
     en: [
-      {
-        pcBanner: newYear_pc,
-        moBanner: newYear_mo,
-        link: '',
-        id: '',
-        title: [''],
-        desc: [],
-        btn: '',
-        targetTap: 1,
-      },
       {
         pcBanner: banner1_pc,
         moBanner: banner1_mo,
