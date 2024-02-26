@@ -45,6 +45,7 @@ const data = ref({
 const searchData = computed(() => {
   return {
     keyword: keyWord.value,
+    category: 'showcase',
     page: 1,
     pageSize: 100,
     lang: lang.value,
