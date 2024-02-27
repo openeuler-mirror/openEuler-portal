@@ -1,5 +1,5 @@
-import newYear_pc from '@/assets/category/home/banner/new-year_pc.jpg';
-import newYear_mo from '@/assets/category/home/banner/new-year_mo.jpg';
+import annualReport_pc from '@/assets/category/home/banner/annual-report_pc.jpg';
+import annualReport_mo from '@/assets/category/home/banner/annual-report_mo.jpg';
 
 import banner1_pc from '@/assets/category/home/banner/banner1_pc.jpg';
 import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';
@@ -8,6 +8,15 @@ export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
+      {
+        pcBanner: annualReport_pc,
+        moBanner: annualReport_mo,
+        link: '/zh/news/openEuler/20240207-yuebao/20230207-yuebao.html',
+        id: 'annual-report',
+        title: ['openEuler 2023 社区年报'],
+        btn: '查看详情',
+        targetTap: 1,
+      },
       {
         pcBanner: banner1_pc,
         moBanner: banner1_mo,

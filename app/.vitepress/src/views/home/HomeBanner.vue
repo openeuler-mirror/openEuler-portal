@@ -58,7 +58,7 @@ const jumpTo = (item: any) => {
       clickable: true,
     }"
     :autoplay="{
-      delay: 500000000,
+      delay: 5000,
       disableOnInteraction: false,
     }"
     :navigation="true"
@@ -82,7 +82,7 @@ const jumpTo = (item: any) => {
           <div
             v-if="item.title?.length"
             class="banner-panel-content flex-column"
-            :class="item.id === 'whitepaper' ? 'whitepaper' : ''"
+            :class="item.id === 'annual-report' ? 'annual-report' : ''"
           >
             <div data-aos="fade-down" class="box">
               <img v-if="item.img" class="text-img" :src="item?.img" alt="" />
@@ -154,51 +154,10 @@ html[lang='zh'] {
     font-size: 14px;
   }
 }
-.eur {
+
+.annual-report {
   @media screen and (max-width: 768px) {
-    display: none;
-  }
-}
-#summit {
-  @media screen and (max-width: 768px) {
-    .banner-panel-content {
-      padding-bottom: 28px;
-      justify-content: flex-end;
-      .action {
-        display: none;
-      }
-    }
-  }
-}
-html[lang='en'] {
-  #summit {
-    .title {
-      line-height: var(--o-line-height-h2);
-      font-size: var(--o-font-size-h2);
-    }
-    @media screen and (max-width: 768px) {
-      .banner-panel-content {
-        padding-bottom: 6px;
-        .title {
-          line-height: var(--o-line-height-h5);
-          font-size: var(--o-font-size-h5);
-        }
-      }
-    }
-  }
-}
-#satisfaction {
-  .title {
-    @media screen and (max-width: 768px) {
-      word-spacing: 100vh;
-    }
-  }
-}
-#euler-sky {
-  @media screen and (max-width: 768px) {
-    .banner-panel-content {
-      display: none;
-    }
+    justify-content: flex-end !important;
     .o-button {
       display: none;
     }
@@ -289,15 +248,6 @@ html[lang='en'] {
             font-size: 16px;
           }
         }
-        @media screen and (max-width: 824px) {
-          margin-top: 0;
-        }
-      }
-      .new-edition {
-        margin-top: 230px;
-        display: flex;
-        justify-content: center;
-        transition: none;
         @media screen and (max-width: 824px) {
           margin-top: 0;
         }
