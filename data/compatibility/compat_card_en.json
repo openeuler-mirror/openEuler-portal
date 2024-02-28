@@ -20928,5 +20928,43 @@
     "chipModel": "ConnectX-5",
     "item": "03026PUN",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS/contrib/drivers/source/Packages/MLNX_OFED_LINUX-23.10-1.1.9.0-openeuler22.03-aarch64.tgz"
-  }
+  },
+    {
+        "vendorID": "8086",
+        "deviceID": "1572",
+        "svID": "19e5",
+        "ssID": "d11c",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP2",
+        "driverName": "i40e",
+        "version": "5.10.0-153.12.0.92.oe2203sp2.x86_64",
+        "type": "NIC",
+        "date": "2024.02.19",
+        "sha256": "23e14f6cb17ea1a938069f2d0b1c4124fa63cffb6f6d63762c7eadbba1e3e5fc",
+        "driverSize": "189K",
+        "chipVendor": "Intel",
+        "boardModel": "X710",
+        "chipModel": "X710",
+        "item": "06310200",
+        "downloadLink": "inbox"
+    },
+    {
+        "vendorID": "8086",
+        "deviceID": "10fb",
+        "svID": "19e5",
+        "ssID": "d111",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP2",
+        "driverName": "ixgbe",
+        "version": "5.10.0-153.1.0.81.oe2203sp2.x86_64",
+        "type": "NIC",
+        "date": "2023.06.20",
+        "sha256": "a1479d8c14cdc4a5ab701da39b862dbe0dc99d8e4385651ef797af7405dd2b56",
+        "driverSize": "162.6K",
+        "chipVendor": "Intel",
+        "boardModel": "SP310",
+        "chipModel": "82599ES",
+        "item": "02311LSY",
+        "downloadLink": "inbox"
+    }
 ]
