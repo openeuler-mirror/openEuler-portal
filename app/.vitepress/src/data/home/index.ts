@@ -11,7 +11,7 @@ export default {
       {
         pcBanner: annualReport_pc,
         moBanner: annualReport_mo,
-        link: '/zh/news/openEuler/20240207-yuebao/20230207-yuebao.html',
+        link: '/zh/news/openEuler/20240223-nianbao/Untitled-1.html',
         id: 'annual-report',
         title: ['openEuler 2023 社区年报'],
         btn: '查看详情',
