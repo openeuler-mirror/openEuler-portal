@@ -1,17 +1,27 @@
-export default {
+import opensoucrce from '@/assets/category/year-plan/opensoucrce.png';
+import opensoucrceTitle from '@/assets/category/year-plan/opensoucrce-title.png';
+import ecology from '@/assets/category/year-plan/ecology.png';
+import ecologyTitle from '@/assets/category/year-plan/ecology-title.png';
+import developer from '@/assets/category/year-plan/developer.png';
+import developerTitle from '@/assets/category/year-plan/developer-title.png';
+import college from '@/assets/category/year-plan/college.png';
+import collegeTitle from '@/assets/category/year-plan/college-title.png';
+import edition from '@/assets/category/year-plan/edition.png';
+import editionTitle from '@/assets/category/year-plan/edition-title.png';
+
+export const yearPlan = {
   opensoucrce: {
     title: '开源顶会',
+    contentBg: opensoucrce,
+    titleBg: opensoucrceTitle,
     id: 'opensoucrce',
     events: [
       {
         month: '2',
         actives: [
           {
-            activeName: 'FOSDEM’ 23',
-            activelink: {
-              url: ' https://b23.tv/2S4dQ0a',
-              className: 'fosdem',
-            },
+            location: '法国',
+            activeName: 'MWC Barcelona',
           },
         ],
       },
@@ -19,11 +29,8 @@ export default {
         month: '3',
         actives: [
           {
-            activeName: 'Linaro Techday',
-            activelink: {
-              url: ' /zh/interaction/event-list/detail/?id=87&isMini=1',
-              className: 'linaro',
-            },
+            location: '法国',
+            activeName: 'KubeCon EU',
           },
         ],
       },
@@ -31,18 +38,8 @@ export default {
         month: '4',
         actives: [
           {
-            activeName: 'FOSSASIA',
-            activelink: {
-              url: 'https://eventyay.com/e/7cfe0771/schedule',
-              className: 'linaro',
-            },
-          },
-          {
-            activeName: 'openEuler Developer Day 2023',
-            activelink: {
-              url: 'https://www.openeuler.org/zh/interaction/summit-list/devday2023/',
-              className: 'odd-2023',
-            },
+            location: '越南',
+            activeName: 'FOSSASIA 2024',
           },
         ],
       },
@@ -50,11 +47,12 @@ export default {
         month: '5',
         actives: [
           {
-            activeName: 'GOTC 2023',
-            activelink: {
-              url: 'https://gotc.oschina.net/',
-              className: 'gotc',
-            },
+            location: '西班牙',
+            activeName: 'Linaro connect',
+          },
+          {
+            location: '深圳',
+            activeName: '开放原子开发者大会 openEuler Developer Day',
           },
         ],
       },
@@ -62,11 +60,12 @@ export default {
         month: '6',
         actives: [
           {
-            activeName: '开放原子全球开源峰会',
-            activelink: {
-              url: 'https://www.openatom.cn/summit/2023/index/main/',
-              className: 'atom',
-            },
+            location: '上海',
+            activeName: 'GOTC',
+          },
+          {
+            location: '香港',
+            activeName: 'KubeCon China',
           },
         ],
       },
@@ -74,16 +73,8 @@ export default {
         month: '8',
         actives: [
           {
-            activeName: 'OSSUMMIT EU2023',
-            activelink: {
-              url: 'https://www.openeuler.org/zh/news/OSSUMMIT1/OSSUMMIT-zh.html',
-            },
-          },
-          {
-            activeName: 'RISC-V Summit China 2023',
-            activelink: {
-              url: 'https://www.openeuler.org/zh/news/20230901-embedded/20230901-embedded.html',
-            },
+            location: 'TBD',
+            activeName: 'RISC-V Summit China',
           },
         ],
       },
@@ -91,271 +82,12 @@ export default {
         month: '9',
         actives: [
           {
-            activeName: 'HUAWEI CONNECT 2023',
-            activelink: {
-              url: 'https://www.openeuler.org/zh/news/20230928-HCopenEuler/20230928-HCopenEuler.html',
-            },
+            location: '韩国',
+            activeName: 'OpenInfra Summit Asia ',
           },
           {
-            activeName: 'KubeCon China 2023',
-            activelink: {
-              url: 'https://www.openeuler.org/zh/news/20230928-kubecon/20230928-kubecon.html',
-            },
-          },
-        ],
-      },
-      {
-        month: '10',
-        actives: [
-          {
-            activeName: '18届中国内核开发者大会',
-            activelink: {
-              url: 'https://www.openeuler.org/zh/news/20231103-CLK/20231103-CLK.html',
-            },
-          },
-        ],
-      },
-      {
-        month: '12',
-        actives: [
-          {
-            activeName: '操作系统大会＆openEuler Summit 2023',
-            activelink: {
-              url: 'https://www.openeuler.org/zh/interaction/summit-list/summit2023/',
-            },
-          },
-          {
-            activeName: '2023开放原子开发者大会',
-            activelink: {
-              url: 'https://www.openatom.cn/journalism/detail/WF3XtqIdKfcW',
-            },
-          },
-          {
-            activeName: 'OpenInfra Days China 2023',
-            activelink: {
-              url: '/zh/news/20231205-OID2/20231205-OID2.html',
-            },
-          },
-          {
-            activeName: 'FICC 2023',
-          },
-        ],
-      },
-    ],
-  },
-  developer: {
-    title: '开发者 活动',
-    id: 'developer',
-    events: [
-      {
-        month: '1',
-        actives: [
-          {
-            activeType: 'Meetup',
-            activeEvent: [
-              {
-                activeName: '北京 DPU',
-                activelink: {
-                  url: '/zh/news/20230117-dupmeetup.html',
-                  className: 'beijin-dpu',
-                },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        month: '2',
-        actives: [
-          {
-            activeType: 'Meetup',
-            activeEvent: [
-              {
-                activeName: '武汉 RISC-v',
-                activelink: {
-                  url: '/zh/interaction/event-list/detail/?id=80&isMini=1',
-                  className: 'risc-v ',
-                },
-              },
-              {
-                activeName: '线上 Embedded',
-                activelink: {
-                  url: '/zh/interaction/event-list/detail/?id=84&isMini=1',
-                  className: 'embedded ',
-                },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        month: '3',
-        actives: [
-          {
-            activeType: '用户组活动',
-            activeEvent: [
-              {
-                activeName: '深圳 机器人',
-                activelink: {
-                  url: '/zh/interaction/event-list/detail/?id=89&isMini=1',
-                },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        month: '4',
-        actives: [
-          {
-            activeType: 'Meetup',
-            activeEvent: [
-              {
-                activeName: '杭州 Compiler& Embedded',
-                activelink: {
-                  url: '/zh/interaction/event-list/detail/?id=88&isMini=1',
-                },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        month: '5',
-        actives: [
-          {
-            activeType: 'Meetup',
-            activeEvent: [
-              {
-                activeName: '北京 SDS',
-                activelink: {
-                  url: '/zh/interaction/event-list/detail/?id=90&isMini=1',
-                },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        month: '6',
-        actives: [
-          {
-            activeType: 'Meetup',
-            activeEvent: [
-              {
-                activeName: '南京 高效运维',
-                activelink: {
-                  url: '/zh/interaction/event-list/detail/?id=91&isMini=1',
-                },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        month: '7',
-        actives: [
-          {
-            activeType: 'Meetup',
-            activeEvent: [
-              {
-                activeName: 'Code Camp',
-                activelink: {
-                  url: 'https://community.riscv.org/events/#/list',
-                },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        month: '8',
-        actives: [
-          {
-            activeType: 'Meetup',
-            activeEvent: [
-              {
-                activeName: '北京 创新技术',
-                activelink: {
-                  url: '/zh/interaction/event-list/detail/?id=93&isMini=1',
-                },
-              },
-              {
-                activeName: '线上 FangTian',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        month: '9',
-        actives: [
-          {
-            activeType: 'Meetup',
-            activeEvent: [
-              {
-                activeName: '长沙 嵌入式',
-                activelink: {
-                  url: '/zh/interaction/event-list/detail/?id=95&isMini=1',
-                },
-              },
-              {
-                activeName: '杭州 编译器',
-              },
-              {
-                activeName: '线上 Bigdata',
-              },
-              {
-                activeName: '线上 G11N',
-              },
-            ],
-          },
-          {
-            activeType: '用户组活动',
-            activeEvent: [
-              {
-                activeName: '西安',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        month: '10',
-        actives: [
-          {
-            activeType: 'Meetup',
-            activeEvent: [
-              {
-                activeName: '北京 虚拟化',
-                activelink: {
-                  url: '/zh/interaction/event-list/detail/?id=98&isMini=1',
-                },
-              },
-              {
-                activeName: '杭州 消息中间件',
-                activelink: {
-                  url: '/zh/interaction/event-list/detail/?id=97&isMini=1',
-                },
-              },
-              {
-                activeName: '天津 Fang Tian SIG',
-                activelink: {
-                  url: '/zh/interaction/event-list/detail/?id=100&isMini=1',
-                },
-              },
-              {
-                activeName: '线上 Fang Tian',
-              },
-            ],
-          },
-          {
-            activeType: '用户组活动',
-            activeEvent: [
-              {
-                activeName: '郑州',
-              },
-            ],
+            location: '奥地利',
+            activeName: 'OSS EU',
           },
         ],
       },
@@ -363,29 +95,8 @@ export default {
         month: '11',
         actives: [
           {
-            activeType: 'Meetup',
-            activeEvent: [
-              {
-                activeName: '苏州 迁移',
-                activelink: {
-                  url: '/zh/interaction/event-list/detail/?id=101&isMini=1',
-                },
-              },
-              {
-                activeName: '线上 消息中间件',
-              },
-            ],
-          },
-          {
-            activeType: '用户组活动',
-            activeEvent: [
-              {
-                activeName: '成都',
-                activelink: {
-                  url: '/zh/interaction/event-list/detail/?id=102&isMini=1',
-                },
-              },
-            ],
+            location: '北京',
+            activeName: '开放原子开源峰会',
           },
         ],
       },
@@ -393,75 +104,204 @@ export default {
         month: '12',
         actives: [
           {
-            activeType: 'Meetup',
-            activeEvent: [
-              {
-                activeName: '新加坡 Free and Open Source',
-              },
-              {
-                activeName: '无锡·第十三届中国开源黑客松',
-                activelink: {
-                  url: 'https://mp.weixin.qq.com/s/5cOPQ_MT2AuToUH9d_QlsA',
-                },
-              },
-              {
-                activeName: '无锡·openEuler Code Camp',
-                activelink: {
-                  url: 'https://mp.weixin.qq.com/s/bRc4sS_opNFpfHsSkYSf0A',
-                },
-              },
-            ],
+            location: 'TBD',
+            activeName: 'OpenInfra Day ',
+          },
+          {
+            location: '北京',
+            activeName: '操作系统峰会 openEuler Summit',
+          },
+        ],
+      },
+    ],
+  },
+  ecology: {
+    title: '生态技术会议',
+    contentBg: ecology,
+    titleBg: ecologyTitle,
+    id: 'ecology',
+    events: [
+      {
+        month: '3',
+        actives: [
+          {
+            location: '日本',
+            activeName: 'Workshop',
+          },
+        ],
+      },
+      {
+        month: '4',
+        actives: [
+          {
+            location: '上海',
+            activeName: 'KCD',
+          },
+          {
+            location: '西安',
+            activeName: '第二届 eBPF 开发者大会',
+          },
+        ],
+      },
+      {
+        month: '9',
+        actives: [
+          {
+            location: '上海',
+            activeName: 'HC 2024',
+          },
+        ],
+      },
+      {
+        month: '10',
+        actives: [
+          {
+            location: '长沙',
+            activeName: '1024',
+          },
+          {
+            location: 'TBD',
+            activeName: 'CLK/CID',
+          },
+        ],
+      },
+      {
+        month: '12',
+        actives: [
+          {
+            location: '上海',
+            activeName: 'Intel On',
+          },
+        ],
+      },
+    ],
+  },
+  developer: {
+    title: 'Call for X 开发者活动',
+    contentBg: developer,
+    titleBg: developerTitle,
+    id: 'developer',
+    events: [
+      {
+        month: '1',
+        actives: [
+          {
+            location: '北京',
+            activeName: 'openEuler&互联网企业研讨会',
+          },
+        ],
+      },
+      {
+        month: '3',
+        actives: [
+          {
+            location: '武汉',
+            activeName: '武汉用户组 Meetup',
+          },
+          {
+            location: '成都',
+            activeName: 'G11N&Docs Meetup',
+          },
+          {
+            location: '线上',
+            activeName: '天翼云创新项目',
+          },
+          {
+            location: '线上',
+            activeName: '基于ebpf的应用层网络管控',
+          },
+        ],
+      },
+      {
+        month: '4',
+        actives: [
+          {
+            location: '线上',
+            activeName: 'UniProton on RISCV',
           },
         ],
       },
     ],
   },
   college: {
-    title: '高校活动',
+    title: '社区&高校',
+    contentBg: college,
+    titleBg: collegeTitle,
     id: 'college',
     actives: [
       {
         activeName: ' 全年 开源实习',
         startTime: 1,
         endTime: 12,
-        activelink: {
-          url: '/zh/internship/',
-          className: 'internship',
-        },
+        activelink: '/zh/internship/',
       },
       {
-        activeName: ' 4月 - 10月 第六届开源创新大赛',
-        startTime: 4,
-        endTime: 10,
-        activelink: {
-          url: 'https://www.gitlink.org.cn/competitions/index/track1_2023_openeuler',
-        },
+        activeName: ' 1月-3月 FOSSASIA CodeHeat',
+        startTime: 1,
+        endTime: 3,
+        activelink: 'https://codeheat.org/',
       },
       {
-        activeName: ' 5月 - 10月 “互联网+”大学生创新创业大赛',
+        activeName: ' 5月 - 10月 “互联网 +”鲲鹏应用创新大赛',
         startTime: 5,
         endTime: 10,
-        activelink: {
-          url: 'https://edu.hicomputing.huawei.com/InternetInnovate2023?tab=1',
-        },
+        activelink:
+          'https://www.hikunpeng.com/developer/contests/kunpeng-competition2023',
       },
       {
-        activeName: ' 5月 - 10月 鲲鹏应用创新大赛',
-        startTime: 5,
-        endTime: 10,
-        activelink: {
-          url: 'https://www.hikunpeng.com/developer/contests/kunpeng-competition2023?tab=2',
-        },
+        activeName: ' 1月 - 7月 开放原子大赛',
+        startTime: 1,
+        endTime: 7,
+        activelink: 'https://competition.atomgit.com/competition',
       },
       {
         activeName: ' 6月 - 10月 第四届开源之夏',
-        activelink: {
-          url: 'https://summer-ospp.ac.cn/org/orgdetail/b9770f4d-f586-4373-bdac-ce6389065946?lang=zh',
-          className: 'summer-ospp',
-        },
+        activelink: 'https://summer-ospp.ac.cn/',
         startTime: 6,
         endTime: 10,
       },
     ],
   },
 } as any;
+export const editionData = {
+  title: '版本发布计划',
+  contentBg: edition,
+  titleBg: editionTitle,
+  id: 'edition',
+  actives: [
+    {
+      time: '5.30',
+      content: '24.03 LTS',
+      month: 5,
+    },
+    {
+      time: '6.30',
+      content: '22.03 LTS SP4',
+      month: 6,
+    },
+    {
+      time: '9.30',
+      content: '24.09',
+      month: 9,
+    },
+    {
+      time: '12.30',
+      content: '24.03 LTS SP1',
+      month: 12,
+    },
+  ],
+};
+export const months = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];

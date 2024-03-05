@@ -14,7 +14,6 @@ category: event
 <script setup lang="ts">
 
 import TheSalon from '@/views/event/EventPlan.vue';
-import AppContent from '@/components/AppContent.vue';
 </script>
 
 <TheSalon />

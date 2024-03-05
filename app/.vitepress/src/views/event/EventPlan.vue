@@ -1,170 +1,12 @@
 <script lang="ts" setup>
 import AppContent from '@/components/AppContent.vue';
 
-import planLink from '@/data/salon/plan';
+import { yearPlan, months, editionData } from '@/data/salon/plan';
 
-import { ref } from 'vue';
 import IconRight from '~icons/app/icon-arrow-right.svg';
-
-const editionList = ref([
-  {
-    time: '3.30',
-    content: '23.03',
-  },
-  {
-    time: '6.30',
-    content: '22.03 LTS SP2',
-  },
-  {
-    time: '9.30',
-    content: '23.09',
-  },
-  {
-    time: '12.30',
-    content: '22.03 LTS SP3',
-  },
-]);
 </script>
 <template>
   <AppContent class="salon-content">
-    <div class="year-plan">
-      <div class="year-plan-main">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <div class="line line3"></div>
-        <div class="line line4"></div>
-        <div
-          v-for="(value, key) in planLink"
-          :key="value"
-          class="activebox"
-          :class="planLink[key].id"
-        >
-          <!-- 社区峰会、成员单位会议、开源项目、开发者活动 -->
-          <div v-if="planLink[key].id !== 'college'" class="title-box">
-            <p>{{ planLink[key].title }}</p>
-          </div>
-          <div v-if="planLink[key].id !== 'college'" class="content-box">
-            <div
-              v-for="item in planLink[key]['events']"
-              :key="item"
-              :class="['month' + item.month]"
-              class="layout"
-            >
-              <!-- 社区峰会、成员单位会议、开源项目 -->
-              <div v-if="planLink[key].id !== 'developer'" class="event-box">
-                <h5>{{ item.month }}月</h5>
-                <div v-for="it in item.actives" :key="it" class="event-item">
-                  <li></li>
-                  <a
-                    v-if="it.hasOwnProperty('activelink')"
-                    :key="it.activelink.url"
-                    :href="it.activelink.url"
-                    :class="it.activelink.className"
-                    :target="it.activelink.target || '_blank'"
-                    >{{ it.activeName }}</a
-                  >
-                  <p v-if="!it.hasOwnProperty('activelink')">
-                    {{ it.activeName }}
-                  </p>
-                </div>
-              </div>
-              <!-- 开发者活动  需要添加tab-->
-              <div v-if="planLink[key].id === 'developer'" class="event-box">
-                <h5>{{ item.month }}月</h5>
-                <div
-                  v-for="devel in item.actives"
-                  :key="devel.activeType"
-                  class="develper"
-                >
-                  <span class="tab">{{ devel.activeType }}</span>
-                  <div
-                    v-for="it in devel.activeEvent"
-                    :key="it"
-                    class="event-item"
-                  >
-                    <li></li>
-                    <a
-                      v-if="it.hasOwnProperty('activelink')"
-                      :key="it.activelink.url"
-                      :href="it.activelink.url"
-                      :class="it.activelink.className"
-                      :target="it.activelink.target || '_blank'"
-                      >{{ it.activeName }}</a
-                    >
-                    <p v-if="!it.hasOwnProperty('activelink')">
-                      {{ it.activeName }}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div v-if="planLink[key].id === 'opensoucrce'" class="otherlink">
-            <p>
-              对上述大会有任何疑问或建议，请联系：<a
-                href="mailto:marketing@openeuler.org"
-                >marketing@openeuler.org</a
-              >
-            </p>
-          </div>
-          <!-- 高校活动 -->
-          <div v-if="planLink[key].id === 'college'" class="title-box">
-            <p>{{ planLink[key].title }}</p>
-          </div>
-          <div v-if="planLink[key].id === 'college'" class="collegee">
-            <div
-              v-for="colact in planLink['college'].actives"
-              :key="colact"
-              :style="{
-                width:
-                  (colact.endTime - (colact.startTime - 1)) *
-                    (colact.endTime === 12 ? 108.5 : 104) +
-                  'px',
-                marginLeft: (colact.startTime - 1) * 104 + 'px',
-              }"
-              class="collegee-item"
-            >
-              <a
-                v-if="colact.hasOwnProperty('activelink')"
-                :key="colact.activelink.url"
-                :href="colact.activelink.url"
-                :class="colact.activelink.className"
-                :target="colact.activelink.target || '_blank'"
-                >{{ colact.activeName }}</a
-              >
-              <p v-if="!colact.hasOwnProperty('activelink')">
-                {{ colact.activeName }}
-              </p>
-            </div>
-            <div class="otherlink">
-              <p>
-                如果您想组织社区活动，参与议题分享，请联系：<a
-                  href="mailto:events@openeuler.sh"
-                  >events@openeuler.sh</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- 版本发布计划 -->
-        <div class="activebox edition">
-          <div class="title-box">版本发布计划</div>
-          <div class="edition-box">
-            <div
-              v-for="(edit, index) in editionList"
-              :key="edit.content"
-              :class="['edit' + index]"
-              class="layout"
-            >
-              <div class="edition-item">
-                <p class="edition-time">{{ edit.time }}</p>
-                <p class="edition-content">{{ edit.content }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- openEuler Meetup 申请攻略 -->
     <OCard class="meetup-form">
       <div class="info">
@@ -186,20 +28,189 @@ const editionList = ref([
         </a>
       </div>
     </OCard>
+    <div class="year-plan">
+      <div class="year-plan-main">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+        <div class="months-box">
+          <div v-for="month in months" :key="month" class="month">
+            {{ month }}
+          </div>
+        </div>
+        <div
+          v-for="(value, key) in yearPlan"
+          :key="value"
+          class="active-box"
+          :class="yearPlan[key].id"
+        >
+          <!-- 社区峰会、成员单位会议、开源项目、开发者活动 -->
+          <div
+            v-if="yearPlan[key].id !== 'college'"
+            :style="{ backgroundImage: `url(${yearPlan[key].titleBg})` }"
+            class="title-box"
+          >
+            <p>{{ yearPlan[key].title }}</p>
+          </div>
+          <div
+            v-if="yearPlan[key].id !== 'college'"
+            :style="{ backgroundImage: `url(${yearPlan[key].contentBg})` }"
+            class="content-box"
+          >
+            <div
+              v-for="item in yearPlan[key]['events']"
+              :key="item"
+              :class="['month' + item.month]"
+              class="layout"
+            >
+              <!-- 社区峰会、成员单位会议、开源项目 -->
+              <template v-if="yearPlan[key].id !== 'developer'">
+                <div v-for="it in item.actives" :key="it" class="event-box">
+                  <div class="event-item">
+                    <li></li>
+                    <p class="location">
+                      {{ it.location }}
+                    </p>
+                    <a
+                      v-if="it.hasOwnProperty('activelink')"
+                      :key="it.activelink.url"
+                      :href="it.activelink.url"
+                      :target="it.activelink.target || '_blank'"
+                      >{{ it.activeName }}</a
+                    >
+                    <p v-else>
+                      {{ it.activeName }}
+                    </p>
+                  </div>
+                </div>
+              </template>
+              <!-- 开发者活动  需要添加tab-->
+              <template v-if="yearPlan[key].id === 'developer'">
+                <div v-for="it in item.actives" :key="it" class="event-box">
+                  <div class="event-item">
+                    <li></li>
+                    <p class="location">
+                      {{ it.location }}
+                    </p>
+                    <a
+                      v-if="it.hasOwnProperty('activelink')"
+                      :key="it.activelink.url"
+                      :href="it.activelink.url"
+                      :target="it.activelink.target || '_blank'"
+                      >{{ it.activeName }}</a
+                    >
+                    <p v-else>
+                      {{ it.activeName }}
+                    </p>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+          <div v-if="yearPlan[key].id === 'opensoucrce'" class="otherlink">
+            <p>
+              对上述大会有任何疑问或建议，请联系：<a
+                href="mailto:marketing@openeuler.org"
+                >marketing@openeuler.org</a
+              >
+            </p>
+          </div>
+          <!-- 高校活动 -->
+          <div
+            v-if="yearPlan[key].id === 'college'"
+            :style="{ backgroundImage: `url(${yearPlan[key].titleBg})` }"
+            class="title-box"
+          >
+            <p>{{ yearPlan[key].title }}</p>
+          </div>
+          <div
+            v-if="yearPlan[key].id === 'college'"
+            :style="{ backgroundImage: `url(${yearPlan[key].contentBg})` }"
+            class="collegee"
+          >
+            <div
+              v-for="colact in yearPlan['college'].actives"
+              :key="colact"
+              :style="{
+                width: (colact.endTime - (colact.startTime - 1)) * 104 + 'px',
+                marginLeft: (colact.startTime - 1) * 104 + 'px',
+              }"
+              class="collegee-item"
+            >
+              <a
+                v-if="colact.hasOwnProperty('activelink')"
+                :key="colact.activelink"
+                :href="colact.activelink"
+                :target="colact.activelink.target || '_blank'"
+                >{{ colact.activeName }}</a
+              >
+              <p v-if="!colact.hasOwnProperty('activelink')">
+                {{ colact.activeName }}
+              </p>
+            </div>
+            <div class="otherlink">
+              <p>
+                如果您想组织社区活动，参与议题分享，请联系：<a
+                  href="mailto:events@openeuler.sh"
+                  >events@openeuler.sh</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 版本发布计划 -->
+        <div class="active-box edition">
+          <div
+            class="title-box"
+            :style="{ backgroundImage: `url(${editionData.titleBg})` }"
+          >
+            {{ editionData.title }}
+          </div>
+          <div
+            :style="{ backgroundImage: `url(${editionData.contentBg})` }"
+            class="edition-box"
+          >
+            <div
+              v-for="edit in editionData.actives"
+              :key="edit.content"
+              :class="['edit-' + edit.month]"
+              class="layout-edition"
+            >
+              <div class="edition-item">
+                <p class="edition-time">{{ edit.time }}</p>
+                <p class="edition-content">{{ edit.content }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </AppContent>
 </template>
 
 <style lang="scss" scoped>
-$lineSpace: 315px;
-$eventboxWidth: 127px;
+$lineSpace: 312px;
+$eventboxWidth: 104px;
 $contentWidth: 1302px;
-$titleboxWidth: 98px;
-$contenML: var(--o-spacing-h5);
+$titleboxWidth: 168px;
 $gridGap: var(--o-spacing-h6);
-$lineLeft: calc($titleboxWidth + $contenML);
+$lineLeft: calc($titleboxWidth);
+
+.months-box {
+  display: flex;
+  justify-content: flex-end;
+  padding: 24px 0;
+  background-color: #e6e7ea4d;
+  .month {
+    padding: 0 8px;
+    min-width: 104px;
+    text-align: center;
+    font-size: var(--o-font-size-h8);
+    line-height: var(--o-line-height-h8);
+  }
+}
 
 .meetup-form {
-  margin-top: 40px;
   :deep(.el-card__body) {
     padding: 8px 24px;
     display: flex;
@@ -273,86 +284,29 @@ $lineLeft: calc($titleboxWidth + $contenML);
           transparent 50%
         );
       }
-      .community {
-        .content-box {
-          background-image: linear-gradient(to right, #181f31, #273b70);
-          .event-box {
-            h5 {
-              color: #7ba9ea;
-            }
-            .event-item {
-              li {
-                color: #7ba9ea;
-              }
-            }
-          }
-        }
-      }
-      .units {
-        .content-box {
-          background-image: linear-gradient(to right, #282114, #543c12);
-          .event-box {
-            h5 {
-              color: #feaa11;
-            }
-            .event-item {
-              li {
-                color: #feaa11;
-              }
-            }
-          }
-        }
-      }
-      .opensoucrce {
-        .content-box {
-          background-image: linear-gradient(to right, #101a19, #0d2a26);
-          .event-box {
-            h5 {
-              color: #00685a;
-            }
-            .event-item {
-              li {
-                color: #00685a;
-              }
-            }
-          }
-        }
-      }
-      .developer {
-        .content-box {
-          background-image: linear-gradient(to right, #1d1528, #301b4e);
-          .event-box {
-            h5 {
-              color: #7d32ea;
-            }
-            .event-item {
-              li {
-                color: #7d32ea;
-              }
-            }
-          }
-        }
-      }
-      .collegee {
-        .collegee-item {
-          background-image: linear-gradient(to right, #121b24, #104370);
-        }
+      .event-box,
+      .collegee-item {
+        background-image: none !important;
+        background-color: rgba(0, 0, 0, 0.2) !important;
       }
     }
   }
 }
 .year-plan {
+  margin-top: 40px;
   color: var(--o-color-text1);
-  overflow: auto;
-  @include scrollbar;
+  @media screen and (max-width: 1416px) {
+    overflow: auto;
+    @include scrollbar;
+  }
   .year-plan-main {
     position: relative;
-    min-width: 1416px;
+    width: 1416px;
     min-height: 500px;
     display: grid;
     grid-row-gap: $gridGap;
     .line {
-      height: calc(100% - 65px);
+      height: calc(100% - 18px);
       width: 1px;
       background-size: 20px 10px;
       background-repeat: repeat-y;
@@ -365,36 +319,43 @@ $lineLeft: calc($titleboxWidth + $contenML);
         transparent 50%
       );
     }
-    @for $i from 1 through 4 {
+    @for $i from 1 through 3 {
       $a: $i + px;
       .line#{$i} {
-        left: calc(calc($lineLeft + calc($lineSpace * $i)) - $a);
+        left: calc(calc($lineLeft + calc($lineSpace * $i)));
       }
     }
     .title-box {
+      background-position: bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
       background-color: var(--o-color-kleinblue5);
       color: var(--o-color-white);
-      font-size: var(--o-font-size-h8);
-      line-height: var(--o-line-height-h8);
-      min-width: $titleboxWidth;
-      max-width: $titleboxWidth;
+      font-size: var(--o-font-size-h7);
+      line-height: var(--o-line-height-h7);
+      flex-shrink: 0;
+      width: $titleboxWidth;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 0 var(--o-spacing-h6);
-      p {
-        word-spacing: 100vw;
-      }
     }
     .content-box {
-      margin-left: $contenML;
+      background-color: var(--o-color-fill2);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right 40px;
+      padding: 20px 0;
       width: 100%;
       display: flex;
       flex-direction: row;
     }
     .collegee {
-      margin-left: $contenML;
+      background-color: var(--o-color-fill2);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right 40px;
       div:last-of-type {
         margin-bottom: 0;
       }
@@ -405,10 +366,10 @@ $lineLeft: calc($titleboxWidth + $contenML);
         text-align: center;
         background-image: linear-gradient(
           90deg,
-          rgba(235, 242, 251, 0.7) 0%,
-          rgba(202, 226, 250, 0.7) 100%
+          rgba(237, 245, 255, 0.7) 10%,
+          rgba(195, 225, 255, 0.36) 100%
         );
-        margin-bottom: var(--o-spacing-h10);
+        margin-bottom: var(--o-spacing-h9);
         p,
         a {
           line-height: 34px;
@@ -425,15 +386,24 @@ $lineLeft: calc($titleboxWidth + $contenML);
         }
       }
     }
-    .layout {
+    .layout,
+    .layout-edition {
       width: 0px;
       height: auto;
       position: relative;
     }
+    .layout-edition {
+      position: absolute;
+      width: 104px;
+    }
     .event-box {
       position: relative;
-      padding: var(--o-spacing-h6);
+      padding: 8px;
       min-width: $eventboxWidth;
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+
       h5 {
         font-size: var(--o-font-size-h8);
         line-height: var(--o-line-height-text);
@@ -443,8 +413,13 @@ $lineLeft: calc($titleboxWidth + $contenML);
       .event-item {
         display: flex;
         align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+        padding-left: 8px;
 
         li {
+          position: absolute;
+          left: 0;
           font-size: var(--o-font-size-tip);
           line-height: var(--o-line-height-tip);
           width: 4px;
@@ -452,10 +427,14 @@ $lineLeft: calc($titleboxWidth + $contenML);
         }
         a,
         p {
+          margin-top: 8px;
           font-size: var(--o-font-size-tip);
           color: var(--o-color-text1);
           position: relative;
           line-height: var(--o-line-height-tip);
+        }
+        .location {
+          margin-top: 0;
         }
         p {
           cursor: default;
@@ -483,14 +462,14 @@ $lineLeft: calc($titleboxWidth + $contenML);
         cursor: default;
       }
     }
-    .activebox {
+    .active-box {
       min-width: 1416px;
       display: flex;
       flex-direction: row;
       position: relative;
       .otherlink {
         position: absolute;
-        bottom: -25px;
+        bottom: -27px;
         right: 0;
         z-index: 3;
         p,
@@ -500,8 +479,8 @@ $lineLeft: calc($titleboxWidth + $contenML);
         }
       }
       .content-box {
-        background-image: linear-gradient(to right, #eff3fb, #dfeafb);
         .event-box {
+          box-shadow: var(--o-shadow-l1);
           h5 {
             color: var(--o-color-kleinblue5);
           }
@@ -515,12 +494,12 @@ $lineLeft: calc($titleboxWidth + $contenML);
     }
     .community {
       .content-box {
-        background-image: linear-gradient(
-          90deg,
-          rgba(247, 241, 218, 0.3) 0%,
-          rgba(251, 234, 175, 0.4) 100%
-        );
         .event-box {
+          background-image: linear-gradient(
+            90deg,
+            rgba(247, 241, 218, 0.3) 0%,
+            rgba(251, 234, 175, 0.4) 100%
+          );
           h5 {
             color: var(--o-color-kleinblue5);
           }
@@ -532,79 +511,83 @@ $lineLeft: calc($titleboxWidth + $contenML);
         }
       }
     }
-    .units {
-      .content-box {
-        background-image: linear-gradient(
-          90deg,
-          rgba(232, 242, 255, 0.5) 0%,
-          rgba(192, 218, 254, 0.43) 100%
-        );
-        .event-box {
-          h5 {
-            color: #feaa11;
-          }
-          .event-item {
-            li {
-              color: #feaa11;
-            }
-          }
-        }
-      }
-    }
+
     .opensoucrce {
-      margin-bottom: 18px;
       .content-box {
-        background-image: linear-gradient(
-          90deg,
-          rgba(236, 240, 243, 0.5) 0%,
-          #cde8e7 100%
-        );
         .event-box {
+          background-image: linear-gradient(
+            90deg,
+            rgba(236, 240, 243, 0.5) 0%,
+            #cde8e7 100%
+          );
           h5 {
             color: #00685a;
           }
           .event-item {
             li {
-              color: #00685a;
+              color: #5ab2aeff;
+            }
+          }
+        }
+      }
+    }
+    .ecology {
+      margin-top: 33px;
+      .content-box {
+        .event-box {
+          background-image: linear-gradient(
+            90deg,
+            rgba(255, 252, 243, 0.3) 0%,
+            rgba(251, 234, 175, 0.4) 100%
+          );
+          h5 {
+            color: #00685a;
+          }
+          .event-item {
+            li {
+              color: #f0bc00ff;
             }
           }
         }
       }
     }
     .developer {
+      .title-box {
+        padding: 0 36px;
+      }
       .content-box {
-        background-image: linear-gradient(
-          90deg,
-          rgba(236, 237, 252, 0.5) 0%,
-          #ebecfc 100%
-        );
         .event-box {
-          h5 {
-            color: #7d32ea;
-          }
+          background-image: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(252, 235, 252, 1) 100%
+          );
           .event-item {
             li {
-              color: #7d32ea;
+              color: #ff87eeff;
             }
           }
         }
       }
     }
     .edition {
-      margin-top: 25px;
+      margin-top: 33px;
 
       .title-box {
-        min-height: 72px;
+        padding: 72px 0;
       }
       .edition-box {
-        margin-left: var(--o-spacing-h5);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right 30px;
         width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
-        @for $i from 0 through 3 {
-          .edit#{$i} {
-            left: calc($lineSpace * calc($i + 1));
+        background-color: var(--o-color-fill2);
+        @for $i from 1 through 12 {
+          .edit-#{$i} {
+            left: calc(104px * $i + 62px);
           }
         }
         .edition-item {

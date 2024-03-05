@@ -30,12 +30,12 @@ const tabsData = {
       name: 'event-list',
     },
     {
-      label: salonData.value.DETAIL_NEWS,
+      label: '活动列表',
       name: 'latest',
     },
     {
-      label: salonData.value.DETAIL_REVIEW,
-      name: 'review',
+      label: '活动申请',
+      name: 'collect',
     },
   ],
 };
