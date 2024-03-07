@@ -15080,5 +15080,167 @@
       "hostBusAdapter": "HiSilicon SAS 3.0 HBA",
       "hardDiskDrive": "SageMicro SSD"
     }
+  },
+  {
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "R6250H0",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2024/03/07",
+    "friendlyLink": "https://www.cancon.com.cn/",
+    "boardCards": [
+      { 
+        "vendorID": "1000",
+        "deviceID": "10E2",
+        "svID": "1000",
+        "ssID": "4000",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "Raid",
+        "date": "2024.03.07",
+        "sha256": "ffddd22e811d306134efaa8bd15a3a11262b008b153f8e9f2f814c0477bdeedb",
+        "driverSize": "73.5K",
+        "chipVendor": "Broadcom",
+        "boardModel": "9560-16i",
+        "chipModel": "SAS3916",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {  
+        "vendorID": "15B3",
+        "deviceID": "1015",
+        "svID": "15B3",
+        "ssID": "0102",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "mlx5_core",
+        "version": "5.0-0",
+        "type": "NIC",
+        "date": "2024.03.07",
+        "sha256": "396304697cb2844e3dbd0573576ecb02521c6ebc71c6eef3af8ed50198ca6c7a",
+        "driverSize": "420.5K",
+        "chipVendor": "Mellanox",
+        "boardModel": "E10GM2-CX4-Lx",
+        "chipModel": "ConnectX-4 Lx",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {  
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1DCF",
+        "ssID": "0308",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "igb",
+        "version": "5.10.0-182.0.0.95.oe2203sp3.x86",
+        "type": "NIC",
+        "date": "2024.03.07",
+        "sha256": "0b1deb1d6eaba333e6ad32af55e8be3e459637b5f78ec082887a9f763efdbe15",
+        "driverSize": "105.5K",
+        "chipVendor": "Intel",
+        "boardModel": "EGI2-I350-US",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+      "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn/",
+      "certificationTime": "2024/03/07",
+      "commitID": "I96FIF",
+      "mainboardModel": "62DC24",
+      "biosUefi": "CQH1050028",
+      "cpu": "Hygon 4",
+      "ram": "8*32G DIMMs",
+      "portsBusTypes": "PCI/PCIe",
+      "videoAdapter": "Aspeed AST2600 VG",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "BROADCOM MR9560-16i"
+    }
+  },
+  {
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "CY52-T40",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2024/03/08",
+    "friendlyLink": "https://www.cancon.com.cn/",
+    "boardCards": [
+      {
+           "vendorID": "8086",
+           "deviceID": "1523",
+           "svID": "ffff",
+           "ssID": "0000",
+           "architecture": "x86_64",
+           "os": "openEuler 22.03 LTS SP3",
+           "driverName": "igb",
+           "version": "5.10.0-182.0.0.95.oe2203sp3.x86_64",
+           "type": "NIC",
+           "date": "2024.03.08",
+           "sha256": "396304697cb2844e3dbd0573576ecb02521c6ebc71c6eef3af8ed50198ca6c7a",
+           "driverSize": "106K",
+           "chipVendor": "Intel",
+           "boardModel": "I350",
+           "chipModel": "I350",
+           "downloadLink": "inbox"
+      }
+    ],
+      "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn/",
+      "certificationTime": "2024/03/08",
+      "commitID": "I96FF7",
+      "mainboardModel": "92DA64B V1.0",
+      "biosUefi": "CZML051208",
+      "cpu": "Hygon 2",
+      "ram": "16*16G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "ASPEED 2500",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "ATA  SSSTC ER2-GD240"
+    }
+  },
+  {
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "CY32-T28",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2024/03/08",
+    "friendlyLink": "https://www.cancon.com.cn/",
+    "boardCards": [
+      {
+           "vendorID": "8086",
+           "deviceID": "1523",
+           "svID": "ffff",
+           "ssID": "0000",
+           "architecture": "x86_64",
+           "os": "openEuler 22.03 LTS SP3",
+           "driverName": "igb",
+           "version": "5.10.0-182.0.0.95.oe2203sp3.x86_64",
+           "type": "NIC",
+           "date": "2024.03.08",
+           "sha256": "396304697cb2844e3dbd0573576ecb02521c6ebc71c6eef3af8ed50198ca6c7a",
+           "driverSize": "106K",
+           "chipVendor": "Intel",
+           "boardModel": "I350",
+           "chipModel": "I350",
+           "downloadLink": "inbox"
+      }
+    ],
+      "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn/",
+      "certificationTime": "2024/03/08",
+      "commitID": "I96FF7",
+      "mainboardModel": "37D08B V1.2",
+      "biosUefi": "0ZMLU415",
+      "cpu": "Hygon 2",
+      "ram": "8*16G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "Onboard VGA",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "ATA  SSSTC ER2-GD240"
+    }
   }
 ]
