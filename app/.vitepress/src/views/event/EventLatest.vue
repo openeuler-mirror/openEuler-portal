@@ -60,7 +60,7 @@ const paramsGetSalon = () => {
   getSalon({
     page: params.currentPage,
     size: params.pageSize,
-    activity: 'registering',
+    activity: '',
   })
     .then((res) => {
       total.value = res.total;

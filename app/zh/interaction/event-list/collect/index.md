@@ -1,24 +1,12 @@
 ---
 title: '活动征集'
+category: event
 ---
 
 <script lang="ts" setup>
-import BannerLevel2 from '@/components/BannerLevel2.vue'
-
-import banner from '@/assets/banner/banner-community.png';
-import illustration from '@/assets/illustrations/collect.png';
 import IconDownload from '~icons/app/icon-download.svg';
-
 </script>
 
-<ClientOnly>
-  <BannerLevel2
-  title="活动征集"
-  :illustration="illustration"
-  :background-image="banner"
-  background-text="CONNECT"
-  />
-</ClientOnly>
 
 <div class="markdown">
 
