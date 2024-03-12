@@ -12,7 +12,6 @@ import UserCase from './UserCase.vue';
 import HomeTrend from './HomeTrend.vue';
 import HomeBanner from './HomeBanner.vue';
 import HomeIntro from './HomeIntro.vue';
-import HomePlayground from './HomePlayground.vue';
 import HomeDisplayZone from './HomeDisplayZone.vue';
 import HomeMedia from './HomeMedia.vue';
 import AppCalendar from '@/components/AppCalendar.vue';
