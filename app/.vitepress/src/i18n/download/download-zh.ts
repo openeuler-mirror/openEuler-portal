@@ -102,6 +102,10 @@ export default {
       ' and have selected the applicable mirrors.',
     ],
   },
+  GET_OPENEULER_OS1:'获取openEuler操作系统',
+  GET_OPENEULER_OS2:'Get openEuler OS',
+  GET_OPENEULER_OS_DOC:'查看 openEuler 社区文档',
+  GET_OPENEULER_OS_DOC_LINK:'https://docs.openeuler.org/zh/',
   MIRROR_ALL: {
     TITLE: '镜像仓列表',
     NAME: '站点',

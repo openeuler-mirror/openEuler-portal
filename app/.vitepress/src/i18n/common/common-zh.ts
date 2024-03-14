@@ -777,6 +777,16 @@ export default {
       ID: 'download',
       CHILDREN: [
         {
+          NAME: '获取方式',
+          TYPE: 0,
+          CHILDREN: [
+            {
+              NAME: '获取openEuler操作系统',
+              PATH: '/download/get-os/',
+            },
+          ],
+        },
+        {
           NAME: '最新版本',
           TYPE: 1,
           CHILDREN: [
