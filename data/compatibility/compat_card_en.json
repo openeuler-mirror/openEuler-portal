@@ -20966,5 +20966,43 @@
         "chipModel": "82599ES",
         "item": "02311LSY",
         "downloadLink": "inbox"
+    },
+    {
+      "vendorID": "1ec6",
+      "deviceID": "0200",
+      "svID": "1ec6",
+      "ssID": "0063",
+      "architecture": "aarch64",
+      "os": "openEuler 22.03 LTS SP2",
+      "driverName": "vastai_pci",
+      "version": "CD9440DD8E1973C48A18416",
+      "type": "GPU",
+      "date": "2024.1.19",
+      "sha256": "df47d49f3418d5a61002739a246470d35238c8bff4d4ee2fa1081c186c95bf57",
+      "driverSize": "29.8M",
+      "chipVendor": "VASTAI",
+      "boardModel": "VG1000",
+      "chipModel": "SG100",
+      "item": "",
+      "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS-SP2/contrib/drivers/source/Packages/ddk_pack.tar.gz"
+    },
+    {
+      "vendorID": "1d82",
+      "deviceID": "0401",
+      "svID": "1d82",
+      "ssID": "0401",
+      "architecture": "aarch64",
+      "os": "openEuler 22.03 LTS SP1",
+      "driverName": "nvme",
+      "version": "1.0",
+      "type": "AIC",
+      "date": "2024.1.31",
+      "sha256": "6fe496dbbb15670f2751f80dbc31389562b43eb6103bcf79547707ef08036883",
+      "driverSize": "19.9M",
+      "chipVendor": "Netint",
+      "boardModel": "QuadraT2A",
+      "chipModel": "codensity g5",
+      "item": "",
+      "downloadLink": "inbox"
     }
 ]
