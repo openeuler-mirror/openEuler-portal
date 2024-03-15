@@ -94,6 +94,10 @@ export default {
       ' and have selected the applicable mirrors.',
     ],
   },
+  GET_OPENEULER_OS1:'Get openEuler OS',
+  GET_OPENEULER_OS2:'Get openEuler OS',
+  GET_OPENEULER_OS_DOC:'View the openEuler documentation',
+  GET_OPENEULER_OS_DOC_LINK:'https://docs.openeuler.org/en/',
   MIRROR_ALL: {
     TITLE: 'Mirrors',
     NAME: 'Site',

@@ -598,6 +598,16 @@ export default {
       ID: 'download',
       CHILDREN: [
         {
+          NAME: 'Getting Method',
+          TYPE: 0,
+          CHILDREN: [
+            {
+              NAME: 'Get openEuler OS',
+              PATH: '/download/get-os/',
+            },
+          ],
+        },
+        {
           NAME: 'Latest',
           TYPE: 1,
           CHILDREN: [
