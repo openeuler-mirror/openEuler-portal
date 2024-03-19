@@ -96,10 +96,6 @@ onMounted(() => {
         width: 100px;
         margin: 0 auto;
         display: block;
-        // @media (max-width: 780px) {
-        //   width: 95px;
-        //   height: 95px;
-        // }
       }
     }
     p {
@@ -159,6 +155,7 @@ onMounted(() => {
     img {
       width: 100px;
       margin-bottom: 8px;
+      border-radius: 50%;
     }
     .mail {
       margin-top: 8px;

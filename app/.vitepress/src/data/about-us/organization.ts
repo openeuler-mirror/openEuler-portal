@@ -20,7 +20,6 @@ import houjian from '@/assets/category/organization/houjian.png';
 import hufeng from '@/assets/category/organization/hufeng.png';
 import huyadi from '@/assets/category/organization/huyadi.png';
 import liyongqiang from '@/assets/category/organization/liyongqiang.png';
-import liushouyong from '@/assets/category/organization/liushouyong.png';
 import renwei from '@/assets/category/organization/renwei.png';
 import shiyong from '@/assets/category/organization/shiyong.png';
 import tianjun from '@/assets/category/organization/tianjun.png';
@@ -46,7 +45,7 @@ import wuheshuan from '@/assets/category/organization/expert/wuheshuan.png';
 import liangbin from '@/assets/category/organization/brand/liangbin.png';
 import huangzhaowei from '@/assets/category/organization/brand/huangzhaowei.png';
 import kanglifeng from '@/assets/category/organization/brand/kanglifeng.png';
-import lina from '@/assets/category/organization/brand/lina.png';
+import zhaoyi from '@/assets/category/organization/brand/zhaoyi.png';
 import lizhenning from '@/assets/category/organization/brand/lizhenning.png';
 import majun from '@/assets/category/organization/brand/majun.png';
 import wangxinhui from '@/assets/category/organization/brand/wangxinhui.png';
@@ -268,13 +267,6 @@ export default {
             gitee: 'charlie_li',
           },
           {
-            img: liushouyong,
-            name: '刘寿永',
-            post: '委员',
-            email: 'pangbanme@163.com',
-            gitee: 'pangbanme',
-          },
-          {
             img: lvcongqing,
             name: '吕从庆',
             post: '委员',
@@ -388,12 +380,6 @@ export default {
             email: 'Ming.yue.hu@intel.com',
           },
           {
-            img: lina,
-            name: '丽娜',
-            position: ['委员'],
-            email: 'li_na1@hoperun.com',
-          },
-          {
             img: lizhenning,
             name: '李震宁',
             position: ['委员'],
@@ -422,6 +408,12 @@ export default {
             name: '张迎',
             position: ['委员'],
             email: 'zhangy1317@chinaunicom.cn',
+          },
+          {
+            img: zhaoyi,
+            name: '赵易',
+            position: ['委员'],
+            email: 'zhao_yi1@hoperun.com',
           },
         ],
       },
@@ -714,13 +706,6 @@ export default {
             gitee: 'charlie_li',
           },
           {
-            img: liushouyong,
-            name: 'Liu Shouyong',
-            post: 'Committee member',
-            email: 'pangbanme@163.com',
-            gitee: 'pangbanme',
-          },
-          {
             img: lvcongqing,
             name: 'Lv Congqing',
             post: 'Committee member',
@@ -834,12 +819,6 @@ export default {
             email: 'Ming.yue.hu@intel.com',
           },
           {
-            img: lina,
-            name: 'Li Na',
-            position: ['Committee member'],
-            email: 'li_na1@hoperun.com',
-          },
-          {
             img: lizhenning,
             name: 'Li Zhenning',
             position: ['Committee member'],
@@ -868,6 +847,12 @@ export default {
             name: 'Zhang Ying',
             position: ['Committee member'],
             email: 'zhangy1317@chinaunicom.cn',
+          },
+          {
+            img: zhaoyi,
+            name: 'Zhao Yi',
+            position: ['Committee member'],
+            email: 'zhao_yi1@hoperun.com',
           },
         ],
       },
