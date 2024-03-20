@@ -27,6 +27,8 @@ import wangyouhai from '@/assets/category/euler-sky/oevp/wangyouhai.png';
 import lichaoran from '@/assets/category/euler-sky/oevp/lichaoran.png';
 import wangxiyuan from '@/assets/category/euler-sky/oevp/wangxiyuan.png';
 import jiangyikun from '@/assets/category/euler-sky/oevp/jiangyikun.png';
+import liupeng from '@/assets/category/euler-sky/oevp/liupeng.png';
+import renyuxin from '@/assets/category/euler-sky/oevp/renyuxin.png';
 
 export default [
   {
@@ -63,6 +65,13 @@ export default [
     company: '中国科学院软件研究所',
     labels: ['数据安全', '操作系统', '云原生'],
     base: '新加坡',
+  },
+  {
+    avator: liupeng,
+    name: '刘鹏',
+    company: '华为技术有限公司',
+    labels: ['云服务', '数据存储', '机密计算'],
+    base: '成都',
   },
   {
     avator: liuwenqing,
@@ -231,5 +240,12 @@ export default [
     company: '华为技术有限公司',
     labels: ['大数据', '云计算', '云原生', '容器镜像'],
     base: '西安',
+  },
+  {
+    avator: renyuxin,
+    name: '任玉鑫',
+    company: '华为技术有限公司',
+    labels: ['操作系统', '网络系统', '系统安全'],
+    base: '北京',
   },
 ];
