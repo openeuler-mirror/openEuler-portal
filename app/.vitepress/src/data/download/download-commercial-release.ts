@@ -70,6 +70,23 @@ export default {
         ],
       },
       {
+        NAME: '新支点服务器操作系统 V6',
+        DOWNLOAD_URL: 'https://nsosmirrors.gd-linux.com/cgsl/V6/openEuler/',
+        DESC: '新支点服务器操作系统V6是新支点基于openEuler开源社区技术的发行版本，是一款安全、稳定、可控的电信级Linux服务器操作系统产品，支持广泛的硬件平台（鲲鹏、飞腾、海光、兆芯）提供5G场景下的多层次虚拟化技术及可靠的运行支持能力，实现快速虚拟机故障切换和支持应用可持续底层升级技术，同时随着云化技术应用的不断深入，支持作为可信的边缘节点。',
+        MANUFACTURER: '广东中兴新支点技术有限公司',
+        PUBLISH_DATE: '2023/03',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://nsosmirrors.gd-linux.com/cgsl/V6/openEuler/V6.02/x86_64/',
+            ARCH: 'x86_64',
+          },
+          {
+            LINK: 'https://nsosmirrors.gd-linux.com/cgsl/V6/openEuler/V6.02/aarch64/',
+            ARCH: 'AArch64',
+          },
+        ],
+      },
+      {
         NAME: '超聚变服务器操作系统 FusionOS 22 （免费使用授权）',
         DOWNLOAD_URL:
           'https://eco.xfusion.com/solutions/market/application/419662379870064640',
