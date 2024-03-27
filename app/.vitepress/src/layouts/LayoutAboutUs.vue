@@ -569,6 +569,25 @@ const handleNodeClick = (node: any) => {
       margin-top: 0 !important;
     }
   }
+  .revision-time {
+    text-align: center;
+    margin-top: -40px;
+    @media screen and (max-width: 768px) {
+      margin-top: -20px;
+    }
+  }
+  .charter-version {
+    display: block;
+    margin-top: 40px;
+    font-weight: normal;
+    font-size: var(--o-font-size-text);
+    line-height: var(--o-line-height-text);
+    @media screen and (max-width: 768px) {
+      margin-top: 24px;
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
+    }
+  }
 }
 
 .dark .about-markdown img {
