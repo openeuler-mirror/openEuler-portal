@@ -13,6 +13,7 @@ import LayoutNews from '@/layouts/LayoutNews.vue';
 import LayoutShowcase from '@/layouts/LayoutShowcase.vue';
 import LayoutMigration from '@/layouts/LayoutMigration.vue';
 import LayoutAboutUs from '@/layouts/LayoutAboutUs.vue';
+import LayoutAboutUsArchived from '@/layouts/LayoutAboutUsArchived.vue';
 import LayoutDownload from './layouts/LayoutDownload.vue';
 import LayoutEvent from './layouts/LayoutEvent.vue';
 import LayoutSecurity from './layouts/LayoutSecurity.vue';
@@ -37,6 +38,7 @@ const compMapping: {
   showcase: LayoutShowcase,
   migration: LayoutMigration,
   'about-us': LayoutAboutUs,
+  'about-us-archived': LayoutAboutUsArchived,
   download: LayoutDownload,
   event: LayoutEvent,
   security: LayoutSecurity,
@@ -53,9 +55,7 @@ const comp = computed(() => {
   return compMapping[frontmatter.value.category];
 });
 
-
 onMounted(() => {
-
   setStoreData();
 });
 </script>
