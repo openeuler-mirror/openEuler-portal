@@ -23,7 +23,7 @@ CLA 是 Contributor License Agreement 的缩写，一般翻译为贡献者许可
 2.1 openEuler 社区 CLA 签署地址 [https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340 ](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340)
 在页面点击 "签署企业 CLA"（英文页面为 "Sign Corporation CLA" ） 按钮进入签署页面 按钮进入。
 
-![images](./images/1.jpg)
+![images](./images/1.png)
 
  <p style='text-align:center'>选择签署不同的CLA-企业签署</p>
 
@@ -95,7 +95,7 @@ CLA 是 Contributor License Agreement 的缩写，一般翻译为贡献者许可
 
 在页面点击 "签署员工 CLA" （英文页面为 "Sign Employee CLA"）
 
-![images](./images/5.jpg)
+![images](./images/5.png)
 
  <p style='text-align:center'> 选择签署不同的CLA-企业员工签署</p>
 
