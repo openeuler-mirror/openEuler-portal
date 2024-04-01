@@ -154,7 +154,7 @@ export default [
     lang: ['zh', 'en', 'ru'],
   },
   {
-    name: 'charter',
+    name: 'charter/**',
     lang: ['zh'],
   },
   {
