@@ -595,4 +595,4 @@ openEuler 委员会（含 openEuler 委员会常务委员会）可以就项目�
 
 <span class="more-info">相关链接：</span>
 
-[openEuler项目群开源治理制度（1.0版本）](/zh/community/charter/v1.0/)
+[《openEuler项目群开源治理制度》（1.0版本）](/zh/community/charter/v1.0/)
