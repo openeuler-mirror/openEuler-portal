@@ -3,7 +3,7 @@ title: 社区章程
 category: about-us
 ---
 
-# openEuler 项目群开源治理制度
+# openEuler项目群开源治理制度
 
 <p class='update-time' >最后修订时间：2024年3月</p>
 
