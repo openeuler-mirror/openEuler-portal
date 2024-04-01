@@ -5,6 +5,8 @@ category: about-us-archived
 
 # openEuler项目群开源治理制度
 
+<p class='update-time' >最后修订时间：2022年12月</p>
+
 ## 第一章　总则
 
 ### 第一条 项目群名称
