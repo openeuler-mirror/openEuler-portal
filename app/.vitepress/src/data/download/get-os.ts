@@ -48,10 +48,6 @@ export default {
           href: 'https://market.cloud.tencent.com/products/39669',
           label: '腾讯云',
         },
-        {
-          href: 'https://mirrors.aliyun.com/openeuler/',
-          label: '阿里云',
-        },
       ],
     },
     {
@@ -157,10 +153,6 @@ export default {
         {
           href: 'https://market.cloud.tencent.com/products/39669',
           label: 'Tencent Cloud',
-        },
-        {
-          href: 'https://mirrors.aliyun.com/openeuler/',
-          label: 'Aliyun Mirror',
         },
       ],
     },
