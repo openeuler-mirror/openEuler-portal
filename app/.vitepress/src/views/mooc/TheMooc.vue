@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue';
 import AppContent from '@/components/AppContent.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import MoocContent from './MoocContent.vue';

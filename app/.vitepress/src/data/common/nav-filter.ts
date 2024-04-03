@@ -23,7 +23,7 @@ export default [
   },
   {
     name: 'mooc',
-    lang: ['zh'],
+    lang: ['zh', 'en'],
   },
   {
     name: 'internship',
