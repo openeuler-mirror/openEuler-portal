@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { reactive, ref, watch, onMounted, computed } from 'vue';
-import { useRouter } from 'vitepress';
+import { useRouter, useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
@@ -37,6 +37,7 @@ const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
 
 const i18n = useI18n();
 const router = useRouter();
+const { lang } = useData();
 
 const inputName = ref('');
 const total = ref(0);
@@ -238,7 +239,7 @@ function handleCancelSelected() {
 }
 
 function goDefectManage() {
-  window.open('/zh/security/management/');
+  window.open(`/${lang.value}/security/management/`);
 }
 
 onMounted(() => {

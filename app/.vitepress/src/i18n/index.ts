@@ -88,6 +88,7 @@ const i18n: { [key: string]: any } = {
     sky: sky.en,
     group: group.en,
     cookie: cookie.en,
+    mooc: mooc.en,
   },
 };
 

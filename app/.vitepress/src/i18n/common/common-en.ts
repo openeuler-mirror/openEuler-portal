@@ -398,6 +398,11 @@ export default {
               PATH: 'https://docs.openeuler.org/en/',
             },
             {
+              NAME: 'MOOCs',
+              LABEL: '',
+              PATH: '/learn/mooc/',
+            },
+            {
               NAME: 'Contribution Guide',
               LABEL: '',
               PATH: '/community/contribution/',
@@ -540,6 +545,11 @@ export default {
               NAME: 'Documentation',
               LABEL: '',
               PATH: 'https://docs.openeuler.org/en/',
+            },
+            {
+              NAME: 'MOOCs',
+              LABEL: '',
+              PATH: '/learn/mooc/',
             },
             {
               NAME: 'Contribution Guide',
