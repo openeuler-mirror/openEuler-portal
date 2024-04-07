@@ -21230,5 +21230,24 @@
         "chipModel": "WX1860A4",
         "item": "",
         "downloadLink": "inbox"
+    },
+    {
+        "vendorID": "1f47",
+        "deviceID": "2018",
+        "svID": "1234",
+        "ssID": "2018",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "swiftn",
+        "version": "1.9.3.1",
+        "type": "DPU",
+        "date": "2024.02.04",
+        "sha256": "9159c8befeb5f44b1418ef71526aedaf308471a2c9a40549d9c3bab863e760ab",
+        "driverSize": "63M",
+        "chipVendor": "YUSUR",
+        "boardModel": "SWIFT-2200NX10",
+        "chipModel": "k2pro",
+        "item": "",
+        "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/SWIFT-2200N_V1.9.3.1.zip"
     }
 ]
