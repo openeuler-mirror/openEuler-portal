@@ -254,23 +254,27 @@ const liveStyleMo = ref({
     }
   }
   .live-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 262px;
     height: 260px;
     @media screen and (max-width: 767px) {
+      justify-content: flex-start;
       width: 100%;
       height: 98px;
       background-repeat: no-repeat;
       background-color: var(--o-color-bg4);
     }
     .live-background-img {
-      margin: 70px 71px;
       width: 120px;
       height: 120px;
+      border-radius: 50%;
+      background-color: var(--o-color-bg4);
       @media screen and (max-width: 767px) {
         width: 68px;
         height: 68px;
         margin-left: 74px;
-        margin-top: 13px;
       }
     }
   }
