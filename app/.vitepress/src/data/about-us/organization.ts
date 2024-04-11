@@ -116,7 +116,7 @@ export default {
               {
                 img: jiangdayong,
                 name: '江大勇',
-                position: ['开放原子开源基金会'],
+                position: [''],
               },
             ],
           },
@@ -549,7 +549,7 @@ export default {
               {
                 img: jiangdayong,
                 name: 'Jiang Dayong',
-                position: ['OpenAtom Foundation'],
+                position: [''],
               },
             ],
           },

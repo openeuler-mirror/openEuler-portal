@@ -101,6 +101,11 @@ export default {
           noIcon: true,
         },
         {
+          img_light: intel_light,
+          img_dark: intel_dark,
+          noIcon: true,
+        },
+        {
           img_light: dianxing_light,
           img_dark: dianxing_dark,
         },
@@ -108,11 +113,7 @@ export default {
           img_light: liantong_light,
           img_dark: liantong_dark,
         },
-        {
-          img_light: intel_light,
-          img_dark: intel_dark,
-          noIcon: true,
-        },
+
         {
           img_light: yidong_light,
           img_dark: yidong_dark,
@@ -165,10 +166,6 @@ export default {
           noIcon: true,
         },
         {
-          img_light: puhua_light,
-          img_dark: puhua_dark,
-        },
-        {
           img_light: zhongyin_light,
           img_dark: zhongyin_dark,
           noIcon: true,
@@ -177,6 +174,10 @@ export default {
           img_light: zuowang_light,
           img_dark: zuowang_dark,
           noIcon: true,
+        },
+        {
+          img_light: puhua_light,
+          img_dark: puhua_dark,
         },
       ],
     },
@@ -245,17 +246,17 @@ export default {
           noIcon: true,
         },
         {
+          img_light: intel_light,
+          img_dark: intel_dark,
+          noIcon: true,
+        },
+        {
           img_light: dianxing_light,
           img_dark: dianxing_dark,
         },
         {
           img_light: liantong_light,
           img_dark: liantong_dark,
-        },
-        {
-          img_light: intel_light,
-          img_dark: intel_dark,
-          noIcon: true,
         },
         {
           img_light: yidong_light,
@@ -309,10 +310,6 @@ export default {
           noIcon: true,
         },
         {
-          img_light: puhua_light,
-          img_dark: puhua_dark,
-        },
-        {
           img_light: zhongyin_light,
           img_dark: zhongyin_dark,
           noIcon: true,
@@ -321,6 +318,10 @@ export default {
           img_light: zuowang_light,
           img_dark: zuowang_dark,
           noIcon: true,
+        },
+        {
+          img_light: puhua_light,
+          img_dark: puhua_dark,
         },
       ],
     },
