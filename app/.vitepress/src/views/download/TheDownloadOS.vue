@@ -80,14 +80,22 @@ const osData = computed(() => {
         </div>
       </OCard>
     </div>
-
-    <a
-      :href="downloadI18n.GET_OPENEULER_OS_DOC_LINK"
-      target="_blank"
-      class="docs-link"
-      rel="noopener noreferrer"
-      >{{ downloadI18n.GET_OPENEULER_OS_DOC }}</a
-    >
+    <div class="bottom-link">
+      <a
+        :href="downloadI18n.GET_IMAGES_LINK"
+        target="_blank"
+        class="docs-link"
+        rel="noopener noreferrer"
+        >{{ downloadI18n.GET_IMAGES }}</a
+      >
+      <a
+        :href="downloadI18n.GET_OPENEULER_OS_DOC_LINK"
+        target="_blank"
+        class="docs-link"
+        rel="noopener noreferrer"
+        >{{ downloadI18n.GET_OPENEULER_OS_DOC }}</a
+      >
+    </div>
   </AppContent>
 </template>
 
@@ -170,7 +178,7 @@ const osData = computed(() => {
       /* 使用自动填充的列，每列的最小宽度是50%，最大宽度是1fr */
       gap: 18px; /* 根据需要设置间隙 */
       min-height: 62px;
-      @media screen and (max-width:768px) {
+      @media screen and (max-width: 768px) {
         min-height: auto;
       }
       .link {
@@ -214,16 +222,18 @@ const osData = computed(() => {
     }
   }
 }
-.docs-link {
+.bottom-link {
+  display: flex;
+  justify-content: flex-end;
   margin-top: 24px;
-  display: block;
-  text-align: right;
-  margin-left: auto;
   font-size: var(--o-font-size-text);
   line-height: var(--o-line-height-text);
   @media screen and (max-width: 768px) {
     font-size: var(--o-font-size-tip);
     line-height: var(--o-line-height-tip);
+  }
+  a {
+    margin-right: 24px;
   }
 }
 
