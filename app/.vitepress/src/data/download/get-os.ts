@@ -66,16 +66,8 @@ export default {
           label: 'OrbStack',
         },
         {
-          href: 'https://mirrors.tuna.tsinghua.edu.cn/openeuler/',
-          label: '清华TUNA',
-        },
-        {
           href: 'https://search.oepkgs.net/zh-CN',
           label: '中科院软件所',
-        },
-        {
-          href: '/zh/mirror/list/',
-          label: '查看更多',
         },
       ],
     },
@@ -172,16 +164,8 @@ export default {
           label: 'OrbStack',
         },
         {
-          href: 'https://mirrors.tuna.tsinghua.edu.cn/openeuler/',
-          label: 'TUNA',
-        },
-        {
           href: 'https://search.oepkgs.net/en-US',
           label: 'ISCAS',
-        },
-        {
-          href: '/en/mirror/list/',
-          label: 'Read More',
         },
       ],
     },
