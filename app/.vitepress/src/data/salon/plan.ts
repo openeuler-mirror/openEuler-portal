@@ -201,6 +201,12 @@ export const yearPlan = {
           {
             location: '成都',
             activeName: 'G11N&Docs Meetup',
+            href: '/zh/interaction/event-list/detail/?id=107&isMini=1',
+          },
+          {
+            location: '南京',
+            activeName: 'Embedded Meetup',
+            href: '/zh/interaction/event-list/detail/?id=108&isMini=1',
           },
           {
             location: '线上',
@@ -215,6 +221,14 @@ export const yearPlan = {
       {
         month: '4',
         actives: [
+          {
+            location: '上海',
+            activeName: 'RISC-V & Compiler MeetUp',
+          },
+          {
+            location: '北京',
+            activeName: 'RISC-V MeetUp',
+          },
           {
             location: '线上',
             activeName: 'UniProton on RISCV',
