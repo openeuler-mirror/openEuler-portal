@@ -72,10 +72,10 @@ import IconRight from '~icons/app/icon-arrow-right.svg';
                       {{ it.location }}
                     </p>
                     <a
-                      v-if="it.hasOwnProperty('activelink')"
-                      :key="it.activelink.url"
-                      :href="it.activelink.url"
-                      :target="it.activelink.target || '_blank'"
+                      v-if="it.href"
+                      :key="it.href"
+                      :href="it.href"
+                      target="_blank"
                       >{{ it.activeName }}</a
                     >
                     <p v-else>
@@ -93,10 +93,10 @@ import IconRight from '~icons/app/icon-arrow-right.svg';
                       {{ it.location }}
                     </p>
                     <a
-                      v-if="it.hasOwnProperty('activelink')"
-                      :key="it.activelink.url"
-                      :href="it.activelink.url"
-                      :target="it.activelink.target || '_blank'"
+                      v-if="it.href"
+                      :key="it.href"
+                      :href="it.href"
+                      target="_blank"
                       >{{ it.activeName }}</a
                     >
                     <p v-else>
