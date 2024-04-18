@@ -60,6 +60,18 @@ export default {
         },
       ],
     },
+    {
+      ID: '6',
+      IMG: mooc,
+      TITLE: 'openEuler安全知识培训',
+      DESC: 'openEuler基础安全意识与能力培训',
+      CHILDREN: [
+        {
+          NAME: '开始学习',
+          PATH: 'https://space.bilibili.com/527064077/channel/collectiondetail?sid=2726214',
+        },
+      ],
+    },
   ],
   BTN_LEARN: '课程学习',
   BTN_APPLY: '考试报名',
