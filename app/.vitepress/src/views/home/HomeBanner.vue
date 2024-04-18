@@ -82,7 +82,7 @@ const jumpTo = (item: any) => {
           <div
             v-if="item.title?.length"
             class="banner-panel-content flex-column"
-            :class="item.id === 'annual-report' ? 'annual-report' : ''"
+            :class="item.id === 'annual-report' ? 'annual-report' : item.id"
           >
             <div data-aos="fade-down" class="box">
               <img v-if="item.img" class="text-img" :src="item?.img" alt="" />
@@ -268,6 +268,47 @@ html[lang='zh'] {
         justify-content: flex-end;
         .o-button {
           margin-top: 8px;
+        }
+      }
+    }
+
+    .devday2024 {
+      @media screen and (max-width: 768px) {
+        justify-content: flex-end;
+        padding-bottom: 12px;
+      }
+
+      p.title:nth-of-type(1),
+      p.title:nth-of-type(3) {
+        font-size: var(--o-font-size-h4);
+        line-height: var(--o-line-height-h4);
+        font-weight: 500;
+        @media screen and (max-width: 768px) {
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
+          text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+        }
+      }
+      p.title:nth-of-type(2) {
+        @media screen and (max-width: 768px) {
+          font-size: var(--o-font-size-h5);
+          line-height: var(--o-line-height-h5);
+          font-weight: 500;
+          text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+        }
+      }
+      p.title:nth-of-type(3) {
+        margin: 8px 0 64px;
+        @media screen and (max-width: 768px) {
+          margin: 0 0 12px;
+        }
+      }
+      .desc {
+        font-size: var(--o-font-size-h6);
+        line-height: var(--o-line-height-h6);
+        @media screen and (max-width: 768px) {
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
         }
       }
     }
