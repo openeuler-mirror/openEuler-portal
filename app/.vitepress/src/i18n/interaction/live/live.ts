@@ -30,13 +30,22 @@ import guoxiaoqi from '@/assets/category/live/speaker/guoxiaoqi.png';
 import liujingang from '@/assets/category/live/speaker/liujingang.png';
 import fanjiacheng from '@/assets/category/live/speaker/fanjiacheng.png';
 import luoyukai from '@/assets/category/live/speaker/luoyukai.png';
+import liyancheng from '@/assets/category/live/speaker/liyancheng.png';
 
 export default {
   cn: {
     LIVE_LIST: [
       {
+        LIVETITLE: 'openEuler软件包引入与版本发布安全介绍',
+        LIVETEACHER: ' 李彦成',
+        LIVETIME: '2024年 4月18日 19:00（周四） ',
+        PHOTOPATH: liyancheng,
+        FORMERLYLINK:
+          'https://www.bilibili.com/video/BV1vz421k7PL/?vd_source=544d9ea25c0bc3a2570734b5b21104be',
+      },
+      {
         LIVETITLE: 'openEuler基础设施环境安全介绍',
-        LIVETEACHER: ' 范佳成',
+        LIVETEACHER: ' 范佳臣',
         LIVETIME: '2024年 4月10日 19:00（周三） ',
         PHOTOPATH: fanjiacheng,
         FORMERLYLINK:
