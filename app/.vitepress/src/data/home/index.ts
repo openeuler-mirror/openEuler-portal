@@ -4,27 +4,10 @@ import annualReport_mo from '@/assets/category/home/banner/annual-report_mo.jpg'
 import banner1_pc from '@/assets/category/home/banner/banner1_pc.jpg';
 import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';
 
-import banner_pc from '@/assets/category/home/banner/banner.jpg';
-import banner_mo from '@/assets/category/home/banner/banner_mo.jpg';
-
 export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
-      {
-        pcBanner: banner_pc,
-        moBanner: banner_mo,
-        link: '/zh/interaction/summit-list/devday2024/',
-        id: 'devday2024',
-        title: [
-          '开放原子开源基金会',
-          'openEuler Developer Day 2024',
-          '诚邀您提交议题，申报SIG会议',
-        ],
-        desc: ['6月 中国-深圳'],
-        btn: '',
-        targetTap: 1,
-      },
       {
         pcBanner: annualReport_pc,
         moBanner: annualReport_mo,
