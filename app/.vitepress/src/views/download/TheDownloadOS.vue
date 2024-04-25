@@ -57,25 +57,15 @@ const osData = computed(() => {
           class="os-card-links"
           :class="[
             `repeat-${item.repeat}`,
-            { 'more-card': item.links.length > 4 },
           ]"
         >
           <a
             v-for="(link, index) in item.links"
-            v-show="index <= 3"
             :href="link.href"
             class="link"
             target="_blank"
             rel="noopener noreferrer"
             >{{ link.label }}</a
-          >
-          <a
-            v-if="item.links.length > 4"
-            :href="item.links[4].href"
-            target="_blank"
-            class="more link"
-            rel="noopener noreferrer"
-            >{{ item.links[4].label }}</a
           >
         </div>
       </OCard>
@@ -204,11 +194,6 @@ const osData = computed(() => {
             top: 6px;
           }
         }
-      }
-      .more {
-        position: absolute;
-        right: 0;
-        bottom: 0;
       }
     }
     .repeat-1 {
