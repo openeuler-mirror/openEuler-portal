@@ -1,5 +1,5 @@
 ---
-title: 'SysCare—openEuler's Secret Weapon for Live Patching'
+title: "SysCare—openEuler's Secret Weapon for Live Patching"
 category: blog
 date: 2024-04-12
 tags:
