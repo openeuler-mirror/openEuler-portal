@@ -55,7 +55,7 @@ export default {
       iconDark: containerImgDark,
       title: '容器镜像',
       intro: 'openEuler 提供官方容器镜像：',
-      repeat: 2,
+      repeat: 3,
       links: [
         {
           href: 'https://hub.docker.com/r/openeuler/openeuler',
@@ -69,6 +69,14 @@ export default {
           href: 'https://search.oepkgs.net/zh-CN',
           label: '中科院软件所',
         },
+        {
+          href: 'https://hub.oepkgs.net/account/sign-in?globalSearch=openeuler',
+          label: 'Harbor',
+        },
+        {
+          href: 'https://quay.io/search?q=openeuler',
+          label: 'quay.io',
+        }
       ],
     },
     {
@@ -153,7 +161,7 @@ export default {
       iconDark: containerImgDark,
       title: 'Container image',
       intro: 'openEuler provides official container images:',
-      repeat: 2,
+      repeat: 3,
       links: [
         {
           href: 'https://hub.docker.com/r/openeuler/openeuler',
@@ -167,6 +175,14 @@ export default {
           href: 'https://search.oepkgs.net/en-US',
           label: 'ISCAS',
         },
+        {
+          href: 'https://hub.oepkgs.net/account/sign-in?globalSearch=openeuler',
+          label: 'Harbor',
+        },
+        {
+          href: 'https://quay.io/search?q=openeuler',
+          label: 'quay.io',
+        }
       ],
     },
     {
