@@ -70,6 +70,10 @@ export default {
           NAME: '开始学习',
           PATH: 'https://space.bilibili.com/527064077/channel/collectiondetail?sid=2726214',
         },
+        {
+          NAME: '考试报名',
+          PATH: '/zh/blog/openeuler/20240428-security.html',
+        },
       ],
     },
   ],

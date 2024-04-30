@@ -168,7 +168,7 @@ function filterCase() {
     currentCaseListAll.value = CaseListAll.value;
   } else {
     CaseListAll.value.forEach((item: any) => {
-      if (item.industry === currentTag.value) {
+      if (item.industry.toLowerCase() === currentTag.value.toLowerCase()) {
         currentCaseListAll.value.push(item);
       }
     });
