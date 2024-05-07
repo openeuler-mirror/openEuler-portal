@@ -8494,5 +8494,293 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "中科方德软件有限公司",
+    "os_version": "NFSCNS-4.0-E312-20240307-aarch64-dvd.iso",
+    "arch": "aarch64",
+    "checksum": "4d72bf5677879d5e33b6e44e346da3eb",
+    "base_openeuler_version": "openEuler-22.03-LTS-SP2-aarch64-dvd",
+    "os_download_link": "https://www.nfschina.com/",
+    "friendly_link": "https://www.nfschina.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/05/07",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "中科方德软件有限公司",
+    "os_version": "NFSCNS-4.0-E312-20240307-x86_64-dvd.iso",
+    "arch": "x86_64",
+    "checksum": "959f8f9194dc35a3f6f092fa40bb829e",
+    "base_openeuler_version": "openEuler-22.03-LTS-SP2-x86_64-dvd.iso",
+    "os_download_link": "https://www.nfschina.com/",
+    "friendly_link": "https://www.nfschina.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/05/07",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "广州企通云网络科技有限公司",
+    "os_version": "TrustEuler-TEOS-V1.0-x86_64-dvd.iso",
+    "arch": "x86_64",
+    "checksum": "11da2c4dbe03e56759beac7df6cb15a7",
+    "base_openeuler_version": "openEuler-22.03-LTS-SP3-x86_64",
+    "os_download_link": "www.cheeronyou.cn",
+    "friendly_link": "www.cheeronyou.cn",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/05/07",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "成都鼎桥通信技术有限公司",
+    "os_version": "openeuler-image-ros-sd3403-20240423083050.rootfs.ext4,boot_img",
+    "arch": "aarch64",
+    "checksum": "dbb3675869bf9cfbfff5cc3f4b04da73,3e2c56ea3263a41d67aefa470ce7787d",
+    "base_openeuler_version": "openEuler Embedded 23.09",
+    "os_download_link": "puai@td-tech.com",
+    "friendly_link": "https://www.td-tech.com/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2024/05/07",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 ]
