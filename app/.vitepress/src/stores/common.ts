@@ -8,18 +8,12 @@ export const useCommon = defineStore('common', {
 });
 
 // cookie状态
-export const useCookieStatus = defineStore('cookieStatus', {
+export const useCookieStore = defineStore('cookie', {
   state: () => ({
     status: '0',
+    version: '20240506',
   }),
   getters: {
     isAllAgreed: (state) => state.status === '1',
   },
-});
-
-// 隐私版本
-export const usePrivacyVersion = defineStore('privacyVersion', {
-  state: () => ({
-    version: '20240301',
-  }),
 });
