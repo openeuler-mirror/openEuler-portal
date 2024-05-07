@@ -3,7 +3,7 @@ import { ref, computed, onMounted } from 'vue';
 import { useData } from 'vitepress';
 import { getUserCaseData } from '@/api/api-showcase';
 import { useI18n } from '@/i18n';
-import { useCookieStatus } from '@/stores/common';
+import { useCookieStore } from '@/stores/common';
 
 import useWindowScroll from '@/components/hooks/useWindowScroll';
 
@@ -19,7 +19,7 @@ import { addSearchBuriedData } from '@/shared/utils';
 
 const i18n = useI18n();
 const { lang } = useData();
-const cookieStatus = useCookieStatus();
+const cookieStore = useCookieStore();
 
 const userCaseData = computed(() => i18n.value.showcase);
 // 当前选中的tag
@@ -102,7 +102,7 @@ function jumpPage(page: number) {
 // 点击跳转案例详情页面
 function goDetail(link: string, item: any, index: number) {
   const search_result_url = '/' + link.replace('index', '');
-  if (cookieStatus.isAllAgreed) {
+  if (cookieStore.isAllAgreed) {
     initSensors(search_result_url, item, index);
   }
   window.open(search_result_url);
@@ -180,7 +180,7 @@ function searchCase() {
   activeIndex.value = 0;
   currentTag.value = userCaseData.value.tags[0];
   if (keyWord.value) {
-    if (cookieStatus.isAllAgreed) {
+    if (cookieStore.isAllAgreed) {
       addSearchBuriedData(keyWord.value);
     }
     getUserCaseData(searchData.value).then((res) => {
