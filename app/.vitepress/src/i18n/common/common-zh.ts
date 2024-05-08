@@ -897,10 +897,6 @@ export default {
         NAME: '法律声明',
         URL: '/other/legal/',
       },
-      {
-        NAME: '关于cookies',
-        URL: '/other/cookies/',
-      },
     ],
     LINKS: [],
     QR_CODE: 'openEuler公众号',

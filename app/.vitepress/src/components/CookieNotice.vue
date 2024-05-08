@@ -8,7 +8,7 @@ import {
   getCustomCookie,
   removeCustomCookie,
 } from '@/shared/utils';
-import { useCookieStore } from '@/stores/common';
+import { useCookieStatus, usePrivacyVersion } from '@/stores/common';
 import { useScreen } from '@/shared/useScreen';
 import { useI18n } from '@/i18n';
 
@@ -19,7 +19,8 @@ const i18n = useI18n();
 const { lang } = useData();
 const isZh = computed(() => (lang.value === 'zh' ? true : false));
 
-const cookieStore = useCookieStore();
+const cookieStatus = useCookieStatus();
+const privacyVersion = usePrivacyVersion();
 
 const route = useRoute();
 
@@ -63,9 +64,9 @@ const getUserCookieStatus = () => {
   const cookieVal = getCustomCookie(COOKEY_KEY) ?? '0';
 
   const cookieStatusVal = cookieVal[0];
-  const cookieVersionVal = cookieVal.slice(1);
+  const privacyVersionVal = cookieVal.slice(1);
 
-  if (cookieVersionVal !== cookieStore.version) {
+  if (privacyVersionVal !== privacyVersion.version) {
     return COOKIE_AGREED_STATUS.NOT_SIGNED;
   }
 
@@ -118,7 +119,7 @@ onMounted(() => {
   }
 
   if (isAllAgreed()) {
-    cookieStore.status = COOKIE_AGREED_STATUS.ALL_AGREED;
+    cookieStatus.status = COOKIE_AGREED_STATUS.ALL_AGREED;
     analysisAllowed.value = true;
     initSensor();
   }
@@ -126,11 +127,11 @@ onMounted(() => {
 
 // 用户同意所有cookie
 const acceptAll = () => {
-  cookieStore.status = COOKIE_AGREED_STATUS.ALL_AGREED;
+  cookieStatus.status = COOKIE_AGREED_STATUS.ALL_AGREED;
   removeCustomCookie(COOKEY_KEY);
   setCustomCookie(
     COOKEY_KEY,
-    `${COOKIE_AGREED_STATUS.ALL_AGREED}${cookieStore.version}`,
+    `${COOKIE_AGREED_STATUS.ALL_AGREED}${privacyVersion.version}`,
     180
   );
   toggleNoticeVisible(false);
@@ -139,11 +140,11 @@ const acceptAll = () => {
 
 // 用户拒绝所有cookie，即仅同意必要cookie
 const rejectAll = () => {
-  cookieStore.status = COOKIE_AGREED_STATUS.NECCESSARY_AGREED;
+  cookieStatus.status = COOKIE_AGREED_STATUS.NECCESSARY_AGREED;
   removeCustomCookie(COOKEY_KEY);
   setCustomCookie(
     COOKEY_KEY,
-    `${COOKIE_AGREED_STATUS.NECCESSARY_AGREED}${cookieStore.version}`,
+    `${COOKIE_AGREED_STATUS.NECCESSARY_AGREED}${privacyVersion.version}`,
     180
   );
   toggleNoticeVisible(false);
@@ -192,14 +193,9 @@ watch(
           <p class="cookie-title">{{ i18n.cookie.title }}</p>
           <p class="cookie-desc">
             {{ i18n.cookie.desc }}
-            <a
-              :href="isZh ? '/zh/other/privacy/' : '/en/other/privacy/'"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {{ i18n.cookie.link }}
-            </a>
-            {{ isZh ? '。' : '.' }}
+            <a :href="isZh ? '/zh/other/privacy/' : '/en/other/privacy/'">
+              {{ i18n.cookie.link }} </a
+            >{{ isZh ? '。' : '.' }}
           </p>
         </div>
         <div class="cookie-notice-right">

@@ -2,7 +2,7 @@
 title: '法律声明'
 ---
 
-<div class='markdown markdown-statement'>
+<div class='markdown legal-privacy'>
 
 <h1>法律声明</h1>
 
