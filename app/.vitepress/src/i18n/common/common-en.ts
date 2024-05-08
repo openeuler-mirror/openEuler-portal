@@ -738,10 +738,6 @@ export default {
         NAME: 'Legal Notice',
         URL: '/other/legal/',
       },
-      {
-        NAME: 'About Cookies',
-        URL: '/other/cookies/',
-      },
     ],
     QR_CODE: 'WeChat Subscription',
     QR_ASSISTANT: 'WeChat Assistant',

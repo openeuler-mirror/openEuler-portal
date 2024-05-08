@@ -2,7 +2,7 @@
 import { computed, onMounted, ref } from 'vue';
 import { useRouter, useData } from 'vitepress';
 
-import { useCommon, useCookieStore } from '@/stores/common';
+import { useCommon, useCookieStatus } from '@/stores/common';
 import { getUrlParams } from '@/shared/utils';
 
 import AppContext from '@/components/AppContent.vue';
@@ -41,7 +41,7 @@ if (lang.value === 'zh') {
 
 const dialogVisible = ref(false);
 const commonStore = useCommon();
-const cookieStore = useCookieStore();
+const cookieStatus = useCookieStatus();
 const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );
@@ -106,7 +106,7 @@ const dateList = [
 ];
 // 埋点统计投放流量
 function collectAdvertisedData() {
-  if(cookieStore.isAllAgreed){
+  if(cookieStatus.isAllAgreed){
     const sensors = (window as any)['sensorsDataAnalytic201505'];
     const { href } = window.location;
     const regex = /[\?&]utm_source=/;

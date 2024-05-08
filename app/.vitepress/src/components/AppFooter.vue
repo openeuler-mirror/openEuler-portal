@@ -120,6 +120,14 @@ const footerCodeList = [
   },
 ];
 
+const onNavClick = (path: string) => {
+  if (path.startsWith('https:')) {
+    window.open(path, '_blank');
+  } else {
+    router.go(`/${lang.value}` + path);
+  }
+};
+
 // 背景
 const footBg = {
   pc: `url(${FooterBg})`,
@@ -136,6 +144,7 @@ const isMigration = computed(() => {
 const isAbout = computed(() => {
   return frontmatter.value.category === 'about-us';
 });
+
 
 onMounted(() => {
   isQrTipVisible.value = localStorage.getItem('euler-feedback') ? false : true;
@@ -170,10 +179,9 @@ onMounted(() => {
               <a
                 v-for="link in i18n.common.FOOTER.RIGHT_LIST"
                 :key="link.URL"
+                href="javascript:;"
                 class="link"
-                :href="`/${lang}${link.URL}`"
-                target="_blank"
-                rel="noopener noreferrer"
+                @click="onNavClick(link.URL)"
                 >{{ link.NAME }}</a
               >
             </div>
