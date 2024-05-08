@@ -8717,7 +8717,7 @@
     "arch": "aarch64",
     "checksum": "dbb3675869bf9cfbfff5cc3f4b04da73,3e2c56ea3263a41d67aefa470ce7787d",
     "base_openeuler_version": "openEuler Embedded 23.09",
-    "os_download_link": "puai@td-tech.com",
+    "os_download_link": "https://www.td-tech.com/",
     "friendly_link": "https://www.td-tech.com/",
     "type": "嵌入式",
     "total_result": "pass",
