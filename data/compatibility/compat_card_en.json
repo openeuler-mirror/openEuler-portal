@@ -21006,6 +21006,25 @@
       "downloadLink": "inbox"
     },
     {
+      "vendorID": "1b00",
+      "deviceID": "d011",
+      "svID": "1b00",
+      "ssID": "d011",
+      "architecture": "x86",
+      "os": "KylinSec OS Linux 3 (Qomolangma)",
+      "driverName": "tsse",
+      "version": "0.7.1",
+      "type": "keycard",
+      "date": "2023.11.24",
+      "sha256": "a54f6499e02e33bbf7bc117941e51514cf8c1bc7501ff8d6ff97162555df1c1c ",
+      "driverSize": "1074440b",
+      "chipVendor": "Montage",
+      "boardModel": "",
+      "chipModel": "",
+      "item": "",
+      "downloadLink": ""
+    },
+    {
         "vendorID": "8088",
         "deviceID": "1001",
         "svID": "8088",
