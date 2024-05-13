@@ -32,6 +32,10 @@ export const yearPlan = {
             location: '法国',
             activeName: 'KubeCon EU',
           },
+          {
+            location: '上海',
+            activeName: 'GDC',
+          },
         ],
       },
       {
@@ -50,22 +54,19 @@ export const yearPlan = {
             location: '西班牙',
             activeName: 'Linaro connect',
           },
-          {
-            location: '深圳',
-            activeName: '开放原子开发者大会 openEuler Developer Day',
-          },
         ],
       },
       {
         month: '6',
         actives: [
+        ],
+      },
+      {
+        month: '7',
+        actives: [
           {
-            location: '上海',
+            location: '杭州',
             activeName: 'GOTC',
-          },
-          {
-            location: '香港',
-            activeName: 'KubeCon China',
           },
         ],
       },
@@ -75,6 +76,10 @@ export const yearPlan = {
           {
             location: 'TBD',
             activeName: 'RISC-V Summit China',
+          },
+          {
+            location: '香港',
+            activeName: 'KubeCon China',
           },
         ],
       },
@@ -232,6 +237,15 @@ export const yearPlan = {
           {
             location: '线上',
             activeName: 'UniProton on RISCV',
+          },
+        ],
+      },
+      {
+        month: '6',
+        actives: [
+          {
+            location: '北京',
+            activeName: 'openEuler 24.03 LTS版本发布会',
           },
         ],
       },
