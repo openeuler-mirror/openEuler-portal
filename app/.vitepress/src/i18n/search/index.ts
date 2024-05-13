@@ -6,6 +6,7 @@ export default {
       all: '全部',
       docs: '文档',
       gitee: '代码仓库',
+      mail: '邮件列表',
       migration: '迁移',
       service: '服务',
       updates: {
@@ -39,6 +40,7 @@ export default {
       all: 'All',
       docs: 'Docs',
       gitee: 'GITEE',
+      mail: 'Mailing Lists',
       showcase: 'Showcase',
       other: 'Other',
       service: 'Service',
