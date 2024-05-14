@@ -82,7 +82,7 @@ const jumpTo = (item: any) => {
           <div
             v-if="item.title?.length"
             class="banner-panel-content flex-column"
-            :class="item.id === 'annual-report' ? 'annual-report' : item.id"
+            :class="item.id"
           >
             <div data-aos="fade-down" class="box">
               <img v-if="item.img" class="text-img" :src="item?.img" alt="" />
@@ -160,6 +160,22 @@ html[lang='zh'] {
     justify-content: flex-end !important;
     .o-button {
       display: none;
+    }
+  }
+}
+
+.version {
+  .box {
+    margin-bottom: 32px;
+  }
+  @media screen and (max-width: 768px) {
+    .box {
+      margin-bottom: 0;
+    }
+    justify-content: flex-end !important;
+    .title {
+      font-size: var(--o-font-size-h6) !important;
+      line-height: 28px;
     }
   }
 }
