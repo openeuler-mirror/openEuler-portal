@@ -1,34 +1,48 @@
 <script lang="ts" setup>
-import { computed } from 'vue';
-import { useI18n } from '@/i18n';
-import userActivity from '@/data/user-group/user-activey';
+import type { PropType } from 'vue';
+import { useRouter } from 'vitepress';
 
-const i18n = useI18n();
-const activityI18n = computed(() => {
-  return i18n.value.group;
+import type { NewsDataT } from '@/shared/@types/type-news';
+
+defineProps({
+  options: {
+    type: Array as PropType<Array<NewsDataT>>,
+    default() {
+      return [];
+    },
+  },
 });
+
+const router = useRouter();
+const toNewsContent = (path: string) => {
+  window.open('/' + path + '.html', '_blank');
+};
 </script>
+
 <template>
-  <div class="title">{{ activityI18n.ACTIVITY }}</div>
-  <div class="news-list">
-    <a v-for="item in userActivity" :key="item.path" :href="`/${item.path}`">
-      <OCard class="news-list-item" shadow="hover">
-        <div class="news-img">
-          <img :src="`/${item.banner}`" :alt="item.banner" />
-        </div>
-        <div class="news-info">
-          <p class="news-title">{{ item.title }}</p>
-          <p class="news-time">{{ item.date }}</p>
-          <p class="news-content">
-            {{ item.summary }}
-          </p>
-        </div>
-      </OCard>
-    </a>
+  <div class="news-list" :class="options.length < 3 ? 'center' : ''">
+    <OCard
+      v-for="item in options"
+      :key="item.path"
+      class="news-list-item"
+      shadow="hover"
+      @click="toNewsContent(item.path)"
+    >
+      <div class="news-img">
+        <img :src="'/' + item.banner" :alt="item.banner" />
+      </div>
+      <div class="news-info">
+        <p class="news-title">{{ item.title }}</p>
+        <p class="news-time">{{ item.date }}</p>
+        <p class="news-content">
+          {{ item.summary }}
+        </p>
+      </div>
+    </OCard>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @mixin showline {
   word-break: break-all;
   text-overflow: ellipsis;
@@ -36,12 +50,30 @@ const activityI18n = computed(() => {
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
+:deep(.el-card__body) {
+  padding: 0;
+  @media (max-width: 980px) {
+    display: flex;
+    flex-direction: row;
+  }
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .news-list {
   max-width: 1448px;
-  margin: var(--o-spacing-h2) auto;
+  margin: var(--o-spacing-h2) auto 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: var(--o-spacing-h4);
+  &.center {
+    justify-content: center;
+    display: flex;
+    @media (max-width: 500px) {
+      display: grid;
+    }
+  }
   @media (max-width: 1450px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -53,7 +85,6 @@ const activityI18n = computed(() => {
     margin-top: 0;
   }
   @media (max-width: 768px) {
-    margin-bottom: var(--o-spacing-h5);
     grid-gap: var(--o-spacing-h5);
   }
   @media (max-width: 500px) {
@@ -65,7 +96,11 @@ const activityI18n = computed(() => {
     flex: 1;
     width: 100%;
     height: 100%;
+    max-width: 436px;
     cursor: pointer;
+    @media (max-width: 1100px) {
+      max-width: inherit;
+    }
     &:hover {
       .news-img img {
         transform: scale(1.05);

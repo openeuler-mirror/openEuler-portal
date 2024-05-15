@@ -49,7 +49,7 @@ import hutianming from '@/assets/category/user-group/hutianming.png';
 
 export default [
   {
-    groupLocal: '广州组',
+    groupLocal: '广州',
     members: [
       {
         name: '尹传勇',
@@ -114,7 +114,7 @@ export default [
     ],
   },
   {
-    groupLocal: '南京用户组',
+    groupLocal: '南京',
     members: [
       {
         name: '汤景仁',
@@ -209,7 +209,7 @@ export default [
     ],
   },
   {
-    groupLocal: '深圳用户组',
+    groupLocal: '深圳',
     members: [
       {
         name: '魏强',
@@ -250,7 +250,7 @@ export default [
     ],
   },
   {
-    groupLocal: '西安用户组',
+    groupLocal: '西安',
     members: [
       {
         name: '谷羽新',
@@ -321,7 +321,7 @@ export default [
     ],
   },
   {
-    groupLocal: '长沙用户组',
+    groupLocal: '长沙',
     members: [
       {
         name: '刘华杰',

@@ -6,16 +6,20 @@ import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppContent from '@/components/AppContent.vue';
 import GroupRole from './GroupRole.vue';
 import GroupRight from './GroupRight.vue';
-import CertifiedMember from './CertifiedMember.vue';
-import GroupActtivity from './GroupActtivity.vue';
+import GroupCity from './GroupCity.vue';
 
 import banner from '@/assets/banner/banner-user-group.png';
 import groupIllustration from '@/assets/illustrations/user-group.png';
+import IconRight from '~icons/app/icon-arrow-right.svg';
 
 const i18n = useI18n();
 const groupI18n = computed(() => {
   return i18n.value.group;
 });
+
+const jumpTo = (path: string) => {
+  window.open(path, '_blank');
+};
 </script>
 <template>
   <BannerLevel2
@@ -24,16 +28,29 @@ const groupI18n = computed(() => {
     :illustration="groupIllustration"
     class="banner"
   >
+    <template #default>
+      <OButton
+        class="post-btn"
+        @click="jumpTo(groupI18n.LINK)"
+        type="outline"
+        animation
+        size="nomral"
+      >
+        {{ groupI18n.LINK_TEXT }}
+        <template #suffixIcon>
+          <OIcon class="right-icon"><IconRight /></OIcon>
+        </template>
+      </OButton>
+    </template>
   </BannerLevel2>
   <AppContent>
     <p class="word-style">
       {{ groupI18n.INTRODUCE }}
-      <a :href="groupI18n.LINK" target="_blank">{{ groupI18n.LINK_TEXT }}</a>
     </p>
+    <GroupCity />
     <GroupRole />
     <GroupRight />
-    <CertifiedMember />
-    <GroupActtivity />
+
     <div class="btn-box">
       <a href="/zh/interaction/event-list/collect/" class="btn">发起活动</a>
     </div>
@@ -41,6 +58,22 @@ const groupI18n = computed(() => {
 </template>
 
 <style scoped lang="scss">
+.post-btn {
+  color: var(--o-color-white);
+  border-color: var(--o-color-white);
+  @media (max-width: 767px) {
+    padding: 3px 16px;
+    font-size: var(--o-font-size-text);
+    line-height: var(--o-line-height-text);
+  }
+  .right-icon {
+    color: var(--o-color-white);
+    @media (max-width: 767px) {
+      font-size: var(--o-font-size-text);
+    }
+  }
+}
+
 :deep(.word-style) {
   color: var(--o-color-text1);
   font-size: var(--o-font-size-h8);
