@@ -756,4 +756,6 @@ export default {
   },
   PREV: 'pre',
   NEXT: 'next',
+  EXPAND: 'Expand',
+  RETRACT: 'Collapse',
 };
