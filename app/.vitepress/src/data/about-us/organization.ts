@@ -333,7 +333,7 @@ export default {
             img: xiongwei,
             name: '熊伟',
             post: '委员',
-            email: 'xiongwei888@huawei.com',
+            email: 'myeuler@163.com',
             gitee: 'myeuler',
           },
           {
@@ -772,7 +772,7 @@ export default {
             img: xiongwei,
             name: 'Xiong Wei',
             post: 'Committee member',
-            email: 'xiongwei888@huawei.com',
+            email: 'myeuler@163.com',
             gitee: 'myeuler',
           },
           {
