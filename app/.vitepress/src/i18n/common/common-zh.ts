@@ -916,4 +916,6 @@ export default {
   },
   PREV: '上一页',
   NEXT: '下一页',
+  EXPAND: '展开',
+  RETRACT: '收起',
 };

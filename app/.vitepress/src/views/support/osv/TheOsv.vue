@@ -13,7 +13,6 @@ import TagFilter from '@/components/TagFilter.vue';
 
 import banner from '@/assets/banner/banner-security.png';
 import osv from '@/assets/illustrations/support/osv.png';
-import IconUp from '~icons/app/icon-chevron-up.svg';
 
 const router = useRouter();
 
@@ -122,10 +121,6 @@ onMounted(() => {
 
 watch(queryData, () => getOsTableList(queryData));
 
-const isExpand = ref(false);
-const getMoreTags = () => {
-  isExpand.value = !isExpand.value;
-};
 </script>
 <template>
   <BannerLevel2
@@ -189,15 +184,8 @@ const getMoreTags = () => {
     <OCard class="filter-card">
       <template #header>
         <div class="card-header">
-          <TagFilter :label="i18n.approve.SELECT_COMPANY" :show="false">
-            <p class="expand-retract" @click="getMoreTags">
-              {{ isExpand ? i18n.approve.RETRACT : i18n.approve.EXPAND }}
-              <OIcon class="expand-icon" :class="isExpand ? 'rotated' : ''"
-                ><IconUp />
-              </OIcon>
-            </p>
-
-            <div class="filter-content" :class="isExpand ? 'is-expanded' : ''">
+          <TagFilter v-if="osNames.length > 1" :label="i18n.approve.SELECT_COMPANY" :show="true">
+            <div class="filter-content">
               <OTag
                 v-for="(item, index) in osNames"
                 :key="'tag' + index"
@@ -213,7 +201,7 @@ const getMoreTags = () => {
       </template>
 
       <div class="card-body">
-        <TagFilter :show="false" :label="i18n.approve.TABLE_COLUMN.TYPE">
+        <TagFilter :label="i18n.approve.TABLE_COLUMN.TYPE">
           <OTag
             v-for="(item, index) in osTypes"
             :key="'tag' + index"
@@ -456,7 +444,6 @@ const getMoreTags = () => {
     cursor: pointer;
     font-size: var(--o-font-size-tip);
     line-height: var(--o-line-height-tip);
-    display: none;
   }
   .expand-icon {
     position: absolute;
