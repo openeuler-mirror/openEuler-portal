@@ -4,23 +4,10 @@ import annualReport_mo from '@/assets/category/home/banner/annual-report_mo.jpg'
 import banner1_pc from '@/assets/category/home/banner/banner1_pc.jpg';
 import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';
 
-import version_pc from '@/assets/category/home/banner/version_pc.jpg';
-import version_mo from '@/assets/category/home/banner/version_mo.jpg';
-
 export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
-      {
-        pcBanner: version_pc,
-        moBanner: version_mo,
-        link: '',
-        id: 'version',
-        title: ['openEuler 24.03 LTS版本发布会'],
-        desc:['2024年6月6日 | 北京'],
-        btn: '',
-        targetTap: 1,
-      },
       {
         pcBanner: annualReport_pc,
         moBanner: annualReport_mo,
