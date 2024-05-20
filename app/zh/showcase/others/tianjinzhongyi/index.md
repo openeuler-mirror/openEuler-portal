@@ -5,7 +5,7 @@ industry: 其他
 company: 
 summary: 电子票证据CentOS系统替代项目
 banner: /category/showcase/case-detail-bg.jpg
-img: /category/showcase/other.png
+img: /category/showcase/others.png
 ---
 
 ## 应用场景

@@ -43,6 +43,10 @@ export default {
           TEXT: 'BiSheng JDK 17',
           LINK: 'https://gitee.com/openeuler/bishengjdk-17',
         },
+        {
+          TEXT: 'BiSheng JDK 21',
+          LINK: 'https://gitee.com/openeuler/bishengjdk-21',
+        },
       ],
       SHOW: false,
     },
@@ -63,6 +67,10 @@ export default {
           TEXT: 'BiSheng JDK 17',
           LINK: 'https://gitee.com/openeuler/bishengjdk-17/issues',
         },
+        {
+          TEXT: 'BiSheng JDK 21',
+          LINK: 'https://gitee.com/openeuler/bishengjdk-21/issues',
+        },
       ],
       SHOW: false,
     },
@@ -76,7 +84,7 @@ export default {
           LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234',
         },
         {
-          TEXT: '2022',
+          TEXT: '2022 and later',
           LINK: 'https://etherpad.openeuler.org/p/Compiler-meetings',
         },
       ],
@@ -107,7 +115,7 @@ export default {
     },
     {
       THEME: 'Supported Java versions: ',
-      BODY: 'Currently, BiSheng JDK supports Java 8 (LTS), 11 (LTS), and 17 (LTS).',
+      BODY: 'Supported Java versions: Currently, BiSheng JDK supports Java 8 (LTS), 11 (LTS), 17 (LTS) and 21 (LTS).',
     },
     {
       THEME: 'Supported architectures: ',
@@ -115,7 +123,7 @@ export default {
     },
     {
       THEME: 'Supported OSs: ',
-      BODY: 'Almost all mainstream Linux OSs are supported. The glibc version must be 2.17 or later. BiSheng JDK has passed the stability verification on all openEuler OSs and CentOS 7.6 before the release.',
+      BODY: 'Almost all mainstream Linux OSs are supported. The glibc version must be 2.18 or later. BiSheng JDK has passed the stability verification on all openEuler OSs, CentOS 7.6, Ubuntu 20.04, Ubuntu 22.04, Kylin V10, and UOS 20 before the release.',
     },
   ],
   BISHENG_FRAMEWORK: {
@@ -147,6 +155,10 @@ export default {
           {
             TEXT: 'BiSheng JDK 17',
             LINK: 'https://gitee.com/openeuler/bishengjdk-17/wikis/Home',
+          },
+          {
+            TEXT: 'BiSheng JDK 21',
+            LINK: 'https://gitee.com/openeuler/bishengjdk-21/wikis/Home',
           },
         ],
         BACKGROUND: {

@@ -32,16 +32,20 @@ export default {
       TITLE: '开启毕昇JDK之旅',
       LINK_LIST: [
         {
-          TEXT: '毕昇JDK8',
+          TEXT: '毕昇JDK 8',
           LINK: 'https://gitee.com/openeuler/bishengjdk-8',
         },
         {
-          TEXT: '毕昇JDK11',
+          TEXT: '毕昇JDK 11',
           LINK: 'https://gitee.com/openeuler/bishengjdk-11',
         },
         {
           TEXT: '毕昇JDK 17',
           LINK: 'https://gitee.com/openeuler/bishengjdk-17',
+        },
+        {
+          TEXT: '毕昇JDK 21',
+          LINK: 'https://gitee.com/openeuler/bishengjdk-21',
         },
       ],
       SHOW: false,
@@ -52,16 +56,20 @@ export default {
       TITLE: '想对毕昇JDK说',
       LINK_LIST: [
         {
-          TEXT: '毕昇JDK8',
+          TEXT: '毕昇JDK 8',
           LINK: 'https://gitee.com/openeuler/bishengjdk-8/issues',
         },
         {
-          TEXT: '毕昇JDK11',
+          TEXT: '毕昇JDK 11',
           LINK: 'https://gitee.com/openeuler/bishengjdk-11/issues',
         },
         {
           TEXT: '毕昇JDK 17',
           LINK: 'https://gitee.com/openeuler/bishengjdk-17/issues',
+        },
+        {
+          TEXT: '毕昇JDK 21',
+          LINK: 'https://gitee.com/openeuler/bishengjdk-21/issues',
         },
       ],
       SHOW: false,
@@ -76,7 +84,7 @@ export default {
           LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234',
         },
         {
-          TEXT: '2022',
+          TEXT: '2022及以后',
           LINK: 'https://etherpad.openeuler.org/p/Compiler-meetings',
         },
       ],
@@ -107,7 +115,7 @@ export default {
     },
     {
       THEME: '支持Java版本: ',
-      BODY: '目前毕昇JDK支持8、11、17三个LTS版本。',
+      BODY: '目前毕昇JDK支持8、11、17、21四个LTS版本。',
     },
     {
       THEME: '支持架构: ',
@@ -115,7 +123,7 @@ export default {
     },
     {
       THEME: '支持操作系统: ',
-      BODY: '目前仅支持Linux版本，对操作系统的要求glibc版本不低于2.17，基本覆盖所有主流操作系统，发布前经过稳定性验证的操作系统有openEuler 全系列操作系统和CentOS 7.6。',
+      BODY: '目前仅支持Linux版本，对操作系统的要求glibc版本不低于2.18，基本覆盖所有主流操作系统，发布前经过稳定性验证的操作系统有openEuler 全系列操作系统、CentOS 7.6、Ubuntu 20.04、Ubuntu 22.04、麒麟V10和UOS 20',
     },
   ],
   BISHENG_FRAMEWORK: {
@@ -147,6 +155,10 @@ export default {
           {
             TEXT: '毕昇JDK 17',
             LINK: 'https://gitee.com/openeuler/bishengjdk-17/wikis/Home',
+          },
+          {
+            TEXT: '毕昇JDK 21',
+            LINK: 'https://gitee.com/openeuler/bishengjdk-21/wikis/Home',
           },
         ],
         BACKGROUND: {
