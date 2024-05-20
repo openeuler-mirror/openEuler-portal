@@ -165,14 +165,12 @@ const goLink = (path: string) => {
           -webkit-box-orient: vertical;
         }
         &-link {
-          max-width: 256px;
           margin-top: var(--o-spacing-h2);
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: flex-start;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 4px 12px;
           &-button {
             padding: 0 !important;
-            margin-right: var(--o-spacing-h5);
             svg {
               color: var(--o-color-brand1);
             }
