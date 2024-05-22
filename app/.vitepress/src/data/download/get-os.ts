@@ -34,7 +34,9 @@ export default {
       title: '公有云',
       repeat: 2,
       intro:
-        'openEuler 在AWS、华为云、腾讯云等主流公有云平台上发布了官方镜像：',
+        'openEuler 在AWS、华为云、腾讯云等主流公有云平台上发布了官方镜像，获取指引可查看',
+      intro1:'使用指南',
+      introLink:'https://forum.openeuler.org/t/topic/4185',
       links: [
         {
           href: 'https://aws.amazon.com/marketplace/pp/prodview-cgu5xymg7qnqg?sr=0-4&ref_=beagle&applicationId=AWSMPContessa',
@@ -54,7 +56,9 @@ export default {
       icon: containerImg,
       iconDark: containerImgDark,
       title: '容器镜像',
-      intro: 'openEuler 提供官方容器镜像：',
+      intro: 'openEuler 提供官方容器镜像，获取指引可查看',
+      intro1:'使用指南',
+      introLink:'https://forum.openeuler.org/t/topic/4189',
       repeat: 3,
       links: [
         {
