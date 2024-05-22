@@ -8782,5 +8782,365 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "中科方德软件有限公司",
+    "os_version": "NFSCNS-4.0-E300-202404192007.aarch64.iso",
+    "arch": "aarch64",
+    "checksum": "a667b099ad1753e354b4efea02c75082",
+    "base_openeuler_version": "openEuler-20.03-LTS-SP3-aarch64-dvd.iso",
+    "os_download_link": "https://www.nfschina.com/",
+    "friendly_link": "https://www.nfschina.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/05/15",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "中科方德软件有限公司",
+    "os_version": "NFSCNS-4.0-E300-202404192008.x86_64.iso",
+    "arch": "x86_64",
+    "checksum": "7b1a2eb9d75ac0a5a6e0703ac464ed0b",
+    "base_openeuler_version": "openEuler-20.03-LTS-SP3-x86_64-dvd.iso",
+    "os_download_link": "https://www.nfschina.com/",
+    "friendly_link": "https://www.nfschina.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/05/15",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "成都鼎桥通信技术有限公司",
+    "os_version": "TDOS-1.0-LTS-aarch64-dvd.iso",
+    "arch": "aarch64",
+    "checksum": "8ed62a76331d1cee9f85f75a49a30270",
+    "base_openeuler_version": "openEuler 22.03 LTS SP3",
+    "os_download_link": "https://www.td-tech.com/",
+    "friendly_link": "https://www.td-tech.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/05/21",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "成都鼎桥通信技术有限公司",
+    "os_version": "TDOS-1.0-LTS-x86_64-dvd.iso",
+    "arch": "x86_64",
+    "checksum": "6de709d5ad856bb4bb7bf3c709ec61bc",
+    "base_openeuler_version": "openEuler 22.03 LTS SP3",
+    "os_download_link": "https://www.td-tech.com/",
+    "friendly_link": "https://www.td-tech.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/05/21",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "深圳开鸿数字产业发展有限公司",
+    "os_version": "KaihongOS-Euler-V1.0-x86_64.iso",
+    "arch": "x86_64",
+    "checksum": "fd66d02e7078e8e2fddd46e27e545d54",
+    "base_openeuler_version": "openEuler 23.09",
+    "os_download_link": " https://www.kaihong.com/",
+    "friendly_link": " https://www.kaihong.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/05/21",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 ]
