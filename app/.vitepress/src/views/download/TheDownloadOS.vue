@@ -51,14 +51,16 @@ const osData = computed(() => {
           <span class="os-card-title-text">{{ item.title }}</span>
         </div>
         <div class="os-card-body">
-          {{ item.intro }}
+          {{ item.intro
+          }}<a
+            v-if="item.introLink"
+            :href="item.introLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ item?.intro1 }}</a
+          >
         </div>
-        <div
-          class="os-card-links"
-          :class="[
-            `repeat-${item.repeat}`,
-          ]"
-        >
+        <div class="os-card-links" :class="[`repeat-${item.repeat}`]">
           <a
             v-for="(link, index) in item.links"
             :href="link.href"

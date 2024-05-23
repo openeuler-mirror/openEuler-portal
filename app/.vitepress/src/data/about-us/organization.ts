@@ -2,7 +2,7 @@ import caizhimin from '@/assets/category/organization/caizhimin.png';
 import gaopei from '@/assets/category/organization/gaopei.png';
 import hannaiping from '@/assets/category/organization/hannaiping.png';
 import jiangdayong from '@/assets/category/organization/jiangdayong.png';
-import jiangzhenhua from '@/assets/category/organization/jiangzhenhua.png';
+import wanghao from '@/assets/category/organization/wanghao.png';
 import lipeiyuan from '@/assets/category/organization/lipeiyuan.png';
 import liuwenqing from '@/assets/category/organization/liuwenqing.png';
 import liuyanfei from '@/assets/category/organization/liuyanfei.png';
@@ -60,7 +60,7 @@ import wangjun from '@/assets/category/organization/user/wangjun.png';
 import wangyouhai from '@/assets/category/organization/user/wangyouhai.png';
 import weijiangang from '@/assets/category/organization/user/weijiangang.png';
 import zhangqingnan from '@/assets/category/organization/user/zhangqingnan.png';
-import xiuliuhua from '@/assets/category/organization/user/xiuliuhua.png';
+import xulei from '@/assets/category/organization/user/xulei.png';
 import zuchen from '@/assets/category/organization/user/zuchen.png';
 import weibin from '@/assets/category/organization/user/weishan.png';
 
@@ -159,14 +159,14 @@ export default {
                 position: ['软通动力信息技术（集团）股份有限公司'],
               },
               {
-                img: jiangzhenhua,
-                name: '姜振华',
-                position: ['超聚变数字技术有限公司'],
-              },
-              {
                 img: lipeiyuan,
                 name: '李培源',
                 position: ['天翼云科技有限公司'],
+              },
+              {
+                img: wanghao,
+                name: '王皓',
+                position: ['超聚变数字技术有限公司'],
               },
               {
                 img: yangjiguo,
@@ -463,10 +463,10 @@ export default {
             email: 'wei_jiangang@hoperun.com',
           },
           {
-            img: xiuliuhua,
-            name: '谢留华',
+            img: xulei,
+            name: '徐磊',
             position: ['委员'],
-            email: 'xielh2000@163.com',
+            email: 'stone.xulei@xfusion.com',
           },
           {
             img: zhangqingnan,
@@ -596,14 +596,14 @@ export default {
                 ],
               },
               {
-                img: jiangzhenhua,
-                name: 'Jiang Zhenhua',
-                position: ['xFusion Digital Technologies Co., Ltd.'],
-              },
-              {
                 img: lipeiyuan,
                 name: 'Li Peiyuan',
                 position: ['China Telecom e-Cloud Technology Co., Ltd.'],
+              },
+              {
+                img: wanghao,
+                name: 'Wang Hao',
+                position: ['xFusion Digital Technologies Co., Ltd.'],
               },
               {
                 img: yangjiguo,
@@ -902,10 +902,10 @@ export default {
             email: 'wei_jiangang@hoperun.com',
           },
           {
-            img: xiuliuhua,
-            name: 'Xie Liuhua',
+            img: xulei,
+            name: 'Xu Lei',
             position: ['Committee member'],
-            email: 'xielh2000@163.com',
+            email: 'stone.xulei@xfusion.com',
           },
           {
             img: zhangqingnan,
