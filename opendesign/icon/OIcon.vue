@@ -10,7 +10,7 @@
 .o-icon svg {
   width: 1em;
   height: 1em;
-  color: currentColor;
+  fill: currentColor;
   vertical-align: top;
 }
 </style>

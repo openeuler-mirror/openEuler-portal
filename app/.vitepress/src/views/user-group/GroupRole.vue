@@ -1,11 +1,15 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 import { useI18n } from '@/i18n';
+import { useCommon } from '@/stores/common';
 
 const i18n = useI18n();
 const groupI18n = computed(() => {
   return i18n.value.group;
 });
+
+const commonStore = useCommon();
+const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
 </script>
 <template>
   <div class="user-role">
@@ -14,9 +18,10 @@ const groupI18n = computed(() => {
       <OCard
         class="card-item"
         v-for="card in groupI18n.CARD_DATA"
-        shadow="hover"
         :key="card.IMG"
-        :style="{ backgroundImage: `url(${card.IMG})` }"
+        :style="{
+          backgroundImage: `url(${isLight ? card.IMG : card.IMGDARK})`,
+        }"
       >
         <div class="card-title">
           {{ card.TITLE }}
@@ -33,7 +38,7 @@ const groupI18n = computed(() => {
 }
 .role-card {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-row-gap: 24px;
   grid-column-gap: 24px;
   @media screen and(max-width:768px) {
@@ -48,11 +53,11 @@ const groupI18n = computed(() => {
     line-height: var(--o-line-height-h6);
     background-position: right bottom;
     background-repeat: no-repeat;
-    background-size: 206px 150px;
-    box-shadow: var(--o-shadow-l2);
+    background-size: 127px 112px;
+    box-shadow: none;
     @media screen and (max-width: 1416px) {
       padding: 16px;
-      background-size: 150px 110px;
+      background-size: 76px 67px;
     }
     .card-title {
       color: var(--o-color-text1);
@@ -67,11 +72,11 @@ const groupI18n = computed(() => {
       margin-top: 8px;
       color: var(--o-color-text3);
       font-size: var(--o-font-size-text);
-      max-width: 200px;
+      max-width: 450px;
       @media screen and (max-width: 1416px) {
         font-size: var(--o-font-size-tip);
         line-height: var(--o-line-height-tip);
-        max-width: 160px;
+        max-width: 220px;
       }
     }
   }

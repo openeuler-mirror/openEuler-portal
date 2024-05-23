@@ -1,54 +1,86 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 import { useI18n } from '@/i18n';
+import { useCommon } from '@/stores/common';
 
+import GroupRightItem from './GroupRightItem.vue';
 const i18n = useI18n();
 const rightI18n = computed(() => {
   return i18n.value.group;
 });
+
+const commonStore = useCommon();
+const theme = computed(() =>
+  commonStore.theme === 'light' ? 'light' : 'dark'
+);
 </script>
 <template>
   <div class="group-right">
     <div class="title">{{ rightI18n.RIGHT }}</div>
-    <div class="right-main">
-      <OContainer
-        v-for="right in rightI18n.RIGHT_DATA"
-        :key="right.TITLE"
-        class="right-card"
-      >
-        <div class="right-title">
-          {{ right.TITLE }}
+    <p class="text">
+      申请加入用户组审核通过后即为用户组Member角色，通过在用户组积极活跃与贡献，可晋升为Ambassador、
+      Co-organizer、 Organizer、OEVP等荣誉角色，并颁发相关证书。
+    </p>
+    <OContainer class="right-main" :class="theme">
+      <ul class="right-title">
+        <li v-for="item in rightI18n.RIGHT_TITLE" :key="item">
+          <span>{{ item }}</span>
+        </li>
+      </ul>
+      <div class="item organizer">
+        <div class="item ambassador">
+          <div class="item member">
+            <GroupRightItem
+              :options="rightI18n.RIGHT_DATA[0]"
+              class="member-item"
+            />
+          </div>
+          <GroupRightItem
+            :options="rightI18n.RIGHT_DATA[1]"
+            class="ambassador-item"
+          />
         </div>
-        <ul class="right-list">
-          <li v-for="item in right.LIST" :key="item" class="item">
-            <span>{{ item }}</span>
-          </li>
-        </ul>
-      </OContainer>
-    </div>
+        <div class="organizer-item">
+          <GroupRightItem :options="rightI18n.RIGHT_DATA[2]" />
+        </div>
+      </div>
+    </OContainer>
   </div>
 </template>
 
 <style scoped lang="scss">
-.right-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-row-gap: 0;
-  grid-column-gap: 24px;
-  @media screen and(max-width:768px) {
-    grid-template-columns: 1fr;
-    grid-gap: 12px;
+.text {
+  font-size: var(--o-font-size-text);
+  line-height: var(--o-line-height-text);
+  color: var(--o-color-text1);
+  @media screen and (max-width: 768px) {
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
   }
-  .right-card {
-    padding: 40px;
-    @media screen and(max-width:768px) {
-      padding: 16px;
-    }
-    .right-title {
-      position: relative;
+}
+.right-main {
+  --right-bg: rgba(230, 231, 234, 0.3);
+  &.dark {
+    --right-bg: rgba(64, 111, 231, 0.05);
+  }
+  padding: 40px;
+  margin-top: 40px;
+  @media screen and (max-width: 1100px) {
+    padding: 24px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 16px;
+    padding: 16px;
+  }
+  .right-title {
+    display: flex;
+    padding: 0 48px 24px;
+    li {
+      flex: 1;
       font-size: var(--o-font-size-h6);
       line-height: var(--o-line-height-h6);
       color: var(--o-color-text1);
+      position: relative;
       &::before {
         content: '';
         position: absolute;
@@ -58,54 +90,30 @@ const rightI18n = computed(() => {
         width: 20px;
         background-color: var(--o-color-brand2);
       }
-      @media screen and(max-width:768px) {
-        font-size: var(--o-font-size-h8);
-        line-height: var(--o-line-height-h8);
-        &::before {
-          width: 16px;
+    }
+  }
+  .item {
+    background-color: var(--right-bg);
+    margin-bottom: 16px;
+    &.organizer {
+      padding: 16px;
+      .organizer-item {
+        padding: 0 30px;
+        @media screen and (max-width: 768px) {
+          padding: 0 16px;
         }
       }
     }
-    .right-list {
-      display: grid;
-      margin-top: 24px;
-      grid-template-columns: 1fr 1fr;
-      grid-row-gap: 24px;
-      grid-column-gap: 24px;
-
-      .item {
-        position: relative;
+    &.ambassador {
+      padding: 30px;
+      @media screen and (max-width: 768px) {
         padding: 16px;
-        padding-left: 30px;
-        color: var(--o-color-text4);
-        line-height: var(--o-line-height-text);
-        font-size: var(--o-font-size-text);
-        background-color: var(--o-color-bg1);
-        &::before {
-          content: '';
-          position: absolute;
-          left: 16px;
-          width: 6px;
-          height: 6px;
-          left: 16px;
-          top: 24px;
-          border-radius: 50%;
-          background-color: var(--o-color-brand1);
-        }
       }
-      @media screen and(max-width:768px) {
-        margin-top: 18px;
-        .item {
-          padding: 8px;
-          padding-left: 20px;
-          font-size: var(--o-font-size-tip);
-          &::before {
-            left: 8px;
-            width: 4px;
-            height: 4px;
-            top: 16px;
-          }
-        }
+    }
+    &.member {
+      padding: 16px 0;
+      @media screen and (max-width: 768px) {
+        padding: 0;
       }
     }
   }

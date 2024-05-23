@@ -1,55 +1,87 @@
-import organizerImg from '@/assets/category/user-group/organizer.png';
-import memberImg from '@/assets/category/user-group/member.png';
-import ambassadorImg from '@/assets/category/user-group/ambassador.png';
+import img1 from '@/assets/category/user-group/img1.png';
+import img2 from '@/assets/category/user-group/img2.png';
+import img3 from '@/assets/category/user-group/img3.png';
+import img4 from '@/assets/category/user-group/img4.png';
+
+import img1Dark from '@/assets/category/user-group/img1_dark.png';
+import img2Dark from '@/assets/category/user-group/img2_dark.png';
+import img3Dark from '@/assets/category/user-group/img3_dark.png';
+import img4Dark from '@/assets/category/user-group/img4_dark.png';
 
 export default {
-  BANNER_TITLE: '城市用户组',
+  BANNER_TITLE: 'openEuler 用户组',
   BANNER_INTRODUCTION: '热衷实践 乐于分享 多元贡献',
   INTRODUCE:
-    'openEuler用户组（openEuler User Group），简称oEUG，是为方便openEuler各区域用户及开发者交流openEuler技术、应用经验，拓展openEuler用户生态而成立的地域性组织。',
-  LINK: 'http://wj.qq.com/s2/11736320/5eef/',
+    'openEuler 用户组（openEuler User Group，简称oEUG）旨在为各区域openEuler用户、开发者构建一个开放多元的本地化交流圈子，在这里用户组成员可以基于openEuler的技术特性、使用经验、实践案例、社区贡献、开源文化等方面有更多集中的交流机会，共建openEuler区域用户生态。',
+  LINK: ' https://wj.qq.com/s2/14126752/ps9k/',
   LINK_TEXT: '申请加入',
-  ROLE: '用户组角色',
+  ROLE: '用户组成员角色',
+  CITY_TITLE: '城市用户组',
+  CITY_LINK: 'https://wj.qq.com/s2/14160176/1786/',
+  CORE_MEMBERS: '核心成员',
   CARD_DATA: [
     {
       TITLE: 'Organizer',
       DESC: '组织者，整体统筹和规划该城市用户组发展计划，引导策划运营活动，统筹日常运营工作。',
-      IMG: organizerImg,
+      IMG: img1,
+      IMGDARK: img1Dark,
+    },
+    {
+      TITLE: 'Co-organizer',
+      DESC: '协助组织者角色。协助发展用户组成员，发起组织活动。',
+      IMG: img2,
+      IMGDARK: img2Dark,
     },
     {
       TITLE: 'Ambassador',
       DESC: '传播大使，在公开活动或 线上平台分享 openEuler 内容，解答用户问题，利用自身影响力在行业中进行布道。',
-      IMG: ambassadorImg,
+      IMG: img3,
+      IMGDARK: img3Dark,
     },
     {
       TITLE: 'Member',
       DESC: '会员，参与组内交流分享，参与活动，输出使用经验，提交用户反馈。',
-      IMG: memberImg,
+      IMG: img4,
+      IMGDARK: img4Dark,
     },
   ],
-  RIGHT: '用户组成员权利和义务',
+  RIGHT: '成员权益与义务',
+  RIGHT_TITLE: ['角色', '权益', '义务'],
   RIGHT_DATA: [
     {
-      TITLE: '加入用户组可以获得什么？',
-      LIST: [
-        '本地用户交流圈子',
-        '区域活动参与机会',
-        '个人/企业在区域的影响力',
-        '入会证书&openEuler官网展示',
-        '优秀成员年度社区礼包',
-        '与社区专家连接的机会',
-        '晋升为社区 oEVP 通道',
+      TITLE: 'Member',
+      EQUITY: [
+        '获得openEuler相关赋能培训、学习资料',
+        '用户诉求直接反馈到社区',
+        '用户组活动参与机会',
+      ],
+      OBLIGATION: [
+        '积极参加用户组活动',
+        '体验或使用openEuler',
+        '输出用户案例',
+        '反馈用户诉求',
       ],
     },
     {
-      TITLE: '加入用户组可以干什么？',
-      LIST: [
-        '参与当地用户组活动，或发起组织活动',
-        '输出用户案例',
-        '参与用户组社群内讨论交流，或在论坛帮助其他用户解决问题',
-        '输出openEuler相关技术文章、使用经验帖子',
-        '反馈用户需求',
-        '参与社区贡献',
+      TITLE: 'Ambassador',
+      EQUITY: [
+        '以大使荣誉身份在官网展示、颁发证书',
+        '获得社区纪念品',
+        '晋升社区 oEVP',
+      ],
+      OBLIGATION: [
+        '线下活动分享openEuler相关议题',
+        '线上输出openEuler相关经验文章',
+        '线上线下解答用户问题',
+      ],
+    },
+    {
+      TITLE: 'Organizer / Co-Organizer',
+      EQUITY: ['以组织者荣誉身份在官网展示、颁发证书', '获得社区纪念品'],
+      OBLIGATION: [
+        '制定用户组运营发展规划',
+        '拓展用户组成员',
+        '一年至少发起组织一次用户组活动',
       ],
     },
   ],
