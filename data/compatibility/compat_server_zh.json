@@ -17340,7 +17340,7 @@
   },
   {
     "hardwareFactory": "新华三",
-    "hardwareModel": "H3C UniServer R4600 G6",
+    "hardwareModel": "H3C UniServer R4900 G6",
     "osVersion": "openEuler 24.03 LTS",
     "architecture": "x86_64",
     "date": "2024/05/21",
