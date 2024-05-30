@@ -190,13 +190,13 @@ export default {
       {
         name: '浙江移动',
         dexcription: '浙江移动完成了openEuler的大规模迁移部署',
-        link: 'https://www.cnii.com.cn/rmydb/202109/t20210923_311404.html',
+        link: '/zh/showcase/provider/003p49ce-8355-d114154aa417/',
       },
       {
         name: '天翼云',
         dexcription:
           '天翼云全场景业务无缝迁移至基于openEuler的自研操作系统CTyunOS',
-        link: 'https://baijiahao.baidu.com/s?id=1744113308957850456',
+        link: '/zh/showcase/provider/tianyiyun0330/',
       },
     ],
     btn: {

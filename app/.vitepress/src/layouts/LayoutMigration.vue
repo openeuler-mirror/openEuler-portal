@@ -22,8 +22,14 @@ const { lang, frontmatter } = useData();
 const commonStore = useCommon();
 
 const router = useRouter();
-const routeList = router.route.path.split('/');
-const activeId = ref(routeList[routeList.length - 2]);
+
+// 构建时页面会携带 .html 需排除构建时的.html 否则迁移首页高亮异常
+const activeId = computed(() => {
+  const routeList = router.route.path.split('/');
+  return routeList[3] && !routeList[3].includes('.html')
+    ? routeList[3]
+    : routeList[2];
+});
 
 const screenWidth = useWindowResize();
 
@@ -35,19 +41,6 @@ const defaultProps = ref({
 const isCustomLayout = computed(() => {
   return frontmatter.value['custom-layout'];
 });
-
-watch(
-  () => {
-    const routeList = router.route.path.split('/');
-    return routeList[3] ? routeList[3] : routeList[2];
-  },
-  (val) => {
-    activeId.value = val;
-  },
-  {
-    immediate: true,
-  }
-);
 
 const logo = computed(() => {
   return commonStore.theme === 'light' ? logo_light : logo_dark;
@@ -101,7 +94,7 @@ const handleNodeClick = (node: any) => {
           class="sidebar-title"
           :class="[
             { active: item.link === activeId },
-            index === 0 ? 'migration-title' : '',
+            { 'migration-title': index === 0 },
           ]"
           @click="handleTitleClick(item.link)"
         >

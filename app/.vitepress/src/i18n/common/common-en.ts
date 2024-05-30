@@ -352,6 +352,11 @@ export default {
               LABEL: '',
               PATH: 'https://docs.openeuler.org/en/',
             },
+            {
+              NAME: 'MOOCs',
+              LABEL: '',
+              PATH: '/learn/mooc/',
+            },
           ],
         },
         {
