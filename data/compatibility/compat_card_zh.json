@@ -22465,7 +22465,24 @@
         "chipModel": "Gemini",
         "item": "",
         "downloadLink": "inbox"
+    },
+    {
+      "vendorID": "1f3f",
+      "deviceID": "2200",
+      "svID": "1f3f",
+      "ssID": "01a4",
+      "architecture": "x86_64",
+      "os": "openEuler 24.03 LTS",
+      "driverName": "sssraid",
+      "version": "1.0.0.0",
+      "type": "RAID",
+      "date": "2024.05.09",
+      "sha256": "0feb8dad1d894384ce3dcc196c7a246dba09f7ccc478de26404aec62d5fbdb3b",
+      "driverSize": "38K",
+      "chipVendor": "Ramaxel",
+      "boardModel": "3S585",
+      "chipModel": "Aires",
+      "item": "",
+      "downloadLink": "inbox"
     }
-
-
 ]
