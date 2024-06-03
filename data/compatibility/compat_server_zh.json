@@ -1774,7 +1774,7 @@
   {
     "hardwareFactory": "量子创新",
     "hardwareModel": "GI-26212",
-    "osVersion": "KylinSec-Server-3.5.1-2206-052233-x86_64",
+    "osVersion": "openEuler 22.03 LTS",
     "architecture": "X86_64",
     "date": "2023/12/20",
     "boardCards": [
@@ -1784,7 +1784,7 @@
         "svID": "18E5",
         "ssID": "D21B",
         "architecture": "x86_64",
-        "os": "KylinSec-Server-3.5.1-2206-052233-x86_64",
+        "os": "openEuler 22.03 LTS",
         "driverName": "mlx5_core",
         "version": "5.1-2.5.2",
         "type": "NIC",
@@ -1803,7 +1803,7 @@
         "svID": "19e5",
         "ssID": "d215",
         "architecture": "X86_64",
-        "os": "KylinSec-Server-3.5.1-2206-052233-x86_64",
+        "os": "openEuler 22.03 LTS",
         "driverName": "megaraid_sas",
         "version": "31.100.01.00",
         "type": "raid",
