@@ -14,12 +14,18 @@ import live from './img/live-broadcast.png';
 import liveDark from './img/live-broadcast_dark.png';
 import meetDate from './img/meet-date.png';
 import meetDateDark from './img/meet-date_dark.png';
+import liveLight1 from '@/assets/category/summit/summit2022/live.png';
+import liveDark1 from '@/assets/category/summit/summit2022/live-dark.png';
 
 import data_zh from './data/data_zh';
 
 import { useCommon } from '@/stores/common';
 
 const commonStore = useCommon();
+
+const liveImg = computed(() =>
+  commonStore.theme === 'light' ? liveLight1 : liveDark1
+);
 
 const isDark = computed(() => {
   return commonStore.theme === 'dark' ? true : false;
@@ -53,7 +59,7 @@ const isDark = computed(() => {
       </p>
     </div>
 
-    <div v-if="false" class="live">
+    <div class="live">
       <div class="meet-title">
         {{ data_zh.live }}
 
@@ -114,6 +120,21 @@ const isDark = computed(() => {
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="previous">
+      <div class="previous-title">
+        <h3>{{ data_zh.previous.title }}</h3>
+        <img :src="liveImg" alt="live" />
+      </div>
+      <div class="link-box">
+        <a
+          v-for="item in data_zh.previous.list"
+          :key="item.link"
+          :href="item.link"
+          >{{ item.name }}</a
+        >
       </div>
     </div>
   </AppContext>
@@ -339,6 +360,56 @@ const isDark = computed(() => {
     .meet-date {
       @media screen and (max-width: 768px) {
         display: none;
+      }
+    }
+  }
+}
+.previous {
+  margin-top: var(--o-spacing-h1);
+  @media screen and (max-width: 768px) {
+    margin-top: var(--o-spacing-h4);
+  }
+  .previous-title {
+    display: flex;
+    h3 {
+      font-size: 26px;
+      line-height: 30px;
+      color: var(--o-color-text1);
+      margin-right: var(--o-spacing-h6);
+      @media screen and (max-width: 768px) {
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
+        margin-right: var(--o-spacing-h7);
+      }
+    }
+    img {
+      @media screen and (max-width: 768px) {
+        width: 22px;
+      }
+    }
+  }
+
+  .link-box {
+    margin-top: var(--o-spacing-h3);
+    display: flex;
+    width: 318px;
+    flex-wrap: wrap;
+    @media screen and (max-width: 768px) {
+      width: 172px;
+      margin-top: var(--o-spacing-h6);
+    }
+    a {
+      font-size: var(--o-font-size-h6);
+      line-height: var(--o-line-height-h6);
+      @media screen and (max-width: 768px) {
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-tip);
+      }
+      & + a {
+        margin-top: var(--o-spacing-h4);
+        @media screen and (max-width: 768px) {
+          margin-top: var(--o-spacing-h8);
+        }
       }
     }
   }
