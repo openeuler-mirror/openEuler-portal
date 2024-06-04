@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 
@@ -8,16 +8,22 @@ const liveUrl =
 
 const screenWidth = useWindowResize();
 
-const height = computed(() => {
+const height = ref(720);
+
+const getLiveHeight = () => {
   if (screenWidth.value > 1024) {
-    return 720;
+    height.value = 720;
   } else if (screenWidth.value >= 820) {
-    return 560;
+    height.value = 560;
   } else if (screenWidth.value > 768 && screenWidth.value < 820) {
-    return 880;
+    height.value = 880;
   } else if (screenWidth.value <= 768) {
-    return screenWidth.value * 1.1;
+    height.value = screenWidth.value * 1.1;
   }
+};
+
+onMounted(() => {
+  getLiveHeight();
 });
 </script>
 <template>

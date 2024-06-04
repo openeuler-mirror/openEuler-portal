@@ -155,7 +155,8 @@ html[lang='zh'] {
   }
 }
 
-.annual-report {
+.annual-report,
+.version-release {
   @media screen and (max-width: 768px) {
     justify-content: flex-end !important;
     .o-button {
