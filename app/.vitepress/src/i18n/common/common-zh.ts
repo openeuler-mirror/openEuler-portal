@@ -130,7 +130,7 @@ export default {
         {
           NAME: '峰会',
           ID: 'summit',
-          PATH: '/interaction/summit-list/summit2023/',
+          PATH: '/interaction/summit-list/2403-version-release/',
         },
         {
           NAME: '论坛',
@@ -376,7 +376,7 @@ export default {
         {
           NAME: '峰会',
           LABEL: '',
-          PATH: '/interaction/summit-list/summit2023/',
+          PATH: '/interaction/summit-list/2403-version-release/',
         },
         {
           NAME: '月刊',
