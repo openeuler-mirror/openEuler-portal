@@ -22486,6 +22486,25 @@
       "chipModel": "Aires",
       "item": "",
       "downloadLink": "inbox"
+    },
+    {
+      "vendorID": "1000",
+      "deviceID": "00ac",
+      "svID": "1000",
+      "ssID": "3000",
+      "architecture": "x86_64",
+      "os": "openEuler 24.03 LTS",
+      "driverName": "mpt3sas",
+      "version": "43.100.00.00",
+      "type": "RAID",
+      "date": "2024.05.30",
+      "sha256": "8db22f8ca52f4232a7087ec36346ca6c207568a13e43ff25bcc9b14467188e9e",
+      "driverSize": "167K",
+      "chipVendor": "Broadcom",
+      "boardModel": "9400-16i",
+      "chipModel": "SAS3416",
+      "item": "",
+      "downloadLink": "inbox"
     }
 ]
 
