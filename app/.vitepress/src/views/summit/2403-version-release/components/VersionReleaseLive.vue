@@ -4,7 +4,7 @@ import { onMounted, ref } from 'vue';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
 const liveUrl =
-  'https://live.vhall.com/v3/lives/embedclientfull/watch/181394321';
+  'https://live.vhall.com/v3/lives/embedclientfull/watch/752558758';
 
 const screenWidth = useWindowResize();
 
