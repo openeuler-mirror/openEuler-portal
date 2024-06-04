@@ -22543,6 +22543,25 @@
         "chipModel": "I350",
         "item": "",
         "downloadLink": "inbox"
+    },
+    {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "x86_64",
+        "os": "openEuler 24.03 LTS",
+        "driverName": "megaraid_sas",
+        "version": "07.725.01.00-rc1",
+        "type": "RAID",
+        "date": "2024.05.23",
+        "sha256": "6e74b40255b7e8d821b8ba02df3e3df3a2048454023d83474a91338199fe73e3",
+        "driverSize": "95K",
+        "chipVendor": "Broadcom",
+        "boardModel": "9560-8i",
+        "chipModel": "SAS39xx",
+        "item": "",
+        "downloadLink": "inbox"
     }
 ]
 
