@@ -51,7 +51,7 @@ export default {
     title: '精彩回顾',
     list: [
       {
-        name: 'openEuler Summit 20223',
+        name: 'openEuler Summit 2023',
         link: '/zh/interaction/summit-list/summit2023/',
       },
       {
