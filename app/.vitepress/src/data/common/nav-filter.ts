@@ -229,4 +229,8 @@ export default [
     name: 'universities',
     lang: ['zh'],
   },
+  {
+    name: '2403-version-release',
+    lang: ['zh'],
+  },
 ];
