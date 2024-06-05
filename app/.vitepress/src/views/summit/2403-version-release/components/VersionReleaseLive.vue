@@ -8,13 +8,13 @@ const liveUrl =
 
 const screenWidth = useWindowResize();
 
-const height = ref(720);
+const height = ref(820);
 
 const getLiveHeight = () => {
   if (screenWidth.value > 1024) {
-    height.value = 720;
-  } else if (screenWidth.value >= 820) {
-    height.value = 560;
+    height.value = 820;
+  } else if (screenWidth.value >= 820 && screenWidth.value <= 1024) {
+    height.value = screenWidth.value * 0.6;
   } else if (screenWidth.value > 768 && screenWidth.value < 820) {
     height.value = 880;
   } else if (screenWidth.value <= 768) {
