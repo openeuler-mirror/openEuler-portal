@@ -16,7 +16,7 @@ export default {
   COMMUNITY: '社区发行版',
   BUSINESS: '商业发行版',
   DETAIL1:
-    'openEuler当前最新版本为23年12月发布的openEuler 22.03 LTS SP3，欢迎下载体验！',
+    'openEuler当前最新版本为24年5月发布的openEuler 24.03 LTS，欢迎下载体验！',
   DETAIL2: '请',
   CLICK_VIEW: '点此查看更多历史版本。',
   ARCHIVE_LINK: '/zh/download/archive/',
