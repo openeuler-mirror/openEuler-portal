@@ -35,7 +35,7 @@ import AppContext from '@/components/AppContent.vue';
   width: 100%;
   height: 100%;
   background-image: url('../img/banner-pc.png');
-  background-position: 50%;
+  background-position: 70% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   @media screen and(max-width:1280px) {
