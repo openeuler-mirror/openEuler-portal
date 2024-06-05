@@ -11,6 +11,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/installation.html',
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '/whitepaper/openEuler 24.03 LTS 技术白皮书.pdf',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WEBSITE_SELECT: '/zh/mirror/select/?version=24.03-LTS',
         MANUFACTURER: 'openEuler社区',
