@@ -4,17 +4,17 @@ import { onMounted, ref } from 'vue';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
 const liveUrl =
-  'https://live.vhall.com/v3/lives/embedclientfull/watch/181394321';
+  'https://live.vhall.com/v3/lives/embedclientfull/watch/752558758';
 
 const screenWidth = useWindowResize();
 
-const height = ref(720);
+const height = ref(820);
 
 const getLiveHeight = () => {
-  if (screenWidth.value > 1024) {
-    height.value = 720;
-  } else if (screenWidth.value >= 820) {
-    height.value = 560;
+  if (screenWidth.value > 1200) {
+    height.value = 820;
+  } else if (screenWidth.value >= 820 && screenWidth.value <= 1200) {
+    height.value = screenWidth.value * 0.6;
   } else if (screenWidth.value > 768 && screenWidth.value < 820) {
     height.value = 880;
   } else if (screenWidth.value <= 768) {
