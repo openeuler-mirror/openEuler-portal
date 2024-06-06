@@ -3026,6 +3026,7 @@ export default {
           'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/Installation.html',
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '/whitepaper/en/openEuler 24.03 LTS Technical White Paper.pdf',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=24.03-LTS',
         MANUFACTURER: 'openEuler community',
