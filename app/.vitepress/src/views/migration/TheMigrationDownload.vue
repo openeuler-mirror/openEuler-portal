@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useData } from 'vitepress';
 import seoConfig from '@/data/common/seo';
 import { useRouter } from 'vitepress';
 
-import downloadInfo from '@/data/migration/migration-download';
+import downloadInfoData from '@/data/migration/migration-download';
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import IconDownload from '~icons/app/icon-download.svg';
 
@@ -14,6 +15,10 @@ interface LinkItem {
   name: string;
   link: string;
 }
+
+const downloadInfo = computed(() => {
+  return downloadInfoData[lang.value as 'zh' | 'en'];
+});
 
 function handleClick(item: LinkItem) {
   if (item.link) {

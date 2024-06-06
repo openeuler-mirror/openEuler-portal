@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { useCommon } from '@/stores/common';
 import { computed } from 'vue';
-import portalInfo from '@/data/migration/migration-portal';
+import { useData } from 'vitepress';
+import { useCommon } from '@/stores/common';
+import portalInfoData from '@/data/migration/migration-portal';
 
 import instructionBG1 from '@/assets/category/migration/portal/portal-instruction-bg-1.png';
 import instructionBG2 from '@/assets/category/migration/portal/portal-instruction-bg-2.png';
@@ -16,6 +17,13 @@ import instructionBGMoDark3 from '@/assets/category/migration/portal/portal-inst
 
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
+
+const { lang } = useData();
+
+const portalInfo = computed(() => {
+  return portalInfoData[lang.value as 'zh' | 'en'];
+});
+
 const instructionBG = computed(() => {
   return commonStore.theme === 'dark'
     ? {

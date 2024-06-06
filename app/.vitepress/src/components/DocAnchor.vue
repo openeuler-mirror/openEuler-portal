@@ -31,7 +31,6 @@ function goAnchor() {
       ? topArr.push(item.offsetTop + item.clientHeight)
       : '';
   });
-
   for (let i = 0; i < topArr.length; i++) {
     if (scrollTop - 100 <= topArr[i]) {
       activeIndex.value = i;
@@ -69,8 +68,7 @@ watch(
     >
       <div class="anchor-link-inner">
         {{
-          item.id.split('-').splice(1, item.id.split('-').length).join('-') ||
-          item.id
+         item.innerText
         }}
       </div>
     </a>

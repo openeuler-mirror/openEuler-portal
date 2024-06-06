@@ -1,20 +1,15 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
-import seoConfig from '@/data/common/seo';
-import caseInfo from '@/data/migration/migration-case';
-
-const { lang } = useData();
+import { computed } from 'vue';
+import caseInfoData from '@/data/migration/migration-case';
+const lang = useData().lang;
+const caseInfo = computed(() => {
+  return caseInfoData[lang.value as 'zh' | 'en'];
+});
 </script>
 
 <template>
-  <SeoBox :seo-data="seoConfig[lang]?.migrationCase" />
   <div class="migration-transplantation">
-    <p class="migration-transplantation-desc">
-      操作系统迁移时，软件也需要同步适配移植，openEuler提供如下这些典型软件移植指南供参考。如果您也想贡献移植案例，请参考<a
-        href="/zh/migration/contribution/"
-        >贡献攻略</a
-      >。
-    </p>
     <div class="migration-transplantation-content">
       <a
         v-for="item in caseInfo"
@@ -31,6 +26,7 @@ const { lang } = useData();
 
 <style lang="scss" scoped>
 .migration-transplantation {
+  margin-top: var(--o-spacing-h2);
   color: var(--o-color-text1);
 
   .migration-transplantation-desc {

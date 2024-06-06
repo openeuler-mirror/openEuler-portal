@@ -1,10 +1,18 @@
 <script setup lang="ts">
-import { useCommon } from '@/stores/common';
 import { computed } from 'vue';
+import { useData } from 'vitepress';
 
-import portalInfo from '@/data/migration/migration-portal';
+import { useCommon } from '@/stores/common';
+
+import portalInfoData from '@/data/migration/migration-portal';
 
 const commonStore = useCommon();
+
+const { lang } = useData();
+
+const portalInfo = computed(() => {
+  return portalInfoData[lang.value as 'zh' | 'en'];
+});
 
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 </script>
@@ -14,9 +22,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
     <div class="migration-path-content">
       <OCard>
         <div class="content-pc">
-          <img
-            :src="isDark ? portalInfo.path.img.dark : portalInfo.path.img.light"
-          />
+          <img :src="portalInfo.path.img.light" />
         </div>
         <div class="content-mobile">
           <div class="content-mobile-item">
@@ -100,6 +106,8 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
         display: none;
       }
       img {
+        padding: 12px;
+        background-color: rgb(236, 236, 236);
         max-width: 974px;
         @media screen and (max-width: 1410px) {
           max-width: 674px;

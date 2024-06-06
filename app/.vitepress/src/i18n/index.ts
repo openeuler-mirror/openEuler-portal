@@ -29,6 +29,7 @@ import sky from './sky';
 import group from './group';
 import university from './university';
 import cookie from './cookie';
+import migration from './migration';
 
 const i18n: { [key: string]: any } = {
   zh: {
@@ -60,6 +61,7 @@ const i18n: { [key: string]: any } = {
     group: group.zh,
     university: university.zh,
     cookie: cookie.zh,
+    migration: migration.zh,
   },
   en: {
     sig: sig.en,
@@ -89,6 +91,7 @@ const i18n: { [key: string]: any } = {
     group: group.en,
     cookie: cookie.en,
     mooc: mooc.en,
+    migration: migration.en,
   },
 };
 
