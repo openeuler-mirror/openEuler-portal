@@ -64,7 +64,7 @@ const jumpTo = (item: any) => {
     :navigation="true"
     @swiper="onSwiper"
   >
-    <swiper-slide v-for="item in homeBanner" :key="item.link">
+    <swiper-slide v-for="(item, index) in homeBanner" :key="item.link">
       <div
         :id="item.id"
         class="banner-panel"
@@ -73,6 +73,7 @@ const jumpTo = (item: any) => {
       >
         <div
           class="banner-panel-cover"
+          :class="{ resize: index === 0 && windowWidth >= 767 }"
           :style="{
             backgroundImage: `url(${
               windowWidth < 767 ? item.moBanner : item.pcBanner
@@ -336,6 +337,10 @@ html[lang='zh'] {
       background-size: cover;
       width: 100%;
       height: 100%;
+
+      &.resize {
+        background-position: 70% 50%;
+      }
     }
     .isH5show {
       display: none;
