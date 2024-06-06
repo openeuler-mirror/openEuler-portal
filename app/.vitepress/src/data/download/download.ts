@@ -87,6 +87,65 @@ export default {
             ARCH: 'AArch64',
             SCENARIO: 'SERVER',
           },
+          // loongarch64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.7 GiB',
+                SHACODE:
+                  'cd4afcbb2fe9d3e833ebf5a6087356b31737592225256c399f431c9a3d780c4f',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/ISO/loongarch64/openEuler-24.03-LTS-loongarch64-dvd.iso',
+                TIPS: 'loongarch64架构的基础安装ISO，包含了运行最小系统的核心组件',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '915.1 MiB',
+                SHACODE:
+                  '4c900e18c2753dfb8a4f791fa7b5609542f92a8996a298555a57b87c610bc4c9',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/ISO/loongarch64/openEuler-24.03-LTS-netinst-loongarch64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'loongarch64',
+            SCENARIO: 'SERVER',
+          },
+          // riscv64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '17.6 GiB',
+                SHACODE:
+                  '61c8b595ee6f765ee2f127b1a26a59b8953a07298831947e91c6fcf30caf47ea',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/ISO/riscv64/openEuler-24.03-LTS-everything-riscv64-dvd.iso',
+                TIPS: 'riscv64架构的全量安装ISO，包含了运行完整系统所需的全部组件',
+              },
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.9 GiB',
+                SHACODE:
+                  'f49a5da648c53af30aa1a5bcc784685d75baca08743c840889bff32655b6a4e1',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/ISO/riscv64/openEuler-24.03-LTS-riscv64-dvd.iso',
+                TIPS: 'riscv64架构的基础安装ISO，包含了运行最小系统的核心组件',
+              },
+              // {
+              //   TYPE: 'Network Install ISO',
+              //   SIZE: '906.0 MiB',
+              //   SHACODE:
+              //     '4d81cf35f4c62a32cefa3e933e741f2c022d0c6d99fead83e6f5498683cd3804',
+              //   DOWNLOAD_LINK:
+              //     'openEuler-24.03-LTS/ISO/riscv64/openEuler-24.03-LTS-netinst-riscv64-dvd.iso',
+              //   TIPS: '',
+              // },
+            ],
+            ARCH: 'riscv64',
+            SCENARIO: 'SERVER',
+          },
           //EDGE_CLOUD x86_64
           {
             LINK_LIST: [
@@ -3040,6 +3099,65 @@ export default {
               },
             ],
             ARCH: 'AArch64',
+            SCENARIO: 'SERVER',
+          },
+          // loongarch64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.7 GiB',
+                SHACODE:
+                  'cd4afcbb2fe9d3e833ebf5a6087356b31737592225256c399f431c9a3d780c4f',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/ISO/loongarch64/openEuler-24.03-LTS-loongarch64-dvd.iso',
+                TIPS: 'Base installation ISO file of the loongarch64 architecture, including the core components for running the minimum system.',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '915.1 MiB',
+                SHACODE:
+                  '4c900e18c2753dfb8a4f791fa7b5609542f92a8996a298555a57b87c610bc4c9',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/ISO/loongarch64/openEuler-24.03-LTS-netinst-loongarch64-dvd.iso',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'loongarch64',
+            SCENARIO: 'SERVER',
+          },
+          // riscv64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '17.6 GiB',
+                SHACODE:
+                  '61c8b595ee6f765ee2f127b1a26a59b8953a07298831947e91c6fcf30caf47ea',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/ISO/riscv64/openEuler-24.03-LTS-everything-riscv64-dvd.iso',
+                TIPS: 'Full installation ISO file of the riscv64 architecture, including all components for running the entire system.',
+              },
+              {
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.9 GiB',
+                SHACODE:
+                  'f49a5da648c53af30aa1a5bcc784685d75baca08743c840889bff32655b6a4e1',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/ISO/riscv64/openEuler-24.03-LTS-riscv64-dvd.iso',
+                TIPS: 'Base installation ISO file of the riscv64 architecture, including the core components for running the minimum system.',
+              },
+              // {
+              //   TYPE: 'Network Install ISO',
+              //   SIZE: '906.0 MiB',
+              //   SHACODE:
+              //     '4d81cf35f4c62a32cefa3e933e741f2c022d0c6d99fead83e6f5498683cd3804',
+              //   DOWNLOAD_LINK:
+              //     'openEuler-24.03-LTS/ISO/riscv64/openEuler-24.03-LTS-netinst-riscv64-dvd.iso',
+              //   TIPS: '',
+              // },
+            ],
+            ARCH: 'riscv64',
             SCENARIO: 'SERVER',
           },
           //EDGE_CLOUD x86_64
