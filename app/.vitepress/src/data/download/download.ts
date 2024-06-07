@@ -87,7 +87,50 @@ export default {
             ARCH: 'AArch64',
             SCENARIO: 'SERVER',
           },
-          // loongarch64
+          // arm32 EMBEDDED
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'openEuler glibc',
+                SIZE: '114.6 MiB',
+                SHACODE:
+                  '435b100bbcedf9455d5860b85fdc1052700cbeca701a817967f2ae53401ef3b1',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/arm32/qemu-arm32/openeuler-glibc-x86_64-openeuler-image-armv7a-qemu-arm-toolchain-24.03-LTS.sh',
+                TIPS: 'arm架构下对应的开发编译链',
+              },
+              {
+                TYPE: 'openEuler Image qemu',
+                SIZE: '52.8 MiB',
+                SHACODE:
+                  '9ca0fba4c26e58dd526ea04dd920860967a643b4ff0d8aff739af9009eaf3dd4',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/arm32/qemu-arm32/openeuler-image-qemu-arm-20240604191016.rootfs.cpio.gz',
+                TIPS: 'arm架构下支持qemu的文件系统',
+              },
+              {
+                TYPE: 'vmlinux',
+                SIZE: '106.1 MiB',
+                SHACODE:
+                  '674f8d5be588e090f954c5340682747ac9c24d10e31705bca3ec88714392fbbd',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/arm32/qemu-arm32/vmlinux',
+                TIPS: '',
+              },
+              {
+                TYPE: 'zImage',
+                SIZE: '2.3 MiB',
+                SHACODE:
+                  '578a1d54ac601568b66f08aac132ed19cace643377e2a5bb78ebb75dbb20414a',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/arm32/qemu-arm32/zImage',
+                TIPS: 'arm架构下支持qemu的内核镜像',
+              },
+            ],
+            ARCH: 'ARM32',
+            SCENARIO: 'EMBEDDED',
+          },
+          // loongarch64 SERVER
           {
             LINK_LIST: [
               {
@@ -112,7 +155,8 @@ export default {
             ARCH: 'loongarch64',
             SCENARIO: 'SERVER',
           },
-          // riscv64
+
+          // riscv64 SERVER
           {
             LINK_LIST: [
               {
@@ -210,16 +254,160 @@ export default {
             ARCH: 'AArch64',
             SCENARIO: 'CLOUD_COMPUTING',
           },
+          // CLOUD_COMPUTING loongarch64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '499.9 MiB',
+                SHACODE:
+                  '427cdb6caa1906ac87acc17a27a7625ed54b228ca3581a50557017a2a526c2d3',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/loongarch64/openEuler-24.03-LTS-loongarch64.qcow2.xz',
+                TIPS: 'loongarch64架构下openEuler虚拟机镜像',
+              },
+            ],
+            ARCH: 'loongarch64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          // CLOUD_COMPUTING riscv64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'RISCV_VIRT_CODE.fd',
+                SIZE: '32.0 MiB',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/riscv64/RISCV_VIRT_CODE.fd',
+                TIPS: '',
+              },
+              {
+                TYPE: 'RISCV_VIRT_VARS.fd',
+                SIZE: '32.0 MiB',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/riscv64/RISCV_VIRT_VARS.fd',
+                TIPS: '',
+              },
+              {
+                TYPE: 'fw_dynamic_oe_2403_penglai.bin',
+                SIZE: '172.4 KiB',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/riscv64/fw_dynamic_oe_2403_penglai.bin',
+                TIPS: '',
+              },
+              {
+                TYPE: 'qcow2',
+                SIZE: '490.3 MiB',
+                SHACODE:
+                  'aa08a2d8da3b0f3a369335be6e8bfda969e5e25dbe6ff9d76a10dd158138a509',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/riscv64/openEuler-24.03-LTS-riscv64.qcow2.xz',
+                TIPS: 'riscv64架构下openEuler虚拟机镜像',
+              },
+              {
+                TYPE: 'start_vm.sh',
+                SIZE: '1.9 KiB',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/riscv64/start_vm.sh',
+                TIPS: '',
+              },
+              {
+                TYPE: 'start_vm_penglai.sh',
+                SIZE: '2.0 KiB',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/riscv64/start_vm_penglai.sh',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'riscv64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
           {
             // AArch64
             LINK_LIST: [
               {
-                TYPE: 'ok3568',
+                TYPE: 'hieulerpi1',
                 SIZE: '',
                 SHACODE: '',
                 DOWNLOAD_LINK:
-                  'openEuler-24.03-LTS/embedded_img/aarch64/ok3568/',
-                TIPS: 'ok3568镜像',
+                  'openEuler-24.03-LTS/embedded_img/aarch64/hieulerpi1/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'hieulerpi1-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/hieulerpi1-ros/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'hieulerpi1-tiny',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/hieulerpi1-tiny/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'oEE-docker-image',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/oEE-docker-image/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'ok3588',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/ok3588/',
+                TIPS: 'ok3588镜像',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-aarch64',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/qemu-aarch64/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-aarch64-6.6',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/qemu-aarch64-6.6/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-aarch64-6.6-llvm',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/qemu-aarch64-6.6-llvm/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-aarch64-llvm',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/qemu-aarch64-llvm/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64/',
                 IS_FOLDER: true,
               },
               {
@@ -228,16 +416,38 @@ export default {
                 SHACODE: '',
                 DOWNLOAD_LINK:
                   'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64-6.6/',
-                // TIPS: '树莓派4B镜像',
                 IS_FOLDER: true,
               },
               {
-                TYPE: 'raspberrypi4-64-kernel6.6-llvm',
+                TYPE: 'raspberrypi4-64-6.6-llvm',
                 SIZE: '',
                 SHACODE: '',
                 DOWNLOAD_LINK:
-                  'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64-kernel6.6-llvm/',
-                // TIPS: '包含ROS2-humble基础软件包的树莓派4B镜像',
+                  'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64-6.6-llvm/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-6.6-rt-hmi',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64-6.6-rt-hmi/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-llvm',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64-llvm/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-rt-hmi-mcs',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64-rt-hmi-mcs/',
                 IS_FOLDER: true,
               },
             ],
@@ -253,7 +463,6 @@ export default {
                 SHACODE: '',
                 DOWNLOAD_LINK:
                   'openEuler-24.03-LTS/embedded_img/x86-64/x86-64-kernel-6.6-rt-hmi-ros/',
-                // TIPS: 'qemu镜像及iso镜像',
                 IS_FOLDER: true,
               },
               {
@@ -262,11 +471,32 @@ export default {
                 SHACODE: '',
                 DOWNLOAD_LINK:
                   'openEuler-24.03-LTS/embedded_img/x86-64/x86-64-rt-hmi-ros-mcs/',
-                // TIPS: '启用PREEMPT_RT软实时补丁的qemu镜像及iso镜像',
                 IS_FOLDER: true,
               },
             ],
             ARCH: 'x86_64',
+            SCENARIO: 'EMBEDDED',
+          },
+          // riscv
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'SG2042',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/x86-64/SG2042/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'lpi4a',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK: 'openEuler-24.03-LTS/embedded_img/x86-64/lpi4a/',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'riscv64',
             SCENARIO: 'EMBEDDED',
           },
         ],
@@ -837,7 +1067,7 @@ export default {
                   'dc91c5b8c68b12ec4e0445648cdfd0714234e82bf0a9509708ce5173bc82afb4',
                 DOWNLOAD_LINK:
                   'openEuler-23.09/embedded_img/arm32/arm32-qemu/openeuler-glibc-x86_64-openeuler-image-armv7a-qemu-arm-toolchain-23.09.sh',
-                TIPS: 'aarch64架构下对应的开发编译链',
+                TIPS: 'arm架构下对应的开发编译链',
               },
               {
                 TYPE: 'openEuler Image qemu',
@@ -846,7 +1076,7 @@ export default {
                   'c7c485541721f401b8820d07a6e98960123efed2f27e5a67c5f8ff86c0f1a834',
                 DOWNLOAD_LINK:
                   'openEuler-23.09/embedded_img/arm32/arm32-qemu/openeuler-image-qemu-arm-20230927204739.rootfs.cpio.gz',
-                TIPS: 'aarch64架构下支持qemu的文件系统',
+                TIPS: 'arm架构下支持qemu的文件系统',
               },
               {
                 TYPE: 'vmlinux',
@@ -864,7 +1094,7 @@ export default {
                   'd1336df07813276e2abf55729671a458236d640c4d0224beb013ffadc1354362',
                 DOWNLOAD_LINK:
                   'openEuler-23.09/embedded_img/arm32/arm32-qemu/zImage',
-                TIPS: 'aarch64架构下支持qemu的内核镜像',
+                TIPS: 'arm架构下支持qemu的内核镜像',
               },
             ],
             ARCH: 'ARM32',
@@ -3026,7 +3256,8 @@ export default {
           'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/Installation.html',
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
-        WHITE_PAPER: '/whitepaper/en/openEuler 24.03 LTS Technical White Paper.pdf',
+        WHITE_PAPER:
+          '/whitepaper/en/openEuler 24.03 LTS Technical White Paper.pdf',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=24.03-LTS',
         MANUFACTURER: 'openEuler community',
@@ -3102,7 +3333,50 @@ export default {
             ARCH: 'AArch64',
             SCENARIO: 'SERVER',
           },
-          // loongarch64
+          // arm32 EMBEDDED
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'openEuler glibc',
+                SIZE: '114.6 MiB',
+                SHACODE:
+                  '435b100bbcedf9455d5860b85fdc1052700cbeca701a817967f2ae53401ef3b1',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/arm32/qemu-arm32/openeuler-glibc-x86_64-openeuler-image-armv7a-qemu-arm-toolchain-24.03-LTS.sh',
+                TIPS: 'Development and compilation toolchain in the arm architecture.',
+              },
+              {
+                TYPE: 'openEuler Image qemu',
+                SIZE: '52.8 MiB',
+                SHACODE:
+                  '9ca0fba4c26e58dd526ea04dd920860967a643b4ff0d8aff739af9009eaf3dd4',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/arm32/qemu-arm32/openeuler-image-qemu-arm-20240604191016.rootfs.cpio.gz',
+                TIPS: 'File system that supports QEMU in the arm architecture.',
+              },
+              {
+                TYPE: 'vmlinux',
+                SIZE: '106.1 MiB',
+                SHACODE:
+                  '674f8d5be588e090f954c5340682747ac9c24d10e31705bca3ec88714392fbbd',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/arm32/qemu-arm32/vmlinux',
+                TIPS: '',
+              },
+              {
+                TYPE: 'zImage',
+                SIZE: '2.3 MiB',
+                SHACODE:
+                  '578a1d54ac601568b66f08aac132ed19cace643377e2a5bb78ebb75dbb20414a',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/arm32/qemu-arm32/zImage',
+                TIPS: 'Kernel image that supports QEMU in the arm architecture.',
+              },
+            ],
+            ARCH: 'ARM32',
+            SCENARIO: 'EMBEDDED',
+          },
+          // loongarch64 SERVER
           {
             LINK_LIST: [
               {
@@ -3127,7 +3401,8 @@ export default {
             ARCH: 'loongarch64',
             SCENARIO: 'SERVER',
           },
-          // riscv64
+
+          // riscv64 SERVER
           {
             LINK_LIST: [
               {
@@ -3225,16 +3500,160 @@ export default {
             ARCH: 'AArch64',
             SCENARIO: 'CLOUD_COMPUTING',
           },
+          // CLOUD_COMPUTING loongarch64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'qcow2.xz',
+                SIZE: '499.9 MiB',
+                SHACODE:
+                  '427cdb6caa1906ac87acc17a27a7625ed54b228ca3581a50557017a2a526c2d3',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/loongarch64/openEuler-24.03-LTS-loongarch64.qcow2.xz',
+                TIPS: 'VM image of openEuler in the loongarch64 architecture.',
+              },
+            ],
+            ARCH: 'loongarch64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
+          // CLOUD_COMPUTING riscv64
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'RISCV_VIRT_CODE.fd',
+                SIZE: '32.0 MiB',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/riscv64/RISCV_VIRT_CODE.fd',
+                TIPS: '',
+              },
+              {
+                TYPE: 'RISCV_VIRT_VARS.fd',
+                SIZE: '32.0 MiB',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/riscv64/RISCV_VIRT_VARS.fd',
+                TIPS: '',
+              },
+              {
+                TYPE: 'fw_dynamic_oe_2403_penglai.bin',
+                SIZE: '172.4 KiB',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/riscv64/fw_dynamic_oe_2403_penglai.bin',
+                TIPS: '',
+              },
+              {
+                TYPE: 'qcow2',
+                SIZE: '490.3 MiB',
+                SHACODE:
+                  'aa08a2d8da3b0f3a369335be6e8bfda969e5e25dbe6ff9d76a10dd158138a509',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/riscv64/openEuler-24.03-LTS-riscv64.qcow2.xz',
+                TIPS: 'VM image of openEuler in the riscv64 architecture.',
+              },
+              {
+                TYPE: 'start_vm.sh',
+                SIZE: '1.9 KiB',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/riscv64/start_vm.sh',
+                TIPS: '',
+              },
+              {
+                TYPE: 'start_vm_penglai.sh',
+                SIZE: '2.0 KiB',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/virtual_machine_img/riscv64/start_vm_penglai.sh',
+                TIPS: '',
+              },
+            ],
+            ARCH: 'riscv64',
+            SCENARIO: 'CLOUD_COMPUTING',
+          },
           {
             // AArch64
             LINK_LIST: [
               {
-                TYPE: 'ok3568',
+                TYPE: 'hieulerpi1',
                 SIZE: '',
                 SHACODE: '',
                 DOWNLOAD_LINK:
-                  'openEuler-24.03-LTS/embedded_img/aarch64/ok3568/',
-                TIPS: 'ok3568 image',
+                  'openEuler-24.03-LTS/embedded_img/aarch64/hieulerpi1/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'hieulerpi1-ros',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/hieulerpi1-ros/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'hieulerpi1-tiny',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/hieulerpi1-tiny/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'oEE-docker-image',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/oEE-docker-image/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'ok3588',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/ok3588/',
+                TIPS: 'ok3588 image',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-aarch64',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/qemu-aarch64/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-aarch64-6.6',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/qemu-aarch64-6.6/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-aarch64-6.6-llvm',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/qemu-aarch64-6.6-llvm/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'qemu-aarch64-llvm',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/qemu-aarch64-llvm/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64/',
                 IS_FOLDER: true,
               },
               {
@@ -3243,16 +3662,38 @@ export default {
                 SHACODE: '',
                 DOWNLOAD_LINK:
                   'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64-6.6/',
-                // TIPS: '树莓派4B镜像',
                 IS_FOLDER: true,
               },
               {
-                TYPE: 'raspberrypi4-64-kernel6.6-llvm',
+                TYPE: 'raspberrypi4-64-6.6-llvm',
                 SIZE: '',
                 SHACODE: '',
                 DOWNLOAD_LINK:
-                  'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64-kernel6.6-llvm/',
-                // TIPS: '包含ROS2-humble基础软件包的树莓派4B镜像',
+                  'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64-6.6-llvm/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-6.6-rt-hmi',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64-6.6-rt-hmi/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-llvm',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64-llvm/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'raspberrypi4-64-rt-hmi-mcs',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/aarch64/raspberrypi4-64-rt-hmi-mcs/',
                 IS_FOLDER: true,
               },
             ],
@@ -3268,7 +3709,6 @@ export default {
                 SHACODE: '',
                 DOWNLOAD_LINK:
                   'openEuler-24.03-LTS/embedded_img/x86-64/x86-64-kernel-6.6-rt-hmi-ros/',
-                // TIPS: 'qemu镜像及iso镜像',
                 IS_FOLDER: true,
               },
               {
@@ -3277,11 +3717,32 @@ export default {
                 SHACODE: '',
                 DOWNLOAD_LINK:
                   'openEuler-24.03-LTS/embedded_img/x86-64/x86-64-rt-hmi-ros-mcs/',
-                // TIPS: '启用PREEMPT_RT软实时补丁的qemu镜像及iso镜像',
                 IS_FOLDER: true,
               },
             ],
             ARCH: 'x86_64',
+            SCENARIO: 'EMBEDDED',
+          },
+          // riscv
+          {
+            LINK_LIST: [
+              {
+                TYPE: 'SG2042',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK:
+                  'openEuler-24.03-LTS/embedded_img/x86-64/SG2042/',
+                IS_FOLDER: true,
+              },
+              {
+                TYPE: 'lpi4a',
+                SIZE: '',
+                SHACODE: '',
+                DOWNLOAD_LINK: 'openEuler-24.03-LTS/embedded_img/x86-64/lpi4a/',
+                IS_FOLDER: true,
+              },
+            ],
+            ARCH: 'riscv64',
             SCENARIO: 'EMBEDDED',
           },
         ],
@@ -3853,7 +4314,7 @@ export default {
                   'dc91c5b8c68b12ec4e0445648cdfd0714234e82bf0a9509708ce5173bc82afb4',
                 DOWNLOAD_LINK:
                   'openEuler-23.09/embedded_img/arm32/arm32-qemu/openeuler-glibc-x86_64-openeuler-image-aarch64-qemu-aarch64-toolchain-23.09.sh',
-                TIPS: 'Development and compilation toolchain in the AArch64 architecture.',
+                TIPS: 'Development and compilation toolchain in the arm architecture.',
               },
               {
                 TYPE: 'openEuler Image qemu',
@@ -3862,7 +4323,7 @@ export default {
                   'c7c485541721f401b8820d07a6e98960123efed2f27e5a67c5f8ff86c0f1a834',
                 DOWNLOAD_LINK:
                   'openEuler-23.09/embedded_img/arm32/arm32-qemu/openeuler-image-qemu-aarch64-20230329193643.rootfs.cpio.gz',
-                TIPS: 'File system that supports QEMU in the AArch64 architecture.',
+                TIPS: 'File system that supports QEMU in the arm architecture.',
               },
               {
                 TYPE: 'vmlinux',
@@ -3880,7 +4341,7 @@ export default {
                   'd1336df07813276e2abf55729671a458236d640c4d0224beb013ffadc1354362',
                 DOWNLOAD_LINK:
                   'openEuler-23.09/embedded_img/arm32/arm32-qemu/zImage',
-                TIPS: 'Kernel image that supports QEMU in the AArch64 architecture.',
+                TIPS: 'Kernel image that supports QEMU in the arm architecture.',
               },
             ],
             ARCH: 'ARM32',
@@ -5028,11 +5489,31 @@ export default {
           {
             LINK_LIST: [
               {
-                TYPE: 'loongarch',
-                SIZE: '2.1 GiB',
-                SHACODE: '29eaf6db6702c1ce91b9ee73c58e7543',
+                TYPE: 'Offline Standard ISO',
+                SIZE: '3.0 GiB',
+                SHACODE:
+                  'cf38eb9ab040306765a74202313d3556aaea8c3c69d1e506b32d93693c27d7af',
                 DOWNLOAD_LINK:
-                  'openEuler-preview/loongarch/ISO/openEuler-22.03-LTS-loongarch64-dvd-beta4.iso',
+                  'openEuler-22.03-LTS/ISO/loongarch64/openEuler-22.03-LTS-loongarch64-dvd.iso',
+                TIPS: 'Base installation ISO file of the LoongArch64 architecture, including the core components for running the minimum system.',
+              },
+              {
+                TYPE: 'Offline Everything ISO',
+                SIZE: '12.1 GiB',
+                SHACODE:
+                  'd571ddedaf3bf5c7e0389b1a66cc0544dab236297cf356e652b6176ce2c63751',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS/ISO/loongarch64/openEuler-22.03-LTS-everything-loongarch64-dvd.iso',
+                TIPS: 'Full installation ISO file of the LoongArch64 architecture, including all components for running the entire system.',
+              },
+              {
+                TYPE: 'Network Install ISO',
+                SIZE: '718.7 MiB',
+                SHACODE:
+                  '2e2d74c9c0be76a712c3c22aab489b171ccfa7ebf99bde7b879638b5cf09ed14',
+                DOWNLOAD_LINK:
+                  'openEuler-22.03-LTS/ISO/loongarch64/openEuler-22.03-LTS-netinst-loongarch64-dvd.iso',
+                TIPS: '',
               },
             ],
             ARCH: 'LoongArch64',
