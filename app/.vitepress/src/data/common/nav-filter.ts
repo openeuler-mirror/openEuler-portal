@@ -131,7 +131,7 @@ export default [
   },
   {
     name: 'migration',
-    lang: ['zh'],
+    lang: ['zh', 'en'],
   },
   {
     name: 'brand',

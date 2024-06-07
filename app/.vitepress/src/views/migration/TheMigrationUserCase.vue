@@ -1,34 +1,17 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue';
+import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 
+import practicesInfoData from '@/data/migration/migration-practices';
+
 const i18n = useI18n();
+const { lang } = useData();
 
-const currentCaseList = ref([
-  {
-    path: '/zh/showcase/provider/005p41c5-a0b2-e850f4211aa0/',
-    title: '中国移动',
-    summary: '浙江公司完成了 openEuler 的大规模迁移部署',
-    industry: '运营商',
-    img: '/category/showcase/provider.png',
-  },
-  {
-    path: 'https://baijiahao.baidu.com/s?id=1744113308957850456',
-    title: '中国电信',
-    summary: '天翼云全场景业务无缝迁移至基于 openEuler 的自研操作系统 CTyunOS',
-    industry: '运营商',
-    img: '/category/showcase/provider.png',
-  },
+const practicesInfo = computed(() => {
+  return practicesInfoData[lang.value as 'zh' | 'en'];
+});
 
-  {
-    path: '/zh/blog/viikei/park-migrate.html',
-    title: '软通动力',
-    summary:
-      '软通动力助力某园区完成服务器硬件、操作系统、上层业务软件的全面替换',
-    industry: '其他',
-    img: '/category/showcase/others.png',
-  },
-]);
 const userCaseData = computed(() => i18n.value.showcase);
 
 function goDetail(link: string) {
@@ -39,7 +22,7 @@ function goDetail(link: string) {
   <div class="migration-user-case">
     <div class="user-case-list">
       <OCard
-        v-for="item in currentCaseList"
+        v-for="item in practicesInfo"
         :key="item.path"
         shadow="hover"
         class="case-card"

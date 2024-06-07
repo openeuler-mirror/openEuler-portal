@@ -2,8 +2,12 @@
 import { useData } from 'vitepress';
 import seoConfig from '@/data/common/seo';
 
-import advantageInfo from '@/data/migration/migration-advantage';
+import advantageInfoData from '@/data/migration/migration-advantage';
+import { computed } from 'vue';
 const { lang } = useData();
+const advantageInfo = computed(() => {
+  return advantageInfoData[lang.value as 'zh' | 'en'];
+});
 </script>
 
 <template>

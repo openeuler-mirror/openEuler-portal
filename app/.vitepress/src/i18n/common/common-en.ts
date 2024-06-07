@@ -357,6 +357,11 @@ export default {
               LABEL: '',
               PATH: '/learn/mooc/',
             },
+            {
+              NAME: 'Migration Center',
+              LABEL: 'Find all OS porting and migration guides',
+              PATH: '/migration/',
+            },
           ],
         },
         {

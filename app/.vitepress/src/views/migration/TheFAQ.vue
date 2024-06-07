@@ -1,6 +1,14 @@
 <script setup lang="ts">
-import faqInfo from '@/data/migration/migration-faq';
+import { computed } from 'vue';
+import { useData } from 'vitepress';
+import faqInfoData from '@/data/migration/migration-faq';
 import IconBook from '~icons/app/icon-book.svg';
+
+const { lang } = useData();
+
+const faqInfo = computed(() => {
+  return faqInfoData[lang.value as 'zh' | 'en'];
+});
 </script>
 
 <template>

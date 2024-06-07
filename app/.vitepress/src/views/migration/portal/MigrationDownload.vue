@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
 
-import { computed } from 'vue';
-
-import portalInfo from '@/data/migration/migration-portal';
+import portalInfoData from '@/data/migration/migration-portal';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import IconDownload from '~icons/app/icon-download.svg';
@@ -16,6 +16,12 @@ interface LinkItem {
   name: string;
   link: string;
 }
+
+const { lang } = useData();
+
+const portalInfo = computed(() => {
+  return portalInfoData[lang.value as 'zh' | 'en'];
+});
 
 function handleClick(item: LinkItem) {
   if (item.link) {

@@ -566,13 +566,13 @@ export default {
       LINK: 'showcase/',
     },
     {
-      TITLE: 'Porting Guide',
+      TITLE: 'Migration Center',
       IMG: migrate,
       DSSCRIPTIVE: 'Learn how to port to openEuler',
       IMG_HOVER: migrateHover,
       IMG_DARK: migrateDark,
       IMG_DARK_HOVER: migrateDarkHover,
-      LINK: '/zh/migration/',
+      LINK: '/en/migration/',
     },
     {
       TITLE: 'openEuler Forum',
