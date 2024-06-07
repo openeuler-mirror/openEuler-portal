@@ -22562,6 +22562,44 @@
         "chipModel": "SAS39xx",
         "item": "",
         "downloadLink": "inbox"
+    },
+    { 
+      "vendorID": "8086",
+      "deviceID": "15ff",
+      "svID": "193d",
+      "ssID": "0000",
+      "architecture": "x86_64",
+      "os": "openEuler 24.03 LTS",
+      "driverName": "i40e",
+      "version": "6.6.0-23.0.0.26.oe2403.x86_64",
+      "type": "NIC",
+      "date": "2024.05.21",
+      "sha256": "12ac3044dd47c8b768dd614efc7abd5145cd13d9659a57ece182a78c6d8f0b64",
+      "driverSize": "248K",
+      "chipVendor": "Intel",
+      "boardModel": "X710",
+      "chipModel": "X710",
+      "item": "",
+      "downloadLink": "inbox"
+    },
+    { 
+      "vendorID": "15b3",
+      "deviceID": "101d",
+      "svID": "15b3",
+      "ssID": "0016",
+      "architecture": "x86_64",
+      "os": "openEuler 24.03 LTS",
+      "driverName": "mlx5_core",
+      "version": "6.6.0-23.0.0.26.oe2403.x86_64",
+      "type": "NIC",
+      "date": "2024.05.20",
+      "sha256": "38236f2305079dee19c3f8e2912946934e85301ce78aa7a210d154fa2e0da737",
+      "driverSize": "695K",
+      "chipVendor": "Mellanox",
+      "boardModel": "MCX623106AN-CDAT",
+      "chipModel": "ConnectX-6 Dx",
+      "item": "",
+      "downloadLink": "inbox"
     }
 ]
 
