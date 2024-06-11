@@ -69,7 +69,7 @@ onUnmounted(() => {
       <div v-if="lang === 'zh'" class="contact">
         <p>资金捐赠，请联系开放原子开源基金会。</p>
         <p>
-          联系人：李扬；电话：010-59258678转8007；邮箱：<a
+          联系人：李扬；手机：13701019266；电话：010-59258678转8007；邮箱：<a
             href="mailto:liyang@openatom.org"
             >liyang@openatom.org</a
           >。
