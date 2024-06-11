@@ -68,6 +68,8 @@ import baodeLogo from '../../assets/category/home/link/baode_light.png';
 import baodeLogo_dark from '../../assets/category/home/dark/link/baode_dark.png';
 import seaway from '@/assets/category/home/link/seaway.png';
 import seaway_dark from '@/assets/category/home/dark/link/seaway_dark.png';
+import kaihong from '@/assets/category/home/link/kaihong.png';
+import kaihong_dark from '@/assets/category/home/dark/link/kaihong_dark.png';
 
 import mulan from '../../assets/category/home/link/mulan.png';
 import mulanLogo_dark from '../../assets/category/home/dark/link/mulan_dark.png';
@@ -397,6 +399,11 @@ export default {
       IMG_DARK: intewellLogo_dark,
     },
     {
+      LINK: 'https://www.kaihong.com/',
+      IMG: kaihong,
+      IMG_DARK: kaihong_dark,
+    },
+    {
       LINK: 'http://www.linx-info.com/#/',
       IMG: linsiLogo,
       IMG_DARK: linsiLogo_dark,
@@ -559,13 +566,13 @@ export default {
       LINK: 'showcase/',
     },
     {
-      TITLE: 'Porting Guide',
+      TITLE: 'Migration Center',
       IMG: migrate,
       DSSCRIPTIVE: 'Learn how to port to openEuler',
       IMG_HOVER: migrateHover,
       IMG_DARK: migrateDark,
       IMG_DARK_HOVER: migrateDarkHover,
-      LINK: '/zh/migration/',
+      LINK: '/en/migration/',
     },
     {
       TITLE: 'openEuler Forum',

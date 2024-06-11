@@ -36,7 +36,7 @@ export default {
       intro:
         'openEuler 在AWS、华为云、腾讯云等主流公有云平台上发布了官方镜像，获取指引可查看',
       intro1:'使用指南',
-      introLink:'https://forum.openeuler.org/t/topic/4185',
+      introLink:'https://forum.openeuler.org/t/topic/4433',
       links: [
         {
           href: 'https://aws.amazon.com/marketplace/pp/prodview-cgu5xymg7qnqg?sr=0-4&ref_=beagle&applicationId=AWSMPContessa',
@@ -59,7 +59,7 @@ export default {
       intro: 'openEuler 提供官方容器镜像，获取指引可查看',
       intro1:'使用指南',
       introLink:'https://forum.openeuler.org/t/topic/4189',
-      repeat: 3,
+      repeat: 2,
       links: [
         {
           href: 'https://hub.docker.com/r/openeuler/openeuler',
@@ -70,12 +70,8 @@ export default {
           label: 'OrbStack',
         },
         {
-          href: 'https://search.oepkgs.net/zh-CN',
-          label: '中科院软件所',
-        },
-        {
           href: 'https://hub.oepkgs.net/account/sign-in?globalSearch=openeuler',
-          label: 'Harbor',
+          label: '中科院软件所',
         },
         {
           href: 'https://quay.io/search?q=openeuler',
@@ -165,7 +161,7 @@ export default {
       iconDark: containerImgDark,
       title: 'Container image',
       intro: 'openEuler provides official container images:',
-      repeat: 3,
+      repeat: 2,
       links: [
         {
           href: 'https://hub.docker.com/r/openeuler/openeuler',
@@ -176,12 +172,8 @@ export default {
           label: 'OrbStack',
         },
         {
-          href: 'https://search.oepkgs.net/en-US',
-          label: 'ISCAS',
-        },
-        {
           href: 'https://hub.oepkgs.net/account/sign-in?globalSearch=openeuler',
-          label: 'Harbor',
+          label: 'ISCAS',
         },
         {
           href: 'https://quay.io/search?q=openeuler',

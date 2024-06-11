@@ -3,9 +3,13 @@ import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
 import { computed } from 'vue';
 
-import portalInfo from '@/data/migration/migration-portal';
+import portalInfoData from '@/data/migration/migration-portal';
 
 const { lang } = useData();
+
+const portalInfo = computed(() => {
+  return portalInfoData[lang.value as 'zh' | 'en'];
+});
 
 const commonStore = useCommon();
 
@@ -29,7 +33,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
                 }"
                 >{{ item.textLeft
                 }}<a
-                  :href="'/' + lang + item.link"
+                  :href="item.link"
                   target="_blank"
                   rel="noopener noreferrer"
                   >{{ item.linkText }}</a
@@ -37,7 +41,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
               >
             </div>
           </div>
-          <div class="help-box-qrs">
+          <div v-if="portalInfo.help?.officalQR.img" class="help-box-qrs">
             <div class="qrs-item">
               <img :src="portalInfo.help.officalQR.img" />
               <p>{{ portalInfo.help.officalQR.text }}</p>
@@ -102,6 +106,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
             margin: 0 0 4px 0;
           }
           span {
+            word-wrap: break-word;
             font-size: var(--o-font-size-h7);
             line-height: var(--o-line-height-h7);
             color: var(--o-color-neutral5);
@@ -123,6 +128,9 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
           margin: auto;
         }
         .qrs-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           @media screen and (max-width: 768px) {
             padding-top: 16px;
             margin: auto;
@@ -138,7 +146,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
             font-size: var(--o-font-size-h7);
             line-height: var(--o-line-height-h8);
             color: var(--o-color-text1);
-            font-weight: 500px;
+            font-weight: 500;
             text-align: center;
             @media screen and (max-width: 768px) {
               margin: 4px 0 0 0;

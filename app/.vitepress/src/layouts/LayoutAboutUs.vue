@@ -7,7 +7,7 @@ import useWindowResize from '@/components/hooks/useWindowResize';
 
 import DocSideBar from '@/components/DocSideBar.vue';
 import DocSideBarMenu from '@/components/DocSideBarMenu.vue';
-import DocAnchor from '@/components/DocAnchor.vue';
+import OrgDocAnchor from '@/views/organization/OrgDocAnchor.vue';
 import NavTree from '@/components/NavTree.vue';
 
 import IconCancel from '~icons/app/icon-cancel.svg';
@@ -143,18 +143,6 @@ const handleNodeClick = (node: any) => {
             :current-node-key="activeId"
             @node-click="handleNodeClick"
           />
-          <!-- <OTree
-            ref="tree"
-            node-key="migration"
-            :data="tocInfo"
-            accordion
-            :props="defaultProps"
-            :highlight-current="true"
-            :icon="IconChevronDown"
-            :current-node-key="activeId"
-            @node-click="handleNodeClick"
-          >
-          </OTree> -->
         </div>
       </ODrawer>
     </ClientOnly>
@@ -162,7 +150,7 @@ const handleNodeClick = (node: any) => {
 
   <!-- 内容区域 -->
   <div class="about-wrapper" :class="{ 'about-markdown': !isCustomLayout }">
-    <DocAnchor class="about-anchor" :class="isHidden ? 'is-hidden' : ''" />
+    <OrgDocAnchor class="about-anchor" :class="isHidden ? 'is-hidden' : ''" />
     <Content
       class="about-content"
       :class="{ 'custom-layout': isCustomLayout }"

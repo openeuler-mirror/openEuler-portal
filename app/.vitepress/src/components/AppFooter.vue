@@ -145,17 +145,13 @@ const isAbout = computed(() => {
   return frontmatter.value.category === 'about-us';
 });
 
-
 onMounted(() => {
   isQrTipVisible.value = localStorage.getItem('euler-feedback') ? false : true;
 });
 </script>
 
 <template>
-  <footer
-    class="footer"
-    :class="{ 'is-doc': (isMigration && lang === 'zh') || isAbout }"
-  >
+  <footer class="footer" :class="{ 'is-doc': isMigration || isAbout }">
     <AppContent :pc-top="0" :mobile-top="0">
       <div class="atom">
         <p class="atom-text">{{ i18n.common.FOOTER.ATOM_TEXT }}</p>

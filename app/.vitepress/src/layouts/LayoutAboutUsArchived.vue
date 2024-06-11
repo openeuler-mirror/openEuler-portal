@@ -2,7 +2,7 @@
 import { computed, ref, watch } from 'vue';
 import { useData, useRouter } from 'vitepress';
 
-import DocAnchor from '@/components/DocAnchor.vue';
+import OrgDocAnchor from '@/views/organization/OrgDocAnchor.vue';
 
 const router = useRouter();
 const { frontmatter } = useData();
@@ -33,7 +33,7 @@ const isHidden = computed(() => {
 <template>
   <!-- 内容区域 -->
   <div class="about-wrapper" :class="{ 'about-markdown': !isCustomLayout }">
-    <DocAnchor class="about-anchor" :class="isHidden ? 'is-hidden' : ''" />
+    <OrgDocAnchor class="about-anchor" :class="isHidden ? 'is-hidden' : ''" />
     <Content
       class="about-content"
       :class="{ 'custom-layout': isCustomLayout }"

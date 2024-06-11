@@ -131,7 +131,7 @@ export default [
   },
   {
     name: 'migration',
-    lang: ['zh'],
+    lang: ['zh', 'en'],
   },
   {
     name: 'brand',
@@ -227,6 +227,10 @@ export default [
   },
   {
     name: 'universities',
+    lang: ['zh'],
+  },
+  {
+    name: '2403-version-release',
     lang: ['zh'],
   },
 ];

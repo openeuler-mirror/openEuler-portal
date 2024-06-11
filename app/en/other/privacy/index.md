@@ -40,7 +40,7 @@ Product operations and maintenance: To provide you with rich product experience,
 
 (h) Content Release. When you participate in community meetings, live broadcasts, blogs, community activities, contribution in the open source community, or newsgroups, your user name and the information you publish will be visible to the community and the public. If you are a SIG member of the openEuler community, we will request your Gitee information for posting on our website.
 
-(i) Quick Issue Creation. When you use the QuickIssue service of the openEuler community to submit an issue, you will need to provide an email address, and a verification email will be sent to the email address you provided to verify the validity of the email address. After an issue is created, some information about your email address will be displayed in the description area on the issue page and in the submitter information of the QuickIssue dashboard.
+(i) Quick Issue Creation. When you use the QuickIssue service of the openEuler community to submit an issue, you will need to provide an email address, and a verification email will be sent to the email address you provided to verify the validity of the email address. After an issue is created, some information about your email address will be displayed in the description area on the issue page and in the submitter information of the QuickIssue dashboard. When a comment is submitted to the issue or the status of the issue changes, an email notification will be sent to your verified email address.
 
 (j) Joining openEuler Valuable Professional. When you apply for the openEuler Valuable Professional qualification, the community will collect your name, mobile number, email address, and photo through the application form you filled in. Your name, mobile number, and email address are used to notify you of the result and contact you. If you successfully qualify as an oEVP, your name and photo will be published on the openEuler official website.
 
@@ -178,8 +178,8 @@ Email: **<contact@openeuler.io>**
 
 Hotline: **+86 14775151246**
 
-Last updated: **March 1, 2024**
+Last updated: **May 30, 2024**
 
-Privacy policy version: **v20240301**
+Privacy policy version: **v20240530**
 
 </div>

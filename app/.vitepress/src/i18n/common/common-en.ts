@@ -352,6 +352,16 @@ export default {
               LABEL: '',
               PATH: 'https://docs.openeuler.org/en/',
             },
+            {
+              NAME: 'MOOCs',
+              LABEL: '',
+              PATH: '/learn/mooc/',
+            },
+            {
+              NAME: 'Migration Center',
+              LABEL: 'Find all OS porting and migration guides',
+              PATH: '/migration/',
+            },
           ],
         },
         {
@@ -622,30 +632,30 @@ export default {
           TYPE: 1,
           CHILDREN: [
             {
-              NAME: 'openEuler 22.03 LTS SP3',
+              NAME: 'openEuler 24.03 LTS',
               LABEL:
-                'openEuler openEuler 22.03 LTS SP3 is the patch version of openEuler 22.03 LTS, and both versions have the same lifecycle.',
-              PATH: '/download/?version=openEuler 22.03 LTS SP3',
+                'openEuler 24.03 LTS, built on Linux kernel 6.6, is suited for server, cloud, edge, AI, and embedded deployments. With best-in-class features, it delivers brand-new experience to developers and users spanning diverse industries.',
+              PATH: '/download/?version=openEuler 24.03 LTS',
               CHILDREN: [
                 {
                   NAME: 'Server',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=SERVER',
+                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=SERVER',
                 },
                 {
                   NAME: 'Edge Cloud',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=EDGE_CLOUD',
+                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=EDGE_CLOUD',
                 },
                 {
                   NAME: 'Cloud Computing',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=CLOUD_COMPUTING',
+                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=CLOUD_COMPUTING',
                 },
                 {
                   NAME: 'Embedded',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP2&scenario=EMBEDDED',
+                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=EMBEDDED',
                 },
               ],
             },

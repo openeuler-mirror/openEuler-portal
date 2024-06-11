@@ -15,7 +15,7 @@ export default {
   COMMUNITY: 'Community Editions',
   BUSINESS: 'Commercial Editions',
   DETAIL1:
-    'openEuler 22.03 LTS SP3 is the latest version that was released in December, 2023. Download and try for yourself here.',
+    'openEuler 24.03 LTS is the latest version that was released in May, 2024. Download and try for yourself here.',
   DETAIL2: '',
   CLICK_VIEW: 'Browse Earlier Versions.',
   ARCHIVE_LINK: '/en/download/archive/',

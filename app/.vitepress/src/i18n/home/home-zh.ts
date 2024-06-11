@@ -56,6 +56,9 @@ import h3cLogo from '@/assets/category/home/link/h3cLogo.png';
 import h3cLogo_dark from '@/assets/category/home/dark/link/h3cLogo_dark.png';
 import intewellLogo from '@/assets/category/home/link/intewellLogo.png';
 import intewellLogo_dark from '@/assets/category/home/dark/link/intewellLogo_dark.png';
+import kaihong from '@/assets/category/home/link/kaihong.png';
+import kaihong_dark from '@/assets/category/home/dark/link/kaihong_dark.png';
+
 import linsiLogo from '@/assets/category/home/link/linsiLogo.png';
 import linsiLogo_dark from '@/assets/category/home/dark/link/linsiLogo_dark.png';
 import ruantongLogo from '@/assets/category/home/link/ruantong_light.png';
@@ -361,6 +364,11 @@ export default {
       LINK: 'https://www.kyland.com.cn/',
       IMG: intewellLogo,
       IMG_DARK: intewellLogo_dark,
+    },
+    {
+      LINK: 'https://www.kaihong.com/',
+      IMG: kaihong,
+      IMG_DARK: kaihong_dark,
     },
     {
       LINK: 'http://www.linx-info.com/#/',
