@@ -485,14 +485,14 @@ export default {
                 SIZE: '',
                 SHACODE: '',
                 DOWNLOAD_LINK:
-                  'openEuler-24.03-LTS/embedded_img/x86-64/SG2042/',
+                  'openEuler-24.03-LTS/embedded_img/riscv64/SG2042//',
                 IS_FOLDER: true,
               },
               {
                 TYPE: 'lpi4a',
                 SIZE: '',
                 SHACODE: '',
-                DOWNLOAD_LINK: 'openEuler-24.03-LTS/embedded_img/x86-64/lpi4a/',
+                DOWNLOAD_LINK: 'openEuler-24.03-LTS/embedded_img/riscv64/lpi4a/',
                 IS_FOLDER: true,
               },
             ],
@@ -3731,14 +3731,14 @@ export default {
                 SIZE: '',
                 SHACODE: '',
                 DOWNLOAD_LINK:
-                  'openEuler-24.03-LTS/embedded_img/x86-64/SG2042/',
+                  'openEuler-24.03-LTS/embedded_img/riscv64/SG2042//',
                 IS_FOLDER: true,
               },
               {
                 TYPE: 'lpi4a',
                 SIZE: '',
                 SHACODE: '',
-                DOWNLOAD_LINK: 'openEuler-24.03-LTS/embedded_img/x86-64/lpi4a/',
+                DOWNLOAD_LINK: 'openEuler-24.03-LTS/embedded_img/riscv64/lpi4a/',
                 IS_FOLDER: true,
               },
             ],
