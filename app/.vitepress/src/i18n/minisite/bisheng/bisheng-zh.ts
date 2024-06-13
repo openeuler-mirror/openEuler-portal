@@ -183,11 +183,11 @@ export default {
       },
       {
         IMG: fileIllustration,
-        DESC: '毕昇JDK历史版本',
+        DESC: '毕昇JDK软件包',
         THEME: '下载',
         LINK: [
           {
-            TEXT: '毕昇JDK历史版本',
+            TEXT: '毕昇JDK软件包',
             LINK: 'https://www.hikunpeng.com/zh/developer/devkit/compiler/jdk',
           },
         ],

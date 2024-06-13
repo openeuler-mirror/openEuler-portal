@@ -183,11 +183,11 @@ export default {
       },
       {
         IMG: fileIllustration,
-        DESC: '',
+        DESC: 'BiSheng JDK Software',
         THEME: 'Download',
         LINK: [
           {
-            TEXT: 'Earlier Versions',
+            TEXT: 'BiSheng JDK Software',
             LINK: 'https://www.hikunpeng.com/en/developer/devkit/compiler/jdk',
           },
         ],
