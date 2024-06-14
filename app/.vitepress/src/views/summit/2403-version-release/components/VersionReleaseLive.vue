@@ -20,10 +20,6 @@ const getLiveHeight = () => {
   }
 };
 
-window.addEventListener('message', (e) => {
-  console.log(e);
-});
-
 onMounted(() => {
   getLiveHeight();
 });
