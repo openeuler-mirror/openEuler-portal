@@ -35,6 +35,8 @@ import zuowang_dark from '@/assets/category/member/zuowang_dark.png';
 import zuowang_light from '@/assets/category/member/zuowang_light.png';
 import puhua_dark from '@/assets/category/member/puhua_dark.png';
 import puhua_light from '@/assets/category/member/puhua_light.png';
+import zhaoxin_dark from '@/assets/category/member/zhaoxin_dark.png';
+import zhaoxin_light from '@/assets/category/member/zhaoxin_light.png';
 import guangfa_dark from '@/assets/category/member/guangfa_dark.png';
 import guangfa_light from '@/assets/category/member/guangfa_light.png';
 import intel_light from '@/assets/category/member/intel_light.png';
@@ -163,6 +165,11 @@ export default {
         {
           img_light: guangfa_light,
           img_dark: guangfa_dark,
+          noIcon: true,
+        },
+        {
+          img_light: zhaoxin_light,
+          img_dark: zhaoxin_dark,
           noIcon: true,
         },
         {
@@ -307,6 +314,11 @@ export default {
         {
           img_light: guangfa_light,
           img_dark: guangfa_dark,
+          noIcon: true,
+        },
+        {
+          img_light: zhaoxin_light,
+          img_dark: zhaoxin_dark,
           noIcon: true,
         },
         {
