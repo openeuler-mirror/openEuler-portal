@@ -17,11 +17,12 @@ import LayoutAboutUsArchived from '@/layouts/LayoutAboutUsArchived.vue';
 import LayoutDownload from './layouts/LayoutDownload.vue';
 import LayoutEvent from './layouts/LayoutEvent.vue';
 import LayoutSecurity from './layouts/LayoutSecurity.vue';
+import LayoutWiki from './layouts/LayoutWiki.vue';
+
 import AppFloat from '@/components/AppFloat.vue';
 import AppFloatEn from '@/components/AppFloatEn.vue';
 import CookieNotice from '@/components/CookieNotice.vue';
 
-import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
 
 const { frontmatter, lang } = useData();
@@ -42,7 +43,10 @@ const compMapping: {
   download: LayoutDownload,
   event: LayoutEvent,
   security: LayoutSecurity,
+  wiki: LayoutWiki,
 };
+
+const categories = Object.keys(compMapping);
 
 const isCustomLayout = computed(() => {
   return (
