@@ -1,12 +1,9 @@
 import hunan from '@/assets/category/university/hunan.png';
 import chengdu from '@/assets/category/university/chengdu.png';
 import lanzhou from '@/assets/category/university/lanzhou.png';
-import bgAi from '@/assets/category/university/bg-ai.png';
 import bgInternship from '@/assets/category/university/bg-internship.png';
 import bgInternshipMb from '@/assets/category/university/bg-internship_mb.png';
-import bgTalents from '@/assets/category/university/bg-talents.png';
 import illustrationAi from '@/assets/category/university/illustration-ai.png';
-import illustrationTalents from '@/assets/category/university/illustration-talents.png';
 import beida from '@/assets/category/university/beida.png';
 import beihang from '@/assets/category/university/beihang.png';
 import changli from '@/assets/category/university/changli.png';
@@ -111,24 +108,14 @@ export default {
         linkHref: 'https://www.openeuler.org/zh/internship/',
       },
       {
-        title: 'openEuler AI 应用挑战赛',
-        bgImg: bgAi,
-        bgInset: illustrationAi,
+        title: '2024第七届CCF开源创新大赛',
+        bgImg: illustrationAi,
+        id:'ccf',
         detail:
-          '首届开放原子开源大赛由工业和信息化部、江苏省人民政府、湖南省人民政府共同主办，openEuler社区参与本赛事设置openEuler AI应用挑战赛，赛题奖金总额30w，由基金会直接发放给获奖团队。',
+          '第七届CCF开源创新大赛在国家自然科学基金委信息科学部的指导下，由中国计算机学会（CCF）主办，长沙理工大学、CCF 开源发展委员会联合承办。openEuler参与开源项目贡献赛道，赛事奖金10w，赛题主要聚焦在openEuler操作系统的内存池管理与用户态线程设计与调度两个方向。',
         linkText: '大赛官网信息',
         linkHref:
-          'https://competition.atomgit.com/competitionInfo?id=1ea056d0418e11eeb9c0eb26c552c0c4',
-      },
-      {
-        title: 'openEuler&openGauss人才发展加速计划',
-        bgImg: bgTalents,
-        bgInset: illustrationTalents,
-        detail:
-          '“openEuler&openGauss人才发展加速计划”是华为公司推进围绕openEuler开源操作系统、openGauss开源数据库全栈人才发展的一项计划举措，旨在鼓励高校和研究所师生加入欧拉、高斯生态，实现围绕openEuler、openGauss的教改创新、社区贡献、研究实习，全面加速欧拉、高斯人才建设。',
-        linkText: '申请官网',
-        linkHref:
-          'https://edu.hicomputing.huawei.com/openeuler-opengauss-talent',
+          'https://www.gitlink.org.cn/competitions/track1_openEuler',
       },
     ],
   },

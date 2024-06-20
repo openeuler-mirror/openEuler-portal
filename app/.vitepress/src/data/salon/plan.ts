@@ -20,8 +20,8 @@ export const yearPlan = {
         month: '2',
         actives: [
           {
-            location: '法国',
-            activeName: 'MWC Barcelona',
+            location: '西班牙，巴塞罗那',
+            activeName: 'MWC 2024',
           },
         ],
       },
@@ -29,11 +29,11 @@ export const yearPlan = {
         month: '3',
         actives: [
           {
-            location: '法国',
+            location: '法国，巴黎',
             activeName: 'KubeCon EU',
           },
           {
-            location: '上海',
+            location: '中国，上海',
             activeName: 'GDC',
           },
         ],
@@ -42,7 +42,7 @@ export const yearPlan = {
         month: '4',
         actives: [
           {
-            location: '越南',
+            location: '越南，河内',
             activeName: 'FOSSASIA 2024',
           },
         ],
@@ -51,21 +51,20 @@ export const yearPlan = {
         month: '5',
         actives: [
           {
-            location: '西班牙',
-            activeName: 'Linaro connect',
+            location: '西班牙，马德里',
+            activeName: 'Linaro Connect',
           },
         ],
       },
       {
         month: '6',
-        actives: [
-        ],
+        actives: [],
       },
       {
         month: '7',
         actives: [
           {
-            location: '杭州',
+            location: '中国，杭州',
             activeName: 'GOTC',
           },
         ],
@@ -74,11 +73,11 @@ export const yearPlan = {
         month: '8',
         actives: [
           {
-            location: 'TBD',
-            activeName: 'RISC-V Summit China',
+            location: '中国，香港',
+            activeName: 'RISC-V Day',
           },
           {
-            location: '香港',
+            location: '中国，香港',
             activeName: 'KubeCon China',
           },
         ],
@@ -87,11 +86,11 @@ export const yearPlan = {
         month: '9',
         actives: [
           {
-            location: '韩国',
+            location: '韩国，水原',
             activeName: 'OpenInfra Summit Asia ',
           },
           {
-            location: '奥地利',
+            location: '奥地利，维也纳',
             activeName: 'OSS EU',
           },
         ],
@@ -100,8 +99,8 @@ export const yearPlan = {
         month: '11',
         actives: [
           {
-            location: '北京',
-            activeName: '开放原子开源峰会',
+            location: '中国，北京',
+            activeName: '2024开放原子开发者大会',
           },
         ],
       },
@@ -109,11 +108,7 @@ export const yearPlan = {
         month: '12',
         actives: [
           {
-            location: 'TBD',
-            activeName: 'OpenInfra Day ',
-          },
-          {
-            location: '北京',
+            location: '中国，北京',
             activeName: '操作系统峰会 openEuler Summit',
           },
         ],
@@ -130,8 +125,12 @@ export const yearPlan = {
         month: '3',
         actives: [
           {
-            location: '日本',
-            activeName: 'Workshop',
+            location: '日本，东京',
+            activeName: 'OpenChain X openEuler 东京研讨会',
+          },
+          {
+            location: '中国，上海',
+            activeName: 'KCD',
           },
         ],
       },
@@ -139,12 +138,8 @@ export const yearPlan = {
         month: '4',
         actives: [
           {
-            location: '上海',
-            activeName: 'KCD',
-          },
-          {
-            location: '西安',
-            activeName: '第二届 eBPF 开发者大会',
+            location: '中国，西安',
+            activeName: 'eBPF 开发者大会',
           },
         ],
       },
@@ -152,7 +147,7 @@ export const yearPlan = {
         month: '9',
         actives: [
           {
-            location: '上海',
+            location: '中国，上海',
             activeName: 'HC 2024',
           },
         ],
@@ -161,8 +156,8 @@ export const yearPlan = {
         month: '10',
         actives: [
           {
-            location: '长沙',
-            activeName: '1024',
+            location: '中国，长沙',
+            activeName: '1024程序员节',
           },
           {
             location: 'TBD',
@@ -174,7 +169,7 @@ export const yearPlan = {
         month: '12',
         actives: [
           {
-            location: '上海',
+            location: '中国，上海',
             activeName: 'Intel On',
           },
         ],
@@ -213,14 +208,6 @@ export const yearPlan = {
             activeName: 'Embedded Meetup',
             href: '/zh/interaction/event-list/detail/?id=108&isMini=1',
           },
-          {
-            location: '线上',
-            activeName: '天翼云创新项目',
-          },
-          {
-            location: '线上',
-            activeName: '基于ebpf的应用层网络管控',
-          },
         ],
       },
       {
@@ -234,10 +221,6 @@ export const yearPlan = {
             location: '北京',
             activeName: 'RISC-V MeetUp',
           },
-          {
-            location: '线上',
-            activeName: 'UniProton on RISCV',
-          },
         ],
       },
       {
@@ -246,6 +229,27 @@ export const yearPlan = {
           {
             location: '北京',
             activeName: 'openEuler 24.03 LTS版本发布会',
+          },
+          {
+            location: '线上',
+            activeName: 'UXL Meetup',
+          },
+          {
+            location: '北京',
+            activeName: 'Arm Meetup',
+          },
+          {
+            location: '南京',
+            activeName: '24.03LTS版本与社区创新Meetup',
+          },
+        ],
+      },
+      {
+        month: '7',
+        actives: [
+          {
+            location: '北京',
+            activeName: 'openEuler Embedded Meetup',
           },
         ],
       },

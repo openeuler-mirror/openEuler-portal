@@ -85,6 +85,7 @@ const pathTarget = computed(() => (path: string) => {
         font-size: var(--o-font-size-h7);
         line-height: var(--o-line-height-h7);
         color: var(--o-color-text1);
+        font-weight: 500;
         @media (max-width: 768px) {
           font-size: var(--o-font-size-text);
           line-height: var(--o-line-height-text);

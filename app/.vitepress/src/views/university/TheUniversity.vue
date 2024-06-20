@@ -142,6 +142,7 @@ onMounted(() => {
             v-for="item in universityData.activityGame.activityList"
             :key="item.title"
             class="activity-item"
+            :class="item.id"
             :style="{ backgroundImage: `url(${item.bgImg})` }"
           >
             <div class="activity-item-left">
@@ -262,6 +263,10 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .university {
+  h3,
+  h4 {
+    font-weight: 500;
+  }
   .university-tab-mobile {
     width: 100%;
     height: 34px;
@@ -309,6 +314,7 @@ onMounted(() => {
   .university-technical {
     .university-technical-title {
       text-align: center;
+      font-weight: 500;
       font-size: var(--o-font-size-h3);
       line-height: var(--o-line-height-h3);
       color: var(--o-color-text1);
@@ -450,6 +456,7 @@ onMounted(() => {
     }
     .university-activity-title {
       text-align: center;
+      font-weight: 500;
       font-size: var(--o-font-size-h3);
       line-height: var(--o-line-height-h3);
       color: var(--o-color-text1);
@@ -512,6 +519,7 @@ onMounted(() => {
             font-size: var(--o-font-size-text);
             line-height: var(--o-line-height-text);
             color: var(--o-color-text4);
+            min-height: 66px;
           }
           .activity-item-link {
             margin-top: var(--o-spacing-h4);
@@ -554,8 +562,8 @@ onMounted(() => {
                 left: 0;
                 transform: translateY(-50%);
                 @media (max-width: 767px) {
-                  width: 8px;
-                  height: 8px;
+                  width: 6px;
+                  height: 6px;
                 }
               }
             }
@@ -567,6 +575,14 @@ onMounted(() => {
           }
         }
       }
+      .ccf {
+        background-size: contain;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        @media (max-width: 767px) {
+          background-size: auto 76px;
+        }
+      }
     }
   }
   .university-contribution {
@@ -576,6 +592,7 @@ onMounted(() => {
     }
     .university-contribution-title {
       text-align: center;
+      font-weight: 500;
       font-size: var(--o-font-size-h3);
       line-height: var(--o-line-height-h3);
       color: var(--o-color-text1);
@@ -606,8 +623,8 @@ onMounted(() => {
           height: 100%;
           width: 100%;
           display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+          flex-direction: column;
+          justify-content: space-between;
           @media (max-width: 767px) {
             padding: 16px;
           }
@@ -673,10 +690,10 @@ onMounted(() => {
               }
             }
           }
-          .tag-box{
+          .tag-box {
             @media (max-width: 767px) {
               margin-top: 8px;
-          }
+            }
           }
         }
         .item-link {
@@ -782,6 +799,7 @@ onMounted(() => {
     }
     .university-mooc-title {
       text-align: center;
+      font-weight: 500;
       font-size: var(--o-font-size-h3);
       line-height: var(--o-line-height-h3);
       color: var(--o-color-text1);
