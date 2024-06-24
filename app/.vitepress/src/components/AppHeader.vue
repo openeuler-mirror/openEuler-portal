@@ -7,7 +7,6 @@ import { useI18n } from '@/i18n';
 import useWindowResize from '@/components/hooks/useWindowResize';
 import navFilterConfig from '@/data/common/nav-filter';
 
-import HeaderNav from './HeaderNav.vue';
 import HeaderNavNew from './HeaderNavNew.vue';
 import HeaderSearch from './HeaderSearch.vue';
 import AppTheme from './AppTheme.vue';
@@ -37,7 +36,6 @@ const i18n = useI18n();
 const commonStore = useCommon();
 
 // 导航数据
-const navRouter = computed(() => i18n.value.common.NAV_ROUTER_CONFIG);
 const navRouterNew = computed(() => i18n.value.common.NAV_ROUTER_CONFIG_NEW);
 const navRouterNewInfo = computed(() => i18n.value.common.NAV_ROUTER_INFO);
 
@@ -58,7 +56,6 @@ const mobileMenuPanel = () => {
     mobileMenuIcon.value = !mobileMenuIcon.value;
     document.documentElement.classList.toggle('overflow');
     activeNav.value = '';
-    handleDefaultSelectedMobile();
   }, 200);
 };
 
@@ -123,7 +120,6 @@ watch(
 const toBody = ref(false);
 onMounted(() => {
   toBody.value = true;
-  handleDefaultSelectedMobile();
 });
 onUnmounted(() => {
   toBody.value = false;
@@ -139,53 +135,10 @@ const goHome = () => {
 
 // 兼容非ZH
 const activeNav = ref<string>();
-const handleMenuLayer = (e: any) => {
-  if (e.target.className !== 'mobile-menu-side') {
-    if (mobileChildMenu.value.length === 0) {
-      mobileMenuIcon.value = false;
-      document.documentElement.classList.remove('overflow');
-    }
-  }
-};
-// 移动端一级导航事件
-const goFirstNavMobile = (item: NavItem) => {
-  mobileChildMenu.value = [];
-  if (Object.prototype.hasOwnProperty.call(item, 'CHILDREN')) {
-    mobileChildMenu.value = item.CHILDREN;
-  } else {
-    mobileMenuIcon.value = false;
-    router.go('/' + lang.value + item.PATH);
-    document.documentElement.classList.remove('overflow');
-  }
-  activeNav.value = item.ID;
-};
 
-// 移动端二级导航事件
-const goSubNavMobile = (item: NavItem) => {
-  if (item.PATH.startsWith('https')) {
-    window.open(item.PATH);
-    return;
-  } else if (item.PATH) {
-    setTimeout(() => {
-      mobileMenuIcon.value = false;
-      document.documentElement.classList.remove('overflow');
-    }, 200);
-    nextTick(() => {
-      router.go('/' + lang.value + item.PATH);
-    });
-  }
-};
+
+
 // 移动端默认选中、二级菜单
-const handleDefaultSelectedMobile = () => {
-  navRouter.value.forEach((item: any) => {
-    item.CLASS.forEach((el: any) => {
-      if (routerPath.value.includes(el)) {
-        mobileChildMenu.value = item.CHILDREN;
-        activeNav.value = item.ID;
-      }
-    });
-  });
-};
 
 const isShowBox = ref(false);
 
@@ -228,46 +181,6 @@ const navItemClick = () => {
               <AppTheme />
             </div>
           </div>
-        </div>
-        <div
-          v-if="toBody && lang === 'ru' && isMobile"
-          class="mobile-menu"
-          :class="{ active: mobileMenuIcon }"
-          @click="handleMenuLayer($event)"
-        >
-          <div class="mobile-menu-side">
-            <div class="mobile-nav">
-              <div
-                v-for="item in navRouter"
-                :key="item.ID"
-                class="link"
-                :class="{
-                  active: activeNav === item.ID,
-                }"
-                @click.stop="goFirstNavMobile(item)"
-              >
-                {{ item.NAME }}
-              </div>
-            </div>
-            <div class="mobile-tools">
-              <AppLanguage :show="langShow" @language-click="navItemClick" />
-              <AppTheme />
-            </div>
-          </div>
-          <transition name="menu-sub">
-            <div v-if="mobileChildMenu.length > 0" class="mobile-menu-content">
-              <div class="mobile-menu-list">
-                <div
-                  v-for="item in mobileChildMenu"
-                  :key="item.ID"
-                  class="link"
-                  @click="goSubNavMobile(item)"
-                >
-                  {{ item.NAME }}
-                </div>
-              </div>
-            </div>
-          </transition>
         </div>
         <!-- 搜索 -->
         <HeaderSearch @search-click="searchControl" />
