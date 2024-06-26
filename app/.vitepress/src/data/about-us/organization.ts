@@ -13,7 +13,7 @@ import zhongxin from '@/assets/category/organization/zhongxin.png';
 import yangjiguo from '@/assets/category/organization/yangjiguo.png';
 
 import huxinwei from '@/assets/category/organization/huxinwei.png';
-import biannaimeng from '@/assets/category/organization/biannaimeng.png';
+import weijiangang from '@/assets/category/organization/weijiangang.png';
 import caozhi from '@/assets/category/organization/caozhi.png';
 import chenqide from '@/assets/category/organization/chenqide.png';
 import houjian from '@/assets/category/organization/houjian.png';
@@ -218,13 +218,6 @@ export default {
             gitee: 'shinwell_hu',
           },
           {
-            img: biannaimeng,
-            name: '卞乃猛',
-            post: '委员',
-            email: 'bian_naimeng@hoperun.com ',
-            gitee: 'biannm',
-          },
-          {
             img: caozhi,
             name: '曹志',
             post: '委员',
@@ -314,6 +307,13 @@ export default {
             post: '委员',
             email: 'wangzhigang17@huawei.com',
             gitee: 'jianminw',
+          },
+          {
+            img: weijiangang,
+            name: '魏建刚',
+            post: '委员',
+            email: 'wei_jiangang@hoperun.com',
+            gitee: 'bugflyfly',
           },
           {
             img: wufengguang,
@@ -657,13 +657,6 @@ export default {
             gitee: 'shinwell_hu',
           },
           {
-            img: biannaimeng,
-            name: 'Bian Naimeng',
-            post: 'Committee member',
-            email: 'bian_naimeng@hoperun.com ',
-            gitee: 'biannm',
-          },
-          {
             img: caozhi,
             name: 'Cao Zhi',
             post: 'Committee member',
@@ -753,6 +746,13 @@ export default {
             post: 'Committee member',
             email: 'wangzhigang17@huawei.com',
             gitee: 'jianminw',
+          },
+          {
+            img: weijiangang,
+            name: 'Wei Jiangang',
+            post: 'Committee member',
+            email: 'wei_jiangang@hoperun.com',
+            gitee: 'bugflyfly',
           },
           {
             img: wufengguang,
