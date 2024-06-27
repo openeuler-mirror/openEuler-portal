@@ -9077,11 +9077,659 @@
     "arch": "x86_64",
     "checksum": "fd66d02e7078e8e2fddd46e27e545d54",
     "base_openeuler_version": "openEuler 23.09",
-    "os_download_link": " https://www.kaihong.com/",
-    "friendly_link": " https://www.kaihong.com/",
+    "os_download_link": "https://www.kaihong.com/",
+    "friendly_link": "https://www.kaihong.com/",
     "type": "服务器",
     "total_result": "pass",
     "date": "2024/05/21",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "同方威视技术股份有限公司",
+    "os_version": "Nuctech_OS-1.0-rc2-loongarch64-dvd.iso",
+    "arch": "loongarch64",
+    "checksum": "1ae19eaa96232a7c5cacf45992eb29fe",
+    "base_openeuler_version": "openEuler-22.03-LTS-loongarch64-dvd.iso",
+    "os_download_link": "https://www.nuctech.com/",
+    "friendly_link": "https://www.nuctech.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/05/24",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "广东中兴新支点技术有限公司",
+    "os_version": "NewStart-CGS-Linux-MAIN.V6.06.05-oe2003sp3-x86_64.dvd.iso",
+    "arch": "x86_64",
+    "checksum": "d310671407fc4ed6d0c019b67b5d03ce",
+    "base_openeuler_version": "openEuler 20.03 LTS SP3",
+    "os_download_link": "https://www.gd-linux.com/solutions/server/",
+    "friendly_link": "https://www.gd-linux.com/solutions/server/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/06/11",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "浙江大华技术有限公司",
+    "os_version": "lynxvision-V1.0-x86.iso",
+    "arch": "x86_64",
+    "checksum": "0a6184c532708502ef789a777e057bf5",
+    "base_openeuler_version": "openEuler 22.03 LTS SP3",
+    "os_download_link": "https://www.dahuatech.com/",
+    "friendly_link": "https://www.dahuatech.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/06/11",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "华郅（北京）技术有限公司",
+    "os_version": "openeuler-image-FeatherOSV1_0.img",
+    "arch": "aarch64",
+    "checksum": "901e0c60d837c1509278173172a4c3f5",
+    "base_openeuler_version": "openEuler Embedded 24.03",
+    "os_download_link": "http://www.extretech.cn/",
+    "friendly_link": "http://www.extretech.cn/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2024/06/11",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "南京南瑞信息通信科技有限公司",
+    "os_version": "NARISecOSV2.0-x86 64-30-20231229.iso",
+    "arch": "x86_64",
+    "checksum": "d5cc8b31f91e396427e74529663f1348",
+    "base_openeuler_version": "openEuler 22.03 LTS",
+    "os_download_link": "http://www.sgepri.sgcc.com.cn/",
+    "friendly_link": "http://www.sgepri.sgcc.com.cn/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/06/11",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "浪潮云信息技术股份公司",
+    "os_version": "InLinux-23.12-LTS-SP1-eu-AMD64-server.iso",
+    "arch": "x86_64",
+    "checksum": "25855ec29f3c048c6d7c7429b3a7bb9c",
+    "base_openeuler_version": "openEuler 22.03 LTS SP3",
+    "os_download_link": "https://cloud.inspur.com/",
+    "friendly_link": "https://cloud.inspur.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/06/21",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "浪潮云信息技术股份公司",
+    "os_version": "InLinux-23.12-LTS-SP1-eu-ARM64-server.iso",
+    "arch": "aarch64",
+    "checksum": "21436e60e24891324169d704d52d2ee9",
+    "base_openeuler_version": "openEuler 22.03 LTS SP3",
+    "os_download_link": "https://cloud.inspur.com/",
+    "friendly_link": "https://cloud.inspur.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/06/21",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "浙江大华技术有限公司",
+    "os_version": "lynxvision-V1.0-arm.iso",
+    "arch": "aarch64",
+    "checksum": "d16c96fac3c485e500c4ecc0b64e802d",
+    "base_openeuler_version": "openEuler 22.03 LTS SP3",
+    "os_download_link": "https://www.dahuatech.com/",
+    "friendly_link": "https://www.dahuatech.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/06/26",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "南京南瑞信息通信科技有限公司",
+    "os_version": "NARISecOSV2.0-aarch64-30-20240504.iso",
+    "arch": "aarch64",
+    "checksum": "3b27866c3e1ae66498b280da13a9496c",
+    "base_openeuler_version": "openEuler 22.03 LTS",
+    "os_download_link": "http://www.sgepri.sgcc.com.cn/ ",
+    "friendly_link": "http://www.sgepri.sgcc.com.cn/ ",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/06/26",
     "details": "详细信息",
     "tools_result": [
       {
