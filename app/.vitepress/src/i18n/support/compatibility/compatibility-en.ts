@@ -105,7 +105,7 @@ export default {
     ITEM_ARR: [
       {
         ID: '01',
-        TITLE: 'Apply to join the openEuler community ( 0.5 days ) .',
+        TITLE: 'Apply to join the openEuler community (0.5 days).',
         DESCRIPTION_1:
           'You need to apply to join the openEuler community on the Gitee platform to become a member of the organization. Application address:',
         A_TEXT:
@@ -129,12 +129,12 @@ export default {
         DESCRIPTION_1:
           'Before performing the compatibility test, learn about the openEuler hardware compatibility policies.',
         A_TEXT: 'Click here to obtain the document.',
-        A_HREF: '/category/support/compatibility/openEuler-compatibility.pdf',
-        DOWNLOAD_NAME: 'openEuler兼容性策略介绍.pdf',
+        A_HREF: '/category/support/compatibility/openEuler-compatibility-en.pdf',
+        DOWNLOAD_NAME: 'openEuler Compatibility Policies.pdf',
       },
       {
         ID: '04',
-        TITLE: 'Create an issue ( 0.5 days ) .',
+        TITLE: 'Create an issue (0.5 days).',
         DESCRIPTION_1:
           'After signing the agreement, create an issue under the oec-hardware project in the openEuler community (',
         A_TEXT: 'https://gitee.com/openeuler/oec-hardware',
@@ -143,7 +143,7 @@ export default {
       },
       {
         ID: '05',
-        TITLE: 'Perform the compatibility test ( 10 days ) .',
+        TITLE: 'Perform the compatibility test (10 days).',
         DESCRIPTION_1:
           'After the issue is created, you can perform the compatibility test. The openEuler team provides the compatibility test framework and user guide that help you complete the test.',
         A_TEXT_2: 'Click here to obtain the user guide.',
@@ -154,7 +154,7 @@ export default {
       },
       {
         ID: '06',
-        TITLE: 'Submit the result for review ( 2 days ) .',
+        TITLE: 'Submit the result for review (2 days).',
         DESCRIPTION_1:
           'After the compatibility test is completed and passed, update the test result to the issue. Send the test result to the public mailbox as instructed by the user guide. Send the application for reviewing the compatibility result to ',
         A_TEXT2: '',
@@ -165,7 +165,7 @@ export default {
       },
       {
         ID: '07',
-        TITLE: 'Release the result ( 2 days ) .',
+        TITLE: 'Release the result (2 days).',
         DESCRIPTION_1:
           'The openEuler team will review the submitted result and add the hardware to the ',
         A_TEXT: 'Compatibility List',
