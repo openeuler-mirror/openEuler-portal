@@ -414,7 +414,7 @@ $ ip a
 ![输入图片说明](image3/w07.png)
 ![输入图片说明](image3/w08.png)
 
-### 注意事项
+### 3.3 注意事项
 
 - 由于多个WSL实例是共享网络的，因此在其中一个实例开启xrdp后，再另外一个WSL中启动服务会失败，此时可以通过修改/etc/xrdp/xrdp.ini和/etc/xrdp/sesman.ini中的监听端口实现开启多个实例的远程桌面
 
@@ -427,5 +427,5 @@ sudo systemctl restart gdm
 
 - 截图的gnome-termial中使用的字体是自己打包的cascadia-code-nerd-fonts-mono，也托管在EUR的xrdp仓库中上，可以通过dnf in cascadia-code-nerd-fonts-mono来进行安装
 
-- 理论上xrdp通过/etc/xrdp/startwm.sh能够启动任意的桌面环境，在$HOME/.xsession中可以添加任意桌面会话的进程，例如要启动i3，只需要echo i3 > $HOME/.xsession && chmod +x ~/.xsession即可，在xrdp连接时，就会启动一个i3的会话
+- 理论上xrdp通过/etc/xrdp/startwm.sh能够启动任意的桌面环境，在 `$HOME/.xsession` 中可以添加任意桌面会话的进程，例如要启动i3，只需要 `echo i3 > $HOME/.xsession && chmod +x ~/.xsession` 即可，在xrdp连接时，就会启动一个i3的会话
 
