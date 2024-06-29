@@ -12,7 +12,7 @@ author:
 summary: Explore Ding ZiWei's journey with openEuler and her insights on contributing to open source communities.
 ---
 
-<img src="./media/image1.PNG">
+<img src="./media/image1.png">
 
 Hey everyone! I'm Ding Ziwei from KylinSoft, and also a maintainer at the [Compliance SIG](https://www.openeuler.org/en/sig/sig-detail/?name=sig-compliance)  (sig-compliance) in the OpenAtom openEuler community. Taking this opportunity, I'd like to share my story of getting involved with openEuler, the projects I've worked on, and how I've grown along the way.
 
