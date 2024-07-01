@@ -10,7 +10,6 @@ import ruantong_light from '@/assets/category/member/ruantong_light.png';
 import dianxing_light from '@/assets/category/member/dianxing_light.png';
 import liantong_light from '@/assets/category/member/liantong_light.png';
 import yidong_light from '@/assets/category/member/yidong_light.png';
-import zhongyin_light from '@/assets/category/member/zhongyin_light.png';
 
 import turbolinux_light from '@/assets/category/member/turbolinux_light.png';
 import baolande_light from '@/assets/category/member/baolande_light.png';
@@ -28,7 +27,6 @@ import ruantong_dark from '@/assets/category/member/ruantong_dark.png';
 import dianxing_dark from '@/assets/category/member/dianxing_dark.png';
 import liantong_dark from '@/assets/category/member/liantong_dark.png';
 import yidong_dark from '@/assets/category/member/yidong_dark.png';
-import zhongyin_dark from '@/assets/category/member/zhongyin_dark.png';
 import zhongruan_dark from '@/assets/category/member/zhongruan_dark.png';
 import zhongruan_light from '@/assets/category/member/zhongruan_light.png';
 import zuowang_dark from '@/assets/category/member/zuowang_dark.png';
@@ -48,6 +46,8 @@ import feiten_dark from '@/assets/category/member/feiten_dark.png';
 import iscas_dark from '@/assets/category/member/iscas_dark.png';
 import aosiwei_light from '@/assets/category/member/aosiwei_light.png';
 import aosiwei_dark from '@/assets/category/member/aosiwei_dark.png';
+import huazhi_light from '@/assets/category/member/huazhi_light.png';
+import huazhi_dark from '@/assets/category/member/huazhi_dark.png';
 
 export default {
   zh: [
@@ -168,13 +168,13 @@ export default {
           noIcon: true,
         },
         {
-          img_light: zhaoxin_light,
-          img_dark: zhaoxin_dark,
+          img_light: huazhi_light,
+          img_dark: huazhi_dark,
           noIcon: true,
         },
         {
-          img_light: zhongyin_light,
-          img_dark: zhongyin_dark,
+          img_light: zhaoxin_light,
+          img_dark: zhaoxin_dark,
           noIcon: true,
         },
         {
@@ -322,8 +322,8 @@ export default {
           noIcon: true,
         },
         {
-          img_light: zhongyin_light,
-          img_dark: zhongyin_dark,
+          img_light: huazhi_light,
+          img_dark: huazhi_dark,
           noIcon: true,
         },
         {
