@@ -78,9 +78,9 @@ openEuler 社区版本分为长期支持版本（LTS）和创新版本[（生命
 
 在签署了[CLA 协议](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340)、找到了你想参与的[ SIG ](https://www.openeuler.org/zh/sig/sig-list/)之后，就可以开始你的社区贡献之旅啦。当然，为维护社区的友好开发和协作环境，在参与社区贡献之前，请先阅读并遵守 [openEuler 社区的行为守则](https://gitee.com/openeuler/community/blob/master/code-of-conduct.md) 以及 [openEuler 社区开发行为规范](https://gitee.com/openeuler/community/blob/master/zh/technical-committee/governance/openEuler%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%A1%8C%E4%B8%BA%E8%A7%84%E8%8C%83.md) 。
 
-- [贡献原创开源项目](https://www.openeuler.org/zh/community/contribution/detail.html#_4-1-贡献原创开源项目)
-- [代码类贡献](https://www.openeuler.org/zh/community/contribution/detail.html#_4-2-代码类贡献)
-- [非代码类贡献](https://www.openeuler.org/zh/community/contribution/detail.html#_4-3-非代码类贡献)
+- [贡献原创开源项目]/zh/community/contribution/detail.html#_4-1-贡献原创开源项目)
+- [代码类贡献](/zh/community/contribution/detail.html#_4-2-代码类贡献)
+- [非代码类贡献](/zh/community/contribution/detail.html#_4-3-非代码类贡献)
 
 ### 4.1 贡献原创开源项目
 
