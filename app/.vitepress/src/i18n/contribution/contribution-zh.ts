@@ -14,19 +14,11 @@ export default {
   PRINT_MAP: '打印攻略地图',
   LINK_LIST: [
     {
-      URL: 'https://huaweicloud.com/product/ecs.html',
+      URL: 'https://www.openeuler.org/zh/download/get-os/',
       BLANK: true,
     },
     {
-      URL: 'https://docs.openeuler.org/zh/docs/20.03_LTS/docs/Virtualization/virtualization.html',
-      BLANK: true,
-    },
-    {
-      URL: 'https://docs.openeuler.org/zh/docs/20.03_LTS/docs/Installation/installation.html',
-      BLANK: true,
-    },
-    {
-      URL: 'https://gitee.com/openeuler/raspberrypi',
+      URL: 'https://gitee.com/openeuler',
       BLANK: true,
     },
     {
@@ -74,19 +66,97 @@ export default {
       BLANK: true,
     },
     {
-      URL: '/zh/#meeting',
+      URL: 'https://www.openeuler.org/zh/blog/2022-11-25-cla/CLA%E7%AD%BE%E7%BD%B2%E6%B5%81%E7%A8%8B.html',
       BLANK: true,
     },
     {
-      URL: '/zh/interaction/event-list/',
+      URL: 'https://gitee.com/openeuler/community/blob/master/community-membership_cn.md',
       BLANK: true,
     },
     {
-      URL: '/zh/interaction/live-list/',
+      URL: '/zh/sig/sig-detail/?name=TC',
       BLANK: true,
     },
     {
-      URL: 'https://www.openeuler.org/zh/interaction/summit-list/devday2022/',
+      URL: '/zh/sig/sig-detail/?name=TC&mail=dev%40openeuler.org',
+      BLANK: true,
+    },
+    /* 待提供链接，两个一样的链接 */
+    {
+      URL: '',
+      BLANK: true,
+    },
+    {
+      URL: '',
+      BLANK: true,
+    },
+    {
+      URL: 'https://gitee.com/openeuler/community/blob/master/zh/contributors/create-package.md',
+      BLANK: true,
+    },
+    {
+      URL: 'https://gitee.com/src-openeuler',
+      BLANK: true,
+    },
+    {
+      URL: 'https://quickissue.openeuler.org/zh/issues/',
+      BLANK: true,
+    },
+    {
+      URL: '/zh/community/contribution/detail.html#_3-3-3-贡献软件包',
+      BLANK: true,
+    },
+    {
+      URL: 'https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md',
+      BLANK: true,
+    },
+    {
+      URL: '/zh/community/contribution/detail.html#_3-3-2-贡献编码',
+      BLANK: true,
+    },
+    {
+      URL: '/zh/community/contribution/detail.html#_3-3-5-检视代码',
+      BLANK: true,
+    },
+    {
+      URL: 'https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md',
+      BLANK: true,
+    },
+    {
+      URL: 'https://gitee.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E6%B5%8B%E8%AF%95%E4%BD%93%E7%B3%BB%E4%BB%8B%E7%BB%8D.md',
+      BLANK: true,
+    },
+    {
+      URL: 'https://gitee.com/openeuler/community/blob/master/zh/contributors/non-code-contributions.md',
+      BLANK: true,
+    },
+    {
+      URL: '/zh/community/program/',
+      BLANK: true,
+    },
+    {
+      URL: '/zh/community/user-group/',
+      BLANK: true,
+    },
+    {
+      URL: 'https://forum.openeuler.org/',
+      BLANK: true,
+    },
+    {
+      URL: '/zh/universities/',
+      BLANK: true,
+    },
+    {
+      URL: '/zh/interaction/blog-list/',
+      BLANK: true,
+    },
+    {
+      URL: '/zh/showcase/',
+      BLANK: true,
+    },
+    // 跳转值文字版4.2.3社区其他工作
+    {
+      URL: '',
       BLANK: true,
     },
     {
@@ -95,50 +165,6 @@ export default {
     },
     {
       URL: '/zh/sig/sig-guidance/',
-      BLANK: true,
-    },
-    {
-      URL: 'https://quickissue.openeuler.org/zh/issues/',
-      BLANK: true,
-    },
-    {
-      URL: '/zh/community/contribution/detail.html#_3-3-2-贡献编码',
-      BLANK: true,
-    },
-    {
-      URL: '/zh/community/contribution/detail.html#_3-3-3-贡献软件包',
-      BLANK: true,
-    },
-    {
-      URL: '/zh/community/contribution/detail.html#_3-3-4-贡献原创开源项目',
-      BLANK: true,
-    },
-    {
-      URL: '/zh/community/contribution/detail.html#_3-3-5-检视代码',
-      BLANK: true,
-    },
-    {
-      URL: 'https://gitee.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E6%B5%8B%E8%AF%95%E4%BD%93%E7%B3%BB%E4%BB%8B%E7%BB%8D.md',
-      BLANK: true,
-    },
-    {
-      URL: 'https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md',
-      BLANK: true,
-    },
-    {
-      URL: 'https://gitee.com/openeuler/community/blob/master/zh/contributors/non-code-contributions.md',
-      BLANK: true,
-    },
-    {
-      URL: 'https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md',
-      BLANK: true,
-    },
-    {
-      URL: '/zh/sig/sig-detail/?name=TC',
-      BLANK: true,
-    },
-    {
-      URL: 'https://gitee.com/openeuler/community/blob/master/community-membership_cn.md',
       BLANK: true,
     },
     {
