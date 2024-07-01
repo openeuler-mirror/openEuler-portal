@@ -26,10 +26,6 @@ const { lang } = useData();
 const i18n = useI18n();
 const commonStore = useCommon();
 const screenWidth = useWindowResize();
-//打开网页
-const handleDownloadUrl = (url: string) => {
-  window.open(url);
-};
 
 //分页与数据项目
 const currentPage = ref(1);
@@ -411,18 +407,23 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
               </div>
             </div>
           </div>
-          <OButton
-            type="primary"
-            size="mini"
-            class="download-button"
-            animation
-            @click="handleDownloadUrl(download.DOWNLOAD_URL)"
+          <a
+            :href="download.DOWNLOAD_URL"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <span>{{ i18n.download.DOWNLOADGO }}</span>
-            <template #suffixIcon>
-              <OIcon><IconArrowRight class="download-button-icon" /></OIcon>
-            </template>
-          </OButton>
+            <OButton
+              type="primary"
+              size="mini"
+              class="download-button"
+              animation
+            >
+              <span>{{ i18n.download.DOWNLOADGO }}</span>
+              <template #suffixIcon>
+                <OIcon><IconArrowRight class="download-button-icon" /></OIcon>
+              </template>
+            </OButton>
+          </a>
         </OCard>
       </div>
       <div v-else class="empty">
