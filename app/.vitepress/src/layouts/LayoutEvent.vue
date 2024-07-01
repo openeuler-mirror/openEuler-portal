@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { computed, reactive } from 'vue';
 import { useData, useRouter } from 'vitepress';
 
 import { useI18n } from '@/i18n';
@@ -23,22 +23,29 @@ const bannerData = {
   }),
   bannerIllustration: illustration,
 };
-const tabsData = {
+
+const tabsData = reactive({
   tabPane: [
     {
-      label: salonData.value.YEAR_PLAN,
+      label: computed(() => {
+        return i18n.value.interaction.MEETUPSLIST.YEAR_PLAN;
+      }),
       name: 'event-list',
     },
     {
-      label: '活动列表',
+      label: computed(() => {
+        return i18n.value.interaction.MEETUPSLIST.LATEST_EVENTS;
+      }),
       name: 'latest',
     },
     {
-      label: '活动申请',
+      label: computed(() => {
+        return i18n.value.interaction.MEETUPSLIST.COLLECT_EVENTS;
+      }),
       name: 'collect',
     },
   ],
-};
+});
 function clickTab(val: string) {
   val === 'event-list'
     ? router.go(`/${lang.value}/interaction/event-list/`)
