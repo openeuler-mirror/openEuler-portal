@@ -2,6 +2,24 @@ export default {
   zh: {
     COMMERCIAL_RELEASE_LIST: [
       {
+        NAME: '浪潮云启操作系统 23.12 LTS SP1',
+        DOWNLOAD_URL:
+          'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP1/',
+        DESC: '浪潮云启操作系统（英文简称InLinux）是安全高效、稳定可靠的企业级服务器操作系统，全面支持云计算、大数据、物联网、智能计算等应用场景，具备性能高效、灵活定制、稳定可靠等特性',
+        MANUFACTURER: '浪潮云信息技术股份公司',
+        PUBLISH_DATE: '2024/5/28',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP1/everything/x86_64/',
+            ARCH: 'x86_64',
+          },
+          {
+            LINK: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP1/everything/AArch64/',
+            ARCH: 'AArch64',
+          },
+        ],
+      },
+      {
         NAME: 'SeawayEdgeV1.00',
         DOWNLOAD_URL:
           'http://new.haiwei.tech/SeawayEdge/SeawayEdge-v1.00-LTS/ISO/x86_64/SeawayEdge-v1.00-LTS-x86_64-dvd.iso',
@@ -99,6 +117,23 @@ export default {
           },
           {
             ARCH: 'AArch64',
+          },
+        ],
+      },
+      {
+        NAME: '浪潮云启操作系统 23.12 LTS',
+        DOWNLOAD_URL: 'https://cloud.inspur.com/',
+        DESC: '浪潮云启操作系统（英文简称InLinux）是安全高效、稳定可靠的企业级服务器操作系统，全面支持云计算、大数据、物联网、智能计算等应用场景，具备性能高效、灵活定制、稳定可靠等特性',
+        MANUFACTURER: '浪潮云信息技术股份公司',
+        PUBLISH_DATE: '2023/2/6',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS/everything/AArch64/',
+            ARCH: 'AArch64',
+          },
+          {
+            LINK: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS/everything/x86_64/',
+            ARCH: 'x86_64',
           },
         ],
       },
