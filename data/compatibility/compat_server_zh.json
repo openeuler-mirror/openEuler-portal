@@ -20336,5 +20336,66 @@
       "hostBusAdapter": "",
       "hardDiskDrive": "BROADCOM MR9560-8i 5.24"
     }
+  },
+  {
+    "hardwareFactory": "华为",
+    "hardwareModel": "TaiShan 200 (Model 2280)",
+    "osVersion": "openEuler 22.03 LTS SP4",
+    "architecture": "aarch64",
+    "date": "2024/06/27",
+    "friendlyLink": "https://e.huawei.com/cn/products/computing/kunpeng/taishan/taishan-2280-v2?from=search",
+    "boardCards":[
+      {
+        "vendorID": "1000",
+        "deviceID": "0017",
+        "svID": "1000",
+        "ssID": "9440",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2024.06.13",
+        "sha256": "db1c2be2751bec2976c0912371ab91d2333ec96e9bbdf00107b60bb4653685c0",
+        "driverSize": "68K",
+        "chipVendor": "Broadcom",
+        "boardModel": "9440-8i",
+        "chipModel": "SAS3408",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "8086",
+        "deviceID": "1584",
+        "svID": "8086",
+        "ssID": "0002",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "i40e",
+        "version": "2.25.7",
+        "type": "raid",
+        "date": "2024.06.14",
+        "sha256": "c0f0958ecb41cfb1899d9dd8ef2a40af5b976f83f9fbb70cd4af748b00a97532",
+        "driverSize": "16M",
+        "chipVendor": "Intel",
+        "boardModel": "XL710-Q1",
+        "chipModel": "XL710",
+        "item": "",
+        "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS-SP4/contrib/drivers/source/Packages/i40e-2.25.7.tar.gz"
+      }
+    ],
+      "compatibilityConfiguration":{
+      "productInformation": "https://e.huawei.com/cn/products/computing/kunpeng/taishan/taishan-2280-v2?from=search",
+      "certificationTime": "2024/06/27",
+      "commitID": "IA9MBM",
+      "mainboardModel": "BC82AMDDA",
+      "biosUefi": "6.70",
+      "cpu": "Kunpeng-920",
+      "ram": "8*32G DIMMs",
+      "portsBusTypes": "x16 PCI Express x16",
+      "videoAdapter": "171x",
+      "hostBusAdapter": "SAS3.0",
+      "hardDiskDrive": "TOSHIBA AL15SEB120N"
+      }
   }
 ]
