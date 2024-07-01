@@ -81,13 +81,12 @@ export default {
       URL: '/zh/sig/sig-detail/?name=TC&mail=dev%40openeuler.org',
       BLANK: true,
     },
-    /* 待提供链接，两个一样的链接 */
     {
-      URL: '',
+      URL: 'https://gitee.com/openeuler/community/raw/master/zh/contributors/openEuler%20%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf',
       BLANK: true,
     },
     {
-      URL: '',
+      URL: 'https://gitee.com/openeuler/community/raw/master/zh/contributors/openEuler%20%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf',
       BLANK: true,
     },
     {
@@ -156,7 +155,7 @@ export default {
     },
     // 跳转值文字版4.2.3社区其他工作
     {
-      URL: '',
+      URL: '/zh/community/contribution/detail.html#_4-2-3-贡献软件包-为社区组件打包',
       BLANK: true,
     },
     {
