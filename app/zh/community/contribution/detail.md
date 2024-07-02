@@ -196,7 +196,7 @@ src-openeuler 主要用于存放制作发布件所需的软件包。
 
 - 您也可以参与社区组件打包工作，请参考 [openEuler 打包指南](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md) 。
 
-- 当然，如果您在使用 openEuler 时发现缺少某些软件包或已有包不满足您的需要时，还可以通过 [openEuler 用户软件仓系统(EUR)](https://eur.openeuler.openatom.cn/) 来帮助完善。关于 EUR 的介绍和使用指南可以参考 [这篇博文](https://zhengzhenyu.gitee.io/post/intro-eur/) 或者 [官方博客 1](https://www.openeuler.org/zh/blog/waaagh/openEuler-user-repo-howto.html) 和 [官方博客 2](https://www.openeuler.org/zh/blog/waaagh/openEuler-user-repo-intro.html) 。
+- 当然，如果您在使用 openEuler 时发现缺少某些软件包或已有包不满足您的需要时，还可以通过 [openEuler 用户软件仓系统(EUR)](https://eur.openeuler.openatom.cn/) 来帮助完善。参考：[EUR 的介绍](https://www.openeuler.org/zh/blog/waaagh/openEuler-user-repo-intro.html) 和 [使用指南](https://www.openeuler.org/zh/blog/waaagh/openEuler-user-repo-howto.html) 。
 
 #### 4.2.4 检视代码
 
