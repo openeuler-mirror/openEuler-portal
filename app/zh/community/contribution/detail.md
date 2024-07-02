@@ -23,7 +23,7 @@ import illustration from '@/assets/illustrations/contribution.png';
 
 <div class="markdown">
 
-# 欢迎来到 OpenAtom openEuler
+# 欢迎来到 OpenAtom openEuler!
 
 OpenAtom openEuler (简称 openEuler) 是由开放原子开源基金会孵化及运营的开源项目。
 
@@ -52,7 +52,7 @@ openEuler 社区版本分为长期支持版本（LTS）和创新版本[（生命
 
 ## 2. 签署 CLA
 
-在参与社区贡献前，您需要根据自身的参与身份（个人、员工、企业），提前[签署 openEuler 社区贡献者许可协议（CLA）](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340)。
+在参与社区贡献前，您需要根据自身的参与身份（个人、员工、企业），提前签署 [openEuler 社区贡献者许可协议（CLA）](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340)。
 
 - 个人 CLA：以个人身份参与社区，请签署个人 CLA
 - 企业 CLA: 以企业身份参与社区，请签署企业 CLA
@@ -92,21 +92,21 @@ openEuler 社区版本分为长期支持版本（LTS）和创新版本[（生命
 
 #### 4.1.1 经 TC 例会之后，您可以参考以下两种方式将您的作品融入到 openEuler 中：
 
-方式一：在 openEuler 社区中开发，在 openEuler 中集成
+方式一：在 openEuler 社区中开发，在 openEuler 中集成：
 
 直接在[openEuler 代码仓](https://gitee.com/openeuler)中建立原创项目，类似将项目“托管”到 openEuler 社区，比如现在社区中的 [iSulad](https://gitee.com/openeuler/iSulad) 和 [A-Tune](https://gitee.com/openeuler/A-Tune) 就是这样的模式。
 
 如果您有了一个很棒的 idea 想要在 openEuler 社区里实现，那么可以依照下面的过程来深度参与到 openEuler 中。
 
-1. 在 [TC 委员会的例会中](https://www.openeuler.org/zh/sig/sig-detail/?id=21&name=TC&mail=dev%40openeuler.org) 申请一个开源项目；
+1.在 [TC 委员会的例会中](https://www.openeuler.org/zh/sig/sig-detail/?id=21&name=TC&mail=dev%40openeuler.org) 申请一个开源项目；
 
-2. 如果 TC 委员会认为这是一个很好的 idea，并且认为值得去推进，那么我们会在[ https://gitee.com/openeuler ](https://gitee.com/openeuler)中建立一个 repo；
+2.如果 TC 委员会认为这是一个很好的 idea，并且认为值得去推进，那么我们会在[ https://gitee.com/openeuler ](https://gitee.com/openeuler)中建立一个 repo；
 
-3. 这个项目在 openEuler 中持续开发和孵化，直到项目逐渐成熟，那么就可以在 src-openeuler 中建立一个仓，为该项目提供相关的 spec 文件，制作成为一个 rpm，跟随着 openEuler 的版本发布，为世界人民所使用。
+3.这个项目在 openEuler 中持续开发和孵化，直到项目逐渐成熟，那么就可以在 src-openeuler 中建立一个仓，为该项目提供相关的 spec 文件，制作成为一个 rpm，跟随着 openEuler 的版本发布，为世界人民所使用。
 
-4. 具体可参考：[openEuler 社区项目运作流程介绍（第 4 页）](https://gitee.com/openeuler/community/raw/master/zh/contributors/openEuler%20%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf)
+4.具体可参考：[openEuler 社区项目运作流程介绍（第 4 页）](https://gitee.com/openeuler/community/raw/master/zh/contributors/openEuler%20%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf)
 
-方式二：在其它社区开发，集成到 openEuler 中
+方式二：在其它社区开发，集成到 openEuler 中：
 
 假定你已经在 github，gitlab 或者 gitee 上拥有了自己的项目，那么只需要按照以上提到的 [如何新增软件包](https://gitee.com/openeuler/community/blob/master/zh/contributors/create-package.md) 那样，将软件加入到 [src-openeuler](https://gitee.com/src-openeuler) 这个 repo 仓就可以了。
 
@@ -114,9 +114,9 @@ openEuler 社区版本分为长期支持版本（LTS）和创新版本[（生命
 
 openEuler 社区主要包括两个代码仓库：
 
-1、代码仓：[https://gitee.com/openeuler](https://gitee.com/openeuler)
+1.代码仓：[https://gitee.com/openeuler](https://gitee.com/openeuler)
 
-2、软件包仓：[https://gitee.com/src-openeuler](https://gitee.com/src-openeuler)
+2.软件包仓：[https://gitee.com/src-openeuler](https://gitee.com/src-openeuler)
 
 openEuler 主要用于存放源码类项目。
 
@@ -142,7 +142,7 @@ src-openeuler 主要用于存放制作发布件所需的软件包。
 
 - 提交 Issue：
 
-  如果您准备向社区上报 Bug 或者提交需求，为 openEuler 社区贡献自己的意见或建议，可以在 openEuler 社区对应的仓库上提交 Issue（请参考 [Issue 提交指南](https://gitee.com/openeuler/community/blob/master/zh/contributors/issue-submit.md)。为了吸引更广泛的注意，您也可以把 Issue 的链接附在邮件内，通过 [邮件列表](https://www.openeuler.org/zh/community/mailing-list/) 发送给所有人。
+  如果您准备向社区上报 Bug 或者提交需求，为 openEuler 社区贡献自己的意见或建议，可以在 openEuler 社区对应的仓库上提交 Issue（请参考 [Issue 提交指南](https://gitee.com/openeuler/community/blob/master/zh/contributors/issue-submit.md))。为了吸引更广泛的注意，您也可以把 Issue 的链接附在邮件内，通过 [邮件列表](https://www.openeuler.org/zh/community/mailing-list/) 发送给所有人。
 
 - 参与 Issue 内的讨论：
 
@@ -216,7 +216,7 @@ openEuler 是一个开放的社区，我们希望所有参与社区的人都能�
 
 为了成功发行一个社区版本，openEuler 需要完成多种测试活动。不同的测试活动，测试代码的位置也有所不同，成功运行测试所需的环境细节也会有差异，有关的信息可以参考 [测试指南](https://gitee.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%80%85%E6%B5%8B%E8%AF%95%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97.md) 。
 
-#### 4.2.6
+#### 4.2.6 社区安全问题披露
 
 - [安全处理流程](https://gitee.com/openeuler/security-committee/blob/master/%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B.jpg) ——简要描述了处理安全问题的过程。
 - [安全披露信息](https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md) ——如果您希望报告安全漏洞，请参考此页面。
@@ -228,6 +228,7 @@ openEuler 是一个开放的社区，我们希望所有参与社区的人都能�
 #### 4.3.1 openEuler Call for X
 
 “[openEuler Call for X 计划](https://www.openeuler.org/zh/community/program/)”是一个开放的社区项目，鼓励所有社区成员以及开源爱好者积极贡献、乐于分享、热衷实践。通过“[openEuler Call for X 计划](https://www.openeuler.org/zh/community/program/)”，您不仅可以参与组织感兴趣的社区活动（Meetups、技术研讨会、直播、大会等，点此了解 [活动申请](https://www.openeuler.org/zh/interaction/event-list/collect/) 要求），也可以分享技术教程、基础设施、场地等资源，共建繁荣开源生态。
+
 联系：[events@openeuler.sh](mailto:events@openeuler.sh) 或 openEuler 小助手（微信号：openeuler123）
 
 #### 4.3.2 城市用户组
@@ -238,7 +239,7 @@ openEuler 用户组（openEuler User Group），简称 oEUG，这是为方便 op
 
 - 参与社区交流，通过[邮件列表](https://www.openeuler.org/zh/community/mailing-list/)，[社区论坛](https://forum.openeuler.org/)或添加小助手（微信号：openeuler123）加入社区交流群，帮助引导社区新人贡献社区，回答社区上的疑问等；
 
-- 运维社区通信工具，包括协助 sig-Maintainer 完善 SIG 主页信息（[EasyEditor 服务](https://www.openeuler.org/zh/blog/20230506-EasyEditor/20230506-EasyEditor.html)）、组织社区例会等；
+- 运维社区通信工具，包括协助 SIG 组的 Maintainer 完善 SIG 主页信息（[EasyEditor 服务](https://www.openeuler.org/zh/blog/20230506-EasyEditor/20230506-EasyEditor.html)）、组织社区例会等；
 
 - 成为社区布道师，共同组织社区聚会，包括 Meetups、直播、社区开发者大会等；
 
@@ -252,13 +253,13 @@ openEuler 用户组（openEuler User Group），简称 oEUG，这是为方便 op
 
 ## 5. 和社区一起成长
 
-openEuler 技术委员会
+- openEuler 技术委员会
 
-openEuler 技术委员会（Technical Committee，简称 TC）是 openEuler 社区的技术决策机构，负责社区技术决策和技术资源的协调。详情请查看  [openEuler 技术委员会介绍](https://www.openeuler.org/zh/sig/sig-detail/?id=21&name=TC&mail=dev%40openeuler.org)。
+  openEuler 技术委员会（Technical Committee，简称 TC）是 openEuler 社区的技术决策机构，负责社区技术决策和技术资源的协调。详情请查看  [openEuler 技术委员会介绍](https://www.openeuler.org/zh/sig/sig-detail/?id=21&name=TC&mail=dev%40openeuler.org)。
 
-社区角色说明
+- 社区角色说明
 
-社区不同角色对应不同的责任与权利，每种角色都是社区不可或缺的一部分，您可以通过积极贡献不断积累经验和影响力，并获得角色上的成长。更详细介绍与责任权利描述请查看  [社区角色说明](https://www.openeuler.org/zh/sig/role-description/)。
+  社区不同角色对应不同的责任与权利，每种角色都是社区不可或缺的一部分，您可以通过积极贡献不断积累经验和影响力，并获得角色上的成长。更详细介绍与责任权利描述请查看  [社区角色说明](https://www.openeuler.org/zh/sig/role-description/)。
 
 ## 6. 相关阅读
 

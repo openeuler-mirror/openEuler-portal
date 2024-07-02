@@ -70,7 +70,7 @@ export default {
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler/community/blob/master/community-membership_cn.md',
+      URL: '/zh/sig/role-description/',
       BLANK: true,
     },
     {
@@ -102,7 +102,7 @@ export default {
       BLANK: true,
     },
     {
-      URL: '/zh/community/contribution/detail.html#_3-3-3-贡献软件包',
+      URL: '/zh/community/contribution/detail.html#_4-2-3-贡献软件包-为社区组件打包',
       BLANK: true,
     },
     {
@@ -110,11 +110,11 @@ export default {
       BLANK: true,
     },
     {
-      URL: '/zh/community/contribution/detail.html#_3-3-2-贡献编码',
+      URL: '/zh/community/contribution/detail.html#_4-2-2-贡献编码',
       BLANK: true,
     },
     {
-      URL: '/zh/community/contribution/detail.html#_3-3-5-检视代码',
+      URL: '/zh/community/contribution/detail.html#_4-2-4-检视代码',
       BLANK: true,
     },
     {
@@ -153,9 +153,8 @@ export default {
       URL: '/zh/showcase/',
       BLANK: true,
     },
-    // 跳转值文字版4.2.3社区其他工作
     {
-      URL: '/zh/community/contribution/detail.html#_4-2-3-贡献软件包-为社区组件打包',
+      URL: '/zh/community/contribution/detail.html#_4-3-3-社区其他工作',
       BLANK: true,
     },
     {
