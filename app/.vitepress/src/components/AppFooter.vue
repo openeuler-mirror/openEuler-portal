@@ -175,9 +175,8 @@ onMounted(() => {
               <a
                 v-for="link in i18n.common.FOOTER.RIGHT_LIST"
                 :key="link.URL"
-                href="javascript:;"
+                :href="link.URL"
                 class="link"
-                @click="onNavClick(link.URL)"
                 >{{ link.NAME }}</a
               >
             </div>
@@ -189,18 +188,17 @@ onMounted(() => {
           </div>
           <div class="footer-right">
             <div v-if="lang === 'zh'" class="code-box">
-              <a
+              <div
                 v-for="(item, index) in footerCodeList"
                 :key="index"
                 class="code-pop"
-                href="javascript:;"
               >
                 <img :src="item.img" class="code-img" alt="openEuler" />
                 <div class="code-layer">
                   <img :src="item.code" alt="openEuler" />
                   <p class="txt">{{ item.label }}</p>
                 </div>
-              </a>
+              </div>
             </div>
             <div class="footer-links" :class="{ iszh: lang === 'zh' }">
               <a
@@ -420,6 +418,7 @@ $color: #fff;
       gap: 16px;
       margin-bottom: 16px;
       .code-pop {
+        cursor: pointer;
         position: relative;
         height: 20px;
         display: block;
