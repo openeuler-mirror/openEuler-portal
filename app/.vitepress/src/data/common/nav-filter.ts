@@ -230,7 +230,11 @@ export default [
     lang: ['zh'],
   },
   {
-    name: '2403-version-release',
+    name: 'summit2023',
+    lang: ['zh', 'en'],
+  },
+  {
+    name: 'summit-list/**',
     lang: ['zh'],
   },
 ];
