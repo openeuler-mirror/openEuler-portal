@@ -1,14 +1,26 @@
 <script lang="ts" setup>
+import { useData } from 'vitepress';
+import { computed } from 'vue';
 import AppContent from '@/components/AppContent.vue';
 
-import { yearPlan, months, editionData } from '@/data/salon/plan';
+import { useI18n } from '@/i18n';
+
+import { yearPlanData, months, editionData } from '@/data/salon/plan';
 
 import IconRight from '~icons/app/icon-arrow-right.svg';
+
+const i18n = useI18n();
+const salonData = computed(() => i18n.value.interaction.MEETUPSLIST);
+
+const lang = useData().lang;
+const yearPlan = computed(() => {
+  return yearPlanData[lang.value as 'zh' | 'en'];
+});
 </script>
 <template>
   <AppContent class="salon-content">
     <!-- openEuler Meetup 申请攻略 -->
-    <OCard class="meetup-form">
+    <OCard v-if="lang === 'zh'" class="meetup-form">
       <div class="info">
         <h3>openEuler Meetup 申请攻略</h3>
         <p class="desc">
@@ -109,10 +121,10 @@ import IconRight from '~icons/app/icon-arrow-right.svg';
           </div>
           <div v-if="yearPlan[key].id === 'opensoucrce'" class="otherlink">
             <p>
-              对上述大会有任何疑问或建议，请联系：<a
-                href="mailto:marketing@openeuler.org"
+              {{ salonData.MARKING_EMAIL
+              }}<a href="mailto:marketing@openeuler.org"
                 >marketing@openeuler.org</a
-              >
+              ><span v-if="lang === 'en'">.</span>
             </p>
           </div>
           <!-- 高校活动 -->
@@ -164,7 +176,7 @@ import IconRight from '~icons/app/icon-arrow-right.svg';
             class="title-box"
             :style="{ backgroundImage: `url(${editionData.titleBg})` }"
           >
-            {{ editionData.title }}
+            {{ lang === 'zh' ? editionData.title.zh : editionData.title.en }}
           </div>
           <div
             :style="{ backgroundImage: `url(${editionData.contentBg})` }"
@@ -211,6 +223,7 @@ $lineLeft: calc($titleboxWidth);
 }
 
 .meetup-form {
+  margin-bottom: 40px;
   :deep(.el-card__body) {
     padding: 8px 24px;
     display: flex;
@@ -293,7 +306,6 @@ $lineLeft: calc($titleboxWidth);
   }
 }
 .year-plan {
-  margin-top: 40px;
   color: var(--o-color-text1);
   @media screen and (max-width: 1416px) {
     overflow: auto;

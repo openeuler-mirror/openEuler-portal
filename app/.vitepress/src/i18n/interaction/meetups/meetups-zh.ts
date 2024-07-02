@@ -1,4 +1,3 @@
-import salon from '@/data/salon/salon';
 export default {
   MEETUPS: {
     MEETUPS: '活动',
@@ -9,6 +8,8 @@ export default {
     DETAIL_MEET: '参会信息',
     DETAIL_REVIEW: '精彩回顾',
     YEAR_PLAN: '年度规划',
+    LATEST_EVENTS: '活动列表',
+    COLLECT_EVENTS: '活动申请',
     DETAIL_NEWS: '最新活动',
     MORE_VIDEO: '更多视频',
     DETAIL_QRCODE_TEXT: '前往报名',
@@ -19,6 +20,7 @@ export default {
     EVENT_REVIEW: '活动回顾',
     INSIDENAME: 'CONNECT',
     DEFAULT_IMG: '/img/meetups/default-address.png',
-    MEETUPS_DATA: salon.cn.MEETUPS_LIST,
+    RELEASE_PLAN: '版本发布计划',
+    MARKING_EMAIL: '对上述大会有任何疑问或建议，请联系：',
   },
 };

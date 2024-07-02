@@ -10,8 +10,6 @@ import AMapLoader from '@amap/amap-jsapi-loader';
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import AppContent from '@/components/AppContent.vue';
 
-import SALON_CONFIG from '@/data/salon/salon';
-
 import type { DetailDateT } from '@/shared/@types/type-salon';
 import { getUrlParam, getBetweenDateStr } from '@/shared/utils';
 
@@ -51,7 +49,6 @@ const isLatest = computed(() => {
     return true;
   }
 });
-const configData = _.cloneDeep(SALON_CONFIG.cn.MEETUPS_LIST);
 
 const detailObj = ref<DetailDateT>();
 const flowPathList = ref<any[]>([]);
@@ -126,17 +123,6 @@ function getActivitiesData() {
     } catch (error: any) {
       throw new Error(error);
     }
-  } else {
-    tabTitle.value = tabTitle.value.splice(0, 2);
-    configData.forEach((item) => {
-      if (item.id === Number(activityId.value)) {
-        detailObj.value = item;
-        tabTitle.value = item.MEETUPS_FLOW_PATH
-          ? tabTitle.value.splice(0, 2)
-          : tabTitle.value.splice(0, 1);
-        flowPathList.value.push(item.MEETUPS_FLOW_PATH);
-      }
-    });
   }
 }
 

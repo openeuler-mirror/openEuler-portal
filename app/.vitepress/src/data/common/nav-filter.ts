@@ -195,7 +195,7 @@ export default [
   },
   {
     name: 'event-list/**',
-    lang: ['zh'],
+    lang: ['zh', 'en'],
   },
   {
     name: 'program/**',

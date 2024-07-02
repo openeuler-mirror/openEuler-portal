@@ -1,11 +1,11 @@
-import salon from '../../../data/salon/salon';
 export default {
   MEETUPS: {
-    MEETUPS: 'Meetups',
+    MEETUPS: 'Events',
+    YEAR_PLAN: 'Annual Planning',
     DETAIL_DESC: 'Introduction',
     DETAIL_FLOW: 'Agenda',
-    DETAIL_REVIEW: 'Review',
     MORE_VIDEO: 'More video',
+    LATEST_EVENTS: 'Latest Events',
     DETAIL_MEET: 'How to attend the event',
     DETAIL_NEWS: 'Latest Activity',
     DETAIL_QRCODE_TEXT: 'Scan the QR code',
@@ -14,6 +14,7 @@ export default {
     ADDRESS: '地址',
     LEARN_MORE: '了解更多',
     DEFAULT_IMG: '/img/meetups/default-address.png',
-    MEETUPS_DATA: salon.en.MEETUPS_LIST,
+    RELEASE_PLAN: 'Release Plan',
+    MARKING_EMAIL: 'If you have any questions or suggestions about the conferences, please contact ',
   },
 };

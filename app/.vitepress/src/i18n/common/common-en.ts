@@ -63,6 +63,11 @@ export default {
           LABEL: '',
           PATH: '/interaction/blog-list/',
         },
+        {
+          NAME: 'Events',
+          LABEL: '',
+          PATH: '/interaction/event-list/',
+        },
       ],
     },
     {
