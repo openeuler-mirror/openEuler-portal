@@ -36,7 +36,7 @@ const goLink = (url: string, isBlank: boolean) => {
         class="map-mo-en"
       />
       <!-- 定位的空标签 -->
-      
+
       <div
         v-for="(item, index) in i18n.contribution.LINK_LIST"
         :key="index"
@@ -546,27 +546,27 @@ const goLink = (url: string, isBlank: boolean) => {
     }
   }
   .link:nth-of-type(17) {
-    width: 54px;
+    width: 42px;
     height: 14px;
-    top: 418px;
-    left: 772px;
+    top: 420px;
+    left: 764px;
     @media screen and (min-width: 768px) and (max-width: 1079px) {
-      width: 34px;
-      height: 9px;
-      top: 255px;
-      left: 413px;
+      width: 23px;
+      height: 8px;
+      top: 257px;
+      left: 408px;
     }
     @media screen and (min-width: 1080px) and (max-width: 1279px) {
-      width: 48px;
-      height: 10px;
-      top: 334px;
-      left: 578px;
+      width: 32px;
+      height: 12px;
+      top: 336px;
+      left: 572px;
     }
     @media screen and (min-width: 1280px) and (max-width: 1439px) {
-      width: 56px;
-      height: 14px;
-      top: 384px;
-      left: 686px;
+      width: 38px;
+      height: 12px;
+      top: 386px;
+      left: 678px;
     }
   }
   .link:nth-of-type(18) {
@@ -1219,10 +1219,10 @@ const goLink = (url: string, isBlank: boolean) => {
   }
   /* 换行链接待处理点击区域样式 */
   .mobile-link:nth-of-type(17) {
-    width: 66.8%;
-    height: 1.4%;
-    left: 22.5%;
-    top: 56.2%;
+    width: 8.8%;
+    height: 0.8%;
+    left: 80.5%;
+    top: 55.9%;
   }
   .mobile-link:nth-of-type(18) {
     width: 47.8%;

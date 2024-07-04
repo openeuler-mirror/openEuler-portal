@@ -152,7 +152,7 @@ src-openeuler 主要用于存放制作发布件所需的软件包。
 
   如果您愿意处理其中的一个 issue，可以将它分配给自己。只需要在评论框内输入 /assign 或 /assign @yourself，机器人就会将问题分配给您，您的名字将显示在负责人列表里。
 
-- 相关链接：[QuickIssue 服务介绍](https://www.openeuler.org/zh/blog/georgecao/QuickIssue.html)
+- 你也可以通过 [QuickIssue 服务平台](https://quickissue.openeuler.org/zh/issues/) 查找或提交 Issue。详情请参考：[QuickIssue 服务介绍](https://www.openeuler.org/zh/blog/georgecao/QuickIssue.html)
 
 #### 4.2.2 贡献编码
 
