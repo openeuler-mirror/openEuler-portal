@@ -56,7 +56,7 @@ export default {
           },
           {
             icon: iconAdvantage03_light,
-            title: '24小时onCall支持',
+            title: '支持到位，快速响应',
             link: '/migration/contact/',
           },
           {
@@ -78,7 +78,7 @@ export default {
           },
           {
             icon: iconAdvantage03_dark,
-            title: '24小时onCall支持',
+            title: '支持到位，快速响应',
             link: '/migration/contact/',
           },
           {
