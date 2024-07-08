@@ -319,7 +319,7 @@ export default {
           {
             icon: iconAdvantage03_light,
 
-            title: '24/7 Support',
+            title: 'Comprehensive and Responsive Support',
 
             link: '/migration/contact/',
           },
@@ -337,7 +337,7 @@ export default {
           {
             icon: iconAdvantage01_dark,
 
-            title: 'End-to-End Migration Solution',
+            title: 'End-to-End Solution',
 
             link: '/migration/guidance/',
           },
@@ -345,7 +345,7 @@ export default {
           {
             icon: iconAdvantage02_dark,
 
-            title: 'Easy-to-Use Migration Tool',
+            title: 'Easy-to-Use Tool',
 
             link: '/migration/download/',
           },
@@ -353,7 +353,7 @@ export default {
           {
             icon: iconAdvantage03_dark,
 
-            title: '24/7 Support',
+            title: 'Comprehensive and Responsive Support',
 
             link: '/migration/contact/',
           },
