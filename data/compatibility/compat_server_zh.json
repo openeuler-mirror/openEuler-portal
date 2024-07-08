@@ -20397,5 +20397,66 @@
       "hostBusAdapter": "SAS3.0",
       "hardDiskDrive": "TOSHIBA AL15SEB120N"
       }
+  },
+  {
+    "hardwareFactory": "超聚变",
+    "hardwareModel": "2288H V5",
+    "osVersion": "openEuler 22.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2024/06/26",
+    "friendlyLink": "https://support.xfusion.com/support/#/zh/rack-servers/2288h-v5-pid-21872244/document",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "159b",
+        "svID": "8086",
+        "ssID": "0003",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "ice",
+        "version": "1.14.9",
+        "type": "NIC",
+        "date": "2024.06.14",
+        "sha256": "21a09bfe3d9a9ec880af6559423abea1ff836801bd4143736aedc758fb242979",
+        "driverSize": "55M",
+        "chipVendor": "Intel",
+        "boardModel": "E810-XXV-2",
+        "chipModel": "E810-XXV",
+        "item": "06310219",
+        "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS-SP4/contrib/drivers/source/Packages/ice-1.14.9.tar.gz"
+      }, 
+      {
+        "vendorID": "1000",
+        "deviceID": "0017",
+        "svID": "19e5",
+        "ssID": "d213",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2024.06.26",
+        "sha256": "fb5c2a4e36ef0ea4a6db3a7789074426f1d68ef9c90a4c8e42ecbc43be8a0978",
+        "driverSize": "74K",
+        "chipVendor": "Broadcom",
+        "boardModel": "SR150-M",
+        "chipModel": "SAS3408",
+        "item": "03024JNF/03033FAT",
+        "downloadLink": "inbox"
+      }
+    ],
+      "compatibilityConfiguration": {
+      "productInformation": "https://support.xfusion.com/support/#/zh/rack-servers/2288h-v5-pid-21872244/document",
+      "certificationTime": "2024/06/26",
+      "commitID": "",
+      "mainboardModel": "BC11SPSCD",
+      "biosUefi": "8.15(U47)",
+      "cpu": "cascade",
+      "ram": "12*32G DDR4",
+      "portsBusTypes": "X16*2/X8*2",
+      "videoAdapter": "Huawei Technologies Co., Ltd. Hi171x Series",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "TOSHIBA  AL15SEB120N"
+    }
   }
 ]
