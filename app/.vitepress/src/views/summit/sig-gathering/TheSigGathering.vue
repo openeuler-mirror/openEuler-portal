@@ -3,15 +3,19 @@ import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SigGatheringBanner.vue';
 import SigGatheringIntroduce from './components/SigGatheringIntroduce.vue';
 import SigGatheringTopic from './components/SigGatheringTopic.vue';
+import SigGatheringAgenda from './components/SigGatheringAgenda.vue';
+import SigGatheringReview from './components/SigGatheringReview.vue';
 
-import summitData from './data';
+import data_zh from './data/data_zh';
 </script>
 
 <template>
-  <SummitBanner :banner-data="summitData.banner" />
+  <SummitBanner :banner-data="data_zh.banner" />
   <AppContext>
-    <SigGatheringIntroduce :introduce-data="summitData.introduce" />
-    <SigGatheringTopic :topic-data="summitData.topic" />
+    <SigGatheringIntroduce :introduce-data="data_zh.introduce" />
+    <SigGatheringTopic :topic-data="data_zh.topic" />
+    <SigGatheringAgenda :agenda-data="data_zh.agenda" />
+    <SigGatheringReview :review-data="data_zh.review" />
   </AppContext>
 </template>
 

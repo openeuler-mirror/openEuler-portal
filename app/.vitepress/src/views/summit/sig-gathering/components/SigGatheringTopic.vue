@@ -54,6 +54,9 @@ const isDark = computed(() => {
 <style lang="scss" scoped>
 .topic {
   margin-top: 72px;
+  @media (max-width: 767px) {
+    margin-top: 40px;
+  }
 }
 .list {
   width: 100%;
@@ -106,6 +109,73 @@ const isDark = computed(() => {
   &:nth-of-type(1),
   &:nth-of-type(2) {
     margin-top: 0;
+  }
+}
+@media (max-width: 1416px) {
+  .item-topic {
+    width: calc(50% - 12px);
+    min-height: 196px;
+    padding: 24px;
+    margin-top: 24px;
+    .title {
+      font-size: var(--o-font-size-h6);
+      line-height: var(--o-line-height-h6);
+      margin-bottom: 16px;
+    }
+    .desc {
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
+    }
+    .link {
+      .text {
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
+      }
+    }
+    &:nth-child(2n) {
+      margin-left: 24px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .item-topic {
+    width: 100%;
+    &:nth-child(2n) {
+      margin-left: 0;
+    }
+    &:nth-of-type(2) {
+      margin-top: 24px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .item-topic {
+    width: 100%;
+    min-height: 132px;
+    padding: 16px;
+    margin-top: 16px;
+    .title {
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
+      margin-bottom: 8px;
+    }
+    .desc {
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
+      color: rgba(0, 0, 0, 0.8);
+    }
+    .link {
+      .text {
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-tip);
+      }
+    }
+    &:nth-child(2n) {
+      margin-left: 0;
+    }
+    &:nth-of-type(2) {
+      margin-top: 16px;
+    }
   }
 }
 .dark .desc {
