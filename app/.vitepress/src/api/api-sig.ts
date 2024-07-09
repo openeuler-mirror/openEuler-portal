@@ -195,3 +195,31 @@ export function getSigLandscape(lang: string): Promise<GroupInfoT[]> {
     return info;
   });
 }
+
+/**
+ * 获取sig group name list
+ * @returns {Object}
+ */
+export function querySigGroup(): Promise<{
+  code: number;
+  data: { openeuler: string[] };
+  msg: string;
+  update_at: string;
+}> {
+  const url = '/api-dsapi/query/sig/name?community=openeuler';
+  return request.get(url).then((res: AxiosResponse) => res.data);
+}
+
+/**
+ * 获取sig gathering 报名
+ * @returns {Object}
+ */
+export function applySigGathering(params: any): Promise<{
+  code: number;
+  data: { openeuler: string[] };
+  msg: string;
+  update_at: string;
+}> {
+  const url = '/api-dsapi/query/sigGathering?community=openeuler';
+  return request.post(url, { params }).then((res: AxiosResponse) => res.data);
+}
