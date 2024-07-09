@@ -1,17 +1,23 @@
 <script setup lang="ts">
 import { computed, ref, reactive, onMounted } from 'vue';
 
-import { ElMessage, FormInstance, FormRules } from 'element-plus';
 import useWindowResize from '@/components/hooks/useWindowResize';
-import { showGuard, getUserAuth } from '@/shared/login';
+import { showGuard } from '@/shared/login';
 
 import AppContent from '@/components/AppContent.vue';
+import OSelect from 'opendesign/select/OSelect.vue';
+import { ElMessage, FormInstance, FormRules } from 'element-plus';
 
 import { isTestEmail, isTestPhone } from '@/shared/utils';
 
 import { queryPersonalInfo } from '@/api/api-login';
+import { usePrivacyVersion } from '@/stores/common';
+import { querySigGroup, applySigGathering } from '@/api/api-sig';
+import { useLogin } from '@/stores/login';
 
-const { token } = getUserAuth();
+const { guardAuthClient } = useLogin();
+
+const versionStore = usePrivacyVersion();
 const ruleFormRef = ref<FormInstance>();
 const screenWidth = ref(useWindowResize());
 const isMobile = computed(() => (screenWidth.value <= 1100 ? true : false));
@@ -21,21 +27,23 @@ const formData = ref({
   name: '',
   phone: '',
   email: '',
-  id: '',
-  address: '',
-  sig: '',
-  subject: [],
-  join: '',
+  userId: '',
+  company: '',
+  sigs: [],
+  technicalSeminars: [],
+  attend: '',
+  acceptPrivacyVersion: [],
+  privacyVersion: versionStore.version,
 });
 
 const placeholderList = [
   '请填写您的真实姓名',
   '请填写您的真实手机号以便接收活动通知',
   '请填写您的真实邮箱信息以便接收活动通知',
-  '关联的账号信息',
-  '请填写您的真实工作单位',
-  '如：xxx SIG，如代表多个SIG参与，可写多个SIG组名称',
-  '至少选择一个专场',
+  '请填写您的openEuler ID',
+  '请填写您的真实工作单位名称',
+  '请您选择SIG组',
+  '请您至少选择一个专题',
   '',
 ];
 
@@ -74,42 +82,56 @@ const rules = reactive<FormRules>({
       trigger: 'blur',
     },
   ],
-  id: [
+  userId: [
     {
       required: true,
       message: placeholderList[3],
       trigger: 'blur',
     },
   ],
-  address: [
+  company: [
     {
       required: true,
       message: placeholderList[4],
       trigger: 'blur',
     },
   ],
-  sig: [
+  sigs: [
     {
       required: true,
       message: placeholderList[5],
       trigger: 'blur',
     },
   ],
-  subject: [
+  technicalSeminars: [
     {
       required: true,
       message: placeholderList[6],
       trigger: 'blur',
     },
   ],
-  //   join: [
-  //     {
-  //       required: true,
-  //       message: placeholderList[7],
-  //       trigger: 'blur',
-  //     },
-  //   ],
+  attend: [
+    {
+      required: true,
+      message: placeholderList[7],
+      trigger: 'blur',
+    },
+  ],
 });
+
+// 获取sig group name list
+const sigGroupLists = ref<Array<string>>([]);
+
+const getSigGroup = () => {
+  try {
+    querySigGroup().then((res) => {
+      sigGroupLists.value = res.data?.openeuler;
+    });
+  } catch (error: any) {
+    console.error(error);
+  }
+};
+getSigGroup();
 
 // 获取用户信息
 const userInfo = ref([]);
@@ -120,21 +142,20 @@ async function getPersonalInfo() {
       const { username, email, phone } = res.data;
       formData.value.email = email;
       formData.value.phone = phone;
-      formData.value.id = username;
+      formData.value.userId = username;
     });
   } catch (error: any) {
     console.error(error);
   }
 }
 onMounted(() => {
-  if (token) {
+  if (guardAuthClient.username) {
     getPersonalInfo();
   }
 });
 
-const meetupPrivacy = ref('');
 const submitMeetupForm = async (formEl: FormInstance | undefined) => {
-  if (meetupPrivacy.value.length < 1) {
+  if (formData.value.acceptPrivacyVersion.length < 1) {
     ElMessage({
       type: 'error',
       message: '请勾选隐私声明',
@@ -144,7 +165,22 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   await formEl.validate((valid) => {
     if (valid) {
-      console.log('submit');
+      const query = { ...formData.value };
+      query.acceptPrivacyVersion = formData.value.acceptPrivacyVersion[0];
+
+      try {
+        applySigGathering(query).then((res) => {
+          if (res.code === 200) {
+            ElMessage({
+              type: 'success',
+              message: '申请成功！',
+            });
+            ruleFormRef.value?.resetFields();
+          }
+        });
+      } catch (error: any) {
+        console.error(error);
+      }
     }
   });
 };
@@ -153,12 +189,12 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   <AppContent :pc-top="40" :mobile-top="12">
     <div class="form">
       <h2>Sig Gathering申请表</h2>
-      <template v-if="token">
+      <template v-if="guardAuthClient.username">
         <el-form
           ref="ruleFormRef"
           :model="formData"
           :rules="rules"
-          label-width="120px"
+          :label-width="isMobile ? '120px' : '240px'"
           class="demo-ruleForm"
           :label-position="labelPosition"
           status-icon
@@ -181,23 +217,44 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
             />
           </el-form-item>
 
-          <el-form-item label="openeuler ID" prop="id">
-            <OInput v-model="formData.id" :placeholder="placeholderList[3]" />
+          <el-form-item label="openEuler ID" prop="userId">
+            <OInput
+              v-model="formData.userId"
+              :placeholder="placeholderList[3]"
+            />
           </el-form-item>
 
-          <el-form-item label="工作单位" prop="address">
+          <el-form-item label="工作单位" prop="company">
             <OInput
-              v-model="formData.address"
+              v-model="formData.company"
               :placeholder="placeholderList[4]"
             />
           </el-form-item>
 
-          <el-form-item label="您在openeuler社区哪个SIG组参与贡献" prop="sig">
-            <OInput v-model="formData.sig" :placeholder="placeholderList[5]" />
+          <el-form-item
+            label="您在openeuler社区的哪个SIG组参与贡献"
+            prop="sigs"
+          >
+            <OSelect
+              v-model="formData.sigs"
+              multiple
+              :placeholder="placeholderList[5]"
+              style="width: 100%"
+            >
+              <OOption
+                v-for="item in sigGroupLists"
+                :key="item"
+                :label="item"
+                :value="item"
+              />
+            </OSelect>
           </el-form-item>
 
-          <el-form-item label="您计划参与的技术研讨专场" prop="subject">
-            <OCheckboxGroup v-model="formData.subject" class="column">
+          <el-form-item
+            label="您计划参与的技术研讨专场"
+            prop="technicalSeminars"
+          >
+            <OCheckboxGroup v-model="formData.technicalSeminars" class="column">
               <OCheckbox value="专题一：多样性算力">
                 专题一：多样性算力
               </OCheckbox>
@@ -219,22 +276,22 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
             </OCheckboxGroup>
           </el-form-item>
 
-          <el-form-item label="您是否参与开发者之夜" prop="join">
-            <ORadioGroup v-model="formData.join">
-              <ORadio value="yes">是</ORadio>
-              <ORadio value="no">否</ORadio>
+          <el-form-item label="您是否参与开发者之夜" prop="attend">
+            <ORadioGroup v-model="formData.attend">
+              <ORadio value="是">是</ORadio>
+              <ORadio value="否">否</ORadio>
             </ORadioGroup>
           </el-form-item>
 
           <el-form-item>
-            <OCheckboxGroup v-model="meetupPrivacy">
-              <OCheckbox value="1"
+            <OCheckboxGroup v-model="formData.acceptPrivacyVersion">
+              <OCheckbox value="是"
                 >您理解并同意，请填写并提交的内容，即视为您已充分阅读并理解openEuler的
                 <a
                   href="/zh/other/privacy/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >隐私声明</a
+                  >《隐私声明》</a
                 >
               </OCheckbox>
             </OCheckboxGroup>
@@ -298,20 +355,31 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 }
 :deep(.el-form) {
   .el-form-item {
-    &:nth-child(6),
-    &:nth-child(7),
-    &:nth-child(8) {
-      flex-direction: column;
+    .el-form-item__label {
+      height: auto;
+      padding-right: 32px;
+    }
+    &:nth-child(6) {
       .el-form-item__label {
-        width: auto !important;
-      }
-      .el-form-item__content {
-        padding-left: 120px;
-      }
-      .el-form-item__error {
-        margin-left: 120px;
+        line-height: 24px;
       }
     }
+  }
+}
+.wrap-item {
+  .el-form-item__label {
+    height: auto;
+    padding-right: 32px;
+  }
+  &:nth-child(6) {
+    .el-form-item__label {
+      line-height: 24px;
+    }
+  }
+}
+:deep(.el-select) {
+  .el-input__wrapper {
+    box-shadow: 0 0 0 1px var(--o-color-border1) inset;
   }
 }
 .auth-box {
