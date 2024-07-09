@@ -272,7 +272,7 @@ onMounted(() => {
   <AppContent :pc-top="40" :mobile-top="12">
     <div class="meetup-form">
       <h2>openEuler Meetup申请表</h2>
-      <template v-if="token">
+      <template v-if="!token">
         <el-form
           ref="ruleFormRef"
           :model="meetupData"
