@@ -131,7 +131,6 @@ const getSigGroup = () => {
     console.error(error);
   }
 };
-getSigGroup();
 
 // 获取用户信息
 const userInfo = ref([]);
@@ -151,6 +150,7 @@ async function getPersonalInfo() {
 onMounted(() => {
   if (guardAuthClient.username) {
     getPersonalInfo();
+    getSigGroup();
   }
 });
 
