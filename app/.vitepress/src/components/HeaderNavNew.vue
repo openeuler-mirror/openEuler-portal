@@ -143,7 +143,7 @@ watch(
                       @click="goPath(list, true)"
                     >
                       {{ list.NAME }}
-                      <OIcon v-if="list.PATH.startsWith('https')" class="icon">
+                      <OIcon v-if="list.OUTLINK" class="icon">
                         <IconOutLink />
                       </OIcon>
                     </span>
