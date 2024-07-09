@@ -45,6 +45,12 @@ li {
   &:first-of-type {
     margin-top: 0;
   }
+  @media (max-width: 767px) {
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 16px;
+  }
 }
 .dark {
   color: rgba(255, 255, 255, 0.8);
