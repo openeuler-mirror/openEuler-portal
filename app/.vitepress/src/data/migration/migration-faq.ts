@@ -1,13 +1,13 @@
 export default {
   zh: {
-    instruction: {
-      title: '说明',
-      text_1: '您可以通过',
-      link_text: '欧拉小智',
-      link: 'https://qa-robot.openeuler.org/',
-      text_2:
-        '获取更多FAQ，此处仅列出部分供参考。如果没有相关问题，您可在欧拉小智中输入“提问”反馈问题。',
-    },
+    // instruction: {
+    //   title: '说明',
+    //   text_1: '您可以通过',
+    //   link_text: '欧拉小智',
+    //   link: 'https://qa-robot.openeuler.org/',
+    //   text_2:
+    //     '获取更多FAQ，此处仅列出部分供参考。如果没有相关问题，您可在欧拉小智中输入“提问”反馈问题。',
+    // },
     chats: [
       {
         question: 'Q：如何获取原地升级的教程或者文档？',

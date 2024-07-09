@@ -13,7 +13,7 @@ const faqInfo = computed(() => {
 
 <template>
   <div class="migration-faq">
-    <div class="instruction">
+    <!-- <div class="instruction">
       <div class="content">
         <div class="title">
           <o-icon><icon-book></icon-book></o-icon>
@@ -30,7 +30,7 @@ const faqInfo = computed(() => {
           <span>{{ faqInfo.instruction.text_2 }}</span>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div
       v-for="item in faqInfo.chats"
