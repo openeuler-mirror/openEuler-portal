@@ -70,7 +70,7 @@ export default {
         {
           NAME: '峰会',
           LABEL: '',
-          PATH: '/interaction/summit-list/2403-version-release/',
+          PATH: '/interaction/summit-list/sig-gathering/',
         },
         {
           NAME: '月刊',

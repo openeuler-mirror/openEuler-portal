@@ -61,7 +61,9 @@ onMounted(() => {
   .sig-gathering-banner {
     height: 100%;
     margin: 0 auto;
-    background: no-repeat center/cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: calc(50% + 155px);
   }
   .banner-panel-content {
     position: absolute;

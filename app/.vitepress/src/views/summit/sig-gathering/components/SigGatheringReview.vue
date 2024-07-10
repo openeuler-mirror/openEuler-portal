@@ -52,13 +52,17 @@ const isDark = computed(() => {
     margin-top: var(--o-spacing-h6);
   }
   p {
-    font-weight: 500;
     & ~ p {
-      margin-top: var(--o-spacing-h6);
+      margin-top: var(--o-spacing-h4);
+      @media screen and (max-width: 768px) {
+        margin-top: var(--o-spacing-h5);
+      }
     }
     a {
-      font-size: var(--o-font-size-h6);
-      line-height: var(--o-line-height-h6);
+      font-size: var(--o-font-size-h7);
+      line-height: var(--o-line-height-h7);
+      font-weight: 500;
+      display: inline-block;
       @media screen and (max-width: 768px) {
         font-size: var(--o-font-size-tip);
         line-height: var(--o-line-height-tip);

@@ -101,6 +101,15 @@ const isDark = computed(() => {
       line-height: var(--o-line-height-h8);
       color: var(--o-color-text1);
       margin-right: 4px;
+      &:hover {
+        color: var(--o-color-neutral6);
+      }
+      &:active {
+        color: var(--o-color-neutral1);
+      }
+    }
+    .o-icon {
+      font-size: var(--o-font-size-h5);
     }
   }
   &:nth-child(2n) {
@@ -154,6 +163,8 @@ const isDark = computed(() => {
     min-height: 132px;
     padding: 16px;
     margin-top: 16px;
+    background-size: 100%;
+    background-position: right bottom;
     .title {
       font-size: var(--o-font-size-text);
       line-height: var(--o-line-height-text);
@@ -162,12 +173,15 @@ const isDark = computed(() => {
     .desc {
       font-size: var(--o-font-size-tip);
       line-height: var(--o-line-height-tip);
-      color: rgba(0, 0, 0, 0.8);
+      color: rgba(0, 0, 0, 0.6);
     }
     .link {
       .text {
         font-size: var(--o-font-size-tip);
         line-height: var(--o-line-height-tip);
+      }
+      .o-icon {
+        font-size: var(--o-font-size-h8);
       }
     }
     &:nth-child(2n) {
@@ -175,10 +189,17 @@ const isDark = computed(() => {
     }
     &:nth-of-type(2) {
       margin-top: 16px;
+      background-position: right top;
+    }
+    &:nth-of-type(5) {
+      background-position: right top;
     }
   }
 }
 .dark .desc {
   color: rgba(255, 255, 255, 0.8);
+  @media (max-width: 767px) {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 </style>

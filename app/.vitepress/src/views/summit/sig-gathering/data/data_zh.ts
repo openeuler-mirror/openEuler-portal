@@ -16,6 +16,8 @@ import agenda_light from '../img/agenda-light.png';
 import agenda_Dark from '../img/agenda-dark.png';
 import agenda1 from '../img/agenda1.png';
 import agenda2 from '../img/agenda2.png';
+import agenda_mo1 from '../img/agenda-mo1.png';
+import agenda_mo2 from '../img/agenda-mo2.png';
 import review_light from '../img/review-light.png';
 import review_Dark from '../img/review-dark.png';
 
@@ -35,7 +37,7 @@ export default {
     titleImDark: introduce_Dark,
     title: '活动简介',
     list: [
-      'openEuler SIG Gathering 2024将于7月26日在北京香格里拉饭店举行。本次活动面向社区107个SIG组，诚邀社区开发者齐聚现场，通过全天线下会议，聚焦openEuler 24.03 LTS 版本后续重要规划和各SIG2024年下半年重要技术方案以及开发计划。',
+      'openEuler SIG Gathering 2024将于7月26日在北京香格里拉饭店举行。本次活动面向社区108个SIG组，诚邀社区开发者齐聚现场，通过全天线下会议，聚焦openEuler 24.03 LTS 版本后续重要规划和各SIG2024年下半年重要技术方案以及开发计划。',
       '“我参与，我做主”，本次SIG组工作会议将设立六大专题研讨，方向为：多样性算力、全场景应用、AI原生支持、openEuler原生开发、上游原生支持、用户体验研究。欢迎各SIG组选择您感兴趣的的专题链接，填写您的需求，一起线下共同探讨，寻求解决方案。'
     ]
   },
@@ -43,12 +45,12 @@ export default {
     titleImg: topic_light,
     titleImDark: topic_Dark,
     title: '专题分类',
-    text: '提交演讲议题',
+    text: '提交议题',
     list: [
       {
         title: '多样性算力',
         desc: [
-          '多样性算力支持是openEuler领先性的核心竞争力之一。openEuler不仅吸引了国际上类似于Intel，AMD，ARM和Linaro等主流平台厂商的深度参与，也为国内众多架构体系和厂商如LongArch，申威和华为等众多ARM或者RISC-v厂商的生态发展汇聚了大量的开发资源和软硬件生态。openEuler的多样性发展策略必将为操作系统全架构基础底座奠定最坚实的基础。本专题将以多样性算力为主题，探讨异构计算架构、多平台支持、CPU/GPU/NPU/加速器协同等话题，并共同协商和规划openEuler的全架构发展计划。'
+          '多样性算力支持是openEuler领先性的核心竞争力之一。openEuler不仅吸引了国际上类似于Intel，AMD，ARM和Linaro等主流平台厂商的深度参与，也为国内众多架构体系和厂商如LongArch，申威和华为等众多ARM或者RISC-v厂商的生态发展汇聚了大量的开发资源和软硬件生态。openEuler的多样性发展策略必将为操作系统全架构基础底座奠定最坚实的基础。本专题将以多样性算力为主题，探讨异构计算架构、多平台支持、CPU/GPU/NPU/加速器协同等话题，并共同协商和规划openEuler的全架构发展计划'
         ],
         bg: topic1,
         bgDark: topic_dark1,
@@ -57,7 +59,7 @@ export default {
       {
         title: '全场景应用',
         desc: [
-          'openEuler自开源之初就以支撑全场景应用为核心特点，解决不同场景的软烟囱问题。openEuler的最新版本中在性能、可靠性、安全性、易用性等方面有了进一步提升，以支持服务器、云计算、边缘计算和嵌入式等场景的全面应用和创新，本专题将结合技术演进和实际案例探讨openEuler在全场景应用方面的发展和规划以及面向AI生态的结合。'
+          'openEuler自开源之初就以支撑全场景应用为核心特点，解决不同场景的软烟囱问题。openEuler的最新版本中在性能、可靠性、安全性、易用性等方面有了进一步提升，以支持服务器、云计算、边缘计算和嵌入式等场景的全面应用和创新，本专题将结合技术演进和实际案例探讨openEuler在全场景应用方面的发展和规划以及面向AI生态的结合'
         ],
         bg: topic2,
         bgDark: topic_dark2,
@@ -88,7 +90,7 @@ export default {
         title: '上游原生支持',
         desc: [
           'openEuler始终遵循“上游优先”的策略，帮助上游开源软件原生支持openEuler，让用户可以在开发、集成、使用这些软件时获得便利。',
-          '本方向主要涉及：openEuler上游原生支持技术讨论及进展同步，讨论如何做好从上游原生支持到openEuler原生发布的关键环节，包含上游协同，监测，维护管理等。'
+          '本方向主要涉及：openEuler上游原生支持技术讨论及进展同步，讨论如何做好从上游原生支持到openEuler原生发布的关键环节，包含上游协同，监测，维护管理等'
         ],
         bg: topic4,
         bgDark: topic_dark4,
@@ -124,12 +126,14 @@ export default {
                 date: '2024/07/26',
                 time: '10:00-10:10',
                 bg: agenda1,
+                bgMo: agenda_mo1,
               },
               {
                 title: '专题研讨',
                 date: '2024/07/26',
                 time: '10:10-12:00',
                 bg: agenda2,
+                bgMo: agenda_mo2,
               }
             ]
           },
@@ -141,36 +145,42 @@ export default {
                 date: '2024/07/26',
                 time: '12:00-13:00',
                 bg: agenda1,
+                bgMo: agenda_mo1,
               },
               {
                 title: '轻松健身操 ',
                 date: '2024/07/26',
                 time: '13:30-13:50',
                 bg: agenda2,
+                bgMo: agenda_mo2,
               },
               {
                 title: '专题探讨',
                 date: '2024/07/26',
                 time: '13:50-16:00',
                 bg: agenda1,
+                bgMo: agenda_mo1,
               },
               {
                 title: '快闪总结',
                 date: '2024/07/26',
                 time: '16:00-18:00',
                 bg: agenda2,
+                bgMo: agenda_mo2,
               },
               {
                 title: 'SIG Gathering 大合照',
                 date: '2024/07/26',
                 time: '18:00-18:05',
                 bg: agenda1,
+                bgMo: agenda_mo1,
               },
               {
                 title: '开发者之夜',
                 date: '2024/07/26',
                 time: '18:30-20:30',
-                bg: agenda2,   
+                bg: agenda2,
+                bgMo: agenda_mo2,
               }
             ]
           }
