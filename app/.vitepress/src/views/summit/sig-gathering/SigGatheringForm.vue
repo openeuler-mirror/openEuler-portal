@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, reactive, onMounted } from 'vue';
+import { computed, ref, reactive, onMounted, watch } from 'vue';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { showGuard } from '@/shared/login';
@@ -149,10 +149,16 @@ async function getPersonalInfo() {
 }
 onMounted(() => {
   getSigGroup();
-  if (guardAuthClient.value.username) {
-    getPersonalInfo();
-  }
 });
+
+watch(
+  () => guardAuthClient.value.username,
+  () => {
+    if (guardAuthClient.value.username) {
+      getPersonalInfo();
+    }
+  }
+);
 
 const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   if (formData.value.acceptPrivacyVersion.length < 1) {
@@ -264,7 +270,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
               <OCheckbox value="专题三：AI原生支持">
                 专题三：AI原生支持
               </OCheckbox>
-              <OCheckbox value="专题四：openEuler原生支持">
+              <OCheckbox value="专题四：openEuler原生开发">
                 专题四：openEuler原生支持
               </OCheckbox>
               <OCheckbox value="专题五：上游原生支持">
@@ -278,14 +284,14 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 
           <el-form-item label="您是否参与开发者之夜" prop="attend">
             <ORadioGroup v-model="formData.attend">
-              <ORadio value="是">是</ORadio>
-              <ORadio value="否">否</ORadio>
+              <ORadio value="agree">是</ORadio>
+              <ORadio value="refuse">否</ORadio>
             </ORadioGroup>
           </el-form-item>
 
           <el-form-item>
             <OCheckboxGroup v-model="formData.acceptPrivacyVersion">
-              <OCheckbox value="是"
+              <OCheckbox value="agree"
                 >您理解并同意，请填写并提交的内容，即视为您已充分阅读并理解openEuler的
                 <a
                   href="/zh/other/privacy/"
@@ -310,7 +316,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
       <template v-else>
         <div class="auth-box">
           <OButton type="primary" @click="showGuard()"
-            >请先登录后，在填写</OButton
+            >请先登录后，再填写</OButton
           >
         </div>
       </template>

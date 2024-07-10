@@ -431,7 +431,7 @@ onMounted(() => {
       <template v-else>
         <div class="auth-box">
           <OButton type="primary" @click="showGuard()"
-            >请先登录后，在填写</OButton
+            >请先登录后，再填写</OButton
           >
         </div>
       </template>

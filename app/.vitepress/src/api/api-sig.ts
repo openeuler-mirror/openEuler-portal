@@ -1,5 +1,6 @@
 import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
+import { getUserAuth } from '@/shared/login';
 import {
   FeatureInfoT,
   GroupInfoT,
@@ -220,6 +221,14 @@ export function applySigGathering(params: any): Promise<{
   msg: string;
   update_at: string;
 }> {
+  const { token } = getUserAuth();
   const url = '/api-dsapi/query/sigGathering?community=openeuler';
-  return request.post(url, { params }).then((res: AxiosResponse) => res.data);
+  return request
+    .post(url, params, {
+      showLoading: true,
+      headers: {
+        token,
+      },
+    })
+    .then((res: AxiosResponse) => res.data);
 }
