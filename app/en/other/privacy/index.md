@@ -4,7 +4,7 @@ title: 'Privacy'
 
 <div class='markdown legal-privacy'>
 
-<h1>Privacy</h1>
+<h1>Privacy Policy</h1>
 
 ---
 
