@@ -226,9 +226,10 @@ export function applySigGathering(params: any): Promise<{
   return request
     .post(url, params, {
       showLoading: true,
+      showError: true,
       headers: {
         token,
       },
     })
-    .then((res: AxiosResponse) => res.data);
+    .then((res: AxiosResponse) => res?.data);
 }
