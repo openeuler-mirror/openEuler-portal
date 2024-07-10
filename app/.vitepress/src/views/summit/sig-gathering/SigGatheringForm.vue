@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, reactive, onMounted, watch } from 'vue';
+import { useRouter, useData } from 'vitepress';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { showGuard } from '@/shared/login';
@@ -15,8 +16,12 @@ import { usePrivacyVersion } from '@/stores/common';
 import { querySigGroup, applySigGathering } from '@/api/api-sig';
 import { useStoreData } from '@/shared/login';
 
+import IconDone from '~icons/app/icon-done.svg';
+
 const { guardAuthClient } = useStoreData();
 
+const { lang } = useData();
+const router = useRouter();
 const versionStore = usePrivacyVersion();
 const ruleFormRef = ref<FormInstance>();
 const screenWidth = ref(useWindowResize());
@@ -29,7 +34,7 @@ const formData = ref({
   email: '',
   userId: '',
   company: '',
-  sigs: [],
+  sigs: [] as string[],
   technicalSeminars: [],
   attend: '',
   acceptPrivacyVersion: [],
@@ -44,7 +49,7 @@ const placeholderList = [
   '请填写您的真实工作单位名称',
   '请您选择SIG组',
   '请您至少选择一个专题',
-  '',
+  '请您选择是否参加开发者之夜',
 ];
 
 // 表单校验规则
@@ -151,6 +156,9 @@ async function getPersonalInfo() {
 }
 onMounted(() => {
   getSigGroup();
+  if (guardAuthClient.value.username) {
+    getPersonalInfo();
+  }
 });
 
 watch(
@@ -184,6 +192,10 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
               message: '申请成功！',
             });
             ruleFormRef.value?.resetFields();
+
+            router.go(
+              `/${lang.value}` + '/interaction/summit-list/sig-gathering/'
+            );
           }
         });
       } catch (error: any) {
@@ -226,10 +238,11 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
           </el-form-item>
 
           <el-form-item label="openEuler ID" prop="userId">
-            <OInput
+            <el-input
               v-model="formData.userId"
               :placeholder="placeholderList[3]"
               disabled
+              class="input-disabled"
             />
           </el-form-item>
 
@@ -257,7 +270,17 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
                 :key="item"
                 :label="item"
                 :value="item"
-              />
+              >
+                <OCheckbox
+                  :value="item"
+                  :class="{
+                    'o-checkbox-checked': formData.sigs.includes(item),
+                  }"
+                >
+                  <OIcon><IconDone /></OIcon>
+                  {{ item }}
+                </OCheckbox>
+              </OOption>
             </OSelect>
           </el-form-item>
 
@@ -329,6 +352,26 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   </AppContent>
 </template>
 <style lang="scss" scoped>
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected::after {
+  display: none;
+}
+:deep(.o-checkbox-label) {
+  .o-icon {
+    font-size: 14px;
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    display: none;
+  }
+}
+.o-checkbox-checked {
+  .o-checkbox-label .o-icon {
+    display: block;
+  }
+}
+
 .form {
   background: var(--o-color-bg2);
   box-shadow: var(--o-shadow-l1);
@@ -349,7 +392,15 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
     }
   }
 }
-
+:deep(.input-disabled) {
+  .el-input__wrapper {
+    border-radius: 0;
+    padding: 1px 15px;
+    .el-input__inner {
+      height: 36px;
+    }
+  }
+}
 .column {
   flex-direction: column;
   align-items: baseline;
