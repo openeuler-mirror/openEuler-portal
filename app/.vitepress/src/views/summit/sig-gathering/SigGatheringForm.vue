@@ -42,11 +42,11 @@ const formData = ref({
 });
 
 const placeholderList = [
-  '请填写您的真实姓名',
+  '请填写您的真实姓名，不超过50个字符',
   '请填写您的真实手机号以便接收活动通知',
   '请填写您的真实邮箱信息以便接收活动通知',
   '请填写您的openEuler ID',
-  '请填写您的真实工作单位名称',
+  '请填写您的真实工作单位名称，不超过50个字符',
   '请您选择SIG组',
   '请您至少选择一个专题',
   '请您选择是否参加开发者之夜',
@@ -60,6 +60,7 @@ const rules = reactive<FormRules>({
       message: placeholderList[0],
       trigger: 'blur',
     },
+    { min: 1, max: 50, message: placeholderList[0], trigger: 'blur' },
   ],
   phone: [
     {
@@ -100,6 +101,7 @@ const rules = reactive<FormRules>({
       message: placeholderList[4],
       trigger: 'blur',
     },
+    { min: 1, max: 50, message: placeholderList[4], trigger: 'blur' },
   ],
   sigs: [
     {
@@ -186,7 +188,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 
       try {
         applySigGathering(query).then((res) => {
-          if (res.code === 200) {
+          if (res?.code === 200) {
             ElMessage({
               type: 'success',
               message: '申请成功！',
@@ -443,6 +445,9 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   .el-input__wrapper {
     box-shadow: 0 0 0 1px var(--o-color-border1) inset;
   }
+}
+.el-select-dropdown__item {
+  display: flex;
 }
 .auth-box {
   padding: 64px 0;
