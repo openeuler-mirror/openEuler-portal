@@ -4360,7 +4360,7 @@ export default {
             SCENARIO: 'EMBEDDED',
           },
         ],
-        PLANNED_EOL: '2027/12',
+        PLANNED_EOL: '2025/12',
       },
       {
         NAME: 'openEuler 23.09',

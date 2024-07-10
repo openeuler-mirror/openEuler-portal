@@ -232,15 +232,15 @@ const quickIssueUrl = computed(() => {
     : 'https://quickissue.openeuler.org/zh/issues/';
 });
 const floatData = ref([
-  {
-    img: computed(() => {
-      return isDark.value ? IconRobot_dark : IconRobot_light;
-    }),
-    text: '欧拉小智',
-    tip: '提供自助问答与咨询',
-    id: 'robot',
-    link: 'https://qa-robot.openeuler.org/',
-  },
+  // {
+  //   img: computed(() => {
+  //     return isDark.value ? IconRobot_dark : IconRobot_light;
+  //   }),
+  //   text: '欧拉小智',
+  //   tip: '提供自助问答与咨询',
+  //   id: 'robot',
+  //   link: 'https://qa-robot.openeuler.org/',
+  // },
   {
     img: computed(() => {
       return IconChat;

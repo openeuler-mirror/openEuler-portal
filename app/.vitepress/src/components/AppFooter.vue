@@ -175,7 +175,7 @@ onMounted(() => {
               <a
                 v-for="link in i18n.common.FOOTER.RIGHT_LIST"
                 :key="link.URL"
-                :href="link.URL"
+                :href="`/${lang}${link.URL}`"
                 class="link"
                 >{{ link.NAME }}</a
               >
