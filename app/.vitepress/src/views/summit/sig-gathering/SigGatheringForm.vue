@@ -13,9 +13,9 @@ import { isTestEmail, isTestPhone } from '@/shared/utils';
 import { queryPersonalInfo } from '@/api/api-login';
 import { usePrivacyVersion } from '@/stores/common';
 import { querySigGroup, applySigGathering } from '@/api/api-sig';
-import { useLogin } from '@/stores/login';
+import { useStoreData } from '@/shared/login';
 
-const { guardAuthClient } = useLogin();
+const { guardAuthClient } = useStoreData();
 
 const versionStore = usePrivacyVersion();
 const ruleFormRef = ref<FormInstance>();
@@ -148,9 +148,9 @@ async function getPersonalInfo() {
   }
 }
 onMounted(() => {
-  if (guardAuthClient.username) {
+  getSigGroup();
+  if (guardAuthClient.value.username) {
     getPersonalInfo();
-    getSigGroup();
   }
 });
 
