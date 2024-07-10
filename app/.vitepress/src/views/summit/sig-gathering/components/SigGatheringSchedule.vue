@@ -76,7 +76,7 @@ const windowWidth = ref(useWindowResize());
   background-image: linear-gradient(270deg, rgba(180,97,246,0.00) 2%, var(--o-color-brand1) 100%);
   padding: var(--o-spacing-h10) var(--o-spacing-h6);
   font-size: var(--o-font-size-h6);
-  color: var(--o-color-text2);
+  color: #fff;
   line-height: var(--o-line-height-h6);
   font-weight: 500;
   position: relative;
@@ -188,6 +188,6 @@ const windowWidth = ref(useWindowResize());
   }
 }
 .child-item-dark {
-  background-color: rgba(38, 35, 40, 0.6);
+  background-color: rgba(38, 35, 40, 0.4);
 }
 </style>
