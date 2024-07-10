@@ -57,7 +57,7 @@ const isDark = computed(() => {
   position: relative;
   margin-top: 53px;
   @media (max-width: 767px) {
-    margin-top: -24px;
+    margin-top: 16px;
   }
 }
 .agenda-tabs {
@@ -66,16 +66,14 @@ const isDark = computed(() => {
     .el-tabs__item {
       padding-top: 0;
       padding-bottom: 18px;
-      font-size: var(--o-font-size-h6);
-      line-height: var(--o-line-height-h6);
+      font-size: 22px;
+      line-height: 30px;
+      font-weight: 500;
       @media (max-width: 767px) {
-        font-size: var(--o-font-size-h8);
-        line-height: var(--o-line-height-h8);
-        padding-bottom: 16px;
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
+        padding-bottom: 4px;
       }
-    }
-    @media (max-width: 767px) {
-      display: none;
     }
   }
 }
@@ -88,7 +86,7 @@ const isDark = computed(() => {
   top: 0;
   right: 0;
   @media (max-width: 767px) {
-    display: none;
+    font-size: var(--o-font-size-h8);
   }
 }
 </style>

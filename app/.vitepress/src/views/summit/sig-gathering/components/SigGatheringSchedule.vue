@@ -1,8 +1,10 @@
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { ref, computed } from 'vue';
 import { useCommon } from '@/stores/common';
 
 import IconTime from '~icons/app/icon-time.svg';
+
+import useWindowResize from '@/components/hooks/useWindowResize';
 
 defineProps({
   options: {
@@ -17,13 +19,20 @@ const commonStore = useCommon();
 const isDark = computed(() => {
   return commonStore.theme === 'dark' ? true : false;
 });
+const windowWidth = ref(useWindowResize());
 </script>
 
 <template>
   <div class="date-list">
     <div v-for="(subitem, i) in options" :key="i" class="data-item">
       <p class="type">{{ subitem.type }}</p>
-      <div v-for="(child, j) in subitem.children" :key="j" class="child-item" :style="{ backgroundImage: `url(${child.bg})` }">
+      <div
+        v-for="(child, j) in subitem.children"
+        :key="j"
+        class="child-item"
+        :class="{'child-item-dark': isDark}"
+        :style="{ backgroundImage: `url(${windowWidth > 767 ? child.bg : child.bgMo})` }"
+      >
         <p class="title">{{ child.title }}</p>
         <div class="bottom">
           <span class="date"><IconTime /><span>{{ child.date }}</span></span>
@@ -53,7 +62,7 @@ const isDark = computed(() => {
     }
   }
   @media (max-width: 767px) {
-    margin: var(--o-spacing-h3) 0 0 var(--o-spacing-h5);
+    margin: var(--o-spacing-h5) 0 0 var(--o-spacing-h5);
     &::before {
       width: 1px;
       height: calc(100% + var(--o-spacing-h3));
@@ -82,9 +91,9 @@ const isDark = computed(() => {
     background-color: var(--o-color-brand1);
   }
   @media (max-width: 767px) {
-    width: 100px;
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-text);
+    width: 128px;
+    font-size: var(--o-font-size-h8);
+    line-height: var(--o-line-height-h8);
     &::before {
       width: 8px;
       height: 8px;
@@ -143,6 +152,11 @@ const isDark = computed(() => {
   }
   @media (max-width: 767px) {
     padding: var(--o-spacing-h5);
+    background-size: cover;
+    background-position: top;
+    &:nth-child(2n + 1) {
+      background-position: bottom;
+    }
     .title {
       font-size: var(--o-font-size-text);
       line-height: var(--o-line-height-text);
@@ -159,7 +173,7 @@ const isDark = computed(() => {
     .bottom {
       font-size: var(--o-font-size-tip);
       line-height: var(--o-line-height-tip);
-      margin-top: var(--o-spacing-h3);
+      margin-top: var(--o-spacing-h4);
       .date {
         svg {
           width: 16px;
@@ -172,5 +186,8 @@ const isDark = computed(() => {
       }
     }
   }
+}
+.child-item-dark {
+  background-color: rgba(38, 35, 40, 0.6);
 }
 </style>
