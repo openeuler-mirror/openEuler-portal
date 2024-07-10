@@ -189,7 +189,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   <AppContent :pc-top="40" :mobile-top="12">
     <div class="form">
       <h2>Sig Gathering申请表</h2>
-      <template v-if="!guardAuthClient.username">
+      <template v-if="guardAuthClient.username">
         <el-form
           ref="ruleFormRef"
           :model="formData"
