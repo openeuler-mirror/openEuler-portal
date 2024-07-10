@@ -125,7 +125,9 @@ const sigGroupLists = ref<Array<string>>([]);
 const getSigGroup = () => {
   try {
     querySigGroup().then((res) => {
-      sigGroupLists.value = res.data?.openeuler;
+      sigGroupLists.value = res.data?.openeuler.sort((a, b) =>
+        a.toLowerCase().localeCompare(b.toLowerCase())
+      );
     });
   } catch (error: any) {
     console.error(error);
@@ -194,7 +196,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 <template>
   <AppContent :pc-top="40" :mobile-top="12">
     <div class="form">
-      <h2>Sig Gathering申请表</h2>
+      <h2>openEuler SIG Gathering 2024 活动报名</h2>
       <template v-if="guardAuthClient.username">
         <el-form
           ref="ruleFormRef"
@@ -227,6 +229,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
             <OInput
               v-model="formData.userId"
               :placeholder="placeholderList[3]"
+              disabled
             />
           </el-form-item>
 
@@ -244,6 +247,8 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
             <OSelect
               v-model="formData.sigs"
               multiple
+              clearable
+              filterable
               :placeholder="placeholderList[5]"
               style="width: 100%"
             >
@@ -271,7 +276,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
                 专题三：AI原生支持
               </OCheckbox>
               <OCheckbox value="专题四：openEuler原生开发">
-                专题四：openEuler原生支持
+                专题四：openEuler原生开发
               </OCheckbox>
               <OCheckbox value="专题五：上游原生支持">
                 专题五：上游原生支持
@@ -306,7 +311,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
           <el-form-item>
             <div style="margin-top: 12px">
               <OButton type="primary" @click="submitMeetupForm(ruleFormRef)">
-                提交申请
+                提交报名
               </OButton>
             </div>
           </el-form-item>
