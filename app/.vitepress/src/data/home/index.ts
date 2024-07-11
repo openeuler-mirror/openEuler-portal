@@ -4,19 +4,19 @@ import annualReport_mo from '@/assets/category/home/banner/annual-report_mo.jpg'
 import banner1_pc from '@/assets/category/home/banner/banner1_pc.jpg';
 import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';
 
-import versionRelease_pc from '@/assets/category/home/banner/2403-LTS_pc.png';
-import versionRelease_mo from '@/assets/category/home/banner/2403-LTS_mo.jpg';
+import sigGathering_pc from '@/assets/category/home/banner/sig-gathering_pc.jpg';
+import sigGathering_mb from '@/assets/category/home/banner/sig-gathering_mb.jpg';
 
 export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
       {
-        pcBanner: versionRelease_pc,
-        moBanner: versionRelease_mo,
-        link: '/zh/interaction/summit-list/2403-version-release/',
-        id: 'version-release',
-        title: ['openEuler ', '24.03 LTS 版本发布会'],
+        pcBanner: sigGathering_pc,
+        moBanner: sigGathering_mb,
+        link: '/zh/interaction/summit-list/sig-gathering/',
+        id: 'sig-gathering',
+        title: ['openEuler ', 'SIG Gathering 2024'],
         btn: '查看详情',
         targetTap: 1,
       },

@@ -12,6 +12,8 @@ import useWindowResize from '@/components/hooks/useWindowResize';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 
+import { useCommon } from '@/stores/common';
+
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const { lang } = useData();
@@ -48,6 +50,11 @@ const jumpTo = (item: any) => {
     }
   }
 };
+
+const commonStore = useCommon();
+const isDark = computed(() => {
+  return commonStore.theme === 'dark' ? true : false;
+});
 </script>
 
 <template>
@@ -73,7 +80,6 @@ const jumpTo = (item: any) => {
       >
         <div
           class="banner-panel-cover"
-          :class="{ resize: index === 0 && windowWidth >= 767 }"
           :style="{
             backgroundImage: `url(${
               windowWidth < 767 ? item.moBanner : item.pcBanner
@@ -83,7 +89,7 @@ const jumpTo = (item: any) => {
           <div
             v-if="item.title?.length"
             class="banner-panel-content flex-column"
-            :class="item.id"
+            :class="[item.id, isDark ? `${item.id}-dark`: '']"
           >
             <div data-aos="fade-down" class="box">
               <img v-if="item.img" class="text-img" :src="item?.img" alt="" />
@@ -337,10 +343,6 @@ html[lang='zh'] {
       background-size: cover;
       width: 100%;
       height: 100%;
-
-      &.resize {
-        background-position: 70% 50%;
-      }
     }
     .isH5show {
       display: none;
@@ -352,8 +354,25 @@ html[lang='zh'] {
       }
     }
 
+    .sig-gathering,
+    .sig-gathering-dark {
+      .box {
+        color: var(--o-color-black);
+      }
+      .home-banner-btn {
+        border-color: var(--o-color-black);
+        color: var(--o-color-black);
+      }
+    }
+
     @media screen and (max-width: 767px) {
       position: static !important;
+      .sig-gathering {
+        justify-content: flex-end;
+        .box {
+          display: none;
+        }
+      }
     }
   }
   @media screen and (max-width: 1100px) {

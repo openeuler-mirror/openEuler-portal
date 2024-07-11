@@ -1,5 +1,6 @@
 import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
+import { getUserAuth } from '@/shared/login';
 import {
   FeatureInfoT,
   GroupInfoT,
@@ -194,4 +195,41 @@ export function getSigLandscape(lang: string): Promise<GroupInfoT[]> {
     });
     return info;
   });
+}
+
+/**
+ * 获取sig group name list
+ * @returns {Object}
+ */
+export function querySigGroup(): Promise<{
+  code: number;
+  data: { openeuler: string[] };
+  msg: string;
+  update_at: string;
+}> {
+  const url = '/api-dsapi/query/sig/name?community=openeuler';
+  return request.get(url).then((res: AxiosResponse) => res.data);
+}
+
+/**
+ * 获取sig gathering 报名
+ * @returns {Object}
+ */
+export function applySigGathering(params: any): Promise<{
+  code: number;
+  data: { openeuler: string[] };
+  msg: string;
+  update_at: string;
+}> {
+  const { token } = getUserAuth();
+  const url = '/api-dsapi/query/sigGathering?community=openeuler';
+  return request
+    .post(url, params, {
+      showLoading: true,
+      showError: true,
+      headers: {
+        token,
+      },
+    })
+    .then((res: AxiosResponse) => res?.data);
 }
