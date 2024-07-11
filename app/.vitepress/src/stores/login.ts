@@ -1,6 +1,8 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
+type LoginStatus = 'NOT_LOGIN' | 'LOGINiNG' | 'LOGINED'
+
 export const useLogin = defineStore('login', () => {
   // 登录信息
   const guardAuthClient = ref({
@@ -19,7 +21,14 @@ export const useLogin = defineStore('login', () => {
     }
   }
   const clearGuardAuthClient = () => {
+    setLoginStatus('NOT_LOGIN')
     setGuardAuthClient({})
   }
-  return { guardAuthClient, setGuardAuthClient, clearGuardAuthClient };
+
+  // 登录状态
+  const loginStatus = ref<LoginStatus>('NOT_LOGIN');
+  const setLoginStatus = (status: LoginStatus) => {
+    loginStatus.value = status;
+  };
+  return { guardAuthClient, setGuardAuthClient, clearGuardAuthClient, loginStatus, setLoginStatus };
 });
