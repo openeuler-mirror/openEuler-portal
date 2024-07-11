@@ -15,6 +15,7 @@ import { queryPersonalInfo } from '@/api/api-login';
 import { usePrivacyVersion } from '@/stores/common';
 import { querySigGroup, applySigGathering } from '@/api/api-sig';
 import { useStoreData } from '@/shared/login';
+import { useLogin } from '@/stores/login';
 
 import IconDone from '~icons/app/icon-done.svg';
 
@@ -27,6 +28,10 @@ const ruleFormRef = ref<FormInstance>();
 const screenWidth = ref(useWindowResize());
 const isMobile = computed(() => (screenWidth.value <= 1080 ? true : false));
 const labelPosition = ref(isMobile.value ? 'top' : 'left');
+
+const loginStatus = computed(() => {
+  return useLogin().loginStatus;
+});
 
 const formData = ref({
   name: '',
@@ -203,9 +208,14 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 </script>
 <template>
   <AppContent :pc-top="40" :mobile-top="12">
-    <div class="form">
+    <div
+      v-if="loginStatus === 'LOGINiNG'"
+      v-loading="loginStatus === 'LOGINiNG'"
+      style="width: 100%; height: 800px"
+    ></div>
+    <div class="form" v-else="loginStatus === 'LOGINED'">
       <h2>openEuler SIG Gathering 2024 活动报名</h2>
-      <template v-if="guardAuthClient.username">
+      <template v-if="loginStatus === 'LOGINED'">
         <el-form
           ref="ruleFormRef"
           :model="formData"
@@ -270,7 +280,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
                 <OCheckbox
                   :value="item"
                   :class="{
-                    'o-checkbox-checked': formData.sigs.includes(item),
+                    'o-checkbox-checked': formData.sigs?.includes(item),
                   }"
                   class="sig-option"
                 >
@@ -350,7 +360,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
         </el-form>
       </template>
 
-      <template v-else>
+      <template v-else-if="loginStatus === 'NOT_LOGIN'">
         <div class="auth-box">
           <OButton type="primary" @click="showGuard()"
             >请先登录后，再填写</OButton
