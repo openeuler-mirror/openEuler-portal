@@ -657,3 +657,11 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   }
 }
 </style>
+
+<style lang="scss">
+.el-popper.o-select-dropdown .o-option.hover {
+  .o-checkbox-icon {
+    border-color: var(--o-color-brand2) !important;
+  }
+}
+</style>
