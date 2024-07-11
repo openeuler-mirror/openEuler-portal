@@ -110,7 +110,7 @@ const jumpToUserZone = () => {
 
       &:hover {
         background: var(--o-color-brand1);
-        // color: var(--o-color-text2);
+        color: var(--o-color-white);
       }
       &.active {
         color: var(--o-color-brand1);
