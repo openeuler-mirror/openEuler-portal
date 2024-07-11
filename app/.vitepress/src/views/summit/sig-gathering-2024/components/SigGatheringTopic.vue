@@ -95,21 +95,14 @@ const isDark = computed(() => {
     a {
       display: inline-flex;
       align-items: center;
+      color: var(--o-color-text1);
       &:hover {
-        .text {
-          color: #5177ca;
-        }
-      }
-      &:active {
-        .text {
-          color: #00288d;
-        }
+        color: var(--o-color-kleinblue5);
       }
     }
     .text {
       font-size: var(--o-font-size-h8);
       line-height: var(--o-line-height-h8);
-      color: var(--o-color-text1);
       margin-right: 4px;
     }
     .o-icon {
@@ -128,14 +121,7 @@ const isDark = computed(() => {
   .link {
     a {
       &:hover {
-        .text {
-          color: #284495;
-        }
-      }
-      &:active {
-        .text {
-          color: #002fa7;
-        }
+        color: #4874dc;
       }
     }
   }
