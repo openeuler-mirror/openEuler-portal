@@ -211,7 +211,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
     <div
       v-if="loginStatus === 'LOGINiNG'"
       v-loading="loginStatus === 'LOGINiNG'"
-      style="width: 100%; height: 800px"
+      class="loading-page"
     ></div>
     <div class="form" v-else="loginStatus === 'LOGINED'">
       <h2>openEuler SIG Gathering 2024 活动报名</h2>
@@ -226,13 +226,18 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
           status-icon
         >
           <el-form-item label="姓名" prop="name">
-            <OInput v-model="formData.name" :placeholder="placeholderList[0]" />
+            <OInput
+              v-model="formData.name"
+              :placeholder="placeholderList[0]"
+              clearable
+            />
           </el-form-item>
 
           <el-form-item label="手机号" prop="phone">
             <OInput
               v-model="formData.phone"
               :placeholder="placeholderList[1]"
+              clearable
             />
           </el-form-item>
 
@@ -240,6 +245,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
             <OInput
               v-model="formData.email"
               :placeholder="placeholderList[2]"
+              clearable
             />
           </el-form-item>
 
@@ -256,6 +262,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
             <OInput
               v-model="formData.company"
               :placeholder="placeholderList[4]"
+              clearable
             />
           </el-form-item>
 
@@ -371,6 +378,26 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   </AppContent>
 </template>
 <style lang="scss" scoped>
+.loading-page {
+  width: 100%;
+  height: 1000px;
+  @media screen and (max-width: 867px) {
+    height: 600px;
+  }
+}
+:deep(.el-loading-mask) {
+  background: var(--o-color-bg2);
+}
+:deep(.el-textarea) {
+  box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+  .el-textarea__inner {
+    border-radius: 0;
+    box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+    &:focus {
+      box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+    }
+  }
+}
 .el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
   background-color: var(--o-color-bg2);
   &::after {
@@ -436,6 +463,19 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 }
 
 :deep(.o-select) {
+  &:hover {
+    box-shadow: 0 0 0 1px var(--o-color-border1) inset !important;
+    .el-input__wrapper {
+      box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+    }
+  }
+
+  & .el-input.is-focus .el-input__wrapper {
+    box-shadow: 0 0 0 1px var(--o-color-border1) inset !important;
+  }
+  .el-input__wrapper {
+    box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+  }
   @media screen and (max-width: 867px) {
     & .el-input {
       height: auto;
@@ -492,6 +532,11 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 :deep(.el-form) {
   max-width: 764px;
   margin: 0 auto;
+  .el-form-item__error {
+    left: 16px;
+    top: 102%;
+  }
+
   .el-form-item {
     margin-bottom: 24px;
     @media screen and (max-width: 867px) {
@@ -604,5 +649,11 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   padding: 64px 0;
   display: grid;
   place-items: center;
+}
+
+:deep(.el-input) {
+  .el-input__validateIcon {
+    display: none;
+  }
 }
 </style>
