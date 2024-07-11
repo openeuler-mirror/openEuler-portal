@@ -327,11 +327,11 @@ watch(
       }
       .version-info {
         margin-top: 8px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
         .link {
-          font-size: 12px;
-          line-height: 18px;
+          margin-right: 12px;
+          line-height: var(--o-line-height-tip);
+          font-size: var(--o-font-size-tip);
         }
       }
       .title {
