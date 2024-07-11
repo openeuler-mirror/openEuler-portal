@@ -14,7 +14,7 @@ export default {
       {
         pcBanner: sigGathering_pc,
         moBanner: sigGathering_mb,
-        link: '/zh/interaction/summit-list/sig-gathering/',
+        link: '/zh/interaction/summit-list/sig-gathering-2024/',
         id: 'sig-gathering',
         title: ['openEuler ', 'SIG Gathering 2024'],
         btn: '查看详情',

@@ -130,18 +130,23 @@ const removeSessionInfo = () => {
 // 刷新后重新请求登录用户信息
 export function refreshInfo(community = 'openeuler') {
   const { token } = getUserAuth();
+  const { setGuardAuthClient, setLoginStatus, clearGuardAuthClient } = useLogin();
   if (token) {
-    const { setGuardAuthClient } = useLogin();
+    setLoginStatus('LOGINiNG');
     setGuardAuthClient(getSessionInfo());
     queryPermission({ community }).then((res) => {
       const { data } = res;
       if (Object.prototype.toString.call(data) === '[object Object]') {
         setGuardAuthClient(data);
         setSessionInfo(data);
+        setLoginStatus('LOGINED');
       }
+    }).catch((err) => {
+      clearGuardAuthClient();
     });
   } else {
     removeSessionInfo();
+    clearGuardAuthClient();
   }
 }
 
@@ -149,23 +154,29 @@ export function refreshInfo(community = 'openeuler') {
 export function isLogined() {
   return new Promise((resolve, reject) => {
     const { token } = getUserAuth();
+    const { setGuardAuthClient, setLoginStatus, clearGuardAuthClient } = useLogin();
     if (token) {
       queryPermission({ community: 'openeuler' })
         .then((res) => {
           const { data } = res;
           if (data) {
             if (Object.prototype.toString.call(data) === '[object Object]') {
-              const { setGuardAuthClient } = useLogin();
               setGuardAuthClient(data);
               setSessionInfo(data);
             }
+            setLoginStatus('LOGINED');
             resolve(true);
           } else {
+            clearGuardAuthClient();
             reject(false);
           }
         })
-        .catch((err) => reject(err));
+        .catch((err) => {
+          clearGuardAuthClient();
+          reject(err); 
+        });
     } else {
+      clearGuardAuthClient();
       reject(false);
     }
   });

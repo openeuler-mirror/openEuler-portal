@@ -15,6 +15,7 @@ import { queryPersonalInfo } from '@/api/api-login';
 import { usePrivacyVersion } from '@/stores/common';
 import { querySigGroup, applySigGathering } from '@/api/api-sig';
 import { useStoreData } from '@/shared/login';
+import { useLogin } from '@/stores/login';
 
 import IconDone from '~icons/app/icon-done.svg';
 
@@ -25,8 +26,12 @@ const router = useRouter();
 const versionStore = usePrivacyVersion();
 const ruleFormRef = ref<FormInstance>();
 const screenWidth = ref(useWindowResize());
-const isMobile = computed(() => (screenWidth.value <= 1100 ? true : false));
+const isMobile = computed(() => (screenWidth.value <= 1080 ? true : false));
 const labelPosition = ref(isMobile.value ? 'top' : 'left');
+
+const loginStatus = computed(() => {
+  return useLogin().loginStatus;
+});
 
 const formData = ref({
   name: '',
@@ -34,22 +39,25 @@ const formData = ref({
   email: '',
   userId: '',
   company: '',
-  sigs: [] as string[],
+  sigs: [] as string[] | null,
   technicalSeminars: [],
   attend: '',
   acceptPrivacyVersion: [],
   privacyVersion: versionStore.version,
+  others: '',
 });
 
 const placeholderList = [
-  '请填写您的真实姓名，不超过50个字符',
+  '请填写您的真实姓名',
   '请填写您的真实手机号以便接收活动通知',
   '请填写您的真实邮箱信息以便接收活动通知',
   '请填写您的openEuler ID',
-  '请填写您的真实工作单位名称，不超过50个字符',
-  '请您选择SIG组',
+  '请填写您的真实工作单位名称',
+  '',
   '请您至少选择一个专题',
-  '请您选择是否参加开发者之夜',
+  '',
+  '姓名长度超出限制',
+  '工作单位长度超出限制',
 ];
 
 // 表单校验规则
@@ -60,7 +68,7 @@ const rules = reactive<FormRules>({
       message: placeholderList[0],
       trigger: 'blur',
     },
-    { min: 1, max: 50, message: placeholderList[0], trigger: 'blur' },
+    { min: 1, max: 50, message: placeholderList[8], trigger: 'blur' },
   ],
   phone: [
     {
@@ -101,14 +109,7 @@ const rules = reactive<FormRules>({
       message: placeholderList[4],
       trigger: 'blur',
     },
-    { min: 1, max: 50, message: placeholderList[4], trigger: 'blur' },
-  ],
-  sigs: [
-    {
-      required: true,
-      message: placeholderList[5],
-      trigger: 'blur',
-    },
+    { min: 1, max: 50, message: placeholderList[9], trigger: 'blur' },
   ],
   technicalSeminars: [
     {
@@ -117,13 +118,7 @@ const rules = reactive<FormRules>({
       trigger: 'blur',
     },
   ],
-  attend: [
-    {
-      required: true,
-      message: placeholderList[7],
-      trigger: 'blur',
-    },
-  ],
+  others: [{ min: 0, max: 1000, message: placeholderList[8], trigger: 'blur' }],
 });
 
 // 获取sig group name list
@@ -132,9 +127,9 @@ const sigGroupLists = ref<Array<string>>([]);
 const getSigGroup = () => {
   try {
     querySigGroup().then((res) => {
-      sigGroupLists.value = res.data?.openeuler.sort((a, b) =>
-        a.toLowerCase().localeCompare(b.toLowerCase())
-      );
+      sigGroupLists.value = res.data?.openeuler
+        .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
+        .filter((item) => item !== 'Private');
     });
   } catch (error: any) {
     console.error(error);
@@ -185,6 +180,9 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
     if (valid) {
       const query = { ...formData.value };
       query.acceptPrivacyVersion = formData.value.acceptPrivacyVersion[0];
+      query.sigs = query.sigs?.length ? query.sigs : null;
+      query.attend = query.attend ? query.attend : null;
+      query.others = query.others ? query.others : null;
 
       try {
         applySigGathering(query).then((res) => {
@@ -196,7 +194,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
             ruleFormRef.value?.resetFields();
 
             router.go(
-              `/${lang.value}` + '/interaction/summit-list/sig-gathering/'
+              `/${lang.value}` + '/interaction/summit-list/sig-gathering-2024/'
             );
           }
         });
@@ -209,26 +207,36 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 </script>
 <template>
   <AppContent :pc-top="40" :mobile-top="12">
-    <div class="form">
+    <div
+      v-if="loginStatus === 'LOGINiNG'"
+      v-loading="loginStatus === 'LOGINiNG'"
+      class="loading-page"
+    ></div>
+    <div class="form" v-else="loginStatus === 'LOGINED'">
       <h2>openEuler SIG Gathering 2024 活动报名</h2>
-      <template v-if="guardAuthClient.username">
+      <template v-if="loginStatus === 'LOGINED'">
         <el-form
           ref="ruleFormRef"
           :model="formData"
           :rules="rules"
-          :label-width="isMobile ? '120px' : '240px'"
+          label-width="222px"
           class="demo-ruleForm"
           :label-position="labelPosition"
           status-icon
         >
           <el-form-item label="姓名" prop="name">
-            <OInput v-model="formData.name" :placeholder="placeholderList[0]" />
+            <OInput
+              v-model="formData.name"
+              :placeholder="placeholderList[0]"
+              clearable
+            />
           </el-form-item>
 
           <el-form-item label="手机号" prop="phone">
             <OInput
               v-model="formData.phone"
               :placeholder="placeholderList[1]"
+              clearable
             />
           </el-form-item>
 
@@ -236,6 +244,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
             <OInput
               v-model="formData.email"
               :placeholder="placeholderList[2]"
+              clearable
             />
           </el-form-item>
 
@@ -252,6 +261,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
             <OInput
               v-model="formData.company"
               :placeholder="placeholderList[4]"
+              clearable
             />
           </el-form-item>
 
@@ -276,8 +286,9 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
                 <OCheckbox
                   :value="item"
                   :class="{
-                    'o-checkbox-checked': formData.sigs.includes(item),
+                    'o-checkbox-checked': formData.sigs?.includes(item),
                   }"
+                  class="sig-option"
                 >
                   <OIcon><IconDone /></OIcon>
                   {{ item }}
@@ -319,22 +330,34 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
             </ORadioGroup>
           </el-form-item>
 
-          <el-form-item>
+          <el-form-item label="其他" prop="others">
+            <OInput
+              v-model="formData.others"
+              :rows="5"
+              type="textarea"
+              max-length="1000"
+              placeholder="请输入您的建议"
+              maxlength="1000"
+              show-word-limit
+            />
+          </el-form-item>
+
+          <el-form-item class="private-item">
             <OCheckboxGroup v-model="formData.acceptPrivacyVersion">
-              <OCheckbox value="agree"
-                >您理解并同意，请填写并提交的内容，即视为您已充分阅读并理解openEuler的
+              <OCheckbox value="agree">
+                您理解并同意，请填写并提交的内容，即视为您已充分阅读并理解openEuler的
                 <a
                   href="/zh/other/privacy/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >《隐私声明》</a
-                >
+                  >《隐私声明》
+                </a>
               </OCheckbox>
             </OCheckboxGroup>
           </el-form-item>
 
-          <el-form-item>
-            <div style="margin-top: 12px">
+          <el-form-item class="submit-item">
+            <div>
               <OButton type="primary" @click="submitMeetupForm(ruleFormRef)">
                 提交报名
               </OButton>
@@ -343,7 +366,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
         </el-form>
       </template>
 
-      <template v-else>
+      <template v-else-if="loginStatus === 'NOT_LOGIN'">
         <div class="auth-box">
           <OButton type="primary" @click="showGuard()"
             >请先登录后，再填写</OButton
@@ -354,23 +377,112 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   </AppContent>
 </template>
 <style lang="scss" scoped>
-.el-select-dropdown.is-multiple .el-select-dropdown__item.selected::after {
-  display: none;
+.loading-page {
+  width: 100%;
+  height: 1000px;
+  @media screen and (max-width: 867px) {
+    height: 600px;
+  }
 }
-:deep(.o-checkbox-label) {
-  .o-icon {
-    font-size: 14px;
-    position: absolute;
-    left: 1px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
+:deep(.el-loading-mask) {
+  background: var(--o-color-bg2);
+}
+:deep(.el-textarea) {
+  box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+  .el-textarea__inner {
+    border-radius: 0;
+    box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+    &:focus {
+      box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+    }
+  }
+}
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+  background-color: var(--o-color-bg2);
+  &::after {
     display: none;
   }
 }
-.o-checkbox-checked {
-  .o-checkbox-label .o-icon {
-    display: block;
+
+:deep(.o-checkbox) {
+  .o-checkbox-icon {
+    min-width: 16px;
+  }
+  .o-checkbox-label {
+    color: var(--o-color-text1);
+    opacity: 0.8;
+  }
+  &.o-checkbox-checked {
+    .o-checkbox-label {
+      color: var(--o-color-text1);
+      opacity: 1;
+      & .o-icon {
+        display: block;
+      }
+    }
+  }
+  &.sig-option {
+    width: 100%;
+    padding: 0 32px 0 20px;
+    position: relative;
+    .o-icon {
+      font-size: 14px;
+      position: absolute;
+      left: 21px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      display: none;
+    }
+  }
+}
+:deep(.o-radio-group) {
+  @media screen and (max-width: 867px) {
+    flex-direction: column;
+    .o-radio {
+      margin-left: 0;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+:deep(.o-radio) {
+  .o-radio-label {
+    color: var(--o-color-text1);
+    opacity: 0.8;
+  }
+  &.o-radio-checked {
+    .o-radio-label {
+      color: var(--o-color-text1);
+      opacity: 1;
+    }
+  }
+}
+
+:deep(.o-select) {
+  &:hover {
+    box-shadow: 0 0 0 1px var(--o-color-border1) inset !important;
+    .el-input__wrapper {
+      box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+    }
+  }
+
+  & .el-input.is-focus .el-input__wrapper {
+    box-shadow: 0 0 0 1px var(--o-color-border1) inset !important;
+  }
+  .el-input__wrapper {
+    box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+  }
+  @media screen and (max-width: 867px) {
+    & .el-input {
+      height: auto;
+      min-height: 34px;
+      .el-input__wrapper {
+        padding: 2px 11px;
+      }
+    }
   }
 }
 
@@ -406,27 +518,101 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 .column {
   flex-direction: column;
   align-items: baseline;
-  .o-checkbox-group,
-  .o-radio-group {
+  gap: 8px;
+  .o-checkbox-group {
     flex-direction: column;
     align-items: baseline;
     gap: 8px;
   }
-  .o-checkbox,
-  .o-radio {
+  .o-checkbox {
     margin-left: 0 !important;
   }
 }
 :deep(.el-form) {
+  max-width: 764px;
+  margin: 0 auto;
+  .el-form-item__error {
+    left: 16px;
+    top: 102%;
+  }
+
   .el-form-item {
+    margin-bottom: 24px;
+    @media screen and (max-width: 867px) {
+      margin-bottom: 16px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(6),
+    &:nth-child(8),
+    &:nth-child(9) {
+      padding-left: 11px;
+      @media screen and (max-width: 867px) {
+        padding-left: 0px;
+      }
+      .el-form-item__label {
+        width: 211px !important;
+        @media screen and (max-width: 867px) {
+          width: 100% !important;
+          padding-left: 11px;
+        }
+      }
+    }
+    .el-form-item__content {
+      flex: 1;
+    }
+
     .el-form-item__label {
       height: auto;
-      padding-right: 32px;
+      padding-right: 0;
+      margin-right: 32px;
+      color: var(--o-color-text1);
+      &::before {
+        margin-top: 4px;
+        width: 7px;
+      }
     }
+
     &:nth-child(6) {
       .el-form-item__label {
         line-height: 24px;
       }
+    }
+  }
+
+  .private-item,
+  .submit-item {
+    justify-content: center;
+    .el-form-item__content {
+      margin-left: 0 !important;
+      max-width: max-content;
+      width: 100%;
+    }
+  }
+  .private-item {
+    margin-top: 8px;
+    .o-checkbox-checked {
+      .o-checkbox-label {
+        color: var(--o-color-text1);
+        & .o-icon {
+          display: block;
+        }
+      }
+    }
+    @media screen and (max-width: 867px) {
+      .o-checkbox {
+        align-items: start;
+        .o-checkbox-icon {
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 867px) {
+    .submit-item {
+      display: flex;
     }
   }
 }
@@ -445,13 +631,37 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   .el-input__wrapper {
     box-shadow: 0 0 0 1px var(--o-color-border1) inset;
   }
+  .el-select__input {
+    margin-left: 18px !important;
+  }
 }
+
 .el-select-dropdown__item {
   display: flex;
+  padding: 0;
+
+  &.selected .o-checkbox {
+    font-weight: 500;
+  }
 }
+
 .auth-box {
   padding: 64px 0;
   display: grid;
   place-items: center;
+}
+
+:deep(.el-input) {
+  .el-input__validateIcon {
+    display: none;
+  }
+}
+</style>
+
+<style lang="scss">
+.el-popper.o-select-dropdown .o-option.hover {
+  .o-checkbox-icon {
+    border-color: var(--o-color-brand2) !important;
+  }
 }
 </style>

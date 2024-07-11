@@ -29,7 +29,7 @@ export default {
     title: 'SIG Gathering 2024',
     subtitle: '2024.07.26  | 北京香格里拉饭店',
     subtitleMo: '2024.07.26  | BEIJING',
-    signUpHref: '/zh/interaction/summit-list/sig-gathering/form/',
+    signUpHref: '/zh/interaction/summit-list/sig-gathering-2024/register/',
     signUpTitle: '立即报名',
   },
   introduce: {
@@ -50,7 +50,8 @@ export default {
       {
         title: '多样性算力',
         desc: [
-          '多样性算力支持是openEuler领先性的核心竞争力之一。openEuler不仅吸引了国际上类似于Intel，AMD，ARM和Linaro等主流平台厂商的深度参与，也为国内众多架构体系和厂商如LongArch，申威和华为等众多ARM或者RISC-v厂商的生态发展汇聚了大量的开发资源和软硬件生态。openEuler的多样性发展策略必将为操作系统全架构基础底座奠定最坚实的基础。本专题将以多样性算力为主题，探讨异构计算架构、多平台支持、CPU/GPU/NPU/加速器协同等话题，并共同协商和规划openEuler的全架构发展计划'
+          '多样性算力支持是openEuler领先性的核心竞争力之一。openEuler不仅吸引了国际上类似于Intel，AMD，ARM和Linaro等主流平台厂商的深度参与，也为国内众多架构体系和厂商如LongArch，申威和华为等众多ARM或者RISC-v厂商的生态发展汇聚了大量的开发资源和软硬件生态。openEuler的多样性发展策略必将为操作系统全架构基础底座奠定最坚实的基础',
+          '本专题将以多样性算力为主题，探讨异构计算架构、多平台支持、CPU/GPU/NPU/加速器协同等话题，并共同协商和规划openEuler的全架构发展计划'
         ],
         bg: topic1,
         bgDark: topic_dark1,
@@ -59,7 +60,8 @@ export default {
       {
         title: '全场景应用',
         desc: [
-          'openEuler自开源之初就以支撑全场景应用为核心特点，解决不同场景的软烟囱问题。openEuler的最新版本中在性能、可靠性、安全性、易用性等方面有了进一步提升，以支持服务器、云计算、边缘计算和嵌入式等场景的全面应用和创新，本专题将结合技术演进和实际案例探讨openEuler在全场景应用方面的发展和规划以及面向AI生态的结合'
+          'openEuler自开源之初就以支撑全场景应用为核心特点，解决不同场景的软烟囱问题。openEuler的最新版本中在性能、可靠性、安全性、易用性等方面有了进一步提升，以支持服务器、云计算、边缘计算和嵌入式等场景的全面应用和创新',
+          '本专题将结合技术演进和实际案例探讨openEuler在全场景应用方面的发展和规划以及面向AI生态的结合'
         ],
         bg: topic2,
         bgDark: topic_dark2,
@@ -68,7 +70,8 @@ export default {
       {
         title: 'AI原生支持',
         desc: [
-          'openEuler在2023年提出了“AI for openEuler, openEuler For AI”的发展方向，在2024年发布了首个AI原生LTS版本24.03 LTS，通过各类创新技术实现了openEuler从通用算力的多样化，到智能算力的多样化三层AI使能架构，本专题将围绕AI原生支持对以下具体方向展开讨论：',
+          'openEuler在2023年提出了“AI for openEuler, openEuler For AI”的发展方向，在2024年发布了首个AI原生LTS版本24.03 LTS，通过各类创新技术实现了openEuler从通用算力的多样化，到智能算力的多样化三层AI使能架构',
+          '本专题将围绕AI原生支持对以下具体方向展开讨论：',
           '1. 基于LLM的智能交互平台，颠覆传统shell 命令交付的模式，改进传统学习，开发，调优，运维体验，智能新语义支持应用智能化升级，共建AI生态',
           '2. CPU/GPU/NPU 算力融合，面向训练高可用/推理低成本方向，降本增效',
           '3. AI 主流软件栈4层栈全栈兼容及封装，主流推理框架加速，开箱即用',
@@ -79,7 +82,8 @@ export default {
       {
         title: 'openEuler原生开发',
         desc: [
-          '操作系统作为应用与技术创新的底座，其软件生态和原生开发体验是对于应用和创新效率提升至关重要的关键因素，目前openEuler已有超过680万装机量，社区汇聚近2万名开发者，如何使能这些开发者更好的基于openEuler进行原生开发，进一步提升开发效率是openEuler社区的关键工作之一，本专题将对以下方面进行讨论：',
+          '操作系统作为应用与技术创新的底座，其软件生态和原生开发体验是对于应用和创新效率提升至关重要的关键因素，目前openEuler已有超过680万装机量，社区汇聚近2万名开发者，如何使能这些开发者更好的基于openEuler进行原生开发，进一步提升开发效率是openEuler社区的关键工作之一',
+          '本专题将对以下方面进行讨论：',
           'openEuler本地开发环境、加包与更新维护、社区开发与协作基础设施、社区构建测试服务'
         ],
         bg: topic3,
@@ -122,7 +126,7 @@ export default {
             type: '上午',
             children: [
               {
-                title: '开场致辞',
+                title: '整体介绍',
                 date: '2024/07/26',
                 time: '10:00-10:10',
                 bg: agenda1,
@@ -162,25 +166,23 @@ export default {
                 bgMo: agenda_mo1,
               },
               {
-                title: '快闪总结',
+                title: '总结分享',
                 date: '2024/07/26',
                 time: '16:00-18:00',
                 bg: agenda2,
                 bgMo: agenda_mo2,
               },
-              {
-                title: 'SIG Gathering 大合照',
-                date: '2024/07/26',
-                time: '18:00-18:05',
-                bg: agenda1,
-                bgMo: agenda_mo1,
-              },
+            ]
+          },
+          {
+            type: '晚上',
+            children: [
               {
                 title: '开发者之夜',
                 date: '2024/07/26',
                 time: '18:30-20:30',
-                bg: agenda2,
-                bgMo: agenda_mo2,
+                bg: agenda1,
+                bgMo: agenda_mo1,
               }
             ]
           }
