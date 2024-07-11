@@ -65,7 +65,7 @@ const windowWidth = ref(useWindowResize());
     margin: var(--o-spacing-h5) 0 0 var(--o-spacing-h5);
     &::before {
       width: 1px;
-      height: calc(100% + var(--o-spacing-h3));
+      height: calc(100% + var(--o-spacing-h5));
       top: 11px;
       left: -12.5px;
     }
@@ -188,6 +188,6 @@ const windowWidth = ref(useWindowResize());
   }
 }
 .child-item-dark {
-  background-color: rgba(38, 35, 40, 0.4);
+  background-color: rgba(38, 35, 40, 0.8);
 }
 </style>
