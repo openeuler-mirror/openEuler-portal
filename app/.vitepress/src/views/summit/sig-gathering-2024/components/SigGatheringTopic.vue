@@ -96,8 +96,10 @@ const isDark = computed(() => {
       display: inline-flex;
       align-items: center;
       color: var(--o-color-text1);
-      &:hover {
-        color: var(--o-color-kleinblue5);
+      @media (hover: hover) {
+        &:hover {
+          color: var(--o-color-kleinblue5);
+        }
       }
     }
     .text {
@@ -118,10 +120,13 @@ const isDark = computed(() => {
   }
 }
 .dark {
+  background-color: #252527;
   .link {
     a {
-      &:hover {
-        color: #4874dc;
+      @media (hover: hover) {
+        &:hover {
+          color: #4874dc;
+        }
       }
     }
   }
