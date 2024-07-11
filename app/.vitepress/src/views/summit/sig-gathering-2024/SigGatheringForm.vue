@@ -190,7 +190,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
             ruleFormRef.value?.resetFields();
 
             router.go(
-              `/${lang.value}` + '/interaction/summit-list/sig-gathering/'
+              `/${lang.value}` + '/interaction/summit-list/sig-gathering-2024/'
             );
           }
         });
