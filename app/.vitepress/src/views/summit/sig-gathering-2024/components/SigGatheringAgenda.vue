@@ -38,7 +38,9 @@ const isDark = computed(() => {
           :name="item.id"
           :label="item.time"
         >
-          <SigGatheringSchedule :options="item.list" />
+          <ClientOnly>
+            <SigGatheringSchedule :options="item.list" />
+          </ClientOnly>
         </OTabPane>
       </OTabs>
       <span class="agenda-date">{{ agendaData.date }}</span>
