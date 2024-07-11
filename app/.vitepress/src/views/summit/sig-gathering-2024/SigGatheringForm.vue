@@ -56,7 +56,8 @@ const placeholderList = [
   '',
   '请您至少选择一个专题',
   '',
-  '文字长度超出限制',
+  '姓名长度超出限制',
+  '工作单位长度超出限制',
 ];
 
 // 表单校验规则
@@ -108,7 +109,7 @@ const rules = reactive<FormRules>({
       message: placeholderList[4],
       trigger: 'blur',
     },
-    { min: 1, max: 50, message: placeholderList[8], trigger: 'blur' },
+    { min: 1, max: 50, message: placeholderList[9], trigger: 'blur' },
   ],
   technicalSeminars: [
     {
@@ -182,8 +183,6 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
       query.sigs = query.sigs?.length ? query.sigs : null;
       query.attend = query.attend ? query.attend : null;
       query.others = query.others ? query.others : null;
-
-      console.log(query);
 
       try {
         applySigGathering(query).then((res) => {
@@ -540,7 +539,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   .el-form-item {
     margin-bottom: 24px;
     @media screen and (max-width: 867px) {
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
     &:last-child {
       margin-bottom: 0;
@@ -632,16 +631,17 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   .el-input__wrapper {
     box-shadow: 0 0 0 1px var(--o-color-border1) inset;
   }
+  .el-select__input {
+    margin-left: 18px !important;
+  }
 }
 
 .el-select-dropdown__item {
   display: flex;
   padding: 0;
+
   &.selected .o-checkbox {
     font-weight: 500;
-    .o-checkbox-label {
-      color: #002fa7;
-    }
   }
 }
 
