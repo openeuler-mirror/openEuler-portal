@@ -81,17 +81,20 @@ onMounted(() => {
   .slogan {
     font-size: var(--o-font-size-h1);
     line-height: var(--o-line-height-h1);
+    color: #000;
     font-weight: 700;
     margin-top: 40px;
   }
   .title {
     font-size: var(--o-font-size-h3);
     line-height: var(--o-line-height-h3);
+    color: #000;
     font-weight: 700;
   }
   .subtitle {
     font-size: 22px;
     line-height: 30px;
+    color: #000;
     font-weight: 400;
     margin-top: 16px;
   }
