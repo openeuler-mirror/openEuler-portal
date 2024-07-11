@@ -652,7 +652,6 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 }
 
 .auth-box {
-  height: 100%;
   padding: 64px 0;
   display: grid;
   place-items: center;
