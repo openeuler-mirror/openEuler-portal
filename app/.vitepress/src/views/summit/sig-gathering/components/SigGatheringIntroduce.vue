@@ -48,7 +48,6 @@ li {
   @media (max-width: 767px) {
     font-size: var(--o-font-size-tip);
     line-height: var(--o-line-height-tip);
-    color: rgba(0, 0, 0, 0.6);
     margin-top: 16px;
   }
 }

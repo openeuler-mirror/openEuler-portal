@@ -78,7 +78,7 @@ const isDark = computed(() => {
   }
 }
 .agenda-date {
-  opacity: 0.1;
+  opacity: 0.25;
   font-size: 32px;
   color: var(--o-color-brand1);
   font-weight: 900;

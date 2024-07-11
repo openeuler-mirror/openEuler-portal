@@ -95,18 +95,22 @@ const isDark = computed(() => {
     a {
       display: inline-flex;
       align-items: center;
+      &:hover {
+        .text {
+          color: #5177ca;
+        }
+      }
+      &:active {
+        .text {
+          color: #00288d;
+        }
+      }
     }
     .text {
       font-size: var(--o-font-size-h8);
       line-height: var(--o-line-height-h8);
       color: var(--o-color-text1);
       margin-right: 4px;
-      &:hover {
-        color: var(--o-color-neutral6);
-      }
-      &:active {
-        color: var(--o-color-neutral1);
-      }
     }
     .o-icon {
       font-size: var(--o-font-size-h5);
@@ -118,6 +122,22 @@ const isDark = computed(() => {
   &:nth-of-type(1),
   &:nth-of-type(2) {
     margin-top: 0;
+  }
+}
+.dark {
+  .link {
+    a {
+      &:hover {
+        .text {
+          color: #284495;
+        }
+      }
+      &:active {
+        .text {
+          color: #002fa7;
+        }
+      }
+    }
   }
 }
 @media (max-width: 1416px) {
@@ -173,7 +193,6 @@ const isDark = computed(() => {
     .desc {
       font-size: var(--o-font-size-tip);
       line-height: var(--o-line-height-tip);
-      color: rgba(0, 0, 0, 0.6);
     }
     .link {
       .text {
@@ -198,8 +217,5 @@ const isDark = computed(() => {
 }
 .dark .desc {
   color: rgba(255, 255, 255, 0.8);
-  @media (max-width: 767px) {
-    color: rgba(255, 255, 255, 0.6);
-  }
 }
 </style>
