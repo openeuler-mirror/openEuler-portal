@@ -176,6 +176,11 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
     return;
   }
   if (!formEl) return;
+
+  if (isMobile.value) {
+    window.scrollTo(0, 0);
+  }
+
   await formEl.validate((valid) => {
     if (valid) {
       const query = { ...formData.value };
@@ -379,13 +384,14 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 <style lang="scss" scoped>
 .loading-page {
   width: 100%;
-  height: 1000px;
+  min-height: calc(100vh - 80px - 282px - 80px);
   @media screen and (max-width: 867px) {
-    height: 600px;
+    min-height: calc(100vh - 259px - 48px - 52px);
   }
 }
 :deep(.el-loading-mask) {
   background: var(--o-color-bg2);
+  z-index: 3;
 }
 :deep(.el-textarea) {
   box-shadow: 0 0 0 1px var(--o-color-border1) inset;
@@ -646,6 +652,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 }
 
 .auth-box {
+  height: 100%;
   padding: 64px 0;
   display: grid;
   place-items: center;
