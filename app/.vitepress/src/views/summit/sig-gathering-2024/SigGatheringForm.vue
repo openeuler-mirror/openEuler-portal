@@ -157,7 +157,7 @@ onMounted(() => {
   getSigGroup();
   if (loginStatus.value === 'LOGINED') {
     getPersonalInfo();
-    showPage.value = true;
+    showPage.value = false;
   } else {
     setTimeout(() => {
       showPage.value = true;
@@ -201,13 +201,18 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
           if (res?.code === 200) {
             ElMessage({
               type: 'success',
-              message: '申请成功！',
+              message: '报名提交成功，请留意查收短信通知',
             });
             ruleFormRef.value?.resetFields();
 
             router.go(
               `/${lang.value}` + '/interaction/summit-list/sig-gathering-2024/'
             );
+          } else if (res?.code === 400) {
+            ElMessage({
+              type: 'error',
+              message: '报名已提交成功，请勿重复提交',
+            });
           }
         });
       } catch (error: any) {
