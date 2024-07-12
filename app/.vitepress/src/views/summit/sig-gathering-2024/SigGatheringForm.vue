@@ -184,9 +184,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   }
   if (!formEl) return;
 
-  if (isMobile.value) {
-    window.scrollTo(0, 0);
-  }
+  window.scrollTo(0, 0);
 
   await formEl.validate((valid) => {
     if (valid) {
