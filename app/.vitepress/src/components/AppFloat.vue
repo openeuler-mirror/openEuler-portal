@@ -3,7 +3,7 @@ import { computed, ref, CSSProperties, watch, onMounted, Ref } from 'vue';
 import { useRouter, useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
 import { postFeedback } from '@/api/api-feedback';
-import { ElMessage } from 'element-plus';
+import { ElMessage, ElStep } from 'element-plus';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { useStoreData } from '@/shared/login';
@@ -392,8 +392,12 @@ const handleClose = function (event: Event) {
   isSatisfactionShown.value = false;
 };
 
-// 移动端用户关闭后7天不展示,提交后30日内不出现入口
-onMounted(() => {
+const handleFloatShown = () => {
+  if (router.route.path.includes('/interaction/summit-list')) {
+    isSatisfactionShown.value = false;
+    isMobileFloatShow.value = false;
+    return;
+  }
   const lastCloseTIME = localStorage.getItem('close-float-time');
   const lastSummitTIME = localStorage.getItem('submit-time-mobile');
   const shouldShow = sessionStorage.getItem('isSatisfactionShown');
@@ -419,7 +423,19 @@ onMounted(() => {
   } else {
     isMobileFloatShow.value = true;
   }
+};
+
+// 移动端用户关闭后7天不展示,提交后30日内不出现入口
+onMounted(() => {
+  handleFloatShown();
 });
+
+watch(
+  () => router.route.path,
+  () => {
+    handleFloatShown();
+  }
+);
 </script>
 
 <template>
