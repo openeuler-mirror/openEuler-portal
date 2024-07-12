@@ -328,10 +328,18 @@ watch(
       .version-info {
         margin-top: 8px;
         display: flex;
+
+        @media (max-width: 1100px) {
+          flex-wrap: wrap;
+        }
         .link {
           margin-right: 12px;
           line-height: var(--o-line-height-tip);
           font-size: var(--o-font-size-tip);
+
+          // & + .link {
+          //   margin-left: 12px;
+          // }
         }
       }
       .title {

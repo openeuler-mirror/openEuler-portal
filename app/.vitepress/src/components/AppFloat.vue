@@ -398,6 +398,8 @@ const handleFloatShown = () => {
     isMobileFloatShow.value = false;
     return;
   }
+
+  // 移动端用户关闭后7天不展示,提交后30日内不出现入口
   const lastCloseTIME = localStorage.getItem('close-float-time');
   const lastSummitTIME = localStorage.getItem('submit-time-mobile');
   const shouldShow = sessionStorage.getItem('isSatisfactionShown');
@@ -425,7 +427,6 @@ const handleFloatShown = () => {
   }
 };
 
-// 移动端用户关闭后7天不展示,提交后30日内不出现入口
 onMounted(() => {
   handleFloatShown();
 });
