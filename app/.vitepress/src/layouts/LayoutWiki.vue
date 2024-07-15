@@ -495,21 +495,13 @@ const handleNodeClick = (node: any) => {
     max-width: 100%;
   }
 
-  a[href^='#'] {
-    display: none;
-  }
   div[class*='language-'] {
-    position: relative;
-    margin: 8px 0;
-    background-color: var(--o-color-bg2);
-    box-shadow: var(--o-shadow-l1);
-    overflow-x: auto;
-    @media screen and (max-width: 768px) {
-      background-color: var(--o-color-bg1);
+    pre {
+      background-color: #272822;
     }
   }
-  [class*='language-'] code,
-  [class*='language-'] pre {
+  code,
+  pre {
     text-align: left;
     white-space: pre;
     word-spacing: normal;
@@ -522,6 +514,19 @@ const handleNodeClick = (node: any) => {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+  }
+
+  pre {
+    position: relative;
+    margin: 8px 0;
+    background-color: var(--o-color-bg1);
+    box-shadow: var(--o-shadow-l1);
+    overflow-x: auto;
+    z-index: 1;
+    padding: 24px 32px;
+    @media screen and (max-width: 768px) {
+      padding: 12px 24px;
+    }
     &::-webkit-scrollbar-track {
       border-radius: 4px;
       background-color: var(--o-color-bg2);
@@ -538,19 +543,7 @@ const handleNodeClick = (node: any) => {
     }
   }
 
-  [class*='language-'] pre {
-    position: relative;
-    z-index: 1;
-    margin: 0;
-    padding: 24px 32px;
-    background: 0 0;
-    overflow-x: auto;
-    @media screen and (max-width: 768px) {
-      padding: 12px 24px;
-    }
-  }
-
-  [class*='language-'] code {
+  code {
     padding: 0;
     line-height: var(--o-line-height-text);
     font-size: var(--o-font-size-text);
