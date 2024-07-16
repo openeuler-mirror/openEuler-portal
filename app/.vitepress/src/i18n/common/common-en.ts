@@ -399,7 +399,37 @@ export default {
           TYPE: 1,
           CHILDREN: [
             {
+              NAME: 'openEuler 24.03 LTS',
+              ADD_TITLE: true,
+              LABEL:
+                'openEuler 24.03 LTS, built on Linux kernel 6.6, is suited for server, cloud, edge, AI, and embedded deployments. With best-in-class features, it delivers brand-new experience to developers and users spanning diverse industries.',
+              PATH: '/download/?version=openEuler 24.03 LTS',
+              CHILDREN: [
+                {
+                  NAME: 'Server',
+                  LABEL: '',
+                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=SERVER',
+                },
+                {
+                  NAME: 'Edge Cloud',
+                  LABEL: '',
+                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=EDGE_CLOUD',
+                },
+                {
+                  NAME: 'Cloud Computing',
+                  LABEL: '',
+                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=CLOUD_COMPUTING',
+                },
+                {
+                  NAME: 'Embedded',
+                  LABEL: '',
+                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=EMBEDDED',
+                },
+              ],
+            },
+            {
               NAME: 'openEuler 22.03 LTS SP4',
+              ADD_TITLE: true,
               LABEL:
                 'openEuler openEuler 22.03 LTS SP4 is the patch version of openEuler 22.03 LTS, and both versions have the same lifecycle.',
               PATH: '/download/?version=openEuler 22.03 LTS SP4',
@@ -418,34 +448,6 @@ export default {
                   NAME: 'Cloud Computing',
                   LABEL: '',
                   PATH: '/download/?version=openEuler openEuler 22.03 LTS SP4&scenario=CLOUD_COMPUTING',
-                },
-              ],
-            },
-            {
-              NAME: 'openEuler 23.09',
-              LABEL:
-                'openEuler 23.09 is an innovation version designed based on Linux kernel 6.4 and is suited for server, cloud, edge, and embedded scenarios. It provides a variety of new features and functions and brings brand-new experience to developers and users in diverse industries.',
-              PATH: '/download/?version=openEuler 23.09',
-              CHILDREN: [
-                {
-                  NAME: 'Server',
-                  LABEL: '',
-                  PATH: '/download/?version=openEuler 23.09&scenario=SERVER',
-                },
-                {
-                  NAME: 'Edge Cloud',
-                  LABEL: '',
-                  PATH: '/download/?version=openEuler 23.09&scenario=EDGE_CLOUD',
-                },
-                {
-                  NAME: 'Cloud Computing',
-                  LABEL: '',
-                  PATH: '/download/?version=openEuler 23.09&scenario=CLOUD_COMPUTING',
-                },
-                {
-                  NAME: 'Embedded',
-                  LABEL: '',
-                  PATH: '/download/?version=openEuler 23.09&scenario=EMBEDDED',
                 },
               ],
             },
