@@ -16,7 +16,10 @@ const i18n = useI18n();
 const downloadList = i18n.value.download.COMMUNITY_LIST;
 const screenWidth = useWindowResize();
 const router = useRouter();
-const shownNameList: string[] = [];
+const shownNameList: string[] = [
+  'openEuler 24.03 LTS',
+  'openEuler 22.03 LTS SP4',
+];
 let shownIndex = 0;
 function setShownNameList() {
   let ltsIndex = 0;
@@ -36,7 +39,7 @@ function setShownNameList() {
     }
   }
 }
-setShownNameList();
+// setShownNameList();
 // 获取版版本数据
 
 const versionShownName = ref(shownNameList[shownIndex]);

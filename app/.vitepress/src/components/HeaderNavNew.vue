@@ -148,7 +148,11 @@ watch(
                       </OIcon>
                     </span>
 
-                    <p v-if="list.LABEL" class="desc">
+                    <p
+                      v-if="list.LABEL"
+                      class="desc"
+                      :title="list.ADD_TITLE ? list.LABEL : null"
+                    >
                       {{ list.LABEL }}
                     </p>
                     <div v-if="list.CHILDREN" class="version-info">

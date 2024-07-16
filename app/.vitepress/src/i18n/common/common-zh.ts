@@ -485,7 +485,33 @@ export default {
           TYPE: 1,
           CHILDREN: [
             {
+              NAME: 'openEuler 24.03 LTS',
+              ADD_TITLE: true,
+              LABEL:
+                'openEuler 24.03 LTS 是基于6.6内核的长周期版本，面向服务器、云、边缘计算、AI和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+              PATH: '/download/?version=openEuler 24.03 LTS',
+              CHILDREN: [
+                {
+                  NAME: '服务器',
+                  PATH: '/download/?version=openEuler 24.03 LTS&scenario=SERVER',
+                },
+                {
+                  NAME: '边缘计算',
+                  PATH: '/download/?version=openEuler 24.03 LTS&scenario=EDGE_CLOUD',
+                },
+                {
+                  NAME: '云计算',
+                  PATH: '/download/?version=openEuler 24.03 LTS&scenario=CLOUD_COMPUTING',
+                },
+                {
+                  NAME: '嵌入式',
+                  PATH: '/download/?version=openEuler 24.03 LTS&scenario=EMBEDDED',
+                },
+              ],
+            },
+            {
               NAME: 'openEuler 22.03 LTS SP4',
+              ADD_TITLE: true,
               LABEL:
                 'openEuler 22.03 LTS SP4 是openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同。',
               PATH: '/download/?version=openEuler 22.03 LTS SP4',
@@ -501,30 +527,6 @@ export default {
                 {
                   NAME: '云计算',
                   PATH: '/download/?version=openEuler 22.03 LTS SP4&scenario=CLOUD_COMPUTING',
-                },
-              ],
-            },
-            {
-              NAME: 'openEuler 23.09',
-              LABEL:
-                'openEuler 23.09 是基于6.4内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
-              PATH: '/download/?version=openEuler 23.09',
-              CHILDREN: [
-                {
-                  NAME: '服务器',
-                  PATH: '/download/?version=openEuler 23.09&scenario=SERVER',
-                },
-                {
-                  NAME: '边缘计算',
-                  PATH: '/download/?version=openEuler 23.09&scenario=EDGE_CLOUD',
-                },
-                {
-                  NAME: '云计算',
-                  PATH: '/download/?version=openEuler 23.09&scenario=CLOUD_COMPUTING',
-                },
-                {
-                  NAME: '嵌入式',
-                  PATH: '/download/?version=openEuler 23.09&scenario=EMBEDDED',
                 },
               ],
             },
