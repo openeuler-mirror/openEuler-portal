@@ -239,37 +239,37 @@ const initData = (params: CompatibilityQueryT) => {
 // 解决方案筛选
 const selectSolutionTag = (i: number, item: string) => {
   activeIndex.value = i;
-  queryData.solution = item === '全部' ? '' : item;
+  queryData.solution = item === all.value ? '' : item;
   initData(queryData);
 };
 // 认证类型筛选
 const selectAuthenTypeTag = (i: number, item: string) => {
   activeIndex1.value = i;
-  queryData.certificationType = item === '全部' ? '' : item;
+  queryData.certificationType = item === all.value ? '' : item;
   initData(queryData);
 };
 
 const selectTypeTag = (i: number, item: string) => {
   activeIndex.value = i;
   osName.value = item;
-  queryData.os = item === '全部' ? '' : item;
+  queryData.os = item === all.value ? '' : item;
   initData(queryData);
 };
 
 const selectOptionTag = (i: number, item: string) => {
   activeIndex1.value = i;
   if (activeName.value === 'fourth') {
-    queryData.testOrganization = item === '全部' ? '' : item;
+    queryData.testOrganization = item === all.value ? '' : item;
   } else {
-    queryData.architecture = item === '全部' ? '' : item;
-    architehture.value = item === '全部' ? '' : item;
+    queryData.architecture = item === all.value ? '' : item;
+    architehture.value = item === all.value ? '' : item;
   }
   initData(queryData);
 };
 
 const clickDriveType = (i: number, item: string) => {
   activeIndex4.value = i;
-  queryData.cardType = item === '全部' ? '' : item;
+  queryData.cardType = item === all.value ? '' : item;
   driveType.value = item;
 
   initData(queryData);
@@ -277,8 +277,8 @@ const clickDriveType = (i: number, item: string) => {
 
 function clickCpuTag(index: number, item: string) {
   activeIndex2.value = index;
-  queryData.cpu = item === '全部' ? '' : item;
-  cpuName.value = item === '全部' ? '' : item;
+  queryData.cpu = item === all.value ? '' : item;
+  cpuName.value = item === all.value ? '' : item;
   initData(queryData);
 }
 
@@ -300,7 +300,7 @@ function changeSearchVal() {
 
 function searchTestOrganization(i: number, item: string) {
   activeIndex5.value = i;
-  queryData.testOrganization = item === '全部' ? '' : item;
+  queryData.testOrganization = item === all.value ? '' : item;
   initData(queryData);
 }
 
@@ -343,34 +343,34 @@ const initMobileData = (params: CompatibilityQueryT) => {
 };
 
 function selectDriveType(val: string) {
-  queryData.cardType = val === '全部' ? '' : val;
+  queryData.cardType = val === all.value ? '' : val;
   activeIndex4.value = typeLists.value.indexOf(val);
   initMobileData(queryData);
 }
 
 function selectOsName(val: string) {
-  queryData.os = val === '全部' ? '' : val;
+  queryData.os = val === all.value ? '' : val;
   activeIndex.value = osOptions.value.indexOf(val);
 
   initMobileData(queryData);
 }
 
 function selectArchitehture(val: string) {
-  queryData.architecture = val === '全部' ? '' : val;
+  queryData.architecture = val === all.value ? '' : val;
   activeIndex1.value = architectureSelect.value.indexOf(val);
   architehture.value = val;
   initMobileData(queryData);
 }
 
 function selectCpu(val: string) {
-  queryData.cpu = cpuName.value = val === '全部' ? '' : val;
+  queryData.cpu = cpuName.value = val === all.value ? '' : val;
   activeIndex2.value = cpuList.value.indexOf(val);
   cpuName.value = val;
   initMobileData(queryData);
 }
 
 function clickSoftType(i: number, val: string) {
-  queryData.type = val === '全部' ? '' : val;
+  queryData.type = val === all.value ? '' : val;
   activeIndex3.value = i;
   typeName.value = val;
   initMobileData(queryData);
@@ -378,7 +378,7 @@ function clickSoftType(i: number, val: string) {
 
 function selectType(val: string) {
   activeIndex3.value = softType.value.indexOf(val);
-  queryData.type = typeName.value = val === '全部' ? '' : val;
+  queryData.type = typeName.value = val === all.value ? '' : val;
   initMobileData(queryData);
 }
 
@@ -387,7 +387,7 @@ const goSoftwareInfo = (id: number) => {
 };
 // 测试机构
 function selectOrganization(item: string) {
-  queryData.testOrganization = item === '全部' ? '' : item;
+  queryData.testOrganization = item === all.value ? '' : item;
   initMobileData(queryData);
 }
 
@@ -401,12 +401,12 @@ function selectDataSource(item: string) {
 
 // 认证类型-下拉
 const selectAuthenType = (val: string) => {
-  queryData.certificationType = val === '全部' ? '' : val;
+  queryData.certificationType = val === all.value ? '' : val;
   initMobileData(queryData);
 };
 // 解决方案-下拉
 const selectSolutionType = (val: string) => {
-  queryData.solution = val === '全部' ? '' : val;
+  queryData.solution = val === all.value ? '' : val;
   initMobileData(queryData);
 };
 
@@ -459,7 +459,7 @@ onMounted(() => {
     });
   });
 
-  getCpu({ lang: `${lang.value}` }).then((res: any) => {
+  getCpu({ lang: lang.value }).then((res: any) => {
     res.result.forEach((item: string) => {
       cpuList.value.push(item);
       filterData.value.forEach((it) => {
@@ -478,12 +478,12 @@ onMounted(() => {
   });
 
   // filter-解决方案
-  getSolution().then((res: any) => {
+  getSolution({ lang: lang.value }).then((res: any) => {
     solutionType.value = [all.value, ...res.result];
   });
 
   // filter-认证类型
-  getCertificationType().then((res: any) => {
+  getCertificationType({ lang: lang.value }).then((res: any) => {
     authenType.value = [all.value, ...res.result];
   });
 
@@ -731,11 +731,7 @@ onMounted(() => {
         </OTable>
       </OTabPane>
 
-      <OTabPane
-        v-if="lang === 'zh'"
-        :label="i18n.compatibility.SOFTWARE"
-        name="3"
-      >
+      <OTabPane :label="i18n.compatibility.SOFTWARE" name="3">
         <OSearch
           v-model="searchContent"
           class="o-search"
@@ -935,11 +931,7 @@ onMounted(() => {
         </OTable>
       </OTabPane>
 
-      <OTabPane
-        v-if="lang === 'zh'"
-        :label="i18n.compatibility.SOLUTION"
-        name="5"
-      >
+      <OTabPane :label="i18n.compatibility.SOLUTION" name="5">
         <OSearch
           v-model="searchContent"
           class="o-search"
@@ -950,7 +942,11 @@ onMounted(() => {
         <OCard class="filter-card">
           <template #header>
             <div class="card-header">
-              <TagFilter :label="i18n.compatibility.SOLUTION" :show="false">
+              <TagFilter
+                :label="i18n.compatibility.SOLUTION"
+                :class="{ 'en-filter': lang === 'en' }"
+                :show="false"
+              >
                 <OTag
                   v-for="(item, index) in solutionType"
                   :key="'tag' + index"
@@ -964,7 +960,11 @@ onMounted(() => {
             </div>
           </template>
           <div class="card-body">
-            <TagFilter :show="false" :label="i18n.compatibility.AUTHENTICATION">
+            <TagFilter
+              :class="{ 'en-filter': lang === 'en' }"
+              :show="false"
+              :label="i18n.compatibility.AUTHENTICATION"
+            >
               <OTag
                 v-for="(item, index) in authenType"
                 :key="'tag' + index"
@@ -1018,7 +1018,7 @@ onMounted(() => {
                 :href="scope.row.introduceLink"
                 target="_blank"
                 rel="noopener noreferrer"
-                >详细链接</a
+                >{{ i18n.compatibility.SOLUTION_TABLE_COLUMN.LINK }}</a
               >
             </template>
           </el-table-column>
@@ -1439,11 +1439,7 @@ onMounted(() => {
           </p>
         </el-collapse-item>
 
-        <el-collapse-item
-          v-if="lang === 'zh'"
-          :title="i18n.compatibility.SOFTWARE"
-          name="3"
-        >
+        <el-collapse-item :title="i18n.compatibility.SOFTWARE" name="3">
           <ClientOnly>
             <OSearch
               v-model="searchContent"
@@ -1712,11 +1708,7 @@ onMounted(() => {
           </p>
         </el-collapse-item>
 
-        <el-collapse-item
-          v-if="lang === 'zh'"
-          :title="i18n.compatibility.SOLUTION"
-          name="5"
-        >
+        <el-collapse-item :title="i18n.compatibility.SOLUTION" name="5">
           <ClientOnly>
             <OSearch
               v-model="searchContent"
@@ -1811,7 +1803,7 @@ onMounted(() => {
                     :href="item.introduceLink"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >详细链接</a
+                    >{{ i18n.compatibility.SOLUTION_TABLE_COLUMN.LINK }}</a
                   >
                 </li>
               </ul>
@@ -1924,6 +1916,11 @@ onMounted(() => {
 <style lang="scss" scoped>
 .pagination-mob {
   margin-bottom: 12px;
+}
+
+.en-filter {
+  --o-filter-width: 140px;
+  grid-template-columns: 100px auto 60px;
 }
 .solution-details {
   padding: var(--o-spacing-h2);

@@ -97,6 +97,7 @@ export default {
     SYSTEM:'OS',
     DATE: 'Date',
     INTRO: 'Introduction',
+    LINK: 'Link',
   },
   HARDWARE_DETAIL: {
     TITLE_1: 'Product Information',

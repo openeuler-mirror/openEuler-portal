@@ -30,7 +30,7 @@ export default {
     'OVS version',
     'Stratovirt version',
     'libvirt version',
-    'Qemu version'
+    'Qemu version',
   ],
   SEVICE_LABELS: [
     'Vendor',
@@ -97,6 +97,7 @@ export default {
     SYSTEM: '操作系统',
     DATE: '日期',
     INTRO: '介绍',
+    LINK: '详细链接',
   },
   HARDWARE_DETAIL: {
     TITLE_1: 'Product Information',

@@ -326,28 +326,36 @@ export function getSolutionList(params: CompatibilityQueryT): Promise<{
  * 获取解决方案数据
  * @returns {Object}
  */
-export function getSolution(): Promise<{
+export function getSolution(params: { lang: string }): Promise<{
   code: number;
   msg: string;
   result: string[];
   success: boolean;
 }> {
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/solutioncomp/getSolution?lang=zh';
-  return request.get(url).then((res: AxiosResponse) => res.data);
+    '/api-euler/api-cve/cve-security-notice-server/solutioncomp/getSolution';
+  return request
+    .get(url, {
+      params,
+    })
+    .then((res: AxiosResponse) => res.data);
 }
 
 /**
  * 获取认证类型数据
  * @returns {Object}
  */
-export function getCertificationType(): Promise<{
+export function getCertificationType(params: { lang: string }): Promise<{
   code: number;
   msg: string;
   result: string[];
   success: boolean;
 }> {
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/solutioncomp/getCertificationType?lang=zh';
-  return request.get(url).then((res: AxiosResponse) => res.data);
+    '/api-euler/api-cve/cve-security-notice-server/solutioncomp/getCertificationType';
+  return request
+    .get(url, {
+      params,
+    })
+    .then((res: AxiosResponse) => res.data);
 }
