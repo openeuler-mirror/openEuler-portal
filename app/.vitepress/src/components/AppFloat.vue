@@ -245,7 +245,7 @@ const floatData = ref([
     img: computed(() => {
       return IconChat;
     }),
-    text: '欧拉论坛',
+    text: '社区论坛',
     tip: '发帖互助解决各类问题',
     id: 'forum',
     link: 'https://forum.openeuler.org/',

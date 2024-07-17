@@ -31,14 +31,15 @@ const toggle = () => {
 };
 
 const getFilterContentHeight = () => {
-  contentHeight.value = refFilterContent.value?.children[0]?.offsetHeight + 'px';
+  contentHeight.value =
+    refFilterContent.value?.children[0]?.offsetHeight + 'px';
 };
 
 const debounceCheckTagsVisibility = debounce(getFilterContentHeight, 500);
 
 onMounted(() => {
   if (props.show) {
-    getFilterContentHeight()
+    getFilterContentHeight();
     window.addEventListener('resize', debounceCheckTagsVisibility);
   }
 });
@@ -80,10 +81,12 @@ onUnmounted(() => {
   gap: var(--o-spacing-h4);
   position: relative;
   align-items: baseline;
+  --o-filter-width: 60px;
+
   .label {
     font-size: var(--o-font-size-text);
     color: var(--o-color-text4);
-    width: 60px;
+    width: var(--o-filter-width);
     text-align: left;
     line-height: var(--o-line-height-h6);
   }
