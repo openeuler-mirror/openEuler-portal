@@ -55,6 +55,10 @@ export default {
   ],
   en: [
     {
+      path: '/whitepaper/en/openEuler 22.03 LTS SP4 Technical White Paper.pdf',
+      summary: 'openEuler 22.03 LTS SP4 Technical White Paper.pdf',
+    },
+    {
       path: '/whitepaper/en/openEuler%2024.03%20LTS%20Technical%20White%20Paper.pdf',
       summary: 'openEuler 24.03 LTS Technical White Paper',
     },
