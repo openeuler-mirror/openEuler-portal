@@ -16007,6 +16007,25 @@
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/ice-1.10.1.2.2.tar.gz"
   },
   {
+    "vendorID": "1da8",
+    "deviceID": "3800",
+    "svID": "1da8",
+    "ssID": "2000",
+    "architecture": "aarch64",
+    "os": "openEuler 22.03 LTS",
+    "driverName": "nfp",
+    "version": "rev-24.04-1",
+    "type": "NIC",
+    "date": "2024-07-10",
+    "sha256": "524773b9f801f9f3b18eb12ded7c5912bb4a4e9e9c34fd1f52b01f0fcf2bfb3f  /lib/modules/5.10.0-136.12.0.86.oe2203sp1.aarch64/extra/nfp.ko.xz",
+    "driverSize": "237468",
+    "chipVendor": "Corigine",
+    "boardModel": "CGX11-B2PSNM",
+    "chipModel": "NFP3800",
+    "item": "",
+    "downloadLink": "https://download.corigine.com.cn/public/packages/agilio-nfp-driver-dkms-24.04-1.noarch.rpm"
+  },
+  {
     "vendorID": "0731",
     "deviceID": "9230",
     "svID": "0731",
