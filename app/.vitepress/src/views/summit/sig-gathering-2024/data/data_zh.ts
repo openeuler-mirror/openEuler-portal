@@ -29,7 +29,7 @@ export default {
     title: 'SIG Gathering 2024',
     subtitle: '2024.07.26  | 北京香格里拉饭店',
     subtitleMo: '2024.07.26  | BEIJING',
-    signUpHref: '/zh/interaction/summit-list/sig-gathering-2024/register/',
+    signUpHref: '/zh/interaction/summit-list/sig-gathering-2024/apply/',
     signUpTitle: '立即报名',
   },
   introduce: {
