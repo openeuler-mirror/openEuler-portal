@@ -35,7 +35,7 @@ export default {
     titleImDark: introduce_Dark,
     title: 'Introduction',
     list: [
-      'This year\'s gathering will bring together developers from all 107 SIGs in our community, with a focus on the future development of openEuler in the wake of the release of openEuler 24.03 LTS.',
+      'This year\'s gathering will bring together developers from all 108 SIGs in our community, with a focus on the future development of openEuler in the wake of the release of openEuler 24.03 LTS.',
       'The event will consist of six intriguing tracks: diversified computing power, all-scenario applications, AI-native support, native development with openEuler, upstream-native support, and user experience advancement. Join us and pick the track that sparks your interest. You\'ll be free to share ideas, brainstorm, and collaborate within a nurturing and innovative community of like-minded developers.'
     ]
   },
@@ -92,10 +92,10 @@ export default {
         title: 'User Experience Boost',
         desc: [
           'This topic aims at',
-          '(1) Enhancing Knowledge Sharing: Delivering high-quality documentation in both Chinese and English to foster knowledge dissemination.',
-          '(2) Promoting Technology Integration: Supporting the healthy growth of the openEuler ecosystem through comprehensive software and hardware compatibility testing and certification.',
-          '(3) Boosting Service Efficiency: Improving problem-solving efficiency with multi-channel service support and a rich repository of common case studies.',
-          '(4) Strengthening System Development: Enhancing design systems and infrastructure to create a superior user experience.'
+          '(1) Enhancing knowledge sharing: delivering high-quality documentation in both Chinese and English to foster knowledge dissemination.',
+          '(2) Promoting technology integration: supporting the healthy growth of the openEuler ecosystem through comprehensive software and hardware compatibility testing and certification.',
+          '(3) Boosting service efficiency: improving problem-solving efficiency with multi-channel service support and a rich repository of common case studies.',
+          '(4) Strengthening system development: enhancing design systems and infrastructure to create a superior user experience.'
         ],
         href: 'https://etherpad.openeuler.org/p/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%A0%94%E7%A9%B6',
       }
