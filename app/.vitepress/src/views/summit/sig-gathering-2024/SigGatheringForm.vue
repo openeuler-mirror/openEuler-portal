@@ -415,6 +415,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 :deep(.o-checkbox) {
   .o-checkbox-icon {
     min-width: 16px;
+    border: 1px solid var(--o-color-border1);
   }
   .o-checkbox-label {
     color: var(--o-color-text1);
