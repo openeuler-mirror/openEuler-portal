@@ -41,6 +41,15 @@ export default {
     ],
     en: [
       {
+        pcBanner: sigGathering_pc,
+        moBanner: sigGathering_mb,
+        link: '/en/interaction/summit-list/sig-gathering-2024/',
+        id: 'sig-gathering',
+        title: ['openEuler ', 'SIG Gathering 2024'],
+        btn: 'View details',
+        targetTap: 1,
+      },
+      {
         pcBanner: banner1_pc,
         moBanner: banner1_mo,
         link: '/whitepaper/en/openEuler%20OS%20Technical%20Whitepaper_Innovation%20Projects_EN.pdf',
