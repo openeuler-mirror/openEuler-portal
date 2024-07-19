@@ -6,16 +6,29 @@ import SigGatheringTopic from './components/SigGatheringTopic.vue';
 import SigGatheringAgenda from './components/SigGatheringAgenda.vue';
 import SigGatheringReview from './components/SigGatheringReview.vue';
 
+import { useData } from 'vitepress';
+
 import data_zh from './data/data_zh';
+import data_en from './data/data_en';
+
+const { lang } = useData();
+
+let summitData: any;
+
+if (lang.value === 'zh') {
+  summitData = data_zh;
+} else {
+  summitData = data_en;
+}
 </script>
 
 <template>
-  <SummitBanner :banner-data="data_zh.banner" />
+  <SummitBanner :banner-data="summitData.banner" />
   <AppContext>
-    <SigGatheringIntroduce :introduce-data="data_zh.introduce" />
-    <SigGatheringTopic :topic-data="data_zh.topic" />
-    <SigGatheringAgenda :agenda-data="data_zh.agenda" />
-    <SigGatheringReview :review-data="data_zh.review" />
+    <SigGatheringIntroduce :introduce-data="summitData.introduce" />
+    <SigGatheringTopic :topic-data="summitData.topic" />
+    <SigGatheringAgenda :agenda-data="summitData.agenda" />
+    <SigGatheringReview v-if="lang === 'zh'" :review-data="summitData.review" />
   </AppContext>
 </template>
 

@@ -1,8 +1,11 @@
 <script lang="ts" setup>
 import { onMounted } from 'vue';
 import AOS from 'aos';
+import { useData } from 'vitepress';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
+
+const { lang } = useData();
 
 defineProps({
   bannerData: {
@@ -24,7 +27,7 @@ onMounted(() => {
       class="sig-gathering-banner"
       :style="{ backgroundImage: `url(${bannerData.bgPc})` }"
     ></div>
-    <div class="banner-panel-content">
+    <div class="banner-panel-content" :class="{'banner-panel-content-en': lang === 'en'}">
       <div data-aos="fade-down" class="banner-main">
         <p class="slogan">{{ bannerData.slogan }}</p>
         <p class="title">{{ bannerData.title }}</p>
@@ -103,6 +106,14 @@ onMounted(() => {
   }
   .subtitle-mo {
     display: none;
+  }
+
+  .banner-panel-content-en {
+    display: flex;
+    align-items: center;
+    .slogan {
+      margin-top: 0;
+    }
   }
 }
 .home-banner-btn {

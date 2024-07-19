@@ -234,6 +234,10 @@ export default [
     lang: ['zh', 'en'],
   },
   {
+    name: 'sig-gathering-2024',
+    lang: ['zh', 'en'],
+  },
+  {
     name: 'summit-list/**',
     lang: ['zh'],
   },
