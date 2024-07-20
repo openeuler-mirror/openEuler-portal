@@ -305,7 +305,7 @@ export default {
                 TIPS: '',
               },
             ],
-            ARCH: 'loongarch64',
+            ARCH: 'LoongArch64',
             SCENARIO: 'SERVER',
           },
 
@@ -340,7 +340,7 @@ export default {
                 TIPS: '',
               },
             ],
-            ARCH: 'riscv64',
+            ARCH: 'RISC-V',
             SCENARIO: 'SERVER',
           },
           //EDGE_CLOUD x86_64
@@ -420,7 +420,7 @@ export default {
                 TIPS: 'loongarch64架构下openEuler虚拟机镜像',
               },
             ],
-            ARCH: 'loongarch64',
+            ARCH: 'LoongArch64',
             SCENARIO: 'CLOUD_COMPUTING',
           },
           // CLOUD_COMPUTING riscv64
@@ -476,7 +476,7 @@ export default {
                 TIPS: '',
               },
             ],
-            ARCH: 'riscv64',
+            ARCH: 'RISC-V',
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
@@ -650,7 +650,7 @@ export default {
                 IS_FOLDER: true,
               },
             ],
-            ARCH: 'riscv64',
+            ARCH: 'RISC-V',
             SCENARIO: 'EMBEDDED',
           },
         ],
@@ -3705,7 +3705,7 @@ export default {
                 TIPS: '',
               },
             ],
-            ARCH: 'loongarch64',
+            ARCH: 'LoongArch64',
             SCENARIO: 'SERVER',
           },
 
@@ -3740,7 +3740,7 @@ export default {
                 TIPS: '',
               },
             ],
-            ARCH: 'riscv64',
+            ARCH: 'RISC-V',
             SCENARIO: 'SERVER',
           },
           //EDGE_CLOUD x86_64
@@ -3820,7 +3820,7 @@ export default {
                 TIPS: 'VM image of openEuler in the loongarch64 architecture.',
               },
             ],
-            ARCH: 'loongarch64',
+            ARCH: 'LoongArch64',
             SCENARIO: 'CLOUD_COMPUTING',
           },
           // CLOUD_COMPUTING riscv64
@@ -3876,7 +3876,7 @@ export default {
                 TIPS: '',
               },
             ],
-            ARCH: 'riscv64',
+            ARCH: 'RISC-V',
             SCENARIO: 'CLOUD_COMPUTING',
           },
           {
@@ -4050,7 +4050,7 @@ export default {
                 IS_FOLDER: true,
               },
             ],
-            ARCH: 'riscv64',
+            ARCH: 'RISC-V',
             SCENARIO: 'EMBEDDED',
           },
         ],
