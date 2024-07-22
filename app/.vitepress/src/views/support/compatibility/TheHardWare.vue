@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useRouter } from 'vitepress';
+import { useRouter, useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
@@ -7,6 +7,8 @@ import AppContent from '@/components/AppContent.vue';
 
 const i18n = useI18n();
 const router = useRouter();
+
+const { lang } = useData();
 
 function goBackPage() {
   const i = router.route.path.lastIndexOf('h');
@@ -23,7 +25,7 @@ function goBackPage() {
         {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE }}
       </div>
     </div>
-    <div class="hardware-content">
+    <div v-if="lang === 'en'" class="hardware-content">
       <div class="hardware-content-top">
         <div class="title">
           {{ i18n.compatibility.HARDWARE_OEC_DETAIL.DISCRIPTION_TITLE }}
@@ -295,6 +297,15 @@ function goBackPage() {
     padding: 0 var(--o-spacing-h5);
   }
 }
+
+html[lang='zh'] {
+  .banner {
+    .banner-title {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .banner {
   margin: 0 auto;
   .breadcrumb {
