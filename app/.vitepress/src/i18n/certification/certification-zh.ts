@@ -42,6 +42,6 @@ export default {
   sure: '确认',
   agreeDeclaration:
     '您理解并同意，您填写并提交的内容，即视为您已充分阅读并同意openEuler的 ',
-  policy: '隐私政策',
+  policy: '《隐私政策》',
   agreeTip: '必填项',
 };

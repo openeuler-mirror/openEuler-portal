@@ -2,7 +2,7 @@ export default {
   zh: [
     {
       path: '/whitepaper/openEuler%2022.03%20LTS%20SP4%20技术白皮书.pdf',
-      summary: 'openEuler 22.03 LTS  SP4 白皮书',
+      summary: 'openEuler 22.03 LTS SP4 白皮书',
     },
     {
       path: '/whitepaper/openEuler%2024.03%20LTS%20技术白皮书.pdf',
@@ -56,7 +56,7 @@ export default {
   en: [
     {
       path: '/whitepaper/en/openEuler 22.03 LTS SP4 Technical White Paper.pdf',
-      summary: 'openEuler 22.03 LTS SP4 Technical White Paper.pdf',
+      summary: 'openEuler 22.03 LTS SP4 Technical White Paper',
     },
     {
       path: '/whitepaper/en/openEuler%2024.03%20LTS%20Technical%20White%20Paper.pdf',
