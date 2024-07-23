@@ -78,6 +78,12 @@ export default {
           LABEL: '',
           PATH: '/community/mailing-list/',
         },
+        {
+          NAME: 'FAQs',
+          LABEL: '',
+          PATH: '/faq/',
+          SHOW_IN_MOBILE_ONLY: true,
+        },
       ],
     },
   ],

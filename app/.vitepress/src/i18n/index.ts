@@ -30,6 +30,7 @@ import group from './group';
 import university from './university';
 import cookie from './cookie';
 import migration from './migration';
+import faq from './faq';
 
 const i18n: { [key: string]: any } = {
   zh: {
@@ -62,6 +63,7 @@ const i18n: { [key: string]: any } = {
     university: university.zh,
     cookie: cookie.zh,
     migration: migration.zh,
+    faq: faq.zh,
   },
   en: {
     sig: sig.en,
@@ -92,6 +94,7 @@ const i18n: { [key: string]: any } = {
     cookie: cookie.en,
     mooc: mooc.en,
     migration: migration.en,
+    faq: faq.en,
   },
 };
 

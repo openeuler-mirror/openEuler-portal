@@ -9,6 +9,7 @@ const categories: string[] = [
   'sig-route',
   'event',
   'security',
+  'faq'
 ];
 
 export default categories;
