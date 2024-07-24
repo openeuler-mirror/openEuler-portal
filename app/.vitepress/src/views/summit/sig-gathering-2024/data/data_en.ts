@@ -43,7 +43,7 @@ export default {
     titleImg: topic_light,
     titleImDark: topic_Dark,
     title: 'Topics',
-    text: 'Submit your proposal',
+    text: 'View Details',
     list: [
       {
         title: 'Diversified Computing',
