@@ -29,8 +29,8 @@ export default {
     title: 'SIG Gathering 2024',
     subtitle: '2024.07.26  | 北京香格里拉饭店',
     subtitleMo: '2024.07.26  | BEIJING',
-    signUpHref: '/zh/interaction/summit-list/sig-gathering-2024/apply/',
-    signUpTitle: '立即报名',
+    signUpHref: '',
+    signUpTitle: '',
   },
   introduce: {
     titleImg: introduce_light,
@@ -45,7 +45,7 @@ export default {
     titleImg: topic_light,
     titleImDark: topic_Dark,
     title: '专题分类',
-    text: '提交议题',
+    text: '查看详情',
     list: [
       {
         title: '多样性算力',

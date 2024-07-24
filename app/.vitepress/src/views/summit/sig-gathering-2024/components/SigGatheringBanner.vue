@@ -1,11 +1,8 @@
 <script lang="ts" setup>
 import { onMounted } from 'vue';
 import AOS from 'aos';
-import { useData } from 'vitepress';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
-
-const { lang } = useData();
 
 defineProps({
   bannerData: {
@@ -27,7 +24,7 @@ onMounted(() => {
       class="sig-gathering-banner"
       :style="{ backgroundImage: `url(${bannerData.bgPc})` }"
     ></div>
-    <div class="banner-panel-content" :class="{'banner-panel-content-en': lang === 'en'}">
+    <div class="banner-panel-content">
       <div data-aos="fade-down" class="banner-main">
         <p class="slogan">{{ bannerData.slogan }}</p>
         <p class="title">{{ bannerData.title }}</p>
@@ -77,6 +74,8 @@ onMounted(() => {
     left: 50%;
     transform: translateX(-50%);
     padding: 0 44px;
+    display: flex;
+    align-items: center;
     @media screen and (max-width: 1439px) {
       padding: 0 24px;
     }
@@ -86,7 +85,6 @@ onMounted(() => {
     line-height: var(--o-line-height-h1);
     color: #000;
     font-weight: 700;
-    margin-top: 40px;
   }
   .title {
     font-size: var(--o-font-size-h3);
@@ -106,14 +104,6 @@ onMounted(() => {
   }
   .subtitle-mo {
     display: none;
-  }
-
-  .banner-panel-content-en {
-    display: flex;
-    align-items: center;
-    .slogan {
-      margin-top: 0;
-    }
   }
 }
 .home-banner-btn {
@@ -146,7 +136,6 @@ onMounted(() => {
     .slogan {
       font-size: var(--o-font-size-h7);
       line-height: var(--o-line-height-h7);
-      margin-top: 40px;
     }
     .title {
       font-size: var(--o-font-size-h8);
