@@ -42,13 +42,13 @@ openEuler 社区版本分为长期支持版本（LTS）和创新版本[（生命
 您可以体验 openEuler 社区里的以下原创开源项目：
 
 - [StratoVirt](https://www.openeuler.org/zh/other/projects/stratovirt/)：面向云数据中心的企业级虚拟化平台
-- [Tune](https://www.openeuler.org/zh/other/projects/atune/)：一款基于 AI 开发的智能优化引擎
+- [A-Tune](https://www.openeuler.org/zh/other/projects/atune/)：一款基于 AI 开发的智能优化引擎
 - [iSula](https://www.openeuler.org/zh/other/projects/isula/)：轻量级容器解决方案
 - [secGear](https://www.openeuler.org/zh/other/projects/secgear/)：面向计算产业的机密计算安全应用开发套件
 - [pkgship](https://pkgmanage.openeuler.org/)：管理 OS 软件包依赖关系，提供依赖和被依赖关系完整图谱的查询工具
 - [BiSheng JDK](https://www.openeuler.org/zh/other/projects/bishengjdk/): OpenJDK 定制版 Huawei JDK 的开源版本，是一个高性能、可用于生产环境的 OpenJDK 发行版
 - [Compass-CI ](https://compass-ci.openeuler.org/): 可持续集成的开源软件平台, 构建一个开放、完整的测试系统
-- [View More](https://gitee.com/openeuler)
+- [More](https://gitee.com/openeuler)
 
 ## 2. 签署 CLA
 
