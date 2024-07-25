@@ -514,6 +514,14 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
     display: none;
   }
 }
+
+.o-button {
+  --o-button-bg-color-primary_hover: var(--o-color-brand1);
+  --o-button-bg-color-primary_active: var(--o-color-brand1);
+  --o-button-border-primary_hover: 1px solid var(--o-color-brand1);
+  --o-button-border-primary_active: 1px solid var(--o-color-brand1);
+  cursor: default;
+}
 </style>
 
 <style lang="scss">
