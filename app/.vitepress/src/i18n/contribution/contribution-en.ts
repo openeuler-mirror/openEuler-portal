@@ -13,19 +13,11 @@ export default {
   PRINT_MAP: 'Download',
   LINK_LIST: [
     {
-      URL: 'https://huaweicloud.com/product/ecs.html',
+      URL: 'https://www.openeuler.org/en/download/get-os/',
       BLANK: true,
     },
     {
-      URL: 'https://docs.openeuler.org/zh/docs/20.03_LTS/docs/Virtualization/virtualization.html',
-      BLANK: true,
-    },
-    {
-      URL: 'https://docs.openeuler.org/zh/docs/20.03_LTS/docs/Installation/installation.html',
-      BLANK: true,
-    },
-    {
-      URL: 'https://gitee.com/openeuler/raspberrypi',
+      URL: 'https://gitee.com/openeuler',
       BLANK: true,
     },
     {
@@ -73,19 +65,76 @@ export default {
       BLANK: true,
     },
     {
-      URL: '/en/#meeting',
+      URL: 'https://www.openeuler.org/en/blog/2022-11-25-cla/CLA%E7%AD%BE%E7%BD%B2%E6%B5%81%E7%A8%8B.html',
       BLANK: true,
     },
     {
-      URL: '/en/interaction/event-list/',
+      URL: '/en/sig/role-description/',
       BLANK: true,
     },
     {
-      URL: '/en/interaction/live-list/',
+      URL: '/en/sig/sig-detail/?name=TC',
       BLANK: true,
     },
     {
-      URL: 'https://www.openeuler.org/zh/interaction/summit-list/devday2022/',
+      URL: '/zh/sig/sig-detail/?name=TC&mail=dev%40openeuler.org',
+      BLANK: true,
+    },
+    {
+      URL: 'https://gitee.com/openeuler/community/blob/master/en/contributors/create-package.md',
+      BLANK: true,
+    },
+    {
+      URL: 'https://gitee.com/src-openeuler',
+      BLANK: true,
+    },
+    {
+      URL: 'https://quickissue.openeuler.org/en/issues/',
+      BLANK: true,
+    },
+    {
+      URL: 'https://gitee.com/openeuler/community/blob/master/en/contributors/packaging.md',
+      BLANK: true,
+    },
+    {
+      URL: '/en/community/contribution/detail.html#_4-2-2-submit-code',
+      BLANK: true,
+    },
+    {
+      URL: '/en/community/contribution/detail.html#_4-2-4-review-code',
+      BLANK: true,
+    },
+    {
+      URL: '/en/community/contribution/detail.html#_4-2-3-contribute-software-packages-or-package-community-components',
+      BLANK: true,
+    },
+    {
+      URL: 'https://gitee.com/openeuler/security-committee/blob/master/security-disclosure-en.md',
+      BLANK: true,
+    },
+    {
+      URL: 'https://gitee.com/openeuler/QA/blob/master/GuideBook/community-test-system.md',
+      BLANK: true,
+    },
+    // call for x 暂无英文页面(lenk-en(27))
+    {
+      URL: '/en/community/program/',
+      BLANK: true,
+    },
+    {
+      URL: 'https://forum.openeuler.org?locale=en',
+      BLANK: true,
+    },
+    {
+      URL: '/en/interaction/blog-list/',
+      BLANK: true,
+    },
+    {
+      URL: '/en/showcase/',
+      BLANK: true,
+    },
+    {
+      URL: '/en/community/contribution/detail.html#_4-3-2-other-community-work',
       BLANK: true,
     },
     {
@@ -94,50 +143,6 @@ export default {
     },
     {
       URL: '/en/sig/sig-guidance/',
-      BLANK: true,
-    },
-    {
-      URL: 'https://quickissue.openeuler.org/en/issues/',
-      BLANK: true,
-    },
-    {
-      URL: '/en/community/contribution/detail.html#_3-3-2-contribute-code',
-      BLANK: true,
-    },
-    {
-      URL: '/en/community/contribution/detail.html#_3-3-3-contribute-a-package',
-      BLANK: true,
-    },
-    {
-      URL: '/en/community/contribution/detail.html#_3-3-4-contribute-original-open-source-projects',
-      BLANK: true,
-    },
-    {
-      URL: '/en/community/contribution/detail.html#_3-3-5-review-code',
-      BLANK: true,
-    },
-    {
-      URL: 'https://gitee.com/openeuler/QA/blob/master/community-developer-test-contribution-guide.md',
-      BLANK: true,
-    },
-    {
-      URL: 'https://gitee.com/openeuler/community/blob/master/en/contributors/packaging.md',
-      BLANK: true,
-    },
-    {
-      URL: 'https://gitee.com/openeuler/community/blob/master/en/contributors/non-code-contributions.md',
-      BLANK: true,
-    },
-    {
-      URL: 'https://gitee.com/openeuler/security-committee/blob/master/security-disclosure-en.md',
-      BLANK: true,
-    },
-    {
-      URL: '/en/sig/sig-detail/?name=TC',
-      BLANK: true,
-    },
-    {
-      URL: 'https://gitee.com/openeuler/community/blob/master/community-membership.md',
       BLANK: true,
     },
   ],
