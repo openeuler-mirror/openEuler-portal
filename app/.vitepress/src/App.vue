@@ -17,6 +17,9 @@ import LayoutAboutUsArchived from '@/layouts/LayoutAboutUsArchived.vue';
 import LayoutDownload from './layouts/LayoutDownload.vue';
 import LayoutEvent from './layouts/LayoutEvent.vue';
 import LayoutSecurity from './layouts/LayoutSecurity.vue';
+import LayoutFAQ from '@/layouts/LayoutFAQ.vue';
+
+
 import AppFloat from '@/components/AppFloat.vue';
 import AppFloatEn from '@/components/AppFloatEn.vue';
 import CookieNotice from '@/components/CookieNotice.vue';
@@ -42,6 +45,7 @@ const compMapping: {
   download: LayoutDownload,
   event: LayoutEvent,
   security: LayoutSecurity,
+  faq: LayoutFAQ,
 };
 
 const isCustomLayout = computed(() => {

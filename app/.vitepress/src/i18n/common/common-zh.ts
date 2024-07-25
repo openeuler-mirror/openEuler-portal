@@ -102,6 +102,12 @@ export default {
           LABEL: '',
           PATH: '/#footer',
         },
+        {
+          NAME: 'FAQs',
+          LABEL: '',
+          PATH: '/faq/',
+          SHOW_IN_MOBILE_ONLY: true,
+        },
       ],
     },
   ],

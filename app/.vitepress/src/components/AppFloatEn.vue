@@ -12,6 +12,8 @@ import IconTop from '~icons/footer/icon-top.svg';
 import IconSmile from '~icons/footer/icon-smile.svg';
 import IconCancel from '~icons/app/icon-cancel.svg';
 import IconSmileMobile from '~icons/footer/icon-smile-mobile.svg';
+import IconHeadset from '~icons/footer/icon-headset.svg';
+import IconFAQ from '~icons/footer/icon-faq.svg';
 
 const screenWidth = useWindowResize();
 const { guardAuthClient } = useStoreData();
@@ -82,6 +84,19 @@ const title3 = computed(() => {
     return TITLES3[1];
   }
 });
+
+const floatData = ref([
+  {
+    img: computed(() => {
+      return IconFAQ;
+    }),
+    id: '',
+    text: 'FAQs',
+    tip: '',
+    link: `/en/faq/`,
+  },
+]);
+
 onMounted(() => {
   watch(
     () => router.route.path,
@@ -428,6 +443,27 @@ onMounted(() => {
                   >
                     {{ infoData.submit }}
                   </OButton>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item">
+            <OIcon class="icon-box"
+              ><component :is="IconHeadset"></component>
+            </OIcon>
+            <div class="o-popup2">
+              <div
+                v-for="item in floatData"
+                :key="item.link"
+                class="pop-item"
+                rel="noopener noreferrer"
+              >
+                <OIcon><component :is="item.img"></component> </OIcon>
+                <div class="text">
+                  <p class="text-name">
+                    <a :href="item.link" target="_blank">{{ item.text }}</a>
+                  </p>
+                  <p class="text-tip">{{ item.tip }}</p>
                 </div>
               </div>
             </div>

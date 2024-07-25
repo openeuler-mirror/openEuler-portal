@@ -19,6 +19,7 @@ import IconRobot_dark from '~icons/footer/icon-robot_dark.svg';
 import IconQuickIssue_light from '~icons/footer/icon-quickissue_light.svg';
 import IconQuickIssue_dark from '~icons/footer/icon-quickissue_dark.svg';
 import IconChat from '~icons/footer/icon-chat.svg';
+import IconFAQ from '~icons/footer/icon-faq.svg';
 
 const screenWidth = useWindowResize();
 const { lang, frontmatter } = useData();
@@ -258,6 +259,15 @@ const floatData = ref([
     text: 'QuickIssue',
     tip: '快捷提交/查询社区Issues',
     link: quickIssueUrl,
+  },
+  {
+    img: computed(() => {
+      return IconFAQ;
+    }),
+    id: '',
+    text: 'FAQs',
+    tip: '',
+    link: `/${lang.value}/faq/`,
   },
 ]);
 function handleClickTop() {

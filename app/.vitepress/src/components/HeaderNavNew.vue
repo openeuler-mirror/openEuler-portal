@@ -179,6 +179,7 @@ watch(
                   v-for="list in nitem.CHILDREN"
                   :key="list.PATH"
                   class="link"
+                  :class="{ 'show-in-mobile': list.SHOW_IN_MOBILE_ONLY }"
                   @click="goPath(list, true)"
                   >{{ list.NAME }}</span
                 >
@@ -289,6 +290,12 @@ watch(
             margin-left: 0;
             line-height: var(--o-line-height-text);
             font-size: var(--o-font-size-text);
+          }
+        }
+        .show-in-mobile {
+          display: none;
+          @media screen and (max-width: 768px) {
+            display: block;
           }
         }
       }

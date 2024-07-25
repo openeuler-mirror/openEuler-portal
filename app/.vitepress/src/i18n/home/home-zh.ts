@@ -73,6 +73,8 @@ import baodeLogo from '@/assets/category/home/link/baode_light.png';
 import baodeLogo_dark from '@/assets/category/home/dark/link/baode_dark.png';
 import seaway from '@/assets/category/home/link/seaway.png';
 import seaway_dark from '@/assets/category/home/dark/link/seaway_dark.png';
+import ruidun from '@/assets/category/home/link/ruidun_light.png';
+import ruidun_dark from '@/assets/category/home/dark/link/ruidun_dark.png';
 
 import mulan from '@/assets/category/home/link/mulan.png';
 import mulanLogo_dark from '@/assets/category/home/dark/link/mulan_dark.png';
@@ -374,6 +376,11 @@ export default {
       LINK: 'http://www.linx-info.com/#/',
       IMG: linsiLogo,
       IMG_DARK: linsiLogo_dark,
+    },
+    {
+      LINK: 'http://www.sgepri.sgcc.com.cn',
+      IMG: ruidun,
+      IMG_DARK: ruidun_dark,
     },
     {
       LINK: 'http://www.i-soft.com.cn/',

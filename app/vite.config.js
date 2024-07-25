@@ -21,6 +21,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@/': `${path.resolve(__dirname, './.vitepress/src')}/`,
+      '~@/': `${path.resolve(__dirname, './.vitepress/src-new')}/`,
     },
   },
   css: {
