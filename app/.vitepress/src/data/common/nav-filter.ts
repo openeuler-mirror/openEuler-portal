@@ -199,7 +199,7 @@ export default [
   },
   {
     name: 'program/**',
-    lang: ['zh'],
+    lang: ['zh', 'en'],
   },
   {
     name: 'user-group',

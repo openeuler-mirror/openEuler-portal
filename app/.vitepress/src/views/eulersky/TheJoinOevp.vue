@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed, onMounted } from 'vue';
-import { useRouter } from 'vitepress';
+import { useRouter, useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 import AOS from 'aos';
 
@@ -13,13 +13,16 @@ import AppContent from '@/components/AppContent.vue';
 import IconHome from '~icons/app/icon-home.svg';
 
 const commonStore = useCommon();
+const { lang } = useData();
 
 const isDark = computed(() => {
   return commonStore.theme === 'dark' ? true : false;
 });
 
-const oevpListData = oevpList.sort((a, b) => {
-  return a.name.localeCompare(b.name, 'zh');
+const oevpListData = computed(() => {
+  return oevpList[lang.value as 'zh' | 'en'].sort((a, b) => {
+    return a.name.localeCompare(b.name);
+  });
 });
 
 const i18n = useI18n();
@@ -55,7 +58,12 @@ onMounted(() => {
             {{ oevpI18n.CARD_INTRODUCTION }}
           </p>
         </div>
-        <OButton animation type="primary" @click="goDetail(oevpI18n.JOIN_URL)">
+        <OButton
+          v-if="oevpI18n.JOIN_BTN"
+          animation
+          type="primary"
+          @click="goDetail(oevpI18n.JOIN_URL)"
+        >
           {{ oevpI18n.JOIN_BTN }}
         </OButton>
       </OContainer>
@@ -90,7 +98,10 @@ onMounted(() => {
           data-aos="fade-up"
           :level-index="1"
         >
-          <div class="oevp-equity-list">
+          <div
+            class="oevp-equity-list"
+            :class="{ 'oevp-equity-list-en': lang === 'en' }"
+          >
             <div
               v-for="item in oevpI18n.EQUITY_LIST"
               :key="item.TITLE"
@@ -289,6 +300,10 @@ onMounted(() => {
             }
           }
         }
+      }
+      .oevp-equity-list-en  {
+        max-width: 844px;
+        gap: 16px;
       }
     }
     .join-container {
