@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { useRouter } from 'vitepress';
+import { useRouter, useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 
 import TULTORIAL_LIST from '@/data/euler-sky/tultorial';
@@ -8,6 +8,9 @@ import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import AppContent from '@/components/AppContent.vue';
 
 const i18n = useI18n();
+
+const { lang } = useData();
+
 const technicalTutorialI18n = computed(() => {
   return i18n.value.sky.TECHNICAL_TULTORIAL;
 });
@@ -43,7 +46,7 @@ function goDetail(path: string) {
         <h2>{{ technicalTutorialI18n.TULTORIAL_CARD_TITLE }}</h2>
         <div class="tultorial-card-list">
           <OContainer
-            v-for="item in TULTORIAL_LIST"
+            v-for="item in TULTORIAL_LIST[lang as 'zh' | 'en']"
             :key="item.title"
             @click="goDetail(item.url)"
           >

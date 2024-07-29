@@ -307,12 +307,11 @@ export default {
               LABEL: "openEuler's donors",
               PATH: '/community/member/',
             },
-            // {
-            //   NAME: 'Policies',
-            //   LABEL:
-            //     'Charter, regulations, code of conduct, and license policies',
-            //   PATH: '/community/charter/',
-            // },
+            {
+              NAME: 'openEuler Call for X',
+              LABEL: 'Diverse contributions',
+              PATH: '/community/program/',
+            },
             {
               NAME: 'Statistics',
               LABEL: 'Community statistics',

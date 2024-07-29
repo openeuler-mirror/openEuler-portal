@@ -38,6 +38,7 @@ function goDetail(url: string) {
       </p>
       <div class="sky-card">
         <OContainer
+          v-if="homeI18n.EVENT_COLLECTION"
           :style="{ backgroundImage: `url(${imgCardBg})` }"
           class="item"
         >
