@@ -373,14 +373,14 @@ export default {
       IMG_DARK: kaihong_dark,
     },
     {
-      LINK: 'http://www.linx-info.com/#/',
-      IMG: linsiLogo,
-      IMG_DARK: linsiLogo_dark,
-    },
-    {
       LINK: 'http://www.sgepri.sgcc.com.cn',
       IMG: ruidun,
       IMG_DARK: ruidun_dark,
+    },
+    {
+      LINK: 'http://www.linx-info.com/#/',
+      IMG: linsiLogo,
+      IMG_DARK: linsiLogo_dark,
     },
     {
       LINK: 'http://www.i-soft.com.cn/',
