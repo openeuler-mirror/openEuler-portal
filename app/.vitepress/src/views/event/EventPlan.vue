@@ -119,7 +119,7 @@ const yearPlan = computed(() => {
               </template>
             </div>
           </div>
-          <div v-if="yearPlan[key].id === 'opensoucrce'" class="otherlink">
+          <div v-if="yearPlan[key].id === 'opensource'" class="otherlink">
             <p>
               {{ salonData.MARKING_EMAIL
               }}<a href="mailto:marketing@openeuler.org"
@@ -524,7 +524,7 @@ $lineLeft: calc($titleboxWidth);
       }
     }
 
-    .opensoucrce {
+    .opensource {
       .content-box {
         .event-box {
           background-image: linear-gradient(

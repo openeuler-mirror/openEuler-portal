@@ -1,5 +1,5 @@
-import opensoucrce from '@/assets/category/year-plan/opensoucrce.png';
-import opensoucrceTitle from '@/assets/category/year-plan/opensoucrce-title.png';
+import opensource from '@/assets/category/year-plan/opensource.png';
+import opensoucrceTitle from '@/assets/category/year-plan/opensource-title.png';
 import ecology from '@/assets/category/year-plan/ecology.png';
 import ecologyTitle from '@/assets/category/year-plan/ecology-title.png';
 import developer from '@/assets/category/year-plan/developer.png';
@@ -11,11 +11,11 @@ import editionTitle from '@/assets/category/year-plan/edition-title.png';
 
 export const yearPlanData = {
   zh: {
-    opensoucrce: {
+    opensource: {
       title: '开源顶会',
-      contentBg: opensoucrce,
+      contentBg: opensource,
       titleBg: opensoucrceTitle,
-      id: 'opensoucrce',
+      id: 'opensource',
       events: [
         {
           month: '2',
@@ -261,12 +261,33 @@ export const yearPlanData = {
               activeName: 'openEuler Embedded Meetup',
             },
             {
+              location: '北京',
+              activeName: 'openEuler DB SIG Meetup',
+            },
+            {
+              location: '北京',
+              activeName: 'openEuler Backup Meetup',
+            },
+            {
               location: '东莞',
               activeName: '人才与服务 Meetup',
             },
             {
               location: '线上',
               activeName: 'BigData & Arm Meetup',
+            },
+          ],
+        },
+        {
+          month: '8',
+          actives: [
+            {
+              location: '杭州',
+              activeName: 'openEuler RISC-V SIG开发者日与杭州Meetup',
+            },
+            {
+              location: '苏州',
+              activeName: 'openEuler DPU Meetup',
             },
           ],
         },
@@ -313,11 +334,11 @@ export const yearPlanData = {
     },
   },
   en: {
-    opensoucrce: {
+    opensource: {
       title: 'Open Source Summits',
-      contentBg: opensoucrce,
+      contentBg: opensource,
       titleBg: opensoucrceTitle,
-      id: 'opensoucrce',
+      id: 'opensource',
       events: [
         {
           month: '2',
