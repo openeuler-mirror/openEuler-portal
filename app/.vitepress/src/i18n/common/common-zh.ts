@@ -177,6 +177,11 @@ export default {
           TYPE: 1,
           CHILDREN: [
             {
+              NAME: '软件中心',
+              LABEL: '简易便捷地查询openEuler社区软件包',
+              PATH: 'https://easysoftware.openeuler.org/',
+            },
+            {
               NAME: 'OSV技术测评',
               LABEL: '查看OSV技术测评结果',
               PATH: '/approve/',
@@ -208,6 +213,7 @@ export default {
                 },
               ],
             },
+
           ],
         },
       ],
