@@ -40,7 +40,11 @@ const routeList = router.route.path.split('/');
 const activeId = ref(routeList[routeList.length - 2]);
 
 const handleItemClick = (link: string) => {
-  router.go(`/${lang.value}/wiki/${link}/`);
+  if (link === 'introduce' || link === 'quick-start' || link === 'install') {
+    router.go(`/${lang.value}/wiki/about/${link}/`);
+  } else {
+    router.go(`/${lang.value}/wiki/${link}/`);
+  }
 };
 
 watch(
@@ -83,8 +87,17 @@ const goHome = () => {
 };
 
 const handleNodeClick = (node: any) => {
+  console.log(node.link);
   if (node.link) {
-    router.go(`/${lang.value}/wiki/${node.link}/`);
+    if (
+      node.link === 'introduce' ||
+      node.link === 'quick-start' ||
+      node.link === 'install'
+    ) {
+      router.go(`/${lang.value}/wiki/about/${node.link}/`);
+    } else {
+      router.go(`/${lang.value}/wiki/${node.link}/`);
+    }
     toggleMenu(false);
   }
 };
