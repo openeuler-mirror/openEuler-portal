@@ -149,6 +149,7 @@ const clickMenuItem = (id: string) => {
     transition: all 0.3s;
     background-color: var(--o-color-kleinblue4);
     padding: 0 40px;
+    height: 0;
     transform: scaleY(0);
 
     .menu-item {
@@ -191,7 +192,6 @@ const clickMenuItem = (id: string) => {
     .open {
       .menu-list {
         position: relative;
-
         transform: scaleY(1);
       }
       .menu-title-icon {
@@ -201,6 +201,7 @@ const clickMenuItem = (id: string) => {
   }
   &.open {
     & > .menu-list {
+      height: auto;
       transform: scaleY(1);
     }
   }
