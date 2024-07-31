@@ -34,7 +34,7 @@ summary: '案例分析：docker配置容器umask值'
 ```
 systemctl restart docker
 ```
-![image](./figures/docker2.png)
+![image](./figures/docker21.png)
 
 方案二：
 
@@ -44,4 +44,4 @@ systemctl restart docker
 docker run --annotation native.umask=normal XXX
 docker exec --annotation native.umask=normal XXX
 ```
-![image](./figures/docker3.png)
+![image](./figures/docker31.png)
