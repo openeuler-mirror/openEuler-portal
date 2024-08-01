@@ -15,13 +15,13 @@ anchor: true
 
 ## Cloud Native
 
-### 1. Why does the container fail to start when the default runtime of `iSulad` is changed to `lxc` and the error message "failed to initialize engine or runtime" is displayed?
+### 1. Why does the container fail to start when the default runtime of iSulad is changed to `lxc` and the error message "failed to initialize engine or runtime" is displayed?
 
-The default runtime of `iSulad` is `runc`. When the default runtime is set to `lxc`, dependencies might be missing. If you need to change the default runtime of `iSulad` to `lxc`, you need to install the `lcr` and `lxc` software packages and set `runtime` in the **`iSulad`** configuration file to `lcr`. Alternatively, you can specify `--runtime lcr` when starting the container. After the container is started, do not uninstall the `lcr` and `lxc` software packages; otherwise, residual resources may remain when the container is deleted.
+The default runtime of iSulad is `runc`. When the default runtime is set to `lxc`, dependencies might be missing. If you need to change the default runtime of iSulad to `lxc`, you need to install the `lcr` and `lxc` software packages and set `runtime` in the iSulad configuration file to `lcr`. Alternatively, you can specify `--runtime lcr` when starting the container. After the container is started, do not uninstall the `lcr` and `lxc` software packages; otherwise, residual resources may remain when the container is deleted.
 
-### 2. Why is the error message "rpc error: code = Unimplemented desc =" displayed when the `iSulad` `CRI V1` interface is used?
+### 2. Why is the error message "rpc error: code = Unimplemented desc =" displayed when the iSulad `CRI V1` interface is used?
 
-`iSulad` supports both `CRI V1alpha2` and `CRI V1` interfaces. By default, `CRI V1alpha2` is used. To use `CRI V1`, you need to enable the `CRI V1` configuration in the **`iSulad`** configuration file **`/etc/isulad/daemon.json`**:
+iSulad supports both `CRI V1alpha2` and `CRI V1` interfaces. By default, `CRI V1alpha2` is used. To use `CRI V1`, you need to enable the `CRI V1` configuration in the iSulad configuration file **`/etc/isulad/daemon.json`**:
 
 ```json
 {
@@ -29,7 +29,7 @@ The default runtime of `iSulad` is `runc`. When the default runtime is set to `l
 }
 ```
 
-If you are compiling `iSulad` from the source code, add the `cmake` compilation option `-D ENABLE_CRI_API_V1=ON` during compilation.
+If you are compiling iSulad from the source code, add the `cmake` compilation option `-D ENABLE_CRI_API_V1=ON` during compilation.
 
 ### 3. Why does isula-build fail to pull images and the error message "pinging container registry xx: get xx: dial tcp host:repo: connect: connection refused" is displayed?
 
@@ -41,13 +41,13 @@ Starting from version 1.21, Kubernetes no longer supports deploying clusters wit
 
 ### 5. Why cannot openEuler directly install Kubernetes-related RPM packages using yum?
 
-This is because the EPOL-related part of the **yum** repo source needs to be configured for the Kubernetes-related RPM package. You can view [openEuler Forum](https://forum.openeuler.org/t/topic/768) and reconfigure the EPOL source in the environment.
+This is because the EPOL-related part of the **yum** repo source needs to be configured for the Kubernetes-related RPM package. You can view the [openEuler Forum](https://forum.openeuler.org/t/topic/768) and reconfigure the EPOL source in the environment.
 
 ### 6. Why does Kmesh report an error and exit when the Kmesh service is started?
 
 ![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Kmesh/figures/not_set_cluster_ip.png)
 
-Check whether the IP address of the control plane program is correctly configured. In cluster startup mode, the Kmesh service needs to communicate with the control plane program and obtain configuration information from the control plane.Therefore, you need to set the correct IP address of the control plane program. This is done through cluster startup mode in [**Installation and Deployment**](https://docs.openeuler.org/en/docs/24.03_LTS/docs/Kmesh/installation-and-deployment.html).
+Check whether the IP address of the control plane program is correctly configured. In cluster startup mode, the Kmesh service needs to communicate with the control plane program and obtain configuration information from the control plane.Therefore, you need to set the correct IP address of the control plane program. This is done through cluster startup mode in [**installation and deployment**](https://docs.openeuler.org/en/docs/24.03_LTS/docs/Kmesh/installation-and-deployment.html).
 
 ### 7. Why is the message "get kube config error!" displayed when the Kmesh service is started?
 

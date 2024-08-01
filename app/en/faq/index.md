@@ -138,17 +138,12 @@ openEuler ensures security by providing the following comprehensive security fea
 
 Operating system noise includes non-application computing tasks executed during service running, such as:
 
-1. System/User-mode daemon processes
-
-2. Interrupt processing
-
-3. Processes in user mode or kernel
-
-4. Memory management and scheduling overhead
-
-5. Non-computing tasks in service applications (e.g., monitoring logs and thread communication)
-
-6. Resource competition (e.g., cache misses and page faults)
+- System/User-mode daemon processes
+- Interrupt processing
+- Processes in user mode or kernel
+- Memory management and scheduling overhead
+- Non-computing tasks in service applications (e.g., monitoring logs and thread communication)
+- Resource competition (e.g., cache misses and page faults)
 
 ### 19. Where can I find common repo sources for openEuler?
 
@@ -180,10 +175,11 @@ To solve this issue:
 1. Log in to openEuler as the **root** user.
 2. Check and restore files by using the file system check \(fsck\) tool, and reboot openEuler.
 
-    >![fig](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/public_sys-resources/icon-note.gif) **NOTE:**
-    >The fsck tool checks and maintains inconsistent file systems. In case of power-off or drive issues, fsck commands can be used to check file systems. Run the **fsck.ext3 -h** or **fsck.ext4 -h** commands to view the usage instructions for fsck.
+    >![fig](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/public_sys-resources/icon-note.gif) **NOTE**
+    
+     >The fsck tool checks and maintains inconsistent file systems. In case of power-off or drive issues, fsck commands can be used to check file systems. Run the `fsck.ext3 -h` and `fsck.ext4 -h` commands to view the usage instructions for fsck.
 
-To cancel drive mounting timeouts, add  **x-systemd.device-timeout=0** to the **etc/fstab** file. For example:
+To cancel drive mounting timeouts, add  **x-systemd.device-timeout=0** to the **`etc/fstab`** file. For example:
 
 ```sh
 #
@@ -199,9 +195,9 @@ UUID=afcc811f-4b20-42fc-9d31-7307a8cfe0df /boot ext4 defaults,x-systemd.device-t
 /dev/mapper/openEuler-swap swap swap defaults 0 0
 ```
 
-### 22. What should I do when openEuler fails to reinstall due to drive failure caused by inactive logical volume groups?
+### 22. What should I do when openEuler fails to reinstall due to drive failure caused by inactivated logical volume groups?
 
-Before reinstalling openEuler, any inactivate logical volume groups must be restored to a normal state or clear them to avoid exceptions during the reinstallation process. For example:
+Before reinstalling openEuler, any inactivated logical volume groups must be restored to a normal state or clear them to avoid exceptions during the reinstallation process. For example:
 
 - Restore the logical volume group.
 
@@ -243,7 +239,7 @@ If you encounter the message "Error checking software selection," it may indicat
 
 ### 24. How do I enable the kdump service?
 
-Reserved memory is necessary for running the kdump kernel. If the output of `systemctl status kdump` indicates no reserved memory, follow the steps below to reserve it.
+Reserved memory is necessary for running the kdump kernel. If the output of `systemctl status kdump` is "No memory reserved for crash kernel", follow the steps below to reserve it.
 
 ![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/zh-cn_image_0229291280.png)
 
@@ -275,7 +271,8 @@ To use the drive, delete the volume group corresponding to the logical volume fi
     ![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/zh-cn_image_0231657950.png)
 2. Run `vgremove euleros` to delete the volume group.
 3. Run `systemctl restart anaconda` to restart the system for the modification to take effect.
-    >![fig](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/public_sys-resources/icon-note.gif) **NOTE:**
+    >![fig](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/public_sys-resources/icon-note.gif) **NOTE**
+
     >You can also press **Ctrl**+**Alt**+**F6** to return to the GUI and click **Refresh** in the lower right corner to update the storage configuration.
 
 ### 26. What should I do if I cannot install openEuler on an x86 physical machine due to the BIOS security boot option?
@@ -291,7 +288,7 @@ To proceed with the installation, disable secure boot:
 1. Press **F11** as the system starts up and input the password **Admin@9000** to enter the BIOS.
 
     ![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/BIOS.png)
-2. Select to **Administer Secure Boot**.
+2. Select **Administer Secure Boot**.
 
     ![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/security.png)
 3. Set **Enforce Secure Boot** to **Disabled**.
@@ -301,7 +298,7 @@ To proceed with the installation, disable secure boot:
 
 ### 27. How should I address the appearance of "pmie_check failed in /usr/share/pcp/lib/pmie" in the "messages" logs following the openEuler installation with the "Server - Performance tools" software option?
 
-The Anaconda installer, used during openEuler installation, cannot install SELinux policy modules within its chroot environment. Consequently, when the "Server - Performance tools" option installs PCP-related software packages, including pcp-selinux, a necessary SELinux policy module is not applied, resulting in an error.
+The Anaconda installer, used during openEuler installation, cannot install SELinux policy modules within its chroot environment. Consequently, when the "Server - Performance tools" option installs PCP-related software packages, including `pcp-selinux`, the necessary SELinux policy module is not applied, resulting in an error.
 To resolve this issue, execute one of the following commands after installing and restarting openEuler:
 
 - Install the pcpupstream SELinux policy module directly:
@@ -348,9 +345,9 @@ By removing the **reset_devices** parameter, you prevent the device reset operat
 
 This could be due to:
 
-1.Incomplete image. Verify the integrity of the downloaded image.
+1. Incomplete image. Verify the integrity of the downloaded image.
 
-2.Corruption during image writing, especially on Windows. Try writing it on another OS.
+2. Corruption during image writing, especially on Windows. Try writing it on another OS.
 
 ### 31. Why can't I connect to Wi-Fi using the `nmcli` command?
 
@@ -381,6 +378,10 @@ TensorFlow 2.12.1 installation may fail if dependencies are not updated to suppo
     1. Use `pip3` for some dependencies: `pip3 install tensorflow-estimator==2.12.0 keras==2.12.0 protobuf==3.20.3`
     2. Use `yum` for other dependencies: `yum install python3-termcolor python3-future python3-numpy python3-six python3-astunparse python3-google-pasta python3-opt-einsum python3-typing-extensions python3-wrapt python3-h5py python3-grpcio python3-absl-py python3-flatbuffers python3-gast`
 4. Use `yum` to install related packages, for example, `yum install python-keras-rl2`.
+
+### 33. Does openEuler support Btrfs, bcachefs, and ZFS?
+
+openEuler currently supports Btrfs but it's worth noting that Btrfs support may change in the future due to relatively low user engagement. If you have feedback or suggestions, consider subscribing to our kernel SIG mailing list at kernel@openeuler.org [here](https://mailweb.openeuler.org/postorius/lists/kernel@openeuler.org/) to share your thoughts.
 
 <p style="margin-top:32px">
 
