@@ -70,9 +70,9 @@ Additionally, during the migration, it is important to perform necessary data ba
 
 The x2openEuler migration tool provided by the openEuler community is primarily used for migration assessment and has the following functions:
 
-1. Software assessment: It assesses various applications (such as RPM, TAR, ZIP, GZIP, JAR, PY, PYC, SH, BIN, etc.) by scanning the dependent software package list and generates assessment reports in HTML format.
-2. Configuration collection and assessment: It supports the collection of user environment data and generates JSON files. This includes hardware configurations, configuration interfaces, kernel option configurations, system configurations (**sysctl**, **proc**, and **sys**), environment variables, services, processes, ports, command interfaces, system call items, and device driver interfaces. Then, it completes configuration analysis and assessment.
-3. Hardware assessment: It evaluates the compatibility of the server and boards (such as RAID, NIC, FC, IB, GPU, SSD, TPM, etc.) with openEuler's compatibility list.
+- Software assessment: It assesses applications in various formats, including RPM, TAR, ZIP, GIP, and JAR packages, Python scripts, shell scripts, and binary files by scanning the dependent software package list, and generates assessment reports in HTML format.
+- Configuration collection and assessment: It supports the collection of user environment data and generates JSON files. This includes hardware configurations, configuration interfaces, kernel option configurations, system configurations (**sysctl**, **proc**, and **sys**), environment variables, services, processes, ports, command interfaces, system call items, and device driver interfaces. Then, it completes configuration analysis and assessment.
+- Hardware assessment: It evaluates the compatibility of the server and boards (such as RAID, NIC, FC, IB, GPU, SSD, TPM, etc.) with openEuler's compatibility list.
 These functions help you identify potential compatibility issues before migration to ensure a smooth migration process.
 
 ### 8. How do I prepare the environment and check the prerequisites for VM live migration?

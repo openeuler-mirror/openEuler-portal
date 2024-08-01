@@ -175,9 +175,9 @@ To resolve this downgrading failure, run the following command to uninstall the 
 yum remove xfsprogs-xfs_scrub
 ```
 
-### 14. What are the symptoms of CVE-2019-9674 and how does it affect systems? How can I prevent it from happening?
+### 14. How do I deal with CVE-2019-9674?
 
-CVE-2019-9674 refers to a vulnerability found in CPython versions 3.7.2 and earlier related to ZIP files. Attackers can exploit this vulnerability by sending ZIP bombs, which are compressed files that, when extracted, consume excessive system resources, resulting in high resource usage and leading to denial-of-service (DoS) conditions. To address this issue, it is recommended to add the alarm information to zipfile at https://github.com/python/cpython/blob/3.7/Doc/library/zipfile.rst.
+CVE-2019-9674 refers to a vulnerability found in Python versions 3.7.2 and earlier related to ZIP files. Attackers can exploit this vulnerability by sending ZIP bombs, which are compressed files that, when extracted, consume excessive system resources, resulting in high resource usage and leading to denial-of-service (DoS) conditions. To address this issue, it is recommended to add the alarm information to [zipfile](https://github.com/python/cpython/blob/3.7/Doc/library/zipfile.rst).
 
 ### 15. Why does improper use of glibc regular expressions cause ReDoS attacks?
 
@@ -195,39 +195,44 @@ Segmentation fault (core dumped)
 $ time python -c 'print "a"*40900' | grep -E "(a)\\1"
 Segmentation fault (core dumped)
 ```
-The possible causes of this issue and the solutions are as follows:
+The possible causes may be:
 
 A core dump occurs on the process that uses the regular expression. The glibc regular expression is implemented using the NFA/DFA hybrid algorithm. The internal principle is to use a greedy algorithm for recursive query to match as many character strings as possible. The greedy algorithm causes the ReDoS attack when processing the recursive regular expression.
 
-To enhance security, it is crucial to implement strict permission controls to minimize the attack surface. Additionally, always verify that your regular expression is valid and avoid using invalid expressions or excessively long character strings combined with regular expressions (such as references or asterisks) that could lead to infinite recursion. For example, avoid patterns like # ()(\1\1)* or "a"*400000. Furthermore, a user program should be designed in such a way that when it detects a process exception, it automatically restarts the process to restore services, thereby improving the overall reliability of the program.
+To solve this issue:
+1. Implement strict permission controls to minimize the attack surface. 
+2. Always verify that your regular expression is valid and avoid using invalid expressions or excessively long character strings combined with regular expressions (such as references or asterisks) that could lead to infinite recursion. 
+   ```text
+   # ()(\1\1)*
+   # "a"*400000
+   ```
+3. After a user program detects a process exception, the program will restart the process to restore services, improving the overall reliability of the program.
 
-### 16. Why do I encounter an error when installing or uninstalling gdbm-devel-1.18.1-1 while setting up httpd-devel and apr-util-devel software packages, and how can I fix it?
+### 16. Why do I encounter an error when installing or uninstalling **gdbm-devel-1.18.1-1** while setting up **httpd-devel** and **apr-util-devel** software packages, and how can I fix it?
 
-Usually this error is fixed after upgrading both gdbm and **gdbm-devel** to version 1.18.1-2. However, the default version of gdbm-devel remains 1.18.1-1 when installing other packages. Therefore, the error persists. The likely reason for this issue is that the **gdbm-devel-1.18.1-1** package lacks a necessary help package. Because of this, when **gdbm-devel** is installed independently, the required information package cannot be included, resulting in a warning message stating:
-    ```text
-    install-info: No such file or directory for /usr/share/info/gdbm.info.gz
-    ```
-By default, the gdbm-1.18.1-1 main package is installed in the system, but the **gdbm-devel** package is not installed. The software packages depending on gdbm-devel still match the version of the gdbm main package and install **gdbm-devel-1.18.1-1**. As a result, the error persists.
+The likely reason for this issue is that the **gdbm-devel-1.18.1-1** package lacks a necessary help package. Because of this, when **gdbm-devel** is installed independently, the required information package cannot be included, resulting in a warning message stating:
+```text
+install-info: No such file or directory for /usr/share/info/gdbm.info.gz
+```
+By default, the **gdbm-1.18.1-1** main package is installed in the system, but the **gdbm-devel** package is not installed. The software packages depending on **gdbm-devel** still match the version of the **gdbm** main package and install **gdbm-devel-1.18.1-1**. As a result, the error persists.
 
-To resolve the issue, first upgrade the **gdbm** package to version gdbm-1.18.1-2, which will remove the warning message after installing the relevant software packages.
+To solve the issue, first upgrade the **gdbm** package to version **gdbm-1.18.1-2**, which will remove the warning message after installing the relevant software packages.
 
-Next, after upgrading **gdbm**, install the **gdbm-devel** package, ensuring it relies on the higher version of the **gdbm package**. This step will also eliminate the warning message.
+Next, after upgrading **gdbm**, install the **gdbm-devel** package, ensuring it relies on the higher version of the **gdbm** package, hence eliminating the warning message.
 
 ### 17. How can I fix the rpmdb error when running the `yum` or `dnf` command after rebooting my system?
 
-When you encounter an error as follows:
 ```
 error: db5 error(-30973) from dbenv->open: BDB0087 DB_RUNRECOVERY: Fatal error, run database recovery
 error: cannot open Packages index using db5 - (-30973)
 error: cannot open Packages database in /var/lib/rpm
 Error: Error: rpmdb open failed
 ```
-This issue occurs because during an installation or upgrade, read and write operations are performed on the **/var/lib/rpm/__db.00\*** file. If an unexpected interruption such as a forced power-off, insufficient disk space, or executing `kill -9` occurs, the **_db** file becomes corrupted, resulting in errors when running `dnf` or `yum` commands.
 
-To fix this issue, please perform the following steps:
+When you encounter an error as above, please perform the following steps:
 
 1. Run the `kill -9` command to terminate all running RPM-related commands.
-2. Run `rm -rf /var/lib/rpm/__db.00*` to delete all `db.00` files.
+2. Run `rm -rf /var/lib/rpm/__db.00*` to delete all **`db.00`** files.
 3. Run the `rpmdb --rebuilddb` command to rebuild the RPM database.
 
 ### 18. Why does the `rpmrebuild -d /home/test filesystem` command fail to rebuild the **filesystem** package, and how can I fix it?
@@ -238,26 +243,30 @@ When attempting to run the `rpmrebuild --comment-missing=y --keep-perm -b -d /ho
 /usr/lib/rpmrebuild/rpmrebuild.sh:Error:(RpmBuild) Package 'filesystem-3.16-3.oe1.aarch64' build failed.
 /usr/lib/rpmrebuild/rpmrebuild.sh:Error: RpmBuild
 ```
-The issue arises because the software package creates the directory in the **%pretrans -p** phase and modifies it in the **%ghost* phase. If you create a file or directory in this directory and use `rpmrebuild` to build the package, the created file or directory will be included in the package. However, 
+The issue arises because the software package creates a directory in the **%pretrans -p** phase and modifies it in the **%ghost** phase. If you create a file or directory in this directory and use `rpmrebuild` to build the package, the created file or directory will be included in the package. However, 
  `rpmrebuild` cannot include these processes in the package because they are not files or directories, leading to the failure of the package rebuild.
 
 The recommended solution is not to use ` rpmrebuild ` to rebuild the **filesystem** package.
 
 ### 19. An error is reported when `modprobe ` or `insmod` is executed with the `-f ` option. What can I do to resolve it?
 
-The issue arises because the Linux kernel added support for compressed modules in version 5.17, but kmod doesn't fully support this. `modprobe` and `insmod` use the `finit_module()` system call to load uncompressed ko files. However, for compressed ko files, kmod uses the `init_module()` system call to decompress them. `init_module()` does not take the ignore check flag. As a result, `mod_verify_sig()` is always executed by the kernel. The `-f` option of `modprobe` and `insmod` changes verification information about the ko file, resulting in verification failure of `mod_verify_sig()`. To avoid this error, don't use the `-f` option when loading compressed modules with `insmod` or `modprobe`.
+The issue arises because the Linux kernel added support for compressed modules in version 5.17, but kmod doesn't fully support this. `modprobe` and `insmod` use the `finit_module()` system call to load uncompressed ko files. However, for compressed ko files, kmod uses the `init_module()` system call to decompress them. `init_module()` does not take the ignore check flag. As a result, `mod_verify_sig()` is always executed by the kernel. The `-f` option of `modprobe` and `insmod` changes verification information about the ko file, resulting in verification failure of `mod_verify_sig()`. To avoid this error, it is best to avoid using the `-f` option when loading compressed modules with `insmod` or `modprobe`.
 
 ### 20. What should I do if the related process does not recover after a hot upgrade?
 
-First, check if the NVWA service is running. If it’s running, there are two things that might have happened: either the service didn’t manage to recover, or the process itself ran into some trouble. If the service won't start, ensure it is enabled and then run the `systemd` command to view the logs of the corresponding service. Additional logs can be found in the process or service folder named after the path specified by **criu_dir**. The dump.log file contains the logs generated when the running information is retained, and the restore.log file contains the logs generated for process recovery.
+1. Check whether the nvwa service is running. If the nvwa service is running, the service or process may fail to be recovered.
+2. Run the `service nvwa status` command to view the nvwa logs. 
+3. If the service fails to be started, check whether the service is enabled, and then run the `systemd` command to view the logs of the corresponding service. Additional logs are stored in the process or service folder named after the path specified by **criu_dir**. The **`dump.log`** file contains the logs generated when the running information is retained, and the **`restore.log`** file contains the logs generated for process recovery.
 
-### 21. Why does recovery fail and the log displays "Can't fork for 948: File exists."?
+### 21. Why does the recovery fail, displaying the log message "Can't fork for 948: File exists"?
 
 This error occurs because the program's PID is already in use during recovery. Currently, you need to manually restart the affected processes to resolve the issue.
 
-### 22. When the `nvwa` command is used to save and recover a simple program (such as “hello world”), the system displays a message indicating that the operation fails or the program is not running. Why does this occur and how to resolve it?
+### 22. When the nvwa command is used to save and recover a simple program (such as "hello world"), the system displays a message indicating that the operation fails or the program is not running. Why does this occur and how to resolve it?
 
-There are many restrictions on the use of CRIU. Check the NVWA logs for errors. If the issue is related to CRIU, check the dump.log or restore.log files in the corresponding directory. For more details on CRIU usage restrictions, visit [CRIU Wiki](https://criu.org/What_cannot_be_checkpointed).
+This mainly because there are many restrictions on the use of CRIU. 
+
+To solve this issue, check the nvwa logs. If the errors are related to CRIU, examine the ` dump.log`  or ` restore.log`  in the corresponding directory. For information on CRIU usage limitations, refer to the [CRIU Wiki](https://criu.org/What_cannot_be_checkpointed).
 
 ### 23. Why does the train command fail to train a model and the message "training data failed" is displayed?
 
