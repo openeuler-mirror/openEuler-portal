@@ -22165,25 +22165,6 @@
         "downloadLink": "inbox"  
     },
     {
-        "vendorID": "0f",
-        "deviceID": "340b",
-        "svID": "1f0f",
-        "ssID": "1",
-        "architecture": "x86_64",
-        "os": "openEuler 22.03 LTS SP1",
-        "driverName": "nbl_core",
-        "version": "version: 3-3.1.113.1",
-        "type": "智能网卡",
-        "date": "2024-7-15",
-        "sha256": "53a837d25c48aa252fe4c5061e81f9cf57a89b42c85f44b8e8af7c44bba45854",
-        "driverSize": "35631960",
-        "chipVendor": "星云智联",
-        "boardModel": "S1055AS 2*25GbE",
-        "chipModel": "M18105",
-        "item": "",
-        "downloadLink": "inbox"
-    },
-    {
         "vendorID": "8088",
         "deviceID": "1001",
         "svID": "8088",
@@ -24724,7 +24705,7 @@
         "sha256": "2c1310d90ee68e4db89b9259e10bfc08cb346b069e3bbc34c569a345b4671260",
         "driverSize": "84K",
         "chipVendor": "NebulaMatrix",
-        "boardModel": "S1055AS",
+        "boardModel": "S1055AS 2*25G",
         "chipModel": "M18105",
         "item": "",
         "downloadLink": "inbox"
