@@ -20,7 +20,7 @@ import IconDownload from '~icons/app/icon-download.svg';
 
 ## 可获得哪些赋能支持
 
-<a href='/whitepaper/openEuler%20%E7%A4%BE%E5%8C%BA%E4%BB%8B%E7%BB%8D.pdf'>
+<a href='/whitepaper/openEuler%20开源社区介绍.pdf'>
 <OButton
   class="case-download"
   type="outline"

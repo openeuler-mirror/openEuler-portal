@@ -1,4 +1,4 @@
-import caizhimin from '@/assets/category/organization/caizhimin.png';
+import yuping from '@/assets/category/organization/yuping.png';
 import gaopei from '@/assets/category/organization/gaopei.png';
 import hannaiping from '@/assets/category/organization/hannaiping.png';
 import jiangdayong from '@/assets/category/organization/jiangdayong.png';
@@ -13,7 +13,6 @@ import zhongxin from '@/assets/category/organization/zhongxin.png';
 import yangjiguo from '@/assets/category/organization/yangjiguo.png';
 
 import huxinwei from '@/assets/category/organization/huxinwei.png';
-import weijiangang from '@/assets/category/organization/weijiangang.png';
 import caozhi from '@/assets/category/organization/caozhi.png';
 import chenqide from '@/assets/category/organization/chenqide.png';
 import houjian from '@/assets/category/organization/houjian.png';
@@ -148,11 +147,7 @@ export default {
           {
             title: '委员',
             personalList: [
-              {
-                img: caizhimin,
-                name: '蔡志旻',
-                position: ['江苏润和软件股份有限公司'],
-              },
+
               {
                 img: gaopei,
                 name: '高培',
@@ -172,6 +167,11 @@ export default {
                 img: yangjiguo,
                 name: '杨继国',
                 position: ['英特尔（中国）有限公司'],
+              },
+              {
+                img: yuping,
+                name: '于萍',
+                position: ['江苏润和软件股份有限公司'],
               },
               {
                 img: zhangshenju,
@@ -583,11 +583,7 @@ export default {
           {
             title: 'Committee Members',
             personalList: [
-              {
-                img: caizhimin,
-                name: 'Cai Zhimin',
-                position: ['Jiangsu HopeRun Software Co., Ltd.'],
-              },
+
               {
                 img: gaopei,
                 name: 'Gao Pei',
@@ -609,6 +605,11 @@ export default {
                 img: yangjiguo,
                 name: 'Yang Jiguo',
                 position: ['Intel China Ltd.'],
+              },
+              {
+                img: yuping,
+                name: 'Yu Ping',
+                position: ['Jiangsu HopeRun Software Co., Ltd.'],
               },
               {
                 img: zhangshenju,
