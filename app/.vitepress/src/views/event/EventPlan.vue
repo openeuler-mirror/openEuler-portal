@@ -75,48 +75,18 @@ const yearPlan = computed(() => {
               :class="['month' + item.month]"
               class="layout"
             >
-              <!-- 社区峰会、成员单位会议、开源项目 -->
-              <template v-if="yearPlan[key].id !== 'developer'">
-                <div v-for="it in item.actives" :key="it" class="event-box">
+              <!-- 社区峰会、成员单位会议、开源项目、开发者活动 -->
+                <component  :is="it.href ? 'a':'div'" :href="it.href" :target="it.href ? '_blank':null" v-for="it in item.actives" :key="it" class="event-box">
                   <div class="event-item">
                     <li></li>
                     <p class="location">
                       {{ it.location }}
                     </p>
-                    <a
-                      v-if="it.href"
-                      :key="it.href"
-                      :href="it.href"
-                      target="_blank"
-                      >{{ it.activeName }}</a
-                    >
-                    <p v-else>
+                    <p >
                       {{ it.activeName }}
                     </p>
                   </div>
-                </div>
-              </template>
-              <!-- 开发者活动  需要添加tab-->
-              <template v-if="yearPlan[key].id === 'developer'">
-                <div v-for="it in item.actives" :key="it" class="event-box">
-                  <div class="event-item">
-                    <li></li>
-                    <p class="location">
-                      {{ it.location }}
-                    </p>
-                    <a
-                      v-if="it.href"
-                      :key="it.href"
-                      :href="it.href"
-                      target="_blank"
-                      >{{ it.activeName }}</a
-                    >
-                    <p v-else>
-                      {{ it.activeName }}
-                    </p>
-                  </div>
-                </div>
-              </template>
+                </component>
             </div>
           </div>
           <div v-if="yearPlan[key].id === 'opensource'" class="otherlink">
@@ -188,10 +158,10 @@ const yearPlan = computed(() => {
               :class="['edit-' + edit.month]"
               class="layout-edition"
             >
-              <div class="edition-item">
+              <component :is="edit.href ? 'a':'div'" :href="edit.href ? `/${lang}${edit.href}`:null" :target="edit.href ? '_blank':null"  class="edition-item">
                 <p class="edition-time">{{ edit.time }}</p>
                 <p class="edition-content">{{ edit.content }}</p>
-              </div>
+              </component>
             </div>
           </div>
         </div>
@@ -362,6 +332,14 @@ $lineLeft: calc($titleboxWidth);
       width: 100%;
       display: flex;
       flex-direction: row;
+      a {
+        cursor: pointer;
+        &:hover {
+          p:not(.location) {
+            color:var(--o-color-brand1)
+          }
+        }
+      }
     }
     .collegee {
       background-color: var(--o-color-fill2);
@@ -390,9 +368,6 @@ $lineLeft: calc($titleboxWidth);
         a:hover {
           color: var(--o-color-brand1);
         }
-        p {
-          cursor: default;
-        }
         .internship {
           margin-left: 40px;
         }
@@ -411,6 +386,7 @@ $lineLeft: calc($titleboxWidth);
     .event-box {
       position: relative;
       padding: 8px;
+      display: inline-block;
       min-width: $eventboxWidth;
       &:not(:first-child) {
         margin-top: 8px;
@@ -420,7 +396,6 @@ $lineLeft: calc($titleboxWidth);
         font-size: var(--o-font-size-h8);
         line-height: var(--o-line-height-text);
         font-weight: 500;
-        cursor: default;
       }
       .event-item {
         display: flex;
@@ -448,9 +423,6 @@ $lineLeft: calc($titleboxWidth);
         .location {
           margin-top: 0;
         }
-        p {
-          cursor: default;
-        }
         a {
           &:hover {
             color: var(--o-color-brand1);
@@ -471,7 +443,6 @@ $lineLeft: calc($titleboxWidth);
         color: #a358ff;
         padding: 0 4px;
         margin: 4px 0;
-        cursor: default;
       }
     }
     .active-box {
@@ -607,9 +578,18 @@ $lineLeft: calc($titleboxWidth);
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          color: var(--o-color-text1);
+
           p {
             font-size: var(--o-font-size-tip);
             white-space: nowrap;
+          }
+        }
+        a {
+          &:hover {
+            .edition-content {
+              color: var(--o-color-brand1)
+            }
           }
         }
       }
