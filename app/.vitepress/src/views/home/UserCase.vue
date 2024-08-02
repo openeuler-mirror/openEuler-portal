@@ -30,7 +30,7 @@ const jumpTo = (path: string, industry?: number) => {
       '_blank'
     );
   } else {
-    window.open(path.replace(/(index)$/g, ''), '_blank');
+    window.open('/' + path.replace(/(index)$/g, ''), '_blank');
   }
 };
 
