@@ -22,12 +22,12 @@ const commonStore = useCommon();
 </template>
 <style lang="scss" scoped>
 .icon-tips {
-  color: var(--e-color-text4);
+  color: var(--o-color-text4);
   display: flex;
   align-items: center;
   height: min-content;
   .o-icon {
-    font-size: var(--e-font-size-h6);
+    font-size: var(--o-font-size-h6);
   }
 }
 </style>

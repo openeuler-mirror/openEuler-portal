@@ -131,19 +131,19 @@ onMounted(async () => {
   z-index: 10;
 }
 h3 {
-  font-size: var(--e-font-size-h3);
+  font-size: var(--o-font-size-h3);
   font-weight: 300;
-  color: var(--e-color-text1);
-  line-height: var(--e-line-height-h3);
+  color: var(--o-color-text1);
+  line-height: var(--o-line-height-h3);
   width: 100%;
   text-align: center;
-  margin-top: var(--e-spacing-h1);
-  margin-bottom: var(--e-spacing-h2);
+  margin-top: var(--o-spacing-h1);
+  margin-bottom: var(--o-spacing-h2);
   @media (max-width: 768px) {
-    font-size: var(--e-font-size-h8);
-    line-height: var(--e-line-height-h8);
-    margin-top: var(--e-spacing-h2);
-    margin-bottom: var(--e-spacing-h5);
+    font-size: var(--o-font-size-h8);
+    line-height: var(--o-line-height-h8);
+    margin-top: var(--o-spacing-h2);
+    margin-bottom: var(--o-spacing-h5);
   }
 }
 
@@ -151,13 +151,13 @@ html[lang='zh'] .partner {
   margin-bottom: 0;
 }
 .rank-tip {
-  margin: var(--e-spacing-h5) 0 var(--e-spacing-h4);
+  margin: var(--o-spacing-h5) 0 var(--o-spacing-h4);
   text-align: center;
-  font-size: var(--e-font-size-tip);
+  font-size: var(--o-font-size-tip);
   font-weight: 400;
-  color: var(--e-color-text1);
+  color: var(--o-color-text1);
   @media screen and (max-width: 768px) {
-    margin: var(--e-spacing-h7) 0 var(--e-spacing-h6);
+    margin: var(--o-spacing-h7) 0 var(--o-spacing-h6);
   }
 }
 </style>

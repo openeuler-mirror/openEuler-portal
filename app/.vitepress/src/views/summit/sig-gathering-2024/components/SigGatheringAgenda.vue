@@ -72,8 +72,8 @@ const isDark = computed(() => {
       line-height: 30px;
       font-weight: 500;
       @media (max-width: 767px) {
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
         padding-bottom: 4px;
       }
     }
@@ -82,13 +82,13 @@ const isDark = computed(() => {
 .agenda-date {
   opacity: 0.25;
   font-size: 32px;
-  color: var(--e-color-brand1);
+  color: var(--o-color-brand1);
   font-weight: 900;
   position: absolute;
   top: 0;
   right: 0;
   @media (max-width: 767px) {
-    font-size: var(--e-font-size-h8);
+    font-size: var(--o-font-size-h8);
   }
 }
 </style>

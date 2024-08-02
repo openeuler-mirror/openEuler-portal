@@ -45,16 +45,16 @@ defineProps({
 <style lang="scss" scoped>
 .framelist-wrapper {
   .info {
-    box-shadow: var(--e-shadow-l1);
-    padding: var(--e-spacing-h2) 0;
-    background-color: var(--e-color-bg2);
+    box-shadow: var(--o-shadow-l1);
+    padding: var(--o-spacing-h2) 0;
+    background-color: var(--o-color-bg2);
   }
   .desc {
-    margin: 0 var(--e-spacing-h2) var(--e-spacing-h2) var(--e-spacing-h2);
+    margin: 0 var(--o-spacing-h2) var(--o-spacing-h2) var(--o-spacing-h2);
     p {
-      font-size: var(--e-font-size-text);
-      color: var(--e-color-text1);
-      line-height: var(--e-line-height-text);
+      font-size: var(--o-font-size-text);
+      color: var(--o-color-text1);
+      line-height: var(--o-line-height-text);
     }
     &-title {
       margin-top: 24px;
@@ -98,18 +98,18 @@ defineProps({
   }
   @media screen and (max-width: 767px) {
     .info {
-      padding: var(--e-spacing-h5);
+      padding: var(--o-spacing-h5);
     }
     .desc {
       margin: 0;
       p {
-        font-size: var(--e-font-size-tip);
-        line-height: var(--e-line-height-tip);
-        margin-bottom: var(--e-spacing-h8);
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-tip);
+        margin-bottom: var(--o-spacing-h8);
       }
     }
     img {
-      margin-top: var(--e-spacing-h5);
+      margin-top: var(--o-spacing-h5);
       width: 100% !important;
     }
   }

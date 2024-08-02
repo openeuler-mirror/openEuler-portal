@@ -43,8 +43,8 @@ const props = withDefaults(
     margin: 0px -1px -1px 0px;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--e-color-division1);
-    background-color: var(--e-color-bg2);
+    border: 1px solid var(--o-color-division1);
+    background-color: var(--o-color-bg2);
     max-height: 120px;
     overflow: hidden;
     img {

@@ -114,32 +114,32 @@ onMounted(() => {
   }
 }
 .skip {
-  margin-top: var(--e-spacing-h5);
+  margin-top: var(--o-spacing-h5);
   cursor: pointer;
   span {
-    font-size: var(--e-font-size-text);
-    line-height: var(--e-line-height-text);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-text);
+    line-height: var(--o-line-height-text);
+    color: var(--o-color-text1);
     @media (max-width: 768px) {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
     }
   }
   p {
-    font-size: var(--e-font-size-h8);
-    line-height: var(--e-line-height-h8);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h8);
+    line-height: var(--o-line-height-h8);
+    color: var(--o-color-text1);
     margin: 0;
     display: inline-block;
 
     @media (max-width: 768px) {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
     }
   }
   p:hover {
     @media (min-width: 1100px) {
-      color: var(--e-color-link2);
+      color: var(--o-color-link2);
     }
   }
 }

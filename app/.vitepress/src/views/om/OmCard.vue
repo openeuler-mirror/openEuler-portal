@@ -30,9 +30,9 @@ const cardStyle = computed(() => {
 <style lang="scss" scoped>
 .om-card-box {
   display: inline-block;
-  background-color: var(--e-color-kleinblue5);
-  color: var(--e-color-white);
-  font-size: var(--e-font-size-text);
+  background-color: var(--o-color-kleinblue5);
+  color: var(--o-color-white);
+  font-size: var(--o-font-size-text);
   text-align: center;
   box-sizing: border-box;
   padding: 12px;
@@ -44,7 +44,7 @@ const cardStyle = computed(() => {
   }
 
   .om-card-content {
-    background-color: var(--e-color-kleinblue9);
+    background-color: var(--o-color-kleinblue9);
     height: calc(100% - 26px);
     display: flex;
     justify-content: center;
@@ -55,8 +55,8 @@ const cardStyle = computed(() => {
 
   .om-card-item {
     min-width: 64px;
-    background-color: var(--e-color-kleinblue8);
-    font-size: var(--e-font-size-tip);
+    background-color: var(--o-color-kleinblue8);
+    font-size: var(--o-font-size-tip);
     line-height: 24px;
     padding: 0 5px;
     margin: 0 2px;

@@ -51,11 +51,11 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
 .info {
   text-align: center;
   margin-top: 24px;
-  color: var(--e-color-text1);
+  color: var(--o-color-text1);
   p,
   a {
-    font-size: var(--e-font-size-text);
-    line-height: var(--e-line-height-text);
+    font-size: var(--o-font-size-text);
+    line-height: var(--o-line-height-text);
   }
 }
 .right-main {
@@ -68,7 +68,7 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
   }
   .city-item {
     height: 264px;
-    background: var(--e-color-bg2);
+    background: var(--o-color-bg2);
     flex: 1;
     padding: 30px;
     display: flex;
@@ -81,7 +81,7 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
       padding: 24px;
     }
     &:hover {
-      box-shadow: var(--e-shadow-l1);
+      box-shadow: var(--o-shadow-l1);
     }
     img {
       max-width: 100%;
@@ -92,9 +92,9 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
       left: 0;
       width: 100%;
       text-align: center;
-      color: var(--e-color-text1);
-      font-size: var(--e-font-size-h6);
-      line-height: var(--e-line-height-h6);
+      color: var(--o-color-text1);
+      font-size: var(--o-font-size-h6);
+      line-height: var(--o-line-height-h6);
       @media screen and (max-width: 1100px) {
         bottom: 8px;
       }

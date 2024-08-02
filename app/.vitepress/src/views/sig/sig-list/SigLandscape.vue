@@ -45,18 +45,18 @@ onMounted(async () => {
 
 <style scoped lang="scss">
 .landscape {
-  margin-top: var(--e-spacing-h2);
+  margin-top: var(--o-spacing-h2);
 
   .landscape-group {
     & + .landscape-group {
-      margin-top: var(--e-spacing-h2);
+      margin-top: var(--o-spacing-h2);
     }
 
     .landscape-group-title {
-      font-size: var(--e-font-size-h7);
-      line-height: var(--e-line-height7);
-      margin-bottom: var(--e-spacing-h4);
-      color: var(--e-color-text1);
+      font-size: var(--o-font-size-h7);
+      line-height: var(--o-line-height7);
+      margin-bottom: var(--o-spacing-h4);
+      color: var(--o-color-text1);
     }
 
     &:nth-child(2) {

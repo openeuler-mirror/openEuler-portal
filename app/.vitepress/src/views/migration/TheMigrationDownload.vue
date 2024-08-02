@@ -107,48 +107,48 @@ function handleClick(item: LinkItem) {
 
 <style lang="scss" scoped>
 :deep(.el-card) {
-  margin-top: var(--e-spacing-h3);
+  margin-top: var(--o-spacing-h3);
   overflow: visible;
   .el-card__body {
     padding: 0;
   }
 }
 .migration-download {
-  color: var(--e-color-text1);
+  color: var(--o-color-text1);
 
   .migration-download-desc {
-    color: var(--e-color-text1);
-    font-size: var(--e-font-size-h7);
-    line-height: var(--e-line-height-h7);
+    color: var(--o-color-text1);
+    font-size: var(--o-font-size-h7);
+    line-height: var(--o-line-height-h7);
     font-weight: 300;
     margin-top: 0;
-    margin-bottom: var(--e-spacing-h1);
+    margin-bottom: var(--o-spacing-h1);
     @media screen and (max-width: 768px) {
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
-      margin-bottom: var(--e-spacing-h4);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
+      margin-bottom: var(--o-spacing-h4);
     }
   }
 
   h1 {
     font-weight: 300;
     text-align: center;
-    margin-bottom: var(--e-spacing-h2);
-    font-size: var(--e-font-size-h3);
-    line-height: var(--e-line-height-h3);
+    margin-bottom: var(--o-spacing-h2);
+    font-size: var(--o-font-size-h3);
+    line-height: var(--o-line-height-h3);
     @media screen and (max-width: 768px) {
-      margin: 0 0 var(--e-spacing-h4);
-      font-size: var(--e-font-size-h7);
-      line-height: var(--e-line-height-h7);
+      margin: 0 0 var(--o-spacing-h4);
+      font-size: var(--o-font-size-h7);
+      line-height: var(--o-line-height-h7);
     }
   }
 
   .migration-download-content {
     .download-desc {
-      font-size: var(--e-font-size-text);
+      font-size: var(--o-font-size-text);
       font-weight: 400;
-      color: var(--e-color-text4);
-      line-height: var(--e-line-height-text);
+      color: var(--o-color-text4);
+      line-height: var(--o-line-height-text);
     }
 
     .card-box {
@@ -167,20 +167,20 @@ function handleClick(item: LinkItem) {
         img {
           width: 109px;
           height: 74px;
-          margin-right: var(--e-spacing-h4);
+          margin-right: var(--o-spacing-h4);
         }
 
         .card-info {
-          font-size: var(--e-font-size-h5);
+          font-size: var(--o-font-size-h5);
           font-weight: 500;
-          color: var(--e-color-text1);
-          line-height: var(--e-line-height-h5);
+          color: var(--o-color-text1);
+          line-height: var(--o-line-height-h5);
           @media screen and (max-width: 1410px) {
-            font-size: var(--e-font-size-h7);
-            line-height: var(--e-line-height-h7);
+            font-size: var(--o-font-size-h7);
+            line-height: var(--o-line-height-h7);
           }
           .name {
-            margin-right: var(--e-spacing-h6);
+            margin-right: var(--o-spacing-h6);
           }
         }
       }
@@ -205,7 +205,7 @@ function handleClick(item: LinkItem) {
 
           .o-button {
             position: relative;
-            margin-right: var(--e-spacing-h4);
+            margin-right: var(--o-spacing-h4);
             ul {
               display: none;
               position: absolute;
@@ -213,9 +213,9 @@ function handleClick(item: LinkItem) {
               left: 60%;
               z-index: 1;
               width: 160px;
-              padding: var(--e-spacing-h5) 0;
-              background-color: var(--e-color-bg2);
-              border: 1px solid var(--e-color-brand1);
+              padding: var(--o-spacing-h5) 0;
+              background-color: var(--o-color-bg2);
+              border: 1px solid var(--o-color-brand1);
               @media screen and (max-width: 768px) {
                 top: -120px;
               }
@@ -223,14 +223,14 @@ function handleClick(item: LinkItem) {
                 cursor: pointer;
                 display: block;
                 margin: 0;
-                padding: var(--e-spacing-h8) 0;
+                padding: var(--o-spacing-h8) 0;
                 list-style: none;
                 text-align: center;
-                line-height: var(--e-line-height-h6);
-                color: var(--e-color-text1);
+                line-height: var(--o-line-height-h6);
+                color: var(--o-color-text1);
               }
               li:hover {
-                color: var(--e-color-brand1);
+                color: var(--o-color-brand1);
               }
             }
             @media screen and (max-width: 768px) {
@@ -238,7 +238,7 @@ function handleClick(item: LinkItem) {
               margin-bottom: 4px;
             }
             &:last-child {
-              margin-right: var(--e-spacing-h3);
+              margin-right: var(--o-spacing-h3);
               @media screen and (max-width: 440px) {
                 margin-right: 5px;
               }

@@ -174,7 +174,7 @@ const goTop = () => {
       }
       &.name {
         font-size: 16px;
-        color: var(--e-color-text1);
+        color: var(--o-color-text1);
         line-height: 24px;
       }
     }
@@ -185,9 +185,9 @@ const goTop = () => {
     }
     ul .active {
       & a > div {
-        color: var(--e-color-link2) !important;
+        color: var(--o-color-link2) !important;
         &.dot {
-          border-color: var(--e-color-link2);
+          border-color: var(--o-color-link2);
         }
       }
     }
@@ -203,7 +203,7 @@ const goTop = () => {
     .item {
       position: relative;
       margin-bottom: 24px;
-      box-shadow: var(--e-shadow-l3);
+      box-shadow: var(--o-shadow-l3);
     }
     .close {
       position: absolute;

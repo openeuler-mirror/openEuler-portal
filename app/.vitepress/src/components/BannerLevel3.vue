@@ -72,7 +72,7 @@ onMounted(() => {
     filter: brightness(0.8) grayscale(0.2) contrast(1.2);
   }
   .banner-level2 {
-    background-color: var(--e-color-kleinblue4);
+    background-color: var(--o-color-kleinblue4);
   }
 }
 .banner-level3 {
@@ -80,7 +80,7 @@ onMounted(() => {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--e-color-kleinblue6);
+  background-color: var(--o-color-kleinblue6);
 
   .banner-bg {
     position: absolute;
@@ -109,29 +109,29 @@ onMounted(() => {
       width: 50%;
       .banner-text-bg {
         position: absolute;
-        color: var(--e-color-white);
+        color: var(--o-color-white);
         opacity: 0.14;
-        font-size: var(--e-font-size-h3);
-        line-height: var(--e-line-height-h3);
+        font-size: var(--o-font-size-h3);
+        line-height: var(--o-line-height-h3);
         font-weight: bold;
 
         @media screen and (max-width: 1080px) {
-          font-size: var(--e-font-size-h4);
-          line-height: var(--e-line-height-h4);
+          font-size: var(--o-font-size-h4);
+          line-height: var(--o-line-height-h4);
         }
 
         @media screen and (max-width: 768px) {
-          font-size: var(--e-font-size-h6);
-          line-height: var(--e-line-height-h6);
+          font-size: var(--o-font-size-h6);
+          line-height: var(--o-line-height-h6);
         }
       }
       .banner-title {
         position: relative;
         z-index: 1;
-        color: var(--e-color-white);
-        font-size: var(--e-font-size-h3);
-        line-height: var(--e-line-height-h3);
-        margin-top: var(--e-spacing-h5);
+        color: var(--o-color-white);
+        font-size: var(--o-font-size-h3);
+        line-height: var(--o-line-height-h3);
+        margin-top: var(--o-spacing-h5);
         margin-bottom: 0;
         font-weight: bold;
 
@@ -140,33 +140,33 @@ onMounted(() => {
         }
 
         @media screen and (max-width: 1080px) {
-          font-size: var(--e-font-size-h4);
-          line-height: var(--e-line-height-h4);
+          font-size: var(--o-font-size-h4);
+          line-height: var(--o-line-height-h4);
         }
 
         @media screen and (max-width: 768px) {
-          font-size: var(--e-font-size-h6);
-          line-height: var(--e-line-height-h6);
-          margin-top: var(--e-spacing-h6);
+          font-size: var(--o-font-size-h6);
+          line-height: var(--o-line-height-h6);
+          margin-top: var(--o-spacing-h6);
         }
       }
 
       .banner-subtitle {
         position: relative;
         z-index: 1;
-        color: var(--e-color-white);
-        font-size: var(--e-font-size-h7);
-        line-height: var(--e-line-height-h7);
-        margin-top: var(--e-spacing-h10);
+        color: var(--o-color-white);
+        font-size: var(--o-font-size-h7);
+        line-height: var(--o-line-height-h7);
+        margin-top: var(--o-spacing-h10);
 
         @media screen and (max-width: 1080px) {
-          font-size: var(--e-font-size-h7);
-          line-height: var(--e-line-height-h7);
+          font-size: var(--o-font-size-h7);
+          line-height: var(--o-line-height-h7);
         }
 
         @media screen and (max-width: 768px) {
-          font-size: var(--e-font-size-tip);
-          line-height: var(--e-line-height-tip);
+          font-size: var(--o-font-size-tip);
+          line-height: var(--o-line-height-tip);
         }
       }
     }

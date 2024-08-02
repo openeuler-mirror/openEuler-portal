@@ -65,27 +65,27 @@ onUnmounted(() => {
 
 <style lang="scss">
 .el-dropdown__popper.is-light {
-  background-color: var(--e-color-bg2);
+  background-color: var(--o-color-bg2);
   border-radius: 0;
   .el-dropdown-menu__item:not(.is-disabled):focus {
-    background-color: var(--e-color-bg3);
+    background-color: var(--o-color-bg3);
   }
   .el-dropdown-menu {
-    background-color: var(--e-color-bg2);
+    background-color: var(--o-color-bg2);
   }
   .el-dropdown-menu__item {
     padding: 4px 8px;
   }
 }
 .o-dropdown {
-  --e-dropdown-height: 36px;
-  --e-dropdown-border-color: var(--e-color-border1);
-  --e-dropdown-font-color: var(--e-color-text1);
-  --e-dropdown-font-size: var(--e-font-size-text);
-  --e-dropdown-line-height: var(--e-line-height-text);
-  --e-dropdown-color-bg: var(--e-color-bg2);
+  --o-dropdown-height: 36px;
+  --o-dropdown-border-color: var(--o-color-border1);
+  --o-dropdown-font-color: var(--o-color-text1);
+  --o-dropdown-font-size: var(--o-font-size-text);
+  --o-dropdown-line-height: var(--o-line-height-text);
+  --o-dropdown-color-bg: var(--o-color-bg2);
   .o-search {
-    margin: 0 var(--e-spacing-h5);
+    margin: 0 var(--o-spacing-h5);
   }
 }
 .el-dropdown__popper {
@@ -99,15 +99,15 @@ onUnmounted(() => {
       cursor: default;
       display: flex;
       justify-content: center;
-      padding: var(--e-spacing-h9) var(--e-spacing-h5);
-      color: var(--e-color-text-secondary);
+      padding: var(--o-spacing-h9) var(--o-spacing-h5);
+      color: var(--o-color-text-secondary);
     }
 
     .search-box {
       position: sticky;
       top: 5px;
       margin-bottom: 5px;
-      background-color: var(--e-color-bg2);
+      background-color: var(--o-color-bg2);
       width: 100%;
       z-index: 1;
 
@@ -116,9 +116,9 @@ onUnmounted(() => {
         height: 40px;
 
         .el-input__wrapper {
-          box-shadow: 0 0 0 1px var(--e-color-border1) inset;
+          box-shadow: 0 0 0 1px var(--o-color-border1) inset;
           &:hover {
-            box-shadow: 0 0 0 1px var(--e-color-border1) inset;
+            box-shadow: 0 0 0 1px var(--o-color-border1) inset;
           }
           .el-input__prefix-inner {
             font-size: 18px;
@@ -131,12 +131,12 @@ onUnmounted(() => {
         height: 5px;
         width: 100%;
         top: -5px;
-        background-color: var(--e-color-bg2);
+        background-color: var(--o-color-bg2);
       }
     }
     .is-active {
       font-weight: 700;
-      color: var(--e-color-brand1);
+      color: var(--o-color-brand1);
     }
   }
 }

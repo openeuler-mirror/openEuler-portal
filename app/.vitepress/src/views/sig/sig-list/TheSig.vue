@@ -71,7 +71,7 @@ const handlerSigClick = (path: string) => {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   width: 100%;
-  margin-top: var(--e-spacing-h2);
+  margin-top: var(--o-spacing-h2);
   @media (max-width: 1100px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -85,34 +85,34 @@ const handlerSigClick = (path: string) => {
   }
 }
 .o-icon {
-  font-size: var(--e-font-size-h7);
-  color: var(--e-color-brand1);
+  font-size: var(--o-font-size-h7);
+  color: var(--o-color-brand1);
 }
 .sig-ul {
   padding-left: 16px;
-  font-size: var(--e-font-size-text);
+  font-size: var(--o-font-size-text);
   font-weight: 400;
-  line-height: var(--e-line-height-h8);
-  color: var(--e-color-text1);
+  line-height: var(--o-line-height-h8);
+  color: var(--o-color-text1);
   @media (max-width: 1100px) {
-    padding-left: var(--e-spacing-h5);
-    font-size: var(--e-font-size-tip);
+    padding-left: var(--o-spacing-h5);
+    font-size: var(--o-font-size-tip);
   }
   li {
     list-style: disc;
     + li {
-      margin-top: var(--e-spacing-h8);
+      margin-top: var(--o-spacing-h8);
     }
   }
 }
 .sig-list {
-  margin: var(--e-spacing-h2) auto 0;
+  margin: var(--o-spacing-h2) auto 0;
 
   p {
     display: none;
   }
   @media (max-width: 1100px) {
-    margin: var(--e-spacing-h2) auto 0;
+    margin: var(--o-spacing-h2) auto 0;
   }
 
   @media (max-width: 768px) {
@@ -122,7 +122,7 @@ const handlerSigClick = (path: string) => {
     }
     p {
       display: block;
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       text-align: center;
     }
   }

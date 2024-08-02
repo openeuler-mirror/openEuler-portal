@@ -53,9 +53,9 @@ const i18n = useI18n();
 .case-list {
   display: grid;
   width: 100%;
-  margin-top: var(--e-spacing-h4);
+  margin-top: var(--o-spacing-h4);
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: var(--e-spacing-h4);
+  grid-gap: var(--o-spacing-h4);
   &.center {
     justify-content: center;
     display: flex;
@@ -71,7 +71,7 @@ const i18n = useI18n();
   }
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: var(--e-spacing-h5);
+    grid-gap: var(--o-spacing-h5);
     padding: 0px;
   }
   .case-card {
@@ -88,15 +88,15 @@ const i18n = useI18n();
     .card-content-text {
       color: #ffffff;
       h4 {
-        font-size: var(--e-font-size-h7);
-        line-height: var(--e-line-height-h7);
+        font-size: var(--o-font-size-h7);
+        line-height: var(--o-line-height-h7);
         max-width: 256px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         @media (max-width: 768px) {
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
         }
       }
       .detail {
@@ -107,13 +107,13 @@ const i18n = useI18n();
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         margin-top: 2px;
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
         @media (max-width: 768px) {
           max-width: 190px;
           margin-top: 8px;
-          font-size: var(--e-font-size-tip);
-          line-height: var(--e-line-height-tip);
+          font-size: var(--o-font-size-tip);
+          line-height: var(--o-line-height-tip);
         }
       }
       a {
@@ -129,7 +129,7 @@ const i18n = useI18n();
 
           @media (max-width: 768px) {
             width: 88px;
-            font-size: var(--e-font-size-tip);
+            font-size: var(--o-font-size-tip);
           }
         }
       }
@@ -151,8 +151,8 @@ const i18n = useI18n();
       }
       .type {
         text-align: center;
-        font-size: var(--e-font-size-tip);
-        line-height: var(--e-line-height-tip);
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-tip);
         color: #ad9cd3;
       }
     }

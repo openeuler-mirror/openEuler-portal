@@ -270,7 +270,7 @@ watch(
   z-index: 999;
   width: 100%;
   .o-button {
-    --e-button-font-size-mini: 14px;
+    --o-button-font-size-mini: 14px;
   }
   .o-button + .o-button {
     margin-left: 16px;
@@ -285,7 +285,7 @@ watch(
 .cookie-notice-content {
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(5px);
-  box-shadow: var(--e-shadow-l1);
+  box-shadow: var(--o-shadow-l1);
 }
 .dark .cookie-notice-content {
   background-color: rgba(0, 0, 0, 0.9);
@@ -320,7 +320,7 @@ watch(
   .cookie-title {
     font-size: 16px;
     line-height: 28px;
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     font-weight: 500;
     @media (max-width: 840px) {
       font-size: 16px;
@@ -332,7 +332,7 @@ watch(
   .cookie-desc {
     font-size: 12px;
     line-height: 18px;
-    color: var(--e-color-text3);
+    color: var(--o-color-text3);
     margin-top: 8px;
   }
 }
@@ -365,9 +365,9 @@ watch(
   right: 24px;
   cursor: pointer;
   transform-origin: center;
-  color: var(--e-color-text1);
+  color: var(--o-color-text1);
   &:hover {
-    color: var(--e-color-brand1);
+    color: var(--o-color-brand1);
   }
 }
 
@@ -378,7 +378,7 @@ watch(
   }
   .el-dialog__title {
     font-size: 32px;
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     @media (max-width: 840px) {
       font-size: 22px;
     }
@@ -396,14 +396,14 @@ watch(
         .item-title {
           font-size: 18px;
           line-height: 32px;
-          color: var(--e-color-text1);
+          color: var(--o-color-text1);
           font-weight: 500;
         }
 
         .item-extra {
           font-size: 14px;
           line-height: 22px;
-          color: var(--e-color-text4);
+          color: var(--o-color-text4);
           margin-left: 24px;
         }
       }
@@ -411,7 +411,7 @@ watch(
       .item-detail {
         font-size: 16px;
         line-height: 28px;
-        color: var(--e-color-text3);
+        color: var(--o-color-text3);
         margin-top: 12px;
         @media (max-width: 840px) {
           font-size: 14px;

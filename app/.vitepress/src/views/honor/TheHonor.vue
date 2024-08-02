@@ -304,33 +304,33 @@ function clickDetail(index: number) {
       cursor: pointer;
 
       .o-timeline-day {
-        font-size: var(--e-font-size-h6);
-        color: var(--e-color-text4);
-        line-height: var(--e-line-height-h6);
-        margin-bottom: var(--e-spacing-h10);
+        font-size: var(--o-font-size-h6);
+        color: var(--o-color-text4);
+        line-height: var(--o-line-height-h6);
+        margin-bottom: var(--o-spacing-h10);
         transition: all 0.2s;
       }
 
       .o-timeline-icon {
         cursor: pointer;
-        width: var(--e-font-size-h5);
-        height: var(--e-font-size-h5);
-        color: var(--e-color-text4);
+        width: var(--o-font-size-h5);
+        height: var(--o-font-size-h5);
+        color: var(--o-color-text4);
         display: inline-block;
-        background-color: var(--e-color-bg1);
+        background-color: var(--o-color-bg1);
         transition: all 0.2s;
       }
 
       &.active .o-timeline-day,
       &.active .o-timeline-icon {
-        color: var(--e-color-brand1);
+        color: var(--o-color-brand1);
       }
     }
 
     &::after {
       width: 86%;
       height: 2px;
-      background-color: var(--e-color-neutral11);
+      background-color: var(--o-color-neutral11);
       content: '';
       display: block;
       position: absolute;
@@ -355,14 +355,14 @@ function clickDetail(index: number) {
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: var(--e-color-bg2);
+    background-color: var(--o-color-bg2);
     height: 34px;
   }
 
   li {
-    font-size: var(--e-font-size-text);
+    font-size: var(--o-font-size-text);
     line-height: 34px;
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     margin-right: 20px;
 
     &:last-child {
@@ -379,16 +379,16 @@ function clickDetail(index: number) {
   }
 
   .active {
-    color: var(--e-color-brand1);
+    color: var(--o-color-brand1);
 
     &::after {
-      background-color: var(--e-color-brand1);
+      background-color: var(--o-color-brand1);
     }
   }
 }
 
 .content {
-  margin-top: var(--e-spacing-h3);
+  margin-top: var(--o-spacing-h3);
 
   @media (max-width: 768px) {
     margin-top: 0;
@@ -397,11 +397,11 @@ function clickDetail(index: number) {
   .certificate-box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--e-spacing-h4);
+    gap: var(--o-spacing-h4);
 
     @media (max-width: 768px) {
       grid-template-columns: repeat(1, 1fr);
-      gap: var(--e-spacing-h5);
+      gap: var(--o-spacing-h5);
     }
 
     .certificate-item {
@@ -409,10 +409,10 @@ function clickDetail(index: number) {
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
-      padding: var(--e-spacing-h2);
+      padding: var(--o-spacing-h2);
 
       @media (max-width: 768px) {
-        padding: var(--e-spacing-h5) var(--e-spacing-h6);
+        padding: var(--o-spacing-h5) var(--o-spacing-h6);
       }
 
       :deep(.el-card__body) {
@@ -421,16 +421,16 @@ function clickDetail(index: number) {
 
       p {
         min-height: 52px;
-        font-size: var(--e-font-size-h7);
-        line-height: var(--e-line-height-h7);
-        color: var(--e-color-text1);
+        font-size: var(--o-font-size-h7);
+        line-height: var(--o-line-height-h7);
+        color: var(--o-color-text1);
         font-weight: 500;
 
         @media (max-width: 768px) {
           max-width: 100%;
           min-height: auto;
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
         }
       }
 
@@ -441,13 +441,13 @@ function clickDetail(index: number) {
 
         @media (max-width: 768px) {
           margin-top: 24px;
-          font-size: var(--e-font-size-text);
+          font-size: var(--o-font-size-text);
           padding-bottom: 0;
           padding-top: 0;
         }
 
         .detail-icon {
-          color: var(--e-color-brand1);
+          color: var(--o-color-brand1);
           font-size: 16px;
         }
       }
@@ -489,53 +489,53 @@ function clickDetail(index: number) {
   }
 
   .award-box {
-    margin-top: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
     h2 {
       text-align: center;
-      font-size: var(--e-font-size-h3);
-      line-height: var(--e-line-height-h3);
+      font-size: var(--o-font-size-h3);
+      line-height: var(--o-line-height-h3);
       font-weight: 300;
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
 
       @media (max-width: 768px) {
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-height-h8);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h8);
       }
     }
     .title-2023 {
-      margin-top: var(--e-spacing-h2);
-      margin-bottom: var(--e-spacing-h3);
+      margin-top: var(--o-spacing-h2);
+      margin-bottom: var(--o-spacing-h3);
     }
 
     .award-personal {
-      margin-top: var(--e-spacing-h3);
+      margin-top: var(--o-spacing-h3);
 
       @media (max-width: 768px) {
-        margin-top: var(--e-spacing-h6);
+        margin-top: var(--o-spacing-h6);
       }
 
       h5 {
-        font-size: var(--e-font-size-h6);
-        line-height: var(--e-line-height-h6);
-        color: var(--e-color-text1);
+        font-size: var(--o-font-size-h6);
+        line-height: var(--o-line-height-h6);
+        color: var(--o-color-text1);
         text-align: center;
         font-weight: 400;
 
         @media (max-width: 768px) {
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
         }
       }
 
       .personal-box {
-        margin-top: var(--e-spacing-h4);
+        margin-top: var(--o-spacing-h4);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: var(--e-spacing-h4);
+        gap: var(--o-spacing-h4);
 
         @media (max-width: 768px) {
           grid-template-columns: repeat(1, 1fr);
-          gap: var(--e-spacing-h5);
+          gap: var(--o-spacing-h5);
         }
 
         .personal-item {
@@ -551,10 +551,10 @@ function clickDetail(index: number) {
             background: url(@/assets/category/honor/bg2.png) no-repeat;
             background-size: cover;
             text-align: center;
-            padding: var(--e-spacing-h2) 0;
+            padding: var(--o-spacing-h2) 0;
 
             @media (max-width: 768px) {
-              padding: var(--e-spacing-h5) 0;
+              padding: var(--o-spacing-h5) 0;
             }
 
             .item-img {
@@ -580,36 +580,36 @@ function clickDetail(index: number) {
           }
 
           .item-body {
-            padding: var(--e-spacing-h4);
+            padding: var(--o-spacing-h4);
 
             @media (max-width: 768px) {
-              padding: var(--e-spacing-h5);
+              padding: var(--o-spacing-h5);
             }
 
             .name {
-              font-size: var(--e-font-size-h5);
-              line-height: var(--e-line-height-h5);
-              color: var(--e-color-text1);
+              font-size: var(--o-font-size-h5);
+              line-height: var(--o-line-height-h5);
+              color: var(--o-color-text1);
               font-weight: 400;
               text-align: center;
-              margin-bottom: var(--e-spacing-h5);
+              margin-bottom: var(--o-spacing-h5);
 
               @media (max-width: 768px) {
-                font-size: var(--e-font-size-text);
-                line-height: var(--e-line-height-text);
-                margin-bottom: var(--e-spacing-h8);
+                font-size: var(--o-font-size-text);
+                line-height: var(--o-line-height-text);
+                margin-bottom: var(--o-spacing-h8);
               }
             }
 
             .post {
-              font-size: var(--e-font-size-text);
-              line-height: var(--e-line-height-text);
-              color: var(--e-color-text4);
+              font-size: var(--o-font-size-text);
+              line-height: var(--o-line-height-text);
+              color: var(--o-color-text4);
               font-weight: normal;
               text-align: center;
               @media (max-width: 768px) {
-                font-size: var(--e-font-size-tip);
-                line-height: var(--e-line-height-tip);
+                font-size: var(--o-font-size-tip);
+                line-height: var(--o-line-height-tip);
               }
             }
           }
@@ -620,54 +620,54 @@ function clickDetail(index: number) {
             opacity: 0;
             width: 100%;
             height: 100%;
-            padding: var(--e-spacing-h4);
+            padding: var(--o-spacing-h4);
             transition: all 0.2s;
             word-wrap: break-word;
-            background-color: var(--e-color-brand1);
+            background-color: var(--o-color-brand1);
             z-index: 9;
             @media (max-width: 768px) {
-              padding: var(--e-spacing-h5);
+              padding: var(--o-spacing-h5);
             }
             .name {
-              font-size: var(--e-font-size-h5);
-              line-height: var(--e-line-height-h5);
+              font-size: var(--o-font-size-h5);
+              line-height: var(--o-line-height-h5);
               color: #fff;
               text-align: center;
               font-weight: 400;
               @media (max-width: 768px) {
-                font-size: var(--e-font-size-text);
-                line-height: var(--e-line-height-text);
+                font-size: var(--o-font-size-text);
+                line-height: var(--o-line-height-text);
               }
             }
             .detail {
-              margin-top: var(--e-spacing-h5);
+              margin-top: var(--o-spacing-h5);
               overflow-y: scroll;
               max-height: calc(100% - 48px);
               @media (max-width: 768px) {
-                margin-top: var(--e-spacing-h8);
+                margin-top: var(--o-spacing-h8);
               }
               &::-webkit-scrollbar-track {
                 border-radius: 4px;
-                background-color: var(--e-color-bg2);
-                background-color: var(--e-color-brand1);
+                background-color: var(--o-color-bg2);
+                background-color: var(--o-color-brand1);
               }
 
               &::-webkit-scrollbar {
                 width: 6px;
-                background-color: var(--e-color-brand1);
+                background-color: var(--o-color-brand1);
               }
 
               &::-webkit-scrollbar-thumb {
                 border-radius: 4px;
-                background: var(--e-color-division1);
+                background: var(--o-color-division1);
               }
               p {
-                font-size: var(--e-font-size-text);
-                line-height: var(--e-line-height-text);
+                font-size: var(--o-font-size-text);
+                line-height: var(--o-line-height-text);
                 color: #fff;
                 @media (max-width: 768px) {
-                  font-size: var(--e-font-size-tip);
-                  line-height: var(--e-line-height-tip);
+                  font-size: var(--o-font-size-tip);
+                  line-height: var(--o-line-height-tip);
                 }
               }
             }
@@ -685,22 +685,22 @@ function clickDetail(index: number) {
       }
     }
     .award-team {
-      margin-top: var(--e-spacing-h3);
+      margin-top: var(--o-spacing-h3);
       h5 {
-        font-size: var(--e-font-size-h6);
-        line-height: var(--e-line-height-h6);
-        color: var(--e-color-text1);
+        font-size: var(--o-font-size-h6);
+        line-height: var(--o-line-height-h6);
+        color: var(--o-color-text1);
         text-align: center;
         font-weight: 400;
         @media (max-width: 768px) {
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
         }
       }
       .team-card-box {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: var(--e-spacing-h4);
+        gap: var(--o-spacing-h4);
         @media (max-width: 1400px) {
           grid-template-columns: repeat(2, 1fr);
         }
@@ -733,9 +733,9 @@ function clickDetail(index: number) {
         }
       }
       .team-box {
-        margin-top: var(--e-spacing-h4);
+        margin-top: var(--o-spacing-h4);
         @media (max-width: 768px) {
-          margin-top: var(--e-spacing-h6);
+          margin-top: var(--o-spacing-h6);
         }
         .team-item {
           width: 100%;
@@ -744,24 +744,24 @@ function clickDetail(index: number) {
           position: relative;
           min-height: 242px;
           position: relative;
-          padding: var(--e-spacing-h2);
+          padding: var(--o-spacing-h2);
           @media (max-width: 768px) {
             background: url(@/assets/category/honor/bg3-mobild.png) no-repeat;
             background-size: cover;
-            padding: var(--e-spacing-h5) var(--e-spacing-h6);
+            padding: var(--o-spacing-h5) var(--o-spacing-h6);
             min-height: auto;
           }
           :deep(.el-card__body) {
             padding: 0;
           }
           .name {
-            font-size: var(--e-font-size-h7);
-            line-height: var(--e-line-height-h7);
-            color: var(--e-color-text1);
+            font-size: var(--o-font-size-h7);
+            line-height: var(--o-line-height-h7);
+            color: var(--o-color-text1);
             font-weight: 500;
             @media (max-width: 768px) {
-              font-size: var(--e-font-size-text);
-              line-height: var(--e-line-height-text);
+              font-size: var(--o-font-size-text);
+              line-height: var(--o-line-height-text);
             }
           }
           .detail {
@@ -770,13 +770,13 @@ function clickDetail(index: number) {
               margin-top: 8px;
             }
             p {
-              font-size: var(--e-font-size-text);
-              line-height: var(--e-line-height-text);
-              color: var(--e-color-text4);
+              font-size: var(--o-font-size-text);
+              line-height: var(--o-line-height-text);
+              color: var(--o-color-text4);
               font-weight: 400;
               @media (max-width: 768px) {
-                font-size: var(--e-font-size-tip);
-                line-height: var(--e-line-height-tip);
+                font-size: var(--o-font-size-tip);
+                line-height: var(--o-line-height-tip);
               }
             }
             &::after {
@@ -792,16 +792,16 @@ function clickDetail(index: number) {
             padding-left: 0;
             padding-bottom: 0;
             @media (max-width: 768px) {
-              font-size: var(--e-font-size-text);
+              font-size: var(--o-font-size-text);
               bottom: 12px;
             }
             .address-icon {
-              color: var(--e-color-brand1);
+              color: var(--o-color-brand1);
               font-size: 16px;
             }
           }
           & + .team-item {
-            margin-top: var(--e-spacing-h4);
+            margin-top: var(--o-spacing-h4);
           }
           img {
             display: none;
@@ -821,13 +821,13 @@ function clickDetail(index: number) {
     }
   }
   .notice {
-    margin-top: var(--e-spacing-h3);
-    font-size: var(--e-font-size-tip);
-    line-height: var(--e-line-height-tip);
-    color: var(--e-color-text1);
+    margin-top: var(--o-spacing-h3);
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
+    color: var(--o-color-text1);
     width: 100%;
     @media (max-width: 768px) {
-      margin-top: var(--e-spacing-h5);
+      margin-top: var(--o-spacing-h5);
     }
   }
 }

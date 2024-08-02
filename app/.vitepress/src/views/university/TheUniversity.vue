@@ -271,7 +271,7 @@ onMounted(() => {
     width: 100%;
     height: 34px;
     padding: 0 16px;
-    background-color: var(--e-color-bg2);
+    background-color: var(--o-color-bg2);
     position: sticky;
     top: 48px;
     z-index: 9;
@@ -296,11 +296,11 @@ onMounted(() => {
         .el-tabs__item {
           padding: 0 8px;
           a {
-            color: var(--e-color-text1);
+            color: var(--o-color-text1);
           }
           &.is-active {
             a {
-              color: var(--e-color-brand1);
+              color: var(--o-color-brand1);
             }
           }
         }
@@ -315,42 +315,42 @@ onMounted(() => {
     .university-technical-title {
       text-align: center;
       font-weight: 500;
-      font-size: var(--e-font-size-h3);
-      line-height: var(--e-line-height-h3);
-      color: var(--e-color-text1);
+      font-size: var(--o-font-size-h3);
+      line-height: var(--o-line-height-h3);
+      color: var(--o-color-text1);
       @media (max-width: 767px) {
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-height-h8);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h8);
       }
     }
     .university-technical-description {
-      margin-top: var(--e-spacing-h4);
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
-      color: var(--e-color-text4);
+      margin-top: var(--o-spacing-h4);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
+      color: var(--o-color-text4);
       @media (max-width: 767px) {
-        margin-top: var(--e-spacing-h5);
-        font-size: var(--e-font-size-tip);
-        line-height: var(--e-line-height-tip);
+        margin-top: var(--o-spacing-h5);
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-tip);
       }
     }
     .university-technical-group {
-      margin-top: var(--e-spacing-h4);
+      margin-top: var(--o-spacing-h4);
       @media (max-width: 767px) {
-        margin-top: var(--e-spacing-h5);
+        margin-top: var(--o-spacing-h5);
       }
       .group-item {
         @media (min-width: 767px) {
           &:hover {
-            background-color: var(--e-color-fill2_hover);
-            box-shadow: var(--e-shadow-l2_hover);
+            background-color: var(--o-color-fill2_hover);
+            box-shadow: var(--o-shadow-l2_hover);
           }
         }
 
         & ~ .group-item {
-          margin-top: var(--e-spacing-h4);
+          margin-top: var(--o-spacing-h4);
           @media (max-width: 767px) {
-            margin-top: var(--e-spacing-h5);
+            margin-top: var(--o-spacing-h5);
           }
         }
         :deep(.el-card__body) {
@@ -362,9 +362,9 @@ onMounted(() => {
         .group-item-head {
           display: flex;
           .head-logo {
-            margin-right: var(--e-spacing-h4);
+            margin-right: var(--o-spacing-h4);
             @media (max-width: 767px) {
-              margin-right: var(--e-spacing-h6);
+              margin-right: var(--o-spacing-h6);
             }
             img {
               width: 62px;
@@ -375,41 +375,41 @@ onMounted(() => {
           }
           .head-text {
             .head-text-name {
-              font-size: var(--e-font-size-h5);
-              line-height: var(--e-line-height-h5);
-              color: var(--e-color-text1);
+              font-size: var(--o-font-size-h5);
+              line-height: var(--o-line-height-h5);
+              color: var(--o-color-text1);
               @media (max-width: 767px) {
-                font-size: var(--e-font-size-h8);
-                line-height: var(--e-line-height-h8);
+                font-size: var(--o-font-size-h8);
+                line-height: var(--o-line-height-h8);
               }
             }
             .head-text-description {
               margin-top: 8px;
-              font-size: var(--e-font-size-text);
-              line-height: var(--e-line-height-text);
-              color: var(--e-color-text4);
+              font-size: var(--o-font-size-text);
+              line-height: var(--o-line-height-text);
+              color: var(--o-color-text4);
               @media (max-width: 767px) {
-                font-size: var(--e-font-size-tip);
-                line-height: var(--e-line-height-tip);
+                font-size: var(--o-font-size-tip);
+                line-height: var(--o-line-height-tip);
               }
             }
           }
         }
         .group-item-content {
-          margin-top: var(--e-spacing-h4);
+          margin-top: var(--o-spacing-h4);
           @media (max-width: 767px) {
-            margin-top: var(--e-spacing-h5);
+            margin-top: var(--o-spacing-h5);
           }
 
           .content-title {
-            font-size: var(--e-font-size-h8);
-            line-height: var(--e-line-height-h8);
-            color: var(--e-color-brand1);
+            font-size: var(--o-font-size-h8);
+            line-height: var(--o-line-height-h8);
+            color: var(--o-color-brand1);
             position: relative;
             padding-left: 14px;
             @media (max-width: 767px) {
-              font-size: var(--e-font-size-text);
-              line-height: var(--e-line-height-text);
+              font-size: var(--o-font-size-text);
+              line-height: var(--o-line-height-text);
               padding-left: 16px;
             }
             &::before {
@@ -417,7 +417,7 @@ onMounted(() => {
               display: inline-block;
               width: 6px;
               height: 6px;
-              background-color: var(--e-color-brand1);
+              background-color: var(--o-color-brand1);
               border-radius: 50%;
               position: absolute;
               top: 50%;
@@ -432,17 +432,17 @@ onMounted(() => {
           .content-detail {
             margin-top: 8px;
             padding-left: 14px;
-            font-size: var(--e-font-size-text);
-            line-height: var(--e-line-height-text);
-            color: var(--e-color-text4);
+            font-size: var(--o-font-size-text);
+            line-height: var(--o-line-height-text);
+            color: var(--o-color-text4);
             display: flex;
             gap: 16px;
             flex-wrap: wrap;
             @media (max-width: 767px) {
               gap: 12px;
               padding-left: 0;
-              font-size: var(--e-font-size-tip);
-              line-height: var(--e-line-height-tip);
+              font-size: var(--o-font-size-tip);
+              line-height: var(--o-line-height-tip);
             }
           }
         }
@@ -450,48 +450,48 @@ onMounted(() => {
     }
   }
   .university-activity {
-    margin-top: var(--e-spacing-h1);
+    margin-top: var(--o-spacing-h1);
     @media (max-width: 767px) {
-      margin-top: var(--e-spacing-h2);
+      margin-top: var(--o-spacing-h2);
     }
     .university-activity-title {
       text-align: center;
       font-weight: 500;
-      font-size: var(--e-font-size-h3);
-      line-height: var(--e-line-height-h3);
-      color: var(--e-color-text1);
+      font-size: var(--o-font-size-h3);
+      line-height: var(--o-line-height-h3);
+      color: var(--o-color-text1);
       @media (max-width: 767px) {
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-height-h8);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h8);
       }
     }
     .university-activity-list {
       margin-top: 40px;
       @media (max-width: 767px) {
-        margin-top: var(--e-spacing-h5);
+        margin-top: var(--o-spacing-h5);
       }
       .activity-item {
         background-size: cover;
         background-repeat: no-repeat;
         @media (min-width: 767px) {
           &:hover {
-            background-color: var(--e-color-fill2_hover);
-            box-shadow: var(--e-shadow-l2_hover);
+            background-color: var(--o-color-fill2_hover);
+            box-shadow: var(--o-shadow-l2_hover);
           }
         }
 
         &:nth-of-type(1) {
           @media (max-width: 767px) {
             background-size: 100%;
-            background-color: var(--e-color-bg2);
+            background-color: var(--o-color-bg2);
             background-position: right bottom;
           }
         }
 
         & ~ .activity-item {
-          margin-top: var(--e-spacing-h4);
+          margin-top: var(--o-spacing-h4);
           @media (max-width: 767px) {
-            margin-top: var(--e-spacing-h5);
+            margin-top: var(--o-spacing-h5);
           }
         }
         :deep(.el-card__body) {
@@ -506,25 +506,25 @@ onMounted(() => {
         .activity-item-left {
           max-width: 910px;
           .activity-item-title {
-            font-size: var(--e-font-size-h5);
-            line-height: var(--e-line-height-h5);
-            color: var(--e-color-text1);
+            font-size: var(--o-font-size-h5);
+            line-height: var(--o-line-height-h5);
+            color: var(--o-color-text1);
             @media (max-width: 767px) {
-              font-size: var(--e-font-size-h8);
-              line-height: var(--e-line-height-h8);
+              font-size: var(--o-font-size-h8);
+              line-height: var(--o-line-height-h8);
             }
           }
           .activity-item-detail {
-            margin-top: var(--e-spacing-h8);
-            font-size: var(--e-font-size-text);
-            line-height: var(--e-line-height-text);
-            color: var(--e-color-text4);
+            margin-top: var(--o-spacing-h8);
+            font-size: var(--o-font-size-text);
+            line-height: var(--o-line-height-text);
+            color: var(--o-color-text4);
             min-height: 66px;
           }
           .activity-item-link {
-            margin-top: var(--e-spacing-h4);
-            font-size: var(--e-font-size-h8);
-            line-height: var(--e-line-height-h8);
+            margin-top: var(--o-spacing-h4);
+            font-size: var(--o-font-size-h8);
+            line-height: var(--o-line-height-h8);
             position: relative;
             padding-left: 14px;
             &::before {
@@ -532,7 +532,7 @@ onMounted(() => {
               display: block;
               width: 6px;
               height: 6px;
-              background-color: var(--e-color-brand1);
+              background-color: var(--o-color-brand1);
               border-radius: 50%;
               position: absolute;
               left: 0;
@@ -555,7 +555,7 @@ onMounted(() => {
                 display: inline-block;
                 width: 6px;
                 height: 6px;
-                background-color: var(--e-color-brand1);
+                background-color: var(--o-color-brand1);
                 border-radius: 50%;
                 position: absolute;
                 top: 50%;
@@ -586,36 +586,36 @@ onMounted(() => {
     }
   }
   .university-contribution {
-    margin-top: var(--e-spacing-h1);
+    margin-top: var(--o-spacing-h1);
     @media (max-width: 767px) {
-      margin-top: var(--e-spacing-h2);
+      margin-top: var(--o-spacing-h2);
     }
     .university-contribution-title {
       text-align: center;
       font-weight: 500;
-      font-size: var(--e-font-size-h3);
-      line-height: var(--e-line-height-h3);
-      color: var(--e-color-text1);
+      font-size: var(--o-font-size-h3);
+      line-height: var(--o-line-height-h3);
+      color: var(--o-color-text1);
       @media (max-width: 767px) {
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-height-h8);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h8);
       }
     }
     .university-contribution-list1 {
-      margin-top: var(--e-spacing-h2);
+      margin-top: var(--o-spacing-h2);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: var(--e-spacing-h2);
+      gap: var(--o-spacing-h2);
       @media (max-width: 767px) {
-        margin-top: var(--e-spacing-h5);
+        margin-top: var(--o-spacing-h5);
         grid-template-columns: repeat(1, 1fr);
-        gap: var(--e-spacing-h4);
+        gap: var(--o-spacing-h4);
       }
       .university-item {
         @media (min-width: 767px) {
           &:hover {
-            background-color: var(--e-color-fill2_hover);
-            box-shadow: var(--e-shadow-l2_hover);
+            background-color: var(--o-color-fill2_hover);
+            box-shadow: var(--o-shadow-l2_hover);
           }
         }
         :deep(.el-card__body) {
@@ -635,27 +635,27 @@ onMounted(() => {
           }
         }
         .item-name {
-          font-size: var(--e-font-size-h5);
-          line-height: var(--e-line-height-h5);
-          color: var(--e-color-text1);
+          font-size: var(--o-font-size-h5);
+          line-height: var(--o-line-height-h5);
+          color: var(--o-color-text1);
           @media (max-width: 767px) {
-            font-size: var(--e-font-size-h8);
-            line-height: var(--e-line-height-h8);
+            font-size: var(--o-font-size-h8);
+            line-height: var(--o-line-height-h8);
           }
         }
         .item-detail {
-          margin-top: var(--e-spacing-h5);
-          font-size: var(--e-font-size-h8);
-          line-height: var(--e-line-height-h8);
-          color: var(--e-color-text4);
+          margin-top: var(--o-spacing-h5);
+          font-size: var(--o-font-size-h8);
+          line-height: var(--o-line-height-h8);
+          color: var(--o-color-text4);
           @media (max-width: 767px) {
-            margin-top: var(--e-spacing-h8);
-            font-size: var(--e-font-size-tip);
-            line-height: var(--e-line-height-tip);
+            margin-top: var(--o-spacing-h8);
+            font-size: var(--o-font-size-tip);
+            line-height: var(--o-line-height-tip);
           }
         }
         .item-tag {
-          margin-top: var(--e-spacing-h5);
+          margin-top: var(--o-spacing-h5);
           display: flex;
           align-items: center;
           @media (max-width: 767px) {
@@ -667,26 +667,26 @@ onMounted(() => {
               display: block;
             }
             &.tag-title {
-              font-size: var(--e-font-size-h8);
-              line-height: var(--e-line-height-h8);
-              color: var(--e-color-text1);
-              margin-right: var(--e-spacing-h5);
+              font-size: var(--o-font-size-h8);
+              line-height: var(--o-line-height-h8);
+              color: var(--o-color-text1);
+              margin-right: var(--o-spacing-h5);
               @media (max-width: 767px) {
-                font-size: var(--e-font-size-text);
-                line-height: var(--e-line-height-text);
+                font-size: var(--o-font-size-text);
+                line-height: var(--o-line-height-text);
               }
             }
             &.tag-name {
-              margin-right: var(--e-spacing-h8);
-              font-size: var(--e-font-size-tip);
-              line-height: var(--e-line-height-h8);
-              color: var(--e-color-text4);
+              margin-right: var(--o-spacing-h8);
+              font-size: var(--o-font-size-tip);
+              line-height: var(--o-line-height-h8);
+              color: var(--o-color-text4);
               padding: 0 12px;
-              background-color: var(--e-color-bg-secondary);
+              background-color: var(--o-color-bg-secondary);
               @media (max-width: 767px) {
                 display: inline-block;
                 padding: 0 8px;
-                font-size: var(--e-font-size-tip);
+                font-size: var(--o-font-size-tip);
               }
             }
           }
@@ -697,26 +697,26 @@ onMounted(() => {
           }
         }
         .item-link {
-          margin-top: var(--e-spacing-h4);
+          margin-top: var(--o-spacing-h4);
           display: flex;
           align-items: center;
           @media (max-width: 767px) {
-            margin-top: var(--e-spacing-h5);
+            margin-top: var(--o-spacing-h5);
           }
           a {
-            margin-right: var(--e-spacing-h5);
-            font-size: var(--e-font-size-h8);
-            line-height: var(--e-line-height-h8);
-            color: var(--e-color-text1);
+            margin-right: var(--o-spacing-h5);
+            font-size: var(--o-font-size-h8);
+            line-height: var(--o-line-height-h8);
+            color: var(--o-color-text1);
             display: flex;
             align-items: center;
             @media (max-width: 767px) {
-              margin-right: var(--e-spacing-h6);
-              font-size: var(--e-font-size-tip);
-              line-height: var(--e-line-height-tip);
+              margin-right: var(--o-spacing-h6);
+              font-size: var(--o-font-size-tip);
+              line-height: var(--o-line-height-tip);
             }
             &:hover {
-              color: var(--e-color-brand1);
+              color: var(--o-color-brand1);
             }
             .o-icon {
               margin-left: 8px;
@@ -726,20 +726,20 @@ onMounted(() => {
       }
     }
     .university-contribution-list2 {
-      margin-top: var(--e-spacing-h2);
+      margin-top: var(--o-spacing-h2);
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: var(--e-spacing-h2);
+      gap: var(--o-spacing-h2);
       @media (max-width: 767px) {
-        margin-top: var(--e-spacing-h5);
+        margin-top: var(--o-spacing-h5);
         grid-template-columns: repeat(2, 1fr);
-        gap: var(--e-spacing-h5);
+        gap: var(--o-spacing-h5);
       }
       .list2-university-item {
         @media (min-width: 767px) {
           &:hover {
-            background-color: var(--e-color-fill2_hover);
-            box-shadow: var(--e-shadow-l2_hover);
+            background-color: var(--o-color-fill2_hover);
+            box-shadow: var(--o-shadow-l2_hover);
           }
         }
         :deep(.el-card__body) {
@@ -757,20 +757,20 @@ onMounted(() => {
           }
         }
         .list2-item-name {
-          font-size: var(--e-font-size-h8);
-          line-height: var(--e-line-height-h8);
-          color: var(--e-color-text1);
+          font-size: var(--o-font-size-h8);
+          line-height: var(--o-line-height-h8);
+          color: var(--o-color-text1);
           @media (max-width: 767px) {
-            font-size: var(--e-font-size-tip);
-            line-height: var(--e-line-height-tip);
+            font-size: var(--o-font-size-tip);
+            line-height: var(--o-line-height-tip);
           }
         }
       }
       .list2-university-more {
         @media (min-width: 767px) {
           &:hover {
-            background-color: var(--e-color-fill2_hover);
-            box-shadow: var(--e-shadow-l2_hover);
+            background-color: var(--o-color-fill2_hover);
+            box-shadow: var(--o-shadow-l2_hover);
           }
         }
         :deep(.el-card__body) {
@@ -782,8 +782,8 @@ onMounted(() => {
           @media (max-width: 767px) {
             padding: 8px;
             justify-content: center;
-            font-size: var(--e-font-size-tip);
-            line-height: var(--e-line-height-tip);
+            font-size: var(--o-font-size-tip);
+            line-height: var(--o-line-height-tip);
           }
         }
         @media (max-width: 767px) {
@@ -793,21 +793,21 @@ onMounted(() => {
     }
   }
   .university-mooc {
-    margin-top: var(--e-spacing-h1);
+    margin-top: var(--o-spacing-h1);
     @media (max-width: 767px) {
-      margin-top: var(--e-spacing-h2);
+      margin-top: var(--o-spacing-h2);
     }
     .university-mooc-title {
       text-align: center;
       font-weight: 500;
-      font-size: var(--e-font-size-h3);
-      line-height: var(--e-line-height-h3);
-      color: var(--e-color-text1);
-      margin-bottom: var(--e-spacing-h2);
+      font-size: var(--o-font-size-h3);
+      line-height: var(--o-line-height-h3);
+      color: var(--o-color-text1);
+      margin-bottom: var(--o-spacing-h2);
       @media (max-width: 767px) {
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-height-h8);
-        margin-bottom: var(--e-spacing-h5);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h8);
+        margin-bottom: var(--o-spacing-h5);
       }
     }
   }

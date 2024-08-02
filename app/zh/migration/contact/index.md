@@ -23,18 +23,18 @@ openEuler 小助手：备注“迁移”进入技术交流群，可在群内直�
 <style lang = "scss" scoped>
     .contact {
         display: flex;
-        margin-top: var(--e-spacing-h2);
+        margin-top: var(--o-spacing-h2);
         @media screen and (max-width: 768px) {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: var(--e-spacing-h4);
+            margin-top: var(--o-spacing-h4);
         }
         .official{
             margin-right: 100px;
             @media screen and (max-width: 768px) {
                 margin-right: 0;
-                margin-bottom: var(--e-spacing-h4);
+                margin-bottom: var(--o-spacing-h4);
             }
         }
         img {
@@ -42,12 +42,12 @@ openEuler 小助手：备注“迁移”进入技术交流群，可在群内直�
             width: 100%;
         }
         p {
-            font-size: var(--e-font-size-h6);
+            font-size: var(--o-font-size-h6);
             font-weight: 400;
-            color: var(--e-color-text1);
-            line-height: var(--e-line-height-h6);
+            color: var(--o-color-text1);
+            line-height: var(--o-line-height-h6);
             text-align: center;
-            margin-top: var(--e-spacing-h5);
+            margin-top: var(--o-spacing-h5);
         }
     }
 </style>

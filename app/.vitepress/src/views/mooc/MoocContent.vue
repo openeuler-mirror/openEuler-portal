@@ -58,13 +58,13 @@ const pathTarget = computed(() => (path: string) => {
   .mooc-item {
     display: flex;
     min-height: 192px;
-    padding: var(--e-spacing-h2);
+    padding: var(--o-spacing-h2);
     background-image: url(@/assets/category/mooc/mooc2.png);
     background-repeat: no-repeat;
     background-position: 132% center;
     background-size: contain;
     @media (max-width: 760px) {
-      padding: var(--e-spacing-h5);
+      padding: var(--o-spacing-h5);
       min-height: auto;
     }
     .cover {
@@ -82,34 +82,34 @@ const pathTarget = computed(() => (path: string) => {
       flex: 1;
 
       h3 {
-        font-size: var(--e-font-size-h7);
-        line-height: var(--e-line-height-h7);
-        color: var(--e-color-text1);
+        font-size: var(--o-font-size-h7);
+        line-height: var(--o-line-height-h7);
+        color: var(--o-color-text1);
         font-weight: 500;
         @media (max-width: 768px) {
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
         }
       }
       p {
-        font-size: var(--e-font-size-text);
+        font-size: var(--o-font-size-text);
         line-height: 22px;
-        color: var(--e-color-text4);
+        color: var(--o-color-text4);
         @media (max-width: 768px) {
-          font-size: var(--e-font-size-tip);
-          line-height: var(--e-line-height-tip);
+          font-size: var(--o-font-size-tip);
+          line-height: var(--o-line-height-tip);
         }
       }
       .btn {
         display: flex;
-        margin-top: var(--e-spacing-h5);
+        margin-top: var(--o-spacing-h5);
         @media (max-width: 768px) {
-          margin-top: var(--e-spacing-h8);
+          margin-top: var(--o-spacing-h8);
         }
         .o-button {
           margin-right: 24px;
           padding: 0;
-          font-size: var(--e-font-size-text);
+          font-size: var(--o-font-size-text);
           text-align: left;
 
           @media (max-width: 768px) {
@@ -123,7 +123,7 @@ const pathTarget = computed(() => (path: string) => {
             font-size: 12px;
             margin-left: 8px;
             transition: all 0.3s;
-            color: var(--e-color-brand1);
+            color: var(--o-color-brand1);
           }
           &:hover .o-icon {
             transform: translateX(3px);

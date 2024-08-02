@@ -40,12 +40,12 @@ const { bread1, bread2, link1, link2 } = toRefs(props);
 <style lang="scss" scoped>
 .bread-crumbs {
   width: 100%;
-  font-size: var(--e-font-size-tip);
-  line-height: var(--e-line-height-tip);
+  font-size: var(--o-font-size-tip);
+  line-height: var(--o-line-height-tip);
   display: flex;
   align-items: center;
   .bread-icon {
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
   }
   span {
     display: inline-block;
@@ -56,17 +56,17 @@ const { bread1, bread2, link1, link2 } = toRefs(props);
   }
   span {
     a {
-      color: var(--e-color-text4);
+      color: var(--o-color-text4);
     }
   }
   span:nth-of-type(2) {
     margin: 0 4px;
-    font-size: var(--e-font-size-h8);
+    font-size: var(--o-font-size-h8);
   }
   span:nth-last-of-type(1) {
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     a {
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
     }
     .no-click {
       cursor: default;

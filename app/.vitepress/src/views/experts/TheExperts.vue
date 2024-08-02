@@ -41,33 +41,33 @@ import illustration from '@/assets/illustrations/expert.png';
 }
 .experts {
   &-tip {
-    color: var(--e-color-text1);
-    font-size: var(--e-font-size-tip);
-    line-height: var(--e-line-height-tip);
+    color: var(--o-color-text1);
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
   }
 
   &-content {
-    margin-top: var(--e-spacing-h4);
+    margin-top: var(--o-spacing-h4);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: var(--e-spacing-h2);
-    row-gap: var(--e-spacing-h2);
+    column-gap: var(--o-spacing-h2);
+    row-gap: var(--o-spacing-h2);
 
     @media screen and (max-width: 1280px) {
-      column-gap: var(--e-spacing-h4);
-      row-gap: var(--e-spacing-h4);
+      column-gap: var(--o-spacing-h4);
+      row-gap: var(--o-spacing-h4);
     }
 
     @media screen and (max-width: 1080px) {
-      margin-top: var(--e-spacing-h5);
+      margin-top: var(--o-spacing-h5);
       grid-template-columns: repeat(1, 1fr);
-      column-gap: var(--e-spacing-h5);
-      row-gap: var(--e-spacing-h5);
+      column-gap: var(--o-spacing-h5);
+      row-gap: var(--o-spacing-h5);
     }
 
     .content-item {
       display: flex;
-      background-color: var(--e-color-bg2);
+      background-color: var(--o-color-bg2);
 
       .avator {
         width: 54%;
@@ -119,27 +119,27 @@ import illustration from '@/assets/illustrations/expert.png';
         }
 
         &-name {
-          color: var(--e-color-text1);
-          font-size: var(--e-font-size-h5);
-          line-height: var(--e-line-height-h5);
+          color: var(--o-color-text1);
+          font-size: var(--o-font-size-h5);
+          line-height: var(--o-line-height-h5);
           font-weight: 500;
 
           @media screen and (max-width: 768px) {
-            font-size: var(--e-font-size-text);
-            line-height: var(--e-line-height-text);
+            font-size: var(--o-font-size-text);
+            line-height: var(--o-line-height-text);
           }
         }
 
         &-detail {
-          margin-top: var(--e-spacing-h5);
-          color: var(--e-color-text4);
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
+          margin-top: var(--o-spacing-h5);
+          color: var(--o-color-text4);
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
 
           @media screen and (max-width: 768px) {
-            font-size: var(--e-font-size-tip);
-            line-height: var(--e-line-height-tip);
-            margin-top: var(--e-spacing-h8);
+            font-size: var(--o-font-size-tip);
+            line-height: var(--o-line-height-tip);
+            margin-top: var(--o-spacing-h8);
           }
         }
       }

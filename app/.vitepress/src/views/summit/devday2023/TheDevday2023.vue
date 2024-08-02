@@ -213,70 +213,70 @@ onMounted(() => {
 }
 .detail {
   p {
-    font-size: var(--e-font-size-h6);
-    line-height: var(--e-line-height-h6);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h6);
+    line-height: var(--o-line-height-h6);
+    color: var(--o-color-text1);
     font-weight: 300;
     @media screen and (max-width: 768px) {
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
     }
     & + p {
-      margin-top: var(--e-spacing-h6);
+      margin-top: var(--o-spacing-h6);
     }
   }
 }
 .live,
 .guest {
-  margin-top: var(--e-spacing-h1);
+  margin-top: var(--o-spacing-h1);
   @media (max-width: 767px) {
-    margin-top: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
   }
   h3 {
     text-align: center;
-    font-size: var(--e-font-size-h3);
-    line-height: var(--e-line-height-h3);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h3);
+    line-height: var(--o-line-height-h3);
+    color: var(--o-color-text1);
     font-weight: 300;
     @media (max-width: 767px) {
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
     }
   }
   h4 {
     margin-top: 20px;
-    font-size: var(--e-font-size-h5);
-    line-height: var(--e-line-height-h5);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h5);
+    line-height: var(--o-line-height-h5);
+    color: var(--o-color-text1);
     font-weight: 400;
     text-align: center;
     @media screen and (max-width: 768px) {
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
-      margin-top: var(--e-spacing-h5);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
+      margin-top: var(--o-spacing-h5);
     }
   }
   .live-box {
-    margin-top: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
     @media (max-width: 767px) {
-      margin-top: var(--e-spacing-h4);
+      margin-top: var(--o-spacing-h4);
     }
   }
 }
 .agenda {
-  margin-top: var(--e-spacing-h1);
+  margin-top: var(--o-spacing-h1);
   @media (max-width: 767px) {
-    margin-top: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
   }
   h3 {
     text-align: center;
-    font-size: var(--e-font-size-h3);
-    line-height: var(--e-line-height-h3);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h3);
+    line-height: var(--o-line-height-h3);
+    color: var(--o-color-text1);
     font-weight: 300;
     @media (max-width: 767px) {
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
     }
   }
   .date {
@@ -299,7 +299,7 @@ onMounted(() => {
       }
       &.active {
         color: #fff;
-        background-color: var(--e-color-brand1);
+        background-color: var(--o-color-brand1);
         border: 1px solid #fff;
       }
       .date-day {
@@ -358,10 +358,10 @@ onMounted(() => {
       display: inline-block;
       margin: 0 0 24px;
       cursor: pointer;
-      border: 1px solid var(--e-color-border2);
-      color: var(--e-color-text1);
+      border: 1px solid var(--o-color-border2);
+      color: var(--o-color-text1);
       text-align: center;
-      background: var(--e-color-bg2);
+      background: var(--o-color-bg2);
       font-size: 14px;
       line-height: 38px;
       padding: 0 16px;
@@ -376,8 +376,8 @@ onMounted(() => {
 
     .is-active .time-tabs {
       color: #fff;
-      background: var(--e-color-brand1);
-      border-color: var(--e-color-brand1);
+      background: var(--o-color-brand1);
+      border-color: var(--o-color-brand1);
     }
   }
 }
@@ -389,21 +389,21 @@ onMounted(() => {
   }
 }
 .previous {
-  margin-top: var(--e-spacing-h1);
+  margin-top: var(--o-spacing-h1);
   @media screen and (max-width: 768px) {
-    margin-top: var(--e-spacing-h4);
+    margin-top: var(--o-spacing-h4);
   }
   .previous-title {
     display: flex;
     h3 {
       font-size: 26px;
       line-height: 30px;
-      color: var(--e-color-text1);
-      margin-right: var(--e-spacing-h6);
+      color: var(--o-color-text1);
+      margin-right: var(--o-spacing-h6);
       @media screen and (max-width: 768px) {
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
-        margin-right: var(--e-spacing-h7);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
+        margin-right: var(--o-spacing-h7);
       }
     }
     img {
@@ -414,25 +414,25 @@ onMounted(() => {
   }
 
   .link-box {
-    margin-top: var(--e-spacing-h3);
+    margin-top: var(--o-spacing-h3);
     display: flex;
     width: 318px;
     flex-wrap: wrap;
     @media screen and (max-width: 768px) {
       width: 172px;
-      margin-top: var(--e-spacing-h6);
+      margin-top: var(--o-spacing-h6);
     }
     a {
-      font-size: var(--e-font-size-h6);
-      line-height: var(--e-line-height-h6);
+      font-size: var(--o-font-size-h6);
+      line-height: var(--o-line-height-h6);
       @media screen and (max-width: 768px) {
-        font-size: var(--e-font-size-tip);
-        line-height: var(--e-line-height-tip);
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-tip);
       }
       & + a {
-        margin-top: var(--e-spacing-h4);
+        margin-top: var(--o-spacing-h4);
         @media screen and (max-width: 768px) {
-          margin-top: var(--e-spacing-h8);
+          margin-top: var(--o-spacing-h8);
         }
       }
     }

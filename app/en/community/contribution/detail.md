@@ -258,20 +258,20 @@ Contact: [events@openeuler.sh](mailto:events@openeuler.sh)
 
 <style lang="scss" scoped>
 .word {
-  margin-top: var(--e-spacing-h2);
+  margin-top: var(--o-spacing-h2);
   max-width: 1416px;
   li::marker {
-    color: var(--e-color-text1) !important;
+    color: var(--o-color-text1) !important;
   }
  a {
-    color: var(--e-color-link1);
+    color: var(--o-color-link1);
     word-break: break-word ;
   }
   .care {
-    color: var(--e-color-red5);
+    color: var(--o-color-red5);
   }
   @media screen and (max-width: 769px) {
-    padding: var(--e-spacing-h5);
+    padding: var(--o-spacing-h5);
   }
 }
 </style>

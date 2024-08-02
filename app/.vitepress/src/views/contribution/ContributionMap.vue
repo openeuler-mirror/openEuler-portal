@@ -67,21 +67,21 @@ const goLink = (url: string, isBlank: boolean) => {
 </template>
 <style lang="scss" scoped>
 .content-map {
-  background-color: var(--e-color-bg1);
+  background-color: var(--o-color-bg1);
   width: 100%;
-  padding-bottom: var(--e-spacing-h1);
+  padding-bottom: var(--o-spacing-h1);
   .content-map-img {
     width: 1416px;
     min-height: 650px;
     position: relative;
     display: block;
     margin: 0 auto;
-    background-color: var(--e-color-bg4);
+    background-color: var(--o-color-bg4);
     img {
       width: 1034px;
       display: block;
       margin: 0 auto;
-      padding: var(--e-spacing-h1) 0;
+      padding: var(--o-spacing-h1) 0;
       @media screen and (min-width: 768px) and (max-width: 1079px) {
         width: 560px;
       }
@@ -127,7 +127,7 @@ const goLink = (url: string, isBlank: boolean) => {
     }
     img {
       width: 1034px;
-      padding: var(--e-spacing-h1) 0;
+      padding: var(--o-spacing-h1) 0;
       @media screen and (max-width: 1264px) {
         display: none;
       }
@@ -137,7 +137,7 @@ const goLink = (url: string, isBlank: boolean) => {
       display: none;
       margin: 0 auto;
       padding-top: 0;
-      margin-top: var(--e-spacing-h2);
+      margin-top: var(--o-spacing-h2);
       width: 317px;
       @media screen and (max-width: 1264px) {
         display: block;
@@ -151,11 +151,11 @@ const goLink = (url: string, isBlank: boolean) => {
     height: 30px;
     top: 22px;
     right: 22px;
-    background-color: var(--e-color-bg2);
-    color: var(--e-color-brand1);
-    border: 1px solid var(--e-color-brand1);
-    font-size: var(--e-font-size-tip);
-    line-height: var(--e-line-height-h6);
+    background-color: var(--o-color-bg2);
+    color: var(--o-color-brand1);
+    border: 1px solid var(--o-color-brand1);
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-h6);
     text-align: center;
     border-radius: 1px;
     text-decoration: none;
@@ -1104,8 +1104,8 @@ const goLink = (url: string, isBlank: boolean) => {
     position: relative;
     display: block;
     margin: 0 auto;
-    margin-top: var(--e-spacing-h2);
-    padding: 0 var(--e-spacing-h5);
+    margin-top: var(--o-spacing-h2);
+    padding: 0 var(--o-spacing-h5);
     @media screen and (min-width: 768px) {
       display: none;
     }

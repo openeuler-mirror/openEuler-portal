@@ -368,8 +368,8 @@ $osmindCardHeight: 145px;
     .om-desc {
       width: 100%;
       text-align: center;
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
     }
   }
 }
@@ -380,21 +380,21 @@ $osmindCardHeight: 145px;
 
 .om-desc {
   width: calc(100% - ($descSpace + $descIllWidth));
-  font-size: var(--e-font-size-text);
-  color: var(--e-color-text4);
-  line-height: var(--e-line-height-text);
+  font-size: var(--o-font-size-text);
+  color: var(--o-color-text4);
+  line-height: var(--o-line-height-text);
 }
 
 .om-subtitle {
-  font-size: var(--e-font-size-h3);
-  color: var(--e-color-text1);
+  font-size: var(--o-font-size-h3);
+  color: var(--o-color-text1);
   text-align: center;
   margin: 64px 0 32px 0;
 
   @include mobile() {
     margin: 32px 0 16px 0;
-    font-size: var(--e-font-size-h6);
-    line-height: var(--e-line-height-h6);
+    font-size: var(--o-font-size-h6);
+    line-height: var(--o-line-height-h6);
   }
 }
 
@@ -431,25 +431,25 @@ $osmindCardHeight: 145px;
 }
 
 .osmind-title {
-  font-size: var(--e-font-size-h5);
+  font-size: var(--o-font-size-h5);
   line-height: 36px;
   margin-bottom: 8px;
 
   @include mobile() {
-    font-size: var(--e-font-size-h7);
-    line-height: var(--e-line-height-h7);
+    font-size: var(--o-font-size-h7);
+    line-height: var(--o-line-height-h7);
   }
 }
 
 .osmind-desc {
-  font-size: var(--e-font-size-text);
-  color: var(--e-color-text4);
+  font-size: var(--o-font-size-text);
+  color: var(--o-color-text4);
   line-height: 22px;
 
   @include mobile() {
     margin-bottom: 5px;
-    font-size: var(--e-font-size-tip);
-    line-height: var(--e-line-height-tip);
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
   }
 }
 
@@ -490,14 +490,14 @@ $osmindCardHeight: 145px;
 }
 
 .help-content {
-  font-size: var(--e-font-size-h7);
-  color: var(--e-color-text4);
+  font-size: var(--o-font-size-h7);
+  color: var(--o-color-text4);
   line-height: 38px;
 
   @include mobile() {
     width: 100%;
-    font-size: var(--e-font-size-tip);
-    line-height: var(--e-line-height-tip);
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
     text-align: center;
   }
 }
@@ -528,7 +528,7 @@ $osmindCardHeight: 145px;
 
 .qr-code-label {
   text-align: center;
-  font-size: var(--e-font-size-h7);
+  font-size: var(--o-font-size-h7);
   margin-top: 12px;
 
   @include mobile() {
@@ -543,7 +543,7 @@ $osmindCardHeight: 145px;
 
 .scroll-box {
   overflow-x: auto;
-  box-shadow: var(--e-shadow-l2);
+  box-shadow: var(--o-shadow-l2);
 }
 
 .om-set-card {
@@ -551,7 +551,7 @@ $osmindCardHeight: 145px;
 
   @include mobile() {
     min-width: 1180px;
-    line-height: var(--e-line-height-h6);
+    line-height: var(--o-line-height-h6);
   }
 }
 
@@ -560,7 +560,7 @@ $osmindCardHeight: 145px;
   margin: 6px 20px 6px 0;
 
   @include mobile() {
-    font-size: var(--e-font-size-text);
+    font-size: var(--o-font-size-text);
     margin: 6px 10px 6px 0;
   }
 }
@@ -574,8 +574,8 @@ $osmindCardHeight: 145px;
   max-width: calc(100% - 20px);
 
   .om-zone-dropdown-menu {
-    background-color: var(--e-color-bg2);
-    border: 1px solid var(--e-color-brand1);
+    background-color: var(--o-color-bg2);
+    border: 1px solid var(--o-color-brand1);
     padding: 30px 0;
 
     .el-dropdown-menu__item {
@@ -584,7 +584,7 @@ $osmindCardHeight: 145px;
       word-break: break-all;
       word-wrap: break-word;
       white-space: normal;
-      color: var(--e-color-text4);
+      color: var(--o-color-text4);
 
       &:hover {
         color: var(--el-dropdown-menuItem-hover-color);

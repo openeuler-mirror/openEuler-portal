@@ -11,17 +11,17 @@
 @mixin scrollbar {
   &::-webkit-scrollbar-track {
     border-radius: 4px;
-    background-color: var(--e-color-bg2);
+    background-color: var(--o-color-bg2);
   }
 
   &::-webkit-scrollbar {
     width: 6px;
     height: 6px;
-    background-color: var(--e-color-bg2);
+    background-color: var(--o-color-bg2);
   }
 
   &::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background: var(--e-color-division1);
+    background: var(--o-color-division1);
   }
 }

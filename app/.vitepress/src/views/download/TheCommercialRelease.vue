@@ -497,11 +497,11 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
 .filter-drawer {
   .filter-drawer-title {
     width: 100%;
-    font-size: var(--e-font-size-tip);
-    line-height: var(--e-line-height-tip);
-    color: var(--e-color-text1);
-    margin-top: var(--e-spacing-h4);
-    margin-bottom: var(--e-spacing-h9);
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
+    color: var(--o-color-text1);
+    margin-top: var(--o-spacing-h4);
+    margin-bottom: var(--o-spacing-h9);
   }
 
   .filter-drawer-button {
@@ -509,17 +509,17 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    margin-top: var(--e-spacing-h5);
+    margin-top: var(--o-spacing-h5);
     .filter-drawer-button-item {
-      padding: var(--e-spacing-h10) var(--e-spacing-h3);
-      margin: var(--e-spacing-h9);
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      padding: var(--o-spacing-h10) var(--o-spacing-h3);
+      margin: var(--o-spacing-h9);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
     }
   }
 }
 .tag-filter :deep(.label) {
-  color: var(--e-color-text1);
+  color: var(--o-color-text1);
 }
 .page-box {
   display: flex;
@@ -533,10 +533,10 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
   }
 
   .pagination-slot {
-    font-size: var(--e-font-size-text);
+    font-size: var(--o-font-size-text);
     font-weight: 400;
-    color: var(--e-color-text1);
-    line-height: var(--e-spacing-h4);
+    color: var(--o-color-text1);
+    line-height: var(--o-spacing-h4);
   }
   :deep(.o-pagination) {
     display: flex;
@@ -550,10 +550,10 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
     display: none;
     flex-flow: column;
     justify-content: center;
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     align-items: center;
-    font-size: var(--e-font-size-tip);
-    line-height: var(--e-line-height-tip);
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
     @media (max-width: 768px) {
       display: flex;
     }
@@ -562,34 +562,34 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
   .page-box-divide {
     width: 100%;
     height: 1px;
-    margin-top: var(--e-spacing-h5);
-    background-color: var(--e-color-bg-secondary);
+    margin-top: var(--o-spacing-h5);
+    background-color: var(--o-color-bg-secondary);
     .page-box-divide-in {
       height: 100%;
-      background-color: var(--e-color-brand1);
+      background-color: var(--o-color-brand1);
     }
   }
 
   .page-box-button {
-    margin-top: var(--e-spacing-h5);
+    margin-top: var(--o-spacing-h5);
   }
 }
 .download {
   .o-search {
     @media (max-width: 768px) {
-      margin-bottom: var(--e-spacing-h5);
+      margin-bottom: var(--o-spacing-h5);
       height: 28px;
-      font-size: var(--e-font-size-text);
+      font-size: var(--o-font-size-text);
     }
   }
   :deep(.o-tag) {
     padding: 3px 12px;
-    font-size: var(--e-font-height-tip);
-    line-height: var(--e-line-height-tip);
+    font-size: var(--o-font-height-tip);
+    line-height: var(--o-line-height-tip);
   }
   .download-filter {
-    padding: 0 var(--e-spacing-h5);
-    margin-top: var(--e-spacing-h4);
+    padding: 0 var(--o-spacing-h5);
+    margin-top: var(--o-spacing-h4);
     display: flex;
     @media (max-width: 768px) {
       display: none;
@@ -603,7 +603,7 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
     }
 
     &:deep(.el-drawer__header) {
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       margin-bottom: 0px;
       :first-child {
         display: flex;
@@ -613,11 +613,11 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
     }
 
     &:deep(.el-drawer) {
-      background-color: var(--e-color-bg2);
+      background-color: var(--o-color-bg2);
     }
 
     &:deep(.o-tag-type-text) {
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
     }
     .download-filter-title-mobile {
       display: flex;
@@ -628,19 +628,19 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
       cursor: pointer;
     }
     .download-filter-icon-mobile {
-      color: var(--e-color-text4);
-      height: var(--e-font-size-tip);
-      width: var(--e-font-size-tip);
+      color: var(--o-color-text4);
+      height: var(--o-font-size-tip);
+      width: var(--o-font-size-tip);
     }
     .download-filter-word-mobile {
-      color: var(--e-color-text4);
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
-      margin-right: var(--e-spacing-h10);
+      color: var(--o-color-text4);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
+      margin-right: var(--o-spacing-h10);
     }
 
     .download-filter-list-mobile {
-      margin-top: var(--e-spacing-h6);
+      margin-top: var(--o-spacing-h6);
       display: flex;
       flex-flow: row;
       justify-content: flex-start;
@@ -654,32 +654,32 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
       flex-flow: row;
       justify-content: center;
       align-items: center;
-      padding: var(--e-spacing-h10) var(--e-spacing-h9);
-      background-color: var(--e-color-bg-secondary);
-      color: var(--e-color-text-secondary);
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
-      margin-right: var(--e-spacing-h9);
-      margin-top: var(--e-spacing-h10);
+      padding: var(--o-spacing-h10) var(--o-spacing-h9);
+      background-color: var(--o-color-bg-secondary);
+      color: var(--o-color-text-secondary);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
+      margin-right: var(--o-spacing-h9);
+      margin-top: var(--o-spacing-h10);
       .download-filter-card-icon-mobile {
-        font-size: var(--e-color-text1);
-        width: var(--e-font-size-tip);
-        height: var(--e-font-size-tip);
-        margin-left: var(--e-spacing-h9);
+        font-size: var(--o-color-text1);
+        width: var(--o-font-size-tip);
+        height: var(--o-font-size-tip);
+        margin-left: var(--o-spacing-h9);
       }
     }
   }
 
   .download-list {
     display: grid;
-    margin: var(--e-spacing-h4) auto var(--e-spacing-h2);
+    margin: var(--o-spacing-h4) auto var(--o-spacing-h2);
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: var(--e-spacing-h5);
+    grid-gap: var(--o-spacing-h5);
 
     @media (max-width: 768px) {
-      margin: var(--e-spacing-h5) auto;
+      margin: var(--o-spacing-h5) auto;
     }
 
     .download-list-content {
@@ -690,7 +690,7 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
       height: 100%;
 
       :deep(.el-card__body) {
-        padding: var(--e-spacing-h2);
+        padding: var(--o-spacing-h2);
         width: 100%;
         display: flex;
         flex-flow: column;
@@ -698,7 +698,7 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
         align-items: flex-start;
         height: 100%;
         @media (max-width: 768px) {
-          padding: var(--e-spacing-h5) var(--e-spacing-h6);
+          padding: var(--o-spacing-h5) var(--o-spacing-h6);
         }
       }
     }
@@ -712,71 +712,71 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
   }
   .empty {
     display: flex;
-    padding-top: var(--e-spacing-h1);
+    padding-top: var(--o-spacing-h1);
     justify-content: center;
     align-items: center;
     height: 100%;
     flex-direction: column;
-    font-size: var(--e-font-size-h6);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h6);
+    color: var(--o-color-text1);
     .empty-img {
       height: 300px;
     }
     .empty-text {
-      margin-top: var(--e-spacing-h5);
+      margin-top: var(--o-spacing-h5);
     }
     @media screen and (max-width: 768px) {
-      padding-top: var(--e-spacing-h2);
-      font-size: var(--e-font-size-text);
+      padding-top: var(--o-spacing-h2);
+      font-size: var(--o-font-size-text);
       .empty-img {
         max-height: 232px;
       }
       .empty-text {
-        margin-top: var(--e-spacing-h6);
-        font-size: var(--e-font-size-tip);
+        margin-top: var(--o-spacing-h6);
+        font-size: var(--o-font-size-tip);
       }
     }
   }
   .download-name {
-    font-size: var(--e-font-size-h5);
-    color: var(--e-color-text1);
-    line-height: var(--e-line-height-h5);
+    font-size: var(--o-font-size-h5);
+    color: var(--o-color-text1);
+    line-height: var(--o-line-height-h5);
     @media (max-width: 768px) {
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
     }
   }
 
   .download-desc {
-    margin-top: var(--e-spacing-h5);
-    font-size: var(--e-font-size-text);
-    color: var(--e-color-text4);
-    line-height: var(--e-line-height-text);
+    margin-top: var(--o-spacing-h5);
+    font-size: var(--o-font-size-text);
+    color: var(--o-color-text4);
+    line-height: var(--o-line-height-text);
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     @media (max-width: 768px) {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
-      margin-top: var(--e-spacing-h10);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
+      margin-top: var(--o-spacing-h10);
     }
   }
 
   .download-button {
-    margin-top: var(--e-spacing-h4);
-    color: var(--e-color-white);
+    margin-top: var(--o-spacing-h4);
+    color: var(--o-color-white);
     .download-button-icon {
       margin-left: 8px;
     }
   }
 }
 .download-filter-item {
-  margin: var(--e-spacing-h10);
+  margin: var(--o-spacing-h10);
   @media (max-width: 768px) {
-    font-size: var(--e-font-size-tip);
-    line-height: var(--e-line-height-tip);
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
   }
 }
 .line-class {
@@ -786,7 +786,7 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
   }
   .facturer-class,
   .date-class {
-    color: var(--e-color-text4);
+    color: var(--o-color-text4);
   }
   .arch-class {
     display: flex;
@@ -794,8 +794,8 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
     gap: 4px 16px;
     div {
       padding: 2px 8px;
-      background-color: var(--e-color-bg4);
-      color: var(--e-color-text4);
+      background-color: var(--o-color-bg4);
+      color: var(--o-color-text4);
     }
     .no-data {
       background-color: transparent;
@@ -804,18 +804,18 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
   }
 }
 .url-list {
-  margin-top: var(--e-spacing-h4);
+  margin-top: var(--o-spacing-h4);
   display: flex;
   flex-direction: column;
   row-gap: 16px;
   font-size: 14px;
 
   a {
-    font-size: var(--e-font-size-text);
-    color: var(--e-color-brand1);
+    font-size: var(--o-font-size-text);
+    color: var(--o-color-brand1);
     @media (max-width: 768px) {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
     }
   }
 }

@@ -143,7 +143,7 @@ html[lang='zh'] {
   .flex-start {
     @media screen and (max-width: 824px) {
       margin: 0;
-      padding-top: var(--e-spacing-h3);
+      padding-top: var(--o-spacing-h3);
       height: 100%;
     }
   }
@@ -166,7 +166,7 @@ html[lang='zh'] {
   position: relative;
   .banner-panel {
     position: absolute;
-    background-color: var(--e-color-bg2);
+    background-color: var(--o-color-bg2);
     display: flex;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -186,17 +186,17 @@ html[lang='zh'] {
       height: 100%;
       color: #fff;
       .title {
-        font-size: var(--e-font-size-h1);
-        line-height: var(--e-line-height-h1);
+        font-size: var(--o-font-size-h1);
+        line-height: var(--o-line-height-h1);
         // filter: invert(1);
         font-weight: 600;
         @media screen and (max-width: 1439px) {
-          font-size: var(--e-font-size-h2);
-          line-height: var(--e-line-height-h2);
+          font-size: var(--o-font-size-h2);
+          line-height: var(--o-line-height-h2);
         }
         @media screen and (max-width: 824px) {
-          font-size: var(--e-font-size-h4);
-          line-height: var(--e-line-height-h4);
+          font-size: var(--o-font-size-h4);
+          line-height: var(--o-line-height-h4);
         }
       }
       .box {
@@ -217,27 +217,27 @@ html[lang='zh'] {
           }
         }
 
-        font-size: var(--e-font-size-h5);
+        font-size: var(--o-font-size-h5);
         font-weight: normal;
-        line-height: var(--e-line-height-h5);
-        margin-top: var(--e-spacing-h6);
+        line-height: var(--o-line-height-h5);
+        margin-top: var(--o-spacing-h6);
         // filter: invert(1);
         @media screen and (max-width: 1439px) {
-          font-size: var(--e-font-size-h6);
-          line-height: var(--e-line-height-h6);
+          font-size: var(--o-font-size-h6);
+          line-height: var(--o-line-height-h6);
         }
         @media screen and (max-width: 824px) {
-          margin-top: var(--e-spacing-h9);
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
+          margin-top: var(--o-spacing-h9);
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
         }
       }
       .action {
-        margin-top: var(--e-spacing-h3);
+        margin-top: var(--o-spacing-h3);
         .o-icon {
           @media screen and (max-width: 824px) {
             font-size: 16px;
-            color: var(--e-color-yellow5);
+            color: var(--o-color-yellow5);
           }
         }
         @media screen and (max-width: 824px) {
@@ -320,7 +320,7 @@ html[lang='zh'] {
       margin: 0 4px;
     }
     .swiper-pagination-bullet-active {
-      background: var(--e-color-yellow5);
+      background: var(--o-color-yellow5);
       opacity: 1;
     }
     @media screen and (max-width: 1439px) {

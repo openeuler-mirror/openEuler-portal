@@ -193,21 +193,21 @@ Definition：developer entry in the OWNERS file owned by openEuler SIG.
 
 <style scoped lang="scss">
   .markdown {
-    margin-top: var(--e-spacing-h1);
+    margin-top: var(--o-spacing-h1);
   }
   .markdown-mo {
-    margin-top: var(--e-spacing-h2);
-    padding: var(--e-spacing-h5);
+    margin-top: var(--o-spacing-h2);
+    padding: var(--o-spacing-h5);
   }
   .top {
-    font-size: var(--e-font-size-h7);
+    font-size: var(--o-font-size-h7);
     font-weight: 500;
-    color: var(--e-color-text1);
-    line-height: var(--e-line-height-h7);
+    color: var(--o-color-text1);
+    line-height: var(--o-line-height-h7);
   }
   .duty-table {
-    margin-top: var(--e-spacing-h4);
-    margin-bottom: var(--e-spacing-h5);
+    margin-top: var(--o-spacing-h4);
+    margin-bottom: var(--o-spacing-h5);
     box-shadow: none;
     :deep(.el-table__header) {
       tr {
@@ -219,24 +219,24 @@ Definition：developer entry in the OWNERS file owned by openEuler SIG.
     }
   }
   .link {
-    color: var(--e-color-brand1);
+    color: var(--o-color-brand1);
   }
   .mo-card {
-    margin: var(--e-spacing-h4) 0;
+    margin: var(--o-spacing-h4) 0;
     &-item {
-      padding: var(--e-spacing-h5);
+      padding: var(--o-spacing-h5);
       &-text {
         display: flex;
         .text-title {
           white-space:nowrap;
         }
         .text-content {
-          color: var(--e-color-text4);
+          color: var(--o-color-text4);
         }
       }
     }
     &-sides {
-      background-color: var(--e-color-bg1);
+      background-color: var(--o-color-bg1);
     }
   }
 </style>

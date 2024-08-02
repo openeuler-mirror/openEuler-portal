@@ -128,9 +128,9 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .word-style {
-  color: var(--e-color-text1);
-  font-size: var(--e-font-size-h8);
-  line-height: var(--e-line-height-h8);
+  color: var(--o-color-text1);
+  font-size: var(--o-font-size-h8);
+  line-height: var(--o-line-height-h8);
 }
 .oevp {
   .oevp-container {
@@ -144,32 +144,32 @@ onMounted(() => {
     }
 
     h3 {
-      line-height: var(--e-line-height-h5);
-      font-size: var(--e-font-size-h5);
+      line-height: var(--o-line-height-h5);
+      font-size: var(--o-font-size-h5);
     }
     .o-button {
       margin-left: 50px;
       max-height: 40px;
       white-space: nowrap;
-      color: var(--e-color-white);
+      color: var(--o-color-white);
       @media screen and (max-width: 768px) {
         margin-left: 0;
         margin-top: 12px;
         padding: 4px 16px;
-        font-size: var(--e-font-size-text);
+        font-size: var(--o-font-size-text);
       }
     }
     .oevp-container-introduction {
       margin-top: 16px;
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
     }
     @media screen and (max-width: 768px) {
       margin-top: 24px;
       padding: 16px;
       h3 {
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-height-h8);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h8);
       }
       .oevp-container-introduction {
         margin-top: 8px;
@@ -178,16 +178,16 @@ onMounted(() => {
   }
   .oevp-list {
     h2 {
-      margin-top: var(--e-spacing-h2);
-      font-size: var(--e-font-size-h3);
+      margin-top: var(--o-spacing-h2);
+      font-size: var(--o-font-size-h3);
       font-weight: 300;
-      color: var(--e-color-text1);
-      line-height: var(--e-line-height-h3);
+      color: var(--o-color-text1);
+      line-height: var(--o-line-height-h3);
       text-align: center;
       @media screen and (max-width: 768px) {
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-height-h8);
-        margin-top: var(--e-spacing-h4);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h8);
+        margin-top: var(--o-spacing-h4);
       }
     }
     .oevp-card-list {
@@ -207,21 +207,21 @@ onMounted(() => {
         flex-direction: column;
         align-items: center;
         padding: 16px;
-        font-size: var(--e-font-size-tip);
-        line-height: var(--e-line-height-tip);
-        color: var(--e-color-text1);
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-tip);
+        color: var(--o-color-text1);
         .avator {
           width: 100px;
         }
         .name {
           margin-top: 8px;
-          font-size: var(--e-font-size-h8);
-          line-height: var(--e-line-height-h8);
-          color: var(--e-color-brand1);
+          font-size: var(--o-font-size-h8);
+          line-height: var(--o-line-height-h8);
+          color: var(--o-color-brand1);
         }
         .company {
           margin-top: 6px;
-          color: var(--e-color-text4);
+          color: var(--o-color-text4);
         }
         .label-list {
           display: flex;
@@ -231,36 +231,36 @@ onMounted(() => {
           .label {
             margin: 0 4px 4px 0;
             padding: 4px 8px;
-            font-size: var(--e-font-size-tip);
-            line-height: var(--e-line-height-tip);
-            background-color: var(--e-color-bg1);
+            font-size: var(--o-font-size-tip);
+            line-height: var(--o-line-height-tip);
+            background-color: var(--o-color-bg1);
           }
         }
         .base {
           display: flex;
           align-items: center;
           margin-top: 8px;
-          color: var(--e-color-text4);
+          color: var(--o-color-text4);
           .o-icon {
-            font-size: var(--e-font-size-h8);
+            font-size: var(--o-font-size-h8);
             margin-right: 8px;
           }
         }
         &:hover {
-          box-shadow: var(--e-shadow-l2_hover);
+          box-shadow: var(--o-shadow-l2_hover);
         }
       }
     }
     .tip {
       margin-top: 40px;
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       @media screen and (max-width: 768px) {
-        margin-top: var(--e-spacing-h4);
-        font-size: var(--e-font-size-text);
+        margin-top: var(--o-spacing-h4);
+        font-size: var(--o-font-size-text);
       }
     }
     .equity-container {
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       margin-top: 40px;
       width: 100%;
       display: flex;
@@ -294,9 +294,9 @@ onMounted(() => {
           }
           .item-title {
             margin-top: 12px;
-            font-size: var(--e-font-size-h7);
+            font-size: var(--o-font-size-h7);
             @media screen and (max-width: 768px) {
-              font-size: var(--e-font-size-text);
+              font-size: var(--o-font-size-text);
             }
           }
         }
@@ -309,14 +309,14 @@ onMounted(() => {
     .join-container {
       margin-top: 40px;
       padding: 40px;
-      color: var(--e-color-text1);
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
+      color: var(--o-color-text1);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
       @media screen and (max-width: 768px) {
         margin-top: 24px;
         padding: 16px;
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
       }
     }
   }

@@ -57,7 +57,7 @@ const form = ref(
   padding: 0 12px !important;
 
   .el-radio__label {
-    color: var(--e-color-neutral5) !important;
+    color: var(--o-color-neutral5) !important;
     font-weight: normal !important;
     padding: 0 !important;
   }
@@ -68,16 +68,16 @@ const form = ref(
 
   &.is-checked {
     .el-radio__label {
-      color: var(--e-color-brand1) !important;
+      color: var(--o-color-brand1) !important;
     }
   }
   &.is-checked {
-    border-color: var(--e-color-brand1) !important;
+    border-color: var(--o-color-brand1) !important;
   }
 }
 
 .line {
-  border-bottom: 1px solid var(--e-color-division1);
+  border-bottom: 1px solid var(--o-color-division1);
   margin-bottom: 18px;
 }
 .group {

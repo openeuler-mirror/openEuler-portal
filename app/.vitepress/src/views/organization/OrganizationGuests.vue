@@ -45,7 +45,7 @@ onMounted(() => {
   filter: brightness(0.8) grayscale(0.2) contrast(1.2);
 }
 .lecturer-list {
-  margin: var(--e-spacing-h2) auto;
+  margin: var(--o-spacing-h2) auto;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 24px;
@@ -99,8 +99,8 @@ onMounted(() => {
       }
     }
     p {
-      font-size: var(--e-spacing-h5);
-      color: var(--e-color-text1);
+      font-size: var(--o-spacing-h5);
+      color: var(--o-color-text1);
       text-align: center;
       margin-top: 8px;
       @media (max-width: 780px) {
@@ -109,12 +109,12 @@ onMounted(() => {
     }
     &-title {
       p {
-        color: var(--e-color-text4);
-        font-size: var(--e-font-size-tip);
+        color: var(--o-color-text4);
+        font-size: var(--o-font-size-tip);
         font-weight: 400;
         @media (max-width: 780px) {
-          font-size: var(--e-font-size-tip);
-          line-height: var(--e-line-height-tip);
+          font-size: var(--o-font-size-tip);
+          line-height: var(--o-line-height-tip);
         }
       }
       @media (max-width: 780px) {
@@ -163,20 +163,20 @@ onMounted(() => {
       align-items: center;
       justify-content: center;
       font-size: 24px;
-      color: var(--e-color-brand1);
+      color: var(--o-color-brand1);
     }
     .personal-name {
-      font-size: var(--e-font-size-h8);
-      color: var(--e-color-text1);
+      font-size: var(--o-font-size-h8);
+      color: var(--o-color-text1);
       text-align: center;
       margin-bottom: 4px;
     }
     .personal-post {
       margin-top: 4px;
-      font-size: var(--e-font-size-tip);
-      color: var(--e-color-text4);
+      font-size: var(--o-font-size-tip);
+      color: var(--o-color-text4);
       text-align: center;
-      line-height: var(--e-line-height-tip);
+      line-height: var(--o-line-height-tip);
       + .personal-post {
         margin-top: 0;
       }

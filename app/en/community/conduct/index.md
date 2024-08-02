@@ -45,11 +45,11 @@ category: about-us
 
 <style>
 .conduct-en h5{
-    margin-top: var(--e-spacing-h8);
-    margin-bottom: var(--e-spacing-h8);
-    font-size: var(--e-font-size-text);
+    margin-top: var(--o-spacing-h8);
+    margin-bottom: var(--o-spacing-h8);
+    font-size: var(--o-font-size-text);
     font-weight: 400;
-    color: var(--e-color-text4);
-    line-height: var(--e-line-height-text);
+    color: var(--o-color-text4);
+    line-height: var(--o-line-height-text);
 }
 </style>

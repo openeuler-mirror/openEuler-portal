@@ -63,8 +63,8 @@ onMounted(() => {
     margin: 0px -1px -1px 0px;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--e-color-division1);
-    background-color: var(--e-color-bg2);
+    border: 1px solid var(--o-color-division1);
+    background-color: var(--o-color-bg2);
     max-height: 120px;
     overflow: hidden;
     img {
@@ -112,25 +112,25 @@ onMounted(() => {
   }
 }
 .partner {
-  margin-top: var(--e-spacing-h1);
+  margin-top: var(--o-spacing-h1);
   @media screen and (max-width: 768px) {
-    margin-top: var(--e-spacing-h4);
+    margin-top: var(--o-spacing-h4);
   }
   h3 {
     text-align: center;
-    font-size: var(--e-font-size-h3);
-    line-height: var(--e-line-height-h3);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h3);
+    line-height: var(--o-line-height-h3);
+    color: var(--o-color-text1);
     font-weight: 300;
     @media (max-width: 767px) {
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
     }
   }
   .partner-item {
-    margin-top: var(--e-spacing-h3);
+    margin-top: var(--o-spacing-h3);
     @media screen and (max-width: 768px) {
-      margin-top: var(--e-spacing-h4);
+      margin-top: var(--o-spacing-h4);
     }
     .picture-panel {
       @media screen and (max-width: 1416px) {
@@ -142,22 +142,22 @@ onMounted(() => {
       }
     }
     h4 {
-      font-size: var(--e-font-size-h5);
-      line-height: var(--e-line-height-h5);
-      color: var(--e-color-text1);
+      font-size: var(--o-font-size-h5);
+      line-height: var(--o-line-height-h5);
+      color: var(--o-color-text1);
       font-weight: 400;
       text-align: center;
       @media screen and (max-width: 768px) {
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
       }
     }
     .picture-panel {
-      margin-top: var(--e-spacing-h4);
+      margin-top: var(--o-spacing-h4);
       margin-left: auto;
       margin-right: auto;
       @media screen and (max-width: 768px) {
-        margin-top: var(--e-spacing-h5);
+        margin-top: var(--o-spacing-h5);
       }
       :deep(a) {
         cursor: default;

@@ -217,7 +217,7 @@ const isMobile = computed(() => {
       height: 196px;
       border-width: 2px;
       border-style: dashed;
-      border-color: var(--e-color-brand1);
+      border-color: var(--o-color-brand1);
       border-bottom: none;
       border-left: none;
     }
@@ -227,7 +227,7 @@ const isMobile = computed(() => {
       min-height: 102px;
       border-width: 2px;
       border-style: dashed;
-      border-color: var(--e-color-brand1);
+      border-color: var(--o-color-brand1);
       border-bottom: none;
       border-right: none;
     }
@@ -248,7 +248,7 @@ const isMobile = computed(() => {
     @media (max-width: 768px) {
       min-height: 0px;
       display: block;
-      margin-top: var(--e-spacing-h5);
+      margin-top: var(--o-spacing-h5);
     }
     .mail-card-left {
       display: flex;
@@ -257,7 +257,7 @@ const isMobile = computed(() => {
       z-index: 4;
       @media (max-width: 768px) {
         margin-right: 0px;
-        margin-bottom: var(--e-spacing-h5);
+        margin-bottom: var(--o-spacing-h5);
         justify-content: center;
         height: fit-content;
         min-height: 0;
@@ -272,7 +272,7 @@ const isMobile = computed(() => {
       @media (max-width: 768px) {
         justify-content: center;
         margin-right: 0px;
-        margin-top: var(--e-spacing-h5);
+        margin-top: var(--o-spacing-h5);
         height: fit-content;
         min-height: 0;
       }
@@ -286,7 +286,7 @@ const isMobile = computed(() => {
     }
     .mail-card-illustration {
       width: 216px;
-      background-color: var(--e-color-brand2);
+      background-color: var(--o-color-brand2);
       @media (max-width: 1280px) {
         width: 180px;
       }
@@ -313,16 +313,16 @@ const isMobile = computed(() => {
       align-items: center;
       width: 100%;
       max-width: 456px;
-      background-color: var(--e-color-bg2);
+      background-color: var(--o-color-bg2);
       .mail-card-text {
         display: flex;
         height: 78px;
         align-items: center;
         .left-title {
           margin-left: 0;
-          font-size: var(--e-font-size-h6);
+          font-size: var(--o-font-size-h6);
           @media screen and (max-width: 768px) {
-            font-size: var(--e-font-size-text);
+            font-size: var(--o-font-size-text);
           }
         }
         .right-docs {
@@ -335,62 +335,62 @@ const isMobile = computed(() => {
         }
       }
       span {
-        color: var(--e-color-text1);
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-h8);
+        color: var(--o-color-text1);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-h8);
         float: left;
-        margin: 0 var(--e-spacing-h4) 0 59px;
-        bottom: var(--e-spacing-h4);
+        margin: 0 var(--o-spacing-h4) 0 59px;
+        bottom: var(--o-spacing-h4);
         @media (max-width: 768px) {
-          margin: 0 var(--e-spacing-h6) var(--e-spacing-h10) 30px;
-          bottom: var(--e-spacing-h5);
+          margin: 0 var(--o-spacing-h6) var(--o-spacing-h10) 30px;
+          bottom: var(--o-spacing-h5);
 
-          line-height: var(--e-line-height-tip);
-          font-size: var(--e-font-size-tip);
+          line-height: var(--o-line-height-tip);
+          font-size: var(--o-font-size-tip);
         }
       }
       p {
-        color: var(--e-color-brand1);
+        color: var(--o-color-brand1);
         cursor: pointer;
         display: inline;
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-h8);
-        bottom: var(--e-spacing-h4);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-h8);
+        bottom: var(--o-spacing-h4);
         @media (max-width: 768px) {
-          font-size: var(--e-font-size-tip);
-          line-height: var(--e-line-height-text);
+          font-size: var(--o-font-size-tip);
+          line-height: var(--o-line-height-text);
         }
       }
       .mail-card-text-circle {
         height: 78px;
         width: 78px;
-        border: 4px solid var(--e-color-white);
+        border: 4px solid var(--o-color-white);
         border-radius: 50%;
-        background-color: var(--e-color-kleinblue5);
+        background-color: var(--o-color-kleinblue5);
         position: relative;
         transform: translate(-50%);
         @media (max-width: 768px) {
           flex-shrink: 0;
           height: 38px;
           width: 38px;
-          border: 2px solid var(--e-color-white);
+          border: 2px solid var(--o-color-white);
           justify-content: center;
         }
         span {
           white-space: nowrap;
-          font-size: var(--e-font-size-h5);
-          color: var(--e-color-white);
-          line-height: var(--e-line-height-h5);
+          font-size: var(--o-font-size-h5);
+          color: var(--o-color-white);
+          line-height: var(--o-line-height-h5);
           position: relative;
           top: 50%;
           right: 36%;
           transform: translate(-50%, -50%);
           font-weight: 500;
           @media (max-width: 768px) {
-            font-size: var(--e-font-size-text);
+            font-size: var(--o-font-size-text);
             margin: auto;
             left: 50%;
-            line-height: var(--e-line-height-text);
+            line-height: var(--o-line-height-text);
           }
         }
       }
@@ -398,9 +398,9 @@ const isMobile = computed(() => {
   }
 }
 .mail-table {
-  margin-top: var(--e-spacing-h1);
+  margin-top: var(--o-spacing-h1);
   @media (max-width: 768px) {
-    margin-top: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
   }
   .mail-address {
     display: flex;
@@ -408,14 +408,14 @@ const isMobile = computed(() => {
     .subscribe-mail {
       cursor: pointer;
       flex-shrink: 0;
-      color: var(--e-color-brand1);
+      color: var(--o-color-brand1);
       padding: 2px 11px;
       margin-left: 8px;
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
-      border: 1px solid var(--e-color-brand1);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
+      border: 1px solid var(--o-color-brand1);
       &:hover {
-        border: 1px solid var(--e-color-brand2);
+        border: 1px solid var(--o-color-brand2);
       }
 
       @media screen and (max-width: 768px) {

@@ -66,7 +66,7 @@ const isDark = computed(() => {
 .item-topic {
   width: calc(50% - 16px);
   min-height: 252px;
-  background-color: var(--e-color-bg2);
+  background-color: var(--o-color-bg2);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -75,15 +75,15 @@ const isDark = computed(() => {
   display: flex;
   flex-direction: column;
   .title {
-    font-size: var(--e-font-size-h5);
-    line-height: var(--e-line-height-h5);
+    font-size: var(--o-font-size-h5);
+    line-height: var(--o-line-height-h5);
     font-weight: 500;
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     margin-bottom: 16px;
   }
   .desc {
-    font-size: var(--e-font-size-h8);
-    line-height: var(--e-line-height-h8);
+    font-size: var(--o-font-size-h8);
+    line-height: var(--o-line-height-h8);
     font-weight: 400;
     color: rgba(0, 0, 0, 0.8);
     &:last-of-type {
@@ -95,20 +95,20 @@ const isDark = computed(() => {
     a {
       display: inline-flex;
       align-items: center;
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       @media (hover: hover) {
         &:hover {
-          color: var(--e-color-kleinblue5);
+          color: var(--o-color-kleinblue5);
         }
       }
     }
     .text {
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
       margin-right: 4px;
     }
     .o-icon {
-      font-size: var(--e-font-size-h5);
+      font-size: var(--o-font-size-h5);
     }
   }
   &:nth-child(2n) {
@@ -138,18 +138,18 @@ const isDark = computed(() => {
     padding: 24px;
     margin-top: 24px;
     .title {
-      font-size: var(--e-font-size-h6);
-      line-height: var(--e-line-height-h6);
+      font-size: var(--o-font-size-h6);
+      line-height: var(--o-line-height-h6);
       margin-bottom: 16px;
     }
     .desc {
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
     }
     .link {
       .text {
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
       }
     }
     &:nth-child(2n) {
@@ -177,21 +177,21 @@ const isDark = computed(() => {
     background-size: 100%;
     background-position: right bottom;
     .title {
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
       margin-bottom: 8px;
     }
     .desc {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
     }
     .link {
       .text {
-        font-size: var(--e-font-size-tip);
-        line-height: var(--e-line-height-tip);
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-tip);
       }
       .o-icon {
-        font-size: var(--e-font-size-h8);
+        font-size: var(--o-font-size-h8);
       }
     }
     &:nth-child(2n) {
