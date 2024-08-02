@@ -67,21 +67,21 @@ const blogInfo = {
 }
 .disclaimer,
 .copyright {
-  font-size: var(--o-font-size-h8);
-  line-height: var(--o-line-height-h8);
-  color: var(--o-color-brand1);
+  font-size: var(--e-font-size-h8);
+  line-height: var(--e-line-height-h8);
+  color: var(--e-color-brand1);
   a {
     text-decoration: underline;
   }
   @media screen and (max-width: 768px) {
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-text);
+    font-size: var(--e-font-size-text);
+    line-height: var(--e-line-height-text);
   }
 }
 .disclaimer {
-  margin-top: var(--o-spacing-h6);
+  margin-top: var(--e-spacing-h6);
   @media screen and (max-width: 768px) {
-    margin-top: var(--o-spacing-h8);
+    margin-top: var(--e-spacing-h8);
   }
 }
 </style>

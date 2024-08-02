@@ -175,7 +175,7 @@ $lineSpace: 312px;
 $eventboxWidth: 104px;
 $contentWidth: 1302px;
 $titleboxWidth: 168px;
-$gridGap: var(--o-spacing-h6);
+$gridGap: var(--e-spacing-h6);
 $lineLeft: calc($titleboxWidth);
 
 .months-box {
@@ -187,8 +187,8 @@ $lineLeft: calc($titleboxWidth);
     padding: 0 8px;
     min-width: 104px;
     text-align: center;
-    font-size: var(--o-font-size-h8);
-    line-height: var(--o-line-height-h8);
+    font-size: var(--e-font-size-h8);
+    line-height: var(--e-line-height-h8);
   }
 }
 
@@ -231,15 +231,15 @@ $lineLeft: calc($titleboxWidth);
     h3 {
       font-size: 18px;
       font-weight: 500;
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
       line-height: 26px;
       margin-bottom: 12px;
     }
     .desc {
-      font-size: var(--o-font-size-text);
+      font-size: var(--e-font-size-text);
       font-weight: 400;
-      color: var(--o-color-text3);
-      line-height: var(--o-line-height-text);
+      color: var(--e-color-text3);
+      line-height: var(--e-line-height-text);
     }
   }
   .meetup-form-btn {
@@ -276,7 +276,7 @@ $lineLeft: calc($titleboxWidth);
   }
 }
 .year-plan {
-  color: var(--o-color-text1);
+  color: var(--e-color-text1);
   @media screen and (max-width: 1416px) {
     overflow: auto;
     @include scrollbar;
@@ -311,20 +311,20 @@ $lineLeft: calc($titleboxWidth);
       background-position: bottom;
       background-size: contain;
       background-repeat: no-repeat;
-      background-color: var(--o-color-kleinblue5);
-      color: var(--o-color-white);
-      font-size: var(--o-font-size-h7);
-      line-height: var(--o-line-height-h7);
+      background-color: var(--e-color-kleinblue5);
+      color: var(--e-color-white);
+      font-size: var(--e-font-size-h7);
+      line-height: var(--e-line-height-h7);
       flex-shrink: 0;
       width: $titleboxWidth;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 0 var(--o-spacing-h6);
+      padding: 0 var(--e-spacing-h6);
     }
     .content-box {
-      background-color: var(--o-color-fill2);
+      background-color: var(--e-color-fill2);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: right 40px;
@@ -336,13 +336,13 @@ $lineLeft: calc($titleboxWidth);
         cursor: pointer;
         &:hover {
           p:not(.location) {
-            color:var(--o-color-brand1)
+            color:var(--e-color-brand1)
           }
         }
       }
     }
     .collegee {
-      background-color: var(--o-color-fill2);
+      background-color: var(--e-color-fill2);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: right 40px;
@@ -351,22 +351,22 @@ $lineLeft: calc($titleboxWidth);
       }
       .collegee-item {
         height: 34px;
-        font-size: var(--o-font-size-tip);
-        color: var(--o-color-text1);
+        font-size: var(--e-font-size-tip);
+        color: var(--e-color-text1);
         text-align: center;
         background-image: linear-gradient(
           90deg,
           rgba(237, 245, 255, 0.7) 10%,
           rgba(195, 225, 255, 0.36) 100%
         );
-        margin-bottom: var(--o-spacing-h9);
+        margin-bottom: var(--e-spacing-h9);
         p,
         a {
           line-height: 34px;
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
         }
         a:hover {
-          color: var(--o-color-brand1);
+          color: var(--e-color-brand1);
         }
         .internship {
           margin-left: 40px;
@@ -393,8 +393,8 @@ $lineLeft: calc($titleboxWidth);
       }
 
       h5 {
-        font-size: var(--o-font-size-h8);
-        line-height: var(--o-line-height-text);
+        font-size: var(--e-font-size-h8);
+        line-height: var(--e-line-height-text);
         font-weight: 500;
       }
       .event-item {
@@ -407,25 +407,25 @@ $lineLeft: calc($titleboxWidth);
         li {
           position: absolute;
           left: 0;
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-line-height-tip);
           width: 4px;
           margin-right: 4px;
         }
         a,
         p {
           margin-top: 8px;
-          font-size: var(--o-font-size-tip);
-          color: var(--o-color-text1);
+          font-size: var(--e-font-size-tip);
+          color: var(--e-color-text1);
           position: relative;
-          line-height: var(--o-line-height-tip);
+          line-height: var(--e-line-height-tip);
         }
         .location {
           margin-top: 0;
         }
         a {
           &:hover {
-            color: var(--o-color-brand1);
+            color: var(--e-color-brand1);
           }
         }
       }
@@ -437,8 +437,8 @@ $lineLeft: calc($titleboxWidth);
         align-items: center;
         border: 1px solid #a358ff;
         height: 22px;
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
         text-align: center;
         color: #a358ff;
         padding: 0 4px;
@@ -457,19 +457,19 @@ $lineLeft: calc($titleboxWidth);
         z-index: 3;
         p,
         a {
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-line-height-tip);
         }
       }
       .content-box {
         .event-box {
-          box-shadow: var(--o-shadow-l1);
+          box-shadow: var(--e-shadow-l1);
           h5 {
-            color: var(--o-color-kleinblue5);
+            color: var(--e-color-kleinblue5);
           }
           .event-item {
             li {
-              color: var(--o-color-kleinblue5);
+              color: var(--e-color-kleinblue5);
             }
           }
         }
@@ -484,11 +484,11 @@ $lineLeft: calc($titleboxWidth);
             rgba(251, 234, 175, 0.4) 100%
           );
           h5 {
-            color: var(--o-color-kleinblue5);
+            color: var(--e-color-kleinblue5);
           }
           .event-item {
             li {
-              color: var(--o-color-kleinblue5);
+              color: var(--e-color-kleinblue5);
             }
           }
         }
@@ -567,7 +567,7 @@ $lineLeft: calc($titleboxWidth);
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-color: var(--o-color-fill2);
+        background-color: var(--e-color-fill2);
         @for $i from 1 through 12 {
           .edit-#{$i} {
             left: calc(104px * $i + 62px);
@@ -578,17 +578,17 @@ $lineLeft: calc($titleboxWidth);
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
 
           p {
-            font-size: var(--o-font-size-tip);
+            font-size: var(--e-font-size-tip);
             white-space: nowrap;
           }
         }
         a {
           &:hover {
             .edition-content {
-              color: var(--o-color-brand1)
+              color: var(--e-color-brand1)
             }
           }
         }

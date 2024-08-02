@@ -13,35 +13,35 @@ const attrs = useAttrs();
 
 <style lang="scss">
 .o-card {
-  --o-card-font-color: var(--o-color-text1);
-  --o-card-bg-color: var(--o-color-fill2);
-  --o-card-division-color: var(--o-color-division1);
-  --o-card-bg-color_hover: var(--o-color-fill2_hover);
+  --e-card-font-color: var(--e-color-text1);
+  --e-card-bg-color: var(--e-color-fill2);
+  --e-card-division-color: var(--e-color-division1);
+  --e-card-bg-color_hover: var(--e-color-fill2_hover);
 
   &.el-card {
-    color: var(--o-card-font-color);
+    color: var(--e-card-font-color);
     border-radius: 0;
-    background-color: var(--o-card-bg-color);
+    background-color: var(--e-card-bg-color);
     transition: none;
     border: none;
 
     &.is-always-shadow {
-      box-shadow: var(--o-shadow-l2);
+      box-shadow: var(--e-shadow-l2);
     }
 
     &.is-hover-shadow {
-      box-shadow: var(--o-shadow-l2);
+      box-shadow: var(--e-shadow-l2);
       &:hover,
       &:focus {
         @media screen and (min-width: 1100px) {
-          box-shadow: var(--o-shadow-l2_hover);
-          background-color: var(--o-card-bg-color_hover);
+          box-shadow: var(--e-shadow-l2_hover);
+          background-color: var(--e-card-bg-color_hover);
         }
       }
     }
 
     .el-card__header {
-      border-bottom: 1px solid var(--o-card-division-color);
+      border-bottom: 1px solid var(--e-card-division-color);
     }
   }
 }

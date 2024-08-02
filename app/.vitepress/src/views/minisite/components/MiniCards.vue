@@ -102,10 +102,10 @@ const isDark = computed(() => {
 
 <style lang="scss" scoped>
 .cards-wraper {
-  margin-bottom: var(--o-spacing-h2);
-  box-shadow: var(--o-shadow-l1);
+  margin-bottom: var(--e-spacing-h2);
+  box-shadow: var(--e-shadow-l1);
   @media screen and (max-width: 767px) {
-    margin-bottom: var(--o-spacing-h5);
+    margin-bottom: var(--e-spacing-h5);
   }
 }
 .info {
@@ -113,7 +113,7 @@ const isDark = computed(() => {
   &-cards {
     height: 290px;
     margin: 0 auto;
-    background-color: var(--o-color-bg2);
+    background-color: var(--e-color-bg2);
     &-item {
       position: relative;
       .cover {
@@ -133,11 +133,11 @@ const isDark = computed(() => {
       cursor: pointer;
     }
     &-title {
-      font-size: var(--o-font-size-h8);
+      font-size: var(--e-font-size-h8);
       font-weight: 400;
-      color: var(--o-color-text1);
-      line-height: var(--o-line-height-h8);
-      margin-top: var(--o-spacing-h5);
+      color: var(--e-color-text1);
+      line-height: var(--e-line-height-h8);
+      margin-top: var(--e-spacing-h5);
       text-align: center;
     }
     &-mail {
@@ -146,11 +146,11 @@ const isDark = computed(() => {
       left: -32%;
       z-index: 1;
       width: 260px;
-      background-color: var(--o-color-bg2);
-      border: 1px solid var(--o-color-brand1);
-      padding: var(--o-spacing-h5) 0;
+      background-color: var(--e-color-bg2);
+      border: 1px solid var(--e-color-brand1);
+      padding: var(--e-spacing-h5) 0;
       text-align: center;
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
     }
     .menu {
       position: absolute;
@@ -158,31 +158,31 @@ const isDark = computed(() => {
       left: 60%;
       z-index: 1;
       width: 160px;
-      background-color: var(--o-color-bg2);
-      border: 1px solid var(--o-color-brand1);
-      padding: var(--o-spacing-h5) 0;
+      background-color: var(--e-color-bg2);
+      border: 1px solid var(--e-color-brand1);
+      padding: var(--e-spacing-h5) 0;
       &-item {
         display: block;
         text-align: center;
-        padding: var(--o-spacing-h8) 0;
-        line-height: var(--o-line-height-h6);
+        padding: var(--e-spacing-h8) 0;
+        line-height: var(--e-line-height-h6);
         cursor: pointer;
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
       }
       &-item:hover {
-        color: var(--o-color-brand1);
+        color: var(--e-color-brand1);
       }
     }
 
     @media screen and (max-width: 767px) {
       width: 100%;
       height: fit-content;
-      box-shadow: var(--o-shadow-l1);
+      box-shadow: var(--e-shadow-l1);
       box-sizing: border-box;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-row-gap: 16px;
-      padding: var(--o-spacing-h5);
+      padding: var(--e-spacing-h5);
       &-item {
         margin: 0 auto;
         padding: 0;
@@ -201,9 +201,9 @@ const isDark = computed(() => {
         cursor: pointer;
       }
       &-title {
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
-        margin-top: var(--o-spacing-h10);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
+        margin-top: var(--e-spacing-h10);
         text-align: center;
       }
       &-mail {
@@ -211,8 +211,8 @@ const isDark = computed(() => {
         top: 40%;
         left: -42%;
         width: 180px;
-        font-size: var(--o-font-size-tip);
-        padding: var(--o-spacing-h6) 0;
+        font-size: var(--e-font-size-tip);
+        padding: var(--e-spacing-h6) 0;
         text-align: center;
       }
       .menu {
@@ -220,14 +220,14 @@ const isDark = computed(() => {
         top: 40%;
         left: 60%;
         width: 100px;
-        font-size: var(--o-font-size-tip);
-        padding: var(--o-spacing-h6) 0;
+        font-size: var(--e-font-size-tip);
+        padding: var(--e-spacing-h6) 0;
         &-item {
           display: block;
           text-align: center;
           padding: 0;
           cursor: pointer;
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
         }
       }
     }
@@ -235,7 +235,7 @@ const isDark = computed(() => {
       display: flex;
       justify-content: space-around;
       width: 100%;
-      padding: var(--o-spacing-h2) 0;
+      padding: var(--e-spacing-h2) 0;
       &-item {
         width: 170px;
         height: 170px;
@@ -249,7 +249,7 @@ const isDark = computed(() => {
       display: flex;
       justify-content: space-around;
       max-width: 1416px;
-      padding: var(--o-spacing-h2) 0;
+      padding: var(--e-spacing-h2) 0;
       &-item {
         width: 170px;
         height: 170px;

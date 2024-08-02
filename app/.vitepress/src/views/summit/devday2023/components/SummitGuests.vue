@@ -88,7 +88,7 @@ onMounted(() => {
   filter: brightness(0.8) grayscale(0.2) contrast(1.2);
 }
 .lecturer-list {
-  margin: var(--o-spacing-h2) auto;
+  margin: var(--e-spacing-h2) auto;
   // display: flex;
   // flex-wrap: wrap;
   // justify-content: center;
@@ -139,8 +139,8 @@ onMounted(() => {
     //   margin-top: 20px;
     // }
     p {
-      font-size: var(--o-spacing-h5);
-      color: var(--o-color-brand1);
+      font-size: var(--e-spacing-h5);
+      color: var(--e-color-brand1);
       text-align: center;
       margin-top: 8px;
       @media (max-width: 780px) {
@@ -148,18 +148,18 @@ onMounted(() => {
       }
     }
     &-title {
-      margin-bottom: var(--o-spacing-h8);
+      margin-bottom: var(--e-spacing-h8);
       &:nth-last-of-type(1) {
-        margin-bottom: var(--o-spacing-h4);
+        margin-bottom: var(--e-spacing-h4);
       }
       p {
-        color: var(--o-color-text1);
-        font-size: var(--o-font-size-text);
+        color: var(--e-color-text1);
+        font-size: var(--e-font-size-text);
         font-weight: 400;
-        line-height: var(--o-line-height-text);
+        line-height: var(--e-line-height-text);
         @media (max-width: 780px) {
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-line-height-tip);
         }
       }
       @media (max-width: 780px) {

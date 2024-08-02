@@ -88,7 +88,7 @@ function handleTabClick(val: any) {
 <style scoped lang="scss">
 .router-tabs {
   margin: 0 auto;
-  background-color: var(--o-color-bg2);
+  background-color: var(--e-color-bg2);
   :deep(.el-tabs__nav-scroll) {
     display: flex;
     justify-content: center;
@@ -96,19 +96,19 @@ function handleTabClick(val: any) {
 }
 .post-btn {
   margin-right: 24px;
-  color: var(--o-color-white);
-  border-color: var(--o-color-white);
+  color: var(--e-color-white);
+  border-color: var(--e-color-white);
   @media (max-width: 767px) {
     margin-top: 12px;
     margin-right: 0;
     padding: 3px 16px;
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-text);
+    font-size: var(--e-font-size-text);
+    line-height: var(--e-line-height-text);
   }
   .right-icon {
-    color: var(--o-color-brand2);
+    color: var(--e-color-brand2);
     @media (max-width: 767px) {
-      font-size: var(--o-font-size-text);
+      font-size: var(--e-font-size-text);
     }
   }
 }

@@ -178,46 +178,46 @@ onMounted(() => {
 .banner {
   margin: 0 auto;
   .breadcrumb {
-    margin-bottom: var(--o-spacing-h5);
-    font-size: var(--o-font-size-h6);
-    color: var(--o-color-link1);
-    line-height: var(--o-line-height-h5);
+    margin-bottom: var(--e-spacing-h5);
+    font-size: var(--e-font-size-h6);
+    color: var(--e-color-link1);
+    line-height: var(--e-line-height-h5);
     cursor: pointer;
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-h7);
-      font-size: var(--o-font-size-h7);
+      font-size: var(--e-font-size-h7);
+      font-size: var(--e-font-size-h7);
     }
   }
   .banner-title {
-    font-size: var(--o-font-size-h3);
-    line-height: var(--o-line-height-h3);
-    margin-bottom: var(--o-spacing-h1);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-h3);
+    line-height: var(--e-line-height-h3);
+    margin-bottom: var(--e-spacing-h1);
+    color: var(--e-color-text1);
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-h5);
-      line-height: var(--o-line-height-h5);
-      margin-bottom: var(--o-spacing-h2);
+      font-size: var(--e-font-size-h5);
+      line-height: var(--e-line-height-h5);
+      margin-bottom: var(--e-spacing-h2);
     }
   }
 }
 .common-title {
-  font-size: var(--o-font-size-h5);
+  font-size: var(--e-font-size-h5);
   font-weight: 500;
-  color: var(--o-color-text1);
-  line-height: var(--o-line-height-h5);
-  margin-bottom: var(--o-spacing-h4);
+  color: var(--e-color-text1);
+  line-height: var(--e-line-height-h5);
+  margin-bottom: var(--e-spacing-h4);
   @media screen and (max-width: 768px) {
-    font-size: var(--o-font-size-h7);
-    margin-bottom: var(--o-spacing-h5);
+    font-size: var(--e-font-size-h7);
+    margin-bottom: var(--e-spacing-h5);
   }
 }
 .assess-content {
-  padding-bottom: var(--o-spacing-h4);
+  padding-bottom: var(--e-spacing-h4);
   &-box {
-    font-size: var(--o-font-size-text);
+    font-size: var(--e-font-size-text);
     font-weight: 400;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-text);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-text);
     display: flex;
     justify-content: space-between;
     @media screen and (max-width: 768px) {
@@ -226,19 +226,19 @@ onMounted(() => {
     }
     .left ul li {
       display: flex;
-      padding-bottom: var(--o-spacing-h5);
+      padding-bottom: var(--e-spacing-h5);
       a {
-        color: var(--o-color-link1);
+        color: var(--e-color-link1);
       }
       p {
-        color: var(--o-color-text4);
+        color: var(--e-color-text4);
         &:nth-child(2) {
           flex: 1;
         }
       }
       .item-name {
         width: 180px;
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
         @media screen and (max-width: 767px) {
           width: 100px;
           margin-right: 8px;
@@ -262,7 +262,7 @@ onMounted(() => {
           display: flex;
           align-items: center;
           img {
-            margin-right: var(--o-spacing-h9);
+            margin-right: var(--e-spacing-h9);
             width: 32px;
             height: 32px;
             align-self: center;
@@ -272,23 +272,23 @@ onMounted(() => {
             }
           }
           .claim-text {
-            font-size: var(--o-font-size-h4);
-            color: var(--o-color-text1);
-            line-height: var(--o-line-height-h3);
+            font-size: var(--e-font-size-h4);
+            color: var(--e-color-text1);
+            line-height: var(--e-line-height-h3);
             font-weight: 800;
             @media screen and (max-width: 768px) {
-              font-size: var(--o-font-size-h7);
-              line-height: var(--o-line-height-h7);
+              font-size: var(--e-font-size-h7);
+              line-height: var(--e-line-height-h7);
             }
           }
         }
         .subtitle-claim {
           width: 100px;
-          font-size: var(--o-font-size-text);
-          color: var(--o-color-text4);
+          font-size: var(--e-font-size-text);
+          color: var(--e-color-text4);
           text-align: center;
-          line-height: var(--o-spacing-h4);
-          margin-top: var(--o-spacing-h5);
+          line-height: var(--e-spacing-h4);
+          margin-top: var(--e-spacing-h5);
         }
       }
     }
@@ -301,22 +301,22 @@ onMounted(() => {
 }
 .mobile-list {
   display: none;
-  box-shadow: var(--o-shadow1);
+  box-shadow: var(--e-shadow1);
   @media screen and (max-width: 768px) {
     display: block;
   }
   .item {
-    padding: var(--o-spacing-h5) var(--o-spacing-h5) var(--o-spacing-h8);
-    font-size: var(--o-font-size-tip);
+    padding: var(--e-spacing-h5) var(--e-spacing-h5) var(--e-spacing-h8);
+    font-size: var(--e-font-size-tip);
     font-weight: 400;
-    color: var(--o-color-neutral8);
-    line-height: var(--o-line-height-tip);
-    background-color: var(--o-color-bg2);
+    color: var(--e-color-neutral8);
+    line-height: var(--e-line-height-tip);
+    background-color: var(--e-color-bg2);
     &:nth-child(odd) {
-      background: var(--o-color-bg4);
+      background: var(--e-color-bg4);
     }
     & li {
-      margin-bottom: var(--o-spacing-h8);
+      margin-bottom: var(--e-spacing-h8);
       display: flex;
       span {
         width: 64px;
@@ -328,7 +328,7 @@ onMounted(() => {
         img {
           width: 12px;
           height: 12px;
-          margin-right: var(--o-spacing-h10);
+          margin-right: var(--e-spacing-h10);
         }
       }
     }
@@ -339,15 +339,15 @@ onMounted(() => {
       }
     }
     span {
-      color: var(--o-color-text1);
-      margin-right: var(--o-spacing-h8);
+      color: var(--e-color-text1);
+      margin-right: var(--e-spacing-h8);
     }
   }
 }
 .tool-content {
-  margin-bottom: var(--o-spacing-h2);
+  margin-bottom: var(--e-spacing-h2);
   @media screen and (max-width: 768px) {
-    margin-bottom: var(--o-spacing-h4);
+    margin-bottom: var(--e-spacing-h4);
   }
   &:last-child {
     margin-bottom: 0;
@@ -359,7 +359,7 @@ onMounted(() => {
   img {
     width: 16px;
     height: 16px;
-    margin-right: var(--o-spacing-h9);
+    margin-right: var(--e-spacing-h9);
   }
 }
 </style>

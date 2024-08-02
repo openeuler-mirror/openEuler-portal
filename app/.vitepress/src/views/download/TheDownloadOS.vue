@@ -102,10 +102,10 @@ const osData = computed(() => {
   }
 }
 .banner-introduction {
-  font-size: var(--o-font-size-h6);
-  color: var(--o-color-white);
+  font-size: var(--e-font-size-h6);
+  color: var(--e-color-white);
   @media screen and (max-width: 768px) {
-    font-size: var(--o-font-size-tip);
+    font-size: var(--e-font-size-tip);
   }
 }
 
@@ -136,15 +136,15 @@ const osData = computed(() => {
       align-items: center;
       font-size: 32px;
       line-height: 44px;
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
       img {
         width: 40px;
         height: 40px;
         margin-right: 16px;
       }
       @media screen and (max-width: 768px) {
-        font-size: var(--o-font-size-h8);
-        line-height: var(--o-line-height-h8);
+        font-size: var(--e-font-size-h8);
+        line-height: var(--e-line-height-h8);
         img {
           width: 24px;
           height: 24px;
@@ -154,13 +154,13 @@ const osData = computed(() => {
     .os-card-body {
       margin-top: 16px;
       margin-bottom: 16px;
-      font-size: var(--o-font-size-h8);
-      line-height: var(--o-line-height-h8);
-      min-height: calc(2 * var(--o-line-height-h8));
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
+      min-height: calc(2 * var(--e-line-height-h8));
       @media screen and (max-width: 768px) {
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
-        min-height: calc(2 * var(--o-line-height-text));
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
+        min-height: calc(2 * var(--e-line-height-text));
       }
     }
     .os-card-links {
@@ -176,8 +176,8 @@ const osData = computed(() => {
       .link {
         position: relative;
         padding-left: 12px;
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
 
         &::before {
           content: '';
@@ -187,11 +187,11 @@ const osData = computed(() => {
           top: 9px;
           border-radius: 50%;
           left: 0;
-          background-color: var(--o-color-brand1);
+          background-color: var(--e-color-brand1);
         }
         @media screen and (max-width: 768px) {
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-line-height-tip);
           &::before {
             top: 6px;
           }
@@ -213,11 +213,11 @@ const osData = computed(() => {
   display: flex;
   justify-content: flex-end;
   margin-top: 24px;
-  font-size: var(--o-font-size-text);
-  line-height: var(--o-line-height-text);
+  font-size: var(--e-font-size-text);
+  line-height: var(--e-line-height-text);
   @media screen and (max-width: 768px) {
-    font-size: var(--o-font-size-tip);
-    line-height: var(--o-line-height-tip);
+    font-size: var(--e-font-size-tip);
+    line-height: var(--e-line-height-tip);
   }
   a {
     margin-right: 24px;

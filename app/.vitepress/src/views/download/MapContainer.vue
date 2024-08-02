@@ -170,7 +170,7 @@ onMounted(() => {
   .wrap {
     top: 0;
     left: 0;
-    padding: var(--o-spacing-h8);
+    padding: var(--e-spacing-h8);
     display: none;
     z-index: 13;
   }
@@ -182,27 +182,27 @@ onMounted(() => {
     background-color: #fff;
     position: absolute;
     border: #fff285 1px solid;
-    border-radius: var(--o-spacing-h10);
-    box-shadow: var(--o-shadow-l1);
+    border-radius: var(--e-spacing-h10);
+    box-shadow: var(--e-shadow-l1);
     z-index: 100;
     &-name {
-      color: var(--o-color-brand1);
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
+      color: var(--e-color-brand1);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
       white-space: nowrap;
     }
     &-location {
-      color: var(--o-color-text4);
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
+      color: var(--e-color-text4);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
     }
   }
   .map-icon {
-    width: var(--o-font-size-h8);
-    height: var(--o-font-size-h8);
-    border-radius: var(--o-font-size-h8);
+    width: var(--e-font-size-h8);
+    height: var(--e-font-size-h8);
+    border-radius: var(--e-font-size-h8);
     background-color: #fff285;
-    margin-right: var(--o-spacing-h9);
+    margin-right: var(--e-spacing-h9);
     box-shadow: #f9762d 0px 0px 10px;
     transition: all 0.5s;
     cursor: pointer;
@@ -219,8 +219,8 @@ onMounted(() => {
     display: flex;
     flex-flow: row;
     flex-wrap: nowrap;
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-text);
+    font-size: var(--e-font-size-text);
+    line-height: var(--e-line-height-text);
     white-space: nowrap;
     color: #000;
     font-weight: 600;

@@ -44,7 +44,7 @@ const jumpToUserZone = () => {
 
 <style lang="scss" scoped>
 .opt-user {
-  margin-left: var(--o-spacing-h5);
+  margin-left: var(--e-spacing-h5);
   height: 100%;
   display: flex;
   align-items: center;
@@ -65,13 +65,13 @@ const jumpToUserZone = () => {
       }
     }
     .opt-name {
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
       margin-left: 8px;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
       width: 72px;
-      line-height: var(--o-line-height-h8);
+      line-height: var(--e-line-height-h8);
       @media (max-width: 1100px) {
         display: none;
       }
@@ -91,29 +91,29 @@ const jumpToUserZone = () => {
       top: 48px;
       left: -60px;
     }
-    background: var(--o-color-bg2);
+    background: var(--e-color-bg2);
     cursor: pointer;
     z-index: 999;
-    box-shadow: var(--o-shadow-l1);
+    box-shadow: var(--e-shadow-l1);
     min-width: 78px;
     li {
-      line-height: var(--o-line-height-h3);
+      line-height: var(--e-line-height-h3);
       text-align: center;
-      font-size: var(--o-font-size-text);
-      color: var(--o-color-text1);
-      border-bottom: 1px solid var(--o-color-division1);
-      padding: 0 var(--o-spacing-h5);
+      font-size: var(--e-font-size-text);
+      color: var(--e-color-text1);
+      border-bottom: 1px solid var(--e-color-division1);
+      padding: 0 var(--e-spacing-h5);
       white-space: nowrap;
       &:last-child {
         border-bottom: 0 none;
       }
 
       &:hover {
-        background: var(--o-color-brand1);
-        color: var(--o-color-white);
+        background: var(--e-color-brand1);
+        color: var(--e-color-white);
       }
       &.active {
-        color: var(--o-color-brand1);
+        color: var(--e-color-brand1);
         background: none;
         cursor: default;
       }
@@ -122,8 +122,8 @@ const jumpToUserZone = () => {
 }
 .login {
   .icon {
-    font-size: var(--o-font-size-h6);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-h6);
+    color: var(--e-color-text1);
     cursor: pointer;
   }
 }

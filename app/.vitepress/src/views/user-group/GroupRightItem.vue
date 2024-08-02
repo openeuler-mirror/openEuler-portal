@@ -52,9 +52,9 @@ const repeatStr = (v: string) => {
   }
   .right-title {
     position: relative;
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-text);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-text);
+    line-height: var(--e-line-height-text);
+    color: var(--e-color-text1);
     flex: 1;
   }
   .dot {
@@ -69,15 +69,15 @@ const repeatStr = (v: string) => {
       left: 0px;
       top: 6px;
       border-radius: 50%;
-      background-color: var(--o-color-brand1);
+      background-color: var(--e-color-brand1);
     }
   }
   .right-list {
     flex: 1;
     .item {
-      color: var(--o-color-text4);
-      line-height: var(--o-line-height-text);
-      font-size: var(--o-font-size-text);
+      color: var(--e-color-text4);
+      line-height: var(--e-line-height-text);
+      font-size: var(--e-font-size-text);
       &:not(:last-child) {
         margin-bottom: 8px;
         @media screen and(max-width:768px) {
@@ -90,7 +90,7 @@ const repeatStr = (v: string) => {
 
       .item {
         padding-left: 20px;
-        font-size: var(--o-font-size-tip);
+        font-size: var(--e-font-size-tip);
         &::before {
           left: 8px;
           width: 4px;

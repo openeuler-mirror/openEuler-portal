@@ -590,20 +590,20 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .sig-table {
-  margin-top: var(--o-spacing-h2);
+  margin-top: var(--e-spacing-h2);
   @media (max-width: 768px) {
-    margin-top: var(--o-spacing-h4);
+    margin-top: var(--e-spacing-h4);
   }
   .sig-name {
     display: flex;
     align-items: center;
     &-info {
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
     }
     .gitee-icon {
       display: flex;
-      margin-left: var(--o-spacing-h8);
+      margin-left: var(--e-spacing-h8);
       align-items: center;
     }
   }
@@ -612,25 +612,25 @@ onMounted(() => {
     align-items: center;
     .subscribe-sig {
       cursor: pointer;
-      color: var(--o-color-brand1);
+      color: var(--e-color-brand1);
       padding: 2px 11px;
       margin-left: 8px;
-      font-size: var(--o-font-size-tip);
-      line-height: var(--o-line-height-tip);
-      border: 1px solid var(--o-color-brand1);
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
+      border: 1px solid var(--e-color-brand1);
       &:hover {
-        border: 1px solid var(--o-color-brand2);
+        border: 1px solid var(--e-color-brand2);
       }
     }
   }
   .ellipsis {
-    color: var(--o-color-brand1);
+    color: var(--e-color-brand1);
   }
   .pagination-slot {
-    font-size: var(--o-font-size-text);
+    font-size: var(--e-font-size-text);
     font-weight: 400;
-    color: var(--o-color-text1);
-    line-height: var(--o-spacing-h4);
+    color: var(--e-color-text1);
+    line-height: var(--e-spacing-h4);
   }
   .sig-maintainer {
     display: grid;
@@ -641,53 +641,53 @@ onMounted(() => {
     &-item {
       a {
         white-space: nowrap;
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-h5);
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-h5);
       }
     }
   }
   .sig-email {
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-text);
+    font-size: var(--e-font-size-text);
+    line-height: var(--e-line-height-text);
   }
   .sig-repo {
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-h5);
+    font-size: var(--e-font-size-text);
+    line-height: var(--e-line-height-h5);
   }
 }
 .sig-select {
-  margin-bottom: var(--o-spacing-h4);
+  margin-bottom: var(--e-spacing-h4);
   display: flex;
   align-items: flex-end;
   align-items: center;
   .sig-tip {
-    font-size: var(--o-font-size-tip);
-    line-height: var(--o-line-height-tip);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-tip);
+    line-height: var(--e-line-height-tip);
+    color: var(--e-color-text1);
   }
   &-item {
     display: flex;
     align-items: center;
-    margin-right: var(--o-spacing-h1);
+    margin-right: var(--e-spacing-h1);
     flex-wrap: nowrap;
     .select-item-name {
-      margin-right: var(--o-spacing-h5);
-      color: var(--o-color-text1);
-      line-height: var(--o-line-height-h7);
+      margin-right: var(--e-spacing-h5);
+      color: var(--e-color-text1);
+      line-height: var(--e-line-height-h7);
       @media (max-width: 1000px) {
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
         width: 100px;
       }
     }
     span {
-      font-size: var(--o-font-size-h7);
+      font-size: var(--e-font-size-h7);
       @media screen and (max-width: 768px) {
-        font-size: var(--o-font-size-h8);
+        font-size: var(--e-font-size-h8);
       }
     }
     @media (max-width: 1280px) {
-      margin-right: var(--o-spacing-h5);
+      margin-right: var(--e-spacing-h5);
       :deep(.el-select) {
         width: 150px;
       }
@@ -696,7 +696,7 @@ onMounted(() => {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin-bottom: var(--o-spacing-h5);
+      margin-bottom: var(--e-spacing-h5);
       margin-right: 0;
       :deep(.el-select) {
         width: 100%;
@@ -713,20 +713,20 @@ onMounted(() => {
   }
 }
 .sig-pagination {
-  margin-top: var(--o-spacing-h2);
+  margin-top: var(--e-spacing-h2);
 }
 .sig-table-mo {
   .mo-item {
-    padding: var(--o-spacing-h5);
+    padding: var(--e-spacing-h5);
     &-text {
       display: flex;
       align-items: center;
-      margin-bottom: var(--o-spacing-h5);
+      margin-bottom: var(--e-spacing-h5);
       .mo-item-title {
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
-        color: var(--o-color-text1);
-        margin-right: var(--o-spacing-h7);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
+        color: var(--e-color-text1);
+        margin-right: var(--e-spacing-h7);
       }
       .mo-subscribe-sig {
         height: 100%;
@@ -736,8 +736,8 @@ onMounted(() => {
         font-size: 12px;
       }
       .sig-board-icon {
-        height: var(--o-font-size-text);
-        width: var(--o-font-size-text);
+        height: var(--e-font-size-text);
+        width: var(--e-font-size-text);
         margin-top: 2px;
         position: relative;
         right: 10px;
@@ -746,8 +746,8 @@ onMounted(() => {
       .mo-item-mail,
       .mo-item-repo,
       .mo-item-maintainer {
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
       }
       .mo-item-maintainersbox {
         display: grid;
@@ -763,11 +763,11 @@ onMounted(() => {
     }
   }
   .mo-item-odd {
-    background-color: var(--o-color-bg4);
+    background-color: var(--e-color-bg4);
   }
 
   .sig-pagination-mo {
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
   }
 }
 </style>

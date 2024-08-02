@@ -81,14 +81,14 @@ onMounted(() => {
     }
   }
   .slogan {
-    font-size: var(--o-font-size-h1);
-    line-height: var(--o-line-height-h1);
+    font-size: var(--e-font-size-h1);
+    line-height: var(--e-line-height-h1);
     color: #000;
     font-weight: 700;
   }
   .title {
-    font-size: var(--o-font-size-h3);
-    line-height: var(--o-line-height-h3);
+    font-size: var(--e-font-size-h3);
+    line-height: var(--e-line-height-h3);
     color: #000;
     font-weight: 700;
   }
@@ -134,12 +134,12 @@ onMounted(() => {
       }
     }
     .slogan {
-      font-size: var(--o-font-size-h7);
-      line-height: var(--o-line-height-h7);
+      font-size: var(--e-font-size-h7);
+      line-height: var(--e-line-height-h7);
     }
     .title {
-      font-size: var(--o-font-size-h8);
-      line-height: var(--o-line-height-h8);
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
     }
     .subtitle {
       font-size: 8px;
@@ -156,9 +156,9 @@ onMounted(() => {
   .home-banner-btn {
     padding: 3px 11px;
     margin-top: 8px;
-    --o-button-font-size: var(--o-font-size-tip);
-    --o-button-line-heighte: var(--o-line-height-tip);
-    --o-button-icon-font-size: var(--o-font-size-h8);
+    --e-button-font-size: var(--e-font-size-tip);
+    --e-button-line-heighte: var(--e-line-height-tip);
+    --e-button-icon-font-size: var(--e-font-size-h8);
   }
 }
 </style>

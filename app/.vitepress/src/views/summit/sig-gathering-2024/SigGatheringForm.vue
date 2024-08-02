@@ -241,21 +241,21 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   }
 }
 :deep(.el-loading-mask) {
-  background: var(--o-color-bg2);
+  background: var(--e-color-bg2);
   z-index: 3;
 }
 :deep(.el-textarea) {
-  box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+  box-shadow: 0 0 0 1px var(--e-color-border1) inset;
   .el-textarea__inner {
     border-radius: 0;
-    box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+    box-shadow: 0 0 0 1px var(--e-color-border1) inset;
     &:focus {
-      box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+      box-shadow: 0 0 0 1px var(--e-color-border1) inset;
     }
   }
 }
 .el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
-  background-color: var(--o-color-bg2);
+  background-color: var(--e-color-bg2);
   &::after {
     display: none;
   }
@@ -264,15 +264,15 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 :deep(.o-checkbox) {
   .o-checkbox-icon {
     min-width: 16px;
-    border: 1px solid var(--o-color-border1);
+    border: 1px solid var(--e-color-border1);
   }
   .o-checkbox-label {
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
     opacity: 0.8;
   }
   &.o-checkbox-checked {
     .o-checkbox-label {
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
       opacity: 1;
       & .o-icon {
         display: block;
@@ -308,12 +308,12 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 }
 :deep(.o-radio) {
   .o-radio-label {
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
     opacity: 0.8;
   }
   &.o-radio-checked {
     .o-radio-label {
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
       opacity: 1;
     }
   }
@@ -321,17 +321,17 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 
 :deep(.o-select) {
   &:hover {
-    box-shadow: 0 0 0 1px var(--o-color-border1) inset !important;
+    box-shadow: 0 0 0 1px var(--e-color-border1) inset !important;
     .el-input__wrapper {
-      box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+      box-shadow: 0 0 0 1px var(--e-color-border1) inset;
     }
   }
 
   & .el-input.is-focus .el-input__wrapper {
-    box-shadow: 0 0 0 1px var(--o-color-border1) inset !important;
+    box-shadow: 0 0 0 1px var(--e-color-border1) inset !important;
   }
   .el-input__wrapper {
-    box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+    box-shadow: 0 0 0 1px var(--e-color-border1) inset;
   }
   @media screen and (max-width: 867px) {
     & .el-input {
@@ -345,8 +345,8 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 }
 
 .form {
-  background: var(--o-color-bg2);
-  box-shadow: var(--o-shadow-l1);
+  background: var(--e-color-bg2);
+  box-shadow: var(--e-shadow-l1);
   padding: 40px;
   @media (max-width: 1100px) {
     padding: 16px;
@@ -357,7 +357,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
     font-weight: 500;
     margin: 0 0 40px;
     text-align: center;
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
     @media (max-width: 1100px) {
       font-size: 24px;
       margin: 24px 0;
@@ -426,7 +426,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
       height: auto;
       padding-right: 0;
       margin-right: 32px;
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
       &::before {
         margin-top: 4px;
         width: 7px;
@@ -453,7 +453,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
     margin-top: 8px;
     .o-checkbox-checked {
       .o-checkbox-label {
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
         & .o-icon {
           display: block;
         }
@@ -487,7 +487,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 }
 :deep(.el-select) {
   .el-input__wrapper {
-    box-shadow: 0 0 0 1px var(--o-color-border1) inset;
+    box-shadow: 0 0 0 1px var(--e-color-border1) inset;
   }
   .el-select__input {
     margin-left: 18px !important;
@@ -516,10 +516,10 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 }
 
 .o-button {
-  --o-button-bg-color-primary_hover: var(--o-color-brand1);
-  --o-button-bg-color-primary_active: var(--o-color-brand1);
-  --o-button-border-primary_hover: 1px solid var(--o-color-brand1);
-  --o-button-border-primary_active: 1px solid var(--o-color-brand1);
+  --e-button-bg-color-primary_hover: var(--e-color-brand1);
+  --e-button-bg-color-primary_active: var(--e-color-brand1);
+  --e-button-border-primary_hover: 1px solid var(--e-color-brand1);
+  --e-button-border-primary_active: 1px solid var(--e-color-brand1);
   cursor: default;
 }
 </style>
@@ -527,7 +527,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 <style lang="scss">
 .el-popper.o-select-dropdown .o-option.hover {
   .o-checkbox-icon {
-    border-color: var(--o-color-brand2) !important;
+    border-color: var(--e-color-brand2) !important;
   }
 }
 </style>

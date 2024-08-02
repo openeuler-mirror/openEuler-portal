@@ -152,7 +152,7 @@ onUnmounted(() => {
     height: 100%;
     left: 0;
     bottom: -50%;
-    background-color: var(--o-color-bg4);
+    background-color: var(--e-color-bg4);
     z-index: 0;
   }
   @media screen and (max-width: 1100px) {
@@ -162,16 +162,16 @@ onUnmounted(() => {
     position: relative;
     cursor: pointer;
     display: block !important;
-    color: var(--o-color-text4);
-    line-height: var(--o-line-height-text);
-    font-size: var(--o-font-size-text);
-    border-left: 1px solid var(--o-color-bg4);
+    color: var(--e-color-text4);
+    line-height: var(--e-line-height-text);
+    font-size: var(--e-font-size-text);
+    border-left: 1px solid var(--e-color-bg4);
     z-index: 1;
     padding: 8px 12px;
   }
   .active {
-    color: var(--o-color-brand1);
-    border-left: 1px solid var(--o-color-brand1);
+    color: var(--e-color-brand1);
+    border-left: 1px solid var(--e-color-brand1);
   }
 }
 .council {
@@ -182,47 +182,47 @@ onUnmounted(() => {
     padding-right: 0px;
   }
   h2 {
-    font-size: var(--o-font-size-h5);
-    line-height: var(--o-line-height-h5);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-h5);
+    line-height: var(--e-line-height-h5);
+    color: var(--e-color-text1);
     text-align: center;
     font-weight: normal;
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-h8);
-      line-height: var(--o-line-height-h8);
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
     }
   }
   .council-Committee,
   .council-technology,
   .council-counselor {
-    margin-top: var(--o-spacing-h2);
+    margin-top: var(--e-spacing-h2);
     @media screen and (max-width: 768px) {
-      margin-top: var(--o-spacing-h3);
+      margin-top: var(--e-spacing-h3);
     }
   }
   .council-list {
-    margin-top: var(--o-spacing-h3);
-    padding: var(--o-spacing-h2) 50px;
-    background-color: var(--o-color-bg2);
-    box-shadow: var(--o-shadow-l2);
+    margin-top: var(--e-spacing-h3);
+    padding: var(--e-spacing-h2) 50px;
+    background-color: var(--e-color-bg2);
+    box-shadow: var(--e-shadow-l2);
     @media screen and (max-width: 768px) {
-      margin-top: var(--o-spacing-h5);
-      padding: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
+      padding: var(--e-spacing-h5);
     }
     .council-item {
       & + .council-item {
-        margin-top: var(--o-spacing-h2);
+        margin-top: var(--e-spacing-h2);
       }
       h4 {
-        font-size: var(--o-font-size-h7);
-        line-height: var(--o-line-height-h7);
-        color: var(--o-color-text1);
+        font-size: var(--e-font-size-h7);
+        line-height: var(--e-line-height-h7);
+        color: var(--e-color-text1);
         font-weight: 500;
         margin-bottom: 16px;
       }
       .lecturer-list {
         margin: 0 auto;
-        margin-top: var(--o-spacing-h5);
+        margin-top: var(--e-spacing-h5);
       }
     }
     li {
@@ -232,14 +232,14 @@ onUnmounted(() => {
       }
       .personal-name {
         margin-top: 8px;
-        font-size: var(--o-font-size-h8);
-        color: var(--o-color-text1);
+        font-size: var(--e-font-size-h8);
+        color: var(--e-color-text1);
         text-align: center;
       }
       .personal-post {
         margin-top: 4px;
-        font-size: var(--o-font-size-tip);
-        color: var(--o-color-text4);
+        font-size: var(--e-font-size-tip);
+        color: var(--e-color-text4);
         text-align: center;
       }
       .links {
@@ -250,7 +250,7 @@ onUnmounted(() => {
           display: flex;
           align-items: center;
           font-size: 24px;
-          color: var(--o-color-brand1);
+          color: var(--e-color-brand1);
           margin-right: 18px;
           img {
             width: 24px;
@@ -269,7 +269,7 @@ onUnmounted(() => {
   }
   .list-technology {
     margin: 0 auto;
-    margin-top: var(--o-spacing-h2);
+    margin-top: var(--e-spacing-h2);
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 32px;
@@ -292,7 +292,7 @@ onUnmounted(() => {
       grid-template-columns: repeat(3, 1fr);
     }
     @media (max-width: 780px) {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
       display: grid;
       width: 100%;
       gap: 16px;
@@ -301,9 +301,9 @@ onUnmounted(() => {
   }
   .notice {
     margin-top: 54px;
-    font-size: var(--o-font-size-tip);
-    line-height: var(--o-line-height-tip);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-tip);
+    line-height: var(--e-line-height-tip);
+    color: var(--e-color-text1);
     @media (max-width: 780px) {
       margin-top: 16px;
     }

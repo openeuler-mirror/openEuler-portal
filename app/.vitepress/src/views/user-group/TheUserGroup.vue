@@ -59,58 +59,58 @@ const jumpTo = (path: string) => {
 
 <style scoped lang="scss">
 .post-btn {
-  color: var(--o-color-white);
-  border-color: var(--o-color-white);
+  color: var(--e-color-white);
+  border-color: var(--e-color-white);
   @media (max-width: 767px) {
     padding: 3px 16px;
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-text);
+    font-size: var(--e-font-size-text);
+    line-height: var(--e-line-height-text);
   }
   .right-icon {
-    color: var(--o-color-white);
+    color: var(--e-color-white);
     @media (max-width: 767px) {
-      font-size: var(--o-font-size-text);
+      font-size: var(--e-font-size-text);
     }
   }
 }
 
 :deep(.word-style) {
-  color: var(--o-color-text1);
-  font-size: var(--o-font-size-h8);
-  line-height: var(--o-line-height-h8);
+  color: var(--e-color-text1);
+  font-size: var(--e-font-size-h8);
+  line-height: var(--e-line-height-h8);
   @media screen and (max-width: 768px) {
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-text);
+    font-size: var(--e-font-size-text);
+    line-height: var(--e-line-height-text);
   }
 }
 :deep(.title) {
-  font-size: var(--o-font-size-h3);
+  font-size: var(--e-font-size-h3);
   font-weight: 300;
-  color: var(--o-color-text1);
-  line-height: var(--o-line-height-h3);
+  color: var(--e-color-text1);
+  line-height: var(--e-line-height-h3);
   width: 100%;
   text-align: center;
-  margin-top: var(--o-spacing-h1);
-  margin-bottom: var(--o-spacing-h2);
+  margin-top: var(--e-spacing-h1);
+  margin-bottom: var(--e-spacing-h2);
   @media (max-width: 768px) {
-    font-size: var(--o-font-size-h8);
-    line-height: var(--o-line-height-h8);
-    margin-top: var(--o-spacing-h2);
-    margin-bottom: var(--o-spacing-h5);
+    font-size: var(--e-font-size-h8);
+    line-height: var(--e-line-height-h8);
+    margin-top: var(--e-spacing-h2);
+    margin-bottom: var(--e-spacing-h5);
   }
 }
 .btn-box {
   margin-top: 40px;
   display: flex;
   justify-content: center;
-  font-size: var(--o-line-height-h8);
+  font-size: var(--e-line-height-h8);
   .btn {
     cursor: pointer;
     padding: 16px 72px;
-    background-color: var(--o-color-brand1);
-    color: var(--o-color-white);
+    background-color: var(--e-color-brand1);
+    color: var(--e-color-white);
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-text);
+      font-size: var(--e-font-size-text);
     }
   }
 }

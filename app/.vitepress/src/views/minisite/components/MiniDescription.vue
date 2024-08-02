@@ -49,70 +49,70 @@ defineProps({
 
 <style lang="scss" scoped>
 .desc-wraper {
-  margin-bottom: var(--o-spacing-h2);
-  box-shadow: var(--o-shadow-l1);
+  margin-bottom: var(--e-spacing-h2);
+  box-shadow: var(--e-shadow-l1);
 }
 .desc {
   margin: 0 auto;
-  background-color: var(--o-color-bg2);
-  padding: var(--o-spacing-h2);
+  background-color: var(--e-color-bg2);
+  padding: var(--e-spacing-h2);
   box-sizing: border-box;
-  font-size: var(--o-font-size-text);
+  font-size: var(--e-font-size-text);
   .desc-list {
     width: 100%;
     font-weight: 400;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-text);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-text);
     @media screen and (max-width: 767px) {
       p {
-        margin-bottom: var(--o-spacing-h8);
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
+        margin-bottom: var(--e-spacing-h8);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
         font-weight: 400;
       }
     }
   }
   .more-info {
     p {
-      margin: var(--o-spacing-h2) auto var(--o-spacing-h5) 0;
+      margin: var(--e-spacing-h2) auto var(--e-spacing-h5) 0;
       height: 26px;
-      font-size: var(--o-font-size-h7);
+      font-size: var(--e-font-size-h7);
       font-weight: 400;
-      color: var(--o-color-text1);
-      line-height: var(--o-line-height-h7);
+      color: var(--e-color-text1);
+      line-height: var(--e-line-height-h7);
       @media screen and (max-width: 767px) {
-        margin: var(--o-spacing-h4) 0 0 0;
-        font-size: var(--o-font-size-text);
+        margin: var(--e-spacing-h4) 0 0 0;
+        font-size: var(--e-font-size-text);
         font-weight: 500;
-        line-height: var(--o-line-height-text);
-        height: var(--o-line-height-text);
+        line-height: var(--e-line-height-text);
+        height: var(--e-line-height-text);
       }
     }
     ul {
-      font-size: var(--o-font-size-text);
+      font-size: var(--e-font-size-text);
       font-weight: 400;
-      color: var(--o-color-text1);
-      line-height: var(--o-line-height-text);
-      padding-left: var(--o-spacing-h5);
+      color: var(--e-color-text1);
+      line-height: var(--e-line-height-text);
+      padding-left: var(--e-spacing-h5);
       list-style: disc;
       li {
-        color: var(--o-color-text1);
-        font-size: var(--o-font-size-text);
-        margin-top: var(--o-spacing-h8);
+        color: var(--e-color-text1);
+        font-size: var(--e-font-size-text);
+        margin-top: var(--e-spacing-h8);
         span {
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
         }
         @media screen and (max-width: 767px) {
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-line-height-tip);
           font-weight: 400;
         }
       }
     }
   }
   @media screen and (max-width: 767px) {
-    padding: var(--o-spacing-h5);
-    font-size: var(--o-font-size-tip);
+    padding: var(--e-spacing-h5);
+    font-size: var(--e-font-size-tip);
   }
 }
 @media screen and (min-width: 1440px) {

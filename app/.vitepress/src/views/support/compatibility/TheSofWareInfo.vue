@@ -300,79 +300,79 @@ onMounted(() => {
 .wrapper {
   // max-width: 1504px;
   // margin: 0 auto;
-  padding: var(--o-spacing-h2);
-  // margin-top: var(--o-spacing-h2);
-  background-color: var(--o-color-bg2);
+  padding: var(--e-spacing-h2);
+  // margin-top: var(--e-spacing-h2);
+  background-color: var(--e-color-bg2);
   @media screen and (max-width: 768px) {
-    padding: var(--o-spacing-h5);
+    padding: var(--e-spacing-h5);
   }
 }
 .banner {
   margin: 0 auto;
   .breadcrumb {
-    margin-bottom: var(--o-spacing-h5);
-    font-size: var(--o-font-size-h6);
-    color: var(--o-color-link1);
-    line-height: var(--o-line-height-h5);
+    margin-bottom: var(--e-spacing-h5);
+    font-size: var(--e-font-size-h6);
+    color: var(--e-color-link1);
+    line-height: var(--e-line-height-h5);
     cursor: pointer;
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-h8);
-      font-size: var(--o-font-size-h8);
-      margin-bottom: var(--o-spacing-h6);
+      font-size: var(--e-font-size-h8);
+      font-size: var(--e-font-size-h8);
+      margin-bottom: var(--e-spacing-h6);
     }
   }
   .banner-title {
-    font-size: var(--o-font-size-h3);
-    line-height: var(--o-line-height-h3);
-    margin-bottom: var(--o-spacing-h1);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-h3);
+    line-height: var(--e-line-height-h3);
+    margin-bottom: var(--e-spacing-h1);
+    color: var(--e-color-text1);
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-h7);
-      line-height: var(--o-line-height-h7);
-      margin-bottom: var(--o-spacing-h4);
+      font-size: var(--e-font-size-h7);
+      line-height: var(--e-line-height-h7);
+      margin-bottom: var(--e-spacing-h4);
     }
   }
 }
 .title {
-  font-size: var(--o-font-size-h5);
-  color: var(--o-color-text1);
-  margin-bottom: var(--o-spacing-h5);
-  line-height: var(--o-line-height-h5);
+  font-size: var(--e-font-size-h5);
+  color: var(--e-color-text1);
+  margin-bottom: var(--e-spacing-h5);
+  line-height: var(--e-line-height-h5);
   @media screen and (max-width: 768px) {
     font-size: 14px;
     font-weight: 500;
     line-height: 22px;
-    margin-bottom: var(--o-spacing-h6);
+    margin-bottom: var(--e-spacing-h6);
   }
 }
 .link {
-  font-size: var(--o-font-size-h8);
-  line-height: var(--o-line-height-h8);
-  color: var(--o-color-link1);
+  font-size: var(--e-font-size-h8);
+  line-height: var(--e-line-height-h8);
+  color: var(--e-color-link1);
   word-break: break-all;
   cursor: pointer;
   @media screen and (max-width: 768px) {
-    font-size: var(--o-font-size-tip);
-    line-height: var(--o-line-height-tip);
+    font-size: var(--e-font-size-tip);
+    line-height: var(--e-line-height-tip);
   }
 }
 .download {
-  font-size: var(--o-font-size-h8);
-  line-height: var(--o-line-height-h8);
-  color: var(--o-color-text1);
+  font-size: var(--e-font-size-h8);
+  line-height: var(--e-line-height-h8);
+  color: var(--e-color-text1);
   @media screen and (max-width: 768px) {
-    font-size: var(--o-font-size-tip);
-    line-height: var(--o-line-height-tip);
+    font-size: var(--e-font-size-tip);
+    line-height: var(--e-line-height-tip);
   }
   a {
-    color: var(--o-color-link1);
+    color: var(--e-color-link1);
   }
   .download-link-en {
     font-style: italic;
   }
 }
 .main-middle {
-  margin: var(--o-spacing-h4) 0;
+  margin: var(--e-spacing-h4) 0;
   .content {
     display: flex;
     justify-content: space-between;
@@ -395,12 +395,12 @@ onMounted(() => {
         display: flex;
         align-items: flex-start;
         justify-content: left;
-        padding-bottom: var(--o-spacing-h4);
-        font-size: var(--o-font-size-text);
-        color: var(--o-color-text1);
+        padding-bottom: var(--e-spacing-h4);
+        font-size: var(--e-font-size-text);
+        color: var(--e-color-text1);
         @media screen and (max-width: 768px) {
           width: 100%;
-          padding-bottom: var(--o-spacing-h6);
+          padding-bottom: var(--e-spacing-h6);
           justify-content: space-between;
           span {
             flex: 1;
@@ -408,16 +408,16 @@ onMounted(() => {
         }
         .label {
           flex: 3;
-          color: var(--o-color-text4);
+          color: var(--e-color-text4);
           @media screen and (max-width: 768px) {
-            font-size: var(--o-font-size-tip);
-            line-height: var(--o-line-height-tip);
+            font-size: var(--e-font-size-tip);
+            line-height: var(--e-line-height-tip);
           }
         }
         .content-item {
           @media screen and (max-width: 768px) {
-            font-size: var(--o-font-size-tip);
-            line-height: var(--o-line-height-tip);
+            font-size: var(--e-font-size-tip);
+            line-height: var(--e-line-height-tip);
           }
           flex: 5;
         }
@@ -427,31 +427,31 @@ onMounted(() => {
 }
 .main-bottom {
   .table-pc {
-    margin-bottom: var(--o-spacing-h4);
+    margin-bottom: var(--e-spacing-h4);
     @media screen and (max-width: 768px) {
       display: none;
     }
   }
   .table-mobile {
     display: none;
-    margin-bottom: var(--o-spacing-h5);
-    box-shadow: var(--o-shadow-l1);
+    margin-bottom: var(--e-spacing-h5);
+    box-shadow: var(--e-shadow-l1);
     @media screen and (max-width: 768px) {
       display: block;
     }
 
     .item {
-      padding: var(--o-spacing-h5);
-      font-size: var(--o-font-size-tip);
+      padding: var(--e-spacing-h5);
+      font-size: var(--e-font-size-tip);
       font-weight: 400;
-      color: var(--o-color-neutral8);
-      line-height: var(--o-line-height-tip);
-      background-color: var(--o-color-bg2);
+      color: var(--e-color-neutral8);
+      line-height: var(--e-line-height-tip);
+      background-color: var(--e-color-bg2);
       &:nth-child(odd) {
-        background: var(--o-color-bg4);
+        background: var(--e-color-bg4);
       }
       & li {
-        margin-bottom: var(--o-spacing-h8);
+        margin-bottom: var(--e-spacing-h8);
       }
       li:last-child {
         margin-bottom: 0;
@@ -463,8 +463,8 @@ onMounted(() => {
         }
       }
       span {
-        color: var(--o-color-text1);
-        margin-right: var(--o-spacing-h8);
+        color: var(--e-color-text1);
+        margin-right: var(--e-spacing-h8);
       }
     }
   }

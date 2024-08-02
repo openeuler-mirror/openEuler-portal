@@ -33,27 +33,27 @@ function goDetail(url: string) {
 
 <style lang="scss">
 .search-service {
-  background-color: var(--o-color-bg2);
-  box-shadow: var(--o-shadow-l1);
-  padding: var(--o-spacing-h2);
-  margin-bottom: var(--o-spacing-h3);
+  background-color: var(--e-color-bg2);
+  box-shadow: var(--e-shadow-l1);
+  padding: var(--e-spacing-h2);
+  margin-bottom: var(--e-spacing-h3);
   h3 {
-    font-size: var(--o-font-size-h5);
-    line-height: var(--o-line-height-h5);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-h5);
+    line-height: var(--e-line-height-h5);
+    color: var(--e-color-text1);
   }
   .service-item {
-    padding-top: var(--o-spacing-h4);
+    padding-top: var(--e-spacing-h4);
     .service-title {
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
-      color: var(--o-color-brand1);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
+      color: var(--e-color-brand1);
     }
     .service-intro {
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
-      margin-top: var(--o-spacing-h8);
-      color: var(--o-color-text4);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
+      margin-top: var(--e-spacing-h8);
+      color: var(--e-color-text4);
     }
   }
 }

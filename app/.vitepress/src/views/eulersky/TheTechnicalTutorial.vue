@@ -67,22 +67,22 @@ function goDetail(path: string) {
     margin-top: 40px;
     padding: 40px;
     h3 {
-      color: var(--o-color-text1);
-      line-height: var(--o-line-height-h5);
-      font-size: var(--o-font-size-h5);
+      color: var(--e-color-text1);
+      line-height: var(--e-line-height-h5);
+      font-size: var(--e-font-size-h5);
     }
     .tultorial-container-introduction {
       margin-top: 16px;
-      color: var(--o-color-text1);
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
+      color: var(--e-color-text1);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
     }
     @media screen and (max-width: 768px) {
       margin-top: 24px;
       padding: 16px;
       h3 {
-        font-size: var(--o-font-size-h8);
-        line-height: var(--o-line-height-h7);
+        font-size: var(--e-font-size-h8);
+        line-height: var(--e-line-height-h7);
       }
       .tultorial-container-introduction {
         margin-top: 8px;
@@ -91,17 +91,17 @@ function goDetail(path: string) {
   }
   .tultorial-main {
     h2 {
-      font-size: var(--o-font-size-h3);
+      font-size: var(--e-font-size-h3);
       font-weight: 300;
-      color: var(--o-color-text1);
-      line-height: var(--o-line-height-h3);
+      color: var(--e-color-text1);
+      line-height: var(--e-line-height-h3);
       width: 100%;
       text-align: center;
-      margin-top: var(--o-spacing-h2);
+      margin-top: var(--e-spacing-h2);
       @media screen and (max-width: 768px) {
-        font-size: var(--o-font-size-h8);
-        line-height: var(--o-line-height-h8);
-        margin-top: var(--o-spacing-h4);
+        font-size: var(--e-font-size-h8);
+        line-height: var(--e-line-height-h8);
+        margin-top: var(--e-spacing-h4);
       }
     }
     .tultorial-card-list {
@@ -127,13 +127,13 @@ function goDetail(path: string) {
           width: 100%;
         }
         .card-title {
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
           padding: 16px;
           padding-bottom: 40px;
-          font-size: var(--o-font-size-h7);
-          line-height: var(--o-line-height-h7);
+          font-size: var(--e-font-size-h7);
+          line-height: var(--e-line-height-h7);
           @media screen and (max-width: 768px) {
-            font-size: var(--o-font-size-text);
+            font-size: var(--e-font-size-text);
             padding: 16px;
           }
         }
