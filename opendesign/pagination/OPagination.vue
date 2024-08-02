@@ -142,12 +142,12 @@ watch(
 
 <style lang="scss">
 .o-pagination {
-  --e-pagination-font-color: var(--e-color-text1);
-  --e-pagination-font-color_active: var(--e-color-brand1);
-  --e-pagination-bg-color: var(--e-color-text5);
-  --e-pagination-bg-color_hover: var(--e-color-brand5);
-  --e-pagination-bg-color_selected: var(--e-color-brand5);
-  --e-pagination-number-border-color_active: var(--e-color-brand1);
+  --o-pagination-font-color: var(--o-color-text1);
+  --o-pagination-font-color_active: var(--o-color-brand1);
+  --o-pagination-bg-color: var(--o-color-text5);
+  --o-pagination-bg-color_hover: var(--o-color-brand5);
+  --o-pagination-bg-color_selected: var(--o-color-brand5);
+  --o-pagination-number-border-color_active: var(--o-color-brand1);
 
   &.el-pagination {
     justify-content: center;
@@ -155,11 +155,11 @@ watch(
       display: none;
     }
     .el-pagination__sizes {
-      margin: 0 var(--e-spacing-h8) 0 0;
+      margin: 0 var(--o-spacing-h8) 0 0;
     }
     .el-input {
-      --el-input-bg-color: var(--e-pagination-bg-color);
-      --el-input-text-color: var(--e-pagination-font-color);
+      --el-input-bg-color: var(--o-pagination-bg-color);
+      --el-input-text-color: var(--o-pagination-font-color);
     }
     .el-input__wrapper {
       border-radius: 0px;
@@ -173,56 +173,56 @@ watch(
       --el-select-border-color-hover: none;
       --el-select-input-focus-border-color: none;
       & .el-input .el-select__caret {
-        color: var(--e-pagination-font-color);
+        color: var(--o-pagination-font-color);
       }
     }
     .el-select-dropdown__wrap {
       background-color: #000 !important;
     }
     .el-pager li {
-      color: var(--e-pagination-font-color);
-      background: var(--e-pagination-bg-color);
+      color: var(--o-pagination-font-color);
+      background: var(--o-pagination-bg-color);
       border-radius: 0px;
       line-height: 36px;
       height: 36px;
       width: 36px;
       &:hover {
-        color: var(--e-color-text2) !important;
-        background-color: var(--e-pagination-font-color_active);
+        color: var(--o-color-text2) !important;
+        background-color: var(--o-pagination-font-color_active);
       }
     }
     .el-pager li.is-active.number {
-      background: var(--e-pagination-font-color_active);
-      color: var(--e-color-text2);
+      background: var(--o-pagination-font-color_active);
+      color: var(--o-color-text2);
       font-weight: 400;
-      font-size: var(--e-font-size-text);
+      font-size: var(--o-font-size-text);
     }
     .btn-next,
     .btn-prev {
       width: 36px;
       height: 36px;
-      color: var(--e-pagination-font-color);
+      color: var(--o-pagination-font-color);
       border-radius: 0px;
-      background: var(--e-pagination-bg-color);
+      background: var(--o-pagination-bg-color);
     }
     .btn-prev:disabled {
-      background: var(--e-color-text5);
+      background: var(--o-color-text5);
     }
     .btn-next {
-      margin-right: var(--e-spacing-h5) !important;
+      margin-right: var(--o-spacing-h5) !important;
     }
     .btn-next:disabled {
-      background: var(--e-color-text5);
+      background: var(--o-color-text5);
     }
 
     .el-pagination__jump {
       height: 36px;
-      font-size: var(--e-font-size-text);
+      font-size: var(--o-font-size-text);
       font-weight: 400;
-      line-height: var(--e-line-height-text);
-      color: var(--e-color-neutral8);
+      line-height: var(--o-line-height-text);
+      color: var(--o-color-neutral8);
       border-radius: 0px;
-      margin-left: var(--e-spacing-h4);
+      margin-left: var(--o-spacing-h4);
       .el-input__wrapper {
         flex-grow: 0.273;
       }
@@ -230,7 +230,7 @@ watch(
   }
 }
 .o-pagination-popper {
-  box-shadow: var(--e-shadow-l3);
+  box-shadow: var(--o-shadow-l3);
   &.el-popper {
     box-shadow: none !important;
     --el-popper-border-radius: none;
@@ -240,29 +240,29 @@ watch(
     }
 
     .el-select-dropdown__item {
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
 
       &:hover {
-        color: var(--e-color-brand1);
-        background: var(--e-color-bg1);
+        color: var(--o-color-brand1);
+        background: var(--o-color-bg1);
       }
     }
     .hover {
-      color: var(--e-color-brand1);
-      background: var(--e-color-bg1);
+      color: var(--o-color-brand1);
+      background: var(--o-color-bg1);
     }
 
     .el-select-dropdown__item.selected {
-      background-color: var(--e-color-bg1);
+      background-color: var(--o-color-bg1);
     }
 
     .el-select-dropdown__item.selected {
       font-weight: normal;
-      color: var(--e-color-brand1);
+      color: var(--o-color-brand1);
     }
 
     .el-select-dropdown__wrap {
-      background-color: var(--e-color-bg2);
+      background-color: var(--o-color-bg2);
     }
   }
 }
@@ -270,10 +270,10 @@ watch(
   display: none;
   justify-content: center;
   align-items: center;
-  font-size: var(--e-font-size-tip);
+  font-size: var(--o-font-size-tip);
   .icon-prev {
     margin-right: 8px;
-    color: var(--e-color-brand1);
+    color: var(--o-color-brand1);
   }
   .page-number {
     margin: 0 28px;
@@ -284,14 +284,14 @@ watch(
       text-align: right;
       border: none;
       background-color: transparent;
-      color: var(--e-color-brand1);
+      color: var(--o-color-brand1);
       &:focus {
         text-align: center;
-        outline: 1px solid var(--e-color-brand1);
+        outline: 1px solid var(--o-color-brand1);
       }
     }
     span {
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       display: inline-block;
       width: 16px;
       text-align: left;
@@ -299,16 +299,16 @@ watch(
   }
   .icon-next {
     margin-left: 8px;
-    color: var(--e-color-brand1);
+    color: var(--o-color-brand1);
   }
   .next,
   .prev {
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     line-height: 100%;
     cursor: pointer;
   }
   .disable-button {
-    color: var(--e-color-text4);
+    color: var(--o-color-text4);
   }
   @media (max-width: 768px) {
     width: 100%;

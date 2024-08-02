@@ -375,57 +375,57 @@ const isAgreeTipShow = ref(true);
 
 <style lang="scss" scoped>
 .breadcrumb {
-  color: var(--e-color-text1);
-  background: var(--e-color-bg1);
+  color: var(--o-color-text1);
+  background: var(--o-color-bg1);
   display: flex;
-  margin-bottom: var(--e-spacing-h2);
+  margin-bottom: var(--o-spacing-h2);
   @media screen and (max-width: 840px) {
-    margin-bottom: var(--e-spacing-h5);
+    margin-bottom: var(--o-spacing-h5);
   }
   .last-page {
-    font-size: var(--e-font-size-tip);
+    font-size: var(--o-font-size-tip);
     font-weight: 300;
-    color: var(--e-color-text4);
-    line-height: var(--e-line-height-tip);
+    color: var(--o-color-text4);
+    line-height: var(--o-line-height-tip);
     cursor: pointer;
   }
   .separtor {
-    margin: 0 var(--e-spacing-h10);
+    margin: 0 var(--o-spacing-h10);
     .o-icon {
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
     }
   }
   .current-page {
-    font-size: var(--e-font-size-tip);
+    font-size: var(--o-font-size-tip);
     font-weight: 600;
-    color: var(--e-color-text1);
-    line-height: var(--e-line-height-tip);
+    color: var(--o-color-text1);
+    line-height: var(--o-line-height-tip);
   }
 }
 .certificate-search {
-  margin-top: var(--e-spacing-h2);
+  margin-top: var(--o-spacing-h2);
   @media screen and (max-width: 840px) {
     margin-top: 0;
   }
   h2 {
-    font-size: var(--e-font-size-h3);
-    line-height: var(--e-line-height-h3);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h3);
+    line-height: var(--o-line-height-h3);
+    color: var(--o-color-text1);
     text-align: center;
     font-weight: 300;
     @media screen and (max-width: 840px) {
-      font-size: var(--e-font-size-h7);
-      line-height: var(--e-line-height-h7);
+      font-size: var(--o-font-size-h7);
+      line-height: var(--o-line-height-h7);
     }
   }
   .search-content {
-    margin-top: var(--e-spacing-h1);
+    margin-top: var(--o-spacing-h1);
     width: 100%;
-    background-color: var(--e-color-bg2);
-    padding: var(--e-spacing-h2) 0;
+    background-color: var(--o-color-bg2);
+    padding: var(--o-spacing-h2) 0;
     @media screen and (max-width: 840px) {
-      margin-top: var(--e-spacing-h7);
-      padding: var(--e-spacing-h5);
+      margin-top: var(--o-spacing-h7);
+      padding: var(--o-spacing-h5);
       min-width: 328px;
     }
     .input-box {
@@ -449,12 +449,12 @@ const isAgreeTipShow = ref(true);
 
           .o-icon {
             color: red;
-            font-size: var(--e-font-size-h5);
+            font-size: var(--o-font-size-h5);
           }
           span {
-            font-size: var(--e-font-size-text);
-            line-height: var(--e-line-height-text);
-            color: var(--e-color-text1);
+            font-size: var(--o-font-size-text);
+            line-height: var(--o-line-height-text);
+            color: var(--o-color-text1);
           }
         }
         .right {
@@ -464,17 +464,17 @@ const isAgreeTipShow = ref(true);
           @media screen and (max-width: 840px) {
             .o-input {
               height: 24px;
-              font-size: var(--e-font-size-tip);
+              font-size: var(--o-font-size-tip);
             }
           }
           @media screen and (max-width: 410px) {
             max-width: 223px;
           }
           .tip {
-            font-size: var(--e-font-size-tip);
-            line-height: var(--e-line-height-tip);
+            font-size: var(--o-font-size-tip);
+            line-height: var(--o-line-height-tip);
             color: #ff8d4d;
-            margin-top: var(--e-spacing-h8);
+            margin-top: var(--o-spacing-h8);
             @media screen and (max-width: 840px) {
               display: none;
             }
@@ -502,12 +502,12 @@ const isAgreeTipShow = ref(true);
           }
           .o-icon {
             color: red;
-            font-size: var(--e-font-size-h5);
+            font-size: var(--o-font-size-h5);
           }
           span {
-            font-size: var(--e-font-size-text);
-            line-height: var(--e-line-height-text);
-            color: var(--e-color-text1);
+            font-size: var(--o-font-size-text);
+            line-height: var(--o-line-height-text);
+            color: var(--o-color-text1);
           }
         }
         .right {
@@ -518,7 +518,7 @@ const isAgreeTipShow = ref(true);
             padding-right: 88px;
             .o-input {
               height: 24px;
-              font-size: var(--e-font-size-tip);
+              font-size: var(--o-font-size-tip);
             }
           }
           @media screen and (max-width: 410px) {
@@ -532,8 +532,8 @@ const isAgreeTipShow = ref(true);
             bottom: -8px;
             left: 0;
             transform: translateY(100%);
-            font-size: var(--e-font-size-tip);
-            line-height: var(--e-line-height-tip);
+            font-size: var(--o-font-size-tip);
+            line-height: var(--o-line-height-tip);
             color: #ff8d4d;
             @media screen and (max-width: 840px) {
               bottom: -6px;
@@ -560,22 +560,22 @@ const isAgreeTipShow = ref(true);
               height: 24px !important;
               right: 0px;
               transform: none;
-              background-color: var(--e-color-brand1);
-              color: var(--e-color-white);
-              font-size: var(--e-font-size-tip);
+              background-color: var(--o-color-brand1);
+              color: var(--o-color-white);
+              font-size: var(--o-font-size-tip);
             }
           }
           .await {
             cursor: not-allowed;
-            border: 1px solid var(--e-color-text3);
-            color: var(--e-color-text3);
+            border: 1px solid var(--o-color-text3);
+            color: var(--o-color-text3);
           }
         }
       }
       .agree-box {
         width: 100%;
-        margin-top: var(--e-spacing-h2);
-        font-size: var(--e-font-size-text);
+        margin-top: var(--o-spacing-h2);
+        font-size: var(--o-font-size-text);
         :deep(.el-checkbox) {
           height: auto;
           width: 100%;
@@ -586,9 +586,9 @@ const isAgreeTipShow = ref(true);
           }
         }
         :deep(.el-checkbox__label) {
-          font-size: var(--e-font-size-h9);
-          line-height: var(--e-line-height-h9);
-          color: var(--e-color-text1);
+          font-size: var(--o-font-size-h9);
+          line-height: var(--o-line-height-h9);
+          color: var(--o-color-text1);
           position: relative;
           white-space: break-spaces;
           .agree-tip {
@@ -599,16 +599,16 @@ const isAgreeTipShow = ref(true);
           }
         }
         a {
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
         }
       }
       .button-box {
         max-width: 536px;
-        margin-top: var(--e-spacing-h2);
+        margin-top: var(--o-spacing-h2);
         text-align: center;
         @media screen and (max-width: 840px) {
-          margin-top: var(--e-spacing-h2);
+          margin-top: var(--o-spacing-h2);
         }
         .o-button {
           padding-top: 7px;
@@ -616,9 +616,9 @@ const isAgreeTipShow = ref(true);
           height: 36px;
           @media screen and (max-width: 840px) {
             height: 24px;
-            color: var(--e-color-white);
-            background-color: var(--e-color-brand1);
-            font-size: var(--e-font-size-tip);
+            color: var(--o-color-white);
+            background-color: var(--o-color-brand1);
+            font-size: var(--o-font-size-tip);
           }
         }
       }
@@ -626,31 +626,31 @@ const isAgreeTipShow = ref(true);
   }
 }
 .certificate-download {
-  margin-top: var(--e-spacing-h2);
+  margin-top: var(--o-spacing-h2);
   @media screen and (max-width: 840px) {
     margin-top: 0;
   }
   h2 {
-    margin-top: var(--e-spacing-h2);
-    font-size: var(--e-font-size-h3);
-    line-height: var(--e-line-height-h3);
-    color: var(--e-color-text1);
+    margin-top: var(--o-spacing-h2);
+    font-size: var(--o-font-size-h3);
+    line-height: var(--o-line-height-h3);
+    color: var(--o-color-text1);
     text-align: center;
     font-weight: 300;
     @media screen and (max-width: 1100px) {
-      margin-top: var(--e-spacing-h5);
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-font-size-h8);
+      margin-top: var(--o-spacing-h5);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-font-size-h8);
     }
   }
   .certificate-box {
-    margin-top: var(--e-spacing-h2);
-    background-color: var(--e-color-bg2);
-    padding: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
+    background-color: var(--o-color-bg2);
+    padding: var(--o-spacing-h2);
     text-align: center;
     @media screen and (max-width: 1100px) {
-      margin-top: var(--e-spacing-h5);
-      background-color: var(--e-color-bg1);
+      margin-top: var(--o-spacing-h5);
+      background-color: var(--o-color-bg1);
       padding: 0;
     }
     .certificate-item-box {
@@ -668,7 +668,7 @@ const isAgreeTipShow = ref(true);
         width: 336px;
         height: 263px;
         border: 1px solid transparent;
-        box-shadow: var(--e-shadow-l1);
+        box-shadow: var(--o-shadow-l1);
         position: relative;
         @media screen and (max-width: 1100px) {
           width: 100%;
@@ -677,13 +677,13 @@ const isAgreeTipShow = ref(true);
         }
 
         .item-img {
-          background-color: var(--e-color-bg4);
+          background-color: var(--o-color-bg4);
           padding: 14px 0 10px;
           text-align: center;
           position: relative;
           @media screen and (max-width: 1100px) {
             padding: 12px;
-            background-color: var(--e-color-brand1);
+            background-color: var(--o-color-brand1);
           }
 
           img {
@@ -695,32 +695,32 @@ const isAgreeTipShow = ref(true);
           }
         }
         .item-text {
-          padding: var(--e-spacing-h4) 0;
+          padding: var(--o-spacing-h4) 0;
           text-align: center;
           @media screen and (max-width: 1100px) {
-            padding-left: var(--e-spacing-h5);
+            padding-left: var(--o-spacing-h5);
           }
           .title {
-            font-size: var(--e-font-size-h7);
-            line-height: var(--e-line-height-h7);
-            color: var(--e-color-text1);
+            font-size: var(--o-font-size-h7);
+            line-height: var(--o-line-height-h7);
+            color: var(--o-color-text1);
             font-weight: 300;
             @media screen and (max-width: 1100px) {
-              font-size: var(--e-font-size-text);
-              line-height: var(--e-line-height-text);
+              font-size: var(--o-font-size-text);
+              line-height: var(--o-line-height-text);
               text-align: left;
             }
           }
           .name {
-            margin-top: var(--e-spacing-h8);
-            font-size: var(--e-font-size-text);
-            line-height: var(--e-line-height-text);
-            color: var(--e-color-text1);
+            margin-top: var(--o-spacing-h8);
+            font-size: var(--o-font-size-text);
+            line-height: var(--o-line-height-text);
+            color: var(--o-color-text1);
             font-weight: 300;
             @media screen and (max-width: 1100px) {
-              font-size: var(--e-font-size-tip);
-              line-height: var(--e-line-height-tip);
-              color: var(--e-color-text3);
+              font-size: var(--o-font-size-tip);
+              line-height: var(--o-line-height-tip);
+              color: var(--o-color-text3);
             }
           }
         }
@@ -746,7 +746,7 @@ const isAgreeTipShow = ref(true);
           }
         }
         &.checked {
-          border: 1px solid var(--e-color-brand1);
+          border: 1px solid var(--o-color-brand1);
           .choose-img {
             background-image: url(@/assets/category/certification/choose.png);
           }
@@ -795,13 +795,13 @@ const isAgreeTipShow = ref(true);
       }
     }
     .o-button {
-      margin-top: var(--e-spacing-h2);
+      margin-top: var(--o-spacing-h2);
       @media screen and (max-width: 1100px) {
-        font-size: var(--e-font-size-tip);
+        font-size: var(--o-font-size-tip);
         height: 24px;
         line-height: 24px;
-        background-color: var(--e-color-brand1);
-        color: var(--e-color-white);
+        background-color: var(--o-color-brand1);
+        color: var(--o-color-white);
       }
     }
   }
@@ -810,26 +810,26 @@ const isAgreeTipShow = ref(true);
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: var(--e-font-size-h6);
-    color: var(--e-color-text1);
-    padding: var(--e-spacing-h2) 0;
+    font-size: var(--o-font-size-h6);
+    color: var(--o-color-text1);
+    padding: var(--o-spacing-h2) 0;
     min-height: calc(100vh - 339px);
     .nofound-text {
-      margin-top: var(--e-spacing-h5);
-      font-size: var(--e-font-size-h7);
+      margin-top: var(--o-spacing-h5);
+      font-size: var(--o-font-size-h7);
     }
     .nofound-img {
       height: 300px;
     }
     @media screen and (max-width: 840px) {
-      padding-top: var(--e-spacing-h2);
-      font-size: var(--e-font-size-text);
+      padding-top: var(--o-spacing-h2);
+      font-size: var(--o-font-size-text);
       .nofound-img {
         max-height: 232px;
       }
       .nofound-text {
-        margin-top: var(--e-spacing-h6);
-        font-size: var(--e-font-size-tip);
+        margin-top: var(--o-spacing-h6);
+        font-size: var(--o-font-size-tip);
       }
     }
   }

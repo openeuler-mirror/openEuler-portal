@@ -72,11 +72,11 @@ const docsActive = ref(props.docsObj.TAB && props.docsObj.TAB[0]?.VALUE);
     }
     .el-tabs {
       :deep(.el-tabs__header) {
-        margin-bottom: var(--e-spacing-h4);
+        margin-bottom: var(--o-spacing-h4);
       }
       :deep(.el-tabs__nav) {
         .is-active {
-          color: var(--e-color-brand1);
+          color: var(--o-color-brand1);
         }
       }
       :deep(.el-tabs__content) {
@@ -96,19 +96,19 @@ const docsActive = ref(props.docsObj.TAB && props.docsObj.TAB[0]?.VALUE);
       border: 0 none;
       padding: 0;
       &-item {
-        --e-collapse-color-border: none;
+        --o-collapse-color-border: none;
         padding: 0;
         :deep(.el-collapse-item__header) {
           height: 34px;
-          font-size: var(--e-font-size-tip);
-          padding: var(--e-spacing-h8) 0 var(--e-spacing-h8) var(--e-spacing-h8);
+          font-size: var(--o-font-size-tip);
+          padding: var(--o-spacing-h8) 0 var(--o-spacing-h8) var(--o-spacing-h8);
           position: relative;
           &:after {
             content: '';
-            left: var(--e-spacing-h8);
-            right: var(--e-spacing-h8);
+            left: var(--o-spacing-h8);
+            right: var(--o-spacing-h8);
             position: absolute;
-            background: var(--e-color-border2);
+            background: var(--o-color-border2);
             height: 1px;
             font-size: 0;
             bottom: 0;
@@ -120,7 +120,7 @@ const docsActive = ref(props.docsObj.TAB && props.docsObj.TAB[0]?.VALUE);
           }
         }
         :deep(.el-collapse-item__wrap) {
-          background-color: var(--e-color-bg1);
+          background-color: var(--o-color-bg1);
           .el-collapse-item__content {
             padding: 0;
           }

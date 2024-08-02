@@ -141,16 +141,16 @@ const isDark = computed(() => {
 </template>
 <style lang="scss" scoped>
 .meet-title {
-  font-size: var(--e-font-size-h3);
-  line-height: var(--e-line-height-h3);
+  font-size: var(--o-font-size-h3);
+  line-height: var(--o-line-height-h3);
   font-weight: 300;
-  color: var(--e-color-text1);
+  color: var(--o-color-text1);
   margin-bottom: 40px;
   text-align: center;
   position: relative;
   @media screen and (max-width: 768px) {
-    font-size: var(--e-font-size-h7);
-    line-height: var(--e-line-height-h7);
+    font-size: var(--o-font-size-h7);
+    line-height: var(--o-line-height-h7);
     margin-bottom: 16px;
   }
   img {
@@ -168,12 +168,12 @@ const isDark = computed(() => {
 .introduce {
   margin-top: 8px;
   p {
-    font-size: var(--e-font-size-h6);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h6);
+    color: var(--o-color-text1);
     @media screen and (max-width: 768px) {
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
-      color: var(--e-color-text4);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
+      color: var(--o-color-text4);
     }
 
     & + P {
@@ -218,7 +218,7 @@ const isDark = computed(() => {
 .time-line {
   width: 2px;
   min-height: 100%;
-  background-color: var(--e-color-brand1);
+  background-color: var(--o-color-brand1);
   margin: 24px 24px 0 8px;
   position: relative;
   @media screen and (max-width: 768px) {
@@ -230,7 +230,7 @@ const isDark = computed(() => {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: var(--e-color-brand1);
+    background-color: var(--o-color-brand1);
     position: absolute;
     left: -7px;
     @media screen and (max-width: 768px) {
@@ -250,8 +250,8 @@ const isDark = computed(() => {
   }
 }
 .morning {
-  font-size: var(--e-font-size-h6);
-  line-height: var(--e-line-height-h6);
+  font-size: var(--o-font-size-h6);
+  line-height: var(--o-line-height-h6);
   font-weight: 500;
   color: #fff;
   padding: 4px 12px 4px 12px;
@@ -260,8 +260,8 @@ const isDark = computed(() => {
   @media screen and (max-width: 768px) {
     width: 128px;
     height: 29px;
-    font-size: var(--e-font-size-h8);
-    line-height: var(--e-line-height-h8);
+    font-size: var(--o-font-size-h8);
+    line-height: var(--o-line-height-h8);
   }
 }
 .morning-bg_light {
@@ -283,7 +283,7 @@ const isDark = computed(() => {
   .agenda-lists-card {
     padding: 24px;
     width: 100%;
-    background-color: var(--e-color-bg2);
+    background-color: var(--o-color-bg2);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: right;
@@ -310,7 +310,7 @@ const isDark = computed(() => {
       width: 6px;
       height: 22px;
       border-radius: 3px;
-      background-color: var(--e-color-brand1);
+      background-color: var(--o-color-brand1);
       margin-right: 8px;
       @media screen and (max-width: 768px) {
         width: 4px;
@@ -324,17 +324,17 @@ const isDark = computed(() => {
       font-size: 22px;
       line-height: 30px;
       font-weight: 500;
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       @media screen and (max-width: 768px) {
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
       }
     }
   }
 
   .card-bottom {
     margin-top: 24px;
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     display: flex;
     align-items: center;
     @media screen and (max-width: 768px) {
@@ -349,12 +349,12 @@ const isDark = computed(() => {
     }
     .meet-time,
     .meet-date {
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
       margin-right: 24px;
       @media screen and (max-width: 768px) {
-        font-size: var(--e-font-size-tip);
-        line-height: var(--e-line-height-tip);
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-tip);
       }
     }
     .meet-date {
@@ -365,21 +365,21 @@ const isDark = computed(() => {
   }
 }
 .previous {
-  margin-top: var(--e-spacing-h1);
+  margin-top: var(--o-spacing-h1);
   @media screen and (max-width: 768px) {
-    margin-top: var(--e-spacing-h4);
+    margin-top: var(--o-spacing-h4);
   }
   .previous-title {
     display: flex;
     h3 {
       font-size: 26px;
       line-height: 30px;
-      color: var(--e-color-text1);
-      margin-right: var(--e-spacing-h6);
+      color: var(--o-color-text1);
+      margin-right: var(--o-spacing-h6);
       @media screen and (max-width: 768px) {
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
-        margin-right: var(--e-spacing-h7);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
+        margin-right: var(--o-spacing-h7);
       }
     }
     img {
@@ -390,25 +390,25 @@ const isDark = computed(() => {
   }
 
   .link-box {
-    margin-top: var(--e-spacing-h3);
+    margin-top: var(--o-spacing-h3);
     display: flex;
     width: 318px;
     flex-wrap: wrap;
     @media screen and (max-width: 768px) {
       width: 172px;
-      margin-top: var(--e-spacing-h6);
+      margin-top: var(--o-spacing-h6);
     }
     a {
-      font-size: var(--e-font-size-h6);
-      line-height: var(--e-line-height-h6);
+      font-size: var(--o-font-size-h6);
+      line-height: var(--o-line-height-h6);
       @media screen and (max-width: 768px) {
-        font-size: var(--e-font-size-tip);
-        line-height: var(--e-line-height-tip);
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-tip);
       }
       & + a {
-        margin-top: var(--e-spacing-h4);
+        margin-top: var(--o-spacing-h4);
         @media screen and (max-width: 768px) {
-          margin-top: var(--e-spacing-h8);
+          margin-top: var(--o-spacing-h8);
         }
       }
     }

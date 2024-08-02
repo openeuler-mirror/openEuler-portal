@@ -143,13 +143,13 @@ onMounted(() => {
 :deep(.o-button.button-size-large) {
   min-width: 248px;
   justify-content: center;
-  --e-button-font-size: var(--e-font-size-h6);
+  --o-button-font-size: var(--o-font-size-h6);
   line-height: 38px;
   height: 60px;
   @media screen and (max-width: 1100px) {
     height: 48px;
     min-width: 200px;
-    --e-button-font-size: var(--e-font-size-h7);
+    --o-button-font-size: var(--o-font-size-h7);
   }
 }
 .city-action {
@@ -158,46 +158,46 @@ onMounted(() => {
 }
 .city-info {
   padding: 40px;
-  background: var(--e-color-bg2);
-  box-shadow: var(--e-shadow-l1);
+  background: var(--o-color-bg2);
+  box-shadow: var(--o-shadow-l1);
   margin: 40px 0;
   @media screen and (max-width: 1100px) {
     padding: 24px;
     margin: 24px 0;
   }
   .title {
-    font-size: var(--e-font-size-h4);
-    line-height: var(--e-line-height-h4);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h4);
+    line-height: var(--o-line-height-h4);
+    color: var(--o-color-text1);
     font-weight: 500;
     @media screen and (max-width: 1100px) {
-      font-size: var(--e-font-size-h5);
-      line-height: var(--e-line-height-h5);
+      font-size: var(--o-font-size-h5);
+      line-height: var(--o-line-height-h5);
     }
   }
   .organizational {
-    font-size: var(--e-font-size-h8);
-    line-height: var(--e-line-height-h8);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h8);
+    line-height: var(--o-line-height-h8);
+    color: var(--o-color-text1);
     margin-top: 20px;
     @media screen and (max-width: 1100px) {
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
     }
   }
 }
 .city-member {
   h2 {
     text-align: center;
-    font-size: var(--e-font-size-h3);
-    line-height: var(--e-line-height-h3);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h3);
+    line-height: var(--o-line-height-h3);
+    color: var(--o-color-text1);
     font-weight: 300;
     margin-bottom: 40px;
-    margin-top: var(--e-spacing-h1);
+    margin-top: var(--o-spacing-h1);
     @media screen and (max-width: 1100px) {
-      font-size: var(--e-font-size-h5);
-      line-height: var(--e-line-height-h5);
+      font-size: var(--o-font-size-h5);
+      line-height: var(--o-line-height-h5);
       margin: 40px 0 24px;
     }
   }
@@ -206,14 +206,14 @@ onMounted(() => {
 // 用户案例
 .show-case {
   .case-text {
-    font-size: var(--e-font-size-h8);
-    line-height: var(--e-line-height-h8);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h8);
+    line-height: var(--o-line-height-h8);
+    color: var(--o-color-text1);
     text-align: center;
     margin: 40px 0;
     @media screen and (max-width: 1100px) {
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
       margin: 16px 0;
     }
   }

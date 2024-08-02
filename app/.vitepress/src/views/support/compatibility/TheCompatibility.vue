@@ -1919,20 +1919,20 @@ onMounted(() => {
 }
 
 .en-filter {
-  --e-filter-width: 140px;
+  --o-filter-width: 140px;
   grid-template-columns: 100px auto 60px;
 }
 .solution-details {
-  padding: var(--e-spacing-h2);
-  background-color: var(--e-color-bg2);
-  box-shadow: var(--e-shadow-l2);
+  padding: var(--o-spacing-h2);
+  background-color: var(--o-color-bg2);
+  box-shadow: var(--o-shadow-l2);
   @media screen and (max-width: 768px) {
-    padding: var(--e-spacing-h5);
+    padding: var(--o-spacing-h5);
   }
   .option-title {
-    font-size: var(--e-font-size-h5);
-    color: var(--e-color-text1);
-    line-height: var(--e-line-height-h5);
+    font-size: var(--o-font-size-h5);
+    color: var(--o-color-text1);
+    line-height: var(--o-line-height-h5);
     @media screen and (max-width: 768px) {
       font-size: 14px;
       font-weight: 500;
@@ -1957,15 +1957,15 @@ onMounted(() => {
   }
   .info-item {
     display: flex;
-    font-size: var(--e-font-size-text);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-text);
+    color: var(--o-color-text1);
     @media screen and (max-width: 768px) {
       font-size: 12px;
       line-height: 18px;
     }
     p:first-child {
       width: 210px;
-      color: var(--e-color-text4);
+      color: var(--o-color-text4);
       @media screen and (max-width: 768px) {
         width: 140px;
       }
@@ -1978,7 +1978,7 @@ onMounted(() => {
 :deep(.el-tabs__nav-scroll) {
   display: flex;
   justify-content: center;
-  background-color: var(--e-color-bg2);
+  background-color: var(--o-color-bg2);
   height: 48px;
 }
 .mobile-content {
@@ -2000,18 +2000,18 @@ onMounted(() => {
   :deep(.el-collapse) {
     --el-collapse-border-color: none;
     .el-collapse-item__header {
-      padding-left: var(--e-spacing-h8);
-      background-color: var(--e-color-bg2);
-      color: var(--e-color-text1);
+      padding-left: var(--o-spacing-h8);
+      background-color: var(--o-color-bg2);
+      color: var(--o-color-text1);
       border-bottom: none;
-      box-shadow: var(--e-shadow-l1);
+      box-shadow: var(--o-shadow-l1);
       height: 34px;
     }
     .el-collapse-item__wrap {
-      background-color: var(--e-color-bg1);
+      background-color: var(--o-color-bg1);
     }
     .el-collapse-item__content {
-      background-color: var(--e-color-bg1);
+      background-color: var(--o-color-bg1);
     }
     .el-collapse-item__content:last-child {
       padding-bottom: 0;
@@ -2019,7 +2019,7 @@ onMounted(() => {
   }
   :deep(.o-select) {
     width: 100%;
-    margin-top: var(--e-spacing-h6);
+    margin-top: var(--o-spacing-h6);
   }
   :deep(.o-search) {
     height: 36px;
@@ -2028,7 +2028,7 @@ onMounted(() => {
       --el-input-icon-color: var(--el-text-color-placeholder);
     }
     .el-input__wrapper {
-      font-size: var(--e-font-size-tip);
+      font-size: var(--o-font-size-tip);
     }
     .el-input__prefix-inner {
       font-size: 18px;
@@ -2038,31 +2038,31 @@ onMounted(() => {
 .bottom-wrapper {
   max-width: 1504px;
   margin: 0 auto;
-  padding: 0 var(--e-spacing-h2);
+  padding: 0 var(--o-spacing-h2);
 }
 .o-search {
   height: 48px;
 }
 .filter-card {
-  margin: var(--e-spacing-h4) 0;
+  margin: var(--o-spacing-h4) 0;
   @media screen and (max-width: 768px) {
     display: none;
   }
   :deep(.el-card__body) {
-    padding: var(--e-spacing-h8) var(--e-spacing-h2);
+    padding: var(--o-spacing-h8) var(--o-spacing-h2);
     .o-tag {
-      margin: var(--e-spacing-h10);
+      margin: var(--o-spacing-h10);
     }
   }
 }
 .friendly-link {
-  color: var(--e-color-link1);
+  color: var(--o-color-link1);
 }
 .pc-list {
-  margin-bottom: var(--e-spacing-h2);
+  margin-bottom: var(--o-spacing-h2);
   .hardware-info {
     cursor: pointer;
-    color: var(--e-color-link1);
+    color: var(--o-color-link1);
   }
   @media screen and (max-width: 768px) {
     display: none;
@@ -2070,29 +2070,29 @@ onMounted(() => {
 }
 .empty-status {
   text-align: center;
-  font-size: var(--e-font-size-tip);
-  color: var(--e-color-text4);
-  line-height: var(--e-spacing-tip);
-  padding: var(--e-spacing-h2) 0 var(--e-spacing-h5);
+  font-size: var(--o-font-size-tip);
+  color: var(--o-color-text4);
+  line-height: var(--o-spacing-tip);
+  padding: var(--o-spacing-h2) 0 var(--o-spacing-h5);
 }
 .mobile-list {
   display: none;
-  margin-bottom: var(--e-spacing-h5);
-  margin-top: var(--e-spacing-h6);
-  box-shadow: var(--e-shadow-l1);
+  margin-bottom: var(--o-spacing-h5);
+  margin-top: var(--o-spacing-h6);
+  box-shadow: var(--o-shadow-l1);
   @media screen and (max-width: 768px) {
     display: block;
   }
 
   .item {
-    padding: var(--e-spacing-h5);
-    font-size: var(--e-font-size-tip);
+    padding: var(--o-spacing-h5);
+    font-size: var(--o-font-size-tip);
     font-weight: 400;
-    color: var(--e-color-neutral8);
-    line-height: var(--e-line-height-tip);
-    background-color: var(--e-color-bg2);
+    color: var(--o-color-neutral8);
+    line-height: var(--o-line-height-tip);
+    background-color: var(--o-color-bg2);
     &:nth-child(odd) {
-      background: var(--e-color-bg4);
+      background: var(--o-color-bg4);
     }
     & li {
       margin-bottom: 8px;
@@ -2107,39 +2107,39 @@ onMounted(() => {
       }
     }
     span {
-      color: var(--e-color-text1);
-      margin-right: var(--e-spacing-h8);
+      color: var(--o-color-text1);
+      margin-right: var(--o-spacing-h8);
     }
   }
 }
 
 .pagination {
-  margin-top: var(--e-spacing-h2);
+  margin-top: var(--o-spacing-h2);
   .pagination-slot {
-    font-size: var(--e-font-size-text);
+    font-size: var(--o-font-size-text);
     font-weight: 400;
-    color: var(--e-color-text1);
-    line-height: var(--e-spacing-h4);
+    color: var(--o-color-text1);
+    line-height: var(--o-spacing-h4);
   }
 }
 .about {
-  margin-top: var(--e-spacing-h4);
-  font-size: var(--e-font-size-h8);
+  margin-top: var(--o-spacing-h4);
+  font-size: var(--o-font-size-h8);
   font-weight: 400;
-  color: var(--e-color-text1);
-  line-height: var(--e-line-height-h8);
+  color: var(--o-color-text1);
+  line-height: var(--o-line-height-h8);
   a {
-    color: var(--e-color-link1);
+    color: var(--o-color-link1);
   }
 }
 .mobile-about {
-  padding: var(--e-spacing-h5);
-  font-size: var(--e-font-size-tip);
+  padding: var(--o-spacing-h5);
+  font-size: var(--o-font-size-tip);
   font-weight: 400;
-  color: var(--e-color-text4);
-  line-height: var(--e-line-height-tip);
+  color: var(--o-color-text4);
+  line-height: var(--o-line-height-tip);
   a {
-    color: var(--e-color-link1);
+    color: var(--o-color-link1);
   }
 }
 .last-mobile-about {

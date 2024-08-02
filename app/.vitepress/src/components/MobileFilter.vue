@@ -236,51 +236,51 @@ const allHighLight = (val: any) => {
 
 <style scoped lang="scss">
 :deep(.o-tag) {
-  font-size: var(--e-font-size-tip);
-  line-height: var(--e-line-height-tip);
-  padding-left: var(--e-spacing-h8);
+  font-size: var(--o-font-size-tip);
+  line-height: var(--o-line-height-tip);
+  padding-left: var(--o-spacing-h8);
   padding-right: 0;
-  color: var(--e-color-text4);
+  color: var(--o-color-text4);
 }
 :deep(.o-button) {
   width: 104px;
   height: 28px;
-  font-size: var(--e-font-size-text);
-  line-height: var(--e-line-height-text);
+  font-size: var(--o-font-size-text);
+  line-height: var(--o-line-height-text);
   justify-content: center;
 }
 .o-screen {
-  padding: var(--e-spacing-h5) 0;
+  padding: var(--o-spacing-h5) 0;
 
   &-header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     &-button {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
-      color: var(--e-color-text4);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
+      color: var(--o-color-text4);
       &-icon {
         display: inline-block;
         .icon {
           position: relative;
           bottom: -2px;
-          color: var(--e-color-text1);
+          color: var(--o-color-text1);
         }
       }
     }
   }
   &-tags {
-    // padding: 0 var(--e-spacing-h5);
+    // padding: 0 var(--o-spacing-h5);
     &-tag {
-      margin-right: var(--e-spacing-h8);
-      margin-top: var(--e-spacing-h8);
-      background-color: var(--e-color-bg4);
+      margin-right: var(--o-spacing-h8);
+      margin-top: var(--o-spacing-h8);
+      background-color: var(--o-color-bg4);
       &-icon {
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-height-tip);
-        // color: var(--e-color-text1);
-        color: var(--e-color-text3);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-tip);
+        // color: var(--o-color-text1);
+        color: var(--o-color-text3);
         position: relative;
         top: 1px;
       }
@@ -289,34 +289,34 @@ const allHighLight = (val: any) => {
   &-box {
     &-drawer {
       &-header {
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
         text-align: center;
         p {
           display: inline-block;
-          color: var(--e-color-text1);
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
+          color: var(--o-color-text1);
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
         }
       }
       &-content {
         &-title {
-          font-size: var(--e-font-size-tip);
-          line-height: var(--e-line-height-tip);
-          color: var(--e-color-text1);
+          font-size: var(--o-font-size-tip);
+          line-height: var(--o-line-height-tip);
+          color: var(--o-color-text1);
         }
         &-options {
           &-option {
             display: inline-block;
-            padding: 2px var(--e-spacing-h8);
-            font-size: var(--e-font-size-tip);
-            line-height: var(--e-line-height-tip);
-            margin: var(--e-spacing-h8);
-            border: 1px solid var(--e-color-transparent);
-            color: var(--e-color-text1);
+            padding: 2px var(--o-spacing-h8);
+            font-size: var(--o-font-size-tip);
+            line-height: var(--o-line-height-tip);
+            margin: var(--o-spacing-h8);
+            border: 1px solid var(--o-color-transparent);
+            color: var(--o-color-text1);
             &.active {
-              border: 1px solid var(--e-color-brand1);
-              color: var(--e-color-brand1);
+              border: 1px solid var(--o-color-brand1);
+              color: var(--o-color-brand1);
             }
           }
         }

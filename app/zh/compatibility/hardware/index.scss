@@ -7,12 +7,12 @@
     justify-content: left;
     padding: 32px;
     @media screen and (max-width: 768px) {
-      padding: var(--e-spacing-h4) 0;
+      padding: var(--o-spacing-h4) 0;
     }
     &:last-child {
       padding-bottom: 0;
       @media screen and (max-width: 768px) {
-        padding-bottom: var(--e-spacing-h3);
+        padding-bottom: var(--o-spacing-h3);
       }
     }
     h3 {
@@ -23,17 +23,17 @@
   .order-number {
     display: flex;
     align-self: center;
-    font-size: var(--e-line-height-h3);
-    color: var(--e-color-link1);
-    padding-right: var(--e-spacing-h3);
+    font-size: var(--o-line-height-h3);
+    color: var(--o-color-link1);
+    padding-right: var(--o-spacing-h3);
     @media screen and (max-width: 768px) {
-      font-size: var(--e-line-height-h4);
-      padding-right: var(--e-spacing-h5);
+      font-size: var(--o-line-height-h4);
+      padding-right: var(--o-spacing-h5);
     }
   }
   .content {
     position: relative;
-    padding-left: var(--e-spacing-h3);
+    padding-left: var(--o-spacing-h3);
     &::after {
       content: '';
       position: absolute;
@@ -41,13 +41,13 @@
       left: 0;
       width: 1px;
       height: 100%;
-      background-color: var(--e-color-border1);
+      background-color: var(--o-color-border1);
     }
     p:last-of-type {
       margin-bottom: 0;
     }
     @media screen and (max-width: 768px) {
-      padding-left: var(--e-spacing-h5);
+      padding-left: var(--o-spacing-h5);
     }
   }
 }

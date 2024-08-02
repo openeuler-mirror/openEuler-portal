@@ -134,10 +134,10 @@ const goLink = (path: string) => {
     .docs-list {
       .item {
         height: 192px;
-        padding: var(--e-spacing-h2) 0 var(--e-spacing-h2) var(--e-spacing-h2);
-        font-size: var(--e-font-size-h7);
-        color: var(--e-color-text1);
-        line-height: var(--e-line-height-h6);
+        padding: var(--o-spacing-h2) 0 var(--o-spacing-h2) var(--o-spacing-h2);
+        font-size: var(--o-font-size-h7);
+        color: var(--o-color-text1);
+        line-height: var(--o-line-height-h6);
         position: relative;
         overflow: hidden;
         &-content {
@@ -145,19 +145,19 @@ const goLink = (path: string) => {
           z-index: 3;
         }
         &-theme {
-          height: var(--e-line-height-h7);
-          font-size: var(--e-font-size-h7);
-          color: var(--e-color-text1);
-          line-height: var(--e-line-height-h7);
+          height: var(--o-line-height-h7);
+          font-size: var(--o-font-size-h7);
+          color: var(--o-color-text1);
+          line-height: var(--o-line-height-h7);
           font-weight: 500;
         }
         &-desc {
-          margin-top: var(--e-spacing-h10);
+          margin-top: var(--o-spacing-h10);
           max-width: 256px;
-          font-size: var(--e-font-size-text);
+          font-size: var(--o-font-size-text);
           font-weight: 400;
-          color: var(--e-color-text4);
-          line-height: var(--e-line-height-text);
+          color: var(--o-color-text4);
+          line-height: var(--o-line-height-text);
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
@@ -165,14 +165,14 @@ const goLink = (path: string) => {
           -webkit-box-orient: vertical;
         }
         &-link {
-          margin-top: var(--e-spacing-h2);
+          margin-top: var(--o-spacing-h2);
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
           gap: 4px 12px;
           &-button {
             padding: 0 !important;
             svg {
-              color: var(--e-color-brand1);
+              color: var(--o-color-brand1);
             }
           }
         }
@@ -203,7 +203,7 @@ const goLink = (path: string) => {
           z-index: 1;
         }
         &:hover {
-          box-shadow: var(--e-shadow-l2_hover);
+          box-shadow: var(--o-shadow-l2_hover);
         }
       }
     }
@@ -238,7 +238,7 @@ const goLink = (path: string) => {
 }
 .mobile-docs {
   width: 100%;
-  background-color: var(--e-color-bg1);
+  background-color: var(--o-color-bg1);
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -249,29 +249,29 @@ const goLink = (path: string) => {
     .docs-item {
       width: 100%;
       height: 144px;
-      margin: var(--e-spacing-h5) 0;
-      background-color: var(--e-color-bg2);
-      padding: var(--e-spacing-h5) 0 var(--e-spacing-h5) var(--e-spacing-h6);
+      margin: var(--o-spacing-h5) 0;
+      background-color: var(--o-color-bg2);
+      padding: var(--o-spacing-h5) 0 var(--o-spacing-h5) var(--o-spacing-h6);
       position: relative;
-      box-shadow: var(--e-shadow-l2);
+      box-shadow: var(--o-shadow-l2);
       &-content {
         position: absolute;
         z-index: 3;
         height: 112px;
       }
       &-theme {
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
-        height: var(--e-line-height-text);
-        color: var(--e-color-text1);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
+        height: var(--o-line-height-text);
+        color: var(--o-color-text1);
         font-weight: 500;
       }
       &-desc {
-        font-size: var(--e-font-size-tip);
-        line-height: var(--e-line-height-tip);
-        margin-top: var(--e-spacing-h8);
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-tip);
+        margin-top: var(--o-spacing-h8);
         max-width: 190px;
-        color: var(--e-color-text4);
+        color: var(--o-color-text4);
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -287,9 +287,9 @@ const goLink = (path: string) => {
         justify-content: flex-start;
         .more-button {
           padding: 0 !important;
-          margin-right: var(--e-spacing-h5);
+          margin-right: var(--o-spacing-h5);
           svg {
-            color: var(--e-color-brand1);
+            color: var(--o-color-brand1);
           }
         }
       }

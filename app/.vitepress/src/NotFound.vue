@@ -30,26 +30,26 @@ const notFoundImg = computed(() =>
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: var(--e-font-size-h6);
-  color: var(--e-color-text1);
-  padding: var(--e-spacing-h2) 0;
+  font-size: var(--o-font-size-h6);
+  color: var(--o-color-text1);
+  padding: var(--o-spacing-h2) 0;
   min-height: calc(100vh - 339px);
   .nofound-text {
-    margin-top: var(--e-spacing-h5);
-    font-size: var(--e-font-size-h7);
+    margin-top: var(--o-spacing-h5);
+    font-size: var(--o-font-size-h7);
   }
   .nofound-img {
     height: 300px;
   }
   @media screen and (max-width: 768px) {
-    padding-top: var(--e-spacing-h2);
-    font-size: var(--e-font-size-text);
+    padding-top: var(--o-spacing-h2);
+    font-size: var(--o-font-size-text);
     .nofound-img {
       max-height: 232px;
     }
     .nofound-text {
-      margin-top: var(--e-spacing-h6);
-      font-size: var(--e-font-size-tip);
+      margin-top: var(--o-spacing-h6);
+      font-size: var(--o-font-size-tip);
     }
   }
 }

@@ -16,7 +16,7 @@ title: 毕昇 JDK
       text-align: center;
   }
   .tck-affidavit p {
-      color:var(--e-color-text1);
+      color:var(--o-color-text1);
       font-size:18px;
   }
 </style>

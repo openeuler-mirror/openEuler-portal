@@ -69,19 +69,19 @@ const navList = computed(() => {
     position: relative;
     cursor: pointer;
     display: block !important;
-    color: var(--e-color-text4);
-    line-height: var(--e-line-height-text);
-    font-size: var(--e-font-size-text);
-    border-left: 1px solid var(--e-color-bg4);
+    color: var(--o-color-text4);
+    line-height: var(--o-line-height-text);
+    font-size: var(--o-font-size-text);
+    border-left: 1px solid var(--o-color-bg4);
     z-index: 1;
     padding: 8px 12px;
     &:hover {
-      color: var(--e-color-brand1);
+      color: var(--o-color-brand1);
     }
   }
   .active {
-    color: var(--e-color-brand1);
-    border-left: 1px solid var(--e-color-brand1);
+    color: var(--o-color-brand1);
+    border-left: 1px solid var(--o-color-brand1);
   }
 }
 </style>

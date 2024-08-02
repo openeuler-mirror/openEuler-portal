@@ -1,9 +1,9 @@
 .text-box {
-  padding: var(--e-spacing-h2);
-  background-color: var(--e-color-bg2);
-  box-shadow: var(--e-shadow-l2);
+  padding: var(--o-spacing-h2);
+  background-color: var(--o-color-bg2);
+  box-shadow: var(--o-shadow-l2);
   @media screen and (max-width: 768px) {
-    padding: var(--e-spacing-h5);
+    padding: var(--o-spacing-h5);
   }
   p:first-child {
     margin-top: 0;
@@ -11,31 +11,31 @@
 }
 strong {
   font-weight: 500;
-  color: var(--e-color-text1);
+  color: var(--o-color-text1);
 }
 p,
 ul,
 ol {
   margin-top: 22px;
-  font-size: var(--e-font-size-text);
+  font-size: var(--o-font-size-text);
   font-weight: normal;
-  color: var(--e-color-text4);
-  line-height: var(--e-line-height-text);
+  color: var(--o-color-text4);
+  line-height: var(--o-line-height-text);
   @media screen and (max-width: 768px) {
-    margin-top: var(--e-spacing-h8);
-    font-size: var(--e-font-size-tip);
+    margin-top: var(--o-spacing-h8);
+    font-size: var(--o-font-size-tip);
   }
 }
 h3 {
-  margin: 0 auto var(--e-spacing-h2);
+  margin: 0 auto var(--o-spacing-h2);
   text-align: center;
   font-weight: 300;
-  font-size: var(--e-font-size-h3);
-  line-height: var(--e-line-height-h3);
+  font-size: var(--o-font-size-h3);
+  line-height: var(--o-line-height-h3);
   @media screen and (max-width: 768px) {
-    font-size: var(--e-font-size-h5);
-    line-height: var(--e-line-height-h5);
-    margin: var(--e-spacing-h4) auto var(--e-spacing-h6);
+    font-size: var(--o-font-size-h5);
+    line-height: var(--o-line-height-h5);
+    margin: var(--o-spacing-h4) auto var(--o-spacing-h6);
   }
   a {
     display: none;

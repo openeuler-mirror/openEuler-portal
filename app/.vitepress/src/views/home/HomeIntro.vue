@@ -108,7 +108,7 @@ const jumpTo = (path: string) => {
 .home-intro {
   :deep(.el-collapse) {
     border: none;
-    background-color: var(--e-color-bg1);
+    background-color: var(--o-color-bg1);
   }
   .intro-container {
     @media screen and (max-width: 1100px) {
@@ -120,22 +120,22 @@ const jumpTo = (path: string) => {
   }
 
   h3 {
-    font-size: var(--e-font-size-h3);
+    font-size: var(--o-font-size-h3);
     font-weight: 300;
-    color: var(--e-color-text1);
-    line-height: var(--e-line-height-h3);
+    color: var(--o-color-text1);
+    line-height: var(--o-line-height-h3);
     width: 100%;
     text-align: center;
-    margin-top: var(--e-spacing-h1);
+    margin-top: var(--o-spacing-h1);
     @media (max-width: 768px) {
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
-      margin-top: var(--e-spacing-h2);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
+      margin-top: var(--o-spacing-h2);
     }
   }
 
   .intro-mobile {
-    margin-top: var(--e-spacing-h5);
+    margin-top: var(--o-spacing-h5);
     display: none;
     flex-flow: column;
     @media screen and (max-width: 1100px) {
@@ -153,7 +153,7 @@ const jumpTo = (path: string) => {
       :deep(.el-collapse-item__header) {
         position: relative;
         height: 100%;
-        padding: var(--e-spacing-h4);
+        padding: var(--o-spacing-h4);
         border: none !important;
         &.is-active {
           &::after {
@@ -169,10 +169,10 @@ const jumpTo = (path: string) => {
           height: 1px;
           width: calc((100% - 48px));
           transition: all 0.3s;
-          background-color: var(--e-color-border2);
+          background-color: var(--o-color-border2);
         }
         @media (max-width: 768px) {
-          padding: var(--e-spacing-h8);
+          padding: var(--o-spacing-h8);
           &::after {
             width: calc((100% - 16px));
           }
@@ -180,7 +180,7 @@ const jumpTo = (path: string) => {
       }
 
       :deep(.el-collapse-item__wrap) {
-        margin: var(--e-spacing-h5) 0;
+        margin: var(--o-spacing-h5) 0;
       }
     }
 
@@ -202,23 +202,23 @@ const jumpTo = (path: string) => {
 
     .intro-title-mobile {
       cursor: pointer;
-      font-size: var(--e-font-size-h5);
+      font-size: var(--o-font-size-h5);
       font-weight: 500;
-      color: var(--e-color-text1);
-      line-height: var(--e-line-height-h5);
+      color: var(--o-color-text1);
+      line-height: var(--o-line-height-h5);
       @media (max-width: 768px) {
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
       }
     }
 
     .intro-icon-mobile {
-      font-size: var(--e-font-size-h8);
-      color: var(--e-color-text4);
+      font-size: var(--o-font-size-h8);
+      color: var(--o-color-text4);
     }
   }
   .intro-pc {
-    margin-top: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
     display: block;
     @media screen and (max-width: 1100px) {
       display: none;
@@ -226,21 +226,21 @@ const jumpTo = (path: string) => {
 
     .intro-card-pc {
       :deep(.el-card__body) {
-        padding: var(--e-spacing-h1) var(--e-spacing-h1) var(--e-spacing-h2);
+        padding: var(--o-spacing-h1) var(--o-spacing-h1) var(--o-spacing-h2);
       }
     }
 
     .intro-content-pc {
       display: flex;
       flex-flow: row;
-      padding-bottom: var(--e-spacing-h2);
-      border-bottom: 1px solid var(--e-color-division1);
+      padding-bottom: var(--o-spacing-h2);
+      border-bottom: 1px solid var(--o-color-division1);
     }
 
     .intro-list-pc {
       display: flex;
       flex-flow: column;
-      margin-right: var(--e-spacing-h1);
+      margin-right: var(--o-spacing-h1);
       height: 300px;
       align-items: center;
 
@@ -261,21 +261,21 @@ const jumpTo = (path: string) => {
 
     .intro-title-pc {
       cursor: pointer;
-      font-size: var(--e-font-size-h5);
+      font-size: var(--o-font-size-h5);
       font-weight: 400;
       text-align: center;
-      color: var(--e-color-text1);
-      line-height: var(--e-line-height-h4);
-      border-bottom: 1px solid var(--e-color-division1);
-      padding: var(--e-spacing-h4) 0;
+      color: var(--o-color-text1);
+      line-height: var(--o-line-height-h4);
+      border-bottom: 1px solid var(--o-color-division1);
+      padding: var(--o-spacing-h4) 0;
       @media screen and (min-width: 1100px) {
         &:hover {
-          color: var(--e-color-brand1);
+          color: var(--o-color-brand1);
         }
       }
     }
     .active {
-      color: var(--e-color-brand1);
+      color: var(--o-color-brand1);
     }
     .intro-title-pc-en {
       width: 266px;
@@ -285,12 +285,12 @@ const jumpTo = (path: string) => {
     }
     .intro-button-pc {
       display: flex;
-      padding-top: var(--e-spacing-h2);
+      padding-top: var(--o-spacing-h2);
       justify-content: center;
       align-items: center;
       @media screen and (max-width: 1080px) {
         padding: 20px 0;
-        font-size: var(--e-font-size-tip);
+        font-size: var(--o-font-size-tip);
       }
 
       :deep(.o-button) {
@@ -298,9 +298,9 @@ const jumpTo = (path: string) => {
       }
 
       .intro-button-icon-pc {
-        color: var(--e-color-brand1);
-        width: var(--e-font-size-h8);
-        height: var(--e-font-size-h8);
+        color: var(--o-color-brand1);
+        width: var(--o-font-size-h8);
+        height: var(--o-font-size-h8);
       }
     }
   }
@@ -319,7 +319,7 @@ const jumpTo = (path: string) => {
   .el-collapse-item__header {
     position: relative;
     border-left: none;
-    border-bottom: 1px solid var(--e-color-division1);
+    border-bottom: 1px solid var(--o-color-division1);
   }
 }
 </style>

@@ -520,29 +520,29 @@ function convertMd(data: string) {
 @mixin title {
   text-align: center;
   position: relative;
-  font-size: var(--e-font-size-h3);
-  line-height: var(--e-line-height-h3);
-  color: var(--e-color-text1);
+  font-size: var(--o-font-size-h3);
+  line-height: var(--o-line-height-h3);
+  color: var(--o-color-text1);
   font-weight: 400;
   @media screen and (max-width: 768px) {
-    font-size: var(--e-font-size-h8);
-    line-height: var(--e-line-height-h8);
+    font-size: var(--o-font-size-h8);
+    line-height: var(--o-line-height-h8);
   }
 }
 @mixin floor-content {
-  margin-top: var(--e-spacing-h2);
-  background-color: var(--e-color-bg2);
-  padding: var(--e-spacing-h2);
-  box-shadow: var(--e-shadow-l1);
+  margin-top: var(--o-spacing-h2);
+  background-color: var(--o-color-bg2);
+  padding: var(--o-spacing-h2);
+  box-shadow: var(--o-shadow-l1);
   @media screen and (max-width: 768px) {
-    margin-top: var(--e-spacing-h5);
-    padding: var(--e-spacing-h5);
+    margin-top: var(--o-spacing-h5);
+    padding: var(--o-spacing-h5);
   }
 }
 @mixin floor-box {
-  margin-top: var(--e-spacing-h1);
+  margin-top: var(--o-spacing-h1);
   @media screen and (max-width: 768px) {
-    margin-top: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
   }
 }
 
@@ -551,59 +551,59 @@ function convertMd(data: string) {
 }
 .sig-detail {
   max-width: 1504px;
-  padding: var(--e-spacing-h2) var(--e-spacing-h2) var(--e-spacing-h1);
+  padding: var(--o-spacing-h2) var(--o-spacing-h2) var(--o-spacing-h1);
   margin: 0 auto;
   @media (max-width: 1100px) {
-    padding: 16px 16px var(--e-spacing-h2);
+    padding: 16px 16px var(--o-spacing-h2);
   }
   .content {
     width: 100%;
-    margin-top: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
     .sig-pagination {
-      margin-top: var(--e-spacing-h2);
+      margin-top: var(--o-spacing-h2);
       @media screen and (max-width: 768px) {
-        margin-top: var(--e-spacing-h5);
+        margin-top: var(--o-spacing-h5);
       }
     }
     .pagination-slot {
-      font-size: var(--e-font-size-text);
+      font-size: var(--o-font-size-text);
       font-weight: 400;
-      color: var(--e-color-text1);
-      line-height: var(--e-spacing-h4);
+      color: var(--o-color-text1);
+      line-height: var(--o-spacing-h4);
     }
     .brief-introduction {
       @include floor-content;
       .brief-introduction-title {
-        font-size: var(--e-font-size-h3);
-        line-height: var(--e-line-height-h3);
-        color: var(--e-color-text1);
+        font-size: var(--o-font-size-h3);
+        line-height: var(--o-line-height-h3);
+        color: var(--o-color-text1);
         font-weight: 300;
         display: flex;
         align-items: center;
         @media screen and (max-width: 768px) {
-          font-size: var(--e-font-size-h8);
-          line-height: var(--e-line-height-h8);
+          font-size: var(--o-font-size-h8);
+          line-height: var(--o-line-height-h8);
         }
         a {
-          margin-left: var(--e-spacing-h4);
-          font-size: var(--e-font-size-h5);
+          margin-left: var(--o-spacing-h4);
+          font-size: var(--o-font-size-h5);
           display: flex;
           align-items: center;
           @media screen and (max-width: 768px) {
-            margin-left: var(--e-spacing-h6);
-            font-size: var(--e-font-size-h8);
+            margin-left: var(--o-spacing-h6);
+            font-size: var(--o-font-size-h8);
           }
         }
       }
       .introduction-content {
-        margin-top: var(--e-spacing-h5);
-        font-size: var(--e-font-size-text);
+        margin-top: var(--o-spacing-h5);
+        font-size: var(--o-font-size-text);
         line-height: 22px;
-        color: var(--e-color-text3);
+        color: var(--o-color-text3);
         @media screen and (max-width: 768px) {
-          margin-top: var(--e-spacing-h6);
-          font-size: var(--e-font-size-tip);
-          line-height: var(--e-line-height-tip);
+          margin-top: var(--o-spacing-h6);
+          font-size: var(--o-font-size-tip);
+          line-height: var(--o-line-height-tip);
         }
       }
     }
@@ -619,7 +619,7 @@ function convertMd(data: string) {
     .meeting {
       @include floor-box;
       .no-meeting {
-        padding: var(--e-spacing-h5) 0;
+        padding: var(--o-spacing-h5) 0;
         text-align: center;
       }
       .floor-title {
@@ -630,7 +630,7 @@ function convertMd(data: string) {
         padding: 0;
       }
       .schedule {
-        margin-top: var(--e-spacing-h4);
+        margin-top: var(--o-spacing-h4);
         .calendar {
           width: 448px;
         }
@@ -639,25 +639,25 @@ function convertMd(data: string) {
 
     .member {
       @include floor-box;
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       .floor-title {
         @include title;
       }
       .member-box {
         @include floor-content;
         h5 {
-          font-size: var(--e-font-size-h6);
-          line-height: var(--e-line-height-h6);
+          font-size: var(--o-font-size-h6);
+          line-height: var(--o-line-height-h6);
           font-weight: 400;
-          color: var(--e-color-text1);
+          color: var(--o-color-text1);
           @media screen and (max-width: 768px) {
-            font-size: var(--e-font-size-h8);
-            line-height: var(--e-line-height-h8);
+            font-size: var(--o-font-size-h8);
+            line-height: var(--o-line-height-h8);
           }
         }
         ul {
-          margin-top: var(--e-spacing-h2);
-          padding: 0 var(--e-spacing-h7);
+          margin-top: var(--o-spacing-h2);
+          padding: 0 var(--o-spacing-h7);
           display: flex;
           justify-content: start;
           flex-wrap: wrap;
@@ -668,18 +668,18 @@ function convertMd(data: string) {
             .icon-link {
               display: flex;
               justify-content: center;
-              margin-top: var(--e-spacing-h8);
-              font-size: var(--e-font-size-h5);
+              margin-top: var(--o-spacing-h8);
+              font-size: var(--o-font-size-h5);
               a {
-                margin: 0 var(--e-spacing-h8);
+                margin: 0 var(--o-spacing-h8);
               }
             }
             @media (max-width: 1080px) {
               flex: 0 0 50%;
               .icon-link {
-                font-size: var(--e-font-size-h7);
+                font-size: var(--o-font-size-h7);
                 a {
-                  margin: 0 var(--e-spacing-h9);
+                  margin: 0 var(--o-spacing-h9);
                 }
               }
             }
@@ -696,13 +696,13 @@ function convertMd(data: string) {
             }
 
             .name {
-              margin-top: var(--e-spacing-h5);
-              font-size: var(--e-font-size-h8);
-              line-height: var(--e-line-height-h8);
+              margin-top: var(--o-spacing-h5);
+              font-size: var(--o-font-size-h8);
+              line-height: var(--o-line-height-h8);
             }
             .introduction {
-              font-size: var(--e-font-size-tip);
-              line-height: var(--e-line-height-tip);
+              font-size: var(--o-font-size-tip);
+              line-height: var(--o-line-height-tip);
             }
           }
         }
@@ -710,25 +710,25 @@ function convertMd(data: string) {
     }
     .repository {
       @include floor-box;
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       .floor-title {
         @include title;
       }
       .repository-box {
         @include floor-content;
         h5 {
-          font-size: var(--e-font-size-h6);
+          font-size: var(--o-font-size-h6);
           font-weight: 400;
-          color: var(--e-color-text1);
+          color: var(--o-color-text1);
         }
       }
 
       a {
         cursor: pointer;
-        color: var(--e-color-brand1);
+        color: var(--o-color-brand1);
       }
       .repository-filter {
-        margin: var(--e-spacing-h4) 0;
+        margin: var(--o-spacing-h4) 0;
         .select-box {
           display: flex;
           justify-items: center;
@@ -737,14 +737,14 @@ function convertMd(data: string) {
             display: flex;
             align-items: center;
             &-name {
-              margin-right: var(--e-spacing-h5);
+              margin-right: var(--o-spacing-h5);
             }
-            margin-right: var(--e-spacing-h1);
+            margin-right: var(--o-spacing-h1);
             .el-input__prefix-inner {
               .o-icon {
-                font-size: var(--e-font-size-h7);
+                font-size: var(--o-font-size-h7);
                 @media screen and (max-width: 768px) {
-                  font-size: var(--e-font-size-h8);
+                  font-size: var(--o-font-size-h8);
                 }
               }
             }
@@ -752,26 +752,26 @@ function convertMd(data: string) {
         }
         .select-box-phone {
           .select-item {
-            font-size: var(--e-font-size-text);
+            font-size: var(--o-font-size-text);
             display: flex;
             align-items: center;
             justify-content: space-between;
           }
           .split-line {
             height: 1px;
-            margin: var(--e-spacing-h6) 0;
-            background-color: var(--e-color-border2);
+            margin: var(--o-spacing-h6) 0;
+            background-color: var(--o-color-border2);
           }
         }
       }
       @media screen and (min-width: 857px) {
         .repository-pagin {
-          margin-top: var(--e-spacing-h2);
+          margin-top: var(--o-spacing-h2);
         }
       }
       @media screen and (max-width: 857px) {
         .repository-pagin {
-          margin-top: var(--e-spacing-h5);
+          margin-top: var(--o-spacing-h5);
         }
       }
       @media screen and (max-width: 768px) {
@@ -780,19 +780,19 @@ function convertMd(data: string) {
     }
     .contribution {
       @include floor-box;
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       .floor-title {
         @include title;
       }
       .contribution-box {
         @include floor-content;
         h5 {
-          font-size: var(--e-font-size-h6);
+          font-size: var(--o-font-size-h6);
           font-weight: 400;
-          color: var(--e-color-text1);
+          color: var(--o-color-text1);
         }
         .contribution-content {
-          margin: var(--e-spacing-h4) 0;
+          margin: var(--o-spacing-h4) 0;
         }
       }
       @media screen and (max-width: 768px) {

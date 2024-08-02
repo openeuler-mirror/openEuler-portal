@@ -219,16 +219,16 @@ function handleFamaleClick() {
 
 <style lang="scss" scoped>
 .black {
-  background-color: var(--e-color-black) !important;
+  background-color: var(--o-color-black) !important;
 }
 .button-group {
   display: grid;
   width: 100%;
-  margin-top: var(--e-spacing-h5);
+  margin-top: var(--o-spacing-h5);
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: var(--e-spacing-h8);
+  grid-gap: var(--o-spacing-h8);
   a {
     width: 100%;
     display: flex;
@@ -238,12 +238,12 @@ function handleFamaleClick() {
   }
 
   .button-item {
-    // padding: var(--e-spacing-h10) 0;
+    // padding: var(--o-spacing-h10) 0;
     max-width: 70px;
     // width: 100%;
-    // font-size: var(--e-font-size-text);
+    // font-size: var(--o-font-size-text);
     // font-weight: 400;
-    // line-height: var(--e-line-height-text);
+    // line-height: var(--o-line-height-text);
     // display: flex;
     // flex-flow: row;
     // justify-content: center;
@@ -253,50 +253,50 @@ function handleFamaleClick() {
     }
   }
   .button-item:hover {
-    background-color: var(--e-color-brand1);
-    color: var(--e-color-text2);
+    background-color: var(--o-color-brand1);
+    color: var(--o-color-text2);
   }
 }
 .brand {
-  margin: var(--e-spacing-h1) auto;
-  padding: 0 var(--e-spacing-h2);
+  margin: var(--o-spacing-h1) auto;
+  padding: 0 var(--o-spacing-h2);
   max-width: 1504px;
   @media (max-width: 1100px) {
-    padding: 0 var(--e-spacing-h5);
-    margin: var(--e-spacing-h2) auto;
+    padding: 0 var(--o-spacing-h5);
+    margin: var(--o-spacing-h2) auto;
   }
   .brand-pronunciation {
     margin-top: 40px;
     padding: 24px;
-    background-color: var(--e-color-bg2);
-    box-shadow: var(--e-shadow-l2);
+    background-color: var(--o-color-bg2);
+    box-shadow: var(--o-shadow-l2);
     display: flex;
     @media (max-width: 768px) {
       padding: 16px 12px;
       margin-top: 16px;
     }
     .brand-name {
-      font-size: var(--e-font-size-h7);
-      line-height: var(--e-line-height-h7);
+      font-size: var(--o-font-size-h7);
+      line-height: var(--o-line-height-h7);
       font-weight: 400;
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       margin-right: 20px;
       @media (max-width: 768px) {
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
         font-weight: 500;
         margin-right: 12px;
       }
     }
     .phonetic-transcription {
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h7);
-      color: var(--e-color-text1);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h7);
+      color: var(--o-color-text1);
       font-weight: 400;
       margin-right: 32px;
       @media (max-width: 768px) {
-        font-size: var(--e-font-size-tip);
-        line-height: var(--e-line-height-text);
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-text);
         margin-right: 24px;
       }
     }
@@ -308,27 +308,27 @@ function handleFamaleClick() {
         margin-right: 16px;
       }
       .gender-box-item {
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-height-h7);
-        color: var(--e-color-text1);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h7);
+        color: var(--o-color-text1);
         font-weight: 400;
-        margin-right: var(--e-spacing-h10);
+        margin-right: var(--o-spacing-h10);
         @media (max-width: 768px) {
-          font-size: var(--e-font-size-tip);
-          line-height: var(--e-line-height-text);
+          font-size: var(--o-font-size-tip);
+          line-height: var(--o-line-height-text);
         }
       }
       .o-icon {
         font-size: 16px;
-        color: var(--e-color-text1);
+        color: var(--o-color-text1);
         cursor: pointer;
         @media (max-width: 768px) {
           font-size: 12px;
         }
         &:hover {
-          color: var(--e-color-brand1);
+          color: var(--o-color-brand1);
           @media (max-width: 768px) {
-            color: var(--e-color-text1);
+            color: var(--o-color-text1);
           }
         }
       }
@@ -341,62 +341,62 @@ function handleFamaleClick() {
     }
   }
   .brand-title {
-    font-size: var(--e-font-size-h3);
+    font-size: var(--o-font-size-h3);
     font-weight: 300;
-    color: var(--e-color-text1);
-    line-height: var(--e-line-height-h3);
+    color: var(--o-color-text1);
+    line-height: var(--o-line-height-h3);
     width: 100%;
     text-align: center;
     @media (max-width: 768px) {
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
     }
   }
 
   .brand-faq {
-    font-size: var(--e-font-size-h7);
+    font-size: var(--o-font-size-h7);
     font-weight: 500;
-    color: var(--e-color-text1);
-    line-height: var(--e-line-height-h7);
-    margin-top: var(--e-spacing-h10);
+    color: var(--o-color-text1);
+    line-height: var(--o-line-height-h7);
+    margin-top: var(--o-spacing-h10);
     a {
-      color: var(--e-color-brand1);
+      color: var(--o-color-brand1);
     }
     @media (max-width: 768px) {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
-      margin-top: var(--e-spacing-h5);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
+      margin-top: var(--o-spacing-h5);
     }
   }
 
   .brand-other-word {
-    margin-top: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
   }
 
   .brand-word {
-    font-size: var(--e-font-size-h7);
+    font-size: var(--o-font-size-h7);
     font-weight: 300;
-    color: var(--e-color-text1);
-    line-height: var(--e-line-height-h7);
-    margin-top: var(--e-spacing-h10);
+    color: var(--o-color-text1);
+    line-height: var(--o-line-height-h7);
+    margin-top: var(--o-spacing-h10);
     a {
-      color: var(--e-color-brand1);
+      color: var(--o-color-brand1);
     }
     @media (max-width: 768px) {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
-      margin-top: var(--e-spacing-h5);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
+      margin-top: var(--o-spacing-h5);
     }
   }
 
   .brand-list {
     display: grid;
     width: 100%;
-    margin-top: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: var(--e-spacing-h4);
+    grid-gap: var(--o-spacing-h4);
   }
 
   .brand-item {
@@ -405,31 +405,31 @@ function handleFamaleClick() {
     @media (max-width: 768px) {
     }
     :deep(.el-card__body) {
-      padding: var(--e-spacing-h4);
+      padding: var(--o-spacing-h4);
       @media (max-width: 768px) {
-        padding: var(--e-spacing-h5) var(--e-spacing-h6);
+        padding: var(--o-spacing-h5) var(--o-spacing-h6);
       }
     }
 
     &-title {
-      font-size: var(--e-font-size-h7);
+      font-size: var(--o-font-size-h7);
       font-weight: 400;
-      color: var(--e-color-text1);
-      line-height: var(--e-line-height-h7);
-      margin-top: var(--e-spacing-h10);
+      color: var(--o-color-text1);
+      line-height: var(--o-line-height-h7);
+      margin-top: var(--o-spacing-h10);
       @media (max-width: 768px) {
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
       }
     }
     &-img {
       height: 120px;
       width: 100%;
-      margin-top: var(--e-spacing-h5);
+      margin-top: var(--o-spacing-h5);
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: var(--e-color-white);
+      background-color: var(--o-color-white);
       img {
         object-fit: contain;
         height: 50%;
@@ -445,32 +445,32 @@ function handleFamaleClick() {
   }
 
   .brand-ppt {
-    margin-top: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
     width: 100%;
 
     h3 {
-      font-size: var(--e-font-size-h3);
+      font-size: var(--o-font-size-h3);
       font-weight: 300;
-      color: var(--e-color-text1);
-      line-height: var(--e-line-height-h3);
+      color: var(--o-color-text1);
+      line-height: var(--o-line-height-h3);
       width: 100%;
       text-align: center;
       @media (max-width: 768px) {
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-height-h8);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h8);
       }
     }
     .ppt-list {
       display: grid;
       width: 100%;
-      margin-top: var(--e-spacing-h2);
+      margin-top: var(--o-spacing-h2);
       justify-items: center;
       align-items: center;
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: var(--e-spacing-h4);
+      grid-gap: var(--o-spacing-h4);
       @media (max-width: 768px) {
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-height-h8);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h8);
       }
       .ppt-item {
         width: 100%;
@@ -481,14 +481,14 @@ function handleFamaleClick() {
             width: 100%;
           }
           .ppt-word {
-            padding: var(--e-spacing-h4);
-            color: var(--e-color-text1);
-            font-size: var(--e-font-size-h7);
-            line-height: var(--e-line-height-h7);
+            padding: var(--o-spacing-h4);
+            color: var(--o-color-text1);
+            font-size: var(--o-font-size-h7);
+            line-height: var(--o-line-height-h7);
             @media (max-width: 768px) {
-              padding: var(--e-spacing-h6);
-              font-size: var(--e-font-size-text);
-              line-height: var(--e-line-height-text);
+              padding: var(--o-spacing-h6);
+              font-size: var(--o-font-size-text);
+              line-height: var(--o-line-height-text);
               font-weight: 500;
             }
           }

@@ -64,9 +64,9 @@ const infraI18n = computed(() => {
 
 <style scoped lang="scss">
 .word-style {
-  color: var(--e-color-text1);
-  font-size: var(--e-font-size-h8);
-  line-height: var(--e-line-height-h8);
+  color: var(--o-color-text1);
+  font-size: var(--o-font-size-h8);
+  line-height: var(--o-line-height-h8);
 }
 .infra {
   .infra-container {
@@ -80,34 +80,34 @@ const infraI18n = computed(() => {
     }
 
     h3 {
-      line-height: var(--e-line-height-h5);
-      font-size: var(--e-font-size-h5);
+      line-height: var(--o-line-height-h5);
+      font-size: var(--o-font-size-h5);
     }
 
     .o-button {
       margin-left: 50px;
       max-height: 40px;
       white-space: nowrap;
-      color: var(--e-color-white);
+      color: var(--o-color-white);
       @media screen and (max-width: 768px) {
         margin-left: 0;
         margin-top: 12px;
         padding: 4px 16px;
-        font-size: var(--e-font-size-text);
+        font-size: var(--o-font-size-text);
       }
     }
     .infra-container-introduction {
-      color: var(--e-color-text4);
+      color: var(--o-color-text4);
       margin-top: 16px;
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
     }
     @media screen and (max-width: 768px) {
       margin-top: 24px;
       padding: 16px;
       h3 {
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-height-h8);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h8);
       }
       .infra-container-introduction {
         margin-top: 8px;
@@ -117,9 +117,9 @@ const infraI18n = computed(() => {
   .contribution {
     margin-top: 40px;
     .contribution-title {
-      color: var(--e-color-text4);
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      color: var(--o-color-text4);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
     }
     .contribution-list {
       margin-top: 24px;
@@ -132,7 +132,7 @@ const infraI18n = computed(() => {
         display: flex;
         max-width: 354px;
         margin: 0px -1px -1px 0px;
-        border: 1px solid var(--e-color-division1);
+        border: 1px solid var(--o-color-division1);
         img {
           width: 100%;
         }
@@ -140,8 +140,8 @@ const infraI18n = computed(() => {
     }
     .tip {
       margin-top: 24px;
-      font-size: var(--e-font-size-tip);
-      color: var(--e-color-text1);
+      font-size: var(--o-font-size-tip);
+      color: var(--o-color-text1);
 
       @media screen and (max-width: 768px) {
         margin-top: 12px;

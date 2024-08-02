@@ -60,11 +60,11 @@ const jumpTo = (path: string) => {
   .task-introduce {
     font-size: 20px;
     line-height: 40px;
-    color: var(--e-color-text4);
+    color: var(--o-color-text4);
     @media (max-width: 1000px) {
       text-align: left;
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
     }
   }
   .item-box {
@@ -92,33 +92,33 @@ const jumpTo = (path: string) => {
         min-height: 160px;
         .item-intriduce {
           width: 100%;
-          font-size: var(--e-font-size-tip);
-          line-height: var(--e-line-height-tip);
+          font-size: var(--o-font-size-tip);
+          line-height: var(--o-line-height-tip);
           margin-bottom: 0;
         }
         .button-box {
           justify-content: inherit;
           gap: 16px;
           position: absolute;
-          bottom: var(--e-spacing-h5);
-          left: var(--e-spacing-h5);
+          bottom: var(--o-spacing-h5);
+          left: var(--o-spacing-h5);
         }
       }
     }
     .item {
       padding: 40px;
-      background-color: var(--e-color-bg2);
-      box-shadow: var(--e-shadow-l2);
+      background-color: var(--o-color-bg2);
+      box-shadow: var(--o-shadow-l2);
       transition: box-shadow 0.1s;
       min-height: 180px;
       .item-name {
-        color: var(--e-color-brand1);
+        color: var(--o-color-brand1);
         font-size: 20px;
         font-weight: 600;
         cursor: pointer;
         @media (max-width: 1000px) {
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
         }
       }
       .item-intriduce {
@@ -132,7 +132,7 @@ const jumpTo = (path: string) => {
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
-        color: var(--e-color-text4);
+        color: var(--o-color-text4);
       }
       .more {
         font-size: 20px;
@@ -152,18 +152,18 @@ const jumpTo = (path: string) => {
           height: auto;
           margin-right: 24px;
           white-space: nowrap span {
-            color: var(--e-color-brand1);
+            color: var(--o-color-brand1);
           }
           &:nth-of-type(2) {
             margin-right: 0;
           }
           @media (max-width: 1000px) {
             padding: 3px 16px;
-            font-size: var(--e-font-size-tip);
+            font-size: var(--o-font-size-tip);
             margin-right: 0;
           }
           .o-icon {
-            color: var(--e-color-brand1);
+            color: var(--o-color-brand1);
             margin-left: 8px;
             transition: all 0.3s;
           }
@@ -184,26 +184,26 @@ const jumpTo = (path: string) => {
         .sig-detail {
           &:hover {
             @media screen and (min-width: 1100px) {
-              border: 1px solid var(--e-color-brand1);
+              border: 1px solid var(--o-color-brand1);
               span {
-                color: var(--e-color-brand1);
+                color: var(--o-color-brand1);
               }
             }
           }
         }
         .o-button--text {
-          color: var(--e-color-text1);
+          color: var(--o-color-text1);
           padding: 8px 12px !important;
           height: auto;
           &:hover {
             @media screen and (min-width: 1100px) {
               .o-icon {
-                color: var(--e-color-brand2);
+                color: var(--o-color-brand2);
               }
             }
           }
           .o-icon {
-            color: var(--e-color-brand1);
+            color: var(--o-color-brand1);
           }
         }
       }
@@ -211,7 +211,7 @@ const jumpTo = (path: string) => {
 
     .item:hover {
       @media screen and (min-width: 1100px) {
-        box-shadow: var(--e-shadow-l2_hover);
+        box-shadow: var(--o-shadow-l2_hover);
       }
     }
   }

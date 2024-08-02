@@ -18,19 +18,19 @@ const attrs = useAttrs();
 
 <style scope lang="scss">
 .el-dialog {
-  --e-dialog-font-color: var(--e-color-text1);
-  --e-dialog-bg-color: var(--e-color-bg2);
-  --e-dialog-division-color: var(--e-color-division1);
-  color: var(--e-dialog-font-color);
+  --o-dialog-font-color: var(--o-color-text1);
+  --o-dialog-bg-color: var(--o-color-bg2);
+  --o-dialog-division-color: var(--o-color-division1);
+  color: var(--o-dialog-font-color);
   border-radius: 0;
-  background-color: var(--e-dialog-bg-color);
+  background-color: var(--o-dialog-bg-color);
   transition: none;
   border: none;
   .el-dialog__header {
     padding: 62px 40px 24px 40px;
     margin: 0;
-    font-size: var(--e-font-size-h3);
-    line-height: var(--e-line-height-h3);
+    font-size: var(--o-font-size-h3);
+    line-height: var(--o-line-height-h3);
   }
   .el-dialog__body {
     padding: 16px 62px;

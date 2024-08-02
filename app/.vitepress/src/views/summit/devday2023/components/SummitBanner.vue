@@ -93,11 +93,11 @@ onMounted(() => {
           @media (max-width: 768px) {
             padding: 6px 16px;
             margin-top: 21px;
-            font-size: var(--e-font-size-text);
-            line-height: var(--e-line-height-text);
+            font-size: var(--o-font-size-text);
+            line-height: var(--o-line-height-text);
             .o-icon {
-              font-size: var(--e-font-size-tip);
-              line-height: var(--e-line-height-tip);
+              font-size: var(--o-font-size-tip);
+              line-height: var(--o-line-height-tip);
               display: flex;
               align-items: center;
             }
@@ -141,11 +141,11 @@ onMounted(() => {
           @media (max-width: 768px) {
             padding: 6px 16px;
             margin-top: 21px;
-            font-size: var(--e-font-size-text);
-            line-height: var(--e-line-height-text);
+            font-size: var(--o-font-size-text);
+            line-height: var(--o-line-height-text);
             .o-icon {
-              font-size: var(--e-font-size-tip);
-              line-height: var(--e-line-height-tip);
+              font-size: var(--o-font-size-tip);
+              line-height: var(--o-line-height-tip);
               display: flex;
               align-items: center;
             }
@@ -166,48 +166,48 @@ onMounted(() => {
       text-align: center;
     }
     h4 {
-      font-size: var(--e-font-size-h4);
-      line-height: var(--e-line-height-h4);
+      font-size: var(--o-font-size-h4);
+      line-height: var(--o-line-height-h4);
       font-weight: normal;
       @media (max-width: 767px) {
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-hight-h8);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-hight-h8);
       }
     }
     h2 {
       font-size: 40px;
-      line-height: var(--e-line-height-h3);
+      line-height: var(--o-line-height-h3);
       font-weight: normal;
-      margin-top: var(--e-spacing-h5);
+      margin-top: var(--o-spacing-h5);
       @media (max-width: 767px) {
-        margin-top: var(--e-spacing-h8);
-        font-size: var(--e-font-size-h7);
-        line-height: var(--e-line-height-h7);
+        margin-top: var(--o-spacing-h8);
+        font-size: var(--o-font-size-h7);
+        line-height: var(--o-line-height-h7);
       }
     }
     h3 {
       margin-top: 32px;
-      font-size: var(--e-font-size-h5);
-      line-height: var(--e-line-height-h5);
+      font-size: var(--o-font-size-h5);
+      line-height: var(--o-line-height-h5);
       font-weight: normal;
       @media (max-width: 767px) {
         margin-top: 16px;
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
       }
     }
     .banner-btn {
       margin-top: 32px;
-      color: var(--e-color-black);
-      border: 1px solid var(--e-color-black);
+      color: var(--o-color-black);
+      border: 1px solid var(--o-color-black);
       @media (max-width: 768px) {
         padding: 6px 16px;
         margin-top: 21px;
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
+        font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
         .o-icon {
-          font-size: var(--e-font-size-tip);
-          line-height: var(--e-line-height-tip);
+          font-size: var(--o-font-size-tip);
+          line-height: var(--o-line-height-tip);
           display: flex;
           align-items: center;
         }

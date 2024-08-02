@@ -113,7 +113,7 @@ const doValidatorForm = (
 <style lang="scss" scoped>
 .header {
   text-align: center;
-  color: var(--e-color-text1);
+  color: var(--o-color-text1);
 }
 .form {
   padding-top: 16px;
@@ -121,12 +121,12 @@ const doValidatorForm = (
 .footer {
   display: flex;
   justify-content: center;
-  column-gap: var(--e-spacing-h5);
+  column-gap: var(--o-spacing-h5);
 }
 .checkbox {
-  color: var(--e-color-text1);
-  font-size: var(--e-font-size-text);
-  line-height: var(--e-line-height-text);
+  color: var(--o-color-text1);
+  font-size: var(--o-font-size-text);
+  line-height: var(--o-line-height-text);
   .o-checkbox-group {
     padding-top: 3px;
   }
@@ -139,7 +139,7 @@ const doValidatorForm = (
 }
 .dialog {
   :deep(.is-draggable) {
-    background-color: var(--e-color-fill2);
+    background-color: var(--o-color-fill2);
   }
 }
 </style>

@@ -26,44 +26,44 @@ const caseInfo = computed(() => {
 
 <style lang="scss" scoped>
 .migration-transplantation {
-  margin-top: var(--e-spacing-h2);
-  color: var(--e-color-text1);
+  margin-top: var(--o-spacing-h2);
+  color: var(--o-color-text1);
 
   .migration-transplantation-desc {
-    color: var(--e-color-text1);
-    font-size: var(--e-font-size-text);
-    line-height: var(--e-line-height-text);
+    color: var(--o-color-text1);
+    font-size: var(--o-font-size-text);
+    line-height: var(--o-line-height-text);
     font-weight: 300;
     margin-top: 0;
-    margin-bottom: var(--e-spacing-h2);
+    margin-bottom: var(--o-spacing-h2);
     @media screen and (max-width: 768px) {
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
-      margin-bottom: var(--e-spacing-h4);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
+      margin-bottom: var(--o-spacing-h4);
     }
   }
   .migration-contribution {
-    margin-top: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
   }
 
   h1 {
     font-weight: 300;
     text-align: center;
-    margin-bottom: var(--e-spacing-h2);
-    font-size: var(--e-font-size-h3);
-    line-height: var(--e-line-height-h3);
+    margin-bottom: var(--o-spacing-h2);
+    font-size: var(--o-font-size-h3);
+    line-height: var(--o-line-height-h3);
     @media screen and (max-width: 768px) {
-      margin: 0 0 var(--e-spacing-h4);
-      font-size: var(--e-font-size-h7);
-      line-height: var(--e-line-height-h7);
+      margin: 0 0 var(--o-spacing-h4);
+      font-size: var(--o-font-size-h7);
+      line-height: var(--o-line-height-h7);
     }
   }
 
   .migration-transplantation-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: var(--e-spacing-h4);
-    column-gap: var(--e-spacing-h4);
+    row-gap: var(--o-spacing-h4);
+    column-gap: var(--o-spacing-h4);
 
     @media screen and (max-width: 1280px) {
       grid-template-columns: repeat(2, 1fr);
@@ -79,24 +79,24 @@ const caseInfo = computed(() => {
 
     .migration-transplantation-card {
       position: relative;
-      background-color: var(--e-color-bg2);
-      border: 1px solid var(--e-color-brand1);
+      background-color: var(--o-color-bg2);
+      border: 1px solid var(--o-color-brand1);
       padding: 16px 18px;
-      font-size: var(--e-font-size-h7);
-      line-height: var(--e-font-size-h7);
+      font-size: var(--o-font-size-h7);
+      line-height: var(--o-font-size-h7);
       font-weight: 500;
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       cursor: pointer;
 
       @media screen and (max-width: 768px) {
-        background-color: var(--e-color-brand1);
-        color: var(--e-color-text2);
+        background-color: var(--o-color-brand1);
+        color: var(--o-color-text2);
         text-align: center;
         padding: 3px 0;
-        font-size: var(--e-font-size-text);
+        font-size: var(--o-font-size-text);
         font-weight: 400;
         color: #ffffff;
-        line-height: var(--e-line-height-text);
+        line-height: var(--o-line-height-text);
       }
       &::before {
         position: absolute;
@@ -105,11 +105,11 @@ const caseInfo = computed(() => {
         top: -1px;
         bottom: 0;
         width: 2px;
-        background-color: var(--e-color-brand1);
+        background-color: var(--o-color-brand1);
       }
 
       &:hover {
-        box-shadow: var(--e-shadow-l2_hover);
+        box-shadow: var(--o-shadow-l2_hover);
       }
     }
   }

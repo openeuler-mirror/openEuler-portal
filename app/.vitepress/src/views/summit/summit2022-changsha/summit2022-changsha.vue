@@ -179,10 +179,10 @@ const scheduleList = [
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: var(--e-spacing-h2);
+  margin-top: var(--o-spacing-h2);
   @media (max-width: 768px) {
     height: 38px;
-    margin-top: var(--e-spacing-h5);
+    margin-top: var(--o-spacing-h5);
   }
 }
 .banner-box {
@@ -209,24 +209,24 @@ const scheduleList = [
     position: absolute;
     top: 0;
     left: 50%;
-    padding: 0 var(--e-spacing-h2);
+    padding: 0 var(--o-spacing-h2);
     transform: translateX(-50%);
     max-width: 1504px;
     width: 100%;
     height: 100%;
     .home-banner-btn {
       position: absolute;
-      bottom: var(--e-spacing-h2);
+      bottom: var(--o-spacing-h2);
       border-color: #fff;
       color: #fff;
     }
     @media (max-width: 1440px) {
-      padding: 0 var(--e-spacing-h4);
+      padding: 0 var(--o-spacing-h4);
     }
     @media (max-width: 1080px) {
-      padding: 0 var(--e-spacing-h5);
+      padding: 0 var(--o-spacing-h5);
       .home-banner-btn {
-        bottom: var(--e-spacing-h5);
+        bottom: var(--o-spacing-h5);
         padding: 4px 12px 4px 16px;
         line-height: 22px;
         font-size: 14px;
@@ -237,7 +237,7 @@ const scheduleList = [
     }
     @media (max-width: 768px) {
       .home-banner-btn {
-        bottom: var(--e-spacing-h8);
+        bottom: var(--o-spacing-h8);
       }
     }
     @media screen and (max-width: 768px) {
@@ -261,21 +261,21 @@ const scheduleList = [
 .middle {
   &-top {
     margin: 0 auto;
-    background-color: var(--e-color-bg2);
-    margin-bottom: var(--e-spacing-h2);
-    padding-bottom: var(--e-spacing-h1);
-    box-shadow: var(--e-shadow-l1);
+    background-color: var(--o-color-bg2);
+    margin-bottom: var(--o-spacing-h2);
+    padding-bottom: var(--o-spacing-h1);
+    box-shadow: var(--o-shadow-l1);
     @media (max-width: 768px) {
-      padding-bottom: var(--e-spacing-h5);
+      padding-bottom: var(--o-spacing-h5);
     }
     &-context {
-      margin-top: var(--e-spacing-h2);
+      margin-top: var(--o-spacing-h2);
       padding: 0px 80px;
       @media (max-width: 1080px) {
-        padding: 0px var(--e-spacing-h3);
+        padding: 0px var(--o-spacing-h3);
       }
       :deep(.el-table tbody tr:hover > td) {
-        background-color: var(--e-color-bg2) !important;
+        background-color: var(--o-color-bg2) !important;
       }
       :deep(.el-table__inner-wrapper::before) {
         width: 0px;
@@ -293,70 +293,70 @@ const scheduleList = [
         .clock {
           height: 24px;
           width: 24px;
-          margin-right: var(--e-spacing-h8);
+          margin-right: var(--o-spacing-h8);
         }
         p {
           font-weight: normal;
-          color: var(--e-color-text4);
-          font-size: var(--e-font-size-h6);
-          line-height: var(--e-line-height-h6);
+          color: var(--o-color-text4);
+          font-size: var(--o-font-size-h6);
+          line-height: var(--o-line-height-h6);
         }
       }
       .agenda {
-        font-size: var(--e-font-size-h6);
+        font-size: var(--o-font-size-h6);
         font-weight: normal;
-        color: var(--e-color-text1);
-        line-height: var(--e-line-height-h6);
+        color: var(--o-color-text1);
+        line-height: var(--o-line-height-h6);
       }
       .guests {
-        font-size: var(--e-font-size-h6);
+        font-size: var(--o-font-size-h6);
         font-weight: normal;
-        color: var(--e-color-text1);
-        line-height: var(--e-line-height-h6);
+        color: var(--o-color-text1);
+        line-height: var(--o-line-height-h6);
       }
       .title {
-        font-size: var(--e-font-size-h8);
+        font-size: var(--o-font-size-h8);
         font-weight: normal;
-        color: var(--e-color-text4);
-        line-height: var(--e-line-height-h8);
+        color: var(--o-color-text4);
+        line-height: var(--o-line-height-h8);
       }
     }
     .mo-context {
-      margin-top: var(--e-spacing-h6);
-      padding: 0 var(--e-spacing-h5);
+      margin-top: var(--o-spacing-h6);
+      padding: 0 var(--o-spacing-h5);
       :deep(.el-timeline-item__timestamp) {
-        color: var(--e-color-brand1);
-        font-size: var(--e-font-size-tip);
+        color: var(--o-color-brand1);
+        font-size: var(--o-font-size-tip);
         font-weight: 400;
-        line-height: var(--e-line-height-tip);
+        line-height: var(--o-line-height-tip);
       }
       :deep(.el-timeline-item__node) {
-        background-color: var(--e-color-brand1);
+        background-color: var(--o-color-brand1);
       }
       :deep(.el-timeline-item__tail) {
-        border-left: 2px dashed var(--e-color-brand1);
+        border-left: 2px dashed var(--o-color-brand1);
       }
       :deep(.el-timeline-item__wrapper) {
-        padding-left: var(--e-spacing-h5);
+        padding-left: var(--o-spacing-h5);
       }
       :deep(.el-timeline-item__timestamp) {
         margin-bottom: 0px;
       }
       &-item {
         .agenda {
-          padding-top: var(--e-spacing-h8);
-          font-size: var(--e-font-size-tip);
+          padding-top: var(--o-spacing-h8);
+          font-size: var(--o-font-size-tip);
           font-weight: 400;
-          color: var(--e-color-text1);
-          line-height: var(--e-line-height-tip);
+          color: var(--o-color-text1);
+          line-height: var(--o-line-height-tip);
         }
         .context-box {
-          margin-top: var(--e-spacing-h8);
+          margin-top: var(--o-spacing-h8);
           display: flex;
-          font-size: var(--e-font-size-tip);
+          font-size: var(--o-font-size-tip);
           font-weight: 400;
-          color: var(--e-color-text4);
-          line-height: var(--e-line-height-tip);
+          color: var(--o-color-text4);
+          line-height: var(--o-line-height-tip);
           .guests {
             width: 100px;
           }
@@ -366,48 +366,48 @@ const scheduleList = [
   }
   &-bottom {
     margin: 0 auto;
-    background-color: var(--e-color-bg2);
-    box-shadow: var(--e-shadow-l1);
+    background-color: var(--o-color-bg2);
+    box-shadow: var(--o-shadow-l1);
     &-context {
       padding: 0px 80px;
-      margin-top: var(--e-spacing-h2);
-      padding-bottom: var(--e-spacing-h2);
+      margin-top: var(--o-spacing-h2);
+      padding-bottom: var(--o-spacing-h2);
       @media (max-width: 1080px) {
-        padding: 0px var(--e-spacing-h3);
+        padding: 0px var(--o-spacing-h3);
       }
       @media (max-width: 768px) {
-        padding: 0px var(--e-spacing-h5);
-        margin-top: var(--e-spacing-h6);
+        padding: 0px var(--o-spacing-h5);
+        margin-top: var(--o-spacing-h6);
       }
       .title {
-        color: var(--e-color-text1);
-        font-size: var(--e-font-size-h5);
-        line-height: var(--e-line-height-h5);
-        margin-bottom: var(--e-spacing-h4);
+        color: var(--o-color-text1);
+        font-size: var(--o-font-size-h5);
+        line-height: var(--o-line-height-h5);
+        margin-bottom: var(--o-spacing-h4);
         font-weight: 500;
         @media (max-width: 768px) {
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
-          margin-bottom: var(--e-spacing-h8);
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
+          margin-bottom: var(--o-spacing-h8);
         }
       }
       .details {
-        color: var(--e-color-text4);
-        font-size: var(--e-font-size-h8);
-        line-height: var(--e-line-height-h8);
-        margin-bottom: var(--e-spacing-h3);
+        color: var(--o-color-text4);
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h8);
+        margin-bottom: var(--o-spacing-h3);
         font-weight: normal;
         @media (max-width: 768px) {
-          font-size: var(--e-font-size-tip);
-          line-height: var(--e-line-height-tip);
-          margin-bottom: var(--e-spacing-h6);
+          font-size: var(--o-font-size-tip);
+          line-height: var(--o-line-height-tip);
+          margin-bottom: var(--o-spacing-h6);
         }
       }
       .last-details {
         margin-bottom: 0px;
         padding-bottom: 0px;
         @media (max-width: 768px) {
-          padding-bottom: var(--e-spacing-h5);
+          padding-bottom: var(--o-spacing-h5);
         }
       }
     }

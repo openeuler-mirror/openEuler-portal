@@ -50,12 +50,12 @@ const theme = computed(() =>
 
 <style scoped lang="scss">
 .text {
-  font-size: var(--e-font-size-text);
-  line-height: var(--e-line-height-text);
-  color: var(--e-color-text1);
+  font-size: var(--o-font-size-text);
+  line-height: var(--o-line-height-text);
+  color: var(--o-color-text1);
   @media screen and (max-width: 768px) {
-    font-size: var(--e-font-size-tip);
-    line-height: var(--e-line-height-tip);
+    font-size: var(--o-font-size-tip);
+    line-height: var(--o-line-height-tip);
   }
 }
 .right-main {
@@ -77,9 +77,9 @@ const theme = computed(() =>
     padding: 0 48px 24px;
     li {
       flex: 1;
-      font-size: var(--e-font-size-h6);
-      line-height: var(--e-line-height-h6);
-      color: var(--e-color-text1);
+      font-size: var(--o-font-size-h6);
+      line-height: var(--o-line-height-h6);
+      color: var(--o-color-text1);
       position: relative;
       &::before {
         content: '';
@@ -88,7 +88,7 @@ const theme = computed(() =>
         bottom: -4px;
         height: 2px;
         width: 20px;
-        background-color: var(--e-color-brand2);
+        background-color: var(--o-color-brand2);
       }
     }
   }

@@ -54,48 +54,48 @@ const handleGo = (path: string) => {
 
 <style lang="scss" scoped>
 :deep(.el-card__body) {
-  padding: var(--e-spacing-h2);
+  padding: var(--o-spacing-h2);
   @media screen and (max-width: 768px) {
-    padding: var(--e-spacing-h5) var(--e-spacing-h6);
+    padding: var(--o-spacing-h5) var(--o-spacing-h6);
   }
 }
 .migration-guide {
-  margin-top: var(--e-spacing-h1);
+  margin-top: var(--o-spacing-h1);
   @media screen and (max-width: 768px) {
-    margin-top: var(--e-spacing-h2);
+    margin-top: var(--o-spacing-h2);
   }
   h3 {
-    font-size: var(--e-font-size-h3);
+    font-size: var(--o-font-size-h3);
     font-weight: 300;
-    color: var(--e-color-text1);
-    line-height: var(--e-line-height-h3);
+    color: var(--o-color-text1);
+    line-height: var(--o-line-height-h3);
     width: 100%;
     text-align: center;
     margin-top: 0;
     @media screen and (max-width: 768px) {
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
       margin: 0;
     }
   }
   p {
-    font-size: var(--e-font-size-h7);
+    font-size: var(--o-font-size-h7);
     font-weight: 300;
-    color: var(--e-color-text1);
-    line-height: var(--e-line-height-h8);
+    color: var(--o-color-text1);
+    line-height: var(--o-line-height-h8);
     width: 100%;
     text-align: center;
-    margin-top: var(--e-spacing-h5);
+    margin-top: var(--o-spacing-h5);
     @media screen and (max-width: 768px) {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
-      margin-top: var(--e-spacing-h8);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
+      margin-top: var(--o-spacing-h8);
     }
   }
   &-content {
-    margin-top: var(--e-spacing-h3);
+    margin-top: var(--o-spacing-h3);
     @media screen and (max-width: 768px) {
-      margin-top: var(--e-spacing-h5);
+      margin-top: var(--o-spacing-h5);
     }
     .guide-box {
       display: flex;
@@ -106,7 +106,7 @@ const handleGo = (path: string) => {
         margin-top: -8px;
       }
       &-item {
-        background: var(--e-color-bg1);
+        background: var(--o-color-bg1);
         padding: 16px 18px;
         text-align: left;
         width: 32%;
@@ -117,39 +117,39 @@ const handleGo = (path: string) => {
           padding: 12px 8px;
         }
         p {
-          font-size: var(--e-font-size-h7);
-          line-height: var(--e-line-height-h8);
-          color: var(--e-color-text1);
+          font-size: var(--o-font-size-h7);
+          line-height: var(--o-line-height-h8);
+          color: var(--o-color-text1);
           font-weight: 500;
           text-align: left;
           margin: 0 0 4px 0;
           @media screen and (max-width: 768px) {
-            font-size: var(--e-font-size-text);
-            line-height: var(--e-line-height-text);
+            font-size: var(--o-font-size-text);
+            line-height: var(--o-line-height-text);
           }
         }
         span {
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
-          color: var(--e-color-neutral5);
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
+          color: var(--o-color-neutral5);
           font-weight: 400;
           text-align: left;
           @media screen and (max-width: 768px) {
-            font-size: var(--e-font-size-tip);
-            line-height: var(--e-line-height-tip);
+            font-size: var(--o-font-size-tip);
+            line-height: var(--o-line-height-tip);
           }
         }
       }
       &-item:hover {
-        background-color: var(--e-color-bg2);
-        border: 1px solid var(--e-color-brand1);
+        background-color: var(--o-color-bg2);
+        border: 1px solid var(--o-color-brand1);
       }
     }
     .line-box {
       margin: 32px 0 24px 0;
       width: 100%;
       height: 1px;
-      background: var(--e-color-division1);
+      background: var(--o-color-division1);
       @media screen and (max-width: 768px) {
         margin: 16px 0;
       }
@@ -166,12 +166,12 @@ const handleGo = (path: string) => {
         align-items: center;
         @media screen and (max-width: 1080px) {
           padding: 0;
-          font-size: var(--e-font-size-text);
+          font-size: var(--o-font-size-text);
         }
         &-icon {
-          color: var(--e-color-brand1);
-          width: var(--e-font-size-h8);
-          height: var(--e-font-size-h8);
+          color: var(--o-color-brand1);
+          width: var(--o-font-size-h8);
+          height: var(--o-font-size-h8);
         }
       }
     }

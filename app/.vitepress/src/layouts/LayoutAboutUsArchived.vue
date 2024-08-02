@@ -43,15 +43,15 @@ const isHidden = computed(() => {
 
 <style lang="scss" scoped>
 .about-title {
-  font-size: var(--e-font-size-h5);
-  line-height: var(--e-line-height-h5);
+  font-size: var(--o-font-size-h5);
+  line-height: var(--o-line-height-h5);
 }
 
 .about-wrapper {
   height: 100%;
   padding: 64px 120px;
   margin-left: 300px;
-  background-color: var(--e-color-bg1);
+  background-color: var(--o-color-bg1);
 
   @media screen and (max-width: 1280px) {
     padding: 64px 60px;
@@ -63,9 +63,9 @@ const isHidden = computed(() => {
   }
 
   @media (max-width: 768px) {
-    padding: var(--e-spacing-h5);
-    margin-top: var(--e-spacing-h5);
-    margin-bottom: var(--e-spacing-h2);
+    padding: var(--o-spacing-h5);
+    margin-top: var(--o-spacing-h5);
+    margin-bottom: var(--o-spacing-h2);
   }
 
   .about-anchor {
@@ -86,9 +86,9 @@ const isHidden = computed(() => {
       padding-right: 0;
     }
     @media screen and (max-width: 768px) {
-      background-color: var(--e-color-bg2);
+      background-color: var(--o-color-bg2);
       padding: 24px 16px 16px 16px;
-      box-shadow: var(--e-shadow-l1);
+      box-shadow: var(--o-shadow-l1);
     }
 
     &.custom-layout {
@@ -97,8 +97,8 @@ const isHidden = computed(() => {
       }
 
       @media screen and (max-width: 768px) {
-        background-color: var(--e-color-bg1);
-        box-shadow: var(--e-shadow-l1);
+        background-color: var(--o-color-bg1);
+        box-shadow: var(--o-shadow-l1);
         padding: 0;
         box-shadow: none;
       }
@@ -113,7 +113,7 @@ const isHidden = computed(() => {
  **/
 
 .about-markdown {
-  --e-color-table: var(--e-color-border2); // 表格边框
+  --o-color-table: var(--o-color-border2); // 表格边框
 
   ol,
   ul {
@@ -129,7 +129,7 @@ const isHidden = computed(() => {
   h4,
   h5,
   h6 {
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     font-weight: bold;
 
     a {
@@ -143,79 +143,79 @@ const isHidden = computed(() => {
   }
 
   hr {
-    margin: var(--e-spacing-h1) 0;
+    margin: var(--o-spacing-h1) 0;
     border: none;
     height: 1px;
-    background-color: var(--e-color-division1);
+    background-color: var(--o-color-division1);
     @media screen and (max-width: 768px) {
-      margin: var(--e-spacing-h4) 0;
+      margin: var(--o-spacing-h4) 0;
     }
   }
 
   h1 {
-    margin-bottom: var(--e-spacing-h2);
-    font-size: var(--e-font-size-h3);
-    line-height: var(--e-line-height-h3);
+    margin-bottom: var(--o-spacing-h2);
+    font-size: var(--o-font-size-h3);
+    line-height: var(--o-line-height-h3);
     font-weight: 300;
     @media screen and (max-width: 768px) {
-      margin: 0 0 var(--e-spacing-h4);
-      font-size: var(--e-font-size-h7);
-      line-height: var(--e-line-height-h7);
+      margin: 0 0 var(--o-spacing-h4);
+      font-size: var(--o-font-size-h7);
+      line-height: var(--o-line-height-h7);
     }
   }
 
   h2 {
-    margin-top: var(--e-spacing-h2);
-    margin-bottom: var(--e-spacing-h3);
-    font-size: var(--e-font-size-h5);
-    line-height: var(--e-line-height-h5);
+    margin-top: var(--o-spacing-h2);
+    margin-bottom: var(--o-spacing-h3);
+    font-size: var(--o-font-size-h5);
+    line-height: var(--o-line-height-h5);
     @media screen and (max-width: 768px) {
-      margin: var(--e-spacing-h4) 0 var(--e-spacing-h5);
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
+      margin: var(--o-spacing-h4) 0 var(--o-spacing-h5);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
     }
   }
 
   h3 {
-    margin-top: var(--e-spacing-h3);
-    font-size: var(--e-font-size-h7);
-    line-height: var(--e-line-height-h7);
+    margin-top: var(--o-spacing-h3);
+    font-size: var(--o-font-size-h7);
+    line-height: var(--o-line-height-h7);
     @media screen and (max-width: 768px) {
-      margin: var(--e-spacing-h6) 0;
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      margin: var(--o-spacing-h6) 0;
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
     }
   }
 
   h4 {
-    margin-top: var(--e-spacing-h4);
-    font-size: var(--e-font-size-h8);
-    line-height: var(--e-font-size-h8);
+    margin-top: var(--o-spacing-h4);
+    font-size: var(--o-font-size-h8);
+    line-height: var(--o-font-size-h8);
     @media screen and (max-width: 768px) {
-      margin-top: var(--e-spacing-h6);
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
+      margin-top: var(--o-spacing-h6);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
     }
   }
 
   h5 {
-    margin-top: var(--e-spacing-h5);
-    font-size: var(--e-font-size-text);
-    line-height: var(--e-font-size-text);
+    margin-top: var(--o-spacing-h5);
+    font-size: var(--o-font-size-text);
+    line-height: var(--o-font-size-text);
   }
 
   p,
   ul,
   ol {
-    margin-top: var(--e-spacing-h8);
-    margin-bottom: var(--e-spacing-h8);
-    font-size: var(--e-font-size-text);
+    margin-top: var(--o-spacing-h8);
+    margin-bottom: var(--o-spacing-h8);
+    font-size: var(--o-font-size-text);
     font-weight: normal;
-    color: var(--e-color-text4);
-    line-height: var(--e-line-height-text);
+    color: var(--o-color-text4);
+    line-height: var(--o-line-height-text);
     @media screen and (max-width: 768px) {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
     }
   }
 
@@ -226,14 +226,14 @@ const isHidden = computed(() => {
     li {
       margin-top: 0.25em;
       &::marker {
-        color: var(--e-color-text4);
+        color: var(--o-color-text4);
       }
     }
   }
 
   table {
     width: 100%;
-    font-size: var(--e-font-size-text);
+    font-size: var(--o-font-size-text);
     table-layout: fixed;
     word-break: break-word;
     border-collapse: collapse;
@@ -241,19 +241,19 @@ const isHidden = computed(() => {
 
     tr {
       height: 36px;
-      color: var(--e-color-text4);
-      border-bottom: 1px solid var(--e-color-table);
+      color: var(--o-color-text4);
+      border-bottom: 1px solid var(--o-color-table);
 
       th {
-        font-size: var(--e-font-size-h8);
-        background-color: var(--e-color-bg4);
-        color: var(--e-color-text1);
+        font-size: var(--o-font-size-h8);
+        background-color: var(--o-color-bg4);
+        color: var(--o-color-text1);
       }
     }
   }
 
   strong {
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     font-weight: bold;
   }
 
@@ -268,11 +268,11 @@ const isHidden = computed(() => {
   div[class*='language-'] {
     position: relative;
     margin: 8px 0;
-    background-color: var(--e-color-bg2);
-    box-shadow: var(--e-shadow-l1);
+    background-color: var(--o-color-bg2);
+    box-shadow: var(--o-shadow-l1);
     overflow-x: auto;
     @media screen and (max-width: 768px) {
-      background-color: var(--e-color-bg1);
+      background-color: var(--o-color-bg1);
     }
   }
   [class*='language-'] code,
@@ -291,17 +291,17 @@ const isHidden = computed(() => {
     hyphens: none;
     &::-webkit-scrollbar-track {
       border-radius: 4px;
-      background-color: var(--e-color-bg2);
+      background-color: var(--o-color-bg2);
     }
 
     &::-webkit-scrollbar {
       height: 8px;
-      background-color: var(--e-color-bg2);
+      background-color: var(--o-color-bg2);
     }
 
     &::-webkit-scrollbar-thumb {
       border-radius: 4px;
-      background: var(--e-color-bg4);
+      background: var(--o-color-bg4);
     }
   }
 
@@ -319,9 +319,9 @@ const isHidden = computed(() => {
 
   [class*='language-'] code {
     padding: 0;
-    line-height: var(--e-line-height-text);
-    font-size: var(--e-font-size-text);
-    color: var(--e-color-text1);
+    line-height: var(--o-line-height-text);
+    font-size: var(--o-font-size-text);
+    color: var(--o-color-text1);
   }
 }
 
@@ -341,12 +341,12 @@ const isHidden = computed(() => {
   .more-info {
     display: block;
     font-weight: normal;
-    font-size: var(--e-font-size-text);
-    line-height: var(--e-line-height-text);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-text);
+    line-height: var(--o-line-height-text);
+    color: var(--o-color-text1);
     @media screen and (max-width: 768px) {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
     }
   }
 }

@@ -37,16 +37,16 @@ const sigDetail = computed(() => {
 </template>
 <style lang="scss" scoped>
 .block-content {
-  padding: var(--e-spacing-h5);
-  font-size: var(--e-font-size-tip);
-  line-height: var(--e-line-height-tip);
+  padding: var(--o-spacing-h5);
+  font-size: var(--o-font-size-tip);
+  line-height: var(--o-line-height-tip);
   .block-detail {
     display: grid;
     grid-template-columns: 70px auto;
-    grid-row-gap: var(--e-spacing-h8);
+    grid-row-gap: var(--o-spacing-h8);
   }
 }
 .bg-color {
-  background-color: var(--e-color-bg4);
+  background-color: var(--o-color-bg4);
 }
 </style>

@@ -46,7 +46,7 @@ const rootStyle = computed(() => {
   padding-top: 60px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--e-color-brand1);
+  background-color: var(--o-color-brand1);
   .wrap {
     max-width: 1504px;
     padding: 0 44px;

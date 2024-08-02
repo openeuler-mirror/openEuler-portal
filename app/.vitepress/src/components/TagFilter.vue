@@ -75,24 +75,24 @@ onUnmounted(() => {
 <style lang="scss" scoped>
 .tag-filter {
   display: grid;
-  background: var(--e-color-bg2);
-  padding: var(--e-spacing-h6) 0;
+  background: var(--o-color-bg2);
+  padding: var(--o-spacing-h6) 0;
   grid-template-columns: 60px auto 60px;
-  gap: var(--e-spacing-h4);
+  gap: var(--o-spacing-h4);
   position: relative;
   align-items: baseline;
-  --e-filter-width: 60px;
+  --o-filter-width: 60px;
 
   .label {
-    font-size: var(--e-font-size-text);
-    color: var(--e-color-text4);
-    width: var(--e-filter-width);
+    font-size: var(--o-font-size-text);
+    color: var(--o-color-text4);
+    width: var(--o-filter-width);
     text-align: left;
-    line-height: var(--e-line-height-h6);
+    line-height: var(--o-line-height-h6);
   }
   .active-more {
     top: inherit;
-    bottom: var(--e-spacing-h6);
+    bottom: var(--o-spacing-h6);
   }
   .more {
     cursor: pointer;
@@ -100,13 +100,13 @@ onUnmounted(() => {
     height: fit-content;
     align-items: center;
     position: absolute;
-    top: var(--e-spacing-h6);
-    right: var(--e-spacing-h4);
-    color: var(--e-color-brand1);
-    font-size: var(--e-font-size-h8);
+    top: var(--o-spacing-h6);
+    right: var(--o-spacing-h4);
+    color: var(--o-color-brand1);
+    font-size: var(--o-font-size-h8);
     .icon {
       transition: all 0.3s;
-      font-size: var(--e-font-size-h5);
+      font-size: var(--o-font-size-h5);
       &.active {
         transform: rotate(180deg);
       }

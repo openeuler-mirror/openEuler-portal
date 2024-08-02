@@ -45,16 +45,16 @@ const windowWidth = ref(useWindowResize());
 
 <style lang="scss" scoped>
 .data-item {
-  margin: var(--e-spacing-h2) 0 0 var(--e-spacing-h3);
+  margin: var(--o-spacing-h2) 0 0 var(--o-spacing-h3);
   position: relative;
   &::before {
     content: '';
     position: absolute;
     width: 2px;
-    height: calc(100% + var(--e-spacing-h2));
+    height: calc(100% + var(--o-spacing-h2));
     top: 18px;
     left: -25px;
-    background-color: var(--e-color-brand1);
+    background-color: var(--o-color-brand1);
   }
   &:last-of-type {
     &::before {
@@ -62,10 +62,10 @@ const windowWidth = ref(useWindowResize());
     }
   }
   @media (max-width: 767px) {
-    margin: var(--e-spacing-h5) 0 0 var(--e-spacing-h5);
+    margin: var(--o-spacing-h5) 0 0 var(--o-spacing-h5);
     &::before {
       width: 1px;
-      height: calc(100% + var(--e-spacing-h5));
+      height: calc(100% + var(--o-spacing-h5));
       top: 11px;
       left: -12.5px;
     }
@@ -73,11 +73,11 @@ const windowWidth = ref(useWindowResize());
 }
 .type {
   width: 160px;
-  background-image: linear-gradient(270deg, rgba(180,97,246,0.00) 2%, var(--e-color-brand1) 100%);
-  padding: var(--e-spacing-h10) var(--e-spacing-h6);
-  font-size: var(--e-font-size-h6);
+  background-image: linear-gradient(270deg, rgba(180,97,246,0.00) 2%, var(--o-color-brand1) 100%);
+  padding: var(--o-spacing-h10) var(--o-spacing-h6);
+  font-size: var(--o-font-size-h6);
   color: #fff;
-  line-height: var(--e-line-height-h6);
+  line-height: var(--o-line-height-h6);
   font-weight: 500;
   position: relative;
   &::before {
@@ -88,12 +88,12 @@ const windowWidth = ref(useWindowResize());
     border-radius: 50%;
     top: 10px;
     left: -32px;
-    background-color: var(--e-color-brand1);
+    background-color: var(--o-color-brand1);
   }
   @media (max-width: 767px) {
     width: 128px;
-    font-size: var(--e-font-size-h8);
-    line-height: var(--e-line-height-h8);
+    font-size: var(--o-font-size-h8);
+    line-height: var(--o-line-height-h8);
     &::before {
       width: 8px;
       height: 8px;
@@ -104,16 +104,16 @@ const windowWidth = ref(useWindowResize());
 }
 .child-item {
   width: 100%;
-  padding: var(--e-spacing-h4);
-  margin-top: var(--e-spacing-h5);
+  padding: var(--o-spacing-h4);
+  margin-top: var(--o-spacing-h5);
   height: 100%;
-  background-color: var(--e-color-bg2);
+  background-color: var(--o-color-bg2);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   .title {
     font-size: 22px;
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     line-height: 30px;
     font-weight: 500;
     margin-left: 14px;
@@ -126,17 +126,17 @@ const windowWidth = ref(useWindowResize());
       border-radius: 3px;
       top: 3px;
       left: -14px;
-      background-color: var(--e-color-brand1);
+      background-color: var(--o-color-brand1);
     }
   }
   .bottom {
     display: flex;
     align-items: center;
-    font-size: var(--e-font-size-h8);
-    color: var(--e-color-text1);
-    line-height: var(--e-line-height-h8);
+    font-size: var(--o-font-size-h8);
+    color: var(--o-color-text1);
+    line-height: var(--o-line-height-h8);
     font-weight: 400;
-    margin-top: var(--e-spacing-h4);
+    margin-top: var(--o-spacing-h4);
     .date {
       display: flex;
       align-items: flex-start;
@@ -147,19 +147,19 @@ const windowWidth = ref(useWindowResize());
       }
     }
     .time {
-      margin-left: var(--e-spacing-h2);
+      margin-left: var(--o-spacing-h2);
     }
   }
   @media (max-width: 767px) {
-    padding: var(--e-spacing-h5);
+    padding: var(--o-spacing-h5);
     background-size: cover;
     background-position: top;
     &:nth-child(2n + 1) {
       background-position: bottom;
     }
     .title {
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
       margin-left: 8px;
       &::before {
         content: '';
@@ -171,9 +171,9 @@ const windowWidth = ref(useWindowResize());
       }
     }
     .bottom {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
-      margin-top: var(--e-spacing-h4);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
+      margin-top: var(--o-spacing-h4);
       .date {
         svg {
           width: 16px;
@@ -182,7 +182,7 @@ const windowWidth = ref(useWindowResize());
         }
       }
       .time {
-        margin-left: var(--e-spacing-h4);
+        margin-left: var(--o-spacing-h4);
       }
     }
   }

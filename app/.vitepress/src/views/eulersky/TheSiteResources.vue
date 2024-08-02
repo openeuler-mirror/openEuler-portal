@@ -87,9 +87,9 @@ function goDetail(url: string) {
 
 <style scoped lang="scss">
 .word-style {
-  color: var(--e-color-text1);
-  font-size: var(--e-font-size-h8);
-  line-height: var(--e-line-height-h8);
+  color: var(--o-color-text1);
+  font-size: var(--o-font-size-h8);
+  line-height: var(--o-line-height-h8);
 }
 .site-container {
   display: flex;
@@ -102,26 +102,26 @@ function goDetail(url: string) {
     margin-top: 24px;
     padding: 16px;
     h3 {
-      line-height: var(--e-line-height-h7);
-      font-size: var(--e-font-size-h7);
+      line-height: var(--o-line-height-h7);
+      font-size: var(--o-font-size-h7);
     }
   }
   .site-container-introduction {
     margin-top: 16px;
-    font-size: var(--e-font-size-text);
-    line-height: var(--e-line-height-text);
+    font-size: var(--o-font-size-text);
+    line-height: var(--o-line-height-text);
   }
 
   h3 {
-    line-height: var(--e-line-height-h5);
-    font-size: var(--e-font-size-h5);
+    line-height: var(--o-line-height-h5);
+    font-size: var(--o-font-size-h5);
     @media screen and (max-width: 768px) {
-      line-height: var(--e-line-height-h7);
-      font-size: var(--e-font-size-h7);
+      line-height: var(--o-line-height-h7);
+      font-size: var(--o-font-size-h7);
     }
   }
   .o-button {
-    color: var(--e-color-white);
+    color: var(--o-color-white);
     margin-left: 50px;
     max-height: 40px;
     white-space: nowrap;
@@ -129,7 +129,7 @@ function goDetail(url: string) {
       margin-left: 0;
       margin-top: 12px;
       padding: 4px 16px;
-      font-size: var(--e-font-size-text);
+      font-size: var(--o-font-size-text);
     }
   }
 }
@@ -137,20 +137,20 @@ function goDetail(url: string) {
   margin-top: 40px;
   padding: 40px;
   h3 {
-    line-height: var(--e-line-height-h5);
-    font-size: var(--e-font-size-h5);
+    line-height: var(--o-line-height-h5);
+    font-size: var(--o-font-size-h5);
   }
   .apply-container-introduction {
     margin-top: 16px;
-    font-size: var(--e-font-size-text);
-    line-height: var(--e-line-height-text);
+    font-size: var(--o-font-size-text);
+    line-height: var(--o-line-height-text);
   }
   @media screen and (max-width: 768px) {
     margin-top: 24px;
     padding: 16px;
     h3 {
-      font-size: var(--e-font-size-h7);
-      line-height: var(--e-line-height-h7);
+      font-size: var(--o-font-size-h7);
+      line-height: var(--o-line-height-h7);
     }
     .apply-container-introduction {
       margin-top: 8px;
@@ -159,16 +159,16 @@ function goDetail(url: string) {
 }
 .site-list {
   h2 {
-    margin-top: var(--e-spacing-h2);
-    font-size: var(--e-font-size-h3);
+    margin-top: var(--o-spacing-h2);
+    font-size: var(--o-font-size-h3);
     font-weight: 300;
-    color: var(--e-color-text1);
-    line-height: var(--e-line-height-h3);
+    color: var(--o-color-text1);
+    line-height: var(--o-line-height-h3);
     text-align: center;
     @media screen and (max-width: 768px) {
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
-      margin-top: var(--e-spacing-h4);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
+      margin-top: var(--o-spacing-h4);
     }
   }
   .site-card-list {
@@ -185,16 +185,16 @@ function goDetail(url: string) {
     }
     .o-container {
       padding: 40px;
-      color: var(--e-color-text1);
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      color: var(--o-color-text1);
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
       background-position: right bottom;
       background-repeat: no-repeat;
       background-size: 160px auto;
       @media screen and (max-width: 768px) {
         padding: 16px;
         height: 144px;
-        font-size: var(--e-font-size-text);
+        font-size: var(--o-font-size-text);
         background-size: 150px 100px;
       }
       .label-line {
@@ -204,7 +204,7 @@ function goDetail(url: string) {
         display: inline-block;
         min-width: 70px;
         text-align: right;
-        color: var(--e-color-text4);
+        color: var(--o-color-text4);
       }
       .text-info {
         display: inline-block;

@@ -120,7 +120,7 @@ const liveStyleMo = ref({
                   :style="{
                     color:
                       commonStore.theme === 'dark'
-                        ? 'var(--e-color-white)'
+                        ? 'var(--o-color-white)'
                         : '',
                   }"
                   @click="jumpTo(live.FORMERLYLINK)"
@@ -163,30 +163,30 @@ const liveStyleMo = ref({
 <style lang="scss" scoped>
 .live {
   .pagination-slot {
-    font-size: var(--e-font-size-text);
+    font-size: var(--o-font-size-text);
     font-weight: 400;
-    color: var(--e-color-text1);
-    line-height: var(--e-spacing-h4);
+    color: var(--o-color-text1);
+    line-height: var(--o-spacing-h4);
   }
   .live-top-title {
     width: 100%;
     margin: 0 auto;
     font-weight: 300;
-    font-size: var(--e-font-size-h3);
+    font-size: var(--o-font-size-h3);
     text-align: center;
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     @media screen and (max-width: 767px) {
-      font-size: var(--e-font-size-h8);
+      font-size: var(--o-font-size-h8);
     }
   }
   .live-list {
     display: grid;
     max-width: 1504px;
-    margin: var(--e-spacing-h2) auto;
+    margin: var(--o-spacing-h2) auto;
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: var(--e-spacing-h4);
+    grid-gap: var(--o-spacing-h4);
     @media (max-width: 1504px) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -194,7 +194,7 @@ const liveStyleMo = ref({
       grid-template-columns: repeat(1, 1fr);
     }
     @media screen and (max-width: 767px) {
-      margin: var(--e-spacing-h5) auto;
+      margin: var(--o-spacing-h5) auto;
     }
     .live-list-item {
       width: 100%;
@@ -228,7 +228,7 @@ const liveStyleMo = ref({
       }
     }
     .live-detail-right {
-      padding: var(--e-spacing-h4);
+      padding: var(--o-spacing-h4);
       height: 100%;
       flex: 1;
       display: flex;
@@ -237,19 +237,19 @@ const liveStyleMo = ref({
       @media screen and (max-width: 767px) {
         max-height: 132px;
         width: 100%;
-        padding: 16px var(--e-spacing-h6);
+        padding: 16px var(--o-spacing-h6);
       }
     }
     .live-detail-title {
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: var(--e-font-size-h5);
+      font-size: var(--o-font-size-h5);
       text-align: left;
       font-weight: 500;
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       @media screen and (max-width: 767px) {
-        font-size: var(--e-font-size-text);
-        color: var(--e-color-text1);
+        font-size: var(--o-font-size-text);
+        color: var(--o-color-text1);
       }
     }
   }
@@ -264,13 +264,13 @@ const liveStyleMo = ref({
       width: 100%;
       height: 98px;
       background-repeat: no-repeat;
-      background-color: var(--e-color-bg4);
+      background-color: var(--o-color-bg4);
     }
     .live-background-img {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      background-color: var(--e-color-bg4);
+      background-color: var(--o-color-bg4);
       @media screen and (max-width: 767px) {
         width: 68px;
         height: 68px;
@@ -279,32 +279,32 @@ const liveStyleMo = ref({
     }
   }
   .live-desc {
-    margin-top: var(--e-spacing-h4);
+    margin-top: var(--o-spacing-h4);
     padding: 0;
-    line-height: var(--e-line-height-tip);
+    line-height: var(--o-line-height-tip);
     span {
       display: inline;
       font-weight: 400;
     }
     @media screen and (max-width: 767px) {
-      margin-top: var(--e-spacing-h5);
+      margin-top: var(--o-spacing-h5);
     }
     .live-desc-text {
-      margin-right: var(--e-spacing-h3);
-      line-height: var(--e-line-height-tip);
-      font-size: var(--e-font-size-text);
-      color: var(--e-color-text1);
+      margin-right: var(--o-spacing-h3);
+      line-height: var(--o-line-height-tip);
+      font-size: var(--o-font-size-text);
+      color: var(--o-color-text1);
       overflow: hidden;
       text-overflow: ellipsis;
       @media screen and (max-width: 767px) {
-        font-size: var(--e-font-size-tip);
-        margin-right: var(--e-spacing-h5);
+        font-size: var(--o-font-size-tip);
+        margin-right: var(--o-spacing-h5);
       }
     }
   }
   .live-button {
     .live-button-icon {
-      color: var(--e-color-brand1);
+      color: var(--o-color-brand1);
     }
   }
   .live-pagination {
@@ -318,13 +318,13 @@ const liveStyleMo = ref({
     // }
   }
   .smail-icon {
-    font-size: var(--e-font-size-h7);
+    font-size: var(--o-font-size-h7);
     vertical-align: text-bottom;
-    color: var(--e-color-text4);
-    margin-right: var(--e-spacing-h8);
+    color: var(--o-color-text4);
+    margin-right: var(--o-spacing-h8);
     @media screen and (max-width: 767px) {
-      font-size: var(--e-font-size-h8);
-      color: var(--e-color-text4);
+      font-size: var(--o-font-size-h8);
+      color: var(--o-color-text4);
     }
   }
   .pagination {
@@ -332,7 +332,7 @@ const liveStyleMo = ref({
       display: flex;
       flex-direction: row;
       justify-content: center;
-      margin-top: var(--e-spacing-h5);
+      margin-top: var(--o-spacing-h5);
       width: 100%;
       height: 18px;
     }
@@ -341,31 +341,31 @@ const liveStyleMo = ref({
       flex-direction: row;
       margin: auto;
       .pagination-options-icon {
-        font-size: var(--e-font-size-tip);
-        color: var(--e-color-brand1);
+        font-size: var(--o-font-size-tip);
+        color: var(--o-color-brand1);
       }
       .pagination-options-icon:hover {
         cursor: pointer;
       }
       .pagination-options-text {
-        font-size: var(--e-font-size-tip);
-        margin-left: var(--e-spacing-h8);
-        margin-right: var(--e-spacing-h8);
-        color: var(--e-color-text1);
+        font-size: var(--o-font-size-tip);
+        margin-left: var(--o-spacing-h8);
+        margin-right: var(--o-spacing-h8);
+        color: var(--o-color-text1);
       }
       .pagination-options-text:hover {
-        color: var(--e-color-brand1);
+        color: var(--o-color-brand1);
         cursor: pointer;
       }
     }
     .pagination-information {
       margin-left: 20px;
       margin-right: 20px;
-      font-size: var(--e-font-size-tip);
-      color: var(--e-color-text1);
+      font-size: var(--o-font-size-tip);
+      color: var(--o-color-text1);
       .pagination-information-current {
-        color: var(--e-color-brand1);
-        font-size: var(--e-font-size-tip);
+        color: var(--o-color-brand1);
+        font-size: var(--o-font-size-tip);
       }
     }
   }

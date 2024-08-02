@@ -165,17 +165,17 @@ const handleNodeClick = (node: any) => {
   top: 0;
   width: 268px;
   height: 100vh;
-  background: var(--e-color-bg2);
+  background: var(--o-color-bg2);
   box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   z-index: 999;
   .nav-top {
     width: 100%;
-    background: var(--e-color-bg2);
+    background: var(--o-color-bg2);
     font-size: 14px;
     line-height: 22px;
-    color: var(--e-color-text1);
-    padding: var(--e-spacing-h5);
+    color: var(--o-color-text1);
+    padding: var(--o-spacing-h5);
     font-weight: bold;
     display: flex;
     justify-content: space-between;
@@ -187,7 +187,7 @@ const handleNodeClick = (node: any) => {
     :deep(.o-icon) {
       padding: 12px;
       cursor: pointer;
-      font-size: var(--e-font-size-h5);
+      font-size: var(--o-font-size-h5);
     }
   }
 
@@ -197,7 +197,7 @@ const handleNodeClick = (node: any) => {
   :deep(.el-tree .el-tree-node__label) {
     font-size: 14px;
     line-height: 16px;
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
   }
 }
 
@@ -207,7 +207,7 @@ const handleNodeClick = (node: any) => {
   left: 48px;
   z-index: 99;
   font-size: 24px;
-  color: var(--e-color-text1);
+  color: var(--o-color-text1);
   cursor: pointer;
 }
 
@@ -222,14 +222,14 @@ const handleNodeClick = (node: any) => {
 
   &::-webkit-scrollbar-thumb {
     border-radius: 2px;
-    background-color: var(--e-color-division);
+    background-color: var(--o-color-division);
     background-clip: content-box;
   }
 
   &::-webkit-scrollbar-track {
     border-radius: 0;
     box-shadow: none;
-    background: var(--e-color-bg1);
+    background: var(--o-color-bg1);
   }
 
   .sidebar-title:first-child {
@@ -242,10 +242,10 @@ const handleNodeClick = (node: any) => {
 .sidebar-title {
   position: relative;
   padding: 0 40px;
-  font-size: var(--e-font-size-text);
+  font-size: var(--o-font-size-text);
   height: 70px;
   line-height: 70px;
-  color: var(--e-color-white);
+  color: var(--o-color-white);
   cursor: pointer;
 
   &::before {
@@ -253,7 +253,7 @@ const handleNodeClick = (node: any) => {
     top: 0;
     width: calc(100% - 80px);
     height: 1px;
-    background-color: var(--e-color-neutral11);
+    background-color: var(--o-color-neutral11);
     content: '';
     background-color: #ffffff;
     opacity: 0.1;
@@ -269,15 +269,15 @@ const handleNodeClick = (node: any) => {
 }
 
 .about-title {
-  font-size: var(--e-font-size-h5);
-  line-height: var(--e-line-height-h5);
+  font-size: var(--o-font-size-h5);
+  line-height: var(--o-line-height-h5);
 }
 
 .about-wrapper {
   height: 100%;
   padding: 64px 120px;
   margin-left: 300px;
-  background-color: var(--e-color-bg1);
+  background-color: var(--o-color-bg1);
 
   @media screen and (max-width: 1280px) {
     padding: 64px 60px;
@@ -289,9 +289,9 @@ const handleNodeClick = (node: any) => {
   }
 
   @media (max-width: 768px) {
-    padding: var(--e-spacing-h5);
-    margin-top: var(--e-spacing-h5);
-    margin-bottom: var(--e-spacing-h2);
+    padding: var(--o-spacing-h5);
+    margin-top: var(--o-spacing-h5);
+    margin-bottom: var(--o-spacing-h2);
   }
 
   .about-anchor {
@@ -312,9 +312,9 @@ const handleNodeClick = (node: any) => {
       padding-right: 0;
     }
     @media screen and (max-width: 768px) {
-      background-color: var(--e-color-bg2);
+      background-color: var(--o-color-bg2);
       padding: 24px 16px 16px 16px;
-      box-shadow: var(--e-shadow-l1);
+      box-shadow: var(--o-shadow-l1);
     }
 
     &.custom-layout {
@@ -323,8 +323,8 @@ const handleNodeClick = (node: any) => {
       }
 
       @media screen and (max-width: 768px) {
-        background-color: var(--e-color-bg1);
-        box-shadow: var(--e-shadow-l1);
+        background-color: var(--o-color-bg1);
+        box-shadow: var(--o-shadow-l1);
         padding: 0;
         box-shadow: none;
       }
@@ -339,7 +339,7 @@ const handleNodeClick = (node: any) => {
  **/
 
 .about-markdown {
-  --e-color-table: var(--e-color-border2); // 表格边框
+  --o-color-table: var(--o-color-border2); // 表格边框
 
   ol,
   ul {
@@ -355,7 +355,7 @@ const handleNodeClick = (node: any) => {
   h4,
   h5,
   h6 {
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     font-weight: bold;
 
     a {
@@ -369,79 +369,79 @@ const handleNodeClick = (node: any) => {
   }
 
   hr {
-    margin: var(--e-spacing-h1) 0;
+    margin: var(--o-spacing-h1) 0;
     border: none;
     height: 1px;
-    background-color: var(--e-color-division1);
+    background-color: var(--o-color-division1);
     @media screen and (max-width: 768px) {
-      margin: var(--e-spacing-h4) 0;
+      margin: var(--o-spacing-h4) 0;
     }
   }
 
   h1 {
-    margin-bottom: var(--e-spacing-h2);
-    font-size: var(--e-font-size-h3);
-    line-height: var(--e-line-height-h3);
+    margin-bottom: var(--o-spacing-h2);
+    font-size: var(--o-font-size-h3);
+    line-height: var(--o-line-height-h3);
     font-weight: 300;
     @media screen and (max-width: 768px) {
-      margin: 0 0 var(--e-spacing-h4);
-      font-size: var(--e-font-size-h7);
-      line-height: var(--e-line-height-h7);
+      margin: 0 0 var(--o-spacing-h4);
+      font-size: var(--o-font-size-h7);
+      line-height: var(--o-line-height-h7);
     }
   }
 
   h2 {
-    margin-top: var(--e-spacing-h2);
-    margin-bottom: var(--e-spacing-h3);
-    font-size: var(--e-font-size-h5);
-    line-height: var(--e-line-height-h5);
+    margin-top: var(--o-spacing-h2);
+    margin-bottom: var(--o-spacing-h3);
+    font-size: var(--o-font-size-h5);
+    line-height: var(--o-line-height-h5);
     @media screen and (max-width: 768px) {
-      margin: var(--e-spacing-h4) 0 var(--e-spacing-h5);
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
+      margin: var(--o-spacing-h4) 0 var(--o-spacing-h5);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
     }
   }
 
   h3 {
-    margin-top: var(--e-spacing-h3);
-    font-size: var(--e-font-size-h7);
-    line-height: var(--e-line-height-h7);
+    margin-top: var(--o-spacing-h3);
+    font-size: var(--o-font-size-h7);
+    line-height: var(--o-line-height-h7);
     @media screen and (max-width: 768px) {
-      margin: var(--e-spacing-h6) 0;
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
+      margin: var(--o-spacing-h6) 0;
+      font-size: var(--o-font-size-text);
+      line-height: var(--o-line-height-text);
     }
   }
 
   h4 {
-    margin-top: var(--e-spacing-h4);
-    font-size: var(--e-font-size-h8);
-    line-height: var(--e-font-size-h8);
+    margin-top: var(--o-spacing-h4);
+    font-size: var(--o-font-size-h8);
+    line-height: var(--o-font-size-h8);
     @media screen and (max-width: 768px) {
-      margin-top: var(--e-spacing-h6);
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
+      margin-top: var(--o-spacing-h6);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
     }
   }
 
   h5 {
-    margin-top: var(--e-spacing-h5);
-    font-size: var(--e-font-size-text);
-    line-height: var(--e-font-size-text);
+    margin-top: var(--o-spacing-h5);
+    font-size: var(--o-font-size-text);
+    line-height: var(--o-font-size-text);
   }
 
   p,
   ul,
   ol {
-    margin-top: var(--e-spacing-h8);
-    margin-bottom: var(--e-spacing-h8);
-    font-size: var(--e-font-size-text);
+    margin-top: var(--o-spacing-h8);
+    margin-bottom: var(--o-spacing-h8);
+    font-size: var(--o-font-size-text);
     font-weight: normal;
-    color: var(--e-color-text4);
-    line-height: var(--e-line-height-text);
+    color: var(--o-color-text4);
+    line-height: var(--o-line-height-text);
     @media screen and (max-width: 768px) {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
     }
   }
 
@@ -452,14 +452,14 @@ const handleNodeClick = (node: any) => {
     li {
       margin-top: 0.25em;
       &::marker {
-        color: var(--e-color-text4);
+        color: var(--o-color-text4);
       }
     }
   }
 
   table {
     width: 100%;
-    font-size: var(--e-font-size-text);
+    font-size: var(--o-font-size-text);
     table-layout: fixed;
     word-break: break-word;
     border-collapse: collapse;
@@ -467,19 +467,19 @@ const handleNodeClick = (node: any) => {
 
     tr {
       height: 36px;
-      color: var(--e-color-text4);
-      border-bottom: 1px solid var(--e-color-table);
+      color: var(--o-color-text4);
+      border-bottom: 1px solid var(--o-color-table);
 
       th {
-        font-size: var(--e-font-size-h8);
-        background-color: var(--e-color-bg4);
-        color: var(--e-color-text1);
+        font-size: var(--o-font-size-h8);
+        background-color: var(--o-color-bg4);
+        color: var(--o-color-text1);
       }
     }
   }
 
   strong {
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     font-weight: bold;
   }
 
@@ -494,11 +494,11 @@ const handleNodeClick = (node: any) => {
   div[class*='language-'] {
     position: relative;
     margin: 8px 0;
-    background-color: var(--e-color-bg2);
-    box-shadow: var(--e-shadow-l1);
+    background-color: var(--o-color-bg2);
+    box-shadow: var(--o-shadow-l1);
     overflow-x: auto;
     @media screen and (max-width: 768px) {
-      background-color: var(--e-color-bg1);
+      background-color: var(--o-color-bg1);
     }
   }
   [class*='language-'] code,
@@ -517,17 +517,17 @@ const handleNodeClick = (node: any) => {
     hyphens: none;
     &::-webkit-scrollbar-track {
       border-radius: 4px;
-      background-color: var(--e-color-bg2);
+      background-color: var(--o-color-bg2);
     }
 
     &::-webkit-scrollbar {
       height: 8px;
-      background-color: var(--e-color-bg2);
+      background-color: var(--o-color-bg2);
     }
 
     &::-webkit-scrollbar-thumb {
       border-radius: 4px;
-      background: var(--e-color-bg4);
+      background: var(--o-color-bg4);
     }
   }
 
@@ -545,9 +545,9 @@ const handleNodeClick = (node: any) => {
 
   [class*='language-'] code {
     padding: 0;
-    line-height: var(--e-line-height-text);
-    font-size: var(--e-font-size-text);
-    color: var(--e-color-text1);
+    line-height: var(--o-line-height-text);
+    font-size: var(--o-font-size-text);
+    color: var(--o-color-text1);
   }
 }
 
@@ -567,12 +567,12 @@ const handleNodeClick = (node: any) => {
   .more-info {
     display: block;
     font-weight: normal;
-    font-size: var(--e-font-size-text);
-    line-height: var(--e-line-height-text);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-text);
+    line-height: var(--o-line-height-text);
+    color: var(--o-color-text1);
     @media screen and (max-width: 768px) {
-      font-size: var(--e-font-size-tip);
-      line-height: var(--e-line-height-tip);
+      font-size: var(--o-font-size-tip);
+      line-height: var(--o-line-height-tip);
     }
   }
 }

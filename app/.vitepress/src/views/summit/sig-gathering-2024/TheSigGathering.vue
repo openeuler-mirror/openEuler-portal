@@ -34,16 +34,16 @@ if (lang.value === 'zh') {
 
 <style scoped lang="scss">
 :deep(.title-img) {
-  font-size: var(--e-font-size-h3);
-  line-height: var(--e-line-height-h3);
+  font-size: var(--o-font-size-h3);
+  line-height: var(--o-line-height-h3);
   font-weight: 300;
-  color: var(--e-color-text1);
+  color: var(--o-color-text1);
   margin-bottom: 40px;
   text-align: center;
   position: relative;
   @media screen and (max-width: 768px) {
-    font-size: var(--e-font-size-h7);
-    line-height: var(--e-line-height-h7);
+    font-size: var(--o-font-size-h7);
+    line-height: var(--o-line-height-h7);
     margin-bottom: 16px;
   }
   img {

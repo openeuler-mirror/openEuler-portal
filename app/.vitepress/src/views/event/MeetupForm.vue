@@ -446,8 +446,8 @@ onMounted(() => {
   place-items: center;
 }
 .meetup-form {
-  background: var(--e-color-bg2);
-  box-shadow: var(--e-shadow-l1);
+  background: var(--o-color-bg2);
+  box-shadow: var(--o-shadow-l1);
   padding: 40px;
   @media (max-width: 1100px) {
     padding: 16px;
@@ -457,7 +457,7 @@ onMounted(() => {
     font-weight: 500;
     margin: 0 0 40px;
     text-align: center;
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     @media (max-width: 1100px) {
       font-size: 24px;
       margin: 24px 0;
@@ -470,10 +470,10 @@ onMounted(() => {
     }
     .el-input__wrapper {
       border-radius: 0;
-      box-shadow: 0 0 0 1px var(--e-color-border1) inset;
+      box-shadow: 0 0 0 1px var(--o-color-border1) inset;
       height: 36px;
       line-height: 36px;
-      background: var(--e-color-bg2);
+      background: var(--o-color-bg2);
     }
   }
   .column {

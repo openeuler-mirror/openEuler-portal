@@ -66,11 +66,11 @@ const goLink = (path: string) => {
     .item {
       width: 100%;
       height: 96px;
-      background-color: var(--e-color-bg2);
+      background-color: var(--o-color-bg2);
 
-      font-size: var(--e-font-size-h7);
-      color: var(--e-color-text1);
-      line-height: var(--e-height-h6);
+      font-size: var(--o-font-size-h7);
+      color: var(--o-color-text1);
+      line-height: var(--o-height-h6);
       position: relative;
       .item-link {
         z-index: 2;
@@ -82,7 +82,7 @@ const goLink = (path: string) => {
           padding: 0 !important;
           margin-right: 10px;
           svg {
-            color: var(--e-color-brand1);
+            color: var(--o-color-brand1);
           }
         }
       }
@@ -101,7 +101,7 @@ const goLink = (path: string) => {
     @media screen and (max-width: 767px) {
       display: grid;
       grid-template-columns: 1fr;
-      grid-row-gap: var(--e-spacing-h5);
+      grid-row-gap: var(--o-spacing-h5);
       .item {
         height: 54px;
         .item-link {
@@ -120,15 +120,15 @@ const goLink = (path: string) => {
     @media screen and (min-width: 768px) and (max-width: 1079px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-row-gap: var(--e-spacing-h4);
-      grid-column-gap: var(--e-spacing-h4);
+      grid-row-gap: var(--o-spacing-h4);
+      grid-column-gap: var(--o-spacing-h4);
     }
     @media screen and (min-width: 1080px) {
       max-width: 1416px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-row-gap: var(--e-spacing-h4);
-      grid-column-gap: var(--e-spacing-h4);
+      grid-row-gap: var(--o-spacing-h4);
+      grid-column-gap: var(--o-spacing-h4);
     }
   }
 }

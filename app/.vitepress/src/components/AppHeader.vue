@@ -198,22 +198,22 @@ const navItemClick = () => {
 </template>
 <style lang="scss" scoped>
 :deep(.el-input__suffix) {
-  font-size: var(--e-font-size-h7);
+  font-size: var(--o-font-size-h7);
 }
 :deep(.el-input__clear) {
-  font-size: var(--e-font-size-h7);
+  font-size: var(--o-font-size-h7);
 }
 :deep(.el-icon-circle-inner) {
-  font-size: var(--e-font-size-h1);
+  font-size: var(--o-font-size-h1);
 }
 .app-header {
-  background-color: var(--e-color-bg2);
+  background-color: var(--o-color-bg2);
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   z-index: 98;
-  box-shadow: var(--e-shadow-l1);
+  box-shadow: var(--o-shadow-l1);
   &-body {
     display: flex;
     align-items: center;
@@ -235,7 +235,7 @@ const navItemClick = () => {
 .logo {
   height: 32px;
   cursor: pointer;
-  margin-right: var(--e-spacing-h4);
+  margin-right: var(--o-spacing-h4);
   @media (max-width: 1100px) {
     height: 24px;
     position: absolute;
@@ -247,14 +247,14 @@ const navItemClick = () => {
 }
 .mobile-menu-icon {
   display: none;
-  margin-right: var(--e-spacing-h5);
+  margin-right: var(--o-spacing-h5);
   @media (max-width: 1100px) {
     flex: 1;
     display: block;
   }
   .icon {
-    font-size: var(--e-font-size-h6);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h6);
+    color: var(--o-color-text1);
     cursor: pointer;
   }
 }
@@ -283,7 +283,7 @@ const navItemClick = () => {
       overflow: hidden;
       opacity: 0;
       visibility: hidden;
-      border-top: 1px solid var(--e-color-border2);
+      border-top: 1px solid var(--o-color-border2);
       top: 48px;
       height: calc(100% - 48px);
       z-index: 999;
@@ -304,17 +304,17 @@ const navItemClick = () => {
   }
 
   .icon {
-    font-size: var(--e-font-size-h6);
-    color: var(--e-color-text1);
+    font-size: var(--o-font-size-h6);
+    color: var(--o-color-text1);
   }
 }
 .header-tool {
   display: flex;
   align-items: center;
   height: 100%;
-  margin-left: var(--e-spacing-h5);
+  margin-left: var(--o-spacing-h5);
   .lang {
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     letter-spacing: 0.08em;
     font-size: 16px;
   }
@@ -344,7 +344,7 @@ const navItemClick = () => {
   display: flex;
   opacity: 0;
   visibility: hidden;
-  border-top: 1px solid var(--e-color-division);
+  border-top: 1px solid var(--o-color-division);
   background: rgba(0, 0, 0, 0.4);
   top: 48px;
   height: calc(100% - 48px);
@@ -374,11 +374,11 @@ const navItemClick = () => {
   }
   &-side {
     left: -100%;
-    background: var(--e-color-bg1);
+    background: var(--o-color-bg1);
     display: inline-flex;
     height: 100%;
     flex-direction: column;
-    color: var(--e-color-text1);
+    color: var(--o-color-text1);
     min-width: 164px;
     opacity: 0;
     position: relative;
@@ -400,10 +400,10 @@ const navItemClick = () => {
     .mobile-nav {
       .link {
         display: block;
-        font-size: var(--e-font-size-tip);
-        line-height: var(--e-line-height-h3);
-        color: var(--e-color-text1);
-        padding: 0 var(--e-spacing-h5);
+        font-size: var(--o-font-size-tip);
+        line-height: var(--o-line-height-h3);
+        color: var(--o-color-text1);
+        padding: 0 var(--o-spacing-h5);
         position: relative;
         cursor: pointer;
         &::after {
@@ -418,23 +418,23 @@ const navItemClick = () => {
           bottom: 0;
         }
         &.active {
-          background: var(--e-color-bg2);
-          color: var(--e-color-brand1);
+          background: var(--o-color-bg2);
+          color: var(--o-color-brand1);
           &::after {
             width: 24px;
-            background: var(--e-color-brand1);
+            background: var(--o-color-brand1);
           }
         }
       }
     }
     .mobile-tools {
-      padding: 0 var(--e-spacing-h5);
+      padding: 0 var(--o-spacing-h5);
       margin-bottom: 24px;
     }
   }
   &-content {
     flex: 1;
-    background: var(--e-color-bg2);
+    background: var(--o-color-bg2);
     position: relative;
 
     left: 0;
@@ -445,13 +445,13 @@ const navItemClick = () => {
       padding: 0 16px;
 
       .link {
-        line-height: var(--e-line-height-h3);
-        font-size: var(--e-font-size-tip);
+        line-height: var(--o-line-height-h3);
+        font-size: var(--o-font-size-tip);
         font-weight: normal;
-        color: var(--e-color-text4);
+        color: var(--o-color-text4);
         cursor: pointer;
         &:last-child {
-          border-bottom: 1px solid var(--e-color-division1);
+          border-bottom: 1px solid var(--o-color-division1);
         }
       }
     }

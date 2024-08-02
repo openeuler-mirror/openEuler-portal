@@ -295,24 +295,24 @@ onMounted(async () => {
 .word-hover {
   display: block;
   cursor: pointer;
-  color: var(--e-color-text1);
+  color: var(--o-color-text1);
   &:hover {
-    color: var(--e-color-brand1);
+    color: var(--o-color-brand1);
   }
 }
 .media-bottom {
   display: flex;
-  margin-top: var(--e-spacing-h2);
+  margin-top: var(--o-spacing-h2);
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 1080px) {
-    margin-top: var(--e-spacing-h5);
+    margin-top: var(--o-spacing-h5);
   }
   @media screen and (max-width: 768px) {
-    margin: var(--e-spacing-h5) 0 var(--e-spacing-h10) 0;
+    margin: var(--o-spacing-h5) 0 var(--o-spacing-h10) 0;
     :deep(.o-button) {
-      font-size: var(--e-font-size-tip) !important;
-      line-height: var(--e-line-height-tip) !important;
+      font-size: var(--o-font-size-tip) !important;
+      line-height: var(--o-line-height-tip) !important;
     }
   }
 
@@ -321,9 +321,9 @@ onMounted(async () => {
   }
 
   .media-bottom-icon {
-    color: var(--e-color-brand1);
-    width: var(--e-font-size-h8);
-    height: var(--e-font-size-h8);
+    color: var(--o-color-brand1);
+    width: var(--o-font-size-h8);
+    height: var(--o-font-size-h8);
   }
 }
 
@@ -331,16 +331,16 @@ onMounted(async () => {
   display: none;
 }
 .home-media {
-  margin: var(--e-spacing-h2) auto;
+  margin: var(--o-spacing-h2) auto;
   .room-contain-media {
     display: none;
-    padding: var(--e-spacing-h2);
-    background-color: var(--e-color-bg2);
+    padding: var(--o-spacing-h2);
+    background-color: var(--o-color-bg2);
     .type-title {
-      font-size: var(--e-font-size-h7);
-      line-height: var(--e-font-size-h7);
+      font-size: var(--o-font-size-h7);
+      line-height: var(--o-font-size-h7);
       font-weight: 500;
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       display: block;
       @media screen and (max-width: 1080px) {
         display: none;
@@ -348,14 +348,14 @@ onMounted(async () => {
     }
     .room-box {
       display: grid;
-      margin-top: var(--e-spacing-h2);
+      margin-top: var(--o-spacing-h2);
       grid-template-columns: repeat(2, minmax(82px, 1fr));
-      column-gap: var(--e-spacing-h2);
-      row-gap: var(--e-spacing-h2);
+      column-gap: var(--o-spacing-h2);
+      row-gap: var(--o-spacing-h2);
       .room-item-pc {
         display: flex;
-        padding-bottom: var(--e-spacing-h2);
-        border-bottom: 1px solid var(--e-color-division1);
+        padding-bottom: var(--o-spacing-h2);
+        border-bottom: 1px solid var(--o-color-division1);
         p {
           text-align: left;
         }
@@ -365,27 +365,27 @@ onMounted(async () => {
           flex-shrink: 0;
           align-items: center;
           justify-content: center;
-          margin-right: var(--e-spacing-h4);
+          margin-right: var(--o-spacing-h4);
           width: 100px;
           height: 110px;
-          background-color: var(--e-color-bg3);
-          color: var(--e-color-text1);
+          background-color: var(--o-color-bg3);
+          color: var(--o-color-text1);
           .day {
-            margin-bottom: var(--e-spacing-h8);
-            font-size: var(--e-font-size-h4);
+            margin-bottom: var(--o-spacing-h8);
+            font-size: var(--o-font-size-h4);
           }
           .year {
-            padding-left: var(--e-spacing-h10);
+            padding-left: var(--o-spacing-h10);
           }
           .left-bottom {
-            font-size: var(--e-font-size-tip);
+            font-size: var(--o-font-size-tip);
           }
         }
         .room-item-right {
           display: flex;
           flex: 1;
           min-width: 0;
-          font-size: var(--e-font-size-text);
+          font-size: var(--o-font-size-text);
           justify-content: space-between;
           flex-direction: column;
           .room-top {
@@ -396,21 +396,21 @@ onMounted(async () => {
               overflow: hidden;
               text-overflow: ellipsis;
               font-weight: 500;
-              font-size: var(--e-font-size-h7);
-              color: var(--e-color-text1);
+              font-size: var(--o-font-size-h7);
+              color: var(--o-color-text1);
               &:hover {
-                color: var(--e-color-brand1);
+                color: var(--o-color-brand1);
               }
             }
             p {
-              line-height: var(--e-line-height-text);
-              font-size: var(--e-font-size-text);
-              margin-top: var(--e-spacing-h9);
-              color: var(--e-color-text1);
+              line-height: var(--o-line-height-text);
+              font-size: var(--o-font-size-text);
+              margin-top: var(--o-spacing-h9);
+              color: var(--o-color-text1);
             }
             @media screen and (max-width: 768px) {
               a {
-                font-size: var(--e-font-size-text);
+                font-size: var(--o-font-size-text);
               }
             }
           }
@@ -420,7 +420,7 @@ onMounted(async () => {
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 1;
-            color: var(--e-color-text1);
+            color: var(--o-color-text1);
             a {
               text-decoration: none;
             }
@@ -435,28 +435,28 @@ onMounted(async () => {
       .room-box {
         margin: 0;
         grid-template-columns: repeat(1, minmax(300px, 1fr));
-        row-gap: var(--e-spacing-h5);
+        row-gap: var(--o-spacing-h5);
       }
     }
     @media screen and (max-width: 768px) {
-      padding: var(--e-spacing-h6);
-      padding-bottom: var(--e-spacing-h5);
+      padding: var(--o-spacing-h6);
+      padding-bottom: var(--o-spacing-h5);
       .room-box {
         margin: 0;
         grid-template-columns: repeat(1, minmax(300px, 1fr));
         .room-item {
-          border-bottom: 1px solid var(--e-color-division1);
+          border-bottom: 1px solid var(--o-color-division1);
 
           .room-item-pc {
             border-bottom: none;
-            padding-bottom: var(--e-spacing-h5);
+            padding-bottom: var(--o-spacing-h5);
             .room-item-left {
-              margin-right: var(--e-spacing-h6);
-              width: var(--e-line-height-h3);
-              height: var(--e-line-height-h3);
+              margin-right: var(--o-spacing-h6);
+              width: var(--o-line-height-h3);
+              height: var(--o-line-height-h3);
               .day {
                 margin: 0;
-                font-size: var(--e-font-size-text);
+                font-size: var(--o-font-size-text);
               }
               .left-bottom {
                 display: flex;
@@ -470,8 +470,8 @@ onMounted(async () => {
                   white-space: inherit;
                   -webkit-box-orient: vertical;
                   -webkit-line-clamp: 2;
-                  line-height: var(--e-line-height-text);
-                  font-size: var(--e-font-size-text);
+                  line-height: var(--o-line-height-text);
+                  font-size: var(--o-font-size-text);
                 }
                 p {
                   display: none;
@@ -482,10 +482,10 @@ onMounted(async () => {
           .room-item-mo {
             display: flex;
             flex-direction: column;
-            font-size: var(--e-font-size-tip);
-            color: var(--e-color-text4);
+            font-size: var(--o-font-size-tip);
+            color: var(--o-color-text4);
             .author {
-              padding-bottom: var(--e-spacing-h8);
+              padding-bottom: var(--o-spacing-h8);
             }
             a {
               overflow: hidden;
@@ -493,8 +493,8 @@ onMounted(async () => {
               display: -webkit-box;
               -webkit-box-orient: vertical;
               -webkit-line-clamp: 2;
-              line-height: var(--e-line-height-tip);
-              margin-bottom: var(--e-spacing-h5);
+              line-height: var(--o-line-height-tip);
+              margin-bottom: var(--o-spacing-h5);
               color: inherit;
               text-decoration: none;
             }
@@ -510,13 +510,13 @@ onMounted(async () => {
 
 :deep(.title-list) {
   display: flex;
-  padding-bottom: var(--e-spacing-h2);
+  padding-bottom: var(--o-spacing-h2);
   justify-content: flex-end;
   .el-tabs__header {
     margin: 0;
   }
   @media screen and (max-width: 1080px) {
-    padding-bottom: var(--e-spacing-h5);
+    padding-bottom: var(--o-spacing-h5);
     justify-content: center;
   }
   .el-tabs__nav-scroll {
@@ -530,14 +530,14 @@ onMounted(async () => {
   }
   .title-item {
     cursor: pointer;
-    padding: var(--e-spacing-h6);
+    padding: var(--o-spacing-h6);
     &:hover {
-      color: var(--e-color-brand1);
+      color: var(--o-color-brand1);
     }
   }
   .active {
-    background-color: var(--e-color-brand1);
-    color: var(--e-color-text2) !important;
+    background-color: var(--o-color-brand1);
+    color: var(--o-color-text2) !important;
   }
 }
 </style>

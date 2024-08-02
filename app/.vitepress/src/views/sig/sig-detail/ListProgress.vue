@@ -75,13 +75,13 @@ const progressFormat = (item: number) => {
 .bgColor-maintainer {
   background-color: inherit !important;
   .el-progress-bar__inner {
-    background-color: var(--e-color-brand1);
+    background-color: var(--o-color-brand1);
   }
 }
 .bgColor-committer {
   background-color: inherit !important;
   :deep(.el-progress-bar__inner) {
-    background-color: var(--e-color-yellow5);
+    background-color: var(--o-color-yellow5);
   }
 }
 .bgColor-contributor {

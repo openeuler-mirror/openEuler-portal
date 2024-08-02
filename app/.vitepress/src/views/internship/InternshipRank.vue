@@ -346,13 +346,13 @@ onMounted(() => {
     font-size: 14px;
     @media (max-width: 1000px) {
       padding-top: 20px;
-      font-size: var(--e-font-size-tip);
+      font-size: var(--o-font-size-tip);
     }
     a {
       cursor: pointer;
       display: flex;
       justify-content: center;
-      color: var(--e-color-text1);
+      color: var(--o-color-text1);
       div {
         display: flex;
         justify-content: center;
