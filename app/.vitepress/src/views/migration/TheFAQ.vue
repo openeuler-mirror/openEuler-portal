@@ -62,7 +62,7 @@ const faqInfo = computed(() => {
     display: flex;
     background: rgba(254, 229, 184, 0.2);
     width: 85%;
-    border-left: 6px solid var(--o-color-yellow5);
+    border-left: 6px solid var(--e-color-yellow5);
     border-radius: 8px 0px 0px 8px;
 
     .content {
@@ -74,34 +74,34 @@ const faqInfo = computed(() => {
         display: flex;
         align-items: center;
         @media screen and (max-width: 768px) {
-          margin-bottom: var(--o-spacing-h8);
+          margin-bottom: var(--e-spacing-h8);
         }
         .o-icon {
-          font-size: var(--o-font-size-h5);
-          margin-right: var(--o-spacing-h8);
+          font-size: var(--e-font-size-h5);
+          margin-right: var(--e-spacing-h8);
           @media screen and (max-width: 768px) {
-            font-size: var(--o-font-size-h7);
+            font-size: var(--e-font-size-h7);
           }
         }
         p {
-          font-size: var(--o-font-size-h8);
-          color: var(--o-color-text1);
-          line-height: var(--o-line-height-h6);
+          font-size: var(--e-font-size-h8);
+          color: var(--e-color-text1);
+          line-height: var(--e-line-height-h6);
           @media screen and (max-width: 768px) {
-            font-size: var(--o-font-size-text);
-            line-height: var(--o-line-height-text);
+            font-size: var(--e-font-size-text);
+            line-height: var(--e-line-height-text);
             margin: 0;
           }
         }
       }
 
       .description {
-        font-size: var(--o-font-size-text);
-        color: var(--o-color-text4);
-        line-height: var(--o-line-height-text);
+        font-size: var(--e-font-size-text);
+        color: var(--e-color-text4);
+        line-height: var(--e-line-height-text);
         @media screen and (max-width: 768px) {
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-line-height-tip);
         }
       }
     }
@@ -110,22 +110,22 @@ const faqInfo = computed(() => {
   .question-answer {
     margin-top: 20px;
     .question {
-      font-size: var(--o-font-size-text);
+      font-size: var(--e-font-size-text);
       font-weight: 400;
-      color: var(--o-color-text4);
-      line-height: var(--o-line-height-text);
+      color: var(--e-color-text4);
+      line-height: var(--e-line-height-text);
     }
 
     .answer {
       display: flex;
       align-items: center;
-      background: var(--o-color-bg2);
-      border-left: 2px solid var(--o-color-border3);
+      background: var(--e-color-bg2);
+      border-left: 2px solid var(--e-color-border3);
       .answer-text {
-        font-size: var(--o-font-size-text);
+        font-size: var(--e-font-size-text);
         font-weight: 400;
-        color: var(--o-color-text4);
-        line-height: var(--o-line-height-text);
+        color: var(--e-color-text4);
+        line-height: var(--e-line-height-text);
         padding: 16px;
         display: inline;
       }

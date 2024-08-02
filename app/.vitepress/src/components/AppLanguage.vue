@@ -111,12 +111,12 @@ watch(
 .lang-menu {
   position: relative;
   height: 100%;
-  margin-right: var(--o-spacing-h5);
+  margin-right: var(--e-spacing-h5);
   &-link {
     display: flex;
     align-items: center;
-    font-size: var(--o-font-size-text);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-text);
+    color: var(--e-color-text1);
     cursor: pointer;
     height: 100%;
     &.no-state {
@@ -127,28 +127,28 @@ watch(
     position: absolute;
     top: 80px;
     left: -24px;
-    background: var(--o-color-bg2);
+    background: var(--e-color-bg2);
     cursor: pointer;
     z-index: 999;
-    box-shadow: var(--o-shadow-l1);
+    box-shadow: var(--e-shadow-l1);
     min-width: 78px;
     .lang-item {
-      line-height: var(--o-line-height-h3);
+      line-height: var(--e-line-height-h3);
       text-align: center;
-      font-size: var(--o-font-size-text);
-      color: var(--o-color-text1);
-      border-bottom: 1px solid var(--o-color-division1);
-      padding: 0 var(--o-spacing-h5);
+      font-size: var(--e-font-size-text);
+      color: var(--e-color-text1);
+      border-bottom: 1px solid var(--e-color-division1);
+      padding: 0 var(--e-spacing-h5);
       &:last-child {
         border-bottom: 0 none;
       }
 
       &:hover {
-        background: var(--o-color-brand1);
-        color: var(--o-color-white);
+        background: var(--e-color-brand1);
+        color: var(--e-color-white);
       }
       &.active {
-        color: var(--o-color-brand1);
+        color: var(--e-color-brand1);
         background: none;
         cursor: default;
       }
@@ -160,21 +160,21 @@ watch(
 }
 .mobile-change-language {
   display: none;
-  line-height: var(--o-line-height-h3);
+  line-height: var(--e-line-height-h3);
   span {
-    font-size: var(--o-font-size-tip);
-    color: var(--o-color-text4);
+    font-size: var(--e-font-size-tip);
+    color: var(--e-color-text4);
     margin-right: 12px;
     cursor: pointer;
     &.active {
-      color: var(--o-color-brand1);
+      color: var(--e-color-brand1);
       font-weight: 600;
     }
     &:not(:last-child) {
       &:after {
         content: '|';
         margin-left: 12px;
-        color: var(--o-color-text4);
+        color: var(--e-color-text4);
       }
     }
   }

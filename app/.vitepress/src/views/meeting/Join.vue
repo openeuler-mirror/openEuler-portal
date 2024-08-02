@@ -56,19 +56,19 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 h3 {
-  font-size: var(--o-font-size-h3);
+  font-size: var(--e-font-size-h3);
   font-weight: 300;
-  color: var(--o-color-text1);
-  line-height: var(--o-line-height-h3);
+  color: var(--e-color-text1);
+  line-height: var(--e-line-height-h3);
   width: 100%;
   text-align: center;
-  margin-top: var(--o-spacing-h1);
-  margin-bottom: var(--o-spacing-h2);
+  margin-top: var(--e-spacing-h1);
+  margin-bottom: var(--e-spacing-h2);
   @media (max-width: 768px) {
-    font-size: var(--o-font-size-h8);
-    line-height: var(--o-line-height-h8);
-    margin-top: var(--o-spacing-h2);
-    margin-bottom: var(--o-spacing-h5);
+    font-size: var(--e-font-size-h8);
+    line-height: var(--e-line-height-h8);
+    margin-top: var(--e-spacing-h2);
+    margin-bottom: var(--e-spacing-h5);
   }
 }
 .join-card-box {
@@ -86,31 +86,31 @@ h3 {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
   .join-card {
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
     padding: 24px;
 
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-color: var(--o-color-bg2);
-    box-shadow: var(--o-shadow-l1);
+    background-color: var(--e-color-bg2);
+    box-shadow: var(--e-shadow-l1);
     .join-title {
       font-weight: 500;
-      font-size: var(--o-font-size-h5);
-      line-height: var(--o-line-height-h5);
+      font-size: var(--e-font-size-h5);
+      line-height: var(--e-line-height-h5);
       @media (max-width: 768px) {
-        font-size: var(--o-font-size-h7);
-        line-height: var(--o-line-height-h7);
+        font-size: var(--e-font-size-h7);
+        line-height: var(--e-line-height-h7);
         grid-template-columns: repeat(1, minmax(200px, 1fr));
       }
     }
     .join-des {
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
       margin-top: 24px;
       @media (max-width: 768px) {
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
         grid-template-columns: repeat(1, minmax(200px, 1fr));
       }
     }
@@ -118,16 +118,16 @@ h3 {
       display: block;
       margin-top: auto;
       margin-top: 32px;
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
       @media (max-width: 768px) {
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
       }
       .o-button {
         :deep(.prefix-icon) {
           margin-right: 8px;
-          font-size: var(--o-font-size-h5);
+          font-size: var(--e-font-size-h5);
         }
       }
       a {

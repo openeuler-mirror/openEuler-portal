@@ -47,10 +47,10 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
   }
   .card-item {
     padding: 40px;
-    background-color: var(--o-color-bg2);
-    font-size: var(--o-font-size-h7);
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h6);
+    background-color: var(--e-color-bg2);
+    font-size: var(--e-font-size-h7);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h6);
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: 127px 112px;
@@ -60,22 +60,22 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
       background-size: 76px 67px;
     }
     .card-title {
-      color: var(--o-color-text1);
-      font-size: var(--o-font-size-h7);
-      line-height: var(--o-line-height-h7);
+      color: var(--e-color-text1);
+      font-size: var(--e-font-size-h7);
+      line-height: var(--e-line-height-h7);
       @media screen and (max-width: 1416px) {
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
       }
     }
     .desc {
       margin-top: 8px;
-      color: var(--o-color-text3);
-      font-size: var(--o-font-size-text);
+      color: var(--e-color-text3);
+      font-size: var(--e-font-size-text);
       max-width: 450px;
       @media screen and (max-width: 1416px) {
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
         max-width: 220px;
       }
     }

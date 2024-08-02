@@ -1,11 +1,11 @@
 @import './var.scss';
 
 .o-tag {
-  padding: var(--o-tag-padding);
-  font-size: var(--o-tag-font-size);
-  line-height: var(--o-tag-line-height);
-  color: var(--o-tag-font-color);
-  border: var(--o-tag-border);
+  padding: var(--e-tag-padding);
+  font-size: var(--e-tag-font-size);
+  line-height: var(--e-tag-line-height);
+  color: var(--e-tag-font-color);
+  border: var(--e-tag-border);
   outline: none;
   user-select: none;
   cursor: default;
@@ -13,18 +13,18 @@
 
   &:active {
     @media screen and (min-width: 1100px) {
-      color: var(--o-tag-font-color_active);
-      border: var(--o-tag-font-color_active);
+      color: var(--e-tag-font-color_active);
+      border: var(--e-tag-font-color_active);
     }
   }
 
   &.o-tag-type-primary {
-    color: var(--o-tag-font-color-primary);
-    border: var(--o-tag-border-primary);
+    color: var(--e-tag-font-color-primary);
+    border: var(--e-tag-border-primary);
     &:hover {
       @media screen and (min-width: 1100px) {
-        color: var(--o-color-brand2);
-        border: var(--o-tag-border-primary_hover);
+        color: var(--e-color-brand2);
+        border: var(--e-tag-border-primary_hover);
       }
     }
     &.o-tag-checked {
@@ -37,8 +37,8 @@
         height: 16px;
         &::after {
           border: 8px solid transparent;
-          border-right: 8px solid var(--o-color-brand1);
-          border-bottom: 8px solid var(--o-color-brand1);
+          border-right: 8px solid var(--e-color-brand1);
+          border-bottom: 8px solid var(--e-color-brand1);
           content: '';
           width: 16px;
           height: 16px;
@@ -65,34 +65,34 @@
     cursor: pointer;
   }
   &.o-tag-type-secondary {
-    color: var(--o-tag-font-color-secondary);
-    border: var(--o-tag-border-secondary);
-    line-height: var(--o-tag-small-line-height);
-    padding: var(--o-tag-secondary-padding);
-    background: var(--o-tag-bg-color-secondary);
+    color: var(--e-tag-font-color-secondary);
+    border: var(--e-tag-border-secondary);
+    line-height: var(--e-tag-small-line-height);
+    padding: var(--e-tag-secondary-padding);
+    background: var(--e-tag-bg-color-secondary);
   }
 
   &.o-tag-type-text {
-    color: var(--o-tag-font-color);
-    border: var(--o-tag-border-text);
+    color: var(--e-tag-font-color);
+    border: var(--e-tag-border-text);
     background: none;
     &:hover,
     &:active {
       @media screen and (min-width: 1100px) {
-        color: var(--o-tag-font-color_hover);
+        color: var(--e-tag-font-color_hover);
       }
     }
   }
   &.o-tag-size-small {
-    padding: var(--o-tag-small-padding);
-    font-size: var(--o-tag-small-font-size);
-    line-height: var(--o-tag-small-line-height);
+    padding: var(--e-tag-small-padding);
+    font-size: var(--e-tag-small-font-size);
+    line-height: var(--e-tag-small-line-height);
 
     &:hover,
     &:active {
       @media screen and (min-width: 1100px) {
-        color: var(--o-tag-font-color);
-        border: var(--o-tag-border);
+        color: var(--e-tag-font-color);
+        border: var(--e-tag-border);
       }
     }
   }

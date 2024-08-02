@@ -43,7 +43,7 @@ const handleSigClick = (sigName: string) => {
 .landscape-feature {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  column-gap: var(--o-spacing-h6);
+  column-gap: var(--e-spacing-h6);
   .landscape-feature-item {
     max-width: 180px;
     &:nth-child(1) {
@@ -88,21 +88,21 @@ const handleSigClick = (sigName: string) => {
       justify-content: center;
       padding: 18px;
       height: 80px;
-      font-size: var(--o-font-size-h8);
-      line-height: var(--o-line-height-h8);
-      color: var(--o-color-white);
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
+      color: var(--e-color-white);
       text-align: center;
       word-break: break-all;
     }
     .feature-item-title-en {
-      font-size: var(--o-font-size-text);
+      font-size: var(--e-font-size-text);
     }
 
     .feature-item-sig {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
       .sig-item {
         & + .sig-item {
-          margin-top: var(--o-spacing-h5);
+          margin-top: var(--e-spacing-h5);
         }
         cursor: pointer;
         width: 100%;
@@ -110,7 +110,7 @@ const handleSigClick = (sigName: string) => {
         padding: 0 23px;
         height: 46px;
 
-        font-size: var(--o-font-size-text);
+        font-size: var(--e-font-size-text);
         line-height: 46px;
         color: #002fa7;
         border: 1px solid #002fa7;

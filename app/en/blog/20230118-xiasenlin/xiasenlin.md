@@ -30,11 +30,11 @@ Hello, guys. I'm a maintainer of the small_leek, Application, ruby, epol, and De
 Interview Details
 -----------------
 
-<p style="color:var(--o-color-brand1)">What are the strengths of openEuler that attract you most?</p>
+<p style="color:var(--e-color-brand1)">What are the strengths of openEuler that attract you most?</p>
 
 For me, openEuler is one of the genuine open source communities in China. For developers, **openEuler has a low technical threshold and rich interest groups. From the beginning, the openEuler technical committee has gathered many technical experts in the OS field, and continues attracting experts from various segments.** Developers can not only obtain software packages from the openEuler community, but also communicate with technical experts. So I sincerely invite you guys to join the openEuler community.
 
-<p style="color:var(--o-color-brand1)">You were selected as one of the openEuler stars in 2022, which means that you have made outstanding contributions to openEuler. Can you tell us your contributions in detail?</p>
+<p style="color:var(--e-color-brand1)">You were selected as one of the openEuler stars in 2022, which means that you have made outstanding contributions to openEuler. Can you tell us your contributions in detail?</p>
 
 In 2022, I have done three major things in the community.
 
@@ -46,7 +46,7 @@ In 2022, I have done three major things in the community.
 
 In the openEuler community, I am mainly engaged in building community software engineering capabilities. If you have any suggestions, feel free to communicate with me.
 
-<p style="color:var(--o-color-brand1)">How do you participate in the community work? Do you have any experience to share with us?</p>
+<p style="color:var(--e-color-brand1)">How do you participate in the community work? Do you have any experience to share with us?</p>
 
 At the beginning, I didn't know much about how an open source community operates. After comparing RPM building, bug fixing, CVE fixing, and community infrastructure, which is RPM build system + gate, I gradually found the field that I was really interested in. Now, I mainly engage in software engineering capability building and optimization.
 
@@ -54,7 +54,7 @@ In the past year, I have communicated with OS vendors and SUSE experts to unders
 
 **Interest matters a lot to me. Only if I am really interested in this field can I be willing to invest more time in it.**
 
-<p style="color:var(--o-color-brand1)">What are your concerns in community affairs? And what's your following plan?</p>
+<p style="color:var(--e-color-brand1)">What are your concerns in community affairs? And what's your following plan?</p>
 
 In terms of community affairs, I value developers' suggestions or complaints on the community's engineering capabilities, because they are end users who give actual pain points.
 

@@ -197,34 +197,34 @@ watch(
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: var(--o-font-size-h6);
-  color: var(--o-color-text1);
+  font-size: var(--e-font-size-h6);
+  color: var(--e-color-text1);
   height: 100%;
   .empty-img {
     height: 300px;
   }
   .empty-text {
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
   }
 }
 .pagination {
-  margin-top: var(--o-spacing-h2);
+  margin-top: var(--e-spacing-h2);
   @media screen and (max-width: 768px) {
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
   }
 }
 .pagination-slot {
-  font-size: var(--o-font-size-text);
+  font-size: var(--e-font-size-text);
   font-weight: 400;
-  color: var(--o-color-text1);
-  line-height: var(--o-spacing-h4);
+  color: var(--e-color-text1);
+  line-height: var(--e-spacing-h4);
 }
 
 .split-line {
   height: 1px;
   border: none;
-  background-color: var(--o-color-division1);
-  margin-top: var(--o-spacing-h1);
+  background-color: var(--e-color-division1);
+  margin-top: var(--e-spacing-h1);
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -235,20 +235,20 @@ watch(
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: var(--o-spacing-h2) var(--o-spacing-h4);
+  grid-gap: var(--e-spacing-h2) var(--e-spacing-h4);
   @media (max-width: 1080px) {
     grid-template-columns: repeat(2, 1fr);
   }
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: var(--o-spacing-h5);
+    grid-gap: var(--e-spacing-h5);
   }
 
   .salon-review-card {
     cursor: pointer;
     width: 100%;
     :deep(.el-card__body) {
-      padding: var(--o-spacing-h4);
+      padding: var(--e-spacing-h4);
       width: 100%;
       display: flex;
       flex-flow: column;
@@ -268,9 +268,9 @@ watch(
       }
 
       .salon-review-card-title-mobile {
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
-        color: var(--o-color-text1);
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
+        color: var(--e-color-text1);
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -279,10 +279,10 @@ watch(
         word-break: break-all;
       }
       .salon-review-card-desc-mobile {
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
-        color: var(--o-color-text4);
-        margin-top: var(--o-spacing-h9);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
+        color: var(--e-color-text4);
+        margin-top: var(--e-spacing-h9);
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -295,20 +295,20 @@ watch(
     .salon-review-card-icon {
       height: 24px;
       width: 24px;
-      color: var(--o-color-text4);
-      margin-right: var(--o-spacing-h9);
+      color: var(--e-color-text4);
+      margin-right: var(--e-spacing-h9);
       @media (max-width: 768px) {
         height: 16px;
         width: 16px;
-        color: var(--o-color-neutral8);
-        margin-right: var(--o-spacing-h10);
+        color: var(--e-color-neutral8);
+        margin-right: var(--e-spacing-h10);
       }
     }
 
     .salon-review-card-title {
-      font-size: var(--o-font-size-h8);
-      line-height: var(--o-line-height-h8);
-      color: var(--o-color-text1);
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
+      color: var(--e-color-text1);
       overflow: hidden;
       text-overflow: ellipsis;
       height: 52px;
@@ -324,11 +324,11 @@ watch(
     .salon-review-card-desc {
       width: 100%;
       height: 172px;
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
-      color: var(--o-color-text1);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
+      color: var(--e-color-text1);
       overflow: hidden;
-      margin-top: var(--o-spacing-h4);
+      margin-top: var(--e-spacing-h4);
       text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -346,7 +346,7 @@ watch(
       flex-flow: row;
       justify-content: center;
       align-items: center;
-      margin-top: var(--o-spacing-h4);
+      margin-top: var(--e-spacing-h4);
       @media (max-width: 768px) {
         margin-top: 0px;
       }
@@ -361,13 +361,13 @@ watch(
       span {
         position: absolute;
         text-align: center;
-        font-size: var(--o-font-size-h6);
-        line-height: var(--o-line-height-h6);
+        font-size: var(--e-font-size-h6);
+        line-height: var(--e-line-height-h6);
         color: #fff;
         max-width: 400px;
         @media (max-width: 768px) {
-          font-size: var(--o-font-size-text);
-          line-height: var(--o-line-height-text);
+          font-size: var(--e-font-size-text);
+          line-height: var(--e-line-height-text);
         }
       }
     }
@@ -378,9 +378,9 @@ watch(
       justify-content: center;
       align-items: center;
       width: 100%;
-      margin-top: var(--o-spacing-h4);
+      margin-top: var(--e-spacing-h4);
       @media (max-width: 768px) {
-        margin-top: var(--o-spacing-h5);
+        margin-top: var(--e-spacing-h5);
       }
     }
 
@@ -388,13 +388,13 @@ watch(
       padding: 0;
       width: 100%;
       @media (max-width: 768px) {
-        padding: var(--o-spacing-h5) var(--o-spacing-h6);
+        padding: var(--e-spacing-h5) var(--e-spacing-h6);
       }
 
       .home {
-        margin-left: var(--o-spacing-h2);
+        margin-left: var(--e-spacing-h2);
         @media (max-width: 768px) {
-          margin-left: var(--o-spacing-h5);
+          margin-left: var(--e-spacing-h5);
         }
       }
       .address {
@@ -405,12 +405,12 @@ watch(
       }
 
       span {
-        color: var(--o-color-text4);
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
+        color: var(--e-color-text4);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
         white-space: nowrap;
         @media (max-width: 768px) {
-          color: var(--o-color-neutral8);
+          color: var(--e-color-neutral8);
         }
       }
     }
@@ -418,14 +418,14 @@ watch(
 }
 
 .salon-time {
-  margin-top: var(--o-spacing-h2);
+  margin-top: var(--e-spacing-h2);
   display: block;
   @media (max-width: 768px) {
     display: none;
   }
 }
 .salon-tabs {
-  background-color: var(--o-color-bg2);
+  background-color: var(--e-color-bg2);
   display: flex;
   align-items: flex-end;
   justify-content: center;

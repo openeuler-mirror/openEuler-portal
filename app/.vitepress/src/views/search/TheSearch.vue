@@ -791,15 +791,15 @@ const enterEvent = () => {
 <style lang="scss" scoped>
 .search {
   max-width: 1504px;
-  padding: var(--o-spacing-h2) 44px var(--o-spacing-h1);
+  padding: var(--e-spacing-h2) 44px var(--e-spacing-h1);
   margin: 0 auto;
   .input-box {
     position: relative;
     .search-recommend {
       position: absolute;
       width: 100%;
-      background-color: var(--o-color-bg2);
-      box-shadow: var(--o-shadow-l1);
+      background-color: var(--e-color-bg2);
+      box-shadow: var(--e-shadow-l1);
       z-index: 10;
     }
   }
@@ -825,8 +825,8 @@ const enterEvent = () => {
     .suggest-list-box {
       display: flex;
       margin: 16px 0 32px;
-      color: var(--o-color-text1);
-      font-size: var(--o-font-size-text);
+      color: var(--e-color-text1);
+      font-size: var(--e-font-size-text);
       @media (max-width: 768px) {
         padding: 0 16px;
         margin: 12px 0 24px;
@@ -837,7 +837,7 @@ const enterEvent = () => {
           margin-right: 8px;
           cursor: pointer;
           :deep(em) {
-            color: var(--o-color-brand1);
+            color: var(--e-color-brand1);
             font-style: normal;
           }
         }
@@ -847,17 +847,17 @@ const enterEvent = () => {
 
   .search-pagination {
     width: 100%;
-    margin-top: var(--o-spacing-h2);
+    margin-top: var(--e-spacing-h2);
     @media (max-width: 768px) {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
     }
   }
   .search-result {
     .pagination-slot {
-      font-size: var(--o-font-size-text);
+      font-size: var(--e-font-size-text);
       font-weight: 400;
-      color: var(--o-color-text1);
-      line-height: var(--o-spacing-h4);
+      color: var(--e-color-text1);
+      line-height: var(--e-spacing-h4);
     }
     .result-left {
       overflow: hidden;
@@ -883,50 +883,50 @@ const enterEvent = () => {
       }
       .gpt-block {
         width: 100%;
-        margin-top: var(--o-spacing-h2);
+        margin-top: var(--e-spacing-h2);
         @media (max-width: 768px) {
-          margin-top: var(--o-spacing-h5);
+          margin-top: var(--e-spacing-h5);
         }
         .gpt-content {
-          box-shadow: var(--o-shadow-l1);
-          background-color: var(--o-color-bg2);
-          padding: var(--o-spacing-h5) var(--o-spacing-h4);
+          box-shadow: var(--e-shadow-l1);
+          background-color: var(--e-color-bg2);
+          padding: var(--e-spacing-h5) var(--e-spacing-h4);
           white-space: pre-wrap;
-          font-size: var(--o-font-size-text);
-          line-height: var(--o-line-height-text);
+          font-size: var(--e-font-size-text);
+          line-height: var(--e-line-height-text);
           @media (max-width: 768px) {
-            font-size: var(--o-font-size-tip);
-            line-height: var(--o-line-height-tip);
-            padding: var(--o-spacing-h8);
-            margin-left: var(--o-spacing-h5);
-            margin-right: var(--o-spacing-h5);
+            font-size: var(--e-font-size-tip);
+            line-height: var(--e-line-height-tip);
+            padding: var(--e-spacing-h8);
+            margin-left: var(--e-spacing-h5);
+            margin-right: var(--e-spacing-h5);
           }
           :deep(.el-loading-mask) {
-            background-color: var(--o-color-fill5);
+            background-color: var(--e-color-fill5);
           }
           .gpt-text {
-            padding: var(--o-spacing-h5);
-            background-color: var(--o-color-bg1);
+            padding: var(--e-spacing-h5);
+            background-color: var(--e-color-bg1);
             @media (max-width: 768px) {
-              padding: var(--o-spacing-h8);
+              padding: var(--e-spacing-h8);
             }
             .gpt-text-content {
-              color: var(--o-color-text1);
+              color: var(--e-color-text1);
               max-height: 300px;
               overflow-y: auto;
               &::-webkit-scrollbar-track {
                 border-radius: 4px;
-                background-color: var(--o-color-bg2);
+                background-color: var(--e-color-bg2);
               }
 
               &::-webkit-scrollbar {
                 width: 6px;
-                background-color: var(--o-color-bg2);
+                background-color: var(--e-color-bg2);
               }
 
               &::-webkit-scrollbar-thumb {
                 border-radius: 4px;
-                background: var(--o-color-division1);
+                background: var(--e-color-division1);
               }
 
               @keyframes blink {
@@ -942,7 +942,7 @@ const enterEvent = () => {
               }
 
               .blinking {
-                font-size: var(--o-font-size-h8);
+                font-size: var(--e-font-size-h8);
                 font-weight: 900;
                 animation: blink 1s infinite;
               }
@@ -952,31 +952,31 @@ const enterEvent = () => {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: var(--o-spacing-h5);
+            padding-top: var(--e-spacing-h5);
             .icons {
-              margin-right: var(--o-spacing-h3);
-              color: var(--o-color-text1);
+              margin-right: var(--e-spacing-h3);
+              color: var(--e-color-text1);
             }
             .like-icon {
-              font-size: var(--o-font-size-h7);
+              font-size: var(--e-font-size-h7);
               cursor: pointer;
             }
             .stomp-icon {
-              margin-left: var(--o-spacing-h6);
+              margin-left: var(--e-spacing-h6);
             }
           }
         }
         .gpt-content-before {
-          padding: var(--o-spacing-h5) var(--o-spacing-h3);
+          padding: var(--e-spacing-h5) var(--e-spacing-h3);
           display: flex;
           justify-content: space-between;
           .btn {
             margin-left: 84px;
-            margin-top: var(--o-spacing-h5);
-            margin-bottom: var(--o-spacing-h5);
+            margin-top: var(--e-spacing-h5);
+            margin-bottom: var(--e-spacing-h5);
           }
           @media (max-width: 768px) {
-            padding: var(--o-spacing-h5) var(--o-spacing-h10);
+            padding: var(--e-spacing-h5) var(--e-spacing-h10);
           }
         }
       }
@@ -984,10 +984,10 @@ const enterEvent = () => {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: var(--o-spacing-h2);
+        margin-top: var(--e-spacing-h2);
 
         @media (max-width: 768px) {
-          margin-top: var(--o-spacing-h5);
+          margin-top: var(--e-spacing-h5);
         }
         .select-options {
           display: flex;
@@ -995,8 +995,8 @@ const enterEvent = () => {
           align-items: center;
           padding: 0 40px;
           width: 100%;
-          background-color: var(--o-color-bg2);
-          border-bottom: 1px solid var(--o-color-division1);
+          background-color: var(--e-color-bg2);
+          border-bottom: 1px solid var(--e-color-division1);
           @media screen and (max-width: 1620px) {
             padding: 0 24px;
           }
@@ -1006,13 +1006,13 @@ const enterEvent = () => {
             flex-direction: column;
             padding: 0;
             width: calc(100% - 32px);
-            background-color: var(--o-color-bg1);
+            background-color: var(--e-color-bg1);
             border: none;
           }
           .type {
             display: flex;
             flex-shrink: 0;
-            background-color: var(--o-color-bg2);
+            background-color: var(--e-color-bg2);
             @include scrollbar;
             @media (max-width: 768px) {
               width: 100%;
@@ -1021,7 +1021,7 @@ const enterEvent = () => {
               padding: 0 16px;
               white-space: nowrap;
               margin-bottom: 16px;
-              box-shadow: var(--o-shadow-l1);
+              box-shadow: var(--e-shadow-l1);
             }
             li,
             .multiple {
@@ -1031,8 +1031,8 @@ const enterEvent = () => {
               height: 63px;
               min-width: 56px;
               margin-right: 32px;
-              color: var(--o-color-text1);
-              font-size: var(--o-font-size-h8);
+              color: var(--e-color-text1);
+              font-size: var(--e-font-size-h8);
               @media screen and (max-width: 1620px) {
                 margin-right: 24px;
               }
@@ -1040,7 +1040,7 @@ const enterEvent = () => {
                 height: 34px;
                 line-height: 34px;
                 min-width: auto;
-                font-size: var(--o-font-size-text);
+                font-size: var(--e-font-size-text);
                 margin-right: 0;
                 text-align: center;
                 & + li {
@@ -1075,12 +1075,12 @@ const enterEvent = () => {
               cursor: pointer;
             }
             .active {
-              color: var(--o-color-brand1);
+              color: var(--e-color-brand1);
               .multiple {
-                color: var(--o-color-brand1);
+                color: var(--e-color-brand1);
               }
               &::after {
-                background-color: var(--o-color-brand1);
+                background-color: var(--e-color-brand1);
               }
             }
           }
@@ -1096,7 +1096,7 @@ const enterEvent = () => {
             }
             .el-input__wrapper {
               padding: 0 8px;
-              box-shadow: 0 0 1px var(--o-color-border1);
+              box-shadow: 0 0 1px var(--e-color-border1);
             }
           }
         }
@@ -1105,37 +1105,37 @@ const enterEvent = () => {
           min-height: 400px;
           width: 100%;
           height: 100%;
-          box-shadow: var(--o-shadow-l1);
-          background-color: var(--o-color-bg2);
+          box-shadow: var(--e-shadow-l1);
+          background-color: var(--e-color-bg2);
           @media (max-width: 768px) {
             width: 100vw;
-            padding: var(--o-spacing-h5) var(--o-spacing-h5) 0
-              var(--o-spacing-h5);
+            padding: var(--e-spacing-h5) var(--e-spacing-h5) 0
+              var(--e-spacing-h5);
             min-height: 200px;
-            background-color: var(--o-color-bg1);
+            background-color: var(--e-color-bg1);
             box-shadow: none;
           }
           .content-list {
-            padding: 0 var(--o-spacing-h2) var(--o-spacing-h2)
-              var(--o-spacing-h2);
+            padding: 0 var(--e-spacing-h2) var(--e-spacing-h2)
+              var(--e-spacing-h2);
             @media (max-width: 768px) {
               padding: 0;
-              background-color: var(--o-color-bg2);
+              background-color: var(--e-color-bg2);
             }
             li {
-              padding-top: var(--o-spacing-h2);
+              padding-top: var(--e-spacing-h2);
               &:empty {
                 padding: 0;
               }
               @media (max-width: 768px) {
-                padding-top: var(--o-spacing-h5);
-                margin: 0 var(--o-spacing-h5);
+                padding-top: var(--e-spacing-h5);
+                margin: 0 var(--e-spacing-h5);
                 &::after {
                   display: block;
                   content: '';
                   width: 100%;
                   height: 1px;
-                  background-color: var(--o-color-division1);
+                  background-color: var(--e-color-division1);
                   margin-top: 16px;
                 }
                 &:nth-last-of-type(1)::after {
@@ -1143,25 +1143,25 @@ const enterEvent = () => {
                 }
               }
               h3 {
-                font-size: var(--o-font-size-h5);
-                color: var(--o-color-text1);
-                line-height: var(--o-line-height-h5);
+                font-size: var(--e-font-size-h5);
+                color: var(--e-color-text1);
+                line-height: var(--e-line-height-h5);
                 font-weight: 500;
                 cursor: pointer;
                 :deep(span) {
-                  color: var(--o-color-brand1);
+                  color: var(--e-color-brand1);
                 }
                 @media (max-width: 768px) {
-                  font-size: var(--o-font-size-text);
-                  line-height: var(--o-line-height-text);
+                  font-size: var(--e-font-size-text);
+                  line-height: var(--e-line-height-text);
                 }
               }
               .detail {
                 cursor: pointer;
                 margin-top: 16px;
-                font-size: var(--o-font-size-text);
-                line-height: var(--o-line-height-text);
-                color: var(--o-color-text1);
+                font-size: var(--e-font-size-text);
+                line-height: var(--e-line-height-text);
+                color: var(--e-color-text1);
                 max-height: 110px;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -1172,31 +1172,31 @@ const enterEvent = () => {
                 -webkit-box-orient: vertical;
 
                 :deep(span) {
-                  color: var(--o-color-brand1);
+                  color: var(--e-color-brand1);
                 }
                 @media (max-width: 768px) {
                   margin-top: 4px;
                   -webkit-line-clamp: 6;
                   line-clamp: 6;
-                  font-size: var(--o-font-size-tip);
-                  line-height: var(--o-line-height-tip);
-                  color: var(--o-color-text4);
+                  font-size: var(--e-font-size-tip);
+                  line-height: var(--e-line-height-tip);
+                  color: var(--e-color-text4);
                 }
               }
               .from {
                 margin-top: 15px;
-                font-size: var(--o-font-size-text);
-                line-height: var(--o-line-height-text);
-                color: var(--o-color-text1);
+                font-size: var(--e-font-size-text);
+                line-height: var(--e-line-height-text);
+                color: var(--e-color-text1);
                 @media (max-width: 768px) {
                   margin-top: 8px;
-                  font-size: var(--o-font-size-tip);
-                  line-height: var(--o-line-height-tip);
-                  color: var(--o-color-text4);
+                  font-size: var(--e-font-size-tip);
+                  line-height: var(--e-line-height-tip);
+                  color: var(--e-color-text4);
                 }
               }
               .version {
-                margin-top: var(--o-spacing-h8);
+                margin-top: var(--e-spacing-h8);
               }
             }
           }
@@ -1210,43 +1210,43 @@ const enterEvent = () => {
       width: 320px;
       overflow: hidden;
       @include scrollbar;
-      margin-top: var(--o-spacing-h2);
+      margin-top: var(--e-spacing-h2);
       @media (max-width: 768px) {
-        margin-top: var(--o-spacing-h5);
+        margin-top: var(--e-spacing-h5);
       }
       &.exist-suggest-1 {
         margin-top: 0;
       }
       .rpm-list {
-        background-color: var(--o-color-bg2);
-        box-shadow: var(--o-shadow-l1);
+        background-color: var(--e-color-bg2);
+        box-shadow: var(--e-shadow-l1);
         height: 100%;
       }
       @media (max-width: 1200px) {
         display: none;
       }
       h3 {
-        font-size: var(--o-font-size-h5);
-        line-height: var(--o-line-height-h5);
-        padding: var(--o-spacing-h2);
+        font-size: var(--e-font-size-h5);
+        line-height: var(--e-line-height-h5);
+        padding: var(--e-spacing-h2);
         padding-bottom: 0;
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
       }
       ul {
-        padding: 0 var(--o-spacing-h2);
+        padding: 0 var(--e-spacing-h2);
         li {
-          padding-top: var(--o-spacing-h4);
-          color: var(--o-color-text1);
+          padding-top: var(--e-spacing-h4);
+          color: var(--e-color-text1);
           a {
-            font-size: var(--o-font-size-text);
-            line-height: var(--o-line-height-text);
-            color: var(--o-color-brand1);
+            font-size: var(--e-font-size-text);
+            line-height: var(--e-line-height-text);
+            color: var(--e-color-brand1);
           }
           p {
-            font-size: var(--o-font-size-text);
-            line-height: var(--o-line-height-text);
-            margin-top: var(--o-spacing-h8);
-            color: var(--o-color-text4);
+            font-size: var(--e-font-size-text);
+            line-height: var(--e-line-height-text);
+            margin-top: var(--e-spacing-h8);
+            color: var(--e-color-text4);
           }
         }
       }
@@ -1263,13 +1263,13 @@ const enterEvent = () => {
     grid-gap: 12px;
   }
   @media (max-width: 1200px) {
-    padding: 0 16px var(--o-spacing-h2);
-    padding-top: var(--o-spacing-h2);
+    padding: 0 16px var(--e-spacing-h2);
+    padding-top: var(--e-spacing-h2);
     grid-template-columns: 1fr;
   }
   @media (max-width: 768px) {
-    padding: 0 0 var(--o-spacing-h2) 0;
-    padding-top: var(--o-spacing-h5);
+    padding: 0 0 var(--e-spacing-h2) 0;
+    padding-top: var(--e-spacing-h5);
   }
 }
 

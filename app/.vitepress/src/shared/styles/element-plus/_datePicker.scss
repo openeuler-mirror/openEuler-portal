@@ -8,21 +8,21 @@
         border-radius: 0;
         padding: 1px 8px;
         height: 48px;
-        box-shadow: var(--o-shadow-l1);
-        background-color: var(--o-color-bg2);
+        box-shadow: var(--e-shadow-l1);
+        background-color: var(--e-color-bg2);
 
         &:hover {
-            box-shadow: var(--o-shadow-l1);
+            box-shadow: var(--e-shadow-l1);
         }
     }
 
     .el-range-input {
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
     }
 
     .el-range__icon {
-        color: var(--o-color-text4);
-        font-size: var(--o-font-size-h5);
+        color: var(--e-color-text4);
+        font-size: var(--e-font-size-h5);
 
         svg {
             width: 1rem;
@@ -36,21 +36,21 @@
 }
 
 .el-picker-panel {
-    background-color: var(--o-color-bg2);
-    color: var(--o-color-text1);
+    background-color: var(--e-color-bg2);
+    color: var(--e-color-text1);
     border-radius: 0;
 
     &.el-date-range-picker {
-        --el-datepicker-header-text-color: var(--o-color-text1);
-        --el-datepicker-hover-text-color: var(--o-color-brand2);
-        --el-datepicker-active-color: var(--o-color-brand1);
+        --el-datepicker-header-text-color: var(--e-color-text1);
+        --el-datepicker-hover-text-color: var(--e-color-brand2);
+        --el-datepicker-active-color: var(--e-color-brand1);
 
         svg {
-            color: var(--o-color-text1);
+            color: var(--e-color-text1);
         }
 
         .el-date-table td.in-range .el-date-table-cell {
-            background-color: var(--o-color-bg3);
+            background-color: var(--e-color-bg3);
         }
     }
 

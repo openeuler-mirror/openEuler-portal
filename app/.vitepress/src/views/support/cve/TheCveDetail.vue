@@ -215,125 +215,125 @@ onMounted(() => {
 </template>
 <style lang="scss" scoped>
 .detail-link {
-  color: var(--o-color-link1);
+  color: var(--e-color-link1);
   cursor: pointer;
 }
 
 .breadcrumb {
-  color: var(--o-color-text1);
-  background: var(--o-color-bg1);
+  color: var(--e-color-text1);
+  background: var(--e-color-bg1);
   display: flex;
   margin-bottom: 0;
   @media screen and (max-width: 768px) {
-    margin-bottom: var(--o-spacing-h5);
+    margin-bottom: var(--e-spacing-h5);
   }
   .last-page {
-    font-size: var(--o-font-size-tip);
+    font-size: var(--e-font-size-tip);
     font-weight: normal;
-    color: var(--o-color-text4);
-    line-height: var(--o-line-height-tip);
+    color: var(--e-color-text4);
+    line-height: var(--e-line-height-tip);
     cursor: pointer;
   }
   .separtor {
-    margin: 0 var(--o-spacing-h10);
+    margin: 0 var(--e-spacing-h10);
     .o-icon {
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
     }
   }
   .current-page {
-    font-size: var(--o-font-size-tip);
+    font-size: var(--e-font-size-tip);
     font-weight: 600;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-tip);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-tip);
   }
 }
 .cve-head {
-  padding: var(--o-spacing-h2) var(--o-spacing-h2) var(--o-spacing-h2) 0;
-  background: var(--o-color-bg1);
+  padding: var(--e-spacing-h2) var(--e-spacing-h2) var(--e-spacing-h2) 0;
+  background: var(--e-color-bg1);
   @media screen and (max-width: 768px) {
-    padding: var(--o-spacing-h5);
-    margin-bottom: var(--o-spacing-h5);
-    background: var(--o-color-bg2);
-    box-shadow: var(--o-shadow-l1);
+    padding: var(--e-spacing-h5);
+    margin-bottom: var(--e-spacing-h5);
+    background: var(--e-color-bg2);
+    box-shadow: var(--e-shadow-l1);
   }
   .cve-name {
-    font-size: var(--o-font-size-h3);
+    font-size: var(--e-font-size-h3);
     font-weight: normal;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h3);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h3);
     @media screen and (max-width: 768px) {
-      line-height: var(--o-line-height-h8);
-      font-size: var(--o-font-size-h8);
+      line-height: var(--e-line-height-h8);
+      font-size: var(--e-font-size-h8);
       font-weight: 300;
-      color: var(--o-color-text1);
-      margin-bottom: var(--o-spacing-h8);
+      color: var(--e-color-text1);
+      margin-bottom: var(--e-spacing-h8);
     }
   }
   .cve-intro {
-    font-size: var(--o-font-size-text);
+    font-size: var(--e-font-size-text);
     font-weight: 400;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-text);
-    margin-top: var(--o-spacing-h4);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-text);
+    margin-top: var(--e-spacing-h4);
     div {
       display: flex;
     }
     span {
       display: inline-block;
-      margin-right: var(--o-spacing-h8);
+      margin-right: var(--e-spacing-h8);
     }
     @media screen and (max-width: 768px) {
       margin: 0;
-      font-size: var(--o-font-size-tip);
+      font-size: var(--e-font-size-tip);
       font-weight: 400;
-      line-height: var(--o-line-height-tip);
+      line-height: var(--e-line-height-tip);
     }
   }
 }
 .cve-detail-body {
-  background-color: var(--o-color-bg2);
-  padding: var(--o-spacing-h2);
+  background-color: var(--e-color-bg2);
+  padding: var(--e-spacing-h2);
   @media screen and (max-width: 768px) {
-    padding: var(--o-spacing-h5);
+    padding: var(--e-spacing-h5);
   }
   .detail-item {
-    margin-bottom: var(--o-spacing-h2);
+    margin-bottom: var(--e-spacing-h2);
     &:last-child {
       margin-bottom: 0;
     }
     @media screen and (max-width: 768px) {
-      background-color: var(--o-color-bg2);
+      background-color: var(--e-color-bg2);
     }
     &-title {
-      margin-bottom: var(--o-spacing-h4);
-      font-size: var(--o-font-size-h5);
+      margin-bottom: var(--e-spacing-h4);
+      font-size: var(--e-font-size-h5);
       font-weight: 400;
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
       @media screen and (max-width: 768px) {
-        font-size: var(--o-font-size-h8);
-        line-height: var(--o-line-height-h8);
-        margin-bottom: var(--o-spacing-h8);
+        font-size: var(--e-font-size-h8);
+        line-height: var(--e-line-height-h8);
+        margin-bottom: var(--e-spacing-h8);
       }
     }
     .o-table {
       box-shadow: none;
     }
     &-content {
-      color: var(--o-color-text4);
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
-      margin-bottom: var(--o-spacing-h2);
+      color: var(--e-color-text4);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
+      margin-bottom: var(--e-spacing-h2);
       @media screen and (max-width: 768px) {
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
-        margin-bottom: var(--o-spacing-h4);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
+        margin-bottom: var(--e-spacing-h4);
       }
     }
     .metrics-list,
     .affect-list {
-      margin-bottom: var(--o-spacing-h2);
+      margin-bottom: var(--e-spacing-h2);
       .detail-page {
-        color: var(--o-color-link1);
+        color: var(--e-color-link1);
         cursor: pointer;
       }
       @media screen and (max-width: 768px) {
@@ -347,22 +347,22 @@ onMounted(() => {
         display: block;
       }
       .item {
-        padding: var(--o-spacing-h5);
-        font-size: var(--o-font-size-tip);
+        padding: var(--e-spacing-h5);
+        font-size: var(--e-font-size-tip);
         font-weight: 400;
-        color: var(--o-color-neutral8);
-        line-height: var(--o-line-height-tip);
-        background-color: var(--o-color-bg4);
+        color: var(--e-color-neutral8);
+        line-height: var(--e-line-height-tip);
+        background-color: var(--e-color-bg4);
         &:nth-child(2n) {
-          background: var(--o-color-bg1);
+          background: var(--e-color-bg1);
         }
         & li {
-          margin-bottom: var(--o-spacing-h8);
+          margin-bottom: var(--e-spacing-h8);
         }
         li:last-child {
           margin-bottom: 0;
           a {
-            color: var(--o-color-link1);
+            color: var(--e-color-link1);
           }
         }
         li:nth-child(2) {
@@ -372,8 +372,8 @@ onMounted(() => {
           }
         }
         span {
-          color: var(--o-color-text1);
-          margin-right: var(--o-spacing-h8);
+          color: var(--e-color-text1);
+          margin-right: var(--e-spacing-h8);
         }
       }
     }

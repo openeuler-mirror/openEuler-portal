@@ -54,8 +54,8 @@ const height = ref(1710);
 <style lang="scss" scoped>
 .feedback-wrap {
   margin-top: 40px;
-  background: var(--o-color-bg2);
-  box-shadow: var(--o-shadow-l1);
+  background: var(--e-color-bg2);
+  box-shadow: var(--e-shadow-l1);
   padding: 40px;
   @media (max-width: 1100px) {
     margin-top: 24px;
@@ -71,7 +71,7 @@ const height = ref(1710);
     font-weight: 500;
     margin: 0 0 40px;
     text-align: center;
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
     @media (max-width: 1100px) {
       font-size: 24px;
       margin: 24px 0;

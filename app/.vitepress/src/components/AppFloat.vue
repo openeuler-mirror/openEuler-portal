@@ -694,20 +694,20 @@ watch(
       width: 200px;
       top: 0;
       right: 0;
-      background-color: var(--o-color-bg2);
+      background-color: var(--e-color-bg2);
       padding: 16px;
       transform: translate(34%, -110%);
       @media (max-width: 1700px) {
         transform: translate(0, -110%);
       }
       .tip-title {
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
         font-size: 16px;
       }
       .tip-detail {
         margin-top: 4px;
         font-size: 14px;
-        color: var(--o-color-text3);
+        color: var(--e-color-text3);
       }
       .btn-box {
         margin-top: 8px;
@@ -717,7 +717,7 @@ watch(
           font-size: 14px;
           border: none;
           padding: 0;
-          color: var(--o-color-text3);
+          color: var(--e-color-text3);
         }
       }
       &::after {
@@ -725,7 +725,7 @@ watch(
         content: '';
         width: 0;
         border-left: 8px solid transparent;
-        border-top: 8px solid var(--o-color-bg2);
+        border-top: 8px solid var(--e-color-bg2);
         border-right: 8px solid transparent;
         border-bottom: 8px solid transparent;
         position: absolute;
@@ -744,16 +744,16 @@ watch(
       width: 48px;
       height: 48px;
       padding: 12px;
-      background-color: var(--o-color-bg2);
+      background-color: var(--e-color-bg2);
       background-size: cover;
       font-size: 12px;
       line-height: 18px;
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
       position: relative;
       cursor: pointer;
       &:hover {
         .icon-box {
-          color: var(--o-color-brand1);
+          color: var(--e-color-brand1);
         }
         .o-popup2 {
           transform: scale(1);
@@ -765,7 +765,7 @@ watch(
         content: '';
         height: 1px;
         width: 16px;
-        background-color: var(--o-color-bg4);
+        background-color: var(--e-color-bg4);
         position: absolute;
         left: 50%;
         top: 0;
@@ -779,12 +779,12 @@ watch(
         width: 360px;
         top: 0;
         right: 64px;
-        background-color: var(--o-color-bg2);
+        background-color: var(--e-color-bg2);
         padding: 16px 30px;
         transition: all 0.5s;
         transform: scale(0);
         transform-origin: 100% 50%;
-        box-shadow: var(--o-shadow-l2);
+        box-shadow: var(--e-shadow-l2);
         cursor: default;
         &.show {
           transform: scale(1);
@@ -794,13 +794,13 @@ watch(
           top: 5px;
           right: 10px;
           cursor: pointer;
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
         }
         .slider {
           .slider-title {
-            font-size: var(--o-font-size-text);
+            font-size: var(--e-font-size-text);
             line-height: 20px;
-            color: var(--o-color-text1);
+            color: var(--e-color-text1);
             text-align: center;
             white-space: nowrap;
             .title-name {
@@ -816,16 +816,16 @@ watch(
                 height: 20px;
                 line-height: 20px;
                 text-align: center;
-                font-size: var(--o-font-size-tip);
-                color: var(--o-color-text1);
-                background-color: var(--o-color-bg2);
-                box-shadow: var(--o-shadow-l2);
+                font-size: var(--e-font-size-tip);
+                color: var(--e-color-text1);
+                background-color: var(--e-color-bg2);
+                box-shadow: var(--e-shadow-l2);
                 position: absolute;
                 top: -30px;
                 transform: translateX(-50%);
                 left: v-bind(scorePosition);
                 &::after {
-                  border-color: var(--o-color-bg2) transparent transparent;
+                  border-color: var(--e-color-bg2) transparent transparent;
                   border-style: solid;
                   border-width: 8px 8px 0;
                   bottom: -5px;
@@ -842,7 +842,7 @@ watch(
               height: auto;
               height: 8px;
               .el-slider__runway {
-                background-color: var(--o-color-bg-secondary);
+                background-color: var(--e-color-bg-secondary);
               }
               .el-slider__bar {
                 background-image: linear-gradient(
@@ -865,27 +865,27 @@ watch(
               .el-slider__stop {
                 width: 2px;
                 height: 2px;
-                background-color: var(--o-color-bg6);
+                background-color: var(--e-color-bg6);
               }
 
               .el-slider__marks-stop {
-                background-color: var(--o-color-bg2);
+                background-color: var(--e-color-bg2);
                 &:nth-last-of-type(1) {
                   transform: translateX(-4px);
-                  background-color: var(--o-color-bg6);
+                  background-color: var(--e-color-bg6);
                 }
               }
               .el-slider__button {
                 position: relative;
                 border: none;
-                box-shadow: var(--o-shadow-l3);
+                box-shadow: var(--e-shadow-l3);
                 &::after {
                   display: block;
                   content: '';
                   width: 8px;
                   height: 8px;
                   border-radius: 50%;
-                  background-color: var(--o-color-brand1);
+                  background-color: var(--e-color-brand1);
                   position: absolute;
                   left: 50%;
                   top: 50%;
@@ -898,25 +898,25 @@ watch(
             width: 100%;
             display: flex;
             justify-content: space-between;
-            font-size: var(--o-font-size-tip);
-            color: var(--o-color-text4);
+            font-size: var(--e-font-size-tip);
+            color: var(--e-color-text4);
             margin-top: 14px;
           }
         }
         .reason {
           margin-top: 16px;
           .input-area {
-            border: 1px solid var(--o-color-border2);
+            border: 1px solid var(--e-color-border2);
             padding: 8px 16px;
             height: 88px;
-            font-size: var(--o-font-size-tip);
+            font-size: var(--e-font-size-tip);
             line-height: 18px;
             position: relative;
             &:hover {
-              border: 1px solid var(--o-color-border1);
+              border: 1px solid var(--e-color-border1);
             }
             &.is-focus {
-              border: 1px solid var(--o-color-border1);
+              border: 1px solid var(--e-color-border1);
             }
             textarea {
               width: 100%;
@@ -924,12 +924,12 @@ watch(
               border: none;
               outline: none;
               resize: none;
-              background-color: var(--o-color-bg2);
-              color: var(--o-color-text1);
+              background-color: var(--e-color-bg2);
+              color: var(--e-color-text1);
             }
             p {
               text-align: right;
-              color: var(--o-color-text4);
+              color: var(--e-color-text4);
               position: absolute;
               right: 6px;
               bottom: 6px;
@@ -937,20 +937,20 @@ watch(
           }
           .more-info {
             margin-top: 8px;
-            color: var(--o-color-text4);
-            font-size: var(--o-font-size-tip);
+            color: var(--e-color-text4);
+            font-size: var(--e-font-size-tip);
             line-height: 18px;
           }
           .submit-btn {
             margin-top: 16px;
             text-align: center;
             :deep(.o-button) {
-              border-color: var(--o-color-border1);
-              color: var(--o-color-text1);
+              border-color: var(--e-color-border1);
+              color: var(--e-color-text1);
               &:hover {
-                border-color: var(--o-color-brand1);
-                background-color: var(--o-color-brand1);
-                color: var(--o-color-white);
+                border-color: var(--e-color-brand1);
+                background-color: var(--e-color-brand1);
+                color: var(--e-color-white);
               }
             }
           }
@@ -962,15 +962,15 @@ watch(
         right: 64px;
         width: 240px;
         padding: 24px;
-        background-color: var(--o-color-bg2);
+        background-color: var(--e-color-bg2);
         transition: all 0.5s;
         transform: scale(0);
         transform-origin: 100% 50%;
-        box-shadow: var(--o-shadow-l2);
+        box-shadow: var(--e-shadow-l2);
         cursor: default;
         .pop-item {
           display: flex;
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
           & ~ .pop-item {
             margin-top: 18px;
           }
@@ -981,33 +981,33 @@ watch(
             margin-left: 12px;
             text-align: left;
             .text-name {
-              font-size: var(--o-font-size-text);
+              font-size: var(--e-font-size-text);
               line-height: 32px;
               font-weight: 600;
               a {
-                color: var(--o-color-text1);
+                color: var(--e-color-text1);
                 &:hover {
-                  color: var(--o-color-brand1);
+                  color: var(--e-color-brand1);
                 }
               }
             }
             .text-tip {
-              font-size: var(--o-font-size-tip);
+              font-size: var(--e-font-size-tip);
               line-height: 18px;
-              color: var(--o-color-text3);
+              color: var(--e-color-text3);
             }
           }
         }
       }
     }
     .nav-box1 {
-      box-shadow: var(--o-shadow-l1);
+      box-shadow: var(--e-shadow-l1);
     }
     .nav-box2 {
       margin-top: 12px;
-      box-shadow: var(--o-shadow-l1);
+      box-shadow: var(--e-shadow-l1);
       &.nav-item {
-        background-color: var(--o-color-bg2);
+        background-color: var(--e-color-bg2);
         opacity: 0.6;
         &:hover {
           opacity: 1;
@@ -1024,10 +1024,10 @@ watch(
         margin-bottom: 12px;
         padding: 12px 16px;
         height: fit-content;
-        background-color: var(--o-color-bg2);
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
-        color: var(--o-color-white);
+        background-color: var(--e-color-bg2);
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
+        color: var(--e-color-white);
         img {
           position: absolute;
           display: none;
@@ -1103,7 +1103,7 @@ watch(
 
     .o-popup1 {
       width: 100%;
-      background-color: var(--o-color-bg2);
+      background-color: var(--e-color-bg2);
       padding: 16px 24px;
       transform-origin: 100% 50%;
       border-radius: 8px 8px 0px 0px;
@@ -1113,13 +1113,13 @@ watch(
         top: 5px;
         right: 10px;
         cursor: pointer;
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
       }
       .slider {
         .slider-title {
-          font-size: var(--o-font-size-text);
+          font-size: var(--e-font-size-text);
           line-height: 20px;
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
           text-align: center;
           white-space: nowrap;
           .title-name {
@@ -1137,9 +1137,9 @@ watch(
             position: absolute;
             transform: translateX(-50%);
             font-size: 14px;
-            color: var(--o-color-text4);
+            color: var(--e-color-text4);
             &.is-active {
-              color: var(--o-color-text1);
+              color: var(--e-color-text1);
               font-size: 16px;
             }
             &:nth-last-of-type(1) {
@@ -1173,7 +1173,7 @@ watch(
             }
             .el-slider__runway {
               height: 100%;
-              background-color: var(--o-color-bg-secondary);
+              background-color: var(--e-color-bg-secondary);
               border-radius: 8px;
             }
             .el-slider__bar {
@@ -1199,7 +1199,7 @@ watch(
             .el-slider__stop {
               width: 2px;
               height: 2px;
-              background-color: var(--o-color-bg6);
+              background-color: var(--e-color-bg6);
             }
             .el-slider__marks {
               width: 100%;
@@ -1214,23 +1214,23 @@ watch(
             }
 
             .el-slider__marks-stop {
-              background-color: var(--o-color-bg2);
+              background-color: var(--e-color-bg2);
               &:nth-last-of-type(1) {
                 transform: translateX(-6px);
-                background-color: var(--o-color-bg6);
+                background-color: var(--e-color-bg6);
               }
             }
             .el-slider__button {
               position: relative;
               border: none;
-              box-shadow: var(--o-shadow-l3);
+              box-shadow: var(--e-shadow-l3);
               &::after {
                 display: block;
                 content: '';
                 width: 8px;
                 height: 8px;
                 border-radius: 50%;
-                background-color: var(--o-color-brand1);
+                background-color: var(--e-color-brand1);
                 position: absolute;
                 left: 50%;
                 top: 50%;
@@ -1243,8 +1243,8 @@ watch(
           width: 100%;
           display: flex;
           justify-content: space-between;
-          font-size: var(--o-font-size-tip);
-          color: var(--o-color-text4);
+          font-size: var(--e-font-size-tip);
+          color: var(--e-color-text4);
           margin-top: 8px;
           span {
             scale: 0.84;
@@ -1254,19 +1254,19 @@ watch(
       .reason {
         margin-top: 16px;
         .input-area {
-          border: 1px solid var(--o-color-border2);
+          border: 1px solid var(--e-color-border2);
           padding: 8px 16px;
           height: 88px;
-          font-size: var(--o-font-size-text);
-          line-height: var(--o-line-height-text);
+          font-size: var(--e-font-size-text);
+          line-height: var(--e-line-height-text);
           line-height: 18px;
           position: relative;
           border-radius: 4px;
           &:hover {
-            border: 1px solid var(--o-color-border1);
+            border: 1px solid var(--e-color-border1);
           }
           &.is-focus {
-            border: 1px solid var(--o-color-border1);
+            border: 1px solid var(--e-color-border1);
           }
           textarea {
             width: 100%;
@@ -1274,12 +1274,12 @@ watch(
             border: none;
             outline: none;
             resize: none;
-            background-color: var(--o-color-bg2);
-            color: var(--o-color-text1);
+            background-color: var(--e-color-bg2);
+            color: var(--e-color-text1);
           }
           p {
             text-align: right;
-            color: var(--o-color-text4);
+            color: var(--e-color-text4);
             position: absolute;
             right: 6px;
             bottom: 6px;
@@ -1287,8 +1287,8 @@ watch(
         }
         .more-info {
           margin-top: 8px;
-          color: var(--o-color-text4);
-          font-size: var(--o-font-size-tip);
+          color: var(--e-color-text4);
+          font-size: var(--e-font-size-tip);
           line-height: 18px;
           text-align: center;
         }
@@ -1301,18 +1301,18 @@ watch(
           flex-grow: 1;
           justify-content: center;
           border: none;
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
           position: relative;
           padding: 0;
           &.forbidden {
-            color: var(--o-color-text5);
+            color: var(--e-color-text5);
           }
           &:nth-of-type(1)::after {
             display: block;
             content: '';
             width: 1px;
             height: 100%;
-            background-color: var(--o-color-text5);
+            background-color: var(--e-color-text5);
             position: absolute;
             right: 0;
             top: 0;

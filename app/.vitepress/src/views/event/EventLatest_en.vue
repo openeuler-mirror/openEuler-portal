@@ -63,16 +63,16 @@ import IconDeta from '~icons/app/icon-deta.svg';
 
 <style lang="scss" scoped>
 .pagination {
-  margin-top: var(--o-spacing-h2);
+  margin-top: var(--e-spacing-h2);
   @media screen and (max-width: 768px) {
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
   }
 }
 .pagination-slot {
-  font-size: var(--o-font-size-text);
+  font-size: var(--e-font-size-text);
   font-weight: 400;
-  color: var(--o-color-text1);
-  line-height: var(--o-spacing-h4);
+  color: var(--e-color-text1);
+  line-height: var(--e-spacing-h4);
 }
 
 .event-latest {
@@ -87,7 +87,7 @@ import IconDeta from '~icons/app/icon-deta.svg';
   }
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: var(--o-spacing-h5);
+    grid-gap: var(--e-spacing-h5);
   }
 
   .event-latest-card {
@@ -104,9 +104,9 @@ import IconDeta from '~icons/app/icon-deta.svg';
 
     .event-latest-card-title {
       font-weight: 700;
-      font-size: var(--o-font-size-h5);
-      line-height: var(--o-line-height-h5);
-      color: var(--o-color-text1);
+      font-size: var(--e-font-size-h5);
+      line-height: var(--e-line-height-h5);
+      color: var(--e-color-text1);
       overflow: hidden;
       text-overflow: ellipsis;
       min-height: 64px;
@@ -128,13 +128,13 @@ import IconDeta from '~icons/app/icon-deta.svg';
       span {
         position: absolute;
         text-align: center;
-        font-size: var(--o-font-size-h6);
-        line-height: var(--o-line-height-h6);
+        font-size: var(--e-font-size-h6);
+        line-height: var(--e-line-height-h6);
         color: #fff;
         max-width: 400px;
         @media (max-width: 768px) {
-          font-size: var(--o-font-size-text);
-          line-height: var(--o-line-height-text);
+          font-size: var(--e-font-size-text);
+          line-height: var(--e-line-height-text);
         }
       }
     }
@@ -148,23 +148,23 @@ import IconDeta from '~icons/app/icon-deta.svg';
       width: 100%;
 
       span {
-        color: var(--o-color-text4);
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
+        color: var(--e-color-text4);
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
         white-space: nowrap;
         @media (max-width: 768px) {
-          color: var(--o-color-neutral8);
+          color: var(--e-color-neutral8);
         }
       }
       .o-icon {
         font-size: 20px;
-        color: var(--o-color-text4);
+        color: var(--e-color-text4);
         margin-right: 8px;
         @media (max-width: 768px) {
           height: 16px;
           width: 16px;
-          color: var(--o-color-neutral8);
-          margin-right: var(--o-spacing-h10);
+          color: var(--e-color-neutral8);
+          margin-right: var(--e-spacing-h10);
         }
       }
     }
@@ -172,12 +172,12 @@ import IconDeta from '~icons/app/icon-deta.svg';
       padding: 24px;
       width: 100%;
       @media (max-width: 768px) {
-        padding: var(--o-spacing-h5) var(--o-spacing-h6);
+        padding: var(--e-spacing-h5) var(--e-spacing-h6);
       }
       .home {
-        margin-left: var(--o-spacing-h2);
+        margin-left: var(--e-spacing-h2);
         @media (max-width: 768px) {
-          margin-left: var(--o-spacing-h5);
+          margin-left: var(--e-spacing-h5);
         }
       }
       .address {
@@ -193,8 +193,8 @@ import IconDeta from '~icons/app/icon-deta.svg';
           padding: 0;
           :deep(.suffix-icon) {
             margin-left: 8px;
-            color: var(--o-color-brand1);
-            font-size: var(--o-font-size-h8);
+            color: var(--e-color-brand1);
+            font-size: var(--e-font-size-h8);
           }
         }
       }

@@ -44,33 +44,33 @@ const isDark = computed(() => {
   }
 }
 .link-box {
-  margin-top: var(--o-spacing-h2);
+  margin-top: var(--e-spacing-h2);
   width: 100%;
   text-align: center;
   @media screen and (max-width: 768px) {
     width: 100%;
-    margin-top: var(--o-spacing-h6);
+    margin-top: var(--e-spacing-h6);
   }
   p {
     & ~ p {
-      margin-top: var(--o-spacing-h4);
+      margin-top: var(--e-spacing-h4);
       @media screen and (max-width: 768px) {
-        margin-top: var(--o-spacing-h5);
+        margin-top: var(--e-spacing-h5);
       }
     }
     a {
-      font-size: var(--o-font-size-h7);
-      line-height: var(--o-line-height-h7);
+      font-size: var(--e-font-size-h7);
+      line-height: var(--e-line-height-h7);
       font-weight: 500;
       display: inline-block;
       @media screen and (max-width: 768px) {
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
       }
       & + a {
-        margin-top: var(--o-spacing-h6);
+        margin-top: var(--e-spacing-h6);
         @media screen and (max-width: 768px) {
-          margin-top: var(--o-spacing-h8);
+          margin-top: var(--e-spacing-h8);
         }
       }
     }

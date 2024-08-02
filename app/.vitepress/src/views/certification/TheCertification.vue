@@ -110,49 +110,49 @@ function onMoreClick(type: number, link = '') {
   }
 }
 .more-btn {
-  color: var(--o-color-white);
-  border-color: var(--o-color-white);
+  color: var(--e-color-white);
+  border-color: var(--e-color-white);
   @media (max-width: 767px) {
     padding: 3px 16px;
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-text);
+    font-size: var(--e-font-size-text);
+    line-height: var(--e-line-height-text);
   }
   .banner-icon {
-    color: var(--o-color-brand2);
+    color: var(--e-color-brand2);
     @media (max-width: 767px) {
-      font-size: var(--o-font-size-text);
+      font-size: var(--e-font-size-text);
     }
   }
 }
 .detail {
-  font-size: var(--o-font-size-h7);
-  line-height: var(--o-line-height-h7);
-  color: var(--o-color-text1);
+  font-size: var(--e-font-size-h7);
+  line-height: var(--e-line-height-h7);
+  color: var(--e-color-text1);
   @media screen and (max-width: 1100px) {
-    font-size: var(--o-font-size-tip);
-    line-height: var(--o-line-height-tip);
-    color: var(--o-color-text4);
+    font-size: var(--e-font-size-tip);
+    line-height: var(--e-line-height-tip);
+    color: var(--e-color-text4);
   }
 }
 .card-box {
-  margin-top: var(--o-spacing-h2);
+  margin-top: var(--e-spacing-h2);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--o-spacing-h4);
+  gap: var(--e-spacing-h4);
   @media screen and (max-width: 1328px) {
     grid-template-columns: repeat(2, 1fr);
   }
   @media screen and (max-width: 1100px) {
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
   }
   @media screen and (max-width: 585px) {
     grid-template-columns: repeat(1, 1fr);
   }
   .card-item {
     &:hover {
-      box-shadow: var(--o-shadow-l2_hover);
+      box-shadow: var(--e-shadow-l2_hover);
       @media screen and (max-width: 1100px) {
-        box-shadow: var(--o-shadow-l2);
+        box-shadow: var(--e-shadow-l2);
       }
     }
     :deep(.el-card__body) {
@@ -161,7 +161,7 @@ function onMoreClick(type: number, link = '') {
     .item-head {
       width: 100%;
       height: 188px;
-      background-color: var(--o-color-brand1);
+      background-color: var(--e-color-brand1);
       position: relative;
       @media screen and (max-width: 1100px) {
         height: 98px;
@@ -186,42 +186,42 @@ function onMoreClick(type: number, link = '') {
       }
     }
     .item-body {
-      padding: var(--o-spacing-h4);
+      padding: var(--e-spacing-h4);
       @media screen and (max-width: 1100px) {
-        padding: var(--o-spacing-h6);
+        padding: var(--e-spacing-h6);
       }
       .name {
-        font-size: var(--o-font-size-h7);
-        line-height: var(--o-line-height-h7);
-        color: var(--o-color-text1);
+        font-size: var(--e-font-size-h7);
+        line-height: var(--e-line-height-h7);
+        color: var(--e-color-text1);
         @media screen and (max-width: 1100px) {
-          font-size: var(--o-font-size-text);
-          line-height: var(--o-line-height-text);
+          font-size: var(--e-font-size-text);
+          line-height: var(--e-line-height-text);
         }
       }
       .professional {
-        margin-top: var(--o-spacing-h8);
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
-        color: var(--o-color-text4);
+        margin-top: var(--e-spacing-h8);
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
+        color: var(--e-color-text4);
         @media screen and (max-width: 1100px) {
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-line-height-tip);
         }
       }
       .card-more {
-        margin-top: var(--o-spacing-h4);
+        margin-top: var(--e-spacing-h4);
         border: none;
         padding: 0;
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
         @media screen and (max-width: 1100px) {
-          margin-top: var(--o-spacing-h5);
-          font-size: var(--o-font-size-text);
+          margin-top: var(--e-spacing-h5);
+          font-size: var(--e-font-size-text);
         }
         :deep(.suffix-icon) {
-          color: var(--o-color-brand1);
+          color: var(--e-color-brand1);
           @media screen and (max-width: 1100px) {
-            font-size: var(--o-font-size-text);
+            font-size: var(--e-font-size-text);
           }
         }
       }

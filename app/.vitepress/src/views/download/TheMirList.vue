@@ -359,10 +359,10 @@ onMounted(async () => {
   opacity: 0;
 }
 .mirror-map {
-  margin-top: var(--o-spacing-h2);
+  margin-top: var(--e-spacing-h2);
   width: 100%;
   height: 996px;
-  box-shadow: var(--o-shadow-l1);
+  box-shadow: var(--e-shadow-l1);
   @media (max-width: 768px) {
     height: 50vh;
   }
@@ -383,7 +383,7 @@ onMounted(async () => {
 }
 .mirror-mobile {
   > :nth-child(odd) {
-    background-color: var(--o-color-bg4);
+    background-color: var(--e-color-bg4);
   }
 
   display: none;
@@ -402,7 +402,7 @@ onMounted(async () => {
 }
 .mirror-card {
   :deep(.el-card__body) {
-    padding: var(--o-spacing-h5);
+    padding: var(--e-spacing-h5);
     :first-child .mirror-card-title,
     :first-child .mirror-card-word {
       margin-top: 0px;
@@ -418,31 +418,31 @@ onMounted(async () => {
   }
 
   &-title {
-    font-size: var(--o-font-size-tip);
-    line-height: var(--o-line-height-tip);
-    color: var(--o-color-text4);
-    margin-right: var(--o-spacing-h10);
-    margin-top: var(--o-spacing-h8);
+    font-size: var(--e-font-size-tip);
+    line-height: var(--e-line-height-tip);
+    color: var(--e-color-text4);
+    margin-right: var(--e-spacing-h10);
+    margin-top: var(--e-spacing-h8);
   }
 
   &-word {
-    font-size: var(--o-font-size-tip);
-    line-height: var(--o-line-height-tip);
-    color: var(--o-color-neutral8);
-    margin-top: var(--o-spacing-h8);
+    font-size: var(--e-font-size-tip);
+    line-height: var(--e-line-height-tip);
+    color: var(--e-color-neutral8);
+    margin-top: var(--e-spacing-h8);
     a {
-      font-size: var(--o-font-size-tip);
-      line-height: var(--o-line-height-tip);
-      margin-top: var(--o-spacing-h8);
-      color: var(--o-color-brand1);
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
+      margin-top: var(--e-spacing-h8);
+      color: var(--e-color-brand1);
     }
   }
 
   &-rsnc {
-    margin-top: var(--o-spacing-h8);
-    width: var(--o-font-size-h8);
-    height: var(--o-font-size-h8);
-    color: var(--o-color-brand1);
+    margin-top: var(--e-spacing-h8);
+    width: var(--e-font-size-h8);
+    height: var(--e-font-size-h8);
+    color: var(--e-color-brand1);
   }
 }
 
@@ -474,34 +474,34 @@ onMounted(async () => {
       }
 
       a {
-        font-size: var(--o-font-size-h7);
-        line-height: var(--o-line-height-h7);
+        font-size: var(--e-font-size-h7);
+        line-height: var(--e-line-height-h7);
         font-weight: 800;
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
       }
     }
   }
 
   :deep(.mirror-list-header) {
-    background: var(--o-color-bg4);
-    font-size: var(--o-font-size-h8);
+    background: var(--e-color-bg4);
+    font-size: var(--e-font-size-h8);
     font-weight: 400;
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
     line-height: 54px;
     padding: 0 !important;
     .cell {
-      padding: 0 var(--o-spacing-h6) 0 0;
+      padding: 0 var(--e-spacing-h6) 0 0;
     }
 
     &:first-child {
       .cell {
-        padding-left: var(--o-spacing-h2);
+        padding-left: var(--e-spacing-h2);
       }
     }
 
     &:last-child {
       .cell {
-        padding-right: var(--o-spacing-h2);
+        padding-right: var(--e-spacing-h2);
       }
     }
   }
@@ -535,9 +535,9 @@ onMounted(async () => {
   }
 
   :deep(.mirror-list-row) {
-    font-size: var(--o-font-size-h8);
+    font-size: var(--e-font-size-h8);
     font-weight: 400;
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
     height: 54px;
     border: none;
 
@@ -546,7 +546,7 @@ onMounted(async () => {
       width: 100%;
       height: 1px;
       position: relative;
-      background-color: var(--o-color-division1);
+      background-color: var(--e-color-division1);
       margin: 0 auto;
       display: flex;
     }
@@ -554,7 +554,7 @@ onMounted(async () => {
     .cell {
       height: 54px;
       padding-left: 0px;
-      padding-right: var(--o-spacing-h6);
+      padding-right: var(--e-spacing-h6);
       display: flex;
       flex-flow: row;
       justify-content: flex-start;
@@ -567,14 +567,14 @@ onMounted(async () => {
         width: 100%;
         height: 1px;
         position: relative;
-        background-color: var(--o-color-division1);
+        background-color: var(--e-color-division1);
         margin: 0 auto;
         display: flex;
-        left: var(--o-spacing-h2);
+        left: var(--e-spacing-h2);
       }
 
       .cell {
-        padding-left: var(--o-spacing-h2);
+        padding-left: var(--e-spacing-h2);
       }
     }
     &:last-child {
@@ -583,30 +583,30 @@ onMounted(async () => {
         width: 100%;
         height: 1px;
         position: relative;
-        background-color: var(--o-color-division1);
+        background-color: var(--e-color-division1);
         margin: 0 auto;
         display: flex;
-        right: var(--o-spacing-h2);
+        right: var(--e-spacing-h2);
       }
       .cell {
-        padding-right: var(--o-spacing-h2);
+        padding-right: var(--e-spacing-h2);
       }
     }
   }
   p {
-    font-size: var(--o-font-size-h7);
+    font-size: var(--e-font-size-h7);
     font-weight: 400;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h7);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h7);
     margin-bottom: 12px;
     @media (max-width: 768px) {
-      font-size: var(--o-font-size-tip);
-      line-height: var(--o-line-height-tip);
-      margin-bottom: var(--o-spacing-h5);
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
+      margin-bottom: var(--e-spacing-h5);
     }
   }
   .rsync-tip {
-    margin-bottom: var(--o-spacing-h2);
+    margin-bottom: var(--e-spacing-h2);
     span {
       display: block;
       &:last-child {
@@ -614,13 +614,13 @@ onMounted(async () => {
         font-style: italic;
         display: inline-block;
         word-spacing: 4px;
-        background-color: var(--o-color-bg4);
+        background-color: var(--e-color-bg4);
       }
     }
   }
   a {
     text-decoration: none;
-    color: var(--o-color-brand1);
+    color: var(--e-color-brand1);
   }
 
   .mirror-list-img {
@@ -634,17 +634,17 @@ onMounted(async () => {
   }
   .mirror-list-rsnc {
     cursor: pointer;
-    color: var(--o-color-brand1);
+    color: var(--e-color-brand1);
     display: block;
-    width: var(--o-line-height-h8);
-    height: var(--o-line-height-h8);
+    width: var(--e-line-height-h8);
+    height: var(--e-line-height-h8);
   }
   .mirror-list-ftp {
     cursor: pointer;
-    color: var(--o-color-brand1);
+    color: var(--e-color-brand1);
     display: block;
-    width: var(--o-line-height-h8);
-    height: var(--o-line-height-h8);
+    width: var(--e-line-height-h8);
+    height: var(--e-line-height-h8);
   }
 }
 </style>
