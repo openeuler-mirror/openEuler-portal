@@ -36,26 +36,16 @@ const tocInfo = computed(() => {
   }
 });
 
-const routeList = router.route.path.split('/');
-const activeId = ref(routeList[routeList.length - 2]);
-
 const handleItemClick = (link: string) => {
-  if (link === 'introduce' || link === 'quick-start' || link === 'install') {
-    router.go(`/${lang.value}/wiki/about/${link}/`);
-  } else {
-    router.go(`/${lang.value}/wiki/${link}/`);
-  }
+  router.go(`/${lang.value}/wiki/${link}/`);
 };
 
-watch(
-  () => {
-    const routeList = router.route.path.split('/');
-    return routeList[routeList.length - 2];
-  },
-  (val) => {
-    activeId.value = val;
-  }
-);
+const activeId = computed(() => {
+  const path = router.route.path;
+  return path.replace(/^\/(zh|en)\/wiki\//g, '').replace(/\/$/g, '');
+});
+
+console.log(activeId.value);
 
 const isCustomLayout = computed(() => {
   return frontmatter.value['custom-layout'];
@@ -87,17 +77,8 @@ const goHome = () => {
 };
 
 const handleNodeClick = (node: any) => {
-  console.log(node.link);
   if (node.link) {
-    if (
-      node.link === 'introduce' ||
-      node.link === 'quick-start' ||
-      node.link === 'install'
-    ) {
-      router.go(`/${lang.value}/wiki/about/${node.link}/`);
-    } else {
-      router.go(`/${lang.value}/wiki/${node.link}/`);
-    }
+    router.go(`/${lang.value}/wiki/${node.link}/`);
     toggleMenu(false);
   }
 };
@@ -170,9 +151,6 @@ const handleNodeClick = (node: any) => {
 </template>
 
 <style lang="scss" scoped>
-.wiki-content {
-}
-
 .nav-tree {
   position: fixed;
   left: 0;
