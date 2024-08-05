@@ -444,7 +444,7 @@ sudo systemctl restart gdm
 
 ### 4.2 安装步骤
 
-#### 一、下载安装Virtual Box
+#### 4.2.1 下载安装Virtual Box
 
 在 [VirtualBox官网](https://www.virtualbox.org/wiki/Downloads)下载安装程序
 
@@ -458,7 +458,7 @@ sudo systemctl restart gdm
 
 ![输入图片说明](image4/e04.png)
 
-#### 二、创建虚拟机
+#### 4.2.2 创建虚拟机
 
 
 选择 【控制】-->【新建】，填写虚拟机的配置信息，示例如下
@@ -493,7 +493,7 @@ sudo systemctl restart gdm
 
 ![输入图片说明](image4/e10.png)
 
-#### 三、安装openEuler
+#### 4.2.3 安装openEuler
 
 启动上一步创建好的虚拟机
 
@@ -560,3 +560,38 @@ sudo systemctl restart gdm
 ![输入图片说明](image4/e26.png)
 
 到这里openEuler虚拟机已经安装完成了~
+
+
+## 5. Azure获取openEuler共享镜像
+
+
+### 步骤1 登录 [Azure Portal](https://portal.azure.com/)
+
+### 步骤2 进入账户主页搜索：Community images 服务并进入
+
+![输入图片说明](image5/az01.jpg)
+
+### 步骤3 在Community images服务页面搜索关键词：openEuler，即可看到可用的openEuler镜像
+
+![输入图片说明](image5/az02.jpg)
+
+### 步骤4 点击目标镜像，即可创建VM
+
+![输入图片说明](image5/az03.jpg)
+
+
+## 6. 在阿里云获取openEuler镜像
+
+### 步骤1 登录阿里云控制台[https://cn.aliyun.com](https://cn.aliyun.com)
+
+### 步骤2 展开主页选项卡，选择云服务器ECS
+
+![输入图片说明](image6/al01.jpeg)
+
+![输入图片说明](image6/al02.jpeg)
+
+### 步骤3 进入**镜像**列表，选择**社区镜像**，搜索openEuler
+
+![输入图片说明](image6/al03.jpeg)
+
+### 步骤4 选择目标版本创建虚机
