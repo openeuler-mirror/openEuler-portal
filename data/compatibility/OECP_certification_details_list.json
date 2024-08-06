@@ -9934,5 +9934,77 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "粤港澳大湾区国创中心",
+    "os_version": "vmlinux-5.10.0,rootfs",
+    "arch": "aarch64",
+    "checksum": "af65c7c39969e79f2e29f73b5adeed5a  aarch64-GCOS-linux-addr2line\n541f8ee432ac9411c3821743500211bc  aarch64-GCOS-linux-ar\n0da4d8d43aca067bf446f8096f10f278  aarch64-GCOS-linux-as\n45ef9ec261a5649c50d44330a5c38ca6  aarch64-GCOS-linux-c++\n5ed21e032522c211bdd7c5f57c0be56a  aarch64-GCOS-linux-cc\nc64a40310e2a9f544dd61f2f048f5464  aarch64-GCOS-linux-c++filt\n327555c27118ecd325747f1cc8a140e0  aarch64-GCOS-linux-cpp\nb74bff5431b70c9d91cc925beb497095  aarch64-GCOS-linux-elfedit\n45ef9ec261a5649c50d44330a5c38ca6  aarch64-GCOS-linux-g++\n5ed21e032522c211bdd7c5f57c0be56a  aarch64-GCOS-linux-gcc\n5ed21e032522c211bdd7c5f57c0be56a  aarch64-GCOS-linux-gcc-10.3.1\nc31340caede1b68a46fe1bac03826a26  aarch64-GCOS-linux-gcc-ar\n71c27821c864048e578d7bf4dd2af726  aarch64-GCOS-linux-gcc-nm\nb2ab62be474c032979c687f0f61f0b19  aarch64-GCOS-linux-gcc-ranlib\n0d9f397196616c35c7094a96b000becc  aarch64-GCOS-linux-gcov\nabb76c4301112125bc37f8d6637dcce7  aarch64-GCOS-linux-gcov-tool\na526cb658dbaf1e5521302d4c84ed3c8  aarch64-GCOS-linux-gfortran\n85c2f70c35233afbd75aca711e0e7a14  aarch64-GCOS-linux-gprof\nc5f819cd68af6e2df457b7ba22181412  aarch64-GCOS-linux-ld\n3f36b809893102664f1009185574cb37  aarch64-GCOS-linux-ld.bfd\n810f8907a4bcde3abac1ca0d000ac496  aarch64-GCOS-linux-ld.gold\n4412bca0ed16568e1547ce9ae5eb49e5  aarch64-GCOS-linux-nm\n148145b66b269ed5f27f59e08ab9a563  aarch64-GCOS-linux-objcopy\n7bd95b33a65fdfa3efe5ab04b65eb709  aarch64-GCOS-linux-objdump\n4db07edcea7ed544179b40605d8d8798  aarch64-GCOS-linux-ranlib\nafc2f5b2d53d36a25f98b3349e6df34e  aarch64-GCOS-linux-readelf\n9a8650c4bf3722778cde79d606d35b8e  aarch64-GCOS-linux-size\nd9ed59c7849c7a25cc47d6a960f60d51  aarch64-GCOS-linux-strings\n150c12b7413000f6ca7c658438f8d7e4  aarch64-GCOS-linux-strip\naf65c7c39969e79f2e29f73b5adeed5a  aarch64-openeuler-linux-gnu-addr2line\n541f8ee432ac9411c3821743500211bc  aarch64-openeuler-linux-gnu-ar\n0da4d8d43aca067bf446f8096f10f278  aarch64-openeuler-linux-gnu-as\n45ef9ec261a5649c50d44330a5c38ca6  aarch64-openeuler-linux-gnu-c++\n5ed21e032522c211bdd7c5f57c0be56a  aarch64-openeuler-linux-gnu-cc\nc64a40310e2a9f544dd61f2f048f5464  aarch64-openeuler-linux-gnu-c++filt\n327555c27118ecd325747f1cc8a140e0  aarch64-openeuler-linux-gnu-cpp\nb74bff5431b70c9d91cc925beb497095  aarch64-openeuler-linux-gnu-elfedit\n45ef9ec261a5649c50d44330a5c38ca6  aarch64-openeuler-linux-gnu-g++\n5ed21e032522c211bdd7c5f57c0be56a  aarch64-openeuler-linux-gnu-gcc\n5ed21e032522c211bdd7c5f57c0be56a  aarch64-openeuler-linux-gnu-gcc-10.3.1\nc31340caede1b68a46fe1bac03826a26  aarch64-openeuler-linux-gnu-gcc-ar\n71c27821c864048e578d7bf4dd2af726  aarch64-openeuler-linux-gnu-gcc-nm\nb2ab62be474c032979c687f0f61f0b19  aarch64-openeuler-linux-gnu-gcc-ranlib\n0d9f397196616c35c7094a96b000becc  aarch64-openeuler-linux-gnu-gcov\nabb76c4301112125bc37f8d6637dcce7  aarch64-openeuler-linux-gnu-gcov-tool\na526cb658dbaf1e5521302d4c84ed3c8  aarch64-openeuler-linux-gnu-gfortran\n85c2f70c35233afbd75aca711e0e7a14  aarch64-openeuler-linux-gnu-gprof\nc5f819cd68af6e2df457b7ba22181412  aarch64-openeuler-linux-gnu-ld\n3f36b809893102664f1009185574cb37  aarch64-openeuler-linux-gnu-ld.bfd\n810f8907a4bcde3abac1ca0d000ac496  aarch64-openeuler-linux-gnu-ld.gold\n4412bca0ed16568e1547ce9ae5eb49e5  aarch64-openeuler-linux-gnu-nm\n148145b66b269ed5f27f59e08ab9a563  aarch64-openeuler-linux-gnu-objcopy\n7bd95b33a65fdfa3efe5ab04b65eb709  aarch64-openeuler-linux-gnu-objdump\n4db07edcea7ed544179b40605d8d8798  aarch64-openeuler-linux-gnu-ranlib\nafc2f5b2d53d36a25f98b3349e6df34e  aarch64-openeuler-linux-gnu-readelf\n9a8650c4bf3722778cde79d606d35b8e  aarch64-openeuler-linux-gnu-size\nd9ed59c7849c7a25cc47d6a960f60d51  aarch64-openeuler-linux-gnu-strings\n150c12b7413000f6ca7c658438f8d7e4  aarch64-openeuler-linux-gnu-strip",
+    "base_openeuler_version": "openEuler Embedded 23.09",
+    "os_download_link": "https://space.welink.huaweicloud.com/wechatshare/41f5ef598b4faf69e77e116c2974fec5",
+    "friendly_link": "https://space.welink.huaweicloud.com/wechatshare/41f5ef598b4faf69e77e116c2974fec5",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2024/08/06",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 ]
