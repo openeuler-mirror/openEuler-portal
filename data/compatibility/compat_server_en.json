@@ -21062,7 +21062,7 @@
   {
     "hardwareFactory": "Nettrix",
     "hardwareModel": "R620 G50",
-    "osVersion": "openEuler 22.03 LTS SP3",
+    "osVersion": "openEuler 22.03 LTS SP2",
     "architecture": "x86_64",
     "date": "2024/07/18",
     "friendlyLink": "https://www.nettrix.com.cn/product/1576.html",
@@ -21073,7 +21073,7 @@
           "svID": "ffff",
           "ssID": "0308",
           "architecture": "x86_64",
-          "os": "openEuler 22.03 LTS SP3",
+          "os": "openEuler 22.03 LTS SP2",
           "driverName": "igb",
           "version": "5.10.0-153.12.0.92.oe2203sp2.x86_64",
           "type": "NIC",
