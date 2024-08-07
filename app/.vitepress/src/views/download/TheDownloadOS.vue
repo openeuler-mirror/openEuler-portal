@@ -165,7 +165,6 @@ const osData = computed(() => {
     }
     .os-card-links {
       position: relative;
-      margin-top: auto;
       display: grid;
       /* 使用自动填充的列，每列的最小宽度是50%，最大宽度是1fr */
       gap: 18px; /* 根据需要设置间隙 */

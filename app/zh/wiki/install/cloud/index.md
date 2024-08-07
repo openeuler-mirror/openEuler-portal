@@ -133,7 +133,7 @@ print("Hello, world!")
 Hello, World!
 ```
 
-## Azure 获取 openEuler 共享镜像
+## Azure获取openEuler共享镜像
 
 ### 步骤 1 登录 [Azure Portal](https://portal.azure.com/)
 
@@ -149,18 +149,18 @@ Hello, World!
 
 ![输入图片说明](./images/az03.jpg)
 
-## 在阿里云获取 openEuler 镜像
+## 在阿里云获取openEuler镜像
 
-### 步骤 1 登录阿里云控制台[https://cn.aliyun.com](https://cn.aliyun.com)
+### 步骤1 登录阿里云控制台[https://cn.aliyun.com](https://cn.aliyun.com)
 
-### 步骤 2 展开主页选项卡，选择云服务器 ECS
+### 步骤2 展开主页选项卡，选择云服务器 ECS
 
 ![输入图片说明](./images/al01.jpeg)
 
 ![输入图片说明](./images/al02.jpeg)
 
-### 步骤 3 进入**镜像**列表，选择**社区镜像**，搜索 openEuler
+### 步骤3 进入**镜像**列表，选择**社区镜像**，搜索 openEuler
 
 ![输入图片说明](./images/al03.jpeg)
 
-### 步骤 4 选择目标版本创建虚机
+### 步骤4 选择目标版本创建虚机
