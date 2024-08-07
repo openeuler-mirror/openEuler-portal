@@ -159,11 +159,10 @@ $ cd ~/rpmbuild/SPECS$ rpmbuild -ba openssl.spec
 
   有些软件包，如 coreutils，augeas，diffutils，在 rpmbuild 命令执行后，有提示“FAIL test-localeconv (exit status: 134)”报错信息。该报错信息是由于 Aarch64 和 x86_64 在 char 类型上定义不一致导致的，请在 Makefile 文件中增加--fsigned-char 编译选项以解决。
 
-### 2.3 更新软件包
+### 2.3 社区组件打包 与 EUR使用
 
-待补充
-
-### 2.4 社区组件打包
+您也可以参与社区组件打包工作，请参考[openEuler 打包指南](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md) 。
+如果您在使用 openEuler 时发现缺少某些软件包或已有包不满足您的需要时，还可以通过 [openEuler 用户软件仓系统(EUR)](https://eur.openeuler.openatom.cn/) 来帮助完善。参考：[EUR 的介绍](https://www.openeuler.org/zh/blog/waaagh/openEuler-user-repo-intro.html) 和 [使用指南](https://www.openeuler.org/zh/blog/waaagh/openEuler-user-repo-howto.html) 。
 
 您也可以参与社区组件打包，请参考[如何打包](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md)。
 
