@@ -7,7 +7,7 @@ import useWindowResize from '@/components/hooks/useWindowResize';
 
 import DocSideBar from '@/components/DocSideBar.vue';
 import DocSideBarMenu from '@/components/DocSideBarMenu.vue';
-import OrgDocAnchor from '@/views/organization/OrgDocAnchor.vue';
+import DocAnchor from '@/components/DocAnchor.vue';
 import NavTree from '@/components/NavTree.vue';
 
 import IconCancel from '~icons/app/icon-cancel.svg';
@@ -142,7 +142,7 @@ const handleNodeClick = (node: any) => {
 
   <!-- 内容区域 -->
   <div class="wiki-wrapper" :class="{ 'wiki-markdown': !isCustomLayout }">
-    <OrgDocAnchor class="wiki-anchor" :class="isHidden ? 'is-hidden' : ''" />
+    <DocAnchor class="wiki-anchor" :class="isHidden ? 'is-hidden' : ''" />
     <Content
       class="wiki-content"
       :class="{ 'custom-layout': isCustomLayout }"
@@ -287,10 +287,7 @@ const handleNodeClick = (node: any) => {
   }
 
   .wiki-anchor {
-    // right: 120px;
-    // @media screen and (max-width: 1280px) {
-    //   right: 0;
-    // }
+    width: 220px;
   }
   .is-hidden {
     display: none;
@@ -363,7 +360,7 @@ const handleNodeClick = (node: any) => {
 
   h1 {
     margin-top: 0;
-    text-align: center;
+    // text-align: center;
   }
 
   hr {
@@ -380,7 +377,7 @@ const handleNodeClick = (node: any) => {
     margin-bottom: var(--o-spacing-h2);
     font-size: var(--o-font-size-h3);
     line-height: var(--o-line-height-h3);
-    font-weight: 300;
+    // font-weight: 300;
     @media screen and (max-width: 768px) {
       margin: 0 0 var(--o-spacing-h4);
       font-size: var(--o-font-size-h7);
@@ -450,7 +447,7 @@ const handleNodeClick = (node: any) => {
     li {
       margin-top: 0.25em;
       &::marker {
-        color: var(--o-color-text4);
+        color: var(--o-color-text1);
       }
     }
   }
@@ -472,6 +469,13 @@ const handleNodeClick = (node: any) => {
         font-size: var(--o-font-size-h8);
         background-color: var(--o-color-bg4);
         color: var(--o-color-text1);
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      td {
+        padding-left: 24px;
+        padding-right: 24px;
       }
     }
   }

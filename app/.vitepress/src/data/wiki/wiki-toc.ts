@@ -12,10 +12,6 @@ export default {
           label: '快速链接',
           link: 'about/quick-start',
         },
-        {
-          label: '许可证',
-          link: 'about/licenses',
-        },
       ],
     },
     {
@@ -23,32 +19,24 @@ export default {
       link: 'contribution',
     },
     {
-      label: '安装使用',
-      link: 'install-and-use',
+      label: '安装指引',
+      link: 'install',
       children: [
         {
-          label: '1. 公有云上 openEuler 镜像使用指南',
-          link: 'install-and-use/1',
+          label: '公有云',
+          link: 'install/cloud',
         },
         {
-          label: '2. openEuler 容器镜像部署指南',
-          link: 'install-and-use/2',
+          label: '容器镜像',
+          link: 'install/image',
         },
         {
-          label: '3. 如何在openEuler WSL中体验完整的桌面环境',
-          link: 'install-and-use/3',
+          label: 'WSL',
+          link: 'install/wsl',
         },
         {
-          label: '4. windows 下使用 VirtualBox 安装 openEuler',
-          link: 'install-and-use/4',
-        },
-        {
-          label: '5. Azure 获取 openEuler 共享镜像',
-          link: 'install-and-use/5',
-        },
-        {
-          label: '6. 在阿里云获取 openEuler 镜像',
-          link: 'install-and-use/6',
+          label: 'Virtualization',
+          link: 'install/virtualization',
         },
       ],
     },

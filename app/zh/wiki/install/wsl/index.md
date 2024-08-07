@@ -3,7 +3,7 @@ title: 安装使用
 category: wiki
 ---
 
-## 3. 如何在 openEuler WSL 中体验完整的桌面环境
+# 如何在 openEuler WSL 中体验完整的桌面环境
 
 [WSL(Windows Subsystem For Linux)](https://learn.microsoft.com/en-us/windows/wsl/about) 是微软发布的让用户能够在 windows 上使用 Linux 环境的技术
 
@@ -13,13 +13,13 @@ category: wiki
 
 如果无法访问应用商店，还可以参考[之前的文章，使用 sideload](https://mp.weixin.qq.com/s?__biz=MzkyMjYzNjU0Ng==&mid=2247507510&idx=2&sn=a1b4af27d9773605217745fd05ddb61c&source=41#wechat_redirect)。
 
-### 3.1 openEuler User Repo
+## openEuler User Repo
 
 为了丰富 openEuler 的软件包生态，社区也推出了[openEuler 用户软件仓系统(EUR)](https://eur.openeuler.openatom.cn/)，关于 EUR 更详细的介绍和使用指南可以参考这篇博文或者[官方博客 1](https://www.openeuler.org/zh/blog/waaagh/openEuler-user-repo-howto.html)和[官方博客 2](https://www.openeuler.org/zh/blog/waaagh/openEuler-user-repo-intro.html)
 
 当您在使用 openEuler 时发现缺少某些软件包或已有包不满足需要，EUR 就是您最好的帮手
 
-### 3.2 WSL + EUR
+## WSL + EUR
 
 笔者自己是重度 Linux 桌面用户，在使用 openEuler WSL 的过程中，也一直期望能够用上原生的 DE（Desktop Environment）
 
@@ -127,7 +127,7 @@ $ ip a
 ![输入图片说明](./images/w07.png)
 ![输入图片说明](./images/w08.png)
 
-### 3.3 注意事项
+## 注意事项
 
 - 由于多个 WSL 实例是共享网络的，因此在其中一个实例开启 xrdp 后，再另外一个 WSL 中启动服务会失败，此时可以通过修改/etc/xrdp/xrdp.ini 和/etc/xrdp/sesman.ini 中的监听端口实现开启多个实例的远程桌面
 

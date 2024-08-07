@@ -233,4 +233,8 @@ export default [
     name: '2403-version-release',
     lang: ['zh'],
   },
+  {
+    name: 'wiki',
+    lang: ['zh'],
+  },
 ];

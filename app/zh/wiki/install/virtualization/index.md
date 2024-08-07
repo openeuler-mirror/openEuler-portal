@@ -3,9 +3,9 @@ title: 安装使用
 category: wiki
 ---
 
-## 4. windows 下使用 VirtualBox 安装 openEuler
+# windows 下使用 VirtualBox 安装 openEuler
 
-### 4.1 环境准备
+## 环境准备
 
 - Windows10 64 位
 - Oracle VM VirtualBox 6.1.4
@@ -13,9 +13,9 @@ category: wiki
 
 ![输入图片说明](./images/e01.png)
 
-### 4.2 安装步骤
+## 安装步骤
 
-#### 4.2.1 下载安装 Virtual Box
+### 1. 下载安装 Virtual Box
 
 在 [VirtualBox 官网](https://www.virtualbox.org/wiki/Downloads)下载安装程序
 
@@ -29,7 +29,7 @@ category: wiki
 
 ![输入图片说明](./images/e04.png)
 
-#### 4.2.2 创建虚拟机
+### 2. 创建虚拟机
 
 选择 【控制】-->【新建】，填写虚拟机的配置信息，示例如下
 
@@ -63,7 +63,7 @@ category: wiki
 
 ![输入图片说明](./images/e10.png)
 
-#### 4.2.3 安装 openEuler
+### 3. 安装 openEuler
 
 启动上一步创建好的虚拟机
 
