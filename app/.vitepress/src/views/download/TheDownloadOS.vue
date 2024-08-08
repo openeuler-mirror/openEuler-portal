@@ -163,12 +163,14 @@ const osData = computed(() => {
         min-height: calc(2 * var(--o-line-height-text));
       }
     }
+
     .os-card-links {
       position: relative;
       display: grid;
       /* 使用自动填充的列，每列的最小宽度是50%，最大宽度是1fr */
       gap: 18px; /* 根据需要设置间隙 */
       min-height: 62px;
+      margin-top: auto;
       @media screen and (max-width: 768px) {
         min-height: auto;
       }
