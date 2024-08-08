@@ -3,7 +3,7 @@ title: 安装指引
 category: wiki
 ---
 
-# 公有云上 openEuler 镜像使用指南
+# 公有云上openEuler镜像使用指南
 
 目前，社区已经将多个版本的 openEuler 云镜像发布到公有云厂商。本篇以华为云为例子介绍 openEuler 镜像的使用方式。[其他云](https://www.openeuler.org/zh/download/get-os/)上 openEuler 使用方式与华为云相似，详细使用方法可参考对应云上商品的使用指南。
 
@@ -39,7 +39,7 @@ category: wiki
 
 注意，腾讯云还未大规模使用 arm 算力，发布时国内很多区不可用，因此未在腾讯云上发布 openEuler 的 arm 镜像。
 
-## 创建 openEuler 云实例
+## 创建openEuler云实例
 
 以在华为云上创建云主机（实例）为例，说明公有云上 openEuler 的使用方法
 
