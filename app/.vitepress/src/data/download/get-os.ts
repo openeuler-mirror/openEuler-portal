@@ -74,10 +74,10 @@ export default {
         },
         {
           href: 'https://quay.io/search?q=openeuler',
-          label: 'quay.io',
+          label: 'Quay.io',
         },
         {
-          href: 'https://hub.oepkgs.net/account/sign-in?globalSearch=openeuler',
+          href: '/zh/wiki/install/image/#在orbstack中获取openeuler',
           label: 'OrbStack',
         },
         {
@@ -188,7 +188,7 @@ export default {
         },
         {
           href: 'https://quay.io/search?q=openeuler',
-          label: 'quay.io',
+          label: 'Quay.io',
         },
       ],
     },

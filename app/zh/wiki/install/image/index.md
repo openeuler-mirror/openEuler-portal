@@ -3,7 +3,7 @@ title: 安装使用
 category: wiki
 ---
 
-# openEuler 容器镜像部署指南
+# openEuler容器镜像部署指南
 
 当前 openEuler 社区除过基础镜像之外，已经发布和上线了 20+核心的开源应用镜像，本文着重分享 openEuler 基础镜像的安装和使用的初步实践，如果您对 openEuler 社区其他镜像感兴趣，欢迎大家使用和体验。
 

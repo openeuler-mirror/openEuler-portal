@@ -2,7 +2,6 @@ export default {
   zh: [
     {
       label: '关于openEuler',
-      link: 'about',
       children: [
         {
           label: '介绍',
@@ -20,7 +19,6 @@ export default {
     },
     {
       label: '安装指引',
-      link: 'install',
       children: [
         {
           label: '公有云',

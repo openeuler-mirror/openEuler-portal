@@ -45,8 +45,6 @@ const activeId = computed(() => {
   return path.replace(/^\/(zh|en)\/wiki\//g, '').replace(/\/$/g, '');
 });
 
-console.log(activeId.value);
-
 const isCustomLayout = computed(() => {
   return frontmatter.value['custom-layout'];
 });
@@ -287,7 +285,7 @@ const handleNodeClick = (node: any) => {
   }
 
   .wiki-anchor {
-    width: 220px;
+    width: 228px;
   }
   .is-hidden {
     display: none;
@@ -471,11 +469,19 @@ const handleNodeClick = (node: any) => {
         color: var(--o-color-text1);
         padding-left: 24px;
         padding-right: 24px;
+        @media (max-width: 768px) {
+          padding-left: 12px;
+          padding-right: 12px;
+        }
       }
 
       td {
         padding-left: 24px;
         padding-right: 24px;
+        @media (max-width: 768px) {
+          padding-left: 12px;
+          padding-right: 12px;
+        }
       }
     }
   }
