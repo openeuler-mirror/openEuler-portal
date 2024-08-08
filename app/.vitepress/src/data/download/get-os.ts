@@ -46,14 +46,13 @@ export default {
           label: 'Azure',
         },
         {
-          href: 'https://marketplace.huaweicloud.com/contents/b295de63-8718-4477-961a-46fdffaad701#productid=OFFI1004941126717046784',
-          label: '华为云',
-        },
-        {
           href: '/zh/wiki/install/cloud/#在阿里云获取openeuler镜像',
           label: '阿里云',
         },
-
+        {
+          href: 'https://marketplace.huaweicloud.com/contents/b295de63-8718-4477-961a-46fdffaad701#productid=OFFI1004941126717046784',
+          label: '华为云',
+        },
         {
           href: 'https://market.cloud.tencent.com/products/39669',
           label: '腾讯云',
@@ -163,12 +162,12 @@ export default {
           label: 'Azure',
         },
         {
-          href: 'https://marketplace.huaweicloud.com/contents/b295de63-8718-4477-961a-46fdffaad701#productid=OFFI1004941126717046784',
-          label: 'Huawei Cloud',
+          href: 'https://www.alibabacloud.com/en',
+          label: 'Alibaba Cloud',
         },
         {
-          href: 'https://www.aliyun.com',
-          label: 'Alibaba Cloud',
+          href: 'https://marketplace.huaweicloud.com/contents/b295de63-8718-4477-961a-46fdffaad701#productid=OFFI1004941126717046784',
+          label: 'Huawei Cloud',
         },
         {
           href: 'https://market.cloud.tencent.com/products/39669',
