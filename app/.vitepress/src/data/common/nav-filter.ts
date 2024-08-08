@@ -50,6 +50,10 @@ export default [
     lang: ['zh'],
   },
   {
+    name: 'wiki/**',
+    lang: ['zh'],
+  },
+  {
     name: 'contribution',
     lang: ['zh', 'en'],
   },
