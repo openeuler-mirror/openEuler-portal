@@ -40,10 +40,19 @@ const handleItemClick = (link: string) => {
   router.go(`/${lang.value}/wiki/${link}/`);
 };
 
-const activeId = computed(() => {
-  const path = router.route.path;
-  return path.replace(/^\/(zh|en)\/wiki\//g, '').replace(/\/$/g, '');
-});
+const activeId = ref('');
+
+watch(
+  () => {
+    return router.route.path;
+  },
+  (val) => {
+    activeId.value = val.replace(/^\/(zh|en)\/wiki\//g, '').replace(/\/$/g, '');
+  },
+  {
+    immediate: true,
+  }
+);
 
 const isCustomLayout = computed(() => {
   return frontmatter.value['custom-layout'];
