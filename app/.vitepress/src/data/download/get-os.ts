@@ -23,7 +23,7 @@ export default {
         'openEuler 社区版分为长期支持版本（LTS）和创新版本，支持X86、AArch、Arm、RISC-V等架构。',
       links: [
         {
-          href: '/zh/download/?version=openEuler%2022.03%20LTS%20SP3',
+          href: '/zh/download/',
           label: '下载 openEuler',
         },
       ],
@@ -32,20 +32,28 @@ export default {
       icon: cloudImg,
       iconDark: cloudImgDark,
       title: '公有云',
-      repeat: 2,
-      intro:
-        'openEuler 在AWS、华为云、腾讯云等主流公有云平台上发布了官方镜像，获取指引可查看',
-      intro1:'使用指南',
-      introLink:'https://forum.openeuler.org/t/topic/4433',
+      repeat: 3,
+      intro: 'openEuler 官方镜像在以下主流平台正式发布，点此查看',
+      intro1: '安装指引',
+      introLink: '/zh/wiki/install/cloud/',
       links: [
         {
           href: 'https://aws.amazon.com/marketplace/pp/prodview-cgu5xymg7qnqg?sr=0-4&ref_=beagle&applicationId=AWSMPContessa',
           label: 'Amazon AWS',
         },
         {
-          href: 'https://www.huaweicloud.com/product/hce.html',
+          href: '/zh/wiki/install/cloud/#azure获取openeuler共享镜像',
+          label: 'Azure',
+        },
+        {
+          href: 'https://marketplace.huaweicloud.com/contents/b295de63-8718-4477-961a-46fdffaad701#productid=OFFI1004941126717046784',
           label: '华为云',
         },
+        {
+          href: '/zh/wiki/install/cloud/#在阿里云获取openeuler镜像',
+          label: '阿里云',
+        },
+
         {
           href: 'https://market.cloud.tencent.com/products/39669',
           label: '腾讯云',
@@ -56,17 +64,21 @@ export default {
       icon: containerImg,
       iconDark: containerImgDark,
       title: '容器镜像',
-      intro: 'openEuler 提供官方容器镜像，获取指引可查看',
-      intro1:'使用指南',
-      introLink:'https://forum.openeuler.org/t/topic/4189',
-      repeat: 2,
+      intro: 'openEuler 提供官方容器镜像，点此查看',
+      intro1: '安装指引',
+      introLink: '/zh/wiki/install/image/',
+      repeat: 3,
       links: [
         {
           href: 'https://hub.docker.com/r/openeuler/openeuler',
           label: 'Docker Hub',
         },
         {
-          href: '/zh/blog/20230530-OrbStack/Orbstack%E6%94%AF%E6%8C%81openEuler%E5%8F%91%E8%A1%8C%E7%89%88.html',
+          href: 'https://quay.io/search?q=openeuler',
+          label: 'Quay.io',
+        },
+        {
+          href: '/zh/wiki/install/image/#在orbstack中获取openeuler',
           label: 'OrbStack',
         },
         {
@@ -74,9 +86,9 @@ export default {
           label: '中科院软件所',
         },
         {
-          href: 'https://quay.io/search?q=openeuler',
-          label: 'quay.io',
-        }
+          href: 'https://images.linuxcontainers.org/',
+          label: 'Linux Container',
+        },
       ],
     },
     {
@@ -87,7 +99,7 @@ export default {
       repeat: 1,
       links: [
         {
-          href: '/zh/blog/waaagh/openEuler-DE-in-WSL.html',
+          href: '/zh/wiki/install/wsl/',
           label: 'WSL(Windows Subsystem For Linux)',
         },
       ],
@@ -100,8 +112,8 @@ export default {
       repeat: 1,
       links: [
         {
-          href: '/zh/blog/traffic_millions/2020-03-27-VirtualBox.html',
-          label: '在 VirtualBox 中安装openEuler',
+          href: '/zh/wiki/install/virtualization/',
+          label: '在VirtualBox中安装openEuler',
         },
       ],
     },
@@ -138,7 +150,7 @@ export default {
       icon: cloudImg,
       iconDark: cloudImgDark,
       title: 'Cloud Images',
-      repeat: 2,
+      repeat: 3,
       intro:
         'openEuler has released official images on mainstream public cloud platforms such as AWS, HUAWEI CLOUD, and Tencent Cloud:',
       links: [
@@ -147,8 +159,16 @@ export default {
           label: 'Amazon AWS',
         },
         {
-          href: 'https://www.huaweicloud.com/product/hce.html',
+          href: 'https://portal.azure.com',
+          label: 'Azure',
+        },
+        {
+          href: 'https://marketplace.huaweicloud.com/contents/b295de63-8718-4477-961a-46fdffaad701#productid=OFFI1004941126717046784',
           label: 'Huawei Cloud',
+        },
+        {
+          href: 'https://www.aliyun.com',
+          label: 'Alibaba Cloud',
         },
         {
           href: 'https://market.cloud.tencent.com/products/39669',
@@ -161,11 +181,15 @@ export default {
       iconDark: containerImgDark,
       title: 'Container image',
       intro: 'openEuler provides official container images:',
-      repeat: 2,
+      repeat: 3,
       links: [
         {
           href: 'https://hub.docker.com/r/openeuler/openeuler',
           label: 'Docker Hub',
+        },
+        {
+          href: 'https://quay.io/search?q=openeuler',
+          label: 'Quay.io',
         },
         {
           href: '/en/blog/20230530-OrbStack/Orbstack%E6%94%AF%E6%8C%81openEuler%E5%8F%91%E8%A1%8C%E7%89%88.html',
@@ -176,9 +200,9 @@ export default {
           label: 'ISCAS',
         },
         {
-          href: 'https://quay.io/search?q=openeuler',
-          label: 'quay.io',
-        }
+          href: 'https://images.linuxcontainers.org/',
+          label: 'Linux Container',
+        },
       ],
     },
     {

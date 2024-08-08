@@ -145,13 +145,20 @@ const isAbout = computed(() => {
   return frontmatter.value.category === 'about-us';
 });
 
+const isWiki = computed(() => {
+  return frontmatter.value.category === 'wiki';
+});
+
 onMounted(() => {
   isQrTipVisible.value = localStorage.getItem('euler-feedback') ? false : true;
 });
 </script>
 
 <template>
-  <footer class="footer" :class="{ 'is-doc': isMigration || isAbout }">
+  <footer
+    class="footer"
+    :class="{ 'is-doc': isMigration || isAbout || isWiki }"
+  >
     <AppContent :pc-top="0" :mobile-top="0">
       <div class="atom">
         <p class="atom-text">{{ i18n.common.FOOTER.ATOM_TEXT }}</p>
@@ -175,8 +182,9 @@ onMounted(() => {
               <a
                 v-for="link in i18n.common.FOOTER.RIGHT_LIST"
                 :key="link.URL"
-                :href="`/${lang}${link.URL}`"
+                href="javascript:;"
                 class="link"
+                @click="onNavClick(link.URL)"
                 >{{ link.NAME }}</a
               >
             </div>
@@ -188,17 +196,18 @@ onMounted(() => {
           </div>
           <div class="footer-right">
             <div v-if="lang === 'zh'" class="code-box">
-              <div
+              <a
                 v-for="(item, index) in footerCodeList"
                 :key="index"
                 class="code-pop"
+                href="javascript:;"
               >
                 <img :src="item.img" class="code-img" alt="openEuler" />
                 <div class="code-layer">
                   <img :src="item.code" alt="openEuler" />
                   <p class="txt">{{ item.label }}</p>
                 </div>
-              </div>
+              </a>
             </div>
             <div class="footer-links" :class="{ iszh: lang === 'zh' }">
               <a
@@ -418,7 +427,6 @@ $color: #fff;
       gap: 16px;
       margin-bottom: 16px;
       .code-pop {
-        cursor: pointer;
         position: relative;
         height: 20px;
         display: block;
