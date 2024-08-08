@@ -17,7 +17,7 @@ import summitDarkHover from '@/assets/category/home/dark/new-home/summit-hover.s
 
 import imgList1 from '@/assets/category/home/carouse/img-list1.jpg';
 import imgList2 from '@/assets/category/home/carouse/img-list2.jpg';
-import imgList3 from '@/assets/category/home/carouse/img-list3.jpg';
+import imgList3 from '@/assets/category/home/carouse/img-list3.png';
 
 import contributer from '@/assets/category/home/round/contributer.svg';
 import contributerDark from '@/assets/category/home/round/dark/contributer.svg';
