@@ -50,6 +50,10 @@ export default [
     lang: ['zh'],
   },
   {
+    name: 'wiki/**',
+    lang: ['zh'],
+  },
+  {
     name: 'contribution',
     lang: ['zh', 'en'],
   },
@@ -195,11 +199,11 @@ export default [
   },
   {
     name: 'event-list/**',
-    lang: ['zh', 'en'],
+    lang: ['zh'],
   },
   {
     name: 'program/**',
-    lang: ['zh', 'en'],
+    lang: ['zh'],
   },
   {
     name: 'user-group',
@@ -230,15 +234,7 @@ export default [
     lang: ['zh'],
   },
   {
-    name: 'summit2023',
-    lang: ['zh', 'en'],
-  },
-  {
-    name: 'sig-gathering-2024',
-    lang: ['zh', 'en'],
-  },
-  {
-    name: 'summit-list/**',
+    name: '2403-version-release',
     lang: ['zh'],
   },
 ];
