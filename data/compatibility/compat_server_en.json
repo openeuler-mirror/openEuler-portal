@@ -18355,6 +18355,67 @@
     }
   },
   {
+    "hardwareFactory": "HuaKun",
+    "hardwareModel": "HuaKun AT9508 G3",
+    "osVersion": "openEuler 20.03 LTS SP3",
+    "architecture": "aarch64",
+    "date": "2024/07/29",
+    "friendlyLink": "https://www.schkzy.com/",
+    "boardCards": [
+      {
+        "vendorID": "19e5",
+        "deviceID": "",
+        "svID": "",
+        "ssID": "",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "hns3",
+        "version": "21.12.3",
+        "type": "NIC",
+        "date": "2024/07/29",
+        "sha256": "ef1b82789b0b3fd3f5ccc1f007529517790ee2a2cfd997dca643f7ad0c5341b9",
+        "driverSize": "171K",
+        "chipVendor": "Huawei",
+        "boardModel": "SF221Q",
+        "chipModel": "4*GE",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "",
+        "deviceID": "",
+        "svID": "",
+        "ssID": "",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "megaraid_sas",
+        "version": "5.250.02-3847",
+        "type": "raid",
+        "date": "2024/07/29",
+        "sha256": "4f1a639103bc79622075f217cf4bf5dcd0275518664cf5e7c4954421da98133a",
+        "driverSize": "293K",
+        "chipVendor": "Avago",
+        "boardModel": " AVAGO MegaRAID SAS 9560-8i ",
+        "chipModel": "SAS39xx",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "",
+      "certificationTime": "2024/07/29",
+      "commitID": "726",
+      "mainboardModel": "",
+      "biosUefi": "KL4.41.113",
+      "cpu": "HUAWEI Kunpeng 920 5250",
+      "ram": "32*32G DIMMs",
+      "portsBusTypes": "x16 PCI Express x16/x4 PCI Express x4",
+      "videoAdapter": "Hi171x",
+      "hostBusAdapter": "HiSilicon SAS 3.0",
+      "hardDiskDrive": ""
+    }
+  },
+  {
     "hardwareFactory": "HuaqiComputing",
     "hardwareModel": "DH-RS2297",
     "osVersion": "openEuler 22.03 LTS SP3",
