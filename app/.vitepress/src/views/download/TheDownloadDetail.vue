@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
-import lodash from 'lodash';
+import lodash from 'lodash-es';
 
 import { getUrlParam } from '@/shared/utils';
 import { DownloadCommunityDataT } from '@/shared/@types/type-download';

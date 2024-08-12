@@ -32,8 +32,8 @@ const isDark = computed(() => {
 
 ## Certificate Center
 openEuler certificate center is used to store the public key and certificate information used in each system of the community。
-|  Certificate/Public key | Format | Certificate Properties | Generate Time | Expiration Time | Algorithm | Download Link |
-|  ----------- | --- | ------ | ------ | ----- | ------ | ------- |
-|  openEuler Shim Default CA | X509 | c813cda25ee2749e5551b8919a0537db |2023-11-14 | 2053-12-31 | RSA-4096 |download(<a :href="withBase('/certificates/openEuler-x509ca.cer.pem')" download>pem</a> \| <a :href="withBase('/certificates/openEuler-x509ca.cer.der')" download>der</a>) |
+| Certificate/Public key    | Format | Certificate Properties           | Generate Time | Expiration Time | Algorithm | Download Link                                                                                                                                                                                                                                                |
+| ------------------------- | ------ | -------------------------------- | ------------- | --------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| openEuler Shim Default CA | X509   | c813cda25ee2749e5551b8919a0537db | 2023-11-14    | 2053-12-31      | RSA-4096  | download(<a :href="withBase('/certificates/openEuler-x509ca.cer.pem')" download="openEuler-x509ca.cer.pem">pem</a> \| <a :href="withBase('/certificates/openEuler-x509ca.cer.der')" download="openEuler-x509ca.cer.der">der</a>) |
 
 </div>

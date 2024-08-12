@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useAttrs, nextTick, onUnmounted } from 'vue';
-import { debounce } from 'lodash';
+import lodash from 'lodash-es';
+
+const { debounce } = lodash;
 
 const props = defineProps({
   listenerScorll: {

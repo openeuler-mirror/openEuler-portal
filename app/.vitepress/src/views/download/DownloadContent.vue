@@ -2,7 +2,7 @@
 import { ref, computed, Ref, toRefs, onMounted, watch } from 'vue';
 
 import { useI18n } from '@/i18n';
-import lodash from 'lodash';
+import lodash from 'lodash-es';
 import { useRouter, useData } from 'vitepress';
 
 import useWindowResize from '@/components/hooks/useWindowResize';

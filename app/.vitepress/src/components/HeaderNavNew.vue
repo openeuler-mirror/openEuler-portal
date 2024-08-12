@@ -2,7 +2,7 @@
 import { ref, watch, computed, nextTick } from 'vue';
 import { useRouter, useData } from 'vitepress';
 import useWindowResize from '@/components/hooks/useWindowResize';
-import { debounce } from 'lodash';
+import { debounce } from 'lodash-es';
 import { useOeep } from '@/stores/oeep';
 import { scrollToBottom } from '@/shared/utils';
 

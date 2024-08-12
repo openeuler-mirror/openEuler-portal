@@ -34,7 +34,7 @@ const isDark = computed(() => {
 openEuler证书中心用于存放社区各个系统中具体使用的公钥及证书信息。
 |  证书/公钥 | 格式 | 证书属性 | 启用时间 | 到期时间 | 算法 | 下载地址 |
 |  ----------- | --- | ------ | ------ | ----- | ------ | ------- |
-|  openEuler Shim Default CA | X509 | c813cda25ee2749e5551b8919a0537db |2023-11-14 | 2053-12-31 | RSA-4096 |下载(<a :href="withBase('/certificates/openEuler-x509ca.cer.pem')" download>pem</a> \| <a :href="withBase('/certificates/openEuler-x509ca.cer.der')" download>der</a>) |
+|  openEuler Shim Default CA | X509 | c813cda25ee2749e5551b8919a0537db |2023-11-14 | 2053-12-31 | RSA-4096 |下载(<a :href="withBase('/certificates/openEuler-x509ca.cer.pem')" download="openEuler-x509ca.cer.pem">pem</a> \| <a :href="withBase('/certificates/openEuler-x509ca.cer.der')" download="openEuler-x509ca.cer.der">der</a>) |
 
 </div>
 

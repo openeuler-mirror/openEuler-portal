@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData, useRouter } from 'vitepress';
 import { computed, onMounted, ref, reactive, watch } from 'vue';
-import { debounce, filter, uniq } from 'lodash';
+import { debounce, filter, uniq } from 'lodash-es';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { useI18n } from '@/i18n';
