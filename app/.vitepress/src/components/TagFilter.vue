@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { onMounted, ref, onUnmounted } from 'vue';
 import { useI18n } from '@/i18n';
-import { debounce } from 'lodash';
+import { debounce } from 'lodash-es';
 
 import IconDown from '~icons/app/icon-chevron-down.svg';
 

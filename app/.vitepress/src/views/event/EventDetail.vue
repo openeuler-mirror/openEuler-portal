@@ -3,7 +3,7 @@ import { ref, shallowRef, onMounted, computed, onUnmounted, watch } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 
-import _ from 'lodash';
+import _ from 'lodash-es';
 import { getNowFormatDate } from '@/shared/utils';
 
 import AMapLoader from '@amap/amap-jsapi-loader';

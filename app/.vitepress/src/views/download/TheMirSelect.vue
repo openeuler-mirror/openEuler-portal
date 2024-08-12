@@ -4,7 +4,7 @@ import { useI18n } from '@/i18n';
 
 import { selectMirror } from '@/api/api-mirror';
 
-import _ from 'lodash';
+import _ from 'lodash-es';
 import { getUrlParam } from '@/shared/utils';
 
 import type { DownloadData } from '@/shared/@types/type-download';

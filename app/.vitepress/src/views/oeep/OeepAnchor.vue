@@ -3,7 +3,7 @@ import { onMounted, onUnmounted, ref, watch, nextTick } from 'vue';
 import { useRoute } from 'vitepress';
 import { useOeep } from '@/stores/oeep';
 
-import _ from 'lodash';
+import _ from 'lodash-es';
 
 const props = defineProps({
   className: {

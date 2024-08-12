@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, Ref, ref, watch } from 'vue';
 import { useData } from 'vitepress';
-import cloneTool from 'lodash';
+import cloneTool from 'lodash-es';
 
 import { useI18n } from '@/i18n';
 import { useCommon } from '@/stores/common';

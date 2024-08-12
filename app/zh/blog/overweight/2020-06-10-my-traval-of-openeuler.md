@@ -318,7 +318,7 @@ openEuler是一个开放的社区，我们希望所有参与社区的人都能�
 - 贡献的架构是否正确
 - 贡献是否完善
 
-注意：如果您的PR请求没有引起足够的关注，可以在SIG的邮件列表或[dev@openeuler.org](./mailto:dev@openeuler.org)求助。
+注意：如果您的PR请求没有引起足够的关注，可以在SIG的邮件列表或<dev@openeuler.org>求助。
 
 这里是一个[可供参考的示例](https://gitee.com/open_euler/dashboard/projects/src-openeuler/ct-ng/pulls/2?tab=comments)。
 
@@ -360,9 +360,9 @@ stateDiagram
   - Maintainer的联系方式
 - **方式二**：如果您知道感兴趣的项目名称，可以在openEuler的Repository列表下进行模糊搜索，从而快速定位到对应项目的首页地址。通常情况下，在该项目首页地址的`README.md`文件中，可以找到该项目所属的SIG信息、交流方式、成员和联系方式等。
 
-如果上述两种方式都定位不到您感兴趣的SIG，您可以向[community@openeuler.org](./mailto:community@openeuler.org)发求助邮件。建议您在邮件列表内用“【开发过程疑问】”作为标题，在内容中写出你寻找的SIG或项目的特征，我们会为您提供帮助。
+如果上述两种方式都定位不到您感兴趣的SIG，您可以向<community@openeuler.org>发求助邮件。建议您在邮件列表内用“【开发过程疑问】”作为标题，在内容中写出你寻找的SIG或项目的特征，我们会为您提供帮助。
 
-确定好你要创建小组后，可以按照[模板](https://gitee.com/openeuler/community/tree/master/sig/sig-template)创建一个新的sig目录，并提交 PR 到 [community仓库](https://gitee.com/openeuler/community/tree/master/sig)，并在TC例会上申请议题（订阅tc@openeuler.org，并关注议题收集的邮件），经过大家一致同意后，合入PR，就代表sig创立成功。 
+确定好你要创建小组后，可以按照[模板](https://gitee.com/openeuler/community/tree/master/sig/sig-template)创建一个新的sig目录，并提交 PR 到 [community仓库](https://gitee.com/openeuler/community/tree/master/sig)，并在TC例会上申请议题（订阅<tc@openeuler.org>，并关注议题收集的邮件），经过大家一致同意后，合入PR，就代表sig创立成功。 
 
 这里是一个PR提交创立sig-golang的[具体例子](https://gitee.com/openeuler/community/commit/27b68ca952fffe175ff86b5debe286ea356347db)，包括sig的raodmap、职责、管理的仓库（也许是从别的sig中移交过来）、联系方式和maintainer等信息。
 

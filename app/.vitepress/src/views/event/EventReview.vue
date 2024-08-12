@@ -2,7 +2,7 @@
 import { reactive, onMounted, Ref, ref, watch } from 'vue';
 import { useData, useRouter } from 'vitepress';
 
-import _ from 'lodash';
+import _ from 'lodash-es';
 
 import { useCommon } from '@/stores/common';
 

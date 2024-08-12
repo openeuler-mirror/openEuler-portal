@@ -1,5 +1,5 @@
 import path from 'path';
-import { defineConfig } from 'vitepress';
+import { defineConfig } from 'vite';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 
 import Icons from 'unplugin-icons/vite';

@@ -30,7 +30,7 @@ import ODropdown from 'opendesign/dropdown/ODropdown.vue';
 import OIcon from 'opendesign/icon/OIcon.vue';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
-import { debounce } from 'lodash';
+import { debounce } from 'lodash-es';
 
 const screenWidth = useWindowResize();
 const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));

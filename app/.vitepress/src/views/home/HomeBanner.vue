@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
-import 'swiper/swiper.min.css';
-import 'swiper/components/navigation/navigation.min.css';
-import 'swiper/components/pagination/pagination.min.css';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import { useData } from 'vitepress';
 import HOME_CONFIG from '@/data/home';
 
@@ -14,18 +16,17 @@ import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 
 import { useCommon } from '@/stores/common';
 
-SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const { lang } = useData();
 const flag = ref();
 const onSwiper = (swiper: any) => {
   swiper.el.onmouseout = function () {
-    swiper.navigation.$nextEl.removeClass('show');
-    swiper.navigation.$prevEl.removeClass('show');
+    swiper.navigation.nextEl.classList.remove('show');
+    swiper.navigation.prevEl.classList.remove('show');
   };
   swiper.el.onmouseover = function () {
-    swiper.navigation.$nextEl.addClass('show');
-    swiper.navigation.$prevEl.addClass('show');
+    swiper.navigation.nextEl.classList.add('show');
+    swiper.navigation.prevEl.classList.add('show');
   };
   flag.value = computed(() => swiper.animating);
 };
@@ -60,6 +61,7 @@ const isDark = computed(() => {
 <template>
   <swiper
     class="home-banner"
+    :modules="[Autoplay, Pagination, Navigation]"
     :loop="true"
     :pagination="{
       clickable: true,
@@ -89,7 +91,7 @@ const isDark = computed(() => {
           <div
             v-if="item.title?.length"
             class="banner-panel-content flex-column"
-            :class="[item.id, isDark ? `${item.id}-dark`: '']"
+            :class="[item.id, isDark ? `${item.id}-dark` : '']"
           >
             <div data-aos="fade-down" class="box">
               <img v-if="item.img" class="text-img" :src="item?.img" alt="" />

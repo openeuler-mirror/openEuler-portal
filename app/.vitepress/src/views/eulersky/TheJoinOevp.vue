@@ -70,24 +70,26 @@ onMounted(() => {
       <div class="oevp-list">
         <h2>{{ oevpI18n.OEVP_TITLE }}</h2>
         <div class="oevp-card-list">
-          <OContainer
-            v-for="item in oevpListData"
-            :key="item.name"
-            class="card-item"
-            data-aos="fade-up"
-          >
-            <img class="avator" :src="item.avator" />
-            <span class="name">{{ item.name }}</span>
-            <span class="company">{{ item.company }}</span>
-            <div class="label-list">
-              <span v-for="label in item.labels" :key="label" class="label">{{
-                label
-              }}</span>
-            </div>
-            <span class="base"
-              ><OIcon><IconHome /></OIcon>{{ item.base }}</span
+          <clientonly>
+            <OContainer
+              v-for="item in oevpListData"
+              :key="item.avator"
+              class="card-item"
+              data-aos="fade-up"
             >
-          </OContainer>
+              <img class="avator" :src="item.avator" />
+              <span class="name">{{ item.name }}</span>
+              <span class="company">{{ item.company }}</span>
+              <div class="label-list">
+                <span v-for="label in item.labels" :key="label" class="label">{{
+                  label
+                }}</span>
+              </div>
+              <span class="base"
+                ><OIcon><IconHome /></OIcon>{{ item.base }}</span
+              >
+            </OContainer>
+          </clientonly>
         </div>
         <p class="tip">{{ oevpI18n.TIP }}</p>
       </div>
@@ -301,7 +303,7 @@ onMounted(() => {
           }
         }
       }
-      .oevp-equity-list-en  {
+      .oevp-equity-list-en {
         max-width: 844px;
         gap: 16px;
       }
