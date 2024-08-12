@@ -640,64 +640,64 @@ function setActiveMirrorMobile(index: number, item: string) {
 
 <style lang="scss" scoped>
 .content-wrap {
-  margin-top: var(--o-spacing-h4);
-  background-color: var(--o-color-bg2);
-  padding: var(--o-spacing-h2) var(--o-spacing-h1);
-  box-shadow: var(--o-shadow-l2);
+  margin-top: var(--e-spacing-h4);
+  background-color: var(--e-color-bg2);
+  padding: var(--e-spacing-h2) var(--e-spacing-h1);
+  box-shadow: var(--e-shadow-l2);
   @media (max-width: 1100px) {
-    margin-top: var(--o-spacing-h5);
-    padding: var(--o-spacing-h4) var(--o-spacing-h8);
+    margin-top: var(--e-spacing-h5);
+    padding: var(--e-spacing-h4) var(--e-spacing-h8);
   }
   .title {
     text-align: center;
-    font-size: var(--o-font-size-h3);
-    line-height: var(--o-line-height-h3);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-h3);
+    line-height: var(--e-line-height-h3);
+    color: var(--e-color-text1);
     @media (max-width: 1100px) {
-      font-size: var(--o-font-size-h8);
-      line-height: var(--o-line-height-h8);
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
     }
   }
   .subtitle {
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
     text-align: center;
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-text);
-    color: var(--o-color-text3);
+    font-size: var(--e-font-size-text);
+    line-height: var(--e-line-height-text);
+    color: var(--e-color-text3);
     @media (max-width: 1100px) {
-      margin-top: var(--o-spacing-h8);
-      font-size: var(--o-font-size-tip);
-      line-height: var(--o-line-height-tip);
+      margin-top: var(--e-spacing-h8);
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
     }
   }
   .other-link {
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
     text-align: center;
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-text);
+    font-size: var(--e-font-size-text);
+    line-height: var(--e-line-height-text);
     @media (max-width: 1100px) {
-      margin-top: var(--o-spacing-h8);
-      font-size: var(--o-font-size-tip);
-      line-height: var(--o-line-height-tip);
+      margin-top: var(--e-spacing-h8);
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
     }
     a {
       display: inline-block;
-      padding: 0 var(--o-spacing-h5);
+      padding: 0 var(--e-spacing-h5);
       @media (max-width: 1100px) {
-        padding: 0 var(--o-spacing-h8);
+        padding: 0 var(--e-spacing-h8);
       }
       & ~ a {
-        border-left: 1px solid var(--o-color-border2);
+        border-left: 1px solid var(--e-color-border2);
       }
     }
   }
   .filter-card {
-    margin: var(--o-spacing-h4) 0;
-    background-color: var(--o-color-bg2);
-    padding: var(--o-spacing-h5) var(--o-spacing-h2);
+    margin: var(--e-spacing-h4) 0;
+    background-color: var(--e-color-bg2);
+    padding: var(--e-spacing-h5) var(--e-spacing-h2);
     @media screen and (max-width: 768px) {
       padding: 0;
-      font-size: var(--o-font-size-tip);
+      font-size: var(--e-font-size-tip);
     }
     :deep(.tag-filter) {
       padding: 0;
@@ -712,11 +712,11 @@ function setActiveMirrorMobile(index: number, item: string) {
         }
       }
       .label {
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
         @media screen and (max-width: 768px) {
           width: 26px;
           white-space: nowrap;
-          font-size: var(--o-font-size-tip);
+          font-size: var(--e-font-size-tip);
         }
       }
       .tag-filter-box {
@@ -726,46 +726,46 @@ function setActiveMirrorMobile(index: number, item: string) {
       }
       .o-tag {
         padding: 0 12px;
-        font-size: var(--o-font-size-text);
+        font-size: var(--e-font-size-text);
         height: 28px;
         line-height: 28px;
         display: flex;
         align-items: flex-start;
         @media screen and (max-width: 768px) {
           padding: 0 6px;
-          font-size: var(--o-font-size-tip) !important;
+          font-size: var(--e-font-size-tip) !important;
           height: 24px;
           line-height: 24px;
           margin-bottom: 2px;
         }
       }
       &.os-box {
-        margin-top: var(--o-spacing-h5);
+        margin-top: var(--e-spacing-h5);
         @media screen and (max-width: 768px) {
-          margin-top: var(--o-spacing-h8);
+          margin-top: var(--e-spacing-h8);
         }
       }
     }
     .disable {
-      color: var(--o-color-text5);
+      color: var(--e-color-text5);
       cursor: not-allowed;
     }
   }
   .content-item {
-    margin-top: var(--o-spacing-h2);
+    margin-top: var(--e-spacing-h2);
     @media (max-width: 1100px) {
-      margin-top: var(--o-spacing-h4);
+      margin-top: var(--e-spacing-h4);
     }
     :deep(.el-scrollbar) {
       tr {
         &:hover {
-          background-color: var(--o-color-bg2);
+          background-color: var(--e-color-bg2);
         }
       }
     }
     :deep(.el-table__inner-wrapper) {
       &::before {
-        background-color: var(--o-color-border2);
+        background-color: var(--e-color-border2);
       }
     }
     :deep(.o-table.el-table) {
@@ -773,31 +773,31 @@ function setActiveMirrorMobile(index: number, item: string) {
     }
     h3 {
       text-align: center;
-      font-size: var(--o-font-size-h5);
-      line-height: var(--o-line-height-h5);
-      color: var(--o-color-text1);
+      font-size: var(--e-font-size-h5);
+      line-height: var(--e-line-height-h5);
+      color: var(--e-color-text1);
       @media (max-width: 1100px) {
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
       }
     }
     .download-pc {
-      margin-top: var(--o-spacing-h4);
+      margin-top: var(--e-spacing-h4);
       .name-info {
         display: flex;
         align-items: center;
-        gap: var(--o-spacing-h8);
-        color: var(--o-color-text1);
+        gap: var(--e-spacing-h8);
+        color: var(--e-color-text1);
         .server-tips {
-          width: var(--o-font-size-h6);
+          width: var(--e-font-size-h6);
           height: 32px;
-          color: var(--o-color-text4);
+          color: var(--e-color-text4);
         }
       }
       .down-copy {
-        font-size: var(--o-font-size-text);
+        font-size: var(--e-font-size-text);
         padding-left: 0;
-        color: var(--o-color-brand1);
+        color: var(--e-color-brand1);
         :deep(.suffix-icon) {
           width: 14px;
           @media (max-width: 1100px) {
@@ -805,7 +805,7 @@ function setActiveMirrorMobile(index: number, item: string) {
           }
         }
         &:hover {
-          color: var(--o-color-brand2);
+          color: var(--e-color-brand2);
         }
       }
       .down-link {
@@ -835,7 +835,7 @@ function setActiveMirrorMobile(index: number, item: string) {
         .cell {
           line-height: 46px;
           overflow: visible;
-          padding-left: var(--o-spacing-h2);
+          padding-left: var(--e-spacing-h2);
           a {
             word-break: normal;
           }
@@ -846,7 +846,7 @@ function setActiveMirrorMobile(index: number, item: string) {
             width: 200px;
             input,
             i {
-              color: var(--o-color-brand1);
+              color: var(--e-color-brand1);
             }
           }
         }
@@ -861,7 +861,7 @@ function setActiveMirrorMobile(index: number, item: string) {
           }
         }
         .el-table__body-wrapper {
-          border-bottom: 1px solid var(--o-color-border2);
+          border-bottom: 1px solid var(--e-color-border2);
         }
         tr::after {
           width: 100%;
@@ -882,19 +882,19 @@ function setActiveMirrorMobile(index: number, item: string) {
       }
     }
     .download-mobile {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
       .download-item {
-        padding: var(--o-spacing-h5);
+        padding: var(--e-spacing-h5);
         &:nth-of-type(2n + 1) {
-          background-color: var(--o-color-bg4);
+          background-color: var(--e-color-bg4);
         }
         .item-text {
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-font-height-tip);
-          color: var(--o-color-text1);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-font-height-tip);
+          color: var(--e-color-text1);
           display: flex;
           & ~ .item-text {
-            margin-top: var(--o-spacing-h8);
+            margin-top: var(--e-spacing-h8);
           }
           span {
             display: inline-block;
@@ -903,10 +903,10 @@ function setActiveMirrorMobile(index: number, item: string) {
             }
           }
           .text-size {
-            color: var(--o-color-text4);
+            color: var(--e-color-text4);
           }
           .down-copy {
-            color: var(--o-color-brand1);
+            color: var(--e-color-brand1);
             padding: 0;
             line-height: 0;
           }
@@ -918,7 +918,7 @@ function setActiveMirrorMobile(index: number, item: string) {
                 width: 160px;
                 overflow: scroll;
                 white-space: nowrap;
-                margin-right: var(--o-spacing-h7);
+                margin-right: var(--e-spacing-h7);
                 &::-webkit-scrollbar {
                   display: none;
                 }
@@ -937,29 +937,29 @@ function setActiveMirrorMobile(index: number, item: string) {
               top: calc(100% + 6px);
               left: 0;
               width: 210px;
-              background-color: var(--o-color-bg2);
+              background-color: var(--e-color-bg2);
               z-index: 2147483647;
               overflow: hidden;
               transition: all 0.3s;
               max-height: 0;
               box-sizing: border-box;
-              box-shadow: var(--o-shadow-l5);
+              box-shadow: var(--e-shadow-l5);
               &.mirror-show {
-                padding: var(--o-spacing-h8) 0;
+                padding: var(--e-spacing-h8) 0;
                 max-height: 800px;
               }
               li {
-                padding: 0 var(--o-spacing-h8);
-                line-height: var(--o-line-height-h8);
-                color: var(--o-color-text3);
+                padding: 0 var(--e-spacing-h8);
+                line-height: var(--e-line-height-h8);
+                color: var(--e-color-text3);
                 &.mirror-item {
                   width: 210px;
-                  color: var(--o-color-text1);
+                  color: var(--e-color-text1);
                   white-space: nowrap;
                   text-overflow: ellipsis;
                   overflow: hidden;
                   &:hover {
-                    background-color: var(--o-color-bg4);
+                    background-color: var(--e-color-bg4);
                   }
                 }
                 .all-mirror {
@@ -972,7 +972,7 @@ function setActiveMirrorMobile(index: number, item: string) {
                         width: 20px;
                         display: flex;
                         flex-grow: 0;
-                        color: var(--o-color-brand1);
+                        color: var(--e-color-brand1);
                       }
                     }
                   }
@@ -995,14 +995,14 @@ function setActiveMirrorMobile(index: number, item: string) {
               position: absolute;
               left: 0;
               top: -46px;
-              background-color: var(--o-color-bg2);
-              padding: var(--o-spacing-h9);
+              background-color: var(--e-color-bg2);
+              padding: var(--e-spacing-h9);
             }
             .server-tips {
-              width: var(--o-font-size-tip);
-              height: var(--o-font-size-tip);
-              color: var(--o-color-text4);
-              margin-left: var(--o-spacing-h9);
+              width: var(--e-font-size-tip);
+              height: var(--e-font-size-tip);
+              color: var(--e-color-text4);
+              margin-left: var(--e-spacing-h9);
               transform: translateY(-1px);
             }
             .mask-mobile {
@@ -1034,7 +1034,7 @@ function setActiveMirrorMobile(index: number, item: string) {
               height: 16px;
               padding: 0;
               input {
-                font-size: var(--o-font-size-tip);
+                font-size: var(--e-font-size-tip);
                 vertical-align: top;
                 line-height: auto;
                 height: 16px;

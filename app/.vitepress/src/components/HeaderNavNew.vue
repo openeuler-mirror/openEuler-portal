@@ -199,9 +199,9 @@ watch(
   top: 80px;
   left: 0;
   right: 0;
-  background-color: var(--o-color-bg2);
+  background-color: var(--e-color-bg2);
   z-index: 90;
-  box-shadow: var(--o-shadow-l1);
+  box-shadow: var(--e-shadow-l1);
 
   max-width: calc(100% + 16px);
   width: calc(100% + 16px);
@@ -211,7 +211,7 @@ watch(
 
   transform: scaleY(0);
   @media screen and (max-width: 1100px) {
-    border-top: 1px solid var(--o-color-border2);
+    border-top: 1px solid var(--e-color-border2);
     top: 0;
     left: 0px;
     padding: 0;
@@ -226,7 +226,7 @@ watch(
 
   .nav-dropdown-wrapper {
     @media (max-width: 1439px) {
-      background: var(--o-color-bg2);
+      background: var(--e-color-bg2);
       overflow-y: auto;
       padding: 16px;
       height: 100%;
@@ -238,7 +238,7 @@ watch(
       }
     }
     .nav-dropdown-bottom {
-      border-top: 1px solid var(--o-color-border2);
+      border-top: 1px solid var(--e-color-border2);
       margin-top: 24px;
       display: flex;
       padding: 16px 0 0;
@@ -266,7 +266,7 @@ watch(
         .title {
           font-size: 14px;
           font-weight: 400;
-          color: var(--o-color-text4);
+          color: var(--e-color-text4);
           line-height: 24px;
           @media (max-width: 1100px) {
             font-size: 12px;
@@ -276,20 +276,20 @@ watch(
         .link {
           font-size: 16px;
           font-weight: 500;
-          color: var(--o-color-brand1);
+          color: var(--e-color-brand1);
           line-height: 24px;
           display: inline-block;
           cursor: pointer;
           margin-left: 24px;
           &:hover {
-            color: var(--o-color-brand2);
+            color: var(--e-color-brand2);
           }
           @media (max-width: 1100px) {
             display: block;
             margin-bottom: 12px;
             margin-left: 0;
-            line-height: var(--o-line-height-text);
-            font-size: var(--o-font-size-text);
+            line-height: var(--e-line-height-text);
+            font-size: var(--e-font-size-text);
           }
         }
         .show-in-mobile {
@@ -317,7 +317,7 @@ watch(
         &:not(:last-child) {
           margin-right: 0;
           margin-bottom: 12px;
-          border-bottom: 1px solid var(--o-color-border2);
+          border-bottom: 1px solid var(--e-color-border2);
           padding-bottom: 12px;
         }
       }
@@ -345,8 +345,8 @@ watch(
         }
         .link {
           margin-right: 12px;
-          line-height: var(--o-line-height-tip);
-          font-size: var(--o-font-size-tip);
+          line-height: var(--e-line-height-tip);
+          font-size: var(--e-font-size-tip);
 
           // & + .link {
           //   margin-left: 12px;
@@ -354,10 +354,10 @@ watch(
         }
       }
       .title {
-        line-height: var(--o-line-height-text);
-        font-size: var(--o-font-size-text);
+        line-height: var(--e-line-height-text);
+        font-size: var(--e-font-size-text);
         font-weight: 400;
-        color: var(--o-color-text4);
+        color: var(--e-color-text4);
         margin-bottom: 16px;
         @media (max-width: 1100px) {
           margin-bottom: 16px;
@@ -366,37 +366,37 @@ watch(
       }
       .link {
         font-weight: 500;
-        color: var(--o-color-brand1);
-        line-height: var(--o-line-height-h8);
-        font-size: var(--o-font-size-h8);
+        color: var(--e-color-brand1);
+        line-height: var(--e-line-height-h8);
+        font-size: var(--e-font-size-h8);
         cursor: pointer;
         display: flex;
 
         cursor: pointer;
         @media (max-width: 1100px) {
-          line-height: var(--o-line-height-text);
-          font-size: var(--o-font-size-text);
+          line-height: var(--e-line-height-text);
+          font-size: var(--e-font-size-text);
         }
         .o-icon {
           display: flex;
           align-items: center;
           height: 24px;
-          margin-left: var(--o-spacing-h9);
-          color: var(--o-color-text1);
+          margin-left: var(--e-spacing-h9);
+          color: var(--e-color-text1);
           font-size: 14px;
         }
         &:hover {
-          color: var(--o-color-brand2);
+          color: var(--e-color-brand2);
         }
         &.no-link {
-          color: var(--o-color-text1) !important;
+          color: var(--e-color-text1) !important;
           cursor: default;
         }
       }
       .desc {
         font-size: 12px;
         font-weight: 400;
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
         line-height: 18px;
         display: -webkit-box;
         text-overflow: ellipsis;
@@ -439,7 +439,7 @@ html[lang='en'] .o-nav .o-nav-list > li {
   position: relative;
   @media screen and (max-width: 1100px) {
     width: 164px;
-    background: var(--o-color-bg1);
+    background: var(--e-color-bg1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -460,53 +460,53 @@ html[lang='en'] .o-nav .o-nav-list > li {
       align-items: center;
       height: 100%;
 
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-h8);
-      color: var(--o-color-text1);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-h8);
+      color: var(--e-color-text1);
       @media screen and (max-width: 1100px) {
-        line-height: var(--o-line-height-h3);
+        line-height: var(--e-line-height-h3);
         position: relative;
         display: block;
         height: auto;
         &.active {
-          color: var(--o-color-brand1);
+          color: var(--e-color-brand1);
           @media (max-width: 1100px) {
-            background: var(--o-color-bg2);
+            background: var(--e-color-bg2);
           }
           &::after {
-            background: var(--o-color-brand1);
+            background: var(--e-color-brand1);
           }
         }
       }
       @media screen and (min-width: 1100px) {
         &:hover {
-          color: var(--o-color-brand1);
+          color: var(--e-color-brand1);
           z-index: 99;
           .nav-dropdown {
             transform: scaleY(1);
             transition-timing-function: cubic-bezier(0.16, 0.75, 0.5, 1);
           }
           &::after {
-            background: var(--o-color-brand1);
+            background: var(--e-color-brand1);
           }
         }
       }
       &.active {
-        color: var(--o-color-brand1);
+        color: var(--e-color-brand1);
         z-index: 99;
         .nav-dropdown {
           display: block;
         }
         &::after {
-          background: var(--o-color-brand1);
+          background: var(--e-color-brand1);
         }
       }
       &::after {
         content: '';
         position: absolute;
-        left: var(--o-spacing-h4);
+        left: var(--e-spacing-h4);
         bottom: 0;
-        width: calc(100% - var(--o-spacing-h4) * 2);
+        width: calc(100% - var(--e-spacing-h4) * 2);
         height: 2px;
         border-radius: 1px;
         transition: all 0.1s linear;
@@ -517,10 +517,10 @@ html[lang='en'] .o-nav .o-nav-list > li {
       }
       .nav-item {
         display: block;
-        padding: 0 var(--o-spacing-h4);
+        padding: 0 var(--e-spacing-h4);
         @media screen and (max-width: 1100px) {
-          padding: 0 var(--o-spacing-h6);
-          font-size: var(--o-font-size-text);
+          padding: 0 var(--e-spacing-h6);
+          font-size: var(--e-font-size-text);
         }
       }
     }

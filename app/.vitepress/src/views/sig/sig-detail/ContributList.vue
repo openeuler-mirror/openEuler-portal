@@ -333,9 +333,9 @@ const jumpPage = (val: number) => {
 </template>
 <style scoped lang="scss">
 .sig-pagination {
-  margin-top: var(--o-spacing-h2);
+  margin-top: var(--e-spacing-h2);
   @media screen and (max-width: 768px) {
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
   }
 }
 
@@ -343,19 +343,19 @@ const jumpPage = (val: number) => {
   box-shadow: none;
 }
 .pagination-slot {
-  font-size: var(--o-font-size-text);
+  font-size: var(--e-font-size-text);
   font-weight: 400;
-  color: var(--o-color-text1);
-  line-height: var(--o-spacing-h4);
+  color: var(--e-color-text1);
+  line-height: var(--e-spacing-h4);
 }
 @media screen and (min-width: 857px) {
   .repository-pagin {
-    margin-top: var(--o-spacing-h2);
+    margin-top: var(--e-spacing-h2);
   }
 }
 @media screen and (max-width: 857px) {
   .repository-pagin {
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
   }
 }
 .ranking-list {
@@ -366,10 +366,10 @@ const jumpPage = (val: number) => {
     height: 0px;
   }
   .caption {
-    font-size: var(--o-font-size-h8);
-    color: var(--o-color-black);
-    line-height: var(--o-line-height-h8);
-    margin-bottom: var(--o-spacing-h8);
+    font-size: var(--e-font-size-h8);
+    color: var(--e-color-black);
+    line-height: var(--e-line-height-h8);
+    margin-bottom: var(--e-spacing-h8);
   }
   .box {
     display: flex;
@@ -384,7 +384,7 @@ const jumpPage = (val: number) => {
     .num {
       width: 100px;
       text-align: left;
-      color: var(--o-color-brand1);
+      color: var(--e-color-brand1);
     }
   }
 }
@@ -402,7 +402,7 @@ const jumpPage = (val: number) => {
       height: 12px;
       border-radius: 2px;
       font-size: 10px;
-      color: var(--o-color-white);
+      color: var(--e-color-white);
       line-height: 12px;
       text-align: center;
       margin-right: 8px;
@@ -423,9 +423,9 @@ const jumpPage = (val: number) => {
   &-box {
     width: 54px;
     height: 22px;
-    background: var(--o-color-kleinblue7);
+    background: var(--e-color-kleinblue7);
     border-radius: 2px;
-    color: var(--o-color-white);
+    color: var(--e-color-white);
     margin-right: 10px;
     display: flex;
     justify-content: center;
@@ -442,18 +442,18 @@ const jumpPage = (val: number) => {
   }
 }
 .bg-color-maintainer {
-  background-color: var(--o-color-brand1);
+  background-color: var(--e-color-brand1);
 }
 .bg-color-committer {
-  background-color: var(--o-color-yellow5);
+  background-color: var(--e-color-yellow5);
 }
 .bg-color-contributor {
   background-color: #4aaead;
 }
 .bg-color-cancel {
-  background-color: var(--o-color-neutral10);
+  background-color: var(--e-color-neutral10);
 }
 .color-cancel {
-  color: var(--o-color-neutral10);
+  color: var(--e-color-neutral10);
 }
 </style>

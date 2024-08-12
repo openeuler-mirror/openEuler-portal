@@ -52,18 +52,18 @@ defineExpose(handleSearch);
 <style lang="scss">
 .search-history {
   margin-top: 40px;
-  color: var(--o-color-text1);
-  box-shadow: var(--o-shadow-l1);
+  color: var(--e-color-text1);
+  box-shadow: var(--e-shadow-l1);
   background: rgba(255, 255, 255, 0.9);
-  padding: var(--o-spacing-h3);
+  padding: var(--e-spacing-h3);
   .history-list {
     margin-top: 24px;
     display: flex;
     gap: 16px 16px;
-    background-color: var(--o-cloor-bg1);
+    background-color: var(--e-cloor-bg1);
     .o-tag {
-      background-color: var(--o-color-bg4);
-      color: var(--o-color-text-secondary);
+      background-color: var(--e-color-bg4);
+      color: var(--e-color-text-secondary);
       cursor: pointer;
     }
   }

@@ -197,28 +197,28 @@ const handleSearch = (searchValue: string) => {
 <style lang="scss" scoped>
 .icon {
   cursor: pointer;
-  font-size: var(--o-font-size-h6);
-  color: var(--o-color-text-secondary);
+  font-size: var(--e-font-size-h6);
+  color: var(--e-color-text-secondary);
 }
 
 .search-icon {
-  color: var(--o-color-text1);
+  color: var(--e-color-text1);
 }
 
 .header-search {
   position: relative;
-  margin-left: var(--o-spacing-h2);
+  margin-left: var(--e-spacing-h2);
   .o-input {
     width: 160px;
     transition: width 0.3s;
-    background-color: var(--o-color-bg1);
+    background-color: var(--e-color-bg1);
     @media (max-width: 1100px) {
       display: none;
     }
   }
   @media (max-width: 1100px) {
     :deep(.o-search) {
-      --o-search-height: 28px;
+      --e-search-height: 28px;
     }
     margin-left: 0;
     z-index: 2;
@@ -231,7 +231,7 @@ const handleSearch = (searchValue: string) => {
   &-box {
     .close {
       cursor: pointer;
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
     }
   }
   .drawer {
@@ -240,7 +240,7 @@ const handleSearch = (searchValue: string) => {
     overflow: hidden;
     width: 100%;
     margin-top: 21px;
-    box-shadow: var(--o-shadow-l4);
+    box-shadow: var(--e-shadow-l4);
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(5px);
     padding: 24px 0;
@@ -252,40 +252,40 @@ const handleSearch = (searchValue: string) => {
       left: -16px;
       right: 0;
       width: 100vw;
-      padding: var(--o-spacing-h5) 0;
+      padding: var(--e-spacing-h5) 0;
     }
     .hots {
-      padding: 0 var(--o-spacing-h3);
+      padding: 0 var(--e-spacing-h3);
       @media (max-width: 1100px) {
-        padding: 0 var(--o-spacing-h5);
+        padding: 0 var(--e-spacing-h5);
       }
       .hots-title {
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
-        color: var(--o-color-text1);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
+        color: var(--e-color-text1);
       }
       .hots-list {
         display: flex;
         flex-wrap: wrap;
         .hots-list-item {
-          margin-top: var(--o-spacing-h5);
-          margin-right: var(--o-spacing-h5);
-          margin-right: var(--o-spacing-h5);
-          color: var(--o-color-text-secondary);
+          margin-top: var(--e-spacing-h5);
+          margin-right: var(--e-spacing-h5);
+          margin-right: var(--e-spacing-h5);
+          color: var(--e-color-text-secondary);
           cursor: pointer;
           &:hover {
-            color: var(--o-color-brand1);
+            color: var(--e-color-brand1);
           }
           @media (max-width: 1100px) {
-            font-size: var(--o-font-size-tip);
-            line-height: var(--o-line-height-tip);
+            font-size: var(--e-font-size-tip);
+            line-height: var(--e-line-height-tip);
           }
         }
       }
     }
     @media (max-width: 768px) {
       .hots-list-item {
-        margin-right: var(--o-spacing-h8);
+        margin-right: var(--e-spacing-h8);
       }
     }
   }
@@ -298,26 +298,26 @@ const handleSearch = (searchValue: string) => {
   }
   .history {
     display: flex;
-    font-size: var(--o-font-size-tip);
-    line-height: var(--o-line-height-tip);
-    color: var(--o-color-text1);
-    padding: 0 var(--o-spacing-h3);
+    font-size: var(--e-font-size-tip);
+    line-height: var(--e-line-height-tip);
+    color: var(--e-color-text1);
+    padding: 0 var(--e-spacing-h3);
     @media (max-width: 1100px) {
-      padding: 0 var(--o-spacing-h5);
+      padding: 0 var(--e-spacing-h5);
     }
   }
   .recommend-item {
     cursor: pointer;
     margin-top: 8px;
-    color: var(--o-color-text-secondary);
-    font-size: var(--o-font-size-h8);
-    padding: 4px var(--o-spacing-h3);
+    color: var(--e-color-text-secondary);
+    font-size: var(--e-font-size-h8);
+    padding: 4px var(--e-spacing-h3);
     @media (max-width: 1100px) {
-      padding: 0 var(--o-spacing-h5);
+      padding: 0 var(--e-spacing-h5);
     }
     &:hover {
-      color: var(--o-color-brand1);
-      background-color: var(--o-color-bg1);
+      color: var(--e-color-brand1);
+      background-color: var(--e-color-bg1);
     }
   }
 }

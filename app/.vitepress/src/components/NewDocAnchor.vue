@@ -83,10 +83,10 @@ watch(
 
 <style lang="scss" scoped>
 .title {
-  line-height: var(--o-line-height-h7);
-  font-size: var(--o-font-size-h7);
+  line-height: var(--e-line-height-h7);
+  font-size: var(--e-font-size-h7);
   font-weight: 500;
-  color: var(--o-color-text1);
+  color: var(--e-color-text1);
 }
 
 .o-scroller {
@@ -135,9 +135,9 @@ watch(
     position: relative;
     cursor: pointer;
     display: block !important;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h8);
-    font-size: var(--o-font-size-h8);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h8);
+    font-size: var(--e-font-size-h8);
     z-index: 1;
     padding: 8px 4px;
     border-radius: 8px;
@@ -148,11 +148,11 @@ watch(
       top: 0;
       height: 100%;
       left: -6px;
-      background-color: var(--o-color-bg4);
+      background-color: var(--e-color-bg4);
       z-index: 1;
     }
     &:hover {
-      color: var(--o-color-link2);
+      color: var(--e-color-link2);
     }
     &-inner {
       overflow: hidden;
@@ -164,10 +164,10 @@ watch(
     }
   }
   .active-link {
-    color: var(--o-color-brand1);
+    color: var(--e-color-brand1);
     font-weight: 500;
     &:hover {
-      color: var(--o-color-brand1);
+      color: var(--e-color-brand1);
     }
     &::after {
       position: absolute;
@@ -177,7 +177,7 @@ watch(
       top: 50%;
       transform: translateY(-50%);
       left: -6px;
-      background-color: var(--o-color-brand1);
+      background-color: var(--e-color-brand1);
       z-index: 1;
       border-radius: 1px;
     }
@@ -190,7 +190,7 @@ watch(
     }
     .active-link {
       &:hover {
-        color: var(--o-color-brand1);
+        color: var(--e-color-brand1);
       }
     }
   }

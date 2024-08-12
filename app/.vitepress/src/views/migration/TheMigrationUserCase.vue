@@ -51,11 +51,11 @@ function goDetail(link: string) {
 .user-case-list {
   display: grid;
   width: 100%;
-  margin: var(--o-spacing-h2) 0;
+  margin: var(--e-spacing-h2) 0;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: var(--o-spacing-h4);
+  grid-gap: var(--e-spacing-h4);
   @media (max-width: 1280px) {
-    margin: var(--o-spacing-h4) 0;
+    margin: var(--e-spacing-h4) 0;
     grid-template-columns: repeat(2, 1fr);
   }
   @media (max-width: 768px) {
@@ -78,15 +78,15 @@ function goDetail(link: string) {
         margin: 0;
         font-weight: 700;
         color: #ffffff;
-        font-size: var(--o-font-size-h7);
-        line-height: var(--o-line-height-h7);
+        font-size: var(--e-font-size-h7);
+        line-height: var(--e-line-height-h7);
         max-width: 256px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         @media (max-width: 768px) {
-          font-size: var(--o-font-size-text);
-          line-height: var(--o-line-height-text);
+          font-size: var(--e-font-size-text);
+          line-height: var(--e-line-height-text);
         }
       }
       .detail {
@@ -98,13 +98,13 @@ function goDetail(link: string) {
         -webkit-box-orient: vertical;
         margin-top: 2px;
         color: #ffffff;
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
         @media (max-width: 768px) {
           max-width: 190px;
           margin-top: 8px;
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-line-height-tip);
         }
       }
       a {
@@ -120,7 +120,7 @@ function goDetail(link: string) {
 
           @media (max-width: 768px) {
             width: 88px;
-            font-size: var(--o-font-size-tip);
+            font-size: var(--e-font-size-tip);
           }
         }
       }
@@ -140,8 +140,8 @@ function goDetail(link: string) {
       }
       .type {
         text-align: center;
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
         color: #ad9cd3;
       }
     }

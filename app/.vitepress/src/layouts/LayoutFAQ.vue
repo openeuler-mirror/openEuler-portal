@@ -120,10 +120,10 @@ const IconMenuShow = computed(() => {
   display: flex;
   flex-direction: column;
   .faq-title {
-    line-height: var(--o-line-height-h7);
-    font-size: var(--o-font-size-h7);
+    line-height: var(--e-line-height-h7);
+    font-size: var(--e-font-size-h7);
     font-weight: 500;
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
   }
   .toc-box {
     display: flex;
@@ -132,22 +132,22 @@ const IconMenuShow = computed(() => {
     .toc-item {
       padding: 8px 4px;
       color: rgba(0, 0, 0, 0.8);
-      line-height: var(--o-line-height-h8);
-      font-size: var(--o-font-size-h8);
+      line-height: var(--e-line-height-h8);
+      font-size: var(--e-font-size-h8);
       border-radius: 4px;
       &:hover {
         background: #e7edf6;
       }
       @media screen and (max-width: 1100px) {
-        line-height: var(--o-line-height-text);
-        font-size: var(--o-font-size-text);
+        line-height: var(--e-line-height-text);
+        font-size: var(--e-font-size-text);
       }
     }
     .toc-item + .toc-item {
       margin-top: 2px;
     }
     .active {
-      color: var(--o-color-brand1);
+      color: var(--e-color-brand1);
       background: #c7d4ed;
       font-weight: 500;
       &:hover {
@@ -164,7 +164,7 @@ const IconMenuShow = computed(() => {
   top: 0;
   width: 268px;
   height: 100vh;
-  background: var(--o-color-bg2);
+  background: var(--e-color-bg2);
   box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   .faq-title {
@@ -172,8 +172,8 @@ const IconMenuShow = computed(() => {
     justify-content: space-between;
     padding: 16px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    line-height: var(--o-line-height-h8);
-    font-size: var(--o-font-size-h8);
+    line-height: var(--e-line-height-h8);
+    font-size: var(--e-font-size-h8);
     .o-icon {
       font-size: 24px;
     }
@@ -191,19 +191,19 @@ const IconMenuShow = computed(() => {
   top: 48px;
   right: 0;
   padding: 16px;
-  background-color: var(--o-color-bg2);
+  background-color: var(--e-color-bg2);
   margin-bottom: 16px;
   width: 100%;
   z-index: 2;
-  box-shadow: var(--o-shadow-l1);
+  box-shadow: var(--e-shadow-l1);
   .o-icon {
     font-size: 24px;
   }
 }
 
 .faq-title {
-  font-size: var(--o-font-size-h5);
-  line-height: var(--o-line-height-h5);
+  font-size: var(--e-font-size-h5);
+  line-height: var(--e-line-height-h5);
 }
 
 .faq-wrapper {
@@ -221,7 +221,7 @@ const IconMenuShow = computed(() => {
     @media screen and (max-width: 1100px) {
       margin-top: calc(48px + 16px);
       margin-bottom: 40px;
-      background-color: var(--o-color-bg2);
+      background-color: var(--e-color-bg2);
     }
     :deep(.markdown) {
       margin: 32px;
@@ -252,8 +252,8 @@ const IconMenuShow = computed(() => {
       h2 {
         margin-top: 32px;
         margin-bottom: 24px;
-        font-size: var(--o-font-size-h5);
-        line-height: var(--o-line-height-h5);
+        font-size: var(--e-font-size-h5);
+        line-height: var(--e-line-height-h5);
         font-weight: 500;
       }
       h2 + h3 {
@@ -270,21 +270,21 @@ const IconMenuShow = computed(() => {
       li {
         margin: 8px 0 0 0;
         color: rgba(0, 0, 0, 0.8);
-        font-size: var(--o-font-size-h8);
-        line-height: var(--o-line-height-h8);
+        font-size: var(--e-font-size-h8);
+        line-height: var(--e-line-height-h8);
       }
       code {
         font-size: inherit;
         line-height: inherit;
         padding: 0 4px;
         white-space: inherit;
-        background-color: var(--o-color-bg4);
+        background-color: var(--e-color-bg4);
       }
       pre {
         code {
           padding: 0;
-          line-height: var(--o-line-height-text);
-          font-size: var(--o-font-size-text);
+          line-height: var(--e-line-height-text);
+          font-size: var(--e-font-size-text);
           background-color: transparent;
         }
       }
@@ -307,8 +307,8 @@ const IconMenuShow = computed(() => {
         h3 {
           margin-top: 24px;
           margin-bottom: 12px;
-          font-size: var(--o-font-size-h8);
-          line-height: var(--o-line-height-h8);
+          font-size: var(--e-font-size-h8);
+          line-height: var(--e-line-height-h8);
         }
         h2 + h3 {
           margin-top: 16px;
@@ -317,8 +317,8 @@ const IconMenuShow = computed(() => {
         li {
           margin: 8px 0 0 0;
           color: rgba(0, 0, 0, 0.8);
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-line-height-tip);
         }
       }
     }
@@ -335,7 +335,7 @@ const IconMenuShow = computed(() => {
         }
       }
       .active {
-        color: var(--o-color-brand1);
+        color: var(--e-color-brand1);
         background: #353539;
         &:hover {
           background: #353539;

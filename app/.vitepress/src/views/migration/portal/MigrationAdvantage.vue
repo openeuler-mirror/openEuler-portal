@@ -142,42 +142,42 @@ const handleGo = (path: string) => {
 }
 .migration-advantage {
   h3 {
-    font-size: var(--o-font-size-h3);
+    font-size: var(--e-font-size-h3);
     font-weight: 300;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h3);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h3);
     width: 100%;
     text-align: center;
     margin-top: 0;
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-h8);
-      line-height: var(--o-line-height-h8);
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
       margin: 0;
     }
   }
   p {
-    font-size: var(--o-font-size-h7);
+    font-size: var(--e-font-size-h7);
     font-weight: 300;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h8);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h8);
     width: 100%;
     text-align: center;
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-tip);
-      line-height: var(--o-line-height-tip);
-      margin-top: var(--o-spacing-h8);
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
+      margin-top: var(--e-spacing-h8);
     }
   }
   &-content {
-    margin-top: var(--o-spacing-h3);
+    margin-top: var(--e-spacing-h3);
     @media screen and (max-width: 768px) {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
     }
     .content-card {
-      margin-top: var(--o-spacing-h4);
+      margin-top: var(--e-spacing-h4);
       @media screen and (max-width: 768px) {
-        margin: var(--o-spacing-h5) 0 0 0;
+        margin: var(--e-spacing-h5) 0 0 0;
       }
     }
   }
@@ -232,28 +232,28 @@ const handleGo = (path: string) => {
         }
         p {
           margin: 0;
-          font-size: var(--o-font-size-h7);
+          font-size: var(--e-font-size-h7);
           font-weight: 500;
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
           text-align: left;
-          line-height: var(--o-line-height-h8);
+          line-height: var(--e-line-height-h8);
           @media screen and (max-width: 768px) {
             text-align: center;
           }
         }
         span {
-          margin-top: var(--o-spacing-h5);
-          font-size: var(--o-font-size-text);
+          margin-top: var(--e-spacing-h5);
+          font-size: var(--e-font-size-text);
           font-weight: 400;
           text-align: left;
           white-space: pre-line;
-          color: var(--o-color-text4);
-          line-height: var(--o-line-height-text);
+          color: var(--e-color-text4);
+          line-height: var(--e-line-height-text);
           @media screen and (max-width: 768px) {
             margin-top: 4px;
             text-align: center;
-            font-size: var(--o-font-size-tip);
-            line-height: var(--o-line-height-tip);
+            font-size: var(--e-font-size-tip);
+            line-height: var(--e-line-height-tip);
           }
         }
       }
@@ -302,17 +302,17 @@ const handleGo = (path: string) => {
       }
       p {
         margin-top: 16px;
-        font-size: var(--o-font-size-h7);
+        font-size: var(--e-font-size-h7);
         font-weight: 500;
-        line-height: var(--o-line-height-h8);
+        line-height: var(--e-line-height-h8);
         @media screen and (max-width: 1610px) {
-          font-size: var(--o-font-size-h8);
+          font-size: var(--e-font-size-h8);
         }
         @media screen and (max-width: 768px) {
           margin: 4px 0 0 0;
-          font-size: var(--o-font-size-text);
+          font-size: var(--e-font-size-text);
           font-weight: 400;
-          line-height: var(--o-line-height-text);
+          line-height: var(--e-line-height-text);
         }
       }
       @media screen and (max-width: 768px) {
@@ -334,7 +334,7 @@ const handleGo = (path: string) => {
           margin: auto;
           width: 90%;
           height: 1px;
-          background: var(--o-color-division1);
+          background: var(--e-color-division1);
           margin-top: 12px;
           margin-bottom: 12px;
         }
@@ -342,7 +342,7 @@ const handleGo = (path: string) => {
       .border-box-column {
         height: 157px;
         width: 1px;
-        background: var(--o-color-division1);
+        background: var(--e-color-division1);
       }
     }
   }

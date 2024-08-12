@@ -10,7 +10,7 @@ const attrs = useAttrs();
 
 <style lang="scss">
 .o-dropdown-item {
-  --o-dropdown-item-font-color: var(--o-color-text1);
-  color: var(--o-dropdown-item-font-color);
+  --e-dropdown-item-font-color: var(--e-color-text1);
+  color: var(--e-dropdown-item-font-color);
 }
 </style>

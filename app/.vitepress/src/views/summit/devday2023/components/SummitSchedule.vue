@@ -166,7 +166,7 @@ const otherTabType = ref(0);
     font-size: 20px;
     line-height: 24px;
     font-weight: 400;
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
     @media (max-width: 1100px) {
       margin-top: 24px;
       font-size: 14px;
@@ -178,16 +178,16 @@ const otherTabType = ref(0);
     margin-top: 18px;
     justify-content: center;
     text-align: center;
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
     @media screen and (max-width: 768px) {
       margin-top: 4px;
-      font-size: var(--o-font-size-tip);
-      line-height: var(--o-line-height-tip);
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
     }
   }
   .meeting-title {
     font-weight: 400;
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
     font-size: 20px;
     line-height: 28px;
     text-align: center;
@@ -236,10 +236,10 @@ const otherTabType = ref(0);
       display: inline-block;
       margin: 0 0 24px;
       cursor: pointer;
-      border: 1px solid var(--o-color-border2);
-      color: var(--o-color-text1);
+      border: 1px solid var(--e-color-border2);
+      color: var(--e-color-text1);
       text-align: center;
-      background: var(--o-color-bg2);
+      background: var(--e-color-bg2);
       font-size: 14px;
       line-height: 38px;
       padding: 0 16px;
@@ -252,15 +252,15 @@ const otherTabType = ref(0);
 
     .is-active .time-tabs {
       color: #fff;
-      background: var(--o-color-brand1);
-      border-color: var(--o-color-brand1);
+      background: var(--e-color-brand1);
+      border-color: var(--e-color-brand1);
     }
   }
   .schedule-item {
     width: 100%;
     padding: 24px;
-    background-color: var(--o-color-bg2);
-    margin-top: var(--o-spacing-h4);
+    background-color: var(--e-color-bg2);
+    margin-top: var(--e-spacing-h4);
     @media (max-width: 1100px) {
       padding: 16px;
     }
@@ -295,7 +295,7 @@ const otherTabType = ref(0);
       }
       :deep(.el-tabs__nav-scroll) {
         text-align: center;
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
       }
       :deep(.el-tabs__content) {
         overflow: visible;
@@ -312,7 +312,7 @@ const otherTabType = ref(0);
       }
       .other-text {
         margin: 24px auto 0 auto;
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
         font-size: 18px;
         line-height: 26px;
         text-align: center;
@@ -330,7 +330,7 @@ const otherTabType = ref(0);
       }
       .other-title {
         margin: 24px auto;
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
         font-size: 18px;
         line-height: 26px;
         text-align: center;
@@ -362,14 +362,14 @@ const otherTabType = ref(0);
       display: none;
     }
     :deep(.time-tabs) {
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
       &:hover {
-        color: var(--o-color-brand1);
+        color: var(--e-color-brand1);
       }
     }
     :deep(.is-active) {
       .time-tabs {
-        color: var(--o-color-brand1);
+        color: var(--e-color-brand1);
       }
     }
   }
@@ -381,14 +381,14 @@ const otherTabType = ref(0);
   .content-item {
     display: grid;
     grid-template-columns: 192px 580px 445px;
-    // border-bottom: 1px solid var(--o-color-border2);
+    // border-bottom: 1px solid var(--e-color-border2);
     padding: 20px 0px;
     transition: all 0.25s ease;
     align-items: center;
     min-height: 64px;
     position: relative;
     & + .content-item {
-      border-top: 1px solid var(--o-color-border2);
+      border-top: 1px solid var(--e-color-border2);
     }
     @media screen and (max-width: 1328px) {
       grid-template-columns: 192px 450px 400px;
@@ -400,7 +400,7 @@ const otherTabType = ref(0);
       position: static;
     }
     // &:hover {
-    //   background-color: var(--o-color-bg4);
+    //   background-color: var(--e-color-bg4);
     // }
     .name-box {
       @media screen and (max-width: 1100px) {
@@ -426,14 +426,14 @@ const otherTabType = ref(0);
     .desc {
       font-size: 18px;
       line-height: 30px;
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
       display: block;
       margin-right: 36px;
       cursor: default;
       > span {
         display: block;
         & ~ span {
-          margin-top: var(--o-spacing-h6);
+          margin-top: var(--e-spacing-h6);
         }
       }
       @media (max-width: 1100px) {
@@ -446,9 +446,9 @@ const otherTabType = ref(0);
     .name {
       min-width: 200px;
       display: inline-block;
-      color: var(--o-color-text3);
+      color: var(--e-color-text3);
       font-size: 16px;
-      line-height: var(--o-line-height-h8);
+      line-height: var(--e-line-height-h8);
       @media (max-width: 1100px) {
         font-size: 12px;
         line-height: 18px;
@@ -457,7 +457,7 @@ const otherTabType = ref(0);
     .post {
       width: 100%;
       display: inline-block;
-      color: var(--o-color-text3);
+      color: var(--e-color-text3);
       font-size: 16px;
       line-height: 24px;
       // word-break: keep-all;
@@ -477,7 +477,7 @@ const otherTabType = ref(0);
       width: 192px;
       font-size: 18px;
       line-height: 26px;
-      color: var(--o-color-text3);
+      color: var(--e-color-text3);
       display: flex;
       align-items: center;
       @media screen and (max-width: 1100px) {
@@ -488,7 +488,7 @@ const otherTabType = ref(0);
       svg {
         width: 18px;
         height: 18px;
-        color: var(--o-color-text3);
+        color: var(--e-color-text3);
         margin-right: 6px;
         @media screen and (max-width: 1100px) {
           display: none;
@@ -508,8 +508,8 @@ const otherTabType = ref(0);
       left: 50%;
       transform: translateX(-50%);
       z-index: 9;
-      background-color: var(--o-color-bg2);
-      box-shadow: var(--o-shadow-l4);
+      background-color: var(--e-color-bg2);
+      box-shadow: var(--e-shadow-l4);
       max-height: 300px;
       overflow: auto;
       @media (max-width: 1100px) {
@@ -529,7 +529,7 @@ const otherTabType = ref(0);
         > span {
           font-size: 14px;
           line-height: 22px;
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
           display: inline-block;
           @media (max-width: 1100px) {
             font-size: 12px;

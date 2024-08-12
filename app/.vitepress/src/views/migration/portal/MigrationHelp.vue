@@ -29,7 +29,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
             >
               <span
                 :style="{
-                  color: isDark ? 'var(--o-color-white)' : '',
+                  color: isDark ? 'var(--e-color-white)' : '',
                 }"
                 >{{ item.textLeft
                 }}<a
@@ -58,34 +58,34 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 </template>
 <style lang="scss" scoped>
 :deep(.el-card__body) {
-  padding: var(--o-spacing-h2);
+  padding: var(--e-spacing-h2);
   @media screen and (max-width: 768px) {
-    padding: var(--o-spacing-h5) var(--o-spacing-h6);
+    padding: var(--e-spacing-h5) var(--e-spacing-h6);
   }
 }
 .migration-help {
-  margin-top: var(--o-spacing-h1);
+  margin-top: var(--e-spacing-h1);
   @media screen and (max-width: 768px) {
-    margin-top: var(--o-spacing-h2);
+    margin-top: var(--e-spacing-h2);
   }
   h3 {
-    font-size: var(--o-font-size-h3);
+    font-size: var(--e-font-size-h3);
     font-weight: 300;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h3);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h3);
     width: 100%;
     text-align: center;
     margin-top: 0;
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-h8);
-      line-height: var(--o-line-height-h8);
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
       margin: 0;
     }
   }
   &-content {
-    margin-top: var(--o-spacing-h3);
+    margin-top: var(--e-spacing-h3);
     @media screen and (max-width: 768px) {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
     }
     .help-box {
       display: flex;
@@ -107,13 +107,13 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
           }
           span {
             word-wrap: break-word;
-            font-size: var(--o-font-size-h7);
-            line-height: var(--o-line-height-h7);
-            color: var(--o-color-neutral5);
+            font-size: var(--e-font-size-h7);
+            line-height: var(--e-line-height-h7);
+            color: var(--e-color-neutral5);
             font-weight: 400;
             @media screen and (max-width: 768px) {
-              font-size: var(--o-font-size-tip);
-              line-height: var(--o-line-height-tip);
+              font-size: var(--e-font-size-tip);
+              line-height: var(--e-line-height-tip);
             }
           }
         }
@@ -143,15 +143,15 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
           }
           p {
             margin: 12px 0 0 0;
-            font-size: var(--o-font-size-h7);
-            line-height: var(--o-line-height-h8);
-            color: var(--o-color-text1);
+            font-size: var(--e-font-size-h7);
+            line-height: var(--e-line-height-h8);
+            color: var(--e-color-text1);
             font-weight: 500;
             text-align: center;
             @media screen and (max-width: 768px) {
               margin: 4px 0 0 0;
-              font-size: var(--o-font-size-text);
-              line-height: var(--o-line-height-text);
+              font-size: var(--e-font-size-text);
+              line-height: var(--e-line-height-text);
             }
           }
         }

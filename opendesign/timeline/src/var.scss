@@ -1,22 +1,22 @@
 .o-timeline {
   // 背景颜色
-  --o-timeline-background-color: var(--o-color-neutral11);
-  --o-timeline-background-icon: var(--o-color-bg1);
+  --e-timeline-background-color: var(--e-color-neutral11);
+  --e-timeline-background-icon: var(--e-color-bg1);
 
   // 文字颜色
-  --o-timeline-font-color-active: var(--o-color-brand1);
-  --o-timeline-font-color: var(--o-color-text4);
+  --e-timeline-font-color-active: var(--e-color-brand1);
+  --e-timeline-font-color: var(--e-color-text4);
 
   // font-size
-  --o-timeline-font-size: var(--o-font-size-h6);
-  --o-timeline-font-size-icon: var(--o-font-size-h5);
+  --e-timeline-font-size: var(--e-font-size-h6);
+  --e-timeline-font-size-icon: var(--e-font-size-h5);
 
   // line-height
-  --o-timeline-line-height: var(--o-line-height-h6);
+  --e-timeline-line-height: var(--e-line-height-h6);
 
   // 动画
-  --o-timeline-transition: all 0.2s;
+  --e-timeline-transition: all 0.2s;
 
   // 间距
-  --o-timeline-spacing-word: var(--o-spacing-h10);
+  --e-timeline-spacing-word: var(--e-spacing-h10);
 }

@@ -154,12 +154,12 @@ const changeLive = (val: number): void => {
 }
 .live-room {
   &-video {
-    margin-bottom: var(--o-spacing-h4);
+    margin-bottom: var(--e-spacing-h4);
     width: 100%;
     display: block;
     border: none;
     @media (max-width: 780px) {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
     }
   }
   &-web {
@@ -197,22 +197,22 @@ const changeLive = (val: number): void => {
       }
       .link {
         flex: 1;
-        padding: var(--o-spacing-h6) 0;
+        padding: var(--e-spacing-h6) 0;
         cursor: pointer;
-        background-color: var(--o-color-bg2);
+        background-color: var(--e-color-bg2);
         height: 88px;
         text-align: center;
         display: grid;
         align-items: center;
-        border: 1px solid var(--o-color-brand1);
+        border: 1px solid var(--e-color-brand1);
         p {
-          color: var(--o-color-text1);
-          font-size: var(--o-font-size-h7);
-          line-height: var(--o-line-height-h7);
+          color: var(--e-color-text1);
+          font-size: var(--e-font-size-h7);
+          line-height: var(--e-line-height-h7);
         }
 
         &:hover {
-          box-shadow: var(--o-shadow-l2_hover);
+          box-shadow: var(--e-shadow-l2_hover);
         }
       }
 

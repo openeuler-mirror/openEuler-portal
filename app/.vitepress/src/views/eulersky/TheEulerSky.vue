@@ -98,17 +98,17 @@ function goDetail(url: string) {
   }
 }
 .banner-introduction {
-  font-size: var(--o-font-size-h6);
-  color: var(--o-color-white);
+  font-size: var(--e-font-size-h6);
+  color: var(--e-color-white);
   @media screen and (max-width: 768px) {
-    font-size: var(--o-font-size-tip);
+    font-size: var(--e-font-size-tip);
   }
 }
 
 .word-style {
-  color: var(--o-color-text1);
-  font-size: var(--o-font-size-h8);
-  line-height: var(--o-line-height-h8);
+  color: var(--e-color-text1);
+  font-size: var(--e-font-size-h8);
+  line-height: var(--e-line-height-h8);
 }
 .sky {
   .sky-card-list,
@@ -125,18 +125,18 @@ function goDetail(url: string) {
       grid-template-columns: 1fr;
     }
     .item {
-      padding: var(--o-spacing-h2) 0 var(--o-spacing-h2) var(--o-spacing-h2);
+      padding: var(--e-spacing-h2) 0 var(--e-spacing-h2) var(--e-spacing-h2);
       height: 192px;
-      font-size: var(--o-font-size-h7);
-      color: var(--o-color-text1);
-      line-height: var(--o-line-height-h6);
+      font-size: var(--e-font-size-h7);
+      color: var(--e-color-text1);
+      line-height: var(--e-line-height-h6);
       background-position: right bottom;
       background-repeat: no-repeat;
       background-size: 180px 120px;
       @media screen and (max-width: 768px) {
         padding: 16px;
         height: 144px;
-        font-size: var(--o-font-size-text);
+        font-size: var(--e-font-size-text);
         background-size: 150px 100px;
       }
       .item-content {
@@ -155,15 +155,15 @@ function goDetail(url: string) {
       .item-link {
         max-width: 256px;
         padding: 0;
-        margin-right: var(--o-spacing-h5);
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
+        margin-right: var(--e-spacing-h5);
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
         svg {
-          color: var(--o-color-brand1);
+          color: var(--e-color-brand1);
         }
       }
       .item:hover {
-        box-shadow: var(--o-shadow-l2_hover);
+        box-shadow: var(--e-shadow-l2_hover);
       }
     }
   }

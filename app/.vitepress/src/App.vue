@@ -88,7 +88,7 @@ onMounted(() => {
 main {
   position: relative;
   min-height: calc(100vh - 259px);
-  background-color: var(--o-color-bg1);
+  background-color: var(--e-color-bg1);
   padding-top: 80px;
   &::after {
     content: '';
