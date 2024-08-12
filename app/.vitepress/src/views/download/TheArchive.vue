@@ -439,25 +439,25 @@ const changeCurrentPageMoblie = (val: number) => {
 
 <style lang="scss" scoped>
 .download {
-  margin-top: var(--o-spacing-h4);
+  margin-top: var(--e-spacing-h4);
   .detail-last {
-    margin-top: var(--o-spacing-h5);
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-text);
-    color: var(--o-color-text1);
+    margin-top: var(--e-spacing-h5);
+    font-size: var(--e-font-size-text);
+    line-height: var(--e-line-height-text);
+    color: var(--e-color-text1);
     @media (max-width: 1100px) {
-      margin-top: var(--o-spacing-h6);
+      margin-top: var(--e-spacing-h6);
     }
   }
 
   .filter-card {
-    margin: var(--o-spacing-h4) 0;
-    background-color: var(--o-color-bg2);
-    padding: var(--o-spacing-h5) var(--o-spacing-h2);
-    box-shadow: var(--o-shadow-l2);
+    margin: var(--e-spacing-h4) 0;
+    background-color: var(--e-color-bg2);
+    padding: var(--e-spacing-h5) var(--e-spacing-h2);
+    box-shadow: var(--e-shadow-l2);
     @media screen and (max-width: 1100px) {
       padding: 0;
-      font-size: var(--o-font-size-tip);
+      font-size: var(--e-font-size-tip);
     }
     :deep(.tag-filter) {
       padding: 0;
@@ -467,11 +467,11 @@ const changeCurrentPageMoblie = (val: number) => {
         gap: 0;
       }
       .label {
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
         @media screen and (max-width: 1100px) {
           display: block;
           min-width: 60px !important;
-          font-size: var(--o-font-size-tip);
+          font-size: var(--e-font-size-tip);
         }
       }
       .tag-filter-box {
@@ -481,20 +481,20 @@ const changeCurrentPageMoblie = (val: number) => {
       }
       .o-tag {
         padding: 3px 12px;
-        font-size: var(--o-font-size-text);
+        font-size: var(--e-font-size-text);
         height: 28px;
         line-height: 28px;
         display: flex;
         align-items: center;
         @media screen and (max-width: 1100px) {
           padding: 2px 8px;
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-line-height-tip);
         }
       }
       &.os-box,
       &.version-box {
-        margin-top: var(--o-spacing-h5);
+        margin-top: var(--e-spacing-h5);
         @media screen and (max-width: 1100px) {
           margin-top: 0;
           padding-top: 0;
@@ -502,19 +502,19 @@ const changeCurrentPageMoblie = (val: number) => {
       }
     }
     .disable {
-      color: var(--o-color-text5);
+      color: var(--e-color-text5);
     }
   }
   :deep(.o-search) {
-    margin-top: var(--o-spacing-h4);
+    margin-top: var(--e-spacing-h4);
     @media (max-width: 1100px) {
       height: 28px;
-      font-size: var(--o-font-size-text);
+      font-size: var(--e-font-size-text);
     }
   }
   .download-filter {
-    padding: 0 var(--o-spacing-h5);
-    margin-top: var(--o-spacing-h2);
+    padding: 0 var(--e-spacing-h5);
+    margin-top: var(--e-spacing-h2);
     display: flex;
     @media (max-width: 1100px) {
       display: none;
@@ -525,10 +525,10 @@ const changeCurrentPageMoblie = (val: number) => {
     .pc-list {
       .detail-page {
         cursor: pointer;
-        color: var(--o-color-link1);
+        color: var(--e-color-link1);
       }
       :deep(.cell) {
-        padding-left: var(--o-spacing-h2);
+        padding-left: var(--e-spacing-h2);
       }
       @media screen and (max-width: 1100px) {
         display: none;
@@ -554,19 +554,19 @@ const changeCurrentPageMoblie = (val: number) => {
       }
     }
     .mobile-list {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
       .download-item {
-        padding: var(--o-spacing-h5);
+        padding: var(--e-spacing-h5);
         &:nth-of-type(2n + 1) {
-          background-color: var(--o-color-bg4);
+          background-color: var(--e-color-bg4);
         }
         .item-text {
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-font-height-tip);
-          color: var(--o-color-text1);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-font-height-tip);
+          color: var(--e-color-text1);
           display: flex;
           & ~ .item-text {
-            margin-top: var(--o-spacing-h8);
+            margin-top: var(--e-spacing-h8);
           }
           span {
             display: inline-block;
@@ -575,7 +575,7 @@ const changeCurrentPageMoblie = (val: number) => {
             }
             &.content-text {
               width: auto;
-              color: var(--o-color-text4);
+              color: var(--e-color-text4);
               span {
                 width: auto;
                 min-width: auto;
@@ -587,10 +587,10 @@ const changeCurrentPageMoblie = (val: number) => {
             }
           }
           .text-size {
-            color: var(--o-color-text4);
+            color: var(--e-color-text4);
           }
           .down-copy {
-            color: var(--o-color-brand1);
+            color: var(--e-color-brand1);
             padding: 0;
             line-height: 0;
           }
@@ -602,14 +602,14 @@ const changeCurrentPageMoblie = (val: number) => {
               position: absolute;
               left: 0;
               top: -46px;
-              background-color: var(--o-color-bg2);
-              padding: var(--o-spacing-h9);
+              background-color: var(--e-color-bg2);
+              padding: var(--e-spacing-h9);
             }
             .server-tips {
-              width: var(--o-font-size-tip);
-              height: var(--o-font-size-tip);
-              color: var(--o-color-text4);
-              margin-left: var(--o-spacing-h9);
+              width: var(--e-font-size-tip);
+              height: var(--e-font-size-tip);
+              color: var(--e-color-text4);
+              margin-left: var(--e-spacing-h9);
             }
             .mask-mobile {
               position: fixed;
@@ -628,7 +628,7 @@ const changeCurrentPageMoblie = (val: number) => {
               box-shadow: none;
               padding: 0;
               input {
-                font-size: var(--o-font-size-tip);
+                font-size: var(--e-font-size-tip);
                 vertical-align: top;
                 line-height: auto;
                 height: 14px;
@@ -650,55 +650,55 @@ const changeCurrentPageMoblie = (val: number) => {
   }
   .empty {
     display: flex;
-    padding-top: var(--o-spacing-h1);
+    padding-top: var(--e-spacing-h1);
     justify-content: center;
     align-items: center;
     height: 100%;
     flex-direction: column;
-    font-size: var(--o-font-size-h6);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-h6);
+    color: var(--e-color-text1);
     .empty-img {
       height: 300px;
     }
     .empty-text {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
     }
     @media screen and (max-width: 1100px) {
-      padding-top: var(--o-spacing-h2);
-      font-size: var(--o-font-size-text);
+      padding-top: var(--e-spacing-h2);
+      font-size: var(--e-font-size-text);
       .empty-img {
         max-height: 232px;
       }
       .empty-text {
-        margin-top: var(--o-spacing-h6);
-        font-size: var(--o-font-size-tip);
+        margin-top: var(--e-spacing-h6);
+        font-size: var(--e-font-size-tip);
       }
     }
   }
   .download-name {
-    font-size: var(--o-font-size-h5);
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h5);
+    font-size: var(--e-font-size-h5);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h5);
     @media (max-width: 1100px) {
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
     }
   }
 
   .download-desc {
-    margin-top: var(--o-spacing-h5);
-    font-size: var(--o-font-size-text);
-    color: var(--o-color-text4);
-    line-height: var(--o-line-height-text);
+    margin-top: var(--e-spacing-h5);
+    font-size: var(--e-font-size-text);
+    color: var(--e-color-text4);
+    line-height: var(--e-line-height-text);
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     @media (max-width: 1100px) {
-      font-size: var(--o-font-size-tip);
-      line-height: var(--o-line-height-tip);
-      margin-top: var(--o-spacing-h10);
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
+      margin-top: var(--e-spacing-h10);
     }
   }
 
@@ -707,7 +707,7 @@ const changeCurrentPageMoblie = (val: number) => {
     .download-button-icon {
       // margin-left: 8px;
       font-size: 14px;
-      color: var(--o-color-brand1);
+      color: var(--e-color-brand1);
       @media (max-width: 1100px) {
         font-size: 12px;
       }
@@ -718,15 +718,15 @@ const changeCurrentPageMoblie = (val: number) => {
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    margin-top: var(--o-spacing-h2);
+    margin-top: var(--e-spacing-h2);
     @media (max-width: 768px) {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
     }
     .pagination-slot {
-      font-size: var(--o-font-size-text);
+      font-size: var(--e-font-size-text);
       font-weight: 400;
-      color: var(--o-color-text1);
-      line-height: var(--o-spacing-h4);
+      color: var(--e-color-text1);
+      line-height: var(--e-spacing-h4);
     }
   }
 }

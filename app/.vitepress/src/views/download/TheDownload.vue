@@ -118,34 +118,34 @@ onMounted(() => {
 .download-community {
   .detail {
     p {
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
-      color: var(--o-color-text1);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
+      color: var(--e-color-text1);
       @media (max-width: 1100px) {
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
       }
     }
   }
   .download-content {
-    margin-top: var(--o-spacing-h4);
+    margin-top: var(--e-spacing-h4);
     @media (max-width: 1100px) {
-      margin-top: var(--o-spacing-h6);
+      margin-top: var(--e-spacing-h6);
     }
     .content-selection {
       display: flex;
       .selection-item {
         flex-grow: 1;
         text-align: center;
-        background-color: var(--o-color-bg2);
-        border: 1px solid var(--o-color-border2);
-        color: var(--o-color-text1);
-        font-size: var(--o-font-size-h8);
+        background-color: var(--e-color-bg2);
+        border: 1px solid var(--e-color-border2);
+        color: var(--e-color-text1);
+        font-size: var(--e-font-size-h8);
         line-height: 40px;
         cursor: pointer;
         @media (max-width: 1100px) {
           width: 50%;
-          font-size: var(--o-font-size-text);
+          font-size: var(--e-font-size-text);
           line-height: 22px;
           padding: 10px 16px;
           display: flex;
@@ -153,9 +153,9 @@ onMounted(() => {
           justify-content: center;
         }
         &.active {
-          background-color: var(--o-color-brand1);
-          border: 1px solid var(--o-color-brand1);
-          color: var(--o-color-white);
+          background-color: var(--e-color-brand1);
+          border: 1px solid var(--e-color-brand1);
+          color: var(--e-color-white);
         }
       }
     }

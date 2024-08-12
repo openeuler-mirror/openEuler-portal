@@ -160,17 +160,17 @@ const handleNodeClick = (node: any) => {
   top: 0;
   width: 268px;
   height: 100vh;
-  background: var(--o-color-bg2);
+  background: var(--e-color-bg2);
   box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   z-index: 999;
   .nav-top {
     width: 100%;
-    background: var(--o-color-bg2);
+    background: var(--e-color-bg2);
     font-size: 14px;
     line-height: 22px;
-    color: var(--o-color-text1);
-    padding: var(--o-spacing-h5);
+    color: var(--e-color-text1);
+    padding: var(--e-spacing-h5);
     font-weight: bold;
     display: flex;
     justify-content: space-between;
@@ -182,7 +182,7 @@ const handleNodeClick = (node: any) => {
     :deep(.o-icon) {
       padding: 12px;
       cursor: pointer;
-      font-size: var(--o-font-size-h5);
+      font-size: var(--e-font-size-h5);
     }
   }
 
@@ -200,7 +200,7 @@ const handleNodeClick = (node: any) => {
   left: 48px;
   z-index: 99;
   font-size: 24px;
-  color: var(--o-color-text1);
+  color: var(--e-color-text1);
   cursor: pointer;
 }
 
@@ -225,34 +225,34 @@ const handleNodeClick = (node: any) => {
         display: flex;
         align-items: center;
         @media screen and (max-width: 768px) {
-          margin-bottom: var(--o-spacing-h8);
+          margin-bottom: var(--e-spacing-h8);
         }
         .o-icon {
           font-size: 24px;
           margin-right: 6px;
           @media screen and (max-width: 768px) {
-            font-size: var(--o-font-size-h7);
+            font-size: var(--e-font-size-h7);
           }
         }
         p {
-          font-size: var(--o-font-size-h8);
-          color: var(--o-color-text1);
-          line-height: var(--o-line-height-h8);
+          font-size: var(--e-font-size-h8);
+          color: var(--e-color-text1);
+          line-height: var(--e-line-height-h8);
           @media screen and (max-width: 768px) {
-            font-size: var(--o-font-size-text);
-            line-height: var(--o-line-height-text);
+            font-size: var(--e-font-size-text);
+            line-height: var(--e-line-height-text);
             margin: 0;
           }
         }
       }
     }
     .description {
-      font-size: var(--o-font-size-text);
-      color: var(--o-color-text4);
-      line-height: var(--o-line-height-text);
+      font-size: var(--e-font-size-text);
+      color: var(--e-color-text4);
+      line-height: var(--e-line-height-text);
       @media screen and (max-width: 768px) {
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
       }
     }
   }
@@ -273,14 +273,14 @@ const handleNodeClick = (node: any) => {
 
   &::-webkit-scrollbar-thumb {
     border-radius: 2px;
-    background-color: var(--o-color-division);
+    background-color: var(--e-color-division);
     background-clip: content-box;
   }
 
   &::-webkit-scrollbar-track {
     border-radius: 0;
     box-shadow: none;
-    background: var(--o-color-bg1);
+    background: var(--e-color-bg1);
   }
 
   .sidebar-title:first-child {
@@ -293,10 +293,10 @@ const handleNodeClick = (node: any) => {
 .sidebar-title {
   position: relative;
   padding: 0 40px;
-  font-size: var(--o-font-size-text);
+  font-size: var(--e-font-size-text);
   height: 70px;
   line-height: 70px;
-  color: var(--o-color-white);
+  color: var(--e-color-white);
   cursor: pointer;
 
   &::before {
@@ -304,7 +304,7 @@ const handleNodeClick = (node: any) => {
     top: 0;
     width: calc(100% - 80px);
     height: 1px;
-    background-color: var(--o-color-neutral11);
+    background-color: var(--e-color-neutral11);
     content: '';
     background-color: #ffffff;
     opacity: 0.1;
@@ -320,8 +320,8 @@ const handleNodeClick = (node: any) => {
 }
 
 .migration-title {
-  font-size: var(--o-font-size-h5);
-  line-height: var(--o-line-height-h5);
+  font-size: var(--e-font-size-h5);
+  line-height: var(--e-line-height-h5);
 }
 
 .migration-wrapper {
@@ -332,15 +332,15 @@ const handleNodeClick = (node: any) => {
       margin-top: 0;
     }
     @media screen and (max-width: 768px) {
-      background-color: var(--o-color-bg2);
+      background-color: var(--e-color-bg2);
       padding: 24px 16px 16px 16px;
-      box-shadow: var(--o-shadow-l1);
+      box-shadow: var(--e-shadow-l1);
     }
 
     &.custom-layout {
       @media screen and (max-width: 768px) {
-        background-color: var(--o-color-bg1);
-        box-shadow: var(--o-shadow-l1);
+        background-color: var(--e-color-bg1);
+        box-shadow: var(--e-shadow-l1);
         padding: 0;
         box-shadow: none;
       }

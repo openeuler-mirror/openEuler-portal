@@ -30,7 +30,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
             <div
               class="item-dexcription"
               :style="{
-                color: isDark ? 'var(--o-color-white)' : '',
+                color: isDark ? 'var(--e-color-white)' : '',
               }"
             >
               {{ portalInfo.path.imgMo.top.dexcription }}
@@ -42,7 +42,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
             <div
               class="item-dexcription"
               :style="{
-                color: isDark ? 'var(--o-color-white)' : '',
+                color: isDark ? 'var(--e-color-white)' : '',
               }"
             >
               {{ portalInfo.path.imgMo.bottom.dexcription }}
@@ -57,49 +57,49 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 
 <style lang="scss" scoped>
 :deep(.el-card__body) {
-  padding: var(--o-spacing-h2);
+  padding: var(--e-spacing-h2);
   @media screen and (max-width: 768px) {
-    padding: var(--o-spacing-h5) var(--o-spacing-h6);
+    padding: var(--e-spacing-h5) var(--e-spacing-h6);
   }
 }
 .migration-path {
-  margin-top: var(--o-spacing-h1);
+  margin-top: var(--e-spacing-h1);
   @media screen and (max-width: 768px) {
-    margin-top: var(--o-spacing-h2);
+    margin-top: var(--e-spacing-h2);
   }
   h3 {
-    font-size: var(--o-font-size-h3);
+    font-size: var(--e-font-size-h3);
     font-weight: 300;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h3);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h3);
     width: 100%;
     text-align: center;
     margin-top: 0;
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-h8);
-      line-height: var(--o-line-height-h8);
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
       margin: 0;
     }
   }
   p {
-    font-size: var(--o-font-size-h7);
+    font-size: var(--e-font-size-h7);
     font-weight: 300;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h8);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h8);
     width: 100%;
     text-align: center;
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-tip);
-      line-height: var(--o-line-height-tip);
-      margin-top: var(--o-spacing-h8);
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
+      margin-top: var(--e-spacing-h8);
     }
   }
   &-content {
     text-align: center;
-    margin-top: var(--o-spacing-h3);
+    margin-top: var(--e-spacing-h3);
     @media screen and (max-width: 768px) {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
     }
     .content-pc {
       @media screen and (max-width: 768px) {
@@ -126,18 +126,18 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
       &-item {
         p {
           @media screen and (max-width: 768px) {
-            font-size: var(--o-font-size-text);
-            line-height: var(--o-line-height-text);
-            // color: var(--o-color-text1);
+            font-size: var(--e-font-size-text);
+            line-height: var(--e-line-height-text);
+            // color: var(--e-color-text1);
             font-weight: 400;
             margin: 0;
           }
         }
         .item-dexcription {
           @media screen and (max-width: 768px) {
-            font-size: var(--o-font-size-tip);
-            line-height: var(--o-line-height-tip);
-            color: var(--o-color-neutral5);
+            font-size: var(--e-font-size-tip);
+            line-height: var(--e-line-height-tip);
+            color: var(--e-color-neutral5);
             font-weight: 400;
             margin-top: 4px;
           }

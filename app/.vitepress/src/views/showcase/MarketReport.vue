@@ -110,21 +110,21 @@ const handleCurrentChange = (val: number) => {
   padding: 40px 44px 64px;
   margin: 0 auto;
   .pagination-slot {
-    font-size: var(--o-font-size-text);
+    font-size: var(--e-font-size-text);
     font-weight: 400;
-    color: var(--o-color-text1);
-    line-height: var(--o-spacing-h4);
+    color: var(--e-color-text1);
+    line-height: var(--e-spacing-h4);
   }
   @media (max-width: 768px) {
     padding: 24px 0 40px 0;
-    background-color: var(--o-color-bg1);
+    background-color: var(--e-color-bg1);
   }
 
   .case-list {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: var(--o-spacing-h4);
+    grid-gap: var(--e-spacing-h4);
     @media (max-width: 1280px) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -144,17 +144,17 @@ const handleCurrentChange = (val: number) => {
         padding: 16px 16px 14px 12px;
       }
       .card-content-text {
-        color: var(--o-color-white);
+        color: var(--e-color-white);
         h4 {
-          font-size: var(--o-font-size-h7);
-          line-height: var(--o-line-height-h7);
+          font-size: var(--e-font-size-h7);
+          line-height: var(--e-line-height-h7);
           max-width: 256px;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
           @media (max-width: 768px) {
-            font-size: var(--o-font-size-text);
-            line-height: var(--o-line-height-text);
+            font-size: var(--e-font-size-text);
+            line-height: var(--e-line-height-text);
           }
         }
         .detail {
@@ -165,13 +165,13 @@ const handleCurrentChange = (val: number) => {
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           margin-top: 2px;
-          font-size: var(--o-font-size-h7);
-          line-height: var(--o-line-height-h7);
+          font-size: var(--e-font-size-h7);
+          line-height: var(--e-line-height-h7);
           @media (max-width: 768px) {
             max-width: 190px;
             margin-top: 8px;
-            font-size: var(--o-font-size-tip);
-            line-height: var(--o-line-height-tip);
+            font-size: var(--e-font-size-tip);
+            line-height: var(--e-line-height-tip);
           }
         }
         a {
@@ -185,7 +185,7 @@ const handleCurrentChange = (val: number) => {
             justify-content: center;
 
             @media (max-width: 768px) {
-              font-size: var(--o-font-size-tip);
+              font-size: var(--e-font-size-tip);
             }
           }
         }
@@ -205,17 +205,17 @@ const handleCurrentChange = (val: number) => {
         }
         .type {
           text-align: center;
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-line-height-tip);
           color: #ad9cd3;
         }
       }
     }
   }
   .page-box {
-    margin-top: var(--o-spacing-h2);
+    margin-top: var(--e-spacing-h2);
     @media (max-width: 768px) {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
     }
   }
 }

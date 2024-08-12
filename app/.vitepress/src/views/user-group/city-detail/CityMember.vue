@@ -111,22 +111,22 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
 <style lang="scss" scoped>
 :deep(.el-popover) {
   .el-popover__title {
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
     font-weight: bold;
   }
 }
 .member-contribution {
   .title {
-    font-size: var(--o-font-size-h8);
-    line-height: var(--o-line-height-h8);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-h8);
+    line-height: var(--e-line-height-h8);
+    color: var(--e-color-text1);
     margin-bottom: 4px;
   }
   .text {
     height: 72px;
-    color: var(--o-color-text3);
-    font-size: var(--o-font-size-text);
-    line-height: var(--o-line-height-text);
+    color: var(--e-color-text3);
+    font-size: var(--e-font-size-text);
+    line-height: var(--e-line-height-text);
     overflow-y: auto;
     @include scrollbar;
   }
@@ -140,7 +140,7 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
       height: 40px;
     }
     &::after {
-      background: var(--o-color-brand1);
+      background: var(--e-color-brand1);
       opacity: 0.1;
       content: '';
       position: absolute;
@@ -156,7 +156,7 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
     position: relative;
     z-index: 2;
     line-height: 48px;
-    font-size: var(--o-font-size-h5);
+    font-size: var(--e-font-size-h5);
     color: #fff;
     width: 246px;
     text-align: center;
@@ -164,7 +164,7 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
     @media screen and (max-width: 768px) {
       line-height: 40px;
       width: 204px;
-      font-size: var(--o-font-size-h6);
+      font-size: var(--e-font-size-h6);
     }
   }
   .member-content {
@@ -181,10 +181,10 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
     }
 
     .member-item {
-      box-shadow: var(--o-shadow-l1);
+      box-shadow: var(--e-shadow-l1);
       min-height: 184px;
       position: relative;
-      background: var(--o-color-bg2) no-repeat no-repeat right bottom;
+      background: var(--e-color-bg2) no-repeat no-repeat right bottom;
       &.organizer {
         .avatar {
           width: 274px;
@@ -218,9 +218,9 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
       .o-icon {
         margin-left: 6px;
         cursor: pointer;
-        color: var(--o-color-text1);
+        color: var(--e-color-text1);
         &:hover {
-          color: var(--o-color-brand1);
+          color: var(--e-color-brand1);
         }
         svg {
           width: 24px;
@@ -229,9 +229,9 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
       }
     }
     .name {
-      font-size: var(--o-font-size-h7);
-      line-height: var(--o-line-height-h7);
-      color: var(--o-color-text1);
+      font-size: var(--e-font-size-h7);
+      line-height: var(--e-line-height-h7);
+      color: var(--e-color-text1);
     }
     .info {
       padding: 24px;
@@ -243,9 +243,9 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
         padding: 16px;
       }
       .position {
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
-        color: var(--o-color-text4);
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
+        color: var(--e-color-text4);
         margin-top: 4px;
         max-width: 185px;
       }
@@ -253,17 +253,17 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
         margin-top: 4px;
         max-width: 185px;
         :deep(.o-tag) {
-          background: var(--o-color-bg1);
+          background: var(--e-color-bg1);
           border: 0 none;
           border-radius: 12px;
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
           margin-right: 8px;
           margin-top: 8px;
         }
       }
       .email .o-icon {
         font-size: 24px;
-        color: var(--o-color-brand1);
+        color: var(--e-color-brand1);
       }
       .homePage,
       .email {
@@ -271,8 +271,8 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
         bottom: 24px;
         left: 24px;
         a {
-          font-size: var(--o-font-size-tip);
-          line-height: var(--o-line-height-tip);
+          font-size: var(--e-font-size-tip);
+          line-height: var(--e-line-height-tip);
         }
       }
     }
@@ -283,7 +283,7 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      background: var(--o-color-greyblue3);
+      background: var(--e-color-greyblue3);
       overflow: hidden;
       right: 24px;
       top: 50%;

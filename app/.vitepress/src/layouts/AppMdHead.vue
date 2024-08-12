@@ -37,7 +37,7 @@ const resolveDate = (date: any) => {
 <style lang="scss" scoped>
 .markdown-body-title {
   margin-bottom: 40px;
-  border-bottom: 1px solid var(--o-color-border2);
+  border-bottom: 1px solid var(--e-color-border2);
   padding-bottom: 24px;
   .page-title {
     font-size: 36px;
@@ -46,9 +46,9 @@ const resolveDate = (date: any) => {
     font-weight: 500;
   }
   .info {
-    color: var(--o-color-text4);
-    font-size: var(--o-font-size-tip);
-    line-height: var(--o-line-height-tip);
+    color: var(--e-color-text4);
+    font-size: var(--e-font-size-tip);
+    line-height: var(--e-line-height-tip);
     .line {
       margin: 0 16px;
     }
@@ -70,8 +70,8 @@ const resolveDate = (date: any) => {
       margin: 0 12px;
       padding: 0 12px;
       margin-top: 8px;
-      border-left: 1px solid var(--o-color-border1);
-      border-right: 1px solid var(--o-color-border1);
+      border-left: 1px solid var(--e-color-border1);
+      border-right: 1px solid var(--e-color-border1);
     }
     .o-tag {
       margin-top: 8px;

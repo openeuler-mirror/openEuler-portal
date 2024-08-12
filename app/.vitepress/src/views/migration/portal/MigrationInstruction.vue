@@ -65,7 +65,7 @@ const instructionBG = computed(() => {
               <div
                 class="content-text"
                 :style="{
-                  color: isDark ? 'var(--o-color-white)' : '',
+                  color: isDark ? 'var(--e-color-white)' : '',
                 }"
               >
                 {{ item.content }}
@@ -87,42 +87,42 @@ const instructionBG = computed(() => {
   }
 }
 .migration-instruction {
-  margin-top: var(--o-spacing-h1);
+  margin-top: var(--e-spacing-h1);
   @media screen and (max-width: 768px) {
-    margin-top: var(--o-spacing-h2);
+    margin-top: var(--e-spacing-h2);
   }
   h3 {
-    font-size: var(--o-font-size-h3);
+    font-size: var(--e-font-size-h3);
     font-weight: 300;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h3);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h3);
     width: 100%;
     text-align: center;
     margin-top: 0;
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-h8);
-      line-height: var(--o-line-height-h8);
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
       margin: 0;
     }
   }
   p {
-    font-size: var(--o-font-size-h7);
+    font-size: var(--e-font-size-h7);
     font-weight: 300;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h8);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h8);
     width: 100%;
     text-align: center;
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-tip);
-      line-height: var(--o-line-height-tip);
-      margin-top: var(--o-spacing-h8);
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
+      margin-top: var(--e-spacing-h8);
     }
   }
   &-content {
-    margin-top: var(--o-spacing-h3);
+    margin-top: var(--e-spacing-h3);
     @media screen and (max-width: 768px) {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
     }
     .instruction-box {
       display: flex;
@@ -182,26 +182,26 @@ const instructionBG = computed(() => {
         .content-text {
           margin: 8px 0 16px 0;
           white-space: pre-line;
-          font-size: var(--o-font-size-text);
-          line-height: var(--o-font-size-h7);
+          font-size: var(--e-font-size-text);
+          line-height: var(--e-font-size-h7);
           font-weight: 400;
-          color: var(--o-color-neutral5);
+          color: var(--e-color-neutral5);
           @media screen and (max-width: 768px) {
             margin: 4px 0;
-            font-size: var(--o-font-size-tip);
-            line-height: var(--o-line-height-tip);
+            font-size: var(--e-font-size-tip);
+            line-height: var(--e-line-height-tip);
           }
         }
 
         p {
-          font-size: var(--o-font-size-h7);
-          line-height: var(--o-font-size-h6);
+          font-size: var(--e-font-size-h7);
+          line-height: var(--e-font-size-h6);
           font-weight: 400;
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
           margin: 0;
           @media screen and (max-width: 768px) {
-            font-size: var(--o-font-size-text);
-            line-height: var(--o-line-height-text);
+            font-size: var(--e-font-size-text);
+            line-height: var(--e-line-height-text);
           }
         }
       }

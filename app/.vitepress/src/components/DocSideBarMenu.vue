@@ -98,7 +98,7 @@ const clickMenuItem = (id: string) => {
 <style lang="scss" scoped>
 .sidebar-menu {
   position: relative;
-  color: var(--o-color-white);
+  color: var(--e-color-white);
 
   .menu-title {
     position: relative;
@@ -106,7 +106,7 @@ const clickMenuItem = (id: string) => {
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
-    font-size: var(--o-font-size-text);
+    font-size: var(--e-font-size-text);
     height: 70px;
     line-height: 70px;
     cursor: pointer;
@@ -123,17 +123,17 @@ const clickMenuItem = (id: string) => {
     }
 
     &-icon {
-      font-size: var(--o-font-size-h5);
+      font-size: var(--e-font-size-h5);
       transform: rotate(0);
       transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 
     &:hover {
-      color: var(--o-color-yellow5);
+      color: var(--e-color-yellow5);
     }
 
     &.active {
-      color: var(--o-color-yellow5);
+      color: var(--e-color-yellow5);
     }
 
     &.open {
@@ -147,7 +147,7 @@ const clickMenuItem = (id: string) => {
     overflow-y: hidden;
     transform-origin: top;
     transition: all 0.3s;
-    background-color: var(--o-color-kleinblue4);
+    background-color: var(--e-color-kleinblue4);
     padding: 0 40px;
     height: 0;
     transform: scaleY(0);
@@ -157,8 +157,8 @@ const clickMenuItem = (id: string) => {
       height: min-content;
       // overflow-y: hidden;
       align-items: center;
-      font-size: var(--o-font-size-text);
-      line-height: var(--o-line-height-text);
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
       .secondary {
         display: flex;
         justify-content: space-between;
@@ -178,15 +178,15 @@ const clickMenuItem = (id: string) => {
       }
 
       & + .menu-item {
-        margin-top: var(--o-spacing-h4);
+        margin-top: var(--e-spacing-h4);
       }
 
       &:hover {
-        color: var(--o-color-yellow5);
+        color: var(--e-color-yellow5);
       }
 
       &.active {
-        color: var(--o-color-yellow5);
+        color: var(--e-color-yellow5);
       }
     }
     .open {

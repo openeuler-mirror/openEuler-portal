@@ -450,34 +450,34 @@ const watchData = watch(
 <style lang="scss" scoped>
 .calendar-title {
   text-align: center;
-  font-size: var(--o-font-size-h3);
+  font-size: var(--e-font-size-h3);
   font-weight: 400;
 }
 .left-title {
   display: flex;
-  margin-bottom: var(--o-spacing-h2);
+  margin-bottom: var(--e-spacing-h2);
   align-items: center;
   height: 40px;
-  font-size: var(--o-font-size-h8);
+  font-size: var(--e-font-size-h8);
   .disable {
     cursor: not-allowed;
-    color: var(--o-color-text5);
+    color: var(--e-color-text5);
     &:hover {
-      color: var(--o-color-text5);
+      color: var(--e-color-text5);
     }
   }
   .o-icon {
-    font-size: var(--o-font-size-h5);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-h5);
+    color: var(--e-color-text1);
   }
 }
 .month-date {
-  color: var(--o-color-text1);
-  padding: 0 var(--o-spacing-h8);
+  color: var(--e-color-text1);
+  padding: 0 var(--e-spacing-h8);
 }
 @media screen and (max-width: 768px) {
   .month-date {
-    font-size: var(--o-font-size-tip);
+    font-size: var(--e-font-size-tip);
   }
   .left-title {
     display: none;
@@ -502,31 +502,31 @@ const watchData = watch(
     cursor: pointer;
     padding: 12px;
     &:hover {
-      color: var(--o-color-brand1);
+      color: var(--e-color-brand1);
     }
   }
   .active {
-    background-color: var(--o-color-brand1);
-    color: var(--o-color-text2) !important;
+    background-color: var(--e-color-brand1);
+    color: var(--e-color-text2) !important;
   }
 }
 .o-icon {
   cursor: pointer;
-  font-size: var(--o-font-size-h7);
+  font-size: var(--e-font-size-h7);
   transition: color 0.2s;
   &:hover {
-    color: var(--o-color-brand1);
+    color: var(--e-color-brand1);
     svg {
-      color: var(--o-color-brand2);
-      fill: var(--o-color-brand2);
+      color: var(--e-color-brand2);
+      fill: var(--e-color-brand2);
     }
   }
 }
 .main-body {
   display: flex;
   :deep(.el-calendar) {
-    --el-calendar-border: 1px solid var(--o-color-border2);
-    background-color: var(--o-color-bg1);
+    --el-calendar-border: 1px solid var(--e-color-border2);
+    background-color: var(--e-color-bg1);
     .el-collapse-item__content {
       padding: 0;
       background-color: transparent;
@@ -536,16 +536,16 @@ const watchData = watch(
       padding: 0;
       border: none;
       @media screen and (max-width: 768px) {
-        background-color: var(--o-color-bg2);
+        background-color: var(--e-color-bg2);
         .left-title {
           margin: 0;
         }
       }
     }
     .el-calendar__body {
-      background-color: var(--o-color-bg2);
+      background-color: var(--e-color-bg2);
       th {
-        color: var(--o-color-text4);
+        color: var(--e-color-text4);
       }
     }
   }
@@ -557,15 +557,15 @@ const watchData = watch(
   }
   @media screen and (max-width: 768px) {
     .collapse-box-mo {
-      margin: var(--o-spacing-h6) 0;
+      margin: var(--e-spacing-h6) 0;
       :deep(.el-collapse-item) {
-        background-color: var(--o-color-bg2);
-        padding: 0 var(--o-spacing-h8);
+        background-color: var(--e-color-bg2);
+        padding: 0 var(--e-spacing-h8);
         .el-icon {
-          font-size: var(--o-font-size-text);
+          font-size: var(--e-font-size-text);
           font-weight: 700;
           transform: rotate(90deg);
-          color: var(--o-color-text1);
+          color: var(--e-color-text1);
         }
         .el-icon.is-active {
           transform: rotate(270deg);
@@ -573,7 +573,7 @@ const watchData = watch(
         .el-collapse-item__header {
           height: 34px;
           border: none;
-          background-color: var(--o-color-bg2);
+          background-color: var(--e-color-bg2);
         }
         .el-collapse-item__wrap {
           border: 0;
@@ -587,7 +587,7 @@ const watchData = watch(
           justify-content: center;
           .left-title {
             display: flex;
-            padding: var(--o-spacing-h8) var(--o-spacing-h1);
+            padding: var(--e-spacing-h8) var(--e-spacing-h1);
             align-items: center;
             justify-content: space-between;
             svg {
@@ -603,12 +603,12 @@ const watchData = watch(
         width: 100%;
         .o-icon {
           color: inherit;
-          color: var(--o-color-text1);
-          font-size: var(--o-font-size-h8);
+          color: var(--e-color-text1);
+          font-size: var(--e-font-size-h8);
         }
         .month-date {
           padding-left: 8px;
-          font-size: var(--o-font-size-tip);
+          font-size: var(--e-font-size-tip);
           line-height: 16px;
         }
       }
@@ -623,7 +623,7 @@ const watchData = watch(
       th {
         text-align: center;
       }
-      background-color: var(--o-color-bg4);
+      background-color: var(--e-color-bg4);
     }
     @media screen and (max-width: 1100px) {
       max-width: 400px;
@@ -636,8 +636,8 @@ const watchData = watch(
     .is-today {
       .el-calendar-day {
         .day-box {
-          color: var(--o-color-text4);
-          background-color: var(--o-color-bg4);
+          color: var(--e-color-text4);
+          background-color: var(--e-color-bg4);
         }
       }
     }
@@ -648,7 +648,7 @@ const watchData = watch(
         height: 44px;
       }
       tbody {
-        box-shadow: var(--o-shadow-l2);
+        box-shadow: var(--e-shadow-l2);
       }
       .el-calendar-table__row {
         -moz-user-select: none; /*火狐*/
@@ -656,14 +656,14 @@ const watchData = watch(
         -ms-user-select: none; /*IE10*/
         -khtml-user-select: none; /*早期浏览器*/
         user-select: none;
-        font-size: var(--o-font-size-tip);
+        font-size: var(--e-font-size-tip);
         .is-selected {
           background-color: transparent;
           .el-calendar-day {
             .day-box {
-              background-color: var(--o-color-brand1);
+              background-color: var(--e-color-brand1);
               .date-calender {
-                color: var(--o-color-text2);
+                color: var(--e-color-text2);
               }
             }
           }
@@ -675,7 +675,7 @@ const watchData = watch(
           padding: 0;
           height: 66px;
           &:hover {
-            background-color: var(--o-color-bg1);
+            background-color: var(--e-color-bg1);
           }
           @media screen and (max-width: 768px) {
             background-color: inherit !important;
@@ -698,7 +698,7 @@ const watchData = watch(
             width: 20px;
             height: 20px;
             border-radius: 0 0 0 20px;
-            background-color: var(--o-color-brand2);
+            background-color: var(--e-color-brand2);
             @media screen and (max-width: 768px) {
               width: 12px;
               height: 12px;
@@ -716,9 +716,9 @@ const watchData = watch(
             border-radius: 50%;
             align-items: center;
             .date-calender {
-              line-height: var(--o-line-height-text);
-              font-size: var(--o-font-size-h8);
-              color: var(--o-color-text1);
+              line-height: var(--e-line-height-text);
+              font-size: var(--e-font-size-h8);
+              color: var(--e-color-text1);
             }
           }
         }
@@ -727,7 +727,7 @@ const watchData = watch(
             height: 100%;
             .day-box {
               .date-calender {
-                font-size: var(--o-font-size-tip);
+                font-size: var(--e-font-size-tip);
               }
             }
           }
@@ -748,8 +748,8 @@ const watchData = watch(
       width: 100%;
       thead {
         th {
-          padding: var(--o-spacing-h8) 0;
-          font-size: var(--o-font-size-tip);
+          padding: var(--e-spacing-h8) 0;
+          font-size: var(--e-font-size-tip);
         }
       }
       tbody {
@@ -769,17 +769,17 @@ const watchData = watch(
   }
   :deep(.detail-list) {
     width: 100%;
-    background-color: var(--o-color-bg1);
+    background-color: var(--e-color-bg1);
     .right-title {
       display: flex;
       height: 40px;
-      margin-bottom: var(--o-spacing-h2);
+      margin-bottom: var(--e-spacing-h2);
       justify-content: flex-end;
       @media screen and (max-width: 768px) {
         margin-bottom: 0;
-        padding-bottom: var(--o-spacing-h5);
+        padding-bottom: var(--e-spacing-h5);
         justify-content: center;
-        background-color: var(--o-color-bg1);
+        background-color: var(--e-color-bg1);
       }
       .el-tabs__header {
         margin: 0;
@@ -787,22 +787,22 @@ const watchData = watch(
     }
     .detail-head {
       line-height: 21px;
-      padding: var(--o-spacing-h6);
+      padding: var(--e-spacing-h6);
       text-align: center;
-      color: var(--o-color-text4);
-      background-color: var(--o-color-bg4);
+      color: var(--e-color-text4);
+      background-color: var(--e-color-bg4);
       @media screen and (max-width: 768px) {
-        padding: var(--o-spacing-h8) 0;
-        font-size: var(--o-font-size-tip);
+        padding: var(--e-spacing-h8) 0;
+        font-size: var(--e-font-size-tip);
       }
     }
 
     .meeting-list {
-      padding: var(--o-spacing-h8) 0 0 var(--o-spacing-h8);
+      padding: var(--e-spacing-h8) 0 0 var(--e-spacing-h8);
       height: v-bind('calendarHeight');
-      background-color: var(--o-color-bg2);
+      background-color: var(--e-color-bg2);
       overflow-y: scroll;
-      box-shadow: var(--o-shadow-l2);
+      box-shadow: var(--e-shadow-l2);
       .el-collapse {
         border: none;
         --el-collapse-header-height: 96px;
@@ -812,7 +812,7 @@ const watchData = watch(
           }
         }
         .el-collapse-item {
-          margin-bottom: var(--o-spacing-h8);
+          margin-bottom: var(--e-spacing-h8);
           .el-collapse-item__header {
             padding-left: 0;
             border: none;
@@ -821,35 +821,35 @@ const watchData = watch(
         }
         .el-collapse-item__wrap {
           border: none;
-          padding: var(--o-spacing-h6) var(--o-spacing-h5);
-          background-color: var(--o-collapse-color-bg2);
+          padding: var(--e-spacing-h6) var(--e-spacing-h5);
+          background-color: var(--e-collapse-color-bg2);
           @media screen and (max-width: 768px) {
-            padding: var(--o-spacing-h6);
-            background-color: var(--o-color-bg1);
+            padding: var(--e-spacing-h6);
+            background-color: var(--e-color-bg1);
             .el-collapse-item__content {
-              background-color: var(--o-color-bg1);
+              background-color: var(--e-color-bg1);
             }
           }
         }
       }
       @media screen and (max-width: 768px) {
-        padding: var(--o-spacing-h8);
+        padding: var(--e-spacing-h8);
         height: fit-content;
         overflow: auto;
       }
       &::-webkit-scrollbar-track {
         border-radius: 4px;
-        background-color: var(--o-color-bg2);
+        background-color: var(--e-color-bg2);
       }
 
       &::-webkit-scrollbar {
         width: 6px;
-        background-color: var(--o-color-bg2);
+        background-color: var(--e-color-bg2);
       }
 
       &::-webkit-scrollbar-thumb {
         border-radius: 4px;
-        background: var(--o-color-division1);
+        background: var(--e-color-division1);
       }
       .el-collapse-item__arrow {
         display: none;
@@ -857,18 +857,18 @@ const watchData = watch(
       .el-collapse-item__content {
         padding: 0;
         @media screen and (max-width: 768px) {
-          font-size: var(--o-font-size-tip);
+          font-size: var(--e-font-size-tip);
         }
       }
       .meet-item {
         display: flex;
         justify-content: space-between;
-        padding: var(--o-spacing-h5);
+        padding: var(--e-spacing-h5);
         width: 100%;
         height: 100%;
-        background-color: var(--o-color-bg3);
-        border: 1px solid var(--o-color-bg3);
-        border-left: 2px solid var(--o-color-brand1);
+        background-color: var(--e-color-bg3);
+        border: 1px solid var(--e-color-bg3);
+        border-left: 2px solid var(--e-color-brand1);
         .meet-left {
           display: flex;
           flex-direction: column;
@@ -878,14 +878,14 @@ const watchData = watch(
             display: flex;
             align-items: center;
             .meet-name {
-              margin-right: var(--o-spacing-h5);
+              margin-right: var(--e-spacing-h5);
               max-width: 400px;
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
-              font-size: var(--o-font-size-h7);
-              color: var(--o-color-text1);
-              line-height: var(--o-line-height-h7);
+              font-size: var(--e-font-size-h7);
+              color: var(--e-color-text1);
+              line-height: var(--e-line-height-h7);
             }
             .el-collapse-item__content {
               padding: 0 20px;
@@ -904,18 +904,18 @@ const watchData = watch(
             align-items: center;
             width: fit-content;
             height: 24px;
-            font-size: var(--o-font-size-h8);
-            line-height: var(--o-line-height-h8);
+            font-size: var(--e-font-size-h8);
+            line-height: var(--e-line-height-h8);
             @media screen and (max-width: 768px) {
-              font-size: var(--o-font-size-text);
+              font-size: var(--e-font-size-text);
             }
             .o-icon {
               margin: 0 5px;
-              color: var(--o-color-brand1);
-              font-size: var(--o-font-size-h5);
+              color: var(--e-color-brand1);
+              font-size: var(--e-font-size-h5);
               transition: all 0.3s;
               svg {
-                color: var(--o-color-brand1);
+                color: var(--e-color-brand1);
               }
             }
             &:hover {
@@ -927,16 +927,16 @@ const watchData = watch(
         }
         .item-right {
           display: flex;
-          font-size: var(--o-font-size-text);
+          font-size: var(--e-font-size-text);
           .o-button {
             flex-shrink: 0;
             padding: 0;
             .o-icon {
-              color: var(--o-color-brand1);
-              font-size: var(--o-font-size-h5);
+              color: var(--e-color-brand1);
+              font-size: var(--e-font-size-h5);
             }
             &:hover {
-              color: var(--o-color-brand1);
+              color: var(--e-color-brand1);
             }
             @media screen and (max-width: 768px) {
               display: none;
@@ -947,12 +947,12 @@ const watchData = watch(
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            padding: 0 var(--o-spacing-h5);
+            padding: 0 var(--e-spacing-h5);
             font-weight: normal;
             text-align: center;
-            font-size: var(--o-font-size-h8);
+            font-size: var(--e-font-size-h8);
             span {
-              line-height: var(--o-line-height-h8);
+              line-height: var(--e-line-height-h8);
               i {
                 font-style: normal;
               }
@@ -963,8 +963,8 @@ const watchData = watch(
             align-items: center;
             width: 24px;
             .o-icon {
-              font-size: var(--o-font-size-h5);
-              color: var(--o-color-text1);
+              font-size: var(--e-font-size-h5);
+              color: var(--e-color-text1);
               transition: all 0.3s;
             }
             .reversal {
@@ -973,15 +973,15 @@ const watchData = watch(
           }
         }
         @media screen and (max-width: 768px) {
-          background-color: var(--o-color-bg2);
-          padding: var(--o-spacing-h6);
-          border: 1px solid var(--o-color-division1);
-          border-left: 2px solid var(--o-color-brand1);
+          background-color: var(--e-color-bg2);
+          padding: var(--e-spacing-h6);
+          border: 1px solid var(--e-color-division1);
+          border-left: 2px solid var(--e-color-brand1);
           .meet-left {
             max-width: 200px;
             .left-top {
               .meet-name {
-                font-size: var(--o-font-size-text);
+                font-size: var(--e-font-size-text);
                 font-weight: 700;
               }
             }
@@ -989,24 +989,24 @@ const watchData = watch(
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              font-size: var(--o-font-size-tip);
-              color: var(--o-color-text4);
+              font-size: var(--e-font-size-tip);
+              color: var(--e-color-text4);
             }
           }
           .item-right {
             .detail-time {
               flex-direction: row;
               align-items: flex-end;
-              padding: 0 var(--o-spacing-h8);
-              font-size: var(--o-font-size-tip);
+              padding: 0 var(--e-spacing-h8);
+              font-size: var(--e-font-size-tip);
             }
             .extend {
               align-items: flex-end;
               .o-icon {
                 display: inline-block;
-                height: var(--o-line-height-h8);
-                line-height: var(--o-line-height-h8);
-                font-size: var(--o-font-size-h8);
+                height: var(--e-line-height-h8);
+                line-height: var(--e-line-height-h8);
+                font-size: var(--e-font-size-h8);
                 svg {
                   vertical-align: middle;
                 }
@@ -1016,11 +1016,11 @@ const watchData = watch(
         }
       }
       .meet-detail {
-        color: var(--o-color-text4);
+        color: var(--e-color-text4);
         .meeting-item {
           display: flex;
-          padding-bottom: var(--o-spacing-h8);
-          line-height: var(--o-line-height-tip);
+          padding-bottom: var(--e-spacing-h8);
+          line-height: var(--e-line-height-tip);
           word-break: break-all;
           .item-title {
             flex-shrink: 0;
@@ -1035,8 +1035,8 @@ const watchData = watch(
               overflow: hidden;
             }
             .creator-name {
-              padding-left: var(--o-spacing-h5);
-              font-size: var(--o-font-size-text);
+              padding-left: var(--e-spacing-h5);
+              font-size: var(--e-font-size-text);
             }
           }
         }
@@ -1045,13 +1045,13 @@ const watchData = watch(
           @media screen and (max-width: 768px) {
             display: flex;
             justify-content: center;
-            padding-top: var(--o-spacing-h8);
-            border-top: 1px solid var(--o-color-division1);
-            padding: var(--o-spacing-h5) 0 var(--o-spacing-h10);
+            padding-top: var(--e-spacing-h8);
+            border-top: 1px solid var(--e-color-division1);
+            padding: var(--e-spacing-h5) 0 var(--e-spacing-h10);
             .o-button {
-              padding: 3px var(--o-spacing-h6);
+              padding: 3px var(--e-spacing-h6);
               .o-icon {
-                font-size: var(--o-font-size-tip);
+                font-size: var(--e-font-size-tip);
               }
             }
           }
@@ -1064,21 +1064,21 @@ const watchData = watch(
       align-items: center;
       justify-content: center;
       height: 100%;
-      color: var(--o-color-text1);
-      font-size: var(--o-font-size-h8);
+      color: var(--e-color-text1);
+      font-size: var(--e-font-size-h8);
       img {
         height: 216px;
       }
       p {
-        margin-top: var(--o-spacing-h5);
+        margin-top: var(--e-spacing-h5);
       }
       @media screen and (max-width: 768px) {
         img {
-          margin-top: var(--o-spacing-h5);
+          margin-top: var(--e-spacing-h5);
         }
         p {
-          padding-bottom: var(--o-spacing-h5);
-          font-size: var(--o-font-size-tip);
+          padding-bottom: var(--e-spacing-h5);
+          font-size: var(--e-font-size-tip);
         }
       }
     }
@@ -1093,7 +1093,7 @@ const watchData = watch(
     margin: 0 auto;
     align-items: center;
     flex-direction: column;
-    background-color: var(--o-color-bg2);
+    background-color: var(--e-color-bg2);
   }
 }
 </style>

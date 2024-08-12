@@ -140,18 +140,18 @@ const isDark = computed(() => {
     }
     :deep(.el-tabs) {
       .el-tabs__header {
-        margin-bottom: var(--o-spacing-h4);
+        margin-bottom: var(--e-spacing-h4);
       }
       .el-tabs__nav {
         .el-tabs__active-bar {
-          background-color: var(--o-color-brand1);
+          background-color: var(--e-color-brand1);
         }
         .is-active {
-          color: var(--o-color-brand1);
+          color: var(--e-color-brand1);
         }
       }
       .el-tabs__content {
-        box-shadow: var(--o-shadow-l1);
+        box-shadow: var(--e-shadow-l1);
       }
     }
   }
@@ -165,24 +165,24 @@ const isDark = computed(() => {
         flex: 1;
       }
       .desc {
-        background-color: var(--o-color-bg2);
-        margin: 0 var(--o-spacing-h6) 0 0;
-        padding: var(--o-spacing-h2) var(--o-spacing-h2) 0 var(--o-spacing-h2);
+        background-color: var(--e-color-bg2);
+        margin: 0 var(--e-spacing-h6) 0 0;
+        padding: var(--e-spacing-h2) var(--e-spacing-h2) 0 var(--e-spacing-h2);
         position: relative;
         height: 100%;
-        box-shadow: var(--o-shadow-l1);
+        box-shadow: var(--e-shadow-l1);
         &-item {
-          color: var(--o-color-text1);
-          font-size: var(--o-font-size-h7);
-          line-height: var(--o-line-height-h7);
-          margin-bottom: var(--o-spacing-h4);
+          color: var(--e-color-text1);
+          font-size: var(--e-font-size-h7);
+          line-height: var(--e-line-height-h7);
+          margin-bottom: var(--e-spacing-h4);
         }
         &-title {
-          font-size: var(--o-font-size-h5);
+          font-size: var(--e-font-size-h5);
           font-weight: 500;
-          color: var(--o-color-text1);
-          line-height: var(--o-line-height-h5);
-          padding-bottom: var(--o-spacing-h4);
+          color: var(--e-color-text1);
+          line-height: var(--e-line-height-h5);
+          padding-bottom: var(--e-spacing-h4);
         }
         &-background {
           background-size: 100%;
@@ -196,9 +196,9 @@ const isDark = computed(() => {
       }
       .framework-img {
         flex: 1;
-        background-color: var(--o-color-bg2);
-        margin-left: var(--o-spacing-h6);
-        box-shadow: var(--o-shadow-l1);
+        background-color: var(--e-color-bg2);
+        margin-left: var(--e-spacing-h6);
+        box-shadow: var(--e-shadow-l1);
         img {
           margin: 0 auto;
           display: block;
@@ -228,19 +228,19 @@ const isDark = computed(() => {
     @media screen and (min-width: 768px) and (max-width: 1079px) {
       .info {
         .desc {
-          padding: var(--o-spacing-h5) var(--o-spacing-h5) 0 var(--o-spacing-h5);
+          padding: var(--e-spacing-h5) var(--e-spacing-h5) 0 var(--e-spacing-h5);
           &-title {
-            font-size: var(--o-font-size-text);
+            font-size: var(--e-font-size-text);
             font-weight: 500px;
-            color: var(--o-color-text1);
-            line-height: var(--o-line-height-h8);
-            padding-bottom: var(--o-spacing-h6);
+            color: var(--e-color-text1);
+            line-height: var(--e-line-height-h8);
+            padding-bottom: var(--e-spacing-h6);
           }
           &-item {
-            color: var(--o-color-text1);
-            line-height: var(--o-line-height-tip);
-            font-size: var(--o-font-size-tip);
-            padding: var(--o-spacing-h8) 0;
+            color: var(--e-color-text1);
+            line-height: var(--e-line-height-tip);
+            font-size: var(--e-font-size-tip);
+            padding: var(--e-spacing-h8) 0;
           }
         }
         .framework-img {
@@ -258,19 +258,19 @@ const isDark = computed(() => {
         .desc {
           width: 100%;
           margin: 0;
-          padding: var(--o-spacing-h5);
-          padding-bottom: var(--o-spacing-h2);
+          padding: var(--e-spacing-h5);
+          padding-bottom: var(--e-spacing-h2);
           &-title {
             padding-bottom: 0;
-            font-size: var(--o-font-size-text);
-            line-height: var(--o-line-height-text);
+            font-size: var(--e-font-size-text);
+            line-height: var(--e-line-height-text);
             font-weight: 500;
-            margin-bottom: var(--o-spacing-h5);
+            margin-bottom: var(--e-spacing-h5);
           }
           &-item {
-            font-size: var(--o-font-size-tip);
-            line-height: var(--o-line-height-tip);
-            margin: var(--o-spacing-h8) 0 0 0;
+            font-size: var(--e-font-size-tip);
+            line-height: var(--e-line-height-tip);
+            margin: var(--e-spacing-h8) 0 0 0;
           }
           &-background {
             width: 202px;
@@ -281,11 +281,11 @@ const isDark = computed(() => {
           }
         }
         .framework-img {
-          padding: var(--o-spacing-h5);
-          margin-top: var(--o-spacing-h5);
+          padding: var(--e-spacing-h5);
+          margin-top: var(--e-spacing-h5);
           margin-left: 0;
           width: 100%;
-          background-color: var(--o-color-bg2);
+          background-color: var(--e-color-bg2);
           img {
             margin: 0 auto;
             display: block;

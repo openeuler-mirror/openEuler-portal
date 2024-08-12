@@ -270,6 +270,6 @@ openEuler 用户组（openEuler User Group），简称 oEUG，这是为方便 op
 
 <style lang="scss" scoped>
   .care {
-    color: var(--o-color-red5);
+    color: var(--e-color-red5);
   }
 </style>

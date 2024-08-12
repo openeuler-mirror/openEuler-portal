@@ -38,16 +38,16 @@ const isDark = computed(() => {
 
 <style lang="scss" scoped>
 li {
-  font-size: var(--o-font-size-h6);
-  line-height: var(--o-line-height-h6);
+  font-size: var(--e-font-size-h6);
+  line-height: var(--e-line-height-h6);
   color: rgba(0, 0, 0, 0.8);
   margin-top: 28px;
   &:first-of-type {
     margin-top: 0;
   }
   @media (max-width: 767px) {
-    font-size: var(--o-font-size-tip);
-    line-height: var(--o-line-height-tip);
+    font-size: var(--e-font-size-tip);
+    line-height: var(--e-line-height-tip);
     margin-top: 16px;
   }
 }

@@ -75,8 +75,8 @@ watch(
 .theme-box-pc {
   cursor: pointer;
   .icon {
-    font-size: var(--o-font-size-h6);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-h6);
+    color: var(--e-color-text1);
   }
   @media screen and (max-width: 1100px) {
     display: none;
@@ -91,12 +91,12 @@ watch(
 }
 .dark {
   .icon {
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
   }
 }
 :deep(.el-switch__inner) {
   .is-show {
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
   }
 }
 </style>

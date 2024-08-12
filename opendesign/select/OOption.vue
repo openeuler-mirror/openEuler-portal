@@ -15,12 +15,12 @@ const attrs = useAttrs();
 .el-popper.o-select-dropdown {
   border: none;
   border-radius: 0 !important;
-  background-color: var(--o-color-bg2);
+  background-color: var(--e-color-bg2);
   .o-option.hover {
-    background-color: var(--o-color-bg4);
+    background-color: var(--e-color-bg4);
   }
   .o-option:hover {
-    background-color: var(--o-color-bg4);
+    background-color: var(--e-color-bg4);
   }
 }
 </style>

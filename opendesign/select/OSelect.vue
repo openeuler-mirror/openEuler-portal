@@ -82,26 +82,26 @@ onUnmounted(() => {
 
 <style lang="scss">
 .o-select {
-  --o-select-font-tip: var(--o-font-size-tip);
-  --o-select-font-text: var(--o-color-text4);
-  --o-select-color-bg: var(--o-color-bg2);
-  --o-select-shadow: var(--o-shadow-l1);
-  --o-select-shadow_hover: var(--o-shadow-l2);
+  --e-select-font-tip: var(--e-font-size-tip);
+  --e-select-font-text: var(--e-color-text4);
+  --e-select-color-bg: var(--e-color-bg2);
+  --e-select-shadow: var(--e-shadow-l1);
+  --e-select-shadow_hover: var(--e-shadow-l2);
   border: none;
   --el-select-border-color-hover: transparent !important;
   &:hover {
-    box-shadow: var(--o-select-shadow_hover);
+    box-shadow: var(--e-select-shadow_hover);
   }
   .el-input__wrapper {
-    background-color: var(--o-select-color-bg);
+    background-color: var(--e-select-color-bg);
     border-radius: 0;
-    box-shadow: var(--o-select-shadow);
+    box-shadow: var(--e-select-shadow);
     &:hover {
       border: none;
     }
   }
   .el-input__prefix-inner {
-    // font-size: var(--o-select-font-tip);
+    // font-size: var(--e-select-font-tip);
     .o-icon {
       display: flex;
       align-items: center;
@@ -111,7 +111,7 @@ onUnmounted(() => {
     height: 40px;
     .el-icon {
       svg {
-        color: var(--o-select-font-text);
+        color: var(--e-select-font-text);
       }
     }
   }
@@ -119,9 +119,9 @@ onUnmounted(() => {
     .el-input {
       height: 34px;
       .el-input__wrapper {
-        padding: var(--o-spacing-h8);
+        padding: var(--e-spacing-h8);
         .el-input__inner {
-          font-size: var(--o-select-font-tip);
+          font-size: var(--e-select-font-tip);
         }
       }
       .el-input__suffix {

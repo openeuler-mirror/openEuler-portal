@@ -229,7 +229,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 $color: #fff;
 .footer {
-  background: var(--o-color-greyblack1);
+  background: var(--e-color-greyblack1);
   &.is-doc {
     margin-left: 300px;
     @media (max-width: 1100px) {
@@ -243,8 +243,8 @@ $color: #fff;
     line-height: 48px;
     width: 100%;
     height: 48px;
-    background-color: var(--o-color-bg1);
-    color: var(--o-color-text3);
+    background-color: var(--e-color-bg1);
+    color: var(--e-color-text3);
     font-size: 14px;
     display: flex;
     justify-content: center;
@@ -254,7 +254,7 @@ $color: #fff;
     right: 0;
     left: 0;
     z-index: 999;
-    box-shadow: var(--o-shadow-l1);
+    box-shadow: var(--e-shadow-l1);
     text-align: center;
     @media screen and (max-width: 1000px) {
       font-size: 12px;
@@ -281,7 +281,7 @@ $color: #fff;
       margin-left: 16px;
       width: 24px;
       height: 24px;
-      background: var(--o-color-greyblack3);
+      background: var(--e-color-greyblack3);
       border-radius: 50%;
       display: inline-flex;
       justify-content: center;
@@ -302,21 +302,21 @@ $color: #fff;
   }
   .atom {
     text-align: center;
-    padding: var(--o-spacing-h3) 0 var(--o-spacing-h4);
+    padding: var(--e-spacing-h3) 0 var(--e-spacing-h4);
     position: relative;
     border-bottom: 1px solid rgba(229, 229, 229, 0.12);
     @media (max-width: 1440px) {
-      padding: var(--o-spacing-h4) 0;
+      padding: var(--e-spacing-h4) 0;
     }
 
     &-text {
-      font-size: var(--o-font-size-h6);
+      font-size: var(--e-font-size-h6);
       font-weight: 400;
       color: $color;
-      line-height: var(--o-line-height-h6);
+      line-height: var(--e-line-height-h6);
       @media (max-width: 1440px) {
-        font-size: var(--o-font-size-text);
-        line-height: var(--o-line-height-text);
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
       }
     }
     &-logo {
@@ -341,7 +341,7 @@ $color: #fff;
       position: relative;
       min-height: 118px;
       @media (max-width: 1400px) {
-        padding: var(--o-spacing-h4) 0;
+        padding: var(--e-spacing-h4) 0;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -373,26 +373,26 @@ $color: #fff;
   }
 
   .copy-right {
-    font-size: var(--o-font-size-text);
+    font-size: var(--e-font-size-text);
     color: $color;
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
     @media (max-width: 1400px) {
-      font-size: var(--o-font-size-tip);
-      line-height: var(--o-line-height-tip);
-      margin-top: var(--o-spacing-h8);
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
+      margin-top: var(--e-spacing-h8);
     }
   }
   .license {
-    font-size: var(--o-font-size-text);
+    font-size: var(--e-font-size-text);
     color: $color;
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
     span {
-      color: var(--o-color-text-secondary);
+      color: var(--e-color-text-secondary);
     }
     @media (max-width: 1400px) {
-      font-size: var(--o-font-size-tip);
-      line-height: var(--o-line-height-tip);
-      margin-top: var(--o-spacing-h8);
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
+      margin-top: var(--e-spacing-h8);
     }
   }
 
@@ -400,17 +400,17 @@ $color: #fff;
     text-align: center;
     .link {
       color: $color;
-      font-size: var(--o-font-size-text);
+      font-size: var(--e-font-size-text);
       display: inline-block;
-      padding: 0 var(--o-spacing-h6);
+      padding: 0 var(--e-spacing-h6);
       border-right: 1px solid $color;
       &:last-child {
         border-right: 0;
       }
       @media (max-width: 1400px) {
-        font-size: var(--o-font-size-tip);
-        line-height: var(--o-line-height-tip);
-        padding: 0 var(--o-spacing-h9);
+        font-size: var(--e-font-size-tip);
+        line-height: var(--e-line-height-tip);
+        padding: 0 var(--e-spacing-h9);
       }
     }
     @media (max-width: 1400px) {
@@ -538,8 +538,8 @@ $color: #fff;
 
     p {
       color: $color;
-      font-size: var(--o-font-size-tip);
-      margin-top: var(--o-spacing-h8);
+      font-size: var(--e-font-size-tip);
+      margin-top: var(--e-spacing-h8);
     }
   }
 
@@ -547,9 +547,9 @@ $color: #fff;
     display: block;
     margin-top: 4px;
     color: $color;
-    font-size: var(--o-font-size-text);
+    font-size: var(--e-font-size-text);
     @media (max-width: 1400px) {
-      font-size: var(--o-font-size-tip);
+      font-size: var(--e-font-size-tip);
     }
   }
   .float-right {
@@ -559,7 +559,7 @@ $color: #fff;
     top: 70vh;
     right: 50px;
     z-index: 10;
-    box-shadow: var(--o-shadow-l1);
+    box-shadow: var(--e-shadow-l1);
     .nav-item {
       display: flex;
       align-items: center;
@@ -567,11 +567,11 @@ $color: #fff;
       text-align: center;
       width: 50px;
       height: 50px;
-      background-color: var(--o-color-bg2);
+      background-color: var(--e-color-bg2);
       background-size: cover;
       font-size: 12px;
       line-height: 18px;
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
       .text {
         word-spacing: 100vw;
         display: none;
@@ -580,8 +580,8 @@ $color: #fff;
         font-size: 24px;
       }
       &:hover {
-        color: var(--o-color-white);
-        background-color: var(--o-color-black);
+        color: var(--e-color-white);
+        background-color: var(--e-color-black);
         .o-icon {
           display: none;
         }
@@ -615,8 +615,8 @@ $color: #fff;
   .dark-nav {
     .nav-item {
       &:hover {
-        background-color: var(--o-color-white);
-        color: var(--o-color-black);
+        background-color: var(--e-color-white);
+        color: var(--e-color-black);
       }
     }
   }
@@ -635,7 +635,7 @@ $color: #fff;
       right: -10px;
       top: -10px;
       width: 20px;
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
     }
   }
 }

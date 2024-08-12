@@ -95,11 +95,11 @@ onUnmounted(() => {
   .member-line {
     .member-title {
       margin-bottom: 16px;
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
       font-weight: 500;
-      font-size: var(--o-font-size-h5);
+      font-size: var(--e-font-size-h5);
       @media screen and (max-width: 768px) {
-        font-size: var(--o-font-size-h7);
+        font-size: var(--e-font-size-h7);
       }
     }
     .logo-list {
@@ -110,7 +110,7 @@ onUnmounted(() => {
         position: relative;
         max-width: 354px;
         margin: 0px -1px -1px 0px;
-        border: 1px solid var(--o-color-division1);
+        border: 1px solid var(--e-color-division1);
         img {
           width: 100%;
         }
@@ -138,7 +138,7 @@ onUnmounted(() => {
   .tip {
     display: grid;
     grid-row-gap: 16px;
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
     p {
       font-size: 12px;
     }
@@ -162,7 +162,7 @@ onUnmounted(() => {
     height: 100%;
     left: 0;
     bottom: -50%;
-    background-color: var(--o-color-bg4);
+    background-color: var(--e-color-bg4);
     z-index: 0;
   }
   @media screen and (max-width: 1100px) {
@@ -172,16 +172,16 @@ onUnmounted(() => {
     position: relative;
     cursor: pointer;
     display: block !important;
-    color: var(--o-color-text4);
-    line-height: var(--o-line-height-text);
-    font-size: var(--o-font-size-text);
-    border-left: 1px solid var(--o-color-bg4);
+    color: var(--e-color-text4);
+    line-height: var(--e-line-height-text);
+    font-size: var(--e-font-size-text);
+    border-left: 1px solid var(--e-color-bg4);
     z-index: 1;
     padding: 8px 12px;
   }
   .active {
-    color: var(--o-color-brand1);
-    border-left: 1px solid var(--o-color-brand1);
+    color: var(--e-color-brand1);
+    border-left: 1px solid var(--e-color-brand1);
   }
 }
 .dark {

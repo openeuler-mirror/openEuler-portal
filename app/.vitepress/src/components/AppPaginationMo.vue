@@ -102,10 +102,10 @@ function jumpPage(e: any) {
   display: none;
   justify-content: center;
   align-items: center;
-  font-size: var(--o-font-size-tip);
+  font-size: var(--e-font-size-tip);
   .icon-prev {
     margin-right: 8px;
-    color: var(--o-color-brand1);
+    color: var(--e-color-brand1);
   }
   .page-number {
     margin: 0 28px;
@@ -116,14 +116,14 @@ function jumpPage(e: any) {
       text-align: right;
       border: none;
       background-color: transparent;
-      color: var(--o-color-brand1);
+      color: var(--e-color-brand1);
       &:focus {
         text-align: center;
-        outline: 1px solid var(--o-color-brand1);
+        outline: 1px solid var(--e-color-brand1);
       }
     }
     span {
-      color: var(--o-color-text1);
+      color: var(--e-color-text1);
       display: inline-block;
       width: 16px;
       text-align: left;
@@ -131,16 +131,16 @@ function jumpPage(e: any) {
   }
   .icon-next {
     margin-left: 8px;
-    color: var(--o-color-brand1);
+    color: var(--e-color-brand1);
   }
   .next,
   .prev {
-    color: var(--o-color-text1);
+    color: var(--e-color-text1);
     line-height: 100%;
     cursor: pointer;
   }
   .disable-button {
-    color: var(--o-color-text4);
+    color: var(--e-color-text4);
   }
   @media (max-width: 768px) {
     width: 100%;

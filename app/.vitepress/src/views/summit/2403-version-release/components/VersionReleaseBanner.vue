@@ -65,15 +65,15 @@ import AppContext from '@/components/AppContent.vue';
   }
 
   p {
-    font-size: var(--o-font-size-h1);
+    font-size: var(--e-font-size-h1);
     line-height: 65px;
     @media screen and(max-width:1100px) {
-      font-size: var(--o-font-size-h2);
-      line-height: var(--o-line-height-h2);
+      font-size: var(--e-font-size-h2);
+      line-height: var(--e-line-height-h2);
     }
     @media screen and(max-width:767px) {
-      font-size: var(--o-font-size-h3);
-      line-height: var(--o-line-height-h3);
+      font-size: var(--e-font-size-h3);
+      line-height: var(--e-line-height-h3);
     }
   }
 

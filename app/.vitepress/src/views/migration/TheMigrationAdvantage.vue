@@ -34,34 +34,34 @@ const advantageInfo = computed(() => {
 
 <style lang="scss" scoped>
 .advantage-top {
-  font-size: var(--o-font-size-text);
+  font-size: var(--e-font-size-text);
   font-weight: 400;
-  color: var(--o-color-text4);
-  line-height: var(--o-line-height-text);
+  color: var(--e-color-text4);
+  line-height: var(--e-line-height-text);
 }
 
 .advantage-middle {
-  margin-top: var(--o-spacing-h4);
+  margin-top: var(--e-spacing-h4);
   display: flex;
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    margin-top: var(--o-spacing-h6);
+    margin-top: var(--e-spacing-h6);
   }
   .card {
     flex: 1;
-    padding: var(--o-spacing-h4) var(--o-spacing-h3);
-    background: var(--o-color-bg2);
-    box-shadow: var(--o-shadow-l1);
+    padding: var(--e-spacing-h4) var(--e-spacing-h3);
+    background: var(--e-color-bg2);
+    box-shadow: var(--e-shadow-l1);
     display: flex;
     flex-direction: column;
-    // margin-top: var(--o-spacing-h4);
+    // margin-top: var(--e-spacing-h4);
     // @media screen and (max-width: 768px) {
-    //   margin: var(--o-spacing-h6);
+    //   margin: var(--e-spacing-h6);
     // }
     &:nth-child(2) {
-      margin: 0 var(--o-spacing-h4);
+      margin: 0 var(--e-spacing-h4);
       @media screen and (max-width: 768px) {
-        margin: var(--o-spacing-h6) 0;
+        margin: var(--e-spacing-h6) 0;
       }
     }
     img {
@@ -69,26 +69,26 @@ const advantageInfo = computed(() => {
       align-self: center;
     }
     p {
-      font-size: var(--o-font-size-text);
+      font-size: var(--e-font-size-text);
       font-weight: 400;
-      color: var(--o-color-text4);
-      line-height: var(--o-line-height-text);
-      margin-top: var(--o-spacing-h4);
+      color: var(--e-color-text4);
+      line-height: var(--e-line-height-text);
+      margin-top: var(--e-spacing-h4);
       @media screen and (max-width: 768px) {
-        margin-top: var(--o-spacing-h6);
+        margin-top: var(--e-spacing-h6);
       }
     }
   }
 }
 
 .advantage-bottom {
-  font-size: var(--o-font-size-text);
+  font-size: var(--e-font-size-text);
   font-weight: 400;
-  color: var(--o-color-text4);
-  line-height: var(--o-line-height-text);
-  margin-top: var(--o-spacing-h4);
+  color: var(--e-color-text4);
+  line-height: var(--e-line-height-text);
+  margin-top: var(--e-spacing-h4);
   @media screen and (max-width: 768px) {
-    margin-top: var(--o-spacing-h6);
+    margin-top: var(--e-spacing-h6);
   }
 }
 </style>

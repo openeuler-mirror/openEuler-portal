@@ -91,22 +91,22 @@ defineExpose(handleSearch);
 <style scoped lang="scss">
 .recommend {
   padding: 12px 0;
-  background-color: var(--o-color-bg2);
+  background-color: var(--e-color-bg2);
   .history {
     display: flex;
     padding: 0 32px 0 32px;
-    font-size: var(--o-font-size-tip);
-    line-height: var(--o-line-height-tip);
-    color: var(--o-color-text1);
+    font-size: var(--e-font-size-tip);
+    line-height: var(--e-line-height-tip);
+    color: var(--e-color-text1);
   }
   .recommend-item {
     margin-top: 8px;
     padding: 4px 32px;
     cursor: pointer;
-    color: var(--o-color-text-secondary);
+    color: var(--e-color-text-secondary);
     &:hover {
-      color: var(--o-color-brand1);
-      background-color: var(--o-color-bg1);
+      color: var(--e-color-brand1);
+      background-color: var(--e-color-bg1);
     }
   }
 }

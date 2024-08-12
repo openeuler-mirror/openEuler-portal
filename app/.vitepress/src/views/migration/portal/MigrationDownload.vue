@@ -101,47 +101,47 @@ function handleClick(item: LinkItem) {
   .el-card__body {
     padding: 0;
     @media screen and (max-width: 768px) {
-      padding: var(--o-spacing-h5) var(--o-spacing-h6);
+      padding: var(--e-spacing-h5) var(--e-spacing-h6);
     }
   }
 }
 .migration-download {
-  margin-top: var(--o-spacing-h1);
+  margin-top: var(--e-spacing-h1);
   @media screen and (max-width: 768px) {
-    margin-top: var(--o-spacing-h2);
+    margin-top: var(--e-spacing-h2);
   }
   h3 {
-    font-size: var(--o-font-size-h3);
+    font-size: var(--e-font-size-h3);
     font-weight: 300;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h3);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h3);
     width: 100%;
     text-align: center;
     margin-top: 0;
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-h8);
-      line-height: var(--o-line-height-h8);
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
       margin: 0;
     }
   }
   p {
-    font-size: var(--o-font-size-h7);
+    font-size: var(--e-font-size-h7);
     font-weight: 300;
-    color: var(--o-color-text1);
-    line-height: var(--o-line-height-h8);
+    color: var(--e-color-text1);
+    line-height: var(--e-line-height-h8);
     width: 100%;
     text-align: center;
-    margin-top: var(--o-spacing-h5);
+    margin-top: var(--e-spacing-h5);
     @media screen and (max-width: 768px) {
-      font-size: var(--o-font-size-tip);
-      line-height: var(--o-line-height-tip);
-      margin-top: var(--o-spacing-h8);
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
+      margin-top: var(--e-spacing-h8);
     }
   }
   &-content {
-    margin-top: var(--o-spacing-h3);
+    margin-top: var(--e-spacing-h3);
     @media screen and (max-width: 768px) {
-      margin-top: var(--o-spacing-h5);
+      margin-top: var(--e-spacing-h5);
     }
     .card-box {
       display: flex;
@@ -159,7 +159,7 @@ function handleClick(item: LinkItem) {
         img {
           width: 109px;
           height: 74px;
-          margin-right: var(--o-spacing-h4);
+          margin-right: var(--e-spacing-h4);
 
           @media screen and (max-width: 440px) {
             display: none;
@@ -167,16 +167,16 @@ function handleClick(item: LinkItem) {
         }
 
         .card-info {
-          font-size: var(--o-font-size-h5);
+          font-size: var(--e-font-size-h5);
           font-weight: 500;
-          color: var(--o-color-text1);
-          line-height: var(--o-line-height-h5);
+          color: var(--e-color-text1);
+          line-height: var(--e-line-height-h5);
           @media screen and (max-width: 1410px) {
-            font-size: var(--o-font-size-h7);
-            line-height: var(--o-line-height-h7);
+            font-size: var(--e-font-size-h7);
+            line-height: var(--e-line-height-h7);
           }
           .name {
-            margin-right: var(--o-spacing-h6);
+            margin-right: var(--e-spacing-h6);
           }
         }
       }
@@ -213,16 +213,16 @@ function handleClick(item: LinkItem) {
 
           .o-button {
             position: relative;
-            margin-right: var(--o-spacing-h4);
+            margin-right: var(--e-spacing-h4);
             ul {
               display: none;
               position: absolute;
               top: 15px;
               left: 60%;
               width: 160px;
-              padding: var(--o-spacing-h5) 0;
-              background-color: var(--o-color-bg2);
-              border: 1px solid var(--o-color-brand1);
+              padding: var(--e-spacing-h5) 0;
+              background-color: var(--e-color-bg2);
+              border: 1px solid var(--e-color-brand1);
               z-index: 20;
               @media screen and (max-width: 768px) {
                 top: -120px;
@@ -231,14 +231,14 @@ function handleClick(item: LinkItem) {
                 cursor: pointer;
                 display: block;
                 margin: 0;
-                padding: var(--o-spacing-h8) 0;
+                padding: var(--e-spacing-h8) 0;
                 list-style: none;
                 text-align: center;
-                line-height: var(--o-line-height-h6);
-                color: var(--o-color-text1);
+                line-height: var(--e-line-height-h6);
+                color: var(--e-color-text1);
               }
               li:hover {
-                color: var(--o-color-brand1);
+                color: var(--e-color-brand1);
               }
             }
             @media screen and (max-width: 768px) {
@@ -246,7 +246,7 @@ function handleClick(item: LinkItem) {
               margin-bottom: 4px;
             }
             &:last-child {
-              margin-right: var(--o-spacing-h3);
+              margin-right: var(--e-spacing-h3);
               @media screen and (max-width: 440px) {
                 margin-right: 4px;
               }

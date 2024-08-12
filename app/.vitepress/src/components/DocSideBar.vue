@@ -16,8 +16,8 @@
   padding: 40px 0;
   min-height: calc(100vh - 80px);
   width: 300px;
-  color: var(--o-color-text2);
-  background-color: var(--o-color-kleinblue5);
+  color: var(--e-color-text2);
+  background-color: var(--e-color-kleinblue5);
 
   @media screen and (max-width: 1100px) {
     top: 48px;
