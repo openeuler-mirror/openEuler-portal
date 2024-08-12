@@ -255,6 +255,17 @@
   filter: brightness(80%) grayscale(20%) contrast(1.2);
 }
 
+.vp-code {
+  span {
+    color: var(--shiki-dark, #fff);
+  }
+}
+
+.lang,
+.copy {
+  display: none;
+}
+
 /**
  * 法律声明 && 隐私政策
  **/
