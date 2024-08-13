@@ -69,8 +69,8 @@ onMounted(() => {
       </OContainer>
       <div class="oevp-list">
         <h2>{{ oevpI18n.OEVP_TITLE }}</h2>
-        <div class="oevp-card-list">
-          <clientonly>
+        <clientonly>
+          <div class="oevp-card-list">
             <OContainer
               v-for="item in oevpListData"
               :key="item.avator"
@@ -89,8 +89,8 @@ onMounted(() => {
                 ><OIcon><IconHome /></OIcon>{{ item.base }}</span
               >
             </OContainer>
-          </clientonly>
-        </div>
+          </div>
+        </clientonly>
         <p class="tip">{{ oevpI18n.TIP }}</p>
       </div>
       <div class="oevp-list">
