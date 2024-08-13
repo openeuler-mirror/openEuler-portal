@@ -415,13 +415,13 @@ onMounted(async () => {
             }
           }
           .room-bottom {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 1;
             color: var(--e-color-text1);
             a {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 1;
               text-decoration: none;
             }
             @media screen and (max-width: 768px) {

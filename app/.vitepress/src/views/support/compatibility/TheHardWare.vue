@@ -16,7 +16,7 @@ function goBackPage() {
 }
 </script>
 <template>
-  <AppContent>
+  <AppContent class="hardware-wrapper">
     <div class="banner">
       <div class="breadcrumb" @click="goBackPage">
         {{ i18n.compatibility.COMPATIBILITY }} \
@@ -299,10 +299,8 @@ function goBackPage() {
 }
 
 html[lang='zh'] {
-  .banner {
-    .banner-title {
-      margin-bottom: 0;
-    }
+  .hardware-wrapper {
+    padding-bottom: 0;
   }
 }
 
