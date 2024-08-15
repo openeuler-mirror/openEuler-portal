@@ -2,12 +2,28 @@ export default {
   zh: {
     COMMERCIAL_RELEASE_LIST: [
       {
+        NAME: '鼎桥TDOS服务器操作系统 V1.0',
+        DOWNLOAD_URL:
+          'https://www.td-tech.com/',
+        DESC: '鼎桥操作系统（简称TDOS）是鼎桥基于openEuler22.03版本，面向运营商、金融、政企等行业的关键业务而设计开发的企业级服务器操作系统软件。其在openEuler社区版的基础上，融入了众多的自研竞争力特性，完善了生态支持和专业的技术保障。TDOS可广泛适用于数据库、大数据、云计算、WEB服务等应用场景，支持光盘、U盘和网络等多种安装方式，可部署在物理服务器、虚拟机和容器等环境中，同时可为客户提供灵活的部署、升级和迁移方案。',
+        MANUFACTURER: '成都鼎桥通信技术有限公司',
+        PUBLISH_DATE: '2024/05',
+        DETAILED_LINK: [
+          {
+            ARCH: 'x86_64',
+          },
+          {
+            ARCH: 'AArch64',
+          },
+        ],
+      },
+      {
         NAME: '浪潮云启操作系统 23.12 LTS SP1',
         DOWNLOAD_URL:
           'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP1/',
-        DESC: '浪潮云启操作系统（英文简称InLinux）是安全高效、稳定可靠的企业级服务器操作系统，全面支持云计算、大数据、物联网、智能计算等应用场景，具备性能高效、灵活定制、稳定可靠等特性',
+        DESC: '浪潮云启操作系统（英文简称InLinux）是安全高效、稳定可靠的企业级服务器操作系统，全面支持云计算、大数据、物联网、智能计算等应用场景，具备性能高效、灵活定制、稳定可靠等特性。',
         MANUFACTURER: '浪潮云信息技术股份公司',
-        PUBLISH_DATE: '2024/5/28',
+        PUBLISH_DATE: '2024/05',
         DETAILED_LINK: [
           {
             LINK: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP1/everything/x86_64/',
