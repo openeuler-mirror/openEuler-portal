@@ -359,10 +359,6 @@ const handleNodeClick = (node: any) => {
   h6 {
     color: var(--e-color-text1);
     font-weight: bold;
-
-    a {
-      display: none;
-    }
   }
 
   h1 {
