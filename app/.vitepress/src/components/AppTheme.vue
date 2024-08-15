@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, onMounted, watch, ref } from 'vue';
+import { computed, onMounted, onUnmounted, watch, ref } from 'vue';
 import { useCommon } from '@/stores/common';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
@@ -24,6 +24,12 @@ const changeThemeMobile = () => {
   localStorage.setItem(APPEARANCE_KEY, commonStore.theme);
 };
 
+const handleStorageEvent = (event: StorageEvent) => {
+  if (event.key === APPEARANCE_KEY) {
+    commonStore.theme = event.newValue === 'dark' ? 'dark' : 'light';
+  }
+};
+
 onMounted(() => {
   let theme;
   if (!localStorage.getItem(APPEARANCE_KEY)) {
@@ -34,8 +40,12 @@ onMounted(() => {
   } else {
     theme = localStorage.getItem(APPEARANCE_KEY);
   }
-
   commonStore.theme = theme === 'dark' ? 'dark' : 'light';
+  window.addEventListener('storage', handleStorageEvent);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('storage', handleStorageEvent);
 });
 
 watch(
