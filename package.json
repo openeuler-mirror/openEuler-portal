@@ -8,7 +8,9 @@
     "lint": "eslint \"app/.vitepress/src/**/*.{js,ts,vue,jsx,tsx}\"",
     "fix": "eslint --fix \"app/.vitepress/src/**/*.{js,ts,vue,jsx,tsx}\"",
     "lint:components": "eslint \"opendesign/**/*.{js,ts,vue,jsx,tsx}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "sitemap:zh": "node genSitemap.js zh",
+    "sitemap:en": "node genSitemap.js en"
   },
   "keywords": [],
   "author": "",
