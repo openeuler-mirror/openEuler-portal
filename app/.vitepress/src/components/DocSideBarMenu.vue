@@ -199,9 +199,11 @@ const clickMenuItem = (id: string) => {
       }
     }
   }
+  .open + .menu-list {
+    height: auto;
+  }
   &.open {
     & > .menu-list {
-      height: auto;
       transform: scaleY(1);
     }
   }
