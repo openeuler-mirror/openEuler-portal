@@ -58,6 +58,7 @@ import huangweixu from '@/assets/category/organization/user/huangweixu.png';
 import wangjun from '@/assets/category/organization/user/wangjun.png';
 import wangyouhai from '@/assets/category/organization/user/wangyouhai.png';
 import weijiangang from '@/assets/category/organization/user/weijiangang.png';
+import zhangjian from '@/assets/category/organization/user/zhangjian.png';
 import zhangqingnan from '@/assets/category/organization/user/zhangqingnan.png';
 import xulei from '@/assets/category/organization/user/xulei.png';
 import zuchen from '@/assets/category/organization/user/zuchen.png';
@@ -457,16 +458,16 @@ export default {
             email: 'bin.wei@intel.com',
           },
           {
-            img: weijiangang,
-            name: '魏建刚',
-            position: ['委员'],
-            email: 'wei_jiangang@hoperun.com',
-          },
-          {
             img: xulei,
             name: '徐磊',
             position: ['委员'],
             email: 'stone.xulei@xfusion.com',
+          },
+          {
+            img: zhangjian,
+            name: '张剑',
+            position: ['委员'],
+            email: 'zhang_jian7@hoperun.com',
           },
           {
             img: zhangqingnan,
@@ -897,16 +898,16 @@ export default {
             email: 'bin.wei@intel.com',
           },
           {
-            img: weijiangang,
-            name: 'Wei Jiangang',
-            position: ['Committee member'],
-            email: 'wei_jiangang@hoperun.com',
-          },
-          {
             img: xulei,
             name: 'Xu Lei',
             position: ['Committee member'],
             email: 'stone.xulei@xfusion.com',
+          },
+          {
+            img: zhangjian,
+            name: 'Zhang Jian',
+            position: ['Committee member'],
+            email: 'zhang_jian7@hoperun.com',
           },
           {
             img: zhangqingnan,
