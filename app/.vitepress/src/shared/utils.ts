@@ -179,9 +179,16 @@ export function getCustomCookie(key: string) {
  * @param key cookie的key
  * @param value cookie的值
  * @param day cookie的过期时间 默认1天
+ * @param domain domain地址
  */
-export function setCustomCookie(key: string, value: string, day = 1) {
-  Cookies.set(key, value, { expires: day, path: '/' });
+
+export function setCustomCookie(
+  key: string,
+  value: string,
+  day = 1,
+  domain: string = location.hostname
+) {
+  Cookies.set(key, value, { expires: day, path: '/', domain: domain });
 }
 
 /**
@@ -196,7 +203,6 @@ export function removeCustomCookie(key: string) {
 export function scrollToBottom() {
   window.scrollTo(0, document.body.scrollHeight);
 }
-
 
 const opt = Object.prototype.toString;
 export function isBoolean(val: unknown): val is boolean {

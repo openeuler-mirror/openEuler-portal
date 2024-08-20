@@ -1,13 +1,15 @@
 <script lang="ts" setup>
-import { computed, onMounted, onUnmounted, watch, ref } from 'vue';
+import { computed, onMounted, watch, ref } from 'vue';
 import { useCommon } from '@/stores/common';
 import useWindowResize from '@/components/hooks/useWindowResize';
+
+import { setCustomCookie, getCustomCookie } from '@/shared/utils';
 
 import IconSun from '~icons/app/icon-sun-outline.svg';
 import IconMoon from '~icons/app/icon-moon-outline.svg';
 
 // 风格切换
-const APPEARANCE_KEY = 'vitepress-theme-appearance';
+const APPEARANCE_KEY = 'openEuler-theme-appearance';
 
 const commonStore = useCommon();
 const screenWidth = ref(useWindowResize());
@@ -17,35 +19,35 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
 const changeTheme = () => {
   const theme = commonStore.theme === 'dark' ? 'light' : 'dark';
   commonStore.theme = theme;
-  localStorage.setItem(APPEARANCE_KEY, theme);
+  setCustomCookie(
+    APPEARANCE_KEY,
+    theme,
+    180,
+    import.meta.env.VITE_COOKIE_DOMAIN
+  );
 };
 
 const changeThemeMobile = () => {
-  localStorage.setItem(APPEARANCE_KEY, commonStore.theme);
-};
-
-const handleStorageEvent = (event: StorageEvent) => {
-  if (event.key === APPEARANCE_KEY) {
-    commonStore.theme = event.newValue === 'dark' ? 'dark' : 'light';
-  }
+  setCustomCookie(
+    APPEARANCE_KEY,
+    commonStore.theme,
+    180,
+    import.meta.env.VITE_COOKIE_DOMAIN
+  );
 };
 
 onMounted(() => {
+  window.localStorage.removeItem('vitepress-theme-appearance');
   let theme;
-  if (!localStorage.getItem(APPEARANCE_KEY)) {
+  if (!getCustomCookie(APPEARANCE_KEY)) {
     const prefereDark = window.matchMedia(
       '(prefers-color-scheme: dark)'
     ).matches;
     theme = prefereDark ? 'dark' : 'light';
   } else {
-    theme = localStorage.getItem(APPEARANCE_KEY);
+    theme = getCustomCookie(APPEARANCE_KEY);
   }
   commonStore.theme = theme === 'dark' ? 'dark' : 'light';
-  window.addEventListener('storage', handleStorageEvent);
-});
-
-onUnmounted(() => {
-  window.removeEventListener('storage', handleStorageEvent);
 });
 
 watch(
@@ -56,6 +58,9 @@ watch(
     const documentElement = document.documentElement;
     val === 'light' && documentElement.classList.remove('dark');
     val === 'dark' && documentElement.classList.add('dark');
+  },
+  {
+    immediate: true,
   }
 );
 </script>
