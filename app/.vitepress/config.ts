@@ -27,6 +27,12 @@ const config: UserConfig = {
       },
     ],
     [
+      'script',
+      {
+        src: '/check-dark-mode.js',
+      },
+    ],
+    [
       'meta',
       {
         name: 'baidu-site-verification',
@@ -34,7 +40,7 @@ const config: UserConfig = {
       },
     ],
   ],
-  appearance: true, // enable dynamic scripts for dark mode
+  appearance: false, // enable dynamic scripts for dark mode
   titleTemplate: false, //  vitepress supports pageTitileTemplate since 1.0.0
   locales: {
     root: {
