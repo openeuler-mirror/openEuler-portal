@@ -10006,5 +10006,293 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "中移（苏州）软件技术有限公司",
+    "os_version": "BCLinux-21.10U4-dvd-aarch64.iso",
+    "arch": "aarch64",
+    "checksum": "30861c8cb1ca5b889ea91d3d1b04baae",
+    "base_openeuler_version": "openEuler 22.03 LTS SP3",
+    "os_download_link": "https://ecloud.10086.cn/",
+    "friendly_link": "https://ecloud.10086.cn/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/08/09",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "中移（苏州）软件技术有限公司",
+    "os_version": "BCLinux-21.10U4-dvd-x86_64.iso",
+    "arch": "x86_64",
+    "checksum": "f4d891ca50c68738b3f5072b9f88bffd",
+    "base_openeuler_version": "openEuler 22.03 LTS SP3",
+    "os_download_link": "https://ecloud.10086.cn/",
+    "friendly_link": "https://ecloud.10086.cn/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/08/09",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "江苏润和",
+    "os_version": "HopeOS-V20-standard-aarch64-dvd.iso",
+    "arch": "aarch64",
+    "checksum": "c748e4bc891929d4b5063d8b9c75df95",
+    "base_openeuler_version": "openEuler 20.03 LTS SP4",
+    "os_download_link": "http://www.hoperun.com/",
+    "friendly_link": "http://www.hoperun.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/08/16",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "江苏润和",
+    "os_version": "HopeOS-V20-standard-x86_64-dvd.iso",
+    "arch": "x86_64",
+    "checksum": "8b721835eaae5774bde18042fa64cfe7",
+    "base_openeuler_version": "openEuler 20.03 LTS SP4",
+    "os_download_link": "http://www.hoperun.com/",
+    "friendly_link": "http://www.hoperun.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/08/16",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 ]
