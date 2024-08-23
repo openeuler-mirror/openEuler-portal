@@ -62,7 +62,7 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/compatibility/, ''),
       },
       '/certification/': {
-        target: 'https://openeuler.shanhaitujian.cn/',
+        target: 'https://certification.openeuler.org/server/',
         changeOrigin: true,
       },
       '/api-search/': {
