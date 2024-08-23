@@ -21930,6 +21930,25 @@
           "item": "",
           "downloadLink": "inbox"
       },
+	  {
+          "vendorID": "1000",
+          "deviceID": "10fb",
+          "svID": "1dcf",
+          "ssID": "030a",
+          "architecture": "x86_64",
+          "os": "openEuler 22.03 LTS SP3",
+          "driverName": "ixgbe",
+          "version": "5.10.0-182.0.0.95.oe2203sp3.x86",
+          "type": "NIC",
+          "date": "2024.07.16",
+          "sha256": "cab46e70bffc60a93bc26c0816088d95855b9bed3c54218b3e8411ef43113f99",
+          "driverSize": "163K",
+          "chipVendor": "Intel",
+          "boardModel": "E10GI2-82599-US",
+          "chipModel": "82599ES",
+          "item": "",
+          "downloadLink": "inbox"
+      },
       {
           "vendorID": "1000",
           "deviceID": "0017",
@@ -21946,6 +21965,25 @@
           "chipVendor": "Broadcom",
           "boardModel": "9440-8i",
           "chipModel": "SAS3408",
+          "item": "",
+          "downloadLink": "inbox"
+      },
+      {
+          "vendorID": "1000",
+          "deviceID": "10e2",
+          "svID": "1000",
+          "ssID": "4010",
+          "architecture": "x86_64",
+          "os": "openEuler 22.03 LTS SP3",
+          "driverName": "megaraid_sas",
+          "version": "07.714.04.00-rc1",
+          "type": "RAID",
+          "date": "2024.07.16",
+          "sha256": "ffddd22e811d306134efaa8bd15a3a11262b008b153f8e9f2f814c0477bdeedb",
+          "driverSize": "74K",
+          "chipVendor": "Broadcom",
+          "boardModel": "9560-8i",
+          "chipModel": "SAS39XX",
           "item": "",
           "downloadLink": "inbox"
       }
