@@ -233,15 +233,6 @@ const quickIssueUrl = computed(() => {
     : 'https://quickissue.openeuler.org/zh/issues/';
 });
 const floatData = ref([
-  // {
-  //   img: computed(() => {
-  //     return isDark.value ? IconRobot_dark : IconRobot_light;
-  //   }),
-  //   text: '欧拉小智',
-  //   tip: '提供自助问答与咨询',
-  //   id: 'robot',
-  //   link: 'https://qa-robot.openeuler.org/',
-  // },
   {
     img: computed(() => {
       return IconChat;
@@ -1204,9 +1195,6 @@ watch(
             .el-slider__marks {
               width: 100%;
               transform: translateY(-42px);
-              .el-slider__marks-text:nth-of-type(v-bind(score2)) {
-                color: red;
-              }
               .el-slider__marks-text:nth-last-child(1) {
                 left: 99% !important;
                 white-space: nowrap;
