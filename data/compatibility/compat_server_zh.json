@@ -22161,5 +22161,67 @@
       "hostBusAdapter": "Broadcom / LSI MegaRAID 9560-16i",
       "hardDiskDrive": "BROADCOM MR9560-16i"
     }
+  },
+  {
+    "hardwareFactory": "超云",
+    "hardwareModel": "R5215 G13",
+    "osVersion": "openEuler 22.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2024/08/02",
+    "friendlyLink": "https://www.chinasupercloud.com/product/detail?productid=3dcd313a-39d8-426a-a394-0dfd4cb19db1",
+    "boardCards": [
+    {
+        "vendorID": "0x1000",
+        "deviceID": "0x5D",
+        "svID": "0x1000",
+        "ssID": "0x9361",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2024.08.02",
+        "sha256": "f228e241a1e1970163a5423feccf8cf46f72b1d895a9fa186ee7cffbac304924",
+        "driverSize": "75588",
+        "chipVendor": "Broadcom / LSI",
+        "boardModel": "9361-8i",
+        "chipModel": "MegaRAID SAS-3 3108",
+        "item": "",
+        "downloadLink": "inbox"
+    },
+    {
+        "vendorID": "0x8086",
+        "deviceID": "0x1533",
+        "svID": "0xFFFF",
+        "ssID": "0x0000",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "igb",
+        "version": "5.10.0-216.0.0.115.oe2203sp4.x8",
+        "type": "NIC",
+        "date": "2024.08.02",
+        "sha256": "f9cfbaa7ae3393a6a597e844829c9e90ed71768b57c1ac4bd602821b625f298f",
+        "driverSize": "108300",
+        "chipVendor": "intel",
+        "boardModel": "I210",
+        "chipModel": "I210",
+        "item": "",
+        "downloadLink": "inbox"
+
+    }
+   ],
+    "compatibilityConfiguration":{
+    "productInformation": "https://www.chinasupercloud.com/product/detail?productid=3dcd313a-39d8-426a-a394-0dfd4cb19db1",
+    "certificationTime": "2024/08/02",
+    "commitID": "1066",
+    "mainboardModel": "R5215 G13",
+    "biosUefi": "EG6.12.11",
+    "cpu": "Intel(R) Xeon(R) Gold 6430 @2.10 GHz",
+    "ram": "32*32G DIMMs",
+    "portsBusTypes": "x16 PCI Express 5 x16, x8 PCI Express 5 x8, x8 PCI Express 3 x8, x4 PCI Express 5 x4",
+    "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+    "hostBusAdapter": "Avago 3508",
+    "hardDiskDrive": "AVAGO MR9361-8i"
+   }
   }
 ]
