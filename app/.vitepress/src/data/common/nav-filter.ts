@@ -51,7 +51,7 @@ export default [
   },
   {
     name: 'wiki/**',
-    lang: ['zh'],
+    lang: ['zh', 'en'],
   },
   {
     name: 'contribution',

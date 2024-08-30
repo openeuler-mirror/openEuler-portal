@@ -141,7 +141,7 @@ export default {
       links: [
         {
           href: '/en/download/?version=openEuler%2022.03%20LTS%20SP3',
-          label: 'Down load openEuler',
+          label: 'Download openEuler',
         },
       ],
     },
@@ -151,18 +151,20 @@ export default {
       title: 'Cloud Images',
       repeat: 3,
       intro:
-        'openEuler has released official images on mainstream public cloud platforms such as AWS, HUAWEI CLOUD, and Tencent Cloud:',
+        'openEuler has released official images on mainstream public cloud platforms. ',
+      intro1: 'Installation Guide',
+      introLink: '/en/wiki/install/cloud/',
       links: [
         {
           href: 'https://aws.amazon.com/marketplace/pp/prodview-cgu5xymg7qnqg?sr=0-4&ref_=beagle&applicationId=AWSMPContessa',
-          label: 'Amazon AWS',
+          label: 'AWS',
         },
         {
-          href: 'https://portal.azure.com',
+          href: '/en/wiki/install/cloud/#obtaining-the-openeuler-shared-image-on-azure',
           label: 'Azure',
         },
         {
-          href: 'https://www.alibabacloud.com/en',
+          href: '/en/wiki/install/cloud/#obtaining-the-openeuler-image-on-alibaba-cloud',
           label: 'Alibaba Cloud',
         },
         {
@@ -178,8 +180,10 @@ export default {
     {
       icon: containerImg,
       iconDark: containerImgDark,
-      title: 'Container image',
-      intro: 'openEuler provides official container images:',
+      title: 'Container Images',
+      intro: 'openEuler provides official container images. ',
+      intro1: 'Installation Guide',
+      introLink: '/en/wiki/install/image/',
       repeat: 3,
       links: [
         {
@@ -191,7 +195,7 @@ export default {
           label: 'Quay.io',
         },
         {
-          href: '/en/blog/20230530-OrbStack/Orbstack%E6%94%AF%E6%8C%81openEuler%E5%8F%91%E8%A1%8C%E7%89%88.html',
+          href: '/en/wiki/install/image/#在orbstack中获取openeuler',
           label: 'OrbStack',
         },
         {
@@ -208,12 +212,12 @@ export default {
       icon: windowsImg,
       iconDark: windowsImgDark,
       title: 'Windows',
-      intro: 'Running the openEuler Environment on Windows:',
+      intro: 'Running openEuler on Windows:',
       repeat: 1,
       links: [
         {
-          href: '/en/blog/20230811-waaagh/openEuler-DE-in-WSL.html',
-          label: 'WSL(Windows Subsystem For Linux)',
+          href: '/en/wiki/install/wsl/',
+          label: 'Windows Subsystem for Linux (WSL)',
         },
       ],
     },
@@ -221,11 +225,11 @@ export default {
       icon: virtualizationImg,
       iconDark: virtualizationImgDark,
       title: 'Virtualization',
-      intro: 'Running openEuler on a VM:',
+      intro: 'Running openEuler on VMs:',
       repeat: 1,
       links: [
         {
-          href: '/en/blog/traffic_millions/2020-03-27-VirtualBox.html',
+          href: '/en/wiki/install/virtualization/',
           label: 'Installing openEuler in VirtualBox',
         },
       ],
