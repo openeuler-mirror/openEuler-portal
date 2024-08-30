@@ -140,7 +140,7 @@ export default {
         'openEuler community versions are classified into Long Term Support (LTS) versions and innovation versions. openEuler supports the x86, AArch, Arm, and RISC-V architectures.',
       links: [
         {
-          href: '/en/download/?version=openEuler%2022.03%20LTS%20SP3',
+          href: '/en/download/',
           label: 'Download openEuler',
         },
       ],
