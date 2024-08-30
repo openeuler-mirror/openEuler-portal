@@ -347,9 +347,6 @@ const handleNodeClick = (node: any) => {
   ul {
     list-style: inherit;
   }
-  a {
-    word-break: break-all;
-  }
 
   h1,
   h2,

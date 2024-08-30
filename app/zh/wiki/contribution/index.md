@@ -76,7 +76,7 @@ e) 答疑交流
    type: public
    ```
 
-   - 提交 PR（请参考 PR 提交指南，PR 合入后将会在 gitee 建立同名仓库。查看地 址：src-openeuler。同时在 obs 上建立同名仓库，可在 obs 网站查看： [https://build.openeuler.org/project/show/openEuler:Factory](https://build.openeuler.org/project/show/openEuler:Factory)
+   - 提交 PR（请参考 [PR 提交指南](https://gitee.com/openeuler/community/blob/master/zh/contributors/pull-request.md)，PR 合入后将会在 gitee 建立同名仓库。查看地 址：src-openeuler。同时在 obs 上建立同名仓库，可在 obs 网站查看： [https://build.openeuler.org/project/show/openEuler:Factory](https://build.openeuler.org/project/show/openEuler:Factory)
 
 #### 2.1.2 修改 obs 拉取代码方式
 
