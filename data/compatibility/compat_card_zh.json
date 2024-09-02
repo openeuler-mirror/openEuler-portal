@@ -25125,5 +25125,43 @@
         "chipModel": "M18105",
         "item": "",
         "downloadLink": "inbox"
+    },
+    {    
+        "vendorID": "0x1000",
+        "deviceID": "0x5D",
+        "svID": "0x1000",
+        "ssID": "0x9361",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2024.08.02",
+        "sha256": "f228e241a1e1970163a5423feccf8cf46f72b1d895a9fa186ee7cffbac304924",
+        "driverSize": "75588",
+        "chipVendor": "Broadcom / LSI",
+        "boardModel": "9361-8i",
+        "chipModel": "SAS-3 3108",
+        "item": "",
+        "downloadLink": "inbox"
+    },
+    {
+        "vendorID": "0x8086",
+        "deviceID": "0x1533",
+        "svID": "0xFFFF",
+        "ssID": "0x0000",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "igb",
+        "version": "5.10.0-216.0.0.115.oe2203sp4.x8",
+        "type": "NIC",
+        "date": "2024.08.02",
+        "sha256": "f9cfbaa7ae3393a6a597e844829c9e90ed71768b57c1ac4bd602821b625f298f",
+        "driverSize": "108300",
+        "chipVendor": "intel",
+        "boardModel": "I210",
+        "chipModel": "I210",
+        "item": "",
+        "downloadLink": "inbox"
     }
 ]
