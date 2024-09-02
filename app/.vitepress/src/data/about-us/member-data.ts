@@ -48,6 +48,10 @@ import aosiwei_light from '@/assets/category/member/aosiwei_light.png';
 import aosiwei_dark from '@/assets/category/member/aosiwei_dark.png';
 import huazhi_light from '@/assets/category/member/huazhi_light.png';
 import huazhi_dark from '@/assets/category/member/huazhi_dark.png';
+import boyun_light from '@/assets/category/member/boyun_light.png';
+import boyun_dark from '@/assets/category/member/boyun_dark.png';
+import arm_light from '@/assets/category/member/arm_light.png';
+import arm_dark from '@/assets/category/member/arm_dark.png';
 
 export default {
   zh: [
@@ -126,6 +130,16 @@ export default {
       donorTitle: '白银捐赠人',
       ID: 'Silver-Donors',
       logoList: [
+        {
+          img_light: arm_light,
+          img_dark: arm_dark,
+          noIcon: true,
+        },
+        {
+          img_light: boyun_light,
+          img_dark: boyun_dark,
+          noIcon: true,
+        },
         {
           img_light: aosiwei_light,
           img_dark: aosiwei_dark,
@@ -275,6 +289,16 @@ export default {
       donorTitle: 'Silver Donors',
       ID: 'Silver-Donors',
       logoList: [
+        {
+          img_light: arm_light,
+          img_dark: arm_dark,
+          noIcon: true,
+        },
+        {
+          img_light: boyun_light,
+          img_dark: boyun_dark,
+          noIcon: true,
+        },
         {
           img_light: aosiwei_light,
           img_dark: aosiwei_dark,
