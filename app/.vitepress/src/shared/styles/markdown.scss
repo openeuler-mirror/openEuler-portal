@@ -269,7 +269,7 @@
 /**
  * 法律声明 && 隐私政策
  **/
-.legal-privacy {
+.markdown-statement {
   margin: 0 auto;
   padding: 0;
   padding-top: 94px;
@@ -279,25 +279,25 @@
   box-shadow: none;
 }
 @media screen and (max-width: 768px) {
-  .legal-privacy {
+  .markdown-statement {
     padding-top: 0;
     margin-top: var(--e-spacing-h2);
     padding-bottom: var(--e-spacing-h2);
   }
 }
-.legal-privacy hr {
+.markdown-statement hr {
   margin: var(--e-spacing-h2) 0;
 }
 @media screen and (max-width: 768px) {
-  .legal-privacy hr {
+  .markdown-statement hr {
     margin: var(--e-spacing-h4) 0 var(--e-spacing-h4) 0;
   }
 }
-.legal-privacy h1 {
+.markdown-statement h1 {
   margin-top: 0;
   text-align: center;
 }
-.legal-privacy h2 {
+.markdown-statement h2 {
   font-size: var(--e-font-size-h7);
   letter-spacing: 0;
   line-height: var(--e-line-height-h8);
@@ -305,7 +305,7 @@
   margin-bottom: var(--e-spacing-h6);
 }
 @media screen and (max-width: 768px) {
-  .legal-privacy h2 {
+  .markdown-statement h2 {
     font-size: var(--e-font-size-text);
     letter-spacing: 0;
     line-height: var(--e-line-height-text);
@@ -313,7 +313,7 @@
     margin-bottom: var(--e-spacing-h8);
   }
 }
-.legal-privacy h3 {
+.markdown-statement h3 {
   font-size: var(--e-font-size-text);
   letter-spacing: 0;
   line-height: var(--e-line-height-text);

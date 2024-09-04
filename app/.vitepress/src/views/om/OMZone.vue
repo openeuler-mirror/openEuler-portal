@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useCookieStatus } from '@/stores/common';
+import { useCookieStore } from '@/stores/common';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppContent from '@/components/AppContent.vue';
 import OmCard from './OmCard.vue';
@@ -122,7 +122,7 @@ const oMSetTitleStyle = (height: number) => {
 };
 
 
-const cookieStatus = useCookieStatus();
+const cookieStore = useCookieStore();
 
 const downloadByUrl = (url: string) => {
   const a = document.createElement('a');
@@ -132,7 +132,7 @@ const downloadByUrl = (url: string) => {
   a.click();
   window.URL.revokeObjectURL(url);
   document.body.removeChild(a);
-  if(cookieStatus.isAllAgreed){
+  if(cookieStore.isAllAgreed){
     setProfile(url);
   }
 };

@@ -10,7 +10,7 @@ import {
   getTagsData,
   getChatapi,
 } from '@/api/api-search';
-import { useCookieStatus } from '@/stores/common';
+import { useCookieStore } from '@/stores/common';
 
 import IconSearch from '~icons/app/icon-search.svg';
 import IconCancel from '~icons/app/icon-cancel.svg';
@@ -151,7 +151,7 @@ const suggestList = ref([]);
 const activeVersion = ref('');
 
 // cookie
-const cookieStatus = useCookieStatus();
+const cookieStore = useCookieStore();
 
 async function getVersionTag() {
   await getTagsData(tagsParams).then((res) => {
@@ -341,7 +341,7 @@ function searchAll(valueChange?: boolean) {
   if (searchInput.value) {
     currentPage.value = 1;
 
-    if (cookieStatus.isAllAgreed) {
+    if (cookieStore.isAllAgreed) {
       addSearchBuriedData(searchInput.value);
     }
     if (valueChange) {
@@ -384,7 +384,7 @@ function goLink(data: any, index: number) {
       : '';
     search_result_url = location.origin + search_result_url;
   }
-  if (cookieStatus.isAllAgreed) {
+  if (cookieStore.isAllAgreed) {
     setAdvertisedData(data, index, search_result_url);
   }
   window.open(search_result_url);

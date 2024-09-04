@@ -120,14 +120,6 @@ const footerCodeList = [
   },
 ];
 
-const onNavClick = (path: string) => {
-  if (path.startsWith('https:')) {
-    window.open(path, '_blank');
-  } else {
-    router.go(`/${lang.value}` + path);
-  }
-};
-
 // 背景
 const footBg = {
   pc: `url(${FooterBg})`,
