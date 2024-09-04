@@ -59,7 +59,16 @@ We may also supplement the personal data we collect from you with additional per
 
 **(n) Compatibility Test Service**. When using the compatibility test service, you can log in with your openEuler community account. We will use the user name, nickname, email address, and mobile number of your openEuler community account to authenticate your identity and manage your data. When you edit your basic personal data on your profile page, we will collect your user name, mobile number, and email address. The user name and mobile number will be used to notify you of the identity authentication results, while the user name and email address will be used to update you on the certification progress. After an openEuler compatibility test is passed, the service will collect your project manager's name and signature through the certification confirmation page to generate a compatibility certificate for you.
 
-## 2. How We Share Your Personal Data
+## 2. How We Use Cookies and Similar Technologies
+
+We will collect and use your information through cookies and similar technologies in accordance with the following principles:
+
+1. To ensure the proper functioning of this platform, we will store, set, and access cookies on your computer or mobile device. Cookies are small data files stored on your drive or device memory. They allow us to remember your preferences, such as your device language, font size, and other browsing preferences, as well as your login information.
+2. You can manage cookies by adjusting your browser settings. Note that some openEuler community services require the use of cookies. Disabling cookies may affect your use of some or all functions of these services.
+
+For details about cookies, please refer to [About Cookies](/en/other/cookies)
+
+## 3. How We Share Your Personal Data
 
 Sharing means providing third parties with your personal data. The third parties and we would handle the personal data independently. We do not share your personal data with third parties without your consent, except in the following circumstances or as described in this Statement:
 
@@ -71,15 +80,17 @@ Sharing means providing third parties with your personal data. The third parties
 
 (d) **Partners**. We may share your personal data with our partners. However, we will share your personal data only for legitimate, justified, necessary, specified, and explicit purposes, and share only the personal data necessary for providing our services. Our partners may include:
 
-​ (1) **Developers, platforms, and social media networks**. Some products or services may be directly provided to you by third parties. In this case, we need to provide them with the transaction information. If you associate our services or products with third-party platforms or social media networks (for example, direct login through a third-party website, virtual login, or associated login), we may disclose your personal data with your authorization. We do not control the third party's use of your personal data.
+​ **&emsp;&emsp;1. Developers, platforms, and social media networks**. Some products or services may be directly provided to you by third parties. In this case, we need to provide them with the transaction information. If you associate our services or products with third-party platforms or social media networks (for example, direct login through a third-party website, virtual login, or associated login), we may disclose your personal data with your authorization. We do not control the third party's use of your personal data.
 
-​ (2) **Service suppliers or professional service providers**. We may share your personal data with third-party companies and individuals that provide services on our behalf or help us operate the websites and services (such as supply, infrastructure support, hosting, customer support, marketing and analytics, and data processing services). We share such data only for purposes consistent with this Statement or under your authorization. We may disclose your personal data to professional advisors, such as auditors, insurers, bankers, and lawyers, where necessary in the course of the professional services that they render to us.
+​ ​ **&emsp;&emsp;2. Service suppliers or professional service providers**. We may share your personal data with third-party companies and individuals that provide services on our behalf or help us operate the websites and services (such as supply, infrastructure support, hosting, customer support, marketing and analytics, and data processing services). We share such data only for purposes consistent with this Statement or under your authorization. We may disclose your personal data to professional advisors, such as auditors, insurers, bankers, and lawyers, where necessary in the course of the professional services that they render to us.
 
-​ (3) We integrate Baidu Statistics SDK from Beijing Baidu Netcom Science Technology Co., Ltd. to provide more complete and high-quality services and better support daily data analysis requirements of activity operations, user operations, and technology development. Baidu Statistics SDK needs to collect and use your necessary device information (IP address, OS, network service provider, system language, screen resolution, screen color, region, browser type, browser language, and browser version), usage information (access source, search keyword, accessed pages, pop-ups, visitor ID, number of community accesses, stay duration, access timestamp, and server type and version). For details about the types and purposes of information collected and used by Baidu Statistics SDK, and how Baidu Statistics SDK protects the collected and used information, please read the [<u>Baidu Statistics Privacy Policy</u>](https://tongji.baidu.com/web/help/article?id=330&type=0) carefully.
+​ ​ **&emsp;&emsp;3.** We integrate Baidu Statistics SDK from Beijing Baidu Netcom Science Technology Co., Ltd. to provide more complete and high-quality services and better support daily data analysis requirements of activity operations, user operations, and technology development. Baidu Statistics SDK needs to collect and use your necessary device information (IP address, OS, network service provider, system language, screen resolution, screen color, region, browser type, browser language, and browser version), usage information (access source, search keyword, accessed pages, pop-ups, visitor ID, number of community accesses, stay duration, access timestamp, and server type and version). For details about the types and purposes of information collected and used by Baidu Statistics SDK, and how Baidu Statistics SDK protects the collected and used information, please read the [<u>Baidu Statistics Privacy Policy</u>](https://tongji.baidu.com/web/help/article?id=330&type=0) carefully.
+
+​ ​ **&emsp;&emsp;4.** We use Authing to provide you with the login service. For details about the types and purposes of personal information collected and used by Authing and how Authing protects the collected and used information, please read the Authing Privacy Policy carefully.
 
 When we share your personal data with affiliates or partners, their responsibilities and obligations will be governed by contracts and we will require them to take appropriate measures to ensure the security of the personal data processed.
 
-## 3. How Long We Retain Your Personal Data For
+## 4. How Long We Retain Your Personal Data For
 
 We will retain your personal data for no longer than is necessary for the purposes set out in this Statement, unless otherwise required by laws or requested by you.
 
@@ -89,11 +100,11 @@ For example, for service optimization, the access timestamp, IP address, request
 
 For example, when the community no longer displays you as a member of an openEuler User Group, we will delete your personal data (avatar, name, email address, company/school, position, personal profile) within one month.
 
-## 4. How We Protect Your Personal Data
+## 5. How We Protect Your Personal Data
 
 We take the security of your personal data seriously. We take appropriate physical, organizational, and technical measures to protect your personal data. For example, we use encryption technologies to ensure the confidentiality of data; we implement protection mechanisms to protect data from attacks. We deploy access control mechanisms to ensure that only authorized personnel can access your personal data. In addition, we hold security and privacy protection training. <u>**In a word, we are committed to protecting your personal data. Nevertheless, no security measure is perfect and no product, service, website, data transfer, computing system, or network connection is absolutely secure.**</u>
 
-## 5. How We Access or Control Your Personal Data
+## 6. How We Access or Control Your Personal Data
 
 In accordance with applicable laws and regulations, you may have the following rights regarding your personal data:
 
@@ -121,43 +132,55 @@ You should understand that the CLA is a legally binding document signed by you o
 
 You can change the scope of your authorization for us to collect your personal data or withdraw your authorization. However, your decision to withdraw your consent or authorization does not affect any previous processing of personal data based on your authorization.
 
-### 5.1 Data Access
+### 6.1 Data Access
 
 You can log in to the user center using an openEuler community account using the browser on your local PC or mobile device to access your personal data.
 You can click the profile picture and choose Summary in the upper right corner of the forum to access your posts, likes, favorites, browsing history, and other personal data.
 
-### 5.2 Data Correction
+### 6.2 Data Correction
 
-You can log in to the user center using an openEuler community account and choose User Center > Info to view and correct your personal data.
+You can log in using an openEuler community account and perform the following operations in User Center:
+
+1. Change your avatar.
+2. Choose Info to view and correct your personal data.
+3. Choose Identity to check and correct you email address, mobile number, and Gitee/GitHub/OpenAtom account.
+4. Choose Security to reset your login password.
+
 You have the right to update or modify your personal data processed by us when you need to or find any errors with it. You can view and correct your personal data by clicking the profile picture and choose Preferences in the upper right corner of the forum.
 
-### 5.3 Data Deletion
+### 6.3 Data Deletion
 
-You can log in to the user center using an openEuler community account and choose User Center > Info or Identity to delete basic information about your openEuler community account or unbind your Gitee or GitHub account.
+You can log in using an openEuler community account and choose User Center > Info to delete basic information about your openEuler community account, or choose User Center > Identity to delete you mobile number or unbind your Gitee/GitHub/OpenAtom account.
+
 You can manage your personal data on the corresponding service page. You can delete data you published during interactions, such as comments and posts. You can also contact the administrator to anonymize the data.
 
-### 5.4 Revocation of Consent
+### 6.4 Revocation of Consent
 
-If you have any further requests, questions, comments, or suggestions regarding your rights as a data subject, please contact us using the contact information provided in the "Contacting Us" section of this Statement.
+1. You can contact us via email to object to the processing of your personal information.
+2. You can contact us via email to restrict the processing of your personal information.
+3. You can choose User Center > Security > Cancel signature to withdraw consent to the Statement.
 
-### 5.5 Deletion
+**Please note that if you withdraw your consent to the Statement, we will be unable to continue providing services to you, but your account will remain active.**
 
-You can log in to the openEuler community and choose User Center > Security > Delete to delete your openEuler community account.
+### 6.5 Deletion
+
+You can log in to the openEuler community and choose User Center > Security > Delete to delete your openEuler community account. This action will also delete your personal information in the openEuler community. Exercise caution when performing this operation.
+
 If you request us to delete your personal data of the openEuler forum service, you can log in to the forum service and use the deletion function in the user center to delete the personal data, topics, replies, and drafts in the account immediately.
 
-## 6. Where Your Personal Data Is Stored
+## 7. Where Your Personal Data Is Stored
 
 Your personal data is stored in servers located in the Hong Kong Special Administrative Region of the People's Republic of China.
 
-## 7. How This Statement Is Updated
+## 8. How This Statement Is Updated
 
 We may update this Statement from time to time according to changes of our services or data processing. If we update this Statement, we will publish the latest version of the Statement on the website, and it will take effect immediately upon its release. You are advised to review this Statement periodically for any changes. If we make changes to this Statement, we will notify you through appropriate channels (including announcements and pop-ups) and obtain your consent.
 
-## 8. How We Protect Children's Online Privacy
+## 9. How We Protect Children's Online Privacy
 
 This website and its contents and services are mainly intended for individuals over the age of 14. Individuals under the age of 14 are not allowed to use the services we provide without the consent of their parents or guardians. If personal data of an individual under the age of 14 is collected with prior parental consent, we will use or disclose the data only if permitted by law, explicitly consented by the individual's parents or guardians, or necessary for the protection of the individual. If we accidentally collect personal data of an individual under the age of 14 without verifiable prior consent from the individual's parents or guardians, we will attempt to delete the data as soon as possible.
 
-## 9. How to Contact Us
+## 10. How to Contact Us
 
 If you want to contact us or exercise your rights, please contact us at:
 

@@ -12,9 +12,10 @@ A cookie is a text file stored by a web server on a computer or mobile device, a
 
 The openEuler community sometimes stores cookies on computers or mobile devices. We use cookies to improve user experience, including:
 
-1. Mandatory cookies: When you use the websites, cookies improve your Web browsing experience.
-2. Your preferences and settings: A website can use cookies to save settings, such as the languages, font sizes, and other browsing preferences of computers or mobile devices.
-3. Statistical analysis: With cookies, the openEuler community can collect information about your use of our website and other applications, for example, recording a single access (using session cookies) or multiple accesses (using permanent cookies).
+1. Mandatory cookies:
+    - When you use the websites, cookies improve your Web browsing experience.
+    - Your preferences and settings: A website can use cookies to save settings, such as the languages, font sizes, and other browsing preferences of computers or mobile devices.
+2. Statistical analysis: With cookies, the openEuler community can collect information about your use of our website and other applications, for example, recording a single access (using session cookies) or multiple accesses (using permanent cookies).
 
 The openEuler community does not use cookies for any purposes other than those described in this statement. You can manage or delete cookies based on your preferences. For details, visit [AboutCookies.org](https://www.aboutcookies.org/). You can clear all cookies saved on your computer. Most browsers are set to block cookies. But if you do so, you need to change the user settings yourself every time you visit our website. For details about how to change the browser settings, please visit the following links: [Internet Explorer](http://windows.microsoft.com/en-gb/internet-explorer/delete-manage-cookies), [Google Chrome](https://support.google.com/chrome/answer/95647?hl=en), [Mozilla Firefox](https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer?redirectlocale=en-US&redirectslug=Cookies), [Safari](https://support.apple.com/kb/PH19214?locale=en_US&viewlocale=en_US) and [Opera](http://www.opera.com/help/tutorials/security/privacy/).
 
