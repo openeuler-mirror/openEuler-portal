@@ -277,6 +277,26 @@
   max-width: 880px;
   background: var(--e-color-bg1);
   box-shadow: none;
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+
+  ul,
+  ol {
+    padding-left: 1em;
+
+    li {
+      margin-top: 0.25em;
+      &::marker {
+        color: var(--o-color-text1);
+      }
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   .markdown-statement {
