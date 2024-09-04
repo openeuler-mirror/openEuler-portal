@@ -66,7 +66,7 @@ We will collect and use your information through cookies and similar technologie
 1. To ensure the proper functioning of this platform, we will store, set, and access cookies on your computer or mobile device. Cookies are small data files stored on your drive or device memory. They allow us to remember your preferences, such as your device language, font size, and other browsing preferences, as well as your login information.
 2. You can manage cookies by adjusting your browser settings. Note that some openEuler community services require the use of cookies. Disabling cookies may affect your use of some or all functions of these services.
 
-For details about cookies, please refer to [About Cookies](/en/other/cookies)
+For details about cookies, please refer to [About Cookies](/en/other/cookies/)
 
 ## 3. How We Share Your Personal Data
 
