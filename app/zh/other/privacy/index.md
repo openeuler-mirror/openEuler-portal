@@ -72,7 +72,7 @@ title: '隐私政策'
 
 （2）您可以通过自行修改浏览器设置的方式拒绝或管理Cookie。openEuler 社区的某些服务可能必须使用 Cookie，禁用 Cookie 可能会影响您使用这些服务的全部或部分功能。
 
-其他具体的Cookie信息，请参考[《关于Cookies》](/zh/other/cookies)。
+其他具体的Cookie信息，请参考[《关于Cookies》](/zh/other/cookies/)。
 
 ## 3.我们如何共享您的个人信息
 
