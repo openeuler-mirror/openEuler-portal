@@ -131,7 +131,8 @@ const acceptAll = () => {
   setCustomCookie(
     COOKEY_KEY,
     `${COOKIE_AGREED_STATUS.ALL_AGREED}${cookieStore.version}`,
-    180
+    180,
+    import.meta.env.VITE_COOKIE_DOMAIN
   );
   toggleNoticeVisible(false);
   initSensor();
@@ -144,7 +145,8 @@ const rejectAll = () => {
   setCustomCookie(
     COOKEY_KEY,
     `${COOKIE_AGREED_STATUS.NECCESSARY_AGREED}${cookieStore.version}`,
-    180
+    180,
+    import.meta.env.VITE_COOKIE_DOMAIN
   );
   toggleNoticeVisible(false);
 };
