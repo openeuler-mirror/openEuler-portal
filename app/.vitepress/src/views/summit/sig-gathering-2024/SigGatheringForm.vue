@@ -12,7 +12,7 @@ import { ElMessage, FormInstance, FormRules } from 'element-plus';
 import { isTestEmail, isTestPhone } from '@/shared/utils';
 
 import { queryPersonalInfo } from '@/api/api-login';
-import { usePrivacyVersion } from '@/stores/common';
+import { usePrivacyStore } from '@/stores/common';
 import { querySigGroup, applySigGathering } from '@/api/api-sig';
 import { useStoreData } from '@/shared/login';
 import { useLogin } from '@/stores/login';
@@ -23,7 +23,7 @@ const { guardAuthClient } = useStoreData();
 
 const { lang } = useData();
 const router = useRouter();
-const versionStore = usePrivacyVersion();
+const privacyStore = usePrivacyStore();
 const ruleFormRef = ref<FormInstance>();
 const screenWidth = ref(useWindowResize());
 const isMobile = computed(() => (screenWidth.value <= 1080 ? true : false));
@@ -43,7 +43,7 @@ const formData = ref({
   technicalSeminars: [],
   attend: '',
   acceptPrivacyVersion: [],
-  privacyVersion: versionStore.version,
+  privacyVersion: privacyStore.version,
   others: '',
 });
 
@@ -152,27 +152,27 @@ async function getPersonalInfo() {
   }
 }
 
-const showPage = ref(false);
-onMounted(() => {
-  getSigGroup();
-  if (loginStatus.value === 'LOGINED') {
-    getPersonalInfo();
-    showPage.value = false;
-  } else {
-    setTimeout(() => {
-      showPage.value = true;
-    }, 300);
-  }
-});
+// const showPage = ref(false);
+// onMounted(() => {
+//   getSigGroup();
+//   if (loginStatus.value === 'LOGINED') {
+//     getPersonalInfo();
+//     showPage.value = false;
+//   } else {
+//     setTimeout(() => {
+//       showPage.value = true;
+//     }, 300);
+//   }
+// });
 
-watch(
-  () => guardAuthClient.value.username,
-  () => {
-    if (guardAuthClient.value.username) {
-      getPersonalInfo();
-    }
-  }
-);
+// watch(
+//   () => guardAuthClient.value.username,
+//   () => {
+//     if (guardAuthClient.value.username) {
+//       getPersonalInfo();
+//     }
+//   }
+// );
 
 const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   if (formData.value.acceptPrivacyVersion.length < 1) {

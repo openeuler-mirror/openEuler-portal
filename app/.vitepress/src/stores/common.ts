@@ -16,3 +16,9 @@ export const useCookieStore = defineStore('cookie', {
     isAllAgreed: (state) => state.status === '1',
   },
 });
+
+export const usePrivacyStore = defineStore('privacy', {
+  state: () => ({
+    version: '20240830',
+  }),
+});
