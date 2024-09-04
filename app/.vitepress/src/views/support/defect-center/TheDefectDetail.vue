@@ -159,14 +159,6 @@ onMounted(() => {
               </div>
               <div class="tab-content-item">
                 <h5 class="tab-content-item-title">
-                  {{ i18n.safetyBulletin.THEME }}
-                </h5>
-                <p class="tab-content-item-text">
-                  {{ detailData.subject }}
-                </p>
-              </div>
-              <div class="tab-content-item">
-                <h5 class="tab-content-item-title">
                   {{ i18n.safetyBulletin.DESCRIPTION }}
                 </h5>
                 <p class="tab-content-item-text">

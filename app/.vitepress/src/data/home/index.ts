@@ -4,20 +4,19 @@ import annualReport_mo from '@/assets/category/home/banner/annual-report_mo.jpg'
 import banner1_pc from '@/assets/category/home/banner/banner1_pc.jpg';
 import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';
 
-import sigGathering_pc from '@/assets/category/home/banner/sig-gathering_pc.jpg';
-import sigGathering_mb from '@/assets/category/home/banner/sig-gathering_mb.jpg';
+import osSummit_pc from '@/assets/category/home/banner/ossummit_pc.jpg';
+import osSummit_mo from '@/assets/category/home/banner/ossummit_mo.jpg';
 
 export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
       {
-        pcBanner: sigGathering_pc,
-        moBanner: sigGathering_mb,
-        link: '/zh/interaction/summit-list/sig-gathering-2024/',
-        id: 'sig-gathering',
-        title: ['openEuler ', 'SIG Gathering 2024'],
-        btn: '查看详情',
+        pcBanner: osSummit_pc,
+        moBanner: osSummit_mo,
+        link: 'https://osseu2024.sched.com/event/1iWLB',
+        id: 'osseu',
+        btn: '',
         targetTap: 1,
       },
       {
@@ -41,12 +40,11 @@ export default {
     ],
     en: [
       {
-        pcBanner: sigGathering_pc,
-        moBanner: sigGathering_mb,
-        link: '/en/interaction/summit-list/sig-gathering-2024/',
-        id: 'sig-gathering',
-        title: ['openEuler ', 'SIG Gathering 2024'],
-        btn: 'View details',
+        pcBanner: osSummit_pc,
+        moBanner: osSummit_mo,
+        link: 'https://osseu2024.sched.com/event/1iWLB',
+        id: 'osseu',
+        btn: '',
         targetTap: 1,
       },
       {
