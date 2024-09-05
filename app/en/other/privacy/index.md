@@ -1,10 +1,10 @@
 ---
-title: 'Privacy'
+title: 'Privacy Policy'
 ---
 
 <div class='markdown markdown-statement'>
 
-<h1>Privacy</h1>
+<h1>Privacy Policy</h1>
 
 ---
 
@@ -86,7 +86,7 @@ Sharing means providing third parties with your personal data. The third parties
 
 ​ ​ **&emsp;&emsp;3.** We integrate Baidu Statistics SDK from Beijing Baidu Netcom Science Technology Co., Ltd. to provide more complete and high-quality services and better support daily data analysis requirements of activity operations, user operations, and technology development. Baidu Statistics SDK needs to collect and use your necessary device information (IP address, OS, network service provider, system language, screen resolution, screen color, region, browser type, browser language, and browser version), usage information (access source, search keyword, accessed pages, pop-ups, visitor ID, number of community accesses, stay duration, access timestamp, and server type and version). For details about the types and purposes of information collected and used by Baidu Statistics SDK, and how Baidu Statistics SDK protects the collected and used information, please read the [<u>Baidu Statistics Privacy Policy</u>](https://tongji.baidu.com/web/help/article?id=330&type=0) carefully.
 
-​ ​ **&emsp;&emsp;4.** We use Authing to provide you with the login service. For details about the types and purposes of personal information collected and used by Authing and how Authing protects the collected and used information, please read the Authing Privacy Policy carefully.
+​ ​ **&emsp;&emsp;4.** We use Authing to provide you with the login service. For details about the types and purposes of personal information collected and used by Authing and how Authing protects the collected and used information, please read the [Authing Privacy](https://www.authing.cn/privacy-policy.html) Policy carefully.
 
 When we share your personal data with affiliates or partners, their responsibilities and obligations will be governed by contracts and we will require them to take appropriate measures to ensure the security of the personal data processed.
 
