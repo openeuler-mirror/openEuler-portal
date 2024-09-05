@@ -21377,7 +21377,7 @@
     }
   },
   {
-    "hardwareFactory": "XFUSION",
+    "hardwareFactory": "超聚变",
     "hardwareModel": "2288H",
     "osVersion": "openEuler 22.03 LTS SP3",
     "architecture": "x86_64",
@@ -21419,7 +21419,7 @@
     }
   },
   {
-    "hardwareFactory": "XFUSION",
+    "hardwareFactory": "超聚变",
     "hardwareModel": "2288H V6",
     "osVersion": "openEuler 22.03 LTS SP4",
     "architecture": "x86_64",
@@ -21636,8 +21636,8 @@
     }
   },
   {
-    "hardwareFactory": "XFUSION",
-    "hardwareModel": "2288H V7-HE",
+    "hardwareFactory": "超聚变",
+    "hardwareModel": "2288H V7",
     "osVersion": "openEuler 22.03 LTS SP4",
     "architecture": "x86_64",
     "date": "2024/08/08",
@@ -22025,8 +22025,8 @@
     }
   },
   {
-    "hardwareFactory": "XFUSION",
-    "hardwareModel": "2288H V7-HE",
+    "hardwareFactory": "超聚变",
+    "hardwareModel": "2288H V7",
     "osVersion": "openEuler 22.03 LTS SP4",
     "architecture": "x86_64",
     "date": "2024/08/08",
