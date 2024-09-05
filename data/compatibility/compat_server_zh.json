@@ -22025,48 +22025,6 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
-    "hardwareModel": "2288H V7",
-    "osVersion": "openEuler 22.03 LTS SP4",
-    "architecture": "x86_64",
-    "date": "2024/08/08",
-    "friendlyLink": "https://www.xfusion.com/en/product/rack-server/fusionserver-2288h-v7",
-    "boardCards": [
-      {
-        "vendorID": "8086",
-        "deviceID": "1521",
-        "svID": "ffff",
-        "ssID": "0000",
-        "architecture": "x86_64",
-        "os": "openEuler 22.03 LTS SP4",
-        "driverName": "igb",
-        "version": "5.10.0-216.0.0.115.oe2203sp4.x86_64",
-        "type": "NIC",
-        "date": "2024/08/08",
-        "sha256": "f9cfbaa7ae3393a6a597e844829c9e90ed71768b57c1ac4bd602821b625f298f",
-        "driverSize": "108300",
-        "chipVendor": "intel",
-        "boardModel": "GE350-T2",
-        "chipModel": "i350",
-        "item": "",
-        "downloadLink": "inbox"
-      }
-    ],
-    "compatibilityConfiguration": {
-      "productInformation": "https://www.xfusion.com/en/product/rack-server/fusionserver-2288h-v7",
-      "certificationTime": "2024/08/08",
-      "commitID": "",
-      "mainboardModel": "",
-      "biosUefi": "01.01.03.13 (U6216)",
-      "cpu": "Intel(R) Xeon(R) Gold 6438Y+",
-      "ram": "2*64G DIMMs",
-      "portsBusTypes": "x8 PCI Express 5 x8 ，x16 PCI Express 5 x16 ",
-      "videoAdapter": "Hi171x",
-      "hostBusAdapter": "",
-      "hardDiskDrive": "BROADCOM MR560-8i 5.24"
-    }
-  },
-  {
     "hardwareFactory": "新华三",
     "hardwareModel": "H3C UniServer R4900 G5",
     "osVersion": "openEuler 24.03 LTS",
