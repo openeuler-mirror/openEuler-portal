@@ -21637,7 +21637,7 @@
   },
   {
     "hardwareFactory": "XFUSION",
-    "hardwareModel": "2288H V7-HE",
+    "hardwareModel": "2288H V7",
     "osVersion": "openEuler 22.03 LTS SP4",
     "architecture": "x86_64",
     "date": "2024/08/08",
@@ -22026,7 +22026,7 @@
   },
   {
     "hardwareFactory": "XFUSION",
-    "hardwareModel": "2288H V7-HE",
+    "hardwareModel": "2288H V7",
     "osVersion": "openEuler 22.03 LTS SP4",
     "architecture": "x86_64",
     "date": "2024/08/08",
