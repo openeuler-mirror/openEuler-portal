@@ -1612,6 +1612,128 @@
     }
   },
   {
+    "hardwareFactory": "超云数字技术集团有限公司",
+    "hardwareModel": "R3215",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2024/01/29",
+    "friendlyLink": "https://www.chinasupercloud.com/product/detail?productid\u003d4a4a2fb4-eb39-49dd-a91c-685894800b67",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "10E2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2024/01/29",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Broadcom",
+        "boardModel": "",
+        "chipModel": "3908",
+        "item": "",
+        "downloadLink": ""
+      },
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "",
+        "ssID": "",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "igb",
+        "version": "GPL v2",
+        "type": "NET",
+        "date": "2024/01/29",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Intel",
+        "boardModel": "i350",
+        "chipModel": "i350",
+        "item": "",
+        "downloadLink": ""
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.chinasupercloud.com/product/detail?productid\u003d4a4a2fb4-eb39-49dd-a91c-685894800b67",
+      "certificationTime": "2024/01/29",
+      "commitID": "",
+      "mainboardModel": "",
+      "biosUefi": "KL4.26",
+      "cpu": "Hygon 71xx 72xx 73xx",
+      "ram": "8*32G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "超云数字技术集团有限公司",
+    "hardwareModel": "R3216",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2024/01/29",
+    "friendlyLink": "https://www.chinasupercloud.com/product/detail?productid\u003d4c653f2a-b1f9-46ad-8ba5-a121c3bce079",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "10E2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2024/01/29",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Broadcom",
+        "boardModel": "",
+        "chipModel": "3908",
+        "item": "",
+        "downloadLink": ""
+      },
+      {
+        "vendorID": "15b3",
+        "deviceID": "1017",
+        "svID": "15b3",
+        "ssID": "0020",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "mlx5_core",
+        "version": "5.0-0",
+        "type": "NET",
+        "date": "2024/01/29",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Mellanox",
+        "boardModel": "MCX512A-ACAT",
+        "chipModel": "ConnectX-5",
+        "item": "",
+        "downloadLink": ""
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.chinasupercloud.com/product/detail?productid\u003d4c653f2a-b1f9-46ad-8ba5-a121c3bce079",
+      "certificationTime": "2024/01/29",
+      "commitID": "",
+      "mainboardModel": "",
+      "biosUefi": "H01HG2P",
+      "cpu": "Hygon 71xx 72xx 73xx",
+      "ram": "8*32G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "",
+      "hardDiskDrive": ""
+    }
+  },
+  {
     "hardwareFactory": "联想",
     "hardwareModel": "Lenovo WenTian WR5220 G3",
     "osVersion": "openEuler 22.03 LTS SP3",
@@ -22022,48 +22144,6 @@
       "videoAdapter": "ASPEED",
       "hostBusAdapter": "",
       "hardDiskDrive": "Broadcom SAS 9500-8i 35.100.00.00"
-    }
-  },
-  {
-    "hardwareFactory": "超聚变",
-    "hardwareModel": "2288H V7",
-    "osVersion": "openEuler 22.03 LTS SP4",
-    "architecture": "x86_64",
-    "date": "2024/08/08",
-    "friendlyLink": "https://www.xfusion.com/en/product/rack-server/fusionserver-2288h-v7",
-    "boardCards": [
-      {
-        "vendorID": "8086",
-        "deviceID": "1521",
-        "svID": "ffff",
-        "ssID": "0000",
-        "architecture": "x86_64",
-        "os": "openEuler 22.03 LTS SP4",
-        "driverName": "igb",
-        "version": "5.10.0-216.0.0.115.oe2203sp4.x86_64",
-        "type": "NIC",
-        "date": "2024/08/08",
-        "sha256": "f9cfbaa7ae3393a6a597e844829c9e90ed71768b57c1ac4bd602821b625f298f",
-        "driverSize": "108300",
-        "chipVendor": "intel",
-        "boardModel": "GE350-T2",
-        "chipModel": "i350",
-        "item": "",
-        "downloadLink": "inbox"
-      }
-    ],
-    "compatibilityConfiguration": {
-      "productInformation": "https://www.xfusion.com/en/product/rack-server/fusionserver-2288h-v7",
-      "certificationTime": "2024/08/08",
-      "commitID": "",
-      "mainboardModel": "",
-      "biosUefi": "01.01.03.13 (U6216)",
-      "cpu": "Intel(R) Xeon(R) Gold 6438Y+",
-      "ram": "2*64G DIMMs",
-      "portsBusTypes": "x8 PCI Express 5 x8 ，x16 PCI Express 5 x16 ",
-      "videoAdapter": "Hi171x",
-      "hostBusAdapter": "",
-      "hardDiskDrive": "BROADCOM MR560-8i 5.24"
     }
   },
   {
