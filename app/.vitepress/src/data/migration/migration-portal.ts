@@ -99,7 +99,7 @@ export default {
           dark: imgDownloadLeft_dark,
         },
         name: 'x2openEuler',
-        version: '3.0.0-1230',
+        version: '3.0.0-2024630',
       },
       btns: [
         {
@@ -107,15 +107,15 @@ export default {
           softLinks: [
             {
               name: 'x86_64 ',
-              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-core-3.0.0-20240125.x86_64.rpm',
+              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-core-3.0.0-20240818.x86_64.rpm',
             },
             {
               name: 'aarch64 ',
-              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/aarch64/Packages/x2openEuler-core-3.0.0-20240125.aarch64.rpm',
+              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/aarch64/Packages/x2openEuler-core-3.0.0-20240818.aarch64.rpm',
             },
             {
               name: 'upgrade-for6 ',
-              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-upgrade-for6-3.0.0-20240125.x86_64.rpm',
+              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-upgrade-for6-3.0.0-20240818.x86_64.rpm',
             },
           ],
         },
