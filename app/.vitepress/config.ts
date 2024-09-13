@@ -1,5 +1,6 @@
-import type { UserConfig } from 'vitepress';
+import type { HeadConfig, UserConfig } from 'vitepress';
 import sitemapZh from './sitemap/sitemap-zh';
+import tdks from './tdks';
 
 const config: UserConfig = {
   base: '/',
@@ -19,14 +20,6 @@ const config: UserConfig = {
       },
     ],
     [
-      'meta',
-      {
-        name: 'keywords',
-        content:
-          'openEuler,开源Linux系统,linux开源社区,开源社区,Linux迁移,openEuler社区官网',
-      },
-    ],
-    [
       'script',
       {
         src: '/check-dark-mode.js',
@@ -42,6 +35,43 @@ const config: UserConfig = {
   ],
   appearance: false, // enable dynamic scripts for dark mode
   titleTemplate: false, //  vitepress supports pageTitileTemplate since 1.0.0
+  transformPageData(pageData) {
+    const filePath = pageData.filePath;
+    let lookupKey: string;
+    if (filePath.endsWith('index.md')) {
+      lookupKey = filePath.slice(0, -9);
+    } else {
+      lookupKey = filePath.slice(0, -2).concat('html');
+    }
+    const locale = filePath.slice(0, 2) as 'zh' | 'en';
+    const tdkInfo = tdks[locale]?.[lookupKey];
+    if (!tdkInfo) {
+      return;
+    }
+    const { title, description, keywords } = tdkInfo;
+    description && (pageData.description = description);
+    if (title) {
+      pageData.title = title;
+      pageData.titleTemplate = tdks.titleSuffix[locale];
+    }
+    if (keywords) {
+      pageData.frontmatter.head ??= [];
+      const keywordsIndex = pageData.frontmatter.head.findIndex(
+        (item: HeadConfig) => item[1]?.name === 'keywords'
+      );
+      if (keywordsIndex !== -1) {
+        pageData.frontmatter.head.splice(keywordsIndex, 1, [
+          'meta',
+          { name: 'keywords', content: keywords },
+        ]);
+        return;
+      }
+      pageData.frontmatter.head.push([
+        'meta',
+        { name: 'keywords', content: keywords },
+      ]);
+    }
+  },
   locales: {
     root: {
       lang: 'zh',
@@ -61,7 +91,7 @@ const config: UserConfig = {
       description:
         'openEuler is an open source, free Linux distribution platform. The platform provides an open community for global developers to build an open, diversified, and architecture-inclusive software ecosystem. openEuler is also an innovative platform that encourages everyone to propose new ideas, explore new approaches, and practice new solutions.',
     },
-    ...sitemapZh,
+    // ...sitemapZh,
   },
   markdown: {
     config(md) {
