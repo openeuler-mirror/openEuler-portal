@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref, computed, onMounted } from 'vue';
 import { showGuard, useStoreData } from '@/shared/login';
-import { useCommon, useCookieStatus } from '@/stores/common';
+import { useCommon, useCookieStore } from '@/stores/common';
 import { getUrlParams } from '@/shared/utils';
 
 import AppContext from '@/components/AppContent.vue';
@@ -18,7 +18,7 @@ import succeedTipImg from '@/assets/category/celebrating/succeed-tip.png';
 
 // const { token } = getUserAuth();
 const { guardAuthClient } = useStoreData();
-const cookieStatus = useCookieStatus();
+const cookieStore = useCookieStore();
 const commonStore = useCommon();
 const downIllImg1 = computed(() =>
   commonStore.theme === 'light' ? downIllImg1Light : downIllImg1Dark
@@ -108,7 +108,7 @@ function setDownData() {
 }
 function onDownBtnClick() {
   if (guardAuthClient.value.photo && guardAuthClient.value.username) {
-    if(cookieStatus.isAllAgreed){
+    if(cookieStore.isAllAgreed){
       setDownData();
     }
     isTipShow.value = true;
@@ -136,7 +136,7 @@ function setAdvertisedData() {
 }
 onMounted(() => {
   setTimeout(() => {
-    if(cookieStatus.isAllAgreed){
+    if(cookieStore.isAllAgreed){
       setAdvertisedData();
     }
   }, 300);

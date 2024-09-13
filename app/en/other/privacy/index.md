@@ -1,8 +1,8 @@
 ---
-title: 'Privacy'
+title: 'Privacy Policy'
 ---
 
-<div class='markdown legal-privacy'>
+<div class='markdown markdown-statement'>
 
 <h1>Privacy Policy</h1>
 
@@ -14,9 +14,16 @@ The OpenAtom Foundation (hereinafter referred to as "we", "us", or "foundation")
 
 If you only browse the general content of the openEuler community website (hereinafter referred to as "this website"), we usually do not require you to provide personal data. However, we will collect your personal data in the following cases:
 
-(a) Account Service. The openEuler community provides the openEuler community account service for unified identity and permission management. When you register an openEuler community account, we will collect your email address or mobile number for identity verification and your Gitee or GitHub account for permission management of the community code hosting platform. In community activities, we will use the preceding personal data to verify your identity in the community and collect statistics based on the data so that we can understand the operating status of the openEuler community platform.
+**(a) Account Service**.
 
-(b) Forum Service. The forum service provides you with the following functions. We will process the data required for providing the functions. If you do not provide the required data, your experience may be affected when you use the functions of the forum service.
+  1. When you register for an openEuler community account, we will collect your user name, email address, mobile number, password, and email/phone verification code. A unique account identifier will be automatically generated. Refusal to provide this information will prevent account creation.
+  2. When you log in to the openEuler community using your user name, email address, or mobile number, we will collect the provided credentials and verification code for authentication. Refusal to provide this information will prevent login.
+  3. When you log in using a third-party account (Gitee, GitHub, or OpenAtom), we will collect your user name, user ID, nickname, avatar, and email address from that platform for authentication and code repository access management. If you use Gitee or GitHub without an existing bound openEuler account, a new openEuler account with a unique identifier will be automatically generated, deriving its user name from your Gitee or GitHub account. Refusal to provide this information will prevent login via third-party accounts.
+  4. After logging in, you can optionally provide your avatar, nickname, and company name. This information is not required for using openEuler community features.
+  5. After logging in, you can modify your email address, mobile number, and password.
+  6. After logging in, you can bind your openEuler account to a third-party account (GitHub, Gitee, or OpenAtom). We will collect your user name, user ID, nickname, avatar, and email address from the bound platform. Refusal to provide this information will prevent third-party account binding for login purposes.
+
+**(b) Forum Service**. The forum service provides you with the following functions. We will process the data required for providing the functions. If you do not provide the required data, your experience may be affected when you use the functions of the forum service.
 
 Login and identity authentication: You can use an openEuler community account to log in to the forum service. We will use the user name, nickname, and email address of your openEuler community account to authenticate your identity and manage your data.
 
@@ -28,49 +35,38 @@ To promote exchanges and interactions, we will collect statistics on and display
 
 Product operations and maintenance: To provide you with rich product experience, improve product operations policies, ensure stable product running, and ensure network security according to laws and regulations, we will collect your login account information, device hardware information, operating system settings, network information (such as IP addresses), network operator information, your browsing or touching records in this forum, and error messages.
 
-(c) Mail Subscription. When you use our mail subscription service, we will collect your <u>**email address and name (optional)**</u>. We will provide you with the email subscription service through this email address to facilitate your participation in discussions in the community.
+**(c) Mail Subscription**. When you use our mail subscription service, we will collect your <u>**email address and name (optional)**</u>. We will provide you with the email subscription service through this email address to facilitate your participation in discussions in the community.
 
-(d) Service Optimization. To continuously understand the operating status of the openEuler Community and provide better services for you, we will deploy a third-party plugin in this program. The third-party plugin will collect and record information on your browser, computer, and mobile device, including your IP address, access timestamp, access source, accessed pages, access status, accessed resource size, OS, system language, browser type, browser language, browser version, and server type and version. This will form the basis of our analysis, which helps us to better understand the openEuler Community operation.
+**(d) Service Optimization**. To ensure the openEuler community functions as best as possible, and to provide better services for you, we will collect information about your browser, computer, and mobile device, including **the access timestamp, IP address, request details, access status, size of accessed resources, access source, and request user agent information**. Based on this information, we will collect statistics to understand the operating status of the openEuler community. The web analytics tool provider captures data about your activities on our website through cookies and other technologies and provides this data to us anonymously. No website user can identify this information.
 
-(e) Contributor License Agreement ("CLA") Signing. When you participate in code contribution through the Contributor License Agreement ("CLA") signing system (click [here](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340) to learn more), you need to submit your [relevant personal data](https://clasign.osinfra.cn/privacy) to the CLA signing system. We will obtain such personal data to verify whether you have signed the CLA, and to conduct relevant statistical analysis to understand how the community is operating.
+**(e) Contributor License Agreement ("CLA") Signing**. When you participate in code contribution through the Contributor License Agreement ("CLA") signing system (click [here](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340) to learn more), you need to submit your [relevant personal data](https://clasign.osinfra.cn/privacy) to the CLA signing system. We will obtain such personal data to verify whether you have signed the CLA, and to conduct relevant statistical analysis to understand how the community is operating.
 
-(f) Talent Assessment. After you pass the openEuler community talent assessment test, we will collect your name, email address, test partner, test score, and certification level from our test partners to generate the openEuler community talent certificate for you. In addition, we acquire such data to conduct relevant statistical analysis about talent development of the community.
+**(f) Talent Assessment**. After you pass the openEuler community talent assessment test, we will collect your name, email address, test partner, test score, and certification level from our test partners to generate the openEuler community talent certificate for you. In addition, we acquire such data to conduct relevant statistical analysis about talent development of the community.
 
-(g) MOOCStudio. To verify your identity and ensure platform security as well as proper resource usage, you must register an openEuler community account to experience the MOOCStudio. We will collect your email address for identity verification and conduct statistical analysis for the purpose of operating openEuler MOOCStudio.
+**(g) Content Release**. When you participate in community meetings, live broadcasts, blogs, community activities, contribution in the open source community, or newsgroups, your user name and the information you publish will be visible to the community and the public. If you are a SIG member of the openEuler community, we will request your Gitee information for posting on our website.
 
-(h) Content Release. When you participate in community meetings, live broadcasts, blogs, community activities, contribution in the open source community, or newsgroups, your user name and the information you publish will be visible to the community and the public. If you are a SIG member of the openEuler community, we will request your Gitee information for posting on our website.
+**(h) Quick Issue Creation**. When you use the QuickIssue service of the openEuler community to submit an issue, you will need to provide an email address, and a verification email will be sent to the email address you provided to verify the validity of the email address. After an issue is created, some information about your email address will be displayed in the description area on the issue page and in the submitter information of the QuickIssue dashboard.
 
-(i) Quick Issue Creation. When you use the QuickIssue service of the openEuler community to submit an issue, you will need to provide an email address, and a verification email will be sent to the email address you provided to verify the validity of the email address. After an issue is created, some information about your email address will be displayed in the description area on the issue page and in the submitter information of the QuickIssue dashboard. When a comment is submitted to the issue or the status of the issue changes, an email notification will be sent to your verified email address.
+**(i) Joining openEuler Valuable Professional**. When you apply for the openEuler Valuable Professional qualification, the community will collect your name, mobile number, email address, and photo through the application form you filled in. Your name, mobile number, and email address are used to notify you of the result and contact you. If you successfully qualify as an oEVP, your name and photo will be published on the openEuler official website.
 
-(j) Joining openEuler Valuable Professional. When you apply for the openEuler Valuable Professional qualification, the community will collect your name, mobile number, email address, and photo through the application form you filled in. Your name, mobile number, and email address are used to notify you of the result and contact you. If you successfully qualify as an oEVP, your name and photo will be published on the openEuler official website.
+**(j) Venue Resource Contribution**. When you proactively contribute venue resources to openEuler, the community will collect your name, phone number, and email address from the form you filled in, which will be only used to contact you.
 
-(k) Venue Resource Contribution. When you proactively contribute venue resources to openEuler, the community will collect your name, phone number, and email address from the form you filled in, which will be only used to contact you.
+**(k) Meetup**. When you apply for an openEuler meetup, the community will collect your mobile number and email address from the application form you fill in. The collected mobile number and email address will be used to contact you later to communicate about the meetup details. Furthermore, the community will request your name and company name for the purpose of meetup sign-ins, nameplates, and other related activities.
 
-(l) Meetup. When you apply for an openEuler meetup, the community will collect your mobile number and email address from the application form you fill in. The collected mobile number and email address will be used to contact you later to communicate about the meetup details. Furthermore, the community will request your name and company name for the purpose of meetup sign-ins, nameplates, and other related activities.
-
-(m) openEuler User Group application. When you apply to participate in an openEuler User Group event, the community will collect your name, company, position, email address, phone number, and WeChat ID, which will be used to contact you and confirm your application and other related matters.
+**(l) openEuler User Group application**. When you apply to participate in an openEuler User Group event, the community will collect your name, company, position, email address, phone number, and WeChat ID, which will be used to contact you and confirm your application and other related matters.
 
 We may also supplement the personal data we collect from you with additional personal data we receive from third parties, including other platforms, communities, or legal and public channels within the scope of your authorization and consent. We promise to process your personal data in strict accordance with applicable laws and regulations. Please read the privacy statements and user agreements of the third parties carefully. If your personal data provided by a third party is required for using related services of the community, but you refuse to allow the third party to collect, use, transfer, or share your personal data when the third party provides services, you may not be able to use related services of the community. For example, when you use an authorized third-party account to log in to the community, we will obtain your personal data from the third party with your consent.
 
+**(n) Compatibility Test Service**. When using the compatibility test service, you can log in with your openEuler community account. We will use the user name, nickname, email address, and mobile number of your openEuler community account to authenticate your identity and manage your data. When you edit your basic personal data on your profile page, we will collect your user name, mobile number, and email address. The user name and mobile number will be used to notify you of the identity authentication results, while the user name and email address will be used to update you on the certification progress. After an openEuler compatibility test is passed, the service will collect your project manager's name and signature through the certification confirmation page to generate a compatibility certificate for you.
+
 ## 2. How We Use Cookies and Similar Technologies
 
-(a) To ensure our website works properly, we may at times place cookies on your computer or mobile device. A cookie is a small data file placed on your computer or mobile device that facilitates your access to a website. The content of a cookie can be retrieved or read only by the server that creates the cookie. We use cookies and similar technologies for understanding how you interact with our websites, helping you efficiently browse pages, storing and honoring your preferences, improving your browsing experience, and fulfilling other legitimate purposes.
+We will collect and use your information through cookies and similar technologies in accordance with the following principles:
 
-(b) We categorize cookies on our websites into two categories:
+1. To ensure the proper functioning of this platform, we will store, set, and access cookies on your computer or mobile device. Cookies are small data files stored on your drive or device memory. They allow us to remember your preferences, such as your device language, font size, and other browsing preferences, as well as your login information.
+2. You can manage cookies by adjusting your browser settings. Note that some openEuler community services require the use of cookies. Disabling cookies may affect your use of some or all functions of these services.
 
-​ (1) Required cookies: When you use the websites, cookies improve your Web browsing experience.
-
-​ (2) Statistical analysis cookies: We collect information about your use of our services, including your single or multiple visits, which help us understand how you interact with the services. We use the statistical analysis plugin provided by Baidu.
-
-Many services require cookies. If you do not allow cookies related to these services, you may not be able to use these services or specific functions of these services.
-
-(c) **Do Not Track**. Many Web browsers provide the **Do Not Track** function, which sends **Do Not Track** requests to websites. Currently, major Internet standardization organizations have not established policies to specify how websites should handle these requests. If you enable **Do Not Track** or similar functions that your browser may provide, we will not change the way your data is collected and used as described in this Statement. However, we reserve the right to respond to your **Do Not Track** request and stop collecting your data without prior notice.
-
-(d) **Your Choice**. Most browsers allow you to delete or reject cookies. To do this, follow the instructions in the browser settings. By default, many browsers accept cookies until you change your settings.
-
-(e) **Expiration Time**. We may use both session cookies, which expire when you close your browser, and permanent cookies, which are stored on your computer or mobile device for six months according to applicable laws and regulations or until you reject or delete them.
-
-(f) **Other technologies**. In addition to cookies, other similar technologies may be used to automatically collect information. We may use browser web storage through HTML5, also called localStorage objects, to implement similar functions as cookies. Browser web storage can store more data than cookies. Your web browser may be able to clear the browser web storage.
+For details about cookies, please refer to [About Cookies](/en/other/cookies/)
 
 ## 3. How We Share Your Personal Data
 
@@ -78,17 +74,19 @@ Sharing means providing third parties with your personal data. The third parties
 
 (a) **Sharing under your instruction**. We may share your personal data with your consent and under your instruction to the third parties indicated by you.
 
-(b) Sharing your personal data as necessary for protecting national security, public security, and your and other individuals' crucial legitimate rights and interests.
+(b) **Sharing your personal data as necessary for protecting national security, public security, and your and other individuals' crucial legitimate rights and interests**.
 
 (c) **Affiliates**. We may share your personal data with our affiliates, for the purposes of transaction support, service support, or security support.
 
 (d) **Partners**. We may share your personal data with our partners. However, we will share your personal data only for legitimate, justified, necessary, specified, and explicit purposes, and share only the personal data necessary for providing our services. Our partners may include:
 
-​ (1) **Developers, platforms, and social media networks**. Some products or services may be directly provided to you by third parties. In this case, we need to provide them with the transaction information. If you associate our services or products with third-party platforms or social media networks (for example, direct login through a third-party website, virtual login, or associated login), we may disclose your personal data with your authorization. We do not control the third party's use of your personal data.
+​ **&emsp;&emsp;1. Developers, platforms, and social media networks**. Some products or services may be directly provided to you by third parties. In this case, we need to provide them with the transaction information. If you associate our services or products with third-party platforms or social media networks (for example, direct login through a third-party website, virtual login, or associated login), we may disclose your personal data with your authorization. We do not control the third party's use of your personal data.
 
-​ (2) **Service suppliers or professional service providers**. We may share your personal data with third-party companies and individuals that provide services on our behalf or help us operate the websites and services (such as supply, infrastructure support, hosting, customer support, marketing and analytics, and data processing services). We share such data only for purposes consistent with this Statement or under your authorization. We may disclose your personal data to professional advisors, such as auditors, insurers, bankers, and lawyers, where necessary in the course of the professional services that they render to us.
+​ ​ **&emsp;&emsp;2. Service suppliers or professional service providers**. We may share your personal data with third-party companies and individuals that provide services on our behalf or help us operate the websites and services (such as supply, infrastructure support, hosting, customer support, marketing and analytics, and data processing services). We share such data only for purposes consistent with this Statement or under your authorization. We may disclose your personal data to professional advisors, such as auditors, insurers, bankers, and lawyers, where necessary in the course of the professional services that they render to us.
 
-​ (3) We integrate Baidu Statistics SDK from Beijing Baidu Netcom Science Technology Co., Ltd. to provide more complete and high-quality services and better support daily data analysis requirements of activity operations, user operations, and technology development. Baidu Statistics SDK needs to collect and use your necessary device information (IP address, OS, network service provider, system language, screen resolution, screen color, region, browser type, browser language, and browser version), usage information (access source, search keyword, accessed pages, pop-ups, visitor ID, number of community accesses, stay duration, access timestamp, and server type and version). For details about the types and purposes of information collected and used by Baidu Statistics SDK, and how Baidu Statistics SDK protects the collected and used information, please read the [<u>Baidu Statistics Privacy Policy</u>](https://tongji.baidu.com/web/help/article?id=330&type=0) carefully.
+​ ​ **&emsp;&emsp;3.** We integrate Baidu Statistics SDK from Beijing Baidu Netcom Science Technology Co., Ltd. to provide more complete and high-quality services and better support daily data analysis requirements of activity operations, user operations, and technology development. Baidu Statistics SDK needs to collect and use your necessary device information (IP address, OS, network service provider, system language, screen resolution, screen color, region, browser type, browser language, and browser version), usage information (access source, search keyword, accessed pages, pop-ups, visitor ID, number of community accesses, stay duration, access timestamp, and server type and version). For details about the types and purposes of information collected and used by Baidu Statistics SDK, and how Baidu Statistics SDK protects the collected and used information, please read the [<u>Baidu Statistics Privacy Policy</u>](https://tongji.baidu.com/web/help/article?id=330&type=0) carefully.
+
+​ ​ **&emsp;&emsp;4.** We use Authing to provide you with the login service. For details about the types and purposes of personal information collected and used by Authing and how Authing protects the collected and used information, please read the [Authing Privacy](https://www.authing.cn/privacy-policy.html) Policy carefully.
 
 When we share your personal data with affiliates or partners, their responsibilities and obligations will be governed by contracts and we will require them to take appropriate measures to ensure the security of the personal data processed.
 
@@ -98,7 +96,7 @@ We will retain your personal data for no longer than is necessary for the purpos
 
 Generally, we will store or retain your personal data within the retention period according to applicable laws or service agreements from the date when we obtain your personal data in the community. If your personal data has exceeded the retention period and no law requires us to continue processing your specific personal data, we will delete your personal data or anonymize it according to applicable laws and regulations.
 
-For example, the IP address, access timestamp, access source, accessed pages, access status, accessed resource size, OS, system language, browser type, browser language, browser version, and server type and version information collected for service optimization will be automatically deleted after 10 days.
+For example, for service optimization, the access timestamp, IP address, request details, access status, accessed resource size, access source, and request user agent information collected based on the access quantity statistics will be automatically deleted after 10 days.
 
 For example, when the community no longer displays you as a member of an openEuler User Group, we will delete your personal data (avatar, name, email address, company/school, position, personal profile) within one month.
 
@@ -141,21 +139,33 @@ You can click the profile picture and choose Summary in the upper right corner o
 
 ### 6.2 Data Correction
 
-You can log in to the user center using an openEuler community account and choose User Center > Info to view and correct your personal data.
+You can log in using an openEuler community account and perform the following operations in User Center:
+
+1. Change your avatar.
+2. Choose Info to view and correct your personal data.
+3. Choose Identity to check and correct you email address, mobile number, and Gitee/GitHub/OpenAtom account.
+4. Choose Security to reset your login password.
+
 You have the right to update or modify your personal data processed by us when you need to or find any errors with it. You can view and correct your personal data by clicking the profile picture and choose Preferences in the upper right corner of the forum.
 
 ### 6.3 Data Deletion
 
-You can log in to the user center using an openEuler community account and choose User Center > Info or Identity to delete basic information about your openEuler community account or unbind your Gitee or GitHub account.
+You can log in using an openEuler community account and choose User Center > Info to delete basic information about your openEuler community account, or choose User Center > Identity to delete you mobile number or unbind your Gitee/GitHub/OpenAtom account.
+
 You can manage your personal data on the corresponding service page. You can delete data you published during interactions, such as comments and posts. You can also contact the administrator to anonymize the data.
 
 ### 6.4 Revocation of Consent
 
-If you have any further requests, questions, comments, or suggestions regarding your rights as a data subject, please contact us using the contact information provided in the "Contacting Us" section of this Statement.
+1. You can contact us via email to object to the processing of your personal information.
+2. You can contact us via email to restrict the processing of your personal information.
+3. You can choose User Center > Security > Cancel signature to withdraw consent to the Statement.
+
+**Please note that if you withdraw your consent to the Statement, we will be unable to continue providing services to you, but your account will remain active.**
 
 ### 6.5 Deletion
 
-You can log in to the openEuler community and choose User Center > Security > Delete to delete your openEuler community account.
+You can log in to the openEuler community and choose User Center > Security > Delete to delete your openEuler community account. This action will also delete your personal information in the openEuler community. Exercise caution when performing this operation.
+
 If you request us to delete your personal data of the openEuler forum service, you can log in to the forum service and use the deletion function in the user center to delete the personal data, topics, replies, and drafts in the account immediately.
 
 ## 7. Where Your Personal Data Is Stored
@@ -178,8 +188,8 @@ Email: **<contact@openeuler.io>**
 
 Hotline: **+86 14775151246**
 
-Last updated: **May 30, 2024**
+Last updated: **August 30, 2024**
 
-Privacy policy version: **v20240530**
+Privacy policy version: **v20240830**
 
 </div>
