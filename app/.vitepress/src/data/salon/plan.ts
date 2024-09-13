@@ -98,6 +98,10 @@ export const yearPlanData = {
               location: '奥地利，维也纳',
               activeName: 'OSS EU',
             },
+            {
+              location: '中国，北京',
+              activeName: '2024 开放原子开源生态大会',
+            },
           ],
         },
         {
@@ -176,8 +180,8 @@ export const yearPlanData = {
               activeName: '1024程序员节',
             },
             {
-              location: 'TBD',
-              activeName: 'CLK/CID',
+              location: '中国，北京',
+              activeName: '2024 CID',
             },
           ],
         },
@@ -310,6 +314,15 @@ export const yearPlanData = {
             {
               location: '苏州',
               activeName: 'openEuler DPU Meetup',
+            },
+          ],
+        },
+        {
+          month: '9',
+          actives: [
+            {
+              location: '广州',
+              activeName: 'openEuler Embedded Meetup',
             },
           ],
         },

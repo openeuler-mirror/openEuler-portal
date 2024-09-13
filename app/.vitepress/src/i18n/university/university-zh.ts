@@ -108,14 +108,51 @@ export default {
         linkHref: 'https://www.openeuler.org/zh/internship/',
       },
       {
-        title: '2024第七届CCF开源创新大赛',
+        title: '第七届CCF开源创新大赛',
         bgImg: illustrationAi,
-        id:'ccf',
+        id: 'ccf',
         detail:
           '第七届CCF开源创新大赛在国家自然科学基金委信息科学部的指导下，由中国计算机学会（CCF）主办，长沙理工大学、CCF 开源发展委员会联合承办。openEuler参与开源项目贡献赛道，赛事奖金10w，赛题主要聚焦在openEuler操作系统的内存池管理与用户态线程设计与调度两个方向。',
         linkText: '大赛官网信息',
+        linkHref: 'https://www.gitlink.org.cn/competitions/track1_openEuler',
+      },
+      {
+        title: '鲲鹏应用创新大赛-openEuler开源创新赛道',
+        bgImg: illustrationAi,
+        id: 'ccf',
+        detail:
+          '鲲鹏应用创新大赛2024是面向基础软/硬件开发者的顶级赛事，旨在鼓励广大开发者基于鲲鹏全栈根技术，围绕产业真实难题，共同打造基础软/硬件解决方案。 本届大赛开设openEuler开源创新赛道，分为基础赛（围绕openEuler 进行原生开发（初阶））与挑战赛围绕openEuler 进行原生开发（高阶）两个方向。',
+        linkText: '大赛官网信息',
         linkHref:
-          'https://www.gitlink.org.cn/competitions/track1_openEuler',
+          'https://www.hikunpeng.com/zh/developer/contests/kunpeng-competition2024?tab=4',
+      },
+      {
+        title: '国家级大学生创新训练计划-华为命题',
+        bgImg: illustrationAi,
+        id: 'ccf',
+        detail:
+          '国家级大学生创新训练计划，简称“国创计划”，是教育部质量工程项目中作用面积最大、涉及人数最多的项目，秉承“兴趣驱动、自主实践、重在过程”的理念，目前已经成为面向全体大学生的一项创新人才基础培育工程，聚焦国家创新与发展，引领高校创新人才改革。开设“基于openEuler 开源操作系统的实践创新”单项赛题。',
+        linkText: '大赛官网信息',
+        linkHref: 'https://edu.hicomputing.huawei.com/guochuang2024',
+      },
+      {
+        title: '中国国际大学生创新大赛（2024）',
+        bgImg: illustrationAi,
+        id: 'ccf',
+        detail:
+          '华为深度参与中国国际大学生创新大赛（2024），输出产业命题，推进产教融合、科教融汇。操作系统是整个计算机系统的核心基础软件，上承应用，下接硬件，面向用户，对生态要求极高，在鲲鹏赛道开设基于openEuler开源操作系统三个赛题，可官网详细了解。',
+        linkText: '鲲鹏赛题-openEuler赛题报名入口',
+        linkHref:
+          'https://edu.hicomputing.huawei.com/InternetInnovate2024?tab=kunpeng',
+      },
+      {
+        title: '开源之夏',
+        bgImg: illustrationAi,
+        id: 'ccf',
+        detail:
+          'openEuler社区连续四年连续四年参与由中国科学院软件所主办的开源软件供应链点亮计划-开源之夏活动，是目前规模最大最有影响力的高校开源活动。旨在鼓励在校学生积极参与开源软件的开发维护，培养和发掘更多优秀的开发者。',
+        linkText: '开源之夏官网信息',
+        linkHref: 'https://summer-ospp.ac.cn/',
       },
     ],
   },

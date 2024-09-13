@@ -246,7 +246,14 @@ function convertMd(data: string) {
           class="brief-introduction-title floor-title"
         >
           {{ sigMemberData?.sig_name }}
-          <a :href="giteeHomeLink" target="_blank" rel="noopener noreferrer">
+          <a
+            :href="
+              'https://gitee.com/openeuler/community/tree/master/sig/' +
+              sigMemberData?.sig_name
+            "
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <OIcon class="icon"> <IconGitee /> </OIcon
           ></a>
         </h2>
