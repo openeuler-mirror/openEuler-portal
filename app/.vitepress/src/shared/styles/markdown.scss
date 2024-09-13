@@ -285,7 +285,6 @@
     list-style-type: disc;
   }
 
-
   ul,
   ol {
     padding-left: 1em;
@@ -296,6 +295,15 @@
         color: var(--o-color-text1);
       }
     }
+  }
+}
+
+.markdown.markdown-statement {
+  p,
+  ul,
+  ol,
+  a {
+    word-break: normal;
   }
 }
 @media screen and (max-width: 768px) {
