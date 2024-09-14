@@ -52,7 +52,7 @@ const config: UserConfig = {
     description && (pageData.description = description);
     if (title) {
       pageData.title = title;
-      pageData.titleTemplate = tdks.titleSuffix[locale];
+      pageData.titleTemplate = `:title | ${tdks.titleSuffix[locale]}`;
     }
     if (keywords) {
       pageData.frontmatter.head ??= [];
