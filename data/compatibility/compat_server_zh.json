@@ -10720,8 +10720,8 @@
     }
   },
   {
-    "hardwareFactory": "联想",
-    "hardwareModel": "SR658H V2",
+    "hardwareFactory": "联想开天",
+    "hardwareModel": "KR722h G2",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2023/02/07",
@@ -10781,7 +10781,7 @@
     }
   },
   {
-    "hardwareFactory": "联想开天",
+    "hardwareFactory": "联想",
     "hardwareModel": "SR658H V2",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
@@ -14026,8 +14026,8 @@
     }
   },
   {
-    "hardwareFactory": "联想",
-    "hardwareModel": "联想开天KR722h G2",
+    "hardwareFactory": "联想开天",
+    "hardwareModel": "KR722h G2",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2023/02/07",
@@ -22890,5 +22890,188 @@
     "hostBusAdapter": "Avago 3508",
     "hardDiskDrive": "AVAGO MR9361-8i"
    }
+  },
+  {
+    "hardwareFactory": "联想开天",
+    "hardwareModel": "KR722h G2",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "x86_64",
+    "date": "2024/09/10",
+    "friendlyLink": "",
+    "boardCards":[
+        {
+            "vendorID": "8086",
+            "deviceID": "1521",
+            "svID": "17aa",
+            "ssID": "4016",
+            "architecture": "x86_64",
+            "os": "openEuler 22.03 LTS",
+            "driverName": "igb",
+            "version": "5.10.0-60.18.0.50.oe2203.x86_64",
+            "type": "NIC",
+            "date": "2024.9.10",
+            "sha256": "7aaf89fad3eae542e505379cef9e6fb9ad65be587f0993f4de63a50ca9b93229",
+            "driverSize": "524K",
+            "chipVendor": "Intel",
+            "boardModel": "I350",
+            "chipModel": "I350",
+            "item": "",
+            "downloadLink": "inbox" 
+        },
+        {
+            "vendorID": "1000",
+            "deviceID": "10e2",
+            "svID": "1d49",
+            "ssID": "060a",
+            "architecture": "x86_64",
+            "os": "openEuler 22.03 LTS",
+            "driverName": "megaraid_sas",
+            "version": "07.714.04.00-rc1",
+            "type": "raid",
+            "date": "2024.09.10",
+            "sha256": "abf3ad2595702e635fb07be307414d9df4baccd8ad1a1c369d28be61a46c93b6",
+            "driverSize": "343K",
+            "chipVendor": "Broadcom",
+            "boardModel": "ThinkSystem RAID 940-8i",
+            "chipModel": "3908",
+            "item": "",
+            "downloadLink": "inbox"
+        }
+    ],
+    "compatibilityConfiguration":{
+        "productInformation": "https://kt.lenovo.com/ProductThree/29",
+        "certificationTime": "2024/09/10",
+        "commitID": "IAP6BO",
+        "mainboardModel": "70WDQWERCN",
+        "biosUefi": "HSE254A-2.54",
+        "cpu": "Hygon C86 7390 32-core Processor",
+        "ram": "32*32G DIMMs",
+        "portsBusTypes": "x8 PCI Express 4 x8, x16 PCI Express 4 x16",
+        "videoAdapter": "ASPEED",
+        "hostBusAdapter": "",
+        "hardDiskDrive": "RAID 940-8i"
+    }
+  },
+  {
+    "hardwareFactory": "联想",
+    "hardwareModel": "SR658H V2",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "x86_64",
+    "date": "2024/09/10",
+    "friendlyLink": "",
+    "boardCards":[
+        {
+            "vendorID": "8086",
+            "deviceID": "1521",
+            "svID": "17aa",
+            "ssID": "4016",
+            "architecture": "x86_64",
+            "os": "openEuler 22.03 LTS",
+            "driverName": "igb",
+            "version": "5.10.0-60.18.0.50.oe2203.x86_64",
+            "type": "NIC",
+            "date": "2024.9.10",
+            "sha256": "7aaf89fad3eae542e505379cef9e6fb9ad65be587f0993f4de63a50ca9b93229",
+            "driverSize": "524K",
+            "chipVendor": "Intel",
+            "boardModel": "I350",
+            "chipModel": "I350",
+            "item": "",
+            "downloadLink": "inbox" 
+        },
+        {
+            "vendorID": "1000",
+            "deviceID": "10e2",
+            "svID": "1d49",
+            "ssID": "060a",
+            "architecture": "x86_64",
+            "os": "openEuler 22.03 LTS",
+            "driverName": "megaraid_sas",
+            "version": "07.714.04.00-rc1",
+            "type": "raid",
+            "date": "2024.09.10",
+            "sha256": "abf3ad2595702e635fb07be307414d9df4baccd8ad1a1c369d28be61a46c93b6",
+            "driverSize": "343K",
+            "chipVendor": "Broadcom",
+            "boardModel": "ThinkSystem RAID 940-8i",
+            "chipModel": "3908",
+            "item": "",
+            "downloadLink": "inbox"
+        }
+    ],
+    "compatibilityConfiguration":{
+        "productInformation": "https://kt.lenovo.com/ProductThree/29",
+        "certificationTime": "2024/09/10",
+        "commitID": "IAP6BO",
+        "mainboardModel": "70WDQWERCN",
+        "biosUefi": "HSE254A-2.54",
+        "cpu": "Hygon C86 7390 32-core Processor",
+        "ram": "32*32G DIMMs",
+        "portsBusTypes": "x8 PCI Express 4 x8, x16 PCI Express 4 x16",
+        "videoAdapter": "ASPEED",
+        "hostBusAdapter": "",
+        "hardDiskDrive": "RAID 940-8i"
+    }
+  },
+  {
+    "hardwareFactory": "联想开天",
+    "hardwareModel": "KR722f G2",
+    "osVersion": "openEuler 24.03 LTS",
+    "architecture": "aarch64",
+    "date": "2024/09/03",
+    "friendlyLink": "",
+    "boardCards":[
+        {
+            "vendorID": "8086",
+            "deviceID": "1521",
+            "svID": "8086",
+            "ssID": "00a1",
+            "architecture": "aarch64",
+            "os": "openEuler 24.03 LTS",
+            "driverName": "igb",
+            "version": " 6.6.0-28.0.0.34.oe2403.aarch64",
+            "type": "NIC",
+            "date": "2024.09.03",
+            "sha256": "3cafe2ad3c2f47706ed045c2ce94de35d98ef5514fde1ff1a49a4be05aad77ac",
+            "driverSize": "104880",
+            "chipVendor": "Intel",
+            "boardModel": "I350",
+            "chipModel": "I350",
+            "item": "",
+            "downloadLink": "inbox"
+        },
+        {
+            "vendorID": "1000",
+            "deviceID": "10e2",
+            "svID": "1d49",
+            "ssID": "060a",
+            "architecture": "aarch64",
+            "os": "openEuler 24.03 LTS",
+            "driverName": "megaraid_sas",
+            "version": "07.725.01.00-rc1",
+            "type": "raid",
+            "date": "2024.09.03",
+            "sha256": "0849d91a6ff035ee6942a652376c41fa4e829a0a301944d12d7280da38967a5f",
+            "driverSize": "86624",
+            "chipVendor": "Broadcom",
+            "boardModel": "ThinkSystem RAID 940-8i",
+            "chipModel": "3908",
+            "item": "",
+            "downloadLink": "inbox"
+        }
+    ],
+    "compatibilityConfiguration":{
+        "productInformation": "https://kt.lenovo.com/ProductThree/49",
+        "certificationTime": "2024/09/03",
+        "commitID": "IAOGGQ",
+        "mainboardModel": "TAIFENG",
+        "biosUefi": "KL4.2A.KR722f_G2.R.028.240612",
+        "cpu": "S5000C/64",
+        "ram": "16*32G DIMMs",
+        "portsBusTypes": "x16 PCI Express",
+        "videoAdapter": "SP2510",
+        "hostBusAdapter": "Avago 3580",
+        "hardDiskDrive": "Lenovo RAID 940-8i "
+    }
   }
 ]
