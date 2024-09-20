@@ -53,7 +53,7 @@ const genSitemapAndRobotsTxt = (locale) => {
           let pagePath;
           const withoutExtName = encodeURIComponent(fileName.slice(0, -3));
           if (withoutExtName === INDEX) {
-            pagePath = path.map(encodeURIComponent).join('/');
+            pagePath = path.map(encodeURIComponent).join('/') + '/';
           } else {
             pagePath = path.map(encodeURIComponent).concat(withoutExtName + '.html').join('/');
           }
