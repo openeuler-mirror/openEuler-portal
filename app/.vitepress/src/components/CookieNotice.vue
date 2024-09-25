@@ -1,7 +1,10 @@
 <script lang="ts" setup>
-import { ref, watch, onMounted, computed } from 'vue';
-import { useRoute, useData } from 'vitepress';
+import { ref, watch, computed } from 'vue';
+import { useRoute, useData, inBrowser } from 'vitepress';
 import { ElDialog, ElSwitch } from 'element-plus';
+
+import { enableOA, disableOA, reportBaseInfo } from '@/shared/analytics';
+
 import {
   setCustomCookie,
   isBoolean,
@@ -98,31 +101,10 @@ const initSensor = () => {
     s.appendChild(hm);
   })();
 
-  // ds埋点
-  (function () {
-    const sensorsdata = document.createElement('script');
-    sensorsdata.src = '/allow_sensor/sensorsdata.min.js';
-
-    const hm = document.createElement('script');
-    hm.src = '/allow_sensor/sensors.js';
-    const s = document.getElementsByTagName('HEAD')[0];
-    s.appendChild(sensorsdata);
-    s.appendChild(hm);
-  })();
+  // 分析埋点
+  enableOA();
+  reportBaseInfo();
 };
-
-onMounted(() => {
-  // 未签署，展示cookie notice
-  if (isNotSigned()) {
-    toggleNoticeVisible(true);
-  }
-
-  if (isAllAgreed()) {
-    cookieStore.status = COOKIE_AGREED_STATUS.ALL_AGREED;
-    analysisAllowed.value = true;
-    initSensor();
-  }
-});
 
 // 用户同意所有cookie
 const acceptAll = () => {
@@ -176,12 +158,30 @@ const onDlgChange = () => {
   toggleDlgVisible(false);
 };
 
+// 初次加载，上报
+if (inBrowser) {
+  // 未签署，展示cookie notice
+  if (isNotSigned()) {
+    toggleNoticeVisible(true);
+  }
+
+  if (isAllAgreed()) {
+    cookieStore.status = COOKIE_AGREED_STATUS.ALL_AGREED;
+    analysisAllowed.value = true;
+    initSensor();
+  } else {
+    disableOA();
+  }
+}
+
 watch(
   () => route.path,
   () => {
     if (isNotSigned()) {
       toggleNoticeVisible(true);
     }
+
+    reportBaseInfo();
   }
 );
 </script>
