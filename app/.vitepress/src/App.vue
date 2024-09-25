@@ -60,6 +60,21 @@ const comp = computed(() => {
   return compMapping[frontmatter.value.category];
 });
 
+import { OpenAnalytics, OpenEventKeys } from '@opensig/open-analytics';
+
+const oa = new OpenAnalytics({
+  appKey: 'openEuler',
+  request: (data) => {
+    console.log(data);
+  },
+});
+
+oa.enableReporting();
+oa.report(OpenEventKeys.PV);
+oa.report(OpenEventKeys.LCP);
+oa.report(OpenEventKeys.INP);
+oa.report(OpenEventKeys.PageBasePerformance);
+
 onMounted(() => {
   setStoreData();
 });
