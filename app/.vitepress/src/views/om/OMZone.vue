@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { oa } from '@/shared/analytics';
 import { useCookieStore } from '@/stores/common';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppContent from '@/components/AppContent.vue';
@@ -121,7 +122,6 @@ const oMSetTitleStyle = (height: number) => {
   };
 };
 
-
 const cookieStore = useCookieStore();
 
 const downloadByUrl = (url: string) => {
@@ -132,8 +132,8 @@ const downloadByUrl = (url: string) => {
   a.click();
   window.URL.revokeObjectURL(url);
   document.body.removeChild(a);
-  if(cookieStore.isAllAgreed){
-    setProfile(url);
+  if (cookieStore.isAllAgreed) {
+    reportDownload(url);
   }
 };
 
@@ -200,12 +200,13 @@ const toolsUrl = {
     },
   ],
 };
-const setProfile = function (url: string) {
-  const sensors = (window as any)['sensorsDataAnalytic201505'];
-  sensors?.setProfile({
-    profileType: 'OM',
-    downloadURrl: url,
-    date: new Date().getTime(),
+
+const reportDownload = (url: string) => {
+  oa.report('OM', () => {
+    return {
+      downloadURrl: url,
+      date: new Date().getTime(),
+    };
   });
 };
 </script>
