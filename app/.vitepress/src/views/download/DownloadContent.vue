@@ -3,11 +3,11 @@ import { ref, computed, Ref, toRefs, onMounted, watch } from 'vue';
 
 import { useI18n } from '@/i18n';
 import lodash from 'lodash-es';
-import { useRouter, useData } from 'vitepress';
+import { useData } from 'vitepress';
 
+import { archMap } from '@/data/download/download';
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { ElMessage } from 'element-plus';
-import { selectMirror } from '@/api/api-mirror';
 import { getUrlParam } from '@/shared/utils';
 import { useCommon } from '@/stores/common';
 import type {
@@ -25,7 +25,6 @@ import IconTips from '~icons/app/icon-tips.svg';
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import IconChevronDown from '~icons/app/icon-chevron-down.svg';
 
-const router = useRouter();
 const commonStore = useCommon();
 const props = defineProps({
   version: {
@@ -35,14 +34,32 @@ const props = defineProps({
       return '';
     },
   },
+  scenario: {
+    type: String,
+    default: () => {
+      return '';
+    },
+  },
+  versionData: {
+    type: Object,
+    default() {
+      return [];
+    },
+  },
+  mirrorList: {
+    type: Object,
+    default() {
+      return [];
+    },
+  },
 });
-const { version } = toRefs(props);
+const { version, versionData, mirrorList, scenario } = toRefs(props);
 const i18n = useI18n();
 const downloadList = lodash.cloneDeep(i18n.value.download.COMMUNITY_LIST);
 const { lang } = useData();
 const shaText = 'SHA256';
-const contentData: Ref<DownloadCommunityDataT[]> = computed(() => {
-  return downloadList.filter(
+const contentData: Ref<DownloadCommunityDataT> = computed(() => {
+  return downloadList.find(
     (item: DownloadCommunityDataT) => item.NAME === version.value
   );
 });
@@ -68,55 +85,51 @@ onMounted(() => {
 // tag筛选
 const activeArch = ref('');
 const activeScenario = ref('');
+
 const architectureList: Ref<string[]> = ref([]);
-const scenarioList: Ref<ScenarioT[]> = ref([]);
+const scenarioList = ref<{ value: string; label: string }[]>(
+  Array.from(lodash.cloneDeep(i18n.value.download.SCENARIO_LIST).values())
+);
+
+scenarioList.value.shift();
 function initActiveScenario() {
-  // 查看是否有携带筛选参数
-  const scenario = getUrlParam('scenario');
-  if (scenario) {
-    activeScenario.value = scenario;
+  if (scenario.value) {
     let flag = true;
-    contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItemT) => {
-      if (item.SCENARIO === activeScenario.value && flag) {
-        activeArch.value = item.ARCH;
+    activeScenario.value = scenario.value;
+    versionData.value.forEach((item: DetailedLinkItemT) => {
+      if (item.Scenario === activeScenario.value && flag) {
+        activeArch.value = item.Arch;
         flag = false;
       }
     });
   } else {
-    activeScenario.value = contentData.value[0].DETAILED_LINK[0].SCENARIO;
-    activeArch.value = contentData.value[0].DETAILED_LINK[0].ARCH;
+    activeArch.value = architectureList.value[0];
+    activeScenario.value = scenarioList.value[0].value;
   }
 }
-onMounted(() => {
-  watch(
-    () => router.route.path,
-    () => {
-      initActiveScenario();
-    },
-    { immediate: true }
-  );
-});
 
 function setTagList() {
-  const temp: string[] = [];
+  const tempArch = new Set<string>();
   architectureList.value = [];
-  scenarioList.value = [];
-  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItemT) => {
-    if (!architectureList.value.includes(item.ARCH)) {
-      architectureList.value.push(item.ARCH);
-    }
-    if (!temp.includes(item.SCENARIO)) {
-      temp.push(item.SCENARIO);
+  // 对versionData 按照 Map 架构顺序排序 不存在的排最后
+  versionData.value = versionData.value.sort((a, b) => {
+    const indexA = Array.from(archMap.keys()).indexOf(a.Arch);
+    const indexB = Array.from(archMap.keys()).indexOf(b.Arch);
+    if (indexA === -1 && indexB === -1) {
+      return 0;
+    } else if (indexA === -1) {
+      return 1;
+    } else if (indexB === -1) {
+      return -1;
+    } else {
+      return indexA - indexB;
     }
   });
-  temp.forEach((item: string) => {
-    i18n.value.download.SCENARIO_LIST.forEach((itemList: ScenarioT) => {
-      if (item === itemList.KEY && !scenarioList.value.includes(itemList)) {
-        scenarioList.value.push(itemList);
-      }
-    });
+  // 排完序生成 architectureList
+  versionData.value.forEach((item: DetailedLinkItemT) => {
+    tempArch.add(item.Arch);
   });
-  // 查看是否有携带筛选参数
+  architectureList.value = Array.from(tempArch);
   initActiveScenario();
 }
 
@@ -131,10 +144,10 @@ const onScenarioTagClick = (select: string) => {
 const tempTag = ref('');
 function setTempTag() {
   let flag = true;
-  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItemT) => {
-    if (item.ARCH === activeArch.value) {
+  versionData.value.forEach((item: DetailedLinkItemT) => {
+    if (item.Arch === activeArch.value) {
       if (flag) {
-        tempTag.value = item.SCENARIO;
+        tempTag.value = item.Scenario;
         flag = false;
       }
     }
@@ -142,8 +155,8 @@ function setTempTag() {
 }
 function isDisable(tag: string) {
   let flag = false;
-  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItemT) => {
-    if (item.ARCH === activeArch.value && item.SCENARIO === tag) {
+  versionData.value.forEach((item: DetailedLinkItemT) => {
+    if (item.Arch === activeArch.value && item.Scenario === tag) {
       flag = true;
     }
   });
@@ -155,17 +168,16 @@ function isDisable(tag: string) {
   return !flag;
 }
 // 获取镜像仓及表格显示数据
+// 表格数据
 const tableData: Ref<LinkListItemT[]> = ref([]);
 const activeMirror: Ref<string[]> = ref([]);
 const activeMirrorLink: Ref<string[]> = ref([]);
-const allMirrorList: Ref<MirrorLsitT[]> = ref([]);
-const mirrorList: Ref<MirrorLsitT[]> = ref([]);
 const moreMirrorList: Ref<MirrorLsitT[]> = ref([]);
 function setActiveMirror() {
   activeMirror.value = [];
   activeMirrorLink.value = [];
-  if (mirrorList.value[0]) {
-    tableData.value.forEach(() => {
+  if (mirrorList.value?.length) {
+    tableData.value?.forEach(() => {
       const temp = lodash.cloneDeep(mirrorList.value);
       temp[0].NameSpend =
         temp[0].Name + ' (' + temp[0].NetworkBandwidth + 'Mb/s)';
@@ -174,75 +186,56 @@ function setActiveMirror() {
     });
   } else {
     tableData.value.forEach(() => {
-      activeMirror.value.push(contentData.value[0].GET_ISO_URL);
-      activeMirrorLink.value.push(contentData.value[0].GET_ISO_URL);
+      activeMirror.value.push(contentData.value?.GET_ISO_URL);
+      activeMirrorLink.value.push(contentData.value?.GET_ISO_URL);
     });
   }
 }
 function getTableData() {
   tableData.value = [];
-  contentData.value[0].DETAILED_LINK.forEach((item: DetailedLinkItemT) => {
+  versionData.value.forEach((item: DetailedLinkItemT) => {
     if (
-      item.ARCH === activeArch.value &&
-      item.SCENARIO === activeScenario.value
+      item.Arch === activeArch.value &&
+      item.Scenario === activeScenario.value
     ) {
-      tableData.value = item.LINK_LIST;
+      tableData.value = item.Tree;
     }
   });
   if (
     !activeMirror.value[0] &&
     !activeMirrorLink.value[0] &&
-    tableData.value[0]
+    tableData.value?.length
   ) {
     setActiveMirror();
   }
 }
 async function getMirrorList() {
-  try {
-    const mirrorData = await selectMirror(contentData.value[0].VERSION);
-    mirrorList.value = [];
-    moreMirrorList.value = [];
-    if (mirrorData) {
-      for (let i = 0; i < mirrorData.MirrorList.length; i++) {
-        for (let j = i; j < mirrorData.MirrorList.length; j++) {
-          if (
-            mirrorData.MirrorList[i].NetworkBandwidth <
-            mirrorData.MirrorList[j].NetworkBandwidth
-          ) {
-            [mirrorData.MirrorList[i], mirrorData.MirrorList[j]] = [
-              mirrorData.MirrorList[j],
-              mirrorData.MirrorList[i],
-            ];
-          }
-        }
-      }
-      mirrorData.MirrorList.forEach((item: MirrorLsitT) => {
-        item.NameSpend = item.Name + ' (' + item.NetworkBandwidth + 'Mb/s)';
-      });
-      allMirrorList.value = lodash.cloneDeep(mirrorData.MirrorList);
-      mirrorList.value = lodash.cloneDeep(mirrorData.MirrorList.splice(0, 3));
-      moreMirrorList.value = lodash.cloneDeep(mirrorData.MirrorList);
-      if (mirrorList.value.length === 1) {
-        mirrorList.value = [
-          {
-            Name: 'openEuler-HongKong',
-            NetworkBandwidth: '500',
-            HttpURL: 'https://repo.openeuler.org/',
-          },
-        ];
-      }
-    } else {
-      mirrorList.value = [];
-      moreMirrorList.value = [];
+  moreMirrorList.value = [];
+  mirrorList.value.forEach((item: MirrorLsitT, index: number) => {
+    item.NameSpend = item.Name + ' (' + item.NetworkBandwidth + 'Mb/s)';
+    if (index >= 3) {
+      moreMirrorList.value.push(item);
     }
-    setActiveMirror();
-  } catch (e: any) {
-    throw new Error(e);
-  }
+  });
+  setActiveMirror();
 }
+watch(
+  () => props.versionData,
+  () => {
+    if (!versionData.value.length) {
+      return;
+    }
+    getMirrorList();
+    setTagList();
+    initActiveScenario();
+    getTableData();
+  },
+  {
+    immediate: true,
+    deep: true,
+  }
+);
 onMounted(async () => {
-  setTagList();
-  getTableData();
   watch(activeArch, function () {
     getTableData();
     setTempTag();
@@ -250,24 +243,13 @@ onMounted(async () => {
   watch(activeScenario, function () {
     getTableData();
   });
-  watch(
-    version,
-    async function () {
-      await getMirrorList();
-      setTagList();
-      getTableData();
-    },
-    {
-      immediate: true,
-    }
-  );
   watch(tableData, function () {
     setActiveMirror();
   });
 });
 
 function setMirrorLink(index: number) {
-  allMirrorList.value.forEach((item: MirrorLsitT) => {
+  mirrorList.value.forEach((item: MirrorLsitT) => {
     if (item.NameSpend === activeMirror.value[index]) {
       activeMirrorLink.value[index] = item.HttpURL;
     }
@@ -297,33 +279,33 @@ function setActiveMirrorMobile(index: number, item: string) {
 
 <template>
   <div class="content-wrap">
-    <h2 class="title">{{ contentData[0].NAME }}</h2>
-    <p class="subtitle">{{ contentData[0].DESC }}</p>
-    <p class="subtitle">Planned EOL: {{ contentData[0].PLANNED_EOL }}</p>
+    <h2 class="title">{{ contentData?.NAME }}</h2>
+    <p class="subtitle">{{ contentData?.DESC }}</p>
+    <p class="subtitle">Planned EOL: {{ contentData?.PLANNED_EOL }}</p>
     <div class="other-link">
       <a
-        v-if="contentData[0].RELEASE_DESC_URL"
-        :href="contentData[0].RELEASE_DESC_URL"
+        v-if="contentData?.RELEASE_DESC_URL"
+        :href="contentData?.RELEASE_DESC_URL"
         target="_blank"
         rel="noopener noreferrer"
         >{{ i18n.download.RELEASE_DESC }}</a
       ><a
-        v-if="contentData[0].INSTALL_GUIDENCE_URL"
-        :href="contentData[0].INSTALL_GUIDENCE_URL"
+        v-if="contentData?.INSTALL_GUIDENCE_URL"
+        :href="contentData?.INSTALL_GUIDENCE_URL"
         target="_blank"
         rel="noopener noreferrer"
         >{{ i18n.download.INSTALL_GUIDENCE }}</a
       >
       <a
-        v-if="contentData[0].WHITE_PAPER"
-        :href="contentData[0].WHITE_PAPER"
+        v-if="contentData?.WHITE_PAPER"
+        :href="contentData?.WHITE_PAPER"
         target="_blank"
         rel="noopener noreferrer"
         >{{ i18n.download.WHITE_PAPER }}</a
       >
       <a
-        v-if="contentData[0].LIFE_CYCLE_URL"
-        :href="contentData[0].LIFE_CYCLE_URL"
+        v-if="contentData?.LIFE_CYCLE_URL"
+        :href="contentData?.LIFE_CYCLE_URL"
         target="_blank"
         rel="noopener noreferrer"
         >{{ i18n.download.LIFE_CYCLE }}</a
@@ -343,7 +325,7 @@ function setActiveMirrorMobile(index: number, item: string) {
           :type="activeArch === item ? 'primary' : 'text'"
           @click="onArchTagClick(index, item)"
         >
-          {{ item }}
+          {{ archMap.get(item)?.label || item }}
         </OTag>
       </TagFilter>
       <TagFilter
@@ -354,13 +336,13 @@ function setActiveMirrorMobile(index: number, item: string) {
       >
         <OTag
           v-for="(item, index) in scenarioList"
-          :key="item.VALUE + index"
+          :key="item.value"
           checkable
-          :type="activeScenario === item.KEY ? 'primary' : 'text'"
-          :class="{ disable: isDisable(item.KEY) }"
-          @click="isDisable(item.KEY) ? '' : onScenarioTagClick(item.KEY)"
+          :type="activeScenario === item.value ? 'primary' : 'text'"
+          :class="{ disable: isDisable(item.value) }"
+          @click="isDisable(item.value) ? '' : onScenarioTagClick(item.value)"
         >
-          {{ item.VALUE }}
+          {{ item.label }}
         </OTag>
       </TagFilter>
     </div>
@@ -369,14 +351,14 @@ function setActiveMirrorMobile(index: number, item: string) {
       <div v-if="screenWidth > 1100" class="download-pc">
         <OTable :data="tableData" style="width: 100%">
           <el-table-column
-            :width="screenWidth > 1310 ? '280' : '230'"
+            :width="screenWidth > 1310 ? '290' : '230'"
             :label="i18n.download.TABLE_HEAD[0]"
             prop="name"
           >
             <template #default="scope: any">
               <div class="name-info">
-                {{ scope.row.TYPE }}
-                <template v-if="scope.row.TIPS">
+                {{ scope.row.Name }}
+                <template v-if="scope.row.Tips">
                   <el-tooltip
                     placement="right-start"
                     :offset-y="60"
@@ -384,7 +366,7 @@ function setActiveMirrorMobile(index: number, item: string) {
                   >
                     <template #content>
                       <p class="tips-text">
-                        {{ scope.row.TIPS }}
+                        {{ scope.row.Tips }}
                       </p>
                     </template>
                     <IconTips class="server-tips" />
@@ -399,7 +381,7 @@ function setActiveMirrorMobile(index: number, item: string) {
             prop="size"
           >
             <template #default="scope: any">
-              {{ scope.row.SIZE || '-' }}
+              {{ scope.row.Size || '-' }}
             </template>
           </el-table-column>
           <el-table-column :label="i18n.download.TABLE_HEAD[2]" prop="down_url">
@@ -418,13 +400,14 @@ function setActiveMirrorMobile(index: number, item: string) {
                     </p>
                   </li>
                   <el-option
-                    v-for="item in mirrorList"
+                    v-for="(item, index) in mirrorList"
+                    v-show="Number(index) < 3"
                     :key="item.Name"
                     :label="item.Name + ' (' + item.NetworkBandwidth + 'Mb/s)'"
                     :value="item.Name + ' (' + item.NetworkBandwidth + 'Mb/s)'"
                   >
                   </el-option>
-                  <li>
+                  <li v-if="moreMirrorList?.length">
                     <p class="select-text">{{ i18n.download.MORE_MIRROR }}</p>
                   </li>
 
@@ -458,15 +441,19 @@ function setActiveMirrorMobile(index: number, item: string) {
             prop="sha_code"
           >
             <template #header>
-              {{ !tableData[0]?.IS_FOLDER ? i18n.download.TABLE_HEAD[3] : '' }}
+              {{
+                tableData?.length && tableData[0]?.Type === 'file'
+                  ? i18n.download.TABLE_HEAD[3]
+                  : ''
+              }}
             </template>
             <template #default="scope: any">
-              <div v-if="scope.row.SHACODE" class="down-action">
+              <div v-if="scope.row.ShaCode" class="down-action">
                 <OButton
                   class="down-copy"
                   size="mini"
                   type="text"
-                  @click="handleUrlCopy(scope.row.SHACODE)"
+                  @click="handleUrlCopy(scope.row.ShaCode)"
                 >
                   {{ shaText }}
                   <template #suffixIcon>
@@ -484,11 +471,15 @@ function setActiveMirrorMobile(index: number, item: string) {
             <template #default="scope: any">
               <a
                 class="down-link"
-                :href="activeMirrorLink[scope.$index] + scope.row.DOWNLOAD_LINK"
+                :href="activeMirrorLink[scope.$index] + scope.row.Path"
                 :target="scope.row.IS_FOLDER ? '_blank' : '_self'"
                 rel="noopener noreferrer"
               >
-                <OButton v-if="!scope.row.IS_FOLDER" size="mini" type="primary">
+                <OButton
+                  v-if="scope.row.Type === 'file'"
+                  size="mini"
+                  type="primary"
+                >
                   {{ i18n.download.DOWNLOAD_BTN_NAME }}
                   <template #suffixIcon>
                     <IconDownload />
@@ -511,16 +502,16 @@ function setActiveMirrorMobile(index: number, item: string) {
       <ul v-else class="download-mobile">
         <li
           v-for="(item, index) in tableData"
-          :key="item.TYPE"
+          :key="item.Name"
           class="download-item"
         >
           <div class="item-text">
             <span>{{ i18n.download.TABLE_HEAD[0] + ':' }}</span
             ><span class="tips-box"
-              >{{ item.TYPE }}
-              <template v-if="item.TIPS">
+              >{{ item.Name }}
+              <template v-if="item.Tips">
                 <p v-show="showIndex === index" class="tips-text">
-                  {{ item.TIPS }}
+                  {{ item.Tips }}
                 </p>
                 <IconTips class="server-tips" @click="setShowIndex(index)" />
                 <div
@@ -533,7 +524,7 @@ function setActiveMirrorMobile(index: number, item: string) {
           </div>
           <div class="item-text">
             <span>{{ i18n.download.TABLE_HEAD[1] + ':' }}</span
-            ><span class="text-size">{{ item.SIZE }}</span>
+            ><span class="text-size">{{ item.Size }}</span>
           </div>
           <div class="item-text">
             <span>{{ i18n.download.TABLE_HEAD[2] + ':' }}</span>
@@ -603,14 +594,14 @@ function setActiveMirrorMobile(index: number, item: string) {
               ></div>
             </div>
           </div>
-          <div v-if="item.SHACODE" class="item-text">
+          <div v-if="item.ShaCode" class="item-text">
             <span>{{ i18n.download.TABLE_HEAD[3] + ':' }}</span>
             <div class="copy-box">
               <OButton
                 class="down-copy"
                 size="mini"
                 type="text"
-                @click="handleUrlCopy(item.SHACODE)"
+                @click="handleUrlCopy(item.ShaCode)"
               >
                 {{ shaText }}
                 <template #suffixIcon>
@@ -621,10 +612,7 @@ function setActiveMirrorMobile(index: number, item: string) {
           </div>
           <div class="item-text">
             <span>{{ i18n.download.TABLE_HEAD[4] + ':' }}</span>
-            <a
-              class="down-link"
-              :href="activeMirrorLink[index] + item.DOWNLOAD_LINK"
-            >
+            <a class="down-link" :href="activeMirrorLink[index] + item.Path">
               {{ i18n.download.CLICK_DOWNLOAD }}
             </a>
           </div>
@@ -704,10 +692,10 @@ function setActiveMirrorMobile(index: number, item: string) {
       @media screen and (max-width: 768px) {
         display: flex;
         gap: 32px;
-        &.tag-en{
+        &.tag-en {
           gap: 48px;
-          .tag-filter-box{
-            gap:6px;
+          .tag-filter-box {
+            gap: 6px;
           }
         }
       }

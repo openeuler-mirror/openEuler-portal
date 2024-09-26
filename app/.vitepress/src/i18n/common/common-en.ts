@@ -413,22 +413,22 @@ export default {
                 {
                   NAME: 'Server',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=SERVER',
+                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=ISO',
                 },
                 {
                   NAME: 'Edge Cloud',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=EDGE_CLOUD',
+                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=edge_img',
                 },
                 {
                   NAME: 'Cloud Computing',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=CLOUD_COMPUTING',
+                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=virtual_machine_img',
                 },
                 {
                   NAME: 'Embedded',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=EMBEDDED',
+                  PATH: '/download/?version=openEuler openEuler 24.03 LTS&scenario=embedded_img',
                 },
               ],
             },
@@ -442,17 +442,17 @@ export default {
                 {
                   NAME: 'Server',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler openEuler 22.03 LTS SP4&scenario=SERVER',
+                  PATH: '/download/?version=openEuler openEuler 22.03 LTS SP4&scenario=ISO',
                 },
                 {
                   NAME: 'Edge Cloud',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler openEuler 22.03 LTS SP4&scenario=EDGE_CLOUD',
+                  PATH: '/download/?version=openEuler openEuler 22.03 LTS SP4&scenario=edge_img',
                 },
                 {
                   NAME: 'Cloud Computing',
                   LABEL: '',
-                  PATH: '/download/?version=openEuler openEuler 22.03 LTS SP4&scenario=CLOUD_COMPUTING',
+                  PATH: '/download/?version=openEuler openEuler 22.03 LTS SP4&scenario=virtual_machine_img',
                 },
               ],
             },

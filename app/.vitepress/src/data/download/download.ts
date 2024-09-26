@@ -3390,13 +3390,16 @@ export default {
         ],
       },
     ],
-    SCENARIO_LIST: [
-      { KEY: '', VALUE: '全部' },
-      { KEY: 'SERVER', VALUE: '服务器' },
-      { KEY: 'EDGE_CLOUD', VALUE: '边缘计算' },
-      { KEY: 'CLOUD_COMPUTING', VALUE: '云计算' },
-      { KEY: 'EMBEDDED', VALUE: '嵌入式' },
-    ],
+    SCENARIO_LIST: new Map([
+      ['', { value: '', label: '全部' }],
+      ['ISO', { value: 'ISO', label: '服务器' }],
+      ['edge_img', { value: 'edge_img', label: '边缘计算' }],
+      [
+        'virtual_machine_img',
+        { value: 'virtual_machine_img', label: '云计算' },
+      ],
+      ['embedded_img', { value: 'embedded_img', label: '嵌入式' }],
+    ]),
   },
   en: {
     COMMUNITY_LIST: [
@@ -3411,7 +3414,8 @@ export default {
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
-        WHITE_PAPER: '/whitepaper/en/openEuler 22.03 LTS SP4 Technical White Paper.pdf',
+        WHITE_PAPER:
+          '/whitepaper/en/openEuler 22.03 LTS SP4 Technical White Paper.pdf',
         WEBSITE_SELECT: '/en/mirror/select/?version=22.03-LTS-SP4',
         MANUFACTURER: 'openEuler community',
         PUBLISH_DATE: '2024/06',
@@ -6735,12 +6739,67 @@ export default {
         PLANNED_EOL: '',
       },
     ],
-    SCENARIO_LIST: [
-      { KEY: '', VALUE: 'All' },
-      { KEY: 'SERVER', VALUE: 'Server' },
-      { KEY: 'EDGE_CLOUD', VALUE: 'Edge Cloud' },
-      { KEY: 'CLOUD_COMPUTING', VALUE: 'Cloud Computing' },
-      { KEY: 'EMBEDDED', VALUE: 'Embedded' },
-    ],
+    SCENARIO_LIST: new Map([
+      ['', { value: '', label: 'All' }],
+      ['ISO', { value: 'ISO', label: 'Server' }],
+      ['edge_img', { value: 'edge_img', label: 'Edge Cloud' }],
+      [
+        'virtual_machine_img',
+        { value: 'virtual_machine_img', label: 'Cloud Computing' },
+      ],
+      ['embedded_img', { value: 'embedded_img', label: 'Embedded' }],
+    ]),
   },
 };
+
+export const archMap = new Map([
+  [
+    'x86_64',
+    {
+      value: 'x86_64',
+      label: 'x86_64',
+    },
+  ],
+  [
+    'aarch64',
+    {
+      value: 'aarch64',
+      label: 'AArch64',
+    },
+  ],
+  [
+    'arm32',
+    {
+      value: 'arm32',
+      label: 'ARM32',
+    },
+  ],
+  [
+    'loongarch64',
+    {
+      value: 'loongarch64',
+      label: 'LoongArch64',
+    },
+  ],
+  [
+    'riscv64',
+    {
+      value: 'riscv64',
+      label: 'RISC-V',
+    },
+  ],
+  [
+    'power',
+    {
+      value: 'power',
+      label: 'Power',
+    },
+  ],
+  [
+    'sw_arch',
+    {
+      value: 'sw_arch',
+      label: 'SW64',
+    },
+  ],
+]);
