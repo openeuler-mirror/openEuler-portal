@@ -1,6 +1,6 @@
 ---
 title: '【案例】systemd-logind服务无法获取NIS服务器上的用户信息'
-date: '2023-06-04'
+date: '2024-06-04'
 category: blog
 tags:
   - 案例库

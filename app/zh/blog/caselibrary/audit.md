@@ -1,6 +1,6 @@
 ---
 title: '【案例】audit写日志占满分区空间出现系统停机'
-date: '2023-07-05'
+date: '2024-07-05'
 category: blog
 tags:
   - 案例库
