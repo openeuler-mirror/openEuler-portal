@@ -174,7 +174,7 @@ onMounted(() => {
                 </p>
               </div>
               <div v-if="bugIdList.length" class="tab-content-item">
-                <h5 class="tab-content-item-title">BUG</h5>
+                <h5 class="tab-content-item-title">issue</h5>
                 <a
                   v-for="(item, index) in bugIdList"
                   :key="index"

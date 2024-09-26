@@ -2,6 +2,12 @@
 import { ref, onMounted, watch } from 'vue';
 import { useI18n } from '@/i18n';
 
+import { getDownloadLink } from '@/api/api-mirror';
+
+import type { DetailedLinkItemT } from '@/shared/@types/type-download';
+
+import { constructDownloadData } from '@/shared/download';
+
 import { getUrlParam } from '@/shared/utils';
 import { useRouter, useData } from 'vitepress';
 
@@ -18,7 +24,7 @@ const screenWidth = useWindowResize();
 const router = useRouter();
 const shownNameList: string[] = [
   'openEuler 24.03 LTS',
-  'openEuler 22.03 LTS SP4',
+  'openEuler 24.09',
 ];
 let shownIndex = 0;
 function setShownNameList() {
@@ -42,7 +48,14 @@ function setShownNameList() {
 // setShownNameList();
 // 获取版版本数据
 
-const versionShownName = ref(shownNameList[shownIndex]);
+const versionShownName = ref('');
+const scenario = ref('');
+
+const versionTabClick = (version: string) => {
+  scenario.value = '';
+  setversionShownName(version);
+};
+
 function setversionShownName(version: string) {
   versionShownName.value = version;
   history.pushState(
@@ -50,8 +63,38 @@ function setversionShownName(version: string) {
     '',
     location.origin + location.pathname + `?version=${version}`
   );
+  queryGetDownloadLink(versionShownName.value);
 }
+
+const versionData = ref<DetailedLinkItemT[]>();
+const mirrorList = ref();
+
+// 根据版本号查询 下载信息
+const queryGetDownloadLink = (version: string) => {
+  versionData.value = [];
+  getDownloadLink(version.replaceAll(' ', '-')).then((res) => {
+    mirrorList.value = res.MirrorList.sort((a, b) => {
+      return b.NetworkBandwidth - a.NetworkBandwidth;
+    });
+    versionData.value = constructDownloadData(
+      res?.FileTree,
+      versionShownName.value.replaceAll(' ', '-'),
+      i18n
+    );
+  });
+};
+
 onMounted(() => {
+  watch(
+    () => router.route.path,
+    () => {
+      scenario.value = getUrlParam('scenario');
+      if (scenario.value && screenWidth.value > 1100) {
+        window.scrollTo(0, 200);
+      }
+    },
+    { immediate: true }
+  );
   watch(
     () => versionShownName.value,
     () => {
@@ -60,23 +103,10 @@ onMounted(() => {
         setversionShownName(shownNameList[0]);
       } else {
         if (shownNameList.includes(urlVersion)) {
-          versionShownName.value = urlVersion;
+          setversionShownName(urlVersion);
         } else {
           router.go(`/${lang.value}/download/archive/`);
         }
-      }
-    },
-    { immediate: true }
-  );
-});
-
-onMounted(() => {
-  watch(
-    () => router.route.path,
-    () => {
-      const scenario = getUrlParam('scenario');
-      if (scenario && screenWidth.value > 1100) {
-        window.scrollTo(0, 200);
       }
     },
     { immediate: true }
@@ -103,12 +133,17 @@ onMounted(() => {
             :key="item"
             class="selection-item"
             :class="{ active: versionShownName === item }"
-            @click="setversionShownName(item)"
+            @click="versionTabClick(item)"
           >
             {{ item }}
           </div>
         </div>
-        <DownloadContent :version="versionShownName" />
+        <DownloadContent
+          :version="versionShownName"
+          :scenario="scenario"
+          :version-data="versionData"
+          :mirror-list="mirrorList"
+        />
       </div>
     </div>
   </AppContent>

@@ -15,7 +15,7 @@ export default {
   COMMUNITY: 'Community Editions',
   BUSINESS: 'Commercial Editions',
   DETAIL1:
-    'openEuler 22.03 LTS SP4 is the latest version that was released in June, 2024. Download and try for yourself here.',
+    'openEuler 24.09 is the latest version that was released in Sept, 2024. Download and try for yourself here.',
   DETAIL2: '',
   CLICK_VIEW: 'Browse Earlier Versions.',
   ARCHIVE_LINK: '/en/download/archive/',
@@ -27,8 +27,18 @@ export default {
   ARCHITECTURE2: 'Architecture',
   SCENARIO2: 'Scenario',
   ARCHITECTUREList: ['x86_64', 'AArch64', 'ARM32'],
-  SCENARIOList: ['Server', 'Edge Cloud', 'Cloud Computing', 'Embedded'],
+  SCENARIOS: ['Server', 'Edge Cloud', 'Cloud Computing', 'Embedded'],
   VERSION_TYPE: 'Version',
+  OFFLINE_STANDARD:
+    'Base installation ISO file of the {arch} architecture, including the core components for running the minimum system.',
+  OFFLINE_EVERYTHING:
+    'Full installation ISO file of the {arch} architecture, including all components for running the entire system.',
+  EDGE_OFFLINE_STANDARD:
+    'Base installation ISO file of the {arch} architecture, including the core components for running the minimum system.',
+  VIRTUAL_MACHINE: 'VM image of openEuler in the {arch} architecture.',
+  GLIBC: 'Development and compilation toolchain in the ARM architecture.',
+  QEMU: 'File system that supports QEMU in the ARM architecture.',
+  zImage: 'Kernel image that supports QEMU in the ARM architecture.',
   VERSION_LIST: [
     {
       KEY: 'ALL',
@@ -96,10 +106,10 @@ export default {
   },
   GET_IMAGES: 'Mirrors',
   GET_IMAGES_LINK: '/en/mirror/list/',
-  GET_OPENEULER_OS1:'Get openEuler OS',
-  GET_OPENEULER_OS2:'Get openEuler OS',
-  GET_OPENEULER_OS_DOC:'View the openEuler documentation',
-  GET_OPENEULER_OS_DOC_LINK:'https://docs.openeuler.org/en/',
+  GET_OPENEULER_OS1: 'Get openEuler OS',
+  GET_OPENEULER_OS2: 'Get openEuler OS',
+  GET_OPENEULER_OS_DOC: 'View the openEuler documentation',
+  GET_OPENEULER_OS_DOC_LINK: 'https://docs.openeuler.org/en/',
   MIRROR_ALL: {
     TITLE: 'Mirrors',
     NAME: 'Site',

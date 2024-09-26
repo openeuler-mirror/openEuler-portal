@@ -3,11 +3,15 @@ import { computed, onMounted, Ref, ref, watch } from 'vue';
 import { useData } from 'vitepress';
 import cloneTool from 'lodash-es';
 
+import { getVersionInfo } from '@/api/api-mirror';
+import { getVersionList } from '@/shared/download';
+
 import { useI18n } from '@/i18n';
 import { useCommon } from '@/stores/common';
 import useWindowResize from '@/components/hooks/useWindowResize';
+import { archMap } from '@/data/download/download';
 
-import type { DownloadCommunityDataT } from '@/shared/@types/type-download';
+import type { VersionInfoT } from '@/shared/@types/type-download';
 
 import AppContent from '@/components/AppContent.vue';
 import TagFilter from '@/components/TagFilter.vue';
@@ -26,7 +30,7 @@ const screenWidth = useWindowResize();
 //分页与数据项目
 const currentPage = ref(1);
 const pageSize = ref(10);
-const filterList: Ref<DownloadCommunityDataT[]> = ref([]);
+const filterList = ref<VersionInfoT[]>([]);
 const dataList = computed(() => {
   return filterList.value.slice(
     (currentPage.value - 1) * pageSize.value,
@@ -39,97 +43,121 @@ const total = computed(() => {
 
 //数据筛选
 const tagScenario = cloneTool.cloneDeep(i18n.value.download.SCENARIO_LIST);
-const activeScenario = ref(tagScenario[0].KEY);
+
+const activeScenario = ref(tagScenario.get('').value);
+
 const tagArch: Ref<string[]> = ref([]);
 const activeArch = ref('');
 const activeVersionType = ref(i18n.value.download.VERSION_LIST[0].KEY);
-const allList: any = ref(
-  cloneTool.cloneDeep(i18n.value.download.COMMUNITY_LIST)
-);
+const allList: any = ref();
+const loading = ref(true);
+
 const setTagArch = () => {
-  allList.value.forEach((item: any) => {
-    if (item.DETAILED_LINK) {
-      item.DETAILED_LINK.forEach((itemLink: any) => {
-        if (!tagArch.value.includes(itemLink.ARCH) && itemLink.ARCH) {
-          tagArch.value.push(itemLink.ARCH);
-        }
-      });
-    }
+  const tempArch = new Set<string>();
+  versionList.value.forEach((item: any) => {
+    item?.Arch?.forEach((arch: any) => {
+      tempArch.add(arch);
+    });
   });
+  // 按照Map顺序排列
+  for (const key of archMap.keys()) {
+    if (tempArch.has(key)) {
+      tagArch.value.push(key);
+    }
+  }
+  // 不在Map中的排最后
+  for (const item of tempArch) {
+    if (!archMap.has(item)) {
+      tagArch.value.push(item);
+    }
+  }
   tagArch.value.unshift(i18n.value.download.ALL_DATA);
   activeArch.value = tagArch.value[0];
 };
-function onArchTagClick(index: number, item: string) {
-  activeArch.value = item;
-}
-function onScenarioTagClick(index: number, item: string) {
-  activeScenario.value = item;
-}
-function onVersionTypeTagClick(index: number, item: string) {
-  activeVersionType.value = item;
-}
+
+const versionList = ref();
+const queryGetVersionInfo = () => {
+  loading.value = true;
+  getVersionInfo()
+    .then((res) => {
+      versionList.value = getVersionList(res.RepoVersion, i18n);
+      allList.value = cloneTool.cloneDeep(versionList.value);
+      getTableData();
+      setTagArch();
+    })
+    .finally(() => {
+      loading.value = false;
+    });
+};
+
+// ------------ 筛选逻辑 -------------------
 function getTableData() {
-  let temp = [];
-  if (activeScenario.value === tagScenario[0].KEY) {
-    temp = allList.value;
-  } else {
-    allList.value.forEach((item: any) => {
-      let flag = false;
-      if (item.DETAILED_LINK) {
-        item.DETAILED_LINK.forEach((itemLink: any) => {
-          if (itemLink.SCENARIO === activeScenario.value) {
-            flag = true;
-          }
-        });
-      }
-      if (flag) {
-        temp.push(item);
+  currentPage.value = 1;
+  // 根据activeScenario.value筛选数据
+  function filterByScenario(list: VersionInfoT[], activeScenario: any) {
+    if (activeScenario === tagScenario.get('').value) {
+      return list;
+    }
+    const result: VersionInfoT[] = [];
+    list.forEach((item) => {
+      const hasMatchingScenario = item.Scenario.some(
+        (scenario) => scenario === activeScenario
+      );
+      if (hasMatchingScenario) {
+        result.push(item);
       }
     });
+    return result;
   }
-  let temp1: any = [];
-  if (activeArch.value === tagArch.value[0]) {
-    temp1 = temp;
-  } else {
-    temp.forEach((item: any) => {
-      let flag = false;
-      if (item.DETAILED_LINK) {
-        item.DETAILED_LINK.forEach((itemLink: any) => {
-          if (itemLink.ARCH === activeArch.value) {
-            flag = true;
-          }
-        });
-      }
-      if (flag) {
-        temp1.push(item);
+
+  // 根据activeArch.value筛选数据
+  function filterByArch(list: VersionInfoT[], activeArch: string) {
+    // 全部 直接返回
+    if (activeArch === tagArch.value[0]) {
+      return list;
+    }
+    const result: VersionInfoT[] = [];
+    list.forEach((item) => {
+      const hasMatchingArch = item.Arch.some((arch) => {
+        return arch === activeArch;
+      });
+      if (hasMatchingArch) {
+        result.push(item);
       }
     });
+    return result;
   }
-  let temp2: any = [];
-  if (activeVersionType.value === i18n.value.download.VERSION_LIST[0].KEY) {
-    temp2 = temp1;
-  } else if (
-    activeVersionType.value === i18n.value.download.VERSION_LIST[1].KEY
+
+  // 根据activeVersionType.value筛选数据
+  function filterByVersionType(
+    list: VersionInfoT[],
+    activeVersionType: string,
+    i18n: any
   ) {
-    temp1.forEach((item: any) => {
-      if (item.LTS) {
-        temp2.push(item);
-      }
-    });
-  } else if (
-    activeVersionType.value === i18n.value.download.VERSION_LIST[2].KEY
-  ) {
-    temp1.forEach((item: any) => {
-      if (!item.LTS) {
-        temp2.push(item);
-      }
-    });
+    if (activeVersionType === i18n.value.download.VERSION_LIST[0].KEY) {
+      return list;
+    } else if (activeVersionType === i18n.value.download.VERSION_LIST[1].KEY) {
+      return list.filter((item) => item.LTS);
+    } else if (activeVersionType === i18n.value.download.VERSION_LIST[2].KEY) {
+      return list.filter((item) => !item.LTS);
+    }
+    return list;
   }
-  filterList.value = temp2;
+  const scenarioFiltered = filterByScenario(
+    allList.value,
+    activeScenario.value
+  );
+  const archFiltered = filterByArch(scenarioFiltered, activeArch.value);
+  const versionFiltered = filterByVersionType(
+    archFiltered,
+    activeVersionType.value,
+    i18n
+  );
+  filterList.value = versionFiltered;
 }
+
 onMounted(() => {
-  setTagArch();
-  getTableData();
+  queryGetVersionInfo();
   watch(activeArch, function () {
     getTableData();
   });
@@ -143,47 +171,24 @@ onMounted(() => {
 // 搜索功能
 const searchContent = ref('');
 const changeSearchVal = (val: string) => {
-  allList.value = cloneTool.cloneDeep(i18n.value.download.COMMUNITY_LIST);
+  allList.value = cloneTool.cloneDeep(versionList.value);
   const searchReg = new RegExp(val, 'i');
-  currentPage.value = 1;
-  activeScenario.value = tagScenario[0].KEY;
+  activeScenario.value = tagScenario.get('').value;
   activeArch.value = tagArch.value[0];
   allList.value = allList.value.filter((item: any) => {
-    return searchReg.test(item.NAME);
+    return searchReg.test(item.Version);
   });
   getTableData();
 };
-// 获取该软件所有支持的架构和应用场景
-const getItemList = (type: any, linkList: any) => {
-  const itemList: any = [];
-  if (type === 'ARCH') {
-    linkList.forEach((item: any) => {
-      if (!itemList.includes(item.ARCH)) {
-        itemList.push(item.ARCH);
-      }
-    });
-  } else if (type === 'SCENARIO') {
-    const temp: any = [];
-    linkList.forEach((item: any) => {
-      if (!temp.includes(item.SCENARIO)) {
-        temp.push(item.SCENARIO);
-      }
-    });
-    temp.forEach((item: any) => {
-      i18n.value.download.SCENARIO_LIST.forEach((itemText: any) => {
-        if (itemText.KEY === item) {
-          itemList.push(itemText.VALUE);
-        }
-      });
-    });
-  }
 
-  return itemList;
-};
 // 移动端翻页
 
 const changeCurrentPageMoblie = (val: number) => {
   currentPage.value = val;
+};
+//
+const changeSize = () => {
+  currentPage.value = 1;
 };
 </script>
 
@@ -220,9 +225,9 @@ const changeCurrentPageMoblie = (val: number) => {
             :key="'tag' + index"
             checkable
             :type="activeArch === item ? 'primary' : 'text'"
-            @click="onArchTagClick(index, item)"
+            @click="activeArch = item"
           >
-            {{ item }}
+            {{ archMap.get(item)?.label || item }}
           </OTag>
         </TagFilter>
         <TagFilter
@@ -231,13 +236,13 @@ const changeCurrentPageMoblie = (val: number) => {
           :show="false"
         >
           <OTag
-            v-for="(item, index) in tagScenario"
-            :key="item.VALUE + index"
+            v-for="item in tagScenario.values()"
+            :key="item.value"
             checkable
-            :type="activeScenario === item.KEY ? 'primary' : 'text'"
-            @click="onScenarioTagClick(index, item.KEY)"
+            :type="activeScenario === item.value ? 'primary' : 'text'"
+            @click="activeScenario = item.value"
           >
-            {{ item.VALUE }}
+            {{ item.label }}
           </OTag>
         </TagFilter>
         <TagFilter
@@ -250,188 +255,189 @@ const changeCurrentPageMoblie = (val: number) => {
             :key="item.VALUE + index"
             checkable
             :type="activeVersionType === item.KEY ? 'primary' : 'text'"
-            @click="onVersionTypeTagClick(index, item.KEY)"
+            @click="activeVersionType = item.KEY"
           >
             {{ item.VALUE }}
           </OTag>
         </TagFilter>
       </div>
       <!-- 表格 -->
-      <div v-if="dataList.length" class="download-list">
-        <OTable class="pc-list" :data="dataList">
-          <el-table-column
-            :label="i18n.download.VERSION"
-            :width="screenWidth > 1400 ? '260' : '240'"
-          >
-            <template #default="scope: any">
-              {{ scope.row?.NAME }}
-            </template>
-          </el-table-column>
-          <el-table-column
-            :label="i18n.download.ARCHITECTURE"
-            :width="screenWidth > 1400 ? '300' : ''"
-          >
-            <template #default="scope: any">
-              <div class="arch-box">
-                <span
-                  v-for="item in getItemList('ARCH', scope.row?.DETAILED_LINK)"
-                  :key="item"
-                  >{{ item }}</span
+      <div
+        v-loading="loading"
+        element-loading-background="transparent"
+        class="download-list"
+        :class="{ 'min-height': loading }"
+      >
+        <template v-if="dataList.length" class="download-list">
+          <OTable class="pc-list" :data="dataList">
+            <el-table-column
+              :label="i18n.download.VERSION"
+              :width="screenWidth > 1400 ? '260' : '240'"
+            >
+              <template #default="scope: any">
+                {{ scope.row?.Version }}
+              </template>
+            </el-table-column>
+            <el-table-column
+              :label="i18n.download.ARCHITECTURE"
+              :width="screenWidth > 1400 ? '300' : ''"
+            >
+              <template #default="scope: any">
+                <div class="arch-box">
+                  <span v-for="item in scope.row?.Arch" :key="item">
+                    {{ archMap.get(item)?.label || item }}
+                  </span>
+                </div>
+              </template>
+            </el-table-column>
+            <el-table-column
+              :label="i18n.download.SCENARIO"
+              :width="screenWidth > 1400 ? '300' : ''"
+            >
+              <template #default="scope: any">
+                <div class="scenario-box">
+                  <span v-for="scenario in scope.row?.Scenario" :key="scenario">
+                    {{ tagScenario.get(scenario).label }}
+                  </span>
+                </div>
+              </template>
+            </el-table-column>
+            <el-table-column
+              :label="i18n.download.RELEASE_DATE"
+              :width="screenWidth > 1400 ? '' : '150'"
+            >
+              <template #default="scope: any">
+                {{ scope.row?.publishDate }}
+              </template>
+            </el-table-column>
+            <el-table-column
+              :label="i18n.download.PLANNEDEOL"
+              :width="screenWidth > 1400 ? '' : '150'"
+            >
+              <template #default="scope: any">
+                {{ scope.row?.plannedEol }}
+              </template>
+            </el-table-column>
+            <el-table-column
+              :label="i18n.download.DOWNLOAD_LINK"
+              :width="screenWidth > 1400 ? '200' : '160'"
+            >
+              <template #default="scope: any">
+                <a
+                  class="download-detail"
+                  :href="
+                    scope.row.PREVIEW
+                      ? scope.row.DOWNLOAD_URL
+                      : '/' +
+                        lang +
+                        '/download/archive/detail/?version=' +
+                        scope.row.Version
+                  "
+                  :target="scope.row.PREVIEW ? '_blank' : '_self'"
                 >
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column
-            :label="i18n.download.SCENARIO"
-            :width="screenWidth > 1400 ? '300' : ''"
-          >
-            <template #default="scope: any">
-              <div class="scenario-box">
-                <span
-                  v-for="item in getItemList(
-                    'SCENARIO',
-                    scope.row?.DETAILED_LINK
-                  )"
-                  :key="item"
-                  >{{ item }}</span
-                >
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column
-            :label="i18n.download.RELEASE_DATE"
-            :width="screenWidth > 1400 ? '' : '150'"
-          >
-            <template #default="scope: any">
-              {{ scope.row?.PUBLISH_DATE }}
-            </template>
-          </el-table-column>
-          <el-table-column
-            :label="i18n.download.PLANNEDEOL"
-            :width="screenWidth > 1400 ? '' : '150'"
-          >
-            <template #default="scope: any">
-              {{ scope.row?.PLANNED_EOL }}
-            </template>
-          </el-table-column>
-          <el-table-column
-            :label="i18n.download.DOWNLOAD_LINK"
-            :width="screenWidth > 1400 ? '200' : '160'"
-          >
-            <template #default="scope: any">
-              <a
-                class="download-detail"
-                :href="
-                  scope.row.PREVIEW
-                    ? scope.row.DOWNLOAD_URL
-                    : '/' +
-                      lang +
-                      '/download/archive/detail/?version=' +
-                      scope.row.NAME
-                "
-                :target="scope.row.PREVIEW ? '_blank' : '_self'"
-              >
-                <OButton
-                  type="text"
-                  size="mini"
-                  class="download-button"
-                  animation
+                  <OButton
+                    type="text"
+                    size="mini"
+                    class="download-button"
+                    animation
+                  >
+                    <span>{{ i18n.download.DOWNLOADGO }}</span>
+                    <template #suffixIcon>
+                      <OIcon
+                        ><IconArrowRight class="download-button-icon"
+                      /></OIcon>
+                    </template> </OButton
+                ></a>
+              </template>
+            </el-table-column>
+          </OTable>
+          <ul v-if="screenWidth < 1100" class="mobile-list">
+            <li
+              v-for="item in dataList"
+              :key="item.Version"
+              class="download-item"
+            >
+              <p class="item-text">
+                <span>{{ i18n.download.VERSION + ':' }}</span
+                ><span class="tips-box content-text">{{ item.Version }} </span>
+              </p>
+              <p class="item-text">
+                <span>{{ i18n.download.ARCHITECTURE + ':' }}</span
+                ><span class="arch-box content-text">
+                  <template v-for="itemArch in item.Arch" :key="itemArch">
+                    <span v-if="itemArch">{{ itemArch }}</span>
+                  </template>
+                </span>
+              </p>
+              <p class="item-text">
+                <span>{{ i18n.download.SCENARIO + ':' }}</span>
+                <span class="scenario-box content-text">
+                  <template v-for="scenario in item.Scenario" :key="scenario">
+                    <span v-if="scenario"
+                      >{{ tagScenario.get(scenario).label }}
+                    </span>
+                  </template>
+                </span>
+              </p>
+              <p class="item-text">
+                <span>{{ i18n.download.RELEASE_DATE + ':' }}</span>
+                <span class="content-text">{{ item.publishDate }}</span>
+              </p>
+              <p class="item-text">
+                <span>{{ i18n.download.PLANNEDEOL + ':' }}</span>
+                <span class="content-text">{{ item.plannedEol }}</span>
+              </p>
+              <p class="item-text">
+                <span>{{ i18n.download.DOWNLOAD_LINK + ':' }}</span>
+                <a
+                  class="download-detail"
+                  :href="
+                    '/' +
+                    lang +
+                    '/download/archive/detail/?version=' +
+                    item.Version
+                  "
                 >
                   <span>{{ i18n.download.DOWNLOADGO }}</span>
-                  <template #suffixIcon>
-                    <OIcon
-                      ><IconArrowRight class="download-button-icon"
-                    /></OIcon>
-                  </template> </OButton
-              ></a>
-            </template>
-          </el-table-column>
-        </OTable>
-        <ul v-if="screenWidth < 1100" class="mobile-list">
-          <li v-for="item in dataList" :key="item.NAME" class="download-item">
-            <p class="item-text">
-              <span>{{ i18n.download.VERSION + ':' }}</span
-              ><span class="tips-box content-text">{{ item.NAME }} </span>
-            </p>
-            <p class="item-text">
-              <span>{{ i18n.download.ARCHITECTURE + ':' }}</span
-              ><span class="arch-box content-text">
-                <template
-                  v-for="itemArch in getItemList('ARCH', item.DETAILED_LINK)"
-                  :key="itemArch"
-                >
-                  <span v-if="itemArch">{{ itemArch }}</span>
-                </template>
-              </span>
-            </p>
-            <p class="item-text">
-              <span>{{ i18n.download.SCENARIO + ':' }}</span>
-              <span class="scenario-box content-text">
-                <template
-                  v-for="itemScen in getItemList(
-                    'SCENARIO',
-                    item.DETAILED_LINK
-                  )"
-                  :key="itemScen"
-                >
-                  <span v-if="itemScen">{{ itemScen }} </span>
-                </template>
-              </span>
-            </p>
-            <p class="item-text">
-              <span>{{ i18n.download.RELEASE_DATE + ':' }}</span>
-              <span class="content-text">{{ item.PUBLISH_DATE }}</span>
-            </p>
-            <p class="item-text">
-              <span>{{ i18n.download.PLANNEDEOL + ':' }}</span>
-              <span class="content-text">{{ item.PLANNED_EOL }}</span>
-            </p>
-            <p class="item-text">
-              <span>{{ i18n.download.DOWNLOAD_LINK + ':' }}</span>
-              <a
-                class="download-detail"
-                :href="
-                  '/' + lang + '/download/archive/detail/?version=' + item.NAME
-                "
+                </a>
+              </p>
+            </li>
+          </ul>
+          <!-- 页码 -->
+          <div class="page-box">
+            <ClientOnly>
+              <OPagination
+                v-if="total"
+                v-model:current-page="currentPage"
+                v-model:page-size="pageSize"
+                :page-sizes="[10, 20, 40]"
+                :background="true"
+                layout="sizes, prev, pager, next, slot, jumper"
+                :total="total"
+                @size-change="changeSize"
+                @jump-page="changeCurrentPageMoblie"
               >
-                <span>{{ i18n.download.DOWNLOADGO }}</span>
-              </a>
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div v-else class="empty">
-        <img
-          class="empty-img"
-          :src="
-            commonStore.theme === 'light' ? notFoundImg_light : notFoundImg_dark
-          "
-          alt="404"
-        />
-        <p class="empty-text">
-          {{ lang === 'zh' ? '暂无数据！' : 'NotFound !' }}
-        </p>
-      </div>
-      <!-- mobild -->
-
-      <!-- 页码 -->
-      <div class="page-box">
-        <ClientOnly>
-          <OPagination
-            v-if="total"
-            v-model:current-page="currentPage"
-            v-model:page-size="pageSize"
-            :page-sizes="[10, 20, 40]"
-            :background="true"
-            layout="sizes, prev, pager, next, slot, jumper"
-            :total="total"
-            @jump-page="changeCurrentPageMoblie"
-          >
-            <span class="pagination-slot"
-              >{{ currentPage }} / {{ Math.ceil(total / pageSize) }}</span
-            >
-          </OPagination>
-        </ClientOnly>
+                <span class="pagination-slot"
+                  >{{ currentPage }} / {{ Math.ceil(total / pageSize) }}</span
+                >
+              </OPagination>
+            </ClientOnly>
+          </div>
+        </template>
+        <div v-else-if="!loading" class="empty">
+          <img
+            class="empty-img"
+            :src="
+              commonStore.theme === 'light'
+                ? notFoundImg_light
+                : notFoundImg_dark
+            "
+            alt="404"
+          />
+          <p class="empty-text">
+            {{ lang === 'zh' ? '暂无数据！' : 'NotFound !' }}
+          </p>
+        </div>
       </div>
     </div>
   </AppContent>
@@ -520,7 +526,9 @@ const changeCurrentPageMoblie = (val: number) => {
       display: none;
     }
   }
-
+  .min-height {
+    min-height: 420px;
+  }
   .download-list {
     .pc-list {
       .detail-page {
