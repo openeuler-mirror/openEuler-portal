@@ -1,13 +1,21 @@
 import { OpenAnalytics, OpenEventKeys } from '@opensig/open-analytics';
 import { reporAnalytics } from '@/api/api-analytics';
+import { isBrowser } from './utils';
 
-export const oa = new OpenAnalytics({
-  appKey: 'openEuler',
-  request: (data) => {
-    console.log(data);
-    reporAnalytics(data)
-  },
-});
+export let oa = {
+  enableReporting: () => {},
+  report: () => {},
+};
+
+if (isBrowser()) {
+  oa = new OpenAnalytics({
+    appKey: 'openEuler',
+    request: (data) => {
+      console.log(data);
+      reporAnalytics(data);
+    },
+  });
+}
 
 export const enableOA = () => {
   oa.enableReporting(true);

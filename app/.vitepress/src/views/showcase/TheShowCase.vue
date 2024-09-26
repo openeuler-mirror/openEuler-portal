@@ -109,7 +109,18 @@ function goDetail(link: string, item: any, index: number) {
   }
   window.open(search_result_url);
 }
-// 埋点
+
+// ----------------------- 埋点相关 ----------------------------
+let SEARCH_EVENT_ID = uniqueId();
+const reportSearch = (keyword: string) => {
+  SEARCH_EVENT_ID = uniqueId();
+  oa.report('searchValue', () => {
+    return {
+      search_event_id: SEARCH_EVENT_ID,
+      search_key: keyword,
+    };
+  });
+};
 const reportSelectSearchResult = (link: string, item: any, index: number) => {
   const searchKeyObj = {
     search_tag: currentTag.value,
@@ -120,19 +131,10 @@ const reportSelectSearchResult = (link: string, item: any, index: number) => {
 
   oa.report('selectSearchResult', () => {
     return {
-      search_event_id: uniqueId(),
+      search_event_id: SEARCH_EVENT_ID,
       search_key: keyWord.value,
       ...(item || {}),
       ...searchKeyObj,
-    };
-  });
-};
-
-const reportSearch = (keyword: string) => {
-  oa.report('searchValue', () => {
-    return {
-      search_event_id: uniqueId(),
-      search_key: keyword,
     };
   });
 };
