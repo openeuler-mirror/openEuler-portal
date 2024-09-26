@@ -1,4 +1,5 @@
 import Cookies from 'js-cookie';
+import { v4 as uuidV4 } from 'uuid';
 
 // 格式化数字
 export function formatNumber(num: number) {
@@ -56,40 +57,6 @@ export function getNowFormatDate() {
   return currentDate;
 }
 
-// 搜索对搜索词埋点
-export function setSearchBuriedData(search_key: string) {
-  const search_event_id = `${search_key}${new Date().getTime()}${
-    (window as any)['sensorsCustomBuriedData']?.ip || ''
-  }`;
-  const obj = {
-    search_key,
-    search_event_id,
-  };
-  (window as any)['addSearchBuriedData'] = obj;
-  const sensors = (window as any)['sensorsDataAnalytic201505'];
-  sensors?.setProfile({
-    profileType: 'searchValue',
-    ...((window as any)['sensorsCustomBuriedData'] || {}),
-    ...((window as any)['addSearchBuriedData'] || {}),
-  });
-}
-
-// 等待sensor加载完成
-export function addSearchBuriedData(search_key: string, num = 20) {
-  if (!num) {
-    // 重试最大次数
-    return;
-  }
-  if ((window as any)['sensorsCustomBuriedData']) {
-    setSearchBuriedData(search_key);
-  } else {
-    setTimeout(() => {
-      // 若是一开始没有值，则重试
-      num--;
-      addSearchBuriedData(search_key, num);
-    }, 500);
-  }
-}
 // URL参数转对象
 export function getUrlParams(url: string) {
   const arrObj = url.split('?');
@@ -207,4 +174,11 @@ export function scrollToBottom() {
 const opt = Object.prototype.toString;
 export function isBoolean(val: unknown): val is boolean {
   return opt.call(val) === '[object Boolean]';
+}
+
+/**
+ * 生成随机字符串
+ */
+export function uniqueId(): string {
+  return uuidV4();
 }

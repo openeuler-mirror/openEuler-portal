@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 import { useRouter, useData } from 'vitepress';
@@ -105,31 +104,7 @@ const dateList = [
   { day: 15, month: 'DEC' },
   { day: 16, month: 'DEC' },
 ];
-// 埋点统计投放流量
-function collectAdvertisedData() {
-  if(cookieStore.isAllAgreed){
-    const sensors = (window as any)['sensorsDataAnalytic201505'];
-    const { href } = window.location;
-    const regex = /[\?&]utm_source=/;
-    const containsUtmSource = regex.test(href);
-    if (!containsUtmSource) {
-      return;
-    }
-    const paramsArr = getUrlParams(href);
-    sensors?.setProfile({
-      ...(window as any)['sensorsCustomBuriedData'],
-      profileType: 'fromAdvertised',
-      origin: href,
-      ...paramsArr,
-    });
-  }
-  history.pushState(null, '', location.origin + location.pathname);
-}
-onMounted(() => {
-  setTimeout(() => {
-      collectAdvertisedData();
-  }, 300);
-});
+
 // 英文页面点击按钮前往中文直播间处理
 function goLive(index: number) {
   router.go(`/zh/interaction/summit-list/summit2023/?live=${index}`);
