@@ -7,8 +7,7 @@ COPY . /home/openeuler/web
 RUN rm -rf ./app/ru
 
 RUN pnpm install
-RUN pnpm sitemap:zh
-RUN pnpm sitemap:en
+RUN pnpm sitemap
 RUN pnpm build
 
 FROM swr.cn-north-4.myhuaweicloud.com/opensourceway/openeuler/nginx:1.22.0-22.03-lts
