@@ -1,4 +1,5 @@
 import Cookies from 'js-cookie';
+import { v4 as uuidV4 } from 'uuid';
 
 // 格式化数字
 export function formatNumber(num: number) {
@@ -173,4 +174,11 @@ export function scrollToBottom() {
 const opt = Object.prototype.toString;
 export function isBoolean(val: unknown): val is boolean {
   return opt.call(val) === '[object Boolean]';
+}
+
+/**
+ * 生成随机字符串
+ */
+export function uniqueId(): string {
+  return uuidV4();
 }

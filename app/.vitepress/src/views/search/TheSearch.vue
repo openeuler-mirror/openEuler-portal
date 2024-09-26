@@ -31,6 +31,8 @@ import SearchRecommend from './SearchRecommend.vue';
 import { ElMessage } from 'element-plus';
 import { AigcPrivacyAccepted } from '@/shared/privacy-accepted.const';
 import { useStoreData, isLogined, showGuard } from '@/shared/login';
+import { uniqueId } from '@/shared/utils';
+
 import useClickOutside from '@/components/hooks/useClickOutside';
 
 const searchRecommendRef = ref();
@@ -400,6 +402,7 @@ const reportSelectSearchResult = (data: any, index: number, path: string) => {
 
   oa.report('selectSearchResult', () => {
     return {
+      search_event_id: uniqueId(),
       search_key: Math.random(), // TODO:具体搜索值需传入
       ...(data || {}),
       ...searchKeyObj,
@@ -410,6 +413,7 @@ const reportSelectSearchResult = (data: any, index: number, path: string) => {
 const reportSearch = (keyword: string) => {
   oa.report('searchValue', () => {
     return {
+      search_event_id: uniqueId(),
       search_key: keyword,
     };
   });

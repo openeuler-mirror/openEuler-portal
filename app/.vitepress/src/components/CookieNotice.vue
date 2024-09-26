@@ -3,7 +3,12 @@ import { ref, watch, computed } from 'vue';
 import { useRoute, useData, inBrowser } from 'vitepress';
 import { ElDialog, ElSwitch } from 'element-plus';
 
-import { enableOA, disableOA, reportBaseInfo } from '@/shared/analytics';
+import {
+  enableOA,
+  disableOA,
+  reportPV,
+  reportPerformance,
+} from '@/shared/analytics';
 
 import {
   setCustomCookie,
@@ -103,7 +108,8 @@ const initSensor = () => {
 
   // 分析埋点
   enableOA();
-  reportBaseInfo();
+  reportPV();
+  reportPerformance();
 };
 
 // 用户同意所有cookie
@@ -181,7 +187,7 @@ watch(
       toggleNoticeVisible(true);
     }
 
-    reportBaseInfo();
+    reportPV();
   }
 );
 </script>

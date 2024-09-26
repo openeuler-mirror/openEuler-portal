@@ -6,6 +6,7 @@ import { oa } from '@/shared/analytics';
 import { getUserCaseData } from '@/api/api-showcase';
 import { useI18n } from '@/i18n';
 import { useCookieStore } from '@/stores/common';
+import { uniqueId } from '@/shared/utils';
 
 import useWindowScroll from '@/components/hooks/useWindowScroll';
 
@@ -119,6 +120,7 @@ const reportSelectSearchResult = (link: string, item: any, index: number) => {
 
   oa.report('selectSearchResult', () => {
     return {
+      search_event_id: uniqueId(),
       search_key: keyWord.value,
       ...(item || {}),
       ...searchKeyObj,
@@ -129,6 +131,7 @@ const reportSelectSearchResult = (link: string, item: any, index: number) => {
 const reportSearch = (keyword: string) => {
   oa.report('searchValue', () => {
     return {
+      search_event_id: uniqueId(),
       search_key: keyword,
     };
   });

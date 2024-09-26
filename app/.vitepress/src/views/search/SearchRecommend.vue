@@ -21,7 +21,7 @@ const queryGetSearchRecommend = (val: string) => {
   getSearchRecommend({
     query: val,
   }).then((res) => {
-    recommendData.value = res.obj.word;
+    recommendData.value = res?.obj?.word;
   });
 };
 queryGetSearchRecommend(props.val);
