@@ -68,6 +68,7 @@ export default defineConfig({
       '/api-search/': {
         target: 'https://doc-search.openeuler.org/',
         changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-search/, ''),
       },
       '/api-chat/': {
         target: 'https://autogpt.osinfra.cn/api/',
