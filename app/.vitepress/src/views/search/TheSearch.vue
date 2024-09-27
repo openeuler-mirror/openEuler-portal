@@ -387,7 +387,7 @@ function goLink(data: any, index: number) {
     search_result_url = location.origin + search_result_url;
   }
   if (cookieStore.isAllAgreed) {
-    reportSelectSearchResult(data, index, search_result_url);
+    reportSelectSearchResult(data, index, search_result_url, searchInput.value);
   }
   window.open(search_result_url);
 }
@@ -403,7 +403,12 @@ const reportSearch = (keyword: string) => {
   });
 };
 
-const reportSelectSearchResult = (data: any, index: number, path: string) => {
+const reportSelectSearchResult = (
+  data: any,
+  index: number,
+  path: string,
+  keyword: string
+) => {
   const searchKeyObj = {
     search_tag: data.type,
     search_rank_num: pageSize.value * (currentPage.value - 1) + (index + 1),
@@ -414,7 +419,7 @@ const reportSelectSearchResult = (data: any, index: number, path: string) => {
   oa.report('selectSearchResult', () => {
     return {
       search_event_id: SEARCH_EVENT_ID,
-      search_key: Math.random(), // TODO:具体搜索值需传入
+      search_key: keyword,
       ...(data || {}),
       ...searchKeyObj,
     };
