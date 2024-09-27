@@ -77,7 +77,7 @@ onUnmounted(() => {
   display: grid;
   background: var(--e-color-bg2);
   padding: var(--e-spacing-h6) 0;
-  grid-template-columns: 60px auto 60px;
+  grid-template-columns: 80px auto 60px;
   gap: var(--e-spacing-h4);
   position: relative;
   align-items: baseline;
