@@ -31,6 +31,9 @@ cd qemu
 
 git checkout cxl-2024-08-20
 
+Apply following fix patch for CXL ECS,
+https://lore.kernel.org/qemu-devel/20240927091743.965-1-shiju.jose@huawei.com/T/#u
+
 mkdir qemu/build
 
 cd qemu/build
@@ -69,10 +72,6 @@ Latest kernel patches ( for V13) for EDAC enhancement for RAS features.
 https://github.com/shijujose4/linux.git
 
 Branch: edac-enhancement-ras-features_v13
-
-ToDO: Kernel CXL ECS code has been updated, but corresponding QEMU changes
-for ECS will be send to the qemu community. Thus ECS feature will not work
-fully as expected. 
 
 --- a/arch/arm64/configs/defconfig
 
