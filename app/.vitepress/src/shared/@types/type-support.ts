@@ -9,6 +9,7 @@ export interface CveQueryT {
   year?: string;
   score?: string;
   noticeType: string;
+  reason?: string;
 }
 export interface OsvQueryT {
   pages: BaseQueryT;
@@ -94,6 +95,7 @@ export interface AffectProductT {
   securityNoticeNo: string;
   status: string;
   updateTime: string;
+  reason: string;
 }
 
 export interface ConfigurationInfoT {
