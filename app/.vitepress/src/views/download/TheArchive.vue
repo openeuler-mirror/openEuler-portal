@@ -186,6 +186,10 @@ const changeSearchVal = (val: string) => {
 const changeCurrentPageMoblie = (val: number) => {
   currentPage.value = val;
 };
+//
+const changeSize = () => {
+  currentPage.value = 1;
+};
 </script>
 
 <template>
@@ -262,6 +266,7 @@ const changeCurrentPageMoblie = (val: number) => {
         v-loading="loading"
         element-loading-background="transparent"
         class="download-list"
+        :class="{ 'min-height': loading }"
       >
         <template v-if="dataList.length" class="download-list">
           <OTable class="pc-list" :data="dataList">
@@ -409,6 +414,7 @@ const changeCurrentPageMoblie = (val: number) => {
                 :background="true"
                 layout="sizes, prev, pager, next, slot, jumper"
                 :total="total"
+                @size-change="changeSize"
                 @jump-page="changeCurrentPageMoblie"
               >
                 <span class="pagination-slot"
@@ -520,9 +526,10 @@ const changeCurrentPageMoblie = (val: number) => {
       display: none;
     }
   }
-
-  .download-list {
+  .min-height {
     min-height: 420px;
+  }
+  .download-list {
     .pc-list {
       .detail-page {
         cursor: pointer;
