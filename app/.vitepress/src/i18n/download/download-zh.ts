@@ -28,8 +28,16 @@ export default {
   ARCHITECTURE2: '架构',
   SCENARIO2: '场景',
   ARCHITECTUREList: ['x86_64', 'AArch64', 'ARM32'],
-  SCENARIOList: ['服务器', '边缘计算', '云计算', '嵌入式'],
+  SCENARIOS: ['服务器', '边缘计算', '云计算', '嵌入式'],
   VERSION_TYPE: '版本类型',
+  OFFLINE_STANDARD: '{arch}架构的基础安装ISO，包含了运行最小系统的核心组件',
+  OFFLINE_EVERYTHING:
+    '{arch}架构的全量安装ISO，包含了运行完整系统所需的全部组件',
+  EDGE_OFFLINE_STANDARD: '{arch}架构的边缘ISO，包含了运行最小系统的核心组件',
+  VIRTUAL_MACHINE: '{arch}架构下openEuler虚拟机镜像',
+  GLIBC: 'arm架构下对应的开发编译链',
+  QEMU: 'arm架构下支持qemu的文件系统',
+  zImage: 'arm架构下支持qemu的内核镜像',
   VERSION_LIST: [
     {
       KEY: 'ALL',

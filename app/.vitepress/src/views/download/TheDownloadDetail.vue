@@ -2,10 +2,15 @@
 import { ref, onMounted } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
-import lodash from 'lodash-es';
 
+import { getDownloadLink, getVersionInfo } from '@/api/api-mirror';
+
+import { constructDownloadData } from '@/shared/download';
 import { getUrlParam } from '@/shared/utils';
-import { DownloadCommunityDataT } from '@/shared/@types/type-download';
+import { getVersionList } from '@/shared/download';
+
+import type { VersionInfoT } from '@/shared/@types/type-download';
+import type { DetailedLinkItemT } from '@/shared/@types/type-download';
 
 import DownloadContent from './DownloadContent.vue';
 import AppContent from '@/components/AppContent.vue';
@@ -15,16 +20,34 @@ import IconChevronRight from '~icons/app/icon-chevron-right.svg';
 
 const i18n = useI18n();
 const { lang } = useData();
-const downloadList: DownloadCommunityDataT[] = lodash.cloneDeep(
-  i18n.value.download.COMMUNITY_LIST
-);
-downloadList.pop();
-const activeVersion = ref(downloadList[0].NAME);
+
+const versionData = ref<DetailedLinkItemT[]>();
+const versionList = ref<VersionInfoT[]>();
+const mirrorList = ref();
+const activeVersion = ref('');
 function handleSelectChange() {
   history.pushState(null, '', `?version=${activeVersion.value}`);
+  queryGetDownloadLink(activeVersion.value.replaceAll(' ', '-'));
 }
+
+const queryGetDownloadLink = (version: string) => {
+  versionData.value = [];
+  getDownloadLink(version).then((res) => {
+    mirrorList.value = res.MirrorList.sort((a, b) => {
+      return b.NetworkBandwidth - a.NetworkBandwidth;
+    });
+    versionData.value = constructDownloadData(res?.FileTree, version, i18n);
+  });
+};
+const queryGetVersionInfo = () => {
+  getVersionInfo().then((res) => {
+    versionList.value = getVersionList(res.RepoVersion, i18n);
+  });
+};
 onMounted(() => {
   activeVersion.value = decodeURIComponent(getUrlParam('version'));
+  queryGetDownloadLink(activeVersion.value.replaceAll(' ', '-'));
+  queryGetVersionInfo();
 });
 // 获取版版本数据
 </script>
@@ -52,15 +75,19 @@ onMounted(() => {
             @change="handleSelectChange"
           >
             <OOption
-              v-for="itemData in downloadList"
-              :key="itemData.NAME"
-              :label="itemData.NAME"
-              :value="itemData.NAME"
+              v-for="itemData in versionList"
+              :key="itemData.Version"
+              :label="itemData.Version"
+              :value="itemData.Version"
             />
           </OSelect>
         </ClientOnly>
       </div>
-      <DownloadContent :version="activeVersion" />
+      <DownloadContent
+        :version="activeVersion"
+        :version-data="versionData"
+        :mirror-list="mirrorList"
+      />
     </AppContent>
   </div>
 </template>

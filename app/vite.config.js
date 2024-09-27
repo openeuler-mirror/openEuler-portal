@@ -84,6 +84,12 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
+      '/api-download/': {
+        target: 'https://repo-mirrorbits.test.osinfra.cn',
+        // target: 'https://repo-mirrorbits.test.osinfra.cn',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-download/, ''),
+      },
       '/api-euler': {
         target: 'https://www.openeuler.org',
         changeOrigin: true,

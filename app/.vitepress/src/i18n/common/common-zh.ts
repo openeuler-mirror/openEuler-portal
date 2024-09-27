@@ -514,19 +514,19 @@ export default {
               CHILDREN: [
                 {
                   NAME: '服务器',
-                  PATH: '/download/?version=openEuler 24.03 LTS&scenario=SERVER',
+                  PATH: '/download/?version=openEuler 24.03 LTS&scenario=ISO',
                 },
                 {
                   NAME: '边缘计算',
-                  PATH: '/download/?version=openEuler 24.03 LTS&scenario=EDGE_CLOUD',
+                  PATH: '/download/?version=openEuler 24.03 LTS&scenario=edge_img',
                 },
                 {
                   NAME: '云计算',
-                  PATH: '/download/?version=openEuler 24.03 LTS&scenario=CLOUD_COMPUTING',
+                  PATH: '/download/?version=openEuler 24.03 LTS&scenario=virtual_machine_img',
                 },
                 {
                   NAME: '嵌入式',
-                  PATH: '/download/?version=openEuler 24.03 LTS&scenario=EMBEDDED',
+                  PATH: '/download/?version=openEuler 24.03 LTS&scenario=embedded_img',
                 },
               ],
             },
@@ -539,15 +539,15 @@ export default {
               CHILDREN: [
                 {
                   NAME: '服务器',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP4&scenario=SERVER',
+                  PATH: '/download/?version=openEuler 22.03 LTS SP4&scenario=ISO',
                 },
                 {
                   NAME: '边缘计算',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP4&scenario=EDGE_CLOUD',
+                  PATH: '/download/?version=openEuler 22.03 LTS SP4&scenario=edge_img',
                 },
                 {
                   NAME: '云计算',
-                  PATH: '/download/?version=openEuler 22.03 LTS SP4&scenario=CLOUD_COMPUTING',
+                  PATH: '/download/?version=openEuler 22.03 LTS SP4&scenario=virtual_machine_img',
                 },
               ],
             },
