@@ -6796,9 +6796,9 @@ export const archMap = new Map([
     },
   ],
   [
-    'sw_arch',
+    'sw64',
     {
-      value: 'sw_arch',
+      value: 'sw64',
       label: 'SW64',
     },
   ],
