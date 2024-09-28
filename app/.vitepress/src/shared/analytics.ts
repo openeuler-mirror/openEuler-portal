@@ -11,7 +11,6 @@ if (isBrowser()) {
   oa = new OpenAnalytics({
     appKey: 'openEuler',
     request: (data) => {
-      console.log(data);
       reporAnalytics(data);
     },
   });
