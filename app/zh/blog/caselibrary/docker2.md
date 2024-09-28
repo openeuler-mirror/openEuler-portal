@@ -20,13 +20,13 @@ docker正常启动容器，容器运行一段时间后，在无其他异常的�
 
 运行docker容器镜像，字符界面长时间处于空闲状态，一段时间后字符界面会自动退出，包括docker run -d后台启动运行容器，也会有一段时间后自动退出现象。
 
-   ![image](./figures/docker容器运行自动退出5.PNG)
+   ![image](./figures/docker容器运行自动退出5.png)
 
 ## 原因分析
 
 运行容器镜像，当开发者通过ssh登陆且字符界面长时间处于空闲状态，字符界面会自动退出。这是由于容器镜像在制作时在/etc/profile文件中设置了TMOUT字段，当前此值默认为300S。
 
-   ![image](./figures/docker容器运行自动退出1.PNG)
+   ![image](./figures/docker容器运行自动退出1.png)
 
 ## 解决方案
 
@@ -44,11 +44,11 @@ docker正常启动容器，容器运行一段时间后，在无其他异常的�
 
     1. 先修改/etc/profile中的TMOUT环境变量值为0
 
-   ![image](./figures/docker容器运行自动退出2.PNG)
+   ![image](./figures/docker容器运行自动退出2.png)
 
     2. 再在/root/.bashrc中增加一行source /etc/profile
 
-   ![image](./figures/docker容器运行自动退出3.PNG)
+   ![image](./figures/docker容器运行自动退出3.png)
 
 3. 最终重启容器，TMOUT已经被设置为0，此时容器就不会再因为超时退出
 
@@ -56,4 +56,4 @@ docker正常启动容器，容器运行一段时间后，在无其他异常的�
     docker restart $container_id
     ```
 
-   ![image](./figures/docker容器运行自动退出4.PNG)
+   ![image](./figures/docker容器运行自动退出4.png)
