@@ -242,6 +242,10 @@ export default [
     lang: ['zh', 'en'],
   },
   {
+    name: 'summit2024',
+    lang: ['zh', 'en'],
+  },
+  {
     name: 'summit-list/**',
     lang: ['zh'],
   },
