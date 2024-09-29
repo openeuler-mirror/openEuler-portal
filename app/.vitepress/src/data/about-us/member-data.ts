@@ -52,6 +52,8 @@ import boyun_light from '@/assets/category/member/boyun_light.png';
 import boyun_dark from '@/assets/category/member/boyun_dark.png';
 import arm_light from '@/assets/category/member/arm_light.png';
 import arm_dark from '@/assets/category/member/arm_dark.png';
+import ningsi_light from '@/assets/category/member/ningsi_light.png';
+import ningsi_dark from '@/assets/category/member/ningsi_dark.png';
 
 export default {
   zh: [
@@ -71,13 +73,13 @@ export default {
       ID: 'Platinum-Donors',
       logoList: [
         {
-          img_light: qilin_light,
-          img_dark: qilin_dark,
+          img_light: qilinSoft_light,
+          img_dark: qilinSoft_dark,
           noIcon: true,
         },
         {
-          img_light: qilinSoft_light,
-          img_dark: qilinSoft_dark,
+          img_light: qilin_light,
+          img_dark: qilin_dark,
           noIcon: true,
         },
         {
@@ -136,13 +138,18 @@ export default {
           noIcon: true,
         },
         {
+          img_light: aosiwei_light,
+          img_dark: aosiwei_dark,
+          noIcon: true,
+        },
+        {
           img_light: boyun_light,
           img_dark: boyun_dark,
           noIcon: true,
         },
         {
-          img_light: aosiwei_light,
-          img_dark: aosiwei_dark,
+          img_light: ningsi_light,
+          img_dark: ningsi_dark,
           noIcon: true,
         },
         {
@@ -231,13 +238,13 @@ export default {
       ID: 'Platinum-Donors',
       logoList: [
         {
-          img_light: qilin_light,
-          img_dark: qilin_dark,
+          img_light: qilinSoft_light,
+          img_dark: qilinSoft_dark,
           noIcon: true,
         },
         {
-          img_light: qilinSoft_light,
-          img_dark: qilinSoft_dark,
+          img_light: qilin_light,
+          img_dark: qilin_dark,
           noIcon: true,
         },
         {
@@ -295,13 +302,18 @@ export default {
           noIcon: true,
         },
         {
+          img_light: aosiwei_light,
+          img_dark: aosiwei_dark,
+          noIcon: true,
+        },
+        {
           img_light: boyun_light,
           img_dark: boyun_dark,
           noIcon: true,
         },
         {
-          img_light: aosiwei_light,
-          img_dark: aosiwei_dark,
+          img_light: ningsi_light,
+          img_dark: ningsi_dark,
           noIcon: true,
         },
         {

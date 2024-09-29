@@ -16,7 +16,6 @@ import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 
 import { useCommon } from '@/stores/common';
 
-
 const { lang } = useData();
 const flag = ref();
 const onSwiper = (swiper: any) => {
@@ -134,6 +133,15 @@ const isDark = computed(() => {
               alt="openEuler"
             />
           </div>
+          <video
+            v-if="item.video && windowWidth > 767"
+            autoplay
+            loop
+            muted
+            :poster="item.pcBanner"
+          >
+            <source :src="item.video" type="video/mp4" />
+          </video>
         </div>
       </div>
     </swiper-slide>
@@ -174,6 +182,14 @@ html[lang='zh'] {
   }
 }
 
+.national-day {
+  @media screen and (max-width: 768px) {
+    .box {
+      display: none;
+    }
+  }
+}
+
 .version {
   .box {
     margin-bottom: 32px;
@@ -209,6 +225,7 @@ html[lang='zh'] {
       cursor: pointer;
     }
     .banner-panel-content {
+      position: relative;
       box-sizing: border-box;
       max-width: 1504px;
       margin: 0 auto;
@@ -218,6 +235,7 @@ html[lang='zh'] {
       justify-content: center;
       height: 100%;
       color: #fff;
+      z-index: 1;
       .title {
         font-size: var(--e-font-size-h1);
         line-height: var(--e-line-height-h1);
@@ -340,11 +358,20 @@ html[lang='zh'] {
     }
 
     .banner-panel-cover {
+      position: relative;
       background-position: 50%;
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
       height: 100%;
+      video {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
     }
     .isH5show {
       display: none;
