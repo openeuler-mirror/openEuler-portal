@@ -20,7 +20,7 @@ summary: '案例分析：docker配置容器umask值对容器的影响'
 
 正常openeuler容器启动，容器默认的umask值为0027，修改后others群组将无法访问新建文件或目录。
 
-![image](./figures/docker配置umask值1.PNG)
+![image](./figures/docker配置umask值1.png)
 
 ## 原因分析
 
@@ -34,7 +34,7 @@ summary: '案例分析：docker配置容器umask值对容器的影响'
 ```
 systemctl restart docker
 ```
-![image](./figures/docker配置umask值2.PNG)
+![image](./figures/docker配置umask值2.png)
 
 方案二：
 
@@ -44,4 +44,4 @@ systemctl restart docker
 docker run --annotation native.umask=normal XXX
 docker exec --annotation native.umask=normal XXX
 ```
-![image](./figures/docker配置umask值3.PNG)
+![image](./figures/docker配置umask值3.png)
