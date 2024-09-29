@@ -7,10 +7,25 @@ import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';
 import osSummit_pc from '@/assets/category/home/banner/ossummit_pc.jpg';
 import osSummit_mo from '@/assets/category/home/banner/ossummit_mo.jpg';
 
+import guoqing_pc from '@/assets/category/home/banner/guoqing_pc.jpg';
+import guoqing_pc_video from '@/assets/category/home/banner/guoqing_pc.mp4';
+import guoqing_mo from '@/assets/category/home/banner/guoqing_mo.jpg';
+
 export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
+      {
+        pcBanner: guoqing_pc,
+        moBanner: guoqing_mo,
+        link: '',
+        video: guoqing_pc_video,
+        id: 'national-day',
+        title: ['共筑开源梦 同庆辉煌时'],
+        desc: ['openEuler社区祝大家国庆节快乐'],
+        btn: '',
+        targetTap: 1,
+      },
       {
         pcBanner: osSummit_pc,
         moBanner: osSummit_mo,

@@ -44,7 +44,7 @@ import wuheshuan from '@/assets/category/organization/expert/wuheshuan.png';
 import liangbin from '@/assets/category/organization/brand/liangbin.png';
 import huangzhaowei from '@/assets/category/organization/brand/huangzhaowei.png';
 import kanglifeng from '@/assets/category/organization/brand/kanglifeng.png';
-import zhaoyi from '@/assets/category/organization/brand/zhaoyi.png';
+import xulu from '@/assets/category/organization/brand/xulu.png';
 import lizhenning from '@/assets/category/organization/brand/lizhenning.png';
 import majun from '@/assets/category/organization/brand/majun.png';
 import wangxinhui from '@/assets/category/organization/brand/wangxinhui.png';
@@ -405,16 +405,16 @@ export default {
             email: 'wendan@kylinsec.com.cn',
           },
           {
+            img: xulu,
+            name: '徐露',
+            position: ['委员'],
+            email: 'xu_lu2@hoperun.com',
+          },
+          {
             img: zhangyin,
             name: '张迎',
             position: ['委员'],
             email: 'zhangy1317@chinaunicom.cn',
-          },
-          {
-            img: zhaoyi,
-            name: '赵易',
-            position: ['委员'],
-            email: 'zhao_yi1@hoperun.com',
           },
         ],
       },
@@ -845,16 +845,16 @@ export default {
             email: 'wendan@kylinsec.com.cn',
           },
           {
+            img: xulu,
+            name: 'Xu Lu',
+            position: ['Committee member'],
+            email: 'xu_lu2@hoperun.com',
+          },
+          {
             img: zhangyin,
             name: 'Zhang Ying',
             position: ['Committee member'],
             email: 'zhangy1317@chinaunicom.cn',
-          },
-          {
-            img: zhaoyi,
-            name: 'Zhao Yi',
-            position: ['Committee member'],
-            email: 'zhao_yi1@hoperun.com',
           },
         ],
       },

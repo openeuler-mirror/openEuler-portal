@@ -104,7 +104,7 @@ openEuler 社区版本分为长期支持版本（LTS）和创新版本[（生命
 
 3.这个项目在 openEuler 中持续开发和孵化，直到项目逐渐成熟，那么就可以在 src-openeuler 中建立一个仓，为该项目提供相关的 spec 文件，制作成为一个 rpm，跟随着 openEuler 的版本发布，为世界人民所使用。
 
-4.具体可参考：[openEuler 社区项目运作流程介绍（第 4 页）](https://gitee.com/openeuler/community/raw/master/zh/contributors/openEuler%20%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf)
+4.具体可参考：[openEuler 社区项目运作流程介绍（第 4 页）](https://gitee.com/openeuler/community/raw/master/zh/contributors/openEuler%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf)
 
 方式二：在其它社区开发，集成到 openEuler 中：
 
