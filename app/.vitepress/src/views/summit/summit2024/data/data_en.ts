@@ -2,6 +2,8 @@ import banner_pc from '../img/banner-pc.jpg';
 import banner_mo from '../img/banner-mo.jpg';
 import textImg_pc from '../img/textImg-pc.png';
 import textImg_mo from '../img/textImg-mo.png';
+import callForPc from '../img/call-for-pc.jpg';
+import callForMo from '../img/call-for-mo.jpg';
 
 export default {
   banner: {
@@ -22,4 +24,30 @@ export default {
     'Collaborate on key initiatives for intelligent and digital transformation and contribute to the growth of a new global open source ecosystem.',
   ],
   introduce4: 'Join us as we unite the open source community, contribute to digital innovation, and work together towards digital intelligence.',
+  contentList: [
+    {
+      name: 'CALL FOR SPEAKER',
+      img: callForPc,
+      img_mo: callForMo,
+      link: 'https://shimo.im/forms/4mD9PWslzXzUBVfV/fill',
+    },
+    {
+      name: 'CALL FOR SPONSOR',
+      img: callForPc,
+      img_mo: callForMo,
+      link: 'https://shimo.im/forms/RztZ7HwgQMpNUsb4/fill',
+    },
+    {
+      name: 'CALL FOR SIG',
+      img: callForPc,
+      img_mo: callForMo,
+      link: 'https://shimo.im/forms/juGrDffhD8br7Lch/fill',
+    },
+    {
+      name: 'CALL FOR DEMO',
+      img: callForPc,
+      img_mo: callForMo,
+      link: 'https://shimo.im/forms/nuezgDhi3irgyLIf/fill',
+    },
+  ],
 };

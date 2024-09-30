@@ -49,6 +49,26 @@ if (lang.value === 'zh') {
       </ul>
       <p v-if="summitData.introduce4">{{ summitData.introduce4 }}</p>
     </div>
+    <div class="call-content">
+      <a
+        v-for="item in summitData.contentList"
+        :key="item.link"
+        class="content-item"
+        :href="item.link"
+        target="_blank"
+      >
+        <div class="card-bg" :style="{ backgroundImage: `url(${isMobile ? item.img_mo : item.img})` }"></div>
+        <div v-if="lang === 'zh'" class="cn-title call-title">
+          {{ item.name }}
+        </div>
+        <div
+          class="en-title call-title"
+          :class="{ 'in-en-lang': lang === 'en' }"
+        >
+          {{ item.name_en || item.name }}
+        </div>
+      </a>
+    </div>
     <div v-if="lang === 'zh'" class="previous">
       <div class="previous-title">
         <h3>{{ summitData.previous.title }}</h3>
@@ -66,6 +86,9 @@ if (lang.value === 'zh') {
   </AppContext>
 </template>
 <style scoped lang="scss">
+.dark .card-bg {
+  filter: brightness(80%) grayscale(20%) contrast(1.2);
+}
 @mixin mobile {
   @media screen and (max-width: 768px) {
     @content;
@@ -95,6 +118,85 @@ if (lang.value === 'zh') {
   @media screen and (max-width: 768px) {
     font-size: var(--e-font-size-text);
     line-height: var(--e-line-height-text);
+  }
+}
+
+.call-content {
+  display: grid;
+  margin: var(--e-spacing-h1) auto 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--e-spacing-h4);
+  @media screen and (max-width: 968px) {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 270px;
+    gap: var(--e-spacing-h4);
+    margin: var(--e-spacing-h4) auto 0 auto;
+  }
+  .content-item {
+    position: relative;
+    width: 100%;
+    display: block;
+    height: 352px;
+    text-align: center;
+    box-shadow: var(--e-shadow-l2);
+    @media screen and (max-width: 768px) {
+      height: 265px;
+    }
+    &:hover {
+      box-shadow: var(--e-shadow-l2_hover);
+      @media screen and (max-width: 1100px) {
+        box-shadow: var(--e-shadow-l2);
+      }
+    }
+    .card-bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      @media screen and (max-width: 768px) {
+        background-position: center bottom;
+      }
+    }
+    .call-title {
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--e-color-white);
+    }
+    .cn-title {
+      bottom: 13%;
+      font-size: var(--e-font-size-h4);
+      font-weight: 600;
+      letter-spacing: 4px;
+      @media screen and (max-width: 1416px) {
+        font-size: var(--e-font-size-h5);
+      }
+      @media screen and (max-width: 768px) {
+        font-size: var(--e-font-size-h6);
+        bottom: 15%;
+      }
+    }
+    .en-title {
+      bottom: 5%;
+      font-size: var(--e-font-size-h6);
+      letter-spacing: 2px;
+      @media screen and (max-width: 1416px) {
+        font-size: var(--e-font-size-h7);
+      }
+      @media screen and (max-width: 768px) {
+        font-size: var(--e-font-size-h8);
+        bottom: 6%;
+        letter-spacing: 1px;
+      }
+    }
+    .in-en-lang {
+      bottom: 10%;
+    }
   }
 }
 
