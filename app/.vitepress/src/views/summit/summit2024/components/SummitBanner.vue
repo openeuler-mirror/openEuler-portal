@@ -13,7 +13,6 @@ defineProps({
   },
 });
 
-
 const { lang } = useData();
 const screenWidth = ref(useWindowResize());
 const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
@@ -62,7 +61,6 @@ onMounted(() => {
     transform: translateX(-50%);
     padding: 0 44px;
     display: flex;
-    align-items: center;
     @media screen and (max-width: 1439px) {
       padding: 0 24px;
     }
@@ -71,7 +69,8 @@ onMounted(() => {
     width: 100%;
   }
   .text-img {
-    height: 162px;
+    height: 156px;
+    margin-top: 90px;
   }
 }
 
