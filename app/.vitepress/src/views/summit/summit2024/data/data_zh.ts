@@ -2,6 +2,8 @@ import banner_pc from '../img/banner-pc.jpg';
 import banner_mo from '../img/banner-mo.jpg';
 import textImg_pc from '../img/textImg-pc.png';
 import textImg_mo from '../img/textImg-mo.png';
+import callForPc from '../img/call-for-pc.jpg';
+import callForMo from '../img/call-for-mo.jpg';
 
 export default {
   banner: {
@@ -22,6 +24,36 @@ export default {
     '共商智能化、数字化的关键举措，为全球开源新生态的建设贡献力量',
   ],
   introduce4: '汇聚开源，贡献智慧，崛起数字时代，引领数智未来。',
+  contentList: [
+    {
+      name: '议题征集',
+      name_en: 'CALL FOR SPEAKER',
+      img: callForPc,
+      img_mo: callForMo,
+      link: 'https://shimo.im/forms/4mD9PWslzXzUBVfV/fill',
+    },
+    {
+      name: '赞助征集',
+      name_en: 'CALL FOR SPONSOR',
+      img: callForPc,
+      img_mo: callForMo,
+      link: 'https://shimo.im/forms/RztZ7HwgQMpNUsb4/fill',
+    },
+    {
+      name: 'SIG征集',
+      name_en: 'CALL FOR SIG',
+      img: callForPc,
+      img_mo: callForMo,
+      link: 'https://shimo.im/forms/juGrDffhD8br7Lch/fill',
+    },
+    {
+      name: 'DEMO征集',
+      name_en: 'CALL FOR DEMO',
+      img: callForPc,
+      img_mo: callForMo,
+      link: 'https://shimo.im/forms/nuezgDhi3irgyLIf/fill',
+    },
+  ],
   previous: {
     title: '精彩回顾',
     list: [
