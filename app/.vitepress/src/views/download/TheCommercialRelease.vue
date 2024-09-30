@@ -190,6 +190,9 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
   });
   return itemArchList;
 };
+const changeSize = () => {
+  currentPage.value = 1;
+}
 </script>
 
 <template>
@@ -447,6 +450,7 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
               v-model:page-size="pageSize"
               :page-sizes="[12, 18, 24, 36]"
               :background="true"
+              @size-change="changeSize"
               layout="sizes, prev, pager, next, slot, jumper"
               :total="total"
             >

@@ -48,17 +48,19 @@ export interface MirrorDataT {
   [key: string]: string;
 }
 export interface LinkListItemT {
-  TYPE: string;
-  SIZE: string;
-  SHACODE: string;
-  DOWNLOAD_LINK: string;
-  TIPS: string;
-  IS_FOLDER?: boolean;
+  Name: string;
+  Size: string;
+  ShaCode: string;
+  Path: string;
+  Type: 'file' | 'dir';
+  Tips: string;
+  Order: number;
 }
 export interface DetailedLinkItemT {
-  LINK_LIST: LinkListItemT[];
-  ARCH: string;
-  SCENARIO: string;
+  Order: number;
+  Tree: LinkListItemT[];
+  Arch: string;
+  Scenario: string;
 }
 export interface DetailedLinkCommercialItemT {
   LINK: string;
@@ -68,4 +70,13 @@ export interface DetailedLinkCommercialItemT {
 export interface ScenarioT {
   KEY: string;
   VALUE: string;
+}
+
+export interface VersionInfoT {
+  Version: string;
+  Scenario: string[];
+  Arch: string[];
+  LTS: boolean;
+  plannedEol: string;
+  publishDate: string;
 }

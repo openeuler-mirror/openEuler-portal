@@ -1,6 +1,10 @@
 export default {
   zh: [
     {
+      path: '/whitepaper/openEuler%2024.09%20技术白皮书.pdf',
+      summary: 'openEuler 24.09 白皮书',
+    },
+    {
       path: '/whitepaper/openEuler%2022.03%20LTS%20SP4%20技术白皮书.pdf',
       summary: 'openEuler 22.03 LTS SP4 白皮书',
     },
