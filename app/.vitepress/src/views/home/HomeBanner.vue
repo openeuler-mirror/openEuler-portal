@@ -125,7 +125,7 @@ const isDark = computed(() => {
           <div
             v-if="item.id === 'devday'"
             class="img-box"
-            :class="windowWidth < 824 ? 'box-mo' : ''"
+            :class="[windowWidth < 824 ? 'box-mo' : '', item.class]"
           >
             <img
               v-if="(item as any).textImg_pc"
@@ -400,6 +400,36 @@ html[lang='zh'] {
         justify-content: flex-end;
         .box {
           display: none;
+        }
+      }
+    }
+
+    .img-box {
+      position: absolute;
+      width: 100%;
+      max-width: 1416px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0 44px;
+    }
+    .summit-text-img {
+      img {
+        height: 156px;
+        margin-top: 110px;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      .img-box {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+      .summit-text-img {
+        img {
+          height: 60px;
+          margin-bottom: 38px;
         }
       }
     }

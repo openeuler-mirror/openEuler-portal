@@ -11,10 +11,28 @@ import guoqing_pc from '@/assets/category/home/banner/guoqing_pc.jpg';
 import guoqing_pc_video from '@/assets/category/home/banner/guoqing_pc.mp4';
 import guoqing_mo from '@/assets/category/home/banner/guoqing_mo.jpg';
 
+import summit_pc from '@/assets/category/home/banner/summit2024-pc.jpg';
+import summit_mo from '@/assets/category/home/banner/summit2024-mo.jpg';
+import textImg_pc from '@/assets/category/home/banner/textImg-pc.png';
+import textImg_mo from '@/assets/category/home/banner/textImg-mo.png';
+
 export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
+      {
+        pcBanner: summit_pc,
+        moBanner: summit_mo,
+        link: '/zh/interaction/summit-list/summit2024/',
+        id: 'devday',
+        title: [],
+        desc: [],
+        btn: '',
+        targetTap: 1,
+        textImg_pc: textImg_pc,
+        textImg_mo: textImg_mo,
+        class: 'summit-text-img'
+      },
       {
         pcBanner: guoqing_pc,
         moBanner: guoqing_mo,
