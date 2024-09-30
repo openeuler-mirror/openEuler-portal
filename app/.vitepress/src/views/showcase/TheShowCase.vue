@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
 import { useData } from 'vitepress';
+
+import { oa } from '@/shared/analytics';
 import { getUserCaseData } from '@/api/api-showcase';
 import { useI18n } from '@/i18n';
 import { useCookieStore } from '@/stores/common';
+import { uniqueId } from '@/shared/utils';
 
 import useWindowScroll from '@/components/hooks/useWindowScroll';
 
@@ -15,7 +18,6 @@ import IconRight from '~icons/app/icon-arrow-right.svg';
 import IconDownload from '~icons/app/icon-download.svg';
 import banner from '@/assets/banner/banner-community.png';
 import search from '@/assets/illustrations/search.png';
-import { addSearchBuriedData } from '@/shared/utils';
 
 const i18n = useI18n();
 const { lang } = useData();
@@ -103,36 +105,38 @@ function jumpPage(page: number) {
 function goDetail(link: string, item: any, index: number) {
   const search_result_url = '/' + link.replace('index', '');
   if (cookieStore.isAllAgreed) {
-    initSensors(search_result_url, item, index);
+    reportSelectSearchResult(search_result_url, item, index);
   }
   window.open(search_result_url);
 }
-// 埋点
-const initSensors = (link: string, item: any, index: number) => {
+
+// ----------------------- 埋点相关 ----------------------------
+let SEARCH_EVENT_ID = uniqueId();
+const reportSearch = (keyword: string) => {
+  SEARCH_EVENT_ID = uniqueId();
+  oa.report('searchValue', () => {
+    return {
+      search_event_id: SEARCH_EVENT_ID,
+      search_key: keyword,
+    };
+  });
+};
+const reportSelectSearchResult = (link: string, item: any, index: number) => {
   const searchKeyObj = {
     search_tag: currentTag.value,
     search_rank_num: pageSize.value * (currentPage.value - 1) + (index + 1),
     search_result_total_num: total.value,
     search_result_url: location.origin + link,
   };
-  try {
-    const sensors = (window as any)['sensorsDataAnalytic201505'];
-    const searchResult = keyWord.value
-      ? (window as any)['addSearchBuriedData'] || {}
-      : {
-          search_key: '',
-          search_event_id: '',
-        };
-    sensors.setProfile({
-      profileType: 'selectSearchResult',
+
+  oa.report('selectSearchResult', () => {
+    return {
+      search_event_id: SEARCH_EVENT_ID,
+      search_key: keyWord.value,
       ...(item || {}),
-      ...((window as any)['sensorsCustomBuriedData'] || {}),
-      ...searchResult,
       ...searchKeyObj,
-    });
-  } catch (error: any) {
-    console.error(error);
-  }
+    };
+  });
 };
 
 // 设置当前tag的所有案例
@@ -181,7 +185,7 @@ function searchCase() {
   currentTag.value = userCaseData.value.tags[0];
   if (keyWord.value) {
     if (cookieStore.isAllAgreed) {
-      addSearchBuriedData(keyWord.value);
+      reportSearch(keyWord.value);
     }
     getUserCaseData(searchData.value).then((res) => {
       if (res.status === 200 && res.obj.records) {

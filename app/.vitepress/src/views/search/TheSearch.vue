@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, watch, ref, onMounted, reactive, nextTick } from 'vue';
 import { useData } from 'vitepress';
+import { oa } from '@/shared/analytics';
 import { useI18n } from '@/i18n';
 import {
   getSearchData,
@@ -28,9 +29,10 @@ import MatterTip from './MatterTip.vue';
 import SearchRecommend from './SearchRecommend.vue';
 
 import { ElMessage } from 'element-plus';
-import { addSearchBuriedData } from '@/shared/utils';
 import { AigcPrivacyAccepted } from '@/shared/privacy-accepted.const';
 import { useStoreData, isLogined, showGuard } from '@/shared/login';
+import { uniqueId } from '@/shared/utils';
+
 import useClickOutside from '@/components/hooks/useClickOutside';
 
 const searchRecommendRef = ref();
@@ -342,7 +344,7 @@ function searchAll(valueChange?: boolean) {
     currentPage.value = 1;
 
     if (cookieStore.isAllAgreed) {
-      addSearchBuriedData(searchInput.value);
+      reportSearch(searchInput.value);
     }
     if (valueChange) {
       currentTab.value = 'all';
@@ -385,27 +387,43 @@ function goLink(data: any, index: number) {
     search_result_url = location.origin + search_result_url;
   }
   if (cookieStore.isAllAgreed) {
-    setAdvertisedData(data, index, search_result_url);
+    reportSelectSearchResult(data, index, search_result_url, searchInput.value);
   }
   window.open(search_result_url);
 }
 // ----------------------- 埋点相关 ----------------------------
-const setAdvertisedData = (data: any, index: number, path: string) => {
+let SEARCH_EVENT_ID = uniqueId();
+const reportSearch = (keyword: string) => {
+  SEARCH_EVENT_ID = uniqueId();
+  oa.report('searchValue', () => {
+    return {
+      search_event_id: SEARCH_EVENT_ID,
+      search_key: keyword,
+    };
+  });
+};
+
+const reportSelectSearchResult = (
+  data: any,
+  index: number,
+  path: string,
+  keyword: string
+) => {
   const searchKeyObj = {
     search_tag: data.type,
     search_rank_num: pageSize.value * (currentPage.value - 1) + (index + 1),
     search_result_total_num: total.value,
     search_result_url: path,
   };
-  const sensors = (window as any)['sensorsDataAnalytic201505'];
-  const sensorObj = {
-    profileType: 'selectSearchResult',
-    ...(data || {}),
-    ...((window as any)['sensorsCustomBuriedData'] || {}),
-    ...((window as any)['addSearchBuriedData'] || {}),
-    ...searchKeyObj,
-  };
-  sensors.setProfile(sensorObj);
+
+  oa.report('selectSearchResult', () => {
+    return {
+      search_event_id: SEARCH_EVENT_ID,
+      search_key: keyword,
+      ...(data || {}),
+      ...searchKeyObj,
+    };
+  });
 };
 
 // 移动端跳转翻页事件
