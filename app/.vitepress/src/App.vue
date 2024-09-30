@@ -76,7 +76,9 @@ onMounted(() => {
     </main>
   </el-config-provider>
   <CookieNotice />
-  <AppFooter />
+  <ClientOnly>
+    <AppFooter />
+  </ClientOnly>
 </template>
 
 <style lang="scss" scoped>

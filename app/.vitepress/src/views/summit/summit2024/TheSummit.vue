@@ -36,7 +36,9 @@ if (lang.value === 'zh') {
 }
 </script>
 <template>
-  <SummitBanner :banner-data="summitData.banner" />
+  <ClientOnly>
+    <SummitBanner :banner-data="summitData.banner" />
+  </ClientOnly>
   <AppContext>
     <div class="introduce">
       <p>{{ summitData.introduce }}</p>

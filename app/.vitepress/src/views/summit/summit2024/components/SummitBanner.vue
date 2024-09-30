@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, watch } from 'vue';
 import { useData } from 'vitepress';
 import AOS from 'aos';
 
@@ -15,13 +15,21 @@ defineProps({
 
 const { lang } = useData();
 const screenWidth = ref(useWindowResize());
-const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
+const isMobile = ref(false);
 
 onMounted(() => {
   AOS.init({
     duration: 800,
   });
 });
+
+watch(
+  () => screenWidth.value,
+  (val) => {
+    isMobile.value = val <= 768 ? true : false
+  },
+  { immediate: true }
+);
 </script>
 
 <template>
