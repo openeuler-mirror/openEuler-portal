@@ -106,19 +106,20 @@ export const constructDownloadData = (
   });
 };
 
+// 将版本架构场景信息与发布时间等信息结合
 export const getVersionList = (list: VersionInfoT[], i18n: any) => {
   return list
-    .map((version: VersionInfoT) => {
+    .filter((version) => {
       version.Version = version.Version.replaceAll('-', ' ');
-      i18n.value.download.COMMUNITY_LIST.find(
-        (item: { PLANNED_EOL: string; PUBLISH_DATE: string; NAME: string }) => {
-          if (item.NAME === version.Version) {
-            version.plannedEol = item.PLANNED_EOL;
-            version.publishDate = item.PUBLISH_DATE;
-          }
-        }
+      const matchItem = i18n.value.download.COMMUNITY_LIST.find(
+        (item: { NAME: string }) => item.NAME === version.Version
       );
-      return version;
+      if (matchItem) {
+        version.plannedEol = matchItem.PLANNED_EOL;
+        version.publishDate = matchItem.PUBLISH_DATE;
+        return true;
+      }
+      return false;
     })
     .sort((a: VersionInfoT, b: VersionInfoT) => {
       // 按照发布时间排序
