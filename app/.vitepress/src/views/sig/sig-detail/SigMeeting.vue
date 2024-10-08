@@ -36,9 +36,10 @@ const props = defineProps({
   },
   mail: {
     type: String,
-    default: '',
+    default: 'dev@openeuler.org',
   },
 });
+
 const commonStore = useCommon();
 let currentMeet = reactive<TableDataT>({
   date: '',

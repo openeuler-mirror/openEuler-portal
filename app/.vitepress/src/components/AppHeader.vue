@@ -114,8 +114,14 @@ watch(
 );
 
 const toBody = ref(false);
+// ---------------- 防止logo 刷新闪烁 -------------------
+const logoVisible = ref(false);
 onMounted(() => {
   toBody.value = true;
+  // 设置0.5秒后显示元素
+  setTimeout(() => {
+    logoVisible.value = true;
+  }, 500);
 });
 onUnmounted(() => {
   toBody.value = false;
@@ -240,6 +246,7 @@ const navItemClick = () => {
   }
 }
 .logo {
+  visibility: hidden;
   height: 32px;
   cursor: pointer;
   margin-right: var(--e-spacing-h4);

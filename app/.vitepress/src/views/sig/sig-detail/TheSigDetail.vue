@@ -26,7 +26,7 @@ import {
 } from '@/api/api-sig';
 
 const router = useRouter();
-const { lang } = useData();
+const { lang, params } = useData();
 const i18n = useI18n();
 const screenWidth = useWindowResize();
 const isIphone = computed(() => {
@@ -37,7 +37,10 @@ const paginLayout = computed(() =>
     ? 'prev, slot, jumper, next'
     : 'sizes, prev, pager, next, slot, jumper'
 );
-const sigDetailName = ref('');
+
+const sigName = computed(() => {
+  return params.value?.sig || '';
+});
 const sigDetail = computed(() => {
   return i18n.value.sig.SIG_DETAIL;
 });
@@ -45,13 +48,13 @@ const mail = ref('');
 const sigMeetingData: any = ref('');
 const sigMemberData: any = ref('');
 const memberList: any = ref([]);
-const params = reactive({
+const pageParams = reactive({
   size: 50,
   page: 1,
 });
 
 function getSigDetails() {
-  getSigDetail(sigDetailName.value, params)
+  getSigDetail(sigName.value, pageParams)
     .then((res: any) => {
       sigMeetingData.value = res.data;
     })
@@ -63,7 +66,7 @@ function getSigDetails() {
 function getSigMembers() {
   const param = {
     community: 'openeuler',
-    sig: sigDetailName.value,
+    sig: sigName.value,
   };
   getSigMember(param).then((res: any) => {
     if (res?.data[0]) {
@@ -123,7 +126,7 @@ const repositoryList = computed(() => {
 const getRepositoryList = () => {
   const param = {
     community: 'openeuler',
-    sig: sigDetailName.value,
+    sig: sigName.value,
   };
   getSigRepositoryList(param).then((data) => {
     if (data.code === 200) {
@@ -150,23 +153,6 @@ function setDefaultImage(e: any) {
   }
 }
 onMounted(() => {
-  function getUrlParam(paraName: any) {
-    const searchArray = location.search.split('?');
-    if (searchArray.length > 1) {
-      const arrPara = searchArray[1].split('&');
-      let arr;
-      for (let i = 0; i < arrPara.length; i++) {
-        arr = arrPara[i].split('=');
-        if (arr !== null && arr[0] === paraName) {
-          return arr[1];
-        }
-      }
-      return '';
-    } else {
-      return '';
-    }
-  }
-  sigDetailName.value = getUrlParam('name');
   getSigDetails();
   getSigMembers();
   getRepositoryList();
@@ -207,22 +193,22 @@ onUpdated(() => {
   }
 });
 // 获取easyeditor编辑发布的信息
-const href = `https://www.openeuler.org/${lang.value}/sig/sig-detail/?name=`;
+const href = `https://www.openeuler.org/${lang.value}/sig/sig-detail/?name=${sigName.value}`;
 const easyeditorInfo: any = ref({});
 function getEasyeditorInfo() {
-  getSigDetailInfo(href + sigDetailName.value)
-    .then((res) => {
-      if (res.statusCode === 200 && res.data?.length) {
-        res.data.forEach((item: EasyeditorInfoDataItemT) => {
-          easyeditorInfo.value[item.name] = item;
-        });
-      }
-    })
-    .catch((error) => {
-      throw new Error(error);
-    });
+  getSigDetailInfo(href).then((res) => {
+    if (res.statusCode === 200 && res.data?.length) {
+      res.data.forEach((item: EasyeditorInfoDataItemT) => {
+        easyeditorInfo.value[item.name] = item;
+      });
+    }
+  });
 }
 onMounted(() => {
+  const path = window.location.pathname;
+  if (path.at(-1) !== '/') {
+    history.replaceState(null, '', window.location.pathname + '/');
+  }
   getEasyeditorInfo();
 });
 // 转换md语法

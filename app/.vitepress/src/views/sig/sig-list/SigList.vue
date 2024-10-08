@@ -338,11 +338,10 @@ onMounted(() => {
         <template #default="scope">
           <div class="sig-name">
             <a
-              target="_blank"
               rel="noopener noreferrer"
               style="cursor: pointer"
               class="sig-name-info"
-              @click="toSigDetail(scope.row)"
+              :href="`/${language}/sig/${scope.row.sig_name}/`"
             >
               {{ scope.row.sig_name }}
             </a>

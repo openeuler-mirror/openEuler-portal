@@ -122,6 +122,7 @@ const config: UserConfig = {
       });
     },
   },
+  cleanUrls: true,
   themeConfig: {
     // locales: {
     //   '/': i18n.zh,
