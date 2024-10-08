@@ -777,6 +777,7 @@ function setActiveMirrorMobile(index: number, item: string) {
         gap: var(--e-spacing-h8);
         color: var(--e-color-text1);
         .server-tips {
+          cursor: pointer;
           width: var(--e-font-size-h6);
           height: 32px;
           color: var(--e-color-text4);

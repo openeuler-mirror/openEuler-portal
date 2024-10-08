@@ -93,7 +93,6 @@ const isDark = computed(() => {
             :class="[item.id, isDark ? `${item.id}-dark` : '']"
           >
             <div data-aos="fade-down" class="box">
-              <img v-if="item.img" class="text-img" :src="item?.img" alt="" />
               <p
                 v-for="title in item.title"
                 :key="title"
@@ -125,7 +124,7 @@ const isDark = computed(() => {
           <div
             v-if="item.id === 'devday'"
             class="img-box"
-            :class="[windowWidth < 824 ? 'box-mo' : '', item.class]"
+            :class="[windowWidth < 824 ? 'box-mo' : '', item.id]"
           >
             <img
               v-if="(item as any).textImg_pc"
@@ -133,15 +132,6 @@ const isDark = computed(() => {
               alt="openEuler"
             />
           </div>
-          <video
-            v-if="item.video && windowWidth > 767"
-            autoplay
-            loop
-            muted
-            :poster="item.pcBanner"
-          >
-            <source :src="item.video" type="video/mp4" />
-          </video>
         </div>
       </div>
     </swiper-slide>
@@ -414,7 +404,7 @@ html[lang='zh'] {
       transform: translateX(-50%);
       padding: 0 44px;
     }
-    .summit-text-img {
+    .devday {
       img {
         height: 156px;
         margin-top: 110px;
@@ -426,7 +416,7 @@ html[lang='zh'] {
         justify-content: center;
         align-items: flex-end;
       }
-      .summit-text-img {
+      .devday {
         img {
           height: 60px;
           margin-bottom: 38px;

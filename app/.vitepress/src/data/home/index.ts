@@ -7,10 +7,6 @@ import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';
 import osSummit_pc from '@/assets/category/home/banner/ossummit_pc.jpg';
 import osSummit_mo from '@/assets/category/home/banner/ossummit_mo.jpg';
 
-import guoqing_pc from '@/assets/category/home/banner/guoqing_pc.jpg';
-import guoqing_pc_video from '@/assets/category/home/banner/guoqing_pc.mp4';
-import guoqing_mo from '@/assets/category/home/banner/guoqing_mo.jpg';
-
 import summit_pc from '@/assets/category/home/banner/summit2024-pc.jpg';
 import summit_mo from '@/assets/category/home/banner/summit2024-mo.jpg';
 import textImg_pc from '@/assets/category/home/banner/textImg-pc.png';
@@ -25,24 +21,9 @@ export default {
         moBanner: summit_mo,
         link: '/zh/interaction/summit-list/summit2024/',
         id: 'devday',
-        title: [],
-        desc: [],
-        btn: '',
         targetTap: 1,
         textImg_pc: textImg_pc,
         textImg_mo: textImg_mo,
-        class: 'summit-text-img'
-      },
-      {
-        pcBanner: guoqing_pc,
-        moBanner: guoqing_mo,
-        link: '',
-        video: guoqing_pc_video,
-        id: 'national-day',
-        title: ['共筑开源梦 同庆辉煌时'],
-        desc: ['openEuler社区祝大家国庆节快乐'],
-        btn: '',
-        targetTap: 1,
       },
       {
         pcBanner: osSummit_pc,
