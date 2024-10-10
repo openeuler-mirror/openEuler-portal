@@ -15,6 +15,10 @@ const jumpToUserZone = () => {
   const origin = import.meta.env.VITE_LOGIN_ORIGIN;
   window.open(`${origin}/${language}/profile`, '_black');
 };
+
+const jumpToMsgCenter = () => {
+  window.open(import.meta.env.VITE_MESSAGE_CENTER_URL);
+};
 </script>
 
 <template>
@@ -31,6 +35,7 @@ const jumpToUserZone = () => {
       </div>
       <ul class="menu-list">
         <li @click="jumpToUserZone()">{{ i18n.common.USER_CENTER }}</li>
+        <li @click="jumpToMsgCenter()">{{ i18n.common.MESSAGE_CENTER }}</li>
         <li @click="logout()">{{ i18n.common.LOGOUT }}</li>
       </ul>
     </div>
