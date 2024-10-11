@@ -1,0 +1,37 @@
+@use './var.scss';
+
+.o-badge {
+  position: relative;
+  display: inline-block;
+}
+
+.o-badge-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(100%, -50%);
+  transform-origin: 100% 0;
+  min-width: var(--badge-min-width);
+  font-size: var(--badge-text-size);
+  line-height: var(--badge-text-height);
+  text-align: center;
+  color: var(--badge-color);
+  background-color: var(--badge-bg-color);
+  padding-left: var(--badge-padding);
+  padding-right: var(--badge-padding);
+  border-radius: var(--badge-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--badge-height);
+}
+
+.o-badge-label {
+  display: inline-block;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: var(--badge-text-size);
+  line-height: var(--badge-text-height);
+  transform: scale(0.66667);
+}
