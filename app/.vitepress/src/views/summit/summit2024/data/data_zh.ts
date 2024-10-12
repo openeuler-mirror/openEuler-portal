@@ -33,13 +33,6 @@ export default {
       link: 'https://shimo.im/forms/4mD9PWslzXzUBVfV/fill',
     },
     {
-      name: '赞助征集',
-      name_en: 'CALL FOR SPONSOR',
-      img: callForPc,
-      img_mo: callForMo,
-      link: 'https://shimo.im/forms/RztZ7HwgQMpNUsb4/fill',
-    },
-    {
       name: 'SIG征集',
       name_en: 'CALL FOR SIG',
       img: callForPc,
