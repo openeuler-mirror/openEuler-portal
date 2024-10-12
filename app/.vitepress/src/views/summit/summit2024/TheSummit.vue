@@ -126,7 +126,7 @@ if (lang.value === 'zh') {
 .call-content {
   display: grid;
   margin: var(--e-spacing-h1) auto 0 auto;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--e-spacing-h4);
   @media screen and (max-width: 968px) {
     grid-template-columns: repeat(1, 1fr);
