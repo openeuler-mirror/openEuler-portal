@@ -1,13 +1,16 @@
-
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
-import { useRouter, useData } from 'vitepress';
+import { useData } from 'vitepress';
 
-import { useCommon, useCookieStore } from '@/stores/common';
+import { useCommon } from '@/stores/common';
+import { type ScheduleItemT } from './@type';
+
+import { getEasyeditorInfo } from '@/api/api-easyeditor';
 
 import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
-
+import SummitSchedule from './components/SummitSchedule.vue';
+import SummitSubforum from './components/SummitSubforum.vue';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
 import liveLight from '@/assets/category/summit/summit2022/live.png';
@@ -18,7 +21,6 @@ import data_en from './data/data_en';
 
 const { lang } = useData();
 
-const router = useRouter();
 const commonStore = useCommon();
 const isMobile = computed(() =>
   useWindowResize().value <= 768 ? true : false
@@ -27,18 +29,52 @@ const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );
 
-let summitData: any;
+//------------------- 峰会日程 --------------------
+const summitData = computed(() => {
+  return lang.value === 'zh' ? data_zh : data_en;
+});
 
-if (lang.value === 'zh') {
-  summitData = data_zh;
-} else {
-  summitData = data_en;
+const dateList = [
+  { day: 15, month: 'NOV' },
+  { day: 16, month: 'NOV' },
+];
+// 议程日期切换
+const dataIndex = ref(0);
+// 控制主论坛分论坛切换
+const timeTabIndex = ref(0);
+function setDataIndex(index: number) {
+  dataIndex.value = index;
+  timeTabIndex.value = 0;
 }
+// 切割agent数据获取当前页面渲染数据
+const renderData = computed(() => {
+  if (timeTabIndex.value === 1) {
+    return getData.value?.content.content.slice(1);
+  } else if (getData.value) {
+    return getData.value?.content.content.slice(0, 1);
+  }
+});
+// 获取议程数据
+const agendaData = ref<ScheduleItemT[]>([]);
+onMounted(() => {
+  const href = `https://www.openeuler.org/${lang.value}/interaction/summit-list/summit2024/`;
+  getEasyeditorInfo(href).then((res) => {
+    for (let i = 0; i < res?.data?.length; i++) {
+      res.data[i].content = JSON.parse(res.data[i].content);
+    }
+    agendaData.value = res.data;
+  });
+});
+const getData = computed(() => {
+  if (dataIndex.value === 0) {
+    return agendaData.value.find((item) => item.name === 'schedule-15');
+  } else {
+    return agendaData.value.find((item) => item.name === 'schedule-16');
+  }
+});
 </script>
 <template>
-  <ClientOnly>
-    <SummitBanner :banner-data="summitData.banner" />
-  </ClientOnly>
+  <SummitBanner :banner-data="summitData.banner" />
   <AppContext>
     <div class="introduce">
       <p>{{ summitData.introduce }}</p>
@@ -51,6 +87,7 @@ if (lang.value === 'zh') {
       </ul>
       <p v-if="summitData.introduce4">{{ summitData.introduce4 }}</p>
     </div>
+    <!-- call for -->
     <div class="call-content">
       <a
         v-for="item in summitData.contentList"
@@ -59,7 +96,12 @@ if (lang.value === 'zh') {
         :href="item.link"
         target="_blank"
       >
-        <div class="card-bg" :style="{ backgroundImage: `url(${isMobile ? item.img_mo : item.img})` }"></div>
+        <div
+          class="card-bg"
+          :style="{
+            backgroundImage: `url(${isMobile ? item.img_mo : item.img})`,
+          }"
+        ></div>
         <div v-if="lang === 'zh'" class="cn-title call-title">
           {{ item.name }}
         </div>
@@ -71,6 +113,59 @@ if (lang.value === 'zh') {
         </div>
       </a>
     </div>
+    <div class="agenda">
+      <h3>
+        {{ summitData.agenda.title }}
+      </h3>
+      <div class="date">
+        <div
+          v-for="(item, index) in dateList"
+          :key="item.day"
+          class="date-item"
+          :class="{ active: dataIndex === index }"
+          @click="setDataIndex(index)"
+        >
+          <p class="date-day">{{ item.day }}</p>
+          <p class="date-month">{{ item.month }}</p>
+        </div>
+      </div>
+      <!--  日程-->
+      <div class="schedule-box">
+        <el-tabs v-model.number="timeTabIndex" class="schedule-tabs">
+          <el-tab-pane :name="0">
+            <template #label>
+              <div class="time-tabs">
+                {{ summitData.agenda.tabType[0] }}
+              </div>
+            </template>
+          </el-tab-pane>
+          <el-tab-pane :name="1">
+            <template #label>
+              <div class="time-tabs">
+                {{ summitData.agenda.tabType[1] }}
+              </div>
+            </template>
+          </el-tab-pane>
+        </el-tabs>
+        <template v-if="renderData?.length && timeTabIndex === 0">
+          <!--  日程表格 -->
+          <SummitSchedule
+            v-for="item in renderData"
+            :key="item.lable"
+            :agenda-data="item"
+          />
+        </template>
+        <!-- 分论坛卡片 -->
+        <template v-else-if="renderData?.length">
+          <SummitSubforum
+            v-for="item in renderData"
+            :key="item.lable"
+            :agenda-data="item"
+          />
+        </template>
+      </div>
+    </div>
+    <!--  只在中文页显示精彩回顾 -->
     <div v-if="lang === 'zh'" class="previous">
       <div class="previous-title">
         <h3>{{ summitData.previous.title }}</h3>
@@ -126,9 +221,12 @@ if (lang.value === 'zh') {
 .call-content {
   display: grid;
   margin: var(--e-spacing-h1) auto 0 auto;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--e-spacing-h4);
-  @media screen and (max-width: 968px) {
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
     max-width: 270px;
     gap: var(--e-spacing-h4);
@@ -199,6 +297,150 @@ if (lang.value === 'zh') {
     .in-en-lang {
       bottom: 10%;
     }
+  }
+}
+
+.agenda {
+  margin-top: var(--e-spacing-h1);
+  @media (max-width: 767px) {
+    margin-top: var(--e-spacing-h2);
+  }
+  h3 {
+    text-align: center;
+    font-size: var(--e-font-size-h3);
+    line-height: var(--e-line-height-h3);
+    color: var(--e-color-text1);
+    font-weight: 300;
+    @media (max-width: 767px) {
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
+    }
+  }
+  .date {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    .date-item {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #cbcbcb;
+      border-radius: 8px;
+      border: 1px solid #cbcbcb;
+      transition: all 0.3s ease-out;
+
+      & ~ div {
+        margin-left: 40px;
+      }
+      &.active {
+        color: #fff;
+        background-color: var(--e-color-brand1);
+        border: 1px solid #fff;
+      }
+      .date-day {
+        padding: 13px 17px 3px 15px;
+        line-height: 48px;
+        font-size: 48px;
+        font-weight: 700;
+        border-bottom: 1px solid #cbcbcb;
+        @media screen and (max-width: 1120px) {
+          padding: 6px 16px;
+          font-size: 32px;
+          line-height: 32px;
+        }
+      }
+      .date-month {
+        padding: 6px 0;
+        font-size: 24px;
+        font-weight: 100;
+        line-height: 24px;
+        @media screen and (max-width: 1120px) {
+          padding: 4px 0;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .schedule-box {
+    position: relative;
+    .time-tip {
+      position: absolute;
+      top: 24px;
+      font-size: 18px;
+      color: var(--e-color-text1);
+      @media (max-width: 1100px) {
+        top: 46px;
+        font-size: 12px;
+      }
+    }
+    .change-tip {
+      margin-top: 24px;
+      font-size: 18px;
+      color: var(--e-color-text1);
+      @media (max-width: 1100px) {
+        margin-top: 16px;
+        font-size: 12px;
+      }
+    }
+  }
+  .schedule-tabs {
+    position: relative;
+    text-align: center;
+    margin-top: 24px;
+    :deep(.el-tabs__content) {
+      overflow: visible;
+      .el-button {
+        position: absolute;
+        left: 0;
+        top: -75px;
+        z-index: 1;
+      }
+    }
+    :deep(.el-tabs__nav) {
+      float: none;
+      display: inline-block;
+      .el-tabs__active-bar {
+        display: none;
+      }
+      .el-tabs__item {
+        padding: 0;
+      }
+    }
+    :deep(.el-tabs__nav-wrap) {
+      &::after {
+        display: none;
+      }
+    }
+    .time-tabs {
+      display: inline-block;
+      margin: 0 0 24px;
+      cursor: pointer;
+      border: 1px solid var(--e-color-border2);
+      color: var(--e-color-text1);
+      text-align: center;
+      background: var(--e-color-bg2);
+      font-size: 14px;
+      line-height: 38px;
+      padding: 0 16px;
+      min-width: 172px;
+      @media (max-width: 1100px) {
+        line-height: 28px;
+        font-size: 12px;
+        padding: 0 12px;
+        min-width: 100px;
+      }
+    }
+
+    .is-active .time-tabs {
+      color: #fff;
+      background: var(--e-color-brand1);
+      border-color: var(--e-color-brand1);
+    }
+  }
+  .summit-subforum {
+    margin-top: 24px;
   }
 }
 

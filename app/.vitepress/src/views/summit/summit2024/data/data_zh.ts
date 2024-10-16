@@ -1,16 +1,16 @@
-import banner_pc from '../img/banner-pc.jpg';
-import banner_mo from '../img/banner-mo.jpg';
 import textImg_pc from '../img/textImg-pc.png';
-import textImg_mo from '../img/textImg-mo.png';
 import callForPc from '../img/call-for-pc.jpg';
 import callForMo from '../img/call-for-mo.jpg';
 
 export default {
   banner: {
-    pcBanner: banner_pc,
-    moBanner: banner_mo,
     pcTextImg: textImg_pc,
-    moTextImg: textImg_mo,
+    moTextImg: '',
+    btn: '立即报名',
+    link: {
+      pc: 'https://openatomcon.openatom.cn/registration/?activityNo=HD20241010150325',
+      mo: 'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20241010150325',
+    },
   },
   introduce:
     '数智技术驱动第四次工业革命，带来生产力的显著跃升。作为千行百业的数字底座，openEuler五年来持续创新，为全球开源新生态的建设贡献力量。',
@@ -46,7 +46,19 @@ export default {
       img_mo: callForMo,
       link: 'https://shimo.im/forms/nuezgDhi3irgyLIf/fill',
     },
+    {
+      name: 'POSTER征集',
+      name_en: 'CALL FOR POSTER',
+      img: callForPc,
+      img_mo: callForMo,
+      link: 'https://shimo.im/forms/gYEhLZitK1EqWYEM/fill',
+    },
   ],
+  agenda: {
+    title: '活动日程',
+    tabType: ['主论坛', '分论坛'],
+    changeTip: '注：最终日程安排以会议当天实际议程为准。',
+  },
   previous: {
     title: '精彩回顾',
     list: [

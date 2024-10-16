@@ -68,6 +68,11 @@ export default {
           LABEL: '',
           PATH: '/interaction/event-list/',
         },
+        {
+          NAME: 'Summits',
+          LABEL: '',
+          PATH: '/interaction/summit-list/summit2024/',
+        },
       ],
     },
     {
