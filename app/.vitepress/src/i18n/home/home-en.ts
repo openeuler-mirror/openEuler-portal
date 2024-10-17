@@ -103,6 +103,8 @@ import zhongruan from '../../assets/category/home/link/zhongruan_light.png';
 import zhongruan_dark from '../../assets/category/home/dark/link/zhongruan_dark.png';
 import baina from '../../assets/category/home/link/baina.png';
 import baina_dark from '../../assets/category/home/dark/link/baina_dark.png';
+import dingqiao from '../../assets/category/home/link/dingqiao_light.png';
+import dingqiao_dark from '../../assets/category/home/dark/link/dingqiao_dark.png';
 
 import finance from '../../assets/category/home/case/finance.svg';
 import financeDark from '../../assets/category/home/dark/case/finance.svg';
@@ -384,6 +386,11 @@ export default {
       LINK: 'https://www.xfusion.com/en/',
       IMG: xfusion,
       IMG_DARK: xfusionLogo_dark,
+    },
+    {
+      LINK: 'https://www.td-tech.com/en/',
+      IMG: dingqiao,
+      IMG_DARK: dingqiao_dark,
     },
     {
       LINK: 'https://www.fhss.com.cn/',
