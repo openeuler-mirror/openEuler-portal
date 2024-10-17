@@ -21758,6 +21758,65 @@
     }
   },
   {
+    "hardwareFactory": "ZTE",
+    "hardwareModel": "R8500 G5",
+    "osVersion": "openEuler 24.03 LTS",
+    "architecture": "x86_64",
+    "date": "2024/09/11",
+    "friendlyLink": "",
+    "boardCards": [
+      {
+        "vendorID": "15b3",
+        "deviceID": "1015",
+        "svID": "15b3",
+        "ssID": "0b44",
+        "architecture": "x86_64",
+        "os": "openEuler 24.03 LTS",
+        "driverName": "mlx5_core",
+        "version": "6.6.0-35.0.0.43.oe2403.x86_64",
+        "type": "NIC",
+        "date": "2024/09/11",
+        "sha256": "",
+        "driverSize": "33554432",
+        "chipVendor": "Mellanox",
+        "boardModel": "NS212",
+        "chipModel": "ConnectX-4 Lx",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "9005",
+        "deviceID": "028f",
+        "svID": "1cf2",
+        "ssID": "5449",
+        "architecture": "x86_64",
+        "os": "openEuler 24.03 LTS",
+        "driverName": "smartpqi",
+        "version": "Linux 2.1.24-046",
+        "type": "Raid",
+        "date": "2024/09/11",
+        "sha256": "",
+        "driverSize": "32768",
+        "chipVendor": "Microchip",
+        "boardModel": "RS241-18i",
+        "chipModel": "PM8236",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://enterprise.zte.com.cn/product-detail.html?id\u003d100",
+      "certificationTime": "2024/09/11",
+      "commitID": "",
+      "mainboardModel": "55010100",
+      "biosUefi": "04.24.02.00",
+      "cpu": "INTEL(R) XEON(R) GOLD 6448H",
+      "ram": "24*64G DIMMs",
+      "portsBusTypes": "UPI",
+      "videoAdapter": "ASPEED AST2600",
+      "hostBusAdapter": "ZTE SmartROC3100 RS241-18i 2G",
+      "hardDiskDrive": "Micron_7450_MTFDKCC3T2TFS\", \"Micron_5300_MTFDDAK480TDS\", \" 2*INTEL SSDSC2KG960G8"
+    }
+  },
+  {
     "hardwareFactory": "XFUSION",
     "hardwareModel": "2288H V7",
     "osVersion": "openEuler 22.03 LTS SP4",
