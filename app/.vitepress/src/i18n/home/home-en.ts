@@ -596,7 +596,7 @@ export default {
       IMG_HOVER: summitHover,
       IMG_DARK: summitDark,
       IMG_DARK_HOVER: summitDarkHover,
-      DSSCRIPTIVE: 'openEuler Summit 2024',
+      DSSCRIPTIVE: 'Operating System Conference & openEuler Summit 2024',
       LINK: '/en/interaction/summit-list/summit2024/',
     },
   ],
