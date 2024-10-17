@@ -596,8 +596,8 @@ export default {
       IMG_HOVER: summitHover,
       IMG_DARK: summitDark,
       IMG_DARK_HOVER: summitDarkHover,
-      DSSCRIPTIVE: '2022 OpenAtom Global Open Source Summit',
-      LINK: 'https://legacy.openatom.org/summit',
+      DSSCRIPTIVE: 'Operating System Conference & openEuler Summit 2024',
+      LINK: '/en/interaction/summit-list/summit2024/',
     },
   ],
   IMG_CAROUSE: {

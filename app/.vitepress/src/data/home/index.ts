@@ -54,6 +54,15 @@ export default {
     ],
     en: [
       {
+        pcBanner: summit_pc,
+        moBanner: summit_mo,
+        link: '/en/interaction/summit-list/summit2024/',
+        id: 'devday',
+        targetTap: 1,
+        textImg_pc: textImg_pc,
+        textImg_mo: textImg_mo,
+      },
+      {
         pcBanner: osSummit_pc,
         moBanner: osSummit_mo,
         link: 'https://osseu2024.sched.com/event/1iWLB',
