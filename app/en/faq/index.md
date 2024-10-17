@@ -15,7 +15,7 @@ anchor: true
 ### 1. What is openEuler?
 
 The OpenAtom openEuler project, short for openEuler, is an open-source OS project incubated and operated by the OpenAtom Foundation.
-It started as a simple server OS but has now blossomed into a full-blown digital infrastructure OS, supporting server, cloud, edge, and embedded deployments. This Linux distribution is compatible with multiple instruction set architectures and ideal for a wide range of operational technology applications, enabling OT-ICT convergence.
+It is a digital infrastructure OS that fits into any server, cloud computing, edge computing, and embedded deployment. This Linux distribution is compatible with multiple instruction set architectures and ideal for a wide range of operational technology applications, enabling OT-ICT convergence.
 
 ### 2. What is the openEuler community like?
 
