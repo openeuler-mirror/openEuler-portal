@@ -56,7 +56,7 @@ function convertMd(data: string) {
                 idSubItemShow === subItem.id && idShow === itemList.id,
             }"
           >
-            <span  class="time">
+            <span class="time">
               <IconTime v-show="subItem.time" />
               {{ subItem.time }}
             </span>
@@ -67,7 +67,7 @@ function convertMd(data: string) {
             >
               <span
                 v-for="item in subItem.desc.split('\n')"
-                :key="item + '1'"
+                :key="item"
                 v-dompurify-html="convertMd(item)"
               ></span>
             </span>
