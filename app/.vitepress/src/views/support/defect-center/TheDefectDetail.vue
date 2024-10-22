@@ -175,16 +175,18 @@ onMounted(() => {
               </div>
               <div v-if="bugIdList.length" class="tab-content-item">
                 <h5 class="tab-content-item-title">issue</h5>
-                <a
-                  v-for="(item, index) in bugIdList"
-                  :key="index"
-                  :href="`https://gitee.com/src-openeuler/${
-                    detailData.affectedComponent
-                  }/issues/${item?.split('-')?.at(-1)}`"
-                  class="tab-content-item-text tab-content-item-link"
-                >
-                  {{ item }}
-                </a>
+                <div class="flex">
+                  <a
+                    v-for="(item, index) in bugIdList"
+                    :key="index"
+                    :href="`https://gitee.com/src-openeuler/${
+                      detailData.affectedComponent
+                    }/issues/${item?.split('-')?.at(-1)}`"
+                    class="tab-content-item-text tab-content-item-link"
+                  >
+                    {{ item }}
+                  </a>
+                </div>
               </div>
 
               <div v-if="cveIdList.length" class="tab-content-item">
@@ -471,6 +473,13 @@ onMounted(() => {
             font-size: var(--e-font-size-tip);
             font-weight: 400;
             line-height: var(--e-line-height-tip);
+          }
+        }
+        .flex {
+          display: flex;
+          flex-direction: column;
+          + .flex {
+            margin-top: 8px;
           }
         }
       }

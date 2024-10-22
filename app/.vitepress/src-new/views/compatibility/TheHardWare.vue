@@ -3,35 +3,35 @@ import { useRouter, useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 
-import AppContent from '@/components/AppContent.vue';
+import { OBreadcrumb, OBreadcrumbItem } from '@opensig/opendesign';
 
-const i18n = useI18n();
-const router = useRouter();
+import ContentWrapper from '~@/components/ContentWrapper.vue';
 
 const { lang } = useData();
-
-function goBackPage() {
-  const i = router.route.path.lastIndexOf('h');
-  router.go(`${router.route.path.substring(0, i)}`);
-}
+const i18n = useI18n();
 </script>
 <template>
-  <AppContent class="hardware-wrapper">
-    <div class="banner">
-      <div class="breadcrumb" @click="goBackPage">
-        {{ i18n.compatibility.COMPATIBILITY }} \
-      </div>
-      <div class="banner-title">
-        {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE }}
-      </div>
-    </div>
-  </AppContent>
+  <ContentWrapper :vertical-padding="['40px', 0]">
+    <OBreadcrumb>
+      <OBreadcrumbItem>
+        <a :href="`/${lang}/compatibility/`">
+          {{ i18n.compatibility.COMPATIBILITY }}
+        </a>
+      </OBreadcrumbItem>
+      <OBreadcrumbItem>
+        {{ i18n.compatibility.COMPATIBILITY_TITLE }}
+      </OBreadcrumbItem>
+    </OBreadcrumb>
+  </ContentWrapper>
 </template>
 <style lang="scss" scope>
+.o-tab {
+  margin-bottom: 40px;
+}
 .wrapper {
   max-width: 1504px;
   margin: 0 auto;
-  padding: var(--e-spacing-h2) var(--e-spacing-h2) 0;
+  padding: 40px var(--e-spacing-h2) 0;
   @media screen and (max-width: 768px) {
     padding: 0 var(--e-spacing-h5);
   }
