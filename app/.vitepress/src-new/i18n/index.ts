@@ -1,6 +1,7 @@
 import { createI18n, type I18nOptions } from 'vue-i18n';
 
 import talentAssessment from './talent-assessment';
+import response from './response';
 // 操作&反馈提示
 
 import { getCurrentLocale } from '~@/utils/locale';
@@ -41,9 +42,11 @@ const datetimeFormats: I18nOptions['datetimeFormats'] = {
 const messages = {
   zh: {
     talent: talentAssessment.zh,
+    response: response.zh,
   },
   en: {
     talent: talentAssessment.en,
+    response: response.en,
   },
 };
 

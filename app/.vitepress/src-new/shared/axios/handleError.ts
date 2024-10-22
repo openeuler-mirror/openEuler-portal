@@ -1,18 +1,7 @@
 import type { AxiosError } from 'axios';
-import { reportAPIPerformance } from '@/shared/analytics'
-import i18n from '@/i18n';
+import i18n from '~@/i18n';
 
 const { t } = i18n.global;
-
-function getErrorCodeMsg(code: string, statusCode: number) {
-  const codeKey = String(code).replace(/'/g, '').replace(/_(\w)/g, (_, letter) => letter.toUpperCase());
-  let msg = t(`response.${codeKey}`);
-  if (msg === `response.${codeKey}`) {
-    msg = t(`response.statusCode${statusCode}`);
-  }
-
-  return msg;
-}
 
 export default (err: AxiosError) => {
   const { response } = err;
@@ -23,8 +12,7 @@ export default (err: AxiosError) => {
 
     switch (response && response.status) {
       case 400:
-        err.code = data.code ?? String(response.status);
-        err.message = getErrorCodeMsg(data.code, response.status);
+        err.message = t('response.statusCode400');
         break;
       case 401:
         err.message = t('response.statusCode401');
@@ -34,7 +22,6 @@ export default (err: AxiosError) => {
         break;
       case 404:
         err.code = data?.code ?? String(response.status);
-        err.message = getErrorCodeMsg(data?.code, response.status);
         break;
       case 408:
         err.message = t('response.statusCode408');
@@ -64,9 +51,5 @@ export default (err: AxiosError) => {
         err.message = `${t('response.defaultStatusCode')}：(${response.status})!`;
     }
   }
-
-  // 上报接口性能
-  reportAPIPerformance(response);
-
   return err;
 };
