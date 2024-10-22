@@ -68,6 +68,9 @@ watch(
   () => {
     changeLocale(lang.value);
   },
+  {
+    immediate: true,
+  }
 );
 
 onMounted(() => {

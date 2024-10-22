@@ -443,7 +443,7 @@ export default {
               //培训认证
               NAME: '人才评定',
               LABEL: '',
-              PATH: 'https://talent-assessment.openeuler.org/',
+              PATH: '/talent-assessment/',
             },
           ],
         },
