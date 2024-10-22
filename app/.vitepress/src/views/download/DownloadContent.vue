@@ -756,7 +756,7 @@ function setActiveMirrorMobile(index: number, item: string) {
         background-color: var(--e-color-border2);
       }
     }
-    :deep(.o-table.el-table) {
+    :deep(.e-table.el-table) {
       box-shadow: none;
     }
     h3 {

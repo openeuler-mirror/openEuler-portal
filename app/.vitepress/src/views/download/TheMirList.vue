@@ -447,7 +447,7 @@ onMounted(async () => {
 }
 
 .mirror-list {
-  :deep(.o-table) {
+  :deep(.e-table) {
     .el-table__cell {
       padding: 0 0;
     }

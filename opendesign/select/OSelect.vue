@@ -92,6 +92,9 @@ onUnmounted(() => {
   &:hover {
     box-shadow: var(--e-select-shadow_hover);
   }
+  .select-trigger  {
+    width: 100%;
+  }
   .el-input__wrapper {
     background-color: var(--e-select-color-bg);
     border-radius: 0;

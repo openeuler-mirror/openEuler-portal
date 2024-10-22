@@ -56,6 +56,8 @@ watch(
   },
   (val) => {
     const documentElement = document.documentElement;
+    val === 'light' && documentElement.removeAttribute('data-o-theme');
+    val === 'dark' && documentElement.setAttribute('data-o-theme', 'dark');
     val === 'light' && documentElement.classList.remove('dark');
     val === 'dark' && documentElement.classList.add('dark');
   },

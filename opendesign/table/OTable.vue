@@ -5,13 +5,13 @@ const attrs = useAttrs();
 </script>
 
 <template>
-  <ElTable class="o-table" v-bind="attrs">
+  <ElTable class="e-table" v-bind="attrs">
     <slot></slot>
   </ElTable>
 </template>
 
 <style lang="scss">
-.o-table {
+.e-table {
   &.el-table {
     --el-table-header-bg-color: var(--e-color-bg4);
     --el-table-row-hover-bg-color: var(--e-color-bg3);

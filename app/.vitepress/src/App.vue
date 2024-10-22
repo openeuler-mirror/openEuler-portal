@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import type { Component } from 'vue';
-import { computed, onMounted } from 'vue';
+import { computed, onMounted, watch } from 'vue';
 
 import zhCn from 'element-plus/lib/locale/lang/zh-cn';
 import en from 'element-plus/lib/locale/lang/en';
@@ -26,7 +26,9 @@ import CookieNotice from '@/components/CookieNotice.vue';
 
 import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
+import { useLocale } from '~@/composables/useLocale';
 
+const { changeLocale } = useLocale();
 const { frontmatter, lang } = useData();
 
 const locale = computed(() => {
@@ -59,6 +61,14 @@ const isCustomLayout = computed(() => {
 const comp = computed(() => {
   return compMapping[frontmatter.value.category];
 });
+// ----------------------------- new ----------------------------
+
+watch(
+  () => lang.value,
+  () => {
+    changeLocale(lang.value);
+  },
+);
 
 onMounted(() => {
   setStoreData();
@@ -103,6 +113,26 @@ main {
     @media (max-width: 1100px) {
       overflow: visible;
     }
+  }
+}
+</style>
+
+<style lang="scss">
+#app {
+  --layout-content-max-width: 1504px;
+  --layout-content-padding: 44px;
+
+  @include respond-to('<=laptop') {
+    --layout-content-max-width: 100%;
+    --layout-content-padding: 24px;
+  }
+
+  @include respond-to('<=pad') {
+    --layout-content-padding: 32px;
+  }
+
+  @include respond-to('phone') {
+    --layout-content-padding: 16px;
   }
 }
 </style>
