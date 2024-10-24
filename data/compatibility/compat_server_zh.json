@@ -12890,6 +12890,67 @@
     }
   },
   {
+    "hardwareFactory": "浪潮英信服务器",
+    "hardwareModel": "NF2160",
+    "osVersion": "openEuler 22.03 LTS SP2",
+    "architecture": "aarch64",
+    "date": "2023/07/04",
+    "friendlyLink": "https://service.phytium.com.cn/homepage/production/3/",
+    "boardCards": [
+        {
+            "vendorID": "8086",
+            "deviceID": "1521",
+            "svID": "8086",
+            "ssID": "0001",
+            "architecture": "aarch64",
+            "os": "openEuler 22.03 LTS SP2",
+            "driverName": "igb",
+            "version": "",
+            "type": "NIC",
+            "date": "2023/07/04",
+            "sha256": "17080276b4e6fe41f5e758b66ecb298325ce794ddedd3531b5d7f13137981448",
+            "driverSize": "92K",
+            "chipVendor": "Intel Corporation",
+            "boardModel": "I350-T4",
+            "chipModel": "I350 ",
+            "item": "",
+            "downloadLink": "inbox"
+        },
+        {
+            "vendorID": "1000",
+            "deviceID": "005d",
+            "svID": "1000",
+            "ssID": "9a61",
+            "architecture": "aarch64",
+            "os": "openEuler 22.03 LTS SP2",
+            "driverName": "megaraid_sas",
+            "version": "07.714.04.00-rc1",
+            "type": "raid",
+            "date": "2023/06/21",
+            "sha256": "8626215c7f32ac350b9cfad36a6817c10adf1ca5574a026824662a82b893f106",
+            "driverSize": "68k",
+            "chipVendor": "Symbios Logic Inc.",
+            "boardModel": "N/A",
+            "chipModel": "SAS-3 3108",
+            "item": "",
+            "downloadLink":"inbox"
+        }
+    ],
+    "compatibilityConfiguration":{
+      "productInformation": " https://service.phytium.com.cn/homepage/production/3/",
+      "certificationTime": "2023/07/04",
+      "commitID": "https://gitee.com/openeuler/oec-hardware/issues/I7HG91",
+      "mainboardModel": "Phytium FT-2000+/64-V0001",
+      "biosUefi": "Phytium-V1006 ",
+      "cpu": "Phytium FT-2000+/64",
+      "ram": "8* 16G Samsung",
+      "portsBusTypes": "x16 PCI-X, x1 PCI-X",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family ",
+      "hostBusAdapter": "",
+      "hardDiskDrive": ""
+    }
+  },
+  {
     "hardwareFactory": "新华三",
     "hardwareModel": "H3C UniServer R4950 G5",
     "osVersion": "openEuler 22.03 LTS",
