@@ -514,6 +514,29 @@ onMounted(() => {
 
   <OTabs v-model="activeName" class="tabs-pc" @tab-click="handleClick">
     <AppContent>
+      <p v-if="activeName === '1' || activeName === '2'" class="about">
+        {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
+
+        <a href="#" @click="goDetailPage">{{
+          i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
+        }}</a>
+      </p>
+      <p v-if="activeName === '3'" class="about">
+        {{ i18n.compatibility.SOFTWARE_OEC_DETAIL.TEXT }}
+
+        <a href="#" @click="goDetailPage">{{
+          i18n.compatibility.SOFTWARE_OEC_DETAIL.TITLE
+        }}</a>
+      </p>
+      <p v-if="activeName === '4'" class="about">
+        {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT }}
+
+        <a href="#" @click="goDetailPage">{{
+          i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TITLE
+        }}</a>
+        <br />
+        {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT_2 }}
+      </p>
       <OTabPane :label="i18n.compatibility.HARDWARE" name="1">
         <OSearch
           v-model="searchContent"
@@ -1130,29 +1153,6 @@ onMounted(() => {
             >
           </OPagination>
         </ClientOnly>
-        <p v-if="activeName === '1' || activeName === '2'" class="about">
-          {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
-
-          <a href="#" @click="goDetailPage">{{
-            i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
-          }}</a>
-        </p>
-        <p v-if="activeName === '3'" class="about">
-          {{ i18n.compatibility.SOFTWARE_OEC_DETAIL.TEXT }}
-
-          <a href="#" @click="goDetailPage">{{
-            i18n.compatibility.SOFTWARE_OEC_DETAIL.TITLE
-          }}</a>
-        </p>
-        <p v-if="activeName === '4'" class="about">
-          {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT }}
-
-          <a href="#" @click="goDetailPage">{{
-            i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TITLE
-          }}</a>
-          <br />
-          {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT_2 }}
-        </p>
       </div>
     </AppContent>
   </OTabs>
@@ -1215,6 +1215,12 @@ onMounted(() => {
               </OOption>
             </OSelect>
           </ClientOnly>
+          <p class="mobile-about">
+            {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
+            <a href="#" @click="goDetailPage">{{
+              i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
+            }}</a>
+          </p>
 
           <ul v-if="totalPage !== 0" class="mobile-list">
             <li v-for="item in tableData" :key="item.id" class="item">
@@ -1281,13 +1287,6 @@ onMounted(() => {
             @jump-page="handleCurrentChange"
           >
           </OPagination>
-
-          <p class="mobile-about">
-            {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
-            <a href="#" @click="goDetailPage">{{
-              i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
-            }}</a>
-          </p>
         </el-collapse-item>
 
         <el-collapse-item :title="i18n.compatibility.DRIVE" name="2">
@@ -1347,6 +1346,12 @@ onMounted(() => {
               </OOption>
             </OSelect>
           </ClientOnly>
+          <p class="mobile-about">
+            {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
+            <a href="#" @click="goDetailPage">{{
+              i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
+            }}</a>
+          </p>
 
           <ul v-if="totalPage !== 0" class="mobile-list">
             <li v-for="item in tableData" :key="item.id" class="item">
@@ -1430,13 +1435,6 @@ onMounted(() => {
             @current-change="handleCurrentChange"
             @jump-page="handleCurrentChange"
           ></OPagination>
-
-          <p class="mobile-about">
-            {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
-            <a href="#" @click="goDetailPage">{{
-              i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
-            }}</a>
-          </p>
         </el-collapse-item>
 
         <el-collapse-item :title="i18n.compatibility.SOFTWARE" name="3">
@@ -1496,6 +1494,12 @@ onMounted(() => {
               </OOption>
             </OSelect>
           </ClientOnly>
+          <p class="mobile-about">
+            {{ i18n.compatibility.SOFTWARE_OEC_DETAIL.TEXT }}
+            <a href="#" @click="goDetailPage">{{
+              i18n.compatibility.SOFTWARE_OEC_DETAIL.TITLE
+            }}</a>
+          </p>
 
           <ul v-if="totalPage !== 0" class="mobile-list">
             <li v-for="item in tableData" :key="item.id" class="item">
@@ -1585,13 +1589,6 @@ onMounted(() => {
             @current-change="handleCurrentChange"
             @jump-page="handleCurrentChange"
           ></OPagination>
-
-          <p class="mobile-about">
-            {{ i18n.compatibility.SOFTWARE_OEC_DETAIL.TEXT }}
-            <a href="#" @click="goDetailPage">{{
-              i18n.compatibility.SOFTWARE_OEC_DETAIL.TITLE
-            }}</a>
-          </p>
         </el-collapse-item>
 
         <el-collapse-item
@@ -1634,7 +1631,14 @@ onMounted(() => {
               </OOption>
             </OSelect>
           </ClientOnly>
-
+          <p class="mobile-about last-mobile-about">
+            {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT }}
+            <a href="#" @click="goDetailPage">{{
+              i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TITLE
+            }}</a>
+            <br />
+            {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT_2 }}
+          </p>
           <ul v-if="totalPage !== 0" class="mobile-list">
             <li v-for="item in tableData" :key="item.id" class="item">
               <ul>
@@ -1697,15 +1701,6 @@ onMounted(() => {
             @current-change="handleCurrentChange"
             @jump-page="handleCurrentChange"
           ></OPagination>
-
-          <p class="mobile-about last-mobile-about">
-            {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT }}
-            <a href="#" @click="goDetailPage">{{
-              i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TITLE
-            }}</a>
-            <br />
-            {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT_2 }}
-          </p>
         </el-collapse-item>
 
         <el-collapse-item :title="i18n.compatibility.SOLUTION" name="5">
@@ -1914,7 +1909,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-.pagination-mob {
+:deep(.pagination-mobile) {
   margin-bottom: 12px;
 }
 
@@ -2123,7 +2118,7 @@ onMounted(() => {
   }
 }
 .about {
-  margin-top: var(--e-spacing-h4);
+  margin-bottom: 24px;
   font-size: var(--e-font-size-h8);
   font-weight: 400;
   color: var(--e-color-text1);

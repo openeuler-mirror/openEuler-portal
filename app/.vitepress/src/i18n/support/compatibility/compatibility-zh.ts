@@ -1,5 +1,7 @@
 export default {
   COMPATIBILITY: '兼容性列表',
+  COMPATIBILITY_TITLE: 'openEuler 硬件兼容性测试整体介绍',
+  COMPATIBILITY_HARDWARE: '硬件兼容性整体介绍',
   HARDWARE: '整机',
   DRIVE: '板卡',
   CPU: 'CPU',
@@ -132,7 +134,7 @@ export default {
   },
   HARDWARE_OEC_DETAIL: {
     TEXT: '关于硬件兼容性测试，openEuler提供了完整的测试流程和工具，详见',
-    TITLE: 'openEuler 硬件兼容性测试整体介绍',
+    TITLE: 'openEuler 硬件兼容性认证整体介绍',
     DISCRIPTION_TITLE: '简介',
     DISCRIPTION_CONTENT:
       'openEuler提供了一系列的工具、文档和操作流程帮助用户测试openEuler与硬件的兼容性。如果您需要对服务器等硬件展开兼容性测试，下文提供了兼容性测试流程，并且每个阶段提供了预计需要的时间供参考。',
