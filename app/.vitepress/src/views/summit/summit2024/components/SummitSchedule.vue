@@ -71,9 +71,9 @@ function convertMd(data: string) {
                 v-dompurify-html="convertMd(item)"
               ></span>
             </span>
-            <div v-if="subItem.person[0]" class="name-box">
+            <div v-if="subItem.person.length" class="name-box">
               <div v-for="personItem in subItem.person" :key="personItem.id">
-                <span class="name">
+                <span v-if="personItem.name" class="name">
                   {{ personItem.name }}
                 </span>
                 <span v-if="personItem.post" class="post">

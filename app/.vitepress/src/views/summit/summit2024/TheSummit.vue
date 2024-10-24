@@ -11,7 +11,7 @@ import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
 import SummitSchedule from './components/SummitSchedule.vue';
 import SummitSubforum from './components/SummitSubforum.vue';
-import useWindowResize from '@/components/hooks/useWindowResize';
+import SummitPartner from './components/SummitPartner.vue';
 
 import liveLight from '@/assets/category/summit/summit2022/live.png';
 import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
@@ -22,12 +22,14 @@ import data_en from './data/data_en';
 const { lang } = useData();
 
 const commonStore = useCommon();
-const isMobile = computed(() =>
-  useWindowResize().value <= 768 ? true : false
-);
+
 const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );
+
+const isLight = computed(() => {
+  return commonStore.theme === 'light';
+});
 
 //------------------- 峰会日程 --------------------
 const summitData = computed(() => {
@@ -85,7 +87,7 @@ const getData = computed(() => {
           {{ li }}
         </li>
       </ul>
-      <p v-if="summitData.introduce4">{{ summitData.introduce4 }}</p>
+      <p v-if="summitData?.introduce4">{{ summitData.introduce4 }}</p>
     </div>
     <!-- call for -->
     <div class="call-content">
@@ -99,7 +101,7 @@ const getData = computed(() => {
         <div
           class="card-bg"
           :style="{
-            backgroundImage: `url(${isMobile ? item.img_mo : item.img})`,
+            backgroundImage: `url(${isLight ? item.img : item.img_dark})`,
           }"
         ></div>
         <div v-if="lang === 'zh'" class="cn-title call-title">
@@ -142,7 +144,11 @@ const getData = computed(() => {
           <el-tab-pane :name="1">
             <template #label>
               <div class="time-tabs">
-                {{ summitData.agenda.tabType[1] }}
+                {{
+                  dataIndex === 0
+                    ? summitData.agenda.tabType[1]
+                    : summitData.agenda.tabType1[1]
+                }}
               </div>
             </template>
           </el-tab-pane>
@@ -157,14 +163,16 @@ const getData = computed(() => {
         </template>
         <!-- 分论坛卡片 -->
         <template v-else-if="renderData?.length">
-          <SummitSubforum
-            v-for="item in renderData"
+          <SummitSubforum :agenda-data="renderData[0]" />
+          <SummitSchedule
+            v-for="item in renderData.slice(1)"
             :key="item.lable"
             :agenda-data="item"
           />
         </template>
       </div>
     </div>
+    <SummitPartner />
     <!--  只在中文页显示精彩回顾 -->
     <div v-if="lang === 'zh'" class="previous">
       <div class="previous-title">
@@ -266,7 +274,7 @@ const getData = computed(() => {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      color: var(--e-color-white);
+      color: var(--e-color-text1);
     }
     .cn-title {
       bottom: 13%;
@@ -426,10 +434,10 @@ const getData = computed(() => {
       padding: 0 16px;
       min-width: 172px;
       @media (max-width: 1100px) {
+        min-width: 160px;
         line-height: 28px;
         font-size: 12px;
         padding: 0 12px;
-        min-width: 100px;
       }
     }
 
