@@ -3,9 +3,6 @@ import { useScreen } from '~@/composables/useScreen';
 
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
-import TalentCertification from './TalentCertification.vue';
-import TalentDemand from './TalentDemand.vue';
-import TalentQuery from './TalentQuery.vue';
 
 import illustration from '~@/assets/category/talent-assessment/illustration.png';
 import banner from '~@/assets/category/talent-assessment/banner-bg.png';
@@ -19,9 +16,7 @@ const { isPhone } = useScreen();
     :illustration="illustration"
   />
   <ContentWrapper :vertical-padding="isPhone ? [0, '32px'] : [0, '72px']">
-    <TalentCertification />
-    <TalentDemand />
-    <TalentQuery />
+
   </ContentWrapper>
 </template>
 
