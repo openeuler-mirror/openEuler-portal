@@ -1,8 +1,11 @@
 import { createI18n, type I18nOptions } from 'vue-i18n';
 
-import talentAssessment from './talent-assessment';
+// 公共模块
 import response from './response';
-// 操作&反馈提示
+// 业务
+import talentAssessment from './talent-assessment';
+import contactUs from './contact-us';
+import home from './home';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -42,11 +45,15 @@ const datetimeFormats: I18nOptions['datetimeFormats'] = {
 const messages = {
   zh: {
     talent: talentAssessment.zh,
+    contact: contactUs.zh,
     response: response.zh,
+    home: home.zh,
   },
   en: {
     talent: talentAssessment.en,
+    contact: contactUs.en,
     response: response.en,
+    home: home.en,
   },
 };
 

@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import { computed } from 'vue';
+
+import { useScreen } from '~@/composables/useScreen';
+
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 import TalentCertification from './TalentCertification.vue';
@@ -7,6 +11,18 @@ import TalentQuery from './TalentQuery.vue';
 
 import illustration from '~@/assets/category/talent-assessment/illustration.png';
 import banner from '~@/assets/category/talent-assessment/banner-bg.png';
+
+const { isPhone, isPad } = useScreen();
+
+const verticalPadding = computed(() => {
+  if (isPhone.value) {
+    return ['32px', '32px'];
+  } else if (isPad.value) {
+    return ['40px', '40px'];
+  } else {
+    return ['72px', '72px'];
+  }
+});
 </script>
 <template>
   <BannerLevel2
@@ -14,7 +30,7 @@ import banner from '~@/assets/category/talent-assessment/banner-bg.png';
     :background-image="banner"
     :illustration="illustration"
   />
-  <ContentWrapper :vertical-padding="[0, '72px']">
+  <ContentWrapper :vertical-padding="verticalPadding">
     <TalentCertification />
     <TalentDemand />
     <TalentQuery />
@@ -28,8 +44,14 @@ import banner from '~@/assets/category/talent-assessment/banner-bg.png';
   color: var(--o-color-info1);
   text-align: center;
   margin-top: 72px;
-  @media (max-width: 768px) {
+  @include respond-to('phone') {
     margin-top: 32px;
   }
+}
+:deep(.o-card) {
+  --card-radius: 0;
+}
+:deep(.o-btn) {
+  --btn-radius: 28px;
 }
 </style>

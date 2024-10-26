@@ -185,7 +185,7 @@ onMounted(() => {
         @include respond-to('pad_h') {
           max-height: 160px;
         }
-        @include respond-to('pad_v') {
+        @include respond-to('phone') {
           max-height: 94px;
         }
       }

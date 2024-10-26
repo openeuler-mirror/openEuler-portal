@@ -10,9 +10,9 @@ import { OCard, OButton, OIcon } from '@opensig/opendesign';
         <div class="query-intro">
           <i18n-t keypath="talent.certificateQueryIntro" :tag="'p'">
             <template #email>
-              <a :href="`mailto:${$t('talent.email')}`">{{
-                $t('talent.email')
-              }}</a>
+              <a href="mailto:oecxonline@openeuler.sh"
+                >mailto:oecxonline@openeuler.sh</a
+              >
             </template>
           </i18n-t>
         </div>
@@ -21,20 +21,38 @@ import { OCard, OButton, OIcon } from '@opensig/opendesign';
         </div>
         <div class="query-template">
           <div class="row">
-            <span class="label">收件人</span>
-            <span class="content">oecxonline@openeuler.sh</span>
-          </div>
-          <div class="row">
-            <span class="label">主题</span>
-            <span class="content">openEuler人才认证证书查询</span>
-          </div>
-          <div class="row">
-            <span class="label">正文</span>
+            <span class="label">{{ $t('talent.addressee') }}</span>
             <span class="content">
-              <p>姓名： 例：张三</p>
-              <p>认证等级： 例：OECA/OECP-M</p>
-              <p>考试日期： 2022年8月15日</p>
-              <p>考试单位： 例：麒麟信安/软通教育等</p>
+              <a href="mailto:oecxonline@openeuler.sh"
+                >oecxonline@openeuler.sh</a
+              >
+            </span>
+          </div>
+          <div class="row">
+            <span class="label">{{ $t('talent.theme') }}</span>
+            <span class="content">{{ $t('talent.themeContent') }}</span>
+          </div>
+          <div class="row">
+            <span class="label">{{ $t('talent.text') }}</span>
+            <span class="content">
+              <div>
+                {{ $t('talent.name') }}
+                <span class="gray">{{ $t('talent.nameExp') }}</span>
+              </div>
+              <div>
+                {{ $t('talent.certificationLevel') }}
+                <span class="gray">{{
+                  $t('talent.certificationLevelExp')
+                }}</span>
+              </div>
+              <div>
+                {{ $t('talent.date')
+                }}<span class="gray">{{ $t('talent.dateExp') }}</span>
+              </div>
+              <div>
+                {{ $t('talent.location') }}
+                <span class="gray">{{ $t('talent.locationExp') }}</span>
+              </div>
             </span>
           </div>
         </div>
@@ -52,28 +70,44 @@ import { OCard, OButton, OIcon } from '@opensig/opendesign';
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 32px;
       @include text1;
       .query-intro {
-        @include text1;
+        color: var(--o-color-info2);
       }
       .query-template-title {
         margin-top: 16px;
+        color: var(--o-color-info1);
+        font-weight: 500;
       }
       .query-template {
         margin-top: 12px;
+        border-radius: var(--o-radius-xs);
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.15);
         .row {
-          margin-bottom: 15px;
+          display: flex;
+          &:not(:last-child) {
+            .content {
+              border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+            }
+          }
         }
         .label {
-          background-color: var(--o-color-primary2);
+          padding: 12px;
+          background-color: #c7d4ed;
+          background-color: var(--o-color-control3-light);
           font-weight: 500;
           width: 150px;
-          display: inline-block;
-          vertical-align: top;
+          text-align: center;
         }
         .content {
           display: inline-block;
+          padding: 12px;
+          width: 100%;
+          color: var(--o-color-info1);
+          .gray {
+            color: var(--o-color-info3);
+          }
         }
       }
     }
