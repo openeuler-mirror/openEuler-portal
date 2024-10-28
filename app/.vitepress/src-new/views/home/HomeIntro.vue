@@ -1,17 +1,23 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { useI18n } from '@/i18n';
-import { useData } from 'vitepress';
+
+import { useLocale } from '~@/composables/useLocale';
+import introData from '~@/data/home/intro';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 
-const { lang } = useData();
+const { locale } = useLocale();
 
 const i18n = useI18n();
 
 const active = ref(0);
 
 const activeMobile = ref(0);
+
+const imgSrc = computed(() => {
+  return introData[active.value].img[locale.value];
+});
 
 const handleChangeActive = (index: number) => {
   active.value = index;
@@ -31,30 +37,27 @@ const jumpTo = (path: string) => {
 
 <template>
   <div class="home-intro">
-    <h3>{{ i18n.home.IMG_CAROUSE.TITLE }}</h3>
-    <OContainer data-aos="fade-up" class="intro-container" :level-index="1">
+    <h3>{{ $t('home.introTitle') }}</h3>
+    <div data-aos="fade-up" class="intro-container" :level-index="1">
       <div class="intro-pc">
-        <OCard class="intro-card-pc" shadow="never">
+        <div class="intro-card-pc">
           <div class="intro-content-pc">
             <div class="intro-list-pc">
               <div
-                v-for="(item, index) in i18n.home.IMG_CAROUSE.LIST"
-                :key="item.TITLE"
+                v-for="(item, index) in introData"
+                :key="item.title"
                 :class="[
                   'intro-title-pc',
                   active === index ? 'active' : '',
-                  lang !== 'zh' ? 'intro-title-pc-en' : '',
+                  locale !== 'zh' ? 'intro-title-pc-en' : '',
                 ]"
                 @click="handleChangeActive(index)"
               >
-                {{ item.TITLE }}
+                {{ item.title[locale] }}
               </div>
             </div>
             <div class="intro-img-pc">
-              <img
-                :src="i18n.home.IMG_CAROUSE.LIST[active]?.IMG_URL"
-                alt="openEuler"
-              />
+              <img :src="imgSrc" alt="openEuler" />
             </div>
           </div>
           <div class="intro-button-pc">
@@ -70,7 +73,7 @@ const jumpTo = (path: string) => {
               {{ i18n.home.IMG_CAROUSE.BUTTON }}
             </OButton>
           </div>
-        </OCard>
+        </div>
       </div>
 
       <OCollapse
@@ -100,7 +103,7 @@ const jumpTo = (path: string) => {
           </div>
         </OCollapseItem>
       </OCollapse>
-    </OContainer>
+    </div>
   </div>
 </template>
 

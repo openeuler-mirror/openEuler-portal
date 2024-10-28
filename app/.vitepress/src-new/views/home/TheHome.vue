@@ -4,10 +4,11 @@ import { computed, onMounted } from 'vue';
 import AOS from 'aos';
 
 import { useScreen } from '~@/composables/useScreen';
-
 import ContentWrapper from '~@/components/ContentWrapper.vue';
+
 import HomeBanner from './HomeBanner.vue';
 import HomeDisplayZone from './HomeDisplayZone.vue';
+import HomeIntro from './HomeIntro.vue';
 
 const { isPhone, isPad } = useScreen();
 
@@ -34,6 +35,7 @@ onMounted(() => {
     <HomeBanner />
     <ContentWrapper :vertical-padding="verticalPadding">
       <HomeDisplayZone class="home-display-zone" />
+      <HomeIntro />
     </ContentWrapper>
   </div>
 </template>
@@ -53,5 +55,16 @@ onMounted(() => {
     #ebeffc 79%,
     #f3f3f5 100%
   );
+}
+[data-o-theme='dark'] {
+  .home {
+    background-image: linear-gradient(
+      180deg,
+      #1a1a1c 0%,
+      #0c0f1c 35%,
+      #141b2e 52%,
+      rgba(26, 26, 28, 0.04) 88%
+    );
+  }
 }
 </style>

@@ -1,45 +1,35 @@
 <script setup lang="ts">
+import { storeToRefs } from 'pinia';
+
 import { useCommon } from '@/stores/common';
-import { computed } from 'vue';
+import { useLocale } from '~@/composables/useLocale';
+
 import displayZoneData from '~@/data/home/display-zone';
 
-const commonStore = useCommon();
-
-const jumpTo = (path: string) => {
-  window.open(path, '_blank');
-};
-
-const getImgUrl = computed(() => (item: { IMG_DARK: string; IMG: string }) => {
-  return commonStore.theme === 'dark' ? item.IMG_DARK : item.IMG;
-});
-
-const getImgUrlHover = computed(
-  () => (item: { IMG_DARK_HOVER: string; IMG_HOVER: string }) => {
-    return commonStore.theme === 'dark' ? item.IMG_DARK_HOVER : item.IMG_HOVER;
-  }
-);
+const { locale } = useLocale();
+const { theme } = storeToRefs(useCommon());
 </script>
 
 <template>
   <div class="home-display-zone" data-aos="fade-up">
     <a
       v-for="item in displayZoneData"
-      :key="item.link.zh"
-      :href="item.link.zh"
+      :key="item.link[locale]"
+      :href="item.link[locale]"
       class="display-zone-item"
     >
       <div class="display-zone-icon">
         <img
-          :src="item.icon.light"
+          :src="item.icon[theme]"
           alt="openEuler"
           class="display-zone-item-icon"
         />
       </div>
       <div class="display-zone-text">
         <h4 class="display-zone-title">
-          {{ item.title.zh }}
+          {{ item.title[locale] }}
         </h4>
-        <p class="display-zone-description">{{ item.description.zh }}</p>
+        <p class="display-zone-description">{{ item.description[locale] }}</p>
       </div>
     </a>
   </div>
