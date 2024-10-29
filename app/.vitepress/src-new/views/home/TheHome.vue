@@ -9,6 +9,7 @@ import ContentWrapper from '~@/components/ContentWrapper.vue';
 import HomeBanner from './HomeBanner.vue';
 import HomeDisplayZone from './HomeDisplayZone.vue';
 import HomeIntro from './HomeIntro.vue';
+import HomePlayCommunity from './HomePlayCommunity.vue';
 
 const { isPhone, isPad } = useScreen();
 
@@ -36,6 +37,7 @@ onMounted(() => {
     <ContentWrapper :vertical-padding="verticalPadding">
       <HomeDisplayZone class="home-display-zone" />
       <HomeIntro />
+      <HomePlayCommunity />
     </ContentWrapper>
   </div>
 </template>
@@ -45,6 +47,16 @@ onMounted(() => {
   margin-top: -41px;
   @include respond-to('phone') {
     margin-top: 0;
+  }
+}
+:deep(h3) {
+  @include display3;
+  font-weight: 500;
+  color: var(--o-color-info1);
+  text-align: center;
+  margin-top: 72px;
+  @include respond-to('phone') {
+    margin-top: 32px;
   }
 }
 .home {

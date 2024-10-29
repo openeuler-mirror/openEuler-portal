@@ -1,19 +1,20 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import { useI18n } from '@/i18n';
 
+import { OButton, OIcon, OCollapse, OCollapseItem } from '@opensig/opendesign';
 import { useLocale } from '~@/composables/useLocale';
+import { useScreen } from '~@/composables/useScreen';
+
 import introData from '~@/data/home/intro';
 
-import IconArrowRight from '~icons/app/icon-arrow-right.svg';
+import IconArrowRight from '~icons/app/icon-chevron-right.svg';
 
-const { locale } = useLocale();
-
-const i18n = useI18n();
+const { locale, isZh } = useLocale();
+const { isPhone, leLaptop } = useScreen();
 
 const active = ref(0);
 
-const activeMobile = ref(0);
+const activeMobile = ref([0]);
 
 const imgSrc = computed(() => {
   return introData[active.value].img[locale.value];
@@ -21,17 +22,13 @@ const imgSrc = computed(() => {
 
 const handleChangeActive = (index: number) => {
   active.value = index;
-  activeMobile.value = index;
+  activeMobile.value = [index];
 };
 
-const handleChangeActiveMobile = (activeNames: any) => {
-  if (activeNames !== '') {
-    active.value = activeNames;
+const handleChangeActiveMobile = (activeValues: number[]) => {
+  if (activeValues?.length) {
+    active.value = Number(activeValues[0]);
   }
-};
-
-const jumpTo = (path: string) => {
-  window.open(path, '_blank');
 };
 </script>
 
@@ -39,67 +36,76 @@ const jumpTo = (path: string) => {
   <div class="home-intro">
     <h3>{{ $t('home.introTitle') }}</h3>
     <div data-aos="fade-up" class="intro-container" :level-index="1">
-      <div class="intro-pc">
+      <div v-if="!leLaptop" class="intro-pc">
         <div class="intro-card-pc">
           <div class="intro-content-pc">
             <div class="intro-list-pc">
               <div
                 v-for="(item, index) in introData"
-                :key="item.title"
+                :key="item.title[locale]"
                 :class="[
-                  'intro-title-pc',
+                  'intro-info-pc',
                   active === index ? 'active' : '',
-                  locale !== 'zh' ? 'intro-title-pc-en' : '',
+                  locale !== 'zh' ? 'intro-info-pc-en' : '',
                 ]"
                 @click="handleChangeActive(index)"
               >
-                {{ item.title[locale] }}
+                <div class="title">
+                  {{ item.title[locale] }}
+                </div>
+                <div v-if="isZh" class="description">
+                  {{ item.description }}
+                </div>
               </div>
             </div>
             <div class="intro-img-pc">
               <img :src="imgSrc" alt="openEuler" />
             </div>
           </div>
-          <div class="intro-button-pc">
+          <a
+            class="intro-button-pc"
+            :href="`/${locale}/community/contribution/detail.html`"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <OButton
-              animation
-              type="text"
-              class="intro-button-item-pc"
-              @click="jumpTo(i18n.home.IMG_CAROUSE.TRY_URL)"
+              :size="isPhone ? 'medium' : 'large'"
+              :style="{
+                '--btn-padding': 0,
+                '--btn-bg-color-hover': 'transparent',
+                '--btn-bg-color-active': 'transparent',
+              }"
+              variant="text"
             >
-              <template #suffixIcon>
-                <IconArrowRight class="intro-button-icon-pc"></IconArrowRight>
+              {{ $t('home.introBtn') }}
+              <template #suffix>
+                <OIcon>
+                  <IconArrowRight></IconArrowRight>
+                </OIcon>
               </template>
-              {{ i18n.home.IMG_CAROUSE.BUTTON }}
             </OButton>
-          </div>
+          </a>
         </div>
       </div>
 
       <OCollapse
+        v-else
         v-model="activeMobile"
         class="intro-mobile"
         accordion
         @change="handleChangeActiveMobile"
       >
         <OCollapseItem
-          v-for="(item, index) in i18n.home.IMG_CAROUSE.LIST"
-          :key="item.TITLE"
-          :name="index"
+          v-for="(item, index) in introData"
+          :key="item.title[locale]"
+          :value="index"
           class="intro-card-mobile"
         >
           <template #title>
-            <div class="intro-content-mobile">
-              <div class="intro-title-mobile">
-                {{ item.TITLE }}
-              </div>
-            </div>
+            {{ item.title[locale] }}
           </template>
           <div class="intro-img-mobile">
-            <img
-              :src="i18n.home.IMG_CAROUSE.LIST[index]?.IMG_URL"
-              alt="openEuler"
-            />
+            <img :src="imgSrc" alt="openEuler" />
           </div>
         </OCollapseItem>
       </OCollapse>
@@ -109,220 +115,110 @@ const jumpTo = (path: string) => {
 
 <style lang="scss" scoped>
 .home-intro {
-  :deep(.el-collapse) {
-    border: none;
-    background-color: var(--e-color-bg1);
-  }
-  .intro-container {
-    @media screen and (max-width: 1100px) {
-      box-shadow: none;
-    }
-  }
-  :deep(.el-collapse-item__content) {
-    padding: 0;
-  }
-
-  h3 {
-    font-size: var(--e-font-size-h3);
-    font-weight: 300;
-    color: var(--e-color-text1);
-    line-height: var(--e-line-height-h3);
-    width: 100%;
-    text-align: center;
-    margin-top: var(--e-spacing-h1);
-    @media (max-width: 768px) {
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
-      margin-top: var(--e-spacing-h2);
-    }
-  }
-
-  .intro-mobile {
-    margin-top: var(--e-spacing-h5);
-    display: none;
-    flex-flow: column;
-    @media screen and (max-width: 1100px) {
-      display: flex;
-    }
-
-    .intro-card-mobile {
-      &:last-child :deep(.el-collapse-item__header)::after {
-        display: none;
-      }
-      :deep(.el-collapse-item__content) {
-        padding: 0px !important;
-      }
-
-      :deep(.el-collapse-item__header) {
-        position: relative;
-        height: 100%;
-        padding: var(--e-spacing-h4);
-        border: none !important;
-        &.is-active {
-          &::after {
-            opacity: 0;
-          }
-        }
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          height: 1px;
-          width: calc((100% - 48px));
-          transition: all 0.3s;
-          background-color: var(--e-color-border2);
-        }
-        @media (max-width: 768px) {
-          padding: var(--e-spacing-h8);
-          &::after {
-            width: calc((100% - 16px));
-          }
-        }
-      }
-
-      :deep(.el-collapse-item__wrap) {
-        margin: var(--e-spacing-h5) 0;
-      }
-    }
-
-    .intro-content-mobile {
-      display: flex;
-      flex-flow: row;
-    }
-
-    .intro-img-mobile {
-      width: 100%;
-      height: 100%;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
-
-    .intro-title-mobile {
-      cursor: pointer;
-      font-size: var(--e-font-size-h5);
-      font-weight: 500;
-      color: var(--e-color-text1);
-      line-height: var(--e-line-height-h5);
-      @media (max-width: 768px) {
-        font-size: var(--e-font-size-text);
-        line-height: var(--e-line-height-text);
-      }
-    }
-
-    .intro-icon-mobile {
-      font-size: var(--e-font-size-h8);
-      color: var(--e-color-text4);
-    }
-  }
+  // PC 端 css
   .intro-pc {
     margin-top: var(--e-spacing-h2);
     display: block;
-    @media screen and (max-width: 1100px) {
-      display: none;
-    }
-
-    .intro-card-pc {
-      :deep(.el-card__body) {
-        padding: var(--e-spacing-h1) var(--e-spacing-h1) var(--e-spacing-h2);
-      }
-    }
-
     .intro-content-pc {
       display: flex;
-      flex-flow: row;
-      padding-bottom: var(--e-spacing-h2);
-      border-bottom: 1px solid var(--e-color-division1);
     }
 
     .intro-list-pc {
+      position: relative;
       display: flex;
       flex-flow: column;
-      margin-right: var(--e-spacing-h1);
-      height: 300px;
-      align-items: center;
-
-      :nth-child(3) {
-        border-bottom: 0px !important;
-        padding-bottom: 0px !important;
+      padding: 32px;
+      margin-right: 32px;
+      padding-left: calc(32px + 72px);
+      &::before {
+        position: absolute;
+        top: -52px;
+        left: 16px;
+        width: 60px;
+        height: 490px;
+        content: '';
+        background-image: url(~@/assets/category/home/intro/left-bg_light.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
       }
     }
 
     .intro-img-pc {
       flex: 1;
+      padding: 0 0 24px 24px;
       img {
         width: 100%;
         height: 100%;
         object-fit: contain;
       }
+      background-repeat: no-repeat;
+      background-position: center top 24px;
+      background-size: 100% 100%;
+      background-image: url(~@/assets/category/home/intro/right-bg_light.png);
+      border-radius: 8px;
     }
 
-    .intro-title-pc {
+    .intro-info-pc {
       cursor: pointer;
-      font-size: var(--e-font-size-h5);
-      font-weight: 400;
-      text-align: center;
-      color: var(--e-color-text1);
-      line-height: var(--e-line-height-h4);
-      border-bottom: 1px solid var(--e-color-division1);
-      padding: var(--e-spacing-h4) 0;
-      @media screen and (min-width: 1100px) {
-        &:hover {
-          color: var(--e-color-brand1);
+      text-align: left;
+      &:not(:last-child) {
+        margin-bottom: 72px;
+      }
+      .title {
+        @include h3;
+        color: var(--o-color-info1);
+      }
+      .description {
+        margin-top: 4px;
+        @include text1;
+        color: var(--o-color-info2);
+      }
+      @include hover {
+        .title {
+          color: var(--o-color-primary1);
         }
+      }
+      @include respond-to('<=laptop') {
+        margin-top: 0;
       }
     }
     .active {
-      color: var(--e-color-brand1);
+      .title {
+        color: var(--o-color-primary1);
+      }
     }
-    .intro-title-pc-en {
+    .intro-info-pc-en {
       width: 266px;
-    }
-    .intro-title-pc:first-child {
-      padding-top: 0;
     }
     .intro-button-pc {
       display: flex;
-      padding-top: var(--e-spacing-h2);
+      margin: auto;
+      margin-top: 32px;
       justify-content: center;
       align-items: center;
-      @media screen and (max-width: 1080px) {
-        padding: 20px 0;
-        font-size: var(--e-font-size-tip);
-      }
-
-      :deep(.o-button) {
-        padding: 0;
-      }
-
-      .intro-button-icon-pc {
-        color: var(--e-color-brand1);
-        width: var(--e-font-size-h8);
-        height: var(--e-font-size-h8);
+      width: min-content;
+    }
+  }
+  .intro-mobile {
+    margin-top: 12px;
+    .intro-card-mobile {
+      overflow: hidden;
+    }
+    .intro-img-mobile {
+      img {
+        width: 100%;
       }
     }
   }
 }
-:deep(.o-collapse) {
-  .el-icon-arrow-right {
-    font-weight: 700;
-    transform: rotate(90deg);
-    &::before {
-      color: #000;
+
+[data-o-theme='dark'] {
+  .intro-pc {
+    .intro-list-pc {
+      &::before {
+        background-image: url(~@/assets/category/home/intro/left-bg_dark.png);
+      }
     }
-  }
-  .el-icon-arrow-right.is-active {
-    transform: rotate(270deg);
-  }
-  .el-collapse-item__header {
-    position: relative;
-    border-left: none;
-    border-bottom: 1px solid var(--e-color-division1);
   }
 }
 </style>
