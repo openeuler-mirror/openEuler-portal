@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { reactive, computed, ref, onMounted, onUpdated } from 'vue';
-import { OCard, OButton, OIcon } from '@opensig/opendesign';
+import { OCard } from '@opensig/opendesign';
 </script>
 <template>
   <div class="talent-query">
@@ -11,7 +10,7 @@ import { OCard, OButton, OIcon } from '@opensig/opendesign';
           <i18n-t keypath="talent.certificateQueryIntro" :tag="'p'">
             <template #email>
               <a href="mailto:oecxonline@openeuler.sh"
-                >mailto:oecxonline@openeuler.sh</a
+                >oecxonline@openeuler.sh</a
               >
             </template>
           </i18n-t>
@@ -83,12 +82,12 @@ import { OCard, OButton, OIcon } from '@opensig/opendesign';
         margin-top: 12px;
         border-radius: var(--o-radius-xs);
         overflow: hidden;
-        border: 1px solid rgba(0, 0, 0, 0.15);
+        border: 1px solid var(--o-color-control4);
         .row {
           display: flex;
           &:not(:last-child) {
             .content {
-              border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+              border-bottom: 1px solid var(--o-color-control4);
             }
           }
         }
