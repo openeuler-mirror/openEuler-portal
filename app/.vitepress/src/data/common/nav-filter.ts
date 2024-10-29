@@ -249,4 +249,8 @@ export default [
     name: 'summit-list/**',
     lang: ['zh'],
   },
+  {
+    name: 'talent-assessment',
+    lang: ['zh'],
+  },
 ];

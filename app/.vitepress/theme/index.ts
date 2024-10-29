@@ -9,7 +9,7 @@ import '@/shared/styles/index.scss';
 import '~@/assets/style/theme/default-light.token.css';
 import '~@/assets/style/theme/dark.token.css';
 import '@opensig/opendesign/es/index.css';
-
+import '~@/assets/style/theme/index.scss';
 
 import ElementPlus from 'element-plus';
 import OpenDesign from 'opendesign';
