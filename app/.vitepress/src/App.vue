@@ -22,7 +22,7 @@ import LayoutFAQ from '@/layouts/LayoutFAQ.vue';
 
 import AppFloat from '@/components/AppFloat.vue';
 import AppFloatEn from '@/components/AppFloatEn.vue';
-import CookieNotice from '@/components/CookieNotice.vue';
+import CookieNotice from '~@/components/CookieNotice.vue';
 
 import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
