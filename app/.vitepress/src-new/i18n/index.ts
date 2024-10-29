@@ -2,6 +2,7 @@ import { createI18n, type I18nOptions } from 'vue-i18n';
 
 // 公共模块
 import response from './response';
+import cookie from './cookie';
 // 业务
 import talentAssessment from './talent-assessment';
 import contactUs from './contact-us';
@@ -44,15 +45,23 @@ const datetimeFormats: I18nOptions['datetimeFormats'] = {
 
 const messages = {
   zh: {
+    // 公共模块
+    response: response.zh,
+    cookie: cookie.zh,
+
+    // 业务
     talent: talentAssessment.zh,
     contact: contactUs.zh,
-    response: response.zh,
     home: home.zh,
   },
   en: {
+    // 公共模块
+    response: response.en,
+    cookie: cookie.en,
+
+    // 业务
     talent: talentAssessment.en,
     contact: contactUs.en,
-    response: response.en,
     home: home.en,
   },
 };
