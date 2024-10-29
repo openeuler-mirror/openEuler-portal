@@ -10,6 +10,7 @@ import '~@/assets/style/theme/default-light.token.css';
 import '~@/assets/style/theme/dark.token.css';
 import '@opensig/opendesign/es/index.css';
 import '~@/assets/style/theme/index.scss';
+import '~@/assets/style/theme/media.token.scss';
 
 import ElementPlus from 'element-plus';
 import OpenDesign from 'opendesign';
