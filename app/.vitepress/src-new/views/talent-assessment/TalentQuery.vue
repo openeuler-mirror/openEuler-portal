@@ -112,6 +112,9 @@ import { OCard } from '@opensig/opendesign';
           padding: 12px;
           width: 100%;
           color: var(--o-color-info1);
+          @include respond-to('phone') {
+            padding: 8px 12px;
+          }
           .gray {
             color: var(--o-color-info3);
           }

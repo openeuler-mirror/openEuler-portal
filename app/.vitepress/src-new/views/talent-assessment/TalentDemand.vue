@@ -99,6 +99,9 @@ const { isPhone } = useScreen();
       flex-direction: column;
       justify-content: space-between;
       @include text1;
+      @include respond-to('phone') {
+        margin-top: 12px;
+      }
       .company {
         font-weight: 500;
         @include h3;

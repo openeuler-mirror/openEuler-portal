@@ -1,6 +1,6 @@
 import card1 from '~@/assets/category/home/play-community/card-1.png';
 import card2 from '~@/assets/category/home/play-community/card-2.png';
-export const vitalityData = [
+export const vitalityConfig = [
   {
     vitalityValue: 0,
     vitalityKey: 'contributors',

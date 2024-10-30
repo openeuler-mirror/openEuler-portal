@@ -3,8 +3,11 @@ import { computed, onMounted } from 'vue';
 
 import AOS from 'aos';
 
+import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
+
+import { getSortData } from '@/api/api-search';
 
 import HomeBanner from './HomeBanner.vue';
 import HomeDisplayZone from './HomeDisplayZone.vue';
@@ -12,6 +15,15 @@ import HomeIntro from './HomeIntro.vue';
 import HomePlayCommunity from './HomePlayCommunity.vue';
 
 const { isPhone, isPad } = useScreen();
+const { locale } = useLocale();
+
+const paramsCase = {
+  category: 'showcase',
+  lang: locale.value,
+  page: 1,
+  pageSize: 100,
+};
+getSortData(paramsCase);
 
 const verticalPadding = computed(() => {
   if (isPhone.value) {
