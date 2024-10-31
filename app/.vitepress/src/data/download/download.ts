@@ -389,6 +389,7 @@ export default {
       {
         NAME: 'openEuler 24.09',
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.09/',
+        WHITE_PAPER: '/whitepaper/en/openEuler 24.09 Technical White Paper.pdf',
         DESC: 'openEuler 24.09, built on Linux kernel 6.6, is suited for server, cloud, edge, AI, and embedded deployments. With best-in-class features, it delivers brand-new experience to developers and users spanning diverse industries.',
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/en/docs/24.09/docs/Releasenotes/release_notes.html',
