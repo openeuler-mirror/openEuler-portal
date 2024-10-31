@@ -32,13 +32,17 @@ import zhongdian_dark from '../img/logo/zhongdian_dark.png';
 import zhongdian_light from '../img/logo/zhongdian_light.png';
 import zhongke_dark from '../img/logo/zhongke_dark.png';
 import zhongke_light from '../img/logo/zhongke_light.png';
+import huazhi_light from '../img/logo/huazhi_light.png';
+import huazhi_dark from '../img/logo/huazhi_dark.png';
+import jindie_light from '../img/logo/jindie_light.png';
+import jindie_dark from '../img/logo/jindie_dark.png';
 
 export default {
   title: '共建单位',
   titleEn: 'Sponsors',
   partnerList: [
     {
-      subTitle: '主办单位',
+      subTitle: '主办方',
       subTitleEn: 'Hosts',
       class: 'center',
       logoList: [
@@ -57,7 +61,7 @@ export default {
       ],
     },
     {
-      subTitle: '联合主办单位',
+      subTitle: '联合主办方',
       subTitleEn: 'Co-Hosts',
       class: 'center',
       logoList: [
@@ -80,7 +84,7 @@ export default {
       ],
     },
     {
-      subTitle: '协办单位',
+      subTitle: '协办方',
       subTitleEn: 'Co-Organizers',
       class: 'center co-organizers',
       logoList: [
@@ -123,13 +127,21 @@ export default {
       ],
     },
     {
-      subTitle: '支持单位',
+      subTitle: '支持方',
       subTitleEn: 'Supporter',
       class: 'center',
       logoList: [
         {
           img: zhongke_light,
           img_dark: zhongke_dark,
+        },
+        {
+          img: huazhi_light,
+          img_dark: huazhi_dark,
+        },
+        {
+          img: jindie_light,
+          img_dark: jindie_dark,
         },
       ],
     },

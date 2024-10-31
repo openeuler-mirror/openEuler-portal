@@ -1,7 +1,7 @@
 /**
  * 迁移专区
  **/
-.migration-markdown{
+.migration-markdown {
   height: 100%;
   padding: 64px 120px;
   margin-left: 300px;
@@ -35,6 +35,9 @@
   }
   a {
     word-break: break-all;
+  }
+  ol {
+    list-style: decimal;
   }
 
   h1,
