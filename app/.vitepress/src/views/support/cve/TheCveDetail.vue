@@ -98,7 +98,6 @@ onMounted(() => {
     affectedProductList.value = res.result;
   });
 });
-
 </script>
 <template>
   <AppContent :mobile-top="16">
@@ -154,7 +153,10 @@ onMounted(() => {
           </OTableColumn>
           <OTableColumn :label="i18n.cve.PACKAGE" prop="packageName">
           </OTableColumn>
-          <OTableColumn :label="i18n.cve.STATUS" prop="status"> </OTableColumn>
+          <OTableColumn :label="i18n.cve.STATUS" prop="status" width="120">
+          </OTableColumn>
+          <OTableColumn :label="i18n.cve.ANALYSIS" prop="reason">
+          </OTableColumn>
 
           <el-table-column :label="i18n.cve.SECURITY_ADVISORIES">
             <template #default="scope">
@@ -190,6 +192,9 @@ onMounted(() => {
               </li>
               <li>
                 <span>{{ i18n.cve.STATUS }}:</span>{{ item.status }}
+              </li>
+              <li>
+                <span>{{ i18n.cve.ANALYSIS }}:</span>{{ item.reason }}
               </li>
               <li>
                 <span>{{ i18n.cve.SECURITY_ADVISORIES }}:</span
