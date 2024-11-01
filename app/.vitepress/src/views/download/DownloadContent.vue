@@ -712,7 +712,7 @@ function setActiveMirrorMobile(index: number, item: string) {
         display: flex;
         flex-wrap: wrap;
       }
-      .o-tag {
+      .e-tag {
         padding: 0 12px;
         font-size: var(--e-font-size-text);
         height: 28px;

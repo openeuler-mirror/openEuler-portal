@@ -73,7 +73,7 @@ const resolveDate = (date: any) => {
       border-left: 1px solid var(--e-color-border1);
       border-right: 1px solid var(--e-color-border1);
     }
-    .o-tag {
+    .e-tag {
       margin-top: 8px;
       margin-right: 4px;
     }

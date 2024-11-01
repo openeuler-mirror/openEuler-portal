@@ -485,7 +485,7 @@ const changeSize = () => {
         display: flex;
         flex-wrap: wrap;
       }
-      .o-tag {
+      .e-tag {
         padding: 3px 12px;
         font-size: var(--e-font-size-text);
         height: 28px;
