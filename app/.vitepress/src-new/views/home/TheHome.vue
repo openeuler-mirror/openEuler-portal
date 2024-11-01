@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 
 import AOS from 'aos';
 
@@ -8,6 +8,7 @@ import { useScreen } from '~@/composables/useScreen';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
 import { getSortData } from '@/api/api-search';
+import { getMeetingActivity } from '@/api/api-calendar';
 
 import HomeBanner from './HomeBanner.vue';
 import HomeDisplayZone from './HomeDisplayZone.vue';
@@ -15,13 +16,15 @@ import HomeIntro from './HomeIntro.vue';
 import HomePlayCommunity from './HomePlayCommunity.vue';
 import HomeShowCase from './HomeShowCase.vue';
 import HomePartner from './HomePartner.vue';
-import HomeTrend from './HomeTrend.vue';
+import HomeCalendar from './HomeCalendar.vue';
 
 const { isPhone, isPad } = useScreen();
-const { locale } = useLocale();
+
+const { locale, isZh } = useLocale();
+
+const calendarData = ref<string[]>([]);
 
 const paramsCase = {
-  category: 'showcase',
   lang: locale.value,
   page: 1,
   pageSize: 100,
@@ -44,6 +47,11 @@ onMounted(() => {
     delay: 100,
     once: true,
   });
+  getMeetingActivity({
+    type: 'all',
+  }).then((res) => {
+    calendarData.value = res.data;
+  });
 });
 </script>
 <template>
@@ -53,6 +61,10 @@ onMounted(() => {
       <HomeDisplayZone class="home-display-zone" />
       <HomeIntro />
       <HomePlayCommunity />
+      <HomeCalendar
+        v-if="isZh && calendarData?.length"
+        :table-data="calendarData"
+      />
       <HomeShowCase />
     </ContentWrapper>
     <HomePartner />
