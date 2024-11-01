@@ -64,6 +64,9 @@ import { OCard } from '@opensig/opendesign';
 .talent-query-card {
   margin-top: 40px;
   color: var(--o-color-info1);
+  @include respond-to('phone') {
+    margin-top: 16px;
+  }
   :deep(.o-card-content) {
     .talent-query-main {
       display: flex;
@@ -98,12 +101,20 @@ import { OCard } from '@opensig/opendesign';
           font-weight: 500;
           width: 150px;
           text-align: center;
+          @include respond-to('phone') {
+            padding: 8px 12px;
+            text-align: left;
+            width: 74px;
+          }
         }
         .content {
           display: inline-block;
           padding: 12px;
           width: 100%;
           color: var(--o-color-info1);
+          @include respond-to('phone') {
+            padding: 8px 12px;
+          }
           .gray {
             color: var(--o-color-info3);
           }

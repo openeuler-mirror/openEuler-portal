@@ -15,7 +15,7 @@ const { isPhone } = useScreen();
       class="talent-certification-card"
       :style="{ '--card-main-padding': '6px' }"
     >
-      <img class="card-img" :src="illustration" alt="" />
+      <img class="card-img img-in-dark" :src="illustration" alt="" />
       <div class="card-info">
         <p class="introduce">{{ $t('talent.talentCertificationIntro') }}</p>
         <a

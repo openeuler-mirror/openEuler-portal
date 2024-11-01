@@ -7,4 +7,5 @@ export default {
   getOpenEuler: '获取openEuler',
   communityVitality: 'openEuler社区活力',
   viewDetails: '查看贡献详情',
+  detailsLink: 'https://datastat.openeuler.org/zh/overview',
 };
