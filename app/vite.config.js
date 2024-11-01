@@ -125,6 +125,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-certification/, ''),
       },
+      '/doc-search/': {
+        target: 'https://doc-search.test.osinfra.cn/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/doc-search/, ''),
+      },
     },
   },
 });

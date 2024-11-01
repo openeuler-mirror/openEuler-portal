@@ -4,6 +4,15 @@
   }
 }
 
+@mixin text-truncate($line-clamp: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-clamp;
+}
+
 @mixin img-in-dark {
   filter: brightness(80%) grayscale(20%) contrast(1.2);
 }

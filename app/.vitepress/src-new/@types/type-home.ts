@@ -12,3 +12,11 @@ export interface VitalityValueT {
   modulenums: number;
   contributors: number;
 }
+
+// 案例参数
+export interface CaseT {
+  category?: string;
+  lang?: string;
+  page?: number;
+  pageSize?: number;
+}

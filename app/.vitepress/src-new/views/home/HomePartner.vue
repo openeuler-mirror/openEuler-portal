@@ -9,7 +9,7 @@ const publisher3 = publisher.slice(16);
 </script>
 
 <template>
-  <div class="home-partner">
+  <div class="home-partner" data-aos="fade-up">
     <p class="title">发行厂商</p>
     <HomeSwiper :data="publisher1" class="partner-swiper"></HomeSwiper>
     <HomeSwiper
