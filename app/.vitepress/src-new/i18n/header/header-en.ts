@@ -1,3 +1,5 @@
+import { markRaw } from 'vue';
+
 import DocumentLight from '~@/assets/category/header/document-light.svg';
 import IntroductionLight from '~@/assets/category/header/introduction-light.svg';
 import DownloadLight from '~@/assets/category/header/download-light.svg';
@@ -18,6 +20,9 @@ const TAG_TYPE = {
   HOT: 'HOT',
   NEW: 'NEW',
 }
+
+const OutLink = markRaw(IconOutLink);
+const ArrowRight = markRaw(IconArrowRight);
 
 export default {
   NAV_ROUTER: [
@@ -267,13 +272,13 @@ export default {
         },
         {
           NAME: 'Training',
-          ICON: IconArrowRight,
+          ICON: ArrowRight,
           CHILDREN: [
             {
               NAME: 'Tutorials',
               DESCRIPTION: 'Mini video courses presented by openEuler.',
               URL: 'https://space.bilibili.com/527064077/channel/collectiondetail?sid=1229363',
-              ICON: IconOutLink,
+              ICON: OutLink,
             },
           ],
           SHORTCUT: []
@@ -366,7 +371,7 @@ export default {
               NAME: 'OEPKGS',
               DESCRIPTION: 'A third-party extension repository for openEuler.',
               URL: 'https://oepkgs.net/zh-CN',
-              ICON: IconOutLink
+              ICON: OutLink
             },
           ],
         },
@@ -377,7 +382,7 @@ export default {
               NAME: 'oecp',
               DESCRIPTION: 'A simple, effective tool to analyze and compare OS differences.',
               URL: 'https://gitee.com/openeuler/oecp',
-              ICON: IconOutLink,
+              ICON: OutLink,
             },
             {
               NAME: 'Pkgship',
@@ -520,7 +525,7 @@ export default {
                   NAME: 'CLA',
                   DESCRIPTION: 'Sign the CLA to protect your work—multiple options available!',
                   URL: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
-                  ICON: IconOutLink,
+                  ICON: OutLink,
                 },
               ]
             },

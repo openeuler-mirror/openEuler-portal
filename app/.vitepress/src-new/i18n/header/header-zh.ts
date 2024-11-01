@@ -1,3 +1,5 @@
+import { markRaw } from 'vue';
+
 import DocumentLight from '~@/assets/category/header/document-light.svg';
 import InformationLight from '~@/assets/category/header/information-light.svg';
 import IntroductionLight from '~@/assets/category/header/introduction-light.svg';
@@ -25,6 +27,9 @@ const TAG_TYPE = {
   HOT: 'HOT',
   NEW: 'NEW',
 }
+
+const OutLink = markRaw(IconOutLink);
+const ArrowRight = markRaw(IconArrowRight);
 
 export default {
   NAV_ROUTER: [
@@ -292,7 +297,7 @@ export default {
         },
         {
           NAME: '课程中心',
-          ICON: IconArrowRight,
+          ICON: ArrowRight,
           CHILDREN: [
             {
               NAME: 'HCIA-openEuler 认证培训课程',
@@ -306,7 +311,7 @@ export default {
                 {
                   NAME: '报名考试',
                   URL: 'https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=383&authenticationLevel=CTYPE_CARE_HCIA&technicalField=PSC&version=1.0',
-                  ICON: IconOutLink,
+                  ICON: OutLink,
                 },
               ]
             },
@@ -314,7 +319,7 @@ export default {
               NAME: 'openEuler精品课程',
               DESCRIPTION: 'openEuler从入门到实践系列课程',
               URL: 'https://c0605e03bb6b40dca9cd34ab5b3fb1f8.shixizhi.huawei.com/portal/1643780836745113602?pageId=1644269448177651714&activeIndex=-1&sxz-lang=zh_CN',
-              ICON: IconOutLink
+              ICON: OutLink
             },
             {
               NAME: 'openEuler安全知识培训',
@@ -324,7 +329,7 @@ export default {
                 {
                   NAME: '开始学习',
                   URL: 'https://space.bilibili.com/527064077/channel/collectiondetail?sid=2726214',
-                  ICON: IconOutLink,
+                  ICON: OutLink,
                 },
                 {
                   NAME: '报名考试',
@@ -336,7 +341,7 @@ export default {
               NAME: 'Tutorials',
               DESCRIPTION: 'openEuler官方出品的迷你视频课程',
               URL: 'https://space.bilibili.com/527064077/channel/collectiondetail?sid=1229363',
-              ICON: IconOutLink,
+              ICON: OutLink,
             },
             {
               NAME: 'openEuler直播',
@@ -436,7 +441,7 @@ export default {
               NAME: 'License工具门户',
               DESCRIPTION: '帮助快速检测License权利、义务、限制',
               URL: 'https://compliance.openeuler.org/',
-              ICON: IconOutLink,
+              ICON: OutLink,
             },
           ],
         },
@@ -457,13 +462,13 @@ export default {
               NAME: 'EulerLauncher',
               DESCRIPTION: '跨平台openEuler虚拟机管理工具',
               URL: 'https://gitee.com/openeuler/eulerlauncher',
-              ICON: IconOutLink
+              ICON: OutLink
             },
             {
               NAME: 'OEPKGS',
               DESCRIPTION: 'OEPKGS软件托管平台',
               URL: 'https://oepkgs.net/zh-CN',
-              ICON: IconOutLink
+              ICON: OutLink
             },
           ],
         },
@@ -474,7 +479,7 @@ export default {
               NAME: 'oecp',
               DESCRIPTION: '操作系统差异比较分析工具',
               URL: 'https://gitee.com/openeuler/oecp',
-              ICON: IconOutLink,
+              ICON: OutLink,
             },
             {
               NAME: 'Pkgship',
@@ -647,7 +652,7 @@ export default {
                   NAME: 'CLA签署',
                   DESCRIPTION: '参与贡献前，需签署贡献者许可协议（CLA）\n个人CLA、企业CLA、员工CLA',
                   URL: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
-                  ICON: IconOutLink,
+                  ICON: OutLink,
                 },
               ]
             },
@@ -738,7 +743,7 @@ export default {
               NAME: 'NestOS',
               DESCRIPTION: '基于欧拉开源操作系统的云底座操作系统',
               URL: 'https://nestos.openeuler.org/',
-              ICON: IconOutLink,
+              ICON: OutLink,
             },
           ],
           SHORTCUT: [],
