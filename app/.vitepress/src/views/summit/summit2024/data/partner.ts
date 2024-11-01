@@ -36,6 +36,8 @@ import huazhi_light from '../img/logo/huazhi_light.png';
 import huazhi_dark from '../img/logo/huazhi_dark.png';
 import jindie_light from '../img/logo/jindie_light.png';
 import jindie_dark from '../img/logo/jindie_dark.png';
+import oschina_light from '../img/logo/oschina_light.png';
+import oschina_dark from '../img/logo/oschina_dark.png';
 
 export default {
   title: '共建单位',
@@ -142,6 +144,10 @@ export default {
         {
           img: jindie_light,
           img_dark: jindie_dark,
+        },
+        {
+          img: oschina_light,
+          img_dark: oschina_dark,
         },
       ],
     },
