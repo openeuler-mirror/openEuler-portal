@@ -552,7 +552,7 @@ const enterEvent = () => {
       <div class="result-left">
         <!-- 搜索框 -->
 
-        <div
+        <!-- <div
           v-if="showChatRes && lang === 'zh'"
           class="gpt-block"
           :class="suggestList.length ? 'exist-suggest' : ''"
@@ -610,7 +610,7 @@ const enterEvent = () => {
             v-model="viewAgreeVisible"
             @submit="searchChat"
           ></ViewAgreeModal>
-        </div>
+        </div> -->
         <div class="search-content">
           <div class="select-options">
             <ul class="type">
