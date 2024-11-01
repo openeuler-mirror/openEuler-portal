@@ -431,11 +431,7 @@ html[lang='zh'] {
     height: 300px;
   }
   :deep(.swiper-pagination) {
-    width: 1416px !important;
-    bottom: 84px;
-    left: 50% !important;
-    transform: translateX(-50%);
-    text-align: left;
+    bottom: 64px;
     .swiper-pagination-bullet {
       width: 40px;
       height: 2px;

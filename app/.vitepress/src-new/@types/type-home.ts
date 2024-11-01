@@ -1,3 +1,4 @@
+// 社区活力数据
 export interface VitalityValueT {
   comments: number;
   communitymembers: number;
