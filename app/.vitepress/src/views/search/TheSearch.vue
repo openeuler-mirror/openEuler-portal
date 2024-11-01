@@ -351,7 +351,7 @@ function searchAll(valueChange?: boolean) {
       currentTab.value = 'all';
     }
     searchRecommendRef.value(searchInput.value);
-    searchChat();
+    // searchChat();
     searchCountAll();
     searchDataAll();
     searchRpm();
