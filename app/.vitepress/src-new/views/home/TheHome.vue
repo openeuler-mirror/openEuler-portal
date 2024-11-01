@@ -15,6 +15,7 @@ import HomeIntro from './HomeIntro.vue';
 import HomePlayCommunity from './HomePlayCommunity.vue';
 import HomeShowCase from './HomeShowCase.vue';
 import HomePartner from './HomePartner.vue';
+import HomeTrend from './HomeTrend.vue';
 
 const { isPhone, isPad } = useScreen();
 const { locale } = useLocale();
@@ -55,6 +56,8 @@ onMounted(() => {
       <HomeShowCase />
     </ContentWrapper>
     <HomePartner />
+
+    <HomeTrend />
   </div>
 </template>
 

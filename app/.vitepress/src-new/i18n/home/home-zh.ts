@@ -8,4 +8,8 @@ export default {
   communityVitality: 'openEuler社区活力',
   viewDetails: '查看贡献详情',
   detailsLink: 'https://datastat.openeuler.org/zh/overview',
+  // 社区动态
+  trend: '社区动态',
+  blog: '博客',
+  news: '新闻',
 };
