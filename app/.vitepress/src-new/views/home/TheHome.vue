@@ -13,6 +13,7 @@ import HomeBanner from './HomeBanner.vue';
 import HomeDisplayZone from './HomeDisplayZone.vue';
 import HomeIntro from './HomeIntro.vue';
 import HomePlayCommunity from './HomePlayCommunity.vue';
+import HomeShowCase from './HomeShowCase.vue';
 import HomePartner from './HomePartner.vue';
 
 const { isPhone, isPad } = useScreen();
@@ -51,6 +52,7 @@ onMounted(() => {
       <HomeDisplayZone class="home-display-zone" />
       <HomeIntro />
       <HomePlayCommunity />
+      <HomeShowCase />
     </ContentWrapper>
     <HomePartner />
   </div>
