@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { ref, watch, computed } from 'vue';
-import { useRoute, useData, inBrowser } from 'vitepress';
+import { ref, watch } from 'vue';
+import { useRoute, inBrowser } from 'vitepress';
 
 import {
   DialogActionT,
@@ -33,6 +33,8 @@ const { t, isZh } = useLocale();
 const { leLaptop, lePadV } = useScreen();
 
 const cookieStore = useCookieStore();
+
+const COOKIE_DOMAIN = import.meta.env.VITE_COOKIE_DOMAIN;
 
 // cookie的key
 const COOKIE_KEY = 'agreed-cookiepolicy';
@@ -114,7 +116,7 @@ const acceptAll = () => {
     COOKIE_KEY,
     `${COOKIE_AGREED_STATUS.ALL_AGREED}${cookieStore.version}`,
     180,
-    import.meta.env.VITE_COOKIE_DOMAIN
+    COOKIE_DOMAIN
   );
   toggleNoticeVisible(false);
   initSensor();
@@ -128,7 +130,7 @@ const rejectAll = () => {
     COOKIE_KEY,
     `${COOKIE_AGREED_STATUS.NECCESSARY_AGREED}${cookieStore.version}`,
     180,
-    import.meta.env.VITE_COOKIE_DOMAIN
+    COOKIE_DOMAIN
   );
   toggleNoticeVisible(false);
 };
@@ -231,7 +233,7 @@ watch(
               target="_blank"
               rel="noopener noreferrer"
             >
-            {{ t('cookie.link') }}
+              {{ t('cookie.link') }}
             </a>
             {{ isZh ? '。' : '.' }}
           </p>
