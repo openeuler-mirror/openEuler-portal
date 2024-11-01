@@ -41,6 +41,9 @@ export default defineConfig({
       compiler: 'vue3',
       customCollections: {
         app: FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src/assets/svg-icons')
+        ),
+        'app-new': FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src-new/assets/svg-icons')
         ),
         mooc: FileSystemIconLoader(
