@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import { ref, computed, onMounted } from 'vue';
 import AOS from 'aos';
+
+import { useCommon } from '@/stores/common';
+
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
@@ -16,6 +19,12 @@ defineProps({
 const screenWidth = ref(useWindowResize());
 const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
 
+const commonStore = useCommon();
+
+const isLight = computed(() => {
+  return commonStore.theme === 'light';
+});
+
 onMounted(() => {
   AOS.init({
     duration: 800,
@@ -28,7 +37,10 @@ onMounted(() => {
     <div class="banner-panel-cover"></div>
     <div class="banner-panel-content">
       <div data-aos="fade-up" class="banner-main">
-        <img :src="bannerData.pcTextImg" class="text-img" />
+        <img
+          :src="isLight ? bannerData.pcTextImgLight : bannerData.pcTextImgDark"
+          class="text-img"
+        />
         <div v-if="bannerData.btn" data-aos="fade-up" class="action">
           <ClientOnly>
             <a
@@ -50,11 +62,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-$banner-color: #fff;
-
-.dark .banner-panel-cover {
-  filter: brightness(80%) grayscale(20%) contrast(1.2);
-}
+$banner-color: var(--e-color-text1);
 
 .home-banner {
   width: 100%;
@@ -66,9 +74,9 @@ $banner-color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(../img/banner-pc.jpg);
+    background-image: url(../img/banner_pc_light.jpg);
     @media screen and (max-width: 768px) {
-      background-image: url(../img/banner_mo.jpg);
+      background-image: url(../img/banner_mo_light.png);
     }
   }
   .banner-panel-content {
@@ -93,6 +101,7 @@ $banner-color: #fff;
       padding-bottom: 20px;
     }
   }
+
   .banner-main {
     width: 100%;
   }
@@ -103,7 +112,7 @@ $banner-color: #fff;
     }
   }
   .action {
-    margin-top: var(--e-spacing-h3);
+    margin-top: 32px;
     a {
       display: inline-block;
     }
@@ -126,7 +135,12 @@ $banner-color: #fff;
     }
   }
 }
-
+.dark .banner-panel-cover {
+  background-image: url(../img/banner_pc_dark.jpg);
+  @media screen and (max-width: 768px) {
+    background-image: url(../img/banner_mo_dark.png);
+  }
+}
 @media (max-width: 767px) {
   .home-banner {
     height: 300px;

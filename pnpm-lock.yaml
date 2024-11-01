@@ -12,8 +12,8 @@ dependencies:
     specifier: ^2.0.1
     version: 2.0.1
   '@opensig/open-analytics':
-    specifier: ^0.0.6
-    version: 0.0.6
+    specifier: ^0.0.8
+    version: 0.0.8
   '@opensig/opendesign':
     specifier: 0.0.65
     version: 0.0.65(vue@3.3.4)
@@ -1011,8 +1011,8 @@ packages:
       fastq: 1.16.0
     dev: true
 
-  /@opensig/open-analytics@0.0.6:
-    resolution: {integrity: sha512-ty8yI/KFKT20a983AOUY4KNfsbdrWjRCwxl/abh1Z9PEIAA0d3NNkZtmoTmPFMpsx81fhgObcLeHq0ld/zpAsg==}
+  /@opensig/open-analytics@0.0.8:
+    resolution: {integrity: sha512-29aX1TKdn98zNYCGnIXHy90ZZJfgTM1ArChTtqzLmTSJOikch8gkmkaFPseDdvsl0wGCNoFtdp8oehstK5hVYg==}
     dependencies:
       ua-parser-js: 1.0.39
       uuid: 10.0.0

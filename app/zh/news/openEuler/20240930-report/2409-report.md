@@ -5,7 +5,7 @@ category: news
 tags:
   - openEuler
   - 社区运作报告
-banner: 'img/banners/240930-report'
+banner: 'img/banners/240930-report.png'
 author: 'openEuler'
 summary: 'openEuler 社区 2024 年 9 月运作报告'
 ---
@@ -53,9 +53,9 @@ openEuler 24.09 版本是基于Linux 6.6内核构建的首个创新版本，从m
 ### 社区规模
 ---
 
-截至2024年9月30日，openEuler 社区用户累计超过511万。超过2万名开发者在社区持续贡献。社区累计产生 189K个PRs、118.4K条Issues。目前，加入openEuler 社区的单位成员1775家，本月新增41家。
+截至2024年9月30日，openEuler 社区用户累计超过355万。超过2万名开发者在社区持续贡献。社区累计产生 189K个PRs、118.4K条Issues。目前，加入openEuler 社区的单位成员1775家，本月新增41家。
 
-![image](media/2409-03.png)
+![image](media/2409-01-2.jpg)
 
 社区贡献看板（截至2024/09/30）
 

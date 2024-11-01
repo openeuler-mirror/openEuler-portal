@@ -21,6 +21,7 @@ const total = ref(0);
 const layout = ref('sizes, prev, pager, next, slot, jumper');
 const searchContent = ref('');
 const activeIndex = ref(0);
+const activeReason = ref(0);
 const selectedYear = ref('');
 const activeScore = ref(0);
 const activeYear = ref(0);
@@ -35,6 +36,7 @@ const queryData: CveQueryT = reactive({
   },
   keyword: '',
   status: '',
+  reason: '',
   year: '',
   score: '',
   noticeType: 'cve',
@@ -51,6 +53,11 @@ function getCveLists(data: CveQueryT) {
 const selectTypetag = (i: number, category: string) => {
   activeIndex.value = i;
   queryData.status = category;
+};
+
+const selectReason = (i: number, reason: string) => {
+  activeReason.value = i;
+  queryData.reason = reason;
 };
 
 const handleSizeChange = (val: number) => {
@@ -112,6 +119,18 @@ watch(queryData, () => getCveLists(queryData));
         </OTag>
       </TagFilter>
 
+      <TagFilter :label="i18n.cve.REASON" :show="false">
+        <OTag
+          v-for="(item, index) in i18n.cve.REASON_LIST"
+          :key="'tag' + index"
+          checkable
+          :type="activeReason === index ? 'primary' : 'text'"
+          @click="selectReason(index, item.LABEL)"
+        >
+          {{ item.NAME }}
+        </OTag>
+      </TagFilter>
+
       <TagFilter :show="false" :label="i18n.safetyBulletin.YEAR">
         <OTag
           v-for="(item, index) in queryYears"
@@ -149,6 +168,19 @@ watch(queryData, () => getCveLists(queryData));
             {{ item.NAME }}
           </div>
         </div>
+
+        <div class="filter">
+          <div
+            v-for="(item, index) in i18n.cve.REASON_LIST"
+            :key="index"
+            :class="activeReason === index ? 'selected' : ''"
+            class="filter-item"
+            @click="selectReason(index, item.LABEL)"
+          >
+            {{ item.NAME }}
+          </div>
+        </div>
+
         <div class="filter">
           <div
             v-for="(item, index) in i18n.cve.CVSS_LIST"
@@ -333,23 +365,30 @@ watch(queryData, () => getCveLists(queryData));
     align-items: center;
     width: 100%;
     margin-bottom: var(--e-spacing-h8);
+    border: 1px solid var(--e-color-brand1);
     .selected {
       background-color: var(--e-color-brand1);
       color: var(--e-color-text2);
     }
+
     &-item {
       cursor: pointer;
-      flex: 1;
       text-align: center;
       padding: var(--e-spacing-h9) 0;
       font-size: var(--e-font-size-tip);
       font-weight: 400;
       color: var(--e-color-brand1);
       line-height: var(--e-line-height-text);
-      border: 1px solid var(--e-color-brand1);
+      border-left: 1px solid var(--e-color-brand1);
       border-right: 0;
-      &:last-child {
-        border: 1px solid var(--e-color-brand1);
+
+      &:not(:first-child) {
+        flex: 1;
+      }
+
+      &:first-child {
+        width: 100px;
+        border-left: none;
       }
     }
   }
