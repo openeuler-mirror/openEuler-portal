@@ -1009,11 +1009,7 @@ const enterEvent = () => {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: var(--e-spacing-h2);
 
-        @media (max-width: 768px) {
-          margin-top: var(--e-spacing-h5);
-        }
         .select-options {
           display: flex;
           justify-content: space-between;
