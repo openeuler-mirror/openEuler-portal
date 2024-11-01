@@ -6,6 +6,7 @@ import type { LocaleT } from '~@/@types/type-locale';
 
 export const useLocale = () => {
   const { t, locale } = useI18n();
+  const $t = t;
 
   const isZh = computed(() => locale.value === 'zh');
   const isEn = computed(() => locale.value === 'en');
@@ -32,16 +33,14 @@ export const useLocale = () => {
     if (locale.value === lang) {
       return;
     }
-    locale.value = lang;
-    const language = isUndefined(lang) ? (isZh.value ? 'en' : 'zh') : lang;
 
-    if (isClient) {
-      localStorage.setItem('locale', language);
-    }
+    const language = isUndefined(lang) ? (isZh.value ? 'en' : 'zh') : lang;
+    locale.value = language;
   };
 
   return {
     t,
+    $t,
     locale,
     isZh,
     isEn,
