@@ -49,6 +49,9 @@ export default defineConfig({
         mooc: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src/assets/category/mooc')
         ),
+        home: FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src-new/assets/category/home/svgs')
+        ),
         footer: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src/assets/common/footer')
         ),

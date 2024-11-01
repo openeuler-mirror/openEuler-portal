@@ -52,8 +52,8 @@ const jumpTo = (item: any) => {
 };
 
 const commonStore = useCommon();
-const isDark = computed(() => {
-  return commonStore.theme === 'dark' ? true : false;
+const theme = computed(() => {
+  return commonStore.theme;
 });
 </script>
 
@@ -66,7 +66,7 @@ const isDark = computed(() => {
       clickable: true,
     }"
     :autoplay="{
-      delay: 500000,
+      delay: 5000,
       disableOnInteraction: false,
     }"
     :navigation="true"
@@ -83,22 +83,23 @@ const isDark = computed(() => {
           class="banner-panel-cover"
           :style="{
             backgroundImage: `url(${
-              windowWidth < 767 ? item.moBanner : item.pcBanner
+              windowWidth < 767
+                ? item.moBanner[theme]
+                  ? item.moBanner[theme]
+                  : item.moBanner
+                : item.pcBanner[theme]
+                ? item.pcBanner[theme]
+                : item.pcBanner
             })`,
           }"
         >
           <div
             v-if="item.title?.length"
             class="banner-panel-content flex-column"
-            :class="[item.id, isDark ? `${item.id}-dark` : '']"
+            :class="[item.id]"
           >
             <div data-aos="fade-down" class="box">
-              <p
-                v-for="title in item.title"
-                :key="title"
-                :class="item.id === 'eur' ? 'eur' : ''"
-                class="title"
-              >
+              <p v-for="title in item.title" :key="title" class="title">
                 {{ title }}
               </p>
               <p class="desc">
@@ -119,7 +120,12 @@ const isDark = computed(() => {
               </OButton>
             </div>
           </div>
-          <img v-else class="isH5show" :src="item.moBanner" alt="openEuler" />
+          <img
+            v-else
+            class="isH5show"
+            :src="item.moBanner[theme] ? item.moBanner[theme] : item.moBanner"
+            alt="openEuler"
+          />
 
           <div
             v-if="item.id === 'devday'"
@@ -127,8 +133,8 @@ const isDark = computed(() => {
             :class="[windowWidth < 824 ? 'box-mo' : '', item.id]"
           >
             <img
-              v-if="(item as any).textImg_pc"
-              :src="windowWidth < 824 ? (item as any).textImg_mo : (item as any).textImg_pc"
+              v-if="(item as any).textImg_pc && windowWidth > 824"
+              :src=" (item as any).textImg_pc[theme]"
               alt="openEuler"
             />
           </div>
@@ -150,6 +156,7 @@ html[lang='zh'] {
   }
 }
 .dark .banner-panel-cover {
+  background-color: rgb(0, 0, 51);
   filter: brightness(80%) grayscale(20%) contrast(1.2);
 }
 .home-banner-btn {
@@ -177,6 +184,12 @@ html[lang='zh'] {
     .box {
       display: none;
     }
+  }
+}
+
+#devday {
+  .banner-panel-cover {
+    background-position: 62%;
   }
 }
 
@@ -354,6 +367,7 @@ html[lang='zh'] {
       background-size: cover;
       width: 100%;
       height: 100%;
+      background-color: rgb(178, 209, 255);
       video {
         position: absolute;
         top: 0;
@@ -403,6 +417,11 @@ html[lang='zh'] {
       left: 50%;
       transform: translateX(-50%);
       padding: 0 44px;
+      img {
+        @media screen and (max-width: 1440px) {
+          padding: 0 16px;
+        }
+      }
     }
     .devday {
       img {

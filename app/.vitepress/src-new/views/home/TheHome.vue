@@ -17,6 +17,7 @@ import HomePlayCommunity from './HomePlayCommunity.vue';
 import HomeShowCase from './HomeShowCase.vue';
 import HomePartner from './HomePartner.vue';
 import HomeCalendar from './HomeCalendar.vue';
+import HomeTrend from './HomeTrend.vue';
 
 const { isPhone, isPad } = useScreen();
 
@@ -66,10 +67,9 @@ onMounted(() => {
         :table-data="calendarData"
       />
       <HomeShowCase />
+      <HomeTrend />
     </ContentWrapper>
     <HomePartner />
-
-    <HomeTrend />
   </div>
 </template>
 
