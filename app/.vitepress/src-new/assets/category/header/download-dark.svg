@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="path-1" x="0" y="0" width="32" height="32"></rect>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-71备份" transform="translate(0.000000, 0.000000)">
+            <g id="Clipped">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="蒙版"></g>
+                <g id="编组" opacity="0.2" mask="url(#mask-2)" fill="#4374F2">
+                    <g transform="translate(3.364000, 2.752000)" id="减去顶层">
+                        <path d="M1.978,0 L23.736,0 C24.829,0 25.714,0.885 25.714,1.978 L25.714,23.736 C25.714,24.828 24.829,25.714 23.736,25.714 L1.978,25.714 C0.886,25.714 0,24.828 0,23.736 L0,1.978 C0,0.885 0.886,0 1.978,0 Z M18.636,22.998 L6.636,22.998 C6.36,22.998 6.136,23.222 6.136,23.498 C6.136,23.774 6.36,23.998 6.636,23.998 L18.636,23.998 C18.912,23.998 19.136,23.774 19.136,23.498 C19.136,23.222 18.912,22.998 18.636,22.998 Z"></path>
+                    </g>
+                </g>
+            </g>
+            <g id="Clipped" transform="translate(9.604647, 16.750000)" fill="#4374F2">
+                <path d="M5.85535299,8.12 L0.245352993,1.65 C-0.314647007,1 0.145352993,0 1.00535299,0 L12.215353,0 C13.075353,0 13.535353,1 12.975353,1.65 L7.36535299,8.12 C6.96535299,8.58 6.25535299,8.58 5.85535299,8.12 Z" id="多边形-5"></path>
+            </g>
+            <g id="Clipped" transform="translate(14.219971, 5.750000)" fill="#4374F2" fill-rule="nonzero" opacity="0.8">
+                <g id="编组">
+                    <rect id="矩形-53" x="0" y="0" width="4" height="10" rx="2"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

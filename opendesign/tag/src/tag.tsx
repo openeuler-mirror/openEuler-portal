@@ -11,7 +11,7 @@ export default defineComponent({
 
     const classNames = computed(() => {
       return {
-        'o-tag': true,
+        'e-tag': true,
         [`o-tag-size-${size.value}`]: true,
         [`o-tag-type-${type.value}`]: true,
         'o-tag-checked': checked.value,

@@ -401,7 +401,7 @@ watch(queryData, () => getOsTableList(queryData));
   }
   :deep(.el-card__body) {
     padding: var(--e-spacing-h8) var(--e-spacing-h2);
-    .o-tag {
+    .e-tag {
       margin: var(--e-spacing-h10);
     }
   }
