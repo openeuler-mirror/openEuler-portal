@@ -4,7 +4,7 @@ import showMd from 'markdown-it';
 
 import IconTime from '~icons/app/icon-time.svg';
 
-defineProps({
+const props = defineProps({
   agendaData: {
     type: Object,
     required: true,
@@ -24,7 +24,13 @@ function changeIndexShow(id: string, idItem: string) {
   idShow.value = id;
   idSubItemShow.value = idItem;
 }
-
+const otherTabType = ref(0);
+watch(
+  () => props.agendaData,
+  () => {
+    otherTabType.value = 0;
+  }
+);
 // 转换md语法
 function convertMd(data: string) {
   return showMd().render(data);
@@ -35,8 +41,26 @@ function convertMd(data: string) {
   <div class="schedule">
     <h4 v-if="agendaData.lable">{{ agendaData.lable }}</h4>
     <div class="schedule-item other">
+      <el-tabs
+        v-if="agendaData.content[1]"
+        v-model.number="otherTabType"
+        class="other-tabs"
+      >
+        <el-tab-pane
+          v-for="(itemList, scheduleIndex) in agendaData.content"
+          :key="itemList.id"
+          :name="scheduleIndex"
+        >
+          <template #label>
+            <div class="time-tabs">
+              {{ itemList.name }}
+            </div>
+          </template>
+        </el-tab-pane>
+      </el-tabs>
       <div
-        v-for="itemList in agendaData.content"
+        v-for="(itemList, listIndex) in agendaData.content"
+        v-show="otherTabType === listIndex"
         :key="itemList.id"
         class="content"
       >
@@ -71,9 +95,9 @@ function convertMd(data: string) {
                 v-dompurify-html="convertMd(item)"
               ></span>
             </span>
-            <div v-if="subItem.person[0]" class="name-box">
+            <div v-if="subItem.person.length" class="name-box">
               <div v-for="personItem in subItem.person" :key="personItem.id">
-                <span class="name">
+                <span v-if="personItem.name" class="name">
                   {{ personItem.name }}
                 </span>
                 <span v-if="personItem.post" class="post">
@@ -197,6 +221,100 @@ function convertMd(data: string) {
     margin-top: var(--e-spacing-h4);
     @media (max-width: 1100px) {
       padding: 16px;
+    }
+    &.other {
+      :deep(.el-tabs) {
+        margin-bottom: 24px;
+        .el-tabs__header.is-top .el-tabs__item.is-top {
+          padding: 0px 20px 0px 0;
+          @media (max-width: 1100px) {
+            height: auto;
+            padding: 0px 18px 0px 0;
+            line-height: 22px;
+          }
+        }
+        .el-tabs__nav {
+          float: none;
+          display: inline-block;
+          @media (max-width: 1100px) {
+            line-height: 44px;
+          }
+        }
+        .el-tabs__header {
+          text-align: center;
+          margin: 0;
+          .el-tabs__item {
+            @media (max-width: 1100px) {
+              font-size: 12px;
+              line-height: 18px;
+            }
+          }
+        }
+      }
+      :deep(.el-tabs__nav-scroll) {
+        text-align: center;
+        color: var(--e-color-text1);
+      }
+      :deep(.el-tabs__content) {
+        overflow: visible;
+        @media (max-width: 1100px) {
+          margin-top: 16px;
+        }
+      }
+      :deep(.el-tabs__nav) {
+        float: none;
+        display: inline-block;
+        @media (max-width: 1100px) {
+          line-height: 44px;
+        }
+      }
+      .other-text {
+        margin: 24px auto 0 auto;
+        color: var(--e-color-text1);
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 1100px) {
+          font-size: 14px;
+          line-height: 22px;
+          margin: 16px 0;
+        }
+        svg {
+          margin-right: 8px;
+        }
+      }
+      .other-title {
+        margin: 24px auto;
+        color: var(--e-color-text1);
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: normal;
+        @media (max-width: 1100px) {
+          font-size: 14px;
+          line-height: 22px;
+          margin: 16px 0;
+        }
+      }
+      .content-list {
+        .detail {
+          display: none;
+        }
+        .show-detail {
+          .detail {
+            display: block;
+          }
+        }
+      }
+      .exit-detail {
+        cursor: pointer;
+      }
     }
     .detail {
       display: none;

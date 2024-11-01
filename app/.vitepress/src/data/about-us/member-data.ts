@@ -54,6 +54,8 @@ import arm_light from '@/assets/category/member/arm_light.png';
 import arm_dark from '@/assets/category/member/arm_dark.png';
 import ningsi_light from '@/assets/category/member/ningsi_light.png';
 import ningsi_dark from '@/assets/category/member/ningsi_dark.png';
+import yinke_light from '@/assets/category/member/yinke_light.png';
+import yinke_dark from '@/assets/category/member/yinke_dark.png';
 
 export default {
   zh: [
@@ -140,6 +142,11 @@ export default {
         {
           img_light: aosiwei_light,
           img_dark: aosiwei_dark,
+          noIcon: true,
+        },
+        {
+          img_light: yinke_light,
+          img_dark: yinke_dark,
           noIcon: true,
         },
         {
@@ -304,6 +311,11 @@ export default {
         {
           img_light: aosiwei_light,
           img_dark: aosiwei_dark,
+          noIcon: true,
+        },
+        {
+          img_light: yinke_light,
+          img_dark: yinke_dark,
           noIcon: true,
         },
         {

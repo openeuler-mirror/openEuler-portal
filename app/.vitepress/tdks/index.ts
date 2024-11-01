@@ -5,7 +5,7 @@ export default {
   zh,
   en,
   titleSuffix: {
-    zh: 'openEuler社区官网',
+    zh: 'openEuler社区',
     en: 'openEuler',
   }
 }

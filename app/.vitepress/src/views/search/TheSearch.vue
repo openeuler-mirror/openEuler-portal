@@ -51,14 +51,15 @@ const currentPage = ref(1);
 // 每页数据
 const pageSize = ref(12);
 // 搜索内容
-const searchInput = ref<string>('');
-const searchValue = computed(() => {
+const searchInput = ref('');
+const currentSearchVal = ref('');
+const tips = computed(() => {
   return i18n.value.common.SEARCH;
 });
 // 接收搜索数量的数据
 const searchNumber: any = ref([]);
 // 搜索框是否获取焦点
-const isFocuse = ref(false);
+const isFocus = ref(false);
 
 const searchData = computed(() => {
   return {
@@ -387,7 +388,12 @@ function goLink(data: any, index: number) {
     search_result_url = location.origin + search_result_url;
   }
   if (cookieStore.isAllAgreed) {
-    reportSelectSearchResult(data, index, search_result_url, searchInput.value);
+    reportSelectSearchResult(
+      data,
+      index,
+      search_result_url,
+      currentSearchVal.value
+    );
   }
   window.open(search_result_url);
 }
@@ -435,6 +441,7 @@ onMounted(async () => {
   await getVersionTag();
   if (location.href.split('=')[1]) {
     searchInput.value = decodeURIComponent(window.location.href.split('=')[1]);
+    currentSearchVal.value = searchInput.value;
   }
   window.addEventListener('click', () => {
     if (isClickOutside.value) {
@@ -485,7 +492,7 @@ const handleSearchHistory = (val: string) => {
 };
 
 const changeFocuseState = (state: boolean) => {
-  isFocuse.value = state;
+  isFocus.value = state;
 };
 
 // 控制无数据状态显示
@@ -506,7 +513,7 @@ const enterEvent = () => {
         <OSearch
           ref="searchInputRef"
           v-model="searchInput"
-          :placeholder="searchValue.PLEACHOLDER"
+          :placeholder="tips.PLEACHOLDER"
           :maxlength="50"
           @focus="changeFocuseState(true)"
           @change="() => searchAll(true)"
@@ -521,7 +528,7 @@ const enterEvent = () => {
         <ClientOnly>
           <SearchRecommend
             class="search-recommend"
-            v-show="isFocuse"
+            v-show="isFocus"
             ref="searchRecommendRef"
             @search-click="handleSearchHistory"
             :val="searchInput"

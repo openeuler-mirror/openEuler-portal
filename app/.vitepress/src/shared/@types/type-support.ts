@@ -9,6 +9,7 @@ export interface CveQueryT {
   year?: string;
   score?: string;
   noticeType: string;
+  reason?: string;
 }
 export interface OsvQueryT {
   pages: BaseQueryT;
@@ -94,6 +95,7 @@ export interface AffectProductT {
   securityNoticeNo: string;
   status: string;
   updateTime: string;
+  reason: string;
 }
 
 export interface ConfigurationInfoT {
@@ -148,7 +150,7 @@ export interface AdapterListT {
 export interface ResultT {
   name: string;
   percent: string;
-  result: string
+  result: string;
 }
 export interface ComponentQueryT {
   securityLevel?: string;
@@ -188,13 +190,14 @@ export interface OsvListT {
 }
 export interface OsvDataT {
   osvList: OsvListT[];
-  totalCount: number
+  totalCount: number;
 }
 export interface PackageInfoT {
   productName: string;
   packageName: string;
   sha256: string;
   url?: string;
+  isEpol: boolean;
   child: PackageInfoT[];
 }
 export interface PackageT {
@@ -373,27 +376,27 @@ export interface SolutionDataT {
   updateTime: string;
 }
 export interface SoftwareListItemT {
-  arch: string,
-  bin: string,
-  category: string,
-  cmds: object,
-  downloadLink: string,
-  group: string,
-  install: string,
-  libs: string,
-  license: string,
-  os: string,
-  property: string,
-  result_root: string,
-  result_url: string,
-  src_location: string,
-  type: string,
-  uninstall: string,
-  version: string,
+  arch: string;
+  bin: string;
+  category: string;
+  cmds: object;
+  downloadLink: string;
+  group: string;
+  install: string;
+  libs: string;
+  license: string;
+  os: string;
+  property: string;
+  result_root: string;
+  result_url: string;
+  src_location: string;
+  type: string;
+  uninstall: string;
+  version: string;
 }
 export interface SoftwareListT {
   total: number;
-  info: SoftwareListItemT[]
+  info: SoftwareListItemT[];
 }
 export interface BussinessSoftItemT {
   authenticateLink?: null;
@@ -407,11 +410,11 @@ export interface BussinessSoftItemT {
   productVersion: string;
   region?: null;
   testOrganization: string;
-  type: string
+  type: string;
 }
 export interface BussinessSoftT {
   data: BussinessSoftItemT[];
-  totalNum: number
+  totalNum: number;
 }
 export interface SofoFilterT {
   Arch: string[];
@@ -420,7 +423,7 @@ export interface SofoFilterT {
 }
 export interface TestOrganizationsT {
   osNames: string[];
-  testOrganizations: string[]
+  testOrganizations: string[];
 }
 export interface SelectParamsT {
   lang: string;

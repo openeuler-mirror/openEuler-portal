@@ -4,6 +4,10 @@ import { showGuard, logout, useStoreData, getUserAuth } from '../shared/login';
 import { useI18n } from '@/i18n';
 
 import IconLogin from '~icons/app/icon-login.svg';
+import { onMounted, ref } from 'vue';
+import { getUnreadMsgCount } from '@/api/api-messageCenter';
+import AppBadge from './badge/AppBadge.vue';
+import { queryPersonalInfo } from '@/api/api-login';
 
 const { lang } = useData();
 const { token } = getUserAuth();
@@ -19,23 +23,62 @@ const jumpToUserZone = () => {
 const jumpToMsgCenter = () => {
   window.open(import.meta.env.VITE_MESSAGE_CENTER_URL);
 };
+
+const unreadMsgCount = ref(0);
+
+onMounted(async () => {
+  if (token) {
+    const { data: userInfo } = await queryPersonalInfo();
+    const giteeNotRegistered = !(userInfo.identities as any[])?.find(
+      (item) => item.identity === 'gitee'
+    );
+    const data = await getUnreadMsgCount();
+    unreadMsgCount.value = data.reduce((count, val) => {
+      if (giteeNotRegistered && val.source === 'https://gitee.com') {
+        return count;
+      }
+      return count + val.count;
+    }, 0);
+  }
+});
 </script>
 
 <template>
   <div v-if="lang !== 'ru'" class="opt-user">
     <div v-if="token">
       <div class="el-dropdown-link opt-info">
-        <img
-          v-if="guardAuthClient.photo"
-          :src="guardAuthClient.photo"
-          class="user-img"
-        />
-        <div v-else class="user-img"></div>
+        <AppBadge v-if="unreadMsgCount" :value="unreadMsgCount">
+          <img
+            v-if="guardAuthClient.photo"
+            :src="guardAuthClient.photo"
+            class="user-img"
+          />
+          <div v-else class="user-img"></div>
+        </AppBadge>
+        <template v-else>
+          <img
+            v-if="guardAuthClient.photo"
+            :src="guardAuthClient.photo"
+            class="user-img"
+          />
+          <div v-else class="user-img"></div>
+        </template>
         <p class="opt-name">{{ guardAuthClient.username }}</p>
       </div>
       <ul class="menu-list">
         <li @click="jumpToUserZone()">{{ i18n.common.USER_CENTER }}</li>
-        <li @click="jumpToMsgCenter()">{{ i18n.common.MESSAGE_CENTER }}</li>
+        <li @click="jumpToMsgCenter()">
+          <AppBadge
+            v-if="unreadMsgCount"
+            :value="unreadMsgCount"
+            :offset="[0, 10]"
+          >
+            {{ i18n.common.MESSAGE_CENTER }}
+          </AppBadge>
+          <template v-else>
+            {{ i18n.common.MESSAGE_CENTER }}
+          </template>
+        </li>
         <li @click="logout()">{{ i18n.common.LOGOUT }}</li>
       </ul>
     </div>
