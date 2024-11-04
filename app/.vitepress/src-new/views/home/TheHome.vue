@@ -67,10 +67,9 @@ onMounted(() => {
         :table-data="calendarData"
       />
       <HomeShowCase />
+      <HomeTrend />
     </ContentWrapper>
     <HomePartner />
-
-    <HomeTrend />
   </div>
 </template>
 
