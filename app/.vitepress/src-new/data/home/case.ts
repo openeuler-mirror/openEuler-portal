@@ -28,19 +28,19 @@ import educationDark from '~@/assets/category/home/case/dark/education.svg';
 import educationActiveDark from '~@/assets/category/home/case/dark/education-active.svg';
 import educationIllustration from '~@/assets/category/home/case/education.png';
 
-import government from '~@/assets/category/home/case/light/government.svg';
-import governmentActive from '~@/assets/category/home/case/light/government-active.svg';
-import governmentrDark from '~@/assets/category/home/case/dark/government.svg';
-import governmentActiveDark from '~@/assets/category/home/case/dark/government-active.svg';
-import governmentIllustration from '~@/assets/category/home/case/government.png';
+import cloudComputing from '~@/assets/category/home/case/light/cloud-computing.svg';
+import cloudComputingActive from '~@/assets/category/home/case/light/cloud-computing-active.svg';
+import cloudComputingDark from '~@/assets/category/home/case/dark/cloud-computing.svg';
+import cloudComputingActiveDark from '~@/assets/category/home/case/dark/cloud-computing-active.svg';
+import cloudComputingIllustration from '~@/assets/category/home/case/cloud-computing.png';
 
-import spaceFlight from '~@/assets/category/home/case/light/space-flight.svg';
-import spaceFlightyActive from '~@/assets/category/home/case/light/space-flight-active.svg';
-import spaceFlightyDark from '~@/assets/category/home/case/dark/space-flight.svg';
-import spaceFlightActiveDark from '~@/assets/category/home/case/dark/space-flight-active.svg';
-import spaceFlightIllustration from '~@/assets/category/home/case/space-flight.png';
+import other from '~@/assets/category/home/case/light/other.svg';
+import otherActive from '~@/assets/category/home/case/light/other-active.svg';
+import otherDark from '~@/assets/category/home/case/dark/other.svg';
+import otherActiveDark from '~@/assets/category/home/case/dark/other-active.svg';
+import otherIllustration from '~@/assets/category/home/case/other.png';
 
-export const cases = [
+export const casesZh = [
   {
     label: '金融',
     icon: {
@@ -104,25 +104,87 @@ export const cases = [
   {
     label: '云计算',
     icon: {
-      light: government,
-      dark: governmentrDark,
+      light: cloudComputing,
+      dark: cloudComputingDark,
     },
     iconActive: {
-      light: governmentActive,
-      dark: governmentActiveDark,
+      light: cloudComputingActive,
+      dark: cloudComputingActiveDark,
     },
-    img: governmentIllustration,
+    img: cloudComputingIllustration,
   },
   {
     label: '其他',
     icon: {
-      light: spaceFlight,
-      dark: spaceFlightyDark,
+      light: other,
+      dark: otherDark,
     },
     iconActive: {
-      light: spaceFlightyActive,
-      dark: spaceFlightActiveDark,
+      light: otherActive,
+      dark: otherActiveDark,
     },
-    img: spaceFlightIllustration,
+    img: otherIllustration,
+  },
+];
+export const casesEn = [
+  {
+    label: 'Finance',
+    icon: {
+      light: finance,
+      dark: financeDark,
+    },
+    iconActive: {
+      light: financeActive,
+      dark: financeActiveDark,
+    },
+    img: financeIllustration,
+  },
+  {
+    label: 'Carrier',
+    icon: {
+      light: operator,
+      dark: operatorDark,
+    },
+    iconActive: {
+      light: operatorActive,
+      dark: operatorActiveDark,
+    },
+    img: operatorIllustration,
+  },
+  {
+    label: 'Energy',
+    icon: {
+      light: energy,
+      dark: energyDark,
+    },
+    iconActive: {
+      light: energyActive,
+      dark: energyActiveDark,
+    },
+    img: energyIllustration,
+  },
+  {
+    label: 'Logistics',
+    icon: {
+      light: logistics,
+      dark: logisticsDark,
+    },
+    iconActive: {
+      light: logisticsActive,
+      dark: logisticsActiveDark,
+    },
+    img: logisticsIllustration,
+  },
+  {
+    label: 'Others',
+    icon: {
+      light: other,
+      dark: otherDark,
+    },
+    iconActive: {
+      light: otherActive,
+      dark: otherActiveDark,
+    },
+    img: otherIllustration,
   },
 ];

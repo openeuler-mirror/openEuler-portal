@@ -12,4 +12,8 @@ export default {
   trend: '社区动态',
   blog: '博客',
   news: '新闻',
+  // 用户案例
+  case: '用户案例',
+  more: '查看更多',
+  publisher: '发行厂商',
 };

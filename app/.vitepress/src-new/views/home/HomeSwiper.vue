@@ -14,8 +14,7 @@ import 'swiper/css/autoplay';
 
 export interface PublisherT {
   logo: {
-    light: string;
-    dark: string;
+    [key: string]: string;
   };
   href: string;
   href_en?: string;
