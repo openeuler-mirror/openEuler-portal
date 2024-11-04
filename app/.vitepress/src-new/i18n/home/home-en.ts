@@ -7,4 +7,5 @@ export default {
   case: '用户案例',
   more: 'View More',
   publisher: '发行厂商',
+  publisherTips: 'listed in alphabetical order',
 };
