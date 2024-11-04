@@ -91,6 +91,31 @@ export default {
       class: 'center co-organizers',
       logoList: [
         {
+          img: yidong_light,
+          img_dark: yidong_dark,
+        },
+        {
+          img: tianyi_light,
+          img_dark: tianyi_dark,
+        },
+        {
+          img: liantong_light,
+          img_dark: liantong_dark,
+        },
+        {
+          img: ruantong_light,
+          img_dark: ruantong_dark,
+        },
+        {
+          img: iscas_light,
+          img_dark: iscas_dark,
+        },
+        {
+          img: oschina_light,
+          img_dark: oschina_dark,
+        },
+
+        {
           img: linsi_light,
           img_dark: linsi_dark,
         },
@@ -105,30 +130,6 @@ export default {
         {
           img: baolande_light,
           img_dark: baolande_dark,
-        },
-        {
-          img: ruantong_light,
-          img_dark: ruantong_dark,
-        },
-        {
-          img: iscas_light,
-          img_dark: iscas_dark,
-        },
-        {
-          img: oschina_light,
-          img_dark: oschina_dark,
-        },
-        {
-          img: liantong_light,
-          img_dark: liantong_dark,
-        },
-        {
-          img: yidong_light,
-          img_dark: yidong_dark,
-        },
-        {
-          img: tianyi_light,
-          img_dark: tianyi_dark,
         },
       ],
     },
