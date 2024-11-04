@@ -36,7 +36,7 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
   <div class="home-intro">
     <h3>{{ $t('home.introTitle') }}</h3>
     <div data-aos="fade-up" class="intro-container" :level-index="1">
-      <div v-if="!leLaptop" class="intro-pc">
+      <div v-if="!isPhone" class="intro-pc">
         <div class="intro-card-pc">
           <div class="intro-content-pc">
             <div class="intro-list-pc">
@@ -117,7 +117,7 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
 .home-intro {
   // PC 端 css
   .intro-pc {
-    margin-top: var(--e-spacing-h2);
+    margin-top: 40px;
     display: block;
     .intro-content-pc {
       display: flex;
@@ -140,6 +140,10 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
         background-image: url(~@/assets/category/home/intro/left-bg_light.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
+      }
+      @include respond-to('<=pad_v') {
+        width: 100%;
+        flex-direction: column;
       }
     }
 
