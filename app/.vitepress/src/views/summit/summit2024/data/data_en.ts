@@ -17,7 +17,7 @@ export default {
     'Operating systems form the backbone of digital and intelligent industry transformation. openEuler, an open source operating system born in China for digital infrastructure, has emerged as a key player in the global open source landscape. Over the past five years, its market presence was steadily increasing. And openEuler has been continuously driving innovations in OS for AI and AI for OS, accelerating digital transformation, and fostering a thriving ecosystem though industry-wide collaboration.',
   introduce2:
     'On November 15–16, 2024, we invite you to join us at the Operating System Conference & openEuler Summit 2024 at the ZhongGuanCun International Innovation Center in Beijing. This event will bring together global leaders, visionaries, business executives, tech experts, partners, and open source foundations to explore the future of the OS industry and uncover new opportunities. We will showcase collaborative achievements, share insights into digital transformation, and demonstrate how technology drives innovation and next-gen productivity.',
-  introduce3: "What to expect:",
+  introduce3: 'What to expect:',
   list: [
     '30+ keynotes, forums, and panel discussions offering cutting-edge perspectives',
     '100+ exhibition booths showcasing the latest openEuler solutions and joint innovations.',
@@ -53,7 +53,7 @@ export default {
   agenda: {
     title: 'Agenda',
     tabType: ['Keynote', 'Subforums'],
-    tabType1: ['Keynote', 'Subforums/SIG Meetings'],
+    tabType1: ['Keynote', 'Technical Sessions/SIG Meetings'],
     changeTip: '*The agenda is subject to change.',
   },
   previous: {

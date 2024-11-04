@@ -115,6 +115,10 @@ export default {
           img_dark: iscas_dark,
         },
         {
+          img: oschina_light,
+          img_dark: oschina_dark,
+        },
+        {
           img: liantong_light,
           img_dark: liantong_dark,
         },
@@ -144,10 +148,6 @@ export default {
         {
           img: jindie_light,
           img_dark: jindie_dark,
-        },
-        {
-          img: oschina_light,
-          img_dark: oschina_dark,
         },
       ],
     },
