@@ -109,7 +109,7 @@ onUnmounted(() => {
 </script>
 <template>
   <div class="user-case" data-aos="fade-up">
-    <p class="title">用户案例</p>
+    <h3 class="title">{{ t('home.case') }}</h3>
     <div ref="userCase">
       <OScroller show-type="never">
         <div class="tab">

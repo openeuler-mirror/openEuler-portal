@@ -18,6 +18,7 @@ const publisher3 = publisher.slice(16);
       class="partner-swiper"
     ></HomeSwiper>
     <HomeSwiper :data="publisher3" class="partner-swiper"></HomeSwiper>
+    <p class="tips">{{ $t('home.publisherTips') }}</p>
   </div>
 </template>
 
@@ -34,6 +35,12 @@ const publisher3 = publisher.slice(16);
 }
 .partner-swiper {
   margin-top: 24px;
+}
+.tips {
+  @include tip1;
+  margin-top: 24px;
+  text-align: center;
+  color: var(--o-color-info3);
 }
 
 @include respond-to('phone') {
