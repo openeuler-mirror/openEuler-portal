@@ -7,7 +7,6 @@ import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
-import { getSortData } from '@/api/api-search';
 import { getMeetingActivity } from '@/api/api-calendar';
 
 import HomeBanner from './HomeBanner.vue';
@@ -17,25 +16,21 @@ import HomePlayCommunity from './HomePlayCommunity.vue';
 import HomeShowCase from './HomeShowCase.vue';
 import HomePartner from './HomePartner.vue';
 import HomeCalendar from './HomeCalendar.vue';
+import HomeTrend from './HomeTrend.vue';
 
-const { isPhone, isPad } = useScreen();
+const { isPhone, isPadV } = useScreen();
 
 const { locale, isZh } = useLocale();
 
-const calendarData = ref<string[]>([]);
+const isResult = ref(false);
 
-const paramsCase = {
-  lang: locale.value,
-  page: 1,
-  pageSize: 100,
-};
-getSortData(paramsCase);
+const calendarData = ref<string[]>([]);
 
 const verticalPadding = computed(() => {
   if (isPhone.value) {
     return ['32px', '32px'];
-  } else if (isPad.value) {
-    return ['0', '40px'];
+  } else if (isPadV.value) {
+    return ['32px', '40px'];
   } else {
     return ['0', '72px'];
   }
@@ -65,18 +60,17 @@ onMounted(() => {
         v-if="isZh && calendarData?.length"
         :table-data="calendarData"
       />
-      <HomeShowCase />
+      <HomeShowCase @result="isResult = true" />
+      <HomeTrend :is-result="isResult" />
     </ContentWrapper>
     <HomePartner />
-
-    <HomeTrend />
   </div>
 </template>
 
 <style scoped lang="scss">
 .home-display-zone {
   margin-top: -41px;
-  @include respond-to('phone') {
+  @include respond-to('<=pad_v') {
     margin-top: 0;
   }
 }

@@ -1,8 +1,14 @@
 import type { HeadConfig, UserConfig } from 'vitepress';
-import sitemapZh from './sitemap/sitemap-zh';
 import tdks from './tdks';
 
+const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
+
 const config: UserConfig = {
+  sitemap: {
+    hostname: 'https://www.openeuler.org',
+    transformItems: (items) => items.filter(item => !item.url.startsWith('/en/approve')),
+  },
+  lastUpdated: true,
   base: '/',
   head: [
     [
@@ -35,24 +41,39 @@ const config: UserConfig = {
   ],
   appearance: false, // enable dynamic scripts for dark mode
   titleTemplate: false, //  vitepress supports pageTitileTemplate since 1.0.0
-  transformPageData(pageData) {
+  async transformPageData(pageData) {
     const filePath = pageData.filePath;
     let lookupKey: string;
     if (filePath.endsWith('index.md')) {
-      lookupKey = filePath.slice(0, -9);
+      lookupKey = encodeURI(filePath.slice(0, -9));
     } else {
-      lookupKey = filePath.slice(0, -2).concat('html');
+      lookupKey = encodeURI(filePath.slice(0, -2).concat('html'));
     }
     const locale = filePath.slice(0, 2) as 'zh' | 'en';
     const tdkInfo = tdks[locale]?.[lookupKey];
+    if (lookupKey === 'zh') {
+      pageData.titleTemplate = 'openEuler社区官网';
+    } else if (lookupKey === 'en') {
+      pageData.titleTemplate = 'openEuler';
+    } else {
+      pageData.titleTemplate = `:title | ${tdks.titleSuffix[locale]}`;
+    }
     if (!tdkInfo) {
+      if (isBlog.test(lookupKey)) {
+        const frontmatter = pageData.frontmatter;
+        const description = frontmatter?.summary || frontmatter?.Summary;
+        if (!pageData.description && description) {
+          pageData.description = description;
+        }
+      }
       return;
     }
     const { title, description, keywords } = tdkInfo;
-    description && (pageData.description = description);
+    if (description) {
+      pageData.description = description;
+    }
     if (title) {
       pageData.title = title;
-      pageData.titleTemplate = `:title | ${tdks.titleSuffix[locale]}`;
     }
     if (keywords) {
       pageData.frontmatter.head ??= [];

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { ref, watch } from 'vue';
 
 import { OCard, OFigure, OScroller, OTab, OTabPane } from '@opensig/opendesign';
 
@@ -14,8 +14,17 @@ import blogBg1 from '~@/assets/category/home/trend/blog-bg1.jpg';
 import blogBg2 from '~@/assets/category/home/trend/blog-bg2.jpg';
 import blogBg3 from '~@/assets/category/home/trend/blog-bg3.jpg';
 
+import IconUser from '~icons/app-new/icon-user.svg';
+
 const { t, locale } = useLocale();
 const { leLaptop, lePadV } = useScreen();
+
+const props = defineProps({
+  isResult: {
+    type: Boolean,
+    default: false,
+  },
+});
 
 // -------------------- 选中tab页 --------------------
 const activeTab = ref('blog');
@@ -54,11 +63,10 @@ const calcBlogStyle = (idx: number) => {
 // -------------------- 获取新闻、博客 --------------------
 const newsArr = ref([]);
 const blogArr = ref([]);
-onMounted(() => {
+const getData = () => {
   getHomeNews(locale.value).then((newsRes) => {
     if (newsRes && newsRes.obj && newsRes.obj.records) {
       newsArr.value = normalizeData(newsRes.obj.records);
-      console.log(newsArr.value);
     }
 
     getHomeBlog(locale.value).then((blogRes) => {
@@ -67,7 +75,13 @@ onMounted(() => {
       }
     });
   });
-});
+};
+watch(
+  () => props.isResult,
+  () => {
+    getData();
+  }
+);
 
 // -------------------- 跳转 --------------------
 </script>
@@ -114,31 +128,27 @@ onMounted(() => {
             v-for="(blog, idx) in blogArr"
             cursor="pointer"
             class="trend-card trend-blog"
+            :class="{ 'le-pad_v': lePadV }"
             hoverable
             :data-o-theme="calcBlogStyle(idx)?.theme"
             :title="blog.title"
             :title-row="2"
             :title-max-row="2"
             :detail-max-row="2"
-            :detail="!lePadV ? blog.summary : blog.date"
+            :detail="!lePadV ? blog.summary : ''"
             :cover="calcBlogStyle(idx)?.bg"
             :cover-ratio="1"
             :href="`/${blog.path}`"
             target="_blank"
           >
-            <div class="blog-content">
-              <!-- <div class="blog-top">
-                <p class="blog-title">
-                  {{ blog.title }}
-                </p>
-                <p class="blog-detail">
-                  {{ blog.summary }}
-                </p>
-              </div> -->
-              <div class="blog-bottom">
-                <p class="blog-date">{{ blog.date }}</p>
-                <p class="blog-author">{{ blog.author && blog.author[0] }}</p>
-              </div>
+            <div class="blog-bottom">
+              <p class="blog-date">{{ blog.date }}</p>
+              <p class="blog-author">
+                <OIcon class="icon-user">
+                  <IconUser />
+                </OIcon>
+                {{ blog.author && blog.author[0] }}
+              </p>
             </div>
           </OCard>
         </OScroller>
@@ -215,14 +225,22 @@ onMounted(() => {
   --figure-radius: 8px;
 }
 
-.blog-card {
-  padding: 32px;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  color: var(--o-color-info1);
-  flex-direction: column;
-  justify-content: space-between;
+.trend-blog {
+  position: relative;
+}
+
+.trend-blog {
+  :deep(.o-card-main) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  :deep(.o-card-content) {
+    height: 100%;
+  }
 }
 
 .blog-title {
@@ -235,12 +253,34 @@ onMounted(() => {
 }
 
 .blog-bottom {
+  position: absolute;
+  bottom: var(--card-main-padding);
   display: flex;
+  width: calc(100% - 2 * var(--card-main-padding));
   justify-content: space-between;
   color: rgba(var(--o-white), 0.8);
+  font-size: var(--card-content-text-size);
+  line-height: var(--card-content-text-height);
 }
 
-.blog-date {
-  @include text1;
+.le-pad_v {
+  .blog-bottom {
+    flex-direction: column;
+    .blog-author {
+      margin-top: 2px;
+    }
+  }
+}
+
+.blog-author {
+  display: flex;
+  align-items: center;
+}
+
+.icon-user {
+  color: rgba(var(--o-white), 0.8);
+  fill: currentColor;
+  margin-right: 4px;
+  @include h2;
 }
 </style>

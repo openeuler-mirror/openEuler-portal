@@ -1,4 +1,6 @@
+import { computed } from 'vue';
 import { createI18n, type I18nOptions } from 'vue-i18n';
+import { useData } from 'vitepress';
 
 // 公共模块
 import response from './response';
@@ -7,6 +9,7 @@ import cookie from './cookie';
 import talentAssessment from './talent-assessment';
 import contactUs from './contact-us';
 import home from './home';
+import header from './header';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -53,6 +56,7 @@ const messages = {
     talent: talentAssessment.zh,
     contact: contactUs.zh,
     home: home.zh,
+    header: header.zh,
   },
   en: {
     // 公共模块
@@ -63,6 +67,7 @@ const messages = {
     talent: talentAssessment.en,
     contact: contactUs.en,
     home: home.en,
+    header: header.en,
   },
 };
 
@@ -76,5 +81,10 @@ const i18n = createI18n({
   messages,
   datetimeFormats,
 });
+
+export function useI18n() {
+  const { lang } = useData();
+  return computed(() => messages[lang.value]);
+}
 
 export default i18n;

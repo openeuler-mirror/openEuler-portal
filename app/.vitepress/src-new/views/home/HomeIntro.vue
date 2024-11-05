@@ -36,7 +36,7 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
   <div class="home-intro">
     <h3>{{ $t('home.introTitle') }}</h3>
     <div data-aos="fade-up" class="intro-container" :level-index="1">
-      <div v-if="!leLaptop" class="intro-pc">
+      <div v-if="!isPhone" class="intro-pc">
         <div class="intro-card-pc">
           <div class="intro-content-pc">
             <div class="intro-list-pc">
@@ -117,7 +117,7 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
 .home-intro {
   // PC 端 css
   .intro-pc {
-    margin-top: var(--e-spacing-h2);
+    margin-top: 40px;
     display: block;
     .intro-content-pc {
       display: flex;
@@ -130,13 +130,20 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
       padding: 32px;
       margin-right: 32px;
       padding-left: calc(32px + 72px);
+      $list-width: 60px;
+      $list-height: 490px;
+      @include respond-to('laptop') {
+        padding-right: 0;
+        $list-width: 52px;
+        $list-height: 423px;
+      }
       &::before {
+        content: '';
         position: absolute;
         top: -52px;
         left: 16px;
-        width: 60px;
-        height: 490px;
-        content: '';
+        width: $list-width;
+        height: $list-height;
         background-image: url(~@/assets/category/home/intro/left-bg_light.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -163,6 +170,9 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
       text-align: left;
       &:not(:last-child) {
         margin-bottom: 72px;
+        @include respond-to('laptop') {
+          margin-bottom: 56px;
+        }
       }
       .title {
         @include h3;

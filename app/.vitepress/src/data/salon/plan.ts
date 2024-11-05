@@ -326,6 +326,19 @@ export const yearPlanData = {
             },
           ],
         },
+        {
+          month: '10',
+          actives: [
+            {
+              location: '杭州',
+              activeName: 'openEuler 操作系统安全 Meetup',
+            },
+            {
+              location: '北京',
+              activeName: 'openEuler SDS Meetup',
+            },
+          ],
+        },
       ],
     },
     college: {

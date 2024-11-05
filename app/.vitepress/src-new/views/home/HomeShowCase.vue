@@ -17,27 +17,38 @@ import { useScreen } from '~@/composables/useScreen';
 
 import IconChevronRight from '~icons/app/icon-chevron-right.svg';
 
-import { cases } from '~@/data/home/case';
+import { casesZh, casesEn } from '~@/data/home/case';
 
-import { getShowCases } from '~@/api/api-home';
+import { getHomeShowCases } from '~@/api/api-search';
+
+const emit = defineEmits(['result']);
+
+export interface CasesT {
+  label: string;
+  icon: {
+    [key: string]: string;
+  };
+  iconActive: {
+    [key: string]: string;
+  };
+  img: string;
+}
 
 const { theme } = storeToRefs(useCommon());
-const { locale } = useLocale();
+const { locale, t } = useLocale();
 const { isPhone } = useScreen();
 
 const userCase = ref<HTMLElement>();
 const activeTab = ref(0);
+const cases = ref<CasesT[]>([]);
+cases.value = locale.value === 'zh' ? casesZh : casesEn;
 
 // -------------------- 获取案例数据 --------------------
 const caseData = ref({});
-const params = {
-  category: 'showcase',
-  lang: locale.value,
-  page: 1,
-  pageSize: 100,
-};
 const getCases = () => {
-  getShowCases(params).then((res) => {
+  getHomeShowCases(locale.value).then((res) => {
+    emit('result');
+
     const result: any = {};
     res?.obj?.records.forEach((item: { lang: string; industry: string }) => {
       if (typeof result[item.industry] === 'undefined') {
@@ -50,12 +61,11 @@ const getCases = () => {
     caseData.value = result;
   });
 };
-getCases();
 
 // -------------------- 自动切换tab --------------------
 const timer = ref();
 const changeCase = () => {
-  activeTab.value === cases.length - 1
+  activeTab.value === cases.value.length - 1
     ? (activeTab.value = 0)
     : activeTab.value++;
 };
@@ -77,6 +87,7 @@ const moreLink = (val: number) => {
 };
 
 onMounted(() => {
+  getCases();
   try {
     if (userCase.value) {
       setCaseInterval();
@@ -96,7 +107,7 @@ onUnmounted(() => {
 </script>
 <template>
   <div class="user-case" data-aos="fade-up">
-    <p class="title">用户案例</p>
+    <h3 class="title">{{ t('home.case') }}</h3>
     <div ref="userCase">
       <OScroller show-type="never">
         <div class="tab">
@@ -155,7 +166,7 @@ onUnmounted(() => {
       </ul>
       <div class="more-btn">
         <OLink class="more" @click="moreLink(activeTab + 1)"
-          >查看更多<OIcon><IconChevronRight /></OIcon
+          >{{ t('home.more') }}<OIcon><IconChevronRight /></OIcon
         ></OLink>
       </div>
     </div>
@@ -181,6 +192,7 @@ onUnmounted(() => {
   background-color: #e0e6f5;
   padding: 6px;
   border-radius: var(--o-radius-s);
+  white-space: nowrap;
 }
 .item-tab {
   display: flex;
@@ -305,6 +317,80 @@ onUnmounted(() => {
   .o-icon {
     --icon-size: 16px;
     margin-left: 4px;
+  }
+}
+
+@include respond-to('laptop') {
+  .right-img {
+    width: 520px;
+  }
+}
+
+@include respond-to('<=pad') {
+  .item-tab {
+    padding: 7px 12px;
+  }
+  .case-img {
+    margin-left: 36px;
+  }
+  .right-img {
+    width: 375px;
+  }
+  .content {
+    height: 388px;
+    margin-top: 24px;
+    &::after {
+      width: 12px;
+    }
+  }
+  .case-list {
+    margin-left: 32px;
+  }
+  .left-content {
+    padding: 24px 0;
+    .o-divider {
+      --o-divider-gap: 16px 0 16px;
+    }
+  }
+}
+
+@include respond-to('<=pad_v') {
+  .item-tab {
+    padding: 7px 12px;
+  }
+  .case-img {
+    margin-left: 24px;
+  }
+  .right-img {
+    width: 375px;
+  }
+  .content {
+    height: 300px;
+    margin-top: 16px;
+    &::after {
+      width: 8px;
+    }
+  }
+  .case-list {
+    margin-left: 16px;
+  }
+  .left-content {
+    padding: 12px 0;
+    .o-divider {
+      --o-divider-gap: 12px 0 12px;
+    }
+  }
+  .content-icon {
+    width: 32px;
+    margin-right: 8px;
+  }
+  .item-title {
+    .company {
+      @include h3;
+    }
+  }
+  .summary {
+    margin-top: 4px;
   }
 }
 

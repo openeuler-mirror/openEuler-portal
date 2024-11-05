@@ -3,7 +3,7 @@ import { OCard, OButton, OIcon } from '@opensig/opendesign';
 
 import { useScreen } from '~@/composables/useScreen';
 
-import IconOutLink from '~icons/app/icon-out-link2.svg';
+import IconOutLink from '~icons/app-new/icon-outlink.svg';
 import illustration from '~@/assets/category/talent-assessment/rencai.png';
 
 const { isPhone } = useScreen();

@@ -40,7 +40,7 @@ onMounted(() => {
     </i18n-t>
     <div class="play-intro">
       <p class="play-intro-text">{{ $t('home.playIntro') }}</p>
-      <OButton color="primary" variant="solid">
+      <OButton color="primary" size="large" variant="solid">
         {{ $t('home.getOpenEuler') }}
       </OButton>
     </div>
@@ -359,7 +359,7 @@ onMounted(() => {
       display: flex;
       align-items: center;
       @include respond-to('<=laptop') {
-        margin: 0 12px 0 0;
+        margin: 0 0 0 0;
       }
       @include respond-to('phone') {
         margin: 16px 0 0 0;

@@ -7,23 +7,33 @@ import banner1_mo from '@/assets/category/home/banner/banner1_mo.jpg';
 import osSummit_pc from '@/assets/category/home/banner/ossummit_pc.jpg';
 import osSummit_mo from '@/assets/category/home/banner/ossummit_mo.jpg';
 
-import summit_pc from '@/assets/category/home/banner/summit2024-pc.jpg';
-import summit_mo from '@/assets/category/home/banner/summit2024-mo.jpg';
-import textImg_pc from '@/assets/category/home/banner/textImg-pc.png';
-import textImg_mo from '@/assets/category/home/banner/textImg-mo.png';
+import osSummit_pc_light from '@/assets/category/home/banner/banner_bg_light.jpg';
+import osSummit_pc_dark from '@/assets/category/home/banner/banner_bg_dark.jpg';
+import osSummit_mo_light from '@/assets/category/home/banner/banner_mo_light.jpg';
+import osSummit_mo_dark from '@/assets/category/home/banner/banner_mo_dark.jpg';
+import wenzi_dark from '@/assets/category/home/banner/wenzi_dark.png';
+import wenzi_light from '@/assets/category/home/banner/wenzi_light.png';
 
 export default {
   // 首页banner  targetTap:1 新页签打开
   HOMEBANNER: {
     zh: [
       {
-        pcBanner: summit_pc,
-        moBanner: summit_mo,
+        pcBanner: {
+          light: osSummit_pc_light,
+          dark: osSummit_pc_dark,
+        },
+        moBanner: {
+          light: osSummit_mo_light,
+          dark: osSummit_mo_dark,
+        },
         link: '/zh/interaction/summit-list/summit2024/',
         id: 'devday',
         targetTap: 1,
-        textImg_pc: textImg_pc,
-        textImg_mo: textImg_mo,
+        textImg_pc: {
+          light: wenzi_light,
+          dark: wenzi_dark,
+        },
       },
       {
         pcBanner: osSummit_pc,
@@ -54,13 +64,21 @@ export default {
     ],
     en: [
       {
-        pcBanner: summit_pc,
-        moBanner: summit_mo,
+        pcBanner: {
+          light: osSummit_pc_light,
+          dark: osSummit_pc_dark,
+        },
+        moBanner: {
+          light: osSummit_mo_light,
+          dark: osSummit_mo_dark,
+        },
         link: '/en/interaction/summit-list/summit2024/',
         id: 'devday',
         targetTap: 1,
-        textImg_pc: textImg_pc,
-        textImg_mo: textImg_mo,
+        textImg_pc: {
+          light: wenzi_light,
+          dark: wenzi_dark,
+        },
       },
       {
         pcBanner: osSummit_pc,

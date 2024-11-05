@@ -61,7 +61,7 @@ defineExpose(handleSearch);
     display: flex;
     gap: 16px 16px;
     background-color: var(--e-cloor-bg1);
-    .o-tag {
+    .e-tag {
       background-color: var(--e-color-bg4);
       color: var(--e-color-text-secondary);
       cursor: pointer;

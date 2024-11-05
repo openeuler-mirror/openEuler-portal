@@ -6,7 +6,8 @@ import { computed, onMounted, watch } from 'vue';
 import zhCn from 'element-plus/lib/locale/lang/zh-cn';
 import en from 'element-plus/lib/locale/lang/en';
 
-import AppHeader from '@/components/AppHeader.vue';
+import AppHeader from '~@/components/header/AppHeader.vue';
+// import AppHeader from '@/components/AppHeader.vue';
 import AppFooter from '@/components/AppFooter.vue';
 import LayoutBlog from '@/layouts/LayoutBlog.vue';
 import LayoutNews from '@/layouts/LayoutNews.vue';

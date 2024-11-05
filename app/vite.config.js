@@ -49,6 +49,9 @@ export default defineConfig({
         mooc: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src/assets/category/mooc')
         ),
+        home: FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src-new/assets/category/home/svgs')
+        ),
         footer: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src/assets/common/footer')
         ),
@@ -58,7 +61,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api-easyeditor/': {
-        target: 'https://easyeditor.openeuler.org',
+        target: 'https://easyeditor.openeuler.org/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-easyeditor/, ''),
       },
@@ -124,11 +127,6 @@ export default defineConfig({
         target: 'https://ccs.openeuler.org/ccs/base/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-certification/, ''),
-      },
-      '/doc-search/': {
-        target: 'https://doc-search.test.osinfra.cn/',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/doc-search/, ''),
       },
     },
   },

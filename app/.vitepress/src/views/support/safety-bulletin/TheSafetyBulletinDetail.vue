@@ -60,12 +60,13 @@ function getRpmUrl(data: PackageInfoT[]) {
             path = `everything/${product.productName}/Packages/${rpm.packageName}`;
           }
         } else {
+          let router = rpm.isEpol ? 'EPOL/update/main' : 'update';
           if (product.productName === 'src') {
-            path = `update/source/Packages/${rpm.packageName}`;
+            path = `${router}/source/Packages/${rpm.packageName}`;
           } else if (product.productName === 'noarch') {
-            path = `update/aarch64/Packages/${rpm.packageName}`;
+            path = `${router}/aarch64/Packages/${rpm.packageName}`;
           } else {
-            path = `update/${product.productName}/Packages/${rpm.packageName}`;
+            path = `${router}/${product.productName}/Packages/${rpm.packageName}`;
           }
         }
         rpm.url = `${baseUrl}/${version.productName}/${path}`;
