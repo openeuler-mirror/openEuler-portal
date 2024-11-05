@@ -14,11 +14,14 @@ import useWindowResize from '@/components/hooks/useWindowResize';
 
 import IconCancel from '~icons/app/icon-cancel.svg';
 import IconSearch from '~icons/app-new/icon-header-search.svg';
+import IconDelete from '~icons/app-new/icon-header-delete.svg';
+import IconDeleteAll from '~icons/app-new/icon-delete.svg';
+import IconBack from '~icons/app-new/icon-header-back.svg';
 
 const { lang } = useData();
 const searchRef = ref();
 const isClickOutside = useClickOutside(searchRef) || false;
-const windowWidth = ref(useWindowResize());
+const screenWidth = ref(useWindowResize());
 
 const emits = defineEmits(['focus-input', 'search-click']);
 const isShowDrawer = ref(false);
@@ -26,6 +29,8 @@ const searchInput = ref('');
 const i18n = useI18n();
 
 const commonStore = useCommon();
+const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
+const isMobile = computed(() => screenWidth.value <= 1200 ? true : false);
 
 // 搜索事件
 function handleSearchEvent() {
@@ -65,16 +70,18 @@ const showDrawer = () => {
 };
 // 关闭搜索框
 const closeSearchBox = () => {
-  isShowBox.value = false;
   searchInput.value = '';
-  commonStore.iconMenuShow = true;
-  isShowDrawer.value = false;
   emits('search-click', isShowBox.value);
+  if (!isMobile.value) {
+    isShowBox.value = false;
+    commonStore.iconMenuShow = true;
+    isShowDrawer.value = false;
+  }
 };
 
 onMounted(() => {
   window.addEventListener('click', () => {
-    if (isClickOutside.value && windowWidth.value > 768) {
+    if (isClickOutside.value && !isMobile.value) {
       closeSearchBox();
     }
   });
@@ -124,75 +131,115 @@ const handleSearch = (searchValue: string) => {
     localStorage.setItem('searchHistory', JSON.stringify(searchHistory.value));
   }
 };
+
+const deleteHistory = (data: string) => {
+  if (!data) {
+    localStorage.removeItem('searchHistory');
+    searchHistory.value = [];
+  }
+
+  const history = localStorage.getItem('searchHistory');
+  if (history) {
+    searchHistory.value = JSON.parse(history).filter((s: string) => s !== data);
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory.value));
+  }
+};
+
+const closeSearch = () => {
+  searchInput.value = '';
+  isShowBox.value = false;
+  commonStore.iconMenuShow = true;
+  isShowDrawer.value = false;
+  emits('search-click', isShowBox.value);
+}
 </script>
 <template>
-  <div
-    ref="searchRef"
-    class="header-search"
-    :class="{ 'input-focus': isShowDrawer }"
-  >
-    <OInput
-      v-model="searchInput"
-      :placeholder="
-        isShowDrawer ? searchValue.PLEACHOLDER_EXTEND : searchValue.PLEACHOLDER
-      "
-      @keyup.enter="handleSearchEvent"
-      @focus="showDrawer"
-    >
-      <template #prefix>
-        <OIcon class="icon"><IconSearch></IconSearch></OIcon>
-      </template>
-      <template v-if="isShowDrawer" #suffix>
-        <OIcon class="close icon" @click="closeSearchBox"><IconCancel /></OIcon>
-      </template>
-    </OInput>
-
-    <div v-show="isShowDrawer" class="drawer">
+  <div class="search-wrapper">
+    <div :class="{ 'search': !isMobile, 'focus': isShowDrawer && !isMobile }">
       <div
-        v-if="recommendData.length && searchInput"
-        class="recommend search-recommend"
+        ref="searchRef"
+        class="header-search"
       >
-        <div
-          v-for="item in recommendData"
-          class="recommend-item"
-          @click="onTopSearchItemClick(item.key)"
-          :key="item.key"
-        >
-          {{ item.key }}
-        </div>
-      </div>
-      <div v-else-if="searchHistory.length" class="recommend">
-        <span class="history">{{ searchValue.BROWSEHISTORY }}</span>
-        <div
-          v-for="item in searchHistory"
-          class="recommend-item"
-          @click="onTopSearchItemClick(item)"
-          :key="item"
-        >
-          {{ item }}
-        </div>
-      </div>
-      <div class="hots">
-        <div class="hots-title">
-          <p class="hots-text">{{ searchValue.TOPSEARCH }}</p>
-        </div>
-        <div class="hots-list">
-          <div
-            v-for="item in popList"
-            :key="item"
-            type="text"
-            class="hots-list-item"
-            @click="onTopSearchItemClick(item)"
+
+        <div :class="{ 'input-focus': isShowDrawer }">
+          <OIcon v-if="isMobile && isShowDrawer" @click.stop="closeSearch"><IconBack></IconBack></OIcon>
+          <OInput
+            v-model="searchInput"
+            :placeholder="
+              isShowDrawer ? searchValue.PLEACHOLDER_EXTEND : searchValue.PLEACHOLDER
+            "
+            @keyup.enter="handleSearchEvent"
+            @focus="showDrawer"
           >
-            {{ item }}
+            <template #prefix>
+              <OIcon class="icon"><IconSearch></IconSearch></OIcon>
+            </template>
+            <template v-if="(!isMobile && isShowDrawer) || ( isMobile && searchInput )" #suffix>
+              <OIcon class="close icon" @click="closeSearchBox"><IconCancel /></OIcon>
+            </template>
+          </OInput>
+          <span v-if="isMobile && isShowDrawer" class="search-text" @click="handleSearchEvent">搜索</span>
+        </div>
+
+        <div v-show="isShowDrawer" class="drawer">
+          <div
+            v-if="recommendData.length && searchInput"
+            class="search-recommend"
+          >
+            <div
+              v-for="item in recommendData"
+              class="recommend-item"
+              @click="onTopSearchItemClick(item.key)"
+              :key="item.key"
+            >
+              {{ item.key }}
+            </div>
+          </div>
+          <div v-else-if="searchHistory.length" class="history-container">
+            <div class="history-title">
+              <span class="title">{{ searchValue.BROWSEHISTORY }}</span>
+              <OIcon class="icon" @click.stop="deleteHistory('')">
+                <IconDeleteAll></IconDeleteAll>
+              </OIcon>
+            </div>
+            <div class="history">
+              <div
+                v-for="item in searchHistory"
+                class="history-item"
+                :class="{ 'dark': isDark  }"
+                @click="onTopSearchItemClick(item)"
+                :key="item"
+              >
+                <span class="history-text">{{ item }}</span>
+                <OIcon class="icon-container" @click.stop="deleteHistory(item)"><IconDelete class="icon"></IconDelete></OIcon>
+              </div>
+            </div>
+            <div class="split-line"></div>
+          </div>
+          <div class="hots">
+            <div class="hots-title">
+              <p>{{ searchValue.TOPSEARCH }}</p>
+            </div>
+            <div class="hots-list">
+              <div
+                v-for="item in popList"
+                :key="item"
+                type="text"
+                class="hots-list-item"
+                @click="onTopSearchItemClick(item)"
+              >
+                {{ item }}
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
+      <OIcon @click="showDrawer" class="icon search-icon"
+        ><IconSearch></IconSearch
+      ></OIcon>
     </div>
   </div>
-  <OIcon @click="showDrawer" class="icon search-icon"
-    ><IconSearch></IconSearch
-  ></OIcon>
 </template>
 <style lang="scss" scoped>
 .icon {
@@ -205,124 +252,258 @@ const handleSearch = (searchValue: string) => {
   color: var(--o-color-info1);
 }
 
+.search-wrapper {
+  position: relative;
+
+  .search {
+    position: absolute;
+    right: 0;
+    top: -16px;
+    background-color: var(--o-color-fill2);
+    z-index: 100;
+
+    &.focus {
+      top: -32px;
+    }
+  }
+}
+
 .header-search {
   position: relative;
-  margin-left: var(---o-gap-7);
+  display: flex;
   .o-input {
     width: 160px;
     height: 32px;
     transition: width 0.3s;
     transform: translate(0);
-    background-color: var(--o-color-fill2);
-    @media (max-width: 1200px) {
+    @include respond-to('<=pad') {
       display: none;
     }
   }
-  @media (max-width: 1200px) {
-    :deep(.o-search) {
-      --e-search-height: 28px;
-    }
+  @include respond-to('<=pad') {
     margin-left: 0;
     z-index: 2;
     position: fixed;
     width: calc(100vw - 32px);
     left: 16px;
     right: 16px;
+    top: 10px;
   }
+  
+  .input-focus {
+    padding: var(--o-gap-4);
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    &::after {
+      content: '';
+      position: absolute;
+      height: var(--o-gap-4);
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: var(--o-color-fill2);
+      z-index: 200;
 
-  &-box {
-    .close {
-      cursor: pointer;
-      color: var(--o-color-info1);
+      @include respond-to('<=pad') {
+        display: none;
+      }
+    }
+
+    .search-text {
+      white-space: nowrap;
+      @include h3;
+    }
+
+    @include respond-to('<=pad') {
+      padding: 0;
+      z-index: 200;
+      background-color: var(--o-color-fill2);
+      width: 100%;
+      gap: var(--o-gap-4);
+      align-items: center;
     }
   }
+
   .drawer {
     position: absolute;
     left: 0px;
-    top: 32px;
+    top: 64px;
     height: auto;
     overflow: hidden;
     width: 100%;
 
     box-shadow: var(--o-shadow-2);
     backdrop-filter: blur(5px);
-    padding: var(--o-gap-5) 0;
+    padding: var(--o-gap-5);
+    padding-top: var(--o-gap-2);
     background: var(--o-color-fill2);
     border-radius: 0 0 4px 4px;
 
-    @media (max-width: 1200px) {
+    @include respond-to('<=pad') {
       backdrop-filter: blur(0px);
-      margin-top: var(--o-gap-2);
       left: -16px;
       right: 0;
       width: 100vw;
-      padding: var(--o-gap-4) 0;
-    }
+      height: 100vh;
+      padding: var(--o-gap-4);
+      border-radius: unset;
+      top: 32px;
+    } 
+
     .hots {
-      padding: 0 var(--o-gap-6);
-      @media (max-width: 1200px) {
-        padding: 0 var(--o-gap-4);
-      }
       .hots-title {
         @include tip2;
-        color: var(--o-color-info1);
+        color: var(--o-color-info3);
+
+        @include respond-to('<=pad') {
+          @include text2;
+          color: var(--o-color-info1);
+          margin-bottom: var(--o-gap-3);
+        }
       }
       .hots-list {
         display: flex;
         flex-wrap: wrap;
+        @include tip2;
         .hots-list-item {
-          margin-top: var(--o-gap-4);
+          margin-top: var(--o-gap-3);
           margin-right: var(--o-gap-4);
-          margin-right: var(--o-gap-4);
-          color: #707070;
+          color: var(--o-color-info1);
           cursor: pointer;
           &:hover {
             color: var( --o-color-primary1);
           }
-          @media (max-width: 1200px) {
-            @include tip2;
-          }
+        }
+
+        @include respond-to('<=pad') {
+          @include text1;
+          display: block;
         }
       }
+    }
+
+    @include respond-to('<=pad') {
+      box-shadow: unset;
+      padding-left: var(--o-gap-5);
+      padding-right: var(--o-gap-5);
     }
   }
 }
 
-.recommend {
-  padding-bottom: var(--o-gap-5);
-  & > :first-child {
-    margin-top: 0 !important;
+.history-container {
+  .title {
+    @include tip2;
+    color: var(--o-color-info3);
+
+    @include respond-to('<=pad') {
+      @include text2;
+      color: var(--o-color-info1);
+    }
+  }
+  .history-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .history {
     display: flex;
-    @include tip2;
-    color: var(--o-color-info1);
-    padding: 0 var(--o-gap-6);
-    @media (max-width: 1200px) {
-      padding: 0 var(--o-gap-4);
+    gap: 8px;
+
+    .history-item {
+      cursor: pointer;
+      background-color: var(--o-color-fill3);
+      border-radius: var(--o-radius-xs);
+      margin-top: var(--o-gap-2);
+      height: 24px;
+      max-width: 224px;
+      display: flex;
+      align-items: center;
+      padding: 0 var(--o-gap-3);
+      position: relative;
+
+      .icon-container {
+        display: none;
+      }
+
+      &:hover {
+        background-color: rgb(var(--o-kleinblue-1));
+
+        .icon-container {
+          display: inline-block;
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background-color: rgb(var(--o-mixedgray-9));
+          right: -8px;
+          top: -8px;
+        }
+      }
+      
+      .icon {
+        height: 16px;
+        width: 16px;
+      }
+
+      &.dark {
+        &:hover {
+          background-color: rgb(var(--o-mixedgray-7));
+        }
+      }
+
+      .history-text {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        @include tip2;
+
+        @include respond-to('<=pad') {
+          @include text1;
+        }
+      }
+
+      @include respond-to('<=pad') {
+        height: 28px;
+      }
     }
   }
-  .recommend-item {
-    cursor: pointer;
-    margin-top: 8px;
-    color: #707070;
-    padding: var(--o-gap-1) var(--o-gap-6);
-    @include text1;
-    @media (max-width: 1200px) {
-      padding: 0 var(--o-gap-4);
+  .split-line {
+    background: var(--o-color-control4);
+    width: 100%;
+    height: 1px;
+    margin: var(--o-gap-4) 0;
+
+    @include respond-to('<=pad') {
+      display: none;
     }
-    &:hover {
-      color: var( --o-color-primary1);
-      background-color: var(--o-color-fill1);
-    }
+  }
+  @include respond-to('<=pad') {
+    margin-bottom: var(--o-gap-5);
   }
 }
 .search-recommend {
-  margin-top: -4px;
+  margin-bottom: var(--o-gap-3);
+
+  .recommend-item {
+    @include tip2;
+    & + .recommend-item {
+      margin-top: var(--o-gap-3);
+    }
+
+    cursor: pointer;
+    &:hover {
+      color: var( --o-color-primary1);
+    }
+
+    @include respond-to('<=pad') {
+      @include text1;
+    }
+  }
 }
 .search-icon {
   display: none;
-  @media (max-width: 1200px) {
+  @include respond-to('<=pad') {
     display: block;
   }
 
@@ -334,19 +515,21 @@ const handleSearch = (searchValue: string) => {
   box-shadow: var(--o-shadow-2);
   .o-input {
     display: flex;
-    width: 512px;
+    width: 480px;
 
     @include respond-to('laptop') {
-      width: 450px;
+      width: 420px;
     }
 
-    @media (max-width: 1200px) {
+    @include respond-to('<=pad') {
       width: 100%;
       :deep(.el-input__wrapper) {
         width: 100%;
-        height: 28px;
       }
     }
+  }
+  @include respond-to('<=pad') {
+    box-shadow: unset;
   }
 }
 

@@ -97,7 +97,6 @@ const linkClick = () => {
 }
 
 const menuPanel = () => {
-  console.log(toBody.value);
   toBody.value = !toBody.value;
   setTimeout(() => {
     menuIcon.value = !menuIcon.value;
@@ -253,7 +252,6 @@ const menuPanel = () => {
     left: 0;
     overflow: hidden;
     border-top: 1px solid var(--o-color-control4);
-    z-index: 100;
     top: 48px;
     height: calc(100% - 48px);
     transform: translateX(-130%);
