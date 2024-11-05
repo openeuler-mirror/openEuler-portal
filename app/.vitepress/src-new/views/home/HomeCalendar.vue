@@ -434,7 +434,7 @@ const watchData = watch(
   border-radius: var(--o-radius-xs);
   background-color: var(--o-color-fill2);
   overflow: hidden;
-  @include respond-to('phone') {
+  @include respond-to('<=pad_v') {
     margin-top: 12px;
     background-color: transparent;
     flex-direction: column;
@@ -443,7 +443,7 @@ const watchData = watch(
     width: 56%;
     --el-calendar-borde: none;
     --el-calendar-selected-bg-color: none;
-    @include respond-to('phone') {
+    @include respond-to('<=pad_v') {
       width: 100%;
       flex-direction: column;
     }
@@ -451,7 +451,7 @@ const watchData = watch(
       height: 60px;
       padding: 14px 24px;
       border-bottom: 1px solid var(--o-color-control4);
-      @include respond-to('phone') {
+      @include respond-to('<=pad_v') {
         justify-content: center;
         padding: 16px 16px 12px;
         height: auto;
@@ -479,7 +479,7 @@ const watchData = watch(
           border: 1px solid var(--o-color-control4);
           @include h4;
           margin-right: 24px;
-          @include respond-to('phone') {
+          @include respond-to('<=pad_v') {
             display: none;
           }
         }
@@ -494,14 +494,14 @@ const watchData = watch(
       .right-title {
         @include text2;
         color: var(--o-color-info2);
-        @include respond-to('phone') {
+        @include respond-to('<=pad_v') {
           display: none;
         }
       }
     }
     .el-calendar__body {
       border-right: 1px solid var(--o-color-control4);
-      @include respond-to('phone') {
+      @include respond-to('<=pad_v') {
         border: none;
         padding: 0 16px 16px;
       }
@@ -516,6 +516,9 @@ const watchData = watch(
       max-width: 100px;
       height: 64px;
       color: var(--o-color-info1);
+      @include respond-to('<=pad_v') {
+        padding: 0;
+      }
 
       .out-box {
         overflow: hidden;
@@ -528,6 +531,12 @@ const watchData = watch(
         @include hover {
           background-color: var(--o-color-primary1-light);
           border: 1px solid var(--o-color-primary1);
+          @include respond-to('<=pad_v') {
+            @include hover {
+              background-color: inherit;
+              border: 1px solid transparent;
+            }
+          }
         }
         .icon-box {
           margin-top: 4px;
@@ -539,28 +548,104 @@ const watchData = watch(
             padding: 1px;
           }
         }
+        @include respond-to('<=pad_v') {
+          background-color: transparent;
+          text-align: center;
+          .day-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .o-icon {
+            width: 6px;
+            height: 6px;
+            svg {
+              display: none;
+            }
+          }
+        }
       }
     }
     .is-selected {
       .out-box {
         background-color: var(--o-color-primary1-light);
         border: 1px solid var(--o-color-primary1);
+        @include respond-to('<=pad_v') {
+          background-color: transparent;
+          border: 1px solid transparent;
+          .date-calender {
+            position: relative;
+            color: var(--o-color-white);
+            z-index: 1;
+            &::after {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              height: 24px;
+              width: 40px;
+              background-color: var(--o-color-primary1);
+              border-radius: var(--o-radius-l);
+              z-index: -1;
+            }
+          }
+        }
+      }
+    }
+    .is-today {
+      .date-calender {
+        $size: 24px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        z-index: 1;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: $size;
+          height: $size;
+          // background-color: var(--o-color-control1-light);
+          border-radius: 50%;
+          z-index: -1;
+        }
+        @include respond-to('<=pad_v') {
+          height: auto;
+          width: auto;
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 24px;
+            width: 40px;
+            background-color: var(--o-color-control1-light);
+            border-radius: var(--o-radius-l);
+            z-index: -1;
+          }
+        }
       }
     }
   }
   .detail-list {
     width: 44%;
-    @include respond-to('phone') {
+    @include respond-to('<=pad_v') {
       margin-top: 12px;
       background-color: var(--o-color-fill2);
       width: 100%;
     }
-    @include respond-to('>pad') {
+    @include respond-to('>pad_v') {
       .current-day {
         display: none;
       }
     }
-    @include respond-to('phone') {
+    @include respond-to('<=pad_v') {
       .current-day {
         @include text2;
         display: flex;
@@ -577,7 +662,7 @@ const watchData = watch(
       align-items: flex-end;
       height: 60px;
       border-bottom: 1px solid var(--o-color-control4);
-      @include respond-to('phone') {
+      @include respond-to('<=pad_v') {
         height: auto;
         .o-icon {
           display: none;
@@ -585,7 +670,7 @@ const watchData = watch(
       }
     }
     $icon-size: 24px;
-    @include respond-to('phone') {
+    @include respond-to('<=pad_v') {
       $icon-size: 20px;
     }
     .meet-title {
@@ -593,7 +678,6 @@ const watchData = watch(
       align-items: center;
       color: var(--o-color-info1);
       @include text2;
-      @include text-truncate(1);
       .o-icon {
         flex-shrink: 0;
         padding: 1px;
@@ -617,7 +701,7 @@ const watchData = watch(
     height: v-bind('calendarHeight');
     @include scrollbar;
     overflow: auto;
-    @include respond-to('phone') {
+    @include respond-to('<=pad_v') {
       height: auto;
     }
     .empty {
@@ -644,7 +728,7 @@ const watchData = watch(
     .o-collapse-item-header {
       align-items: center;
       padding: 16px 24px;
-      @include respond-to('phone') {
+      @include respond-to('<=pad_v') {
         padding: 12px 16px;
       }
     }
@@ -652,7 +736,7 @@ const watchData = watch(
       padding: 16px 60px;
       background-color: var(--o-color-control2-light);
       margin-bottom: 0;
-      @include respond-to('phone') {
+      @include respond-to('<=pad_v') {
         padding: 12px 16px;
       }
       a {
