@@ -27,3 +27,16 @@ export function getHomeBlog(locale: string) {
     return res.data;
   });
 }
+
+/**
+ * es搜索获取首页用户案例
+ * @return { Promise<ResponseT> } 用户案例
+ */
+export function getHomeShowCases(locale: string) {
+  const url = '/api-search/search/sort';
+  const params = { category: 'showcase', lang: locale, page: 1, pageSize: 100 };
+
+  return request.post(url, params).then((res) => {
+    return res.data;
+  });
+}

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { ref, watch } from 'vue';
 
 import { OCard, OFigure, OScroller, OTab, OTabPane } from '@opensig/opendesign';
 
@@ -18,6 +18,13 @@ import IconUser from '~icons/app-new/icon-user.svg';
 
 const { t, locale } = useLocale();
 const { leLaptop, lePadV } = useScreen();
+
+const props = defineProps({
+  isResult: {
+    type: Boolean,
+    default: false,
+  },
+});
 
 // -------------------- 选中tab页 --------------------
 const activeTab = ref('blog');
@@ -56,11 +63,10 @@ const calcBlogStyle = (idx: number) => {
 // -------------------- 获取新闻、博客 --------------------
 const newsArr = ref([]);
 const blogArr = ref([]);
-onMounted(() => {
+const getData = () => {
   getHomeNews(locale.value).then((newsRes) => {
     if (newsRes && newsRes.obj && newsRes.obj.records) {
       newsArr.value = normalizeData(newsRes.obj.records);
-      console.log(newsArr.value);
     }
 
     getHomeBlog(locale.value).then((blogRes) => {
@@ -69,7 +75,13 @@ onMounted(() => {
       }
     });
   });
-});
+};
+watch(
+  () => props.isResult,
+  () => {
+    getData();
+  }
+);
 
 // -------------------- 跳转 --------------------
 </script>
