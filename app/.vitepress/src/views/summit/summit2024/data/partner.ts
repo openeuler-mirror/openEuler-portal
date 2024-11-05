@@ -103,19 +103,6 @@ export default {
           img_dark: liantong_dark,
         },
         {
-          img: ruantong_light,
-          img_dark: ruantong_dark,
-        },
-        {
-          img: iscas_light,
-          img_dark: iscas_dark,
-        },
-        {
-          img: oschina_light,
-          img_dark: oschina_dark,
-        },
-
-        {
           img: linsi_light,
           img_dark: linsi_dark,
         },
@@ -130,6 +117,18 @@ export default {
         {
           img: baolande_light,
           img_dark: baolande_dark,
+        },
+        {
+          img: ruantong_light,
+          img_dark: ruantong_dark,
+        },
+        {
+          img: iscas_light,
+          img_dark: iscas_dark,
+        },
+        {
+          img: oschina_light,
+          img_dark: oschina_dark,
         },
       ],
     },
