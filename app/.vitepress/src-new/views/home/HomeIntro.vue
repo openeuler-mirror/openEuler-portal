@@ -132,8 +132,10 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
       padding-left: calc(32px + 72px);
       $list-width: 60px;
       $list-height: 490px;
-      @include respond-to('<=pad_v') {
-        margin-top: 0;
+      @include respond-to('laptop') {
+        padding-right: 0;
+        $list-width: 52px;
+        $list-height: 423px;
       }
       &::before {
         content: '';
@@ -145,10 +147,6 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
         background-image: url(~@/assets/category/home/intro/left-bg_light.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
-      }
-      @include respond-to('<=pad_v') {
-        width: 100%;
-        flex-direction: column;
       }
     }
 
@@ -172,6 +170,9 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
       text-align: left;
       &:not(:last-child) {
         margin-bottom: 72px;
+        @include respond-to('laptop') {
+          margin-bottom: 56px;
+        }
       }
       .title {
         @include h3;
