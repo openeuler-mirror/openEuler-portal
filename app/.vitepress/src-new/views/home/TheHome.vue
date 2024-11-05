@@ -23,6 +23,8 @@ const { isPhone, isPadV } = useScreen();
 
 const { locale, isZh } = useLocale();
 
+const isResult = ref(false);
+
 const calendarData = ref<string[]>([]);
 
 const paramsCase = {
@@ -66,8 +68,8 @@ onMounted(() => {
         v-if="isZh && calendarData?.length"
         :table-data="calendarData"
       />
-      <HomeShowCase />
-      <HomeTrend />
+      <HomeShowCase @result="isResult = true" />
+      <HomeTrend :is-result="isResult" />
     </ContentWrapper>
     <HomePartner />
   </div>

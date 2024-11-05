@@ -19,7 +19,9 @@ import IconChevronRight from '~icons/app/icon-chevron-right.svg';
 
 import { casesZh, casesEn } from '~@/data/home/case';
 
-import { getShowCases } from '~@/api/api-home';
+import { getHomeShowCases } from '~@/api/api-search';
+
+const emit = defineEmits(['result']);
 
 export interface CasesT {
   label: string;
@@ -43,14 +45,10 @@ cases.value = locale.value === 'zh' ? casesZh : casesEn;
 
 // -------------------- 获取案例数据 --------------------
 const caseData = ref({});
-const params = {
-  category: 'showcase',
-  lang: locale.value,
-  page: 1,
-  pageSize: 100,
-};
 const getCases = () => {
-  getShowCases(params).then((res) => {
+  getHomeShowCases(locale.value).then((res) => {
+    emit('result');
+
     const result: any = {};
     res?.obj?.records.forEach((item: { lang: string; industry: string }) => {
       if (typeof result[item.industry] === 'undefined') {
