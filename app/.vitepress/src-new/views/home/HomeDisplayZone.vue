@@ -46,10 +46,12 @@ const { theme } = storeToRefs(useCommon());
   background: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
   z-index: 1;
-  @include respond-to('<=laptop') {
-    row-gap: 24px;
+  @include respond-to('<=pad_v') {
     position: relative;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0;
+    gap: 16px;
+    background: transparent;
     .display-zone-item {
       flex-direction: column;
       .display-zone-icon {
@@ -65,8 +67,7 @@ const { theme } = storeToRefs(useCommon());
   }
   @include respond-to('phone') {
     gap: 12px;
-    padding: 0;
-    background: transparent;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .display-zone-item {
@@ -74,7 +75,7 @@ const { theme } = storeToRefs(useCommon());
     display: flex;
     align-items: center;
     border-radius: var(--o-radius-xs);
-    @include respond-to('phone') {
+    @include respond-to('<=pad_v') {
       padding: 16px;
       background: var(--o-color-fill2);
     }
@@ -89,7 +90,7 @@ const { theme } = storeToRefs(useCommon());
     }
     .display-zone-text {
       margin-left: 12px;
-      @include respond-to('<=laptop') {
+      @include respond-to('<=pad_v') {
         text-align: center;
       }
       .display-zone-title {
@@ -102,7 +103,7 @@ const { theme } = storeToRefs(useCommon());
         color: var(--o-color-info2);
         @include tip1;
         text-align: left;
-        @include respond-to('phone') {
+        @include respond-to('<=pad_v') {
           display: none;
         }
       }
