@@ -7,7 +7,6 @@ import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
-import { getSortData } from '@/api/api-search';
 import { getMeetingActivity } from '@/api/api-calendar';
 
 import HomeBanner from './HomeBanner.vue';
@@ -26,13 +25,6 @@ const { locale, isZh } = useLocale();
 const isResult = ref(false);
 
 const calendarData = ref<string[]>([]);
-
-const paramsCase = {
-  lang: locale.value,
-  page: 1,
-  pageSize: 100,
-};
-getSortData(paramsCase);
 
 const verticalPadding = computed(() => {
   if (isPhone.value) {
