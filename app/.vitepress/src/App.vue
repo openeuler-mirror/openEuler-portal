@@ -20,8 +20,8 @@ import LayoutSecurity from './layouts/LayoutSecurity.vue';
 import LayoutWiki from './layouts/LayoutWiki.vue';
 import LayoutFAQ from '@/layouts/LayoutFAQ.vue';
 
-import AppFloat from '@/components/AppFloat.vue';
-import AppFloatEn from '@/components/AppFloatEn.vue';
+import FloatingButton from '~@/components/FloatingButton.vue';
+import FloatingButtonEn from '~@/components/FloatingButtonEn.vue';
 import CookieNotice from '~@/components/CookieNotice.vue';
 
 import categories from '@/data/common/category';
@@ -84,8 +84,8 @@ onMounted(() => {
     <main :class="frontmatter.class ? frontmatter.class : ''">
       <component :is="comp" v-if="isCustomLayout"></component>
       <Content v-else />
-      <AppFloat v-if="lang === 'zh'" />
-      <AppFloatEn v-else />
+      <FloatingButton v-if="lang === 'zh'" />
+      <FloatingButtonEn v-else />
     </main>
   </el-config-provider>
   <CookieNotice />
