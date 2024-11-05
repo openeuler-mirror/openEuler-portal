@@ -173,8 +173,9 @@ const linkClick = () => {
             </nav>
           </div>
         </div>
+
         <div class="header-tool">
-          <HeaderSearch/>
+          <HeaderSearch />
           <AppCode />
           <AppLanguage :show="langOptions" />
           <AppTheme />
