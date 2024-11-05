@@ -5,9 +5,9 @@ import { useI18n } from '~@/i18n';
 import { OCollapse, OIcon, OCollapseItem } from '@opensig/opendesign';
 import { useCommon } from '@/stores/common';
 
-import AppTheme from './AppTheme.vue';
-import AppLanguage from './AppLanguage.vue';
-import AppLogin from './AppLogin.vue';
+import HeaderTheme from './HeaderTheme.vue';
+import HeaderLanguage from './HeaderLanguage.vue';
+import HeaderLogin from './HeaderLogin.vue';
 import NavContent from './NavContent.vue';
 import HeaderSearch from './HeaderSearch.vue';
 
@@ -169,14 +169,14 @@ const menuPanel = () => {
                     }">
                 {{ $t('header.CODE') }}
               </div>
-              <AppLanguage :show="langOptions"/>
-              <AppTheme />
+              <HeaderLanguage :show="langOptions"/>
+              <HeaderTheme />
             </div>
           </div>
         </div>
         <!-- 搜索 -->
         <HeaderSearch />
-        <AppLogin />
+        <HeaderLogin />
     </div>
   </header>
 </template>

@@ -677,6 +677,7 @@ export default {
     CHANGE: 'Change',
     PLEACHOLDER: 'Please enter...',
     PLEACHOLDER_EXTEND: 'Please enter the content',
+    TEXT: 'Search',
   },
   SOURCE_CODE: [
     {
