@@ -7,7 +7,7 @@ import { OCard, OButton, OIcon, ODivider } from '@opensig/opendesign';
 
 import { useScreen } from '~@/composables/useScreen';
 
-import IconOutLink from '~icons/app/icon-outlink.svg';
+import IconOutLink from '~icons/app-new/icon-outlink.svg';
 
 import talentDemand from '~@/data/talent/talent-demand';
 
