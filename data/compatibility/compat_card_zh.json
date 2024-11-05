@@ -21993,7 +21993,7 @@
   },
  {
         "vendorID": "1f3f",
-        "debiceID": "2200",
+        "deviceID": "2200",
         "svID": "1f3f",
         "ssID": "0185",
         "architecture": "aarch64",
@@ -22012,7 +22012,7 @@
     },
     {
         "vendorID": "15b3",
-        "debiceID": "1017",
+        "deviceID": "1017",
         "svID": "19e5",
         "ssID": "d120",
         "architecture": "aarch64",
@@ -22107,7 +22107,7 @@
   },
     {
         "vendorID": "15b3",
-        "debiceID": "1017",
+        "deviceID": "1017",
         "svID": "19e5",
         "ssID": "d120",
         "architecture": "x86_64",
@@ -22126,7 +22126,7 @@
     },
     {
         "vendorID": "1000",
-        "debiceID": "0097",
+        "deviceID": "0097",
         "svID": "1000",
         "ssID": "3090",
         "architecture": "x86_64",
@@ -22145,7 +22145,7 @@
     },
     {
         "vendorID": "1000",
-        "debiceID": "0014",
+        "deviceID": "0014",
         "svID": "19e5",
         "ssID": "da16",
         "architecture": "aarch64",
@@ -22164,7 +22164,7 @@
     },
     {
         "vendorID": "1000",
-        "debiceID": "0014",
+        "deviceID": "0014",
         "svID": "19e5",
         "ssID": "da16",
         "architecture": "x86_64",
@@ -22183,7 +22183,7 @@
     },
     {
         "vendorID": "9005",
-        "debiceID": "028f",
+        "deviceID": "028f",
         "svID": "9005",
         "ssID": "0801",
         "architecture": "x86_64",
@@ -22202,7 +22202,7 @@
     },
     {
         "vendorID": "10df",
-        "debiceID": "e300",
+        "deviceID": "e300",
         "svID": "10df",
         "ssID": "e310",
         "architecture": "aarch64",
@@ -22221,7 +22221,7 @@
     },
     {
         "vendorID": "10df",
-        "debiceID": "e300",
+        "deviceID": "e300",
         "svID": "10df",
         "ssID": "e310",
         "architecture": "x86_64",
@@ -22468,7 +22468,7 @@
     },
     {
         "vendorID": "1f3f",
-        "debiceID": "2200",
+        "deviceID": "2200",
         "svID": "1f3f",
         "ssID": "0185",
         "architecture": "aarch64",
@@ -22487,7 +22487,7 @@
     },
     {
         "vendorID": "1f3f",
-        "debiceID": "2100",
+        "deviceID": "2100",
         "svID": "1f3f",
         "ssID": "0125",
         "architecture": "x86_64",
@@ -22506,7 +22506,7 @@
     },
     {
         "vendorID": "1f3f",
-        "debiceID": "2100",
+        "deviceID": "2100",
         "svID": "1f3f",
         "ssID": "0125",
         "architecture": "x86_64",
@@ -22525,7 +22525,7 @@
     },
     {
         "vendorID": "1f3f",
-        "debiceID": "2100",
+        "deviceID": "2100",
         "svID": "1f3f",
         "ssID": "0125",
         "architecture": "x86_64",
@@ -22544,7 +22544,7 @@
     },
     {
         "vendorID": "1f3f",
-        "debiceID": "2100",
+        "deviceID": "2100",
         "svID": "1f3f",
         "ssID": "0125",
         "architecture": "x86_64",
@@ -22563,7 +22563,7 @@
     },
     {
         "vendorID": "1f3f",
-        "debiceID": "2200",
+        "deviceID": "2200",
         "svID": "1f3f",
         "ssID": "01a8",
         "architecture": "x86_64",
@@ -22582,7 +22582,7 @@
     },
     {
         "vendorID": "1f3f",
-        "debiceID": "2200",
+        "deviceID": "2200",
         "svID": "1f3f",
         "ssID": "01ad",
         "architecture": "x86_64",
@@ -22601,7 +22601,7 @@
     },
     {
         "vendorID": "1f3f",
-        "debiceID": "2200",
+        "deviceID": "2200",
         "svID": "1f3f",
         "ssID": "01ad",
         "architecture": "x86_64",
@@ -22620,7 +22620,7 @@
     },
     {
         "vendorID": "1f3f",
-        "debiceID": "9020",
+        "deviceID": "9020",
         "svID": "1f3f",
         "ssID": "0052",
         "architecture": "x86_64",
@@ -22639,7 +22639,7 @@
     },
     {
         "vendorID": "1f3f",
-        "debiceID": "9020",
+        "deviceID": "9020",
         "svID": "1f3f",
         "ssID": "0052",
         "architecture": "x86_64",
@@ -22658,7 +22658,7 @@
     },
     {
         "vendorID": "1f3f",
-        "debiceID": "9020",
+        "deviceID": "9020",
         "svID": "1f3f",
         "ssID": "0052",
         "architecture": "x86_64",
