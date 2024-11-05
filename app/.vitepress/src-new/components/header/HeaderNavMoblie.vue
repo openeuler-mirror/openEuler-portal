@@ -10,9 +10,10 @@ import HeaderLanguage from './HeaderLanguage.vue';
 import HeaderLogin from './HeaderLogin.vue';
 import NavContent from './NavContent.vue';
 import HeaderSearch from './HeaderSearch.vue';
+import NavLink from './NavLink.vue';
 
 import IconCancel from '~icons/app/icon-cancel.svg';
-import IconMenu from '~icons/app-new/icon-menu.svg';
+import IconMenu from '~icons/app-new/icon-header-menu.svg';
 import logo_light from '~@/assets/category/header/logo.svg';
 import logo_dark from '~@/assets/category/header/logo_dark.svg';
 import IconOutLink from '~icons/app/icon-out-link.svg';
@@ -154,12 +155,12 @@ const menuPanel = () => {
                     </OCollapseItem>
                   </OCollapse>
                   <div v-else class="nav-aside-wrapper">
-                    <div v-for="item in navInfo" :key="item.NAME" class="source-code-item">
+                    <NavLink v-for="item in navInfo" :url="item.PATH" :key="item.NAME" class="source-code-item">
                       <span>{{ item.NAME }}</span>
                       <OIcon>
                         <IconOutLink class="icon" />
                       </OIcon>
-                    </div>
+                    </NavLink>
                   </div>
                 </div>
               </nav>
@@ -251,7 +252,6 @@ const menuPanel = () => {
     position: fixed;
     left: 0;
     overflow: hidden;
-    border-top: 1px solid var(--o-color-control4);
     top: 48px;
     height: calc(100% - 48px);
     transform: translateX(-130%);
