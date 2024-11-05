@@ -2,7 +2,7 @@
 import { computed, ref, onMounted, watch } from 'vue';
 import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
-import { useI18n } from '@/i18n';
+import { useI18n } from '~@/i18n';
 
 import type { SearchRecommendT } from '@/shared/@types/type-search';
 
@@ -49,7 +49,7 @@ const onTopSearchItemClick = (val: string) => {
   handleSearchEvent();
 };
 
-const searchValue = computed(() => i18n.value.common.SEARCH);
+const searchValue = computed(() => i18n.value.header.SEARCH);
 // 显示/移除搜索框
 const isShowBox = ref(false);
 const popList = ref<string[]>([]);
@@ -178,7 +178,7 @@ const closeSearch = () => {
               <OIcon class="close icon" @click="closeSearchBox"><IconCancel /></OIcon>
             </template>
           </OInput>
-          <span v-if="isMobile && isShowDrawer" class="search-text" @click="handleSearchEvent">搜索</span>
+          <span v-if="isMobile && isShowDrawer" class="search-text" @click="handleSearchEvent">{{ searchValue.TEXT }}</span>
         </div>
 
         <div v-show="isShowDrawer" class="drawer">
