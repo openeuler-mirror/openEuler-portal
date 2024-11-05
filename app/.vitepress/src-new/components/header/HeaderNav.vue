@@ -6,10 +6,10 @@ import { useCommon } from '@/stores/common';
 import { debounce } from 'lodash-es';
 
 import NavContent from './NavContent.vue';
-import AppTheme from './AppTheme.vue';
-import AppLanguage from './AppLanguage.vue';
-import AppCode from './AppCode.vue';
-import AppLogin from './AppLogin.vue';
+import HeaderTheme from './HeaderTheme.vue';
+import HeaderLanguage from './HeaderLanguage.vue';
+import HeaderCode from './HeaderCode.vue';
+import HeaderLogin from './HeaderLogin.vue';
 import HeaderSearch from './HeaderSearch.vue';
 import NavLink from './NavLink.vue';
 
@@ -176,10 +176,10 @@ const linkClick = () => {
 
         <div class="header-tool">
           <HeaderSearch />
-          <AppCode />
-          <AppLanguage :show="langOptions" />
-          <AppTheme />
-          <AppLogin />
+          <HeaderCode />
+          <HeaderLanguage :show="langOptions" />
+          <HeaderTheme />
+          <HeaderLogin />
         </div>
       </ClientOnly>
     </div>
