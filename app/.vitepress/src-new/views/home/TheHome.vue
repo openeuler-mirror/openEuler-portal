@@ -28,11 +28,11 @@ const calendarData = ref<string[]>([]);
 
 const verticalPadding = computed(() => {
   if (isPhone.value) {
-    return ['32px', '32px'];
+    return ['32px', '0'];
   } else if (isPadV.value) {
-    return ['32px', '40px'];
+    return ['32px', '0'];
   } else {
-    return ['0', '72px'];
+    return ['0', '0'];
   }
 });
 onMounted(() => {
@@ -54,15 +54,17 @@ onMounted(() => {
     <HomeBanner />
     <ContentWrapper :vertical-padding="verticalPadding">
       <HomeDisplayZone class="home-display-zone" />
-      <HomeIntro />
+    </ContentWrapper>
+    <HomeIntro />
+    <ContentWrapper :vertical-padding="['0', '0']">
       <HomePlayCommunity />
       <HomeCalendar
         v-if="isZh && calendarData?.length"
         :table-data="calendarData"
       />
-      <HomeShowCase @result="isResult = true" />
-      <HomeTrend :is-result="isResult" />
     </ContentWrapper>
+    <HomeShowCase @result="isResult = true" />
+    <HomeTrend :is-result="isResult" />
     <HomePartner />
   </div>
 </template>
@@ -74,17 +76,17 @@ onMounted(() => {
     margin-top: 0;
   }
 }
+
 :deep(h3) {
   @include display3;
   font-weight: 500;
   color: var(--o-color-info1);
   text-align: center;
-  margin-top: 72px;
-  @include respond-to('phone') {
-    margin-top: 32px;
-  }
+  margin-top: var(--o-gap-section);
 }
 .home {
+  overflow: hidden;
+
   background-image: linear-gradient(
     180deg,
     #f3f3f5 0%,

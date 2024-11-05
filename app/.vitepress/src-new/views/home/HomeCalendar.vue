@@ -21,7 +21,6 @@ import {
 
 import IconLeft from '~icons/app/icon-chevron-left.svg';
 import IconRight from '~icons/app/icon-chevron-right.svg';
-import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import IconDate from '~icons/home/icon-date.svg';
 import IconAll from '~icons/home/icon-all.svg';
 import IconEvent from '~icons/home/icon-event.svg';
@@ -29,8 +28,10 @@ import IconSummit from '~icons/home/icon-summit.svg';
 import IconMeet from '~icons/home/icon-meet.svg';
 import notFoundImg_light from '@/assets/illustrations/404.png';
 import notFoundImg_dark from '@/assets/illustrations/404_dark.png';
+import cubeOne from '~@/assets/category/home/calendar/cube-1.png';
+import cubeTow from '~@/assets/category/home/calendar/cube-2.png';
 
-import useWindowResize from '@/components/hooks/useWindowResize';
+import AppSection from '~@/components/AppSection.vue';
 
 const props = defineProps({
   tableData: {
@@ -108,7 +109,6 @@ const tabType = ref(titleList[0].value);
 const calendar = ref();
 const calendarHeight = ref<string>('335px');
 const isLimit = ref(false);
-const windowWidth = ref(useWindowResize());
 
 // 活动会议筛选
 function selectTab() {
@@ -339,11 +339,13 @@ const watchData = watch(
                 :value="index"
               >
                 <template #title>
-                  <div class="meet-title">
+                  <div class="meet-title" :title="item.name || item.title">
                     <OIcon class="meeting">
                       <IconMeet></IconMeet>
                     </OIcon>
-                    {{ item.name || item.title }}
+                    <div class="text">
+                      {{ item.name || item.title }}
+                    </div>
                   </div>
                   <div class="meet-info">
                     <span class="start-time"
@@ -388,6 +390,7 @@ const watchData = watch(
                             (item[keys.key] as string).startsWith('http')
                           "
                         :href="item[keys.key]"
+                        target="_blank"
                         >{{ item[keys.key] }}</a
                       >
                       <p v-else>
@@ -415,6 +418,8 @@ const watchData = watch(
         </div>
       </div>
     </div>
+    <img class="cube-1" :src="cubeOne" alt="" />
+    <img class="cube-2" :src="cubeTow" alt="" />
   </div>
 </template>
 <style lang="scss" scoped>
@@ -427,156 +432,199 @@ const watchData = watch(
 .event {
   background-color: #ffa122;
 }
-
-.calendar-body {
-  display: flex;
-  margin-top: 40px;
-  border-radius: var(--o-radius-xs);
-  background-color: var(--o-color-fill2);
-  overflow: hidden;
-  @include respond-to('<=pad_v') {
-    margin-top: 12px;
-    background-color: transparent;
-    flex-direction: column;
-  }
-  :deep(.calender) {
-    width: 56%;
-    --el-calendar-borde: none;
-    --el-calendar-selected-bg-color: none;
+.home-calendar {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  .calendar-body {
+    display: flex;
+    margin-top: 40px;
+    border-radius: var(--o-radius-xs);
+    background-color: var(--o-color-fill2);
+    overflow: hidden;
     @include respond-to('<=pad_v') {
-      width: 100%;
+      margin-top: 12px;
+      background-color: transparent;
       flex-direction: column;
     }
-    .el-calendar__header {
-      height: 60px;
-      padding: 14px 24px;
-      border-bottom: 1px solid var(--o-color-control4);
+    :deep(.calender) {
+      width: 56%;
+      --el-calendar-borde: none;
+      --el-calendar-selected-bg-color: none;
       @include respond-to('<=pad_v') {
-        justify-content: center;
-        padding: 16px 16px 12px;
-        height: auto;
-        border-bottom: none;
+        width: 100%;
+        flex-direction: column;
       }
-      td {
-        border: none;
-      }
-      .left-title {
-        display: flex;
-        align-items: center;
-        @include text2;
-        .o-icon {
-          cursor: pointer;
-          font-size: 24px;
+      .el-calendar__header {
+        height: 60px;
+        padding: 14px 24px;
+        border-bottom: 1px solid var(--o-color-control4);
+        @include respond-to('<=pad_v') {
+          justify-content: center;
+          padding: 16px 16px 12px;
+          height: auto;
+          border-bottom: none;
         }
-        .month-date {
-          margin: 0 4px;
+        td {
+          border: none;
         }
-        .current-date {
+        .left-title {
           display: flex;
           align-items: center;
-          border-radius: var(--o-radius-xs);
-          padding: 1px 16px;
-          border: 1px solid var(--o-color-control4);
-          @include h4;
-          margin-right: 24px;
+          @include text2;
+          .o-icon {
+            cursor: pointer;
+            font-size: 24px;
+          }
+          .month-date {
+            margin: 0 4px;
+          }
+          .current-date {
+            display: flex;
+            align-items: center;
+            border-radius: var(--o-radius-xs);
+            padding: 1px 16px;
+            border: 1px solid var(--o-color-control4);
+            @include h4;
+            margin-right: 24px;
+            @include respond-to('<=pad_v') {
+              display: none;
+            }
+          }
+          .date {
+            color: var(--o-color-primary1);
+          }
+          .o-icon {
+            font-size: 20px;
+            margin-right: 8px;
+          }
+        }
+        .right-title {
+          @include text2;
+          color: var(--o-color-info2);
           @include respond-to('<=pad_v') {
             display: none;
           }
         }
-        .date {
-          color: var(--o-color-primary1);
-        }
-        .o-icon {
-          font-size: 20px;
-          margin-right: 8px;
-        }
       }
-      .right-title {
-        @include text2;
-        color: var(--o-color-info2);
+      .el-calendar__body {
+        border-right: 1px solid var(--o-color-control4);
         @include respond-to('<=pad_v') {
-          display: none;
+          border: none;
+          padding: 0 16px 16px;
         }
       }
-    }
-    .el-calendar__body {
-      border-right: 1px solid var(--o-color-control4);
-      @include respond-to('<=pad_v') {
+      td {
         border: none;
-        padding: 0 16px 16px;
       }
-    }
-    td {
-      border: none;
-    }
-    .el-calendar-day {
-      padding: 0;
-      padding-left: 8px;
-      padding-bottom: 8px;
-      max-width: 100px;
-      height: 64px;
-      color: var(--o-color-info1);
-      @include respond-to('<=pad_v') {
+      .el-calendar-day {
         padding: 0;
-      }
+        padding-left: 8px;
+        padding-bottom: 8px;
+        max-width: 100px;
+        height: 64px;
+        color: var(--o-color-info1);
+        @include respond-to('<=pad_v') {
+          padding: 0;
+        }
 
-      .out-box {
-        overflow: hidden;
-        border-radius: var(--o-radius-xs);
-        padding: 8px;
-        width: 100%;
-        height: 100%;
-        background-color: var(--o-color-primary4-light);
-        border: 1px solid transparent;
-        @include hover {
+        .out-box {
+          overflow: hidden;
+          border-radius: var(--o-radius-xs);
+          padding: 8px;
+          width: 100%;
+          height: 100%;
+          background-color: var(--o-color-primary4-light);
+          border: 1px solid transparent;
+          @include hover {
+            background-color: var(--o-color-primary1-light);
+            border: 1px solid var(--o-color-primary1);
+            @include respond-to('<=pad_v') {
+              @include hover {
+                background-color: inherit;
+                border: 1px solid transparent;
+              }
+            }
+          }
+          .icon-box {
+            margin-top: 4px;
+            color: var(--o-color-white);
+            height: 20px;
+            width: 20px;
+            .meeting {
+              border-radius: 50%;
+              padding: 1px;
+            }
+          }
+          @include respond-to('<=pad_v') {
+            background-color: transparent;
+            text-align: center;
+            .day-box {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+            .o-icon {
+              width: 6px;
+              height: 6px;
+              svg {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .is-selected {
+        .out-box {
           background-color: var(--o-color-primary1-light);
           border: 1px solid var(--o-color-primary1);
           @include respond-to('<=pad_v') {
-            @include hover {
-              background-color: inherit;
-              border: 1px solid transparent;
-            }
-          }
-        }
-        .icon-box {
-          margin-top: 4px;
-          color: var(--o-color-white);
-          height: 20px;
-          width: 20px;
-          .meeting {
-            border-radius: 50%;
-            padding: 1px;
-          }
-        }
-        @include respond-to('<=pad_v') {
-          background-color: transparent;
-          text-align: center;
-          .day-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-          .o-icon {
-            width: 6px;
-            height: 6px;
-            svg {
-              display: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            .date-calender {
+              position: relative;
+              color: var(--o-color-white);
+              z-index: 1;
+              &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 24px;
+                width: 40px;
+                background-color: var(--o-color-primary1);
+                border-radius: var(--o-radius-l);
+                z-index: -1;
+              }
             }
           }
         }
       }
-    }
-    .is-selected {
-      .out-box {
-        background-color: var(--o-color-primary1-light);
-        border: 1px solid var(--o-color-primary1);
-        @include respond-to('<=pad_v') {
-          background-color: transparent;
-          border: 1px solid transparent;
-          .date-calender {
-            position: relative;
-            color: var(--o-color-white);
-            z-index: 1;
+      .is-today {
+        .date-calender {
+          $size: 24px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: fit-content;
+          z-index: 1;
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: $size;
+            height: $size;
+            // background-color: var(--o-color-control1-light);
+            border-radius: 50%;
+            z-index: -1;
+          }
+          @include respond-to('<=pad_v') {
+            height: auto;
+            width: auto;
             &::after {
               content: '';
               position: absolute;
@@ -585,7 +633,7 @@ const watchData = watch(
               transform: translate(-50%, -50%);
               height: 24px;
               width: 40px;
-              background-color: var(--o-color-primary1);
+              background-color: var(--o-color-control1-light);
               border-radius: var(--o-radius-l);
               z-index: -1;
             }
@@ -593,173 +641,164 @@ const watchData = watch(
         }
       }
     }
-    .is-today {
-      .date-calender {
-        $size: 24px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: fit-content;
-        z-index: 1;
-        &::after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: $size;
-          height: $size;
-          // background-color: var(--o-color-control1-light);
-          border-radius: 50%;
-          z-index: -1;
-        }
-        @include respond-to('<=pad_v') {
-          height: auto;
-          width: auto;
-          &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: 24px;
-            width: 40px;
-            background-color: var(--o-color-control1-light);
-            border-radius: var(--o-radius-l);
-            z-index: -1;
-          }
-        }
-      }
-    }
-  }
-  .detail-list {
-    width: 44%;
-    @include respond-to('<=pad_v') {
-      margin-top: 12px;
-      background-color: var(--o-color-fill2);
-      width: 100%;
-    }
-    @include respond-to('>pad_v') {
-      .current-day {
-        display: none;
-      }
-    }
-    @include respond-to('<=pad_v') {
-      .current-day {
-        @include text2;
-        display: flex;
-        margin: 16px 16px 12px;
-        padding: 7px 12px;
-        justify-content: center;
-        border-radius: var(--o-radius-s);
-        background-color: var(--o-color-control4-light);
-      }
-    }
-    .o-tab {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      height: 60px;
-      border-bottom: 1px solid var(--o-color-control4);
+    .detail-list {
+      width: 44%;
       @include respond-to('<=pad_v') {
-        height: auto;
-        .o-icon {
+        margin-top: 12px;
+        background-color: var(--o-color-fill2);
+        width: 100%;
+      }
+      @include respond-to('>pad_v') {
+        .current-day {
           display: none;
         }
       }
-    }
-    $icon-size: 24px;
-    @include respond-to('<=pad_v') {
-      $icon-size: 20px;
-    }
-    .meet-title {
-      display: flex;
-      align-items: center;
-      color: var(--o-color-info1);
-      @include text2;
-      .o-icon {
-        flex-shrink: 0;
-        padding: 1px;
-        border-radius: 50%;
-        color: var(--o-color-white);
-        margin-right: 12px;
-        width: $icon-size;
-        height: $icon-size;
+      @include respond-to('<=pad_v') {
+        .current-day {
+          @include text2;
+          display: flex;
+          margin: 16px 16px 12px;
+          padding: 7px 12px;
+          justify-content: center;
+          border-radius: var(--o-radius-s);
+          background-color: var(--o-color-control4-light);
+        }
+      }
+      .o-tab {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 60px;
+        border-bottom: 1px solid var(--o-color-control4);
+        @include respond-to('<=pad_v') {
+          height: auto;
+          .o-icon {
+            display: none;
+          }
+        }
+      }
+      $icon-size: 24px;
+      @include respond-to('<=pad_v') {
+        $icon-size: 20px;
+      }
+      .meet-title {
+        display: flex;
+        align-items: center;
+        color: var(--o-color-info1);
+        @include text2;
+        .o-icon {
+          flex-shrink: 0;
+          padding: 1px;
+          border-radius: 50%;
+          color: var(--o-color-white);
+          margin-right: 12px;
+          width: $icon-size;
+          height: $icon-size;
+        }
+        .text {
+          @include text-truncate(1);
+          display: block;
+          width: 100%;
+        }
+      }
+      .meet-info {
+        margin-left: calc($icon-size + 12px);
+        margin-top: 8px;
+        display: flex;
+        @include tip1;
+        color: var(--o-color-info3);
+        text-decoration: none;
       }
     }
-    .meet-info {
-      margin-left: calc($icon-size + 12px);
-      margin-top: 8px;
+    .meeting-list {
+      height: v-bind('calendarHeight');
+      @include scrollbar;
+      overflow: auto;
+      @include respond-to('<=pad_v') {
+        height: auto;
+      }
+      .empty {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 32px;
+        img {
+          max-width: 165px;
+        }
+        p {
+          @include text1;
+          color: var(--o-color-info3);
+          margin-top: 16px;
+        }
+      }
+    }
+    :deep(.o-collapse) {
+      .o-collapse-item-icon {
+        height: min-content;
+      }
+      .o-collapse-item-header {
+        align-items: center;
+        padding: 16px 24px;
+        @include respond-to('<=pad_v') {
+          padding: 12px 16px;
+        }
+      }
+      .o-collapse-item-body {
+        padding: 16px 60px;
+        background-color: var(--o-color-control2-light);
+        margin-bottom: 0;
+        @include respond-to('<=pad_v') {
+          padding: 12px 16px;
+        }
+        a {
+          word-break: break-all;
+        }
+      }
+    }
+
+    .calendar-info {
       display: flex;
       @include tip1;
       color: var(--o-color-info3);
-      text-decoration: none;
-    }
-  }
-  .meeting-list {
-    height: v-bind('calendarHeight');
-    @include scrollbar;
-    overflow: auto;
-    @include respond-to('<=pad_v') {
-      height: auto;
-    }
-    .empty {
-      display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      padding: 32px;
-      img {
-        max-width: 165px;
+      .info-item {
+        display: flex;
+        margin-top: 8px;
+        .item-title {
+          min-width: 110px;
+        }
       }
-      p {
-        @include text1;
-        color: var(--o-color-info3);
-        margin-top: 16px;
+      .info-item:first-child {
+        margin-top: 0;
       }
     }
   }
-  :deep(.o-collapse) {
-    .o-collapse-item-icon {
-      height: min-content;
-    }
-    .o-collapse-item-header {
-      align-items: center;
-      padding: 16px 24px;
-      @include respond-to('<=pad_v') {
-        padding: 12px 16px;
-      }
-    }
-    .o-collapse-item-body {
-      padding: 16px 60px;
-      background-color: var(--o-color-control2-light);
-      margin-bottom: 0;
-      @include respond-to('<=pad_v') {
-        padding: 12px 16px;
-      }
-      a {
-        word-break: break-all;
-      }
-    }
+}
+.cube-1,
+.cube-2 {
+  position: absolute;
+  top: -14px;
+  left: -140px;
+  width: 320px;
+  z-index: -1;
+  @include respond-to('<=pad_v') {
+    width: 84px;
+    top: -14px;
+    left: -30px;
   }
-
-  .calendar-info {
-    display: flex;
-    @include tip1;
-    color: var(--o-color-info3);
-    flex-direction: column;
-    .info-item {
-      display: flex;
-      margin-top: 8px;
-      .item-title {
-        min-width: 110px;
-      }
-    }
-    .info-item:first-child {
-      margin-top: 0;
-    }
+}
+.cube-2 {
+  left: inherit;
+  top: inherit;
+  width: 325px;
+  bottom: -160px;
+  right: -252px;
+  @include respond-to('<=pad_v') {
+    width: 71px;
+    bottom: -40px;
+    right: -30px;
   }
 }
 </style>

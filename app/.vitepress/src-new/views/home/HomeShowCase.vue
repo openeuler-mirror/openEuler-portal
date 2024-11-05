@@ -15,6 +15,8 @@ import { useCommon } from '@/stores/common';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
+import AppSection from '~@/components/AppSection.vue';
+
 import IconChevronRight from '~icons/app/icon-chevron-right.svg';
 
 import { casesZh, casesEn } from '~@/data/home/case';
@@ -106,8 +108,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <div class="user-case" data-aos="fade-up">
-    <h3 class="title">{{ t('home.case') }}</h3>
+  <AppSection :title="t('home.case')" class="user-case" data-aos="fade-up">
     <div ref="userCase">
       <OScroller show-type="never">
         <div class="tab">
@@ -170,18 +171,10 @@ onUnmounted(() => {
         ></OLink>
       </div>
     </div>
-  </div>
+  </AppSection>
 </template>
 
 <style scoped lang="scss">
-.title {
-  @include display3;
-  color: var(--o-color-info1);
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
 .tab {
   text-align: center;
 }
