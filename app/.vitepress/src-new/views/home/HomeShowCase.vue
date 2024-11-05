@@ -61,7 +61,6 @@ const getCases = () => {
     caseData.value = result;
   });
 };
-getCases();
 
 // -------------------- 自动切换tab --------------------
 const timer = ref();
@@ -88,6 +87,7 @@ const moreLink = (val: number) => {
 };
 
 onMounted(() => {
+  getCases();
   try {
     if (userCase.value) {
       setCaseInterval();
