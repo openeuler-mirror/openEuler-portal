@@ -130,13 +130,18 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
       padding: 32px;
       margin-right: 32px;
       padding-left: calc(32px + 72px);
+      $list-width: 60px;
+      $list-height: 490px;
+      @include respond-to('<=pad_v') {
+        margin-top: 0;
+      }
       &::before {
+        content: '';
         position: absolute;
         top: -52px;
         left: 16px;
-        width: 60px;
-        height: 490px;
-        content: '';
+        width: $list-width;
+        height: $list-height;
         background-image: url(~@/assets/category/home/intro/left-bg_light.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;

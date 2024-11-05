@@ -19,7 +19,7 @@ import HomePartner from './HomePartner.vue';
 import HomeCalendar from './HomeCalendar.vue';
 import HomeTrend from './HomeTrend.vue';
 
-const { isPhone, isPad } = useScreen();
+const { isPhone, isPadV } = useScreen();
 
 const { locale, isZh } = useLocale();
 
@@ -35,8 +35,8 @@ getSortData(paramsCase);
 const verticalPadding = computed(() => {
   if (isPhone.value) {
     return ['32px', '32px'];
-  } else if (isPad.value) {
-    return ['0', '40px'];
+  } else if (isPadV.value) {
+    return ['32px', '40px'];
   } else {
     return ['0', '72px'];
   }
@@ -76,7 +76,7 @@ onMounted(() => {
 <style scoped lang="scss">
 .home-display-zone {
   margin-top: -41px;
-  @include respond-to('phone') {
+  @include respond-to('<=pad_v') {
     margin-top: 0;
   }
 }
