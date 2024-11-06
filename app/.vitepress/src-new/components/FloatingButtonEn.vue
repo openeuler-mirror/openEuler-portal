@@ -42,15 +42,24 @@ const TITLES1 = [
   'How likely are you to recommend the ',
   'Are you satisfied with',
 ];
+
 const TITLES2 = [
   'openEuler Community',
-  'openEuler Technology Highlights',
-  'openEuler Learning & Contribution',
-  'openEuler Updates',
-  'openEuler Downloads',
-  'openEuler About',
-  'openEuler Connects',
-  'openEuler Support & Services',
+  'Get openEuler OS',
+  'Community Releases',
+  'Other Releases',
+  'Install',
+  'Training',
+  'Migration',
+  'Tech Highlights',
+  'Compatibility',
+  'Services & Resources',
+  'About',
+  'Contribute',
+  'Projects',
+  'Engage with Us',
+  'Activities',
+  'News & Blogs',
 ];
 const TITLES3 = ['to others?', '?'];
 
@@ -60,32 +69,36 @@ interface TitleItemT {
 
 const tipsObj: TitleItemT = {
   '/en/': TITLES2[0],
-  '/showcase/': TITLES2[1],
-  '/showcase/technical-white-paper/': TITLES2[1],
-  '/showcase/white-paper/': TITLES2[1],
-  '/learn/mooc/': TITLES2[2],
-  '/universities/': TITLES2[2],
-  '/community/contribution/': TITLES2[2],
-  '/sig/sig-list/': TITLES2[2],
-  '/internship/': TITLES2[2],
-  '/interaction/news-list/': TITLES2[3],
-  '/interaction/blog-list/': TITLES2[3],
-  '/interaction/event-list/': TITLES2[3],
-  '/interaction/summit-list/': TITLES2[3],
-  '/download/': TITLES2[4],
+  '/download/get-os/': TITLES2[1],
+  '/download/': TITLES2[2],
+  '/download/commercial-release/': TITLES2[3],
   '/mirror/list/': TITLES2[4],
-  '/community/organization/': TITLES2[5],
-  '/community/charter/': TITLES2[5],
-  '/oEEP/': TITLES2[5],
-  '/community/member/': TITLES2[5],
-  '/community/honor/': TITLES2[5],
-  '/community/program/': TITLES2[5],
-  '/mailing-list/': TITLES2[6],
-  '/sig/meeting-guide/': TITLES2[6],
-  '/migration/': TITLES2[7],
-  '/approve/': TITLES2[7],
-  '/compatibility/': TITLES2[7],
-  '/security/': TITLES2[7],
+  '/interaction/live-list/': TITLES2[5],
+  '/learn/mooc/': TITLES2[5],
+  '/migration/': TITLES2[6],
+  '/showcase/': TITLES2[7],
+  '/showcase/technical-white-paper/': TITLES2[7],
+  '/compatibility/': TITLES2[8],
+  '/approve/': TITLES2[9],
+  '/security/security-bulletins/': TITLES2[9],
+  '/security/bug-bulletins/': TITLES2[9],
+  '/faq/': TITLES2[9],
+  '/community/organization/': TITLES2[10],
+  '/community/conduct/': TITLES2[10],
+  '/community/member/': TITLES2[10],
+  '/sig/sig-list/': TITLES2[11],
+  '/community/contribution/': TITLES2[11],
+  '/other/projects/atune/': TITLES2[12],
+  '/other/projects/isula/': TITLES2[12],
+  '/other/projects/stratovirt/': TITLES2[12],
+  '/other/projects/bishengjdk/': TITLES2[12],
+  '/other/projects/secgear/': TITLES2[12],
+  '/community/mailing-list/': TITLES2[13],
+  '/interaction/event-list/': TITLES2[14],
+  '/interaction/summit-list/summit2024/': TITLES2[14],
+  '/community/program/': TITLES2[14],
+  '/interaction/news-list/': TITLES2[15],
+  '/interaction/blog-list/': TITLES2[15],
 };
 
 const title2 = ref(TITLES2[0]);
@@ -537,7 +550,7 @@ watch(
       <div class="feedback-mb-head">
         <div class="head-title" @click="toggleDialogVisible">
           <OIcon class="icon-box"
-            ><component :is="IconSmileMobile"></component>
+            ><component :is="IconSmile"></component>
           </OIcon>
           <p>
             {{ title1 }}
@@ -655,7 +668,7 @@ watch(
       width: 180px;
       top: 0;
       right: 0;
-      background-color: var(--e-color-bg2);
+      background-color: var(--o-color-fill2);
       padding: 16px;
       transform: translate(34%, -110%);
 
@@ -663,13 +676,13 @@ watch(
         transform: translate(0, -110%);
       }
       .tip-title {
-        color: var(--e-color-text1);
+        color: varvar(--o-color-info1);
         font-size: 16px;
       }
       .tip-detail {
         margin-top: 4px;
         font-size: 14px;
-        color: var(--e-color-text3);
+        color: var(--o-color-info1);
       }
       .btn-box {
         margin-top: 8px;
@@ -679,7 +692,7 @@ watch(
           font-size: 14px;
           border: none;
           padding: 0;
-          color: var(--e-color-text3);
+          color: var(--o-color-info1);
         }
       }
 
@@ -688,7 +701,7 @@ watch(
         content: '';
         width: 0;
         border-left: 8px solid transparent;
-        border-top: 8px solid var(--e-color-bg2);
+        border-top: 8px solid var(--o-color-fill2);
         border-right: 8px solid transparent;
         border-bottom: 8px solid transparent;
         position: absolute;
@@ -715,7 +728,7 @@ watch(
           cursor: pointer;
         }
 
-        &:hover {
+        @include hover {
           .icon-smile,
           .icon-headset {
             color: var(--o-color-primary1);
@@ -876,7 +889,7 @@ watch(
             line-height: 18px;
             position: relative;
 
-            &:hover {
+            @include hover {
               border: 1px solid var(--o-color-control2);
             }
 
@@ -913,7 +926,7 @@ watch(
               border-color: var(--o-color-control3);
               color: var(--o-color-info1);
 
-              &:hover {
+              @include hover {
                 border-color: var(--o-color-primary1);
                 background-color: var(--o-color-primary1);
                 color: var(--o-color-white);
@@ -932,7 +945,7 @@ watch(
         color: var(--o-color-info1);
         @include h2;
 
-        &:hover {
+        @include hover {
           color: var(--o-color-primary1);
         }
       }
@@ -980,6 +993,7 @@ watch(
       }
       .o-icon {
         margin-right: 8px;
+        color: var(--o-color-primary1);
       }
     }
   }
@@ -1156,7 +1170,7 @@ watch(
         line-height: var(--o-line_height-tip2);
         position: relative;
         border-radius: var(--o-radius-xs);
-        &:hover {
+        @include hover {
           border: 1px solid var(--o-color-control3);
         }
         &.is-focus {
@@ -1262,7 +1276,7 @@ watch(
           font-weight: 600;
           a {
             color: var(--o-color-info1);
-            &:hover {
+            @include hover {
               color: var(--o-color-primary1);
             }
           }

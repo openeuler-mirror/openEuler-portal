@@ -15,7 +15,6 @@ import IconQuickIssue_light from '~icons/footer/icon-quickissue_light.svg';
 import IconQuickIssue_dark from '~icons/footer/icon-quickissue_dark.svg';
 import IconChat from '~icons/footer/icon-chat.svg';
 import IconFAQ from '~icons/footer/icon-faq.svg';
-import IconSmileMobile from '~icons/footer/icon-smile-mobile.svg';
 
 import { postFeedback } from '@/api/api-feedback';
 
@@ -35,13 +34,21 @@ const isDark = computed(() => {
 const TITLES1 = ['您向他人推荐 ', '您对 '];
 const TITLES2 = [
   'openEuler社区',
-  'openEuler技术展示',
-  'openEuler学习与贡献',
-  'openEuler动态',
-  'openEuler下载',
-  'openEuler关于社区',
-  'openEuler交流',
-  'openEuler支持与服务',
+  '获取方式',
+  '社区发行版',
+  '其他版本',
+  '下载服务',
+  '课程中心',
+  '迁移与运维',
+  '技术展示',
+  '兼容性专区',
+  '支持与服务',
+  '关于社区',
+  '贡献与成长',
+  '项目',
+  '社区交流',
+  '活动',
+  '资讯',
 ];
 const TITLES3 = [' 的可能性有多大？', ' 的整体满意度如何？'];
 
@@ -90,32 +97,47 @@ interface TitleItemT {
 
 const tipsObj: TitleItemT = {
   '/zh/': TITLES2[0],
-  '/showcase/': TITLES2[1],
-  '/showcase/technical-white-paper/': TITLES2[1],
-  '/showcase/white-paper/': TITLES2[1],
-  '/learn/mooc/': TITLES2[2],
-  '/universities/': TITLES2[2],
-  '/community/contribution/': TITLES2[2],
-  '/sig/sig-list/': TITLES2[2],
-  '/internship/': TITLES2[2],
-  '/interaction/news-list/': TITLES2[3],
-  '/interaction/blog-list/': TITLES2[3],
-  '/interaction/event-list/': TITLES2[3],
-  '/interaction/summit-list/': TITLES2[3],
-  '/download/': TITLES2[4],
+  '/download/get-os/': TITLES2[1],
+  '/download/': TITLES2[2],
+  '/download/commercial-release/': TITLES2[3],
   '/mirror/list/': TITLES2[4],
-  '/community/organization/': TITLES2[5],
-  '/community/charter/': TITLES2[5],
-  '/oEEP/': TITLES2[5],
-  '/community/member/': TITLES2[5],
-  '/community/honor/': TITLES2[5],
-  '/community/program/': TITLES2[5],
-  '/mailing-list/': TITLES2[6],
-  '/sig/meeting-guide/': TITLES2[6],
-  '/migration/': TITLES2[7],
-  '/approve/': TITLES2[7],
-  '/compatibility/': TITLES2[7],
-  '/security/': TITLES2[7],
+  '/interaction/live-list/': TITLES2[5],
+  '/learn/mooc/': TITLES2[5],
+  '/blog/openeuler/20240428-security.html': TITLES2[5],
+  '/migration/': TITLES2[6],
+  '/om/': TITLES2[6],
+  '/showcase/': TITLES2[7],
+  '/showcase/technical-white-paper/': TITLES2[7],
+  '/showcase/market-report/': TITLES2[7],
+  '/compatibility/': TITLES2[8],
+  '/approve/': TITLES2[9],
+  '/security/security-bulletins/': TITLES2[9],
+  '/security/bug-bulletins/': TITLES2[9],
+  '/faq/': TITLES2[9],
+  '/community/organization/': TITLES2[10],
+  '/community/charter/': TITLES2[10],
+  '/community/member/': TITLES2[10],
+  '/community/honor/': TITLES2[10],
+  '/oEEP/': TITLES2[10],
+  '/community/user-group/': TITLES2[10],
+  '/overview/': TITLES2[10],
+  '/sig/sig-list/': TITLES2[11],
+  '/community/contribution/': TITLES2[11],
+  '/universities/': TITLES2[11],
+  '/internship/': TITLES2[11],
+  '/other/projects/atune/': TITLES2[12],
+  '/other/projects/isula/': TITLES2[12],
+  '/other/projects/stratovirt/': TITLES2[12],
+  '/other/projects/bishengjdk/': TITLES2[12],
+  '/other/projects/secgear/': TITLES2[12],
+  '/community/mailing-list/': TITLES2[13],
+  '/meeting/': TITLES2[13],
+  '/interaction/event-list/': TITLES2[14],
+  '/interaction/summit-list/summit2024/': TITLES2[14],
+  '/community/program/': TITLES2[14],
+  '/interaction/news-list/': TITLES2[15],
+  '/interaction/blog-list/': TITLES2[15],
+  '/monthly-summary': TITLES2[15],
 };
 
 const title1 = computed(() => {
@@ -140,6 +162,8 @@ onMounted(() => {
   watch(
     () => router.route.path,
     () => {
+      console.log(router.route.path);
+
       if (router.route.path === '/zh/') {
         title2.value = TITLES2[0];
       } else {
@@ -604,7 +628,7 @@ watch(
       <div class="feedback-mb-head">
         <div class="head-title" @click="toggleDialogVisible">
           <OIcon class="icon-box"
-            ><component :is="IconSmileMobile"></component>
+            ><component :is="IconSmile"></component>
           </OIcon>
           <p>
             {{ title1 }}
@@ -761,7 +785,7 @@ watch(
         content: '';
         width: 0;
         border-left: 8px solid transparent;
-        border-top: 8px solid var(--e-color-bg2);
+        border-top: 8px solid var(--o-color-fill2);
         border-right: 8px solid transparent;
         border-bottom: 8px solid transparent;
         position: absolute;
@@ -789,7 +813,7 @@ watch(
           cursor: pointer;
         }
 
-        &:hover {
+        @include hover {
           .icon-smile,
           .icon-headset {
             color: var(--o-color-primary1);
@@ -857,6 +881,7 @@ watch(
                 }
               }
             }
+
             :deep(.el-slider) {
               height: auto;
               height: 10px;
@@ -950,7 +975,7 @@ watch(
             line-height: 18px;
             position: relative;
 
-            &:hover {
+            @include hover {
               border: 1px solid var(--o-color-control2);
             }
 
@@ -984,7 +1009,7 @@ watch(
 
             a {
               color: var(--o-color-primary1);
-              &:hover {
+              @include hover {
                 color: var(--o-color-primary2);
               }
             }
@@ -1000,7 +1025,7 @@ watch(
               border-color: var(--o-color-control3);
               color: var(--o-color-info1);
 
-              &:hover {
+              @include hover {
                 border-color: var(--o-color-primary1);
                 background-color: var(--o-color-primary1);
                 color: var(--o-color-white);
@@ -1019,7 +1044,7 @@ watch(
         color: var(--o-color-info1);
         @include h2;
 
-        &:hover {
+        @include hover {
           color: var(--o-color-primary1);
         }
       }
@@ -1040,7 +1065,11 @@ watch(
     padding: 12px;
     margin: 0 auto;
     text-align: center;
-    background: linear-gradient(90deg, #d7e8f7 0%, #c4cfe8 100%);
+    background: linear-gradient(
+      90deg,
+      var(--o-color-control2-light) 0%,
+      var(--o-color-control3-light) 100%
+    );
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -1067,6 +1096,7 @@ watch(
       }
       .o-icon {
         margin-right: 8px;
+        color: var(--o-color-primary1);
       }
     }
   }
@@ -1169,6 +1199,7 @@ watch(
             border-radius: 8px;
             background-image: linear-gradient(90deg, #62b2f6 0%, #002fa7 100%);
           }
+
           .el-slider__button-wrapper + div {
             position: relative;
             transform: translateY(5px);
@@ -1180,11 +1211,13 @@ watch(
               }
             }
           }
+
           .el-slider__stop {
             width: 2px;
             height: 2px;
             background-color: var(--o-color-control2);
           }
+
           .el-slider__marks {
             width: 100%;
             transform: translateY(-42px);
@@ -1196,6 +1229,7 @@ watch(
 
           .el-slider__marks-stop {
             background-color: var(--o-color-fill2);
+
             &:nth-last-of-type(1) {
               transform: translateX(-6px);
               background-color: var(--o-color-control2);
@@ -1243,7 +1277,7 @@ watch(
         line-height: 18px;
         position: relative;
         border-radius: var(--o-radius-xs);
-        &:hover {
+        @include hover {
           border: 1px solid var(--o-color-control3);
         }
         &.is-focus {
@@ -1355,7 +1389,7 @@ watch(
           font-weight: 600;
           a {
             color: var(--o-color-info1);
-            &:hover {
+            @include hover {
               color: var(--o-color-primary1);
             }
           }
