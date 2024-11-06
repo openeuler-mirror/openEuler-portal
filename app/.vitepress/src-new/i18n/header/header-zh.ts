@@ -285,6 +285,7 @@ export default {
               NAME: '文档撰写指南',
               TYPE: IntroductionLight,
               TYPE_DARK: IntroductionDark,
+              ICON: OutLink,
               URL: 'https://gitee.com/openeuler/docs/blob/master/contribute/写作规范.md',
             },
             {
@@ -689,6 +690,7 @@ export default {
               NAME: 'CLA-FAQ',
               TYPE: HeartLight,
               TYPE_DARK: HeartDark,
+              ICON: OutLink,
               URL: 'https://gitee.com/openeuler/infrastructure/blob/master/docs/cla-guide/faq/faq.md',
             },
             {
@@ -808,8 +810,7 @@ export default {
               NAME: '操作系统大会 & openEuler Summit 2024',
               PICTURE: Summit,
               DESCRIPTION: '操作系统是产业数字化、智能化发展的坚实底座。openEuler作为数智基础设施的开源操作系统，开源5年，产业共建、生态繁荣；openEuler系市场份额屡攀新高；技术不断创新，使能AI，加速OS智能化，让数智无所不能；源于中国，贡献全球，已成长为企业级全球开源操作系统社区的重要一员。',
-              DATE: '2024/11/15',
-              POSITION: '北京',
+              REMARK: '时间：2024/11/15 - 2024/11/16 | 北京',
               TYPE: 'PICTURE',
               URL: '/interaction/summit-list/summit2024/',
             },
@@ -817,8 +818,7 @@ export default {
               NAME: 'openEuler SIG Gathering 2024',
               PICTURE: Sig,
               DESCRIPTION: 'openEuler SIG Gathering 2024将于7月26日在北京香格里拉饭店举行。本次活动面向社区108个SIG组，诚邀社区开发者齐聚现场，通过全天线下会议，聚焦openEuler 24.03 LTS 版本后续重要规划和各SIG2024年下半年重要技术方案以及开发计划。',
-              DATE: '2024/07/26',
-              POSITION: '北京',
+              REMARK: '时间：2024/07/26 | 北京',
               TYPE: 'PICTURE',
               URL: '/interaction/summit-list/sig-gathering-2024/',
             },
@@ -848,7 +848,7 @@ export default {
             {
               NAME: 'openEuler 2023 社区年报',
               PICTURE: Report,
-              DATE: '2024/01/01',
+              REMARK: '发布时间：2024/01/01',
               TYPE: 'PICTURE',
               URL: '/news/openEuler/20240223-nianbao/Untitled-1.html',
             },
@@ -861,8 +861,6 @@ export default {
   MESSAGE_CENTER: '消息中心',
   LOGOUT: '退出登录',
   CODE: '源码',
-  DATE: '时间',
-  VENUE: '地点',
   QUICKLINK: '快捷链接',
   SEARCH: {
     BROWSEHISTORY: '历史记录',

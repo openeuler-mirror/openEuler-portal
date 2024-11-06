@@ -37,7 +37,6 @@ const linkClick = () => {
       </NavLink>
       <div class="desc-container">
         <p class="item-desc">{{ subItem.DESCRIPTION }}</p>
-        <div class="fade"> </div>
       </div>
       <div v-if="subItem.MOBILE_SHOW_CHILD" style="display: flex;">
         <NavLink v-for="system in subItem.CHILDREN" :url="system.URL" class="system" @link-click="linkClick">
@@ -66,7 +65,6 @@ const linkClick = () => {
         </div>
         <div class="desc-container">
           <p class="item-desc">{{ subItem.DESCRIPTION }}</p>
-          <div class="fade"> </div>
         </div>
         <div class="system-container">
           <NavLink v-for="system in subItem.CHILDREN" :url="system.URL" class="system" @link-click="linkClick">
@@ -100,16 +98,13 @@ const linkClick = () => {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
 
-.fade {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 108px;
-  height: 18px;
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, var(--o-color-fill2) 100%);
-  pointer-events: none;
+  mask:
+    linear-gradient(270deg, transparent, transparent 0%, var(--o-color-info2)),
+    linear-gradient(270deg, var(--o-color-info2), var(--o-color-info2));
+  mask-size: 100% calc(100% - 20px), 100% 20px;
+  mask-position: bottom, top;
+  mask-repeat: no-repeat;
 }
 
 .content-container {
@@ -160,6 +155,7 @@ const linkClick = () => {
   .desc-container {
     overflow: hidden;
     position: relative;
+    padding-bottom: var(--o-gap-3);
 
     .item-desc {
       color: var(--o-color-info2);
@@ -213,10 +209,6 @@ const linkClick = () => {
       text-align: justify;
       @include text1;
       @include hidden;
-    }
-
-    .fade {
-      bottom: var(--o-gap-1);
     }
   }
 
