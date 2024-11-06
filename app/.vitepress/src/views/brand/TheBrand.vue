@@ -110,9 +110,11 @@ function handleFamaleClick() {
         {{ i18n.brand.WORDS[3] }}
         <a :href="i18n.brand.WORDS_LINK[1]">{{ i18n.brand.WORDS[4] }}</a>
         {{ i18n.brand.WORDS[5] }}
-        <a :href="i18n.brand.WORDS_LINK[2]" download>{{
-          i18n.brand.WORDS[6]
-        }}</a>
+        <a
+          :href="i18n.brand.WORDS_LINK[2]"
+          :download="i18n.brand.WORDS_LINK[2]"
+          >{{ i18n.brand.WORDS[6] }}</a
+        >
         <br />
         {{ i18n.brand.WORDS[7] }}
         <a
