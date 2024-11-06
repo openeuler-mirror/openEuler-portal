@@ -88,6 +88,7 @@ onMounted(() => {
             >
               <OButton
                 variant="text"
+                color="primary"
                 :size="lePadV ? 'medium' : 'large'"
                 :style="{
                   '--btn-padding': 0,
@@ -136,6 +137,7 @@ onMounted(() => {
       >
         <OButton
           variant="text"
+          color="primary"
           :size="lePadV ? 'medium' : 'large'"
           :style="{
             '--btn-padding': 0,
@@ -184,8 +186,8 @@ onMounted(() => {
     .click {
       position: absolute;
       right: 0;
-      top: 0;
-      transform: translate(170%, -50%);
+      bottom: 0;
+      transform: translateX(calc(100% + 16px));
       img {
         height: 66px;
       }
@@ -204,6 +206,7 @@ onMounted(() => {
         }
       }
       @include respond-to('phone') {
+        transform: translateX(calc(100% + 12px));
         img {
           height: 38px;
         }
@@ -213,7 +216,7 @@ onMounted(() => {
   .play-intro {
     position: relative;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: space-between;
     margin-top: 8px;
     color: var(--o-color-info2);
@@ -232,6 +235,12 @@ onMounted(() => {
         margin-left: 24px;
       }
     }
+    @include respond-to('<=pad_v') {
+      .play-intro-text {
+        max-width: 480px;
+      }
+    }
+
     @include respond-to('phone') {
       .o-btn {
         margin-left: 0;
@@ -263,6 +272,7 @@ onMounted(() => {
       background-color: var(--o-color-fill2);
       border-radius: var(--o-radius-xs);
       .card-top {
+        font-weight: 500;
         background-size: 100% 100%;
         background-repeat: no-repeat;
         padding: 54px 32px 44px;
@@ -347,6 +357,7 @@ onMounted(() => {
       display: flex;
       @include h1;
       align-items: center;
+      font-weight: 500;
       img {
         margin-left: 12px;
         width: 56px;
@@ -466,7 +477,7 @@ onMounted(() => {
         .label {
           margin-top: 4px;
           @include text1;
-          color: var(--o-color-white);
+          color: rgba(255, 255, 255, 0.8);
           @include respond-to('<=pad') {
             margin-top: 2px;
           }

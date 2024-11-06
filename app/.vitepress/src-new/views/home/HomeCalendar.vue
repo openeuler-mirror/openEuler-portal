@@ -107,7 +107,7 @@ const titleList = [
 ];
 const tabType = ref(titleList[0].value);
 const calendar = ref();
-const calendarHeight = ref<string>('335px');
+const calendarHeight = ref<string>('407px');
 const isLimit = ref(false);
 
 // 活动会议筛选
@@ -477,6 +477,7 @@ const watchData = watch(
             font-size: 24px;
           }
           .month-date {
+            font-weight: 500;
             margin: 0 4px;
           }
           .current-date {

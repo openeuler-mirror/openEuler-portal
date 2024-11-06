@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 
+import { storeToRefs } from 'pinia';
+import { useCommon } from '@/stores/common';
+
 import { OButton, OIcon, OCollapse, OCollapseItem } from '@opensig/opendesign';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -13,6 +16,7 @@ import IconArrowRight from '~icons/app/icon-chevron-right.svg';
 
 const { locale, isZh } = useLocale();
 const { isPhone, lePadV } = useScreen();
+const { theme } = storeToRefs(useCommon());
 
 const active = ref(0);
 
@@ -46,18 +50,25 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
               <div
                 v-for="(item, index) in introData"
                 :key="item.title[locale]"
-                :class="[
-                  'intro-info-pc',
-                  active === index ? 'active' : '',
-                  locale !== 'zh' ? 'intro-info-pc-en' : '',
-                ]"
-                @click="handleChangeActive(index)"
+                class="intro-list-item"
               >
-                <div class="title" :class="{ 'en-title': !isZh }">
-                  {{ item.title[locale] }}
+                <div class="intro-list-icon">
+                  <img :src="item.icon[theme]" alt="" />
                 </div>
-                <div v-if="isZh" class="description">
-                  {{ item.description }}
+                <div
+                  :class="[
+                    'intro-info-pc',
+                    active === index ? 'active' : '',
+                    locale !== 'zh' ? 'intro-info-pc-en' : '',
+                  ]"
+                  @click="handleChangeActive(index)"
+                >
+                  <div class="title" :class="{ 'en-title': !isZh }">
+                    {{ item.title[locale] }}
+                  </div>
+                  <div v-if="isZh" class="description">
+                    {{ item.description }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -159,8 +170,37 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
       display: flex;
       flex-flow: column;
       padding: 32px;
-      margin-right: 32px;
-      padding-left: calc(32px + 72px);
+      .intro-list-item {
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+          margin-bottom: 72px;
+          @include respond-to('laptop') {
+            margin-bottom: 56px;
+          }
+          @include respond-to('pad_h') {
+            margin-bottom: 24px;
+          }
+          @media screen and (max-width: 1000px) {
+            margin-bottom: 16px;
+          }
+        }
+        .intro-list-icon {
+          width: 58px;
+          @include respond-to('laptop') {
+            width: 52px;
+          }
+          @include respond-to('pad_h') {
+            width: 50px;
+          }
+          @media screen and (max-width: 1000px) {
+            width: 28px;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
       @include respond-to('<=laptop') {
         padding-right: 0;
       }
@@ -177,34 +217,6 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
         padding-left: calc(16px + 28px);
         margin-right: 16px;
       }
-      &::before {
-        content: '';
-        position: absolute;
-        top: -52px;
-        left: 16px;
-        width: 60px;
-        height: 490px;
-        background-image: url(~@/assets/category/home/intro/left-bg_light.png);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        @include respond-to('laptop') {
-          top: -34px;
-          width: 52px;
-          height: 404px;
-        }
-        @include respond-to('pad_h') {
-          top: -30px;
-          left: 0;
-          width: 40px;
-          height: 290px;
-        }
-        @media screen and (max-width: 1000px) {
-          left: 0;
-          top: -24px;
-          width: 28px;
-          height: 224px;
-        }
-      }
     }
 
     .intro-img-pc {
@@ -213,7 +225,7 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
       img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        border-radius: var(--o-radius-s);
       }
       background-repeat: no-repeat;
       background-position: center top 24px;
@@ -233,20 +245,11 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
     .intro-info-pc {
       cursor: pointer;
       text-align: left;
-      &:not(:last-child) {
-        margin-bottom: 72px;
-        @include respond-to('laptop') {
-          margin-bottom: 56px;
-        }
-        @include respond-to('pad_h') {
-          margin-bottom: 24px;
-        }
-        @media screen and (max-width: 1000px) {
-          margin-bottom: 16px;
-        }
-      }
+      margin-left: 24px;
+
       .title {
         @include h3;
+        font-weight: 500;
         color: var(--o-color-info1);
       }
       .en-title {
@@ -258,6 +261,9 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
         }
         @include respond-to('pad_h') {
           height: 50px;
+        }
+        @media screen and (max-width: 1000px) {
+          height: 28px;
         }
       }
       .description {
