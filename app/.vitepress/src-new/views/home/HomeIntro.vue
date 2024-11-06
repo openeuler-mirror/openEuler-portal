@@ -5,19 +5,23 @@ import { OButton, OIcon, OCollapse, OCollapseItem } from '@opensig/opendesign';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
+import AppSection from '~@/components/AppSection.vue';
+
 import introData from '~@/data/home/intro';
 
 import IconArrowRight from '~icons/app/icon-chevron-right.svg';
 
 const { locale, isZh } = useLocale();
-const { isPhone, leLaptop } = useScreen();
+const { isPhone, lePadV } = useScreen();
 
 const active = ref(0);
 
 const activeMobile = ref([0]);
 
 const imgSrc = computed(() => {
-  return introData[active.value].img[locale.value];
+  return lePadV.value
+    ? introData[active.value].img[locale.value].mo
+    : introData[active.value].img[locale.value].pc;
 });
 
 const handleChangeActive = (index: number) => {
@@ -33,10 +37,9 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
 </script>
 
 <template>
-  <div class="home-intro">
-    <h3>{{ $t('home.introTitle') }}</h3>
+  <AppSection :title="$t('home.introTitle')" class="home-intro">
     <div data-aos="fade-up" class="intro-container" :level-index="1">
-      <div v-if="!isPhone" class="intro-pc">
+      <div v-if="!lePadV" class="intro-pc">
         <div class="intro-card-pc">
           <div class="intro-content-pc">
             <div class="intro-list-pc">
@@ -50,7 +53,7 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
                 ]"
                 @click="handleChangeActive(index)"
               >
-                <div class="title">
+                <div class="title" :class="{ 'en-title': !isZh }">
                   {{ item.title[locale] }}
                 </div>
                 <div v-if="isZh" class="description">
@@ -109,15 +112,43 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
           </div>
         </OCollapseItem>
       </OCollapse>
+      <a
+        v-if="lePadV"
+        class="intro-button-mo"
+        :href="`/${locale}/community/contribution/detail.html`"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <OButton
+          :size="isPhone ? 'medium' : 'large'"
+          :style="{
+            '--btn-padding': 0,
+            '--btn-bg-color-hover': 'transparent',
+            '--btn-bg-color-active': 'transparent',
+          }"
+          variant="text"
+        >
+          {{ $t('home.introBtn') }}
+          <template #suffix>
+            <OIcon>
+              <IconArrowRight></IconArrowRight>
+            </OIcon>
+          </template>
+        </OButton>
+      </a>
     </div>
-  </div>
+  </AppSection>
 </template>
 
 <style lang="scss" scoped>
 .home-intro {
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   // PC 端 css
   .intro-pc {
-    margin-top: 40px;
     display: block;
     .intro-content-pc {
       display: flex;
@@ -130,23 +161,49 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
       padding: 32px;
       margin-right: 32px;
       padding-left: calc(32px + 72px);
-      $list-width: 60px;
-      $list-height: 490px;
-      @include respond-to('laptop') {
+      @include respond-to('<=laptop') {
         padding-right: 0;
-        $list-width: 52px;
-        $list-height: 423px;
+      }
+      @include respond-to('laptop') {
+        padding-left: calc(32px + 54px);
+      }
+      @include respond-to('pad_h') {
+        padding: 16px;
+        padding-left: calc(18px + 40px);
+        margin-right: 16px;
+      }
+      @media screen and (max-width: 1000px) {
+        padding: 0;
+        padding-left: calc(16px + 28px);
+        margin-right: 16px;
       }
       &::before {
         content: '';
         position: absolute;
         top: -52px;
         left: 16px;
-        width: $list-width;
-        height: $list-height;
+        width: 60px;
+        height: 490px;
         background-image: url(~@/assets/category/home/intro/left-bg_light.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        @include respond-to('laptop') {
+          top: -34px;
+          width: 52px;
+          height: 404px;
+        }
+        @include respond-to('pad_h') {
+          top: -30px;
+          left: 0;
+          width: 40px;
+          height: 290px;
+        }
+        @media screen and (max-width: 1000px) {
+          left: 0;
+          top: -24px;
+          width: 28px;
+          height: 224px;
+        }
       }
     }
 
@@ -163,6 +220,14 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
       background-size: 100% 100%;
       background-image: url(~@/assets/category/home/intro/right-bg_light.png);
       border-radius: 8px;
+      @include respond-to('pad_h') {
+        padding: 0 0 16px 16px;
+        background-position: center top 16px;
+      }
+      @media screen and (max-width: 1000px) {
+        padding: 0 0 14px 14px;
+        background-position: center top 14px;
+      }
     }
 
     .intro-info-pc {
@@ -173,10 +238,27 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
         @include respond-to('laptop') {
           margin-bottom: 56px;
         }
+        @include respond-to('pad_h') {
+          margin-bottom: 24px;
+        }
+        @media screen and (max-width: 1000px) {
+          margin-bottom: 16px;
+        }
       }
       .title {
         @include h3;
         color: var(--o-color-info1);
+      }
+      .en-title {
+        display: flex;
+        align-items: center;
+        height: 58px;
+        @include respond-to('laptop') {
+          height: 52px;
+        }
+        @include respond-to('pad_h') {
+          height: 50px;
+        }
       }
       .description {
         margin-top: 4px;
@@ -211,6 +293,7 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
   }
   .intro-mobile {
     margin-top: 12px;
+    width: 100%;
     .intro-card-mobile {
       overflow: hidden;
     }
@@ -219,6 +302,9 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
         width: 100%;
       }
     }
+  }
+  .intro-button-mo {
+    margin: 12px auto 0;
   }
 }
 

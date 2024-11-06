@@ -70,7 +70,32 @@ export const playCommunity = {
       },
       textBtn: {
         label: '查看捐赠权益',
-        link: '', //TODO:''
+        link: '/zh/community/charter/#第八条-项目群捐赠人的开源治理参与方式',
+      },
+    },
+  ],
+  en: [
+    {
+      title: 'Start Contributing',
+      bg: card1,
+      intro: 'Contribute code, modify docs, and join our discussions.',
+      btn: {
+        label: 'Contribution Guide',
+        link: '/en/community/contribution/detail.html',
+      },
+      textBtn: {
+        label: 'View SIGs',
+        link: '/zh/sig/sig-list/',
+      },
+    },
+    {
+      title: 'Become a Member',
+      bg: card2,
+      intro:
+        "Welcome to openEuler! We're thrilled to have you as a member of our community dedicated to building an open source OS for digital infrastructure.",
+      btn: {
+        label: 'Members',
+        link: '/en/community/member/',
       },
     },
   ],

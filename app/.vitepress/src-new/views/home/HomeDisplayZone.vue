@@ -16,6 +16,7 @@ const { theme } = storeToRefs(useCommon());
       v-for="item in displayZoneData"
       :key="item.link[locale]"
       :href="item.link[locale]"
+      target="_blank"
       class="display-zone-item"
     >
       <div class="display-zone-icon">
@@ -58,7 +59,6 @@ const { theme } = storeToRefs(useCommon());
         width: 32px;
       }
       .display-zone-text {
-        margin: 0;
         .display-zone-title-en {
           text-align: center;
         }
@@ -92,6 +92,8 @@ const { theme } = storeToRefs(useCommon());
       margin-left: 12px;
       @include respond-to('<=pad_v') {
         text-align: center;
+        margin-top: 8px;
+        margin-left: 0;
       }
       .display-zone-title {
         word-break: break-all;
