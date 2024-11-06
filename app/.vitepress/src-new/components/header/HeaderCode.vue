@@ -11,12 +11,12 @@ const i18n = useI18n();
 const sourceCode = computed(() => i18n.value.header.SOURCE_CODE);
 
 const itemChange = (data: any) => {
-  window.open(data.url, '_blank');
+  window.open(data.PATH, '_blank');
 }
 </script>
 
 <template>
-  <DropInfo :data="sourceCode" :field="'URL'" @item-change="itemChange">
+  <DropInfo :data="sourceCode" :field="'PATH'" @item-change="itemChange">
     <template #title>
       <span>{{ $t('header.CODE') }}</span>
       <OIcon>

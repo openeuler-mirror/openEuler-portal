@@ -67,9 +67,8 @@ const goHome = () => {
   router.go(`/${lang.value}/`);
 };
 
-const toggleSubDebounced = debounce(
-  function (item: any | null) {
-    if (item === null) return;
+const changeSubnav = debounce(
+  function (item: any) {
     subNavActive.value = item.NAME;
     subNavContent.value = item;
   },
@@ -118,15 +117,15 @@ const linkClick = () => {
                           :class="{
                             active: subNavActive === subItem.NAME,
                           }"
-                          @mouseenter="toggleSubDebounced(subItem)"
-                          @mouseleave="toggleSubDebounced(null)"
+                          @click="changeSubnav(subItem)"
                         >
                         <span>{{ subItem.NAME }}</span>
                         </div>
                       </div>
                       <div class="nav-sub-content">
                         <div class="content-left">
-                          <span class="content-title">{{ subNavContent.NAME }}</span>
+                          <NavLink v-if="subNavContent.URL" class="content-title-url" :url="subNavContent.URL" @link-click="linkClick">{{ subNavContent.NAME }}</NavLink>
+                          <span v-else class="content-title">{{ subNavContent.NAME }}</span>
                           <OIcon v-if="subNavContent.ICON">
                             <component :is="subNavContent.ICON" class="icon" />
                           </OIcon>
@@ -371,6 +370,7 @@ const linkClick = () => {
 
         .group-name {
           padding-bottom: 12px;
+          color: var(--o-color-info3);
           @include tip1;
         }
       }
@@ -495,6 +495,11 @@ const linkClick = () => {
       display: inline-block;
       margin-bottom: var(--o-gap-4);
       color: var(--o-color-info3);
+    }
+
+    .content-title-url {
+      @include text1;
+      margin-bottom: var(--o-gap-4);
     }
   }
 }

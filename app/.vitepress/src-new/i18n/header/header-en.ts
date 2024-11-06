@@ -174,13 +174,13 @@ export default {
               NAME: 'openEuler 24.03 LTS Installation Guide',
               TYPE: IntroductionLight,
               TYPE_DARK: IntroductionDark,
-              URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/installation.html',
+              URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/Installation.html',
             },
             {
               NAME: 'openEuler 24.09 Installation Guide',
               TYPE: IntroductionLight,
               TYPE_DARK: IntroductionDark,
-              URL: 'https://docs.openeuler.org/zh/docs/24.09/docs/Installation/installation.html',
+              URL: 'https://docs.openeuler.org/en/docs/24.09/docs/Installation/Installation.html',
             },
             {
               NAME: 'openEuler Lifecycle',
@@ -236,23 +236,23 @@ export default {
               NAME: 'Trending Docs',
               DESCRIPTION: 'The most viewed documents.',
               TAG: TAG_TYPE.HOT,
-              URL: 'https://docs.openeuler.org/zh/#hot',
+              URL: 'https://docs.openeuler.org/en/#hot',
             },
             {
               NAME: 'Create Apps',
               DESCRIPTION: 'Guides for application development on openEuler.',
-              URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/ApplicationDev/application-development.html',
+              URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/ApplicationDev/application-development.html',
             },
             {
               NAME: 'Getting Started',
               DESCRIPTION: 'Documentation guides to help you get started with openEuler.',
-              URL: 'https://docs.openeuler.org/zh/#process',
+              URL: 'https://docs.openeuler.org/en/#process',
             },
             {
               NAME: 'Tools',
               DESCRIPTION: 'Resources for using and accessing commonly used tools.',
               TAG: TAG_TYPE.HOT,
-              URL: 'https://docs.openeuler.org/zh/#tool',
+              URL: 'https://docs.openeuler.org/en/#tool',
             },
           ],
           SHORTCUT: [
@@ -260,24 +260,25 @@ export default {
               NAME: 'openEuler 24.03 LTS Documentation',
               TYPE: IntroductionLight,
               TYPE_DARK: IntroductionDark,
-              URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Releasenotes/法律声明.html',
+              URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Releasenotes/法律声明.html',
             },
             {
               NAME: 'Installation and Upgrade',
               TYPE: IntroductionLight,
               TYPE_DARK: IntroductionDark,
-              URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/installation.html',
+              URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/installation.html',
             },
           ]
         },
         {
           NAME: 'Training',
           ICON: ArrowRight,
+          URL: '/learn/mooc/',
           CHILDREN: [
             {
               NAME: 'Tutorials',
               DESCRIPTION: 'Mini video courses presented by openEuler.',
-              URL: 'https://space.bilibili.com/527064077/channel/collectiondetail?sid=1229363',
+              URL: 'https://www.youtube.com/playlist?list=PLtDfk9jvMAziPyVaA-DOkXx0GgIUjXc0_',
               ICON: OutLink,
             },
           ],
@@ -350,7 +351,7 @@ export default {
             {
               NAME: 'Submit Package',
               DESCRIPTION: 'Contribute software packages efficiently to the community.',
-              URL: 'https://software-pkg.openeuler.org/zh/package',
+              URL: 'https://software-pkg.openeuler.org/en/package',
             },
           ],
         },
@@ -370,7 +371,7 @@ export default {
             {
               NAME: 'OEPKGS',
               DESCRIPTION: 'A third-party extension repository for openEuler.',
-              URL: 'https://oepkgs.net/zh-CN',
+              URL: 'https://oepkgs.net/en-CN',
               ICON: OutLink
             },
           ],
@@ -397,7 +398,7 @@ export default {
             {
               NAME: 'QuickIssue',
               DESCRIPTION: 'Submit and track community issues quickly and easily.',
-              URL: 'https://quickissue.openeuler.org/zh/issues/',
+              URL: 'https://quickissue.openeuler.org/en/issues/',
             },
           ],
         },
@@ -416,7 +417,14 @@ export default {
               URL: '/compatibility/',
             },
           ],
-          SHORTCUT: []
+          SHORTCUT: [
+            {
+              NAME: 'Overall Introduction to the openEuler Hardware Compatibility Test',
+              TYPE: HeartLight,
+              TYPE_DARK: HeartDark,
+              URL: '/compatibility/hardware/',
+            },
+          ]
         },
         {
           NAME: 'Services & Resources',
@@ -424,7 +432,7 @@ export default {
             {
               NAME: 'x2openEuler',
               DESCRIPTION: 'A user-friendly tool to seamlessly migrate your OS to openEuler.',
-              URL: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
+              URL: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
             },
             {
               NAME: 'Security Center',
@@ -453,7 +461,7 @@ export default {
               NAME: 'QuickIssue ',
               TYPE: ToolLight,
               TYPE_DARK: ToolDark,
-              URL: 'https://quickissue.openeuler.org/zh/issues/',
+              URL: 'https://quickissue.openeuler.org/en/issues/',
             },
           ]
         },
@@ -482,73 +490,32 @@ export default {
               URL: '/community/member/',
             },
             {
-              NAME: 'Honors',
-              DESCRIPTION: "openEuler's awards and recognitions.",
-              URL: '/community/honor/',
-            },
-            {
-              NAME: 'oEEPs',
-              DESCRIPTION: 'openEuler Evolution Proposals.',
-              URL: '/oEEP/?name=oEEP-0000 oEEP  索引',
-            },
-            {
-              NAME: 'User Groups',
-              DESCRIPTION: 'Regional user communities.',
-              URL: '/community/user-group/',
-            },
-            {
               NAME: 'Statistics',
               DESCRIPTION: 'Find stats and see how the openEuler community thrives.',
-              URL: 'https://datastat.openeuler.org/zh/overview',
+              URL: 'https://datastat.openeuler.org/en/overview',
             },
           ],
           SHORTCUT: []
         },
         {
           NAME: 'Contribute',
-          HASGROUP: true,
           CHILDREN: [
             {
-              NAME: 'Developer Contribution',
-              CHILDREN: [
-                {
-                  NAME: 'SIGs',
-                  DESCRIPTION: 'Explore diverse SIGs.',
-                  URL: '/sig/sig-list/',
-                },
-                {
-                  NAME: 'Contribution Guide',
-                  DESCRIPTION: 'See how to get involved and make an impact in our community.',
-                  URL: '/community/contribution/',
-                },
-                {
-                  NAME: 'CLA',
-                  DESCRIPTION: 'Sign the CLA to protect your work—multiple options available!',
-                  URL: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
-                  ICON: OutLink,
-                },
-              ]
+              NAME: 'SIGs',
+              DESCRIPTION: 'Explore diverse SIGs.',
+              URL: '/sig/sig-list/',
             },
             {
-              NAME: 'Develop Growth',
-              CHILDREN: [
-                {
-                  NAME: 'Academia',
-                  DESCRIPTION: 'University tech groups, internships, and competitions.',
-                  URL: '/universities/',
-                },
-                {
-                  NAME: 'Certification',
-                  DESCRIPTION: 'Validate your openEuler skills with our certification programs.',
-                  URL: 'https://talent-assessment.openeuler.org/#/',
-                },
-                {
-                  NAME: 'Open Source Internships',
-                  DESCRIPTION: 'Apply for an open source internship and gain valuable experience.',
-                  URL: '/internship/',
-                },
-              ]
-            }
+              NAME: 'Contribution Guide',
+              DESCRIPTION: 'See how to get involved and make an impact in our community.',
+              URL: '/community/contribution/',
+            },
+            {
+              NAME: 'CLA',
+              DESCRIPTION: 'Sign the CLA to protect your work—multiple options available!',
+              URL: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
+              ICON: OutLink,
+            },
           ],
           SHORTCUT: []
         },
@@ -590,11 +557,6 @@ export default {
               NAME: 'Mailing Lists',
               DESCRIPTION: 'Discuss openEuler tech and progress on our mailing lists.',
               URL: '/community/mailing-list/',
-            },
-            {
-              NAME: 'Online Meetings',
-              DESCRIPTION: 'Find and participate in SIG meetings.',
-              URL: '/meeting/',
             },
             {
               NAME: 'Contact Us',

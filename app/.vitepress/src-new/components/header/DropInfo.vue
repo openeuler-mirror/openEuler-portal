@@ -25,8 +25,7 @@ const props = defineProps({
 const emits = defineEmits(['item-change']);
 function changeItem(value: any) {
   if (props.defaultValue === value[props.field]) return;
-
-  emits('item-change', value.id);
+  emits('item-change', value.id || value);
   isMenu.value = false;
 }
 

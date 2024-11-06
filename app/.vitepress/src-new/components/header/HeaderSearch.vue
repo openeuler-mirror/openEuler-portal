@@ -408,6 +408,7 @@ const closeSearch = () => {
   .history {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 
     .history-item {
       cursor: pointer;

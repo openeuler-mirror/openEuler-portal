@@ -298,6 +298,7 @@ export default {
         {
           NAME: '课程中心',
           ICON: ArrowRight,
+          URL: '/learn/mooc/',
           CHILDREN: [
             {
               NAME: 'HCIA-openEuler 认证培训课程',
@@ -515,7 +516,7 @@ export default {
             {
               NAME: '兼容性技术测评',
               DESCRIPTION: '帮助企业快速申请兼容性技术测评',
-              URL: '',
+              URL: 'https://certification.openeuler.org/#/',
             },
           ],
           SHORTCUT: [
