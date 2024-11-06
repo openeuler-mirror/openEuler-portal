@@ -17,7 +17,7 @@ import blogBg3 from '~@/assets/category/home/trend/blog-bg3.jpg';
 import IconUser from '~icons/app-new/icon-user.svg';
 
 const { t, locale } = useLocale();
-const { leLaptop, lePadV } = useScreen();
+const { lePadV } = useScreen();
 
 const props = defineProps({
   isResult: {
