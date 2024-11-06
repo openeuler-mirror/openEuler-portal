@@ -1,519 +1,261 @@
-<script lang="ts" setup>
+<script setup lang="ts">
+import {
+  OButton,
+  OCarousel,
+  OCarouselItem,
+  OFigure,
+} from '@opensig/opendesign';
 import { computed, ref } from 'vue';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { useLocale } from '~@/composables/useLocale';
 
-import { useData } from 'vitepress';
-import HOME_CONFIG from '@/data/home';
+import banner from '~@/data/home/banner';
+import { useScreen } from '~@/composables/useScreen';
 
-import useWindowResize from '@/components/hooks/useWindowResize';
-
-import IconArrowRight from '~icons/app/icon-arrow-right.svg';
-
+// TODO:风格切换代码待整改
 import { useCommon } from '@/stores/common';
-
-const { lang } = useData();
-const flag = ref();
-const onSwiper = (swiper: any) => {
-  swiper.el.onmouseout = function () {
-    swiper.navigation.nextEl.classList.remove('show');
-    swiper.navigation.prevEl.classList.remove('show');
-  };
-  swiper.el.onmouseover = function () {
-    swiper.navigation.nextEl.classList.add('show');
-    swiper.navigation.prevEl.classList.add('show');
-  };
-  flag.value = computed(() => swiper.animating);
-};
-const windowWidth = ref(useWindowResize());
-
-// 判断语言 banner
-const homeBanner = computed(() => {
-  if (lang.value === 'en') {
-    return HOME_CONFIG.HOMEBANNER.en;
-  } else {
-    return HOME_CONFIG.HOMEBANNER.zh;
-  }
+import ContentWrapper from '~@/components/ContentWrapper.vue';
+const commonStore = useCommon();
+const isLight = computed(() => {
+  return commonStore.theme === 'light';
 });
 
-// banner跳转事件
-const jumpTo = (item: any) => {
-  if (flag.value && item.link) {
-    if (item.targetTap === 1) {
-      window.open(item.link, '_blank');
+const { locale } = useLocale();
+const { isPhone, isPad, gtPad } = useScreen();
+
+const bannerInfo = computed(() => {
+  const info = banner[locale.value as 'zh' | 'en'];
+  for (let i = 0, len = info.length; i < len; i++) {
+    const item = info[i];
+
+    let themeInfo;
+
+    if (item.light && isLight.value) {
+      themeInfo = item.light;
+    }
+
+    if (item.dark && !isLight.value) {
+      themeInfo = item.dark;
+    }
+
+    if (themeInfo) {
+      Object.keys(themeInfo).forEach((key) => {
+        item[key] = themeInfo[key];
+      });
     } else {
-      window.open(item.link, '_self');
+      item.withStickyBg = true;
+    }
+
+    if (gtPad.value) {
+      item.bg = item.bg_pc;
+    } else if (isPad.value) {
+      item.bg = item.bg_pad;
+    } else {
+      item.bg = item.bg_mb;
     }
   }
-};
 
-const commonStore = useCommon();
-const theme = computed(() => {
-  return commonStore.theme;
+  return info;
 });
+
+// 主题切换
+const theme = ref('');
+const onBeforeChange = (idx: number) => {
+  theme.value = bannerInfo.value[idx].bg_theme ?? 'light';
+};
+const onClick = (href) => {
+  window.open(href);
+};
 </script>
 
 <template>
-  <swiper
-    class="home-banner"
-    :modules="[Autoplay, Pagination, Navigation]"
-    :loop="true"
-    :pagination="{
-      clickable: true,
-    }"
-    :autoplay="{
-      delay: 5000,
-      disableOnInteraction: false,
-    }"
-    :navigation="true"
-    @swiper="onSwiper"
-  >
-    <swiper-slide v-for="(item, index) in homeBanner" :key="item.link">
-      <div
-        :id="item.id"
-        class="banner-panel"
-        :class="{ 'is-link': item.link }"
-        @click="jumpTo(item)"
+  <div class="home-banner">
+    <OCarousel
+      v-if="!isPhone"
+      class="banner-carousel"
+      effect="toggle"
+      active-class="current-slide"
+      indicator-click
+      :data-o-theme="theme"
+      @before-change="onBeforeChange"
+    >
+      <OCarouselItem
+        v-for="(info, index) in bannerInfo"
+        :key="index"
+        class="banner-item"
+        :class="`banner-item${index}`"
       >
-        <div
-          class="banner-panel-cover"
-          :style="{
-            backgroundImage: `url(${
-              windowWidth < 767
-                ? item.moBanner[theme]
-                  ? item.moBanner[theme]
-                  : item.moBanner
-                : item.pcBanner[theme]
-                ? item.pcBanner[theme]
-                : item.pcBanner
-            })`,
+        <OFigure
+          class="banner-bg"
+          :src="info.bg"
+          :class="{
+            'with-sticky-bg': info.withStickyBg,
+            'in-dark': !isLight,
+            'cursor-pointer': info.href && !info.btn,
           }"
+          @click="onClick(info.href)"
         >
-          <div
-            v-if="item.title?.length"
-            class="banner-panel-content flex-column"
-            :class="[item.id]"
-          >
-            <div data-aos="fade-down" class="box">
-              <p v-for="title in item.title" :key="title" class="title">
-                {{ title }}
-              </p>
-              <p class="desc">
-                <span
-                  v-for="item2 in item.desc"
-                  :key="item2"
-                  class="inline-desc"
-                  >{{ item2 }}</span
-                >
-              </p>
-            </div>
-            <div v-if="item.btn" data-aos="fade-up" class="action">
-              <OButton animation class="home-banner-btn">
-                {{ item.btn }}
-                <template #suffixIcon
-                  ><OIcon><IconArrowRight /></OIcon
-                ></template>
-              </OButton>
-            </div>
-          </div>
-          <img
-            v-else
-            class="isH5show"
-            :src="item.moBanner[theme] ? item.moBanner[theme] : item.moBanner"
-            alt="openEuler"
-          />
+          <ContentWrapper class="banner-wrapper">
+            <div class="banner-content">
+              <!-- 标题 -->
+              <div class="banner-title" v-if="info.title && info.title.length">
+                <p v-for="(title, i) in info.title">{{ title }}</p>
+              </div>
+              <!-- 操作按钮 -->
+              <div v-if="info.btn" class="banner-opts">
+                <OButton :href="info.href" target="_blank" size="large">
+                  {{ info.btn }}
+                </OButton>
+              </div>
 
-          <div
-            v-if="item.id === 'devday'"
-            class="img-box"
-            :class="[windowWidth < 824 ? 'box-mo' : '', item.id]"
-          >
-            <img
-              v-if="(item as any).textImg_pc && windowWidth > 824"
-              :src=" (item as any).textImg_pc[theme]"
-              alt="openEuler"
-            />
-          </div>
-        </div>
-      </div>
-    </swiper-slide>
-  </swiper>
+              <img v-if="gtPad" :src="info.attach" class="banner-attach" />
+            </div>
+          </ContentWrapper>
+        </OFigure>
+      </OCarouselItem>
+    </OCarousel>
+
+    <OCarousel
+      v-if="isPhone"
+      class="banner-carousel"
+      effect="gallery"
+      indicator-click
+      data-o-theme="theme"
+      arrow="never"
+      @before-change="onBeforeChange"
+    >
+      <OCarouselItem
+        v-for="(info, index) in bannerInfo"
+        class="banner-item"
+        :class="`banner-item${index}`"
+      >
+        <ContentWrapper class="banner-wrapper">
+          <OFigure
+            class="banner-bg"
+            :src="info.bg"
+            @click="onClick(info.href)"
+          />
+        </ContentWrapper>
+      </OCarouselItem>
+    </OCarousel>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-$banner-color: #fff;
-html[lang='zh'] {
-  .flex-start {
-    @media screen and (max-width: 824px) {
-      margin: 0;
-      padding-top: var(--e-spacing-h3);
-      height: 100%;
-    }
-  }
-}
-.dark .banner-panel-cover {
-  background-color: rgb(0, 0, 51);
-  filter: brightness(80%) grayscale(20%) contrast(1.2);
-}
-.home-banner-btn {
-  border-color: $banner-color;
-  color: $banner-color;
-  @media screen and (max-width: 824px) {
-    padding: 5px 12px 5px 16px;
-    line-height: 22px;
-    font-size: 14px;
-  }
-}
-
-.annual-report,
-.version-release {
-  @media screen and (max-width: 768px) {
-    justify-content: flex-end !important;
-    .o-button {
-      display: none;
-    }
-  }
-}
-
-.national-day {
-  @media screen and (max-width: 768px) {
-    .box {
-      display: none;
-    }
-  }
-}
-
-#devday {
-  .banner-panel-cover {
-    background-position: 62%;
-  }
-}
-
-.version {
-  .box {
-    margin-bottom: 32px;
-  }
-  @media screen and (max-width: 768px) {
-    .box {
-      margin-bottom: 0;
-    }
-    justify-content: flex-end !important;
-    .title {
-      font-size: var(--e-font-size-h6) !important;
-      line-height: 28px;
-    }
-  }
-}
-
 .home-banner {
-  height: 480px;
-  position: relative;
-  .banner-panel {
-    position: absolute;
-    background-color: var(--e-color-bg2);
-    display: flex;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+  overflow: hidden;
+  --banner-height: 480px;
+  height: var(--banner-height);
+
+  @include respond-to('<=pad') {
+    --banner-height: 360px;
+  }
+
+  @include respond-to('phone') {
+    margin-top: 16px;
+
+    --banner-height: calc(
+      (100vw - 2 * var(--layout-content-padding)) / 936 * 552 + 16px
+    );
+  }
+}
+
+.banner-carousel {
+  width: 100%;
+  height: 100%;
+
+  @include respond-to('phone') {
+    // margin-top: 16px;
+  }
+}
+
+.banner-item {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-bg {
+  width: 100%;
+  height: 100%;
+
+  :deep(.o-figure-img) {
     width: 100%;
     height: 100%;
-    opacity: 1;
-    transition: all 0.3s;
-
-    &.is-link {
-      cursor: pointer;
-    }
-    .banner-panel-content {
-      position: relative;
-      box-sizing: border-box;
-      max-width: 1504px;
-      margin: 0 auto;
-      padding: 0 44px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%;
-      color: #fff;
-      z-index: 1;
-      .title {
-        font-size: var(--e-font-size-h1);
-        line-height: var(--e-line-height-h1);
-        // filter: invert(1);
-        font-weight: 600;
-        @media screen and (max-width: 1439px) {
-          font-size: var(--e-font-size-h2);
-          line-height: var(--e-line-height-h2);
-        }
-        @media screen and (max-width: 824px) {
-          font-size: var(--e-font-size-h4);
-          line-height: var(--e-line-height-h4);
-        }
-      }
-      .box {
-        color: $banner-color;
-      }
-      .text-img {
-        max-height: 213px;
-        @media screen and (max-width: 768px) {
-          display: none;
-        }
-      }
-      .desc {
-        .inline-desc {
-          &:nth-child(2) {
-            padding-left: 30px;
-            @media screen and (max-width: 768px) {
-              padding: 0;
-              display: block;
-            }
-          }
-        }
-
-        font-size: var(--e-font-size-h5);
-        font-weight: normal;
-        line-height: var(--e-line-height-h5);
-        margin-top: var(--e-spacing-h6);
-        // filter: invert(1);
-        @media screen and (max-width: 1439px) {
-          font-size: var(--e-font-size-h6);
-          line-height: var(--e-line-height-h6);
-        }
-        @media screen and (max-width: 824px) {
-          margin-top: var(--e-spacing-h9);
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
-        }
-      }
-      .action {
-        margin-top: var(--e-spacing-h3);
-        .o-icon {
-          @media screen and (max-width: 824px) {
-            font-size: 16px;
-          }
-        }
-        @media screen and (max-width: 824px) {
-          margin-top: 0;
-        }
-      }
-
-      @media screen and (max-width: 1440px) {
-        padding: 0 16px;
-      }
-      @media screen and (max-width: 824px) {
-        padding: 72px 16px 50px;
-        justify-content: space-between;
-        box-sizing: border-box;
-        text-align: center;
-      }
-    }
-    .download {
-      @media screen and (max-width: 768px) {
-        justify-content: flex-end;
-        .o-button {
-          margin-top: 8px;
-        }
-      }
-    }
-
-    .devday2024 {
-      @media screen and (max-width: 768px) {
-        justify-content: flex-end;
-        padding-bottom: 12px;
-      }
-
-      p.title:nth-of-type(1),
-      p.title:nth-of-type(3) {
-        font-size: var(--e-font-size-h4);
-        line-height: var(--e-line-height-h4);
-        font-weight: 500;
-        @media screen and (max-width: 768px) {
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
-          text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-        }
-      }
-      p.title:nth-of-type(2) {
-        @media screen and (max-width: 768px) {
-          font-size: var(--e-font-size-h5);
-          line-height: var(--e-line-height-h5);
-          font-weight: 500;
-          text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-        }
-      }
-      p.title:nth-of-type(3) {
-        margin: 8px 0 64px;
-        @media screen and (max-width: 768px) {
-          margin: 0 0 12px;
-        }
-      }
-      .desc {
-        font-size: var(--e-font-size-h6);
-        line-height: var(--e-line-height-h6);
-        @media screen and (max-width: 768px) {
-          font-size: var(--e-font-size-text);
-          line-height: var(--e-line-height-text);
-        }
-      }
-    }
-
-    .banner-panel-cover {
-      position: relative;
-      background-position: 50%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 100%;
-      height: 100%;
-      background-color: rgb(178, 209, 255);
-      video {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 0;
-      }
-    }
-    .isH5show {
-      display: none;
-      object-fit: cover;
-      width: 100%;
-      @media screen and (max-width: 824px) {
-        display: block;
-        height: 300px;
-      }
-    }
-
-    .sig-gathering,
-    .sig-gathering-dark {
-      .box {
-        color: var(--e-color-black);
-      }
-      .home-banner-btn {
-        border-color: var(--e-color-black);
-        color: var(--e-color-black);
-      }
-    }
-
-    @media screen and (max-width: 767px) {
-      position: static !important;
-      .sig-gathering {
-        justify-content: flex-end;
-        .box {
-          display: none;
-        }
-      }
-    }
-
-    .img-box {
-      position: absolute;
-      width: 100%;
-      max-width: 1416px;
-      height: 100%;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 0 44px;
-      img {
-        @media screen and (max-width: 1440px) {
-          padding: 0 16px;
-        }
-      }
-    }
-    .devday {
-      img {
-        height: 156px;
-        margin-top: 110px;
-      }
-    }
-    @media screen and (max-width: 767px) {
-      .img-box {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-      }
-      .devday {
-        img {
-          height: 60px;
-          margin-bottom: 38px;
-        }
-      }
-    }
   }
-  @media screen and (max-width: 1100px) {
-    height: 400px;
-  }
-  @media screen and (max-width: 824px) {
-    height: 300px;
-  }
-  :deep(.swiper-pagination) {
-    bottom: 64px;
-    .swiper-pagination-bullet {
-      width: 40px;
-      height: 2px;
-      opacity: 1;
-      background: rgba(207, 211, 215, 0.6);
-      border-radius: 0;
-      margin: 0 4px;
-    }
-    .swiper-pagination-bullet-active {
-      background: var(--e-color-yellow5);
-      opacity: 1;
-    }
-    @media screen and (max-width: 1439px) {
-      width: 1080px !important;
-      padding: 0 16px;
-      left: 0 !important;
-      transform: translateX(0);
-    }
-    @media screen and (max-width: 1100px) {
-      width: 100% !important;
-      bottom: 72px;
-      .swiper-pagination-bullet {
-        width: 20px !important;
-        margin: 0 4px 0 0;
-      }
-    }
-    @media screen and (max-width: 824px) {
-      left: 50% !important;
-      transform: translateX(-50%);
-      text-align: center;
-      bottom: 24px;
-    }
+
+  @include respond-to('phone') {
+    --figure-radius: 12px;
   }
 }
 
-:deep(.swiper-button-prev) {
-  width: 32px;
-  height: 32px;
-  background: rgba(56, 56, 56, 0.5);
-  border-radius: 50%;
-  opacity: 0;
-  transition: all 0.3s;
-  &:after {
-    font-size: 20px;
-    color: #fff;
+.banner-wrapper {
+  height: 100%;
+}
+
+.banner-content {
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.banner-title {
+  @include display1;
+  color: var(--o-color-info1);
+  --d: 10px;
+}
+
+.banner-opts {
+  margin-top: 24px;
+  --d: 20px;
+}
+
+@keyframes fade-up {
+  from {
+    transform: translateY(var(--d));
+    opacity: 0;
   }
-  &.show {
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
-:deep(.swiper-button-next) {
-  width: 32px;
-  height: 32px;
-  background: rgba(56, 56, 56, 0.5);
-  border-radius: 50%;
-  opacity: 0;
-  transition: all 0.3s;
-  &:after {
-    font-size: 20px;
-    color: #fff;
+
+.current-slide {
+  .banner-title {
+    animation: fade-up 400ms ease-in;
   }
-  &.show {
-    opacity: 1;
+  .banner-opts {
+    animation: fade-up 400ms ease-in;
   }
+}
+
+.in-dark.with-sticky-bg {
+  :deep(.o-figure-img) {
+    @include img-in-dark;
+  }
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+</style>
+
+<style lang="scss" scoped>
+.banner-item0 {
+  // 定制修改item1
+  .banner-attach {
+    height: 156px;
+  }
+}
+
+.banner-item1 {
+  // 定制修改item2
+}
+.banner-item2 {
+  // 定制修改item2
+}
+.banner-item3 {
+  // 定制修改item1
 }
 </style>
