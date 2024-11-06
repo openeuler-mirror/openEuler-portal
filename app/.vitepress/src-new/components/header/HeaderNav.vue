@@ -44,6 +44,7 @@ const isShow = ref(false);
 const navActive = ref();
 const subNavActive = ref();
 const subNavContent = ref({});
+const subNav = ref({});
 const toggleDebounced = debounce(
   function (item: any | null) {
     if (item === null) {
@@ -53,13 +54,10 @@ const toggleDebounced = debounce(
       navActive.value = item.ID;
       isShow.value = true;
       subNavActive.value = item.CHILDREN[0]?.NAME;
+      subNav.value = item.CHILDREN;
       subNavContent.value = item.CHILDREN[0];
     }
   },
-  150,
-  {
-    trailing: true,
-  }
 );
 
 // 返回首页
@@ -106,72 +104,80 @@ const linkClick = () => {
                   @mouseleave="toggleDebounced(null)"
                 >
                   <span class="nav-item">{{ item.NAME }}</span>
-                  <div v-if="isShow" :class="['nav-dropdown', item.ID]">
-                    <div class="nav-drop-content">
-                      <div class="nav-sub-background" :class="{ dark: commonStore.theme === 'dark' }"></div>
-                      <div class="nav-sub">
-                        <div
-                          v-for="subItem in item.CHILDREN"
-                          :key="subItem.NAME"
-                          class="nav-sub-item"
-                          :class="{
-                            active: subNavActive === subItem.NAME,
-                          }"
-                          @click="changeSubnav(subItem)"
-                        >
-                        <span>{{ subItem.NAME }}</span>
-                        </div>
-                      </div>
-                      <div class="nav-sub-content">
-                        <div class="content-left">
-                          <NavLink v-if="subNavContent.URL" class="content-title-url" :url="subNavContent.URL" @link-click="linkClick">{{ subNavContent.NAME }}</NavLink>
-                          <span v-else class="content-title">{{ subNavContent.NAME }}</span>
-                          <OIcon v-if="subNavContent.ICON">
-                            <component :is="subNavContent.ICON" class="icon" />
-                          </OIcon>
-                          <div v-if="subNavContent.HASGROUP">
-                            <div class="group" v-for="group in subNavContent.CHILDREN" :key="group.NAME">
-                              <p class="group-name">{{ group.NAME }}</p>
-                              <NavContent :nav-content="group?.CHILDREN" @link-click="linkClick" />
-                            </div>
+                  <transition name="transition">
+                    <div v-if="isShow" :class="['nav-dropdown', navActive]">
+                      <div class="nav-drop-content">
+                        <div class="nav-sub-background" :class="{ dark: commonStore.theme === 'dark' }"></div>
+                        <div class="nav-sub">
+                          <div
+                            v-for="subItem in subNav"
+                            :key="subItem.NAME"
+                            class="nav-sub-item"
+                            :class="{
+                              active: subNavActive === subItem.NAME,
+                            }"
+                            @click="changeSubnav(subItem)"
+                          >
+                          <span>{{ subItem.NAME }}</span>
                           </div>
-                          <NavContent v-else :nav-content="subNavContent?.CHILDREN" @link-click="linkClick" />
-
                         </div>
-                        <div class="split-line" v-if="subNavContent.SHORTCUT?.length"></div>
-                        <div class="content-right">
-                          <div v-if="subNavContent.SHORTCUT?.length">
-                            <span class="content-title">{{ $t('header.QUICKLINK') }}</span>
-                            <div v-if="!subNavContent.WITH_PICTURE">
-                              <div v-for="shortcut in subNavContent?.SHORTCUT" :key="shortcut.NAME"  class="shortcut">
-                                <img v-if="isLight" :src="shortcut.TYPE" class="icon">
-                                <img v-else :src="shortcut.TYPE_DARK" class="icon">
-                                <NavLink :url="shortcut.URL" @link-click="linkClick" class="shortcut-link">{{ shortcut.NAME }}</NavLink>
+                        <div class="nav-sub-content">
+                          <div class="content-left">
+                            <NavLink v-if="subNavContent.URL" class="content-title-url" :url="subNavContent.URL" @link-click="linkClick">{{ subNavContent.NAME }}</NavLink>
+                            <span v-else class="content-title">{{ subNavContent.NAME }}</span>
+                            <OIcon v-if="subNavContent.ICON">
+                              <component :is="subNavContent.ICON" class="icon" />
+                            </OIcon>
+                            <div v-if="subNavContent.HASGROUP">
+                              <div class="group" v-for="group in subNavContent.CHILDREN" :key="group.NAME">
+                                <p class="group-name">{{ group.NAME }}</p>
+                                <NavContent :nav-content="group?.CHILDREN" @link-click="linkClick" />
                               </div>
                             </div>
-                            <div v-else>
-                              <NavLink v-for="shortcut in subNavContent?.SHORTCUT" :url="shortcut.URL" :key="shortcut.NAME" class="review" @link-click="linkClick">
-                                <img :src="shortcut.PICTURE" class="review-picture">
-                                <div class="review-content">
-                                  <p class="review-title">{{ shortcut.NAME }}</p>
-                                  <p class="review-desc" :title="shortcut.DESCRIPTION">{{ shortcut.DESCRIPTION }}</p>
-                                  <div class="review-property">
-                                    <span>{{ $t('header.DATE') }}：{{ shortcut.DATE }}</span>
-                                    <span v-if="shortcut.POSITION"> | {{ $t('header.VENUE') }}：{{ shortcut.POSITION }}</span>
-                                  </div>
+                            <NavContent v-else :nav-content="subNavContent?.CHILDREN" @link-click="linkClick" />
+
+                          </div>
+                          <div class="split-line" v-if="subNavContent.SHORTCUT?.length"></div>
+                          <div class="content-right">
+                            <div v-if="subNavContent.SHORTCUT?.length">
+                              <span class="content-title">{{ $t('header.QUICKLINK') }}</span>
+                              <div v-if="!subNavContent.WITH_PICTURE">
+                                <div v-for="shortcut in subNavContent?.SHORTCUT" :key="shortcut.NAME"  class="shortcut">
+                                  <img v-if="isLight" :src="shortcut.TYPE" class="icon">
+                                  <img v-else :src="shortcut.TYPE_DARK" class="icon">
+                                  <NavLink :url="shortcut.URL" @link-click="linkClick" class="shortcut-link">
+                                    {{ shortcut.NAME }}
+                                    <OIcon v-if="shortcut.ICON">
+                                      <component :is="shortcut.ICON" class="icon" />
+                                    </OIcon>
+                                  </NavLink>
                                 </div>
-                              </NavLink>
+                              </div>
+                              <div v-else>
+                                <NavLink v-for="shortcut in subNavContent?.SHORTCUT" :url="shortcut.URL" :key="shortcut.NAME" class="review" @link-click="linkClick">
+                                  <img :src="shortcut.PICTURE" class="review-picture">
+                                  <div class="review-content">
+                                    <p class="review-title">{{ shortcut.NAME }}</p>
+                                    <p class="review-desc" :title="shortcut.DESCRIPTION">{{ shortcut.DESCRIPTION }}</p>
+                                    <div class="review-property">
+                                      <span>{{ shortcut.REMARK }}</span>
+                                    </div>
+                                  </div>
+                                </NavLink>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </transition>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
+
+
 
         <div class="header-tool">
           <HeaderSearch />
@@ -211,7 +217,7 @@ const linkClick = () => {
   height: 32px;
   width: 136px;
   cursor: pointer;
-  margin-right: var(--o-gap-8);
+  margin-right: var(--o-gap-7);
 }
 
 .header-content {
@@ -250,14 +256,11 @@ const linkClick = () => {
       align-items: center;
       height: 100%;
       color: var(--o-color-info1);
+      cursor: pointer;
       @include text1;
 
       &:hover {
         z-index: 99;
-        .nav-dropdown {
-          transform: scaleY(1);
-          transition-timing-function: cubic-bezier(0.16, 0.75, 0.5, 1);
-        }
       }
 
       &.active {
@@ -271,7 +274,6 @@ const linkClick = () => {
           width: calc(100% - var(--o-gap-4) * 2);
           height: 2px;
           border-radius: 1px;
-          transition: all 0.1s linear;
           background: var(--o-color-primary1);
         }
       }
@@ -297,8 +299,6 @@ const linkClick = () => {
   min-height: 320px;
   justify-content: center;
   transform-origin: top;
-  transition: all 0.5s cubic-bezier(0.5, 0, 0.84, 0.25);
-  transform: scaleY(0);
 
 
   .nav-drop-content {
@@ -331,14 +331,14 @@ const linkClick = () => {
 
   .nav-sub {
     width: 172px;
-    padding: 32px 16px 0 0;
-    padding-top: var(--o-gap-6);
+    margin-right: var(--o-gap-4);
+    margin-top: var(--o-gap-6);
     position: relative;
 
     .nav-sub-item {
       width: 172px;
       height: 40px;
-      border-radius: var(--o-radius-xs);
+      border-radius: var(--o-radius-s);
       display: flex;
       align-items: center;
 
@@ -361,7 +361,7 @@ const linkClick = () => {
 
     .content-left {
       flex: 1;
-      padding: 32px 24px 24px 36px;
+      padding: 32px 24px 24px 32px;
 
       .group {
         & + .group {
@@ -405,6 +405,12 @@ const linkClick = () => {
           &:hover {
             color: var(--o-color-primary2);
           }
+
+          .icon {
+            height: 16px;
+            width: 16px;
+            margin-left: var(--o-gap-2);
+          }
         }
 
         .icon {
@@ -424,7 +430,7 @@ const linkClick = () => {
         }
 
         & + .review {
-          margin-top: var(--o-gap-2);
+          margin-top: var(--o-gap-3);
         }
         
         .review-picture {
@@ -441,6 +447,8 @@ const linkClick = () => {
           margin-left: var(--o-gap-4);
           flex: 1;
           max-width: 60%;
+          display: flex;
+          flex-direction: column;
 
           @media screen and (max-width: 1780px) {
             max-width: 68%;
@@ -463,12 +471,20 @@ const linkClick = () => {
           .review-desc {
             @include tip2;
             overflow: hidden;
+            flex: 1;
             color: var(--o-color-info2);
             margin-top: var(--o-gap-1);
             margin-bottom: var(--o-gap-2);
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
+
+            mask:
+              linear-gradient(270deg, transparent, transparent 0%, var(--o-color-info2)),
+              linear-gradient(270deg, var(--o-color-info2), var(--o-color-info2));
+            mask-size: 100% calc(100% - 20px), 100% 20px;
+            mask-position: bottom, top;
+            mask-repeat: no-repeat;
           }
 
           .review-property {
@@ -502,5 +518,15 @@ const linkClick = () => {
       margin-bottom: var(--o-gap-4);
     }
   }
+}
+
+.transition-enter-active,
+.transition-leave-active {
+  transition: opacity var(--o-duration-m3);
+}
+
+.transition-enter-from,
+.transition-leave-to {
+  opacity: 0;
 }
 </style>

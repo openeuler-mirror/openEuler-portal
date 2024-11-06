@@ -260,13 +260,13 @@ export default {
               NAME: 'openEuler 24.03 LTS Documentation',
               TYPE: IntroductionLight,
               TYPE_DARK: IntroductionDark,
-              URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Releasenotes/法律声明.html',
+              URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Releasenotes/terms-of-use.html',
             },
             {
               NAME: 'Installation and Upgrade',
               TYPE: IntroductionLight,
               TYPE_DARK: IntroductionDark,
-              URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/installation.html',
+              URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/Installation.html',
             },
           ]
         },
@@ -482,7 +482,7 @@ export default {
             {
               NAME: 'Code of Conduct',
               DESCRIPTION: "openEuler's code of conduct.",
-              URL: '/community/charter/',
+              URL: '/community/conduct/',
             },
             {
               NAME: 'Members',
@@ -599,8 +599,7 @@ export default {
               NAME: 'Operating System Confenrence & openEuler Summit 2024',
               PICTURE: Summit,
               DESCRIPTION: 'Operating systems form the backbone of digital and intelligent industry transformation. openEuler, an open source operating system born in China for digital infrastructure, has emerged as a key player in the global open source landscape. Over the past five years, its market presence was steadily increasing. And openEuler has been continuously driving innovations in OS for AI and AI for OS, accelerating digital transformation, and fostering a thriving ecosystem though industry-wide collaboration.',
-              DATE: '2024/11/15',
-              POSITION: 'Beijing',
+              REMARK: 'November 15-16, 2024 | Beijing',
               TYPE: 'PICTURE',
               URL: '/interaction/summit-list/summit2024/',
             },
@@ -629,8 +628,6 @@ export default {
   MESSAGE_CENTER: 'Message Center',
   LOGOUT: 'Logout',
   CODE: 'Code', 
-  DATE: 'Date',
-  VENUE: 'Venue',
   QUICKLINK: 'Quick Link',
   SEARCH: {
     BROWSEHISTORY: 'History',
