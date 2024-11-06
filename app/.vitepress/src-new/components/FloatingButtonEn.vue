@@ -966,7 +966,11 @@ watch(
     padding-right: 32px;
     margin: 0 auto;
     text-align: center;
-    background: linear-gradient(90deg, #d7e8f7 0%, #c4cfe8 100%);
+    background: linear-gradient(
+      90deg,
+      var(--o-color-control2-light) 0%,
+      var(--o-color-control3-light) 100%
+    );
     border-radius: 8px;
     display: flex;
     align-items: center;
