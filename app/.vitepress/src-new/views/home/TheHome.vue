@@ -65,7 +65,7 @@ onMounted(() => {
     </ContentWrapper>
     <HomeShowCase @result="isResult = true" />
     <HomeTrend :is-result="isResult" />
-    <HomePartner />
+    <!-- <HomePartner /> -->
   </div>
 </template>
 
