@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import AppSection from '~@/components/AppSection.vue';
 import HomeSwiper from './HomeSwiper.vue';
 
 import { publisher } from '~@/data/home/publisher';
@@ -9,8 +10,11 @@ const publisher3 = publisher.slice(16);
 </script>
 
 <template>
-  <div class="home-partner" data-aos="fade-up">
-    <p class="title">{{$t('home.publisher')}}</p>
+  <AppSection
+    class="home-partner"
+    :title="$t('home.publisher')"
+    data-aos="fade-up"
+  >
     <HomeSwiper :data="publisher1" class="partner-swiper"></HomeSwiper>
     <HomeSwiper
       :data="publisher2"
@@ -19,13 +23,10 @@ const publisher3 = publisher.slice(16);
     ></HomeSwiper>
     <HomeSwiper :data="publisher3" class="partner-swiper"></HomeSwiper>
     <p class="tips">{{ $t('home.publisherTips') }}</p>
-  </div>
+  </AppSection>
 </template>
 
 <style lang="scss" scoped>
-.home-partner {
-  padding-bottom: 72px;
-}
 .title {
   @include display3;
   color: var(--o-color-info1);
@@ -44,12 +45,6 @@ const publisher3 = publisher.slice(16);
 }
 
 @include respond-to('phone') {
-  .home-partner {
-    padding-bottom: 32px;
-  }
-  .title {
-    margin-bottom: 12px;
-  }
   .partner-swiper {
     margin-top: 12px;
   }

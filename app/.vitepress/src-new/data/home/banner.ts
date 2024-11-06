@@ -10,6 +10,7 @@ import summit2024_attach_dark from '~@/assets/category/home/banner/summit2024/su
 import ossummit_pc from '~@/assets/category/home/banner/ossummit/ossummit_pc.jpg';
 import ossummit_pad from '~@/assets/category/home/banner/ossummit/ossummit_pad.jpg';
 import ossummit_mb from '~@/assets/category/home/banner/ossummit/ossummit_mb.jpg';
+import ossummit_attach from '~@/assets/category/home/banner/ossummit/ossummit_attach.png';
 
 import annual2023_pc from '~@/assets/category/home/banner/annual2023/annual2023_pc.jpg';
 import annual2023_pad from '~@/assets/category/home/banner/annual2023/annual2023_pad.jpg';
@@ -43,6 +44,7 @@ export default {
       bg_pc: ossummit_pc,
       bg_pad: ossummit_pad,
       bg_mb: ossummit_mb,
+      attach: ossummit_attach,
       bg_theme: 'dark',
       href: 'https://osseu2024.sched.com/event/1iWLB',
       isBlank: true,
@@ -91,6 +93,7 @@ export default {
       bg_pc: ossummit_pc,
       bg_pad: ossummit_pad,
       bg_mb: ossummit_mb,
+      attach: ossummit_attach,
       bg_theme: 'dark',
       href: 'https://osseu2024.sched.com/event/1iWLB',
       isBlank: true,

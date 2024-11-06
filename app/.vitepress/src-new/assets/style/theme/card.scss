@@ -1,4 +1,5 @@
 @use '../mixin/common.scss' as *;
+
 .o-card {
   --card-cover-radius: 8px;
   --card-radius: 8px;
@@ -16,7 +17,7 @@
 }
 
 .o-card-cursor-pointer {
-  &:hover {
+  @include hover {
     .o-card-title {
       color: var(--o-color-primary1);
     }

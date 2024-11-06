@@ -76,6 +76,7 @@ const onClick = (href) => {
       effect="toggle"
       active-class="current-slide"
       indicator-click
+      :auto-play="true"
       :data-o-theme="theme"
       @before-change="onBeforeChange"
     >
@@ -108,7 +109,7 @@ const onClick = (href) => {
                 </OButton>
               </div>
 
-              <img v-if="gtPad" :src="info.attach" class="banner-attach" />
+              <img v-if="!isPhone" :src="info.attach" class="banner-attach" />
             </div>
           </ContentWrapper>
         </OFigure>
@@ -120,8 +121,9 @@ const onClick = (href) => {
       class="banner-carousel"
       effect="gallery"
       indicator-click
-      data-o-theme="theme"
+      :data-o-theme="theme"
       arrow="never"
+      :auto-play="true"
       @before-change="onBeforeChange"
     >
       <OCarouselItem
@@ -163,6 +165,9 @@ const onClick = (href) => {
 .banner-carousel {
   width: 100%;
   height: 100%;
+  @include respond-to('>pad_v') {
+    --carousel-indicator-offset: 59px;
+  }
 
   @include respond-to('phone') {
     // margin-top: 16px;
@@ -242,20 +247,35 @@ const onClick = (href) => {
 </style>
 
 <style lang="scss" scoped>
+// 定制修改item0
 .banner-item0 {
-  // 定制修改item1
   .banner-attach {
     height: 156px;
+
+    @include respond-to('pad') {
+      height: 120px;
+    }
   }
 }
 
+// 定制修改item1
 .banner-item1 {
-  // 定制修改item2
+  .banner-content {
+    width: 100%;
+    justify-content: center;
+  }
+  .banner-attach {
+    height: 38%;
+    margin-top: -60px;
+    object-fit: contain;
+  }
 }
+
+// 定制修改item2
 .banner-item2 {
-  // 定制修改item2
 }
+
+// 定制修改item3
 .banner-item3 {
-  // 定制修改item1
 }
 </style>

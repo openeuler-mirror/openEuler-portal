@@ -6,6 +6,7 @@ import {
   DialogActionT,
   OButton,
   ODialog,
+  OIcon,
   OSwitch,
   isBoolean,
 } from '@opensig/opendesign';
@@ -26,6 +27,8 @@ import { useCookieStore } from '~@/stores/common';
 
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
+
+import IconClose from '~icons/app-new/icon-close.svg';
 
 const route = useRoute();
 
@@ -250,10 +253,9 @@ watch(
           </OButton>
         </div>
 
-        <IconClose
-          class="cookie-notice-close"
-          @click="toggleNoticeVisible(false)"
-        />
+        <OIcon class="cookie-notice-close" @click="toggleNoticeVisible(false)">
+          <IconClose />
+        </OIcon>
       </ContentWrapper>
     </div>
     <ODialog
@@ -389,6 +391,8 @@ watch(
   cursor: pointer;
   color: var(--o-color-info1);
   transform-origin: center;
+  @include h2;
+
   @include hover {
     color: var(--o-color-primary2);
   }
