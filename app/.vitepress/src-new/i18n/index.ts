@@ -10,6 +10,7 @@ import talentAssessment from './talent-assessment';
 import contactUs from './contact-us';
 import home from './home';
 import header from './header';
+import footer from './footer';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -57,6 +58,7 @@ const messages = {
     contact: contactUs.zh,
     home: home.zh,
     header: header.zh,
+    footer: footer.zh,
   },
   en: {
     // 公共模块
@@ -68,6 +70,7 @@ const messages = {
     contact: contactUs.en,
     home: home.en,
     header: header.en,
+    footer: footer.en,
   },
 };
 
@@ -82,6 +85,7 @@ const i18n = createI18n({
   datetimeFormats,
 });
 
+// TODO: 使用composables的 useLocale,对象放在 data 里面
 export function useI18n() {
   const { lang } = useData();
   return computed(() => messages[lang.value]);
