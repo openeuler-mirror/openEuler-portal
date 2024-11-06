@@ -10,6 +10,7 @@ import summit2024_attach_dark from '~@/assets/category/home/banner/summit2024/su
 import ossummit_pc from '~@/assets/category/home/banner/ossummit/ossummit_pc.jpg';
 import ossummit_pad from '~@/assets/category/home/banner/ossummit/ossummit_pad.jpg';
 import ossummit_mb from '~@/assets/category/home/banner/ossummit/ossummit_mb.jpg';
+import ossummit_attach from '~@/assets/category/home/banner/ossummit/ossummit_attach.png';
 
 import annual2023_pc from '~@/assets/category/home/banner/annual2023/annual2023_pc.jpg';
 import annual2023_pad from '~@/assets/category/home/banner/annual2023/annual2023_pad.jpg';
@@ -43,6 +44,7 @@ export default {
       bg_pc: ossummit_pc,
       bg_pad: ossummit_pad,
       bg_mb: ossummit_mb,
+      attach: ossummit_attach,
       bg_theme: 'dark',
       href: 'https://osseu2024.sched.com/event/1iWLB',
       isBlank: true,
@@ -91,6 +93,7 @@ export default {
       bg_pc: ossummit_pc,
       bg_pad: ossummit_pad,
       bg_mb: ossummit_mb,
+      attach: ossummit_attach,
       bg_theme: 'dark',
       href: 'https://osseu2024.sched.com/event/1iWLB',
       isBlank: true,
@@ -106,93 +109,4 @@ export default {
       btn: 'Download',
     },
   ],
-};
-
-export const a = {
-  // 首页banner  targetTap:1 新页签打开
-  HOMEBANNER: {
-    zh: [
-      {
-        // pcBanner: {
-        //   light: osSummit_pc_light,
-        //   dark: osSummit_pc_dark,
-        // },
-        pcBanner: osSummit_pc_light,
-        moBanner: osSummit_mo_light,
-        // moBanner: {
-        //   light: osSummit_mo_light,
-        //   dark: osSummit_mo_dark,
-        // },
-        link: '/zh/interaction/summit-list/summit2024/',
-        id: 'devday',
-        targetTap: 1,
-        textImg_pc: {
-          light: wenzi_light,
-          dark: wenzi_dark,
-        },
-      },
-      {
-        pcBanner: osSummit_pc,
-        moBanner: osSummit_mo,
-        link: 'https://osseu2024.sched.com/event/1iWLB',
-        id: 'osseu',
-        btn: '',
-        targetTap: 1,
-      },
-      {
-        pcBanner: annualReport_pc,
-        moBanner: annualReport_mo,
-        link: '/zh/news/openEuler/20240223-nianbao/Untitled-1.html',
-        id: 'annual-report',
-        title: ['openEuler 2023 社区年报'],
-        btn: '查看详情',
-        targetTap: 1,
-      },
-      {
-        pcBanner: banner1_pc,
-        moBanner: banner1_mo,
-        link: '/whitepaper/openEuler%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E5%88%9B%E6%96%B0%E9%A1%B9%E7%9B%AE%E6%80%BB%E8%A7%88%EF%BC%89.pdf',
-        id: 'whitepaper',
-        title: ['《openEuler操作系统（创新项目总览）》'],
-        btn: '查看详情',
-        targetTap: 1,
-      },
-    ],
-    en: [
-      {
-        pcBanner: {
-          light: osSummit_pc_light,
-          dark: osSummit_pc_dark,
-        },
-        moBanner: {
-          light: osSummit_mo_light,
-          dark: osSummit_mo_dark,
-        },
-        link: '/en/interaction/summit-list/summit2024/',
-        id: 'devday',
-        targetTap: 1,
-        textImg_pc: {
-          light: wenzi_light,
-          dark: wenzi_dark,
-        },
-      },
-      {
-        pcBanner: osSummit_pc,
-        moBanner: osSummit_mo,
-        link: 'https://osseu2024.sched.com/event/1iWLB',
-        id: 'osseu',
-        btn: '',
-        targetTap: 1,
-      },
-      {
-        pcBanner: banner1_pc,
-        moBanner: banner1_mo,
-        link: '/whitepaper/en/openEuler%20OS%20Technical%20Whitepaper_Innovation%20Projects_EN.pdf',
-        id: 'whitepaper',
-        title: ['openEuler OS Technical Whitepaper', 'Innovation Projects'],
-        btn: 'Download',
-        targetTap: 1,
-      },
-    ],
-  },
 };

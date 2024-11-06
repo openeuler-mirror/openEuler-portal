@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 
-import { OCard, OFigure, OScroller, OTab, OTabPane } from '@opensig/opendesign';
+import { OCard, OScroller, OTab, OTabPane } from '@opensig/opendesign';
 
 import AppSection from '~@/components/AppSection.vue';
 
@@ -64,16 +64,16 @@ const calcBlogStyle = (idx: number) => {
 const newsArr = ref([]);
 const blogArr = ref([]);
 const getData = () => {
-  getHomeNews(locale.value).then((newsRes) => {
-    if (newsRes && newsRes.obj && newsRes.obj.records) {
-      newsArr.value = normalizeData(newsRes.obj.records);
-    }
+  getHomeBlog(locale.value).then((blogRes) => {
+    if (blogRes && blogRes.obj && blogRes.obj.records) {
+      blogArr.value = normalizeData(blogRes.obj.records);
 
-    getHomeBlog(locale.value).then((blogRes) => {
-      if (blogRes && blogRes.obj && blogRes.obj.records) {
-        blogArr.value = normalizeData(blogRes.obj.records);
-      }
-    });
+      getHomeNews(locale.value).then((newsRes) => {
+        if (newsRes && newsRes.obj && newsRes.obj.records) {
+          newsArr.value = normalizeData(newsRes.obj.records);
+        }
+      });
+    }
   });
 };
 watch(
@@ -89,33 +89,6 @@ watch(
 <template>
   <AppSection :title="t('home.trend')" class="home-trend">
     <OTab v-model="activeTab" variant="text" :line="false">
-      <!-- 新闻 -->
-      <OTabPane v-if="newsArr.length" value="news" :label="t('home.news')">
-        <OScroller
-          class="trend-scroller"
-          :show-type="lePadV ? 'never' : 'always'"
-          size="small"
-          disabled-y
-        >
-          <OCard
-            v-for="(news, idx) in newsArr"
-            :key="idx"
-            cursor="pointer"
-            class="trend-card"
-            hoverable
-            :title="news.title"
-            :title-row="2"
-            :title-max-row="2"
-            :detail-max-row="2"
-            :detail="!lePadV ? news.summary : news.date"
-            :cover="`https://www.openeuler.org/${news.banner}`"
-            :cover-ratio="456 / 188"
-            :href="`/${news.path}`"
-            target="_blank"
-          >
-          </OCard>
-        </OScroller>
-      </OTabPane>
       <!-- 博客 -->
       <OTabPane v-if="blogArr.length" value="blog" :label="$t('home.blog')">
         <OScroller
@@ -150,6 +123,33 @@ watch(
                 {{ blog.author && blog.author[0] }}
               </p>
             </div>
+          </OCard>
+        </OScroller>
+      </OTabPane>
+      <!-- 新闻 -->
+      <OTabPane v-if="newsArr.length" value="news" :label="t('home.news')">
+        <OScroller
+          class="trend-scroller"
+          :show-type="lePadV ? 'never' : 'always'"
+          size="small"
+          disabled-y
+        >
+          <OCard
+            v-for="(news, idx) in newsArr"
+            :key="idx"
+            cursor="pointer"
+            class="trend-card"
+            hoverable
+            :title="news.title"
+            :title-row="2"
+            :title-max-row="2"
+            :detail-max-row="2"
+            :detail="!lePadV ? news.summary : news.date"
+            :cover="`https://www.openeuler.org/${news.banner}`"
+            :cover-ratio="456 / 188"
+            :href="`/${news.path}`"
+            target="_blank"
+          >
           </OCard>
         </OScroller>
       </OTabPane>

@@ -36,8 +36,8 @@ img {
 
 pre,
 code {
-  font-family: 'Helvetica', 'Arial', 'PingFang SC', 'Microsoft YaHei',
-    sans-serif;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
 }
 
 a {
@@ -77,9 +77,11 @@ ol,
 ul {
   list-style: none outside none;
 }
+
 .overflow {
   overflow: hidden;
 }
+
 .hm-t-container {
   display: none;
 }
