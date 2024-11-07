@@ -142,10 +142,6 @@ onUnmounted(() => {
       <ul class="content">
         <li class="case-list">
           <div class="left-content">
-            <img
-              :src="cases[activeTab].iconActive[theme]"
-              class="content-icon"
-            />
             <ORow gap="0" wrap="wrap">
               <OCol
                 flex="0 0 100%"
@@ -173,11 +169,6 @@ onUnmounted(() => {
           <OFigure :src="cases[activeTab].img" colorful class="right-img" />
         </li>
       </ul>
-      <!-- <div class="more-btn">
-        <OLink class="more" @click="moreLink(activeTab + 1)"
-          >{{ t('home.more') }}<OIcon><IconChevronRight /></OIcon
-        ></OLink>
-      </div> -->
     </div>
   </AppSection>
 </template>
@@ -200,7 +191,7 @@ onUnmounted(() => {
   align-items: center;
   @include text2;
   color: var(--o-color-info1);
-  padding: 7px 25px;
+  padding: 6px 48px;
   border-radius: var(--o-radius-xs);
   cursor: pointer;
   @include hover {
@@ -241,25 +232,12 @@ onUnmounted(() => {
 }
 .case-list {
   width: 52%;
-  margin-left: 40px;
-}
-.left-content {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
+  margin-left: 48px;
   padding: 32px 0 40px;
-  .o-row {
-    width: 100%;
-  }
   .o-divider {
     --o-divider-gap: 24px 0 24px;
     --o-divider-color: rgba(var(--o-mixedgray-14), 0.1);
   }
-}
-.content-icon {
-  width: 48px;
-  margin-right: 16px;
-  flex-shrink: 0;
 }
 .item-case {
   cursor: pointer;
@@ -308,24 +286,10 @@ onUnmounted(() => {
   min-width: 0;
 }
 
-.more-btn {
-  text-align: center;
-  margin-top: 40px;
-}
-.more {
-  @include tip1;
-  --link-color-hover: var(--o-color-primary1);
-  :deep(.o-link-label) {
-    display: flex;
-    align-items: center;
-  }
-  .o-icon {
-    --icon-size: 16px;
-    margin-left: 4px;
-  }
-}
-
 @include respond-to('laptop') {
+  .item-tab {
+    padding: 6px 16px;
+  }
   .content {
     height: 387px;
     margin-top: 24px;
@@ -333,14 +297,13 @@ onUnmounted(() => {
       width: 12px;
     }
   }
-  .left-content {
+  .case-list {
+    width: 52%;
+    margin-left: 36px;
     padding: 24px 0 32px;
     .o-divider {
       --o-divider-gap: 16px 0 16px;
     }
-  }
-  .content-icon {
-    width: 45px;
   }
   .summary {
     margin-top: 8px;
@@ -355,16 +318,19 @@ onUnmounted(() => {
 }
 
 @include respond-to('<=pad') {
+  .tab-list {
+    padding: 4px;
+  }
   .item-tab {
-    padding: 7px 12px;
+    padding: 4px 20px;
   }
   .case-list {
     width: 48%;
-    margin-left: 30px;
-  }
-  .content-icon {
-    width: 36px;
-    margin-right: 12px;
+    margin-left: 36px;
+    padding: 24px 0;
+    .o-divider {
+      --o-divider-gap: 12px 0 12px;
+    }
   }
   .case-img {
     width: 40%;
@@ -378,12 +344,6 @@ onUnmounted(() => {
     margin-top: 24px;
     &::after {
       width: 12px;
-    }
-  }
-  .left-content {
-    padding: 24px 0;
-    .o-divider {
-      --o-divider-gap: 12px 0 12px;
     }
   }
   .summary {
@@ -400,7 +360,7 @@ onUnmounted(() => {
     margin-right: 4px;
   }
   .case-img {
-    width: 48%;
+    width: 47%;
     margin-left: auto;
   }
   .right-img {
@@ -414,18 +374,12 @@ onUnmounted(() => {
     }
   }
   .case-list {
-    width: 46%;
+    width: 47%;
     margin-left: 16px;
-  }
-  .left-content {
     padding: 12px 0;
     .o-divider {
       --o-divider-gap: 12px 0 12px;
     }
-  }
-  .content-icon {
-    width: 32px;
-    margin-right: 8px;
   }
   .item-title {
     .company {
@@ -493,12 +447,7 @@ onUnmounted(() => {
   .case-list {
     width: 100%;
     margin-left: 8px;
-  }
-  .left-content {
     padding: 12px 0;
-    .o-row {
-      width: 100%;
-    }
     .o-divider {
       --o-divider-gap: 12px 0 12px;
       --o-divider-color: rgba(var(--o-mixedgray-14), 0.1);
@@ -525,16 +474,6 @@ onUnmounted(() => {
     padding: 0 16px 0 8px;
     @include text1;
     margin-top: 2px;
-  }
-  .content-icon {
-    display: none;
-  }
-
-  .more-btn {
-    margin-top: 12px;
-  }
-  .more {
-    @include text2;
   }
 }
 
