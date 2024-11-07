@@ -1,11 +1,16 @@
 <script setup lang="ts">
-import { isArray } from '@opensig/opendesign';
+import { isArray, OLink } from '@opensig/opendesign';
+
+import OIcon from 'opendesign/icon/OIcon.vue';
+import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 
 interface SectionPropsT {
   title?: string | Array<string>;
   subtitle?: string;
   full?: boolean;
   headerJustifyCenter?: boolean;
+  footer?: string;
+  footerHref?: string;
 }
 
 const props = withDefaults(defineProps<SectionPropsT>(), {
@@ -13,6 +18,8 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
   subtitle: undefined,
   full: false,
   headerJustifyCenter: true,
+  footer: undefined,
+  footerHref: undefined,
 });
 </script>
 
@@ -52,6 +59,18 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
         <div v-if="$slots.default" class="section-body">
           <slot></slot>
         </div>
+
+        <!-- footer -->
+        <div v-if="$slots.footer || props.footer" class="section-footer">
+          <slot name="footer">
+            <OLink :href="props.footerHref" target="_blank">
+              {{ props.footer }}
+              <template #suffix>
+                <OIcon><IconChevronRight /> </OIcon>
+              </template>
+            </OLink>
+          </slot>
+        </div>
       </slot>
     </div>
   </div>
@@ -64,11 +83,13 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
     padding: 0 var(--layout-content-padding);
     margin: var(--o-gap-section) auto 0;
   }
+
   &:last-child {
     .section-wrapper {
       padding-bottom: var(--o-gap-section);
     }
   }
+
   &.is-full {
     .section-wrapper {
       max-width: 100%;
@@ -84,6 +105,7 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
       }
     }
   }
+
   .section-title {
     display: flex;
     justify-content: center;
@@ -110,6 +132,20 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
 
   .section-body {
     margin-top: var(--o-gap-t2c);
+  }
+
+  .section-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+
+    @include respond-to('<=laptop') {
+      margin-top: 16px;
+    }
+
+    @include respond-to('phone') {
+      margin-top: 12px;
+    }
   }
 }
 </style>

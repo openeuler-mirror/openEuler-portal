@@ -108,7 +108,15 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <AppSection :title="t('home.case')" class="user-case" data-aos="fade-up">
+  <AppSection
+    :title="t('home.case')"
+    class="user-case"
+    data-aos="fade-up"
+    :footer="t('home.more')"
+    :footer-href="
+      `showcase/?industry=${activeTab + 1}`.replace(/(index)$/g, '')
+    "
+  >
     <div ref="userCase">
       <OScroller show-type="never">
         <div class="tab">
@@ -165,11 +173,11 @@ onUnmounted(() => {
           <OFigure :src="cases[activeTab].img" colorful class="right-img" />
         </li>
       </ul>
-      <div class="more-btn">
+      <!-- <div class="more-btn">
         <OLink class="more" @click="moreLink(activeTab + 1)"
           >{{ t('home.more') }}<OIcon><IconChevronRight /></OIcon
         ></OLink>
-      </div>
+      </div> -->
     </div>
   </AppSection>
 </template>

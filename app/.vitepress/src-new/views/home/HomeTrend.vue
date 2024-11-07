@@ -87,7 +87,12 @@ watch(
 </script>
 
 <template>
-  <AppSection :title="t('home.trend')" class="home-trend">
+  <AppSection
+    class="home-trend"
+    :title="t('home.trend')"
+    :footer="t('home.more')"
+    :footer-href="`/${locale}/interaction/${activeTab}-list/`"
+  >
     <OTab v-model="activeTab" variant="text" :line="false">
       <!-- 博客 -->
       <OTabPane v-if="blogArr.length" value="blog" :label="$t('home.blog')">
