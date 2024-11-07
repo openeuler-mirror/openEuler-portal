@@ -18,6 +18,10 @@ import developmentTool_en_mo from '~@/assets/category/home/intro/development-too
 import computingArch_icon_light from '~@/assets/category/home/intro/computing-arch_light.png';
 import coverAll_icon_light from '~@/assets/category/home/intro/cover-all_light.png';
 import developmentTool_icon_light from '~@/assets/category/home/intro/development-tool_light.png';
+
+import computingArch_icon_dark from '~@/assets/category/home/intro/computing-arch_dark.png';
+import coverAll_icon_dark from '~@/assets/category/home/intro/cover-all_dark.png';
+import developmentTool_icon_dark from '~@/assets/category/home/intro/development-tool_dark.png';
 export default [
   {
     title: {
@@ -36,7 +40,7 @@ export default [
     },
     icon: {
       light: computingArch_icon_light,
-      dark: computingArch_icon_light,
+      dark: computingArch_icon_dark,
     },
     description: '全量组件原子化，构建服务自助化',
   },
@@ -57,7 +61,7 @@ export default [
     },
     icon: {
       light: coverAll_icon_light,
-      dark: coverAll_icon_light,
+      dark: coverAll_icon_dark,
     },
     description: '一次开发，覆盖数字基础设施全场景',
   },
@@ -78,7 +82,7 @@ export default [
     },
     icon: {
       light: developmentTool_icon_light,
-      dark: developmentTool_icon_light,
+      dark: developmentTool_icon_dark,
     },
     description: '统一API跨多设备调用',
   },

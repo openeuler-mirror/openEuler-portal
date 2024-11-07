@@ -12,7 +12,10 @@ import AppSection from '~@/components/AppSection.vue';
 
 import introData from '~@/data/home/intro';
 
-import IconArrowRight from '~icons/app/icon-chevron-right.svg';
+import line from '~@/assets/category/home/intro/line.png';
+import circle from '~@/assets/category/home/intro/circle.png';
+import lineDark from '~@/assets/category/home/intro/line_dark.png';
+import circleDark from '~@/assets/category/home/intro/circle_dark.png';
 
 const { locale, isZh } = useLocale();
 const { isPhone, lePadV } = useScreen();
@@ -54,6 +57,10 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
               >
                 <div class="intro-list-icon">
                   <img :src="item.icon[theme]" alt="" />
+                  <img
+                    class="circle"
+                    :src="theme === 'light' ? circle : circleDark"
+                  />
                 </div>
                 <div
                   :class="[
@@ -70,35 +77,17 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
                     {{ item.description }}
                   </div>
                 </div>
+                <img
+                  class="line"
+                  :src="theme === 'light' ? line : lineDark"
+                  alt=""
+                />
               </div>
             </div>
             <div class="intro-img-pc">
               <img :src="imgSrc" alt="openEuler" />
             </div>
           </div>
-          <a
-            class="intro-button-pc"
-            :href="`/${locale}/community/contribution/detail.html`"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <OButton
-              :size="isPhone ? 'medium' : 'large'"
-              :style="{
-                '--btn-padding': 0,
-                '--btn-bg-color-hover': 'transparent',
-                '--btn-bg-color-active': 'transparent',
-              }"
-              variant="text"
-            >
-              {{ $t('home.introBtn') }}
-              <template #suffix>
-                <OIcon>
-                  <IconArrowRight></IconArrowRight>
-                </OIcon>
-              </template>
-            </OButton>
-          </a>
         </div>
       </div>
 
@@ -116,37 +105,13 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
           class="intro-card-mobile"
         >
           <template #title>
-            {{ item.title[locale] }}
+            <img :src="item.icon[theme]" alt="" /> {{ item.title[locale] }}
           </template>
           <div class="intro-img-mobile">
             <img :src="imgSrc" alt="openEuler" />
           </div>
         </OCollapseItem>
       </OCollapse>
-      <a
-        v-if="lePadV"
-        class="intro-button-mo"
-        :href="`/${locale}/community/contribution/detail.html`"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <OButton
-          :size="isPhone ? 'medium' : 'large'"
-          :style="{
-            '--btn-padding': 0,
-            '--btn-bg-color-hover': 'transparent',
-            '--btn-bg-color-active': 'transparent',
-          }"
-          variant="text"
-        >
-          {{ $t('home.introBtn') }}
-          <template #suffix>
-            <OIcon>
-              <IconArrowRight></IconArrowRight>
-            </OIcon>
-          </template>
-        </OButton>
-      </a>
     </div>
   </AppSection>
 </template>
@@ -169,24 +134,40 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
       position: relative;
       display: flex;
       flex-flow: column;
-      padding: 32px;
+      margin: 32px 32px 32px 18px;
       .intro-list-item {
         display: flex;
         align-items: center;
+        &:last-child {
+          .circle {
+            display: none;
+          }
+        }
         &:not(:last-child) {
           margin-bottom: 72px;
           @include respond-to('laptop') {
             margin-bottom: 56px;
-          }
-          @include respond-to('pad_h') {
-            margin-bottom: 24px;
           }
           @media screen and (max-width: 1000px) {
             margin-bottom: 16px;
           }
         }
         .intro-list-icon {
+          position: relative;
           width: 58px;
+          .circle {
+            position: absolute;
+            width: 16px;
+            bottom: -36px;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            @include respond-to('laptop') {
+              bottom: -28px;
+            }
+            @media screen and (max-width: 1000px) {
+              bottom: -18px;
+            }
+          }
           @include respond-to('laptop') {
             width: 52px;
           }
@@ -200,21 +181,31 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
             width: 100%;
           }
         }
+        .line {
+          position: absolute;
+          left: 29px;
+          width: 1px;
+          z-index: -1;
+          @include respond-to('laptop') {
+            left: 26px;
+          }
+          @include respond-to('pad_h') {
+            left: 25px;
+          }
+          @media screen and (max-width: 1000px) {
+            left: 14px;
+          }
+        }
       }
       @include respond-to('<=laptop') {
-        padding-right: 0;
       }
       @include respond-to('laptop') {
-        padding-left: calc(32px + 54px);
       }
       @include respond-to('pad_h') {
-        padding: 16px;
-        padding-left: calc(18px + 40px);
         margin-right: 16px;
       }
       @media screen and (max-width: 1000px) {
         padding: 0;
-        padding-left: calc(16px + 28px);
         margin-right: 16px;
       }
     }
@@ -288,14 +279,6 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
     .intro-info-pc-en {
       width: 266px;
     }
-    .intro-button-pc {
-      display: flex;
-      margin: auto;
-      margin-top: 32px;
-      justify-content: center;
-      align-items: center;
-      width: min-content;
-    }
   }
   .intro-mobile {
     margin-top: 12px;
@@ -303,9 +286,18 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
     .intro-card-mobile {
       overflow: hidden;
     }
+    :deep(.o-collapse-item-title) {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 12px;
+        width: 30px;
+      }
+    }
     .intro-img-mobile {
       img {
         width: 100%;
+        border-radius: var(--o-radius-s);
       }
     }
   }

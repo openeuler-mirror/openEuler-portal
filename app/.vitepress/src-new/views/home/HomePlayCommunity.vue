@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
+import { storeToRefs } from 'pinia';
+
 import { OButton, OIcon } from '@opensig/opendesign';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
+
+import { useCommon } from '@/stores/common';
 
 import { playCommunity, vitalityConfig } from '~@/data/home/play-community';
 
@@ -11,27 +15,23 @@ import { getStatistic } from '@/api/api-search';
 
 import logo from '~@/assets/category/home/play-community/logo.png';
 import floorBg from '~@/assets/category/home/play-community/floor-bg.png';
-import cube from '~@/assets/category/home/play-community/floor-element.png';
+import floorBgDark from '~@/assets/category/home/play-community/floor-bg_dark.png';
+import cube from '~@/assets/category/home/play-community/cube.png';
+import cubeDark from '~@/assets/category/home/play-community/cube_dark.png';
 import click from '~@/assets/category/home/play-community/click.png';
 import vitality from '~@/assets/category/home/play-community/vitality.svg';
+import blue from '~@/assets/category/home/play-community/blue_light.png';
+import blueDark from '~@/assets/category/home/play-community/blue_dark.png';
 import IconArrowRight from '~icons/app/icon-chevron-right.svg';
 
 import { type VitalityValueT } from '~@/@type/type-home';
 
 const { locale } = useLocale();
-const { lePadV } = useScreen();
+const { isPhone, lePadV, leLaptop } = useScreen();
 
 const vitalityData = ref<VitalityValueT>();
 
-// const btnSize = computed (() => {
-//   if (isPhone.value) {
-//     return ['32px', '0'];
-//   } else if (lePadV.value) {
-//     return ['32px', '0'];
-//   } else {
-//     return ['0', '0'];
-//   }
-// })
+const { theme } = storeToRefs(useCommon());
 
 onMounted(() => {
   getStatistic().then((res) => {
@@ -55,14 +55,15 @@ onMounted(() => {
     </i18n-t>
     <div class="play-intro">
       <p class="play-intro-text">{{ $t('home.playIntro') }}</p>
-      <a :href="`/${locale}/download/get-os/`" target="_blank">
+      <a class="get-os" :href="`/${locale}/download/get-os/`" target="_blank">
         <OButton
-          color="primary"
-          :size="lePadV ? 'medium' : 'large'"
+          :size="isPhone ? 'medium' : 'large'"
           variant="solid"
+          color="primary"
         >
           {{ $t('home.getOpenEuler') }}
         </OButton>
+        <img :src="theme === 'light' ? blue : blueDark" />
       </a>
     </div>
     <div class="play-cards">
@@ -76,7 +77,7 @@ onMounted(() => {
           </p>
           <div class="btn-box">
             <a :href="card.btn.link" target="_blank" rel="noopener noreferrer">
-              <OButton color="primary" :size="lePadV ? 'medium' : 'large'">
+              <OButton :size="lePadV ? 'medium' : 'large'" color="primary">
                 {{ card.btn.label }}
               </OButton>
             </a>
@@ -88,7 +89,6 @@ onMounted(() => {
             >
               <OButton
                 variant="text"
-                color="primary"
                 :size="lePadV ? 'medium' : 'large'"
                 :style="{
                   '--btn-padding': 0,
@@ -137,8 +137,7 @@ onMounted(() => {
       >
         <OButton
           variant="text"
-          color="primary"
-          :size="lePadV ? 'medium' : 'large'"
+          :size="leLaptop ? 'medium' : 'large'"
           :style="{
             '--btn-padding': 0,
             '--btn-color': 'var(--o-color-white)',
@@ -156,8 +155,8 @@ onMounted(() => {
         </OButton>
       </a>
     </div>
-    <img class="cube" :src="cube" />
-    <img class="floor-bg" :src="floorBg" />
+    <img class="cube" :src="theme === 'light' ? cube : cubeDark" />
+    <img class="floor-bg" :src="theme === 'light' ? floorBg : floorBgDark" />
   </div>
 </template>
 
@@ -224,11 +223,7 @@ onMounted(() => {
     border-bottom: 4px solid transparent;
     padding-bottom: 24px;
     border-image: linear-gradient(90deg, #95b2fb 0%, #002fa7 100%) 1;
-    @include respond-to('phone') {
-      flex-direction: column;
-      padding-bottom: 0;
-      border: none;
-    }
+
     @include respond-to('<=laptop') {
       .o-btn {
         flex-shrink: 0;
@@ -236,9 +231,16 @@ onMounted(() => {
       }
     }
     @include respond-to('<=pad_v') {
+      padding-bottom: 12px;
       .play-intro-text {
         max-width: 480px;
       }
+    }
+    @include respond-to('phone') {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 0;
+      border: none;
     }
 
     @include respond-to('phone') {
@@ -246,8 +248,14 @@ onMounted(() => {
         margin-left: 0;
         margin-top: 12px;
       }
-      .play-intro-text {
-        margin-top: 12px;
+    }
+    .get-os {
+      position: relative;
+      img {
+        top: -150%;
+        left: -50%;
+        position: absolute;
+        width: 330px;
       }
     }
   }
@@ -258,13 +266,14 @@ onMounted(() => {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
     @include respond-to('<=laptop') {
+      margin-top: 24px;
       gap: 24px;
     }
     @include respond-to('<=pad_v') {
+      margin-top: 12px;
       gap: 16px;
     }
     @include respond-to('phone') {
-      margin-top: 12px;
       grid-template-columns: repeat(1, 1fr);
       gap: 12px;
     }
@@ -336,6 +345,7 @@ onMounted(() => {
     width: 100%;
     color: var(--o-color-white);
     background-size: 100% 100%;
+    border-radius: var(--o-radius-xs);
     background-image: url(~@/assets/category/home/play-community/vitality-bg_light.png);
     @include respond-to('<=laptop') {
       margin-top: 24px;
@@ -352,6 +362,7 @@ onMounted(() => {
       padding: 12px 16px;
       flex-direction: column;
       margin-top: 12px;
+      background-image: url(~@/assets/category/home/play-community/vitality-bg_light_mo.png);
     }
     .vitality-text {
       display: flex;
@@ -370,10 +381,9 @@ onMounted(() => {
         }
       }
       @include respond-to('<=pad_v') {
-        justify-content: space-between;
         width: 100%;
         img {
-          width: 32px;
+          width: 24px;
         }
       }
     }
@@ -410,7 +420,7 @@ onMounted(() => {
         }
         @include respond-to('<=pad_v') {
           padding-left: 16px;
-          margin-left: 24px;
+          margin-left: 32px;
           &:nth-child(1) {
             margin-left: 0;
             padding-left: 0;
@@ -421,6 +431,9 @@ onMounted(() => {
           &::before {
             left: -2px;
           }
+        }
+        @media screen and (max-width: 560px) {
+          margin-left: 24px;
         }
         @media (min-width: 470px) and (max-width: 520px) {
           &:nth-child(4) {
@@ -454,13 +467,26 @@ onMounted(() => {
             }
           }
         }
-        @media screen and (max-width: 430px) {
+        @media (min-width: 370px) and (max-width: 430px) {
           &:nth-child(4),
           &:nth-child(5) {
             margin-top: 12px;
           }
           &:nth-child(3) {
             margin-right: 50px;
+          }
+          &:nth-child(4) {
+            margin-left: 0;
+            padding-left: 0;
+            &::before {
+              display: none;
+            }
+          }
+        }
+        @media screen and (max-width: 369px) {
+          &:nth-child(4),
+          &:nth-child(5) {
+            margin-top: 12px;
           }
           &:nth-child(4) {
             margin-left: 0;
@@ -507,6 +533,11 @@ onMounted(() => {
       top: -74px;
       left: -30px;
     }
+    @include respond-to('phone') {
+      width: 46px;
+      top: -20px;
+      left: -12px;
+    }
   }
   .floor-bg {
     position: absolute;
@@ -522,6 +553,14 @@ onMounted(() => {
   }
 }
 [data-o-theme='dark'] {
+  .home-play-community {
+    .vitality {
+      background-image: url(~@/assets/category/home/play-community/vitality-bg_dark_pc.png);
+      @include respond-to('<=pad_v') {
+        background-image: url(~@/assets/category/home/play-community/vitality-bg_dark_mo.png);
+      }
+    }
+  }
   .click-bg {
     opacity: 0.2;
   }
