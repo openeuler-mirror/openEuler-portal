@@ -22239,6 +22239,25 @@
         "downloadLink": "inbox"  
     },
     {
+      "vendorID": "无锡海普存储科技有限公司",
+      "deviceID": "N:1:0:1",
+      "svID": "HPD3104T0T103T8000，HP6U75A23700D3BP",
+      "ssID": "NA",
+      "architecture": "aarch64",
+      "os": "openEuler 22.03 LTS SP4",
+      "driverName": "NA",
+      "version": "NA",
+      "type": "SSD",
+      "date": "2024/09/04",
+      "sha256": "NA",
+      "driverSize": "NA",
+      "chipVendor": "SK Hynix",
+      "boardModel": "HPD3104T0T103T8000",
+      "chipModel": "H25T2TC88535",
+      "item": "",
+      "downloadLink": "inbox"
+    },
+    {
         "vendorID": "8088",
         "deviceID": "1001",
         "svID": "8088",
