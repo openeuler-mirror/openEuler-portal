@@ -77,10 +77,6 @@ export default {
         link: '/zh/interaction/summit-list/summit2022/',
       },
       {
-        name: '湖南欧拉操作系统生态大会',
-        link: '/zh/interaction/summit-list/summit2022-changsha/',
-      },
-      {
         name: 'openEuler Developer Day 2022',
         link: 'https://v1.openeuler.org/zh/interaction/summit-list/devday2022/',
       },
