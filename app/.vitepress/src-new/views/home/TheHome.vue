@@ -65,7 +65,9 @@ onMounted(() => {
     </ContentWrapper>
     <HomeShowCase @result="isResult = true" />
     <HomeTrend :is-result="isResult" />
-    <HomePartner />
+    <ClientOnly>
+      <HomePartner />
+    </ClientOnly>
   </div>
 </template>
 
@@ -92,8 +94,11 @@ onMounted(() => {
     #f3f3f5 0%,
     #dae1f2 40%,
     #ebeffc 79%,
-    #f3f3f5 100%
+    #f5f6f8 100%
   );
+  background-position: 0 480px;
+  background-size: 100% 60%;
+  background-repeat: no-repeat;
 }
 [data-o-theme='dark'] {
   .home {

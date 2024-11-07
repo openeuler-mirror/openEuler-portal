@@ -203,6 +203,9 @@ onUnmounted(() => {
   padding: 7px 25px;
   border-radius: var(--o-radius-xs);
   cursor: pointer;
+  @include hover {
+    color: var(--o-color-primary1);
+  }
 }
 .nav-item-icon {
   width: 24px;
@@ -220,7 +223,6 @@ onUnmounted(() => {
   background-image: url('~@/assets/category/home/case/light/bg.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
   border-radius: var(--o-radius-xs);
   margin-top: 32px;
   position: relative;
@@ -296,6 +298,7 @@ onUnmounted(() => {
 .case-img {
   width: 48%;
   margin-left: 72px;
+  text-align: center;
 }
 .right-img {
   width: 550px;
@@ -311,6 +314,7 @@ onUnmounted(() => {
 }
 .more {
   @include tip1;
+  --link-color-hover: var(--o-color-primary1);
   :deep(.o-link-label) {
     display: flex;
     align-items: center;
@@ -322,8 +326,31 @@ onUnmounted(() => {
 }
 
 @include respond-to('laptop') {
+  .content {
+    height: 387px;
+    margin-top: 24px;
+    &::after {
+      width: 12px;
+    }
+  }
+  .left-content {
+    padding: 24px 0 32px;
+    .o-divider {
+      --o-divider-gap: 16px 0 16px;
+    }
+  }
+  .content-icon {
+    width: 45px;
+  }
+  .summary {
+    margin-top: 8px;
+  }
+  .case-img {
+    width: 36%;
+    margin-left: 220px;
+  }
   .right-img {
-    width: 520px;
+    width: 100%;
   }
 }
 
@@ -331,48 +358,63 @@ onUnmounted(() => {
   .item-tab {
     padding: 7px 12px;
   }
+  .case-list {
+    width: 48%;
+    margin-left: 30px;
+  }
+  .content-icon {
+    width: 36px;
+    margin-right: 12px;
+  }
   .case-img {
-    margin-left: 36px;
+    width: 40%;
+    margin-left: auto;
   }
   .right-img {
-    width: 375px;
+    width: 100%;
   }
   .content {
-    height: 388px;
+    height: 347px;
     margin-top: 24px;
     &::after {
       width: 12px;
     }
   }
-  .case-list {
-    margin-left: 32px;
-  }
   .left-content {
     padding: 24px 0;
     .o-divider {
-      --o-divider-gap: 16px 0 16px;
+      --o-divider-gap: 12px 0 12px;
     }
+  }
+  .summary {
+    margin-top: 8px;
   }
 }
 
 @include respond-to('<=pad_v') {
   .item-tab {
-    padding: 7px 12px;
+    padding: 4px 12px;
+  }
+  .nav-item-icon {
+    width: 16px;
+    margin-right: 4px;
   }
   .case-img {
-    margin-left: 24px;
+    width: 48%;
+    margin-left: auto;
   }
   .right-img {
-    width: 375px;
+    width: 100%;
   }
   .content {
-    height: 300px;
+    height: 299px;
     margin-top: 16px;
     &::after {
       width: 8px;
     }
   }
   .case-list {
+    width: 46%;
     margin-left: 16px;
   }
   .left-content {
@@ -395,10 +437,7 @@ onUnmounted(() => {
   }
 }
 
-@include respond-to('phone') {
-  .title {
-    margin-bottom: 12px;
-  }
+@media screen and (max-width: 700px) {
   .tab {
     height: 26px;
   }
@@ -421,7 +460,7 @@ onUnmounted(() => {
     display: none;
   }
   .item-tab-active {
-    color: var(--o-color-info1);
+    color: var(--o-color-primary1);
     background-color: transparent;
     box-shadow: none;
     position: relative;
@@ -434,12 +473,18 @@ onUnmounted(() => {
       left: 50%;
       transform: translateX(-50%);
       bottom: -4px;
-      background-color: var(--o-color-black);
+      background-color: var(--o-color-primary1);
       border-radius: 1px;
     }
   }
+}
+
+@include respond-to('phone') {
+  .title {
+    margin-bottom: 12px;
+  }
   .content {
-    height: 264px;
+    height: 267px;
     margin-top: 16px;
     &::after {
       width: 8px;
@@ -457,6 +502,14 @@ onUnmounted(() => {
     .o-divider {
       --o-divider-gap: 12px 0 12px;
       --o-divider-color: rgba(var(--o-mixedgray-14), 0.1);
+    }
+  }
+  .item-link {
+    &:hover {
+      color: var(--o-color-info2);
+    }
+    &:active {
+      color: var(--o-color-info2);
     }
   }
   .item-title {
@@ -493,6 +546,10 @@ onUnmounted(() => {
     color: var(--o-color-primary1);
     background-color: #353539;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  }
+  .more {
+    --link-color: var(--o-color-info1);
+    --link-color-hover: #4374f2;
   }
   @include respond-to('phone') {
     .tab {
