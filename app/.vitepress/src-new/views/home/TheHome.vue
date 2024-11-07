@@ -53,18 +53,19 @@ onMounted(() => {
   <div class="home">
     <HomeBanner />
     <ContentWrapper :vertical-padding="verticalPadding">
-      <HomeDisplayZone class="home-display-zone" />
+      <HomeDisplayZone data-aos="fade-up" class="home-display-zone" />
     </ContentWrapper>
-    <HomeIntro />
+    <HomeIntro data-aos="fade-up" />
     <ContentWrapper :vertical-padding="['0', '0']">
-      <HomePlayCommunity />
+      <HomePlayCommunity data-aos="fade-up" />
       <HomeCalendar
+        data-aos="fade-up"
         v-if="isZh && calendarData?.length"
         :table-data="calendarData"
       />
     </ContentWrapper>
-    <HomeShowCase @result="isResult = true" />
-    <HomeTrend :is-result="isResult" />
+    <HomeShowCase data-aos="fade-up" @result="isResult = true" />
+    <HomeTrend data-aos="fade-up" :is-result="isResult" />
     <ClientOnly>
       <HomePartner />
     </ClientOnly>

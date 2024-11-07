@@ -45,7 +45,7 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
 
 <template>
   <AppSection :title="$t('home.introTitle')" class="home-intro">
-    <div data-aos="fade-up" class="intro-container" :level-index="1">
+    <div class="intro-container" :level-index="1">
       <div v-if="!lePadV" class="intro-pc">
         <div class="intro-card-pc">
           <div class="intro-content-pc">

@@ -14,7 +14,7 @@ import {
   OCollapse,
   OCollapseItem,
   OTab,
-  OButton,
+  OLink,
   OTabPane,
   ODivider,
 } from '@opensig/opendesign';
@@ -28,6 +28,8 @@ import IconAll from '~icons/home/icon-all.svg';
 import IconEvent from '~icons/home/icon-event.svg';
 import IconSummit from '~icons/home/icon-summit.svg';
 import IconMeet from '~icons/home/icon-meet.svg';
+
+import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 import notFoundImg_light from '@/assets/illustrations/404.png';
 import notFoundImg_dark from '@/assets/illustrations/404_dark.png';
 import cubeOne from '~@/assets/category/home/calendar/cube-1.png';
@@ -313,7 +315,7 @@ const watchData = watch(
                     getSummitHighlight(data.day)
                   "
                 >
-                  <IconMeet></IconMeet>
+                  <IconSummit></IconSummit>
                 </OIcon>
               </div>
             </div>
@@ -390,25 +392,12 @@ const watchData = watch(
                       {{ item.activity_type }}
                     </div>
                   </div>
-                  <a :href="item.url" target="_blank" rel="noopener noreferrer">
-                    <OButton
-                      v-if="item.start_date"
-                      variant="text"
-                      size="small"
-                      :style="{
-                        '--btn-padding': 0,
-                        '--btn-bg-color-hover': 'transparent',
-                        '--btn-bg-color-active': 'transparent',
-                      }"
-                    >
-                      {{ i18n.LEARN_MORE }}
-                      <template #suffix>
-                        <OIcon>
-                          <IconRight></IconRight>
-                        </OIcon>
-                      </template>
-                    </OButton>
-                  </a>
+                  <OLink v-if="item.type" :href="item.url" target="_blank">
+                    {{ i18n.LEARN_MORE }}
+                    <template #suffix>
+                      <OIcon><IconChevronRight /> </OIcon>
+                    </template>
+                  </OLink>
                 </template>
                 <div class="calendar-info">
                   <template v-for="keys in detailItem" :key="keys.key">
@@ -474,6 +463,9 @@ const watchData = watch(
 .event {
   background-color: #ffa122;
   z-index: 1;
+}
+.o-link {
+  --link-icon-size: 16px;
 }
 .home-calendar {
   position: relative;
@@ -559,7 +551,18 @@ const watchData = watch(
         }
       }
       .el-calendar__body {
+        padding: 12px 24px 32px;
         border-right: 1px solid var(--o-color-control4);
+        td:first-child {
+          .el-calendar-day {
+            margin-left: 0 !important;
+          }
+        }
+        tr:last-child {
+          .el-calendar-day {
+            margin-bottom: 0 !important;
+          }
+        }
         @include respond-to('<=pad_v') {
           border: none;
           padding: 0 16px 16px;
@@ -590,8 +593,8 @@ const watchData = watch(
       }
       .el-calendar-day {
         padding: 0;
-        padding-left: 8px;
-        padding-bottom: 8px;
+        margin-left: 8px;
+        margin-bottom: 8px;
         max-width: 100px;
         height: 64px;
         color: var(--o-color-info1);
@@ -608,11 +611,11 @@ const watchData = watch(
           padding: 8px 12px;
           width: 100%;
           height: 100%;
-          background-color: var(--o-color-primary4-light);
+          background-color: var(--o-color-control2-light);
           border: 1px solid transparent;
           @include tip1;
           @include hover {
-            background-color: var(--o-color-primary1-light);
+            background-color: var(--o-color-control3-light);
             @include respond-to('<=pad_v') {
               @include hover {
                 background-color: inherit;
@@ -674,7 +677,7 @@ const watchData = watch(
       }
       .is-selected {
         .out-box {
-          background-color: var(--o-color-primary1-light);
+          background-color: var(--o-color-control3-light);
           border: 1px solid var(--o-color-primary1);
           @include respond-to('<=pad_v') {
             background-color: transparent;
@@ -716,7 +719,7 @@ const watchData = watch(
             transform: translate(-50%, -50%);
             width: $size;
             height: $size;
-            background-color: var(--o-color-control1-light);
+            background-color: var(--o-color-control3-light);
             border-radius: 50%;
             z-index: -1;
           }
@@ -814,7 +817,9 @@ const watchData = watch(
           @include tip1;
         }
       }
-      .o-btn {
+      .o-link {
+        font-size: var(--o-font_size-tip1);
+        line-height: var(--o-line_height-tip1);
         margin-left: calc($icon-size + 12px);
       }
     }
@@ -843,6 +848,30 @@ const watchData = watch(
       }
     }
     :deep(.o-collapse) {
+      .o-collapse-item {
+        position: relative;
+        border-top: none;
+        &::after {
+          position: absolute;
+          content: '';
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: calc(100% - 2 * 24px);
+          height: 1px;
+          background-color: var(--collapse-division-color);
+        }
+        @include respond-to('<=pad_v') {
+          &::after {
+            width: calc(100% - 2 * 16px);
+          }
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
       .o-collapse-item-icon {
         height: min-content;
       }
@@ -891,6 +920,13 @@ const watchData = watch(
   left: -140px;
   width: 320px;
   z-index: -1;
+  @include respond-to('laptop') {
+    width: 327px;
+    top: -84px;
+    left: -210px;
+  }
+  @include respond-to('pad_h') {
+  }
   @include respond-to('<=pad_v') {
     width: 84px;
     top: -14px;
@@ -908,6 +944,11 @@ const watchData = watch(
   width: 325px;
   bottom: -160px;
   right: -252px;
+  @include respond-to('laptop') {
+    width: 327px;
+    bottom: -160px;
+    right: -80px;
+  }
   @include respond-to('<=pad_v') {
     width: 71px;
     bottom: -40px;

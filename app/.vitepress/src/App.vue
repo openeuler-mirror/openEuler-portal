@@ -91,7 +91,7 @@ onMounted(() => {
   </el-config-provider>
   <CookieNotice />
   <ClientOnly>
-    <AppFooter />
+    <AppFooter :lang="lang" />
   </ClientOnly>
 </template>
 
