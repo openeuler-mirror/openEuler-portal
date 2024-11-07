@@ -69,8 +69,8 @@ interface TitleItemT {
 
 const tipsObj: TitleItemT = {
   '/en/': TITLES2[0],
-  '/download/get-os/': TITLES2[1],
   '/download/': TITLES2[2],
+  '/download/get-os/': TITLES2[1],
   '/download/commercial-release/': TITLES2[3],
   '/mirror/list/': TITLES2[4],
   '/interaction/live-list/': TITLES2[5],
@@ -307,7 +307,7 @@ onMounted(() => {
   watch(
     () => router.route.path,
     () => {
-      if (router.route.path === '/zh/') {
+      if (router.route.path === '/en/') {
         isFloatTipShow.value = true;
         setTimeout(() => {
           isFloatTipShow.value = false;
@@ -737,6 +737,11 @@ watch(
 
         .icon-cancel {
           @include h4;
+          transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+
+          @include hover {
+            transform: rotate(180deg);
+          }
         }
       }
 
@@ -890,11 +895,11 @@ watch(
             position: relative;
 
             @include hover {
-              border: 1px solid var(--o-color-control2);
+              border: 1px solid var(--o-color-primary1);
             }
 
             &.is-focus {
-              border: 1px solid var(--o-color-control2);
+              border: 1px solid var(--o-color-primary1);
             }
 
             textarea {
