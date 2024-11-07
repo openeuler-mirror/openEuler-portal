@@ -3,8 +3,7 @@ export default {
   introTitle: 'An open source OS for digital infrastructure',
   introBtn: 'Try Now',
   playCommunity: 'Explore {openEuler} Community {click}',
-  playIntro:
-    'Download openEuler now and explore its robust features!',
+  playIntro: 'Download openEuler now and explore its robust features!',
   getOpenEuler: 'Get openEuler',
   communityVitality: 'Community Vitality',
   viewDetails: 'Learn More',
@@ -15,5 +14,5 @@ export default {
   case: 'Success Stories',
   more: 'View More',
   publisher: 'Vendors with openEuler-based Commercial Editions',
-  publisherTips: 'listed in alphabetical order',
+  publisherTips: 'Listed in no particular order',
 };

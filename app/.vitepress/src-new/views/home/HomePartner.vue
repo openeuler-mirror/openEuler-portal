@@ -13,6 +13,7 @@ const publisher3 = publisher.slice(16);
   <AppSection
     class="home-partner"
     :title="$t('home.publisher')"
+    :full="true"
     data-aos="fade-up"
   >
     <HomeSwiper :data="publisher1" class="partner-swiper"></HomeSwiper>

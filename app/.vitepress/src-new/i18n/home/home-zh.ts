@@ -15,5 +15,5 @@ export default {
   case: '用户案例',
   more: '查看更多',
   publisher: '发行厂商',
-  publisherTips: '注：排名不分先后，按首字母排序',
+  publisherTips: '注：排名不分先后',
 };
