@@ -1,0 +1,2697 @@
+{
+  "white": {
+    "name": "白色",
+    "type": "palette",
+    "typeName": "颜色",
+    "value": [
+      {
+        "key": "white",
+        "value": {
+          "light": "255, 255, 255",
+          "dark": "255, 255, 255"
+        }
+      }
+    ]
+  },
+  "black": {
+    "name": "黑色",
+    "type": "palette",
+    "typeName": "颜色",
+    "value": [
+      {
+        "key": "black",
+        "value": {
+          "light": "0, 0, 0",
+          "dark": "0, 0, 0"
+        }
+      }
+    ]
+  },
+  "kleinblue": {
+    "name": "品牌色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "kleinblue-1",
+        "value": {
+          "light": "235, 241, 250",
+          "dark": "14, 26, 69"
+        }
+      },
+      {
+        "key": "kleinblue-2",
+        "value": {
+          "light": "206, 219, 245",
+          "dark": "18, 34, 87"
+        }
+      },
+      {
+        "key": "kleinblue-3",
+        "value": {
+          "light": "132, 161, 220",
+          "dark": "29, 51, 119"
+        }
+      },
+      {
+        "key": "kleinblue-4",
+        "value": {
+          "light": "81, 119, 202",
+          "dark": "42, 72, 158"
+        }
+      },
+      {
+        "key": "kleinblue-5",
+        "value": {
+          "light": "37, 81, 185",
+          "dark": "51, 91, 196"
+        }
+      },
+      {
+        "key": "kleinblue-6",
+        "value": {
+          "light": "0, 47, 167",
+          "dark": "67, 116, 242"
+        }
+      },
+      {
+        "key": "kleinblue-7",
+        "value": {
+          "light": "0, 39, 147",
+          "dark": "104, 142, 237 "
+        }
+      },
+      {
+        "key": "kleinblue-8",
+        "value": {
+          "light": "0, 31, 126",
+          "dark": "140, 171, 234"
+        }
+      },
+      {
+        "key": "kleinblue-9",
+        "value": {
+          "light": "0, 24, 126",
+          "dark": "176, 199, 241"
+        }
+      },
+      {
+        "key": "kleinblue-10",
+        "value": {
+          "light": "0, 18, 85",
+          "dark": "215, 227, 248"
+        }
+      }
+    ]
+  },
+  "yellow": {
+    "name": "黄色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "yellow-1",
+        "value": {
+          "light": "254, 252, 233",
+          "dark": "81, 46, 9"
+        }
+      },
+      {
+        "key": "yellow-2",
+        "value": {
+          "light": "252, 248, 202",
+          "dark": "121, 75, 15"
+        }
+      },
+      {
+        "key": "yellow-3",
+        "value": {
+          "light": "249, 237, 149",
+          "dark": "161, 107, 22"
+        }
+      },
+      {
+        "key": "yellow-4",
+        "value": {
+          "light": "246, 224, 98",
+          "dark": "202, 143, 30"
+        }
+      },
+      {
+        "key": "yellow-5",
+        "value": {
+          "light": "243, 207, 49",
+          "dark": "242, 183, 38"
+        }
+      },
+      {
+        "key": "yellow-6",
+        "value": {
+          "light": "240, 188, 6",
+          "dark": "245, 202, 80"
+        }
+      },
+      {
+        "key": "yellow-7",
+        "value": {
+          "light": "200, 147, 0",
+          "dark": "247, 219, 122"
+        }
+      },
+      {
+        "key": "yellow-8",
+        "value": {
+          "light": "160, 109, 0",
+          "dark": "250, 234, 166"
+        }
+      },
+      {
+        "key": "yellow-9",
+        "value": {
+          "light": "120, 76, 0",
+          "dark": "252, 246, 210"
+        }
+      },
+      {
+        "key": "yellow-10",
+        "value": {
+          "light": "80, 47, 0",
+          "dark": "254, 251, 237"
+        }
+      }
+    ]
+  },
+  "orange": {
+    "name": "橘红色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "orange-1",
+        "value": {
+          "light": "255, 246, 232",
+          "dark": "77, 24, 0"
+        }
+      },
+      {
+        "key": "orange-2",
+        "value": {
+          "light": "254, 226, 186",
+          "dark": "120, 42, 1"
+        }
+      },
+      {
+        "key": "orange-3",
+        "value": {
+          "light": "253, 202, 140",
+          "dark": "163, 68, 8"
+        }
+      },
+      {
+        "key": "orange-4",
+        "value": {
+          "light": "252, 176, 95",
+          "dark": "207, 97, 19"
+        }
+      },
+      {
+        "key": "orange-5",
+        "value": {
+          "light": "251, 147, 50",
+          "dark": "250, 130, 33"
+        }
+      },
+      {
+        "key": "orange-6",
+        "value": {
+          "light": "250, 115, 5",
+          "dark": "251, 143, 43"
+        }
+      },
+      {
+        "key": "orange-7",
+        "value": {
+          "light": "207, 88, 3",
+          "dark": "252, 174, 91"
+        }
+      },
+      {
+        "key": "orange-8",
+        "value": {
+          "light": "163, 64, 2",
+          "dark": "253, 202, 139"
+        }
+      },
+      {
+        "key": "orange-9",
+        "value": {
+          "light": "120, 42, 1",
+          "dark": "254, 227, 188"
+        }
+      },
+      {
+        "key": "orange-10",
+        "value": {
+          "light": "77, 24, 0",
+          "dark": "255, 248, 237"
+        }
+      }
+    ]
+  },
+  "red": {
+    "name": "红色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "red-1",
+        "value": {
+          "light": "255, 234, 232",
+          "dark": "77, 0, 17"
+        }
+      },
+      {
+        "key": "red-2",
+        "value": {
+          "light": "250, 185, 182",
+          "dark": "115, 3, 24"
+        }
+      },
+      {
+        "key": "red-3",
+        "value": {
+          "light": "245, 136, 134",
+          "dark": "153, 9, 31"
+        }
+      },
+      {
+        "key": "red-4",
+        "value": {
+          "light": "240, 87, 90",
+          "dark": "192, 17, 37"
+        }
+      },
+      {
+        "key": "red-5",
+        "value": {
+          "light": "235, 43, 52",
+          "dark": "230, 28, 43"
+        }
+      },
+      {
+        "key": "red-6",
+        "value": {
+          "light": "230, 0, 18",
+          "dark": "235, 35, 45"
+        }
+      },
+      {
+        "key": "red-7",
+        "value": {
+          "light": "192, 0, 22",
+          "dark": "240, 82, 85"
+        }
+      },
+      {
+        "key": "red-8",
+        "value": {
+          "light": "153, 0, 23",
+          "dark": "245, 132, 130"
+        }
+      },
+      {
+        "key": "red-9",
+        "value": {
+          "light": "115, 0, 21",
+          "dark": "250, 183, 180"
+        }
+      },
+      {
+        "key": "red-10",
+        "value": {
+          "light": "77, 0, 17",
+          "dark": "255, 234, 232"
+        }
+      }
+    ]
+  },
+  "green": {
+    "name": "绿色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "green-1",
+        "value": {
+          "light": "232, 255, 238",
+          "dark": "0, 77, 42"
+        }
+      },
+      {
+        "key": "green-2",
+        "value": {
+          "light": "177, 239, 195",
+          "dark": "2, 102, 53"
+        }
+      },
+      {
+        "key": "green-3",
+        "value": {
+          "light": "128, 224, 158",
+          "dark": "10, 127, 66"
+        }
+      },
+      {
+        "key": "green-4",
+        "value": {
+          "light": "84, 208, 127",
+          "dark": "22, 152, 80"
+        }
+      },
+      {
+        "key": "green-5",
+        "value": {
+          "light": "45, 193, 101",
+          "dark": "36, 177, 95"
+        }
+      },
+      {
+        "key": "green-6",
+        "value": {
+          "light": "11, 177, 81",
+          "dark": "51, 193, 104"
+        }
+      },
+      {
+        "key": "green-7",
+        "value": {
+          "light": "7, 152, 72",
+          "dark": "90, 208, 131"
+        }
+      },
+      {
+        "key": "green-8",
+        "value": {
+          "light": "4, 127, 63",
+          "dark": "135, 224, 163"
+        }
+      },
+      {
+        "key": "green-9",
+        "value": {
+          "light": "2, 102, 53",
+          "dark": "185, 239, 200"
+        }
+      },
+      {
+        "key": "green-10",
+        "value": {
+          "light": "0, 77, 42",
+          "dark": "240, 255, 244"
+        }
+      }
+    ]
+  },
+  "amber": {
+    "name": "琥珀色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "amber-1",
+        "value": {
+          "light": "253, 247, 232",
+          "dark": "77, 30, 0"
+        }
+      },
+      {
+        "key": "amber-2",
+        "value": {
+          "light": "250, 237, 200",
+          "dark": "116, 51, 0"
+        }
+      },
+      {
+        "key": "amber-3",
+        "value": {
+          "light": "245, 215, 147",
+          "dark": "154, 76, 0"
+        }
+      },
+      {
+        "key": "amber-4",
+        "value": {
+          "light": "241, 191, 96",
+          "dark": "193, 105, 0"
+        }
+      },
+      {
+        "key": "amber-5",
+        "value": {
+          "light": "236, 165, 47",
+          "dark": "231, 137, 0"
+        }
+      },
+      {
+        "key": "amber-6",
+        "value": {
+          "light": "231, 137, 0",
+          "dark": "236, 165, 47"
+        }
+      },
+      {
+        "key": "amber-7",
+        "value": {
+          "light": "193, 105, 0",
+          "dark": "241, 191, 96"
+        }
+      },
+      {
+        "key": "amber-8",
+        "value": {
+          "light": "154, 76, 0",
+          "dark": "245, 215, 147"
+        }
+      },
+      {
+        "key": "amber-9",
+        "value": {
+          "light": "116, 51, 0",
+          "dark": "250, 237, 200"
+        }
+      },
+      {
+        "key": "amber-10",
+        "value": {
+          "light": "77, 30, 0",
+          "dark": "253, 247, 232"
+        }
+      }
+    ]
+  },
+  "lime": {
+    "name": "黄绿色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "lime-1",
+        "value": {
+          "light": "243, 250, 230",
+          "dark": "53, 70, 0"
+        }
+      },
+      {
+        "key": "lime-2",
+        "value": {
+          "light": "229, 244, 195",
+          "dark": "82, 105, 0"
+        }
+      },
+      {
+        "key": "lime-3",
+        "value": {
+          "light": "208, 233, 140",
+          "dark": "112, 141, 1"
+        }
+      },
+      {
+        "key": "lime-4",
+        "value": {
+          "light": "191, 223, 89",
+          "dark": "143, 176, 2"
+        }
+      },
+      {
+        "key": "lime-5",
+        "value": {
+          "light": "177, 212, 42",
+          "dark": "175, 211, 5"
+        }
+      },
+      {
+        "key": "lime-6",
+        "value": {
+          "light": "167, 201, 0",
+          "dark": "184, 220, 48"
+        }
+      },
+      {
+        "key": "lime-7",
+        "value": {
+          "light": "136, 168, 0",
+          "dark": "196, 229, 95"
+        }
+      },
+      {
+        "key": "lime-8",
+        "value": {
+          "light": "107, 134, 0",
+          "dark": "212, 237, 145"
+        }
+      },
+      {
+        "key": "lime-9",
+        "value": {
+          "light": "78, 101, 0",
+          "dark": "231, 246, 198"
+        }
+      },
+      {
+        "key": "lime-10",
+        "value": {
+          "light": "51, 67, 0",
+          "dark": "244, 251, 231"
+        }
+      }
+    ]
+  },
+  "light-green": {
+    "name": "浅绿色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "light-green-1",
+        "value": {
+          "light": "242, 247, 231",
+          "dark": "33, 60, 7"
+        }
+      },
+      {
+        "key": "light-green-2",
+        "value": {
+          "light": "225, 240, 199",
+          "dark": "51, 90, 11"
+        }
+      },
+      {
+        "key": "light-green-3",
+        "value": {
+          "light": "195, 225, 148",
+          "dark": "70, 119, 16"
+        }
+      },
+      {
+        "key": "light-green-4",
+        "value": {
+          "light": "166, 209, 103",
+          "dark": "91, 149, 21"
+        }
+      },
+      {
+        "key": "light-green-5",
+        "value": {
+          "light": "138, 194, 62",
+          "dark": "112, 179, 27"
+        }
+      },
+      {
+        "key": "light-green-6",
+        "value": {
+          "light": "112, 179, 27",
+          "dark": "184, 220, 48"
+        }
+      },
+      {
+        "key": "light-green-7",
+        "value": {
+          "light": "91, 149, 21",
+          "dark": "166, 209, 103"
+        }
+      },
+      {
+        "key": "light-green-8",
+        "value": {
+          "light": "70, 119, 16",
+          "dark": "195, 225, 148"
+        }
+      },
+      {
+        "key": "light-green-9",
+        "value": {
+          "light": "51, 90, 11",
+          "dark": "225, 240, 199"
+        }
+      },
+      {
+        "key": "light-green-10",
+        "value": {
+          "light": "33, 60, 7",
+          "dark": "242, 247, 231"
+        }
+      }
+    ]
+  },
+  "teal": {
+    "name": "蓝绿色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "teal-1",
+        "value": {
+          "light": "228, 247, 241",
+          "dark": "0, 60, 48"
+        }
+      },
+      {
+        "key": "teal-2",
+        "value": {
+          "light": "192, 240, 224",
+          "dark": "0, 90, 71"
+        }
+      },
+      {
+        "key": "teal-3",
+        "value": {
+          "light": "135, 225, 197",
+          "dark": "0, 119, 93"
+        }
+      },
+      {
+        "key": "teal-4",
+        "value": {
+          "light": "84, 209, 173",
+          "dark": "0, 149, 113"
+        }
+      },
+      {
+        "key": "teal-5",
+        "value": {
+          "light": "39, 194, 152",
+          "dark": "0, 179, 133"
+        }
+      },
+      {
+        "key": "teal-6",
+        "value": {
+          "light": "0, 179, 133",
+          "dark": "39, 194, 152"
+        }
+      },
+      {
+        "key": "teal-7",
+        "value": {
+          "light": "0, 149, 113",
+          "dark": "84, 209, 173"
+        }
+      },
+      {
+        "key": "teal-8",
+        "value": {
+          "light": "0, 119, 93",
+          "dark": "135, 225, 197"
+        }
+      },
+      {
+        "key": "teal-9",
+        "value": {
+          "light": "0, 90, 71",
+          "dark": "192, 240, 224"
+        }
+      },
+      {
+        "key": "teal-10",
+        "value": {
+          "light": "0, 60, 48",
+          "dark": "228, 247, 241"
+        }
+      }
+    ]
+  },
+  "cyan": {
+    "name": "青色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "cyan-1",
+        "value": {
+          "light": "228, 247, 247",
+          "dark": "0, 52, 60"
+        }
+      },
+      {
+        "key": "cyan-2",
+        "value": {
+          "light": "192, 240, 240",
+          "dark": "0, 79, 90"
+        }
+      },
+      {
+        "key": "cyan-3",
+        "value": {
+          "light": "135, 223, 225",
+          "dark": "0, 107, 119"
+        }
+      },
+      {
+        "key": "cyan-4",
+        "value": {
+          "light": "84, 205, 209",
+          "dark": "0, 137, 149"
+        }
+      },
+      {
+        "key": "cyan-5",
+        "value": {
+          "light": "39, 186, 194",
+          "dark": "39, 186, 194"
+        }
+      },
+      {
+        "key": "cyan-6",
+        "value": {
+          "light": "0, 167, 179",
+          "dark": "84, 205, 209"
+        }
+      },
+      {
+        "key": "cyan-7",
+        "value": {
+          "light": "0, 137, 149",
+          "dark": "92, 208, 212"
+        }
+      },
+      {
+        "key": "cyan-8",
+        "value": {
+          "light": "0, 107, 119",
+          "dark": "135, 223, 225"
+        }
+      },
+      {
+        "key": "cyan-9",
+        "value": {
+          "light": "0, 79, 90",
+          "dark": "192, 240, 240"
+        }
+      },
+      {
+        "key": "cyan-10",
+        "value": {
+          "light": "0, 52, 60",
+          "dark": "228, 247, 247"
+        }
+      }
+    ]
+  },
+  "light-blue": {
+    "name": "浅蓝色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "light-blue-1",
+        "value": {
+          "light": "232, 247, 252",
+          "dark": "0, 47, 76"
+        }
+      },
+      {
+        "key": "light-blue-2",
+        "value": {
+          "light": "200, 237, 250",
+          "dark": "0, 72, 115"
+        }
+      },
+      {
+        "key": "light-blue-3",
+        "value": {
+          "light": "147, 218, 245",
+          "dark": "0, 99, 153"
+        }
+      },
+      {
+        "key": "light-blue-4",
+        "value": {
+          "light": "96, 198, 239",
+          "dark": "0, 127, 191"
+        }
+      },
+      {
+        "key": "light-blue-5",
+        "value": {
+          "light": "47, 178, 234",
+          "dark": "0, 156, 229"
+        }
+      },
+      {
+        "key": "light-blue-6",
+        "value": {
+          "light": "0, 156, 229",
+          "dark": "47, 178, 234"
+        }
+      },
+      {
+        "key": "light-blue-7",
+        "value": {
+          "light": "0, 127, 191",
+          "dark": "96, 198, 239"
+        }
+      },
+      {
+        "key": "light-blue-8",
+        "value": {
+          "light": "0, 99, 153",
+          "dark": "147, 218, 245"
+        }
+      },
+      {
+        "key": "light-blue-9",
+        "value": {
+          "light": "0, 72, 115",
+          "dark": "200, 237, 250"
+        }
+      },
+      {
+        "key": "light-blue-10",
+        "value": {
+          "light": "0, 47, 76",
+          "dark": "232, 247, 252"
+        }
+      }
+    ]
+  },
+  "blue": {
+    "name": "蓝色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "blue-1",
+        "value": {
+          "light": "233, 245, 254",
+          "dark": "0, 43, 97"
+        }
+      },
+      {
+        "key": "blue-2",
+        "value": {
+          "light": "202, 231, 252",
+          "dark": "0, 61, 133"
+        }
+      },
+      {
+        "key": "blue-3",
+        "value": {
+          "light": "149, 205, 249",
+          "dark": "0, 80, 169"
+        }
+      },
+      {
+        "key": "blue-4",
+        "value": {
+          "light": "98, 178, 246",
+          "dark": "0, 100, 204"
+        }
+      },
+      {
+        "key": "blue-5",
+        "value": {
+          "light": "49, 151, 243",
+          "dark": "0, 122, 240"
+        }
+      },
+      {
+        "key": "blue-6",
+        "value": {
+          "light": "0, 122, 240",
+          "dark": "49, 151, 243"
+        }
+      },
+      {
+        "key": "blue-7",
+        "value": {
+          "light": "0, 100, 204",
+          "dark": "98, 178, 246"
+        }
+      },
+      {
+        "key": "blue-8",
+        "value": {
+          "light": "0, 80, 169",
+          "dark": "149, 205, 249"
+        }
+      },
+      {
+        "key": "blue-9",
+        "value": {
+          "light": "0, 61, 133",
+          "dark": "202, 231, 252"
+        }
+      },
+      {
+        "key": "blue-10",
+        "value": {
+          "light": "0, 43, 97",
+          "dark": "233, 245, 254"
+        }
+      }
+    ]
+  },
+
+  "mixedgray": {
+    "name": "混合中性色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "mixedgray-1",
+        "value": {
+          "light": "255, 255, 255",
+          "dark": "0, 0, 0"
+        }
+      },
+      {
+        "key": "mixedgray-2",
+        "value": {
+          "light": "243, 243, 245",
+          "dark": "18, 18, 20"
+        }
+      },
+      {
+        "key": "mixedgray-3",
+        "value": {
+          "light": "237, 237, 240",
+          "dark": "26, 26, 28"
+        }
+      },
+      {
+        "key": "mixedgray-4",
+        "value": {
+          "light": "232, 232, 235",
+          "dark": "36, 36, 39"
+        }
+      },
+      {
+        "key": "mixedgray-5",
+        "value": {
+          "light": "222, 222, 227",
+          "dark": "43, 43, 47"
+        }
+      },
+      {
+        "key": "mixedgray-6",
+        "value": {
+          "light": "212, 212, 217",
+          "dark": "53, 53, 57"
+        }
+      },
+      {
+        "key": "mixedgray-7",
+        "value": {
+          "light": "186, 186, 191",
+          "dark": "63, 63, 67"
+        }
+      },
+      {
+        "key": "mixedgray-8",
+        "value": {
+          "light": "149, 149, 157",
+          "dark": "85, 85, 88"
+        }
+      },
+      {
+        "key": "mixedgray-9",
+        "value": {
+          "light": "111, 111, 117",
+          "dark": "118, 118, 122"
+        }
+      },
+      {
+        "key": "mixedgray-10",
+        "value": {
+          "light": "85 , 85, 92",
+          "dark": "156, 156, 159"
+        }
+      },
+      {
+        "key": "mixedgray-11",
+        "value": {
+          "light": "61, 61, 66",
+          "dark": "181, 181, 185"
+        }
+      },
+      {
+        "key": "mixedgray-12",
+        "value": {
+          "light": "37, 37, 41",
+          "dark": "208, 208, 210"
+        }
+      },
+      {
+        "key": "mixedgray-13",
+        "value": {
+          "light": "21, 21, 23",
+          "dark": "235, 235, 238"
+        }
+      },
+      {
+        "key": "mixedgray-14",
+        "value": {
+          "light": "0, 0, 0",
+          "dark": "255,255, 255"
+        }
+      }
+    ]
+  },
+  "indigo": {
+    "name": "靛蓝色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "indigo-1",
+        "value": {
+          "light": "232, 236, 247",
+          "dark": "5, 19, 101"
+        }
+      },
+      {
+        "key": "indigo-2",
+        "value": {
+          "light": "200, 211, 240",
+          "dark": "10, 28, 118"
+        }
+      },
+      {
+        "key": "indigo-3",
+        "value": {
+          "light": "150, 170, 225",
+          "dark": "16, 38, 138"
+        }
+      },
+      {
+        "key": "indigo-4",
+        "value": {
+          "light": "106, 131, 209",
+          "dark": "23, 50, 159"
+        }
+      },
+      {
+        "key": "indigo-5",
+        "value": {
+          "light": "66, 96, 194",
+          "dark": "31, 63, 179"
+        }
+      },
+      {
+        "key": "indigo-6",
+        "value": {
+          "light": "31, 63, 179",
+          "dark": "66, 96, 194"
+        }
+      },
+      {
+        "key": "indigo-7",
+        "value": {
+          "light": "23, 50, 159",
+          "dark": "106, 131, 209"
+        }
+      },
+      {
+        "key": "indigo-8",
+        "value": {
+          "light": "16, 38, 138",
+          "dark": "150, 170, 225"
+        }
+      },
+      {
+        "key": "indigo-9",
+        "value": {
+          "light": "10, 28, 118",
+          "dark": "209, 218, 241"
+        }
+      },
+      {
+        "key": "indigo-10",
+        "value": {
+          "light": "5, 19, 101",
+          "dark": "232, 236, 247"
+        }
+      }
+    ]
+  },
+  "violet": {
+    "name": "紫罗兰色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "violet-1",
+        "value": {
+          "light": "234, 231, 249",
+          "dark": "34, 0, 109"
+        }
+      },
+      {
+        "key": "violet-2",
+        "value": {
+          "light": "206, 199, 242",
+          "dark": "39, 2, 130"
+        }
+      },
+      {
+        "key": "violet-3",
+        "value": {
+          "light": "163, 147, 229",
+          "dark": "46, 7, 150"
+        }
+      },
+      {
+        "key": "violet-4",
+        "value": {
+          "light": "124, 100, 217",
+          "dark": "53, 13, 171"
+        }
+      },
+      {
+        "key": "violet-5",
+        "value": {
+          "light": "90, 58, 204",
+          "dark": "61, 20, 191"
+        }
+      },
+      {
+        "key": "violet-6",
+        "value": {
+          "light": "61, 20, 191",
+          "dark": "97, 62, 201"
+        }
+      },
+      {
+        "key": "violet-7",
+        "value": {
+          "light": "53, 13, 171",
+          "dark": "150, 130, 223"
+        }
+      },
+      {
+        "key": "violet-8",
+        "value": {
+          "light": "46, 7, 150",
+          "dark": "182, 169, 233"
+        }
+      },
+      {
+        "key": "violet-9",
+        "value": {
+          "light": "39, 2, 130",
+          "dark": "217, 210, 244"
+        }
+      },
+      {
+        "key": "violet-10",
+        "value": {
+          "light": "34, 0, 109",
+          "dark": "240, 237, 250"
+        }
+      }
+    ]
+  },
+
+  "purple": {
+    "name": "紫色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "purple-1",
+        "value": {
+          "light": "245, 228, 247",
+          "dark": "60, 0, 97"
+        }
+      },
+      {
+        "key": "purple-2",
+        "value": {
+          "light": "234, 192, 240",
+          "dark": "77, 0, 118"
+        }
+      },
+      {
+        "key": "purple-3",
+        "value": {
+          "light": "211, 136, 225",
+          "dark": "95, 0, 138"
+        }
+      },
+      {
+        "key": "purple-4",
+        "value": {
+          "light": "187, 85, 209",
+          "dark": "114, 0, 159"
+        }
+      },
+      {
+        "key": "purple-5",
+        "value": {
+          "light": "161, 41, 194",
+          "dark": "135, 2, 179"
+        }
+      },
+      {
+        "key": "purple-6",
+        "value": {
+          "light": "135, 2, 179",
+          "dark": "161, 41, 194"
+        }
+      },
+      {
+        "key": "purple-7",
+        "value": {
+          "light": "114, 0, 159",
+          "dark": "187, 85, 209"
+        }
+      },
+      {
+        "key": "purple-8",
+        "value": {
+          "light": "95, 0, 138",
+          "dark": "211, 136, 225"
+        }
+      },
+      {
+        "key": "purple-9",
+        "value": {
+          "light": "77, 0, 118",
+          "dark": "234, 192, 240"
+        }
+      },
+      {
+        "key": "purple-10",
+        "value": {
+          "light": "60, 0, 97",
+          "dark": "245, 228, 247"
+        }
+      }
+    ]
+  },
+
+  "pink": {
+    "name": "粉红色",
+    "type": "palette",
+    "typeName": "色盘",
+    "value": [
+      {
+        "key": "pink-1",
+        "value": {
+          "light": "252, 232, 239",
+          "dark": "81, 0, 51"
+        }
+      },
+      {
+        "key": "pink-2",
+        "value": {
+          "light": "249, 199, 217",
+          "dark": "117, 0, 70"
+        }
+      },
+      {
+        "key": "pink-3",
+        "value": {
+          "light": "243, 146, 184",
+          "dark": "153, 0, 86"
+        }
+      },
+      {
+        "key": "pink-4",
+        "value": {
+          "light": "236, 95, 156",
+          "dark": "188, 0, 100"
+        }
+      },
+      {
+        "key": "pink-5",
+        "value": {
+          "light": "230, 46, 132",
+          "dark": "224, 0, 112"
+        }
+      },
+      {
+        "key": "pink-6",
+        "value": {
+          "light": "224, 0, 112",
+          "dark": "230, 46, 132"
+        }
+      },
+      {
+        "key": "pink-7",
+        "value": {
+          "light": "188, 0, 100",
+          "dark": "236, 95, 156"
+        }
+      },
+      {
+        "key": "pink-8",
+        "value": {
+          "light": "153, 0, 86",
+          "dark": "243, 146, 184"
+        }
+      },
+      {
+        "key": "pink-9",
+        "value": {
+          "light": "117, 0, 70",
+          "dark": "249, 199, 217"
+        }
+      },
+      {
+        "key": "pink-10",
+        "value": {
+          "light": "81, 0, 51",
+          "dark": "252, 232, 239"
+        }
+      }
+    ]
+  },
+
+  "base": {
+    "name": "基础色(不同皮肤色相不变)",
+    "type": "color",
+    "typeName": "颜色",
+    "value": [
+      {
+        "key": "color-white",
+        "value": {
+          "light": "rgb(var(--o-white))",
+          "dark": "rgb(var(--o-white))"
+        }
+      },
+      {
+        "key": "color-black",
+        "value": {
+          "light": "rgb(var(--o-black))",
+          "dark": "rgb(var(--o-black))"
+        }
+      }
+    ]
+  },
+  "primary": {
+    "name": "强调色",
+    "type": "color",
+    "typeName": "颜色",
+    "value": [
+      {
+        "key": "color-primary1",
+        "description": "常规",
+        "value": {
+          "light": "rgb(var(--o-kleinblue-6))",
+          "dark": "rgb(var(--o-kleinblue-6))"
+        }
+      },
+      {
+        "key": "color-primary2",
+        "description": "悬浮",
+        "value": {
+          "light": "rgb(var(--o-kleinblue-4))",
+          "dark": "rgb(var(--o-kleinblue-5))"
+        }
+      },
+      {
+        "key": "color-primary3",
+        "description": "激活",
+        "value": {
+          "light": "rgb(var(--o-kleinblue-7))",
+          "dark": "rgb(var(--o-kleinblue-7))"
+        }
+      },
+      {
+        "key": "color-primary4",
+        "description": "禁用",
+        "value": {
+          "light": "rgb(var(--o-kleinblue-3))",
+          "dark": "rgb(var(--o-kleinblue-4))"
+        }
+      },
+      {
+        "key": "color-primary1-light",
+        "description": "常规-浅",
+        "value": {
+          "light": "rgb(var(--o-kleinblue-2))",
+          "dark": "rgb(var(--o-kleinblue-2))"
+        }
+      },
+      {
+        "key": "color-primary2-light",
+        "description": "悬浮-浅",
+        "value": {
+          "light": "rgb(var(--o-kleinblue-3))",
+          "dark": "rgb(var(--o-kleinblue-3))"
+        }
+      },
+      {
+        "key": "color-primary3-light",
+        "description": "激活-浅",
+        "value": {
+          "light": "rgb(var(--o-kleinblue-4))",
+          "dark": "rgb(var(--o-kleinblue-4))"
+        }
+      },
+      {
+        "key": "color-primary4-light",
+        "description": "禁用-浅",
+        "value": {
+          "light": "rgb(var(--o-kleinblue-1))",
+          "dark": "rgb(var(--o-kleinblue-1))"
+        }
+      }
+    ]
+  },
+  "success": {
+    "name": "成功色",
+    "type": "color",
+    "typeName": "颜色",
+    "value": [
+      {
+        "key": "color-success1",
+        "description": "常规",
+        "value": {
+          "light": "rgb(var(--o-green-6))",
+          "dark": "rgb(var(--o-green-6))"
+        }
+      },
+      {
+        "key": "color-success2",
+        "description": "悬浮",
+        "value": {
+          "light": "rgb(var(--o-green-4))",
+          "dark": "rgb(var(--o-green-4))"
+        }
+      },
+      {
+        "key": "color-success3",
+        "description": "激活",
+        "value": {
+          "light": "rgb(var(--o-green-7))",
+          "dark": "rgb(var(--o-green-7))"
+        }
+      },
+      {
+        "key": "color-success4",
+        "description": "禁用",
+        "value": {
+          "light": "rgb(var(--o-green-3))",
+          "dark": "rgb(var(--o-green-3))"
+        }
+      },
+      {
+        "key": "color-success1-light",
+        "description": "常规-浅",
+        "value": {
+          "light": "rgb(var(--o-green-2))",
+          "dark": "rgb(var(--o-green-2))"
+        }
+      },
+      {
+        "key": "color-success2-light",
+        "description": "悬浮-浅",
+        "value": {
+          "light": "rgb(var(--o-green-3))",
+          "dark": "rgb(var(--o-green-3))"
+        }
+      },
+      {
+        "key": "color-success3-light",
+        "description": "激活-浅",
+        "value": {
+          "light": "rgb(var(--o-green-4))",
+          "dark": "rgb(var(--o-green-4))"
+        }
+      },
+      {
+        "key": "color-success4-light",
+        "description": "禁用-浅",
+        "value": {
+          "light": "rgb(var(--o-green-1))",
+          "dark": "rgb(var(--o-green-1))"
+        }
+      }
+    ]
+  },
+  "warning": {
+    "name": "告警色",
+    "type": "color",
+    "typeName": "颜色",
+    "value": [
+      {
+        "key": "color-warning1",
+        "description": "常规",
+        "value": {
+          "light": "rgb(var(--o-orange-6))",
+          "dark": "rgb(var(--o-orange-6))"
+        }
+      },
+      {
+        "key": "color-warning2",
+        "description": "悬浮",
+        "value": {
+          "light": "rgb(var(--o-orange-4))",
+          "dark": "rgb(var(--o-orange-4))"
+        }
+      },
+      {
+        "key": "color-warning3",
+        "description": "激活",
+        "value": {
+          "light": "rgb(var(--o-orange-7))",
+          "dark": "rgb(var(--o-orange-7))"
+        }
+      },
+      {
+        "key": "color-warning4",
+        "description": "禁用",
+        "value": {
+          "light": "rgb(var(--o-orange-3))",
+          "dark": "rgb(var(--o-orange-3))"
+        }
+      },
+      {
+        "key": "color-warning1-light",
+        "description": "常规-浅",
+        "value": {
+          "light": "rgb(var(--o-orange-2))",
+          "dark": "rgb(var(--o-orange-2))"
+        }
+      },
+      {
+        "key": "color-warning2-light",
+        "description": "悬浮-浅",
+        "value": {
+          "light": "rgb(var(--o-orange-3))",
+          "dark": "rgb(var(--o-orange-3))"
+        }
+      },
+      {
+        "key": "color-warning3-light",
+        "description": "激活-浅",
+        "value": {
+          "light": "rgb(var(--o-orange-4))",
+          "dark": "rgb(var(--o-orange-4))"
+        }
+      },
+      {
+        "key": "color-warning4-light",
+        "description": "禁用-浅",
+        "value": {
+          "light": "rgb(var(--o-orange-1))",
+          "dark": "rgb(var(--o-orange-1))"
+        }
+      }
+    ]
+  },
+  "danger": {
+    "name": "危险色",
+    "type": "color",
+    "typeName": "颜色",
+    "value": [
+      {
+        "key": "color-danger1",
+        "description": "常规",
+        "value": {
+          "light": "rgb(var(--o-red-6))",
+          "dark": "rgb(var(--o-red-6))"
+        }
+      },
+      {
+        "key": "color-danger2",
+        "description": "悬浮",
+        "value": {
+          "light": "rgb(var(--o-red-4))",
+          "dark": "rgb(var(--o-red-4))"
+        }
+      },
+      {
+        "key": "color-danger3",
+        "description": "激活",
+        "value": {
+          "light": "rgb(var(--o-red-7))",
+          "dark": "rgb(var(--o-red-7))"
+        }
+      },
+      {
+        "key": "color-danger4",
+        "description": "禁用",
+        "value": {
+          "light": "rgb(var(--o-red-3))",
+          "dark": "rgb(var(--o-red-3))"
+        }
+      },
+      {
+        "key": "color-danger1-light",
+        "description": "常规-浅",
+        "value": {
+          "light": "rgb(var(--o-red-2))",
+          "dark": "rgb(var(--o-red-2))"
+        }
+      },
+      {
+        "key": "color-danger2-light",
+        "description": "悬浮-浅",
+        "value": {
+          "light": "rgb(var(--o-red-3))",
+          "dark": "rgb(var(--o-red-3))"
+        }
+      },
+      {
+        "key": "color-danger3-light",
+        "description": "激活-浅",
+        "value": {
+          "light": "rgb(var(--o-red-4))",
+          "dark": "rgb(var(--o-red-4))"
+        }
+      },
+      {
+        "key": "color-danger4-light",
+        "description": "禁用-浅",
+        "value": {
+          "light": "rgb(var(--o-red-1))",
+          "dark": "rgb(var(--o-red-1))"
+        }
+      }
+    ]
+  },
+  "fill": {
+    "name": "填充色",
+    "type": "color",
+    "typeName": "颜色",
+    "value": [
+      {
+        "key": "color-fill1",
+        "description": "一级填充：页面背景",
+        "value": {
+          "light": "rgb(var(--o-mixedgray-2))",
+          "dark": "rgb(var(--o-mixedgray-3))"
+        }
+      },
+      {
+        "key": "color-fill2",
+        "description": "二级填充：区块/卡片",
+        "value": {
+          "light": "rgb(var(--o-mixedgray-1))",
+          "dark": "rgb(var(--o-mixedgray-4))"
+        }
+      },
+      {
+        "key": "color-fill3",
+        "description": "三级填充：卡片",
+        "value": {
+          "light": "rgb(var(--o-mixedgray-3))",
+          "dark": "rgb(var(--o-mixedgray-5))"
+        }
+      }
+    ]
+  },
+  "control": {
+    "name": "控件色",
+    "type": "color",
+    "typeName": "颜色",
+    "value": [
+      {
+        "key": "color-control1",
+        "description": "常规，常用于边框",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-14), 0.25)",
+          "dark": "rgba(var(--o-mixedgray-14), 0.25)"
+        }
+      },
+      {
+        "key": "color-control2",
+        "description": "悬浮，常用于边框",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-14), 0.6)",
+          "dark": "rgba(var(--o-mixedgray-14), 0.6)"
+        }
+      },
+      {
+        "key": "color-control3",
+        "description": "激活，常用于边框",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-14), 0.8)",
+          "dark": "rgba(var(--o-mixedgray-14), 0.8)"
+        }
+      },
+      {
+        "key": "color-control4",
+        "description": "禁用，常用于边框",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-14), 0.1)",
+          "dark": "rgba(var(--o-mixedgray-14), 0.15)"
+        }
+      },
+      {
+        "key": "color-control1-light",
+        "description": "常规-浅，常用于背景",
+        "value": {
+          "light": "rgb(var(--o-mixedgray-5), 1.0)",
+          "dark": "rgb(var(--o-mixedgray-7), 1.0)"
+        }
+      },
+      {
+        "key": "color-control2-light",
+        "description": "悬浮-浅，常用于背景",
+        "value": {
+          "light": "rgba(var(--o-kleinblue-1), 1)",
+          "dark": "rgb(var(--o-mixedgray-5), 1)"
+        }
+      },
+      {
+        "key": "color-control3-light",
+        "description": "激活-浅，常用于背景",
+        "value": {
+          "light": "rgba(var(--o-kleinblue-2), 1)",
+          "dark": "rgb(var(--o-mixedgray-6), 1)"
+        }
+      },
+      {
+        "key": "color-control4-light",
+        "description": "禁用-浅，常用于背景",
+        "value": {
+          "light": "rgb(var(--o-mixedgray-3), 1)",
+          "dark": "rgb(var(--o-mixedgray-5), 1)"
+        }
+      },
+      {
+        "key": "color-control-light",
+        "description": "很浅，常用于表格背景色",
+        "value": {
+          "light": "rgb(var(--o-mixedgray-1), 1.0)",
+          "dark": "rgb(var(--o-mixedgray-4), 1.0)"
+        }
+      }
+    ]
+  },
+  "info": {
+    "name": "信息色",
+    "type": "color",
+    "typeName": "颜色",
+    "value": [
+      {
+        "key": "color-info1",
+        "description": "一级/强调/标题",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-14), 1.0)",
+          "dark": "rgba(var(--o-mixedgray-14), 1.0)"
+        }
+      },
+      {
+        "key": "color-info2",
+        "description": "二级/次强调/正文",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-14), 0.8)",
+          "dark": "rgba(var(--o-mixedgray-14), 0.8)"
+        }
+      },
+      {
+        "key": "color-info3",
+        "description": "三级/辅助信息",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-14), 0.6)",
+          "dark": "rgba(var(--o-mixedgray-14), 0.6)"
+        }
+      },
+      {
+        "key": "color-info4",
+        "description": "置灰/禁用",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-14), 0.4)",
+          "dark": "rgba(var(--o-mixedgray-14), 0.4)"
+        }
+      },
+      {
+        "key": "color-info1-inverse",
+        "description": "一级/次强调/正文反色",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-1), 1.0)",
+          "dark": "rgba(var(--o-mixedgray-1), 1.0)"
+        }
+      },
+      {
+        "key": "color-info2-inverse",
+        "description": "二级/辅助信息反色",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-1), 0.8)",
+          "dark": "rgba(var(--o-mixedgray-1), 0.8)"
+        }
+      },
+      {
+        "key": "color-info3-inverse",
+        "description": "三级/辅助信息反色",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-1), 0.6)",
+          "dark": "rgba(var(--o-mixedgray-1), 0.6)"
+        }
+      },
+      {
+        "key": "color-info4-inverse",
+        "description": "置灰/禁用反色",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-1), 0.4)",
+          "dark": "rgba(var(--o-mixedgray-1), 0.4)"
+        }
+      }
+    ]
+  },
+  "mask": {
+    "name": "遮罩色",
+    "type": "color",
+    "typeName": "颜色",
+    "value": [
+      {
+        "key": "color-mask1",
+        "description": "全局遮罩",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-14), 0.4)",
+          "dark": "rgba(var(--o-mixedgray-1), 0.4)"
+        }
+      },
+      {
+        "key": "color-mask2",
+        "description": "局部遮罩",
+        "value": {
+          "light": "rgba(var(--o-mixedgray-1), 0.2)",
+          "dark": "rgba(var(--o-mixedgray-4), 0.2)"
+        }
+      }
+    ]
+  },
+  "link": {
+    "name": "链接色",
+    "type": "color",
+    "typeName": "颜色",
+    "value": [
+      {
+        "key": "color-link1",
+        "description": "常规",
+        "value": {
+          "light": "rgba(var(--o-kleinblue-6))",
+          "dark": "rgba(var(--o-kleinblue-6))"
+        }
+      },
+      {
+        "key": "color-link2",
+        "description": "悬浮",
+        "value": {
+          "light": "rgba(var(--o-kleinblue-4))",
+          "dark": "rgba(var(--o-kleinblue-5))"
+        }
+      },
+      {
+        "key": "color-link3",
+        "description": "激活",
+        "value": {
+          "light": "rgba(var(--o-kleinblue-7))",
+          "dark": "rgba(var(--o-kleinblue-7))"
+        }
+      },
+      {
+        "key": "color-link4",
+        "description": "禁用",
+        "value": {
+          "light": "rgba(var(--o-kleinblue-3))",
+          "dark": "rgba(var(--o-kleinblue-4))"
+        }
+      }
+    ]
+  },
+
+  "shadow": {
+    "name": "阴影",
+    "type": "shadow",
+    "typeName": "阴影",
+    "value": [
+      {
+        "key": "shadow-1",
+        "name": "阴影1",
+        "description": "用于卡片、小弹窗、楼层阴影",
+        "value": {
+          "light": "0 3px 8px rgba(var(--o-mixedgray-9), 0.08)",
+          "dark": "0 3px 8px rgba(var(--o-mixedgray-1), 0.08)"
+        }
+      },
+      {
+        "key": "shadow-2",
+        "name": "阴影2",
+        "description": "用于卡片悬浮阴影",
+        "value": {
+          "light": "0 2px 24px rgba(var(--o-mixedgray-9), 0.15)",
+          "dark": "0 2px 24px rgba(var(--o-mixedgray-1), 0.15)"
+        }
+      },
+      {
+        "key": "shadow-3",
+        "name": "阴影3",
+        "description": "用于提示阴影",
+        "value": {
+          "light": "0 8px 40px rgba(var(--o-mixedgray-9), 0.1)",
+          "dark": "0 8px 40px rgba(var(--o-mixedgray-1), 0.1)"
+        }
+      }
+    ]
+  },
+
+  "gap": {
+    "name": "间距",
+    "type": "gap",
+    "typeName": "间距",
+    "value": [
+      {
+        "key": "gap-1",
+        "name": "间距1",
+        "description": "用于组件之间的间距1",
+        "value": {
+          "light": "4px",
+          "dark": "4px"
+        }
+      },
+      {
+        "key": "gap-2",
+        "name": "间距2",
+        "description": "用于组件之间的间距2",
+        "value": {
+          "light": "8px",
+          "dark": "8px"
+        }
+      },
+      {
+        "key": "gap-3",
+        "name": "间距3",
+        "description": "用于组件之间的间距3",
+        "value": {
+          "light": "12px",
+          "dark": "12px"
+        }
+      },
+      {
+        "key": "gap-4",
+        "name": "间距4",
+        "description": "用于组件之间的间距4",
+        "value": {
+          "light": "16px",
+          "dark": "16px"
+        }
+      },
+      {
+        "key": "gap-5",
+        "name": "间距5",
+        "description": "用于组件之间的间距5",
+        "value": {
+          "light": "24px",
+          "dark": "24px"
+        }
+      },
+      {
+        "key": "gap-6",
+        "name": "间距6",
+        "description": "用于组件之间的间距6",
+        "value": {
+          "light": "32px",
+          "dark": "32px"
+        }
+      },
+      {
+        "key": "gap-7",
+        "name": "间距7",
+        "description": "用于组件之间的间距7",
+        "value": {
+          "light": "40px",
+          "dark": "40px"
+        }
+      },
+      {
+        "key": "gap-8",
+        "name": "间距8",
+        "description": "用于组件之间的间距8",
+        "value": {
+          "light": "48px",
+          "dark": "48px"
+        }
+      },
+      {
+        "key": "gap-9",
+        "name": "间距9",
+        "description": "用于组件之间的间距9",
+        "value": {
+          "light": "64px",
+          "dark": "64px"
+        }
+      },
+      {
+        "key": "gap-10",
+        "name": "间距10",
+        "description": "用于组件之间的间距10",
+        "value": {
+          "light": "72px",
+          "dark": "72px"
+        }
+      }
+    ]
+  },
+
+  "control_size": {
+    "name": "组件尺寸",
+    "type": "size",
+    "typeName": "尺寸",
+    "value": [
+      {
+        "key": "control_size-2xs",
+        "name": "超小尺寸",
+        "description": "超小尺寸",
+        "value": {
+          "light": "14px",
+          "dark": "14px"
+        }
+      },
+      {
+        "key": "control_size-xs",
+        "name": "小尺寸",
+        "description": "小尺寸",
+        "value": {
+          "light": "16px",
+          "dark": "16px"
+        }
+      },
+      {
+        "key": "control_size-s",
+        "name": "小尺寸",
+        "description": "小尺寸",
+        "value": {
+          "light": "24px",
+          "dark": "24px"
+        }
+      },
+      {
+        "key": "control_size-m",
+        "name": "中尺寸",
+        "description": "尺寸",
+        "value": {
+          "light": "32px",
+          "dark": "32px"
+        }
+      },
+      {
+        "key": "control_size-l",
+        "name": "大尺寸",
+        "description": "尺寸",
+        "value": {
+          "light": "40px",
+          "dark": "40px"
+        }
+      },
+      {
+        "key": "control_size-xl",
+        "name": "大尺寸",
+        "description": "尺寸",
+        "value": {
+          "light": "48px",
+          "dark": "48px"
+        }
+      },
+      {
+        "key": "control_size-2xl",
+        "name": "大尺寸",
+        "description": "尺寸",
+        "value": {
+          "light": "56px",
+          "dark": "56px"
+        }
+      }
+    ]
+  },
+
+  "icon_size": {
+    "name": "图标尺寸",
+    "type": "size",
+    "typeName": "尺寸",
+    "value": [
+      {
+        "key": "icon_size-xs",
+        "name": "超小尺寸图标",
+        "description": "超小尺寸图标",
+        "value": {
+          "light": "16px",
+          "dark": "16px"
+        }
+      },
+      {
+        "key": "icon_size-s",
+        "name": "小尺寸图标",
+        "description": "小尺寸图标",
+        "value": {
+          "light": "20px",
+          "dark": "20px"
+        }
+      },
+      {
+        "key": "icon_size-m",
+        "name": "中尺寸图标",
+        "description": "中尺寸图标",
+        "value": {
+          "light": "24px",
+          "dark": "24px"
+        }
+      },
+      {
+        "key": "icon_size-l",
+        "name": "大尺寸图标",
+        "description": "大尺寸图标",
+        "value": {
+          "light": "32px",
+          "dark": "32px"
+        }
+      },
+      {
+        "key": "icon_size-xl",
+        "name": "超大尺寸图标",
+        "description": "超大尺寸图标",
+        "value": {
+          "light": "40px",
+          "dark": "40px"
+        }
+      },
+      {
+        "key": "icon_size-2xl",
+        "name": "2xl尺寸图标",
+        "description": "2xl尺寸图标",
+        "value": {
+          "light": "48px",
+          "dark": "48px"
+        }
+      },
+      {
+        "key": "icon_size-3xl",
+        "name": "3xl尺寸图标",
+        "description": "3xl尺寸图标",
+        "value": {
+          "light": "56px",
+          "dark": "56px"
+        }
+      },
+      {
+        "key": "icon_size-4xl",
+        "name": "4xl尺寸图标",
+        "description": "4xl尺寸图标",
+        "value": {
+          "light": "64px",
+          "dark": "64px"
+        }
+      }
+    ]
+  },
+  "icon_size_control": {
+    "name": "组件图标尺寸",
+    "type": "size",
+    "typeName": "尺寸",
+    "value": [
+      {
+        "key": "icon_size_control-xs",
+        "name": "超小尺寸图标",
+        "description": "超小尺寸控件图标(组件使用)",
+        "value": {
+          "light": "16px",
+          "dark": "16px"
+        }
+      },
+      {
+        "key": "icon_size_control-s",
+        "name": "小尺寸图标",
+        "description": "小尺寸控件图标(组件使用)",
+        "value": {
+          "light": "20px",
+          "dark": "20px"
+        }
+      },
+      {
+        "key": "icon_size_control-m",
+        "name": "中尺寸图标",
+        "description": "中尺寸控件图标(组件使用)",
+        "value": {
+          "light": "24px",
+          "dark": "24px"
+        }
+      },
+      {
+        "key": "icon_size_control-l",
+        "name": "大尺寸图标",
+        "description": "大尺寸控件图标(组件使用)",
+        "value": {
+          "light": "32px",
+          "dark": "32px"
+        }
+      },
+      {
+        "key": "icon_size_control-xl",
+        "name": "超大尺寸图标",
+        "description": "超大尺寸控件图标(组件使用)",
+        "value": {
+          "light": "40px",
+          "dark": "40px"
+        }
+      }
+    ]
+  },
+
+  "font_size": {
+    "name": "字体尺寸",
+    "type": "font",
+    "typeName": "字体",
+    "value": [
+      {
+        "key": "font_size-display1",
+        "name": "一级数据展示",
+        "description": "一级数据展示",
+        "value": {
+          "light": "56px",
+          "dark": "56px"
+        }
+      },
+      {
+        "key": "font_size-display2",
+        "name": "二级数据展示",
+        "description": "二级数据展示",
+        "value": {
+          "light": "48px",
+          "dark": "48px"
+        }
+      },
+      {
+        "key": "font_size-display3",
+        "name": "三级数据展示",
+        "description": "三级数据展示",
+        "value": {
+          "light": "40px",
+          "dark": "40px"
+        }
+      },
+      {
+        "key": "font_size-h1",
+        "name": "一级标题",
+        "description": "一级标题",
+        "value": {
+          "light": "32px",
+          "dark": "32px"
+        }
+      },
+      {
+        "key": "font_size-h2",
+        "name": "二级标题",
+        "description": "二级标题",
+        "value": {
+          "light": "24px",
+          "dark": "24px"
+        }
+      },
+      {
+        "key": "font_size-h3",
+        "name": "三级标题",
+        "description": "三级标题",
+        "value": {
+          "light": "22px",
+          "dark": "22px"
+        }
+      },
+      {
+        "key": "font_size-h4",
+        "name": "四级标题",
+        "description": "四级标题",
+        "value": {
+          "light": "20px",
+          "dark": "20px"
+        }
+      },
+      {
+        "key": "font_size-text1",
+        "name": "常规正文",
+        "description": "常规正文",
+        "value": {
+          "light": "16px",
+          "dark": "16px"
+        }
+      },
+      {
+        "key": "font_size-text2",
+        "name": "大号正文",
+        "description": "大号正文",
+        "value": {
+          "light": "18px",
+          "dark": "18px"
+        }
+      },
+      {
+        "key": "font_size-tip1",
+        "name": "提示文本1",
+        "description": "提示文本1",
+        "value": {
+          "light": "14px",
+          "dark": "14px"
+        }
+      },
+      {
+        "key": "font_size-tip2",
+        "name": "提示文本2",
+        "description": "提示文本2",
+        "value": {
+          "light": "12px",
+          "dark": "12px"
+        }
+      }
+    ]
+  },
+  "line_height": {
+    "name": "字体行高",
+    "type": "font",
+    "typeName": "字体",
+    "value": [
+      {
+        "key": "line_height-display1",
+        "name": "一级数据展示",
+        "description": "一级数据展示",
+        "value": {
+          "light": "80px",
+          "dark": "80px"
+        }
+      },
+      {
+        "key": "line_height-display2",
+        "name": "二级数据展示",
+        "description": "二级数据展示",
+        "value": {
+          "light": "64px",
+          "dark": "64px"
+        }
+      },
+      {
+        "key": "line_height-display3",
+        "name": "三级数据展示",
+        "description": "三级数据展示",
+        "value": {
+          "light": "56px",
+          "dark": "56px"
+        }
+      },
+      {
+        "key": "line_height-h1",
+        "name": "一级标题",
+        "description": "一级标题",
+        "value": {
+          "light": "44px",
+          "dark": "44px"
+        }
+      },
+      {
+        "key": "line_height-h2",
+        "name": "二级标题",
+        "description": "二级标题",
+        "value": {
+          "light": "32px",
+          "dark": "32px"
+        }
+      },
+      {
+        "key": "line_height-h3",
+        "name": "三级标题",
+        "description": "三级标题",
+        "value": {
+          "light": "30px",
+          "dark": "30px"
+        }
+      },
+      {
+        "key": "line_height-h4",
+        "name": "四级标题",
+        "description": "四级标题",
+        "value": {
+          "light": "28px",
+          "dark": "28px"
+        }
+      },
+      {
+        "key": "line_height-text1",
+        "name": "正文",
+        "description": "正文",
+        "value": {
+          "light": "24px",
+          "dark": "24px"
+        }
+      },
+      {
+        "key": "line_height-text2",
+        "name": "正文-大",
+        "description": "正文-大",
+        "value": {
+          "light": "26px",
+          "dark": "26x"
+        }
+      },
+      {
+        "key": "line_height-tip1",
+        "name": "提示文本1",
+        "description": "提示文本1",
+        "value": {
+          "light": "22px",
+          "dark": "22px"
+        }
+      },
+      {
+        "key": "line_height-tip2",
+        "name": "提示文本2",
+        "description": "提示文本2",
+        "value": {
+          "light": "18px",
+          "dark": "18px"
+        }
+      }
+    ]
+  },
+
+  "radius": {
+    "name": "圆角尺寸",
+    "type": "size",
+    "typeName": "尺寸",
+    "value": [
+      {
+        "key": "radius-xs",
+        "name": "超小尺寸圆角",
+        "description": "超小尺寸圆角",
+        "value": {
+          "light": "4px",
+          "dark": "4px"
+        }
+      },
+      {
+        "key": "radius-s",
+        "name": "小尺寸圆角",
+        "description": "小尺寸圆角",
+        "value": {
+          "light": "8px",
+          "dark": "8px"
+        }
+      },
+      {
+        "key": "radius-m",
+        "name": "中尺寸圆角",
+        "description": "中尺寸圆角",
+        "value": {
+          "light": "12px",
+          "dark": "12px"
+        }
+      },
+      {
+        "key": "radius-l",
+        "name": "大尺寸圆角",
+        "description": "大尺寸圆角",
+        "value": {
+          "light": "16px",
+          "dark": "16px"
+        }
+      },
+      {
+        "key": "radius-xl",
+        "name": "大尺寸圆角",
+        "description": "大尺寸圆角,一般用于卡片",
+        "value": {
+          "light": "24px",
+          "dark": "24px"
+        }
+      }
+    ]
+  },
+  "radius_control": {
+    "name": "组件圆角尺寸",
+    "type": "size",
+    "typeName": "尺寸",
+    "value": [
+      {
+        "key": "radius_control-xs",
+        "name": "超小尺寸控件圆角",
+        "description": "超小尺寸控件圆角(组件使用)",
+        "value": {
+          "light": "4px",
+          "dark": "4px"
+        }
+      },
+      {
+        "key": "radius_control-s",
+        "name": "小尺寸控件圆角",
+        "description": "小尺寸控件圆角(组件使用)",
+        "value": {
+          "light": "8px",
+          "dark": "8px"
+        }
+      },
+      {
+        "key": "radius_control-m",
+        "name": "中尺寸控件圆角",
+        "description": "中尺寸控件圆角(组件使用)",
+        "value": {
+          "light": "12px",
+          "dark": "12px"
+        }
+      },
+      {
+        "key": "radius_control-l",
+        "name": "大尺寸控件圆角",
+        "description": "大尺寸控件圆角(组件使用)",
+        "value": {
+          "light": "16px",
+          "dark": "16px"
+        }
+      }
+    ]
+  },
+
+  "duration": {
+    "name": "动画持续时间",
+    "type": "animation",
+    "typeName": "动画",
+    "value": [
+      {
+        "key": "duration-s",
+        "name": "持续时间",
+        "description": "用于退出屏幕的动画",
+        "value": {
+          "light": "200ms",
+          "dark": "200ms"
+        }
+      },
+      {
+        "key": "duration-m1",
+        "name": "持续时间",
+        "description": "用于当曲线为standard-in时进入屏幕的动画",
+        "value": {
+          "light": "250ms",
+          "dark": "250ms"
+        }
+      },
+      {
+        "key": "duration-m2",
+        "name": "持续时间",
+        "description": "用于当曲线为standard时开始、结束的动画",
+        "value": {
+          "light": "300ms",
+          "dark": "300ms"
+        }
+      },
+      {
+        "key": "duration-m3",
+        "name": "持续时间",
+        "description": "用于当曲线为emphasized-in时进入屏幕的动画",
+        "value": {
+          "light": "400ms",
+          "dark": "400ms"
+        }
+      },
+      {
+        "key": "duration-l",
+        "name": "持续时间",
+        "description": "用于当曲线为emphasized时开始、结束的动画",
+        "value": {
+          "light": "500ms",
+          "dark": "500ms"
+        }
+      },
+      {
+        "key": "duration-xl",
+        "name": "持续时间",
+        "description": "用于当曲线为emphasized时，轮播切换动画",
+        "value": {
+          "light": "1000ms",
+          "dark": "1000ms"
+        }
+      }
+    ]
+  },
+
+  "easing": {
+    "name": "动画曲线",
+    "type": "animation",
+    "typeName": "动画",
+    "value": [
+      {
+        "key": "easing-linear",
+        "name": "线性动画曲线",
+        "description": "线性曲线",
+        "value": {
+          "light": "cubic-bezier(0, 0, 1, 1)",
+          "dark": "cubic-bezier(0, 0, 1, 1)"
+        }
+      },
+      {
+        "key": "easing-standard",
+        "name": "动画曲线",
+        "description": "用于组件",
+        "value": {
+          "light": "cubic-bezier(0.2, 0, 0, 1)",
+          "dark": "cubic-bezier(0.2, 0, 0, 1)"
+        }
+      },
+      {
+        "key": "easing-standard-in",
+        "name": "动画曲线",
+        "description": "用于组件",
+        "value": {
+          "light": "cubic-bezier(0, 0, 0, 1)",
+          "dark": "cubic-bezier(0, 0, 0, 1)"
+        }
+      },
+      {
+        "key": "easing-standard-out",
+        "name": "动画曲线",
+        "description": "用于组件",
+        "value": {
+          "light": "cubic-bezier(0.3, 0, 1, 1)",
+          "dark": "cubic-bezier(0.3, 0, 1, 1)"
+        }
+      },
+      {
+        "key": "easing-emphasized",
+        "name": "动画曲线",
+        "description": "用于大卡片、场景切换",
+        "value": {
+          "light": "cubic-bezier(0.2, 0, 0, 1)",
+          "dark": "cubic-bezier(0.2, 0, 0, 1)"
+        }
+      },
+      {
+        "key": "easing-emphasized-in",
+        "name": "动画曲线",
+        "description": "用于大卡片、场景切换",
+        "value": {
+          "light": "cubic-bezier(0.3, 0, 0.8, 0.15)",
+          "dark": "cubic-bezier(0.3, 0, 0.8, 0.15)"
+        }
+      },
+      {
+        "key": "easing-emphasized-out",
+        "name": "动画曲线",
+        "description": "用于大卡片、场景切换",
+        "value": {
+          "light": "cubic-bezier(0.05, 0.7, 0.1, 1)",
+          "dark": "cubic-bezier(0.05, 0.7, 0.1, 1)"
+        }
+      }
+    ]
+  }
+}
