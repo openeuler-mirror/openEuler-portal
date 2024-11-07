@@ -19,6 +19,8 @@ import {
   ODivider,
 } from '@opensig/opendesign';
 
+import summitData from '~@/data/summit';
+
 import IconLeft from '~icons/app/icon-chevron-left.svg';
 import IconRight from '~icons/app/icon-chevron-right.svg';
 import IconDate from '~icons/home/icon-date.svg';
@@ -30,6 +32,8 @@ import notFoundImg_light from '@/assets/illustrations/404.png';
 import notFoundImg_dark from '@/assets/illustrations/404_dark.png';
 import cubeOne from '~@/assets/category/home/calendar/cube-1.png';
 import cubeTow from '~@/assets/category/home/calendar/cube-2.png';
+import cubeOneDark from '~@/assets/category/home/calendar/cube-1_dark.png';
+import cubeTowDark from '~@/assets/category/home/calendar/cube-2_dark.png';
 
 import AppSection from '~@/components/AppSection.vue';
 
@@ -59,7 +63,7 @@ const i18n = {
   SIG_GROUP: 'SIG组:',
   NEW_DATE: '最新日程：',
   EMPTY_TEXT: '当日没有活动，敬请期待',
-  LEARN_MORE: '了解更多',
+  LEARN_MORE: '查看详情',
 };
 // 日历展示时间限制
 const limitTime = '2021 年 1 月';
@@ -75,7 +79,6 @@ const detailItem = [
   { text: '活动介绍', key: 'synopsis' },
   { text: '起始日期', key: 'start_date' },
   { text: '结束日期', key: 'end_date' },
-  { text: '活动形式', key: 'activity_type' },
   { text: '线上链接', key: 'online_url' },
   { text: '报名链接', key: 'register_url' },
   { text: '活动地点', key: 'address' },
@@ -128,7 +131,8 @@ function setMeetingDay(day: string, event: Event) {
   if (day === currentDay.value.raw) {
     return false;
   }
-  if (props.tableData?.includes(day)) {
+  if (props.tableData?.includes(day) || getSummitHighlight(day)) {
+    activeName.value = [];
     paramGetDaysData({
       date: day,
       type: tabType.value,
@@ -143,6 +147,12 @@ function setMeetingDay(day: string, event: Event) {
 function paramGetDaysData(params: { date: string; type: string }) {
   getDaysData(params).then((res) => {
     renderData.value = res.data;
+    if (
+      (params.type === 'all' || params.type === 'summit') &&
+      getSummitHighlight(params.date)
+    ) {
+      renderData.value.timeData.push(getSummitHighlight(params.date));
+    }
     // 当天只有一个日程，直接展开，多个日程，全部折叠
     if (renderData.value.timeData.length === 1) {
       activeName.value = [0];
@@ -156,10 +166,10 @@ function paramGetDaysData(params: { date: string; type: string }) {
         );
       });
       renderData.value.timeData.map((item2) => {
-        if (item2.etherpad) {
+        if (item2?.etherpad) {
           item2['duration_time'] = `${item2.startTime}-${item2.endTime}`;
         }
-        if (item2.activity_type) {
+        if (item2?.activity_type && !item2.dates) {
           item2.activity_type = activityType[Number(item2.activity_type) - 1];
         }
       });
@@ -210,14 +220,12 @@ const watchChange = (element: HTMLElement) => {
   });
 };
 const resolveDate = (date: string) => {
-  const reg = /(\d{4})\-(\d{2})\-(\d{2})/;
-  date = date.replace(reg, '$1年$2月$3日');
-  if (date.charAt(5) === '0') {
-    date = date.substring(6);
-  } else {
-    date = date.substring(5);
-  }
-  return date;
+  return date.replaceAll('-', '/');
+};
+const getSummitHighlight = (date: string) => {
+  return summitData.find((item) => {
+    return item.dates?.includes(date);
+  });
 };
 onMounted(() => {
   // 设置右侧 日程列表高度
@@ -289,7 +297,22 @@ const watchData = watch(
                 {{ removeLeadingZero(data.day.split('-').at(-1) || '') }}
               </p>
               <div class="icon-box">
-                <OIcon class="meeting" v-if="tableData.includes(data.day)">
+                <OIcon
+                  class="meeting"
+                  v-if="
+                    (tabType === 'all' || tabType === 'meetings') &&
+                    tableData.includes(data.day)
+                  "
+                >
+                  <IconMeet></IconMeet>
+                </OIcon>
+                <OIcon
+                  class="summit"
+                  v-if="
+                    (tabType === 'all' || tabType === 'summit') &&
+                    getSummitHighlight(data.day)
+                  "
+                >
                   <IconMeet></IconMeet>
                 </OIcon>
               </div>
@@ -335,13 +358,14 @@ const watchData = watch(
             >
               <OCollapseItem
                 v-for="(item, index) in renderData.timeData"
-                :key="item.id"
+                :key="index"
                 :value="index"
               >
                 <template #title>
                   <div class="meet-title" :title="item.name || item.title">
-                    <OIcon class="meeting">
-                      <IconMeet></IconMeet>
+                    <OIcon :class="item.type || 'meeting'">
+                      <IconSummit v-if="item.type === 'summit'"></IconSummit>
+                      <IconMeet v-else></IconMeet>
                     </OIcon>
                     <div class="text">
                       {{ item.name || item.title }}
@@ -349,33 +373,42 @@ const watchData = watch(
                   </div>
                   <div class="meet-info">
                     <span class="start-time"
-                      ><span v-if="!item.schedules"
+                      ><span v-if="!item.start_date"
                         >{{ item.startTime }} - {{ item.endTime }}</span
                       >
-                      <span v-else>{{ item.schedules[0].start }}</span></span
+                      <span v-else
+                        >{{ resolveDate(item.start_date) }}-{{
+                          resolveDate(item.end_date || '')
+                        }}</span
+                      ></span
                     >
                     <ODivider direction="v" />
-                    <div class="group-name">
+                    <div v-if="item.group_name">
                       {{ i18n.SIG_GROUP }} {{ item.group_name }}
                     </div>
+                    <div v-if="item.activity_type">
+                      {{ item.activity_type }}
+                    </div>
                   </div>
-                  <OButton
-                    v-if="item.schedules"
-                    variant="text"
-                    :size="isPhone ? 'medium' : 'large'"
-                    :style="{
-                      '--btn-padding': 0,
-                      '--btn-bg-color-hover': 'transparent',
-                      '--btn-bg-color-active': 'transparent',
-                    }"
-                  >
-                    {{ i18n.LEARN_MORE }}
-                    <template #suffix>
-                      <OIcon>
-                        <IconRight></IconRight>
-                      </OIcon>
-                    </template>
-                  </OButton>
+                  <a :href="item.url" target="_blank" rel="noopener noreferrer">
+                    <OButton
+                      v-if="item.start_date"
+                      variant="text"
+                      size="small"
+                      :style="{
+                        '--btn-padding': 0,
+                        '--btn-bg-color-hover': 'transparent',
+                        '--btn-bg-color-active': 'transparent',
+                      }"
+                    >
+                      {{ i18n.LEARN_MORE }}
+                      <template #suffix>
+                        <OIcon>
+                          <IconRight></IconRight>
+                        </OIcon>
+                      </template>
+                    </OButton>
+                  </a>
                 </template>
                 <div class="calendar-info">
                   <template v-for="keys in detailItem" :key="keys.key">
@@ -418,19 +451,29 @@ const watchData = watch(
         </div>
       </div>
     </div>
-    <img class="cube-1" :src="cubeOne" alt="" />
-    <img class="cube-2" :src="cubeTow" alt="" />
+    <img
+      class="cube-1"
+      :src="commonStore.theme === 'light' ? cubeOne : cubeOneDark"
+      alt=""
+    />
+    <img
+      class="cube-2"
+      :src="commonStore.theme === 'light' ? cubeTow : cubeTowDark"
+    />
   </div>
 </template>
 <style lang="scss" scoped>
 .meeting {
   background-color: #007af0;
+  z-index: 3;
 }
 .summit {
   background-color: #3422ff;
+  z-index: 2;
 }
 .event {
   background-color: #ffa122;
+  z-index: 1;
 }
 .home-calendar {
   position: relative;
@@ -454,6 +497,8 @@ const watchData = watch(
       @include respond-to('<=pad_v') {
         width: 100%;
         flex-direction: column;
+        background-color: var(--o-color-fill2);
+        border-radius: var(--o-radius-xs);
       }
       .el-calendar__header {
         height: 60px;
@@ -488,6 +533,9 @@ const watchData = watch(
             border: 1px solid var(--o-color-control4);
             @include h4;
             margin-right: 24px;
+            @include respond-to('pad') {
+              margin-right: 8px;
+            }
             @include respond-to('<=pad_v') {
               display: none;
             }
@@ -496,11 +544,13 @@ const watchData = watch(
             color: var(--o-color-primary1);
           }
           .o-icon {
-            font-size: 20px;
+            font-size: 24px;
             margin-right: 8px;
           }
         }
         .right-title {
+          display: flex;
+          align-items: center;
           @include text2;
           color: var(--o-color-info2);
           @include respond-to('<=pad_v') {
@@ -513,6 +563,26 @@ const watchData = watch(
         @include respond-to('<=pad_v') {
           border: none;
           padding: 0 16px 16px;
+          thead {
+            background-color: var(--o-color-control4-light);
+            overflow: hidden;
+            th {
+              padding: 9px 0;
+            }
+            th:first-child {
+              border-top-left-radius: var(--o-radius-xs);
+              border-bottom-left-radius: var(--o-radius-xs);
+            }
+            th:last-child {
+              border-top-right-radius: var(--o-radius-xs);
+              border-bottom-right-radius: var(--o-radius-xs);
+            }
+          }
+          tr:last-child {
+            .out-box {
+              margin-bottom: 0 !important;
+            }
+          }
         }
       }
       td {
@@ -526,20 +596,23 @@ const watchData = watch(
         height: 64px;
         color: var(--o-color-info1);
         @include respond-to('<=pad_v') {
+          display: flex;
+          justify-content: center;
           padding: 0;
+          height: fit-content;
         }
 
         .out-box {
-          overflow: hidden;
+          position: relative;
           border-radius: var(--o-radius-xs);
-          padding: 8px;
+          padding: 8px 12px;
           width: 100%;
           height: 100%;
           background-color: var(--o-color-primary4-light);
           border: 1px solid transparent;
+          @include tip1;
           @include hover {
             background-color: var(--o-color-primary1-light);
-            border: 1px solid var(--o-color-primary1);
             @include respond-to('<=pad_v') {
               @include hover {
                 background-color: inherit;
@@ -551,19 +624,43 @@ const watchData = watch(
             margin-top: 4px;
             color: var(--o-color-white);
             height: 20px;
-            width: 20px;
-            .meeting {
+            .o-icon {
+              position: relative;
               border-radius: 50%;
               padding: 1px;
+              margin-left: -4px;
+              @include respond-to('<=pad_v') {
+                margin-left: -2px;
+              }
+              &:first-child {
+                margin: 0;
+              }
             }
           }
           @include respond-to('<=pad_v') {
             background-color: transparent;
+            padding: 0;
+            margin: 6px 8px;
             text-align: center;
+            width: 24px;
+            height: 24px;
             .day-box {
               display: flex;
               flex-direction: column;
+              justify-content: center;
               align-items: center;
+              font-size: 14px;
+              line-height: 22px;
+            }
+            .icon-box {
+              display: flex;
+              justify-content: center;
+              margin-top: 0;
+              position: absolute;
+              left: 50%;
+              bottom: -2px;
+              height: 6px;
+              transform: translate(-50%, 100%);
             }
             .o-icon {
               width: 6px;
@@ -619,7 +716,7 @@ const watchData = watch(
             transform: translate(-50%, -50%);
             width: $size;
             height: $size;
-            // background-color: var(--o-color-control1-light);
+            background-color: var(--o-color-control1-light);
             border-radius: 50%;
             z-index: -1;
           }
@@ -648,6 +745,7 @@ const watchData = watch(
         margin-top: 12px;
         background-color: var(--o-color-fill2);
         width: 100%;
+        border-radius: var(--o-radius-xs);
       }
       @include respond-to('>pad_v') {
         .current-day {
@@ -671,6 +769,7 @@ const watchData = watch(
         align-items: flex-end;
         height: 60px;
         border-bottom: 1px solid var(--o-color-control4);
+        margin-bottom: 0;
         @include respond-to('<=pad_v') {
           height: auto;
           .o-icon {
@@ -691,6 +790,7 @@ const watchData = watch(
           flex-shrink: 0;
           padding: 1px;
           border-radius: 50%;
+          overflow: hidden;
           color: var(--o-color-white);
           margin-right: 12px;
           width: $icon-size;
@@ -706,9 +806,16 @@ const watchData = watch(
         margin-left: calc($icon-size + 12px);
         margin-top: 8px;
         display: flex;
+        align-items: center;
         @include tip1;
         color: var(--o-color-info3);
         text-decoration: none;
+        .o-divider {
+          @include tip1;
+        }
+      }
+      .o-btn {
+        margin-left: calc($icon-size + 12px);
       }
     }
     .meeting-list {
@@ -788,6 +895,11 @@ const watchData = watch(
     width: 84px;
     top: -14px;
     left: -30px;
+  }
+  @include respond-to('phone') {
+    width: 54px;
+    top: 4px;
+    left: -16px;
   }
 }
 .cube-2 {
