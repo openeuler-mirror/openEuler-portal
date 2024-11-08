@@ -17,7 +17,7 @@ const props = defineProps({
 
 const router = useRouter();
 const { lang } = useData();
-const { isPadV } = useScreen();
+const { lePadV } = useScreen();
 
 // 选择语言;
 const langOptions = [
@@ -69,7 +69,7 @@ const getLang = (lang: String) => {
 </script>
 
 <template>
-  <div v-if="!isPadV"  class="header-lang">
+  <div v-if="!lePadV"  class="header-lang">
     <ODropdown trigger="hover" optionPosition="bottom" option-wrap-class="dropdown">
       <div class="info-wrap hover-icon-rotate">
         <span class="title">{{ getLang(lang) }}</span>

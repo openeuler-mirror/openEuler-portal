@@ -9,7 +9,7 @@ import HeaderNavMoblie from './HeaderNavMoblie.vue';
 
 const router = useRouter();
 const { lang } = useData();
-const { isPadV } = useScreen();
+const { lePadV } = useScreen();
 
 const routerPath = ref(router.route.path);
 const langShow = ref(['zh', 'en']);
@@ -69,7 +69,7 @@ watch(
 </script>
 
 <template>
-  <HeaderNavMoblie v-if="isPadV" :lang-options="langShow" />
+  <HeaderNavMoblie v-if="lePadV" :lang-options="langShow" />
   <HeaderNav v-else :lang-options="langShow" />
 </template>
 

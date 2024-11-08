@@ -64,6 +64,9 @@ const hideSub = () => {
   display: flex;
   align-items: center;
   position: relative;
+  @include respond-to('<=pad_v') {
+    margin-left: var(--o-gap-2);
+  }
 
   .opt-info {
     display: flex;
