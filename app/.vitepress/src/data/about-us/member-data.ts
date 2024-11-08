@@ -29,10 +29,7 @@ import liantong_dark from '@/assets/category/member/liantong_dark.png';
 import yidong_dark from '@/assets/category/member/yidong_dark.png';
 import zhongruan_dark from '@/assets/category/member/zhongruan_dark.png';
 import zhongruan_light from '@/assets/category/member/zhongruan_light.png';
-import zuowang_dark from '@/assets/category/member/zuowang_dark.png';
-import zuowang_light from '@/assets/category/member/zuowang_light.png';
-import puhua_dark from '@/assets/category/member/puhua_dark.png';
-import puhua_light from '@/assets/category/member/puhua_light.png';
+
 import zhaoxin_dark from '@/assets/category/member/zhaoxin_dark.png';
 import zhaoxin_light from '@/assets/category/member/zhaoxin_light.png';
 import guangfa_dark from '@/assets/category/member/guangfa_dark.png';
@@ -205,15 +202,6 @@ export default {
           img_dark: zhaoxin_dark,
           noIcon: true,
         },
-        {
-          img_light: zuowang_light,
-          img_dark: zuowang_dark,
-          noIcon: true,
-        },
-        {
-          img_light: puhua_light,
-          img_dark: puhua_dark,
-        },
       ],
     },
     {
@@ -365,23 +353,14 @@ export default {
           noIcon: true,
         },
         {
-          img_light: zhaoxin_light,
-          img_dark: zhaoxin_dark,
-          noIcon: true,
-        },
-        {
           img_light: huazhi_light,
           img_dark: huazhi_dark,
           noIcon: true,
         },
         {
-          img_light: zuowang_light,
-          img_dark: zuowang_dark,
+          img_light: zhaoxin_light,
+          img_dark: zhaoxin_dark,
           noIcon: true,
-        },
-        {
-          img_light: puhua_light,
-          img_dark: puhua_dark,
         },
       ],
     },

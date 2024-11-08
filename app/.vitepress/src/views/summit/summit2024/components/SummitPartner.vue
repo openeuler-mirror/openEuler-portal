@@ -118,12 +118,12 @@ onMounted(() => {
       width: 50%;
     }
   }
-  .link-item:nth-child(5) {
+  .link-item:nth-child(1) {
     @media screen and (min-width: 1416px) {
       margin-left: 8px;
     }
   }
-  .link-item:nth-child(7) {
+  .link-item:nth-child(3) {
     @media screen and (min-width: 1416px) {
       margin-right: 8px;
     }

@@ -37,7 +37,7 @@ export const yearPlanData = {
             {
               location: '中国，上海',
               activeName: 'GDC',
-              href:'/zh/news/openEuler/20240330-GDC/20240330-GDC.html',
+              href: '/zh/news/openEuler/20240330-GDC/20240330-GDC.html',
             },
           ],
         },
@@ -47,7 +47,7 @@ export const yearPlanData = {
             {
               location: '越南，河内',
               activeName: 'FOSSASIA 2024',
-              href:'/zh/news/20240426-fassasia/20240426-fassasia.html'
+              href: '/zh/news/20240426-fassasia/20240426-fassasia.html',
             },
           ],
         },
@@ -66,8 +66,7 @@ export const yearPlanData = {
         },
         {
           month: '7',
-          actives: [
-          ],
+          actives: [],
         },
         {
           month: '8',
@@ -75,7 +74,7 @@ export const yearPlanData = {
             {
               location: '中国，上海',
               activeName: 'GOTC',
-              href:'https://gotc.oschina.net/?from=wap'
+              href: 'https://gotc.oschina.net/?from=wap',
             },
             {
               location: '杭州',
@@ -111,14 +110,10 @@ export const yearPlanData = {
               location: '中国，北京',
               activeName: '2024开放原子开发者大会',
             },
-          ],
-        },
-        {
-          month: '12',
-          actives: [
             {
               location: '中国，北京',
-              activeName: '操作系统峰会 openEuler Summit',
+              activeName: '操作系统大会&openEuler Summit 2024',
+              href: '/zh/interaction/summit-list/summit2024/',
             },
           ],
         },
@@ -136,7 +131,7 @@ export const yearPlanData = {
             {
               location: '日本，东京',
               activeName: 'OpenChain X openEuler 东京研讨会',
-              href:'/zh/news/openEuler/20240330-openchain/20240330-openchain.html'
+              href: '/zh/news/openEuler/20240330-openchain/20240330-openchain.html',
             },
             {
               location: '中国，上海',
@@ -159,7 +154,7 @@ export const yearPlanData = {
             {
               location: '中国，北京',
               activeName: 'openEuler SIG Gathering 2024',
-              href:'/zh/interaction/summit-list/sig-gathering-2024/'
+              href: '/zh/interaction/summit-list/sig-gathering-2024/',
             },
           ],
         },
@@ -217,7 +212,7 @@ export const yearPlanData = {
             {
               location: '武汉',
               activeName: '武汉用户组 Meetup',
-              href:'/zh/news/openEuler/20240330-yhz/20240330-yhz.html'
+              href: '/zh/news/openEuler/20240330-yhz/20240330-yhz.html',
             },
             {
               location: '成都',
@@ -237,7 +232,7 @@ export const yearPlanData = {
             {
               location: '上海',
               activeName: 'RISC-V & Compiler MeetUp',
-              href:'/zh/news/20240426-sh/20240426-sh.html'
+              href: '/zh/news/20240426-sh/20240426-sh.html',
             },
             {
               location: '北京',
@@ -251,7 +246,7 @@ export const yearPlanData = {
             {
               location: '北京',
               activeName: 'openEuler 24.03 LTS版本发布会',
-              href:'/zh/news/openEuler/20240612-24fb/20240612-24fb.html'
+              href: '/zh/news/openEuler/20240612-24fb/20240612-24fb.html',
             },
             {
               location: '线上',
@@ -260,22 +255,22 @@ export const yearPlanData = {
             {
               location: '北京',
               activeName: 'Arm Meetup',
-              href:'/zh/news/openEuler/20240628-Arm/20240628-Arm.html'
+              href: '/zh/news/openEuler/20240628-Arm/20240628-Arm.html',
             },
             {
               location: '南京',
               activeName: '24.03 LTS 版本与社区创新Meetup',
-              href:'/zh/news/openEuler/20240625-nanjing/20240625-nanjing.html'
+              href: '/zh/news/openEuler/20240625-nanjing/20240625-nanjing.html',
             },
             {
               location: '长沙',
               activeName: 'openEuler 24.03 LTS Meetup',
-              href:'/zh/news/openEuler/20240628-changsha/20240628-changsha.html'
+              href: '/zh/news/openEuler/20240628-changsha/20240628-changsha.html',
             },
             {
               location: '西安',
               activeName: 'openEuler 24.03 LTS & Embedded Meetup',
-              href:'/zh/news/openEuler/20240705-xian/20240705-xian.html'
+              href: '/zh/news/openEuler/20240705-xian/20240705-xian.html',
             },
           ],
         },
@@ -386,8 +381,9 @@ export const yearPlanData = {
           actives: [
             {
               location: 'Barcelona, Spain',
-              activeName: '2024 openEuler Global Ecosystem Collaboration Workshop',
-              href:'https://www.youtube.com/watch?v=DFQ1-u11uqg&list=PLtDfk9jvMAzgu0w75z2k2u-n9XkrWCDVC'
+              activeName:
+                '2024 openEuler Global Ecosystem Collaboration Workshop',
+              href: 'https://www.youtube.com/watch?v=DFQ1-u11uqg&list=PLtDfk9jvMAzgu0w75z2k2u-n9XkrWCDVC',
             },
           ],
         },
@@ -397,7 +393,7 @@ export const yearPlanData = {
             {
               location: 'Paris, France',
               activeName: 'KubeCon EU',
-              href:'https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/'
+              href: 'https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/',
             },
           ],
         },
@@ -407,7 +403,7 @@ export const yearPlanData = {
             {
               location: 'Hanoi, Vietnam',
               activeName: 'FOSSASIA 2024',
-              href:'https://www.youtube.com/playlist?list=PLtDfk9jvMAzjaWscsLJaO-jxRmAVwVGTh'
+              href: 'https://www.youtube.com/playlist?list=PLtDfk9jvMAzjaWscsLJaO-jxRmAVwVGTh',
             },
           ],
         },
@@ -417,7 +413,7 @@ export const yearPlanData = {
             {
               location: 'Madrid, Spain',
               activeName: 'Linaro Connect',
-              href:'https://youtu.be/1bRrCsrPKbk?si=gFM5JPnRH5oaIxym'
+              href: 'https://youtu.be/1bRrCsrPKbk?si=gFM5JPnRH5oaIxym',
             },
           ],
         },
@@ -427,8 +423,7 @@ export const yearPlanData = {
         },
         {
           month: '7',
-          actives: [
-          ],
+          actives: [],
         },
         {
           month: '8',
@@ -436,17 +431,17 @@ export const yearPlanData = {
             {
               location: 'Shanghai, China',
               activeName: 'GOTC',
-              href:'https://gotc.oschina.net/?from=wap'
+              href: 'https://gotc.oschina.net/?from=wap',
             },
             {
               location: 'Hangzhou, China',
               activeName: 'RISC-V Day',
-              href:'https://riscv.org/event/risc-v-china-summit/'
+              href: 'https://riscv.org/event/risc-v-china-summit/',
             },
             {
               location: 'Hong Kong, China',
               activeName: 'KubeCon China',
-              href:'https://events.linuxfoundation.org/kubecon-cloudnativecon-open-source-summit-ai-dev-china/'
+              href: 'https://events.linuxfoundation.org/kubecon-cloudnativecon-open-source-summit-ai-dev-china/',
             },
           ],
         },
@@ -456,27 +451,22 @@ export const yearPlanData = {
             {
               location: 'Suwon, South Korea',
               activeName: 'OpenInfra Summit Asia',
-              href:'https://2024.openinfraasia.org/'
+              href: 'https://2024.openinfraasia.org/',
             },
             {
               location: 'Vienna, Austria',
               activeName: 'OSS EU',
-              href:'https://events.linuxfoundation.org/open-source-summit-europe/'
+              href: 'https://events.linuxfoundation.org/open-source-summit-europe/',
             },
           ],
         },
         {
           month: '11',
           actives: [
-          ],
-        },
-        {
-          month: '12',
-          actives: [
             {
               location: 'Beijing, China',
-              activeName: 'openEuler Summit',
-              href:'/en/interaction/summit-list/summit2023/'
+              activeName: 'Operating System Conference & openEuler Summit 2024',
+              href: '/en/interaction/summit-list/summit2024/',
             },
           ],
         },
@@ -494,12 +484,12 @@ export const yearPlanData = {
             {
               location: 'Tokyo, Japan',
               activeName: 'OpenChain X openEuler Workshop',
-              href:'https://www.youtube.com/playlist?list=PLtDfk9jvMAzjYGqaeMYFUufxnnCdCibni'
+              href: 'https://www.youtube.com/playlist?list=PLtDfk9jvMAzjYGqaeMYFUufxnnCdCibni',
             },
             {
               location: 'Shanghai, China',
               activeName: 'KCD',
-              href:'https://community.cncf.io/events/details/cncf-kcd-shanghai-presents-kcd-shanghai-2024/'
+              href: 'https://community.cncf.io/events/details/cncf-kcd-shanghai-presents-kcd-shanghai-2024/',
             },
           ],
         },
@@ -518,7 +508,7 @@ export const yearPlanData = {
             {
               location: 'Beijing, China',
               activeName: 'openEuler SIG Gathering 2024',
-              href:'/en/interaction/summit-list/sig-gathering-2024/'
+              href: '/en/interaction/summit-list/sig-gathering-2024/',
             },
           ],
         },
@@ -546,9 +536,7 @@ export const yearPlanData = {
         },
         {
           month: '12',
-          actives: [
-
-          ],
+          actives: [],
         },
       ],
     },
@@ -566,14 +554,14 @@ export const editionData = {
     {
       time: '5.30',
       content: '24.03 LTS',
-      href:'/download/?version=openEuler%2024.03%20LTS',
+      href: '/download/?version=openEuler%2024.03%20LTS',
       month: 5,
     },
     {
       time: '6.30',
       content: '22.03 LTS SP4',
       month: 6,
-      href:'/download/?version=openEuler%2022.03%20LTS%20SP4'
+      href: '/download/?version=openEuler%2022.03%20LTS%20SP4',
     },
     {
       time: '9.30',

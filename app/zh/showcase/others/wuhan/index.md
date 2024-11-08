@@ -2,7 +2,7 @@
 title: 中科通达智慧交通管控平台
 category: showcase
 industry: 其他
-company: 
+company: 中科通达智慧交通管控平台
 summary: 中科通达智慧交通管控平台
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/others.png

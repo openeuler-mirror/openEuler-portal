@@ -336,7 +336,7 @@ const tdks: {
         'AI-assisted EulerCopilot leverages LLMs to offer capabilities that revolutionize your management of the openEuler environment.',
       keywords: 'EulerCopilot, LLM, OS',
     },
-  'en/blog/G11N-SIG/20240412-SysCare/SysCare—openEuler%20Secret%20Weapon%20for%20Live%20Patching.html':
+  'en/blog/G11N-SIG/20240412-SysCare/SysCare%E2%80%94openEuler%20Secret%20Weapon%20for%20Live%20Patching.html':
     {
       title: 'SysCare, Secret Weapon for Live Patching',
       description:
@@ -1035,6 +1035,13 @@ const tdks: {
       "KylinSec + openEuler support safe operations of the first batch of State Grid's digital converter station pilot projects.",
     keywords: 'safe operations, digital converter station, electrical grid',
   },
+  'en/blog/202030721-Kmesh/202030721-Kmesh.html': {
+    title: 'Kmesh: Service Governance Framework',
+    description:
+      'Discover Kmesh, a high-performance service mesh framework launched by openEuler, optimizing data plane latency with innovative architecture.',
+    keywords:
+      'service mesh, Kmesh, service governance framework, infrastructure layer',
+  },
   'en/community/certification-services': {
     title: 'Certification',
     description:
@@ -1057,6 +1064,7 @@ const tdks: {
     title: 'Software Compatibility',
     description:
       "Enhance your project's efficiency by exploring compatibility options for software within the openEuler ecosystem.",
+    keywords: 'software, compatibility, openEuler',
   },
   'en/download/archive/detail': {
     title: 'Download Archived Release',
