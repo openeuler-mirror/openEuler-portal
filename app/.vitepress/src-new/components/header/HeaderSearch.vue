@@ -21,7 +21,7 @@ import IconBack from '~icons/app-new/icon-header-back.svg';
 const { lang } = useData();
 const searchRef = ref();
 const isClickOutside = useClickOutside(searchRef) || false;
-const { isPadV } = useScreen();
+const { lePadV } = useScreen();
 
 const emits = defineEmits(['focus-input', 'search-click']);
 const isShowDrawer = ref(false);
@@ -71,7 +71,7 @@ const showDrawer = () => {
 const closeSearchBox = () => {
   searchInput.value = '';
   emits('search-click', isShowBox.value);
-  if (!isPadV.value) {
+  if (!lePadV.value) {
     isShowBox.value = false;
     commonStore.iconMenuShow = true;
     isShowDrawer.value = false;
@@ -80,7 +80,7 @@ const closeSearchBox = () => {
 
 onMounted(() => {
   window.addEventListener('click', () => {
-    if (isClickOutside.value && !isPadV.value) {
+    if (isClickOutside.value && !lePadV.value) {
       closeSearchBox();
     }
   });
@@ -154,14 +154,14 @@ const closeSearch = () => {
 </script>
 <template>
   <div class="search-wrapper">
-    <div :class="{ 'search': !isPadV, 'focus': isShowDrawer && !isPadV }">
+    <div :class="{ 'search': !lePadV, 'focus': isShowDrawer && !lePadV }">
       <div
         ref="searchRef"
         class="header-search"
       >
 
         <div :class="{ 'input-focus': isShowDrawer }">
-          <OIcon v-if="isPadV && isShowDrawer" @click.stop="closeSearch"><IconBack></IconBack></OIcon>
+          <OIcon v-if="lePadV && isShowDrawer" @click.stop="closeSearch"><IconBack></IconBack></OIcon>
           <OInput
             v-model="searchInput"
             :placeholder="
@@ -173,11 +173,11 @@ const closeSearch = () => {
             <template #prefix>
               <OIcon class="icon"><IconSearch></IconSearch></OIcon>
             </template>
-            <template v-if="(!isPadV && isShowDrawer) || ( isPadV && searchInput )" #suffix>
+            <template v-if="(!lePadV && isShowDrawer) || ( lePadV && searchInput )" #suffix>
               <OIcon class="close icon" @click="closeSearchBox"><IconCancel /></OIcon>
             </template>
           </OInput>
-          <span v-if="isPadV && isShowDrawer" class="search-text" @click="handleSearchEvent">{{ searchValue.TEXT }}</span>
+          <span v-if="lePadV && isShowDrawer" class="search-text" @click="handleSearchEvent">{{ searchValue.TEXT }}</span>
         </div>
 
         <div v-show="isShowDrawer" class="drawer">

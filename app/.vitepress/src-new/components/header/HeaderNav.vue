@@ -107,7 +107,10 @@ const linkClick = () => {
                   <transition name="transition">
                     <div v-if="isShow" :class="['nav-dropdown', navActive]">
                       <div class="nav-drop-content">
-                        <div class="nav-sub-background" :class="{ dark: commonStore.theme === 'dark' }"></div>
+                        <div class="nav-sub-background">
+                          <div class="nav-background-left"></div>
+                          <div class="nav-background-right"></div>
+                        </div>
                         <div class="nav-sub">
                           <div
                             v-for="subItem in subNav"
@@ -338,40 +341,76 @@ const linkClick = () => {
   z-index: 90;
   color: var(--o-color-info1);
   display: flex;
+  cursor: default;
 
   min-height: 320px;
   justify-content: center;
   transform-origin: top;
+
+  @include respond-to('laptop') {
+    min-height: 300px;
+  }
+  @include respond-to('pad_h') {
+    min-height: 260px;
+  }
 
 
   .nav-drop-content {
     max-width: 1416px;
     width: calc(100vw - 64px);
     display: flex;
-
-    @include respond-to('laptop') {
-      margin: 0 var(--o-gap-5);
-    }
   }
 
   .nav-sub-background {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: calc((100% - 1416px) / 2 + 188px);
+    height: 100%;
+
+    @include respond-to('laptop') {
+      width: 220px;
+    }
+    @include respond-to('pad_h') {
+      width: 182px;
+    }
+
+    .nav-background-left {
       position: absolute;
-      left: 0px;
-      top: 0px;
-      width: calc((100% - 1416px) / 2 + 188px);
-      height: 100%;
-      background-image: url('../../assets/category/header/nav_background.png');
+      left: 0;
+      top: 0;
+      width: 173px;
+      height: 169px;
+      background-image: url('../../assets/category/header/nav_background_left.png');
       background-size: cover;
       z-index: -1;
 
       @include respond-to('laptop') {
-        width: 212px;
+        height: 104px;
+        width: 102px;
       }
-
-      &.dark {
-        background-image: url('../../assets/category/header/nav_background_dark.png');
+      @include respond-to('pad_h') {
+        width: 68px;
+        height: 9px;
       }
     }
+
+    .nav-background-right {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 173px;
+      height: 172px;
+      background-image: url('../../assets/category/header/nav_background_right.png');
+      background-size: cover;
+      z-index: -1;
+
+      @include respond-to('pad_v-laptop') {
+        width: 124px;
+        height: 152px;
+      }
+    }
+  }
 
   .nav-sub {
     width: 172px;
@@ -385,15 +424,12 @@ const linkClick = () => {
     }
 
     .nav-sub-item {
-      width: 172px;
       height: 40px;
       border-radius: var(--o-radius-s);
       display: flex;
       align-items: center;
+      cursor: pointer;
 
-      @include respond-to('pad_h') {
-        width: 142px;
-      }
       > span {
         padding-left: var(--o-gap-2);
       }
@@ -443,7 +479,9 @@ const linkClick = () => {
     }
     .content-right {
       width: 298px;
-      padding: 32px 0 24px 23px;
+      padding-top: var(--o-gap-6);
+      padding-bottom: var(--o-gap-5);
+      padding-left: var(--o-gap-4);
 
       @media screen and (max-width: 1780px) {
         width: 384px;
@@ -502,7 +540,6 @@ const linkClick = () => {
 
       .review {
         width: 410px;
-        height: 90px;
         display: flex;
         align-items: unset;
         position: relative;
@@ -598,13 +635,6 @@ const linkClick = () => {
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
 
-            mask:
-              linear-gradient(270deg, transparent, transparent 0%, var(--o-color-info2)),
-              linear-gradient(270deg, var(--o-color-info2), var(--o-color-info2));
-            mask-size: 100% calc(100% - 20px), 100% 20px;
-            mask-position: bottom, top;
-            mask-repeat: no-repeat;
-
             @include respond-to('<=laptop') {
               display: none;
             }
@@ -621,21 +651,16 @@ const linkClick = () => {
       }
     }
     .split-line {
-      position: absolute;
       background: var(--o-color-control4);
       width: 1px;
       height: 100%;
       min-height: 320px;
-      right: 298px;
 
-      @media screen and (max-width: 1780px) {
-        right: 372px;
-      }
       @include respond-to('laptop') {
-        right: 352px;
+        min-height: 300px;
       }
       @include respond-to('pad_h') {
-        right: 216px;
+        min-height: 260px;
       }
     }
 
