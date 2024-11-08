@@ -17,6 +17,7 @@ import {
   OLink,
   OTabPane,
   ODivider,
+  OScroller,
 } from '@opensig/opendesign';
 
 import summitData from '~@/data/summit';
@@ -346,14 +347,13 @@ const watchData = watch(
           </div>
         </div>
 
-        <div ref="meetingListRef" class="meeting-list">
-          <div
-            v-if="
-              (renderData.timeData.length && renderData.date) ||
-              (renderData.timeData.length && renderData.start_date)
-            "
-          >
+        <div>
+          <OScroller class="meeting-list" show-type="hover" size="small">
             <OCollapse
+              v-if="
+                renderData.timeData.length &&
+                (renderData.date || renderData.start_date)
+              "
               v-model="activeName"
               accordion
               :style="{ '--collapse-padding': '0' }"
@@ -427,16 +427,16 @@ const watchData = watch(
                 </div>
               </OCollapseItem>
             </OCollapse>
-          </div>
-          <div v-else class="empty">
-            <img
-              v-if="commonStore.theme === 'light'"
-              :src="notFoundImg_light"
-              alt=""
-            />
-            <img v-else :src="notFoundImg_dark" alt="" />
-            <p>{{ i18n.EMPTY_TEXT }}</p>
-          </div>
+            <div v-else class="empty">
+              <img
+                v-if="commonStore.theme === 'light'"
+                :src="notFoundImg_light"
+                alt=""
+              />
+              <img v-else :src="notFoundImg_dark" alt="" />
+              <p>{{ i18n.EMPTY_TEXT }}</p>
+            </div>
+          </OScroller>
         </div>
       </div>
     </div>
@@ -825,8 +825,8 @@ const watchData = watch(
     }
     .meeting-list {
       height: v-bind('calendarHeight');
-      @include scrollbar;
-      overflow: auto;
+      // @include scrollbar;
+      // overflow: auto;
       @include respond-to('<=pad_v') {
         height: auto;
       }
@@ -860,6 +860,11 @@ const watchData = watch(
           width: calc(100% - 2 * 24px);
           height: 1px;
           background-color: var(--collapse-division-color);
+        }
+        @include hover {
+          .text {
+            color: var(--o-color-primary1);
+          }
         }
         @include respond-to('<=pad_v') {
           &::after {

@@ -128,6 +128,7 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
     display: block;
     .intro-content-pc {
       display: flex;
+      align-items: center;
     }
 
     .intro-list-pc {
@@ -212,10 +213,12 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
 
     .intro-img-pc {
       flex: 1;
+      height: min-content;
       padding: 0 0 24px 24px;
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
         border-radius: var(--o-radius-s);
       }
       background-repeat: no-repeat;

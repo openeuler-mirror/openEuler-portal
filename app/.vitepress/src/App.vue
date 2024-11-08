@@ -20,6 +20,7 @@ import LayoutEvent from './layouts/LayoutEvent.vue';
 import LayoutSecurity from './layouts/LayoutSecurity.vue';
 import LayoutWiki from './layouts/LayoutWiki.vue';
 import LayoutFAQ from '@/layouts/LayoutFAQ.vue';
+import LayouWhitePaper from '@/layouts/LayouWhitePaper.vue';
 
 import FloatingButton from '~@/components/FloatingButton.vue';
 import FloatingButtonEn from '~@/components/FloatingButtonEn.vue';
@@ -50,6 +51,7 @@ const compMapping: {
   security: LayoutSecurity,
   faq: LayoutFAQ,
   wiki: LayoutWiki,
+  'white-paper': LayouWhitePaper,
 };
 
 const isCustomLayout = computed(() => {
@@ -62,6 +64,9 @@ const isCustomLayout = computed(() => {
 const comp = computed(() => {
   return compMapping[frontmatter.value.category];
 });
+console.log(comp);
+console.log(isCustomLayout);
+
 // ----------------------------- new ----------------------------
 
 watch(

@@ -279,6 +279,9 @@ onMounted(() => {
         }
       }
       .card-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
         padding: 32px;
         @include respond-to('<=laptop') {
           padding: 24px;
@@ -498,7 +501,7 @@ onMounted(() => {
       display: flex;
       align-items: center;
       @include text1;
-      @include respond-to('<=laptop') {
+      @include respond-to('pad_h') {
         margin: 0 0 0 0;
       }
       @include respond-to('<=pad_v') {
@@ -514,8 +517,13 @@ onMounted(() => {
     z-index: -1;
     @include respond-to('laptop') {
       width: 145px;
-      top: -74px;
+      top: -47px;
       left: -30px;
+    }
+    @include respond-to('<=pad_v') {
+      width: 46px;
+      top: -20px;
+      left: -12px;
     }
     @include respond-to('phone') {
       width: 46px;

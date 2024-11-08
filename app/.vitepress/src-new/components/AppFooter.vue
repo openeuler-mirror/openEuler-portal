@@ -72,7 +72,7 @@ watch(
     <div class="footer-content">
       <ContentWrapper :pc-top="0" :mobile-top="0">
         <div class="quick-nav">
-          <div v-for="category in quickNav[locale]" class="category">
+          <div v-for="category in quickNav[lang]" class="category">
             <div class="category-title">
               {{ category.title }}
             </div>
@@ -90,7 +90,7 @@ watch(
             {{ $t('footer.friendshipLink') }}
           </div>
           <a
-            v-for="link in friendshipLinks[locale]"
+            v-for="link in friendshipLinks[lang]"
             class="friendship-link-item"
             :href="link.link"
             target="_blank"
@@ -198,7 +198,7 @@ $color: #fff;
       @include h4;
     }
     .atom-logo {
-      height: 32px;
+      height: 36px;
       margin-top: 12px;
       @include respond-to('<=pad') {
         height: 30px;
