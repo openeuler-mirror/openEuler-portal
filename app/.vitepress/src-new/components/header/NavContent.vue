@@ -98,13 +98,6 @@ const linkClick = () => {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-
-  mask:
-    linear-gradient(270deg, transparent, transparent 0%, var(--o-color-info2)),
-    linear-gradient(270deg, var(--o-color-info2), var(--o-color-info2));
-  mask-size: 100% calc(100% - 20px), 100% 20px;
-  mask-position: bottom, top;
-  mask-repeat: no-repeat;
 }
 
 .content-container {

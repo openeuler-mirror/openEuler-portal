@@ -11,7 +11,7 @@ import IconMoon from '~icons/app-new/icon-header-moon.svg';
 const APPEARANCE_KEY = 'openEuler-theme-appearance';
 
 const commonStore = useCommon();
-const { isPadV } = useScreen();
+const { lePadV } = useScreen();
 const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
 
 const changeTheme = () => {
@@ -66,7 +66,7 @@ watch(
 </script>
 
 <template>
-  <div v-if="isPadV" class="theme-box-mobile">
+  <div v-if="lePadV" class="theme-box-mobile">
     <OSwitch
       v-model="commonStore.theme"
       active-value="dark"

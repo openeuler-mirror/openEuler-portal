@@ -110,7 +110,7 @@ main {
     content: '';
     display: table;
   }
-  @media (max-width: 1100px) {
+  @include respond-to('<=pad_v') {
     padding-top: 48px;
   }
   &.download-page {

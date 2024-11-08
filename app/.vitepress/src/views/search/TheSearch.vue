@@ -351,7 +351,7 @@ function searchAll(valueChange?: boolean) {
       currentTab.value = 'all';
     }
     searchRecommendRef.value(searchInput.value);
-    searchChat();
+    // searchChat();
     searchCountAll();
     searchDataAll();
     searchRpm();
@@ -552,7 +552,7 @@ const enterEvent = () => {
       <div class="result-left">
         <!-- 搜索框 -->
 
-        <div
+        <!-- <div
           v-if="showChatRes && lang === 'zh'"
           class="gpt-block"
           :class="suggestList.length ? 'exist-suggest' : ''"
@@ -610,7 +610,7 @@ const enterEvent = () => {
             v-model="viewAgreeVisible"
             @submit="searchChat"
           ></ViewAgreeModal>
-        </div>
+        </div> -->
         <div class="search-content">
           <div class="select-options">
             <ul class="type">
@@ -1009,11 +1009,7 @@ const enterEvent = () => {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: var(--e-spacing-h2);
 
-        @media (max-width: 768px) {
-          margin-top: var(--e-spacing-h5);
-        }
         .select-options {
           display: flex;
           justify-content: space-between;
