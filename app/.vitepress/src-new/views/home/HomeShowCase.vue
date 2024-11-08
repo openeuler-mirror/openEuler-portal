@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, watch } from 'vue';
 import {
   OIcon,
   ORow,
@@ -38,12 +38,16 @@ export interface CasesT {
 
 const { theme } = storeToRefs(useCommon());
 const { locale, t } = useLocale();
-const { isPhone } = useScreen();
+const { isPhone, size } = useScreen();
 
 const userCase = ref<HTMLElement>();
 const activeTab = ref(0);
 const cases = ref<CasesT[]>([]);
 cases.value = locale.value === 'zh' ? casesZh : casesEn;
+
+const tabs = ref();
+const activeWidth = ref();
+const activeLeft = ref();
 
 // -------------------- 获取案例数据 --------------------
 const caseData = ref({});
@@ -64,15 +68,23 @@ const getCases = () => {
   });
 };
 
+// -------------------- tab切换动效 --------------------
+const init = () => {
+  activeWidth.value = tabs.value.children[activeTab.value].offsetWidth + 'px';
+  activeLeft.value = tabs.value.children[activeTab.value].offsetLeft + 'px';
+};
+
 // -------------------- 自动切换tab --------------------
 const timer = ref();
 const changeCase = () => {
   activeTab.value === cases.value.length - 1
     ? (activeTab.value = 0)
     : activeTab.value++;
+  init();
 };
 const setCaseInterval = () => {
   timer.value = setInterval(changeCase, 5000);
+  init();
 };
 const clearCaseInterval = () => {
   clearInterval(timer.value);
@@ -81,12 +93,15 @@ const clearCaseInterval = () => {
 // -------------------- 点击切换tab --------------------
 const changeTab = (val: number) => {
   activeTab.value = val;
+  init();
 };
 
-const moreLink = (val: number) => {
-  const url = `showcase/?industry=${val}`.replace(/(index)$/g, '');
-  window.open(url, '_blank');
-};
+watch(
+  () => size.width,
+  () => {
+    init();
+  }
+);
 
 onMounted(() => {
   getCases();
@@ -120,12 +135,12 @@ onUnmounted(() => {
     <div ref="userCase">
       <OScroller show-type="never">
         <div class="tab">
-          <ul class="tab-list">
+          <ul class="tab-list" ref="tabs">
             <li
               v-for="(tab, i) in cases"
               :key="i"
               class="item-tab"
-              :class="{ 'item-tab-active': activeTab === i }"
+              :class="{ 'item-tab-active-mb': activeTab === i }"
               @click="changeTab(i)"
             >
               <img
@@ -136,6 +151,10 @@ onUnmounted(() => {
               <img v-else :src="tab.icon[theme]" class="nav-item-icon" />
               <span>{{ tab.label }}</span>
             </li>
+            <div
+              class="item-tab-active"
+              :style="{ width: activeWidth, left: activeLeft }"
+            ></div>
           </ul>
         </div>
       </OScroller>
@@ -185,6 +204,7 @@ onUnmounted(() => {
   padding: 6px;
   border-radius: var(--o-radius-s);
   white-space: nowrap;
+  position: relative;
 }
 .item-tab {
   display: flex;
@@ -194,6 +214,7 @@ onUnmounted(() => {
   padding: 6px 48px;
   border-radius: var(--o-radius-xs);
   cursor: pointer;
+  z-index: 2;
   @include hover {
     color: var(--o-color-primary1);
   }
@@ -203,9 +224,15 @@ onUnmounted(() => {
   margin-right: 8px;
 }
 .item-tab-active {
+  position: absolute;
+  height: 38px;
+  left: 6px;
   color: var(--o-color-primary1);
   background-color: var(--o-color-fill2);
   box-shadow: 0 2px 4px 0 rgba(0, 47, 167, 0.16);
+  border-radius: var(--o-radius-xs);
+  z-index: 1;
+  transition: left 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 .content {
@@ -290,6 +317,9 @@ onUnmounted(() => {
   .item-tab {
     padding: 6px 16px;
   }
+  .item-tab-active {
+    height: 36px;
+  }
   .content {
     height: 387px;
     margin-top: 24px;
@@ -324,6 +354,9 @@ onUnmounted(() => {
   .item-tab {
     padding: 4px 20px;
   }
+  .item-tab-active {
+    height: 32px;
+  }
   .case-list {
     width: 48%;
     margin-left: 36px;
@@ -354,6 +387,9 @@ onUnmounted(() => {
 @include respond-to('<=pad_v') {
   .item-tab {
     padding: 4px 12px;
+  }
+  .item-tab-active {
+    height: 30px;
   }
   .nav-item-icon {
     width: 16px;
@@ -414,6 +450,9 @@ onUnmounted(() => {
     display: none;
   }
   .item-tab-active {
+    display: none;
+  }
+  .item-tab-active-mb {
     color: var(--o-color-primary1);
     background-color: transparent;
     box-shadow: none;
@@ -490,7 +529,7 @@ onUnmounted(() => {
     --link-color: var(--o-color-info1);
     --link-color-hover: #4374f2;
   }
-  @include respond-to('phone') {
+  @media screen and (max-width: 700px) {
     .tab {
       height: 26px;
     }
@@ -499,7 +538,7 @@ onUnmounted(() => {
       padding: 0;
       white-space: nowrap;
     }
-    .item-tab-active {
+    .item-tab-active-mb {
       color: var(--o-color-info1);
       background-color: transparent;
       &::after {
