@@ -2,7 +2,7 @@
 title: 新能源风场电力监控系统
 category: showcase
 industry: 能源
-company: 
+company: 新能源风场电力监控系统
 summary: 全面基于国内主流安全操作系统进行大规模建设
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/energy.png

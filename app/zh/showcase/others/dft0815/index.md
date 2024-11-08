@@ -2,7 +2,7 @@
 title: 东方通DPI流量采集平台V2.0
 category: showcase
 industry: 其他
-company: 
+company: 东方通DPI流量采集平台V2.0
 summary: 确保网络环境的安全和高效运行
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/others.png
