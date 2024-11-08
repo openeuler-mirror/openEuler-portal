@@ -29,7 +29,7 @@ const hideSub = () => {
 </script>
 
 <template>
-  <div v-if="lang !== 'ru'" class="opt-user" @mouseenter="showSub()"
+  <div class="opt-user" @mouseenter="showSub()"
   @mouseleave="hideSub()">
     <div v-if="token">
       <div class="el-dropdown-link opt-info">
@@ -60,7 +60,6 @@ const hideSub = () => {
 
 <style lang="scss" scoped>
 .opt-user {
-  margin-left: var(--o-gap-4);
   height: 100%;
   display: flex;
   align-items: center;
@@ -74,7 +73,7 @@ const hideSub = () => {
       border-radius: 50%;
       cursor: pointer;
       vertical-align: middle;
-      @media (max-width: 1200px) {
+      @include respond-to('<=pad_v') {
         width: 28px;
         height: 28px;
       }
@@ -91,7 +90,7 @@ const hideSub = () => {
     box-shadow: var(--o-shadow-1);
     padding: var(--o-gap-1);
 
-    @media (max-width: 1200px) {
+    @include respond-to('<=pad_v') {
       min-width: 96px;
       top: 48px;
       left: -60px;
@@ -116,7 +115,7 @@ const hideSub = () => {
         color: var(--o-color-primary1);
         cursor: default;
       }
-      &:hover {
+      @include hover {
         color: var(--o-color-primary1);
         background: var(--o-color-control2-light);
       }

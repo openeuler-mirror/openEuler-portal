@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { watch, computed, ref } from 'vue';
 import { useRouter, useData } from 'vitepress';
-import useWindowResize from '@/components/hooks/useWindowResize';
+import { useScreen } from '~@/composables/useScreen';
 import navFilterConfig from '@/data/common/nav-filter';
 
 import HeaderNav from './HeaderNav.vue';
@@ -9,8 +9,7 @@ import HeaderNavMoblie from './HeaderNavMoblie.vue';
 
 const router = useRouter();
 const { lang } = useData();
-const screenWidth = ref(useWindowResize());
-const isMobile = computed(() => screenWidth.value <= 1200 ? true : false);
+const { isPadV } = useScreen();
 
 const routerPath = ref(router.route.path);
 const langShow = ref(['zh', 'en']);
@@ -70,7 +69,7 @@ watch(
 </script>
 
 <template>
-  <HeaderNavMoblie v-if="isMobile" :lang-options="langShow" />
+  <HeaderNavMoblie v-if="isPadV" :lang-options="langShow" />
   <HeaderNav v-else :lang-options="langShow" />
 </template>
 

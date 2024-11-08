@@ -244,6 +244,8 @@ export default {
       CHILDREN: [
         {
           NAME: '文档中心',
+          ICON: ArrowRight,
+          URL: 'https://docs.openeuler.org/zh/',
           CHILDREN: [
             {
               NAME: '热门文档',
@@ -668,12 +670,12 @@ export default {
                 },
                 {
                   NAME: '人才培养',
-                  DESCRIPTION: '旨在帮助企业快速培养openEuler专业生态人才。',
+                  DESCRIPTION: '旨在帮助企业快速培养openEuler专业生态人才',
                   URL: 'https://talent-assessment.openeuler.org/#/',
                 },
                 {
                   NAME: '开源实习',
-                  DESCRIPTION: '旨在帮助在校学生在项目实践中提升能力，成为优秀的开源人才。',
+                  DESCRIPTION: '旨在帮助在校学生在项目实践中提升能力，成为优秀的开源人才',
                   URL: '/internship/',
                 },
               ]

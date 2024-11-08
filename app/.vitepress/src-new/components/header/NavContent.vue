@@ -83,7 +83,7 @@ const linkClick = () => {
   color: var(--o-color-info1);
   cursor: pointer;
 
-  &:hover {
+  @include hover {
     color:var(--o-color-primary1);
   }
 }
@@ -125,11 +125,11 @@ const linkClick = () => {
       }
     }
 
-    @include respond-to('laptop') {
-      width: calc((100% - 48px) / 2);
+    @include respond-to('pad_v-laptop') {
+      width: calc((100% - 24px) / 2);
 
       &:nth-child(2n) {
-        margin-left: var(--o-gap-8);
+        margin-left: var(--o-gap-5);
       }
 
       &:nth-child(n+3) {
@@ -146,6 +146,7 @@ const linkClick = () => {
     .item-name {
       font-family: PingFangSC;
       font-weight: 500;
+      white-space: nowrap;
       @include text1;
     }
     .content-tag {
@@ -180,6 +181,10 @@ const linkClick = () => {
 
       &:not(:last-child) {
         margin-right: var(--o-gap-5);
+
+        @media screen and (max-width: 1780px) {
+          margin-right: var(--o-gap-4);
+        }
       }
     }
   }
