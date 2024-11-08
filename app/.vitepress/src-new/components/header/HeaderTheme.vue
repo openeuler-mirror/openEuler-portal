@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, onMounted, watch, ref } from 'vue';
 import { useCommon } from '@/stores/common';
-import useWindowResize from '@/components/hooks/useWindowResize';
+import { useScreen } from '~@/composables/useScreen';
 import { setCustomCookie, getCustomCookie } from '@/shared/utils';
 
 import IconSun from '~icons/app/icon-sun-outline.svg';
@@ -11,8 +11,7 @@ import IconMoon from '~icons/app-new/icon-header-moon.svg';
 const APPEARANCE_KEY = 'openEuler-theme-appearance';
 
 const commonStore = useCommon();
-const screenWidth = ref(useWindowResize());
-const isMobile = computed(() => (screenWidth.value <= 1200 ? true : false));
+const { isPadV } = useScreen();
 const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
 
 const changeTheme = () => {
@@ -67,7 +66,7 @@ watch(
 </script>
 
 <template>
-  <div v-if="isMobile" class="theme-box-mobile">
+  <div v-if="isPadV" class="theme-box-mobile">
     <OSwitch
       v-model="commonStore.theme"
       active-value="dark"
@@ -93,14 +92,14 @@ watch(
   .icon {
     font-size: var(--o-icon_size-s);
   }
-  @media screen and (max-width: 1200px) {
+  @include respond-to('<=pad_v') {
     display: none;
   }
 }
 .theme-box-mobile {
   display: none;
 
-  @media screen and (max-width: 1200px) {
+  @include respond-to('<=pad_v') {
     display: block;
   }
 }

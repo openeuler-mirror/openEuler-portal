@@ -231,6 +231,8 @@ export default {
       CHILDREN: [
         {
           NAME: 'Documentation',
+          ICON: ArrowRight,
+          URL: 'https://docs.openeuler.org/en/',
           CHILDREN: [
             {
               NAME: 'Trending Docs',

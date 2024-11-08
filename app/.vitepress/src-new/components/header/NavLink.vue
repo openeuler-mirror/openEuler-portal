@@ -21,6 +21,11 @@ const router = useRouter();
 
 const linkClick = () => {
   emits('link-click');
+  // 解决下载Tab高亮问题
+  if (props.url.startsWith('/download/')) {
+    window.open(`/${lang.value}${props.url}`, '_self');
+    return;
+  }
   router.go(`/${lang.value}${props.url}`);
 };
 </script>
@@ -38,7 +43,7 @@ const linkClick = () => {
   <div
     v-else
     @click="linkClick"
-    class="link link-item"
+    class="link"
     :class="{'without-url': !url}">
     <slot></slot>
   </div>
@@ -49,15 +54,10 @@ const linkClick = () => {
   color: var(--o-color-info1);
   display: flex;
   align-items: center;
-  cursor: pointer;
 
-  &:hover {
+  @include hover {
     color:var(--o-color-primary1);
   }
-}
-
-.link-item {
-  display: inline-block;
 }
 
 .without-url {

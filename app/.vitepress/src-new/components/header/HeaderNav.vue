@@ -83,7 +83,7 @@ const linkClick = () => {
 </script>
 
 <template>
-  <header class="app-header">
+  <header class="app-header" :class="{ dark: commonStore.theme === 'dark' }">
     <div class="app-header-body">
       <img class="logo" alt="openEuler logo" :src="logoUrl" @click="goHome" />
       <ClientOnly>
@@ -112,10 +112,10 @@ const linkClick = () => {
                           <div
                             v-for="subItem in subNav"
                             :key="subItem.NAME"
-                            class="nav-sub-item"
                             :class="{
                               active: subNavActive === subItem.NAME,
                             }"
+                            class="nav-sub-item"
                             @click="changeSubnav(subItem)"
                           >
                           <span>{{ subItem.NAME }}</span>
@@ -123,11 +123,13 @@ const linkClick = () => {
                         </div>
                         <div class="nav-sub-content">
                           <div class="content-left">
-                            <NavLink v-if="subNavContent.URL" class="content-title-url" :url="subNavContent.URL" @link-click="linkClick">{{ subNavContent.NAME }}</NavLink>
+                            <NavLink v-if="subNavContent.URL" class="content-title-url" :url="subNavContent.URL" @link-click="linkClick">
+                              {{ subNavContent.NAME }}
+                              <OIcon v-if="subNavContent.ICON">
+                                <component :is="subNavContent.ICON" class="icon" />
+                              </OIcon>
+                            </NavLink>
                             <span v-else class="content-title">{{ subNavContent.NAME }}</span>
-                            <OIcon v-if="subNavContent.ICON">
-                              <component :is="subNavContent.ICON" class="icon" />
-                            </OIcon>
                             <div v-if="subNavContent.HASGROUP">
                               <div class="group" v-for="group in subNavContent.CHILDREN" :key="group.NAME">
                                 <p class="group-name">{{ group.NAME }}</p>
@@ -177,8 +179,6 @@ const linkClick = () => {
           </div>
         </div>
 
-
-
         <div class="header-tool">
           <HeaderSearch />
           <HeaderCode />
@@ -201,14 +201,39 @@ const linkClick = () => {
   z-index: 98;
   box-shadow: var(--o-shadow-1);
   backdrop-filter: blur(5px);
+
+  &.dark {
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: var(--o-color-control4);
+    }
+  }
+
+  &:before {
+    bottom: 0;
+    box-shadow: var(--o-shadow-1);
+    content: '';
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+  }
+
   .app-header-body {
     display: flex;
     align-items: center;
     max-width: 1416px;
     margin: 0 auto;
     height: 80px;
-    @media (max-width: 1439px) {
-      padding: 0 var(--o-gap-5);
+    @media (max-width: 1480px) {
+      margin: 0 var(--o-gap-6);
     }
   }
 }
@@ -218,6 +243,13 @@ const linkClick = () => {
   width: 136px;
   cursor: pointer;
   margin-right: var(--o-gap-7);
+
+  @include respond-to('laptop') {
+    margin-right: 28px;
+  }
+  @include respond-to('pad_h') {
+    margin-right: var(--o-gap-2);
+  }
 }
 
 .header-content {
@@ -240,6 +272,10 @@ const linkClick = () => {
   align-items: center;
   height: 100%;
   gap: 20px;
+
+  @include respond-to('pad_v-laptop') {
+    gap: var(--o-gap-4);
+  }
 }
 
 .o-nav {
@@ -259,7 +295,7 @@ const linkClick = () => {
       cursor: pointer;
       @include text1;
 
-      &:hover {
+      @include hover {
         z-index: 99;
       }
 
@@ -280,6 +316,13 @@ const linkClick = () => {
       .nav-item {
         display: block;
         padding: var(--o-gap-4);
+
+        @include respond-to('laptop') {
+          padding: 14px;
+        }
+        @include respond-to('pad_h') {
+          padding: 10px;
+        }
       }
     }
   }
@@ -302,7 +345,8 @@ const linkClick = () => {
 
 
   .nav-drop-content {
-    width: 1416px;
+    max-width: 1416px;
+    width: calc(100vw - 64px);
     display: flex;
 
     @include respond-to('laptop') {
@@ -335,6 +379,11 @@ const linkClick = () => {
     margin-top: var(--o-gap-6);
     position: relative;
 
+    @include respond-to('pad_h') {
+      width: 142px;
+      margin-right: var(--o-gap-2);
+    }
+
     .nav-sub-item {
       width: 172px;
       height: 40px;
@@ -342,13 +391,21 @@ const linkClick = () => {
       display: flex;
       align-items: center;
 
+      @include respond-to('pad_h') {
+        width: 142px;
+      }
       > span {
         padding-left: var(--o-gap-2);
       }
+
+      @include hover {
+        background: var(--o-color-control2-light);
+      }
     }
     .active {
-      background: var(--o-color-control2-light);
+      background: var(--o-color-control3-light) !important;
       color: var(--o-color-primary1);
+      font-weight: 500;
       @include text1;
     }
   }
@@ -363,6 +420,10 @@ const linkClick = () => {
       flex: 1;
       padding: 32px 24px 24px 32px;
 
+      @include respond-to('pad_h') {
+        padding: var(--o-gap-6) var(--o-gap-4);
+      }
+
       .group {
         & + .group {
           padding-top: var(--o-gap-5);
@@ -375,14 +436,24 @@ const linkClick = () => {
         }
       }
       .icon {
-        height: 20px;
-        width: 20px;
-        padding: 8px 0 0 6px;
+        height: 16px;
+        width: 16px;
+        padding-left: 6px;
       }
     }
     .content-right {
       width: 298px;
       padding: 32px 0 24px 23px;
+
+      @media screen and (max-width: 1780px) {
+        width: 384px;
+      }
+      @include respond-to('laptop') {
+        width: 354px;
+      }
+      @include respond-to('pad_h') {
+        width: 224px;
+      }
 
       .shortcut {
         width: 282px;
@@ -396,13 +467,23 @@ const linkClick = () => {
         cursor: pointer;
         @include tip1;
 
+        @media screen and (max-width: 1780px) {
+          width: 362px;
+        }
+        @include respond-to('laptop') {
+          width: 334px;
+        }
+        @include respond-to('pad_h') {
+          width: 204px;
+        }
+
         & + .shortcut {
           margin-top: var(--o-gap-2);
         }
 
         .shortcut-link {
           color: var(--o-color-link1);
-          &:hover {
+          @include hover {
             color: var(--o-color-primary2);
           }
 
@@ -424,9 +505,27 @@ const linkClick = () => {
         height: 90px;
         display: flex;
         align-items: unset;
+        position: relative;
 
         @media screen and (max-width: 1780px) {
-          width: 270px;
+          width: 360px;
+        }
+        @include respond-to('laptop') {
+          width: 300px;
+        }
+        @include respond-to('pad_h') {
+          width: 200px;
+          &:not(:last-child) {
+            &:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              height: 1px;
+              background: var(--o-color-control4);
+            }
+          }
         }
 
         & + .review {
@@ -434,24 +533,40 @@ const linkClick = () => {
         }
         
         .review-picture {
-          max-width: 38%;
+          width: 160px;
           height: auto;
           display: block;
-          object-fit: cover;
+          object-fit: contain;
 
           @media screen and (max-width: 1780px) {
-            max-width: 30%;
+            max-width: 150px;
+          }
+          @include respond-to('laptop') {
+            width: 120px;
+            height: 68px;
+          }
+          @include respond-to('pad_h') {
+            display: none;
           }
         }
         .review-content {
           margin-left: var(--o-gap-4);
           flex: 1;
-          max-width: 60%;
+          max-width: 224px;
           display: flex;
           flex-direction: column;
+          justify-content: space-between;
 
           @media screen and (max-width: 1780px) {
-            max-width: 68%;
+            max-width: 200px;
+          }
+          @include respond-to('laptop') {
+            margin-left: var(--o-gap-2);
+            height: 68px;
+          }
+          @include respond-to('pad_h') {
+            margin-left: unset;
+            height: 68px;
           }
 
           .review-title {
@@ -463,8 +578,12 @@ const linkClick = () => {
             font-weight: 500;
             cursor: pointer;
 
-            &:hover {
+            @include hover {
               color:var(--o-color-primary1);
+            }
+
+            @include respond-to('<=laptop') {
+              white-space: wrap;
             }
           }
 
@@ -485,6 +604,10 @@ const linkClick = () => {
             mask-size: 100% calc(100% - 20px), 100% 20px;
             mask-position: bottom, top;
             mask-repeat: no-repeat;
+
+            @include respond-to('<=laptop') {
+              display: none;
+            }
           }
 
           .review-property {
@@ -504,6 +627,16 @@ const linkClick = () => {
       height: 100%;
       min-height: 320px;
       right: 298px;
+
+      @media screen and (max-width: 1780px) {
+        right: 372px;
+      }
+      @include respond-to('laptop') {
+        right: 352px;
+      }
+      @include respond-to('pad_h') {
+        right: 216px;
+      }
     }
 
     .content-title {
