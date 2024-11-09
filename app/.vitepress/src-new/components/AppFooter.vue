@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { watch, type PropType } from 'vue';
+import { ref, computed, watch, type PropType } from 'vue';
 
 import { useLocale } from '~@/composables/useLocale';
 
@@ -50,6 +50,29 @@ const footerCodeList = [
   },
 ];
 
+//-------------底部媒体 hover 改变图片 src-----------------
+const currentHoverId = ref('');
+
+const currentMediaData = computed(() => {
+  return linksData[props.lang];
+});
+
+const handleMouseEnter = (id: string) => {
+  currentHoverId.value = id;
+};
+const handleMouseLeave = () => {
+  currentHoverId.value = '';
+};
+
+const getImgSrc = (id: string) => {
+  const logo = currentMediaData.value.find((item) => item.id === id);
+  if (logo && currentHoverId.value === id) {
+    return logo.logo.hover;
+  } else if (logo) {
+    return logo.logo.normal;
+  }
+};
+
 watch(
   () => props.lang,
   (val) => {
@@ -89,13 +112,16 @@ watch(
           <div class="friendship-link-title">
             {{ $t('footer.friendshipLink') }}
           </div>
-          <a
-            v-for="link in friendshipLinks[lang]"
-            class="friendship-link-item"
-            :href="link.link"
-            target="_blank"
-            >{{ link.title }}</a
-          >
+          <div class="friendship-link-box">
+            <a
+              v-for="link in friendshipLinks[lang]"
+              class="friendship-link-item"
+              :href="link.link"
+              :key="link.link"
+              target="_blank"
+              >{{ link.title }}</a
+            >
+          </div>
         </div>
         <div class="inner">
           <div class="footer-logo">
@@ -158,15 +184,17 @@ watch(
             </div>
             <div class="footer-links" :class="{ iszh: lang === 'zh' }">
               <a
-                v-for="(item, index) in linksData[lang]"
+                v-for="item in currentMediaData"
                 :key="item.path"
                 :href="item.path"
+                @mouseenter="handleMouseEnter(item.id)"
+                @mouseleave="handleMouseLeave()"
                 class="links-logo"
                 target="_blank"
               >
                 <img
                   :style="{ height: `${item.height}px` }"
-                  :src="item.logo"
+                  :src="getImgSrc(item.id)"
                   alt=""
                 />
               </a>
@@ -184,13 +212,20 @@ $color: #fff;
   @include tip2;
 }
 .footer {
+  &.is-doc {
+    margin-left: 300px;
+    @media (max-width: 1100px) {
+      margin-left: 0;
+    }
+  }
+  overflow: hidden;
   background: rgba(18, 18, 18);
   :deep(.app-content) {
     padding-bottom: 0;
   }
   .atom {
     text-align: center;
-    padding: 24px 0 12px;
+    margin-top: 24px;
     position: relative;
 
     .atom-text {
@@ -200,7 +235,8 @@ $color: #fff;
     .atom-logo {
       height: 36px;
       margin-top: 12px;
-      @include respond-to('<=pad') {
+      @include respond-to('<=pad_v') {
+        margin-top: 16px;
         height: 30px;
       }
     }
@@ -210,7 +246,7 @@ $color: #fff;
     @include tip1;
     background: url('~@/assets/category/footer/footer-bg.png') no-repeat bottom
       center;
-    @include respond-to('<=pad') {
+    @include respond-to('<=pad_v') {
       background: url('~@/assets/category/footer/footer-bg-mo.png') no-repeat
         bottom center;
     }
@@ -219,7 +255,7 @@ $color: #fff;
       display: flex;
       justify-content: space-between;
       max-width: 1140px;
-      @include respond-to('<=pad') {
+      @include respond-to('<=pad_v') {
         display: none;
       }
       .category {
@@ -253,15 +289,27 @@ $color: #fff;
       @include tip2;
       //TODO: 颜色变量
       border-bottom: 1px solid rgba(229, 229, 229, 0.12);
-      @include respond-to('<=pad') {
+      @include respond-to('<=pad_v') {
+        flex-direction: column;
+        padding-bottom: 16px;
+        .friendship-link-box {
+          margin-top: 12px;
+        }
       }
       .friendship-link-title {
         color: var(--o-color-white);
-        margin-right: 45px;
+        margin-right: 38px;
+        @include respond-to('<=pad') {
+          margin-right: 24px;
+        }
       }
       .friendship-link-item {
-        &:not(:first-of-type) {
-          margin-left: 24px;
+        white-space: nowrap;
+        &:not(:last-of-type) {
+          margin-right: 24px;
+          @include respond-to('<=pad') {
+            margin-right: 12px;
+          }
         }
         color: rgba(255, 255, 255, 0.6);
         @include hover {
@@ -271,15 +319,14 @@ $color: #fff;
     }
     .inner {
       display: flex;
-      align-items: end;
+      align-items: flex-start;
       justify-content: space-between;
-      padding: 18px 0 32px;
+      padding: 8px 0 32px;
       position: relative;
-      min-height: 118px;
-      @include respond-to('<=pad') {
+      @include respond-to('<=pad_v') {
         margin: 0 auto;
         max-width: 240px;
-        padding: 14px 0 24px;
+        padding: 12px 0 24px;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -297,7 +344,7 @@ $color: #fff;
     .show-mo {
       display: none;
     }
-    @include respond-to('<=pad') {
+    @include respond-to('<=pad_v') {
       text-align: center;
       margin: 16px 0;
       .show-pc {
@@ -316,7 +363,7 @@ $color: #fff;
   .copyright {
     margin-top: 6px;
     color: rgba(255, 255, 255, 0.6);
-    @include respond-to('phone') {
+    @include respond-to('<=pad_v') {
       margin-top: 4px;
     }
   }
@@ -326,7 +373,7 @@ $color: #fff;
     span {
       color: rgba(255, 255, 255, 0.6);
     }
-    @include respond-to('phone') {
+    @include respond-to('<=pad_v') {
       margin-top: 4px;
     }
   }
@@ -342,7 +389,7 @@ $color: #fff;
       display: flex;
       align-items: center;
     }
-    @include respond-to('<=pad') {
+    @include respond-to('<=pad_v') {
       order: -1;
     }
   }
@@ -353,7 +400,6 @@ $color: #fff;
       display: flex;
       justify-content: right;
       gap: 16px;
-      margin-bottom: 16px;
       .code-pop {
         cursor: pointer;
         position: relative;
@@ -404,10 +450,13 @@ $color: #fff;
             }
           }
         }
-        &:hover {
+        @include hover {
           .code-layer {
             display: block;
           }
+        }
+        @include respond-to('pad_h') {
+          height: 18px;
         }
         @include respond-to('<=pad_v') {
           height: auto;
@@ -416,52 +465,54 @@ $color: #fff;
           }
         }
       }
-      @include respond-to('<=pad') {
+      @include respond-to('<=pad_v') {
         justify-content: center;
-      }
-      @include respond-to('<=pad') {
-        margin-top: 24px;
       }
     }
     .footer-links {
       display: flex;
       justify-content: right;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
+      margin-left: 24px;
       .links-logo {
         display: flex;
         align-items: center;
-        padding: 0 9px;
-        height: 40px;
+        height: 38px;
+        padding: 0 20px;
         background-color: #2b2b2f;
         border-radius: var(--o-radius-xs);
-        img {
+        @include respond-to('pad_h') {
+          height: 30px;
+          padding: 0 8px;
+        }
+        @include respond-to('<=pad_v') {
+          height: 30px;
+          padding: 0 8px;
+        }
+        .logo {
           object-fit: cover;
         }
       }
-      @include respond-to('<=pad') {
-        justify-content: center;
+      @include respond-to('pad_h') {
+        margin-left: 32px;
       }
       @include respond-to('<=pad_v') {
+        justify-content: center;
         display: flex;
         text-align: center;
-        .img {
-          height: 16px;
-        }
       }
       &.iszh {
+        margin-top: 12px;
         gap: 12px 8px;
         .links-logo {
+          padding: 0 9px;
           height: 20px;
         }
-        @include respond-to('<=pad_v') {
+        @include respond-to('<=pad') {
           display: flex;
           flex-wrap: wrap;
           text-align: center;
-          margin-top: 21px;
-          .img {
-            height: 16px;
-          }
         }
       }
     }
@@ -481,7 +532,7 @@ $color: #fff;
   .footer {
     .footer-content {
       .inner {
-        @include respond-to('<=pad') {
+        @include respond-to('<=pad_v') {
           margin: 0 auto;
           max-width: fit-content;
           padding: 14px 0 24px;

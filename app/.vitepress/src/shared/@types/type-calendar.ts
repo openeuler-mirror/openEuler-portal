@@ -16,12 +16,12 @@ export interface DayDataT {
   group_name?: string;
   endTime?: string;
   end_date?: string;
+  type: string;
   activity_type?: number | string;
 }
 
 export interface TableDataT {
   date: string;
-  start_date?: string;
   timeData: DayDataT[];
 }
 export interface TableDataObjT {

@@ -354,6 +354,13 @@ onMounted(() => {
       @include h1;
       align-items: center;
       font-weight: 500;
+      @media screen and (max-width: 1000px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      @include respond-to('<=pad_v') {
+        width: 100%;
+      }
       img {
         margin-left: 12px;
         width: 56px;
@@ -364,10 +371,8 @@ onMounted(() => {
           margin-left: 8px;
           width: 24px;
         }
-      }
-      @include respond-to('<=pad_v') {
-        width: 100%;
-        img {
+        @include respond-to('<=pad_v') {
+          width: 100%;
           width: 24px;
         }
       }
@@ -533,13 +538,12 @@ onMounted(() => {
   }
   .floor-bg {
     position: absolute;
-    top: -72px;
+    top: calc(-1 * var(--o-gap-section));
     left: -185px;
     width: 900px;
     z-index: -1;
     @include respond-to('<=laptop') {
       width: 60%;
-      top: -72px;
       left: 0;
     }
   }
