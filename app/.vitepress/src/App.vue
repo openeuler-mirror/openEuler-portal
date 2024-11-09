@@ -64,9 +64,15 @@ const isCustomLayout = computed(() => {
 const comp = computed(() => {
   return compMapping[frontmatter.value.category];
 });
-console.log(comp);
-console.log(isCustomLayout);
 
+// 是否添加footer 边距
+const isDocs = computed(() => {
+  return (
+    frontmatter.value.category === 'migration' ||
+    frontmatter.value.category === 'about-us' ||
+    frontmatter.value.category === 'wiki'
+  );
+});
 // ----------------------------- new ----------------------------
 
 watch(
@@ -95,9 +101,7 @@ onMounted(() => {
     </main>
   </el-config-provider>
   <CookieNotice />
-  <ClientOnly>
-    <AppFooter :lang="lang" />
-  </ClientOnly>
+  <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
 </template>
 
 <style lang="scss" scoped>
@@ -122,6 +126,12 @@ main {
     @media (max-width: 1100px) {
       overflow: visible;
     }
+  }
+}
+.is-docs {
+  margin-left: 300px;
+  @media (max-width: 1100px) {
+    margin-left: 0;
   }
 }
 </style>

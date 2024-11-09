@@ -199,12 +199,13 @@ function handleClick(item: LinkItem) {
           }
         }
         .card-btn {
+          margin-left: 24px;
           align-self: center;
           z-index: 10;
           margin-right: 120px;
           @media screen and (max-width: 1410px) {
             padding: 15px 0 23px 20px;
-            margin-right: 0;
+            margin: 0;
           }
           @media screen and (max-width: 768px) {
             padding: 0;

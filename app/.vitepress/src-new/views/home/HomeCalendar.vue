@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { ref, nextTick, onMounted, PropType, watch } from 'vue';
 
-import { useScreen } from '~@/composables/useScreen';
-
-import { isValidKey, getNowFormatDate, isBrowser } from '@/shared/utils';
+import { isValidKey, isBrowser } from '@/shared/utils';
 import { TableDataT, DayDataT } from '@/shared/@types/type-calendar';
 import { useCommon } from '@/stores/common';
 
@@ -50,8 +48,6 @@ const props = defineProps({
 });
 
 const commonStore = useCommon();
-
-const { isPhone } = useScreen();
 
 const renderData = ref<TableDataT>({
   date: '',
@@ -350,10 +346,7 @@ const watchData = watch(
         <div>
           <OScroller class="meeting-list" show-type="hover" size="small">
             <OCollapse
-              v-if="
-                renderData.timeData.length &&
-                (renderData.date || renderData.start_date)
-              "
+              v-if="renderData.timeData.length"
               v-model="activeName"
               accordion
               :style="{ '--collapse-padding': '0' }"
@@ -950,9 +943,9 @@ const watchData = watch(
   bottom: -160px;
   right: -252px;
   @include respond-to('laptop') {
-    width: 327px;
-    bottom: -160px;
-    right: -80px;
+    width: 400px;
+    bottom: -190px;
+    right: -250px;
   }
   @include respond-to('<=pad_v') {
     width: 71px;

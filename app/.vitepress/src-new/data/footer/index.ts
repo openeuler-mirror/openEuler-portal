@@ -1,46 +1,74 @@
-// 中文友情链接
+// 中文媒体链接
 import LogoBilibili from '~@/assets/category/footer/bilibili.png';
 import LogoToutiao from '~@/assets/category/footer/toutiao.png';
 import LogoJuejin from '~@/assets/category/footer/juejin.png';
 import LogoOschina from '~@/assets/category/footer/oschina.png';
 import LogoCsdn from '~@/assets/category/footer/csdn.png';
 
-// 英文友情链接
+// 英文媒体链接
 import LogoRedditSquare from '~@/assets/category/footer/reddit-square.png';
 import LogoLinkedin from '~@/assets/category/footer/linkdin.png';
 import LogoYoutube from '~@/assets/category/footer/youtube.png';
 import LogoTwitter from '~@/assets/category/footer/x.png';
 
-// 友情链接
+// 中文媒体链接
+import LogoBilibiliHover from '~@/assets/category/footer/bilibili_hover.png';
+import LogoToutiaoHover from '~@/assets/category/footer/toutiao_hover.png';
+import LogoJuejinHover from '~@/assets/category/footer/juejin_hover.png';
+import LogoOschinaHover from '~@/assets/category/footer/oschina_hover.png';
+import LogoCsdnHover from '~@/assets/category/footer/csdn_hover.png';
+
+// 英文媒体链接
+import LogoRedditSquareHover from '~@/assets/category/footer/reddit-square_hover.png';
+import LogoLinkedinHover from '~@/assets/category/footer/linkdin_hover.png';
+import LogoYoutubeHover from '~@/assets/category/footer/youtube_hover.png';
+import LogoTwitterHover from '~@/assets/category/footer/x_hover.png';
+
+// 媒体链接
 export const linksData = {
   zh: [
     {
       path: 'https://my.oschina.net/openeuler',
-      logo: LogoOschina,
+      logo: {
+        normal: LogoOschina,
+        hover: LogoOschinaHover,
+      },
       id: 'oschina',
       height: 14,
     },
     {
       path: 'https://blog.csdn.net/openEuler_?spm=1000.2115.3001.5343',
-      logo: LogoCsdn,
+      logo: {
+        normal: LogoCsdn,
+        hover: LogoCsdnHover,
+      },
       id: 'csdn',
       height: 11,
     },
     {
       path: 'https://juejin.cn/user/3183782863845454',
-      logo: LogoJuejin,
+      logo: {
+        normal: LogoJuejin,
+        hover: LogoJuejinHover,
+      },
       id: 'juejin',
       height: 11,
     },
     {
       path: 'https://space.bilibili.com/527064077/channel/series',
-      logo: LogoBilibili,
+      logo: {
+        normal: LogoBilibili,
+        hover: LogoBilibiliHover,
+      },
       id: 'bilibili',
       height: 13,
     },
     {
       path: 'https://www.toutiao.com/c/user/token/MS4wLjABAAAAZivzVkJzMyQ44GzmX1i_ON0bgxL3E8ybHC-P9HMqZiqUgpYVnjCjynDt-SebKN7r',
-      logo: LogoToutiao,
+      logo: {
+        normal: LogoToutiao,
+        hover: LogoToutiaoHover,
+      },
       id: 'toutiao',
       height: 13,
     },
@@ -48,25 +76,37 @@ export const linksData = {
   en: [
     {
       path: 'https://www.linkedin.com/company/openeuler',
-      logo: LogoLinkedin,
+      logo: {
+        normal: LogoLinkedin,
+        hover: LogoLinkedinHover,
+      },
       id: 'linkedin',
       height: 24,
     },
     {
       path: 'https://x.com/openEuler',
-      logo: LogoTwitter,
+      logo: {
+        normal: LogoTwitter,
+        hover: LogoTwitterHover,
+      },
       id: 'twitter',
       height: 24,
     },
     {
       path: 'https://www.youtube.com/channel/UCPzSqXqCgmJmdIicbY7GAeA',
-      logo: LogoYoutube,
+      logo: {
+        normal: LogoYoutube,
+        hover: LogoYoutubeHover,
+      },
       id: 'youtube',
       height: 18,
     },
     {
       path: 'https://www.reddit.com/r/openEuler/',
-      logo: LogoRedditSquare,
+      logo: {
+        normal: LogoRedditSquare,
+        hover: LogoRedditSquareHover,
+      },
       id: 'reddit-square',
       height: 24,
     },

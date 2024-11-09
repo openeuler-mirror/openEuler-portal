@@ -73,16 +73,19 @@ const { theme } = storeToRefs(useCommon());
   .display-zone-item {
     cursor: pointer;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     border-radius: var(--o-radius-xs);
     @include respond-to('<=pad_v') {
+      align-items: center;
       padding: 16px;
       background: var(--o-color-fill2);
     }
     .display-zone-item-icon {
       display: block;
+      
     }
     .display-zone-icon {
+      flex-shrink: 0;
       width: 48px;
       img {
         width: 100%;
@@ -96,7 +99,6 @@ const { theme } = storeToRefs(useCommon());
         margin-left: 0;
       }
       .display-zone-title {
-        word-break: break-all;
         color: var(--o-color-info1);
         @include text2;
         font-weight: 500;

@@ -196,11 +196,12 @@ function handleClick(item: LinkItem) {
           bottom: 0;
         }
         .card-btn {
+          margin-left: 24px;
           align-self: center;
           margin-right: 120px;
           @media screen and (max-width: 1410px) {
             padding: 15px 0 23px 20px;
-            margin-right: 0;
+            margin: 0;
           }
 
           .o-button {
