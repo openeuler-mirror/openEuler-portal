@@ -82,8 +82,6 @@ watch(
     getData();
   }
 );
-
-// -------------------- 跳转 --------------------
 </script>
 
 <template>
@@ -92,7 +90,7 @@ watch(
     :title="t('home.trend')"
     :footer="t('home.more')"
     :footer-href="`/${locale}/interaction/${activeTab}-list/`"
-    :full="{ lePadV }"
+    :full="lePadV"
   >
     <OTab v-model="activeTab" variant="text" :line="false">
       <!-- 博客 -->
