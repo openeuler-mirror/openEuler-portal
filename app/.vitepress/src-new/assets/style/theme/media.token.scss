@@ -48,8 +48,8 @@
   }
 
   @include respond-to('pad_v') {
-    --o-gap-t2c: 16px;
-    --o-gap-section: 40px;
+    --o-gap-t2c: 12px;
+    --o-gap-section: 32px;
   }
 
   @include respond-to('phone') {

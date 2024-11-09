@@ -92,6 +92,7 @@ watch(
     :title="t('home.trend')"
     :footer="t('home.more')"
     :footer-href="`/${locale}/interaction/${activeTab}-list/`"
+    :full="{ lePadV }"
   >
     <OTab v-model="activeTab" variant="text" :line="false">
       <!-- 博客 -->
@@ -115,7 +116,7 @@ watch(
             :detail-max-row="2"
             :detail="!lePadV ? blog.summary : ''"
             :cover="calcBlogStyle(idx)?.bg"
-            :cover-ratio="1"
+            :cover-ratio="475 / 392"
             :href="`/${blog.path}`"
             target="_blank"
           >
@@ -181,6 +182,7 @@ watch(
 
   @include respond-to('<=pad_v') {
     padding-bottom: 0;
+    --scroller-padding: 0 var(--layout-content-padding);
   }
 
   @include respond-to('phone') {
