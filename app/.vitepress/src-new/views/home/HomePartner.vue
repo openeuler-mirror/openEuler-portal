@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AppSection from '~@/components/AppSection.vue';
+import { useScreen } from '~@/composables/useScreen';
 import HomeSwiper from './HomeSwiper.vue';
 
 import { publisher } from '~@/data/home/publisher';
@@ -7,14 +8,11 @@ import { publisher } from '~@/data/home/publisher';
 const publisher1 = publisher.slice(0, 8);
 const publisher2 = publisher.slice(8, 16);
 const publisher3 = publisher.slice(16);
+const { lePad } = useScreen();
 </script>
 
 <template>
-  <AppSection
-    class="home-partner"
-    :title="$t('home.publisher')"
-    :full="true"
-  >
+  <AppSection class="home-partner" :title="$t('home.publisher')" :full="lePad">
     <HomeSwiper :data="publisher1" class="partner-swiper"></HomeSwiper>
     <HomeSwiper
       :data="publisher2"
@@ -22,15 +20,19 @@ const publisher3 = publisher.slice(16);
       class="partner-swiper"
     ></HomeSwiper>
     <HomeSwiper :data="publisher3" class="partner-swiper"></HomeSwiper>
-    <p class="tips">{{ $t('home.publisherTips') }}</p>
+    <template #footer>
+      <p class="partner-tips">{{ $t('home.publisherTips') }}</p>
+    </template>
   </AppSection>
 </template>
 
 <style lang="scss" scoped>
 .partner-swiper {
-  max-width: 1920px;
-  margin-top: 24px;
-  @media screen and (min-width: 1921px) {
+  & + .partner-swiper {
+    margin-top: 12px;
+  }
+
+  @include respond-to('>pad') {
     &::before {
       content: '';
       position: absolute;
@@ -61,22 +63,16 @@ const publisher3 = publisher.slice(16);
     }
   }
 }
-.tips {
+
+.parterner-tips {
   @include tip1;
-  margin-top: 24px;
   text-align: center;
   color: var(--o-color-info3);
-}
-
-@include respond-to('phone') {
-  .partner-swiper {
-    margin-top: 12px;
-  }
 }
 </style>
 
 <style lang="scss">
-[data-o-theme='dark'] {
+@include in-dark {
   .partner-swiper {
     .o-figure img {
       filter: none;

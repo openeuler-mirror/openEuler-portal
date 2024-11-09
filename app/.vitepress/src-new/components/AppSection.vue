@@ -79,13 +79,11 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
 <style lang="scss" scoped>
 .app-section {
   .section-wrapper {
-    max-width: var(--layout-content-max-width);
-    padding: 0 var(--layout-content-padding);
     margin: var(--o-gap-section) auto 0;
   }
 
   &.is-full {
-    .section-wrapper {
+    .section-body {
       max-width: 100%;
       width: 100%;
       padding: 0;
@@ -108,14 +106,23 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
   }
 
   .section-title {
+    max-width: var(--layout-content-max-width);
+    padding: 0 var(--layout-content-padding);
+    margin: 0 auto;
+
     display: flex;
     justify-content: center;
     color: var(--o-color-info1);
+    text-align: center;
     @include display3;
     font-weight: 500;
   }
 
   .section-subtitle {
+    max-width: var(--layout-content-max-width);
+    padding: 0 var(--layout-content-padding);
+    margin: 0 auto;
+
     display: flex;
     justify-content: center;
     margin-top: 12px;
@@ -132,10 +139,18 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
   }
 
   .section-body {
+    max-width: var(--layout-content-max-width);
+    padding: 0 var(--layout-content-padding);
+    margin: 0 auto;
+
     margin-top: var(--o-gap-t2c);
   }
 
   .section-footer {
+    max-width: var(--layout-content-max-width);
+    padding: 0 var(--layout-content-padding);
+    margin: 0 auto;
+
     display: flex;
     justify-content: center;
     @include text1;
