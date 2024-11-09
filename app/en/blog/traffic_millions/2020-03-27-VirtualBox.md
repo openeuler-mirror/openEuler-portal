@@ -135,7 +135,7 @@ Restart the VM. When the following page is displayed, press Enter.
 
 <img src="./2020-03-27-VirtualBox-media/reboot_start.png" >
 
-Enter the password (configured during the installation) of user (root), log in to the OpenEuler VM.
+Enter the password (configured during the installation) of user (root), log in to the openEuler VM.
 
 <img src="./2020-03-27-VirtualBox-media/install_over.png" >
 
