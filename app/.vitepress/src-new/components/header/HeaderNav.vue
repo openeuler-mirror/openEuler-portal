@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import { useRouter, useData  } from 'vitepress';
+import { useRouter, useData } from 'vitepress';
 import { useI18n } from '~@/i18n';
 import { useCommon } from '@/stores/common';
 import { debounce } from 'lodash-es';
@@ -15,6 +15,7 @@ import NavLink from './NavLink.vue';
 
 import logo_light from '~@/assets/category/header/logo.svg';
 import logo_dark from '~@/assets/category/header/logo_dark.svg';
+import ContentWrapper from '~@/components/ContentWrapper.vue';
 
 const router = useRouter();
 const { lang } = useData();
@@ -45,20 +46,18 @@ const navActive = ref();
 const subNavActive = ref();
 const subNavContent = ref({});
 const subNav = ref({});
-const toggleDebounced = debounce(
-  function (item: any | null) {
-    if (item === null) {
-      navActive.value = '';
-      isShow.value = false;
-    } else {
-      navActive.value = item.ID;
-      isShow.value = true;
-      subNavActive.value = item.CHILDREN[0]?.NAME;
-      subNav.value = item.CHILDREN;
-      subNavContent.value = item.CHILDREN[0];
-    }
-  },
-);
+const toggleDebounced = debounce(function (item: any | null) {
+  if (item === null) {
+    navActive.value = '';
+    isShow.value = false;
+  } else {
+    navActive.value = item.ID;
+    isShow.value = true;
+    subNavActive.value = item.CHILDREN[0]?.NAME;
+    subNav.value = item.CHILDREN;
+    subNavContent.value = item.CHILDREN[0];
+  }
+});
 
 // 返回首页
 const goHome = () => {
@@ -84,13 +83,10 @@ const linkClick = () => {
 
 <template>
   <header class="app-header" :class="{ dark: commonStore.theme === 'dark' }">
-    <div class="app-header-body">
+    <ContentWrapper class="app-header-wrap">
       <img class="logo" alt="openEuler logo" :src="logoUrl" @click="goHome" />
       <ClientOnly>
-        <div
-          class="header-content"
-          :class="lang"
-        >
+        <div class="header-content" :class="lang">
           <div class="header-nav">
             <nav class="o-nav">
               <ul class="o-nav-list">
@@ -121,49 +117,109 @@ const linkClick = () => {
                             class="nav-sub-item"
                             @click="changeSubnav(subItem)"
                           >
-                          <span>{{ subItem.NAME }}</span>
+                            <span>{{ subItem.NAME }}</span>
                           </div>
                         </div>
                         <div class="nav-sub-content">
                           <div class="content-left">
-                            <NavLink v-if="subNavContent.URL" class="content-title-url" :url="subNavContent.URL" @link-click="linkClick">
+                            <NavLink
+                              v-if="subNavContent.URL"
+                              class="content-title-url"
+                              :url="subNavContent.URL"
+                              @link-click="linkClick"
+                            >
                               {{ subNavContent.NAME }}
                               <OIcon v-if="subNavContent.ICON">
-                                <component :is="subNavContent.ICON" class="icon" />
+                                <component
+                                  :is="subNavContent.ICON"
+                                  class="icon"
+                                />
                               </OIcon>
                             </NavLink>
-                            <span v-else class="content-title">{{ subNavContent.NAME }}</span>
+                            <span v-else class="content-title">{{
+                              subNavContent.NAME
+                            }}</span>
                             <div v-if="subNavContent.HASGROUP">
-                              <div class="group" v-for="group in subNavContent.CHILDREN" :key="group.NAME">
+                              <div
+                                class="group"
+                                v-for="group in subNavContent.CHILDREN"
+                                :key="group.NAME"
+                              >
                                 <p class="group-name">{{ group.NAME }}</p>
-                                <NavContent :nav-content="group?.CHILDREN" @link-click="linkClick" />
+                                <NavContent
+                                  :nav-content="group?.CHILDREN"
+                                  @link-click="linkClick"
+                                />
                               </div>
                             </div>
-                            <NavContent v-else :nav-content="subNavContent?.CHILDREN" @link-click="linkClick" />
-
+                            <NavContent
+                              v-else
+                              :nav-content="subNavContent?.CHILDREN"
+                              @link-click="linkClick"
+                            />
                           </div>
-                          <div class="split-line" v-if="subNavContent.SHORTCUT?.length"></div>
+                          <div
+                            class="split-line"
+                            v-if="subNavContent.SHORTCUT?.length"
+                          ></div>
                           <div class="content-right">
                             <div v-if="subNavContent.SHORTCUT?.length">
-                              <span class="content-title">{{ $t('header.QUICKLINK') }}</span>
+                              <span class="content-title">{{
+                                $t('header.QUICKLINK')
+                              }}</span>
                               <div v-if="!subNavContent.WITH_PICTURE">
-                                <div v-for="shortcut in subNavContent?.SHORTCUT" :key="shortcut.NAME"  class="shortcut">
-                                  <img v-if="isLight" :src="shortcut.TYPE" class="icon">
-                                  <img v-else :src="shortcut.TYPE_DARK" class="icon">
-                                  <NavLink :url="shortcut.URL" @link-click="linkClick" class="shortcut-link">
+                                <div
+                                  v-for="shortcut in subNavContent?.SHORTCUT"
+                                  :key="shortcut.NAME"
+                                  class="shortcut"
+                                >
+                                  <img
+                                    v-if="isLight"
+                                    :src="shortcut.TYPE"
+                                    class="icon"
+                                  />
+                                  <img
+                                    v-else
+                                    :src="shortcut.TYPE_DARK"
+                                    class="icon"
+                                  />
+                                  <NavLink
+                                    :url="shortcut.URL"
+                                    @link-click="linkClick"
+                                    class="shortcut-link"
+                                  >
                                     {{ shortcut.NAME }}
                                     <OIcon v-if="shortcut.ICON">
-                                      <component :is="shortcut.ICON" class="icon" />
+                                      <component
+                                        :is="shortcut.ICON"
+                                        class="icon"
+                                      />
                                     </OIcon>
                                   </NavLink>
                                 </div>
                               </div>
                               <div v-else>
-                                <NavLink v-for="shortcut in subNavContent?.SHORTCUT" :url="shortcut.URL" :key="shortcut.NAME" class="review" @link-click="linkClick">
-                                  <img :src="shortcut.PICTURE" class="review-picture">
+                                <NavLink
+                                  v-for="shortcut in subNavContent?.SHORTCUT"
+                                  :url="shortcut.URL"
+                                  :key="shortcut.NAME"
+                                  class="review"
+                                  @link-click="linkClick"
+                                >
+                                  <img
+                                    :src="shortcut.PICTURE"
+                                    class="review-picture"
+                                  />
                                   <div class="review-content">
-                                    <p class="review-title">{{ shortcut.NAME }}</p>
-                                    <p class="review-desc" :title="shortcut.DESCRIPTION">{{ shortcut.DESCRIPTION }}</p>
+                                    <p class="review-title">
+                                      {{ shortcut.NAME }}
+                                    </p>
+                                    <p
+                                      class="review-desc"
+                                      :title="shortcut.DESCRIPTION"
+                                    >
+                                      {{ shortcut.DESCRIPTION }}
+                                    </p>
                                     <div class="review-property">
                                       <span>{{ shortcut.REMARK }}</span>
                                     </div>
@@ -190,7 +246,7 @@ const linkClick = () => {
           <HeaderLogin />
         </div>
       </ClientOnly>
-    </div>
+    </ContentWrapper>
   </header>
 </template>
 
@@ -229,15 +285,10 @@ const linkClick = () => {
     z-index: 100;
   }
 
-  .app-header-body {
+  .app-header-wrap {
     display: flex;
     align-items: center;
-    max-width: 1416px;
-    margin: 0 auto;
     height: 80px;
-    @media (max-width: 1480px) {
-      margin: 0 var(--o-gap-6);
-    }
   }
 }
 
@@ -353,7 +404,6 @@ const linkClick = () => {
   @include respond-to('pad_h') {
     min-height: 260px;
   }
-
 
   .nav-drop-content {
     max-width: 1416px;
@@ -568,7 +618,7 @@ const linkClick = () => {
         & + .review {
           margin-top: var(--o-gap-3);
         }
-        
+
         .review-picture {
           width: 160px;
           height: auto;
@@ -616,7 +666,7 @@ const linkClick = () => {
             cursor: pointer;
 
             @include hover {
-              color:var(--o-color-primary1);
+              color: var(--o-color-primary1);
             }
 
             @include respond-to('<=laptop') {
