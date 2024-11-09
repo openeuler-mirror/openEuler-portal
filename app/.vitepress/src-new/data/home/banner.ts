@@ -86,7 +86,7 @@ export default {
         attach: summit2024_attach_dark,
         bg_theme: 'dark',
       },
-      href: '/zh/interaction/summit-list/summit2024/',
+      href: '/en/interaction/summit-list/summit2024/',
       isBlank: true,
     },
     {
@@ -103,7 +103,7 @@ export default {
       bg_pad: innovation_pad,
       bg_mb: innovation_mb,
       bg_theme: 'dark',
-      link: '/whitepaper/en/openEuler%20OS%20Technical%20Whitepaper_Innovation%20Projects_EN.pdf',
+      href: '/whitepaper/en/openEuler%20OS%20Technical%20Whitepaper_Innovation%20Projects_EN.pdf',
       isBlank: true,
       title: ['openEuler OS Technical Whitepaper', 'Innovation Projects'],
       btn: 'Download',

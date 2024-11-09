@@ -61,7 +61,9 @@ const bannerInfo = computed(() => {
 // 主题切换
 const theme = ref('');
 const onBeforeChange = (idx: number) => {
-  theme.value = bannerInfo.value[idx].bg_theme ?? 'light';
+  setTimeout(() => {
+    theme.value = bannerInfo.value[idx].bg_theme ?? 'light';
+  }, 100);
 };
 const onClick = (href) => {
   window.open(href);
