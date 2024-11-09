@@ -11,7 +11,7 @@ const { theme } = storeToRefs(useCommon());
 </script>
 
 <template>
-  <div class="home-display-zone" data-aos="fade-up">
+  <div class="home-display-zone">
     <a
       v-for="item in displayZoneData"
       :key="item.link[locale]"

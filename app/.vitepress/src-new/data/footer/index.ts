@@ -119,23 +119,23 @@ export const quickNav = {
       list: [
         {
           title: '成员单位',
-          link: '',
+          link: '/zh/community/member/',
         },
         {
           title: '组织架构',
-          link: '',
+          link: '/zh/community/organization/',
         },
         {
           title: '社区章程',
-          link: '',
+          link: '/zh/community/charter/',
         },
         {
           title: '贡献看板',
-          link: '',
+          link: '/zh/community/charter/',
         },
         {
           title: '社区介绍',
-          link: '',
+          link: '/whitepaper/openEuler%20%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E4%BB%8B%E7%BB%8D.pdf',
         },
       ],
     },
@@ -144,15 +144,15 @@ export const quickNav = {
       list: [
         {
           title: '新闻',
-          link: '',
+          link: '/zh/interaction/news-list/',
         },
         {
           title: '博客',
-          link: '',
+          link: '/zh/interaction/blog-list/',
         },
         {
           title: '白皮书',
-          link: '',
+          link: '/zh/showcase/technical-white-paper/',
         },
       ],
     },
@@ -161,19 +161,19 @@ export const quickNav = {
       list: [
         {
           title: '获取openEuler操作系统',
-          link: '',
+          link: '/zh/download/get-os/',
         },
         {
           title: '最新社区发行版',
-          link: '',
+          link: '/zh/download/',
         },
         {
           title: '商业发行版',
-          link: '',
+          link: '/zh/download/commercial-release/',
         },
         {
           title: '软件中心',
-          link: '',
+          link: 'https://easysoftware.openeuler.org/zh',
         },
       ],
     },
@@ -182,20 +182,20 @@ export const quickNav = {
       list: [
         {
           title: '文档',
-          link: '',
+          link: 'https://docs.openeuler.org/zh/',
         },
         {
           title: 'FAQ',
-          link: '',
+          link: 'https://www.openeuler.org/zh/faq/',
         },
-        {
-          title: '联系我们',
-          link: '',
-        },
-        {
-          title: '反馈问题',
-          link: '',
-        },
+        // {
+        //   title: '联系我们',
+        //   link: '',
+        // },
+        // {
+        //   title: '反馈问题',
+        //   link: '',
+        // },
       ],
     },
     {
@@ -203,15 +203,15 @@ export const quickNav = {
       list: [
         {
           title: '邮件列表',
-          link: '',
+          link: '/zh/community/mailing-list/',
         },
         {
           title: '活动',
-          link: '',
+          link: '/zh/interaction/event-list/',
         },
         {
           title: '论坛',
-          link: '',
+          link: 'https://forum.openeuler.org/',
         },
       ],
     },
@@ -220,15 +220,131 @@ export const quickNav = {
       list: [
         {
           title: 'SIG中心',
-          link: '',
+          link: '/zh/sig/sig-list/',
         },
         {
           title: '贡献攻略',
-          link: '',
+          link: '/zh/community/contribution/',
         },
         {
           title: '课程中心',
-          link: '',
+          link: '/zh/learn/mooc/',
+        },
+      ],
+    },
+  ],
+  en: [
+    {
+      title: 'About openEuler',
+      list: [
+        {
+          title: 'Members',
+          link: '/en/community/member/',
+        },
+        {
+          title: 'Governance',
+          link: '/en/community/organization/',
+        },
+        {
+          title: 'Code of Conduct',
+          link: '/en/community/charter/',
+        },
+        {
+          title: 'Statistics',
+          link: '/en/community/charter/',
+        },
+      ],
+    },
+    {
+      title: 'News & Blogs',
+      list: [
+        {
+          title: 'News',
+          link: '/en/interaction/news-list/',
+        },
+        {
+          title: 'Blogs',
+          link: '/en/interaction/blog-list/',
+        },
+        {
+          title: 'White Papers',
+          link: '/en/showcase/technical-white-paper/',
+        },
+      ],
+    },
+    {
+      title: 'Access',
+      list: [
+        {
+          title: 'openEuler Is Everywhere',
+          link: '/en/download/get-os/',
+        },
+        {
+          title: 'Latest Community Releases',
+          link: '/en/download/',
+        },
+        {
+          title: 'Commercial Releases',
+          link: '/en/download/commercial-release/',
+        },
+        // {
+        //   title: '软件中心',
+        //   link: 'https://easysoftware.openeuler.org/en',
+        // },
+      ],
+    },
+    {
+      title: 'Services & Resources',
+      list: [
+        {
+          title: 'Documentation',
+          link: 'https://docs.openeuler.org/en/',
+        },
+        {
+          title: 'FAQ',
+          link: 'https://www.openeuler.org/en/faq/',
+        },
+        // {
+        //   title: 'Contact Us',
+        //   link: '',
+        // },
+        // {
+        //   title: '反馈问题',
+        //   link: '',
+        // },
+      ],
+    },
+    {
+      title: 'Communicate',
+      list: [
+        {
+          title: 'Mailing Lists',
+          link: '/en/community/mailing-list/',
+        },
+        {
+          title: 'Activities',
+          link: '/en/interaction/event-list/',
+        },
+        {
+          title: 'Forum',
+          link: 'https://forum.openeuler.org/',
+        },
+      ],
+    },
+    {
+      title: 'Contribute',
+      list: [
+        {
+          title: 'SIGs',
+          link: '/en/sig/sig-list/',
+        },
+        {
+          title: 'Contribution Guide',
+          link: '/en/community/contribution/',
+        },
+        {
+          title: 'Training',
+          link: '/zh/learn/mooc/',
         },
       ],
     },
@@ -276,6 +392,28 @@ export const friendshipLinks = {
     {
       link: 'https://www.mindspore.cn/',
       title: '昇思mindSpore',
+    },
+    {
+      link: 'http://www.ebaina.com/',
+      title: 'Ebaina',
+    },
+  ],
+  en: [
+    {
+      link: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian',
+      title: 'infoQ',
+    },
+    {
+      link: 'https://www.authing.cn/',
+      title: 'Authing',
+    },
+    {
+      link: 'https://www.opengauss.org/en/',
+      title: 'openGauss',
+    },
+    {
+      link: 'https://www.mindspore.cn/',
+      title: 'mindSpore',
     },
     {
       link: 'http://www.ebaina.com/',

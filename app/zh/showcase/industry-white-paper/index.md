@@ -1,5 +1,6 @@
 ---
 title: 行业白皮书
+category: white-paper
 ---
 
 <script setup lang="ts">

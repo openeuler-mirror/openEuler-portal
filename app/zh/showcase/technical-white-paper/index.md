@@ -1,5 +1,6 @@
 ---
 title: 技术白皮书
+category: white-paper
 ---
 
 <script setup lang="ts">

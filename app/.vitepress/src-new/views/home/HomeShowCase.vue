@@ -126,7 +126,6 @@ onUnmounted(() => {
   <AppSection
     :title="t('home.case')"
     class="user-case"
-    data-aos="fade-up"
     :footer="t('home.more')"
     :footer-href="
       `showcase/?industry=${activeTab + 1}`.replace(/(index)$/g, '')

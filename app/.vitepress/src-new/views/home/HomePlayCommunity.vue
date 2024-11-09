@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue';
+import { ref, onMounted } from 'vue';
 import { storeToRefs } from 'pinia';
 
-import { OButton, OIcon } from '@opensig/opendesign';
+import { OButton, OIcon, OLink } from '@opensig/opendesign';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -22,7 +22,7 @@ import click from '~@/assets/category/home/play-community/click.png';
 import vitality from '~@/assets/category/home/play-community/vitality.svg';
 import blue from '~@/assets/category/home/play-community/blue_light.png';
 import blueDark from '~@/assets/category/home/play-community/blue_dark.png';
-import IconArrowRight from '~icons/app/icon-chevron-right.svg';
+import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 
 import { type VitalityValueT } from '~@/@type/type-home';
 
@@ -41,7 +41,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="home-play-community" data-aos="fade-up">
+  <div class="home-play-community">
     <i18n-t class="play-community-title" keypath="home.playCommunity" tag="h3">
       <template #openEuler>
         <img class="logo" :src="logo" />
@@ -63,7 +63,7 @@ onMounted(() => {
         >
           {{ $t('home.getOpenEuler') }}
         </OButton>
-        <img :src="theme === 'light' ? blue : blueDark" />
+        <img @click.stop="" :src="theme === 'light' ? blue : blueDark" />
       </a>
     </div>
     <div class="play-cards">
@@ -81,29 +81,19 @@ onMounted(() => {
                 {{ card.btn.label }}
               </OButton>
             </a>
-            <a
+            <OLink
               v-if="card.textBtn"
               :href="card.textBtn.link"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <OButton
-                variant="text"
-                :size="lePadV ? 'medium' : 'large'"
-                :style="{
-                  '--btn-padding': 0,
-                  '--btn-bg-color-hover': 'transparent',
-                  '--btn-bg-color-active': 'transparent',
-                }"
-              >
-                {{ card.textBtn.label }}
-                <template #suffix>
-                  <OIcon>
-                    <IconArrowRight></IconArrowRight>
-                  </OIcon>
-                </template>
-              </OButton>
-            </a>
+              {{ card.textBtn.label }}
+              <template #suffix>
+                <OIcon>
+                  <IconChevronRight></IconChevronRight>
+                </OIcon>
+              </template>
+            </OLink>
           </div>
         </div>
       </div>
@@ -129,31 +119,20 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <a
+      <OLink
         :href="`https://datastat.openeuler.org/${locale}/overview`"
+        :style="{ '--link-color': 'rgba(255, 255, 255, 0.8)' }"
         class="vitality-btn"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <OButton
-          variant="text"
-          :size="leLaptop ? 'medium' : 'large'"
-          :style="{
-            '--btn-padding': 0,
-            '--btn-color': 'var(--o-color-white)',
-            '--btn-color-hover': 'var(--o-color-white)',
-            '--btn-bg-color-hover': 'transparent',
-            '--btn-bg-color-active': 'transparent',
-          }"
-        >
-          {{ $t('home.viewDetails') }}
-          <template #suffix>
-            <OIcon>
-              <IconArrowRight></IconArrowRight>
-            </OIcon>
-          </template>
-        </OButton>
-      </a>
+        {{ $t('home.viewDetails') }}
+        <template #suffix>
+          <OIcon>
+            <IconChevronRight></IconChevronRight>
+          </OIcon>
+        </template>
+      </OLink>
     </div>
     <img class="cube" :src="theme === 'light' ? cube : cubeDark" />
     <img class="floor-bg" :src="theme === 'light' ? floorBg : floorBgDark" />
@@ -186,7 +165,7 @@ onMounted(() => {
       position: absolute;
       right: 0;
       bottom: 0;
-      transform: translateX(calc(100% + 16px));
+      transform: translateX(calc(100% + 40px));
       img {
         height: 66px;
       }
@@ -200,6 +179,7 @@ onMounted(() => {
         filter: blur(50px);
       }
       @include respond-to('<=laptop') {
+        transform: translateX(calc(100% + 24px));
         img {
           height: 44px;
         }
@@ -256,6 +236,7 @@ onMounted(() => {
         left: -50%;
         position: absolute;
         width: 330px;
+        z-index: -1;
       }
     }
   }
@@ -298,6 +279,9 @@ onMounted(() => {
         }
       }
       .card-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
         padding: 32px;
         @include respond-to('<=laptop') {
           padding: 24px;
@@ -314,6 +298,7 @@ onMounted(() => {
         }
         .btn-box {
           margin-top: 32px;
+          @include text1;
           a {
             & + a {
               margin-left: 16px;
@@ -432,7 +417,7 @@ onMounted(() => {
             left: -2px;
           }
         }
-        @media screen and (max-width: 560px) {
+        @media screen and (max-width: 630px) {
           margin-left: 24px;
         }
         @media (min-width: 470px) and (max-width: 520px) {
@@ -512,9 +497,11 @@ onMounted(() => {
     }
     .vitality-btn {
       margin-left: 32px;
+      // height: min-content;
       display: flex;
       align-items: center;
-      @include respond-to('<=laptop') {
+      @include text1;
+      @include respond-to('pad_h') {
         margin: 0 0 0 0;
       }
       @include respond-to('<=pad_v') {
@@ -530,8 +517,13 @@ onMounted(() => {
     z-index: -1;
     @include respond-to('laptop') {
       width: 145px;
-      top: -74px;
+      top: -47px;
       left: -30px;
+    }
+    @include respond-to('<=pad_v') {
+      width: 46px;
+      top: -20px;
+      left: -12px;
     }
     @include respond-to('phone') {
       width: 46px;
@@ -541,7 +533,7 @@ onMounted(() => {
   }
   .floor-bg {
     position: absolute;
-    top: -140px;
+    top: -72px;
     left: -185px;
     width: 900px;
     z-index: -1;
@@ -563,6 +555,12 @@ onMounted(() => {
   }
   .click-bg {
     opacity: 0.2;
+  }
+}
+.o-link {
+  --link-icon-size: 24px;
+  @include respond-to('<=pad_v') {
+    --link-icon-size: 16px;
   }
 }
 </style>

@@ -72,7 +72,7 @@ watch(
     <div class="footer-content">
       <ContentWrapper :pc-top="0" :mobile-top="0">
         <div class="quick-nav">
-          <div v-for="category in quickNav[locale]" class="category">
+          <div v-for="category in quickNav[lang]" class="category">
             <div class="category-title">
               {{ category.title }}
             </div>
@@ -90,7 +90,7 @@ watch(
             {{ $t('footer.friendshipLink') }}
           </div>
           <a
-            v-for="link in friendshipLinks[locale]"
+            v-for="link in friendshipLinks[lang]"
             class="friendship-link-item"
             :href="link.link"
             target="_blank"
@@ -198,7 +198,7 @@ $color: #fff;
       @include h4;
     }
     .atom-logo {
-      height: 32px;
+      height: 36px;
       margin-top: 12px;
       @include respond-to('<=pad') {
         height: 30px;
@@ -251,9 +251,9 @@ $color: #fff;
       padding-bottom: 12px;
       display: flex;
       @include tip2;
-      border-bottom: 1px solid var(--o-color-control1);
+      //TODO: 颜色变量
+      border-bottom: 1px solid rgba(229, 229, 229, 0.12);
       @include respond-to('<=pad') {
-        display: none;
       }
       .friendship-link-title {
         color: var(--o-color-white);
@@ -314,9 +314,8 @@ $color: #fff;
   }
 
   .copyright {
-    color: $color;
     margin-top: 6px;
-    @include tip2;
+    color: rgba(255, 255, 255, 0.6);
     @include respond-to('phone') {
       margin-top: 4px;
     }
@@ -325,7 +324,7 @@ $color: #fff;
     color: $color;
     margin-top: 6px;
     span {
-      color: var(--o-color-info3);
+      color: rgba(255, 255, 255, 0.6);
     }
     @include respond-to('phone') {
       margin-top: 4px;
@@ -334,6 +333,7 @@ $color: #fff;
 
   .footer-option {
     text-align: center;
+    @include tip1;
     .link {
       color: $color;
       display: inline-block;
@@ -432,7 +432,7 @@ $color: #fff;
         display: flex;
         align-items: center;
         padding: 0 9px;
-        height: 20px;
+        height: 40px;
         background-color: #2b2b2f;
         border-radius: var(--o-radius-xs);
         img {
@@ -451,6 +451,9 @@ $color: #fff;
       }
       &.iszh {
         gap: 12px 8px;
+        .links-logo {
+          height: 20px;
+        }
         @include respond-to('<=pad_v') {
           display: flex;
           flex-wrap: wrap;
@@ -471,6 +474,23 @@ $color: #fff;
 
   .email {
     color: $color;
+  }
+}
+
+[lang='en'] {
+  .footer {
+    .footer-content {
+      .inner {
+        @include respond-to('<=pad') {
+          margin: 0 auto;
+          max-width: fit-content;
+          padding: 14px 0 24px;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
   }
 }
 </style>
