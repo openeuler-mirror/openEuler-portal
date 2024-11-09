@@ -27,16 +27,6 @@ const publisher3 = publisher.slice(16);
 </template>
 
 <style lang="scss" scoped>
-.home-partner {
-  padding-bottom: var(--o-gap-section);
-}
-.title {
-  @include display3;
-  color: var(--o-color-info1);
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 40px;
-}
 .partner-swiper {
   max-width: 1920px;
   margin-top: 24px;

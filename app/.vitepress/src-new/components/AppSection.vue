@@ -84,12 +84,6 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
     margin: var(--o-gap-section) auto 0;
   }
 
-  &:last-child {
-    .section-wrapper {
-      padding-bottom: var(--o-gap-section);
-    }
-  }
-
   &.is-full {
     .section-wrapper {
       max-width: 100%;
@@ -97,6 +91,13 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
       padding: 0;
     }
   }
+
+  &:last-child {
+    .section-wrapper {
+      padding-bottom: var(--o-gap-section);
+    }
+  }
+
   .section-header {
     &.is-left {
       .section-title,
@@ -137,6 +138,7 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
   .section-footer {
     display: flex;
     justify-content: center;
+    @include text1;
     margin-top: 32px;
 
     @include respond-to('<=laptop') {
