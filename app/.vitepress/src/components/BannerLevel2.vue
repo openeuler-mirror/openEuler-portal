@@ -107,15 +107,13 @@ onMounted(() => {
 
   .wrap {
     position: relative;
-    max-width: 1504px;
+    max-width: var(--layout-content-max-width);
+    padding-left: var(--layout-content-padding);
+    padding-right: var(--layout-content-padding);
     margin: 0 auto;
-    padding: 0 44px;
     display: flex;
     justify-content: space-between;
     min-height: 280px;
-    @media screen and (max-width: 1439px) {
-      padding: 0 16px;
-    }
 
     @media screen and (max-width: 1080px) {
       min-height: 200px;

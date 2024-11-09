@@ -123,20 +123,20 @@ main {
 
 <style lang="scss">
 #app {
-  --layout-content-max-width: 1504px;
-  --layout-content-padding: 44px;
+  --layout-content-max-width: 1616px;
+  --layout-content-padding: 64px;
 
   @include respond-to('<=laptop') {
     --layout-content-max-width: 100%;
-    --layout-content-padding: 24px;
+    --layout-content-padding: 40px;
   }
 
   @include respond-to('<=pad') {
     --layout-content-padding: 32px;
   }
 
-  @include respond-to('phone') {
-    --layout-content-padding: 16px;
+  @include respond-to('<=pad_v') {
+    --layout-content-padding: 24px;
   }
 }
 </style>

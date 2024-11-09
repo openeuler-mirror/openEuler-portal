@@ -29,17 +29,12 @@ const pcPaddingTop = computed(() => {
 .app-content {
   padding-top: v-bind('pcPaddingTop');
   padding-bottom: var(--e-spacing-h1);
-  padding-left: 44px;
-  padding-right: 44px;
-  max-width: 1504px;
+  max-width: var(--layout-content-max-width);
+  padding-left: var(--layout-content-padding);
+  padding-right: var(--layout-content-padding);
   margin: 0 auto;
-  @media (max-width: 1439px) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
+
   @media (max-width: 1100px) {
-    padding-left: 16px;
-    padding-right: 16px;
     padding-top: v-bind('mobilePaddingTop');
     padding-bottom: var(--e-spacing-h2);
   }
