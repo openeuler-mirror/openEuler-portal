@@ -27,7 +27,7 @@ During the event, the OpenAtom Foundation and representatives from community par
 
 Moreover, 15 community partners and experts from JD.com, China Mobile, China Telecom eSurfing Cloud, Unicom Digital Tech, AMD, Phytium, Loongson, Huawei, Intel, Institute of Software of Chinese Academy of Sciences, Hoperun, Inspur, iSoftStone, and OpenInfra Foundation discussed [how to enable all-scenario applications in this intelligent era](https://www.youtube.com/watch?v=BHUPLsCjhL0&list=PLtDfk9jvMAzgpB6cLVgg2Wk1cMPDKn2YN&index=2). 
 
-![](./images/1731050900298_启动1.jpg)
+![](./images/启动.jpg)
 
 ### openEuler showcases RISC-V advancements at the RISC-V Summit Europe 2024
 The [RISC-V Summit Europe 2024](https://riscv.org/event/risc-v-summit-europe-2024/)  took place in Munich, Germany, from June 24–28. The openEuler RISC-V SIG, led by the Institute of Software, Chinese Academy of Sciences, showcased its latest advancements at the summit. RISC-V architecture has become one of the mainstream architectures in [openEuler 24.03 LTS](https://www.linkedin.com/pulse/openeuler-2403-lts-breaking-ground-native-risc-v-support-openeuler-s6coc/?trackingId=BmHZAJB8S46X0npWD8KJQQ%3D%3D), with its software ecosystem now on par with x86 and Arm.
@@ -64,7 +64,7 @@ On June 21, the [openEuler Arm SIG](https://www.openeuler.org/en/sig/sig-detail/
  
 - openEuler online meetup
 On June 19, the [openEuler Migration Meetup](https://www.youtube.com/live/w7pIHPq3Nk0) took place via YouTube. Dr.Xiong Wei and various technical experts from the community provided insights on migrating to openEuler. During the meetup, Ding Jiahui, Senior Engineer of the community, demonstrated a seamless upgrade from CentOS to openEuler. Additionally, community developer Shine Wang shared practical experiences in developing openEuler, offering valuable tips for developers looking to upgrade operating systems and engage in community contributions.
-![](./images/3-#Migrate2openEuler-meetup嘉宾海报-openEulerMigrationOnboarding.jpg)
+![](./images/3.jpg)
 
 These meetups have not only highlighted the advancements of openEuler 24.03 LTS but also strengthened the community's network, paving the way for further innovation and collaboration.
 
