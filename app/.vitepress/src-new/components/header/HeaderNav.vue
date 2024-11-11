@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import { useRouter, useData } from 'vitepress';
+import { useData } from 'vitepress';
 import { useI18n } from '~@/i18n';
 import { useCommon } from '@/stores/common';
 import { debounce } from 'lodash-es';
@@ -15,9 +15,7 @@ import NavLink from './NavLink.vue';
 
 import logo_light from '~@/assets/category/header/logo.svg';
 import logo_dark from '~@/assets/category/header/logo_dark.svg';
-import ContentWrapper from '~@/components/ContentWrapper.vue';
 
-const router = useRouter();
 const { lang } = useData();
 const i18n = useI18n();
 const commonStore = useCommon();
@@ -59,11 +57,6 @@ const toggleDebounced = debounce(function (item: any | null) {
   }
 });
 
-// 返回首页
-const goHome = () => {
-  router.go(`/${lang.value}/`);
-};
-
 const changeSubnav = debounce(
   function (item: any) {
     subNavActive.value = item.NAME;
@@ -82,230 +75,168 @@ const linkClick = () => {
 </script>
 
 <template>
-  <header class="app-header" :class="{ dark: commonStore.theme === 'dark' }">
-    <ContentWrapper class="app-header-wrap">
-      <img class="logo" alt="openEuler logo" :src="logoUrl" @click="goHome" />
-      <ClientOnly>
-        <div class="header-content" :class="lang">
-          <div class="header-nav">
-            <nav class="o-nav">
-              <ul class="o-nav-list">
-                <li
-                  v-for="(item, index) in navData"
-                  :key="item.ID"
-                  :class="{
-                    active: navActive === item.ID,
-                  }"
-                  @mouseenter="toggleDebounced(item)"
-                  @mouseleave="toggleDebounced(null)"
-                >
-                  <span class="nav-item">{{ item.NAME }}</span>
-                  <transition name="transition">
-                    <div v-if="isShow" :class="['nav-dropdown', navActive]">
-                      <div class="nav-drop-content">
-                        <div class="nav-sub-background">
-                          <div class="nav-background-left"></div>
-                          <div class="nav-background-right"></div>
+  <div class="header-content" :class="lang">
+    <div class="header-nav">
+      <nav class="o-nav">
+        <ul class="o-nav-list">
+          <li
+            v-for="(item, index) in navData"
+            :key="item.ID"
+            :class="{
+              active: navActive === item.ID,
+            }"
+            @mouseenter="toggleDebounced(item)"
+            @mouseleave="toggleDebounced(null)"
+          >
+            <span class="nav-item" :class="lang">{{ item.NAME }}</span>
+            <transition name="transition">
+              <div v-if="isShow" :class="['nav-dropdown', navActive, commonStore.theme]">
+                <div class="nav-drop-content">
+                  <div class="nav-sub-background">
+                    <div class="nav-background-left"></div>
+                    <div class="nav-background-right"></div>
+                  </div>
+                  <div class="nav-sub">
+                    <div
+                      v-for="subItem in subNav"
+                      :key="subItem.NAME"
+                      :class="{
+                        active: subNavActive === subItem.NAME,
+                      }"
+                      class="nav-sub-item"
+                      @click="changeSubnav(subItem)"
+                    >
+                      <span>{{ subItem.NAME }}</span>
+                    </div>
+                  </div>
+                  <div class="nav-sub-content">
+                    <div class="content-left">
+                      <NavLink
+                        v-if="subNavContent.URL"
+                        class="content-title-url"
+                        :url="subNavContent.URL"
+                        @link-click="linkClick"
+                      >
+                        {{ subNavContent.NAME }}
+                        <OIcon v-if="subNavContent.ICON">
+                          <component
+                            :is="subNavContent.ICON"
+                            class="icon"
+                          />
+                        </OIcon>
+                      </NavLink>
+                        <span v-else class="content-title">{{
+                          subNavContent.NAME
+                        }}</span>
+                      <div v-if="subNavContent.HASGROUP">
+                        <div
+                          class="group"
+                          v-for="group in subNavContent.CHILDREN"
+                          :key="group.NAME"
+                        >
+                          <p class="group-name">{{ group.NAME }}</p>
+                          <NavContent
+                            :nav-content="group?.CHILDREN"
+                            @link-click="linkClick"
+                          />
                         </div>
-                        <div class="nav-sub">
-                          <div
-                            v-for="subItem in subNav"
-                            :key="subItem.NAME"
-                            :class="{
-                              active: subNavActive === subItem.NAME,
-                            }"
-                            class="nav-sub-item"
-                            @click="changeSubnav(subItem)"
-                          >
-                            <span>{{ subItem.NAME }}</span>
-                          </div>
-                        </div>
-                        <div class="nav-sub-content">
-                          <div class="content-left">
-                            <NavLink
-                              v-if="subNavContent.URL"
-                              class="content-title-url"
-                              :url="subNavContent.URL"
-                              @link-click="linkClick"
-                            >
-                              {{ subNavContent.NAME }}
-                              <OIcon v-if="subNavContent.ICON">
-                                <component
-                                  :is="subNavContent.ICON"
-                                  class="icon"
-                                />
-                              </OIcon>
-                            </NavLink>
-                            <span v-else class="content-title">{{
-                              subNavContent.NAME
-                            }}</span>
-                            <div v-if="subNavContent.HASGROUP">
-                              <div
-                                class="group"
-                                v-for="group in subNavContent.CHILDREN"
-                                :key="group.NAME"
-                              >
-                                <p class="group-name">{{ group.NAME }}</p>
-                                <NavContent
-                                  :nav-content="group?.CHILDREN"
-                                  @link-click="linkClick"
-                                />
-                              </div>
-                            </div>
-                            <NavContent
-                              v-else
-                              :nav-content="subNavContent?.CHILDREN"
-                              @link-click="linkClick"
-                            />
-                          </div>
+                      </div>
+                      <NavContent
+                        v-else
+                        :nav-content="subNavContent?.CHILDREN"
+                        @link-click="linkClick"
+                      />
+                    </div>
                           <div
                             class="split-line"
                             v-if="subNavContent.SHORTCUT?.length"
                           ></div>
-                          <div class="content-right">
-                            <div v-if="subNavContent.SHORTCUT?.length">
-                              <span class="content-title">{{
-                                $t('header.QUICKLINK')
-                              }}</span>
-                              <div v-if="!subNavContent.WITH_PICTURE">
-                                <div
-                                  v-for="shortcut in subNavContent?.SHORTCUT"
-                                  :key="shortcut.NAME"
-                                  class="shortcut"
-                                >
-                                  <img
-                                    v-if="isLight"
-                                    :src="shortcut.TYPE"
-                                    class="icon"
-                                  />
-                                  <img
-                                    v-else
-                                    :src="shortcut.TYPE_DARK"
-                                    class="icon"
-                                  />
-                                  <NavLink
-                                    :url="shortcut.URL"
-                                    @link-click="linkClick"
-                                    class="shortcut-link"
-                                  >
-                                    {{ shortcut.NAME }}
-                                    <OIcon v-if="shortcut.ICON">
-                                      <component
-                                        :is="shortcut.ICON"
-                                        class="icon"
-                                      />
-                                    </OIcon>
-                                  </NavLink>
-                                </div>
-                              </div>
-                              <div v-else>
-                                <NavLink
-                                  v-for="shortcut in subNavContent?.SHORTCUT"
-                                  :url="shortcut.URL"
-                                  :key="shortcut.NAME"
-                                  class="review"
-                                  @link-click="linkClick"
-                                >
-                                  <img
-                                    :src="shortcut.PICTURE"
-                                    class="review-picture"
-                                  />
-                                  <div class="review-content">
-                                    <p class="review-title">
-                                      {{ shortcut.NAME }}
-                                    </p>
-                                    <p
-                                      class="review-desc"
-                                      :title="shortcut.DESCRIPTION"
-                                    >
-                                      {{ shortcut.DESCRIPTION }}
-                                    </p>
-                                    <div class="review-property">
-                                      <span>{{ shortcut.REMARK }}</span>
-                                    </div>
-                                  </div>
-                                </NavLink>
+                    <div class="content-right">
+                      <div v-if="subNavContent.SHORTCUT?.length">
+                        <span class="content-title">{{
+                          $t('header.QUICKLINK')
+                        }}</span>
+                        <div v-if="!subNavContent.WITH_PICTURE">
+                          <div
+                            v-for="shortcut in subNavContent?.SHORTCUT"
+                            :key="shortcut.NAME"
+                            class="shortcut"
+                          >
+                            <img
+                              v-if="isLight"
+                              :src="shortcut.TYPE"
+                              class="icon"
+                            />
+                            <img
+                              v-else
+                              :src="shortcut.TYPE_DARK"
+                              class="icon"
+                            />
+                            <NavLink
+                              :url="shortcut.URL"
+                              @link-click="linkClick"
+                              class="shortcut-link"
+                            >
+                              {{ shortcut.NAME }}
+                              <OIcon v-if="shortcut.ICON">
+                                <component
+                                  :is="shortcut.ICON"
+                                  class="icon"
+                                />
+                              </OIcon>
+                            </NavLink>
+                          </div>
+                        </div>
+                        <div v-else>
+                          <NavLink
+                            v-for="shortcut in subNavContent?.SHORTCUT"
+                            :url="shortcut.URL"
+                            :key="shortcut.NAME"
+                            class="review"
+                            @link-click="linkClick"
+                          >
+                            <img
+                              :src="shortcut.PICTURE"
+                              class="review-picture"
+                            />
+                            <div class="review-content">
+                              <p class="review-title">
+                                {{ shortcut.NAME }}
+                              </p>
+                              <p
+                                class="review-desc"
+                                :title="shortcut.DESCRIPTION"
+                              >
+                                {{ shortcut.DESCRIPTION }}
+                              </p>
+                              <div class="review-property">
+                                <span>{{ shortcut.REMARK }}</span>
                               </div>
                             </div>
-                          </div>
+                          </NavLink>
                         </div>
                       </div>
                     </div>
-                  </transition>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+                  </div>
+                </div>
+              </div>
+            </transition>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
-        <div class="header-tool">
-          <HeaderSearch />
-          <HeaderCode />
-          <HeaderLanguage :show="langOptions" />
-          <HeaderTheme />
-          <HeaderLogin />
-        </div>
-      </ClientOnly>
-    </ContentWrapper>
-  </header>
+  <div class="header-tool">
+    <HeaderSearch />
+    <HeaderCode />
+    <HeaderLanguage :show="langOptions" />
+    <HeaderTheme />
+    <HeaderLogin />
+  </div>
 </template>
 
 <style lang="scss" scoped>
-.app-header {
-  background-color: var(--o-color-fill2);
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 98;
-  box-shadow: var(--o-shadow-1);
-  backdrop-filter: blur(5px);
-
-  &.dark {
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 1px;
-      background-color: var(--o-color-control4);
-    }
-  }
-
-  &:before {
-    bottom: 0;
-    box-shadow: var(--o-shadow-1);
-    content: '';
-    left: 0;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 100;
-  }
-
-  .app-header-wrap {
-    display: flex;
-    align-items: center;
-    height: 80px;
-  }
-}
-
-.logo {
-  height: 32px;
-  width: 136px;
-  cursor: pointer;
-  margin-right: var(--o-gap-7);
-
-  @include respond-to('laptop') {
-    margin-right: 28px;
-  }
-  @include respond-to('pad_h') {
-    margin-right: var(--o-gap-2);
-  }
-}
-
 .header-content {
   display: flex;
   justify-content: center;
@@ -377,6 +308,11 @@ const linkClick = () => {
         @include respond-to('pad_h') {
           padding: 10px;
         }
+        &.en {
+          @media (min-width: 841px) and (max-width: 1000px) {
+            padding: var(--o-gap-2);
+          }
+        }
       }
     }
   }
@@ -388,7 +324,6 @@ const linkClick = () => {
   left: 0;
   right: 0;
   background: var(--o-color-fill2);
-  box-shadow: var(--o-shadow-1);
   z-index: 90;
   color: var(--o-color-info1);
   display: flex;
@@ -397,6 +332,10 @@ const linkClick = () => {
   min-height: 320px;
   justify-content: center;
   transform-origin: top;
+
+  &.light {
+    box-shadow: 0 1px 5px rgba(45, 47, 51, 0.1);
+  }
 
   @include respond-to('laptop') {
     min-height: 300px;
@@ -431,7 +370,7 @@ const linkClick = () => {
       top: 0;
       width: 173px;
       height: 169px;
-      background-image: url('../../assets/category/header/nav_background_left.png');
+      background-image: url('~@/assets/category/header/nav_background_left.png');
       background-size: cover;
       z-index: -1;
 
@@ -451,7 +390,7 @@ const linkClick = () => {
       bottom: 0;
       width: 173px;
       height: 172px;
-      background-image: url('../../assets/category/header/nav_background_right.png');
+      background-image: url('~@/assets/category/header/nav_background_right.png');
       background-size: cover;
       z-index: -1;
 
@@ -608,7 +547,7 @@ const linkClick = () => {
               position: absolute;
               left: 0;
               right: 0;
-              bottom: 0;
+              bottom: -8px;
               height: 1px;
               background: var(--o-color-control4);
             }
