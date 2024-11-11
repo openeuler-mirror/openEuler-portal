@@ -29,7 +29,7 @@ Currently, openEuler 24.03 LTS for all four scenarios (server, embedded, edge, a
 ### openEuler participates in Linaro Connect 2024
 On May 17, Dr. Xiong Wei, Executive Director of the openEuler Community, was invited to Linaro Connect 2024. During the event, Dr. Xiong delivered a [keynote speech](https://www.youtube.com/watch?v=1bRrCsrPKbk&list=PLtDfk9jvMAzjfit0Mc9o2FGw8JO_9MCOS&index=44) showcasing openEuler's capabilities in digital intelligence and its efforts to promote the prosperity of the Arm ecosystem.
 
-![](./images/05-#LinaroConnect2024-熊博金句海报.jpg)
+![](./images/05-熊博金句海报.jpg)
 
 ### openEuler Technical Committee Chairperson Hu Xinwei spoke at the Chip Technology Forum
 
