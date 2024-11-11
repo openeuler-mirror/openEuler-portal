@@ -10,7 +10,7 @@ import { getEasyeditorInfo } from '@/api/api-easyeditor';
 import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
 import SummitSchedule from './components/SummitSchedule.vue';
-import SummitSubforum from './components/SummitSubforum.vue';
+import SummitGuest from './components/SummitGuest.vue';
 import SummitPartner from './components/SummitPartner.vue';
 
 import liveLight from '@/assets/category/summit/summit2022/live.png';
@@ -18,6 +18,7 @@ import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
 
 import data_zh from './data/data_zh';
 import data_en from './data/data_en';
+import guest from './data';
 
 const { lang } = useData();
 
@@ -74,6 +75,9 @@ const getData = computed(() => {
     return agendaData.value.find((item) => item.name === 'schedule-16');
   }
 });
+
+// ------------------ 嘉宾数据 -----------
+const guestData = guest;
 </script>
 <template>
   <SummitBanner :banner-data="summitData.banner" />
@@ -145,6 +149,7 @@ const getData = computed(() => {
         </template>
       </div>
     </div>
+    <SummitGuest v-if="lang === 'zh'" class="guest" :data="guestData" />
     <SummitPartner />
     <!--  只在中文页显示精彩回顾 -->
     <div v-if="lang === 'zh'" class="previous">
@@ -199,22 +204,23 @@ const getData = computed(() => {
   }
 }
 
+:deep(h3) {
+  text-align: center;
+  font-size: var(--e-font-size-h3);
+  line-height: var(--e-line-height-h3);
+  color: var(--e-color-text1);
+  font-weight: 300;
+  @media (max-width: 767px) {
+    font-size: var(--e-font-size-h8);
+    line-height: var(--e-line-height-h8);
+  }
+}
 .agenda {
   margin-top: var(--e-spacing-h1);
   @media (max-width: 767px) {
     margin-top: var(--e-spacing-h2);
   }
-  h3 {
-    text-align: center;
-    font-size: var(--e-font-size-h3);
-    line-height: var(--e-line-height-h3);
-    color: var(--e-color-text1);
-    font-weight: 300;
-    @media (max-width: 767px) {
-      font-size: var(--e-font-size-h8);
-      line-height: var(--e-line-height-h8);
-    }
-  }
+
   .date {
     display: flex;
     justify-content: center;
@@ -342,7 +348,12 @@ const getData = computed(() => {
     margin-top: 24px;
   }
 }
-
+.guest {
+  margin-top: var(--e-spacing-h1);
+  @media screen and (max-width: 768px) {
+    margin-top: var(--e-spacing-h4);
+  }
+}
 .previous {
   margin-top: var(--e-spacing-h1);
   @media screen and (max-width: 768px) {

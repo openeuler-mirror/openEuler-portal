@@ -41,6 +41,7 @@ const sigDetailName = ref('');
 const sigDetail = computed(() => {
   return i18n.value.sig.SIG_DETAIL;
 });
+const mail = ref('');
 const sigMeetingData: any = ref('');
 const sigMemberData: any = ref('');
 const memberList: any = ref([]);
@@ -54,7 +55,6 @@ function getSigDetails() {
     sigMeetingData.value = res.data;
   });
 }
-const giteeHomeLink = ref('');
 
 function getSigMembers() {
   const param = {
@@ -66,6 +66,7 @@ function getSigMembers() {
       if (res?.data[0]) {
         const data = res.data[0];
         sigMemberData.value = data;
+        mail.value = data.mailing_list;
         const { maintainer_info } = data || [];
         if (maintainer_info) {
           memberList.value = maintainer_info;
@@ -289,6 +290,7 @@ function convertMd(data: string) {
           v-if="sigMeetingData.length"
           class="calender-box"
           :table-data="sigMeetingData"
+          :mail="mail"
           :meeting-detail="
             easyeditorInfo.meeting ? easyeditorInfo.meeting.content : null
           "
