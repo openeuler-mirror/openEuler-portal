@@ -138,7 +138,7 @@ main {
 
 <style lang="scss">
 #app {
-  --layout-content-max-width: 1616px;
+  --layout-content-max-width: 1544px;
   --layout-content-padding: 64px;
 
   @include respond-to('<=laptop') {
