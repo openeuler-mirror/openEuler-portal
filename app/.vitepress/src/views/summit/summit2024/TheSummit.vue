@@ -9,16 +9,16 @@ import { getEasyeditorInfo } from '@/api/api-easyeditor';
 
 import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
-import SummitSchedule from './components/SummitSchedule.vue';
 import SummitGuest from './components/SummitGuest.vue';
 import SummitPartner from './components/SummitPartner.vue';
+import SummitAgent from './components/SummitAgent.vue';
 
 import liveLight from '@/assets/category/summit/summit2022/live.png';
 import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
 
 import data_zh from './data/data_zh';
 import data_en from './data/data_en';
-import guest from './data';
+import data from './data';
 
 const { lang } = useData();
 
@@ -62,22 +62,33 @@ const agendaData = ref<ScheduleItemT[]>([]);
 onMounted(() => {
   const href = `https://www.openeuler.org/${lang.value}/interaction/summit-list/summit2024/`;
   getEasyeditorInfo(href).then((res) => {
-    for (let i = 0; i < res?.data?.length; i++) {
-      res.data[i].content = JSON.parse(res.data[i].content);
+    for (let i = 0; i < data?.length; i++) {
+      // res.data[i].content = JSON.parse(res.data[i].content);
+      data[i].content = JSON.parse(data[i].content);
     }
-    agendaData.value = res.data;
+    allData.value = data;
+    console.log(allData.value);
+    console.log(summit2024.value);
   });
 });
-const getData = computed(() => {
-  if (dataIndex.value === 0) {
-    return agendaData.value.find((item) => item.name === 'schedule-15');
-  } else {
-    return agendaData.value.find((item) => item.name === 'schedule-16');
-  }
-});
 
-// ------------------ 嘉宾数据 -----------
-const guestData = guest;
+const allData = ref([]);
+
+const summit2024 = computed(() => {
+  return allData.value?.find((item) => item.name === 'summit2024');
+});
+// // ------------------ 嘉宾数据 -----------
+const agentData = computed(() => {
+  return summit2024.value?.content?.sections.find(
+    (item) => item.type === 'AGENDA'
+  );
+});
+// // ------------------ 嘉宾数据 -----------
+const guestData = computed(() => {
+  return summit2024.value?.content?.sections.find(
+    (item) => item.type === 'GUEST'
+  );
+});
 </script>
 <template>
   <SummitBanner :banner-data="summitData.banner" />
@@ -93,7 +104,7 @@ const guestData = guest;
       </ul>
       <p v-if="summitData?.introduce4">{{ summitData.introduce4 }}</p>
     </div>
-    <div class="agenda">
+    <!-- <div class="agenda">
       <h3>
         {{ summitData.agenda.title }}
       </h3>
@@ -109,7 +120,6 @@ const guestData = guest;
           <p class="date-month">{{ item.month }}</p>
         </div>
       </div>
-      <!--  日程-->
       <div class="schedule-box">
         <el-tabs v-model.number="timeTabIndex" class="schedule-tabs">
           <el-tab-pane :name="0">
@@ -132,14 +142,12 @@ const guestData = guest;
           </el-tab-pane>
         </el-tabs>
         <template v-if="renderData?.length && timeTabIndex === 0">
-          <!--  日程表格 -->
           <SummitSchedule
             v-for="item in renderData"
             :key="item.lable"
             :agenda-data="item"
           />
         </template>
-        <!-- 分论坛卡片 -->
         <template v-else-if="renderData?.length">
           <SummitSchedule
             v-for="item in renderData"
@@ -148,7 +156,9 @@ const guestData = guest;
           />
         </template>
       </div>
-    </div>
+    </div> -->
+    <SummitAgent :data="agentData" />
+
     <SummitGuest v-if="lang === 'zh'" class="guest" :data="guestData" />
     <SummitPartner />
     <!--  只在中文页显示精彩回顾 -->
