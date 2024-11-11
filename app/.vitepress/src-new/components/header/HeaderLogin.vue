@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { useData } from 'vitepress';
 import { showGuard, logout, useStoreData, getUserAuth } from '@/shared/login';
+import { OIcon, ODropdown, ODropdownItem } from '@opensig/opendesign';
 
 import IconLogin from '~icons/app-new/icon-header-person.svg';
 
@@ -18,20 +19,11 @@ const jumpToUserZone = () => {
 const jumpToMsgCenter = () => {
   window.open(import.meta.env.VITE_MESSAGE_CENTER_URL);
 };
-
-const isMenu = ref(false);
-const showSub = () => {
-  isMenu.value = true;
-};
-const hideSub = () => {
-  isMenu.value = false;
-};
 </script>
 
 <template>
-  <div class="opt-user" @mouseenter="showSub()"
-  @mouseleave="hideSub()">
-    <div v-if="token">
+  <div class="opt-user">
+    <ODropdown v-if="token" trigger="hover" optionPosition="bottom" option-wrap-class="dropdown">
       <div class="el-dropdown-link opt-info">
         <img
           v-if="guardAuthClient.photo"
@@ -44,12 +36,13 @@ const hideSub = () => {
           </OIcon>
         </div>
       </div>
-      <ul class="menu-list" v-show="isMenu">
-        <li @click="jumpToUserZone()">{{ $t('header.USER_CENTER') }}</li>
-        <li @click="jumpToMsgCenter()">{{ $t('header.MESSAGE_CENTER') }}</li>
-        <li @click="logout()">{{ $t('header.LOGOUT') }}</li>
-      </ul>
-    </div>
+
+      <template #dropdown>
+        <ODropdownItem @click="jumpToUserZone()">{{ $t('header.USER_CENTER') }}</ODropdownItem>
+        <ODropdownItem @click="jumpToMsgCenter()">{{ $t('header.MESSAGE_CENTER') }}</ODropdownItem>
+        <ODropdownItem @click="logout()">{{ $t('header.LOGOUT') }}</ODropdownItem>
+      </template>
+    </ODropdown>
     <div v-else class="login" @click="showGuard()">
       <OIcon class="icon">
         <IconLogin />
@@ -71,6 +64,7 @@ const hideSub = () => {
   .opt-info {
     display: flex;
     align-items: center;
+    height: 100%;
     .user-img {
       font-size: var(--o-icon_size-l);
       border-radius: 50%;
@@ -82,53 +76,31 @@ const hideSub = () => {
       }
     }
   }
-  .menu-list {
-    position: absolute;
-    top: 80px;
-    min-width: 136px;
-    left: -58px;
-    background: var(--o-color-fill2);
-    cursor: pointer;
-    z-index: 999;
-    box-shadow: var(--o-shadow-1);
-    padding: var(--o-gap-1);
-
-    @include respond-to('<=pad_v') {
-      min-width: 96px;
-      top: 48px;
-      left: -60px;
-    }
-
-    @include respond-to('laptop') {
-      left: -96px;
-    }
-
-    li {
-      @include text1;
-      text-align: center;
-      height: 40px;
-      color: var(--o-color-info1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      white-space: nowrap;
-      border-radius: 2px;
-
-      &.active {
-        color: var(--o-color-primary1);
-        cursor: default;
-      }
-      @include hover {
-        color: var(--o-color-primary1);
-        background: var(--o-color-control2-light);
-      }
-    }
-  }
 }
 .login {
   .icon {
     font-size: var(--o-icon_size-s);
     cursor: pointer;
   }
+}
+
+.o-dropdown {
+  height: 100%;
+}
+.o-dropdown-item {
+  background: var(--o-color-fill2);
+  cursor: pointer;
+  border-radius: var(--o-radius_control-xs);
+  padding: var(--o-gap-1);
+  min-width: 144px;
+  height: 40px;
+
+  @include hover {
+    color: var(--o-color-primary1);
+    background: var(--o-color-control2-light);
+  }
+}
+.dropdown {
+  --dropdown-list-radius: var(--o-radius-xs);
 }
 </style>

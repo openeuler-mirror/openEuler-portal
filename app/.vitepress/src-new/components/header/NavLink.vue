@@ -62,5 +62,6 @@ const linkClick = () => {
 
 .without-url {
   pointer-events: none;
+  color: var(--o-color-info1) !important;
 }
 </style>

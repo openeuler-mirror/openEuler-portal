@@ -358,16 +358,6 @@ export default {
           ],
         },
         {
-          NAME: 'Test',
-          CHILDREN: [
-            {
-              NAME: 'EulerTest',
-              DESCRIPTION: 'A testing and management platform for openEuler releases.',
-              URL: 'https://radiatest.openeuler.org/home/version-management/product/',
-            },
-          ]
-        },
-        {
           NAME: 'Release',
           CHILDREN: [
             {
@@ -381,12 +371,6 @@ export default {
         {
           NAME: 'Analyze',
           CHILDREN: [
-            {
-              NAME: 'oecp',
-              DESCRIPTION: 'A simple, effective tool to analyze and compare OS differences.',
-              URL: 'https://gitee.com/openeuler/oecp',
-              ICON: OutLink,
-            },
             {
               NAME: 'Pkgship',
               DESCRIPTION: 'A tool to query OS package information and dependencies with ease.',
@@ -440,7 +424,7 @@ export default {
               NAME: 'Security Center',
               DESCRIPTION: 'Track the latest vulnerabilities, security advisories, and more.',
               URL: '',
-              MOBILE_SHOW_CHILD: false,
+              MOBILE_SHOW_CHILD: true,
               CHILDREN: [
                 {
                   NAME: 'security center',

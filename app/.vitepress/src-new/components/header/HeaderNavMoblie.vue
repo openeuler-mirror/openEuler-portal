@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref, watch, computed, onMounted, onUnmounted } from 'vue';
-import { useRouter, useData } from 'vitepress';
+import { ref, watch, computed, onMounted } from 'vue';
+import { useData } from 'vitepress';
 import { useI18n } from '~@/i18n';
 import { OCollapse, OIcon, OCollapseItem } from '@opensig/opendesign';
 import { useCommon } from '@/stores/common';
@@ -12,29 +12,16 @@ import NavContent from './NavContent.vue';
 import HeaderSearch from './HeaderSearch.vue';
 import NavLink from './NavLink.vue';
 
-import IconCancel from '~icons/app/icon-cancel.svg';
-import IconMenu from '~icons/app-new/icon-header-menu.svg';
-import logo_light from '~@/assets/category/header/logo.svg';
-import logo_dark from '~@/assets/category/header/logo_dark.svg';
 import IconOutLink from '~icons/app/icon-out-link.svg';
 
-const router = useRouter();
 const { lang } = useData();
 const i18n = useI18n();
 const headerData = computed(() => i18n.value.header.NAV_ROUTER);
 const codeData = computed(() => i18n.value.header.SOURCE_CODE);
 
-const toBody = ref(false);
-const menuIcon = ref(false);
-
-
 onMounted(() => {
   navActive.value = 'download';
   navInfo.value = headerData.value[0];
-  toBody.value = true;
-});
-onUnmounted(() => {
-  toBody.value = false;
 });
 
 const props = defineProps({
@@ -44,21 +31,15 @@ const props = defineProps({
       return [];
     },
   },
+  menuShow: {
+    type: Boolean,
+    default() {
+      return false;
+    }
+  }
 });
 
 const collapseValue = ref([]);
-
-const commonStore = useCommon();
-const logoUrl = computed(() =>
-  commonStore.theme === 'light' ? logo_light : logo_dark
-);
-
-// 返回首页
-const goHome = () => {
-  toBody.value = false;
-  menuIcon.value = false;
-  router.go(`/${lang.value}/`);
-};
 
 const navActive = ref('');
 const navInfo = ref({})
@@ -74,7 +55,7 @@ const handleNavClick = (item: any) => {
 };
 
 watch(
-  () => menuIcon.value,
+  () => props.menuShow,
   (val: boolean) => {
     navActive.value = 'download';
     navInfo.value = headerData.value[0];
@@ -93,93 +74,74 @@ watch(
   }
 );
 
+const emit = defineEmits(['link-click']);
 const linkClick = () => {
-  menuPanel();
+  emit('link-click');
 }
-
-const menuPanel = () => {
-  toBody.value = !toBody.value;
-  setTimeout(() => {
-    menuIcon.value = !menuIcon.value;
-  }, 200);
-};
 </script>
 
 <template>
-  <header class="app-header">
-    <div class="app-header-body">
-      <div class="menu-icon">
-        <div class="icon" @click="menuPanel">
-          <OIcon>
-            <IconMenu v-if="!menuIcon" />
-            <IconCancel v-else />
-          </OIcon>
-        </div>
-      </div>
-      <img class="logo" alt="openEuler logo" :src="logoUrl" @click="goHome" />
-        <div
-          class="header-content"
-          :class="lang"
-        >
-          <div class="header-nav" :class="{ active: menuIcon }">
-              <nav class="o-nav">
-                <ul class="o-nav-list">
-                  <li
-                    v-for="(item, index) in headerData"
-                    :key="item.ID"
-                    :class="{
-                      active: navActive === item.ID,
-                    }"
-                  >
-                    <span @click="handleNavClick(item)">{{
-                      item.NAME
-                    }}</span>
-                  </li>
-                </ul>
-                <div class='nav-aside'>
-                  <OCollapse v-if="navActive !== 'SOURCE_CODE'" v-model="collapseValue" class="nav-aside-wrapper">
-                    <OCollapseItem
-                      v-for="item in navInfo.CHILDREN"
-                      :value="item.NAME"
-                      :title="item.NAME"
-                      :key="item.NAME"
-                      class="nav-aside-content"
-                    >
-                      <div v-if="item.HASGROUP">
-                        <div class="group" v-for="group in item.CHILDREN" :key="group.NAME">
-                          <span>{{ group.NAME }}</span>
-                          <NavContent :nav-content="group?.CHILDREN" @link-click="linkClick" :is-mobile="true" />
-                        </div>
-                      </div>
-                      <NavContent v-else :nav-content="item?.CHILDREN" @link-click="linkClick" :is-mobile="true" />
-                    </OCollapseItem>
-                  </OCollapse>
-                  <div v-else class="nav-aside-wrapper">
-                    <NavLink v-for="item in navInfo" :url="item.PATH" :key="item.NAME" class="source-code-item">
-                      <span>{{ item.NAME }}</span>
-                      <OIcon>
-                        <IconOutLink class="icon" />
-                      </OIcon>
-                    </NavLink>
+  <div
+    class="header-content"
+    :class="lang"
+  >
+    <div class="header-nav" :class="{ active: menuShow }">
+        <nav class="o-nav">
+          <ul class="o-nav-list">
+            <li
+              v-for="(item, index) in headerData"
+              :key="item.ID"
+              :class="{
+                active: navActive === item.ID,
+              }"
+            >
+              <span @click="handleNavClick(item)">{{
+                item.NAME
+              }}</span>
+            </li>
+          </ul>
+          <div class='nav-aside'>
+            <OCollapse v-if="navActive !== 'SOURCE_CODE'" v-model="collapseValue" class="nav-aside-wrapper">
+              <OCollapseItem
+                v-for="item in navInfo.CHILDREN"
+                :value="item.NAME"
+                :title="item.NAME"
+                :key="item.NAME"
+                class="nav-aside-content"
+              >
+                <div v-if="item.HASGROUP">
+                  <div class="group" v-for="group in item.CHILDREN" :key="group.NAME">
+                    <span>{{ group.NAME }}</span>
+                    <NavContent :nav-content="group?.CHILDREN" @link-click="linkClick" :is-mobile="true" />
                   </div>
                 </div>
-              </nav>
-            <div class="header-tool">
-              <div class="header-tool-code" @click="handleNavClick(null)" :class="{
-                      active: navActive === 'SOURCE_CODE',
-                    }">
-                {{ $t('header.CODE') }}
-              </div>
-              <HeaderLanguage :show="langOptions"/>
-              <HeaderTheme />
+                <NavContent v-else :nav-content="item?.CHILDREN" @link-click="linkClick" :is-mobile="true" />
+              </OCollapseItem>
+            </OCollapse>
+            <div v-else class="nav-aside-wrapper">
+              <NavLink v-for="item in navInfo" :url="item.PATH" :key="item.NAME" class="source-code-item">
+                <span>{{ item.NAME }}</span>
+                <OIcon>
+                  <IconOutLink class="icon" />
+                </OIcon>
+              </NavLink>
             </div>
           </div>
+        </nav>
+      <div class="header-tool">
+        <div class="header-tool-code" @click="handleNavClick(null)" :class="{
+                active: navActive === 'SOURCE_CODE',
+              }">
+          {{ $t('header.CODE') }}
         </div>
-        <!-- 搜索 -->
-        <HeaderSearch />
-        <HeaderLogin />
+        <HeaderLanguage :show="langOptions"/>
+        <HeaderTheme />
+      </div>
     </div>
-  </header>
+  </div>
+  <!-- 搜索 -->
+  <HeaderSearch />
+  <HeaderLogin />
 </template>
 
 <style lang="scss" scoped>
@@ -197,43 +159,6 @@ const menuPanel = () => {
   } 
 }
 
-.app-header {
-  background-color: var(--o-color-fill2);
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 98;
-  box-shadow: var(--o-shadow-1);
-  .app-header-body {
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 48px;
-    padding: 0 var(--o-gap-4);
-    justify-content: space-between;
-    position: relative;
-  }
-}
-.logo {
-  height: 24px;
-  width: 136px;
-  cursor: pointer;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 12px;
-}
-.menu-icon {
-  flex: 1;
-  display: block;
-  .icon {
-    font-size: var(--o-icon_size-m);
-    color: var(--o-color-info1);
-    cursor: pointer;
-  }
-}
 
 .header-content {
   display: flex;
@@ -253,7 +178,7 @@ const menuPanel = () => {
     left: 0;
     overflow: hidden;
     top: 48px;
-    height: calc(100% - 48px);
+    height: calc(100vh - 48px);
     transform: translateX(-130%);
 
     transition-duration: 0.333s;

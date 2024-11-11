@@ -38,7 +38,7 @@ const linkClick = () => {
       <div class="desc-container">
         <p class="item-desc">{{ subItem.DESCRIPTION }}</p>
       </div>
-      <div v-if="subItem.MOBILE_SHOW_CHILD" style="display: flex;">
+      <div v-if="subItem.MOBILE_SHOW_CHILD" class="system-container">
         <NavLink v-for="system in subItem.CHILDREN" :url="system.URL" class="system" @link-click="linkClick">
           {{ system.NAME }}
           <OIcon v-if="system.ICON">
@@ -106,28 +106,34 @@ const linkClick = () => {
   padding: 0;
   flex-wrap: wrap;
 
+  @include respond-to('>laptop') {
+    column-gap: var(--o-gap-8);
+    row-gap: var(--o-gap-5);
+  }
+
+  @include respond-to('laptop') {
+    column-gap: var(--o-gap-5);
+    row-gap: var(--o-gap-5);
+  }
+
+  @include respond-to('pad_h') {
+    column-gap: var(--o-gap-5);
+    row-gap: var(--o-gap-5);
+  }
+
   .content-item {
     @include respond-to('>laptop') {
       width: calc((100% - 96px) / 3);
-      &:not(:nth-child(3n + 1)) {
-        margin-left: var(--o-gap-8);
-      }
-
-      &:nth-child(n+4) {
-        margin-top: var(--o-gap-5);
-      }
+      min-width: 230px;
     }
 
-    @include respond-to('pad_v-laptop') {
+    @include respond-to('laptop') {
+      width: calc((100% - 48px) / 3);
+      min-width: 184px;
+    }
+
+    @include respond-to('pad_h') {
       width: calc((100% - 24px) / 2);
-
-      &:nth-child(2n) {
-        margin-left: var(--o-gap-5);
-      }
-
-      &:nth-child(n+3) {
-        margin-top: var(--o-gap-5);
-      }
     }
   }
 
@@ -210,16 +216,19 @@ const linkClick = () => {
     }
   }
 
-  .system {
-    font-weight: 500;
-    margin: 0;
+  .system-container {
     display: flex;
-    align-items: center;
-    color: var(--o-color-primary1);
-    @include text1;
+    flex-wrap: wrap;
+    column-gap: var(--o-gap-5);
+    row-gap: var(--o-gap-1);
 
-    & + .system {
-      margin-left: var(--o-gap-5);
+    .system {
+      font-weight: 500;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      color: var(--o-color-primary1);
+      @include text1;
     }
   }
 }

@@ -169,6 +169,8 @@ const closeSearch = () => {
             "
             @keyup.enter="handleSearchEvent"
             @focus="showDrawer"
+            class="normal"
+            :class="lang"
           >
             <template #prefix>
               <OIcon class="icon"><IconSearch></IconSearch></OIcon>
@@ -177,6 +179,7 @@ const closeSearch = () => {
               <OIcon class="close icon" @click="closeSearchBox"><IconCancel /></OIcon>
             </template>
           </OInput>
+          <OIcon class="only-icon" :class="lang" @click="showDrawer"><IconSearch></IconSearch></OIcon>
           <span v-if="lePadV && isShowDrawer" class="search-text" @click="handleSearchEvent">{{ searchValue.TEXT }}</span>
         </div>
 
@@ -324,6 +327,13 @@ const closeSearch = () => {
       gap: var(--o-gap-4);
       align-items: center;
     }
+
+    .normal {
+      display: flex !important;
+    }
+    .only-icon {
+      display: none !important;
+    }
   }
 
   .drawer {
@@ -388,6 +398,22 @@ const closeSearch = () => {
       box-shadow: unset;
       padding-left: var(--o-gap-5);
       padding-right: var(--o-gap-5);
+    }
+  }
+  .normal.en {
+    @media (min-width: 841px) and (max-width: 1000px) {
+      display: none;
+    }
+  }
+  .only-icon {
+    display: none;
+
+    &.en {
+      @media (min-width: 841px) and (max-width: 1000px) {
+        display: block;
+        font-size: var(--o-icon_size-s);
+        padding-top: var(--o-gap-1);
+      }
     }
   }
 }
@@ -511,7 +537,7 @@ const closeSearch = () => {
   }
 
   &.icon {
-    font-size: 20px;
+    font-size: var(--o-icon_size-m);
   }
 }
 .input-focus {

@@ -548,7 +548,7 @@ export default {
               NAME: '社区公告',
               DESCRIPTION: '查看漏洞管理、安全公告等安全问题',
               URL: '',
-              MOBILE_SHOW_CHILD: false,
+              MOBILE_SHOW_CHILD: true,
               CHILDREN: [
                 {
                   NAME: '安全中心',
@@ -671,7 +671,7 @@ export default {
                 {
                   NAME: '人才培养',
                   DESCRIPTION: '旨在帮助企业快速培养openEuler专业生态人才',
-                  URL: 'https://talent-assessment.openeuler.org/#/',
+                  URL: '/talent-assessment/',
                 },
                 {
                   NAME: '开源实习',
