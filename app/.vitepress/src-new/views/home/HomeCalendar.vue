@@ -131,7 +131,6 @@ function setMeetingDay(day: string, event: Event) {
     return false;
   }
   if (props.tableData?.includes(day) || getSummitHighlight(day)) {
-    activeName.value = [];
     paramGetDaysData({
       date: day,
       type: tabType.value,
@@ -591,6 +590,9 @@ const watchData = watch(
         max-width: 100px;
         height: 64px;
         color: var(--o-color-info1);
+        @include respond-to('<=pad') {
+          height: fit-content;
+        }
         @include respond-to('<=pad_v') {
           display: flex;
           justify-content: center;
@@ -617,12 +619,15 @@ const watchData = watch(
             }
           }
           .icon-box {
+            display: flex;
             margin-top: 4px;
             color: var(--o-color-white);
             height: 20px;
             .o-icon {
+              flex-shrink: 0;
               position: relative;
               border-radius: 50%;
+              height: fit-content;
               padding: 1px;
               margin-left: -4px;
               @include respond-to('<=pad_v') {
@@ -881,12 +886,8 @@ const watchData = watch(
         }
       }
       .o-collapse-item-body {
-        padding: 16px 60px;
         background-color: var(--o-color-control2-light);
         margin-bottom: 0;
-        @include respond-to('<=pad_v') {
-          padding: 12px 16px;
-        }
         a {
           word-break: break-all;
         }
@@ -898,6 +899,10 @@ const watchData = watch(
       @include tip1;
       color: var(--o-color-info3);
       flex-direction: column;
+      padding: 16px 60px;
+      @include respond-to('<=pad_v') {
+        padding: 12px 16px;
+      }
       .info-item {
         display: flex;
         margin-top: 8px;

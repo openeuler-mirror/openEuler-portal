@@ -15,13 +15,13 @@ import ContentWrapper from './ContentWrapper.vue';
 
 import LogoFooter from '~@/assets/category/footer/footer-logo2.png';
 import LogoFooter1 from '~@/assets/category/footer/footer-logo1.png';
-import LogoAtom from '~@/assets/category/footer/atom-logo.svg';
+import LogoAtom from '~@/assets/category/footer/atom-logo.png';
 
 // 公众号、小助手
 import CodeTitleXzs from '~@/assets/category/footer/img-xzs.png';
 import CodeTitleGzh from '~@/assets/category/footer/img-gzh.png';
 import CodeImgXzs from '~@/assets/category/footer/code-xzs.png';
-import CodeImgZgz from '~@/assets/category/footer/code-zgz.png';
+import CodeImgZgz from '~@/assets/category/footer/code-zgz.jpg';
 
 const props = defineProps({
   lang: {
@@ -233,7 +233,7 @@ $color: #fff;
       @include h4;
     }
     .atom-logo {
-      height: 36px;
+      height: 32px;
       margin-top: 12px;
       @include respond-to('<=pad_v') {
         margin-top: 16px;
@@ -466,7 +466,7 @@ $color: #fff;
         }
       }
       @include respond-to('<=pad_v') {
-        justify-content: center;
+        justify-content: space-between;
       }
     }
     .footer-links {
@@ -501,6 +501,7 @@ $color: #fff;
         justify-content: center;
         display: flex;
         text-align: center;
+        margin-left: 0;
       }
       &.iszh {
         margin-top: 12px;

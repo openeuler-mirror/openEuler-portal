@@ -348,7 +348,7 @@ $osmindCardHeight: 145px;
   padding: 40px;
 }
 
-.o-card {
+.e-card {
   @include mobile() {
     :deep(.el-card__body) {
       padding: 16px 12px;

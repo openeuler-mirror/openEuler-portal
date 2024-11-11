@@ -55,16 +55,18 @@ onMounted(() => {
     </i18n-t>
     <div class="play-intro">
       <p class="play-intro-text">{{ $t('home.playIntro') }}</p>
-      <a class="get-os" :href="`/${locale}/download/get-os/`" target="_blank">
-        <OButton
-          :size="isPhone ? 'medium' : 'large'"
-          variant="solid"
-          color="primary"
-        >
-          {{ $t('home.getOpenEuler') }}
-        </OButton>
+      <div class="get-os">
+        <a :href="`/${locale}/download/get-os/`" target="_blank">
+          <OButton
+            :size="isPhone ? 'medium' : 'large'"
+            variant="solid"
+            color="primary"
+          >
+            {{ $t('home.getOpenEuler') }}
+          </OButton>
+        </a>
         <img @click.stop="" :src="theme === 'light' ? blue : blueDark" />
-      </a>
+      </div>
     </div>
     <div class="play-cards">
       <div class="card-item" v-for="card in playCommunity[locale]">
