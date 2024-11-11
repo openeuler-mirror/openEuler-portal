@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { computed, ref, CSSProperties, watch, onMounted, Ref } from 'vue';
+import {
+  computed,
+  ref,
+  CSSProperties,
+  watch,
+  onMounted,
+  Ref,
+  onUnmounted,
+} from 'vue';
 import { useRouter } from 'vitepress';
 
 import IconTop from '~icons/footer/icon-top.svg';
@@ -8,10 +16,9 @@ import IconHeadset from '~icons/footer/icon-headset.svg';
 import IconCancel from '~icons/footer/icon-cancel.svg';
 
 import IconFAQ from '~icons/footer/icon-faq.svg';
-import IconSmileMobile from '~icons/footer/icon-smile-mobile.svg';
 
 import { ElMessage } from 'element-plus';
-import { OIcon, ODivider, OPopup } from '@opensig/opendesign';
+import { OIcon, ODivider, OPopup, OLink } from '@opensig/opendesign';
 
 import { postFeedback } from '@/api/api-feedback';
 
@@ -393,8 +400,25 @@ const handleFeedbackShow = () => {
   }
 };
 
+// 页面滚动大于一屏时，显示回到顶部悬浮按钮
+const showBackTop = ref(false);
+
+const listenScroll = () => {
+  if (window.pageYOffset > window.innerHeight) {
+    showBackTop.value = true;
+  } else {
+    showBackTop.value = false;
+  }
+};
+
 onMounted(() => {
+  window.addEventListener('scroll', listenScroll);
+
   handleFeedbackShow();
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', listenScroll);
 });
 
 watch(
@@ -520,24 +544,33 @@ watch(
             :offset="24"
             trigger="hover"
           >
-            <div v-for="item in floatData" :key="item.link" class="popup-item">
+            <OLink
+              v-for="item in floatData"
+              :key="item.link"
+              :href="item.link"
+              target="_blank"
+              class="popup-item"
+            >
               <OIcon><component :is="item.img"></component> </OIcon>
 
               <div class="text">
                 <p class="text-name">
-                  <a :href="item.link" target="_blank">{{ item.text }}</a>
+                  {{ item.text }}
                 </p>
 
                 <p v-if="item.tip" class="text-tip">{{ item.tip }}</p>
               </div>
-            </div>
+            </OLink>
           </OPopup>
         </div>
       </div>
 
       <div
         class="nav-box2"
-        :class="isDark ? 'dark-nav' : ''"
+        :class="[
+          isDark ? 'dark-nav' : '',
+          showBackTop ? 'show-scroll-top' : '',
+        ]"
         @click="handleClickTop"
       >
         <OIcon class="icon-top"><component :is="IconTop"></component> </OIcon>
@@ -693,6 +726,10 @@ watch(
           border: none;
           padding: 0;
           color: var(--o-color-info1);
+
+          @include hover {
+            color: var(--o-color-primary1);
+          }
         }
       }
 
@@ -741,11 +778,13 @@ watch(
 
           @include hover {
             transform: rotate(180deg);
+            color: var(--o-color-primary1);
           }
         }
       }
 
       .popup-item {
+        width: 100%;
         .o-icon {
           font-size: var(--o-font_size-h1);
           color: var(--o-color-info1);
@@ -928,13 +967,12 @@ watch(
               padding: 6px 26px;
               font-size: var(--o-font_size-tip1);
               border-radius: var(--o-radius-l);
-              border-color: var(--o-color-control3);
-              color: var(--o-color-info1);
+              border-color: var(--o-color-primary1);
+              color: var(--o-color-primary1);
 
               @include hover {
-                border-color: var(--o-color-primary1);
-                background-color: var(--o-color-primary1);
-                color: var(--o-color-white);
+                border-color: var(--o-color-primary2);
+                color: var(--o-color-primary2);
               }
             }
           }
@@ -945,6 +983,7 @@ watch(
     .nav-box2 {
       margin-top: 12px;
       cursor: pointer;
+      opacity: 0;
 
       .icon-top {
         color: var(--o-color-info1);
@@ -955,13 +994,17 @@ watch(
         }
       }
     }
+
+    .show-scroll-top {
+      opacity: 1;
+    }
   }
 }
 
 .feedback-mb {
   position: sticky;
   bottom: 16px;
-  z-index: 9;
+  z-index: 11;
   width: 100%;
   padding: 0 16px;
   margin-bottom: 16px;
@@ -1266,9 +1309,18 @@ watch(
     --popup-min-width: 220px;
 
     .popup-item {
-      display: flex;
-      align-items: flex-start;
-      color: var(--o-color-info1);
+      .o-link-label {
+        display: flex;
+        align-items: flex-start;
+        color: var(--o-color-info1);
+        cursor: pointer;
+      }
+
+      @include hover {
+        & .text .text-name {
+          color: var(--o-color-primary1);
+        }
+      }
 
       & ~ .popup-item {
         margin-top: 12px;
