@@ -1,9 +1,17 @@
 <script setup lang="ts">
-import { computed, ref, CSSProperties, watch, onMounted, Ref } from 'vue';
+import {
+  computed,
+  ref,
+  CSSProperties,
+  watch,
+  onMounted,
+  Ref,
+  onUnmounted,
+} from 'vue';
 import { useRouter, useData } from 'vitepress';
 import { useThrottleFn } from '@vueuse/core';
 
-import { OIcon, ODivider, OPopup } from '@opensig/opendesign';
+import { OIcon, ODivider, OPopup, OLink } from '@opensig/opendesign';
 import { ElMessage } from 'element-plus';
 
 import IconTop from '~icons/footer/icon-top.svg';
@@ -459,8 +467,25 @@ const handleFeedbackShow = () => {
   }
 };
 
+// 页面滚动大于一屏时，显示回到顶部悬浮按钮
+const showBackTop = ref(false);
+
+const listenScroll = () => {
+  if (window.pageYOffset > window.innerHeight) {
+    showBackTop.value = true;
+  } else {
+    showBackTop.value = false;
+  }
+};
+
 onMounted(() => {
+  window.addEventListener('scroll', listenScroll);
+
   handleFeedbackShow();
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', listenScroll);
 });
 
 watch(
@@ -478,9 +503,9 @@ watch(
         <h4 class="tip-title">{{ infoData.feedbackTitle }}</h4>
         <div class="tip-detail">{{ infoData.welcome }}</div>
         <div class="btn-box">
-          <OButton size="mini" @click="closeFloatTip">{{
-            infoData.know
-          }}</OButton>
+          <OButton size="mini" class="feedback-tip-btn" @click="closeFloatTip">
+            {{ infoData.know }}
+          </OButton>
         </div>
       </div>
 
@@ -596,24 +621,33 @@ watch(
             :offset="24"
             trigger="hover"
           >
-            <div v-for="item in floatData" :key="item.link" class="popup-item">
+            <OLink
+              v-for="item in floatData"
+              :key="item.link"
+              :href="item.link"
+              target="_blank"
+              class="popup-item"
+            >
               <OIcon><component :is="item.img"></component> </OIcon>
 
               <div class="text">
                 <p class="text-name">
-                  <a :href="item.link" target="_blank">{{ item.text }}</a>
+                  {{ item.text }}
                 </p>
 
                 <p v-if="item.tip" class="text-tip">{{ item.tip }}</p>
               </div>
-            </div>
+            </OLink>
           </OPopup>
         </div>
       </div>
 
       <div
         class="nav-box2"
-        :class="isDark ? 'dark-nav' : ''"
+        :class="[
+          isDark ? 'dark-nav' : '',
+          showBackTop ? 'show-scroll-top' : '',
+        ]"
         @click="handleClickTop"
       >
         <OIcon class="icon-top"><component :is="IconTop"></component> </OIcon>
@@ -693,16 +727,16 @@ watch(
               </p>
             </div>
             <p class="more-info">
-              {{ infoData.more1
-              }}<a :href="infoData.more2Link" target="_blank"
+              {{ infoData.more1 }}
+              <a :href="infoData.more2Link" target="_blank"
                 >{{ infoData.more2 }}
               </a>
             </p>
           </div>
           <div class="btn-box">
-            <OButton type="outline" size="middle" @click="cancelDialog">{{
-              infoData.cancel
-            }}</OButton>
+            <OButton type="outline" size="middle" @click="cancelDialog">
+              {{ infoData.cancel }}
+            </OButton>
             <OButton
               type="outline"
               size="middle"
@@ -776,6 +810,10 @@ watch(
           border: none;
           padding: 0;
           color: var(--o-color-info1);
+
+          @include hover {
+            color: var(--o-color-primary1);
+          }
         }
       }
       &::after {
@@ -820,10 +858,11 @@ watch(
 
         .icon-cancel {
           @include h4;
-          transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+          transition: all var(--o-duration-m1) var(--o-easing-standard-in);
 
           @include hover {
             transform: rotate(180deg);
+            color: var(--o-color-primary1);
           }
         }
       }
@@ -1025,13 +1064,12 @@ watch(
               padding: 6px 26px;
               font-size: var(--o-font_size-tip1);
               border-radius: var(--o-radius-l);
-              border-color: var(--o-color-control3);
-              color: var(--o-color-info1);
+              border-color: var(--o-color-primary1);
+              color: var(--o-color-primary1);
 
               @include hover {
-                border-color: var(--o-color-primary1);
-                background-color: var(--o-color-primary1);
-                color: var(--o-color-white);
+                border-color: var(--o-color-primary2);
+                color: var(--o-color-primary2);
               }
             }
           }
@@ -1042,6 +1080,7 @@ watch(
     .nav-box2 {
       margin-top: 12px;
       cursor: pointer;
+      opacity: 0;
 
       .icon-top {
         color: var(--o-color-info1);
@@ -1052,13 +1091,17 @@ watch(
         }
       }
     }
+
+    .show-scroll-top {
+      opacity: 1;
+    }
   }
 }
 
 .feedback-mb {
   position: sticky;
   bottom: 16px;
-  z-index: 9;
+  z-index: 11;
   width: 100%;
   padding: 0 16px;
   margin-bottom: 16px;
@@ -1371,11 +1414,23 @@ watch(
     box-shadow: var(--o-shadow-2);
     --popup-min-width: 220px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     .popup-item {
-      display: flex;
-      align-items: flex-start;
-      color: var(--o-color-info1);
+      width: 100%;
+      .o-link-label {
+        display: flex;
+        align-items: flex-start;
+        color: var(--o-color-info1);
+        cursor: pointer;
+      }
+
+      @include hover {
+        & .text .text-name {
+          color: var(--o-color-primary1);
+        }
+      }
 
       & ~ .popup-item {
         margin-top: 12px;
@@ -1392,9 +1447,6 @@ watch(
           font-weight: 600;
           a {
             color: var(--o-color-info1);
-            @include hover {
-              color: var(--o-color-primary1);
-            }
           }
         }
         .text-tip {
