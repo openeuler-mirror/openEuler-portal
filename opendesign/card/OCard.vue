@@ -5,14 +5,14 @@ const attrs = useAttrs();
 </script>
 
 <template>
-  <ElCard class="o-card" v-bind="attrs">
+  <ElCard class="e-card" v-bind="attrs">
     <slot name="header"></slot>
     <slot></slot>
   </ElCard>
 </template>
 
 <style lang="scss">
-.o-card {
+.e-card {
   --e-card-font-color: var(--e-color-text1);
   --e-card-bg-color: var(--e-color-fill2);
   --e-card-division-color: var(--e-color-division1);

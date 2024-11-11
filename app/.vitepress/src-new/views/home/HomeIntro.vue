@@ -149,6 +149,9 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
           @include respond-to('laptop') {
             margin-bottom: 56px;
           }
+          @media screen and (max-width: 1200px) {
+            margin-bottom: 40px;
+          }
           @media screen and (max-width: 1000px) {
             margin-bottom: 16px;
           }
@@ -164,6 +167,9 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
             transform: translate(-50%, 50%);
             @include respond-to('laptop') {
               bottom: -28px;
+            }
+            @media screen and (max-width: 1200px) {
+              bottom: -20px;
             }
             @media screen and (max-width: 1000px) {
               bottom: -18px;
@@ -198,16 +204,12 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
           }
         }
       }
-      @include respond-to('<=laptop') {
-      }
-      @include respond-to('laptop') {
-      }
       @include respond-to('pad_h') {
-        margin-right: 16px;
+        margin-right: 32px;
       }
       @media screen and (max-width: 1000px) {
         padding: 0;
-        margin-right: 16px;
+        margin-right: 32px;
       }
     }
 
