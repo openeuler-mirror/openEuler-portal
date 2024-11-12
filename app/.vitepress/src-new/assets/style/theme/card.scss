@@ -6,6 +6,17 @@
 
   --card-title-word-break: normal;
   --card-detail-word-break: normal;
+
+  // svg图标滑过变色
+  .path-fill {
+    fill: var(--o-color-info1);
+    transition: all var (--o-easing-standard) var(--o-duration-m2);
+  }
+  &:hover {
+    .path-fill {
+      fill: var(--o-color-primary1);
+    }
+  }
 }
 
 .o-card-cover-h,
