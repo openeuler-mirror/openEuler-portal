@@ -10,7 +10,7 @@ title: 'Intel<sup>®</sup> Platform Advanced Technology Validation Specification
 
 The Intel Advanced Technology Evaluation adopts the existing openEuler compatibility testing framework and introduces a test suite specific to Intel platforms.
 <!-- // TODO:是否需要 -->
-![测评流程](./openEuler-technology-evaluation-process.png)
+![测评流程](./openEuler-technology-evaluation-process.jpg)
 
 ### 2 Checklist
 

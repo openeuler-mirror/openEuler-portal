@@ -12,7 +12,7 @@ title: '英特尔®平台先进技术评测规范'
 
 对于合格的申请者，英特尔将发放英特尔<sup>®</sup>平台先进技术验证函("验证函")。
 
-![测评流程](./openEuler-technology-evaluation-process.png)
+![测评流程](./openEuler-technology-evaluation-process.jpg)
 
 ### 2、检查清单
 
@@ -27,11 +27,11 @@ title: '英特尔®平台先进技术评测规范'
 
 ##### 2.2 固件版本
 
-确保固件已更新到最新版本。
+确保固件（BIOS）已更新到最新版本。
 
 ##### 2.3 操作系统
 
-当前支持的openEuler版本：openEuler 24.03 LTS
+当前支持的openEuler版本：openEuler 24.03 LTS，包含了Sapphire Rapids、Emerald Rapids、Sierra Forest、Granite Rapids的全特性的支持
 
 说明：目前openEuler 22.03 LTS SP4包含了Sapphire Rapids和Emerald Rapids的全特性的支持，Sierra Forest和Granite Rapids仅包含选择性特性的支持。
 
@@ -55,7 +55,7 @@ title: '英特尔®平台先进技术评测规范'
 | User-Mode Instruction Prevention (UMIP)     | umip: tests-umip             |
 | XSAVE                                       | xsave: tests-xsave           |
 
-说明：测试用例根据平台特性的差异会有所不同，并且测试用例会也会根据特性在openEuler系统的集成而更新或增加。英特尔技术可能需要启用的硬件、软件或服务激活，详见[法律声明与免责声明© Intel Corporation](https://edc.intel.com/content/www/us/en/products/performance/benchmarks/overview/) 
+说明：测试用例根据平台特性的差异会有所不同，并且测试用例会也会根据特性在openEuler系统的集成而更新或增加，测试用例支持CPU版本有所差异，可根据实际情况选择跳过。英特尔技术可能需要启用的硬件、软件或服务激活，详见[法律声明与免责声明© Intel Corporation](https://edc.intel.com/content/www/us/en/products/performance/benchmarks/overview/) 
 ### 4、联系方式
 
 评测申请邮箱：[intel-openeuler-certification@intel.com](mailto:intel-openeuler-certification@intel.com)
