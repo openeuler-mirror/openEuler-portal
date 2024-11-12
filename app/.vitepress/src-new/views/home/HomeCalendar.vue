@@ -770,7 +770,6 @@ const watchData = watch(
         align-items: flex-end;
         height: 60px;
         border-bottom: 1px solid var(--o-color-control4);
-        margin-bottom: 0;
         @include respond-to('<=pad_v') {
           height: auto;
           .o-icon {

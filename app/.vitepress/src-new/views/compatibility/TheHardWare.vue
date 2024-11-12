@@ -24,7 +24,7 @@ const i18n = useI18n();
     </OBreadcrumb>
   </ContentWrapper>
 </template>
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .o-tab {
   margin-bottom: 40px;
 }
