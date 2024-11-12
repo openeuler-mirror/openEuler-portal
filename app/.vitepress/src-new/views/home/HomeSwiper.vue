@@ -6,12 +6,6 @@ import { storeToRefs } from 'pinia';
 import { useCommon } from '@/stores/common';
 import { useLocale } from '~@/composables/useLocale';
 
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Autoplay } from 'swiper/modules';
-
-import 'swiper/css';
-import 'swiper/css/autoplay';
-
 export interface PublisherT {
   logo: {
     [key: string]: string;
@@ -40,64 +34,77 @@ const { isEn } = useLocale();
 </script>
 
 <template>
-  <Swiper
-    :modules="[Autoplay]"
-    slides-per-view="auto"
-    :space-between="0"
-    :autoplay="{
-      delay: 0,
-      disableOnInteraction: false,
-      reverseDirection: reverseDirection,
-      pauseOnMouseEnter: true,
-    }"
-    :noSwiping="true"
-    :free-mode="true"
-    :speed="8000"
-    :loop="true"
-  >
-    <SwiperSlide v-for="(item, i) in data" :key="i">
-      <slot :item="item">
+  <div v-if="data.length > 0" class="swiper">
+    <div class="swiper-list" :class="{ 'swiper-reverse': reverseDirection }">
+      <div v-for="(item, i) in data" :key="i" class="swiper-item">
         <OLink
           :href="isEn ? (item.href_en ? item.href_en : item.href) : item.href"
           target="_blank"
         >
-          <div class="box">
+          <div class="swiper-card">
             <OFigure :src="item.logo[theme]" />
           </div>
         </OLink>
-      </slot>
-    </SwiperSlide>
-  </Swiper>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-.box {
+.swiper {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+.swiper-list {
+  display: flex;
+  animation: marque 100s linear infinite;
+  @include respond-to('>phone') {
+    @include hover {
+      animation-play-state: paused;
+    }
+  }
+}
+.swiper-reverse {
+  animation: marquere 100s linear infinite;
+}
+
+.swiper-card {
   width: 269px;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
   margin-right: 24px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  pointer-events: auto;
 }
 .o-figure {
   width: 100%;
   border-radius: var(--o-radius-xs);
 }
-:deep(.swiper-wrapper) {
-  -webkit-transition-timing-function: linear;
-  -moz-transition-timing-function: linear;
-  -ms-transition-timing-function: linear;
-  -o-transition-timing-function: linear;
-  transition-timing-function: linear;
+
+@keyframes marque {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-:deep(.swiper-slide) {
-  width: auto;
-  height: auto;
+@keyframes marquere {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @include respond-to('phone') {
-  .box {
+  .swiper-card {
     width: 160px;
     margin-right: 12px;
   }
