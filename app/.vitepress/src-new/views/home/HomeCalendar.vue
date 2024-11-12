@@ -627,10 +627,14 @@ const watchData = watch(
               flex-shrink: 0;
               position: relative;
               border-radius: 50%;
-              height: fit-content;
-              padding: 1px;
-              margin-left: -4px;
+              padding: 2px;
+              width: 20px;
+              height: 20px;
+              font-size: 20px;
+              margin-left: -6px;
               @include respond-to('<=pad_v') {
+                height: 6px;
+                width: 6px;
                 margin-left: -2px;
               }
               &:first-child {
@@ -778,9 +782,7 @@ const watchData = watch(
         }
       }
       $icon-size: 24px;
-      @include respond-to('<=pad_v') {
-        $icon-size: 20px;
-      }
+
       .meet-title {
         display: flex;
         align-items: center;
@@ -788,13 +790,19 @@ const watchData = watch(
         @include text2;
         .o-icon {
           flex-shrink: 0;
-          padding: 1px;
+          padding: 2px;
           border-radius: 50%;
           overflow: hidden;
           color: var(--o-color-white);
           margin-right: 12px;
-          width: $icon-size;
-          height: $icon-size;
+          width: 24px;
+          height: 24px;
+          font-size: 24px;
+          @include respond-to('<=pad_v') {
+            font-size: 20px;
+            width: 20px;
+            height: 20px;
+          }
         }
         .text {
           @include text-truncate(1);
@@ -815,6 +823,7 @@ const watchData = watch(
         }
       }
       .o-link {
+        font-weight: 300;
         font-size: var(--o-font_size-tip1);
         line-height: var(--o-line_height-tip1);
         margin-left: calc($icon-size + 12px);

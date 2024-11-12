@@ -89,13 +89,14 @@ onMounted(() => {
 }
 .home {
   overflow: hidden;
+  background-color: var(--o-color-fill1);
 
   background-image: linear-gradient(
     180deg,
     #f3f3f5 0%,
     #dae1f2 40%,
     #ebeffc 79%,
-    #f5f6f8 100%
+    rgb(243, 243, 245) 100%
   );
   background-position: 0 480px;
   background-size: 100% 60%;
@@ -108,7 +109,7 @@ onMounted(() => {
       #1a1a1c 0%,
       #0c0f1c 35%,
       #141b2e 52%,
-      rgba(26, 26, 28, 0.04) 88%
+      rgba(26, 26, 28, 0.04) 100%
     );
   }
 }
