@@ -219,7 +219,7 @@ $color: #fff;
     }
   }
   overflow: hidden;
-  background: rgba(18, 18, 18);
+  background: #121214;
   :deep(.app-content) {
     padding-bottom: 0;
   }
@@ -478,16 +478,16 @@ $color: #fff;
       .links-logo {
         display: flex;
         align-items: center;
-        height: 38px;
-        padding: 0 20px;
+        height: 26px;
+        padding: 0 14px;
         background-color: #2b2b2f;
         border-radius: var(--o-radius-xs);
         @include respond-to('pad_h') {
-          height: 30px;
+          height: 26px;
           padding: 0 8px;
         }
         @include respond-to('<=pad_v') {
-          height: 30px;
+          height: 26px;
           padding: 0 8px;
         }
         .logo {

@@ -81,7 +81,7 @@ export const linksData = {
         hover: LogoLinkedinHover,
       },
       id: 'linkedin',
-      height: 24,
+      height: 16,
     },
     {
       path: 'https://x.com/openEuler',
@@ -90,7 +90,7 @@ export const linksData = {
         hover: LogoTwitterHover,
       },
       id: 'twitter',
-      height: 24,
+      height: 16,
     },
     {
       path: 'https://www.youtube.com/channel/UCPzSqXqCgmJmdIicbY7GAeA',
@@ -99,7 +99,7 @@ export const linksData = {
         hover: LogoYoutubeHover,
       },
       id: 'youtube',
-      height: 18,
+      height: 12,
     },
     {
       path: 'https://www.reddit.com/r/openEuler/',
@@ -108,7 +108,7 @@ export const linksData = {
         hover: LogoRedditSquareHover,
       },
       id: 'reddit-square',
-      height: 24,
+      height: 16,
     },
   ],
 };
@@ -406,7 +406,7 @@ export const friendshipLinks = {
       title: '鲲鹏小智',
     },
     {
-      link: 'https://dw.pcl.ac.cn/',
+      link: 'https://pcl.ac.cn/',
       title: '鹏城实验室',
     },
     {
@@ -431,7 +431,7 @@ export const friendshipLinks = {
     },
     {
       link: 'https://www.mindspore.cn/',
-      title: '昇思mindSpore',
+      title: '昇思MindSpore',
     },
     {
       link: 'http://www.ebaina.com/',
@@ -453,7 +453,7 @@ export const friendshipLinks = {
     },
     {
       link: 'https://www.mindspore.cn/',
-      title: 'mindSpore',
+      title: 'MindSpore',
     },
     {
       link: 'http://www.ebaina.com/',
