@@ -264,10 +264,6 @@ const closeSearch = () => {
 
   &.close {
     @include x-svg-hover;
-
-    @include hover {
-      color: var(--o-color-primary2);
-    }
   }
 }
 
