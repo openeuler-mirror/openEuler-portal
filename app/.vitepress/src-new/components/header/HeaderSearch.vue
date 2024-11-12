@@ -12,7 +12,7 @@ import { getSearchRecommend } from '@/api/api-search';
 import useClickOutside from '@/components/hooks/useClickOutside';
 import { useScreen } from '~@/composables/useScreen';
 
-import IconCancel from '~icons/app/icon-cancel.svg';
+import IconClose from '~icons/app-new/icon-close.svg';
 import IconSearch from '~icons/app-new/icon-header-search.svg';
 import IconDelete from '~icons/app-new/icon-header-delete.svg';
 import IconDeleteAll from '~icons/app-new/icon-delete.svg';
@@ -150,22 +150,22 @@ const closeSearch = () => {
   commonStore.iconMenuShow = true;
   isShowDrawer.value = false;
   emits('search-click', isShowBox.value);
-}
+};
 </script>
 <template>
   <div class="search-wrapper">
-    <div :class="{ 'search': !lePadV, 'focus': isShowDrawer && !lePadV }">
-      <div
-        ref="searchRef"
-        class="header-search"
-      >
-
+    <div :class="{ search: !lePadV, focus: isShowDrawer && !lePadV }">
+      <div ref="searchRef" class="header-search">
         <div :class="{ 'input-focus': isShowDrawer }">
-          <OIcon v-if="lePadV && isShowDrawer" @click.stop="closeSearch"><IconBack></IconBack></OIcon>
+          <OIcon v-if="lePadV && isShowDrawer" @click.stop="closeSearch"
+            ><IconBack></IconBack
+          ></OIcon>
           <OInput
             v-model="searchInput"
             :placeholder="
-              isShowDrawer ? searchValue.PLEACHOLDER_EXTEND : searchValue.PLEACHOLDER
+              isShowDrawer
+                ? searchValue.PLEACHOLDER_EXTEND
+                : searchValue.PLEACHOLDER
             "
             @keyup.enter="handleSearchEvent"
             @focus="showDrawer"
@@ -175,12 +175,24 @@ const closeSearch = () => {
             <template #prefix>
               <OIcon class="icon"><IconSearch></IconSearch></OIcon>
             </template>
-            <template v-if="(!lePadV && isShowDrawer) || ( lePadV && searchInput )" #suffix>
-              <OIcon class="close icon" @click="closeSearchBox"><IconCancel /></OIcon>
+            <template
+              v-if="(!lePadV && isShowDrawer) || (lePadV && searchInput)"
+              #suffix
+            >
+              <OIcon class="close icon" @click="closeSearchBox"
+                ><IconClose
+              /></OIcon>
             </template>
           </OInput>
-          <OIcon class="only-icon" :class="lang" @click="showDrawer"><IconSearch></IconSearch></OIcon>
-          <span v-if="lePadV && isShowDrawer" class="search-text" @click="handleSearchEvent">{{ searchValue.TEXT }}</span>
+          <OIcon class="only-icon" :class="lang" @click="showDrawer"
+            ><IconSearch></IconSearch
+          ></OIcon>
+          <span
+            v-if="lePadV && isShowDrawer"
+            class="search-text"
+            @click="handleSearchEvent"
+            >{{ searchValue.TEXT }}</span
+          >
         </div>
 
         <div v-show="isShowDrawer" class="drawer">
@@ -208,12 +220,14 @@ const closeSearch = () => {
               <div
                 v-for="item in searchHistory"
                 class="history-item"
-                :class="{ 'dark': isDark  }"
+                :class="{ dark: isDark }"
                 @click="onTopSearchItemClick(item)"
                 :key="item"
               >
                 <span class="history-text">{{ item }}</span>
-                <OIcon class="icon-container" @click.stop="deleteHistory(item)"><IconDelete class="icon"></IconDelete></OIcon>
+                <OIcon class="icon-container" @click.stop="deleteHistory(item)"
+                  ><IconDelete class="icon"></IconDelete
+                ></OIcon>
               </div>
             </div>
             <div class="split-line"></div>
@@ -235,7 +249,6 @@ const closeSearch = () => {
             </div>
           </div>
         </div>
-
       </div>
       <OIcon @click="showDrawer" class="icon search-icon"
         ><IconSearch></IconSearch
@@ -248,6 +261,14 @@ const closeSearch = () => {
   cursor: pointer;
   @include h4;
   color: var(--o-color-info1);
+
+  &.close {
+    @include x-svg-hover;
+
+    @include hover {
+      color: var(--o-color-primary2);
+    }
+  }
 }
 
 .search-icon {
@@ -294,7 +315,7 @@ const closeSearch = () => {
     right: 16px;
     top: 10px;
   }
-  
+
   .input-focus {
     padding: var(--o-gap-4);
     border-radius: 4px 4px 0 0;
@@ -360,7 +381,7 @@ const closeSearch = () => {
       padding: var(--o-gap-4);
       border-radius: unset;
       top: 32px;
-    } 
+    }
 
     .hots {
       .hots-title {
@@ -383,7 +404,7 @@ const closeSearch = () => {
           color: var(--o-color-info1);
           cursor: pointer;
           @include hover {
-            color: var( --o-color-primary1);
+            color: var(--o-color-primary1);
           }
         }
 
@@ -468,7 +489,7 @@ const closeSearch = () => {
           top: -8px;
         }
       }
-      
+
       .icon {
         height: 16px;
         width: 16px;
@@ -522,7 +543,7 @@ const closeSearch = () => {
 
     cursor: pointer;
     @include hover {
-      color: var( --o-color-primary1);
+      color: var(--o-color-primary1);
     }
 
     @include respond-to('<=pad_v') {
