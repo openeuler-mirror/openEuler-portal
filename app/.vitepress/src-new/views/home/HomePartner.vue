@@ -27,7 +27,6 @@ const publisher3 = [...publisher.slice(16), ...publisher.slice(16)];
 
 <style lang="scss" scoped>
 .home-partner {
-  max-width: 1920px;
   margin: 0 auto;
 }
 .partner-swiper {
