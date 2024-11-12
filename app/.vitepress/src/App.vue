@@ -3,8 +3,8 @@ import { useData } from 'vitepress';
 import type { Component } from 'vue';
 import { computed, onMounted, watch } from 'vue';
 
-import zhCn from 'element-plus/lib/locale/lang/zh-cn';
-import en from 'element-plus/lib/locale/lang/en';
+import zhCn from 'element-plus/es/locale/lang/zh-cn';
+import en from 'element-plus/es/locale/lang/en';
 
 import AppHeader from '~@/components/header/AppHeader.vue';
 // import AppHeader from '@/components/AppHeader.vue';
@@ -25,6 +25,8 @@ import LayouWhitePaper from '@/layouts/LayouWhitePaper.vue';
 import FloatingButton from '~@/components/FloatingButton.vue';
 import FloatingButtonEn from '~@/components/FloatingButtonEn.vue';
 import CookieNotice from '~@/components/CookieNotice.vue';
+
+import AppTour from '~@/components/AppTour.vue';
 
 import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
@@ -96,12 +98,13 @@ onMounted(() => {
     <main :class="frontmatter.class ? frontmatter.class : ''">
       <component :is="comp" v-if="isCustomLayout"></component>
       <Content v-else />
-      <FloatingButton v-if="lang === 'zh'" />
+      <FloatingButton id="tour_feedback" v-if="lang === 'zh'" />
       <FloatingButtonEn v-else />
     </main>
   </el-config-provider>
   <CookieNotice />
   <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
+  <AppTour />
 </template>
 
 <style lang="scss" scoped>
