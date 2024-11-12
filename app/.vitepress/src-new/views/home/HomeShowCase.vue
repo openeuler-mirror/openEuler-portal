@@ -93,6 +93,29 @@ const clearCaseInterval = () => {
 // -------------------- 点击切换tab --------------------
 const changeTab = (val: number) => {
   activeTab.value = val;
+
+  // 移动端最后一个tab看不见，需要选中的时候tab自动滑动
+  const tabWidth = tabs.value.offsetWidth;
+  const indexWidth = tabs.value?.children[activeTab.value].offsetWidth;
+  const indexLeft = tabs.value?.children[activeTab.value].offsetLeft;
+  if (tabWidth + 48 > size.width) {
+    const scrollTab = document.querySelector(
+      '#scrollTab > .o-scroller-container'
+    );
+    if (indexLeft * 2 > tabWidth) {
+      scrollTab?.scrollTo({
+        left: scrollTab?.scrollLeft + indexWidth,
+        behavior: 'instant',
+      });
+    }
+    if (indexLeft * 2 + indexWidth < tabWidth) {
+      scrollTab?.scrollTo({
+        left: scrollTab?.scrollLeft - indexWidth,
+        behavior: 'instant',
+      });
+    }
+  }
+
   init();
 };
 
@@ -132,7 +155,7 @@ onUnmounted(() => {
     "
   >
     <div ref="userCase">
-      <OScroller show-type="never">
+      <OScroller id="scrollTab" show-type="never">
         <div class="tab">
           <ul class="tab-list" ref="tabs">
             <li
