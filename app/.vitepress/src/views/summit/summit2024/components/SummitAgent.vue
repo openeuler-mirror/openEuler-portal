@@ -255,17 +255,17 @@ watch(
               big.smallClass?.length && big.smallClass[0].title !== 'default'
             "
             v-model="big.activeBigSmallId"
+            :key="`tabs-${big.id}`"
           >
             <el-tab-pane
               v-for="small of big.smallClass"
-              :key="small.id"
+              :key="`tab-pane-${big.id}-${small.id}`"
               :name="small.id"
             >
               <template #label>
                 <div
                   class="time-tabs"
                   v-if="small.title !== 'default'"
-                  :key="small.title"
                   :class="{ activeSmall: small.isActive }"
                   @click="clickBigSmall(big, small)"
                 >
