@@ -281,6 +281,10 @@ const linkClick = () => {
       @include text1;
       transition: all var(--o-duration-s) var(--o-easing-standard);
 
+      @include hover {
+        z-index: 99;
+      }
+
       &::after {
         content: '';
         position: absolute;
