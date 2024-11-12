@@ -35,6 +35,7 @@ const jumpToMsgCenter = () => {
             <IconLogin />
           </OIcon>
         </div>
+        <p class="opt-name">{{ guardAuthClient.username }}</p>
       </div>
 
       <template #dropdown>
@@ -66,7 +67,8 @@ const jumpToMsgCenter = () => {
     align-items: center;
     height: 100%;
     .user-img {
-      font-size: var(--o-icon_size-l);
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       cursor: pointer;
       vertical-align: middle;
@@ -76,6 +78,18 @@ const jumpToMsgCenter = () => {
       }
     }
   }
+
+  .opt-name {
+      color: var(--o-color-info1);
+      margin-left: 8px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 72px;
+      @include respond-to('<=pad_v') {
+        display: none;
+      }
+    }
 }
 .login {
   .icon {
