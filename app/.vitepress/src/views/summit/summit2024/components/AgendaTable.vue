@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { PropType, computed } from 'vue';
 import { StoreDataT, TableDataT } from '../@type/agenda';
-import { getPersonTitle } from '../utils';
+
+import IconTime from '~icons/app/icon-time.svg';
 
 const props = defineProps({
   datas: {
@@ -16,7 +17,6 @@ const props = defineProps({
 
 const tableData = computed<TableDataT[]>(() => {
   if (!Array.isArray(props.datas)) {
-    console.log('props.datas2', props.datas);
     return [];
   }
   const item = props?.datas?.find((item: StoreDataT) => item.id === props.id);
@@ -30,17 +30,20 @@ const tableData = computed<TableDataT[]>(() => {
 <template>
   <div v-if="tableData?.length" class="event-table">
     <div v-for="item of tableData" :key="item.id" class="table-row">
-      <div class="time">{{ item.time }}</div>
-      <div class="event">{{ item.event }}</div>
-      <div class="guest-info">
+      <div class="time">
+        <IconTime v-show="item.time" />
+        {{ item.time }}
+      </div>
+      <div class="desc">
+        <span v-for="subItem in item.event?.split('\n')" :key="subItem">
+          {{ subItem }}
+        </span>
+      </div>
+      <div class="name-box">
         <div v-for="guest of item.guestData" :key="guest.id" class="guest">
-          <div class="guest-name">{{ guest.name }}</div>
-          <div
-            class="guest-title"
-            v-for="title of getPersonTitle(guest.title)"
-            :key="title"
-          >
-            {{ title }}
+          <div class="name">{{ guest.name }}</div>
+          <div class="post">
+            {{ guest.title }}
           </div>
         </div>
       </div>
@@ -50,37 +53,127 @@ const tableData = computed<TableDataT[]>(() => {
 
 <style scoped lang="scss">
 .event-table {
-  background-color: #fff;
-  box-shadow: 0 1px 5px 0 rgba(45, 47, 51, 0.1);
-  padding: 0 20px 10px;
+  width: 100%;
+  padding: 24px;
+  background-color: var(--e-color-bg2);
+  text-align: left;
+  @media screen and (max-width: 1100px) {
+    position: relative;
+  }
+  @media (max-width: 1100px) {
+    padding: 16px;
+  }
   .table-row {
-    display: flex;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    min-height: 60px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 192px 580px 480px;
+    padding: 20px 0px;
+    transition: all 0.25s ease;
     align-items: center;
-    text-align: left;
-    &:last-child {
-      border-bottom: none;
+    min-height: 64px;
+    position: relative;
+    & + .table-row {
+      border-top: 1px solid var(--e-color-border2);
+    }
+    @media screen and (max-width: 1328px) {
+      grid-template-columns: 192px 450px 400px;
+    }
+    @media screen and (max-width: 1100px) {
+      grid-template-columns: 80px auto;
+      padding: 6px 0;
+      min-height: 36px;
+      position: static;
+    }
+    .name-box {
+      @media screen and (max-width: 1100px) {
+        grid-column-end: 3;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 1100px) {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          display: block;
+        }
+      }
+    }
+    .desc {
+      font-size: 18px;
+      line-height: 30px;
+      color: var(--e-color-text1);
+      display: block;
+      margin-right: 36px;
+      cursor: default;
+      word-wrap: break-word;
+      > span {
+        display: block;
+        & ~ span {
+          margin-top: var(--e-spacing-h6);
+        }
+      }
+      @media (max-width: 1100px) {
+        margin-right: 0;
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    .name {
+      width: 200px;
+      display: inline-block;
+      color: var(--e-color-text3);
+      font-size: 16px;
+      line-height: var(--e-line-height-h8);
+      @media (max-width: 1100px) {
+        font-size: 12px;
+        line-height: 18px;
+        width: auto;
+      }
+    }
+    .post {
+      width: 100%;
+      display: inline-block;
+      color: var(--e-color-text3);
+      font-size: 16px;
+      line-height: 24px;
+      flex: 1;
+      @media (max-width: 1100px) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+    .post-more {
+      width: 345px;
+      @media screen and (max-width: 1100px) {
+        width: 100%;
+      }
     }
     .time {
-      flex: 1;
+      width: 192px;
+      font-size: 18px;
+      line-height: 26px;
+      color: var(--e-color-text3);
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 1100px) {
+        font-size: 12px;
+        line-height: 18px;
+        width: 80px;
+      }
+      svg {
+        width: 18px;
+        height: 18px;
+        color: var(--e-color-text3);
+        margin-right: 6px;
+        @media screen and (max-width: 1100px) {
+          display: none;
+        }
+      }
     }
-    .event {
-      flex: 2.5;
-    }
-    .guest-info {
-      flex: 2.5;
-      .guest {
-        display: flex;
-        color: #707070;
-      }
-      .guest-name {
-        min-width: 160px;
-      }
-      .guest-title {
-        flex: 1;
-      }
+    .info .desc {
+      width: 460px;
+      margin-right: 40px;
+      display: inline-block;
     }
   }
 }

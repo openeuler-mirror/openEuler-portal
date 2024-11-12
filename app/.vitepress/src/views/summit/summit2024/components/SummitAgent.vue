@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { watch, PropType, ref } from 'vue';
-import PreviewSubtitle from './PreviewSubtitle.vue';
 import AgendaTable from './AgendaTable.vue';
 import {
   AgendaInfoT,
@@ -19,7 +18,6 @@ const props = defineProps({
 // -------------------------------------   date 的交互    -------------------------------
 const dateList = ref<DateDataT[]>(props.data.agenda);
 const doActiveDate = (date: DateDataT | undefined = undefined) => {
-  console.log('in doactivedate');
   let item = {} as DateDataT;
   // 参数为空
   if (!date) {
@@ -67,7 +65,6 @@ const doActiveDate = (date: DateDataT | undefined = undefined) => {
 const activeSpan = ref<SpanDataT>();
 const spanList = ref<SpanDataT[]>();
 const doActiveSpan = (span: SpanDataT | undefined = undefined) => {
-  // console.log('in doactivespan');
   let item = {} as SpanDataT;
   if (!span) {
     // 没有数据，初始化数据 返回
@@ -120,30 +117,25 @@ const doActiveSpan = (span: SpanDataT | undefined = undefined) => {
 // -------------------------------------   big 的交互   -----------------------------------
 const bigList = ref<BigClassT[]>();
 const activeBigSmall = ref<SmallClassT>();
+// 默认激活第一项
 const doActiveBig = () => {
-  // console.log('in doactivebig');
   if (bigList.value?.length) {
     // 大类别是并排显示，把每个大类别下小类别一项激活
     bigList.value.forEach((one) => {
       if (one.smallClass?.length) {
-        const item = one.smallClass?.find((item) => {
-          return item.isActive;
+        one.smallClass.forEach((item) => {
+          item.isActive = false;
         });
-        if (!item) {
-          one.smallClass[0].isActive = true;
-          one.activeBigSmallId = one.smallClass[0].id;
-        } else {
-          one.activeBigSmallId = item.id;
-        }
+        one.smallClass[0].isActive = true;
+        one.activeBigSmallId = one.smallClass[0].id;
       }
     });
   }
-  // console.log('after doactivebig');
 };
 // span下有大类别，大类别下有小类别，激活大类别下的小列表，
+// -------------------------- tab 高亮 ------------------
 const clickBigSmall = (big: BigClassT, small: SmallClassT) => {
   activeBigSmall.value = small;
-  // console.log('in clickBigSmall');
   big.smallClass?.forEach((one) => {
     one.isActive = false;
   });
@@ -160,29 +152,23 @@ const clickBigSmall = (big: BigClassT, small: SmallClassT) => {
     }
     return item;
   });
-  // console.log('after clickBigSmall');
 };
 // -------------------------------------   small 的交互   ---------------------------------
 // span下的small, 大类别bigClass下的small没在这里
 const activeSpanSmall = ref<SmallClassT>();
 const smallList = ref<SmallClassT[]>();
+const spansmallId = ref<string>();
 const doActiveSmall = (small: SmallClassT | undefined = undefined) => {
-  // console.log('in doactivesmall');
   let item = {} as SmallClassT;
   if (!small) {
     // 没有数据，初始化数据 返回
     if (!smallList.value?.length) {
       return;
     }
-    // 有数据，找到激活项或第一项
-    const one = smallList.value.find((item) => {
-      return item.isActive;
+    smallList.value.forEach((item) => {
+      item.isActive = false;
     });
-    if (!one) {
-      item = smallList.value[0];
-    } else {
-      item = one;
-    }
+    item = smallList.value[0];
   } else {
     // 参数不为空，重置激活项
     smallList.value?.forEach((item) => {
@@ -198,11 +184,10 @@ const doActiveSmall = (small: SmallClassT | undefined = undefined) => {
       return;
     }
   }
+  spansmallId.value = item.id;
   activeSpanSmall.value = item;
   item.isActive = true;
-  // console.log('after doactivesmall');
 };
-// console.log('props.data1', props.data);
 
 watch(
   () => props.data.agenda,
@@ -214,41 +199,38 @@ watch(
     immediate: true,
   }
 );
+
 // -------------------------------------   table数据      ---------------------------------
 // title 为 default 默认不显示，default时默认只有一条数据
 </script>
 <template>
   <div v-if="dateList?.length" class="section">
-    <!-- <PreviewSubtitle
-      :title="props.data.title"
-      :title-stripe="props.data.titleStripe"
-    /> -->
     <h3>{{ props.data.title }}</h3>
     <div class="agenda">
       <!--  日期列表  -->
-      <div class="date-list">
-        <template v-for="date of dateList">
+      <div class="date">
+        <template v-for="date of dateList" :key="date.date">
           <div
             v-if="date.date !== 'default'"
             :key="date.date"
-            :class="{ activeDate: date.isActive }"
-            class="date-title"
+            :class="{ active: date.isActive }"
+            class="date-item"
             @click="doActiveDate(date)"
           >
-            <div class="title-date">
+            <div class="date-day">
               {{
                 date.date?.length <= 2
                   ? date.date
                   : new Date(date.date).getDate()
               }}
             </div>
-            <div class="title-desc">DEC</div>
+            <div class="date-month">NOV</div>
           </div>
         </template>
       </div>
       <!--  分时段类别列表  -->
       <div class="span-list">
-        <template v-for="span of spanList">
+        <template v-for="span of spanList" :key="span.span">
           <div
             v-if="span.span !== 'default'"
             :key="span.span"
@@ -262,24 +244,36 @@ watch(
       </div>
       <!--   分时段类别下面的  大类别列表   -->
       <template v-if="bigList?.length">
+        <!--    小类别列表    -->
         <div v-for="big of bigList" :key="big.title" class="bigClass">
           <div v-if="big.title !== 'default'" class="big-title">
             {{ big.title }}
           </div>
           <!--    小类别列表    -->
-          <div v-if="big.smallClass?.length" class="smallClass">
-            <template v-for="small of big.smallClass">
-              <div
-                v-if="small.title !== 'default'"
-                :key="small.title"
-                class="small-title"
-                :class="{ activeSmall: small.isActive }"
-                @click="clickBigSmall(big, small)"
-              >
-                {{ small.title }}
-              </div>
-            </template>
-          </div>
+          <el-tabs
+            v-if="
+              big.smallClass?.length && big.smallClass[0].title !== 'default'
+            "
+            v-model="big.activeBigSmallId"
+          >
+            <el-tab-pane
+              v-for="small of big.smallClass"
+              :key="small.id"
+              :name="small.id"
+            >
+              <template #label>
+                <div
+                  class="time-tabs"
+                  v-if="small.title !== 'default'"
+                  :key="small.title"
+                  :class="{ activeSmall: small.isActive }"
+                  @click="clickBigSmall(big, small)"
+                >
+                  {{ small.title }}
+                </div>
+              </template>
+            </el-tab-pane>
+          </el-tabs>
           <!--  小类别下面的数据1   -->
           <AgendaTable
             :id="big.activeBigSmallId"
@@ -295,27 +289,25 @@ watch(
         </div>
       </template>
       <!--   分时段类别下面的  小类别列表    -->
-      <template v-if="smallList?.length">
-        <div class="smallClass">
-          <template v-for="small of smallList">
+      <el-tabs v-if="smallList?.length" v-model.number="spansmallId">
+        <el-tab-pane
+          v-for="(small, index) of smallList"
+          :key="small.title"
+          :name="index"
+        >
+          <template #label>
             <div
+              class="time-tabs"
               v-if="small.title !== 'default'"
               :key="small.title"
-              class="small-title"
               :class="{ activeSmall: small.isActive }"
               @click="doActiveSmall(small)"
             >
               {{ small.title }}
             </div>
           </template>
-        </div>
-        <!--   小类别下面的数据2  -->
-        <AgendaTable
-          :id="activeSpanSmall?.id"
-          :datas="props.data.datas"
-          :key="activeSpanSmall?.id"
-        ></AgendaTable>
-      </template>
+        </el-tab-pane>
+      </el-tabs>
       <!--  分时段类别下面的数据  -->
       <div
         v-if="activeSpan?.id && !bigList?.length && !smallList?.length"
@@ -335,61 +327,99 @@ watch(
 .agenda {
   margin: 0 auto;
   text-align: center;
-  .date-list {
+  .date {
     display: flex;
     justify-content: center;
-    .date-title {
-      margin: 20px;
-      width: 106px;
-      height: 123px;
+    margin-top: 24px;
+    .date-item {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #cbcbcb;
       border-radius: 8px;
       border: 1px solid #cbcbcb;
-      color: #cbcbcb;
-      cursor: pointer;
-      &.activeDate {
+      transition: all 0.3s ease-out;
+
+      & ~ div {
+        margin-left: 40px;
+      }
+      &.active {
         color: #fff;
-        background-color: #002fa7;
-        .title-date {
-          border-bottom: 1px solid #fff;
+        background-color: var(--e-color-brand1);
+        border: 1px solid #fff;
+      }
+      .date-day {
+        padding: 13px 17px 3px 15px;
+        line-height: 48px;
+        font-size: 48px;
+        font-weight: 700;
+        border-bottom: 1px solid #cbcbcb;
+        @media screen and (max-width: 1120px) {
+          padding: 6px 16px;
+          font-size: 32px;
+          line-height: 32px;
         }
       }
-      .title-date {
-        font-size: 40px;
-        height: 70px;
-        line-height: 70px;
-        border-bottom: 1px solid;
-      }
-      .title-desc {
-        font-size: 22px;
-        height: 50px;
-        line-height: 50px;
+      .date-month {
+        padding: 6px 0;
+        font-size: 24px;
+        font-weight: 100;
+        line-height: 24px;
+        @media screen and (max-width: 1120px) {
+          padding: 4px 0;
+          font-size: 16px;
+        }
       }
     }
   }
   .span-list {
+    margin: 24px 0;
     display: flex;
     justify-content: center;
-    margin: 20px;
     .span-title {
-      min-width: 116px;
-      height: 40px;
-      line-height: 40px;
-      border: 1px solid #e5e5e5;
-      border-collapse: collapse;
-      padding: 0 15px;
+      display: inline-block;
       cursor: pointer;
+      border: 1px solid var(--e-color-border2);
+      color: var(--e-color-text1);
+      text-align: center;
+      background: var(--e-color-bg2);
+      font-size: 14px;
+      line-height: 38px;
+      padding: 0 16px;
+      min-width: 172px;
+      @media (max-width: 1100px) {
+        min-width: 160px;
+        line-height: 28px;
+        font-size: 12px;
+        padding: 0 12px;
+      }
       &.activeSpan {
-        background-color: #002fa7;
-        color: rgba(255, 255, 255, 0.85);
-        border: 1px solid #002fa7;
+        color: #fff;
+        background: var(--e-color-brand1);
+        border-color: var(--e-color-brand1);
       }
     }
   }
   .big-title {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    text-align: center;
     font-size: 20px;
-    margin: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--e-color-text1);
+    @media (max-width: 1100px) {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
-  .smallClass {
+  .small-class {
+    margin-top: var(--e-spacing-h4);
+
     width: 1416px;
     background-color: #fff;
     display: flex;
@@ -405,6 +435,127 @@ watch(
         padding-bottom: 10px;
         border-bottom: 1px solid #002fa7;
       }
+    }
+  }
+  .big-class {
+  }
+
+  :deep(.el-tabs) {
+    background-color: var(--e-color-bg2);
+    padding: 24px;
+    padding-bottom: 0;
+    @media (max-width: 1100px) {
+      padding: 16px;
+      padding-bottom: 0;
+    }
+    .el-tabs__nav-wrap::after {
+      display: none;
+    }
+    .el-tabs__header.is-top .el-tabs__item.is-top {
+      padding: 0px 20px 0px 0;
+      @media (max-width: 1100px) {
+        height: auto;
+        padding: 0px 18px 0px 0;
+        line-height: 22px;
+      }
+    }
+    .el-tabs__nav {
+      float: none;
+      display: inline-block;
+      @media (max-width: 1100px) {
+        line-height: 44px;
+      }
+    }
+    .el-tabs__header {
+      text-align: center;
+      margin: 0;
+      .el-tabs__item {
+        @media (max-width: 1100px) {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  :deep(.el-tabs__nav-scroll) {
+    text-align: center;
+    color: var(--e-color-text1);
+  }
+  :deep(.el-tabs__content) {
+    overflow: visible;
+    margin-top: 0;
+    // @media (max-width: 1100px) {
+    //   margin-top: 16px;
+    // }
+  }
+  :deep(.el-tabs__nav) {
+    float: none;
+    display: inline-block;
+    @media (max-width: 1100px) {
+      line-height: 44px;
+    }
+  }
+  .other-text {
+    margin: 24px auto 0 auto;
+    color: var(--e-color-text1);
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 1100px) {
+      font-size: 14px;
+      line-height: 22px;
+      margin: 16px 0;
+    }
+    svg {
+      margin-right: 8px;
+    }
+  }
+  .other-title {
+    margin: 24px auto;
+    color: var(--e-color-text1);
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    @media (max-width: 1100px) {
+      font-size: 14px;
+      line-height: 22px;
+      margin: 16px 0;
+    }
+  }
+  .content-list {
+    .detail {
+      display: none;
+    }
+    .show-detail {
+      .detail {
+        display: block;
+      }
+    }
+  }
+  .exit-detail {
+    cursor: pointer;
+  }
+  .detail {
+    display: none;
+  }
+  :deep(.time-tabs) {
+    color: var(--e-color-text1);
+    font-size: var(--e-font-size-text);
+    line-height: 38px;
+    &:hover {
+      color: var(--e-color-brand1);
+    }
+  }
+  :deep(.is-active) {
+    .time-tabs {
+      color: var(--e-color-brand1);
     }
   }
   .span-data {
