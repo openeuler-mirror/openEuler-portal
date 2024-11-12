@@ -465,7 +465,7 @@ const watchData = watch(
   z-index: 1;
   .calendar-body {
     display: flex;
-    margin-top: 40px;
+    margin-top: var(--o-gap-t2c);
     border-radius: var(--o-radius-xs);
     background-color: var(--o-color-fill2);
     overflow: hidden;
