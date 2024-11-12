@@ -207,13 +207,13 @@ openEuler团队会针对提交的测试结果进行审核，如果通过，会�
 
 ## 三、评测申请
 
-送测厂商应通过以下渠道申请评测：[英特尔官网](https://www.intel.cn/content/www/cn/zh/homepage.html)或[openEuler社区官网](/zh/)。送测厂商申请评测即表示其接受本流程及指南、[《英特尔<sup>®</sup>平台先进技术评测条款与条件》](/zh/compatibility/terms-and-conditions/)的管辖和适用。
+送测厂商应通过以下渠道申请评测：[英特尔官网](https://www.intel.cn/content/www/cn/zh/homepage.html)或[openEuler社区官网](/zh/)。送测厂商申请评测即表示其接受本流程及指南、《英特尔<sup>®</sup>平台先进技术评测条款与条件》的管辖和适用。
 
 ## 四、技术评测
 
 送测厂商需自担运费和保价费邮寄送测对象及物料至联合验证中心指定收件地址，收件人 **寇雨**，联系电话 **17600801705**，地址 **北京市通州区科谷一街8号院8号楼B1**。联合验证中心在收到送测厂商通过上述渠道申请且收到送测对象后，根据申请范围开展评测工作。测试结束后送测厂商自行取回。联合验证中心占有送测对象期间，将尽合理义务保管送测对象。联合验证中心强烈建议送测厂商为其送测对象购买足额的保险抵抗风险。
 
-为完成上述评测，联合验证中心将委托开放原子负责送测对象在验证中心内的上线、摆放等工作；联合验证中心委托开放原子负责openEuler评测，联合验证中心委托英特尔负责英特尔评测。开放原子或英特尔根据[《openEuler兼容性协议》](https://certification.openeuler.org/#/compatibilityProtocol)或[《英特尔<sup>®</sup>平台先进技术评测规范》](/zh/compatibility/intel-validation-specification/)和[《英特尔<sup>®</sup>平台先进技术评测条款与条件》](/zh/compatibility/terms-and-conditions/)安装、运行测试套件，并书面通知送测厂商评测结果。评测通过的，开放原子、英特尔将分别依据测试结果出具各自的验证函。
+为完成上述评测，联合验证中心将委托开放原子负责送测对象在验证中心内的上线、摆放等工作；联合验证中心委托开放原子负责openEuler评测，联合验证中心委托英特尔负责英特尔评测。开放原子或英特尔根据[《openEuler兼容性协议》](https://certification.openeuler.org/#/compatibilityProtocol)或[《英特尔<sup>®</sup>平台先进技术评测规范》](/zh/compatibility/intel-validation-specification/)和《英特尔<sup>®</sup>平台先进技术评测条款与条件》安装、运行测试套件，并书面通知送测厂商评测结果。评测通过的，开放原子、英特尔将分别依据测试结果出具各自的验证函。
 
 ## 五、评测结果的公布与使用
 

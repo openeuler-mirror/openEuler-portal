@@ -202,7 +202,7 @@ OpenAtom is responsible for the openEuler Validation, while Intel is responsible
 
 ### 3.Validation Application
 
-3.1	Vendors submitting products for testing should apply through the following channels: [the Intel official website](https://www.intel.cn/content/www/cn/en/homepage.html) or [the openEuler community official website](/zh/). By applying for the validation, vendors agree to be governed by this process and guidelines and the [Intel<sup>®</sup> Platform Advanced Technology Validation Terms and Conditions](/zh/compatibility/terms-and-conditions/).
+3.1	Vendors submitting products for testing should apply through the following channels: [the Intel official website](https://www.intel.cn/content/www/cn/en/homepage.html) or [the openEuler community official website](/zh/). By applying for the validation, vendors agree to be governed by this process and guidelines and the Intel<sup>®</sup> Platform Advanced Technology Validation Terms and Conditions.
 
 ### 4.Technical Validation
 
@@ -212,7 +212,7 @@ OpenAtom is responsible for the openEuler Validation, while Intel is responsible
 
 4.3	During the period that the Joint Validation Center has possession of the product, it will exercise reasonable care. The Joint Validation Center is only liable for direct economic losses caused by its own intentional actions or gross negligence, up to a maximum of RMB 18,000, and does not assume liability for any other losses. Therefore, the Joint Validation Center strongly recommends that vendors purchase adequate insurance for the products submitted for testing.
 
-4.4	To complete the validation, the Joint Validation Center will entrust OpenAtom with the setup and arrangement of the products in the validation center; OpenAtom is responsible for the openEuler Validation, and Intel is responsible for the Intel Validation. OpenAtom or Intel will install and run the test suite according to the [openEuler Compatibility Agreement](https://certification.openeuler.org/#/compatibilityProtocol). or the [Intel Validation Specification](/en/compatibility/intel-validation-specification/). and the [Intel Platform Advanced Technology Validation Terms and Conditions](/en/compatibility/terms-and-conditions/), and notify the vendor of the validation results in writing.
+4.4	To complete the validation, the Joint Validation Center will entrust OpenAtom with the setup and arrangement of the products in the validation center; OpenAtom is responsible for the openEuler Validation, and Intel is responsible for the Intel Validation. OpenAtom or Intel will install and run the test suite according to the [openEuler Compatibility Agreement](https://certification.openeuler.org/#/compatibilityProtocol). or the [Intel Validation Specification](/en/compatibility/intel-validation-specification/). and the Intel Platform Advanced Technology Validation Terms and Conditions, and notify the vendor of the validation results in writing.
 
 4.5	If the validation is successful, OpenAtom and Intel will issue their respective "Validation Letters" based on the results.
 
