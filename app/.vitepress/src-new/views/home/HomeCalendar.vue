@@ -20,8 +20,8 @@ import {
 
 import summitData from '~@/data/summit';
 
-import IconLeft from '~icons/app/icon-chevron-left.svg';
-import IconRight from '~icons/app/icon-chevron-right.svg';
+import IconLeft from '~icons/app-new/icon-chevron-left.svg';
+import IconRight from '~icons/app-new/icon-chevron-right.svg';
 import IconDate from '~icons/home/icon-date.svg';
 import IconAll from '~icons/home/icon-all.svg';
 import IconEvent from '~icons/home/icon-event.svg';
