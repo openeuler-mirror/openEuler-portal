@@ -2,35 +2,35 @@
 import { computed, onMounted, ref } from 'vue';
 import { useData } from 'vitepress';
 
-import { useCommon } from '@/stores/common';
-import { type ScheduleItemT } from './@type';
+import { useCommon, useCookieStore } from '@/stores/common';
 
 import { getEasyeditorInfo } from '@/api/api-easyeditor';
+import { getUrlParam } from '@/shared/utils';
+import { oa } from '@/shared/analytics';
 
 import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
-import SummitSchedule from './components/SummitSchedule.vue';
 import SummitGuest from './components/SummitGuest.vue';
 import SummitPartner from './components/SummitPartner.vue';
+import SummitSchedule from './components/SummitSchedule.vue';
+import SummitLive from './components/SummitLive.vue';
 
 import liveLight from '@/assets/category/summit/summit2022/live.png';
 import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
 
 import data_zh from './data/data_zh';
 import data_en from './data/data_en';
+
 import guest from './data';
 
 const { lang } = useData();
 
 const commonStore = useCommon();
+const cookieStore = useCookieStore();
 
 const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );
-
-const isLight = computed(() => {
-  return commonStore.theme === 'light';
-});
 
 //------------------- 峰会日程 --------------------
 const summitData = computed(() => {
@@ -78,6 +78,29 @@ const getData = computed(() => {
 
 // ------------------ 嘉宾数据 -----------
 const guestData = guest;
+//-------- 直播 --------
+const isLiveShown = ref(0);
+
+// 埋点统计投放流量
+function collectAdvertisedData() {
+  if (cookieStore.isAllAgreed) {
+    const params = getUrlParam('utm_source');
+    if (!params) {
+      return;
+    }
+    oa.report('fromAdvertised', () => {
+      return {
+        utm_source: params,
+      };
+    });
+  }
+  history.pushState(null, '', location.origin + location.pathname);
+}
+onMounted(() => {
+  setTimeout(() => {
+    collectAdvertisedData();
+  }, 300);
+});
 </script>
 <template>
   <SummitBanner :banner-data="summitData.banner" />
@@ -92,6 +115,40 @@ const guestData = guest;
         </li>
       </ul>
       <p v-if="summitData?.introduce4">{{ summitData.introduce4 }}</p>
+    </div>
+    <div id="live" class="live">
+      <h3 class="title-bar">
+        {{ lang === 'zh' ? summitData.live.title : summitData.live.titleEn }}
+      </h3>
+      <div>
+        <OTabs v-model="isLiveShown" class="schedule-tabs">
+          <el-tab-pane
+            v-for="(item, index) in summitData.live.date"
+            :key="index"
+            :name="index"
+          >
+            <template #label>
+              <div class="time-tabs">
+                {{ item }}
+              </div>
+            </template>
+          </el-tab-pane>
+        </OTabs>
+        <ClientOnly>
+          <SummitLive
+            v-if="isLiveShown === 0"
+            :live-data="summitData.live.liveData1"
+            class-name="live-btn1"
+            class="live-box"
+          />
+          <SummitLive
+            v-if="isLiveShown === 1"
+            :live-data="summitData.live.liveData2"
+            class-name="live-btn2"
+            class="live-box"
+          />
+        </ClientOnly>
+      </div>
     </div>
     <div class="agenda">
       <h3>
@@ -149,6 +206,7 @@ const guestData = guest;
         </template>
       </div>
     </div>
+
     <SummitGuest v-if="lang === 'zh'" class="guest" :data="guestData" />
     <SummitPartner />
     <!--  只在中文页显示精彩回顾 -->
@@ -203,7 +261,120 @@ const guestData = guest;
     line-height: var(--e-line-height-text);
   }
 }
+.live,
+.guest {
+  margin-top: var(--e-spacing-h1);
+  @media (max-width: 767px) {
+    margin-top: var(--e-spacing-h2);
+  }
+  h3 {
+    text-align: center;
+    font-size: var(--e-font-size-h3);
+    line-height: var(--e-line-height-h3);
+    color: var(--e-color-text1);
+    font-weight: 300;
+    @media (max-width: 767px) {
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
+    }
+  }
+  h4 {
+    margin-top: 20px;
+    font-size: var(--e-font-size-h5);
+    line-height: var(--e-line-height-h5);
+    color: var(--e-color-text1);
+    font-weight: 400;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
+      margin-top: var(--e-spacing-h5);
+    }
+  }
+  .live-box {
+    margin-top: var(--e-spacing-h2);
+    @media (max-width: 767px) {
+      margin-top: var(--e-spacing-h4);
+    }
+  }
+}
+.live {
+  .schedule-tabs {
+    text-align: center;
+    margin-top: 24px;
+    :deep(.el-tabs__nav) {
+      float: none;
+      display: inline-block;
+      .el-tabs__active-bar {
+        display: none;
+      }
+      .el-tabs__item {
+        padding: 0;
+      }
+    }
+    .time-tabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // margin: 0 0 24px;
+      cursor: pointer;
+      border: 1px solid var(--e-color-border2);
+      color: var(--e-color-text1);
+      width: 120px;
+      text-align: center;
+      background: var(--e-color-bg2);
+      font-size: var(--e-font-size-text);
+      line-height: 38px;
+      padding: 0 var(--e-spacing-h5);
+      .o-icon {
+        margin-left: 12px;
+      }
+      @media (max-width: 1100px) {
+        width: 80px;
+        line-height: 28px;
+        font-size: var(--e-font-size-tip);
+        padding: 0 var(--e-spacing-h6);
+      }
+    }
 
+    .is-active .time-tabs {
+      color: #fff;
+      background: var(--e-color-brand1);
+      border-color: var(--e-color-brand2);
+    }
+    .other-tabs {
+      margin-bottom: 24px;
+      :deep(.el-tabs__nav) {
+        float: none;
+        display: inline-block;
+        @media (max-width: 1100px) {
+          line-height: 44px;
+        }
+      }
+      :deep(.el-tabs__header) {
+        text-align: center;
+        .el-tabs__item {
+          @media (max-width: 1100px) {
+            font-size: var(--e-font-size-tip);
+            line-height: var(--e-line-height-tip);
+          }
+        }
+      }
+    }
+  }
+  .time-box {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    .o-button {
+      color: var(--e-color-text1);
+      :deep(.suffix-icon) {
+        color: var(--e-color-brand1);
+      }
+    }
+  }
+}
 :deep(h3) {
   text-align: center;
   font-size: var(--e-font-size-h3);
@@ -213,6 +384,12 @@ const guestData = guest;
   @media (max-width: 767px) {
     font-size: var(--e-font-size-h8);
     line-height: var(--e-line-height-h8);
+  }
+}
+.agenda-floor {
+  margin-top: var(--e-spacing-h1);
+  @media (max-width: 767px) {
+    margin-top: var(--e-spacing-h2);
   }
 }
 .agenda {

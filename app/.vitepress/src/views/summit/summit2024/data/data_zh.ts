@@ -3,6 +3,7 @@ import callFor_dark from '../img/call-for_dark.jpg';
 import textLight from '../img/wenzi_light.png';
 import textDark from '../img/wenzi_dark.png';
 
+import liveData from './live-data';
 export default {
   banner: {
     btn: '立即报名',
@@ -55,6 +56,7 @@ export default {
       link: 'https://shimo.im/forms/gYEhLZitK1EqWYEM/fill',
     },
   ],
+  live: liveData,
   agenda: {
     title: '活动日程',
     tabType: ['主论坛', '分论坛'],
