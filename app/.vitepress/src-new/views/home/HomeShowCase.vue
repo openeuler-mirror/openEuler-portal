@@ -17,7 +17,7 @@ import { useScreen } from '~@/composables/useScreen';
 
 import AppSection from '~@/components/AppSection.vue';
 
-import IconChevronRight from '~icons/app/icon-chevron-right.svg';
+import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 
 import { casesZh, casesEn } from '~@/data/home/case';
 
@@ -70,8 +70,8 @@ const getCases = () => {
 
 // -------------------- tab切换动效 --------------------
 const init = () => {
-  activeWidth.value = tabs.value.children[activeTab.value].offsetWidth + 'px';
-  activeLeft.value = tabs.value.children[activeTab.value].offsetLeft + 'px';
+  activeWidth.value = tabs.value?.children[activeTab.value].offsetWidth + 'px';
+  activeLeft.value = tabs.value?.children[activeTab.value].offsetLeft + 'px';
 };
 
 // -------------------- 自动切换tab --------------------
@@ -233,6 +233,9 @@ onUnmounted(() => {
   z-index: 1;
   transition: left 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
+.item-tab-active-mb {
+  color: var(--o-color-primary1);
+}
 
 .content {
   width: 100%;
@@ -327,7 +330,7 @@ onUnmounted(() => {
     }
   }
   .case-list {
-    width: 52%;
+    width: 48%;
     margin-left: 36px;
     padding: 24px 0 32px;
     .o-divider {
@@ -338,8 +341,8 @@ onUnmounted(() => {
     margin-top: 8px;
   }
   .case-img {
-    width: 36%;
-    margin-left: 220px;
+    width: 38%;
+    margin-left: auto;
   }
   .right-img {
     width: 100%;
