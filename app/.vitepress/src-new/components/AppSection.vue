@@ -66,7 +66,7 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
             <OLink :href="props.footerHref" target="_blank">
               {{ props.footer }}
               <template #suffix>
-                <OIcon><IconChevronRight /> </OIcon>
+                <OIcon class="footer-icon"><IconChevronRight /> </OIcon>
               </template>
             </OLink>
           </slot>
@@ -154,6 +154,7 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
     display: flex;
     justify-content: center;
     @include text1;
+
     margin-top: 32px;
 
     @include respond-to('<=laptop') {
@@ -163,6 +164,10 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
     @include respond-to('phone') {
       margin-top: 12px;
     }
+  }
+
+  .footer-icon {
+    font-size: 16px;
   }
 }
 </style>
