@@ -279,23 +279,28 @@ const linkClick = () => {
       color: var(--o-color-info1);
       cursor: pointer;
       @include text1;
+      transition: all var(--o-duration-s) var(--o-easing-standard);
 
-      @include hover {
-        z-index: 99;
+      &::after {
+        content: '';
+        position: absolute;
+        left: var(--o-gap-4);
+        opacity: 0;
+        bottom: 0;
+        width: calc(100% - var(--o-gap-4) * 2);
+        height: 2px;
+        border-radius: 1px;
+        background: var(--o-color-primary1);
+        transition: all var(--o-duration-s) var(--o-easing-standard);
       }
+      
 
       &.active {
         color: var(--o-color-primary1);
         z-index: 99;
         &::after {
           content: '';
-          position: absolute;
-          left: var(--o-gap-4);
-          bottom: 0;
-          width: calc(100% - var(--o-gap-4) * 2);
-          height: 2px;
-          border-radius: 1px;
-          background: var(--o-color-primary1);
+          opacity: 1;
         }
       }
       .nav-item {
@@ -432,6 +437,8 @@ const linkClick = () => {
       display: flex;
       align-items: center;
       cursor: pointer;
+      transition: all var(--o-duration-s) var(--o-easing-standard);
+
 
       > span {
         padding-left: var(--o-gap-2);
