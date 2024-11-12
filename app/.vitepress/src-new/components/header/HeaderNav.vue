@@ -334,7 +334,7 @@ const linkClick = () => {
   transform-origin: top;
 
   &.light {
-    box-shadow: 0 1px 5px rgba(45, 47, 51, 0.1);
+    box-shadow: 0 3px 6px rgba(#001255, 0.08);
   }
 
   @include respond-to('laptop') {
@@ -342,6 +342,20 @@ const linkClick = () => {
   }
   @include respond-to('pad_h') {
     min-height: 260px;
+  }
+
+  @include respond-to('>pad_v') {
+    &.dark {
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background-color: var(--o-color-control4);
+      }
+    }
   }
 
   .nav-drop-content {

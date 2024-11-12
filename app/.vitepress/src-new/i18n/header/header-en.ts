@@ -547,7 +547,7 @@ export default {
             {
               NAME: 'Contact Us',
               DESCRIPTION: '',
-              URL: '',
+              URL: '/contact-us/',
               TAG: TAG_TYPE.NEW, 
             },
           ],

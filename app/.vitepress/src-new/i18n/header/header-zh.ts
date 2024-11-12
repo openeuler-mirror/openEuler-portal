@@ -699,7 +699,7 @@ export default {
               NAME: '开发者日历',
               TYPE: InformationLight,
               TYPE_DARK: InformationDark,
-              URL: '/meeting/',
+              URL: '/#calendar/',
             },
             {
               NAME: '活动与大赛',
@@ -774,7 +774,7 @@ export default {
             {
               NAME: '联系我们',
               DESCRIPTION: '',
-              URL: '',
+              URL: '/contact-us/',
               TAG: TAG_TYPE.NEW, 
             },
           ],

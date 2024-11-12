@@ -208,6 +208,16 @@ const handleNodeClick = (node: any) => {
   font-size: 24px;
   color: var(--e-color-text1);
   cursor: pointer;
+
+  @media (min-width: 841px) and (max-width: 1100px) {
+    background-color: var(--o-color-fill2);
+    border-radius: 0 100px 100px 0;
+    box-shadow: var(--o-shadow-2);
+    padding: var(--o-gap-2);
+    top: 142px;
+    left: 0;
+    z-index: 80;
+  }
 }
 
 .wiki-sidebar-toc {
