@@ -1,9 +1,12 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useData } from 'vitepress';
 import { showGuard, logout, useStoreData, getUserAuth } from '@/shared/login';
 import { OIcon, ODropdown, ODropdownItem } from '@opensig/opendesign';
 
+import AppBadge from '@/components/badge/AppBadge.vue';
+import { getUnreadMsgCount } from '@/api/api-messageCenter';
+import { queryPersonalInfo } from '@/api/api-login';
 import IconLogin from '~icons/app-new/icon-header-person.svg';
 
 const { lang } = useData();
@@ -19,28 +22,67 @@ const jumpToUserZone = () => {
 const jumpToMsgCenter = () => {
   window.open(import.meta.env.VITE_MESSAGE_CENTER_URL);
 };
+
+const unreadMsgCount = ref(0);
+
+onMounted(async () => {
+  if (token) {
+    const { data: userInfo } = await queryPersonalInfo();
+    const giteeNotRegistered = !(userInfo.identities as any[])?.find(
+      (item) => item.identity === 'gitee'
+    );
+    const data = await getUnreadMsgCount();
+    unreadMsgCount.value = data.reduce((count, val) => {
+      if (giteeNotRegistered && val.source === 'https://gitee.com') {
+        return count;
+      }
+      return count + val.count;
+    }, 0);
+  }
+});
 </script>
 
 <template>
   <div class="opt-user">
     <ODropdown v-if="token" trigger="hover" optionPosition="bottom" option-wrap-class="dropdown">
       <div class="el-dropdown-link opt-info">
-        <img
-          v-if="guardAuthClient.photo"
-          :src="guardAuthClient.photo"
-          class="user-img"
-        />
-        <div v-else class="login">
-          <OIcon class="icon">
-            <IconLogin />
-          </OIcon>
+        <AppBadge v-if="unreadMsgCount" :value="unreadMsgCount">
+          <img
+            v-if="guardAuthClient.photo"
+            :src="guardAuthClient.photo"
+            class="user-img"
+          />
+          <div v-else class="user-img"></div>
+        </AppBadge>
+
+        <div v-else>
+          <img
+            v-if="guardAuthClient.photo"
+            :src="guardAuthClient.photo"
+            class="user-img"
+          />
+          <div v-else class="login">
+            <OIcon class="icon">
+              <IconLogin />
+            </OIcon>
+          </div>
         </div>
         <p class="opt-name">{{ guardAuthClient.username }}</p>
       </div>
 
       <template #dropdown>
         <ODropdownItem @click="jumpToUserZone()">{{ $t('header.USER_CENTER') }}</ODropdownItem>
-        <ODropdownItem @click="jumpToMsgCenter()">{{ $t('header.MESSAGE_CENTER') }}</ODropdownItem>
+        <ODropdownItem @click="jumpToMsgCenter()">
+          <AppBadge
+            v-if="unreadMsgCount"
+            :value="unreadMsgCount"
+          >
+            {{ $t('header.MESSAGE_CENTER') }}
+          </AppBadge>
+          <div v-else>
+            {{ $t('header.MESSAGE_CENTER') }}
+          </div>
+        </ODropdownItem>
         <ODropdownItem @click="logout()">{{ $t('header.LOGOUT') }}</ODropdownItem>
       </template>
     </ODropdown>
