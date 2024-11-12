@@ -476,7 +476,8 @@ const closeSearch = () => {
       }
 
       @include hover {
-        background-color: rgb(var(--o-kleinblue-1));
+        background-color: var(--o-color-control2-light);
+        color: var(--o-color-primary1);
 
         .icon-container {
           display: inline-block;

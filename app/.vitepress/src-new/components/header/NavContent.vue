@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { OTag, OIcon } from '@opensig/opendesign';
 
 import NavLink from './NavLink.vue';
@@ -23,6 +24,12 @@ const emits = defineEmits(['link-click']);
 const linkClick = () => {
   emits('link-click');
 }
+
+const showDesc = ref(false);
+const descMouseenter = (e: MouseEvent) => {
+  if (!e || !e.target) return;
+  showDesc.value = e.target.clientHeight < e.target.scrollHeight;
+} 
 </script>
 
 <template>
@@ -64,7 +71,13 @@ const linkClick = () => {
           </NavLink>
         </div>
         <div class="desc-container">
-          <p class="item-desc">{{ subItem.DESCRIPTION }}</p>
+          <p
+            class="item-desc"
+            :title="showDesc? subItem.DESCRIPTION : null"
+            @mouseenter="descMouseenter($event)"
+          >
+            {{ subItem.DESCRIPTION }}
+          </p>
         </div>
         <div class="system-container">
           <NavLink v-for="system in subItem.CHILDREN" :url="system.URL" class="system" @link-click="linkClick">
