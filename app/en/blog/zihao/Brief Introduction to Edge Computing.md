@@ -60,5 +60,5 @@ As a technology emerging in recent years, edge computing is gradually entering o
 
 - [Edge Computing: Development and Challenges (Zhihu.com)](https://zhuanlan.zhihu.com/?url=https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F432773278)
 - [Building a Cloud-Edge Collaborative Cluster Using KubeEdge and iSulad on openEuler – CSDN Blog](https://gitee.com/link?target=https%3A%2F%2Fblog.csdn.net%2Fweixin_41033724%2Farticle%2Fdetails%2F121312708)
-- [Kunpeng + OpenEuler Software and  Hardware Collaborative Edge Computing Platform – Edge Computing Consortium (ecconsortium.org)](http://www.ecconsortium.org/Lists/show/id/515.html)
+- [Kunpeng + openEuler Software and  Hardware Collaborative Edge Computing Platform – Edge Computing Consortium (ecconsortium.org)](http://www.ecconsortium.org/Lists/show/id/515.html)
 - [openEuler-White Paper-2109.pdf](https://www.openeuler.org/whitepaper/openEuler-whitepaper-2109.pdf)

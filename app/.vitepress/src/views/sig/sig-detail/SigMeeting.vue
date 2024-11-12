@@ -34,7 +34,7 @@ const props = defineProps({
     type: String,
     default: '',
   },
-  oldEmail: {
+  mail: {
     type: String,
     default: '',
   },
@@ -217,19 +217,14 @@ function handleCommand(date: string) {
       <div class="info-body">
         <h5>{{ sigData.MAIL_LIST }}</h5>
         <p class="email">
-          <a
-            :href="oldEmail ? `mailto:${oldEmail}` : `mailto:dev@openeuler.org`"
-            >{{ oldEmail || 'dev@openeuler.org' }}</a
-          >
+          <a :href="`mailto:${mail}`">{{ mail }}</a>
           <a
             v-if="
-              (oldEmail?.split('@').length &&
-                oldEmail?.split('@')[1] === 'openeuler.org') ||
-              !oldEmail
+              (mail?.split('@').length &&
+                mail?.split('@')[1] === 'openeuler.org') ||
+              !mail
             "
-            :href="`https://mailweb.openeuler.org/postorius/lists/${
-              oldEmail || 'dev@openeuler.org'
-            }/`"
+            :href="`https://mailweb.openeuler.org/postorius/lists/${mail}/`"
             target="_blank"
             rel="noopener noreferrer"
             class="subscribe"
