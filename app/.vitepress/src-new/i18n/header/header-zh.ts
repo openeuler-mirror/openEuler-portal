@@ -1,21 +1,5 @@
 import { markRaw } from 'vue';
 
-import DocumentLight from '~@/assets/category/header/document-light.svg';
-import InformationLight from '~@/assets/category/header/information-light.svg';
-import IntroductionLight from '~@/assets/category/header/introduction-light.svg';
-import DownloadLight from '~@/assets/category/header/download-light.svg';
-import TopicLight from '~@/assets/category/header/topic-light.svg';
-import ToolLight from '~@/assets/category/header/tool-light.svg';
-import HeartLight from '~@/assets/category/header/heart-light.svg';
-
-import DocumentDark from '~@/assets/category/header/document-dark.svg';
-import InformationDark from '~@/assets/category/header/information-dark.svg';
-import IntroductionDark from '~@/assets/category/header/introduction-dark.svg';
-import DownloadDark from '~@/assets/category/header/download-dark.svg';
-import TopicDark from '~@/assets/category/header/topic-dark.svg';
-import ToolDark from '~@/assets/category/header/tool-dark.svg';
-import HeartDark from '~@/assets/category/header/heart-dark.svg';
-
 import Summit from '~@/assets/category/header/summit.png';
 import Sig from '~@/assets/category/header/sig.png';
 import Report from '~@/assets/category/header/report.png';
@@ -73,20 +57,14 @@ export default {
           SHORTCUT: [
             {
               NAME: 'openEuler 24.03 LTS',
-              TYPE: DownloadLight,
-              TYPE_DARK: DownloadDark,
               URL: '/download/?version=openEuler 24.03 LTS',
             },
             {
               NAME: 'openEuler repo 源',
-              TYPE: DownloadLight,
-              TYPE_DARK: DownloadDark,
               URL: 'https://repo.openeuler.openatom.cn/',
             },
             {
               NAME: '镜像仓列表',
-              TYPE: DownloadLight,
-              TYPE_DARK: DownloadDark,
               URL: '/mirror/list/',
             },
           ],
@@ -173,32 +151,22 @@ export default {
           SHORTCUT: [
             {
               NAME: '技术白皮书',
-              TYPE: IntroductionLight,
-              TYPE_DARK: IntroductionDark,
               URL: '/showcase/technical-white-paper/',
             },
             {
               NAME: '24.03 LTS安装指南',
-              TYPE: IntroductionLight,
-              TYPE_DARK: IntroductionDark,
               URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/installation.html',
             },
             {
               NAME: '24.09安装指南',
-              TYPE: IntroductionLight,
-              TYPE_DARK: IntroductionDark,
               URL: 'https://docs.openeuler.org/zh/docs/24.09/docs/Installation/installation.html',
             },
             {
               NAME: '版本生命周期',
-              TYPE: DownloadLight,
-              TYPE_DARK: DownloadDark,
               URL: '/other/lifecycle/',
             },
             {
               NAME: '查询历史版本',
-              TYPE: DownloadLight,
-              TYPE_DARK: DownloadDark,
               URL: '/download/archive/',
             },
           ], 
@@ -273,27 +241,19 @@ export default {
           SHORTCUT: [
             {
               NAME: '24.03LTS文档',
-              TYPE: IntroductionLight,
-              TYPE_DARK: IntroductionDark,
               URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Releasenotes/法律声明.html',
             },
             {
               NAME: '安装升级',
-              TYPE: IntroductionLight,
-              TYPE_DARK: IntroductionDark,
               URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/installation.html',
             },
             {
               NAME: '文档撰写指南',
-              TYPE: IntroductionLight,
-              TYPE_DARK: IntroductionDark,
               ICON: OutLink,
               URL: 'https://gitee.com/openeuler/docs/blob/master/contribute/写作规范.md',
             },
             {
               NAME: 'Man Pages',
-              TYPE: IntroductionLight,
-              TYPE_DARK: IntroductionDark,
               URL: 'https://man.openeuler.org/',
             },
           ]
@@ -356,8 +316,6 @@ export default {
           SHORTCUT: [
             {
               NAME: '从入门到精通-openEuler操作系统迁移专题',
-              TYPE: TopicLight,
-              TYPE_DARK: TopicDark,
               URL: 'https://c0605e03bb6b40dca9cd34ab5b3fb1f8.shixizhi.huawei.com/community/community.htm?communityId=1748285175854272513&schoolId=1643780836745113602&activeIndex=-1&subIndex=undefined&subIndex=undefined&sxz-lang=zh_CN',
             }
           ]
@@ -379,14 +337,10 @@ export default {
           SHORTCUT: [
             {
               NAME: '迁移工具x2openEuler',
-              TYPE: ToolLight,
-              TYPE_DARK: ToolDark,
               URL: '/migration/download/',
             },
             {
               NAME: '迁移实践',
-              TYPE: DocumentLight,
-              TYPE_DARK: DocumentDark,
               URL: '/migration/user-cases/',
             },
           ]
@@ -525,8 +479,6 @@ export default {
           SHORTCUT: [
             {
               NAME: 'openEuler 硬件兼容性测试整体介绍',
-              TYPE: HeartLight,
-              TYPE_DARK: HeartDark,
               URL: '/compatibility/hardware/',
             },
           ]
@@ -569,14 +521,10 @@ export default {
           SHORTCUT: [
             {
               NAME: 'OSV技术测评整体介绍',
-              TYPE: HeartLight,
-              TYPE_DARK: HeartDark,
               URL: '/approve/approve-step/',
             },
             {
               NAME: 'QuickIssue ',
-              TYPE: ToolLight,
-              TYPE_DARK: ToolDark,
               URL: 'https://quickissue.openeuler.org/zh/issues/',
             },
           ]
@@ -629,8 +577,6 @@ export default {
           SHORTCUT: [
             {
               NAME: 'openEuler社区介绍PDF',
-              TYPE: IntroductionLight,
-              TYPE_DARK: IntroductionDark,
               URL: 'https://www.openeuler.org/whitepaper/openEuler %E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E4%BB%8B%E7%BB%8D.pdf',
             }
           ]
@@ -684,33 +630,23 @@ export default {
           SHORTCUT: [
             {
               NAME: '企业签署CLA流程',
-              TYPE: HeartLight,
-              TYPE_DARK: HeartDark,
               URL: '/blog/2022-11-25-cla/CLA%E7%AD%BE%E7%BD%B2%E6%B5%81%E7%A8%8B.html',
             },
             {
               NAME: 'CLA-FAQ',
-              TYPE: HeartLight,
-              TYPE_DARK: HeartDark,
               ICON: OutLink,
               URL: 'https://gitee.com/openeuler/infrastructure/blob/master/docs/cla-guide/faq/faq.md',
             },
             {
               NAME: '开发者日历',
-              TYPE: InformationLight,
-              TYPE_DARK: InformationDark,
               URL: '/#calendar/',
             },
             {
               NAME: '活动与大赛',
-              TYPE: InformationLight,
-              TYPE_DARK: InformationDark,
               URL: '/universities/#%E6%B4%BB%E5%8A%A8%E4%B8%8E%E5%A4%A7%E8%B5%9B',
             },
             {
               NAME: '高校技术小组',
-              TYPE: InformationLight,
-              TYPE_DARK: InformationDark,
               URL: '/universities/#%E9%AB%98%E6%A0%A1%E6%8A%80%E6%9C%AF%E5%B0%8F%E7%BB%84',
             },
             

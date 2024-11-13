@@ -13,9 +13,6 @@ import HeaderLogin from './HeaderLogin.vue';
 import HeaderSearch from './HeaderSearch.vue';
 import NavLink from './NavLink.vue';
 
-import logo_light from '~@/assets/category/header/logo.svg';
-import logo_dark from '~@/assets/category/header/logo_dark.svg';
-
 const { lang } = useData();
 const i18n = useI18n();
 const commonStore = useCommon();
@@ -31,12 +28,6 @@ const props = defineProps({
 
 // 导航数据
 const navData = computed(() => i18n.value.header.NAV_ROUTER);
-// 判断主题
-const isLight = computed(() => commonStore.theme === 'light');
-// Logo主题判断
-const logoUrl = computed(() =>
-  commonStore.theme === 'light' ? logo_light : logo_dark
-);
 
 // nav 鼠标滑过事件
 const isShow = ref(false);
@@ -162,16 +153,6 @@ const linkClick = () => {
                             :key="shortcut.NAME"
                             class="shortcut"
                           >
-                            <img
-                              v-if="isLight"
-                              :src="shortcut.TYPE"
-                              class="icon"
-                            />
-                            <img
-                              v-else
-                              :src="shortcut.TYPE_DARK"
-                              class="icon"
-                            />
                             <NavLink
                               :url="shortcut.URL"
                               @link-click="linkClick"
@@ -310,6 +291,7 @@ const linkClick = () => {
       &.active {
         color: var(--o-color-primary1);
         z-index: 99;
+        font-weight: 500;
         &::after {
           content: '';
           opacity: 1;
@@ -522,9 +504,9 @@ const linkClick = () => {
       .shortcut {
         width: 282px;
         min-height: 42px;
-        background: var(--o-color-fill1);
+        background: var(--o-color-fill3);
         border-radius: var(--o-radius_control-xs);
-        padding: 10px 10px 10px 13px;
+        padding: 10px 10px 10px 24px;
         display: flex;
         align-items: center;
         gap: var(--o-gap-3);
@@ -556,11 +538,6 @@ const linkClick = () => {
             width: 16px;
             margin-left: var(--o-gap-2);
           }
-        }
-
-        .icon {
-          height: 26px;
-          width: 26px;
         }
       }
 
