@@ -47,7 +47,7 @@ Version bugs are specific types of issues reported by community developers, test
 The openEuler community relies on Gitee issues for bug management. To improve version bug awareness efficiency, the openEuler community provides a dedicated issue feedback template that interconnects with the community awareness tool. Developers are advised to use this template to submit issues to the src-openEuler software package repositories so that SIGs can detect and handle the issues as soon as possible. The template is as follows:
 
 ```markdown
-**[Issue Title]: Briefly describe the issue, inlcuding the scenario, actions taken, and results. (Positive words are recommended.)**
+**[Issue Title]: Briefly describe the issue, including the scenario, actions taken, and results. (Positive words are recommended.)**
 
 **I. Bug Information**
 

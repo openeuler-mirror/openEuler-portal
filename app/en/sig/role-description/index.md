@@ -121,7 +121,7 @@ Contributors are people who frequently contribute to the community. They take pa
   - Resolving subsequent errors or problems
 
 - Agree PR by executing '/ lgtm'
-- Assign issue or PR, ask memebers to comment by execting/assign @username
+- Assign issue or PR, ask members to comment by execting/assign @username
 - Run PR test automatically. /ok-to-test is not necessary
 - Operate the PR with needs-ok-to-test label by execting /ok-to-test and close PR by execting /close.
 
