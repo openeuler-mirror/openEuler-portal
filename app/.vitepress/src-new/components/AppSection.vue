@@ -126,7 +126,7 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
     display: flex;
     justify-content: center;
     margin-top: 12px;
-    color: var(--o-color-info1);
+    color: var(--o-color-info2);
     @include text1;
 
     @include respond-to('pad-laptop') {
@@ -135,6 +135,7 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
 
     @include respond-to('phone') {
       margin-top: 12px;
+      text-align: center;
     }
   }
 
