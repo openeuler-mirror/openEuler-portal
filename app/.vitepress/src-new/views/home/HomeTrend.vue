@@ -163,7 +163,10 @@ watch(
 
 <style lang="scss" scoped>
 .trend-scroller {
-  --scrollbar-height: 100%;
+  :deep(.o-scrollbar) {
+    --scrollbar-height: 100%;
+  }
+
   height: 100%;
   overflow-x: auto;
   overflow-y: auto;
