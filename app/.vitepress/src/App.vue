@@ -150,7 +150,7 @@ main {
     --layout-content-padding: 32px;
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond-to('phone') {
     --layout-content-padding: 24px;
   }
 }

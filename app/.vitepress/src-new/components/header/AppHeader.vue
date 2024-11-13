@@ -9,7 +9,7 @@ import ContentWrapper from '~@/components/ContentWrapper.vue';
 
 import logo_light from '~@/assets/category/header/logo.svg';
 import logo_dark from '~@/assets/category/header/logo_dark.svg';
-import IconCancel from '~icons/app/icon-cancel.svg';
+import IconClose from '~icons/app-new/icon-close.svg';
 import IconMenu from '~icons/app-new/icon-header-menu.svg';
 
 const router = useRouter();
@@ -106,7 +106,7 @@ const mobileClick = () => {
         <div class="icon" @click="menuPanel">
           <OIcon>
             <IconMenu v-if="!menuShow" />
-            <IconCancel v-else />
+            <IconClose v-else />
           </OIcon>
         </div>
       </div>
@@ -164,7 +164,6 @@ const mobileClick = () => {
     }
     @include respond-to('<=pad_v') {
       height: 48px;
-      padding: 0 var(--o-gap-4);
       justify-content: space-between;
       position: relative;
     }
