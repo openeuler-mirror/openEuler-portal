@@ -7,15 +7,6 @@ import summit2024_mb_dark from '~@/assets/category/home/banner/summit2024/summit
 import summit2024_attach_light from '~@/assets/category/home/banner/summit2024/summit2024_attach_light.png';
 import summit2024_attach_dark from '~@/assets/category/home/banner/summit2024/summit2024_attach_dark.png';
 
-import ossummit_pc from '~@/assets/category/home/banner/ossummit/ossummit_pc.jpg';
-import ossummit_pad from '~@/assets/category/home/banner/ossummit/ossummit_pad.jpg';
-import ossummit_mb from '~@/assets/category/home/banner/ossummit/ossummit_mb.jpg';
-import ossummit_attach from '~@/assets/category/home/banner/ossummit/ossummit_attach.png';
-
-import annual2023_pc from '~@/assets/category/home/banner/annual2023/annual2023_pc.jpg';
-import annual2023_pad from '~@/assets/category/home/banner/annual2023/annual2023_pad.jpg';
-import annual2023_mb from '~@/assets/category/home/banner/annual2023/annual2023_mb.jpg';
-
 import innovation_pc from '~@/assets/category/home/banner/innovation/innovation_pc.jpg';
 import innovation_pad from '~@/assets/category/home/banner/innovation/innovation_pad.jpg';
 import innovation_mb from '~@/assets/category/home/banner/innovation/innovation_mb.jpg';
@@ -39,25 +30,6 @@ export default {
       },
       href: '/zh/interaction/summit-list/summit2024/',
       isBlank: true,
-    },
-    {
-      bg_pc: ossummit_pc,
-      bg_pad: ossummit_pad,
-      bg_mb: ossummit_mb,
-      attach: ossummit_attach,
-      bg_theme: 'dark',
-      href: 'https://osseu2024.sched.com/event/1iWLB',
-      isBlank: true,
-    },
-    {
-      bg_pc: annual2023_pc,
-      bg_pad: annual2023_pad,
-      bg_mb: annual2023_mb,
-      href: '/zh/news/openEuler/20240223-nianbao/Untitled-1.html',
-      isBlank: true,
-      title: ['openEuler 2023 社区年报'],
-      btn: '查看详情',
-      bg_theme: 'dark',
     },
     {
       bg_pc: innovation_pc,
@@ -89,15 +61,7 @@ export default {
       href: '/en/interaction/summit-list/summit2024/',
       isBlank: true,
     },
-    {
-      bg_pc: ossummit_pc,
-      bg_pad: ossummit_pad,
-      bg_mb: ossummit_mb,
-      attach: ossummit_attach,
-      bg_theme: 'dark',
-      href: 'https://osseu2024.sched.com/event/1iWLB',
-      isBlank: true,
-    },
+
     {
       bg_pc: innovation_pc,
       bg_pad: innovation_pad,
