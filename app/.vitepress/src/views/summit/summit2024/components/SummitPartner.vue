@@ -134,6 +134,19 @@ onMounted(() => {
     justify-content: center;
   }
 }
+.co-hosts {
+  .link-item:nth-child(1) {
+    @media screen and (min-width: 1416px) {
+      margin-left: 8px;
+    }
+  }
+  .link-item:nth-child(3) {
+    @media screen and (min-width: 1416px) {
+      margin-right: 8px;
+    }
+  }
+}
+
 .partner {
   margin-top: var(--e-spacing-h1);
   @media screen and (max-width: 768px) {

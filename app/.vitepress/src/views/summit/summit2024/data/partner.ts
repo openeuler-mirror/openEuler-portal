@@ -38,6 +38,10 @@ import jindie_light from '../img/logo/jindie_light.png';
 import jindie_dark from '../img/logo/jindie_dark.png';
 import oschina_light from '../img/logo/oschina_light.png';
 import oschina_dark from '../img/logo/oschina_dark.png';
+import huawei_light from '../img/logo/huawei_light.png';
+import huawei_dark from '../img/logo/huawei_dark.png';
+import intel_light from '../img/logo/intel_light.png';
+import intel_dark from '../img/logo/intel_dark.png';
 
 export default {
   title: '共建单位',
@@ -65,8 +69,12 @@ export default {
     {
       subTitle: '联合主办方',
       subTitleEn: 'Co-Hosts',
-      class: 'center',
+      class: 'center co-hosts',
       logoList: [
+        {
+          img: huawei_light,
+          img_dark: huawei_dark,
+        },
         {
           img: qiling_light,
           img_dark: qiling_dark,
@@ -129,6 +137,10 @@ export default {
         {
           img: oschina_light,
           img_dark: oschina_dark,
+        },
+        {
+          img: intel_light,
+          img_dark: intel_dark,
         },
       ],
     },

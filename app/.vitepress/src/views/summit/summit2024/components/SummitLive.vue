@@ -191,14 +191,14 @@ const changeLive = (val: number): void => {
       justify-content: space-between;
       &.live-btn1 {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 16px;
         flex-direction: row;
         width: 100%;
         flex-wrap: wrap;
         justify-content: space-between;
         .link-main {
-          grid-column: 1/5;
+          grid-column: 1/4;
         }
       }
       &.live-btn2 {
