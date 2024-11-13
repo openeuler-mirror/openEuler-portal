@@ -83,7 +83,7 @@ watch(
 </script>
 
 <template>
-  <div class="footer">
+  <div id="tour_footer" class="footer">
     <ContentWrapper :pc-top="0" :mobile-top="0">
       <div class="atom">
         <p class="atom-text">{{ t('footer.atomText') }}</p>

@@ -88,7 +88,7 @@ const linkClick = () => {
             @mouseenter="toggleDebounced(item)"
             @mouseleave="toggleDebounced(null)"
           >
-            <span class="nav-item">{{ item.NAME }}</span>
+            <span :id="'tour_headerNav_' + item.ID" class="nav-item">{{ item.NAME }}</span>
             <transition name="transition">
               <div v-if="isShow" :class="['nav-dropdown', navActive, commonStore.theme]">
                 <div class="nav-drop-content">
@@ -229,10 +229,12 @@ const linkClick = () => {
 
   <div class="header-tool">
     <HeaderSearch />
-    <HeaderCode />
-    <HeaderLanguage :show="langOptions" />
-    <HeaderTheme />
-    <HeaderLogin />
+    <div id="tour_headerNav_tool" class="header-right">
+      <HeaderCode />
+      <HeaderLanguage :show="langOptions" />
+      <HeaderTheme />
+      <HeaderLogin />
+    </div>
   </div>
 </template>
 
@@ -256,7 +258,13 @@ const linkClick = () => {
   display: flex;
   align-items: center;
   height: 100%;
+}
+.header-right {
+  display: flex;
+  align-items: center;
   gap: 20px;
+  padding: 22px 0;
+  margin-left: 20px;
 
   @include respond-to('pad_v-laptop') {
     gap: var(--o-gap-4);
@@ -309,13 +317,18 @@ const linkClick = () => {
       }
       .nav-item {
         display: block;
-        padding: var(--o-gap-4);
+        padding: 22px var(--o-gap-4);
 
         @include respond-to('laptop') {
-          padding: 14px;
+          padding: 22px 14px;
         }
         @include respond-to('pad_h') {
-          padding: 10px;
+          padding: 22px 10px;
+        }
+        &.en {
+          @media (min-width: 841px) and (max-width: 1000px) {
+            padding: var(--o-gap-2);
+          }
         }
       }
     }

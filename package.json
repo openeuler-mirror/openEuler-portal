@@ -25,7 +25,7 @@
     "aos": "^2.3.4",
     "axios": "1.6.8",
     "dayjs": "^1.8.31",
-    "element-plus": "^2.2.9",
+    "element-plus": "2.8.0",
     "js-base64": "^3.7.5",
     "js-cookie": "3.0.1",
     "lodash-es": "^4.17.21",
