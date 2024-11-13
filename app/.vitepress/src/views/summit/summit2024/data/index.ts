@@ -1,10 +1,413 @@
-export default [
-  {
-    content_type: 'application/json;charset=UTF-8',
-    name: 'summit2024',
-    description: '',
-    title: '',
-    content:
-      '{"page":{"name":"summit2024","url":"https://www.openeuler.org/zh/interaction/summit-list/summit2024/","type":"event","sections":["AGENDA","GUEST"],"lang":"zh"},"sections":[{"type":"AGENDA","name":"活动日程","title":"活动日程","titleStripe":"agenda","agenda":[{"date":"15","title":"","spans":[{"span":"主论坛","bigClass":[{"title":"操作系统大会 2024","smallClass":[{"title":"default","desc":"","id":"agenda15_1_1","isActive":true}],"id":"agenda15_1","isActive":true}],"smallClass":[],"id":1,"isActive":true},{"span":"分论坛","bigClass":[{"title":"default","smallClass":[{"title":"麒麟软件","desc":"","id":"agenda15_2_1"},{"title":"麒麟信安","desc":"","id":"agenda15_2_2"},{"title":"统信软件","desc":"","id":"41619813-c485-45b0-811f-ac359a5fe648"},{"title":"高校创新与人才发展","desc":"","id":"263ee8c5-5cfc-44e4-94b1-67905c26ff1a"},{"title":"openEuler及ARM全球生态分论坛","desc":"","id":"8506f408-b98b-4b0d-95a7-092cdd59ff59"},{"title":"智能制造分论坛","desc":"","id":"f06918f9-ca94-4923-88e2-f78736203bad"}],"id":"agenda15_2"}],"smallClass":[],"id":2}],"isActive":true},{"date":"16","title":"","spans":[{"span":"主论坛","bigClass":[{"title":"openEuler Summit 2024","smallClass":[{"title":"default","desc":"","id":"2ee1fd3f-8095-4e1b-b90c-13bbdd9cb31f"}],"id":"agenda16_1"}],"smallClass":[],"id":1},{"span":"分论坛","bigClass":[{"title":"default","smallClass":[{"title":"Linux 内核","desc":"","id":"dca2b75e-5ad5-40d4-8c34-6d486c3b782b"},{"title":"多样性计算","desc":"","id":"57e75bc3-760a-4e48-bf12-f39f94aebbef"},{"title":"社区与开发者","desc":"","id":"b74c2970-b742-42c2-bae8-a0b6312b7cc2"},{"title":"安全与合规","desc":"","id":"0b991d76-97b6-4906-9887-bb1d4402b1ee"},{"title":"云原生","desc":"","id":"b90d65f1-a354-4e6f-8a22-a91eb5b90a04"},{"title":"迁移与运维","desc":"","id":"84f59d2d-a5e0-4a5e-b4e7-851d8c46619a"},{"title":"AI","desc":"","id":"31205cd0-bf8f-4f84-b504-3e73c91e7f1c"},{"title":"嵌入式","desc":"","id":"1ce3da51-7671-45f8-bd9a-251d86581814"}],"id":"agenda16_2"},{"title":"SIG组开放工作会议","smallClass":[{"title":"default","desc":"","id":"dca2b75e-5ad5-40d4-8c34-6d486c3b782c"}],"id":"agenda16_3"},{"title":"开发者之夜","smallClass":[{"title":"default","desc":"","id":"dca2b75e-5ad5-40d4-8c34-6d486c3b782d"}],"id":"agenda16_4"}],"smallClass":[],"id":2}]}],"datas":[{"id":"agenda15_1_1","data":[{"id":"agenda15_1_1_1","time":"09:30 - 09:55","event":"大会致辞","guestData":[{"name":"政府领导及特邀嘉宾","title":"","id":"agenda15_1_1_1_1","visible":true}]},{"id":"id10","time":"09:55 - 10:05","event":"仪式：2024年度openEuler 商业实践","guestData":[{"name":"","title":"","id":"id10","visible":true}]},{"id":"id11","time":"10:05 - 10:15","event":"仪式：2024年度openEuler 社区贡献单位","guestData":[{"name":"","title":"","id":"id11","visible":false}]},{"id":"id5","time":"10:15 - 10:30","event":"openEuler 持续创新，加速全球化","guestData":[{"name":"江大勇","title":"openEuler 委员会主席","id":"id5","visible":false}]},{"id":"id6","time":"10:30 - 10:40","event":"仪式：openEuler 操作系统全球可持续化发展倡议","guestData":[{"name":"","title":"","id":"id6","visible":true}]},{"id":"id8","time":"10:40 - 10:55","event":"ARM全球生态体系发展与合作","guestData":[{"name":"ARM生态代表","title":"","id":"id8","visible":true}]},{"id":"id10","time":"10:55 - 11:10","event":"openEuler 创新实践分享","guestData":[{"name":"特邀嘉宾","title":"","id":"id10","visible":true},{"name":"特邀嘉宾","title":"","id":"b2abc7c2-f783-468d-896c-7eab10a64e72","visible":true}]},{"id":"id8","time":"11:10 - 11:25","event":"openEuler 在金融行业的实践案例分享","guestData":[{"name":"特邀嘉宾","title":"","id":"id8","visible":true}]},{"id":"id9","time":"11:25 - 11:40","event":"openEuler 在互联网行业的实践案例分享","guestData":[{"name":"特邀嘉宾","title":"","id":"id9","visible":false}]},{"id":"id9","time":"11:40 - 11:55","event":"openEuler 国际用户代表分享","guestData":[{"name":"特邀嘉宾","title":"","id":"id9","visible":false}]}]},{"id":"agenda15_2_1","data":[{"id":"agenda15_2_1_1","time":"14:00 - 14:10","event":"开场致辞","guestData":[{"name":"特邀嘉宾","title":"","id":"agenda15_2_1_1_1"},{"name":"特邀嘉宾","title":"","id":"09b4a91b-48e3-430f-b5ba-ff614268f4c9"}]},{"id":"id1","time":"14:10 - 14:20","event":"高效的软硬协同，加速行业安全全场景落地","guestData":[{"name":"","title":"","id":"id1"}]},{"id":"id2","time":"14:30 - 14:40","event":"麒麟软件产品及解决方案介绍","guestData":[{"name":"","title":"","id":"id2"}]},{"id":"id3","time":"14:40 - 15:30","event":"生态伙伴解决方案案例分享","guestData":[{"name":"特邀嘉宾","title":"","id":"id3"},{"name":"特邀嘉宾","title":"","id":"2afeed2d-f958-4e66-88d9-e0b98e65fb77"},{"name":"特邀嘉宾","title":"","id":"d99ba1ac-5f53-4feb-b270-3a881d5eca24"},{"name":"特邀嘉宾","title":"","id":"ad05fa5a-e1a5-4980-b5e3-6e0f5ed64d8c"},{"name":"特邀嘉宾","title":"","id":"f219ccdb-ff02-4e8b-bcca-139d284ee094"}]},{"id":"id4","time":"15:30 - 16:00","event":"圆桌论坛","guestData":[{"name":"","title":"","id":"id4"}]}]},{"id":"agenda15_2_2","data":[{"id":"agenda15_2_2_1","time":"14:00 - 14:10","event":"开场致辞","guestData":[{"name":"刘文清","title":"麒麟信安总裁","id":"agenda15_2_2_1_1"},{"name":"特邀嘉宾","title":"","id":"a0729495-c970-4b24-8383-0a2698e597d2"}]},{"id":"id1","time":"14:10 - 14:30","event":"麒麟信安操作系统技术创新及行业实践","guestData":[{"name":"赵敏敏","title":"麒麟信安操作系统产品总监","id":"id1"}]},{"id":"id2","time":"14:30 - 14:50","event":"openEuler 社区主题演讲","guestData":[{"name":"openEuler 社区专家","title":"","id":"id2"}]},{"id":"id3","time":"14:50 - 15:10","event":"根植openEuler 携手共建 “一生态”","guestData":[{"name":"刘华杰","title":"湖南欧拉生态创新中心副主任","id":"id3"}]},{"id":"id4","time":"15:10 - 15:30","event":"行业解决方案分享：操作系统安全增强方案","guestData":[{"name":"高 睿","title":"麒麟信安产品与解决方案专家","id":"id4"}]},{"id":"id5","time":"15:30 - 15:50","event":"行业解决方案分享：工业领域操作系统及应用实践","guestData":[{"name":"石 勇","title":"麒麟信安操作系统研发总监","id":"id5"}]},{"id":"id6","time":"15:50 - 16:10","event":"行业解决方案分享：安全云办公解决方案及应用实践","guestData":[{"name":"高洪鹤","title":"麒麟信安产品与解决方案专家","id":"id6"}]},{"id":"id7","time":"16:10 - 16:30","event":"现场自由讨论&交流","guestData":[{"name":"","title":"","id":"id7"}]}]},{"id":"41619813-c485-45b0-811f-ac359a5fe648","data":[{"id":"76f83ca2-8bca-42f2-9ed5-e0bf5e0b96e9","time":"14:00 - 14:10","event":"开场致辞","guestData":[{"name":"统信软件领导","title":"","id":"67f7792c-f2b4-49ac-ac55-1c5687601203"},{"name":"特邀嘉宾","title":"","id":"350550a0-49d2-4b34-95d2-e7f9fa6522d0"}]},{"id":"id1","time":"14:10 - 14:30","event":"统信软件产品相关技术及商业版本特性介绍","guestData":[{"name":"统信技术专家","title":"","id":"id1"}]},{"id":"id2","time":"14:30 - 14:50","event":"社区技术主题分享","guestData":[{"name":"社区技术专家","title":"","id":"id2"}]},{"id":"id3","time":"14:50 - 15:10","event":"电力行业实践分享","guestData":[{"name":"用户代表","title":"","id":"id3"}]},{"id":"id4","time":"15:10 - 15:30","event":"金融行业实践分享","guestData":[{"name":"用户代表","title":"","id":"id4"}]},{"id":"id5","time":"15:30 - 15:50","event":"ISV案例分享","guestData":[{"name":"ISV代表","title":"","id":"id5"}]},{"id":"id6","time":"15:50 - 16:10","event":"伙伴分享","guestData":[{"name":"伙伴代表","title":"","id":"id6"}]}]},{"id":"263ee8c5-5cfc-44e4-94b1-67905c26ff1a","data":[{"id":"6b0e7896-8f8f-4501-abb9-0e48ceb9ec5f","time":"14:00-14:05","event":"开场致辞","guestData":[{"name":"特邀嘉宾","title":"","id":"5cd42f12-a5a2-409a-91f7-ede76e607fde"}]},{"id":"id1","time":"14:05-14:55","event":"技术创新成果分享","guestData":[{"name":"特邀嘉宾","title":"","id":"id1"},{"name":"特邀嘉宾","title":"","id":"3f4ab6b8-947d-4ec3-92d3-dd1fd5ff0779"},{"name":"特邀嘉宾","title":"","id":"94dd1cfe-1b0a-4d01-9f65-c18448c54b8d"},{"name":"特邀嘉宾","title":"","id":"80d68242-168f-4ba2-9f9a-f8c801fbb077"},{"name":"特邀嘉宾","title":"","id":"b6769b53-06a3-4f91-845d-a7cb36538e53"}]},{"id":"id2","time":"14:55-15:35","event":"开源应用分享","guestData":[{"name":"特邀嘉宾","title":"","id":"id2"},{"name":"特邀嘉宾","title":"","id":"af48ce51-1230-474b-a36f-11d9f8d6861a"},{"name":"特邀嘉宾","title":"","id":"d4dc5d1f-54eb-4537-8c8e-d0b64c8465f1"},{"name":"特邀嘉宾","title":"","id":"441cc0d7-bf27-4cc1-ba9b-5293bddc6b80"}]},{"id":"id3","time":"15:35-15:45","event":"人才培养","guestData":[{"name":"特邀嘉宾","title":"","id":"id3"}]},{"id":"id4","time":"15:45-16:00","event":"圆桌探讨","guestData":[{"name":"全体成员","title":"","id":"id4"}]}]},{"id":"8506f408-b98b-4b0d-95a7-092cdd59ff59","data":[{"id":"10c4aadd-25e9-4403-b9f6-14dff250e96d","time":"14:00 - 14:10","event":"开场致辞","guestData":[{"name":"熊 伟","title":"openEuler?委员会执行总监，开放原子开源基金会TOC副主席","id":"af35ac65-b0ff-492c-9c6c-a061f07c346e"},{"name":"Andrew?Wafaa","title":"\\nARM Fellow，软件社区高级总监\\n","id":"3454dbcd-fa65-402c-b3e7-146feb1d136c"}]},{"id":"id1","time":"14:10 - 14:25","event":"全球ARM服务器&操作系统趋势与进展分享","guestData":[{"name":"Jake Saunders","title":"ABI Research 亚太区与咨询服务副总裁","id":"id1"}]},{"id":"id2","time":"14:25 - 14:40","event":"全球ARM生态落地与成果分享","guestData":[{"name":"Bill?Fletcher","title":"Linaro 工程与服务销售副总裁","id":"id2"}]},{"id":"id3","time":"14:40 - 14:55","event":"金融行业实践分享","guestData":[{"name":"金融客户代表","title":"","id":"id3"}]},{"id":"id4","time":"14:55 - 15:10","event":"金融应用软件案例分享","guestData":[{"name":"伙伴代表","title":"","id":"id4"}]},{"id":"id5","time":"15:10 - 15:25","event":"泛政府行业实践分享","guestData":[{"name":"高校客户代表","title":"","id":"id5"}]},{"id":"id6","time":"15:25 - 15:40","event":"泛政府应用软件案例分享","guestData":[{"name":"伙伴代表","title":"","id":"id6"}]}]},{"id":"f06918f9-ca94-4923-88e2-f78736203bad","data":[{"id":"1a127170-d55e-4d1f-a9d9-4ddae4863ec7","time":"14:00 - 14:10","event":"加快构建新质生产力，openEuler 助力智能制造迈向新发展","guestData":[{"name":"胡正策","title":"openEuler委员会执行总监","id":"e16b3c83-e8cc-4e82-b7a5-6d9e4f3a8ff1"}]},{"id":"id1","time":"14:10 - 15:00","event":"行业布道：车企研发管理信息化以及制造信息化前言趋势分享\\n\\n案例分享：鲲鹏计算助力汽车电子信息化转型升级 \\n\\n开放研讨","guestData":[{"name":"特邀嘉宾","title":"","id":"id1"},{"name":"特邀嘉宾","title":"","id":"9af63c62-cc1f-42c9-ab0c-b2c6840dc92b"},{"name":"全体成员","title":"","id":"4d32b943-5366-477b-a875-1a5124499e37"}]},{"id":"id2","time":"15:00 - 15:35","event":"技术布道：openEluer赋能车路云一体化场景，实现“聪明的车 智慧的路”\\n\\n开放研讨\\n","guestData":[{"name":"特邀嘉宾","title":"","id":"id2"},{"name":"全体成员","title":"","id":"dc2e2a39-cc7e-4af9-8836-9e41e536a2e0"}]},{"id":"id3","time":"15:35 - 16:10","event":"技术布道：openEluer在智能汽车驾驶场景下的技术优势解读\\n\\n开放研讨","guestData":[{"name":"特邀嘉宾","title":"","id":"id3"},{"name":"全体成员","title":"","id":"6473099c-c982-4ca0-a72a-1f2339fb5d2d"}]}]},{"id":"2ee1fd3f-8095-4e1b-b90c-13bbdd9cb31f","data":[{"id":"a7935a6c-f672-41c4-94a5-927995496a01","time":"09:30 - 09:35","event":"openEuler 社区发展致辞","guestData":[{"name":"特邀嘉宾","title":"","id":"ecb38208-3925-4eaf-8eb8-0864976c1c3b"}]},{"id":"id1","time":"09:35 - 10:05","event":"海内存知已，天涯若比邻\\n\\nOpen Infrastructure Blueprint on openEuler\\n\\nCNCF CI openEuler 最新接入成果\\n\\nOpenHPC 3.x 原生支持 openEuler\\n\\nopenEuler x Linaro 最新合作进展","guestData":[{"name":"熊 伟","title":"openEuler 委员会执行总监，开放原子开源基金会TOC副主席","id":"id1"},{"name":"Kendall Nelson","title":"Senior Upstream Developer Advocate","id":"d6dafe9d-e421-42ff-8bb8-ab5a481d85b1"},{"name":"Keith Chan","title":"Linux Foundation APAC\\nDirector of Strategic Planning, CNCF China Director","id":"e825e64d-674e-4010-bd6f-731e99a08b50"},{"name":"Martin Tsvetanov Grigorov","title":"TSC Member, OpenHPC","id":"3fc25fe6-4509-493f-af65-cf76f72f8334"},{"name":"Bill Fletcher","title":"VP of Sales, Member and Service, Linaro","id":"cbff3ad0-d1ef-4099-95b0-42da34d8c213"}]},{"id":"id2","time":"10:05 - 10:10","event":"仪式：openEuler 项目群捐赠意向签约","guestData":[{"name":"项目捐赠代表","title":"","id":"id2"}]},{"id":"id3","time":"10:10 - 10:15","event":"仪式：openEuler 社区伙伴跟随24.03LTS 商业版本发布","guestData":[{"name":"伙伴代表","title":"","id":"id3"}]},{"id":"id4","time":"10:15 - 10:50","event":"openEuler 技术展望主题演讲\\n\\n共建开源安全新标准","guestData":[{"name":"胡欣蔚","title":"openEuler 技术委员会主席","id":"id4"},{"name":"Gopi Krishnan Rajbahadur","title":"Co-Lead of SPDX AI and Dataset Profile, Ambassdor","id":"a88e53f9-94d1-41fd-a213-cbe7b252271d"},{"name":"特邀嘉宾","title":"","id":"4b0a3c24-b00d-4dcd-b1f7-1d0ba359326e"}]},{"id":"id5","time":"10:50 - 11:00","event":"openEuler & Friends 5.0","guestData":[{"name":"社区开发者","title":"","id":"id5"}]},{"id":"id6","time":"11:00 - 11:10","event":"麒麟软件商业成果分享","guestData":[{"name":"特邀嘉宾","title":"","id":"id6"}]},{"id":"id7","time":"11:10 - 11:15","event":"麒麟信安商业成果分享","guestData":[{"name":"特邀嘉宾","title":"","id":"id7"}]},{"id":"id8","time":"11:15 - 11:25","event":"统信软件商业成果分享","guestData":[{"name":"特邀嘉宾","title":"","id":"id8"}]},{"id":"id9","time":"11:25 - 11:35","event":"超聚变商业成果分享","guestData":[{"name":"特邀嘉宾","title":"","id":"id9"}]},{"id":"id12","time":"11:35 - 11:45","event":"伙伴商业成果分享","guestData":[{"name":"特邀嘉宾","title":"","id":"id12"}]},{"id":"id10","time":"11:45 - 11:55","event":"仪式：openEuler 2024年度项目之星","guestData":[{"name":"获奖代表","title":"","id":"id10"}]},{"id":"id11","time":"11:55 - 12:00","event":"仪式：openEuler 2024年度贡献之星","guestData":[{"name":"获奖代表","title":"","id":"id11"}]}]},{"id":"dca2b75e-5ad5-40d4-8c34-6d486c3b782b","data":[{"id":"e29ded85-fa7f-44af-bb4e-725fefbbd25d","time":"13:30-13:35","event":"开场致辞","guestData":[{"name":"李晨斌","title":"凝思软件社区产品专家","id":"fcada889-f249-4b1e-8414-701dcdcbe934"}]},{"id":"id1","time":"13:35-13:40","event":"openEuler 内核社区发展介绍","guestData":[{"name":"谢秀奇","title":"openEuler 社区Kernel SIG Maintainer","id":"id1"}]},{"id":"id2","time":"13:40-13:55","event":"基于openEuler 内核实现 PRIP 协议与应用","guestData":[{"name":"段武杰","title":"凝思软件研发产品经理\\n","id":"id2"}]},{"id":"id3","time":"13:55-14:10","event":"动态精细化的进程级内存超分技术","guestData":[{"name":"石光银","title":"浪潮云操作系统架构师","id":"id3"}]},{"id":"id4","time":"14:10-14:25","event":"基于libbpf的内核分析工具集介绍","guestData":[{"name":"陈 源","title":"麒麟软件内核软件研发工程师","id":"id4"}]},{"id":"id5","time":"14:25-14:40","event":"基于eBPF的高性能带宽管理实践","guestData":[{"name":"高 伟","title":"大华大数据研究院云平台研发总监","id":"id5"}]},{"id":"id6","time":"14:40-14:55","event":"基于CXL设计虚拟机共享内存池","guestData":[{"name":"温志伟、王迪","title":"麒麟软件操作系统研发工程师","id":"id6"}]},{"id":"id7","time":"14:55-15:05","event":"处理器 uncore 调频框架与调频策略","guestData":[{"name":"李 伟","title":"华为操作系统研发工程师\\n","id":"id7"}]},{"id":"id8","time":"15:05-15:20","event":"高性能计算场景性能调优","guestData":[{"name":"苏 伟","title":"麒麟信安高级系统工程师\\n","id":"id8"}]},{"id":"id9","time":"15:20-15:30","event":"oeAware：业务场景在线无感调优框架介绍","guestData":[{"name":"刘长庚","title":"华为操作系统研发工程师","id":"id9"}]},{"id":"id10","time":"15:30-15:45","event":"异构算力切分技术与云原生容器生态","guestData":[{"name":"Meskhidze Konstantin、陈辉","title":"华为OS内核研发工程师\\n","id":"id10"}]},{"id":"id11","time":"15:45-16:00","event":"openEuler 支持 AMD SEV-SNP 介绍","guestData":[{"name":"王文宽","title":"AMD Linux 内核专家","id":"id11"}]}]},{"id":"57e75bc3-760a-4e48-bf12-f39f94aebbef","data":[{"id":"62995a1f-0073-40af-b703-a386790955b9","time":"13:30-13:35","event":"开场致辞","guestData":[{"name":"杨 彬","title":"软通动力\\n","id":"ae50adb3-78cc-4b19-af97-2c0664b839d6"}]},{"id":"id1","time":"13:35-13:55","event":"龙架构携手openEuler社区共建软件生态","guestData":[{"name":"王洪虎","title":"龙芯中科操作系统研发总监","id":"id1"}]},{"id":"id2","time":"13:55-14:10","event":"Accelerate Arm64 Spark SQL with Gluten and Velox","guestData":[{"name":"Yuqi Gu","title":"Arm China Staff Software Engineer","id":"id2"}]},{"id":"id3","time":"14:10-14:30","event":"RISC-V 加速 openEuler 异构计算生态","guestData":[{"name":"王经纬","title":"中国科学院软件研究所工程师","id":"id3"}]},{"id":"id4","time":"14:30-14:45","event":"基于虚拟化与分布式通信技术促进异构系统与跨平台应用的生态融合","guestData":[{"name":"魏建刚","title":"江苏润和高级产品经理","id":"id4"}]},{"id":"id5","time":"14:45-15:00","event":"基于QT套件实现跨平台系统的通用图形界面开发","guestData":[{"name":"王立忠","title":"软通动力开发专家","id":"id5"}]},{"id":"id6","time":"15:00-15:15","event":"openEuler 上通过UADK加速大数据应用的最佳实践","guestData":[{"name":"赵 帅","title":"Linaro，Tech Lead ","id":"id6"},{"name":"陈 强","title":"openEuler bigdata SIG maintainer","id":"07da7a3e-9291-4401-bcf9-d8c1324ca957"}]},{"id":"id7","time":"15:15-15:30","event":"可编程网络在DPU上的应用","guestData":[{"name":"唐 杰","title":"益思芯产品方案副总裁","id":"id7"}]},{"id":"id8","time":"15:30-15:45","event":"SPDK使能UADK实现压缩和加解密的卸载","guestData":[{"name":"刘秦飞","title":"华为高级工程师","id":"id8"}]},{"id":"id9","time":"15:45-16:00","event":"CFGO下一站：动态反馈优化","guestData":[{"name":"王如锋","title":"华为编译器开发工程师","id":"id9"}]}]},{"id":"b74c2970-b742-42c2-bae8-a0b6312b7cc2","data":[{"id":"b1236ded-7bc4-40ed-9044-8ce6e91d8d69","time":"13:30-13:35","event":"开场致辞","guestData":[{"name":"郑振宇","title":"openEuler 社区运营组组长","id":"c2dfbf16-4fc0-44e7-ae76-565c80b1ca14"}]},{"id":"id1","time":"13:35-13:55","event":"点亮开源新星——openEuler@开源之夏&开源实习","guestData":[{"name":"李 梦","title":"中国科学院软件研究所开源之夏运营负责人","id":"id1"}]},{"id":"id2","time":"13:55-14:10","event":"Devstation：智能化开发平台","guestData":[{"name":"李 萍","title":"华为高级工程师","id":"id2"}]},{"id":"id3","time":"14:10-14:30","event":"从开发到交付的全流程自动化：CI/CD流水线场景及应用实践","guestData":[{"name":"季宗耀","title":"统信软件研发主管","id":"id3"}]},{"id":"id4","time":"14:30-14:45","event":"社区基础设施如何连接openEuler软件生态","guestData":[{"name":"钟源珂","title":"华为高级软件开发工程师","id":"id4"}]},{"id":"id5","time":"14:45-15:00","event":"epkg：openEuler下一代包管理","guestData":[{"name":"吴峰光","title":"华为高级技术专家","id":"id5"}]},{"id":"id6","time":"15:00-15:15","event":"如何通过 openEuler 构筑 EulixOS 3.0","guestData":[{"name":"常秉善","title":"中国科学院软件研究所软件工程师","id":"id6"}]},{"id":"id7","time":"15:15-15:30","event":"oeDeploy：为用户提供最佳部署体验","guestData":[{"name":"丁嘉辉","title":"华为高级工程师","id":"id7"}]},{"id":"id8","time":"15:45-16:00","event":"LTO 在 openEuler 上的实践与探索","guestData":[{"name":"王淳洋","title":"华为软件工程师","id":"id8"}]}]},{"id":"0b991d76-97b6-4906-9887-bb1d4402b1ee","data":[{"id":"70ad1fdf-38c5-4d4b-a681-f6e5bfdf685b","time":"13:30-13:35","event":"开场致辞","guestData":[{"name":"朱健伟","title":"openEuler 安全委员会主席","id":"38196506-211b-4b34-bcb2-afbacfe31a9a"}]},{"id":"id1","time":"13:35-13:55","event":"OpenChain：开源软件供应链管理和安全保障认证实践","guestData":[{"name":"裘 健","title":"法国BV 网络安全及合作伙伴经理","id":"id1"}]},{"id":"id2","time":"13:55-14:10","event":"构建安全可信生态：漏洞治理和安全认证","guestData":[{"name":"何伊曼","title":"德凯网络安全高级工程师","id":"id2"}]},{"id":"id3","time":"14:10-14:30","event":"CSAF规范漏洞披露实践","guestData":[{"name":"Sonny van Lingen","title":"CSAF TC member","id":"id3"}]},{"id":"id4","time":"14:30-14:45","event":"开源社区贡献者的合规遵从意识提升","guestData":[{"name":"魏建刚","title":"江苏润和高级产品经理","id":"id4"}]},{"id":"id5","time":"14:45-15:00","event":"openEuler 机密计算技术与实践","guestData":[{"name":"侯明永","title":"openEuler 机密计算SIG Maintainer","id":"id5"}]},{"id":"id6","time":"15:00-15:15","event":"CFCA安全启动签名体系介绍和实践","guestData":[{"name":"宋鑫磊","title":"中金金融认证中心信息安全专家","id":"id6"}]},{"id":"id7","time":"15:15-15:30","event":"前沿密码安全技术的探索与实践","guestData":[{"name":"同 理","title":"华为技术专家","id":"id7"}]},{"id":"id8","time":"15:30-15:45","event":"FusionOS操作系统安全技术实践","guestData":[{"name":"王金超","title":"超聚变安全架构师","id":"id8"}]},{"id":"id9","time":"15:45-16:00","event":"网络运行安全背景下操作系统安全需求分析","guestData":[{"name":"路晔绵","title":"中国信息通信研究院高级安全专家","id":"id9"}]}]},{"id":"b90d65f1-a354-4e6f-8a22-a91eb5b90a04","data":[{"id":"9c8e9622-1da9-4701-a737-ba5a9b720e17","time":"13:30-13:45","event":"基于云原生底座的大模型训推管理","guestData":[{"name":"敬少飞","title":"宝兰德产品总监","id":"b982d2c2-b1e7-426f-ac8c-c05a4c7cbaaf"}]},{"id":"id1","time":"13:45-14:00","event":"基于eBPF构建高性能内核原生Sidecarless服务网格","guestData":[{"name":"徐中虎","title":"华为云开源技术专家","id":"id1"}]},{"id":"id2","time":"14:00-14:15","event":"openAMDC 面向AI云原生的新型内存数据网格","guestData":[{"name":"林 琳","title":"金蝶天燕产品研发中心总经理，首席架构师","id":"id2"}]},{"id":"id3","time":"14:15-14:30","event":"open-ebackup：基于云原生架构的数据安全和保护","guestData":[{"name":"张双民","title":"华为数据保护软件首席架构师","id":"id3"}]},{"id":"id4","time":"14:30-14:45","event":"超融合虚拟化场景SPECVirt性能调优实践","guestData":[{"name":"鲍永雷 / 王利民","title":"超聚变技术专家","id":"id4"}]},{"id":"id5","time":"14:45-15:00","event":"基于openEuler 的云原生存储可靠性探索与实践","guestData":[{"name":"杨晓亮","title":"统信软件资深研发工程师","id":"id5"}]},{"id":"id6","time":"15:00-15:15","event":"Gazelle多进程架构下UDP组播的支持和实践","guestData":[{"name":"万 峰","title":"麒麟软件高级软件工程师","id":"id6"}]},{"id":"id7","time":"15:15-15:30","event":"基于在离线混部的集群资源利用率提升","guestData":[{"name":"李帅","title":"华为云原生开发高级工程师","id":"id7"},{"name":"张建津","title":"联通数科容器产品技术架构师","id":"488d87f3-7eff-41c7-a1a2-295733f6cb44"}]},{"id":"id8","time":"15:30-15:45","event":"云原生基础设施的安全规范","guestData":[{"name":"王 麟","title":"天翼云研发专家","id":"id8"}]},{"id":"id9","time":"15:45-16:00","event":"KTIB：赋能CI/CD中的多架构镜像合规构建与管理","guestData":[{"name":"华宇萌","title":"麒麟软件研发工程师","id":"id9"}]}]},{"id":"84f59d2d-a5e0-4a5e-b4e7-851d8c46619a","data":[{"id":"81ef82ed-c2b1-4cdd-936d-a4e371c2769f","time":"13:30-13:35","event":"开场致辞","guestData":[{"name":"张 剑","title":"江苏润和研发总监","id":"6c7be557-45e7-4b5b-a43a-86d4c5c3c445"}]},{"id":"id1","time":"13:35-13:55","event":"差异化环境下KVM虚拟机热迁移技术","guestData":[{"name":"王 迪","title":"麒麟软件高级软件工程师","id":"id1"}]},{"id":"id2","time":"13:55-14:10","event":"AI智能运维管理平台PilotGo","guestData":[{"name":"张 寒","title":"麒麟软件高级研发工程师","id":"id2"}]},{"id":"id3","time":"14:10-14:30","event":"A-Ops 3.0，基于大模型的自然语言交互平台","guestData":[{"name":"卢学贤","title":"华为智能运维开发工程师","id":"id3"}]},{"id":"id4","time":"14:30-14:45","event":"日志模型在操作系统运维中的应用","guestData":[{"name":"肖春阳","title":"华为开发工程师","id":"id4"}]},{"id":"id5","time":"14:45-15:00","event":"基于鲲鹏+openEuler 生态实现Windows web应用迁移","guestData":[{"name":"富 焘","title":"华为openEuler 迁移技术专家\\n","id":"id5"}]},{"id":"id6","time":"15:00-15:15","event":"大数据平台原地迁移与智能运维","guestData":[{"name":"张 剑","title":"江苏润和研发总监","id":"id6"}]},{"id":"id7","time":"15:15-15:30","event":"基于容器与虚拟化技术实现PE应用跨架构跨平台融合使用","guestData":[{"name":"魏建刚","title":"江苏润和高级产品经理","id":"id7"}]},{"id":"id8","time":"15:30-15:45","event":"麒麟信安一站式系统迁移平台系统迁移加固方案及Windows迁移拓展","guestData":[{"name":"高 睿","title":"麒麟信安产品经理","id":"id8"}]},{"id":"id9","time":"15:45-16:00","event":"基于ebpf技术的云原生网络可观测性","guestData":[{"name":"孙景浩","title":"华为高级服务工程师","id":"id9"}]}]},{"id":"31205cd0-bf8f-4f84-b504-3e73c91e7f1c","data":[{"id":"41f3cb2f-60e5-4459-a488-aa04cd44505a","time":"13:30-13:45","event":"基于openEuler 大模型中间件助力企业大模型应用快速落地","guestData":[{"name":"杨西利","title":"东方通高级产品经理","id":"822023f3-1835-48b6-b0c2-262b09d68f21"}]},{"id":"id1","time":"13:45-14:00","event":"基于EulerCopilot的行业落地实践","guestData":[{"name":"徐 洋","title":"华鲲振宇生态发展部部长","id":"id1"}]},{"id":"id2","time":"14:00-14:15","event":"OPEA+openEuler：开箱即用的企业级生成式AI解决方案","guestData":[{"name":"田 俊","title":"英特尔软件开发工程师","id":"id2"}]},{"id":"id3","time":"14:15-14:30","event":"基于copilot的联通内部AI实践","guestData":[{"name":"阳文兵","title":"联通数科工程师","id":"id3"}]},{"id":"id4","time":"14:30-14:45","event":"基于LLM的麒麟信安新一代智能运维管理平台","guestData":[{"name":"邓旺波","title":"麒麟信安研发副经理","id":"id4"}]},{"id":"id5","time":"14:45-15:00","event":"基于统信UOS的EulerCopilot部署实践与应用","guestData":[{"name":"王 萌","title":"统信软件系统研发工程师","id":"id5"}]},{"id":"id6","time":"15:00-15:15","event":"云原生AI平台构建：从模型开发到生产环境的自动化与扩展","guestData":[{"name":"吴言平","title":"统信软件资深研发工程师","id":"id6"}]},{"id":"id7","time":"15:15-15:30","event":"LLM智能运行：从智算到通算/智算协同加速大模型推理","guestData":[{"name":"董微、王成","title":"华为高级研发工程师","id":"id7"}]},{"id":"id8","time":"15:30-15:45","event":"超聚变操作系统与AI的高性能融合","guestData":[{"name":"韩武琦","title":"超聚变解决方案架构师","id":"id8"}]},{"id":"id9","time":"15:45-16:00","event":"基于润和软件HopeOS for AI的智慧政府方案实践","guestData":[{"name":"魏 博","title":"江苏润和欧拉业务部产品与解决方案总监","id":"id9"}]}]},{"id":"1ce3da51-7671-45f8-bd9a-251d86581814","data":[{"id":"7f27293a-6507-4ebe-b447-1e705a0b9f1f","time":"13:30-13:35","event":"开场致辞","guestData":[{"name":"任 慰","title":"openEuler 社区技术委员会委员","id":"2c21a5b8-8658-4428-a071-a7faf24c3321"}]},{"id":"id1","time":"13:35-13:55","event":"基于openEuler+AI 高校人才培养与就业","guestData":[{"name":"杜 辉","title":"易百纳技术社区创始人","id":"id1"}]},{"id":"id2","time":"13:55-14:10","event":"基于openEuler的功能安全计算中间件关键技术","guestData":[{"name":"黄新林","title":"同济大学教授","id":"id2"}]},{"id":"id3","time":"14:10-14:30","event":"基于异构多核处理器的欧拉系统开发及工业应用案例分享","guestData":[{"name":"丁度树","title":"广州创龙产品总监","id":"id3"}]},{"id":"id4","time":"14:30-14:45","event":"openEuler与OneOS携手，共创AMP双系统新方案","guestData":[{"name":"何 剑","title":"中移物联网操作系统产品部首席架构师","id":"id4"}]},{"id":"id5","time":"14:45-15:00","event":"嵌入式场景下的OS实时性能优化及测试方法","guestData":[{"name":"王有康，靳若斌","title":"超聚变操作系统资深工程师","id":"id5"}]},{"id":"id6","time":"15:00-15:15","event":"嵌入式欧拉系统在工业场景的最新应用","guestData":[{"name":"覃 彪","title":"深圳米尔电子产品经理","id":"id6"}]},{"id":"id7","time":"15:15-15:30","event":"华郅边缘智算平台的行业实践","guestData":[{"name":"周宏斌","title":"华郅解决方案副总经理","id":"id7"}]},{"id":"id8","time":"15:30-15:45","event":"基于ZVM的openEuler embedded混合关键系统框架","guestData":[{"name":"谢国琪","title":"湖南大学教授，嵌入式与网络计算湖南省重点实验室主任","id":"id8"}]},{"id":"id9","time":"15:45-16:00","event":"基于OEE支撑工业机器人用户显控一体化平台","guestData":[{"name":"舒 明","title":"粤港澳大湾区国家技术创新中心嵌入式操作系统产品部首席技术总监","id":"id9"}]}]},{"id":"dca2b75e-5ad5-40d4-8c34-6d486c3b782c","data":[{"id":"e29ded85-fa7f-44af-bb4e-725fefbbd25e","time":"16:15 - 17:45","event":"SIG组开放工作会议","guestData":[{"name":"","title":"","id":"fcada889-f249-4b1e-8414-701dcdcbe935"}]}]},{"id":"dca2b75e-5ad5-40d4-8c34-6d486c3b782d","data":[{"id":"e29ded85-fa7f-44af-bb4e-725fefbbd25f","time":"18:00 - 20:00","event":"开发者之夜","guestData":[{"name":"","title":"","id":"fcada889-f249-4b1e-8414-701dcdcbe936"}]}]}]},{"type":"BANNER","name":"活动banner","imgs":[{"type":"PC","name":"PC端","isActive":true,"img":{"lightBg":"","lightWord":"","darkBg":"","darkWord":""}},{"type":"PAD","name":"Pad端","isActive":false,"img":{"lightBg":"","lightWord":"","darkBg":"","darkWord":""}},{"type":"H5","name":"移动端","isActive":false,"img":{"lightBg":"","darkBg":""}}],"operate":[]},{"type":"INTRODUCTION","name":"大会简介","title":"大会简介","titleStripe":"introduction","desc":"","hasCard":false,"data":[]},{"type":"GUEST","name":"活动嘉宾","title":"活动嘉宾","titleStripe":"","guestClass":[{"title":"操作系统大会主论坛嘉宾","isActive":false,"id":"6IwL8EDQ6HcB1TBc"},{"title":"openEuler Summit 2024主论坛嘉宾","isActive":true,"id":"9d8huIQdG6XzCDGj"}],"datas":[{"id":"6IwL8EDQ6HcB1TBc","data":[{"id":"ZOybXZHaFZbpbgCT","name":"程晓明","nameVisible":false,"img":"https://obs-openeuler-easyeditor-test.obs.ap-southeast-1.myhuaweicloud.com:443/5c597e56-e898-493d-a06c-bec5b4fe35b1.png","imgVisible":true,"title":"开放原子基金会;理事长；","titleVisible":false},{"id":"e4NSz383Pn1I8vYV","name":"倪光南","nameVisible":false,"img":"https://obs-openeuler-easyeditor-test.obs.ap-southeast-1.myhuaweicloud.com:443/d19ea733-6e2f-4742-9b9c-80d53cfe35fd.png","imgVisible":true,"title":"中国工程院；\\n院士","titleVisible":false},{"id":"nirimtFMoYUUvNOY","name":"江大勇","nameVisible":false,"img":"https://obs-openeuler-easyeditor-test.obs.ap-southeast-1.myhuaweicloud.com:443/5d174f44-6677-43de-b3e6-5c607da0f8ca.png","imgVisible":true,"title":"openEuler委员会；\\n主席","titleVisible":false},{"id":"jYSNhhZhJjQ3XicR","name":"吕仲涛","nameVisible":false,"img":"https://obs-openeuler-easyeditor-test.obs.ap-southeast-1.myhuaweicloud.com:443/a176f3d2-3deb-43a0-ac74-b087c7b43914.png","imgVisible":true,"title":"北京金融科技产业联盟；\\n董事长","titleVisible":false}]},{"id":"9d8huIQdG6XzCDGj","data":[{"id":"6lvxO4ZXXWv58vAM","name":"江大勇","nameVisible":false,"img":"https://obs-openeuler-easyeditor-test.obs.ap-southeast-1.myhuaweicloud.com:443/d133f084-5699-46cb-9f01-46124a362830.png","imgVisible":true,"title":"openEuler委员会；主席","titleVisible":false},{"id":"YcCnMmIaI8Hq5EvZ","name":"熊伟","nameVisible":false,"img":"https://obs-openeuler-easyeditor-test.obs.ap-southeast-1.myhuaweicloud.com:443/c9d35120-3ab7-460d-9d4e-c26321d66538.png","imgVisible":true,"title":"openEuler委员会执行总监；开发原子开源基金会TOC副主席","titleVisible":false},{"id":"BA07uuBL0sw3NVW5","name":"胡欣蔚","nameVisible":false,"img":"https://obs-openeuler-easyeditor-test.obs.ap-southeast-1.myhuaweicloud.com:443/e3021d76-7bf0-4064-bf37-0d83f415594f.png","imgVisible":true,"title":"openEuler技术委员会；主席","titleVisible":false}]}]},{"type":"PARTNER","name":"共建单位","title":"共建单位","titleStripe":"cooperate","partnerClass":[],"datas":[]},{"type":"REVIEW","name":"往期回顾","title":"往期回顾","titleStripe":"highlights review","data":[{"id":"9","year":"2023","title":"openEuler Summit 2023","url":"https://www.openeuler.org/zh/interaction/summit-list/summit2023/","urlVisible":false},{"id":"8","year":"2023","title":"openEuler Developer Day 2023","url":"https://www.openeuler.org/zh/interaction/summit-list/devday2023/","urlVisible":false,"yearVisible":false},{"id":"7","year":"2022","title":"openEuler Summit 2022","url":"https://www.openeuler.org/zh/interaction/summit-list/summit2022/","urlVisible":false,"yearVisible":false},{"id":"5","year":"2022","title":"openEuler Developer Day 2022","url":"https://v1.openeuler.org/zh/interaction/summit-list/devday2022/","yearVisible":false},{"id":"4","year":"2021","title":"openEuler Summit 2021","url":"https://v1.openeuler.org/zh/interaction/summit-list/summit2021/","urlVisible":false},{"id":"3","year":"2021","title":"openEuler Developer Day 2021","url":"https://v1.openeuler.org/zh/interaction/summit-list/devday2021/","titleVisible":false},{"id":"2","year":"2020","title":"openEuler Summit 2020","url":"https://v1.openeuler.org/zh/interaction/summit-list/","urlVisible":false,"titleVisible":false},{"id":"1","year":"2020","title":"openEuler Virtual Summit 2020","url":"https://v1.openeuler.org/zh/interaction/summit-list/list/","titleVisible":false,"urlVisible":false}]}],"step":2}',
-  },
-];
+import Andrew from '../img/guest/Andrew Wafaa.png';
+import dengwangbo from '../img/guest/dengwangbo.png';
+import dingdushu from '../img/guest/dingdushu.png';
+import Dr from '../img/guest/Dr. Nyoman Suwartha.png';
+import dukaitian from '../img/guest/dukaitian.png';
+import fanjiacheng from '../img/guest/fanjiacheng.png';
+import gaorui from '../img/guest/gaorui.png';
+import hejian from '../img/guest/hejian.png';
+import heyiman from '../img/guest/heyiman.png';
+import huayumeng from '../img/guest/huayumeng.png';
+import hufeng from '../img/guest/hufeng.png';
+import huxinwei from '../img/guest/huxinwei.png';
+import jiangdayong from '../img/guest/jiangdayong.png';
+import lichenbin from '../img/guest/lichenbin.png';
+import liujilong from '../img/guest/liujilong.png';
+import luhuamian from '../img/guest/luhuamian.png';
+import luojuekai from '../img/guest/luojuekai.png';
+import lvzhongtao from '../img/guest/lvzhongtao.png';
+import niguangnan from '../img/guest/niguangnan.png';
+import shihaitao from '../img/guest/shihaitao.png';
+import sognxinlei from '../img/guest/sognxinlei.png';
+import wanfeng from '../img/guest/wanfeng.png';
+import wanglin from '../img/guest/wanglin.png';
+import wangmeng from '../img/guest/wangmeng.png';
+import wangzhi from '../img/guest/wangzhi.png';
+import weijiangang from '../img/guest/weijiangang.png';
+import xiexiuqi from '../img/guest/xiexiuqi.png';
+import xiongwei from '../img/guest/xiongwei.png';
+import xuxuepeng from '../img/guest/xuxuepeng.png';
+import yangbin from '../img/guest/yangbin.png';
+import yanlinlin from '../img/guest/yanlinlin.png';
+import zhangjian from '../img/guest/zhangjian.png';
+import zhangjianjin from '../img/guest/zhangjianjin.png';
+import zhangye from '../img/guest/zhangye.png';
+import zhengzhenyu from '../img/guest/zhengzhenyu.png';
+
+export default {
+  type: 'GUEST',
+  name: '活动嘉宾',
+  title: '活动嘉宾',
+  titleStripe: '',
+  guestClass: [
+    {
+      title: '操作系统大会主论坛嘉宾',
+      isActive: false,
+      id: '6IwL8EDQ6HcB1TBc',
+    },
+    {
+      title: 'openEuler Summit 2024主论坛嘉宾',
+      isActive: false,
+      id: '9d8huIQdG6XzCDGj',
+    },
+    {
+      title: '分论坛演讲嘉宾',
+      isActive: true,
+      id: 'luNrAKkg4Ss4ug33',
+    },
+    {
+      title: '技术论坛出品人',
+      isActive: false,
+      id: 'lekFUMeJuR2Qpd9b',
+    },
+  ],
+  datas: [
+    {
+      id: '6IwL8EDQ6HcB1TBc',
+      data: [
+        {
+          id: 'e4NSz383Pn1I8vYV',
+          name: '倪光南',
+          nameVisible: false,
+          img: niguangnan,
+          imgVisible: true,
+          title: '中国工程院；\n院士',
+          titleVisible: false,
+        },
+        {
+          id: 'nirimtFMoYUUvNOY',
+          name: '江大勇',
+          nameVisible: false,
+          img: jiangdayong,
+          imgVisible: true,
+          title: 'openEuler委员会；\n主席',
+          titleVisible: false,
+        },
+        {
+          id: 'afPsBfG6G6OubqTD',
+          name: 'Andrew Wafaa',
+          nameVisible: false,
+          img: Andrew,
+          imgVisible: true,
+          title: 'Senior Director&Fellow；\nSoftware Communities',
+          titleVisible: false,
+        },
+        {
+          id: 'jYSNhhZhJjQ3XicR',
+          name: '吕仲涛',
+          nameVisible: false,
+          img: lvzhongtao,
+          imgVisible: true,
+          title: '北京金融科技产业联盟；\n董事长',
+          titleVisible: false,
+        },
+      ],
+    },
+    {
+      id: '9d8huIQdG6XzCDGj',
+      data: [
+        {
+          id: '6lvxO4ZXXWv58vAM',
+          name: '江大勇',
+          nameVisible: false,
+          img: jiangdayong,
+          imgVisible: true,
+          title: 'openEuler委员会；主席',
+          titleVisible: false,
+        },
+        {
+          id: 'YcCnMmIaI8Hq5EvZ',
+          name: '熊伟',
+          nameVisible: false,
+          img: xiongwei,
+          imgVisible: true,
+          title: 'openEuler委员会执行总监；开发原子开源基金会TOC副主席',
+          titleVisible: false,
+        },
+        {
+          id: 'BA07uuBL0sw3NVW5',
+          name: '胡欣蔚',
+          nameVisible: false,
+          img: huxinwei,
+          imgVisible: true,
+          title: 'openEuler技术委员会；主席',
+          titleVisible: false,
+        },
+        {
+          id: 'OCWKUFIootwPhXCi',
+          name: 'Dr. Nyoman Suwartha',
+          nameVisible: false,
+          img: Dr,
+          imgVisible: true,
+          title:
+            'Associate Dean of Education；\nFaculty of Engineering；\nUniversitas Indonesia',
+          titleVisible: false,
+        },
+        {
+          id: '7vSUr4u4ngxQaFzf',
+          name: '张野',
+          nameVisible: false,
+          img: zhangye,
+          imgVisible: true,
+          title: '中金金融认证中心有限公司 (CFCA)；\n 副总经理',
+          titleVisible: false,
+        },
+        {
+          id: 'p8pzKx5l2Bs4fQ0z',
+          name: '刘继龙',
+          nameVisible: false,
+          img: liujilong,
+          imgVisible: true,
+          title: '广州重点实验室；\n高级工程师',
+          titleVisible: false,
+        },
+      ],
+    },
+
+    {
+      id: 'luNrAKkg4Ss4ug33',
+      data: [
+        {
+          id: 'lf14EP2pux2fWoxJ',
+          name: '邓旺波',
+          nameVisible: false,
+          img: dengwangbo,
+          imgVisible: true,
+          title: '湖南麒麟信安科技股份有限公司；\n研发副经理',
+          titleVisible: false,
+        },
+        {
+          id: 'cUumPvgeynFokyQd',
+          name: '丁度树',
+          nameVisible: false,
+          img: dingdushu,
+          imgVisible: true,
+          title: '广州创龙电子科技有限公司；产品总监',
+          titleVisible: false,
+        },
+        {
+          id: 'rt712xZ9iKgPoP8W',
+          name: '高睿',
+          nameVisible: false,
+          img: gaorui,
+          imgVisible: true,
+          title: '麒麟信安；\n产品经理',
+          titleVisible: false,
+        },
+        {
+          id: 'ceI4hbqG8nb7cSaM',
+          name: '何剑',
+          nameVisible: false,
+          img: hejian,
+          imgVisible: true,
+          title: '中移物联网有限公司\n操作系统产品部首席架构师',
+          titleVisible: false,
+        },
+        {
+          id: 'xdE2Ld6bYeufIVG1',
+          name: '何伊曼',
+          nameVisible: false,
+          img: heyiman,
+          imgVisible: true,
+          title: '德凯质量认证（上海）有限公司\n网络安全高级工程师',
+          titleVisible: false,
+        },
+        {
+          id: 'PapUaUNSX311wpWc',
+          name: '华宇萌',
+          nameVisible: false,
+          img: huayumeng,
+          imgVisible: true,
+          title: '麒麟软件有限公司；\n研发工程师',
+          titleVisible: false,
+        },
+        {
+          id: 'QjtMNLhhAFA4lRda',
+          name: '路晔绵',
+          nameVisible: false,
+          img: luhuamian,
+          imgVisible: true,
+          title: '中国信息通信研究院；\n高级安全专家',
+          titleVisible: false,
+        },
+        {
+          id: 'IIsXviYm2tem7upM',
+          name: '宋鑫磊',
+          nameVisible: false,
+          img: sognxinlei,
+          imgVisible: true,
+          title: '中金金融认证中心有限公司；\n信息安全专家',
+          titleVisible: false,
+        },
+        {
+          id: 'xj7CVkKXyWHkm2Z0',
+          name: '万峰',
+          nameVisible: false,
+          img: wanfeng,
+          imgVisible: true,
+          title: '麒麟软件有限公司；\n高级软件工程师',
+          titleVisible: false,
+        },
+        {
+          id: 'z37MhOijhSKbRph9',
+          name: '王麟',
+          nameVisible: false,
+          img: wanglin,
+          imgVisible: true,
+          title: '天翼云；\n研发专家',
+          titleVisible: false,
+        },
+        {
+          id: 'xOXphNWMT2V1wRXo',
+          name: '王萌',
+          nameVisible: false,
+          img: wangmeng,
+          imgVisible: true,
+          title: '统信软件系统；\n研发工程师',
+          titleVisible: false,
+        },
+        {
+          id: 'JsybW6SUFAsJGzja',
+          name: '魏建刚',
+          nameVisible: false,
+          img: weijiangang,
+          imgVisible: true,
+          title: '江苏润和软件股份有限公司；\n高级产品经理',
+          titleVisible: false,
+        },
+        {
+          id: 'e6qlSggwbsSwTNvl',
+          name: '燕林琳',
+          nameVisible: false,
+          img: yanlinlin,
+          imgVisible: true,
+          title:
+            '深圳市金蝶天燕云计算股份有限公司；\n产品研发中心总经理&首席架构师',
+          titleVisible: false,
+        },
+        {
+          id: 'tuOMb7xZSNGr1JWn',
+          name: '张建津',
+          nameVisible: false,
+          img: zhangjianjin,
+          imgVisible: true,
+          title: '联通数科；\n容器产品技术架构师',
+          titleVisible: false,
+        },
+      ],
+    },
+    {
+      id: 'lekFUMeJuR2Qpd9b',
+      data: [
+        {
+          id: 'uJxYeJRmEVl3qkDF',
+          name: '谢秀奇',
+          nameVisible: false,
+          img: xiexiuqi,
+          imgVisible: true,
+          title: 'openEuler;\nkernel commiter',
+          titleVisible: false,
+        },
+        {
+          id: 'tyxoJfBayHVgvbcw',
+          name: '范佳臣',
+          nameVisible: false,
+          img: fanjiacheng,
+          imgVisible: true,
+          title: 'openEuler;\nrelease-management SIG committer',
+          titleVisible: false,
+        },
+        {
+          id: 'ZDobwuDxMQfMGPZ1',
+          name: '郑振宇',
+          nameVisible: false,
+          img: zhengzhenyu,
+          imgVisible: true,
+          title: 'openEuler;\n社区运营组组长',
+          titleVisible: false,
+        },
+        {
+          id: '6p35GJwfU7azaFy6',
+          name: '罗钰凯',
+          nameVisible: false,
+          img: luojuekai,
+          imgVisible: true,
+          title: 'openEuler安全委员会;\n委员',
+          titleVisible: false,
+        },
+        {
+          id: 'REVylftYHjLyP0m4',
+          name: '徐学鹏',
+          nameVisible: false,
+          img: xuxuepeng,
+          imgVisible: true,
+          title: 'openEuler；\nCloud Native SIG maintainer',
+          titleVisible: false,
+        },
+        {
+          id: 'mQAMOdVJFNlORiLg',
+          name: '胡峰',
+          nameVisible: false,
+          img: hufeng,
+          imgVisible: true,
+          title: 'openEuler技术委员会；\n委员',
+          titleVisible: false,
+        },
+        {
+          id: 'cSMvNGadWSBVI1gI',
+          name: '王执',
+          nameVisible: false,
+          img: wangzhi,
+          imgVisible: true,
+          title: 'openEuler；\n兼容性SIG committer',
+          titleVisible: false,
+        },
+        {
+          id: 'hihcVTTIlLpaEOQ2',
+          name: '杜开田',
+          nameVisible: false,
+          img: dukaitian,
+          imgVisible: true,
+          title: 'openEuler社区；\n兼容性SIG组maintainer',
+          titleVisible: false,
+        },
+        {
+          id: 'rFPpRF5a1LJbdKem',
+          name: '史海涛',
+          nameVisible: false,
+          img: shihaitao,
+          imgVisible: true,
+          title: '华为2012实验室；\nopenEuler Embedded 项目经理',
+          titleVisible: false,
+        },
+        {
+          id: 'IpldCYB8Ziri02GA',
+          name: '李晨斌',
+          nameVisible: false,
+          img: lichenbin,
+          imgVisible: true,
+          title: '北京凝思软件股份有限公司；\n社区产品专家',
+          titleVisible: false,
+        },
+        {
+          id: 'r6u6vuCVNgB6FxVv',
+          name: '张剑',
+          nameVisible: false,
+          img: zhangjian,
+          imgVisible: true,
+          title: '润和软件；\n用户委员会候选',
+          titleVisible: false,
+        },
+        {
+          id: 'hxFuv8B5Xog6v5uO',
+          name: '杨彬',
+          nameVisible: false,
+          img: yangbin,
+          imgVisible: true,
+          title: '软通动力操作系统研究中心；\n负责人',
+          titleVisible: false,
+        },
+      ],
+    },
+  ],
+};
