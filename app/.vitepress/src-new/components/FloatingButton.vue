@@ -270,7 +270,7 @@ function submitFeedback() {
           type: 'success',
         });
         const summitTime = new Date().valueOf();
-        if (screenWidth.value < 1100) {
+        if (screenWidth.value <= 1200) {
           localStorage.setItem(
             'submit-feedback-time-mb',
             JSON.stringify(summitTime)
@@ -497,7 +497,7 @@ watch(
 </script>
 
 <template>
-  <div v-if="screenWidth > 1100" class="feedback">
+  <div class="feedback">
     <div class="feedback-wrap">
       <div v-show="isFloatTipShow" class="float-tip">
         <h4 class="tip-title">{{ infoData.feedbackTitle }}</h4>
@@ -655,100 +655,96 @@ watch(
     </div>
   </div>
 
-  <template v-else>
-    <div v-if="isShowFeedbackMb" class="feedback-mb">
-      <div class="feedback-mb-head">
-        <div class="head-title" @click="toggleDialogVisible">
-          <OIcon class="icon-box"
-            ><component :is="IconSmile"></component>
-          </OIcon>
-          <p>
+  <div v-if="isShowFeedbackMb" class="feedback-mb">
+    <div class="feedback-mb-head">
+      <div class="head-title" @click="toggleDialogVisible">
+        <OIcon class="icon-box"><component :is="IconSmile"></component> </OIcon>
+        <p>
+          {{ title1 }}
+          <span class="title-name">{{ title2 }}</span>
+          {{ title3 }}
+        </p>
+      </div>
+      <OIcon class="icon-box icon-close" @click="closeFeedbackMb"
+        ><component :is="IconCancel"></component>
+      </OIcon>
+    </div>
+
+    <el-dialog :show-close="false" v-model="dialogVisible">
+      <div class="o-popup1">
+        <div class="slider">
+          <p class="slider-title">
             {{ title1 }}
             <span class="title-name">{{ title2 }}</span>
             {{ title3 }}
           </p>
-        </div>
-        <OIcon class="icon-box icon-close" @click="closeFeedbackMb"
-          ><component :is="IconCancel"></component>
-        </OIcon>
-      </div>
-
-      <el-dialog :show-close="false" v-model="dialogVisible">
-        <div class="o-popup1">
-          <div class="slider">
-            <p class="slider-title">
-              {{ title1 }}
-              <span class="title-name">{{ title2 }}</span>
-              {{ title3 }}
-            </p>
-            <ul class="score-list">
-              <li
-                v-for="item in marksMobile"
-                :key="'mark' + item"
-                :style="{ left: item * 10 + '%' }"
-                :class="{ 'is-active': score / 10 === item }"
-                @click="setScore(item)"
-              >
-                {{ item }}
-              </li>
-            </ul>
-            <div class="slider-body">
-              <ClientOnly>
-                <el-slider
-                  v-model="score"
-                  :step="STEP"
-                  :marks="marks"
-                  show-stops
-                  :show-tooltip="false"
-                  @input="changeSlider"
-                />
-              </ClientOnly>
-            </div>
-            <div class="grade-info">
-              <span>{{
-                title2 === TITLES2[0] ? infoData.grade1 : infoData.grade1_1
-              }}</span>
-              <span>{{
-                title2 === TITLES2[0] ? infoData.grade2 : infoData.grade2_1
-              }}</span>
-            </div>
-          </div>
-          <div v-show="isReasonShow" class="reason">
-            <div class="input-area" :class="{ 'is-focus': isFocus }">
-              <textarea
-                ref="textareaRef"
-                v-model="inputText"
-                :placeholder="placeholder"
-                maxlength="500"
-              ></textarea>
-              <p>
-                <span>{{ inputText.length }}</span
-                >/500
-              </p>
-            </div>
-            <p class="more-info">
-              {{ infoData.more1 }}
-              <a :href="infoData.more2Link" target="_blank"
-                >{{ infoData.more2 }}
-              </a>
-            </p>
-          </div>
-          <div class="btn-box">
-            <OButton type="outline" size="middle" @click="cancelDialog">
-              {{ infoData.cancel }}
-            </OButton>
-            <OButton
-              type="outline"
-              size="middle"
-              @click="submitFeedback"
-              :class="{ forbidden: !isReasonShow }"
-              >{{ infoData.confirm }}</OButton
+          <ul class="score-list">
+            <li
+              v-for="item in marksMobile"
+              :key="'mark' + item"
+              :style="{ left: item * 10 + '%' }"
+              :class="{ 'is-active': score / 10 === item }"
+              @click="setScore(item)"
             >
+              {{ item }}
+            </li>
+          </ul>
+          <div class="slider-body">
+            <ClientOnly>
+              <el-slider
+                v-model="score"
+                :step="STEP"
+                :marks="marks"
+                show-stops
+                :show-tooltip="false"
+                @input="changeSlider"
+              />
+            </ClientOnly>
+          </div>
+          <div class="grade-info">
+            <span>{{
+              title2 === TITLES2[0] ? infoData.grade1 : infoData.grade1_1
+            }}</span>
+            <span>{{
+              title2 === TITLES2[0] ? infoData.grade2 : infoData.grade2_1
+            }}</span>
           </div>
         </div>
-      </el-dialog>
-    </div>
-  </template>
+        <div v-show="isReasonShow" class="reason">
+          <div class="input-area" :class="{ 'is-focus': isFocus }">
+            <textarea
+              ref="textareaRef"
+              v-model="inputText"
+              :placeholder="placeholder"
+              maxlength="500"
+            ></textarea>
+            <p>
+              <span>{{ inputText.length }}</span
+              >/500
+            </p>
+          </div>
+          <p class="more-info">
+            {{ infoData.more1 }}
+            <a :href="infoData.more2Link" target="_blank"
+              >{{ infoData.more2 }}
+            </a>
+          </p>
+        </div>
+        <div class="btn-box">
+          <OButton type="outline" size="middle" @click="cancelDialog">
+            {{ infoData.cancel }}
+          </OButton>
+          <OButton
+            type="outline"
+            size="middle"
+            @click="submitFeedback"
+            :class="{ forbidden: !isReasonShow }"
+            >{{ infoData.confirm }}</OButton
+          >
+        </div>
+      </div>
+    </el-dialog>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -757,6 +753,10 @@ watch(
   bottom: 200px;
   right: 80px;
   z-index: 10;
+
+  @include respond-to('<=pad') {
+    display: none;
+  }
 
   @media (max-width: 1700px) {
     right: 20px;
@@ -767,7 +767,8 @@ watch(
   @media (max-width: 1526px) {
     right: 44px;
   }
-  @media (max-width: 1439px) {
+
+  @include respond-to('laptop') {
     right: 24px;
   }
 
@@ -1103,9 +1104,15 @@ watch(
   bottom: 16px;
   z-index: 11;
   width: 100%;
-  padding: 0 16px;
   margin-bottom: 16px;
+  max-width: var(--layout-content-max-width);
+  padding-left: var(--layout-content-padding);
+  padding-right: var(--layout-content-padding);
+  display: none;
 
+  @include respond-to('<=pad') {
+    display: block;
+  }
   .feedback-mb-head {
     height: 40px;
     padding: 12px;
@@ -1128,7 +1135,14 @@ watch(
       position: absolute;
       right: 12px;
       top: 50%;
+      cursor: pointer;
       transform: translateY(-50%);
+      transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+
+      @include hover {
+        transform: translateY(-50%) rotate(180deg);
+        color: var(--o-color-primary1);
+      }
     }
     .head-title {
       display: flex;
