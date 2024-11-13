@@ -38,7 +38,7 @@ const { theme } = storeToRefs(useCommon());
 
 <style lang="scss" scoped>
 .home-display-zone {
-  padding: 16px 72px;
+  padding: 16px 68px;
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -47,6 +47,12 @@ const { theme } = storeToRefs(useCommon());
   background: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
   z-index: 1;
+  @include respond-to('laptop') {
+    padding: 16px 54px;
+  }
+  @include respond-to('pad_h') {
+    padding: 16px 24px;
+  }
   @include respond-to('<=pad_v') {
     position: relative;
     grid-template-columns: repeat(4, 1fr);
@@ -82,7 +88,6 @@ const { theme } = storeToRefs(useCommon());
     }
     .display-zone-item-icon {
       display: block;
-      
     }
     .display-zone-icon {
       flex-shrink: 0;

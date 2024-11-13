@@ -254,7 +254,7 @@ const watchData = watch(
 );
 </script>
 <template>
-  <div class="home-calendar">
+  <div id="calendar" class="home-calendar">
     <h3>openEuler开发者日历</h3>
     <div class="calendar-body">
       <el-calendar ref="calendar" class="calender">

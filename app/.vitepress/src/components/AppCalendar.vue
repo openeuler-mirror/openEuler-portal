@@ -120,35 +120,34 @@ function setMeetingDay(day: string, event: Event) {
 }
 
 function paramGetDaysData(params: { date: string; type: string }) {
-  getDaysData(params)
-    .then((res) => {
-      renderData.value = res.data;
-      if (renderData.value.timeData.length === 1) {
-        activeName.value = '0';
-        nextTick(() => {
-          if (document.querySelector('.meet-item')) {
-            (document.querySelector('.meet-item') as HTMLElement).click();
-          }
-        });
-      } else {
-        // 会议时间排序
-        activeName.value = '';
-        renderData.value.timeData.sort((a: DayDataT, b: DayDataT) => {
-          return (
-            parseInt(a.startTime?.replace(':', '')) -
-            parseInt(b.startTime?.replace(':', ''))
-          );
-        });
-        renderData.value.timeData.map((item2) => {
-          if (item2.etherpad) {
-            item2['duration_time'] = `${item2.startTime}-${item2.endTime}`;
-          }
-          if (item2.activity_type) {
-            item2.activity_type = activityType[Number(item2.activity_type) - 1];
-          }
-        });
-      }
-    })
+  getDaysData(params).then((res) => {
+    renderData.value = res.data;
+    if (renderData.value.timeData.length === 1) {
+      activeName.value = '0';
+      nextTick(() => {
+        if (document.querySelector('.meet-item')) {
+          (document.querySelector('.meet-item') as HTMLElement).click();
+        }
+      });
+    } else {
+      // 会议时间排序
+      activeName.value = '';
+      renderData.value.timeData.sort((a: DayDataT, b: DayDataT) => {
+        return (
+          parseInt(a.startTime?.replace(':', '')) -
+          parseInt(b.startTime?.replace(':', ''))
+        );
+      });
+      renderData.value.timeData.map((item2) => {
+        if (item2.etherpad) {
+          item2['duration_time'] = `${item2.startTime}-${item2.endTime}`;
+        }
+        if (item2.activity_type) {
+          item2.activity_type = activityType[Number(item2.activity_type) - 1];
+        }
+      });
+    }
+  });
 }
 
 function selectDate(val: string, date: string) {
@@ -229,7 +228,7 @@ const watchData = watch(
 );
 </script>
 <template>
-  <div class="main-body">
+  <div id="calendar" class="main-body">
     <div class="calendar">
       <el-calendar v-if="windowWidth > 768" ref="calendar" class="calender">
         <template #header="{ date }">
