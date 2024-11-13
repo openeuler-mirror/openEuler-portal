@@ -12,12 +12,6 @@ export default {
       nameEn: 'Operating System Conference Keynote',
     },
     {
-      liveId: 14976,
-      liveTestId: 14977,
-      name: '麒麟软件',
-      nameEn: 'Kylinsoft',
-    },
-    {
       liveId: 14978,
       liveTestId: 14979,
       name: '麒麟信安',
