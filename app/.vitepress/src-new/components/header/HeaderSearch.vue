@@ -170,7 +170,6 @@ const closeSearch = () => {
             @keyup.enter="handleSearchEvent"
             @focus="showDrawer"
             class="normal"
-            :class="lang"
           >
             <template #prefix>
               <OIcon class="icon"><IconSearch></IconSearch></OIcon>
@@ -184,7 +183,7 @@ const closeSearch = () => {
               /></OIcon>
             </template>
           </OInput>
-          <OIcon class="only-icon" :class="lang" @click="showDrawer"
+          <OIcon class="only-icon" @click="showDrawer"
             ><IconSearch></IconSearch
           ></OIcon>
           <span
@@ -417,7 +416,7 @@ const closeSearch = () => {
       padding-right: var(--o-gap-5);
     }
   }
-  .normal.en {
+  .normal {
     @media (min-width: 841px) and (max-width: 1000px) {
       display: none;
     }
@@ -425,12 +424,10 @@ const closeSearch = () => {
   .only-icon {
     display: none;
 
-    &.en {
-      @media (min-width: 841px) and (max-width: 1000px) {
-        display: block;
-        font-size: var(--o-icon_size-s);
-        padding-top: var(--o-gap-1);
-      }
+    @media (min-width: 841px) and (max-width: 1000px) {
+      display: block;
+      font-size: var(--o-icon_size-s);
+      padding-top: var(--o-gap-1);
     }
   }
 }

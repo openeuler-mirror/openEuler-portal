@@ -110,7 +110,7 @@ const mobileClick = () => {
           </OIcon>
         </div>
       </div>
-      <img class="logo" :class="lang" alt="openEuler logo" :src="logoUrl" @click="goHome" />
+      <img class="logo" alt="openEuler logo" :src="logoUrl" @click="goHome" />
       <ClientOnly>
         <HeaderNavMoblie v-if="lePadV" ref="mobileNav" :lang-options="langShow" :menuShow="menuShow" @link-click="mobileClick"/>
         <HeaderNav v-else :lang-options="langShow" />
@@ -184,12 +184,6 @@ const mobileClick = () => {
     @include respond-to('pad_h') {
       margin-right: var(--o-gap-2);
     }
-
-    &.en {
-      @media (min-width: 841px) and (max-width: 1000px) {
-        width: 100px;
-      }
-    }
   }
   @include respond-to('<=pad_v') {
     height: 24px;
@@ -209,6 +203,14 @@ const mobileClick = () => {
     color: var(--o-color-info1);
     height: 24px;
     cursor: pointer;
+  }
+}
+
+html[lang='en'] {
+  .logo {
+    @media (min-width: 841px) and (max-width: 1000px) {
+      width: 100px;
+    }
   }
 }
 </style>

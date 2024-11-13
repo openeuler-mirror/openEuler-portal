@@ -75,7 +75,7 @@ const linkClick = () => {
 </script>
 
 <template>
-  <div class="header-content" :class="lang">
+  <div class="header-content">
     <div class="header-nav">
       <nav class="o-nav">
         <ul class="o-nav-list">
@@ -88,7 +88,7 @@ const linkClick = () => {
             @mouseenter="toggleDebounced(item)"
             @mouseleave="toggleDebounced(null)"
           >
-            <span class="nav-item" :class="lang">{{ item.NAME }}</span>
+            <span class="nav-item">{{ item.NAME }}</span>
             <transition name="transition">
               <div v-if="isShow" :class="['nav-dropdown', navActive, commonStore.theme]">
                 <div class="nav-drop-content">
@@ -317,11 +317,6 @@ const linkClick = () => {
         @include respond-to('pad_h') {
           padding: 10px;
         }
-        &.en {
-          @media (min-width: 841px) and (max-width: 1000px) {
-            padding: var(--o-gap-2);
-          }
-        }
       }
     }
   }
@@ -450,6 +445,10 @@ const linkClick = () => {
 
       @include hover {
         background: var(--o-color-control2-light);
+      }
+
+      & + .nav-sub-item {
+        margin-top: 2px;
       }
     }
     .active {
@@ -688,6 +687,14 @@ const linkClick = () => {
     .content-title-url {
       @include text1;
       margin-bottom: var(--o-gap-4);
+    }
+  }
+}
+
+html[lang='en'] {
+  .nav-item {
+    @media (min-width: 841px) and (max-width: 1000px) {
+      padding: var(--o-gap-2) !important;
     }
   }
 }
