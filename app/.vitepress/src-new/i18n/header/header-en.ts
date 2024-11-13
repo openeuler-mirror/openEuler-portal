@@ -1,18 +1,6 @@
 import { markRaw } from 'vue';
 
-import DocumentLight from '~@/assets/category/header/document-light.svg';
-import IntroductionLight from '~@/assets/category/header/introduction-light.svg';
-import DownloadLight from '~@/assets/category/header/download-light.svg';
-import ToolLight from '~@/assets/category/header/tool-light.svg';
-import HeartLight from '~@/assets/category/header/heart-light.svg';
 import Summit from '~@/assets/category/header/summit.png';
-
-import DocumentDark from '~@/assets/category/header/document-dark.svg';
-import IntroductionDark from '~@/assets/category/header/introduction-dark.svg';
-import DownloadDark from '~@/assets/category/header/download-dark.svg';
-import ToolDark from '~@/assets/category/header/tool-dark.svg';
-import HeartDark from '~@/assets/category/header/heart-dark.svg';
-
 import IconOutLink from '~icons/app/icon-out-link.svg';
 import IconArrowRight from '~icons/app-new/icon-header-next.svg';
 
@@ -66,20 +54,14 @@ export default {
           SHORTCUT: [
             {
               NAME: 'openEuler 24.03 LTS',
-              TYPE: DownloadLight,
-              TYPE_DARK: DownloadDark,
               URL: '/download/?version=openEuler 24.03 LTS',
             },
             {
               NAME: 'openEuler repo',
-              TYPE: DownloadLight,
-              TYPE_DARK: DownloadDark,
               URL: 'https://repo.openeuler.openatom.cn/',
             },
             {
               NAME: 'Mirrors',
-              TYPE: DownloadLight,
-              TYPE_DARK: DownloadDark,
               URL: '/mirror/list/',
             },
           ],
@@ -166,32 +148,22 @@ export default {
           SHORTCUT: [
             {
               NAME: 'Technical White Papers',
-              TYPE: IntroductionLight,
-              TYPE_DARK: IntroductionDark,
               URL: '/showcase/technical-white-paper/',
             },
             {
               NAME: 'openEuler 24.03 LTS Installation Guide',
-              TYPE: IntroductionLight,
-              TYPE_DARK: IntroductionDark,
               URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/Installation.html',
             },
             {
               NAME: 'openEuler 24.09 Installation Guide',
-              TYPE: IntroductionLight,
-              TYPE_DARK: IntroductionDark,
               URL: 'https://docs.openeuler.org/en/docs/24.09/docs/Installation/Installation.html',
             },
             {
               NAME: 'openEuler Lifecycle',
-              TYPE: DownloadLight,
-              TYPE_DARK: DownloadDark,
               URL: '/other/lifecycle/',
             },
             {
               NAME: 'Historical Releases',
-              TYPE: DownloadLight,
-              TYPE_DARK: DownloadDark,
               URL: '/download/archive/',
             },
           ], 
@@ -260,14 +232,10 @@ export default {
           SHORTCUT: [
             {
               NAME: 'openEuler 24.03 LTS Documentation',
-              TYPE: IntroductionLight,
-              TYPE_DARK: IntroductionDark,
               URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Releasenotes/terms-of-use.html',
             },
             {
               NAME: 'Installation and Upgrade',
-              TYPE: IntroductionLight,
-              TYPE_DARK: IntroductionDark,
               URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/Installation.html',
             },
           ]
@@ -298,14 +266,10 @@ export default {
           SHORTCUT: [
             {
               NAME: 'Get x2openEuler',
-              TYPE: ToolLight,
-              TYPE_DARK: ToolDark,
               URL: '/migration/download/',
             },
             {
               NAME: 'Migration Practices',
-              TYPE: DocumentLight,
-              TYPE_DARK: DocumentDark,
               URL: '/migration/user-cases/',
             },
           ]
@@ -406,8 +370,6 @@ export default {
           SHORTCUT: [
             {
               NAME: 'Overall Introduction to the openEuler Hardware Compatibility Test',
-              TYPE: HeartLight,
-              TYPE_DARK: HeartDark,
               URL: '/compatibility/hardware/',
             },
           ]
@@ -445,8 +407,6 @@ export default {
           SHORTCUT: [
             {
               NAME: 'QuickIssue ',
-              TYPE: ToolLight,
-              TYPE_DARK: ToolDark,
               URL: 'https://quickissue.openeuler.org/en/issues/',
             },
           ]
