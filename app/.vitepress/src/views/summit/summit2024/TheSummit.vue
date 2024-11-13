@@ -2,82 +2,81 @@
 import { computed, onMounted, ref } from 'vue';
 import { useData } from 'vitepress';
 
-import { useCommon } from '@/stores/common';
-import { type ScheduleItemT } from './@type';
+import { useCommon, useCookieStore } from '@/stores/common';
 
 import { getEasyeditorInfo } from '@/api/api-easyeditor';
+import { getUrlParam } from '@/shared/utils';
+import { oa } from '@/shared/analytics';
 
 import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
-import SummitSchedule from './components/SummitSchedule.vue';
 import SummitGuest from './components/SummitGuest.vue';
 import SummitPartner from './components/SummitPartner.vue';
+import SummitAgent from './components/SummitAgent.vue';
+import SummitLive from './components/SummitLive.vue';
 
 import liveLight from '@/assets/category/summit/summit2022/live.png';
 import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
 
 import data_zh from './data/data_zh';
 import data_en from './data/data_en';
-import guest from './data';
 
 const { lang } = useData();
 
 const commonStore = useCommon();
+const cookieStore = useCookieStore();
 
 const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );
-
-const isLight = computed(() => {
-  return commonStore.theme === 'light';
-});
 
 //------------------- 峰会日程 --------------------
 const summitData = computed(() => {
   return lang.value === 'zh' ? data_zh : data_en;
 });
 
-const dateList = [
-  { day: 15, month: 'NOV' },
-  { day: 16, month: 'NOV' },
-];
-// 议程日期切换
-const dataIndex = ref(0);
-// 控制主论坛分论坛切换
-const timeTabIndex = ref(0);
-function setDataIndex(index: number) {
-  dataIndex.value = index;
-  timeTabIndex.value = 0;
-}
-// 切割agent数据获取当前页面渲染数据
-const renderData = computed(() => {
-  if (timeTabIndex.value === 1) {
-    return getData.value?.content.content.slice(1);
-  } else if (getData.value) {
-    return getData.value?.content.content.slice(0, 1);
-  }
-});
 // 获取议程数据
-const agendaData = ref<ScheduleItemT[]>([]);
 onMounted(() => {
   const href = `https://www.openeuler.org/${lang.value}/interaction/summit-list/summit2024/`;
   getEasyeditorInfo(href).then((res) => {
-    for (let i = 0; i < res?.data?.length; i++) {
+    for (let i = 0; i < res.data?.length; i++) {
       res.data[i].content = JSON.parse(res.data[i].content);
     }
-    agendaData.value = res.data;
+    const summit2024 = res.data.find((item) => item.name === 'summit2024')
+      ?.content?.sections;
+    agendaData.value = summit2024.find((item) => item.type === 'AGENDA');
+    guestData.value = summit2024.find((item) => item.type === 'GUEST');
+    console.log(summit2024);
   });
 });
-const getData = computed(() => {
-  if (dataIndex.value === 0) {
-    return agendaData.value.find((item) => item.name === 'schedule-15');
-  } else {
-    return agendaData.value.find((item) => item.name === 'schedule-16');
-  }
-});
 
+// ------------------ 日程数据 -----------
+const agendaData = ref();
 // ------------------ 嘉宾数据 -----------
-const guestData = guest;
+const guestData = ref();
+//-------- 直播 --------
+const isLiveShown = ref(0);
+
+// 埋点统计投放流量
+function collectAdvertisedData() {
+  if (cookieStore.isAllAgreed) {
+    const params = getUrlParam('utm_source');
+    if (!params) {
+      return;
+    }
+    oa.report('fromAdvertised', () => {
+      return {
+        utm_source: params,
+      };
+    });
+  }
+  history.pushState(null, '', location.origin + location.pathname);
+}
+onMounted(() => {
+  setTimeout(() => {
+    collectAdvertisedData();
+  }, 300);
+});
 </script>
 <template>
   <SummitBanner :banner-data="summitData.banner" />
@@ -93,63 +92,43 @@ const guestData = guest;
       </ul>
       <p v-if="summitData?.introduce4">{{ summitData.introduce4 }}</p>
     </div>
-    <div class="agenda">
-      <h3>
-        {{ summitData.agenda.title }}
+    <div id="live" class="live">
+      <h3 class="title-bar">
+        {{ lang === 'zh' ? summitData.live.title : summitData.live.titleEn }}
       </h3>
-      <div class="date">
-        <div
-          v-for="(item, index) in dateList"
-          :key="item.day"
-          class="date-item"
-          :class="{ active: dataIndex === index }"
-          @click="setDataIndex(index)"
-        >
-          <p class="date-day">{{ item.day }}</p>
-          <p class="date-month">{{ item.month }}</p>
-        </div>
-      </div>
-      <!--  日程-->
-      <div class="schedule-box">
-        <el-tabs v-model.number="timeTabIndex" class="schedule-tabs">
-          <el-tab-pane :name="0">
+      <div>
+        <OTabs v-model="isLiveShown" class="schedule-tabs">
+          <el-tab-pane
+            v-for="(item, index) in summitData.live.date"
+            :key="index"
+            :name="index"
+          >
             <template #label>
               <div class="time-tabs">
-                {{ summitData.agenda.tabType[0] }}
+                {{ item }}
               </div>
             </template>
           </el-tab-pane>
-          <el-tab-pane :name="1">
-            <template #label>
-              <div class="time-tabs">
-                {{
-                  dataIndex === 0
-                    ? summitData.agenda.tabType[1]
-                    : summitData.agenda.tabType1[1]
-                }}
-              </div>
-            </template>
-          </el-tab-pane>
-        </el-tabs>
-        <template v-if="renderData?.length && timeTabIndex === 0">
-          <!--  日程表格 -->
-          <SummitSchedule
-            v-for="item in renderData"
-            :key="item.lable"
-            :agenda-data="item"
+        </OTabs>
+        <ClientOnly>
+          <SummitLive
+            v-if="isLiveShown === 0"
+            :live-data="summitData.live.liveData1"
+            class-name="live-btn1"
+            class="live-box"
           />
-        </template>
-        <!-- 分论坛卡片 -->
-        <template v-else-if="renderData?.length">
-          <SummitSchedule
-            v-for="item in renderData"
-            :key="item.lable"
-            :agenda-data="item"
+          <SummitLive
+            v-if="isLiveShown === 1"
+            :live-data="summitData.live.liveData2"
+            class-name="live-btn2"
+            class="live-box"
           />
-        </template>
+        </ClientOnly>
       </div>
     </div>
-    <SummitGuest v-if="lang === 'zh'" class="guest" :data="guestData" />
+    <SummitAgent class="agenda-floor" :data="agendaData" />
+
+    <SummitGuest v-if="guestData" class="guest" :data="guestData" />
     <SummitPartner />
     <!--  只在中文页显示精彩回顾 -->
     <div v-if="lang === 'zh'" class="previous">
@@ -203,7 +182,120 @@ const guestData = guest;
     line-height: var(--e-line-height-text);
   }
 }
+.live,
+.guest {
+  margin-top: var(--e-spacing-h1);
+  @media (max-width: 767px) {
+    margin-top: var(--e-spacing-h2);
+  }
+  h3 {
+    text-align: center;
+    font-size: var(--e-font-size-h3);
+    line-height: var(--e-line-height-h3);
+    color: var(--e-color-text1);
+    font-weight: 300;
+    @media (max-width: 767px) {
+      font-size: var(--e-font-size-h8);
+      line-height: var(--e-line-height-h8);
+    }
+  }
+  h4 {
+    margin-top: 20px;
+    font-size: var(--e-font-size-h5);
+    line-height: var(--e-line-height-h5);
+    color: var(--e-color-text1);
+    font-weight: 400;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
+      margin-top: var(--e-spacing-h5);
+    }
+  }
+  .live-box {
+    margin-top: var(--e-spacing-h2);
+    @media (max-width: 767px) {
+      margin-top: var(--e-spacing-h4);
+    }
+  }
+}
+.live {
+  .schedule-tabs {
+    text-align: center;
+    margin-top: 24px;
+    :deep(.el-tabs__nav) {
+      float: none;
+      display: inline-block;
+      .el-tabs__active-bar {
+        display: none;
+      }
+      .el-tabs__item {
+        padding: 0;
+      }
+    }
+    .time-tabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // margin: 0 0 24px;
+      cursor: pointer;
+      border: 1px solid var(--e-color-border2);
+      color: var(--e-color-text1);
+      width: 120px;
+      text-align: center;
+      background: var(--e-color-bg2);
+      font-size: var(--e-font-size-text);
+      line-height: 38px;
+      padding: 0 var(--e-spacing-h5);
+      .o-icon {
+        margin-left: 12px;
+      }
+      @media (max-width: 1100px) {
+        width: 80px;
+        line-height: 28px;
+        font-size: var(--e-font-size-tip);
+        padding: 0 var(--e-spacing-h6);
+      }
+    }
 
+    .is-active .time-tabs {
+      color: #fff;
+      background: var(--e-color-brand1);
+      border-color: var(--e-color-brand2);
+    }
+    .other-tabs {
+      margin-bottom: 24px;
+      :deep(.el-tabs__nav) {
+        float: none;
+        display: inline-block;
+        @media (max-width: 1100px) {
+          line-height: 44px;
+        }
+      }
+      :deep(.el-tabs__header) {
+        text-align: center;
+        .el-tabs__item {
+          @media (max-width: 1100px) {
+            font-size: var(--e-font-size-tip);
+            line-height: var(--e-line-height-tip);
+          }
+        }
+      }
+    }
+  }
+  .time-box {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    .o-button {
+      color: var(--e-color-text1);
+      :deep(.suffix-icon) {
+        color: var(--e-color-brand1);
+      }
+    }
+  }
+}
 :deep(h3) {
   text-align: center;
   font-size: var(--e-font-size-h3);
@@ -213,6 +305,12 @@ const guestData = guest;
   @media (max-width: 767px) {
     font-size: var(--e-font-size-h8);
     line-height: var(--e-line-height-h8);
+  }
+}
+.agenda-floor {
+  margin-top: var(--e-spacing-h1);
+  @media (max-width: 767px) {
+    margin-top: var(--e-spacing-h2);
   }
 }
 .agenda {

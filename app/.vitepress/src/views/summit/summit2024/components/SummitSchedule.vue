@@ -417,7 +417,6 @@ function convertMd(data: string) {
       color: var(--e-color-text3);
       font-size: 16px;
       line-height: 24px;
-      // word-break: keep-all;
       flex: 1;
       @media (max-width: 1100px) {
         font-size: 12px;
@@ -477,7 +476,6 @@ function convertMd(data: string) {
       &::-webkit-scrollbar {
         display: none; /* Chrome Safari */
       }
-      // display: none;
       p {
         display: flex;
         & + p {

@@ -1110,7 +1110,7 @@ const tdks: {
     keywords: 'openEuler, system management, FAQ, Linux',
   },
   en: {
-    title: 'openEuler | OS for Digit Infrastructure',
+    title: 'openEuler | OS for Digital Infrastructure',
     description:
       'An open source OS run by the OpenAtom Foundation that builds a global community to enhance digital infrastructure and support diverse architectures.',
     keywords: 'openEuler, community, projects, developments, resources',
