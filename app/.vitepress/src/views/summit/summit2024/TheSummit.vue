@@ -12,7 +12,7 @@ import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
 import SummitGuest from './components/SummitGuest.vue';
 import SummitPartner from './components/SummitPartner.vue';
-import SummitSchedule from './components/SummitSchedule.vue';
+import SummitAgent from './components/SummitAgent.vue';
 import SummitLive from './components/SummitLive.vue';
 
 import liveLight from '@/assets/category/summit/summit2022/live.png';
@@ -20,8 +20,6 @@ import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
 
 import data_zh from './data/data_zh';
 import data_en from './data/data_en';
-
-import guest from './data';
 
 const { lang } = useData();
 
@@ -37,47 +35,25 @@ const summitData = computed(() => {
   return lang.value === 'zh' ? data_zh : data_en;
 });
 
-const dateList = [
-  { day: 15, month: 'NOV' },
-  { day: 16, month: 'NOV' },
-];
-// 议程日期切换
-const dataIndex = ref(0);
-// 控制主论坛分论坛切换
-const timeTabIndex = ref(0);
-function setDataIndex(index: number) {
-  dataIndex.value = index;
-  timeTabIndex.value = 0;
-}
-// 切割agent数据获取当前页面渲染数据
-const renderData = computed(() => {
-  if (timeTabIndex.value === 1) {
-    return getData.value?.content.content.slice(1);
-  } else if (getData.value) {
-    return getData.value?.content.content.slice(0, 1);
-  }
-});
 // 获取议程数据
-const agendaData = ref<ScheduleItemT[]>([]);
 onMounted(() => {
   const href = `https://www.openeuler.org/${lang.value}/interaction/summit-list/summit2024/`;
   getEasyeditorInfo(href).then((res) => {
-    for (let i = 0; i < res?.data?.length; i++) {
+    for (let i = 0; i < res.data?.length; i++) {
       res.data[i].content = JSON.parse(res.data[i].content);
     }
-    agendaData.value = res.data;
+    const summit2024 = res.data.find((item) => item.name === 'summit2024')
+      ?.content?.sections;
+    agendaData.value = summit2024.find((item) => item.type === 'AGENDA');
+    guestData.value = summit2024.find((item) => item.type === 'GUEST');
+    console.log(summit2024);
   });
 });
-const getData = computed(() => {
-  if (dataIndex.value === 0) {
-    return agendaData.value.find((item) => item.name === 'schedule-15');
-  } else {
-    return agendaData.value.find((item) => item.name === 'schedule-16');
-  }
-});
 
+// ------------------ 日程数据 -----------
+const agendaData = ref();
 // ------------------ 嘉宾数据 -----------
-const guestData = guest;
+const guestData = ref();
 //-------- 直播 --------
 const isLiveShown = ref(0);
 
@@ -150,64 +126,9 @@ onMounted(() => {
         </ClientOnly>
       </div>
     </div>
-    <div class="agenda">
-      <h3>
-        {{ summitData.agenda.title }}
-      </h3>
-      <div class="date">
-        <div
-          v-for="(item, index) in dateList"
-          :key="item.day"
-          class="date-item"
-          :class="{ active: dataIndex === index }"
-          @click="setDataIndex(index)"
-        >
-          <p class="date-day">{{ item.day }}</p>
-          <p class="date-month">{{ item.month }}</p>
-        </div>
-      </div>
-      <!--  日程-->
-      <div class="schedule-box">
-        <el-tabs v-model.number="timeTabIndex" class="schedule-tabs">
-          <el-tab-pane :name="0">
-            <template #label>
-              <div class="time-tabs">
-                {{ summitData.agenda.tabType[0] }}
-              </div>
-            </template>
-          </el-tab-pane>
-          <el-tab-pane :name="1">
-            <template #label>
-              <div class="time-tabs">
-                {{
-                  dataIndex === 0
-                    ? summitData.agenda.tabType[1]
-                    : summitData.agenda.tabType1[1]
-                }}
-              </div>
-            </template>
-          </el-tab-pane>
-        </el-tabs>
-        <template v-if="renderData?.length && timeTabIndex === 0">
-          <!--  日程表格 -->
-          <SummitSchedule
-            v-for="item in renderData"
-            :key="item.lable"
-            :agenda-data="item"
-          />
-        </template>
-        <!-- 分论坛卡片 -->
-        <template v-else-if="renderData?.length">
-          <SummitSchedule
-            v-for="item in renderData"
-            :key="item.lable"
-            :agenda-data="item"
-          />
-        </template>
-      </div>
-    </div>
+    <SummitAgent class="agenda-floor" :data="agendaData" />
 
-    <SummitGuest v-if="lang === 'zh'" class="guest" :data="guestData" />
+    <SummitGuest v-if="guestData" class="guest" :data="guestData" />
     <SummitPartner />
     <!--  只在中文页显示精彩回顾 -->
     <div v-if="lang === 'zh'" class="previous">
