@@ -254,8 +254,7 @@ const watchData = watch(
 );
 </script>
 <template>
-  <div id="calendar" class="home-calendar">
-    <h3>openEuler开发者日历</h3>
+  <AppSection id="calendar" title="openEuler开发者日历" class="home-calendar">
     <div class="calendar-body">
       <el-calendar ref="calendar" class="calender">
         <template #header="{ date }">
@@ -441,7 +440,7 @@ const watchData = watch(
       class="cube-2"
       :src="commonStore.theme === 'light' ? cubeTow : cubeTowDark"
     />
-  </div>
+  </AppSection>
 </template>
 <style lang="scss" scoped>
 .meeting {
@@ -774,6 +773,9 @@ const watchData = watch(
         align-items: flex-end;
         height: 60px;
         border-bottom: 1px solid var(--o-color-control4);
+        @include respond-to('pad_v-laptop') {
+          --tab-nav-padding: 0 0 14px;
+        }
         @include respond-to('<=pad_v') {
           height: auto;
           .o-icon {
@@ -823,7 +825,7 @@ const watchData = watch(
         }
       }
       .o-link {
-        font-weight: 300;
+        font-weight: 400;
         font-size: var(--o-font_size-tip1);
         line-height: var(--o-line_height-tip1);
         margin-left: calc($icon-size + 12px);
@@ -831,8 +833,6 @@ const watchData = watch(
     }
     .meeting-list {
       height: v-bind('calendarHeight');
-      // @include scrollbar;
-      // overflow: auto;
       @include respond-to('<=pad_v') {
         height: auto;
       }
@@ -928,25 +928,27 @@ const watchData = watch(
 .cube-2 {
   position: absolute;
   top: -14px;
-  left: -140px;
+  left: -20px;
   width: 320px;
   z-index: -1;
   @include respond-to('laptop') {
     width: 327px;
     top: -84px;
-    left: -210px;
+    left: -173px;
   }
   @include respond-to('pad_h') {
+    top: -46px;
+    left: -104px;
   }
   @include respond-to('<=pad_v') {
     width: 84px;
-    top: -14px;
-    left: -30px;
+    top: -7px;
+    left: 4px;
   }
   @include respond-to('phone') {
     width: 54px;
     top: 4px;
-    left: -16px;
+    left: 4px;
   }
 }
 .cube-2 {
@@ -954,16 +956,16 @@ const watchData = watch(
   top: inherit;
   width: 325px;
   bottom: -160px;
-  right: -252px;
+  right: -120px;
   @include respond-to('laptop') {
     width: 400px;
     bottom: -190px;
-    right: -250px;
+    right: -140px;
   }
   @include respond-to('<=pad_v') {
     width: 71px;
     bottom: -40px;
-    right: -30px;
+    right: -8px;
   }
 }
 </style>

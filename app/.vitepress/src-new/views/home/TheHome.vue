@@ -58,12 +58,8 @@ onMounted(() => {
     <HomeIntro data-aos="fade-up" />
     <ContentWrapper :vertical-padding="['0', '0']">
       <HomePlayCommunity data-aos="fade-up" />
-      <HomeCalendar
-        data-aos="fade-up"
-        v-if="isZh && calendarData?.length"
-        :table-data="calendarData"
-      />
     </ContentWrapper>
+    <HomeCalendar data-aos="fade-up" v-if="isZh && calendarData.length" :table-data="calendarData" />
     <HomeShowCase data-aos="fade-up" @result="isResult = true" />
     <HomeTrend data-aos="fade-up" :is-result="isResult" />
     <ClientOnly>
