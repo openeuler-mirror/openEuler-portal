@@ -194,7 +194,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
     <div class="follow-us" :class="isZh ? 'zh' : 'en'">
       <div class="follow-us-cover">
         <img
-          :src="isZh ? (lePad ? followCoverEn : followCoverZh) : followCoverEn"
+          :src="isZh ? (lePadV ? followCoverEn : followCoverZh) : followCoverEn"
           class="cover"
         />
       </div>
@@ -294,8 +294,8 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
     background: var(--o-color-fill2);
     .follow-us-cover {
       img {
-        @include respond-to('laptop') {
-          height: auto;
+        @include respond-to('pad_h') {
+          height: 203px;
         }
         @include respond-to('phone') {
           height: 84px;
@@ -305,16 +305,26 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
   }
   &.en {
     height: 225px;
+    @include respond-to('<=pad') {
+      padding: 0;
+      height: 124px;
+    }
     @include respond-to('<=pad_v') {
       height: 150px;
     }
-    @include respond-to('<=pad') {
-      padding: 0;
-    }
+
     .follow-us-cover {
       position: absolute;
       inset: 0;
       width: 100%;
+      img {
+        @include respond-to('<=pad') {
+          height: auto;
+        }
+        @include respond-to('<=pad_v') {
+          height: 100%;
+        }
+      }
     }
     .follow-us-content {
       position: relative;
@@ -324,19 +334,37 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
       @include respond-to('<=pad_v') {
         padding: 16px;
         align-items: flex-start;
+        flex-direction: column;
       }
       h3 {
         color: #fff;
         width: 225px;
+        @include respond-to('laptop') {
+          width: 150px;
+        }
+        @include respond-to('<=pad') {
+          width: 123px;
+          @include h2;
+        }
+        @include respond-to('<=pad_v') {
+          width: 100%;
+        }
       }
       .follow-us-box {
         flex: 1;
         align-items: center;
         width: 100%;
+        @include respond-to('<=pad') {
+          margin: 0;
+        }
+        @include respond-to('<=pad_v') {
+          margin-top: 20px;
+        }
         .line {
           margin-top: 0;
           --o-divider-bd-color: rgba(255, 255, 255, 0.25);
-          @include respond-to('<=pad') {
+
+          @include respond-to('<=pad_v') {
             display: none;
           }
         }
@@ -356,7 +384,8 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
               height: 56px;
               margin: 0 auto 8px;
               display: block;
-              @include respond-to('<=pad_v') {
+
+              @include respond-to('<=pad') {
                 height: 32px;
               }
               &.hover {
@@ -378,9 +407,12 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
     }
   }
   @include respond-to('laptop') {
-    height: 248px;
+    height: 314px;
   }
-  @include respond-to('<=pad') {
+  @include respond-to('pad_h') {
+    height: 203px;
+  }
+  @include respond-to('<=pad_v') {
     flex-direction: column;
     padding: 8px;
     height: auto;
@@ -388,9 +420,15 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
 
   .follow-us-cover {
     order: 2;
-    width: 44%;
+    width: 657px;
     height: 100%;
-    @include respond-to('<=pad') {
+    @include respond-to('laptop') {
+      width: 557px;
+    }
+    @include respond-to('pad_h') {
+      width: 360px;
+    }
+    @include respond-to('<=pad_v') {
       order: 0;
       width: 100%;
     }
@@ -412,12 +450,12 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
     flex: 1;
 
     @include respond-to('laptop') {
-      padding: 24px 32px;
+      padding: 48px 40px;
     }
     @include respond-to('<=pad') {
-      padding: 24px;
+      padding: 28px;
     }
-    @include respond-to('phone') {
+    @include respond-to('<=pad_v') {
       padding: 12px 8px;
     }
     h3 {
@@ -427,12 +465,13 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
     }
     .follow-us-box {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       @include respond-to('<=pad') {
         margin-top: 24px;
       }
       @include respond-to('<=pad_v') {
         flex-direction: column;
+        margin-top: 12px;
       }
 
       .code-box {
@@ -442,25 +481,49 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
         text-align: center;
         .code-img + .code-img {
           margin-left: 24px;
+          @include respond-to('pad_h') {
+            margin-left: 12px;
+          }
+        }
+
+        @include respond-to('<=pad_v') {
+          width: 100%;
+          justify-content: flex-start;
         }
         @include respond-to('phone') {
           width: 100%;
+          justify-content: space-between;
         }
         p {
           color: var(--o-color-info1);
           margin-top: 8px;
           @include text1;
+          @include respond-to('pad_h') {
+            @include tip1;
+          }
         }
         img {
           width: 124px;
           height: 124px;
           border-radius: 4px;
           border: 1px solid var(--o-color-control4);
+          @include respond-to('pad_h') {
+            width: 68px;
+            height: 68px;
+          }
+          @include respond-to('<=pad_v') {
+            width: 114px;
+            height: 114px;
+          }
         }
       }
       .line {
-        height: 100px;
-        margin: 16px 48px 0;
+        height: 85px;
+        margin: 0 48px;
+        @include respond-to('pad_h') {
+          height: 55px;
+          margin: 0 16px;
+        }
         @include respond-to('<=pad_v') {
           height: auto;
           margin: 12px 0;
@@ -472,6 +535,9 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
         gap: 24px;
         @include respond-to('<=pad') {
           width: 50%;
+        }
+        @include respond-to('pad_h') {
+          gap: 16px;
         }
         @include respond-to('<=pad_v') {
           width: 100%;
@@ -485,6 +551,9 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
           img {
             height: 24px;
             margin-right: 16px;
+            @include respond-to('pad_h') {
+              height: 16px;
+            }
           }
         }
       }
@@ -526,7 +595,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
     .o-card-icon {
       --card-icon-size: 40px;
       height: var(--card-icon-size);
-      @include respond-to('<=laptop') {
+      @include respond-to('<=pad') {
         --card-icon-size: 32px;
       }
       svg {
