@@ -128,7 +128,6 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
     display: block;
     .intro-content-pc {
       display: flex;
-      align-items: center;
     }
 
     .intro-list-pc {
@@ -152,6 +151,9 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
           @media screen and (max-width: 1200px) {
             margin-bottom: 40px;
           }
+          @media screen and (max-width: 1100px) {
+            margin-bottom: 24px;
+          }
           @media screen and (max-width: 1000px) {
             margin-bottom: 16px;
           }
@@ -171,6 +173,9 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
             @media screen and (max-width: 1200px) {
               bottom: -20px;
             }
+            @media screen and (max-width: 1100px) {
+              bottom: -20px;
+            }
             @media screen and (max-width: 1000px) {
               bottom: -18px;
             }
@@ -180,6 +185,9 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
           }
           @include respond-to('pad_h') {
             width: 50px;
+          }
+          @media screen and (max-width: 1100px) {
+            width: 36px;
           }
           @media screen and (max-width: 1000px) {
             width: 28px;
@@ -199,17 +207,20 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
           @include respond-to('pad_h') {
             left: 25px;
           }
+          @media screen and (max-width: 1100px) {
+            left: 18px;
+          }
           @media screen and (max-width: 1000px) {
             left: 14px;
           }
         }
       }
       @include respond-to('pad_h') {
-        margin-right: 32px;
+        margin: 24px 24px 24px 18px;
       }
       @media screen and (max-width: 1000px) {
         padding: 0;
-        margin-right: 32px;
+        margin: 0 16px 0 0;
       }
     }
 
