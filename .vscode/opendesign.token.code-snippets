@@ -52,7 +52,7 @@
       "var(--o-kleinblue-5)"
     ],
     "body": "var(--o-kleinblue-5)",
-    "description": "[light: 37, 81, 185, dark: 51, 91, 196]",
+    "description": "[light: 37, 81, 185, dark: 57, 97, 202]",
     "scope": "css,scss,less"
   },
   "--o-kleinblue-6": {
@@ -60,7 +60,7 @@
       "var(--o-kleinblue-6)"
     ],
     "body": "var(--o-kleinblue-6)",
-    "description": "[light: 0, 47, 167, dark: 67, 116, 242]",
+    "description": "[light: 0, 47, 167, dark: 70, 119, 245]",
     "scope": "css,scss,less"
   },
   "--o-kleinblue-7": {
@@ -68,7 +68,7 @@
       "var(--o-kleinblue-7)"
     ],
     "body": "var(--o-kleinblue-7)",
-    "description": "[light: 0, 39, 147, dark: 104, 142, 237 ]",
+    "description": "[light: 0, 39, 147, dark: 110, 148, 243 ]",
     "scope": "css,scss,less"
   },
   "--o-kleinblue-8": {
