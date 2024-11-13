@@ -57,7 +57,7 @@ There are 2 types of memory scrubbing,
 
 ### Comparison of memory scrubbing features
 
-<img src="./images/scrub_comparison.JPG" width="1000" >
+<img src="./images/scrub_comparison.jpg" width="1000" />
 
 *(1) - SPA - System Physical Address. See section 9.19.7.8 Function Index 5 - Translate SPA of ACPI spec r6.5.  
 *(2) - DPA - Device Physical Address. See section 9.19.7.8 Function Index 5 - Translate SPA of ACPI spec r6.5.  
@@ -116,7 +116,7 @@ PPR (Post Package Repair) maintenance operation requests the memory device to pe
 
 The following figure shows the technical architecture of the enhanced EDAC for controlling RAS features. 
 
-<img src="./images/edac_enhancement_for_control_ras_features.JPG" width="1000" >
+<img src="./images/edac_enhancement_for_control_ras_features.jpg" width="1000" />
 
 1. EDAC feature specific components - Creates and return feature specific descriptors.
 2. EDAC device driver enhancement for control RAS features  - Get feature's attr descriptors from the EDAC feature component and registers device's RAS features with EDAC bus and expose the feature's sysfs attributes under the sysfs EDAC bus.
@@ -131,13 +131,13 @@ The added EDAC feature specific components (e.g. EDAC scrub, EDAC ECS, EDAC PPR 
 # Examples
 
 The edac feature specific driver exposes sysfs feature control attributes to the user.
-For example scrub control, the control attributes of the registered scrubbers is available in the /sys/bus/edac/devices/<dev-name>/scrubX/
+For example scrub control, the control attributes of the registered scrubbers is available in the /sys/bus/edac/devices/\<dev-name>/scrubX/
 
 The usage takes the form shown in these examples:
 
-<img src="./images/usage-cxl-scrub-control.png" width="1000" >
+<img src="./images/usage-cxl-scrub-control.png" width="1000" />
 
-<img src="./images/usage-ras2-scrub-control.png" width="1000" >
+<img src="./images/usage-ras2-scrub-control.png" width="1000" />
 
 # Implementation
 
