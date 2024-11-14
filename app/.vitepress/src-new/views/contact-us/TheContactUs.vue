@@ -431,8 +431,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
       width: 360px;
     }
     @include respond-to('<=pad_v') {
-      order: 0;
-      width: 100%;
+      display: none;
     }
     img {
       max-width: 100%;
@@ -492,6 +491,9 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
           margin-left: 24px;
           @include respond-to('pad_h') {
             margin-left: 12px;
+          }
+          @include respond-to('phone') {
+            margin-left: 0;
           }
         }
 
@@ -590,6 +592,9 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
       --card-icon-size: 48px;
       @include respond-to('<=pad') {
         --card-icon-size: 40px;
+      }
+      @include respond-to('<=pad_v') {
+        --card-icon-size: 32px;
       }
       svg {
         width: var(--card-icon-size);

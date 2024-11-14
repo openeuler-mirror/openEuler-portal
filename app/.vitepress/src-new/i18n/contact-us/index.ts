@@ -3,7 +3,7 @@ export default {
   zh: {
     bannerTitle: '联系我们',
     communityContact: '社区联系',
-    communityContactDesc: '您有任何的疑问可以发送邮件咨询，我们将在收到邮件后3-5个工作日内答',
+    communityContactDesc: '我们将在收到邮件后3-5个工作日内答复',
     communityItem1: '资金捐赠请联系',
     communityItem2: '社区活动请联系',
     communityItem3: '品牌合作请联系',
@@ -18,7 +18,7 @@ export default {
     handyMaterialsList: [
       {
         title: "openEuler社区文档",
-        desc: "帮助开发者快速了解 openEuler，包括发行说明、系统安装、管理员指南、虚拟化和容器等各类项目的使用指导等内容",
+        desc: "帮助开发者快速了解 openEuler，包括发行说明、系统安装、管理员指南、虚拟化和容器等各类项目说明与使用指导",
         href: 'https://docs.openeuler.org/zh/'
       },
       {
