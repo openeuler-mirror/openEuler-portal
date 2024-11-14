@@ -70,6 +70,10 @@ const { isEn } = useLocale();
   animation: marquere 100s linear infinite;
 }
 
+.swiper-item {
+  display: flex;
+}
+
 .swiper-card {
   width: 269px;
   background-color: var(--o-color-fill2);
@@ -84,6 +88,12 @@ const { isEn } = useLocale();
 .o-figure {
   width: 100%;
   border-radius: var(--o-radius-xs);
+}
+
+:deep(.o-link) {
+  .o-link-label {
+    display: flex;
+  }
 }
 
 @keyframes marque {

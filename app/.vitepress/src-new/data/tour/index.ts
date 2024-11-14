@@ -48,7 +48,7 @@ export const FIRST_TOUR_STEPS = [
 export const NEW_CHANGE_DATA = {
   title: '欢迎使用',
   icon: stepIcon,
-  desc: '首先，让我们来看看网站首页上都有哪些变化？',
+  desc: '首先，让我们来看看网站首页上都有哪些新变化？',
   list: ['快速入口', '玩转社区', '开发者日历', '用户案例', '社区动态'],
 };
 
@@ -191,8 +191,8 @@ export const NEW_GUIDE_TOUR_STEPS = [
     color: '#7798FE',
     placement: 'bottom',
     href: '/',
-    title: '个人中心',
-    desc: ['代码仓、语言和个人之中心入口在这里~'],
+    title: '代码仓、语言和个人中心入口在这里~',
+    desc: [],
     extra: [],
   },
   {

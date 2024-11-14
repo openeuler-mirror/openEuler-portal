@@ -31,7 +31,7 @@ const publisher3 = [...publisher.slice(16), ...publisher.slice(16)];
 }
 .partner-swiper {
   & + .partner-swiper {
-    margin-top: 12px;
+    margin-top: 24px;
   }
 }
 
