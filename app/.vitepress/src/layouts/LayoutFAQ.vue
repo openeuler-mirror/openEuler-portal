@@ -107,13 +107,13 @@ const IconMenuShow = computed(() => {
 
 <style lang="scss" scoped>
 .catalog {
-position: fixed;
-top: 12px;
-left: 48px;
-z-index: 99;
-font-size: 24px;
-color: var(--e-color-text1);
-cursor: pointer;
+  position: fixed;
+  top: 12px;
+  left: 48px;
+  z-index: 99;
+  font-size: 24px;
+  color: var(--e-color-text1);
+  cursor: pointer;
 
   @media (min-width: 841px) and (max-width: 1100px) {
     background-color: var(--o-color-fill2);
@@ -123,6 +123,9 @@ cursor: pointer;
     top: 80px;
     left: 0;
     z-index: 80;
+  }
+  @include respond-to('pad_v') {
+    left: 56px;
   }
 }
 .left-toc {
