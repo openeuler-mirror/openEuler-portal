@@ -191,14 +191,16 @@ onMounted(() => {
 
               <div v-if="cveIdList.length" class="tab-content-item">
                 <h5 class="tab-content-item-title">CVE</h5>
-                <a
-                  v-for="(item, index) in cveIdList"
-                  :key="index"
-                  :href="`/${lang}/security/cve/detail/?cveId=${item}&packageName=${detailData.affectedComponent}`"
-                  class="tab-content-item-text tab-content-item-link"
-                >
-                  {{ item }}
-                </a>
+                <div class="tab-content-item-link-box">
+                  <a
+                    v-for="(item, index) in cveIdList"
+                    :key="index"
+                    :href="`/${lang}/security/cve/detail/?cveId=${item}&packageName=${detailData.affectedComponent}`"
+                    class="tab-content-item-text tab-content-item-link"
+                  >
+                    {{ item }}
+                  </a>
+                </div>
               </div>
 
               <div class="tab-content-item">
@@ -308,6 +310,10 @@ onMounted(() => {
       background-color: var(--e-color-bg2);
     }
   }
+}
+.tab-content-item-link-box {
+  display: flex;
+  flex-direction: column;
 }
 .wrapper {
   max-width: 1504px;
