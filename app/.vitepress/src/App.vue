@@ -104,7 +104,9 @@ onMounted(() => {
   </el-config-provider>
   <CookieNotice />
   <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
-  <AppTour />
+  <ClientOnly>
+    <AppTour />
+  </ClientOnly>
 </template>
 
 <style lang="scss" scoped>

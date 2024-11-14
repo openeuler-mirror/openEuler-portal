@@ -163,6 +163,7 @@ watch(
     :close-on-press-escape="false"
     :mask="true"
     :content-style="{ '--el-tour-bg-color': arrowColor }"
+    :scroll-into-view-options="false"
     :class="{
       'home-tour': homeVisible,
       'change-tour': newChangeVisible,
@@ -170,8 +171,8 @@ watch(
     }"
   >
     <el-tour-step
-      v-for="(item, i) in steps"
-      :key="i"
+      v-for="item in steps"
+      :key="currentStep"
       :target="item.target || undefined"
       :placement="item.placement || undefined"
       :scroll-into-view-options="false"
