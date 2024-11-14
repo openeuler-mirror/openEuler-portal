@@ -358,6 +358,14 @@ watch(
     right: 8px;
     cursor: pointer;
     @include x-svg-hover;
+
+    @include hover {
+      color: var(--o-color-primary2);
+    }
+
+    &.active {
+      color: var(--o-color-primary3);
+    }
   }
 }
 
@@ -455,6 +463,14 @@ watch(
     right: 8px;
     cursor: pointer;
     @include x-svg-hover;
+
+    @include hover {
+      color: var(--o-color-primary2);
+    }
+
+    &.active {
+      color: var(--o-color-primary3);
+    }
   }
 }
 
