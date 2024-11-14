@@ -56,15 +56,6 @@ onMounted(() => {
     <div class="play-intro">
       <p class="play-intro-text">{{ $t('home.playIntro') }}</p>
       <div class="get-os">
-        <a :href="`/${locale}/download/get-os/`" target="_blank">
-          <OButton
-            :size="isPhone ? 'medium' : 'large'"
-            variant="solid"
-            color="primary"
-          >
-            {{ $t('home.getOpenEuler') }}
-          </OButton>
-        </a>
         <img @click.stop="" :src="theme === 'light' ? blue : blueDark" />
       </div>
     </div>
@@ -74,7 +65,7 @@ onMounted(() => {
           {{ card.title }}
         </div>
         <div class="card-bottom">
-          <p class="card-intro">
+          <p class="card-intro" :title="card.intro">
             {{ card.intro }}
           </p>
           <div class="btn-box">
@@ -234,8 +225,9 @@ onMounted(() => {
     .get-os {
       position: relative;
       img {
-        top: -150%;
-        left: -50%;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -65%);
         position: absolute;
         width: 330px;
         z-index: -1;
@@ -295,6 +287,7 @@ onMounted(() => {
           padding: 12px 16px;
         }
         .card-intro {
+          @include text-truncate(2);
           @include text1;
           color: var(--o-color-info2);
         }

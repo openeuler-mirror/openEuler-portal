@@ -254,19 +254,11 @@ const watchData = watch(
 );
 </script>
 <template>
-  <AppSection id="calendar" title="openEuler开发者日历" class="home-calendar">
+  <AppSection title="openEuler开发者日历" class="home-calendar">
     <div class="calendar-body">
       <el-calendar ref="calendar" class="calender">
         <template #header="{ date }">
           <div class="left-title">
-            <div class="current-date">
-              <OIcon>
-                <IconDate></IconDate>
-              </OIcon>
-              <span class="date">
-                {{ removeLeadingZero(currentDay.raw.split('-').at(-1) || '') }}
-              </span>
-            </div>
             <OIcon @click="selectDate('prev-month', date)">
               <IconLeft :class="{ disable: isLimit }"></IconLeft>
             </OIcon>
@@ -458,10 +450,13 @@ const watchData = watch(
 .o-link {
   --link-icon-size: 16px;
 }
+
 .home-calendar {
-  position: relative;
-  width: 100%;
-  z-index: 1;
+  :deep(.section-body) {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
   .calendar-body {
     display: flex;
     margin-top: var(--o-gap-t2c);
@@ -507,21 +502,6 @@ const watchData = watch(
           .month-date {
             font-weight: 500;
             margin: 0 4px;
-          }
-          .current-date {
-            display: flex;
-            align-items: center;
-            border-radius: var(--o-radius-xs);
-            padding: 1px 16px;
-            border: 1px solid var(--o-color-control4);
-            @include h4;
-            margin-right: 24px;
-            @include respond-to('pad') {
-              margin-right: 8px;
-            }
-            @include respond-to('<=pad_v') {
-              display: none;
-            }
           }
           .date {
             color: var(--o-color-primary1);
@@ -602,7 +582,7 @@ const watchData = watch(
         .out-box {
           position: relative;
           border-radius: var(--o-radius-xs);
-          padding: 8px 12px;
+          padding: 6px 12px;
           width: 100%;
           height: 100%;
           background-color: var(--o-color-control2-light);
@@ -616,6 +596,12 @@ const watchData = watch(
                 border: 1px solid transparent;
               }
             }
+          }
+          .day-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
           }
           .icon-box {
             display: flex;
@@ -705,12 +691,14 @@ const watchData = watch(
       }
       .is-today {
         .date-calender {
-          $size: 24px;
+          $size: 32px;
           position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
           width: fit-content;
+          height: 24px;
+          line-height: 24px;
           z-index: 1;
           &::after {
             content: '';
@@ -894,7 +882,7 @@ const watchData = watch(
         }
       }
       .o-collapse-item-body {
-        background-color: var(--o-color-control2-light);
+        background-color: #f7f9fd;
         margin-bottom: 0;
         a {
           word-break: break-all;
@@ -924,43 +912,58 @@ const watchData = watch(
     }
   }
 }
+
+@include in-dark {
+  .home-calendar {
+    .calendar-body {
+      :deep(.o-collapse) {
+        .o-collapse-item-body {
+          background-color: #2b2b2f;
+        }
+      }
+    }
+  }
+}
+
 .cube-1,
 .cube-2 {
   position: absolute;
-  top: -14px;
-  left: -20px;
+  top: -104px;
+  left: -110px;
   width: 320px;
   z-index: -1;
   @include respond-to('laptop') {
     width: 327px;
-    top: -84px;
-    left: -173px;
+    top: -180px;
+    left: -210px;
   }
   @include respond-to('pad_h') {
-    top: -46px;
-    left: -104px;
   }
   @include respond-to('<=pad_v') {
     width: 84px;
-    top: -7px;
-    left: 4px;
+    top: -50px;
+    left: -4px;
   }
   @include respond-to('phone') {
     width: 54px;
-    top: 4px;
-    left: 4px;
+    top: -32px;
+    left: 3px;
   }
 }
 .cube-2 {
   left: inherit;
   top: inherit;
-  width: 325px;
-  bottom: -160px;
-  right: -120px;
+  width: 380px;
+  bottom: -181px;
+  right: -220px;
   @include respond-to('laptop') {
     width: 400px;
-    bottom: -190px;
+    bottom: -200px;
+    right: -240px;
+  }
+  @include respond-to('pad_h') {
     right: -140px;
+    bottom: -150px;
   }
   @include respond-to('<=pad_v') {
     width: 71px;

@@ -21,7 +21,7 @@ import IconContact6 from '~icons/app-new/icon-contact6.svg';
 import IconContact7 from '~icons/app-new/icon-contact7.svg';
 
 import CodeImgXzs from '~@/assets/category/footer/code-xzs.png';
-import CodeImgZgz from '~@/assets/category/footer/code-zgz.png';
+import CodeImgZgz from '~@/assets/category/footer/code-zgz.jpg';
 
 // follow us
 import followCoverZh from '~@/assets/category/contact/follow-zh.jpg';

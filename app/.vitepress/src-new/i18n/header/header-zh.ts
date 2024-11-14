@@ -639,7 +639,7 @@ export default {
             },
             {
               NAME: '开发者日历',
-              URL: '/#calendar/',
+              URL: '/meeting/#calendar',
             },
             {
               NAME: '活动与大赛',

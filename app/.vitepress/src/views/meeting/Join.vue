@@ -6,6 +6,8 @@ import meetingConfig from '@/data/meeting';
 import AppContent from '@/components/AppContent.vue';
 import AppCalendar from '@/components/AppCalendar.vue';
 
+import HomeCalendar from '~@/views/home/HomeCalendar.vue';
+
 import { getMeetingActivity } from '@/api/api-calendar';
 
 const calendarData = ref<string[]>([]);
@@ -44,12 +46,9 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <h3>openEuler 开发者日历</h3>
-      <AppCalendar
-        v-if="calendarData?.length"
-        id="meeting"
-        :table-data="calendarData"
-      />
+      <div id="calendar">
+        <HomeCalendar v-if="calendarData?.length" :table-data="calendarData" />
+      </div>
     </div>
   </AppContent>
 </template>
@@ -69,6 +68,16 @@ h3 {
     line-height: var(--e-line-height-h8);
     margin-top: var(--e-spacing-h2);
     margin-bottom: var(--e-spacing-h5);
+  }
+}
+#calendar {
+  :deep(.app-section) {
+    .section-wrapper {
+      padding: 0;
+    }
+    .section-body {
+      padding: 0;
+    }
   }
 }
 .join-card-box {
