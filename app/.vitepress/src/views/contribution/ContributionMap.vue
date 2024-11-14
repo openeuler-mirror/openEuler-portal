@@ -67,7 +67,7 @@ const goLink = (url: string, isBlank: boolean) => {
 </template>
 <style lang="scss" scoped>
 .content-map {
-  background-color: var(--e-color-bg1);
+  background-color: var(--o-color-fill1);
   width: 100%;
   padding-bottom: var(--e-spacing-h1);
   .content-map-img {

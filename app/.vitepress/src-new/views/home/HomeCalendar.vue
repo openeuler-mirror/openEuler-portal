@@ -536,6 +536,10 @@ const watchData = watch(
             text-align: left;
             color: var(--o-color-info3);
             @include text1;
+            @include respond-to('<=pad_v') {
+              padding: 0;
+              text-align: center;
+            }
           }
         }
         td:first-child {
@@ -822,6 +826,9 @@ const watchData = watch(
         @include tip1;
         color: var(--o-color-info3);
         text-decoration: none;
+        @include respond-to('<=pad_v') {
+          margin-left: 32px;
+        }
         .o-divider {
           @include tip1;
         }
@@ -831,6 +838,10 @@ const watchData = watch(
         font-size: var(--o-font_size-tip1);
         line-height: var(--o-line_height-tip1);
         margin-left: calc($icon-size + 12px);
+        @include respond-to('<=pad_v') {
+          margin-left: 32px;
+          padding: 0;
+        }
       }
     }
     .meeting-list {
