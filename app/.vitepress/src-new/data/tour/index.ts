@@ -196,16 +196,6 @@ export const NEW_GUIDE_TOUR_STEPS = [
     extra: [],
   },
   {
-    bg: stepFooterImg,
-    target: '#tour_footer',
-    color: 'var(--o-color-fill2)',
-    placement: 'top',
-    href: '/',
-    title: 'Footer',
-    desc: ['我们在Footer这里提供了一些快捷链接，方便朋友们的检索'],
-    extra: [],
-  },
-  {
     bg: stepFeedbackImg,
     target: '#tour_feedback',
     color: 'var(--o-color-fill2)',

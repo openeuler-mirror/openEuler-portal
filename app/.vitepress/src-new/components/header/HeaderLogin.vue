@@ -96,7 +96,7 @@ onMounted(async () => {
 
 <style lang="scss" scoped>
 .opt-user {
-  height: 100%;
+  height: calc(100% + 10px);
   display: flex;
   align-items: center;
   position: relative;

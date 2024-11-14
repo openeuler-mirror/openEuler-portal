@@ -45,7 +45,7 @@ const itemChange = (data: any) => {
 }
 
 .header-code {
-  height: 100%;
+  height: calc(100% + 10px);
   display: flex;
   align-items: center;
 

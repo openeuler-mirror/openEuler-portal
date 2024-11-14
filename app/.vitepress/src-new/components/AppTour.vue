@@ -163,7 +163,6 @@ watch(
     :close-on-press-escape="false"
     :mask="true"
     :content-style="{ '--el-tour-bg-color': arrowColor }"
-    :scroll-into-view-options="false"
     :class="{
       'home-tour': homeVisible,
       'change-tour': newChangeVisible,
@@ -175,7 +174,6 @@ watch(
       :key="currentStep"
       :target="item.target || undefined"
       :placement="item.placement || undefined"
-      :scroll-into-view-options="false"
     >
       <template #header>
         <div v-if="!newChangeVisible" class="header-img">

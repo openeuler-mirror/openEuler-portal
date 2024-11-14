@@ -509,7 +509,7 @@ watch(
         </div>
       </div>
 
-      <div class="nav-box1" :class="isDark ? 'dark-nav' : ''">
+      <div id="tour_feedback" class="nav-box1" :class="isDark ? 'dark-nav' : ''">
         <div
           class="nav-item"
           id="feedback"
