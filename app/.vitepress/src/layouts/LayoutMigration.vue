@@ -352,7 +352,7 @@ const handleNodeClick = (node: any) => {
 
     &.custom-layout {
       @media screen and (max-width: 768px) {
-        background-color: var(--e-color-bg1);
+        background-color: var(--o-color-fill1);
         box-shadow: var(--e-shadow-l1);
         padding: 0;
         box-shadow: none;
