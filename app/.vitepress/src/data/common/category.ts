@@ -11,6 +11,7 @@ const categories: string[] = [
   'security',
   'faq',
   'wiki',
+  'white-paper',
 ];
 
 export default categories;

@@ -21,11 +21,9 @@ import {
   getDriverArchitecture,
   getHardwareOSOptions,
   getDriverOSOptions,
-  getSoftwareList,
   getBusinessSoftwareList,
   getTestOrganizations,
   getCpu,
-  getSoftFilter,
   getDriveTypes,
   getSolutionList,
   getSolution,
@@ -157,14 +155,14 @@ const getDriverData = (data: CompatibilityQueryT) => {
 };
 
 // 开源软件
-const getSoftwareData = (data: CompatibilityQueryT) => {
-  getSoftwareList(data).then((res: any) => {
-    total.value = res.total;
-    totalPage.value = Math.ceil(total.value / queryData.pages.size);
-    tableData.value = res.info;
-  });
-  osOptions.value = hardwareOsOptions.value;
-};
+// const getSoftwareData = (data: CompatibilityQueryT) => {
+//   getSoftwareList(data).then((res: any) => {
+//     total.value = res.total;
+//     totalPage.value = Math.ceil(total.value / queryData.pages.size);
+//     tableData.value = res.info;
+//   });
+//   osOptions.value = hardwareOsOptions.value;
+// };
 
 // 商业软件
 const getBusinessSoftwareData = (data: CompatibilityQueryT) => {
@@ -225,7 +223,6 @@ const handleClick = () => {
 const methodMap: { [key: string]: (params: CompatibilityQueryT) => void } = {
   '1': getCompatibilityData,
   '2': getDriverData,
-  '3': getSoftwareData,
   '4': getBusinessSoftwareData,
   '5': getSolutionData,
 };
@@ -470,12 +467,12 @@ onMounted(() => {
     });
   });
 
-  getSoftFilter().then((res: any) => {
-    res.Type.forEach((item: string) => {
-      softType.value.push(item);
-    });
-    osLists.value = res.OS;
-  });
+  // getSoftFilter().then((res: any) => {
+  //   res.Type.forEach((item: string) => {
+  //     softType.value.push(item);
+  //   });
+  //   osLists.value = res.OS;
+  // });
 
   // filter-解决方案
   getSolution({ lang: lang.value }).then((res: any) => {
@@ -514,6 +511,29 @@ onMounted(() => {
 
   <OTabs v-model="activeName" class="tabs-pc" @tab-click="handleClick">
     <AppContent>
+      <p v-if="activeName === '1' || activeName === '2'" class="about">
+        {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
+
+        <a href="#" @click="goDetailPage">{{
+          i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
+        }}</a>
+      </p>
+      <p v-if="activeName === '3'" class="about">
+        {{ i18n.compatibility.SOFTWARE_OEC_DETAIL.TEXT }}
+
+        <a href="#" @click="goDetailPage">{{
+          i18n.compatibility.SOFTWARE_OEC_DETAIL.TITLE
+        }}</a>
+      </p>
+      <p v-if="activeName === '4'" class="about">
+        {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT }}
+
+        <a href="#" @click="goDetailPage">{{
+          i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TITLE
+        }}</a>
+        <br />
+        {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT_2 }}
+      </p>
       <OTabPane :label="i18n.compatibility.HARDWARE" name="1">
         <OSearch
           v-model="searchContent"
@@ -727,106 +747,6 @@ onMounted(() => {
           <OTableColumn
             :label="i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_MODEL"
             prop="chipModel"
-          ></OTableColumn>
-        </OTable>
-      </OTabPane>
-
-      <OTabPane :label="i18n.compatibility.SOFTWARE" name="3">
-        <OSearch
-          v-model="searchContent"
-          class="o-search"
-          :placeholder="i18n.compatibility.SOFTWARE_SEARCH_PLACEHOLDER"
-          @change="changeSearchVal"
-        ></OSearch>
-        <OCard class="filter-card">
-          <template #header>
-            <div class="card-header">
-              <TagFilter :label="i18n.compatibility.OS" :show="false">
-                <OTag
-                  v-for="(item, index) in osOptions"
-                  :key="'tag' + index"
-                  checkable
-                  :type="activeIndex === index ? 'primary' : 'text'"
-                  @click="selectTypeTag(index, item)"
-                >
-                  {{ item }}
-                </OTag>
-              </TagFilter>
-            </div>
-          </template>
-          <div class="card-body">
-            <TagFilter :show="false" :label="i18n.compatibility.SOFTWARETYPE">
-              <OTag
-                v-for="(item, index) in softType"
-                :key="'tag' + index"
-                checkable
-                :type="activeIndex3 === index ? 'primary' : 'text'"
-                @click="clickSoftType(index, item)"
-              >
-                {{ item }}
-              </OTag>
-            </TagFilter>
-
-            <TagFilter :show="false" :label="i18n.compatibility.ARCHITECTURE">
-              <OTag
-                v-for="(item, index) in architectureSelect"
-                :key="'tag' + index"
-                checkable
-                :type="activeIndex1 === index ? 'primary' : 'text'"
-                @click="selectOptionTag(index, item)"
-              >
-                {{ item }}
-              </OTag>
-            </TagFilter>
-          </div>
-        </OCard>
-        <OTable class="pc-list" :data="tableData" style="width: 100%">
-          <OTableColumn
-            :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.ARCHITECTURE"
-            prop="arch"
-            width="130"
-          >
-          </OTableColumn>
-          <OTableColumn
-            :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.SOFTWARENAME"
-            prop="softwareName"
-          ></OTableColumn>
-          <OTableColumn
-            :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.SYSTEM"
-            prop="os"
-          ></OTableColumn>
-          <OTableColumn
-            :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.VERSION"
-            prop="version"
-            width="140"
-          ></OTableColumn>
-          <OTableColumn
-            :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.SOFTWARETYPE"
-            prop="group"
-          ></OTableColumn>
-          <OTableColumn
-            :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.PROPERTIES"
-            prop="property"
-            width="160"
-          ></OTableColumn>
-
-          <el-table-column
-            :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.DOWNLOADLINK"
-            width="130"
-          >
-            <template #default="scope">
-              <a
-                class="friendly-link"
-                :href="scope.row.downloadLink"
-                target="_blank"
-                rel="noopener noreferrer"
-                >link</a
-              >
-            </template>
-          </el-table-column>
-          <OTableColumn
-            :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.PUBLICKLICENSE"
-            prop="license"
           ></OTableColumn>
         </OTable>
       </OTabPane>
@@ -1130,29 +1050,6 @@ onMounted(() => {
             >
           </OPagination>
         </ClientOnly>
-        <p v-if="activeName === '1' || activeName === '2'" class="about">
-          {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
-
-          <a href="#" @click="goDetailPage">{{
-            i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
-          }}</a>
-        </p>
-        <p v-if="activeName === '3'" class="about">
-          {{ i18n.compatibility.SOFTWARE_OEC_DETAIL.TEXT }}
-
-          <a href="#" @click="goDetailPage">{{
-            i18n.compatibility.SOFTWARE_OEC_DETAIL.TITLE
-          }}</a>
-        </p>
-        <p v-if="activeName === '4'" class="about">
-          {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT }}
-
-          <a href="#" @click="goDetailPage">{{
-            i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TITLE
-          }}</a>
-          <br />
-          {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT_2 }}
-        </p>
       </div>
     </AppContent>
   </OTabs>
@@ -1215,6 +1112,12 @@ onMounted(() => {
               </OOption>
             </OSelect>
           </ClientOnly>
+          <p class="mobile-about">
+            {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
+            <a href="#" @click="goDetailPage">{{
+              i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
+            }}</a>
+          </p>
 
           <ul v-if="totalPage !== 0" class="mobile-list">
             <li v-for="item in tableData" :key="item.id" class="item">
@@ -1281,13 +1184,6 @@ onMounted(() => {
             @jump-page="handleCurrentChange"
           >
           </OPagination>
-
-          <p class="mobile-about">
-            {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
-            <a href="#" @click="goDetailPage">{{
-              i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
-            }}</a>
-          </p>
         </el-collapse-item>
 
         <el-collapse-item :title="i18n.compatibility.DRIVE" name="2">
@@ -1347,6 +1243,12 @@ onMounted(() => {
               </OOption>
             </OSelect>
           </ClientOnly>
+          <p class="mobile-about">
+            {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
+            <a href="#" @click="goDetailPage">{{
+              i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
+            }}</a>
+          </p>
 
           <ul v-if="totalPage !== 0" class="mobile-list">
             <li v-for="item in tableData" :key="item.id" class="item">
@@ -1430,168 +1332,6 @@ onMounted(() => {
             @current-change="handleCurrentChange"
             @jump-page="handleCurrentChange"
           ></OPagination>
-
-          <p class="mobile-about">
-            {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT }}
-            <a href="#" @click="goDetailPage">{{
-              i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE
-            }}</a>
-          </p>
-        </el-collapse-item>
-
-        <el-collapse-item :title="i18n.compatibility.SOFTWARE" name="3">
-          <ClientOnly>
-            <OSearch
-              v-model="searchContent"
-              class="o-search"
-              :placeholder="i18n.compatibility.SOFTWARE_SEARCH_PLACEHOLDER"
-              @change="changeSearchVal"
-            ></OSearch>
-            <!-- 架构 -->
-            <OSelect
-              v-model="architehture"
-              :placeholder="i18n.compatibility.ARCHITECTURE"
-              @change="selectArchitehture"
-            >
-              <OOption
-                v-for="item in architectureSelect"
-                :key="item"
-                :class="item"
-                :label="item"
-                :value="item"
-              >
-                {{ item }}
-              </OOption>
-            </OSelect>
-            <!-- 软件类型 -->
-            <OSelect
-              v-model="typeName"
-              :placeholder="i18n.compatibility.SOFTWARETYPE"
-              @change="selectType"
-            >
-              <OOption
-                v-for="item in softType"
-                :key="item"
-                :class="item"
-                :label="item"
-                :value="item"
-              >
-                {{ item }}
-              </OOption>
-            </OSelect>
-            <!-- 操作系统-->
-            <OSelect
-              v-model="osName"
-              :placeholder="i18n.compatibility.OS"
-              @change="selectOsName"
-            >
-              <OOption
-                v-for="item in osLists"
-                :key="item"
-                :class="item"
-                :label="item"
-                :value="item"
-              >
-                {{ item }}
-              </OOption>
-            </OSelect>
-          </ClientOnly>
-
-          <ul v-if="totalPage !== 0" class="mobile-list">
-            <li v-for="item in tableData" :key="item.id" class="item">
-              <ul>
-                <li>
-                  <span
-                    >{{
-                      i18n.compatibility.SOFTWARE_TABLE_COLUMN.ARCHITECTURE
-                    }}:</span
-                  >{{ item.arch }}
-                </li>
-                <li>
-                  <span
-                    >{{
-                      i18n.compatibility.SOFTWARE_TABLE_COLUMN.SOFTWARETYPE
-                    }}:</span
-                  >
-                  {{ item.group }}
-                </li>
-                <li>
-                  <span
-                    >{{
-                      i18n.compatibility.SOFTWARE_TABLE_COLUMN.SOFTWARENAME
-                    }}:</span
-                  >
-                  {{ item.softwareName }}
-                </li>
-                <li>
-                  <span
-                    >{{
-                      i18n.compatibility.SOFTWARE_TABLE_COLUMN.VERSION
-                    }}:</span
-                  >
-                  {{ item.version }}
-                </li>
-                <li>
-                  <span
-                    >{{
-                      i18n.compatibility.SOFTWARE_TABLE_COLUMN.PROPERTIES
-                    }}:</span
-                  >
-                  {{ item.property }}
-                </li>
-                <li>
-                  <span
-                    >{{
-                      i18n.compatibility.SOFTWARE_TABLE_COLUMN.SYSTEM
-                    }}:</span
-                  >
-                  {{ item.os }}
-                </li>
-                <li>
-                  <span
-                    >{{
-                      i18n.compatibility.SOFTWARE_TABLE_COLUMN.DOWNLOADLINK
-                    }}:</span
-                  >
-                  <a
-                    :href="item.downloadLink"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="friendly-link"
-                    >link</a
-                  >
-                </li>
-                <li>
-                  <span
-                    >{{
-                      i18n.compatibility.SOFTWARE_TABLE_COLUMN.PUBLICKLICENSE
-                    }}:</span
-                  >
-                  {{ item.license }}
-                </li>
-              </ul>
-            </li>
-          </ul>
-
-          <div v-if="totalPage === 0" class="empty-status">
-            {{ i18n.compatibility.EMPTY_SEARCH_RESULT }}
-          </div>
-
-          <OPagination
-            v-model:page-size="queryData.pages.size"
-            v-model:current-page="queryData.pages.page"
-            :total="total"
-            :background="true"
-            @current-change="handleCurrentChange"
-            @jump-page="handleCurrentChange"
-          ></OPagination>
-
-          <p class="mobile-about">
-            {{ i18n.compatibility.SOFTWARE_OEC_DETAIL.TEXT }}
-            <a href="#" @click="goDetailPage">{{
-              i18n.compatibility.SOFTWARE_OEC_DETAIL.TITLE
-            }}</a>
-          </p>
         </el-collapse-item>
 
         <el-collapse-item
@@ -1634,7 +1374,14 @@ onMounted(() => {
               </OOption>
             </OSelect>
           </ClientOnly>
-
+          <p class="mobile-about last-mobile-about">
+            {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT }}
+            <a href="#" @click="goDetailPage">{{
+              i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TITLE
+            }}</a>
+            <br />
+            {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT_2 }}
+          </p>
           <ul v-if="totalPage !== 0" class="mobile-list">
             <li v-for="item in tableData" :key="item.id" class="item">
               <ul>
@@ -1697,15 +1444,6 @@ onMounted(() => {
             @current-change="handleCurrentChange"
             @jump-page="handleCurrentChange"
           ></OPagination>
-
-          <p class="mobile-about last-mobile-about">
-            {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT }}
-            <a href="#" @click="goDetailPage">{{
-              i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TITLE
-            }}</a>
-            <br />
-            {{ i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT_2 }}
-          </p>
         </el-collapse-item>
 
         <el-collapse-item :title="i18n.compatibility.SOLUTION" name="5">
@@ -1914,7 +1652,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-.pagination-mob {
+:deep(.pagination-mobile) {
   margin-bottom: 12px;
 }
 
@@ -2017,7 +1755,7 @@ onMounted(() => {
       padding-bottom: 0;
     }
   }
-  :deep(.o-select) {
+  :deep(.e-select) {
     width: 100%;
     margin-top: var(--e-spacing-h6);
   }
@@ -2050,7 +1788,7 @@ onMounted(() => {
   }
   :deep(.el-card__body) {
     padding: var(--e-spacing-h8) var(--e-spacing-h2);
-    .o-tag {
+    .e-tag {
       margin: var(--e-spacing-h10);
     }
   }
@@ -2123,7 +1861,7 @@ onMounted(() => {
   }
 }
 .about {
-  margin-top: var(--e-spacing-h4);
+  margin-bottom: 24px;
   font-size: var(--e-font-size-h8);
   font-weight: 400;
   color: var(--e-color-text1);

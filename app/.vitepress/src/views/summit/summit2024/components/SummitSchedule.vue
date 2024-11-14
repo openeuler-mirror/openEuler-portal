@@ -181,8 +181,6 @@ function convertMd(data: string) {
       }
     }
     :deep(.el-tabs__nav) {
-      float: none;
-      display: inline-block;
       .el-tabs__active-bar {
         display: none;
       }
@@ -192,7 +190,6 @@ function convertMd(data: string) {
     }
     .time-tabs {
       display: inline-block;
-      margin: 0 0 24px;
       cursor: pointer;
       border: 1px solid var(--e-color-border2);
       color: var(--e-color-text1);
@@ -234,8 +231,6 @@ function convertMd(data: string) {
           }
         }
         .el-tabs__nav {
-          float: none;
-          display: inline-block;
           @media (max-width: 1100px) {
             line-height: 44px;
           }
@@ -252,7 +247,8 @@ function convertMd(data: string) {
         }
       }
       :deep(.el-tabs__nav-scroll) {
-        text-align: center;
+        display: flex;
+        justify-content: center;
         color: var(--e-color-text1);
       }
       :deep(.el-tabs__content) {
@@ -262,8 +258,6 @@ function convertMd(data: string) {
         }
       }
       :deep(.el-tabs__nav) {
-        float: none;
-        display: inline-block;
         @media (max-width: 1100px) {
           line-height: 44px;
         }

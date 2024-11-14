@@ -16,8 +16,8 @@ const attrs = useAttrs();
 
 const classNames = computed(() => {
   return `${attrs['poper-class']}`
-    ? `${attrs['poper-class']} o-pagination-popper`
-    : 'o-pagination-popper';
+    ? `${attrs['poper-class']} e-pagination-popper`
+    : 'e-pagination-popper';
 });
 
 // 移动端
@@ -85,7 +85,7 @@ watch(
 <template>
   <ElPagination
     v-if="!isMobile"
-    class="o-pagination"
+    class="e-pagination"
     v-bind="attrs"
     :popper-class="classNames"
   >
@@ -141,7 +141,7 @@ watch(
 </template>
 
 <style lang="scss">
-.o-pagination {
+.e-pagination {
   --e-pagination-font-color: var(--e-color-text1);
   --e-pagination-font-color_active: var(--e-color-brand1);
   --e-pagination-bg-color: var(--e-color-text5);
@@ -157,11 +157,11 @@ watch(
     .el-pagination__sizes {
       margin: 0 var(--e-spacing-h8) 0 0;
     }
-    .el-input {
-      --el-input-bg-color: var(--e-pagination-bg-color);
-      --el-input-text-color: var(--e-pagination-font-color);
+    .el-select{
+      --el-select-bg-color: var(--e-pagination-bg-color);
+      --el-select-text-color: var(--e-pagination-font-color);
     }
-    .el-input__wrapper {
+    .el-select__wrapper {
       border-radius: 0px;
       box-shadow: none;
       height: 36px;
@@ -229,7 +229,7 @@ watch(
     }
   }
 }
-.o-pagination-popper {
+.e-pagination-popper {
   box-shadow: var(--e-shadow-l3);
   &.el-popper {
     box-shadow: none !important;

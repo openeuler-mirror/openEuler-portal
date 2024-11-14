@@ -90,16 +90,14 @@ onMounted(() => {
     user-select: none;
   }
   .wrap {
-    max-width: 1504px;
+    max-width: var(--layout-content-max-width);
+    padding-left: var(--layout-content-padding);
+    padding-right: var(--layout-content-padding);
     margin: 0 auto;
-    padding: 0 44px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 160px;
-    @media screen and (max-width: 1439px) {
-      padding: 0 24px;
-    }
 
     @media screen and (max-width: 768px) {
       min-height: 126px;

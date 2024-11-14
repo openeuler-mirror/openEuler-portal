@@ -441,9 +441,9 @@ export default {
             },
             {
               //培训认证
-              NAME: '人才评定',
+              NAME: '人才培养',
               LABEL: '',
-              PATH: 'https://talent-assessment.openeuler.org/',
+              PATH: '/talent-assessment/',
             },
           ],
         },

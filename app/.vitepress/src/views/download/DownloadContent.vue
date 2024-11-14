@@ -712,7 +712,7 @@ function setActiveMirrorMobile(index: number, item: string) {
         display: flex;
         flex-wrap: wrap;
       }
-      .o-tag {
+      .e-tag {
         padding: 0 12px;
         font-size: var(--e-font-size-text);
         height: 28px;
@@ -756,7 +756,7 @@ function setActiveMirrorMobile(index: number, item: string) {
         background-color: var(--e-color-border2);
       }
     }
-    :deep(.o-table.el-table) {
+    :deep(.e-table.el-table) {
       box-shadow: none;
     }
     h3 {

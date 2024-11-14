@@ -339,7 +339,7 @@ const jumpPage = (val: number) => {
   }
 }
 
-.o-table {
+.e-table {
   box-shadow: none;
 }
 .pagination-slot {

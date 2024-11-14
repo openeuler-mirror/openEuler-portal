@@ -47,7 +47,7 @@ const IconMenuShow = computed(() => {
   <!-- 内容区域 -->
   <div class="faq-wrapper">
     <!-- 移动端导航栏 -->
-    <div v-if="screenWidth < 1100" class="mobile-nav">
+    <div v-if="screenWidth < 1100">
       <OIcon v-show="IconMenuShow" class="catalog" @click="toggleMenu(true)"
         ><IconCatalog
       /></OIcon>
@@ -106,6 +106,28 @@ const IconMenuShow = computed(() => {
 </template>
 
 <style lang="scss" scoped>
+.catalog {
+  position: fixed;
+  top: 12px;
+  left: 48px;
+  z-index: 99;
+  font-size: 24px;
+  color: var(--e-color-text1);
+  cursor: pointer;
+
+  @media (min-width: 841px) and (max-width: 1100px) {
+    background-color: var(--o-color-fill2);
+    border-radius: 0 100px 100px 0;
+    box-shadow: var(--o-shadow-2);
+    padding: var(--o-gap-1);
+    top: 80px;
+    left: 0;
+    z-index: 80;
+  }
+  @include respond-to('pad_v') {
+    left: 56px;
+  }
+}
 .left-toc {
   max-width: 280px;
   width: 100%;
@@ -186,21 +208,6 @@ const IconMenuShow = computed(() => {
   right: 0;
 }
 
-.mobile-nav {
-  position: fixed;
-  top: 48px;
-  right: 0;
-  padding: 16px;
-  background-color: var(--e-color-bg2);
-  margin-bottom: 16px;
-  width: 100%;
-  z-index: 2;
-  box-shadow: var(--e-shadow-l1);
-  .o-icon {
-    font-size: 24px;
-  }
-}
-
 .faq-title {
   font-size: var(--e-font-size-h5);
   line-height: var(--e-line-height-h5);
@@ -219,7 +226,6 @@ const IconMenuShow = computed(() => {
     max-width: 1054px;
     width: 100%;
     @media screen and (max-width: 1100px) {
-      margin-top: calc(48px + 16px);
       margin-bottom: 40px;
       background-color: var(--e-color-bg2);
     }

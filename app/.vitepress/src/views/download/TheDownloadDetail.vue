@@ -23,11 +23,21 @@ const { lang } = useData();
 
 const versionData = ref<DetailedLinkItemT[]>();
 const versionList = ref<VersionInfoT[]>();
+const scenario = ref('');
+
 const mirrorList = ref();
 const activeVersion = ref('');
 function handleSelectChange() {
   history.pushState(null, '', `?version=${activeVersion.value}`);
   queryGetDownloadLink(activeVersion.value.replaceAll(' ', '-'));
+}
+
+function setversionShownName(version: string) {
+  history.pushState(
+    null,
+    '',
+    location.origin + location.pathname + `?version=${version}`
+  );
 }
 
 const queryGetDownloadLink = (version: string) => {
@@ -46,6 +56,8 @@ const queryGetVersionInfo = () => {
 };
 onMounted(() => {
   activeVersion.value = decodeURIComponent(getUrlParam('version'));
+  scenario.value = decodeURIComponent(getUrlParam('scenario'));
+  setversionShownName(activeVersion.value);
   queryGetDownloadLink(activeVersion.value.replaceAll(' ', '-'));
   queryGetVersionInfo();
 });
@@ -87,6 +99,7 @@ onMounted(() => {
         :version="activeVersion"
         :version-data="versionData"
         :mirror-list="mirrorList"
+        :scenario="scenario"
       />
     </AppContent>
   </div>

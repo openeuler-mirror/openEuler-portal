@@ -555,7 +555,7 @@ function convertMd(data: string) {
   }
 }
 
-.o-table {
+.e-table {
   box-shadow: none;
 }
 .sig-detail {

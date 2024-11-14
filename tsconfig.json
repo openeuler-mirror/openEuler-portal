@@ -15,6 +15,7 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["./app/.vitepress/src/*"],
+      "~@/*": ["./app/.vitepress/src-new/*"],
       "opendesign": ["./opendesign"]
     },
     "types": [

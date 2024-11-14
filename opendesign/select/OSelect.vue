@@ -27,7 +27,7 @@ const debounceEvent = debounce(
 );
 
 const classNames = computed(() => {
-  return `${attrs['custom-class']} o-select-dropdown`;
+  return `${attrs['custom-class']} e-select-dropdown`;
 });
 
 let optionDom: null | HTMLElement = null;
@@ -68,7 +68,7 @@ onUnmounted(() => {
 
 <template>
   <ElSelect
-    class="o-select"
+    class="e-select"
     :popper-class="classNames"
     v-bind="attrs"
     @visible-change="scrollEvent"
@@ -81,7 +81,7 @@ onUnmounted(() => {
 </template>
 
 <style lang="scss">
-.o-select {
+.e-select {
   --e-select-font-tip: var(--e-font-size-tip);
   --e-select-font-text: var(--e-color-text4);
   --e-select-color-bg: var(--e-color-bg2);
@@ -92,22 +92,30 @@ onUnmounted(() => {
   &:hover {
     box-shadow: var(--e-select-shadow_hover);
   }
-  .el-input__wrapper {
+  .select-trigger {
+    width: 100%;
+  }
+  .el-select__wrapper {
     background-color: var(--e-select-color-bg);
     border-radius: 0;
     box-shadow: var(--e-select-shadow);
+    padding: 0px 11px;
     &:hover {
+      box-shadow: none;
       border: none;
     }
+
+    &.is-focused {
+      box-shadow: 0 0 0 1px var(--e-color-brand1) inset;
+    }
   }
-  .el-input__prefix-inner {
-    // font-size: var(--e-select-font-tip);
+  .el-select__prefix-inner {
     .o-icon {
       display: flex;
       align-items: center;
     }
   }
-  .el-input__suffix {
+  .el-select__suffix {
     height: 40px;
     .el-icon {
       svg {
@@ -116,15 +124,15 @@ onUnmounted(() => {
     }
   }
   @media screen and (max-width: 867px) {
-    .el-input {
+    .el-select {
       height: 34px;
-      .el-input__wrapper {
+      .el-select__wrapper {
         padding: var(--e-spacing-h8);
-        .el-input__inner {
+        .el-select__inner {
           font-size: var(--e-select-font-tip);
         }
       }
-      .el-input__suffix {
+      .el-selct__suffix {
         height: 34px;
       }
     }

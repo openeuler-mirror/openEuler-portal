@@ -320,7 +320,7 @@ onMounted(() => {
         margin-bottom: var(--e-spacing-h8);
       }
     }
-    .o-table {
+    .e-table {
       box-shadow: none;
     }
     &-content {

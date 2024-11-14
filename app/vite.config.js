@@ -28,7 +28,10 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         charset: false,
-        additionalData: `@use "@/shared/styles/mixin/common.scss" as *;`,
+        additionalData: `
+        @use "~@/assets/style/mixin/screen.scss" as *;
+        @use "~@/assets/style/mixin/font.scss" as *;
+        @use "~@/assets/style/mixin/common.scss" as *;`,
       },
     },
   },
@@ -40,8 +43,17 @@ export default defineConfig({
         app: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src/assets/svg-icons')
         ),
+        'app-new': FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src-new/assets/svg-icons')
+        ),
         mooc: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src/assets/category/mooc')
+        ),
+        home: FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src-new/assets/category/home/svgs')
+        ),
+        case: FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src-new/assets/category/home/case/svg-icons')
         ),
         footer: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src/assets/common/footer')

@@ -1,0 +1,16 @@
+export default {
+  timeout: 'Request timeout',
+  statusCode400: 'Bad request (400)',
+  statusCode401: 'Session expired, Log in again. (401)',
+  statusCode403: 'Forbidden (403)',
+  statusCode404: 'Page not found (404)',
+  statusCode408: 'Request timeout (408)',
+  statusCode418: "This page isn't working (418)",
+  statusCode500: 'Internal server error (500)',
+  statusCode501: 'Not implemented (501)',
+  statusCode502: 'Bad gateway (502)',
+  statusCode503: 'Service unavailable (503)',
+  statusCode504: 'Gateway timeout (504)',
+  statusCode505: 'HTTP version not supported (505)',
+  defaultStatusCode: 'Request error. Status code: ',
+};

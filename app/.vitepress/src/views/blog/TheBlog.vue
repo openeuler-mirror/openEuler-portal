@@ -458,7 +458,11 @@ const changeCurrentPageMoblie = (val: number) => {
         </ClientOnly>
       </div>
     </div>
-    <div v-loading="loading" element-loading-background="transparent"  class="blog-body">
+    <div
+      v-loading="loading"
+      element-loading-background="transparent"
+      class="blog-body"
+    >
       <template v-if="blogCardData.length">
         <div class="blog-list">
           <OCard
@@ -538,6 +542,10 @@ const changeCurrentPageMoblie = (val: number) => {
 </template>
 
 <style lang="scss" scoped>
+.el-select {
+  min-width: 227px;
+}
+
 @mixin showline {
   word-break: break-all;
   text-overflow: ellipsis;
@@ -587,7 +595,20 @@ const changeCurrentPageMoblie = (val: number) => {
     display: none;
   }
   .blog-select-item {
+    display: flex;
+    align-items: center;
     margin-right: var(--e-spacing-h1);
+    @media (max-width: 1100px) {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--e-spacing-h5);
+      :deep(.e-select) {
+        width: 100%;
+      }
+    }
     .o-icon {
       font-size: var(--e-font-size-h7);
       @media screen and (max-width: 768px) {
@@ -595,10 +616,15 @@ const changeCurrentPageMoblie = (val: number) => {
       }
     }
     .blog-select-item-title {
+      white-space: nowrap;
       margin-right: var(--e-spacing-h5);
       color: var(--e-color-text1);
       font-size: var(--e-font-size-h7);
-      line-height: var(--e-line-height-h7);
+      @media (max-width: 1100px) {
+        width: 50px;
+        font-size: var(--e-font-size-h8);
+        line-height: var(--e-line-height-h8);
+      }
     }
   }
 }

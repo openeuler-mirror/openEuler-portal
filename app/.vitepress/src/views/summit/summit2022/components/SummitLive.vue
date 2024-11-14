@@ -142,7 +142,7 @@ const changeLive = (val: number): void => {
 <style scoped lang="scss">
 .select-room {
   display: none;
-  :deep(.o-select) {
+  :deep(.e-select) {
     width: 100%;
     .el-input {
       height: 48px;

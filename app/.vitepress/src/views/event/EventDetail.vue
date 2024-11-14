@@ -816,7 +816,7 @@ watch(windowWidth, () => {
         display: none;
       }
 
-      :deep(.o-table) {
+      :deep(.e-table) {
         box-shadow: none;
       }
 

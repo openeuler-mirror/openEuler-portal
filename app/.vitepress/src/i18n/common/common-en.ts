@@ -348,12 +348,12 @@ export default {
               LABEL: '',
               PATH: '/sig/sig-list/',
             },
-            {
-              //培训认证
-              NAME: 'Certification',
-              LABEL: '',
-              PATH: 'https://talent-assessment.openeuler.org/',
-            },
+            // {
+            //   //培训认证
+            //   NAME: 'Certification',
+            //   LABEL: '',
+            //   PATH: 'https://talent-assessment.openeuler.org/',
+            // },
           ],
         },
         {

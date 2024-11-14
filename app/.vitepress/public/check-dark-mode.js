@@ -11,7 +11,9 @@ function getCookie(key) {
   return null;
 }
 
-const e = getCookie('openEuler-theme-appearance') || 'auto',
-  a = window.matchMedia('(prefers-color-scheme: dark)').matches;
-(!e || e === 'auto' ? a : e === 'dark') &&
+const e = getCookie('openEuler-theme-appearance') || 'auto';
+const a = window.matchMedia('(prefers-color-scheme: dark)').matches;
+if (!e || e === 'auto' ? a : e === 'dark') {
   document.documentElement.classList.add('dark');
+  document.documentElement.setAttribute('data-o-theme', 'dark');
+}

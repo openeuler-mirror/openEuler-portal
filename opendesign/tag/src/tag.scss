@@ -1,6 +1,6 @@
 @import './var.scss';
 
-.o-tag {
+.e-tag {
   padding: var(--e-tag-padding);
   font-size: var(--e-tag-font-size);
   line-height: var(--e-tag-line-height);
@@ -10,6 +10,7 @@
   user-select: none;
   cursor: default;
   display: inline-block;
+  border-radius: 0;
 
   &:active {
     @media screen and (min-width: 1100px) {

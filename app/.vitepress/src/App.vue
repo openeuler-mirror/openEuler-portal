@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import type { Component } from 'vue';
-import { computed, onMounted } from 'vue';
+import { computed, onMounted, watch } from 'vue';
 
-import zhCn from 'element-plus/lib/locale/lang/zh-cn';
-import en from 'element-plus/lib/locale/lang/en';
+import zhCn from 'element-plus/es/locale/lang/zh-cn';
+import en from 'element-plus/es/locale/lang/en';
 
-import AppHeader from '@/components/AppHeader.vue';
-import AppFooter from '@/components/AppFooter.vue';
+import AppHeader from '~@/components/header/AppHeader.vue';
+// import AppHeader from '@/components/AppHeader.vue';
+import AppFooter from '~@/components/AppFooter.vue';
 import LayoutBlog from '@/layouts/LayoutBlog.vue';
 import LayoutNews from '@/layouts/LayoutNews.vue';
 import LayoutShowcase from '@/layouts/LayoutShowcase.vue';
@@ -19,14 +20,19 @@ import LayoutEvent from './layouts/LayoutEvent.vue';
 import LayoutSecurity from './layouts/LayoutSecurity.vue';
 import LayoutWiki from './layouts/LayoutWiki.vue';
 import LayoutFAQ from '@/layouts/LayoutFAQ.vue';
+import LayouWhitePaper from '@/layouts/LayouWhitePaper.vue';
 
-import AppFloat from '@/components/AppFloat.vue';
-import AppFloatEn from '@/components/AppFloatEn.vue';
-import CookieNotice from '@/components/CookieNotice.vue';
+import FloatingButton from '~@/components/FloatingButton.vue';
+import FloatingButtonEn from '~@/components/FloatingButtonEn.vue';
+import CookieNotice from '~@/components/CookieNotice.vue';
+
+import AppTour from '~@/components/AppTour.vue';
 
 import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
+import { useLocale } from '~@/composables/useLocale';
 
+const { changeLocale } = useLocale();
 const { frontmatter, lang } = useData();
 
 const locale = computed(() => {
@@ -47,6 +53,7 @@ const compMapping: {
   security: LayoutSecurity,
   faq: LayoutFAQ,
   wiki: LayoutWiki,
+  'white-paper': LayouWhitePaper,
 };
 
 const isCustomLayout = computed(() => {
@@ -60,6 +67,26 @@ const comp = computed(() => {
   return compMapping[frontmatter.value.category];
 });
 
+// 是否添加footer 边距
+const isDocs = computed(() => {
+  return (
+    frontmatter.value.category === 'migration' ||
+    frontmatter.value.category === 'about-us' ||
+    frontmatter.value.category === 'wiki'
+  );
+});
+// ----------------------------- new ----------------------------
+
+watch(
+  () => lang.value,
+  () => {
+    changeLocale(lang.value);
+  },
+  {
+    immediate: true,
+  }
+);
+
 onMounted(() => {
   setStoreData();
 });
@@ -71,13 +98,14 @@ onMounted(() => {
     <main :class="frontmatter.class ? frontmatter.class : ''">
       <component :is="comp" v-if="isCustomLayout"></component>
       <Content v-else />
-      <AppFloat v-if="lang === 'zh'" />
-      <AppFloatEn v-else />
+      <FloatingButton v-if="lang === 'zh'" />
+      <FloatingButtonEn v-else />
     </main>
   </el-config-provider>
   <CookieNotice />
+  <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
   <ClientOnly>
-    <AppFooter />
+    <AppTour />
   </ClientOnly>
 </template>
 
@@ -90,19 +118,45 @@ onMounted(() => {
 main {
   position: relative;
   min-height: calc(100vh - 259px);
-  background-color: var(--e-color-bg1);
+  background-color: var(--o-color-fill1);
   padding-top: 80px;
   &::after {
     content: '';
     display: table;
   }
-  @media (max-width: 1100px) {
+  @include respond-to('<=pad_v') {
     padding-top: 48px;
   }
   &.download-page {
     @media (max-width: 1100px) {
       overflow: visible;
     }
+  }
+}
+.is-docs {
+  margin-left: 300px;
+  @media (max-width: 1100px) {
+    margin-left: 0;
+  }
+}
+</style>
+
+<style lang="scss">
+#app {
+  --layout-content-max-width: 1544px;
+  --layout-content-padding: 64px;
+
+  @include respond-to('<=laptop') {
+    --layout-content-max-width: 100%;
+    --layout-content-padding: 40px;
+  }
+
+  @include respond-to('<=pad') {
+    --layout-content-padding: 32px;
+  }
+
+  @include respond-to('phone') {
+    --layout-content-padding: 24px;
   }
 }
 </style>

@@ -389,7 +389,7 @@ watch(queryData, () => getOsTableList(queryData));
   .filter-box {
     display: flex;
     flex-direction: column;
-    .o-select {
+    .e-select {
       margin-bottom: var(--e-spacing-h6);
     }
   }
@@ -401,7 +401,7 @@ watch(queryData, () => getOsTableList(queryData));
   }
   :deep(.el-card__body) {
     padding: var(--e-spacing-h8) var(--e-spacing-h2);
-    .o-tag {
+    .e-tag {
       margin: var(--e-spacing-h10);
     }
   }
