@@ -116,9 +116,9 @@ watch(
             :cover="calcBlogStyle(idx)?.bg"
             :cover-ratio="
               gtLaptop
-                ? 424 / 371
+                ? 451 / 382
                 : gtPad
-                ? 377 / 318
+                ? 418 / 368
                 : gtPadV
                 ? 325 / 274
                 : gtPhone
