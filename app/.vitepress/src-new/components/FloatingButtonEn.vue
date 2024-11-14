@@ -18,7 +18,7 @@ import IconCancel from '~icons/footer/icon-cancel.svg';
 import IconFAQ from '~icons/footer/icon-faq.svg';
 
 import { ElMessage } from 'element-plus';
-import { OIcon, ODivider, OPopup, OLink } from '@opensig/opendesign';
+import { OIcon, ODivider, OPopup, OLink, OButton } from '@opensig/opendesign';
 
 import { postFeedback } from '@/api/api-feedback';
 
@@ -435,10 +435,10 @@ watch(
       <div v-show="isFloatTipShow" class="float-tip">
         <h4 class="tip-title">{{ infoData.feedbackTitle }}</h4>
         <div class="tip-detail">{{ infoData.welcome }}</div>
-        <div class="btn-box">
-          <OButton size="mini" @click="closeFloatTip">{{
-            infoData.know
-          }}</OButton>
+        <div class="tip-handle">
+          <p class="tip-konwed" @click="closeFloatTip">
+            {{ infoData.know }}
+          </p>
         </div>
       </div>
 
@@ -521,7 +521,11 @@ watch(
               </div>
 
               <div class="submit-btn">
-                <OButton type="outline" size="mini" @click="handleClickSubmit">
+                <OButton
+                  size="medium"
+                  color="primary"
+                  @click="handleClickSubmit"
+                >
                   {{ infoData.submit }}
                 </OButton>
               </div>
@@ -647,12 +651,13 @@ watch(
           </div>
         </div>
         <div class="btn-box">
-          <OButton type="outline" size="middle" @click="cancelDialog">{{
-            infoData.cancel
-          }}</OButton>
+          <OButton type="outline" size="medium" @click="cancelDialog">
+            {{ infoData.cancel }}
+          </OButton>
+
           <OButton
             type="outline"
-            size="middle"
+            size="medium"
             @click="submitFeedback"
             :class="{ forbidden: !isReasonShow }"
             >{{ infoData.confirm }}</OButton
@@ -711,22 +716,21 @@ watch(
       }
       .tip-title {
         color: varvar(--o-color-info1);
-        font-size: 16px;
+        @include text1;
       }
       .tip-detail {
         margin-top: 4px;
-        font-size: 14px;
+        @include tip2;
         color: var(--o-color-info1);
       }
-      .btn-box {
+      .tip-handle {
         margin-top: 8px;
         display: flex;
         justify-content: end;
-        .o-button {
-          font-size: 14px;
-          border: none;
-          padding: 0;
+        .tip-konwed {
+          @include tip1;
           color: var(--o-color-info1);
+          cursor: pointer;
 
           @include hover {
             color: var(--o-color-primary1);
@@ -1266,7 +1270,7 @@ watch(
       display: flex;
       justify-content: center;
 
-      .o-button {
+      .o-btn {
         flex-grow: 1;
         justify-content: center;
         border: none;
