@@ -33,7 +33,7 @@ const descMouseenter = (e: MouseEvent) => {
 </script>
 
 <template>
-  <div v-if="isMobile">
+  <div v-if="isMobile" class="container-mobile">
     <div v-for="subItem in navContent" :key="subItem.NAME" class="content-container-mobile">
       <NavLink :url="subItem.URL" class="content-subtitle" @link-click="linkClick">
         {{ subItem.NAME }}
@@ -200,6 +200,10 @@ const descMouseenter = (e: MouseEvent) => {
       }
     }
   }
+}
+
+.container-mobile .content-container-mobile:last-child {
+  margin-bottom: 12px;
 }
 
 .content-container-mobile {
