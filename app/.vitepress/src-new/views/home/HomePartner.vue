@@ -32,6 +32,18 @@ const publisher3 = [...publisher.slice(16), ...publisher.slice(16)];
 .partner-swiper {
   & + .partner-swiper {
     margin-top: 24px;
+
+    @include respond-to('laptop') {
+      margin-top: 20px;
+    }
+
+    @include respond-to('pad_h') {
+      margin-top: 16px;
+    }
+
+    @include respond-to('<=pad_v') {
+      margin-top: 12px;
+    }
   }
 }
 
