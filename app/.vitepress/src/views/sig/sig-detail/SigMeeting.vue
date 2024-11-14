@@ -909,6 +909,7 @@ function handleCommand(date: string) {
       overflow-y: scroll;
       .el-collapse {
         border: none;
+        padding: 0;
         --el-collapse-header-height: 96px;
         .collapse-box:last-child {
           .el-collapse-item {

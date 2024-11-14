@@ -276,7 +276,7 @@ const watchData = watch(
             <span>{{ currentDay.resolve }}</span>
           </div>
         </template>
-        <template #dateCell="{ data }">
+        <template #date-cell="{ data }">
           <div
             class="out-box"
             :class="{ 'has-calender': tableData.includes(data.day) }"
@@ -530,6 +530,14 @@ const watchData = watch(
       .el-calendar__body {
         padding: 12px 24px 32px;
         border-right: 1px solid var(--o-color-control4);
+        thead {
+          th {
+            padding: 12px 0 16px 20px;
+            text-align: left;
+            color: var(--o-color-info3);
+            @include text1;
+          }
+        }
         td:first-child {
           .el-calendar-day {
             margin-left: 0 !important;
