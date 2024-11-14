@@ -91,6 +91,12 @@ watch(
           <img :src="LogoAtom" class="atom-logo" alt="" />
         </a>
       </div>
+      <ODivider
+        :style="{
+          '--o-divider-bd-color': 'rgba(229, 229, 229, 0.12)',
+          '--o-divider-gap': '16px',
+        }"
+      />
     </ContentWrapper>
     <div class="footer-content">
       <ContentWrapper :pc-top="0" :mobile-top="0">

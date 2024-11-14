@@ -44,7 +44,12 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
 </script>
 
 <template>
-  <AppSection :title="$t('home.introTitle')" class="home-intro">
+  <AppSection
+    :title="$t('home.introTitle')"
+    class="home-intro"
+    :footer="$t('home.getOpenEuler')"
+    :footer-href="`/${locale}/download/get-os/`"
+  >
     <div class="intro-container" :level-index="1">
       <div v-if="!lePadV" class="intro-pc">
         <div class="intro-card-pc">
