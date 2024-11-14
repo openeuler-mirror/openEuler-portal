@@ -420,9 +420,9 @@ onMounted(() => {
         @media screen and (max-width: 630px) {
           margin-left: 24px;
         }
-        @media (min-width: 470px) and (max-width: 520px) {
+        @media (min-width: 520px) and (max-width: 530px) {
           &:nth-child(4) {
-            margin-right: 46px;
+            margin-right: 50px;
           }
           &:nth-child(5) {
             margin-top: 12px;
@@ -436,7 +436,23 @@ onMounted(() => {
             }
           }
         }
-        @media (min-width: 431px) and (max-width: 469px) {
+        @media (min-width: 470px) and (max-width: 519px) {
+          &:nth-child(4) {
+            margin-right: 30px;
+          }
+          &:nth-child(5) {
+            margin-top: 12px;
+          }
+          &:nth-child(1),
+          &:nth-child(5) {
+            margin-left: 0;
+            padding-left: 0;
+            &::before {
+              display: none;
+            }
+          }
+        }
+        @media (min-width: 441px) and (max-width: 469px) {
           &:nth-child(4) {
             margin-right: 0;
           }
@@ -452,13 +468,13 @@ onMounted(() => {
             }
           }
         }
-        @media (min-width: 370px) and (max-width: 430px) {
+        @media (min-width: 370px) and (max-width: 440px) {
           &:nth-child(4),
           &:nth-child(5) {
             margin-top: 12px;
           }
           &:nth-child(3) {
-            margin-right: 50px;
+            margin-right: 40px;
           }
           &:nth-child(4) {
             margin-left: 0;
@@ -497,10 +513,12 @@ onMounted(() => {
     }
     .vitality-btn {
       margin-left: 32px;
-      // height: min-content;
       display: flex;
       align-items: center;
       @include text1;
+      @include hover {
+        color: var(--o-color-primary2);
+      }
       @include respond-to('pad_h') {
         margin: 0 0 0 0;
       }

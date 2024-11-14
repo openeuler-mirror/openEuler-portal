@@ -101,6 +101,7 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
         v-model="activeMobile"
         class="intro-mobile"
         accordion
+        :style="{ '--collapse-radius': '4px' }"
         @change="handleChangeActiveMobile"
       >
         <OCollapseItem
@@ -315,10 +316,14 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
         width: 30px;
       }
     }
+    :deep(.o-collapse-item-body) {
+      margin-bottom: 0;
+    }
     .intro-img-mobile {
+      margin-bottom: var(--collapse-item-gap);
       img {
         width: 100%;
-        border-radius: var(--o-radius-s);
+        border-radius: var(--o-radius-xs);
       }
     }
   }

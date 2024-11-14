@@ -39,10 +39,6 @@ const commonStore = useCommon();
 const navRouterNew = computed(() => i18n.value.common.NAV_ROUTER_CONFIG_NEW);
 const navRouterNewInfo = computed(() => i18n.value.common.NAV_ROUTER_INFO);
 
-const logo = computed(() =>
-  commonStore.theme === 'light' ? logo_light : logo_dark
-);
-
 const routerPath = ref(router.route.path);
 
 // 移动菜单事件
@@ -161,9 +157,18 @@ const navItemClick = () => {
         </OIcon>
       </div>
       <div class="logo">
-        <ClientOnly>
-          <img alt="openEuler logo" :src="logo" @click="goHome" />
-        </ClientOnly>
+        <img
+          class="light"
+          alt="openEuler logo"
+          :src="logo_light"
+          @click="goHome"
+        />
+        <img
+          class="dark"
+          alt="openEuler logo"
+          :src="logo_dark"
+          @click="goHome"
+        />
       </div>
       <ClientOnly>
         <div
@@ -238,6 +243,9 @@ const navItemClick = () => {
   height: 32px;
   cursor: pointer;
   margin-right: var(--e-spacing-h4);
+  .dark {
+    display: none;
+  }
   @media (max-width: 1100px) {
     height: 24px;
     position: absolute;
@@ -245,6 +253,17 @@ const navItemClick = () => {
     transform: translateX(-50%);
     top: 12px;
     margin-right: 0;
+  }
+}
+
+@include in-dark {
+  .logo {
+    .light {
+      display: none;
+    }
+    .dark {
+      display: block;
+    }
   }
 }
 .mobile-menu-icon {
