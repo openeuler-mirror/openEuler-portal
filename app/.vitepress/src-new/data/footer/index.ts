@@ -228,10 +228,10 @@ export const quickNav = {
           title: 'FAQ',
           link: 'https://www.openeuler.org/zh/faq/',
         },
-        // {
-        //   title: '联系我们',
-        //   link: '',
-        // },
+        {
+          title: '联系我们',
+          link: '/zh/contact-us/',
+        },
         // {
         //   title: '反馈问题',
         //   link: '',
@@ -344,10 +344,10 @@ export const quickNav = {
           title: 'FAQ',
           link: 'https://www.openeuler.org/en/faq/',
         },
-        // {
-        //   title: 'Contact Us',
-        //   link: '',
-        // },
+        {
+          title: 'Contact Us',
+          link: '/en/contact-us/',
+        },
         // {
         //   title: '反馈问题',
         //   link: '',
