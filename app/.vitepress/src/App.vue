@@ -98,7 +98,7 @@ onMounted(() => {
     <main :class="frontmatter.class ? frontmatter.class : ''">
       <component :is="comp" v-if="isCustomLayout"></component>
       <Content v-else />
-      <FloatingButton id="tour_feedback" v-if="lang === 'zh'" />
+      <FloatingButton v-if="lang === 'zh'" />
       <FloatingButtonEn v-else />
     </main>
   </el-config-provider>

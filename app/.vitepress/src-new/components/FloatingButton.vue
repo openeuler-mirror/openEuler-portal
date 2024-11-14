@@ -497,7 +497,7 @@ watch(
 </script>
 
 <template>
-  <div class="feedback">
+  <div id="tour_feedback" class="feedback">
     <div class="feedback-wrap">
       <div v-show="isFloatTipShow" class="float-tip">
         <h4 class="tip-title">{{ infoData.feedbackTitle }}</h4>
