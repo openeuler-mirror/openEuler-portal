@@ -111,7 +111,11 @@ const onClick = (href) => {
                 </OButton>
               </div>
 
-              <img v-if="!isPhone" :src="info.attach" class="banner-attach" />
+              <img
+                v-if="!isPhone && info.attach"
+                :src="info.attach"
+                class="banner-attach"
+              />
             </div>
           </ContentWrapper>
         </OFigure>
@@ -168,11 +172,15 @@ const onClick = (href) => {
   width: 100%;
   height: 100%;
   @include respond-to('>pad_v') {
-    --carousel-indicator-offset: 59px;
+    --carousel-indicator-offset: 53px;
   }
 
-  @include respond-to('phone') {
-    // margin-top: 16px;
+  @include respond-to('<=pad_v') {
+    --carousel-indicator-offset: 1px;
+  }
+
+  :deep(.o-carousel-indicator-bar) {
+    height: 24px;
   }
 }
 
@@ -191,7 +199,7 @@ const onClick = (href) => {
   }
 
   @include respond-to('phone') {
-    --figure-radius: 12px;
+    --figure-radius: 4px;
   }
 }
 

@@ -1,8 +1,8 @@
 @use '../mixin/common.scss' as *;
 
 .o-card {
-  --card-cover-radius: 8px;
-  --card-radius: 8px;
+  --card-cover-radius: 4px !important;
+  --card-radius: 4px !important;
 
   --card-title-word-break: normal;
   --card-detail-word-break: normal;
@@ -24,7 +24,7 @@
   --card-cover-padding: 0 !important;
 }
 .o-card-cover-v {
-  --card-cover-radius: 8px 8px 0 0;
+  --card-cover-radius: 4px 4px 0 0 !important;
 }
 
 .o-card-cursor-pointer {

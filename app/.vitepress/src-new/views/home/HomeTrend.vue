@@ -17,7 +17,7 @@ import blogBg3 from '~@/assets/category/home/trend/blog-bg3.jpg';
 import IconUser from '~icons/app-new/icon-user.svg';
 
 const { t, locale } = useLocale();
-const { gtLaptop, gtPadV, lePadV } = useScreen();
+const { gtLaptop, gtPad, gtPadV, gtPhone, lePadV } = useScreen();
 
 const props = defineProps({
   isResult: {
@@ -114,7 +114,17 @@ watch(
             :detail-max-row="2"
             :detail="!lePadV ? blog.summary : ''"
             :cover="calcBlogStyle(idx)?.bg"
-            :cover-ratio="gtLaptop ? 475 / 392 : gtPadV ? 333 / 278 : 165 / 162"
+            :cover-ratio="
+              gtLaptop
+                ? 424 / 371
+                : gtPad
+                ? 377 / 318
+                : gtPadV
+                ? 325 / 274
+                : gtPhone
+                ? 292 / 238
+                : 165 / 162
+            "
             :href="`/${blog.path}`"
             target="_blank"
           >
