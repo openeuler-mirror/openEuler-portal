@@ -7,7 +7,7 @@ import liveData from './live-data';
 
 export default {
   banner: {
-    btn: 'Register',
+    btn: '',
     pcTextImgLight: textLight,
     pcTextImgDark: textDark,
     link: {

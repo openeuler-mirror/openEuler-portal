@@ -6,13 +6,10 @@ import textDark from '../img/wenzi_dark.png';
 import liveData from './live-data';
 export default {
   banner: {
-    btn: '立即报名',
+    btn: '观看直播',
     pcTextImgLight: textLight,
     pcTextImgDark: textDark,
-    link: {
-      pc: 'https://openatomcon.openatom.cn/registration/?activityNo=HD20241010150325',
-      mo: 'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20241010150325',
-    },
+    link: '/zh/interaction/summit-list/summit2024/#live',
   },
   introduce:
     '操作系统是产业数字化、智能化发展的坚实底座。openEuler作为数智基础设施的开源操作系统，开源5年，产业共建、生态繁荣；openEuler系市场份额屡攀新高；技术不断创新，使能AI，加速OS智能化，让数智无所不能；源于中国，贡献全球，已成长为企业级全球开源操作系统社区的重要一员。',

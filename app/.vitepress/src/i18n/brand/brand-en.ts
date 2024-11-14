@@ -20,7 +20,7 @@ export default {
     'https://legacy.openatom.cn/brandguide',
     'mailto:trademarks@openeuler.sh',
     '/data/brand/Application Guide for Use of openEuler Trademarks.docx',
-    '/data/brand/openEuler商标使用规范.pdf',
+    '/en/other/brand/specification/',
   ],
   WORDS_FAQ: [
     'For any questions regarding the use of above trademarks, contact ',

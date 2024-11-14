@@ -92,7 +92,7 @@ onMounted(() => {
       </ul>
       <p v-if="summitData?.introduce4">{{ summitData.introduce4 }}</p>
     </div>
-    <div id="live" class="live">
+    <div v-if="lang === 'zh'" id="live" class="live">
       <h3 class="title-bar">
         {{ lang === 'zh' ? summitData.live.title : summitData.live.titleEn }}
       </h3>
@@ -220,6 +220,14 @@ onMounted(() => {
   }
 }
 .live {
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 80px;
+    margin-top: -80px;
+    overflow: hidden;
+  }
   .schedule-tabs {
     text-align: center;
     margin-top: 24px;
