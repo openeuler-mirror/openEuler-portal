@@ -391,7 +391,7 @@ watch(
   cursor: pointer;
   color: var(--o-color-info1);
   transform-origin: center;
-  @include h2;
+  @include h4;
 
   @include hover {
     color: var(--o-color-primary2);

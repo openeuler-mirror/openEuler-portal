@@ -203,6 +203,10 @@ const pageTotal = computed(() =>
 </template>
 
 <style lang="scss" scoped>
+.el-select {
+  min-width: 227px;
+}
+
 @mixin showline {
   word-break: break-all;
   text-overflow: ellipsis;
@@ -265,7 +269,7 @@ const pageTotal = computed(() =>
       align-items: center;
       justify-content: space-between;
       margin-bottom: var(--e-spacing-h5);
-      :deep(.o-select) {
+      :deep(.e-select) {
         width: 100%;
       }
     }
@@ -276,6 +280,7 @@ const pageTotal = computed(() =>
       }
     }
     .news-select-item-title {
+      white-space: nowrap;
       margin-right: var(--e-spacing-h5);
       color: var(--e-color-text1);
       font-size: var(--e-font-size-h7);

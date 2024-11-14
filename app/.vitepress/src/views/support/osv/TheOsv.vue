@@ -389,7 +389,7 @@ watch(queryData, () => getOsTableList(queryData));
   .filter-box {
     display: flex;
     flex-direction: column;
-    .o-select {
+    .e-select {
       margin-bottom: var(--e-spacing-h6);
     }
   }

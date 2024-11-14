@@ -1755,7 +1755,7 @@ onMounted(() => {
       padding-bottom: 0;
     }
   }
-  :deep(.o-select) {
+  :deep(.e-select) {
     width: 100%;
     margin-top: var(--e-spacing-h6);
   }
