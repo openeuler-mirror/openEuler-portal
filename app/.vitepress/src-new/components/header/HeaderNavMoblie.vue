@@ -236,6 +236,10 @@ const linkClick = () => {
        display: block;
        flex: 0 1 auto;
 
+       :deep(.o-collapse-item-body) {
+        margin-bottom: 0;
+       }
+
        .group + .group {
           margin-top: var(--o-gap-3);
        }

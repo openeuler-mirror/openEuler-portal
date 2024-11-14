@@ -45,8 +45,12 @@ const toggleDebounced = debounce(function (item: any | null) {
     subNavActive.value = item.CHILDREN[0]?.NAME;
     subNav.value = item.CHILDREN;
     subNavContent.value = item.CHILDREN[0];
+  }},
+  100,
+  {
+    trailing: true,
   }
-});
+);
 
 const changeSubnav = debounce(
   function (item: any) {
@@ -76,9 +80,9 @@ const linkClick = () => {
             :class="{
               active: navActive === item.ID,
             }"
-            @mouseenter="toggleDebounced(item)"
-            @mouseleave="toggleDebounced(null)"
-          >
+              @mouseenter="toggleDebounced(item)"
+              @mouseleave="toggleDebounced(null)"
+            >
             <span :id="'tour_headerNav_' + item.ID" class="nav-item">{{ item.NAME }}</span>
             <transition name="transition">
               <div v-if="isShow" :class="['nav-dropdown', navActive, commonStore.theme]">
@@ -327,6 +331,7 @@ const linkClick = () => {
   z-index: 90;
   color: var(--o-color-info1);
   display: flex;
+  font-weight: normal;
   cursor: default;
 
   min-height: 320px;
