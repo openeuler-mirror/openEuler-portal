@@ -234,8 +234,8 @@ onUnmounted(() => {
   }
 }
 .nav-item-icon {
-  width: 24px;
   margin-right: 8px;
+  @include h2;
 }
 .item-tab-active {
   position: absolute;
