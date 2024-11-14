@@ -106,7 +106,7 @@ const getLang = (lang: String) => {
 }
 
 .header-lang {
-  height: 100%;
+  height: calc(100% + 10px);
   display: flex;
   align-items: center;
 
