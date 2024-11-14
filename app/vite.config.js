@@ -52,6 +52,9 @@ export default defineConfig({
         home: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src-new/assets/category/home/svgs')
         ),
+        case: FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src-new/assets/category/home/case/svg-icons')
+        ),
         footer: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src/assets/common/footer')
         ),
