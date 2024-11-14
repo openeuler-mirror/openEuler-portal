@@ -542,7 +542,7 @@ const changeSize = () => {
     color: var(--e-color-text1);
     line-height: var(--e-spacing-h4);
   }
-  :deep(.o-pagination) {
+  :deep(.e-pagination) {
     display: flex;
     @media (max-width: 768px) {
       display: none;

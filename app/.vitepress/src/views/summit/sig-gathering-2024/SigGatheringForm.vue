@@ -319,7 +319,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   }
 }
 
-:deep(.o-select) {
+:deep(.e-select) {
   &:hover {
     box-shadow: 0 0 0 1px var(--e-color-border1) inset !important;
     .el-input__wrapper {
@@ -525,7 +525,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
 </style>
 
 <style lang="scss">
-.el-popper.o-select-dropdown .o-option.hover {
+.el-popper.e-select-dropdown .o-option.hover {
   .o-checkbox-icon {
     border-color: var(--e-color-brand2) !important;
   }

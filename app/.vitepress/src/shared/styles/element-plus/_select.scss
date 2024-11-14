@@ -29,12 +29,8 @@
   border: 1px solid var(--e-color-border2);
 }
 
-.el-select-dropdown__item.hover {
+.el-select-dropdown__item.is-hovering {
   background-color: var(--e-color-bg1);
-}
-
-.el-popper {
-  background-color: red;
 }
 
 .popper-select {
