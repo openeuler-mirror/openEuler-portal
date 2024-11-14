@@ -460,8 +460,6 @@ watch(
       }
     }
     .el-tabs__nav {
-      float: none;
-      display: inline-block;
       @media (max-width: 1100px) {
         line-height: 44px;
       }
@@ -478,19 +476,15 @@ watch(
     }
   }
   :deep(.el-tabs__nav-scroll) {
-    text-align: center;
     color: var(--e-color-text1);
+    display: flex;
+    justify-content: center;
   }
   :deep(.el-tabs__content) {
     overflow: visible;
     margin-top: 0;
-    // @media (max-width: 1100px) {
-    //   margin-top: 16px;
-    // }
   }
   :deep(.el-tabs__nav) {
-    float: none;
-    display: inline-block;
     @media (max-width: 1100px) {
       line-height: 44px;
     }

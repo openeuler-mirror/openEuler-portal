@@ -2402,10 +2402,9 @@ onMounted(() => {
   }
   :deep(.el-tabs__nav-scroll) {
     display: flex;
+    justify-content: center;
   }
   :deep(.el-tabs__nav) {
-    float: none !important;
-    display: inline-block;
     margin: 0 auto;
   }
   :deep(.el-tabs__active-bar) {
@@ -2505,14 +2504,18 @@ onMounted(() => {
       .schedule-tabs {
         text-align: center;
         margin-top: 24px;
-        :deep(.el-tabs__nav) {
-          float: none;
-          display: inline-block;
-          .el-tabs__active-bar {
-            display: none;
-          }
-          .el-tabs__item {
-            padding: 0;
+        :deep(.el-tabs__nav-wrap) {
+          display: flex;
+          justify-content: center;
+
+          .el-tabs__nav {
+            display: inline-flex;
+            .el-tabs__active-bar {
+              display: none;
+            }
+            .el-tabs__item {
+              padding: 0;
+            }
           }
         }
         .time-tabs {
@@ -2541,8 +2544,6 @@ onMounted(() => {
         .other-tabs {
           margin-bottom: 24px;
           :deep(.el-tabs__nav) {
-            float: none;
-            display: inline-block;
             @media (max-width: 1100px) {
               line-height: 44px;
             }
@@ -2569,14 +2570,13 @@ onMounted(() => {
         }
         &.other {
           :deep(.el-tabs__nav-scroll) {
-            text-align: center;
+            display: flex;
+            justify-content: center;
           }
           :deep(.el-tabs__content) {
             overflow: visible;
           }
           :deep(.el-tabs__nav) {
-            float: none;
-            display: inline-block;
             @media (max-width: 1100px) {
               line-height: 44px;
             }

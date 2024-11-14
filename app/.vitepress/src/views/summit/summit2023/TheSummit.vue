@@ -681,6 +681,11 @@ onMounted(() => {
     position: relative;
     text-align: center;
     margin-top: 24px;
+
+    :deep(.el-tabs__nav-wrap) {
+      display: flex;
+      justify-content: center;
+    }
     :deep(.el-tabs__content) {
       overflow: visible;
       .el-button {
@@ -691,8 +696,6 @@ onMounted(() => {
       }
     }
     :deep(.el-tabs__nav) {
-      float: none;
-      display: inline-block;
       .el-tabs__active-bar {
         display: none;
       }
@@ -707,7 +710,6 @@ onMounted(() => {
     }
     .time-tabs {
       display: inline-block;
-      margin: 0 0 24px;
       cursor: pointer;
       border: 1px solid var(--e-color-border2);
       color: var(--e-color-text1);
@@ -773,9 +775,12 @@ onMounted(() => {
   .schedule-tabs {
     text-align: center;
     margin-top: 24px;
+
+    :deep(.el-tabs__nav-wrap) {
+      display: flex;
+      justify-content: center;
+    }
     :deep(.el-tabs__nav) {
-      float: none;
-      display: inline-block;
       .el-tabs__active-bar {
         display: none;
       }
@@ -815,13 +820,13 @@ onMounted(() => {
     }
     .other-tabs {
       margin-bottom: 24px;
+
       :deep(.el-tabs__nav) {
-        float: none;
-        display: inline-block;
         @media (max-width: 1100px) {
           line-height: 44px;
         }
       }
+
       :deep(.el-tabs__header) {
         text-align: center;
         .el-tabs__item {
