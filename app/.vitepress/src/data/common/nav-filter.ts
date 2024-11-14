@@ -183,7 +183,7 @@ export default [
   },
   {
     name: 'specification',
-    lang: ['zh'],
+    lang: ['zh', 'en'],
   },
   {
     name: 'technical-white-paper',
