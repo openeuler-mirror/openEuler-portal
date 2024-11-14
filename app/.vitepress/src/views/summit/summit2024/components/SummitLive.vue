@@ -91,7 +91,9 @@ function messageEvent() {
   );
 }
 onMounted(async () => {
-  isTest.value = false;
+  isTest.value =
+    window.location.host.includes('test.osinfra') ||
+    window.location.host.includes('localhost');
   createUserId(isTest.value ? renderData[0].liveTestId : renderData[0].liveId);
   messageEvent();
 });
