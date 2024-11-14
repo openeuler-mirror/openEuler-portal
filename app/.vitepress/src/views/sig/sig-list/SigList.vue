@@ -589,6 +589,10 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
+.el-select{
+  min-width: 227px;
+}
+
 .sig-table {
   margin-top: var(--e-spacing-h2);
   @media (max-width: 768px) {
@@ -671,6 +675,7 @@ onMounted(() => {
     margin-right: var(--e-spacing-h1);
     flex-wrap: nowrap;
     .select-item-name {
+      white-space: nowrap;
       margin-right: var(--e-spacing-h5);
       color: var(--e-color-text1);
       line-height: var(--e-line-height-h7);
