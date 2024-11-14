@@ -28,8 +28,7 @@ import xfusion_dark from '../img/logo/xfusion_dark.png';
 import xfusion_light from '../img/logo/xfusion_light.png';
 import yidong_dark from '../img/logo/yidong_dark.png';
 import yidong_light from '../img/logo/yidong_light.png';
-import zhongdian_dark from '../img/logo/zhongdian_dark.png';
-import zhongdian_light from '../img/logo/zhongdian_light.png';
+
 import zhongke_dark from '../img/logo/zhongke_dark.png';
 import zhongke_light from '../img/logo/zhongke_light.png';
 import huazhi_light from '../img/logo/huazhi_light.png';
@@ -55,10 +54,6 @@ export default {
         {
           img: openEuler_light,
           img_dark: openEuler_dark,
-        },
-        {
-          img: zhongdian_light,
-          img_dark: zhongdian_dark,
         },
         {
           img: globalComputing_light,

@@ -43,10 +43,7 @@ onMounted(() => {
         />
         <div v-if="bannerData.btn" data-aos="fade-up" class="action">
           <ClientOnly>
-            <a
-              :href="isMobile ? bannerData.link.mo : bannerData.link.pc"
-              target="_blank"
-            >
+            <a :href="bannerData.link">
               <OButton animation class="home-banner-btn">
                 {{ bannerData.btn }}
                 <template #suffixIcon>
