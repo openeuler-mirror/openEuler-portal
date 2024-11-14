@@ -60,7 +60,7 @@
       "var(--o-kleinblue-6)"
     ],
     "body": "var(--o-kleinblue-6)",
-    "description": "[light: 0, 47, 167, dark: 70, 119, 245]",
+    "description": "[light: 0, 47, 167, dark: 73, 122, 248]",
     "scope": "css,scss,less"
   },
   "--o-kleinblue-7": {
