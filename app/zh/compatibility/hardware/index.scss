@@ -1,6 +1,5 @@
 .markdown {
-  margin: 40px 0 0 0;
-  width: 100%;
+  margin-top: 0;
 
   .step {
     display: flex;
@@ -51,7 +50,4 @@
       padding-left: var(--e-spacing-h5);
     }
   }
-}
-.wrapper {
-  padding: 24px var(--e-spacing-h2) 0;
 }

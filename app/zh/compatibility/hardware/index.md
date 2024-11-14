@@ -3,59 +3,19 @@ title: 'Hardware'
 ---
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-
-import {
-  OBreadcrumb,
-  OBreadcrumbItem,
-  OTab,
-  OTabPane,
-} from '@opensig/opendesign';
-import TheHardWare from "~@/views/compatibility/TheHardWare.vue";
-import { getUrlParams } from "~@/utils/common.ts";
-import { useI18n } from '@/i18n';
-const i18n = useI18n();
-const activeTab = ref('');
-
-const handleTabChange = (val:string) => {
-  if (val) {
-    history.pushState(null, '', `?overview=true`);
-  } else {
-   const urlWithoutParams = window.location.href.split('?')[0];
-   history.pushState(null, '', urlWithoutParams);
-  }
-}
-onMounted(() => {
-  activeTab.value = getUrlParams(window.location.href).get('overview') || '';
-})
+  import TheHardWare from "@/views/support/compatibility/TheHardWare.vue";
 </script>
 
 <TheHardWare />
 
-<div class='wrapper'>
-
-<OTab
-  v-model="activeTab"
-  @change="handleTabChange"
-  variant="text"
-  :style="{
-    '--tab-nav-justify': 'left',
-    '--tab-nav-text-size': 'var(--o-font_size-h4)',
-    '--tab-nav-text-height': 'var(--o-line_height-h4)',
-  }"
-  :line="false"
->
-<OTabPane :label="i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE" value="">
 <div class='markdown'>
 
-# openEuler 硬件兼容性认证整体介绍
-
 ## 简介
-openEuler为用户测试openEuler与硬件的兼容性提供了两条路径，分别是社区认证和现场认证。社区认证能使用户在短期内完成兼容性测试并将测试结果展示于兼容性列表上。如果您需要在兼容性测试认证完成后获取相应证书，请走 [现场认证](https://gitee.com/openeuler/technical-certification/blob/master/README.md) / [测评联系](https://gitee.com/openeuler/technical-certification/issues/I9MY2A?from=project-issue)
+openEuler为用户测试openEuler与硬件的兼容性提供了两条路径，分别是社区认证和创新中心认证。社区认证能使用户在短期内完成兼容性测试并将测试结果展示于兼容性列表上。如果您需要在兼容性测试认证完成后获取相应证书，请走 [创新中心认证](https://gitee.com/openeuler/technical-certification/blob/master/README.md) / [测评联系](https://gitee.com/openeuler/technical-certification/issues/I9MY2A?from=project-issue)
 
 下文提供了社区兼容性认证流程，并且每个阶段提供了预计需要的时间供参考。
 
-## 社区兼容性认证流程
+## 兼容性测试流程
 <!-- ----------------------------------------------------------------------- -->
 
 <div class='step'>
@@ -183,53 +143,5 @@ openEuler团队会针对提交的测试结果进行审核，如果通过，会�
 </div>
 
 </div>
-</OTabPane>
-<!-- 硬件兼容性整体介绍 -->
-<OTabPane :label="i18n.compatibility.COMPATIBILITY_HARDWARE" value="true">
 
-<div class="markdown">
-
-# 硬件兼容性整体介绍
-
-## 一、评测服务背景介绍
-
-开放原子-英特尔联合验证中心（以下简称“联合验证中心”）由开放原子开源基金会（以下简称“开放原子”）和英特尔（中国）有限公司（“英特尔”）联合成立并运行。为提升软硬件融合水平，联合验证中心将开展openEuler社区硬件兼容性测试（整机）（以下简称“openEuler评测”）、英特尔<sup>®</sup>平台先进技术评测（以下简称“英特尔评测”）。
-
-开放原子负责openEuler评测，英特尔负责英特尔评测。开放原子和英特尔各自负责业务范围内的评测要求、管理整个评测项目并颁发其负责范围内的测试函。
-
-## 二、前置条件
-
-送测厂商须为英特尔<sup>®</sup>合作伙伴联盟会员。
-
-送测对象为送测厂商产品测试验证平台（PVT）阶段之后的服务器产品，须基于第四代以及后续英特尔<sup>®</sup>至强<sup>®</sup>处理器。送测对象须预装openEuler官网列示的社区发行版或基于openEuler社区发行版所研发的操作系统商业发行版。
-
-## 三、评测申请
-
-送测厂商应通过以下渠道申请评测：[英特尔官网](https://www.intel.cn/content/www/cn/zh/homepage.html)或[openEuler社区官网](/zh/)。送测厂商申请评测即表示其接受本流程及指南、《英特尔<sup>®</sup>平台先进技术评测条款与条件》的管辖和适用。
-
-## 四、技术评测
-
-送测厂商需自担运费和保价费邮寄送测对象及物料至联合验证中心指定收件地址，收件人 **寇雨**，联系电话 **17600801705**，地址 **北京市通州区科谷一街8号院8号楼B1**。联合验证中心在收到送测厂商通过上述渠道申请且收到送测对象后，根据申请范围开展评测工作。测试结束后送测厂商自行取回。联合验证中心占有送测对象期间，将尽合理义务保管送测对象。联合验证中心强烈建议送测厂商为其送测对象购买足额的保险抵抗风险。
-
-为完成上述评测，联合验证中心将委托开放原子负责送测对象在验证中心内的上线、摆放等工作；联合验证中心委托开放原子负责openEuler评测，联合验证中心委托英特尔负责英特尔评测。开放原子或英特尔根据[《openEuler兼容性协议》](https://certification.openeuler.org/#/compatibilityProtocol)或[《英特尔<sup>®</sup>平台先进技术评测规范》](/zh/compatibility/intel-validation-specification/)和《英特尔<sup>®</sup>平台先进技术评测条款与条件》安装、运行测试套件，并书面通知送测厂商评测结果。评测通过的，开放原子、英特尔将分别依据测试结果出具各自的验证函。
-
-## 五、评测结果的公布与使用
-
-送测厂商、联合验证中心、开放原子、英特尔均可对外公布及使用验证函。
-
-开放原子-英特尔联合验证中心
-
-2024年8月8日
-
-</div>
-
-</OTabPane>
-</OTab>
-
-</div>
-
-
-<style lang="scss" scoped> @import './index.scss';
-
-
-</style>
+<style lang="scss" scoped> @import './index.scss'; </style>
