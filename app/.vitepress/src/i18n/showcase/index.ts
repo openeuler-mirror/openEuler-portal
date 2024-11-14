@@ -12,7 +12,7 @@ export default {
     marketReport: '市场研究报告',
     downloadMarketReport: '下载市场研究报告',
     technicalWhilePaper: '技术白皮书',
-    IndustryWhilePaper: '白皮书',
+    IndustryWhilePaper: '行业白皮书',
     find1: '发现',
     find2: '个案例研究',
     button: '阅读案例',

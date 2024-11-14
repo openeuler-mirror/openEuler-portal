@@ -28,7 +28,7 @@ const config: UserConfig = {
     [
       'script',
       {
-        src: '/check-dark-mode.js',
+        src: '/check-dark-mode-v2.js',
       },
     ],
     [

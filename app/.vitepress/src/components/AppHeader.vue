@@ -136,8 +136,6 @@ const goHome = () => {
 // 兼容非ZH
 const activeNav = ref<string>();
 
-
-
 // 移动端默认选中、二级菜单
 
 const isShowBox = ref(false);
@@ -162,7 +160,11 @@ const navItemClick = () => {
           <IconCancel v-else />
         </OIcon>
       </div>
-      <img class="logo" alt="openEuler logo" :src="logo" @click="goHome" />
+      <div class="logo">
+        <ClientOnly>
+          <img alt="openEuler logo" :src="logo" @click="goHome" />
+        </ClientOnly>
+      </div>
       <ClientOnly>
         <div
           v-show="!isShowBox || !isMobile"
