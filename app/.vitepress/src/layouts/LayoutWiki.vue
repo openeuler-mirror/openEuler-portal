@@ -218,6 +218,9 @@ const handleNodeClick = (node: any) => {
     left: 0;
     z-index: 80;
   }
+  @include respond-to('pad_v') {
+    left: 56px;
+  }
 }
 
 .wiki-sidebar-toc {
