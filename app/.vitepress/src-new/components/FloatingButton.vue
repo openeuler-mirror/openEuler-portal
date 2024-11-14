@@ -509,7 +509,11 @@ watch(
         </div>
       </div>
 
-      <div id="tour_feedback" class="nav-box1" :class="isDark ? 'dark-nav' : ''">
+      <div
+        id="tour_feedback"
+        class="nav-box1"
+        :class="isDark ? 'dark-nav' : ''"
+      >
         <div
           class="nav-item"
           id="feedback"
@@ -1174,6 +1178,8 @@ watch(
     margin-top: 0;
     background-color: transparent;
     border-radius: 8px 8px 0px 0px;
+    padding: 0;
+
     .el-dialog__header {
       padding: 0;
     }

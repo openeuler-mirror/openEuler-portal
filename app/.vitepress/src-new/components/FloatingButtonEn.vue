@@ -1078,6 +1078,8 @@ watch(
     margin-top: 0;
     background-color: transparent;
     border-radius: 8px 8px 0px 0px;
+    padding: 0;
+
     .el-dialog__header {
       padding: 0;
     }
