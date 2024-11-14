@@ -354,6 +354,12 @@ onMounted(async () => {
   </div>
 </template>
 <style lang="scss" scoped>
+:deep(.el-table) {
+  .el-table__header .el-table__cell {
+    padding: 16px 0;
+  }
+}
+
 .input-box #use-copy {
   position: absolute;
   opacity: 0;
@@ -447,11 +453,6 @@ onMounted(async () => {
 }
 
 .mirror-list {
-  :deep(.e-table) {
-    .el-table__cell {
-      padding: 0 0;
-    }
-  }
   :deep(.mirror-list-area) {
     .mirror-list-row {
       height: 72px;
@@ -488,7 +489,6 @@ onMounted(async () => {
     font-weight: 400;
     color: var(--e-color-text1);
     line-height: 54px;
-    padding: 0 !important;
     .cell {
       padding: 0 var(--e-spacing-h6) 0 0;
     }
