@@ -244,7 +244,7 @@ const linkClick = () => {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 22px 0;
+  height: 100%;
   margin-left: 20px;
 
   @include respond-to('pad_v-laptop') {

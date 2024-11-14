@@ -5,6 +5,8 @@ import { showGuard, logout, useStoreData, getUserAuth } from '@/shared/login';
 import { OIcon, ODropdown, ODropdownItem } from '@opensig/opendesign';
 
 import AppBadge from '@/components/badge/AppBadge.vue';
+import { getUnreadMsgCount } from '@/api/api-messageCenter';
+import { queryPersonalInfo } from '@/api/api-login';
 import IconLogin from '~icons/app-new/icon-header-person.svg';
 
 const { lang } = useData();
@@ -22,6 +24,22 @@ const jumpToMsgCenter = () => {
 };
 
 const unreadMsgCount = ref(0);
+
+onMounted(async () => {
+  if (token) {
+    const { data: userInfo } = await queryPersonalInfo();
+    const giteeNotRegistered = !(userInfo.identities as any[])?.find(
+      (item) => item.identity === 'gitee'
+    );
+    const data = await getUnreadMsgCount();
+    unreadMsgCount.value = data.reduce((count, val) => {
+      if (giteeNotRegistered && val.source === 'https://gitee.com') {
+        return count;
+      }
+      return count + val.count;
+    }, 0);
+  }
+});
 </script>
 
 <template>
