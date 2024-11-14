@@ -98,6 +98,11 @@ const nextStep = (current: number, total: number) => {
   }
 };
 
+// 切换tab
+const changeStep = (val: number) => {
+  currentStep.value = FIRST_TOUR_STEPS.length + val;
+};
+
 watch(
   () => currentStep.value,
   (val) => {
@@ -193,6 +198,7 @@ watch(
               :class="{
                 'item-tab-active': i === currentStep - FIRST_TOUR_STEPS.length,
               }"
+              @click="changeStep(i)"
             >
               {{ item }}
             </li>
@@ -396,9 +402,20 @@ watch(
     margin-top: 4px;
     text-align: center;
     padding: 8px 24px;
+    cursor: pointer;
+    transition: all var(--o-duration-s) var(--o-easing-standard);
     &.item-tab-active {
       color: var(--o-color-info1-inverse);
       background-color: var(--o-color-link1);
+    }
+
+    @include hover {
+      color: var(--o-color-info1-inverse);
+      background-color: var(--o-color-link2);
+
+      &.item-tab-active {
+        background-color: var(--o-color-link1);
+      }
     }
   }
 
@@ -472,6 +489,10 @@ watch(
     }
     .item-tab {
       &.item-tab-active {
+        color: var(--o-color-info1);
+      }
+
+      @include hover {
         color: var(--o-color-info1);
       }
     }
