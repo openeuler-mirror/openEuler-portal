@@ -45,6 +45,10 @@ const props = defineProps({
       return {};
     },
   },
+  shownIcon: {
+    type: Boolean,
+    default: true,
+  },
 });
 
 const commonStore = useCommon();
@@ -424,11 +428,13 @@ const watchData = watch(
       </div>
     </div>
     <img
+      v-if="shownIcon"
       class="cube-1"
       :src="commonStore.theme === 'light' ? cubeOne : cubeOneDark"
       alt=""
     />
     <img
+      v-if="shownIcon"
       class="cube-2"
       :src="commonStore.theme === 'light' ? cubeTow : cubeTowDark"
     />
