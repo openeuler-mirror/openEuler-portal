@@ -11,7 +11,7 @@ import {
 import { useRouter, useData } from 'vitepress';
 import { useThrottleFn } from '@vueuse/core';
 
-import { OIcon, ODivider, OPopup, OLink } from '@opensig/opendesign';
+import { OIcon, ODivider, OPopup, OLink, OButton } from '@opensig/opendesign';
 import { ElMessage } from 'element-plus';
 
 import IconTop from '~icons/footer/icon-top.svg';
@@ -497,15 +497,15 @@ watch(
 </script>
 
 <template>
-  <div id="tour_feedback" class="feedback">
+  <div class="feedback">
     <div class="feedback-wrap">
       <div v-show="isFloatTipShow" class="float-tip">
         <h4 class="tip-title">{{ infoData.feedbackTitle }}</h4>
         <div class="tip-detail">{{ infoData.welcome }}</div>
-        <div class="btn-box">
-          <OButton size="mini" class="feedback-tip-btn" @click="closeFloatTip">
+        <div class="tip-handle">
+          <p class="tip-konwed" @click="closeFloatTip">
             {{ infoData.know }}
-          </OButton>
+          </p>
         </div>
       </div>
 
@@ -593,7 +593,11 @@ watch(
                 </a>
               </p>
               <div class="submit-btn">
-                <OButton type="outline" size="mini" @click="handleClickSubmit">
+                <OButton
+                  size="medium"
+                  color="primary"
+                  @click="handleClickSubmit"
+                >
                   {{ infoData.submit }}
                 </OButton>
               </div>
@@ -731,16 +735,17 @@ watch(
           </p>
         </div>
         <div class="btn-box">
-          <OButton type="outline" size="middle" @click="cancelDialog">
+          <OButton type="outline" size="medium" @click="cancelDialog">
             {{ infoData.cancel }}
           </OButton>
           <OButton
             type="outline"
-            size="middle"
+            size="medium"
             @click="submitFeedback"
             :class="{ forbidden: !isReasonShow }"
-            >{{ infoData.confirm }}</OButton
           >
+            {{ infoData.confirm }}
+          </OButton>
         </div>
       </div>
     </el-dialog>
@@ -802,15 +807,14 @@ watch(
         @include tip2;
         color: var(--o-color-info1);
       }
-      .btn-box {
+      .tip-handle {
         margin-top: 8px;
         display: flex;
         justify-content: end;
-        .o-button {
+        .tip-konwed {
           @include tip1;
-          border: none;
-          padding: 0;
           color: var(--o-color-info1);
+          cursor: pointer;
 
           @include hover {
             color: var(--o-color-primary1);
@@ -1372,7 +1376,7 @@ watch(
       margin-top: 12px;
       display: flex;
       justify-content: center;
-      .o-button {
+      .o-btn {
         flex-grow: 1;
         justify-content: center;
         border: none;
