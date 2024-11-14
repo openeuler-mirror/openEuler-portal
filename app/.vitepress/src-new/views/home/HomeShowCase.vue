@@ -27,12 +27,7 @@ const emit = defineEmits(['result']);
 
 export interface CasesT {
   label: string;
-  icon: {
-    [key: string]: string;
-  };
-  iconActive: {
-    [key: string]: string;
-  };
+  icon: string;
   img: string;
 }
 
@@ -83,7 +78,7 @@ const changeCase = () => {
   init();
 };
 const setCaseInterval = () => {
-  timer.value = setInterval(changeCase, 5000);
+  timer.value = setInterval(changeCase, 500000);
   init();
 };
 const clearCaseInterval = () => {
@@ -165,12 +160,9 @@ onUnmounted(() => {
               :class="{ 'item-tab-active-mb': activeTab === i }"
               @click="changeTab(i)"
             >
-              <img
-                v-if="activeTab === i"
-                :src="tab.iconActive[theme]"
-                class="nav-item-icon"
-              />
-              <img v-else :src="tab.icon[theme]" class="nav-item-icon" />
+              <OIcon class="nav-item-icon">
+                <component :is="tab.icon"> </component>
+              </OIcon>
               <span>{{ tab.label }}</span>
             </li>
             <div
@@ -263,7 +255,7 @@ onUnmounted(() => {
 .content {
   width: 100%;
   height: 491px;
-  background-image: url('~@/assets/category/home/case/light/bg.png');
+  background-image: url('~@/assets/category/home/case/bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: var(--o-radius-xs);
