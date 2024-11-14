@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, onMounted, onUnmounted, watch } from 'vue';
+import { ref, onMounted, onUnmounted, watch, shallowRef } from 'vue';
 import {
   OIcon,
   ORow,
@@ -37,7 +37,7 @@ const { isPhone, size } = useScreen();
 
 const userCase = ref<HTMLElement>();
 const activeTab = ref(0);
-const cases = ref<CasesT[]>([]);
+const cases = shallowRef<CasesT[]>([]);
 cases.value = locale.value === 'zh' ? casesZh : casesEn;
 
 const tabs = ref();

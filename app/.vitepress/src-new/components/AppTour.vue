@@ -45,6 +45,10 @@ const arrowColor = computed(() => {
   return steps[currentStep.value]?.color;
 });
 
+const handleStopWheel = (e: Event) => {
+  e.preventDefault();
+};
+
 // -------------------- 首页 中文页面  pc端 --------------------
 const isHome = computed(() => {
   return route.path === '/zh/' && lang.value === 'zh' && size.width > 1200;
@@ -53,11 +57,15 @@ const isHome = computed(() => {
 watch(
   () => isHome.value,
   (val) => {
+    open.value = false;
     if (val) {
       if (
         !localStorage.getItem('tour_guide') ||
         localStorage.getItem('tour_guide') !== '20241112'
       ) {
+        window.addEventListener('wheel', handleStopWheel, {
+          passive: false,
+        });
         open.value = true;
       }
     }
@@ -138,8 +146,11 @@ useResizeObserver(window.document.body, () => {
 watch(
   () => open.value,
   (val) => {
-    if (!val) {
+    if (!val && lang.value === 'zh' && size.width > 1200) {
       localStorage.setItem('tour_guide', '20241112');
+    }
+    if (!val) {
+      window.removeEventListener('wheel', handleStopWheel);
     }
   }
 );
@@ -172,7 +183,7 @@ watch(
         <div v-else class="header-change">
           <div class="title">
             <span>{{ NEW_CHANGE_DATA.title }}</span>
-            <span>{{ NEW_CHANGE_DATA.icon }}</span>
+            <img :src="NEW_CHANGE_DATA.icon" />
           </div>
           <p class="desc">{{ NEW_CHANGE_DATA.desc }}</p>
           <ul class="tab">
@@ -189,7 +200,7 @@ watch(
           </ul>
         </div>
       </template>
-      <div class="tour-text">
+      <div class="tour-text" :class="{ 'tour-text-case': currentStep === 4 }">
         <div v-if="newChangeVisible" class="tour-img">
           <OFigure :src="item.bg[theme]" />
         </div>
@@ -341,6 +352,7 @@ watch(
     top: 8px;
     right: 8px;
     cursor: pointer;
+    @include x-svg-hover;
   }
 }
 
@@ -364,6 +376,10 @@ watch(
     @include tip1;
     color: var(--o-color-info1);
     font-weight: 500;
+    img {
+      width: 118px;
+      margin-left: 8px;
+    }
   }
   .desc {
     @include tip2;
@@ -395,17 +411,23 @@ watch(
     background-position: left -80px top 0;
   }
   .tour-text {
-    min-height: 350px;
+    min-height: 351px;
     padding: 40px 24px 24px;
   }
   .tour-img {
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
 
     .o-figure {
       width: 100%;
-      height: 206px;
       border-radius: var(--o-radius-s);
+    }
+  }
+
+  .tour-text-case {
+    padding: 40px 24px 12px;
+    .tour-desc {
+      margin-top: 10px;
     }
   }
 
@@ -416,6 +438,7 @@ watch(
     top: 8px;
     right: 8px;
     cursor: pointer;
+    @include x-svg-hover;
   }
 }
 
@@ -447,6 +470,11 @@ watch(
   .change-tour {
     .el-tour__content {
       background: #1a1a1c;
+    }
+    .item-tab {
+      &.item-tab-active {
+        color: var(--o-color-info1);
+      }
     }
   }
 }

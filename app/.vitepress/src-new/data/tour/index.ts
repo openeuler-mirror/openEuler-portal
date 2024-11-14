@@ -12,6 +12,8 @@ import stepDeveloperCalendarImgDark from '~@/assets/category/tour/dark/step-deve
 import stepUserCaseImgDark from '~@/assets/category/tour/dark/step-user-case.png';
 import stepDynamicImgDark from '~@/assets/category/tour/dark/step-dynamic.png';
 
+import stepIcon from '~@/assets/category/tour/step-logo.png';
+
 import stepDownloadImg from '~@/assets/category/tour/step-download.png';
 import stepLearnImg from '~@/assets/category/tour/step-learn.png';
 import stepDevelopmentImg from '~@/assets/category/tour/step-development.png';
@@ -38,14 +40,14 @@ export const FIRST_TOUR_STEPS = [
       'openEuler是面向数字基础设施的开源操作系统。openEuler网站作为社区对外展示的重要窗口，一直致力于为开发者提供一个易于分享、交流、查询社区各类资源的平台，包括但不限于版本信息、软件包、工具、文档、活动、技术博客等',
     ],
     extra: [
-      '结合年度用户满意度调查，我们对openEuler网站进行升级，以期待提升的朋友们的使用体验',
+      '结合年度用户满意度调查，我们对openEuler网站进行升级，以期待提升朋友们的使用体验',
     ],
   },
 ];
 
 export const NEW_CHANGE_DATA = {
   title: '欢迎使用',
-  icon: 'openEuler',
+  icon: stepIcon,
   desc: '首先，让我们来看看网站首页上都有哪些变化？',
   list: ['快速入口', '玩转社区', '开发者日历', '用户案例', '社区动态'],
 };
