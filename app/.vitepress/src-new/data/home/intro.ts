@@ -1,14 +1,14 @@
-import computingArch_zh_pc from '~@/assets/category/home/intro/computing-arch_zh_pc.png';
-import coverAll_zh_pc from '~@/assets/category/home/intro/cover-all_zh_pc.png';
-import developmentTool_zh_pc from '~@/assets/category/home/intro/development-tool_zh_pc.png';
+import computingArch_zh_pc from '~@/assets/category/home/intro/computing-arch_zh_pc.jpg';
+import coverAll_zh_pc from '~@/assets/category/home/intro/cover-all_zh_pc.jpg';
+import developmentTool_zh_pc from '~@/assets/category/home/intro/development-tool_zh_pc.jpg';
 
 import computingArch_zh_mo from '~@/assets/category/home/intro/computing-arch_zh_mo.png';
 import coverAll_zh_mo from '~@/assets/category/home/intro/cover-all_zh_mo.png';
 import developmentTool_zh_mo from '~@/assets/category/home/intro/development-tool_zh_mo.png';
 
-import computingArch_en_pc from '~@/assets/category/home/intro/computing-arch_en_pc.png';
-import coverAll_en_pc from '~@/assets/category/home/intro/cover-all_en_pc.png';
-import developmentTool_en_pc from '~@/assets/category/home/intro/development-tool_en_pc.png';
+import computingArch_en_pc from '~@/assets/category/home/intro/computing-arch_en_pc.jpg';
+import coverAll_en_pc from '~@/assets/category/home/intro/cover-all_en_pc.jpg';
+import developmentTool_en_pc from '~@/assets/category/home/intro/development-tool_en_pc.jpg';
 
 import computingArch_en_mo from '~@/assets/category/home/intro/computing-arch_en_mo.png';
 import coverAll_en_mo from '~@/assets/category/home/intro/cover-all_en_mo.png';

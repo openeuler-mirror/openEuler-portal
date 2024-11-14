@@ -109,6 +109,9 @@ $banner-color: var(--e-color-text1);
     }
   }
   .action {
+    @media screen and (min-width: 550px) and (max-width: 768px) {
+      display: none;
+    }
     margin-top: 32px;
     a {
       display: inline-block;
@@ -118,7 +121,7 @@ $banner-color: var(--e-color-text1);
         font-size: 16px;
       }
     }
-    @media screen and (max-width: 824px) {
+    @media screen and (max-width: 768px) {
       margin-top: 0;
     }
   }
