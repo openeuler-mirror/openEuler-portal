@@ -4,7 +4,6 @@ import { ref, onMounted } from 'vue';
 import meetingConfig from '@/data/meeting';
 
 import AppContent from '@/components/AppContent.vue';
-import AppCalendar from '@/components/AppCalendar.vue';
 
 import HomeCalendar from '~@/views/home/HomeCalendar.vue';
 
@@ -47,7 +46,11 @@ onMounted(() => {
         </div>
       </div>
       <div id="calendar">
-        <HomeCalendar v-if="calendarData?.length" :table-data="calendarData" />
+        <HomeCalendar
+          v-if="calendarData?.length"
+          :table-data="calendarData"
+          :shown-icon="false"
+        />
       </div>
     </div>
   </AppContent>
@@ -71,6 +74,7 @@ h3 {
   }
 }
 #calendar {
+  min-height: 400px;
   :deep(.app-section) {
     .section-wrapper {
       padding: 0;
