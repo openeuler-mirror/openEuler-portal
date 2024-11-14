@@ -293,6 +293,9 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
   &.zh {
     background: var(--o-color-fill2);
     .follow-us-cover {
+      @include respond-to('<=pad_v') {
+        display: none;
+      }
       img {
         @include respond-to('pad_h') {
           height: 100%;
@@ -430,9 +433,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
     @include respond-to('pad_h') {
       width: 360px;
     }
-    @include respond-to('<=pad_v') {
-      display: none;
-    }
+
     img {
       max-width: 100%;
       height: 100%;
