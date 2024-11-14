@@ -1,4 +1,4 @@
-import stepHomeImg from '~@/assets/category/tour/step-home.png';
+import stepHomeImg from '~@/assets/category/tour/step-home.jpg';
 
 import stepQuickEntranceImg from '~@/assets/category/tour/light/step-quick-entrance.png';
 import stepPlayCommunityImg from '~@/assets/category/tour/light/step-play-community.png';
@@ -14,15 +14,15 @@ import stepDynamicImgDark from '~@/assets/category/tour/dark/step-dynamic.png';
 
 import stepIcon from '~@/assets/category/tour/step-logo.png';
 
-import stepDownloadImg from '~@/assets/category/tour/step-download.png';
-import stepLearnImg from '~@/assets/category/tour/step-learn.png';
-import stepDevelopmentImg from '~@/assets/category/tour/step-development.png';
-import stepApproveImg from '~@/assets/category/tour/step-approve.png';
-import stepCommunityImg from '~@/assets/category/tour/step-community.png';
-import stepUpdateImg from '~@/assets/category/tour/step-update.png';
-import stepToolImg from '~@/assets/category/tour/step-tool.png';
-import stepFooterImg from '~@/assets/category/tour/step-footer.png';
-import stepFeedbackImg from '~@/assets/category/tour/step-feedback.png';
+import stepDownloadImg from '~@/assets/category/tour/step-download.jpg';
+import stepLearnImg from '~@/assets/category/tour/step-learn.jpg';
+import stepDevelopmentImg from '~@/assets/category/tour/step-development.jpg';
+import stepApproveImg from '~@/assets/category/tour/step-approve.jpg';
+import stepCommunityImg from '~@/assets/category/tour/step-community.jpg';
+import stepUpdateImg from '~@/assets/category/tour/step-update.jpg';
+import stepToolImg from '~@/assets/category/tour/step-tool.jpg';
+import stepFooterImg from '~@/assets/category/tour/step-footer.jpg';
+import stepFeedbackImg from '~@/assets/category/tour/step-feedback.jpg';
 
 import i18n from '~@/i18n';
 
