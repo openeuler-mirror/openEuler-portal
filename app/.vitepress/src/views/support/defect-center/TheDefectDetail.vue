@@ -318,7 +318,6 @@ onMounted(() => {
 .wrapper {
   max-width: 1504px;
   margin: var(--e-spacing-h2) auto 0;
-  background-color: var(--e-color-bg1);
   padding: 0 44px;
   @media screen and (max-width: 768px) {
     margin: 16px 0 0;
@@ -328,7 +327,6 @@ onMounted(() => {
 .wrapper1 {
   max-width: 1504px;
   margin: 0 auto var(--e-spacing-h1);
-  background-color: var(--e-color-bg1);
   @media screen and (max-width: 768px) {
     margin: 16px 0 40px;
   }
@@ -337,7 +335,7 @@ onMounted(() => {
   max-width: 1504px;
   margin: 0 auto;
   padding: 0 44px;
-  background-color: var(--e-color-bg1);
+  background-color: var(--o-color-fill1);
   @media screen and (max-width: 768px) {
     width: 100%;
     padding: 0;
@@ -345,7 +343,6 @@ onMounted(() => {
 }
 .breadcrumb {
   color: var(--e-color-text1);
-  background: var(--e-color-bg1);
   display: flex;
   margin-bottom: 0;
   @media screen and (max-width: 768px) {
@@ -375,7 +372,7 @@ onMounted(() => {
 }
 .bulletin-head {
   padding: var(--e-spacing-h2) var(--e-spacing-h2) var(--e-spacing-h2) 0;
-  background: var(--e-color-bg1);
+  background: var(--o-color-fill1);
   @media screen and (max-width: 768px) {
     padding: var(--e-spacing-h5);
     margin: 0 var(--e-spacing-h5) var(--e-spacing-h5);

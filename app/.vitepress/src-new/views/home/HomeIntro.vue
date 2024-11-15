@@ -54,7 +54,10 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
       <div v-if="!lePadV" class="intro-pc">
         <div class="intro-card-pc">
           <div class="intro-content-pc">
-            <div class="intro-list-pc">
+            <div
+              class="intro-list-pc"
+              :class="[locale !== 'zh' ? 'intro-list-pc-en' : '']"
+            >
               <div
                 v-for="(item, index) in introData"
                 :key="item.title[locale]"
@@ -144,59 +147,58 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
       .intro-list-item {
         display: flex;
         align-items: center;
+        // 左侧icon宽度
+        --intro-gap: 72px;
+        @include respond-to('laptop') {
+          --intro-gap: 56px;
+        }
+        @media screen and (max-width: 1200px) {
+          --intro-gap: 40px;
+        }
+        @media screen and (max-width: 1100px) {
+          --intro-gap: 24px;
+        }
+        @media screen and (max-width: 1000px) {
+          --intro-gap: 16px;
+        }
         &:last-child {
           .circle {
             display: none;
           }
         }
         &:not(:last-child) {
-          margin-bottom: 72px;
-          @include respond-to('laptop') {
-            margin-bottom: 56px;
-          }
-          @media screen and (max-width: 1200px) {
-            margin-bottom: 40px;
-          }
-          @media screen and (max-width: 1100px) {
-            margin-bottom: 24px;
-          }
-          @media screen and (max-width: 1000px) {
-            margin-bottom: 16px;
-          }
+          margin-bottom: var(--intro-gap);
+        }
+        // 左侧icon宽度
+        --icon-width: 58px;
+        @include respond-to('laptop') {
+          --icon-width: 52px;
+        }
+        @include respond-to('pad_h') {
+          --icon-width: 50px;
+        }
+        @media screen and (max-width: 1100px) {
+          --icon-width: 36px;
+        }
+        @media screen and (max-width: 1000px) {
+          --icon-width: 28px;
         }
         .intro-list-icon {
           position: relative;
-          width: 58px;
+          width: var(--icon-width);
+
           .circle {
             position: absolute;
             width: 16px;
-            bottom: -36px;
+            bottom: calc(var(--intro-gap) / 2 * -1);
             left: 50%;
             transform: translate(-50%, 50%);
-            @include respond-to('laptop') {
-              bottom: -28px;
-            }
-            @media screen and (max-width: 1200px) {
-              bottom: -20px;
-            }
             @media screen and (max-width: 1100px) {
               bottom: -20px;
             }
             @media screen and (max-width: 1000px) {
               bottom: -18px;
             }
-          }
-          @include respond-to('laptop') {
-            width: 52px;
-          }
-          @include respond-to('pad_h') {
-            width: 50px;
-          }
-          @media screen and (max-width: 1100px) {
-            width: 36px;
-          }
-          @media screen and (max-width: 1000px) {
-            width: 28px;
           }
           img {
             width: 100%;
@@ -207,18 +209,7 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
           left: 29px;
           width: 1px;
           z-index: -1;
-          @include respond-to('laptop') {
-            left: 26px;
-          }
-          @include respond-to('pad_h') {
-            left: 25px;
-          }
-          @media screen and (max-width: 1100px) {
-            left: 18px;
-          }
-          @media screen and (max-width: 1000px) {
-            left: 14px;
-          }
+          left: calc(var(--icon-width) / 2);
         }
       }
       @include respond-to('pad_h') {
@@ -227,6 +218,13 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
       @media screen and (max-width: 1000px) {
         padding: 0;
         margin: 0 16px 0 0;
+      }
+    }
+    .intro-list-pc-en {
+      .intro-list-item {
+        @media screen and (max-width: 1200px) {
+          --intro-gap: 40px;
+        }
       }
     }
 
@@ -265,19 +263,15 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
         font-weight: 500;
         color: var(--o-color-info1);
       }
+      @media screen and (max-width: 1200px) {
+        .intro-list-item {
+          margin-bottom: 40px;
+        }
+      }
       .en-title {
         display: flex;
         align-items: center;
-        height: 58px;
-        @include respond-to('laptop') {
-          height: 52px;
-        }
-        @include respond-to('pad_h') {
-          height: 50px;
-        }
-        @media screen and (max-width: 1000px) {
-          height: 28px;
-        }
+        height: var(--icon-width);
       }
       .description {
         margin-top: 4px;

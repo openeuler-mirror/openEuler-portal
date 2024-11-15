@@ -310,6 +310,11 @@ function convertMd(data: string) {
         justify-content: center;
         color: var(--e-color-text1);
       }
+      :deep(.is-scrollable) {
+        .el-tabs__nav-scroll {
+          display: block;
+        }
+      }
       :deep(.el-tabs__content) {
         overflow: visible;
         @media (max-width: 1100px) {

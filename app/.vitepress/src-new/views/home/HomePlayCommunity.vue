@@ -231,6 +231,9 @@ onMounted(() => {
         position: absolute;
         width: 330px;
         z-index: -1;
+        @include respond-to('phone') {
+          display: none;
+        }
       }
     }
   }
@@ -253,6 +256,8 @@ onMounted(() => {
       gap: 12px;
     }
     .card-item {
+      display: flex;
+      flex-direction: column;
       background-color: var(--o-color-fill2);
       border-radius: var(--o-radius-xs);
       .card-top {
@@ -275,8 +280,9 @@ onMounted(() => {
       .card-bottom {
         display: flex;
         flex-direction: column;
-        align-items: space-between;
+        justify-content: space-between;
         padding: 32px;
+        height: 100%;
         @include respond-to('<=laptop') {
           padding: 24px;
         }

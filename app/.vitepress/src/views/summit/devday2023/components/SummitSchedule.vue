@@ -298,6 +298,11 @@ const otherTabType = ref(0);
         display: flex;
         justify-content: center;
       }
+      :deep(.is-scrollable) {
+        .el-tabs__nav-scroll {
+          display: block;
+        }
+      }
       :deep(.el-tabs__content) {
         overflow: visible;
         @media (max-width: 1100px) {
