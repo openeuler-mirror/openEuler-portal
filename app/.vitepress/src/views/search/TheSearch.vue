@@ -775,7 +775,7 @@ const enterEvent = () => {
       >
         <div class="rpm-list">
           <h3>{{ i18n.search.relative }}</h3>
-          <el-scrollbar :height="resultHeight + 100">
+          <el-scrollbar :height="resultHeight - 8">
             <ul>
               <li v-for="item in searchRpmList" :key="item.filename">
                 <a
@@ -852,12 +852,16 @@ const enterEvent = () => {
       margin: 16px 0 32px;
       color: var(--e-color-text1);
       font-size: var(--e-font-size-text);
+      flex-wrap: wrap;
       @media (max-width: 768px) {
-        padding: 0 16px;
-        margin: 12px 0 24px;
+        margin: 12px 0 12px;
+        span {
+          margin-bottom: 8px;
+        }
       }
       .suggest-list {
         display: flex;
+        flex-wrap: wrap;
         .suggest {
           margin-right: 8px;
           cursor: pointer;
@@ -1110,6 +1114,7 @@ const enterEvent = () => {
             min-width: 100px;
             @media screen and (max-width: 768px) {
               width: 100%;
+              max-width: 100%;
               padding-bottom: 8px;
             }
             &:hover {

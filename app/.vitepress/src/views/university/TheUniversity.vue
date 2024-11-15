@@ -289,6 +289,11 @@ onMounted(() => {
           justify-content: center;
           flex-wrap: wrap;
         }
+        :deep(.is-scrollable) {
+          .el-tabs__nav-scroll {
+            display: block;
+          }
+        }
         .el-tabs__nav {
           display: flex;
           margin: 0 auto;

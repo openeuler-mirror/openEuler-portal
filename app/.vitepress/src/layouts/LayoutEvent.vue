@@ -73,5 +73,10 @@ function clickTab(val: string) {
     display: flex;
     justify-content: center;
   }
+  :deep(.is-scrollable) {
+    .el-tabs__nav-scroll {
+      display: block;
+    }
+  }
 }
 </style>

@@ -480,6 +480,11 @@ watch(
     display: flex;
     justify-content: center;
   }
+  :deep(.is-scrollable) {
+    .el-tabs__nav-scroll {
+      display: block;
+    }
+  }
   :deep(.el-tabs__content) {
     overflow: visible;
     margin-top: 0;

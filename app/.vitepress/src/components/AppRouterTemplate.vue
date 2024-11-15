@@ -93,6 +93,11 @@ function handleTabClick(val: any) {
     display: flex;
     justify-content: center;
   }
+  :deep(.is-scrollable) {
+    .el-tabs__nav-scroll {
+      display: block;
+    }
+  }
 }
 .post-btn {
   margin-right: 24px;
