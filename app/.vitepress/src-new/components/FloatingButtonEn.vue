@@ -1279,6 +1279,8 @@ watch(
         color: var(--o-color-info1);
         position: relative;
         padding: 0;
+        border: none !important;
+        background: transparent !important;
 
         &.forbidden {
           color: var(--o-color-info4);
