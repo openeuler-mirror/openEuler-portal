@@ -125,7 +125,7 @@ watch(
                 ? 292 / 238
                 : 165 / 162
             "
-            :href="`/${blog.path}`"
+            :href="`/${blog.path}.html`"
             target="_blank"
           >
             <div class="blog-bottom">
@@ -159,9 +159,9 @@ watch(
             :title-max-row="2"
             :detail-max-row="2"
             :detail="!lePadV ? news.summary : news.date"
-            :cover="`https://www.openeuler.org/${news.banner}`"
+            :cover="`/${news.banner}`"
             :cover-ratio="456 / 188"
-            :href="`/${news.path}`"
+            :href="`/${news.path}.html`"
             target="_blank"
           >
           </OCard>
