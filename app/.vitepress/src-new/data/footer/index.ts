@@ -171,7 +171,7 @@ export const quickNav = {
         },
         {
           title: '贡献看板',
-          link: '/zh/community/charter/',
+          link: 'https://datastat.openeuler.org/zh/overview',
         },
         {
           title: '社区介绍',
@@ -291,7 +291,7 @@ export const quickNav = {
         },
         {
           title: 'Statistics',
-          link: '/en/community/charter/',
+          link: 'https://datastat.openeuler.org/en/overview',
         },
       ],
     },

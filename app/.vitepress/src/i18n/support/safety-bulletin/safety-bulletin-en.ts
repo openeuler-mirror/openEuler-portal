@@ -6,7 +6,7 @@ export default {
   SECURITY_ADVISORIES_DETAIL: 'Security Advisories Detail',
   SEARCH: 'Search',
   SELECT_ALL: 'All',
-  DATE_PICKER: 'Date Picker',
+  DATE_PICKER: 'Date',
   START_DATE: 'Start date',
   END_DATE: 'End date',
   CANCEL: 'Cancel',
