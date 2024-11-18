@@ -214,7 +214,7 @@ export const publisher = [
       light: zhongkefangde,
       dark: zhongkefangdeLogo_dark,
     },
-    href: 'http://www.nfs-china.com/index.html',
+    href: 'https://www.nfschina.com/',
   },
   {
     logo: {
