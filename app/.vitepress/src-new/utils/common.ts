@@ -23,8 +23,13 @@ export function getCookie(key: string) {
  * @param {string} value cookie的值
  * @param {number} day cookie的过期时间 默认1天
  */
-export function setCookie(key: string, value: string, day = 1) {
-  Cookies.set(key, value, { expires: day, path: '/' });
+export function setCookie(
+  key: string,
+  value: string,
+  day = 1,
+  domain: string = location.hostname
+) {
+  Cookies.set(key, value, { expires: day, path: '/', domain });
 }
 
 /**
