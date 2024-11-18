@@ -389,11 +389,11 @@ export default {
               MOBILE_SHOW_CHILD: true,
               CHILDREN: [
                 {
-                  NAME: 'security center',
+                  NAME: 'Security Center',
                   URL: '/security/security-bulletins/',
                 },
                 {
-                  NAME: 'bug center',
+                  NAME: 'Bug Center',
                   URL: '/security/bug-bulletins/',
                 },
               ],
