@@ -54,7 +54,7 @@ const agendaData = ref();
 // ------------------ 嘉宾数据 -----------
 const guestData = ref();
 //-------- 直播 --------
-const isLiveShown = ref(1);
+const isLiveShown = ref(0);
 
 // 埋点统计投放流量
 function collectAdvertisedData() {

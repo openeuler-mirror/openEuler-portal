@@ -6,7 +6,7 @@ import textDark from '../img/wenzi_dark.png';
 import liveData from './live-data';
 export default {
   banner: {
-    btn: '观看直播',
+    btn: '精彩回顾',
     pcTextImgLight: textLight,
     pcTextImgDark: textDark,
     link: '/zh/interaction/summit-list/summit2024/#live',
