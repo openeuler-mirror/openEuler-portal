@@ -79,7 +79,7 @@ const descMouseenter = (e: MouseEvent) => {
             {{ subItem.DESCRIPTION }}
           </p>
         </div>
-        <div class="system-container">
+        <div v-if="subItem.CHILDREN" class="system-container">
           <NavLink v-for="system in subItem.CHILDREN" :url="system.URL" class="system" @link-click="linkClick">
             {{ system.NAME }}
             <OIcon v-if="system.ICON">
@@ -135,17 +135,11 @@ const descMouseenter = (e: MouseEvent) => {
   }
 
   .content-item {
-    @include respond-to('>laptop') {
-      width: calc((100% - 96px) / 3);
-      min-width: 230px;
-    }
-
-    @include respond-to('laptop') {
+    width: calc((100% - 96px) / 3);
+    @media (min-width: 1300px) and (max-width: 1440px) {
       width: calc((100% - 48px) / 3);
-      min-width: 184px;
     }
-
-    @include respond-to('pad_h') {
+    @media (max-width: 1300px) {
       width: calc((100% - 24px) / 2);
     }
   }
@@ -168,7 +162,6 @@ const descMouseenter = (e: MouseEvent) => {
   .desc-container {
     overflow: hidden;
     position: relative;
-    padding-bottom: var(--o-gap-3);
 
     .item-desc {
       color: var(--o-color-info2);
@@ -182,6 +175,7 @@ const descMouseenter = (e: MouseEvent) => {
   .system-container {
     display: flex;
     flex-wrap: wrap;
+    padding-top: var(--o-gap-3);
 
     .system {
       font-weight: 500;
