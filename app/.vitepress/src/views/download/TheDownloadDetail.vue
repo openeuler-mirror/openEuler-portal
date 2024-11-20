@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { useData } from 'vitepress';
+import { useData, useRouter } from 'vitepress';
 import { useI18n } from '@/i18n';
 
 import { getDownloadLink, getVersionInfo } from '@/api/api-mirror';
@@ -20,6 +20,8 @@ import IconChevronRight from '~icons/app/icon-chevron-right.svg';
 
 const i18n = useI18n();
 const { lang } = useData();
+
+const router = useRouter();
 
 const versionData = ref<DetailedLinkItemT[]>();
 const versionList = ref<VersionInfoT[]>();
@@ -42,12 +44,17 @@ function setversionShownName(version: string) {
 
 const queryGetDownloadLink = (version: string) => {
   versionData.value = [];
-  getDownloadLink(version).then((res) => {
-    mirrorList.value = res.MirrorList.sort((a, b) => {
-      return b.NetworkBandwidth - a.NetworkBandwidth;
+  getDownloadLink(version)
+    .then((res) => {
+      mirrorList.value = res.MirrorList.sort((a, b) => {
+        return b.NetworkBandwidth - a.NetworkBandwidth;
+      });
+      versionData.value = constructDownloadData(res?.FileTree, version, i18n);
+    })
+    // 未查询到版本数据，重定向到archive页面
+    .catch(() => {
+      router.go(`/${lang.value}/download/archive/`);
     });
-    versionData.value = constructDownloadData(res?.FileTree, version, i18n);
-  });
 };
 const queryGetVersionInfo = () => {
   getVersionInfo().then((res) => {
