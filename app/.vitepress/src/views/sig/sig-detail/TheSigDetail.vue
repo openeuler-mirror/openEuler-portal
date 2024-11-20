@@ -51,9 +51,13 @@ const params = reactive({
 });
 
 function getSigDetails() {
-  getSigDetail(sigDetailName.value, params).then((res: any) => {
-    sigMeetingData.value = res.data;
-  });
+  getSigDetail(sigDetailName.value, params)
+    .then((res: any) => {
+      sigMeetingData.value = res.data;
+    })
+    .catch(() => {
+      router.go(`${lang.value}/sig/sig-list/`);
+    });
 }
 
 function getSigMembers() {
@@ -61,23 +65,17 @@ function getSigMembers() {
     community: 'openeuler',
     sig: sigDetailName.value,
   };
-  getSigMember(param)
-    .then((res: any) => {
-      if (res?.data[0]) {
-        const data = res.data[0];
-        sigMemberData.value = data;
-        mail.value = data.mailing_list;
-        const { maintainer_info } = data || [];
-        if (maintainer_info) {
-          memberList.value = maintainer_info;
-        }
-      } else {
-        router.go(`${lang.value}/sig/sig-list/`);
+  getSigMember(param).then((res: any) => {
+    if (res?.data[0]) {
+      const data = res.data[0];
+      sigMemberData.value = data;
+      mail.value = data.mailing_list;
+      const { maintainer_info } = data || [];
+      if (maintainer_info) {
+        memberList.value = maintainer_info;
       }
-    })
-    .catch((error) => {
-      throw new Error(error);
-    });
+    }
+  });
 }
 
 // 仓库列表过滤参数
@@ -746,9 +744,22 @@ function convertMd(data: string) {
             display: flex;
             align-items: center;
             &-name {
+              word-break: keep-all;
               margin-right: var(--e-spacing-h5);
             }
             margin-right: var(--e-spacing-h1);
+            @media screen and (max-width: 1100px) {
+              margin-right: 12px;
+            }
+            .el-select {
+              min-width: 200px;
+              @media screen and (max-width: 1100px) {
+                min-width: 160px;
+                .select-item {
+                  margin-right: 12px;
+                }
+              }
+            }
             .el-input__prefix-inner {
               .o-icon {
                 font-size: var(--e-font-size-h7);
