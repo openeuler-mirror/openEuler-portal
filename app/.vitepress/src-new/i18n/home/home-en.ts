@@ -1,6 +1,6 @@
 export default {
   // 楼层1
-  introTitle: 'An open source OS for digital infrastructure',
+  introTitle: 'An Open Source OS for Digital Infrastructure',
   introBtn: 'Try Now',
   playCommunity: 'Explore {openEuler} Community {click}',
   playIntro: 'Download openEuler now and explore its robust features!',

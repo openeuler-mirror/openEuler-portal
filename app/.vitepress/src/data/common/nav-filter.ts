@@ -214,8 +214,8 @@ export default [
     lang: ['zh'],
   },
   {
-    name: 'monthly-summary',
-    lang: ['zh'],
+    name: 'monthly-bulletins',
+    lang: ['zh', 'en'],
   },
   {
     name: 'approve-step',

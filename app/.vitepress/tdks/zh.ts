@@ -296,7 +296,7 @@ const tdks: {
     keywords:
       'openEuler,openEuler活动,Meetup,开发者竞赛,开源黑客松,开发者沙龙,开源社区,openEuler社区,linux开源社区',
   },
-  'zh/monthly-summary': {
+  'zh/monthly-bulletins': {
     title: 'openEuler月刊 | 社区运作报告',
     description:
       'openEuler月刊是面向社区所有开发者展现社区运作情况，包括社区治理、技术、生态、活动等方方面面的发展情况。月刊每月发布一次。 想要了解更多相关信息，欢迎访问openEuler官网。',
