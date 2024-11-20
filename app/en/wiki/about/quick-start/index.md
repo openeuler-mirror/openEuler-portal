@@ -17,6 +17,6 @@ category: wiki
 - openEuler software package repository: <https://gitee.com/src-openeuler>
 - GitHub mirror: <https://github.com/openeuler-mirror>
 - Blogs: <https://www.openeuler.org/en/interaction/blog-list/>
-- Monthly newsletters: <https://www.openeuler.org/en/monthly-summary/>
+- Monthly newsletters: <https://www.openeuler.org/en/monthly-bulletins/>
 - Forum: <https://forum.openeuler.org/>
 - Mailing lists: <https://www.openeuler.org/en/community/mailing-list/>

@@ -20,10 +20,10 @@ const { lang } = useData();
 </script>
 
 <SeoBox :seo-data="seoConfig[lang]?.migrationCase" />
-    <p class="migration-transplantation-desc">
-      openEuler provides typical software porting guides to fit most deployment needs. You can also contribute your successful migration cases. For details, see <a
-        href="/en/migration/contribution/"
-        >Contribution Guide</a
-      >.
-    </p>
+<p class="migration-transplantation-desc">
+  openEuler provides typical software porting guides to fit most deployment needs. You can alscontribute your successful migration cases. For details, see <a
+    href="/en/migration/contribution/"
+    >Contribution Guide</a
+  >.
+</p>
 <TheMigrationCase />

@@ -25,6 +25,267 @@ function goBackPage() {
         {{ i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE }}
       </div>
     </div>
+    <div v-if="lang === 'en'" class="hardware-content">
+      <div class="hardware-content-top">
+        <div class="title">
+          {{ i18n.compatibility.HARDWARE_OEC_DETAIL.DISCRIPTION_TITLE }}
+        </div>
+        <div class="content">
+          {{ i18n.compatibility.HARDWARE_OEC_DETAIL.DISCRIPTION_CONTENT }}
+        </div>
+      </div>
+      <div class="hardware-content-middle">
+        <div class="title">
+          {{ i18n.compatibility.HARDWARE_OEC_DETAIL.PROCESS_TITLE }}
+        </div>
+        <div class="content">
+          <div class="content-item">
+            <div class="left">
+              {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].ID }}
+            </div>
+            <div class="right">
+              <div class="item-title">
+                {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].TITLE }}
+              </div>
+              <div class="item-content">
+                {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0]
+                    .DESCRIPTION_1
+                }}
+                <a
+                  :href="
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT
+                  "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {{
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT
+                  }}
+                </a>
+                {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0]
+                    .DESCRIPTION_2
+                }}
+              </div>
+            </div>
+          </div>
+          <div class="content-item">
+            <div class="left">
+              {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].ID }}
+            </div>
+            <div class="right">
+              <div class="item-title">
+                {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].TITLE }}
+              </div>
+              <div class="item-content">
+                {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1]
+                    .DESCRIPTION_1
+                }}
+                <a
+                  :href="
+                    'mailto:' +
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT
+                  "
+                >
+                  {{
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT
+                  }}
+                </a>
+                {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1]
+                    .DESCRIPTION_2
+                }}
+                <p>
+                  {{
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1]
+                      .DESCRIPTION_3
+                  }}
+                  <a
+                    :href="
+                      i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT2
+                    "
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {{
+                      i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT2
+                    }}
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content-item">
+            <div class="left">
+              {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].ID }}
+            </div>
+            <div class="right">
+              <div class="item-title">
+                {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].TITLE }}
+              </div>
+              <div class="item-content">
+                {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2]
+                    .DESCRIPTION_1
+                }}
+                <a
+                  :href="
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].A_HREF
+                  "
+                  :download="
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2]
+                      .DOWNLOAD_NAME
+                  "
+                >
+                  {{
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].A_TEXT
+                  }}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="content-item">
+            <div class="left">
+              {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].ID }}
+            </div>
+            <div class="right">
+              <div class="item-title">
+                {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].TITLE }}
+              </div>
+              <div class="item-content">
+                {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3]
+                    .DESCRIPTION_1
+                }}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  :href="
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT
+                  "
+                >
+                  {{
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT
+                  }}
+                </a>
+                {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3]
+                    .DESCRIPTION_2
+                }}
+              </div>
+            </div>
+          </div>
+          <div class="content-item">
+            <div class="left">
+              {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].ID }}
+            </div>
+            <div class="right">
+              <div class="item-title">
+                {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].TITLE }}
+              </div>
+              <div class="item-content">
+                {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4]
+                    .DESCRIPTION_1
+                }}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  :href="
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].A_HREF
+                  "
+                >
+                  {{
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].A_TEXT_2
+                  }}
+                </a>
+                <!-- {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4]
+                    .DESCRIPTION_2
+                }} -->
+                <!-- <a
+                  :href="
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].A_HREF_2
+                  "
+                  :download="
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4]
+                      .DOWNLOAD_NAME
+                  "
+                >
+                  {{
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].A_TEXT_2
+                  }}
+                </a> -->
+              </div>
+            </div>
+          </div>
+          <div class="content-item">
+            <div class="left">
+              {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].ID }}
+            </div>
+            <div class="right">
+              <div class="item-title">
+                {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].TITLE }}
+              </div>
+              <div class="item-content">
+                {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5]
+                    .DESCRIPTION_1
+                }}
+                {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5]
+                    .DESCRIPTION_3
+                }}
+                <a
+                  :href="
+                    'mailto:' +
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].A_TEXT
+                  "
+                >
+                  {{
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].A_TEXT
+                  }}
+                </a>
+                {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5]
+                    .DESCRIPTION_2
+                }}
+              </div>
+            </div>
+          </div>
+          <div
+            v-if="i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[6]"
+            class="content-item"
+          >
+            <div class="left">
+              {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[6].ID }}
+            </div>
+            <div class="right">
+              <div class="item-title">
+                {{ i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[6].TITLE }}
+              </div>
+              <div class="item-content">
+                {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[6]
+                    .DESCRIPTION_1
+                }}
+                <a @click="goBackPage">
+                  {{
+                    i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[6].A_TEXT
+                  }}
+                </a>
+                {{
+                  i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[6]
+                    .DESCRIPTION_2
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </AppContent>
 </template>
 <style lang="scss" scope>

@@ -772,7 +772,7 @@ export default {
             {
               NAME: '月刊',
               DESCRIPTION: '查看openEuler社区运作报告',
-              URL: '/monthly-summary/',
+              URL: '/monthly-bulletins/',
             },
           ],
           SHORTCUT: [

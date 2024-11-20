@@ -551,6 +551,11 @@ export default {
               DESCRIPTION: 'Gain in-depth knowledge and fresh perspectives on openEuler.',
               URL: '/interaction/blog-list/',
             },
+            {
+              NAME: 'Monthly Bulletins',
+              DESCRIPTION: "What's new in the openEuler community.",
+              URL: '/monthly-bulletins/',
+            },
           ],
           SHORTCUT: []
         },
