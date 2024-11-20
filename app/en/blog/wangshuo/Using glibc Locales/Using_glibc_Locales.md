@@ -219,7 +219,7 @@ glibc.spec
 
 # The glibc-all-langpacks provides the virtual glibc-langpack,
 # and thus satisfies glibc's requirement for installed locales.
-# Users can add one more other langauge packs and then eventually
+# Users can add one more other language packs and then eventually
 # uninstall all-langpacks to save space.
 %package all-langpacks
 Summary: All language packs for %{name}.

@@ -22,7 +22,7 @@ In the world of Bioinformatics, the [BioConductor](http://mp.weixin.qq.com/s?__b
 
 GitHub ID: @martin-g
 
-Martin Grigorov is a maintainer of openEuler from the OpenHPC team and a member of several Apache Software Foundation projects. Martin has been working in the IT industry since 2003 and has developed plenty of software for differenct industries. As an open source believer, he has contributed to many projects and communities. He likes to spend his free time with his family, to travel and to care about his garden. 
+Martin Grigorov is a maintainer of openEuler from the OpenHPC team and a member of several Apache Software Foundation projects. Martin has been working in the IT industry since 2003 and has developed plenty of software for different industries. As an open source believer, he has contributed to many projects and communities. He likes to spend his free time with his family, to travel and to care about his garden. 
 
  
 
