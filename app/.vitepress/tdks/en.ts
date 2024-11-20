@@ -154,7 +154,7 @@ const tdks: {
     keywords:
       'open source event, developer event, open source conference, open source summit, meetup',
   },
-  'en/monthly-summary': {
+  'en/monthly-bulletins': {
     title: 'Monthly Newsletter',
     description:
       "Stay connected with openEuler's monthly newsletter. Get the latest updates, news, and insights from the community delivered straight to you each month.",

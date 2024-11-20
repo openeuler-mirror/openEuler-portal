@@ -22,54 +22,6 @@ export default {
       ID: 'download',
       CHILDREN: [
         {
-          NAME: '获取方式',
-          CHILDREN: [
-            {
-              NAME: '获取openEuler操作系统',
-              DESCRIPTION: '提供获取openEuler的不同方式公有云、容器镜像、windows等',
-              TAG: TAG_TYPE.HOT,
-              URL: '/download/get-os/',
-              MOBILE_SHOW_CHILD: false,
-              CHILDREN: [
-                {
-                  NAME: '公有云',
-                  URL: '/wiki/install/cloud/',
-                },
-                {
-                  NAME: '容器镜像',
-                  URL: '/wiki/install/image/',
-                },
-                {
-                  NAME: 'Windows',
-                  URL: '/wiki/install/wsl/',
-                },
-                {
-                  NAME: 'Virtualization',
-                  URL: '/wiki/install/virtualization/',
-                },
-                {
-                  NAME: 'Raspberry Pi',
-                  URL: 'https://gitee.com/openeuler/raspberrypi/blob/master/README.md',
-                },
-              ],
-            }
-          ], 
-          SHORTCUT: [
-            {
-              NAME: 'openEuler 24.03 LTS',
-              URL: '/download/?version=openEuler 24.03 LTS',
-            },
-            {
-              NAME: 'openEuler repo 源',
-              URL: 'https://repo.openeuler.openatom.cn/',
-            },
-            {
-              NAME: '镜像仓列表',
-              URL: '/mirror/list/',
-            },
-          ],
-        }, 
-        {
           NAME: '社区发行版', 
           CHILDREN: [
             {
@@ -170,6 +122,41 @@ export default {
               URL: '/download/archive/',
             },
           ], 
+          EXTRAS: [
+            {
+              NAME: '其他获取方式',
+              URL: '/download/get-os/',
+              ICON: ArrowRight,
+              CHILDREN: [
+                {
+                  NAME: '公有云',
+                  DESCRIPTION: 'openEuler官方镜像在以下主流平台正式发布',
+                  URL: '/wiki/install/cloud/',
+                },
+                {
+                  NAME: '容器镜像',
+                  DESCRIPTION: 'openEuler提供官方容器镜像',
+                  URL: '/wiki/install/image/',
+                },
+                {
+                  NAME: 'Windows',
+                  DESCRIPTION: '在Windows上运行openEuler',
+                  URL: '/wiki/install/wsl/',
+                },
+                {
+                  NAME: 'Virtualization',
+                  DESCRIPTION: '在虚拟机上运行openEuler',
+                  URL: '/wiki/install/virtualization/',
+                },
+                {
+                  NAME: 'Raspberry Pi',
+                  DESCRIPTION: '在树莓派上安装openEuler',
+                  ICON: OutLink,
+                  URL: 'https://gitee.com/openeuler/raspberrypi/blob/master/README.md',
+                },
+              ], 
+            },
+          ]
         },
         {
           NAME: '其他版本',
@@ -183,7 +170,7 @@ export default {
           SHORTCUT: [],
         },
         {
-          NAME: '下载服务',
+          NAME: '下载资源',
           CHILDREN: [
             {
               NAME: '软件中心',
@@ -416,6 +403,12 @@ export default {
         {
           NAME: '发布',
           CHILDREN: [
+            {
+              NAME: 'EulerPublisher',
+              DESCRIPTION: 'openEuler云原生发布工具',
+              URL: 'https://gitee.com/openeuler/eulerpublisher',
+              ICON: OutLink
+            },
             {
               NAME: 'EulerLauncher',
               DESCRIPTION: '跨平台openEuler虚拟机管理工具',
@@ -779,7 +772,7 @@ export default {
             {
               NAME: '月刊',
               DESCRIPTION: '查看openEuler社区运作报告',
-              URL: '/monthly-summary/',
+              URL: '/monthly-bulletins/',
             },
           ],
           SHORTCUT: [

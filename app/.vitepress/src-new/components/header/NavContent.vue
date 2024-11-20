@@ -79,7 +79,7 @@ const descMouseenter = (e: MouseEvent) => {
             {{ subItem.DESCRIPTION }}
           </p>
         </div>
-        <div class="system-container">
+        <div v-if="subItem.CHILDREN" class="system-container">
           <NavLink v-for="system in subItem.CHILDREN" :url="system.URL" class="system" @link-click="linkClick">
             {{ system.NAME }}
             <OIcon v-if="system.ICON">
@@ -106,13 +106,6 @@ const descMouseenter = (e: MouseEvent) => {
   margin-left: var(--o-gap-2);
 }
 
-@mixin hidden {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
 .content-container {
   display: flex;
   margin: 0;
@@ -135,17 +128,11 @@ const descMouseenter = (e: MouseEvent) => {
   }
 
   .content-item {
-    @include respond-to('>laptop') {
-      width: calc((100% - 96px) / 3);
-      min-width: 230px;
-    }
-
-    @include respond-to('laptop') {
+    width: calc((100% - 96px) / 3);
+    @media (min-width: 1300px) and (max-width: 1440px) {
       width: calc((100% - 48px) / 3);
-      min-width: 184px;
     }
-
-    @include respond-to('pad_h') {
+    @media (max-width: 1300px) {
       width: calc((100% - 24px) / 2);
     }
   }
@@ -168,20 +155,19 @@ const descMouseenter = (e: MouseEvent) => {
   .desc-container {
     overflow: hidden;
     position: relative;
-    padding-bottom: var(--o-gap-3);
 
     .item-desc {
       color: var(--o-color-info2);
       margin: 0;
-      white-space: pre-line;
       @include tip2;
-      @include hidden;
+      @include text-truncate(2);
     }
   }
 
   .system-container {
     display: flex;
     flex-wrap: wrap;
+    padding-top: var(--o-gap-3);
 
     .system {
       font-weight: 500;
@@ -229,7 +215,7 @@ const descMouseenter = (e: MouseEvent) => {
       margin-bottom: var(--o-gap-1);
       text-align: justify;
       @include text1;
-      @include hidden;
+      @include text-truncate(2);
     }
   }
 

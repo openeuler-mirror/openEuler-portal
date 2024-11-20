@@ -18,7 +18,7 @@ category: wiki
 - 软件包仓：[https://gitee.com/src-openeuler](https://gitee.com/src-openeuler)
 - GitHub 镜像仓：[https://github.com/openeuler-mirror](https://github.com/openeuler-mirror)
 - 博客：[https://www.openeuler.org/zh/interaction/blog-list/](https://www.openeuler.org/zh/interaction/blog-list/)
-- 月刊：[https://www.openeuler.org/zh/monthly-summary/](https://www.openeuler.org/zh/monthly-summary/)
+- 月刊：[https://www.openeuler.org/zh/monthly-bulletins/](https://www.openeuler.org/zh/monthly-bulletins/)
 - 论坛：[https://forum.openeuler.org/](https://forum.openeuler.org/)
 - 邮件列表：[https://www.openeuler.org/zh/community/mailing-list/](https://www.openeuler.org/zh/community/mailing-list/)
 - 交流群：添加小助手微信：openeuler123，备注感兴趣的 SIG 组或技术领域

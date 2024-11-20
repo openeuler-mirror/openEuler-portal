@@ -145,7 +145,7 @@ const tipsObj: TitleItemT = {
   '/community/program/': TITLES2[14],
   '/interaction/news-list/': TITLES2[15],
   '/interaction/blog-list/': TITLES2[15],
-  '/monthly-summary': TITLES2[15],
+  '/monthly-bulletins': TITLES2[15],
 };
 
 const title1 = computed(() => {

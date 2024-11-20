@@ -120,9 +120,9 @@ const linkClick = () => {
                           />
                         </OIcon>
                       </NavLink>
-                        <span v-else class="content-title">{{
-                          subNavContent.NAME
-                        }}</span>
+                      <span v-else class="content-title">{{
+                        subNavContent.NAME
+                      }}</span>
                       <div v-if="subNavContent.HASGROUP">
                         <div
                           class="group"
@@ -141,11 +141,32 @@ const linkClick = () => {
                         :nav-content="subNavContent?.CHILDREN"
                         @link-click="linkClick"
                       />
+                      <div v-if="subNavContent.EXTRAS" class="extra">
+                        <div v-for="extra in subNavContent.EXTRAS" :key="extra.NAME">
+                          <NavLink
+                            class="content-title-url"
+                            :url="extra.URL"
+                            @link-click="linkClick"
+                          >
+                            {{ extra.NAME }}
+                            <OIcon>
+                              <component
+                                :is="extra.ICON"
+                                class="icon"
+                              />
+                            </OIcon>
+                          </NavLink>
+                          <NavContent
+                            :nav-content="extra.CHILDREN"
+                            @link-click="linkClick"
+                          />
+                        </div>
+                      </div>
                     </div>
-                          <div
-                            class="split-line"
-                            v-if="subNavContent.SHORTCUT?.length"
-                          ></div>
+                    <div
+                      class="split-line"
+                      v-if="subNavContent.SHORTCUT?.length"
+                    ></div>
                     <div class="content-right">
                       <div v-if="subNavContent.SHORTCUT?.length">
                         <span class="content-title">{{
@@ -187,12 +208,6 @@ const linkClick = () => {
                             <div class="review-content">
                               <p class="review-title">
                                 {{ shortcut.NAME }}
-                              </p>
-                              <p
-                                class="review-desc"
-                                :title="shortcut.DESCRIPTION"
-                              >
-                                {{ shortcut.DESCRIPTION }}
                               </p>
                               <div class="review-property">
                                 <span>{{ shortcut.REMARK }}</span>
@@ -365,7 +380,7 @@ const linkClick = () => {
 
   .nav-drop-content {
     max-width: 1416px;
-    width: calc(100vw - 64px);
+    width: calc(100vw - 2*var(--layout-content-padding));
     display: flex;
   }
 
@@ -468,7 +483,7 @@ const linkClick = () => {
 
     .content-left {
       flex: 1;
-      padding: 32px 24px 24px 32px;
+      padding: 32px 24px 32px 32px;
 
       @include respond-to('pad_h') {
         padding: var(--o-gap-6) var(--o-gap-4);
@@ -490,25 +505,22 @@ const linkClick = () => {
         width: 16px;
         padding-left: 6px;
       }
+      .extra {
+        margin-top: var(--o-gap-5);
+      }
     }
     .content-right {
-      width: 298px;
+      width: 358px;
       padding-top: var(--o-gap-6);
       padding-bottom: var(--o-gap-5);
       padding-left: var(--o-gap-4);
 
-      @media screen and (max-width: 1780px) {
-        width: 384px;
-      }
-      @include respond-to('laptop') {
-        width: 354px;
-      }
       @include respond-to('pad_h') {
         width: 224px;
       }
 
       .shortcut {
-        width: 282px;
+        width: 342px;
         min-height: 42px;
         background: var(--o-color-fill3);
         border-radius: var(--o-radius_control-xs);
@@ -519,12 +531,6 @@ const linkClick = () => {
         cursor: pointer;
         @include tip1;
 
-        @media screen and (max-width: 1780px) {
-          width: 362px;
-        }
-        @include respond-to('laptop') {
-          width: 334px;
-        }
         @include respond-to('pad_h') {
           width: 204px;
         }
@@ -548,17 +554,11 @@ const linkClick = () => {
       }
 
       .review {
-        width: 410px;
+        width: 342px;
         display: flex;
         align-items: unset;
         position: relative;
 
-        @media screen and (max-width: 1780px) {
-          width: 360px;
-        }
-        @include respond-to('laptop') {
-          width: 300px;
-        }
         @include respond-to('pad_h') {
           width: 200px;
           &:not(:last-child) {
@@ -579,47 +579,32 @@ const linkClick = () => {
         }
 
         .review-picture {
-          width: 160px;
+          width: 120px;
           height: auto;
           display: block;
           object-fit: contain;
 
-          @media screen and (max-width: 1780px) {
-            max-width: 150px;
-          }
-          @include respond-to('laptop') {
-            width: 120px;
-            height: 68px;
-          }
           @include respond-to('pad_h') {
             display: none;
           }
         }
         .review-content {
-          margin-left: var(--o-gap-4);
+          margin-left: var(--o-gap-2);
           flex: 1;
-          max-width: 224px;
+          max-width: 212px;
+          height: 68px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
 
-          @media screen and (max-width: 1780px) {
-            max-width: 200px;
-          }
-          @include respond-to('laptop') {
-            margin-left: var(--o-gap-2);
-            height: 68px;
-          }
           @include respond-to('pad_h') {
             margin-left: unset;
-            height: 68px;
           }
 
           .review-title {
             @include text1;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            @include text-truncate(2);
+            max-height: 48px;
             color: var(--o-color-info1);
             font-weight: 500;
             cursor: pointer;
@@ -627,25 +612,8 @@ const linkClick = () => {
             @include hover {
               color: var(--o-color-primary1);
             }
-
-            @include respond-to('<=laptop') {
-              white-space: wrap;
-            }
-          }
-
-          .review-desc {
-            @include tip2;
-            overflow: hidden;
-            flex: 1;
-            color: var(--o-color-info2);
-            margin-top: var(--o-gap-1);
-            margin-bottom: var(--o-gap-2);
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-
-            @include respond-to('<=laptop') {
-              display: none;
+            @include respond-to('pad_v-laptop') {
+              max-height: 44px;
             }
           }
 

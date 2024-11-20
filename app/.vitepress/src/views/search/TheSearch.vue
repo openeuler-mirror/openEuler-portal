@@ -1017,6 +1017,7 @@ const enterEvent = () => {
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 100%;
         .select-options {
           display: flex;
           justify-content: space-between;
@@ -1113,19 +1114,19 @@ const enterEvent = () => {
             }
           }
           :deep(.el-select) {
+            margin: 8px 0;
             max-width: 170px;
             min-width: 100px;
             @media screen and (max-width: 768px) {
               width: 100%;
               max-width: 100%;
-              padding-bottom: 8px;
+              margin: 0;
             }
             &:hover {
-              box-shadow: none;
+              box-shadow: var(--e-select-shadow);
             }
             .el-input__wrapper {
               padding: 0 8px;
-              box-shadow: 0 0 1px var(--e-color-border1);
             }
           }
         }
@@ -1239,13 +1240,6 @@ const enterEvent = () => {
       width: 320px;
       overflow: hidden;
       @include scrollbar;
-      margin-top: var(--e-spacing-h2);
-      @media (max-width: 768px) {
-        margin-top: var(--e-spacing-h5);
-      }
-      &.exist-suggest-1 {
-        margin-top: 0;
-      }
       .rpm-list {
         background-color: var(--e-color-bg2);
         box-shadow: var(--e-shadow-l1);

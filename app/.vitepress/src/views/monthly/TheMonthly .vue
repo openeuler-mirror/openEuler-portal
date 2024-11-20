@@ -18,12 +18,16 @@ import type { NewsDataT, ParamsTypeT } from '@/shared/@types/type-news';
 const router = useRouter();
 const { lang } = useData();
 
+const tags = computed(() => {
+  return lang.value === 'zh' ? '社区运作报告' : 'Newsletter';
+});
+
 const sortParams = reactive({
   page: 1,
   pageSize: 9,
   lang: lang.value,
   category: 'news',
-  tags: '社区运作报告',
+  tags: tags.value,
 });
 // 新闻列表数据
 const newsCardData = ref<NewsDataT[]>([]);
@@ -41,7 +45,7 @@ const tagsParams = reactive({
   category: 'news',
   want: 'archives',
   condition: {
-    tags: '社区运作报告',
+    tags: tags.value,
   },
 });
 const i18n = useI18n();
@@ -66,7 +70,7 @@ const changeTime = () => {
     pageSize: 9,
     lang: lang.value,
     category: 'news',
-    tags: '社区运作报告',
+    tags: tags.value,
     archives: selectTimeVal.value === '' ? undefined : selectTimeVal.value,
   };
   getListData(params);
@@ -120,7 +124,7 @@ const pageTotal = computed(() =>
   <BannerLevel2
     :background-image="banner"
     background-text="CONNECT"
-    title="月刊"
+    :title="i18n.interaction.monthly"
     :illustration="illustration"
   />
   <AppContent :mobile-top="16">
