@@ -849,12 +849,12 @@ const enterEvent = () => {
     }
     .suggest-list-box {
       display: flex;
-      margin: 16px 0 32px;
+      margin: 16px 0 0;
       color: var(--e-color-text1);
       font-size: var(--e-font-size-text);
       flex-wrap: wrap;
       @media (max-width: 768px) {
-        margin: 12px 0 12px;
+        margin: 12px 0 0;
         span {
           margin-bottom: 8px;
         }
@@ -882,6 +882,10 @@ const enterEvent = () => {
     }
   }
   .search-result {
+    margin-top: 32px;
+    @media (max-width: 768px) {
+      margin-top: 12px;
+    }
     .pagination-slot {
       font-size: var(--e-font-size-text);
       font-weight: 400;
@@ -1013,7 +1017,6 @@ const enterEvent = () => {
         display: flex;
         flex-direction: column;
         align-items: center;
-
         .select-options {
           display: flex;
           justify-content: space-between;

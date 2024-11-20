@@ -13,6 +13,6 @@ export default {
   news: 'News',
   case: 'Success Stories',
   more: 'View More',
-  publisher: 'Vendors with openEuler-based Commercial Editions',
+  publisher: 'Vendors with openEuler-based Commercial Releases',
   publisherTips: 'Listed in no particular order',
 };

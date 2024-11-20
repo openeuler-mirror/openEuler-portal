@@ -296,6 +296,7 @@ onMounted(() => {
           @include text-truncate(2);
           @include text1;
           color: var(--o-color-info2);
+          word-break: keep-all;
         }
         .btn-box {
           margin-top: 32px;

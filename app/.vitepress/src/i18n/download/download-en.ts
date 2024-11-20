@@ -12,8 +12,8 @@ export default {
   GET_ISO: 'Get ISO',
   SELECT: 'Filter',
   // 新增 start
-  COMMUNITY: 'Community Editions',
-  BUSINESS: 'Commercial Editions',
+  COMMUNITY: 'Community Releases',
+  BUSINESS: 'Commercial Releases',
   DETAIL1:
     'openEuler 24.09 is the latest version that was released in Sept, 2024. Download and try for yourself here.',
   DETAIL2: '',
