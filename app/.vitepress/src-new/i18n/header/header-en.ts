@@ -19,54 +19,6 @@ export default {
       ID: 'download',
       CHILDREN: [
         {
-          NAME: 'Get openEuler OS',
-          CHILDREN: [
-            {
-              NAME: 'openEuler Is Everywhere',
-              DESCRIPTION: 'Get openEuler for public clouds, containers, and Windows.',
-              TAG: TAG_TYPE.HOT,
-              URL: '/download/get-os/',
-              MOBILE_SHOW_CHILD: false,
-              CHILDREN: [
-                {
-                  NAME: 'Cloud Images',
-                  URL: '/wiki/install/cloud/',
-                },
-                {
-                  NAME: 'Container Images',
-                  URL: '/wiki/install/image/',
-                },
-                {
-                  NAME: 'Windows',
-                  URL: '/wiki/install/wsl/',
-                },
-                {
-                  NAME: 'Virtualization',
-                  URL: '/wiki/install/virtualization/',
-                },
-                {
-                  NAME: 'Raspberry Pi',
-                  URL: 'https://gitee.com/openeuler/raspberrypi/blob/master/README.md',
-                },
-              ],
-            }
-          ], 
-          SHORTCUT: [
-            {
-              NAME: 'openEuler 24.03 LTS',
-              URL: '/download/?version=openEuler 24.03 LTS',
-            },
-            {
-              NAME: 'openEuler repo',
-              URL: 'https://repo.openeuler.openatom.cn/',
-            },
-            {
-              NAME: 'Mirrors',
-              URL: '/mirror/list/',
-            },
-          ],
-        }, 
-        {
           NAME: 'Community Releases', 
           CHILDREN: [
             {
@@ -166,7 +118,42 @@ export default {
               NAME: 'Historical Releases',
               URL: '/download/archive/',
             },
-          ], 
+          ],
+          EXTRAS: [
+            {
+              NAME: 'Get openEuler',
+              URL: '/download/get-os/',
+              ICON: ArrowRight,
+              CHILDREN: [
+                {
+                  NAME: 'Cloud Images',
+                  DESCRIPTION: 'openEuler has released official images on mainstream public cloud platforms',
+                  URL: '/wiki/install/cloud/',
+                },
+                {
+                  NAME: 'Container Images',
+                  DESCRIPTION: 'openEuler provides official container images',
+                  URL: '/wiki/install/image/',
+                },
+                {
+                  NAME: 'Windows',
+                  DESCRIPTION: 'Running openEuler on Windows',
+                  URL: '/wiki/install/wsl/',
+                },
+                {
+                  NAME: 'Virtualization',
+                  DESCRIPTION: 'Running openEuler on VMs',
+                  URL: '/wiki/install/virtualization/',
+                },
+                {
+                  NAME: 'Raspberry Pi',
+                  DESCRIPTION: 'Installing openEuler on Raspberry Pi',
+                  ICON: OutLink,
+                  URL: 'https://gitee.com/openeuler/raspberrypi/blob/master/README.md',
+                },
+              ], 
+            },
+          ]
         },
         {
           NAME: 'Other Releases',

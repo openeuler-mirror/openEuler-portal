@@ -116,6 +116,28 @@ const linkClick = () => {
                   </div>
                 </div>
                 <NavContent v-else :nav-content="item?.CHILDREN" @link-click="linkClick" :is-mobile="true" />
+                <div v-if="item.EXTRAS" class="extra">
+                  <div v-for="extra in item.EXTRAS" :key="extra.NAME">
+                    <NavLink
+                      class="content-title-url"
+                      :url="extra.URL"
+                      @link-click="linkClick"
+                    >
+                      {{ extra.NAME }}
+                      <OIcon>
+                        <component
+                          :is="extra.ICON"
+                          class="icon"
+                        />
+                      </OIcon>
+                    </NavLink>
+                    <NavContent
+                      :nav-content="extra.CHILDREN"
+                      @link-click="linkClick"
+                      :is-mobile="true"
+                    />
+                  </div>
+                </div>
               </OCollapseItem>
             </OCollapse>
             <div v-else class="nav-aside-wrapper">
@@ -236,13 +258,25 @@ const linkClick = () => {
        display: block;
        flex: 0 1 auto;
 
-       :deep(.o-collapse-item-body) {
-        margin-bottom: 0;
-       }
+      :deep(.o-collapse-item-body) {
+      margin-bottom: 0;
+      }
 
-       .group + .group {
-          margin-top: var(--o-gap-3);
-       }
+      .group + .group {
+        margin-top: var(--o-gap-3);
+      }
+
+      .content-title-url {
+        @include text2;
+        color: var(--o-color-primary1);
+        margin: var(--o-gap-4) 0;
+
+        .icon {
+          height: 16px;
+          width: 16px;
+          margin-left: var(--o-gap-2);
+        }
+      }
     }
 
     .source-code-item {
