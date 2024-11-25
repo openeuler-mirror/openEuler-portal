@@ -3,6 +3,9 @@ import { ref } from 'vue';
 
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppContent from '@/components/AppContent.vue';
+import Honor2022 from './Honor2022.vue';
+import Honor2023 from './Honor2023.vue';
+import Honor2024 from './Honor2024.vue';
 
 import banner from '@/assets/category/honor/banner.jpg';
 import illustration from '@/assets/category/honor/ill.png';
@@ -12,7 +15,14 @@ import IconChecked from '~icons/app/icon-checked.svg';
 import IconUnchecked from '~icons/app/icon-unchecked.svg';
 import IconRight from '~icons/app/icon-arrow-right.svg';
 import honorData from '@/data/honor';
-const activeYear = ref('2023');
+
+const comMap = new Map([
+  ['2022', Honor2022],
+  ['2023', Honor2023],
+  ['2024', Honor2024],
+]);
+
+const activeYear = ref('2024');
 const showNumber = ref(-1);
 function useClickTab(year: string) {
   activeYear.value = year;
@@ -34,7 +44,7 @@ function clickDetail(index: number) {
   />
   <ul class="h5-time">
     <li
-      v-for="item in honorData.timeList"
+      v-for="item in honorData.honorList.keys()"
       :key="item"
       :class="activeYear === item ? 'active' : ''"
       @click="useClickTab(item)"
@@ -46,25 +56,28 @@ function clickDetail(index: number) {
     <div class="honor-time">
       <ul class="o-timeline-list pc-time">
         <li
-          v-for="item in honorData.timeList"
+          v-for="item in honorData.honorList.keys()"
           :key="item"
           class="o-timeline-item"
           :class="activeYear === item ? 'active' : ''"
           @click="useClickTab(item)"
         >
           <p class="o-timeline-day">{{ item }}</p>
-          <IconChecked
-            v-if="activeYear === item"
-            class="o-timeline-icon"
-          ></IconChecked>
-          <IconUnchecked v-else class="o-timeline-icon"></IconUnchecked>
+          <div class="o-timeline-icon-box">
+            <IconChecked
+              v-if="activeYear === item"
+              class="o-timeline-icon"
+            ></IconChecked>
+            <IconUnchecked v-else class="o-timeline-icon"></IconUnchecked>
+          </div>
         </li>
       </ul>
     </div>
     <div class="content">
-      <div v-show="activeYear === '2022'" class="certificate-box">
+      <div class="certificate-box">
         <OCard
-          v-for="(item, index) in honorData.certificateList2022"
+          v-for="(item, index) in honorData.honorList.get(activeYear)
+            ?.certificateList"
           :key="item.name"
           class="certificate-item"
         >
@@ -85,6 +98,7 @@ function clickDetail(index: number) {
             </template>
           </OButton>
           <OButton
+            v-if="item?.certificate"
             class="detail-btn"
             type="text"
             animation
@@ -108,176 +122,10 @@ function clickDetail(index: number) {
           </div>
         </OCard>
       </div>
-      <div v-show="activeYear === '2021'" class="certificate-box">
-        <OCard
-          v-for="item in honorData.certificateList2021"
-          :key="item.name"
-          class="certificate-item"
-        >
-          <p>{{ item.name }}</p>
-          <OButton
-            class="detail-btn"
-            type="text"
-            animation
-            size="nomral"
-            @click="clickBtn(item.link)"
-          >
-            {{ honorData.readNews }}
-            <template #suffixIcon>
-              <OIcon class="detail-icon">
-                <IconRight />
-              </OIcon>
-            </template>
-          </OButton>
-          <img class="bg-right" :src="bgImg" alt="" />
-        </OCard>
-      </div>
-      <div v-show="activeYear === '2023'" class="certificate-box">
-        <OCard
-          v-for="item in honorData.certificateList2023"
-          :key="item.name"
-          class="certificate-item"
-        >
-          <p>{{ item.name }}</p>
-          <OButton
-            class="detail-btn"
-            type="text"
-            animation
-            size="nomral"
-            @click="clickBtn(item.link)"
-          >
-            {{ honorData.readNews }}
-            <template #suffixIcon>
-              <OIcon class="detail-icon">
-                <IconRight />
-              </OIcon>
-            </template>
-          </OButton>
-          <img class="bg-right" :src="bgImg" alt="" />
-        </OCard>
-      </div>
-      <div v-show="honorData.award.personal.has(activeYear)" class="award-box">
-        <h2
-          v-for="item in honorData.award.personal.get(activeYear)?.title"
-          :key="item"
-        >
-          {{ item }}
-        </h2>
-        <template v-if="activeYear === '2023'">
-          <div
-            v-for="item in honorData.award.team.get(activeYear)"
-            :key="item.title"
-            class="award-team"
-          >
-            <h5>{{ item.title }}</h5>
-            <div class="team-card-box">
-              <div
-                v-for="award in item.awardList"
-                :key="award.name"
-                class="team-box"
-              >
-                <OCard class="team-item">
-                  <p class="name">{{ award.name }}</p>
-                  <div class="detail">
-                    <p v-for="itemDetail in award.detail" :key="itemDetail">
-                      {{ itemDetail }}
-                    </p>
-                  </div>
-                  <OButton
-                    v-if="award.link"
-                    class="address-btn"
-                    type="text"
-                    animation
-                    size="nomral"
-                    @click="clickBtn(award.link)"
-                  >
-                    项目地址
-                    <template #suffixIcon>
-                      <OIcon class="address-icon">
-                        <IconRight />
-                      </OIcon>
-                    </template>
-                  </OButton>
-                  <img class="bg-right" :src="bgImg" alt="" />
-                </OCard>
-              </div>
-            </div>
-          </div>
-        </template>
-        <h2 v-if="activeYear === '2023'" class="title-2023">
-          2023年度贡献之星
-        </h2>
-        <div class="award-personal">
-          <h5>{{ honorData.award.personal.get(activeYear)?.subTitle }}</h5>
-          <div class="personal-box">
-            <OCard
-              v-for="item in honorData.award.personal.get(activeYear)
-                ?.awardList"
-              :key="item"
-              class="personal-item"
-            >
-              <div class="item-head">
-                <img class="item-img" :src="item.img" alt="" />
-                <img class="bg-right" :src="bgImg" alt="" />
-              </div>
-              <div class="item-body">
-                <p class="name">{{ item.name }}</p>
-                <p v-for="itemPost in item.post" :key="itemPost" class="post">
-                  {{ itemPost }}
-                </p>
-              </div>
-              <div class="personal-hover">
-                <p class="name">{{ item.name }}</p>
-                <div class="detail">
-                  <p v-for="itemDetail in item.detail" :key="itemDetail">
-                    {{ itemDetail }}
-                  </p>
-                </div>
-              </div>
-            </OCard>
-          </div>
-        </div>
-        <template v-if="activeYear === '2022'">
-          <div
-            v-for="item in honorData.award.team.get(activeYear)"
-            :key="item.title"
-            class="award-team"
-          >
-            <h5>{{ item.title }}</h5>
-            <div
-              v-for="award in item.awardList"
-              :key="award.name"
-              class="team-box"
-            >
-              <OCard class="team-item">
-                <p class="name">{{ award.name }}</p>
-                <div class="detail">
-                  <p v-for="itemDetail in award.detail" :key="itemDetail">
-                    {{ itemDetail }}
-                  </p>
-                </div>
-                <OButton
-                  v-if="award.link"
-                  class="address-btn"
-                  type="text"
-                  animation
-                  size="nomral"
-                  @click="clickBtn(award.link)"
-                >
-                  项目地址
-                  <template #suffixIcon>
-                    <OIcon class="address-icon">
-                      <IconRight />
-                    </OIcon>
-                  </template>
-                </OButton>
-                <img :src="bgImg" alt="" />
-              </OCard>
-            </div>
-          </div>
-        </template>
-      </div>
-
+      <component
+        :is="comMap.get(activeYear)"
+        :honor-data="honorData.honorList.get(activeYear)"
+      ></component>
       <p v-show="activeYear === '2022'" class="notice">
         {{ honorData.notice }}
       </p>
@@ -291,14 +139,15 @@ function clickDetail(index: number) {
 <style lang="scss" scoped>
 .honor-time {
   .o-timeline-list {
-    max-width: 270px;
+    max-width: 730px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-
     .o-timeline-item {
       position: relative;
-      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       list-style: none;
       text-align: center;
       cursor: pointer;
@@ -310,8 +159,27 @@ function clickDetail(index: number) {
         margin-bottom: var(--e-spacing-h10);
         transition: all 0.2s;
       }
-
+      .o-timeline-icon-box:not(:first-child) {
+        position: relative;
+        &::after {
+          position: absolute;
+          width: 200px;
+          height: 2px;
+          background-color: var(--e-color-neutral11);
+          content: '';
+          display: block;
+          top: 50%;
+          left: 0;
+          transform: translate(calc(-100% - 2px), -50%);
+          z-index: 0;
+          @media screen and (max-width: 800px) {
+            width: 196px;
+          }
+        }
+      }
       .o-timeline-icon {
+        position: relative;
+        z-index: 3;
         cursor: pointer;
         width: var(--e-font-size-h5);
         height: var(--e-font-size-h5);
@@ -326,18 +194,12 @@ function clickDetail(index: number) {
         color: var(--e-color-brand1);
       }
     }
-
-    &::after {
-      width: 86%;
-      height: 2px;
-      background-color: var(--e-color-neutral11);
-      content: '';
-      display: block;
-      position: absolute;
-      top: 43px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
+    .o-timeline-item:first-child {
+      .o-timeline-icon-box {
+        &::after {
+          display: none;
+        }
+      }
     }
   }
 
@@ -388,13 +250,12 @@ function clickDetail(index: number) {
 }
 
 .content {
-  margin-top: var(--e-spacing-h3);
+  .certificate-box:not(:empty) {
+    margin-top: var(--e-spacing-h3);
 
-  @media (max-width: 768px) {
-    margin-top: 0;
-  }
-
-  .certificate-box {
+    @media (max-width: 768px) {
+      margin-top: 0;
+    }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--e-spacing-h4);
@@ -488,7 +349,7 @@ function clickDetail(index: number) {
     }
   }
 
-  .award-box {
+  :deep(.award-box) {
     margin-top: var(--e-spacing-h2);
     h2 {
       text-align: center;
@@ -701,7 +562,7 @@ function clickDetail(index: number) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: var(--e-spacing-h4);
-        @media (max-width: 1400px) {
+        @media (max-width: 1600px) {
           grid-template-columns: repeat(2, 1fr);
         }
         @media (max-width: 768px) {
@@ -735,7 +596,7 @@ function clickDetail(index: number) {
       .team-box {
         margin-top: var(--e-spacing-h4);
         @media (max-width: 768px) {
-          margin-top: var(--e-spacing-h6);
+          margin-top: 0;
         }
         .team-item {
           width: 100%;
@@ -818,39 +679,48 @@ function clickDetail(index: number) {
           min-height: 180px;
         }
       }
-    }
-  }
-  .notice {
-    margin-top: var(--e-spacing-h3);
-    font-size: var(--e-font-size-tip);
-    line-height: var(--e-line-height-tip);
-    color: var(--e-color-text1);
-    width: 100%;
-    @media (max-width: 768px) {
-      margin-top: var(--e-spacing-h5);
+      .team-box:first-child {
+        @media (max-width: 768px) {
+          margin-top: var(--e-spacing-h6);
+        }
+      }
     }
   }
 }
+:deep(.notice) {
+  margin-top: var(--e-spacing-h3);
+  font-size: var(--e-font-size-tip);
+  line-height: var(--e-line-height-tip);
+  color: var(--e-color-text1);
+  width: 100%;
+  @media (max-width: 768px) {
+    margin-top: var(--e-spacing-h5);
+  }
+}
 .dark {
-  .content .certificate-box .certificate-item {
-    background-image: url(/.vitepress/src/assets/category/honor/bg1-dark-mobile.png);
-    background-size: 100% 100%;
-    @media (max-width: 768px) {
-      background-image: url(/.vitepress/src/assets/category/honor/bg1-dark-mobile.png);
-      background-size: cover;
+  .content {
+    .certificate-box .certificate-item {
+      background-image: url(/.vitepress/src/assets/category/honor/bg1-dark-mobile.png) !important;
+      background-size: 100% 100%;
+      @media (max-width: 768px) {
+        background-image: url(/.vitepress/src/assets/category/honor/bg1-dark-mobile.png);
+        background-size: cover;
+      }
     }
-  }
-  .content .award-box .award-personal .personal-box .personal-item .item-head {
-    background-image: url(/.vitepress/src/assets/category/honor/bg2-dark.png);
-    @media (max-width: 768px) {
-      background-image: url(/.vitepress/src/assets/category/honor/bg2-dark-mobile.png);
+    :deep(.award-box) {
+      .award-personal .personal-box .personal-item .item-head {
+        background-image: url(/.vitepress/src/assets/category/honor/bg2-dark.png);
+        @media (max-width: 768px) {
+          background-image: url(/.vitepress/src/assets/category/honor/bg2-dark-mobile.png);
+        }
+      }
+      .award-team .team-box .team-item {
+        background-image: url(/.vitepress/src/assets/category/honor/bg3-dark.png);
+      }
+      img {
+        filter: brightness(80%) grayscale(20%) contrast(1.2);
+      }
     }
-  }
-  .content .award-box .award-team .team-box .team-item {
-    background-image: url(/.vitepress/src/assets/category/honor/bg3-dark.png);
-  }
-  img {
-    filter: brightness(80%) grayscale(20%) contrast(1.2);
   }
 }
 </style>
