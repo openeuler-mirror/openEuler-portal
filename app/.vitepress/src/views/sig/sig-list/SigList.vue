@@ -173,7 +173,7 @@ const changeSize = (val: number) => {
 };
 
 const toSigDetail = (value: SIGLIST) => {
-  router.go(`/${language.value}/sig/sig-detail/?name=${value.sig_name}`);
+  router.go(`/${language.value}/sig/${value.sig_name}`);
 };
 // select 滑动到底部翻页
 function getNextPage() {
@@ -589,7 +589,7 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-.el-select{
+.el-select {
   min-width: 227px;
 }
 

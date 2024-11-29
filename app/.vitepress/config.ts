@@ -122,13 +122,8 @@ const config: UserConfig = {
       });
     },
   },
+  cleanUrls: true,
   themeConfig: {
-    // locales: {
-    //   '/': i18n.zh,
-    //   '/zh/': i18n.zh,
-    //   '/en/': i18n.en,
-    //   '/ru/': i18n.ru,
-    // },
     docsUrl: 'https://docs.openeuler.org',
     forumUrl: 'https://forum.openeuler.org',
   },
