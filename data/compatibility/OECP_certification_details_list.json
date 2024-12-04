@@ -10726,5 +10726,221 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "江苏润和软件股份有限公司",
+    "os_version": "HopeOS-V24-standard-aarch64-dvd.iso",
+    "arch": "aarch64",
+    "checksum": "c45e0f557cbf52202c5a19a3d45d5262",
+    "base_openeuler_version": "openEuler 24.03 LTS",
+    "os_download_link": "http://www.hoperun.com/",
+    "friendly_link": "http://www.hoperun.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/10/30",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "江苏润和软件股份有限公司",
+    "os_version": "HopeOS-V24-standard-x86_64-dvd.iso",
+    "arch": "x86_64",
+    "checksum": "0d610dc54fc816095d5799916c899037",
+    "base_openeuler_version": "openEuler 24.03 LTS",
+    "os_download_link": "http://www.hoperun.com/",
+    "friendly_link": "http://www.hoperun.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/10/30",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "中移物联网有限公司",
+    "os_version": "OneOS Multi V1.3",
+    "arch": "aarch64",
+    "checksum": "42706eb1fc910c003f5992f55400012b *qemu-oneos-rproc.elf",
+    "base_openeuler_version": "openEuler 24.03 LTS",
+    "os_download_link": "https://os.iot.10086.cn/",
+    "friendly_link": "https://os.iot.10086.cn/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2024/12/04",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 ]
