@@ -65,12 +65,16 @@ watch(
 
 const getLang = (lang: String) => {
   return lang === 'zh' ? '中文' : 'EN';
-}
+};
 </script>
 
 <template>
-  <div v-if="!lePadV"  class="header-lang">
-    <ODropdown trigger="hover" optionPosition="bottom" option-wrap-class="dropdown">
+  <div v-if="!lePadV" class="header-lang">
+    <ODropdown
+      trigger="hover"
+      optionPosition="bottom"
+      option-wrap-class="dropdown"
+    >
       <div class="info-wrap hover-icon-rotate">
         <span class="title">{{ getLang(lang) }}</span>
         <OIcon class="icon"><IconChevronDown /></OIcon>
@@ -81,7 +85,8 @@ const getLang = (lang: String) => {
           v-for="item in langList"
           @click="changeLanguage(item.id)"
           :key="item.id"
-          class="list">
+          class="list"
+        >
           {{ getLang(item.id) }}
         </ODropdownItem>
       </template>
@@ -132,7 +137,7 @@ const getLang = (lang: String) => {
     border-radius: var(--o-radius_control-xs);
     padding: var(--o-gap-1);
     width: 144px;
-  } 
+  }
 }
 
 .hover-icon-rotate {

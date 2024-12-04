@@ -35,14 +35,14 @@ const props = defineProps({
     type: Boolean,
     default() {
       return false;
-    }
-  }
+    },
+  },
 });
 
 const collapseValue = ref([]);
 
 const navActive = ref('');
-const navInfo = ref({})
+const navInfo = ref({});
 
 const handleNavClick = (item: any) => {
   if (!item) {
@@ -65,9 +65,10 @@ watch(
 watch(
   () => headerData.value || codeData.value,
   () => {
-    navInfo.value = navActive.value === 'SOURCE_CODE' ?
-      codeData.value
-      : headerData.value.find(item => item.ID === navActive.value);
+    navInfo.value =
+      navActive.value === 'SOURCE_CODE'
+        ? codeData.value
+        : headerData.value.find((item) => item.ID === navActive.value);
   },
   {
     deep: true,
@@ -77,86 +78,104 @@ watch(
 const emit = defineEmits(['link-click']);
 const linkClick = () => {
   emit('link-click');
-}
+};
 </script>
 
 <template>
-  <div
-    class="header-content"
-    :class="lang"
-  >
+  <div class="header-content" :class="lang">
     <div class="header-nav" :class="{ active: menuShow }">
-        <nav class="o-nav">
-          <ul class="o-nav-list">
-            <li
-              v-for="(item, index) in headerData"
-              :key="item.ID"
-              :class="{
-                active: navActive === item.ID,
-              }"
+      <nav class="o-nav">
+        <ul class="o-nav-list">
+          <li
+            v-for="(item, index) in headerData"
+            :key="item.ID"
+            :class="{
+              active: navActive === item.ID,
+            }"
+          >
+            <span @click="handleNavClick(item)">{{ item.NAME }}</span>
+          </li>
+        </ul>
+        <div class="nav-aside">
+          <OCollapse
+            v-if="navActive !== 'SOURCE_CODE'"
+            v-model="collapseValue"
+            class="nav-aside-wrapper"
+          >
+            <OCollapseItem
+              v-for="item in navInfo.CHILDREN"
+              :value="item.NAME"
+              :title="item.NAME"
+              :key="item.NAME"
+              class="nav-aside-content"
             >
-              <span @click="handleNavClick(item)">{{
-                item.NAME
-              }}</span>
-            </li>
-          </ul>
-          <div class='nav-aside'>
-            <OCollapse v-if="navActive !== 'SOURCE_CODE'" v-model="collapseValue" class="nav-aside-wrapper">
-              <OCollapseItem
-                v-for="item in navInfo.CHILDREN"
-                :value="item.NAME"
-                :title="item.NAME"
-                :key="item.NAME"
-                class="nav-aside-content"
-              >
-                <div v-if="item.HASGROUP">
-                  <div class="group" v-for="group in item.CHILDREN" :key="group.NAME">
-                    <span>{{ group.NAME }}</span>
-                    <NavContent :nav-content="group?.CHILDREN" @link-click="linkClick" :is-mobile="true" />
-                  </div>
+              <div v-if="item.HASGROUP">
+                <div
+                  class="group"
+                  v-for="group in item.CHILDREN"
+                  :key="group.NAME"
+                >
+                  <span>{{ group.NAME }}</span>
+                  <NavContent
+                    :nav-content="group?.CHILDREN"
+                    @link-click="linkClick"
+                    :is-mobile="true"
+                  />
                 </div>
-                <NavContent v-else :nav-content="item?.CHILDREN" @link-click="linkClick" :is-mobile="true" />
-                <div v-if="item.EXTRAS" class="extra">
-                  <div v-for="extra in item.EXTRAS" :key="extra.NAME">
-                    <NavLink
-                      class="content-title-url"
-                      :url="extra.URL"
-                      @link-click="linkClick"
-                    >
-                      {{ extra.NAME }}
-                      <OIcon>
-                        <component
-                          :is="extra.ICON"
-                          class="icon"
-                        />
-                      </OIcon>
-                    </NavLink>
-                    <NavContent
-                      :nav-content="extra.CHILDREN"
-                      @link-click="linkClick"
-                      :is-mobile="true"
-                    />
-                  </div>
+              </div>
+              <NavContent
+                v-else
+                :nav-content="item?.CHILDREN"
+                @link-click="linkClick"
+                :is-mobile="true"
+              />
+              <div v-if="item.EXTRAS" class="extra">
+                <div v-for="extra in item.EXTRAS" :key="extra.NAME">
+                  <NavLink
+                    class="content-title-url"
+                    :url="extra.URL"
+                    @link-click="linkClick"
+                  >
+                    {{ extra.NAME }}
+                    <OIcon>
+                      <component :is="extra.ICON" class="icon" />
+                    </OIcon>
+                  </NavLink>
+                  <NavContent
+                    :nav-content="extra.CHILDREN"
+                    @link-click="linkClick"
+                    :is-mobile="true"
+                  />
                 </div>
-              </OCollapseItem>
-            </OCollapse>
-            <div v-else class="nav-aside-wrapper">
-              <NavLink v-for="item in navInfo" :url="item.PATH" :key="item.NAME" class="source-code-item">
-                <span>{{ item.NAME }}</span>
-                <OIcon>
-                  <IconOutLink class="icon" />
-                </OIcon>
-              </NavLink>
-            </div>
+              </div>
+            </OCollapseItem>
+          </OCollapse>
+          <div v-else class="nav-aside-wrapper">
+            <NavLink
+              v-for="item in navInfo"
+              :url="item.PATH"
+              :key="item.NAME"
+              class="source-code-item"
+            >
+              <span>{{ item.NAME }}</span>
+              <OIcon>
+                <IconOutLink class="icon" />
+              </OIcon>
+            </NavLink>
           </div>
-        </nav>
+        </div>
+      </nav>
       <div class="header-tool">
-        <div class="header-tool-code" @click="handleNavClick(null)" :class="{
-                active: navActive === 'SOURCE_CODE',
-              }">
+        <div
+          class="header-tool-code"
+          @click="handleNavClick(null)"
+          :class="{
+            active: navActive === 'SOURCE_CODE',
+          }"
+        >
           {{ $t('header.CODE') }}
         </div>
-        <HeaderLanguage :show="langOptions"/>
+        <HeaderLanguage :show="langOptions" />
         <HeaderTheme />
       </div>
     </div>
@@ -178,9 +197,8 @@ const linkClick = () => {
   &.active {
     color: var(--o-color-primary1);
     background: var(--o-color-fill2);
-  } 
+  }
 }
-
 
 .header-content {
   display: flex;
@@ -250,16 +268,16 @@ const linkClick = () => {
   z-index: 190;
 
   .nav-aside-wrapper {
-     overflow-y: auto;
-     padding: 12px 16px 24px 12px; 
-     height: 100%;
+    overflow-y: auto;
+    padding: 12px 16px 24px 12px;
+    height: 100%;
 
-     .nav-aside-content {
-       display: block;
-       flex: 0 1 auto;
+    .nav-aside-content {
+      display: block;
+      flex: 0 1 auto;
 
       :deep(.o-collapse-item-body) {
-      margin-bottom: 0;
+        margin-bottom: 0;
       }
 
       .group + .group {
@@ -296,7 +314,7 @@ const linkClick = () => {
   }
 }
 
-.o-nav { 
+.o-nav {
   height: 100%;
   position: relative;
   width: 99px;
