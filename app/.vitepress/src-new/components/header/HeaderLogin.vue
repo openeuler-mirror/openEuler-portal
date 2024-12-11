@@ -28,16 +28,14 @@ const unreadMsgCount = ref(0);
 onMounted(async () => {
   if (token) {
     const { data: userInfo } = await queryPersonalInfo();
-    const giteeNotRegistered = !(userInfo.identities as any[])?.find(
-      (item) => item.identity === 'gitee'
+    const giteeLoginName: string | undefined = (
+      userInfo.identities as any[]
+    )?.find((item) => item.identity === 'gitee')?.login_name;
+    const data = await getUnreadMsgCount(giteeLoginName);
+    unreadMsgCount.value = Object.values(data).reduce(
+      (count, val) => count + val,
+      0
     );
-    const data = await getUnreadMsgCount();
-    unreadMsgCount.value = data.reduce((count, val) => {
-      if (giteeNotRegistered && val.source === 'https://gitee.com') {
-        return count;
-      }
-      return count + val.count;
-    }, 0);
   }
 });
 </script>
