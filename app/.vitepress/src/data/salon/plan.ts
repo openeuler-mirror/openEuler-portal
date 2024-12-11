@@ -108,12 +108,17 @@ export const yearPlanData = {
           actives: [
             {
               location: '中国，北京',
-              activeName: '2024开放原子开发者大会',
-            },
-            {
-              location: '中国，北京',
               activeName: '操作系统大会&openEuler Summit 2024',
               href: '/zh/interaction/summit-list/summit2024/',
+            },
+          ],
+        },
+        {
+          month: '12',
+          actives: [
+            {
+              location: '中国，武汉',
+              activeName: '2024开放原子开发者大会暨首届开源技术学术大会',
             },
           ],
         },
@@ -177,15 +182,6 @@ export const yearPlanData = {
             {
               location: '中国，北京',
               activeName: '2024 CID',
-            },
-          ],
-        },
-        {
-          month: '12',
-          actives: [
-            {
-              location: '中国，上海',
-              activeName: 'Intel On',
             },
           ],
         },
@@ -331,6 +327,40 @@ export const yearPlanData = {
             {
               location: '北京',
               activeName: 'openEuler SDS Meetup',
+            },
+          ],
+        },
+        {
+          month: '11',
+          actives: [
+            {
+              location: '郑州',
+              activeName: '郑州用户组 Meetup',
+            },
+            {
+              location: '上海',
+              activeName: '走进同济大学 Meetup',
+            },
+          ],
+        },
+        {
+          month: '12',
+          actives: [
+            {
+              location: '苏州',
+              activeName: 'RISC-V Meetup',
+            },
+            {
+              location: '北京',
+              activeName: 'openEuler & openKylin AI 及云原生 Meetup',
+            },
+            {
+              location: '北京',
+              activeName: '云原生 & 中间件 Meetup',
+            },
+            {
+              location: '烟台',
+              activeName: 'openEuler 胶东用户组 Meetup',
             },
           ],
         },

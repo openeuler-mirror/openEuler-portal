@@ -205,10 +205,6 @@ function getEasyeditorInfo() {
   });
 }
 onMounted(() => {
-  //   const path = window.location.pathname;
-  //   if (path.at(-1) !== '/') {
-  //     history.replaceState(null, '', window.location.pathname + '/');
-  //   }
   getEasyeditorInfo();
 });
 // 转换md语法
