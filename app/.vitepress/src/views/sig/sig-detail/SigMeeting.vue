@@ -13,6 +13,7 @@ import { isValidKey, isBrowser } from '@/shared/utils';
 import { TableDataT, DayDataT } from '@/shared/@types/type-calendar';
 import { useCommon } from '@/stores/common';
 import { useI18n } from '@/i18n';
+import { useData } from 'vitepress';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import IconDown from '~icons/app/icon-chevron-down.svg';
@@ -39,6 +40,9 @@ const props = defineProps({
     default: '',
   },
 });
+
+const { params } = useData();
+
 const commonStore = useCommon();
 let currentMeet = reactive<TableDataT>({
   date: '',
@@ -157,30 +161,15 @@ const resolveDate = (date: string) => {
   date = date.replace(reg, '$1年$2月$3日');
   return date;
 };
-const sigDetailName = ref('');
+const sigName = computed(() => {
+  return params.value?.sig || '';
+});
 
-function getUrlParam(paraName: any) {
-  const searchList = location.search.split('?');
-  if (searchList.length > 1) {
-    const paraList = searchList[1].split('&');
-    let arr;
-    for (let i = 0; i < paraList.length; i++) {
-      arr = paraList[i].split('=');
-      if (arr !== null && arr[0] === paraName) {
-        return arr[1];
-      }
-    }
-    return '';
-  } else {
-    return '';
-  }
-}
+
 const meetingSummaryLink = computed(() => {
-  return `https://etherpad.openeuler.org/p/${sigDetailName.value}-meetings`;
+  return `https://etherpad.openeuler.org/p/${sigName.value}-meetings`;
 });
-onMounted(() => {
-  sigDetailName.value = getUrlParam('name');
-});
+
 const watchData = watch(
   () => props.tableData.length,
   () => {
