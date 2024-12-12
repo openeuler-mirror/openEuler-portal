@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useI18n } from '@/i18n';
 
 import { useData } from 'vitepress';
@@ -8,14 +8,6 @@ import MEMBER_DATA from '@/data/about-us/member-data';
 import { useCommon } from '@/stores/common';
 
 const { lang } = useData();
-
-const memberData = computed(() => {
-  if (lang.value === 'en') {
-    return MEMBER_DATA.en;
-  } else {
-    return MEMBER_DATA.zh;
-  }
-});
 
 const activeIndex = ref(0);
 // 滚动激活导航
@@ -46,8 +38,8 @@ onUnmounted(() => {
 </script>
 <template>
   <div class="member">
-    <div v-for="line in memberData" :key="line.donorTitle" class="member-line">
-      <h2 :id="line.ID" class="member-title">{{ line.donorTitle }}</h2>
+    <div v-for="line in MEMBER_DATA" :key="line.ID" class="member-line">
+      <h2 :id="line.ID" class="member-title">{{ line.donorTitle[lang] }}</h2>
       <div class="logo-list">
         <span
           v-for="img in line.logoList"
@@ -78,9 +70,9 @@ onUnmounted(() => {
     </div>
   </div>
   <ul class="nav-right">
-    <li v-for="(item, index) in memberData" :key="item.ID">
+    <li v-for="(item, index) in MEMBER_DATA" :key="item.ID">
       <a :href="'#' + item.ID" :class="activeIndex === index ? 'active' : ''">{{
-        item.donorTitle
+        item.donorTitle[lang]
       }}</a>
     </li>
   </ul>
