@@ -40,4 +40,4 @@ img: /category/showcase/education.png
 
 **合作伙伴**
 
-![E:/VI/LOGO文件/logo.pnglogo](./media/image2.png)
+<img width="200" src="./media/image2.png" />
