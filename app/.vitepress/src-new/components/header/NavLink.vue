@@ -14,7 +14,7 @@ const props = defineProps({
 
 const isExternal = () => {
   return props.url.startsWith('https');
-}
+};
 
 const emits = defineEmits(['link-click']);
 const router = useRouter();
@@ -40,11 +40,7 @@ const linkClick = () => {
   >
     <slot></slot>
   </a>
-  <div
-    v-else
-    @click="linkClick"
-    class="link"
-    :class="{'without-url': !url}">
+  <div v-else @click="linkClick" class="link" :class="{ 'without-url': !url }">
     <slot></slot>
   </div>
 </template>
@@ -56,7 +52,7 @@ const linkClick = () => {
   align-items: center;
 
   @include hover {
-    color:var(--o-color-primary1);
+    color: var(--o-color-primary1);
   }
 }
 

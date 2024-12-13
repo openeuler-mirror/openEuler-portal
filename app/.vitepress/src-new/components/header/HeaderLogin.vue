@@ -44,7 +44,12 @@ onMounted(async () => {
 
 <template>
   <div class="opt-user">
-    <ODropdown v-if="token" trigger="hover" optionPosition="bottom" option-wrap-class="dropdown">
+    <ODropdown
+      v-if="token"
+      trigger="hover"
+      optionPosition="bottom"
+      option-wrap-class="dropdown"
+    >
       <div class="el-dropdown-link opt-info">
         <AppBadge v-if="unreadMsgCount" :value="unreadMsgCount">
           <img
@@ -71,19 +76,20 @@ onMounted(async () => {
       </div>
 
       <template #dropdown>
-        <ODropdownItem @click="jumpToUserZone()">{{ $t('header.USER_CENTER') }}</ODropdownItem>
+        <ODropdownItem @click="jumpToUserZone()">{{
+          $t('header.USER_CENTER')
+        }}</ODropdownItem>
         <ODropdownItem @click="jumpToMsgCenter()">
-          <AppBadge
-            v-if="unreadMsgCount"
-            :value="unreadMsgCount"
-          >
+          <AppBadge v-if="unreadMsgCount" :value="unreadMsgCount">
             {{ $t('header.MESSAGE_CENTER') }}
           </AppBadge>
           <div v-else>
             {{ $t('header.MESSAGE_CENTER') }}
           </div>
         </ODropdownItem>
-        <ODropdownItem @click="logout()">{{ $t('header.LOGOUT') }}</ODropdownItem>
+        <ODropdownItem @click="logout()">{{
+          $t('header.LOGOUT')
+        }}</ODropdownItem>
       </template>
     </ODropdown>
     <div v-else class="login" @click="showGuard()">
@@ -122,16 +128,16 @@ onMounted(async () => {
   }
 
   .opt-name {
-      color: var(--o-color-info1);
-      margin-left: 8px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      width: 72px;
-      @include respond-to('<=pad_v') {
-        display: none;
-      }
+    color: var(--o-color-info1);
+    margin-left: 8px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 72px;
+    @include respond-to('<=pad_v') {
+      display: none;
     }
+  }
 }
 .login {
   .icon {

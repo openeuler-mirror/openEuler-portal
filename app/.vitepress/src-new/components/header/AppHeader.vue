@@ -67,7 +67,7 @@ watch(
       const routeArr = routerPath.value.split('/');
       const routeName = routeArr[routeArr.length - 2];
       // TODO:目前只支持一级
-      const names = navFilterConfig[i].name.split('/')
+      const names = navFilterConfig[i].name.split('/');
       const name = names[0];
 
       if (
@@ -96,7 +96,7 @@ const menuPanel = () => {
 
 const mobileClick = () => {
   menuPanel();
-}
+};
 </script>
 
 <template>
@@ -112,7 +112,13 @@ const mobileClick = () => {
       </div>
       <img class="logo" alt="openEuler logo" :src="logoUrl" @click="goHome" />
       <ClientOnly>
-        <HeaderNavMoblie v-if="lePadV" ref="mobileNav" :lang-options="langShow" :menuShow="menuShow" @link-click="mobileClick"/>
+        <HeaderNavMoblie
+          v-if="lePadV"
+          ref="mobileNav"
+          :lang-options="langShow"
+          :menuShow="menuShow"
+          @link-click="mobileClick"
+        />
         <HeaderNav v-else :lang-options="langShow" />
       </ClientOnly>
     </ContentWrapper>
@@ -179,7 +185,7 @@ const mobileClick = () => {
     margin-right: var(--o-gap-7);
 
     @include respond-to('laptop') {
-    margin-right: 28px;
+      margin-right: 28px;
     }
     @include respond-to('pad_h') {
       margin-right: var(--o-gap-2);

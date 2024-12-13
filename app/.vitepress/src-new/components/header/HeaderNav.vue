@@ -35,17 +35,19 @@ const navActive = ref();
 const subNavActive = ref();
 const subNavContent = ref({});
 const subNav = ref({});
-const toggleDebounced = debounce(function (item: any | null) {
-  if (item === null) {
-    navActive.value = '';
-    isShow.value = false;
-  } else {
-    navActive.value = item.ID;
-    isShow.value = true;
-    subNavActive.value = item.CHILDREN[0]?.NAME;
-    subNav.value = item.CHILDREN;
-    subNavContent.value = item.CHILDREN[0];
-  }},
+const toggleDebounced = debounce(
+  function (item: any | null) {
+    if (item === null) {
+      navActive.value = '';
+      isShow.value = false;
+    } else {
+      navActive.value = item.ID;
+      isShow.value = true;
+      subNavActive.value = item.CHILDREN[0]?.NAME;
+      subNav.value = item.CHILDREN;
+      subNavContent.value = item.CHILDREN[0];
+    }
+  },
   100,
   {
     trailing: true,
@@ -80,12 +82,17 @@ const linkClick = () => {
             :class="{
               active: navActive === item.ID,
             }"
-              @mouseenter="toggleDebounced(item)"
-              @mouseleave="toggleDebounced(null)"
-            >
-            <span :id="'tour_headerNav_' + item.ID" class="nav-item">{{ item.NAME }}</span>
+            @mouseenter="toggleDebounced(item)"
+            @mouseleave="toggleDebounced(null)"
+          >
+            <span :id="'tour_headerNav_' + item.ID" class="nav-item">{{
+              item.NAME
+            }}</span>
             <transition name="transition">
-              <div v-if="isShow" :class="['nav-dropdown', navActive, commonStore.theme]">
+              <div
+                v-if="isShow"
+                :class="['nav-dropdown', navActive, commonStore.theme]"
+              >
                 <div class="nav-drop-content">
                   <div class="nav-sub-background">
                     <div class="nav-background-left"></div>
@@ -114,10 +121,7 @@ const linkClick = () => {
                       >
                         {{ subNavContent.NAME }}
                         <OIcon v-if="subNavContent.ICON">
-                          <component
-                            :is="subNavContent.ICON"
-                            class="icon"
-                          />
+                          <component :is="subNavContent.ICON" class="icon" />
                         </OIcon>
                       </NavLink>
                       <span v-else class="content-title">{{
@@ -142,7 +146,10 @@ const linkClick = () => {
                         @link-click="linkClick"
                       />
                       <div v-if="subNavContent.EXTRAS" class="extra">
-                        <div v-for="extra in subNavContent.EXTRAS" :key="extra.NAME">
+                        <div
+                          v-for="extra in subNavContent.EXTRAS"
+                          :key="extra.NAME"
+                        >
                           <NavLink
                             class="content-title-url"
                             :url="extra.URL"
@@ -150,10 +157,7 @@ const linkClick = () => {
                           >
                             {{ extra.NAME }}
                             <OIcon>
-                              <component
-                                :is="extra.ICON"
-                                class="icon"
-                              />
+                              <component :is="extra.ICON" class="icon" />
                             </OIcon>
                           </NavLink>
                           <NavContent
@@ -185,10 +189,7 @@ const linkClick = () => {
                             >
                               {{ shortcut.NAME }}
                               <OIcon v-if="shortcut.ICON">
-                                <component
-                                  :is="shortcut.ICON"
-                                  class="icon"
-                                />
+                                <component :is="shortcut.ICON" class="icon" />
                               </OIcon>
                             </NavLink>
                           </div>
@@ -306,7 +307,6 @@ const linkClick = () => {
         background: var(--o-color-primary1);
         transition: all var(--o-duration-s) var(--o-easing-standard);
       }
-      
 
       &.active {
         color: var(--o-color-primary1);
@@ -380,7 +380,7 @@ const linkClick = () => {
 
   .nav-drop-content {
     max-width: 1416px;
-    width: calc(100vw - 2*var(--layout-content-padding));
+    width: calc(100vw - 2 * var(--layout-content-padding));
     display: flex;
   }
 
@@ -453,7 +453,6 @@ const linkClick = () => {
       align-items: center;
       cursor: pointer;
       transition: all var(--o-duration-s) var(--o-easing-standard);
-
 
       > span {
         padding-left: var(--o-gap-2);
@@ -546,7 +545,7 @@ const linkClick = () => {
           }
 
           .icon {
-            height: 16px;
+            height: 22px;
             width: 16px;
             margin-left: var(--o-gap-2);
           }
@@ -604,6 +603,7 @@ const linkClick = () => {
           .review-title {
             @include text1;
             @include text-truncate(2);
+            word-break: normal;
             max-height: 48px;
             color: var(--o-color-info1);
             font-weight: 500;

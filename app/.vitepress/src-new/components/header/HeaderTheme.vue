@@ -21,7 +21,7 @@ const changeTheme = () => {
     APPEARANCE_KEY,
     theme,
     180,
-    import.meta.env.VITE_COOKIE_DOMAIN,
+    import.meta.env.VITE_COOKIE_DOMAIN
   );
 };
 
@@ -30,7 +30,7 @@ const changeThemeMobile = () => {
     APPEARANCE_KEY,
     commonStore.theme,
     180,
-    import.meta.env.VITE_COOKIE_DOMAIN,
+    import.meta.env.VITE_COOKIE_DOMAIN
   );
 };
 

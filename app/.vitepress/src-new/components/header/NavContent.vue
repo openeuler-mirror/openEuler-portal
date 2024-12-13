@@ -11,42 +11,60 @@ const props = defineProps({
       return [];
     },
   },
-  isMobile : {
+  isMobile: {
     type: Boolean,
     default() {
       return false;
-    }
-  }
+    },
+  },
 });
-
 
 const emits = defineEmits(['link-click']);
 const linkClick = () => {
   emits('link-click');
-}
+};
 
 const showDesc = ref(false);
 const descMouseenter = (e: MouseEvent) => {
   if (!e || !e.target) return;
   showDesc.value = e.target.clientHeight < e.target.scrollHeight;
-} 
+};
 </script>
 
 <template>
   <div v-if="isMobile" class="container-mobile">
-    <div v-for="subItem in navContent" :key="subItem.NAME" class="content-container-mobile">
-      <NavLink :url="subItem.URL" class="content-subtitle" @link-click="linkClick">
+    <div
+      v-for="subItem in navContent"
+      :key="subItem.NAME"
+      class="content-container-mobile"
+    >
+      <NavLink
+        :url="subItem.URL"
+        class="content-subtitle"
+        @link-click="linkClick"
+      >
         {{ subItem.NAME }}
         <OIcon v-if="subItem.ICON">
           <component :is="subItem.ICON" class="icon" />
         </OIcon>
-        <OTag v-if="subItem.TAG" round="pill" color="danger" class="content-tag">{{ subItem.TAG }}</OTag>
+        <OTag
+          v-if="subItem.TAG"
+          round="pill"
+          color="danger"
+          class="content-tag"
+          >{{ subItem.TAG }}</OTag
+        >
       </NavLink>
       <div class="desc-container">
         <p class="item-desc">{{ subItem.DESCRIPTION }}</p>
       </div>
       <div v-if="subItem.MOBILE_SHOW_CHILD" class="system-container">
-        <NavLink v-for="system in subItem.CHILDREN" :url="system.URL" class="system" @link-click="linkClick">
+        <NavLink
+          v-for="system in subItem.CHILDREN"
+          :url="system.URL"
+          class="system"
+          @link-click="linkClick"
+        >
           {{ system.NAME }}
           <OIcon v-if="system.ICON">
             <component :is="system.ICON" class="icon" />
@@ -60,33 +78,46 @@ const descMouseenter = (e: MouseEvent) => {
     <div
       v-for="subItem in navContent"
       :key="subItem.NAME"
-      :class="{ 'content-item': navContent.length > 1 }">
-        <div class="item-title">
-          <NavLink :url="subItem.URL" class="item-name" @link-click="linkClick">
-            {{ subItem.NAME }}
-            <OIcon v-if="subItem.ICON">
-              <component :is="subItem.ICON" class="icon" />
-            </OIcon>
-            <OTag v-if="subItem.TAG" round="pill" color="danger" size="small" class="content-tag">{{ subItem.TAG }}</OTag>
-          </NavLink>
-        </div>
-        <div class="desc-container">
-          <p
-            class="item-desc"
-            :title="showDesc? subItem.DESCRIPTION : null"
-            @mouseenter="descMouseenter($event)"
+      :class="{ 'content-item': navContent.length > 1 }"
+    >
+      <div class="item-title">
+        <NavLink :url="subItem.URL" class="item-name" @link-click="linkClick">
+          {{ subItem.NAME }}
+          <OIcon v-if="subItem.ICON">
+            <component :is="subItem.ICON" class="icon" />
+          </OIcon>
+          <OTag
+            v-if="subItem.TAG"
+            round="pill"
+            color="danger"
+            size="small"
+            class="content-tag"
+            >{{ subItem.TAG }}</OTag
           >
-            {{ subItem.DESCRIPTION }}
-          </p>
-        </div>
-        <div v-if="subItem.CHILDREN" class="system-container">
-          <NavLink v-for="system in subItem.CHILDREN" :url="system.URL" class="system" @link-click="linkClick">
-            {{ system.NAME }}
-            <OIcon v-if="system.ICON">
-              <component :is="system.ICON" class="icon" />
-            </OIcon>
-          </NavLink>
-        </div>
+        </NavLink>
+      </div>
+      <div class="desc-container">
+        <p
+          class="item-desc"
+          :title="showDesc ? subItem.DESCRIPTION : null"
+          @mouseenter="descMouseenter($event)"
+        >
+          {{ subItem.DESCRIPTION }}
+        </p>
+      </div>
+      <div v-if="subItem.CHILDREN" class="system-container">
+        <NavLink
+          v-for="system in subItem.CHILDREN"
+          :url="system.URL"
+          class="system"
+          @link-click="linkClick"
+        >
+          {{ system.NAME }}
+          <OIcon v-if="system.ICON">
+            <component :is="system.ICON" class="icon" />
+          </OIcon>
+        </NavLink>
+      </div>
     </div>
   </div>
 </template>
@@ -97,7 +128,7 @@ const descMouseenter = (e: MouseEvent) => {
   cursor: pointer;
 
   @include hover {
-    color:var(--o-color-primary1);
+    color: var(--o-color-primary1);
   }
 }
 
@@ -161,6 +192,7 @@ const descMouseenter = (e: MouseEvent) => {
       margin: 0;
       @include tip2;
       @include text-truncate(2);
+      word-break: normal;
     }
   }
 
@@ -193,9 +225,9 @@ const descMouseenter = (e: MouseEvent) => {
 }
 
 .content-container-mobile {
-    & + .content-container-mobile {
+  & + .content-container-mobile {
     margin-top: var(--o-gap-3);
-    }
+  }
 
   .content-subtitle {
     color: var(--o-color-primary1);
@@ -216,6 +248,7 @@ const descMouseenter = (e: MouseEvent) => {
       text-align: justify;
       @include text1;
       @include text-truncate(2);
+      word-break: normal;
     }
   }
 

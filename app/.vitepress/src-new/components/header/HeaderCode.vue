@@ -11,31 +11,36 @@ const sourceCode = computed(() => i18n.value.header.SOURCE_CODE);
 
 const itemChange = (data: any) => {
   window.open(data.PATH, '_blank');
-}
+};
 </script>
 
 <template>
-<div class="header-code">
-  <ODropdown trigger="hover" optionPosition="bottom" option-wrap-class="dropdown">
-    <div class="info-wrap hover-icon-rotate">
-      <span class="title">{{ $t('header.CODE') }}</span>
-      <OIcon class="icon"><IconChevronDown /></OIcon>
-    </div>
+  <div class="header-code">
+    <ODropdown
+      trigger="hover"
+      optionPosition="bottom"
+      option-wrap-class="dropdown"
+    >
+      <div class="info-wrap hover-icon-rotate">
+        <span class="title">{{ $t('header.CODE') }}</span>
+        <OIcon class="icon"><IconChevronDown /></OIcon>
+      </div>
 
-    <template #dropdown>
-      <ODropdownItem
-        v-for="item in sourceCode"
-        @click="itemChange(item)"
-        :key="item.PATH"
-        class="list">
-        {{ item.NAME }}
-        <OIcon>
-          <IconOutLink class="icon" />
-        </OIcon>
-      </ODropdownItem>
-    </template>
-  </ODropdown>
-</div>
+      <template #dropdown>
+        <ODropdownItem
+          v-for="item in sourceCode"
+          @click="itemChange(item)"
+          :key="item.PATH"
+          class="list"
+        >
+          {{ item.NAME }}
+          <OIcon>
+            <IconOutLink class="icon" />
+          </OIcon>
+        </ODropdownItem>
+      </template>
+    </ODropdown>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -71,7 +76,7 @@ const itemChange = (data: any) => {
     border-radius: var(--o-radius_control-xs);
     padding: var(--o-gap-1);
     width: 144px;
-  } 
+  }
 }
 
 .hover-icon-rotate {
