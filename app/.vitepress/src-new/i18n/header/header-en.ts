@@ -487,6 +487,11 @@ export default {
           NAME: 'Engage with Us',
           CHILDREN: [
             {
+              NAME: 'Forum',
+              DESCRIPTION: 'Share knowledge, ask anything, and solve together.',
+              URL: 'https://forum.openeuler.org/',
+            },
+            {
               NAME: 'Mailing Lists',
               DESCRIPTION: 'Discuss openEuler tech and progress on our mailing lists.',
               URL: '/community/mailing-list/',
