@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { onMounted, ref } from 'vue';
 
 import { OCard, OScroller, OTab, OTabPane } from '@opensig/opendesign';
 
@@ -18,13 +18,6 @@ import IconUser from '~icons/app-new/icon-user.svg';
 
 const { t, locale } = useLocale();
 const { gtLaptop, gtPad, gtPadV, gtPhone, lePadV } = useScreen();
-
-const props = defineProps({
-  isResult: {
-    type: Boolean,
-    default: false,
-  },
-});
 
 // -------------------- 选中tab页 --------------------
 const activeTab = ref('blog');
@@ -76,12 +69,9 @@ const getData = () => {
     }
   });
 };
-watch(
-  () => props.isResult,
-  () => {
-    getData();
-  }
-);
+onMounted(() => {
+  getData();
+});
 </script>
 
 <template>

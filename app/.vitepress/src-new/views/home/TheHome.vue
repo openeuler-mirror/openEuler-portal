@@ -20,9 +20,7 @@ import HomeTrend from './HomeTrend.vue';
 
 const { isPhone, isPadV } = useScreen();
 
-const { locale, isZh } = useLocale();
-
-const isResult = ref(false);
+const { isZh } = useLocale();
 
 const calendarData = ref<string[]>([]);
 
@@ -64,8 +62,8 @@ onMounted(() => {
       v-if="isZh && calendarData.length"
       :table-data="calendarData"
     />
-    <HomeShowCase data-aos="fade-up" @result="isResult = true" />
-    <HomeTrend data-aos="fade-up" :is-result="isResult" />
+    <HomeShowCase data-aos="fade-up" />
+    <HomeTrend data-aos="fade-up" />
     <ClientOnly>
       <HomePartner />
     </ClientOnly>

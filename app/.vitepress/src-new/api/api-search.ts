@@ -23,20 +23,31 @@ export function getHomeBlog(locale: string) {
   const url = '/api-search/search/sort';
   const params = { category: 'blog', lang: locale, page: 1, pageSize: 6 };
 
-  return request.post(url, params).then((res) => {
-    return res.data;
-  });
+  return request
+    .post(url, params, {
+      ignoreDuplicates: true,
+    })
+    .then((res) => {
+      return res.data;
+    });
 }
 
 /**
  * es搜索获取首页用户案例
  * @return { Promise<ResponseT> } 用户案例
  */
-export function getHomeShowCases(locale: string) {
+export function getHomeShowCases(params: {
+  category: string;
+  lang: string;
+  page: number;
+  pageSize: number;
+}) {
   const url = '/api-search/search/sort';
-  const params = { category: 'showcase', lang: locale, page: 1, pageSize: 100 };
-
-  return request.post(url, params).then((res) => {
-    return res.data;
-  });
+  return request
+    .post(url, params, {
+      ignoreDuplicates: true,
+    })
+    .then((res) => {
+      return res.data;
+    });
 }

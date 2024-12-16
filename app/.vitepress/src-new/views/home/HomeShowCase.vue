@@ -38,7 +38,16 @@ const { isPhone, size } = useScreen();
 const userCase = ref<HTMLElement>();
 const activeTab = ref(0);
 const cases = shallowRef<CasesT[]>([]);
+
 cases.value = locale.value === 'zh' ? casesZh : casesEn;
+
+const params = {
+  category: 'showcase',
+  lang: locale.value,
+  page: 1,
+  pageSize: 4,
+  industry: '',
+};
 
 const tabs = ref();
 const activeWidth = ref();
@@ -47,19 +56,16 @@ const activeLeft = ref();
 // -------------------- 获取案例数据 --------------------
 const caseData = ref({});
 const getCases = () => {
-  getHomeShowCases(locale.value).then((res) => {
-    emit('result');
-
-    const result: any = {};
-    res?.obj?.records.forEach((item: { lang: string; industry: string }) => {
-      if (typeof result[item.industry] === 'undefined') {
-        result[item.industry] = [];
-      }
-      if (result[item.industry].length < 4) {
-        result[item.industry].push(item);
-      }
+  const promiseArr = [];
+  cases.value.forEach((item) => {
+    params.industry = item.label;
+    promiseArr.push(getHomeShowCases(params));
+    caseData.value[item.label] = [];
+  });
+  Promise.all(promiseArr).then((res) => {
+    res.forEach((item, index) => {
+      caseData.value[cases.value[index].label] = item.obj?.records;
     });
-    caseData.value = result;
   });
 };
 

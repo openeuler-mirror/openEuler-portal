@@ -123,3 +123,18 @@ export interface SearchRecommendT {
   key: string;
   count: number;
 }
+
+export interface ShowcaseDataT {
+  summary: string; // 简要说明
+  path: string; // 页面路径
+  img: string; // 图片路径
+  articleName: string;
+  banner: string; // 详情页横幅图片路径
+  textContent: string; // 文章内容
+  industry: string; // 行业类别
+  company: string; // 公司/机构名称
+  lang: string; // 语言
+  type: string; // 类型
+  title: string; // 标题
+  category: string; // 类别
+}
