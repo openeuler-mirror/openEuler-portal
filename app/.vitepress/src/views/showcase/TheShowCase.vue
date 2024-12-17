@@ -1,10 +1,17 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, watch, reactive } from 'vue';
 import { useData } from 'vitepress';
 
+import { cloneDeep } from 'lodash-es';
+
 import { oa } from '@/shared/analytics';
+import { isNull, isUndefined } from '@opensig/opendesign';
+
 import { getUserCaseData } from '@/api/api-showcase';
 import { useI18n } from '@/i18n';
+
+import type { ShowcaseDataT } from '@/shared/@types/type-search';
+
 import { useCookieStore } from '@/stores/common';
 import { uniqueId } from '@/shared/utils';
 
@@ -24,64 +31,83 @@ const { lang } = useData();
 const cookieStore = useCookieStore();
 
 const userCaseData = computed(() => i18n.value.showcase);
-// 当前选中的tag
-const currentTag = ref(userCaseData.value.tags[0]);
-const keyWord = ref('');
 
 const loading = ref(true);
 
 const activeIndex = ref(0);
 const selectTypeTag = (i: number, type: string) => {
   activeIndex.value = i;
-  currentTag.value = type;
-  filterCase();
+  parmes.industry = type;
 };
+
+// 接收所有案例
+const caseData = ref<ShowcaseDataT[]>([]);
+
+const searchVal = ref('');
 // 获取全部案例的参数
-const data = ref({
+const parmes = reactive({
   page: 1,
-  pageSize: 100,
+  pageSize: 12,
+  keyword: '',
   lang: lang.value,
   category: 'showcase',
-});
-// 搜索接口传递参数
-const searchData = computed(() => {
-  return {
-    keyword: keyWord.value,
-    category: 'showcase',
-    page: 1,
-    pageSize: 100,
-    lang: lang.value,
-  };
+  industry: userCaseData.value.tags[0],
 });
 
-// 当前显示的页码
-const currentPage = ref(1);
-// 每页数据
-const pageSize = ref(12);
-// 接收所有案例
-const CaseListAll: any = ref([]);
-// 当前分类的所有案例
-const currentCaseListAll: any = ref([]);
-// 当前显示的案例
-const currentCaseList = computed(() => {
-  if (currentCaseListAll.value.length > pageSize.value) {
-    return currentCaseListAll.value.slice(
-      (currentPage.value - 1) * pageSize.value,
-      currentPage.value * pageSize.value
-    );
-  } else {
-    return currentCaseListAll.value;
+const handleSearchChange = (val: string) => {
+  if (cookieStore.isAllAgreed && val) {
+    reportSearch(val);
   }
-});
+  parmes.keyword = val;
+};
+
+watch(
+  () => ({
+    pageSize: parmes.pageSize,
+    search: parmes.keyword,
+    lang: parmes.lang,
+    category: parmes.category,
+    industry: parmes.industry,
+  }),
+  () => {
+    // 非 page 属性改变时重置 page 为 1
+    parmes.page = 1;
+    getCaseData();
+  },
+  { deep: true }
+);
+
+watch(
+  () => parmes.page,
+  () => {
+    // 仅 page 改变时调用接口
+    getCaseData();
+  }
+);
 
 // 数据总条数
-const total = computed(() => {
-  return currentCaseListAll.value.length;
-});
+const total = ref(0);
 // 分页器总页数
 const totalPage = computed(() => {
-  return Math.ceil(total.value / pageSize.value);
+  return Math.ceil(total.value / parmes.pageSize);
 });
+
+const filterEmptyParmes = (params: any) => {
+  if (params) {
+    params.industry =
+      params.industry === userCaseData.value.tags[0] ? '' : params.industry;
+    Object.keys(params).forEach((key) => {
+      if (
+        params[key] === '' ||
+        isNull(params[key]) ||
+        isUndefined(params[key])
+      ) {
+        delete params[key];
+      }
+    });
+  }
+  return params;
+};
 
 // 控制分页器显示
 const isShow = computed(() => {
@@ -99,7 +125,7 @@ const isTopNavMo = computed(() => {
 
 // 移动端跳转翻页
 function jumpPage(page: number) {
-  currentPage.value = page;
+  parmes.page = page;
 }
 // 点击跳转案例详情页面
 function goDetail(link: string, item: any, index: number) {
@@ -123,8 +149,8 @@ const reportSearch = (keyword: string) => {
 };
 const reportSelectSearchResult = (link: string, item: any, index: number) => {
   const searchKeyObj = {
-    search_tag: currentTag.value,
-    search_rank_num: pageSize.value * (currentPage.value - 1) + (index + 1),
+    search_tag: parmes.industry,
+    search_rank_num: parmes.pageSize * (parmes.page - 1) + (index + 1),
     search_result_total_num: total.value,
     search_result_url: location.origin + link,
   };
@@ -132,7 +158,7 @@ const reportSelectSearchResult = (link: string, item: any, index: number) => {
   oa.report('selectSearchResult', () => {
     return {
       search_event_id: SEARCH_EVENT_ID,
-      search_key: keyWord.value,
+      search_key: parmes.keyword,
       ...(item || {}),
       ...searchKeyObj,
     };
@@ -140,63 +166,23 @@ const reportSelectSearchResult = (link: string, item: any, index: number) => {
 };
 
 // 设置当前tag的所有案例
-function setCurrentCaseListAll() {
+function getCaseData() {
   loading.value = true;
-  getUserCaseData(data.value)
+  getUserCaseData(filterEmptyParmes(cloneDeep(parmes)))
     .then((res: any) => {
-      currentCaseListAll.value = [];
-      if (res.status === 200 && res.obj.records) {
-        CaseListAll.value = res.obj.records;
-        if (activeIndex.value === 0) {
-          currentCaseListAll.value = res.obj.records;
-        } else {
-          CaseListAll.value.forEach((item: any) => {
-            if (item.industry === currentTag.value) {
-              currentCaseListAll.value.push(item);
-            }
-          });
-        }
+      if (res?.obj?.records) {
+        caseData.value = res.obj.records;
+        total.value = res.obj.count;
       } else {
-        currentCaseListAll.value = [];
+        caseData.value = [];
+        total.value = 0;
       }
-      filterCase();
     })
     .finally(() => {
       loading.value = false;
     });
 }
-// 根据tag筛选需要显示的案例
-function filterCase() {
-  currentCaseListAll.value = [];
-  if (activeIndex.value === 0) {
-    currentCaseListAll.value = CaseListAll.value;
-  } else {
-    CaseListAll.value.forEach((item: any) => {
-      if (item.industry.toLowerCase() === currentTag.value.toLowerCase()) {
-        currentCaseListAll.value.push(item);
-      }
-    });
-  }
-}
-// }
-// 搜索功能
-function searchCase() {
-  activeIndex.value = 0;
-  currentTag.value = userCaseData.value.tags[0];
-  if (keyWord.value) {
-    if (cookieStore.isAllAgreed) {
-      reportSearch(keyWord.value);
-    }
-    getUserCaseData(searchData.value).then((res) => {
-      if (res.status === 200 && res.obj.records) {
-        CaseListAll.value = res.obj.records;
-      }
-      currentCaseListAll.value = CaseListAll.value;
-    });
-  } else {
-    setCurrentCaseListAll();
-  }
-}
+
 // 根据跳转时url携带的参数显示筛选内容
 function getUrlParam() {
   const industry = Number(
@@ -204,17 +190,17 @@ function getUrlParam() {
   );
   if (industry) {
     activeIndex.value = industry * 1;
-    currentTag.value = userCaseData.value.tags[activeIndex.value];
+    parmes.industry = userCaseData.value.tags[activeIndex.value];
   } else {
     activeIndex.value = 0;
-    currentTag.value = userCaseData.value.tags[0];
+    parmes.industry = userCaseData.value.tags[0];
   }
 }
 
 // 获取所有案例及设置当前需要显示的案例
 onMounted(() => {
   getUrlParam();
-  setCurrentCaseListAll();
+  getCaseData();
 });
 </script>
 
@@ -249,10 +235,10 @@ onMounted(() => {
       }}</a>
     </div>
     <OSearch
-      v-model="keyWord"
+      v-model.lazy.trim="searchVal"
+      @change="handleSearchChange"
       :placeholder="userCaseData.placeHolder"
       :clearable="true"
-      @change="searchCase"
     ></OSearch>
     <div class="tag-box" :class="isTopNavMo ? 'tag-top' : ''">
       <TagFilter :label="userCaseData.type" class="tag-pc">
@@ -281,7 +267,7 @@ onMounted(() => {
 
     <div class="case-header">
       <p class="case-number">
-        {{ userCaseData.find1 }} <span>{{ currentCaseListAll.length }}</span>
+        {{ userCaseData.find1 }} <span>{{ total }}</span>
         {{ userCaseData.find2 }}
       </p>
       <a v-if="userCaseData.caseLink" :href="userCaseData.caseLink">
@@ -300,7 +286,7 @@ onMounted(() => {
     >
       <div class="case-list">
         <OCard
-          v-for="(item, index) in currentCaseList"
+          v-for="(item, index) in caseData"
           :key="item.path"
           shadow="hover"
           class="case-card"
@@ -327,16 +313,16 @@ onMounted(() => {
     <div v-if="isShow" class="page-box">
       <ClientOnly>
         <OPagination
-          v-model:current-page="currentPage"
-          v-model:page-size="pageSize"
+          v-model:current-page="parmes.page"
+          v-model:page-size="parmes.pageSize"
           :hide-on-single-page="true"
-          :page-sizes="[pageSize]"
+          :page-sizes="[12, 18, 24, 36]"
           :background="true"
           layout="sizes, prev, pager, next, slot, jumper"
           :total="total"
           @jump-page="jumpPage"
         >
-          <span class="pagination-slot">{{ currentPage }}/{{ totalPage }}</span>
+          <span class="pagination-slot">{{ parmes.page }}/{{ totalPage }}</span>
         </OPagination>
       </ClientOnly>
     </div>
