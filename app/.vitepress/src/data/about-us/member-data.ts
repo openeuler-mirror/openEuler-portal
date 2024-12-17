@@ -53,6 +53,10 @@ import ningsi_light from '@/assets/category/member/ningsi_light.png';
 import ningsi_dark from '@/assets/category/member/ningsi_dark.png';
 import yinke_light from '@/assets/category/member/yinke_light.png';
 import yinke_dark from '@/assets/category/member/yinke_dark.png';
+import nanfangdianwang_light from '@/assets/category/member/nanfangdianwang_light.png';
+import nanfangdianwang_dark from '@/assets/category/member/nanfangdianwang_dark.png';
+import dianziyun_light from '@/assets/category/member/dianziyun_light.png';
+import dianziyun_dark from '@/assets/category/member/dianziyun_dark.png';
 
 export default [
   {
@@ -121,6 +125,11 @@ export default [
         noIcon: true,
       },
       {
+        img_light: nanfangdianwang_light,
+        img_dark: nanfangdianwang_dark,
+        noIcon: true,
+      },
+      {
         img_light: dianxing_light,
         img_dark: dianxing_dark,
       },
@@ -128,7 +137,6 @@ export default [
         img_light: liantong_light,
         img_dark: liantong_dark,
       },
-
       {
         img_light: yidong_light,
         img_dark: yidong_dark,
@@ -175,6 +183,11 @@ export default [
       {
         img_light: xinhua_light,
         img_dark: xinhua_dark,
+        noIcon: true,
+      },
+      {
+        img_light: dianziyun_light,
+        img_dark: dianziyun_dark,
         noIcon: true,
       },
       {
