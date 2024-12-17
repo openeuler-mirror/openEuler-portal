@@ -4,20 +4,13 @@ import { getUserAuth } from '@/shared/login';
 /**
  * 获取消息中心未读消息数量
  */
-export function getUnreadMsgCount(): Promise<
-  {
-    source: string;
-    count: number;
-  }[]
-> {
-  const { token } = getUserAuth();
+export function getUnreadMsgCount(giteeLoginName?: string) {
   return request
-    .get<{ count: { source: string; count: number }[] }>(
-      '/api-message/inner/count',
-      {
-        headers: { token },
-      }
-    )
+    .get<{ count: Record<string, number> }>('/api-message/inner/count_new', {
+      params: { gitee_user_name: giteeLoginName },
+      headers: getUserAuth(),
+      showError: false,
+    })
     .then((res) => res.data.count)
-    .catch(() => []);
+    .catch(() => ({}));
 }
