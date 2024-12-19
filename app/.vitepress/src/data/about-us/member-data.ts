@@ -233,7 +233,7 @@ export default [
       zh: '学术机构和非营利组织',
       en: 'Academic Institutions ',
     },
-    ID: 'Academic-Institutions ',
+    ID: 'Academic-Institutions',
     logoList: [
       {
         img_light: iscas_light,

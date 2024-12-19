@@ -41,6 +41,7 @@ import wanghuaimin from '@/assets/category/organization/expert/wanghuaimin.png';
 import zhouminghui from '@/assets/category/organization/expert/zhouminghui.png';
 import wuheshuan from '@/assets/category/organization/expert/wuheshuan.png';
 
+// 品牌委员会
 import liangbin from '@/assets/category/organization/brand/liangbin.png';
 import huangzhaowei from '@/assets/category/organization/brand/huangzhaowei.png';
 import kanglifeng from '@/assets/category/organization/brand/kanglifeng.png';
@@ -52,6 +53,7 @@ import wendan from '@/assets/category/organization/brand/wendan.png';
 import zhangyin from '@/assets/category/organization/brand/zhangyin.png';
 import humingyue from '@/assets/category/organization/brand/humingyu.png';
 
+// 用户委员会
 import xiule from '@/assets/category/organization/user/xiulei.png';
 import gaohonghe from '@/assets/category/organization/user/gaohonghe.png';
 import huangweixu from '@/assets/category/organization/user/huangweixu.png';
@@ -63,6 +65,45 @@ import zhangqingnan from '@/assets/category/organization/user/zhangqingnan.png';
 import xulei from '@/assets/category/organization/user/xulei.png';
 import zuchen from '@/assets/category/organization/user/zuchen.png';
 import weibin from '@/assets/category/organization/user/weishan.png';
+
+// 业务发展工作组
+import huangxuwei from '@/assets/category/organization/development/huangxuwei.png';
+import lichengpeng from '@/assets/category/organization/development/lichengpeng.png';
+import liuhuajie from '@/assets/category/organization/development/liuhuajie.png';
+import liushenghang from '@/assets/category/organization/development/liushenghang.png';
+import liyang from '@/assets/category/organization/development/liyang.png';
+import zhangmuliang from '@/assets/category/organization/development/zhangmuliang.png';
+import zuwenyu from '@/assets/category/organization/development/zuwenyu.png';
+
+// 教育
+import fanglili from '@/assets/category/organization/education/fanglili.png';
+import fenxiaoliang from '@/assets/category/organization/education/fenxiaoliang.png';
+import gaoliqun from '@/assets/category/organization/education/gaoliqun.png';
+import guoquanyou from '@/assets/category/organization/education/guoquanyou.png';
+import linzhenxing from '@/assets/category/organization/education/linzhenxing.png';
+import menxiaokang from '@/assets/category/organization/education/menxiaokang.png';
+import qinxuefen from '@/assets/category/organization/education/qinxuefen.png';
+import xieyu from '@/assets/category/organization/education/xieyu.png';
+import yangdongjie from '@/assets/category/organization/education/yangdongjie.png';
+import yangheyue from '@/assets/category/organization/education/yangheyue.png';
+import zhaolichao from '@/assets/category/organization/education/zhaolichao.png';
+
+// 法务
+import libo from '@/assets/category/organization/legal/libo.png';
+import liuwei from '@/assets/category/organization/legal/liuwei.png';
+import songlipin from '@/assets/category/organization/legal/songlipin.png';
+import wangsiyang from '@/assets/category/organization/legal/wangsiyang.png';
+import xinpeng from '@/assets/category/organization/legal/xinpeng.png';
+import zhangwei from '@/assets/category/organization/legal/zhangwei.png';
+
+// 运营
+import chenjing from '@/assets/category/organization/operation/chenjing.png';
+import huxiaojie from '@/assets/category/organization/operation/huxiaojie.png';
+import liming from '@/assets/category/organization/operation/liming.png';
+import liumingjie from '@/assets/category/organization/operation/liumingjie.png';
+import rentao from '@/assets/category/organization/operation/rentao.png';
+import tiankehui from '@/assets/category/organization/operation/tiankehui.png';
+import zhenzhengyu from '@/assets/category/organization/operation/zhenzhengyu.png';
 
 export default {
   zh: {
@@ -148,7 +189,6 @@ export default {
           {
             title: '委员',
             personalList: [
-
               {
                 img: gaopei,
                 name: '高培',
@@ -483,6 +523,61 @@ export default {
           },
         ],
       },
+      {
+        title: 'openEuler 业务发展工作组',
+        list: [
+          { img: liyang, name: '李杨', position: ['组长'] },
+          { img: huangweixu, name: '黄伟旭', position: ['副组长'] },
+          { img: zhangmuliang, name: '张木梁', position: ['副组长'] },
+          { img: lichengpeng, name: '李成鹏', position: ['组员'] },
+          { img: liuhuajie, name: '刘华杰', position: ['组员'] },
+          { img: liumingjie, name: '刘明杰', position: ['组员'] },
+          { img: liushenghang, name: '刘胜航', position: ['组员'] },
+          { img: zhangjian, name: '张剑', position: ['组员'] },
+          { img: zuwenyu, name: '朱文玉', position: ['组员'] },
+        ],
+      },
+      {
+        title: 'openEuler 社区运营工作组',
+        list: [
+          { img: zhenzhengyu, name: '郑振宇', position: ['组长'] },
+          { img: huxiaojie, name: '胡骁杰', position: ['副组长'] },
+          { img: chenjing, name: '陈静', position: ['组员'] },
+          { img: liuhuajie, name: '刘华杰', position: ['组员'] },
+          { img: liming, name: '刘敏', position: ['组员'] },
+          { img: liumingjie, name: '刘明杰', position: ['组员'] },
+          { img: rentao, name: '任涛', position: ['组员'] },
+          { img: tiankehui, name: '田可辉', position: ['组员'] },
+          { img: xulu, name: '徐露', position: ['组员'] },
+        ],
+      },
+      {
+        title: 'openEuler 教育工作组',
+        list: [
+          { img: zhaolichao, name: '赵立超', position: ['组长'] },
+          { img: yangdongjie, name: '杨东杰', position: ['副组长'] },
+          { img: fanglili, name: '方丽丽', position: ['组员'] },
+          { img: fenxiaoliang, name: '冯潇靓', position: ['组员'] },
+          { img: gaoliqun, name: '高立群', position: ['组员'] },
+          { img: guoquanyou, name: '郭全友', position: ['组员'] },
+          { img: linzhenxing, name: '林振行', position: ['组员'] },
+          { img: menxiaokang, name: '门小康', position: ['组员'] },
+          { img: qinxuefen, name: '秦学峰', position: ['组员'] },
+          { img: xieyu, name: '谢宇', position: ['组员'] },
+          { img: yangheyue, name: '杨和悦', position: ['组员'] },
+        ],
+      },
+      {
+        title: 'openEuler 法务工作组',
+        list: [
+          { img: zhangwei, name: '张伟', position: ['组长'] },
+          { img: liuwei, name: '刘伟', position: ['副组长'] },
+          { img: libo, name: '李博', position: ['组员'] },
+          { img: songlipin, name: '宋李萍', position: ['组员'] },
+          { img: wangsiyang, name: '王思扬', position: ['组员'] },
+          { img: xinpeng, name: '刑鹏', position: ['组员'] },
+        ],
+      },
     ],
     idList: [
       '顾问专家委员会',
@@ -490,6 +585,10 @@ export default {
       '技术委员会',
       '品牌委员会',
       '用户委员会',
+      '业务发展工作组',
+      '社区运营工作组',
+      '教育工作组',
+      '法务工作组',
     ],
     notice: '注：按照姓名汉语拼音排序',
   },
@@ -584,7 +683,6 @@ export default {
           {
             title: 'Committee Members',
             personalList: [
-
               {
                 img: gaopei,
                 name: 'Gao Pei',

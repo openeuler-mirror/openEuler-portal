@@ -20,7 +20,7 @@ export default {
   ISULA_BANNER_TEXT: ['iSula', 'Packs a huge punch in a small size'],
   ISULA_LOGO: logo,
   ISULA_DESC_UP: [
-    'iSula is the brand of Huawei container solution. It derives its name from a species of ant, one of the most powerful insects in the world despite its small size. This combination of ultimate power and minimal size is the perfect description of the iSula container technology solution.',
+    'iSula derives its name from a species of ant, one of the most powerful insects in the world despite its small size. This combination of ultimate power and minimal size is the perfect description of the iSula container technology solution.',
   ],
   ISULA_DESC_DOWN: [
     'Currently, the iSula family includes the following components:',

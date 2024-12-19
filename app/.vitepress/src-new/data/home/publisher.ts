@@ -23,6 +23,7 @@ import zhongkechuangdaLogo from '~@/assets/category/home/publisher/light/zhongke
 import zhongkefangde from '~@/assets/category/home/publisher/light/zhongkefangde.png';
 import zhongkehongqi from '~@/assets/category//home/publisher/light/zhongkehongqi.png';
 import seaway from '~@/assets/category/home/publisher/light/seaway.png';
+import langchaoyun_light from '~@/assets/category/home/publisher/light/langchaoyun.png';
 
 import baodeLogo_dark from '~@/assets/category/home/publisher/dark/baode.png';
 import xfusionLogo_dark from '~@/assets/category/home/publisher/dark/xfusion.png';
@@ -49,6 +50,7 @@ import zhongkechuangdaLogo_dark from '~@/assets/category/home/publisher/dark/zho
 import zhongkefangdeLogo_dark from '~@/assets/category/home/publisher/dark/zhongkefangde.png';
 import zhongkehongqiLogo_dark from '~@/assets/category/home/publisher//dark/zhongkehongqi.png';
 import seaway_dark from '~@/assets/category/home/publisher/dark/seaway.png';
+import langchaoyun_dark from '~@/assets/category/home/publisher/dark/langchaoyun.png';
 
 export const publisher = [
   {
@@ -102,6 +104,13 @@ export const publisher = [
       dark: kaihong_dark,
     },
     href: 'https://www.kaihong.com/',
+  },
+  {
+    logo: {
+      light: langchaoyun_light,
+      dark: langchaoyun_dark,
+    },
+    href: 'https://cloud.inspur.com/',
   },
   {
     logo: {
