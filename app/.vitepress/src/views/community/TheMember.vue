@@ -9,32 +9,11 @@ import { useCommon } from '@/stores/common';
 
 const { lang } = useData();
 
-const activeIndex = ref(0);
-// 滚动激活导航
-const navRef: any = ref([]);
-const handleScrollEvent = () => {
-  const scrollTop =
-    document.body.scrollTop || document.documentElement.scrollTop;
-  const activeList: Array<number> = [];
-  navRef.value.forEach((item: any, index: number) => {
-    if (scrollTop + 100 > item.offsetTop) {
-      activeList.push(index);
-    }
-  });
-  activeIndex.value = activeList[activeList.length - 1];
-};
 
 const i18n = useI18n();
 
 const commonStore = useCommon();
 
-onMounted(() => {
-  navRef.value = document.querySelectorAll('h2');
-  window.addEventListener('scroll', handleScrollEvent);
-});
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScrollEvent);
-});
 </script>
 <template>
   <div class="member">
@@ -69,13 +48,6 @@ onUnmounted(() => {
       </div>
     </div>
   </div>
-  <ul class="nav-right">
-    <li v-for="(item, index) in MEMBER_DATA" :key="item.ID">
-      <a :href="'#' + item.ID" :class="activeIndex === index ? 'active' : ''">{{
-        item.donorTitle[lang]
-      }}</a>
-    </li>
-  </ul>
 </template>
 
 <style lang="scss" scoped>

@@ -20,40 +20,9 @@ const organizationData: any = computed(() => {
   }
 });
 
-const activeIndex = ref(0);
-// 滚动激活导航
-const navRef: any = ref([]);
-const handleScrollEvent = () => {
-  const scrollTop =
-    document.body.scrollTop || document.documentElement.scrollTop;
-  const activeList: Array<number> = [];
-  navRef.value.forEach((item: any, index: number) => {
-    if (scrollTop + 100 > item.offsetTop) {
-      activeList.push(index);
-    }
-  });
-  activeIndex.value = activeList[activeList.length - 1];
-};
-
-onMounted(() => {
-  navRef.value = document.querySelectorAll('h2');
-  window.addEventListener('scroll', handleScrollEvent);
-});
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScrollEvent);
-});
 </script>
 
 <template>
-  <ul class="nav-right">
-    <li v-for="(item, index) in organizationData.memberList" :key="item.title">
-      <a
-        :href="'#' + organizationData.idList[index]"
-        :class="activeIndex === index ? 'active' : ''"
-        >{{ item.title }}</a
-      >
-    </li>
-  </ul>
   <div class="council">
     <h2 :id="organizationData.idList[0]" class="council-counselor">
       {{ organizationData.memberList[0].title }}
@@ -66,7 +35,7 @@ onUnmounted(() => {
         :mobile-columns-num="2"
       ></OrganizationGuests>
     </div>
-    <h2 :id="organizationData.idList[1]" class="council-Committee">
+    <h2 :id="organizationData.idList[1]" class="council-committee">
       {{ organizationData.memberList[1].title }}
     </h2>
     <div class="council-list">
@@ -111,35 +80,30 @@ onUnmounted(() => {
         </p>
       </li>
     </ul>
-    <h2 :id="organizationData.idList[3]" class="council-counselor">
-      {{ organizationData.memberList[3].title }}
-    </h2>
-    <div class="council-list">
-      <OrganizationGuests
-        :lecturer-list="organizationData.memberList[3].list"
-        shape="circle"
-        :web-columns-num="6"
-        :mobile-columns-num="2"
-      ></OrganizationGuests>
-    </div>
-    <h2 :id="organizationData.idList[4]" class="council-counselor">
-      {{ organizationData.memberList[4].title }}
-    </h2>
-    <div class="council-list">
-      <OrganizationGuests
-        :lecturer-list="organizationData.memberList[4].list"
-        shape="circle"
-        :web-columns-num="6"
-        :mobile-columns-num="2"
-      ></OrganizationGuests>
-    </div>
-
+    <template
+      v-for="(groupInfo, index) in organizationData.memberList.slice(3)"
+    >
+      <h2 :id="organizationData.idList[index + 3]" class="council-counselor">
+        {{ groupInfo.title }}
+      </h2>
+      <div class="council-list">
+        <OrganizationGuests
+          :lecturer-list="groupInfo.list"
+          shape="circle"
+          :web-columns-num="6"
+          :mobile-columns-num="2"
+        ></OrganizationGuests>
+      </div>
+    </template>
     <p class="notice">{{ organizationData.notice }}</p>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .nav-right {
+  // position: sticky;
+  // top: 112px;
+  // left: 0;
   position: fixed;
   top: calc(10% + 80px);
   right: 0;
@@ -176,7 +140,6 @@ onUnmounted(() => {
 }
 .council {
   max-width: 1380px;
-  padding-right: 200px;
   margin: 40px auto 0;
   @media screen and (max-width: 1720px) {
     padding-right: 0px;
@@ -192,7 +155,7 @@ onUnmounted(() => {
       line-height: var(--e-line-height-h8);
     }
   }
-  .council-Committee,
+  .council-committee,
   .council-technology,
   .council-counselor {
     margin-top: var(--e-spacing-h2);

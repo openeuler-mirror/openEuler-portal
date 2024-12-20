@@ -9,6 +9,7 @@ import DocSideBar from '@/components/DocSideBar.vue';
 import DocSideBarMenu from '@/components/DocSideBarMenu.vue';
 import OrgDocAnchor from '@/views/organization/OrgDocAnchor.vue';
 import NavTree from '@/components/NavTree.vue';
+import DocAnchor from '@/components/DocAnchor.vue';
 
 import IconCancel from '~icons/app/icon-cancel.svg';
 import IconCatalog from '~icons/mooc/catalog.svg';
@@ -58,8 +59,8 @@ const isCustomLayout = computed(() => {
 });
 
 // 控制右侧锚点导航隐藏
-const isHidden = computed(() => {
-  return frontmatter.value['anchor'];
+const isDocAnchor = computed(() => {
+  return frontmatter.value?.anchor || false;
 });
 
 const isIconShown = computed(() => {
@@ -91,74 +92,84 @@ const handleNodeClick = (node: any) => {
 </script>
 
 <template>
-  <!-- PC侧边导航栏 -->
-  <DocSideBar v-if="screenWidth > 1100">
-    <div class="aboout-sidebar-toc">
-      <template v-for="item in tocInfo" :key="item.label">
-        <DocSideBarMenu
-          v-if="item && item.children && item.children.length"
-          :info="item"
-          :active-id="activeId"
-          @item-click="handleItemClick"
-        ></DocSideBarMenu>
-        <p
-          v-else
-          class="sidebar-title"
-          :class="[{ active: item.link === activeId }]"
-          @click="handleItemClick(item.link)"
+  <div class="about-page">
+    <!-- PC侧边导航栏 -->
+    <DocSideBar v-if="screenWidth > 1100">
+      <div class="aboout-sidebar-toc">
+        <template v-for="item in tocInfo" :key="item.label">
+          <DocSideBarMenu
+            v-if="item && item.children && item.children.length"
+            :info="item"
+            :active-id="activeId"
+            @item-click="handleItemClick"
+          ></DocSideBarMenu>
+          <p
+            v-else
+            class="sidebar-title"
+            :class="[{ active: item.link === activeId }]"
+            @click="handleItemClick(item.link)"
+          >
+            {{ item.label }}
+          </p>
+        </template>
+      </div>
+    </DocSideBar>
+
+    <!-- 移动端导航栏 -->
+    <template v-else>
+      <OIcon v-show="isIconShown" class="catalog" @click="toggleMenu(true)"
+        ><IconCatalog
+      /></OIcon>
+      <ClientOnly>
+        <ODrawer
+          v-model="isShowMenu"
+          direction="ltr"
+          size="268px"
+          :show-close="false"
         >
-          {{ item.label }}
-        </p>
-      </template>
-    </div>
-  </DocSideBar>
-
-  <!-- 移动端导航栏 -->
-  <template v-else>
-    <OIcon v-show="isIconShown" class="catalog" @click="toggleMenu(true)"
-      ><IconCatalog
-    /></OIcon>
-    <ClientOnly>
-      <ODrawer
-        v-model="isShowMenu"
-        direction="ltr"
-        size="268px"
-        :show-close="false"
-      >
-        <div class="nav-tree">
-          <div class="nav-top">
-            <img
-              class="logo"
-              :src="logo"
-              alt="openEuler logo"
-              @click="goHome"
+          <div class="nav-tree">
+            <div class="nav-top">
+              <img
+                class="logo"
+                :src="logo"
+                alt="openEuler logo"
+                @click="goHome"
+              />
+              <OIcon @click="toggleMenu(false)"><IconCancel /></OIcon>
+            </div>
+            <NavTree
+              ref="tree"
+              :node-key="'migration'"
+              :data="tocInfo"
+              :default-props="defaultProps"
+              :current-node-key="activeId"
+              @node-click="handleNodeClick"
             />
-            <OIcon @click="toggleMenu(false)"><IconCancel /></OIcon>
           </div>
-          <NavTree
-            ref="tree"
-            :node-key="'migration'"
-            :data="tocInfo"
-            :default-props="defaultProps"
-            :current-node-key="activeId"
-            @node-click="handleNodeClick"
-          />
-        </div>
-      </ODrawer>
-    </ClientOnly>
-  </template>
+        </ODrawer>
+      </ClientOnly>
+    </template>
 
-  <!-- 内容区域 -->
-  <div class="about-wrapper" :class="{ 'about-markdown': !isCustomLayout }">
-    <OrgDocAnchor class="about-anchor" :class="isHidden ? 'is-hidden' : ''" />
-    <Content
-      class="about-content"
-      :class="{ 'custom-layout': isCustomLayout }"
-    />
+    <!-- 内容区域 -->
+    <div class="about-wrapper" :class="{ 'about-markdown': !isCustomLayout }">
+      <Content
+        class="about-content"
+        :class="{ 'custom-layout': isCustomLayout }"
+      />
+    </div>
+    <!-- 锚点OrgDocAnchor组件过滤空格前title -->
+    <OrgDocAnchor v-if="!isDocAnchor" class="about-anchor" />
+    <DocAnchor v-else class="about-anchor" />
   </div>
 </template>
 
 <style lang="scss" scoped>
+.about-page {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
 .nav-tree {
   position: fixed;
   left: 0;
@@ -287,9 +298,12 @@ const handleNodeClick = (node: any) => {
 }
 
 .about-wrapper {
+  position: relative;
+  width: 100%;
   height: 100%;
-  padding: 64px 120px;
+  padding: 64px;
   margin-left: 300px;
+  flex: 1;
   background-color: var(--o-color-fill1);
 
   @media screen and (max-width: 1280px) {
@@ -307,18 +321,8 @@ const handleNodeClick = (node: any) => {
     margin-bottom: var(--e-spacing-h2);
   }
 
-  .about-anchor {
-    // right: 120px;
-    // @media screen and (max-width: 1280px) {
-    //   right: 0;
-    // }
-  }
-  .is-hidden {
-    display: none;
-  }
   .about-content {
-    max-width: 1380px;
-    padding-right: 200px;
+    max-width: 1180px;
     margin: 0 auto;
 
     @media screen and (max-width: 1100px) {
@@ -343,6 +347,12 @@ const handleNodeClick = (node: any) => {
       }
     }
   }
+}
+.about-anchor {
+  position: sticky;
+  right: 0;
+  height: min-content;
+  flex-shrink: 0;
 }
 </style>
 
