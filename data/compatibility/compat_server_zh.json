@@ -26417,5 +26417,126 @@
         "hostBusAdapter": "Avago 3580",
         "hardDiskDrive": "Lenovo RAID 940-8i "
     }
-  }
+  },
+  {
+    "hardwareFactory": "联想开天",
+    "hardwareModel": "KR722H G2",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2024/12/11",
+    "friendlyLink": "",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "17aa",
+        "ssID": "4016",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "igb",
+        "version": "5.10.0-182.0.0.95.oe2203sp3.x86",
+        "type": "NIC",
+        "date": "",
+        "sha256": "396304697cb2844e3dbd0573576ecb02521c6ebc71c6eef3af8ed50198ca6c7a",
+        "driverSize": "108032",
+        "chipVendor": "Intel",
+        "boardModel": "I350",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1d49",
+        "ssID": "060c",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "raid",
+        "date": "",
+        "sha256": "ffddd22e811d306134efaa8bd15a3a11262b008b153f8e9f2f814c0477bdeedb",
+        "driverSize": "75284",
+        "chipVendor": "Broadcom",
+        "boardModel": "940-16i",
+        "chipModel": "SAS3916",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://kt.lenovo.com/ProductThree/29",
+      "certificationTime": "2024/12/11",
+      "commitID": "IBAMQ6",
+      "mainboardModel": "HengShan",
+      "biosUefi": "HSE254A-2.54",
+      "cpu": "Hygon C86 7390",
+      "ram": "8*32G DIMMs",
+      "portsBusTypes": "x8x8x16",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "Lenove RAID 940-16i"
+    }
+  },
+  {
+    "hardwareFactory": "联想",
+    "hardwareModel": "SR658H V2",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2024/12/11",
+    "friendlyLink": "",
+    "boardCards":[
+        {
+            "vendorID": "8086",
+            "deviceID": "1521",
+            "svID": "17aa",
+            "ssID": "4016",
+            "architecture": "x86_64",
+            "os": "openEuler 22.03 LTS SP3",
+            "driverName": "igb",
+            "version": "5.10.0-182.0.0.95.oe2203sp3.x86",
+            "type": "NIC",
+            "date": "",
+            "sha256": "396304697cb2844e3dbd0573576ecb02521c6ebc71c6eef3af8ed50198ca6c7a",
+            "driverSize": "108032",
+            "chipVendor": "Intel",
+            "boardModel": "I350",
+            "chipModel": "I350",
+            "item": "",
+            "downloadLink": "inbox"
+        },
+        {
+            "vendorID": "1000",
+            "deviceID": "10e2",
+            "svID": "1d49",
+            "ssID": "060c",
+            "architecture": "x86_64",
+            "os": "openEuler 22.03 LTS SP3",
+            "driverName": "megaraid_sas",
+            "version": "07.714.04.00-rc1",
+            "type": "raid",
+            "date": "",
+            "sha256": "ffddd22e811d306134efaa8bd15a3a11262b008b153f8e9f2f814c0477bdeedb",
+            "driverSize": "75284",
+            "chipVendor": "Broadcom",
+            "boardModel": "940-16i",
+            "chipModel": "SAS3916",
+            "item": "",
+            "downloadLink": "inbox"
+        }
+    ],
+    "compatibilityConfiguration":{
+        "productInformation": "https://kt.lenovo.com/ProductThree/29",
+        "certificationTime": "2024/12/11",
+        "commitID": "IBAMQ6",
+        "mainboardModel": "HengShan",
+        "biosUefi": "HSE254A-2.54",
+        "cpu": "Hygon C86 7390",
+        "ram": "8*32G DIMMs",
+        "portsBusTypes": "x8x8x16",
+        "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+        "hostBusAdapter": "",
+        "hardDiskDrive": "Lenove RAID 940-16i"
+    }
 ]
