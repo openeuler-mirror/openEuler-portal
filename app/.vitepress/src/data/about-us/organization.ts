@@ -575,7 +575,7 @@ export default {
           { img: libo, name: '李博', position: ['组员'] },
           { img: songlipin, name: '宋李萍', position: ['组员'] },
           { img: wangsiyang, name: '王思扬', position: ['组员'] },
-          { img: xinpeng, name: '刑鹏', position: ['组员'] },
+          { img: xinpeng, name: '邢鹏', position: ['组员'] },
         ],
       },
     ],
