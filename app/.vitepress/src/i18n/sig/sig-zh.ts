@@ -176,7 +176,7 @@ export default {
           COLOR: '#fec456',
           LIST: [
             {
-              NAME: 'sig-RaspberryPi',
+              NAME: 'sig-SBC',
             },
             {
               NAME: 'sig-RISC-V',

@@ -225,7 +225,7 @@ export default {
         {
           TITLE: 'Raspberry Pi',
           IMG: '/img/home/areaPai.png',
-          LINK: 'https://gitee.com/openeuler/raspberrypi',
+          LINK: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/install-pi.html',
         },
         {
           TITLE: 'Hardware',

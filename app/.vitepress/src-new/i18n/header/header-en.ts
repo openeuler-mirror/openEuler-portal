@@ -149,7 +149,7 @@ export default {
                   NAME: 'Raspberry Pi',
                   DESCRIPTION: 'Installing openEuler on Raspberry Pi',
                   ICON: OutLink,
-                  URL: 'https://gitee.com/openeuler/raspberrypi/blob/master/README.md',
+                  URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/install-pi.html',
                 },
               ], 
             },

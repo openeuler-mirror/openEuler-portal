@@ -124,7 +124,7 @@ export default {
       repeat: 1,
       links: [
         {
-          href: 'https://gitee.com/openeuler/raspberrypi/blob/master/README.md',
+          href: 'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/%E5%AE%89%E8%A3%85%E5%9C%A8%E6%A0%91%E8%8E%93%E6%B4%BE.html',
           label: '树莓派',
         },
       ],
@@ -242,7 +242,7 @@ export default {
       repeat: 1,
       links: [
         {
-          href: 'https://gitee.com/openeuler/raspberrypi/blob/master/README.en.md',
+          href: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/install-pi.html',
           label: 'Raspberry Pi ',
         },
       ],

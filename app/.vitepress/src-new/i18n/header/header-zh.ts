@@ -152,7 +152,7 @@ export default {
                   NAME: 'Raspberry Pi',
                   DESCRIPTION: '在树莓派上安装openEuler',
                   ICON: OutLink,
-                  URL: 'https://gitee.com/openeuler/raspberrypi/blob/master/README.md',
+                  URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/%E5%AE%89%E8%A3%85%E5%9C%A8%E6%A0%91%E8%8E%93%E6%B4%BE.html',
                 },
               ], 
             },
