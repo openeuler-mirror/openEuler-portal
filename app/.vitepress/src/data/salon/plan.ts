@@ -154,6 +154,16 @@ export const yearPlanData = {
           ],
         },
         {
+          month: '6',
+          actives: [
+            {
+              location: '中国，北京',
+              activeName: 'openEuler 24.03 LTS 版本发布会',
+              href: '/zh/interaction/summit-list/2403-version-release/',
+            },
+          ],
+        },
+        {
           month: '7',
           actives: [
             {

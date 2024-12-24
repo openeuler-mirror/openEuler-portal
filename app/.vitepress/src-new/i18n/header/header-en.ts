@@ -489,7 +489,7 @@ export default {
             {
               NAME: 'Forum',
               DESCRIPTION: 'Share knowledge, ask anything, and solve together.',
-              URL: 'https://forum.openeuler.org/',
+              URL: 'https://forum.openeuler.org/?locale=en',
             },
             {
               NAME: 'Mailing Lists',

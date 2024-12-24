@@ -688,7 +688,7 @@ export default {
             {
               NAME: '论坛',
               DESCRIPTION: '与开发者讨论openEuler',
-              URL: 'https://forum.openeuler.org/',
+              URL: 'https://forum.openeuler.org/?locale=zh_CN',
             },
             {
               NAME: '邮件列表',
