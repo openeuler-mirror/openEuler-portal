@@ -17934,7 +17934,7 @@
   {
     "hardwareFactory": "新华三",
     "hardwareModel": "H3C UniServer R4900 G6",
-    "osVersion": "openEuler 22.03 LTS SP3 ",
+    "osVersion": "openEuler 22.03 LTS SP3",
     "architecture": "x86_64",
     "date": "2024/03/19",
     "friendlyLink": "https://www.h3c.com/",
@@ -17945,7 +17945,7 @@
         "svID": "103c",
         "ssID": "339e",
         "architecture": "x86_64",
-        "os": "openEuler 22.03 LTS SP3 ",
+        "os": "openEuler 22.03 LTS SP3",
         "driverName": "igb",
         "version": "5.10.0-182.0.0.95",
         "type": "NIC",
@@ -24502,7 +24502,7 @@
   {
     "hardwareFactory": "新华三技术有限公司",
     "hardwareModel": "H3C UniServer R4930 G7",
-    "osVersion": "openEuler 22.03 SP3 LTS",
+    "osVersion": "openEuler 22.03 LTS SP3",
     "architecture": "x86_64",
     "date": "2024/09/11",
     "friendlyLink": "https://www.h3c.com",
