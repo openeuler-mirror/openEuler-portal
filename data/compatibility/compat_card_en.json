@@ -26439,6 +26439,25 @@
       "item": "NA",
       "downloadLink": "inbox"
     },
+    {
+      "vendorID": "0x9005",
+      "deviceID": "0x028F",
+      "svID": "0x1F3A",
+      "ssID": "0x0104",
+      "architecture": "aarch64",
+      "os": "openEuler 20.03 LTS SP4",
+      "driverName": "smartpqi",
+      "version": "1.1.1",
+      "type": "raid",
+      "date": "2024/12/16",
+      "sha256": "084ec50283d70a5aa87c16151d8c0494721113fe073d5f4ae7e8858c2e1e89fa",
+      "driverSize": "146507",
+      "chipVendor": "microchip",
+      "boardModel": "D3100S",
+      "chipModel": "PM8204",
+      "item": "NA",
+      "downloadLink": "inbox"
+    },
   {
         "vendorID": "19e5",
         "deviceID": "3758",
