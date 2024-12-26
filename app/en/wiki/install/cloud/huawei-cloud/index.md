@@ -3,40 +3,6 @@ title: Installation Guide
 category: wiki
 ---
 
-# Public Cloud Image User Guide
-
-Multiple public cloud vendors are providing openEuler cloud images. This document takes Huawei Cloud as an example to introduce how to use openEuler images. The usage of openEuler on [other clouds](https://www.openeuler.org/en/download/get-os/) is similar to that on Huawei Cloud, and the detailed usage methods can be found in the user guides of the respective cloud products.
-
-## Available Versions
-
-The following openEuler image versions have been released on mainstream public clouds:
-
-- **AWS Marketplace**
-
-| Version         | AMI ID                | Architecture   |
-| :-------------- | :-------------------- | :------ |
-| 22.03-LTS-SP1 2 | ami-0baeb9308b134d488 | x86_64  |
-| 22.03-LTS-SP1   | ami-03231b47c646ab173 | AArch64 |
-| 22.03-LTS-SP2   | ami-0eceb9e642c0299f8 | x86_64  |
-| 22.03-LTS-SP2   | ami-067e1b0f491b95db2 | AArch64 |
-| 22.03-LTS-SP3   | ami-0145435b3931b0fe7 | x86_64  |
-| 22.03-LTS-SP3   | ami-01677a5af1dee0f72 | AArch64 |
-| 23.09           | ami-08556c9d0dd2f0a01 | x86_64  |
-| 23.09           | ami-051484777fe029d4e | AArch64 |
-
-- **Huawei Cloud KooGallery**
-
-| Version         | Architecture   |
-| :-------------- | :------ |
-| 22.03-LTS-SP2 1 | x86_64  |
-| 22.03-LTS-SP2   | AArch64 |
-| 22.03-LTS-SP3   | x86_64  |
-| 22.03-LTS-SP3   | AArch64 |
-| 23.09           | x86_64  |
-| 23.09           | AArch64 |
-
-**Note:** Tencent Cloud has not yet widely adopted Arm computing power, and many regions in China are not available during release. Therefore, the openEuler image for AArch64 has not been released on Tencent Cloud.
-
 ## openEuler Cloud Instance Creation
 
 This section takes cloud host (instance) creation on Huawei Cloud as an example to illustrate how to use openEuler on a public cloud.
@@ -112,35 +78,3 @@ This section takes cloud host (instance) creation on Huawei Cloud as an example 
       ```
 
 **The method of using openEuler images on other clouds is similar to that on Huawei Cloud. For details, see the user guide of the respective cloud product.**
-
-## Obtaining the openEuler Shared Image on Azure
-
-1. Log in to the [Azure Portal](https://portal.azure.com/).
-
-2. Go to the account home page and search for "Community images."
-
-   ![](./images/az01.png)
-
-3. On the **Community images** page, search for the "openEuler" to view available openEuler images.
-
-   ![](./images/az02.jpeg)
-
-4. Click the target image and create a VM.
-
-   ![](./images/az03.jpeg)
-
-## Obtaining the openEuler Image on Alibaba Cloud
-
-1. Log in to the [Alibaba Cloud Console](https://cn.aliyun.com).
-
-2. Expand the Home tab and choose **Elastic Compute Service**.
-
-   ![](./images/al01.png)
-
-   ![](./images/al02.png)
-
-3. In the **Images** list, choose **Community Images**, and search for "openEuler."
-
-   ![](./images/al03.png)
-
-4. Select an openEuler version to create a VM.

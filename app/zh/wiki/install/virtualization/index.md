@@ -5,11 +5,15 @@ category: wiki
 
 # windows 下使用 VirtualBox 安装 openEuler
 
+Oracle VirtualBox是由Inno Tek软件公司出品的虚拟机软件，现由Oracle进行开发，是Oracle公司xVM虚拟化平台技术的一部分。用户可以在openEuler官方软件仓下载openEuler的虚拟机镜像，使用VirtualBox安装openEuler虚拟机。
+
+openEuler下载地址：<https://www.openeuler.org/zh/download>
+
 ## 环境准备
 
 - Windows10 64 位
 - Oracle VM VirtualBox 6.1.4
-- openEuler 开源社区下载：[openEuler-20.03-LTS-x86_64-dvd.iso](https://repo.openeuler.org/openEuler-20.03-LTS/ISO/x86_64/openEuler-20.03-LTS-x86_64-dvd.iso)（X86）
+- 本文使用的版本是openEuler 20.03 LTS，下载地址：[openEuler-20.03-LTS-x86_64-dvd.iso](https://repo.openeuler.org/openEuler-20.03-LTS/ISO/x86_64/openEuler-20.03-LTS-x86_64-dvd.iso)（X86）
 
 ![输入图片说明](./images/e01.png)
 
