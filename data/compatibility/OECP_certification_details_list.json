@@ -11086,5 +11086,509 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "华为技术有限公司",
+    "os_version": "EulerOS-V2.0SP13-aarch64-dvd.iso",
+    "arch": "aarch64",
+    "checksum": "d3be72d1c8df7a237f6a3cc5a686424d",
+    "base_openeuler_version": "openEuler 22.03 LTS SP3",
+    "os_download_link": "http://www.huawei.com/",
+    "friendly_link": "http://www.huawei.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/12/17",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "华为技术有限公司",
+    "os_version": "EulerOS-V2.0SP13-x86_64-dvd.iso",
+    "arch": "x86_64",
+    "checksum": "7ef62bc667d087c2acb443faa8f9d6f3",
+    "base_openeuler_version": "openEuler 22.03 LTS SP3",
+    "os_download_link": "http://www.huawei.com/",
+    "friendly_link": "http://www.huawei.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/12/17",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "中电云计算技术有限公司",
+    "os_version": "CCLinux-24.09-LTS-SP1-aarch64-dvd.iso",
+    "arch": "aarch64",
+    "checksum": "c8fa3c6bd81c99312414d715c1f1f269",
+    "base_openeuler_version": "openEuler 24.03 LTS",
+    "os_download_link": "https://cecloud.com/",
+    "friendly_link": "https://cecloud.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/12/17",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "中电云计算技术有限公司",
+    "os_version": "CCLinux-24.09-LTS-SP1-x86_64-dvd.iso",
+    "arch": "x86_64",
+    "checksum": "881ce62849d9a264286109569b2f441b",
+    "base_openeuler_version": "openEuler 24.03 LTS",
+    "os_download_link": "https://cecloud.com/",
+    "friendly_link": "https://cecloud.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/12/17",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "上海格蒂电力科技有限公司",
+    "os_version": "Grid-elec-1.0-aarch64-dvd.iso",
+    "arch": "aarch64",
+    "checksum": "2dacd77a2d14e008053ac08e22d77e4f",
+    "base_openeuler_version": "openEuler 22.03 LTS SP2",
+    "os_download_link": "http://www.grid-elec.com",
+    "friendly_link": "http://www.grid-elec.com",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2024/12/18",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "中软国际科技服务有限公司",
+    "os_version": "CSIOS-V1.0.0",
+    "arch": "aarch64",
+    "checksum": "f017772d4dc9110288d6a22b6bdef419 vmlinux\n0eb2cf4c095f0c842045fb0073ffcf05 Image\nc140bc47a6f6d8babdfc4554b5a56039 csios-glibc-x86_64-csios-image-aarch64-qemu-aarch64-toolchain-1.0.0.sh\n73726dfe7669863e41a4886ed9dc6b6f csios-image-qemu-aarch64-20241115080641.rootfs.cpio.gz\n6e5a9591e9b1d6977c4d07acd5dcdc7f zImage",
+    "base_openeuler_version": "openEuler 24.03 LTS",
+    "os_download_link": "https://www.chinasofti.com/",
+    "friendly_link": "https://www.chinasofti.com/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2024/12/20",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "上海格蒂电力科技有限公司",
+    "os_version": "gee_v1.img",
+    "arch": "aarch64",
+    "checksum": "9cbd4ee1e1734076af97c0d3745ac22b",
+    "base_openeuler_version": "openEuler 22.03 LTS",
+    "os_download_link": "http://www.grid-elec.com",
+    "friendly_link": "http://www.grid-elec.com",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2024/12/23",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 ]
