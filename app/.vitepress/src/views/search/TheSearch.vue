@@ -187,7 +187,7 @@ function setCurrentType(type: string) {
   } else if (currentTab.value === 'packages') {
     tagsParams.category = 'docs';
   }
-  getVersionTag();
+  // getVersionTag();
   currentTab.value = type;
   currentPage.value = 1;
   searchDataAll();
@@ -438,7 +438,7 @@ function jumpPage(page: number) {
   searchDataAll();
 }
 onMounted(async () => {
-  await getVersionTag();
+  // await getVersionTag();
   if (location.href.split('=')[1]) {
     searchInput.value = decodeURIComponent(window.location.href.split('=')[1]);
     currentSearchVal.value = searchInput.value;
@@ -718,10 +718,6 @@ const enterEvent = () => {
                   :label="item.key"
                   :value="item.key"
                 >
-                  <!-- <div class="version" style="float: left">{{ item.key }}</div>
-                <div class="count" style="float: right">
-                  {{ item.count || '' }}
-                </div> -->
                 </OOption>
               </OSelect>
             </ClientOnly>

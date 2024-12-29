@@ -6,11 +6,23 @@
 
   --card-title-word-break: normal;
   --card-detail-word-break: normal;
+  --card-main-padding: 24px 24px;
+  height: 100%;
 
   // svg图标滑过变色
   .path-fill {
     fill: var(--o-color-info1);
     transition: all var (--o-easing-standard) var(--o-duration-m2);
+  }
+
+  .o-card-detail {
+    height: auto;
+  }
+  .o-card-icon {
+    svg {
+      width: 1em;
+      height: 1em;
+    }
   }
   &:hover {
     .path-fill {

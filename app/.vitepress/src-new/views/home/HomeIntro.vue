@@ -48,7 +48,7 @@ const handleChangeActiveMobile = (activeValues: number[]) => {
     :title="$t('home.introTitle')"
     class="home-intro"
     :footer="$t('home.getOpenEuler')"
-    :footer-href="`/${locale}/download/get-os/`"
+    :footer-href="`/${locale}/download/#get-openeuler`"
   >
     <div class="intro-container" :level-index="1">
       <div v-if="!lePadV" class="intro-pc">

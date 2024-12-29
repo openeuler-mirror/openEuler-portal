@@ -291,7 +291,7 @@ export default {
             {
               NAME: 'x2openEuler',
               LABEL: '将原有业务迁移到openEuler的工具套件',
-              PATH: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
+              PATH: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
             },
             {
               NAME: 'Compass-CI',

@@ -30,7 +30,7 @@ export default {
           {
             text: 'x2openEuler用户指南',
             isLink: true,
-            link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
+            link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
           },
           {
             text: '，获取官方指导文档。',
@@ -60,7 +60,7 @@ export default {
           {
             text: 'x2openEuler用户指南。',
             isLink: true,
-            link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
+            link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
           },
         ],
       },
@@ -75,7 +75,7 @@ export default {
           {
             text: 'x2openEuler用户指南',
             isLink: true,
-            link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
+            link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
           },
           {
             text: '的FAQ中进行查找；如果没有同类问题，可在社区提',
@@ -105,7 +105,7 @@ export default {
           {
             text: 'x2openEuler用户指南。',
             isLink: true,
-            link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
+            link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
           },
         ],
       },
@@ -182,7 +182,7 @@ export default {
 
             isLink: true,
 
-            link: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
+            link: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
           },
 
           {
@@ -227,7 +227,7 @@ export default {
 
             isLink: true,
 
-            link: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
+            link: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
           },
         ],
       },
@@ -250,7 +250,7 @@ export default {
 
             isLink: true,
 
-            link: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
+            link: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
           },
 
           {
@@ -294,7 +294,7 @@ export default {
 
             isLink: true,
 
-            link: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
+            link: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
           },
         ],
       },

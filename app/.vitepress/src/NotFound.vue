@@ -1,11 +1,18 @@
 <script setup lang="ts">
-import { useData } from 'vitepress';
+import { computed } from 'vue';
 import { useCommon } from '@/stores/common';
 
 import notFoundImg_light from '@/assets/illustrations/404.png';
 import notFoundImg_dark from '@/assets/illustrations/404_dark.png';
-import { computed } from 'vue';
-const { lang } = useData();
+
+
+defineProps({
+  docs: {
+    type: String,
+    default: '',
+  },
+});
+
 const commonStore = useCommon();
 
 const notFoundImg = computed(() =>
@@ -18,7 +25,7 @@ const notFoundImg = computed(() =>
     <img class="nofound-img" :src="notFoundImg" alt="404" />
     <p class="nofound-text">
       <slot name="title">
-        {{ lang === 'zh' ? '暂无数据' : 'NotFound !' }}
+        {{ docs || $t('common.empty') }}
       </slot>
     </p>
   </div>

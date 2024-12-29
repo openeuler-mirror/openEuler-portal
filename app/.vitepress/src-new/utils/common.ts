@@ -1,11 +1,24 @@
 import Cookies from 'js-cookie';
 
-// URL参数转对象
-// TODO:完善注释
+/**
+ * 获取url搜索参数
+ * @param {string} url 完整 url
+ * @returns {Object} url 中的搜索参数
+ */
 export function getUrlParams(url: string) {
   const search = new URL(url).search;
   const params = new URLSearchParams(search);
   return params;
+}
+
+/**
+ * 获取当前路由的参数
+ * @param {string} query 需要的参数
+ * @returns {string} query 路由中获取到的参数
+ */
+export function getUrlParam(query: string) {
+  const search = new URL(window.location.href).search;
+  return new URLSearchParams(search).get(query) || '';
 }
 
 /**

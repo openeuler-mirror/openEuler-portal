@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { watch, computed, ref } from 'vue';
 import { useRouter, useData } from 'vitepress';
+
 import { useScreen } from '~@/composables/useScreen';
 import navFilterConfig from '@/data/common/nav-filter';
+
 import HeaderNav from './HeaderNav.vue';
+import SearchHeaderMo from '~@/views/search/SearchHeaderMo.vue';
+
 import HeaderNavMoblie from './HeaderNavMoblie.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
@@ -11,9 +15,10 @@ import logo_light from '~@/assets/category/header/logo.svg';
 import logo_dark from '~@/assets/category/header/logo_dark.svg';
 import IconClose from '~icons/app-new/icon-close.svg';
 import IconMenu from '~icons/app-new/icon-header-menu.svg';
+import IconBack from '~icons/app-new/icon-arrow-left.svg';
 
 const router = useRouter();
-const { lang } = useData();
+const { lang, frontmatter } = useData();
 const { lePadV } = useScreen();
 
 const routerPath = ref(router.route.path);
@@ -27,6 +32,7 @@ const isHome = computed(() =>
 );
 
 import { useCommon } from '@/stores/common';
+import { isPadSize } from '@opensig/opendesign/lib/_utils/global';
 const commonStore = useCommon();
 // Logo主题判断
 const logoUrl = computed(() =>
@@ -37,6 +43,10 @@ const logoUrl = computed(() =>
 const goHome = () => {
   menuShow.value = false;
   router.go(`/${lang.value}/`);
+};
+
+const goBack = (href: string) => {
+  router.go(href);
 };
 
 watch(
@@ -86,6 +96,15 @@ watch(
   { immediate: true }
 );
 
+// 简单文字头部
+const isSimpleHeader = computed(() => {
+  return frontmatter.value.simpleHeader;
+});
+
+// 搜索页移动端布局
+const isSearchPage = computed(() => {
+  return frontmatter.value.searchPage;
+});
 const mobileNav = ref();
 const menuShow = ref(false);
 const menuPanel = () => {
@@ -102,7 +121,7 @@ const mobileClick = () => {
 <template>
   <header class="app-header" :class="{ dark: commonStore.theme === 'dark' }">
     <ContentWrapper class="app-header-wrap">
-      <div v-if="lePadV" class="menu-icon">
+      <div v-if="lePadV && !isSimpleHeader && !isSearchPage" class="menu-icon">
         <div class="icon" @click="menuPanel">
           <OIcon>
             <IconMenu v-if="!menuShow" />
@@ -110,16 +129,35 @@ const mobileClick = () => {
           </OIcon>
         </div>
       </div>
-      <img class="logo" alt="openEuler logo" :src="logoUrl" @click="goHome" />
+      <!--  二级路由简单头部 -->
+      <div v-if="lePadV && isSimpleHeader" class="simple-header">
+        <OIcon class="icon-back" @click="goBack(isSimpleHeader)">
+          <IconBack />
+        </OIcon>
+        <span>
+          {{ frontmatter.title }}
+        </span>
+      </div>
+      <SearchHeaderMo v-if="isSearchPage && lePadV" />
+      <img
+        v-if="(!isSimpleHeader && !isSearchPage) || !lePadV"
+        class="logo"
+        alt="openEuler logo"
+        :src="logoUrl"
+        @click="goHome"
+      />
       <ClientOnly>
         <HeaderNavMoblie
-          v-if="lePadV"
+          v-if="lePadV && !isSimpleHeader && !isSearchPage"
           ref="mobileNav"
           :lang-options="langShow"
           :menuShow="menuShow"
           @link-click="mobileClick"
         />
-        <HeaderNav v-else :lang-options="langShow" />
+        <HeaderNav
+          v-else-if="(!isSimpleHeader && !isSearchPage) || !lePadV"
+          :lang-options="langShow"
+        />
       </ClientOnly>
     </ContentWrapper>
   </header>
@@ -159,6 +197,17 @@ const mobileClick = () => {
       right: 0;
       top: 0;
       z-index: 100;
+    }
+  }
+  .simple-header {
+    display: flex;
+    align-items: center;
+    @include h4;
+    color: var(--o-color-info1);
+    .o-icon {
+      cursor: pointer;
+      margin-right: 16px;
+      font-size: var(--o-icon_size-m);
     }
   }
 

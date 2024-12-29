@@ -1,5 +1,6 @@
-import { request } from '~@/shared/axios';
+import { request, AxiosResponse } from '~@/shared/axios';
 
+import { FeedbackParamsT } from '~@/@types/type-search';
 /**
  * es搜索获取首页新闻
  * @param { LocaleT } 语言
@@ -50,4 +51,21 @@ export function getHomeShowCases(params: {
     .then((res) => {
       return res.data;
     });
+}
+
+/**
+ * 获取相关软件包数据
+ * @param {Object} params 请求参数
+ * @param {string} params.keyword 输入关键词
+ * @returns {Object}
+ */
+export function getSoftwareDocs(params: FeedbackParamsT): Promise<{
+  msg: string;
+}> {
+  const url = '/api-search/software/docs';
+  return request
+    .post(url, params, {
+      ignoreDuplicates: true,
+    })
+    .then((res: AxiosResponse) => res.data);
 }

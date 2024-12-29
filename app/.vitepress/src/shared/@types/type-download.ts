@@ -55,6 +55,7 @@ export interface LinkListItemT {
   Type: 'file' | 'dir';
   Tips: string;
   Order: number;
+  index: number;
 }
 export interface DetailedLinkItemT {
   Order: number;

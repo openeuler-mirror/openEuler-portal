@@ -192,7 +192,7 @@ const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
 };
 const changeSize = () => {
   currentPage.value = 1;
-}
+};
 </script>
 
 <template>

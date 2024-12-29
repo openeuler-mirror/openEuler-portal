@@ -6,7 +6,8 @@ const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
 const config: UserConfig = {
   sitemap: {
     hostname: 'https://www.openeuler.org',
-    transformItems: (items) => items.filter(item => !item.url.startsWith('/en/approve')),
+    transformItems: (items) =>
+      items.filter((item) => !item.url.startsWith('/en/approve')),
   },
   lastUpdated: true,
   base: '/',
@@ -126,6 +127,8 @@ const config: UserConfig = {
   themeConfig: {
     docsUrl: 'https://docs.openeuler.org',
     forumUrl: 'https://forum.openeuler.org',
+    softwareUrl: 'https://easysoftware.openeuler.org',
+    repoUrl: 'https://repo.openeuler.openatom.cn',
   },
 };
 export default config;

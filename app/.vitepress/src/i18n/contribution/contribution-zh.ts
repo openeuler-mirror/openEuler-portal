@@ -14,7 +14,7 @@ export default {
   PRINT_MAP: '打印攻略地图',
   LINK_LIST: [
     {
-      URL: 'https://www.openeuler.org/zh/download/get-os/',
+      URL: 'https://www.openeuler.org/zh/download/#get-openeuler',
       BLANK: true,
     },
     {

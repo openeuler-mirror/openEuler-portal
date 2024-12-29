@@ -6,6 +6,12 @@ import { computed, onMounted, watch } from 'vue';
 import zhCn from 'element-plus/es/locale/lang/zh-cn';
 import en from 'element-plus/es/locale/lang/en';
 
+//opendesign 国际化
+import zhCN from '@opensig/opendesign/es/locale/lang/zh-cn';
+import enUS from '@opensig/opendesign/es/locale/lang/en-us';
+
+import { isClient, OScroller, OConfigProvider } from '@opensig/opendesign';
+
 import AppHeader from '~@/components/header/AppHeader.vue';
 // import AppHeader from '@/components/AppHeader.vue';
 import AppFooter from '~@/components/AppFooter.vue';
@@ -32,10 +38,10 @@ import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
 import { useLocale } from '~@/composables/useLocale';
 
-const { changeLocale } = useLocale();
+const { changeLocale, isZh } = useLocale();
 const { frontmatter, lang } = useData();
 
-const locale = computed(() => {
+const elLocale = computed(() => {
   return lang.value === 'zh' ? zhCn : en;
 });
 
@@ -94,16 +100,18 @@ onMounted(() => {
 
 <template>
   <AppHeader />
-  <el-config-provider :locale="locale">
-    <main :class="frontmatter.class ? frontmatter.class : ''">
-      <component :is="comp" v-if="isCustomLayout"></component>
-      <Content v-else />
-      <FloatingButton v-if="lang === 'zh'" />
-      <FloatingButtonEn v-else />
-    </main>
-  </el-config-provider>
-  <CookieNotice />
-  <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
+    <OConfigProvider :locale="isZh ? zhCN : enUS">
+      <el-config-provider :locale="elLocale">
+        <main :class="frontmatter.class ? frontmatter.class : ''">
+          <component :is="comp" v-if="isCustomLayout"></component>
+          <Content v-else />
+          <FloatingButton v-if="lang === 'zh'" />
+          <FloatingButtonEn v-else />
+        </main>
+      </el-config-provider>
+    </OConfigProvider>
+    <CookieNotice />
+    <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
   <ClientOnly>
     <AppTour />
   </ClientOnly>
@@ -113,6 +121,15 @@ onMounted(() => {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.o-scroller {
+  height: 100vh;
+  background-color: var(--o-color-fill1);
+  --scrollbar-height: calc(100vh - var(--layout-header-height) * 2 - 10px);
+  :deep(.o-scroller-container) {
+    scroll-padding-top: var(--layout-header-height);
+  }
 }
 
 main {
@@ -145,6 +162,7 @@ main {
 #app {
   --layout-content-max-width: 1544px;
   --layout-content-padding: 64px;
+  --layout-header-height: 80px;
 
   @include respond-to('<=laptop') {
     --layout-content-max-width: 100%;

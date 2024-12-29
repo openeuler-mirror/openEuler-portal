@@ -7,27 +7,30 @@ import type {
 export const constructDownloadData = (
   versionDatas: DetailedLinkItemT[],
   version: string,
-  i18n: any
+  t: any
 ) => {
   return versionDatas.map((versionData) => {
-    versionData.Tree = versionData.Tree?.map((tree) => {
+    versionData.Tree = versionData.Tree?.filter((tree) => {
+      //debug 文件不展示
+      return !tree.Name.includes('debug');
+    });
+    versionData.Tree = versionData.Tree?.map((tree, index) => {
+      tree.index = index;
       //--------------- 标准镜像 ---------------
       //iso Offline Standard
       if (tree.Name === `${version}-${versionData.Arch}-dvd.iso`) {
-        tree.Tips = i18n.value.download.OFFLINE_STANDARD.replace(
-          '{arch}',
-          versionData.Arch
-        );
+        tree.Tips = t('download.OFFLINE_STANDARD', {
+          arch: versionData.Arch,
+        });
         tree.Order = 1;
         tree.Name = 'Offline Standard ISO';
         return tree;
       }
       //iso everything
       if (tree.Name === `${version}-everything-${versionData.Arch}-dvd.iso`) {
-        tree.Tips = i18n.value.download.OFFLINE_EVERYTHING.replace(
-          '{arch}',
-          versionData.Arch
-        );
+        tree.Tips = t('download.OFFLINE_EVERYTHING', {
+          arch: versionData.Arch,
+        });
         tree.Order = 2;
         tree.Name = 'Offline Everything ISO';
         return tree;
@@ -41,55 +44,47 @@ export const constructDownloadData = (
 
       //edge Offline Standard
       if (tree.Name === `${version}-edge-${versionData.Arch}-dvd.iso`) {
-        tree.Tips = i18n.value.download.EDGE_OFFLINE_STANDARD.replace(
-          '{arch}',
-          versionData.Arch
-        );
+        tree.Tips = t('download.EDGE_OFFLINE_STANDARD', {
+          arch: versionData.Arch,
+        });
         tree.Name = 'Offline Standard ISO';
         return tree;
       }
       // --------------------- arm ----------------------
       // arm glibc
       if (tree.Name.includes('openeuler-glibc')) {
-        tree.Tips = i18n.value.download.GLIBC.replace(
-          '{arch}',
-          versionData.Arch
-        );
+        tree.Tips = t('download.GLIBC', {
+          arch: versionData.Arch,
+        });
         tree.Name = 'openEuler glibc';
         return tree;
       }
       // arm qemu
       if (tree.Name.includes('openeuler-image-qemu')) {
-        tree.Tips = i18n.value.download.QEMU.replace(
-          '{arch}',
-          versionData.Arch
-        );
+        tree.Tips = t('download.QEMU', {
+          arch: versionData.Arch,
+        });
         tree.Name = 'openEuler Image qemu';
         return tree;
       }
       if (tree.Name === 'zImage') {
-        tree.Tips = i18n.value.download.zImage.replace(
-          '{arch}',
-          versionData.Arch
-        );
+        tree.Tips = t('download.zImage', {
+          arch: versionData.Arch,
+        });
         tree.Name = 'zImage';
         return tree;
       }
       // virtual_machine_img
       if (tree.Name.includes('qcow2.xz')) {
-        tree.Tips = i18n.value.download.VIRTUAL_MACHINE.replace(
-          '{arch}',
-          versionData.Arch
-        );
+        tree.Tips = t('download.VIRTUAL_MACHINE', {
+          arch: versionData.Arch,
+        });
         tree.Name = 'qcow2.xz';
         return tree;
       }
       return tree;
     });
-    versionData.Tree = versionData.Tree?.filter((tree) => {
-      //debug 文件不展示
-      return !tree.Name.includes('debug');
-    });
+
     // 根据 Order 排序
     versionData.Tree = versionData.Tree?.sort((a, b) => {
       if (a.Order && b.Order) {
@@ -107,11 +102,11 @@ export const constructDownloadData = (
 };
 
 // 将版本架构场景信息与发布时间等信息结合
-export const getVersionList = (list: VersionInfoT[], i18n: any) => {
+export const getVersionList = (list: VersionInfoT[], localeInfos: any) => {
   return list
     .filter((version) => {
       version.Version = version.Version.replaceAll('-', ' ');
-      const matchItem = i18n.value.download.COMMUNITY_LIST.find(
+      const matchItem = localeInfos?.find(
         (item: { NAME: string }) => item.NAME === version.Version
       );
       if (matchItem) {
@@ -128,4 +123,23 @@ export const getVersionList = (list: VersionInfoT[], i18n: any) => {
         Number(a.publishDate?.replace('/', ''))
       );
     });
+};
+
+export const getOSType = (name: string, version: string, arch: string) => {
+  if (name === `${version}-everything-${arch}-dvd.iso`) {
+    return 'Offline Everything ISO';
+  }
+  //iso netinst
+  if (name === `${version}-netinst-${arch}-dvd.iso`) {
+    return 'Network Install ISO';
+  }
+  //edge Offline Standard
+  if (name === `${version}-edge-${arch}-dvd.iso`) {
+    return 'Offline Standard ISO';
+  }
+  //Offline Standard
+  if (name === `${version}-${arch}-dvd.iso`) {
+    return 'Offline Standard ISO';
+  }
+  return '';
 };

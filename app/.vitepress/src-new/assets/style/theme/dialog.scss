@@ -32,4 +32,13 @@
 
 .o-dialog {
   --dlg-radius: var(--layout-pkg-radius);
+  .o-dlg-footer {
+    margin-top: 32px;
+    .o-dlg-actions {
+      .o-btn {
+        --btn-bg-color-active: transparent;
+        --btn-bg-color-hover: transparent;
+      }
+    }
+  }
 }

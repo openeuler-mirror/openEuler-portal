@@ -11,7 +11,7 @@ head:
   #     content: openEuler下载,openEuler镜像下载,openEuler ISO镜像,openEuler社区官网,openEuler镜像,开源Linux系统
 ---
 <script setup lang="ts">
-  import TheCommercialRelease from "@/views/download/TheCommercialRelease.vue"
+  import TheCommercialRelease from "~@/views/download/TheCommercialRelease.vue"
 </script>
 
 <TheCommercialRelease />

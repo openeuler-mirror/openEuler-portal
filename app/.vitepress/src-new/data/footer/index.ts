@@ -201,7 +201,7 @@ export const quickNav = {
       list: [
         {
           title: '获取openEuler操作系统',
-          link: '/zh/download/get-os/',
+          link: '/zh/download/#get-openeuler',
         },
         {
           title: '最新社区发行版',
@@ -317,7 +317,7 @@ export const quickNav = {
       list: [
         {
           title: 'openEuler Is Everywhere',
-          link: '/en/download/get-os/',
+          link: '/en/download/#get-openeuler',
         },
         {
           title: 'Latest Community Releases',

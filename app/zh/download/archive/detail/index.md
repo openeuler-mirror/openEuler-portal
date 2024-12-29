@@ -1,8 +1,9 @@
 ---
-title: 'openEuler下载 | openEuler ISO镜像'
+title: '所有版本下载'
 category: download-detail
 class: download-page
 titleTemplate: openEuler社区官网
+simpleHeader: '/zh/download/?archive=true'
 head:
   - - meta
     - name: description
@@ -13,7 +14,7 @@ head:
 ---
 
 <script setup lang="ts">
-  import TheDownloadDetail from "@/views/download/TheDownloadDetail.vue"
+  import TheDownloadDetail from "~@/views/download/TheDownloadDetail.vue"
 </script>
 
 <TheDownloadDetail />
