@@ -118,6 +118,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+// TODO: 导航高度使用变量
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -119,7 +119,13 @@ const mobileClick = () => {
 </script>
 
 <template>
-  <header class="app-header" :class="{ dark: commonStore.theme === 'dark' }">
+  <header
+    class="app-header"
+    :class="[
+      { dark: commonStore.theme === 'dark' },
+      { 'search-header': isSearchPage },
+    ]"
+  >
     <ContentWrapper class="app-header-wrap">
       <div v-if="lePadV && !isSimpleHeader && !isSearchPage" class="menu-icon">
         <div class="icon" @click="menuPanel">
@@ -223,6 +229,9 @@ const mobileClick = () => {
       position: relative;
     }
   }
+}
+.search-header {
+  box-shadow: none;
 }
 
 .logo {

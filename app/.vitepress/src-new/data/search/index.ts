@@ -105,6 +105,19 @@ export const moduleMap = new Map([
 
 export const subModuleMap = new Map([
   [
+    'release',
+    {
+      label: {
+        zh: '社区发行版',
+        en: 'Community Releases',
+      },
+      from: {
+        zh: ['下载', '社区发行版', '{version}'],
+        en: ['Download', 'Community Releases', '{version}'],
+      },
+    },
+  ],
+  [
     'communityRelease',
     {
       label: {
@@ -249,6 +262,42 @@ export const subModuleMap = new Map([
       from: {
         zh: ['动态', '资讯', '博客'],
         en: ['Stay Updated', 'News & Blogs', 'Blogs'],
+      },
+    },
+  ],
+  [
+    'migration',
+    {
+      from: {
+        zh: ['学习', '迁移与运维', '迁移专区'],
+        en: ['Learn', 'Migration', 'Migrate to openEuler'],
+      },
+    },
+  ],
+  [
+    'service',
+    {
+      from: {
+        zh: ['服务'],
+        en: ['Service'],
+      },
+    },
+  ],
+  [
+    'migration',
+    {
+      from: {
+        zh: ['学习', '迁移与运维', '迁移专区'],
+        en: ['Learn', 'Migration', 'Migrate to openEuler'],
+      },
+    },
+  ],
+  [
+    'packages',
+    {
+      from: {
+        zh: ['开发', '分析', 'Pkgship'],
+        en: ['Develop', 'Analyze', 'Pkgship'],
       },
     },
   ],

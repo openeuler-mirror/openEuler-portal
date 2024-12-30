@@ -276,9 +276,9 @@ const closeSearch = () => {
     margin-left: 0;
     z-index: 2;
     position: fixed;
-    width: calc(100vw - 32px);
-    left: 16px;
-    right: 16px;
+    width: calc(100vw - var(--layout-content-padding) * 2);
+    left: var(--layout-content-padding);
+    right: var(--layout-content-padding);
     top: 10px;
   }
 

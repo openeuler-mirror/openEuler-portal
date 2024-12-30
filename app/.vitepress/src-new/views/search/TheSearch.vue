@@ -393,6 +393,8 @@ const getMoreDataMo = () => {
 </template>
 <style lang="scss" scoped>
 .search {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: calc(100vh - var(--layout-header-height) - 114px);
   background-color: var(--o-color-fill2);
@@ -401,11 +403,11 @@ const getMoreDataMo = () => {
   }
   .search-banner {
     @include respond-to('<=pad_v') {
-      position: static;
-      margin: 0;
-      max-width: 100%;
-      background: var(--o-color-fill2);
-      padding-top: 8px;
+      background: var(--o-color-fill2) !important;
+      box-shadow: var(--o-shadow-1);
+      position: sticky;
+      top: 48px;
+      z-index: 9;
     }
   }
 }

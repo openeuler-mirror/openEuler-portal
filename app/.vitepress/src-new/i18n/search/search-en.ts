@@ -1,5 +1,5 @@
 export default {
-  form: 'From:',
+  from: 'From:',
   service: 'Related service',
   no: 'No',
   version: 'Version:',

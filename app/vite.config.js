@@ -96,13 +96,13 @@ export default defineConfig({
         changeOrigin: true,
       },
       '/api-search/': {
-        // target: 'https://doc-search.test.osinfra.cn/',
-        target: 'https://www.openeuler.org',
+        target: 'https://doc-search.test.osinfra.cn/',
+        // target: 'https://www.openeuler.org',
         changeOrigin: true,
         headers: {
           Referer: '',
         },
-        // rewrite: (path) => path.replace(/^\/api-search/, ''),
+        rewrite: (path) => path.replace(/^\/api-search/, ''),
       },
       '/api-feedback/': {
         target: 'https://datastat-develop.test.osinfra.cn/',
@@ -123,8 +123,8 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api-meeting/, ''),
       },
       '/api/': {
-        target: 'https://api.openeuler.org',
-        // target: 'https://repo-mirrorbits.test.osinfra.cn',
+        // target: 'https://api.openeuler.org',
+        target: 'https://repo-mirrorbits.test.osinfra.cn',
 
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),

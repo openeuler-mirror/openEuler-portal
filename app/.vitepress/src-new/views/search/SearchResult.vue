@@ -189,14 +189,20 @@ const reportSelectSearchResult = (
     };
   });
 };
-const handleSelectChange = () => {
-  // console.log(55);
-};
+
+const verticalPadding = computed(() => {
+  if (lePadV.value) {
+    return ['16px', '24px'];
+  } else {
+    return ['40px', '72px'];
+  }
+});
+
 const COUNT_PER_PAGE = [12, 18, 24, 36];
 </script>
 <template>
-  <ContentWrapper class="search-result" :vertical-padding="['40px', '72px']">
-    <ORadioGroup v-model="searchType">
+  <ContentWrapper class="search-result" :vertical-padding="verticalPadding">
+    <ORadioGroup v-if="subModules?.length" v-model="searchType">
       <ORadio
         v-for="subModule in subModules"
         :key="subModule.key"
@@ -210,14 +216,13 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
       </ORadio>
     </ORadioGroup>
     <OSelect
-      v-show="
+      v-if="
         !searchType || searchType === 'docs' || searchType.includes('packages')
       "
       v-model="activeVersion"
       placeholder="Select"
       optionPosition="br"
       optionWrapClass="mirror-select"
-      @change="handleSelectChange"
     >
       <OOption :label="$t('search.allVersion')" value=""> </OOption>
       <OOption
@@ -350,7 +355,9 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
           />
         </div>
         <div
-          v-if="currentPage >= Math.ceil(total / pageSize) && lePadV && !loading"
+          v-if="
+            currentPage >= Math.ceil(total / pageSize) && lePadV && !loading
+          "
           class="end"
         >
           {{ $t('search.listEnd') }}
@@ -364,6 +371,7 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
 <style lang="scss" scoped>
 .search-result {
   position: relative;
+  width: 100%;
   .search-pagination {
     width: 100%;
     margin-top: 40px;
@@ -384,8 +392,14 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
     @include text1;
     text-align: center;
   }
+  .o-radio-group,
+  .o-select {
+    margin-bottom: 40px;
+    @include respond-to('<=pad_v') {
+      margin-bottom: 16px;
+    }
+  }
   .search-content {
-    margin-top: 40px;
     display: flex;
     .o-divider {
       height: auto;

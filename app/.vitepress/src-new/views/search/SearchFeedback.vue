@@ -286,10 +286,10 @@ const isVisible = ref(false);
   &.medium {
     padding: 24px;
     background: var(--o-color-fill1);
-    margin: 40px 0 32px;
+    margin: 40px 0 0;
     border-radius: var(--o-radius-xs);
     @include respond-to('<=pad') {
-      margin: 0 0 16px;
+      margin: 24px 0 ;
       border-radius: 8px;
     }
     @include respond-to('<=pad_v') {
