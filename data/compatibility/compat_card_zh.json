@@ -29476,5 +29476,43 @@
     "chipModel": "ConnextX-6 Lx",
     "item": "",
     "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "1cf2",
+    "deviceID": "8049",
+    "svID": "1cf2",
+    "ssID": "549c",
+    "architecture": "aarch64",
+    "os": "openEuler 22.03 LTS SP4",
+    "driverName": "zxdh_pf",
+    "version": "1.0-1",
+    "type": "NIC",
+    "date": "2024.10.26",
+    "sha256": "8f8be489a14b1063fcee6cf2b5096e350d8d0acaf27c23b7d38771822c99debd",
+    "driverSize": "12M",
+    "chipVendor": "ZTE",
+    "boardModel": "E312",
+    "chipModel": "N/A",
+    "item": "",
+    "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "1cf2",
+    "deviceID": "8049",
+    "svID": "1cf2",
+    "ssID": "549c",
+    "architecture": "x86_64",
+    "os": "openEuler 22.03 LTS SP4",
+    "driverName": "zxdh_pf",
+    "version": "1.0-1",
+    "type": "NIC",
+    "date": "2024.10.24",
+    "sha256": "1cc5ba777522c8c76a41b4f5f2203d0c6e247d2a99a87df30dbf2270d58d8159",
+    "driverSize": "12M",
+    "chipVendor": "ZTE",
+    "boardModel": "E312",
+    "chipModel": "N/A",
+    "item": "",
+    "downloadLink": "inbox"
   }
 ]
