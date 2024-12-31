@@ -27248,5 +27248,85 @@
       "hostBusAdapter": "",
       "hardDiskDrive": "INTEL SSDSC2KB96"
     }
+  },
+  {
+    "hardwareFactory": "新华三",
+    "hardwareModel": "H3C UniServer R5350 G6",
+    "osVersion": "openEuler 22.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2024/12/20",
+    "friendlyLink": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/GPU_Server/Products_Series/Application_Optimization_GPU/R5350_G6/",
+    "boardCards": [
+      {
+        "vendorID": "15b3",
+        "deviceID": "1021",
+        "svID": "15b3",
+        "ssID": "0023",
+        "architecture": "x86_64",
+        "os": "openEuler 24.03 LTS SP1",
+        "driverName": "mlx5_core",
+        "version": "5.10-240.0.0.139.oe2203sp4.x86_64",
+        "type": "NIC",
+        "date": "2024.12.19",
+        "sha256": "a3fa07170cb3227b24cfc1ce63d4ea81a619eddce9de2ad55acca49a85052596",
+        "driverSize": "421K",
+        "chipVendor": "Mellanox",
+        "boardModel": "MCX75310AAS-NEAT",
+        "chipModel": "ConnextX-7",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "15b3",
+        "deviceID": "101f",
+        "svID": "15b3",
+        "ssID": "0004",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "mlx5_core",
+        "version": "5.10-240.0.0.139.oe2203sp4.x86_64",
+        "type": "NIC",
+        "date": "2024.12.19",
+        "sha256": "a3fa07170cb3227b24cfc1ce63d4ea81a619eddce9de2ad55acca49a85052596",
+        "driverSize": "421K",
+        "chipVendor": "Mellanox",
+        "boardModel": "MCX631432AN-ADAB",
+        "chipModel": "ConnextX-6 Lx",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2017.01.14",
+        "sha256": "1863f75d30fd9b5a0a46d772277c014675d98a453724f466dea37b4affb8ad6f",
+        "driverSize": "74K",
+        "chipVendor": "Broadcom",
+        "boardModel": "9560-8i",
+        "chipModel": "SAS3908",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/GPU_Server/Products_Series/Application_Optimization_GPU/R5350_G6/",
+      "certificationTime": "2024/12/20",
+      "commitID": "IBCP8T",
+      "mainboardModel": "Rack Mount Chassis",
+      "biosUefi": "6.30.35",
+      "cpu": "AMD EPYC 9454 48-Core Processor",
+      "ram": "8*32G RDIMMs",
+      "portsBusTypes": "X8 PCI Express 5 x8/x16 PCI Express 5 x16",
+      "videoAdapter": "ASPEED Graphics Family",
+      "hostBusAdapter": "",
+      "hardDiskDrive": ""
+    }
   }
 ]
