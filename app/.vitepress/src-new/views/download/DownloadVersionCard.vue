@@ -421,7 +421,10 @@ const columns = [
             :value="item.Name + ' (' + item.NetworkBandwidth + 'Mb/s)'"
           >
           </OOption>
-          <ODivider :style="{ '--o-divider-gap': '4px' }" />
+          <ODivider
+            v-if="moreMirrorList?.length"
+            :style="{ '--o-divider-gap': '4px' }"
+          />
           <div class="mirror-list">
             <OLink :href="'/' + locale + '/mirror/list/'">
               {{ t('download.ALL_MIRROR') }}

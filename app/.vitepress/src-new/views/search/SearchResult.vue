@@ -364,7 +364,11 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
           class="nofound"
           :docs="$t('search.empty')"
         />
-        <SearchFeedback v-if="!lePadV" size="medium" :keyword="searchVal" />
+        <SearchFeedback
+          v-if="!lePadV && total >= 10"
+          size="medium"
+          :keyword="searchVal"
+        />
         <div v-show="total > COUNT_PER_PAGE[0] && !lePadV" class="pagination">
           <OPagination
             v-model:page="currentPage"
