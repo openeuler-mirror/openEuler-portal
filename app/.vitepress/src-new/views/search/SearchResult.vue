@@ -131,7 +131,7 @@ watch(
   }
 );
 
-function goLink(data: any, index: number) {
+const getLink = (data: any) => {
   let { path } = data;
   let search_result_url = '/' + path;
 
@@ -149,12 +149,13 @@ function goLink(data: any, index: number) {
       : '';
     search_result_url = location.origin + search_result_url;
   }
+  return search_result_url;
+};
+
+function handleLinkClick(data: any, index: number) {
   if (cookieStore.isAllAgreed) {
-    reportSelectSearchResult(data, index, search_result_url, props.searchVal);
+    reportSelectSearchResult(data, index, getLink(data), props.searchVal);
   }
-  if (cookieStore.isAllAgreed) {
-  }
-  window.open(search_result_url);
 }
 //
 const downloadZoneData = computed(() => {
@@ -262,15 +263,15 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
             "
             class="search-zone"
           >
-            <SearchSoftwareZone
-              v-if="softwareList.length"
-              :software-zone="softwareList"
-              :search-value="searchValue"
-            />
             <SearchDownloadAggre v-if="downloadAggre && !downloadZoneData" />
             <SearchDownloadZone
               v-if="downloadZoneData"
               :download-zone="downloadZoneData"
+            />
+            <SearchSoftwareZone
+              v-if="softwareList.length"
+              :software-zone="softwareList"
+              :search-value="searchValue"
             />
           </div>
           <template v-for="(item, index) in searchResultList" :key="item.id">
@@ -288,21 +289,29 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
               "
               class="search-card"
             >
-              <h3
-                v-dompurify-html="
-                  item.title.replace('-meetings', ` ${$t('search.sigMeeting')}`)
-                "
-                @click="goLink(item, index)"
-              ></h3>
-              <p
-                v-dompurify-html="
-                  item.type === 'service'
-                    ? item.secondaryTitle || ''
-                    : item.textContent
-                "
-                class="detail"
-                @click="goLink(item, index)"
-              ></p>
+              <a
+                :href="getLink(item)"
+                target="_blank"
+                @click="handleLinkClick(item, index)"
+              >
+                <h3
+                  v-dompurify-html="
+                    item.title.replace(
+                      '-meetings',
+                      ` ${$t('search.sigMeeting')}`
+                    )
+                  "
+                ></h3>
+                <p
+                  v-dompurify-html="
+                    item.type === 'service'
+                      ? item.secondaryTitle || ''
+                      : item.textContent
+                  "
+                  class="detail"
+                ></p>
+              </a>
+
               <div v-if="item.arch && item.scenario" class="tag-box">
                 <OTag>
                   {{ archMap.get(item.arch)?.label || item.arch }}
@@ -460,6 +469,9 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
           }
         }
         .search-zone {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
           &:empty {
             display: none;
           }
