@@ -25059,6 +25059,62 @@
   },
   {
     "hardwareFactory": "新华三",
+    "hardwareModel": "H3C UniServer R5500 G7",
+    "osVersion": "openEuler 24.03 LTS",
+    "architecture": "x86",
+    "date": "2024/09/12",
+    "friendlyLink": "https://www.h3c.com/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "193d",
+        "ssID": "1005",
+        "architecture": "x86",
+        "os": "openEuler 24.03 LTS",
+        "driverName": "igb",
+        "version": "6.6.0-33.0.0.40.oe2403.aarch64",
+        "type": "NIC",
+        "sha256": "8223f45ec0d557829539bbbc26d642abfb4657b692b101a1abefca263281740e",
+        "driverSize": "103K",
+        "chipVendor": "Intel",
+        "boardModel": "360T-B",
+        "chipModel": "I350",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "9005",
+        "deviceID": "028f",
+        "svID": "193d",
+        "ssID": "f461",
+        "architecture": "aarch64",
+        "os": "openEuler 24.03 LTS ",
+        "driverName": "smartpqi",
+        "version": "2.1.24-046",
+        "type": "RAID",
+        "sha256": "d535927d7e42b8a61d3dd5ed43a840b5fb4dffba4060ad68b3ea21caacb9f4e3",
+        "driverSize": "58k",
+        "chipVendor": "Adaptec",
+        "boardModel": "P460-B4",
+        "chipModel": "Smart Storage PQI SAS",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com/",
+      "certificationTime": "2024/09/12",
+      "commitID": "I7QEBM",
+      "mainboardModel": "",
+      "cpu": "S5000C-64 @ 2.1GHz *2",
+      "ram": "8*32G Samsung DDR4",
+      "portsBusTypes": "x16 PCI Express 5 x16",
+      "videoAdapter": "Display controller:Phytium Technology Co., Ltd. Device dc3e",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "SEAGATE ST1000NX0313 SN02 "
+    }
+  },
+  {
+    "hardwareFactory": "新华三",
     "hardwareModel": "H3C UniServer R5330 G7",
     "osVersion": "openEuler 24.03 LTS",
     "architecture": "x86_64",
