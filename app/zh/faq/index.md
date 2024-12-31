@@ -149,7 +149,15 @@ openEuler 提供了多级调度框架，实现多种调度模型共存，业务�
 
 为了方便大家快速找到openEuler所需版本的repo源，现将openEuler各版本的repo源进行了整理并归类，详情可查看：[https://forum.openeuler.org/t/topic/768](https://forum.openeuler.org/t/topic/768)
 
-### 20. 安装openEuler时选择第二盘位为安装目标，操作系统无法启动
+### 20. openEuler如何更换镜像源?
+
+在使用openEuler系统时,部分用户可能会遇到YUM拉取软件包时下载速度较慢的问问题,尤其是在网络不稳定或
+镜像源不理想的情况下。openEuler如何更换镜像源,详情可查看:
+
+[https://www.openeuler.org/zh/blog/2024-10-15-boostYum/2024-10-15-boostYum.html](https://www.openeuler.org/zh/blog/2024-10-15-boostYum/2024-10-15-boostYum.html)
+
+
+### 21. 安装openEuler时选择第二盘位为安装目标，操作系统无法启动
 
 原因分析：当安装系统到第二块磁盘时，MBR和GRUB会默认安装到第二块磁盘sdb。这样会有下面两种情况：
 
@@ -158,69 +166,69 @@ openEuler 提供了多级调度框架，实现多种调度模型共存，业务�
 
 具体解决方案请参考文档[安装指南中的常见问题1](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html#%E9%97%AE%E9%A2%981%E5%AE%89%E8%A3%85openeuler%E6%97%B6%E9%80%89%E6%8B%A9%E7%AC%AC%E4%BA%8C%E7%9B%98%E4%BD%8D%E4%B8%BA%E5%AE%89%E8%A3%85%E7%9B%AE%E6%A0%87%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8)
 
-### 21. openEuler开机后进入emergency模式
+### 22. openEuler开机后进入emergency模式
 
 操作系统文件系统损坏导致磁盘挂载失败、或io压力过大导致磁盘挂载超时（超时时间为90秒）、系统异常掉电、物理磁盘io性能低等情况都可能导致该问题的出现。
 
 具体解决方式请参考文档[安装指南中的常见问题2](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html#%E9%97%AE%E9%A2%982openeuler%E5%BC%80%E6%9C%BA%E5%90%8E%E8%BF%9B%E5%85%A5emergency%E6%A8%A1%E5%BC%8F)
 
-### 22. 系统中存在无法激活的逻辑卷组时，重装系统失败
+### 23. 系统中存在无法激活的逻辑卷组时，重装系统失败
 
 由于磁盘故障，系统中存在无法激活的逻辑卷组，重装系统出现异常，需在重装前将逻辑卷组恢复到正常状态或者清除这些逻辑卷组。
 
 具体操作请参考文档[安装指南中的常见问题3](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html#%E9%97%AE%E9%A2%983%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AD%98%E5%9C%A8%E6%97%A0%E6%B3%95%E6%BF%80%E6%B4%BB%E7%9A%84%E9%80%BB%E8%BE%91%E5%8D%B7%E7%BB%84%E6%97%B6%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%A4%B1%E8%B4%A5)
 
-### 23. 选择安装源出现异常
+### 24. 选择安装源出现异常
 
 选择安装源后出现："Error checking software selection"。这种现象是由于安装源中的软件包依赖存在问题，需要检查安装源是否存在异常，根据检查结果使用新的安装源。
 
-### 24. 如何手动开启kdump服务
+### 25. 如何手动开启kdump服务
 
 执行systemctl status kdump命令，提示无预留内存。这是因为kdump服务需要系统预留一段内存用于运行kdump内核，而当前系统没有为kdump服务预留内存，所以无法运行kdump服务。
 
 具体解决方式请参考文档[安装指南中的常见问题5](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html#%E9%97%AE%E9%A2%985%E5%A6%82%E4%BD%95%E6%89%8B%E5%8A%A8%E5%BC%80%E5%90%AFkdump%E6%9C%8D%E5%8A%A1)
 
-### 25. 多块磁盘组成逻辑卷安装系统后，再次安装不能只选其中一块磁盘
+### 26. 多块磁盘组成逻辑卷安装系统后，再次安装不能只选其中一块磁盘
 
 因为多块磁盘组成逻辑卷相当于一个整体，所以只需要删除对应的卷组即可。
 
 具体操作请参考文档[安装指南中的常见问题6](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html#%E9%97%AE%E9%A2%986%E5%A4%9A%E5%9D%97%E7%A3%81%E7%9B%98%E7%BB%84%E6%88%90%E9%80%BB%E8%BE%91%E5%8D%B7%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%86%8D%E6%AC%A1%E5%AE%89%E8%A3%85%E4%B8%8D%E8%83%BD%E5%8F%AA%E9%80%89%E5%85%B6%E4%B8%AD%E4%B8%80%E5%9D%97%E7%A3%81%E7%9B%98)
 
-### 26. x86物理机UEFI模式由于security boot安全选项问题无法安装
+### 27. x86物理机UEFI模式由于security boot安全选项问题无法安装
 
 x86物理机安装系统时，由于设置了BIOS选项security boot 为enable（默认是disable），导致系统一直停留在“No bootable device”提示界面。原因在与开启security boot后，主板会验证引导程序及操作系统 ，若没有用对应的私钥进行签名，则无法通过主板上内置公钥的认证。
 
 具体解决方式请参考文档[安装指南中的常见问题7](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html#%E9%97%AE%E9%A2%987x86%E7%89%A9%E7%90%86%E6%9C%BAuefi%E6%A8%A1%E5%BC%8F%E7%94%B1%E4%BA%8Esecurity-boot%E5%AE%89%E5%85%A8%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85)
 
-### 27. 安装openEuler时，软件选择页面选择“服务器-性能工具”，安装后messages日志有pmie_check报错信息
+### 28. 安装openEuler时，软件选择页面选择“服务器-性能工具”，安装后messages日志有pmie_check报错信息
 
 安装系统时软件选择勾选服务器-性能工具，会安装pcp相关软件包，正常安装并重启后，/var/log/messages日志文件中会产生报错：pmie_check failed in /usr/share/pcp/lib/pmie。
 
 具体原因与解决方式请参考文档[安装指南中的常见问题8](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html#%E9%97%AE%E9%A2%988%E5%AE%89%E8%A3%85openeuler%E6%97%B6%E8%BD%AF%E4%BB%B6%E9%80%89%E6%8B%A9%E9%A1%B5%E9%9D%A2%E9%80%89%E6%8B%A9%E6%9C%8D%E5%8A%A1%E5%99%A8-%E6%80%A7%E8%83%BD%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%90%8Emessages%E6%97%A5%E5%BF%97%E6%9C%89pmie_check%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF)
 
-### 28. 在两块已经安装了系统的磁盘上进行重复选择，并自定义分区时，安装失败
+### 29. 在两块已经安装了系统的磁盘上进行重复选择，并自定义分区时，安装失败
 
 直接选择目标磁盘进行自定义分区，请勿频繁取消操作，如果一定要进行取消重选，建议重新安装。参考[issue链接](https://gitee.com/src-openeuler/anaconda/issues/I29P84?from=project-issue)
 
-### 29. 安装LSI MegaRAID卡的物理机kdump无法生成vmcore
+### 30. 安装LSI MegaRAID卡的物理机kdump无法生成vmcore
 
 在物理机etc/sysconfig/kdump文件中将second kernel默认启动参数reset_devices删除，可以规避second kernel启动过程中由于MegaRAID卡驱动复位设备所致IO请求未完成问题，以成功生成vmcore。
 
 详情请参考文档[安装指南中的常见问题10](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html#%E9%97%AE%E9%A2%9810%E5%AE%89%E8%A3%85lsi-megaraid%E5%8D%A1%E7%9A%84%E7%89%A9%E7%90%86%E6%9C%BAkdump%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90vmcore)
 
-### 30. 树莓派启动失败
+### 31. 树莓派启动失败
 
 刷写 openEuler 发布的树莓派镜像后，树莓派启动失败，可以尝试将完整的镜像重新刷写入 SD 卡。
 
 详情请参考文档[安装在树莓派的常见问题1](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-1.html#%E9%97%AE%E9%A2%981%E6%A0%91%E8%8E%93%E6%B4%BE%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5)
 
-### 31. nmcli 命令连接 WIFI 失败
+### 32. nmcli 命令连接 WIFI 失败
 
 执行 nmcli dev wifi connect SSID password PWD 命令连接 WIFI 失败。原因在与执行的命令缺少密码。注意，如果密码中包含特殊字符，需要使用单引号将密码括起来。如果使用 nmcli 命令行连接 WIFI 失败，建议使用 nmtui 字符界面进行连接。
 
 具体操作步骤请参考文档[安装在树莓派的常见问题2](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-1.html#%E9%97%AE%E9%A2%982nmcli-%E5%91%BD%E4%BB%A4%E8%BF%9E%E6%8E%A5-wifi-%E5%A4%B1%E8%B4%A5)
 
-### 32. tensorflow包及相关包安装失败
+### 33. tensorflow包及相关包安装失败
 
 tensorflow的依赖包暂时未升级至适配tensorflow==2.12.1的版本，因此需要通过pip手动安装其依赖软件。
 
@@ -228,7 +236,7 @@ tensorflow的依赖包暂时未升级至适配tensorflow==2.12.1的版本，因�
 
 <p style="margin-top:32px">
 
-如常见问题内未能解决您的需求，请邮件至社区[邮件列表](/zh/community/mailing-list/)或[社区论坛](https://forum.openeuler.org/)交流
+如常见问题内未能解决您的需求，请邮件至社区[邮件列表](/zh/community/mailing-list/)、参加[社区论坛](https://forum.openeuler.org/)或在[QuickIssue](https://quickissue.openeuler.org) 提交问题。
 
 </p>
 

@@ -1,0 +1,81 @@
+.repo-status {
+  :deep(.o-tag) {
+    --tag-color: var(--o-color-white);
+    --tag-bd-color: transparent;
+    min-width: 72px;
+
+    &.type0 {
+      --tag-bg-color: var(--o-color-success1);
+    }
+    &.type1 {
+      --tag-bg-color: #03b5a5;
+    }
+    &.type2 {
+      --tag-bg-color: #f5cd05;
+    }
+    &.type3 {
+      --tag-bg-color: var(--o-color-warning1);
+    }
+    &.type4 {
+      --tag-bg-color: var(--o-color-danger1);
+    }
+  }
+}
+.indicators {
+  .repo-status {
+    :deep(.o-tag) {
+      min-width: 56px;
+      border-radius: 2px;
+    }
+  }
+}
+
+.apply-status {
+  :deep(.o-tag) {
+    min-width: 72px;
+    color: var(--o-color-white);
+    &.open {
+      --tag-bg-color: var(--o-color-warning1);
+      --tag-bd-color: var(--o-color-warning1);
+    }
+    &.approved {
+      --tag-bg-color: var(--o-color-success1);
+      --tag-bd-color: var(--o-color-success1);
+    }
+    &.revoked {
+      --tag-bg-color: var(--o-color-control1);
+      --tag-bd-color: transparent;
+    }
+
+    &.rejected {
+      --tag-bg-color: var(--o-color-danger1);
+      --tag-bd-color: var(--o-color-danger1);
+    }
+  }
+}
+
+.bubble-content {
+  color: var(--o-color-info1);
+  max-width: 300px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+
+  .title {
+    font-weight: bold;
+  }
+}
+
+.header-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .filter-icon {
+    width: 16px;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+}

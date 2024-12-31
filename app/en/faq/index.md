@@ -385,7 +385,7 @@ openEuler currently supports Btrfs but it's worth noting that Btrfs support may 
 
 <p style="margin-top:32px">
 
-If the above FAQs cannot resolve your issue, please send an email to our [mailing lists](/en/community/mailing-list/) describing your issue or discuss it on the [openEuler Forum](https://forum.openeuler.org/).
+If the above FAQs cannot resolve your issue, please send an email to our [mailing lists](/en/community/mailing-list/) describing your issue or discuss it on the [openEuler Forum](https://forum.openeuler.org/) also you can submit your issue on the [QuickIssue](https://quickissue.openeuler.org/en/issues/).
 
 </p>
 

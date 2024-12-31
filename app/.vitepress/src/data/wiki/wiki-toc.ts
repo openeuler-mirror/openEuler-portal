@@ -33,8 +33,16 @@ export default {
           link: 'install/wsl',
         },
         {
-          label: 'Virtualization',
+          label: 'MacOS',
+          link: 'install/macos',
+        },
+        {
+          label: '虚拟化',
           link: 'install/virtualization',
+        },
+        {
+          label: '树莓派',
+          link: 'install/raspberry-pi',
         },
       ],
     },
@@ -73,8 +81,16 @@ export default {
           link: 'install/wsl',
         },
         {
+          label: 'MacOS',
+          link: 'install/macos',
+        },
+        {
           label: 'Virtual Machines',
           link: 'install/virtualization',
+        },
+        {
+          label: 'Raspberry Pi',
+          link: 'install/raspberry-pi',
         },
       ],
     },

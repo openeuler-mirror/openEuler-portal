@@ -121,24 +121,6 @@ export function getSearchCount(params: SearchCountQueryT): Promise<{
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 /**
- * 获取相关软件包数据
- * @param {Object} params 请求参数
- * @param {string} params.keyword 输入关键词
- * @returns {Object}
- */
-export function getSearchRpm(params: { keyword: string }): Promise<{
-  data: SearchRamDataT;
-  msg: string;
-  status: number;
-}> {
-  const url = '/api-node/repo/search';
-  return request
-    .get(url, {
-      params,
-    })
-    .then((res: AxiosResponse) => res.data);
-}
-/**
  * 获取热门搜索数据
  * @param {String} params 语言
  * @returns {Object}

@@ -1,67 +1,53 @@
 <script lang="ts" setup>
-import { reactive, computed, ref, onMounted, onUpdated } from 'vue';
+import { computed } from 'vue';
 import { useData } from 'vitepress';
 
-import { useI18n } from '@/i18n';
+import { useLocale } from '~@/composables/useLocale';
+import { useScreen } from '~@/composables/useScreen';
 import seoConfig from '@/data/common/seo';
 
-import AppRouterTemplate from '@/components/AppRouterTemplate.vue';
+import AppRouterTemplate from '~@/components/AppRouterTemplate.vue';
+import AppRouterTemplateMo from '~@/components/AppRouterTemplateMo.vue';
 
-import banner from '@/assets/banner/banner-download.png';
-import illustration from '@/assets/illustrations/iso.png';
-import { useRouter } from 'vitepress';
+import banner from '~@/assets/category/download/download-banner.png';
+import IconCommunityReleases from '~icons/download/community-releases.svg';
+import IconCommercaialReleases from '~icons/download/commercaial-releases.svg';
 
 const { lang } = useData();
-const i18n = useI18n();
+const { t, locale } = useLocale();
+const { lePadV } = useScreen();
 
-const router = useRouter();
-const clickTab = (val: string) => {
-  val === 'download'
-    ? router.go(`/${lang.value}/download/`)
-    : router.go(`/${lang.value}/download/${val}/`);
-};
 const bannerData = {
   bannerImg: banner,
-  bannerTitle: computed(() => {
-    return i18n.value.download.OUTSIDE_TITLE;
-  }),
-  bannerIllustration: illustration,
+  bannerTitle: computed(() => t('download.download')),
+  subtitle: computed(() => t('download.downloadDec')),
 };
 
-const tabsData = reactive({
-  tabPane: [
-    {
-      label: computed(() => {
-        return i18n.value.download.COMMUNITY;
-      }),
-      name: 'download',
-    },
-    {
-      label: computed(() => {
-        return i18n.value.download.BUSINESS;
-      }),
-      name: 'commercial-release',
-    },
-  ],
-});
-
-const activeTab = ref('');
-onMounted(() => {
-  onUpdated(() => {
-    const pathList = router.route.path.split('/');
-    activeTab.value = pathList[pathList.length - 2];
-  });
-});
+const tabsData = computed(() => [
+  {
+    title: t('download.COMMUNITY'),
+    name: 'download',
+    href: `/${locale.value}/download/`,
+    icon: IconCommunityReleases,
+    subtitle: locale.value === 'zh' ? t('download.communitySub') : '',
+  },
+  {
+    title: t('download.commercaial'),
+    name: 'commercial-release',
+    href: `/${locale.value}/download/commercial-release/`,
+    icon: IconCommercaialReleases,
+    subtitle: locale.value === 'zh' ? t('download.commercaialSub') : '',
+  },
+]);
 </script>
 <template>
   <div>
     <SeoBox :seo-data="seoConfig[lang]?.download" />
-    <AppRouterTemplate
+    <component
+      :is="lePadV ? AppRouterTemplateMo : AppRouterTemplate"
       :banner-data="bannerData"
       :tabs-data="tabsData"
-      :active-tab="activeTab"
-      @click-tab="clickTab"
-    />
+    ></component>
     <Content />
   </div>
 </template>

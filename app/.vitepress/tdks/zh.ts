@@ -413,7 +413,7 @@ const tdks: {
     keywords: 'openEuler, 软件兼容性, 信息',
   },
   'zh/download/archive/detail': {
-    title: 'openEuler历史版本下载 | 下载中心',
+    title: 'openEuler所有版本下载 | 下载中心',
     description: '访问查看openEuler的历史版本及资源。',
     keywords: 'openEuler, 下载, 归档',
   },

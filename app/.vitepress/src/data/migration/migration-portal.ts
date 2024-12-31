@@ -125,7 +125,7 @@ export default {
         },
         {
           name: '使用指南',
-          link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
+          link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
         },
         {
           name: '视频实操',
@@ -418,7 +418,7 @@ export default {
         {
           name: 'User Guide',
 
-          link: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html',
+          link: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
         },
       ],
 

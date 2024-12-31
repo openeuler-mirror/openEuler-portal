@@ -171,6 +171,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
               >
                 <template #forum>
                   <span v-if="isZh" class="wx">微信号 openeuler123</span>
+                  <!-- TODO: i18n 里面不要放 对象，吧数据放到data 里面 -->
                   <span v-else>
                     <a
                       href="https://forum.openeuler.org"

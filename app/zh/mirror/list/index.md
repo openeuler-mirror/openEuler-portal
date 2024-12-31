@@ -11,7 +11,7 @@ head:
 ---
 
 <script setup lang="ts">
-  import TheMirList from "@/views/download/TheMirList.vue"
+  import TheMirList from "~@/views/mirror/TheMirror.vue"
 </script>
 
 <TheMirList />

@@ -13,7 +13,7 @@ export default {
   PRINT_MAP: 'Download',
   LINK_LIST: [
     {
-      URL: 'https://www.openeuler.org/en/download/get-os/',
+      URL: 'https://www.openeuler.org/en/download/#get-openeuler',
       BLANK: true,
     },
     {

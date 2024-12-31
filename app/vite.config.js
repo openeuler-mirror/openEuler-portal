@@ -50,10 +50,28 @@ export default defineConfig({
           path.resolve(__dirname, './.vitepress/src/assets/category/mooc')
         ),
         home: FileSystemIconLoader(
-          path.resolve(__dirname, './.vitepress/src-new/assets/category/home/svgs')
+          path.resolve(
+            __dirname,
+            './.vitepress/src-new/assets/category/home/svg-icons'
+          )
         ),
         case: FileSystemIconLoader(
-          path.resolve(__dirname, './.vitepress/src-new/assets/category/home/case/svg-icons')
+          path.resolve(
+            __dirname,
+            './.vitepress/src-new/assets/category/home/case/svg-icons'
+          )
+        ),
+        download: FileSystemIconLoader(
+          path.resolve(
+            __dirname,
+            './.vitepress/src-new/assets/category/download/svg-icons'
+          )
+        ),
+        search: FileSystemIconLoader(
+          path.resolve(
+            __dirname,
+            './.vitepress/src-new/assets/category/search/svg-icons'
+          )
         ),
         footer: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src/assets/common/footer')
@@ -78,8 +96,12 @@ export default defineConfig({
         changeOrigin: true,
       },
       '/api-search/': {
-        target: 'https://doc-search.openeuler.org/',
+        target: 'https://doc-search.test.osinfra.cn/',
+        // target: 'https://www.openeuler.org',
         changeOrigin: true,
+        headers: {
+          Referer: '',
+        },
         rewrite: (path) => path.replace(/^\/api-search/, ''),
       },
       '/api-chat/': {
@@ -101,10 +123,6 @@ export default defineConfig({
         target: 'https://www.openeuler.org',
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/api-euler/, ''),
-      },
-      '/api-node/': {
-        target: 'https://www.openeuler.org',
-        changeOrigin: true,
       },
       '/api-omapi/': {
         target: 'https://omapi.osinfra.cn/',

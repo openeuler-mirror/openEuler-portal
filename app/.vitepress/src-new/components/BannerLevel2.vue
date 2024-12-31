@@ -55,7 +55,7 @@ onMounted(() => {
         data-aos-duration="800"
       >
         <h1 v-if="title" class="banner-title">{{ title }}</h1>
-        <p v-if="subtitle && !slots.default" class="banner-subtitle">
+        <p v-if="subtitle" class="banner-subtitle">
           {{ subtitle }}
         </p>
         <div v-if="slots.default" class="banner-operation">
@@ -97,41 +97,43 @@ onMounted(() => {
     position: absolute;
     height: 100%;
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
     user-select: none;
   }
 
   .wrap {
     position: relative;
-    max-width: 1504px;
-    margin: 0 auto;
+    max-width: var(--layout-content-max-width);
     padding: 0 var(--layout-content-padding);
+    margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    min-height: 280px;
+    height: 360px;
 
-    @media screen and (max-width: 1080px) {
-      min-height: 200px;
+    @media screen and (max-width: 1680px) {
+      height: 280px;
     }
 
-    @media screen and (max-width: 768px) {
-      min-height: 126px;
+    @media screen and (max-width: 1200px) {
+      height: 220px;
+    }
+    @media screen and (max-width: 840px) {
+      height: 120;
     }
     .banner-text {
       display: flex;
       flex-direction: column;
       position: relative;
-      margin-top: 86px;
-      margin-bottom: 86px;
       max-width: 54%;
-      @include respond-to('pad_h') {
-        margin-top: 64px;
-        margin-bottom: 64px;
-      }
-      @include respond-to('phone') {
-        margin-top: 32px;
-        margin-bottom: 32px;
-      }
+      // @include respond-to('pad_h') {
+      //   margin-top: 64px;
+      //   margin-bottom: 64px;
+      // }
+      // @include respond-to('phone') {
+      //   margin-top: 32px;
+      //   margin-bottom: 32px;
+      // }
 
       .banner-text-bg {
         position: absolute;
@@ -146,18 +148,14 @@ onMounted(() => {
         position: relative;
         z-index: 1;
         color: var(--o-color-white);
-        @include display2;
-        margin-top: 32px;
+        @include display1;
         margin-bottom: 0;
         font-weight: 500;
-        @include respond-to('phone') {
-          margin-top: 12px;
-        }
       }
 
       .banner-subtitle {
         position: relative;
-        margin-top: 6px;
+        margin-top: 16px;
         @include h4;
         color: var(--o-color-white);
         z-index: 1;

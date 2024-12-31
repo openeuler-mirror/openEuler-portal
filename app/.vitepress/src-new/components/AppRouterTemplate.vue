@@ -2,9 +2,8 @@
 import { computed } from 'vue';
 import { useRouter } from 'vitepress';
 
-import { OButton, OTab, OTabPane } from '@opensig/opendesign';
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
-import IconRight from '~icons/app/icon-arrow-right.svg';
+import { OIcon } from '@opensig/opendesign';
 
 const props = defineProps({
   bannerData: {
@@ -42,12 +41,6 @@ const activeRoute = computed(() => {
     return active.value[active.value.length - 2];
   }
 });
-
-const emits = defineEmits(['click-tab']);
-
-function handleTabClick(val: any) {
-  emits('click-tab', val?.props.name);
-}
 </script>
 <template>
   <div>
@@ -55,33 +48,31 @@ function handleTabClick(val: any) {
       :background-image="bannerData.bannerImg"
       :background-text="bannerData.bannerText"
       :title="bannerData.bannerTitle.value"
-      :illustration="bannerData.bannerIllustration"
+      :subtitle="bannerData.subtitle"
     >
-      <a
-        v-for="btn in btnDatas"
-        :href="btn.link.value"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <template v-if="btn?.text?.value">
-          <OButton class="post-btn" type="outline" animation size="medium">
-            {{ btn.text.value }}
-            <template #suffixIcon>
-              <OIcon class="right-icon"><IconRight /></OIcon>
-            </template>
-          </OButton>
-        </template>
-      </a>
     </BannerLevel2>
     <div class="router-tabs">
-      <OTab v-model="activeRoute" @tab-click="handleTabClick">
-        <OTabPane
-          v-for="item in tabsData.tabPane"
+      <div class="tab-pane">
+        <a
+          class="pane-content"
+          v-for="item in tabsData"
+          :href="item.href"
+          :class="{ active: item.name === activeRoute }"
           :key="item.name"
-          :label="item.label"
-          :name="item.name"
-        ></OTabPane>
-      </OTab>
+        >
+          <div class="pane-content-inner">
+            <OIcon class="icon">
+              <component :is="item.icon"></component>
+            </OIcon>
+            <div class="info">
+              <div class="title">{{ item.title }}</div>
+              <div v-if="item.subtitle" class="subtitle">
+                {{ item.subtitle }}
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -91,7 +82,54 @@ function handleTabClick(val: any) {
   margin: 0 auto;
   background-color: var(--e-color-bg2);
 }
-.post-btn {
-  margin-right: 24px;
+.tab-pane {
+  display: grid;
+  min-height: 72px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.pane-content {
+  color: var(--o-color-info1);
+  background-color: var(--o-color-fill2);
+  &:first-child {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &:last-child {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .pane-content-inner {
+    max-width: calc(
+      var(--layout-content-max-width) / 2 - var(--layout-content-padding)
+    );
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include respond-to('<=laptop') {
+      max-width: calc(100% - var(--layout-content-padding));
+    }
+  }
+  .o-icon {
+    margin-right: 16px;
+    font-size: var(--o-icon_size-xl);
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-weight: 500;
+      @include text2;
+    }
+    .subtitle {
+      margin-top: 4px;
+      @include text1;
+    }
+  }
+}
+.pane-content.active {
+  color: var(--o-color-white);
+  background-image: linear-gradient(270deg, #0027a7 0%, #95b2fb 100%);
 }
 </style>

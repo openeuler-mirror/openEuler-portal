@@ -24,7 +24,7 @@ export default {
       {
         title: "获取openEuler OS",
         desc: "提供获取openEuler的不同方式，公有云、容器镜像、windows、MacOS等",
-        href: 'https://www.openeuler.org/zh/download/get-os/'
+        href: 'https://www.openeuler.org/zh/download/#get-openeuler'
       },
       {
         title: "参与社区贡献",
@@ -58,7 +58,7 @@ export default {
       {
         title: "Get openEuler OS",
         desc: "Get openEuler for public clouds, containers, and Windows.",
-        href: 'https://www.openeuler.org/en/download/get-os/'
+        href: 'https://www.openeuler.org/en/download/#get-openeuler'
       },
       {
         title: "Join Community",

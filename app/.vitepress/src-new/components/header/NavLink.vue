@@ -22,10 +22,10 @@ const router = useRouter();
 const linkClick = () => {
   emits('link-click');
   // 解决下载Tab高亮问题
-  if (props.url.startsWith('/download/')) {
-    window.open(`/${lang.value}${props.url}`, '_self');
-    return;
-  }
+  // if (props.url.startsWith('/download/')) {
+  //   window.open(`/${lang.value}${props.url}`, '_self');
+  //   return;
+  // }
   router.go(`/${lang.value}${props.url}`);
 };
 </script>

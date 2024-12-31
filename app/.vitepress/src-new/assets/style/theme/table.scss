@@ -5,7 +5,7 @@
   --table-head-cell-padding: 12px 20px;
   --table-head-bg: var(--o-color-control3-light);
   --table-color: var(--o-color-info1);
-
+  --table-radius: var(--o-radius-xs);
   --table-loading-mask: var(--o-color-info4-inverse);
   .o-table-loading-wrap {
     z-index: 99;
@@ -18,7 +18,21 @@
       @include text1;
     }
   }
+  table th:first-child {
+    padding-left: var(--table-edge-padding);
+  }
 
+  table th:last-child {
+    padding-right: var(--table-edge-padding);
+  }
+
+  table td:first-child {
+    padding-left: var(--table-edge-padding);
+  }
+
+  table td:last-child {
+    padding-right: var(--table-edge-padding);
+  }
   th {
     font-weight: 500;
     border-right: 0;

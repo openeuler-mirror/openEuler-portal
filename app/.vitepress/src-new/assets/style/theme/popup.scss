@@ -1,8 +1,9 @@
 .o-popup {
   --popup-shadow: var(--o-shadow-2);
-  // --popup-bd: 1px solid var(--o-color-control4);
+  --popup-bd: 1px solid var(--o-color-control4);
   .o-popup-body {
     border-radius: var(--popup-radius);
+    border: 1px solid var(--o-color-control4);
   }
   .global-feedback-popup {
     border: none;
@@ -14,4 +15,8 @@
   .o-popup-anchor {
     z-index: 2;
   }
+}
+
+.o-options-popup {
+  --popup-radius: var(--o-radius_control-xs);
 }

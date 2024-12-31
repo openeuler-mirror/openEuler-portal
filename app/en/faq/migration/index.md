@@ -20,7 +20,7 @@ anchor: true
 You can refer to the following resources to help you migrate to openEuler:
 
 - [openEuler Migration page](https://www.openeuler.org/en/migration/)
-- [x2openEuler Usage Guide](https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html)
+- [x2openEuler Usage Guide](https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html)
 - [x2openEuler tool download](https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS/contrib/x2openEuler/noarch/Packages/)
 - [x2openEuler source](https://forum.openeuler.org/t/topic/768)
 - x2openEuler migration demo: [Watch here](https://youtu.be/tk7wlg9-Y3g?si=QDIq5e9m2z53gIHd)

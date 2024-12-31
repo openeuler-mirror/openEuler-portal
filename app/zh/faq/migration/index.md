@@ -14,7 +14,7 @@ anchor: true
 ### 1. 迁移过程中可能需要用到的网站链接
 
 - [openEuler迁移专区](https://www.openeuler.org/zh/migration/)
-- [x2openEuler官方文档](https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html)
+- [x2openEuler官方文档](https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html)
 - [x2openEuler工具下载](https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS/contrib/x2openEuler/noarch/Packages/)
 - x2openEuler需要用到的openEuler的源 [https://forum.openeuler.org/t/topic/768](https://forum.openeuler.org/t/topic/768)
 - [x2openEuler迁移学习](https://hiss.shixizhi.huawei.com/center/privateCenter.htm?schoolId=1643780836745113602&type=studyCenter_LearningTask&sxz-lang=zh_CN&mapDetail=3&mapDetailId=1663089385654558721&freedomMapClickItemId=1681185900091936769&freedomMapClickItemId=1686217461215608834)

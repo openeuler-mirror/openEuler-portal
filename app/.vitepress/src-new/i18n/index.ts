@@ -5,12 +5,15 @@ import { useData } from 'vitepress';
 // 公共模块
 import response from './response';
 import cookie from './cookie';
+import header from './header';
+import footer from './footer';
+import common from './common';
+import search from './search';
 // 业务
 import talentAssessment from './talent-assessment';
 import contactUs from './contact-us';
 import home from './home';
-import header from './header';
-import footer from './footer';
+import download from './download';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -52,25 +55,31 @@ const messages = {
     // 公共模块
     response: response.zh,
     cookie: cookie.zh,
+    header: header.zh,
+    footer: footer.zh,
+    common: common.zh,
+    search: search.zh,
 
     // 业务
     talent: talentAssessment.zh,
     contact: contactUs.zh,
     home: home.zh,
-    header: header.zh,
-    footer: footer.zh,
+    download: download.zh,
   },
   en: {
     // 公共模块
     response: response.en,
     cookie: cookie.en,
+    header: header.en,
+    footer: footer.en,
+    common: common.en,
+    search: search.en,
 
     // 业务
     talent: talentAssessment.en,
     contact: contactUs.en,
     home: home.en,
-    header: header.en,
-    footer: footer.en,
+    download: download.en,
   },
 };
 

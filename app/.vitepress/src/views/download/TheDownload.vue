@@ -15,37 +15,16 @@ import DownloadContent from './DownloadContent.vue';
 
 import AppContent from '@/components/AppContent.vue';
 
-import useWindowResize from '@/components/hooks/useWindowResize';
 
 const { lang } = useData();
 const i18n = useI18n();
 const downloadList = i18n.value.download.COMMUNITY_LIST;
-const screenWidth = useWindowResize();
 const router = useRouter();
 const shownNameList: string[] = [
   'openEuler 24.03 LTS',
   'openEuler 24.09',
 ];
-let shownIndex = 0;
-function setShownNameList() {
-  let ltsIndex = 0;
-  let standerIndex = 0;
-  for (let i = 0; i < downloadList.length; i++) {
-    if (!shownNameList[0] && downloadList[i].LTS) {
-      ltsIndex = i;
-      shownNameList[0] = downloadList[i].NAME;
-    } else if (!shownNameList[1] && !downloadList[i].LTS) {
-      standerIndex = i;
-      shownNameList[1] = downloadList[i].NAME;
-    } else if (shownNameList[0] && shownNameList[1]) {
-      if (standerIndex < ltsIndex) {
-        shownIndex = 1;
-      }
-      break;
-    }
-  }
-}
-// setShownNameList();
+
 // 获取版版本数据
 
 const versionShownName = ref('');
@@ -85,16 +64,6 @@ const queryGetDownloadLink = (version: string) => {
 };
 
 onMounted(() => {
-  watch(
-    () => router.route.path,
-    () => {
-      scenario.value = getUrlParam('scenario');
-      if (scenario.value && screenWidth.value > 1100) {
-        window.scrollTo(0, 200);
-      }
-    },
-    { immediate: true }
-  );
   watch(
     () => versionShownName.value,
     () => {

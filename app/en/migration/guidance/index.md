@@ -42,7 +42,7 @@ When planning to migrate an OS, set up a migration support team comprising membe
 
 ## Conducting Migration Analysis
 
-After the support team is set up, your company needs to determine the project overview, which starts with collecting the names and requirements of services to be migrated, and the software stacks, deployment modes, and server hardware information. The information should be filtered by service provider, OS, and hardware environment, with specified service priority. Then, assess the compatibility in an assessment report of the OS hardware, software, and configurations with openEuler by referring to the [x2openEuler User Guide](https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html), and supplement or replace incompatible software packages.
+After the support team is set up, your company needs to determine the project overview, which starts with collecting the names and requirements of services to be migrated, and the software stacks, deployment modes, and server hardware information. The information should be filtered by service provider, OS, and hardware environment, with specified service priority. Then, assess the compatibility in an assessment report of the OS hardware, software, and configurations with openEuler by referring to the [x2openEuler User Guide](https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html), and supplement or replace incompatible software packages.
 
 x2openEuler can generate a pre-upgrade compatibility assessment report, which includes the following info:
 
@@ -175,7 +175,7 @@ openEuler supports two migration paths:
 
 <img src="./implementation.png" style="margin-bottom: 20px"/>
 
-You are advised to use x2openEuler to assess software compatibility and select a migration path that fits your requirements. After formulating the overall migration plan, you can start service migration. With the x2openEuler tool and compatibility assessment report, fully compatible services can be directly upgraded while retaining the original services and configurations. For details about the in-place upgrade, see the [x2openEuler User Guide](https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduce.html). For migration after adaptation, operations include stopping service, isolating backups, deploying the system and applications, synchronizing configurations, and service cutover. Contact us for a detailed technical guide.
+You are advised to use x2openEuler to assess software compatibility and select a migration path that fits your requirements. After formulating the overall migration plan, you can start service migration. With the x2openEuler tool and compatibility assessment report, fully compatible services can be directly upgraded while retaining the original services and configurations. For details about the in-place upgrade, see the [x2openEuler User Guide](https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html). For migration after adaptation, operations include stopping service, isolating backups, deploying the system and applications, synchronizing configurations, and service cutover. Contact us for a detailed technical guide.
 
 <img src="./upgrade.png"/>
 
