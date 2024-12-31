@@ -256,6 +256,7 @@ function setMirrorLink(index: number) {
   });
   return '';
 }
+const devStation = ['24.03 LTS SP1', '24.09'];
 
 //------------------------ 改版代码 ------------------------------
 // 筛选配置信息
@@ -337,7 +338,9 @@ const columns = [
           <template v-for="option in scenarioList" :key="option.value">
             <ORadio
               v-show="
-                !(isDisable(option.value) && option.label === 'DevStation')
+                option.value.toLowerCase() !== 'devstation' ||
+                (devStation.includes(contentData.VERSION) &&
+                  option.value.toLowerCase() === 'devstation')
               "
               :value="option.value"
             >
