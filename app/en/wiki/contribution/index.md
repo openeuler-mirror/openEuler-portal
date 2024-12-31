@@ -170,7 +170,7 @@ You can also participate in community component packaging. For details, see the 
 
 - Optimize openEuler documentation by participating in [document bug catching](https://docs-bug.openeuler.sh/).
 
-- Create [blogs](https://www.openeuler.org/zh/interaction/blog-list/) or participate in the [community forum](https://forum.openeuler.org/) to share your technical solutions and achievements with the community.
+- Create [blogs](https://www.openeuler.org/en/interaction/blog-list/) or participate in the [community forum](https://forum.openeuler.org/) to share your technical solutions and achievements with the community.
 
 - Participate in the writing of [Success Stories](https://www.openeuler.org/en/showcase/) to demonstrate the use of openEuler or projects of the openEuler community in service scenarios, and the positive effects they have brought.
 
