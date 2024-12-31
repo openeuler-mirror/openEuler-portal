@@ -3,6 +3,87 @@ title: Installation Guide
 category: wiki
 ---
 
+## Obtaining the openEuler Image on AWS
+
+#### Step 1
+
+Log in to the [AWS Console](https://console.aws.amazon.com).
+
+#### Step 2
+
+Expand the **Services** tab, select **Compute** and then **EC2**.
+
+![](./images/aws_4.12.05.png)
+
+![](./images/aws_4.13.43.png)
+
+![](./images/aws_4.34.37.png)
+
+#### Step 3
+
+In the **Images** list, choose **AMI Catalog**.
+![](./images/aws_4.38.12.png)
+
+#### Step 4
+
+Choose **Community AMIs** and search for "openEuler."
+
+![](./images/aws_4.39.49.png)
+
+#### Step 5
+
+Select an openEuler version to create a VM.
+
+
+## Obtaining the openEuler Shared Image on Azure
+
+#### Step 1
+
+Log in to the [Azure Portal](https://portal.azure.com/).
+
+#### Step 2
+
+Go to the account home page and search for "Community images."
+
+   ![](./images/az01.png)
+
+#### Step 3
+
+On the **Community images** page, search for the "openEuler" to view available openEuler images.
+
+   ![](./images/az02.jpeg)
+
+#### Step 4
+
+Click the target image and create a VM.
+
+   ![](./images/az03.jpeg)
+
+
+## Obtaining the openEuler Image on Alibaba Cloud
+
+#### Step 1
+
+Log in to the [Alibaba Cloud Console](https://cn.aliyun.com).
+
+#### Step 2
+
+Expand the **Home** tab and choose **Elastic Compute Service**.
+
+   ![](./images/al01.png)
+
+   ![](./images/al02.png)
+
+#### Step 3
+
+In the **Images** list, choose **Community Images**, and search for "openEuler."
+
+   ![](./images/al03.png)
+
+#### Step 4
+
+Select an openEuler version to create a VM.
+
 ## Obtaining the openEuler Image on Huawei Cloud
 
 This section takes cloud host (instance) creation on Huawei Cloud as an example to illustrate how to use openEuler on a public cloud.

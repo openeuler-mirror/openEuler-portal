@@ -210,7 +210,12 @@ const rsyncCode =
             </span>
           </template>
         </i18n-t>
-        <i18n-t keypath="download.changeImage" tag="p" class="mirror-text">
+        <i18n-t
+          v-if="locale === 'zh'"
+          keypath="download.changeImage"
+          tag="p"
+          class="mirror-text"
+        >
           <template #click>
             <a :href="$t('download.faqLink')">{{ $t('download.click') }}</a>
           </template>
@@ -475,6 +480,7 @@ html[lang='en'] {
 
   .mirror-list-img {
     img {
+      min-height: 30px;
       width: 38px;
     }
   }

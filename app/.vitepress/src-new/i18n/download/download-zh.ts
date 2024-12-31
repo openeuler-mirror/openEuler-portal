@@ -14,7 +14,7 @@ export default {
   lts: '长期支持版本',
   innovation: '社区创新版本',
   communityIntro:
-    'openEuler 社区版分为长期支持版本（LTS）和创新版本，支持X86、AArch、Arm、RISC-V等架构',
+    'openEuler 社区版分为长期支持版本（LTS）和创新版本，支持x86_64、aarch64、ARM32、RISC-V等架构',
   RELEASE_DESC: '发行说明',
   all: '全部',
   filterLts: 'LTS',
@@ -136,7 +136,7 @@ export default {
   MIRROR_ALL_CONTENT_2: '同步openEuler镜像，请执行以下命令：{rsync}',
   changeImage: '如需换源，请{click}',
   click: '点击查看',
-  faqLink: 'fq',
+  faqLink: '/zh/faq/#_20-openeuler如何更换镜像源',
   sizeTitle: '版本空间',
   areaFilter: '地区筛选',
   sizeTip: '如果您使用rsync同步到本地or镜像站，下表展示各个版本占用的存储空间',

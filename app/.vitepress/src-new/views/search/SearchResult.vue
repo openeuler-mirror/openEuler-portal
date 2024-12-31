@@ -198,6 +198,16 @@ const verticalPadding = computed(() => {
   }
 });
 
+const zoneShowCondition = computed(() => {
+  const isInitialPage = props.currentPage === 1 || lePadV.value;
+  const isNotSearch = !props.searchType;
+  return (
+    isNotSearch &&
+    isInitialPage &&
+    (props.softwareList.length || downloadZoneData.value || downloadAggre.value)
+  );
+});
+
 const COUNT_PER_PAGE = [12, 18, 24, 36];
 </script>
 <template>
@@ -257,15 +267,25 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
               :software-zone="softwareList"
               :search-value="searchValue"
             />
-            <SearchDownloadAggre v-if="downloadAggre" />
+            <SearchDownloadAggre v-if="downloadAggre && !downloadZoneData" />
             <SearchDownloadZone
               v-if="downloadZoneData"
               :download-zone="downloadZoneData"
             />
           </div>
           <template v-for="(item, index) in searchResultList" :key="item.id">
+            <template v-if="index === 11 && lePadV">
+              <SearchFeedback
+                class="mo-feedback"
+                size="medium"
+                :keyword="searchValue"
+              />
+            </template>
             <div
-              v-if="item.type !== 'release' && item.type !== 'aggre'"
+              v-if="
+                (item.type !== 'release' || searchType.includes('other')) &&
+                item.type !== 'aggre'
+              "
               class="search-card"
             >
               <h3
@@ -381,6 +401,9 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
   }
   .nofound {
     min-height: min-content;
+  }
+  .mo-feedback {
+    background-color: var(--o-color-fill2);
   }
 
   .pagination-slot {

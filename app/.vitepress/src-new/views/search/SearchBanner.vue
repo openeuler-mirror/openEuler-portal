@@ -189,6 +189,7 @@ defineExpose({ searchRecommendRef });
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      @include tip1;
       .suggest {
         margin-right: 8px;
         cursor: pointer;

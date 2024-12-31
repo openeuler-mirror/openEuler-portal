@@ -302,7 +302,7 @@ const columns = [
           {{ $t(linkData.textKey) }}
         </a>
         <ODivider
-          v-if="index < linkConfigs.length - 1"
+          v-if="contentData[linkData.urlKey] && index < linkConfigs.length - 1"
           :style="{
             '--o-divider-label-gap': '0 8px',
           }"
@@ -462,7 +462,7 @@ const columns = [
         <a
           class="download-link"
           :href="selectMirror[row.index]?.downloadLink + row.Path"
-          :target="row.IS_FOLDER ? '_blank' : '_self'"
+          :target="row.Type === 'file' ? '_self' : '_blank'"
           rel="noopener noreferrer"
         >
           <OButton

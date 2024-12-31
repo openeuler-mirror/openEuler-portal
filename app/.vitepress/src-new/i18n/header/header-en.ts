@@ -75,6 +75,10 @@ export default {
                   NAME: 'Embedded',
                   URL: '/download/?scenario=embedded_img#openEuler 24.09',
                 },
+                {
+                  NAME: 'DevStation',
+                  URL: '/download/?scenario=DevStation#openEuler 24.09',
+                },
               ],
             },
             {

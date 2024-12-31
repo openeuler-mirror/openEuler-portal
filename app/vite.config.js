@@ -104,14 +104,6 @@ export default defineConfig({
         },
         rewrite: (path) => path.replace(/^\/api-search/, ''),
       },
-      '/api-feedback/': {
-        target: 'https://datastat-develop.test.osinfra.cn/',
-        changeOrigin: true,
-        headers: {
-          Referer: '',
-        },
-        rewrite: (path) => path.replace(/^\/api-feedback/, ''),
-      },
       '/api-chat/': {
         target: 'https://autogpt.osinfra.cn/api/',
         changeOrigin: true,
@@ -123,9 +115,7 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api-meeting/, ''),
       },
       '/api/': {
-        // target: 'https://api.openeuler.org',
-        target: 'https://repo-mirrorbits.test.osinfra.cn',
-
+        target: 'https://api.openeuler.org',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },

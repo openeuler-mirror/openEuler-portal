@@ -88,6 +88,10 @@ export default {
           label: 'Virtual Machines',
           link: 'install/virtualization',
         },
+        {
+          label: 'Raspberry Pi',
+          link: 'install/raspberry-pi',
+        },
       ],
     },
   ],

@@ -10,9 +10,9 @@ export default {
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP1/',
         DESC: 'openEuler 24.03 LTS SP1 是基于6.6内核的24.03 LTS版本增强扩展版本，面向服务器、云、边缘计算和嵌入式场景，持续提供更多新特性和功能扩展，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
         RELEASE_DESC_URL:
-          'https://docs.openeuler.org/zh/docs/24.03 LTS SP1/docs/Releasenotes/release_notes.html',
+          'https://docs.openeuler.org/zh/docs/24.03_LTS_SP1/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
-          'https://docs.openeuler.org/zh/docs/24.03 LTS SP1/docs/Installation/installation.html',
+          'https://docs.openeuler.org/zh/docs/24.03_LTS_SP1/docs/Installation/installation.html',
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         WHITE_PAPER: '/whitepaper/openEuler 24.03 LTS SP1 技术白皮书.pdf',
@@ -255,7 +255,7 @@ export default {
         PUBLISH_DATE: '2023/12',
         LTS: true,
         VERSION: '20.03-LTS-SP4',
-        PLANNED_EOL: '2025/12',
+        PLANNED_EOL: '2025/11',
       },
       {
         NAME: 'openEuler 20.03 LTS SP3',
@@ -272,7 +272,7 @@ export default {
         PUBLISH_DATE: '2021/12',
         LTS: true,
         VERSION: '20.03-LTS-SP3',
-        PLANNED_EOL: '2025/12',
+        PLANNED_EOL: '2023/12',
       },
       {
         NAME: 'openEuler 21.09',
@@ -378,7 +378,7 @@ export default {
         PUBLISH_DATE: '2020/03',
         LTS: true,
         VERSION: '20.03-LTS',
-        PLANNED_EOL: '2022/03',
+        PLANNED_EOL: '2021/03',
       },
       {
         NAME: 'openEuler Preview',
@@ -402,9 +402,9 @@ export default {
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP1/',
         DESC: 'openEuler 24.03 LTS SP1, an enhanced version of the 24.03 LTS release based on the 6.6 kernel, is designed for server, cloud, edge computing, and embedded deployments, offering new features and functionality for developers and users across diverse domains.',
         RELEASE_DESC_URL:
-          'https://docs.openeuler.org/en/docs/24.03 LTS SP1/docs/Releasenotes/release_notes.html',
+          'https://docs.openeuler.org/en/docs/24.03_LTS_SP1/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
-          'https://docs.openeuler.org/en/docs/24.03 LTS SP1/docs/Installation/Installation.html',
+          'https://docs.openeuler.org/en/docs/24.03_LTS_SP1/docs/Installation/Installation.html',
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
@@ -650,7 +650,7 @@ export default {
         PUBLISH_DATE: '2023/12',
         LTS: true,
         VERSION: '20.03-LTS-SP4',
-        PLANNED_EOL: '2025/12',
+        PLANNED_EOL: '2025/11',
       },
       {
         NAME: 'openEuler 20.03 LTS SP3',
@@ -668,7 +668,7 @@ export default {
         PUBLISH_DATE: '2021/12',
         LTS: true,
         VERSION: '20.03-LTS-SP3',
-        PLANNED_EOL: '2025/12',
+        PLANNED_EOL: '2023/12',
       },
       {
         NAME: 'openEuler 21.09',
@@ -779,7 +779,7 @@ export default {
         PUBLISH_DATE: '2020/03',
         LTS: true,
         VERSION: '20.03-LTS',
-        PLANNED_EOL: '2022/03',
+        PLANNED_EOL: '2021/03',
       },
       {
         NAME: 'openEuler Preview',
@@ -852,7 +852,7 @@ export const archMap = new Map([
     'aarch64',
     {
       value: 'aarch64',
-      label: 'AArch64',
+      label: 'aarch64',
     },
   ],
   [

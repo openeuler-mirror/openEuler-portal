@@ -233,6 +233,7 @@ const isVisible = ref(false);
 </style>
 <style lang="scss" scoped>
 .o-textarea {
+  --textarea-text-size: 14px;
   --textarea-radius: var(--o-radius-xs);
 }
 .search-feedback {

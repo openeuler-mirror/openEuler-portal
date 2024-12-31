@@ -223,7 +223,7 @@ export default {
       introLink: '/en/wiki/install/cloud/',
       links: [
         {
-          href: 'https://aws.amazon.com/marketplace/pp/prodview-cgu5xymg7qnqg?sr=0-4&ref_=beagle&applicationId=AWSMPContessa',
+          href: '/en/wiki/install/cloud/#obtaining-the-openeuler-image-on-aws',
           label: 'AWS',
           introduce:
             'Amazon Web Services (AWS) is the largest cloud service provider in the world. AWS Marketplace now offers openEuler cloud images in multiple versions. Deploy your openEuler-based environments on AWS today!',
@@ -241,7 +241,7 @@ export default {
             "Alibaba Cloud, Alibaba's cloud computing platform, offers a wide range of products and services. openEuler cloud images are now available in Alibaba Cloud Marketplace, giving unexceptional performance and scalability in your cloud environment.",
         },
         {
-          href: 'https://marketplace.huaweicloud.com/contents/b295de63-8718-4477-961a-46fdffaad701#productid=OFFI1004941126717046784',
+          href: '#obtaining-the-openeuler-image-on-huawei-cloud',
           label: 'Huawei Cloud',
           introduce:
             'Huawei Cloud offers an extensive suite of cloud computing services, including Elastic Cloud Server (ECS) and Object Storage Service (OBS). Find openEuler cloud images in Huawei Cloud Marketplace and unlock the power of this open source OS!',

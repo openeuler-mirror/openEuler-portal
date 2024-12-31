@@ -14,6 +14,6 @@ export function getSearchFeedback(params: FeedbackParamsT): Promise<{
   obj: string[];
   msg: string;
 }> {
-  const url = `/api-feedback/query/search/issue?community=openeuler`;
+  const url = `/api-dsapi/query/search/issue?community=openeuler`;
   return request.post(url, params).then((res) => res.data);
 }

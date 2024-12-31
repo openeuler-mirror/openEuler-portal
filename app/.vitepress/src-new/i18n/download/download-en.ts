@@ -9,7 +9,7 @@ export default {
   community: 'Community Releases',
   commercaial: 'Commercial Releases',
   latest: 'Latest Versions',
-  archive: 'Earlier Versions',
+  archive: 'All Versions',
   versionFilter: '版本筛选',
   communityIntro:
     'openEuler community versions are classified into Long Term Support (LTS) versions and innovation versions. openEuler supports the x86, AArch, Arm, and RISC-V architectures.',
@@ -37,7 +37,7 @@ export default {
     'The recommended mirror sites are based on your IP address. You can find a specific mirror site or create a public mirror site for the openEuler community {link}',
   CLICK_LIST: ' here.',
   MIRROR_LIST_LINK: '/en/mirror/list/',
-  HISTORY: 'Archive',
+  HISTORY: 'All Versions',
   ARCHITECTURE2: 'Architecture',
   SCENARIO2: 'Scenario',
   ARCHITECTUREList: ['x86_64', 'AArch64', 'ARM32'],

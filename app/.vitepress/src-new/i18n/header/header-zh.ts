@@ -157,7 +157,7 @@ export default {
                 {
                   NAME: 'MacOs',
                   DESCRIPTION: '在MacOs上运行openEuler',
-                  URL: '/download/#MacOs',
+                  URL: '/download/#macos',
                 },
                 {
                   NAME: '虚拟机',
