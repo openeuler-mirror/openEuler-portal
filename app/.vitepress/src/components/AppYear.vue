@@ -4,7 +4,12 @@ import { useData } from 'vitepress';
 
 import yearImgZh from '@/assets/category/year/euler-year-zh.png';
 import yearImgEn from '@/assets/category/year/euler-year-en.png';
+import yearImgZhMb from '@/assets/category/year/euler-year-zh-mb.png';
+import yearImgEnMb from '@/assets/category/year/euler-year-en-mb.png';
 
+import useWindowResize from '@/components/hooks/useWindowResize';
+
+const screenWidth = ref(useWindowResize());
 const { lang } = useData();
 const EULER_YEAR = 'https://summary.openeuler.org/';
 
@@ -13,7 +18,9 @@ function closeYear() {
   isShow.value = false;
 }
 const yearImg = computed(() => {
-  return lang.value === 'zh' ? yearImgZh : yearImgEn;
+  return lang.value === 'zh' 
+  ? (screenWidth.value > 840 ? yearImgZh : yearImgZhMb) 
+  : (screenWidth.value > 840 ? yearImgEn : yearImgEnMb);
 });
 </script>
 <template>
@@ -34,10 +41,6 @@ const yearImg = computed(() => {
   left: calc(var(--layout-content-padding) / 2);
   bottom: 164px;
   z-index: 12;
-
-  @include respond-to('<=pad') {
-    display: none;
-  }
 
   .year-link {
     position: absolute;
