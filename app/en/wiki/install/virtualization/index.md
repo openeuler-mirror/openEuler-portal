@@ -5,6 +5,10 @@ category: wiki
 
 # Installing openEuler in VirtualBox on Windows
 
+VirtualBox, originally developed by Innotek GmbH and now maintained by Oracle Corporation, is a VM software component of the Oracle xVM virtualization platform. Users can install openEuler VMs through VirtualBox using images downloaded from the official openEuler repository.
+
+openEuler download link: <https://www.openeuler.org/en/download>
+
 ## Environment Preparation
 
 - Windows 10 (64-bit)
