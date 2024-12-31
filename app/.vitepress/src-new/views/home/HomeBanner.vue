@@ -65,8 +65,12 @@ const onBeforeChange = (idx: number) => {
     theme.value = bannerInfo.value[idx].bg_theme ?? 'light';
   }, 100);
 };
+
+// banner跳转
 const onClick = (href) => {
-  window.open(href);
+  if (href) {
+    window.open(href);
+  }
 };
 </script>
 
@@ -78,7 +82,7 @@ const onClick = (href) => {
       effect="toggle"
       active-class="current-slide"
       indicator-click
-      :auto-play="true"
+      :auto-play="false"
       :data-o-theme="theme"
       @before-change="onBeforeChange"
     >
@@ -257,8 +261,18 @@ const onClick = (href) => {
 </style>
 
 <style lang="scss" scoped>
-// 定制修改item0
+// 定制修改item1
 .banner-item0 {
+  .banner-attach {
+    height: 200px;
+
+    @include respond-to('pad') {
+      height: 160px;
+    }
+  }
+}
+
+.banner-item1 {
   .banner-attach {
     height: 156px;
 
@@ -268,8 +282,8 @@ const onClick = (href) => {
   }
 }
 
-// 定制修改item1
-.banner-item1 {
+// 定制修改item2
+.banner-item2 {
   .banner-content {
     width: 100%;
     justify-content: center;
