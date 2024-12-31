@@ -69,7 +69,10 @@ const getLang = (lang: String) => {
 </script>
 
 <template>
-  <div v-if="!lePadV" class="header-lang">
+  <div
+    v-if="!lePadV"
+    :class="langList.length <= 1 ? 'hide-lang' : 'header-lang'"
+  >
     <ODropdown
       trigger="hover"
       optionPosition="bottom"
@@ -93,7 +96,10 @@ const getLang = (lang: String) => {
     </ODropdown>
   </div>
 
-  <div v-else class="mobile-change-language">
+  <div
+    v-else
+    :class="langList.length <= 1 ? 'hide-lang' : 'mobile-change-language'"
+  >
     <span
       v-for="item in langList"
       :key="item.id"
@@ -108,6 +114,10 @@ const getLang = (lang: String) => {
 .icon {
   font-size: var(--o-icon_size_control-xs);
   margin-left: var(--o-gap-1);
+}
+
+.hide-lang {
+  display: none;
 }
 
 .header-lang {
