@@ -192,7 +192,7 @@ Run the ` **fdisk -l** ` command as the  **root**  user to obtain the drive info
    
    `dd bs=4M if=openEuler-21.09-raspi-aarch64.img of=/dev/sdb`
    
-   > ![](./public_sys-resources/icon-note.gif) **NOTE** 
+   > **NOTE** 
    Generally, the block size is set to 4 MB. If the write operation fails or the written image cannot be used, you can set the block size to 1 MB and try again. However, the write operation is time-consuming when the block size is set to 1 MB.
 
 ## Writing Images on Mac
@@ -221,7 +221,7 @@ Run the ` **diskutil list** ` command as the  **root**  user to obtain the drive
    
    `dd bs=4m if=openEuler-21.09-raspi-aarch64.img of=/dev/disk3`
    
-   > ![](./public_sys-resources/icon-note.gif) **NOTE**
+   > **NOTE**
    > Generally, the block size is set to 4 MB. If the write operation fails or the written image cannot be used, you can set the block size to 1 MB and try again. However, the write operation is time-consuming when the block size is set to 1 MB.
 
 
