@@ -218,7 +218,7 @@ defineExpose({ searchRecommendRef });
     }
 
     :deep(.o-tab-nav) {
-      @include h4;
+      // @include h4;
       color: rgba($color: var(--o-white), $alpha: 0.8);
       @include respond-to('<=pad_v') {
         color: var(--tab-icon-color);

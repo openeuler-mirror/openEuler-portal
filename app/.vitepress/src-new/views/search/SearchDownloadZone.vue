@@ -95,6 +95,7 @@ const goDetail = (url: string) => {
     justify-content: space-between;
     .title {
       @include text2;
+      font-weight: 500;
       .brand-color {
         color: var(--o-color-primary1);
       }

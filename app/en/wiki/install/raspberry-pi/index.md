@@ -108,7 +108,7 @@ Currently, the openEuler Raspberry Pi image supports the 3B, 3B+, and 4B version
 
 ## Installation Modes
 
-> ![](./public_sys-resources/icon-notice.gif) **NOTE**
+>  **NOTE**
 > 
 > - The hardware supports only Raspberry Pi 3B/3B+/4B.
 > - The installation is performed by writing images to the SD card. This section describes how to write images on Windows, Linux, and Mac.
@@ -154,7 +154,7 @@ To format the SD card, perform the following procedures:
 
 ### Writing Images to the SD Card
 
-> ![](./public_sys-resources/icon-notice.gif) **NOTE**   
+>  **NOTE**   
 If the compressed image file **openEuler-21.09-raspi-aarch64.img.xz** is obtained, decompress the file to obtain the **openEuler-21.09-raspi-aarch64.img** image file.
 
 To write the **openEuler-21.09-raspi-aarch64.img** image file to the SD card, perform the following procedures:
@@ -312,19 +312,19 @@ To expand the root directory partition capacity, perform the following procedure
    
    7. Enter the start sector number of the new partition. That is, the start sector number recorded in Step `1`. In the example, the start sector number is `1593344`.
       
-      > ![](./public_sys-resources/icon-notice.gif) **NOTE:**   
+      >  **NOTE:**   
 Do not press **Enter** or use the default parameters.
    
-   8. Press `Enter` to use the last sector number by default as the end sector number of the new partition.
+   1. Press `Enter` to use the last sector number by default as the end sector number of the new partition.
    
-   9. Enter `N` without changing the sector ID.
+   2. Enter `N` without changing the sector ID.
    
-   10. Enter `w` to save the partition settings and exit the interactive CLI.
+   3.  Enter `w` to save the partition settings and exit the interactive CLI.
    
    **Figure 2** Expand the partition capacity<a name="zh-cn_topic_0151920806_f6ff7658b349942ea87f4521c0256c315"></a>  
 ![](./figures/Expand the partition capacity)
 
-3. Run the `fdisk -l` command as the root user to check the drive partition information and ensure that the drive partition is correct. The command output is as follows:
+1. Run the `fdisk -l` command as the root user to check the drive partition information and ensure that the drive partition is correct. The command output is as follows:
    
    ```shell
    # fdisk -l
@@ -341,11 +341,11 @@ Do not press **Enter** or use the default parameters.
    /dev/mmcblk0p3      1593344 31116287 29522944 14.1G 83 Linux
    ```
 
-4. Run the `resize2fs /dev/mmcblk0p3` command as the root user to increase the size of the unloaded file system.
+2. Run the `resize2fs /dev/mmcblk0p3` command as the root user to increase the size of the unloaded file system.
 
-5. Run the `df -lh` command to check the drive space information and ensure that the root directory partition has been expanded.
+3. Run the `df -lh` command to check the drive space information and ensure that the root directory partition has been expanded.
    
-   > ![](./public_sys-resources/icon-notice.gif) **NOTE:**   
+   > **NOTE:**   
 If the root directory partition is not expanded, run the `reboot` command to restart the Raspberry Pi and then run the `resize2fs /dev/mmcblk0p3` command as the root user.
 
 ### Connecting to the Wi-Fi Network
