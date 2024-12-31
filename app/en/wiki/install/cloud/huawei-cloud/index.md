@@ -3,7 +3,7 @@ title: Installation Guide
 category: wiki
 ---
 
-## openEuler Cloud Instance Creation
+## Obtaining the openEuler Image on Huawei Cloud
 
 This section takes cloud host (instance) creation on Huawei Cloud as an example to illustrate how to use openEuler on a public cloud.
 
@@ -41,7 +41,7 @@ This section takes cloud host (instance) creation on Huawei Cloud as an example 
 
       Due to the image release requirements of Huawei Cloud KooGallery, ECSs running openEuler images cannot be accessed via root login or password authentication. The default user is **openeuler**. Therefore, before using the ECS, you need to log in to the console as the **root** user set in step 4 and modify the configuration items in the **/etc/ssh/sshd_config** file as follows:
 
-      ```shell
+      ```ini
       # /etc/ssh/sshd_config
 
       # Allows root user login.
