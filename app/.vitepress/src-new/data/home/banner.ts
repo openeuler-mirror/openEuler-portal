@@ -1,3 +1,8 @@
+import newyear_pc from '~@/assets/category/home/banner/new-year/new-year_pc.jpg';
+import newyear_pad from '~@/assets/category/home/banner/new-year/new-year_pad.jpg';
+import newyear_mb from '~@/assets/category/home/banner/new-year/new-year_mb.jpg';
+import newyear_attach from '~@/assets/category/home/banner/new-year/new-year_attach.png';
+
 import summit2024_pc_light from '~@/assets/category/home/banner/summit2024/summit2024_pc_light.jpg';
 import summit2024_pc_dark from '~@/assets/category/home/banner/summit2024/summit2024_pc_dark.jpg';
 import summit2024_pad_light from '~@/assets/category/home/banner/summit2024/summit2024_pad_light.jpg';
@@ -13,6 +18,13 @@ import innovation_mb from '~@/assets/category/home/banner/innovation/innovation_
 
 export default {
   zh: [
+    {
+      bg_pc: newyear_pc,
+      bg_pad: newyear_pad,
+      bg_mb: newyear_mb,
+      attach: newyear_attach,
+      bg_theme: 'dark',
+    },
     {
       light: {
         bg_pc: summit2024_pc_light,
@@ -43,6 +55,13 @@ export default {
     },
   ],
   en: [
+    {
+      bg_pc: newyear_pc,
+      bg_pad: newyear_pad,
+      bg_mb: newyear_mb,
+      attach: newyear_attach,
+      bg_theme: 'dark',
+    },
     {
       light: {
         bg_pc: summit2024_pc_light,
