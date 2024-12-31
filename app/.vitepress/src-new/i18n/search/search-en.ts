@@ -18,6 +18,8 @@ export default {
   submit: 'Submit',
   cancel: 'Cancel',
   more: 'View More',
+  allVersion: 'All',
   gaussWant: '',
   listEnd: "It's already at the bottom!",
+  latest: 'Latest',
 };

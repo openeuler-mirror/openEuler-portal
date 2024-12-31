@@ -32,7 +32,7 @@ import IconNotFound from '~icons/app-new/icon-bad.svg';
 import IconFeedback from '~icons/app-new/icon-feedback.svg';
 
 const { t } = useLocale();
-const { lePad, isPhone, gtPadV, gtPhone } = useScreen();
+const { isPhone, gtPadV, gtPhone } = useScreen();
 
 const feedbackTxa = ref('');
 const isMessageSuccess = ref(false);
@@ -289,7 +289,7 @@ const isVisible = ref(false);
     margin: 40px 0 0;
     border-radius: var(--o-radius-xs);
     @include respond-to('<=pad') {
-      margin: 24px 0 ;
+      margin: 24px 0;
       border-radius: 8px;
     }
     @include respond-to('<=pad_v') {

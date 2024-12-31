@@ -87,6 +87,9 @@ const goDetail = (url: string) => {
   background-position: center bottom;
   background-repeat: no-repeat;
   border-radius: var(--o-radius-xs);
+  @include respond-to('<=pad_v') {
+    padding: 12px 16px;
+  }
   .download-title {
     display: flex;
     justify-content: space-between;

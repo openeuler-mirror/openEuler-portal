@@ -72,6 +72,10 @@ export default [
     size: '432 GB',
   },
   {
+    release: 'openEuler 24.03 LTS SP1',
+    size: '351 GB',
+  },
+  {
     release: 'openEuler preview',
     size: '189 GB',
   },

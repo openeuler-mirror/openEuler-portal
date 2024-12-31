@@ -44,7 +44,7 @@ export default {
       introLink: '/zh/wiki/install/cloud/',
       links: [
         {
-          href: 'https://aws.amazon.com/marketplace/pp/prodview-cgu5xymg7qnqg?sr=0-4&ref_=beagle&applicationId=AWSMPContessa',
+          href: '/zh/wiki/install/cloud/#在aws获取openeuler镜像',
           label: 'Amazon AWS',
           introduce:
             'Amazon Web Services(AWS)是全球最全面、应用最广泛的云服务平台。AWS Marketplace中提供了多个版本的openEuler云镜像',
@@ -62,13 +62,13 @@ export default {
             '阿里云是阿里巴巴推出的云计算服务，涉及云计算的产品与服务。用户可以在云市场找到多版本的openEuler云镜像',
         },
         {
-          href: 'https://marketplace.huaweicloud.com/contents/b295de63-8718-4477-961a-46fdffaad701#productid=OFFI1004941126717046784',
+          href: '/zh/wiki/install/cloud/#在华为云获取openeuler镜像',
           label: '华为云',
           introduce:
             '华为云提供包括弹性云服务器、对象存储服务等在内的云计算服务。openEuler社区已经将多版本的openEuler云镜像发布到华为云市场',
         },
         {
-          href: 'https://market.cloud.tencent.com/products/39669',
+          href: '/zh/wiki/install/cloud/#在腾讯云获取openeuler镜像',
           label: '腾讯云',
           introduce:
             '腾讯云是腾讯推出的云计算服务，构建覆盖全球的数据中心节点。openEuler社区积极拓展与腾讯云的合作，为用户提供更多版本的openEuler云镜像',
@@ -153,7 +153,7 @@ export default {
       repeat: 1,
       links: [
         {
-          href: '/zh/wiki/install/image/#在orbstack中获取openeuler',
+          href: '/zh/wiki/install/macos/',
           label: 'OrbStack',
           introduce:
             'OrbStack是一个为macOS设计的快速、轻量级且简单的虚拟机平台，用于运行Docker容器和Linux虚拟机。用户可以在OrbStack上充分利用openEuler社区提供的容器镜像',
@@ -197,11 +197,10 @@ export default {
       repeat: 1,
       links: [
         {
-          href: 'https://gitee.com/openeuler/raspberrypi/blob/master/README.md',
+          href: '/zh/wiki/install/raspberry-pi/',
           label: '在树莓派中安装openEuler',
           introduce:
             '树莓派是一款由英国树莓派基金会开发的小型单板计算机，因其低成本、易于编程和灵活性而广受欢迎。用户可以在openEuler官方软件仓下载openEuler的树莓派镜像，在这款流行的硬件平台上体验openEuler操作系统',
-          outlink: true,
         },
       ],
     },
@@ -247,12 +246,6 @@ export default {
           introduce:
             'Huawei Cloud offers an extensive suite of cloud computing services, including Elastic Cloud Server (ECS) and Object Storage Service (OBS). Find openEuler cloud images in Huawei Cloud Marketplace and unlock the power of this open source OS!',
         },
-        {
-          href: 'https://market.cloud.tencent.com/products/39669',
-          label: 'Tencent Cloud',
-          introduce:
-            'Tencent Cloud is a cloud computing platform launched by Tencent, operating in data centers across the globe. Download openEuler cloud images on Tencent Cloud and deploy your openEuler-based environments today!',
-        },
       ],
     },
     {
@@ -281,12 +274,6 @@ export default {
           label: 'Quay.io',
           introduce:
             'Quay.io is one of the leading registries for building, storage, and distributing container images. Get base and application container images on Quay.io with detailed usage instructions. Start deploying openEuler now!',
-        },
-        {
-          href: '/en/wiki/install/image/#在orbstack中获取openeuler',
-          label: 'OrbStack',
-          introduce:
-            'OrbStack is a fast and lightweight VM platform designed to run Docker containers and Linux VMs on macOS. Find the container images by the openEuler community on OrbStack here.',
         },
         {
           href: 'https://hub.oepkgs.net/account/sign-in?globalSearch=openeuler',
@@ -321,6 +308,28 @@ export default {
           label: 'Windows Subsystem for Linux (WSL)',
           introduce:
             'Windows Subsystem for Linux (WSL) is a Microsoft offering that enables Linux environments to directly run on Windows. Download the openEuler application for WSL on Microsoft Store to enjoy an openEuler development environment without leaving your Windows setup.Windows Subsystem for Linux (WSL) is a Microsoft offering that enables Linux environments to directly run on Windows. Download the openEuler application for WSL on Microsoft Store to enjoy an openEuler development environment without leaving your Windows setup.',
+        },
+      ],
+    },
+    {
+      id: 'macos',
+      bg: {
+        light: macOsImg,
+        dark: macOsImgDark,
+      },
+      bgMo: {
+        light: macOsImgMo,
+        dark: macOsImgDarkMo,
+      },
+      title: 'MacOs',
+      intro: 'Running openEuler on MacOs',
+      repeat: 1,
+      links: [
+        {
+          href: '/en/wiki/install/macos/',
+          label: 'OrbStack',
+          introduce:
+            'OrbStack is a fast and lightweight VM platform designed to run Docker containers and Linux VMs on macOS. Find the container images by the openEuler community on OrbStack here.',
         },
       ],
     },
@@ -361,9 +370,8 @@ export default {
       repeat: 1,
       links: [
         {
-          href: 'https://gitee.com/openeuler/raspberrypi/blob/master/README.en.md',
+          href: '/en/wiki/install/raspberry-pi/',
           label: 'Raspberry Pi ',
-          outlink: true,
           introduce:
             'Raspberry Pi is a compact single-board computer developed by the Raspberry Pi Foundation. Praised for its affordability and flexibility, Raspberry Pi images are now available on the official openEuler software repository.',
         },

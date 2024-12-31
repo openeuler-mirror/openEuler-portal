@@ -6,7 +6,7 @@ import { getSearchRecommend } from '@/api/api-search';
 
 import { OIcon, OLink, OButton } from '@opensig/opendesign';
 
-import communityVersionData from '@/data/download/download';
+import communityVersionData from '~@/data/download/download';
 import { subModuleMap } from '~@/data/search';
 
 import { useLocale } from '~@/composables/useLocale';
@@ -25,7 +25,7 @@ const router = useRouter();
       <div class="title">{{ $t('search.gaussWant') }}</div>
     </div>
     <div class="download-version">
-      最新版本: {{ localeCommunityVersionData[0].NAME }}
+      {{ $t('search.latest') }}: {{ localeCommunityVersionData[0].NAME }}
     </div>
     <div class="download-desc">
       {{ localeCommunityVersionData[0].DESC }}
@@ -50,6 +50,9 @@ const router = useRouter();
   background-position: center bottom;
   background-repeat: no-repeat;
   border-radius: var(--o-radius-xs);
+  @include respond-to('<=pad_v') {
+    padding: 12px 16px;
+  }
   .download-title {
     display: flex;
     justify-content: space-between;

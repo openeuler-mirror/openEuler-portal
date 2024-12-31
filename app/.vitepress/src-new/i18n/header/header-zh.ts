@@ -25,28 +25,32 @@ export default {
           NAME: '社区发行版',
           CHILDREN: [
             {
-              NAME: 'openEuler 24.03 LTS',
+              NAME: 'openEuler 24.03 LTS SP1',
               DESCRIPTION:
-                'openEuler 24.03 LTS 是基于Linux 6.6内核的长周期版本，面向服务器、云、边缘计算、AI和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户',
+                'openEuler 24.03 LTS SP1 是基于6.6内核的24.03 LTS版本增强扩展版本，面向服务器、云、边缘计算和嵌入式场景，持续提供更多新特性和功能扩展，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
               TAG: TAG_TYPE.NEW,
-              URL: '/download/#openEuler 24.03 LTS',
+              URL: '/download/#openEuler 24.03 LTS SP1',
               MOBILE_SHOW_CHILD: true,
               CHILDREN: [
                 {
                   NAME: '服务器',
-                  URL: '/download/?scenario=ISO#openEuler 24.03 LTS',
+                  URL: '/download/?scenario=ISO#openEuler 24.03 LTS SP1',
                 },
                 {
                   NAME: '边缘计算',
-                  URL: '/download/?scenario=edge_img#openEuler 24.03 LTS',
+                  URL: '/download/?scenario=edge_img#openEuler 24.03 LTS SP1',
                 },
                 {
                   NAME: '云计算',
-                  URL: '/download/?scenario=virtual_machine_img#openEuler 24.03 LTS',
+                  URL: '/download/?scenario=virtual_machine_img#openEuler 24.03 LTS SP1',
                 },
                 {
                   NAME: '嵌入式',
-                  URL: '/download/?scenario=embedded_img#openEuler 24.03 LTS',
+                  URL: '/download/?scenario=embedded_img#openEuler 24.03 LTS SP1',
+                },
+                {
+                  NAME: 'DevStation',
+                  URL: '/download/?scenario=DevStation#openEuler 24.03 LTS SP1',
                 },
               ],
             },
@@ -113,8 +117,8 @@ export default {
               URL: '/showcase/technical-white-paper/',
             },
             {
-              NAME: '24.03 LTS安装指南',
-              URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/installation.html',
+              NAME: '24.03 LTS SP1安装指南',
+              URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS_SP1/docs/Installation/installation.html',
             },
             {
               NAME: '24.09安装指南',
@@ -126,7 +130,7 @@ export default {
             },
             {
               NAME: '查询所有版本',
-              URL: '/download/archive/',
+              URL: '/download?archive=true',
             },
           ],
           EXTRAS: [
@@ -151,12 +155,17 @@ export default {
                   URL: '/download/#windows',
                 },
                 {
-                  NAME: 'Virtualization',
+                  NAME: 'MacOs',
+                  DESCRIPTION: '在MacOs上运行openEuler',
+                  URL: '/download/#MacOs',
+                },
+                {
+                  NAME: '虚拟机',
                   DESCRIPTION: '在虚拟机上运行openEuler',
                   URL: '/download/#virtualization',
                 },
                 {
-                  NAME: 'Raspberry Pi',
+                  NAME: '树莓派',
                   DESCRIPTION: '在树莓派上安装openEuler',
                   URL: '/download/#raspberrypi',
                 },

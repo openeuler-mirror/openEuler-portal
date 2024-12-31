@@ -94,12 +94,22 @@ const searchValue = computed(() => {
   background-color: rgba($color: #2e53fa, $alpha: 0.04);
   background-position: center bottom;
   background-repeat: no-repeat;
+  .more {
+    position: absolute;
+    right: 0;
+  }
   border-radius: var(--o-radius-xs);
+  @include respond-to('<=pad_v') {
+    padding: 12px 16px;
+  }
   .software-card {
     min-width: 348px;
   }
   :deep(.o-scrollbar-container) {
     padding-bottom: 16px;
+    @include respond-to('<=pad_v') {
+      padding-bottom: 0;
+    }
   }
   .software-title {
     display: flex;
@@ -116,6 +126,10 @@ const searchValue = computed(() => {
     margin-top: 24px;
     display: flex;
     gap: 24px;
+    @include respond-to('<=pad_v') {
+      margin-top: 8px;
+      gap: 16px;
+    }
   }
   .from {
     @include tip2;

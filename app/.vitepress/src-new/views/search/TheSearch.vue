@@ -40,7 +40,7 @@ const searchBannerRef = ref();
 
 const { lePadV } = useScreen();
 
-// const isLoading = ref(true);
+const isPageChange = ref(true);
 
 // 接收搜索数量的数据
 const searchTypeCount = ref<SearchCountResItemT[]>([]);
@@ -71,8 +71,6 @@ watch(
       ];
     }
     searchType.value = res === 'all' ? '' : res;
-    // 重置数据
-    searchResultList.value = [];
     // 其他类型处理
     searchAll();
   }
@@ -192,7 +190,7 @@ function getSussageData() {
 // 获取搜索结果的数据
 const isLoading = ref(true);
 // 获取搜索结果
-const queryGetSearchData = () => {
+const queryGetSearchData = (isPage: boolean) => {
   isLoading.value = true;
   // 版本为全部时 limit 不传
   if (!activeVersion.value) {
@@ -224,10 +222,9 @@ const queryGetSearchData = () => {
   getSearchData(docParams.value)
     .then((res) => {
       if (res.status === 200 && res.obj?.records[0]) {
-        if (lePadV.value && isLoading.value) {
-          console.log(res.obj.records);
+        if (lePadV.value && isPageChange.value) {
           searchResultList.value.push(...res.obj.records);
-        } else if (!lePadV.value) {
+        } else {
           searchResultList.value = res.obj.records;
         }
       } else {
@@ -235,7 +232,7 @@ const queryGetSearchData = () => {
       }
     })
     .finally(() => {
-      isLoading.value = false;
+      isPageChange.value = false;
       isLoading.value = false;
     });
 };
@@ -293,6 +290,7 @@ watch(
 const categorizedData = computed(() => {
   const result = {};
   unMatchedCategory.value = [];
+
   // 初始化分类
   moduleMap.forEach((rule, category) => {
     result[category] = {
@@ -314,22 +312,34 @@ const categorizedData = computed(() => {
         matchedCategory = category;
       }
     });
+
     // 如果没有匹配到分类，归入 "others"
     if (!matchedCategory) {
       matchedCategory = 'other';
       unMatchedCategory.value.push(key);
     }
+
     // 更新分类结果
     result[matchedCategory].total += doc_count;
     if (result[matchedCategory].subModules) {
       result[matchedCategory].subModules.push({ key, doc_count });
     }
   });
+
+  // 对每个分类的 subModules 进行排序
+  Object.keys(result).forEach((category) => {
+    const rule = moduleMap.get(category);
+    if (rule && rule.subModules && result[category].subModules) {
+      result[category].subModules.sort((a, b) => {
+        return rule.subModules.indexOf(a.key) - rule.subModules.indexOf(b.key);
+      });
+    }
+  });
+
   return result;
 });
 
 const handleSearchTypeChange = () => {
-  searchResultList.value = [];
   searchAll();
 };
 const pageSizeChange = () => {
@@ -351,11 +361,11 @@ const getMoreDataMo = () => {
   if (
     lePadV.value &&
     currentPage.value < Math.ceil(total.value / pageSize.value) &&
-    !isLoading.value
+    !isPageChange.value
   ) {
-    isLoading.value = true;
+    isPageChange.value = true;
     currentPage.value++;
-    queryGetSearchData();
+    queryGetSearchData(true);
   }
 };
 </script>

@@ -53,7 +53,7 @@ const localeGetOsData = computed(() => {
             </OButton>
           </a>
         </div>
-        <div class="grid-container">
+        <div class="grid-container" :class="{ en: locale === 'en' }">
           <div
             v-for="link in container.links"
             class="link-container"
@@ -218,6 +218,15 @@ const localeGetOsData = computed(() => {
         grid-column: span 3;
       }
       > :only-child {
+        grid-column: 1 / -1;
+      }
+    }
+    .en {
+    }
+  }
+  #cloud {
+    .en {
+      > :nth-child(4) {
         grid-column: 1 / -1;
       }
     }

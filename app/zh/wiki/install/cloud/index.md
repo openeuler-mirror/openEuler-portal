@@ -3,6 +3,77 @@ title: 安装指引
 category: wiki
 ---
 
+##  在AWS获取openEuler镜像
+
+#### 步骤 1 
+
+登陆AWS控制台<https://console.aws.amazon.com>
+
+#### 步骤 2 展开主页选项卡，进入计算列表，选择EC2
+
+![输入图片说明](./images/aws_3.47.22.png)
+
+![输入图片说明](./images/aws_4.03.06.png)
+
+![输入图片说明](./images/aws_4.04.36.png)
+
+#### 步骤 3 进入映像列表，选择AMI目录
+
+![输入图片说明](./images/aws_3.58.41.png)
+
+#### 步骤 4 选择社区AMI，搜索openEuler
+
+![输入图片说明](./images/aws_4.06.48.png)
+
+#### 步骤 5 选择目标版本创建实例
+
+## Azure获取openEuler共享镜像
+
+#### 步骤 1 
+
+登录 [Azure Portal](https://portal.azure.com/)
+
+#### 步骤 2 
+
+进入账户主页搜索：Community images 服务并进入
+
+![输入图片说明](./images/az01.jpg)
+
+#### 步骤 3 
+
+在 Community images 服务页面搜索关键词：openEuler，即可看到可用的 openEuler 镜像
+
+![输入图片说明](./images/az02.jpg)
+
+#### 步骤 4 
+
+点击目标镜像，即可创建 VM
+
+![输入图片说明](./images/az03.jpg)
+
+## 在阿里云获取openEuler镜像
+
+#### 步骤 1 
+
+登录阿里云控制台<https://cn.aliyun.com>
+
+#### 步骤 2 
+
+展开主页选项卡，选择云服务器 ECS
+
+![输入图片说明](./images/al01.jpeg)
+
+![输入图片说明](./images/al02.jpeg)
+
+#### 步骤 3 
+
+进入**镜像**列表，选择**社区镜像**，搜索 openEuler
+
+![输入图片说明](./images/al03.jpeg)
+
+### 步骤 4 
+
+选择目标版本创建虚机。
 
 ## 在华为云获取openEuler镜像
 
@@ -82,4 +153,38 @@ category: wiki
 
 **其他云上 openEuler 镜像的使用方式与华为云相似，详细使用方法可参考对应云上商品的使用指南。**
 
+## 在腾讯云获取openEuler镜像
 
+#### 步骤 1 
+
+登陆腾讯云控制台 <https://console.cloud.tencent.com/>
+
+#### 步骤 2 
+
+展开选项卡，选择云服务器
+
+![输入图片说明](./images/tt_10.33.39.png)
+
+![输入图片说明](./images/tt_10.36.40.png)
+
+#### 步骤 3 
+
+进入实例列表，选择目标实例类型
+
+![输入图片说明](./images/tt_10.39.15.png)
+
+#### 步骤 4 
+
+选择自定义配置
+
+![输入图片说明](./images/tt_10.42.17.png)
+
+#### 步骤 5
+
+进入云镜像市场，搜索openEuler
+
+![输入图片说明](./images/tt_10.44.00.png)
+
+![输入图片说明](./images/tt_10.46.54.png)
+
+#### 步骤 6 选择目标版本创建实例

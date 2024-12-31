@@ -22,28 +22,32 @@ export default {
           NAME: 'Community Releases',
           CHILDREN: [
             {
-              NAME: 'openEuler 24.03 LTS',
+              NAME: 'openEuler 24.03 LTS SP1',
               DESCRIPTION:
-                'The latest LTS version built on Linux kernel 6.6, suited for server, cloud, edge, AI, and embedded deployments.',
+                'openEuler 24.03 LTS SP1, an enhanced version of the 24.03 LTS release based on the 6.6 kernel, is designed for server, cloud, edge computing, and embedded deployments, offering new features and functionality for developers and users across diverse domains.',
               TAG: TAG_TYPE.NEW,
-              URL: '/download/#openEuler 24.03 LTS',
+              URL: '/download/#openEuler 24.03 LTS SP1',
               MOBILE_SHOW_CHILD: true,
               CHILDREN: [
                 {
                   NAME: 'Server',
-                  URL: '/download/?scenario=ISO#openEuler 24.03 LTS',
+                  URL: '/download/?scenario=ISO#openEuler 24.03 LTS SP1',
                 },
                 {
                   NAME: 'Edge Cloud',
-                  URL: '/download/?scenario=edge_img#openEuler 24.03 LTS',
+                  URL: '/download/?scenario=edge_img#openEuler 24.03 LTS SP1',
                 },
                 {
                   NAME: 'Cloud Computing',
-                  URL: '/download/?scenario=virtual_machine_img#openEuler 24.03 LTS',
+                  URL: '/download/?scenario=virtual_machine_img#openEuler 24.03 LTS SP1',
                 },
                 {
                   NAME: 'Embedded',
-                  URL: '/download/?scenario=embedded_img#openEuler 24.03 LTS',
+                  URL: '/download/?scenario=embedded_img#openEuler 24.03 LTS SP1',
+                },
+                {
+                  NAME: 'DevStation',
+                  URL: '/download/?scenario=DevStation#openEuler 24.03 LTS SP1',
                 },
               ],
             },
@@ -106,8 +110,8 @@ export default {
               URL: '/showcase/technical-white-paper/',
             },
             {
-              NAME: 'openEuler 24.03 LTS Installation Guide',
-              URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/Installation.html',
+              NAME: 'openEuler 24.03 LTS SP1 Installation Guide',
+              URL: 'https://docs.openeuler.org/en/docs/24.03_LTS_SP1/docs/Installation/Installation.html',
             },
             {
               NAME: 'openEuler 24.09 Installation Guide',
@@ -143,6 +147,11 @@ export default {
                   NAME: 'Windows',
                   DESCRIPTION: 'Running openEuler on Windows',
                   URL: '/download/#windows',
+                },
+                {
+                  NAME: 'MacOs',
+                  DESCRIPTION: 'Running openEuler on MacOs',
+                  URL: '/download/#macos',
                 },
                 {
                   NAME: 'Virtualization',

@@ -157,6 +157,9 @@ const repeatTags = (v: string) => {
 
 :deep(.o-card-main) {
   justify-content: space-between;
+  @include respond-to('<=pad_v') {
+    padding: 12px 16px;
+  }
   &:hover {
     .name-info {
       color: var(--o-color-primary1);
@@ -171,6 +174,9 @@ const repeatTags = (v: string) => {
     display: flex;
     height: 60px;
     align-items: flex-start;
+    @include respond-to('<=pad_v') {
+      height: 32px;
+    }
   }
   .pkg-icon {
     height: 32px;
@@ -197,6 +203,9 @@ const repeatTags = (v: string) => {
     -webkit-box-orient: vertical;
     position: relative;
     word-break: break-all;
+    @include respond-to('<=pad_v') {
+      height: 32px;
+    }
     .name span {
       color: var(--o-color-primary1);
     }
@@ -207,6 +216,9 @@ const repeatTags = (v: string) => {
     justify-content: space-between;
     .tags-box {
       margin-top: 24px;
+      @include respond-to('<=pad_v') {
+        margin-top: 8px;
+      }
     }
     .maintainers {
       @include tip1;
@@ -217,6 +229,9 @@ const repeatTags = (v: string) => {
       display: flex;
       align-items: center;
       margin-top: 16px;
+      @include respond-to('<=pad_v') {
+        margin-top: 8px;
+      }
       .o-icon {
         margin-right: 8px;
         color: var(--o-color-info3);
@@ -289,6 +304,9 @@ const repeatTags = (v: string) => {
     position: relative;
     word-break: break-all;
     height: 48px;
+    @include respond-to('<=pad_v') {
+      height: 36px;
+    }
     --linear-gradient: var(--o-mixedgray-1);
     &.dark {
       --linear-gradient: var(--o-mixedgray-4);

@@ -161,6 +161,9 @@ defineExpose({ searchRecommendRef });
     }
     :deep(.o_box) {
       width: 100%;
+      .o_input {
+        width: 100%;
+      }
     }
     .search-recommend {
       position: absolute;

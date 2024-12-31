@@ -6,6 +6,23 @@ export default {
   zh: {
     COMMUNITY_LIST: [
       {
+        NAME: 'openEuler 24.03 LTS SP1',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP1/',
+        DESC: 'openEuler 24.03 LTS SP1 是基于6.6内核的24.03 LTS版本增强扩展版本，面向服务器、云、边缘计算和嵌入式场景，持续提供更多新特性和功能扩展，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/zh/docs/24.03 LTS SP1/docs/Releasenotes/release_notes.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/zh/docs/24.03 LTS SP1/docs/Installation/installation.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '/whitepaper/openEuler 24.03 LTS SP1 技术白皮书.pdf',
+        LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+        PUBLISH_DATE: '2024/12',
+        LTS: true,
+        VERSION: '24.03 LTS SP1',
+        PLANNED_EOL: '2026/12',
+      },
+      {
         NAME: 'openEuler 24.09',
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.09/',
         DESC: 'openEuler 24.09 是基于6.6内核的创新版本，面向服务器、云、边缘计算、AI和嵌入式场景，提供更多新特性和功能，给开发者和用户带来更新的体验。',
@@ -380,6 +397,22 @@ export default {
   },
   en: {
     COMMUNITY_LIST: [
+      {
+        NAME: 'openEuler 24.03 LTS SP1',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP1/',
+        DESC: 'openEuler 24.03 LTS SP1, an enhanced version of the 24.03 LTS release based on the 6.6 kernel, is designed for server, cloud, edge computing, and embedded deployments, offering new features and functionality for developers and users across diverse domains.',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/en/docs/24.03 LTS SP1/docs/Releasenotes/release_notes.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/en/docs/24.03 LTS SP1/docs/Installation/Installation.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        LIFE_CYCLE_URL: '/en/other/lifecycle/',
+        PUBLISH_DATE: '2024/12',
+        LTS: true,
+        VERSION: '24.03 LTS SP1',
+        PLANNED_EOL: '2026/12',
+      },
       {
         NAME: 'openEuler 24.09',
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.09/',

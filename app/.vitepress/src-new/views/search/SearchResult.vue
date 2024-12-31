@@ -209,7 +209,10 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
         :value="subModule.key"
       >
         <template #radio="{ checked }">
-          <OToggle :checked="checked">
+          <OToggle
+            v-if="subModuleMap.get(subModule.key)?.label"
+            :checked="checked"
+          >
             {{ subModuleMap.get(subModule.key)?.label[locale] }}
           </OToggle>
         </template>
@@ -239,9 +242,13 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
         <div v-if="searchResultList.length" class="content-list">
           <div
             v-if="
-              (!searchType && currentPage === 1 && softwareList.length) ||
-              (!searchType && currentPage === 1 && downloadZoneData) ||
-              (!searchType && currentPage === 1 && downloadAggre)
+              (!searchType &&
+                (currentPage === 1 || lePadV) &&
+                softwareList.length) ||
+              (!searchType &&
+                (currentPage === 1 || lePadV) &&
+                downloadZoneData) ||
+              (!searchType && (currentPage === 1 || lePadV) && downloadAggre)
             "
             class="search-zone"
           >
@@ -258,11 +265,13 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
           </div>
           <template v-for="(item, index) in searchResultList" :key="item.id">
             <div
-              v-if="item.type !== 'release' || item.type !== 'aggre'"
+              v-if="item.type !== 'release' && item.type !== 'aggre'"
               class="search-card"
             >
               <h3
-                v-dompurify-html="item.title"
+                v-dompurify-html="
+                  item.title.replace('-meetings', ` ${$t('search.sigMeeting')}`)
+                "
                 @click="goLink(item, index)"
               ></h3>
               <p
@@ -335,16 +344,8 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
           class="nofound"
           :docs="$t('search.empty')"
         />
-        <SearchFeedback
-          v-if="!lePadV"
-          v-show="!loading"
-          size="medium"
-          :keyword="searchVal"
-        />
-        <div
-          v-show="total > COUNT_PER_PAGE[0] && !loading && !lePadV"
-          class="pagination"
-        >
+        <SearchFeedback v-if="!lePadV" size="medium" :keyword="searchVal" />
+        <div v-show="total > COUNT_PER_PAGE[0] && !lePadV" class="pagination">
           <OPagination
             v-model:page="currentPage"
             v-model:page-size="pageSize"
@@ -397,6 +398,14 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
     margin-bottom: 40px;
     @include respond-to('<=pad_v') {
       margin-bottom: 16px;
+    }
+  }
+  .o-radio-group {
+    @include respond-to('<=pad_v') {
+      .o-toggle {
+        --toggle-bg-color: var(--o-color-fill2);
+        --toggle-bg-color-hover: var(--o-color-fill2);
+      }
     }
   }
   .search-content {

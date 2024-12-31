@@ -21,7 +21,9 @@ export default {
   gaussWant: '猜你想找：openEuler版本下载',
   softwareZoneTitle: '{searchVal}软件中心下载包',
   downloadZoneTitle: '{searchVal}下载',
-  goDownload: '前往下载中心',
+  goDownload: '前往下载',
   empty: '未找到相关内容，请尝试其他搜索词',
   listEnd: '已经到底了！',
+  sigMeeting: 'SIG组会议纪要',
+  latest: '最新版本',
 };

@@ -16,11 +16,11 @@ import {
 
 import { getVersionInfo } from '@/api/api-mirror';
 import { getVersionList } from '@/shared/download';
-import communityVersionData from '@/data/download/download';
+import communityVersionData from '~@/data/download/download';
 
 import FilterableTableHeader from '~@/components/FilterableTableHeader.vue';
 
-import { archMap } from '@/data/download/download';
+import { archMap } from '~@/data/download/download';
 
 import { VERSION_LIST, SCENARIO_LIST } from '~@/data/download/download';
 

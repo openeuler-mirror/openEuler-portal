@@ -5,7 +5,7 @@ import { useRouter } from 'vitepress';
 
 import { getDownloadLink, getVersionInfo } from '@/api/api-mirror';
 
-import communityVersionData from '@/data/download/download';
+import communityVersionData from '~@/data/download/download';
 
 import { constructDownloadData } from '@/shared/download';
 import { getUrlParam } from '~@/utils/common';

@@ -1,29 +1,3 @@
-export const tagList = {
-  all: '全部',
-  docs: '文档',
-  gitee: '代码仓库',
-  mail: '邮件列表',
-  migration: '迁移',
-  service: '服务',
-  updates: {
-    val: '动态',
-    tags: {
-      blog: '博客',
-      news: '新闻',
-      forum: '论坛',
-    },
-  },
-  more: {
-    val: '更多',
-    tags: {
-      showcase: '案例',
-      other: '其他',
-      whitepaper: '白皮书',
-      packages: '软件包',
-    },
-  },
-};
-
 export const moduleMap = new Map([
   [
     'all',
@@ -60,7 +34,7 @@ export const moduleMap = new Map([
         zh: '学习',
         en: 'Learn',
       },
-      subModules: ['whitepaper', 'showcase'],
+      subModules: ['whitepaper', 'showcase', 'migration'],
     },
   ],
   [
@@ -147,8 +121,8 @@ export const subModuleMap = new Map([
     'docs',
     {
       from: {
-        zh: ['学习', '下载中心'],
-        en: ['Learn', 'Download Center'],
+        zh: ['学习', '文档中心'],
+        en: ['Learn', 'Documentation'],
       },
     },
   ],
@@ -266,15 +240,6 @@ export const subModuleMap = new Map([
     },
   ],
   [
-    'migration',
-    {
-      from: {
-        zh: ['学习', '迁移与运维', '迁移专区'],
-        en: ['Learn', 'Migration', 'Migrate to openEuler'],
-      },
-    },
-  ],
-  [
     'service',
     {
       from: {
@@ -286,6 +251,10 @@ export const subModuleMap = new Map([
   [
     'migration',
     {
+      label: {
+        zh: '迁移',
+        en: 'Migration',
+      },
       from: {
         zh: ['学习', '迁移与运维', '迁移专区'],
         en: ['Learn', 'Migration', 'Migrate to openEuler'],

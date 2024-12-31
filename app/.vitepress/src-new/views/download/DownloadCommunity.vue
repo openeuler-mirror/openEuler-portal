@@ -4,7 +4,7 @@ import { ref, computed, onMounted } from 'vue';
 import { OTab, OTabPane } from '@opensig/opendesign';
 import AppSection from '~@/components/AppSection.vue';
 
-import communityVersionData from '@/data/download/download';
+import communityVersionData from '~@/data/download/download';
 
 import { useLocale } from '~@/composables/useLocale';
 
@@ -19,7 +19,11 @@ import { getUrlParam } from '~@/utils/common';
 const { locale, t } = useLocale();
 
 const activeTab = ref('latest');
-const shownNameList: string[] = ['openEuler-24.03-LTS', 'openEuler-24.09'];
+const shownNameList: string[] = [
+  'openEuler-24.03-LTS-SP1',
+  'openEuler-24.09',
+  'openEuler-22.03-LTS-SP4',
+];
 
 // 获取版版本数据
 

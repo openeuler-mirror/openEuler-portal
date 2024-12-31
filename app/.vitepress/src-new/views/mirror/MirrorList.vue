@@ -192,16 +192,30 @@ const rsyncCode =
           }}</a>
         </template>
       </i18n-t>
-      <i18n-t keypath="download.MIRROR_ALL_CONTENT_2" tag="p" class="rsync-tip">
-        <template #rsync>
-          <span class="rsync-code"
-            >{{ rsyncCode }}
-            <OIcon class="icon-copy" @click="handleCopyText(rsyncCode, $event)">
-              <IconCopy />
-            </OIcon>
-          </span>
-        </template>
-      </i18n-t>
+      <div class="rsync-box">
+        <i18n-t
+          keypath="download.MIRROR_ALL_CONTENT_2"
+          tag="p"
+          class="rsync-tip"
+        >
+          <template #rsync>
+            <span class="rsync-code"
+              >{{ rsyncCode }}
+              <OIcon
+                class="icon-copy"
+                @click="handleCopyText(rsyncCode, $event)"
+              >
+                <IconCopy />
+              </OIcon>
+            </span>
+          </template>
+        </i18n-t>
+        <i18n-t keypath="download.changeImage" tag="p" class="mirror-text">
+          <template #click>
+            <a :href="$t('download.faqLink')">{{ $t('download.click') }}</a>
+          </template>
+        </i18n-t>
+      </div>
     </div>
     <!-- 筛选 -->
     <div class="filter-box">
@@ -384,11 +398,18 @@ const rsyncCode =
   @include text1;
   color: var(--o-color-info1);
   text-align: center;
+  .rsync-box {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    justify-content: center;
+    @include respond-to('<=pad') {
+      flex-direction: column;
+    }
+  }
   .rsync-tip {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 12px;
     @include respond-to('<=pad') {
       flex-direction: column;
     }
@@ -398,7 +419,7 @@ const rsyncCode =
       padding: 8px 16px;
       background-color: var(--o-color-control2-light);
       border-radius: var(--o-radius-xs);
-      margin-left: 12px;
+      margin: 0 12px;
       @include respond-to('<=pad') {
         margin-top: 8px;
         padding: 6px 8px;
