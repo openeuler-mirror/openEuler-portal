@@ -112,22 +112,37 @@ Currently, the openEuler Raspberry Pi image supports the 3B, 3B+, and 4B version
 > 
 > - The hardware supports only Raspberry Pi 3B/3B+/4B.
 > - The installation is performed by writing images to the SD card. This section describes how to write images on Windows, Linux, and Mac.
-> - The image used in this section is the Raspberry Pi image of openEuler. For details about how to obtain the image, see [Installation Preparations](Installation-Preparations1.md).
+> - The image used in this section is the Raspberry Pi image of openEuler. For details about how to obtain the image, see Installation Preparations.
 
 <!-- TOC -->
 
-- [Installation Modes](#installation-modes)
-    - [Writing Images on Windows](#writing-images-on-windows)
-        - [Formatting the SD Card](#formatting-the-sd-card)
-        - [Writing Images to the SD Card](#writing-images-to-the-sd-card)
-    - [Writing Images on Linux](#writing-images-on-linux)
-        - [Checking Drive Partition Information](#checking-drive-partition-information)
-        - [Unmounting the SD Card](#unmounting-the-sd-card)
-        - [Writing Images to the SD Card](#writing-images-to-the-sd-card-1)
-    - [Writing Images on Mac](#writing-images-on-mac)
-        - [Checking Drive Partition Information](#checking-drive-partition-information-1)
-        - [Unmounting the SD Card](#unmounting-the-sd-card-1)
-        - [Writing Images to the SD Card](#writing-images-to-the-sd-card-2)
+- [Installation on Raspberry Pi](#installation-on-raspberry-pi)
+  - [Installation Source](#installation-source)
+  - [Verifying the Image Integrity](#verifying-the-image-integrity)
+    - [Overview](#overview)
+    - [Prerequisites](#prerequisites)
+    - [Procedures](#procedures)
+  - [Installation Requirements](#installation-requirements)
+    - [Hardware Compatibility](#hardware-compatibility)
+    - [Minimum Hardware Specifications](#minimum-hardware-specifications)
+  - [Installation Modes](#installation-modes)
+  - [Writing Images on Windows](#writing-images-on-windows)
+    - [Formatting the SD Card](#formatting-the-sd-card)
+    - [Writing Images to the SD Card](#writing-images-to-the-sd-card)
+  - [Writing Images on Linux](#writing-images-on-linux)
+    - [Checking Drive Partition Information](#checking-drive-partition-information)
+    - [Unmounting the SD Card](#unmounting-the-sd-card)
+    - [Writing Images to the SD Card](#writing-images-to-the-sd-card-1)
+  - [Writing Images on Mac](#writing-images-on-mac)
+    - [Checking Drive Partition Information](#checking-drive-partition-information-1)
+    - [Unmounting the SD Card](#unmounting-the-sd-card-1)
+    - [Writing Images to the SD Card](#writing-images-to-the-sd-card-2)
+  - [Installation Guide](#installation-guide)
+  - [Starting the System](#starting-the-system)
+  - [Logging in to the System](#logging-in-to-the-system)
+  - [Configuring the System](#configuring-the-system)
+    - [Expanding the Root Directory Partition](#expanding-the-root-directory-partition)
+    - [Connecting to the Wi-Fi Network](#connecting-to-the-wi-fi-network)
 
 <!-- /TOC -->
 ## Writing Images on Windows
@@ -227,7 +242,7 @@ Run the ` **diskutil list** ` command as the  **root**  user to obtain the drive
 
 ## Installation Guide
 
-This section describes how to enable the Raspberry Pi function after [Writing Raspberry Pi Images into the SD card](./Installation-Modes1.md).
+This section describes how to enable the Raspberry Pi function after Writing Raspberry Pi Images into the SD card.
 
 <!-- TOC -->
 - [Installation Guide](#installation-guide)
