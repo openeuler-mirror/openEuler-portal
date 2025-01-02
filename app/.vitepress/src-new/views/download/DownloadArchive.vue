@@ -372,14 +372,11 @@ const searchVal = ref('');
         <template #default="scope">
           <OLink
             :href="
-              scope.row.PREVIEW
-                ? scope.row.DOWNLOAD_URL
-                : '/' +
-                  lang +
-                  '/download/archive/detail/?version=' +
-                  scope.row.Version
+              '/' +
+              lang +
+              '/download/archive/detail/?version=' +
+              scope.row.Version
             "
-            :target="scope.row.PREVIEW ? '_blank' : '_self'"
           >
             <span>{{ t('download.DOWNLOADGO') }}</span>
             <template #suffix>
@@ -474,14 +471,11 @@ const searchVal = ref('');
               <div class="value">
                 <OLink
                   :href="
-                    version?.PREVIEW
-                      ? version?.DOWNLOAD_URL
-                      : '/' +
-                        lang +
-                        '/download/archive/detail/?version=' +
-                        version.Version
+                    '/' +
+                    lang +
+                    '/download/archive/detail/?version=' +
+                    version.Version
                   "
-                  :target="version.PREVIEW ? '_blank' : '_self'"
                 >
                   <span>{{ t('download.DOWNLOADGO') }}</span>
                   <template #suffix>

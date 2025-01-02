@@ -380,19 +380,6 @@ export default {
         VERSION: '20.03-LTS',
         PLANNED_EOL: '2021/03',
       },
-      {
-        NAME: 'openEuler Preview',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-preview/',
-        DESC: 'openEuler Preview 为社区制作的尝鲜版，旨在对于新技术的探索，当前包含了对于RISC-V架构的支持。',
-        INSTALL_GUIDENCE_URL:
-          'https://gitee.com/openeuler/RISC-V/blob/master/documents/Installing.md',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/RISC-V/issues',
-        GET_ISO_URL: 'https://repo.openeuler.org/',
-        PUBLISH_DATE: '2020/09',
-        LTS: false,
-        VERSION: '20.03-LTS',
-        PREVIEW: true,
-      },
     ],
   },
   en: {
@@ -780,18 +767,6 @@ export default {
         LTS: true,
         VERSION: '20.03-LTS',
         PLANNED_EOL: '2021/03',
-      },
-      {
-        NAME: 'openEuler Preview',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-preview/',
-        DESC: 'openEuler Preview is a trial version of the community designed to explore new technologies and currently includes support for the RISC-V architecture.',
-        INSTALL_GUIDENCE_URL:
-          'https://gitee.com/openeuler/RISC-V/blob/master/documents/Installing.md',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/RISC-V/issues',
-        GET_ISO_URL: 'https://repo.openeuler.org/',
-        PUBLISH_DATE: '2020/09',
-        LTS: false,
-        PLANNED_EOL: '',
       },
     ],
   },

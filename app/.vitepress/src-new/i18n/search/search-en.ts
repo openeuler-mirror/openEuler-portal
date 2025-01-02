@@ -20,9 +20,11 @@ export default {
   more: 'View More',
   allVersion: 'All',
   gaussWant: 'get OS',
+  softwareZoneTitle: '{searchVal} download',
   downloadZoneTitle: '{searchVal} download',
   listEnd: "It's already at the bottom!",
   latest: 'Latest',
   goDownload: 'Download',
   sigMeeting: '',
+  empty: 'NotFound !',
 };

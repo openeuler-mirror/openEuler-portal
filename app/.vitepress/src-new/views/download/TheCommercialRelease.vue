@@ -432,7 +432,7 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
           </OCheckboxGroup>
           <ODivider :style="{ '--o-divider-gap': '12px' }" />
           <div class="filter-drawer-title">
-            {{ t('download.PUBLISH_DATE') }}
+            {{ t('download.ARCHITECTURE') }}
           </div>
           <OCheckboxGroup v-model="activeArch" @change="handleArchClick">
             <OCheckbox value="">

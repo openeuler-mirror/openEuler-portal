@@ -63,7 +63,7 @@ const localeGetOsData = computed(() => {
               <a
                 class="link"
                 :href="link.href"
-                target="_blank"
+                :target="link.href.startsWith('http') ? '_blank' : ''"
                 rel="noopener noreferrer"
               >
                 {{ link.label }}

@@ -112,7 +112,6 @@ onMounted(() => {
       <OTabPane value="latest" :label="$t('download.latest')">
         <template v-for="(latestVersion, index) in latestVersions" :key="index">
           <DownloadVersionCard
-            v-if="latestVersion.versionData?.length"
             :scenario="latestVersion.latestCommunityVersionData.scenario"
             :id="latestVersion.latestCommunityVersionData.NAME"
             :version-data="latestVersion.versionData"

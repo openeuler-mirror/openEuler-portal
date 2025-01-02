@@ -323,7 +323,6 @@ const isVisible = ref(false);
     }
   }
   &.small {
-    min-width: 300px;
     .title {
       border-bottom: 1px solid var(--o-color-control4);
       padding: 0 0 12px;
