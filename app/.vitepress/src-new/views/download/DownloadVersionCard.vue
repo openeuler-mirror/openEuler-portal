@@ -235,6 +235,12 @@ watch(
     deep: true,
   }
 );
+watch(
+  () => props.scenario,
+  () => {
+    initActiveScenario();
+  }
+);
 onMounted(async () => {
   watch(activeArch, function () {
     getTableData();
@@ -286,9 +292,7 @@ const columns = [
     <!-------------- 版本基本信息 -------------->
     <h2 class="title">
       {{ contentData?.NAME }}
-      <OTag v-if="contentData?.NAME?.includes('LTS')" class="lts">{{
-        $t('download.lts')
-      }}</OTag>
+      <OTag v-if="contentData?.LTS" class="lts">{{ $t('download.lts') }}</OTag>
       <OTag v-else class="innovation"> {{ $t('download.innovation') }}</OTag>
     </h2>
     <p class="subtitle">Planned EOL: {{ contentData?.PLANNED_EOL }}</p>
