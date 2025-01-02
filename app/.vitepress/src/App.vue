@@ -101,18 +101,19 @@ onMounted(() => {
 
 <template>
   <AppHeader />
-    <OConfigProvider :locale="isZh ? zhCN : enUS">
-      <el-config-provider :locale="elLocale">
-        <main :class="frontmatter.class ? frontmatter.class : ''">
-          <component :is="comp" v-if="isCustomLayout"></component>
-          <Content v-else />
-          <FloatingButton v-if="lang === 'zh'" />
-          <FloatingButtonEn v-else />
-        </main>
-      </el-config-provider>
-    </OConfigProvider>
-    <CookieNotice />
-    <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
+  <OConfigProvider :locale="isZh ? zhCN : enUS">
+    <el-config-provider :locale="elLocale">
+      <main :class="frontmatter.class ? frontmatter.class : ''">
+        <component :is="comp" v-if="isCustomLayout"></component>
+        <Content v-else />
+        <FloatingButton v-if="lang === 'zh'" />
+        <FloatingButtonEn v-else />
+        <AppYear />
+      </main>
+    </el-config-provider>
+  </OConfigProvider>
+  <CookieNotice />
+  <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
   <ClientOnly>
     <AppTour />
   </ClientOnly>

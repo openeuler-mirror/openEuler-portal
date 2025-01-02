@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, watch } from 'vue';
 
 import { OTab, OTabPane } from '@opensig/opendesign';
 import AppSection from '~@/components/AppSection.vue';
@@ -7,6 +7,7 @@ import AppSection from '~@/components/AppSection.vue';
 import communityVersionData from '~@/data/download/download';
 
 import { useLocale } from '~@/composables/useLocale';
+import { useDownload } from '~@/stores/download';
 
 import { getDownloadLink } from '@/api/api-mirror';
 
@@ -30,6 +31,7 @@ const shownNameList: string[] = [
 const scenario = ref('');
 
 const latestVersions = ref([]);
+const downloadStore = useDownload();
 
 const localeCommunityVersionData = computed(() => {
   return communityVersionData[locale.value].COMMUNITY_LIST;
@@ -55,6 +57,15 @@ const queryGetDownloadLink = (version: string, scenario?: string) => {
   });
 };
 
+downloadStore.$subscribe((mutation, state) => {
+  latestVersions.value.forEach((item) => {
+    item.latestCommunityVersionData.scenario = '';
+    if (item?.latestCommunityVersionData.NAME === state.version) {
+      item.latestCommunityVersionData.scenario = state.scenario;
+    }
+  });
+});
+
 // 调用 fetchVersionData 执行任务
 const getVersionLocale = (version: string) => {
   const latestCommunityVersionData = localeCommunityVersionData.value.find(
@@ -63,8 +74,6 @@ const getVersionLocale = (version: string) => {
   if (!latestCommunityVersionData) {
     return; // 如果没有找到对应数据，返回 null
   }
-  latestCommunityVersionData.lts =
-    latestCommunityVersionData.NAME.includes('LTS');
   latestVersions.value.push({
     latestCommunityVersionData,
   });

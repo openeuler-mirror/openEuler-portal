@@ -89,24 +89,24 @@ export default {
               DESCRIPTION:
                 'openEuler 22.03 LTS SP4 是openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同',
               TAG: null,
-              URL: '/download/archive/detail/?version=openEuler 22.03 LTS SP4',
+              URL: '/download/#openEuler 22.03 LTS SP4',
               MOBILE_SHOW_CHILD: true,
               CHILDREN: [
                 {
                   NAME: '服务器',
-                  URL: '/download/archive/detail/?version=openEuler 22.03 LTS SP4&scenario=ISO',
+                  URL: '/download/?scenario=ISO#openEuler 22.03 LTS SP4',
                 },
                 {
                   NAME: '边缘计算',
-                  URL: '/download/archive/detail/?version=openEuler 22.03 LTS SP4&scenario=edge_img',
+                  URL: '/download/?scenario=edge_img#openEuler 22.03 LTS SP4',
                 },
                 {
                   NAME: '云计算',
-                  URL: '/download/archive/detail/?version=openEuler 22.03 LTS SP4&scenario=virtual_machine_img',
+                  URL: '/download/?scenario=virtual_machine_img#openEuler 22.03 LTS SP4',
                 },
                 {
                   NAME: '嵌入式',
-                  URL: '/download/archive/detail/?version=openEuler 22.03 LTS SP4&scenario=embedded_img',
+                  URL: '/download/?scenario=embedded_img#openEuler 22.03 LTS SP4',
                 },
               ],
             },
@@ -160,7 +160,7 @@ export default {
                   URL: '/download/#macos',
                 },
                 {
-                  NAME: '虚拟机',
+                  NAME: '虚拟化',
                   DESCRIPTION: '在虚拟机上运行openEuler',
                   URL: '/download/#virtualization',
                 },

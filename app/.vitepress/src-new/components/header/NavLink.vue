@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { useData, useRouter } from 'vitepress';
 
+import { useDownload } from '~@/stores/download';
+import { getUrlParams } from '~@/utils/common';
+
 const { lang } = useData();
 const props = defineProps({
   url: {
@@ -12,6 +15,8 @@ const props = defineProps({
   },
 });
 
+const downloadStore = useDownload();
+
 const isExternal = () => {
   return props.url.startsWith('https');
 };
@@ -21,12 +26,21 @@ const router = useRouter();
 
 const linkClick = () => {
   emits('link-click');
-  // 解决下载Tab高亮问题
-  // if (props.url.startsWith('/download/')) {
-  //   window.open(`/${lang.value}${props.url}`, '_self');
-  //   return;
-  // }
+  // 解决下载tag 高亮问题
+  if (props.url.startsWith('/download/')) {
+    getDownloadQuery(props.url);
+  }
   router.go(`/${lang.value}${props.url}`);
+};
+
+const getDownloadQuery = (url: string) => {
+  const scenario = getUrlParams(`${window.location.origin}${url}`).get(
+    'scenario'
+  );
+  if (scenario) {
+    downloadStore.setScenario(scenario);
+    downloadStore.setVersion(url.split('#').at(-1) || '');
+  }
 };
 </script>
 

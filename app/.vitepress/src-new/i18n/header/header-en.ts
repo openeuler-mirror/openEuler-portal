@@ -86,24 +86,24 @@ export default {
               DESCRIPTION:
                 'A patch version of openEuler 22.03 LTS. Both versions share the same lifecycle.',
               TAG: null,
-              URL: '/download/archive/detail/?version=openEuler 22.03 LTS SP4',
+              URL: '/download/#openEuler 22.03 LTS SP4',
               MOBILE_SHOW_CHILD: true,
               CHILDREN: [
                 {
                   NAME: 'Server',
-                  URL: '/download/archive/detail/?version=openEuler 22.03 LTS SP4&scenario=ISO',
+                  URL: '/download/?scenario=ISO#openEuler 22.03 LTS SP4',
                 },
                 {
                   NAME: 'Edge Cloud',
-                  URL: '/download/archive/detail/?version=openEuler 22.03 LTS SP4&scenario=edge_img',
+                  URL: '/download/?scenario=edge_img#openEuler 22.03 LTS SP4',
                 },
                 {
                   NAME: 'Cloud Computing',
-                  URL: '/download/archive/detail/?version=openEuler 22.03 LTS SP4&scenario=virtual_machine_img',
+                  URL: '/download/?scenario=virtual_machine_img#openEuler 22.03 LTS SP4',
                 },
                 {
                   NAME: 'Embedded',
-                  URL: '/download/archive/detail/?version=openEuler 22.03 LTS SP4&scenario=embedded_img',
+                  URL: '/download/?scenario=embedded_img#openEuler 22.03 LTS SP4',
                 },
               ],
             },
