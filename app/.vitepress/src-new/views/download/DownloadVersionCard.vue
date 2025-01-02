@@ -338,9 +338,9 @@ const columns = [
           <template v-for="option in scenarioList" :key="option.value">
             <ORadio
               v-show="
-                option.value.toLowerCase() !== 'devstation' ||
                 (devStation.includes(contentData.VERSION) &&
-                  option.value.toLowerCase() === 'devstation')
+                  option.value.toLowerCase() === 'devstation') ||
+                option.value.toLowerCase() !== 'devstation'
               "
               :value="option.value"
             >

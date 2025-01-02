@@ -241,7 +241,7 @@ export default {
             "Alibaba Cloud, Alibaba's cloud computing platform, offers a wide range of products and services. openEuler cloud images are now available in Alibaba Cloud Marketplace, giving unexceptional performance and scalability in your cloud environment.",
         },
         {
-          href: '#obtaining-the-openeuler-image-on-huawei-cloud',
+          href: '/en/wiki/install/cloud/#obtaining-the-openeuler-image-on-huawei-cloud',
           label: 'Huawei Cloud',
           introduce:
             'Huawei Cloud offers an extensive suite of cloud computing services, including Elastic Cloud Server (ECS) and Object Storage Service (OBS). Find openEuler cloud images in Huawei Cloud Marketplace and unlock the power of this open source OS!',

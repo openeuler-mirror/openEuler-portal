@@ -60,7 +60,7 @@ const showDrawer = () => {
   isShowDrawer.value = true;
   const params = `lang=${lang.value}`;
 
-  if (popList.value.length) {
+  if (popList.value?.length) {
     return;
   }
   getPop(params).then((res) => {

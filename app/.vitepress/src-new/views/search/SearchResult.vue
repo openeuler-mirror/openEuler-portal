@@ -113,7 +113,7 @@ const { searchType, currentPage, pageSize, activeVersion } = useVModels(
 const { site } = useData();
 const { locale } = useLocale();
 const cookieStore = useCookieStore();
-const { lePadV } = useScreen();
+const { lePadV, lePad } = useScreen();
 
 const contentRef = ref();
 
@@ -199,12 +199,11 @@ const verticalPadding = computed(() => {
   }
 });
 
-const zoneShowCondition = computed(() => {
-  const isInitialPage = props.currentPage === 1 || lePadV.value;
-  const isNotSearch = !props.searchType;
+// 专区pc 端仅在 全部tab第一页显示，移动端在全部 tab下翻页依然显示
+const zoneShownCondition = computed(() => {
   return (
-    isNotSearch &&
-    isInitialPage &&
+    !props.searchType &&
+    (props.currentPage === 1 || lePadV.value) &&
     (props.softwareList.length || downloadZoneData.value || downloadAggre.value)
   );
 });
@@ -251,18 +250,7 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
       <!-- 搜索内容列表 -->
       <div ref="contentRef" class="content-box">
         <div v-if="searchResultList.length" class="content-list">
-          <div
-            v-if="
-              (!searchType &&
-                (currentPage === 1 || lePadV) &&
-                softwareList.length) ||
-              (!searchType &&
-                (currentPage === 1 || lePadV) &&
-                downloadZoneData) ||
-              (!searchType && (currentPage === 1 || lePadV) && downloadAggre)
-            "
-            class="search-zone"
-          >
+          <div v-if="zoneShownCondition" class="search-zone">
             <SearchDownloadAggre v-if="downloadAggre && !downloadZoneData" />
             <SearchDownloadZone
               v-if="downloadZoneData"
@@ -361,7 +349,10 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
                   </div>
                 </div>
               </div>
-              <p v-if="item.version" class="from version">
+              <p
+                v-if="item.version && searchType === 'docs'"
+                class="from version"
+              >
                 <span>{{ $t('search.version') }}</span>
                 <span>{{ item.version }}</span>
               </p>
@@ -397,8 +388,13 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
           {{ $t('search.listEnd') }}
         </div>
       </div>
-      <ODivider v-if="!lePadV" direction="v" />
-      <SearchFeedback v-if="!lePadV" size="small" :keyword="searchVal" />
+      <ODivider v-if="!lePad" direction="v" />
+      <SearchFeedback
+        class="right-feed-back"
+        v-if="!lePad"
+        size="small"
+        :keyword="searchVal"
+      />
     </div>
   </ContentWrapper>
 </template>
@@ -446,17 +442,24 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
   }
   .search-content {
     display: flex;
+    --o-divider-label-gap: 0 40px;
+    @include respond-to('<=pad') {
+      --o-divider-label-gap: 0 16px;
+    }
     .o-divider {
       height: auto;
       --o-divider-label-gap: 0 40px;
+    }
+    .right-feed-back {
+      min-width: 300px;
     }
     .content-box {
       position: relative;
       min-height: 400px;
       width: 100%;
       height: 100%;
-      max-width: calc(100% - 2 * 40px - 1px - 300px);
-      @include respond-to('<=pad_v') {
+      max-width: calc(100% - 2 * var(--o-divider-label-gap) - 1px - 300px);
+      @include respond-to('<=pad') {
         max-width: 100%;
       }
       .content-list {
@@ -497,7 +500,7 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
           .detail {
             cursor: pointer;
             margin-top: 8px;
-            @include text2;
+            @include text1;
             color: var(--o-color-info1);
             @include text-truncate(2);
             :deep(span) {

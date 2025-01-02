@@ -13,7 +13,7 @@ export const moduleMap = new Map([
     {
       label: {
         zh: '下载',
-        en: 'All',
+        en: 'Download',
       },
       subModules: ['communityRelease', 'commercialRelease'],
     },
@@ -131,7 +131,7 @@ export const subModuleMap = new Map([
     {
       from: {
         zh: ['下载', '下载资源', '软件中心'],
-        en: ['Download'],
+        en: ['Download', 'Install', 'EasySoftWare'],
       },
     },
   ],

@@ -23,7 +23,7 @@ const seoConfig: { [key: string]: any } = {
       },
       {
         level: 3,
-        keyWords: '欧拉社区',
+        keyWords: 'openEuler社区',
       },
     ],
     download: [
@@ -89,7 +89,7 @@ const seoConfig: { [key: string]: any } = {
       },
       {
         level: 2,
-        keyWords: '欧拉社区',
+        keyWords: 'openEuler社区',
       },
       {
         level: 3,

@@ -12,18 +12,21 @@ import ContentWrapper from '~@/components/ContentWrapper.vue';
 import IconSearch from '~icons/app-new/icon-header-search.svg';
 
 const props = defineProps({
+  // 建议搜索词
   suggestList: {
     type: Array as PropType<string[]>,
     default: () => {
       return [];
     },
   },
+  // tab数据
   tabData: {
     type: Object,
     default: () => {
       return [];
     },
   },
+  // input 框输入数据
   modelValue: {
     type: String,
     default: '',
@@ -218,7 +221,6 @@ defineExpose({ searchRecommendRef });
     }
 
     :deep(.o-tab-nav) {
-      // @include h4;
       color: rgba($color: var(--o-white), $alpha: 0.8);
       @include respond-to('<=pad_v') {
         color: var(--tab-icon-color);
