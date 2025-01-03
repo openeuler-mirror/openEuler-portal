@@ -442,23 +442,23 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
   }
   .search-content {
     display: flex;
-    --o-divider-label-gap: 0 40px;
-    @include respond-to('<=pad') {
-      --o-divider-label-gap: 0 16px;
-    }
+    --o-divider-label-gap: 40px;
+    --feed-back-width: 300px;
     .o-divider {
       height: auto;
       --o-divider-label-gap: 0 40px;
     }
     .right-feed-back {
-      min-width: 300px;
+      min-width: var(--feed-back-width);
     }
     .content-box {
       position: relative;
       min-height: 400px;
       width: 100%;
       height: 100%;
-      max-width: calc(100% - 2 * var(--o-divider-label-gap) - 1px - 300px);
+      max-width: calc(
+        100% - 2 * var(--o-divider-label-gap) - 1px - var(--feed-back-width)
+      );
       @include respond-to('<=pad') {
         max-width: 100%;
       }
