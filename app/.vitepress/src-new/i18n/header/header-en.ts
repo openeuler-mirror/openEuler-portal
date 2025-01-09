@@ -311,12 +311,14 @@ export default {
               DESCRIPTION:
                 'An open, unified build service for streamlined development.',
               URL: 'https://eulermaker.compass-ci.openeuler.openatom.cn/',
+              ANALYTICSNAME: 'eulermaker',
             },
             {
               NAME: 'Compass-CI',
               DESCRIPTION:
                 'An open platform for reliable, comprehensive testing.',
               URL: 'https://compass-ci.openeuler.org/',
+              ANALYTICSNAME: 'compassci',
             },
             {
               NAME: 'openEuler User Repo',
@@ -351,6 +353,7 @@ export default {
               DESCRIPTION:
                 'A tool to query OS package information and dependencies with ease.',
               URL: 'https://pkgmanage.openeuler.org/',
+              ANALYTICSNAME: 'pkgship',
             },
           ],
         },
