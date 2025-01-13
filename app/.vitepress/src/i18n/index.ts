@@ -2,7 +2,6 @@ import { computed } from 'vue';
 import { useData } from 'vitepress';
 
 import sig from './sig';
-import download from './download';
 import brand from './brand';
 import home from './home';
 import common from './common';
@@ -35,7 +34,6 @@ import faq from './faq';
 const i18n: { [key: string]: any } = {
   zh: {
     sig: sig.zh,
-    download: download.zh,
     brand: brand.zh,
     home: home.zh,
     common: common.zh,
@@ -67,7 +65,6 @@ const i18n: { [key: string]: any } = {
   },
   en: {
     sig: sig.en,
-    download: download.en,
     brand: brand.en,
     home: home.en,
     common: common.en,

@@ -10,7 +10,7 @@ import type {
   DetailedLinkCommercialItemT,
 } from '@/shared/@types/type-download';
 
-import commercialReleaseData from '@/data/download/download-commercial-release';
+import commercialReleaseData from '~@/data/download/download-commercial-release';
 
 import AppSection from '~@/components/AppSection.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';

@@ -67,9 +67,7 @@ const queryGetDownloadLink = (version: string) => {
   versionInfo.value = localeCommunityVersion;
   versionData.value = [];
   getDownloadLink(version).then((res) => {
-    mirrorList.value = res.MirrorList.sort((a, b) => {
-      return b.NetworkBandwidth - a.NetworkBandwidth;
-    });
+    mirrorList.value = res.MirrorList;
     versionData.value = constructDownloadData(res?.FileTree, version, t);
   });
 };

@@ -24,6 +24,7 @@ import zhongkefangde from '~@/assets/category/home/publisher/light/zhongkefangde
 import zhongkehongqi from '~@/assets/category//home/publisher/light/zhongkehongqi.png';
 import seaway from '~@/assets/category/home/publisher/light/seaway.png';
 import langchaoyun_light from '~@/assets/category/home/publisher/light/langchaoyun.png';
+import geidi_light from '~@/assets/category/home/publisher/light/geidi.png';
 
 import baodeLogo_dark from '~@/assets/category/home/publisher/dark/baode.png';
 import xfusionLogo_dark from '~@/assets/category/home/publisher/dark/xfusion.png';
@@ -51,6 +52,7 @@ import zhongkefangdeLogo_dark from '~@/assets/category/home/publisher/dark/zhong
 import zhongkehongqiLogo_dark from '~@/assets/category/home/publisher//dark/zhongkehongqi.png';
 import seaway_dark from '~@/assets/category/home/publisher/dark/seaway.png';
 import langchaoyun_dark from '~@/assets/category/home/publisher/dark/langchaoyun.png';
+import geidi_dark from '~@/assets/category/home/publisher/dark/geidi.png';
 
 export const publisher = [
   {
@@ -153,6 +155,13 @@ export const publisher = [
       dark: hopeRunLogo_dark,
     },
     href: 'http://www.hoperun.com/',
+  },
+  {
+    logo: {
+      light: geidi_light,
+      dark: geidi_dark,
+    },
+    href: 'http://www.grid-elec.com/',
   },
   {
     logo: {

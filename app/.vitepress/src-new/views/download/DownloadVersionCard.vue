@@ -186,13 +186,6 @@ function setActiveMirror() {
         bandwidth: temp[0].NameSpend,
       });
     });
-  } else {
-    tableData.value.forEach(() => {
-      selectMirror.value?.push({
-        downloadLink: contentData.value.GET_ISO_URL,
-        bandwidth: contentData.value.GET_ISO_URL,
-      });
-    });
   }
 }
 function getTableData() {
@@ -262,6 +255,7 @@ function setMirrorLink(index: number) {
   });
   return '';
 }
+// TODO: 优化代码
 const devStation = ['24.03 LTS SP1', '24.09'];
 
 //------------------------ 改版代码 ------------------------------

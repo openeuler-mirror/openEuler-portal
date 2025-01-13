@@ -86,28 +86,17 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-easyeditor/, ''),
       },
-      '/compatibility/': {
-        target: 'https://api-proxy.openeuler.isrc.ac.cn',
+      '/api-certification/': {
+        target: 'https://certification.openeuler.org/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/compatibility/, ''),
-      },
-      '/certification/': {
-        target: 'https://certification.openeuler.org/server/',
-        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-certification/, ''),
       },
       '/api-search/': {
-        target: 'https://doc-search.test.osinfra.cn/',
-        // target: 'https://www.openeuler.org',
+        target: 'https://www.openeuler.org',
         changeOrigin: true,
         headers: {
           Referer: '',
         },
-        rewrite: (path) => path.replace(/^\/api-search/, ''),
-      },
-      '/api-chat/': {
-        target: 'https://autogpt.osinfra.cn/api/',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-chat/, ''),
       },
       '/api-meeting/': {
         target: 'https://meetings.openeuler.openatom.cn/',
@@ -124,6 +113,11 @@ export default defineConfig({
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/api-euler/, ''),
       },
+      '/api-cve/': {
+        target: 'https://api-cve.openeuler.org/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-cve/, ''),
+      },
       '/api-omapi/': {
         target: 'https://omapi.osinfra.cn/',
         changeOrigin: true,
@@ -138,16 +132,6 @@ export default defineConfig({
         target: 'https://mailweb.openeuler.org/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-mail/, ''),
-      },
-      '/ip-api/': {
-        target: 'http://ip-api.com/json/',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/ip-api/, ''),
-      },
-      '/api-certification/': {
-        target: 'https://ccs.openeuler.org/ccs/base/',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-certification/, ''),
       },
     },
   },

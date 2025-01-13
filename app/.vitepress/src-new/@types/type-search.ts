@@ -1,3 +1,11 @@
+export interface SoftwareParamsT {
+  dataType: string;
+  keyword: string;
+  pageNum: number;
+  pageSize: number;
+  keywordType: string;
+}
+
 export interface FeedbackParamsT {
   searchFlag: boolean;
   keyword: string;
@@ -24,4 +32,9 @@ export interface PkgIdsT {
   IMAGE: string;
   EPKG: string;
   OEPKG: string;
+}
+
+export interface SearchCountResItemT {
+  doc_count: number;
+  key: string;
 }

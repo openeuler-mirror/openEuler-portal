@@ -31,6 +31,8 @@ import { getOSType } from '@/shared/download';
 import { uniqueId } from '@/shared/utils';
 import { SCENARIO_LIST, archMap } from '~@/data/download/download';
 
+import type { AppItemT } from '~@/@types/type-search';
+
 import { useCookieStore } from '@/stores/common';
 
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
@@ -81,13 +83,13 @@ const props = defineProps({
     default: '',
   },
   versionList: {
-    type: Array,
+    type: Array as PropType<string[]>,
     default: () => {
       return [];
     },
   },
   softwareList: {
-    type: Array,
+    type: Array as PropType<AppItemT[]>,
     default: () => {
       return [];
     },
@@ -240,9 +242,9 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
       <OOption :label="$t('search.allVersion')" value=""> </OOption>
       <OOption
         v-for="(item, index) in versionList"
-        :key="item.key"
-        :label="item.key"
-        :value="item.key"
+        :key="item"
+        :label="item"
+        :value="item"
       >
       </OOption>
     </OSelect>
@@ -431,6 +433,9 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
     @include respond-to('<=pad_v') {
       margin-bottom: 16px;
     }
+  }
+  .o-select {
+    width: 220px;
   }
   .o-radio-group {
     @include respond-to('<=pad_v') {

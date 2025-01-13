@@ -38,13 +38,13 @@ export default {
       {
         NAME: 'SeawayEdgeV1.00',
         DOWNLOAD_URL:
-          'http://new.haiwei.tech/SeawayEdge/SeawayEdge-v1.00-LTS/ISO/x86_64/SeawayEdge-v1.00-LTS-x86_64-dvd.iso',
+          'https://haiwei.tech/',
         DESC: 'SeawayEdge是中科海微基于openEuler开源社区构建，结合边缘、嵌入式领域场景探索，打造全场景协同的面向数字基础设施的开源操作系统。',
         MANUFACTURER: '中科海微（北京）科技有限公司',
         PUBLISH_DATE: '2023/09',
         DETAILED_LINK: [
           {
-            LINK: 'http://new.haiwei.tech/SeawayEdge/SeawayEdge-v1.00-LTS/ISO/x86_64/SeawayEdge-v1.00-LTS-x86_64-dvd.iso',
+            LINK: 'https://haiwei.tech/',
             ARCH: 'x86_64',
           },
         ],
@@ -79,6 +79,21 @@ export default {
         DESC: '磐石操作系统（简称CSIOS）是中软国际基于openEuler 22.03版本，面向运营商、金融、政企等行业的关键业务而设计开发的企业级服务器操作系统软件。其在openEuler社区版的基础上，融入了众多的自研竞争力特性，完善了生态支持和专业的技术保障。CSIOS可广泛适用于数据库、大数据、云计算、WEB服务等应用场景，支持光盘、U盘和网络等多种安装方式，可部署在物理服务器、虚拟机和容器等环境中，同时可为客户提供灵活的部署、升级和迁移方案。',
         MANUFACTURER: '中软国际科技服务有限公司',
         PUBLISH_DATE: '2023/07',
+        DETAILED_LINK: [
+          {
+            ARCH: 'x86_64',
+          },
+          {
+            ARCH: 'AArch64',
+          },
+        ],
+      },
+      {
+        NAME: '润和企业级服务器操作系统 HopeOS V22',
+        DOWNLOAD_URL: 'https://www.hoperun.com/',
+        DESC: '润和企业级服务器操作系统 HopeOS V22（简称HopeOS V22）是江苏润和软件股份有限公司基于openEuler 22.03 LTS SP1 版本，面向运营商、金融、政企等行业的关键业务而设计开发的企业级服务器操作系统软件。其在openEuler社区版的基础上，融入了众多的自研竞争力特性，完善了生态支持和专业的技术保障。HopeOS V22 可广泛适用于数据库、大数据、云计算、WEB服务等应用场景，支持光盘、U盘和网络等多种安装方式，可部署在物理服务器、虚拟机和容器等环境中，同时可为客户提供灵活的部署、升级和迁移方案。',
+        MANUFACTURER: '江苏润和软件股份有限公司',
+        PUBLISH_DATE: '2023/05',
         DETAILED_LINK: [
           {
             ARCH: 'x86_64',
@@ -248,7 +263,7 @@ export default {
         NAME: 'HopeStage',
         DOWNLOAD_URL: 'http://webapp.hoperun.com:8007/HopeStage/',
         DESC: '企业级通用操作系统HopeStage是基于openEuler构建的企业级Linux操作系统，具备高效、稳定、安全的特性，致力于为企业级的数据库、大数据、云计算、人工智能平台提供安全稳定的运行基础。',
-        MANUFACTURER: '江苏润和',
+        MANUFACTURER: '江苏润和软件股份有限公司',
         PUBLISH_DATE: '2020/09',
         DETAILED_LINK: [
           {
@@ -321,7 +336,7 @@ export default {
         NAME: 'HopeEdge',
         DOWNLOAD_URL: 'http://webapp.hoperun.com:8007/HopeEdge/',
         DESC: '物联网边缘计算操作系统HopeEdge是基于openEuler构建的、面向IoT场景的边缘计算操作系统，具备轻量安全、自主创新、高效互联、快速部署四大关键特性；提供设备管理、数据采集、云边协同、人工智能等功能。',
-        MANUFACTURER: '江苏润和',
+        MANUFACTURER: '江苏润和软件股份有限公司',
         PUBLISH_DATE: '2020/07',
         LTS: false,
         DETAILED_LINK: [

@@ -186,6 +186,7 @@ defineExpose({ searchRecommendRef });
       display: none;
     }
     .suggest-label {
+      @include tip1;
       color: rgba($color: var(--o-white), $alpha: 0.8);
     }
     .suggest-list {
