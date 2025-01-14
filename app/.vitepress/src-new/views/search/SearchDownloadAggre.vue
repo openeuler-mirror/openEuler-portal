@@ -2,12 +2,9 @@
 import { ref, watch, computed } from 'vue';
 import { useRouter } from 'vitepress';
 
-import { getSearchRecommend } from '@/api/api-search';
-
-import { OIcon, OLink, OButton } from '@opensig/opendesign';
+import { OIcon, OButton } from '@opensig/opendesign';
 
 import communityVersionData from '~@/data/download/download';
-import { subModuleMap } from '~@/data/search';
 
 import { useLocale } from '~@/composables/useLocale';
 

@@ -1,20 +1,17 @@
 <script setup lang="ts">
-import { computed, watch, ref, onMounted, reactive, nextTick } from 'vue';
-import { useData } from 'vitepress';
+import { computed, watch, ref, onMounted } from 'vue';
 
-import {
-  getSearchData,
-  getSearchCount,
-  getRelevant,
-  getTagsData,
-} from '@/api/api-search';
+import { getSearchData, getSearchCount, getRelevant } from '@/api/api-search';
 
-import type { SearchCountResItemT } from '@/shared/@types/type-search';
+import communityVersionData from '~@/data/download/download';
+
+import type { SearchCountResItemT, AppItemT } from '~@/@types/type-search';
 import { getSoftwareDocs } from '~@/api/api-search';
 
 import { useSearchValue } from '~@/stores/search';
 import { useCookieStore } from '@/stores/common';
 import { useScreen } from '~@/composables/useScreen';
+import { useLocale } from '~@/composables/useLocale';
 
 import { uniqueId } from '@/shared/utils';
 import { oa } from '@/shared/analytics';
@@ -25,7 +22,7 @@ import SearchResult from './SearchResult.vue';
 
 import { moduleMap } from '~@/data/search';
 
-const { lang, site } = useData();
+const { locale } = useLocale();
 // 当前选择类型
 const currentTab = ref('all');
 // 当前显示的页码
@@ -40,7 +37,7 @@ const searchBannerRef = ref();
 
 const { lePadV } = useScreen();
 
-const isPageChange = ref(true);
+const isPageCountChange = ref(true);
 
 // 接收搜索数量的数据
 const searchTypeCount = ref<SearchCountResItemT[]>([]);
@@ -82,7 +79,7 @@ const docParams = computed(() => {
     keyword: searchValue.value,
     page: currentPage.value,
     pageSize: pageSize.value,
-    lang: lang.value,
+    lang: locale.value,
     type: `${searchType.value}`,
     limit: [
       {
@@ -97,7 +94,7 @@ const docParams = computed(() => {
 const countParams = computed(() => {
   return {
     keyword: searchValue.value,
-    lang: lang.value,
+    lang: locale.value,
     docsVersion: activeVersion.value,
     limit: [
       {
@@ -112,17 +109,12 @@ const countParams = computed(() => {
   };
 });
 
-const tagsParams = reactive({
-  lang: lang.value,
-  category: 'docs',
-  want: 'version',
-});
-const versionList = ref([]);
+const versionList = ref<string[]>([]);
 
 // 接收获取的搜索数据
 const searchResultList: any = ref([]);
 // 接收软件包数据
-const softwareList: any = ref([]);
+const softwareList = ref<AppItemT[]>([]);
 // 总数据数量
 const total = computed(() => {
   if (categorizedData.value[currentTab.value]?.subModules) {
@@ -141,13 +133,14 @@ const activeVersion = ref('');
 // cookie
 const cookieStore = useCookieStore();
 
-async function getVersionTag() {
-  await getTagsData(tagsParams).then((res) => {
-    if (res.obj?.totalNum.length) {
-      activeVersion.value = res.obj?.totalNum[0].key;
-    }
-    versionList.value = res.obj?.totalNum;
-  });
+function getVersionTag() {
+  versionList.value = communityVersionData[locale.value].COMMUNITY_LIST.reduce(
+    (versions, currentValue) => {
+      return [...versions, currentValue.VERSION.replaceAll(' ', '_')];
+    },
+    [] as string[]
+  );
+  activeVersion.value = versionList.value[0];
 }
 
 // 点击搜索框的删除图标
@@ -190,7 +183,7 @@ function getSussageData() {
 // 获取搜索结果的数据
 const isLoading = ref(true);
 // 获取搜索结果
-const queryGetSearchData = (isPage: boolean) => {
+const queryGetSearchData = () => {
   isLoading.value = true;
   // 版本为全部时 limit 不传
   if (!activeVersion.value) {
@@ -222,7 +215,7 @@ const queryGetSearchData = (isPage: boolean) => {
   getSearchData(docParams.value)
     .then((res) => {
       if (res.status === 200 && res.obj?.records[0]) {
-        if (lePadV.value && isPageChange.value) {
+        if (lePadV.value && isPageCountChange.value) {
           searchResultList.value.push(...res.obj.records);
         } else {
           searchResultList.value = res.obj.records;
@@ -232,7 +225,7 @@ const queryGetSearchData = (isPage: boolean) => {
       }
     })
     .finally(() => {
-      isPageChange.value = false;
+      isPageCountChange.value = false;
       isLoading.value = false;
     });
 };
@@ -246,7 +239,7 @@ function searchAll(valueChange?: boolean) {
     if (valueChange) {
       currentTab.value = 'all';
     }
-    searchBannerRef.value.searchRecommendRef.handleSearch(searchValue.value);
+    searchBannerRef.value.searchRecommendRef?.handleSearch(searchValue.value);
     queryGetSearchCount();
     queryGetSearchData();
     queryGetSoftware();
@@ -270,8 +263,8 @@ function handleSelectChange(val: string) {
   history.pushState(null, '', `?search=${encodeURIComponent(val)}`);
 }
 
-onMounted(async () => {
-  await getVersionTag();
+onMounted(() => {
+  getVersionTag();
   if (getUrlParam('search')) {
     searchValue.value = getUrlParam('search');
     currentSearchVal.value = searchValue.value;
@@ -335,7 +328,6 @@ const categorizedData = computed(() => {
       });
     }
   });
-
   return result;
 });
 
@@ -361,11 +353,11 @@ const getMoreDataMo = () => {
   if (
     lePadV.value &&
     currentPage.value < Math.ceil(total.value / pageSize.value) &&
-    !isPageChange.value
+    !isPageCountChange.value
   ) {
-    isPageChange.value = true;
+    isPageCountChange.value = true;
     currentPage.value++;
-    queryGetSearchData(true);
+    queryGetSearchData();
   }
 };
 </script>

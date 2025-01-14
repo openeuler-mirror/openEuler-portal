@@ -20,6 +20,7 @@ import { getUrlParam } from '~@/utils/common';
 const { locale, t } = useLocale();
 
 const activeTab = ref('latest');
+// TODO:从 导航配置取数据
 const shownNameList: string[] = [
   'openEuler-24.03-LTS-SP1',
   'openEuler-24.09',
@@ -40,9 +41,7 @@ const localeCommunityVersionData = computed(() => {
 // 根据版本号查询 下载信息
 const queryGetDownloadLink = (version: string, scenario?: string) => {
   getDownloadLink(version).then((res) => {
-    const mirrorList = res.MirrorList.sort((a, b) => {
-      return b.NetworkBandwidth - a.NetworkBandwidth;
-    });
+    const mirrorList = res.MirrorList;
     const versionData = constructDownloadData(res?.FileTree, version, t);
 
     latestVersions.value.map((item) => {

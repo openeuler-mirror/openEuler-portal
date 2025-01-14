@@ -1,6 +1,6 @@
 import { request, AxiosResponse } from '~@/shared/axios';
 
-import { FeedbackParamsT } from '~@/@types/type-search';
+import { SoftwareParamsT, AppItemT } from '~@/@types/type-search';
 /**
  * es搜索获取首页新闻
  * @param { LocaleT } 语言
@@ -59,8 +59,11 @@ export function getHomeShowCases(params: {
  * @param {string} params.keyword 输入关键词
  * @returns {Object}
  */
-export function getSoftwareDocs(params: FeedbackParamsT): Promise<{
+export function getSoftwareDocs(params: SoftwareParamsT): Promise<{
   msg: string;
+  data: {
+    all: AppItemT[];
+  };
 }> {
   const url = '/api-search/software/docs';
   return request

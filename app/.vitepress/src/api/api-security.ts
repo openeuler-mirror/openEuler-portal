@@ -32,7 +32,7 @@ export function getSecurityList(
   params: SafetyBulletinQueryT
 ): Promise<TotalDataT> {
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/securitynotice/findAll';
+    '/api-cve/cve-security-notice-server/securitynotice/findAll';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 
@@ -44,7 +44,7 @@ export function getSecurityList(
 export function getSecurityDetail(
   securityNoticeNo: string
 ): Promise<SecurityDetailT> {
-  const url = `/api-euler/api-cve/cve-security-notice-server/securitynotice/getBySecurityNoticeNo?securityNoticeNo=${securityNoticeNo}`;
+  const url = `/api-cve/cve-security-notice-server/securitynotice/getBySecurityNoticeNo?securityNoticeNo=${securityNoticeNo}`;
   return request.get(url).then((res: AxiosResponse) => res.data.result);
 }
 
@@ -55,7 +55,7 @@ export function getSecurityDetail(
  */
 export function getCveList(params: CveQueryT): Promise<TotalDataT> {
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/cvedatabase/findAll';
+    '/api-cve/cve-security-notice-server/cvedatabase/findAll';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 
@@ -66,7 +66,7 @@ export function getCveList(params: CveQueryT): Promise<TotalDataT> {
  * @return {Promise<CveDetailT>} cve详情信息
  */
 export function getCveDetail(id: string, name: string): Promise<CveDetailT> {
-  const url = `/api-euler/api-cve/cve-security-notice-server/cvedatabase/getByCveIdAndPackageName?cveId=${id}&packageName=${name}`;
+  const url = `/api-cve/cve-security-notice-server/cvedatabase/getByCveIdAndPackageName?cveId=${id}&packageName=${name}`;
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -80,7 +80,7 @@ export function getAffectedProduct(
   id: string,
   name: string
 ): Promise<AffectProductT[]> {
-  const url = `/api-euler/api-cve/cve-security-notice-server/cvedatabase/getCVEProductPackageList?cveId=${id}&packageName=${name}`;
+  const url = `/api-cve/cve-security-notice-server/cvedatabase/getCVEProductPackageList?cveId=${id}&packageName=${name}`;
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -90,7 +90,7 @@ export function getAffectedProduct(
  */
 export function getDriverArchitecture(): Promise<string[]> {
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/hardwarecomp/getArchitecture';
+    '/api-cve/cve-security-notice-server/hardwarecomp/getArchitecture';
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -100,7 +100,7 @@ export function getDriverArchitecture(): Promise<string[]> {
  */
 export function getHardwareOSOptions(): Promise<string[]> {
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/hardwarecomp/getOS';
+    '/api-cve/cve-security-notice-server/hardwarecomp/getOS';
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -109,7 +109,7 @@ export function getHardwareOSOptions(): Promise<string[]> {
  * @return {Promise<string[]>} 操作系统分类数据
  */
 export function getDriverOSOptions(): Promise<string[]> {
-  const url = '/api-euler/api-cve/cve-security-notice-server/drivercomp/getOS';
+  const url = '/api-cve/cve-security-notice-server/drivercomp/getOS';
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -122,7 +122,7 @@ export function getCompatibilityList(
   params: CompatibilityQueryT
 ): Promise<CompatibilityListT[]> {
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/hardwarecomp/findAll';
+    '/api-cve/cve-security-notice-server/hardwarecomp/findAll';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 
@@ -132,7 +132,7 @@ export function getCompatibilityList(
  * @return {Promise<ConfigurationInfoT>} 详情信息
  */
 export function getConfigurationInfo(id: string): Promise<ConfigurationInfoT> {
-  const url = ` /api-euler/api-cve/cve-security-notice-server/hardwarecomp/getOne?id=${id}`;
+  const url = ` /api-cve/cve-security-notice-server/hardwarecomp/getOne?id=${id}`;
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -142,7 +142,7 @@ export function getConfigurationInfo(id: string): Promise<ConfigurationInfoT> {
  * @return {Promise<AdapterListT[]>} Adapter and Drivers列表
  */
 export function getdetailAapterList(id: string): Promise<AdapterListT[]> {
-  const url = ` /api-euler/api-cve/cve-security-notice-server/hardwarecomp/getAdapterList?hardwareId=${id}`;
+  const url = ` /api-cve/cve-security-notice-server/hardwarecomp/getAdapterList?hardwareId=${id}`;
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -155,27 +155,10 @@ export function getDriverList(
   params: CompatibilityQueryT
 ): Promise<DriverListT[]> {
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/drivercomp/findAll';
+    '/api-cve/cve-security-notice-server/drivercomp/findAll';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 
-/**
- * 获取开源软件列表
- * @param {CompatibilityQueryT} params 获取开源软件列表请求参数
- * @return {Promise<SoftwareListT>} 开源软件列表
- */
-export function getSoftwareList(
-  params: CompatibilityQueryT
-): Promise<SoftwareListT> {
-  const os = params.os ? `&os=${params.os}` : '';
-  const architecture = params.architecture
-    ? `&arch=${params.architecture}`
-    : '';
-  const type = params.type ? `&type=${params.type}` : '';
-  const keyword = params.keyword ? `&keyword=${params.keyword}` : '';
-  const url = `/compatibility/api/web_backend/compat_software_info?page_size=${params.pages.size}&page_num=${params.pages.page}${keyword}${architecture}${os}${type}`;
-  return request.get(url).then((res: AxiosResponse) => res.data);
-}
 
 /**
  * 获取商业软件列表
@@ -194,7 +177,7 @@ export function getBusinessSoftwareList(
     dataSource: new Array(params.dataSource),
     productType: new Array('软件'),
   };
-  const url = `/certification/software/communityChecklist`;
+  const url = `/api-certification/server/certification/software/communityChecklist`;
   return request.post(url, queryData).then((res: AxiosResponse) => res.data);
 }
 
@@ -204,16 +187,7 @@ export function getBusinessSoftwareList(
  * @return {Promise<string[]>} 板卡类型数据
  */
 export function getDriveTypes(lang: string): Promise<string[]> {
-  const url = `/api-euler/api-cve/cve-security-notice-server/drivercomp/getType?lang=${lang}`;
-  return request.get(url).then((res: AxiosResponse) => res.data);
-}
-
-/**
- * 获取软件类型-筛选条件
- * @return {Promise<SofoFilterT>} {Arch:[], Os:[], Type:[]} Type软件类型
- */
-export function getSoftFilter(): Promise<SofoFilterT> {
-  const url = '/compatibility/api/web_backend/query_compat_software';
+  const url = `/api-cve/cve-security-notice-server/drivercomp/getType?lang=${lang}`;
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -222,7 +196,7 @@ export function getSoftFilter(): Promise<SofoFilterT> {
  * @return {Promise<TestOrganizationsT>} 测试机构
  */
 export function getTestOrganizations(): Promise<TestOrganizationsT> {
-  const url = '/certification/software/filterCriteria';
+  const url = '/api-certification/server/certification/software/filterCriteria';
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -233,7 +207,7 @@ export function getTestOrganizations(): Promise<TestOrganizationsT> {
  * @return {Promise<string[]>} CPU数据
  */
 export function getCpu(params: SelectParamsT): Promise<string[]> {
-  const url = `/api-euler/api-cve/cve-security-notice-server/hardwarecomp/getCpu?lang=${params.lang}`;
+  const url = `/api-cve/cve-security-notice-server/hardwarecomp/getCpu?lang=${params.lang}`;
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -242,7 +216,7 @@ export function getCpu(params: SelectParamsT): Promise<string[]> {
  * @return {Promise<string[]>} os厂商数据
  */
 export function getOsName(): Promise<string[]> {
-  const url = '/api-euler/api-cve/cve-security-notice-server/osv/getOsName';
+  const url = '/api-cve/cve-security-notice-server/osv/getOsName';
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -251,7 +225,7 @@ export function getOsName(): Promise<string[]> {
  * @return {Promise<string[]>} 分类列表['嵌入式','服务器']
  */
 export function getOsType(): Promise<string[]> {
-  const url = '/api-euler/api-cve/cve-security-notice-server/osv/getType';
+  const url = '/api-cve/cve-security-notice-server/osv/getType';
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -261,7 +235,7 @@ export function getOsType(): Promise<string[]> {
  * @return {Promise<OsvDataT>} {OsvListT: [], totalCount: number}
  */
 export function getOsTableData(params: OsvQueryT): Promise<OsvDataT> {
-  const url = '/api-euler/api-cve/cve-security-notice-server/osv/findAll';
+  const url = '/api-cve/cve-security-notice-server/osv/findAll';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 
@@ -276,7 +250,7 @@ export function getOsvOne(id: string): Promise<{
   result: OsvListT;
   success: boolean;
 }> {
-  const url = `/api-euler/api-cve/cve-security-notice-server/osv/getOne?id=${id}`;
+  const url = `/api-cve/cve-security-notice-server/osv/getOne?id=${id}`;
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -286,7 +260,7 @@ export function getOsvOne(id: string): Promise<{
  */
 export function getProductList(): Promise<string[]> {
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/securitynotice/getAffectedProduct';
+    '/api-cve/cve-security-notice-server/securitynotice/getAffectedProduct';
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -302,7 +276,7 @@ export function getComponentList(params: ComponentQueryT): Promise<string[]> {
     }
   });
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/securitynotice/getAffectedComponent';
+    '/api-cve/cve-security-notice-server/securitynotice/getAffectedComponent';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
 
@@ -318,7 +292,7 @@ export function getSolutionList(params: CompatibilityQueryT): Promise<{
   success: boolean;
 }> {
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/solutioncomp/findAll';
+    '/api-cve/cve-security-notice-server/solutioncomp/findAll';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 
@@ -333,7 +307,7 @@ export function getSolution(params: { lang: string }): Promise<{
   success: boolean;
 }> {
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/solutioncomp/getSolution';
+    '/api-cve/cve-security-notice-server/solutioncomp/getSolution';
   return request
     .get(url, {
       params,
@@ -352,7 +326,7 @@ export function getCertificationType(params: { lang: string }): Promise<{
   success: boolean;
 }> {
   const url =
-    '/api-euler/api-cve/cve-security-notice-server/solutioncomp/getCertificationType';
+    '/api-cve/cve-security-notice-server/solutioncomp/getCertificationType';
   return request
     .get(url, {
       params,

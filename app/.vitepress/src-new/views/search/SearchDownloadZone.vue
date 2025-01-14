@@ -1,8 +1,5 @@
 <script lang="ts" setup>
-import { ref, watch } from 'vue';
 import { useRouter } from 'vitepress';
-
-import { getSearchRecommend } from '@/api/api-search';
 
 import { OIcon, OLink } from '@opensig/opendesign';
 

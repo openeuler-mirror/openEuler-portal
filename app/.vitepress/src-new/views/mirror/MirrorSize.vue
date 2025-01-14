@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import repoData from '@/data/download/repo-size';
+import repoData from '~@/data/download/repo-size';
 
 import { OTable } from '@opensig/opendesign';
 
