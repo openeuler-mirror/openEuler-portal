@@ -1,5 +1,5 @@
 ---
-title: 天翼云科技有限公司（FaaS产品）
+title: 天翼云FaaS产品
 category: showcase
 industry: 运营商
 company: 天翼云科技有限公司
