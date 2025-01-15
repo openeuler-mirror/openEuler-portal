@@ -1,9 +1,9 @@
 ---
-title: 联通系统集成公司
+title: 联通智能化运营平台
 category: showcase
 industry: 运营商
 company: 联通系统集成公司
-summary: 联通智能化运营平台 完成全生命周期运营平台的平稳迁移
+summary: 构建全栈自主创新的基础设施服务层
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/provider.png
 ---
