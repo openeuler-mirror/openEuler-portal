@@ -1,5 +1,5 @@
 ---
-title: 中移苏州研究院
+title: 中移苏州研究院公有云平台
 category: showcase
 industry: 运营商
 company: 中国移动
