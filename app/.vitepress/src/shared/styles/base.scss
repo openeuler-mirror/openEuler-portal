@@ -9,8 +9,8 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   scroll-behavior: smooth;
   box-sizing: border-box;
-  font-family: 'Helvetica', 'Arial', 'PingFang SC', 'Microsoft YaHei',
-    sans-serif;
+  background-color: var(--e-color-bg1);
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica', 'Arial', sans-serif;
   @include scrollbar;
 }
 
@@ -36,8 +36,7 @@ img {
 
 pre,
 code {
-  font-family: 'Helvetica', 'Arial', 'PingFang SC', 'Microsoft YaHei',
-    sans-serif;
+  font-family: 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', monospace;
 }
 
 a {
@@ -64,6 +63,7 @@ h6,
 p {
   margin: 0;
 }
+
 dd,
 dl,
 li,
@@ -77,9 +77,22 @@ ol,
 ul {
   list-style: none outside none;
 }
+
+button,
+input,
+optgroup,
+section,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
 .overflow {
   overflow: hidden;
 }
+
 .hm-t-container {
   display: none;
 }

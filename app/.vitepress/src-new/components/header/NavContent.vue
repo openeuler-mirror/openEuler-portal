@@ -174,7 +174,6 @@ const descMouseenter = (e: MouseEvent) => {
     align-items: center;
 
     .item-name {
-      font-family: PingFangSC;
       font-weight: 500;
       white-space: nowrap;
       @include text1;
