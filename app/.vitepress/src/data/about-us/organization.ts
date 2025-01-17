@@ -6,7 +6,7 @@ import wanghao from '@/assets/category/organization/wanghao.png';
 import lipeiyuan from '@/assets/category/organization/lipeiyuan.png';
 import liuwenqing from '@/assets/category/organization/liuwenqing.png';
 import liuyanfei from '@/assets/category/organization/liuyanfei.png';
-import wuyanjun from '@/assets/category/organization/wuyanjun.png';
+import qusheng from '@/assets/category/organization/qusheng.png';
 import zujianzhong from '@/assets/category/organization/zujianzhong.png';
 import zhangshenju from '@/assets/category/organization/zhangshenju.png';
 import zhongxin from '@/assets/category/organization/zhongxin.png';
@@ -31,6 +31,8 @@ import xiexiuqi from '@/assets/category/organization/xiexiuqi.png';
 import xiongwei from '@/assets/category/organization/xiongwei.png';
 import lvcongqing from '@/assets/category/organization/lvcongqing.png';
 import zhaochuanfeng from '@/assets/category/organization/zhaochuanfeng.png';
+import huzhengce from '@/assets/category/organization/huzhengce.png';
+import xujian from '@/assets/category/organization/xujian.png';
 
 // 专家委员会
 import huotaiwen from '@/assets/category/organization/expert/huotaiwen.png';
@@ -44,10 +46,10 @@ import wuheshuan from '@/assets/category/organization/expert/wuheshuan.png';
 // 品牌委员会
 import liangbin from '@/assets/category/organization/brand/liangbin.png';
 import huangzhaowei from '@/assets/category/organization/brand/huangzhaowei.png';
-import kanglifeng from '@/assets/category/organization/brand/kanglifeng.png';
+import zhengchuanrong from '@/assets/category/organization/brand/zhengchuanrong.png';
 import xulu from '@/assets/category/organization/brand/xulu.png';
 import lizhenning from '@/assets/category/organization/brand/lizhenning.png';
-import majun from '@/assets/category/organization/brand/majun.png';
+import zhengli from '@/assets/category/organization/brand/zhengli.png';
 import wangxinhui from '@/assets/category/organization/brand/wangxinhui.png';
 import wendan from '@/assets/category/organization/brand/wendan.png';
 import zhangyin from '@/assets/category/organization/brand/zhangyin.png';
@@ -149,15 +151,15 @@ export default {
         ],
       },
       {
-        title: '2023-2024 年 openEuler 委员会',
+        title: 'openEuler 委员会',
         list: [
           {
             title: '主席',
             personalList: [
               {
-                img: jiangdayong,
-                name: '江大勇',
-                position: [''],
+                img: xiongwei,
+                name: '熊伟',
+                position: ['华为技术有限公司'],
               },
             ],
           },
@@ -175,8 +177,8 @@ export default {
                 position: ['湖南麒麟信安科技股份有限公司'],
               },
               {
-                img: wuyanjun,
-                name: '武延军',
+                img: qusheng,
+                name: '屈晟',
                 position: ['中国科学院软件研究所'],
               },
               {
@@ -205,6 +207,11 @@ export default {
                 position: ['超聚变数字技术有限公司'],
               },
               {
+                img: xujian,
+                name: '徐健',
+                position: ['中国南方电网有限责任公司'],
+              },
+              {
                 img: yangjiguo,
                 name: '杨继国',
                 position: ['英特尔（中国）有限公司'],
@@ -230,8 +237,8 @@ export default {
             title: '执行总监',
             personalList: [
               {
-                img: xiongwei,
-                name: '熊伟',
+                img: huzhengce,
+                name: '胡正策',
                 position: ['华为技术有限公司'],
               },
             ],
@@ -371,13 +378,6 @@ export default {
             gitee: 'xiexiuqi',
           },
           {
-            img: xiongwei,
-            name: '熊伟',
-            post: '委员',
-            email: 'myeuler@163.com',
-            gitee: 'myeuler',
-          },
-          {
             img: zhaochuanfeng,
             name: '赵川峰',
             post: '委员',
@@ -409,12 +409,6 @@ export default {
             email: 'huangzhaowei@xfusion.com',
           },
           {
-            img: kanglifeng,
-            name: '康丽锋',
-            position: ['委员'],
-            email: 'kanglifeng@uniontech.com',
-          },
-          {
             img: humingyue,
             name: '胡明月',
             position: ['委员'],
@@ -425,12 +419,6 @@ export default {
             name: '李震宁',
             position: ['委员'],
             email: 'lizhenning@kylinos.cn',
-          },
-          {
-            img: majun,
-            name: '马骏',
-            position: ['委员'],
-            email: 'junmacy@isoftstone.com',
           },
           {
             img: wangxinhui,
@@ -455,6 +443,18 @@ export default {
             name: '张迎',
             position: ['委员'],
             email: 'zhangy1317@chinaunicom.cn',
+          },
+          {
+            img: zhengchuanrong,
+            name: '郑传荣',
+            position: ['委员'],
+            email: 'zhengchuanrong@uniontech.com',
+          },
+          {
+            img: zhengli,
+            name: '郑莉',
+            position: ['委员'],
+            email: 'lizhengq@isoftstone.com',
           },
         ],
       },
@@ -641,15 +641,15 @@ export default {
         ],
       },
       {
-        title: 'openEuler Committee 2023-2024',
+        title: 'openEuler Committee',
         list: [
           {
             title: 'Chairperson',
             personalList: [
               {
-                img: jiangdayong,
-                name: 'Jiang Dayong',
-                position: [''],
+                img: xiongwei,
+                name: 'Xiong Wei',
+                position: ['Huawei Technologies Co., Ltd.'],
               },
             ],
           },
@@ -667,8 +667,8 @@ export default {
                 position: ['Hunan Kylinsec Technology Co., Ltd.'],
               },
               {
-                img: wuyanjun,
-                name: 'Wu Yanjun',
+                img: qusheng,
+                name: 'Qu Sheng',
                 position: [
                   'Institute of Software, Chinese Academy of Sciences',
                 ],
@@ -728,8 +728,8 @@ export default {
             title: 'Executive Director',
             personalList: [
               {
-                img: xiongwei,
-                name: 'Xiong Wei',
+                img: huzhengce,
+                name: 'Hu Zhengce',
                 position: ['Huawei Technologies Co., Ltd.'],
               },
             ],
@@ -869,13 +869,6 @@ export default {
             gitee: 'xiexiuqi',
           },
           {
-            img: xiongwei,
-            name: 'Xiong Wei',
-            post: 'Committee member',
-            email: 'myeuler@163.com',
-            gitee: 'myeuler',
-          },
-          {
             img: zhaochuanfeng,
             name: 'Zhao Chuanfeng',
             post: 'Committee member',
@@ -907,12 +900,6 @@ export default {
             email: 'huangzhaowei@xfusion.com',
           },
           {
-            img: kanglifeng,
-            name: 'Kang Lifeng',
-            position: ['Committee member'],
-            email: 'kanglifeng@uniontech.com',
-          },
-          {
             img: humingyue,
             name: 'Hu Mingyue',
             position: ['Committee member'],
@@ -923,12 +910,6 @@ export default {
             name: 'Li Zhenning',
             position: ['Committee member'],
             email: 'lizhenning@kylinos.cn',
-          },
-          {
-            img: majun,
-            name: 'Ma Jun',
-            position: ['Committee member'],
-            email: 'junmacy@isoftstone.com',
           },
           {
             img: wangxinhui,
@@ -953,6 +934,18 @@ export default {
             name: 'Zhang Ying',
             position: ['Committee member'],
             email: 'zhangy1317@chinaunicom.cn',
+          },
+          {
+            img: zhengchuanrong,
+            name: 'Zheng Chuanrong',
+            position: ['Committee member'],
+            email: 'zhengchuanrong@uniontech.com',
+          },
+          {
+            img: zhengli,
+            name: 'Zheng Li',
+            position: ['Committee member'],
+            email: 'lizhengq@isoftstone.com',
           },
         ],
       },

@@ -15,7 +15,7 @@ const { isPhone } = useScreen();
       class="talent-certification-card"
       :style="{ '--card-main-padding': '6px' }"
     >
-      <img class="card-img img-in-dark" :src="illustration" alt="" />
+      <img class="card-img" :src="illustration" alt="" />
       <div class="card-info">
         <p class="introduce">{{ $t('talent.talentCertificationIntro') }}</p>
         <a
@@ -58,6 +58,8 @@ const { isPhone } = useScreen();
     .card-img {
       max-width: 400px;
       margin-right: 40px;
+      overflow: hidden;
+      border-radius: var(--o-radius-xs);
       @include respond-to('<=laptop') {
         max-width: 300px;
       }
