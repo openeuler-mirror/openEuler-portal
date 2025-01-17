@@ -26288,6 +26288,25 @@
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
     {
+      "vendorID": "1f47",
+      "deviceID": "1001",
+      "svID": "1f47",
+      "ssID": "0001",
+      "architecture": "x86_64",
+      "os": "openEuler 22.03 LTS SP4",
+      "driverName": "ysk_unic2",
+      "version": "3.3.9",
+      "type": "Ethernet",
+      "date": "2024/09/20",
+      "sha256": "fe2ab77baf249a1af0cea6bbba0e0520583c4d5d63a3c4b253d0c651157d7254",
+      "driverSize": "32839424",
+      "chipVendor": "yusur",
+      "boardModel": "FLEXFLOW-2200T",
+      "chipModel": "K2pro",
+      "item": "NA",
+      "downloadLink": "https://www.yusur.tech/"
+    },
+    {
         "vendorID": "19e5",
         "deviceID": "3858",
         "svID": "19e5",
