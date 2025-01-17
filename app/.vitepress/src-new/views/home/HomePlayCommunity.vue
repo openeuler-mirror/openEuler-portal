@@ -253,6 +253,7 @@ onMounted(() => {
     }
     @include respond-to('phone') {
       grid-template-columns: repeat(1, 1fr);
+      max-width: 100%;
       gap: 12px;
     }
     .card-item {
@@ -296,7 +297,7 @@ onMounted(() => {
           @include text-truncate(2);
           @include text1;
           color: var(--o-color-info2);
-          word-break: keep-all;
+          word-break: break-word;
         }
         .btn-box {
           margin-top: 32px;

@@ -526,7 +526,7 @@ export default {
       {
         title: 'openEuler 业务发展工作组',
         list: [
-          { img: liyang, name: '李杨', position: ['组长'] },
+          { img: liyang, name: '李扬', position: ['组长'] },
           { img: huangweixu, name: '黄伟旭', position: ['副组长'] },
           { img: zhangmuliang, name: '张木梁', position: ['副组长'] },
           { img: lichengpeng, name: '李成鹏', position: ['组员'] },
