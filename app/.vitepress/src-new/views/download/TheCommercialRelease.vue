@@ -266,8 +266,6 @@ const onClickDownload = (data: any) => {
     target: t('download.DOWNLOADGO'),
   });
 };
-
-const COUNT_PER_PAGE = [12, 18, 24, 36];
 </script>
 
 <template>

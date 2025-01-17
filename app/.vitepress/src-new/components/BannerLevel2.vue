@@ -31,6 +31,8 @@ const props = defineProps({
   },
 });
 
+console.log(props.subtitle);
+
 const rootStyle = computed(() => {
   const result: CSSProperties = {};
   if (props.backgroundColor) {
