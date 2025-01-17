@@ -73,6 +73,12 @@ export default defineConfig({
             './.vitepress/src-new/assets/category/search/svg-icons'
           )
         ),
+        sig: FileSystemIconLoader(
+          path.resolve(
+            __dirname,
+            './.vitepress/src-new/assets/category/sig/sig-icons'
+          )
+        ),
         footer: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src/assets/common/footer')
         ),

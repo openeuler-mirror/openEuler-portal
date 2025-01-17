@@ -14,6 +14,7 @@ import talentAssessment from './talent-assessment';
 import contactUs from './contact-us';
 import home from './home';
 import download from './download';
+import sig from './sig';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -65,6 +66,7 @@ const messages = {
     contact: contactUs.zh,
     home: home.zh,
     download: download.zh,
+    sig: sig.zh,
   },
   en: {
     // 公共模块
@@ -80,6 +82,7 @@ const messages = {
     contact: contactUs.en,
     home: home.en,
     download: download.en,
+    sig: sig.en,
   },
 };
 

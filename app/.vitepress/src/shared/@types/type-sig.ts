@@ -4,8 +4,9 @@ export interface FeatureInfoT {
 }
 
 export interface GroupInfoT {
-  groupName: string;
-  features: FeatureInfoT[];
+  sig_names: string;
+  en_feature: string;
+  feature: string;
 }
 
 export interface SigListT {
@@ -14,7 +15,7 @@ export interface SigListT {
   id: number;
   irc: string;
   maillist: string;
-  owners: string
+  owners: string;
 }
 
 export interface InfoItemT {
@@ -48,11 +49,11 @@ export interface SigCompleteItemT {
   maintainer_info: [];
   maintainers: string[];
   repos: string[];
-  sig_name: string
+  sig_name: string;
 }
 export interface SigCompleteListT {
   data: SigCompleteItemT[];
-  total: number
+  total: number;
 }
 export interface TimeDataT {
   creator: string;
@@ -71,17 +72,17 @@ export interface TimeDataT {
 }
 export interface SigDetailItemT {
   date: string;
-  timeData: TimeDataT[]
+  timeData: TimeDataT[];
 }
 export interface SigDetailT {
-  tableData: SigDetailItemT[]
+  tableData: SigDetailItemT[];
 }
 export interface committerDetailT {
   gitee_id: string[];
-  repo: string
+  repo: string;
 }
 export interface SigRepoT {
   committerDetails: committerDetailT[];
   committers: string[];
-  maintainers: string[]
+  maintainers: string[];
 }

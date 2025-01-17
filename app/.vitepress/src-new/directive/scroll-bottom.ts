@@ -1,7 +1,7 @@
+// 滑动到底部出发事件，主要用于移动端请求下一页数据
 import { DirectiveBinding } from 'vue';
 import { throttle } from 'lodash-es';
 
-// 扩展 HTMLElement 类型，支持自定义属性
 interface ExtendedHTMLElement extends HTMLElement {
   scrollToBottomCleanup?: () => void;
 }

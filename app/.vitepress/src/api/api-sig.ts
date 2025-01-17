@@ -30,14 +30,14 @@ export function getCompleteList(params?: LIST_PARAMS) {
  * 获取仓库列表
  * @returns {Object}
  */
-export function getRepoList(): Promise<{
+export function getRepoList(params): Promise<{
   code: number;
   data: string[];
   msg: string;
   update_at: string;
 }> {
-  const url = `/api-dsapi/query/sig/repo?community=openeuler&search=fuzzy`;
-  return request.get(url).then((res: AxiosResponse) => res.data);
+  const url = `/api-dsapi/query/sig/repo`;
+  return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
 /**
  * 获取仓库信息列表
@@ -123,78 +123,6 @@ export function querySigUserContribute(params: object): Promise<{
 }> {
   const url = '/api-dsapi/query/sig/usercontribute';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
-}
-
-/**
- * 获取sig landscape
- * @param {string} lang 语言
- * @returns {Promise<GroupInfoT[]>}
- */
-export function getSigLandscape(lang: string): Promise<GroupInfoT[]> {
-  const url = '/api-dsapi/query/sig/scoreAll?community=openeuler';
-  return request.get(url).then((res: AxiosResponse) => {
-    const data = res.data?.data;
-    const info: GroupInfoT[] = [];
-    for (let i = 0, len = data.length; i < len; i++) {
-      const item = data[i];
-
-      lang === 'zh'
-        ? ''
-        : ((item.group = item.en_group), (item.feature = item.en_feature));
-      if (item.group === '' && item.feature === '') {
-        continue;
-      }
-
-      if (
-        !info.find((group: GroupInfoT) => {
-          return group.groupName === item.group;
-        })
-      ) {
-        info.push({
-          groupName: item.group,
-          features: [],
-        });
-      }
-
-      const groupInfo: GroupInfoT | undefined = info.find(
-        (group: GroupInfoT) => {
-          return group.groupName === item.group;
-        }
-      );
-
-      if (
-        !groupInfo?.features.find((feature: any) => {
-          return feature.featureName === item.feature;
-        })
-      ) {
-        groupInfo?.features.push({
-          featureName: item.feature,
-          sigs: [],
-        });
-      }
-
-      const featureInfo: FeatureInfoT | undefined = groupInfo?.features.find(
-        (feature: FeatureInfoT) => {
-          return feature.featureName === item.feature;
-        }
-      );
-      featureInfo?.sigs.push(item.sig_names);
-    }
-    info.sort((b: GroupInfoT, a: GroupInfoT) => {
-      return a.features.length - b.features.length;
-    });
-    info.forEach((group: GroupInfoT) => {
-      group.features.sort((b: FeatureInfoT, a: FeatureInfoT) => {
-        return a.sigs.length - b.sigs.length;
-      });
-      group.features.forEach((feature: FeatureInfoT) => {
-        feature.sigs.sort((b: string, a: string) => {
-          return b.toLowerCase().localeCompare(a);
-        });
-      });
-    });
-    return info;
-  });
 }
 
 /**
