@@ -94,7 +94,17 @@ const props = defineProps({
       return [];
     },
   },
+  sortOptions: {
+    type: Array as PropType<{ value: string; label: string }[]>,
+    default: () => {
+      return [];
+    },
+  },
   activeVersion: {
+    type: String,
+    default: '',
+  },
+  activeSort: {
     type: String,
     default: '',
   },
@@ -105,12 +115,11 @@ const emits = defineEmits([
   'update:currentPage',
   'update:pageSize',
   'update:activeVersion',
+  'update:activeSort',
 ]);
 
-const { searchType, currentPage, pageSize, activeVersion } = useVModels(
-  props,
-  emits
-);
+const { searchType, currentPage, pageSize, activeVersion, activeSort } =
+  useVModels(props, emits);
 
 const { site } = useData();
 const { locale } = useLocale();
@@ -125,6 +134,8 @@ const loadingFn = useLoading(
   },
   contentRef
 );
+
+const sortType = ['commercialRelease', 'mail', 'news', 'blog'];
 
 watch(
   () => props.loading,
@@ -214,40 +225,58 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
 </script>
 <template>
   <ContentWrapper class="search-result" :vertical-padding="verticalPadding">
-    <ORadioGroup v-if="subModules?.length" v-model="searchType">
-      <ORadio
-        v-for="subModule in subModules"
-        :key="subModule.key"
-        :value="subModule.key"
+    <div class="filter-line">
+      <ORadioGroup v-if="subModules?.length" v-model="searchType">
+        <ORadio
+          v-for="subModule in subModules"
+          :key="subModule.key"
+          :value="subModule.key"
+        >
+          <template #radio="{ checked }">
+            <OToggle
+              v-if="subModuleMap.get(subModule.key)?.label"
+              :checked="checked"
+            >
+              {{ subModuleMap.get(subModule.key)?.label[locale] }}
+            </OToggle>
+          </template>
+        </ORadio>
+      </ORadioGroup>
+      <OSelect
+        v-if="
+          !searchType ||
+          searchType === 'docs' ||
+          searchType === 'communityRelease' ||
+          searchType.includes('packages')
+        "
+        v-model="activeVersion"
+        placeholder="Select"
+        optionPosition="br"
       >
-        <template #radio="{ checked }">
-          <OToggle
-            v-if="subModuleMap.get(subModule.key)?.label"
-            :checked="checked"
-          >
-            {{ subModuleMap.get(subModule.key)?.label[locale] }}
-          </OToggle>
-        </template>
-      </ORadio>
-    </ORadioGroup>
-    <OSelect
-      v-if="
-        !searchType || searchType === 'docs' || searchType.includes('packages')
-      "
-      v-model="activeVersion"
-      placeholder="Select"
-      optionPosition="br"
-      optionWrapClass="mirror-select"
-    >
-      <OOption :label="$t('search.allVersion')" value=""> </OOption>
-      <OOption
-        v-for="(item, index) in versionList"
-        :key="item"
-        :label="item"
-        :value="item"
+        <OOption :label="$t('search.allVersion')" value=""> </OOption>
+        <OOption
+          v-for="item in versionList"
+          :key="item"
+          :label="item"
+          :value="item"
+        >
+        </OOption>
+      </OSelect>
+      <OSelect
+        v-if="sortType.includes(searchType)"
+        v-model="activeSort"
+        placeholder="Select"
+        optionPosition="br"
       >
-      </OOption>
-    </OSelect>
+        <OOption
+          v-for="item in sortOptions"
+          :key="item.label"
+          :label="item.label"
+          :value="item.value"
+        >
+        </OOption>
+      </OSelect>
+    </div>
     <div class="search-content">
       <!-- 搜索内容列表 -->
       <div ref="contentRef" class="content-box">
@@ -301,7 +330,6 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
                   class="detail"
                 ></p>
               </a>
-
               <div v-if="item.arch && item.scenario" class="tag-box">
                 <OTag>
                   {{ archMap.get(item.arch)?.label || item.arch }}
@@ -352,7 +380,9 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
                 </div>
               </div>
               <p
-                v-if="item.version && searchType === 'docs'"
+                v-if="
+                  item.version && (searchType === 'docs' || searchType === '')
+                "
                 class="from version"
               >
                 <span>{{ $t('search.version') }}</span>
@@ -404,11 +434,11 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
 .search-result {
   position: relative;
   width: 100%;
+  --o-divider-label-gap: 40px;
+  --feed-back-width: 300px;
   .search-pagination {
     width: 100%;
     margin-top: 40px;
-    @include respond-to('') {
-    }
   }
   .nofound {
     min-height: min-content;
@@ -427,18 +457,41 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
     @include text1;
     text-align: center;
   }
-  .o-radio-group,
-  .o-select {
+  .filter-line {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 40px;
+    max-width: calc(
+      100% - 2 * var(--o-divider-label-gap) - 1px - var(--feed-back-width)
+    );
+    &:empty {
+      margin: 0;
+    }
+    @include respond-to('pad_h') {
+      max-width: 100%;
+      margin-bottom: 32px;
+    }
     @include respond-to('<=pad_v') {
+      flex-direction: column;
+      max-width: 100%;
       margin-bottom: 16px;
+      .o-select {
+        margin-top: 16px;
+      }
     }
   }
   .o-select {
     width: 220px;
+    @include respond-to('<=pad_v') {
+      width: 150px;
+    }
   }
   .o-radio-group {
     @include respond-to('<=pad_v') {
+      gap: 8px;
+      .o-radio + .o-radio {
+        margin-left: 0;
+      }
       .o-toggle {
         --toggle-bg-color: var(--o-color-fill2);
         --toggle-bg-color-hover: var(--o-color-fill2);
@@ -447,8 +500,6 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
   }
   .search-content {
     display: flex;
-    --o-divider-label-gap: 40px;
-    --feed-back-width: 300px;
     .o-divider {
       height: auto;
       --o-divider-label-gap: 0 40px;

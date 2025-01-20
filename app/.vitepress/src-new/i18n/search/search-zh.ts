@@ -26,4 +26,6 @@ export default {
   listEnd: '已经到底了！',
   sigMeeting: 'SIG组会议纪要',
   latest: '最新版本',
+  sortCorrelation: '最相关降序排列',
+  sortTime: '发布时间降序排序',
 };

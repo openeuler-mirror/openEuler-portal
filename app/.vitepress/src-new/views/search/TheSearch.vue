@@ -22,7 +22,7 @@ import SearchResult from './SearchResult.vue';
 
 import { moduleMap } from '~@/data/search';
 
-const { locale } = useLocale();
+const { locale, t } = useLocale();
 // 当前选择类型
 const currentTab = ref('all');
 // 当前显示的页码
@@ -44,6 +44,21 @@ const searchTypeCount = ref<SearchCountResItemT[]>([]);
 const unMatchedCategory = ref([]);
 
 const searchType = ref('');
+// 排序方式
+const activeSort = ref('');
+
+const sortOptions = computed(() => {
+  return [
+    {
+      value: '',
+      label: t('search.sortCorrelation'),
+    },
+    {
+      value: 'desc',
+      label: t('search.sortTime'),
+    },
+  ];
+});
 
 // 一级导航变化，高亮到二级导航第一个
 watch(
@@ -80,7 +95,8 @@ const docParams = computed(() => {
     page: currentPage.value,
     pageSize: pageSize.value,
     lang: locale.value,
-    type: `${searchType.value}`,
+    type: searchType.value,
+    sort: activeSort.value,
     limit: [
       {
         type: currentTab.value || 'docs',
@@ -136,7 +152,7 @@ const cookieStore = useCookieStore();
 function getVersionTag() {
   versionList.value = communityVersionData[locale.value].COMMUNITY_LIST.reduce(
     (versions, currentValue) => {
-      return [...versions, currentValue.VERSION.replaceAll(' ', '_')];
+      return [...versions, currentValue.VERSION.replaceAll('-', '_')];
     },
     [] as string[]
   );
@@ -236,6 +252,7 @@ function searchAll(valueChange?: boolean) {
     if (cookieStore.isAllAgreed) {
       reportSearch(searchValue.value);
     }
+    // 是否重置tab
     if (valueChange) {
       currentTab.value = 'all';
     }
@@ -271,13 +288,6 @@ onMounted(() => {
   }
   searchAll();
 });
-
-watch(
-  () => activeVersion.value,
-  () => {
-    searchAll();
-  }
-);
 
 // ------------------------  导航分类 --------------------------
 const categorizedData = computed(() => {
@@ -344,7 +354,7 @@ const searchStore = useSearchValue();
 // 移动端导航搜索事件
 searchStore.$subscribe((mutation, state) => {
   searchValue.value = state.searchValue;
-  searchAll();
+  searchAll(true);
 });
 
 // 移动端翻页
@@ -378,9 +388,12 @@ const getMoreDataMo = () => {
       v-model:active-version="activeVersion"
       v-model:current-page="currentPage"
       v-model:page-size="pageSize"
+      v-model:active-sort="activeSort"
       @update:page-size="pageSizeChange"
       @update:search-type="handleSearchTypeChange"
       @update:current-page="queryGetSearchData"
+      @update:active-sort="queryGetSearchData"
+      @update:active-version="searchAll()"
       :search-result-list="searchResultList"
       :search-value="searchValue"
       :sub-modules="categorizedData[currentTab].subModules"
@@ -390,6 +403,7 @@ const getMoreDataMo = () => {
       :software-list="softwareList"
       :search-type-count="searchTypeCount"
       :total="total"
+      :sort-options="sortOptions"
     />
   </div>
 </template>
