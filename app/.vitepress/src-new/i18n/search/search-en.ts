@@ -27,4 +27,6 @@ export default {
   goDownload: 'Go to Download',
   sigMeeting: '',
   empty: 'NotFound !',
+  sortCorrelation: 'Most Relevant',
+  sortTime: 'Newest',
 };
