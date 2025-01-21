@@ -1,9 +1,9 @@
 ---
-title: 天翼云终端操作系统云场景定制项目
+title: 天翼云科技有限公司
 category: showcase
 industry: 云计算
 company: 天翼云科技有限公司
-summary: 银河麒麟操作系统提供多元场景智慧解决方案，助力客户高效上云
+summary: 终端操作系统云场景定制项目。银河麒麟操作系统提供多元场景智慧解决方案，助力客户高效上云。
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/cloud-computing.png
 ---
