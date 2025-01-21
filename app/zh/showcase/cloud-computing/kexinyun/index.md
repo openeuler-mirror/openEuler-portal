@@ -1,5 +1,5 @@
 ---
-title: 可信云主机
+title: 中国移动云能力中心
 category: showcase
 industry: 云计算
 company: 中国移动云能力中心
