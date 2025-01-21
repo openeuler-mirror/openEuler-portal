@@ -1,9 +1,9 @@
 ---
-title: 中国农业银行新一代云计算平台方案
+title: 中国农业银行
 category: showcase
 industry: 金融
 company: 中国农业银行
-summary: 新一代云计算平台方案
+summary: 全面建设以一体化云平台和分布式数据库为关键基础的分布式架构体系，打造新一代云计算平台方案
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---
