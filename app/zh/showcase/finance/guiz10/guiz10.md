@@ -1,9 +1,9 @@
 ---
-title: 贵州省农村信用社联合社基于统信 UOS 的 CentOS 替代方案
+title: 贵州省农村信用社联合社
 category: showcase
 industry: 金融
 company: 贵州省农村信用社
-summary: 基于统信 UOS 的 CentOS 替代方案。
+summary: 基于统信 UOS 的 CentOS 替代方案
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---
