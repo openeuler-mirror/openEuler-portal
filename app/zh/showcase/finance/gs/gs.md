@@ -1,9 +1,9 @@
 ---
-title: 中国工商银行云数智一体化算力生态建设方案
+title: 中国工商银行
 category: showcase
 industry: 金融
 company: 中国工商银行
-summary: 云数智一体化算力生态建设方案。
+summary: 云数智一体化算力生态建设方案
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---
