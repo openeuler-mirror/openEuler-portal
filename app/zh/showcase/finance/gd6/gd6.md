@@ -1,9 +1,9 @@
 ---
-title: 中国光大银行基于全栈云的数字化基础设施体系建设项目
+title: 中国光大银行
 category: showcase
 industry: 金融
 company: 中国光大银行
-summary: 基于全栈云的数字化基础设施体系建设项目。
+summary: 基于全栈云的数字化基础设施体系建设项目
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---
