@@ -1,5 +1,5 @@
 ---
-title: 中信银行高性能服务网格 Kmesh
+title: 中信银行
 category: showcase
 industry: 金融
 company: 中信银行
