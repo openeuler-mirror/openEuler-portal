@@ -1,9 +1,9 @@
 ---
-title: 中国银行-openEuler系操作系统大规模应用实践
+title: 中国银行
 category: showcase
 industry: 金融
 company: 中国银行
-summary: 中国银行通过建设企业级技术平台，实现了数字化转型和科技创新，降低了开发难度和成本，提升了网信速度和系统质效，支持了业务发展。
+summary: 基于openEuler系操作系统大规模应用实践
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---
