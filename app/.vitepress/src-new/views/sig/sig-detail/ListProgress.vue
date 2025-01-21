@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { computed, onMounted, toRefs, ref, watch, nextTick } from 'vue';
+import { toRefs, ref, watch, nextTick } from 'vue';
 
 import { OProgress } from '@opensig/opendesign';
 import WordAvatar from '~@/components/WordAvatar.vue';
+import { useLocale } from '~@/composables/useLocale';
 
 const props = defineProps({
   item: {
@@ -40,6 +41,7 @@ const props = defineProps({
 });
 const { componentName, memberList, usertype } = toRefs(props);
 
+const { locale } = useLocale();
 const progressRef = ref();
 const progressColor = () => {
   if (componentName.value === 'member' && usertype.value === 'contributor') {
@@ -64,9 +66,12 @@ const progressFormat = (item: number) => {
   return memberList.value ? (100 / memberList.value) * item : 0;
 };
 
-const trankWidth = computed(() => {
-  return ((progressFormat(props.item) * 300) / 100).toFixed(2);
-});
+// 跳转个人详情
+const goToUser = (data: string) => {
+  const url = 'https://datastat.openeuler.org';
+  return `${url}/${locale.value}/user/${data}`;
+};
+
 watch(
   () => props.item,
   () => {
@@ -95,16 +100,14 @@ watch(
   >
     <template #default="{ percentage }">
       <WordAvatar :name="giteeName" size="small" />
-      <div class="gitee-name">{{ giteeName }}</div>
+      <a
+        class="gitee-name"
+        :title="giteeName"
+        :href="goToUser(giteeName)"
+        >{{ giteeName }}</a
+      >
     </template>
   </OProgress>
-  <!-- <OProgress
-    :style="{ width }"
-    :show-text="false"
-    :stroke-width="8"
-    :percentage="progressFormat(props.item)"
-    color="primary" :style="{ width: '300px' }" :stroke-width="24" label-inside 
-  /> -->
 </template>
 
 <style lang="scss" scoped>
@@ -112,6 +115,7 @@ watch(
   :deep(.o-progress-line-wrap) {
     .o-progress-line-track {
       background-color: transparent;
+      overflow: visible;
       .o-progress-line-bar {
         display: flex;
         align-items: center;
@@ -139,6 +143,7 @@ watch(
           text-align: left;
           margin-left: 8px;
           @include text-truncate(1);
+          word-break: break-all;
           min-width: 80px;
         }
       }

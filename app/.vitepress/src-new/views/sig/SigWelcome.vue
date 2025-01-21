@@ -23,7 +23,7 @@ const { lePadV } = useScreen();
             <div class="title">
               {{ card.title[locale] }}
             </div>
-            <div v-clamp-text="3" class="subtitle">
+            <div :v-clamp-text="lePadV ? 3 : false" class="subtitle">
               {{ card.subtitle[locale] }}
             </div>
           </div>
@@ -71,7 +71,7 @@ const { lePadV } = useScreen();
         margin-top: 16px;
         @include tip1;
         color: var(--o-color-info2);
-        @include text-truncate(3);
+        // @include text-truncate(3);
         @include respond-to('<=pad_v') {
           margin-top: 8px;
         }

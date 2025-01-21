@@ -1,19 +1,16 @@
 <script setup lang="ts">
-import ListProgress from './ListProgress.vue';
-import ListFormRadio from './ListFormRadio.vue';
 import { ref, computed, watch, onMounted } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 import { querySigUserContribute } from '@/api/api-sig';
-import IconSearch from '~icons/app/icon-search.svg';
-import NotFound from '@/NotFound.vue';
+import IconSearch from '~icons/app-new/icon-search.svg';
 import { SigContributeArrT } from '@/shared/@types/type-sig';
 
-import { OPagination } from '@opensig/opendesign';
-
+import ListProgress from './ListProgress.vue';
+import ListFormRadio from './ListFormRadio.vue';
+import ResultEmpty from '~@/components/ResultEmpty.vue';
+import { OInput, OPagination } from '@opensig/opendesign';
 import { ORadioGroup, ORadio, OToggle } from '@opensig/opendesign';
-
-import { COUNT_PER_PAGE } from '~@/shared/config';
 
 const { lang } = useData();
 const i18n = useI18n();
@@ -63,7 +60,7 @@ const param = ref({
 });
 const memberData = ref<SigContributeArrT[]>([]);
 const memberMax = ref(0);
-const searchInput = ref('');
+const searchVal = ref('');
 
 const sortExp = (key: string, isAsc: boolean) => {
   return function (x: any, y: any) {
@@ -148,9 +145,9 @@ const pageSize = ref(10);
 // 搜索过滤
 
 const querySearch = () => {
-  if (searchInput.value !== '') {
+  if (searchVal.value !== '') {
     const newList = memberData.value.filter((item: any) =>
-      item.gitee_id.toLowerCase().includes(searchInput.value)
+      item.gitee_id.toLowerCase().includes(searchVal.value)
     );
     reallData.value = newList;
     filterReallData();
@@ -164,20 +161,6 @@ const getcontributeValue = (item: any) => {
   item.isSelected = !item.isSelected;
   querySearch();
 };
-// 跳转个人详情
-const goToUser = (data: string) => {
-  const url = 'https://datastat.openeuler.org';
-  const path = `/${lang.value}/user/${data}`;
-  window.open(url + path, '_blank');
-};
-
-// 动态计算参数赋值
-const form = ref(
-  lastformOption.value.reduce((pre: any, next: any) => {
-    pre[next.id] = next.active;
-    return pre;
-  }, {})
-);
 
 const getContributeInfo = () => {
   getMemberData();
@@ -190,7 +173,6 @@ const renderData = computed(() => {
     currentPage.value * pageSize.value
   );
 });
-
 </script>
 <template>
   <div>
@@ -222,6 +204,17 @@ const renderData = computed(() => {
             </template>
           </ORadio>
         </ORadioGroup>
+        <OInput
+          v-if="index === 1"
+          class="serach-input"
+          :placeholder="$t('download.PLACEHOLDER')"
+          v-model.lazy="searchVal"
+          @change="querySearch"
+        >
+          <template #prefix>
+            <OIcon class="icon"><IconSearch></IconSearch></OIcon>
+          </template>
+        </OInput>
       </div>
     </div>
     <div class="contribut-rank">
@@ -246,17 +239,26 @@ const renderData = computed(() => {
         </div>
       </div>
       <div class="rank-list">
-        <div v-for="(item, index) in renderData" class="rank-line">
-          <div class="rank-nub">
-            {{ currentPage * index + 1 }}
+        <template v-if="renderData.length">
+          <div v-for="(item, index) in renderData" class="rank-line">
+            <div class="rank-nub">
+              {{ currentPage * index + 1 }}
+            </div>
+            <ListProgress
+              :giteeName="item.gitee_id"
+              :item="item.contribute"
+              :member-list="memberMax"
+              :usertype="item.usertype"
+            ></ListProgress>
           </div>
-          <ListProgress
-            :giteeName="item.gitee_id"
-            :item="item.contribute"
-            :member-list="memberMax"
-            :usertype="item.usertype"
-          ></ListProgress>
-        </div>
+        </template>
+        <ResultEmpty
+          :style="{
+            '--result-image-width': '140px',
+            '--result-image-height': '170px',
+          }"
+          v-else
+        />
       </div>
     </div>
 
@@ -291,6 +293,7 @@ const renderData = computed(() => {
   @include text1;
 }
 
+// 筛选卡片
 .filter-box {
   margin-top: 24px;
   background-color: var(--o-color-fill2);
@@ -337,6 +340,16 @@ const renderData = computed(() => {
       margin-top: 12px;
     }
   }
+  .serach-input {
+    margin-left: auto;
+    max-width: 320px;
+    :deep(.o_box-main) {
+      .o-icon {
+        font-size: var(--o-font_size-text1);
+      }
+      border-radius: var(--o-radius-xs);
+    }
+  }
 }
 
 .contribut-rank {
@@ -372,6 +385,9 @@ const renderData = computed(() => {
   }
   .rank-list {
     border-top: 1px solid var(--o-color-control4);
+    .o-result {
+      margin: 40px;
+    }
     .rank-line {
       display: flex;
       align-items: center;

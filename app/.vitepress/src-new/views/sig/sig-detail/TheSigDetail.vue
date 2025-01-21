@@ -15,6 +15,7 @@ import SigMeeting from './SigMeeting.vue';
 import SigRepo from './SigRepo.vue';
 import SigContribut from './SigContribut.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
+import ResultEmpty from '~@/components/ResultEmpty.vue';
 
 import { getSigMeeting, getSigDetail } from '~@/api/api-sig';
 
@@ -119,6 +120,18 @@ onMounted(() => {
           :meeting-data="sigMeetingData"
           :mail="mail"
         />
+        <div v-else class="result-empty-box sig-floor-item">
+          <ResultEmpty
+            :description="$t('sig.noMeeting')"
+            :style="{
+              '--result-image-width': '140px',
+              '--result-image-height': '170px',
+            }"
+          />
+          <p class="tips-text">
+            {{ $t('sig.sigMeetingTip') }}
+          </p>
+        </div>
         <SigRepo class="sig-floor-item" />
         <SigContribut :sig="sigDetailInfo?.sig_name" class="sig-floor-item" />
       </div>
@@ -136,6 +149,17 @@ onMounted(() => {
     .sig-floor-item {
       & + .sig-floor-item {
         margin-top: 32px;
+      }
+    }
+    .result-empty-box {
+      padding: 52px;
+      background-color: var(--o-color-fill2);
+      border-radius: var(--o-radius-xs);
+      .tips-text {
+        margin-top: 8px;
+        text-align: center;
+        color: var(--o-color-info3);
+        @include tip1;
       }
     }
   }

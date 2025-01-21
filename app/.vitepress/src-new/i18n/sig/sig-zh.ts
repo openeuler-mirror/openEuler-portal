@@ -11,14 +11,12 @@ export default {
   sigTip: '注：仓库Committer请点击SIG名称，在仓库列表查询',
   subscribe: '订阅邮件',
   contributor: '{num}位贡献者',
-  sigPlaceholder: '全部SIG组',
-  sigRepo: '全部仓库',
-  sigMaintainer: '全部Maintainer',
   sigMember: '核心成员（{num}）',
   sigMeeting: '交流会议',
   sigMeetingIntro:
     'SIG版本规划工作会议遵循开源、开放原则, 议题收集、技术讨论、会议纪要等各讨论过程均对外开放',
   sigMeetingTip: '会议系统当前仅保留最近半年会议记录',
+  noMeeting: '暂无会议',
   latestMeeting: '最近会议：{date}',
   sigName: 'SIG组: {sig}',
   repoList: '仓库列表（{count}）',
@@ -36,4 +34,15 @@ export default {
   meetingSummary: '查看历史会议纪要',
   contributeTitle: '贡献展示',
   contributeSubTitle: '{sig}个人会员贡献',
+  allSig: '全部SIG组',
+  allRepo: '全部仓库',
+  allMaintainer: '全部Maintainer',
+  meetingBannerTitle: '会议指南',
+  meetingBannerSubtitle: 'openEuler Developer Day 2023 SIG 组版本工作会议指南',
+  meetiingIntroTitle: '会议介绍',
+  meetiingIntro1:
+    'openEuler 开源社区按照不同的 SIG(Special Interests Group) 来组织开发及版本发布工作，openEuler 开源社区的主要技术产品通过 openEuler 开源操作系统承载，它在每年的 3 月和 9 月发布两个版本。当一个版本发布完成后，openEuler 开源社区将召开下一个版本的开发规划会议，会议以 SIG 组为单位，时长为 0.5~1 天，用于集中讨各 SIG 组未来 6 个月的规划、工作事项、任务分工、优先级等相关内容。openEuler 开源社区将为各 SIG 组的规划会议提供场地和技术支持',
+  meetiingIntro2:
+    'SIG 版本规划工作会议遵循开源、开放原则，议题收集、技术讨论、会议纪要等各讨论过程均对外开放',
+  meetiingTypeTitle: '会议介绍',
 };

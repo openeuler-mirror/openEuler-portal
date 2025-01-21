@@ -3,7 +3,7 @@ import { ref, computed, type PropType } from 'vue';
 
 import { useData } from 'vitepress';
 
-import { OIcon, ODivider } from '@opensig/opendesign';
+import { OIcon, ODivider, OScroller } from '@opensig/opendesign';
 
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
@@ -34,7 +34,7 @@ const props = defineProps({
     <div class="sig-member-title">
       {{ $t('sig.sigMember', { num: maintainerList?.length }) }}
     </div>
-    <div class="member-list">
+    <OScroller class="member-list" size="small">
       <div v-for="member in maintainerList" class="member-info">
         <div class="member-info-left">
           <WordAvatar :name="member?.gitee_id" size="medium" />
@@ -54,14 +54,18 @@ const props = defineProps({
               <IconGitee />
             </OIcon>
           </a>
-          <a :href="member.email" target="_blank" rel="noopener noreferrer">
+          <a
+            :href="`mailto:${member.email}`"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <OIcon>
               <IconMail />
             </OIcon>
           </a>
         </div>
       </div>
-    </div>
+    </OScroller>
   </div>
 </template>
 
@@ -70,13 +74,14 @@ const props = defineProps({
   padding: 24px;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  min-height: 744px;
+  height: fit-content;
   .sig-member-title {
     @include h4;
     font-weight: 500;
   }
   .member-list {
     margin-top: 24px;
+    max-height: 744px;
     .member-info {
       display: flex;
       align-items: center;
@@ -84,15 +89,23 @@ const props = defineProps({
         margin-top: 16px;
       }
       .member-info-left {
+        --avatar-width: 40px;
+        --info-width: 165px;
+        --avatar-gap: 16px;
         display: flex;
-        min-width: 165px;
+        min-width: var(--info-width);
         .info {
-          margin-left: 16px;
+          margin-left: var(--avatar-gap);
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           @include tip2;
           .member-name {
+            @include text-truncate(1);
+            width: calc(
+              var(--info-width) - var(--avatar-width) - var(--avatar-gap)
+            );
+            word-break: break-all;
             font-weight: 500;
           }
         }
@@ -103,6 +116,7 @@ const props = defineProps({
         height: 100%;
         gap: 16px;
         .o-icon {
+          color: var(--o-color-info2);
           font-size: var(--o-icon_size-m);
         }
       }
