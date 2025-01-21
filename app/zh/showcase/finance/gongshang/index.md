@@ -1,9 +1,9 @@
 ---
-title: 中国工商银行金融行业数据安全和隐私保护实践
+title: 中国工商银行
 category: showcase
 industry: 金融
 company: 中国工商银行
-summary: 工商银行和复旦大学基于openEuler的全栈自主AI机密计算解决方案
+summary: 金融行业数据安全和隐私保护实践
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---
