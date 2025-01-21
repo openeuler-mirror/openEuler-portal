@@ -1,9 +1,9 @@
 ---
-title: 工商银行 & 复旦大学基于 openEuler 的全栈自主大模型机密计算解决方案
+title: 工商银行 & 复旦大学
 category: showcase
 industry: 金融
 company: 工商银行 & 复旦大学
-summary: 基于 openEuler 的全栈自主大模型机密计算解决方案。
+summary: 基于 openEuler 的全栈自主大模型机密计算解决方案
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---
