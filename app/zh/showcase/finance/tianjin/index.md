@@ -1,9 +1,9 @@
 ---
-title: 天津银行新一代核心系统建设项目
+title: 天津银行
 category: showcase
 industry: 金融
 company: 天津银行
-summary: 天津银行新一代核心系统建设项目
+summary: 信息系统技术升级改造，打造新一代核心系统建设项目
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---
