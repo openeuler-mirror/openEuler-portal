@@ -28,8 +28,8 @@ const { locale } = useLocale();
 const repoQuery = ref({
   community: 'openeuler',
   search: 'fuzzy',
-  pageSize: 12,
-  page: 1,
+  // pageSize: 12,
+  // page: 1,
 });
 
 const sigQuery = ref({
@@ -37,25 +37,63 @@ const sigQuery = ref({
   page: 1,
 });
 
+// 筛选相关
 const allSigInfo = ref<SigCompleteItemT[]>([]);
 const sigNameList = ref<string[]>([]);
+const activeSig = ref('');
+const activeRepo = ref('');
+const activeMaintainer = ref('');
+
+// 计算筛选之后剩下的版本
+const filterSigInfo = computed(() => {
+  // 初始化页数
+  sigQuery.value.page = 1;
+
+  return allSigInfo.value.filter((item: SigCompleteItemT) => {
+    console.log(activeSig.value);
+    // 按 sig 名称 筛选
+    if (activeSig.value && item.sig_name !== activeSig.value) {
+      return false;
+    }
+    // 仓库
+    if (activeRepo.value && !item.repos.includes(activeRepo.value)) {
+      return false;
+    }
+    if (
+      activeMaintainer.value &&
+      !item.maintainers.includes(activeMaintainer.value)
+    ) {
+      return false;
+    }
+    return true; // 满足条件，保留此项
+  });
+});
 
 const renderSigInfo = computed(() => {
-  return allSigInfo.value.slice(
+  return filterSigInfo.value.slice(
     (sigQuery.value.page - 1) * sigQuery.value.pageSize,
     sigQuery.value.page * sigQuery.value.pageSize
   );
 });
 
+const allRepos = ref<string[]>([]);
+
 const queryGetRepoList = () => {
   getRepoList(repoQuery.value).then((res) => {
-    console.log(res);
+    allRepos.value = res.data;
   });
 };
 
+const allMaintainers = ref<string[]>([]);
 const queryGetSigList = () => {
   getSigList().then((res) => {
-    allSigInfo.value = res.data;
+    allSigInfo.value = res.data.sort((a, b) =>
+      a.sig_name.localeCompare(b.sig_name)
+    );
+    allMaintainers.value = allSigInfo.value
+      .flatMap((sigInfo) => sigInfo.maintainers)
+      .filter((value, index, self) => self.indexOf(value) === index)
+      .sort((a, b) => a.localeCompare(b));
   });
 };
 
@@ -77,6 +115,7 @@ const constructLandscapeMap = () => {
 };
 
 onMounted(() => {
+  console.time()
   queryGetRepoList();
   queryGetSigList();
   constructLandscapeMap();
@@ -86,25 +125,27 @@ onMounted(() => {
   <AppSection :title="$t('sig.sigList')" class="sig-list">
     <div class="filter-line">
       <div class="select-box">
-        <OSelect :placeholder="$t('sig.sigPlaceholder')">
+        <OSelect v-model="activeSig" :placeholder="$t('sig.allSig')">
+          <OOption value="" :label="$t('sig.allSig')" />
           <OOption
             v-for="sigName in sigNameList"
             :key="sigName"
             :value="sigName"
           />
         </OSelect>
-        <OSelect :placeholder="$t('sig.sigRepo')">
-          <OOption
-            v-for="sigName in sigNameList"
-            :key="sigName"
-            :value="sigName"
-          />
+        <OSelect v-model="activeRepo" :placeholder="$t('sig.allRepo')">
+          <OOption value="" :label="$t('sig.allRepo')" />
+          <OOption v-for="repo in allRepos" :key="repo" :value="repo" />
         </OSelect>
-        <OSelect :placeholder="$t('sig.sigMaintainer')">
+        <OSelect
+          v-model="activeMaintainer"
+          :placeholder="$t('sig.allMaintainer')"
+        >
+          <OOption value="" :label="$t('sig.allMaintainer')" />
           <OOption
-            v-for="sigName in sigNameList"
-            :key="sigName"
-            :value="sigName"
+            v-for="maintainer in allMaintainers"
+            :key="maintainer"
+            :value="maintainer"
           />
         </OSelect>
       </div>
@@ -134,7 +175,14 @@ onMounted(() => {
               </OIcon>
             </a>
           </div>
-          <div class="sig-info-right">
+          <div
+            v-if="
+              landscapeIconMap.get(
+                landscapeMap.get(sig.sig_name)?.feature?.en || ''
+              )
+            "
+            class="sig-info-right"
+          >
             <OTag>
               <OIcon class="icon">
                 <component
@@ -153,6 +201,7 @@ onMounted(() => {
           <a :href="`mailto:${sig.mailing_list}`">
             {{ sig.mailing_list }}
           </a>
+          <!--  是openeuler，mailweb服务的邮箱展示  -->
           <a
             v-if="
               sig.mailing_list?.split('@').length &&
@@ -211,12 +260,12 @@ onMounted(() => {
       </div>
     </div>
     <!-- 页码 -->
-    <div v-if="allSigInfo.length > COUNT_PER_PAGE[0]" class="pagination">
+    <div v-if="filterSigInfo.length > COUNT_PER_PAGE[0]" class="pagination">
       <OPagination
         v-model:page="sigQuery.page"
         v-model:page-size="sigQuery.pageSize"
         :layout="['total', 'pagesize', 'pager', 'jumper']"
-        :total="allSigInfo.length"
+        :total="filterSigInfo.length"
         :page-sizes="COUNT_PER_PAGE"
         :show-more="true"
       />

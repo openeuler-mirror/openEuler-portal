@@ -102,6 +102,7 @@ const props = defineProps({
       .icon {
         font-size: var(--o-icon_size-m);
         margin-right: 8px;
+        color: var(--o-color-info2);
       }
     }
     .subscribe-sig-mail {
