@@ -1,9 +1,9 @@
 ---
-title: 麒麟信安服务器操作系统在长沙职业技术学院成功部署，加速IT人才培育
+title: 长沙职业技术学院
 category: showcase
 industry: 高校&科研
 company: 长沙职业技术学院
-summary: 凭借高稳定性和高安全性的优势性，麒麟信安服务器操作系统成为学院操作系统迁移首选。
+summary: 麒麟信安服务器操作系统在长沙职业技术学院成功部署，优化学校的管理、教学等信息服务
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/education.png
 ---
