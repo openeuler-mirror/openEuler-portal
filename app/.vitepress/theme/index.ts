@@ -17,6 +17,7 @@ import OpenDesign from 'opendesign';
 import VueDOMPurifyHTML from 'vue-dompurify-html';
 import i18n from '~@/i18n';
 import scrollBottomDirective from '~@/directive/scroll-bottom';
+import clampTextDirective from '~@/directive/clamp-text';
 
 import Layout from '@/App.vue';
 import NotFound from '@/NotFound.vue';
@@ -29,6 +30,7 @@ export default {
       // @ts-ignore
       global.window = {};
     }
+    app.directive('clamp-text', clampTextDirective);
     app.directive('scroll-bottom', scrollBottomDirective);
     app.use(VueDOMPurifyHTML);
     app.use(SeoBox as any);
