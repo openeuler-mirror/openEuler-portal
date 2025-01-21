@@ -3,7 +3,7 @@ title: 上海证券交易所
 category: showcase
 industry: 金融
 company: 上海证券交易所
-summary: 核心交易场景低时延解决方案
+summary: 下一代核心交易系统，在安全可控场景下提供更低的时延
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---
