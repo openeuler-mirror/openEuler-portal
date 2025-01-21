@@ -1,6 +1,14 @@
 import { request, AxiosResponse } from '~@/shared/axios';
 
-import { SoftwareParamsT, AppItemT } from '~@/@types/type-search';
+import {
+  SoftwareParamsT,
+  AppItemT,
+  SearchDocsT,
+  SearchCountQueryT,
+  SearchCountResT,
+  RelevantQueryT,
+  SearchDocsQueryT,
+} from '~@/@types/type-search';
 /**
  * es搜索获取首页新闻
  * @param { LocaleT } 语言
@@ -54,7 +62,7 @@ export function getHomeShowCases(params: {
 }
 
 /**
- * 获取相关软件包数据
+ * 搜索页-获取相关软件包数据
  * @param {Object} params 请求参数
  * @param {string} params.keyword 输入关键词
  * @returns {Object}
@@ -71,4 +79,54 @@ export function getSoftwareDocs(params: SoftwareParamsT): Promise<{
       ignoreDuplicates: true,
     })
     .then((res: AxiosResponse) => res.data);
+}
+
+/**
+ * 搜索页-获取搜索结果
+ * @param {Search} params
+ * @returns {Object}
+ */
+export function getSearchData(params: SearchDocsQueryT): Promise<{
+  msg: string;
+  obj: SearchDocsT;
+  status: number;
+}> {
+  const url = '/api-search/search/docs';
+  // TODO:后端接收参数为下划线version
+  params.limit.forEach((item) => {
+    item.version = item.version.replaceAll('-', '_');
+  });
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
+}
+
+/**
+ * 搜索页-获取搜索各类型结果数量
+ * @param {SearchCountQueryT} params
+ * @returns {Object}
+ */
+export function getSearchCount(params: SearchCountQueryT): Promise<{
+  msg: string;
+  obj: SearchCountResT;
+  status: number;
+}> {
+  const url = '/api-search/search/count';
+    // TODO:后端接收参数为下划线version
+    params.limit.forEach((item) => {
+      item.version = item.version.replaceAll('-', '_');
+    });
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
+}
+
+/**
+ * 搜索页-联想搜索
+ * @param {RelevantQueryT} params
+ * @return  {Object}
+ */
+export function getRelevant(params: RelevantQueryT): Promise<{
+  msg: string;
+  obj: any;
+  status: number;
+}> {
+  const url = `/api-search/search/sugg`;
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
 }

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, watch, ref, onMounted } from 'vue';
 
-import { getSearchData, getSearchCount, getRelevant } from '@/api/api-search';
+import { getSearchData, getSearchCount, getRelevant } from '~@/api/api-search';
 
 import communityVersionData from '~@/data/download/download';
 
@@ -152,7 +152,7 @@ const cookieStore = useCookieStore();
 function getVersionTag() {
   versionList.value = communityVersionData[locale.value].COMMUNITY_LIST.reduce(
     (versions, currentValue) => {
-      return [...versions, currentValue.VERSION.replaceAll('-', '_')];
+      return [...versions, currentValue.VERSION];
     },
     [] as string[]
   );

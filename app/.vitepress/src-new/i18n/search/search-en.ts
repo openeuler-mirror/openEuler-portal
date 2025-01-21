@@ -27,6 +27,6 @@ export default {
   goDownload: 'Go to Download',
   sigMeeting: '',
   empty: 'NotFound !',
-  sortCorrelation: '最相关降序排列',
-  sortTime: '发布时间降序排序',
+  sortCorrelation: 'Most Relevant',
+  sortTime: 'Newest',
 };
