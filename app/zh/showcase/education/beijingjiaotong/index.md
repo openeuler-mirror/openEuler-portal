@@ -3,7 +3,7 @@ title: 北京交通大学
 category: showcase
 industry: 高校&科研
 company: 北京交通大学
-summary: 北京交通大学利用RPA智能人工系统减少人员投入 50%
+summary: RPA智能人工系统减少管理平台50%人员投入 
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/education.png
 ---
