@@ -1,9 +1,9 @@
 ---
-title: 山西证券股份有限公司域名解析系统
+title: 山西证券股份有限公司
 category: showcase
 industry: 金融
 company: 山西证券股份有限公司
-summary: 系统实施后，实现了域名系统的多地和多运营商的互联网接⼊；⽀持权威域名服务的域名变更⾃动分发；支持域名数据的统⼀管理和内 / 外网域名服务在系统服务层面的分离；
+summary: 域名解析系统重构改造
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---
