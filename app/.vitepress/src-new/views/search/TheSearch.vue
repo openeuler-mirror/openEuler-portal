@@ -14,7 +14,7 @@ import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 
 import { uniqueId } from '@/shared/utils';
-import { oa } from '@/shared/analytics';
+import { oaReport } from '@/shared/analytics';
 import { getUrlParam } from '~@/utils/common';
 
 import SearchBanner from './SearchBanner.vue';
@@ -251,12 +251,14 @@ function searchAll(valueChange?: boolean) {
 let SEARCH_EVENT_ID = uniqueId();
 const reportSearch = (keyword: string) => {
   SEARCH_EVENT_ID = uniqueId();
-  oa.report('searchValue', () => {
-    return {
+  oaReport(
+    'searchValue',
+    {
       search_event_id: SEARCH_EVENT_ID,
       search_key: keyword,
-    };
-  });
+    },
+    'search_portal'
+  );
 };
 
 function handleSelectChange(val: string) {

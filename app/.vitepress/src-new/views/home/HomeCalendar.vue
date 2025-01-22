@@ -37,6 +37,7 @@ import cubeOneDark from '~@/assets/category/home/calendar/cube-1_dark.png';
 import cubeTowDark from '~@/assets/category/home/calendar/cube-2_dark.png';
 
 import AppSection from '~@/components/AppSection.vue';
+import { oaReport } from '@/shared/analytics';
 
 const props = defineProps({
   tableData: {
@@ -256,10 +257,16 @@ const watchData = watch(
   },
   { immediate: true }
 );
+
+const onCalendarClick = (e: MouseEvent) => {
+  if (e.isTrusted) {
+    oaReport('click', undefined, 'meeting');
+  }
+};
 </script>
 <template>
   <AppSection title="openEuler开发者日历" class="home-calendar">
-    <div class="calendar-body">
+    <div class="calendar-body" @click="onCalendarClick">
       <el-calendar ref="calendar" class="calender">
         <template #header="{ date }">
           <div class="left-title">

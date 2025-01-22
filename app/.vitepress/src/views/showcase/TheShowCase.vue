@@ -3,10 +3,9 @@ import { ref, computed, onMounted, watch, reactive } from 'vue';
 import { useData } from 'vitepress';
 
 import { cloneDeep } from 'lodash-es';
-
-import { oa } from '@/shared/analytics';
 import { isNull, isUndefined } from '@opensig/opendesign';
 
+import { oaReport } from '@/shared/analytics';
 import { getUserCaseData } from '@/api/api-showcase';
 import { useI18n } from '@/i18n';
 
@@ -140,12 +139,14 @@ function goDetail(link: string, item: any, index: number) {
 let SEARCH_EVENT_ID = uniqueId();
 const reportSearch = (keyword: string) => {
   SEARCH_EVENT_ID = uniqueId();
-  oa.report('searchValue', () => {
-    return {
+  oaReport(
+    'searchValue',
+    {
       search_event_id: SEARCH_EVENT_ID,
       search_key: keyword,
-    };
-  });
+    },
+    'search_portal'
+  );
 };
 const reportSelectSearchResult = (link: string, item: any, index: number) => {
   const searchKeyObj = {
@@ -155,14 +156,16 @@ const reportSelectSearchResult = (link: string, item: any, index: number) => {
     search_result_url: location.origin + link,
   };
 
-  oa.report('selectSearchResult', () => {
-    return {
+  oaReport(
+    'selectSearchResult',
+    {
       search_event_id: SEARCH_EVENT_ID,
-      search_key: parmes.keyword,
+      search_key: keyWord.value,
       ...(item || {}),
       ...searchKeyObj,
-    };
-  });
+    },
+    'search_portal'
+  );
 };
 
 // 设置当前tag的所有案例

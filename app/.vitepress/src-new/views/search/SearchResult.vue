@@ -2,7 +2,7 @@
 import { computed, type PropType, ref, watch } from 'vue';
 
 import { useData } from 'vitepress';
-import { oa } from '@/shared/analytics';
+import { oaReport } from '@/shared/analytics';
 
 import { useVModels } from '@vueuse/core';
 import { moduleMap, subModuleMap } from '~@/data/search';
@@ -183,14 +183,16 @@ const reportSelectSearchResult = (
     search_result_url: path,
   };
 
-  oa.report('selectSearchResult', () => {
-    return {
+  oaReport(
+    'selectSearchResult',
+    {
       search_event_id: SEARCH_EVENT_ID,
       search_key: keyword,
       ...(data || {}),
       ...searchKeyObj,
-    };
-  });
+    },
+    'search_portal'
+  );
 };
 
 const verticalPadding = computed(() => {

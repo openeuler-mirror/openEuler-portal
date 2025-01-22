@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { oa } from '@/shared/analytics';
+import { oaReport } from '@/shared/analytics';
 import { useCookieStore } from '@/stores/common';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppContent from '@/components/AppContent.vue';
@@ -202,11 +202,9 @@ const toolsUrl = {
 };
 
 const reportDownload = (url: string) => {
-  oa.report('OM', () => {
-    return {
-      downloadURrl: url,
-      date: new Date().getTime(),
-    };
+  oaReport('OM', {
+    downloadURrl: url,
+    date: new Date().getTime(),
   });
 };
 </script>

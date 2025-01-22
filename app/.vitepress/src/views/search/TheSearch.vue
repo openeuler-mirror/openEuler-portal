@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, watch, ref, onMounted, reactive, nextTick } from 'vue';
 import { useData } from 'vitepress';
-import { oa } from '@/shared/analytics';
+import { oaReport } from '@/shared/analytics';
 import { useI18n } from '@/i18n';
 import {
   getSearchData,
@@ -401,12 +401,14 @@ function goLink(data: any, index: number) {
 let SEARCH_EVENT_ID = uniqueId();
 const reportSearch = (keyword: string) => {
   SEARCH_EVENT_ID = uniqueId();
-  oa.report('searchValue', () => {
-    return {
+  oaReport(
+    'searchValue',
+    {
       search_event_id: SEARCH_EVENT_ID,
       search_key: keyword,
-    };
-  });
+    },
+    'search_portal'
+  );
 };
 
 const reportSelectSearchResult = (
@@ -422,14 +424,16 @@ const reportSelectSearchResult = (
     search_result_url: path,
   };
 
-  oa.report('selectSearchResult', () => {
-    return {
+  oaReport(
+    'selectSearchResult',
+    {
       search_event_id: SEARCH_EVENT_ID,
       search_key: keyword,
       ...(data || {}),
       ...searchKeyObj,
-    };
-  });
+    },
+    'search_portal'
+  );
 };
 
 // 移动端跳转翻页事件
