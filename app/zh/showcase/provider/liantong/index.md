@@ -1,9 +1,9 @@
 ---
-title: 中国联通
+title: 联通云
 category: showcase
 industry: 运营商
 company: 中国联通
-summary: 银河麒麟高级操作系统V10助力联通云建设打出组合拳
+summary: 基于“双引擎基座+一云多芯”为不同行业场景提供可靠、高质量的应用上云服务
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/provider.png
 ---

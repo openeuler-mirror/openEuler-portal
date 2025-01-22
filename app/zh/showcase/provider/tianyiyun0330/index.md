@@ -1,5 +1,5 @@
 ---
-title: 天翼云全场景业务无缝替换至基于openEuler自研操作系统CTyunOS
+title: 天翼云全场景业务
 category: showcase
 industry: 运营商
 company: 天翼云科技有限公司

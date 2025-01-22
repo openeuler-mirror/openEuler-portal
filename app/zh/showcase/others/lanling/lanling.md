@@ -1,5 +1,5 @@
 ---
-title: openEuler用户案例：蓝凌数字化办公平台软件EKP-N
+title: 蓝凌数字化办公平台软件EKP-N
 category: showcase
 industry: 其他
 company: 蓝凌软件

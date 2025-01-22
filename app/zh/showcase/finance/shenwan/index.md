@@ -1,9 +1,9 @@
 ---
-title: 申万宏源极速高频量化交易平台
+title: 申万宏源证券有限公司
 category: showcase
 industry: 金融
-company: 申万宏源极速高频量化交易平台
-summary: 交易节点平均穿透时延降低25%
+company: 申万宏源证券有限公司
+summary: 超聚变操作系统助力申万宏源打造速度更快的高频量化交易平台
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---

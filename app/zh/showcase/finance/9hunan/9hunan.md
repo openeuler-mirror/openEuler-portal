@@ -1,9 +1,9 @@
 ---
-title: 湖南省农村信用社联合社基于银河麒麟操作系统的 CentOS 迁移替换方案
+title: 湖南省农村信用社联合社
 category: showcase
 industry: 金融
 company: 湖南省农村信用社联合社
-summary: 湖南省农村信用社联合社基于银河麒麟操作系统的 CentOS 迁移替换方案
+summary: 基于银河麒麟操作系统的 CentOS 迁移替换方案
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---

@@ -1,9 +1,9 @@
 ---
-title: 大华股份联合openEuler优化带宽管理方案，显著优化视频流多业务并发运行效率
+title: 大华股份容器云平台
 category: showcase
 industry: 其他
 company: 大华股份
-summary: 优化带宽管理方案，显著优化视频流多业务并发运行效率
+summary: 联合openEuler优化带宽管理方案，显著优化视频流多业务并发运行效率
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/others.png
 ---

@@ -1,9 +1,9 @@
 ---
-title: 中国邮政储蓄银行大型核心系统建设项目
+title: 中国邮政储蓄银行
 category: showcase
 industry: 金融
 company: 中国邮政储蓄银行
-summary: 邮储银行在平台建设、系统优化、运维管理等方面总结积累了丰富的实践经验，并联合厂商共同创新，持续优化改进部署、监控、运维方案。
+summary: 大型核心业务系统迁移改造
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---

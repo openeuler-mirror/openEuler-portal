@@ -1,9 +1,9 @@
 ---
-title: 深信服鲲鹏桌面云虚机高密度解决方案
+title: 深信服科技股份有限公司
 category: showcase
 industry: 云计算
 company: 深信服科技股份有限公司
-summary: 基于openEuler实现桌面云提质降本
+summary: 深信服鲲鹏桌面云虚机高密度解决方案，基于openEuler实现桌面云提质降本
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/cloud-computing.png
 ---

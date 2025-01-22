@@ -1,9 +1,9 @@
 ---
-title: 浙商银行全栈区块链服务平台
+title: 浙商银行
 category: showcase
 industry: 金融
 company: 浙商银行
-summary: 加强银行信息化系统安全性，构建良好的供应链产业链金融生态
+summary: 全栈区块链服务平台改造升级
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---

@@ -1,9 +1,9 @@
 ---
-title: 中国银行分布式基础技术平台（鸿鹄平台）
+title: 中国银行
 category: showcase
 industry: 金融
 company:  中国银行
-summary: 未来鸿鹄平台继续全力支持包括核心系统在内的应用系统的信创改造和架构转型。
+summary: 分布式基础技术平台（鸿鹄平台），依托基于openEuler 内核的麒麟商业发行版操作系统
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---

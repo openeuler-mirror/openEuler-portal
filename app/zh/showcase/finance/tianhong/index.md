@@ -1,5 +1,5 @@
 ---
-title: 金融企业天弘基金业务系统建设项目
+title: 天弘基金业务系统建设项目
 category: showcase
 industry: 金融
 company: 天弘基金

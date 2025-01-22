@@ -3,7 +3,7 @@ title: 恒生电子
 category: showcase
 industry: 金融
 company: 恒生电子
-summary: 打造证券行业从基础架构到应用系统全国产全生命周期最优化解决方案。
+summary: 基于openEuler打造金融证券场景深度定制开发的商业版本LightOS操作系统
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---

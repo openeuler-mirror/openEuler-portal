@@ -1,9 +1,9 @@
 ---
-title: 中国银联 UPEL2 产品
+title: 中国银联 
 category: showcase
 industry: 金融
 company: 中国银联
-summary: UPEL 为银联内部 Linux 发行版，是 UP 产品栈中的重要组成部分。
+summary: 采用基于openEuler研发 UPEL2方案，并基于 UPEL2完成云管理平台、容器管理平台等基础平台适配，完成数据库、中间件等基础组件适配
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---

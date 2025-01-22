@@ -1,9 +1,9 @@
 ---
-title: openEuler Copilot System洞察与实践-美团场景案例
+title: 美团容器云平台
 category: showcase
 industry: 其他
 company: 美团
-summary: openEuler Copilot System洞察与实践
+summary: 基于openEuler Copilot System有效管理和优化资源利用率
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/others.png
 ---
