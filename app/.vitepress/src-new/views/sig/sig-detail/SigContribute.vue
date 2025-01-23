@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted } from 'vue';
-import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 import { querySigUserContribute } from '@/api/api-sig';
 import IconSearch from '~icons/app-new/icon-search.svg';
 import { SigContributeArrT } from '@/shared/@types/type-sig';
 
 import ListProgress from './ListProgress.vue';
-import ListFormRadio from './ListFormRadio.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';
 import { OInput, OPagination } from '@opensig/opendesign';
 import { ORadioGroup, ORadio, OToggle } from '@opensig/opendesign';
 
-const { lang } = useData();
+import { useScreen } from '~@/composables/useScreen';
+import { divide } from 'lodash-es';
+
 const i18n = useI18n();
 const sigDetail = computed(() => {
   return i18n.value.sig.SIG_DETAIL;
@@ -24,6 +24,8 @@ const props = defineProps({
     default: '',
   },
 });
+
+const { lePadV } = useScreen();
 const contributionSelectBox = ref([
   {
     color: 'bg-color-maintainer',
@@ -176,10 +178,10 @@ const renderData = computed(() => {
 </script>
 <template>
   <div>
-    <div class="sig-contribut-title">
+    <div class="sig-contribute-title">
       {{ $t('sig.contributeTitle') }}
     </div>
-    <div class="sig-contribut-intro">
+    <div class="sig-contribute-intro">
       {{ $t('sig.contributeSubTitle') }}
     </div>
     <!-------------- 架构场景筛选 -------------->
@@ -217,10 +219,10 @@ const renderData = computed(() => {
         </OInput>
       </div>
     </div>
-    <div class="contribut-rank">
-      <div class="contribut-color-box">
+    <div class="contribute-rank">
+      <div class="contribute-color-box">
         {{ typeLable }}
-        <div class="contribut-list">
+        <div class="contribute-list">
           <div
             v-for="value in contributionSelectBox"
             :key="value.label"
@@ -240,6 +242,11 @@ const renderData = computed(() => {
       </div>
       <div class="rank-list">
         <template v-if="renderData.length">
+          <div
+            v-for="line in 5"
+            class="divider"
+            :class="`divider-${line}`"
+          ></div>
           <div v-for="(item, index) in renderData" class="rank-line">
             <div class="rank-nub">
               {{ currentPage * index + 1 }}
@@ -249,6 +256,7 @@ const renderData = computed(() => {
               :item="item.contribute"
               :member-list="memberMax"
               :usertype="item.usertype"
+              :width="lePadV ? '230px' : '640px'"
             ></ListProgress>
           </div>
         </template>
@@ -284,11 +292,11 @@ const renderData = computed(() => {
   display: flex;
   justify-content: flex-end;
 }
-.sig-contribut-title {
+.sig-contribute-title {
   @include h4;
   font-weight: 500;
 }
-.sig-contribut-intro {
+.sig-contribute-intro {
   margin-top: 8px;
   @include text1;
 }
@@ -352,17 +360,20 @@ const renderData = computed(() => {
   }
 }
 
-.contribut-rank {
+.contribute-rank {
   margin-top: 16px;
   background-color: var(--o-color-fill2);
   border: 1px solid var(--o-color-control4);
   border-radius: var(--o-radius-xs);
-  .contribut-color-box {
+  .contribute-color-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 56px;
-    .contribut-list {
+    @include respond-to('<=pad_v') {
+      padding: 8px 0;
+    }
+    .contribute-list {
       display: flex;
       .yellow-box {
         margin-right: 24px;
@@ -384,7 +395,19 @@ const renderData = computed(() => {
     }
   }
   .rank-list {
+    position: relative;
     border-top: 1px solid var(--o-color-control4);
+    .divider {
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      background-color: var(--o-color-control4);
+    }
+    @for $i from 1 through 5 {
+      .divider-#{$i} {
+        right: calc((100% - 44px) / 6 * #{$i});
+      }
+    }
     .o-result {
       margin: 40px;
     }
@@ -392,8 +415,14 @@ const renderData = computed(() => {
       display: flex;
       align-items: center;
       .rank-nub {
-        padding: 16px;
+        border-right: 1px solid var(--o-color-control4);
+        padding: 16px 0;
+        width: 44px;
+        text-align: center;
         @include tip1;
+      }
+      .o-progress {
+        padding: 0 12px;
       }
     }
   }

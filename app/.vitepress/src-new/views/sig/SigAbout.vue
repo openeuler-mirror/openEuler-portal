@@ -245,6 +245,7 @@ const processDetail = computed(() => {
       border-radius: var(--o-radius-xs);
       background-color: var(--o-color-fill2);
       padding: 12px 16px;
+      padding-bottom: 0;
       .title {
         @include h1;
         font-weight: 500;
@@ -266,6 +267,37 @@ const processDetail = computed(() => {
   .o-divider {
     --o-divider-label-gap: 0 40px;
     height: auto;
+  }
+}
+[data-o-theme='dark'] {
+  .sig-about {
+    .sig-about-card-box {
+      .application-process {
+        .o-card-content {
+          .process-step {
+            .num {
+              color: #2e3647;
+            }
+          }
+          .active.process-step {
+            .num {
+              color: #497af8;
+            }
+            &::after {
+              border-bottom: 18px solid #353539;
+            }
+          }
+          .process-detail {
+            background-image: linear-gradient(
+              212deg,
+              #2d2d31 0%,
+              #353539 100%,
+              #e9f5fe 100%
+            );
+          }
+        }
+      }
+    }
   }
 }
 </style>

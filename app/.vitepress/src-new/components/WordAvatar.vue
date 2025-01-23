@@ -64,7 +64,7 @@ const getAvatarStyle = computed(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--o-color-info1-inverse);
+  color: var(--o-color-white);
 }
 .round {
   border-radius: 50%;

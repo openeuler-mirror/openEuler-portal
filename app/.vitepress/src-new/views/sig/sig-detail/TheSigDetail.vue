@@ -13,7 +13,7 @@ import SigDetailInfoCard from './SigDetailInfoCard.vue';
 import SigMember from './SigMember.vue';
 import SigMeeting from './SigMeeting.vue';
 import SigRepo from './SigRepo.vue';
-import SigContribut from './SigContribut.vue';
+import SigContribute from './SigContribute.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';
 
@@ -83,7 +83,7 @@ const verticalPadding = computed(() => {
   if (isPadVToLaptop.value) {
     return ['16px', '40px'];
   } else if (lePadV.value) {
-    return ['12px', '32px'];
+    return ['32px', '32px'];
   } else {
     return ['32px', '72px'];
   }
@@ -95,7 +95,7 @@ onMounted(() => {
 </script>
 <template>
   <ContentWrapper :vertical-padding="verticalPadding">
-    <OBreadcrumb>
+    <OBreadcrumb class="breadcrumb">
       <OBreadcrumbItem
         v-for="breadCrumb in breadCrumbs"
         :title="breadCrumb.title"
@@ -112,7 +112,7 @@ onMounted(() => {
       :mail="sigDetailInfo?.mailing_list"
     />
     <div class="sig-detail-content">
-      <SigMember :maintainer-list="memberList" />
+      <SigMember class="sig-member" :maintainer-list="memberList" />
       <div class="sig-floor">
         <SigMeeting
           class="sig-floor-item"
@@ -132,8 +132,12 @@ onMounted(() => {
             {{ $t('sig.sigMeetingTip') }}
           </p>
         </div>
+        <SigMember
+          class="sig-member-mo sig-floor-item"
+          :maintainer-list="memberList"
+        />
         <SigRepo class="sig-floor-item" />
-        <SigContribut :sig="sigDetailInfo?.sig_name" class="sig-floor-item" />
+        <SigContribute :sig="sigDetailInfo?.sig_name" class="sig-floor-item" />
       </div>
     </div>
   </ContentWrapper>
@@ -145,6 +149,14 @@ onMounted(() => {
   display: grid;
   grid-template-columns: 348px 1fr;
   gap: 32px;
+  @include respond-to('<=laptop') {
+    grid-template-columns: 1fr;
+  }
+  .sig-member {
+    @include respond-to('<=laptop') {
+      display: none;
+    }
+  }
   .sig-floor {
     .sig-floor-item {
       & + .sig-floor-item {
@@ -162,9 +174,23 @@ onMounted(() => {
         @include tip1;
       }
     }
+    .sig-member-mo {
+      display: none;
+      @include respond-to('<=laptop') {
+        display: block;
+      }
+    }
   }
 }
 .sig-detail-info-card {
   margin-top: 32px;
+  @include respond-to('<=pad_v') {
+    margin-top: 0;
+  }
+}
+.breadcrumb {
+  @include respond-to('<=pad_v') {
+    display: none;
+  }
 }
 </style>

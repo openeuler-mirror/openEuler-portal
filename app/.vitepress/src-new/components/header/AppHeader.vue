@@ -100,6 +100,7 @@ watch(
 const isSimpleHeader = computed(() => {
   return frontmatter.value.simpleHeader;
 });
+console.log(frontmatter.value);
 
 // 搜索页移动端布局
 const isSearchPage = computed(() => {
@@ -141,7 +142,7 @@ const mobileClick = () => {
           <IconBack />
         </OIcon>
         <span>
-          {{ frontmatter.title }}
+          {{ frontmatter.backTitle }}
         </span>
       </div>
       <SearchHeaderMo v-if="isSearchPage && lePadV" />

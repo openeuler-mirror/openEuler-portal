@@ -1,9 +1,10 @@
 ---
-title: '所有版本下载'
+title: "openEuler下载 | openEuler ISO镜像"
 category: download-detail
 class: download-page
 titleTemplate: openEuler社区官网
 simpleHeader: '/zh/download/?archive=true'
+backTitle: '所有版本下载'
 head:
   - - meta
     - name: description
