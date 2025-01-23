@@ -19,7 +19,7 @@ export default {
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         PUBLISH_DATE: '2024/12',
         LTS: true,
-        VERSION: '24.03 LTS SP1',
+        VERSION: '24.03-LTS-SP1',
         PLANNED_EOL: '2026/12',
       },
       {

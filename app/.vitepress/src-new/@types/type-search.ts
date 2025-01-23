@@ -38,3 +38,60 @@ export interface SearchCountResItemT {
   doc_count: number;
   key: string;
 }
+// 搜索页，搜索结果
+export interface SearchDocsT {
+  records: SearchDocsTArrT[];
+  keyword: string; // 搜索词
+  page: number;
+  pageSize: number;
+}
+
+export interface SearchDocsTArrT {
+  eulerForumId: number;
+  lang: string;
+  path: string;
+  textContent: string;
+  title: string;
+  type: string;
+}
+
+// 搜索数量参数
+export interface SearchCountQueryT {
+  docsVersion: string;
+  keyword: string;
+  lang: string;
+  limit: LimitArrItemT[]; // 限制条件
+}
+
+export interface LimitArrItemT {
+  type: string;
+  version: string;
+}
+
+export interface SearchCountResItemT {
+  doc_count: number;
+  key: string;
+}
+
+export interface SearchCountResT {
+  total: SearchCountResItemT[];
+}
+// 关联搜索参数
+export interface RelevantQueryT {
+  keyword: string;
+  page: number;
+  pageSize: number;
+  lang: string;
+  type: string;
+  limit: LimitArrItemT[];
+}
+
+// 搜索 docs 参数
+export interface SearchDocsQueryT {
+  keyword: string;
+  page: number;
+  pageSize: number;
+  lang: string;
+  type: string;
+  limit: LimitArrItemT[];
+}
