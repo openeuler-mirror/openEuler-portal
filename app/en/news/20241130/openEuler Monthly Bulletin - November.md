@@ -40,7 +40,7 @@ The openEuler & Friends 5.0 session showcased the diverse applications of openEu
 
 With over 2,000 contributors from 43 countries and regions, openEuler has gained native support from dozens of mainstream open source projects and formed deep partnerships with global communities. openEuler is now fully available on global major public clouds and container repositories. This year, at the event, we announced deepened collaboration with three major open source foundations—OpenInfra, CNCF, and OpenHPC. They will offer native support for openEuler, while further accelerating openEuler's globalization. Moving forward, we will strengthen our collaboration with partners to deliver comprehensive service and support for the world.
 
-![](./images/4.PNG)
+![](./images/4_1.png)
 
 Also, our community, together with our partners, jointly launched the openEuler Global Resilience Initiative for a secure data ecosystem in the AI era. The initiative advocates for "strengthening open source supply chain security to elevate development excellence, pursuing innovation in OS security to ensure secure operations, and integrating with upstream vulnerability management ecosystems to achieve reliable O&M".
 
