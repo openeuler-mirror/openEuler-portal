@@ -56,7 +56,7 @@ onMounted(() => {
         <li class="item-info-page">
           <IconHome class="sig-board-icon" />
           <span>
-            <a target="_black" :href="item.home_page">
+            <a target="_blank" :href="item.home_page">
               {{ i18n.sig.SIG_LIST.HOME_PAGE }}
             </a>
           </span>

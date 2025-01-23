@@ -17,7 +17,7 @@ const i18n = useI18n();
 const jumpToUserZone = () => {
   const language = lang.value === 'zh' ? 'zh' : 'en';
   const origin = import.meta.env.VITE_LOGIN_ORIGIN;
-  window.open(`${origin}/${language}/profile`, '_black');
+  window.open(`${origin}/${language}/profile`, '_blank');
 };
 
 const jumpToMsgCenter = () => {
