@@ -12,6 +12,7 @@ import {
   OTable,
   OLink,
   OPagination,
+  OScroller,
   OSelect,
   OOption,
   OButton,
@@ -120,83 +121,85 @@ onMounted(() => {
 <template>
   <div class="sig-repo">
     <h2 class="repo-title">
-      {{ $t('sig.repoList', { count: 111 }) }}
+      {{ $t('sig.repoList', { count: totalRepositoryList.length }) }}
     </h2>
-    <OTable
-      class="repo-table"
-      :columns="columns"
-      border="row-frame"
-      :data="repositoryList"
-    >
-      <template #header>
-        <tr>
-          <th>
-            <FilterableTableHeader
-              v-model="repositoryNameSelected"
-              @change="filterRepositoryList"
-              :options="repositoryNameList"
-            >
-              {{ t('sig.repositoryName') }}
-            </FilterableTableHeader>
-          </th>
-          <th>
-            <FilterableTableHeader
-              v-model="maintainerSelected"
-              @change="filterRepositoryList"
-              :options="maintainerList"
-            >
-              {{ t('sig.maintainerEn') }}
-            </FilterableTableHeader>
-          </th>
-          <th>
-            <FilterableTableHeader
-              v-model="committerSelected"
-              @change="filterRepositoryList"
-              :options="committerList"
-            >
-              {{ t('sig.committer') }}
-            </FilterableTableHeader>
-          </th>
-        </tr>
-      </template>
-      <template #td_repo="{ row }">
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          :href="`https://gitee.com/${row.repo}`"
-        >
-          {{ row.repo }}
-        </a>
-      </template>
-      <template #td_maintainer="{ row }">
-        <a
-          v-for="(item, index) in row.maintainers"
-          :key="item"
-          target="_blank"
-          rel="noopener noreferrer"
-          :href="`https://gitee.com/${item}`"
-        >
-          {{ item
-          }}<span v-show="index !== row.maintainers.length - 1">{{
-            locale === 'zh' ? '、' : ',&nbsp;'
-          }}</span>
-        </a>
-      </template>
-      <template #td_gitee_id="{ row }">
-        <a
-          v-for="(item, index) in row.gitee_id"
-          :key="item"
-          target="_blank"
-          rel="noopener noreferrer"
-          :href="`https://gitee.com/${item}`"
-        >
-          {{ item
-          }}<span v-show="index !== row.gitee_id.length - 1">{{
-            locale === 'zh' ? '、' : ',&nbsp;'
-          }}</span>
-        </a>
-      </template>
-    </OTable>
+    <OScroller size="small" class="table-scroller">
+      <OTable
+        class="repo-table"
+        :columns="columns"
+        border="row-frame"
+        :data="repositoryList"
+      >
+        <template #header>
+          <tr>
+            <th>
+              <FilterableTableHeader
+                v-model="repositoryNameSelected"
+                @change="filterRepositoryList"
+                :options="repositoryNameList"
+              >
+                {{ t('sig.repositoryName') }}
+              </FilterableTableHeader>
+            </th>
+            <th>
+              <FilterableTableHeader
+                v-model="maintainerSelected"
+                @change="filterRepositoryList"
+                :options="maintainerList"
+              >
+                {{ t('sig.maintainerEn') }}
+              </FilterableTableHeader>
+            </th>
+            <th>
+              <FilterableTableHeader
+                v-model="committerSelected"
+                @change="filterRepositoryList"
+                :options="committerList"
+              >
+                {{ t('sig.committer') }}
+              </FilterableTableHeader>
+            </th>
+          </tr>
+        </template>
+        <template #td_repo="{ row }">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            :href="`https://gitee.com/${row.repo}`"
+          >
+            {{ row.repo }}
+          </a>
+        </template>
+        <template #td_maintainer="{ row }">
+          <a
+            v-for="(item, index) in row.maintainers"
+            :key="item"
+            target="_blank"
+            rel="noopener noreferrer"
+            :href="`https://gitee.com/${item}`"
+          >
+            {{ item
+            }}<span v-show="index !== row.maintainers.length - 1">{{
+              locale === 'zh' ? '、' : ',&nbsp;'
+            }}</span>
+          </a>
+        </template>
+        <template #td_gitee_id="{ row }">
+          <a
+            v-for="(item, index) in row.gitee_id"
+            :key="item"
+            target="_blank"
+            rel="noopener noreferrer"
+            :href="`https://gitee.com/${item}`"
+          >
+            {{ item
+            }}<span v-show="index !== row.gitee_id.length - 1">{{
+              locale === 'zh' ? '、' : ',&nbsp;'
+            }}</span>
+          </a>
+        </template>
+      </OTable>
+    </OScroller>
     <!-- 页码 -->
     <div
       v-if="totalRepositoryList.length > [10, 20, 30, 40][0]"
@@ -219,6 +222,9 @@ onMounted(() => {
   .repo-title {
     @include h4;
     font-weight: 500;
+  }
+  .table-warpper {
+    width: 100%;
   }
   .repo-table {
     margin-top: 24px;

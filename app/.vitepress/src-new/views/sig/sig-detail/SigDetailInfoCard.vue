@@ -33,6 +33,8 @@ const props = defineProps({
     default: '',
   },
 });
+
+const OMIT = '/openeuler/community/tree/master/';
 </script>
 <template>
   <div class="sig-detail-info-card">
@@ -49,29 +51,36 @@ const props = defineProps({
         <OIcon class="icon">
           <IconGitee />
         </OIcon>
-        {{ giteeAddress }}
+        {{ giteeAddress.replace(OMIT, '...') }}
       </a>
       <ODivider direction="v" />
-      <a class="mail" :href="`mailto:${mail}`">
-        <OIcon class="icon">
-          <IconMail />
-        </OIcon>
-        {{ mail }}
-      </a>
-      <a
-        v-if="
-          mail?.split('@').length && mail?.split('@')[1] === 'openeuler.org'
-        "
-        class="subscribe-sig-mail"
-        :href="`https://mailweb.openeuler.org/postorius/lists/${mail}/`"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <OButton size="medium" color="primary">
-          {{ $t('sig.subscribe') }}
-        </OButton>
-      </a>
+      <div class="mail-info">
+        <a class="mail" :href="`mailto:${mail}`">
+          <OIcon class="icon">
+            <IconMail />
+          </OIcon>
+          {{ mail }}
+        </a>
+        <a
+          v-if="
+            mail?.split('@').length && mail?.split('@')[1] === 'openeuler.org'
+          "
+          class="subscribe-sig-mail"
+          :href="`https://mailweb.openeuler.org/postorius/lists/${mail}/`"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <OButton
+            size="medium"
+            :variant="lePadV ? 'text' : 'outline'"
+            color="primary"
+          >
+            {{ $t('sig.subscribe') }}
+          </OButton>
+        </a>
+      </div>
     </div>
+    <ODivider class="divider-mo" direction="h" />
     <div class="sig-description">
       {{ description }}
     </div>
@@ -86,6 +95,10 @@ const props = defineProps({
   background-size: 100% 100%;
   background-position: right bottom;
   background-repeat: no-repeat;
+  @include respond-to('<=pad_v') {
+    padding: 16px;
+    background-image: linear-gradient(163deg, #eef4fe 0%, #dfecfe 100%);
+  }
   .sig-name {
     @include h2;
     font-weight: 500;
@@ -95,6 +108,22 @@ const props = defineProps({
     display: flex;
     align-items: center;
     @include text1;
+    @include respond-to('<=pad_v') {
+      margin-top: 8px;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    .o-divider {
+      display: none;
+    }
+    .mail-info {
+      display: flex;
+      @include respond-to('<=pad_v') {
+        width: 100%;
+        margin-top: 4px;
+        justify-content: space-between;
+      }
+    }
     .gitee-icon,
     .mail {
       display: flex;
@@ -115,6 +144,12 @@ const props = defineProps({
   .sig-description {
     margin-top: 8px;
     @include text1;
+  }
+  .divider-mo {
+    display: none;
+    @include respond-to('<=pad_v') {
+      display: block;
+    }
   }
 }
 

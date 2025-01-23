@@ -4,8 +4,6 @@ import { ref, onMounted, computed } from 'vue';
 import {
   OIcon,
   OTag,
-  OSelect,
-  OOption,
   OButton,
   OPopover,
   OPagination,
@@ -13,7 +11,10 @@ import {
 
 import WordAvatar from '~@/components/WordAvatar.vue';
 import AppSection from '~@/components/AppSection.vue';
+import ResultEmpty from '~@/components/ResultEmpty.vue';
+
 import { useLocale } from '~@/composables/useLocale';
+import { useScreen } from '~@/composables/useScreen';
 
 import type { SigCompleteItemT } from '~@/@types/type-sig';
 
@@ -24,6 +25,7 @@ import { getSigLandscape, getSigList, getRepoList } from '~@/api/api-sig';
 import IconGitee from '~icons/app-new/icon-gitee.svg';
 
 const { locale } = useLocale();
+const { lePadV } = useScreen();
 
 const repoQuery = ref({
   community: 'openeuler',
@@ -50,7 +52,6 @@ const filterSigInfo = computed(() => {
   sigQuery.value.page = 1;
 
   return allSigInfo.value.filter((item: SigCompleteItemT) => {
-    console.log(activeSig.value);
     // 按 sig 名称 筛选
     if (activeSig.value && item.sig_name !== activeSig.value) {
       return false;
@@ -115,45 +116,62 @@ const constructLandscapeMap = () => {
 };
 
 onMounted(() => {
-  console.time()
   queryGetRepoList();
   queryGetSigList();
   constructLandscapeMap();
+});
+
+const transformedRepos = computed(() => {
+  return allRepos.value.map((item) => ({ value: item, label: item }));
 });
 </script>
 <template>
   <AppSection :title="$t('sig.sigList')" class="sig-list">
     <div class="filter-line">
       <div class="select-box">
-        <OSelect v-model="activeSig" :placeholder="$t('sig.allSig')">
-          <OOption value="" :label="$t('sig.allSig')" />
-          <OOption
+        <el-select
+          v-model="activeSig"
+          :size="lePadV ? 'small' : 'large'"
+          filterable
+          clearable
+          :placeholder="$t('sig.allSig')"
+        >
+          <el-option
             v-for="sigName in sigNameList"
             :key="sigName"
             :value="sigName"
           />
-        </OSelect>
-        <OSelect v-model="activeRepo" :placeholder="$t('sig.allRepo')">
-          <OOption value="" :label="$t('sig.allRepo')" />
-          <OOption v-for="repo in allRepos" :key="repo" :value="repo" />
-        </OSelect>
-        <OSelect
+        </el-select>
+        <el-select-v2
+          v-model="activeRepo"
+          clearable
+          filterable
+          :size="lePadV ? 'small' : 'large'"
+          width="240px"
+          :fit-input-width="false"
+          :options="transformedRepos"
+          :placeholder="$t('sig.allRepo')"
+        >
+        </el-select-v2>
+        <el-select
           v-model="activeMaintainer"
+          clearable
+          filterable
           :placeholder="$t('sig.allMaintainer')"
         >
-          <OOption value="" :label="$t('sig.allMaintainer')" />
-          <OOption
+          <!-- <el-option value="" :label="$t('sig.allMaintainer')" /> -->
+          <el-option
             v-for="maintainer in allMaintainers"
             :key="maintainer"
             :value="maintainer"
           />
-        </OSelect>
+        </el-select>
       </div>
       <div class="tip">
         {{ $t('sig.sigTip') }}
       </div>
     </div>
-    <div class="sig-card-list">
+    <div v-if="renderSigInfo.length" class="sig-card-list">
       <div v-for="sig in renderSigInfo" :key="sig.sig_name" class="sig-card">
         <div class="sig-info">
           <div class="sig-info-left">
@@ -259,6 +277,14 @@ onMounted(() => {
         </div>
       </div>
     </div>
+    <ResultEmpty
+      v-else
+      :style="{
+        'margin-top': '40px',
+        '--result-image-width': '140px',
+        '--result-image-height': '170px',
+      }"
+    />
     <!-- 页码 -->
     <div v-if="filterSigInfo.length > COUNT_PER_PAGE[0]" class="pagination">
       <OPagination
@@ -279,13 +305,35 @@ onMounted(() => {
     display: flex;
     justify-content: space-between;
     .select-box {
+      display: flex;
       @include respond-to('<=pad_v') {
         display: grid;
+        width: 100%;
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
       }
-      .o-select {
-        & + .o-select {
+      .el-select {
+        min-width: 200px;
+        border-radius: var(--o-radius-xs);
+        overflow: hidden;
+        box-shadow: none;
+        :deep(.el-select__wrapper) {
+          height: 40px;
+          border: 1px solid var(--o-color-control1);
+          &.is-hovering,
+          &.is-focused {
+            border: 1px solid var(--o-color-primary1);
+          }
+          box-shadow: none;
+          @include respond-to('<=pad_v') {
+            height: fit-content;
+          }
+        }
+        @include respond-to('<=pad_v') {
+          min-width: auto;
+          width: 100%;
+        }
+        & + .el-select {
           margin-left: 16px;
           @include respond-to('<=pad_v') {
             margin: 0;
@@ -348,6 +396,9 @@ onMounted(() => {
         .icon {
           margin-right: 4px;
           font-size: var(--o-icon_size-xs);
+          @include respond-to('<=pad_v') {
+            display: none;
+          }
         }
       }
     }
@@ -363,6 +414,9 @@ onMounted(() => {
       margin-top: 12px;
       min-height: calc(2 * var(--o-line_height-text1));
       color: var(--o-color-info2);
+      @include respond-to('<=pad_v') {
+        min-height: auto;
+      }
     }
     .sig-member {
       display: flex;

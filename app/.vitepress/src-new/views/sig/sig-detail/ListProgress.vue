@@ -104,6 +104,7 @@ watch(
         class="gitee-name"
         :title="giteeName"
         :href="goToUser(giteeName)"
+        target="_blank"
         >{{ giteeName }}</a
       >
     </template>

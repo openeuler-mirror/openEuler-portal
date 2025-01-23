@@ -32,7 +32,8 @@ const verticalPadding = computed(() => {
     :background-image="banner"
     :illustration="illustration"
   />
-  <SigWelcome />
+  <div class="mo-title">{{ $t('sig.sigCenter') }}</div>
+  <SigWelcome class="sig-welcome" />
   <SigAbout />
   <SigList />
 </template>
@@ -41,6 +42,23 @@ const verticalPadding = computed(() => {
 .sig-banner {
   @include respond-to('<=pad_v') {
     display: none;
+  }
+}
+.mo-title {
+  display: none;
+  @include respond-to('<=pad_v') {
+    margin-top: 16px;
+    display: block;
+    text-align: center;
+    @include display1;
+  }
+}
+.sig-welcome {
+  :deep(.section-wrapper) {
+    margin-top: 40px;
+    @include respond-to('<=pad_v') {
+      margin-top: 12px;
+    }
   }
 }
 </style>
