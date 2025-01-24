@@ -33,6 +33,7 @@ import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 
 import IconClose from '~icons/app-new/icon-close.svg';
+import { useLogin } from '@/stores/login';
 
 const route = useRoute();
 
@@ -40,6 +41,7 @@ const { t, isZh } = useLocale();
 const { leLaptop, lePadV } = useScreen();
 
 const cookieStore = useCookieStore();
+const loginStore = useLogin();
 
 const COOKIE_DOMAIN = import.meta.env.VITE_COOKIE_DOMAIN;
 
@@ -68,9 +70,23 @@ const initSensor = () => {
   })();
 
   // 分析埋点
-  enableOA();
-  reportPV();
-  reportPerformance();
+  if (loginStore.loginStateChecked) {
+    enableOA();
+    reportPV();
+    reportPerformance();
+    return;
+  }
+  const unwatch = watch(
+    () => loginStore.loginStateChecked,
+    (val) => {
+      if (val) {
+        unwatch();
+        enableOA();
+        reportPV();
+        reportPerformance();
+      }
+    }
+  );
 };
 
 const removeSensor = () => {

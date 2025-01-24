@@ -34,6 +34,7 @@ import IconCopy from '~icons/app-new/icon-copy.svg';
 import IconDownload from '~icons/app/icon-download.svg';
 import IconTips from '~icons/app-new/icon-help.svg';
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
+import { computed } from 'vue';
 
 const props = defineProps({
   scenario: {
@@ -61,6 +62,9 @@ const props = defineProps({
     },
   },
 });
+const emits = defineEmits<{
+  (e: 'reportDownload', val: Record<string, string>): void;
+}>();
 const { contentData, versionData, mirrorList, scenario } = toRefs(props);
 const { t, locale } = useLocale();
 const { lePadV } = useScreen();
@@ -89,6 +93,17 @@ const architectureList: Ref<string[]> = ref([]);
 const scenarioList = ref<{ value: string; label: ComputedRef<string> }[]>(
   Array.from(SCENARIO_LIST.values())
 );
+
+const onRadioChange = (val: string | number | boolean, type: string) => {
+  emits('reportDownload', {
+    target:
+      type === 'architecture'
+        ? archMap.get(val as string)?.label || (val as string)
+        : scenarioList.value.find((item) => item.value === val)!.label,
+    level2: contentData.value.NAME,
+    type,
+  });
+};
 
 scenarioList.value.shift();
 function initActiveScenario() {
@@ -245,15 +260,29 @@ onMounted(async () => {
   });
 });
 
-function setMirrorLink(index: number) {
+const currentArchAndScenario = computed(() => ({
+  architecture: archMap.get(activeArch.value)?.label!,
+  scenario: scenarioList.value.find(
+    (item) => item.value === activeScenario.value
+  )!.label!,
+}));
+
+function setMirrorLink(row: any) {
   mirrorList.value.forEach((item: MirrorLsitT) => {
-    if (item.NameSpend === selectMirror.value[index].bandwidth) {
-      selectMirror.value[index].downloadLink = item.HttpURL;
+    if (item.NameSpend === selectMirror.value[row.index].bandwidth) {
+      selectMirror.value[row.index].downloadLink = item.HttpURL;
     }
+  });
+  const label = selectMirror.value[row.index].bandwidth || '';
+  emits('reportDownload', {
+    level2: contentData.value.NAME,
+    level3: row.Name || '',
+    level4: label,
+    target: label,
+    ...currentArchAndScenario.value,
   });
   return '';
 }
-// TODO: 优化代码
 const devStation = ['24.03-LTS-SP1', '24.09'];
 
 //------------------------ 改版代码 ------------------------------
@@ -277,6 +306,17 @@ const columns = [
   { label: t('download.TABLE_HEAD_3'), key: 'shaCode', style: 'width: 15%' },
   { label: t('download.TABLE_HEAD_4'), key: 'download', style: 'width: 15%' },
 ];
+
+const onClickDownload = (row: any) => {
+  const label = selectMirror.value[row.index].bandwidth || '';
+  emits('reportDownload', {
+    level2: contentData.value.NAME,
+    level3: row.Name || '',
+    level4: label,
+    target: t('download.DOWNLOAD_BTN_NAME'),
+    ...currentArchAndScenario.value,
+  });
+};
 </script>
 
 <template>
@@ -312,7 +352,10 @@ const columns = [
     <div class="filter-box">
       <div class="filter-card">
         <div class="label">{{ $t('download.ARCHITECTURE2') }}</div>
-        <ORadioGroup v-model="activeArch">
+        <ORadioGroup
+          v-model="activeArch"
+          @change="onRadioChange($event, 'architecture')"
+        >
           <ORadio
             v-for="option in architectureList"
             :key="option"
@@ -330,7 +373,10 @@ const columns = [
         <div class="label">
           {{ $t('download.SCENARIO2') }}
         </div>
-        <ORadioGroup v-model="activeScenario">
+        <ORadioGroup
+          v-model="activeScenario"
+          @change="onRadioChange($event, 'scenario')"
+        >
           <template v-for="option in scenarioList" :key="option.value">
             <ORadio
               v-show="
@@ -392,7 +438,7 @@ const columns = [
           placeholder="Select"
           optionPosition="br"
           optionWrapClass="mirror-select"
-          @change="setMirrorLink(row.index)"
+          @change="setMirrorLink(row)"
         >
           <div>
             <p class="select-text">
@@ -472,6 +518,7 @@ const columns = [
             size="medium"
             variant="solid"
             color="primary"
+            @click="onClickDownload(row)"
           >
             <template #icon>
               <OIcon>
@@ -480,7 +527,13 @@ const columns = [
             </template>
             {{ t('download.DOWNLOAD_BTN_NAME') }}
           </OButton>
-          <OButton v-else type="text" color="primary" size="medium">
+          <OButton
+            v-else
+            type="text"
+            color="primary"
+            size="medium"
+            @click="onClickDownload(row)"
+          >
             {{ t('download.DOWNLOADGO') }}
             <template #suffix>
               <OIcon>

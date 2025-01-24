@@ -12,9 +12,13 @@ import HeaderCode from './HeaderCode.vue';
 import HeaderLogin from './HeaderLogin.vue';
 import HeaderSearch from './HeaderSearch.vue';
 import NavLink from './NavLink.vue';
+import { oaReport } from '@/shared/analytics';
+import { useLocale } from '~@/composables/useLocale';
 
 const { lang } = useData();
+const { t } = useLocale();
 const i18n = useI18n();
+
 const commonStore = useCommon();
 
 const props = defineProps({
@@ -27,7 +31,41 @@ const props = defineProps({
 });
 
 // 导航数据
-const navData = computed(() => i18n.value.header.NAV_ROUTER);
+const navData = computed(() => {
+  try {
+    let isExtras = false;
+    let isShortCuts = false;
+    const path: string[] = [];
+    return i18n.value.header.NAV_ROUTER.map(function setPath(navItem: any) {
+      path.push(navItem.NAME);
+      const obj = {
+        ...navItem,
+        NAV_PATH: !isExtras
+          ? isShortCuts
+            ? [...path.slice(0, 2), t('header.QUICKLINK'), ...path.slice(2)]
+            : [...path.slice(0, 2), ...path.slice(1)]
+          : [...path],
+      };
+      if (Array.isArray(navItem.CHILDREN)) {
+        obj.CHILDREN = navItem.CHILDREN.map(setPath);
+      }
+      if (Array.isArray(navItem.SHORTCUT)) {
+        isShortCuts = true;
+        obj.SHORTCUT = navItem.SHORTCUT.map(setPath);
+        isShortCuts = false;
+      }
+      if (Array.isArray(navItem.EXTRAS)) {
+        isExtras = true;
+        obj.EXTRAS = navItem.EXTRAS.map(setPath);
+        isExtras = false;
+      }
+      path.pop();
+      return obj;
+    });
+  } catch {
+    return i18n.value.header.NAV_ROUTER;
+  }
+});
 
 // nav 鼠标滑过事件
 const isShow = ref(false);
@@ -56,6 +94,20 @@ const changeSubnav = useDebounceFn(function (item: any) {
 const linkClick = () => {
   navActive.value = '';
   isShow.value = false;
+};
+
+const reportNavClick = (path: string[]) => {
+  oaReport(
+    'click',
+    {
+      module: 'navigation',
+      ...path.reduce((level, item, index) => {
+        level[`level${index + 1}`] = item;
+        return level;
+      }, {} as Record<string, string>),
+    },
+    'portal'
+  );
 };
 </script>
 
@@ -125,6 +177,7 @@ const linkClick = () => {
                           <NavContent
                             :nav-content="group?.CHILDREN"
                             @link-click="linkClick"
+                            @report-nav-click-path="reportNavClick"
                           />
                         </div>
                       </div>
@@ -132,6 +185,7 @@ const linkClick = () => {
                         v-else
                         :nav-content="subNavContent?.CHILDREN"
                         @link-click="linkClick"
+                        @report-nav-click-path="reportNavClick"
                       />
                       <div v-if="subNavContent.EXTRAS" class="extra">
                         <div
@@ -142,6 +196,7 @@ const linkClick = () => {
                             class="content-title-url"
                             :url="extra.URL"
                             @link-click="linkClick"
+                            @click="reportNavClick(extra.NAV_PATH)"
                           >
                             {{ extra.NAME }}
                             <OIcon>
@@ -151,6 +206,7 @@ const linkClick = () => {
                           <NavContent
                             :nav-content="extra.CHILDREN"
                             @link-click="linkClick"
+                            @report-nav-click-path="reportNavClick"
                           />
                         </div>
                       </div>
@@ -174,6 +230,7 @@ const linkClick = () => {
                               :url="shortcut.URL"
                               @link-click="linkClick"
                               class="shortcut-link"
+                              @click="reportNavClick(shortcut.NAV_PATH)"
                             >
                               {{ shortcut.NAME }}
                               <OIcon v-if="shortcut.ICON">
@@ -189,6 +246,7 @@ const linkClick = () => {
                             :key="shortcut.NAME"
                             class="review"
                             @link-click="linkClick"
+                            @click="reportNavClick(shortcut.NAV_PATH)"
                           >
                             <img
                               :src="shortcut.PICTURE"

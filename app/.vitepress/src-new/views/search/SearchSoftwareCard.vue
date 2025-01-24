@@ -16,6 +16,7 @@ import { maintainerDefaults } from '~@/data/search';
 
 import defaultImg from '~@/assets/category/search/default-logo.png';
 import IconUser from '~icons/app-new/icon-user.svg';
+import { oaReport } from '@/shared/analytics';
 
 defineProps({
   data: {
@@ -70,6 +71,19 @@ const jumpTo = (id: PkgIdsT, type?: PkgTypeT) => {
 const repeatTags = (v: string) => {
   return v.toLocaleLowerCase() === 'image' ? t('software.apppkg') : v;
 };
+
+const onClickLink = (e: MouseEvent) => {
+  oaReport(
+    'click',
+    {
+      type: 'topic_software',
+      module: 'search_result',
+      target: (e.currentTarget as HTMLElement).textContent,
+      content: new URLSearchParams(location.search).get('search'),
+    },
+    'search_portal'
+  );
+};
 </script>
 
 <template>
@@ -85,6 +99,7 @@ const repeatTags = (v: string) => {
       <div class="pkg-info">
         <a
           :href="jumpTo(data.pkgIds)"
+          @click="onClickLink"
           target="_blank"
           rel="noopener noreferrer"
           class="name-info"

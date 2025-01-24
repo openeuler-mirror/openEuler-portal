@@ -8,17 +8,31 @@ import ContentWrapper from '~@/components/ContentWrapper.vue';
 
 import DownloadCommunity from './DownloadCommunity.vue';
 import DownloadGetOs from './DownloadGetOs.vue';
-import DownlooadGetResource from './DownlooadGetResource.vue';
-import DownlooadSupportService from './DownlooadSupportService.vue';
+import DownloadGetResource from './DownloadGetResource.vue';
+import DownloadSupportService from './DownloadSupportService.vue';
 
 import { anchorList } from '~@/data/download/download';
+import { oaReport } from '@/shared/analytics';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n();
 const target = ref(null);
 const showAnchor = ref(false);
 
 useIntersectionObserver(target, ([entry]) => {
   showAnchor.value = !entry?.isIntersecting;
 });
+
+const reportDownload = (data: Record<string, any>) => {
+  oaReport(
+    'click',
+    {
+      module: t('download.COMMUNITY'),
+      ...data,
+    },
+    'download'
+  );
+};
 </script>
 <template>
   <div v-show="showAnchor" class="anchor-header">
@@ -44,10 +58,19 @@ useIntersectionObserver(target, ([entry]) => {
     </ContentWrapper>
   </div>
   <div ref="target"></div>
-  <DownloadCommunity id="community-releases" />
-  <DownloadGetOs id="get-openeuler" />
-  <DownlooadGetResource id="related-resources" />
-  <DownlooadSupportService id="services-resources" />
+  <DownloadCommunity
+    @report-download="reportDownload"
+    id="community-releases"
+  />
+  <DownloadGetOs @report-download="reportDownload" id="get-openeuler" />
+  <DownloadGetResource
+    @report-download="reportDownload"
+    id="related-resources"
+  />
+  <DownloadSupportService
+    @report-download="reportDownload"
+    id="services-resources"
+  />
 </template>
 
 <style lang="scss" scoped>

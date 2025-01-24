@@ -1,7 +1,8 @@
-import { OpenAnalytics, OpenEventKeys } from '@opensig/open-analytics';
+import { OpenAnalytics, OpenEventKeys, getClientInfo } from '@opensig/open-analytics';
 import { reporAnalytics } from '@/api/api-analytics';
 import { Awaitable } from 'vitepress';
 import { COOKIE_AGREED_STATUS, useCookieStore } from '~@/stores/common';
+import { useLogin } from '@/stores/login';
 
 const DEFAULT_SERVICE = 'portal';
 
@@ -27,6 +28,7 @@ export const oa = new OpenAnalytics({
 });
 
 export const enableOA = () => {
+  oa.setHeader(getClientInfo());
   oa.enableReporting(true);
 };
 
@@ -73,12 +75,16 @@ export function oaReport<T extends Record<string, any>>(
   }
   return oa.report(
     event,
-    async (...opt) => ({
-      $service,
-      ...(typeof eventData === 'function'
-        ? await eventData(...opt)
-        : eventData),
-    }),
+    async (...opt) => {
+      const loginStore = useLogin();
+      return {
+        $service,
+        login_status: loginStore.isLoggedIn,
+        ...(typeof eventData === 'function'
+          ? await eventData(...opt)
+          : eventData),
+      };
+    },
     options
   );
 }

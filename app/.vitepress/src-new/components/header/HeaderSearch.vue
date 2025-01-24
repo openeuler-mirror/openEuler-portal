@@ -17,6 +17,8 @@ import IconSearch from '~icons/app-new/icon-header-search.svg';
 import IconDelete from '~icons/app-new/icon-header-delete.svg';
 import IconDeleteAll from '~icons/app-new/icon-delete.svg';
 import IconBack from '~icons/app-new/icon-header-back.svg';
+import { useDebounceFn } from '@vueuse/core';
+import { oaReport } from '@/shared/analytics';
 
 const { lang } = useData();
 const searchRef = ref();
@@ -31,10 +33,30 @@ const i18n = useI18n();
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 
+const reportSearch = (event: string, data: Record<string, any>) => {
+  const module = location.pathname.includes('other/search')
+    ? 'search_page'
+    : 'home_page';
+  oaReport(
+    event,
+    {
+      module,
+      ...data,
+    },
+    'search_portal'
+  );
+};
+
 // 搜索事件
-function handleSearchEvent() {
+function handleSearchEvent(report?: boolean) {
   isShowDrawer.value = false;
   handleSearch(searchInput.value);
+  if (report) {
+    reportSearch('click', {
+      content: searchInput.value,
+      type: 'search',
+    });
+  }
   window.open(
     `/${lang.value}/other/search/?search=${encodeURIComponent(
       searchInput.value
@@ -42,10 +64,20 @@ function handleSearchEvent() {
     '_self'
   );
 }
+
+type SearchItemClickType = 'history' | 'popular' | 'suggest';
+
 // 点击热搜标签
-const onTopSearchItemClick = (val: string) => {
+const onTopSearchItemClick = (
+  val: string,
+  type: SearchItemClickType = 'history'
+) => {
   searchInput.value = val;
   handleSearchEvent();
+  reportSearch('click', {
+    type,
+    target: val,
+  });
 };
 
 const searchValue = computed(() => i18n.value.header.SEARCH);
@@ -88,7 +120,13 @@ onMounted(() => {
 // ----------------- 联想搜索 -------------------------
 const recommendData = ref<SearchRecommendT[]>([]);
 
+const reportSearchInput = useDebounceFn(
+  (content: string) => reportSearch('input', { content }),
+  300
+);
+
 const queryGetSearchRecommend = (val: string) => {
+  reportSearchInput(val);
   getSearchRecommend({
     query: val,
   }).then((res) => {
@@ -132,6 +170,7 @@ const handleSearch = (searchValue: string) => {
 };
 
 const deleteHistory = (data: string) => {
+  reportSearch('click', { type: 'history_delete', target: data });
   if (!data) {
     localStorage.removeItem('search-history');
     searchHistory.value = [];
@@ -167,7 +206,7 @@ const closeSearch = () => {
                 ? searchValue.PLEACHOLDER_EXTEND
                 : searchValue.PLEACHOLDER
             "
-            @keyup.enter="handleSearchEvent"
+            @keyup.enter="handleSearchEvent(true)"
             @focus="showDrawer"
             class="normal"
           >
@@ -189,7 +228,7 @@ const closeSearch = () => {
           <span
             v-if="lePadV && isShowDrawer"
             class="search-text"
-            @click="handleSearchEvent"
+            @click="handleSearchEvent(true)"
             >{{ searchValue.TEXT }}</span
           >
         </div>
@@ -202,7 +241,7 @@ const closeSearch = () => {
             <div
               v-for="item in recommendData"
               class="recommend-item"
-              @click="onTopSearchItemClick(item.key)"
+              @click="onTopSearchItemClick(item.key, 'suggest')"
               :key="item.key"
             >
               {{ item.key }}
@@ -241,7 +280,7 @@ const closeSearch = () => {
                 :key="item"
                 type="text"
                 class="hots-list-item"
-                @click="onTopSearchItemClick(item)"
+                @click="onTopSearchItemClick(item, 'popular')"
               >
                 {{ item }}
               </div>
