@@ -67,8 +67,8 @@ const onBeforeChange = (idx: number) => {
 };
 
 // banner跳转
-const onClick = (href) => {
-  if (href) {
+const onClick = (href: string, hasBtn: boolean | undefined) => {
+  if (href && !hasBtn) {
     window.open(href);
   }
 };
@@ -100,10 +100,16 @@ const onClick = (href) => {
             'in-dark': !isLight,
             'cursor-pointer': info.href && !info.btn,
           }"
-          @click="onClick(info.href)"
+          @click="onClick(info.href, info.btn)"
         >
           <ContentWrapper class="banner-wrapper">
             <div class="banner-content">
+              <img
+                v-if="!isPhone && info.attach"
+                :src="info.attach"
+                class="banner-attach"
+              />
+
               <!-- 标题 -->
               <div class="banner-title" v-if="info.title && info.title.length">
                 <p v-for="(title, i) in info.title">{{ title }}</p>
@@ -114,12 +120,6 @@ const onClick = (href) => {
                   {{ info.btn }}
                 </OButton>
               </div>
-
-              <img
-                v-if="!isPhone && info.attach"
-                :src="info.attach"
-                class="banner-attach"
-              />
             </div>
           </ContentWrapper>
         </OFigure>
@@ -264,10 +264,10 @@ const onClick = (href) => {
 // 定制修改item1
 .banner-item0 {
   .banner-attach {
-    height: 200px;
+    height: 120px;
 
     @include respond-to('pad') {
-      height: 160px;
+      height: 80px;
     }
   }
 }
@@ -295,11 +295,11 @@ const onClick = (href) => {
   }
 }
 
-// 定制修改item2
-.banner-item2 {
-}
-
 // 定制修改item3
 .banner-item3 {
+}
+
+// 定制修改item4
+.banner-item4 {
 }
 </style>

@@ -54,6 +54,11 @@ const userCaseData = computed(() => i18n.value.interaction);
 const loading = ref(true);
 
 const toNewsContent = (path: string) => {
+  // TODO:需使用标志符标明特定模块的处理
+  if (path.startsWith('/annual-report/')) {
+    window.open(path, '_self');
+    return;
+  }
   router.go(`/${path}`);
 };
 
@@ -91,6 +96,22 @@ const getListData = (params: ParamsTypeT) => {
             newsCardData.value[i].author = [newsCardData.value[i].author];
           }
           newsCardData.value[i].banner = '/' + newsCardData.value[i].banner;
+        }
+
+        // TODO:特殊处理24年年报，待后续年报单独作为一个栏目
+        if (lang.value === 'zh') {
+          const yearData = {
+            banner: '/img/banners/annual-report-2024.jpg',
+            archives: '2025-01',
+            author: ['openEuler'],
+            date: '2025-01-24',
+            lang: 'zh',
+            title: 'openEuler 2024 社区年报',
+            summary: 'openEuler 2024 社区年报',
+            tags: ['openEuler', '社区运作报告'],
+            path: '/annual-report/openEuler-annual-report-2024.pdf',
+          };
+          newsCardData.value.unshift(yearData);
         }
       }
     })
