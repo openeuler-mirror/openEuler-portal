@@ -3,6 +3,7 @@ import { markRaw } from 'vue';
 import Summit from '~@/assets/category/header/summit.png';
 import Sig from '~@/assets/category/header/sig.png';
 import Report from '~@/assets/category/header/report.png';
+import annualReport2024 from '~@/assets/category/header/annual-report-2024.jpg';
 
 import IconOutLink from '~icons/app/icon-out-link.svg';
 import IconArrowRight from '~icons/app-new/icon-header-next.svg';
@@ -795,12 +796,19 @@ export default {
               URL: '/interaction/blog-list/',
             },
             {
-              NAME: '月刊',
+              NAME: '月刊与年报',
               DESCRIPTION: '查看openEuler社区运作报告',
               URL: '/monthly-bulletins/',
             },
           ],
           SHORTCUT: [
+            {
+              NAME: 'openEuler 2024 社区年报',
+              PICTURE: annualReport2024,
+              REMARK: '发布时间：2025/01/24',
+              TYPE: 'PICTURE',
+              URL: '/annual-report/openEuler-annual-report-2024.pdf',
+            },
             {
               NAME: 'openEuler 2023 社区年报',
               PICTURE: Report,

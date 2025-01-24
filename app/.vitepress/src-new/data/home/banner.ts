@@ -24,6 +24,9 @@ export default {
       bg_mb: newyear_mb,
       attach: newyear_attach,
       bg_theme: 'dark',
+      btn: '查看2024社区年报',
+      href: '/annual-report/openEuler-annual-report-2024.pdf',
+      isBlank: true,
     },
     {
       light: {
@@ -55,13 +58,6 @@ export default {
     },
   ],
   en: [
-    {
-      bg_pc: newyear_pc,
-      bg_pad: newyear_pad,
-      bg_mb: newyear_mb,
-      attach: newyear_attach,
-      bg_theme: 'dark',
-    },
     {
       light: {
         bg_pc: summit2024_pc_light,
