@@ -27131,6 +27131,67 @@
     }
   },
   {
+    "hardwareFactory": "Yangtze",
+    "hardwareModel": "G440K V2",
+    "osVersion": "openEuler 22.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2024/06/01",
+    "friendlyLink": "https://www.yctco.com.cn",
+    "boardCards": [
+      {
+        "vendorID": "15b3",
+        "deviceID": "1017",
+        "svID": "15b3",
+        "ssID": "0121",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP1",
+        "driverName": "mlx5_core",
+        "version": "5.0-0",
+        "type": "NIC",
+        "date": "2024/06/01",
+        "sha256": "7b6f37c5da1db992e594e729e4f2c4d9ff0ab3a5991cb978f96867b6a5069d10",
+        "driverSize": "360432",
+        "chipVendor": "Mellanox",
+        "boardModel": "MCX512A-ACUT",
+        "chipModel": "CX5",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "aarch64",
+        "os": "KylinSec Linux OS release 3 (Qomolangma)",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "raid",
+        "date": "2024/0601",
+        "sha256": "9f63ecefa5aac931a5425c1ec6185ee05be04c0ce1d64e17494c463da81963fc",
+        "driverSize": "69244",
+        "chipVendor": "Broadcom",
+        "boardModel": "MegaRAID 9560-8i",
+        "chipModel": "SAS3908",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.yctco.com.cn",
+      "certificationTime": "2024/06/01",
+      "commitID": "",
+      "mainboardModel": "5104-00723",
+      "biosUefi": "7.09",
+      "cpu": "Kunpeng 920",
+      "ram": "32*64G DIMMs",
+      "portsBusTypes": "X4/X8",
+      "videoAdapter": "1711",
+      "hostBusAdapter": "HiSilicon SAS 3.0 HBA/HiSilicon AHCI HBA",
+      "hardDiskDrive": "HWE62ST3480L003N/MR9560-8i"
+    }
+  },
+  {
     "hardwareFactory": "New H3C Technologies Co., Ltd.",
     "hardwareModel": "H3C UniServer R3950 G7",
     "osVersion": "openEuler 24.03 LTS",
