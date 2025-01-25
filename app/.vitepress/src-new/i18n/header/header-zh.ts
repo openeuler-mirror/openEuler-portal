@@ -807,7 +807,7 @@ export default {
               PICTURE: annualReport2024,
               REMARK: '发布时间：2025/01/24',
               TYPE: 'PICTURE',
-              URL: '/annual-report/openEuler-annual-report-2024.pdf',
+              URL: '/annual-report/openEuler-annual-report-2024/',
             },
             {
               NAME: 'openEuler 2023 社区年报',

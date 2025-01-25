@@ -54,11 +54,6 @@ const userCaseData = computed(() => i18n.value.interaction);
 const loading = ref(true);
 
 const toNewsContent = (path: string) => {
-  // TODO:需使用标志符标明特定模块的处理
-  if (path.startsWith('/annual-report/')) {
-    window.open(path, '_self');
-    return;
-  }
   router.go(`/${path}`);
 };
 
@@ -109,7 +104,7 @@ const getListData = (params: ParamsTypeT) => {
             title: 'openEuler 2024 社区年报',
             summary: 'openEuler 2024 社区年报',
             tags: ['openEuler', '社区运作报告'],
-            path: '/annual-report/openEuler-annual-report-2024.pdf',
+            path: 'zh/annual-report/openEuler-annual-report-2024/',
           };
           newsCardData.value.unshift(yearData);
         }
