@@ -25,7 +25,7 @@ export default {
       attach: newyear_attach,
       bg_theme: 'dark',
       btn: '查看2024社区年报',
-      href: '/annual-report/openEuler-annual-report-2024.pdf',
+      href: '/zh/annual-report/openEuler-annual-report-2024/',
       isBlank: true,
     },
     {

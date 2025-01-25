@@ -31,12 +31,6 @@ const linkClick = () => {
     getDownloadQuery(props.url);
   }
 
-  // TODO:需使用标志符标明特定模块的处理
-  if (props.url.startsWith('/annual-report/')) {
-    window.open(props.url, '_self');
-    return;
-  }
-
   router.go(`/${lang.value}${props.url}`);
 };
 
