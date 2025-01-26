@@ -45,4 +45,7 @@ export default {
   meetiingIntro2:
     'SIG 版本规划工作会议遵循开源、开放原则，议题收集、技术讨论、会议纪要等各讨论过程均对外开放',
   meetiingTypeTitle: '会议介绍',
+  sig: 'SIG',
+  roleDescription: '角色说明',
+  roleDescriptionIntro: '简要描述 openEuler 社区中贡献者角色的各种职责',
 };
