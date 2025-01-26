@@ -29,7 +29,11 @@ onMounted(async () => {
       </a>
     </div>
     <div class="pdf-content">
-      <component :is="VuePdfEmbed" ref="pdfRef" :source="pdfUrl" />
+      <component :is="VuePdfEmbed" ref="pdfRef" :source="pdfUrl">
+        <template #after-page>
+          <div class="pdf-gap"></div>
+        </template>
+      </component>
     </div>
   </div>
 </template>
@@ -68,5 +72,13 @@ onMounted(async () => {
 
 .pdf-content {
   margin-top: var(--pdf-header-height);
+}
+
+.pdf-gap {
+  height: 12px;
+
+  @include respond-to('<=pad_v') {
+    height: 4px;
+  }
 }
 </style>
