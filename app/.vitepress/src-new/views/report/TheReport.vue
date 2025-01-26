@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import VuePdfEmbed from 'vue-pdf-embed';
 
 import OIcon from 'opendesign/icon/OIcon.vue';
 import IconDownload from '~icons/app/icon-download.svg';
+import { onMounted } from 'vue';
 
 const pdfRef = ref();
 const pdfUrl = '/annual-report/openEuler-annual-report-2024.pdf';
-const currentPage = ref(0);
+const VuePdfEmbed = ref(null);
+
+onMounted(async () => {
+  const { default: PdfEmbed } = await import('vue-pdf-embed');
+  VuePdfEmbed.value = PdfEmbed;
+});
 </script>
 
 <template>
@@ -24,7 +29,7 @@ const currentPage = ref(0);
       </a>
     </div>
     <div class="pdf-content">
-      <VuePdfEmbed ref="pdfRef" :source="pdfUrl" :page="currentPage" />
+      <component :is="VuePdfEmbed" ref="pdfRef" :source="pdfUrl" />
     </div>
   </div>
 </template>

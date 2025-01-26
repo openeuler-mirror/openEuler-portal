@@ -123,7 +123,9 @@ onMounted(() => {
       <AppTour />
     </ClientOnly>
   </template>
-  <Content v-else />
+  <ClientOnly v-else>
+    <Content v-if="isReport" />
+  </ClientOnly>
 </template>
 
 <style lang="scss" scoped>
