@@ -44,8 +44,9 @@ export default {
     'openEuler 开源社区按照不同的 SIG(Special Interests Group) 来组织开发及版本发布工作，openEuler 开源社区的主要技术产品通过 openEuler 开源操作系统承载，它在每年的 3 月和 9 月发布两个版本。当一个版本发布完成后，openEuler 开源社区将召开下一个版本的开发规划会议，会议以 SIG 组为单位，时长为 0.5~1 天，用于集中讨各 SIG 组未来 6 个月的规划、工作事项、任务分工、优先级等相关内容。openEuler 开源社区将为各 SIG 组的规划会议提供场地和技术支持',
   meetiingIntro2:
     'SIG 版本规划工作会议遵循开源、开放原则，议题收集、技术讨论、会议纪要等各讨论过程均对外开放',
-  meetiingTypeTitle: '会议介绍',
+  meetingTypeTitle: '会议介绍',
   sig: 'SIG',
   roleDescription: '角色说明',
   roleDescriptionIntro: '简要描述 openEuler 社区中贡献者角色的各种职责',
+  sigMeeingOrg: '组织会议',
 };
