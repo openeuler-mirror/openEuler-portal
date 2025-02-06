@@ -208,7 +208,7 @@ export default {
               },
               {
                 img: xujian,
-                name: '徐健',
+                name: '徐键',
                 position: ['南方电网数字电网科技有限（广东）公司'],
               },
               {
