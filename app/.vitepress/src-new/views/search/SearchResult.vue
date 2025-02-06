@@ -250,7 +250,6 @@ const MO_FEEDBACK_INDEX = 11;
         v-if="
           !searchType ||
           searchType === 'docs' ||
-          searchType === 'communityRelease' ||
           searchType.includes('packages')
         "
         v-model="activeVersion"

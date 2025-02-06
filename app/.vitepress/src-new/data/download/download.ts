@@ -395,6 +395,7 @@ export default {
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
+        WHITE_PAPER: '/whitepaper/en/openEuler 24.03 LTS SP1 Technical White Paper.pdf',
         PUBLISH_DATE: '2024/12',
         LTS: true,
         VERSION: '24.03 LTS SP1',
