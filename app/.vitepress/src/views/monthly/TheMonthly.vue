@@ -92,6 +92,22 @@ const getListData = (params: ParamsTypeT) => {
           }
           newsCardData.value[i].banner = '/' + newsCardData.value[i].banner;
         }
+
+        // TODO:特殊处理24年年报，待后续年报单独作为一个栏目
+        if (lang.value === 'zh') {
+          const yearData = {
+            banner: '/img/banners/annual-report-2024.jpg',
+            archives: '2025-01',
+            author: ['openEuler'],
+            date: '2025-01-24',
+            lang: 'zh',
+            title: 'openEuler 2024 社区年报',
+            summary: 'openEuler 2024 社区年报',
+            tags: ['openEuler', '社区运作报告'],
+            path: 'zh/annual-report/openEuler-annual-report-2024/',
+          };
+          newsCardData.value.unshift(yearData);
+        }
       }
     })
     .finally(() => {

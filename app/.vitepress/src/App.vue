@@ -82,6 +82,10 @@ const isDocs = computed(() => {
     frontmatter.value.category === 'wiki'
   );
 });
+
+const isReport = computed(() => {
+  return frontmatter.value.category === 'report';
+});
 // ----------------------------- new ----------------------------
 
 watch(
@@ -100,22 +104,27 @@ onMounted(() => {
 </script>
 
 <template>
-  <AppHeader />
-  <OConfigProvider :locale="isZh ? zhCN : enUS">
-    <el-config-provider :locale="elLocale">
-      <main :class="frontmatter.class ? frontmatter.class : ''">
-        <component :is="comp" v-if="isCustomLayout"></component>
-        <Content v-else />
-        <FloatingButton v-if="lang === 'zh'" />
-        <FloatingButtonEn v-else />
-        <AppYear />
-      </main>
-    </el-config-provider>
-  </OConfigProvider>
-  <CookieNotice />
-  <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
-  <ClientOnly>
-    <AppTour />
+  <template v-if="!isReport">
+    <AppHeader />
+    <OConfigProvider :locale="isZh ? zhCN : enUS">
+      <el-config-provider :locale="elLocale">
+        <main :class="frontmatter.class ? frontmatter.class : ''">
+          <component :is="comp" v-if="isCustomLayout"></component>
+          <Content v-else />
+          <FloatingButton v-if="lang === 'zh' && !isReport" />
+          <FloatingButtonEn v-else-if="!isReport" />
+          <AppYear v-if="!isReport" />
+        </main>
+      </el-config-provider>
+    </OConfigProvider>
+    <CookieNotice />
+    <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
+    <ClientOnly>
+      <AppTour />
+    </ClientOnly>
+  </template>
+  <ClientOnly v-else>
+    <Content v-if="isReport" />
   </ClientOnly>
 </template>
 

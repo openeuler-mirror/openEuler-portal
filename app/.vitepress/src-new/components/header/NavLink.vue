@@ -30,6 +30,7 @@ const linkClick = () => {
   if (props.url.startsWith('/download/')) {
     getDownloadQuery(props.url);
   }
+
   router.go(`/${lang.value}${props.url}`);
 };
 
