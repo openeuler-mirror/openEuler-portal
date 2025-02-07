@@ -11,12 +11,12 @@ import { OInput, OPagination } from '@opensig/opendesign';
 import { ORadioGroup, ORadio, OToggle } from '@opensig/opendesign';
 
 import { useScreen } from '~@/composables/useScreen';
-import { divide } from 'lodash-es';
 
 const i18n = useI18n();
 const sigDetail = computed(() => {
   return i18n.value.sig.SIG_DETAIL;
 });
+
 const props = defineProps({
   sig: {
     type: String,
@@ -186,6 +186,17 @@ const renderData = computed(() => {
     </div>
     <!-------------- 架构场景筛选 -------------->
     <div class="filter-box">
+      <OInput
+        v-if="lePadV"
+        class="serach-input"
+        :placeholder="$t('sig.contributePlaceholder')"
+        v-model.lazy="searchVal"
+        @change="querySearch"
+      >
+        <template #prefix>
+          <OIcon class="icon"><IconSearch></IconSearch></OIcon>
+        </template>
+      </OInput>
       <div
         v-for="(item, index) in lastformOption"
         :key="item.id"
@@ -207,9 +218,9 @@ const renderData = computed(() => {
           </ORadio>
         </ORadioGroup>
         <OInput
-          v-if="index === 1"
+          v-if="index === 1 && !lePadV"
           class="serach-input"
-          :placeholder="$t('download.PLACEHOLDER')"
+          :placeholder="$t('sig.contributePlaceholder')"
           v-model.lazy="searchVal"
           @change="querySearch"
         >
@@ -219,10 +230,27 @@ const renderData = computed(() => {
         </OInput>
       </div>
     </div>
+    <div v-if="lePadV" class="contribute-list contribute-list-mo">
+      <div
+        v-for="value in contributionSelectBox"
+        :key="value.label"
+        class="yellow-box"
+        style="cursor: pointer"
+        @click="getcontributeValue(value)"
+      >
+        <div
+          class="box"
+          :class="value.isSelected ? value.color : 'bg-color-cancel'"
+        ></div>
+        <span :class="value.isSelected ? '' : 'color-cancel'">{{
+          value.label
+        }}</span>
+      </div>
+    </div>
     <div class="contribute-rank">
       <div class="contribute-color-box">
         {{ typeLable }}
-        <div class="contribute-list">
+        <div v-if="!lePadV" class="contribute-list">
           <div
             v-for="value in contributionSelectBox"
             :key="value.label"
@@ -308,7 +336,8 @@ const renderData = computed(() => {
   border-radius: var(--o-radius-xs);
   padding: 24px;
   @include respond-to('<=pad_v') {
-    margin-top: 16px;
+    margin-top: 12px;
+    padding: 12px;
   }
   .filter-card {
     display: flex;
@@ -324,6 +353,7 @@ const renderData = computed(() => {
       color: var(--o-color-info1);
       min-width: 32px;
       margin-right: 32px;
+      font-weight: 500;
       @include respond-to('<=pad_v') {
         min-width: auto;
       }
@@ -351,6 +381,15 @@ const renderData = computed(() => {
   .serach-input {
     margin-left: auto;
     max-width: 320px;
+    @include respond-to('<=pad_v') {
+      max-width: 100%;
+      width: 100%;
+    }
+    :deep(.o_box) {
+      @include respond-to('<=pad_v') {
+        width: 100%;
+      }
+    }
     :deep(.o_box-main) {
       .o-icon {
         font-size: var(--o-font_size-text1);
@@ -365,33 +404,16 @@ const renderData = computed(() => {
   background-color: var(--o-color-fill2);
   border: 1px solid var(--o-color-control4);
   border-radius: var(--o-radius-xs);
+  @include respond-to('<=pad_v') {
+    margin-top: 8px;
+  }
   .contribute-color-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 56px;
     @include respond-to('<=pad_v') {
-      padding: 8px 0;
-    }
-    .contribute-list {
-      display: flex;
-      .yellow-box {
-        margin-right: 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .box {
-          width: 12px;
-          height: 12px;
-          border-radius: 2px;
-          font-size: 10px;
-          color: var(--e-color-white);
-          line-height: 12px;
-          text-align: center;
-          margin-right: 8px;
-          border-radius: 50%;
-        }
-      }
+      padding: 8px 56px;
     }
   }
   .rank-list {
@@ -409,7 +431,7 @@ const renderData = computed(() => {
       }
     }
     .o-result {
-      margin: 40px;
+      margin: 40px 0;
     }
     .rank-line {
       display: flex;
@@ -420,6 +442,9 @@ const renderData = computed(() => {
         width: 44px;
         text-align: center;
         @include tip1;
+        @include respond-to('<=pad_v') {
+          width: 38px;
+        }
       }
       .o-progress {
         padding: 0 12px;
@@ -428,6 +453,30 @@ const renderData = computed(() => {
   }
 }
 
+.contribute-list {
+  display: flex;
+  font-family: 500;
+  .yellow-box {
+    margin-right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .box {
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      font-size: 10px;
+      color: var(--e-color-white);
+      line-height: 12px;
+      text-align: center;
+      margin-right: 8px;
+      border-radius: 50%;
+    }
+  }
+}
+.contribute-list-mo {
+  margin-top: 12px;
+}
 .bg-color-maintainer {
   background-color: #f0bc00;
 }

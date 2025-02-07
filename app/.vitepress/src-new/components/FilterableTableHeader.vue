@@ -277,9 +277,6 @@ const reset = () => {
             </OCheckboxGroup>
           </template>
           <template v-else>
-            <!-- <div class="check-all-wrap">
-              <ORadio v-model="radioVal" :value="''">全选</ORadio>
-            </div> -->
             <ORadioGroup v-model="radioVal" direction="v">
               <ORadio
                 v-for="item in displayOptions"
@@ -303,6 +300,10 @@ const reset = () => {
 </template>
 
 <style lang="scss" scoped>
+.header-cell {
+  display: flex;
+  align-items: center;
+}
 :deep(.o-divider-line) {
   position: absolute;
   left: 0;
@@ -311,6 +312,9 @@ const reset = () => {
 .input-wrap {
   width: 100%;
   padding: 6px 6px 0 6px;
+  :deep(.o_box) {
+    width: 100%;
+  }
 }
 .filter-icon {
   cursor: pointer;

@@ -1,22 +1,18 @@
 <script lang="ts" setup>
 import { ref, computed, type PropType } from 'vue';
 
-import { useData } from 'vitepress';
-
 import { OIcon, ODivider, OScroller } from '@opensig/opendesign';
 
-import { useScreen } from '~@/composables/useScreen';
-import { useLocale } from '~@/composables/useLocale';
 import WordAvatar from '~@/components/WordAvatar.vue';
 
 import IconGitee from '~icons/app-new/icon-gitee.svg';
 import IconMail from '~icons/app-new/icon-mail.svg';
 
-import { SIG_ADDRESS, GITEE_ADDRESS } from '~@/shared/config/sig';
+import { GITEE_ADDRESS } from '~@/shared/config/sig';
 
 import { sigMaintainerT } from '~@/@types/type-sig';
 
-const props = defineProps({
+defineProps({
   maintainerList: {
     type: Array as PropType<sigMaintainerT[]>,
     define: () => {
@@ -75,13 +71,24 @@ const props = defineProps({
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
   height: fit-content;
+  min-height: 744px;
+  @include respond-to('<=laptop') {
+    padding: 20px 32px;
+    min-height: auto;
+  }
   .sig-member-title {
     @include h4;
     font-weight: 500;
+    @include respond-to('<=laptop') {
+      display: none;
+    }
   }
   .member-list {
     margin-top: 24px;
     max-height: 744px;
+    @include respond-to('<=laptop') {
+      margin-top: 0;
+    }
     .member-info {
       display: flex;
       align-items: center;

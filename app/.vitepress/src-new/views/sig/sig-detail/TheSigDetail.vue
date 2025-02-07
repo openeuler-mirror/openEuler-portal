@@ -112,31 +112,46 @@ onMounted(() => {
       :mail="sigDetailInfo?.mailing_list"
     />
     <div class="sig-detail-content">
+      <!-- SIG成员 -->
       <SigMember class="sig-member" :maintainer-list="memberList" />
       <div class="sig-floor">
-        <SigMeeting
-          class="sig-floor-item"
-          v-if="sigMeetingData.length"
-          :meeting-data="sigMeetingData"
-          :mail="mail"
-        />
-        <div v-else class="result-empty-box sig-floor-item">
-          <ResultEmpty
-            :description="$t('sig.noMeeting')"
-            :style="{
-              '--result-image-width': '140px',
-              '--result-image-height': '170px',
-            }"
+        <div class="meeting-title">
+          {{ $t('sig.sigMeeting') }}
+        </div>
+        <div class="meeting-title-intro">
+          {{ $t('sig.sigMeetingIntro') }}
+        </div>
+        <div class="meeting-card">
+          <SigMeeting
+            class="sig-floor-item"
+            v-if="sigMeetingData.length"
+            :meeting-data="sigMeetingData"
+            :mail="mail"
           />
-          <p class="tips-text">
-            {{ $t('sig.sigMeetingTip') }}
-          </p>
+          <div v-else class="result-empty-box sig-floor-item">
+            <ResultEmpty
+              :description="$t('sig.noMeeting')"
+              :style="{
+                '--result-image-width': '140px',
+                '--result-image-height': '170px',
+              }"
+            />
+            <p class="tips-text">
+              {{ $t('sig.sigMeetingTip') }}
+            </p>
+          </div>
+        </div>
+        <!-- SIG成员移动端 -->
+        <div class="sig-member-title">
+          {{ $t('sig.sigMember', { num: memberList?.length }) }}
         </div>
         <SigMember
           class="sig-member-mo sig-floor-item"
           :maintainer-list="memberList"
         />
+        <!-- SIG仓库 -->
         <SigRepo class="sig-floor-item" />
+        <!-- SIG贡献展示 -->
         <SigContribute :sig="sigDetailInfo?.sig_name" class="sig-floor-item" />
       </div>
     </div>
@@ -152,19 +167,42 @@ onMounted(() => {
   @include respond-to('<=laptop') {
     grid-template-columns: 1fr;
   }
+  .sig-member-title {
+    margin-top: 32px;
+    @include h4;
+    font-weight: 500;
+  }
   .sig-member {
     @include respond-to('<=laptop') {
       display: none;
     }
   }
   .sig-floor {
+    .meeting-title {
+      @include h4;
+      font-weight: 500;
+    }
+    .meeting-card {
+      margin-top: 24px;
+      @include respond-to('<=laptop') {
+        margin-top: 12px;
+      }
+    }
+    .meeting-title-intro {
+      margin-top: 8px;
+      @include text1;
+    }
     .sig-floor-item {
       & + .sig-floor-item {
         margin-top: 32px;
       }
     }
     .result-empty-box {
-      padding: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 52px 0;
       background-color: var(--o-color-fill2);
       border-radius: var(--o-radius-xs);
       .tips-text {
@@ -177,6 +215,7 @@ onMounted(() => {
     .sig-member-mo {
       display: none;
       @include respond-to('<=laptop') {
+        margin-top: 12px;
         display: block;
       }
     }

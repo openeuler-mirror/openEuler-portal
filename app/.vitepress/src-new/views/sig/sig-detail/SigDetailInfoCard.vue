@@ -113,9 +113,6 @@ const OMIT = '/openeuler/community/tree/master/';
       align-items: flex-start;
       flex-direction: column;
     }
-    .o-divider {
-      display: none;
-    }
     .mail-info {
       display: flex;
       @include respond-to('<=pad_v') {
@@ -139,6 +136,9 @@ const OMIT = '/openeuler/community/tree/master/';
     }
     .o-divider {
       font-size: var(--o-font_size-text1);
+      @include respond-to('<=pad_v') {
+        display: none;
+      }
     }
   }
   .sig-description {

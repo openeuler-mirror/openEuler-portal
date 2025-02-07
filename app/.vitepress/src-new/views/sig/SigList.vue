@@ -23,6 +23,7 @@ import { COUNT_PER_PAGE } from '~@/shared/config';
 import { getSigLandscape, getSigList, getRepoList } from '~@/api/api-sig';
 
 import IconGitee from '~icons/app-new/icon-gitee.svg';
+import IconMore from '~icons/sig/more.svg';
 
 const { locale } = useLocale();
 const { lePadV } = useScreen();
@@ -30,8 +31,6 @@ const { lePadV } = useScreen();
 const repoQuery = ref({
   community: 'openeuler',
   search: 'fuzzy',
-  // pageSize: 12,
-  // page: 1,
 });
 
 const sigQuery = ref({
@@ -41,7 +40,6 @@ const sigQuery = ref({
 
 // 筛选相关
 const allSigInfo = ref<SigCompleteItemT[]>([]);
-const sigNameList = ref<string[]>([]);
 const activeSig = ref('');
 const activeRepo = ref('');
 const activeMaintainer = ref('');
@@ -50,7 +48,6 @@ const activeMaintainer = ref('');
 const filterSigInfo = computed(() => {
   // 初始化页数
   sigQuery.value.page = 1;
-
   return allSigInfo.value.filter((item: SigCompleteItemT) => {
     // 按 sig 名称 筛选
     if (activeSig.value && item.sig_name !== activeSig.value) {
@@ -85,25 +82,18 @@ const queryGetRepoList = () => {
   });
 };
 
-const allMaintainers = ref<string[]>([]);
 const queryGetSigList = () => {
   getSigList().then((res) => {
     allSigInfo.value = res.data.sort((a, b) =>
       a.sig_name.localeCompare(b.sig_name)
     );
-    allMaintainers.value = allSigInfo.value
-      .flatMap((sigInfo) => sigInfo.maintainers)
-      .filter((value, index, self) => self.indexOf(value) === index)
-      .sort((a, b) => a.localeCompare(b));
   });
 };
 
 const landscapeMap = new Map();
 const constructLandscapeMap = () => {
   getSigLandscape().then((res) => {
-    sigNameList.value = [];
     res.data.forEach((sig) => {
-      sigNameList.value.push(sig.sig_names);
       landscapeMap.set(sig.sig_names, {
         feature: {
           zh: sig.feature,
@@ -121,8 +111,26 @@ onMounted(() => {
   constructLandscapeMap();
 });
 
+// option 渲染的 maintainers
+const renderMaintainers = computed(() => {
+  return filterSigInfo.value
+    .flatMap((sigInfo) => sigInfo.maintainers)
+    .filter((value, index, self) => self.indexOf(value) === index)
+    .sort((a, b) => a.localeCompare(b));
+});
+
+// option 渲染的 sigs
+const renderRepos = computed(() => {
+  return allSigInfo.value.flatMap((sigInfo) => sigInfo.repos);
+});
+// 构建 v2 select 需要的数据结构
 const transformedRepos = computed(() => {
-  return allRepos.value.map((item) => ({ value: item, label: item }));
+  return renderRepos.value.map((item) => ({ value: item, label: item }));
+});
+
+// option 渲染的 sigs
+const renderSigs = computed(() => {
+  return allSigInfo.value.map((sigInfo) => sigInfo.sig_name);
 });
 </script>
 <template>
@@ -137,7 +145,7 @@ const transformedRepos = computed(() => {
           :placeholder="$t('sig.allSig')"
         >
           <el-option
-            v-for="sigName in sigNameList"
+            v-for="sigName in renderSigs"
             :key="sigName"
             :value="sigName"
           />
@@ -147,21 +155,20 @@ const transformedRepos = computed(() => {
           clearable
           filterable
           :size="lePadV ? 'small' : 'large'"
-          width="240px"
-          :fit-input-width="false"
+          :fit-input-width="240"
           :options="transformedRepos"
           :placeholder="$t('sig.allRepo')"
         >
         </el-select-v2>
         <el-select
           v-model="activeMaintainer"
+          :size="lePadV ? 'small' : 'large'"
           clearable
           filterable
           :placeholder="$t('sig.allMaintainer')"
         >
-          <!-- <el-option value="" :label="$t('sig.allMaintainer')" /> -->
           <el-option
-            v-for="maintainer in allMaintainers"
+            v-for="maintainer in renderMaintainers"
             :key="maintainer"
             :value="maintainer"
           />
@@ -253,11 +260,11 @@ const transformedRepos = computed(() => {
           <OPopover
             v-if="sig.maintainers.length > 9"
             position="top"
-            trigger="click"
+            trigger="hover"
             wrap-class="sig-popup-tip"
           >
             <template #target>
-              <div class="show-more">...</div>
+              <OIcon class="show-more"><IconMore /></OIcon>
             </template>
             <a
               v-for="member in sig.maintainers.slice(9)"
@@ -313,10 +320,16 @@ const transformedRepos = computed(() => {
         gap: 8px;
       }
       .el-select {
-        min-width: 200px;
+        min-width: 160px;
         border-radius: var(--o-radius-xs);
         overflow: hidden;
         box-shadow: none;
+        &:last-child {
+          min-width: 200px;
+        }
+        :deep(.el-select__caret) {
+          color: var(--o-color-info1);
+        }
         :deep(.el-select__wrapper) {
           height: 40px;
           border: 1px solid var(--o-color-control1);
@@ -342,6 +355,7 @@ const transformedRepos = computed(() => {
       }
     }
     .tip {
+      margin-left: 12px;
       @include text1;
       color: var(--o-color-info3);
       @include respond-to('<=pad_v') {
