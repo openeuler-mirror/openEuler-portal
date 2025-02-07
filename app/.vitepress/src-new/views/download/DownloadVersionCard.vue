@@ -256,7 +256,7 @@ function setMirrorLink(index: number) {
   return '';
 }
 // TODO: 优化代码
-const devStation = ['24.03 LTS SP1', '24.09'];
+const devStation = ['24.03-LTS-SP1', '24.09'];
 
 //------------------------ 改版代码 ------------------------------
 // 筛选配置信息
