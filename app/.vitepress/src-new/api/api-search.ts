@@ -91,7 +91,7 @@ export function getSearchData(params: SearchDocsQueryT): Promise<{
   obj: SearchDocsT;
   status: number;
 }> {
-  const url = '/api-search/search/docs';
+  const url = '/api-search/search/docsng';
   // TODO:后端接收参数为下划线version
   params.limit.forEach((item) => {
     item.version = item.version.replaceAll('-', '_');
