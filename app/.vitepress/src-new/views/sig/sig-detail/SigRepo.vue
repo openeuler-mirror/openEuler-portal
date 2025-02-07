@@ -228,6 +228,9 @@ onMounted(() => {
   }
   .repo-table {
     margin-top: 24px;
+    @include respond-to('<=pad_v') {
+      margin-top: 12px;
+    }
   }
   .pagination {
     @include respond-to('<=pad_v') {

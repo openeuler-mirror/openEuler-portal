@@ -5,7 +5,7 @@ import { useScreen } from '~@/composables/useScreen';
 
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
-import SigWelcome from './SigWelcome.vue';
+import SigWelcomeJoin from './SigWelcomeJoin.vue';
 import SigAbout from './SigAbout.vue';
 import SigList from './SigList.vue';
 
@@ -33,7 +33,7 @@ const verticalPadding = computed(() => {
     :illustration="illustration"
   />
   <div class="mo-title">{{ $t('sig.sigCenter') }}</div>
-  <SigWelcome class="sig-welcome" />
+  <SigWelcomeJoin class="sig-welcome" />
   <SigAbout />
   <SigList />
 </template>
