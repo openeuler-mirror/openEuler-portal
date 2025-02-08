@@ -289,10 +289,10 @@ const reset = () => {
         </OScroller>
         <ODivider direction="h"></ODivider>
         <div class="btn-wrap">
-          <OLink color="primary" @click="reset">{{ $t('common.reset') }}</OLink>
-          <OLink class="confirm-link" color="primary" @click="filterConfirm">{{
-            $t('common.confirm')
-          }}</OLink>
+          <div color="primary" @click="reset">{{ $t('common.reset') }}</div>
+          <div class="confirm-link" color="primary" @click="filterConfirm">
+            {{ $t('common.confirm') }}
+          </div>
         </div>
       </div>
     </OPopup>
@@ -325,6 +325,13 @@ const reset = () => {
   display: flex;
   justify-content: center;
   padding: 0 16px;
+  & > div {
+    cursor: pointer;
+    color: var(--o-color-primary1);
+    @include hover {
+      color: var(--o-color-primary2);
+    }
+  }
 
   .confirm-link {
     margin-left: 24px;

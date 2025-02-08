@@ -251,7 +251,7 @@ const activeName = ref<number[]>([0]);
                       {{
                         keys.key === 'platform'
                           ? transformKey(item[keys.key])
-                          : item[keys.key]transformKey
+                          : item[keys.key]
                       }}
                     </p>
                   </div>
@@ -312,6 +312,7 @@ const activeName = ref<number[]>([0]);
 
     display: flex;
     width: 100%;
+    height: 100%;
     max-height: calc(400px - 54px);
     border-top: 1px solid var(--o-color-control4);
     @include respond-to('phone') {
