@@ -130,67 +130,82 @@ const processDetail = computed(() => {
       grid-template-columns: repeat(1, 1fr);
       gap: 12px;
     }
+
     .o-card {
       :deep(.o-card-title) {
         display: flex;
         align-items: center;
+
         .o-icon {
           font-size: var(--o-icon_size-2xl);
         }
+
         .title {
           margin-left: 12px;
-          @include h4;
           font-weight: 500;
+          @include h4;
         }
       }
     }
+
     .sig-about-card {
       :deep(.o-card-main) {
         padding-bottom: 0;
       }
+
       img {
         margin-top: 8px;
         width: 100%;
         border-radius: var(--o-radius-xs) var(--o-radius-xs) 0 0;
       }
     }
+
     .application-process {
       grid-column: 1 / -1;
+
       .title-box {
         margin-left: 12px;
+
         .title {
           margin: 0;
         }
+
         .subtitle {
-          margin-top: 4px;
-          @include tip1;
-          color: var(--o-color-info2);
           @include text-truncate(3);
+
+          margin-top: 4px;
+          color: var(--o-color-info2);
+          @include tip1;
         }
       }
+
       :deep(.o-card-content) {
         margin-top: 24px;
+
         .process-box {
           display: flex;
           align-items: center;
           padding: 0 100px;
           justify-content: space-evenly;
+
           .process-icon {
             height: 4px;
             width: 34px;
           }
         }
+
         .process-step {
           cursor: pointer;
           display: flex;
+
           .step-info {
             display: flex;
-            margin-left: 2px;
             justify-content: space-between;
             flex-direction: column;
             align-items: center;
             margin-left: 6px;
             height: var(--o-icon_size-2xl);
+
             .num {
               font-weight: 500;
               font-size: 36px;
@@ -198,24 +213,29 @@ const processDetail = computed(() => {
               margin-bottom: calc(-1 * 36px / 2);
               color: var(--o-color-primary4-light);
             }
+
             .process {
               padding-top: 6px;
               background-color: var(--o-color-fill2);
-              @include tip1;
               color: var(--o-color-info1);
               width: 100%;
               text-align: center;
+              @include tip1;
             }
           }
+
           .icon {
             font-size: var(--o-font_size-display2);
           }
         }
+
         .active.process-step {
           position: relative;
+
           .num {
             color: var(--o-color-primary2-light);
           }
+
           &::after {
             position: absolute;
             content: '';
@@ -228,6 +248,7 @@ const processDetail = computed(() => {
             margin-top: 24px;
           }
         }
+
         .process-detail {
           margin-top: 24px;
           padding: 22px 38px;
@@ -241,34 +262,42 @@ const processDetail = computed(() => {
         }
       }
     }
+
     .application-process-mo {
       border-radius: var(--o-radius-xs);
       background-color: var(--o-color-fill2);
       padding: 12px 16px;
       padding-bottom: 0;
+
       .title {
-        @include h1;
         font-weight: 500;
+        @include h1;
       }
+
       .process-title {
         display: flex;
         @include h4;
+
         .num {
           margin-right: 12px;
         }
       }
+
       :deep(.o-collapse-item-body) {
-        @include text1;
         margin-bottom: 0;
         padding-bottom: 12px;
+        @include text1;
       }
     }
   }
+
   .o-divider {
     --o-divider-label-gap: 0 40px;
+
     height: auto;
   }
 }
+
 [data-o-theme='dark'] {
   .sig-about {
     .sig-about-card-box {
@@ -279,14 +308,17 @@ const processDetail = computed(() => {
               color: #2e3647;
             }
           }
+
           .active.process-step {
             .num {
               color: #497af8;
             }
+
             &::after {
               border-bottom: 18px solid #353539;
             }
           }
+
           .process-detail {
             background-image: linear-gradient(
               212deg,

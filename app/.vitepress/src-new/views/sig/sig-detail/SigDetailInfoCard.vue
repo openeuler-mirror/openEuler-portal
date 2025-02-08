@@ -99,10 +99,12 @@ const OMIT = '/openeuler/community/tree/master/';
     padding: 16px;
     background-image: linear-gradient(163deg, #eef4fe 0%, #dfecfe 100%);
   }
+
   .sig-name {
-    @include h2;
     font-weight: 500;
+    @include h2;
   }
+
   .mail-line {
     margin-top: 16px;
     display: flex;
@@ -113,6 +115,7 @@ const OMIT = '/openeuler/community/tree/master/';
       align-items: flex-start;
       flex-direction: column;
     }
+
     .mail-info {
       display: flex;
       @include respond-to('<=pad_v') {
@@ -121,19 +124,23 @@ const OMIT = '/openeuler/community/tree/master/';
         justify-content: space-between;
       }
     }
+
     .gitee-icon,
     .mail {
       display: flex;
       align-items: center;
+
       .icon {
         font-size: var(--o-icon_size-m);
         margin-right: 8px;
         color: var(--o-color-info2);
       }
     }
+
     .subscribe-sig-mail {
       margin-left: 8px;
     }
+
     .o-divider {
       font-size: var(--o-font_size-text1);
       @include respond-to('<=pad_v') {
@@ -141,10 +148,12 @@ const OMIT = '/openeuler/community/tree/master/';
       }
     }
   }
+
   .sig-description {
     margin-top: 8px;
     @include text1;
   }
+
   .divider-mo {
     display: none;
     @include respond-to('<=pad_v') {

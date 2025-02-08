@@ -283,12 +283,14 @@ const activeName = ref<number[]>([0]);
   @include respond-to('<=pad_v') {
     height: fit-content;
   }
+
   .card-title {
     display: flex;
     align-items: center;
     padding: 16px 24px;
     font-weight: 500;
     @include text1;
+
     .o-icon {
       cursor: pointer;
       margin-right: 8px;
@@ -296,20 +298,27 @@ const activeName = ref<number[]>([0]);
       font-size: var(--o-icon_size-xs);
     }
   }
+
   .card-title-mo {
     padding: 16px 12px;
+
     .o-select {
       width: 100%;
     }
   }
+
   .card-body {
+    $icon-size: 24px;
+
     display: flex;
     width: 100%;
+    height: 100%;
     max-height: calc(400px - 54px);
     border-top: 1px solid var(--o-color-control4);
     @include respond-to('phone') {
       flex-direction: column;
     }
+
     .date-list {
       padding: 24px;
       flex-shrink: 0;
@@ -318,16 +327,20 @@ const activeName = ref<number[]>([0]);
         display: none;
       }
     }
+
     .card-body-date {
       .year-date {
         font-weight: 500;
         @include tip1;
+
         &:not(:first-child) {
           margin-top: 12px;
         }
+
         & > div:not(:first-child) {
           margin-top: 8px;
         }
+
         .month {
           cursor: pointer;
           padding: 8px 24px;
@@ -335,15 +348,34 @@ const activeName = ref<number[]>([0]);
           border-radius: var(--o-radius-xs);
           width: fit-content;
         }
+
         .active {
           border-color: var(--o-color-primary1);
         }
       }
     }
+
     :deep(.o-collapse) {
       .o-collapse-item {
         position: relative;
         border-top: none;
+        @include hover {
+          .text {
+            color: var(--o-color-primary1);
+          }
+        }
+        @include respond-to('<=pad_v') {
+          &::after {
+            width: calc(100% - 2 * 16px);
+          }
+
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+        }
+
         &::after {
           position: absolute;
           content: '';
@@ -354,25 +386,12 @@ const activeName = ref<number[]>([0]);
           height: 1px;
           background-color: var(--collapse-division-color);
         }
-        @include hover {
-          .text {
-            color: var(--o-color-primary1);
-          }
-        }
-        @include respond-to('<=pad_v') {
-          &::after {
-            width: calc(100% - 2 * 16px);
-          }
-          &:last-child {
-            &::after {
-              display: none;
-            }
-          }
-        }
       }
+
       .o-collapse-item-icon {
         height: min-content;
       }
+
       .o-collapse-item-header {
         align-items: center;
         padding: 16px 24px;
@@ -380,21 +399,25 @@ const activeName = ref<number[]>([0]);
           padding: 12px 16px;
         }
       }
+
       .o-collapse-item-body {
         background-color: #f7f9fd;
         margin-bottom: 0;
+
         a {
           word-break: break-all;
         }
       }
     }
+
     .card-body-info {
       width: 100%;
     }
-    $icon-size: 24px;
+
     :deep(.o-collapse-item-title) {
       display: flex;
     }
+
     .meeting {
       background-color: #007af0;
       flex-shrink: 0;
@@ -418,55 +441,76 @@ const activeName = ref<number[]>([0]);
       flex-direction: column;
       color: var(--o-color-info1);
       @include text2;
+
       .top-line {
         display: flex;
       }
+
       .sig-name {
         margin-top: 8px;
-        @include tip1;
         color: var(--o-color-info3);
+        @include tip1;
       }
 
       .text {
         @include text-truncate(1);
+
         display: block;
         width: 100%;
         margin-right: 8px;
       }
     }
+
     .meet-info {
       margin-left: calc($icon-size + 12px);
       margin-top: 8px;
       display: flex;
       align-items: center;
-      @include tip1;
       color: var(--o-color-info3);
       text-decoration: none;
+      @include tip1;
       @include respond-to('<=pad_v') {
         margin-left: 32px;
       }
+
       .o-divider {
         @include tip1;
       }
     }
+
     .calendar-info {
       display: flex;
-      @include tip1;
       color: var(--o-color-info3);
       flex-direction: column;
       padding: 16px 60px;
+      @include tip1;
       @include respond-to('<=pad_v') {
         padding: 12px 16px;
       }
+
       .info-item {
         display: flex;
         margin-top: 8px;
+
         .item-title {
           min-width: 110px;
         }
       }
+
       .info-item:first-child {
         margin-top: 0;
+      }
+    }
+  }
+}
+
+@include in-dark {
+  .sig-meeting {
+    .card-body {
+      :deep(.o-collapse) {
+        .o-collapse-item-body {
+          background-color: #2b2b2f;
+        }
       }
     }
   }

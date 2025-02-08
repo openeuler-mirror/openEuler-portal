@@ -44,6 +44,7 @@ const verticalPadding = computed(() => {
     display: none;
   }
 }
+
 .mo-title {
   display: none;
   @include respond-to('<=pad_v') {
@@ -53,6 +54,7 @@ const verticalPadding = computed(() => {
     @include display1;
   }
 }
+
 .sig-welcome {
   :deep(.section-wrapper) {
     margin-top: 40px;

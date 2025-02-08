@@ -167,36 +167,47 @@ onMounted(() => {
   @include respond-to('<=laptop') {
     grid-template-columns: 1fr;
   }
+
   .sig-member-title {
     margin-top: 32px;
-    @include h4;
     font-weight: 500;
+    display: none;
+    @include h4;
+    @include respond-to('<=laptop') {
+      display: block;
+    }
   }
+
   .sig-member {
     @include respond-to('<=laptop') {
       display: none;
     }
   }
+
   .sig-floor {
     .meeting-title {
-      @include h4;
       font-weight: 500;
+      @include h4;
     }
+
     .meeting-card {
       margin-top: 24px;
       @include respond-to('<=laptop') {
         margin-top: 12px;
       }
     }
+
     .meeting-title-intro {
       margin-top: 8px;
       @include text1;
     }
+
     .sig-floor-item {
       & + .sig-floor-item {
         margin-top: 32px;
       }
     }
+
     .result-empty-box {
       display: flex;
       align-items: center;
@@ -205,6 +216,7 @@ onMounted(() => {
       padding: 52px 0;
       background-color: var(--o-color-fill2);
       border-radius: var(--o-radius-xs);
+
       .tips-text {
         margin-top: 8px;
         text-align: center;
@@ -212,6 +224,7 @@ onMounted(() => {
         @include tip1;
       }
     }
+
     .sig-member-mo {
       display: none;
       @include respond-to('<=laptop') {
@@ -221,12 +234,14 @@ onMounted(() => {
     }
   }
 }
+
 .sig-detail-info-card {
   margin-top: 32px;
   @include respond-to('<=pad_v') {
     margin-top: 0;
   }
 }
+
 .breadcrumb {
   @include respond-to('<=pad_v') {
     display: none;

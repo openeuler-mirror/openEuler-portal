@@ -12,7 +12,8 @@
     "lint:components": "eslint \"opendesign/**/*.{js,ts,vue,jsx,tsx}\"",
     "gen:token": "opensig-scripts gen:token --config ./app/.vitepress/src-new/tokens/token.config.ts",
     "prepare": "husky install",
-    "sitemap": "node genSitemap.js"
+    "sitemap": "node genSitemap.js",
+    "slint": "stylelint \"app/.vitepress/**/*.(vue|scss)\" --fix"
   },
   "keywords": [],
   "author": "",

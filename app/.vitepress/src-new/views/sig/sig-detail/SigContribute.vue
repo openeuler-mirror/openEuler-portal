@@ -182,7 +182,7 @@ const renderData = computed(() => {
       {{ $t('sig.contributeTitle') }}
     </div>
     <div class="sig-contribute-intro">
-      {{ $t('sig.contributeSubTitle') }}
+      {{ $t('sig.contributeSubTitle', { sig: sig }) }}
     </div>
     <!-------------- 架构场景筛选 -------------->
     <div class="filter-box">
@@ -313,17 +313,19 @@ const renderData = computed(() => {
 </template>
 <style scoped lang="scss">
 .pagination {
-  @include respond-to('<=pad_v') {
-    display: none;
-  }
   margin-top: 32px;
   display: flex;
   justify-content: flex-end;
+  @include respond-to('<=pad_v') {
+    display: none;
+  }
 }
+
 .sig-contribute-title {
-  @include h4;
   font-weight: 500;
+  @include h4;
 }
+
 .sig-contribute-intro {
   margin-top: 8px;
   @include text1;
@@ -339,6 +341,7 @@ const renderData = computed(() => {
     margin-top: 12px;
     padding: 12px;
   }
+
   .filter-card {
     display: flex;
     align-items: center;
@@ -348,36 +351,41 @@ const renderData = computed(() => {
       flex-direction: column;
       align-items: flex-start;
     }
+
     .label {
-      @include text1;
       color: var(--o-color-info1);
       min-width: 32px;
       margin-right: 32px;
       font-weight: 500;
+      @include text1;
       @include respond-to('<=pad_v') {
         min-width: auto;
       }
     }
+
     .o-radio-group {
+      @include respond-to('<=pad_v') {
+        .o-radio {
+          margin: 8px 8px 0 0;
+        }
+      }
+
       .o-radio + .o-radio {
         margin-left: 8px;
         @include respond-to('<=pad_v') {
           margin-left: 0;
         }
       }
-      @include respond-to('<=pad_v') {
-        .o-radio {
-          margin: 8px 8px 0 0;
-        }
-      }
     }
   }
+
   .filter-card:not(:first-child) {
     margin-top: 8px;
     @include respond-to('<=pad_v') {
       margin-top: 12px;
     }
   }
+
   .serach-input {
     margin-left: auto;
     max-width: 320px;
@@ -385,16 +393,19 @@ const renderData = computed(() => {
       max-width: 100%;
       width: 100%;
     }
+
     :deep(.o_box) {
       @include respond-to('<=pad_v') {
         width: 100%;
       }
     }
+
     :deep(.o_box-main) {
+      border-radius: var(--o-radius-xs);
+
       .o-icon {
         font-size: var(--o-font_size-text1);
       }
-      border-radius: var(--o-radius-xs);
     }
   }
 }
@@ -407,6 +418,7 @@ const renderData = computed(() => {
   @include respond-to('<=pad_v') {
     margin-top: 8px;
   }
+
   .contribute-color-box {
     display: flex;
     justify-content: space-between;
@@ -416,26 +428,31 @@ const renderData = computed(() => {
       padding: 8px 56px;
     }
   }
+
   .rank-list {
     position: relative;
     border-top: 1px solid var(--o-color-control4);
+    @for $i from 1 through 5 {
+      .divider-#{$i} {
+        right: calc((100% - 44px) / 6 * #{$i});
+      }
+    }
+
     .divider {
       position: absolute;
       height: 100%;
       width: 1px;
       background-color: var(--o-color-control4);
     }
-    @for $i from 1 through 5 {
-      .divider-#{$i} {
-        right: calc((100% - 44px) / 6 * #{$i});
-      }
-    }
+
     .o-result {
       margin: 40px 0;
     }
+
     .rank-line {
       display: flex;
       align-items: center;
+
       .rank-nub {
         border-right: 1px solid var(--o-color-control4);
         padding: 16px 0;
@@ -446,6 +463,7 @@ const renderData = computed(() => {
           width: 38px;
         }
       }
+
       .o-progress {
         padding: 0 12px;
       }
@@ -456,15 +474,16 @@ const renderData = computed(() => {
 .contribute-list {
   display: flex;
   font-family: 500;
+
   .yellow-box {
     margin-right: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
+
     .box {
       width: 12px;
       height: 12px;
-      border-radius: 2px;
       font-size: 10px;
       color: var(--e-color-white);
       line-height: 12px;
@@ -474,21 +493,27 @@ const renderData = computed(() => {
     }
   }
 }
+
 .contribute-list-mo {
   margin-top: 12px;
 }
+
 .bg-color-maintainer {
   background-color: #f0bc00;
 }
+
 .bg-color-committer {
   background-color: #009ce5;
 }
+
 .bg-color-contributor {
   background-color: var(--o-color-primary1);
 }
+
 .bg-color-cancel {
   background-color: var(--e-color-neutral10);
 }
+
 .color-cancel {
   color: var(--e-color-neutral10);
 }
