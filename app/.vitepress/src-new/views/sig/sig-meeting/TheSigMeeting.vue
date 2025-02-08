@@ -112,7 +112,7 @@ const breadCrumbs = ref([
     </AppSection>
     <!-- 组织会议 -->
     <AppSection class="sig-meeing-org" :title="$t('sig.sigMeeingOrg')">
-      <SigMeetingOrgZh />
+      <SigMeetingOrgZh class="sig-meeting-org-zh" />
       <img
         class="cube-2"
         :src="commonStore.theme === 'light' ? cubeTow : cubeTowDark"
@@ -131,11 +131,14 @@ const breadCrumbs = ref([
     }
   }
 }
+
 .sig-meeting-content {
   color: var(--o-color-info1);
+
   .conference-introduction {
     text-align: center;
     @include text1;
+
     p:last-child {
       margin-top: 12px;
       @include respond-to('<=pad_v') {
@@ -144,6 +147,7 @@ const breadCrumbs = ref([
     }
   }
 }
+
 .sig-meeting {
   overflow: hidden;
   background-image: linear-gradient(
@@ -154,11 +158,13 @@ const breadCrumbs = ref([
   background-position: 0 bottom;
   background-size: 100% 40%;
   background-repeat: no-repeat;
+
   .content-wrapper {
     @include respond-to('<=pad_v') {
       display: none;
     }
   }
+
   :deep(.banner-level3) {
     @include respond-to('<=pad_v') {
       display: none;
@@ -168,9 +174,22 @@ const breadCrumbs = ref([
 
 .sig-meeing-org {
   position: relative;
+  z-index: 1;
+
+  :deep(.section-body) {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sig-meeting-org-zh {
+    position: relative;
+    z-index: 1;
+  }
+
   .cube-2 {
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     width: 380px;
     bottom: -181px;
     right: -220px;
@@ -190,6 +209,7 @@ const breadCrumbs = ref([
     }
   }
 }
+
 [data-o-theme='dark'] {
   .sig-meeting {
     background-image: linear-gradient(180deg, #1a1a1c 0%, #141b2e 100%);

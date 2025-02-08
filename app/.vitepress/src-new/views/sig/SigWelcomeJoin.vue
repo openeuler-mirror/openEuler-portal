@@ -40,42 +40,49 @@ const { lePadV } = useScreen();
 <style scoped lang="scss">
 .sig-welcome {
   .sig-welcome-card {
+    --title-gap: 8px;
+    --title-icon-size: var(--o-icon_size-2xl);
+
     display: flex;
     background-color: var(--o-color-fill2);
     padding: 24px 48px;
-    --title-gap: 8px;
-    --title-icon-size: var(--o-icon_size-2xl);
     @include respond-to('<=pad_v') {
       flex-direction: column;
       padding: 12px;
     }
+
     .card-item {
       @include respond-to('<=pad_v') {
         display: flex;
       }
+
       .o-icon {
+        font-size: var(--title-icon-size);
         @include respond-to('<=pad_v') {
           height: min-content;
         }
-        font-size: var(--title-icon-size);
       }
+
       .title {
         margin-top: var(--title-gap);
-        @include h4;
         font-weight: 500;
+        @include h4;
         @include respond-to('<=pad_v') {
           margin-top: 0;
         }
       }
+
       .subtitle {
         margin-top: 16px;
-        @include tip1;
         color: var(--o-color-info2);
+        @include tip1;
+
         // @include text-truncate(3);
         @include respond-to('<=pad_v') {
           margin-top: 8px;
         }
       }
+
       .sig-info {
         @include respond-to('<=pad_v') {
           margin-left: 12px;
@@ -83,8 +90,10 @@ const { lePadV } = useScreen();
       }
     }
   }
+
   .o-divider {
     --o-divider-label-gap: 0 40px;
+
     height: auto;
   }
 }

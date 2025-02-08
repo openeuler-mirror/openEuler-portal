@@ -220,25 +220,28 @@ onMounted(() => {
 <style scoped lang="scss">
 .sig-repo {
   .repo-title {
-    @include h4;
     font-weight: 500;
+    @include h4;
   }
+
   .table-warpper {
     width: 100%;
   }
+
   .repo-table {
     margin-top: 24px;
     @include respond-to('<=pad_v') {
       margin-top: 12px;
     }
   }
+
   .pagination {
-    @include respond-to('<=pad_v') {
-      display: none;
-    }
     margin-top: 32px;
     display: flex;
     justify-content: flex-end;
+    @include respond-to('<=pad_v') {
+      display: none;
+    }
   }
 }
 </style>

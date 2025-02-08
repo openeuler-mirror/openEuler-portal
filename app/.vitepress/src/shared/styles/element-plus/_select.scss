@@ -10,6 +10,7 @@
   .suffix-icon {
     color: var(--e-color-brand1);
   }
+
   .el-select-dropdown__list {
     margin: 0;
     padding: 0;
@@ -17,18 +18,20 @@
 
   li {
     border-radius: var(--o-radius-xs);
+
     & + li {
       margin-top: 2px;
     }
+
     &.el-select-dropdown__item {
       padding: 6px 12px;
-      @include tip2;
       color: var(--o-color-info1);
+      @include tip2;
 
       &.is-selected {
         font-weight: 500;
         color: var(--o-color-primary1);
-        background-color: var(--o-color-primary1-light);
+        background-color: var(--o-color-control3-light);
       }
     }
   }
@@ -37,6 +40,7 @@
 .el-vl__wrapper {
   background-color: var(--o-color-fill2);
   padding: 8px 6px;
+
   .el-select-dropdown__list {
     margin: 0;
     padding: 0;
@@ -45,18 +49,20 @@
 
   li {
     border-radius: var(--o-radius-xs);
+
     & + li {
       margin-top: 3px;
     }
+
     &.el-select-dropdown__item {
       padding: 6px 12px;
-      @include tip2;
       color: var(--o-color-info1);
+      @include tip2;
 
       &.is-selected {
         font-weight: 500;
         color: var(--o-color-primary1);
-        background-color: var(--o-color-primary1-light);
+        background-color: var(--o-color-control3-light);
       }
     }
   }
@@ -68,7 +74,7 @@
 
 .el-select-dropdown__item.is-hovering {
   color: var(--o-color-info2);
-  background-color: var(--o-color-primary4-light);
+  background-color: var(--o-color-control2-light);
 }
 
 .popper-select {

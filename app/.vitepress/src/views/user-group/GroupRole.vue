@@ -41,7 +41,7 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 24px;
   grid-column-gap: 24px;
-  @media screen and(max-width:768px) {
+  @media screen and (max-width:768px) {
     grid-template-columns: 1fr;
     grid-gap: 12px;
   }

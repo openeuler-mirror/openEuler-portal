@@ -18,8 +18,7 @@ import { useScreen } from '~@/composables/useScreen';
 
 import type { SigCompleteItemT } from '~@/@types/type-sig';
 
-import { welcomeJoin, landscapeIconMap } from '~@/data/sig';
-import { COUNT_PER_PAGE } from '~@/shared/config';
+import { landscapeIconMap } from '~@/data/sig';
 import { getSigLandscape, getSigList, getRepoList } from '~@/api/api-sig';
 
 import IconGitee from '~icons/app-new/icon-gitee.svg';
@@ -28,13 +27,15 @@ import IconMore from '~icons/sig/more.svg';
 const { locale } = useLocale();
 const { lePadV } = useScreen();
 
+const COUNT_PER_PAGE = [10, 20, 30];
+
 const repoQuery = ref({
   community: 'openeuler',
   search: 'fuzzy',
 });
 
 const sigQuery = ref({
-  pageSize: 12,
+  pageSize: 10,
   page: 1,
 });
 
@@ -311,6 +312,7 @@ const renderSigs = computed(() => {
   .filter-line {
     display: flex;
     justify-content: space-between;
+
     .select-box {
       display: flex;
       @include respond-to('<=pad_v') {
@@ -319,33 +321,39 @@ const renderSigs = computed(() => {
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
       }
+
       .el-select {
         min-width: 160px;
         border-radius: var(--o-radius-xs);
         overflow: hidden;
         box-shadow: none;
-        &:last-child {
-          min-width: 200px;
-        }
-        :deep(.el-select__caret) {
-          color: var(--o-color-info1);
-        }
-        :deep(.el-select__wrapper) {
-          height: 40px;
-          border: 1px solid var(--o-color-control1);
-          &.is-hovering,
-          &.is-focused {
-            border: 1px solid var(--o-color-primary1);
-          }
-          box-shadow: none;
-          @include respond-to('<=pad_v') {
-            height: fit-content;
-          }
-        }
         @include respond-to('<=pad_v') {
           min-width: auto;
           width: 100%;
         }
+
+        &:last-child {
+          min-width: 200px;
+        }
+
+        :deep(.el-select__caret) {
+          color: var(--o-color-info1);
+        }
+
+        :deep(.el-select__wrapper) {
+          height: 40px;
+          border: 1px solid var(--o-color-control1);
+          box-shadow: none;
+          @include respond-to('<=pad_v') {
+            height: fit-content;
+          }
+
+          &.is-hovering,
+          &.is-focused {
+            border: 1px solid var(--o-color-primary1);
+          }
+        }
+
         & + .el-select {
           margin-left: 16px;
           @include respond-to('<=pad_v') {
@@ -354,15 +362,17 @@ const renderSigs = computed(() => {
         }
       }
     }
+
     .tip {
       margin-left: 12px;
-      @include text1;
       color: var(--o-color-info3);
+      @include text1;
       @include respond-to('<=pad_v') {
         display: none;
       }
     }
   }
+
   .sig-card-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -373,6 +383,7 @@ const renderSigs = computed(() => {
       grid-template-columns: repeat(1, 1fr);
       gap: 12px;
     }
+
     .sig-card {
       position: relative;
       padding: 24px 32px;
@@ -381,32 +392,45 @@ const renderSigs = computed(() => {
       @include respond-to('<=pad_v') {
         padding: 16px;
       }
+
       .o-tag {
+        --tag-bg-color: var(--o-color-fill2);
+
         position: absolute;
         top: 8px;
         right: 8px;
-        --tag-bg-color: var(--o-color-fill2);
       }
     }
+
     .sig-info {
       display: flex;
       justify-content: space-between;
+
       .sig-info-left {
         display: flex;
         align-items: center;
+
         .sig-name {
-          @include h3;
           color: var(--o-color-info1);
           font-weight: 500;
+          @include h3;
+          @include hover {
+            color: var(--o-color-primary1);
+          }
         }
+
         .gitee-icon {
+          display: flex;
+          align-items: center;
           font-size: var(--o-icon_size-m);
           margin-left: 8px;
         }
       }
+
       :deep(.o-tag-label) {
         display: flex;
         align-items: center;
+
         .icon {
           margin-right: 4px;
           font-size: var(--o-icon_size-xs);
@@ -416,34 +440,42 @@ const renderSigs = computed(() => {
         }
       }
     }
+
     .sig-mail {
       margin-top: 8px;
+
       .subscribe-sig {
         margin-left: 8px;
       }
     }
+
     .sig-description {
       @include text-truncate(2);
-      @include text1;
+
       margin-top: 12px;
       min-height: calc(2 * var(--o-line_height-text1));
       color: var(--o-color-info2);
+      @include text1;
       @include respond-to('<=pad_v') {
         min-height: auto;
       }
     }
+
     .sig-member {
       display: flex;
       margin-top: 16px;
       align-items: center;
+
       .member {
         margin-left: -4px;
       }
+
       .contributor-num {
         margin-left: 6px;
-        @include tip1;
         color: var(--o-color-info3);
+        @include tip1;
       }
+
       .show-more {
         cursor: pointer;
         display: flex;
@@ -460,13 +492,14 @@ const renderSigs = computed(() => {
       }
     }
   }
+
   .pagination {
-    @include respond-to('<=pad_v') {
-      display: none;
-    }
     margin-top: 32px;
     display: flex;
     justify-content: flex-end;
+    @include respond-to('<=pad_v') {
+      display: none;
+    }
   }
 }
 </style>
@@ -474,9 +507,11 @@ const renderSigs = computed(() => {
 <style lang="scss">
 .sig-popup-tip {
   display: flex;
+
   .o-popup-body {
     & > div {
       display: flex;
+
       & > * {
         margin-left: -4px;
       }

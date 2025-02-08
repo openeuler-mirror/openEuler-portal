@@ -70,45 +70,53 @@ defineProps({
   padding: 24px;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  height: fit-content;
-  min-height: 744px;
+  height: min-content;
   @include respond-to('<=laptop') {
     padding: 20px 32px;
-    min-height: auto;
+    height: auto;
   }
+
   .sig-member-title {
-    @include h4;
     font-weight: 500;
+    @include h4;
     @include respond-to('<=laptop') {
       display: none;
     }
   }
+
   .member-list {
     margin-top: 24px;
-    max-height: 744px;
+    height: 700px;
     @include respond-to('<=laptop') {
       margin-top: 0;
     }
+
     .member-info {
       display: flex;
       align-items: center;
+
       & + .member-info {
         margin-top: 16px;
       }
+
       .member-info-left {
         --avatar-width: 40px;
         --info-width: 165px;
         --avatar-gap: 16px;
+
         display: flex;
         min-width: var(--info-width);
+
         .info {
           margin-left: var(--avatar-gap);
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           @include tip2;
+
           .member-name {
             @include text-truncate(1);
+
             width: calc(
               var(--info-width) - var(--avatar-width) - var(--avatar-gap)
             );
@@ -117,19 +125,23 @@ defineProps({
           }
         }
       }
+
       .member-info-right {
         display: flex;
         align-items: center;
         height: 100%;
         gap: 16px;
+
         .o-icon {
           color: var(--o-color-info2);
           font-size: var(--o-icon_size-m);
         }
       }
+
       .o-divider {
-        height: 40px;
         --o-divider-label-gap: 0 24px;
+
+        height: 40px;
       }
     }
   }

@@ -219,7 +219,7 @@ html[lang='zh'] {
       background-size: cover;
       width: 100%;
       height: 100%;
-      @media screen and(max-width:768px) {
+      @media screen and (max-width:768px) {
         background-image: url(../img/banner_mo.png);
       }
     }

@@ -128,6 +128,7 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
 .sig-meeting-org {
   position: relative;
   overflow: hidden;
+
   .sig-meeting-content {
     position: relative;
     padding-left: 76px;
@@ -136,12 +137,14 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
       border-radius: var(--o-radius-xs);
       background-color: var(--o-color-fill2);
     }
+
     &:not(:first-child) {
       margin-top: 26px;
       @include respond-to('<=pad_v') {
         margin-top: 12px;
       }
     }
+
     &:not(:last-child) {
       .sig-meeting-org-card {
         &::after {
@@ -162,10 +165,12 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
         }
       }
     }
+
     .content-title {
-      @include h1;
       display: flex;
       align-items: center;
+      @include h1;
+
       .o-icon {
         position: absolute;
         left: 0;
@@ -177,18 +182,20 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
         }
       }
     }
+
     .sig-meeting-org-card {
       position: relative;
       margin-top: 18px;
       padding: 24px;
       border-radius: var(--o-radius-xs);
       background-color: var(--o-color-fill2);
-      @include text1;
       color: var(--o-color-info2);
+      @include text1;
       @include respond-to('<=pad_v') {
         margin-top: 12px;
         padding: 0;
       }
+
       ol > li::before {
         background-color: var(--o-color-info1);
         border-radius: 50%;
@@ -213,6 +220,7 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
         width: 1px;
         height: calc(100% - 8px);
       }
+
       .no-line > li::after {
         background-color: transparent !important;
       }
@@ -221,14 +229,17 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
         padding-left: 0;
         list-style: none !important;
         counter-reset: num;
+
         & > li {
           counter-increment: num;
           padding-left: 22px;
           position: relative;
           margin-top: 8px;
+
           &:first-child {
             margin-top: 16px;
           }
+
           span {
             display: block;
             flex-wrap: wrap;
@@ -236,12 +247,14 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
             color: var(--o-color-info1);
             font-weight: 500;
             word-break: break-all;
+
             a {
               word-break: break-all;
             }
           }
         }
       }
+
       .no-line {
         & > li {
           &:first-child {

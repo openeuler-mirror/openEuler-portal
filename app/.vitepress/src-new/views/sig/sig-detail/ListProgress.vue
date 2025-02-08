@@ -117,11 +117,13 @@ watch(
     .o-progress-line-track {
       background-color: transparent;
       overflow: visible;
+
       .o-progress-line-bar {
         display: flex;
         align-items: center;
         position: relative;
         min-width: 130px !important;
+
         &::after {
           content: attr(contributor);
           position: absolute;
@@ -132,18 +134,22 @@ watch(
           @include tip1;
         }
       }
+
       .o-progress-line-inner-label {
         display: flex;
         width: 100%;
         align-items: center;
         color: var(--o-color-primary1);
+
         .word-avatar {
           flex-shrink: 0;
         }
+
         .gitee-name {
+          @include text-truncate(1);
+
           text-align: left;
           margin-left: 8px;
-          @include text-truncate(1);
           word-break: break-all;
           min-width: 80px;
         }
@@ -151,20 +157,51 @@ watch(
     }
   }
 }
+
 .color-contributor {
   :deep(.o-progress-line-bar) {
-    background-color: #ebf1fa !important;
+    background-color: #ebf1fa;
   }
 }
+
 .color-committer {
   :deep(.o-progress-line-bar) {
-    background-color: #e8f7fc !important;
+    background-color: #e8f7fc;
   }
 }
+
 .color-maintainer {
   :deep(.o-progress-line-bar) {
-    background-color: #fdf7e8 !important;
-    // background-color: var(--o-color-primary1);
+    background-color: #fdf7e8;
+  }
+}
+
+@include in-dark {
+  .color-maintainer,
+  .color-committer,
+  .color-contributor {
+    :deep(.o-progress-line-bar) {
+      border: 1px solid transparent;
+      background-color: #2b2b2f;
+    }
+  }
+
+  .color-maintainer {
+    :deep(.o-progress-line-bar) {
+      border-color: #f2b726;
+    }
+  }
+
+  .color-contributor {
+    :deep(.o-progress-line-bar) {
+      border-color: #497af8;
+    }
+  }
+
+  .color-committer {
+    :deep(.o-progress-line-bar) {
+      border-color: #2fb2ea;
+    }
   }
 }
 </style>

@@ -261,6 +261,7 @@ const getSectionBg = (item: any) => {
 
         .detail-link {
           --link-color: rgba(var(--o-black), 0.8);
+
           margin-top: 20px;
           @include text1;
 
@@ -301,7 +302,6 @@ const getSectionBg = (item: any) => {
 
       @include respond-to('<=pad_v') {
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 12px;
         margin-top: 12px;
         grid-gap: 16px;
       }
