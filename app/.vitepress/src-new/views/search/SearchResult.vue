@@ -149,8 +149,12 @@ watch(
 
 const getLink = (data: any) => {
   let { path } = data;
+  // google 搜索地址
+  // if (data.recallType === 'G') {
+  //   return path;
+  // }
   let search_result_url = '/' + path;
-
+  // 跳转路径处理
   if (data.type === 'docs') {
     // hugo 编译 路由空格会被替换为 -
     path = path.replaceAll(' ', '-');

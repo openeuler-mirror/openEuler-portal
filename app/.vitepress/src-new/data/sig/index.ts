@@ -13,7 +13,6 @@ import roleDescription from '~icons/sig/role-description.svg';
 
 import meetingGuide_bg from '~@/assets/category/sig/meeting-guide_bg.png';
 import roleDescription_bg from '~@/assets/category/sig/role-description_bg.png';
-import sigGuidance from '~icons/sig/sig-guidance.svg';
 
 import architecturesProcessorsKernelDrivers from '~icons/sig/architectures-processors-kernel-drivers.svg';
 import basicFunctionsFeaturesTools from '~icons/sig/basic-functions-features-tools.svg';
@@ -80,7 +79,7 @@ export const aboutSig = [
       zh: '/zh/sig/role-description/',
       en: '/en/sig/role-description/',
     },
-    backgroud: meetingGuide_bg,
+    backgroud: roleDescription_bg,
   },
   {
     icon: meetingGuide,
@@ -96,7 +95,7 @@ export const aboutSig = [
       zh: '/zh/sig/meeting-guide/',
       en: '',
     },
-    backgroud: roleDescription_bg,
+    backgroud: meetingGuide_bg,
   },
 ];
 

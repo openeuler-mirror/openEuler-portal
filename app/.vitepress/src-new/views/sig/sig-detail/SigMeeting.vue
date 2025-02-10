@@ -93,7 +93,7 @@ const detailItem = [
   { text: '回放链接', key: 'video_url' },
 ];
 
-function setMeetingDay(select: string) {
+function setMeetingDay(select: string | number) {
   const meetingData = JSON.parse(JSON.stringify(props.meetingData));
   currentMeet = meetingData.find((item: TableDataT) => {
     return item.date === select;
@@ -101,7 +101,7 @@ function setMeetingDay(select: string) {
   // 会议时间
   if (currentMeet?.date) {
     renderData.value = currentMeet;
-    activeDay.value = select;
+    activeDay.value = select.toString();
   }
 }
 // 判断会议时间修改提示
@@ -128,10 +128,6 @@ const getTimeTip = (item: DayDataT) => {
 onMounted(() => {
   setMeetingDay(props.meetingData[0].date);
 });
-// 切换会议日期
-function handleCommand(date: string) {
-  setMeetingDay(date);
-}
 const i18n = {
   SIG_GROUP: 'SIG组:',
   NEW_DATE: '最新日程：',
@@ -169,7 +165,7 @@ const activeName = ref<number[]>([0]);
       {{ $t('sig.latestMeeting', { date: activeDay.replaceAll('-', '/') }) }}
     </div>
     <div v-else class="card-title-mo">
-      <OSelect v-model="activeDay">
+      <OSelect v-model="activeDay" @change="(val) => setMeetingDay(val)">
         <OOption
           v-for="item in meetingData"
           :key="item.date"
@@ -193,7 +189,7 @@ const activeName = ref<number[]>([0]);
               :key="dateIndex"
               class="month"
               :class="{ active: date === activeDay }"
-              @click="handleCommand(date)"
+              @click="setMeetingDay(date)"
             >
               {{ date.split('-')[1] + '/' + date.split('-')[2] }}
             </div>
@@ -412,6 +408,9 @@ const activeName = ref<number[]>([0]);
 
     .card-body-info {
       width: 100%;
+      .meeting-list {
+        height: 100%;
+      }
     }
 
     :deep(.o-collapse-item-title) {

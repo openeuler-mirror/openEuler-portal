@@ -21,7 +21,7 @@ import { getSigMeeting, getSigDetail } from '~@/api/api-sig';
 
 import type { SigCompleteItemT } from '~@/@types/type-sig';
 
-const { isPhone, isPad, isPadVToLaptop, lePadV } = useScreen();
+const { isPhone, leLaptop, isPadVToLaptop, lePadV } = useScreen();
 const { locale } = useLocale();
 const { lang, params } = useData();
 const router = useRouter();
@@ -115,37 +115,40 @@ onMounted(() => {
       <!-- SIG成员 -->
       <SigMember class="sig-member" :maintainer-list="memberList" />
       <div class="sig-floor">
-        <div class="meeting-title">
-          {{ $t('sig.sigMeeting') }}
-        </div>
-        <div class="meeting-title-intro">
-          {{ $t('sig.sigMeetingIntro') }}
-        </div>
-        <div class="meeting-card">
-          <SigMeeting
-            class="sig-floor-item"
-            v-if="sigMeetingData.length"
-            :meeting-data="sigMeetingData"
-            :mail="mail"
-          />
-          <div v-else class="result-empty-box sig-floor-item">
-            <ResultEmpty
-              :description="$t('sig.noMeeting')"
-              :style="{
-                '--result-image-width': '140px',
-                '--result-image-height': '170px',
-              }"
+        <div v-if="locale !== 'en'" class="meeting-floot sig-floor-item">
+          <div class="meeting-title">
+            {{ $t('sig.sigMeeting') }}
+          </div>
+          <div class="meeting-title-intro">
+            {{ $t('sig.sigMeetingIntro') }}
+          </div>
+          <div class="meeting-card">
+            <SigMeeting
+              class="sig-floor-item"
+              v-if="sigMeetingData.length"
+              :meeting-data="sigMeetingData"
+              :mail="mail"
             />
-            <p class="tips-text">
-              {{ $t('sig.sigMeetingTip') }}
-            </p>
+            <div v-else class="result-empty-box sig-floor-item">
+              <ResultEmpty
+                :description="$t('sig.noMeeting')"
+                :style="{
+                  '--result-image-width': '140px',
+                  '--result-image-height': '170px',
+                }"
+              />
+              <p class="tips-text">
+                {{ $t('sig.sigMeetingTip') }}
+              </p>
+            </div>
           </div>
         </div>
         <!-- SIG成员移动端 -->
-        <div class="sig-member-title">
+        <div v-if="leLaptop" class="sig-member-title">
           {{ $t('sig.sigMember', { num: memberList?.length }) }}
         </div>
         <SigMember
+          v-if="leLaptop"
           class="sig-member-mo sig-floor-item"
           :maintainer-list="memberList"
         />

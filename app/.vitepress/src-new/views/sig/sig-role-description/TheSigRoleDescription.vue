@@ -394,9 +394,11 @@ const getSectionBg = (item: any) => {
 
       .common-section-list-item {
         padding: 32px 24px;
-        background-size: 100% 100%;
+        background-size: 100% auto;
+        background-position: left bottom;
         background-repeat: no-repeat;
         border-radius: 4px;
+        background-color: var(--o-color-fill2);
 
         @include respond-to('<=pad_v') {
           padding: 16px;

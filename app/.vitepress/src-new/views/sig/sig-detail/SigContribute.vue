@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted } from 'vue';
-import { useI18n } from '@/i18n';
 import { querySigUserContribute } from '@/api/api-sig';
 import IconSearch from '~icons/app-new/icon-search.svg';
 import { SigContributeArrT } from '@/shared/@types/type-sig';
@@ -10,12 +9,8 @@ import ResultEmpty from '~@/components/ResultEmpty.vue';
 import { OInput, OPagination } from '@opensig/opendesign';
 import { ORadioGroup, ORadio, OToggle } from '@opensig/opendesign';
 
+import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
-
-const i18n = useI18n();
-const sigDetail = computed(() => {
-  return i18n.value.sig.SIG_DETAIL;
-});
 
 const props = defineProps({
   sig: {
@@ -26,6 +21,7 @@ const props = defineProps({
 });
 
 const { lePadV } = useScreen();
+const { t } = useLocale();
 const contributionSelectBox = ref([
   {
     color: 'bg-color-maintainer',
@@ -91,24 +87,24 @@ const getMemberData = () => {
 const lastformOption = computed(() => {
   return [
     {
-      label: sigDetail.value.METRIC,
+      label: t('sig.METRIC'),
       id: 'contributeType',
       active: 'pr',
       list: [
-        { label: sigDetail.value.PRS, value: 'pr' },
-        { label: sigDetail.value.ISSUES, value: 'issue' },
-        { label: sigDetail.value.COMMENTS, value: 'comment' },
+        { label: t('sig.PRS'), value: 'pr' },
+        { label: t('sig.ISSUES'), value: 'issue' },
+        { label: t('sig.COMMENTS'), value: 'comment' },
       ],
     },
     {
-      label: sigDetail.value.TIMERANGE,
+      label: t('sig.TIMERANGE'),
       id: 'timeRange',
       active: 'all',
       list: [
-        { label: sigDetail.value.ALL, value: 'all' },
-        { label: sigDetail.value.LAST_ONE_MONTH, value: 'lastonemonth' },
-        { label: sigDetail.value.LAST_HALF_YEAR, value: 'lasthalfyear' },
-        { label: sigDetail.value.LAST_YEAR, value: 'lastoneyear' },
+        { label: t('sig.ALL'), value: 'all' },
+        { label: t('sig.LAST_ONE_MONTH'), value: 'lastonemonth' },
+        { label: t('sig.LAST_HALF_YEAR'), value: 'lasthalfyear' },
+        { label: t('sig.LAST_YEAR'), value: 'lastoneyear' },
       ],
     },
   ];
@@ -120,13 +116,13 @@ const typeLable = ref('');
 const switchType = () => {
   switch (param.value.contributeType) {
     case 'pr':
-      typeLable.value = sigDetail.value.PRS;
+      typeLable.value = t('sig.PRS');
       break;
     case 'issue':
-      typeLable.value = sigDetail.value.ISSUES;
+      typeLable.value = t('sig.ISSUES');
       break;
     case 'comment':
-      typeLable.value = sigDetail.value.COMMENTS;
+      typeLable.value = t('sig.COMMENTS');
       break;
   }
 };
@@ -270,6 +266,7 @@ const renderData = computed(() => {
       </div>
       <div class="rank-list">
         <template v-if="renderData.length">
+          <!-- 底部分割线 -->
           <div
             v-for="line in 5"
             class="divider"
@@ -277,7 +274,7 @@ const renderData = computed(() => {
           ></div>
           <div v-for="(item, index) in renderData" class="rank-line">
             <div class="rank-nub">
-              {{ currentPage * index + 1 }}
+              {{ (currentPage - 1) * 10 + index + 1 }}
             </div>
             <ListProgress
               :giteeName="item.gitee_id"

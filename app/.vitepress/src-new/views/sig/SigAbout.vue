@@ -23,29 +23,30 @@ const processDetail = computed(() => {
 <template>
   <AppSection :title="$t('sig.aboutSig')" class="sig-about">
     <div class="sig-about-card-box">
-      <OCard
-        v-for="(card, idx) in aboutSig"
-        :key="idx"
-        cursor="pointer"
-        class="sig-about-card"
-        hoverable
-        :title="card.title[locale]"
-        :detail="card.subtitle[locale]"
-        :title-max-row="2"
-        :detail-max-row="2"
-        :detail-row="lePadV ? 1 : 2"
-        :href="card.path[locale]"
-      >
-        <template #title>
-          <OIcon class="icon">
-            <component :is="card.icon"></component>
-          </OIcon>
-          <div class="title">
-            {{ card.title[locale] }}
-          </div>
-        </template>
-        <img :src="card.backgroud" alt="" />
-      </OCard>
+      <template v-for="(card, idx) in aboutSig" :key="idx">
+        <OCard
+          v-if="card.path[locale]"
+          cursor="pointer"
+          class="sig-about-card"
+          hoverable
+          :title="card.title[locale]"
+          :detail="card.subtitle[locale]"
+          :title-max-row="2"
+          :detail-max-row="2"
+          :detail-row="lePadV ? 1 : 2"
+          :href="card.path[locale]"
+        >
+          <template #title>
+            <OIcon class="icon">
+              <component :is="card.icon"></component>
+            </OIcon>
+            <div class="title">
+              {{ card.title[locale] }}
+            </div>
+          </template>
+          <img :src="card.backgroud" alt="" />
+        </OCard>
+      </template>
       <OCard
         v-if="!lePadV"
         :title="$t('sig.applicationProcess')"
@@ -153,12 +154,17 @@ const processDetail = computed(() => {
 
     .sig-about-card {
       :deep(.o-card-main) {
+        width: 100%;
         padding-bottom: 0;
+        .o-card-content {
+          height: 100%;
+        }
       }
 
       img {
         margin-top: 8px;
         width: 100%;
+        height: 100%;
         border-radius: var(--o-radius-xs) var(--o-radius-xs) 0 0;
       }
     }
@@ -306,6 +312,37 @@ const processDetail = computed(() => {
     --o-divider-label-gap: 0 40px;
 
     height: auto;
+  }
+}
+[lang='en'] {
+  .sig-about {
+    .sig-about-card-box {
+      grid-template-columns: 484px auto;
+      @include respond-to('<=laptop') {
+        grid-template-columns: 1fr 1fr;
+        .o-card {
+          grid-column: 1 / -1;
+        }
+      }
+      @include respond-to('<=pad_v') {
+        grid-template-columns: 1fr 1fr;
+      }
+      .application-process {
+        grid-column: auto;
+        @include respond-to('<=laptop') {
+          grid-column: 1 / -1;
+        }
+
+        .o-card-content {
+          .process-box {
+            padding: 0;
+          }
+        }
+      }
+      .application-process-mo {
+        grid-column: 1 / -1;
+      }
+    }
   }
 }
 
