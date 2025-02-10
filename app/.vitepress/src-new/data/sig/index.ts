@@ -34,33 +34,33 @@ export const welcomeJoin = [
     icon: exchangeSigIcon,
     title: {
       zh: '进行SIG交流',
-      en: '',
+      en: 'Engage in SIG Discussions',
     },
     subtitle: {
       zh: '在SIG团队项目的gitee首页README.md文件中，可以找到该项目所属的SIG信息、交流方式、成员和联系方式等，欢迎通过邮件列表、公开例会及对应的README.md 文件中提到的联系方式积极参与进SIG内的交流',
-      en: '',
+      en: 'In the README.md file on the project Gitee page, you can find project SIG information, members, and contact information. You can join specific SIGs by mailing the listed email addresses. Also, you can attend public meetings, join discussions or forums, or participate in other activities listed in the corresponding README.md file.',
     },
   },
   {
     icon: joinSigIcon,
     title: {
       zh: '参与SIG贡献',
-      en: '',
+      en: 'Contribute to SIGs',
     },
     subtitle: {
       zh: '每一个SIG在Gitee上都会拥有一个或多个项目，这些项目会拥有一个或多个Repository，SIG的交付成果会保存在这些Repository内。您可以在SIG对应的Repository内提交Issue、针对特定问题参与讨论，提交和解决问题，参与评审等',
-      en: '',
+      en: 'Each SIG comprises one or more projects on Gitee, and each project has repositories that store SIG deliverables. Registering with an SIG enables you to submit, discuss, and resolve issues with other members, as well as participate in reviews in an SIG repository.',
     },
   },
   {
     icon: operateSigIcon,
     title: {
       zh: '推动SIG运转',
-      en: '',
+      en: 'Drive SIG Operations',
     },
     subtitle: {
       zh: 'SIG都是针对特定的一个或多个技术主题而成立的。SIG的核心成员主导SIG的治理，SIG内的成员推动交付成果输出，并争取让交付成果成为openEuler社区发行的一部分',
-      en: '',
+      en: 'An SIG is established for one or more specific technical topics. Core members of an SIG can manage each group, and members can contribute to the quality and the output of deliverables for the openEuler community.',
     },
   },
 ];
@@ -70,11 +70,11 @@ export const aboutSig = [
     icon: roleDescription,
     title: {
       zh: 'SIG角色说明',
-      en: '',
+      en: 'SIG Community Member ',
     },
     subtitle: {
       zh: '了解openEuler 社区中贡献者角色的各种职责',
-      en: '',
+      en: 'Understand the various roles and responsibilities of contributors in the openEuler community.',
     },
     path: {
       zh: '/zh/sig/role-description/',
@@ -105,66 +105,66 @@ export const applicationProcess = [
     icon: lookingSomeoneIcon,
     process: {
       zh: '寻人',
-      en: '',
+      en: 'Find',
     },
     detail: {
       zh: '个人或公司在openEuler社区中寻找2 - 3个具有共同目标的人讨论决定成立SIG组，维护openEuler社区中的某一个技术方向软件包或发起孵化项目',
-      en: '',
+      en: 'Individuals or companies find two or three persons with common goals in the openEuler community to discuss and set up a SIG, which aims to maintain a specific type of software package in the openEuler community or to initiate an incubation project.',
     },
   },
   {
     icon: applyForIcon,
     process: {
       zh: '申请',
-      en: '',
+      en: 'Apply',
     },
     detail: {
       zh: '按照成立 SIG 组的{成立流程 process}，在 Gitee 上创建申请文件，发起 Pull Request ；预约技术委员会会议的时间。',
-      en: '',
+      en: 'Create an application file on Gitee and initiate a pull request (PR) according to the procedure for setting up a SIG. Make an appointment for attending the Technical Committee meeting.',
     },
   },
   {
     icon: communicateIcon,
     process: {
       zh: '沟通',
-      en: '',
+      en: 'Discuss',
     },
     detail: {
       zh: '在技术委员会的例会上就技术范围、维护的目标等和与会成员沟通，在 SIG 目标范围及维护上达成一致。',
-      en: '',
+      en: 'At the regular Technical Committee (TC) meeting, discuss and reach an agreement on the technical scope and maintenance objectives of the SIG.',
     },
   },
   {
     icon: approvedIcon,
     process: {
       zh: '获批',
-      en: '',
+      en: 'Approve',
     },
     detail: {
       zh: '技术委员会批准成立，对应的 Pull Request 合入代码仓库，基础设施会自动建立对应的仓库。',
-      en: '',
+      en: 'The TC approves the establishment of the SIG. The corresponding PR is integrated into the code repository, and the infrastructure automatically establishes the corresponding repository.',
     },
   },
   {
     icon: operateIcon,
     process: {
       zh: '运作',
-      en: '',
+      en: 'Operate',
     },
     detail: {
       zh: 'SIG 开始正式运作，通过邮件列表/例行会议等进行沟通运作。',
-      en: '',
+      en: 'The SIG starts to operate. Members use the mailing list and regular meetings for discussion and operation.',
     },
   },
   {
     icon: improveIcon,
     process: {
       zh: '改进',
-      en: '',
+      en: 'Improve',
     },
     detail: {
       zh: '技术委员会周期 Review SIG 的运作情况，给出指导意见。',
-      en: '',
+      en: 'The TC periodically reviews the SIG operation and provides guidance.',
     },
   },
 ];
