@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import { OTag, OIcon } from '@opensig/opendesign';
 
 import NavLink from './NavLink.vue';
+import { oaReport } from '@/shared/analytics';
 
 const props = defineProps({
   navContent: {
@@ -20,6 +21,7 @@ const props = defineProps({
 });
 
 const emits = defineEmits(['link-click']);
+
 const linkClick = () => {
   emits('link-click');
 };
@@ -28,6 +30,12 @@ const showDesc = ref(false);
 const descMouseenter = (e: MouseEvent) => {
   if (!e || !e.target) return;
   showDesc.value = e.target.clientHeight < e.target.scrollHeight;
+};
+
+const onClickNavLink = (item?: any) => {
+  if (item?.ANALYTICSNAME) {
+    oaReport('click', undefined, item.ANALYTICSNAME);
+  }
 };
 </script>
 
@@ -81,7 +89,12 @@ const descMouseenter = (e: MouseEvent) => {
       :class="{ 'content-item': navContent.length > 1 }"
     >
       <div class="item-title">
-        <NavLink :url="subItem.URL" class="item-name" @link-click="linkClick">
+        <NavLink
+          :url="subItem.URL"
+          class="item-name"
+          @click="onClickNavLink(subItem)"
+          @link-click="linkClick(subItem)"
+        >
           {{ subItem.NAME }}
           <OIcon v-if="subItem.ICON">
             <component :is="subItem.ICON" class="icon" />

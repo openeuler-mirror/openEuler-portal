@@ -1,9 +1,9 @@
 ---
-title: 麒麟信安助力长沙市智慧交通发展中心完成CentOS平滑迁移
+title: 长沙市智慧交通发展中心
 category: showcase
 industry: 其他
 company: 长沙市智慧交通发展中心
-summary: 有效避免了操作系统停服对用户业务系统的稳定运行产生的影响，确保了用户业务系统的持续性。
+summary: 麒麟信安助力长沙市智慧交通发展中心完成CentOS平滑迁移
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/others.png
 ---

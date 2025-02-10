@@ -208,8 +208,8 @@ export default {
               },
               {
                 img: xujian,
-                name: '徐健',
-                position: ['中国南方电网有限责任公司'],
+                name: '徐键',
+                position: ['南方电网数字电网科技有限（广东）公司'],
               },
               {
                 img: yangjiguo,
@@ -699,6 +699,11 @@ export default {
                 img: wanghao,
                 name: 'Wang Hao',
                 position: ['xFusion Digital Technologies Co., Ltd.'],
+              },
+              {
+                img: xujian,
+                name: 'Xu Jian',
+                position: ['China Southern Power Grid'],
               },
               {
                 img: yangjiguo,

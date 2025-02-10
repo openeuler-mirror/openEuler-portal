@@ -39,28 +39,32 @@ const props = defineProps({
 
 const emits = defineEmits(['search', 'update:modelValue', 'update:currentTab']);
 
-const { modelValue, currentTab } = useVModels(props, emits);
-
-const { lePadV } = useScreen();
-
-const { locale } = useLocale();
-// 搜索框是否获取焦点
+const { modelValue } = useVModels(props, emits);
 const isFocus = ref(false);
 const searchRecommendRef = ref();
 
-const changeModelValue = (val: string) => {
-  changeFocuseState(false);
+const currentTab = computed({
+  get: () => props.currentTab,
+  set: (value: string) => {
+    if (value !== props.currentTab) {
+      //TODO: OTab 组件在此处会执行两次 set
+      emits('update:currentTab', value);
+    }
+  },
+});
+
+const { lePadV } = useScreen();
+const { locale } = useLocale();
+
+const changeModelValue = () => {
+  isFocus.value = false;
   emits('search', modelValue.value);
 };
 
-const changeFocuseState = (state: boolean) => {
-  isFocus.value = state;
-};
-
 const handleSearchHistory = (val: string) => {
-  if (val === modelValue.value) return false;
+  if (val === modelValue.value) return;
   modelValue.value = val;
-  changeFocuseState(false);
+  isFocus.value = false;
   emits('search', val);
 };
 const handleClickSuggest = (val: string) => {
@@ -69,37 +73,30 @@ const handleClickSuggest = (val: string) => {
 };
 
 const handleInput = () => {
-  if (isFocus.value) {
-    return;
-  }
-  changeFocuseState(true);
+  if (!isFocus.value) isFocus.value = true;
 };
 
-const verticalPadding = computed(() => {
-  if (lePadV.value) {
-    return ['0', '0'];
-  } else {
-    return ['72px', '0'];
-  }
-});
+const verticalPadding = computed(() =>
+  lePadV.value ? ['0', '0'] : ['72px', '0']
+);
 
 defineExpose({ searchRecommendRef });
 </script>
 <template>
   <div class="search-banner">
     <ContentWrapper :vertical-padding="verticalPadding">
-      <div v-out-click="() => changeFocuseState(false)" class="search-box">
+      <div v-out-click="() => (isFocus = false)" class="search-box">
         <OInput
           :placeholder="$t('common.search')"
           v-model.trim="modelValue"
           ref="inputRef"
           size="large"
           @input="handleInput"
-          @focus="changeFocuseState(true)"
+          @focus="() => (isFocus = true)"
           @keyup.enter="changeModelValue"
         >
           <template #prefix>
-            <OIcon class="icon"><IconSearch></IconSearch></OIcon>
+            <OIcon class="icon"><IconSearch /></OIcon>
           </template>
         </OInput>
         <ClientOnly>

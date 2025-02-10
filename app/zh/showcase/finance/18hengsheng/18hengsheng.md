@@ -1,9 +1,9 @@
 ---
-title: 恒生电子微服务快启动探索
+title: 恒生电子核心交易系统 UF3.0
 category: showcase
 industry: 金融
 company: 恒生电子
-summary: 恒生电子微服务快启动探索。
+summary: 恒生电子微服务快启动探索
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---

@@ -1,9 +1,9 @@
 ---
-title: 平安保险云信创建设项目
+title: 平安保险云
 category: showcase
 industry: 金融
 company: 平安银行
-summary: 平安保险云信创建设项目
+summary: 实现以信创芯片服务器及操作系统为基座的云计算平台
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---

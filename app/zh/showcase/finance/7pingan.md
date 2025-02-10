@@ -1,9 +1,9 @@
 ---
-title: 平安银行开源信创操作系统推广项目
+title: 平安银行
 category: showcase
 industry: 金融
 company: 平安银行
-summary: 显著降低了金融信息系统的 OS软件成本，同时提升了操作系统的可控性与安全性。
+summary: 引入openEuler 操作系统，显著降低了金融信息系统的 OS软件成本，同时提升了操作系统的自主可控性与安全性。
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---

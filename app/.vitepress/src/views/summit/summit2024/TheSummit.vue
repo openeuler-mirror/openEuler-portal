@@ -6,7 +6,7 @@ import { useCommon, useCookieStore } from '@/stores/common';
 
 import { getEasyeditorInfo } from '@/api/api-easyeditor';
 import { getUrlParam } from '@/shared/utils';
-import { oa } from '@/shared/analytics';
+import { oaReport } from '@/shared/analytics';
 
 import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
@@ -63,10 +63,8 @@ function collectAdvertisedData() {
     if (!params) {
       return;
     }
-    oa.report('fromAdvertised', () => {
-      return {
-        utm_source: params,
-      };
+    oaReport('fromAdvertised', {
+      utm_source: params,
     });
   }
   history.pushState(null, '', location.origin + location.pathname);

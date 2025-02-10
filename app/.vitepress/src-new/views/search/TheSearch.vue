@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, watch, ref, onMounted } from 'vue';
+import { computed, watch, ref, onMounted, nextTick } from 'vue';
 
 import { getSearchData, getSearchCount, getRelevant } from '~@/api/api-search';
 
@@ -14,7 +14,7 @@ import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 
 import { uniqueId } from '@/shared/utils';
-import { oa } from '@/shared/analytics';
+import { oaReport } from '@/shared/analytics';
 import { getUrlParam } from '~@/utils/common';
 
 import SearchBanner from './SearchBanner.vue';
@@ -83,8 +83,6 @@ watch(
       ];
     }
     searchType.value = res === 'all' ? '' : res;
-    // 其他类型处理
-    searchAll();
   }
 );
 
@@ -243,8 +241,11 @@ const queryGetSearchData = () => {
     .finally(() => {
       isPageCountChange.value = false;
       isLoading.value = false;
+      flag.value = false;
     });
 };
+
+const flag = ref(false);
 // 获取搜索结果的所有内容
 function searchAll(valueChange?: boolean) {
   if (searchValue.value) {
@@ -255,6 +256,7 @@ function searchAll(valueChange?: boolean) {
     // 是否重置tab
     if (valueChange) {
       currentTab.value = 'all';
+      searchType.value = '';
     }
     searchBannerRef.value.searchRecommendRef?.handleSearch(searchValue.value);
     queryGetSearchCount();
@@ -268,12 +270,14 @@ function searchAll(valueChange?: boolean) {
 let SEARCH_EVENT_ID = uniqueId();
 const reportSearch = (keyword: string) => {
   SEARCH_EVENT_ID = uniqueId();
-  oa.report('searchValue', () => {
-    return {
+  oaReport(
+    'searchValue',
+    {
       search_event_id: SEARCH_EVENT_ID,
       search_key: keyword,
-    };
-  });
+    },
+    'search_portal'
+  );
 };
 
 function handleSelectChange(val: string) {
@@ -370,6 +374,12 @@ const getMoreDataMo = () => {
     queryGetSearchData();
   }
 };
+
+const handleTabChange = () => {
+  nextTick(() => {
+    searchAll();
+  });
+};
 </script>
 <template>
   <div v-scroll-bottom="getMoreDataMo" class="search">
@@ -377,6 +387,7 @@ const getMoreDataMo = () => {
       class="search-banner"
       v-model="searchValue"
       v-model:current-tab="currentTab"
+      @update:current-tab="handleTabChange"
       @search="searchAll"
       ref="searchBannerRef"
       :suggest-list="suggestList"

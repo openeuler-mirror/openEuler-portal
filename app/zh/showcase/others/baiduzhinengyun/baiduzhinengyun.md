@@ -1,5 +1,5 @@
 ---
-title: 百度智能云-基于openEuler打造百度智能云基座
+title: 百度智能云
 category: showcase
 industry: 其他
 company: 百度智能云

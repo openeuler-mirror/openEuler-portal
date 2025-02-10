@@ -1,9 +1,9 @@
 ---
-title: 中国移动
+title: 浙江移动核心业务系统适配
 category: showcase
 industry: 运营商
 company: 中国移动
-summary: 浙江公司核心业务系统，平滑完成操作系统迁移
+summary: 基于国产芯片服务器与操作系统构建自主可控集群
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/provider.png
 ---

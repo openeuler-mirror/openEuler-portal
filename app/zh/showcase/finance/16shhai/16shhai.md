@@ -1,9 +1,9 @@
 ---
-title: 上海证券交易所核心交易场景低时延解决方案
+title: 上海证券交易所
 category: showcase
 industry: 金融
 company: 上海证券交易所
-summary: 通过软件协议栈的优化，数据穿越网络协议栈的耗时降低50%。
+summary: 下一代核心交易系统，在安全可控场景下提供更低的时延
 banner: /category/showcase/case-detail-bg.jpg
 img: /category/showcase/finance.png
 ---

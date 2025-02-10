@@ -2,7 +2,7 @@
 import { computed, type PropType, ref, watch } from 'vue';
 
 import { useData } from 'vitepress';
-import { oa } from '@/shared/analytics';
+import { oaReport } from '@/shared/analytics';
 
 import { useVModels } from '@vueuse/core';
 import { moduleMap, subModuleMap } from '~@/data/search';
@@ -194,14 +194,16 @@ const reportSelectSearchResult = (
     search_result_url: path,
   };
 
-  oa.report('selectSearchResult', () => {
-    return {
+  oaReport(
+    'selectSearchResult',
+    {
       search_event_id: SEARCH_EVENT_ID,
       search_key: keyword,
       ...(data || {}),
       ...searchKeyObj,
-    };
-  });
+    },
+    'search_portal'
+  );
 };
 
 const verticalPadding = computed(() => {
@@ -222,6 +224,8 @@ const zoneShownCondition = computed(() => {
 });
 
 const COUNT_PER_PAGE = [12, 18, 24, 36];
+// 移动端搜索反馈出现位置
+const MO_FEEDBACK_INDEX = 11;
 </script>
 <template>
   <ContentWrapper class="search-result" :vertical-padding="verticalPadding">
@@ -246,7 +250,6 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
         v-if="
           !searchType ||
           searchType === 'docs' ||
-          searchType === 'communityRelease' ||
           searchType.includes('packages')
         "
         v-model="activeVersion"
@@ -266,6 +269,7 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
         v-if="sortType.includes(searchType)"
         v-model="activeSort"
         placeholder="Select"
+        class="sort-select"
         optionPosition="br"
       >
         <OOption
@@ -294,7 +298,7 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
             />
           </div>
           <template v-for="(item, index) in searchResultList" :key="item.id">
-            <template v-if="index === 11 && lePadV">
+            <template v-if="index === MO_FEEDBACK_INDEX && lePadV">
               <SearchFeedback
                 class="mo-feedback"
                 size="medium"
@@ -481,7 +485,13 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
     }
   }
   .o-select {
-    width: 220px;
+    width: 180px;
+    @include respond-to('<=pad_v') {
+      width: 150px;
+    }
+  }
+  .sort-select {
+    width: 192px;
     @include respond-to('<=pad_v') {
       width: 150px;
     }

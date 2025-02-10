@@ -1,5 +1,5 @@
 ---
-title: 中国移动云能力中心
+title: 中国移动云能力中心云主机操作系统迁移方案
 category: showcase
 industry: 运营商
 company: 中国移动云能力中心

@@ -3,6 +3,7 @@ import { markRaw } from 'vue';
 import Summit from '~@/assets/category/header/summit.png';
 import Sig from '~@/assets/category/header/sig.png';
 import Report from '~@/assets/category/header/report.png';
+import annualReport2024 from '~@/assets/category/header/annual-report-2024.jpg';
 
 import IconOutLink from '~icons/app/icon-out-link.svg';
 import IconArrowRight from '~icons/app-new/icon-header-next.svg';
@@ -383,11 +384,13 @@ export default {
               NAME: 'EulerMaker',
               DESCRIPTION: '开放式统一构建服务',
               URL: 'https://eulermaker.compass-ci.openeuler.openatom.cn/',
+              ANALYTICSNAME: 'eulermaker',
             },
             {
               NAME: 'Compass-CI',
               DESCRIPTION: '开放式测试服务平台',
               URL: 'https://compass-ci.openeuler.org/',
+              ANALYTICSNAME: 'compassci',
             },
             {
               NAME: '用户软件仓(EUR)',
@@ -404,6 +407,7 @@ export default {
               DESCRIPTION: '帮助快速检测License权利、义务、限制',
               URL: 'https://compliance.openeuler.org/',
               ICON: OutLink,
+              ANALYTICSNAME: 'license',
             },
           ],
         },
@@ -414,6 +418,7 @@ export default {
               NAME: 'EulerTest',
               DESCRIPTION: '基于openEuler环境开发的测试管理平台',
               URL: 'https://radiatest.openeuler.org/home/version-management/product/',
+              ANALYTICSNAME: 'radiatest',
             },
           ],
         },
@@ -453,6 +458,7 @@ export default {
               NAME: 'Pkgship',
               DESCRIPTION: '管理操作系统软件包信息和依赖项的查询工具',
               URL: 'https://pkgmanage.openeuler.org/',
+              ANALYTICSNAME: 'pkgship',
             },
           ],
         },
@@ -790,12 +796,19 @@ export default {
               URL: '/interaction/blog-list/',
             },
             {
-              NAME: '月刊',
+              NAME: '月刊与年报',
               DESCRIPTION: '查看openEuler社区运作报告',
               URL: '/monthly-bulletins/',
             },
           ],
           SHORTCUT: [
+            {
+              NAME: 'openEuler 2024 社区年报',
+              PICTURE: annualReport2024,
+              REMARK: '发布时间：2025/01/24',
+              TYPE: 'PICTURE',
+              URL: '/annual-report/openEuler-annual-report-2024/',
+            },
             {
               NAME: 'openEuler 2023 社区年报',
               PICTURE: Report,
