@@ -117,13 +117,11 @@ watch(
     .o-progress-line-track {
       background-color: transparent;
       overflow: visible;
-
       .o-progress-line-bar {
         display: flex;
         align-items: center;
         position: relative;
         min-width: 130px !important;
-
         &::after {
           content: attr(contributor);
           position: absolute;
@@ -144,10 +142,8 @@ watch(
         .word-avatar {
           flex-shrink: 0;
         }
-
         .gitee-name {
           @include text-truncate(1);
-
           text-align: left;
           margin-left: 8px;
           word-break: break-all;

@@ -69,19 +69,15 @@ const filterSigInfo = computed(() => {
 });
 
 const renderSigInfo = computed(() => {
-  return filterSigInfo.value.slice(
-    (sigQuery.value.page - 1) * sigQuery.value.pageSize,
-    sigQuery.value.page * sigQuery.value.pageSize
-  );
+  if (!lePadV.value) {
+    return filterSigInfo.value.slice(
+      (sigQuery.value.page - 1) * sigQuery.value.pageSize,
+      sigQuery.value.page * sigQuery.value.pageSize
+    );
+  } else {
+    return filterSigInfo.value.slice(0, sigQuery.value.page * sigQuery.value.pageSize);
+  }
 });
-
-const allRepos = ref<string[]>([]);
-
-const queryGetRepoList = () => {
-  getRepoList(repoQuery.value).then((res) => {
-    allRepos.value = res.data;
-  });
-};
 
 const queryGetSigList = () => {
   getSigList().then((res) => {
@@ -107,7 +103,6 @@ const constructLandscapeMap = () => {
 };
 
 onMounted(() => {
-  queryGetRepoList();
   queryGetSigList();
   constructLandscapeMap();
 });
@@ -133,6 +128,18 @@ const transformedRepos = computed(() => {
 const renderSigs = computed(() => {
   return allSigInfo.value.map((sigInfo) => sigInfo.sig_name);
 });
+
+// 移动端翻页
+// 移动端滑动加载事件
+const getMoreDataMo = () => {
+  if (
+    lePadV.value &&
+    sigQuery.value.page <
+      Math.ceil(filterSigInfo.value.length / sigQuery.value.pageSize)
+  ) {
+    sigQuery.value.page++;
+  }
+};
 </script>
 <template>
   <AppSection :title="$t('sig.sigList')" class="sig-list">
@@ -179,7 +186,11 @@ const renderSigs = computed(() => {
         {{ $t('sig.sigTip') }}
       </div>
     </div>
-    <div v-if="renderSigInfo.length" class="sig-card-list">
+    <div
+      v-if="renderSigInfo.length"
+      v-scroll-bottom="getMoreDataMo"
+      class="sig-card-list"
+    >
       <div v-for="sig in renderSigInfo" :key="sig.sig_name" class="sig-card">
         <div class="sig-info">
           <div class="sig-info-left">
