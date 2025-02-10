@@ -70,7 +70,10 @@ const processDetail = computed(() => {
             <div
               @click="activeStep = index"
               class="process-step"
-              :class="{ active: index === activeStep }"
+              :class="{
+                active: index === activeStep,
+                [`step-${index}`]: true,
+              }"
             >
               <OIcon class="icon">
                 <component :is="step.icon"></component>
@@ -239,13 +242,21 @@ const processDetail = computed(() => {
           &::after {
             position: absolute;
             content: '';
-            border-bottom: 18px solid #e9f5fe;
+            border-bottom: 18px solid black;
             border-left: 18px solid transparent;
             border-right: 18px solid transparent;
             left: 50%;
             bottom: -24px;
             transform: translateX(-50%);
             margin-top: 24px;
+          }
+        }
+        // 三角底色与步骤条渐变保持一致
+        @for $i from 0 through 5 {
+          .step-#{$i} {
+            &::after {
+              border-bottom-color: mix(#f6f9ff, #e9f5fe, $i * 20%) !important;
+            }
           }
         }
 
@@ -316,6 +327,13 @@ const processDetail = computed(() => {
 
             &::after {
               border-bottom: 18px solid #353539;
+            }
+          }
+          @for $i from 0 through 5 {
+            .step-#{$i} {
+              &::after {
+                border-bottom-color: mix(#2d2d31, #353539, $i * 20%) !important;
+              }
             }
           }
 
