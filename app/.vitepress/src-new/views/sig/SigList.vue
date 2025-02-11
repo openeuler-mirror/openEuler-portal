@@ -151,44 +151,46 @@ const getMoreDataMo = () => {
 <template>
   <AppSection :title="$t('sig.sigList')" class="sig-list">
     <div class="filter-line">
-      <div class="select-box">
-        <el-select
-          v-model="activeSig"
-          :size="lePadV ? 'small' : 'large'"
-          filterable
-          clearable
-          :placeholder="$t('sig.allSig')"
-        >
-          <el-option
-            v-for="sigName in renderSigs"
-            :key="sigName"
-            :value="sigName"
-          />
-        </el-select>
-        <el-select-v2
-          v-model="activeRepo"
-          clearable
-          filterable
-          :size="lePadV ? 'small' : 'large'"
-          :fit-input-width="240"
-          :options="transformedRepos"
-          :placeholder="$t('sig.allRepo')"
-        >
-        </el-select-v2>
-        <el-select
-          v-model="activeMaintainer"
-          :size="lePadV ? 'small' : 'large'"
-          clearable
-          filterable
-          :placeholder="$t('sig.allMaintainer')"
-        >
-          <el-option
-            v-for="maintainer in renderMaintainers"
-            :key="maintainer"
-            :value="maintainer"
-          />
-        </el-select>
-      </div>
+      <ClientOnly>
+        <div class="select-box">
+          <el-select
+            v-model="activeSig"
+            :size="lePadV ? 'small' : 'large'"
+            filterable
+            clearable
+            :placeholder="$t('sig.allSig')"
+          >
+            <el-option
+              v-for="sigName in renderSigs"
+              :key="sigName"
+              :value="sigName"
+            />
+          </el-select>
+          <el-select-v2
+            v-model="activeRepo"
+            clearable
+            filterable
+            :size="lePadV ? 'small' : 'large'"
+            :fit-input-width="240"
+            :options="transformedRepos"
+            :placeholder="$t('sig.allRepo')"
+          >
+          </el-select-v2>
+          <el-select
+            v-model="activeMaintainer"
+            :size="lePadV ? 'small' : 'large'"
+            clearable
+            filterable
+            :placeholder="$t('sig.allMaintainer')"
+          >
+            <el-option
+              v-for="maintainer in renderMaintainers"
+              :key="maintainer"
+              :value="maintainer"
+            />
+          </el-select>
+        </div>
+      </ClientOnly>
       <div class="tip">
         {{ $t('sig.sigTip') }}
       </div>
