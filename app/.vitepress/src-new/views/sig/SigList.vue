@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useRouter } from 'vitepress';
+
 import { ref, onMounted, computed } from 'vue';
 
 import {
@@ -29,10 +31,7 @@ const { lePadV } = useScreen();
 
 const COUNT_PER_PAGE = [10, 20, 30];
 
-const repoQuery = ref({
-  community: 'openeuler',
-  search: 'fuzzy',
-});
+const router = useRouter();
 
 const sigQuery = ref({
   pageSize: 10,
@@ -75,7 +74,10 @@ const renderSigInfo = computed(() => {
       sigQuery.value.page * sigQuery.value.pageSize
     );
   } else {
-    return filterSigInfo.value.slice(0, sigQuery.value.page * sigQuery.value.pageSize);
+    return filterSigInfo.value.slice(
+      0,
+      sigQuery.value.page * sigQuery.value.pageSize
+    );
   }
 });
 
@@ -128,6 +130,11 @@ const transformedRepos = computed(() => {
 const renderSigs = computed(() => {
   return allSigInfo.value.map((sigInfo) => sigInfo.sig_name);
 });
+
+//
+const toSigDetail = (sigName: string) => {
+  router.go(`/${locale.value}/sig/${sigName}`);
+};
 
 // 移动端翻页
 // 移动端滑动加载事件
@@ -194,13 +201,13 @@ const getMoreDataMo = () => {
       <div v-for="sig in renderSigInfo" :key="sig.sig_name" class="sig-card">
         <div class="sig-info">
           <div class="sig-info-left">
-            <a
-              :href="`/${locale}/sig/${sig.sig_name}`"
+            <div
+              @click="toSigDetail(sig.sig_name)"
               rel="noopener noreferrer"
               class="sig-name"
             >
               {{ sig.sig_name }}
-            </a>
+            </div>
             <a
               :href="`https://gitee.com/openeuler/community/tree/master/sig/${sig.sig_name}`"
               target="_blank"
@@ -422,6 +429,7 @@ const getMoreDataMo = () => {
         align-items: center;
 
         .sig-name {
+          cursor: pointer;
           color: var(--o-color-info1);
           font-weight: 500;
           @include h3;
