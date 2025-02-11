@@ -321,8 +321,8 @@ export default {
         light: macOsImgMo,
         dark: macOsImgDarkMo,
       },
-      title: 'MacOs',
-      intro: 'Running openEuler on MacOs',
+      title: 'MacOS',
+      intro: 'Running openEuler on MacOS',
       repeat: 1,
       links: [
         {

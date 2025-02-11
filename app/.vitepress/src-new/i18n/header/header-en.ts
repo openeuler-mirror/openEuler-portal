@@ -153,8 +153,8 @@ export default {
                   URL: '/download/#windows',
                 },
                 {
-                  NAME: 'MacOs',
-                  DESCRIPTION: 'Running openEuler on MacOs',
+                  NAME: 'MacOS',
+                  DESCRIPTION: 'Running openEuler on MacOS',
                   URL: '/download/#macos',
                 },
                 {
