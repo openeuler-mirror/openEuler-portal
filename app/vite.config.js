@@ -12,6 +12,8 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, '../dist'),
     cssCodeSplit: true,
+    sourcemap: true, // 开启 Source Map
+    minify: false, // 禁用代码压缩
   },
   publicDir: path.resolve(__dirname, './.vitepress/public'),
   resolve: {
@@ -131,11 +133,12 @@ export default defineConfig({
         rewrite: (url) => url.replace(/^\/api-certification/, ''),
       },
       '/api-search/': {
-        target: 'https://www.openeuler.org',
+        target: 'https://doc-search.test.osinfra.cn',
         changeOrigin: true,
         headers: {
           Referer: '',
         },
+        rewrite: (path) => path.replace(/^\/api-search/, ''),
       },
       '/api-meeting/': {
         target: 'https://meetings.openeuler.openatom.cn/',
