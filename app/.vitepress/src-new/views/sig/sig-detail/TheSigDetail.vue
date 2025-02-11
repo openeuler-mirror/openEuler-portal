@@ -8,7 +8,11 @@ import { SIG_ADDRESS } from '~@/shared/config/sig';
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 
-import { OBreadcrumb, OBreadcrumbItem } from '@opensig/opendesign';
+import {
+  OBreadcrumb,
+  OBreadcrumbItem,
+  vLoading,
+} from '@opensig/opendesign';
 import SigDetailInfoCard from './SigDetailInfoCard.vue';
 import SigMember from './SigMember.vue';
 import SigMeeting from './SigMeeting.vue';
@@ -39,14 +43,22 @@ const mail = ref('');
 const sigMeetingData: any = ref([]);
 const sigDetailInfo = ref<SigCompleteItemT>();
 const memberList: any = ref([]);
+const isLoading = ref(true);
 
+
+
+// 获取sig会议数据
 const queryGetSigMeeting = () => {
+  isLoading.value = true;
   getSigMeeting(sigName.value, pageParams)
     .then((res: any) => {
       sigMeetingData.value = res.data.reverse();
     })
     .catch(() => {
       router.go(`${lang.value}/sig/sig-list/`);
+    })
+    .finally(() => {
+      isLoading.value = false;
     });
 };
 
@@ -122,14 +134,14 @@ onMounted(() => {
           <div class="meeting-title-intro">
             {{ $t('sig.sigMeetingIntro') }}
           </div>
-          <div class="meeting-card">
+          <div v-loading="isLoading" class="meeting-card">
             <SigMeeting
               class="sig-floor-item"
               v-if="sigMeetingData.length"
               :meeting-data="sigMeetingData"
               :mail="mail"
             />
-            <div v-else class="result-empty-box sig-floor-item">
+            <div v-else-if="!isLoading" class="result-empty-box sig-floor-item">
               <ResultEmpty
                 :description="$t('sig.noMeeting')"
                 :style="{
@@ -194,6 +206,7 @@ onMounted(() => {
     }
 
     .meeting-card {
+      position: relative;
       margin-top: 24px;
       @include respond-to('<=laptop') {
         margin-top: 12px;

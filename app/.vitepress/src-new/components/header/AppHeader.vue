@@ -100,7 +100,6 @@ watch(
 const isSimpleHeader = computed(() => {
   return frontmatter.value.simpleHeader;
 });
-console.log(frontmatter.value);
 
 // 搜索页移动端布局
 const isSearchPage = computed(() => {
