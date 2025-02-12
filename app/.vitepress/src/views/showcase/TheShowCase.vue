@@ -160,7 +160,7 @@ const reportSelectSearchResult = (link: string, item: any, index: number) => {
     'selectSearchResult',
     {
       search_event_id: SEARCH_EVENT_ID,
-      search_key: keyWord.value,
+      search_key: parmes.keyword,
       ...(item || {}),
       ...searchKeyObj,
     },
