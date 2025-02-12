@@ -1,7 +1,6 @@
 import yuping from '@/assets/category/organization/yuping.png';
 import gaopei from '@/assets/category/organization/gaopei.png';
 import hannaiping from '@/assets/category/organization/hannaiping.png';
-import jiangdayong from '@/assets/category/organization/jiangdayong.png';
 import wanghao from '@/assets/category/organization/wanghao.png';
 import lipeiyuan from '@/assets/category/organization/lipeiyuan.png';
 import liuwenqing from '@/assets/category/organization/liuwenqing.png';
@@ -11,28 +10,38 @@ import zujianzhong from '@/assets/category/organization/zujianzhong.png';
 import zhangshenju from '@/assets/category/organization/zhangshenju.png';
 import zhongxin from '@/assets/category/organization/zhongxin.png';
 import yangjiguo from '@/assets/category/organization/yangjiguo.png';
-
-import huxinwei from '@/assets/category/organization/huxinwei.png';
-import caozhi from '@/assets/category/organization/caozhi.png';
-import chenqide from '@/assets/category/organization/chenqide.png';
-import houjian from '@/assets/category/organization/houjian.png';
-import hufeng from '@/assets/category/organization/hufeng.png';
-import huyadi from '@/assets/category/organization/huyadi.png';
-import liyongqiang from '@/assets/category/organization/liyongqiang.png';
-import renwei from '@/assets/category/organization/renwei.png';
-import shiyong from '@/assets/category/organization/shiyong.png';
-import tianjun from '@/assets/category/organization/tianjun.png';
-import wangjianmin from '@/assets/category/organization/wangjianmin.png';
-import wanglingzhuo from '@/assets/category/organization/wanglingzhuo.png';
-import wangzhigang from '@/assets/category/organization/wangzhigang.png';
-import zhujianwei from '@/assets/category/organization/zhujianwei.png';
-import wufengguang from '@/assets/category/organization/wufengguang.png';
-import xiexiuqi from '@/assets/category/organization/xiexiuqi.png';
 import xiongwei from '@/assets/category/organization/xiongwei.png';
-import lvcongqing from '@/assets/category/organization/lvcongqing.png';
-import zhaochuanfeng from '@/assets/category/organization/zhaochuanfeng.png';
 import huzhengce from '@/assets/category/organization/huzhengce.png';
 import xujian from '@/assets/category/organization/xujian.png';
+
+// 技术委员会
+import huxinwei from '@/assets/category/organization/technical/huxinwei.png';
+import caozhi from '@/assets/category/organization/technical/caozhi.png';
+import chenqide from '@/assets/category/organization/technical/chenqide.png';
+import houjian from '@/assets/category/organization/technical/houjian.png';
+import hufeng from '@/assets/category/organization/technical/hufeng.png';
+import liyongqiang from '@/assets/category/organization/technical/liyongqiang.png';
+import renwei from '@/assets/category/organization/technical/renwei.png';
+import shiyong from '@/assets/category/organization/technical/shiyong.png';
+import tianjun from '@/assets/category/organization/technical/tianjun.png';
+import wangjianmin from '@/assets/category/organization/technical/wangjianmin.png';
+import wangzhigang from '@/assets/category/organization/technical/wangzhigang.png';
+import zhujianwei from '@/assets/category/organization/technical/zhujianwei.png';
+import wufengguang from '@/assets/category/organization/technical/wufengguang.png';
+import xiexiuqi from '@/assets/category/organization/technical/xiexiuqi.png';
+import lvcongqing from '@/assets/category/organization/technical/lvcongqing.png';
+import zhaochuanfeng from '@/assets/category/organization/technical/zhaochuanfeng.png';
+import liukai from '@/assets/category/organization/technical/liukai.png';
+import yeqinglong from '@/assets/category/organization/technical/yeqinglong.png';
+import tanggeliang from '@/assets/category/organization/technical/tanggeliang.png';
+import yuelongguang from '@/assets/category/organization/technical/yuelongguang.png';
+import dukaitian from '@/assets/category/organization/technical/dukaitian.png';
+import wangjingwei from '@/assets/category/organization/technical/wangjingwei.png';
+import chenyaqiang from '@/assets/category/organization/technical/chenyaqiang.png';
+import chenmaodong from '@/assets/category/organization/technical/chenmaodong.png';
+import maquanyi from '@/assets/category/organization/technical/maquanyi.png';
+import gaoguijin from '@/assets/category/organization/technical/gaoguijin.png';
+
 
 // 专家委员会
 import huotaiwen from '@/assets/category/organization/expert/huotaiwen.png';
@@ -273,11 +282,39 @@ export default {
             gitee: 'georgecao',
           },
           {
+            img: chenmaodong,
+            name: '陈茂冬',
+            post: '委员',
+            email: 'chenmaodong@xfusion.com',
+            gitee: 'chenmaodong',
+          },
+          {
             img: chenqide,
             name: '陈棋德',
             post: '委员',
-            email: 'dillon.chen@gmail.com ',
+            email: 'dillon.chen@gmail.com',
             gitee: 'dillon_chen',
+          },
+          {
+            img: chenyaqiang,
+            name: '陈亚强',
+            post: '委员',
+            email: 'chen_yaqiang@foxmail.com',
+            gitee: 'yaqiangchen',
+          },
+          {
+            img: dukaitian,
+            name: '杜开田',
+            post: '委员',
+            email: 'dukaitian@huawei.com',
+            gitee: 'jimmy_hero',
+          },
+          {
+            img: gaoguijin,
+            name: '高贵锦',
+            post: '委员',
+            email: 'gaoguijin@huawei.com',
+            gitee: 'blue0613',
           },
           {
             img: houjian,
@@ -294,13 +331,6 @@ export default {
             gitee: 'solarhu',
           },
           {
-            img: huyadi,
-            name: '胡亚弟',
-            post: '委员',
-            email: '731229405@qq.com',
-            gitee: 'huyd12',
-          },
-          {
             img: liyongqiang,
             name: '李永强',
             post: '委员',
@@ -308,11 +338,25 @@ export default {
             gitee: 'charlie_li',
           },
           {
+            img: liukai,
+            name: '刘恺',
+            post: '委员',
+            email: 'kraml.liu@gmail.com',
+            gitee: 'kailiu42',
+          },
+          {
             img: lvcongqing,
             name: '吕从庆',
             post: '委员',
             email: 'lvcongqing@uniontech.com',
             gitee: 'HelloWorld_lvcongqing',
+          },
+          {
+            img: maquanyi,
+            name: '马全一',
+            post: '委员',
+            email: 'eli@patch.sh',
+            gitee: 'genedna',
           },
           {
             img: renwei,
@@ -329,6 +373,13 @@ export default {
             gitee: 'stonefly128',
           },
           {
+            img: tanggeliang,
+            name: '唐葛亮',
+            post: '委员',
+            email: 'geliang@kernel.org',
+            gitee: 'geliangtang',
+          },
+          {
             img: tianjun,
             name: '田俊',
             post: '委员',
@@ -343,11 +394,11 @@ export default {
             gitee: 'cellfaint',
           },
           {
-            img: wanglingzhuo,
-            name: '王伶卓',
+            img: wangjingwei,
+            name: '王经纬',
             post: '委员',
-            email: 'relue0z@outlook.com',
-            gitee: 'relue0z',
+            email: 'wangjingwei@iscas.ac.cn',
+            gitee: 'Jingwiw',
           },
           {
             img: wangzhigang,
@@ -376,6 +427,20 @@ export default {
             post: '委员',
             email: 'xiexiuqi@huawei.com',
             gitee: 'xiexiuqi',
+          },
+          {
+            img: yeqinglong,
+            name: '叶青龙',
+            post: '委员',
+            email: 'yeqinglong@kylinsec.com.cn',
+            gitee: 'yeqinglong01',
+          },
+          {
+            img: yuelongguang,
+            name: '岳龙广',
+            post: '委员',
+            email: 'yuelg@chinaunicom.cn',
+            gitee: 'bigclouds99',
           },
           {
             img: zhaochuanfeng,
@@ -769,11 +834,39 @@ export default {
             gitee: 'georgecao',
           },
           {
+            img: chenmaodong,
+            name: 'Chen Maodong',
+            post: 'Committee member',
+            email: 'chenmaodong@xfusion.com',
+            gitee: 'chenmaodong',
+          },
+          {
             img: chenqide,
             name: 'Chen Qide',
             post: 'Committee member',
-            email: 'dillon.chen@gmail.com ',
+            email: 'dillon.chen@gmail.com',
             gitee: 'dillon_chen',
+          },
+          {
+            img: chenyaqiang,
+            name: 'Chenn Yaqiang',
+            post: 'Committee member',
+            email: 'chen_yaqiang@foxmail.com',
+            gitee: 'yaqiangchen',
+          },
+          {
+            img: dukaitian,
+            name: 'Du Kaitian',
+            post: 'Committee member',
+            email: 'dukaitian@huawei.com',
+            gitee: 'jimmy_hero',
+          },
+          {
+            img: gaoguijin,
+            name: 'Gao Guijin',
+            post: 'Committee member',
+            email: 'gaoguijin@huawei.com',
+            gitee: 'blue0613',
           },
           {
             img: houjian,
@@ -790,13 +883,6 @@ export default {
             gitee: 'solarhu',
           },
           {
-            img: huyadi,
-            name: 'Hu Yadi',
-            post: 'Committee member',
-            email: 'huyd12@chinatelecom.cn',
-            gitee: 'huyd12',
-          },
-          {
             img: liyongqiang,
             name: 'Li Yongqiang',
             post: 'Committee member',
@@ -804,11 +890,25 @@ export default {
             gitee: 'charlie_li',
           },
           {
+            img: liukai,
+            name: 'Liu Kai',
+            post: 'Committee member',
+            email: 'kraml.liu@gmail.com',
+            gitee: 'kailiu42',
+          },
+          {
             img: lvcongqing,
             name: 'Lv Congqing',
             post: 'Committee member',
             email: 'lvcongqing@uniontech.com',
             gitee: 'HelloWorld_lvcongqing',
+          },
+          {
+            img: maquanyi,
+            name: 'Ma Quanyi',
+            post: 'Committee member',
+            email: 'eli@patch.sh',
+            gitee: 'genedna',
           },
           {
             img: renwei,
@@ -825,6 +925,13 @@ export default {
             gitee: 'stonefly128',
           },
           {
+            img: tanggeliang,
+            name: 'Tang Geliang',
+            post: 'Committee member',
+            email: 'geliang@kernel.org',
+            gitee: 'geliangtang',
+          },
+          {
             img: tianjun,
             name: 'Tian Jun',
             post: 'Committee member',
@@ -839,11 +946,11 @@ export default {
             gitee: 'cellfaint',
           },
           {
-            img: wanglingzhuo,
-            name: 'Wang Lingzhuo',
+            img: wangjingwei,
+            name: 'Wang Jingwei',
             post: 'Committee member',
-            email: 'relue0z@outlook.com',
-            gitee: 'relue0z',
+            email: 'wangjingwei@iscas.ac.cn',
+            gitee: 'Jingwiw',
           },
           {
             img: wangzhigang,
@@ -872,6 +979,20 @@ export default {
             post: 'Committee member',
             email: 'xiexiuqi@huawei.com',
             gitee: 'xiexiuqi',
+          },
+          {
+            img: yeqinglong,
+            name: 'Ye Qinglong',
+            post: 'Committee member',
+            email: 'yeqinglong@kylinsec.com.cn',
+            gitee: 'yeqinglong01',
+          },
+          {
+            img: yuelongguang,
+            name: 'Yue Longguang',
+            post: 'Committee member',
+            email: 'yuelg@chinaunicom.cn',
+            gitee: 'bigclouds99',
           },
           {
             img: zhaochuanfeng,
