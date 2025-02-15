@@ -24,31 +24,17 @@ const props = defineProps({
     default: '',
   },
 });
-const isTest = ref(false);
 const liveUrl = ref('');
 const renderData: Array<RENDERDATA> = props.liveData as any;
 const roomId = ref(0);
 const setLiveRoom = (item: RENDERDATA, index: number): void => {
   roomId.value = index;
-  createUserId(isTest.value ? item.liveTestId : item.liveId);
+  createUserId(item.liveId);
 };
 
 function createUserId(liveId: number) {
-  let digit = Math.round(Math.random() * 10);
-  digit > 3 ? digit : (digit = 3);
-
-  let returnId = '',
-    userName = '';
-  const charStr =
-    '0123456789@#$%&~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  for (let i = 0; i < digit; i++) {
-    const index = Math.round(Math.random() * (charStr.length - 1));
-    returnId += charStr.substring(index, index + 1);
-  }
-  userName = returnId;
-  liveUrl.value = `https://vhall.huawei.com/v2/watch/${liveId}?lang=zh&thirdId=${userName}`;
+  liveUrl.value = `https://vhall.huawei.com/v2/watch/${liveId}?lang=zh`;
 }
-// const state = ref(-1);
 const height = ref(800);
 function setHeight(data: any) {
   if (data.height === 'auto') {
@@ -79,8 +65,7 @@ onMounted(async () => {
     duration: 800,
     delay: 100,
   });
-  isTest.value = window.location.host.includes('test.osinfra');
-  createUserId(isTest.value ? renderData[0].liveTestId : renderData[0].liveId);
+  createUserId(renderData[0].liveId);
   messageEvent();
 });
 
@@ -101,7 +86,7 @@ const changeLive = (val: number): void => {
           v-for="item in renderData"
           :key="item.id"
           :label="item.name"
-          :value="isTest ? item.liveTestId : item.liveId"
+          :value="item.liveId"
         />
       </OSelect>
     </div>
