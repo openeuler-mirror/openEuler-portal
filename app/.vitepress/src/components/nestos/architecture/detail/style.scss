@@ -1,0 +1,27 @@
+.detail {
+  font-size: 16px;
+  line-height: 1.8rem;
+  text-indent: 1rem;
+
+  img {
+    width: 100%;
+  }
+
+  &-para {
+    line-height: 2rem;
+    &-title {
+      font-weight: bold;
+    }
+    &-code {
+      background-color: #cacacb;
+      color: #252525;
+      padding: 1rem;
+    }
+    &-one {
+      text-indent: 2rem;
+      &_one {
+        text-indent: 3rem;
+      }
+    }
+  }
+}

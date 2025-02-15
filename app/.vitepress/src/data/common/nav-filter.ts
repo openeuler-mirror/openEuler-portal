@@ -253,4 +253,8 @@ export default [
     name: 'talent-assessment',
     lang: ['zh'],
   },
+  {
+    name: 'nestos',
+    lang: ['zh'],
+  },
 ];
