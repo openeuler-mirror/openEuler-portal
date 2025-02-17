@@ -4,7 +4,7 @@ date: '2024-11-25'
 category: blog
 tags:
   - 案例库
-  - 网络
+  - 安装
 author: '孙海'
 summary: '案例分析：系统文件恢复'
 ---

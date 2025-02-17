@@ -5,7 +5,7 @@ category: blog
 tags:
   - 案例库
   - efivars
-  - 网络
+  - 安装
 author: '孙海'
 summary: '案例分析：安装出现efivars报错'
 ---

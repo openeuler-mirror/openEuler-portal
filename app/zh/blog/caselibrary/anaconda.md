@@ -5,7 +5,7 @@ category: blog
 tags:
   - 案例库
   - anaconda
-  - 网络
+  - 安装
 author: '孙海'
 summary: '案例分析：anaconda安装常见磁盘问题'
 ---
