@@ -27,6 +27,7 @@ import university from './university';
 import cookie from './cookie';
 import migration from './migration';
 import faq from './faq';
+import nestos from './nestos';
 
 const i18n: { [key: string]: any } = {
   zh: {
@@ -56,6 +57,7 @@ const i18n: { [key: string]: any } = {
     cookie: cookie.zh,
     migration: migration.zh,
     faq: faq.zh,
+    nestos: nestos.zh,
   },
   en: {
     sig: sig.en,

@@ -19,7 +19,7 @@ summary: 开源社区帮助作者成长，作者成为了openEuler的一员后�
 # 进入开源：我的社区贡献
 ## 成为社区的一员
 
-我跟开源社区的渊源颇深。学生时期遇到开发任务时，常常泡在开源社区中寻找灵感和帮助。工作后，伴随麒麟软件与openEuler的密切合作，我成为了openEuler的一员，有了更多机会深入地参与到开源工作中，并积极参与并在社区中贡献力量。麒麟软件的伙伴们共同深度参与了包括[NestOS](https://nestos.openeuler.org/) 、[PilotGo](https://gitee.com/openeuler/PilotGo) 和[合规](https://www.openeuler.org/zh/sig/sig-detail/?name=sig-compliance) 在内的多个openEuler项目。对我来说，开源不再仅限于资源， 更是一个团队协作与创新的平台。
+我跟开源社区的渊源颇深。学生时期遇到开发任务时，常常泡在开源社区中寻找灵感和帮助。工作后，伴随麒麟软件与 openEuler 的密切合作，我成为了 openEuler 的一员，有了更多机会深入地参与到开源工作中，并积极参与并在社区中贡献力量。麒麟软件的伙伴们共同深度参与了包括[NestOS](https://www.openeuler.org/zh/nestos/) 、[PilotGo](https://gitee.com/openeuler/PilotGo) 和[合规](https://www.openeuler.org/zh/sig/sig-detail/?name=sig-compliance) 在内的多个 openEuler 项目。对我来说，开源不再仅限于资源， 更是一个团队协作与创新的平台。
 
 ## 我在社区中的角色
 
