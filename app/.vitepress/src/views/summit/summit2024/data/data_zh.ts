@@ -75,26 +75,6 @@ export default {
         name: 'openEuler Summit 2022',
         link: '/zh/interaction/summit-list/summit2022/',
       },
-      {
-        name: 'openEuler Developer Day 2022',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/devday2022/',
-      },
-      {
-        name: 'openEuler Summit 2021',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/summit2021/',
-      },
-      {
-        name: 'openEuler Developer Day 2021',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/devday2021/',
-      },
-      {
-        name: 'openEuler Summit 2020',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/',
-      },
-      {
-        name: 'openEuler Virtual Summit 2020',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/list/',
-      },
     ],
   },
 };

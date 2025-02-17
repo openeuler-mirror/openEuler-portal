@@ -2091,31 +2091,6 @@ const summitData: any = {
         link: '/zh/interaction/summit-list/summit2022-changsha/',
         target: '_blank',
       },
-      {
-        name: 'openEuler Developer Day 2022',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/devday2022/',
-        target: '_blank',
-      },
-      {
-        name: 'openEuler Summit 2021',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/summit2021/',
-        target: '_blank',
-      },
-      {
-        name: 'openEuler Developer Day 2021',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/devday2021/',
-        target: '_blank',
-      },
-      {
-        name: 'openEuler Summit 2020',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/',
-        target: '_blank',
-      },
-      {
-        name: 'openEuler Virtual Summit 2020',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/list/',
-        target: '_blank',
-      },
     ],
   },
 };

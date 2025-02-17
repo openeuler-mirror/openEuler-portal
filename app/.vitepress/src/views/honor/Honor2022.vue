@@ -5,6 +5,7 @@ import IconRight from '~icons/app/icon-arrow-right.svg';
 defineProps({
   honorData: {
     type: Object,
+    default: () => ({}),
   },
 });
 </script>

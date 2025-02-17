@@ -412,17 +412,6 @@ export default {
           ],
         },
         {
-          NAME: '测试',
-          CHILDREN: [
-            {
-              NAME: 'EulerTest',
-              DESCRIPTION: '基于openEuler环境开发的测试管理平台',
-              URL: 'https://radiatest.openeuler.org/home/version-management/product/',
-              ANALYTICSNAME: 'radiatest',
-            },
-          ],
-        },
-        {
           NAME: '发布',
           CHILDREN: [
             {

@@ -3,7 +3,6 @@ import { useData } from 'vitepress';
 
 import sig from './sig';
 import brand from './brand';
-import home from './home';
 import common from './common';
 import mooc from './learn';
 import atune from './minisite/atune';
@@ -17,12 +16,10 @@ import live from './interaction/live';
 import filter from './filter';
 import contribution from './contribution';
 import mailing from './mailing';
-import search from './search';
 import osv from './support/osv';
 import compatibility from './support/compatibility';
 import cve from './support/cve';
 import safetyBulletin from './support/safety-bulletin';
-import certification from './certification';
 import about from './about';
 import sky from './sky';
 import group from './group';
@@ -35,7 +32,6 @@ const i18n: { [key: string]: any } = {
   zh: {
     sig: sig.zh,
     brand: brand.zh,
-    home: home.zh,
     common: common.zh,
     mooc: mooc.zh,
     atune: atune.zh,
@@ -53,8 +49,6 @@ const i18n: { [key: string]: any } = {
     filter: filter.zh,
     contribution: contribution.zh,
     mailing: mailing.zh,
-    search: search.zh,
-    certification: certification.zh,
     about: about.zh,
     sky: sky.zh,
     group: group.zh,
@@ -66,7 +60,6 @@ const i18n: { [key: string]: any } = {
   en: {
     sig: sig.en,
     brand: brand.en,
-    home: home.en,
     common: common.en,
     atune: atune.en,
     bisheng: bisheng.en,
@@ -83,8 +76,6 @@ const i18n: { [key: string]: any } = {
     filter: filter.en,
     contribution: contribution.en,
     mailing: mailing.en,
-    search: search.en,
-    certification: certification.en,
     about: about.en,
     sky: sky.en,
     group: group.en,
