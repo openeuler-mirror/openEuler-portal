@@ -5,13 +5,6 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import Icons from 'unplugin-icons/vite';
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 
-// import ElementPlus from 'unplugin-element-plus/vite';
-
-// TODO:在vitepress使用该插件进行element-plus的按需导入会导致编译错误
-// import AutoImport from 'unplugin-auto-import/vite';
-// import Components from 'unplugin-vue-components/vite';
-// import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
-
 export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, '../dist'),
@@ -107,11 +100,6 @@ export default defineConfig({
         target: 'https://api.openeuler.org',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
-      },
-      '/api-euler': {
-        target: 'https://www.openeuler.org',
-        changeOrigin: true,
-        // rewrite: (path) => path.replace(/^\/api-euler/, ''),
       },
       '/api-cve/': {
         target: 'https://api-cve.openeuler.org/',

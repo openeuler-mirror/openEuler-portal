@@ -21,24 +21,4 @@ export default [
     name: 'openEuler Summit 2022',
     url: '/zh/interaction/summit-list/summit2022/',
   },
-  {
-    name: 'openEuler Developer Day 2022',
-    url: 'https://v1.openeuler.org/zh/interaction/summit-list/devday2022/',
-  },
-  {
-    name: 'openEuler Summit 2021',
-    url: 'https://v1.openeuler.org/zh/interaction/summit-list/summit2021/',
-  },
-  {
-    name: 'openEuler Developer Day 2021',
-    url: 'https://v1.openeuler.org/zh/interaction/summit-list/devday2021/',
-  },
-  {
-    name: 'openEuler Summit 2020',
-    url: 'https://v1.openeuler.org/zh/interaction/summit-list/',
-  },
-  {
-    name: 'openEuler Virtual Summit 2020',
-    url: 'https://v1.openeuler.org/zh/interaction/summit-list/list/',
-  },
 ];

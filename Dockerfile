@@ -9,7 +9,10 @@ RUN rm -rf ./app/ru
 RUN pnpm install
 RUN pnpm build
 
-FROM swr.cn-north-4.myhuaweicloud.com/opensourceway/openeuler/nginx:1.22.0-22.03-lts
+FROM swr.cn-north-4.myhuaweicloud.com/opensourceway/openeuler/nginx:latest
+
+RUN yum update -y \
+    && yum install -y pcre-devel
 
 COPY --from=Builder /home/openeuler/web/app/.vitepress/dist /usr/share/nginx/html/
 RUN chmod -R 755 /usr/share/nginx/html
