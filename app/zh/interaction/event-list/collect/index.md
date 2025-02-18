@@ -51,7 +51,7 @@ import IconDownload from '~icons/app/icon-download.svg';
 
 感谢 Meetup 主办方为 openEuler 社区举办精彩的开发者活动。可以更好地了解活动的情况和效果，从而不断提升 openEuler Meetup 活动的质量和影响力，在活动结束后 3 个工作日内主办方需向社区提供验收反馈资料。
 
-在此处填写[Meetup成果反馈表单](/zh/interaction/event-list/meetup-feedback/)
+活动成果反馈请联系[events@openeuler.sh](mailto:events@openeuler.sh)
 
 </div>
 

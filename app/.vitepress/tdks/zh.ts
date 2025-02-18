@@ -479,11 +479,6 @@ const tdks: {
     description: '提交您对openEuler社区活动的反馈，帮助我们改进。',
     keywords: 'openEuler, 活动反馈, 互动中心',
   },
-  'zh/interaction/event-list/meetup-feedback': {
-    title: 'Meetup反馈 | 社区活动',
-    description: '提交您在openEuler Meetup上的体验总结，分享反馈信息。',
-    keywords: 'openEuler, Meetup, 反馈, 总结',
-  },
   'zh/interaction/live-list': {
     title: '直播列表 | 社区活动',
     description: '浏览openEuler社区的直播活动列表，参与实时互动。',

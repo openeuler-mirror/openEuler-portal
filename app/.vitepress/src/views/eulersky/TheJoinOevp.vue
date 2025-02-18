@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed, onMounted } from 'vue';
-import { useRouter, useData } from 'vitepress';
+import {  useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 import AOS from 'aos';
 
@@ -29,11 +29,7 @@ const i18n = useI18n();
 const oevpI18n = computed(() => {
   return i18n.value.sky.JOIN_OEVP;
 });
-const router = useRouter();
 
-function goDetail(url: string) {
-  router.go(url);
-}
 onMounted(() => {
   AOS.init({
     offset: 200,
@@ -56,16 +52,12 @@ onMounted(() => {
           <h3>{{ oevpI18n.CARD_TITLE }}</h3>
           <p class="oevp-container-introduction">
             {{ oevpI18n.CARD_INTRODUCTION }}
+            <div v-if="lang === 'zh'">
+             申请加入请联系：
+            <a href="mailto:events@openeuler.sh">events@openeuler.sh</a>
+          </div>
           </p>
         </div>
-        <OButton
-          v-if="oevpI18n.JOIN_BTN"
-          animation
-          type="primary"
-          @click="goDetail(oevpI18n.JOIN_URL)"
-        >
-          {{ oevpI18n.JOIN_BTN }}
-        </OButton>
       </OContainer>
       <div class="oevp-list">
         <h2>{{ oevpI18n.OEVP_TITLE }}</h2>
