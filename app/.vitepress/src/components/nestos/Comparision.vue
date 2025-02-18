@@ -13,7 +13,6 @@
 <script setup>
 import { comparision_url } from './utils/resource';
 import { reactive, onMounted, nextTick } from 'vue';
-import * as echarts from 'echarts';
 import { useI18n } from '@/i18n';
 
 const i18n = useI18n();
@@ -66,17 +65,18 @@ const state = reactive({
   ],
 });
 onMounted(() => {
-  nextTick(() => {
+  import('echarts').then((echarts) => {
     brokenLine(
       state.xList,
       state.yList,
       'profitNum',
-      'NestOS For Container-容器性能测试'
+      'NestOS For Container-容器性能测试',
+      echarts
     );
   });
 });
 
-function brokenLine(xList, yList, id, title = '折线图') {
+function brokenLine(xList, yList, id, title = '折线图', echarts) {
   // 参数解释：
   // xList => X轴数据
   // yList => y轴数据

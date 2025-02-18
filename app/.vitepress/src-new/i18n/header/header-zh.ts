@@ -690,7 +690,6 @@ export default {
               NAME: 'NestOS',
               DESCRIPTION: '基于欧拉开源操作系统的云底座操作系统',
               URL: '/nestos',
-              ICON: OutLink,
             },
           ],
           SHORTCUT: [],
