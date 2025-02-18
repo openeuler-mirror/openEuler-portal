@@ -339,7 +339,7 @@ onMounted(() => {
               :placeholder="placeholderList[7]"
             />
           </el-form-item>
-          <el-form-item label="负责人联系方式" prop="principalPhone">
+          <el-form-item label="负责人手机号" prop="principalPhone">
             <OInput
               v-model="meetupData.principalPhone"
               :placeholder="placeholderList[8]"

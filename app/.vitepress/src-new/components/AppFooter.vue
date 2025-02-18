@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { ref, computed, watch, type PropType } from 'vue';
+import {  watch, type PropType } from 'vue';
 
 import { useLocale } from '~@/composables/useLocale';
 
 import {
-  linksData,
   linksData2,
   quickNav,
   friendshipLinks,
@@ -49,29 +48,6 @@ const footerCodeList = [
     label: t('footer.qrCode'),
   },
 ];
-
-//-------------底部媒体 hover 改变图片 src-----------------
-const currentHoverId = ref('');
-
-const currentMediaData = computed(() => {
-  return linksData[props.lang];
-});
-
-const handleMouseEnter = (id: string) => {
-  currentHoverId.value = id;
-};
-const handleMouseLeave = () => {
-  currentHoverId.value = '';
-};
-
-const getImgSrc = (id: string) => {
-  const logo = currentMediaData.value.find((item) => item.id === id);
-  if (logo && currentHoverId.value === id) {
-    return logo.logo.hover;
-  } else if (logo) {
-    return logo.logo.normal;
-  }
-};
 
 watch(
   () => props.lang,
@@ -187,23 +163,6 @@ watch(
                   <p class="txt">{{ item.label }}</p>
                 </div>
               </div>
-            </div>
-            <div class="footer-links" :class="{ iszh: lang === 'zh' }">
-              <a
-                v-for="item in currentMediaData"
-                :key="item.path"
-                :href="item.path"
-                @mouseenter="handleMouseEnter(item.id)"
-                @mouseleave="handleMouseLeave()"
-                class="links-logo"
-                target="_blank"
-              >
-                <img
-                  :style="{ height: `${item.height}px` }"
-                  :src="getImgSrc(item.id)"
-                  alt=""
-                />
-              </a>
             </div>
           </div>
         </div>
@@ -325,7 +284,7 @@ $color: #fff;
     }
     .inner {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
       padding: 8px 0 32px;
       position: relative;

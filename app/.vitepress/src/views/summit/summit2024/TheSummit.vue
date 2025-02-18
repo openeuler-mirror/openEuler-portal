@@ -4,7 +4,6 @@ import { useData } from 'vitepress';
 
 import { useCommon, useCookieStore } from '@/stores/common';
 
-import { getEasyeditorInfo } from '@/api/api-easyeditor';
 import { getUrlParam } from '@/shared/utils';
 import { oaReport } from '@/shared/analytics';
 
@@ -21,6 +20,9 @@ import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
 import data_zh from './data/data_zh';
 import data_en from './data/data_en';
 
+import agendaData_zh from './data/agenda-data_zh';
+import agendaData_en from './data/agenda-data_en';
+
 const { lang } = useData();
 
 const commonStore = useCommon();
@@ -30,29 +32,33 @@ const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );
 
-//------------------- 峰会日程 --------------------
-const summitData = computed(() => {
-  return lang.value === 'zh' ? data_zh : data_en;
+const localAgendaData = computed(() => {
+  return lang.value === 'zh' ? agendaData_zh : agendaData_en;
 });
 
-// 获取议程数据
-onMounted(() => {
-  const href = `https://www.openeuler.org/${lang.value}/interaction/summit-list/summit2024/`;
-  getEasyeditorInfo(href).then((res) => {
-    for (let i = 0; i < res.data?.length; i++) {
-      res.data[i].content = JSON.parse(res.data[i].content);
-    }
-    const summit2024 = res.data.find((item) => item.name === 'summit2024')
-      ?.content?.sections;
-    agendaData.value = summit2024.find((item) => item.type === 'AGENDA');
-    guestData.value = summit2024.find((item) => item.type === 'GUEST');
-  });
-});
+//------------------- 峰会日程 --------------------
 
 // ------------------ 日程数据 -----------
 const agendaData = ref();
 // ------------------ 嘉宾数据 -----------
 const guestData = ref();
+const summitData = computed(() => {
+  return lang.value === 'zh' ? data_zh : data_en;
+});
+
+for (let i = 0; i < localAgendaData.value.length; i++) {
+  localAgendaData.value[i].content = JSON.parse(
+    localAgendaData.value[i].content
+  );
+}
+const summit2024 = localAgendaData.value.find(
+  (item) => item.name === 'summit2024'
+)?.content?.sections;
+agendaData.value = summit2024.find((item) => item.type === 'AGENDA');
+guestData.value = summit2024.find((item) => item.type === 'GUEST');
+
+
+
 //-------- 直播 --------
 const isLiveShown = ref(0);
 

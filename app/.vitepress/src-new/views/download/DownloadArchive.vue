@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue';
 import { useData } from 'vitepress';
-import cloneTool from 'lodash-es';
 
 import {
   ORadioGroup,
@@ -76,7 +75,7 @@ const queryGetVersionInfo = () => {
         res.RepoVersion,
         localeCommunityVersionData.value
       );
-      allList.value = cloneTool.cloneDeep(versionList.value);
+      allList.value = JSON.parse(JSON.stringify(versionList.value));
       setTagArch();
     })
     .finally(() => {

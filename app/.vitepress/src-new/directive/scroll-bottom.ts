@@ -1,5 +1,5 @@
 import { DirectiveBinding } from 'vue';
-import { throttle } from 'lodash-es';
+import { useThrottleFn } from '@vueuse/core';
 
 // 扩展 HTMLElement 类型，支持自定义属性
 interface ExtendedHTMLElement extends HTMLElement {
@@ -32,7 +32,7 @@ const scrollBottomDirective = {
     };
 
     // 使用 lodash 的 throttle 限制滚动事件触发频率
-    const throttleEvent = throttle(handleScroll, 300);
+    const throttleEvent = useThrottleFn(handleScroll, 300);
 
     // 将清理逻辑绑定到元素上
     el.scrollToBottomCleanup = () => {

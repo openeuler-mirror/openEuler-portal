@@ -2,7 +2,6 @@
 import { ref, computed, onMounted, watch, reactive } from 'vue';
 import { useData } from 'vitepress';
 
-import { cloneDeep } from 'lodash-es';
 import { isNull, isUndefined } from '@opensig/opendesign';
 
 import { oaReport } from '@/shared/analytics';
@@ -171,7 +170,7 @@ const reportSelectSearchResult = (link: string, item: any, index: number) => {
 // 设置当前tag的所有案例
 function getCaseData() {
   loading.value = true;
-  getUserCaseData(filterEmptyParmes(cloneDeep(parmes)))
+  getUserCaseData(filterEmptyParmes(JSON.parse(JSON.stringify(parmes))))
     .then((res: any) => {
       if (res?.obj?.records) {
         caseData.value = res.obj.records;

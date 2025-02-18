@@ -3,7 +3,7 @@ import { onMounted, onUnmounted, ref, watch, nextTick } from 'vue';
 import { useRoute } from 'vitepress';
 import { useOeep } from '@/stores/oeep';
 
-import _ from 'lodash-es';
+import { useThrottleFn } from '@vueuse/core';
 
 const props = defineProps({
   className: {
@@ -17,9 +17,7 @@ const route = useRoute();
 const activeIndex = ref(0);
 const anchorList = ref<HTMLDivElement[]>();
 
-const debounceEvent = _.throttle(goAnchor, 300, {
-  trailing: true,
-});
+const throttleFnEvent = useThrottleFn(goAnchor, 300, true);
 
 function goAnchor() {
   const scrollTop =
@@ -44,10 +42,10 @@ function goAnchor() {
 
 onMounted(() => {
   goAnchor();
-  window.addEventListener('scroll', debounceEvent);
+  window.addEventListener('scroll', throttleFnEvent);
 });
 onUnmounted(() => {
-  window.removeEventListener('scroll', debounceEvent);
+  window.removeEventListener('scroll', throttleFnEvent);
 });
 watch(
   () => {

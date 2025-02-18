@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { useAttrs, nextTick, onUnmounted } from 'vue';
-import lodash from 'lodash-es';
-
-const { debounce } = lodash;
+import { useDebounceFn } from '@vueuse/core';
 
 const props = defineProps({
   listenerScorll: {
@@ -13,23 +11,17 @@ const props = defineProps({
 
 let optionDom: null | HTMLElement = null;
 
-const debounceEvent = debounce(
-  function () {
-    if (!optionDom) {
-      return false;
-    }
-    const isBottom =
-      optionDom.clientHeight / (optionDom.scrollHeight - optionDom.scrollTop) >=
-      0.6;
-    if (isBottom) {
-      emit('scorll-bottom');
-    }
-  },
-  500,
-  {
-    trailing: true,
+const debounceEvent = useDebounceFn(function () {
+  if (!optionDom) {
+    return false;
   }
-);
+  const isBottom =
+    optionDom.clientHeight / (optionDom.scrollHeight - optionDom.scrollTop) >=
+    0.6;
+  if (isBottom) {
+    emit('scorll-bottom');
+  }
+}, 500);
 function scrollEvent(val: boolean) {
   if (val && props.listenerScorll) {
     nextTick(() => {
