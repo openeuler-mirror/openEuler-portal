@@ -30,7 +30,7 @@ import ODropdown from 'opendesign/dropdown/ODropdown.vue';
 import OIcon from 'opendesign/icon/OIcon.vue';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
-import { debounce } from 'lodash-es';
+import { useDebounceFn } from '@vueuse/core';
 
 const screenWidth = useWindowResize();
 const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
@@ -211,24 +211,18 @@ const isSearchList = ref(false);
 const keyWords = ref('');
 const searchList = ref<string[]>([]);
 const searchTotalList = ref<string[]>([]);
-const searchInputComponent = debounce(
-  (val) => {
-    searchTotalList.value = searchComponent(val, componentTotalList.value);
+const searchInputComponent = useDebounceFn((val) => {
+  searchTotalList.value = searchComponent(val, componentTotalList.value);
 
-    if (keyWords.value) {
-      isSearchList.value = true;
-      searchList.value = searchTotalList.value.slice(0, 49);
-    } else {
-      isSearchList.value = false;
+  if (keyWords.value) {
+    isSearchList.value = true;
+    searchList.value = searchTotalList.value.slice(0, 49);
+  } else {
+    isSearchList.value = false;
 
-      affectedComponentList.value = componentTotalList.value.slice(0, 49);
-    }
-  },
-  500,
-  {
-    trailing: true,
+    affectedComponentList.value = componentTotalList.value.slice(0, 49);
   }
-);
+}, 500);
 
 function handleCommand(val: string) {
   queryData.affectedComponent = val;

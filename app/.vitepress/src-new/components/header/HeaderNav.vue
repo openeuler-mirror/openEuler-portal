@@ -3,7 +3,7 @@ import { ref, computed } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '~@/i18n';
 import { useCommon } from '@/stores/common';
-import { debounce } from 'lodash-es';
+import { useDebounceFn } from '@vueuse/core';
 
 import NavContent from './NavContent.vue';
 import HeaderTheme from './HeaderTheme.vue';
@@ -35,35 +35,23 @@ const navActive = ref();
 const subNavActive = ref();
 const subNavContent = ref({});
 const subNav = ref({});
-const toggleDebounced = debounce(
-  function (item: any | null) {
-    if (item === null) {
-      navActive.value = '';
-      isShow.value = false;
-    } else {
-      navActive.value = item.ID;
-      isShow.value = true;
-      subNavActive.value = item.CHILDREN[0]?.NAME;
-      subNav.value = item.CHILDREN;
-      subNavContent.value = item.CHILDREN[0];
-    }
-  },
-  100,
-  {
-    trailing: true,
+const toggleDebounced = useDebounceFn(function (item: any | null) {
+  if (item === null) {
+    navActive.value = '';
+    isShow.value = false;
+  } else {
+    navActive.value = item.ID;
+    isShow.value = true;
+    subNavActive.value = item.CHILDREN[0]?.NAME;
+    subNav.value = item.CHILDREN;
+    subNavContent.value = item.CHILDREN[0];
   }
-);
+}, 100);
 
-const changeSubnav = debounce(
-  function (item: any) {
-    subNavActive.value = item.NAME;
-    subNavContent.value = item;
-  },
-  150,
-  {
-    trailing: true,
-  }
-);
+const changeSubnav = useDebounceFn(function (item: any) {
+  subNavActive.value = item.NAME;
+  subNavContent.value = item;
+}, 150);
 
 const linkClick = () => {
   navActive.value = '';

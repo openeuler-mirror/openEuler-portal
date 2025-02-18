@@ -13,8 +13,8 @@ import SummitGuests from './components/SummitGuests.vue';
 import liveLightImg from './img/live.png';
 import liveDarkImg from './img/live-dark.png';
 
+import agendaData_zh from './data/agenda-data_zh';
 import summitData from './data';
-import { getEasyeditorInfo } from '@/api/api-easyeditor';
 
 const commonStore = useCommon();
 const liveImg = computed(() =>
@@ -22,6 +22,7 @@ const liveImg = computed(() =>
 );
 
 const getData: any = ref({});
+
 onMounted(() => {
   AOS.init({
     offset: 50,
@@ -29,21 +30,6 @@ onMounted(() => {
     delay: 100,
     once: true,
   });
-  const href =
-    'https://www.openeuler.org/zh/interaction/summit-list/devday2023/';
-  getEasyeditorInfo(href)
-    .then((res) => {
-      if (res.data && res.data[0]) {
-        for (let i = 0; i < res.data.length; i++) {
-          res.data[i].content = JSON.parse(res.data[i].content);
-          getData.value[res.data[i].name] = res.data[i];
-        }
-        agendaData2.value = getData.value.schedule.content.content.slice(0, 1);
-      }
-    })
-    .catch((e) => {
-      throw new Error(e);
-    });
 });
 const showIndex = ref(1);
 function setShowIndex(index: number) {
@@ -52,6 +38,12 @@ function setShowIndex(index: number) {
 // 控制上下午切换
 const tabType = ref(0);
 const agendaData2: any = ref([]);
+
+for (let i = 0; i < agendaData_zh.length; i++) {
+  agendaData_zh[i].content = JSON.parse(agendaData_zh[i].content);
+  getData.value[agendaData_zh[i].name] = agendaData_zh[i];
+}
+agendaData2.value = getData.value.schedule.content.content.slice(0, 1);
 watch(
   tabType,
   () => {

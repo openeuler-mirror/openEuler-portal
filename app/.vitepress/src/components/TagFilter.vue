@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { onMounted, ref, onUnmounted } from 'vue';
 import { useI18n } from '@/i18n';
-import { debounce } from 'lodash-es';
+import { useDebounceFn } from '@vueuse/core';
 
 import IconDown from '~icons/app/icon-chevron-down.svg';
 
@@ -35,7 +35,7 @@ const getFilterContentHeight = () => {
     refFilterContent.value?.children[0]?.offsetHeight + 'px';
 };
 
-const debounceCheckTagsVisibility = debounce(getFilterContentHeight, 500);
+const debounceCheckTagsVisibility = useDebounceFn(getFilterContentHeight, 500);
 
 onMounted(() => {
   if (props.show) {

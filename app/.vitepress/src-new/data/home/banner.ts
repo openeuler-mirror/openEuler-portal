@@ -1,7 +1,6 @@
 import newyear_pc from '~@/assets/category/home/banner/new-year/pc.jpg';
 import newyear_pad from '~@/assets/category/home/banner/new-year/pad.jpg';
-// import newyear_mb from '~@/assets/category/home/banner/new-year/mb.jpg';
-import newyear_mb from '~@/assets/category/home/banner/new-year/new-year_mb.jpg';
+import newyear_mb from '~@/assets/category/home/banner/new-year/mb.jpg';
 
 import innovation_pc from '~@/assets/category/home/banner/innovation/innovation_pc.jpg';
 import innovation_pad from '~@/assets/category/home/banner/innovation/innovation_pad.jpg';
