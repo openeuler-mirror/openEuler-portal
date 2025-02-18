@@ -21,7 +21,9 @@
           :inside-title="i18n.nestos.minititle.comIn"
           :outside-title="i18n.nestos.minititle.comOut"
         />
-        <v-comparision />
+        <ClientOnly>
+          <v-comparision />
+        </ClientOnly>
 
         <mini-title
           :inside-title="i18n.nestos.minititle.resourceIn"
@@ -85,8 +87,8 @@ const handleScroll = () => {
 
     .content {
       max-width: 1480px;
-      margin: 0 var(--o-gap-6);
-      padding: 3% 0;
+      margin: 0 auto;
+      padding: var(--o-gap-6);
       .roadmap {
         width: 100%;
       }
