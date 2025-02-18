@@ -719,6 +719,12 @@ const tdks: {
     description: '查阅openEuler镜像的安装方法，确保高效部署。',
     keywords: 'openEuler, 镜像, 安装, 指南, 部署',
   },
+  // TODO: update
+  'zh/nestos': {
+    title: 'openEuler 镜像安装指南 | Wiki',
+    description: '查阅openEuler镜像的安装方法，确保高效部署。',
+    keywords: 'openEuler, 镜像, 安装, 指南, 部署',
+  },
 };
 
 export default tdks;

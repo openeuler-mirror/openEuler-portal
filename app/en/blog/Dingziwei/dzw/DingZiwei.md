@@ -23,7 +23,7 @@ My open source journey began when I was a student. At that time, I often turned 
 # Diving into openEuler at KylinSoft
 ## Becoming Part of the Community
 
-At KylinSoft, our department collaborates closely with the openEuler community. This partnership allowed me to become a dedicated member of openEuler, actively contributing and building within the community. KylinSoft is deeply involved in various openEuler projects, including [NestOS](https://nestos.openeuler.org/) , PilotGo, and compliance initiatives. Our contributions help advance these projects and enhance our technical expertise and industry impact.
+At KylinSoft, our department collaborates closely with the openEuler community. This partnership allowed me to become a dedicated member of openEuler, actively contributing and building within the community. KylinSoft is deeply involved in various openEuler projects, including [NestOS](https://www.openeuler.org/zh/nestos/) , PilotGo, and compliance initiatives. Our contributions help advance these projects and enhance our technical expertise and industry impact.
 
 ## My Role in the Compliance SIG
 

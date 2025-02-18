@@ -45,5 +45,4 @@ https://gitee.com/openeuler/NestOS/blob/master/docs/devel_manual/nestos-assemble
 https://gitee.com/openeuler/NestOS/tree/master/docs/use_sample
 
 [3]NestOS 容器化部署 OpenStack:
-https://nestos.openeuler.org/
-
+https://www.openeuler.org/zh/nestos/
