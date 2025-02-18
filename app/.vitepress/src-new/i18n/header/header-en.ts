@@ -510,7 +510,7 @@ export default {
             },
             {
               NAME: 'BiSheng JDK',
-              DESCRIPTION: 'A high-performance JDK for Arm.',
+              DESCRIPTION: 'A high-performance, open source Java Virtual Machine.',
               URL: '/other/projects/bishengjdk/',
             },
             {

@@ -678,7 +678,7 @@ export default {
             },
             {
               NAME: 'BiSheng JDK',
-              DESCRIPTION: 'ARM上最好用的JDK',
+              DESCRIPTION: '一款开源的高性能Java虚拟机',
               URL: '/other/projects/bishengjdk/',
             },
             {
