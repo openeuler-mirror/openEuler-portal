@@ -1,6 +1,7 @@
 import { OpenAnalytics, OpenEventKeys } from '@opensig/open-analytics';
 import { reporAnalytics } from '@/api/api-analytics';
 import { Awaitable } from 'vitepress';
+import { COOKIE_AGREED_STATUS, useCookieStore } from '~@/stores/common';
 
 const DEFAULT_SERVICE = 'portal';
 
@@ -15,6 +16,12 @@ const pathServiceMap = {
 export const oa = new OpenAnalytics({
   appKey: 'openEuler',
   request: (data) => {
+    if (
+      useCookieStore().getUserCookieStatus() !== COOKIE_AGREED_STATUS.ALL_AGREED
+    ) {
+      disableOA();
+      return;
+    }
     reporAnalytics(data);
   },
 });
@@ -25,6 +32,13 @@ export const enableOA = () => {
 
 export const disableOA = () => {
   oa.enableReporting(false);
+  [
+    'oa-openEuler-client',
+    'oa-openEuler-events',
+    'oa-openEuler-session',
+  ].forEach((key) => {
+    localStorage.removeItem(key);
+  });
 };
 
 export const reportPV = () => {
@@ -54,6 +68,9 @@ export function oaReport<T extends Record<string, any>>(
     eventOptions?: any;
   }
 ) {
+  if (!oa.enabled) {
+    return;
+  }
   return oa.report(
     event,
     async (...opt) => ({
