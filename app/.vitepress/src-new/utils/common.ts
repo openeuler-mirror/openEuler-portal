@@ -52,3 +52,13 @@ export function setCookie(
 export function removeCookie(key: string) {
   Cookies.remove(key);
 }
+
+/**
+ * 检查是否是同域名
+ * @param {string} path 跳转路径
+ */
+export const checkOriginLink = (path: string) => {
+  return (
+    path.includes('openeuler.org') || path.includes('openeuler.openatom.cn')
+  );
+};
