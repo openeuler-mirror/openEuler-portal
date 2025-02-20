@@ -9,7 +9,7 @@ import type { SearchCountResItemT, AppItemT } from '~@/@types/type-search';
 import { getSoftwareDocs } from '~@/api/api-search';
 
 import { useSearchValue } from '~@/stores/search';
-import { useCookieStore } from '@/stores/common';
+import { useCookieStore } from '~@/stores/common';
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 
