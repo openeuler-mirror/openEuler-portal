@@ -323,23 +323,6 @@ const tdks: {
       '本页面提供openEuler的OSV技术测评报告，包括适用范围、申请流程等详细内容。',
     keywords: 'openEuler, OSV技术测评',
   },
-  'zh/celebrating': {
-    title: 'openEuler 三周年活动 | 社区活动',
-    description:
-      '了解openEuler 3周年的庆祝活动和社区庆典信息，加入我们一起庆祝。',
-    keywords: 'openEuler, 庆祝活动, 社区活动',
-  },
-  'zh/community/certification-services/down.html': {
-    title: '认证服务下载 | 社区服务',
-    description:
-      '提供openEuler认证服务相关的下载链接和资源，方便社区成员使用。',
-    keywords: 'openEuler, 认证服务, 下载',
-  },
-  'zh/community/certification-services/search.html': {
-    title: '认证服务查询 | 社区服务',
-    description: '通过本页面查询openEuler认证服务信息，获取所需的认证支持。',
-    keywords: 'openEuler, 认证服务, 查询',
-  },
   'zh/community/charter/v1.0': {
     title: '社区章程 | 社区规范',
     description: '查看openEuler社区的章程版本，了解社区成员的权利和义务。',
