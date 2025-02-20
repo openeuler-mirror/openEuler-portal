@@ -28,4 +28,8 @@ export default {
   latest: '最新版本',
   sortCorrelation: '最相关降序排列',
   sortTime: '发布时间降序排序',
+  externalTipTitle: '即将跳转到外部网站',
+  externalTipText: '您将要访问的链接不属于软件中心 ，请关注您的账号安全。',
+  externalBtn1: '继续前往',
+  externalBtn2: '取消',
 };
