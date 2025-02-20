@@ -387,12 +387,6 @@ export default {
               ANALYTICSNAME: 'eulermaker',
             },
             {
-              NAME: 'Compass-CI',
-              DESCRIPTION: '开放式测试服务平台',
-              URL: 'https://compass-ci.openeuler.org/',
-              ANALYTICSNAME: 'compassci',
-            },
-            {
               NAME: '用户软件仓(EUR)',
               DESCRIPTION: '开发者易用的软件包托管分发平台',
               URL: 'https://eur.openeuler.openatom.cn/coprs/',
@@ -678,7 +672,7 @@ export default {
             },
             {
               NAME: 'BiSheng JDK',
-              DESCRIPTION: '一款开源的高性能Java虚拟机',
+              DESCRIPTION: '一款高性能Java虚拟机',
               URL: '/other/projects/bishengjdk/',
             },
             {

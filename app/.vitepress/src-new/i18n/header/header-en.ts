@@ -314,13 +314,6 @@ export default {
               ANALYTICSNAME: 'eulermaker',
             },
             {
-              NAME: 'Compass-CI',
-              DESCRIPTION:
-                'An open platform for reliable, comprehensive testing.',
-              URL: 'https://compass-ci.openeuler.org/',
-              ANALYTICSNAME: 'compassci',
-            },
-            {
               NAME: 'openEuler User Repo',
               DESCRIPTION:
                 'An easy-to-use package hosting and distribution platform.',
@@ -510,7 +503,7 @@ export default {
             },
             {
               NAME: 'BiSheng JDK',
-              DESCRIPTION: 'A high-performance, open source Java Virtual Machine.',
+              DESCRIPTION: 'A high-performance Java Virtual Machine.',
               URL: '/other/projects/bishengjdk/',
             },
             {

@@ -2097,10 +2097,7 @@ const summitData: any = {
 const tabType = ref(['main', 'main']);
 const isLiverShown = ref(0);
 const otherTabType = ref([0, 0]);
-// 点击周年浮窗
-function onEntryClick() {
-  router.go('/zh/celebrating/');
-}
+
 // 展厅的video 事件
 const videoDialog = ref(false);
 const videoLink = ref('');
@@ -2312,13 +2309,6 @@ onMounted(() => {
           >{{ item.name }}</a
         >
       </div>
-    </div>
-    <div class="celebrating-img" @click="onEntryClick">
-      <img
-        :src="celebratingEntryImg"
-        alt=""
-        title="下载体验openEuler&#10;赢开源三周年纪念礼包！"
-      />
     </div>
   </AppContext>
 </template>
