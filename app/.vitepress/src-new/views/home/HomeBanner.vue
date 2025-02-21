@@ -116,7 +116,11 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
               </div>
               <!-- 操作按钮 -->
               <div v-if="info.btn" class="banner-opts">
-                <OButton :href="info.href" target="_blank" size="large">
+                <OButton v-if="info.bg_theme === 'dark'"  :href="info.href" target="_blank"   size="large">
+                  {{ info.btn }}
+                </OButton>
+                <!-- TODO:遗留banner 待删除 -->
+                <OButton v-else  :href="info.href" target="_blank" variant="solid" color="primary"  size="large">
                   {{ info.btn }}
                 </OButton>
               </div>
