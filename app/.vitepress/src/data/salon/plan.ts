@@ -18,6 +18,16 @@ export const yearPlanData = {
       id: 'opensource',
       events: [
         {
+          month: '2',
+          actives: [
+            {
+              location: '比利时 布鲁塞尔',
+              activeName: 'FOSDEM 2025',
+              href: 'https://fosdem.org/2025/',
+            },
+          ],
+        },
+        {
           month: '5',
           actives: [
             {
@@ -63,6 +73,11 @@ export const yearPlanData = {
             {
               location: '中国 TBD',
               activeName: '开放原子开源生态大会2025',
+            },
+            {
+              location: '意大利 米兰',
+              activeName: 'KVM Forum 2025',
+              href: 'https://kvm-forum.qemu.org/2025/',
             },
           ],
         },
@@ -119,10 +134,6 @@ export const yearPlanData = {
               location: '中国 TBD',
               activeName: 'CID 2025',
             },
-            {
-              location: '中国 上海',
-              activeName: 'HUAWEI Connect 2025',
-            },
           ],
         },
         {
@@ -158,6 +169,12 @@ export const yearPlanData = {
           startTime: 1,
           endTime: 12,
           activelink: '/zh/internship/',
+        },
+        {
+          activeName: '全年 开放原子校源行',
+          startTime: 1,
+          endTime: 12,
+          activelink: 'https://xiaoyuanxing.openatom.cn/#/dashboard',
         },
         {
           activeName: '1月 - 2月 第二届开放原子大赛',
@@ -202,6 +219,16 @@ export const yearPlanData = {
       titleBg: opensoucrceTitle,
       id: 'opensource',
       events: [
+        {
+          month: '2',
+          actives: [
+            {
+              location: 'Brussels,Belgium',
+              activeName: 'FOSDEM',
+              href: 'https://fosdem.org/2025/',
+            },
+          ],
+        },
         {
           month: '5',
           actives: [
@@ -248,6 +275,11 @@ export const yearPlanData = {
             {
               location: 'China',
               activeName: 'OpenAtom Open Source Eco-Conference 2025',
+            },
+            {
+              location: 'Milan,Italy',
+              activeName: 'KVM Forum',
+              href: 'https://kvm-forum.qemu.org/2025/',
             },
           ],
         },
@@ -303,10 +335,6 @@ export const yearPlanData = {
             {
               location: 'China',
               activeName: 'CID 2025',
-            },
-            {
-              location: 'Shanghai, China',
-              activeName: 'HUAWEI Connect 2025',
             },
           ],
         },
