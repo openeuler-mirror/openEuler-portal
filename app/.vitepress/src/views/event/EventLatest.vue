@@ -90,7 +90,11 @@ watch(
 </script>
 <template>
   <AppContent class="salon-content">
-    <div v-loading="loading" element-loading-background="transparent" class="event-body">
+    <div
+      v-loading="loading"
+      element-loading-background="transparent"
+      class="event-body"
+    >
       <template v-if="latestList?.length">
         <div class="salon-review">
           <OCard

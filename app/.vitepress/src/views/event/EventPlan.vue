@@ -78,10 +78,10 @@ const yearPlan = computed(() => {
               <!-- 社区峰会、成员单位会议、开源项目、开发者活动 -->
               <component
                 :is="it.href ? 'a' : 'div'"
-                :href="it.href"
-                :target="it.href ? '_blank' : null"
                 v-for="it in item.actives"
                 :key="it"
+                :href="it.href"
+                :target="it.href ? '_blank' : null"
                 class="event-box"
               >
                 <div class="event-item">

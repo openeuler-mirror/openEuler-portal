@@ -80,9 +80,9 @@ onMounted(() => {
       <div class="city-action">
         <OButton
           type="primary"
-          @click="jumpTo(groupI18n.LINK)"
           class="button-size-large"
           size="large"
+          @click="jumpTo(groupI18n.LINK)"
           >申请加入</OButton
         >
       </div>
@@ -97,9 +97,9 @@ onMounted(() => {
         <div class="city-action">
           <OButton
             type="primary"
-            @click="jumpTo('/zh/interaction/event-list/collect/')"
             class="button-size-large"
             size="large"
+            @click="jumpTo('/zh/interaction/event-list/collect/')"
             >申请举报活动</OButton
           >
         </div>
@@ -124,13 +124,13 @@ onMounted(() => {
         <div class="city-action">
           <OButton
             type="primary"
+            class="button-size-large"
+            size="large"
             @click="
               jumpTo(
                 'https://gitee.com/openeuler/community/blob/master/zh/contributors/user-story-guideline.md'
               )
             "
-            class="button-size-large"
-            size="large"
             >投稿案例</OButton
           >
         </div>

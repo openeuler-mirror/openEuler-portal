@@ -154,9 +154,9 @@ const handleSearch = (searchValue: string) => {
       >
         <div
           v-for="item in recommendData"
+          :key="item.key"
           class="recommend-item"
           @click="onTopSearchItemClick(item.key)"
-          :key="item.key"
         >
           {{ item.key }}
         </div>
@@ -165,9 +165,9 @@ const handleSearch = (searchValue: string) => {
         <span class="history">{{ searchValue.BROWSEHISTORY }}</span>
         <div
           v-for="item in searchHistory"
+          :key="item"
           class="recommend-item"
           @click="onTopSearchItemClick(item)"
-          :key="item"
         >
           {{ item }}
         </div>
@@ -190,7 +190,7 @@ const handleSearch = (searchValue: string) => {
       </div>
     </div>
   </div>
-  <OIcon @click="showDrawer" class="icon search-icon"
+  <OIcon class="icon search-icon" @click="showDrawer"
     ><IconSearch></IconSearch
   ></OIcon>
 </template>

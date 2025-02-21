@@ -91,7 +91,11 @@ watch(
 
 <template>
   <AppContent class="salon-content">
-    <div v-loading="loading" element-loading-background="transparent" class="salon-review-mian">
+    <div
+      v-loading="loading"
+      element-loading-background="transparent"
+      class="salon-review-mian"
+    >
       <template v-if="allReviewList?.length">
         <div class="salon-review">
           <OCard

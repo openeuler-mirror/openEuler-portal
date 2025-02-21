@@ -52,8 +52,8 @@ onUnmounted(() => {
   <div class="tag-filter">
     <span class="label">{{ label }}</span>
     <div
-      class="tag-filter-box"
       ref="refFilterContent"
+      class="tag-filter-box"
       :class="{ max: isDown, 'tag-filter-extend': show }"
     >
       <slot />

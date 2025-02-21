@@ -60,7 +60,7 @@ function getRpmUrl(data: PackageInfoT[]) {
             path = `everything/${product.productName}/Packages/${rpm.packageName}`;
           }
         } else {
-          let router = rpm.isEpol ? 'EPOL/update/main' : 'update';
+          const router = rpm.isEpol ? 'EPOL/update/main' : 'update';
           if (product.productName === 'src') {
             path = `${router}/source/Packages/${rpm.packageName}`;
           } else if (product.productName === 'noarch') {
@@ -234,8 +234,8 @@ onMounted(() => {
                   </p>
                   <a
                     v-for="single in it.child"
-                    :href="single.url"
                     :key="single"
+                    :href="single.url"
                     class="packge-item-class-rpm"
                   >
                     {{ single.packageName }}
@@ -265,8 +265,8 @@ onMounted(() => {
                   </p>
                   <a
                     v-for="single in it.packageName"
-                    :href="it.url"
                     :key="single"
+                    :href="it.url"
                     class="packge-item-class-rpm"
                   >
                     {{ single }}

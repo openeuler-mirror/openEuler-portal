@@ -254,8 +254,8 @@ watch(
             v-if="
               big.smallClass?.length && big.smallClass[0].title !== 'default'
             "
-            v-model="big.activeBigSmallId"
             :key="`tabs-${big.id}`"
+            v-model="big.activeBigSmallId"
           >
             <el-tab-pane
               v-for="small of big.smallClass"
@@ -264,8 +264,8 @@ watch(
             >
               <template #label>
                 <div
-                  class="time-tabs"
                   v-if="small.title !== 'default'"
+                  class="time-tabs"
                   :class="{ activeSmall: small.isActive }"
                   @click="clickBigSmall(big, small)"
                 >
@@ -277,14 +277,14 @@ watch(
           <!--  小类别下面的数据1   -->
           <AgendaTable
             :id="big.activeBigSmallId"
-            :datas="props.data.datas"
             :key="big.activeBigSmallId"
+            :datas="props.data.datas"
           ></AgendaTable>
           <!--   大类别下面的数据   -->
           <AgendaTable
             :id="big.id"
-            :datas="props.data.datas"
             :key="big.id"
+            :datas="props.data.datas"
           ></AgendaTable>
         </div>
       </template>
@@ -297,9 +297,9 @@ watch(
         >
           <template #label>
             <div
-              class="time-tabs"
               v-if="small.title !== 'default'"
               :key="small.title"
+              class="time-tabs"
               :class="{ activeSmall: small.isActive }"
               @click="doActiveSmall(small)"
             >
@@ -315,8 +315,8 @@ watch(
       >
         <AgendaTable
           :id="activeSpan?.id"
-          :datas="props.data.datas"
           :key="activeSpan?.id"
+          :datas="props.data.datas"
         ></AgendaTable>
       </div>
     </div>

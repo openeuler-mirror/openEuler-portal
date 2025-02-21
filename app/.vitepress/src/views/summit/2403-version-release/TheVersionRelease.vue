@@ -98,12 +98,12 @@ const isDark = computed(() => {
 
           <div class="agenda-lists">
             <div
+              v-for="item in data_zh.agendaData"
+              :key="item.title"
               :class="[
                 'agenda-lists-card',
                 isDark ? 'card-bg-dark' : 'card-bg-light',
               ]"
-              v-for="item in data_zh.agendaData"
-              :key="item.title"
             >
               <div class="card-top">
                 <div class="title-before"></div>

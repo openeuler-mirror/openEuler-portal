@@ -99,7 +99,7 @@ const changeLive = (val: number): void => {
           v-for="item in renderData"
           :key="item.id"
           :label="lang === 'zh' ? item.name : item.nameEn"
-          :value=" item.liveId"
+          :value="item.liveId"
         />
       </OSelect>
     </div>

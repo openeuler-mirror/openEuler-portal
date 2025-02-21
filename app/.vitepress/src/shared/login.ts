@@ -57,9 +57,9 @@ export function getUserAuth() {
 
 // 退出登录
 export function logout() {
-  location.href = `${import.meta.env.VITE_LOGIN_ORIGIN}/logout?redirect_uri=${
-    encodeURIComponent(window?.location?.origin)
-  }`;
+  location.href = `${
+    import.meta.env.VITE_LOGIN_ORIGIN
+  }/logout?redirect_uri=${encodeURIComponent(window?.location?.origin)}`;
 }
 
 // 跳转首页
@@ -70,7 +70,9 @@ export function goToHome() {
 export function showGuard() {
   const origin = import.meta.env.VITE_LOGIN_ORIGIN;
   const { lang } = getLanguage();
-  location.href = `${origin}/login?redirect_uri=${encodeURIComponent(location.href)}&lang=${lang}`;
+  location.href = `${origin}/login?redirect_uri=${encodeURIComponent(
+    location.href
+  )}&lang=${lang}`;
 }
 
 // token失效跳转首页
@@ -130,20 +132,23 @@ const removeSessionInfo = () => {
 // 刷新后重新请求登录用户信息
 export function refreshInfo(community = 'openeuler') {
   const { token } = getUserAuth();
-  const { setGuardAuthClient, setLoginStatus, clearGuardAuthClient } = useLogin();
+  const { setGuardAuthClient, setLoginStatus, clearGuardAuthClient } =
+    useLogin();
   if (token) {
     setLoginStatus('LOGINiNG');
     setGuardAuthClient(getSessionInfo());
-    queryPermission({ community }).then((res) => {
-      const { data } = res;
-      if (Object.prototype.toString.call(data) === '[object Object]') {
-        setGuardAuthClient(data);
-        setSessionInfo(data);
-        setLoginStatus('LOGINED');
-      }
-    }).catch((err) => {
-      clearGuardAuthClient();
-    });
+    queryPermission({ community })
+      .then((res) => {
+        const { data } = res;
+        if (Object.prototype.toString.call(data) === '[object Object]') {
+          setGuardAuthClient(data);
+          setSessionInfo(data);
+          setLoginStatus('LOGINED');
+        }
+      })
+      .catch((err) => {
+        clearGuardAuthClient();
+      });
   } else {
     removeSessionInfo();
     clearGuardAuthClient();
@@ -154,7 +159,8 @@ export function refreshInfo(community = 'openeuler') {
 export function isLogined() {
   return new Promise((resolve, reject) => {
     const { token } = getUserAuth();
-    const { setGuardAuthClient, setLoginStatus, clearGuardAuthClient } = useLogin();
+    const { setGuardAuthClient, setLoginStatus, clearGuardAuthClient } =
+      useLogin();
     if (token) {
       queryPermission({ community: 'openeuler' })
         .then((res) => {
@@ -173,7 +179,7 @@ export function isLogined() {
         })
         .catch((err) => {
           clearGuardAuthClient();
-          reject(err); 
+          reject(err);
         });
     } else {
       clearGuardAuthClient();

@@ -244,8 +244,8 @@ onMounted(() => {
                   </p>
                   <a
                     v-for="single in it.child"
-                    :href="single.url"
                     :key="single"
+                    :href="single.url"
                     class="packge-item-class-rpm"
                   >
                     {{ single.packageName }}
@@ -275,8 +275,8 @@ onMounted(() => {
                   </p>
                   <a
                     v-for="single in it.packageName"
-                    :href="it.url"
                     :key="single"
+                    :href="it.url"
                     class="packge-item-class-rpm"
                   >
                     {{ single }}

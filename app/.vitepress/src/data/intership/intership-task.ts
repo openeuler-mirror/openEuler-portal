@@ -205,12 +205,10 @@ export default {
     },
     {
       NAME: 'sig-dev-utils',
-      NAME_LINK:
-        'https://www.openeuler.org/zh/sig/sig-detail/?name=dev-utils',
+      NAME_LINK: 'https://www.openeuler.org/zh/sig/sig-detail/?name=dev-utils',
       INTRODUCE: 'dev-utils SIG 专注于那些帮助开发人员的工具、SDK 和库',
       TASK: 'https://gitee.com/openeuler/qingzhou/issues?label_ids=125219718&label_text=intern',
-      GITEE:
-        'https://gitee.com/openeuler/community/tree/master/sig/dev-utils',
+      GITEE: 'https://gitee.com/openeuler/community/tree/master/sig/dev-utils',
     },
     {
       NAME_LINK: '',

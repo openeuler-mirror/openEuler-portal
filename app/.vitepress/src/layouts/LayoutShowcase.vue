@@ -41,7 +41,7 @@ const { frontmatter } = useData();
 .bread {
   padding-top: 40px;
   padding: 40px var(--layout-content-padding) 0;
-  max-width:  var(--layout-content-max-width);
+  max-width: var(--layout-content-max-width);
   margin: 0 auto;
   @media (max-width: 768px) {
     padding-top: 16px;

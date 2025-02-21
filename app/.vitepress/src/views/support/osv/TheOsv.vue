@@ -120,7 +120,6 @@ onMounted(() => {
 });
 
 watch(queryData, () => getOsTableList(queryData));
-
 </script>
 <template>
   <BannerLevel2
@@ -184,7 +183,11 @@ watch(queryData, () => getOsTableList(queryData));
     <OCard class="filter-card">
       <template #header>
         <div class="card-header">
-          <TagFilter v-if="osNames.length > 1" :label="i18n.approve.SELECT_COMPANY" :show="true">
+          <TagFilter
+            v-if="osNames.length > 1"
+            :label="i18n.approve.SELECT_COMPANY"
+            :show="true"
+          >
             <div class="filter-content">
               <OTag
                 v-for="(item, index) in osNames"

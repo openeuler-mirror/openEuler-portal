@@ -59,12 +59,12 @@ const navList = computed(() => {
   .active {
     color: var(--e-color-brand1);
     // border-left: 1px solid var(--e-color-brand1);
-    &::before{
+    &::before {
       position: absolute;
       left: -1px;
-      top:50%;
-      transform: translate(-50%,-50%);
-      content: "";
+      top: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
       display: inline-block;
       width: 6px;
       height: 6px;

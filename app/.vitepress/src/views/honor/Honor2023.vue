@@ -30,8 +30,8 @@ defineProps({
               </p>
             </div>
             <a
-              :href="award.link"
               v-if="award.link"
+              :href="award.link"
               target="_blank"
               rel="noopener noreferrer"
             >

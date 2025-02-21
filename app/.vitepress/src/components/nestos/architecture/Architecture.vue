@@ -2,9 +2,9 @@
   <div>
     <div class="character">
       <div
-        class="character-item"
         v-for="item in 6"
         :key="`${item}key`"
+        class="character-item"
         @click="viewDetail(item)"
       >
         <div class="character-item-img">
