@@ -256,10 +256,6 @@ export default {
               ICON: OutLink,
               URL: 'https://gitee.com/openeuler/docs/blob/master/contribute/写作规范.md',
             },
-            {
-              NAME: 'Man Pages',
-              URL: 'https://man.openeuler.org/',
-            },
           ],
         },
         {
