@@ -58,14 +58,14 @@ const yearPlan = computed(() => {
         >
           <!-- 社区峰会、成员单位会议、开源项目、开发者活动 -->
           <div
-            v-if="yearPlan[key].id !== 'college'"
+            v-if="yearPlan[key].id !== 'college' && yearPlan[key].events.length"
             :style="{ backgroundImage: `url(${yearPlan[key].titleBg})` }"
             class="title-box"
           >
             <p>{{ yearPlan[key].title }}</p>
           </div>
           <div
-            v-if="yearPlan[key].id !== 'college'"
+            v-if="yearPlan[key].id !== 'college' && yearPlan[key].events.length"
             :style="{ backgroundImage: `url(${yearPlan[key].contentBg})` }"
             class="content-box"
           >
@@ -76,17 +76,24 @@ const yearPlan = computed(() => {
               class="layout"
             >
               <!-- 社区峰会、成员单位会议、开源项目、开发者活动 -->
-                <component  :is="it.href ? 'a':'div'" :href="it.href" :target="it.href ? '_blank':null" v-for="it in item.actives" :key="it" class="event-box">
-                  <div class="event-item">
-                    <li></li>
-                    <p class="location">
-                      {{ it.location }}
-                    </p>
-                    <p >
-                      {{ it.activeName }}
-                    </p>
-                  </div>
-                </component>
+              <component
+                :is="it.href ? 'a' : 'div'"
+                :href="it.href"
+                :target="it.href ? '_blank' : null"
+                v-for="it in item.actives"
+                :key="it"
+                class="event-box"
+              >
+                <div class="event-item">
+                  <li></li>
+                  <p class="location">
+                    {{ it.location }}
+                  </p>
+                  <p>
+                    {{ it.activeName }}
+                  </p>
+                </div>
+              </component>
             </div>
           </div>
           <div v-if="yearPlan[key].id === 'opensource'" class="otherlink">
@@ -158,7 +165,12 @@ const yearPlan = computed(() => {
               :class="['edit-' + edit.month]"
               class="layout-edition"
             >
-              <component :is="edit.href ? 'a':'div'" :href="edit.href ? `/${lang}${edit.href}`:null" :target="edit.href ? '_blank':null"  class="edition-item">
+              <component
+                :is="edit.href ? 'a' : 'div'"
+                :href="edit.href ? `/${lang}${edit.href}` : null"
+                :target="edit.href ? '_blank' : null"
+                class="edition-item"
+              >
                 <p class="edition-time">{{ edit.time }}</p>
                 <p class="edition-content">{{ edit.content }}</p>
               </component>
@@ -336,7 +348,7 @@ $lineLeft: calc($titleboxWidth);
         cursor: pointer;
         &:hover {
           p:not(.location) {
-            color:var(--e-color-brand1)
+            color: var(--e-color-brand1);
           }
         }
       }
@@ -588,7 +600,7 @@ $lineLeft: calc($titleboxWidth);
         a {
           &:hover {
             .edition-content {
-              color: var(--e-color-brand1)
+              color: var(--e-color-brand1);
             }
           }
         }
