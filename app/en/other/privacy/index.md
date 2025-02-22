@@ -186,7 +186,7 @@ If you want to contact us or exercise your rights, please contact us at:
 
 Email: **<contact@openeuler.io>**
 
-Hotline: **+86 14775151246**
+Hotline: **+86 15311871505**
 
 Last updated: **August 30, 2024**
 
