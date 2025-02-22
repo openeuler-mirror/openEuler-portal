@@ -31,8 +31,7 @@ import {
 export function getSecurityList(
   params: SafetyBulletinQueryT
 ): Promise<TotalDataT> {
-  const url =
-    '/api-cve/cve-security-notice-server/securitynotice/findAll';
+  const url = '/api-cve/cve-security-notice-server/securitynotice/findAll';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 
@@ -54,8 +53,7 @@ export function getSecurityDetail(
  * @return {Promise<TotalDataT>} CVE列表
  */
 export function getCveList(params: CveQueryT): Promise<TotalDataT> {
-  const url =
-    '/api-cve/cve-security-notice-server/cvedatabase/findAll';
+  const url = '/api-cve/cve-security-notice-server/cvedatabase/findAll';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 
@@ -99,8 +97,7 @@ export function getDriverArchitecture(): Promise<string[]> {
  * @return {Promise<string[]>} 操作系统分类数据
  */
 export function getHardwareOSOptions(): Promise<string[]> {
-  const url =
-    '/api-cve/cve-security-notice-server/hardwarecomp/getOS';
+  const url = '/api-cve/cve-security-notice-server/hardwarecomp/getOS';
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
@@ -121,8 +118,7 @@ export function getDriverOSOptions(): Promise<string[]> {
 export function getCompatibilityList(
   params: CompatibilityQueryT
 ): Promise<CompatibilityListT[]> {
-  const url =
-    '/api-cve/cve-security-notice-server/hardwarecomp/findAll';
+  const url = '/api-cve/cve-security-notice-server/hardwarecomp/findAll';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 
@@ -154,11 +150,9 @@ export function getdetailAapterList(id: string): Promise<AdapterListT[]> {
 export function getDriverList(
   params: CompatibilityQueryT
 ): Promise<DriverListT[]> {
-  const url =
-    '/api-cve/cve-security-notice-server/drivercomp/findAll';
+  const url = '/api-cve/cve-security-notice-server/drivercomp/findAll';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
-
 
 /**
  * 获取商业软件列表
@@ -291,8 +285,7 @@ export function getSolutionList(params: CompatibilityQueryT): Promise<{
   result: TotalDataT;
   success: boolean;
 }> {
-  const url =
-    '/api-cve/cve-security-notice-server/solutioncomp/findAll';
+  const url = '/api-cve/cve-security-notice-server/solutioncomp/findAll';
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
 
@@ -306,8 +299,7 @@ export function getSolution(params: { lang: string }): Promise<{
   result: string[];
   success: boolean;
 }> {
-  const url =
-    '/api-cve/cve-security-notice-server/solutioncomp/getSolution';
+  const url = '/api-cve/cve-security-notice-server/solutioncomp/getSolution';
   return request
     .get(url, {
       params,

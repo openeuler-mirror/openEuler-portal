@@ -1,7 +1,12 @@
 import type { ExtractPropTypes, PropType } from 'vue';
 
-export const BadgeColorTypes = ['primary', 'success', 'warning', 'danger'] as const;
-export type BadgeColorT = (typeof BadgeColorTypes)[number];
+export const BadgeColorTypes = [
+  'primary',
+  'success',
+  'warning',
+  'danger',
+] as const;
+export type BadgeColorT = typeof BadgeColorTypes[number];
 
 export const badgeProps = {
   /**

@@ -42,7 +42,6 @@ import chenmaodong from '@/assets/category/organization/technical/chenmaodong.pn
 import maquanyi from '@/assets/category/organization/technical/maquanyi.png';
 import gaoguijin from '@/assets/category/organization/technical/gaoguijin.png';
 
-
 // 专家委员会
 import huotaiwen from '@/assets/category/organization/expert/huotaiwen.png';
 import liaoxiangke from '@/assets/category/organization/expert/liaoxiangke.png';

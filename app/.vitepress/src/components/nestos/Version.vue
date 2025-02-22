@@ -18,7 +18,7 @@
         </p>
       </div>
       <!-- virt 暂时没有图片， 不展示 -->
-      <div class="version-content-img" v-if="verLink[version].BTN !== 'virt'">
+      <div v-if="verLink[version].BTN !== 'virt'" class="version-content-img">
         <img class="archImg" :src="verLink[version].IMG" alt="" />
       </div>
     </div>

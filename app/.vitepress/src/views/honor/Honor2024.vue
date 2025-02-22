@@ -6,7 +6,6 @@ defineProps({
   honorData: {
     type: Object,
     default: () => ({}),
-
   },
 });
 </script>
@@ -29,8 +28,8 @@ defineProps({
               </p>
             </div>
             <a
-              :href="award.link"
               v-if="award.link"
+              :href="award.link"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -51,8 +50,8 @@ defineProps({
     <h2 class="title-2023">2024年度贡献之星</h2>
     <div
       v-for="personal in honorData.award.personal"
-      class="award-personal"
       :key="personal.title"
+      class="award-personal"
     >
       <h5>{{ personal.title }}</h5>
       <div class="personal-box">

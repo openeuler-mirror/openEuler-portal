@@ -31,10 +31,10 @@ const jumpTo = (path: string) => {
     <template #default>
       <OButton
         class="post-btn"
-        @click="jumpTo(groupI18n.LINK)"
         type="outline"
         animation
         size="nomral"
+        @click="jumpTo(groupI18n.LINK)"
       >
         {{ groupI18n.LINK_TEXT }}
         <template #suffixIcon>

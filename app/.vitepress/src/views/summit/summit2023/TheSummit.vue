@@ -62,7 +62,9 @@ function setShowIndex(index: number) {
 const agendaData = ref([]);
 
 for (let i = 0; i < localAgendaData.value.length; i++) {
-  localAgendaData.value[i].content = JSON.parse(localAgendaData.value[i].content);
+  localAgendaData.value[i].content = JSON.parse(
+    localAgendaData.value[i].content
+  );
   agendaData.value = localAgendaData.value;
 }
 
@@ -129,10 +131,10 @@ onMounted(() => {
     <div class="visa-btn-box">
       <OButton
         v-if="lang === 'en'"
-        @click="dialogVisible = true"
         class="visa-btn"
         size="mini"
         type="primary"
+        @click="dialogVisible = true"
         >Visa Letter Request</OButton
       >
     </div>
@@ -406,7 +408,7 @@ onMounted(() => {
         <a
           href="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/excel/Visa.xlsx"
         >
-          <OButton @click="dialogVisible = true" size="mini" type="primary"
+          <OButton size="mini" type="primary" @click="dialogVisible = true"
             >Download the Application Form
           </OButton>
         </a>

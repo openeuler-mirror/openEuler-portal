@@ -36,7 +36,7 @@ const isDark = computed(() => {
         :key="i"
         :style="{ backgroundImage: `url(${isDark ? item.bgDark : item.bg})` }"
         class="item-topic"
-        :class="{'dark': isDark}"
+        :class="{ dark: isDark }"
       >
         <p class="title">{{ item.title }}</p>
         <p v-for="(desc, j) in item.desc" :key="j" class="desc">{{ desc }}</p>

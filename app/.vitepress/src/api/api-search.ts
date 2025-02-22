@@ -113,8 +113,6 @@ export function getPop(params: string): Promise<{
     .then((res: AxiosResponse) => res.data);
 }
 
-
-
 /**
  * 首页数据卡片筛选
  * @return  {Object}

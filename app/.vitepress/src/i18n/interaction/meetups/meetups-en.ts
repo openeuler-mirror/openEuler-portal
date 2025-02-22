@@ -15,6 +15,7 @@ export default {
     LEARN_MORE: '了解更多',
     DEFAULT_IMG: '/img/meetups/default-address.png',
     RELEASE_PLAN: 'Release Plan',
-    MARKING_EMAIL: 'If you have any questions or suggestions about the conferences, please contact ',
+    MARKING_EMAIL:
+      'If you have any questions or suggestions about the conferences, please contact ',
   },
 };

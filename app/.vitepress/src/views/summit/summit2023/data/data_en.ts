@@ -44,6 +44,6 @@ export default {
     title: 'Agenda',
     tabType: ['Morning: Keynote', 'Afternoon: Subforums'],
     tabType2: ['Morning: Keynote', 'Afternoon: Sessions'],
-    changeTip:'*The agenda is subject to change.'
+    changeTip: '*The agenda is subject to change.',
   },
 };

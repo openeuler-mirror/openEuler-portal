@@ -2,7 +2,7 @@
   <div class="mirror">
     <img class="bgImg" src="@/assets/nestos/resource/group.png" alt="bgImg" />
     <el-collapse accordion class="collapse">
-      <el-collapse-item :name="item.$index" v-for="item in docList" :key="item">
+      <el-collapse-item v-for="item in docList" :key="item" :name="item.$index">
         <template #title>
           <!-- <el-icon class="header-icon"> <Folder /> </el-icon> -->
           &nbsp;{{ item.dateTitle }}
@@ -14,19 +14,19 @@
           </el-radio-group>
           <div v-if="mirrorArch === 'x86_64'" class="linkDiv">
             <span
-              class="linkSpan"
               v-for="link in item.x86List"
-              @click="goLink(link)"
               :key="link"
+              class="linkSpan"
+              @click="goLink(link)"
               >{{ link.name }}</span
             >
           </div>
           <div v-else class="linkDiv">
             <span
-              class="linkSpan"
               v-for="link in item.armList"
-              @click="goLink(link)"
               :key="link"
+              class="linkSpan"
+              @click="goLink(link)"
               >{{ link.name }}</span
             >
           </div>

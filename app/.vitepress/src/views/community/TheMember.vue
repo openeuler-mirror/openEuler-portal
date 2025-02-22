@@ -9,11 +9,9 @@ import { useCommon } from '@/stores/common';
 
 const { lang } = useData();
 
-
 const i18n = useI18n();
 
 const commonStore = useCommon();
-
 </script>
 <template>
   <div class="member">

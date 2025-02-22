@@ -4,7 +4,7 @@ interface GetRankResT {
   giteeRoom: string;
   integralValue: number;
   rank: string;
-  userId: number
+  userId: number;
 }
 /**
  * 获取开源实习页面积分排名
@@ -15,11 +15,10 @@ interface GetRankResT {
  */
 const url = '/api/osi-task-manager/intern/points/lists';
 export function getRank(params: object): Promise<{
-  UserPoints: GetRankResT[],
-  code: number,
-  message: string,
-  totalCount: number
+  UserPoints: GetRankResT[];
+  code: number;
+  message: string;
+  totalCount: number;
 }> {
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
-

@@ -57,8 +57,6 @@ const summit2024 = localAgendaData.value.find(
 agendaData.value = summit2024.find((item) => item.type === 'AGENDA');
 guestData.value = summit2024.find((item) => item.type === 'GUEST');
 
-
-
 //-------- 直播 --------
 const isLiveShown = ref(0);
 

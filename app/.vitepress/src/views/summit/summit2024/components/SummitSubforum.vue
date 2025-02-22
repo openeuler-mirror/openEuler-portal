@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 defineProps({
   agendaData: {
     type: Object,
@@ -18,7 +17,7 @@ defineProps({
   <div class="summit-subforum">
     <div v-for="cardInfo in agendaData.content" class="subforum-card">
       <p class="subforum-name">{{ cardInfo.name }}</p>
-      <p class="subforum-topic" v-for="title in cardInfo.content">
+      <p v-for="title in cardInfo.content" class="subforum-topic">
         {{ title.desc }}
       </p>
     </div>

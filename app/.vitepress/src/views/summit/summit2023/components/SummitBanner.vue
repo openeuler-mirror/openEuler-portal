@@ -22,7 +22,6 @@ onMounted(() => {
 
 const { lang } = useData();
 const windowWidth = ref(useWindowResize());
-
 </script>
 
 <template>

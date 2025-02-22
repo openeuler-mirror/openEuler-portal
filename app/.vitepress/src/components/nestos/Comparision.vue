@@ -87,7 +87,7 @@ function brokenLine(xList, yList, id, title = '折线图', echarts) {
   echarts.init(document.getElementById(id)).dispose();
 
   //初始化画布
-  let chartEle = echarts.init(document.getElementById(id));
+  const chartEle = echarts.init(document.getElementById(id));
 
   // 加载数据绘制图表
   chartEle.setOption({

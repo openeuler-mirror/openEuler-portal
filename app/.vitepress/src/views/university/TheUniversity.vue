@@ -62,7 +62,7 @@ onMounted(() => {
       :illustration="universityIllustration"
     ></BannerLevel2>
     <div v-if="isMobile" class="university-tab-mobile">
-      <el-tabs class="other-tabs" v-model.number="activeIndex">
+      <el-tabs v-model.number="activeIndex" class="other-tabs">
         <el-tab-pane
           v-for="(item, index) in navRef"
           :key="item.id"
@@ -202,9 +202,9 @@ onMounted(() => {
                 <span class="tag-title">{{ item.contributionName }}</span>
                 <p class="tag-box">
                   <span
-                    class="tag-name"
                     v-for="itemTag in item.contributionTagList"
                     :key="itemTag"
+                    class="tag-name"
                     >{{ itemTag }}</span
                   >
                 </p>

@@ -38,7 +38,7 @@ export default {
     'Black',
     'Black',
   ],
-  PPT_TEMPLATES: ['中文模板','英文模板'],
+  PPT_TEMPLATES: ['中文模板', '英文模板'],
   VERTICAL_LEFT_IMAGE: [
     {
       STYLE: 'JPG',

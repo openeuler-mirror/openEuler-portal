@@ -207,21 +207,18 @@ const isSearchList = ref(false);
 const keyWords = ref('');
 const searchList = ref<string[]>([]);
 const searchTotalList = ref<string[]>([]);
-const searchInputComponent = useDebounceFn(
-  (val) => {
-    searchTotalList.value = searchComponent(val, componentTotalList.value);
+const searchInputComponent = useDebounceFn((val) => {
+  searchTotalList.value = searchComponent(val, componentTotalList.value);
 
-    if (keyWords.value) {
-      isSearchList.value = true;
-      searchList.value = searchTotalList.value.slice(0, 49);
-    } else {
-      isSearchList.value = false;
+  if (keyWords.value) {
+    isSearchList.value = true;
+    searchList.value = searchTotalList.value.slice(0, 49);
+  } else {
+    isSearchList.value = false;
 
-      affectedComponentList.value = componentTotalList.value.slice(0, 49);
-    }
-  },
-  500
-);
+    affectedComponentList.value = componentTotalList.value.slice(0, 49);
+  }
+}, 500);
 
 function handleCommand(val: string) {
   queryData.affectedComponent = val;

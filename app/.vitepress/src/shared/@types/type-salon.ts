@@ -25,4 +25,3 @@ export interface DetailDateT {
   MEETINGS_INFO?: any;
   videoLink?: string;
 }
-

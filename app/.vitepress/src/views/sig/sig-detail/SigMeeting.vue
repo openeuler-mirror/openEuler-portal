@@ -165,7 +165,6 @@ const sigName = computed(() => {
   return params.value?.sig || '';
 });
 
-
 const meetingSummaryLink = computed(() => {
   return `https://etherpad.openeuler.org/p/${sigName.value}-meetings`;
 });

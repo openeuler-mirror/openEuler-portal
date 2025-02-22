@@ -35,9 +35,9 @@ export default {
     titleImDark: introduce_Dark,
     title: 'Introduction',
     list: [
-      'This year\'s gathering will bring together developers from all 108 SIGs in our community, with a focus on the future development of openEuler in the wake of the release of openEuler 24.03 LTS.',
-      'The event will consist of six intriguing tracks: diversified computing power, all-scenario applications, AI-native support, native development with openEuler, upstream-native support, and user experience advancement. Join us and pick the track that sparks your interest. You\'ll be free to share ideas, brainstorm, and collaborate within a nurturing and innovative community of like-minded developers.'
-    ]
+      "This year's gathering will bring together developers from all 108 SIGs in our community, with a focus on the future development of openEuler in the wake of the release of openEuler 24.03 LTS.",
+      "The event will consist of six intriguing tracks: diversified computing power, all-scenario applications, AI-native support, native development with openEuler, upstream-native support, and user experience advancement. Join us and pick the track that sparks your interest. You'll be free to share ideas, brainstorm, and collaborate within a nurturing and innovative community of like-minded developers.",
+    ],
   },
   topic: {
     titleImg: topic_light,
@@ -48,7 +48,7 @@ export default {
       {
         title: 'Diversified Computing',
         desc: [
-          'This topic explores heterogeneous computing architectures, multi-architecture support, and collaborative CPU/GPU/NPU/accelerator technologies, addressing openEuler\'s strategy for diversified computing power.',
+          "This topic explores heterogeneous computing architectures, multi-architecture support, and collaborative CPU/GPU/NPU/accelerator technologies, addressing openEuler's strategy for diversified computing power.",
         ],
         bg: topic1,
         bgDark: topic_dark1,
@@ -57,7 +57,7 @@ export default {
       {
         title: 'All-scenario Applications',
         desc: [
-          'This topic explores openEuler\'s capability to support the comprehensive applications across servers, cloud, edge computing, and embedded systems, with a focus on performance, reliability, security, and usability enhancements',
+          "This topic explores openEuler's capability to support the comprehensive applications across servers, cloud, edge computing, and embedded systems, with a focus on performance, reliability, security, and usability enhancements",
         ],
         bg: topic2,
         bgDark: topic_dark2,
@@ -66,7 +66,7 @@ export default {
       {
         title: 'AI-Native Support',
         desc: [
-          'This topic delves into openEuler\'s AI-driven innovations, covering AI-native support, intelligent interactive platforms, integrated CPU/GPU/NPU capabilities, and comprehensive AI software stacks.',
+          "This topic delves into openEuler's AI-driven innovations, covering AI-native support, intelligent interactive platforms, integrated CPU/GPU/NPU capabilities, and comprehensive AI software stacks.",
         ],
         href: 'https://etherpad.openeuler.org/p/AI%E5%8E%9F%E7%94%9F%E6%94%AF%E6%8C%81',
       },
@@ -95,11 +95,11 @@ export default {
           '(1) Enhancing knowledge sharing: delivering high-quality documentation in both Chinese and English to foster knowledge dissemination.',
           '(2) Promoting technology integration: supporting the healthy growth of the openEuler ecosystem through comprehensive software and hardware compatibility testing and certification.',
           '(3) Boosting service efficiency: improving problem-solving efficiency with multi-channel service support and a rich repository of common case studies.',
-          '(4) Strengthening system development: enhancing design systems and infrastructure to create a superior user experience.'
+          '(4) Strengthening system development: enhancing design systems and infrastructure to create a superior user experience.',
         ],
         href: 'https://etherpad.openeuler.org/p/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%A0%94%E7%A9%B6',
-      }
-    ]
+      },
+    ],
   },
   agenda: {
     titleImg: agenda_light,
@@ -127,8 +127,8 @@ export default {
                 time: '10:10-12:00',
                 bg: agenda2,
                 bgMo: agenda_mo2,
-              }
-            ]
+              },
+            ],
           },
           {
             type: 'Afternoon',
@@ -161,7 +161,7 @@ export default {
                 bg: agenda2,
                 bgMo: agenda_mo2,
               },
-            ]
+            ],
           },
           {
             type: 'Evening',
@@ -172,11 +172,11 @@ export default {
                 time: '18:30-20:30',
                 bg: agenda1,
                 bgMo: agenda_mo1,
-              }
-            ]
-          }
-        ]
-      }
-    ]
+              },
+            ],
+          },
+        ],
+      },
+    ],
   },
-}
+};
