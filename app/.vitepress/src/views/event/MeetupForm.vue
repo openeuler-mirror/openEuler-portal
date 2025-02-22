@@ -252,8 +252,7 @@ async function getPersonalInfo() {
   try {
     await queryPersonalInfo().then((res) => {
       userInfo.value = res.data;
-      const { username, email, phone } = res.data;
-      meetupData.value.principalUser = username;
+      const { email, phone } = res.data;
       meetupData.value.principalEmail = email;
       meetupData.value.principalPhone = phone;
     });

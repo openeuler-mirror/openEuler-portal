@@ -38,12 +38,6 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
         <p class="name">{{ item.name }}</p>
       </div>
     </div>
-    <div class="info">
-      <p>没有您所在城市的用户组？</p>
-      <a :href="groupData.CITY_LINK" target="_blank" rel="noopener noreferrer"
-        >点此申请成立</a
-      >
-    </div>
   </div>
 </template>
 

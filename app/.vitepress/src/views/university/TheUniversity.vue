@@ -91,12 +91,6 @@ onMounted(() => {
         </h2>
         <div class="university-technical-description">
           <span>{{ universityData.technicalGroup.description.text }}</span>
-          <a
-            :href="universityData.technicalGroup.description.linkHref"
-            target="_blank"
-            rel="noopener noreferrer"
-            >{{ universityData.technicalGroup.description.linkText }}</a
-          >
         </div>
         <div class="university-technical-group">
           <OCard

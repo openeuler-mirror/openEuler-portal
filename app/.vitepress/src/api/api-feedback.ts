@@ -4,7 +4,6 @@ interface FeedBackQueryT {
   feedbackPageUrl: string;
   feedbackText: string;
   feedbackValue: number;
-  userName: string;
 }
 /**
  * 满意度评分
