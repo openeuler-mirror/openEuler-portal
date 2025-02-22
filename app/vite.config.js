@@ -74,11 +74,6 @@ export default defineConfig({
   ],
   server: {
     proxy: {
-      '/api-easyeditor/': {
-        target: 'https://easyeditor.openeuler.org/',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-easyeditor/, ''),
-      },
       '/api-certification/': {
         target: 'https://certification.openeuler.org/',
         changeOrigin: true,

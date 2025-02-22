@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, onUpdated, computed, onUnmounted } from 'vue';
+import { onMounted, ref, onUpdated, computed } from 'vue';
 import { useData, useRouter } from 'vitepress';
 import { useI18n } from '@/i18n';
 import { useCommon } from '@/stores/common';
@@ -88,12 +88,6 @@ onMounted(() => {
       barWidth: 432,
     };
   }
-  try {
-    courseIndex.value =
-      JSON.parse(sessionStorage.getItem('courseIndex') || '0') * 1;
-  } catch (error: any) {
-    console.error(error);
-  }
   setCourseData(allNodeList.value[courseIndex.value]);
 });
 onUpdated(() => {
@@ -107,8 +101,6 @@ function setCheckedNode() {
   if (treeRef.value) {
     treeRef.value.tree.tree.setCurrentKey(currentNode.value.key);
   }
-
-  // refs.tree.tree.tree.setCurrentKey(currentNode.value.key);
 }
 // 读取要渲染的课程内容数据
 function getContent() {
@@ -208,17 +200,8 @@ function setCourseData(obj: any) {
   } else {
     return false;
   }
-  setCourseIndex();
 }
-// 保存当前所在页面防止刷新从第一页渲染
-function setCourseIndex() {
-  allNodeList.value.forEach((item: NodeItemT, index: number) => {
-    if (item.key === currentNode.value.key) {
-      courseIndex.value = index;
-      sessionStorage.setItem('courseIndex', JSON.stringify(courseIndex.value));
-    }
-  });
-}
+
 // 设置介绍文字中的标题下标
 function setListTitleIndex() {
   introductionTextList.value.forEach((item: string, index: number) => {
@@ -247,10 +230,7 @@ function next() {
   }
   setCourseData(allNodeList.value[courseIndex.value]);
 }
-// 卸载时将文档位置回归到第一个
-onUnmounted(() => {
-  sessionStorage.setItem('courseIndex', '0');
-});
+
 // 返回首页
 const goHome = () => {
   router.go(`/${language.value}/`);

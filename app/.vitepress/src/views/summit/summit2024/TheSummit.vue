@@ -1,11 +1,8 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useData } from 'vitepress';
 
-import { useCommon, useCookieStore } from '@/stores/common';
-
-import { getUrlParam } from '@/shared/utils';
-import { oaReport } from '@/shared/analytics';
+import { useCommon } from '@/stores/common';
 
 import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
@@ -26,7 +23,6 @@ import agendaData_en from './data/agenda-data_en';
 const { lang } = useData();
 
 const commonStore = useCommon();
-const cookieStore = useCookieStore();
 
 const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
@@ -59,25 +55,6 @@ guestData.value = summit2024.find((item) => item.type === 'GUEST');
 
 //-------- 直播 --------
 const isLiveShown = ref(0);
-
-// 埋点统计投放流量
-function collectAdvertisedData() {
-  if (cookieStore.isAllAgreed) {
-    const params = getUrlParam('utm_source');
-    if (!params) {
-      return;
-    }
-    oaReport('fromAdvertised', {
-      utm_source: params,
-    });
-  }
-  history.pushState(null, '', location.origin + location.pathname);
-}
-onMounted(() => {
-  setTimeout(() => {
-    collectAdvertisedData();
-  }, 300);
-});
 </script>
 <template>
   <SummitBanner :banner-data="summitData.banner" />

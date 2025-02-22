@@ -37,7 +37,6 @@ const changeThemeMobile = () => {
 };
 
 onMounted(() => {
-  window.localStorage.removeItem('vitepress-theme-appearance');
   let theme;
   if (!getCustomCookie(APPEARANCE_KEY)) {
     const prefereDark = window.matchMedia(

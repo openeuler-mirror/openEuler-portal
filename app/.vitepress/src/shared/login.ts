@@ -15,6 +15,7 @@ function setCookie(cname: string, cvalue: string, isDelete?: boolean) {
     document.cookie = `${cname}=${cvalue}; ${expires}`;
   } catch {}
 }
+
 function getCookie(cname: string) {
   const name = `${cname}=`;
   let ca: any = [];
@@ -31,6 +32,7 @@ function getCookie(cname: string) {
   }
   return '';
 }
+
 function deleteCookie(cname: string) {
   setCookie(cname, 'null', true);
 }
@@ -97,38 +99,6 @@ export function setStoreData(community = 'openeuler') {
   refreshInfo(community);
 }
 
-const setSessionInfo = (data: any) => {
-  const { username, photo, aigcPrivacyAccepted } = data || {};
-  if (username && photo) {
-    sessionStorage.setItem(
-      LOGIN_KEYS.USER_INFO,
-      JSON.stringify({ username, photo, aigcPrivacyAccepted })
-    );
-  }
-};
-const getSessionInfo = () => {
-  let username = '';
-  let photo = '';
-  let aigcPrivacyAccepted = '';
-  try {
-    const info = sessionStorage.getItem(LOGIN_KEYS.USER_INFO);
-    if (info) {
-      const obj = JSON.parse(info) || {};
-      username = obj.username || '';
-      photo = obj.photo || '';
-      aigcPrivacyAccepted = obj.aigcPrivacyAccepted || '';
-    }
-  } catch (error) {}
-  return {
-    username,
-    photo,
-    aigcPrivacyAccepted,
-  };
-};
-const removeSessionInfo = () => {
-  sessionStorage.removeItem(LOGIN_KEYS.USER_INFO);
-};
-
 // 刷新后重新请求登录用户信息
 export function refreshInfo(community = 'openeuler') {
   const { token } = getUserAuth();
@@ -136,13 +106,11 @@ export function refreshInfo(community = 'openeuler') {
     useLogin();
   if (token) {
     setLoginStatus('LOGINiNG');
-    setGuardAuthClient(getSessionInfo());
     queryPermission({ community })
       .then((res) => {
         const { data } = res;
         if (Object.prototype.toString.call(data) === '[object Object]') {
           setGuardAuthClient(data);
-          setSessionInfo(data);
           setLoginStatus('LOGINED');
         }
       })
@@ -150,7 +118,6 @@ export function refreshInfo(community = 'openeuler') {
         clearGuardAuthClient();
       });
   } else {
-    removeSessionInfo();
     clearGuardAuthClient();
   }
 }
@@ -168,7 +135,6 @@ export function isLogined() {
           if (data) {
             if (Object.prototype.toString.call(data) === '[object Object]') {
               setGuardAuthClient(data);
-              setSessionInfo(data);
             }
             setLoginStatus('LOGINED');
             resolve(true);

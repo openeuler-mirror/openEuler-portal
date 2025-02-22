@@ -31,7 +31,9 @@ const main = async () => {
         let sitemapItem = `  <url>\n    <loc>${url}</loc>\n    <xhtml:link rel="alternate" hreflang="${LOCALES[localeIndex]}" href="${url}"/>\n`;
         // 是否存在其他语言页面
         LOCALES.forEach((locale, index) => {
-          if (index === localeIndex) return;
+          if (index === localeIndex) {
+            return;
+          }
           const file = resolve(APP_DIR, locale, ...dirs.slice(1), dirent.name);
           if (fs.existsSync(file)) {
             const currentPagePath = pagePath.slice(pagePath.indexOf('/') + 1);

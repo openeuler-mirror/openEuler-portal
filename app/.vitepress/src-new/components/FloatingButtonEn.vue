@@ -23,13 +23,11 @@ import { OIcon, ODivider, OPopup, OLink, OButton } from '@opensig/opendesign';
 import { postFeedback } from '@/api/api-feedback';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
-import { useStoreData } from '@/shared/login';
 import { useThrottleFn } from '@vueuse/core';
 import { useCommon } from '@/stores/common';
 
 const router = useRouter();
 const screenWidth = useWindowResize();
-const { guardAuthClient } = useStoreData();
 
 const isDark = computed(() => {
   return useCommon().theme === 'dark' ? true : false;
@@ -238,7 +236,6 @@ function submitFeedback() {
     return;
   }
   const params = {
-    userName: guardAuthClient.value.username,
     feedbackPageUrl: window.location.href,
     feedbackText: inputText.value,
     feedbackValue: score.value / 10,
@@ -250,26 +247,11 @@ function submitFeedback() {
           message: 'Submitted successfully. Thanks for your feedback.',
           type: 'success',
         });
-        const summitTime = new Date().valueOf();
         if (screenWidth.value <= 1200) {
-          localStorage.setItem(
-            'submit-feedback-time-mb',
-            JSON.stringify(summitTime)
-          );
-          isReasonShow.value = false;
-          inputText.value = '';
-          score.value = 0;
           isShowFeedbackMb.value = false;
-          dialogVisible.value = false;
-        } else {
-          localStorage.setItem(
-            'submit-feedback-time-pc',
-            JSON.stringify(summitTime)
-          );
-          isReasonShow.value = false;
-          inputText.value = '';
-          score.value = 0;
         }
+        closePopup();
+        dialogVisible.value = false;
       } else {
         ElMessage({
           message: res.msg,
@@ -286,26 +268,7 @@ function submitFeedback() {
 }
 
 function handleClickSubmit() {
-  // pc12小时之内只能提交一次
-  const lastSummitTimePc = localStorage.getItem('submit-feedback-time-pc');
-  const submitTimeLimit = 1 * 12 * 60 * 60 * 1000;
-  const currentTime = new Date().valueOf();
-
-  if (lastSummitTimePc) {
-    const isOverSubmitLimit =
-      currentTime - JSON.parse(lastSummitTimePc) > submitTimeLimit;
-
-    if (isOverSubmitLimit) {
-      submitFeedback();
-    } else {
-      ElMessage({
-        message: 'Do not submit frequently.',
-        type: 'warning',
-      });
-    }
-  } else {
-    submitFeedback();
-  }
+  submitFeedback();
 }
 
 // ------------------ 满意度提示 -----------------
@@ -360,8 +323,6 @@ const cancelDialog = () => {
 
 const closeFeedbackMb = () => {
   isShowFeedbackMb.value = false;
-  const closeTime = new Date().valueOf();
-  localStorage.setItem('close-feedback-time-mb', JSON.stringify(closeTime));
 };
 
 const setScore = (val: number) => {
@@ -371,33 +332,7 @@ const setScore = (val: number) => {
 
 // 移动端用户关闭后7天不展示,提交后30日内不出现入口
 const handleFeedbackShow = () => {
-  const lastCloseTimeMb = localStorage.getItem('close-feedback-time-mb');
-  const lastSummitTimeMb = localStorage.getItem('submit-feedback-time-mb');
-
-  const closeTimeLimit = 7 * 24 * 60 * 60 * 1000; // mobile关闭nss再次使用nss时长限制
-  const submitTimeLimit = 30 * 24 * 60 * 60 * 1000; // mobile提交nss后再次提交时长限制
-  const currentTime = new Date().valueOf();
-
-  if (lastCloseTimeMb || lastSummitTimeMb) {
-    let isOverColseTimeLimit;
-    let isOverSubmitTimeLimit;
-
-    if (lastCloseTimeMb) {
-      isOverColseTimeLimit =
-        currentTime - JSON.parse(lastCloseTimeMb) > closeTimeLimit;
-    } else if (lastSummitTimeMb) {
-      isOverSubmitTimeLimit =
-        currentTime - JSON.parse(lastSummitTimeMb) > submitTimeLimit;
-    }
-
-    if (isOverColseTimeLimit && isOverSubmitTimeLimit) {
-      isShowFeedbackMb.value = true;
-    } else {
-      isShowFeedbackMb.value = false;
-    }
-  } else {
-    isShowFeedbackMb.value = true;
-  }
+  isShowFeedbackMb.value = true;
 };
 
 // 页面滚动大于一屏时，显示回到顶部悬浮按钮
@@ -413,20 +348,12 @@ const listenScroll = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', listenScroll);
-
   handleFeedbackShow();
 });
 
 onUnmounted(() => {
   window.removeEventListener('scroll', listenScroll);
 });
-
-watch(
-  () => router.route.path,
-  () => {
-    handleFeedbackShow();
-  }
-);
 </script>
 
 <template>
@@ -654,7 +581,6 @@ watch(
           <OButton type="outline" size="medium" @click="cancelDialog">
             {{ infoData.cancel }}
           </OButton>
-
           <OButton
             type="outline"
             size="medium"
