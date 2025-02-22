@@ -9,7 +9,7 @@ export default {
     MOOC_DATA: moocData_zh,
   },
 
-  en:{
+  en: {
     MOOC: mooc_en,
-  }
+  },
 };

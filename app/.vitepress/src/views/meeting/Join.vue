@@ -25,7 +25,7 @@ onMounted(() => {
     <div class="join">
       <h3>参与方式</h3>
       <div class="join-card-box">
-        <div v-for="join in meetingConfig" class="join-card" :key="join.title">
+        <div v-for="join in meetingConfig" :key="join.title" class="join-card">
           <div class="join-content">
             <div class="join-title">{{ join.title }}</div>
             <div class="join-des">{{ join.des }}</div>
@@ -33,11 +33,11 @@ onMounted(() => {
           <div class="join-btn">
             <a v-for="btn in join.btn" :href="btn.url">
               <OButton :animation="btn.animation" size="mini" :type="btn.type">
-                <template v-slot:[btn.postion]>
+                <template #[btn.postion]>
                   <OIcon><component :is="btn.icon"></component></OIcon>
                 </template>
                 {{ btn.text }}
-                <template v-slot:[btn.postion]>
+                <template #[btn.postion]>
                   <OIcon><component :is="btn.icon"></component></OIcon>
                 </template>
               </OButton>

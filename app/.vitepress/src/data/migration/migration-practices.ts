@@ -36,16 +36,14 @@ export default {
     {
       path: '/en/showcase/provider/tianyiyun0330/',
       title: 'China Telecom',
-      summary:
-        'Seamless OS Migration to CTyunOS',
+      summary: 'Seamless OS Migration to CTyunOS',
       industry: 'Carrier',
       img: '/category/showcase/provider.png',
     },
     {
       path: '/en/blog/viikei/park-migrate.html',
       title: 'iSoftStone',
-      summary:
-        'Campus OS Migration to New Server Hardware',
+      summary: 'Campus OS Migration to New Server Hardware',
       industry: 'Others',
       img: '/category/showcase/others.png',
     },

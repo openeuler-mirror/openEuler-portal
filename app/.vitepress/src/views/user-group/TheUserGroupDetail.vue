@@ -87,7 +87,6 @@ onMounted(() => {
         <div class="city-action">
           <OButton
             type="primary"
-            @click="jumpTo('/zh/interaction/event-list/collect/')"
             class="button-size-large"
             size="large"
             >申请举办活动</OButton
@@ -114,13 +113,13 @@ onMounted(() => {
         <div class="city-action">
           <OButton
             type="primary"
+            class="button-size-large"
+            size="large"
             @click="
               jumpTo(
                 'https://gitee.com/openeuler/community/blob/master/zh/contributors/user-story-guideline.md'
               )
             "
-            class="button-size-large"
-            size="large"
             >投稿案例</OButton
           >
         </div>

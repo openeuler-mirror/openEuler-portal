@@ -31,11 +31,7 @@ onMounted(() => {
         <p class="subtitle subtitle-pc">{{ bannerData.subtitle }}</p>
         <p class="subtitle subtitle-mo">{{ bannerData.subtitleMo }}</p>
       </div>
-      <div
-        v-if="bannerData.signUpTitle"
-        data-aos="fade-up"
-        class="action"
-      >
+      <div v-if="bannerData.signUpTitle" data-aos="fade-up" class="action">
         <a :href="bannerData.signUpHref">
           <OButton animation class="home-banner-btn">
             {{ bannerData.signUpTitle }}

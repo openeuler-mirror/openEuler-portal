@@ -58,11 +58,11 @@ const IconMenuShow = computed(() => {
         <h2 class="faq-title">{{ i18n.faq.faqTitle }}</h2>
         <div class="toc-box">
           <a
+            v-for="(item, index) in tocInfo"
+            :key="item.label"
             class="toc-item"
             :class="[{ active: item.link === activeId }]"
             :href="`/${lang}/faq/${item.link}${item.link ? '/' : ''}`"
-            v-for="(item, index) in tocInfo"
-            :key="item.label"
           >
             {{ item.label }}
           </a>
@@ -89,12 +89,12 @@ const IconMenuShow = computed(() => {
           </h2>
           <div class="toc-box">
             <a
+              v-for="(item, index) in tocInfo"
+              :key="item.label"
               class="toc-item"
               :class="[{ active: item.link === activeId }]"
               :href="`/${lang}/faq/${item.link}${item.link ? '/' : ''}`"
-              v-for="(item, index) in tocInfo"
               @click="toggleMenu(false)"
-              :key="item.label"
             >
               {{ item.label }}
             </a>

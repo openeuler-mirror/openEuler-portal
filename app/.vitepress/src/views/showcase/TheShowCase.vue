@@ -238,9 +238,9 @@ onMounted(() => {
     </div>
     <OSearch
       v-model.lazy.trim="searchVal"
-      @change="handleSearchChange"
       :placeholder="userCaseData.placeHolder"
       :clearable="true"
+      @change="handleSearchChange"
     ></OSearch>
     <div class="tag-box" :class="isTopNavMo ? 'tag-top' : ''">
       <TagFilter :label="userCaseData.type" class="tag-pc">

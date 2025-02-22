@@ -64,7 +64,7 @@ export function modifyUser(body: any) {
 /**
  * 查询用户信息
  */
- export function queryPersonalInfo() {
+export function queryPersonalInfo() {
   const url = '/api-omapi/oneid/personal/center/user?community=openeuler';
   const { token } = getUserAuth();
   return request

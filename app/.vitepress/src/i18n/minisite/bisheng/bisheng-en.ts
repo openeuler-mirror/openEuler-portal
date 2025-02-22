@@ -14,7 +14,10 @@ import bookIllustration from '@/assets/category/minisite/shared/illustration-boo
 import newspapperIllustration from '@/assets/category/minisite/shared/illustration-newspapper.png';
 
 export default {
-  BISHENG_BANNER_TEXT: ['BiSheng JDK', 'A high-performance Java Virtual Machine.'],
+  BISHENG_BANNER_TEXT: [
+    'BiSheng JDK',
+    'A high-performance Java Virtual Machine.',
+  ],
   BISHENG_DESC: [
     'As a downstream product of OpenJDK, BiSheng JDK is a high-performance OpenJDK distribution that can be used in production environments. BiSheng JDK fixes some performance and stability issues encountered in Huawei internal applications, optimizes performance and enhances stability on the ARM architecture, and delivers improved performance in big data scenarios.',
     'BiSheng JDK is committed to providing Java developers with a stable, reliable, high-performance, and easy-to-debug JDK. It is also a better choice on the ARM architecture.',

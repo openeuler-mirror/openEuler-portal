@@ -29,7 +29,11 @@ const isDark = computed(() => {
       />
     </div>
     <ul>
-      <li v-for="(item, i) in introduceData.list" :key="i" :class="{'dark': isDark}">
+      <li
+        v-for="(item, i) in introduceData.list"
+        :key="i"
+        :class="{ dark: isDark }"
+      >
         {{ item }}
       </li>
     </ul>
