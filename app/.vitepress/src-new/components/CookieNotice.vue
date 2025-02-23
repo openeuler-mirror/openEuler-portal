@@ -21,7 +21,7 @@ import {
   reportPerformance,
 } from '@/shared/analytics';
 
-import { setCookie, getCookie, removeCookie } from '~@/utils/common';
+import { setCookie, removeCookie } from '~@/utils/common';
 
 import {
   COOKIE_AGREED_STATUS,
@@ -82,14 +82,12 @@ const removeSensor = () => {
 };
 
 // -------------------- 展示底部提示 --------------------
-const isNoticeVisible = ref(false);
-
 // 显示/隐藏cookie提示
 const toggleNoticeVisible = (val: boolean) => {
   if (isBoolean(val)) {
-    isNoticeVisible.value = val;
+    cookieStore.isNoticeVisible = val;
   } else {
-    isNoticeVisible.value = !isNoticeVisible.value;
+    cookieStore.isNoticeVisible = !cookieStore.isNoticeVisible;
   }
 };
 
@@ -130,7 +128,7 @@ const toggleDlgVisible = (val: boolean) => {
   if (isBoolean(val)) {
     isDlgVisible.value = val;
   } else {
-    isDlgVisible.value = !isNoticeVisible.value;
+    isDlgVisible.value = !isDlgVisible.value;
   }
 };
 
@@ -208,7 +206,7 @@ watch(
 </script>
 
 <template>
-  <div v-if="isNoticeVisible" class="cookie-notice">
+  <div v-if="cookieStore.isNoticeVisible" class="cookie-notice">
     <div class="cookie-notice-content">
       <ContentWrapper class="cookie-notice-wrap">
         <div class="cookie-notice-left">

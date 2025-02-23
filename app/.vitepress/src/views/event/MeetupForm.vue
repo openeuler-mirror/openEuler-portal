@@ -215,7 +215,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   if (meetupPrivacy.value.length < 1) {
     ElMessage({
       type: 'error',
-      message: '请勾选隐私声明',
+      message: '请勾选隐私政策',
     });
     return;
   }
@@ -413,7 +413,7 @@ onMounted(() => {
                   href="/zh/other/privacy/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >《隐私声明》</a
+                  >《隐私政策》</a
                 >
               </OCheckbox>
             </OCheckboxGroup>

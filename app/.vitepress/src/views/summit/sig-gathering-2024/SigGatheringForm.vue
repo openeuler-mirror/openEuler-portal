@@ -178,7 +178,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   if (formData.value.acceptPrivacyVersion.length < 1) {
     ElMessage({
       type: 'error',
-      message: '请勾选隐私声明',
+      message: '请勾选隐私政策',
     });
     return;
   }
