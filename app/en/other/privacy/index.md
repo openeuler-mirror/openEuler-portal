@@ -92,11 +92,8 @@ In accordance with applicable laws and regulations, you may have the following r
 
 Please note that these rights are not absolute and may be restricted in accordance with applicable laws. If you need our assistance in exercising the requests or rights above, please contact us as set out in the **"How to Contact Us"** section below.
 
-If you request us to delete the data (including your name and **email address**) collected for the purpose of signing the CLA, we will no longer be able to provide you with the corresponding services.
-
-**<u>You should understand that the CLA is a legally binding document signed by you or the corporation you represent. It serves as a proof of your permanent grants of rights over your contributions. Therefore, we will not delete your personal data upon your request, unless deleting the data does not affect the legal effect of the CLA you have signed</u>**.
-
-In addition, any personal data you publicly display on the community website will be stored in the relevant code repository, and historical records will persist even after deletion.
+  - If you request us to delete the data (including your name and **email address**) collected for the purpose of signing the CLA, we will no longer be able to provide you with the corresponding services. **<u>You should understand that the CLA is a legally binding document signed by you or the corporation you represent. It serves as a proof of your permanent grants of rights over your contributions. Therefore, we will not delete your personal data upon your request, unless deleting the data does not affect the legal effect of the CLA you have signed</u>**.
+  - any personal data you publicly display on the community website will be stored in the relevant code repository, and historical records will persist even after deletion.
 
 **<u>Generally, we will respond to you within one month, unless otherwise required by applicable laws. Depending on the complexity of your requests, we may extend the period by two further months. In this case, we will inform you of the extension and its reasons within one month of receiving your request</u>**. Please note that under some circumstances, for example where we cannot verify your identity, or your claim exceeds your rights under applicable laws, we may refuse your request. In this case, we will inform you in written form that your request is refused together with the reasons for our refusal.
 
