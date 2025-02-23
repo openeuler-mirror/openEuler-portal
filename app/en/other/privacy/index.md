@@ -152,7 +152,7 @@ This website and its contents and services are mainly intended for individuals o
 
 ## 10. Third-Party SDK Privacy and Security Policy
 
-In the course of your use of our services, certain services may be provided to you through our collaboration with third-party partners, such as statistical analysis tools. To facilitate this, we have integrated third-party software development kits (SDKs) or similar applications. For details, see the [Third-Party SDKs](/third-party-sdks/en).
+In the course of your use of our services, certain services may be provided to you through our collaboration with third-party partners, such as statistical analysis tools. To facilitate this, we have integrated third-party software development kits (SDKs) or similar applications. For details, see the [Third-Party SDKs](/en/third-party-sdks/).
 
 We have no control over the privacy and data protection policies of third parties, and such third parties are not bound by this policy. Before submitting any personal data to third parties, please review their respective privacy protection policies.
 
