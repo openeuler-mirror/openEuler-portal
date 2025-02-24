@@ -39,7 +39,7 @@ const STEP = {
       '在申请材料模板下载里仔细阅读实习报名流程，在线表单填写完毕后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。',
     ATTENTION2:
       '。发送后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。',
-    DONWLOAD: '申请材料模板下载',
+    DONWLOAD: '实习申请材料模板下载',
     TIP: '（注：组织方会根据所提交的资料对报名学生进行一定的审核筛选）',
   },
   ATTENTION: '注意',
@@ -66,7 +66,7 @@ const STEP = {
       '/intern-assign',
       '命令后两周内没有发简历和方案给导师的，认领自动失效，任务被释放。',
     ],
-    DONWLOAD: '任务认领邮件模板下载',
+    DONWLOAD: '实习任务认领邮件模板下载',
   },
   STEP_ThREE: {
     TITLE: '提交成果',
@@ -108,7 +108,7 @@ const STEP = {
     ],
     ATTENTION_LINK:
       'https://edu.hicomputing.huawei.com/openeuler-opengauss-talent',
-    DONWLOAD: '证明申请材料和邮件模板下载',
+    DONWLOAD: '实习证明申请材料和邮件模板下载',
   },
 };
 </script>
@@ -154,7 +154,7 @@ const STEP = {
               <span class="orange">{{ STEP.STEP_ONE.TIP }}</span>
             </p>
             <a
-              href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/%E5%AE%9E%E4%B9%A0%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E6%A8%A1%E6%9D%BF%20.rar"
+              href="/category/internship/01 实习申请材料模板.zip"
               download
               class="download download-module"
               >{{ STEP.STEP_ONE.DONWLOAD }}</a
@@ -198,7 +198,7 @@ const STEP = {
               {{ STEP.STEP_TOW.ATTENTION_TEXT[3] }}
             </p>
             <a
-              href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/02%20%E4%BB%BB%E5%8A%A1%E8%AE%A4%E9%A2%86%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
+              href="/category/internship/02 实习任务认领邮件模板.zip"
               download
               class="download"
               >{{ STEP.STEP_TOW.DONWLOAD }}</a
@@ -288,7 +288,7 @@ const STEP = {
               {{ STEP.STEP_FOUR.ATTENTION_TEXT[3] }}
             </p>
             <a
-              href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/03%20%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E5%92%8C%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
+              href="/category/internship/03 证明申请材料和邮件模板.zip"
               download
               class="download"
               >{{ STEP.STEP_FOUR.DONWLOAD }}</a
