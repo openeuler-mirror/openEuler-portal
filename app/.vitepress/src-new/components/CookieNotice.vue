@@ -114,7 +114,7 @@ const acceptAll = () => {
   removeCookie(COOKIE_KEY);
   setCookie(
     COOKIE_KEY,
-    `${COOKIE_AGREED_STATUS.ALL_AGREED}${cookieStore.version}`,
+    `${COOKIE_AGREED_STATUS.ALL_AGREED}`,
     180,
     COOKIE_DOMAIN
   );
@@ -128,7 +128,7 @@ const rejectAll = () => {
   removeCookie(COOKIE_KEY);
   setCookie(
     COOKIE_KEY,
-    `${COOKIE_AGREED_STATUS.NECCESSARY_AGREED}${cookieStore.version}`,
+    `${COOKIE_AGREED_STATUS.NECCESSARY_AGREED}`,
     180,
     COOKIE_DOMAIN
   );

@@ -34,15 +34,7 @@ export const useCookieStore = defineStore('cookie', {
   actions: {
     getUserCookieStatus() {
       const cookieVal = getCookie(COOKIE_KEY) ?? '0';
-
       const cookieStatusVal = cookieVal[0];
-      const privacyVersionVal = cookieVal.slice(1);
-
-      if (privacyVersionVal !== this.version) {
-        this.status = COOKIE_AGREED_STATUS.NOT_SIGNED;
-        return COOKIE_AGREED_STATUS.NOT_SIGNED;
-      }
-
       if (cookieStatusVal === COOKIE_AGREED_STATUS.ALL_AGREED) {
         this.status = COOKIE_AGREED_STATUS.ALL_AGREED;
         return COOKIE_AGREED_STATUS.ALL_AGREED;
