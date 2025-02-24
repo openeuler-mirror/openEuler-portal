@@ -1,4 +1,5 @@
 import Cookies from 'js-cookie';
+const DOMAIN = import.meta.env.VITE_COOKIE_DOMAIN;
 
 /**
  * 获取url搜索参数
@@ -59,6 +60,6 @@ export function removeCookie(key: string) {
  */
 export const checkOriginLink = (path: string) => {
   return (
-    path.includes('openeuler.org') || path.includes('openeuler.openatom.cn')
+    path.includes(DOMAIN) || path.includes('openeuler.openatom.cn')
   );
 };
