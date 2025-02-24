@@ -3,7 +3,6 @@ import { computed, ref, reactive, onMounted } from 'vue';
 import { ElMessage, FormInstance, FormRules } from 'element-plus';
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { meetupApplyForm } from '@/api/api-search';
-import { queryPersonalInfo } from '@/api/api-login';
 import { showGuard, getUserAuth } from '@/shared/login';
 import { isTestEmail, isTestPhone } from '@/shared/utils';
 
@@ -246,25 +245,6 @@ async function meetupApply() {
   }
 }
 
-// 获取用户信息
-const userInfo = ref([]);
-async function getPersonalInfo() {
-  try {
-    await queryPersonalInfo().then((res) => {
-      userInfo.value = res.data;
-      const { email, phone } = res.data;
-      meetupData.value.principalEmail = email;
-      meetupData.value.principalPhone = phone;
-    });
-  } catch (error: any) {
-    console.error(error);
-  }
-}
-onMounted(() => {
-  if (token) {
-    getPersonalInfo();
-  }
-});
 </script>
 
 <template>
