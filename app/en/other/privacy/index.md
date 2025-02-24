@@ -18,10 +18,10 @@ The OpenAtom Foundation (hereinafter referred to as "we," "us," or "foundation")
 
   1. When you register for an openEuler community account, we will collect your user name, **email address**, **phone number**, password, and **email/phone verification code**. A unique account identifier will be automatically generated. Refusal to provide this information will prevent account creation.
   2. When you log in to the openEuler community using your user name, **email address**, or **phone number**, we will collect your user name, **email address**, **phone number**, password and **verification code** for authentication. Refusal to provide this information will prevent login.
-  3. When you log in using a third-party account (Gitee, GitHub, or OpenAtom), we will collect your UUID, ID, nickname, avatar, and **email address** from that platform for authentication and code repository access management. If you use Gitee or GitHub without an existing bound openEuler account, a new openEuler account with a unique identifier will be automatically generated, deriving its user name from your Gitee or GitHub account. Refusal to provide this information will prevent login via third-party accounts.
+  3. When you log in using a third-party account (Gitee, GitHub, or OpenAtom), we will collect your Gitee UUID、Gitee ID、Gitee nickname、**Gitee email address**、Gitee avatar、Github UUID、Github ID、Github nickname、**Github email address**、Github avatar、OpenAtom UUID、OpenAtom username、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar from that platform for authentication and code repository access management. If you use Gitee or GitHub without an existing bound openEuler account, a new openEuler account with a unique identifier will be automatically generated, deriving its user name from your Gitee or GitHub account. Refusal to provide this information will prevent login via third-party accounts.
   4. After logging in, you can optionally provide your avatar, nickname, and company name. This information is not required for using openEuler community features.
   5. After logging in, you can modify your **email address**, **phone number**, and password, we will collect **email address**, **phone number**, password and **verification code** for authentication.
-  6. After logging in, you can bind your openEuler account to a third-party account (GitHub, Gitee, or OpenAtom). We will collect your UUID, ID, nickname, avatar, and **email address** from the bound platform. Refusal to provide this information will prevent third-party account binding for login purposes.
+  6. After logging in, you can bind your openEuler account to a third-party account (GitHub, Gitee, or OpenAtom). We will collect your Gitee UUID、Gitee ID、Gitee nickname、**Gitee email address**、Gitee avatar、Github UUID、Github ID、Github nickname、**Github email address**、Github avatar、OpenAtom UUID、OpenAtom username、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar from the bound platform. Refusal to provide this information will prevent third-party account binding for login purposes.
 
 **b) Forum Service**
 
@@ -35,13 +35,13 @@ The OpenAtom Foundation (hereinafter referred to as "we," "us," or "foundation")
 
 **e) Contributor License Agreement ("CLA") Signing**. When you participate in code contribution through the Contributor License Agreement ("CLA") signing system (click [here](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340) to learn more), you need to submit your [relevant personal data](https://clasign.osinfra.cn/privacy/corp/gitee_openeuler-1611298811283968340) to the CLA signing system. We will obtain such personal data to verify whether you have signed the CLA, and to conduct relevant statistical analysis to understand how the community is operating.
 
-**f) Content Release**. When you participate in Community meetings, Community activities, contribution in the open source Community, blogs, newsgroups, or Community organization, you may submit your **photo**, name, **email address**, company name, position, school, profile and Gitee ID for posting on our website so that developers can better understand the community, quickly make contact, and participate in the community.
+**f) Content Release**. When you participate in Community meetings, Community activities, contribution in the open source Community, blogs, newsgroups, or Community organization, you may submit your **photo**, name, **email address**, company name, position, school, profile, region and Gitee ID for posting on our website so that developers can better understand the community, quickly make contact, and participate in the community.
 
-**g) Meetup**. When you apply for an openEuler meetup, the community will collect your name, **phone number**, **email address**, company, and meetup details (including organization, agenda, date, duration, city, event scale, event form, event support, and topics) from the application form you fill in. The collected data will be used to contact you for the purpose of confirming your application and related matters, as well as arranging for relevant affairs, including sign-ins and nameplates.
+**g) Meetup**. When you apply organize an openEuler meetup, the community will collect your name, **phone number**, **email address**, company, and meetup details (including organization, agenda, date, duration, city, event scale, event form, event support, and topics) from the application form you fill in. The collected data will be used to contact you for the purpose of confirming your application and related matters, as well as arranging for relevant affairs, including sign-ins and nameplates.
 
-**h) Quick Issue Creation**. When you submit an issue through the community's QuickIssue service, if you submit the issue using your Gitee account, we will collect your Gitee ID; if you submit the issue using your email, we will collect your **email address** and **email verification code**. The above information is used for quick issue submission. After your issue is successfully created, we will display your Gitee ID or anonymous email in the description information of the issue page and the submitter field of the issue board to facilitate your search for your issue information.
+**h) Quick Issue Creation**. When you submit an issue through the community's QuickIssue service, if you submit the issue using your Gitee account, we will collect your Gitee ID; if you submit the issue using your email, we will collect your **email address** and **email verification code**. In addition, we will collect issue related information (title, SIG name, scenario, repository name, and issue description). The above information is used for quick issue submission. After your issue is successfully created, we will display your Gitee ID or anonymous email in the description information of the issue page and the submitter field of the issue board to facilitate your search for your issue information.
 
-**i) Compatibility Certification**. When you use the compatibility certification service, we will collect your user name, **phone number**, **email address**, and UUID from your openEuler account for identity verification purposes. Your user name and **phone number** will be used to notify you of the enterprise certification results, while your user name and **email address** will be used to inform you of the progress of the compatibility certification. Upon successful completion of the openEuler compatibility certification, the compatibility certification service will collect your enterprise information (including the enterprise name, business license, unified social credit code/organization code, business address, legal representative, registered capital, date of establishment, business term, applicant's name, **applicant's phone number**, **applicant's email address**, business registration country/region, and **enterprise email address**) for the purpose of enterprise certification. The compatibility certification service will also collect the project leader's signature via the certificate confirmation page for the purpose of generating your compatibility certificate.
+**i) Compatibility Certification**. When you use the compatibility certification service, we will collect your UUID, user name, **phone number** and **email address** from your openEuler account for identity verification purposes. Your user name and **phone number** will be used to notify you of the enterprise certification results, while your user name and **email address** will be used to inform you of the progress of the compatibility certification. Upon successful completion of the openEuler compatibility certification, the compatibility certification service will collect your enterprise information (including the enterprise name, business license, unified social credit code/organization code, business address, legal representative, registered capital, date of establishment, business term, applicant's name, **applicant's phone number**, **applicant's email address**, business registration country/region, and **enterprise email address**) for the purpose of enterprise certification. The compatibility certification service will also collect the project leader's signature via the certificate confirmation page for the purpose of generating your compatibility certificate.
 
 **j) EulerMaker**. When you use the EulerMaker service, we will collect your user name, **phone number** and **email address** from your openEuler account for identity verification purposes.
 
@@ -95,7 +95,7 @@ Please note that these rights are not absolute and may be restricted in accordan
   - If you request us to delete the data (including your name and **email address**) collected for the purpose of signing the CLA, we will no longer be able to provide you with the corresponding services. **<u>You should understand that the CLA is a legally binding document signed by you or the corporation you represent. It serves as a proof of your permanent grants of rights over your contributions. Therefore, we will not delete your personal data upon your request, unless deleting the data does not affect the legal effect of the CLA you have signed</u>**.
   - any personal data you publicly display on the community website will be stored in the relevant code repository, and historical records will persist even after deletion.
 
-**<u>Generally, we will respond to you within one month, unless otherwise required by applicable laws. Depending on the complexity of your requests, we may extend the period by two further months. In this case, we will inform you of the extension and its reasons within one month of receiving your request</u>**. Please note that under some circumstances, for example where we cannot verify your identity, or your claim exceeds your rights under applicable laws, we may refuse your request. In this case, we will inform you in written form that your request is refused together with the reasons for our refusal.
+**<u>Generally, we will respond to you within one month, unless otherwise required by applicable laws</u>**. Please note that under some circumstances, for example where we cannot verify your identity, or your claim exceeds your rights under applicable laws, we may refuse your request. In this case, we will inform you in written form that your request is refused together with the reasons for our refusal.
 
 You can change the scope of your authorization for us to collect your personal data or withdraw your authorization. However, your decision to withdraw your consent or authorization does not affect any previous processing of personal data based on your authorization.
 
@@ -108,7 +108,7 @@ You can log in to the user center using an openEuler community account using the
 You can log in using an openEuler community account and perform the following operations in User Center:
 
 1. Change your avatar.
-2. Choose Info to view and correct your personal data.
+2. Choose Info to view and correct your basic information(nickname, company name).
 3. Choose Identity to check and correct you **email address**, **phone number**, and Gitee/Github/OpenAtom account.
 4. Choose Security to reset your login password.
 
@@ -116,22 +116,25 @@ You have the right to update or modify your personal data processed by us when y
 
 ### 6.3 Data Deletion
 
-You can log in using an openEuler community account and choose User Center > Info to delete basic information about your openEuler community account, or choose User Center > Identity to unbind your Gitee/GitHub/OpenAtom account.
+You can log in using an openEuler community account and perform the following operations in User Center:
+
+1. Choose User Center -> Info to delete basic informatio(nickname, company name) about your openEuler community account,
+2. Choose User Center -> Identity to unbind your Gitee/GitHub/OpenAtom account.
 
 ### 6.4 Revocation of Consent
 
 1. You can contact us via email to object to the processing of your personal information.
 2. You can contact us via email to restrict the processing of your personal information.
-3. You can choose to unsubscribe from the mailing list,
-    - If you are not a registered user of the mailing list, you can enter your email address on the unsubscribe page, and that email address will receive a unsubscribe notification email. Click the corresponding confirmation link to complete the unsubscribe process
-    - If you are a registered user of the mailing list, you can directly unsubscribe from the mailing list by clicking unsubscribe
-4. You can choose User Center > Security > Cancel signature to withdraw consent to the policy.
+3. You can choose to unsubscribe from the mailing list:
+    - If you are not a registered user of the mailing list, you can enter your email address on the unsubscribe page, and that email address will receive a unsubscribe notification email. Click the corresponding confirmation link to complete the unsubscribe process;
+    - If you are a registered user of the mailing list, you can directly enter the mailing list that needs to be unsubscribed and click unsubscribe to unsubscribe;
+4. You can choose User Center -> Security -> Cancel signature to withdraw consent to the policy.
 
 **Please note that if you withdraw your consent to the policy, we will be unable to continue providing services to you, but your account will remain active.**
 
 ### 6.5 Deletion
 
-You can log in to the openEuler community and choose User Center > Security > Delete to delete your openEuler community account. This action will also delete your personal information in the openEuler community. Exercise caution when performing this operation.
+You can log in to the openEuler community and choose User Center -> Security -> Delete to delete your openEuler community account. This action will also delete your personal information in the openEuler community. Exercise caution when performing this operation.
 
 ## 7. Where Your Personal Data Is Stored
 
@@ -161,8 +164,8 @@ Email: **<contact@openeuler.io>**
 
 Hotline: **+86 15311871505**
 
-Last updated: **February 23, 2025**
+Last updated: **February 24, 2025**
 
-Privacy policy version: **v20250223**
+Privacy policy version: **v20250224**
 
 </div>

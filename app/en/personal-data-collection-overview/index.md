@@ -17,7 +17,7 @@ This website involves the following personal data collection scenarios:
 - **Purpose**: Verify identity during login and registration on this website and maintain your personal data.
 - **Personal data type**: data you voluntarily submit
 - **Collection method**: user input or shared by third-party accounts
-- **Personal data fields**: user name, company name, **email address**, **phone number**, password, **email or phone verification code** and Gitee/Github/OpenAtom account details (UUID, ID, nickname, **email address**, and avatar).
+- **Personal data fields**: user name, company name, **email address**, **phone number**, password, **email or phone verification code** and Gitee UUID、Gitee ID、Gitee nickname、**Gitee email address**、Gitee avatar、Github UUID、Github ID、Github nickname、**Github email address**、Github avatar、OpenAtom UUID、OpenAtom username、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar.
 
 ## 2. Forum Service
 
@@ -72,7 +72,7 @@ Report type, report description, user name, IP address, region, organization, an
 - **Purpose**: Help developers submit issues in the community.
 - **Personal data type**: data you voluntarily submit
 - **Collection method**: user input
-- **Personal data fields**: **email address**, **email verification code**, title, SIG name, scenario, repository name, and issue description
+- **Personal data fields**: **email address**, **email verification code**, and issue detail(title, SIG name, scenario, repository name, and issue description)
 
 ## 9. Compatibility Certification
 

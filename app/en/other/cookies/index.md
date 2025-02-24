@@ -31,7 +31,7 @@ The openEuler community sometimes stores cookies on computers or mobile devices.
      <br/>
      Source: openEuler website
      <br/>
-     Expiration: 30 minutes
+     Expiration: 10 hours
      <br/>
      Purpose: Prevent cross-site request forgery (CSRF) attacks
    - **c)** Web Application Firewall cookies: HWWAFSESID and HWWAFSESTIME
