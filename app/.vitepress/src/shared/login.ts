@@ -100,26 +100,26 @@ export function setStoreData(community = 'openeuler') {
 }
 
 // 刷新后重新请求登录用户信息
-export function refreshInfo(community = 'openeuler') {
+export async function refreshInfo(community = 'openeuler') {
   const { token } = getUserAuth();
+  const loginStore = useLogin();
   const { setGuardAuthClient, setLoginStatus, clearGuardAuthClient } =
-    useLogin();
+    loginStore;
   if (token) {
     setLoginStatus('LOGINiNG');
-    queryPermission({ community })
-      .then((res) => {
-        const { data } = res;
-        if (Object.prototype.toString.call(data) === '[object Object]') {
-          setGuardAuthClient(data);
-          setLoginStatus('LOGINED');
-        }
-      })
-      .catch((err) => {
-        clearGuardAuthClient();
-      });
+    try {
+      const { data } = await queryPermission({ community });
+      if (Object.prototype.toString.call(data) === '[object Object]') {
+        setGuardAuthClient(data);
+        setLoginStatus('LOGINED');
+      }
+    } catch {
+      clearGuardAuthClient();
+    }
   } else {
     clearGuardAuthClient();
   }
+  loginStore.loginStateChecked = true;
 }
 
 // 判断是否为有效登录状态

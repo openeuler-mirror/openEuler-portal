@@ -14,14 +14,26 @@ import { useScreen } from '~@/composables/useScreen';
 import IconOutLink from '~icons/app-new/icon-outlink.svg';
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 
-const { locale } = useLocale();
+const { locale, t } = useLocale();
 const { lePadV } = useScreen();
 
 const { theme } = storeToRefs(useCommon());
 
+const emits = defineEmits<{
+  (e: 'reportDownload', val: Record<string, string>): void;
+}>();
+
 const localeGetOsData = computed(() => {
   return getOs[locale.value];
 });
+
+const onClickLink = (link: any, container: any) => {
+  emits('reportDownload', {
+    level1: t('download.getOStitle'),
+    level2: container.title,
+    level3: link.label,
+  });
+};
 </script>
 <template>
   <AppSection :title="$t('download.getOStitle')">
@@ -65,6 +77,7 @@ const localeGetOsData = computed(() => {
                 :href="link.href"
                 :target="link.href.startsWith('http') ? '_blank' : ''"
                 rel="noopener noreferrer"
+                @click="onClickLink(link, container)"
               >
                 {{ link.label }}
                 <OIcon v-if="link?.outlink"><IconOutLink /></OIcon>

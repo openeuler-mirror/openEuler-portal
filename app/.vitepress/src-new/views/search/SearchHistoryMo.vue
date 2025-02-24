@@ -18,6 +18,8 @@ import IconSearch from '~icons/app-new/icon-header-search.svg';
 import IconDelete from '~icons/app-new/icon-header-delete.svg';
 import IconDeleteAll from '~icons/app-new/icon-delete.svg';
 import IconBack from '~icons/app-new/icon-header-back.svg';
+import { useDebounceFn } from '@vueuse/core';
+import { oaReport } from '@/shared/analytics';
 
 const { lang } = useData();
 const searchRef = ref();
@@ -34,16 +36,46 @@ const searchStore = useSearchValue();
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 
+const reportSearch = (event: string, data: Record<string, any>) => {
+  const module = location.pathname.includes('other/search')
+    ? 'search_page'
+    : 'home_page';
+  oaReport(
+    event,
+    {
+      module,
+      ...data,
+    },
+    'search_portal'
+  );
+};
+
 // 搜索事件
-function handleSearchEvent() {
+function handleSearchEvent(report?: boolean) {
+  if (report) {
+    reportSearch('click', {
+      content: searchInput.value,
+      type: 'search',
+    });
+  }
   isShowDrawer.value = false;
   handleSearch(searchInput.value);
   searchStore.setSearchValue(searchInput.value);
 }
+
+type SearchItemClickType = 'history' | 'popular' | 'suggest';
+
 // 点击热搜标签
-const onTopSearchItemClick = (val: string) => {
+const onTopSearchItemClick = (
+  val: string,
+  type: SearchItemClickType = 'history'
+) => {
   searchInput.value = val;
   handleSearchEvent();
+  reportSearch('click', {
+    type,
+    target: val,
+  });
 };
 
 const searchValue = computed(() => i18n.value.header.SEARCH);
@@ -74,12 +106,18 @@ onMounted(() => {
 const recommendData = ref<SearchRecommendT[]>([]);
 
 const queryGetSearchRecommend = (val: string) => {
+  reportSearchInput(val);
   getSearchRecommend({
     query: val,
   }).then((res) => {
     recommendData.value = res.obj.word;
   });
 };
+
+const reportSearchInput = useDebounceFn(
+  (content: string) => reportSearch('input', { content }),
+  300
+);
 
 watch(
   () => searchInput.value,
@@ -147,9 +185,10 @@ const closeSearch = () => {
             v-model="searchInput"
             :placeholder="searchValue.PLEACHOLDER"
             @blur=""
-            @keyup.enter="handleSearchEvent"
+            @keyup.enter="handleSearchEvent(true)"
             @focus="showDrawer"
             class="normal"
+            @input=""
           >
             <template #prefix>
               <OIcon class="icon"><IconSearch></IconSearch></OIcon>
@@ -163,7 +202,7 @@ const closeSearch = () => {
           <OIcon class="only-icon" @click="showDrawer"
             ><IconSearch></IconSearch
           ></OIcon>
-          <span class="search-text" @click="handleSearchEvent">{{
+          <span class="search-text" @click="handleSearchEvent(true)">{{
             searchValue.TEXT
           }}</span>
         </div>

@@ -9,12 +9,22 @@ import getResource from '~@/data/download/get-resource';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
-const { locale } = useLocale();
+const emits = defineEmits<{
+  (e: 'reportDownload', val: Record<string, string>): void;
+}>();
+const { locale, t } = useLocale();
 const { isPhone, lePad, lePadV } = useScreen();
 
 const flexGap = computed(() =>
   isPhone.value ? '12px 12px' : lePad.value ? '16px 16px' : '32px 32px'
 );
+
+const onClickCard = (item: any) => {
+  emits('reportDownload', {
+    level1: t('download.getResource'),
+    level2: item[locale.value].title,
+  });
+};
 </script>
 <template>
   <AppSection :title="$t('download.getResource')">
@@ -34,6 +44,7 @@ const flexGap = computed(() =>
           :detail-row="2"
           layout="h"
           :href="item[locale].href"
+          @click="onClickCard(item)"
           target="_blank"
           rel="noopener noreferrer"
           hoverable

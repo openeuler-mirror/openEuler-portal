@@ -9,12 +9,28 @@ import communityVersionData from '~@/data/download/download';
 import { useLocale } from '~@/composables/useLocale';
 
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
+import { oaReport } from '@/shared/analytics';
+import { useI18n } from 'vue-i18n';
 
 const { locale } = useLocale();
+const { t } = useI18n();
 const localeCommunityVersionData = computed(() => {
   return communityVersionData[locale.value].COMMUNITY_LIST;
 });
 const router = useRouter();
+
+const onClickLink = () => {
+  oaReport(
+    'click',
+    {
+      type: 'topic_download',
+      module: 'search_result',
+      content: new URLSearchParams(location.search).get('search'),
+      target: t('search.goDownload'),
+    },
+    'search_portal'
+  );
+};
 </script>
 <template>
   <div class="search-download-zone">
@@ -28,7 +44,7 @@ const router = useRouter();
       {{ localeCommunityVersionData[0].DESC }}
     </div>
     <a :href="`/${locale}/download/`">
-      <OButton variant="outline" color="primary">
+      <OButton @click="onClickLink" variant="outline" color="primary">
         <span>{{ $t('search.goDownload') }}</span>
         <template #suffix>
           <OIcon><IconChevronRight class="download-button-icon" /></OIcon>

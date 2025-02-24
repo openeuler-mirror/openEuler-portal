@@ -20,7 +20,7 @@ const props = defineProps({
   },
 });
 
-const emits = defineEmits(['link-click']);
+const emits = defineEmits(['link-click', 'report-nav-click-path']);
 
 const linkClick = () => {
   emits('link-click');
@@ -35,6 +35,9 @@ const descMouseenter = (e: MouseEvent) => {
 const onClickNavLink = (item?: any) => {
   if (item?.ANALYTICSNAME) {
     oaReport('click', undefined, item.ANALYTICSNAME);
+  }
+  if (Array.isArray(item.NAV_PATH)) {
+    emits('report-nav-click-path', item.NAV_PATH);
   }
 };
 </script>
@@ -87,13 +90,14 @@ const onClickNavLink = (item?: any) => {
       v-for="subItem in navContent"
       :key="subItem.NAME"
       :class="{ 'content-item': navContent.length > 1 }"
+      @click="onItemClick"
     >
       <div class="item-title">
         <NavLink
           :url="subItem.URL"
           class="item-name"
           @click="onClickNavLink(subItem)"
-          @link-click="linkClick(subItem)"
+          @link-click="linkClick"
         >
           {{ subItem.NAME }}
           <OIcon v-if="subItem.ICON">
@@ -123,6 +127,7 @@ const onClickNavLink = (item?: any) => {
           v-for="system in subItem.CHILDREN"
           :url="system.URL"
           class="system"
+          @click="onClickNavLink(system)"
           @link-click="linkClick"
         >
           {{ system.NAME }}
