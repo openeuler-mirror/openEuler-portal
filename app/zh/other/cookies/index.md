@@ -31,7 +31,7 @@ openEuler社区有时会在计算机或移动设备上存储Cookie，我们启�
      <br/>
      来源：openEuler网站
      <br/>
-     到期时间：30分钟
+     到期时间：10小时
      <br/>
      目的：防止跨站请求伪造攻击
    - **c)** Web应用防火墙Cookie：HWWAFSESID，HWWAFSESTIME
