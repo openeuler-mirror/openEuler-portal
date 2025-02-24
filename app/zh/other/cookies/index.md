@@ -111,12 +111,12 @@ openEuler社区不会将Cookie用于本声明所述目的之外的任何用途�
      来源：openEuler网站
      <br/>
      目的：记录您的应用id，事件，会话
-   - **b)** 搜索历史：searchHistory
+   - **b)** 搜索历史：search-history
      <br/>
      来源：openEuler网站
      <br/>
      目的：记录您的站内历史搜索记录
-   - **b)** 新手引导步骤：tour_guide
+   - **c)** 新手引导步骤：tour_guide
      <br/>
      来源：openEuler网站
      <br/>

@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import { watch, onMounted } from 'vue';
+import { watch, nextTick } from 'vue';
 import { handleMarkdown } from '@/shared/markdown';
-import type MarkdownIt from 'markdown-it';
+
+import MermaidPlugIn from '@/shared/markdown-it-mermaid';
+
+import mermaid from 'mermaid';
+
 import { useOeep } from '@/stores/oeep';
 
 const props = defineProps({
@@ -11,25 +15,23 @@ const props = defineProps({
   },
 });
 
-let markdownItMermaid: MarkdownIt.PluginSimple | null = null;
 const mkit = handleMarkdown();
+mkit.use(MermaidPlugIn);
 
-onMounted(async () => {
-  await import('@/shared/markdown-it-mermaid')
-    .then((m) => {
-      markdownItMermaid = m.default;
-      if (!markdownItMermaid) return;
-      mkit.use(markdownItMermaid);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-  useOeep().setStatementHtml(mkit.render(props.statement));
-});
 watch(
   () => props.statement,
   (val) => {
     useOeep().setStatementHtml(mkit.render(val));
+    nextTick(() => {
+      if (document.querySelector('#mermaid')) {
+        mermaid.run({
+          querySelector: '#mermaid',
+        });
+      }
+    });
+  },
+  {
+    immediate: true,
   }
 );
 </script>

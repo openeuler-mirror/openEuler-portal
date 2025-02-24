@@ -110,7 +110,7 @@ We use the following local storage technologies:
      Source: openEuler website
      <br/>
      Purpose: Record your application ID, events, and sessions
-   - **b)** Search History: searchHistory
+   - **b)** Search History: search-history
      <br/>
      Source: openEuler website
      <br/>
