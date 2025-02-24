@@ -31,7 +31,7 @@ export default {
   sortTime: 'Newest',
   externalTipTitle: 'Jumping to external website soon',
   externalTipText:
-    'The link you are about to access does not belong to the software market. Please pay attention to the security of your account.',
+    'The link you are about to access does not belong to the openEuler community. Please pay attention to the security of your account.',
   externalBtn1: 'Continue',
   externalBtn2: 'Cancel',
 };
