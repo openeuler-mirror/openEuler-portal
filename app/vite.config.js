@@ -77,7 +77,7 @@ export default defineConfig({
       '/api-certification/': {
         target: 'https://certification.openeuler.org/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-certification/, ''),
+        rewrite: (url) => url.replace(/^\/api-certification/, ''),
       },
       '/api-search/': {
         target: 'https://www.openeuler.org',
@@ -89,32 +89,32 @@ export default defineConfig({
       '/api-meeting/': {
         target: 'https://meetings.openeuler.openatom.cn/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-meeting/, ''),
+        rewrite: (url) => url.replace(/^\/api-meeting/, ''),
       },
       '/api/': {
         target: 'https://api.openeuler.org',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: (url) => url.replace(/^\/api/, ''),
       },
       '/api-cve/': {
         target: 'https://api-cve.openeuler.org/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-cve/, ''),
+        rewrite: (url) => url.replace(/^\/api-cve/, ''),
       },
       '/api-omapi/': {
         target: 'https://omapi.osinfra.cn/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-omapi/, ''),
+        rewrite: (url) => url.replace(/^\/api-omapi/, ''),
       },
       '/api-dsapi/': {
         target: 'https://dsapi.osinfra.cn/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-dsapi/, ''),
+        rewrite: (url) => url.replace(/^\/api-dsapi/, ''),
       },
       '/api-mail/': {
         target: 'https://mailweb.openeuler.org/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-mail/, ''),
+        rewrite: (url) => url.replace(/^\/api-mail/, ''),
       },
     },
   },
