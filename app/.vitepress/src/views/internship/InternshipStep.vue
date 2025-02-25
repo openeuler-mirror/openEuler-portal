@@ -154,7 +154,7 @@ const STEP = {
               <span class="orange">{{ STEP.STEP_ONE.TIP }}</span>
             </p>
             <a
-              href="/category/internship/01 实习申请材料模板.zip"
+              href="/category/internship/实习申请材料模板.zip"
               download
               class="download download-module"
               >{{ STEP.STEP_ONE.DONWLOAD }}</a
@@ -198,7 +198,7 @@ const STEP = {
               {{ STEP.STEP_TOW.ATTENTION_TEXT[3] }}
             </p>
             <a
-              href="/category/internship/02 实习任务认领邮件模板.zip"
+              href="/category/internship/实习任务认领邮件模板.zip"
               download
               class="download"
               >{{ STEP.STEP_TOW.DONWLOAD }}</a
@@ -288,7 +288,7 @@ const STEP = {
               {{ STEP.STEP_FOUR.ATTENTION_TEXT[3] }}
             </p>
             <a
-              href="/category/internship/03 证明申请材料和邮件模板.zip"
+              href="/category/internship/实习证明申请材料和邮件模板.zip"
               download
               class="download"
               >{{ STEP.STEP_FOUR.DONWLOAD }}</a
