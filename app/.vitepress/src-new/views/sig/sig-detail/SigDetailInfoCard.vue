@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
+import { ref, onMounted, computed, watch, nextTick } from 'vue';
 
 import { useData } from 'vitepress';
 
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 
-import { OIcon, OButton, ODivider } from '@opensig/opendesign';
+import { OIcon, OButton, ODivider, OPopover } from '@opensig/opendesign';
 
 import IconGitee from '~icons/app-new/icon-gitee.svg';
 import IconMail from '~icons/app-new/icon-mail.svg';
@@ -35,6 +35,22 @@ const props = defineProps({
 });
 
 const OMIT = '/openeuler/community/tree/master/';
+
+const descriptionRef = ref();
+const isOverflow = ref(false);
+
+watch(
+  () => props.description,
+  () => {
+    nextTick(() => {
+      if (
+        descriptionRef.value?.scrollHeight > descriptionRef.value?.clientHeight
+      ) {
+        isOverflow.value = true;
+      }
+    });
+  }
+);
 </script>
 <template>
   <div class="sig-detail-info-card">
@@ -81,14 +97,29 @@ const OMIT = '/openeuler/community/tree/master/';
       </div>
     </div>
     <ODivider class="divider-mo" direction="h" />
-    <div class="sig-description">
-      {{ description }}
+    <div class="content">
+      <OPopover
+        position="bottom"
+        trigger="click"
+        wrapper=".content"
+        wrap-class="sig-popup-description"
+      >
+        <template #target>
+          <div ref="descriptionRef" class="sig-description">
+            {{ description }}
+          </div>
+        </template>
+        <div v-if="isOverflow">
+          {{ description }}
+        </div>
+      </OPopover>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .sig-detail-info-card {
+  position: relative;
   padding: 24px 40px;
   border-radius: var(--o-radius-xs);
   background-image: url('~@/assets/category/sig/sig-card_bg_light.png');
@@ -151,6 +182,7 @@ const OMIT = '/openeuler/community/tree/master/';
 
   .sig-description {
     margin-top: 8px;
+    @include text-truncate(2);
     @include text1;
   }
 
@@ -160,6 +192,9 @@ const OMIT = '/openeuler/community/tree/master/';
       display: block;
     }
   }
+}
+
+.sig-popup-description {
 }
 
 [data-o-theme='dark'] {

@@ -8,6 +8,7 @@ export default {
   applicationProcessSubTitle:
     '申请创建一个新的SIG（Special Interests Group）来组织特定领域的开发工作',
   sigList: 'openEuler SIGs',
+  repo:'仓库',
   sigTip: '注：仓库Committer请点击SIG名称，在仓库列表查询',
   subscribe: '订阅邮件',
   contributor: '{num}位贡献者',
@@ -45,7 +46,7 @@ export default {
   meetingIntro2:
     'SIG 版本规划工作会议遵循开源、开放原则，议题收集、技术讨论、会议纪要等各讨论过程均对外开放',
   meetingTypeTitle: '会议类型',
-  sig: 'SIG中心',
+  sig: 'SIG',
   roleDescription: '角色说明',
   roleDescriptionIntro: '简要描述 openEuler 社区中贡献者角色的各种职责',
   sigMeeingOrg: '组织会议',

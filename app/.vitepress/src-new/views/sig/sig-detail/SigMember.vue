@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed, type PropType } from 'vue';
+import { type PropType } from 'vue';
 
 import { OIcon, ODivider, OScroller } from '@opensig/opendesign';
 
@@ -11,6 +11,8 @@ import IconMail from '~icons/app-new/icon-mail.svg';
 import { GITEE_ADDRESS } from '~@/shared/config/sig';
 
 import { sigMaintainerT } from '~@/@types/type-sig';
+
+import { useScreen } from '~@/composables/useScreen';
 
 defineProps({
   maintainerList: {
@@ -24,6 +26,8 @@ defineProps({
     default: '',
   },
 });
+
+const { lePadV } = useScreen();
 </script>
 <template>
   <div class="sig-member">
@@ -33,7 +37,11 @@ defineProps({
     <OScroller class="member-list" size="small">
       <div v-for="member in maintainerList" class="member-info">
         <div class="member-info-left">
-          <WordAvatar :name="member?.gitee_id" size="medium" />
+          <WordAvatar
+            :name="member?.gitee_id"
+            size="medium"
+            :custom-size="lePadV ? 32 : 0"
+          />
           <div class="info">
             <div class="member-name">{{ member.gitee_id }}</div>
             <div class="member-post">Maintainer</div>
@@ -89,20 +97,27 @@ defineProps({
     height: 700px;
     @include respond-to('<=laptop') {
       margin-top: 0;
+      height: auto;
     }
 
     .member-info {
       display: flex;
       align-items: center;
-
       & + .member-info {
         margin-top: 16px;
+        @include respond-to('<=laptop') {
+          margin-top: 8px;
+        }
       }
 
       .member-info-left {
         --avatar-width: 40px;
         --info-width: 165px;
         --avatar-gap: 16px;
+        @include respond-to('<=laptop') {
+          --avatar-width: 32px;
+        --info-width: 125px;
+        }
 
         display: flex;
         min-width: var(--info-width);
@@ -112,7 +127,7 @@ defineProps({
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          @include tip2;
+          @include tip1;
 
           .member-name {
             @include text-truncate(1);
@@ -127,6 +142,7 @@ defineProps({
       }
 
       .member-info-right {
+        margin-left: auto;
         display: flex;
         align-items: center;
         height: 100%;

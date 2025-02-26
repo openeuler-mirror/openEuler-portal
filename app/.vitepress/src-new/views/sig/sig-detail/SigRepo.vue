@@ -4,21 +4,9 @@ import { ref, computed, onMounted } from 'vue';
 import { useData } from 'vitepress';
 
 import {
-  ORadioGroup,
-  ORadio,
-  OTag,
-  OToggle,
-  ODivider,
   OTable,
-  OLink,
   OPagination,
   OScroller,
-  OSelect,
-  OOption,
-  OButton,
-  OIcon,
-  useMessage,
-  OPopover,
 } from '@opensig/opendesign';
 
 import { getSigRepositoryList } from '@/api/api-sig';
@@ -127,6 +115,7 @@ onMounted(() => {
       <OTable
         class="repo-table"
         :columns="columns"
+        :small="true"
         border="row-frame"
         :data="repositoryList"
       >

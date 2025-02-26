@@ -45,7 +45,7 @@ const verticalPadding = computed(() => {
 
 const breadCrumbs = ref([
   {
-    title: 'SIG',
+    title: t('sig.sigCenter'),
     to: `/${locale.value}/sig/sig-list/`,
   },
   {

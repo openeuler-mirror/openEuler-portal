@@ -42,16 +42,17 @@ const { lePadV } = useScreen();
   .sig-welcome-card {
     --title-gap: 8px;
     --title-icon-size: var(--o-icon_size-2xl);
-
     display: flex;
     background-color: var(--o-color-fill2);
     padding: 24px 48px;
+    min-height: 200px;
     @include respond-to('<=pad_v') {
       flex-direction: column;
       padding: 12px;
     }
 
     .card-item {
+      flex: 1;
       @include respond-to('<=pad_v') {
         display: flex;
       }
@@ -92,9 +93,14 @@ const { lePadV } = useScreen();
   }
 
   .o-divider {
+    margin-top: auto;
     --o-divider-label-gap: 0 40px;
-
-    height: auto;
+    height: calc(100% - 52px);
+    height: 127px;
+    @include respond-to('<=pad_v') {
+      margin-top: var(--o-divider-gap);
+      height: auto;
+    }
   }
 }
 </style>

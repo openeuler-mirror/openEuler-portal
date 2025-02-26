@@ -12,8 +12,6 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, '../dist'),
     cssCodeSplit: true,
-    sourcemap: true, // 开启 Source Map
-    minify: false, // 禁用代码压缩
   },
   publicDir: path.resolve(__dirname, './.vitepress/public'),
   resolve: {
