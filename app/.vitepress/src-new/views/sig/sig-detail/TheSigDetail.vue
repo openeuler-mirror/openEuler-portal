@@ -8,11 +8,7 @@ import { SIG_ADDRESS } from '~@/shared/config/sig';
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 
-import {
-  OBreadcrumb,
-  OBreadcrumbItem,
-  vLoading,
-} from '@opensig/opendesign';
+import { OBreadcrumb, OBreadcrumbItem, vLoading } from '@opensig/opendesign';
 import SigDetailInfoCard from './SigDetailInfoCard.vue';
 import SigMember from './SigMember.vue';
 import SigMeeting from './SigMeeting.vue';
@@ -25,7 +21,7 @@ import { getSigMeeting, getSigDetail } from '~@/api/api-sig';
 
 import type { SigCompleteItemT } from '~@/@types/type-sig';
 
-const { isPhone, leLaptop, isPadVToLaptop, lePadV } = useScreen();
+const { leLaptop, isPadVToLaptop, lePadV } = useScreen();
 const { locale } = useLocale();
 const { lang, params } = useData();
 const router = useRouter();
@@ -44,8 +40,6 @@ const sigMeetingData: any = ref([]);
 const sigDetailInfo = ref<SigCompleteItemT>();
 const memberList: any = ref([]);
 const isLoading = ref(true);
-
-
 
 // 获取sig会议数据
 const queryGetSigMeeting = () => {
@@ -118,6 +112,7 @@ onMounted(() => {
       </OBreadcrumbItem>
     </OBreadcrumb>
     <SigDetailInfoCard
+      v-if="sigDetailInfo?.description"
       :description="sigDetailInfo?.description"
       :sig-name="sigDetailInfo?.sig_name"
       :gitee-address="`${SIG_ADDRESS}${sigDetailInfo?.sig_name}`"

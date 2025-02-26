@@ -1,5 +1,7 @@
 ---
 title: '角色说明'
+simpleHeader: '/zh/sig/sig-list/'
+backTitle: 'SIG中心'
 ---
 
 <script setup lang="ts">

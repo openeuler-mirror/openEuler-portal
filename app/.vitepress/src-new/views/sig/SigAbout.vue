@@ -157,14 +157,17 @@ const processDetail = computed(() => {
         width: 100%;
         padding-bottom: 0;
         .o-card-content {
+          --card-content-text-size: 14px;
           height: 100%;
+          @include respond-to('<=pad_v') {
+            --card-content-text-size: 12px;
+          }
         }
       }
 
       img {
         margin-top: 8px;
         width: 100%;
-        height: 100%;
         border-radius: var(--o-radius-xs) var(--o-radius-xs) 0 0;
       }
     }

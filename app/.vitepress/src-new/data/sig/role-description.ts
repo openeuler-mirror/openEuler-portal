@@ -52,6 +52,7 @@ export const communityMember = {
         zh: '职责范围：项目的贡献者',
         en: 'Responsibilities: Contributors of the project',
       },
+      href:'contributor'
     },
     {
       bg: roleDescCommitter,
@@ -67,6 +68,7 @@ export const communityMember = {
         zh: '要求：SIG 的积极贡献者，经验丰富，愿意投入精力参与到审核工作',
         en: 'Requirement: Frequently contributing to SIG, experienced,and willing to undertake review work',
       },
+      href:'committer'
     },
     {
       bg: roleDescMaintainer,
@@ -82,6 +84,7 @@ export const communityMember = {
         zh: '要求：经验丰富，富有责任心、出色的技术能力和管理能力',
         en: 'Requirement：Experienced, responsible, outstanding technologies and management skills',
       },
+      href:'maintainer'
     },
   ],
   cards: [

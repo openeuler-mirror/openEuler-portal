@@ -19,6 +19,7 @@ export default {
   maintainerEn: 'Maintainer',
   committer: 'Committer',
   repositoryList: 'REPOSITORIES',
+  repo:'Repository',
   repositoryName: 'Repos name',
   contact: 'Contact',
   contributeTitle: 'Contribution',

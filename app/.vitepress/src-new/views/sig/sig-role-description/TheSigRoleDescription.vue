@@ -43,7 +43,7 @@ const verticalPadding = computed(() => {
 
 const breadCrumbs = ref([
   {
-    title: t('sig.sig'),
+    title: t('sig.sigCenter'),
     to: `/${locale.value}/sig/sig-list/`,
   },
   {
@@ -102,9 +102,12 @@ const getSectionBg = (item: any) => {
             <div v-if="item.requirement">{{ item.requirement[locale] }}</div>
           </div>
 
-          <OLink class="detail-link" :icon="OIconFile">{{
-            communityMember.viewDetail[locale]
-          }}</OLink>
+          <OLink
+            class="detail-link"
+            :href="`#${item.href}`"
+            :icon="OIconFile"
+            >{{ communityMember.viewDetail[locale] }}</OLink
+          >
         </div>
       </div>
 
@@ -122,6 +125,7 @@ const getSectionBg = (item: any) => {
     <AppSection
       v-for="section in sections"
       class="common-section"
+      :id="section.id"
       :title="section.title[locale]"
       :subtitle="section.subtitle[locale]"
     >
@@ -222,18 +226,19 @@ const getSectionBg = (item: any) => {
         border-radius: 4px;
 
         @include respond-to('<=laptop') {
+          background-size:  100% auto;
           padding: 28px 24px 24px;
         }
 
         @include respond-to('<=pad') {
           padding: 28px 20px 20px;
-          background-size: auto 100%;
+          background-size:  100% 100%;
         }
 
         @include respond-to('<=pad_v') {
           padding: 16px;
           min-height: 152px;
-          background-size: 100% 100%;
+          background-size:  100% auto;
         }
 
         .member-type-item-title {
@@ -394,7 +399,7 @@ const getSectionBg = (item: any) => {
 
       .common-section-list-item {
         padding: 32px 24px;
-        background-size: 100% auto;
+        background-size: 100% 100%;
         background-position: left bottom;
         background-repeat: no-repeat;
         border-radius: 4px;
@@ -402,6 +407,7 @@ const getSectionBg = (item: any) => {
 
         @include respond-to('<=pad_v') {
           padding: 16px;
+          background-size: 100% auto;
         }
 
         .title-wrap {

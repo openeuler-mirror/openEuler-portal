@@ -8,6 +8,7 @@ import {
   OTag,
   OButton,
   OPopover,
+  ODivider,
   OPagination,
 } from '@opensig/opendesign';
 
@@ -24,6 +25,7 @@ import { landscapeIconMap } from '~@/data/sig';
 import { getSigLandscape, getSigList, getRepoList } from '~@/api/api-sig';
 
 import IconGitee from '~icons/app-new/icon-gitee.svg';
+import IconMail from '~icons/app-new/icon-mail.svg';
 import IconMore from '~icons/sig/more.svg';
 
 const { locale } = useLocale();
@@ -243,8 +245,24 @@ const getMoreDataMo = () => {
             </OTag>
           </div>
         </div>
+        <ODivider class="order-1" direction="h" />
+        <a
+          :href="`https://gitee.com/openeuler/community/tree/master/sig/${sig.sig_name}`"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="gitee-adress"
+        >
+          <OIcon class="icon">
+            <IconGitee />
+          </OIcon>
+          {{ `https://gitee.com...sig/${sig.sig_name}` }}
+        </a>
+        <ODivider class="order-2" direction="h" />
         <div class="sig-mail">
-          <a :href="`mailto:${sig.mailing_list}`">
+          <a class="mail-adress" :href="`mailto:${sig.mailing_list}`">
+            <OIcon class="icon">
+              <IconMail />
+            </OIcon>
             {{ sig.mailing_list }}
           </a>
           <!--  是openeuler，mailweb服务的邮箱展示  -->
@@ -258,37 +276,33 @@ const getMoreDataMo = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <OButton size="medium" color="primary">
+            <OButton v-if="!lePadV" size="medium" color="primary">
               {{ $t('sig.subscribe') }}
             </OButton>
+            <span v-else>
+              {{ $t('sig.subscribe') }}
+            </span>
           </a>
         </div>
-        <div :title="sig.description" class="sig-description">
-          {{ sig.description }}
+        <div :title="activeRepo ? '' : sig.description" class="sig-description">
+          <div v-if="!activeRepo" class="content">
+            {{ sig.description }}
+          </div>
+          <div v-else class="repo">
+            <div class="lebal">{{ $t('sig.repo') }}:</div>
+            <a
+              class="repo"
+              :href="`https://gitee.com/${activeRepo}`"
+              target="_blank"
+              ref=""
+              >{{ activeRepo }}</a
+            >
+          </div>
         </div>
         <div class="sig-member">
-          <a
-            v-for="member in sig.maintainers.slice(0, 9)"
-            :key="member"
-            :href="`https://gitee.com/${member}`"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="member"
-          >
-            <WordAvatar size="small" :title="member" :name="member">
-            </WordAvatar>
-          </a>
-          <OPopover
-            v-if="sig.maintainers.length > 9"
-            position="top"
-            trigger="hover"
-            wrap-class="sig-popup-tip"
-          >
-            <template #target>
-              <OIcon class="show-more"><IconMore /></OIcon>
-            </template>
+          <template v-if="!activeMaintainer">
             <a
-              v-for="member in sig.maintainers.slice(9)"
+              v-for="member in sig.maintainers.slice(0, 9)"
               :key="member"
               :href="`https://gitee.com/${member}`"
               target="_blank"
@@ -298,10 +312,41 @@ const getMoreDataMo = () => {
               <WordAvatar size="small" :title="member" :name="member">
               </WordAvatar>
             </a>
-          </OPopover>
-          <div class="contributor-num">
-            {{ $t('sig.contributor', { num: sig.maintainers?.length }) }}
-          </div>
+            <OPopover
+              v-if="sig.maintainers.length > 9"
+              position="top"
+              trigger="hover"
+              wrap-class="sig-popup-tip"
+            >
+              <template #target>
+                <OIcon class="show-more"><IconMore /></OIcon>
+              </template>
+              <a
+                v-for="member in sig.maintainers.slice(9)"
+                :key="member"
+                :href="`https://gitee.com/${member}`"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="member"
+              >
+                <WordAvatar size="small" :title="member" :name="member">
+                </WordAvatar>
+              </a>
+            </OPopover>
+            <div class="contributor-num">
+              {{ $t('sig.contributor', { num: sig.maintainers?.length }) }}
+            </div>
+          </template>
+          <a
+            v-else
+            :href="`https://gitee.com/${activeMaintainer}`"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="single-member"
+          >
+            <WordAvatar size="small" :name="activeMaintainer"> </WordAvatar>
+            {{ activeMaintainer }}
+          </a>
         </div>
       </div>
     </div>
@@ -354,6 +399,9 @@ const getMoreDataMo = () => {
 
         &:last-child {
           min-width: 200px;
+          @include respond-to('<=pad_v') {
+            min-width: auto;
+          }
         }
 
         :deep(.el-select__caret) {
@@ -365,7 +413,7 @@ const getMoreDataMo = () => {
           border: 1px solid var(--o-color-control1);
           box-shadow: none;
           @include respond-to('<=pad_v') {
-            height: fit-content;
+            height: 32px;
           }
 
           &.is-hovering,
@@ -384,6 +432,8 @@ const getMoreDataMo = () => {
     }
 
     .tip {
+      display: flex;
+      align-items: center;
       margin-left: 12px;
       color: var(--o-color-info3);
       @include text1;
@@ -405,24 +455,29 @@ const getMoreDataMo = () => {
     }
 
     .sig-card {
+      display: flex;
+      flex-direction: column;
       position: relative;
       padding: 24px 32px;
       background-color: var(--o-color-fill2);
       border-radius: var(--o-radius-xs);
+      overflow: hidden;
       @include respond-to('<=pad_v') {
         padding: 16px;
       }
 
       .o-tag {
         --tag-bg-color: var(--o-color-fill2);
-
-        position: absolute;
-        top: 8px;
-        right: 8px;
+        @include respond-to('<=pad_v') {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+        }
       }
     }
 
     .sig-info {
+      order: 0;
       display: flex;
       justify-content: space-between;
 
@@ -445,6 +500,9 @@ const getMoreDataMo = () => {
           align-items: center;
           font-size: var(--o-icon_size-m);
           margin-left: 8px;
+          @include respond-to('<=pad_v') {
+            display: none;
+          }
         }
       }
 
@@ -461,24 +519,77 @@ const getMoreDataMo = () => {
         }
       }
     }
+    .gitee-adress {
+      position: relative;
+      display: none;
+      z-index: 1;
+      &::before {
+        content: '';
+        position: absolute;
+        left: -16px;
+        top: -12px;
+        width: 120%;
+        height: 1px;
+        background-color: var(--o-color-control4);
+      }
+      @include respond-to('<=pad_v') {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        order: 2;
+      }
+      .icon {
+        font-size: var(--o-icon_size-m);
+        margin-right: 8px;
+      }
+    }
 
     .sig-mail {
+      display: flex;
+      align-items: center;
       margin-top: 8px;
+      .o-icon {
+        display: none;
+      }
+      @include respond-to('<=pad_v') {
+        margin: 0;
+        justify-content: space-between;
+        order: 4;
+        .mail-adress {
+          display: flex;
+          align-items: center;
+          .o-icon {
+            margin-right: 8px;
+            font-size: var(--o-icon_size-m);
+          }
+        }
+      }
 
       .subscribe-sig {
         margin-left: 8px;
+        display: flex;
+        align-items: center;
       }
     }
 
     .sig-description {
-      @include text-truncate(2);
-
       margin-top: 12px;
       min-height: calc(2 * var(--o-line_height-text1));
       color: var(--o-color-info2);
+      @include text-truncate(2);
       @include text1;
       @include respond-to('<=pad_v') {
+        margin-top: 6px;
+        order: 1;
         min-height: auto;
+      }
+      .repo {
+        display: flex;
+        .lebal {
+          color: var(--o-color-info1);
+          font-weight: 500;
+          margin-right: 8px;
+        }
       }
     }
 
@@ -486,9 +597,19 @@ const getMoreDataMo = () => {
       display: flex;
       margin-top: 16px;
       align-items: center;
-
+      order: 6;
+      @include respond-to('<=pad_v') {
+        margin-top: 0;
+      }
       .member {
         margin-left: -4px;
+      }
+      .single-member {
+        display: flex;
+        align-items: center;
+        .word-avatar {
+          margin-right: 8px;
+        }
       }
 
       .contributor-num {
@@ -511,6 +632,18 @@ const getMoreDataMo = () => {
         color: rgba($color: var(--o-black), $alpha: 1);
         background-color: rgba($color: var(--o-white), $alpha: 1);
       }
+    }
+    .o-divider {
+      display: none;
+      @include respond-to('<=pad_v') {
+        display: block;
+      }
+    }
+    .order-1 {
+      order: 3;
+    }
+    .order-2 {
+      order: 5;
     }
   }
 

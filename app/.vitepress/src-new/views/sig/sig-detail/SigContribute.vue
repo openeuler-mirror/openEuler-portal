@@ -420,7 +420,7 @@ const renderData = computed(() => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 56px;
+    padding: 12px 24px 12px 56px;
     @include respond-to('<=pad_v') {
       padding: 8px 56px;
     }
@@ -473,7 +473,10 @@ const renderData = computed(() => {
   font-family: 500;
 
   .yellow-box {
-    margin-right: 24px;
+    @include text2;
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -487,12 +490,21 @@ const renderData = computed(() => {
       text-align: center;
       margin-right: 8px;
       border-radius: 50%;
+      @include respond-to('<=pad_v') {
+        width: 8px;
+        height: 8px;
+      }
     }
   }
 }
 
 .contribute-list-mo {
+  display: flex;
+  justify-content: space-between;
   margin-top: 12px;
+  .yellow-box {
+    margin-right: 0;
+  }
 }
 
 .bg-color-maintainer {

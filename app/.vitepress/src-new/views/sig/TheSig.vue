@@ -9,8 +9,7 @@ import SigWelcomeJoin from './SigWelcomeJoin.vue';
 import SigAbout from './SigAbout.vue';
 import SigList from './SigList.vue';
 
-import illustration from '~@/assets/category/talent-assessment/illustration.png';
-import banner from '~@/assets/category/talent-assessment/banner-bg.png';
+import banner from '~@/assets/category/sig/sig-center-banner.png';
 
 const { isPhone, isPad } = useScreen();
 
@@ -23,6 +22,7 @@ const verticalPadding = computed(() => {
     return ['0', '72px'];
   }
 });
+
 </script>
 <template>
   <BannerLevel2
@@ -30,7 +30,6 @@ const verticalPadding = computed(() => {
     :title="$t('sig.sigCenter')"
     :subtitle="$t('sig.subtitle')"
     :background-image="banner"
-    :illustration="illustration"
   />
   <div class="mo-title">{{ $t('sig.sigCenter') }}</div>
   <SigWelcomeJoin class="sig-welcome" />
