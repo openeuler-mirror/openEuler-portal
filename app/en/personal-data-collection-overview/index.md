@@ -17,15 +17,14 @@ This website involves the following personal data collection scenarios:
 - **Purpose**: Verify identity during login and registration on this website and maintain your personal data.
 - **Personal data type**: data you voluntarily submit
 - **Collection method**: user input or shared by third-party accounts
-- **Personal data fields**: user name, company name, **email address**, **phone number**, password, **email or phone verification code** and Gitee UUID、Gitee ID、Gitee nickname、**Gitee email address**、Gitee avatar、Github UUID、Github ID、Github nickname、**Github email address**、Github avatar、OpenAtom UUID、OpenAtom username、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar.
+- **Personal data fields**: user name, company, **email address**, **phone number**, password, **email or phone verification code** and Gitee UUID、Gitee ID、Gitee nickname、**Gitee email address**、Gitee avatar、Github UUID、Github ID、Github nickname、**Github email address**、Github avatar、OpenAtom UUID、OpenAtom username、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar.
 
 ## 2. Forum Service
 
 - **Purpose**: Verify account identity and permissions, provide more secure services, and verify reported contents.
 - **Personal data type**: data you voluntarily submit
 - **Collection method**: user input, shared by third-party accounts, or collected by the system
-- **Personal data fields**: user name, **email address**, **phone number**, password, nickname, avatar, Gitee ID, GitHub ID, device operating system, hardware name, browser name, login time, likes, watches, favorites, number of posts, number of replies, number of follows, number of followers, profile, number of badges, list of follows, list of followers, post and reply content, images, audios, videos, documents, and comments
-Report type, report description, user name, IP address, region, organization, and host name
+- **Personal data fields**: user name, **email address**, **phone number**, password, nickname, avatar, Gitee ID, GitHub ID, IP address, region, device information, login time, preference settings, like information, follow information, favorite content, post count, reply count, follow count, fan count, personal profile, badge acquisition, sidebar settings, follow list, fan list, email summary, time zone, post and reply content, images, audio, video, documents, comments, report type, description, region, organization, and host name.
 
 ## 3. Mailing List Service
 
@@ -58,7 +57,7 @@ Report type, report description, user name, IP address, region, organization, an
 - **Purpose**: Help developers better understand and connect with the community, enabling faster engagement.
 - **Personal data type**: data you voluntarily submit
 - **Collection method**: user input
-- **Personal data fields**: **photo**, name, **email address**, company name, position, school, profile, and Gitee ID
+- **Personal data fields**: **photo**, name, **email address**, company name, position, school, profile, region, and Gitee ID
 
 ## 7. Meetup Application
 

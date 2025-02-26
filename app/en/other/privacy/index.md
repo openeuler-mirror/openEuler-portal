@@ -4,9 +4,9 @@ title: 'Privacy Policy'
 
 <div class='markdown markdown-statement'>
 
-<h1>Privacy Policy</h1>
+# Privacy Policy
 
----
+<hr/>
 
 The OpenAtom Foundation (hereinafter referred to as "we," "us," or "foundation") understands the importance of your privacy and fully respects it. **<u>Please read this Privacy Policy (hereinafter referred to as "this policy") carefully before you submit your personal data to us</u>**. If you have any questions about how we process your personal data, please feel free to contact us.
 
@@ -19,15 +19,15 @@ The OpenAtom Foundation (hereinafter referred to as "we," "us," or "foundation")
   1. When you register for an openEuler community account, we will collect your user name, **email address**, **phone number**, password, and **email/phone verification code**. A unique account identifier will be automatically generated. Refusal to provide this information will prevent account creation.
   2. When you log in to the openEuler community using your user name, **email address**, or **phone number**, we will collect your user name, **email address**, **phone number**, password and **verification code** for authentication. Refusal to provide this information will prevent login.
   3. When you log in using a third-party account (Gitee, GitHub, or OpenAtom), we will collect your Gitee UUID、Gitee ID、Gitee nickname、**Gitee email address**、Gitee avatar、Github UUID、Github ID、Github nickname、**Github email address**、Github avatar、OpenAtom UUID、OpenAtom username、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar from that platform for authentication and code repository access management. If you use Gitee or GitHub without an existing bound openEuler account, a new openEuler account with a unique identifier will be automatically generated, deriving its user name from your Gitee or GitHub account. Refusal to provide this information will prevent login via third-party accounts.
-  4. After logging in, you can optionally provide your avatar, nickname, and company name. This information is not required for using openEuler community features.
+  4. After logging in, you can optionally provide your avatar, nickname, and company. This information is not required for using openEuler community features.
   5. After logging in, you can modify your **email address**, **phone number**, and password, we will collect **email address**, **phone number**, password and **verification code** for authentication.
   6. After logging in, you can bind your openEuler account to a third-party account (GitHub, Gitee, or OpenAtom). We will collect your Gitee UUID、Gitee ID、Gitee nickname、**Gitee email address**、Gitee avatar、Github UUID、Github ID、Github nickname、**Github email address**、Github avatar、OpenAtom UUID、OpenAtom username、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar from the bound platform. Refusal to provide this information will prevent third-party account binding for login purposes.
 
 **b) Forum Service**
 
-1. When you sign up or log in to the forum service, we will collect your user name, **email address**, **phone number**, password, nickname, avatar, Gitee ID and GitHub ID from your unified account, and assign permissions and roles to your account. In addition, we will collect the operating system version, hardware name, browser name, and login time of your device to provide you with more secure services.
-2. When you use the forum service, we will collect your likes, watches, favorites, number of posts, number of replies, number of follows, number of followers, profile, number of badges, list of follows, list of followers, post and reply content, images, audios, videos, documents, and comments to understand your personal preferences and provide you with better services.
-3. When you report a concern about a forum post or reply, we will collect your report type, description, user name, IP address, region, organization, and host name to verify and confirm the content of the report.
+  1. When you sign up or log in to the forum service, we will collect your user name, **email address**, **phone number**, password, nickname, avatar, Gitee ID and GitHub ID from your unified account, and assign permissions and roles to your account. In addition, we will collect IP address, region, device information, login time, and preference settings to provide you with more secure services;
+  2. When you use the forum service, we collect your like information, follow information, favorite content, post count, reply count, follow count, fan count, personal profile, badge acquisition, sidebar settings, follow list, fan list, email summary, time zone, post and reply content, images, audio, video, documents, and comments to understand your personal preferences and better serve you;
+  3. When you report a concern about a forum post or reply, we will collect your report type, description, user name, IP address, region, organization, and host name to verify and confirm the content of the report.
 
 **c) Mail List Service**. When you use our mail list service, we will collect your **email address** and **name (optional)**. We will provide you with the email subscription service to facilitate your participation in discussions in the community.
 
@@ -45,6 +45,8 @@ The OpenAtom Foundation (hereinafter referred to as "we," "us," or "foundation")
 
 **j) EulerMaker**. When you use the EulerMaker service, we will collect your user name, **phone number** and **email address** from your openEuler account for identity verification purposes.
 
+<br/>
+
 We may also supplement the personal data we collect from you with additional personal data we receive from third parties, including other platforms, communities, or legal and public channels within the scope of your authorization and consent. We promise to process your personal data in strict accordance with applicable laws and regulations. Please read the privacy policy and user agreements of the third parties carefully. If your personal data provided by a third party is required for using related services of the community, but you refuse to allow the third party to collect, use, transfer, or share your personal data when the third party provides services, you may not be able to use related services of the community. For example, when you use an authorized third-party account to log in to the community, we will obtain your personal data from the third party with your consent.
 
 ## 2. How We Use Cookies and Similar Technologies
@@ -55,13 +57,13 @@ To ensure our website works properly, we may at times place cookies on your comp
 
 Sharing means providing third parties with your personal data. The third parties and we would handle the personal data independently. We do not share your personal data with third parties without your consent, except in the following circumstances or as described in this policy:
 
-- **a) Sharing under your instruction**. We may share your personal data with your consent and under your instruction to the third parties indicated by you.
+**a) Sharing under your instruction**. We may share your personal data with your consent and under your instruction to the third parties indicated by you.
 
-- **b) Sharing your personal data as necessary for protecting national security, public security, and your and other individuals' crucial legitimate rights and interests**.
+**b) Sharing your personal data as necessary for protecting national security, public security, and your and other individuals' crucial legitimate rights and interests**.
 
-- **c) Affiliates**. We may share your personal data with our affiliates, for the purposes of transaction support, service support, or security support.
+**c) Affiliates**. We may share your personal data with our affiliates, for the purposes of transaction support, service support, or security support.
 
-- **d) Partners**. We may share your personal data with our partners. However, we will share your personal data only for legitimate, justified, necessary, specified, and explicit purposes, and share only the personal data necessary for providing our services.
+**d) Partners**. We may share your personal data with our partners. However, we will share your personal data only for legitimate, justified, necessary, specified, and explicit purposes, and share only the personal data necessary for providing our services.
 
   For more details, please refer to the [Data Sharing with Third Parties](/en/data-sharing-with-third-parties/). If you refuse to allow our partners to collect personal data necessary to provide services, you may be unable to use the services provided through those partners.
 
@@ -83,17 +85,24 @@ We take the security of your personal data seriously. We take appropriate physic
 
 In accordance with applicable laws and regulations, you may have the following rights regarding your personal data:
 
-- **a)** Access the personal data we hold about you and obtain copies thereof;
-- **b)** Request us to update or correct your personal data;
-- **c)** Request us to erase your personal data;
-- **d)** Object to our processing of your personal data;
-- **e)** Restrict our processing of your personal data;
-- **f)** Lodge a complaint with the competent data protection authority.
+**a)** Access the personal data we hold about you and obtain copies thereof;
 
-Please note that these rights are not absolute and may be restricted in accordance with applicable laws. If you need our assistance in exercising the requests or rights above, please contact us as set out in the **"How to Contact Us"** section below.
+**b)** Request us to update or correct your personal data;
+
+**c)** Request us to erase your personal data;
+
+**d)** Object to our processing of your personal data;
+
+**e)** Restrict our processing of your personal data;
+
+**f)** Lodge a complaint with the competent data protection authority.
+
+<br/>
+
+- Please note that these rights are not absolute and may be restricted in accordance with applicable laws. If you need our assistance in exercising the requests or rights above, please contact us as set out in the **"How to Contact Us"** section below.
 
   - If you request us to delete the data (including your name and **email address**) collected for the purpose of signing the CLA, we will no longer be able to provide you with the corresponding services. **<u>You should understand that the CLA is a legally binding document signed by you or the corporation you represent. It serves as a proof of your permanent grants of rights over your contributions. Therefore, we will not delete your personal data upon your request, unless deleting the data does not affect the legal effect of the CLA you have signed</u>**.
-  - any personal data you publicly display on the community website will be stored in the relevant code repository, and historical records will persist even after deletion.
+  - Any personal data you publicly display on the community website will be stored in the relevant code repository, and historical records will persist even after deletion.
 
 **<u>Generally, we will respond to you within one month, unless otherwise required by applicable laws</u>**. Please note that under some circumstances, for example where we cannot verify your identity, or your claim exceeds your rights under applicable laws, we may refuse your request. In this case, we will inform you in written form that your request is refused together with the reasons for our refusal.
 
@@ -125,12 +134,8 @@ You can log in using an openEuler community account and perform the following op
 
 1. You can contact us via email to object to the processing of your personal information.
 2. You can contact us via email to restrict the processing of your personal information.
-3. You can choose to unsubscribe from the mailing list:
-    - If you are not a registered user of the mailing list, you can enter your email address on the unsubscribe page, and that email address will receive a unsubscribe notification email. Click the corresponding confirmation link to complete the unsubscribe process;
-    - If you are a registered user of the mailing list, you can directly enter the mailing list that needs to be unsubscribed and click unsubscribe to unsubscribe;
-4. You can choose User Center -> Security -> Cancel signature to withdraw consent to the policy.
-
-**Please note that if you withdraw your consent to the policy, we will be unable to continue providing services to you, but your account will remain active.**
+3. You can choose to unsubscribe from emails in the mailing list service: enter the email you want to unsubscribe from, enter your email in the unsubscribe area, and that email will receive a unsubscribe notification email. Click the corresponding confirmation link to complete the unsubscribe process
+4. You can choose User Center -> Security -> Cancel signature to withdraw consent to the policy. **Please note that if you withdraw your consent to the policy, we will be unable to continue providing services to you, but your account will remain active.**
 
 ### 6.5 Deletion
 
@@ -138,9 +143,7 @@ You can log in to the openEuler community and choose User Center -> Security -> 
 
 ## 7. Where Your Personal Data Is Stored
 
-None of our service scenarios involve the cross-border transfer of personal data. Your personal data is stored in the People's Republic of China.
-
-Our core services are deployed on servers located in the Hong Kong Special Administrative Region of the People's Republic of China. To facilitate collaboration with our affiliates and business partners, certain services are deployed on servers in the Chinese mainland. This means that your personal data may be processed in the region where you use the services, or in the regions where our affiliates, service providers, or partners are located, and may be accessed from these regions. In such cases, we will fulfill our compliance obligations in accordance with applicable laws and regulations, as well as the terms of this policy, ensuring that your personal data is provided with the same level of protection required by applicable laws and regulations and as set forth in this policy. We will also ensure that appropriate safeguards are implemented when transmitting your personal data. For example, when transmitting your personal data over public networks, we will encrypt the data to prevent unauthorized access.
+To enable our affiliates and partners to provide better support, some of your personal data will be transferred from the Hong Kong Special Administrative Region of the People's Republic of China to the Chinese mainland. In such cases, we will fulfill our compliance obligations in accordance with applicable laws and regulations and this policy to ensure that your personal data is protected as required by applicable laws and regulations and in line with the terms set forth in this policy. We will also implement appropriate safeguards during the transfer of your personal data. For example, when transferring your personal data over public networks, we will encrypt the data to prevent unauthorized access.
 
 ## 8. How This Policy Is Updated
 
@@ -148,7 +151,7 @@ We may update or modify this policy from time to time according to changes of ou
 
 ## 9. How We Protect Children's Online Privacy
 
-This website and its contents and services are mainly intended for individuals over the age of 14. Individuals under the age of 14 are not allowed to use the services we provide without the consent of their parents or guardians. If personal data of an individual under the age of 14 is collected with prior parental consent, we will use or disclose the data only if permitted by law, explicitly consented by the individual's parents or guardians, or necessary for the protection of the individual. If we accidentally collect personal data of an individual under the age of 14 without verifiable prior consent from the individual's parents or guardians, we will attempt to delete the data as soon as possible.
+This website and its contents and services are mainly intended for individuals over the age of 14. Individuals under the age of 14 are not allowed to use the services we provide without the consent of their parents or guardians. If we accidentally collect personal data of an individual under the age of 14 without verifiable prior consent from the individual's parents or guardians, we will attempt to delete the data as soon as possible.
 
 ## 10. Third-Party SDK Privacy and Security Policy
 
@@ -164,8 +167,8 @@ Email: **<contact@openeuler.io>**
 
 Hotline: **+86 15311871505**
 
-Last updated: **February 24, 2025**
+Last updated: **February 26, 2025**
 
-Privacy policy version: **v20250224**
+Privacy policy version: **v20250225**
 
 </div>
