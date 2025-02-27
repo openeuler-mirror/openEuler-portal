@@ -29,6 +29,7 @@ const meetupData = ref({
   meetupFormat: '' as any,
   supports: [] as any,
   details: '',
+  acceptPrivacy: false,
 });
 
 const placeholderList = [
@@ -221,6 +222,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   await formEl.validate((valid) => {
     if (valid) {
+      meetupData.value.acceptPrivacy = meetupPrivacy.value.length > 0;
       supportsFormat();
       meetupApply();
     }
@@ -238,6 +240,7 @@ async function meetupApply() {
         });
         ruleFormRef.value?.resetFields();
         meetupPrivacy.value = '';
+        meetupData.value.acceptPrivacy = false;
       }
     });
   } catch (error: any) {
