@@ -121,7 +121,7 @@ const renderMaintainers = computed(() => {
 
 // option 渲染的 sigs
 const renderRepos = computed(() => {
-  return allSigInfo.value.flatMap((sigInfo) => sigInfo.repos);
+  return filterSigInfo.value.flatMap((sigInfo) => sigInfo.repos);
 });
 // 构建 v2 select 需要的数据结构
 const transformedRepos = computed(() => {
