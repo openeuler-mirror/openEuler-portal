@@ -38,7 +38,7 @@ This website involves the following personal data collection scenarios:
 - **Purpose**: Maintain service quality and operational requirements by automatically collecting and storing essential log data for community management and system security.
 - **Personal data type**: application or device information
 - **Collection method**: collected by the system
-- **Personal data fields**: access timestamp, IP address, request details, access status, accessed resource size, access source, user agent, application information (application ID, SDK version, browser, and browser version), device information (operating system, operating system version, device type, device vendor, screen width, and screen height), application usage information (event name, event attributes, reporting time, previous page URL, page title, current page URL and login status)
+- **Personal data fields**: access timestamp, IP address, request details, access status, accessed resource size, access source, user agent, device information (device name, device type, device vendor, operating system, operating system version, screen width, screen height), application information (application ID, SDK version , browser, browser version, browser viewport width, browser viewport height), application usage information (event name, event attributes, reporting time, client anonymous ID, username (if you have logged into community account))
 
 ## 5. Contributor License Agreement (CLA) Signing
 

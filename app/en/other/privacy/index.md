@@ -31,7 +31,7 @@ The OpenAtom Foundation (hereinafter referred to as "we," "us," or "foundation")
 
 **c) Mail List Service**. When you use our mail list service, we will collect your **email address** and **name (optional)**. We will provide you with the email subscription service to facilitate your participation in discussions in the community.
 
-**(d) Service Optimization**. To ensure service quality and operations, we automatically collect and store necessary log data, including access timestamps, IP addresses, region,request details, access status, resource size, access origin, and user agent information. In addition, we will collect application information (application ID, SDK version, browser, and browser version), device information (operating system, operating system version, device type, device vendor, screen width, and screen height), application usage information (event name, event attributes, reporting time, previous page URL, page title, current page URL, and login status). This data is collected for the purposes of community operations and O&M security.
+**(d) Service Optimization**. To ensure service quality and operations, we automatically collect and store necessary log data, including access timestamps, IP addresses, region,request details, access status, resource size, access origin, and user agent information. In addition, we will collect your device information (device name, device type, device vendor, operating system, operating system version, screen width, screen height), application information (application ID, SDK version , browser, browser version, browser viewport width, browser viewport height), application usage information (event name, event attributes, reporting time, client anonymous ID, username (if you have logged into community account)). This data is collected for the purposes of community operations and O&M security.
 
 **e) Contributor License Agreement ("CLA") Signing**. When you participate in code contribution through the Contributor License Agreement ("CLA") signing system (click [here](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340) to learn more), you need to submit your [relevant personal data](https://clasign.osinfra.cn/privacy/corp/gitee_openeuler-1611298811283968340) to the CLA signing system. We will obtain such personal data to verify whether you have signed the CLA, and to conduct relevant statistical analysis to understand how the community is operating.
 
@@ -167,8 +167,8 @@ Email: **<contact@openeuler.io>**
 
 Hotline: **+86 15311871505**
 
-Last updated: **February 26, 2025**
+Last updated: **February 27, 2025**
 
-Privacy policy version: **v20250225**
+Privacy policy version: **v20250227**
 
 </div>
