@@ -103,4 +103,11 @@ const { lePadV } = useScreen();
     }
   }
 }
+[lang='en'] {
+  .sig-welcome {
+  .o-divider {
+    height: 191px;
+  }
+}
+}
 </style>
