@@ -3,19 +3,19 @@ import { ref, computed, onMounted } from 'vue';
 
 import { useData } from 'vitepress';
 
-import {
-  OTable,
-  OPagination,
-  OScroller,
-} from '@opensig/opendesign';
+import { OIcon, OTable, OPagination, OScroller } from '@opensig/opendesign';
+
+import IconChevronDown from '~icons/app-new/icon-chevron-down.svg';
 
 import { getSigRepositoryList } from '@/api/api-sig';
 
 import FilterableTableHeader from '~@/components/FilterableTableHeader.vue';
 
 import { useLocale } from '~@/composables/useLocale';
+import { useScreen } from '~@/composables/useScreen';
 
 const { t, locale } = useLocale();
+const { lePadV } = useScreen();
 
 const { params } = useData();
 
@@ -26,9 +26,7 @@ const sigName = computed(() => {
 // 仓库列表参数
 const currentPage = ref(1);
 const pageSize = ref(10);
-const totalPage = computed(() =>
-  Math.ceil(totalRepositoryList.value.length / pageSize.value)
-);
+
 // 列表过滤后数据
 const totalRepositoryList = ref([] as any[]);
 // 列表原始数据
@@ -42,14 +40,30 @@ const maintainerSelected = ref('');
 const committerList = ref<string[]>([]);
 const committerSelected = ref('');
 
+// 移动端判断数据是否完全展示
+const isFullyDisplayed = computed(() => {
+  return (
+    currentPage.value * pageSize.value >=
+    (totalRepositoryList.value.length || 0)
+  );
+});
+
 const repositoryList = computed(() => {
-  if (totalRepositoryList.value.length > pageSize.value) {
+  if (!lePadV.value) {
+    //PC 端分页
+    if (totalRepositoryList.value.length > pageSize.value) {
+      return totalRepositoryList.value.slice(
+        (currentPage.value - 1) * pageSize.value,
+        currentPage.value * pageSize.value
+      );
+    } else {
+      return totalRepositoryList.value;
+    }
+  } else {
     return totalRepositoryList.value.slice(
-      (currentPage.value - 1) * pageSize.value,
+      0,
       currentPage.value * pageSize.value
     );
-  } else {
-    return totalRepositoryList.value;
   }
 });
 
@@ -93,14 +107,30 @@ const getRepositoryList = () => {
 
 // 表格配置
 const columns = [
-  { label: t('sig.repositoryName'), key: 'repo', style: 'width: 25%' },
-  { label: t('sig.maintainerEn'), key: 'maintainer', style: 'width: 35%' },
+  {
+    label: t('sig.repositoryName'),
+    key: 'repo',
+    style: 'width:120px',
+  },
+  {
+    label: t('sig.maintainerEn'),
+    key: 'maintainer',
+    style: 'width:200px',
+  },
   {
     label: t('sig.committer'),
     key: 'gitee_id',
-    style: 'width: 40%',
+    style: 'width:250px',
   },
 ];
+
+const getMoreClick = () => {
+  if (isFullyDisplayed.value) {
+    currentPage.value = 1;
+  } else {
+    currentPage.value++;
+  }
+};
 
 onMounted(() => {
   getRepositoryList();
@@ -111,7 +141,12 @@ onMounted(() => {
     <h2 class="repo-title">
       {{ $t('sig.repoList', { count: totalRepositoryList.length }) }}
     </h2>
-    <OScroller size="small" class="table-scroller">
+    <OScroller
+      size="small"
+      :show-type="lePadV ? 'always' : 'never'"
+      :disabled-y="true"
+      class="table-scroller"
+    >
       <OTable
         class="repo-table"
         :columns="columns"
@@ -189,6 +224,18 @@ onMounted(() => {
         </template>
       </OTable>
     </OScroller>
+    <div
+      v-if="lePadV && (totalRepositoryList?.length || 0) > pageSize"
+      class="get-more"
+      @click="getMoreClick"
+    >
+      <span>{{
+        isFullyDisplayed ? $t('common.collapse') : $t('common.more')
+      }}</span>
+      <OIcon :class="{ reversal: isFullyDisplayed }">
+        <IconChevronDown />
+      </OIcon>
+    </div>
     <!-- 页码 -->
     <div
       v-if="totalRepositoryList.length > [10, 20, 30, 40][0]"
@@ -222,6 +269,13 @@ onMounted(() => {
     @include respond-to('<=pad_v') {
       margin-top: 12px;
     }
+    :deep(.o-table-wrap) {
+      overflow: visible;
+      table {
+        table-layout: fixed;
+        background-color: var(--o-color-fill2);
+      }
+    }
   }
 
   .pagination {
@@ -231,6 +285,22 @@ onMounted(() => {
     @include respond-to('<=pad_v') {
       display: none;
     }
+  }
+  .get-more {
+    cursor: pointer;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    @include text1;
+    color: var(--o-color-info3);
+    .o-icon {
+      margin-left: 8px;
+      font-size: var(--o-icon_size-xs);
+      transition: all 0.3s;
+    }
+  }
+  .reversal {
+    transform: rotate(180deg);
   }
 }
 </style>

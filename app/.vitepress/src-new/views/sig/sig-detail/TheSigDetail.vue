@@ -174,8 +174,9 @@ onMounted(() => {
   display: grid;
   grid-template-columns: 348px 1fr;
   gap: 32px;
+  width: 100%;
   @include respond-to('<=laptop') {
-    grid-template-columns: 1fr;
+    display: block;
   }
 
   .sig-member-title {
@@ -195,6 +196,7 @@ onMounted(() => {
   }
 
   .sig-floor {
+    width: 100%;
     .meeting-title {
       font-weight: 500;
       @include h4;

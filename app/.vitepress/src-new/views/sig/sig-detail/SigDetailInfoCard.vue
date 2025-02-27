@@ -43,13 +43,19 @@ watch(
   () => props.description,
   () => {
     nextTick(() => {
+      console.log(descriptionRef.value?.scrollHeight);
+      console.log(descriptionRef.value?.clientHeight);
+
       if (
         descriptionRef.value?.scrollHeight > descriptionRef.value?.clientHeight
       ) {
+        console.log(props.description);
+
         isOverflow.value = true;
       }
     });
-  }
+  },
+  { immediate: true }
 );
 </script>
 <template>
@@ -98,18 +104,18 @@ watch(
     </div>
     <ODivider class="divider-mo" direction="h" />
     <div class="content">
+      <div ref="descriptionRef" class="sig-description">
+        {{ description }}
+      </div>
       <OPopover
+        v-if="isOverflow"
         position="bottom"
-        trigger="click"
-        wrapper=".content"
+        trigger="hover"
+        wrapper=".sig-detail-info-card"
         wrap-class="sig-popup-description"
+        target=".sig-description"
       >
-        <template #target>
-          <div ref="descriptionRef" class="sig-description">
-            {{ description }}
-          </div>
-        </template>
-        <div v-if="isOverflow">
+        <div>
           {{ description }}
         </div>
       </OPopover>
