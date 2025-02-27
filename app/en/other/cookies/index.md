@@ -123,6 +123,7 @@ You can click <CookieReset/> to withdraw your consent to non-necessary cookies.
 
 In addition to cookies, we may use other technologies to automatically collect information.
 Browser web storage: We may use browser web storage (including HTML5), also known as local storage, for similar purposes to those of cookies. Browser web storage can store more data than cookies. Your web browser may provide the function to clear the data stored therein.
+
 We use the following local storage technologies:
 
 1. **LocalStorage**

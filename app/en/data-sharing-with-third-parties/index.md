@@ -14,7 +14,7 @@ To ensure the secure and stable running of the website of the OpenAtom Foundatio
 
 - **Third-party company name**: Beijing Baidu Netcom Science Technology Co., Ltd.
 - **Product/Type**: Baidu Statistics SDK
-- **Shared data**: device information (including the IP address, operating system, Internet service provider, system language, screen resolution, screen color, region, browser type, browser language, and browser version) and access information (including the access origin, searched keywords, accessed pages, exit page, visitor identifier, number of community access times, stay duration, access timestamp, and type and version of the server used to access the community)
+- **Shared data**: device information (IP address, hardware information, operating system, Internet service provider, system language, screen resolution, screen color), usage information (region, browser type, browser language, browser version, access source, access search terms, accessed pages, exit page, visitor identifier, number of community visits, duration of stay, access timestamp, server type and version used to access the community)
 - **Data sharing purpose**: daily data analysis of community operations
 - **Application scenario**: user access to the community website
 - **Data sharing method**: transmission through background interfaces
@@ -24,7 +24,7 @@ To ensure the secure and stable running of the website of the OpenAtom Foundatio
 
 - **Third-party company name**: Beijing Steamory Technology Co., Ltd.
 - **Product/Type**: Authing account
-- **Shared data**: user name, company name, **email address**, **phone number**, password, **email or phone verification code** and Gitee/Github/OpenAtom account details (UUID, ID, nickname, **email address**, and avatar)
+- **Shared data**: user name, company, **email address**, **phone number**, password, **email or phone verification code** and Gitee UUID、Gitee ID、Gitee nickname、**Gitee email address**、Gitee avatar、Github UUID、Github ID、Github nickname、**Github email address**、Github avatar、OpenAtom UUID、OpenAtom username、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar.
 - **Data sharing purpose**: authentication and personal data management of the community website
 - **Application scenario**: login service
 - **Data sharing method**: transmission through background interfaces
