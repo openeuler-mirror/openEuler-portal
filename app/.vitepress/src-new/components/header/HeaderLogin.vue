@@ -126,11 +126,11 @@ onMounted(async () => {
   }
 
   .opt-name {
+    padding: 2px 0;
     color: var(--o-color-info1);
     margin-left: 8px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
     width: 72px;
     @include respond-to('<=pad_v') {
       display: none;
