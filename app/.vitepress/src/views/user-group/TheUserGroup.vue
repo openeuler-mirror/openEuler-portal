@@ -10,16 +10,13 @@ import GroupCity from './GroupCity.vue';
 
 import banner from '@/assets/banner/banner-user-group.png';
 import groupIllustration from '@/assets/illustrations/user-group.png';
-import IconRight from '~icons/app/icon-arrow-right.svg';
 
 const i18n = useI18n();
 const groupI18n = computed(() => {
   return i18n.value.group;
 });
 
-const jumpTo = (path: string) => {
-  window.open(path, '_blank');
-};
+
 </script>
 <template>
   <BannerLevel2
@@ -28,20 +25,6 @@ const jumpTo = (path: string) => {
     :illustration="groupIllustration"
     class="banner"
   >
-    <template #default>
-      <OButton
-        class="post-btn"
-        @click="jumpTo(groupI18n.LINK)"
-        type="outline"
-        animation
-        size="nomral"
-      >
-        {{ groupI18n.LINK_TEXT }}
-        <template #suffixIcon>
-          <OIcon class="right-icon"><IconRight /></OIcon>
-        </template>
-      </OButton>
-    </template>
   </BannerLevel2>
   <AppContent>
     <p class="word-style">

@@ -178,7 +178,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   if (formData.value.acceptPrivacyVersion.length < 1) {
     ElMessage({
       type: 'error',
-      message: '请勾选隐私声明',
+      message: '请勾选隐私政策',
     });
     return;
   }
@@ -225,9 +225,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
     <div class="form">
       <h2>openEuler SIG Gathering 2024 活动报名</h2>
       <div class="auth-box">
-        <OButton type="primary">
-          您好，活动报名已截止
-        </OButton>
+        <OButton type="primary"> 您好，活动报名已截止 </OButton>
       </div>
     </div>
   </AppContent>

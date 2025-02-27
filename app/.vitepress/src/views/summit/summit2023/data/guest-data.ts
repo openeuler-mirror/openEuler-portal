@@ -803,7 +803,10 @@ export default {
         name: '王建民',
         position: ['中科院软件所', '高级工程师'],
         nameEn: 'Wang Jianmin',
-        positionEn: [' Senior Engineer,Institute of Software', 'Chinese Academy of Sciences'],
+        positionEn: [
+          ' Senior Engineer,Institute of Software',
+          'Chinese Academy of Sciences',
+        ],
       },
       {
         img: dukaitian,
@@ -866,7 +869,10 @@ export default {
         name: '曾宏安',
         position: ['北京凝思软件股份有限公司', '研发中心总经理'],
         nameEn: 'Zeng Hongan',
-        positionEn: ['General Manager, R&D Center', 'Beijing Linx Software Corp'],
+        positionEn: [
+          'General Manager, R&D Center',
+          'Beijing Linx Software Corp',
+        ],
       },
       {
         img: menxiaokang,

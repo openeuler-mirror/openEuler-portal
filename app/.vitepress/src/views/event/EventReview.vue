@@ -2,8 +2,6 @@
 import { reactive, onMounted, Ref, ref, watch } from 'vue';
 import { useData, useRouter } from 'vitepress';
 
-import _ from 'lodash-es';
-
 import { useCommon } from '@/stores/common';
 
 import AppContent from '@/components/AppContent.vue';
@@ -93,7 +91,11 @@ watch(
 
 <template>
   <AppContent class="salon-content">
-    <div v-loading="loading" element-loading-background="transparent" class="salon-review-mian">
+    <div
+      v-loading="loading"
+      element-loading-background="transparent"
+      class="salon-review-mian"
+    >
       <template v-if="allReviewList?.length">
         <div class="salon-review">
           <OCard

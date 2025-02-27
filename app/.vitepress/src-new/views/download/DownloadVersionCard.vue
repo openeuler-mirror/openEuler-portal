@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { ref, Ref, toRefs, onMounted, watch, type ComputedRef } from 'vue';
 
-import lodash from 'lodash-es';
-
 import { useLocale } from '~@/composables/useLocale';
 import { archMap, SCENARIO_LIST } from '~@/data/download/download';
 
@@ -177,7 +175,7 @@ function setActiveMirror() {
   selectMirror.value = [];
   if (mirrorList.value?.length) {
     tableData.value?.forEach(() => {
-      const temp = lodash.cloneDeep(mirrorList.value);
+      const temp = JSON.parse(JSON.stringify(mirrorList.value));
       temp[0].NameSpend =
         temp[0].Name + ' (' + temp[0].NetworkBandwidth + 'Mb/s)';
 

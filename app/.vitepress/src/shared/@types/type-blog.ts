@@ -18,7 +18,7 @@ export interface SearchBlogT {
   count: number;
   page: number;
   pageSize: number;
-  records: BlogDataT[]
+  records: BlogDataT[];
 }
 export interface ParamsTypeT {
   page: number;

@@ -19,7 +19,6 @@ const organizationData: any = computed(() => {
     return ORGANIZATION_DATA.zh;
   }
 });
-
 </script>
 
 <template>

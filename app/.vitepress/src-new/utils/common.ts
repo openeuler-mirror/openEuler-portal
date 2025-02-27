@@ -1,4 +1,5 @@
 import Cookies from 'js-cookie';
+const DOMAIN = import.meta.env.VITE_COOKIE_DOMAIN;
 
 /**
  * 获取url搜索参数
@@ -52,3 +53,13 @@ export function setCookie(
 export function removeCookie(key: string) {
   Cookies.remove(key);
 }
+
+/**
+ * 检查是否是同域名
+ * @param {string} path 跳转路径
+ */
+export const checkOriginLink = (path: string) => {
+  return (
+    path.includes(DOMAIN) || path.includes('openeuler.openatom.cn')
+  );
+};

@@ -26,33 +26,18 @@ const props = defineProps({
   },
 });
 const screenWidth = useWindowResize();
-const isTest = ref(false);
 const liveUrl = ref('');
 const renderData: Array<RenderData> = props.liveData as any;
 const roomId = ref(0);
 const setLiveRoom = (item: RenderData, index: number): void => {
   roomId.value = index;
-  createUserId(isTest.value ? item.liveTestId : item.liveId);
+  createLiveUrl(item.liveId);
 };
 
-function createUserId(liveId: number) {
-  let digit = Math.round(Math.random() * 10);
-  digit > 3 ? digit : (digit = 3);
-
-  let returnId = '',
-    userName = '';
-  const charStr =
-    '0123456789@#$%&~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  for (let i = 0; i < digit; i++) {
-    const index = Math.round(Math.random() * (charStr.length - 1));
-    returnId += charStr.substring(index, index + 1);
-  }
-  userName = returnId;
-  // landScape 是否启用 H5 直播间横屏适配
-  // logout=1 增加参数 logout=1 时，页面会做退出登录处理，会以游客身份观看
-  liveUrl.value = `https://vhall.huawei.com/v2/watch/${liveId}?lang=zh&thirdId=${userName}&landScape=true`;
+function createLiveUrl(liveId: number) {
+  liveUrl.value = `https://vhall.huawei.com/v2/watch/${liveId}?lang=zh&landScape=true`;
 }
-// const state = ref(-1);
+
 const height = ref(800);
 function setHeight(data: any) {
   // data.state=0,直播未开始，1正在直播，2直播结束，3回放中
@@ -85,10 +70,7 @@ function messageEvent() {
   );
 }
 onMounted(async () => {
-  isTest.value =
-    window.location.host.includes('test.osinfra') ||
-    window.location.host.includes('localhost');
-  createUserId(isTest.value ? renderData[0].liveTestId : renderData[0].liveId);
+  createLiveUrl(renderData[0].liveId);
   messageEvent();
 });
 
@@ -98,7 +80,7 @@ const ActiveBgLong = `url(${liveActiveBgLong})`;
 
 const liveRoom = ref(renderData[0].name);
 const changeLive = (val: number): void => {
-  createUserId(val);
+  createLiveUrl(val);
 };
 </script>
 
@@ -110,7 +92,7 @@ const changeLive = (val: number): void => {
           v-for="item in renderData"
           :key="item.id"
           :label="item.name"
-          :value="isTest ? item.liveTestId : item.liveId"
+          :value="item.liveId"
         />
       </OSelect>
     </div>

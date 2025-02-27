@@ -3,10 +3,8 @@ import { ref, shallowRef, onMounted, computed, onUnmounted, watch } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 
-import _ from 'lodash-es';
 import { getNowFormatDate } from '@/shared/utils';
 
-import AMapLoader from '@amap/amap-jsapi-loader';
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import AppContent from '@/components/AppContent.vue';
 
@@ -30,7 +28,6 @@ const screenWidth = ref(1080);
 
 const isVideoVisible = ref(false);
 
-const map: any = shallowRef(null);
 const { lang } = useData();
 const i18n = useI18n();
 
@@ -86,7 +83,7 @@ function getActivitiesData() {
         //  线上活动不加载地图，不显示tab
         !(res.latitude && res.longitude)
           ? (tabTitle.value = tabTitle.value.splice(0, 2))
-          : initMap(res.longitude, res.latitude);
+          : '';
 
         res[
           'posterImg'
@@ -124,29 +121,6 @@ function getActivitiesData() {
       throw new Error(error);
     }
   }
-}
-
-function initMap(lng: number, lat: number) {
-  AMapLoader.load({
-    key: 'c042a36d28964bd1e1e1785849fb335f', // 申请好的Web端开发者Key，首次调用 load 时必填
-    version: '2.0', // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
-  })
-    .then((AMap) => {
-      const marker = new AMap.Marker({
-        position: new AMap.LngLat(lng, lat),
-        size: new AMap.Size(30, 35),
-        anchor: 'bottom-center',
-      });
-      map.value = new AMap.Map('container', {
-        zoom: 16, //  初始化地图级别
-        lang: 'en',
-        center: [lng, lat], //  初始化地图中心点位置
-      });
-      map.value.add(marker);
-    })
-    .catch((e: any) => {
-      throw new Error(e);
-    });
 }
 
 function clickDayTab(e: any) {
@@ -408,9 +382,6 @@ watch(windowWidth, () => {
                 <IconArrowRight class="icon"></IconArrowRight>
               </OIcon>
             </div>
-          </div>
-          <div class="map">
-            <div id="container"></div>
           </div>
         </div>
       </div>
@@ -989,18 +960,6 @@ watch(windowWidth, () => {
         .o-icon {
           color: var(--e-color-brand1);
         }
-      }
-    }
-    .map {
-      width: 100%;
-      margin: -50px auto 0 auto;
-      height: 100%;
-      @media (max-width: 768px) {
-        display: none;
-      }
-      #container {
-        width: 100%;
-        height: 500px;
       }
     }
   }

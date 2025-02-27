@@ -23,7 +23,6 @@ export default {
     description: {
       text: 'openEuler高校技术小组是在院校内围绕openEuler进行学习、科研及参与社区贡献的组织，该技术小组由高校老师指导学生学习openEuler相关知识、产出openEuler相关科研成果，或直接参与到社区贡献，同时社区及社区生态伙伴整合资源为技术小组的学习与科研提供支持和赋能。',
       linkText: '申请加入',
-      linkHref: 'https://wj.qq.com/s2/13591159/5f50',
     },
     groupList: [
       {

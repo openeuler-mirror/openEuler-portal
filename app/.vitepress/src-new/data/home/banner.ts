@@ -1,16 +1,6 @@
-import newyear_pc from '~@/assets/category/home/banner/new-year/new-year_pc.jpg';
-import newyear_pad from '~@/assets/category/home/banner/new-year/new-year_pad.jpg';
-import newyear_mb from '~@/assets/category/home/banner/new-year/new-year_mb.jpg';
-import newyear_attach from '~@/assets/category/home/banner/new-year/new-year_attach.png';
-
-import summit2024_pc_light from '~@/assets/category/home/banner/summit2024/summit2024_pc_light.jpg';
-import summit2024_pc_dark from '~@/assets/category/home/banner/summit2024/summit2024_pc_dark.jpg';
-import summit2024_pad_light from '~@/assets/category/home/banner/summit2024/summit2024_pad_light.jpg';
-import summit2024_pad_dark from '~@/assets/category/home/banner/summit2024/summit2024_pad_dark.jpg';
-import summit2024_mb_light from '~@/assets/category/home/banner/summit2024/summit2024_mb_light.jpg';
-import summit2024_mb_dark from '~@/assets/category/home/banner/summit2024/summit2024_mb_dark.jpg';
-import summit2024_attach_light from '~@/assets/category/home/banner/summit2024/summit2024_attach_light.png';
-import summit2024_attach_dark from '~@/assets/category/home/banner/summit2024/summit2024_attach_dark.png';
+import newyear_pc from '~@/assets/category/home/banner/new-year/pc.jpg';
+import newyear_pad from '~@/assets/category/home/banner/new-year/pad.jpg';
+import newyear_mb from '~@/assets/category/home/banner/new-year/mb.jpg';
 
 import innovation_pc from '~@/assets/category/home/banner/innovation/innovation_pc.jpg';
 import innovation_pad from '~@/assets/category/home/banner/innovation/innovation_pad.jpg';
@@ -22,28 +12,10 @@ export default {
       bg_pc: newyear_pc,
       bg_pad: newyear_pad,
       bg_mb: newyear_mb,
-      attach: newyear_attach,
-      bg_theme: 'dark',
-      btn: '查看2024社区年报',
+      bg_theme: 'light',
+      title: ['openEuler 2024 社区年报'],
+      btn: '查看详情',
       href: '/zh/annual-report/openEuler-annual-report-2024/',
-      isBlank: true,
-    },
-    {
-      light: {
-        bg_pc: summit2024_pc_light,
-        bg_pad: summit2024_pad_light,
-        bg_mb: summit2024_mb_light,
-        attach: summit2024_attach_light,
-        bg_theme: 'light',
-      },
-      dark: {
-        bg_pc: summit2024_pc_dark,
-        bg_pad: summit2024_pad_dark,
-        bg_mb: summit2024_mb_dark,
-        attach: summit2024_attach_dark,
-        bg_theme: 'dark',
-      },
-      href: '/zh/interaction/summit-list/summit2024/',
       isBlank: true,
     },
     {
@@ -58,25 +30,6 @@ export default {
     },
   ],
   en: [
-    {
-      light: {
-        bg_pc: summit2024_pc_light,
-        bg_pad: summit2024_pad_light,
-        bg_mb: summit2024_mb_light,
-        attach: summit2024_attach_light,
-        bg_theme: 'light',
-      },
-      dark: {
-        bg_pc: summit2024_pc_dark,
-        bg_pad: summit2024_pad_dark,
-        bg_mb: summit2024_mb_dark,
-        attach: summit2024_attach_dark,
-        bg_theme: 'dark',
-      },
-      href: '/en/interaction/summit-list/summit2024/',
-      isBlank: true,
-    },
-
     {
       bg_pc: innovation_pc,
       bg_pad: innovation_pad,

@@ -505,7 +505,7 @@ export default {
             detail: [
               'NestOS是在openEuler社区孵化的云底座操作系统，集成了rpm-ostree支持、ignition配置等技术，采用双根文件系统、原子化更新的设计思路，使用nestos-assembler快速集成构建。并针对K8S、openStack等平台进行适配，优化容器运行底噪，使系统具备十分便捷的集群组件能力，可以更安全的运行大规模的容器化工作负载。',
             ],
-            link: 'https://nestos.openeuler.org/',
+            link: 'https://www.openeuler.org/zh/nestos/',
           },
           {
             name: 'sysMaster',

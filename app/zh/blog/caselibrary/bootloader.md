@@ -1,3 +1,15 @@
+---
+title: '【案例】换标常见问题'
+date: '2024-11-25'
+category: blog
+tags:
+  - 案例库
+  - boot loader
+  - 安装
+author: '孙海'
+summary: '案例分析：换标问题'
+---
+
 # 换标常见问题
 
 ## 场景1：安装失败，提示无法写入boot loader配置

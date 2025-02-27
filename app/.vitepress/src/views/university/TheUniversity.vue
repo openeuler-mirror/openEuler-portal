@@ -62,7 +62,7 @@ onMounted(() => {
       :illustration="universityIllustration"
     ></BannerLevel2>
     <div v-if="isMobile" class="university-tab-mobile">
-      <el-tabs class="other-tabs" v-model.number="activeIndex">
+      <el-tabs v-model.number="activeIndex" class="other-tabs">
         <el-tab-pane
           v-for="(item, index) in navRef"
           :key="item.id"
@@ -91,12 +91,6 @@ onMounted(() => {
         </h2>
         <div class="university-technical-description">
           <span>{{ universityData.technicalGroup.description.text }}</span>
-          <a
-            :href="universityData.technicalGroup.description.linkHref"
-            target="_blank"
-            rel="noopener noreferrer"
-            >{{ universityData.technicalGroup.description.linkText }}</a
-          >
         </div>
         <div class="university-technical-group">
           <OCard
@@ -202,9 +196,9 @@ onMounted(() => {
                 <span class="tag-title">{{ item.contributionName }}</span>
                 <p class="tag-box">
                   <span
-                    class="tag-name"
                     v-for="itemTag in item.contributionTagList"
                     :key="itemTag"
+                    class="tag-name"
                     >{{ itemTag }}</span
                   >
                 </p>

@@ -14,9 +14,8 @@ import bookIllustration from '@/assets/category/minisite/shared/illustration-boo
 import newspapperIllustration from '@/assets/category/minisite/shared/illustration-newspapper.png';
 
 export default {
-  BISHENG_BANNER_TEXT: ['毕昇JDK', 'ARM上最好用的JDK'],
+  BISHENG_BANNER_TEXT: ['毕昇JDK', '一款高性能Java虚拟机'],
   BISHENG_DESC: [
-    '毕昇JDK是华为内部基于OpenJDK定制的Huawei JDK的开源版本。Huawei JDK运行在华为内部500多个产品上，研发团队积累了丰富的开发经验，解决了业务实际运行中遇到的多个疑难问题。',
     '毕昇JDK作为OpenJDK的下游，是一款高性能、可用于生产环境的OpenJDK发行版。毕昇JDK对华为内部应用场景中遇到的一些性能问题和稳定性问题进行了修复，并在ARM架构上进行了性能优化和稳定性增强，在ARM架构上更稳定，在大数据等场景下可以获得更好的性能。',
     '毕昇JDK致力于为JAVA开发者提供一款稳定可靠、高性能、易调测的JDK，也为用户在ARM架构上提供一个更好的选择。',
   ],

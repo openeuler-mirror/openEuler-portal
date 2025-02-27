@@ -399,7 +399,6 @@ export default {
 
               link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/aarch64/Packages/x2openEuler-core-3.0.0-20241022.aarch64.rpm',
             },
-
           ],
         },
 

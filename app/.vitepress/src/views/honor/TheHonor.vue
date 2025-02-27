@@ -126,12 +126,6 @@ function clickDetail(index: number) {
         :is="comMap.get(activeYear)"
         :honor-data="honorData.honorList.get(activeYear)"
       ></component>
-      <p v-show="activeYear === '2022'" class="notice">
-        {{ honorData.notice }}
-      </p>
-      <p v-show="activeYear === '2023'" class="notice">
-        {{ honorData.notice2023 }}
-      </p>
     </div>
   </AppContent>
 </template>

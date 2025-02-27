@@ -21,9 +21,13 @@ import {
   reportPerformance,
 } from '@/shared/analytics';
 
-import { setCookie, getCookie, removeCookie } from '~@/utils/common';
+import { setCookie, removeCookie } from '~@/utils/common';
 
-import { useCookieStore } from '~@/stores/common';
+import {
+  COOKIE_AGREED_STATUS,
+  COOKIE_KEY,
+  useCookieStore,
+} from '~@/stores/common';
 
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
@@ -39,47 +43,17 @@ const cookieStore = useCookieStore();
 
 const COOKIE_DOMAIN = import.meta.env.VITE_COOKIE_DOMAIN;
 
-// cookie的key
-const COOKIE_KEY = 'agreed-cookiepolicy';
-
 // 是否允许分析cookie
 const analysisAllowed = ref(false);
 
-// -------------------- cookie状态 --------------------
-const COOKIE_AGREED_STATUS = {
-  NOT_SIGNED: '0', // 未签署
-  ALL_AGREED: '1', // 同意所有cookie
-  NECCESSARY_AGREED: '2', // 仅同意必要cookie
-};
-
-// 获取cookie状态
-const getUserCookieStatus = () => {
-  const cookieVal = getCookie(COOKIE_KEY) ?? '0';
-
-  const cookieStatusVal = cookieVal[0];
-  const privacyVersionVal = cookieVal.slice(1);
-
-  if (privacyVersionVal !== cookieStore.version) {
-    return COOKIE_AGREED_STATUS.NOT_SIGNED;
-  }
-
-  if (cookieStatusVal === COOKIE_AGREED_STATUS.ALL_AGREED) {
-    return COOKIE_AGREED_STATUS.ALL_AGREED;
-  } else if (cookieStatusVal === COOKIE_AGREED_STATUS.NECCESSARY_AGREED) {
-    return COOKIE_AGREED_STATUS.NECCESSARY_AGREED;
-  } else {
-    return COOKIE_AGREED_STATUS.NOT_SIGNED;
-  }
-};
-
 // 是否未签署
 const isNotSigned = () => {
-  return getUserCookieStatus() === COOKIE_AGREED_STATUS.NOT_SIGNED;
+  return cookieStore.getUserCookieStatus() === COOKIE_AGREED_STATUS.NOT_SIGNED;
 };
 
 // 是否全部同意
 const isAllAgreed = () => {
-  return getUserCookieStatus() === COOKIE_AGREED_STATUS.ALL_AGREED;
+  return cookieStore.getUserCookieStatus() === COOKIE_AGREED_STATUS.ALL_AGREED;
 };
 
 // -------------------- 埋点 --------------------
@@ -88,6 +62,7 @@ const initSensor = () => {
   (function () {
     const hm = document.createElement('script');
     hm.src = 'https://hm.baidu.com/hm.js?ab8d86daab9a8e98cf8faa239aefcd3c';
+    hm.classList.add('analytics-script');
     const s = document.getElementsByTagName('HEAD')[0];
     s.appendChild(hm);
   })();
@@ -98,15 +73,21 @@ const initSensor = () => {
   reportPerformance();
 };
 
-// -------------------- 展示底部提示 --------------------
-const isNoticeVisible = ref(false);
+const removeSensor = () => {
+  disableOA();
+  const scripts = document.querySelectorAll('script.analytics-script');
+  scripts.forEach((script) => {
+    script.remove();
+  });
+};
 
+// -------------------- 展示底部提示 --------------------
 // 显示/隐藏cookie提示
 const toggleNoticeVisible = (val: boolean) => {
   if (isBoolean(val)) {
-    isNoticeVisible.value = val;
+    cookieStore.isNoticeVisible = val;
   } else {
-    isNoticeVisible.value = !isNoticeVisible.value;
+    cookieStore.isNoticeVisible = !cookieStore.isNoticeVisible;
   }
 };
 
@@ -117,7 +98,7 @@ const acceptAll = () => {
   removeCookie(COOKIE_KEY);
   setCookie(
     COOKIE_KEY,
-    `${COOKIE_AGREED_STATUS.ALL_AGREED}${cookieStore.version}`,
+    `${COOKIE_AGREED_STATUS.ALL_AGREED}`,
     180,
     COOKIE_DOMAIN
   );
@@ -131,11 +112,12 @@ const rejectAll = () => {
   removeCookie(COOKIE_KEY);
   setCookie(
     COOKIE_KEY,
-    `${COOKIE_AGREED_STATUS.NECCESSARY_AGREED}${cookieStore.version}`,
+    `${COOKIE_AGREED_STATUS.NECCESSARY_AGREED}`,
     180,
     COOKIE_DOMAIN
   );
   toggleNoticeVisible(false);
+  removeSensor();
 };
 
 // -------------------- 展示弹出框 --------------------
@@ -146,7 +128,7 @@ const toggleDlgVisible = (val: boolean) => {
   if (isBoolean(val)) {
     isDlgVisible.value = val;
   } else {
-    isDlgVisible.value = !isNoticeVisible.value;
+    isDlgVisible.value = !isDlgVisible.value;
   }
 };
 
@@ -201,12 +183,12 @@ if (inBrowser) {
     toggleNoticeVisible(true);
   }
 
-  if (isAllAgreed()) {
+  if (cookieStore.isAllAgreed) {
     cookieStore.status = COOKIE_AGREED_STATUS.ALL_AGREED;
     analysisAllowed.value = true;
     initSensor();
   } else {
-    disableOA();
+    removeSensor();
   }
 }
 
@@ -224,7 +206,7 @@ watch(
 </script>
 
 <template>
-  <div v-if="isNoticeVisible" class="cookie-notice">
+  <div v-if="cookieStore.isNoticeVisible" class="cookie-notice">
     <div class="cookie-notice-content">
       <ContentWrapper class="cookie-notice-wrap">
         <div class="cookie-notice-left">

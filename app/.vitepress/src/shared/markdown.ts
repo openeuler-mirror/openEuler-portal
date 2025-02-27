@@ -17,10 +17,17 @@ const slugify = (s: string) =>
   );
 export function convertGiteePath(markdown: string) {
   const regex = /(\]\()(oEEP-[^\)]+)/g;
-  markdown = markdown?.replace(regex, (match, p1, p2) => `${p1}/zh/oEEP/?name=${encodeURIComponent(decodeURI(p2))}`);
+  markdown = markdown?.replace(
+    regex,
+    (match, p1, p2) =>
+      `${p1}/zh/oEEP/?name=${encodeURIComponent(decodeURI(p2))}`
+  );
 
   const mdRegex = /\(\.\/([^.]+\.md)\)/g;
-  return markdown?.replace(mdRegex, (match, p1) => `(/zh/oEEP/?name=${encodeURIComponent(decodeURI(p1))})`);
+  return markdown?.replace(
+    mdRegex,
+    (match, p1) => `(/zh/oEEP/?name=${encodeURIComponent(decodeURI(p1))})`
+  );
 }
 
 // 将 YFM转为 代码块

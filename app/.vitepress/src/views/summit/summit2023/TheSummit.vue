@@ -18,7 +18,8 @@ import useWindowResize from '@/components/hooks/useWindowResize';
 import data_zh from './data/data_zh';
 import data_en from './data/data_en';
 
-import { getEasyeditorInfo } from '@/api/api-easyeditor';
+import agendaData_zh from './data/agenda-data_zh';
+import agendaData_en from './data/agenda-data_en';
 
 import liveLight from '@/assets/category/summit/summit2022/live.png';
 import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
@@ -31,6 +32,10 @@ const isMobile = computed(() =>
   useWindowResize().value <= 768 ? true : false
 );
 
+const localAgendaData = computed(() => {
+  return lang.value === 'zh' ? agendaData_zh : agendaData_en;
+});
+
 let summitData: any;
 
 if (lang.value === 'zh') {
@@ -41,7 +46,6 @@ if (lang.value === 'zh') {
 
 const dialogVisible = ref(false);
 const commonStore = useCommon();
-const cookieStore = useCookieStore();
 const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );
@@ -55,24 +59,15 @@ function setShowIndex(index: number) {
   tabType.value = 0;
 }
 // 获取议程数据
-const isNoData = ref(false);
 const agendaData = ref([]);
-onMounted(() => {
-  const href = `https://www.openeuler.org/${lang.value}/interaction/summit-list/summit2023/`;
-  getEasyeditorInfo(href)
-    .then((res) => {
-      if (res.data && res.data[0]) {
-        for (let i = 0; i < res.data.length; i++) {
-          res.data[i].content = JSON.parse(res.data[i].content);
-          agendaData.value = res.data;
-          isNoData.value = false;
-        }
-      }
-    })
-    .catch(() => {
-      isNoData.value = true;
-    });
-});
+
+for (let i = 0; i < localAgendaData.value.length; i++) {
+  localAgendaData.value[i].content = JSON.parse(
+    localAgendaData.value[i].content
+  );
+  agendaData.value = localAgendaData.value;
+}
+
 const getData: any = computed(() => {
   let temp;
   if (showIndex.value === 0) {
@@ -136,10 +131,10 @@ onMounted(() => {
     <div class="visa-btn-box">
       <OButton
         v-if="lang === 'en'"
-        @click="dialogVisible = true"
         class="visa-btn"
         size="mini"
         type="primary"
+        @click="dialogVisible = true"
         >Visa Letter Request</OButton
       >
     </div>
@@ -413,7 +408,7 @@ onMounted(() => {
         <a
           href="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/excel/Visa.xlsx"
         >
-          <OButton @click="dialogVisible = true" size="mini" type="primary"
+          <OButton size="mini" type="primary" @click="dialogVisible = true"
             >Download the Application Form
           </OButton>
         </a>

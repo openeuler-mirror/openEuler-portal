@@ -28,14 +28,14 @@ onMounted(() => {
 <template>
   <div class="partner">
     <h3 class="partner-title">
-      {{ lang==="zh"?partnerData.title:partnerData.titleEn }}
+      {{ lang === 'zh' ? partnerData.title : partnerData.titleEn }}
     </h3>
     <div
       v-for="item in partnerData.partnerList"
       :key="item.subTitle"
       class="partner-item"
     >
-      <h4>{{ lang==="zh"?item.subTitle:item.subTitleEn }}</h4>
+      <h4>{{ lang === 'zh' ? item.subTitle : item.subTitleEn }}</h4>
 
       <div class="picture-panel" data-aos="fade-zoom-in" :class="item?.class">
         <a

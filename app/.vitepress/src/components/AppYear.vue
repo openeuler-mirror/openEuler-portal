@@ -18,9 +18,13 @@ function closeYear() {
   isShow.value = false;
 }
 const yearImg = computed(() => {
-  return lang.value === 'zh' 
-  ? (screenWidth.value > 840 ? yearImgZh : yearImgZhMb) 
-  : (screenWidth.value > 840 ? yearImgEn : yearImgEnMb);
+  return lang.value === 'zh'
+    ? screenWidth.value > 840
+      ? yearImgZh
+      : yearImgZhMb
+    : screenWidth.value > 840
+    ? yearImgEn
+    : yearImgEnMb;
 });
 </script>
 <template>

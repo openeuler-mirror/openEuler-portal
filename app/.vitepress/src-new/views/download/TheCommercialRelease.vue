@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, Ref, ref } from 'vue';
 
-import cloneTool from 'lodash-es';
-
 import { useScreen } from '@/shared/useScreen';
 
 import type {
@@ -100,8 +98,8 @@ const activeManufacturer: Ref<string[]> = ref(['']);
 const tagArch: Ref<string[]> = ref([]);
 const activeArch: Ref<string[]> = ref(['']);
 
-const allList: DownloadCommercialDataT[] = cloneTool.cloneDeep(
-  localeCommercialReleaseData.value
+const allList: DownloadCommercialDataT[] = JSON.parse(
+  JSON.stringify(localeCommercialReleaseData.value)
 );
 const setTagArch = () => {
   allList.forEach((item: DownloadCommercialDataT) => {

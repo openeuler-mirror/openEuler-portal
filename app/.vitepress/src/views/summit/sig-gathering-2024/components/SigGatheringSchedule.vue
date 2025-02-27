@@ -30,12 +30,16 @@ const windowWidth = ref(useWindowResize());
         v-for="(child, j) in subitem.children"
         :key="j"
         class="child-item"
-        :class="{'child-item-dark': isDark}"
-        :style="{ backgroundImage: `url(${windowWidth > 767 ? child.bg : child.bgMo})` }"
+        :class="{ 'child-item-dark': isDark }"
+        :style="{
+          backgroundImage: `url(${windowWidth > 767 ? child.bg : child.bgMo})`,
+        }"
       >
         <p class="title">{{ child.title }}</p>
         <div class="bottom">
-          <span class="date"><IconTime /><span>{{ child.date }}</span></span>
+          <span class="date"
+            ><IconTime /><span>{{ child.date }}</span></span
+          >
           <span class="time">{{ child.time }}</span>
         </div>
       </div>
@@ -73,7 +77,11 @@ const windowWidth = ref(useWindowResize());
 }
 .type {
   width: 160px;
-  background-image: linear-gradient(270deg, rgba(180,97,246,0.00) 2%, var(--e-color-brand1) 100%);
+  background-image: linear-gradient(
+    270deg,
+    rgba(180, 97, 246, 0) 2%,
+    var(--e-color-brand1) 100%
+  );
   padding: var(--e-spacing-h10) var(--e-spacing-h6);
   font-size: var(--e-font-size-h6);
   color: #fff;

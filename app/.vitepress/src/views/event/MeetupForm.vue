@@ -3,7 +3,6 @@ import { computed, ref, reactive, onMounted } from 'vue';
 import { ElMessage, FormInstance, FormRules } from 'element-plus';
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { meetupApplyForm } from '@/api/api-search';
-import { queryPersonalInfo } from '@/api/api-login';
 import { showGuard, getUserAuth } from '@/shared/login';
 import { isTestEmail, isTestPhone } from '@/shared/utils';
 
@@ -215,7 +214,7 @@ const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   if (meetupPrivacy.value.length < 1) {
     ElMessage({
       type: 'error',
-      message: '请勾选隐私声明',
+      message: '请勾选隐私政策',
     });
     return;
   }
@@ -246,26 +245,6 @@ async function meetupApply() {
   }
 }
 
-// 获取用户信息
-const userInfo = ref([]);
-async function getPersonalInfo() {
-  try {
-    await queryPersonalInfo().then((res) => {
-      userInfo.value = res.data;
-      const { username, email, phone } = res.data;
-      meetupData.value.principalUser = username;
-      meetupData.value.principalEmail = email;
-      meetupData.value.principalPhone = phone;
-    });
-  } catch (error: any) {
-    console.error(error);
-  }
-}
-onMounted(() => {
-  if (token) {
-    getPersonalInfo();
-  }
-});
 </script>
 
 <template>
@@ -339,7 +318,7 @@ onMounted(() => {
               :placeholder="placeholderList[7]"
             />
           </el-form-item>
-          <el-form-item label="负责人联系方式" prop="principalPhone">
+          <el-form-item label="负责人手机号" prop="principalPhone">
             <OInput
               v-model="meetupData.principalPhone"
               :placeholder="placeholderList[8]"
@@ -414,7 +393,7 @@ onMounted(() => {
                   href="/zh/other/privacy/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >《隐私声明》</a
+                  >《隐私政策》</a
                 >
               </OCheckbox>
             </OCheckboxGroup>

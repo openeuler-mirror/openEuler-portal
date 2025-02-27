@@ -156,8 +156,8 @@ export default {
                   URL: '/download/#windows',
                 },
                 {
-                  NAME: 'MacOs',
-                  DESCRIPTION: '在MacOs上运行openEuler',
+                  NAME: 'MacOS',
+                  DESCRIPTION: '在MacOS上运行openEuler',
                   URL: '/download/#macos',
                 },
                 {
@@ -255,10 +255,6 @@ export default {
               NAME: '文档撰写指南',
               ICON: OutLink,
               URL: 'https://gitee.com/openeuler/docs/blob/master/contribute/写作规范.md',
-            },
-            {
-              NAME: 'Man Pages',
-              URL: 'https://man.openeuler.org/',
             },
           ],
         },
@@ -387,12 +383,6 @@ export default {
               ANALYTICSNAME: 'eulermaker',
             },
             {
-              NAME: 'Compass-CI',
-              DESCRIPTION: '开放式测试服务平台',
-              URL: 'https://compass-ci.openeuler.org/',
-              ANALYTICSNAME: 'compassci',
-            },
-            {
               NAME: '用户软件仓(EUR)',
               DESCRIPTION: '开发者易用的软件包托管分发平台',
               URL: 'https://eur.openeuler.openatom.cn/coprs/',
@@ -408,17 +398,6 @@ export default {
               URL: 'https://compliance.openeuler.org/',
               ICON: OutLink,
               ANALYTICSNAME: 'license',
-            },
-          ],
-        },
-        {
-          NAME: '测试',
-          CHILDREN: [
-            {
-              NAME: 'EulerTest',
-              DESCRIPTION: '基于openEuler环境开发的测试管理平台',
-              URL: 'https://radiatest.openeuler.org/home/version-management/product/',
-              ANALYTICSNAME: 'radiatest',
             },
           ],
         },
@@ -689,7 +668,7 @@ export default {
             },
             {
               NAME: 'BiSheng JDK',
-              DESCRIPTION: 'ARM上最好用的JDK',
+              DESCRIPTION: '一款高性能Java虚拟机',
               URL: '/other/projects/bishengjdk/',
             },
             {
@@ -700,8 +679,7 @@ export default {
             {
               NAME: 'NestOS',
               DESCRIPTION: '基于欧拉开源操作系统的云底座操作系统',
-              URL: 'https://nestos.openeuler.org/',
-              ICON: OutLink,
+              URL: '/nestos',
             },
           ],
           SHORTCUT: [],

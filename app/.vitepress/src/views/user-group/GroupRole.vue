@@ -16,9 +16,9 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
     <div class="title">{{ groupI18n.ROLE }}</div>
     <div class="role-card">
       <OCard
-        class="card-item"
         v-for="card in groupI18n.CARD_DATA"
         :key="card.IMG"
+        class="card-item"
         :style="{
           backgroundImage: `url(${isLight ? card.IMG : card.IMGDARK})`,
         }"

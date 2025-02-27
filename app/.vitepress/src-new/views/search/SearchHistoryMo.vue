@@ -97,7 +97,7 @@ const searchHistory = ref<string[]>([]);
 
 const loadSearchHistory = () => {
   // 从 localStorage 加载搜索历史
-  const history = localStorage.getItem('searchHistory');
+  const history = localStorage.getItem('search-history');
   if (history) {
     searchHistory.value = JSON.parse(history);
   }
@@ -112,20 +112,20 @@ const handleSearch = (searchValue: string) => {
       // 最多保持6条搜集记录
       searchHistory.value.pop();
     }
-    localStorage.setItem('searchHistory', JSON.stringify(searchHistory.value));
+    localStorage.setItem('search-history', JSON.stringify(searchHistory.value));
   }
 };
 
 const deleteHistory = (data: string) => {
   if (!data) {
-    localStorage.removeItem('searchHistory');
+    localStorage.removeItem('search-history');
     searchHistory.value = [];
   }
 
-  const history = localStorage.getItem('searchHistory');
+  const history = localStorage.getItem('search-history');
   if (history) {
     searchHistory.value = JSON.parse(history).filter((s: string) => s !== data);
-    localStorage.setItem('searchHistory', JSON.stringify(searchHistory.value));
+    localStorage.setItem('search-history', JSON.stringify(searchHistory.value));
   }
 };
 

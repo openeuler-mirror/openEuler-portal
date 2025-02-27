@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import dayjs from 'dayjs';
 defineProps({
   frontmatter: {
     type: Object || String,
@@ -8,9 +7,14 @@ defineProps({
     },
   },
 });
+
 // 格式化日期
 const resolveDate = (date: any) => {
-  return dayjs(date).format('YYYY-MM-DD');
+  const d = new Date(date);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0'); // 月份从0开始，所以要加1
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 };
 </script>
 

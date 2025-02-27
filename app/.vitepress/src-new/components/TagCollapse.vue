@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { onMounted, ref, onUnmounted, nextTick } from 'vue';
-import { debounce } from 'lodash-es';
+import { useDebounceFn } from '@vueuse/core';
 
 import { OIcon } from '@opensig/opendesign';
 
@@ -39,7 +39,7 @@ const getFilterContentHeight = () => {
   );
 };
 
-const debounceCheckTagsVisibility = debounce(getFilterContentHeight, 500);
+const debounceCheckTagsVisibility = useDebounceFn(getFilterContentHeight, 500);
 
 onMounted(() => {
   if (props.showCollapse) {

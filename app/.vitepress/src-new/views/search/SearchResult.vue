@@ -26,9 +26,11 @@ import SearchFeedback from './SearchFeedback.vue';
 import SearchDownloadZone from './SearchDownloadZone.vue';
 import SearchSoftwareZone from './SearchSoftwareZone.vue';
 import SearchDownloadAggre from './SearchDownloadAggre.vue';
+import ExternalLink from '~@/components/ExternalLink.vue';
 
 import { getOSType } from '@/shared/download';
 import { uniqueId } from '@/shared/utils';
+import { checkOriginLink } from '~@/utils/common';
 import { SCENARIO_LIST, archMap } from '~@/data/download/download';
 
 import type { AppItemT } from '~@/@types/type-search';
@@ -230,6 +232,20 @@ const zoneShownCondition = computed(() => {
 const COUNT_PER_PAGE = [12, 18, 24, 36];
 // 移动端搜索反馈出现位置
 const MO_FEEDBACK_INDEX = 11;
+
+const showExternalDlg = ref(false);
+const externalLink = ref('');
+const goSearchDetail = (href: string, index: number) => {
+  const link = getLink(href);
+  externalLink.value = link;
+  handleLinkClick(href, index);
+
+  if (checkOriginLink(link)) {
+    window.open(link, '_blank');
+  } else {
+    showExternalDlg.value = true;
+  }
+};
 </script>
 <template>
   <ContentWrapper class="search-result" :vertical-padding="verticalPadding">
@@ -316,11 +332,7 @@ const MO_FEEDBACK_INDEX = 11;
               "
               class="search-card"
             >
-              <a
-                :href="getLink(item)"
-                target="_blank"
-                @click="handleLinkClick(item, index)"
-              >
+              <div @click="goSearchDetail(item, index)">
                 <h3
                   v-dompurify-html="
                     item.title.replace(
@@ -337,7 +349,8 @@ const MO_FEEDBACK_INDEX = 11;
                   "
                   class="detail"
                 ></p>
-              </a>
+              </div>
+
               <div v-if="item.arch && item.scenario" class="tag-box">
                 <OTag>
                   {{ archMap.get(item.arch)?.label || item.arch }}
@@ -436,6 +449,13 @@ const MO_FEEDBACK_INDEX = 11;
         :keyword="searchVal"
       />
     </div>
+
+    <!-- 外联弹窗提示 -->
+    <ExternalLink
+      v-if="showExternalDlg"
+      :href="externalLink"
+      @change="showExternalDlg = false"
+    />
   </ContentWrapper>
 </template>
 <style lang="scss" scoped>

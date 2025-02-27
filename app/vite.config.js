@@ -5,13 +5,6 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import Icons from 'unplugin-icons/vite';
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 
-// import ElementPlus from 'unplugin-element-plus/vite';
-
-// TODO:在vitepress使用该插件进行element-plus的按需导入会导致编译错误
-// import AutoImport from 'unplugin-auto-import/vite';
-// import Components from 'unplugin-vue-components/vite';
-// import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
-
 export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, '../dist'),
@@ -87,15 +80,10 @@ export default defineConfig({
   ],
   server: {
     proxy: {
-      '/api-easyeditor/': {
-        target: 'https://easyeditor.openeuler.org/',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-easyeditor/, ''),
-      },
       '/api-certification/': {
         target: 'https://certification.openeuler.org/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-certification/, ''),
+        rewrite: (url) => url.replace(/^\/api-certification/, ''),
       },
       '/api-search/': {
         target: 'https://doc-search.test.osinfra.cn',
@@ -108,37 +96,32 @@ export default defineConfig({
       '/api-meeting/': {
         target: 'https://meetings.openeuler.openatom.cn/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-meeting/, ''),
+        rewrite: (url) => url.replace(/^\/api-meeting/, ''),
       },
       '/api/': {
         target: 'https://api.openeuler.org',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
-      },
-      '/api-euler': {
-        target: 'https://www.openeuler.org',
-        changeOrigin: true,
-        // rewrite: (path) => path.replace(/^\/api-euler/, ''),
+        rewrite: (url) => url.replace(/^\/api/, ''),
       },
       '/api-cve/': {
         target: 'https://api-cve.openeuler.org/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-cve/, ''),
+        rewrite: (url) => url.replace(/^\/api-cve/, ''),
       },
       '/api-omapi/': {
         target: 'https://omapi.osinfra.cn/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-omapi/, ''),
+        rewrite: (url) => url.replace(/^\/api-omapi/, ''),
       },
       '/api-dsapi/': {
         target: 'https://dsapi.osinfra.cn/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-dsapi/, ''),
+        rewrite: (url) => url.replace(/^\/api-dsapi/, ''),
       },
       '/api-mail/': {
         target: 'https://mailweb.openeuler.org/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-mail/, ''),
+        rewrite: (url) => url.replace(/^\/api-mail/, ''),
       },
     },
   },

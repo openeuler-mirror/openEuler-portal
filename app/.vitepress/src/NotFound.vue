@@ -5,7 +5,6 @@ import { useCommon } from '@/stores/common';
 import notFoundImg_light from '@/assets/illustrations/404.png';
 import notFoundImg_dark from '@/assets/illustrations/404_dark.png';
 
-
 defineProps({
   docs: {
     type: String,

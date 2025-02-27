@@ -479,7 +479,7 @@ export default {
             {
               NAME: 'NestOS',
               LABEL: '基于欧拉开源操作系统的云底座操作系统',
-              PATH: 'https://nestos.openeuler.org/',
+              PATH: '/nestos',
               OUTLINK: true,
             },
           ],

@@ -78,7 +78,7 @@ export default {
       liveId: 14991,
       liveTestId: 14992,
       name: '多样性计算',
-      nameEn:'Diversified Computing'
+      nameEn: 'Diversified Computing',
     },
     {
       liveId: 14988,

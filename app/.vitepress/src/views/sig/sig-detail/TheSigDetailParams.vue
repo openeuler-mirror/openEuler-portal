@@ -5,7 +5,6 @@ import { useI18n } from '@/i18n';
 
 import showMd from 'markdown-it';
 import useWindowResize from '@/components/hooks/useWindowResize';
-import type { EasyeditorInfoDataItemT } from '@/shared/@types/type-sig';
 
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import SigMeeting from './SigMeeting.vue';
@@ -192,21 +191,9 @@ onUpdated(() => {
     titleListBefor.value = titleList.value;
   }
 });
-// 获取easyeditor编辑发布的信息
-const href = `https://www.openeuler.org/${lang.value}/sig/sig-detail/?name=${sigName.value}`;
+
 const easyeditorInfo: any = ref({});
-function getEasyeditorInfo() {
-  getSigDetailInfo(href).then((res) => {
-    if (res.statusCode === 200 && res.data?.length) {
-      res.data.forEach((item: EasyeditorInfoDataItemT) => {
-        easyeditorInfo.value[item.name] = item;
-      });
-    }
-  });
-}
-onMounted(() => {
-  getEasyeditorInfo();
-});
+
 // 转换md语法
 function convertMd(data: string) {
   return showMd().render(data);

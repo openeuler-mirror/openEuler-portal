@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData, useRouter } from 'vitepress';
 import { computed, onMounted, ref, reactive, watch } from 'vue';
-import { debounce, filter, uniq } from 'lodash-es';
+import { useDebounceFn } from '@vueuse/core';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { useI18n } from '@/i18n';
@@ -108,7 +108,7 @@ const getRepositoryList = () => {
             return a.localeCompare(b);
           });
         });
-        maintainerList.value = uniq(maintainerList.value);
+        maintainerList.value = Array.from(new Set(maintainerList.value));
         maintainerList.value.sort((a, b) => {
           return a.localeCompare(b);
         });
@@ -127,7 +127,7 @@ const filterRepositoryList = () => {
     repoRenderList.value = repositioryList.value.slice(0, 99);
     getSigList(initialParams);
   } else {
-    sigList.value = filter(allList.value, (item: any) => {
+    sigList.value = allList.value.filter((item: any) => {
       return (
         (!slectedInfo.sigSelected ||
           item.sig_name === slectedInfo.sigSelected) &&
@@ -200,9 +200,7 @@ function jumpPage(val: number) {
 }
 
 // 输入框防抖
-const debounceEvent = debounce(filterRope, 300, {
-  trailing: true,
-});
+const debounceEvent = useDebounceFn(filterRope, 300);
 watch(
   () => sigList.value,
   (data) => {

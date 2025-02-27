@@ -77,16 +77,6 @@ onMounted(() => {
         title="Member"
         :options="pageData.member"
       />
-      <div class="city-action">
-        <OButton
-          type="primary"
-          @click="jumpTo(groupI18n.LINK)"
-          class="button-size-large"
-          size="large"
-          >申请加入</OButton
-        >
-      </div>
-
       <!-- 用户组活动 -->
       <div v-if="pageData.salon && pageData.salon.length > 0" class="show-case">
         <h2>用户组活动</h2>
@@ -97,10 +87,9 @@ onMounted(() => {
         <div class="city-action">
           <OButton
             type="primary"
-            @click="jumpTo('/zh/interaction/event-list/collect/')"
             class="button-size-large"
             size="large"
-            >申请举报活动</OButton
+            >申请举办活动</OButton
           >
         </div>
       </div>
@@ -124,13 +113,13 @@ onMounted(() => {
         <div class="city-action">
           <OButton
             type="primary"
+            class="button-size-large"
+            size="large"
             @click="
               jumpTo(
                 'https://gitee.com/openeuler/community/blob/master/zh/contributors/user-story-guideline.md'
               )
             "
-            class="button-size-large"
-            size="large"
             >投稿案例</OButton
           >
         </div>

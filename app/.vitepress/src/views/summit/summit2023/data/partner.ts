@@ -23,16 +23,16 @@ import yidong from '../img/logo/yidong.png';
 import zhongruanDark from '../img/logo/zhongruan_dark.png';
 import zhongruan from '../img/logo/zhongruan.png';
 
-import dongfangDark from '../img/logo/dongfang_dark.png'
-import dongfang from '../img/logo/dongfang.png'
-import gongxinDark from '../img/logo/gongxin_dark.png'
-import gongxin from '../img/logo/gongxin.png'
-import liantongDark from '../img/logo/liantong_dark.png'
-import liantong from '../img/logo/liantong.png'
-import linxinDark from '../img/logo/linxin_dark.png'
-import linxin from '../img/logo/linxin.png'
-import zhongdianDark from '../img/logo/zhongdian_dark.png'
-import zhongdian from '../img/logo/zhongdian.png'
+import dongfangDark from '../img/logo/dongfang_dark.png';
+import dongfang from '../img/logo/dongfang.png';
+import gongxinDark from '../img/logo/gongxin_dark.png';
+import gongxin from '../img/logo/gongxin.png';
+import liantongDark from '../img/logo/liantong_dark.png';
+import liantong from '../img/logo/liantong.png';
+import linxinDark from '../img/logo/linxin_dark.png';
+import linxin from '../img/logo/linxin.png';
+import zhongdianDark from '../img/logo/zhongdian_dark.png';
+import zhongdian from '../img/logo/zhongdian.png';
 
 export default {
   title: '共建单位',

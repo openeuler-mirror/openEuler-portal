@@ -153,8 +153,8 @@ export default {
                   URL: '/download/#windows',
                 },
                 {
-                  NAME: 'MacOs',
-                  DESCRIPTION: 'Running openEuler on MacOs',
+                  NAME: 'MacOS',
+                  DESCRIPTION: 'Running openEuler on MacOS',
                   URL: '/download/#macos',
                 },
                 {
@@ -312,13 +312,6 @@ export default {
                 'An open, unified build service for streamlined development.',
               URL: 'https://eulermaker.compass-ci.openeuler.openatom.cn/',
               ANALYTICSNAME: 'eulermaker',
-            },
-            {
-              NAME: 'Compass-CI',
-              DESCRIPTION:
-                'An open platform for reliable, comprehensive testing.',
-              URL: 'https://compass-ci.openeuler.org/',
-              ANALYTICSNAME: 'compassci',
             },
             {
               NAME: 'openEuler User Repo',
@@ -510,7 +503,7 @@ export default {
             },
             {
               NAME: 'BiSheng JDK',
-              DESCRIPTION: 'A high-performance JDK for Arm.',
+              DESCRIPTION: 'A high-performance Java Virtual Machine.',
               URL: '/other/projects/bishengjdk/',
             },
             {

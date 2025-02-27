@@ -2091,41 +2091,13 @@ const summitData: any = {
         link: '/zh/interaction/summit-list/summit2022-changsha/',
         target: '_blank',
       },
-      {
-        name: 'openEuler Developer Day 2022',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/devday2022/',
-        target: '_blank',
-      },
-      {
-        name: 'openEuler Summit 2021',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/summit2021/',
-        target: '_blank',
-      },
-      {
-        name: 'openEuler Developer Day 2021',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/devday2021/',
-        target: '_blank',
-      },
-      {
-        name: 'openEuler Summit 2020',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/',
-        target: '_blank',
-      },
-      {
-        name: 'openEuler Virtual Summit 2020',
-        link: 'https://v1.openeuler.org/zh/interaction/summit-list/list/',
-        target: '_blank',
-      },
     ],
   },
 };
 const tabType = ref(['main', 'main']);
 const isLiverShown = ref(0);
 const otherTabType = ref([0, 0]);
-// 点击周年浮窗
-function onEntryClick() {
-  router.go('/zh/celebrating/');
-}
+
 // 展厅的video 事件
 const videoDialog = ref(false);
 const videoLink = ref('');
@@ -2337,13 +2309,6 @@ onMounted(() => {
           >{{ item.name }}</a
         >
       </div>
-    </div>
-    <div class="celebrating-img" @click="onEntryClick">
-      <img
-        :src="celebratingEntryImg"
-        alt=""
-        title="下载体验openEuler&#10;赢开源三周年纪念礼包！"
-      />
     </div>
   </AppContext>
 </template>

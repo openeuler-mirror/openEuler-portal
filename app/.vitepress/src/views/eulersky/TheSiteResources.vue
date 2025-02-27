@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { useRouter } from 'vitepress';
 import { useI18n } from '@/i18n';
+import { useData } from 'vitepress';
 
 import siteList from '@/data/euler-sky/site';
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
@@ -13,11 +13,8 @@ const i18n = useI18n();
 const siteI18n = computed(() => {
   return i18n.value.sky.SITE_RESOURCES;
 });
-const router = useRouter();
 
-function goDetail(url: string) {
-  router.go(url);
-}
+const { lang } = useData();
 </script>
 <template>
   <div class="infra">
@@ -33,14 +30,11 @@ function goDetail(url: string) {
           <p class="site-container-introduction">
             {{ siteI18n.CARD_INTRODUCTION }}
           </p>
+          <div v-if="lang === 'zh'">
+            贡献资源请联系
+            <a href="mailto:events@openeuler.sh">events@openeuler.sh</a>
+          </div>
         </div>
-        <OButton
-          animation
-          type="primary"
-          @click="goDetail(siteI18n.APPLY_SITE_URL)"
-        >
-          {{ siteI18n.BTN_TEXT }}
-        </OButton>
       </OContainer>
       <div class="site-list">
         <h2>{{ siteI18n.SITE_TITLE }}</h2>

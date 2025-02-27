@@ -1,0 +1,113 @@
+sort: ["allOrder", "typeOrder"]
+
+showcase:
+  - title: "工商银行 & 复旦大学"
+    summary: "基于 openEuler 的全栈自主大模型机密计算解决方案"
+    typeOrder: 12
+  - title: "山西证券股份有限公司"
+    summary: "域名解析系统重构改造"
+    typeOrder: 11
+  - title: "三湘银行"
+    summary: "基于麒麟信安打造银行IT信息化系统安全底座"
+    typeOrder: 10
+  - title: "中国农业银行"
+    summary: "全面建设以一体化云平台和分布式数据库为关键基础的分布式架构体系，打造新一代云计算平台方案"
+    typeOrder: 9
+  - title: "中国建设银行"
+    summary: "分布式信用卡核心业务系统，单日交易量超过 1 亿笔，峰值TPS超过 6000"
+    typeOrder: 8
+  - title: "中国邮政储蓄银行"
+    summary: "大型核心业务系统迁移改造"
+    typeOrder: 7
+  - title: "上海证券交易所"
+    summary: "下一代核心交易系统，在安全可控场景下提供更低的时延"
+    typeOrder: 6
+  - title: "中国银行"
+    summary: "分布式基础技术平台（鸿鹄平台），依托基于openEuler 内核的麒麟商业发行版操作系统"
+    typeOrder: 5
+  - title: "中国光大银行"
+    summary: "基于全栈云的数字化基础设施体系建设项目"
+    typeOrder: 4
+  - title: "中国工商银行"
+    summary: "云数智一体化算力生态建设方案"
+    typeOrder: 3
+  - title: "中国银联"
+    summary: "采用基于openEuler研发 UPEL2方案，并基于 UPEL2完成云管理平台、容器管理平台等基础平台适配，完成数据库、中间件等基础组件适配"
+    typeOrder: 2
+  - title: "湖南省农村信用社联合社"
+    summary: "基于银河麒麟操作系统的 CentOS 迁移替换方案"
+    typeOrder: 1
+
+  - title: "美团容器云平台"
+    summary: "基于openEuler Copilot System有效管理和优化资源利用率"
+    typeOrder: 12
+  - title: "大华股份容器云平台"
+    summary: "联合openEuler优化带宽管理方案，显著优化视频流多业务并发运行效率"
+    typeOrder: 11
+  - title: "百度智能云"
+    summary: "基于openEuler打造百度智能云基座"
+    typeOrder: 10
+  - title: "咪咕视讯"
+    summary: "咪咕视讯搬迁，openEuler或成数字基建最优解。"
+    typeOrder: 9
+  - title: "高新兴"
+    summary: "高新兴基于openEuler Embedded打造安防特种机器人更强系统底座。"
+    typeOrder: 8
+  - title: "成都菁蓉联创科技有限公司（卫星载荷欧拉嵌入式操作系统产品）"
+    summary: "利用openEule操作系统构建商业卫星数智基座"
+    typeOrder: 7
+  - title: "长沙市智慧交通发展中心"
+    summary: "麒麟信安助力长沙市智慧交通发展中心完成CentOS平滑迁移"
+    typeOrder: 6
+  - title: "蜀道集团高速公路 ETC 门架系统自主创新建设项目"
+    summary: "蜀道集团高速公路 ETC 门架系统自主创新建设项目"
+    typeOrder: 5
+  - title: "江西省医保局"
+    summary: "江西省医保局云平台建设项目"
+    typeOrder: 4
+  - title: "东方盛行电子有限责任公司"
+    summary: "东方盛行基于超聚变操作系统打造私有协议媒体安全服务系统提供高安全、高性能、高可靠的运行环境"
+    typeOrder: 3
+  - title: "新华社"
+    summary: "新华社科技创新应用项目共筑 AI 创新方案安全智能加速内容生态建设"
+    typeOrder: 2
+  - title: "中科通达智慧交通管控平台"
+    summary: "中科通达智慧交通管控平台"
+    typeOrder: 1
+
+  - title: "中国工商银行"
+    summary: "云数智一体化算力生态建设方案"
+    allOrder: 12
+  - title: "中国农业银行"
+    summary: "全面建设以一体化云平台和分布式数据库为关键基础的分布式架构体系，打造新一代云计算平台方案"
+    allOrder: 11
+  - title: "中国建设银行"
+    summary: "分布式信用卡核心业务系统，单日交易量超过 1 亿笔，峰值TPS超过 6000"
+    allOrder: 10
+  - title: "中国光大银行"
+    summary: "基于全栈云的数字化基础设施体系建设项目"
+    allOrder: 9
+  - title: "中国银行"
+    summary: "分布式基础技术平台（鸿鹄平台），依托基于openEuler 内核的麒麟商业发行版操作系统"
+    allOrder: 8
+  - title: "上海证券交易所"
+    summary: "下一代核心交易系统，在安全可控场景下提供更低的时延"
+    allOrder: 7
+  - title: "中国移动云能力中心"
+    summary: "基于 openEuler 打造 BC-Linux，分布式块存储，读 IOPS 提升 100%"
+    allOrder: 6
+  - title: "天翼云全场景业务"
+    summary: "天翼云全场景业务无缝替换至基于openEuler自研操作系统CTyunOS"
+    allOrder: 5
+  - title: "国家电网"
+    summary: "国家电网配网自动化系统"
+    allOrder: 4
+  - title: "北京航空航天大学"
+    summary: "基于openEuler构建工业机器人操作系统，打造“开箱即用”的机器人基础软件平台"
+    allOrder: 3
+  - title: "百度智能云"
+    summary: "基于openEuler打造百度智能云基座"
+    allOrder: 2
+  - title: "美团容器云平台"
+    summary: "基于openEuler Copilot System有效管理和优化资源利用率"
+    allOrder: 1

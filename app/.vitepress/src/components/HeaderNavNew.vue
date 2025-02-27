@@ -2,7 +2,7 @@
 import { ref, watch, computed, nextTick } from 'vue';
 import { useRouter, useData } from 'vitepress';
 import useWindowResize from '@/components/hooks/useWindowResize';
-import { debounce } from 'lodash-es';
+import { useDebounceFn } from '@vueuse/core';
 import { useOeep } from '@/stores/oeep';
 import { scrollToBottom } from '@/shared/utils';
 
@@ -45,21 +45,15 @@ const isMobile = computed(() => (screenWidth.value <= 1100 ? true : false));
 // nav 鼠标滑过事件
 const isShow = ref(true);
 const navActive = ref('');
-const toggleSubDebounced = debounce(
-  function (item: any | null) {
-    if (isMobile.value) return;
-    if (item === null) {
-      navActive.value = '';
-    } else {
-      navActive.value = item.ID;
-      isShow.value = true;
-    }
-  },
-  150,
-  {
-    trailing: true,
+const toggleSubDebounced = useDebounceFn(function (item: any | null) {
+  if (isMobile.value) return;
+  if (item === null) {
+    navActive.value = '';
+  } else {
+    navActive.value = item.ID;
+    isShow.value = true;
   }
-);
+}, 150);
 
 const handleMobileNavClick = (index: string, item: any) => {
   if (!isMobile.value) return;

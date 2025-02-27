@@ -10,7 +10,7 @@ author:
 summary: In September 2022, with the joint efforts of developers from Kylinsoft and the openEuler community, NestOS built based on openEuler 22.09 was released.
 ---
 
-In September 2022, with the joint efforts of developers from Kylinsoft and the openEuler community, NestOS built based on openEuler 22.09 was released. You can obtain the OS image from the [official website](https://nestos.openeuler.org).
+In September 2022, with the joint efforts of developers from Kylinsoft and the openEuler community, NestOS built based on openEuler 22.09 was released. You can obtain the OS image from the [official website](https://www.openeuler.org/zh/nestos/).
 
 NestOS is a cloud-based OS incubated in the openEuler community. It provides rpm-ostree support and Ignition mechanism, adopts the dual-root file system and atomic update design, and uses nestos-assembler (nosa for short) for fast building. The NestOS project involves multiple SIGs and maintains more than 50 repositories in the community. The first stable NestOS version was released in March 2022 based on openEuler 22.03 LTS.
 

@@ -13,11 +13,9 @@ export default {
   BANNER_INTRODUCTION: '热衷实践 乐于分享 多元贡献',
   INTRODUCE:
     'openEuler 用户组（openEuler User Group，简称oEUG）旨在为各区域openEuler用户、开发者构建一个开放多元的本地化交流圈子，在这里用户组成员可以基于openEuler的技术特性、使用经验、实践案例、社区贡献、开源文化等方面有更多集中的交流机会，共建openEuler区域用户生态。',
-  LINK: ' https://wj.qq.com/s2/14126752/ps9k/',
   LINK_TEXT: '申请加入',
   ROLE: '用户组成员角色',
   CITY_TITLE: '城市用户组',
-  CITY_LINK: 'https://wj.qq.com/s2/14160176/1786/',
   CORE_MEMBERS: '核心成员',
   CARD_DATA: [
     {

@@ -5,6 +5,7 @@ import IconRight from '~icons/app/icon-arrow-right.svg';
 defineProps({
   honorData: {
     type: Object,
+    default: () => ({}),
   },
 });
 </script>
@@ -58,8 +59,8 @@ defineProps({
             </p>
           </div>
           <a
-            :href="award.link"
             v-if="award.link"
+            :href="award.link"
             target="_blank"
             rel="noopener noreferrer"
           >
