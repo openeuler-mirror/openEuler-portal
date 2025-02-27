@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { type PropType } from 'vue';
+import { ref, computed, type PropType } from 'vue';
 
 import { OIcon, ODivider, OScroller } from '@opensig/opendesign';
 
@@ -7,6 +7,7 @@ import WordAvatar from '~@/components/WordAvatar.vue';
 
 import IconGitee from '~icons/app-new/icon-gitee.svg';
 import IconMail from '~icons/app-new/icon-mail.svg';
+import IconChevronDown from '~icons/app-new/icon-chevron-down.svg';
 
 import { GITEE_ADDRESS } from '~@/shared/config/sig';
 
@@ -14,7 +15,7 @@ import { sigMaintainerT } from '~@/@types/type-sig';
 
 import { useScreen } from '~@/composables/useScreen';
 
-defineProps({
+const props = defineProps({
   maintainerList: {
     type: Array as PropType<sigMaintainerT[]>,
     define: () => {
@@ -28,6 +29,28 @@ defineProps({
 });
 
 const { lePadV } = useScreen();
+const pageSize = ref(5);
+const currentPage = ref(1);
+
+const renderMaintainer = computed(() => {
+  if (!lePadV.value) {
+    return props.maintainerList;
+  } else {
+    return props.maintainerList?.slice(0, currentPage.value * pageSize.value);
+  }
+});
+const isFullyDisplayed = computed(() => {
+  return (
+    currentPage.value * pageSize.value >= (props.maintainerList?.length || 0)
+  );
+});
+const getMoreClick = () => {
+  if (isFullyDisplayed.value) {
+    currentPage.value = 1;
+  } else {
+    currentPage.value++;
+  }
+};
 </script>
 <template>
   <div class="sig-member">
@@ -35,7 +58,7 @@ const { lePadV } = useScreen();
       {{ $t('sig.sigMember', { num: maintainerList?.length }) }}
     </div>
     <OScroller class="member-list" size="small">
-      <div v-for="member in maintainerList" class="member-info">
+      <div v-for="member in renderMaintainer" class="member-info">
         <div class="member-info-left">
           <WordAvatar
             :name="member?.gitee_id"
@@ -68,6 +91,18 @@ const { lePadV } = useScreen();
             </OIcon>
           </a>
         </div>
+      </div>
+      <div
+        v-if="lePadV && (maintainerList?.length || 0) > pageSize"
+        class="get-more"
+        @click="getMoreClick"
+      >
+        <span>{{
+          isFullyDisplayed ? $t('common.collapse') : $t('common.more')
+        }}</span>
+        <OIcon :class="{ reversal: isFullyDisplayed }">
+          <IconChevronDown />
+        </OIcon>
       </div>
     </OScroller>
   </div>
@@ -116,7 +151,7 @@ const { lePadV } = useScreen();
         --avatar-gap: 16px;
         @include respond-to('<=laptop') {
           --avatar-width: 32px;
-        --info-width: 125px;
+          --info-width: 125px;
         }
 
         display: flex;
@@ -160,6 +195,22 @@ const { lePadV } = useScreen();
         height: 40px;
       }
     }
+  }
+  .get-more {
+    cursor: pointer;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    @include text1;
+    color: var(--o-color-info3);
+    .o-icon {
+      margin-left: 8px;
+      font-size: var(--o-icon_size-xs);
+      transition: all 0.3s;
+    }
+  }
+  .reversal {
+    transform: rotate(180deg);
   }
 }
 </style>

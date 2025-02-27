@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted } from 'vue';
-import { querySigUserContribute } from '@/api/api-sig';
-import IconSearch from '~icons/app-new/icon-search.svg';
+
 import { SigContributeArrT } from '@/shared/@types/type-sig';
 
+import IconSearch from '~icons/app-new/icon-search.svg';
+import IconChevronDown from '~icons/app-new/icon-chevron-down.svg';
+
+import { querySigUserContribute } from '@/api/api-sig';
 import ListProgress from './ListProgress.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';
 import { OInput, OPagination } from '@opensig/opendesign';
@@ -42,14 +45,14 @@ const contributionSelectBox = ref([
     key: 'contributor',
   },
 ]);
-const filterReallData = () => {
-  reallData.value = reallData.value.filter((item) => {
+const filterrealData = () => {
+  realData.value = realData.value.filter((item) => {
     return contributionSelectBox.value.some((it) => {
       return it.isSelected && item.usertype === it.key;
     });
   });
 };
-const reallData = ref([] as any[]);
+const realData = ref([] as any[]);
 const param = ref({
   contributeType: 'pr',
   timeRange: 'all',
@@ -77,9 +80,9 @@ const getMemberData = () => {
         ...item,
         rank: index + 1,
       }));
-      reallData.value = memberData.value;
+      realData.value = memberData.value;
     }
-    filterReallData();
+    filterrealData();
     currentPage.value = 1;
   });
 };
@@ -147,8 +150,8 @@ const querySearch = () => {
     const newList = memberData.value.filter((item: any) =>
       item.gitee_id.toLowerCase().includes(searchVal.value)
     );
-    reallData.value = newList;
-    filterReallData();
+    realData.value = newList;
+    filterrealData();
   } else {
     getMemberData();
   }
@@ -165,11 +168,28 @@ const getContributeInfo = () => {
   switchType();
 };
 
+// 移动端判断数据是否完全展示
+const isFullyDisplayed = computed(() => {
+  return currentPage.value * pageSize.value >= (realData.value.length || 0);
+});
+
+const getMoreClick = () => {
+  if (isFullyDisplayed.value) {
+    currentPage.value = 1;
+  } else {
+    currentPage.value++;
+  }
+};
+
 const renderData = computed(() => {
-  return reallData.value.slice(
-    (currentPage.value - 1) * pageSize.value,
-    currentPage.value * pageSize.value
-  );
+  if (!lePadV.value) {
+    return realData.value.slice(
+      (currentPage.value - 1) * pageSize.value,
+      currentPage.value * pageSize.value
+    );
+  } else {
+    return realData.value.slice(0, currentPage.value * pageSize.value);
+  }
 });
 </script>
 <template>
@@ -180,7 +200,7 @@ const renderData = computed(() => {
     <div class="sig-contribute-intro">
       {{ $t('sig.contributeSubTitle', { sig: sig }) }}
     </div>
-    <!-------------- 架构场景筛选 -------------->
+    <!-------------- 筛选 -------------->
     <div class="filter-box">
       <OInput
         v-if="lePadV"
@@ -294,14 +314,26 @@ const renderData = computed(() => {
         />
       </div>
     </div>
+    <div
+      v-if="lePadV && (realData?.length || 0) > pageSize"
+      class="get-more"
+      @click="getMoreClick"
+    >
+      <span>{{
+        isFullyDisplayed ? $t('common.collapse') : $t('common.more')
+      }}</span>
+      <OIcon :class="{ reversal: isFullyDisplayed }">
+        <IconChevronDown />
+      </OIcon>
+    </div>
 
     <!-- 页码 -->
-    <div v-if="reallData.length > [10, 20, 30, 40][0]" class="pagination">
+    <div v-if="realData.length > [10, 20, 30, 40][0]" class="pagination">
       <OPagination
         v-model:page="currentPage"
         v-model:page-size="pageSize"
         :layout="['total', 'pagesize', 'pager', 'jumper']"
-        :total="reallData.length"
+        :total="realData.length"
         :page-sizes="[10, 20, 30, 40]"
         :show-more="true"
       />
@@ -496,6 +528,23 @@ const renderData = computed(() => {
       }
     }
   }
+}
+
+.get-more {
+  cursor: pointer;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  @include text1;
+  color: var(--o-color-info3);
+  .o-icon {
+    margin-left: 8px;
+    font-size: var(--o-icon_size-xs);
+    transition: all 0.3s;
+  }
+}
+.reversal {
+  transform: rotate(180deg);
 }
 
 .contribute-list-mo {
