@@ -2,7 +2,7 @@
 import { welcomeJoin } from '~@/data/sig';
 import { useLocale } from '~@/composables/useLocale';
 
-import { OIcon, ODivider } from '@opensig/opendesign';
+import { OIcon } from '@opensig/opendesign';
 
 import { useScreen } from '~@/composables/useScreen';
 
@@ -28,10 +28,6 @@ const { lePadV } = useScreen();
             </div>
           </div>
         </div>
-        <ODivider
-          v-if="index !== welcomeJoin.length - 1"
-          :direction="lePadV ? 'h' : 'v'"
-        />
       </template>
     </div>
   </AppSection>
@@ -42,22 +38,49 @@ const { lePadV } = useScreen();
   .sig-welcome-card {
     --title-gap: 8px;
     --title-icon-size: var(--o-icon_size-2xl);
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
     background-color: var(--o-color-fill2);
     padding: 24px 48px;
-    min-height: 200px;
     @include respond-to('<=pad_v') {
+      display: flex;
       flex-direction: column;
       padding: 12px;
+      gap: 24px;
     }
 
     .card-item {
-      flex: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      &:not(:first-child) {
+        .sig-info {
+          &::after {
+            position: absolute;
+            content: '';
+            left: -40px;
+            bottom: 0;
+            width: 1px;
+            height: 100%;
+            background-color: var(--o-color-control4);
+            @include respond-to('<=pad_v') {
+              width: 100%;
+              height: 1px;
+              left: 0;
+              top: -12px;
+            }
+          }
+        }
+      }
       @include respond-to('<=pad_v') {
         display: flex;
+        flex-direction: row;
       }
 
       .o-icon {
+        margin-bottom: var(--title-gap);
         font-size: var(--title-icon-size);
         @include respond-to('<=pad_v') {
           height: min-content;
@@ -65,7 +88,6 @@ const { lePadV } = useScreen();
       }
 
       .title {
-        margin-top: var(--title-gap);
         font-weight: 500;
         @include h4;
         @include respond-to('<=pad_v') {
@@ -77,15 +99,16 @@ const { lePadV } = useScreen();
         margin-top: 16px;
         color: var(--o-color-info2);
         @include tip1;
-
-        // @include text-truncate(3);
         @include respond-to('<=pad_v') {
           margin-top: 8px;
         }
       }
 
       .sig-info {
+        position: relative;
+        flex: 1;
         @include respond-to('<=pad_v') {
+          position: initial;
           margin-left: 12px;
         }
       }
@@ -93,10 +116,7 @@ const { lePadV } = useScreen();
   }
 
   .o-divider {
-    margin-top: auto;
     --o-divider-label-gap: 0 40px;
-    height: calc(100% - 52px);
-    height: 127px;
     @include respond-to('<=pad_v') {
       margin-top: var(--o-divider-gap);
       height: auto;

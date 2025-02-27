@@ -417,13 +417,19 @@ const renderData = computed(() => {
 
   .serach-input {
     margin-left: auto;
-    max-width: 320px;
     @include respond-to('<=pad_v') {
       max-width: 100%;
       width: 100%;
     }
+    :deep(.o_input) {
+      width: 100%;
+    }
 
     :deep(.o_box) {
+      width: 320px;
+      @include respond-to('pad_h') {
+        width: 100%;
+      }
       @include respond-to('<=pad_v') {
         width: 100%;
       }
