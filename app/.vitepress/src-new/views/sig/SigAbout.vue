@@ -271,7 +271,7 @@ const processDetail = computed(() => {
 
         .process-detail {
           margin-top: 24px;
-          padding: 22px 38px;
+          padding: 22px 32px;
           background-image: linear-gradient(
             265deg,
             #f6f9ff 0%,
@@ -330,10 +330,22 @@ const processDetail = computed(() => {
       @include respond-to('<=pad_v') {
         grid-template-columns: 1fr 1fr;
       }
+      .sig-about-card {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
       .application-process {
         grid-column: auto;
         @include respond-to('<=laptop') {
           grid-column: 1 / -1;
+        }
+        .process-detail {
+          @include tip1;
+          padding: 16px 24px;
         }
 
         .o-card-content {

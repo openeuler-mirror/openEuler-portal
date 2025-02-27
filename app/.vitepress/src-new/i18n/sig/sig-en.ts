@@ -8,7 +8,7 @@ export default {
   applicationProcessSubTitle:
     'Propose creation of a SIG to coordinate development efforts within a specific domain.',
   sigList: 'openEuler SIGs',
-  sigTip: '注：仓库Committer请点击SIG名称，在仓库列表查询',
+  sigTip: 'Note: Repository Committers, please click on the SIG name to query the repository list.',
   subscribe: 'Subscribe',
   contributor: '{num} maintainers',
   sigMember: 'Maintainer ({num})',
