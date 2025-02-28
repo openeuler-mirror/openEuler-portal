@@ -100,13 +100,13 @@ The openEuler community sometimes stores cookies on computers or mobile devices.
      Expiration: 6 months
      <br/>
      Purpose: Record your preference for the website theme.
-   - **c)** etherpad Cookie：express_sid
+   - **c)** etherpad Cookie: prefs
      <br/>
      Source: etherpad website
      <br/>
      Expiration: 1 year, 1 month, 1 week
      <br/>
-     Purpose: Record the client's preference settings, which are used to set font series, display author colors, and other content.
+     Purpose: Record the client's preference settings, which are used to set font series, colors, and other content.
 
 3. Statistical analysis cookies. We collect information about your use of our website. These cookies help us understand how the services are performing and being used.
    - **a)** Baidu Analytics cookies
