@@ -11,7 +11,7 @@ export default {
   repo:'仓库',
   sigTip: '注：仓库Committer请点击SIG名称，在仓库列表查询',
   subscribe: '订阅邮件',
-  contributor: '{num}位贡献者',
+  contributor: '{num}位维护者',
   sigMember: '核心成员（{num}）',
   sigMeeting: '交流会议',
   sigMeetingIntro:
