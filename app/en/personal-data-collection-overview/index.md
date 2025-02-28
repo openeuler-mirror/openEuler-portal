@@ -17,7 +17,7 @@ This website involves the following personal data collection scenarios:
 - **Purpose**: Verify identity during login and registration on this website and maintain your personal data.
 - **Personal data type**: data you voluntarily submit
 - **Collection method**: user input or shared by third-party accounts
-- **Personal data fields**: user name, company, **email address**, **phone number**, password, **email or phone verification code** and Gitee UUID、Gitee ID、Gitee nickname、**Gitee email address**、Gitee avatar、Github UUID、Github ID、Github nickname、**Github email address**、Github avatar、OpenAtom UUID、OpenAtom username、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar.
+- **Personal data fields**: user name, company, **email address**, **phone number**, password, **email or phone verification code**, avatar, nickname and Gitee UUID、Gitee ID、Gitee nickname、**Gitee email address**、Gitee avatar、Github UUID、Github ID、Github nickname、**Github email address**、Github avatar、OpenAtom UUID、OpenAtom username、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar.
 
 ## 2. Forum Service
 
@@ -50,7 +50,7 @@ This website involves the following personal data collection scenarios:
   - For corporate contributor registration: name, **email address**, corporation, and **email verification code**
   - For individual CLA signing: name, **email address**, and **email verification code**
   - For enterprise administrator login: account, password, and **email address**
-  - For community administrator login: Gitee ID, Gitee organization name, GitHub ID, and GitHub organization name
+  - For community administrator login: Gitee ID, Gitee organization name, GitHub ID, GitHub organization name, **email address**, and **email verification code**
 
 ## 6. Content Release
 
@@ -79,5 +79,12 @@ This website involves the following personal data collection scenarios:
 - **Personal data type**: data you voluntarily submit
 - **Collection method**: user input
 - **Personal data fields**: user name, **phone number**, **email address**, UUID, signature of the project owner, and enterprise information (enterprise name, business license, unified social credit code/organization code, business address, legal representative, registered capital, date of establishment, business term, applicant's name, **applicant's phone number**, **applicant's email address**, business registration country/region, and **enterprise email address**)
+
+## 10. EulerMaker
+
+- **Purpose**: Used for your identity verification
+- **Personal data type**: data you voluntarily submit
+- **Collection method**: user input
+- **Personal data fields**: user name, **email address**
 
 </div>

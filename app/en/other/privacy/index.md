@@ -29,7 +29,7 @@ The OpenAtom Foundation (hereinafter referred to as "we," "us," or "foundation")
   2. When you use the forum service, we collect your like information, follow information, favorite content, post count, reply count, follow count, fan count, personal profile, badge acquisition, sidebar settings, follow list, fan list, email summary, time zone, post and reply content, images, audio, video, documents, and comments to understand your personal preferences and better serve you;
   3. When you report a concern about a forum post or reply, we will collect your report type, description, user name, IP address, region, organization, and host name to verify and confirm the content of the report.
 
-**c) Mail List Service**. When you use our mail list service, we will collect your **email address** and **name (optional)**. We will provide you with the email subscription service to facilitate your participation in discussions in the community.
+**c) Mail List Service**. When you use our mail list service, we will collect your **email address** and name (optional). We will provide you with the email subscription service to facilitate your participation in discussions in the community.
 
 **(d) Service Optimization**. To ensure service quality and operations, we automatically collect and store necessary log data, including access timestamps, IP addresses, region,request details, access status, resource size, access origin, and user agent information. In addition, we will collect your device information (device name, device type, device vendor, operating system, operating system version, screen width, screen height), application information (application ID, SDK version , browser, browser version, browser viewport width, browser viewport height), application usage information (event name, event attributes, reporting time, client anonymous ID, username (if you have logged into community account)). This data is collected for the purposes of community operations and O&M security.
 
@@ -43,7 +43,7 @@ The OpenAtom Foundation (hereinafter referred to as "we," "us," or "foundation")
 
 **i) Compatibility Certification**. When you use the compatibility certification service, we will collect your UUID, user name, **phone number** and **email address** from your openEuler account for identity verification purposes. Your user name and **phone number** will be used to notify you of the enterprise certification results, while your user name and **email address** will be used to inform you of the progress of the compatibility certification. Upon successful completion of the openEuler compatibility certification, the compatibility certification service will collect your enterprise information (including the enterprise name, business license, unified social credit code/organization code, business address, legal representative, registered capital, date of establishment, business term, applicant's name, **applicant's phone number**, **applicant's email address**, business registration country/region, and **enterprise email address**) for the purpose of enterprise certification. The compatibility certification service will also collect the project leader's signature via the certificate confirmation page for the purpose of generating your compatibility certificate.
 
-**j) EulerMaker**. When you use the EulerMaker service, we will collect your user name, **phone number** and **email address** from your openEuler account for identity verification purposes.
+**j) EulerMaker**. When you use the EulerMaker service, we will collect your user name, **email address** from your openEuler account for identity verification purposes.
 
 <br/>
 
@@ -75,7 +75,9 @@ We will retain your personal data for no longer than is necessary for the purpos
 
 Generally, we will store or retain your personal data within the retention period according to applicable laws or service agreements from the date when we obtain your personal data in the community. If your personal data has exceeded the retention period and no law requires us to continue processing your specific personal data, we will delete your personal data or anonymize it according to applicable laws and regulations.
 
-For example, upon your active request for the deletion of personal data, the retention period for the relevant data will be one month. We will respond to your request and delete all personal data within this period.
+Upon your active request for the deletion of personal data, the retention period for the relevant data will be one month. We will respond to your request and delete all personal data within this period.
+
+For service optimization, the access timestamp, IP address, request details, access status, accessed resource size, access source, and request user agent information collected based on the access quantity statistics will be automatically deleted after 10 days.
 
 ## 5. How We Protect Your Personal Data
 
@@ -101,7 +103,7 @@ In accordance with applicable laws and regulations, you may have the following r
 
 - Please note that these rights are not absolute and may be restricted in accordance with applicable laws. If you need our assistance in exercising the requests or rights above, please contact us as set out in the **"How to Contact Us"** section below.
 
-  - If you request us to delete the data (including your name and **email address**) collected for the purpose of signing the CLA, we will no longer be able to provide you with the corresponding services. **<u>You should understand that the CLA is a legally binding document signed by you or the corporation you represent. It serves as a proof of your permanent grants of rights over your contributions. Therefore, we will not delete your personal data upon your request, unless deleting the data does not affect the legal effect of the CLA you have signed</u>**.
+  - To provide you with the CLA Sign service, we will retain your personal data. The retention period of such data will depend on the specific purpose for which it is used, as well as the requirements of applicable laws and regulations. You acknowledge and understand that the CLA is a legally binding document signed by you or the corporation you represent, serving as evidence of the permanent rights granted over your contributions. Therefore, if you request the deletion of the data collected for the purpose of executing the CLA (including, but not limited to, your name and **email address**), we may not be able to comply with such a request, unless the deletion of such data does not affect the legal validity of the CLA you have signed.
   - Any personal data you publicly display on the community website will be stored in the relevant code repository, and historical records will persist even after deletion.
 
 **<u>Generally, we will respond to you within one month, unless otherwise required by applicable laws</u>**. Please note that under some circumstances, for example where we cannot verify your identity, or your claim exceeds your rights under applicable laws, we may refuse your request. In this case, we will inform you in written form that your request is refused together with the reasons for our refusal.
@@ -167,8 +169,8 @@ Email: **<contact@openeuler.io>**
 
 Hotline: **+86 15311871505**
 
-Last updated: **February 27, 2025**
+Last updated: **February 28, 2025**
 
-Privacy policy version: **v20250227**
+Privacy policy version: **v20250228**
 
 </div>
