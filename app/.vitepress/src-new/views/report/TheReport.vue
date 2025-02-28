@@ -5,8 +5,14 @@ import OIcon from 'opendesign/icon/OIcon.vue';
 import IconDownload from '~icons/app/icon-download.svg';
 import { onMounted } from 'vue';
 
+import { useLocale } from '~@/composables/useLocale';
+
+const { isZh } = useLocale();
+
 const pdfRef = ref();
-const pdfUrl = '/annual-report/openEuler-annual-report-2024.pdf';
+const pdfUrl = isZh.value
+  ? '/annual-report/openEuler-annual-report-2024.pdf'
+  : '/annual-report/en/openEuler-annual-report-2024.pdf';
 const VuePdfEmbed = ref(null);
 
 onMounted(async () => {

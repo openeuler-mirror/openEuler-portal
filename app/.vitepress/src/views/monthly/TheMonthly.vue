@@ -11,6 +11,7 @@ import BannerLevel2 from '@/components/BannerLevel2.vue';
 import banner from '@/assets/banner/banner-interaction.png';
 import illustration from '@/assets/illustrations/the-moon.png';
 import IconSearch from '~icons/app/icon-search.svg';
+import annualReport2024 from '~@/assets/category/header/annual-report-2024.jpg';
 
 import { getSortData, getTagsData } from '@/api/api-search';
 import type { NewsDataT, ParamsTypeT } from '@/shared/@types/type-news';
@@ -107,6 +108,19 @@ const getListData = (params: ParamsTypeT) => {
             path: 'zh/annual-report/openEuler-annual-report-2024/',
           };
           newsCardData.value.unshift(yearData);
+        } else {
+          const yearData = {
+            banner: annualReport2024,
+            archives: '2025-01',
+            author: ['openEuler'],
+            date: '2025-01-24',
+            lang: 'en',
+            title: 'openEuler 2024 Annual Report',
+            summary: 'openEuler 2024 Annual Report',
+            tags: ['openEuler'],
+            path: 'en/annual-report/openEuler-annual-report-2024/',
+          };
+          newsCardData.value.unshift(yearData);
         }
       }
     })
@@ -178,7 +192,7 @@ const pageTotal = computed(() =>
       <template v-if="newsCardData.length">
         <div class="news-list">
           <OCard
-            v-for="item in newsCardData"
+            v-for="item in newsCardData.slice(0,9)"
             :key="item.path"
             class="news-list-item"
             shadow="hover"

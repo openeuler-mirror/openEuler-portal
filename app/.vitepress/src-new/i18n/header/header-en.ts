@@ -4,6 +4,9 @@ import Summit from '~@/assets/category/header/summit.png';
 import IconOutLink from '~icons/app/icon-out-link.svg';
 import IconArrowRight from '~icons/app-new/icon-header-next.svg';
 
+import annualReport2024 from '~@/assets/category/header/annual-report-2024.jpg';
+
+
 const TAG_TYPE = {
   HOT: 'HOT',
   NEW: 'NEW',
@@ -582,6 +585,7 @@ export default {
         },
         {
           NAME: 'News & Blogs',
+          WITH_PICTURE: true,
           CHILDREN: [
             {
               NAME: 'News',
@@ -601,7 +605,15 @@ export default {
               URL: '/monthly-bulletins/',
             },
           ],
-          SHORTCUT: [],
+          SHORTCUT: [
+            {
+              NAME: 'openEuler 2024 Annual Report',
+              PICTURE: annualReport2024,
+              REMARK: 'Release time: 2025/01/24',
+              TYPE: 'PICTURE',
+              URL: '/annual-report/openEuler-annual-report-2024/',
+            },
+          ],
         },
       ],
     },
