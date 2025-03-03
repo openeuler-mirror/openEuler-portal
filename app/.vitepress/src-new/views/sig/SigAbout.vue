@@ -156,7 +156,17 @@ const processDetail = computed(() => {
       :deep(.o-card-main) {
         width: 100%;
         padding-bottom: 0;
+        .o-card-main-wrap {
+          height: 100%;
+          & > div {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+          }
+        }
         .o-card-content {
+          display: flex;
+          flex-direction: column;
           --card-content-text-size: 14px;
           height: 100%;
           @include respond-to('<=pad_v') {
@@ -166,6 +176,7 @@ const processDetail = computed(() => {
       }
 
       img {
+        flex: 1;
         margin-top: 8px;
         width: 100%;
         border-radius: var(--o-radius-xs) var(--o-radius-xs) 0 0;
