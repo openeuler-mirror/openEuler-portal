@@ -11,7 +11,6 @@ import BannerLevel2 from '@/components/BannerLevel2.vue';
 import banner from '@/assets/banner/banner-interaction.png';
 import illustration from '@/assets/illustrations/the-moon.png';
 import IconSearch from '~icons/app/icon-search.svg';
-import annualReport2024 from '~@/assets/category/header/annual-report-2024.jpg';
 
 import { getSortData, getTagsData } from '@/api/api-search';
 import type { NewsDataT, ParamsTypeT } from '@/shared/@types/type-news';
@@ -110,7 +109,7 @@ const getListData = (params: ParamsTypeT) => {
           newsCardData.value.unshift(yearData);
         } else {
           const yearData = {
-            banner: annualReport2024,
+            banner: '/img/banners/annual-report-2024-en.jpg',
             archives: '2025-01',
             author: ['openEuler'],
             date: '2025-01-24',
