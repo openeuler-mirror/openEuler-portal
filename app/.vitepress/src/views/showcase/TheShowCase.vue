@@ -125,9 +125,17 @@ const isTopNavMo = computed(() => {
 function jumpPage(page: number) {
   parmes.page = page;
 }
+// 跳转路径处理
+const pathResolving = (path: string) => {
+  path = path.endsWith('index')
+    ? '/' + path.replace(/(index)$/g, '')
+    : '/' + path + '.html';
+  return path;
+};
+
 // 点击跳转案例详情页面
 function goDetail(link: string, item: any, index: number) {
-  const search_result_url = '/' + link.replace('index', '');
+  const search_result_url = pathResolving(link);
   if (cookieStore.isAllAgreed) {
     reportSelectSearchResult(search_result_url, item, index);
   }
