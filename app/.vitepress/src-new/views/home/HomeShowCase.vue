@@ -53,6 +53,13 @@ const tabs = ref();
 const activeWidth = ref();
 const activeLeft = ref();
 
+const pathResolving = (path: string) => {
+  path = path.endsWith('index')
+    ? '/' + path.replace(/(index)$/g, '')
+    : '/' + path + '.html';
+  return path;
+};
+
 // -------------------- 获取案例数据 --------------------
 const caseData = ref({});
 const getCases = () => {
@@ -189,7 +196,7 @@ onUnmounted(() => {
                 class="item-case"
               >
                 <OLink
-                  :href="'/' + item.path.replace(/(index)$/g, '')"
+                  :href="pathResolving(item.path)"
                   target="_blank"
                   class="item-link"
                 >
