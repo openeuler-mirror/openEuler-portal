@@ -209,18 +209,21 @@ onMounted(() => {
           </a>
         </template>
         <template #td_gitee_id="{ row }">
-          <a
-            v-for="(item, index) in row.gitee_id"
-            :key="item"
-            target="_blank"
-            rel="noopener noreferrer"
-            :href="`https://gitee.com/${item}`"
-          >
-            {{ item
-            }}<span v-show="index !== row.gitee_id.length - 1">{{
-              locale === 'zh' ? '、' : ',&nbsp;'
-            }}</span>
-          </a>
+          <template v-if="row.gitee_id.length">
+            <a
+              v-for="(item, index) in row.gitee_id"
+              :key="item"
+              target="_blank"
+              rel="noopener noreferrer"
+              :href="`https://gitee.com/${item}`"
+            >
+              {{ item
+              }}<span v-show="index !== row.gitee_id.length - 1">{{
+                locale === 'zh' ? '、' : ',&nbsp;'
+              }}</span>
+            </a>
+          </template>
+          <span v-else>-</span>
         </template>
       </OTable>
     </OScroller>

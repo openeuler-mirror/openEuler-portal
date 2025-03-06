@@ -1,7 +1,10 @@
 <script lang="ts" setup>
-import { useRouter } from 'vitepress';
-
 import { ref, onMounted, computed } from 'vue';
+
+import { useRouter } from 'vitepress';
+import { storeToRefs } from 'pinia';
+
+import { useCommon } from '@/stores/common';
 
 import {
   OIcon,
@@ -22,7 +25,7 @@ import { useScreen } from '~@/composables/useScreen';
 import type { SigCompleteItemT } from '~@/@types/type-sig';
 
 import { landscapeIconMap } from '~@/data/sig';
-import { getSigLandscape, getSigList, getRepoList } from '~@/api/api-sig';
+import { getSigLandscape, getSigList } from '~@/api/api-sig';
 
 import IconGitee from '~icons/app-new/icon-gitee.svg';
 import IconMail from '~icons/app-new/icon-mail.svg';
@@ -32,6 +35,7 @@ const { locale } = useLocale();
 const { lePadV } = useScreen();
 
 const COUNT_PER_PAGE = [10, 20, 30];
+const { theme } = storeToRefs(useCommon());
 
 const router = useRouter();
 
@@ -225,7 +229,7 @@ const getMoreDataMo = () => {
           </div>
           <div
             v-if="
-              landscapeIconMap.get(
+              landscapeIconMap.has(
                 landscapeMap.get(sig.sig_name)?.feature?.en || ''
               )
             "
@@ -236,9 +240,14 @@ const getMoreDataMo = () => {
                 <component
                   :is="
                     landscapeIconMap.get(
-                      landscapeMap.get(sig.sig_name)?.feature?.en || ''
-                    )
+                      landscapeMap.get(sig.sig_name)?.feature?.en
+                    )?.icon
                   "
+                  :style="{
+                    color: landscapeIconMap.get(
+                      landscapeMap.get(sig.sig_name)?.feature?.en
+                    )?.color[theme],
+                  }"
                 ></component>
               </OIcon>
               {{ landscapeMap.get(sig.sig_name)?.feature[locale] }}
