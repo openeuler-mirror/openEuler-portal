@@ -67,17 +67,46 @@ const navData = computed(() => {
   }
 });
 
+class NavAccessAnalyzer {
+  hoverTime: number = Date.now();
+  stepCount: number = 0;
+
+  end(navPath: string[]) {
+    oaReport(
+      'click',
+      {
+        module: 'navigation',
+        steps: this.stepCount + 1,
+        time_used: Date.now() - this.hoverTime,
+        ...navPath.reduce((levels, navName, index) => {
+          levels[`level${index + 1}`] = navName;
+          return levels;
+        }, {} as Record<string, string>),
+      },
+      'portal'
+    );
+  }
+
+  stepIncr() {
+    this.stepCount++
+  }
+}
+
+let navAnalyzer: NavAccessAnalyzer | null = null;
+
 // nav 鼠标滑过事件
 const isShow = ref(false);
 const navActive = ref();
 const subNavActive = ref();
-const subNavContent = ref({});
-const subNav = ref({});
+const subNavContent = ref<Record<string, any>>({});
+const subNav = ref<Record<string, any>>({});
 const toggleDebounced = useDebounceFn(function (item: any | null) {
   if (item === null) {
+    navAnalyzer = null;
     navActive.value = '';
     isShow.value = false;
   } else {
+    (navAnalyzer ??= new NavAccessAnalyzer()).stepIncr();
     navActive.value = item.ID;
     isShow.value = true;
     subNavActive.value = item.CHILDREN[0]?.NAME;
@@ -87,8 +116,11 @@ const toggleDebounced = useDebounceFn(function (item: any | null) {
 }, 100);
 
 const changeSubnav = useDebounceFn(function (item: any) {
-  subNavActive.value = item.NAME;
-  subNavContent.value = item;
+  if (subNavActive.value !== item.NAME) {
+    navAnalyzer?.stepIncr();
+    subNavActive.value = item.NAME;
+    subNavContent.value = item;
+  }
 }, 150);
 
 const linkClick = () => {
@@ -97,17 +129,8 @@ const linkClick = () => {
 };
 
 const reportNavClick = (path: string[]) => {
-  oaReport(
-    'click',
-    {
-      module: 'navigation',
-      ...path.reduce((level, item, index) => {
-        level[`level${index + 1}`] = item;
-        return level;
-      }, {} as Record<string, string>),
-    },
-    'portal'
-  );
+  navAnalyzer?.end(path);
+  navAnalyzer = null;
 };
 </script>
 
