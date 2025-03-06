@@ -35,28 +35,6 @@ const props = defineProps({
 });
 
 const OMIT = '/openeuler/community/tree/master/';
-
-const descriptionRef = ref();
-const isOverflow = ref(false);
-
-watch(
-  () => props.description,
-  () => {
-    nextTick(() => {
-      console.log(descriptionRef.value?.scrollHeight);
-      console.log(descriptionRef.value?.clientHeight);
-
-      if (
-        descriptionRef.value?.scrollHeight > descriptionRef.value?.clientHeight
-      ) {
-        console.log(props.description);
-
-        isOverflow.value = true;
-      }
-    });
-  },
-  { immediate: true }
-);
 </script>
 <template>
   <div class="sig-detail-info-card">
@@ -104,21 +82,9 @@ watch(
     </div>
     <ODivider class="divider-mo" direction="h" />
     <div class="content">
-      <div ref="descriptionRef" class="sig-description">
+      <div class="sig-description">
         {{ description }}
       </div>
-      <OPopover
-        v-if="isOverflow"
-        position="bottom"
-        trigger="hover"
-        wrapper=".sig-detail-info-card"
-        wrap-class="sig-popup-description"
-        target=".sig-description"
-      >
-        <div>
-          {{ description }}
-        </div>
-      </OPopover>
     </div>
   </div>
 </template>
@@ -128,10 +94,11 @@ watch(
   position: relative;
   padding: 24px 40px;
   border-radius: var(--o-radius-xs);
-  background-image: url('~@/assets/category/sig/sig-card_bg_light.png');
-  background-size: 100% 100%;
-  background-position: right bottom;
+  background-size: 100% auto;
+  background-position: right top;
   background-repeat: no-repeat;
+  background-image: url('~@/assets/category/sig/sig-card_bg_light.png'),
+    linear-gradient(163deg, #e3f0ff 0%, #cae4ff 100%);
   @include respond-to('<=pad_v') {
     padding: 16px;
     background-image: linear-gradient(163deg, #eef4fe 0%, #dfecfe 100%);
@@ -188,7 +155,6 @@ watch(
 
   .sig-description {
     margin-top: 8px;
-    @include text-truncate(2);
     @include text1;
   }
 
@@ -200,12 +166,10 @@ watch(
   }
 }
 
-.sig-popup-description {
-}
-
 [data-o-theme='dark'] {
   .sig-detail-info-card {
-    background-image: url('~@/assets/category/sig/sig-card_bg_dark.png');
+    background-image: url('~@/assets/category/sig/sig-card_bg_dark.png'),
+      linear-gradient(163deg, #30364E 0%, #1D2855 100%);
   }
 }
 </style>
