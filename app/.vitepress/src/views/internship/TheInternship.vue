@@ -47,7 +47,7 @@ const INTEGRAL_DATA = [
       '实习评语',
       '提交实习报告',
     ],
-    SUPPLEMENT: '满足以上3条，实习评语与实习报告经评审合格后发放实习证明。',
+    SUPPLEMENT: '满足以上3条，实习评语与实习报告经评审合格后发放实习证明。具体见以上“申请步骤4“里的实习证明说明。',
   },
   {
     HEAD: '3、优秀实习生证书',
@@ -265,18 +265,10 @@ onUnmounted(() => {
     <div class="intership-wrap">
       <section id="introduce" class="panel introduce-card nav">
         <p class="text">
-          openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。由社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证明和实习工资。
+          开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。由社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证明和实习工资。
         </p>
         <p class="text">
-          盛情邀请社区各位资深开发者成为本次活动导师，点击导师报名通道填写报名表。
-        </p>
-        <p class="text">
-          <a
-            href="https://docs.qq.com/form/page/DUlZIaGFGZ0JGQmZs"
-            target="_blank"
-            rel="noopener noreferrer"
-            >导师报名通道</a
-          >
+          盛情邀请社区各位资深开发者成为开源实习活动导师，请发送报名至活动邮箱<a href="mailto:intern@openeuler.sh">intern@openeuler.sh</a>。
         </p>
       </section>
       <section id="step" class="panel nav">
@@ -393,22 +385,9 @@ onUnmounted(() => {
                   <span>{{ item.TEXT[0] }}</span>
                 </p>
                 <p>
-                  <span>{{ item.TEXT[1] }}</span>
-                  <a
-                    href="/category/internship/导师实习评语.txt"
-                    download
-                    title="下载实习评语"
-                    >{{ item.TEXT[2] }}</a
-                  >
+                  <span>{{ item.TEXT[1] }}{{ item.TEXT[2] }}</span>
                 </p>
-                <p>
-                  <a
-                    href="/category/internship/实习报告模板.docx"
-                    download
-                    title="下载报告模板"
-                    >{{ item.TEXT[3] }}</a
-                  >
-                </p>
+                <p>{{ item.TEXT[3] }}</p>
               </div>
               <div v-else>
                 <p
@@ -417,12 +396,7 @@ onUnmounted(() => {
                   class="star"
                 >
                   <slot v-if="index === 1 && index1 === 3">
-                    <a
-                      href="/category/internship/实习报告模板.docx"
-                      download
-                      title="下载报告模板"
-                      >{{ item1 }}</a
-                    >
+                    {{ item1 }}
                   </slot>
                   <span v-else>{{ item1 }}</span>
                 </p>

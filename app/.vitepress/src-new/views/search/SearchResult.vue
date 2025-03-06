@@ -187,29 +187,20 @@ const downloadAggre = computed(() => {
 // ----------------------- 埋点相关 ----------------------------
 let SEARCH_EVENT_ID = uniqueId();
 
-const reportSelectSearchResult = (
-  data: any,
-  index: number,
-  path: string,
-  keyword: string
-) => {
+const reportSelectSearchResult = (data: any, index: number, path: string) => {
   const searchKeyObj = {
     search_tag: data.type,
     search_rank_num: pageSize.value * (currentPage.value - 1) + (index + 1),
     search_result_total_num: props.total,
     search_result_url: path,
   };
-
-  oaReport(
-    'selectSearchResult',
-    {
-      search_event_id: SEARCH_EVENT_ID,
-      search_key: keyword,
-      ...(data || {}),
-      ...searchKeyObj,
-    },
-    'search_portal'
-  );
+  reportSearch({
+    search_event_id: SEARCH_EVENT_ID,
+    target: data.title.replace(/<.+?>/g, ''),
+    ...(data || {}),
+    ...searchKeyObj,
+    type: 'search_content',
+  });
 };
 
 const verticalPadding = computed(() => {
@@ -246,11 +237,34 @@ const goSearchDetail = (href: string, index: number) => {
     showExternalDlg.value = true;
   }
 };
+
+const onFilterChange = (val: any) => {
+  reportSearch({
+    type: 'subtab',
+    target: subModuleMap.get(val)?.label?.[locale.value] || val,
+  });
+};
+
+const reportSearch = (data: Record<string, any>) => {
+  oaReport(
+    'click',
+    {
+      module: 'search_result',
+      content: props.searchVal,
+      ...data,
+    },
+    'search_portal'
+  );
+};
 </script>
 <template>
   <ContentWrapper class="search-result" :vertical-padding="verticalPadding">
     <div class="filter-line">
-      <ORadioGroup v-if="subModules?.length" v-model="searchType">
+      <ORadioGroup
+        @change="onFilterChange"
+        v-if="subModules?.length"
+        v-model="searchType"
+      >
         <ORadio
           v-for="subModule in subModules"
           :key="subModule.key"
@@ -267,6 +281,7 @@ const goSearchDetail = (href: string, index: number) => {
         </ORadio>
       </ORadioGroup>
       <OSelect
+        @change="onFilterChange"
         v-if="
           !searchType ||
           searchType === 'docs' ||
@@ -286,6 +301,7 @@ const goSearchDetail = (href: string, index: number) => {
         </OOption>
       </OSelect>
       <OSelect
+        @change="onFilterChange"
         v-if="sortType.includes(searchType)"
         v-model="activeSort"
         placeholder="Select"

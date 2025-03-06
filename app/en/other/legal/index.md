@@ -50,6 +50,6 @@ The contents on this website are provided for your convenience only. The openEul
 
 ## Applicable Law and Dispute Resolution
 
-You agree that your access and all related activities on or through this website shall be governed by, construed, and interpreted in accordance with the laws of the PRC. You agree that any dispute between the parties arising out of or in connection with this legal notice or your access and all related activities on or through this website shall be governed by a court with jurisdiction in Shenzhen, Guangdong Province of the People's Republic of China.
+You agree that your access and all related activities on or through this website shall be governed by, construed, and interpreted in accordance with the laws of the PRC. You agree that any dispute between the parties arising out of or in connection with this legal notice or your access and all related activities on or through this website shall be governed by a court with jurisdiction in Beijing Economic-Technological Development Area of the People's Republic of China.
 
 </div>

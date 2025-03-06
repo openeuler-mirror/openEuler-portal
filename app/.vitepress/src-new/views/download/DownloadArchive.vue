@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue';
+import { computed, onMounted, ref, unref, Ref } from 'vue';
 import { useData } from 'vitepress';
 
 import {
@@ -30,6 +30,10 @@ import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
+const emits = defineEmits<{
+  (e: 'reportDownload', val: Record<string, string>): void;
+}>();
+
 const { lang } = useData();
 const { t, locale } = useLocale();
 const { lePadV, isPadVToLaptop } = useScreen();
@@ -42,6 +46,36 @@ const activeArch = ref('');
 const activeVersionType = ref(VERSION_LIST[0].value);
 const allList: any = ref();
 const loading = ref(true);
+
+const radioData = computed(() => ({
+  architecture: archMap.get(activeArch.value)?.label || activeArch.value,
+  scenario:
+    SCENARIO_LIST.get(activeScenario.value as string)?.label.value || '',
+  version:
+    VERSION_LIST.find((item) => item.value === activeVersionType.value)?.label
+      ?.value || '',
+}));
+
+const onRadioChange = (val: string | number | boolean, type: string) => {
+  let targetVal: string | Ref<string>;
+  switch (type) {
+    case 'architecture':
+      targetVal = archMap.get(val as string)?.label || (val as string);
+      break;
+    case 'scenario':
+      targetVal = SCENARIO_LIST.get(val as string)!.label;
+      break;
+    case 'version':
+      targetVal = VERSION_LIST.find((item) => item.value === val)!.label;
+      break;
+    default:
+      return;
+  }
+  emits('reportDownload', {
+    target: unref(targetVal),
+    type,
+  });
+};
 
 const setTagArch = () => {
   const tempArch = new Set<string>();
@@ -219,6 +253,14 @@ const versionNameList = computed(() => {
   });
 });
 const searchVal = ref('');
+
+const onClickLink = (item: any) => {
+  emits('reportDownload', {
+    ...radioData.value,
+    level2: item.Version,
+    target: t('download.DOWNLOADGO'),
+  });
+};
 </script>
 
 <template>
@@ -234,7 +276,10 @@ const searchVal = ref('');
     <div class="filter-box">
       <div class="filter-card">
         <div class="label">{{ $t('download.ARCHITECTURE2') }}</div>
-        <ORadioGroup v-model="activeArch">
+        <ORadioGroup
+          v-model="activeArch"
+          @change="onRadioChange($event, 'architecture')"
+        >
           <ORadio v-for="option in tagArch" :key="option" :value="option">
             <template #radio="{ checked }">
               <OToggle :checked="checked">{{
@@ -248,7 +293,10 @@ const searchVal = ref('');
         <div class="label">
           {{ $t('download.SCENARIO2') }}
         </div>
-        <ORadioGroup v-model="activeScenario">
+        <ORadioGroup
+          v-model="activeScenario"
+          @change="onRadioChange($event, 'scenario')"
+        >
           <ORadio
             v-for="option in SCENARIO_LIST.values()"
             :key="option.value"
@@ -264,7 +312,10 @@ const searchVal = ref('');
         <div class="label">
           {{ $t('download.VERSION_TYPE') }}
         </div>
-        <ORadioGroup v-model="activeVersionType">
+        <ORadioGroup
+          v-model="activeVersionType"
+          @change="onRadioChange($event, 'version')"
+        >
           <ORadio
             v-for="option in VERSION_LIST"
             :key="option.value"
@@ -376,6 +427,7 @@ const searchVal = ref('');
               '/download/archive/detail/?version=' +
               scope.row.Version
             "
+            @click="onClickLink(scope.row)"
           >
             <span>{{ t('download.DOWNLOADGO') }}</span>
             <template #suffix>

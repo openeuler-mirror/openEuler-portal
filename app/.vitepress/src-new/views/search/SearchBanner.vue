@@ -10,6 +10,7 @@ import SearchRecommend from './SearchRecommend.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
 import IconSearch from '~icons/app-new/icon-header-search.svg';
+import { oaReport } from '@/shared/analytics';
 
 const props = defineProps({
   // 建议搜索词
@@ -23,7 +24,7 @@ const props = defineProps({
   tabData: {
     type: Object,
     default: () => {
-      return [];
+      return {};
     },
   },
   // input 框输入数据
@@ -35,6 +36,16 @@ const props = defineProps({
     type: String,
     default: '',
   },
+});
+
+const tabDataLabelMap = computed<Map<string, any> | undefined>(() => {
+  const tabData = props.tabData;
+  if (tabData) {
+    return Object.values(tabData).reduce(
+      (map, val) => map.set(val.value, val.label),
+      new Map()
+    );
+  }
 });
 
 const emits = defineEmits(['search', 'update:modelValue', 'update:currentTab']);
@@ -53,6 +64,13 @@ const currentTab = computed({
   },
 });
 
+const onTabChange = (val: any) => {
+  reportSearch({
+    type: 'tab',
+    target: tabDataLabelMap.value?.get(val)?.[locale.value],
+  });
+};
+
 const { lePadV } = useScreen();
 const { locale } = useLocale();
 
@@ -68,8 +86,25 @@ const handleSearchHistory = (val: string) => {
   emits('search', val);
 };
 const handleClickSuggest = (val: string) => {
-  modelValue.value = val.replace(/<[^>]+>/g, '');
+  val = val.replace(/<[^>]+>/g, '');
+  modelValue.value = val;
+  reportSearch({
+    type: 'looking_for',
+    target: val,
+  });
   emits('search', val);
+};
+
+const reportSearch = (data: Record<string, any>) => {
+  oaReport(
+    'click',
+    {
+      module: 'search_result',
+      content: modelValue.value,
+      ...data,
+    },
+    'search_portal'
+  );
 };
 
 const handleInput = () => {
@@ -129,6 +164,7 @@ defineExpose({ searchRecommendRef });
             : 'var(--o-color-white)',
         }"
         :line="false"
+        @change="onTabChange"
       >
         <template v-for="item in tabData" :key="item.value">
           <OTabPane :value="item.value">

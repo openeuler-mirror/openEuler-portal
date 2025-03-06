@@ -13,8 +13,6 @@ import { useCookieStore } from '~@/stores/common';
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 
-import { uniqueId } from '@/shared/utils';
-import { oaReport } from '@/shared/analytics';
 import { getUrlParam } from '~@/utils/common';
 
 import SearchBanner from './SearchBanner.vue';
@@ -257,9 +255,6 @@ const flag = ref(false);
 function searchAll(valueChange?: boolean) {
   if (searchValue.value) {
     currentPage.value = 1;
-    if (cookieStore.isAllAgreed) {
-      reportSearch(searchValue.value);
-    }
     // 是否重置tab
     if (valueChange) {
       currentTab.value = 'all';
@@ -274,18 +269,6 @@ function searchAll(valueChange?: boolean) {
     clearSearchInput();
   }
 }
-let SEARCH_EVENT_ID = uniqueId();
-const reportSearch = (keyword: string) => {
-  SEARCH_EVENT_ID = uniqueId();
-  oaReport(
-    'searchValue',
-    {
-      search_event_id: SEARCH_EVENT_ID,
-      search_key: keyword,
-    },
-    'search_portal'
-  );
-};
 
 function handleSelectChange(val: string) {
   history.pushState(null, '', `?search=${encodeURIComponent(val)}`);

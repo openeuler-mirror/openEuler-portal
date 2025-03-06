@@ -30,10 +30,15 @@ const props = defineProps({
 import IconFound from '~icons/app-new/icon-good.svg';
 import IconNotFound from '~icons/app-new/icon-bad.svg';
 import IconFeedback from '~icons/app-new/icon-feedback.svg';
+import { oaReport } from '@/shared/analytics';
+import { Directive } from 'vue';
+import { onMounted } from 'vue';
+import { useDebounceFn } from '@vueuse/core';
 
 const { t } = useLocale();
 const { isPhone, gtPadV, gtPhone } = useScreen();
 
+const searchContent = ref('');
 const feedbackTxa = ref('');
 const isMessageSuccess = ref(false);
 const isMessageError = ref(false);
@@ -82,6 +87,39 @@ const querySearchFeedback = () => {
 };
 
 const isVisible = ref(false);
+
+const onInput = useDebounceFn(
+  () => reportSearch('input', { content: feedbackTxa.value, search_content: props.keyword }),
+  500
+);
+
+const onBtnClick = (ev: MouseEvent) => {
+  const val = (ev.target as HTMLElement).textContent;
+  reportSearch('click', { target: val });
+};
+
+const reportSearch = (event: string, data: Record<string, any>) => {
+  oaReport(
+    event,
+    {
+      module: 'search_feedback',
+      content: searchContent.value,
+      ...data,
+    },
+    'search_portal'
+  );
+};
+
+const vBtnAnalyze: Directive<HTMLButtonElement> = {
+  mounted(el) {
+    el.addEventListener('click', onBtnClick);
+  },
+};
+
+onMounted(() => {
+  searchContent.value =
+    new URLSearchParams(location.search).get('search') ?? '';
+});
 </script>
 
 <template>
@@ -97,6 +135,7 @@ const isVisible = ref(false);
         <p class="text">{{ t('search.searchFeedbackText') }}</p>
         <div class="action">
           <OButton
+            v-btn-analyze
             color="primary"
             :icon="IconFound"
             class="search-btn"
@@ -105,6 +144,7 @@ const isVisible = ref(false);
             {{ t('search.found') }}
           </OButton>
           <OButton
+            v-btn-analyze
             color="primary"
             :icon="IconNotFound"
             class="search-btn"
@@ -131,6 +171,7 @@ const isVisible = ref(false);
       <!-- 反馈 -->
       <div v-if="isFound && gtPhone" class="feedback-form">
         <OTextarea
+          @input="onInput"
           v-model="feedbackTxa"
           :placeholder="t('search.searchFeedbackPlaceholder')"
           resize="none"
@@ -143,6 +184,7 @@ const isVisible = ref(false);
 
         <div class="action">
           <OButton
+            v-btn-analyze
             variant="solid"
             color="primary"
             size="medium"
@@ -152,6 +194,7 @@ const isVisible = ref(false);
             >{{ t('search.submit') }}</OButton
           >
           <OButton
+            v-btn-analyze
             variant="outline"
             color="primary"
             @click="onReset"
@@ -171,6 +214,7 @@ const isVisible = ref(false);
           <div class="layer-box">
             <h2 class="layer-title">{{ t('search.searchFeedback') }}</h2>
             <OTextarea
+              @input="onInput"
               v-model="feedbackTxa"
               :placeholder="t('search.searchFeedbackPlaceholder')"
               resize="none"
@@ -183,10 +227,16 @@ const isVisible = ref(false);
             />
 
             <div class="btn-box">
-              <OButton variant="text" class="reset-btn" @click="onReset">
+              <OButton
+                v-btn-analyze
+                variant="text"
+                class="reset-btn"
+                @click="onReset"
+              >
                 {{ t('search.cancel') }}
               </OButton>
               <OButton
+                v-btn-analyze
                 variant="text"
                 color="primary"
                 :disabled="isDisable"

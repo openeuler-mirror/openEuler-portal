@@ -107,6 +107,19 @@ const getListData = (params: ParamsTypeT) => {
             path: 'zh/annual-report/openEuler-annual-report-2024/',
           };
           newsCardData.value.unshift(yearData);
+        } else {
+          const yearData = {
+            banner: '/img/banners/annual-report-2024-en.jpg',
+            archives: '2025-01',
+            author: ['openEuler'],
+            date: '2025-01-24',
+            lang: 'en',
+            title: 'openEuler 2024 Annual Report',
+            summary: 'openEuler 2024 Annual Report',
+            tags: ['openEuler'],
+            path: 'en/annual-report/openEuler-annual-report-2024/',
+          };
+          newsCardData.value.unshift(yearData);
         }
       }
     })
@@ -178,7 +191,7 @@ const pageTotal = computed(() =>
       <template v-if="newsCardData.length">
         <div class="news-list">
           <OCard
-            v-for="item in newsCardData"
+            v-for="item in newsCardData.slice(0,9)"
             :key="item.path"
             class="news-list-item"
             shadow="hover"
