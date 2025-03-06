@@ -60,6 +60,8 @@ export function removeCookie(key: string) {
  */
 export const checkOriginLink = (path: string) => {
   return (
-    path.includes(DOMAIN) || path.includes('openeuler.openatom.cn')
+    path.includes(DOMAIN) ||
+    path.includes('.openeuler.org') ||
+    path.includes('openeuler.openatom.cn')
   );
 };
