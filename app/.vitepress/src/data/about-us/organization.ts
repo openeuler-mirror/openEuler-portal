@@ -66,7 +66,6 @@ import humingyue from '@/assets/category/organization/brand/humingyu.png';
 // 用户委员会
 import xiule from '@/assets/category/organization/user/xiulei.png';
 import gaohonghe from '@/assets/category/organization/user/gaohonghe.png';
-import huangweixu from '@/assets/category/organization/user/huangweixu.png';
 import wangjun from '@/assets/category/organization/user/wangjun.png';
 import wangyouhai from '@/assets/category/organization/user/wangyouhai.png';
 import weijiangang from '@/assets/category/organization/user/weijiangang.png';
@@ -75,9 +74,17 @@ import zhangqingnan from '@/assets/category/organization/user/zhangqingnan.png';
 import xulei from '@/assets/category/organization/user/xulei.png';
 import zuchen from '@/assets/category/organization/user/zuchen.png';
 import weibin from '@/assets/category/organization/user/weishan.png';
+import zhenzhenyu from '@/assets/category/organization/user/zhenzhenyu.png';
+import chenjin from '@/assets/category/organization/user/chenjin.png';
+import cuiji from '@/assets/category/organization/user/cuiji.png';
+import gongchengpeng from '@/assets/category/organization/user/gongchengpeng.png';
+import huyong from '@/assets/category/organization/user/huyong.png';
+import lichenbing from '@/assets/category/organization/user/lichenbing.png';
+import rongtao from '@/assets/category/organization/user/rongtao.png';
+import xutianyuan from '@/assets/category/organization/user/xutianyuan.png';
 
 // 业务发展工作组
-import huangxuwei from '@/assets/category/organization/development/huangxuwei.png';
+import huangweixu from '@/assets/category/organization/user/huangweixu.png';
 import lichengpeng from '@/assets/category/organization/development/lichengpeng.png';
 import liuhuajie from '@/assets/category/organization/development/liuhuajie.png';
 import liushenghang from '@/assets/category/organization/development/liushenghang.png';
@@ -532,16 +539,46 @@ export default {
             email: 'xuelei@cmss.chinamobile.com',
           },
           {
+            img: chenjin,
+            name: '陈静',
+            position: ['委员'],
+            email: 'chenjingc@uniontech.com',
+          },
+          {
+            img: cuiji,
+            name: '崔骥',
+            position: ['委员'],
+            email: 'cuiji@beyondcent.com',
+          },
+          {
+            img: gongchengpeng,
+            name: '龚鹏程',
+            position: ['委员'],
+            email: '4705317@QQ.com',
+          },
+          {
             img: gaohonghe,
             name: '高洪鹤',
             position: ['委员'],
             email: 'gaohonghe@kylinsec.com.cn',
           },
           {
-            img: huangweixu,
-            name: '黄伟旭',
+            img: huyong,
+            name: '胡勇',
             position: ['委员'],
-            email: 'huangweixu@huawei.com',
+            email: 'yong.hu@intel.com',
+          },
+          {
+            img: lichenbing,
+            name: '李晨斌',
+            position: ['委员'],
+            email: 'cbli@linx-info.com',
+          },
+          {
+            img: rongtao,
+            name: '荣涛',
+            position: ['委员'],
+            email: 'rongtao@cestc.cn',
           },
           {
             img: wangjun,
@@ -550,22 +587,16 @@ export default {
             email: 'junwangs@isoftstone.com',
           },
           {
-            img: wangyouhai,
-            name: '王友海',
-            position: ['委员'],
-            email: 'wangyouhai@uniontech.com',
-          },
-          {
-            img: weibin,
-            name: '魏彬',
-            position: ['委员'],
-            email: 'bin.wei@intel.com',
-          },
-          {
             img: xulei,
             name: '徐磊',
             position: ['委员'],
             email: 'stone.xulei@xfusion.com',
+          },
+          {
+            img: xutianyuan,
+            name: '徐田原',
+            position: ['委员'],
+            email: 'xu.tianyuan@h3c.com',
           },
           {
             img: zhangjian,
@@ -578,6 +609,12 @@ export default {
             name: '张庆南',
             position: ['委员'],
             email: 'zhangqingnan001@chinasofti.com',
+          },
+          {
+            img: zhenzhenyu,
+            name: '郑振宇',
+            position: ['委员'],
+            email: 'zhengzhenyu@openeuler.sh',
           },
           {
             img: zuchen,
@@ -1084,16 +1121,46 @@ export default {
             email: 'xuelei@cmss.chinamobile.com',
           },
           {
+            img: chenjin,
+            name: 'Chen Jing',
+            position: ['Committee member'],
+            email: 'chenjingc@uniontech.com',
+          },
+          {
+            img: cuiji,
+            name: 'Cui Ji',
+            position: ['Committee member'],
+            email: 'cuiji@beyondcent.com',
+          },
+          {
+            img: gongchengpeng,
+            name: 'Gong ChenPeng',
+            position: ['Committee member'],
+            email: '4705317@QQ.com',
+          },
+          {
             img: gaohonghe,
             name: 'Gao Honghe',
             position: ['Committee member'],
             email: 'gaohonghe@kylinsec.com.cn',
           },
           {
-            img: huangweixu,
-            name: 'Huang Weixu',
+            img: huyong,
+            name: 'Hu Yong',
             position: ['Committee member'],
-            email: 'huangweixu@huawei.com',
+            email: 'yong.hu@intel.com',
+          },
+          {
+            img: lichenbing,
+            name: 'Li Chenbin',
+            position: ['Committee member'],
+            email: 'cbli@linx-info.com',
+          },
+          {
+            img: rongtao,
+            name: 'Rong Tao',
+            position: ['Committee member'],
+            email: 'rongtao@cestc.cn',
           },
           {
             img: wangjun,
@@ -1102,22 +1169,16 @@ export default {
             email: 'junwangs@isoftstone.com',
           },
           {
-            img: wangyouhai,
-            name: 'Wang Youhai',
-            position: ['Committee member'],
-            email: 'wangyouhai@uniontech.com',
-          },
-          {
-            img: weibin,
-            name: 'Wei Bin',
-            position: ['Committee member'],
-            email: 'bin.wei@intel.com',
-          },
-          {
             img: xulei,
             name: 'Xu Lei',
             position: ['Committee member'],
             email: 'stone.xulei@xfusion.com',
+          },
+          {
+            img: xutianyuan,
+            name: 'Xu Tianyuan',
+            position: ['Committee member'],
+            email: 'xu.tianyuan@h3c.com',
           },
           {
             img: zhangjian,
@@ -1130,6 +1191,12 @@ export default {
             name: 'Zhang Qingnan',
             position: ['Committee member'],
             email: 'zhangqingnan001@chinasofti.com',
+          },
+          {
+            img: zhenzhenyu,
+            name: 'Zheng Zhenyu',
+            position: ['Committee member'],
+            email: 'zhengzhenyu@openeuler.sh',
           },
           {
             img: zuchen,
