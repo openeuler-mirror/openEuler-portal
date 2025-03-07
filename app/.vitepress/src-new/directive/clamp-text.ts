@@ -1,4 +1,4 @@
-// 文本超过 n 行显示展开隐藏按钮
+//TODO: 文本超过 n 行显示展开隐藏按钮
 import { ref, DirectiveBinding } from 'vue';
 
 interface ExtendedHTMLElement extends HTMLElement {
