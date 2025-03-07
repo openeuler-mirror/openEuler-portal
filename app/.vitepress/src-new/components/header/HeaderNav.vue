@@ -88,7 +88,7 @@ class NavAccessAnalyzer {
   }
 
   stepIncr() {
-    this.stepCount++
+    this.stepCount++;
   }
 }
 
@@ -107,6 +107,10 @@ const toggleDebounced = useDebounceFn(function (item: any | null) {
     isShow.value = false;
   } else {
     (navAnalyzer ??= new NavAccessAnalyzer()).stepIncr();
+    oaReport('hover', {
+      module: 'navigation',
+      level1: item.NAME,
+    });
     navActive.value = item.ID;
     isShow.value = true;
     subNavActive.value = item.CHILDREN[0]?.NAME;
@@ -118,6 +122,11 @@ const toggleDebounced = useDebounceFn(function (item: any | null) {
 const changeSubnav = useDebounceFn(function (item: any) {
   if (subNavActive.value !== item.NAME) {
     navAnalyzer?.stepIncr();
+    oaReport('click', {
+      module: 'navigation',
+      level1: item.NAV_PATH[0],
+      level2: item.NAME,
+    });
     subNavActive.value = item.NAME;
     subNavContent.value = item;
   }
