@@ -62,6 +62,7 @@ export const checkOriginLink = (path: string) => {
   return (
     path.includes(DOMAIN) ||
     path.includes('.openeuler.org') ||
+    path.includes('clasign.osinfra.cn') ||
     path.includes('openeuler.openatom.cn')
   );
 };
