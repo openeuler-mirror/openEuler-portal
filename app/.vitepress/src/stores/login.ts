@@ -7,7 +7,6 @@ type LoginStatus = 'NOT_LOGIN' | 'LOGINiNG' | 'LOGINED';
 export const useLogin = defineStore('login', () => {
   // 登录信息
   const guardAuthClient = ref({
-    aigcPrivacyAccepted: '',
     email: '',
     photo: '',
     username: '',
