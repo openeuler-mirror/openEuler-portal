@@ -11,9 +11,12 @@ import img4Dark from '@/assets/category/user-group/img4_dark.png';
 export default {
   BANNER_TITLE: 'openEuler 用户组',
   BANNER_INTRODUCTION: '热衷实践 乐于分享 多元贡献',
+  BANNER_SUBTITLE:
+    '订阅openEuler用户组邮件列表，接收社区技术进展、用户组活动信息，参与用户组讨论',
   INTRODUCE:
     'openEuler 用户组（openEuler User Group，简称oEUG）旨在为各区域openEuler用户、开发者构建一个开放多元的本地化交流圈子，在这里用户组成员可以基于openEuler的技术特性、使用经验、实践案例、社区贡献、开源文化等方面有更多集中的交流机会，共建openEuler区域用户生态。',
-  LINK_TEXT: '申请加入',
+  LINK: 'https://mailweb.openeuler.org/postorius/lists/user-group@openeuler.org/',
+  LINK_TEXT: '订阅邮件',
   ROLE: '用户组成员角色',
   CITY_TITLE: '城市用户组',
   CORE_MEMBERS: '核心成员',

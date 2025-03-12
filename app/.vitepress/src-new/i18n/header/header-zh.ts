@@ -1,7 +1,7 @@
 import { markRaw } from 'vue';
 
 import Summit from '~@/assets/category/header/summit.png';
-import Sig from '~@/assets/category/header/sig.png';
+import Odd from '~@/assets/category/header/odd.png';
 import Report from '~@/assets/category/header/report.png';
 import annualReport2024 from '~@/assets/category/header/annual-report-2024.jpg';
 
@@ -730,7 +730,7 @@ export default {
             {
               NAME: '峰会',
               DESCRIPTION: '查看openEuler年度大会详情',
-              URL: '/interaction/summit-list/summit2024/',
+              URL: '/interaction/summit-list/devday2025/',
             },
             {
               NAME: 'openEuler Call for X计划',
@@ -740,6 +740,15 @@ export default {
           ],
           SHORTCUT: [
             {
+              NAME: 'openEuler Developer Day 2025',
+              PICTURE: Odd,
+              DESCRIPTION:
+                'openEuler Developer Day 2025 （简称 ODD 2025）是开放原子开源基金会孵化及运营的 openEuler 社区发起的开发者大会。',
+              REMARK: '时间：2025/04/11 | 杭州',
+              TYPE: 'PICTURE',
+              URL: '/interaction/summit-list/devday2025/',
+            },
+            {
               NAME: '操作系统大会 & openEuler Summit 2024',
               PICTURE: Summit,
               DESCRIPTION:
@@ -747,15 +756,6 @@ export default {
               REMARK: '时间：2024/11/15 - 2024/11/16 | 北京',
               TYPE: 'PICTURE',
               URL: '/interaction/summit-list/summit2024/',
-            },
-            {
-              NAME: 'openEuler SIG Gathering 2024',
-              PICTURE: Sig,
-              DESCRIPTION:
-                'openEuler SIG Gathering 2024将于7月26日在北京香格里拉饭店举行。本次活动面向社区108个SIG组，诚邀社区开发者齐聚现场，通过全天线下会议，聚焦openEuler 24.03 LTS 版本后续重要规划和各SIG2024年下半年重要技术方案以及开发计划。',
-              REMARK: '时间：2024/07/26 | 北京',
-              TYPE: 'PICTURE',
-              URL: '/interaction/summit-list/sig-gathering-2024/',
             },
           ],
         },

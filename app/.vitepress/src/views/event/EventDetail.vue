@@ -10,6 +10,7 @@ import AppContent from '@/components/AppContent.vue';
 
 import type { DetailDateT } from '@/shared/@types/type-salon';
 import { getUrlParam, getBetweenDateStr } from '@/shared/utils';
+import additionalData from './data/meetup';
 
 import logo_light from '@/assets/common/header/logo.png';
 import logo_dark from '@/assets/common/header/logo_dark.png';
@@ -120,6 +121,11 @@ function getActivitiesData() {
     } catch (error: any) {
       throw new Error(error);
     }
+  } else {
+    detailObj.value = additionalData.MEETUP_DATA.find(
+      (item) => item.id === Number(activityId.value)
+    );
+    flowPathList.value = [detailObj.value?.schedules];
   }
 }
 
@@ -218,7 +224,7 @@ watch(windowWidth, () => {
             :style="{ backgroundImage: `url(${detailObj?.posterImg})` }"
           >
             <h2
-              v-if="getUrlParam('isMini')"
+              v-if="getUrlParam('isMini') || getUrlParam('isAdditional')"
               class="title"
               :class="{ 'poster-3': detailObj.poster === 3 }"
             >
@@ -351,7 +357,10 @@ watch(windowWidth, () => {
           </div>
         </div>
         <div
-          v-if="detailObj?.activity_type !== 2 && getUrlParam('isMini')"
+          v-if="
+            (detailObj?.activity_type !== 2 && getUrlParam('isMini')) ||
+            getUrlParam('isAdditional')
+          "
           class="meet-message detail-card"
         >
           <h1 id="meet-message" class="detail-title">{{ tabTitle[2] }}</h1>
