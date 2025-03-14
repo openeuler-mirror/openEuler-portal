@@ -7,6 +7,7 @@ import { useCommon } from '@/stores/common';
 import AppContent from '@/components/AppContent.vue';
 
 import { getSalon } from '@/api/api-sig';
+import additionalData from './data/meetup';
 
 import notFoundImg_light from '@/assets/illustrations/404.png';
 import notFoundImg_dark from '@/assets/illustrations/404_dark.png';
@@ -35,11 +36,17 @@ const loading = ref(true);
 const latestList: Ref<Array<LatestActivity>> = ref([]);
 
 // 精彩回顾下展示列表
-const goDetail = (item: { id: number; windowOpen: string }) => {
+const goDetail = (item: {
+  id: number;
+  windowOpen: string;
+  isAdditional: boolean;
+}) => {
   if (item.windowOpen) {
     window.open(item.windowOpen);
   } else {
-    const query = 'id=' + item.id + '&isMini=1';
+    const query = item.isAdditional
+      ? `id=${item.id}&isAdditional=true`
+      : `id=${item.id}&isMini=1`;
     router.go('/' + lang.value + `/interaction/event-list/detail/?` + query);
   }
 };
@@ -64,17 +71,21 @@ const paramsGetSalon = () => {
   })
     .then((res) => {
       total.value = res.total;
-      res.data.reverse();
       latestList.value = [];
-      res.data.forEach((item: LatestActivity) => {
+      latestList.value =
+        params.currentPage === 1
+          ? [...additionalData.MEETUP_DATA, ...res.data]
+          : res.data;
+      latestList.value.forEach((item: LatestActivity) => {
         item.posterImg = `https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/website-meetup/website${item.poster}.png`;
-        latestList.value.unshift(item);
       });
+      latestList.value = latestList.value.slice(0, params.pageSize);
     })
     .finally(() => {
       loading.value = false;
     });
 };
+
 onMounted(() => {
   paramsGetSalon();
 });

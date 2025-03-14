@@ -10,13 +10,16 @@ import GroupCity from './GroupCity.vue';
 
 import banner from '@/assets/banner/banner-user-group.png';
 import groupIllustration from '@/assets/illustrations/user-group.png';
+import IconRight from '~icons/app/icon-arrow-right.svg';
 
 const i18n = useI18n();
 const groupI18n = computed(() => {
   return i18n.value.group;
 });
 
-
+const jumpTo = (path: string) => {
+  window.open(path, '_blank');
+};
 </script>
 <template>
   <BannerLevel2
@@ -25,6 +28,23 @@ const groupI18n = computed(() => {
     :illustration="groupIllustration"
     class="banner"
   >
+    <template #default>
+      <p class="banner-subtitle">
+        {{ groupI18n.BANNER_SUBTITLE }}
+      </p>
+      <OButton
+        class="post-btn"
+        type="outline"
+        animation
+        size="nomral"
+        @click="jumpTo(groupI18n.LINK)"
+      >
+        {{ groupI18n.LINK_TEXT }}
+        <template #suffixIcon>
+          <OIcon class="right-icon"><IconRight /></OIcon>
+        </template>
+      </OButton>
+    </template>
   </BannerLevel2>
   <AppContent>
     <p class="word-style">
@@ -54,6 +74,15 @@ const groupI18n = computed(() => {
     @media (max-width: 767px) {
       font-size: var(--e-font-size-text);
     }
+  }
+}
+
+.banner-subtitle {
+  @include h4;
+  color: rgb(var(--o-white));
+  margin-bottom: var(--o-gap-3);
+  @include respond-to('>laptop') {
+    min-width: 800px;
   }
 }
 

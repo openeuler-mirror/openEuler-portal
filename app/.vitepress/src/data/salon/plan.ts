@@ -156,7 +156,17 @@ export const yearPlanData = {
       contentBg: developer,
       titleBg: developerTitle,
       id: 'developer',
-      events: [],
+      events: [
+        {
+          month: '3',
+          actives: [
+            {
+              location: '中国 北京',
+              activeName: 'openEuler on RISC-V & deepin Meetup',
+            },
+          ],
+        },
+      ],
     },
     college: {
       title: '赛事 & 高校',
