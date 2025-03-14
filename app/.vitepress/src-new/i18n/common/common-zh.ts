@@ -7,4 +7,5 @@ export default {
   all: '全部',
   expand: '展开',
   collapse: '收起',
+  more: '查看更多',
 };

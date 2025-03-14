@@ -23,7 +23,7 @@ import AppContext from '@/components/AppContent.vue';
 .banner {
   width: 100%;
   height: 380px;
-  @media screen and(max-width:768px) {
+  @media screen and (max-width:768px) {
     height: 300px;
   }
 }
@@ -38,10 +38,10 @@ import AppContext from '@/components/AppContent.vue';
   background-position: 70% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  @media screen and(max-width:1280px) {
+  @media screen and (max-width:1280px) {
     background-position: 60%;
   }
-  @media screen and(max-width:600px) {
+  @media screen and (max-width:600px) {
     background-image: url('../img/banner-mo.png');
     background-position-y: 70%;
   }
@@ -54,24 +54,24 @@ import AppContext from '@/components/AppContent.vue';
   position: absolute;
   left: 112px;
   top: 86px;
-  @media screen and(max-width:1100px) {
+  @media screen and (max-width:1100px) {
     left: 84px;
   }
-  @media screen and(max-width:768px) {
+  @media screen and (max-width:768px) {
     top: 52px;
   }
-  @media screen and(max-width:600px) {
+  @media screen and (max-width:600px) {
     display: none;
   }
 
   p {
     font-size: var(--e-font-size-h1);
     line-height: 65px;
-    @media screen and(max-width:1100px) {
+    @media screen and (max-width:1100px) {
       font-size: var(--e-font-size-h2);
       line-height: var(--e-line-height-h2);
     }
-    @media screen and(max-width:767px) {
+    @media screen and (max-width:767px) {
       font-size: var(--e-font-size-h3);
       line-height: var(--e-line-height-h3);
     }

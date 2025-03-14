@@ -7,7 +7,7 @@ import type { LocaleT } from '~@/@types/type-locale';
 
 export const useLocale = () => {
   const { t } = useI18n();
-  const locale = useI18n().locale as WritableComputedRef<LocaleT, LocaleT>;
+  const locale = useI18n().locale as WritableComputedRef<LocaleT>;
   const $t = t;
 
   const isZh = computed(() => locale.value === 'zh');

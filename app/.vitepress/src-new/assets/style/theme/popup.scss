@@ -1,6 +1,8 @@
 .o-popup {
   --popup-shadow: var(--o-shadow-2);
   --popup-bd: 1px solid var(--o-color-control4);
+  --popup-radius: var(--o-radius_control-xs);
+
   .o-popup-body {
     border-radius: var(--popup-radius);
     border: 1px solid var(--o-color-control4);

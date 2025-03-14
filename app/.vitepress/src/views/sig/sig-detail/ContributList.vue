@@ -442,13 +442,13 @@ const jumpPage = (val: number) => {
   }
 }
 .bg-color-maintainer {
-  background-color: var(--e-color-brand1);
+  background-color: #f0bc00;
 }
 .bg-color-committer {
-  background-color: var(--e-color-yellow5);
+  background-color: #009ce5;
 }
 .bg-color-contributor {
-  background-color: #4aaead;
+  background-color: var(--o-color-primary1);
 }
 .bg-color-cancel {
   background-color: var(--e-color-neutral10);

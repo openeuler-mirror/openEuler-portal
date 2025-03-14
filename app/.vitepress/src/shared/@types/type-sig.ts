@@ -4,8 +4,9 @@ export interface FeatureInfoT {
 }
 
 export interface GroupInfoT {
-  groupName: string;
-  features: FeatureInfoT[];
+  sig_names: string;
+  en_feature: string;
+  feature: string;
 }
 
 export interface SigListT {

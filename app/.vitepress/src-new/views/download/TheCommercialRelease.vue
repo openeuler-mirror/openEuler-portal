@@ -9,6 +9,7 @@ import type {
 } from '@/shared/@types/type-download';
 
 import commercialReleaseData from '~@/data/download/download-commercial-release';
+import { COUNT_PER_PAGE } from '~@/shared/config';
 
 import AppSection from '~@/components/AppSection.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';
@@ -266,8 +267,6 @@ const onClickDownload = (data: any) => {
     target: t('download.DOWNLOADGO'),
   });
 };
-
-const COUNT_PER_PAGE = [12, 18, 24, 36];
 </script>
 
 <template>

@@ -141,7 +141,7 @@ const mobileClick = () => {
           <IconBack />
         </OIcon>
         <span>
-          {{ frontmatter.title }}
+          {{ frontmatter.backTitle }}
         </span>
       </div>
       <SearchHeaderMo v-if="isSearchPage && lePadV" />

@@ -277,9 +277,6 @@ const reset = () => {
             </OCheckboxGroup>
           </template>
           <template v-else>
-            <!-- <div class="check-all-wrap">
-              <ORadio v-model="radioVal" :value="''">全选</ORadio>
-            </div> -->
             <ORadioGroup v-model="radioVal" direction="v">
               <ORadio
                 v-for="item in displayOptions"
@@ -292,10 +289,10 @@ const reset = () => {
         </OScroller>
         <ODivider direction="h"></ODivider>
         <div class="btn-wrap">
-          <OLink color="primary" @click="reset">{{ $t('common.reset') }}</OLink>
-          <OLink class="confirm-link" color="primary" @click="filterConfirm">{{
-            $t('common.confirm')
-          }}</OLink>
+          <div color="primary" @click="reset">{{ $t('common.reset') }}</div>
+          <div class="confirm-link" color="primary" @click="filterConfirm">
+            {{ $t('common.confirm') }}
+          </div>
         </div>
       </div>
     </OPopup>
@@ -303,6 +300,10 @@ const reset = () => {
 </template>
 
 <style lang="scss" scoped>
+.header-cell {
+  display: flex;
+  align-items: center;
+}
 :deep(.o-divider-line) {
   position: absolute;
   left: 0;
@@ -311,6 +312,9 @@ const reset = () => {
 .input-wrap {
   width: 100%;
   padding: 6px 6px 0 6px;
+  :deep(.o_box) {
+    width: 100%;
+  }
 }
 .filter-icon {
   cursor: pointer;
@@ -321,6 +325,13 @@ const reset = () => {
   display: flex;
   justify-content: center;
   padding: 0 16px;
+  & > div {
+    cursor: pointer;
+    color: var(--o-color-primary1);
+    @include hover {
+      color: var(--o-color-primary2);
+    }
+  }
 
   .confirm-link {
     margin-left: 24px;

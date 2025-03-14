@@ -80,12 +80,12 @@ const repeatStr = (v: string) => {
       font-size: var(--e-font-size-text);
       &:not(:last-child) {
         margin-bottom: 8px;
-        @media screen and(max-width:768px) {
+        @media screen and (max-width:768px) {
           margin-bottom: 4px;
         }
       }
     }
-    @media screen and(max-width:768px) {
+    @media screen and (max-width:768px) {
       margin-top: 12px;
 
       .item {

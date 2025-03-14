@@ -7,4 +7,5 @@ export default {
   all: 'All',
   expand: 'Expand',
   collapse: 'Collapse',
+  more: 'View More',
 };
