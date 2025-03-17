@@ -6,7 +6,7 @@ import lipeiyuan from '@/assets/category/organization/lipeiyuan.png';
 import liuwenqing from '@/assets/category/organization/liuwenqing.png';
 import liuyanfei from '@/assets/category/organization/liuyanfei.png';
 import qusheng from '@/assets/category/organization/qusheng.png';
-import zujianzhong from '@/assets/category/organization/zujianzhong.png';
+import zhanglei from '@/assets/category/organization/zhanglei.png';
 import zhangshenju from '@/assets/category/organization/zhangshenju.png';
 import zhongxin from '@/assets/category/organization/zhongxin.png';
 import yangjiguo from '@/assets/category/organization/yangjiguo.png';
@@ -197,8 +197,8 @@ export default {
                 position: ['中国科学院软件研究所'],
               },
               {
-                img: zujianzhong,
-                name: '朱建忠',
+                img: zhanglei,
+                name: '张磊',
                 position: ['统信软件技术有限公司'],
               },
             ],
@@ -775,8 +775,8 @@ export default {
                 ],
               },
               {
-                img: zujianzhong,
-                name: 'Zhu Jianzhong',
+                img: zhanglei,
+                name: 'Zhang Lei',
                 position: ['UnionTech Software Technology Co., Ltd.'],
               },
             ],
