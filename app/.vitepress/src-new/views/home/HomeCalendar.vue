@@ -19,6 +19,8 @@ import {
 } from '@opensig/opendesign';
 
 import summitData from '~@/data/summit';
+import activityData from '~@/data/activity';
+import { type CalendarValueT } from '~@/@type/type-home';
 
 import IconLeft from '~icons/app-new/icon-chevron-left.svg';
 import IconRight from '~icons/app-new/icon-chevron-right.svg';
@@ -135,7 +137,10 @@ function setMeetingDay(day: string, event: Event) {
   if (day === currentDay.value.raw) {
     return false;
   }
-  if (props.tableData?.includes(day) || getSummitHighlight(day)) {
+  if (
+    props.tableData?.includes(day) ||
+    getSummitHighlight(day, [...summitData, ...activityData])
+  ) {
     paramGetDaysData({
       date: day,
       type: tabType.value,
@@ -151,10 +156,12 @@ function paramGetDaysData(params: { date: string; type: string }) {
   getDaysData(params).then((res) => {
     renderData.value = res.data;
     if (
-      (params.type === 'all' || params.type === 'summit') &&
-      getSummitHighlight(params.date)
+      ['all', 'summit', 'activity'].includes(params.type) &&
+      getSummitHighlight(params.date, [...summitData, ...activityData])
     ) {
-      renderData.value.timeData.push(getSummitHighlight(params.date));
+      renderData.value.timeData.push(
+        getSummitHighlight(params.date, [...summitData, ...activityData])
+      );
     }
     // 当天只有一个日程，直接展开，多个日程，全部折叠
     if (renderData.value.timeData.length === 1) {
@@ -225,8 +232,8 @@ const watchChange = (element: HTMLElement) => {
 const resolveDate = (date: string) => {
   return date.replaceAll('-', '/');
 };
-const getSummitHighlight = (date: string) => {
-  return summitData.find((item) => {
+const getSummitHighlight = (date: string, data: CalendarValueT[]) => {
+  return data.find((item) => {
     return item.dates?.includes(date);
   });
 };
@@ -310,10 +317,19 @@ const onCalendarClick = (e: MouseEvent) => {
                   class="summit"
                   v-if="
                     (tabType === 'all' || tabType === 'summit') &&
-                    getSummitHighlight(data.day)
+                    getSummitHighlight(data.day, summitData)
                   "
                 >
                   <IconSummit></IconSummit>
+                </OIcon>
+                <OIcon
+                  class="activity"
+                  v-if="
+                    (tabType === 'all' || tabType === 'activity') &&
+                    getSummitHighlight(data.day, activityData)
+                  "
+                >
+                  <IconEvent></IconEvent>
                 </OIcon>
               </div>
             </div>
@@ -361,6 +377,9 @@ const onCalendarClick = (e: MouseEvent) => {
                   <div class="meet-title" :title="item.name || item.title">
                     <OIcon :class="item.type || 'meeting'">
                       <IconSummit v-if="item.type === 'summit'"></IconSummit>
+                      <IconEvent
+                        v-else-if="item.type === 'activity'"
+                      ></IconEvent>
                       <IconMeet v-else></IconMeet>
                     </OIcon>
                     <div class="text">
@@ -456,7 +475,7 @@ const onCalendarClick = (e: MouseEvent) => {
   background-color: #3422ff;
   z-index: 2;
 }
-.event {
+.activity {
   background-color: #ffa122;
   z-index: 1;
 }

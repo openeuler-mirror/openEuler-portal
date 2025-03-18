@@ -21,8 +21,8 @@ importers:
         specifier: ^2.3.4
         version: 2.3.4
       axios:
-        specifier: 1.7.4
-        version: 1.7.4
+        specifier: 1.8.2
+        version: 1.8.2
       clipboard:
         specifier: 2.0.11
         version: 2.0.11
@@ -131,7 +131,7 @@ importers:
         version: 0.14.1(@vue/compiler-sfc@3.2.37)(esbuild@0.21.5)(vite@5.4.7(@types/node@18.0.1)(sass@1.51.0)(terser@5.36.0))(vue-template-compiler@2.7.16)(webpack@4.47.0)
       vitepress:
         specifier: 1.2.3
-        version: 1.2.3(@algolia/client-search@4.22.0)(@types/node@18.0.1)(async-validator@4.2.5)(axios@1.7.4)(postcss@8.4.47)(sass@1.51.0)(search-insights@2.13.0)(terser@5.36.0)(typescript@4.7.4)
+        version: 1.2.3(@algolia/client-search@4.22.0)(@types/node@18.0.1)(async-validator@4.2.5)(axios@1.8.2)(postcss@8.4.47)(sass@1.51.0)(search-insights@2.13.0)(terser@5.36.0)(typescript@4.7.4)
 
 packages:
 
@@ -1479,8 +1479,8 @@ packages:
     engines: {node: '>= 4.5.0'}
     hasBin: true
 
-  axios@1.7.4:
-    resolution: {integrity: sha512-DukmaFRnY6AzAALSH4J2M3k6PkaC+MfaAGdEERRWcC9q3/TWQwLpHR8ZRLKTdQ3aBDL64EdluRDjJqKw+BPZEw==}
+  axios@1.8.2:
+    resolution: {integrity: sha512-ls4GYBm5aig9vWx8AWDSGLpnpDQRtWAfrjU+EuytuODrFBkqesN2RkOQCBzrA1RQNHw1SmRMSDDDSwzNAYQ6Rg==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -5547,14 +5547,14 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
-  '@vueuse/integrations@10.11.1(async-validator@4.2.5)(axios@1.7.4)(focus-trap@7.6.0)(vue@3.4.38(typescript@4.7.4))':
+  '@vueuse/integrations@10.11.1(async-validator@4.2.5)(axios@1.8.2)(focus-trap@7.6.0)(vue@3.4.38(typescript@4.7.4))':
     dependencies:
       '@vueuse/core': 10.11.1(vue@3.4.38(typescript@4.7.4))
       '@vueuse/shared': 10.11.1(vue@3.4.38(typescript@4.7.4))
       vue-demi: 0.14.10(vue@3.4.38(typescript@4.7.4))
     optionalDependencies:
       async-validator: 4.2.5
-      axios: 1.7.4
+      axios: 1.8.2
       focus-trap: 7.6.0
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -5829,7 +5829,7 @@ snapshots:
   atob@2.1.2:
     optional: true
 
-  axios@1.7.4:
+  axios@1.8.2:
     dependencies:
       follow-redirects: 1.15.6
       form-data: 4.0.0
@@ -9101,7 +9101,7 @@ snapshots:
       sass: 1.51.0
       terser: 5.36.0
 
-  vitepress@1.2.3(@algolia/client-search@4.22.0)(@types/node@18.0.1)(async-validator@4.2.5)(axios@1.7.4)(postcss@8.4.47)(sass@1.51.0)(search-insights@2.13.0)(terser@5.36.0)(typescript@4.7.4):
+  vitepress@1.2.3(@algolia/client-search@4.22.0)(@types/node@18.0.1)(async-validator@4.2.5)(axios@1.8.2)(postcss@8.4.47)(sass@1.51.0)(search-insights@2.13.0)(terser@5.36.0)(typescript@4.7.4):
     dependencies:
       '@docsearch/css': 3.6.1
       '@docsearch/js': 3.6.1(@algolia/client-search@4.22.0)(search-insights@2.13.0)
@@ -9112,7 +9112,7 @@ snapshots:
       '@vue/devtools-api': 7.4.6
       '@vue/shared': 3.5.8
       '@vueuse/core': 10.11.1(vue@3.4.38(typescript@4.7.4))
-      '@vueuse/integrations': 10.11.1(async-validator@4.2.5)(axios@1.7.4)(focus-trap@7.6.0)(vue@3.4.38(typescript@4.7.4))
+      '@vueuse/integrations': 10.11.1(async-validator@4.2.5)(axios@1.8.2)(focus-trap@7.6.0)(vue@3.4.38(typescript@4.7.4))
       focus-trap: 7.6.0
       mark.js: 8.11.1
       minisearch: 6.3.0

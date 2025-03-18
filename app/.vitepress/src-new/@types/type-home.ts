@@ -13,3 +13,14 @@ export interface VitalityValueT {
   modulenums: number;
   contributors: number;
 }
+
+export interface CalendarValueT {
+  name: string;
+  url: string;
+  dates: string[];
+  address: string;
+  start_date: string;
+  end_date: string;
+  activity_type: string;
+  type: string;
+}

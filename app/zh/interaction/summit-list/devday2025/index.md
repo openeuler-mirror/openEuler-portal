@@ -1,5 +1,5 @@
 ---
-title: openEuler Developer Day 2023
+title: openEuler Developer Day 2025
 ---
 
 <script setup lang="ts">
