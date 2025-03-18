@@ -155,14 +155,18 @@ function setMeetingDay(day: string, event: Event) {
 function paramGetDaysData(params: { date: string; type: string }) {
   getDaysData(params).then((res) => {
     renderData.value = res.data;
-    if (
-      ['all', 'summit', 'activity'].includes(params.type) &&
-      getSummitHighlight(params.date, [...summitData, ...activityData])
-    ) {
-      renderData.value.timeData.push(
-        getSummitHighlight(params.date, [...summitData, ...activityData])
-      );
+
+    const dataMap = {
+      all: [...summitData, ...activityData],
+      summit: summitData,
+      activity: activityData,
+    };
+    const data = dataMap[params.type];
+    const highlight = data && getSummitHighlight(params.date, data);
+    if (highlight) {
+      renderData.value.timeData.push(highlight);
     }
+
     // 当天只有一个日程，直接展开，多个日程，全部折叠
     if (renderData.value.timeData.length === 1) {
       activeName.value = [0];
