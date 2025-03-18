@@ -115,7 +115,7 @@ export default {
       {
         title: '上游原生支持',
         desc: [
-          '本专题将与开发者一起聊聊openEuler上游原生支持，讨论openEuler上游原生支持技术讨论及进展同步，讨论如何做好从上游原生支持到openEuler原生发布的关键环节，包含上游协同，监测，维护管理等',
+          '本专题将与开发者一起聊聊openEuler上游原生支持，讨论openEuler上游原生支持技术及进展同步，讨论如何做好从上游原生支持到openEuler原生发布的关键环节，包含上游协同，监测，维护管理等',
         ],
         bg: topic4,
         href: 'https://etherpad.openeuler.org/p/%E4%B8%8A%E6%B8%B8%E5%8E%9F%E7%94%9F%E6%94%AF%E6%8C%81%EF%BC%882025%EF%BC%89',
