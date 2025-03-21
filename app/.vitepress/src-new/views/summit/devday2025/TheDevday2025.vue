@@ -12,7 +12,6 @@ import data from './data/data_zh';
   <MinisiteBanner :banner-data="data.banner" />
   <AppContext>
     <MinisiteIntroduce :introduce-data="data.introduce" />
-    <MinisiteCard :topic-data="data.call" card-height="256" />
     <MinisiteCard :topic-data="data.topic" />
     <MinisiteAgenda :agenda-data="data.agenda" />
     <MinisiteReview :review-data="data.review" />

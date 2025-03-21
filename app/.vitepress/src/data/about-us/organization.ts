@@ -82,6 +82,7 @@ import huyong from '@/assets/category/organization/user/huyong.png';
 import lichenbing from '@/assets/category/organization/user/lichenbing.png';
 import rongtao from '@/assets/category/organization/user/rongtao.png';
 import xutianyuan from '@/assets/category/organization/user/xutianyuan.png';
+import dushaohui from '@/assets/category/organization/user/dushaohui.png';
 
 // 业务发展工作组
 import huangweixu from '@/assets/category/organization/user/huangweixu.png';
@@ -549,6 +550,12 @@ export default {
             name: '崔骥',
             position: ['委员'],
             email: 'cuiji@beyondcent.com',
+          },
+          {
+            img: dushaohui,
+            name: '杜韶辉',
+            position: ['委员'],
+            email: 'dush1@csg.cn',
           },
           {
             img: gongchengpeng,
@@ -1131,6 +1138,12 @@ export default {
             name: 'Cui Ji',
             position: ['Committee member'],
             email: 'cuiji@beyondcent.com',
+          },
+          {
+            img: dushaohui,
+            name: 'Du ShaoHui',
+            position: ['Committee member'],
+            email: 'dush1@csg.cn',
           },
           {
             img: gongchengpeng,
