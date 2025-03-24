@@ -1141,13 +1141,13 @@ export default {
           },
           {
             img: dushaohui,
-            name: 'Du ShaoHui',
+            name: 'Du Shaohui',
             position: ['Committee member'],
             email: 'dush1@csg.cn',
           },
           {
             img: gongchengpeng,
-            name: 'Gong ChenPeng',
+            name: 'Gong Chenpeng',
             position: ['Committee member'],
             email: '4705317@QQ.com',
           },
