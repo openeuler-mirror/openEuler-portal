@@ -33,8 +33,11 @@ export default {
     bgPcDark: banner_pc_dark,
     bgMoDark: banner_mo_dark,
     bgText: banner_text,
-    signUpHref: '',
-    signUpTitle: '',
+    signUpHrefPc:
+      'https://openatomcon.openatom.cn/registration/?activityNo=HD20250305105858',
+    signUpHrefMo:
+      'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20250305105858',
+    signUpTitle: '立即报名',
   },
   introduce: {
     titleImg: introduce_light,
@@ -42,41 +45,15 @@ export default {
     title: '活动简介',
     list: [
       'openEuler Developer Day 2025 （简称 ODD 2025）是开放原子开源基金会孵化及运营的 openEuler 社区发起的开发者大会。旨在持续推动操作系统乃至基础软件的创新和突破。本次 ODD 2025 将全面展示全新发布的25.03创新版本特性、内核开发、多样性计算和全场景协同的技术成果、分享各行各业基于 openEuler 的商业实践。同时 ODD 也是社区的年度大型工作会议，协同讨论版本路线以及联合创新。openEuler 始终与开发者在一起，用 openEuler 构筑坚实的软件根基，成就属于每位开发者的 openEuler 时代。',
-      '我参与，我做主。开源是一种态度，分享是一种精神。Call for Poster、Call for Demo、SIG Gathering 现已全面开放报名。',
+      '我参与，我做主。开源是一种态度，分享是一种精神。欢迎申报SIG Gathering 环节相关议题。',
     ],
   },
-
-  call: {
-    titleImg: call_light,
-    titleImDark: call_Dark,
-    title: '展区征集',
-    text: '提交报名',
-    list: [
-      {
-        title: 'Call for Poster',
-        desc: [
-          '在这里展示您在社区中的创新技术、项目亮点或关键技术突破，无论您是社区的开发者还是SIG组的Maintainer，都欢迎您展示个人或团队的技术成果，向大家分享您的专业经验，被选中的Poster将在大会期间在展区现场全天展示',
-        ],
-        bg: call1,
-        href: 'https://shimo.im/forms/57Y0wFVHF1DPp7Eu/fill',
-      },
-      {
-        title: 'Call for Demo',
-        desc: [
-          '现公开征集大会开发者体验区 Demo。欢迎大家提交能够展示版本特性解读、技术创新、openEuler 技术应用的 Demo，被选中的互动体验将在大会期间在展区现场全天展示',
-        ],
-        bg: call2,
-        href: 'https://shimo.im/forms/wu99CXWraR99832y/fill',
-      },
-    ],
-  },
-
   topic: {
     titleImg: topic_light,
     titleImDark: topic_Dark,
     title: 'SIG Gathering',
     text: '提交议题',
-    desc: '本次ODD大会的SIG Gathering环节将设立八大专题研讨，方向为：内核开发、全场景应用、AI原生支持、openEuler原生开发、上游原生支持、用户体验设计、RISC-V、云&云原生。欢迎各SIG组选择您感兴趣的的专题链接，填写您的需求，一起线下共同探讨，寻求解决方案。',
+    desc: '本次ODD大会的SIG Gathering环节将设立八大专题研讨，方向为：内核开发、全场景应用、AI原生支持、openEuler生态开发、上游生态开发、用户体验设计、RISC-V、云&云原生。欢迎各SIG组选择您感兴趣的的专题链接，填写您的需求，一起线下共同探讨，寻求解决方案。',
     list: [
       {
         title: '内核开发',
@@ -95,7 +72,7 @@ export default {
         href: 'https://etherpad.openeuler.org/p/%E5%85%A8%E5%9C%BA%E6%99%AF%E5%BA%94%E7%94%A82025',
       },
       {
-        title: 'AI原生支持',
+        title: 'AI生态支持',
         desc: [
           '本专题将与开发者一起探讨openEuler的多样化三层AI使能架构：',
           '1. 基于LLM的智能交互平台，颠覆传统shell命令交付的模式，改进传统学习，开发，调优，运维体验，智能新语义支持应用智能化升级，共建AI生态',
@@ -105,17 +82,18 @@ export default {
         href: 'https://etherpad.openeuler.org/p/AI%E5%8E%9F%E7%94%9F%E6%94%AF%E6%8C%81%EF%BC%882025%EF%BC%89',
       },
       {
-        title: 'openEuler原生开发',
+        title: 'openEuler高效开发',
         desc: [
-          '本专题将与开发者一起聊聊怎么在openEuler上开发。从openEuler本地开发环境、加包与更新维护、社区开发与协作基础设施、到社区构建测试服务，全方位搞定，打造更便利的“基于openEuler做开发”的开发者体验',
+          '本专题将与开发者一起聊聊怎么在openEuler上更好地开发。从openEuler本地开发环境、加包与更新维护、社区开发与协作基础设施等多个角度，打造更便利的“openEuler高效开发”的开发者体验',
         ],
         bg: topic3,
         href: 'https://etherpad.openeuler.org/p/%E5%8E%9F%E7%94%9F%E5%BC%80%E5%8F%91',
       },
       {
-        title: '上游原生支持',
+        title: '上游生态开发',
         desc: [
-          '本专题将与开发者一起聊聊openEuler上游原生支持，讨论openEuler上游原生支持技术及进展同步，讨论如何做好从上游原生支持到openEuler原生发布的关键环节，包含上游协同，监测，维护管理等',
+          'openEuler始终遵循“上游优先”的策略，帮助开源软件上游天然支持openEuler，让用户可以在开发、集成、使用这些软件时获得便利',
+          '本方向主要涉及：openEuler上游支持技术讨论及进展同步，讨论如何做好从上游支持到openEuler集成发布的关键环节，包含上游协同，监测，维护管理等',
         ],
         bg: topic4,
         href: 'https://etherpad.openeuler.org/p/%E4%B8%8A%E6%B8%B8%E5%8E%9F%E7%94%9F%E6%94%AF%E6%8C%81%EF%BC%882025%EF%BC%89',

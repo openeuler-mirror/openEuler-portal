@@ -114,13 +114,32 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
               <div class="banner-title" v-if="info.title && info.title.length">
                 <p v-for="(title, i) in info.title">{{ title }}</p>
               </div>
+              <div
+                class="banner-text"
+                v-if="info.bg_text"
+                :style="{
+                  backgroundImage: `url(${info.bg_text})`,
+                }"
+              ></div>
               <!-- 操作按钮 -->
               <div v-if="info.btn" class="banner-opts">
-                <OButton v-if="info.bg_theme === 'dark'"  :href="info.href" target="_blank"   size="large">
+                <OButton
+                  v-if="info.bg_theme === 'dark'"
+                  :href="info.href"
+                  target="_blank"
+                  size="large"
+                >
                   {{ info.btn }}
                 </OButton>
                 <!-- TODO:遗留banner 待删除 -->
-                <OButton v-else  :href="info.href" target="_blank" variant="solid" color="primary"  size="large">
+                <OButton
+                  v-else
+                  :href="info.href"
+                  target="_blank"
+                  variant="solid"
+                  color="primary"
+                  size="large"
+                >
                   {{ info.btn }}
                 </OButton>
               </div>
@@ -229,6 +248,24 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
   --d: 10px;
 }
 
+.banner-text {
+  height: 180px;
+  width: 446px;
+  --d: 10px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include respond-to('pad_v-laptop') {
+    width: 356px;
+    height: 144px;
+  }
+  @include respond-to('pad_v') {
+    width: 312px;
+    height: 126px;
+  }
+}
+
 .banner-opts {
   margin-top: 24px;
   --d: 20px;
@@ -247,6 +284,9 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 
 .current-slide {
   .banner-title {
+    animation: fade-up 400ms ease-in;
+  }
+  .banner-text {
     animation: fade-up 400ms ease-in;
   }
   .banner-opts {

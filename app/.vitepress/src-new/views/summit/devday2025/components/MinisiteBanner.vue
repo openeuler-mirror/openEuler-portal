@@ -32,6 +32,11 @@ const bannerImage = computed(() => {
     ? props.bannerData.bgMo
     : props.bannerData.bgPc;
 });
+const enrollUrl = computed(() => {
+  return isPhone.value
+    ? props.bannerData.signUpHrefMo
+    : props.bannerData.signUpHrefPc;
+});
 </script>
 
 <template>
@@ -49,13 +54,14 @@ const bannerImage = computed(() => {
           backgroundImage: `url(${bannerData.bgText})`,
         }"
         class="banner-text"
+        v-if="!isPhone"
       ></div>
       <div v-if="bannerData.signUpTitle" data-aos="fade-up">
-        <a :href="bannerData.signUpHref">
+        <a :href="enrollUrl">
           <OButton animation class="home-banner-btn">
             {{ bannerData.signUpTitle }}
             <template #suffixIcon>
-              <OIcon><IconArrowRight /></OIcon>
+              <OIcon class="btn-icon"><IconArrowRight /></OIcon>
             </template>
           </OButton>
         </a>
@@ -111,10 +117,14 @@ const bannerImage = computed(() => {
   }
 }
 .home-banner-btn {
+  @include text1;
   border-color: #000;
   color: #000;
-  padding: 11px 13px 11px 25px;
+  padding: 8px 23px;
   margin-top: var(--o-gap-4);
+  border-radius: 40px;
+  height: 40px;
+  width: 144px;
 }
 
 @include respond-to('<=pad') {
@@ -124,6 +134,16 @@ const bannerImage = computed(() => {
       height: 100%;
       margin: 0 auto;
       background: no-repeat center/cover;
+    }
+  }
+  .home-banner-btn {
+    padding: 8px 16px;
+    height: 40px;
+    width: 120px;
+
+    .btn-icon {
+      width: 16px;
+      height: 16px;
     }
   }
 }
@@ -146,10 +166,6 @@ const bannerImage = computed(() => {
       padding: 0 32px;
     }
   }
-  .home-banner-btn {
-    padding: 3px 11px;
-    margin-top: 8px;
-  }
 }
 
 @include respond-to('phone') {
@@ -160,12 +176,17 @@ const bannerImage = computed(() => {
       margin: 0 auto;
       background: cover;
     }
-    .banner-panel-content {
-      display: none;
+
+    .home-banner-btn {
+      margin-top: 108px;
+      height: 32px;
+      width: 100px;
+      padding: 4px 12px;
+
+      @media (min-width: 356px) and (max-width: 600px) {
+        margin-left: calc(0px + 24 * ((100vw - 356px) / (600 - 356)));
+      }
     }
-  }
-  .home-banner-btn {
-    display: none;
   }
 }
 </style>
