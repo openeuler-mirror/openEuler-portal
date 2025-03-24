@@ -10,6 +10,16 @@ export default [
     type: 'summit',
   },
   {
+    name: 'openEuler Developer Day 2025',
+    url: '/zh/interaction/summit-list/devday2025/',
+    dates: ['2025-04-11'],
+    address: '杭州萧山万怡酒店',
+    start_date: '2025-04-11',
+    end_date: '2025-04-11',
+    activity_type: '线上 + 线下',
+    type: 'summit',
+  },
+  {
     name: 'openEuler Summit 2023',
     url: '/zh/interaction/summit-list/summit2023/',
   },

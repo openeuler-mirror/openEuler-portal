@@ -11,11 +11,6 @@ defineProps({
     required: true,
     default: () => null,
   },
-  cardHeight: {
-    type: String,
-    required: false,
-    default: () => 304,
-  },
 });
 
 const commonStore = useCommon();
@@ -41,7 +36,6 @@ const isDark = computed(() => {
         v-for="(item, i) in topicData.list"
         :key="i"
         :style="{
-          height: `${cardHeight}px`,
           backgroundImage: `url(${item.bg})`,
         }"
         class="item-topic"
@@ -81,6 +75,7 @@ const isDark = computed(() => {
   display: flex;
   flex-direction: column;
   border-radius: var(--o-radius-xs);
+  height: 304px;
 
   .title {
     @include h2;
