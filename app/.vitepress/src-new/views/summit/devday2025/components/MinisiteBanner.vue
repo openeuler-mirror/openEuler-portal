@@ -120,7 +120,7 @@ const enrollUrl = computed(() => {
   @include text1;
   border-color: #000;
   color: #000;
-  padding: 8px 23px;
+  padding: 8px 20px;
   margin-top: var(--o-gap-4);
   border-radius: 40px;
   height: 40px;
