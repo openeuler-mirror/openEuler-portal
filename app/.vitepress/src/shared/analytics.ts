@@ -1,8 +1,13 @@
-import { OpenAnalytics, OpenEventKeys, getClientInfo } from '@opensig/open-analytics';
+import {
+  OpenAnalytics,
+  OpenEventKeys,
+  getClientInfo,
+} from '@opensig/open-analytics';
 import { reporAnalytics } from '@/api/api-analytics';
 import { Awaitable } from 'vitepress';
 import { COOKIE_AGREED_STATUS, useCookieStore } from '~@/stores/common';
 import { useLogin } from '@/stores/login';
+import { removeCustomCookie } from './utils';
 
 const DEFAULT_SERVICE = 'portal';
 
@@ -41,6 +46,16 @@ export const disableOA = () => {
   ].forEach((key) => {
     localStorage.removeItem(key);
   });
+  const hm = /^hm/i;
+  document.cookie
+    .split(';')
+    .map((c) => c.trim())
+    .forEach((c) => {
+      const key = decodeURIComponent(c.split('=')[0]);
+      if (hm.test(key)) {
+        removeCustomCookie(key);
+      }
+    });
 };
 
 export const reportPV = () => {
