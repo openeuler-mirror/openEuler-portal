@@ -2,7 +2,6 @@
 import { onMounted, computed } from 'vue';
 import AOS from 'aos';
 import { useScreen } from '~@/composables/useScreen';
-import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import { useCommon } from '@/stores/common';
 
 const { isPhone } = useScreen();
@@ -60,9 +59,6 @@ const enrollUrl = computed(() => {
         <a :href="enrollUrl">
           <OButton animation class="home-banner-btn">
             {{ bannerData.signUpTitle }}
-            <template #suffixIcon>
-              <OIcon class="btn-icon"><IconArrowRight /></OIcon>
-            </template>
           </OButton>
         </a>
       </div>
@@ -118,15 +114,19 @@ const enrollUrl = computed(() => {
 }
 .home-banner-btn {
   @include text1;
-  border-color: #000;
-  color: #000;
-  padding: 8px 20px;
+  border-color: #002FA7;
+  color: #002FA7;
+  padding: 8px 16px;
   margin-top: var(--o-gap-4);
   border-radius: 40px;
   height: 40px;
-  width: 144px;
+  width: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
 }
-
+ 
 @include respond-to('<=pad') {
   .banner {
     height: 270px;
@@ -134,16 +134,6 @@ const enrollUrl = computed(() => {
       height: 100%;
       margin: 0 auto;
       background: no-repeat center/cover;
-    }
-  }
-  .home-banner-btn {
-    padding: 8px 16px;
-    height: 40px;
-    width: 120px;
-
-    .btn-icon {
-      width: 16px;
-      height: 16px;
     }
   }
 }
@@ -180,8 +170,7 @@ const enrollUrl = computed(() => {
     .home-banner-btn {
       margin-top: 108px;
       height: 32px;
-      width: 100px;
-      padding: 4px 12px;
+      width: 90px;
 
       @media (min-width: 356px) and (max-width: 600px) {
         margin-left: calc(0px + 24 * ((100vw - 356px) / (600 - 356)));

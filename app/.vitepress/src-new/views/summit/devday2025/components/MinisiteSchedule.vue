@@ -80,6 +80,7 @@ const windowWidth = ref(useWindowResize());
   color: #fff;
   font-weight: 500;
   position: relative;
+  border-radius: var(--o-radius-xs);
   &::before {
     content: '';
     position: absolute;
@@ -109,6 +110,7 @@ const windowWidth = ref(useWindowResize());
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: var(--o-radius-xs);
   .title {
     @include h3;
     color: var(--o-color-info1);

@@ -22,7 +22,7 @@ import data from './data/data_zh';
 :deep(.title-img) {
   font-size: 36px;
   line-height: 48px;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--o-color-info1);
   margin-bottom: 40px;
   text-align: center;
