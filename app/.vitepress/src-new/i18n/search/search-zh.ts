@@ -32,4 +32,5 @@ export default {
   externalTipText: '您将要访问的链接不属于openEuler社区 ，请关注您的账号安全。',
   externalBtn1: '继续前往',
   externalBtn2: '取消',
+  common: '公共',
 };

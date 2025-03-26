@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { type PropType, ref, onMounted } from 'vue';
+import { type PropType } from 'vue';
 
 import { useData } from 'vitepress';
 
@@ -26,7 +26,6 @@ defineProps({
 });
 const { locale, t } = useLocale();
 const { theme } = storeToRefs(useCommon());
-const { site } = useData();
 
 // Maintainer数据
 function getMaintainersStr(params: PkgIdsT) {
@@ -63,9 +62,9 @@ function getQueryStr(params: PkgIdsT) {
   }
 }
 const jumpTo = (id: PkgIdsT, type?: PkgTypeT) => {
-  return `${site.value.themeConfig.softwareUrl}/${locale.value}/field/detail?${
-    type ? `type=${type}&` : ''
-  }${getQueryStr(id)}`;
+  return `${import.meta.env.VITE_SERVICE_SOFTWARE_URL}/${
+    locale.value
+  }/field/detail?${type ? `type=${type}&` : ''}${getQueryStr(id)}`;
 };
 
 const repeatTags = (v: string) => {

@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import { ref, watch, PropType, computed } from 'vue';
-
-import { useData } from 'vitepress';
+import { PropType, computed } from 'vue';
 
 import { OIcon, OScroller, OLink } from '@opensig/opendesign';
 
@@ -17,7 +15,7 @@ import type { AppItemT } from '~@/@types/type-search';
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 import { getUrlParam } from '~@/utils/common';
 
-const props = defineProps({
+defineProps({
   softwareZone: {
     type: Array as PropType<AppItemT[]>,
     default: () => [],
@@ -26,7 +24,8 @@ const props = defineProps({
 
 const { lePadV } = useScreen();
 const { locale } = useLocale();
-const { site } = useData();
+
+const SERVICE_SOFTWARE_URL = import.meta.env.VITE_SERVICE_SOFTWARE_URL;
 
 const searchValue = computed(() => {
   return getUrlParam('search') || '';
@@ -44,7 +43,7 @@ const searchValue = computed(() => {
         <OLink
           class="more"
           target="_blank"
-          :href="`${site.themeConfig.softwareUrl}/zh/field?name=${searchValue}`"
+          :href="`${SERVICE_SOFTWARE_URL}/zh/field?name=${searchValue}`"
           >{{ $t('search.more') }}
           <template #suffix>
             <OIcon><IconChevronRight class="download-button-icon" /></OIcon>

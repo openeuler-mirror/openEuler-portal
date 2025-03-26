@@ -124,11 +124,5 @@ const config: UserConfig = {
     },
   },
   cleanUrls: true,
-  themeConfig: {
-    docsUrl: 'https://docs.openeuler.org',
-    forumUrl: 'https://forum.openeuler.org',
-    softwareUrl: 'https://easysoftware.openeuler.org',
-    repoUrl: 'https://repo.openeuler.openatom.cn',
-  },
 };
 export default config;
