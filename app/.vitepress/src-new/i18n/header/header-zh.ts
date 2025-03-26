@@ -218,6 +218,7 @@ export default {
           NAME: '文档中心',
           ICON: ArrowRight,
           URL: 'https://docs.openeuler.org/zh/',
+          MOBILE_LINK: true,
           CHILDREN: [
             {
               NAME: '热门文档',

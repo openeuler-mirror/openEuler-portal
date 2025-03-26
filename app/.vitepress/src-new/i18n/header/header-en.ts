@@ -211,6 +211,7 @@ export default {
           NAME: 'Documentation',
           ICON: ArrowRight,
           URL: 'https://docs.openeuler.org/en/',
+          MOBILE_LINK: true,
           CHILDREN: [
             {
               NAME: 'Trending Docs',
