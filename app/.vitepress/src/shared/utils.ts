@@ -163,8 +163,8 @@ export function setCustomCookie(
  * @param key cookie的key
  * @param value cookie的值
  */
-export function removeCustomCookie(key: string) {
-  Cookies.remove(key);
+export function removeCustomCookie(key: string, opt?: object) {
+  Cookies.remove(key, opt || {});
 }
 
 export function scrollToBottom() {
