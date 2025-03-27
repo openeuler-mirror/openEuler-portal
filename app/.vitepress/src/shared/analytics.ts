@@ -61,7 +61,7 @@ export const removeHM = () => {
     .forEach((c) => {
       const key = decodeURIComponent(c.split('=')[0]);
       if (hm.test(key)) {
-        removeCustomCookie(key);
+        removeCustomCookie(key, { domain: location.hostname });
       }
     });
   [sessionStorage, localStorage].forEach((storage) => {
