@@ -17,6 +17,7 @@ import ContentWrapper from '~@/components/ContentWrapper.vue';
 import {
   enableOA,
   disableOA,
+  removeHM,
   reportPV,
   reportPerformance,
 } from '@/shared/analytics';
@@ -89,14 +90,6 @@ const initSensor = () => {
   );
 };
 
-const removeSensor = () => {
-  disableOA();
-  const scripts = document.querySelectorAll('script.analytics-script');
-  scripts.forEach((script) => {
-    script.remove();
-  });
-};
-
 // -------------------- 展示底部提示 --------------------
 // 显示/隐藏cookie提示
 const toggleNoticeVisible = (val: boolean) => {
@@ -133,7 +126,8 @@ const rejectAll = () => {
     COOKIE_DOMAIN
   );
   toggleNoticeVisible(false);
-  removeSensor();
+  disableOA();
+  removeHM();
 };
 
 // -------------------- 展示弹出框 --------------------
@@ -204,7 +198,8 @@ if (inBrowser) {
     analysisAllowed.value = true;
     initSensor();
   } else {
-    removeSensor();
+    disableOA();
+    removeHM();
   }
 }
 

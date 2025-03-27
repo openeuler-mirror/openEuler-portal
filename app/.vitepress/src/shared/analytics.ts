@@ -26,6 +26,7 @@ export const oa = new OpenAnalytics({
       useCookieStore().getUserCookieStatus() !== COOKIE_AGREED_STATUS.ALL_AGREED
     ) {
       disableOA();
+      removeHM();
       return;
     }
     reporAnalytics(data);
@@ -46,6 +47,13 @@ export const disableOA = () => {
   ].forEach((key) => {
     localStorage.removeItem(key);
   });
+};
+
+export const removeHM = () => {
+  const scripts = document.querySelectorAll('script.analytics-script');
+  scripts.forEach((script) => {
+    script.remove();
+  });
   const hm = /^hm/i;
   document.cookie
     .split(';')
@@ -56,7 +64,17 @@ export const disableOA = () => {
         removeCustomCookie(key);
       }
     });
-};
+  [sessionStorage, localStorage].forEach((storage) => {
+    const keys = [];
+    for (let i = 0; i < storage.length; i++) {
+      const key = storage.key(i)!;
+      if (hm.test(key)) {
+        keys.push(key);
+      }
+    }
+    keys.forEach(key => storage.removeItem(key));
+  })
+}
 
 export const reportPV = () => {
   const path = REGEXP.exec(window.location.pathname)?.[1];
