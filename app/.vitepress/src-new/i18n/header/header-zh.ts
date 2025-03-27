@@ -809,14 +809,21 @@ export default {
     {
       NAME: '代码仓',
       PATH: 'https://gitee.com/openeuler',
+      ICON: OutLink,
     },
     {
       NAME: '软件包仓',
       PATH: 'https://gitee.com/src-openeuler',
+      ICON: OutLink,
     },
     {
       NAME: 'Github镜像仓',
       PATH: 'https://github.com/openeuler-mirror',
+      ICON: OutLink,
+    },
+    {
+      NAME: 'LFS文件管理',
+      PATH: 'https://artlfs-website.openeuler.org/',
     },
   ],
 };

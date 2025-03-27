@@ -622,14 +622,17 @@ export default {
     {
       NAME: 'Code Sources',
       PATH: 'https://gitee.com/openeuler',
+      ICON: OutLink,
     },
     {
       NAME: 'Package Sources',
       PATH: 'https://gitee.com/src-openeuler',
+      ICON: OutLink,
     },
     {
       NAME: 'GitHub Mirror',
       PATH: 'https://github.com/openeuler-mirror',
+      ICON: OutLink,
     },
   ],
 };

@@ -34,8 +34,8 @@ const itemChange = (data: any) => {
           class="list"
         >
           {{ item.NAME }}
-          <OIcon>
-            <IconOutLink class="icon" />
+          <OIcon v-if="item.ICON">
+            <component :is="item.ICON" class="icon" />
           </OIcon>
         </ODropdownItem>
       </template>

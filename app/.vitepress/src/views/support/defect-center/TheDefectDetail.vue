@@ -100,6 +100,16 @@ onMounted(() => {
   securityNoticeNo.value = window.location.href.substring(index1 + 1);
   getSecurityDetailInfo(securityNoticeNo.value);
 });
+
+const generateIssueUrl = (issue: String) => {
+  const origin =
+    detailData.value.affectedComponent === 'kernel'
+      ? 'openeuler'
+      : 'src-openeuler';
+  return `https://gitee.com/${origin}/${
+    detailData.value.affectedComponent
+  }/issues/${issue?.split('-')?.at(-1)}`;
+};
 </script>
 <template>
   <div class="wrapper">
@@ -179,9 +189,7 @@ onMounted(() => {
                   <a
                     v-for="(item, index) in bugIdList"
                     :key="index"
-                    :href="`https://gitee.com/src-openeuler/${
-                      detailData.affectedComponent
-                    }/issues/${item?.split('-')?.at(-1)}`"
+                    :href="generateIssueUrl(item)"
                     class="tab-content-item-text tab-content-item-link"
                   >
                     {{ item }}
