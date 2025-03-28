@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { onMounted, computed } from 'vue';
+import { OButton } from '@opensig/opendesign';
 import AOS from 'aos';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
@@ -64,7 +65,13 @@ const enrollUrl = computed(() => {
         ></div>
         <div v-if="bannerData.signUpTitle" data-aos="fade-up">
           <a :href="enrollUrl">
-            <OButton animation class="home-banner-btn">
+            <OButton
+              class="banner-btn"
+              animation
+              variant="solid"
+              color="primary"
+              size="large"
+            >
               {{ bannerData.signUpTitle }}
             </OButton>
           </a>
@@ -120,19 +127,8 @@ const enrollUrl = computed(() => {
     }
   }
 }
-.home-banner-btn {
-  @include text1;
-  border-color: #002fa7;
-  color: #002fa7;
-  padding: 8px 16px;
+.banner-btn {
   margin-top: var(--o-gap-4);
-  border-radius: 40px;
-  height: 40px;
-  width: 112px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 400;
 }
 
 @include respond-to('<=pad') {

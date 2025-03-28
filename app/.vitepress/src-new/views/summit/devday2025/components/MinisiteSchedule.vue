@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-import IconTime from '~icons/app/icon-time.svg';
+import IconTime from '~icons/app-new/icon-time.svg';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 
@@ -28,7 +28,13 @@ const windowWidth = ref(useWindowResize());
           backgroundImage: `url(${windowWidth > 840 ? child.bg : child.bgMo})`,
         }"
       >
-        <p class="title">{{ child.title }}</p>
+        <div class="title-content">
+          <p class="title">{{ child.title }}</p>
+          <div class="subtitle-content">
+            <p class="subtitle">{{ child.attendee }}</p>
+            <p class="subtitle">{{ child.ldentity }}</p>
+          </div>
+        </div>
         <div class="bottom">
           <span class="date"
             ><IconTime /><span>{{ child.date }}</span></span
@@ -111,21 +117,48 @@ const windowWidth = ref(useWindowResize());
   background-size: cover;
   background-position: center;
   border-radius: var(--o-radius-xs);
-  .title {
-    @include h3;
-    color: var(--o-color-info1);
-    font-weight: 500;
-    margin-left: 14px;
-    position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      width: 6px;
-      height: 22px;
-      border-radius: 3px;
-      top: 3px;
-      left: -14px;
-      background-color: var(--o-color-primary1);
+  .title-content {
+    display: flex;
+    align-items: flex-end;
+    .title {
+      @include h3;
+      color: var(--o-color-info1);
+      font-weight: 500;
+      margin-left: 14px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 22px;
+        border-radius: 3px;
+        top: 3px;
+        left: -14px;
+        background-color: var(--o-color-primary1);
+      }
+    }
+
+    @include respond-to('<=pad_v') {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .subtitle-content {
+      display: flex;
+      .subtitle {
+        @include text1;
+        margin-left: var(--o-gap-2);
+      }
+
+      @include respond-to('<=pad_v') {
+        margin-top: var(--o-gap-3);
+        margin-left: 6px;
+      }
+
+      @media screen and (max-width: 400px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   }
   .bottom {

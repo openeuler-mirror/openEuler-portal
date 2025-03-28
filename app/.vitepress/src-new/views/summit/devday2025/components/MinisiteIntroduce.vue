@@ -20,12 +20,8 @@ const isDark = computed(() => {
 <template>
   <div class="introduce">
     <div class="title-img">
-      {{ introduceData.title }}
-      <img
-        class="introduction-img"
-        :src="isDark ? introduceData.titleImDark : introduceData.titleImg"
-        alt=""
-      />
+      <p class="title-text">{{ introduceData.title }}</p>
+      <img :src="isDark ? introduceData.titleImDark : introduceData.titleImg" />
     </div>
     <ul>
       <li v-for="(item, i) in introduceData.list" :key="i">

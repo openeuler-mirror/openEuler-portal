@@ -2,6 +2,8 @@
 import { computed } from 'vue';
 
 import IconChevronRight from '~icons/app/icon-chevron-right.svg';
+import IconAddress from '~icons/app-new/icon-address.svg';
+import IconTime from '~icons/app-new/icon-time.svg';
 
 import { useCommon } from '@/stores/common';
 
@@ -23,12 +25,8 @@ const isDark = computed(() => {
 <template>
   <div class="topic">
     <div class="title-img">
-      {{ topicData.title }}
-      <img
-        class="introduction-img"
-        :src="isDark ? topicData.titleImDark : topicData.titleImg"
-        alt=""
-      />
+      <p class="title-text">{{ topicData.title }}</p>
+      <img :src="isDark ? topicData.titleImDark : topicData.titleImg" />
     </div>
     <p class="topic-desc">{{ topicData.desc }}</p>
     <ul class="list">
@@ -40,7 +38,15 @@ const isDark = computed(() => {
         }"
         class="item-topic"
       >
-        <p class="title">{{ item.title }}</p>
+        <div class="item-title">
+          <p class="title">{{ item.title }}</p>
+          <div class="title-desc">
+            <OIcon class="icon"><IconAddress /></OIcon>
+            <p class="tips">{{ item.position }}</p>
+            <OIcon class="icon"><IconTime /></OIcon>
+            <p class="tips">{{ item.time }}</p>
+          </div>
+        </div>
         <p v-for="(desc, j) in item.desc" :key="j" class="desc">{{ desc }}</p>
         <div class="link">
           <a :href="item.href" target="_blank">
@@ -75,14 +81,38 @@ const isDark = computed(() => {
   display: flex;
   flex-direction: column;
   border-radius: var(--o-radius-xs);
-  height: 304px;
+  min-height: 304px;
 
-  .title {
-    @include h2;
-    font-weight: 500;
-    color: var(--o-color-info1);
+  .item-title {
     margin-bottom: 16px;
+    .title {
+      @include h2;
+      font-weight: 500;
+      color: var(--o-color-info1);
+      margin-right: var(--o-gap-4);
+    }
+
+    .title-desc {
+      display: flex;
+      align-items: flex-end;
+      margin-top: var(--o-gap-3);
+      .icon {
+        font-size: var(--o-icon_size-m);
+        margin-right: var(--o-gap-1);
+
+        @include respond-to('<=laptop') {
+          font-size: var(--o-icon_size-xs);
+        }
+      }
+
+      .tips {
+        @include tip1;
+        font-weight: 400;
+        margin-right: var(--o-gap-4);
+      }
+    }
   }
+
   .desc {
     @include text1;
     text-align: justify;
