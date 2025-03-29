@@ -14,9 +14,7 @@ The OpenAtom Foundation (hereinafter referred to as "we," "us," or "foundation")
 
 Please carefully review the following updates to this privacy policy:
 
-1. Updated the description of third-party login for account services in the "How We Collect and Process Your Personal Data" section.
-2. Revised the data correction description in the How We Access or Control Your Personal Data" section.
-3. Optimized the bold formatting style for personal data.
+1. Updated the description in the "How We Share Your Personal Data" section.
 
 ## 1. How We Collect and Process Your Personal Data
 
@@ -69,7 +67,7 @@ Sharing means providing third parties with your personal data. The third parties
 
 **b) Sharing your personal data as necessary for protecting national security, public security, and your and other individuals' crucial legitimate rights and interests**.
 
-**c) Affiliates**. We may share your personal data with our affiliates, for the purposes of transaction support, service support, or security support.
+**c) Operational entities**. We may share your personal data with our operational entities, for the purposes of service support or security support.
 
 **d) Partners**. We may share your personal data with our partners. However, we will share your personal data only for legitimate, justified, necessary, specified, and explicit purposes, and share only the personal data necessary for providing our services.
 
@@ -177,8 +175,8 @@ Email: **<contact@openeuler.io>**
 
 Hotline: **+86 15311871505**
 
-Last updated: **March 11, 2025**
+Last updated: **March 29, 2025**
 
-Privacy policy version: **v20250311**
+Privacy policy version: **v20250329**
 
 </div>
