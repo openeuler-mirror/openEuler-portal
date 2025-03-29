@@ -26,10 +26,40 @@ export default {
           NAME: '社区发行版',
           CHILDREN: [
             {
+              NAME: 'openEuler 25.03',
+              DESCRIPTION:
+                'openEuler 25.03 是基于6.6内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+              TAG: TAG_TYPE.NEW,
+              URL: '/download/#openEuler 25.03',
+              MOBILE_SHOW_CHILD: true,
+              CHILDREN: [
+                {
+                  NAME: '服务器',
+                  URL: '/download/?scenario=ISO#openEuler 25.03',
+                },
+                {
+                  NAME: '边缘计算',
+                  URL: '/download/?scenario=edge_img#openEuler 25.03',
+                },
+                {
+                  NAME: '云计算',
+                  URL: '/download/?scenario=virtual_machine_img#openEuler 25.03',
+                },
+                {
+                  NAME: '嵌入式',
+                  URL: '/download/?scenario=embedded_img#openEuler 25.03',
+                },
+                {
+                  NAME: 'DevStation',
+                  URL: '/download/?scenario=DevStation#openEuler 25.03',
+                },
+              ],
+            },
+            {
               NAME: 'openEuler 24.03 LTS SP1',
               DESCRIPTION:
                 'openEuler 24.03 LTS SP1 是基于6.6内核的24.03 LTS版本增强扩展版本，面向服务器、云、边缘计算和嵌入式场景，持续提供更多新特性和功能扩展，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
-              TAG: TAG_TYPE.NEW,
+              TAG: null,
               URL: '/download/#openEuler 24.03 LTS SP1',
               MOBILE_SHOW_CHILD: true,
               CHILDREN: [
@@ -52,36 +82,6 @@ export default {
                 {
                   NAME: 'DevStation',
                   URL: '/download/?scenario=DevStation#openEuler 24.03 LTS SP1',
-                },
-              ],
-            },
-            {
-              NAME: 'openEuler 24.09',
-              DESCRIPTION:
-                'openEuler 24.09 是基于Linux 6.6内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能',
-              TAG: null,
-              URL: '/download/#openEuler 24.09',
-              MOBILE_SHOW_CHILD: true,
-              CHILDREN: [
-                {
-                  NAME: '服务器',
-                  URL: '/download/?scenario=ISO#openEuler 24.09',
-                },
-                {
-                  NAME: '边缘计算',
-                  URL: '/download/?scenario=edge_img#openEuler 24.09',
-                },
-                {
-                  NAME: '云计算',
-                  URL: '/download/?scenario=virtual_machine_img#openEuler 24.09',
-                },
-                {
-                  NAME: '嵌入式',
-                  URL: '/download/?scenario=embedded_img#openEuler 24.09',
-                },
-                {
-                  NAME: 'DevStation',
-                  URL: '/download/?scenario=DevStation#openEuler 24.09',
                 },
               ],
             },
@@ -122,8 +122,8 @@ export default {
               URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS_SP1/docs/Installation/installation.html',
             },
             {
-              NAME: '24.09安装指南',
-              URL: 'https://docs.openeuler.org/zh/docs/24.09/docs/Installation/installation.html',
+              NAME: '25.03安装指南',
+              URL: 'https://docs.openeuler.org/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
             },
             {
               NAME: '版本生命周期',
@@ -211,8 +211,92 @@ export default {
       ],
     },
     {
-      NAME: '学习',
-      ID: 'learn',
+      NAME: '开发',
+      ID: 'development',
+      CHILDREN: [
+        {
+          NAME: '构建',
+          CHILDREN: [
+            {
+              NAME: 'EulerMaker',
+              DESCRIPTION: '开放式统一构建服务',
+              URL: 'https://eulermaker.compass-ci.openeuler.openatom.cn/',
+              ANALYTICSNAME: 'eulermaker',
+            },
+            {
+              NAME: '用户软件仓(EUR)',
+              DESCRIPTION: '开发者易用的软件包托管分发平台',
+              URL: 'https://eur.openeuler.openatom.cn/coprs/',
+            },
+            {
+              NAME: '软件包贡献',
+              DESCRIPTION: '简单高效地贡献软件包',
+              URL: 'https://software-pkg.openeuler.org/zh/package',
+            },
+            {
+              NAME: 'License工具门户',
+              DESCRIPTION: '帮助快速检测License权利、义务、限制',
+              URL: 'https://compliance.openeuler.org/',
+              ICON: OutLink,
+              ANALYTICSNAME: 'license',
+            },
+          ],
+        },
+        {
+          NAME: '发布',
+          CHILDREN: [
+            {
+              NAME: 'EulerPublisher',
+              DESCRIPTION: 'openEuler云原生发布工具',
+              URL: 'https://gitee.com/openeuler/eulerpublisher',
+              ICON: OutLink,
+            },
+            {
+              NAME: 'EulerLauncher',
+              DESCRIPTION: '跨平台openEuler虚拟机管理工具',
+              URL: 'https://gitee.com/openeuler/eulerlauncher',
+              ICON: OutLink,
+            },
+            {
+              NAME: 'OEPKGS',
+              DESCRIPTION: 'OEPKGS软件托管平台',
+              URL: 'https://oepkgs.net/zh-CN',
+              ICON: OutLink,
+            },
+          ],
+        },
+        {
+          NAME: '分析',
+          CHILDREN: [
+            {
+              NAME: 'oecp',
+              DESCRIPTION: '操作系统差异比较分析工具',
+              URL: 'https://gitee.com/openeuler/oecp',
+              ICON: OutLink,
+            },
+            {
+              NAME: 'Pkgship',
+              DESCRIPTION: '管理操作系统软件包信息和依赖项的查询工具',
+              URL: 'https://pkgmanage.openeuler.org/',
+              ANALYTICSNAME: 'pkgship',
+            },
+          ],
+        },
+        {
+          NAME: '问题反馈',
+          CHILDREN: [
+            {
+              NAME: 'QuickIssue',
+              DESCRIPTION: '简易快捷地查询、提交社区Issues',
+              URL: 'https://quickissue.openeuler.org/zh/issues/',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      NAME: '文档',
+      ID: 'document',
       CHILDREN: [
         {
           NAME: '文档中心',
@@ -221,44 +305,34 @@ export default {
           MOBILE_LINK: true,
           CHILDREN: [
             {
-              NAME: '热门文档',
-              DESCRIPTION: '当下最受关注的各类文档',
+              NAME: '新手入门',
+              DESCRIPTION: '10分钟玩转社区，快速构建与成长',
               TAG: TAG_TYPE.HOT,
-              URL: 'https://docs.openeuler.org/zh/#hot',
+              URL: 'https://docs.openeuler.org/zh/docs/25.03/server/quickstart/quickstart/quick-start.html',
             },
             {
-              NAME: '开发教程',
-              DESCRIPTION: '基于openEuler进行应用程序开发的指南文档',
-              URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/ApplicationDev/application-development.html',
+              NAME: '安装指南',
+              DESCRIPTION: '安装 openEuler 操作系统',
+              URL: 'https://docs.openeuler.org/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
             },
             {
-              NAME: '流程规范',
-              DESCRIPTION: '社区文档贡献的具体流程与规范要求',
-              URL: 'https://docs.openeuler.org/zh/#process',
+              NAME: '常见问题',
+              DESCRIPTION: '常见问题解决方法',
+              URL: 'https://docs.openeuler.org/zh/docs/common/faq/general/general_faq.html',
             },
             {
-              NAME: '工具查询',
-              DESCRIPTION: '常用工具的使用指南',
-              TAG: TAG_TYPE.HOT,
-              URL: 'https://docs.openeuler.org/zh/#tool',
-            },
-          ],
-          SHORTCUT: [
-            {
-              NAME: '24.03LTS文档',
-              URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Releasenotes/法律声明.html',
-            },
-            {
-              NAME: '安装升级',
-              URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/installation.html',
-            },
-            {
-              NAME: '文档撰写指南',
-              ICON: OutLink,
-              URL: 'https://gitee.com/openeuler/docs/blob/master/contribute/写作规范.md',
+              NAME: '文档开发指南',
+              DESCRIPTION: '参与文档开发的方式',
+              URL: 'https://docs.openeuler.org/zh/docs/common/contribute/directory_structure_introductory.html',
             },
           ],
         },
+      ],
+    },
+    {
+      NAME: '学习',
+      ID: 'learn',
+      CHILDREN: [
         {
           NAME: '课程中心',
           ICON: ArrowRight,
@@ -370,90 +444,7 @@ export default {
         },
       ],
     },
-    {
-      NAME: '开发',
-      ID: 'development',
-      CHILDREN: [
-        {
-          NAME: '构建',
-          CHILDREN: [
-            {
-              NAME: 'EulerMaker',
-              DESCRIPTION: '开放式统一构建服务',
-              URL: 'https://eulermaker.compass-ci.openeuler.openatom.cn/',
-              ANALYTICSNAME: 'eulermaker',
-            },
-            {
-              NAME: '用户软件仓(EUR)',
-              DESCRIPTION: '开发者易用的软件包托管分发平台',
-              URL: 'https://eur.openeuler.openatom.cn/coprs/',
-            },
-            {
-              NAME: '软件包贡献',
-              DESCRIPTION: '简单高效地贡献软件包',
-              URL: 'https://software-pkg.openeuler.org/zh/package',
-            },
-            {
-              NAME: 'License工具门户',
-              DESCRIPTION: '帮助快速检测License权利、义务、限制',
-              URL: 'https://compliance.openeuler.org/',
-              ICON: OutLink,
-              ANALYTICSNAME: 'license',
-            },
-          ],
-        },
-        {
-          NAME: '发布',
-          CHILDREN: [
-            {
-              NAME: 'EulerPublisher',
-              DESCRIPTION: 'openEuler云原生发布工具',
-              URL: 'https://gitee.com/openeuler/eulerpublisher',
-              ICON: OutLink,
-            },
-            {
-              NAME: 'EulerLauncher',
-              DESCRIPTION: '跨平台openEuler虚拟机管理工具',
-              URL: 'https://gitee.com/openeuler/eulerlauncher',
-              ICON: OutLink,
-            },
-            {
-              NAME: 'OEPKGS',
-              DESCRIPTION: 'OEPKGS软件托管平台',
-              URL: 'https://oepkgs.net/zh-CN',
-              ICON: OutLink,
-            },
-          ],
-        },
-        {
-          NAME: '分析',
-          CHILDREN: [
-            {
-              NAME: 'oecp',
-              DESCRIPTION: '操作系统差异比较分析工具',
-              URL: 'https://gitee.com/openeuler/oecp',
-              ICON: OutLink,
-            },
-            {
-              NAME: 'Pkgship',
-              DESCRIPTION: '管理操作系统软件包信息和依赖项的查询工具',
-              URL: 'https://pkgmanage.openeuler.org/',
-              ANALYTICSNAME: 'pkgship',
-            },
-          ],
-        },
-        {
-          NAME: '问题反馈',
-          CHILDREN: [
-            {
-              NAME: 'QuickIssue',
-              DESCRIPTION: '简易快捷地查询、提交社区Issues',
-              URL: 'https://quickissue.openeuler.org/zh/issues/',
-            },
-          ],
-        },
-      ],
-    },
+
     {
       NAME: '支持',
       ID: 'approve',
