@@ -50,7 +50,7 @@ This website involves the following personal data collection scenarios:
   - For corporate contributor registration: **name**, **email address**, corporation, and **email verification code**
   - For individual CLA signing: **name**, **email address**, and **email verification code**
   - For enterprise administrator login: **account**, **password**, and **email address**
-  - For community administrator login: **Gitee ID**, Gitee organization name, **GitHub ID**, GitHub organization name, **email address**, and **email verification code**
+  - For community administrator login: **account**, **password**, **email address** and **email authorization code**
 
 <br/>
 
