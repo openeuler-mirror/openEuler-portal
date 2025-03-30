@@ -20,7 +20,7 @@ const jumpToUserZone = () => {
 };
 
 const jumpToMsgCenter = () => {
-  window.open(import.meta.env.VITE_MESSAGE_CENTER_URL);
+  window.open(import.meta.env.VITE_SERVICE_MESSAGE_CENTER_URL);
 };
 
 const unreadMsgCount = ref(0);
