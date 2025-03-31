@@ -231,6 +231,12 @@ const queryGetSearchData = () => {
       ];
     }
   }
+
+  // 搜索类型为 all 时，搜索类型不传
+  if (docParams.value.type === 'all') {
+    docParams.value.type = '';
+  }
+
   getSearchData(docParams.value)
     .then((res) => {
       if (res.status === 200 && res.obj?.records[0]) {
