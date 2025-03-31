@@ -6,6 +6,24 @@ export default {
   zh: {
     COMMUNITY_LIST: [
       {
+        NAME: 'openEuler 25.03',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/25.03/',
+        DESC: 'openEuler 25.03 是基于6.6内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/zh/docs/25.03/server/releasenotes/releasenotes/introduction.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '/whitepaper/openEuler 25.03 技术白皮书.pdf',
+        LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+        WEBSITE_SELECT: '/zh/mirror/select/?version=25.03',
+        PUBLISH_DATE: '2025/03',
+        LTS: false,
+        VERSION: '25.03',
+        PLANNED_EOL: '2025/09',
+      },
+      {
         NAME: 'openEuler 24.03 LTS SP1',
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP1/',
         DESC: 'openEuler 24.03 LTS SP1 是基于6.6内核的24.03 LTS版本增强扩展版本，面向服务器、云、边缘计算和嵌入式场景，持续提供更多新特性和功能扩展，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
@@ -385,6 +403,24 @@ export default {
   en: {
     COMMUNITY_LIST: [
       {
+        NAME: 'openEuler 25.03',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/25.03/',
+        DESC: 'openEuler 25.03, an innovation version built on Linux kernel 6.6, is tailored for server, cloud, edge, and embedded scenarios. It offers a compelling range of new features and functions designed to elevate the experience for developers and users across diverse industries.',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/en/docs/25.03/server/releasenotes/releasenotes/introduction.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/en/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '/whitepaper/en/openEuler 25.03 Technical White Paper.pdf',
+        LIFE_CYCLE_URL: 'en/other/lifecycle/',
+        WEBSITE_SELECT: '/en/mirror/select/?version=25.03',
+        PUBLISH_DATE: '2025/03',
+        LTS: false,
+        VERSION: '25.03',
+        PLANNED_EOL: '2025/09',
+      },
+      {
         NAME: 'openEuler 24.03 LTS SP1',
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP1/',
         DESC: 'openEuler 24.03 LTS SP1, an enhanced version of the 24.03 LTS release based on the 6.6 kernel, is designed for server, cloud, edge computing, and embedded deployments, offering new features and functionality for developers and users across diverse domains.',
@@ -395,7 +431,8 @@ export default {
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
-        WHITE_PAPER: '/whitepaper/en/openEuler 24.03 LTS SP1 Technical White Paper.pdf',
+        WHITE_PAPER:
+          '/whitepaper/en/openEuler 24.03 LTS SP1 Technical White Paper.pdf',
         PUBLISH_DATE: '2024/12',
         LTS: true,
         VERSION: '24.03 LTS SP1',
