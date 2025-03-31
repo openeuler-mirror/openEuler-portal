@@ -2,7 +2,6 @@
 import { onMounted, computed } from 'vue';
 import AOS from 'aos';
 import { useScreen } from '~@/composables/useScreen';
-import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import { useCommon } from '@/stores/common';
 
 const { isPhone } = useScreen();
@@ -24,12 +23,10 @@ const isDark = computed(() => {
   return commonStore.theme === 'dark' ? true : false;
 });
 const bannerImage = computed(() => {
-  return isDark.value
-    ? isPhone.value
-      ? props.bannerData.bgMoDark
-      : props.bannerData.bgPcDark
-    : isPhone.value
+  return isPhone.value
     ? props.bannerData.bgMo
+    : isDark.value
+    ? props.bannerData.bgPcDark
     : props.bannerData.bgPc;
 });
 const enrollUrl = computed(() => {
@@ -41,30 +38,37 @@ const enrollUrl = computed(() => {
 
 <template>
   <div class="banner">
-    <div
-      class="banner-image"
-      :style="{
-        backgroundImage: `url(${bannerImage})`,
-      }"
-    ></div>
-    <div class="banner-panel-content">
+    <a v-if="isPhone" :href="enrollUrl">
       <div
-        data-aos="fade-down"
+        class="banner-image"
+        :class="{ 'banner-dark': isDark }"
         :style="{
-          backgroundImage: `url(${bannerData.bgText})`,
+          backgroundImage: `url(${bannerImage})`,
         }"
-        class="banner-text"
-        v-if="!isPhone"
       ></div>
-      <div v-if="bannerData.signUpTitle" data-aos="fade-up">
-        <a :href="enrollUrl">
-          <OButton animation class="home-banner-btn">
-            {{ bannerData.signUpTitle }}
-            <template #suffixIcon>
-              <OIcon class="btn-icon"><IconArrowRight /></OIcon>
-            </template>
-          </OButton>
-        </a>
+    </a>
+    <div v-else style="width: 100%; height: 100%">
+      <div
+        class="banner-image"
+        :style="{
+          backgroundImage: `url(${bannerImage})`,
+        }"
+      ></div>
+      <div class="banner-panel-content">
+        <div
+          data-aos="fade-down"
+          :style="{
+            backgroundImage: `url(${bannerData.bgText})`,
+          }"
+          class="banner-text"
+        ></div>
+        <div v-if="bannerData.signUpTitle" data-aos="fade-up">
+          <a :href="enrollUrl">
+            <OButton animation class="home-banner-btn">
+              {{ bannerData.signUpTitle }}
+            </OButton>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -118,13 +122,17 @@ const enrollUrl = computed(() => {
 }
 .home-banner-btn {
   @include text1;
-  border-color: #000;
-  color: #000;
-  padding: 8px 20px;
+  border-color: #002fa7;
+  color: #002fa7;
+  padding: 8px 16px;
   margin-top: var(--o-gap-4);
   border-radius: 40px;
   height: 40px;
-  width: 144px;
+  width: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
 }
 
 @include respond-to('<=pad') {
@@ -134,16 +142,6 @@ const enrollUrl = computed(() => {
       height: 100%;
       margin: 0 auto;
       background: no-repeat center/cover;
-    }
-  }
-  .home-banner-btn {
-    padding: 8px 16px;
-    height: 40px;
-    width: 120px;
-
-    .btn-icon {
-      width: 16px;
-      height: 16px;
     }
   }
 }
@@ -177,15 +175,8 @@ const enrollUrl = computed(() => {
       background: cover;
     }
 
-    .home-banner-btn {
-      margin-top: 108px;
-      height: 32px;
-      width: 100px;
-      padding: 4px 12px;
-
-      @media (min-width: 356px) and (max-width: 600px) {
-        margin-left: calc(0px + 24 * ((100vw - 356px) / (600 - 356)));
-      }
+    .banner-dark {
+      filter: brightness(80%) grayscale(20%) contrast(1.2);
     }
   }
 }

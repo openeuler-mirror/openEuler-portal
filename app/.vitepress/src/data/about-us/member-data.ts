@@ -57,6 +57,12 @@ import nanfangdianwang_light from '@/assets/category/member/nanfangdianwang_ligh
 import nanfangdianwang_dark from '@/assets/category/member/nanfangdianwang_dark.png';
 import dianziyun_light from '@/assets/category/member/dianziyun_light.png';
 import dianziyun_dark from '@/assets/category/member/dianziyun_dark.png';
+import baiduyun_dark from '@/assets/category/member/baiduyun_dark.png';
+import baiduyun_light from '@/assets/category/member/baiduyun_light.png';
+import langchaoyun_dark from '@/assets/category/member/langchaoyun_dark.png';
+import langchaoyun_light from '@/assets/category/member/langchaoyun_light.png';
+import shenzhoushuma_dark from '@/assets/category/member/shenzhoushuma_dark.png';
+import shenzhoushuma_light from '@/assets/category/member/shenzhoushuma_light.png';
 
 export default [
   {
@@ -156,6 +162,11 @@ export default [
         noIcon: true,
       },
       {
+        img_light: baiduyun_light,
+        img_dark: baiduyun_dark,
+        noIcon: true,
+      },
+      {
         img_light: aosiwei_light,
         img_dark: aosiwei_dark,
         noIcon: true,
@@ -194,6 +205,16 @@ export default [
         img_light: zhongruan_light,
         img_dark: zhongruan_dark,
         noIcon: true,
+      },
+      {
+        img_light: langchaoyun_light,
+        img_dark: langchaoyun_dark,
+        noIcon: false,
+      },
+      {
+        img_light: shenzhoushuma_light,
+        img_dark: shenzhoushuma_dark,
+        noIcon: false,
       },
     ],
   },

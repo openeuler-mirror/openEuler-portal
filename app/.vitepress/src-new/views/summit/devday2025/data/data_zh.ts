@@ -31,7 +31,6 @@ export default {
     bgPc: banner_pc,
     bgMo: banner_mo,
     bgPcDark: banner_pc_dark,
-    bgMoDark: banner_mo_dark,
     bgText: banner_text,
     signUpHrefPc:
       'https://openatomcon.openatom.cn/registration/?activityNo=HD20250305105858',
@@ -52,8 +51,8 @@ export default {
     titleImg: topic_light,
     titleImDark: topic_Dark,
     title: 'SIG Gathering',
-    text: '提交议题',
-    desc: '本次ODD大会的SIG Gathering环节将设立八大专题研讨，方向为：内核开发、全场景应用、AI原生支持、openEuler生态开发、上游生态开发、用户体验设计、RISC-V、云&云原生。欢迎各SIG组选择您感兴趣的的专题链接，填写您的需求，一起线下共同探讨，寻求解决方案。',
+    text: '查看议题',
+    desc: '本次ODD大会的SIG Gathering环节将设立八大专题研讨，方向为：内核开发、AI生态支持、上游生态支持、openEuler高效开发、用户体验设计、云与云原生、全场景应用、RISC-V。欢迎各SIG组选择您感兴趣的的专题链接，填写您的需求，一起线下共同探讨，寻求解决方案。',
     list: [
       {
         title: '内核开发',
@@ -90,7 +89,7 @@ export default {
         href: 'https://etherpad.openeuler.org/p/%E5%8E%9F%E7%94%9F%E5%BC%80%E5%8F%91',
       },
       {
-        title: '上游生态开发',
+        title: '上游生态支持',
         desc: [
           'openEuler始终遵循“上游优先”的策略，帮助开源软件上游天然支持openEuler，让用户可以在开发、集成、使用这些软件时获得便利',
           '本方向主要涉及：openEuler上游支持技术讨论及进展同步，讨论如何做好从上游支持到openEuler集成发布的关键环节，包含上游协同，监测，维护管理等',
