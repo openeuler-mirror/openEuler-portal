@@ -152,7 +152,14 @@ function getVersionTag() {
     },
     [] as string[]
   );
-  activeVersion.value = versionList.value[0];
+  if (
+    getUrlParam('version') &&
+    versionList.value.includes(getUrlParam('version'))
+  ) {
+    activeVersion.value = getUrlParam('version');
+  } else {
+    activeVersion.value = versionList.value[0];
+  }
 }
 
 // 点击搜索框的删除图标
@@ -264,15 +271,24 @@ function searchAll(valueChange?: boolean) {
 }
 
 function handleSelectChange(val: string) {
-  history.pushState(null, '', `?search=${encodeURIComponent(val)}`);
+  history.pushState(
+    null,
+    '',
+    `?search=${encodeURIComponent(val)}&type=${currentTab.value}`
+  );
 }
 
 onMounted(() => {
   getVersionTag();
+  if (getUrlParam('type')) {
+    currentTab.value = getUrlParam('type');
+    searchType.value = currentTab.value;
+  }
   if (getUrlParam('search')) {
     searchValue.value = getUrlParam('search');
     currentSearchVal.value = searchValue.value;
   }
+
   searchAll();
 });
 

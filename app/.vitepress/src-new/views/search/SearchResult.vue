@@ -123,7 +123,6 @@ const emits = defineEmits([
 const { searchType, currentPage, pageSize, activeVersion, activeSort } =
   useVModels(props, emits);
 
-const { site } = useData();
 const { locale } = useLocale();
 const cookieStore = useCookieStore();
 const { lePadV, lePad } = useScreen();
@@ -153,9 +152,9 @@ const getLink = (data: any) => {
   if (data.type === 'docs') {
     // hugo 编译 路由空格会被替换为 -
     path = path.replaceAll(' ', '-');
-    search_result_url = site.value.themeConfig.docsUrl + '/' + path + '.html';
+    search_result_url = `${import.meta.env.VITE_SERVICE_DOCS_URL}/${path}.html`;
   } else if (data.type === 'forum') {
-    search_result_url = `${site.value.themeConfig.forumUrl}${path}`;
+    search_result_url = `${import.meta.env.VITE_SERVICE_FORUM_URL}${path}`;
   } else if (path.startsWith('https')) {
     search_result_url = path;
   } else {
@@ -419,7 +418,11 @@ const reportSearch = (data: Record<string, any>) => {
                 class="from version"
               >
                 <span>{{ $t('search.version') }}</span>
-                <span>{{ item.version }}</span>
+                <span>{{
+                  item.version === 'common'
+                    ? $t('search.common')
+                    : item.version
+                }}</span>
               </p>
             </div>
           </template>
@@ -462,7 +465,7 @@ const reportSearch = (data: Record<string, any>) => {
       />
     </div>
 
-    <!-- 外联弹窗提示 -->
+    <!-- 外链弹窗提示 -->
     <ExternalLink
       v-if="showExternalDlg"
       :href="externalLink"

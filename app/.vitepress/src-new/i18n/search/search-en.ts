@@ -2,7 +2,7 @@ export default {
   from: 'From:',
   service: 'Related service',
   no: 'No',
-  version: 'Version:',
+  version: 'Version: ',
   relative: 'Related software package',
   suggest: 'Are you looking for:',
   copy: 'Copy',
@@ -34,4 +34,5 @@ export default {
     'The link you are about to access does not belong to the openEuler community. Please pay attention to the security of your account.',
   externalBtn1: 'Continue',
   externalBtn2: 'Cancel',
+  common: 'common',
 };
