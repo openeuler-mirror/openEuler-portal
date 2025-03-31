@@ -289,18 +289,6 @@ export default {
                 'Step-by-step instructions for installing openEuler.',
               URL: 'https://docs.openeuler.org/en/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
             },
-            {
-              NAME: 'FAQ',
-              DESCRIPTION:
-                'Solutions to common issues and troubleshooting tips.',
-              URL: 'https://docs.openeuler.org/en/docs/common/faq/general/general_faq.html',
-            },
-            {
-              NAME: 'Documentation Guide',
-              DESCRIPTION:
-                'Explore ways to participate in document development.',
-              URL: 'https://docs.openeuler.org/en/docs/common/contribute/directory_structure_introductory.html',
-            },
           ],
         },
       ],
