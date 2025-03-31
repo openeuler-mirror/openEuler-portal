@@ -17,7 +17,7 @@ export default [
   },
   {
     release: 'openEuler 20.03 LTS SP4',
-    size: '296 GB',
+    size: '360 GB',
   },
   {
     release: 'openEuler 20.09',
@@ -36,8 +36,12 @@ export default [
     size: '616 GB',
   },
   {
+    release: 'openEuler 22.03 LTS 64kb',
+    size: '56 GB',
+  },
+  {
     release: 'openEuler 22.03 LTS SP1',
-    size: '509 GB',
+    size: '562 GB',
   },
   {
     release: 'openEuler 22.03 LTS SP2',
@@ -45,11 +49,11 @@ export default [
   },
   {
     release: 'openEuler 22.03 LTS SP3',
-    size: '385 GB',
+    size: '527 GB',
   },
   {
     release: 'openEuler 22.03 LTS SP4',
-    size: '306 GB',
+    size: '466 GB',
   },
   {
     release: 'openEuler 22.09',
@@ -65,19 +69,23 @@ export default [
   },
   {
     release: 'openEuler 24.03 LTS',
-    size: '525 GB',
+    size: '632 GB',
   },
   {
     release: 'openEuler 24.09',
-    size: '432 GB',
+    size: '460 GB',
   },
   {
     release: 'openEuler 24.03 LTS SP1',
-    size: '351 GB',
+    size: '592 GB',
+  },
+  {
+    release: 'openEuler 25.03',
+    size: '411 GB',
   },
   {
     release: 'openEuler preview',
-    size: '189 GB',
+    size: '357 GB',
   },
   {
     release: 'openeuler1.0',
@@ -85,7 +93,7 @@ export default [
   },
   {
     release: 'security',
-    size: '300 MB',
+    size: '3.1 GB',
   },
   {
     release: 'upload',
@@ -97,6 +105,6 @@ export default [
   },
   {
     release: 'Total',
-    size: '5.5 TB',
+    size: '7.3 TB',
   },
 ];
