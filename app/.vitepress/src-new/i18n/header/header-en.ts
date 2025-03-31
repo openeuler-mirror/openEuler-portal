@@ -6,7 +6,6 @@ import IconArrowRight from '~icons/app-new/icon-header-next.svg';
 
 import annualReport2024 from '~@/assets/category/header/annual-report-2024.jpg';
 
-
 const TAG_TYPE = {
   HOT: 'HOT',
   NEW: 'NEW',
@@ -25,10 +24,40 @@ export default {
           NAME: 'Community Releases',
           CHILDREN: [
             {
+              NAME: 'openEuler 25.03',
+              DESCRIPTION:
+                'openEuler 25.03, an innovation version built on Linux kernel 6.6, is tailored for server, cloud, edge, and embedded scenarios. It offers a compelling range of new features and functions designed to elevate the experience for developers and users across diverse industries.',
+              TAG: TAG_TYPE.NEW,
+              URL: '/download/#openEuler 25.03',
+              MOBILE_SHOW_CHILD: true,
+              CHILDREN: [
+                {
+                  NAME: 'Server',
+                  URL: '/download/?scenario=ISO#openEuler 25.03',
+                },
+                {
+                  NAME: 'Edge Cloud',
+                  URL: '/download/?scenario=edge_img#openEuler 25.03',
+                },
+                {
+                  NAME: 'Cloud Computing',
+                  URL: '/download/?scenario=virtual_machine_img#openEuler 25.03',
+                },
+                {
+                  NAME: 'Embedded',
+                  URL: '/download/?scenario=embedded_img#openEuler 25.03',
+                },
+                {
+                  NAME: 'DevStation',
+                  URL: '/download/?scenario=DevStation#openEuler 25.03',
+                },
+              ],
+            },
+            {
               NAME: 'openEuler 24.03 LTS SP1',
               DESCRIPTION:
                 'openEuler 24.03 LTS SP1, an enhanced version of the 24.03 LTS release based on the 6.6 kernel, is designed for server, cloud, edge computing, and embedded deployments, offering new features and functionality for developers and users across diverse domains.',
-              TAG: TAG_TYPE.NEW,
+              TAG: null,
               URL: '/download/#openEuler 24.03 LTS SP1',
               MOBILE_SHOW_CHILD: true,
               CHILDREN: [
@@ -51,36 +80,6 @@ export default {
                 {
                   NAME: 'DevStation',
                   URL: '/download/?scenario=DevStation#openEuler 24.03 LTS SP1',
-                },
-              ],
-            },
-            {
-              NAME: 'openEuler 24.09',
-              DESCRIPTION:
-                'The latest innovation version built on Linux kernel 6.6, with new features and faster updates.',
-              TAG: null,
-              URL: '/download/#openEuler 24.09',
-              MOBILE_SHOW_CHILD: true,
-              CHILDREN: [
-                {
-                  NAME: 'Server',
-                  URL: '/download/?scenario=ISO#openEuler 24.09',
-                },
-                {
-                  NAME: 'Edge Cloud',
-                  URL: '/download/?scenario=edge_img#openEuler 24.09',
-                },
-                {
-                  NAME: 'Cloud Computing',
-                  URL: '/download/?scenario=virtual_machine_img#openEuler 24.09',
-                },
-                {
-                  NAME: 'Embedded',
-                  URL: '/download/?scenario=embedded_img#openEuler 24.09',
-                },
-                {
-                  NAME: 'DevStation',
-                  URL: '/download/?scenario=DevStation#openEuler 24.09',
                 },
               ],
             },
@@ -121,8 +120,8 @@ export default {
               URL: 'https://docs.openeuler.org/en/docs/24.03_LTS_SP1/docs/Installation/Installation.html',
             },
             {
-              NAME: 'openEuler 24.09 Installation Guide',
-              URL: 'https://docs.openeuler.org/en/docs/24.09/docs/Installation/Installation.html',
+              NAME: 'openEuler 25.03 Installation Guide',
+              URL: 'https://docs.openeuler.org/en/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
             },
             {
               NAME: 'openEuler Lifecycle',
@@ -204,105 +203,6 @@ export default {
       ],
     },
     {
-      NAME: 'Learn',
-      ID: 'learn',
-      CHILDREN: [
-        {
-          NAME: 'Documentation',
-          ICON: ArrowRight,
-          URL: 'https://docs.openeuler.org/en/',
-          CHILDREN: [
-            {
-              NAME: 'Trending Docs',
-              DESCRIPTION: 'The most viewed documents.',
-              TAG: TAG_TYPE.HOT,
-              URL: 'https://docs.openeuler.org/en/#hot',
-            },
-            {
-              NAME: 'Create Apps',
-              DESCRIPTION: 'Guides for application development on openEuler.',
-              URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/ApplicationDev/application-development.html',
-            },
-            {
-              NAME: 'Getting Started',
-              DESCRIPTION:
-                'Documentation guides to help you get started with openEuler.',
-              URL: 'https://docs.openeuler.org/en/#process',
-            },
-            {
-              NAME: 'Tools',
-              DESCRIPTION:
-                'Resources for using and accessing commonly used tools.',
-              TAG: TAG_TYPE.HOT,
-              URL: 'https://docs.openeuler.org/en/#tool',
-            },
-          ],
-          SHORTCUT: [
-            {
-              NAME: 'openEuler 24.03 LTS Documentation',
-              URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Releasenotes/terms-of-use.html',
-            },
-            {
-              NAME: 'Installation and Upgrade',
-              URL: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/Installation.html',
-            },
-          ],
-        },
-        {
-          NAME: 'Training',
-          ICON: ArrowRight,
-          URL: '/learn/mooc/',
-          CHILDREN: [
-            {
-              NAME: 'Tutorials',
-              DESCRIPTION: 'Mini video courses presented by openEuler.',
-              URL: 'https://www.youtube.com/playlist?list=PLtDfk9jvMAziPyVaA-DOkXx0GgIUjXc0_',
-              ICON: OutLink,
-            },
-          ],
-          SHORTCUT: [],
-        },
-        {
-          NAME: 'Migration',
-          CHILDREN: [
-            {
-              NAME: 'Migrate to openEuler',
-              DESCRIPTION: 'Guides for migrating to openEuler.',
-              URL: '/migration/',
-            },
-          ],
-          SHORTCUT: [
-            {
-              NAME: 'Get x2openEuler',
-              URL: '/migration/download/',
-            },
-            {
-              NAME: 'Migration Practices',
-              URL: '/migration/user-cases/',
-            },
-          ],
-        },
-        {
-          NAME: 'Tech Highlights',
-          CHILDREN: [
-            {
-              NAME: 'Success Stories',
-              DESCRIPTION:
-                'Explore how openEuler is used across various industries.',
-              URL: '/showcase/',
-            },
-            {
-              NAME: 'White Papers',
-              DESCRIPTION:
-                'Insights into the tech details and applications of each release.',
-              URL: '/showcase/technical-white-paper/',
-            },
-          ],
-          SHORTCUT: [],
-        },
-      ],
-    },
-    {
       NAME: 'Develop',
       ID: 'development',
       CHILDREN: [
@@ -366,6 +266,104 @@ export default {
         },
       ],
     },
+    {
+      NAME: 'Document',
+      ID: 'document',
+      CHILDREN: [
+        {
+          NAME: 'Document Center',
+          ICON: ArrowRight,
+          URL: 'https://docs.openeuler.org/en/',
+          MOBILE_LINK: true,
+          CHILDREN: [
+            {
+              NAME: 'Quick Start',
+              DESCRIPTION:
+                'Learn the community essentials in 10 minutes, build and grow quickly.',
+              TAG: TAG_TYPE.HOT,
+              URL: 'https://docs.openeuler.org/en/docs/25.03/server/quickstart/quickstart/quick-start.html',
+            },
+            {
+              NAME: 'Installation Guide',
+              DESCRIPTION:
+                'Step-by-step instructions for installing openEuler.',
+              URL: 'https://docs.openeuler.org/en/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
+            },
+            {
+              NAME: 'FAQ',
+              DESCRIPTION:
+                'Solutions to common issues and troubleshooting tips.',
+              URL: 'https://docs.openeuler.org/en/docs/common/faq/general/general_faq.html',
+            },
+            {
+              NAME: 'Documentation Guide',
+              DESCRIPTION:
+                'Explore ways to participate in document development.',
+              URL: 'https://docs.openeuler.org/en/docs/common/contribute/directory_structure_introductory.html',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      NAME: 'Learn',
+      ID: 'learn',
+      CHILDREN: [
+        {
+          NAME: 'Training',
+          ICON: ArrowRight,
+          URL: '/learn/mooc/',
+          CHILDREN: [
+            {
+              NAME: 'Tutorials',
+              DESCRIPTION: 'Mini video courses presented by openEuler.',
+              URL: 'https://www.youtube.com/playlist?list=PLtDfk9jvMAziPyVaA-DOkXx0GgIUjXc0_',
+              ICON: OutLink,
+            },
+          ],
+          SHORTCUT: [],
+        },
+        {
+          NAME: 'Migration',
+          CHILDREN: [
+            {
+              NAME: 'Migrate to openEuler',
+              DESCRIPTION: 'Guides for migrating to openEuler.',
+              URL: '/migration/',
+            },
+          ],
+          SHORTCUT: [
+            {
+              NAME: 'Get x2openEuler',
+              URL: '/migration/download/',
+            },
+            {
+              NAME: 'Migration Practices',
+              URL: '/migration/user-cases/',
+            },
+          ],
+        },
+        {
+          NAME: 'Tech Highlights',
+          CHILDREN: [
+            {
+              NAME: 'Success Stories',
+              DESCRIPTION:
+                'Explore how openEuler is used across various industries.',
+              URL: '/showcase/',
+            },
+            {
+              NAME: 'White Papers',
+              DESCRIPTION:
+                'Insights into the tech details and applications of each release.',
+              URL: '/showcase/technical-white-paper/',
+            },
+          ],
+          SHORTCUT: [],
+        },
+      ],
+    },
+
     {
       NAME: 'Support',
       ID: 'approve',

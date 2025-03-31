@@ -109,6 +109,18 @@ const linkClick = () => {
               :key="item.NAME"
               class="nav-aside-content"
             >
+              <NavLink
+                v-if="item.MOBILE_LINK"
+                class="content-title-url"
+                style="margin-top: 0px;"
+                :url="item.URL"
+                @link-click="linkClick"
+              >
+                {{ item.NAME }}
+                <OIcon>
+                  <component :is="item.ICON" class="icon" />
+                </OIcon>
+              </NavLink>
               <div v-if="item.HASGROUP">
                 <div
                   class="group"
