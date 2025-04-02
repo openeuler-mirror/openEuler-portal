@@ -12022,5 +12022,149 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "中国兵器工业计算机应用技术研究所",
+    "os_version": "openeuler-image-D2000",
+    "arch": "aarch64",
+    "checksum": "openeuler-image-d2000-20250224091145.rootfs.tar.gz：fbc4a8e6d3d6f3daf655856a1d7df03b,Image-5.10.0-openeuler：138b82b5798a96c03830120179a37799",
+    "base_openeuler_version": "openEuler 22.03 LTS SP4",
+    "os_download_link": "http://www.norincogroup.com.cn/",
+    "friendly_link": "http://www.norincogroup.com.cn/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2025/03/21",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "中国兵器工业计算机应用技术研究所",
+    "os_version": "openeuler-image-RK3588",
+    "arch": "aarch64",
+    "checksum": "update.img：cfb7638175b498b1b1665239b59c3675,openeuler-image-ok3588-20250304071305.rootfs.ext4：3168c727ca477e702d3ce74bf9c858d8,Image：73c43d58a3887002c0fe9db4da332e32",
+    "base_openeuler_version": "openEuler 22.03 LTS SP4",
+    "os_download_link": "http://www.norincogroup.com.cn/",
+    "friendly_link": "http://www.norincogroup.com.cn/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2025/03/21",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 ]
