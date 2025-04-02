@@ -6,7 +6,7 @@ tags:
     - fastblock
 archives: 2025-01
 author: OpenAtom openEuler 
-summary: fastblock: a high-performance distributed block storage system
+summary: fastblock, a high-performance distributed block storage system
 ---
 
 ## Fastblock Introduction
