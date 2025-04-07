@@ -14,7 +14,8 @@ The OpenAtom Foundation (hereinafter referred to as "we," "us," or "foundation")
 
 Please carefully review the following updates to this privacy policy:
 
-1. Updated the description in the "How We Share Your Personal Data" section.
+1. Added Personal Tokens in User Center.
+2. Modified the operation interface of User Center.
 
 ## 1. How We Collect and Process Your Personal Data
 
@@ -50,6 +51,8 @@ Please carefully review the following updates to this privacy policy:
 **i) Compatibility Certification**. When you use the compatibility certification service, we will collect your **UUID**, **user name**, **phone number** and **email address** from your openEuler account for identity verification purposes. Your **user name** and **phone number** will be used to notify you of the enterprise certification results, while your **user name** and **email address** will be used to inform you of the progress of the compatibility certification. Upon successful completion of the openEuler compatibility certification, the compatibility certification service will collect your enterprise information (including the enterprise name, business license, unified social credit code/organization code, business address, legal representative, registered capital, date of establishment, business term, **applicant's name**, **applicant's phone number**, **applicant's email address**, business registration country/region, and enterprise email address) for the purpose of enterprise certification. The compatibility certification service will also collect the **project leader's signature** via the certificate confirmation page for the purpose of generating your compatibility certificate.
 
 **j) EulerMaker**. When you use the EulerMaker service, we will collect your **user name**, **email address** from your openEuler account for identity verification purposes.
+
+**k) Personal Tokens**. When generating a **personal token**, we will collect your **email address** and **email verification code** to verify your identity. Upon successful verification, we will collect your token name, granted permissions, and validity period, and will generate the **personal token**. The **personal token** can then be used to access the target API endpoint.
 
 <br/>
 
@@ -125,9 +128,10 @@ You can log in to the user center using an openEuler community account using the
 You can log in using an openEuler community account and perform the following operations in User Center:
 
 1. Change your avatar.
-2. Choose Info to view and correct your basic information(nickname, **company**).
-3. Choose Identity to check and correct you **email address**, **phone number**, and **Gitee/Github/OpenAtom account**.
-4. Choose Security to reset your **login password**.
+2. Choose Settings > Account Management > My Profile to view and correct your basic information(nickname, **company**).
+3. Choose Settings > Account Management > Account Settings to check and correct you **email address**, **phone number**, and **Gitee/Github/OpenAtom account**.
+4. Choose Settings > Account Management > Account Settings to reset your **login password**.
+5. Choose Settings > Personal Tokens to view or modify your token name, granted permissions, and validity periods, or generate new **tokens**.
 
 You have the right to update or modify your personal data processed by us when you need to or find any errors with it.
 
@@ -135,19 +139,20 @@ You have the right to update or modify your personal data processed by us when y
 
 You can log in using an openEuler community account and perform the following operations in User Center:
 
-1. Choose User Center -> Info to delete basic informatio(nickname, **company**) about your openEuler community account,
-2. Choose User Center -> Identity to unbind your **phone number** and **Gitee/GitHub/OpenAtom account**.
+1. Choose Settings > Account Management > My Profile to delete basic informatio(nickname, **company**) about your openEuler community account,
+2. Choose Settings > Account Management > Account Settings to unbind your **phone number** and **Gitee/GitHub/OpenAtom account**.
+3. Choose Settings > Personal Tokens to delete any **personal tokens** you have generated.
 
 ### 6.4 Revocation of Consent
 
 1. You can contact us via email to object to the processing of your personal information.
 2. You can contact us via email to restrict the processing of your personal information.
 3. You can choose to unsubscribe from emails in the mailing list service: enter the email you want to unsubscribe from, enter your email in the unsubscribe area, and that email will receive a unsubscribe notification email. Click the corresponding confirmation link to complete the unsubscribe process
-4. You can choose User Center -> Security -> Cancel signature to withdraw consent to the policy. **Please note that if you withdraw your consent to the policy, we will be unable to continue providing services to you, but your account will remain active.**
+4. You can choose User Center > Settings > Account Management > Account Settings > Account Security > Cancel signature to withdraw consent to the policy. **Please note that if you withdraw your consent to the policy, we will be unable to continue providing services to you, but your account will remain active.**
 
 ### 6.5 Deletion
 
-You can log in to the openEuler community and choose User Center -> Security -> Delete to delete your openEuler community account. This action will also delete your personal information in the openEuler community. Exercise caution when performing this operation.
+You can log in to the openEuler community and choose User Center > Settings > Account Management > Account Settings > Account Security > Delete to delete your openEuler community account. This action will also delete your personal information in the openEuler community. Exercise caution when performing this operation.
 
 ## 7. Where Your Personal Data Is Stored
 
@@ -175,8 +180,8 @@ Email: **<contact@openeuler.io>**
 
 Hotline: **+86 15311871505**
 
-Last updated: **March 29, 2025**
+Last updated: **April 07, 2025**
 
-Privacy policy version: **v20250329**
+Privacy policy version: **v20250407**
 
 </div>

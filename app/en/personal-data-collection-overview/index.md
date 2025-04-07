@@ -94,4 +94,11 @@ This website involves the following personal data collection scenarios:
 - **Collection method**: user input
 - **Personal data fields**: **user name**, **email address**
 
+## 11. Personal Tokens
+
+- **Purpose**: Used to access the target API endpoint
+- **Personal data type**: data you voluntarily submit
+- **Collection method**: user input
+- **Personal data fields**: **personal token**, **email address**, **email verification code**, token name, granted permissions, validity period
+
 </div>
