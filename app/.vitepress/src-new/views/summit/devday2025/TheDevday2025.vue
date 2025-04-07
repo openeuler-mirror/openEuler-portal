@@ -5,15 +5,24 @@ import MinisiteIntroduce from './components/MinisiteIntroduce.vue';
 import MinisiteCard from './components/MinisiteCard.vue';
 import MinisiteAgenda from './components/MinisiteAgenda.vue';
 import MinisiteReview from './components/MinisiteReview.vue';
+import MinisiteAnchor from './components/MinisiteAnchor.vue';
+import MinisiteLive from './components/MinisiteLive.vue';
+import MinisiteGuide from './components/MinisiteGuide.vue';
 import data from './data/data_zh';
 </script>
 
 <template>
   <MinisiteBanner :banner-data="data.banner" />
+  <MinisiteAnchor :anchor-data="data.anchor" />
   <AppContext>
-    <MinisiteIntroduce :introduce-data="data.introduce" />
+    <MinisiteIntroduce
+      :introduce-data="data.introduce"
+      id="minisite-introduction"
+    />
+    <MinisiteLive :live-data="data.live" />
     <MinisiteCard :topic-data="data.topic" />
-    <MinisiteAgenda :agenda-data="data.agenda" />
+    <MinisiteAgenda :agenda-data="data.agenda" id="minisite-agenda" />
+    <MinisiteGuide :guide-data="data.guide" id="venue-guide" />
     <MinisiteReview :review-data="data.review" />
   </AppContext>
 </template>
@@ -42,6 +51,10 @@ import data from './data/data_zh';
       height: 18px;
       top: -4px;
     }
+  }
+  .title-text {
+    z-index: 1;
+    position: relative;
   }
 }
 </style>

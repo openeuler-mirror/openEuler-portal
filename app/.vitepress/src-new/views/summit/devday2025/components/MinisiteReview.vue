@@ -19,12 +19,8 @@ const isDark = computed(() => {
 <template>
   <div class="review">
     <div class="title-img">
-      {{ reviewData.title }}
-      <img
-        class="introduction-img"
-        :src="isDark ? reviewData.titleImDark : reviewData.titleImg"
-        alt=""
-      />
+      <p class="title-text">{{ reviewData.title }}</p>
+      <img :src="isDark ? reviewData.titleImDark : reviewData.titleImg" />
     </div>
     <div class="link-box">
       <p v-for="item in reviewData.list" :key="item.link">

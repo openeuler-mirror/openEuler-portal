@@ -25,6 +25,12 @@ import agenda_mo1 from '../img/agenda-mo1.png';
 import agenda_mo2 from '../img/agenda-mo2.png';
 import review_light from '../img/review-light.png';
 import review_Dark from '../img/review-dark.png';
+import guide_pc from '../img/guide-pc.jpg';
+import guide_mo from '../img/guide-mo.jpg';
+import guide_light from '../img/guide-light.png';
+import guide_dark from '../img/guide-dark.png';
+import live_light from '../img/live-light.png';
+import live_dark from '../img/live-dark.png';
 
 export default {
   banner: {
@@ -43,7 +49,7 @@ export default {
     titleImDark: introduce_Dark,
     title: '活动简介',
     list: [
-      'openEuler Developer Day 2025 （简称 ODD 2025）是开放原子开源基金会孵化及运营的 openEuler 社区发起的开发者大会。旨在持续推动操作系统乃至基础软件的创新和突破。本次 ODD 2025 将全面展示全新发布的25.03创新版本特性、内核开发、多样性计算和全场景协同的技术成果、分享各行各业基于 openEuler 的商业实践。同时 ODD 也是社区的年度大型工作会议，协同讨论版本路线以及联合创新。openEuler 始终与开发者在一起，用 openEuler 构筑坚实的软件根基，成就属于每位开发者的 openEuler 时代。',
+      'openEuler Developer Day 2025 （简称 ODD 2025）是开放原子开源基金会孵化及运营的 openEuler 社区发起的开发者大会。旨在持续推动操作系统乃至基础软件的创新和突破。本次 ODD 2025 将全面展示全新发布的25.03创新版本特性、展示内核开发、多样性计算和全场景协同的技术成果、分享各行各业基于 openEuler 的商业实践。同时 ODD 也是社区的年度大型工作会议，协同讨论版本路线以及联合创新。openEuler 始终与开发者在一起，用 openEuler 构筑坚实的软件根基，成就属于每位开发者的 openEuler 时代。',
       '我参与，我做主。开源是一种态度，分享是一种精神。欢迎申报SIG Gathering 环节相关议题。',
     ],
   },
@@ -61,6 +67,8 @@ export default {
         ],
         bg: topic1,
         href: 'https://etherpad.openeuler.org/p/%E5%86%85%E6%A0%B8%E5%BC%80%E5%8F%91',
+        position: 'B1层 龙井厅',
+        time: '全天',
       },
       {
         title: '全场景应用',
@@ -69,9 +77,11 @@ export default {
         ],
         bg: topic2,
         href: 'https://etherpad.openeuler.org/p/%E5%85%A8%E5%9C%BA%E6%99%AF%E5%BA%94%E7%94%A82025',
+        position: '3F层 永兴厅',
+        time: '全天',
       },
       {
-        title: 'AI生态支持',
+        title: 'AI原生支持',
         desc: [
           '本专题将与开发者一起探讨openEuler的多样化三层AI使能架构：',
           '1. 基于LLM的智能交互平台，颠覆传统shell命令交付的模式，改进传统学习，开发，调优，运维体验，智能新语义支持应用智能化升级，共建AI生态',
@@ -79,6 +89,8 @@ export default {
           '3. AI 主流软件栈4层栈全栈兼容及封装，主流推理框架加速，开箱即用',
         ],
         href: 'https://etherpad.openeuler.org/p/AI%E5%8E%9F%E7%94%9F%E6%94%AF%E6%8C%81%EF%BC%882025%EF%BC%89',
+        position: 'B1层 虎跑厅',
+        time: '全天',
       },
       {
         title: 'openEuler高效开发',
@@ -87,6 +99,8 @@ export default {
         ],
         bg: topic3,
         href: 'https://etherpad.openeuler.org/p/%E5%8E%9F%E7%94%9F%E5%BC%80%E5%8F%91',
+        position: 'B1层 秋月厅',
+        time: '下午',
       },
       {
         title: '上游生态支持',
@@ -96,6 +110,8 @@ export default {
         ],
         bg: topic4,
         href: 'https://etherpad.openeuler.org/p/%E4%B8%8A%E6%B8%B8%E5%8E%9F%E7%94%9F%E6%94%AF%E6%8C%81%EF%BC%882025%EF%BC%89',
+        position: 'B1层 桂雨厅',
+        time: '上午',
       },
       {
         title: '用户体验设计',
@@ -108,6 +124,8 @@ export default {
         ],
         bg: topic5,
         href: 'https://etherpad.openeuler.org/p/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1',
+        position: 'B1层 秋月厅',
+        time: '上午',
       },
       {
         title: 'RISC-V',
@@ -115,6 +133,8 @@ export default {
           '探讨openEuler在RISC-V架构上的最新进展、应用案例和发展方向，提升openEuler多样性算力支持的能力',
         ],
         href: 'https://etherpad.openeuler.org/p/RISC_V',
+        position: 'B1层 玉皇厅',
+        time: '全天',
       },
       {
         title: '云&云原生',
@@ -123,6 +143,8 @@ export default {
         ],
         bg: topic6,
         href: 'https://etherpad.openeuler.org/p/%E4%BA%91%E4%B8%8E%E4%BA%91%E5%8E%9F%E7%94%9F',
+        position: 'B1层 桂雨厅',
+        time: '下午',
       },
     ],
   },
@@ -140,32 +162,47 @@ export default {
             type: '上午',
             children: [
               {
-                title: '致辞',
+                title: '开场致辞',
                 date: '2025/04/11',
                 time: '9:00-9:05',
+                attendee: '李博',
+                ldentity: '开放原子开源基金会秘书长助理',
                 bg: agenda1,
                 bgMo: agenda_mo1,
               },
               {
-                title: 'openEuler社区进展 + openEuler 25.03版本发布',
+                title: '智汇百川，轻启新程',
                 date: '2025/04/11',
                 time: '9:05-9:15',
+                attendee: '胡正策',
+                ldentity: 'OpenAtom openEuler 社区委员会执行总监',
                 bg: agenda2,
                 bgMo: agenda_mo2,
               },
               {
-                title: 'openEuler 25.03重点特性解读',
+                title: 'openEuler 25.03 特性解读',
                 date: '2025/04/11',
                 time: '9:15-9:45',
+                attendee: '胡欣蔚',
+                ldentity: 'OpenAtom openEuler 社区技术委员会主席',
                 bg: agenda1,
                 bgMo: agenda_mo1,
+              },
+              {
+                title: 'SIG Gathering 整体介绍',
+                date: '2025/04/11',
+                time: '9:45-9:50',
+                attendee: '郑振宇',
+                ldentity: 'OpenAtom openEuler 社区运营组组长',
+                bg: agenda2,
+                bgMo: agenda_mo2,
               },
               {
                 title: 'SIG Gathering 专题研讨',
                 date: '2025/04/11',
-                time: '10:00-12:00',
-                bg: agenda2,
-                bgMo: agenda_mo2,
+                time: '09:50-12:00',
+                bg: agenda1,
+                bgMo: agenda_mo1,
               },
             ],
           },
@@ -180,18 +217,25 @@ export default {
                 bgMo: agenda_mo1,
               },
               {
-                title: 'SIG Gathering 专题研讨 ',
+                title: 'SIG Gathering 专题研讨',
                 date: '2025/04/11',
-                time: '14:00-17:00',
+                time: '14:00-16:30',
                 bg: agenda2,
                 bgMo: agenda_mo2,
               },
               {
-                title: 'SIG Gathering 总结',
+                title: 'Poster Session 现场交流',
                 date: '2025/04/11',
-                time: '17:00-18:00',
+                time: '16:30-17:00',
                 bg: agenda1,
                 bgMo: agenda_mo1,
+              },
+              {
+                title: 'SIG Gathering 总结与分享',
+                date: '2025/04/11',
+                time: '17:00-18:00',
+                bg: agenda2,
+                bgMo: agenda_mo2,
               },
             ],
           },
@@ -201,7 +245,7 @@ export default {
               {
                 title: '开发者之夜',
                 date: '2025/04/11',
-                time: '18:30-20:00',
+                time: '18:00-20:30',
                 bg: agenda1,
                 bgMo: agenda_mo1,
               },
@@ -241,5 +285,25 @@ export default {
         link: '/zh/interaction/summit-list/summit2022-changsha/',
       },
     ],
+  },
+  anchor: [
+    { title: '活动简介', id: 'minisite-introduction' },
+    { title: '活动日程', id: 'minisite-agenda' },
+    { title: '会场导览', id: 'venue-guide' },
+  ],
+  live: {
+    titleImg: live_light,
+    titleImDark: live_dark,
+    title: '大会直播',
+    liveId: 15354,
+    liveTestId: 15354,
+    liveDate: '2025-04-10T23:59:59',
+  },
+  guide: {
+    titleImg: guide_light,
+    titleImDark: guide_dark,
+    title: '会场导览',
+    imageMo: guide_mo,
+    imagePc: guide_pc,
   },
 };
