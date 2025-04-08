@@ -97,22 +97,19 @@ const linkClick = () => {
           </li>
         </ul>
         <div class="nav-aside">
-          <OCollapse
-            v-if="navActive !== 'SOURCE_CODE'"
-            v-model="collapseValue"
-            class="nav-aside-wrapper"
-          >
-            <OCollapseItem
+          <ul v-if="navActive !== 'SOURCE_CODE'" class="nav-aside-wrapper">
+            <li
               v-for="item in navInfo.CHILDREN"
               :value="item.NAME"
               :title="item.NAME"
               :key="item.NAME"
               class="nav-aside-content"
             >
+              <p class="content-title">{{ item.NAME }}</p>
               <NavLink
                 v-if="item.MOBILE_LINK"
                 class="content-title-url"
-                style="margin-top: 0px;"
+                style="margin-top: 0px"
                 :url="item.URL"
                 @link-click="linkClick"
               >
@@ -160,8 +157,8 @@ const linkClick = () => {
                   />
                 </div>
               </div>
-            </OCollapseItem>
-          </OCollapse>
+            </li>
+          </ul>
           <div v-else class="nav-aside-wrapper">
             <NavLink
               v-for="item in navInfo"
@@ -170,7 +167,7 @@ const linkClick = () => {
               class="source-code-item"
             >
               <span>{{ item.NAME }}</span>
-              <OIcon>
+              <OIcon v-if="item.ICON">
                 <IconOutLink class="icon" />
               </OIcon>
             </NavLink>
@@ -281,12 +278,25 @@ const linkClick = () => {
 
   .nav-aside-wrapper {
     overflow-y: auto;
-    padding: 12px 16px 24px 12px;
+    padding: 12px 12px 32px;
     height: 100%;
 
     .nav-aside-content {
       display: block;
       flex: 0 1 auto;
+
+      & + .nav-aside-content {
+        position: relative;
+        padding-top: var(--o-gap-3);
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 1px;
+          background-color: rgba(var(--o-mixedgray-14), 0.1);
+        }
+      }
 
       :deep(.o-collapse-item-body) {
         margin-bottom: 0;
@@ -294,6 +304,12 @@ const linkClick = () => {
 
       .group + .group {
         margin-top: var(--o-gap-3);
+      }
+
+      .content-title {
+        @include text1;
+        color: var(--o-color-info3);
+        font-weight: 500;
       }
 
       .content-title-url {
@@ -322,6 +338,21 @@ const linkClick = () => {
       .icon {
         margin-left: var(--o-gap-2);
       }
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 4px;
+      background-color: var(--e-color-bg2);
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: var(--e-color-bg2);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background: var(--e-color-division1);
     }
   }
 }

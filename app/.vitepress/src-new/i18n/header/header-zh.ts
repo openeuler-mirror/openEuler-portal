@@ -23,67 +23,21 @@ export default {
       ID: 'download',
       CHILDREN: [
         {
-          NAME: '社区发行版',
+          NAME: '获取openEuler',
           CHILDREN: [
             {
               NAME: 'openEuler 25.03',
               DESCRIPTION:
-                'openEuler 25.03 是基于6.6内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+                '基于6.6内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
               TAG: TAG_TYPE.NEW,
               URL: '/download/#openEuler 25.03',
-              MOBILE_SHOW_CHILD: true,
-              CHILDREN: [
-                {
-                  NAME: '服务器',
-                  URL: '/download/?scenario=ISO#openEuler 25.03',
-                },
-                {
-                  NAME: '边缘计算',
-                  URL: '/download/?scenario=edge_img#openEuler 25.03',
-                },
-                {
-                  NAME: '云计算',
-                  URL: '/download/?scenario=virtual_machine_img#openEuler 25.03',
-                },
-                {
-                  NAME: '嵌入式',
-                  URL: '/download/?scenario=embedded_img#openEuler 25.03',
-                },
-                {
-                  NAME: 'DevStation',
-                  URL: '/download/?scenario=DevStation#openEuler 25.03',
-                },
-              ],
             },
             {
               NAME: 'openEuler 24.03 LTS SP1',
               DESCRIPTION:
-                'openEuler 24.03 LTS SP1 是基于6.6内核的24.03 LTS版本增强扩展版本，面向服务器、云、边缘计算和嵌入式场景，持续提供更多新特性和功能扩展，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+                '基于6.6内核的24.03 LTS版本增强扩展版本，面向服务器、云、边缘计算和嵌入式场景，持续提供更多新特性和功能扩展，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
               TAG: null,
               URL: '/download/#openEuler 24.03 LTS SP1',
-              MOBILE_SHOW_CHILD: true,
-              CHILDREN: [
-                {
-                  NAME: '服务器',
-                  URL: '/download/?scenario=ISO#openEuler 24.03 LTS SP1',
-                },
-                {
-                  NAME: '边缘计算',
-                  URL: '/download/?scenario=edge_img#openEuler 24.03 LTS SP1',
-                },
-                {
-                  NAME: '云计算',
-                  URL: '/download/?scenario=virtual_machine_img#openEuler 24.03 LTS SP1',
-                },
-                {
-                  NAME: '嵌入式',
-                  URL: '/download/?scenario=embedded_img#openEuler 24.03 LTS SP1',
-                },
-                {
-                  NAME: 'DevStation',
-                  URL: '/download/?scenario=DevStation#openEuler 24.03 LTS SP1',
-                },
-              ],
             },
             {
               NAME: 'openEuler 22.03 LTS SP4',
@@ -91,86 +45,12 @@ export default {
                 'openEuler 22.03 LTS SP4 是openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同',
               TAG: null,
               URL: '/download/#openEuler 22.03 LTS SP4',
-              MOBILE_SHOW_CHILD: true,
-              CHILDREN: [
-                {
-                  NAME: '服务器',
-                  URL: '/download/?scenario=ISO#openEuler 22.03 LTS SP4',
-                },
-                {
-                  NAME: '边缘计算',
-                  URL: '/download/?scenario=edge_img#openEuler 22.03 LTS SP4',
-                },
-                {
-                  NAME: '云计算',
-                  URL: '/download/?scenario=virtual_machine_img#openEuler 22.03 LTS SP4',
-                },
-                {
-                  NAME: '嵌入式',
-                  URL: '/download/?scenario=embedded_img#openEuler 22.03 LTS SP4',
-                },
-              ],
             },
-          ],
-          SHORTCUT: [
-            {
-              NAME: '技术白皮书',
-              URL: '/showcase/technical-white-paper/',
-            },
-            {
-              NAME: '24.03 LTS SP1安装指南',
-              URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS_SP1/docs/Installation/installation.html',
-            },
-            {
-              NAME: '25.03安装指南',
-              URL: 'https://docs.openeuler.org/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
-            },
-            {
-              NAME: '版本生命周期',
-              URL: '/other/lifecycle/',
-            },
-            {
-              NAME: '查询所有版本',
-              URL: '/download?archive=true',
-            },
-          ],
-          EXTRAS: [
             {
               NAME: '其他获取方式',
+              DESCRIPTION: '通过公有云、容器镜像等方式获取openEuler版本',
+              TAG: null,
               URL: '/download/#get-openeuler',
-              ICON: ArrowRight,
-              CHILDREN: [
-                {
-                  NAME: '公有云',
-                  DESCRIPTION: 'openEuler官方镜像在以下主流平台正式发布',
-                  URL: '/download/#cloud',
-                },
-                {
-                  NAME: '容器镜像',
-                  DESCRIPTION: 'openEuler提供官方容器镜像',
-                  URL: '/download/#container',
-                },
-                {
-                  NAME: 'Windows',
-                  DESCRIPTION: '在Windows上运行openEuler',
-                  URL: '/download/#windows',
-                },
-                {
-                  NAME: 'MacOS',
-                  DESCRIPTION: '在MacOS上运行openEuler',
-                  URL: '/download/#macos',
-                },
-                {
-                  NAME: '虚拟化',
-                  DESCRIPTION: '在虚拟机上运行openEuler',
-                  URL: '/download/#virtualization',
-                },
-                {
-                  NAME: '树莓派',
-                  DESCRIPTION: '在树莓派上安装openEuler',
-                  URL: '/download/#raspberrypi',
-                },
-              ],
             },
           ],
         },
@@ -184,20 +64,18 @@ export default {
               URL: '/download/commercial-release/',
             },
           ],
-          SHORTCUT: [],
         },
         {
-          NAME: '下载资源',
+          NAME: '获取其他资源',
           CHILDREN: [
             {
               NAME: '软件中心',
-              DESCRIPTION: '简易便捷地查询openEuler社区软件包',
-              TAG: TAG_TYPE.NEW,
+              DESCRIPTION: '查询openEuler社区软件包',
               URL: 'https://easysoftware.openeuler.org/zh',
             },
             {
               NAME: '镜像仓列表',
-              DESCRIPTION: '查询openEuler所有镜像站点，欢迎新站点的加入',
+              DESCRIPTION: '查询openEuler所有镜像站点',
               URL: '/mirror/list/',
             },
             {
@@ -206,7 +84,28 @@ export default {
               URL: 'https://repo.openeuler.openatom.cn/',
             },
           ],
-          SHORTCUT: [],
+        },
+      ],
+      SHORTCUT: [
+        {
+          NAME: '查询所有版本',
+          URL: '/download?archive=true',
+        },
+        {
+          NAME: '版本生命周期',
+          URL: '/other/lifecycle/',
+        },
+        {
+          NAME: '25.03安装指南',
+          URL: 'https://docs.openeuler.org/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
+        },
+        {
+          NAME: '24.03 LTS SP1安装指南',
+          URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS_SP1/docs/Installation/installation.html',
+        },
+        {
+          NAME: '技术白皮书',
+          URL: '/showcase/technical-white-paper/',
         },
       ],
     },
@@ -214,6 +113,32 @@ export default {
       NAME: '开发',
       ID: 'development',
       CHILDREN: [
+        {
+          NAME: '贡献',
+          CHILDREN: [
+            {
+              NAME: 'SIG中心',
+              DESCRIPTION: '查询openEuler社区SIG组',
+              URL: '/sig/sig-list/',
+            },
+            {
+              NAME: 'CLA签署',
+              DESCRIPTION: '参与贡献前，需签署贡献者许可协议（CLA）',
+              URL: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
+              ICON: OutLink,
+            },
+            {
+              NAME: '贡献攻略',
+              DESCRIPTION: '参与社区贡献的方式',
+              URL: '/community/contribution/',
+            },
+            {
+              NAME: 'oEEP',
+              DESCRIPTION: '查看openEuler社区的演进提案',
+              URL: '/oEEP/?name=oEEP-0000 oEEP  索引',
+            },
+          ],
+        },
         {
           NAME: '构建',
           CHILDREN: [
@@ -235,7 +160,7 @@ export default {
             },
             {
               NAME: 'License工具门户',
-              DESCRIPTION: '帮助快速检测License权利、义务、限制',
+              DESCRIPTION: '检测License权利、义务、限制',
               URL: 'https://compliance.openeuler.org/',
               ICON: OutLink,
               ANALYTICSNAME: 'license',
@@ -283,14 +208,54 @@ export default {
           ],
         },
         {
-          NAME: '问题反馈',
+          NAME: '项目',
           CHILDREN: [
             {
-              NAME: 'QuickIssue',
-              DESCRIPTION: '简易快捷地查询、提交社区Issues',
-              URL: 'https://quickissue.openeuler.org/zh/issues/',
+              NAME: 'A-Tune',
+              DESCRIPTION: '基于AI开发的智能优化引擎',
+              URL: '/other/projects/atune/',
+            },
+            {
+              NAME: 'iSula',
+              DESCRIPTION: '容器技术方案',
+              URL: '/other/projects/isula/',
+            },
+            {
+              NAME: 'secGear',
+              DESCRIPTION: '开发安全应用的机密计算框架',
+              URL: '/other/projects/secgear/',
+            },
+            {
+              NAME: 'NestOS',
+              DESCRIPTION: '基于欧拉开源操作系统的云底座操作系统',
+              URL: '/nestos',
+            },
+            {
+              NAME: 'StratoVirt',
+              DESCRIPTION: '面向云数据中心的企业级虚拟化VMM',
+              URL: '/other/projects/stratovirt/',
+            },
+            {
+              NAME: 'BiSheng JDK',
+              DESCRIPTION: '一款高性能Java虚拟机',
+              URL: '/other/projects/bishengjdk/',
             },
           ],
+        },
+      ],
+      SHORTCUT: [
+        {
+          NAME: '企业签署CLA流程',
+          URL: '/blog/2022-11-25-cla/CLA%E7%AD%BE%E7%BD%B2%E6%B5%81%E7%A8%8B.html',
+        },
+        {
+          NAME: 'CLA-FAQ',
+          ICON: OutLink,
+          URL: 'https://gitee.com/openeuler/infrastructure/blob/master/docs/cla-guide/faq/faq.md',
+        },
+        {
+          NAME: '开发者日历',
+          URL: '/meeting/#calendar',
         },
       ],
     },
@@ -299,11 +264,14 @@ export default {
       ID: 'document',
       CHILDREN: [
         {
-          NAME: '文档中心',
-          ICON: ArrowRight,
-          URL: 'https://docs.openeuler.org/zh/',
-          MOBILE_LINK: true,
+          NAME: '文档',
           CHILDREN: [
+            {
+              NAME: '文档中心',
+              DESCRIPTION: '提供各业务场景及工具使用所需的文档手册',
+              TAG: TAG_TYPE.HOT,
+              URL: 'https://docs.openeuler.org/zh/',
+            },
             {
               NAME: '新手入门',
               DESCRIPTION: '10分钟玩转社区，快速构建与成长',
@@ -312,7 +280,7 @@ export default {
             },
             {
               NAME: '安装指南',
-              DESCRIPTION: '安装 openEuler 操作系统',
+              DESCRIPTION: '指导用户顺利完成 openEuler 操作系统安装',
               URL: 'https://docs.openeuler.org/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
             },
             {
@@ -328,123 +296,73 @@ export default {
           ],
         },
       ],
+      SHORTCUT: [],
     },
     {
       NAME: '学习',
       ID: 'learn',
       CHILDREN: [
         {
-          NAME: '课程中心',
-          ICON: ArrowRight,
-          URL: '/learn/mooc/',
+          NAME: '课程',
           CHILDREN: [
             {
-              NAME: 'HCIA-openEuler 认证培训课程',
-              DESCRIPTION: '学习HCIA-openEuler华为认证openEuler工程师在线课程',
-              MOBILE_SHOW_CHILD: true,
-              CHILDREN: [
-                {
-                  NAME: '开始学习',
-                  URL: '/learn/mooc/detail/',
-                },
-                {
-                  NAME: '报名考试',
-                  URL: 'https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=383&authenticationLevel=CTYPE_CARE_HCIA&technicalField=PSC&version=1.0',
-                  ICON: OutLink,
-                },
-              ],
-            },
-            {
-              NAME: 'openEuler精品课程',
-              DESCRIPTION: 'openEuler从入门到实践系列课程',
-              URL: 'https://c0605e03bb6b40dca9cd34ab5b3fb1f8.shixizhi.huawei.com/portal/1643780836745113602?pageId=1644269448177651714&activeIndex=-1&sxz-lang=zh_CN',
-              ICON: OutLink,
-            },
-            {
-              NAME: 'openEuler安全知识培训',
-              DESCRIPTION: 'openEuler基础安全意识与能力培训',
-              MOBILE_SHOW_CHILD: true,
-              CHILDREN: [
-                {
-                  NAME: '开始学习',
-                  URL: 'https://space.bilibili.com/527064077/channel/collectiondetail?sid=2726214',
-                  ICON: OutLink,
-                },
-                {
-                  NAME: '报名考试',
-                  URL: '/blog/openeuler/20240428-security.html',
-                },
-              ],
-            },
-            {
-              NAME: 'Tutorials',
-              DESCRIPTION: 'openEuler官方出品的迷你视频课程',
-              URL: 'https://space.bilibili.com/527064077/channel/collectiondetail?sid=1229363',
-              ICON: OutLink,
-            },
-            {
-              NAME: 'openEuler直播',
-              DESCRIPTION: '众多大咖精彩课程直播',
-              URL: '/interaction/live-list/',
-            },
-          ],
-          SHORTCUT: [
-            {
-              NAME: '从入门到精通-openEuler操作系统迁移专题',
-              URL: 'https://c0605e03bb6b40dca9cd34ab5b3fb1f8.shixizhi.huawei.com/community/community.htm?communityId=1748285175854272513&schoolId=1643780836745113602&activeIndex=-1&subIndex=undefined&subIndex=undefined&sxz-lang=zh_CN',
+              NAME: '课程中心',
+              DESCRIPTION: '汇聚openEuler各类课程资源',
+              URL: '/learn/mooc/',
             },
           ],
         },
         {
-          NAME: '迁移与运维',
+          NAME: '开发者成长',
           CHILDREN: [
             {
-              NAME: '迁移专区',
-              DESCRIPTION: '助力企业进行操作系统迁移的指南文档',
-              URL: '/migration/',
+              NAME: '高校',
+              DESCRIPTION: '了解高校技术小组与实习赛事资讯',
+              URL: '/universities/',
             },
             {
-              NAME: '运维专区',
-              DESCRIPTION: 'openEuler运维全集和工具',
-              URL: '/om/',
-            },
-          ],
-          SHORTCUT: [
-            {
-              NAME: '迁移工具x2openEuler',
-              URL: '/migration/download/',
+              NAME: '人才培养',
+              DESCRIPTION: '帮助企业快速培养openEuler专业生态人才',
+              URL: '/talent-assessment/',
             },
             {
-              NAME: '迁移实践',
-              URL: '/migration/user-cases/',
-            },
-          ],
-        },
-        {
-          NAME: '技术展示',
-          CHILDREN: [
-            {
-              NAME: '用户案例',
-              DESCRIPTION: '了解openEuler在各行业的最佳案例',
-              URL: '/showcase/',
-            },
-            {
-              NAME: '白皮书',
+              NAME: '开源实习',
               DESCRIPTION:
-                '了解openEuler各版本的技术详情及在行业的生态现状、业务场景的应用',
-              URL: '/showcase/technical-white-paper/',
-            },
-            {
-              NAME: '市场研究报告',
-              DESCRIPTION: '了解openEuler在行业的市场研究情况',
-              URL: '/showcase/market-report/',
+                '帮助在校学生在项目实践中提升能力，成为优秀的开源人才',
+              URL: '/internship/',
             },
           ],
-          SHORTCUT: [],
+        },
+      ],
+      SHORTCUT: [
+        {
+          NAME: '学习HCIA-openEuler 认证培训课程',
+          URL: '/learn/mooc/detail/',
+        },
+        {
+          NAME: 'openEuler精品课程',
+          URL: 'https://c0605e03bb6b40dca9cd34ab5b3fb1f8.shixizhi.huawei.com/portal/1643780836745113602?pageId=1644269448177651714&activeIndex=-1&sxz-lang=zh_CN',
+          ICON: OutLink,
+        },
+        {
+          NAME: '学习openEuler安全知识',
+          URL: 'https://space.bilibili.com/527064077/channel/collectiondetail?sid=2726214',
+          ICON: OutLink,
+        },
+        {
+          NAME: '从入门到精通-openEuler操作系统迁移专题',
+          URL: 'https://c0605e03bb6b40dca9cd34ab5b3fb1f8.shixizhi.huawei.com/community/community.htm?communityId=1748285175854272513&schoolId=1643780836745113602&activeIndex=-1&subIndex=undefined&subIndex=undefined&sxz-lang=zh_CN',
+        },
+        {
+          NAME: '活动与大赛',
+          URL: '/universities/#%E6%B4%BB%E5%8A%A8%E4%B8%8E%E5%A4%A7%E8%B5%9B',
+        },
+        {
+          NAME: '高校技术小组',
+          URL: '/universities/#%E9%AB%98%E6%A0%A1%E6%8A%80%E6%9C%AF%E5%B0%8F%E7%BB%84',
         },
       ],
     },
-
     {
       NAME: '支持',
       ID: 'approve',
@@ -462,59 +380,64 @@ export default {
               DESCRIPTION: '帮助企业快速申请兼容性技术测评',
               URL: 'https://certification.openeuler.org/#/',
             },
-          ],
-          SHORTCUT: [
-            {
-              NAME: 'openEuler 硬件兼容性测试整体介绍',
-              URL: '/compatibility/hardware/',
-            },
-          ],
-        },
-        {
-          NAME: '支持与服务',
-          CHILDREN: [
-            {
-              NAME: 'x2openEuler',
-              DESCRIPTION: '将原有业务迁移到openEuler的工具套件',
-              URL: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
-            },
             {
               NAME: 'OSV技术测评',
               DESCRIPTION: '查看OSV技术测评结果',
               URL: '/approve/',
             },
+          ],
+        },
+        {
+          NAME: '迁移与运维',
+          CHILDREN: [
             {
-              NAME: '社区公告',
+              NAME: '迁移专区',
+              DESCRIPTION: '进行操作系统迁移的指南文档',
+              URL: '/migration/',
+            },
+            {
+              NAME: '运维专区',
+              DESCRIPTION: 'openEuler运维全集和工具',
+              URL: '/om/',
+            },
+          ],
+        },
+        {
+          NAME: '安全公告',
+          CHILDREN: [
+            {
+              NAME: '安全中心',
               DESCRIPTION: '查看漏洞管理、安全公告等安全问题',
-              URL: '',
-              MOBILE_SHOW_CHILD: true,
-              CHILDREN: [
-                {
-                  NAME: '安全中心',
-                  URL: '/security/security-bulletins/',
-                },
-                {
-                  NAME: '缺陷中心',
-                  URL: '/security/bug-bulletins/',
-                },
-              ],
+              URL: '/security/security-bulletins/',
             },
             {
-              NAME: 'FAQ常见问题',
-              DESCRIPTION: '查看openEuler常见问题',
-              URL: '/faq/',
+              NAME: '缺陷中心',
+              DESCRIPTION: '查看缺陷相关安全问题',
+              URL: '/security/bug-bulletins/',
             },
           ],
-          SHORTCUT: [
-            {
-              NAME: 'OSV技术测评整体介绍',
-              URL: '/approve/approve-step/',
-            },
-            {
-              NAME: 'QuickIssue ',
-              URL: 'https://quickissue.openeuler.org/zh/issues/',
-            },
-          ],
+        },
+      ],
+      SHORTCUT: [
+        {
+          NAME: 'openEuler 硬件兼容性测试整体介绍',
+          URL: '/compatibility/hardware/',
+        },
+        {
+          NAME: 'OSV技术测评整体介绍',
+          URL: '/approve/approve-step/',
+        },
+        {
+          NAME: '迁移工具x2openEuler',
+          URL: '/migration/download/',
+        },
+        {
+          NAME: '迁移实践',
+          URL: '/migration/user-cases/',
+        },
+        {
+          NAME: 'FAQ',
+          URL: '/faq/',
         },
       ],
     },
@@ -546,11 +469,6 @@ export default {
               URL: '/community/honor/',
             },
             {
-              NAME: 'oEEP',
-              DESCRIPTION: '查看openEuler社区的演进提案',
-              URL: '/oEEP/?name=oEEP-0000 oEEP  索引',
-            },
-            {
               NAME: '城市用户组',
               DESCRIPTION: '区域用户交流圈',
               URL: '/community/user-group/',
@@ -560,121 +478,28 @@ export default {
               DESCRIPTION: '查看openEuler社区数据',
               URL: 'https://datastat.openeuler.org/zh/overview',
             },
-          ],
-          SHORTCUT: [
             {
-              NAME: 'openEuler社区介绍PDF',
-              URL: 'https://www.openeuler.org/whitepaper/openEuler %E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E4%BB%8B%E7%BB%8D.pdf',
+              NAME: '联系我们',
+              DESCRIPTION: '社区联系方式',
+              URL: '/contact-us/',
+            },
+            {
+              NAME: '用户案例',
+              DESCRIPTION: '了解openEuler在各行业的最佳案例',
+              URL: '/showcase/',
+            },
+            {
+              NAME: '白皮书',
+              DESCRIPTION:
+                '了解openEuler各版本的技术详情及在行业的生态现状、业务场景的应用',
+              URL: '/showcase/technical-white-paper/',
+            },
+            {
+              NAME: '市场研究报告',
+              DESCRIPTION: '了解openEuler在行业的市场研究情况',
+              URL: '/showcase/market-report/',
             },
           ],
-        },
-        {
-          NAME: '贡献与成长',
-          HASGROUP: true,
-          CHILDREN: [
-            {
-              NAME: '开发者贡献',
-              CHILDREN: [
-                {
-                  NAME: 'SIG中心',
-                  DESCRIPTION: '查询openEuler社区SIG组(Special Interest Group)',
-                  URL: '/sig/sig-list/',
-                },
-                {
-                  NAME: '贡献攻略',
-                  DESCRIPTION: '参与社区贡献的方式',
-                  URL: '/community/contribution/',
-                },
-                {
-                  NAME: 'CLA签署',
-                  DESCRIPTION:
-                    '参与贡献前，需签署贡献者许可协议（CLA）\n个人CLA、企业CLA、员工CLA',
-                  URL: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
-                  ICON: OutLink,
-                },
-              ],
-            },
-            {
-              NAME: '开发者成长',
-              CHILDREN: [
-                {
-                  NAME: '高校',
-                  DESCRIPTION: '了解高校技术小组与实习赛事资讯',
-                  URL: '/universities/',
-                },
-                {
-                  NAME: '人才培养',
-                  DESCRIPTION: '旨在帮助企业快速培养openEuler专业生态人才',
-                  URL: '/talent-assessment/',
-                },
-                {
-                  NAME: '开源实习',
-                  DESCRIPTION:
-                    '旨在帮助在校学生在项目实践中提升能力，成为优秀的开源人才',
-                  URL: '/internship/',
-                },
-              ],
-            },
-          ],
-          SHORTCUT: [
-            {
-              NAME: '企业签署CLA流程',
-              URL: '/blog/2022-11-25-cla/CLA%E7%AD%BE%E7%BD%B2%E6%B5%81%E7%A8%8B.html',
-            },
-            {
-              NAME: 'CLA-FAQ',
-              ICON: OutLink,
-              URL: 'https://gitee.com/openeuler/infrastructure/blob/master/docs/cla-guide/faq/faq.md',
-            },
-            {
-              NAME: '开发者日历',
-              URL: '/meeting/#calendar',
-            },
-            {
-              NAME: '活动与大赛',
-              URL: '/universities/#%E6%B4%BB%E5%8A%A8%E4%B8%8E%E5%A4%A7%E8%B5%9B',
-            },
-            {
-              NAME: '高校技术小组',
-              URL: '/universities/#%E9%AB%98%E6%A0%A1%E6%8A%80%E6%9C%AF%E5%B0%8F%E7%BB%84',
-            },
-          ],
-        },
-        {
-          NAME: '项目',
-          CHILDREN: [
-            {
-              NAME: 'A-Tune',
-              DESCRIPTION: '一款基于AI开发的智能优化引擎',
-              URL: '/other/projects/atune/',
-            },
-            {
-              NAME: 'iSula',
-              DESCRIPTION: '容器技术方案',
-              URL: '/other/projects/isula/',
-            },
-            {
-              NAME: 'StratoVirt',
-              DESCRIPTION: '面向云数据中心的企业级虚拟化VMM',
-              URL: '/other/projects/stratovirt/',
-            },
-            {
-              NAME: 'BiSheng JDK',
-              DESCRIPTION: '一款高性能Java虚拟机',
-              URL: '/other/projects/bishengjdk/',
-            },
-            {
-              NAME: 'secGear',
-              DESCRIPTION: '供开发者开发安全应用的机密计算框架',
-              URL: '/other/projects/secgear/',
-            },
-            {
-              NAME: 'NestOS',
-              DESCRIPTION: '基于欧拉开源操作系统的云底座操作系统',
-              URL: '/nestos',
-            },
-          ],
-          SHORTCUT: [],
         },
         {
           NAME: '社区交流',
@@ -695,24 +520,27 @@ export default {
               URL: '/meeting/',
             },
             {
-              NAME: '联系我们',
-              DESCRIPTION: '',
-              URL: '/contact-us/',
-              TAG: TAG_TYPE.NEW,
+              NAME: 'QuickIssue',
+              DESCRIPTION: '简易快捷地查询、提交社区Issues',
+              URL: 'https://quickissue.openeuler.org/zh/issues/',
             },
           ],
-          SHORTCUT: [],
+        },
+      ],
+      SHORTCUT: [
+        {
+          NAME: 'openEuler社区介绍PDF',
+          URL: 'https://www.openeuler.org/whitepaper/openEuler %E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E4%BB%8B%E7%BB%8D.pdf',
         },
       ],
     },
-
     {
       NAME: '动态',
       ID: 'update',
+      WITH_PICTURE: true,
       CHILDREN: [
         {
-          NAME: '社区活动',
-          WITH_PICTURE: true,
+          NAME: '活动',
           CHILDREN: [
             {
               NAME: '活动日历',
@@ -730,30 +558,9 @@ export default {
               URL: '/community/program/',
             },
           ],
-          SHORTCUT: [
-            {
-              NAME: 'openEuler Developer Day 2025',
-              PICTURE: Odd,
-              DESCRIPTION:
-                'openEuler Developer Day 2025 （简称 ODD 2025）是开放原子开源基金会孵化及运营的 openEuler 社区发起的开发者大会。',
-              REMARK: '时间：2025/04/11 | 杭州',
-              TYPE: 'PICTURE',
-              URL: '/interaction/summit-list/devday2025/',
-            },
-            {
-              NAME: '操作系统大会 & openEuler Summit 2024',
-              PICTURE: Summit,
-              DESCRIPTION:
-                '操作系统是产业数字化、智能化发展的坚实底座。openEuler作为数智基础设施的开源操作系统，开源5年，产业共建、生态繁荣；openEuler系市场份额屡攀新高；技术不断创新，使能AI，加速OS智能化，让数智无所不能；源于中国，贡献全球，已成长为企业级全球开源操作系统社区的重要一员。',
-              REMARK: '时间：2024/11/15 - 2024/11/16 | 北京',
-              TYPE: 'PICTURE',
-              URL: '/interaction/summit-list/summit2024/',
-            },
-          ],
         },
         {
           NAME: '资讯',
-          WITH_PICTURE: true,
           CHILDREN: [
             {
               NAME: '新闻',
@@ -771,22 +578,26 @@ export default {
               URL: '/monthly-bulletins/',
             },
           ],
-          SHORTCUT: [
-            {
-              NAME: 'openEuler 2024 社区年报',
-              PICTURE: annualReport2024,
-              REMARK: '发布时间：2025/01/24',
-              TYPE: 'PICTURE',
-              URL: '/annual-report/openEuler-annual-report-2024/',
-            },
-            {
-              NAME: 'openEuler 2023 社区年报',
-              PICTURE: Report,
-              REMARK: '发布时间：2024/01/01',
-              TYPE: 'PICTURE',
-              URL: '/news/openEuler/20240223-nianbao/Untitled-1.html',
-            },
-          ],
+        },
+      ],
+      SHORTCUT: [
+        {
+          NAME: 'openEuler Developer Day 2025',
+          PICTURE: Odd,
+          DESCRIPTION:
+            'openEuler Developer Day 2025 （简称 ODD 2025）是开放原子开源基金会孵化及运营的 openEuler 社区发起的开发者大会。',
+          REMARK: '时间：2025/04/11 | 杭州',
+          TYPE: 'PICTURE',
+          URL: '/interaction/summit-list/devday2025/',
+        },
+        {
+          NAME: '操作系统大会 & openEuler Summit 2024',
+          PICTURE: Summit,
+          DESCRIPTION:
+            '操作系统是产业数字化、智能化发展的坚实底座。openEuler作为数智基础设施的开源操作系统，开源5年，产业共建、生态繁荣；openEuler系市场份额屡攀新高；技术不断创新，使能AI，加速OS智能化，让数智无所不能；源于中国，贡献全球，已成长为企业级全球开源操作系统社区的重要一员。',
+          REMARK: '时间：2024/11/15 - 2024/11/16 | 北京',
+          TYPE: 'PICTURE',
+          URL: '/interaction/summit-list/summit2024/',
         },
       ],
     },
