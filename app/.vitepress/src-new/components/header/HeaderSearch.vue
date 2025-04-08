@@ -619,6 +619,10 @@ const closeSearch = () => {
 :deep(.o-input.el-input .el-input__wrapper) {
   border-radius: var(--o-radius-xs);
 
+  &:hover {
+    --e-input-border-color: var(--o-color-primary1);
+  }
+
   &.is-focus {
     border: 1px solid var(--o-color-primary1);
     box-shadow: unset;
