@@ -81,7 +81,7 @@ export default {
         time: '全天',
       },
       {
-        title: 'AI原生支持',
+        title: 'AI生态支持',
         desc: [
           '本专题将与开发者一起探讨openEuler的多样化三层AI使能架构：',
           '1. 基于LLM的智能交互平台，颠覆传统shell命令交付的模式，改进传统学习，开发，调优，运维体验，智能新语义支持应用智能化升级，共建AI生态',
@@ -165,8 +165,6 @@ export default {
                 title: '开场致辞',
                 date: '2025/04/11',
                 time: '9:00-9:05',
-                attendee: '李博',
-                ldentity: '开放原子开源基金会秘书长助理',
                 bg: agenda1,
                 bgMo: agenda_mo1,
               },
