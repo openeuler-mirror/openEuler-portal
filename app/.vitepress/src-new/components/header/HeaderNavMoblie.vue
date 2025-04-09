@@ -375,6 +375,7 @@ const linkClick = () => {
     > li {
       position: relative;
       @include nav-item;
+      text-align: center;
     }
   }
 }

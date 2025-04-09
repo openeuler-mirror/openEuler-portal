@@ -353,7 +353,7 @@ export default {
             },
             {
               NAME: 'Contact Us',
-              DESCRIPTION: '社区联系方式',
+              DESCRIPTION: 'Email us or follow us on social media.',
               URL: '/contact-us/',
             },
             {

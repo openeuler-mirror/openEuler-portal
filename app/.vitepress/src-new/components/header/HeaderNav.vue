@@ -5,6 +5,8 @@ import { useI18n } from '~@/i18n';
 import { useCommon } from '@/stores/common';
 import { useDebounceFn } from '@vueuse/core';
 
+import { OScroller } from '@opensig/opendesign';
+
 import NavContent from './NavContent.vue';
 import HeaderTheme from './HeaderTheme.vue';
 import HeaderLanguage from './HeaderLanguage.vue';
@@ -133,72 +135,79 @@ const reportNavClick = (path: string[]) => {
                 <div class="nav-drop-content">
                   <div class="nav-background-left"></div>
                   <div class="nav-background-right"></div>
-                  <div class="nav-sub-content">
-                    <div class="content-left">
-                      <div
-                        class="item-sub"
-                        v-for="(sub, s) in subNavContent"
-                        :key="s"
-                      >
-                        <span class="content-title">{{ sub.NAME }}</span>
-                        <NavContent
-                          :nav-content="sub?.CHILDREN"
-                          @link-click="linkClick"
-                          @report-nav-click-path="reportNavClick"
-                        />
+                  <OScroller
+                    class="nav-scroller"
+                    show-type="always"
+                    size="small"
+                    disabled-y
+                  >
+                    <div class="nav-sub-content">
+                      <div class="content-left">
+                        <div
+                          class="item-sub"
+                          v-for="(sub, s) in subNavContent"
+                          :key="s"
+                        >
+                          <span class="content-title">{{ sub.NAME }}</span>
+                          <NavContent
+                            :nav-content="sub?.CHILDREN"
+                            @link-click="linkClick"
+                            @report-nav-click-path="reportNavClick"
+                          />
+                        </div>
                       </div>
-                    </div>
-                    <div class="split-line" v-if="navShortcut?.length"></div>
-                    <div class="content-right">
-                      <div v-if="navShortcut?.length">
-                        <span class="content-title">{{
-                          $t('header.QUICKLINK')
-                        }}</span>
-                        <div v-if="!isPicture">
-                          <div
-                            v-for="shortcut in navShortcut"
-                            :key="shortcut.NAME"
-                            class="shortcut"
-                          >
+                      <div class="split-line" v-if="navShortcut?.length"></div>
+                      <div class="content-right" v-if="navShortcut?.length">
+                        <div v-if="navShortcut?.length">
+                          <span class="content-title">{{
+                            $t('header.QUICKLINK')
+                          }}</span>
+                          <div v-if="!isPicture">
+                            <div
+                              v-for="shortcut in navShortcut"
+                              :key="shortcut.NAME"
+                              class="shortcut"
+                            >
+                              <NavLink
+                                :url="shortcut.URL"
+                                @link-click="linkClick"
+                                class="shortcut-link"
+                                @click="reportNavClick(shortcut.NAV_PATH)"
+                              >
+                                <span>{{ shortcut.NAME }}</span>
+                                <OIcon v-if="shortcut.ICON">
+                                  <component :is="shortcut.ICON" class="icon" />
+                                </OIcon>
+                              </NavLink>
+                            </div>
+                          </div>
+                          <div v-else>
                             <NavLink
+                              v-for="shortcut in navShortcut"
                               :url="shortcut.URL"
+                              :key="shortcut.NAME"
+                              class="review"
                               @link-click="linkClick"
-                              class="shortcut-link"
                               @click="reportNavClick(shortcut.NAV_PATH)"
                             >
-                              <span>{{ shortcut.NAME }}</span>
-                              <OIcon v-if="shortcut.ICON">
-                                <component :is="shortcut.ICON" class="icon" />
-                              </OIcon>
+                              <img
+                                :src="shortcut.PICTURE"
+                                class="review-picture"
+                              />
+                              <div class="review-content">
+                                <p class="review-title">
+                                  {{ shortcut.NAME }}
+                                </p>
+                                <div class="review-property">
+                                  <span>{{ shortcut.REMARK }}</span>
+                                </div>
+                              </div>
                             </NavLink>
                           </div>
                         </div>
-                        <div v-else>
-                          <NavLink
-                            v-for="shortcut in navShortcut"
-                            :url="shortcut.URL"
-                            :key="shortcut.NAME"
-                            class="review"
-                            @link-click="linkClick"
-                            @click="reportNavClick(shortcut.NAV_PATH)"
-                          >
-                            <img
-                              :src="shortcut.PICTURE"
-                              class="review-picture"
-                            />
-                            <div class="review-content">
-                              <p class="review-title">
-                                {{ shortcut.NAME }}
-                              </p>
-                              <div class="review-property">
-                                <span>{{ shortcut.REMARK }}</span>
-                              </div>
-                            </div>
-                          </NavLink>
-                        </div>
                       </div>
                     </div>
-                  </div>
+                  </OScroller>
                 </div>
               </div>
             </transition>
@@ -226,6 +235,7 @@ const reportNavClick = (path: string[]) => {
   align-items: center;
   flex: 1;
   height: 100%;
+  overflow: hidden;
 
   .header-nav {
     height: 100%;
@@ -257,10 +267,38 @@ const reportNavClick = (path: string[]) => {
   height: 100%;
   position: relative;
 
+  @include respond-to('>laptop') {
+    width: calc(100% - 184px);
+  }
+  @media (min-width: 1001px) and (max-width: 1440px) {
+    width: calc(100% - 144px);
+  }
+  @media (max-width: 1000px) {
+    width: calc(100% - 48px);
+  }
+
   .o-nav-list {
     height: 100%;
     padding: 0;
     margin: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 100%;
+      right: 0;
+      top: 0;
+      background-image: linear-gradient(
+        90deg,
+        rgba(var(--o-mixedgray-1), 0) 0%,
+        rgba(var(--o-mixedgray-1), 1) 100%
+      );
+      z-index: 0;
+    }
     > li {
       position: relative;
       display: inline-flex;
@@ -397,10 +435,8 @@ const reportNavClick = (path: string[]) => {
 
   .nav-sub-content {
     display: flex;
-    justify-content: space-between;
     flex: 1;
     position: relative;
-    width: 100%;
 
     .content-left {
       flex: 1;
@@ -408,23 +444,6 @@ const reportNavClick = (path: string[]) => {
       display: flex;
 
       width: 100%;
-      overflow: hidden;
-      overflow-x: auto;
-
-      &::-webkit-scrollbar-track {
-        border-radius: 4px;
-        background-color: var(--e-color-bg2);
-      }
-
-      &::-webkit-scrollbar {
-        height: 6px;
-        background-color: var(--e-color-bg2);
-      }
-
-      &::-webkit-scrollbar-thumb {
-        border-radius: 4px;
-        background: var(--e-color-division1);
-      }
 
       @include respond-to('laptop') {
         padding: var(--o-gap-5) var(--o-gap-4) var(--o-gap-5) 0;
@@ -455,7 +474,7 @@ const reportNavClick = (path: string[]) => {
         width: 261px;
       }
 
-      @include respond-to('<=pad_v') {
+      @include respond-to('<=pad') {
         display: none;
       }
 
@@ -490,6 +509,7 @@ const reportNavClick = (path: string[]) => {
           align-items: center;
           color: var(--o-color-link1);
           word-break: normal;
+          white-space: normal;
           @include hover {
             color: var(--o-color-primary2);
           }
@@ -512,8 +532,12 @@ const reportNavClick = (path: string[]) => {
         align-items: unset;
         position: relative;
 
+        @include respond-to('laptop') {
+          width: 245px;
+        }
+
         @include respond-to('pad_h') {
-          width: 200px;
+          width: 245px;
           &:not(:last-child) {
             &:after {
               content: '';
@@ -549,6 +573,7 @@ const reportNavClick = (path: string[]) => {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          white-space: normal;
 
           @include respond-to('<=laptop') {
             margin-left: unset;
@@ -585,13 +610,13 @@ const reportNavClick = (path: string[]) => {
     .split-line {
       background: var(--o-color-control4);
       width: 1px;
-      height: 100%;
       min-height: 320px;
+      flex-shrink: 0;
 
       @include respond-to('laptop') {
         min-height: 300px;
       }
-      @include respond-to('<=pad_v') {
+      @include respond-to('<=pad') {
         display: none;
       }
     }
@@ -648,8 +673,28 @@ const reportNavClick = (path: string[]) => {
         &:nth-of-type(1) {
           .content-container {
             width: 344px;
+          }
+        }
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          max-width: 25%;
+          flex: 1 1 auto;
+          .content-container {
+            width: auto;
             :deep(.content-item) {
-              margin-left: 60px;
+              width: 100%;
+            }
+          }
+          &:nth-of-type(1) {
+            max-width: 50%;
+            .content-container {
+              :deep(.content-item) {
+                width: calc(50% - 12px);
+              }
             }
           }
         }
@@ -664,16 +709,29 @@ const reportNavClick = (path: string[]) => {
         margin-left: 0;
       }
 
+      @include respond-to('>laptop') {
+        width: 200px;
+      }
+
+      @include respond-to('laptop') {
+        width: 170px;
+      }
+
       @include respond-to('pad_h') {
         width: 132px;
+      }
+    }
 
-        &:last-of-type {
-          width: 288px;
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          flex: 1 1 auto;
           .content-container {
+            width: auto;
             :deep(.content-item) {
-              margin-right: 24px;
-              &:nth-child(2n) {
-                margin-right: 0;
+              width: 100%;
+              .desc-container {
+                width: auto;
               }
             }
           }
@@ -704,11 +762,28 @@ const reportNavClick = (path: string[]) => {
               margin-right: 40px;
             }
           }
+          @include respond-to('>laptop') {
+            width: 992px;
+          }
           @include respond-to('laptop') {
             width: 752px;
           }
           @include respond-to('pad_h') {
-            width: 610px;
+            width: auto;
+          }
+        }
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          max-width: 80%;
+          flex: 1 1 auto;
+          .content-container {
+            :deep(.content-item) {
+              width: calc(25% - 18px);
+            }
           }
         }
       }
@@ -751,7 +826,30 @@ const reportNavClick = (path: string[]) => {
       @include respond-to('pad_h') {
         &:nth-of-type(2) {
           .content-container {
-            width: 306px;
+            width: auto;
+          }
+        }
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          max-width: 25%;
+          flex: 1 1 auto;
+          .content-container {
+            width: auto;
+            :deep(.content-item) {
+              width: 100%;
+            }
+          }
+          &:nth-of-type(2) {
+            max-width: 50%;
+            .content-container {
+              :deep(.content-item) {
+                width: calc(50% - 12px);
+              }
+            }
           }
         }
       }
@@ -796,15 +894,32 @@ const reportNavClick = (path: string[]) => {
       }
 
       @include respond-to('pad_h') {
-        &:nth-of-type(1) {
+        &:nth-of-type(n) {
           .content-container {
-            width: 288px;
+            width: auto;
           }
         }
-        &:nth-of-type(2),
-        &:nth-of-type(3) {
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          max-width: 20%;
+          flex: 1 1 auto;
           .content-container {
-            width: 132px;
+            width: auto;
+            :deep(.content-item) {
+              width: 100%;
+            }
+          }
+          &:nth-of-type(1) {
+            max-width: 40%;
+            .content-container {
+              :deep(.content-item) {
+                width: calc(50% - 12px);
+              }
+            }
           }
         }
       }
@@ -812,14 +927,14 @@ const reportNavClick = (path: string[]) => {
   }
   &.approve-en {
     .item-sub {
-      &:nth-of-type(1) {
+      &:nth-child(n) {
         .content-container {
           width: 200px;
         }
       }
 
       @include respond-to('<=laptop') {
-        &:nth-of-type(1) {
+        &:nth-child(n) {
           .content-container {
             width: 170px;
           }
@@ -827,9 +942,27 @@ const reportNavClick = (path: string[]) => {
       }
 
       @include respond-to('pad_h') {
-        &:nth-of-type(1) {
+        &:nth-child(n) {
           .content-container {
             width: 132px;
+          }
+        }
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          .content-container {
+            width: auto;
+          }
+          &:nth-of-type(1) {
+            max-width: 20%;
+            .content-container {
+              :deep(.content-item) {
+                width: 100%;
+              }
+            }
           }
         }
       }
@@ -852,6 +985,12 @@ const reportNavClick = (path: string[]) => {
               margin-top: 0;
             }
           }
+        }
+      }
+
+      &:nth-of-type(2) {
+        .content-container {
+          width: 200px;
         }
       }
 
@@ -882,12 +1021,35 @@ const reportNavClick = (path: string[]) => {
       @include respond-to('pad_h') {
         &:nth-of-type(1) {
           .content-container {
-            width: 444px;
+            width: auto;
           }
         }
         &:nth-of-type(2) {
           .content-container {
             width: 132px;
+          }
+        }
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          max-width: 20%;
+          flex: 1 1 auto;
+          .content-container {
+            width: auto;
+            :deep(.content-item) {
+              width: 100%;
+            }
+          }
+          &:nth-of-type(1) {
+            max-width: 60%;
+            .content-container {
+              :deep(.content-item) {
+                width: calc((100% / 3) - 18px);
+              }
+            }
           }
         }
       }
@@ -929,7 +1091,21 @@ const reportNavClick = (path: string[]) => {
 
       @include respond-to('pad_h') {
         .content-container {
-          width: 288px;
+          width: auto;
+        }
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          max-width: 40%;
+          flex: 1 1 auto;
+          .content-container {
+            :deep(.content-item) {
+              width: calc(50% - 24px);
+            }
+          }
         }
       }
     }
@@ -952,5 +1128,35 @@ html[lang='en'] {
 .transition-enter-from,
 .transition-leave-to {
   opacity: 0;
+}
+
+@include in-dark {
+  .o-nav {
+    .o-nav-list {
+      &::after {
+        background-image: linear-gradient(
+          90deg,
+          rgba(var(--o-mixedgray-4), 0) 0%,
+          rgba(var(--o-mixedgray-4), 1) 100%
+        );
+      }
+    }
+  }
+}
+
+.nav-scroller {
+  :deep(.o-scrollbar) {
+    --scrollbar-height: 100%;
+  }
+
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: nowrap;
+
+  @include respond-to('<=pad_v') {
+    --scroller-padding: 0 var(--layout-content-padding);
+  }
 }
 </style>

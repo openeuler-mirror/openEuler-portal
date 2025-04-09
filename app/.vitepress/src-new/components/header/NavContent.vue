@@ -200,6 +200,7 @@ const onClickNavLink = (item?: any) => {
     overflow: hidden;
     position: relative;
     height: 36px;
+    white-space: normal;
 
     .item-desc {
       color: var(--o-color-info2);

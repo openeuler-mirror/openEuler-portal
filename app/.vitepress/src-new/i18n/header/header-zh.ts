@@ -42,7 +42,7 @@ export default {
             {
               NAME: 'openEuler 22.03 LTS SP4',
               DESCRIPTION:
-                'openEuler 22.03 LTS SP4 是openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同',
+                'openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同',
               TAG: null,
               URL: '/download/#openEuler 22.03 LTS SP4',
             },
