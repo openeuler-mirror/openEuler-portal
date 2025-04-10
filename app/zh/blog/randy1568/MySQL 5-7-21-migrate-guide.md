@@ -21,7 +21,7 @@ summary: Just about everything of the MySQL 5.7.21 migrate case
 
 ## 1.简要介绍
 
-本文主要用于指导在 openEuler 20.03 sp1 操作系统上部署 mysql 数据库。
+本文主要用于指导在 openEuler 20.03 sp1 操作系统上部署 MySQL 数据库。
 
 MySQL 是一款安全、跨平台、高效的，并与 PHP、Java 等主流编程语言紧密结合的数据库系统。
 本案例使用 x86_64 架构虚拟机，通过评估工具 x2openEuler 评估 MySQL 5.7.21 软件移植到 openEuler 操作系统的兼容性，再实施数据搬迁。
@@ -38,7 +38,7 @@ MySQL 是一款安全、跨平台、高效的，并与 PHP、Java 等主流编�
 OS
 | 软件 | 版本                | 备注                  |
 | ---- | ------------------- | --------------------- |
-| OS   | Centos 7.6.1810     | 当前 mysql 集群服务器 |
+| OS   | Centos 7.6.1810     | 当前 MySQL 集群服务器 |
 | OS   | openEuler 20.03 SP1 | 迁移目标服务器        |
 
 软件包
@@ -108,8 +108,8 @@ x2openEuler init source_centos7.6-openEuler20.03-LTS-SP1.tar.gz
 
 ```
 x2openEuler scan /opt/mysql/
-注意要分析的移植文件需要有能够让x2openEuler用户可以读取的权限
-扫描完成后会在/opt/x2openEuler/output目录生成html格式的报告
+#注意要分析的移植文件需要有能够让x2openEuler用户可以读取的权限
+#扫描完成后会在/opt/x2openEuler/output目录生成html格式的报告
 ```
 
 ## 4.评估结果分析
