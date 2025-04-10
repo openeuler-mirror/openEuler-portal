@@ -110,6 +110,7 @@ const menuShow = ref(false);
 const menuPanel = () => {
   setTimeout(() => {
     menuShow.value = !menuShow.value;
+    document.body.style.overflow = menuShow.value ? 'hidden' : '';
   }, 200);
 };
 

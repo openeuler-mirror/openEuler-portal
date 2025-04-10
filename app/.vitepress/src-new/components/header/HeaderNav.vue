@@ -5,6 +5,8 @@ import { useI18n } from '~@/i18n';
 import { useCommon } from '@/stores/common';
 import { useDebounceFn } from '@vueuse/core';
 
+import { OScroller } from '@opensig/opendesign';
+
 import NavContent from './NavContent.vue';
 import HeaderTheme from './HeaderTheme.vue';
 import HeaderLanguage from './HeaderLanguage.vue';
@@ -33,35 +35,7 @@ const props = defineProps({
 // 导航数据
 const navData = computed(() => {
   try {
-    let isExtras = false;
-    let isShortCuts = false;
-    const path: string[] = [];
-    return i18n.value.header.NAV_ROUTER.map(function setPath(navItem: any) {
-      path.push(navItem.NAME);
-      const obj = {
-        ...navItem,
-        NAV_PATH: !isExtras
-          ? isShortCuts
-            ? [...path.slice(0, 2), t('header.QUICKLINK'), ...path.slice(2)]
-            : [...path.slice(0, 2), ...path.slice(1)]
-          : [...path],
-      };
-      if (Array.isArray(navItem.CHILDREN)) {
-        obj.CHILDREN = navItem.CHILDREN.map(setPath);
-      }
-      if (Array.isArray(navItem.SHORTCUT)) {
-        isShortCuts = true;
-        obj.SHORTCUT = navItem.SHORTCUT.map(setPath);
-        isShortCuts = false;
-      }
-      if (Array.isArray(navItem.EXTRAS)) {
-        isExtras = true;
-        obj.EXTRAS = navItem.EXTRAS.map(setPath);
-        isExtras = false;
-      }
-      path.pop();
-      return obj;
-    });
+    return i18n.value.header.NAV_ROUTER;
   } catch {
     return i18n.value.header.NAV_ROUTER;
   }
@@ -97,14 +71,15 @@ let navAnalyzer: NavAccessAnalyzer | null = null;
 // nav 鼠标滑过事件
 const isShow = ref(false);
 const navActive = ref();
-const subNavActive = ref();
-const subNavContent = ref<Record<string, any>>({});
-const subNav = ref<Record<string, any>>({});
+const subNavContent = ref<any>([]);
+const navShortcut = ref<any>([]);
+const isPicture = ref(false);
 const toggleDebounced = useDebounceFn(function (item: any | null) {
   if (item === null) {
     navAnalyzer = null;
     navActive.value = '';
     isShow.value = false;
+    isPicture.value = false;
   } else {
     (navAnalyzer ??= new NavAccessAnalyzer()).stepIncr();
     oaReport('hover', {
@@ -113,24 +88,11 @@ const toggleDebounced = useDebounceFn(function (item: any | null) {
     });
     navActive.value = item.ID;
     isShow.value = true;
-    subNavActive.value = item.CHILDREN[0]?.NAME;
-    subNav.value = item.CHILDREN;
-    subNavContent.value = item.CHILDREN[0];
+    subNavContent.value = item.CHILDREN;
+    navShortcut.value = item.SHORTCUT;
+    isPicture.value = item.WITH_PICTURE;
   }
 }, 100);
-
-const changeSubnav = useDebounceFn(function (item: any) {
-  if (subNavActive.value !== item.NAME) {
-    navAnalyzer?.stepIncr();
-    oaReport('click', {
-      module: 'navigation',
-      level1: item.NAV_PATH[0],
-      level2: item.NAME,
-    });
-    subNavActive.value = item.NAME;
-    subNavContent.value = item;
-  }
-}, 150);
 
 const linkClick = () => {
   navActive.value = '';
@@ -163,140 +125,89 @@ const reportNavClick = (path: string[]) => {
             <transition name="transition">
               <div
                 v-if="isShow"
-                :class="['nav-dropdown', navActive, commonStore.theme]"
+                :class="[
+                  'nav-dropdown',
+                  navActive,
+                  commonStore.theme,
+                  `${navActive}-${lang}`,
+                ]"
               >
                 <div class="nav-drop-content">
-                  <div class="nav-sub-background">
-                    <div class="nav-background-left"></div>
-                    <div class="nav-background-right"></div>
-                  </div>
-                  <div class="nav-sub">
-                    <div
-                      v-for="subItem in subNav"
-                      :key="subItem.NAME"
-                      :class="{
-                        active: subNavActive === subItem.NAME,
-                      }"
-                      class="nav-sub-item"
-                      @click="changeSubnav(subItem)"
-                    >
-                      <span>{{ subItem.NAME }}</span>
-                    </div>
-                  </div>
-                  <div class="nav-sub-content">
-                    <div class="content-left">
-                      <NavLink
-                        v-if="subNavContent.URL"
-                        class="content-title-url"
-                        :url="subNavContent.URL"
-                        @link-click="linkClick"
-                      >
-                        {{ subNavContent.NAME }}
-                        <OIcon v-if="subNavContent.ICON">
-                          <component :is="subNavContent.ICON" class="icon" />
-                        </OIcon>
-                      </NavLink>
-                      <span v-else class="content-title">{{
-                        subNavContent.NAME
-                      }}</span>
-                      <div v-if="subNavContent.HASGROUP">
+                  <div class="nav-background-left"></div>
+                  <div class="nav-background-right"></div>
+                  <OScroller
+                    class="nav-scroller"
+                    show-type="always"
+                    size="small"
+                    disabled-y
+                  >
+                    <div class="nav-sub-content">
+                      <div class="content-left">
                         <div
-                          class="group"
-                          v-for="group in subNavContent.CHILDREN"
-                          :key="group.NAME"
+                          class="item-sub"
+                          v-for="(sub, s) in subNavContent"
+                          :key="s"
                         >
-                          <p class="group-name">{{ group.NAME }}</p>
+                          <span class="content-title">{{ sub.NAME }}</span>
                           <NavContent
-                            :nav-content="group?.CHILDREN"
+                            :nav-content="sub?.CHILDREN"
                             @link-click="linkClick"
                             @report-nav-click-path="reportNavClick"
                           />
                         </div>
                       </div>
-                      <NavContent
-                        v-else
-                        :nav-content="subNavContent?.CHILDREN"
-                        @link-click="linkClick"
-                        @report-nav-click-path="reportNavClick"
-                      />
-                      <div v-if="subNavContent.EXTRAS" class="extra">
-                        <div
-                          v-for="extra in subNavContent.EXTRAS"
-                          :key="extra.NAME"
-                        >
-                          <NavLink
-                            class="content-title-url"
-                            :url="extra.URL"
-                            @link-click="linkClick"
-                            @click="reportNavClick(extra.NAV_PATH)"
-                          >
-                            {{ extra.NAME }}
-                            <OIcon>
-                              <component :is="extra.ICON" class="icon" />
-                            </OIcon>
-                          </NavLink>
-                          <NavContent
-                            :nav-content="extra.CHILDREN"
-                            @link-click="linkClick"
-                            @report-nav-click-path="reportNavClick"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="split-line"
-                      v-if="subNavContent.SHORTCUT?.length"
-                    ></div>
-                    <div class="content-right">
-                      <div v-if="subNavContent.SHORTCUT?.length">
-                        <span class="content-title">{{
-                          $t('header.QUICKLINK')
-                        }}</span>
-                        <div v-if="!subNavContent.WITH_PICTURE">
-                          <div
-                            v-for="shortcut in subNavContent?.SHORTCUT"
-                            :key="shortcut.NAME"
-                            class="shortcut"
-                          >
+                      <div class="split-line" v-if="navShortcut?.length"></div>
+                      <div class="content-right" v-if="navShortcut?.length">
+                        <div v-if="navShortcut?.length">
+                          <span class="content-title">{{
+                            $t('header.QUICKLINK')
+                          }}</span>
+                          <div v-if="!isPicture">
+                            <div
+                              v-for="shortcut in navShortcut"
+                              :key="shortcut.NAME"
+                              class="shortcut"
+                            >
+                              <NavLink
+                                :url="shortcut.URL"
+                                @link-click="linkClick"
+                                class="shortcut-link"
+                                @click="reportNavClick(shortcut.NAV_PATH)"
+                              >
+                                <span>{{ shortcut.NAME }}</span>
+                                <OIcon v-if="shortcut.ICON">
+                                  <component :is="shortcut.ICON" class="icon" />
+                                </OIcon>
+                              </NavLink>
+                            </div>
+                          </div>
+                          <div v-else>
                             <NavLink
+                              v-for="shortcut in navShortcut"
                               :url="shortcut.URL"
+                              :key="shortcut.NAME"
+                              class="review"
                               @link-click="linkClick"
-                              class="shortcut-link"
                               @click="reportNavClick(shortcut.NAV_PATH)"
                             >
-                              {{ shortcut.NAME }}
-                              <OIcon v-if="shortcut.ICON">
-                                <component :is="shortcut.ICON" class="icon" />
-                              </OIcon>
+                              <img
+                                :src="shortcut.PICTURE"
+                                class="review-picture"
+                              />
+                              <div class="review-content">
+                                <p class="review-title">
+                                  {{ shortcut.NAME }}
+                                </p>
+                                <div class="review-property">
+                                  <span>{{ shortcut.REMARK }}</span>
+                                </div>
+                              </div>
                             </NavLink>
                           </div>
                         </div>
-                        <div v-else>
-                          <NavLink
-                            v-for="shortcut in subNavContent?.SHORTCUT"
-                            :url="shortcut.URL"
-                            :key="shortcut.NAME"
-                            class="review"
-                            @link-click="linkClick"
-                            @click="reportNavClick(shortcut.NAV_PATH)"
-                          >
-                            <img
-                              :src="shortcut.PICTURE"
-                              class="review-picture"
-                            />
-                            <div class="review-content">
-                              <p class="review-title">
-                                {{ shortcut.NAME }}
-                              </p>
-                              <div class="review-property">
-                                <span>{{ shortcut.REMARK }}</span>
-                              </div>
-                            </div>
-                          </NavLink>
-                        </div>
                       </div>
                     </div>
-                  </div>
+                  </OScroller>
                 </div>
               </div>
             </transition>
@@ -324,6 +235,7 @@ const reportNavClick = (path: string[]) => {
   align-items: center;
   flex: 1;
   height: 100%;
+  overflow: hidden;
 
   .header-nav {
     height: 100%;
@@ -355,10 +267,38 @@ const reportNavClick = (path: string[]) => {
   height: 100%;
   position: relative;
 
+  @include respond-to('>laptop') {
+    width: calc(100% - 184px);
+  }
+  @media (min-width: 1001px) and (max-width: 1440px) {
+    width: calc(100% - 144px);
+  }
+  @media (max-width: 1000px) {
+    width: calc(100% - 48px);
+  }
+
   .o-nav-list {
     height: 100%;
     padding: 0;
     margin: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 100%;
+      right: 0;
+      top: 0;
+      background-image: linear-gradient(
+        90deg,
+        rgba(var(--o-mixedgray-1), 0) 0%,
+        rgba(var(--o-mixedgray-1), 1) 100%
+      );
+      z-index: 0;
+    }
     > li {
       position: relative;
       display: inline-flex;
@@ -426,6 +366,7 @@ const reportNavClick = (path: string[]) => {
   display: flex;
   font-weight: normal;
   cursor: default;
+  overflow: hidden;
 
   min-height: 320px;
   justify-content: center;
@@ -462,138 +403,79 @@ const reportNavClick = (path: string[]) => {
     display: flex;
   }
 
-  .nav-sub-background {
+  .nav-background-left {
     position: absolute;
-    left: 0px;
-    top: 0px;
-    width: calc((100% - 1416px) / 2 + 188px);
-    height: 100%;
+    left: 0;
+    top: -87px;
+    width: 173px;
+    height: 249px;
+    background-image: url('~@/assets/category/header/nav_background_left.png');
+    background-size: cover;
+    z-index: -1;
 
-    @include respond-to('laptop') {
-      width: 220px;
-    }
-    @include respond-to('pad_h') {
-      width: 182px;
-    }
-
-    .nav-background-left {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 173px;
-      height: 169px;
-      background-image: url('~@/assets/category/header/nav_background_left.png');
-      background-size: cover;
-      z-index: -1;
-
-      @include respond-to('laptop') {
-        height: 104px;
-        width: 102px;
-      }
-      @include respond-to('pad_h') {
-        width: 68px;
-        height: 9px;
-      }
-    }
-
-    .nav-background-right {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 173px;
-      height: 172px;
-      background-image: url('~@/assets/category/header/nav_background_right.png');
-      background-size: cover;
-      z-index: -1;
-
-      @include respond-to('pad_v-laptop') {
-        width: 124px;
-        height: 152px;
-      }
+    @include respond-to('<=laptop') {
+      display: none;
     }
   }
 
-  .nav-sub {
-    width: 172px;
-    margin-right: var(--o-gap-4);
-    margin-top: var(--o-gap-6);
-    position: relative;
+  .nav-background-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 173px;
+    height: 172px;
+    background-image: url('~@/assets/category/header/nav_background_right.png');
+    background-size: cover;
+    z-index: -1;
 
-    @include respond-to('pad_h') {
-      width: 142px;
-      margin-right: var(--o-gap-2);
-    }
-
-    .nav-sub-item {
-      height: 40px;
-      border-radius: var(--o-radius-s);
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      transition: all var(--o-duration-s) var(--o-easing-standard);
-
-      > span {
-        padding-left: var(--o-gap-2);
-      }
-
-      @include hover {
-        background: var(--o-color-control2-light);
-      }
-
-      & + .nav-sub-item {
-        margin-top: 2px;
-      }
-    }
-    .active {
-      background: var(--o-color-control3-light) !important;
-      color: var(--o-color-primary1);
-      font-weight: 500;
-      @include text1;
+    @include respond-to('<=laptop') {
+      display: none;
     }
   }
 
   .nav-sub-content {
     display: flex;
-    justify-content: space-between;
     flex: 1;
     position: relative;
 
     .content-left {
       flex: 1;
-      padding: 32px 24px 32px 32px;
+      padding: 32px 24px 40px 0;
+      display: flex;
 
-      @include respond-to('pad_h') {
-        padding: var(--o-gap-6) var(--o-gap-4);
+      width: 100%;
+
+      @include respond-to('laptop') {
+        padding: var(--o-gap-5) var(--o-gap-4) var(--o-gap-5) 0;
       }
 
-      .group {
-        & + .group {
-          padding-top: var(--o-gap-5);
-        }
-
-        .group-name {
-          padding-bottom: 12px;
-          color: var(--o-color-info3);
-          @include tip1;
-        }
+      @include respond-to('<=pad') {
+        padding: var(--o-gap-5) 0;
       }
+
       .icon {
         height: 16px;
         width: 16px;
         padding-left: 6px;
       }
-      .extra {
-        margin-top: var(--o-gap-5);
-      }
     }
     .content-right {
       width: 358px;
       padding-top: var(--o-gap-6);
-      padding-bottom: var(--o-gap-5);
+      padding-bottom: var(--o-gap-6);
       padding-left: var(--o-gap-4);
 
+      @include respond-to('laptop') {
+        width: 261px;
+        padding: var(--o-gap-5) 0 var(--o-gap-5) var(--o-gap-4);
+      }
+
       @include respond-to('pad_h') {
-        width: 224px;
+        width: 261px;
+      }
+
+      @include respond-to('<=pad') {
+        display: none;
       }
 
       .shortcut {
@@ -601,15 +483,21 @@ const reportNavClick = (path: string[]) => {
         min-height: 42px;
         background: var(--o-color-fill3);
         border-radius: var(--o-radius_control-xs);
-        padding: 10px 10px 10px 24px;
+        padding: 10px 24px;
         display: flex;
         align-items: center;
         gap: var(--o-gap-3);
         cursor: pointer;
         @include tip1;
 
+        @include respond-to('laptop') {
+          width: 245px;
+          @include text1;
+        }
+
         @include respond-to('pad_h') {
-          width: 204px;
+          width: 245px;
+          @include text1;
         }
 
         & + .shortcut {
@@ -617,13 +505,21 @@ const reportNavClick = (path: string[]) => {
         }
 
         .shortcut-link {
+          display: flex;
+          align-items: center;
           color: var(--o-color-link1);
+          word-break: normal;
+          white-space: normal;
           @include hover {
             color: var(--o-color-primary2);
           }
 
+          span {
+            @include text-truncate(1);
+          }
+
           .icon {
-            height: 22px;
+            height: 16px;
             width: 16px;
             margin-left: var(--o-gap-2);
           }
@@ -636,8 +532,12 @@ const reportNavClick = (path: string[]) => {
         align-items: unset;
         position: relative;
 
+        @include respond-to('laptop') {
+          width: 245px;
+        }
+
         @include respond-to('pad_h') {
-          width: 200px;
+          width: 245px;
           &:not(:last-child) {
             &:after {
               content: '';
@@ -661,7 +561,7 @@ const reportNavClick = (path: string[]) => {
           display: block;
           object-fit: contain;
 
-          @include respond-to('pad_h') {
+          @include respond-to('<=laptop') {
             display: none;
           }
         }
@@ -673,9 +573,11 @@ const reportNavClick = (path: string[]) => {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          white-space: normal;
 
-          @include respond-to('pad_h') {
+          @include respond-to('<=laptop') {
             margin-left: unset;
+            height: auto;
           }
 
           .review-title {
@@ -697,7 +599,7 @@ const reportNavClick = (path: string[]) => {
 
           .review-property {
             @include tip2;
-            color: var(--o-color-info2);
+            color: var(--o-color-info3);
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -708,27 +610,504 @@ const reportNavClick = (path: string[]) => {
     .split-line {
       background: var(--o-color-control4);
       width: 1px;
-      height: 100%;
       min-height: 320px;
+      flex-shrink: 0;
 
       @include respond-to('laptop') {
         min-height: 300px;
       }
-      @include respond-to('pad_h') {
-        min-height: 260px;
+      @include respond-to('<=pad') {
+        display: none;
       }
     }
 
     .content-title {
-      @include text1;
+      @include tip1;
       display: inline-block;
-      margin-bottom: var(--o-gap-4);
+      margin-bottom: var(--o-gap-3);
       color: var(--o-color-info3);
+
+      @include respond-to('laptop') {
+        @include text1;
+      }
+    }
+  }
+
+  &.download {
+    .item-sub {
+      margin-left: 80px;
+      &:nth-of-type(1) {
+        margin-left: 0;
+        .content-container {
+          width: 464px;
+          :deep(.content-item) {
+            margin-left: 64px;
+            &:nth-child(2n + 1) {
+              margin-left: 0;
+            }
+            &:nth-of-type(2) {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      @include respond-to('<=laptop') {
+        margin-left: 24px;
+        &:nth-of-type(1) {
+          .content-container {
+            width: 364px;
+            :deep(.content-item) {
+              margin-left: 24px;
+            }
+          }
+        }
+        &:nth-of-type(3) {
+          .content-container {
+            width: 170px;
+          }
+        }
+      }
+
+      @include respond-to('pad_h') {
+        &:nth-of-type(1) {
+          .content-container {
+            width: 344px;
+          }
+        }
+      }
     }
 
-    .content-title-url {
-      @include text1;
-      margin-bottom: var(--o-gap-4);
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          max-width: 25%;
+          flex: 1 1 auto;
+          .content-container {
+            width: auto;
+            :deep(.content-item) {
+              width: 100%;
+            }
+          }
+          &:nth-of-type(1) {
+            max-width: 50%;
+            .content-container {
+              :deep(.content-item) {
+                width: calc(50% - 12px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.development {
+    .item-sub {
+      margin-left: 24px;
+      &:nth-of-type(1) {
+        margin-left: 0;
+      }
+
+      @include respond-to('>laptop') {
+        width: 200px;
+      }
+
+      @include respond-to('laptop') {
+        width: 170px;
+      }
+
+      @include respond-to('pad_h') {
+        width: 132px;
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          flex: 1 1 auto;
+          .content-container {
+            width: auto;
+            :deep(.content-item) {
+              width: 100%;
+              .desc-container {
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.document {
+    .item-sub {
+      &:nth-of-type(1) {
+        .content-container {
+          :deep(.content-item) {
+            margin-right: 64px;
+            &:nth-child(-n + 4) {
+              margin-top: 0;
+            }
+            &:nth-of-type(4) {
+              margin-right: 0;
+            }
+
+            @include respond-to('<=laptop') {
+              margin-right: 24px;
+            }
+          }
+          @media (min-width: 1441px) and (max-width: 1505px) {
+            :deep(.content-item) {
+              margin-right: 40px;
+            }
+          }
+          @include respond-to('>laptop') {
+            width: 992px;
+          }
+          @include respond-to('laptop') {
+            width: 752px;
+          }
+          @include respond-to('pad_h') {
+            width: auto;
+          }
+        }
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          max-width: 80%;
+          flex: 1 1 auto;
+          .content-container {
+            :deep(.content-item) {
+              width: calc(25% - 18px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.learn {
+    .item-sub {
+      margin-left: 48px;
+      &:nth-of-type(1) {
+        margin-left: 0;
+      }
+      &:nth-of-type(2) {
+        .content-container {
+          width: 448px;
+          :deep(.content-item) {
+            margin-left: 48px;
+            &:nth-child(2n + 1) {
+              margin-left: 0;
+            }
+            &:nth-of-type(2) {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      @include respond-to('<=laptop') {
+        margin-left: 24px;
+        &:nth-of-type(2) {
+          .content-container {
+            width: 364px;
+            :deep(.content-item) {
+              margin-left: 24px;
+            }
+          }
+        }
+      }
+
+      @include respond-to('pad_h') {
+        &:nth-of-type(2) {
+          .content-container {
+            width: auto;
+          }
+        }
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          max-width: 25%;
+          flex: 1 1 auto;
+          .content-container {
+            width: auto;
+            :deep(.content-item) {
+              width: 100%;
+            }
+          }
+          &:nth-of-type(2) {
+            max-width: 50%;
+            .content-container {
+              :deep(.content-item) {
+                width: calc(50% - 12px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.approve {
+    .item-sub {
+      margin-left: 80px;
+      &:nth-of-type(1) {
+        margin-left: 0;
+        .content-container {
+          width: 440px;
+          :deep(.content-item) {
+            margin-left: 40px;
+            &:nth-child(2n + 1) {
+              margin-left: 0;
+            }
+            &:nth-of-type(2) {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      @include respond-to('<=laptop') {
+        margin-left: 24px;
+        &:nth-of-type(1) {
+          .content-container {
+            width: 364px;
+            :deep(.content-item) {
+              margin-left: 24px;
+            }
+          }
+        }
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          .content-container {
+            width: 170px;
+          }
+        }
+      }
+
+      @include respond-to('pad_h') {
+        &:nth-of-type(n) {
+          .content-container {
+            width: auto;
+          }
+        }
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          max-width: 20%;
+          flex: 1 1 auto;
+          .content-container {
+            width: auto;
+            :deep(.content-item) {
+              width: 100%;
+            }
+          }
+          &:nth-of-type(1) {
+            max-width: 40%;
+            .content-container {
+              :deep(.content-item) {
+                width: calc(50% - 12px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.approve-en {
+    .item-sub {
+      &:nth-child(n) {
+        .content-container {
+          width: 200px;
+        }
+      }
+
+      @include respond-to('<=laptop') {
+        &:nth-child(n) {
+          .content-container {
+            width: 170px;
+          }
+        }
+      }
+
+      @include respond-to('pad_h') {
+        &:nth-child(n) {
+          .content-container {
+            width: 132px;
+          }
+        }
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          .content-container {
+            width: auto;
+          }
+          &:nth-of-type(1) {
+            max-width: 20%;
+            .content-container {
+              :deep(.content-item) {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.community {
+    .item-sub {
+      margin-left: 48px;
+      &:nth-of-type(1) {
+        margin-left: 0;
+        .content-container {
+          width: 696px;
+          :deep(.content-item) {
+            margin-left: 48px;
+            &:nth-child(3n + 1) {
+              margin-left: 0;
+            }
+            &:nth-child(-n + 3) {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        .content-container {
+          width: 200px;
+        }
+      }
+
+      @include respond-to('<=laptop') {
+        margin-left: 24px;
+        &:nth-of-type(1) {
+          .content-container {
+            :deep(.content-item) {
+              margin-left: 24px;
+            }
+          }
+        }
+      }
+
+      @include respond-to('laptop') {
+        &:nth-of-type(1) {
+          .content-container {
+            width: 558px;
+          }
+        }
+        &:nth-of-type(2) {
+          .content-container {
+            width: 170px;
+          }
+        }
+      }
+
+      @include respond-to('pad_h') {
+        &:nth-of-type(1) {
+          .content-container {
+            width: auto;
+          }
+        }
+        &:nth-of-type(2) {
+          .content-container {
+            width: 132px;
+          }
+        }
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          max-width: 20%;
+          flex: 1 1 auto;
+          .content-container {
+            width: auto;
+            :deep(.content-item) {
+              width: 100%;
+            }
+          }
+          &:nth-of-type(1) {
+            max-width: 60%;
+            .content-container {
+              :deep(.content-item) {
+                width: calc((100% / 3) - 18px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.update {
+    .item-sub {
+      margin-left: 48px;
+      .content-container {
+        width: 448px;
+        :deep(.content-item) {
+          margin-left: 48px;
+          &:nth-child(2n + 1) {
+            margin-left: 0;
+          }
+          &:nth-child(-n + 2) {
+            margin-top: 0;
+          }
+        }
+      }
+      &:nth-of-type(1) {
+        margin-left: 0;
+      }
+
+      @include respond-to('<=laptop') {
+        margin-left: 24px;
+        .content-container {
+          :deep(.content-item) {
+            margin-left: 24px;
+          }
+        }
+      }
+      @include respond-to('laptop') {
+        .content-container {
+          width: 364px;
+        }
+      }
+
+      @include respond-to('pad_h') {
+        .content-container {
+          width: auto;
+        }
+      }
+    }
+
+    @include respond-to('pad_h') {
+      .content-left {
+        .item-sub {
+          max-width: 40%;
+          flex: 1 1 auto;
+          .content-container {
+            :deep(.content-item) {
+              width: calc(50% - 24px);
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -749,5 +1128,35 @@ html[lang='en'] {
 .transition-enter-from,
 .transition-leave-to {
   opacity: 0;
+}
+
+@include in-dark {
+  .o-nav {
+    .o-nav-list {
+      &::after {
+        background-image: linear-gradient(
+          90deg,
+          rgba(var(--o-mixedgray-4), 0) 0%,
+          rgba(var(--o-mixedgray-4), 1) 100%
+        );
+      }
+    }
+  }
+}
+
+.nav-scroller {
+  :deep(.o-scrollbar) {
+    --scrollbar-height: 100%;
+  }
+
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: nowrap;
+
+  @include respond-to('<=pad_v') {
+    --scroller-padding: 0 var(--layout-content-padding);
+  }
 }
 </style>

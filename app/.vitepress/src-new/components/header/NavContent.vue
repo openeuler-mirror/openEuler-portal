@@ -89,7 +89,7 @@ const onClickNavLink = (item?: any) => {
     <div
       v-for="subItem in navContent"
       :key="subItem.NAME"
-      :class="{ 'content-item': navContent.length > 1 }"
+      class="content-item"
       @click="onItemClick"
     >
       <div class="item-title">
@@ -161,28 +161,21 @@ const onClickNavLink = (item?: any) => {
   padding: 0;
   flex-wrap: wrap;
 
-  @include respond-to('>laptop') {
-    column-gap: var(--o-gap-8);
-    row-gap: var(--o-gap-5);
-  }
-
-  @include respond-to('laptop') {
-    column-gap: var(--o-gap-5);
-    row-gap: var(--o-gap-5);
-  }
-
-  @include respond-to('pad_h') {
-    column-gap: var(--o-gap-5);
-    row-gap: var(--o-gap-5);
-  }
-
   .content-item {
-    width: calc((100% - 96px) / 3);
-    @media (min-width: 1300px) and (max-width: 1440px) {
-      width: calc((100% - 48px) / 3);
+    width: 200px;
+    margin-top: 24px;
+    &:nth-of-type(1) {
+      margin-top: 0;
     }
-    @media (max-width: 1300px) {
-      width: calc((100% - 24px) / 2);
+
+    @include respond-to('laptop') {
+      width: 170px;
+      margin-top: 16px;
+    }
+
+    @include respond-to('pad_h') {
+      width: 132px;
+      margin-top: 16px;
     }
   }
 
@@ -198,11 +191,16 @@ const onClickNavLink = (item?: any) => {
     }
     .content-tag {
       margin-left: var(--o-gap-2);
+      @include respond-to('<=laptop') {
+        display: none;
+      }
     }
   }
   .desc-container {
     overflow: hidden;
     position: relative;
+    height: 36px;
+    white-space: normal;
 
     .item-desc {
       color: var(--o-color-info2);
@@ -242,11 +240,12 @@ const onClickNavLink = (item?: any) => {
 }
 
 .content-container-mobile {
-  & + .content-container-mobile {
-    margin-top: var(--o-gap-3);
-  }
+  margin-right: var(--o-gap-1);
+  margin-top: var(--o-gap-3);
 
   .content-subtitle {
+    @include text2;
+    font-weight: 500;
     color: var(--o-color-primary1);
   }
 
@@ -261,7 +260,6 @@ const onClickNavLink = (item?: any) => {
     .item-desc {
       color: var(--o-color-info2);
       margin-top: var(--o-gap-1);
-      margin-bottom: var(--o-gap-1);
       text-align: justify;
       @include text1;
       @include text-truncate(2);
