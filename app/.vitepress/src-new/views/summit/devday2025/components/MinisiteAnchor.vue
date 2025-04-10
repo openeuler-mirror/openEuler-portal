@@ -51,52 +51,64 @@ useIntersectionObserver(target, ([entry]) => {
     position: fixed;
     top: var(--layout-header-height);
     width: 100%;
-    height: 48px;
-    backdrop-filter: blur(10px);
+    height: 68px;
     z-index: 10;
-    background-color: rgba($color: var(--o-mixedgray-1), $alpha: 0.25);
+    background-color: var(--o-color-control2-light);
     @include text1;
     @include respond-to('<=pad_v') {
-      display: none;
+      top: 48px;
+      height: 54px;
     }
 
     .anchor-container {
       display: flex;
       align-items: center;
-      height: 48px;
+      justify-content: center;
+      max-width: 920px;
+      margin: 0 auto;
+      height: 68px;
+      @include respond-to('<=pad_v') {
+        height: 54px;
+      }
+
 
       :deep(.o-anchor) {
+        width: 100%;
         .o-anchor-line {
           display: none;
         }
 
         .o-anchor-items {
           display: flex;
-          flex-wrap: wrap;
+          max-width: 920px;
+          width: 100%;
+          gap: var(--o-gap-4);
+          background-color: var(--o-color-control3-light);
+          padding: var(--o-gap-1);
+          border-radius: var(--o-radius-xs);
         }
 
         .o-anchor-item {
-          --anchor-item-width: auto;
-          --anchor-item-min-width: auto;
+          flex: 1 1 auto;
           --anchor-item-link-bg-color-hover: transparent;
-          --anchor-item-link-bg-color-active: transparent;
-          --anchor-item-link-color: var(--o-color-info3);
-          --anchor-item-link-color-active: var(--o-color-info1);
           --anchor-item-link-color-hover: --anchor-item-link-gap: 0;
-          --anchor-item-link-padding: 0 32px 0 0;
+          --anchor-item-link-radius: var(--o-radius-xs);
+          --anchor-item-min-width: 60px;
+          --anchor-item-link-gap: 0px;
 
           .o-anchor-item-link {
-            @include hover {
-              &:not(.is-active) {
-                color: var(--o-color-info2);
-              }
-            }
+            @include text1;
+            --anchor-item-link-bg-color-active: var(--o-color-control5-light);
+            --anchor-item-link-color-active: var(--o-color-primary1);
+            --anchor-item-link-color-hover: var(--o-color-primary1);
+            --anchor-item-link-color: var(--o-color-info2);
+            --anchor-item-link-padding: 6px 0;
+            font-weight: 500;
+            display: block;
+            text-align: center;
           }
         }
       }
     }
-}
-.dark {
-  background-color: rgba($color: var(--o-mixedgray-4), $alpha: 0.25);
 }
 </style>
