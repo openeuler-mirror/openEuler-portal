@@ -1552,6 +1552,13 @@
    * @name 
    * @type color
    * @group control
+   * @description 很浅，常用于悬浮类面板背景色
+   */
+  --o-color-control5-light: rgb(var(--o-mixedgray-1), 1);
+  /**
+   * @name 
+   * @type color
+   * @group control
    * @description 很浅，常用于表格背景色
    */
   --o-color-control-light: rgb(var(--o-mixedgray-1), 1.0);
