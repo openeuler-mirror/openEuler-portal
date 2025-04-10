@@ -632,5 +632,9 @@ export default {
       PATH: 'https://github.com/openeuler-mirror',
       ICON: OutLink,
     },
+    {
+      NAME: 'LFS文件管理',
+      PATH: 'https://artlfs-website.openeuler.org',
+    },
   ],
 };
