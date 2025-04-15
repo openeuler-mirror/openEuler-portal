@@ -69,7 +69,7 @@ const paginationData = ref({
 });
 
 const toBlogContent = (path: string) => {
-  router.go(`/${path}`);
+  window.open(`/${path}.html`, '_blank', 'noopener, noreferrer');
 };
 // 获取标签数据
 const getTagsList = () => {

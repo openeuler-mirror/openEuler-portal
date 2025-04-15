@@ -46,7 +46,7 @@ const userCaseData = computed(() => i18n.value.interaction);
 const loading = ref(true);
 
 const toNewsContent = (path: string) => {
-  router.go(`/${path}`);
+  window.open(`/${path}.html`, '_blank', 'noopener, noreferrer');
 };
 
 //筛选数据
