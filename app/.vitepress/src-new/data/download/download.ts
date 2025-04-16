@@ -15,6 +15,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '/whitepaper/openEuler 25.03 技术白皮书.pdf',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WEBSITE_SELECT: '/zh/mirror/select/?version=25.03',
         PUBLISH_DATE: '2025/03',

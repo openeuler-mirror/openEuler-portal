@@ -19,7 +19,7 @@ import data from './data/data_zh';
       :introduce-data="data.introduce"
       id="minisite-introduction"
     />
-    <MinisiteLive :live-data="data.live" />
+    <MinisiteLive :live-data="data.live" id="minisite-live" />
     <MinisiteCard :topic-data="data.topic" />
     <MinisiteAgenda :agenda-data="data.agenda" id="minisite-agenda" />
     <MinisiteGuide :guide-data="data.guide" id="venue-guide" />
