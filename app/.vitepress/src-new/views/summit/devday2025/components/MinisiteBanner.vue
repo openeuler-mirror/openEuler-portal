@@ -31,9 +31,11 @@ const bannerImage = computed(() => {
     : props.bannerData.bgPc;
 });
 const enrollUrl = computed(() => {
-  return isPhone.value
-    ? props.bannerData.signUpHrefMo
-    : props.bannerData.signUpHrefPc;
+  return props.bannerData.ongoing
+    ? isPhone.value
+      ? props.bannerData.signUpHrefMo
+      : props.bannerData.signUpHrefPc
+    : '#minisite-live';
 });
 </script>
 

@@ -192,6 +192,11 @@ export default [
         noIcon: true,
       },
       {
+        img_light: shenzhoushuma_light,
+        img_dark: shenzhoushuma_dark,
+        noIcon: true,
+      },
+      {
         img_light: xinhua_light,
         img_dark: xinhua_dark,
         noIcon: true,
@@ -209,11 +214,6 @@ export default [
       {
         img_light: langchaoyun_light,
         img_dark: langchaoyun_dark,
-        noIcon: false,
-      },
-      {
-        img_light: shenzhoushuma_light,
-        img_dark: shenzhoushuma_dark,
         noIcon: false,
       },
     ],

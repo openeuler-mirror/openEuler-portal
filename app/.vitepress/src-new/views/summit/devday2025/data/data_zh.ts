@@ -42,7 +42,8 @@ export default {
       'https://openatomcon.openatom.cn/registration/?activityNo=HD20250305105858',
     signUpHrefMo:
       'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20250305105858',
-    signUpTitle: '立即报名',
+    signUpTitle: '精彩回顾',
+    ongoing: false,
   },
   introduce: {
     titleImg: introduce_light,
