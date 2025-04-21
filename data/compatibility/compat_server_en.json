@@ -28741,6 +28741,48 @@
   },
   {
     "hardwareFactory": "New H3C Technologies Co., Ltd.",
+    "hardwareModel": "H3C UniServer R3350 G7",
+    "osVersion": "openEuler 24.03 LTS",
+    "architecture": "x86_64",
+    "date": "2025/03/21",
+    "friendlyLink": "https://www.h3c.com",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "193d",
+        "ssID": "1005",
+        "architecture": "x86_64",
+        "os": "openEuler 24.03 LTS",
+        "driverName": "igb",
+        "version": "",
+        "type": "NIC",
+        "date": "2025/03/21",
+        "sha256": "c672a4b77bd2d80b268fc6532d01b96cfcfd5fe12018a07539ad58c11d9f1d49",
+        "driverSize": "92K",
+        "chipVendor": "Intel",
+        "boardModel": "NIC-GE-4P-360T-B2",
+        "chipModel": "Intel i350",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com",
+      "certificationTime": "2025/03/21",
+      "commitID": "I8NEN1",
+      "mainboardModel": "RS33M2C9S",
+      "biosUefi": "7.30.06",
+      "cpu": "AMD EPYC 9755 128-Core Processor",
+      "ram": "2*32G-R-6400",
+      "portsBusTypes": "x8 PCI Express 5 x8\",\"x8 PCI Express 5 x8",
+      "videoAdapter": "NA",
+      "hostBusAdapter": "NA",
+      "hardDiskDrive": "INTEL SSDSC2KB96\",\"SAMSUNG MZ7L37T6"
+    }
+  },
+  {
+    "hardwareFactory": "New H3C Technologies Co., Ltd.",
     "hardwareModel": "H3C UniServer R4900 G6",
     "osVersion": "openEuler 24.03 LTS SP1",
     "architecture": "x86_64",
