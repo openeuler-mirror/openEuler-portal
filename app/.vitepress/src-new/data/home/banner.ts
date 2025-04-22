@@ -3,8 +3,23 @@ import newyear_pad from '~@/assets/category/home/banner/new-year/pad.jpg';
 import newyear_mb from '~@/assets/category/home/banner/new-year/mb.jpg';
 import newyear_mb_en from '~@/assets/category/home/banner/new-year/mb_en.png';
 
+import opensource_summer_pc from '~@/assets/category/home/banner/opensource-summer/pc.jpg';
+import opensource_summer_text from '~@/assets/category/home/banner/opensource-summer/text.png';
+import opensource_summer_mb from '~@/assets/category/home/banner/opensource-summer/mb.jpg';
+import opensource_summer_pad from '~@/assets/category/home/banner/opensource-summer/pad.jpg';
+
 export default {
   zh: [
+    {
+      bg_pc: opensource_summer_pc,
+      bg_pad: opensource_summer_pad,
+      bg_mb: opensource_summer_mb,
+      bg_text: opensource_summer_text,
+      bg_theme: 'light',
+      btn: '查看详情',
+      href: 'https://mp.weixin.qq.com/s/HIZFnq1pStHjOo9dB-Lf-g',
+      isBlank: true,
+    },
     {
       bg_pc: newyear_pc,
       bg_pad: newyear_pad,
