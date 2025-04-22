@@ -249,20 +249,16 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 }
 
 .banner-text {
-  height: 180px;
-  width: 446px;
+  height: 90px;
+  width: 426px;
   --d: 10px;
 
   background-size: contain;
   background-repeat: no-repeat;
 
-  @include respond-to('pad_v-laptop') {
-    width: 356px;
-    height: 144px;
-  }
-  @include respond-to('pad_v') {
-    width: 312px;
-    height: 126px;
+  @include respond-to('pad') {
+    width: 282px;
+    height: 60px;
   }
 }
 

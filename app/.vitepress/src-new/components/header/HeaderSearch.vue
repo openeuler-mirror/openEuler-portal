@@ -49,18 +49,19 @@ const reportSearch = (event: string, data: Record<string, any>) => {
 
 // 搜索事件
 function handleSearchEvent(report?: boolean) {
+  const input = searchInput.value.trim();
+  if (!input) return;
+
   isShowDrawer.value = false;
-  handleSearch(searchInput.value);
+  handleSearch(input);
   if (report) {
     reportSearch('click', {
-      content: searchInput.value,
+      content: input,
       type: 'search',
     });
   }
   window.open(
-    `/${lang.value}/other/search/?search=${encodeURIComponent(
-      searchInput.value
-    )}`,
+    `/${lang.value}/other/search/?search=${encodeURIComponent(input)}`,
     '_self'
   );
 }
