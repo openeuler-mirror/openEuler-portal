@@ -14,8 +14,8 @@ import HeaderCode from './HeaderCode.vue';
 import HeaderLogin from './HeaderLogin.vue';
 import HeaderSearch from './HeaderSearch.vue';
 import NavLink from './NavLink.vue';
-import { oaReport } from '@/shared/analytics';
 import { useLocale } from '~@/composables/useLocale';
+import { vAnalytics } from '~@/directive/analytics';
 
 const { lang } = useData();
 const { t } = useLocale();
@@ -33,40 +33,7 @@ const props = defineProps({
 });
 
 // 导航数据
-const navData = computed(() => {
-  try {
-    return i18n.value.header.NAV_ROUTER;
-  } catch {
-    return i18n.value.header.NAV_ROUTER;
-  }
-});
-
-class NavAccessAnalyzer {
-  hoverTime: number = Date.now();
-  stepCount: number = 0;
-
-  end(navPath: string[]) {
-    oaReport(
-      'click',
-      {
-        module: 'navigation',
-        steps: this.stepCount + 1,
-        time_used: Date.now() - this.hoverTime,
-        ...navPath.reduce((levels, navName, index) => {
-          levels[`level${index + 1}`] = navName;
-          return levels;
-        }, {} as Record<string, string>),
-      },
-      'portal'
-    );
-  }
-
-  stepIncr() {
-    this.stepCount++;
-  }
-}
-
-let navAnalyzer: NavAccessAnalyzer | null = null;
+const navData = computed(() => i18n.value.header.NAV_ROUTER);
 
 // nav 鼠标滑过事件
 const isShow = ref(false);
@@ -76,16 +43,10 @@ const navShortcut = ref<any>([]);
 const isPicture = ref(false);
 const toggleDebounced = useDebounceFn(function (item: any | null) {
   if (item === null) {
-    navAnalyzer = null;
     navActive.value = '';
     isShow.value = false;
     isPicture.value = false;
   } else {
-    (navAnalyzer ??= new NavAccessAnalyzer()).stepIncr();
-    oaReport('hover', {
-      module: 'navigation',
-      level1: item.NAME,
-    });
     navActive.value = item.ID;
     isShow.value = true;
     subNavContent.value = item.CHILDREN;
@@ -99,9 +60,47 @@ const linkClick = () => {
   isShow.value = false;
 };
 
-const reportNavClick = (path: string[]) => {
-  navAnalyzer?.end(path);
-  navAnalyzer = null;
+// ------------导航埋点------------
+// 首次hover时间
+let hoverTime = 0;
+// 最终点击导航所用步骤
+let steps = 0;
+
+const onHoverHeader = () => (steps = 0);
+
+const onHoverNav = (name: string) => {
+  if (steps > 0) return void steps++;
+  steps++;
+  hoverTime = Date.now();
+  return {
+    event: 'hover',
+    properties: {
+      module: 'navigation',
+      level1: name,
+    },
+  };
+};
+
+const onClickNav = () => {
+  steps++;
+  return {
+    properties: {
+      steps,
+      module: 'navigation',
+      time_used: Date.now() - hoverTime,
+    },
+  };
+};
+
+const onClickShortCutLink = (item: any) => {
+  if (Array.isArray(item._PATH)) {
+    return {
+      ...(item._PATH as string[]).reduce((levels, navName, index) => {
+        levels[`level${index + 1}`] = navName;
+        return levels;
+      }, {} as Record<string, string>),
+    };
+  }
 };
 </script>
 
@@ -109,7 +108,7 @@ const reportNavClick = (path: string[]) => {
   <div class="header-content">
     <div class="header-nav">
       <nav class="o-nav">
-        <ul class="o-nav-list">
+        <ul class="o-nav-list" @mouseenter="onHoverHeader">
           <li
             v-for="(item, index) in navData"
             :key="item.ID"
@@ -118,6 +117,8 @@ const reportNavClick = (path: string[]) => {
             }"
             @mouseenter="toggleDebounced(item)"
             @mouseleave="toggleDebounced(null)"
+            v-analytics:mouseenter="() => onHoverNav(item.NAME)"
+            v-analytics.catchBubble="onClickNav"
           >
             <span :id="'tour_headerNav_' + item.ID" class="nav-item">{{
               item.NAME
@@ -152,7 +153,6 @@ const reportNavClick = (path: string[]) => {
                           <NavContent
                             :nav-content="sub?.CHILDREN"
                             @link-click="linkClick"
-                            @report-nav-click-path="reportNavClick"
                           />
                         </div>
                       </div>
@@ -172,7 +172,9 @@ const reportNavClick = (path: string[]) => {
                                 :url="shortcut.URL"
                                 @link-click="linkClick"
                                 class="shortcut-link"
-                                @click="reportNavClick(shortcut.NAV_PATH)"
+                                v-analytics.bubble="
+                                  () => onClickShortCutLink(shortcut)
+                                "
                               >
                                 <span>{{ shortcut.NAME }}</span>
                                 <OIcon v-if="shortcut.ICON">
@@ -188,7 +190,9 @@ const reportNavClick = (path: string[]) => {
                               :key="shortcut.NAME"
                               class="review"
                               @link-click="linkClick"
-                              @click="reportNavClick(shortcut.NAV_PATH)"
+                              v-analytics.bubble="
+                                () => onClickShortCutLink(shortcut)
+                              "
                             >
                               <img
                                 :src="shortcut.PICTURE"
