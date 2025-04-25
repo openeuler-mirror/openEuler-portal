@@ -14,8 +14,7 @@ The OpenAtom Foundation (hereinafter referred to as "we," "us," or "foundation")
 
 Please carefully review the following updates to this privacy policy:
 
-1. Added Personal Tokens in User Center.
-2. Modified the operation interface of User Center.
+1. Update Account Service in section "How We Collect and Process Your Personal Data".
 
 ## 1. How We Collect and Process Your Personal Data
 
@@ -26,9 +25,9 @@ Please carefully review the following updates to this privacy policy:
   1. When you register for an openEuler community account, we will collect your **user name**, **email address**, **phone number**, **password**, and **email/phone verification code**. A unique account identifier will be automatically generated. Refusal to provide this information will prevent account creation.
   2. When you log in to the openEuler community using your **user name**, **email address**, or **phone number**, we will collect your **user name**, **email address**, **phone number**, **password** and **verification code** for authentication. Refusal to provide this information will prevent login.
   3. When you log in using a third-party account (Gitee, GitHub, or OpenAtom), we will collect your **Gitee UUID**、**Gitee ID**、Gitee nickname、**Gitee email address**、Gitee avatar、**Github UUID**、**Github ID**、Github nickname、**Github email address**、Github avatar、**OpenAtom UUID**、**OpenAtom username**、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar from that platform for authentication and code repository access management. If you use Gitee or GitHub without an existing bound openEuler account, a new openEuler account with a unique identifier will be automatically generated, deriving from your **Gitee ID** or **GitHub ID**. Refusal to provide this information will prevent login via third-party accounts.
-  4. After logging in, you can optionally provide your avatar, nickname, and **company**. This information is not required for using openEuler community features.
-  5. After logging in, you can modify your **email address**, **phone number**, and **password**, we will collect **email address**, **phone number**, **password** and **verification code** for authentication.
-  6. After logging in, you can bind your openEuler account to a third-party account (GitHub, Gitee, or OpenAtom). We will collect your **Gitee UUID**、**Gitee ID**、Gitee nickname、**Gitee email address**、Gitee avatar、**Github UUID**、**Github ID**、Github nickname、**Github email address**、Github avatar、**OpenAtom UUID**、**OpenAtom username**、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar from the bound platform. Refusal to provide this information will prevent third-party account binding for login purposes.
+  4. After logging in, you can optionally provide your avatar, nickname, and **company** in User Center. This information is not required for using openEuler community features.
+  5. After logging in, you can modify your **email address**, **phone number**, and **password** in User Center, we will collect **email address**, **phone number**, **password** and **verification code** for authentication.
+  6. After logging in, you can bind your openEuler account to a third-party account (GitHub, Gitee, or OpenAtom) in User Center. We will collect your **Gitee UUID**,**Gitee ID**, Gitee nickname, **Gitee email address**, Gitee avatar, **Github UUID**, **Github ID**, Github nickname, **Github email address**, Github avatar, **OpenAtom UUID**, **OpenAtom username**, OpenAtom nickname, **OpenAtom email address**, and OpenAtom avatar from the bound platform. Refusal to provide this information will prevent third-party account binding for login purposes.
 
 **b) Forum Service**
 
@@ -40,7 +39,7 @@ Please carefully review the following updates to this privacy policy:
 
 **d) Service Optimization**. To ensure service quality and operations, we automatically collect and store necessary log data, including access timestamps, **IP address**, **region**, request details, access status, resource size, access origin, and user agent information. In addition, we will collect your device information (device name, device type, device vendor, operating system, operating system version, screen width, screen height), application information (application ID, SDK version , browser, browser version, browser viewport width, browser viewport height), application usage information (event name, event attributes, reporting time, client anonymous ID, **username (if you have logged into community account)**). This data is collected for the purposes of community operations and O&M security.
 
-**e) Contributor License Agreement ("CLA") Signing**. When you participate in code contribution through the Contributor License Agreement ("CLA") signing system (click [here](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340) to learn more), you need to submit your [relevant personal data](https://clasign.osinfra.cn/privacy/corp/gitee_openeuler-1611298811283968340) to the CLA signing system. We will obtain such personal data to verify whether you have signed the CLA, and to conduct relevant statistical analysis to understand how the community is operating.
+**e) Contributor License Agreement ("CLA") Signing**. When you participate in code contribution through the Contributor License Agreement ("CLA") signing system (click [here](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340?lang=en) to learn more), you need to submit your [relevant personal data](https://clasign.osinfra.cn/privacy/corp/gitee_openeuler-1611298811283968340?lang=en) to the CLA signing system. We will obtain such personal data to verify whether you have signed the CLA, and to conduct relevant statistical analysis to understand how the community is operating.
 
 **f) Content Release**. When you participate in Community meetings, Community activities, contribution in the open source Community, blogs, newsgroups, or Community organization, you may submit your **photo**, **name**, **email address**, **company name**, **position**, **school**, **profile**, **region** and **Gitee ID** for posting on our website so that developers can better understand the community, quickly make contact, and participate in the community.
 
@@ -180,8 +179,8 @@ Email: **<contact@openeuler.io>**
 
 Hotline: **+86 15311871505**
 
-Last updated: **April 07, 2025**
+Last updated: **April 25, 2025**
 
-Privacy policy version: **v20250407**
+Privacy policy version: **v20250425**
 
 </div>

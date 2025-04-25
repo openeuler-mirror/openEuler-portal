@@ -17,7 +17,7 @@ This website involves the following personal data collection scenarios:
 - **Purpose**: Verify identity during login and registration on this website and maintain your personal data.
 - **Personal data type**: data you voluntarily submit
 - **Collection method**: user input or shared by third-party accounts
-- **Personal data fields**: **user name**, **company**, **email address**, **phone number**, **password**, **email or phone verification code**, avatar, nickname and **Gitee UUID**、**Gitee ID**、Gitee nickname、**Gitee email address**、Gitee avatar、**Github UUID**、**Github ID**、Github nickname、**Github email address**、Github avatar、**OpenAtom UUID**、**OpenAtom username**、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar.
+- **Personal data fields**: **user name**, **company**, **email address**, **phone number**, **password**, **email or phone verification code**, avatar, nickname and **Gitee UUID**, **Gitee ID**, Gitee nickname, **Gitee email address**, Gitee avatar, **Github UUID**, **Github ID**, Github nickname, **Github email address**, Github avatar, **OpenAtom UUID**, **OpenAtom username**, OpenAtom nickname, **OpenAtom email address**, OpenAtom avatar.
 
 ## 2. Forum Service
 
@@ -42,22 +42,7 @@ This website involves the following personal data collection scenarios:
 
 ## 5. Contributor License Agreement (CLA) Signing
 
-- **Purpose**: Verify your CLA signing status for code contributions and perform statistical analysis to assess community operations.
-- **Personal data type**: data you voluntarily submit
-- **Collection method**: user input
-- **Personal data fields**: We collect personal data based on the scenario:
-  - For corporate CLA signing: **name of the authorized representative**, **position**, **company name**, **email address**, **email verification code**, **phone number (optional)**, **address (optional)**, **fax number (optional)**, and **the signed CLA document**
-  - For corporate contributor registration: **name**, **email address**, corporation, and **email verification code**
-  - For individual CLA signing: **name**, **email address**, and **email verification code**
-  - For enterprise administrator login: **account**, **password**, and **email address**
-  - For community administrator login: **account**, **password**, **email address** and **email authorization code**
-
-<br/>
-
-- **Purpose**: Maintain service quality and operational requirements.
-- **Personal data type**: application or device information
-- **Collection method**: collected by the system
-- **Personal data fields**: access timestamp, **IP address**, request details, access status, accessed resource size, access source, user agent
+Regarding the purpose of collecting personal data, the types of personal data, the methods of collection, and the specific personal data fields, refer to the [Personal Data Collection Overview](https://clasign.osinfra.cn/information-list/corp/gitee_openeuler-1611298811283968340?lang=en).
 
 ## 6. Content Release
 
