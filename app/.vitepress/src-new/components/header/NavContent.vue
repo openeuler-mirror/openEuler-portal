@@ -3,11 +3,12 @@ import { ref } from 'vue';
 import { OTag, OIcon } from '@opensig/opendesign';
 
 import NavLink from './NavLink.vue';
-import { oaReport } from '@/shared/analytics';
+import { vAnalytics } from '~@/directive/analytics';
+import { PropType } from 'vue';
 
 const props = defineProps({
   navContent: {
-    type: Array,
+    type: Array as PropType<any[]>,
     default() {
       return [];
     },
@@ -20,7 +21,7 @@ const props = defineProps({
   },
 });
 
-const emits = defineEmits(['link-click', 'report-nav-click-path']);
+const emits = defineEmits(['link-click']);
 
 const linkClick = () => {
   emits('link-click');
@@ -32,12 +33,15 @@ const descMouseenter = (e: MouseEvent) => {
   showDesc.value = e.target.clientHeight < e.target.scrollHeight;
 };
 
-const onClickNavLink = (item?: any) => {
-  if (item?.ANALYTICSNAME) {
-    oaReport('click', undefined, item.ANALYTICSNAME);
-  }
-  if (Array.isArray(item.NAV_PATH)) {
-    emits('report-nav-click-path', item.NAV_PATH);
+// ------------导航埋点------------
+const onClickNav = (item: any) => {
+  if (Array.isArray(item._PATH)) {
+    return {
+      ...(item._PATH as string[]).reduce((levels, navName, index) => {
+        levels[`level${index + 1}`] = navName;
+        return levels;
+      }, {} as Record<string, string>),
+    };
   }
 };
 </script>
@@ -48,6 +52,7 @@ const onClickNavLink = (item?: any) => {
       v-for="subItem in navContent"
       :key="subItem.NAME"
       class="content-container-mobile"
+      v-analytics.bubble="() => onClickNav(subItem)"
     >
       <NavLink
         :url="subItem.URL"
@@ -75,6 +80,7 @@ const onClickNavLink = (item?: any) => {
           :url="system.URL"
           class="system"
           @link-click="linkClick"
+          v-analytics.bubble="() => onClickNav(system)"
         >
           {{ system.NAME }}
           <OIcon v-if="system.ICON">
@@ -86,19 +92,9 @@ const onClickNavLink = (item?: any) => {
   </div>
 
   <div v-else class="content-container">
-    <div
-      v-for="subItem in navContent"
-      :key="subItem.NAME"
-      class="content-item"
-      @click="onItemClick"
-    >
-      <div class="item-title">
-        <NavLink
-          :url="subItem.URL"
-          class="item-name"
-          @click="onClickNavLink(subItem)"
-          @link-click="linkClick"
-        >
+    <div v-for="subItem in navContent" :key="subItem.NAME" class="content-item">
+      <div class="item-title" v-analytics.bubble="() => onClickNav(subItem)">
+        <NavLink :url="subItem.URL" class="item-name" @link-click="linkClick">
           {{ subItem.NAME }}
           <OIcon v-if="subItem.ICON">
             <component :is="subItem.ICON" class="icon" />
@@ -127,8 +123,8 @@ const onClickNavLink = (item?: any) => {
           v-for="system in subItem.CHILDREN"
           :url="system.URL"
           class="system"
-          @click="onClickNavLink(system)"
           @link-click="linkClick"
+          v-analytics.bubble="() => onClickNav(system)"
         >
           {{ system.NAME }}
           <OIcon v-if="system.ICON">
