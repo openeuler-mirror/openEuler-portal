@@ -1,0 +1,30 @@
+export default {
+  rights: '权益',
+  obligation: '义务',
+  contribution: '贡献',
+  userGroup: '城市用户组',
+  groupDesc: '当申请成立某城市用户组满20人，则开通该城市用户组',
+  groupTip: '没有您所在城市的用户组？',
+  application: '申请成立',
+  openEulerGroup: 'openEuler 用户组',
+  joinGroup: '加入用户组',
+  joinCityGroup: '加入城市用户组',
+  organization: '组织单位',
+  honoraryMember: '荣誉成员',
+  organizer: 'Organizer',
+  ambassador: 'Ambassador',
+  subscribe: '订阅邮件',
+  subscribeDesc:
+    '订阅城市用户组邮件列表，接收社区技术进展、用户组活动信息，参与用户组讨论。',
+  joinWechat: '进入用户组微信群',
+  wechatDesc: '添加openEuler小助手微信，备注"xx用户组进群"',
+  cityEvent: '城市活动',
+  eventDesc:
+    'openEuler社区鼓励用户组成员自发举办活动，通过call for meetup申请，社区将给予一定的活动资源和物料支持',
+  applyEvent: '申请举办活动',
+  personalPage: '个人主页',
+  showcase: '用户案例',
+  showcaseDesc:
+    '欢迎用户组成员分享使用openEuler的案例实践，优秀案例将在用户组内、社区官方传播渠道宣传推广，为其它用户提供参考，打造用户产品影响力',
+  provideCase: '提供案例',
+};
