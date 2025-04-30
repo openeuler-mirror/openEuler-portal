@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted, ComponentPublicInstance } from 'vue';
 
 import AOS from 'aos';
 
@@ -8,6 +8,7 @@ import { useScreen } from '~@/composables/useScreen';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
 import { getMeetingActivity } from '@/api/api-calendar';
+import { vAnalytics } from '~@/directive/analytics';
 
 import HomeBanner from './HomeBanner.vue';
 import HomeDisplayZone from './HomeDisplayZone.vue';
@@ -17,6 +18,8 @@ import HomeShowCase from './HomeShowCase.vue';
 import HomePartner from './HomePartner.vue';
 import HomeCalendar from './HomeCalendar.vue';
 import HomeTrend from './HomeTrend.vue';
+import { oaReport } from '@/shared/analytics';
+import { useEventListener, useIntersectionObserver } from '@vueuse/core';
 
 const { isPhone, isPadV } = useScreen();
 
@@ -46,26 +49,93 @@ onMounted(() => {
     calendarData.value = res.data;
   });
 });
+
+// ------------滚动深度埋点------------
+// 当前视口内的楼层
+const currentActiveSections = new Set<string>();
+
+const introRef = ref<ComponentPublicInstance>();
+const playCommunityRef = ref<ComponentPublicInstance>();
+const calendarRef = ref<ComponentPublicInstance>();
+const showcaseRef = ref<ComponentPublicInstance>();
+const trendRef = ref<ComponentPublicInstance>();
+const partnerRef = ref<ComponentPublicInstance>();
+
+useIntersectionObserver(
+  [
+    introRef,
+    playCommunityRef,
+    calendarRef,
+    showcaseRef,
+    trendRef,
+    partnerRef
+  ],
+  (entries) => {
+    for (const ent of entries) {
+      const section = ent.target as HTMLElement;
+      const sectionTitle = section.getAttribute('data-v-analytics-title');
+      if (sectionTitle) {
+        ent.isIntersecting
+          ? currentActiveSections.add(sectionTitle)
+          : currentActiveSections.delete(sectionTitle);
+      }
+    }
+  },
+  {
+    threshold: 0.5,
+  }
+);
+
+const reportScrollDepth = () => {
+  oaReport('scroll', {
+    module: 'homepage',
+    scrollTop: document.documentElement.scrollTop,
+    sections: Array.from(currentActiveSections),
+    perentage:
+      (
+        (document.documentElement.scrollTop * 100) /
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight)
+      ).toFixed(2) + '%',
+  });
+};
+
+onUnmounted(() => {
+  reportScrollDepth();
+  currentActiveSections.clear();
+});
+
+if (typeof document !== 'undefined') {
+  useEventListener(document, 'visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+      reportScrollDepth();
+    }
+  });
+}
 </script>
 <template>
-  <div class="home">
+  <div
+    class="home"
+    v-analytics.catchBubble="{ properties: { module: 'homepage' } }"
+  >
     <HomeBanner />
     <ContentWrapper :vertical-padding="verticalPadding">
       <HomeDisplayZone data-aos="fade-up" class="home-display-zone" />
     </ContentWrapper>
-    <HomeIntro data-aos="fade-up" />
+    <HomeIntro ref="introRef" data-aos="fade-up" />
     <ContentWrapper :vertical-padding="['0', '0']">
-      <HomePlayCommunity data-aos="fade-up" />
+      <HomePlayCommunity ref="playCommunityRef" data-aos="fade-up" />
     </ContentWrapper>
     <HomeCalendar
+      ref="calendarRef"
       data-aos="fade-up"
       v-if="isZh && calendarData.length"
       :table-data="calendarData"
     />
-    <HomeShowCase data-aos="fade-up" />
-    <HomeTrend data-aos="fade-up" />
+    <HomeShowCase ref="showcaseRef" data-aos="fade-up" />
+    <HomeTrend ref="trendRef" data-aos="fade-up" />
     <ClientOnly>
-      <HomePartner />
+      <HomePartner ref="partnerRef" />
     </ClientOnly>
   </div>
 </template>

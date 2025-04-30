@@ -23,8 +23,12 @@ import vitality from '~@/assets/category/home/play-community/vitality.svg';
 import blue from '~@/assets/category/home/play-community/blue_light.png';
 import blueDark from '~@/assets/category/home/play-community/blue_dark.png';
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
+import { vAnalytics } from '~@/directive/analytics';
 
 import { type VitalityValueT } from '~@/@type/type-home';
+import { useI18n } from 'vue-i18n';
+import useInViewDuration from '~@/composables/useInViewDuration';
+import { oaReport } from '@/shared/analytics';
 
 const { locale } = useLocale();
 const { isPhone, lePadV, leLaptop } = useScreen();
@@ -38,10 +42,30 @@ onMounted(() => {
     vitalityData.value = res.data;
   });
 });
+
+// ------------埋点------------
+const { t } = useI18n();
+const container = ref();
+
+// 元素可视停留时间
+useInViewDuration(container, (duration) => {
+  oaReport('ElementExposure', {
+    module: 'homepage',
+    level1: t('home.playCommunity', { openEuler: 'openEuler' }),
+    duration,
+  });
+});
 </script>
 
 <template>
-  <div class="home-play-community">
+  <div
+    class="home-play-community"
+    ref="container"
+    v-analytics.bubble.noTrigger="{
+      level1: $t('home.playCommunity', { openEuler: 'openEuler' }),
+    }"
+    :data-v-analytics-title="$t('home.playCommunity', { openEuler: 'openEuler' })"
+  >
     <i18n-t class="play-community-title" keypath="home.playCommunity" tag="h3">
       <template #openEuler>
         <img class="logo" :src="logo" />
@@ -70,7 +94,14 @@ onMounted(() => {
           </p>
           <div class="btn-box">
             <a :href="card.btn.link" target="_blank" rel="noopener noreferrer">
-              <OButton :size="lePadV ? 'medium' : 'large'" color="primary">
+              <OButton
+                :size="lePadV ? 'medium' : 'large'"
+                color="primary"
+                v-analytics.bubble="{
+                  level2: card.title,
+                  target: card.btn.label,
+                }"
+              >
                 {{ card.btn.label }}
               </OButton>
             </a>
@@ -79,6 +110,10 @@ onMounted(() => {
               :href="card.textBtn.link"
               target="_blank"
               rel="noopener noreferrer"
+              v-analytics.bubble="{
+                level2: card.title,
+                target: card.textBtn.label,
+              }"
             >
               {{ card.textBtn.label }}
               <template #suffix>
@@ -118,6 +153,9 @@ onMounted(() => {
         class="vitality-btn"
         target="_blank"
         rel="noopener noreferrer"
+        v-analytics.bubble="{
+          target: t('home.viewDetails'),
+        }"
       >
         {{ $t('home.viewDetails') }}
         <template #suffix>

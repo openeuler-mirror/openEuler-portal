@@ -40,6 +40,8 @@ import cubeTowDark from '~@/assets/category/home/calendar/cube-2_dark.png';
 
 import AppSection from '~@/components/AppSection.vue';
 import { oaReport } from '@/shared/analytics';
+import { vAnalytics } from '~@/directive/analytics';
+import useInViewDuration from '~@/composables/useInViewDuration';
 
 const props = defineProps({
   tableData: {
@@ -269,15 +271,34 @@ const watchData = watch(
   { immediate: true }
 );
 
-const onCalendarClick = (e: MouseEvent) => {
-  if (e.isTrusted) {
-    oaReport('click', undefined, 'meeting');
-  }
+// ------------埋点------------
+const onClickDate = (e: Event, day: string) => {
+  if (!e.isTrusted) return;
+  return {
+    target: day,
+  };
 };
+
+const container = ref();
+
+// 元素可视停留时间
+useInViewDuration(container, (duration) => {
+  oaReport('ElementExposure', {
+    module: 'homepage',
+    level1: 'openEuler开发者日历',
+    duration,
+  });
+});
 </script>
 <template>
-  <AppSection title="openEuler开发者日历" class="home-calendar">
-    <div class="calendar-body" @click="onCalendarClick">
+  <AppSection
+    title="openEuler开发者日历"
+    class="home-calendar"
+    ref="container"
+    v-analytics.bubble.noTrigger="{ level1: 'openEuler开发者日历' }"
+    data-v-analytics-title="openEuler开发者日历"
+  >
+    <div class="calendar-body">
       <el-calendar ref="calendar" class="calender">
         <template #header="{ date }">
           <div class="left-title">
@@ -299,6 +320,7 @@ const onCalendarClick = (e: MouseEvent) => {
             class="out-box"
             :class="{ 'has-calender': tableData.includes(data.day) }"
             @click="setMeetingDay(data.day, $event)"
+            v-analytics.bubble="(ev) => onClickDate(ev, data.day)"
           >
             <div class="day-box">
               <p
@@ -430,6 +452,11 @@ const onCalendarClick = (e: MouseEvent) => {
                           "
                         :href="item[keys.key]"
                         target="_blank"
+                        v-analytics.bubble="{
+                          level2: tabType,
+                          level3: item.name || item.title,
+                          target: item[keys.key],
+                        }"
                         >{{ item[keys.key] }}</a
                       >
                       <p v-else>
