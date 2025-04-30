@@ -7992,7 +7992,7 @@
     ]
   },
   {
-    "osv_name": "华为云计算有限公司",
+    "osv_name": "华为云计算技术有限公司",
     "os_version": "HCE-2.0-aarch64-dvd.iso",
     "arch": "aarch64",
     "checksum": "1b2533c1b9c077c3a0941b873ab3d7b1",
@@ -10152,7 +10152,7 @@
     ]
   },
   {
-    "osv_name": "江苏润和软件股份有限公司",
+    "osv_name": "江苏润和",
     "os_version": "HopeOS-V20-standard-aarch64-dvd.iso",
     "arch": "aarch64",
     "checksum": "c748e4bc891929d4b5063d8b9c75df95",
@@ -10224,7 +10224,7 @@
     ]
   },
   {
-    "osv_name": "江苏润和软件股份有限公司",
+    "osv_name": "江苏润和",
     "os_version": "HopeOS-V20-standard-x86_64-dvd.iso",
     "arch": "x86_64",
     "checksum": "8b721835eaae5774bde18042fa64cfe7",
@@ -12106,6 +12106,294 @@
     "type": "嵌入式",
     "total_result": "pass",
     "date": "2025/03/21",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "湖南麒麟信安科技股份有限公司",
+    "os_version": "KylinSec-Server-3.6.1-release-250403-1045-aarch64-dvd.iso",
+    "arch": "aarch64",
+    "checksum": "3c9ea8e25eaf78565deba86ea0c4e130",
+    "base_openeuler_version": "openEuler 24.03 LTS",
+    "os_download_link": "https://www.kylinsec.com.cn/",
+    "friendly_link": "https://www.kylinsec.com.cn/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2025/04/14",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "广州汇智通信技术有限公司",
+    "os_version": "TeligenOS-V3-standard-aarch64-dvd-20250317.iso",
+    "arch": "aarch64",
+    "checksum": "fdd1eb13b75d119aac40981d761c70a6",
+    "base_openeuler_version": "openEuler 22.03 LTS SP1",
+    "os_download_link": "http://www.teligen.net/",
+    "friendly_link": "http://www.teligen.net/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2025/04/24",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "广州汇智通信技术有限公司",
+    "os_version": "TeligenOS-V3-standard-x86_64-dvd-20250317.iso",
+    "arch": "x86_64",
+    "checksum": "308659f6f6340abb97cb329221370207",
+    "base_openeuler_version": "openEuler 22.03 LTS SP1",
+    "os_download_link": "http://www.teligen.net/",
+    "friendly_link": "http://www.teligen.net/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2025/04/24",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "湖南麒麟信安科技股份有限公司",
+    "os_version": "KylinSec-Server-3.5.2-release-250414-1935-aarch64.iso",
+    "arch": "aarch64",
+    "checksum": "a8a34be36c17c15f99d2c46bf815e2a2",
+    "base_openeuler_version": "openEuler 22.03 LTS SP4",
+    "os_download_link": "https://www.kylinsec.com.cn/",
+    "friendly_link": "https://www.kylinsec.com.cn/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2025/04/24",
     "details": "详细信息",
     "tools_result": [
       {
