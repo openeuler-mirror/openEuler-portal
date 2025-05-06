@@ -17,7 +17,7 @@ export default {
       bg_text: opensource_summer_text,
       bg_theme: 'light',
       btn: '查看详情',
-      href: 'https://mp.weixin.qq.com/s/HIZFnq1pStHjOo9dB-Lf-g',
+      href: 'https://summer-ospp.ac.cn/org/orgdetail/b9770f4d-f586-4373-bdac-ce6389065946?lang=zh',
       isBlank: true,
     },
     {
