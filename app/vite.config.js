@@ -69,6 +69,9 @@ export default defineConfig({
         footer: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src/assets/common/footer')
         ),
+        security: FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src-new/assets/category/security/svg-icons')
+        ),
       },
     }),
   ],
