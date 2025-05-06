@@ -287,7 +287,9 @@ onMounted(() => {
                 <OPopover
                   v-if="!lePadV"
                   position="top"
-                  wrap-class="status-popover"
+                  :wrap-class="
+                    isDark ? 'status-popover-dark' : 'status-popover'
+                  "
                 >
                   <template #target>
                     <OTag class="status-tag" :style="{ '--tag-radius': '4px' }">
@@ -307,7 +309,9 @@ onMounted(() => {
                 <OPopover
                   v-if="!lePadV && reasonPop(row.reason)"
                   position="top"
-                  wrap-class="status-popover"
+                  :wrap-class="
+                    isDark ? 'status-popover-dark' : 'status-popover'
+                  "
                 >
                   <template #target>
                     <span>{{ row.reason }}</span>
@@ -616,7 +620,8 @@ ul {
 }
 </style>
 <style lang="scss">
-.status-popover {
+.status-popover,
+.status-popover-dark {
   width: 326px;
   .o-popup-body {
     border-radius: var(--o-radius-xs);
@@ -632,6 +637,9 @@ ul {
     margin-top: 4px;
     @include tip1;
   }
+}
+.status-popover-dark {
+  --popup-bg-color: #3f3f43;
 }
 .glossary-body {
   --dlg-radius: var(--o-radius-xs);
