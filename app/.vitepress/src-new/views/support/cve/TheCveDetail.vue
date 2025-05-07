@@ -30,7 +30,6 @@ import { statusMap, glossaryList } from '~@/data/cve';
 
 import { changeTimeStamp } from '~@/utils/common';
 
-import { useI18n } from '@/i18n';
 import { useRoute } from 'vitepress';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -42,7 +41,6 @@ interface CvssItem {
   openEuler?: string;
 }
 
-const i18n = useI18n();
 const route = useRoute();
 const { t, locale } = useLocale();
 const { lePadV } = useScreen();
@@ -57,18 +55,20 @@ const cveDetailData = ref<CveDetailCvssT>();
 const affectedProductList = ref<AffectProductT[]>([]);
 const cvssList = ref<CvssItem[]>([]);
 
+// -------------------- CVSS v3 表格表头 --------------------
 const columns = [
   { label: '', key: 'cate' },
   { label: 'NVD', key: 'NVD' },
   { label: 'openEuler', key: 'openEuler' },
 ];
 
+// -------------------- 获取CVSS v3 指标数据 --------------------
 const getCveDetailInfo = (cveId: string, packageName: string) => {
   getCveDetail(cveId, packageName).then((res: any) => {
     cveDetailData.value = res.result;
     cvssList.value = [
       {
-        cate: i18n.value.cve.CVSS_SCORE,
+        cate: t('cve.cvssScore'),
         NVD: cveDetailData.value?.cvsssCoreNVD,
         openEuler: cveDetailData.value?.cvsssCoreOE,
       },
@@ -146,29 +146,33 @@ const levelShow = (cvsssCoreOE: string) => {
   };
 };
 
+// -------------------- 影响产品表头 --------------------
 const columnsProduct = [
-  { label: i18n.value.cve.PRODUCT, key: 'productName' },
-  { label: i18n.value.cve.PACKAGE, key: 'packageName' },
-  { label: i18n.value.cve.STATUS, key: 'status' },
-  { label: i18n.value.cve.ANALYSIS, key: 'reason' },
-  { label: i18n.value.cve.SECURITY_ADVISORIES, key: 'securityNoticeNo' },
-  { label: i18n.value.cve.RELEASE_DATE, key: 'releaseTime' },
-  { label: i18n.value.cve.UPDATE_TIME, key: 'updateTime' },
+  { label: t('cve.product'), key: 'productName' },
+  { label: t('cve.package'), key: 'packageName' },
+  { label: t('cve.status'), key: 'status' },
+  { label: t('cve.analysis'), key: 'reason' },
+  { label: t('cve.securityBulletin'), key: 'securityNoticeNo' },
+  { label: t('cve.releaseDate'), key: 'releaseTime' },
+  { label: t('cve.update'), key: 'updateTime' },
 ];
 
+// -------------------- 获取影响产品的数据--------------------
 const getAffectedProductInfo = (cveId: string, packageName: string) => {
   getAffectedProduct(cveId, packageName).then((res: any) => {
     affectedProductList.value = res.result;
   });
 };
 
+// -------------------- CVE术语说明弹窗--------------------
 const glossaryVisible = ref(false);
 const columnsGlossary = [
   { label: t('cve.bugStatus'), key: 'status' },
   { label: t('cve.bugDesc'), key: 'description' },
 ];
 
-const reasonPop = (val: string) => {
+// -------------------- hover显示详细信息--------------------
+const reasonHover = (val: string) => {
   const item = glossaryList.find((e) => {
     return (
       e.status.replace(/[-_\s]/g, ' ').toLowerCase() ===
@@ -194,7 +198,7 @@ onMounted(() => {
     <ContentWrapper :vertical-padding="['32px', '72px']">
       <OBreadcrumb>
         <OBreadcrumbItem :href="route.path.replace('detail/', '')">{{
-          i18n.cve.CVE
+          t('cve.cve')
         }}</OBreadcrumbItem>
         <OBreadcrumbItem>{{ cveDetailData?.cveId }}</OBreadcrumbItem>
       </OBreadcrumb>
@@ -232,7 +236,7 @@ onMounted(() => {
           <p class="desc">{{ cveDetailData?.summary }}</p>
         </div>
         <div class="info-item">
-          <p class="label">{{ i18n.cve.METRICS_V3 }}</p>
+          <p class="label">{{ t('cve.metrics') }}</p>
           <OScroller
             class="norm-scroller"
             show-type="always"
@@ -249,7 +253,7 @@ onMounted(() => {
         </div>
         <div class="info-item">
           <div class="label-box">
-            <p class="label">{{ i18n.cve.AFFECTED_PRODUCTS }}</p>
+            <p class="label">{{ t('cve.affectedProduct') }}</p>
             <OButton
               variant="outline"
               color="normal"
@@ -307,7 +311,7 @@ onMounted(() => {
               </template>
               <template #td_reason="{ row }">
                 <OPopover
-                  v-if="!lePadV && reasonPop(row.reason)"
+                  v-if="!lePadV && reasonHover(row.reason)"
                   position="top"
                   :wrap-class="
                     isDark ? 'status-popover-dark' : 'status-popover'
@@ -318,7 +322,7 @@ onMounted(() => {
                   </template>
                   <div>
                     <p class="tag-title">{{ row.reason }}</p>
-                    <p class="tag-desc">{{ reasonPop(row.reason) }}</p>
+                    <p class="tag-desc">{{ reasonHover(row.reason) }}</p>
                   </div>
                 </OPopover>
                 <p v-if="lePadV">{{ row.reason }}</p>

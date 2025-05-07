@@ -308,7 +308,7 @@ const listenScroll = () => {
   });
 };
 
-// 使用 lodash 的 throttle 限制滚动事件触发频率
+// 使用 lodash 限制滚动事件触发频率
 const throttleEvent = useThrottleFn(listenScroll, 300);
 
 onMounted(() => {
@@ -342,6 +342,7 @@ onUnmounted(() => {
           v-model="debounceSearch"
           :placeholder="t('safetyBulletin.searchPlaceholder')"
           size="large"
+          clearable
           class="input-search"
         >
           <template #prefix>
@@ -461,6 +462,7 @@ onUnmounted(() => {
                   v-model="debounceComponentSearch"
                   :placeholder="t('safetyBulletin.search')"
                   size="medium"
+                  clearable
                   class="input-component-search"
                 >
                   <template #prefix>
@@ -563,6 +565,7 @@ onUnmounted(() => {
           v-model="debounceSearch"
           :placeholder="t('safetyBulletin.searchPlaceholder')"
           size="large"
+          clearable
           class="input-search-mb"
         >
           <template #prefix>
@@ -680,6 +683,9 @@ onUnmounted(() => {
 .input-search {
   width: 320px;
   :deep(.o_box) {
+    width: 320px;
+  }
+  :deep(.o_input) {
     width: 100%;
   }
 }

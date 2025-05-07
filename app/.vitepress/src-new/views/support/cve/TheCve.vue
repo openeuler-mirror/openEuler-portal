@@ -273,7 +273,7 @@ const listenScroll = () => {
   });
 };
 
-// 使用 lodash 的 throttle 限制滚动事件触发频率
+// 使用 lodash 限制滚动事件触发频率
 const throttleEvent = useThrottleFn(listenScroll, 300);
 
 onMounted(() => {

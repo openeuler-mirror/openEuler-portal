@@ -24,4 +24,11 @@ export default {
   reset: 'Reset',
   confirm: 'OK',
   loading: 'Loading',
+  overview: 'Overview',
+  brief_introduction: 'BriefIntroduction',
+  theme: 'theme',
+  description: 'description',
+  reference: 'referenceDocuments',
+  updated_packages: 'Updated software packages',
+  updated_hot_patches: 'Security Advisories',
 };
