@@ -4,6 +4,20 @@ titleTemplate: openEuler社区官网
 category: migration
 ---
 
+## 3.0.0-20250104 版本特性说明
+
+- ### 新增特性
+    1. 支持.NET Framework框架Web应用迁移至openEuler-20.03-LTS-SP1(仅支持aarch64)。
+
+    2. 支持对.NET Framework框架Web应用的源码进行兼容性扫描，包括：业务系统架构、三方库、数据库接口、Windows API。
+
+    3. 支持对中间件Nginx和Httpd的自动化部署。
+  
+    4. 支持服务启动。
+
+    5. 支持在迁移的每一个阶段进行回滚。
+
+    6. 支持迁移后的环境清理。
 
 ## 3.0.0-20240930 版本特性说明
 
