@@ -595,6 +595,8 @@ onUnmounted(() => {
   :deep(.o_box) {
     width: 320px;
   }
+}
+.o-input {
   :deep(.o_input) {
     width: 100%;
   }

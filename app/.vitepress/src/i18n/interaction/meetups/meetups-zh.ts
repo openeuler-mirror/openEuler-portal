@@ -8,6 +8,7 @@ export default {
     DETAIL_MEET: '参会信息',
     DETAIL_REVIEW: '精彩回顾',
     YEAR_PLAN: '年度规划',
+    LATEST_OVERVIEW: '活动概览',
     LATEST_EVENTS: '活动列表',
     COLLECT_EVENTS: '活动申请',
     DETAIL_NEWS: '最新活动',

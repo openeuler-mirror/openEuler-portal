@@ -28,9 +28,11 @@ import { changeTimeStamp } from '~@/utils/common';
 
 import { useRoute } from 'vitepress';
 import { useLocale } from '~@/composables/useLocale';
+import { useScreen } from '~@/composables/useScreen';
 
 const route = useRoute();
 const { t, locale } = useLocale();
+const { lePadV } = useScreen();
 
 const activeTab = ref(0);
 
@@ -117,7 +119,7 @@ onMounted(() => {
 <template>
   <div class="safety-bulletin-detail">
     <ContentWrapper :vertical-padding="['32px', '72px']">
-      <OBreadcrumb>
+      <OBreadcrumb v-if="!lePadV">
         <OBreadcrumbItem :href="route.path.replace('detail/', '')">{{
           t('safetyBulletin.securityBulletin')
         }}</OBreadcrumbItem>
@@ -441,6 +443,7 @@ onMounted(() => {
 @include respond-to('<=pad_v') {
   .banner {
     padding: 24px 12px;
+    margin-top: 0;
   }
   .text-box {
     @include text1;

@@ -196,7 +196,7 @@ onMounted(() => {
 <template>
   <div class="cve-detail">
     <ContentWrapper :vertical-padding="['32px', '72px']">
-      <OBreadcrumb>
+      <OBreadcrumb v-if="!lePadV">
         <OBreadcrumbItem :href="route.path.replace('detail/', '')">{{
           t('cve.cve')
         }}</OBreadcrumbItem>
@@ -566,6 +566,7 @@ ul {
 @include respond-to('<=pad_v') {
   .banner {
     padding: 24px 12px;
+    margin-top: 0;
   }
   .text-box {
     @include text1;

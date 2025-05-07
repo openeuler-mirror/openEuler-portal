@@ -1,5 +1,6 @@
 ---
 title: '安全公告详情'
+simpleHeader: '/zh/security/security-bulletins/'
 ---
 
 <script setup lang="ts">

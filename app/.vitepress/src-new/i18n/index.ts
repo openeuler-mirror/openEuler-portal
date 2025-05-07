@@ -16,6 +16,7 @@ import home from './home';
 import download from './download';
 import safetyBulletin from './safety-bulletin';
 import cve from './cve';
+import eventOverview from './event-overview';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -69,6 +70,7 @@ const messages = {
     download: download.zh,
     safetyBulletin: safetyBulletin.zh,
     cve: cve.zh,
+    eventOverview: eventOverview.zh,
   },
   en: {
     // 公共模块
@@ -86,6 +88,7 @@ const messages = {
     download: download.en,
     safetyBulletin: safetyBulletin.en,
     cve: cve.en,
+    eventOverview: eventOverview.en,
   },
 };
 
