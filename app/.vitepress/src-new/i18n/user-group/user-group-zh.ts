@@ -17,7 +17,7 @@ export default {
   subscribeDesc:
     '订阅城市用户组邮件列表，接收社区技术进展、用户组活动信息，参与用户组讨论。',
   joinWechat: '进入用户组微信群',
-  wechatDesc: '添加openEuler小助手微信，备注"xx用户组进群"',
+  wechatDesc: '添加openEuler小助手微信，备注"xx（城市）用户组进群"',
   cityEvent: '城市活动',
   eventDesc:
     'openEuler社区鼓励用户组成员自发举办活动，通过call for meetup申请，社区将给予一定的活动资源和物料支持',
@@ -27,4 +27,7 @@ export default {
   showcaseDesc:
     '欢迎用户组成员分享使用openEuler的案例实践，优秀案例将在用户组内、社区官方传播渠道宣传推广，为其它用户提供参考，打造用户产品影响力',
   provideCase: '提供案例',
+  waiting: '虚位以待',
+  waitDesc: '如何成为Organizer、Ambassador？',
+  viewNow: '立即查看',
 };

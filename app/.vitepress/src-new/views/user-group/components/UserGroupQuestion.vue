@@ -10,7 +10,9 @@ import IconHook from '~icons/user-group/hook.svg';
       <div class="subtitle">
         <span>
           {{ questionData.desc1 }}
-          <a :href="`mailto:${questionData.mail}`">user@openeuler.sh</a>
+          <a :href="`mailto:${questionData.mail}`" class="hover-underline"
+            >user@openeuler.sh</a
+          >
           {{ questionData.desc2 }}
         </span>
       </div>
@@ -76,7 +78,16 @@ import IconHook from '~icons/user-group/hook.svg';
     }
   }
 
-  .organizer {
+  .card.organizer {
+    position: relative;
+  }
+  .card.organizer::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -86,14 +97,10 @@ import IconHook from '~icons/user-group/hook.svg';
   .tip-item {
     display: flex;
     gap: var(--o-gap-3);
-    align-items: center;
+    align-items: flex-start;
 
     &.first-item {
       padding-top: var(--o-gap-7);
-
-      .icon {
-        margin-bottom: var(--o-gap-5);
-      }
     }
 
     &:not(:last-child) {
@@ -149,6 +156,12 @@ import IconHook from '~icons/user-group/hook.svg';
         }
       }
     }
+  }
+}
+
+[data-o-theme='dark'] {
+  .card.organizer::before {
+    filter: brightness(80%) grayscale(20%) contrast(1.2);
   }
 }
 </style>

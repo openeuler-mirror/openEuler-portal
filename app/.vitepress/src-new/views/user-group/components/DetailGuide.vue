@@ -1,8 +1,11 @@
 <script lang="ts" setup>
+import { useI18n } from 'vue-i18n';
 import AppSection from '~@/components/AppSection.vue';
 import { guideData } from '~@/data/user-group';
-import { useI18n } from 'vue-i18n';
 import { OButton } from '@opensig/opendesign';
+import { useScreen } from '~@/composables/useScreen';
+
+const { lePadV } = useScreen();
 
 const { t } = useI18n();
 </script>
@@ -14,13 +17,15 @@ const { t } = useI18n();
         <p class="title">{{ t('usergroup.subscribe') }}</p>
         <p class="desc">{{ t('usergroup.subscribeDesc') }}</p>
         <div>
-          <a :href="`mailto:${guideData.link1}`">{{ guideData.link1 }}</a>
+          <a :href="`mailto:${guideData.link1}`" class="hover-underline">{{
+            guideData.link1
+          }}</a>
         </div>
         <OButton
           animation
           variant="outline"
           color="primary"
-          size="medium"
+          :size="lePadV ? 'small' : 'medium'"
           class="button"
           :href="guideData.link2"
         >
@@ -48,12 +53,6 @@ const { t } = useI18n();
 </template>
 
 <style lang="scss" scoped>
-.group-guide {
-  :deep(.section-wrapper) {
-    margin-top: 54px;
-  }
-}
-
 .guide {
   width: 100%;
   background-color: var(--o-color-fill2);

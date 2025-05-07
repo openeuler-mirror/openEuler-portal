@@ -206,7 +206,7 @@ export default [
     lang: ['zh', 'en'],
   },
   {
-    name: 'user-group',
+    name: 'user-group/**',
     lang: ['zh'],
   },
   {

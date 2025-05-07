@@ -1,14 +1,18 @@
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { PropType } from 'vue';
 import { OCard, OButton } from '@opensig/opendesign';
-import AppSection from '~@/components/AppSection.vue';
 import { useI18n } from 'vue-i18n';
+import AppSection from '~@/components/AppSection.vue';
 import { casesZh } from '~@/data/home/case';
 import { linkData } from '~@/data/user-group';
+import { useScreen } from '~@/composables/useScreen';
+import type { ShowCaseT } from '~@/@types/type-user-group';
+
+const { lePadV } = useScreen();
 
 defineProps({
   options: {
-    type: Array,
+    type: Array as PropType<Array<ShowCaseT>>,
     default() {
       return [];
     },
@@ -18,7 +22,7 @@ defineProps({
 const { t } = useI18n();
 
 const toNewsContent = (path: string) => {
-  window.open(`/${path}.html`, '_blank');
+  window.open(`/${path}`, '_blank');
 };
 
 const cardIcon = (type: string) => {
@@ -40,6 +44,7 @@ const cardIcon = (type: string) => {
         hoverable
         :title="item.title"
         :title-row="1"
+        :title-max-row="1"
         :detail="item.summary"
         :detail-row="2"
         :detail-max-row="2"
@@ -54,7 +59,7 @@ const cardIcon = (type: string) => {
           animation
           variant="solid"
           color="primary"
-          size="large"
+          :size="lePadV ? 'small' : 'large'"
           class="button"
           :href="linkData.provideCase"
         >

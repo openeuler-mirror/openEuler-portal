@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { OBreadcrumb, OBreadcrumbItem } from '@opensig/opendesign';
 import { computed } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from 'vue-i18n';
+import { OBreadcrumb, OBreadcrumbItem } from '@opensig/opendesign';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 import { detailData } from '~@/data/user-group';
 import { useScreen } from '~@/composables/useScreen';

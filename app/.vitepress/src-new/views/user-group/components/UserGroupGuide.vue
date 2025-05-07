@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import AppSection from '~@/components/AppSection.vue';
-
 import { guideData } from '~@/data/user-group';
+
 import IconMail from '~icons/user-group/mail.svg';
 import IconWechat from '~icons/user-group/wechat.svg';
 </script>
@@ -22,8 +22,14 @@ import IconWechat from '~icons/user-group/wechat.svg';
               <OIcon class="icon"><IconMail /></OIcon>
               <p class="desc">{{ guideData.desc2 }}</p>
             </div>
-            <a :href="`mailto:${guideData.link1}`">{{ guideData.link1 }}</a>
-            <a :href="guideData.link2">{{ guideData.mail }}</a>
+            <a :href="`mailto:${guideData.link1}`" class="hover-underline">{{
+              guideData.link1
+            }}</a>
+            <div>
+              <a :href="guideData.link2" class="hover-underline">{{
+                guideData.mail
+              }}</a>
+            </div>
           </div>
           <div class="split-line2"></div>
           <div class="method method-right">
@@ -46,7 +52,7 @@ import IconWechat from '~icons/user-group/wechat.svg';
 <style lang="scss" scoped>
 .group-guide {
   :deep(.section-wrapper) {
-    margin-top: 54px;
+    margin-top: var(--o-gap-7);
 
     @include respond-to('phone') {
       margin-top: 28px;
@@ -59,12 +65,12 @@ import IconWechat from '~icons/user-group/wechat.svg';
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
   min-height: 224px;
-  padding: var(--o-gap-7) 76px;
+  padding: var(--o-gap-7);
   display: flex;
   gap: 78px;
 
   .guide-left {
-    flex: 1.2;
+    flex: 1.1;
   }
 
   .split-line1 {
@@ -86,6 +92,10 @@ import IconWechat from '~icons/user-group/wechat.svg';
         &.method-right {
           flex-direction: row;
           gap: var(--o-gap-5);
+
+          .contact-item {
+            margin-bottom: var(--o-gap-2);
+          }
         }
       }
       .split-line2 {
@@ -180,9 +190,15 @@ import IconWechat from '~icons/user-group/wechat.svg';
 
     .contact-method {
       display: flex;
+      max-width: 840px;
 
       .method {
         flex: 1;
+
+        &.method-right {
+          display: flex;
+          justify-content: flex-end;
+        }
       }
     }
   }

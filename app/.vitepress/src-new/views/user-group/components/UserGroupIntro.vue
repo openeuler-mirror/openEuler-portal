@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import AppSection from '~@/components/AppSection.vue';
-import { introData } from '~@/data/user-group';
 import { useI18n } from 'vue-i18n';
-import IconHook from '~icons/user-group/hook.svg';
+import AppSection from '~@/components/AppSection.vue';
 import { useScreen } from '~@/composables/useScreen';
+import { introData } from '~@/data/user-group';
+import IconHook from '~icons/user-group/hook.svg';
 
 const { isPhone } = useScreen();
 
@@ -42,8 +42,12 @@ const { t } = useI18n();
             <OIcon class="icon"><IconHook /></OIcon>
             <p v-if="typeof right === 'string'" class="desc">{{ right }}</p>
             <div v-else>
-              <span style="margin-right: 4px">{{ right.text }}</span>
-              <a :href="right.url">{{ right.operation }}</a>
+              <span style="margin-right: 4px" class="desc">{{
+                right.text
+              }}</span>
+              <a :href="right.url" class="hover-underline">{{
+                right.operation
+              }}</a>
             </div>
           </div>
         </div>
@@ -61,7 +65,9 @@ const { t } = useI18n();
             </p>
             <div v-else class="obligation-desc">
               <span>{{ obligation.text }}</span>
-              <a :href="obligation.url">{{ obligation.operation }}</a>
+              <a :href="obligation.url" class="hover-underline text-button">{{
+                obligation.operation
+              }}</a>
             </div>
           </div>
         </div>
@@ -130,7 +136,7 @@ const { t } = useI18n();
     @include text1;
     display: flex;
     gap: var(--o-gap-2);
-    align-items: center;
+    align-items: flex-start;
 
     &:not(:last-child) {
       margin-bottom: var(--o-gap-3);
@@ -164,6 +170,12 @@ const { t } = useI18n();
       display: flex;
       justify-content: space-between;
       width: 100%;
+      color: var(--o-color-info2);
+      gap: var(--o-gap-2);
+
+      .text-button {
+        min-width: 56px;
+      }
     }
 
     .desc {
@@ -224,7 +236,7 @@ const { t } = useI18n();
   }
 }
 
-@include respond-to('pad_v-laptop') {
+@include respond-to('pad_h') {
   .intro-list {
     flex-direction: column;
 

@@ -1,12 +1,17 @@
 <script lang="ts" setup>
+import type { PropType } from 'vue';
 import { OCard, OButton } from '@opensig/opendesign';
-import AppSection from '~@/components/AppSection.vue';
 import { useI18n } from 'vue-i18n';
+import AppSection from '~@/components/AppSection.vue';
 import { linkData } from '~@/data/user-group';
+import { useScreen } from '~@/composables/useScreen';
+import type { NewsDataT } from '@/shared/@types/type-news';
+
+const { lePadV } = useScreen();
 
 defineProps({
   options: {
-    type: Array,
+    type: Array as PropType<Array<NewsDataT>>,
     default() {
       return [];
     },
@@ -16,7 +21,7 @@ defineProps({
 const { t } = useI18n();
 
 const toNewsContent = (path: string) => {
-  window.open(`/${path}.html`, '_blank');
+  window.open(`/${path}`, '_blank');
 };
 </script>
 
@@ -34,6 +39,7 @@ const toNewsContent = (path: string) => {
         hoverable
         :title="item.title"
         :title-row="2"
+        :title-max-row="2"
         :detail="item.summary"
         :detail-max-row="2"
       >
@@ -47,7 +53,7 @@ const toNewsContent = (path: string) => {
           animation
           variant="solid"
           color="primary"
-          size="large"
+          :size="lePadV ? 'small' : 'large'"
           class="button"
           :href="linkData.applyEvent"
         >

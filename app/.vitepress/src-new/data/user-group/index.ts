@@ -1,4 +1,4 @@
-import newyear_pc from '~@/assets/category/home/banner/new-year/pc.jpg';
+import user_group_banner from '~@/assets/category/user-group/common/user-group-banner.jpg';
 import wechat from '~@/assets/category/user-group/common/wechat.png';
 import member from '~@/assets/category/user-group/common/member.png';
 import ambassador from '~@/assets/category/user-group/common/ambassador.png';
@@ -13,7 +13,7 @@ import detail_banner_mb from '~@/assets/category/user-group/common/detail-banner
 import detail_banner_mb_dark from '~@/assets/category/user-group/common/detail-banner-mb-dark.jpg';
 
 export const bannerData = {
-  bg_pc: newyear_pc,
+  bg_pc: user_group_banner,
   title: 'openEuler 用户组',
   desc: '订阅 openEuler 用户组邮件列表，接收社区技术进展、用户组活动信息，参与用户组讨论',
   btn: '订阅邮件',
@@ -25,11 +25,11 @@ export const guideData = {
   subtitle1: '什么是用户组？',
   subtitle2: '加入用户组',
   desc1:
-    'openEuler 用户组（openEuler User Group，简称oEUG）旨在为各区域openEuler用户、开发者构建一个开放多元的本地化交流圈子，在这里用户组成员可以基于openEuler的技术特性、使用经验、实践案例、社区贡献、开源文化等方面有更多集中的交流机会，共建openEuler区域用户生态。',
+    'openEuler 用户组（openEuler User Group，简称oEUG）旨在为各区域openEuler用户、开发者构建一个开放多元的本地化交流圈子，在这里用户组成员可以基于openEuler的技术特性、使用经验、实践案例、社区贡献、开源文化等方面有更多集中的交流机会，共建openEuler区域用户生态',
   desc2: '关注用户组邮件列表',
   desc3: '加入微信群',
   tip1: '添加openEuler小助手微信',
-  tip2: '备注"xx用户组进群"',
+  tip2: '备注"xx（城市）用户组进群"',
   link1: 'user-group@openeuler.org',
   link2:
     'https://mailweb.openeuler.org/postorius/lists/user-group@openeuler.org/',
@@ -45,7 +45,7 @@ export const introData = {
       title: [
         {
           name: 'Member',
-          desc: '会员，参与组内交流分享，参与活动，输出使用经验，提交用户反馈。',
+          desc: '会员，参与组内交流分享，参与活动，输出使用经验，提交用户反馈',
         },
       ],
       background: member,
@@ -74,7 +74,7 @@ export const introData = {
       title: [
         {
           name: 'Ambassador',
-          desc: '传播大使，在公开活动或 线上平台分享 openEuler 内容，解答用户问题，利用自身影响力在行业中进行布道。',
+          desc: '传播大使，在公开活动或 线上平台分享 openEuler 内容，解答用户问题，利用自身影响力在行业中进行布道',
         },
       ],
       background: ambassador,
@@ -98,11 +98,11 @@ export const introData = {
       title: [
         {
           name: 'Organizer',
-          desc: '组织者，整体统筹和规划该城市用户组发展计划，引导策划运营活动，统筹日常运营工作。',
+          desc: '组织者，整体统筹和规划该城市用户组发展计划，引导策划运营活动，统筹日常运营工作',
         },
         {
           name: 'Co-organizer',
-          desc: '协助组织者角色。协助发展用户组成员，发起组织活动。',
+          desc: '协助组织者角色。协助发展用户组成员，发起组织活动',
         },
       ],
       background: coorganizer,
@@ -114,7 +114,7 @@ export const introData = {
         {
           text: '一年至少发起组织一次用户组活动',
           operation: '举办活动',
-          url: '/zh/interaction/event-list/collect/',
+          url: '/zh/interaction/event-list/#activity-apply',
         },
       ],
     },
@@ -149,7 +149,7 @@ export const detailData = {
 };
 
 export const linkData = {
-  applyEvent: '/zh/interaction/event-list/collect/',
+  applyEvent: '/zh/interaction/event-list/#activity-apply',
   provideCase:
     'https://gitee.com/openeuler/community/blob/master/zh/contributors/user-story-guideline.md',
 };

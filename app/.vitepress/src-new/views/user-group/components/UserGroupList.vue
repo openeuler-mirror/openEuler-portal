@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import AppSection from '~@/components/AppSection.vue';
-import { OCard } from '@opensig/opendesign';
-import cityData from '~@/data/user-group/city/';
 import { useI18n } from 'vue-i18n';
 import { useData } from 'vitepress';
+import { OCard } from '@opensig/opendesign';
+import AppSection from '~@/components/AppSection.vue';
+import cityData from '~@/data/user-group/city/';
 
 const { t } = useI18n();
 const { lang } = useData();
@@ -55,8 +55,14 @@ const { lang } = useData();
     }
 
     :deep(.o-card-content) {
-      @include h2;
+      font-size: 28px;
+      line-height: 40px;
+      font-weight: 500;
       color: rgba(var(--o-white));
+
+      @include respond-to('<=laptop') {
+        @include h2;
+      }
     }
   }
 }
