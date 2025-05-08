@@ -1,18 +1,15 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { useData } from 'vitepress';
-import { useI18n } from 'vue-i18n';
 import { OBreadcrumb, OBreadcrumbItem } from '@opensig/opendesign';
+import { useLocale } from '~@/composables/useLocale';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 import { detailData } from '~@/data/user-group';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
 import IconJoinGroup from '~icons/user-group/join-group.svg';
 
+const { t, locale } = useLocale();
 const { isPhone } = useScreen();
-
-const { t } = useI18n();
-const { lang } = useData();
 
 const commonStore = useCommon();
 const isDark = computed(() => {
@@ -36,7 +33,7 @@ const breadCrumbs = computed(() => {
   return [
     {
       title: t('usergroup.openEulerGroup'),
-      to: `/${lang.value}/community/user-group/`,
+      to: `/${locale.value}/community/user-group/`,
     },
     {
       title: props.cityGroup,

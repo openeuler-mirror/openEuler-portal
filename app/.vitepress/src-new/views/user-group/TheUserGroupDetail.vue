@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vitepress';
-import { useI18n } from 'vue-i18n';
+import { useLocale } from '~@/composables/useLocale';
 import cityData from '~@/data/user-group/city/';
 import DetailIntroCard from './components/DetailIntroCard.vue';
 import DetailMember from './components/DetailMember.vue';
@@ -9,8 +9,8 @@ import DetailGuide from './components/DetailGuide.vue';
 import DetailEvent from './components/DetailEvent.vue';
 import DetailCase from './components/DetailCase.vue';
 
-const { t } = useI18n();
 const router = useRouter();
+const { t, locale } = useLocale();
 
 const groupData = ref();
 const cityGroup = ref();
@@ -20,10 +20,10 @@ onMounted(() => {
     const city = params.get('name');
     cityGroup.value = `${city}${t('usergroup.userGroup')}`;
     const data = cityData.find((item) => item.name === city);
-    if (!data) router.go('/zh/community/user-group/');
+    if (!data) router.go(`/${locale.value}/community/user-group/`);
     groupData.value = data?.data ?? {};
   } else {
-    router.go('/zh/community/user-group/');
+    router.go(`/${locale.value}/community/user-group/`);
   }
 });
 </script>

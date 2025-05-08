@@ -1,5 +1,5 @@
 import { CasesRecordsT } from '@/shared/@types/type-showcase';
-import type { NewsDataT } from '@/shared/@types/type-news';
+import type { NewsDataT } from '~@/@types/type-news';
 
 export interface CityItemT {
   name: string;
