@@ -42,16 +42,6 @@ const getActivitiesData = () => {
   );
 };
 
-// 活动回顾
-const review = () => {
-  const banner = document.querySelector('.event-detail .banner') as HTMLElement;
-
-  window?.scrollTo({
-    top: lePadV ? banner?.offsetHeight + 48 : banner?.offsetHeight + 140,
-    behavior: 'smooth',
-  });
-};
-
 onMounted(() => {
   getActivitiesData();
 });
@@ -99,8 +89,9 @@ onMounted(() => {
           variant="solid"
           color="primary"
           :size="lePadV ? 'medium' : 'large'"
+          :href="detailObj?.new_url"
+          target="_blank"
           class="review-btn"
-          @click="review"
         >
           <span>{{ t('eventOverview.review') }}</span>
         </OButton>
@@ -130,6 +121,7 @@ onMounted(() => {
   background-size: auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   @include tip1;
 }
 .title-box {
@@ -152,7 +144,7 @@ onMounted(() => {
   --tag-bd-color: var(--o-color-primary4);
 }
 .synopsis {
-  width: 69%;
+  width: 932px;
   margin-top: 16px;
 }
 .date {
@@ -172,6 +164,10 @@ onMounted(() => {
   }
 }
 
+.review-btn {
+  --btn-min-width: 112px;
+}
+
 .content {
   background-color: var(--o-color-fill2);
   padding: 32px;
@@ -185,6 +181,21 @@ onMounted(() => {
 .content-dark {
   .o-figure {
     @include img-in-dark;
+  }
+}
+
+@include respond-to('laptop') {
+  .synopsis {
+    width: 860px;
+  }
+}
+
+@include respond-to('pad_h') {
+  .banner {
+    padding: 24px;
+  }
+  .synopsis {
+    width: 580px;
   }
 }
 
@@ -210,6 +221,7 @@ onMounted(() => {
   }
   .review-btn {
     margin-top: 16px;
+    --btn-min-width: 80px;
   }
   .content {
     background-color: transparent;

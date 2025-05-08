@@ -19,7 +19,7 @@ import {
 import { useRouter } from 'vitepress';
 
 import AppSection from '~@/components/AppSection.vue';
-import NotFound from '@/NotFound.vue';
+import ResultEmpty from '~@/components/ResultEmpty.vue';
 
 import { EventSeries, EventState, MEETUP_DATA } from '~@/data/activity/list';
 
@@ -117,7 +117,7 @@ const COUNT_PER_PAGE = [12, 24, 36, 48];
 const latestList = ref<any>([]);
 const currentList = ref<any>([]);
 
-const paramsGetSalon = () => {
+const activityList = () => {
   latestList.value = MEETUP_DATA[locale.value];
   params.currentPage = 1;
   params.pageSize = 12;
@@ -145,12 +145,12 @@ const paramsGetSalon = () => {
 };
 
 onMounted(() => {
-  paramsGetSalon();
+  activityList();
 });
 watch(
   () => params,
   () => {
-    paramsGetSalon();
+    activityList();
   },
   {
     deep: true,
@@ -308,7 +308,7 @@ const handleConfirm = () => {
               :src="lePadV ? item.posterImgMb : item.posterImg"
             >
               <div class="tags">
-                <OTag v-if="item?.series">
+                <OTag v-if="item?.series" class="series-tag">
                   <OIcon><IconDeveloperTag /></OIcon>
                   <span class="tag-text">
                     {{ EventSeries.get(item?.series)?.label[locale] }}
@@ -339,7 +339,11 @@ const handleConfirm = () => {
         </OCard>
       </OCol>
     </ORow>
-    <NotFound v-else class="nofound" :docs="t('eventOverview.empty')" />
+    <ResultEmpty
+      v-else
+      class="nofound"
+      :description="t('eventOverview.empty')"
+    />
 
     <!-- 分页 -->
     <div v-if="total > COUNT_PER_PAGE[0]" class="pagination">
@@ -427,6 +431,16 @@ const handleConfirm = () => {
 </template>
 
 <style lang="scss" scoped>
+.app-section {
+  --o-gap-section: 40px;
+
+  @include respond-to('<=laptop') {
+    --o-gap-section: 32px;
+  }
+  @include respond-to('phone') {
+    --o-gap-section: 16px;
+  }
+}
 .filter-card {
   background-color: var(--o-color-fill2);
   padding: 24px 32px;
@@ -533,10 +547,12 @@ const handleConfirm = () => {
   justify-content: center;
   text-align: center;
   cursor: pointer;
+  padding: 32px;
   .title {
     font-weight: 500;
-    height: 96px;
+    height: auto;
     @include h2;
+    @include text-truncate(3);
   }
   .date {
     margin-top: 24px;
@@ -547,11 +563,56 @@ const handleConfirm = () => {
   }
 }
 
+.o-figure {
+  width: 100%;
+}
+
 .pagination {
   margin-top: 32px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.nofound {
+  margin-top: 40px;
+}
+
+@include respond-to('laptop') {
+  .card-content {
+    padding: 24px;
+  }
+}
+
+@include respond-to('pad_h') {
+  .tags {
+    .o-tag {
+      :deep(.o-tag-label) {
+        font-size: 10px;
+        white-space: nowrap;
+      }
+    }
+    .series-tag {
+      --tag-padding: 0;
+      width: 104px;
+      :deep(.o-tag-label) {
+        margin-right: 11px;
+      }
+    }
+  }
+  .card-content {
+    padding: 40px 16px 24px;
+    .title {
+      @include text1;
+    }
+    .date {
+      margin-top: 8px;
+      @include tip1;
+    }
+    .city {
+      @include tip1;
+    }
+  }
 }
 
 @include respond-to('<=pad_v') {
@@ -573,8 +634,6 @@ const handleConfirm = () => {
     margin-top: 12px;
   }
   .card-content {
-    justify-content: flex-end;
-    padding-bottom: 16px;
     .title {
       height: auto;
       padding: 0 32px;
@@ -611,6 +670,19 @@ const handleConfirm = () => {
   }
   .dialog-footer {
     text-align: center;
+  }
+}
+
+@include respond-to('phone') {
+  .card-content {
+    padding: 16px 16px 0;
+  }
+}
+</style>
+<style lang="scss">
+@include respond-to('<=pad_v') {
+  .filter-body {
+    --layer-align: flex-end;
   }
 }
 </style>

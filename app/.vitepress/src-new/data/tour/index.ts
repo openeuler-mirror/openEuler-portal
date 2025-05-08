@@ -23,6 +23,7 @@ import stepUpdateImg from '~@/assets/category/tour/step-update.jpg';
 import stepToolImg from '~@/assets/category/tour/step-tool.jpg';
 import stepFooterImg from '~@/assets/category/tour/step-footer.jpg';
 import stepFeedbackImg from '~@/assets/category/tour/step-feedback.jpg';
+import stepDocsImg from '~@/assets/category/tour/step-docs.jpg';
 
 import i18n from '~@/i18n';
 
@@ -136,23 +137,35 @@ export const NEW_GUIDE_TOUR_STEPS = [
     extra: [],
   },
   {
-    bg: stepLearnImg,
-    target: '#tour_headerNav_learn',
-    color: '#7798FE',
-    placement: 'bottom',
-    href: '/',
-    title: '学习',
-    desc: ['展示文档中心、课程、迁移与运维、技术展示等资源'],
-    extra: [],
-  },
-  {
     bg: stepDevelopmentImg,
     target: '#tour_headerNav_development',
     color: '#7798FE',
     placement: 'bottom',
     href: '/',
     title: '开发',
-    desc: ['提供构建、测试、发布等一系列开发者所需要的工具'],
+    desc: ['提供贡献、构建、发布、分析等一系列开发者所需的指导和工具'],
+    extra: [],
+  },
+  {
+    bg: stepDocsImg,
+    target: '#tour_headerNav_document',
+    color: '#7798FE',
+    placement: 'bottom',
+    href: '/',
+    title: '文档',
+    desc: [
+      '提供服务器、虚拟化、云原生、边缘计算、嵌入式业务场景以及各种社区开发工具使用所需的文档手册',
+    ],
+    extra: [],
+  },
+  {
+    bg: stepLearnImg,
+    target: '#tour_headerNav_learn',
+    color: '#7798FE',
+    placement: 'bottom',
+    href: '/',
+    title: '学习',
+    desc: ['展示课程、高校、人才培养、开源实习等开发者成长所需的资源'],
     extra: [],
   },
   {
@@ -162,7 +175,7 @@ export const NEW_GUIDE_TOUR_STEPS = [
     placement: 'bottom',
     href: '/',
     title: '支持',
-    desc: ['提供兼容性测评、OSV技术测评、安全公告等资源'],
+    desc: ['提供兼容性测评、OSV技术测评、迁移与运维、安全公告等资源'],
     extra: [],
   },
   {
@@ -172,7 +185,7 @@ export const NEW_GUIDE_TOUR_STEPS = [
     placement: 'bottom',
     href: '/',
     title: '社区',
-    desc: ['展示社区组织、社区章程、贡献、人才评定、社区交流方式等资源'],
+    desc: ['展示社区组织、社区章程、白皮书、市场研究报告、社区交流方式等资源'],
     extra: [],
   },
   {

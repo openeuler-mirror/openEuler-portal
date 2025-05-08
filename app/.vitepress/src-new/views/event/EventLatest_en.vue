@@ -22,8 +22,8 @@ const { t } = useLocale();
     <ORow :gap="lePadV ? '0 12px' : '32px 32px'" wrap="wrap">
       <OCol
         :flex="lePadV ? ' 0 0 100%' : '0 0 33.33%'"
-        v-for="(item, i) in eventData"
-        :key="i"
+        v-for="item in eventData"
+        :key="item.title"
       >
         <OCard hoverable class="event-item">
           <template #cover>
@@ -63,6 +63,16 @@ const { t } = useLocale();
   </AppSection>
 </template>
 <style lang="scss" scoped>
+.app-section {
+  --o-gap-section: 40px;
+
+  @include respond-to('<=laptop') {
+    --o-gap-section: 32px;
+  }
+  @include respond-to('phone') {
+    --o-gap-section: 16px;
+  }
+}
 .o-card {
   --card-content-gap: 0;
   --card-footer-gap: 12px;

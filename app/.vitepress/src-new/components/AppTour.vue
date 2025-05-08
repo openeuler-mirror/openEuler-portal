@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { ref, computed, watch } from 'vue';
+import { ref, computed, watch, onUnmounted } from 'vue';
 import { useResizeObserver } from '@vueuse/core';
-import { OButton, OFigure, OIcon } from '@opensig/opendesign';
+import { OButton, OFigure, OIcon, OCheckbox } from '@opensig/opendesign';
 import { useRoute, useData } from 'vitepress';
 
 import IconClose from '~icons/app-new/icon-close.svg';
@@ -49,6 +49,8 @@ const handleStopWheel = (e: Event) => {
   e.preventDefault();
 };
 
+const promptVisible = ref<number[]>([]);
+
 // -------------------- 首页 中文页面  pc端 --------------------
 const isHome = computed(() => {
   return route.path === '/zh/' && lang.value === 'zh' && size.width > 1200;
@@ -75,7 +77,8 @@ watch(
 
 // 跳过
 const skip = () => {
-  if (newChangeVisible.value) {
+  const length = promptVisible.value.length;
+  if (newChangeVisible.value && !length) {
     currentStep.value = FIRST_TOUR_STEPS.length + NEW_CHANGE_TOUR_STEPS.length;
   } else {
     open.value = false;
@@ -151,14 +154,21 @@ useResizeObserver(window.document.body, () => {
 watch(
   () => open.value,
   (val) => {
-    if (!val && lang.value === 'zh' && size.width > 1200) {
-      localStorage.setItem('tour_guide', '20241112');
-    }
-    if (!val) {
-      window.removeEventListener('wheel', handleStopWheel);
+    const length = promptVisible.value.length;
+    if (length) {
+      if (!val && lang.value === 'zh' && size.width > 1200) {
+        localStorage.setItem('tour_guide', '20241112');
+      }
+      if (!val) {
+        window.removeEventListener('wheel', handleStopWheel);
+      }
     }
   }
 );
+
+onUnmounted(() => {
+  window.removeEventListener('wheel', handleStopWheel);
+});
 </script>
 <template>
   <el-tour
@@ -222,7 +232,10 @@ watch(
         </div>
       </div>
       <div class="tour-footer">
-        <div class="footer-item">
+        <div class="footer-item left-item">
+          <div class="check-btn">
+            <OCheckbox v-model="promptVisible" :value="1">不再提示</OCheckbox>
+          </div>
           <span v-if="newChangeVisible" class="indicator-text"
             >{{ currentStep + 1 - FIRST_TOUR_STEPS.length }}/{{
               NEW_CHANGE_TOUR_STEPS.length
@@ -236,7 +249,6 @@ watch(
               NEW_CHANGE_TOUR_STEPS.length
             }}/{{ NEW_GUIDE_TOUR_STEPS.length }}</span
           >
-          <span class="indicator-text skip" @click="skip">跳过</span>
         </div>
         <div class="footer-item">
           <span v-if="currentStep > 0" class="prev-step" @click="prevStep()"
@@ -252,7 +264,7 @@ watch(
           >
         </div>
       </div>
-      <OIcon v-if="!newGuideVisible" class="tour-close" @click="skip">
+      <OIcon class="tour-close" @click="skip">
         <IconClose />
       </OIcon>
     </el-tour-step>
@@ -314,11 +326,18 @@ watch(
     display: flex;
     align-items: center;
   }
-  .skip {
-    margin-left: 12px;
-    cursor: pointer;
-    @include hover {
-      color: var(--o-color-info1);
+  .left-item {
+    width: 50%;
+    justify-content: space-between;
+  }
+  .check-btn {
+    height: 24px;
+    .o-checkbox {
+      color: var(--o-color-info3);
+      @include tip2;
+    }
+    .o-checkbox-label {
+      color: var(--o-color-info3);
     }
   }
   .prev-step {
@@ -482,6 +501,28 @@ watch(
   .header-img {
     .o-figure {
       height: 100px;
+    }
+  }
+
+  .tour-close {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(var(--o-mixedgray-14), 0.25);
+    border-radius: 50%;
+    font-size: 24px;
+    color: var(--o-color-fill2);
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    @include x-svg-hover;
+
+    @include hover {
+      color: var(--o-color-primary2);
+    }
+
+    &.active {
+      color: var(--o-color-primary3);
     }
   }
 

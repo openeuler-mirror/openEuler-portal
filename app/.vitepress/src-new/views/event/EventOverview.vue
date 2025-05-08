@@ -8,7 +8,6 @@ import {
   OButton,
   OIcon,
   ODivider,
-  OFigure,
 } from '@opensig/opendesign';
 
 import AppSection from '~@/components/AppSection.vue';
@@ -185,6 +184,7 @@ watch(
     v-if="!lePadV && locale === 'zh'"
     :title="t('eventOverview.applyTitle')"
     :subtitle="t('eventOverview.appltDesc')"
+    id="activity-apply"
   >
     <ORow gap="32px 0" wrap="nowrap">
       <OCol flex="0 0 66%">
@@ -292,7 +292,7 @@ watch(
       </OCol>
     </ORow>
   </AppSection>
-  <div v-if="lePadV && locale === 'zh'" class="section-mb">
+  <div v-if="lePadV && locale === 'zh'" id="activity-apply" class="section-mb">
     <p class="section-title-mb">{{ t('eventOverview.applyTitle') }}</p>
     <p class="section-desc-mb">
       {{ t('eventOverview.appltDesc') }}
@@ -355,6 +355,16 @@ watch(
 </template>
 
 <style lang="scss" scoped>
+.app-section {
+  --o-gap-section: 40px;
+
+  @include respond-to('<=laptop') {
+    --o-gap-section: 32px;
+  }
+  @include respond-to('phone') {
+    --o-gap-section: 16px;
+  }
+}
 .months-box {
   background-image: linear-gradient(
     130deg,
@@ -506,7 +516,7 @@ watch(
 }
 
 .college-box {
-  padding: 12px 6px;
+  padding: 12px 0;
   position: relative;
 }
 .collegee-item {
@@ -529,6 +539,7 @@ watch(
   color: var(--o-color-info1);
   padding: 6px 0;
   background-color: #fff;
+  margin: 0 4px;
   @include tip1;
 }
 
@@ -586,7 +597,7 @@ watch(
 }
 .title-box {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .step {
   width: 20px;
@@ -597,6 +608,8 @@ watch(
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  margin-top: 6px;
   @include tip1;
 }
 .title {
@@ -669,6 +682,7 @@ watch(
     }
   }
   .o-link {
+    flex-shrink: 0;
     --link-color-hover: var(--o-color-white);
   }
 }
@@ -705,10 +719,86 @@ watch(
   }
 }
 
+@include respond-to('laptop') {
+  .apply-card {
+    height: 270px;
+    background-position: center bottom;
+    background-size: 380px auto;
+  }
+  .hold-card {
+    height: auto;
+    background-size: 216px auto;
+    .desc {
+      width: 70%;
+    }
+  }
+  .step {
+    margin-top: 4px;
+  }
+  .feedback-card {
+    height: auto;
+    .desc {
+      width: 100%;
+    }
+  }
+  .material2 {
+    width: 188px;
+    bottom: 118px;
+  }
+  .material1 {
+    width: 262px;
+  }
+}
+
+@include respond-to('pad_h') {
+  .apply-card {
+    height: 270px;
+    background-position: center bottom;
+    background-size: 304px auto;
+  }
+  .hold-card {
+    height: 120px;
+    background-size: 172px auto;
+    .desc {
+      width: 70%;
+    }
+  }
+  .step {
+    margin-top: 3px;
+  }
+  .feedback-card {
+    height: auto;
+    .desc {
+      width: 100%;
+    }
+  }
+  .material2 {
+    width: 150px;
+    bottom: 95px;
+  }
+  .material1 {
+    width: 210px;
+  }
+}
+
+@media (min-width: 841px) and (max-width: 960px) {
+  .apply-card {
+    height: 320px;
+  }
+  .material2 {
+    width: 120px;
+    bottom: 95px;
+  }
+  .material1 {
+    width: 180px;
+  }
+}
+
 @include respond-to('<=pad_v') {
   :deep(.el-collapse-item__header) {
     padding: 12px 16px;
     border-bottom: none;
+    border-radius: var(--o-radius-xs);
     &.is-active {
       border-bottom: none;
     }
@@ -730,6 +820,7 @@ watch(
   }
   :deep(.el-collapse-item__wrap) {
     border-bottom: none;
+    border-radius: var(--o-radius-xs);
   }
   .content-box {
     flex-direction: column;

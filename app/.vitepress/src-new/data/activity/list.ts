@@ -132,6 +132,7 @@ export const MEETUP_DATA = {
       posterImgMb: beijingMb,
       series: '3',
       detail_img: beijingDetail,
+      new_url: '/zh/news/openEuler/20250308-ddepin3/20250308-ddepin3.html',
     },
   ],
   en: [],
