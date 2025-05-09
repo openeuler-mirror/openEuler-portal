@@ -16,6 +16,7 @@ import home from './home';
 import download from './download';
 import safetyBulletin from './safety-bulletin';
 import cve from './cve';
+import usergroup from './user-group';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -69,6 +70,7 @@ const messages = {
     download: download.zh,
     safetyBulletin: safetyBulletin.zh,
     cve: cve.zh,
+    usergroup: usergroup.zh,
   },
   en: {
     // 公共模块
