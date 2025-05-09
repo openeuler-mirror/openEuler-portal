@@ -26,7 +26,7 @@ onMounted(async () => {
     <div class="pdf-header">
       <a
         class="download-btn"
-        href="/annual-report/openEuler-annual-report-2024.pdf"
+        :href="pdfUrl"
         download="openEuler-annual-report-2024.pdf"
       >
         <OIcon>
