@@ -26,7 +26,7 @@ import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
 const { t, locale } = useLocale();
-const { lePadV } = useScreen();
+const { lePadV, isPadVToLaptop } = useScreen();
 
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
@@ -42,6 +42,16 @@ const getActivitiesData = () => {
   );
 };
 
+const verticalPadding = computed(() => {
+  if (isPadVToLaptop.value) {
+    return ['16px', '40px'];
+  } else if (lePadV.value) {
+    return ['16px', '32px'];
+  } else {
+    return ['32px', '72px'];
+  }
+});
+
 onMounted(() => {
   getActivitiesData();
 });
@@ -49,7 +59,7 @@ onMounted(() => {
 
 <template>
   <div class="event-detail">
-    <ContentWrapper :vertical-padding="['32px', '72px']">
+    <ContentWrapper :vertical-padding="verticalPadding">
       <OBreadcrumb v-if="!lePadV">
         <OBreadcrumbItem :href="`/${locale}/interaction/event-list/latest/`">
           {{ t('eventOverview.list') }}
@@ -134,14 +144,14 @@ onMounted(() => {
 }
 .type-tag {
   margin-left: 16px;
-  --tag-padding: 3px 12px;
+  --tag-padding: 1px 8px;
   --tag-bg-color: rgba(var(--o-blue-6));
   --tag-bd-color: rgba(var(--o-blue-6));
   --tag-color: var(--o-color-white);
 }
 .tag-completed {
-  --tag-bg-color: var(--o-color-primary4);
-  --tag-bd-color: var(--o-color-primary4);
+  --tag-bg-color: rgba(var(--o-kleinblue-3), 0.4);
+  --tag-bd-color: transparent;
 }
 .synopsis {
   width: 932px;
@@ -210,14 +220,25 @@ onMounted(() => {
   .title-box {
     display: inline-block;
   }
+  .title {
+    @include h1;
+  }
   .synopsis {
     width: 100%;
+    @include tip2;
   }
   .date {
     margin-top: 12px;
+    @include tip2;
   }
   .address {
     margin-top: 8px;
+    align-items: flex-start;
+    @include tip2;
+  }
+  .o-icon {
+    font-size: 16px !important;
+    margin-top: 1px;
   }
   .review-btn {
     margin-top: 16px;
@@ -231,6 +252,21 @@ onMounted(() => {
   .o-figure {
     margin-top: 12px;
     --figure-radius: var(--o-radius-xs);
+  }
+}
+@include respond-to('phone') {
+  .title {
+    @include display3;
+  }
+  .synopsis {
+    width: 100%;
+    @include text1;
+  }
+  .date {
+    @include text1;
+  }
+  .address {
+    @include text1;
   }
 }
 </style>

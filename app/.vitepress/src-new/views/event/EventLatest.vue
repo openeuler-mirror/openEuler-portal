@@ -204,7 +204,7 @@ const handleConfirm = () => {
 </script>
 
 <template>
-  <AppSection :title="t('eventOverview.list')">
+  <AppSection :title="t('eventOverview.list')" class="event-latest">
     <div v-if="!lePadV" class="filter-card">
       <div class="filter">
         <p class="filter-title">{{ t('eventOverview.series') }}</p>
@@ -357,12 +357,7 @@ const handleConfirm = () => {
         @change="onPaginationChange"
       ></OPagination>
     </div>
-    <ODialog
-      v-model:visible="filterVisible"
-      size="medium"
-      :style="{ '--dlg-radius': '4px' }"
-      class="filter-body"
-    >
+    <ODialog v-model:visible="filterVisible" size="medium" class="filter-body">
       <template #header>
         <span class="del-title">{{ t('eventOverview.filter') }}</span>
       </template>
@@ -371,7 +366,7 @@ const handleConfirm = () => {
           <p class="filter-title">{{ t('eventOverview.series') }}</p>
           <ORadioGroup
             v-model="seriesValue"
-            :style="{ gap: lePadV ? '4px 4px' : '16px 8px' }"
+            :style="{ gap: lePadV ? '8px 8px' : '16px 8px' }"
           >
             <ORadio
               v-for="option in seriesOptions"
@@ -395,7 +390,7 @@ const handleConfirm = () => {
           <p class="filter-title">{{ t('eventOverview.state') }}</p>
           <ORadioGroup
             v-model="stateValue"
-            :style="{ gap: lePadV ? '4px 4px' : '16px 8px' }"
+            :style="{ gap: lePadV ? '8px 8px' : '16px 8px' }"
           >
             <ORadio
               v-for="option in stateOptions"
@@ -511,8 +506,8 @@ const handleConfirm = () => {
   width: calc(100% - 8px);
 
   .o-tag {
-    --tag-bg-color: var(--o-color-mask1);
-    --tag-bd-color: var(--o-color-mask1);
+    --tag-bg-color: var(--o-color-info4);
+    --tag-bd-color: var(--o-color-info4);
     backdrop-filter: blur(6px);
     border: none;
     --tag-color: var(--o-color-white);
@@ -576,6 +571,7 @@ const handleConfirm = () => {
 
 .nofound {
   margin-top: 40px;
+  --result-desc-color: var(--o-color-info1);
 }
 
 @include respond-to('laptop') {
@@ -616,6 +612,9 @@ const handleConfirm = () => {
 }
 
 @include respond-to('<=pad_v') {
+  .event-latest {
+    min-height: calc(100vh - 250px);
+  }
   .o-input {
     width: 100%;
   }
@@ -665,11 +664,19 @@ const handleConfirm = () => {
   }
   .o-toggle {
     --toggle-size: auto;
-    --toggle-padding: 6px 12px;
+    --toggle-padding: 4px 11px;
     max-height: auto;
   }
   .dialog-footer {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .o-btn {
+      flex: 1;
+    }
+  }
+  .divider-btn {
+    --o-divider-label-gap: 0 8px;
   }
 }
 
@@ -683,6 +690,9 @@ const handleConfirm = () => {
 @include respond-to('<=pad_v') {
   .filter-body {
     --layer-align: flex-end;
+    --dlg-margin: 16px;
+    --dlg-radius: 8px;
+    --dlg-width: calc(100vw - 32px);
   }
 }
 </style>
