@@ -70,7 +70,16 @@ export default defineConfig({
           path.resolve(__dirname, './.vitepress/src/assets/common/footer')
         ),
         security: FileSystemIconLoader(
-          path.resolve(__dirname, './.vitepress/src-new/assets/category/security/svg-icons')
+          path.resolve(
+            __dirname,
+            './.vitepress/src-new/assets/category/security/svg-icons'
+          )
+        ),
+        'user-group': FileSystemIconLoader(
+          path.resolve(
+            __dirname,
+            './.vitepress/src-new/assets/category/user-group/svg-icons'
+          )
         ),
         event: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src-new/assets/category/event/svg-icons')

@@ -17,6 +17,7 @@ import download from './download';
 import safetyBulletin from './safety-bulletin';
 import cve from './cve';
 import eventOverview from './event-overview';
+import usergroup from './user-group';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -71,6 +72,7 @@ const messages = {
     safetyBulletin: safetyBulletin.zh,
     cve: cve.zh,
     eventOverview: eventOverview.zh,
+    usergroup: usergroup.zh,
   },
   en: {
     // 公共模块

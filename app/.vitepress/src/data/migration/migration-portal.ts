@@ -99,7 +99,7 @@ export default {
           dark: imgDownloadLeft_dark,
         },
         name: 'x2openEuler',
-        version: '3.0.0-2024930',
+        version: '3.0.0-20250104',
       },
       btns: [
         {
@@ -107,11 +107,11 @@ export default {
           softLinks: [
             {
               name: 'x86_64 ',
-              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-core-3.0.0-20241022.x86_64.rpm',
+              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-core-3.0.0-latest.x86_64.rpm',
             },
             {
               name: 'aarch64 ',
-              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/aarch64/Packages/x2openEuler-core-3.0.0-20241022.aarch64.rpm',
+              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/aarch64/Packages/x2openEuler-core-3.0.0-latest.aarch64.rpm',
             },
           ],
         },
@@ -125,7 +125,16 @@ export default {
         },
         {
           name: '使用指南',
-          link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
+          softLinks: [
+            {
+              name: 'Linux迁移 ',
+              link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
+            },
+            {
+              name: 'Windows迁移 ',
+              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/aarch64/Packages/x2openEuler%20.NET迁移详细指导.docx',
+            },
+          ],
         },
         {
           name: '视频实操',
