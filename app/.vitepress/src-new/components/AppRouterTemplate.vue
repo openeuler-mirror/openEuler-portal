@@ -119,12 +119,18 @@ const activeRoute = computed(() => {
     display: flex;
     flex-direction: column;
     .title {
-      font-weight: 500;
       @include text2;
     }
     .subtitle {
       margin-top: 4px;
       @include text1;
+    }
+  }
+}
+.active {
+  .info {
+    .title {
+      font-weight: 500;
     }
   }
 }

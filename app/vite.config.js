@@ -81,6 +81,9 @@ export default defineConfig({
             './.vitepress/src-new/assets/category/user-group/svg-icons'
           )
         ),
+        event: FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src-new/assets/category/event/svg-icons')
+        ),
       },
     }),
   ],

@@ -58,12 +58,13 @@ const subTitle = computed(() => {
           '--content-wrapper-vertical-paddingTop': '0',
           '--content-wrapper-vertical-paddingBottom': '0',
         }"
+        @click="handleToggleDrawer"
       >
         <div class="left-info">
           <span>{{ bannerData.bannerTitle }}</span>
           <OTag> {{ subTitle }} </OTag>
         </div>
-        <div @click="handleToggleDrawer" class="right-icon">
+        <div class="right-icon">
           <OIcon :class="{ reversal: shownSelect }"> <IconChevronDown /></OIcon>
         </div>
       </ContentWrapper>

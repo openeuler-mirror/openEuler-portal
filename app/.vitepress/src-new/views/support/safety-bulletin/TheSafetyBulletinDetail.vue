@@ -26,13 +26,13 @@ import { securityNoticeNos, typeMap } from '~@/data/safety-bulletin';
 
 import { changeTimeStamp } from '~@/utils/common';
 
-import { useI18n } from '@/i18n';
 import { useRoute } from 'vitepress';
 import { useLocale } from '~@/composables/useLocale';
+import { useScreen } from '~@/composables/useScreen';
 
-const i18n = useI18n();
 const route = useRoute();
 const { t, locale } = useLocale();
+const { lePadV } = useScreen();
 
 const activeTab = ref(0);
 
@@ -119,9 +119,9 @@ onMounted(() => {
 <template>
   <div class="safety-bulletin-detail">
     <ContentWrapper :vertical-padding="['32px', '72px']">
-      <OBreadcrumb>
+      <OBreadcrumb v-if="!lePadV">
         <OBreadcrumbItem :href="route.path.replace('detail/', '')">{{
-          i18n.safetyBulletin.SECURITY_ADVISORIES
+          t('safetyBulletin.securityBulletin')
         }}</OBreadcrumbItem>
         <OBreadcrumbItem>{{ securityNoticeNo }}</OBreadcrumbItem>
       </OBreadcrumb>
@@ -138,7 +138,7 @@ onMounted(() => {
           </OTag>
         </div>
         <div class="text-box">
-          <span class="gray">{{ i18n.safetyBulletin.SYNOPSIS }}:</span>
+          <span class="gray">{{ t('safetyBulletin.summary') }}:</span>
           <span>{{ detailData.summary }}</span>
         </div>
         <div class="time text-box">
@@ -155,29 +155,29 @@ onMounted(() => {
       </div>
       <div class="content">
         <OTab v-model="activeTab" :line="false">
-          <OTabPane :label="i18n.safetyBulletin.OVERVIEW" :value="0">
+          <OTabPane :label="t('safetyBulletin.overview')" :value="0">
             <div class="info-item">
-              <p class="label">{{ i18n.safetyBulletin.BRIEF_INTRODUCTION }}</p>
+              <p class="label">{{ t('safetyBulletin.brief_introduction') }}</p>
               <p class="desc">{{ detailData.introduction }}</p>
             </div>
             <div class="info-item">
-              <p class="label">{{ i18n.safetyBulletin.SEVERITY }}</p>
+              <p class="label">{{ t('safetyBulletin.severityLevel') }}</p>
               <p class="desc">{{ detailData.type }}</p>
             </div>
             <div class="info-item">
-              <p class="label">{{ i18n.safetyBulletin.THEME }}</p>
+              <p class="label">{{ t('safetyBulletin.theme') }}</p>
               <p class="desc">{{ detailData.subject }}</p>
             </div>
             <div class="info-item">
-              <p class="label">{{ i18n.safetyBulletin.DESCRIPTION }}</p>
+              <p class="label">{{ t('safetyBulletin.description') }}</p>
               <p class="desc">{{ detailData.description }}</p>
             </div>
             <div class="info-item">
-              <p class="label">{{ i18n.safetyBulletin.AFFECTED_COMPONENTS }}</p>
+              <p class="label">{{ t('safetyBulletin.affectedComponent') }}</p>
               <p class="desc">{{ detailData.affectedComponent }}</p>
             </div>
             <div class="info-item info-cve">
-              <p class="label">{{ i18n.safetyBulletin.CVE }}</p>
+              <p class="label">{{ t('safetyBulletin.cve') }}</p>
               <p
                 v-for="(item, index) in cveIdList"
                 :key="index"
@@ -193,7 +193,7 @@ onMounted(() => {
               </p>
             </div>
             <div class="info-item info-cve">
-              <p class="label">{{ i18n.safetyBulletin.REFERENCE_DOCUMENTS }}</p>
+              <p class="label">{{ t('safetyBulletin.reference') }}</p>
               <p
                 v-for="(item, index) in detailData.referenceList"
                 :key="index"
@@ -212,7 +212,7 @@ onMounted(() => {
           </OTabPane>
           <OTabPane
             v-if="detailData?.packageHelperList?.length"
-            :label="i18n.safetyBulletin.UPDATED_PACKAGES"
+            :label="t('safetyBulletin.updated_packages')"
             :value="1"
           >
             <ORow gap="0 12px" wrap="wrap">
@@ -254,7 +254,7 @@ onMounted(() => {
           </OTabPane>
           <OTabPane
             v-if="detailData?.packageHotpatchList?.length"
-            :label="i18n.safetyBulletin.UPDATED_HOT_PATCHES"
+            :label="t('safetyBulletin.updated_hot_patches')"
             :value="2"
           >
             <ORow gap="0 12px" wrap="wrap">
@@ -443,6 +443,7 @@ onMounted(() => {
 @include respond-to('<=pad_v') {
   .banner {
     padding: 24px 12px;
+    margin-top: 0;
   }
   .text-box {
     @include text1;

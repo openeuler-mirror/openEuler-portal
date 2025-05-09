@@ -12,7 +12,7 @@ category: event
 ---
 
 <script setup lang="ts">
-    import EventLatest from '@/views/event/EventLatest.vue'
+    import EventLatest from '~@/views/event/EventLatest.vue'
 </script>
 
 <EventLatest />

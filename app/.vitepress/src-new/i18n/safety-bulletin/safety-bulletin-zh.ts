@@ -23,4 +23,11 @@ export default {
   reset: '重置',
   confirm: '确定',
   loading: '加载中',
+  overview: '概述',
+  brief_introduction: '简介',
+  theme: '主题',
+  description: '描述',
+  reference: '参考',
+  updated_packages: '更新的软件包',
+  updated_hot_patches: '更新的热补丁',
 };

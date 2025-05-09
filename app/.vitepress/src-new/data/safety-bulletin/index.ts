@@ -55,7 +55,8 @@ export const securityNoticeNos = [
 // 从2020年开始生成年份
 const currentYear = new Date().getFullYear();
 const queryYears = [] as string[];
-for (let year = currentYear; year >= 2020; year--) {
+const YEAR = 2020;
+for (let year = currentYear; year >= YEAR; year--) {
   queryYears.push(year.toString());
 }
 queryYears.unshift('');

@@ -1,5 +1,6 @@
 ---
 title: 'CVE详情'
+simpleHeader: '/zh/security/cve/'
 ---
 
 <script setup lang="ts">

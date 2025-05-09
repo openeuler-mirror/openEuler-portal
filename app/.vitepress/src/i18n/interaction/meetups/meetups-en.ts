@@ -5,6 +5,7 @@ export default {
     DETAIL_DESC: 'Introduction',
     DETAIL_FLOW: 'Agenda',
     MORE_VIDEO: 'More video',
+    LATEST_OVERVIEW: 'Event Overview',
     LATEST_EVENTS: 'Latest Events',
     DETAIL_MEET: 'How to attend the event',
     DETAIL_NEWS: 'Latest Activity',
