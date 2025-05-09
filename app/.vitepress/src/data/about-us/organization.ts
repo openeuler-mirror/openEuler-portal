@@ -64,7 +64,6 @@ import zhangyin from '@/assets/category/organization/brand/zhangyin.png';
 import humingyue from '@/assets/category/organization/brand/humingyu.png';
 
 // 用户委员会
-import xiule from '@/assets/category/organization/user/xiulei.png';
 import gaohonghe from '@/assets/category/organization/user/gaohonghe.png';
 import wangjun from '@/assets/category/organization/user/wangjun.png';
 import wangyouhai from '@/assets/category/organization/user/wangyouhai.png';
@@ -534,10 +533,10 @@ export default {
         title: 'openEuler 用户委员会',
         list: [
           {
-            img: xiule,
-            name: '薛蕾',
+            img: wangjun,
+            name: '王军',
             position: ['主席'],
-            email: 'xuelei@cmss.chinamobile.com',
+            email: 'junwangs@isoftstone.com',
           },
           {
             img: chenjin,
@@ -586,12 +585,6 @@ export default {
             name: '荣涛',
             position: ['委员'],
             email: 'rongtao@cestc.cn',
-          },
-          {
-            img: wangjun,
-            name: '王军',
-            position: ['委员'],
-            email: 'junwangs@isoftstone.com',
           },
           {
             img: xulei,
@@ -1122,10 +1115,10 @@ export default {
         title: 'openEuler User Committee',
         list: [
           {
-            img: xiule,
-            name: 'Xue Lei',
+            img: wangjun,
+            name: 'Wang Jun',
             position: ['Chairperson'],
-            email: 'xuelei@cmss.chinamobile.com',
+            email: 'junwangs@isoftstone.com',
           },
           {
             img: chenjin,
@@ -1174,12 +1167,6 @@ export default {
             name: 'Rong Tao',
             position: ['Committee member'],
             email: 'rongtao@cestc.cn',
-          },
-          {
-            img: wangjun,
-            name: 'Wang Jun',
-            position: ['Committee member'],
-            email: 'junwangs@isoftstone.com',
           },
           {
             img: xulei,
