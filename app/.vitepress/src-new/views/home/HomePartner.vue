@@ -2,6 +2,7 @@
 import AppSection from '~@/components/AppSection.vue';
 import { useScreen } from '~@/composables/useScreen';
 import HomeSwiper from './HomeSwiper.vue';
+import { vAnalytics } from '~@/directive/analytics';
 
 import { publisher } from '~@/data/home/publisher';
 
@@ -11,7 +12,13 @@ const publisher3 = [...publisher.slice(16), ...publisher.slice(16)];
 </script>
 
 <template>
-  <AppSection class="home-partner" :title="$t('home.publisher')" :full="true">
+  <AppSection
+    class="home-partner"
+    :title="$t('home.publisher')"
+    :full="true"
+    v-analytics.bubble="{ level1: $t('home.publisher') }"
+    :data-v-analytics-title="$t('home.publisher')"
+  >
     <HomeSwiper :data="publisher1" class="partner-swiper"></HomeSwiper>
     <HomeSwiper
       :data="publisher2"

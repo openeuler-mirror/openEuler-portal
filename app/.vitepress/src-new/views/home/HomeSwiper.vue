@@ -5,6 +5,7 @@ import type { PropType } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useCommon } from '@/stores/common';
 import { useLocale } from '~@/composables/useLocale';
+import { vAnalytics } from '~@/directive/analytics';
 
 export interface PublisherT {
   logo: {
@@ -40,6 +41,9 @@ const { isEn } = useLocale();
         <OLink
           :href="isEn ? (item.href_en ? item.href_en : item.href) : item.href"
           target="_blank"
+          v-analytics.bubble="{
+            target: isEn ? item.href_en ?? item.href : item.href,
+          }"
         >
           <div class="swiper-card">
             <OFigure :src="item.logo[theme]" />
