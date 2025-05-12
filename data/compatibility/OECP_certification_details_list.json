@@ -12241,7 +12241,7 @@
   },
   {
     "osv_name": "广州汇智通信技术有限公司",
-    "os_version": "TeligenOS-V3-standard-aarch64-dvd-20250317.iso",
+    "os_version": "TeligenOS-V3-standard-aarch64-dvd.iso",
     "arch": "aarch64",
     "checksum": "fdd1eb13b75d119aac40981d761c70a6",
     "base_openeuler_version": "openEuler 22.03 LTS SP1",
@@ -12313,7 +12313,7 @@
   },
   {
     "osv_name": "广州汇智通信技术有限公司",
-    "os_version": "TeligenOS-V3-standard-x86_64-dvd-20250317.iso",
+    "os_version": "TeligenOS-V3-standard-x86_64-dvd.iso",
     "arch": "x86_64",
     "checksum": "308659f6f6340abb97cb329221370207",
     "base_openeuler_version": "openEuler 22.03 LTS SP1",
@@ -12394,6 +12394,150 @@
     "type": "服务器",
     "total_result": "pass",
     "date": "2025/04/24",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "中国船舶集团有限公司第七一六研究所",
+    "os_version": "杰瑞海欧1.0",
+    "arch": "aarch64",
+    "checksum": "JARI-rootfs-202504151600.tar.gz:4dbdf9f483135d72fa59c3756b5f01bc、Image-d2000-5.10.0.tar.gz:27332e854791913eb2c161cd813de28a",
+    "base_openeuler_version": "openEuler Embedded 24.03",
+    "os_download_link": "www.jari.cn",
+    "friendly_link": "www.jari.cn",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2025/05/06",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "佳都科技集团股份有限公司",
+    "os_version": "TransHarmony.img",
+    "arch": "aarch64",
+    "checksum": "290087d36870e40236191157bf071025",
+    "base_openeuler_version": "openEuler Embedded 23.09",
+    "os_download_link": "https://www.pcitech.com/",
+    "friendly_link": "https://www.pcitech.com/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2025/05/06",
     "details": "详细信息",
     "tools_result": [
       {
