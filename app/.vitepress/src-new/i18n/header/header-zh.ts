@@ -240,6 +240,11 @@ export default {
               DESCRIPTION: '一款高性能Java虚拟机',
               URL: '/other/projects/bishengjdk/',
             },
+            {
+              NAME: 'openEuler智能化解决方案',
+              DESCRIPTION: '搭载在openEuler上的大模型平台',
+              URL: '/projects/intelligence/',
+            },
           ],
         },
       ],

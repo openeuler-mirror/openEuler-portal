@@ -206,6 +206,11 @@ export default {
               DESCRIPTION: 'A high-performance Java Virtual Machine.',
               URL: '/other/projects/bishengjdk/',
             },
+            {
+              NAME: 'openEuler Intelligence',
+              DESCRIPTION: 'Large language model platform powered by openEuler',
+              URL: '/projects/intelligence/',
+            },
           ],
         },
       ],

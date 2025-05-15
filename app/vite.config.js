@@ -84,6 +84,9 @@ export default defineConfig({
         event: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src-new/assets/category/event/svg-icons')
         ),
+        intelligence: FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src-new/assets/category/intelligence/svg-icons')
+        ),
       },
     }),
   ],
