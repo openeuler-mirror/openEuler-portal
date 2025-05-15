@@ -61,7 +61,7 @@ export function getUserAuth() {
 export function logout() {
   location.href = `${
     import.meta.env.VITE_LOGIN_ORIGIN
-  }/logout?redirect_uri=${encodeURIComponent(window?.location?.origin)}`;
+  }/logout?redirect_uri=${encodeURIComponent(location?.href)}`;
 }
 
 // 跳转首页
