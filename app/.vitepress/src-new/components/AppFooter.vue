@@ -266,6 +266,7 @@ $color: #fff;
         margin-right: 38px;
         @include respond-to('<=pad') {
           margin-right: 24px;
+          min-width: 48px;
         }
       }
       .friendship-link-item {
