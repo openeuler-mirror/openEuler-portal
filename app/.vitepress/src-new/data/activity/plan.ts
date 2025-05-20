@@ -271,23 +271,23 @@ export const yearPlanData = {
       events: [
         { month: '1' },
         { month: '2' },
-        { month: '3' },
-        { month: '4' },
         {
-          month: '5',
+          month: '3',
           actives: [
             {
-              location: '05/30',
-              activeName: '24.03 LTS',
+              location: '3.30',
+              activeName: '25.03',
             },
           ],
         },
+        { month: '4' },
+        { month: '5' },
         {
           month: '6',
           actives: [
             {
-              location: '06/30',
-              activeName: '22.03 LTS SP4',
+              location: '6.30',
+              activeName: '24.03 LTS SP2',
             },
           ],
         },
@@ -297,8 +297,8 @@ export const yearPlanData = {
           month: '9',
           actives: [
             {
-              location: '09/30',
-              activeName: '24.09',
+              location: '9.30',
+              activeName: '25.09',
             },
           ],
         },
@@ -308,8 +308,8 @@ export const yearPlanData = {
           month: '12',
           actives: [
             {
-              location: '12/30',
-              activeName: '24.03 LTS SP1',
+              location: '12.31',
+              activeName: '24.03 LTS SP3',
             },
           ],
         },
@@ -508,10 +508,6 @@ export const applyData = {
         {
           title: '社媒矩阵传播',
           text: '官网/公众号/B站/社群同步宣传',
-        },
-        {
-          title: '直播资源',
-          text: '可选openEuler官方直播间资源',
         },
         {
           title: '直播资源',
