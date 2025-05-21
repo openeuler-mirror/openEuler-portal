@@ -1,6 +1,6 @@
 # openEuler-portal
 
-[openEuler 社区官网](https://openeuler.org/zh/)的源码仓库
+[openEuler 社区官网](https://openeuler.openatom.cn)的源码仓库
 
 ## 目录结构
 
