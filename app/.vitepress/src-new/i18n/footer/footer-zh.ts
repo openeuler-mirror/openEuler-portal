@@ -7,5 +7,7 @@ export default {
   license_2: '木兰宽松许可证第2版（MulanPSL2）',
   qrCode: 'openEuler公众号',
   qrAssistant: 'openEuler小助手',
-  friendshipLink:'友情链接'
+  friendshipLink: '友情链接',
+  filingText1: '京ICP备2020036654号-1',
+  filingText2: '京公网安备 11030102011597 号',
 };

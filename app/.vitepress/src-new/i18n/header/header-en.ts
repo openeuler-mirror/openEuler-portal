@@ -90,11 +90,15 @@ export default {
         },
         {
           NAME: 'openEuler 25.03 Installation Guide',
-          URL: 'https://docs.openeuler.org/en/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
+          URL: `${
+            import.meta.env.VITE_SERVICE_DOCS_URL
+          }/en/docs/25.03/server/installation_upgrade/installation/installation-preparations.html`,
         },
         {
           NAME: 'openEuler 24.03 LTS SP1 Installation Guide',
-          URL: 'https://docs.openeuler.org/en/docs/24.03_LTS_SP1/docs/Installation/Installation.html',
+          URL: `${
+            import.meta.env.VITE_SERVICE_DOCS_URL
+          }/en/docs/24.03_LTS_SP1/docs/Installation/Installation.html`,
         },
         {
           NAME: 'Technical White Papers',
@@ -149,7 +153,9 @@ export default {
               NAME: 'Submit Package',
               DESCRIPTION:
                 'Contribute software packages efficiently to the community.',
-              URL: 'https://software-pkg.openeuler.org/en/package',
+              URL: `${
+                import.meta.env.VITE_SERVICE_SOFTWARE_PKG_URL
+              }/en/package`,
             },
           ],
         },
@@ -171,7 +177,7 @@ export default {
               NAME: 'Pkgship',
               DESCRIPTION:
                 'A tool to query OS package information and dependencies with ease.',
-              URL: 'https://pkgmanage.openeuler.org/',
+              URL: import.meta.env.VITE_SERVICE_PKGMANAGE_URL,
               ANALYTICSNAME: 'pkgship',
             },
           ],
@@ -223,20 +229,24 @@ export default {
               DESCRIPTION:
                 'Your go-to resource for different service scenarios and tool usage.',
               TAG: TAG_TYPE.HOT,
-              URL: 'https://docs.openeuler.org/en/',
+              URL: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/`,
             },
             {
               NAME: 'Quick Start',
               DESCRIPTION:
                 'Learn the community essentials in 10 minutes, build and grow quickly.',
               TAG: TAG_TYPE.HOT,
-              URL: 'https://docs.openeuler.org/en/docs/25.03/server/quickstart/quickstart/quick-start.html',
+              URL: `${
+                import.meta.env.VITE_SERVICE_DOCS_URL
+              }/en/docs/25.03/server/quickstart/quickstart/quick-start.html`,
             },
             {
               NAME: 'Installation Guide',
               DESCRIPTION:
                 'Step-by-step instructions for installing openEuler.',
-              URL: 'https://docs.openeuler.org/en/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
+              URL: `${
+                import.meta.env.VITE_SERVICE_DOCS_URL
+              }/en/docs/25.03/server/installation_upgrade/installation/installation-preparations.html`,
             },
           ],
         },
@@ -349,7 +359,7 @@ export default {
               NAME: 'Statistics',
               DESCRIPTION:
                 'Find stats and see how the openEuler community thrives.',
-              URL: 'https://datastat.openeuler.org/en/overview',
+              URL: `${import.meta.env.VITE_SERVICE_DATASTAT_URL}/en/overview`,
             },
             {
               NAME: 'Contact Us',
@@ -376,7 +386,7 @@ export default {
             {
               NAME: 'Forum',
               DESCRIPTION: 'Share knowledge, ask anything, and solve together.',
-              URL: 'https://forum.openeuler.org/?locale=en',
+              URL: `${import.meta.env.VITE_SERVICE_FORUM_URL}/?locale=en`,
             },
             {
               NAME: 'Mailing Lists',
@@ -388,7 +398,7 @@ export default {
               NAME: 'QuickIssue',
               DESCRIPTION:
                 'Submit and track community issues quickly and easily.',
-              URL: 'https://quickissue.openeuler.org/en/issues/',
+              URL: `${import.meta.env.VITE_SERVICE_QUICKISSUE_URL}/en/issues/`,
             },
           ],
         },

@@ -71,7 +71,7 @@ export default {
             {
               NAME: '软件中心',
               DESCRIPTION: '查询openEuler社区软件包',
-              URL: 'https://easysoftware.openeuler.org/zh',
+              URL: `${import.meta.env.VITE_SERVICE_SOFTWARE_URL}/zh`,
             },
             {
               NAME: '镜像仓列表',
@@ -97,11 +97,15 @@ export default {
         },
         {
           NAME: '25.03安装指南',
-          URL: 'https://docs.openeuler.org/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
+          URL: `${
+            import.meta.env.VITE_SERVICE_DOCS_URL
+          }/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html`,
         },
         {
           NAME: '24.03 LTS SP1安装指南',
-          URL: 'https://docs.openeuler.org/zh/docs/24.03_LTS_SP1/docs/Installation/installation.html',
+          URL: `${
+            import.meta.env.VITE_SERVICE_DOCS_URL
+          }/zh/docs/24.03_LTS_SP1/docs/Installation/installation.html`,
         },
         {
           NAME: '技术白皮书',
@@ -156,12 +160,14 @@ export default {
             {
               NAME: '软件包贡献',
               DESCRIPTION: '简单高效地贡献软件包',
-              URL: 'https://software-pkg.openeuler.org/zh/package',
+              URL: `${
+                import.meta.env.VITE_SERVICE_SOFTWARE_PKG_URL
+              }/zh/package`,
             },
             {
               NAME: 'License工具门户',
               DESCRIPTION: '检测License权利、义务、限制',
-              URL: 'https://compliance.openeuler.org/',
+              URL: import.meta.env.VITE_SERVICE_COMPLIANCE_URL,
               ICON: OutLink,
               ANALYTICSNAME: 'license',
             },
@@ -202,7 +208,7 @@ export default {
             {
               NAME: 'Pkgship',
               DESCRIPTION: '管理操作系统软件包信息和依赖项的查询工具',
-              URL: 'https://pkgmanage.openeuler.org/',
+              URL: import.meta.env.VITE_SERVICE_PKGMANAGE_URL,
               ANALYTICSNAME: 'pkgship',
             },
           ],
@@ -270,28 +276,36 @@ export default {
               NAME: '文档中心',
               DESCRIPTION: '提供各业务场景及工具使用所需的文档手册',
               TAG: TAG_TYPE.HOT,
-              URL: 'https://docs.openeuler.org/zh/',
+              URL: `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/`,
             },
             {
               NAME: '新手入门',
               DESCRIPTION: '10分钟玩转社区，快速构建与成长',
               TAG: TAG_TYPE.HOT,
-              URL: 'https://docs.openeuler.org/zh/docs/25.03/server/quickstart/quickstart/quick-start.html',
+              URL: `${
+                import.meta.env.VITE_SERVICE_DOCS_URL
+              }/zh/docs/25.03/server/quickstart/quickstart/quick-start.html`,
             },
             {
               NAME: '安装指南',
               DESCRIPTION: '指导用户顺利完成 openEuler 操作系统安装',
-              URL: 'https://docs.openeuler.org/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
+              URL: `${
+                import.meta.env.VITE_SERVICE_DOCS_URL
+              }/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html`,
             },
             {
               NAME: '常见问题',
               DESCRIPTION: '常见问题解决方法',
-              URL: 'https://docs.openeuler.org/zh/docs/common/faq/general/general_faq.html',
+              URL: `${
+                import.meta.env.VITE_SERVICE_DOCS_URL
+              }/zh/docs/common/faq/general/general_faq.html`,
             },
             {
               NAME: '文档开发指南',
               DESCRIPTION: '参与文档开发的方式',
-              URL: 'https://docs.openeuler.org/zh/docs/common/contribute/directory_structure_introductory.html',
+              URL: `${
+                import.meta.env.VITE_SERVICE_DOCS_URL
+              }/zh/docs/common/contribute/directory_structure_introductory.html`,
             },
           ],
         },
@@ -378,7 +392,7 @@ export default {
             {
               NAME: '兼容性技术测评',
               DESCRIPTION: '帮助企业快速申请兼容性技术测评',
-              URL: 'https://certification.openeuler.org/#/',
+              URL: `${import.meta.env.VITE_SERVICE_CERTIFICATION_URL}/#/`,
             },
             {
               NAME: 'OSV技术测评',
@@ -476,7 +490,7 @@ export default {
             {
               NAME: '贡献看板',
               DESCRIPTION: '查看openEuler社区数据',
-              URL: 'https://datastat.openeuler.org/zh/overview',
+              URL: `${import.meta.env.VITE_SERVICE_DATASTAT_URL}/zh/overview`,
             },
             {
               NAME: '联系我们',
@@ -507,7 +521,7 @@ export default {
             {
               NAME: '论坛',
               DESCRIPTION: '与开发者讨论openEuler',
-              URL: 'https://forum.openeuler.org/?locale=zh_CN',
+              URL: `${import.meta.env.VITE_SERVICE_FORUM_URL}/?locale=zh_CN`,
             },
             {
               NAME: '邮件列表',
@@ -522,7 +536,7 @@ export default {
             {
               NAME: 'QuickIssue',
               DESCRIPTION: '简易快捷地查询、提交社区Issues',
-              URL: 'https://quickissue.openeuler.org/zh/issues/',
+              URL: `${import.meta.env.VITE_SERVICE_QUICKISSUE_URL}/zh/issues/`,
             },
           ],
         },
@@ -530,7 +544,9 @@ export default {
       SHORTCUT: [
         {
           NAME: 'openEuler社区介绍PDF',
-          URL: 'https://www.openeuler.org/whitepaper/openEuler %E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E4%BB%8B%E7%BB%8D.pdf',
+          URL: `${
+            import.meta.env.VITE_MAIN_DOMAIN_URL
+          }/whitepaper/openEuler %E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E4%BB%8B%E7%BB%8D.pdf`,
         },
       ],
     },
@@ -634,7 +650,7 @@ export default {
     },
     {
       NAME: 'LFS文件管理',
-      PATH: 'https://artlfs-website.openeuler.org',
+      PATH: import.meta.env.VITE_SERVICE_ARTLFS_WEBSITE_URL,
     },
   ],
 };
