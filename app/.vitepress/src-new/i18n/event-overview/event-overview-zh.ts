@@ -14,4 +14,5 @@ export default {
   confirm: '确定',
   empty: '未找到相关活动',
   review: '活动回顾',
+  signup: '立即报名',
 };
