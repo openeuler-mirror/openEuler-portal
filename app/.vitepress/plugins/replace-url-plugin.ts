@@ -3,7 +3,7 @@ import { glob } from 'glob';
 import { join } from 'path';
 
 const OPENEULER_ORG_URL = 'https://www.openeuler.org';
-const OPENEULER_ATOM_URL = 'https://openeuler.openatom.cn';
+const OPENEULER_ATOM_URL = 'https://www.openeuler.openatom.cn';
 
 export default function replaceUrlPlugin() {
   let envVar;
