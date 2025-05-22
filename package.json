@@ -2,11 +2,13 @@
   "name": "openeuler-portal",
   "version": "0.0.1",
   "description": "",
+  "type": "module",
   "scripts": {
     "dev": "vitepress dev app",
     "build": "vitepress build app",
     "lint": "eslint \"app/.vitepress/src/**/*.{js,ts,vue,jsx,tsx}\"",
     "fix": "eslint --fix \"app/.vitepress/src/**/*.{js,ts,vue,jsx,tsx}\"",
+    "preview": "vitepress preview app",
     "lint:components": "eslint \"opendesign/**/*.{js,ts,vue,jsx,tsx}\"",
     "gen:token": "opensig-scripts gen:token --config ./app/.vitepress/src-new/tokens/token.config.ts",
     "prepare": "husky install",
@@ -51,6 +53,7 @@
     "@vue/eslint-config-typescript": "^11.0.0",
     "eslint": "^8.19.0",
     "eslint-plugin-vue": "^9.1.1",
+    "glob": "^11.0.2",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
@@ -58,6 +61,7 @@
     "typescript": "^4.7.4",
     "unplugin-element-plus": "^0.4.1",
     "unplugin-icons": "^0.14.1",
+    "vite-plugin-static-copy": "^2.2.0",
     "vitepress": "1.2.3"
   },
   "lint-staged": {

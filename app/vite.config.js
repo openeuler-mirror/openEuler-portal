@@ -1,10 +1,11 @@
 import path from 'path';
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitepress';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 
 import Icons from 'unplugin-icons/vite';
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 import replaceUrlPlugin from './.vitepress/plugins/replace-url-plugin';
 
 export default defineConfig({
@@ -90,6 +91,26 @@ export default defineConfig({
           )
         ),
       },
+    }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'zh/other/privacy/index.md',
+          dest: 'file/zh/privacy',
+        },
+        {
+          src: 'en/other/privacy/index.md',
+          dest: 'file/en/privacy',
+        },
+        {
+          src: 'zh/other/legal/index.md',
+          dest: 'file/zh/legal',
+        },
+        {
+          src: 'en/other/legal/index.md',
+          dest: 'file/en/legal',
+        },
+      ],
     }),
     replaceUrlPlugin(),
   ],
