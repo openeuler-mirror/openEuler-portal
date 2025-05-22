@@ -5,6 +5,8 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import Icons from 'unplugin-icons/vite';
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 
+import replaceUrlPlugin from './.vitepress/plugins/replace-url-plugin';
+
 export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, '../dist'),
@@ -82,10 +84,14 @@ export default defineConfig({
           )
         ),
         event: FileSystemIconLoader(
-          path.resolve(__dirname, './.vitepress/src-new/assets/category/event/svg-icons')
+          path.resolve(
+            __dirname,
+            './.vitepress/src-new/assets/category/event/svg-icons'
+          )
         ),
       },
     }),
+    replaceUrlPlugin(),
   ],
   server: {
     proxy: {
