@@ -90,6 +90,9 @@ export default defineConfig({
             './.vitepress/src-new/assets/category/event/svg-icons'
           )
         ),
+        intelligence: FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src-new/assets/category/intelligence/svg-icons')
+        ),
       },
     }),
     viteStaticCopy({
