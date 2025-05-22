@@ -62,6 +62,7 @@ import wangxinhui from '@/assets/category/organization/brand/wangxinhui.png';
 import wendan from '@/assets/category/organization/brand/wendan.png';
 import zhangyin from '@/assets/category/organization/brand/zhangyin.png';
 import humingyue from '@/assets/category/organization/brand/humingyu.png';
+import pengyaying from '@/assets/category/organization/brand/pengyaying.png';
 
 // 用户委员会
 import gaohonghe from '@/assets/category/organization/user/gaohonghe.png';
@@ -490,6 +491,12 @@ export default {
             name: '李震宁',
             position: ['委员'],
             email: 'lizhenning@kylinos.cn',
+          },
+          {
+            img: pengyaying,
+            name: '彭雅莹',
+            position: ['委员'],
+            email: '260060281@qq.com',
           },
           {
             img: wangxinhui,
@@ -1072,6 +1079,12 @@ export default {
             name: 'Li Zhenning',
             position: ['Committee member'],
             email: 'lizhenning@kylinos.cn',
+          },
+          {
+            img: pengyaying,
+            name: 'Peng Yaying',
+            position: ['Committee member'],
+            email: '260060281@qq.com',
           },
           {
             img: wangxinhui,

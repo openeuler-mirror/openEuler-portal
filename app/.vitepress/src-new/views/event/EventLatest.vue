@@ -328,7 +328,7 @@ const handleConfirm = () => {
                 <p class="title">{{ item.title }}</p>
                 <div class="card-bottom">
                   <p class="date">
-                    {{ changeTimeStamp(new Date(item.date).getTime()) }}
+                    {{ changeTimeStamp(new Date(item.date.substring(0, 10))) }}
                   </p>
                   <ODivider v-if="lePadV" direction="v" class="divider-mb" />
                   <p class="city">{{ item.city }}</p>

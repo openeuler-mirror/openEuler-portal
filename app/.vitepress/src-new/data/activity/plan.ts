@@ -200,7 +200,19 @@ export const yearPlanData = {
           ],
         },
         { month: '4' },
-        { month: '5' },
+        {
+          month: '5',
+          actives: [
+            {
+              location: '中国 成都',
+              activeName: 'openEuler & deepin Meetup成都站',
+            },
+            {
+              location: '中国 天津',
+              activeName: 'openEuler云原生开源中间件Meetup天津站',
+            },
+          ],
+        },
         { month: '6' },
         { month: '7' },
         { month: '8' },

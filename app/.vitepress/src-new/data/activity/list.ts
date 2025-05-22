@@ -2,6 +2,13 @@ import beijing from '~@/assets/category/event/list/beijing.jpg';
 import beijingMb from '~@/assets/category/event/list/beijing-mb.jpg';
 import beijingDetail from '~@/assets/category/event/list/beijing-detail.jpg';
 
+import tianjin from '~@/assets/category/event/list/tianjin.jpg';
+import tianjinMb from '~@/assets/category/event/list/tianjin-mb.jpg';
+import detail_250524 from '~@/assets/category/event/list/250524.jpg';
+import chengdu from '~@/assets/category/event/list/chengdu.jpg';
+import chengduMb from '~@/assets/category/event/list/chengdu-mb.jpg';
+import detail_250527 from '~@/assets/category/event/list/250527.jpg';
+
 export const EventSeries = new Map([
   [
     'all',
@@ -110,6 +117,42 @@ export const EventState = new Map([
 
 export const MEETUP_DATA = {
   zh: [
+    {
+      id: 2,
+      title: 'openEuler云原生开源中间件Meetup天津站',
+      date: '2025-05-27 14:00-17:30',
+      activity_type: 2,
+      synopsis:
+        '由openEuler社区、东方通、天津职业技术师范大学联合举办的“轻舟泛海，云翼冲天·openEuler云原生开源中间件”为主题的Meetup将在天津职业技术师范大学举办。此次交流活动特邀多位业内专家，分享实战案例与前沿技术解析，为技术爱好者、行业从业者、高校学生等加油充电，深化技术交流与学习，同时还将进行实习宣讲互动，为高校学生解读东方通开源实习项目，提供更多宝贵的实践机会。',
+      address: '天津职业技术师范大学（天津市津南区）',
+      city: '天津市',
+      isAdditional: true,
+      posterImg: tianjin,
+      posterImgMb: tianjinMb,
+      series: '3',
+      detail_img: detail_250527,
+      new_url: '',
+    },
+    {
+      id: 1,
+      title: 'openEuler & deepin Meetup成都站',
+      date: '2025-05-24 14:00-17:30',
+      activity_type: 2,
+      synopsis:
+        '在开源技术领域，开源生态建设一直是众多从业者共同关注的话题。为了深入探讨开源生态的发展之道，一场聚焦「开源生态共建」的技术聚会将在成都・菁蓉汇启幕 ──  由  openEuler 社区和deepin（深度） 社区与联合主办，如意玲珑社区承办的openEuler & deepin Meetup成都站 ，邀你成为开源生态版图的「共建者」，无论你是刚踏入开源的「萌新」，还是深耕技术的「老炮」，希望本次活动都能为你带来新的技术视角与灵感。',
+      address: '四川省成都市原岛酒店（环球中心新会展店）5楼3号会议室',
+      city: '成都市',
+      isAdditional: true,
+      posterImg: chengdu,
+      posterImgMb: chengduMb,
+      series: '3',
+      detail_img: detail_250524,
+      new_url: '',
+      signup_url:
+        'https://openatomcon.openatom.cn/registration/?activityNo=HD20250513141929',
+      signup_url_mb:
+        'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20250513141929',
+    },
     {
       id: 1000,
       title: 'openEuler on RISC-V & deepin Meetup-北京站',

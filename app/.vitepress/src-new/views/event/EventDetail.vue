@@ -26,7 +26,7 @@ import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
 const { t, locale } = useLocale();
-const { lePadV, isPadVToLaptop } = useScreen();
+const { lePadV, isPadVToLaptop, isPhone } = useScreen();
 
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
@@ -96,6 +96,7 @@ onMounted(() => {
           </div>
         </div>
         <OButton
+          v-if="detailObj?.activity_type === 1 && detailObj?.new_url"
           variant="solid"
           color="primary"
           :size="lePadV ? 'medium' : 'large'"
@@ -105,10 +106,21 @@ onMounted(() => {
         >
           <span>{{ t('eventOverview.review') }}</span>
         </OButton>
+        <OButton
+          v-if="detailObj?.activity_type === 2 && detailObj?.signup_url"
+          variant="solid"
+          color="primary"
+          :size="lePadV ? 'medium' : 'large'"
+          :href="isPhone ? detailObj?.signup_url_mb : detailObj?.signup_url"
+          target="_blank"
+          class="review-btn"
+        >
+          <span>{{ t('eventOverview.signup') }}</span>
+        </OButton>
       </div>
       <div class="content" :class="{ 'content-dark': isDark }">
         <p class="title">{{ t('eventOverview.agenda') }}</p>
-        <OFigure :src="detailObj?.detail_img"></OFigure>
+        <OFigure :src="detailObj?.detail_img" class="figure"></OFigure>
       </div>
     </ContentWrapper>
   </div>
@@ -186,7 +198,7 @@ onMounted(() => {
 }
 .o-figure {
   margin-top: 32px;
-  max-width: 100%;
+  max-width: 800px;
 }
 .content-dark {
   .o-figure {
