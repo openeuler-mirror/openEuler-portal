@@ -68,7 +68,7 @@ const infoData = {
   placeholder3: '请输入您满意的原因（9-10）',
   more1: '感谢您的反馈，如需帮助，可论坛',
   more2: '发帖求助',
-  more2Link: 'https://forum.openeuler.org/',
+  more2Link: import.meta.env.VITE_SERVICE_FORUM_URL,
   submit: '提交',
   cancel: '取消',
   confirm: '确认',
@@ -326,8 +326,10 @@ const isMigration = computed(() => {
 
 const quickIssueUrl = computed(() => {
   return isMigration.value
-    ? 'https://quickissue.openeuler.org/zh/new-issues/?c2lnPXNpZy1NaWdyYXRpb24mcmVwbz1vcGVuZXVsZXIvbWlncmF0aW9uLWFzc2lzdGFudCZyZXBvX2lkPTE1OTI4MzA0JnR5cGU96L+B56e75o+Q5LyYJnRpdGxlPVvmkKzov4Fd'
-    : 'https://quickissue.openeuler.org/zh/issues/';
+    ? `${
+        import.meta.env.VITE_SERVICE_QUICKISSUE_URL
+      }/zh/new-issues/?c2lnPXNpZy1NaWdyYXRpb24mcmVwbz1vcGVuZXVsZXIvbWlncmF0aW9uLWFzc2lzdGFudCZyZXBvX2lkPTE1OTI4MzA0JnR5cGU96L+B56e75o+Q5LyYJnRpdGxlPVvmkKzov4Fd`
+    : `${import.meta.env.VITE_SERVICE_QUICKISSUE_URL}/zh/issues/`;
 });
 
 const floatData = ref([
@@ -338,7 +340,7 @@ const floatData = ref([
     text: '社区论坛',
     tip: '发帖互助解决各类问题',
     id: 'forum',
-    link: 'https://forum.openeuler.org/',
+    link: import.meta.env.VITE_SERVICE_FORUM_URL,
   },
   {
     img: computed(() => {

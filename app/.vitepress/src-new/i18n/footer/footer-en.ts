@@ -8,4 +8,6 @@ export default {
   qrCode: 'WeChat Subscription',
   qrAssistant: 'WeChat Assistant',
   friendshipLink: 'Related Links',
+  filingText1: 'J. ICP B. No. 2020036654-1',
+  filingText2: 'J.G.W.A.B. No. 11030102011597',
 };

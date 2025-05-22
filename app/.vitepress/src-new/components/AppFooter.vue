@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {  watch, type PropType } from 'vue';
+import { watch, type PropType } from 'vue';
 
 import { useLocale } from '~@/composables/useLocale';
 
@@ -7,6 +7,7 @@ import {
   linksData2,
   quickNav,
   friendshipLinks,
+  filingData,
 } from '~@/data/footer';
 
 import { ODivider } from '@opensig/opendesign';
@@ -138,17 +139,26 @@ watch(
                 />
               </template>
             </div>
-            <p class="copyright">
-              {{
-                t('footer.copyRight', {
-                  year: new Date().getFullYear(),
-                })
-              }}
-            </p>
             <p class="license">
               <span>{{ t('footer.license_1') }}</span>
               {{ t('footer.license_2') }}
             </p>
+            <div class="copyright">
+              <p>
+                {{
+                  t('footer.copyRight', {
+                    year: new Date().getFullYear(),
+                  })
+                }}
+              </p>
+              <div class="filing">
+                <a :href="filingData.link" target="_blank" class="filing-link">
+                  {{ t('footer.filingText1') }}
+                </a>
+                <img :src="filingData.icon" class="filing-img" />
+                <p>{{ t('footer.filingText2') }}</p>
+              </div>
+            </div>
           </div>
           <div class="footer-right">
             <div v-if="lang === 'zh'" class="code-box">
@@ -291,7 +301,6 @@ $color: #fff;
       position: relative;
       @include respond-to('<=pad_v') {
         margin: 0 auto;
-        max-width: 240px;
         padding: 12px 0 24px;
         flex-direction: column;
         justify-content: space-between;
@@ -329,8 +338,33 @@ $color: #fff;
   .copyright {
     margin-top: 6px;
     color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    gap: var(--o-gap-2);
+
+    @include respond-to('<=pad') {
+      flex-direction: column;
+      gap: 6px;
+    }
     @include respond-to('<=pad_v') {
       margin-top: 4px;
+      gap: 4px;
+    }
+
+    .filing {
+      display: flex;
+      gap: var(--o-gap-2);
+
+      .filing-link {
+        color: rgba(255, 255, 255, 0.6);
+        @include hover {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+      .filing-img {
+        height: 16px;
+        width: 16px;
+        align-self: center;
+      }
     }
   }
   .license {
@@ -352,7 +386,6 @@ $color: #fff;
       display: inline-block;
     }
     .footer-option-item {
-      display: flex;
       align-items: center;
     }
     @include respond-to('<=pad_v') {
