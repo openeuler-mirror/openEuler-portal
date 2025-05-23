@@ -28,6 +28,7 @@ export default {
     if (typeof global !== 'undefined') {
       // @ts-ignore
       global.window = {};
+      global.__VUE_PROD_DEVTOOLS__ = false;
     }
     app.directive('scroll-bottom', scrollBottomDirective);
     app.use(VueDOMPurifyHTML);
