@@ -167,7 +167,10 @@ watch(
             >
               <div
                 class="item-content"
-                :class="[`start${colact.startTime}`, `end${colact.endTime}`]"
+                :class="[
+                  `start${colact.startTime}`,
+                  `duration${colact.duration}`,
+                ]"
               >
                 <p>{{ colact.activeName }}</p>
               </div>
@@ -547,7 +550,7 @@ watch(
   .start#{$i} {
     grid-column-start: $i;
   }
-  .end#{$i} {
+  .duration#{$i} {
     grid-column-end: span $i;
   }
 }
