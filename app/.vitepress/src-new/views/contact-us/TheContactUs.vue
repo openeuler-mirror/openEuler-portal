@@ -49,7 +49,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 const contactData = [
   {
     title: t('contact.communityItem1'),
-    email: 'liyang@openatom.org',
+    email: 'gaofei@openatom.org',
     icon: IconContact1,
   },
   {

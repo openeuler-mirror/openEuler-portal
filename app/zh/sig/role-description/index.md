@@ -92,12 +92,12 @@ import illustration from '@/assets/illustrations/sig-role.png';
 
 ### 责任与权力
 
-- 评审 PR：对 Contributor 提交的 PR 完成评审，评审可以参考社区的[编程建议]()和[安全编程规范](https://gitee.com/openeuler/security-committee/blob/master/guide/SecureCoding.md)。
+- 评审 PR：对 Contributor 提交的 PR 完成评审，评审可以参考社区的[软件包开发规范](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md)和[安全编程指南](https://gitee.com/openeuler/security-committee/blob/master/docs/zh/developer-guide/SecureCoding.md)。
 
 - 分发处理问题:请参考“[问题处理流程](https://gitee.com/openeuler/community/blob/master/zh/contributors/issue-submit.md)”。
 - 跟踪依赖性问题：在开发分支中，其他 SIG 组的软件包的更新可能会到导致破坏本 SIG 内软件包的依赖关系。此时 Committer 会收到告警提示，Committer 应尽力重建软件包。依赖关系出错可能会使最终用户无法更新系统，打包团队也会介入并重建存在依赖性问题的软件包，但 Committer 不应依赖这些重建。
-- 如有接口变更，通知可能会影响到的 SIG：其他 SIG 或项目会依赖本 SIG 的软件包，对软件包接口的变更可能会对他们造成影响。Committer 应了解并评审&决策变更造成的依赖影响，并公告和发送 API 或 ABI 变更的告警邮件。这类公告应在变更发生至少一周前完成，并应通知到所有可能受影响的 SIG。具体请参考[接口变更通知流程]()。
-- 更新和维护软件包版本：遵守社区的[软件包更新质量控制策略]()完成软件包的更新。
+- 如有接口变更，通知可能会影响到的 SIG：其他 SIG 或项目会依赖本 SIG 的软件包，对软件包接口的变更可能会对他们造成影响。Committer 应了解并评审&决策变更造成的依赖影响，并公告和发送 API 或 ABI 变更的告警邮件。这类公告应在变更发生至少一周前完成，并应通知到所有可能受影响的 SIG。具体请参考[KABI接口变更评审实例](https://www.openeuler.org/zh/oEEP/?name=oEEP-0009%20openEuler%20LTS%20%E7%89%88%E6%9C%AC%E5%86%85%E6%A0%B8%20KABI%20%E5%8F%98%E6%9B%B4%E7%AD%96%E7%95%A5)。
+- 更新和维护软件包版本：遵守社区的[软件包更新质量控制策略](https://www.openeuler.org/zh/oEEP/?name=oEEP-0017%20openEuler%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E5%88%86%E7%BA%A7%26%E6%89%A7%E8%A1%8C%E7%AD%96%E7%95%A5)完成软件包的更新。
 - 和上游社区合作，包括：
 
   - 将所有变更推送到上游社区
