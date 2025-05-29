@@ -33,4 +33,7 @@ export default {
   externalBtn1: '继续前往',
   externalBtn2: '取消',
   common: '公共',
+  emptyVersion1: '未找到相关内容',
+  emptyVersion2: '请尝试其他搜索词或切换版本为“',
+  emptyVersion3: '”查看',
 };

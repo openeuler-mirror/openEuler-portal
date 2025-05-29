@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, type PropType, ref, watch } from 'vue';
 
+import { OLink } from '@opensig/opendesign';
+
 import { useData } from 'vitepress';
 import { oaReport } from '@/shared/analytics';
 
@@ -251,6 +253,14 @@ const reportSearch = (data: Record<string, any>) => {
     'search_portal'
   );
 };
+
+const allVersion = () => {
+  emits('update:activeVersion', '');
+  reportSearch({
+    type: 'subtab',
+    target: '',
+  });
+};
 </script>
 <template>
   <ContentWrapper class="search-result" :vertical-padding="verticalPadding">
@@ -419,9 +429,7 @@ const reportSearch = (data: Record<string, any>) => {
               >
                 <span>{{ $t('search.version') }}</span>
                 <span>{{
-                  item.version === 'common'
-                    ? $t('search.common')
-                    : item.version
+                  item.version === 'common' ? $t('search.common') : item.version
                 }}</span>
               </p>
             </div>
@@ -431,7 +439,33 @@ const reportSearch = (data: Record<string, any>) => {
           v-else-if="!loading"
           class="nofound"
           :docs="$t('search.empty')"
-        />
+        >
+          <template
+            v-if="
+              !searchType ||
+              searchType === 'docs' ||
+              searchType.includes('packages')
+            "
+            #title
+          >
+            <div v-if="!activeVersion">{{ $t('search.empty') }}</div>
+            <div v-else>
+              <p class="empty-title">{{ $t('search.emptyVersion1') }}</p>
+              <div class="empty-version">
+                <span>{{ $t('search.emptyVersion2') }}</span>
+                <OLink
+                  color="primary"
+                  variant="text"
+                  hoverUnderline
+                  @click="allVersion"
+                >
+                  {{ $t('search.allVersion') }}
+                </OLink>
+                <span>{{ $t('search.emptyVersion3') }}</span>
+              </div>
+            </div>
+          </template>
+        </NotFound>
         <SearchFeedback
           v-if="!lePadV && total >= 10"
           size="medium"
@@ -485,6 +519,15 @@ const reportSearch = (data: Record<string, any>) => {
   }
   .nofound {
     min-height: min-content;
+  }
+  .empty-title {
+    text-align: center;
+    font-weight: 500;
+    @include text2;
+  }
+  .empty-version {
+    margin-top: 8px;
+    @include text1;
   }
   .mo-feedback {
     background-color: var(--o-color-fill2);
@@ -599,6 +642,9 @@ const reportSearch = (data: Record<string, any>) => {
             color: var(--o-color-info1);
             font-weight: 500;
             :deep(span) {
+              color: var(--o-color-primary1);
+            }
+            @include hover {
               color: var(--o-color-primary1);
             }
           }

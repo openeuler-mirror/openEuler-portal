@@ -65,7 +65,7 @@ const handleSearch = (searchValue: string) => {
 defineExpose({ handleSearch });
 </script>
 <template>
-  <div v-if="recommendData.length && value" class="recommend">
+  <div v-if="recommendData?.length && value" class="recommend">
     <div
       v-for="item in recommendData"
       class="recommend-item"

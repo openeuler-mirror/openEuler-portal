@@ -35,4 +35,7 @@ export default {
   externalBtn1: 'Continue',
   externalBtn2: 'Cancel',
   common: 'common',
+  emptyVersion1: 'No relevant content found.',
+  emptyVersion2: 'Try another seach keyword or change the version top',
+  emptyVersion3: '.',
 };
