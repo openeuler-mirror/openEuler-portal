@@ -140,63 +140,67 @@ const downloadByUrl = (url: string) => {
 const featuresDownloadUrl =
   'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/OSMind%20%E5%85%B3%E9%94%AE%E7%89%B9%E6%80%A7%E4%B8%8E%E4%BB%B7%E5%80%BC.pdf';
 const guideDownloadUrl =
-  'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/IT%20Service%20Tools%201.0.T7%20OS%20Mind%20%E4%BA%A7%E5%93%81%E6%96%87%E6%A1%A3.zip';
+  'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/OSMind-1.0.0%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.docx';
 
 const toolsUrl = {
   base: [
     {
-      name: 'ITServiceTools_1.0.T7.zip（系统安装包）',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T7.zip',
+      name: 'ITServiceTools-1.0.0.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools-1.0.0.zip',
     },
     {
-      name: 'ITServiceTools_1.0.T7_Asset.zip（巡检包）',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T7_Asset.zip',
+      name: 'ITServiceTools_1.0.0_Asset.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_Asset.zip',
     },
     {
-      name: 'ITServiceTools_1.0.T7_Tools.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T7_Tools.zip',
+      name: 'ITServiceTools_1.0.0_PythonDeps_openEuler24.03LTS-x86_64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_PythonDeps_openEuler24.03LTS-x86_64.zip',
     },
     {
-      name: 'ITServiceTools_1.0.T7_ThirdParty_python_arm.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T7_ThirdParty_python_arm.zip',
+      name: 'ITServiceTools_1.0.0_PythonDeps_openEuler24.03LTS-aarch64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_PythonDeps_openEuler24.03LTS-aarch64.zip',
     },
     {
-      name: 'ITServiceTools_1.0.T7_ThirdParty_python_x86.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T7_ThirdParty_python_x86.zip',
+      name: 'ITServiceTools_1.0.0_PythonDeps_openEuler22.03LTS-x86_64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_PythonDeps_openEuler22.03LTS-x86_64.zip',
+    },
+    {
+      name: 'ITServiceTools_1.0.0_PythonDeps_openEuler22.03LTS-aarch64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_PythonDeps_openEuler22.03LTS-aarch64.zip',
     },
   ],
   feature: [
     {
-      name: 'ITServiceTools_1.0.T7_ThirdParty_EulerOS2.0SP10-aarch64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T7_ThirdParty_EulerOS2.0SP10-aarch64.zip',
+      name: 'ITServiceTools_1.0.0_Nebula_Any-x86_64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_Nebula_Any-x86_64.zip',
     },
     {
-      name: 'ITServiceTools_1.0.T7_ThirdParty_EulerOS2.0SP10-x86_64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T7_ThirdParty_EulerOS2.0SP10-x86_64.zip',
+      name: 'ITServiceTools_1.0.0_Nebula_Any-aarch64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_Nebula_Any-aarch64.zip',
     },
     {
-      name: 'ITServiceTools_1.0.T7_ThirdParty_openEuler20.03LTS-aarch64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T7_ThirdParty_openEuler20.03LTS-aarch64.zip',
+      name: 'ITServiceTools_1.0.0_ThirdParty_openEuler24.03LTS-x86_64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_ThirdParty_openEuler24.03LTS-x86_64.zip',
     },
     {
-      name: 'ITServiceTools_1.0.T7_ThirdParty_openEuler20.03LTS-x86_64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T7_ThirdParty_openEuler20.03LTS-x86_64.zip',
+      name: 'ITServiceTools_1.0.0_ThirdParty_openEuler24.03LTS-aarch64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_ThirdParty_openEuler24.03LTS-aarch64.zip',
     },
     {
-      name: 'ITServiceTools_1.0.T7_ThirdParty_openEuler22.03LTS-aarch64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T7_ThirdParty_openEuler22.03LTS-aarch64.zip',
+      name: 'ITServiceTools_1.0.0_ThirdParty_openEuler22.03LTS-x86_64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_ThirdParty_openEuler22.03LTS-x86_64.zip',
     },
     {
-      name: 'ITServiceTools_1.0.T7_ThirdParty_openEuler22.03LTS-x86_64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T7_ThirdParty_openEuler22.03LTS-x86_64.zip',
+      name: 'ITServiceTools_1.0.0_ThirdParty_openEuler22.03LTS-aarch64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_ThirdParty_openEuler22.03LTS-aarch64.zip',
     },
     {
-      name: 'ITServiceTools_1.0.T7_Nebula_Any-aarch64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T7_Nebula_Any-aarch64.zip',
+      name: 'ITServiceTools_1.0.0_ThirdParty_openEuler20.03LTS-x86_64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_ThirdParty_openEuler20.03LTS-x86_64.zip',
     },
     {
-      name: 'ITServiceTools_1.0.T7_Nebula_Any-x86_64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.T7_Nebula_Any-x86_64.zip',
+      name: 'ITServiceTools_1.0.0_ThirdParty_openEuler20.03LTS-aarch64.zip',
+      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_ThirdParty_openEuler20.03LTS-aarch64.zip',
     },
   ],
 };

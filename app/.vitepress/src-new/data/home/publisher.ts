@@ -25,6 +25,7 @@ import zhongkehongqi from '~@/assets/category//home/publisher/light/zhongkehongq
 import seaway from '~@/assets/category/home/publisher/light/seaway.png';
 import langchaoyun_light from '~@/assets/category/home/publisher/light/langchaoyun.png';
 import geidi_light from '~@/assets/category/home/publisher/light/geidi.png';
+import bochuan_light from '~@/assets/category/home/publisher/light/bochuan.png';
 
 import baodeLogo_dark from '~@/assets/category/home/publisher/dark/baode.png';
 import xfusionLogo_dark from '~@/assets/category/home/publisher/dark/xfusion.png';
@@ -53,6 +54,7 @@ import zhongkehongqiLogo_dark from '~@/assets/category/home/publisher//dark/zhon
 import seaway_dark from '~@/assets/category/home/publisher/dark/seaway.png';
 import langchaoyun_dark from '~@/assets/category/home/publisher/dark/langchaoyun.png';
 import geidi_dark from '~@/assets/category/home/publisher/dark/geidi.png';
+import bochuan_dark from '~@/assets/category/home/publisher/dark/bochuan.png';
 
 export const publisher = [
   {
@@ -62,6 +64,13 @@ export const publisher = [
     },
     href: 'http://www.powerleader.com.cn',
     href_en: 'http://en.powerleader.com.cn/',
+  },
+  {
+    logo: {
+      light: bochuan_light,
+      dark: bochuan_dark,
+    },
+    href: 'https://www.qsemos.com/',
   },
   {
     logo: {

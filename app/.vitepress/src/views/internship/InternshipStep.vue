@@ -140,7 +140,7 @@ const STEP = {
           <p>
             {{ STEP.STEP_ONE.TEXT2 }}
             <a
-              href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4A68T?from=project-issue"
+              href="https://gitee.com/openeuler/opensource-intern/issues/IC9BQW?from=project-issue"
               target="_blank"
               rel="noopener noreferrer"
               >{{ STEP.STEP_ONE.LINK1 }}</a
