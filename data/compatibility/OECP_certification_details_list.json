@@ -12598,5 +12598,293 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "新华三技术有限公司",
+    "os_version": "NingOS-V3.0-2.0.2501-aarch64-dvd.iso",
+    "arch": "aarch64",
+    "checksum": "146b3eec500655c81d3f1585c7261a25",
+    "base_openeuler_version": "openEuler 24.03 LTS SP1",
+    "os_download_link": "https://www.h3c.com/",
+    "friendly_link": "https://www.h3c.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2025/05/22",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "新华三技术有限公司",
+    "os_version": "NingOS-V3.0-2.0.2501-x86_64-dvd.iso",
+    "arch": "x86_64",
+    "checksum": "009b9089d021bf155bda6a24c0efa1a0",
+    "base_openeuler_version": "openEuler 24.03 LTS SP1",
+    "os_download_link": "https://www.h3c.com/",
+    "friendly_link": "https://www.h3c.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2025/05/22",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "统信软件技术有限公司",
+    "os_version": "uos-server-20-1070u1e-arm64-RC-20250424-2336.iso",
+    "arch": "aarch64",
+    "checksum": "dda353e57f85625a9cb1853f0ee2d795",
+    "base_openeuler_version": "openEuler 20.03 LTS SP4",
+    "os_download_link": "https://www.uniontech.com/",
+    "friendly_link": "https://www.uniontech.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2025/05/22",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "湖南麒麟信安科技股份有限公司",
+    "os_version": "KylinSec-Server-3.4-5-release-250509-1425-aarch64.iso",
+    "arch": "aarch64",
+    "checksum": "7514e64a8906a6fb8752b2e91e9951f3",
+    "base_openeuler_version": "openEuler 20.03 LTS SP4",
+    "os_download_link": "https://www.kylinsec.com.cn/",
+    "friendly_link": "https://www.kylinsec.com.cn/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2025/05/22",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 ]
