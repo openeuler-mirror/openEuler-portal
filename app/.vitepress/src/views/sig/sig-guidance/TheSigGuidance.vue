@@ -109,7 +109,7 @@ const language = configData.lang;
 .application {
   .middle {
     position: relative;
-    z-index: 90;
+    z-index: 10;
     &-item {
       min-height: 154px;
       display: flex;
