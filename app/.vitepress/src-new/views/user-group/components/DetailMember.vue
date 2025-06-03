@@ -74,7 +74,7 @@ const dialogVisible = ref(false);
               <div class="card-title">
                 <span class="name">{{ item.name }}</span>
                 <template v-if="item.contribution">
-                  <OPopover position="top">
+                  <OPopover position="top" wrap-class="contribution-popopver-wrap">
                     <template #target>
                       <OIcon class="icon-honor"><IconHonor /></OIcon>
                     </template>
@@ -487,7 +487,7 @@ const dialogVisible = ref(false);
   --dlg-radius: var(--o-radius-xs) !important;
   --dlg-bg-color: var(--o-color-control5-light);
 }
-.o-popup-wrap {
+.contribution-popopver-wrap {
   --popup-bg-color: var(--o-color-control5-light);
 }
 </style>

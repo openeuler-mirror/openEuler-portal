@@ -121,7 +121,7 @@ export const MEETUP_DATA = {
       id: 2,
       title: 'openEuler云原生开源中间件Meetup天津站',
       date: '2025-05-27 14:00-17:30',
-      activity_type: 2,
+      activity_type: 1,
       synopsis:
         '由openEuler社区、东方通、天津职业技术师范大学联合举办的“轻舟泛海，云翼冲天·openEuler云原生开源中间件”为主题的Meetup将在天津职业技术师范大学举办。此次交流活动特邀多位业内专家，分享实战案例与前沿技术解析，为技术爱好者、行业从业者、高校学生等加油充电，深化技术交流与学习，同时还将进行实习宣讲互动，为高校学生解读东方通开源实习项目，提供更多宝贵的实践机会。',
       address: '天津职业技术师范大学（天津市津南区）',
@@ -131,13 +131,13 @@ export const MEETUP_DATA = {
       posterImgMb: tianjinMb,
       series: '3',
       detail_img: detail_250527,
-      new_url: '',
+      new_url: '/zh/news/20250530-dft/20250530-dft.html',
     },
     {
       id: 1,
       title: 'openEuler & deepin Meetup成都站',
       date: '2025-05-24 14:00-17:30',
-      activity_type: 2,
+      activity_type: 1,
       synopsis:
         '在开源技术领域，开源生态建设一直是众多从业者共同关注的话题。为了深入探讨开源生态的发展之道，一场聚焦「开源生态共建」的技术聚会将在成都・菁蓉汇启幕 ──  由  openEuler 社区和deepin（深度） 社区与联合主办，如意玲珑社区承办的openEuler & deepin Meetup成都站 ，邀你成为开源生态版图的「共建者」，无论你是刚踏入开源的「萌新」，还是深耕技术的「老炮」，希望本次活动都能为你带来新的技术视角与灵感。',
       address: '四川省成都市原岛酒店（环球中心新会展店）5楼3号会议室',
@@ -147,7 +147,7 @@ export const MEETUP_DATA = {
       posterImgMb: chengduMb,
       series: '3',
       detail_img: detail_250524,
-      new_url: '',
+      new_url: '/zh/news/20250530-deepin1/20250530-deepin1.html',
       signup_url:
         'https://openatomcon.openatom.cn/registration/?activityNo=HD20250513141929',
       signup_url_mb:
