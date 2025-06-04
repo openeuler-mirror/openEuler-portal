@@ -73,7 +73,7 @@ export const deployList = [
     list: [
       {
         text: '版本与兼容性信息',
-        href: 'https://gitee.com/openeuler/euler-copilot-framework/blob/master/docs/user-guide/%E7%89%88%E6%9C%AC%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%80%A7%E8%AF%B4%E6%98%8E.md',
+        href: 'https://gitee.com/openeuler/euler-copilot-framework/blob/master/documents/user-guide/%E7%89%88%E6%9C%AC%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%80%A7%E8%AF%B4%E6%98%8E.md',
       },
     ],
   },
