@@ -414,6 +414,8 @@ export default {
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=25.03',
+        WHITE_PAPER:
+        '/whitepaper/en/openEuler 25.03 Technical White Paper.pdf',
         PUBLISH_DATE: '2025/03',
         LTS: false,
         VERSION: '25.03',
