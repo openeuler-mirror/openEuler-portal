@@ -159,9 +159,9 @@ watch(
       if (!val && lang.value === 'zh' && size.width > 1200) {
         localStorage.setItem('tour_guide', '20241112');
       }
-      if (!val) {
-        window.removeEventListener('wheel', handleStopWheel);
-      }
+    }
+    if (!val) {
+      window.removeEventListener('wheel', handleStopWheel);
     }
   }
 );
