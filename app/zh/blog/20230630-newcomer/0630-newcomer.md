@@ -130,9 +130,9 @@ Repo)是openEuler社区针对开发者推出的个人软件包托管平台，目
 
 **社区安全问题披露**
 
--   [[安全处理流程]](https://gitee.com/openeuler/security-committee/blob/master/security-process.md)------简要描述了处理安全问题的过程
+-   [[安全处理流程]](https://gitee.com/openeuler/security-committee/blob/master/docs/zh/vulnerability-management-process/security-process.md)------简要描述了处理安全问题的过程
 
--   [[安全披露信息]](https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md)------如果您希望报告安全漏洞，请参考此页面
+-   [[安全披露信息]](https://gitee.com/openeuler/security-committee/blob/master/docs/zh/vulnerability-management-process/security-disclosure.md)------如果您希望报告安全漏洞，请参考此页面
 
 # 找到您感兴趣的组织 
 
