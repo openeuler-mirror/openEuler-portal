@@ -215,8 +215,8 @@ A successful release of the community version requires multiple types of testing
 
 #### 4.2.6 Report Community Security Issues
 
-- [openEuler Community Security Issue Handling Process](https://gitee.com/openeuler/security-committee/blob/master/security-issue-handling-process.png) briefly introduces the process of handling security issues.
-- [openEuler Security Disclosure](https://gitee.com/openeuler/security-committee/blob/master/security-disclosure-en.md) describes how to report security vulnerabilities.
+- [openEuler Community Security Issue Handling Process](https://gitee.com/openeuler/security-committee/blob/master/docs/en/vulnerability-management-process/security-process-en.md) briefly introduces the process of handling security issues.
+- [openEuler Security Disclosure](https://gitee.com/openeuler/security-committee/blob/master/docs/en/vulnerability-management-process/security-disclosure-en.md) describes how to report security vulnerabilities.
 
 ### 4.3 Make Non-Code Contributions
 

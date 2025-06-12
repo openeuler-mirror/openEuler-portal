@@ -116,9 +116,9 @@ You can also participate in community component packaging. For details, see [[Pa
 
 **Disclosure of Community Security Issues**
 
--   [[Security Handling Process]](https://gitee.com/openeuler/security-committee/blob/master/security-process-en.md) briefly describes the process of handling security issues.
+-   [[Security Handling Process]](https://gitee.com/openeuler/security-committee/blob/master/docs/en/vulnerability-management-process/security-process-en.md) briefly describes the process of handling security issues.
 
--   [[Security Disclosure]](https://gitee.com/openeuler/security-committee/blob/master/security-disclosure-en.md) describes how to report security vulnerabilities.
+-   [[Security Disclosure]](https://gitee.com/openeuler/security-committee/blob/master/docs/en/vulnerability-management-process/security-disclosure-en.md) describes how to report security vulnerabilities.
 
 # Finding a SIG 
 

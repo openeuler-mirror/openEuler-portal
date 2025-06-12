@@ -218,8 +218,8 @@ openEuler 是一个开放的社区，我们希望所有参与社区的人都能�
 
 #### 4.2.6 社区安全问题披露
 
-- [安全处理流程](https://gitee.com/openeuler/security-committee/blob/master/%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B.jpg) ——简要描述了处理安全问题的过程。
-- [安全披露信息](https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md) ——如果您希望报告安全漏洞，请参考此页面。
+- [安全处理流程](https://gitee.com/openeuler/security-committee/blob/master/docs/zh/vulnerability-management-process/security-process.md) ——简要描述了处理安全问题的过程。
+- [安全披露信息](https://gitee.com/openeuler/security-committee/blob/master/docs/zh/vulnerability-management-process/security-disclosure.md) ——如果您希望报告安全漏洞，请参考此页面。
 
 ### 4.3 非代码类贡献
 
