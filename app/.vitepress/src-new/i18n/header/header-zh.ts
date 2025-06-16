@@ -365,7 +365,7 @@ export default {
         },
         {
           NAME: '学习openEuler安全知识',
-          URL: 'https://space.bilibili.com/527064077/channel/collectiondetail?sid=2726214',
+          URL: 'https://space.bilibili.com/527064077/lists/2726214',
           ICON: OutLink,
         },
         {

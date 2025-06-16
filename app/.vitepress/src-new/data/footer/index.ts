@@ -404,10 +404,6 @@ export const friendshipLinks = {
       title: '鲲鹏社区',
     },
     {
-      link: 'http://ic-openlabs.huawei.com/chat/#/',
-      title: '鲲鹏小智',
-    },
-    {
       link: 'https://pcl.ac.cn/',
       title: '鹏城实验室',
     },
