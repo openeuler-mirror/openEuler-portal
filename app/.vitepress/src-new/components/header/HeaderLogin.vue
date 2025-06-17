@@ -15,7 +15,7 @@ const { guardAuthClient } = useStoreData();
 
 const jumpToUserZone = () => {
   const language = lang.value === 'zh' ? 'zh' : 'en';
-  window.open(`/${language}/workspace`, '_blank');
+  window.open(`/${language}/my`, '_blank');
 };
 
 const jumpToMsgCenter = () => {

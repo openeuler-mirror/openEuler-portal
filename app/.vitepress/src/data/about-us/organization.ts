@@ -58,7 +58,6 @@ import zhengchuanrong from '@/assets/category/organization/brand/zhengchuanrong.
 import xulu from '@/assets/category/organization/brand/xulu.png';
 import lizhenning from '@/assets/category/organization/brand/lizhenning.png';
 import zhengli from '@/assets/category/organization/brand/zhengli.png';
-import wangxinhui from '@/assets/category/organization/brand/wangxinhui.png';
 import wendan from '@/assets/category/organization/brand/wendan.png';
 import zhangyin from '@/assets/category/organization/brand/zhangyin.png';
 import humingyue from '@/assets/category/organization/brand/humingyu.png';
@@ -497,12 +496,6 @@ export default {
             name: '彭雅莹',
             position: ['委员'],
             email: '260060281@qq.com',
-          },
-          {
-            img: wangxinhui,
-            name: '王鑫辉',
-            position: ['委员'],
-            email: 'wangxinhui@cmss.chinamobile.com',
           },
           {
             img: wendan,
@@ -1085,12 +1078,6 @@ export default {
             name: 'Peng Yaying',
             position: ['Committee member'],
             email: '260060281@qq.com',
-          },
-          {
-            img: wangxinhui,
-            name: 'Wang Xinhui',
-            position: ['Committee member'],
-            email: 'wangxinhui@cmss.chinamobile.com',
           },
           {
             img: wendan,

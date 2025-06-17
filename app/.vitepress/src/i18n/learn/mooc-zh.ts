@@ -44,7 +44,7 @@ export default {
       CHILDREN: [
         {
           NAME: '开始学习',
-          PATH: 'https://space.bilibili.com/527064077/channel/collectiondetail?sid=1229363',
+          PATH: 'https://space.bilibili.com/527064077/lists/1229363',
         },
       ],
     },
@@ -68,7 +68,7 @@ export default {
       CHILDREN: [
         {
           NAME: '开始学习',
-          PATH: 'https://space.bilibili.com/527064077/channel/collectiondetail?sid=2726214',
+          PATH: 'https://space.bilibili.com/527064077/lists/2726214',
         },
         {
           NAME: '考试报名',
