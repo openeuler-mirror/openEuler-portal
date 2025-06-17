@@ -132,7 +132,7 @@ export default {
             },
             {
               name: 'Windows迁移 ',
-              link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/aarch64/Packages/x2openEuler%20.NET迁移详细指导.docx',
+              link: 'https://repo.oepkgs.net/openeuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/aarch64/Packages/x2openEuler-dotNet-migration-guidance.docx',
             },
           ],
         },
