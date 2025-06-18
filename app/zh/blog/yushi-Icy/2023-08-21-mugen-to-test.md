@@ -19,7 +19,7 @@ summary: 针对单包的加固测试全流程记录。
 RadiaTest平台：https://radiatest.openeuler.org/login/
 - 用户登录,选择openEuler鉴权登录,首次登录需要用gitee注册，如果之前gitee账号没有签署CLA，需要签署CLA才可进入平台
   - 使用个人邮箱注册签署individual CLA(推荐，签署employee CLA需耐心等待签署通过)
-  - 使用华为邮箱注册必须签署employee CLA，签署后找曹志 00567459通过，通过后会收到邮件（此处我等待了一天多）
+  - 使用华为邮箱注册必须签署employee CLA，签署完成，通过后会收到邮件（如一直没收到邮件，可联系infra sig成员帮忙。）
 - 登录后进入Workspace的资源池，进入openEuler公共机器组，创建虚拟机
   - 若radiaTest资源池中没有openEuler公共机器组，则需点击右上角的小铃铛标志，然后点击左侧的两个小人标志，申请加入kunpeng用户组，等待管理员审批通过
     <img src="./2023-08-21-mugen-to-test-01.png"/>
