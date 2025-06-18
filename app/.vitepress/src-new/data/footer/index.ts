@@ -432,12 +432,16 @@ export const friendshipLinks = {
       title: '昇思MindSpore',
     },
     {
-      link: 'http://www.ebaina.com/',
-      title: 'Ebaina',
+      link: 'https://www.openubmc.cn/',
+      title: 'openUBMC',
     },
     {
-      link: 'https://www.openubmc.cn',
-      title: 'openUBMC',
+      link: 'https://www.openfuyao.cn/',
+      title: 'openFuyao',
+    },
+    {
+      link: 'http://www.ebaina.com/',
+      title: 'Ebaina',
     },
   ],
   en: [
@@ -454,8 +458,16 @@ export const friendshipLinks = {
       title: 'openGauss',
     },
     {
-      link: 'https://www.mindspore.cn/',
+      link: 'https://www.mindspore.cn/en/',
       title: 'MindSpore',
+    },
+    {
+      link: 'https://www.openubmc.cn/',
+      title: 'openUBMC',
+    },
+    {
+      link: 'https://www.openfuyao.cn/',
+      title: 'openFuyao',
     },
     {
       link: 'http://www.ebaina.com/',
