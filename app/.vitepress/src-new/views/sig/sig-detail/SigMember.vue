@@ -22,6 +22,12 @@ const props = defineProps({
       return [];
     },
   },
+  committerList: {
+    type: Array as PropType<sigMaintainerT[]>,
+    define: () => {
+      return [];
+    },
+  },
   sigName: {
     type: String,
     default: '',
@@ -53,67 +59,130 @@ const getMoreClick = () => {
 };
 </script>
 <template>
-  <div class="sig-member">
-    <div class="sig-member-title">
-      {{ $t('sig.sigMember', { num: maintainerList?.length }) }}
-    </div>
-    <OScroller class="member-list" size="small">
-      <div v-for="member in renderMaintainer" class="member-info">
-        <div class="member-info-left">
-          <WordAvatar
-            :name="member?.gitee_id"
-            size="medium"
-            :custom-size="lePadV ? 32 : 0"
-          />
-          <div class="info">
-            <div class="member-name">{{ member.gitee_id }}</div>
-            <div class="member-post">Maintainer</div>
+  <div>
+    <P class="sig-core">{{
+      $t('sig.sigCore', {
+        num: maintainerList?.length + committerList?.length,
+      })
+    }}</P>
+    <div class="sig-member">
+      <div class="sig-member-title">
+        {{ $t('sig.sigMaintainer', { num: maintainerList?.length }) }}
+      </div>
+      <OScroller class="member-list" size="small">
+        <div v-for="member in maintainerList" class="member-info">
+          <div class="member-info-left">
+            <WordAvatar
+              :name="member?.gitee_id"
+              size="medium"
+              :custom-size="lePadV ? 32 : 0"
+            />
+            <div class="info">
+              <div class="member-id">{{ member.gitee_id }}</div>
+              <div class="member-name">{{ member.name }}</div>
+            </div>
+          </div>
+          <ODivider direction="v" />
+          <div class="member-info-right">
+            <a
+              :href="`${GITEE_ADDRESS}/${member?.gitee_id}`"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <OIcon>
+                <IconGitee />
+              </OIcon>
+            </a>
+            <a
+              :href="`mailto:${member.email}`"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <OIcon>
+                <IconMail />
+              </OIcon>
+            </a>
           </div>
         </div>
-        <ODivider direction="v" />
-        <div class="member-info-right">
-          <a
-            :href="`${GITEE_ADDRESS}/${member?.gitee_id}`"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <OIcon>
-              <IconGitee />
-            </OIcon>
-          </a>
-          <a
-            :href="`mailto:${member.email}`"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <OIcon>
-              <IconMail />
-            </OIcon>
-          </a>
+        <!-- <div
+          v-if="lePadV && (maintainerList?.length || 0) > pageSize"
+          class="get-more"
+          @click="getMoreClick"
+        >
+          <span>{{
+            isFullyDisplayed ? $t('common.collapse') : $t('common.more')
+          }}</span>
+          <OIcon :class="{ reversal: isFullyDisplayed }">
+            <IconChevronDown />
+          </OIcon>
+        </div> -->
+      </OScroller>
+      <div class="sig-member-title sig-committer-title">
+        {{ $t('sig.sigCommitter', { num: committerList?.length }) }}
+      </div>
+      <OScroller class="member-list" size="small">
+        <div v-for="member in committerList" class="member-info">
+          <div class="member-info-left">
+            <WordAvatar
+              :name="member?.gitee_id"
+              size="medium"
+              :custom-size="lePadV ? 32 : 0"
+            />
+            <div class="info">
+              <div class="member-id">{{ member.gitee_id }}</div>
+              <div class="member-name">{{ member.name }}</div>
+            </div>
+          </div>
+          <ODivider direction="v" />
+          <div class="member-info-right">
+            <a
+              :href="`${GITEE_ADDRESS}/${member?.gitee_id}`"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <OIcon>
+                <IconGitee />
+              </OIcon>
+            </a>
+            <a
+              :href="`mailto:${member.email}`"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <OIcon>
+                <IconMail />
+              </OIcon>
+            </a>
+          </div>
         </div>
-      </div>
-      <div
-        v-if="lePadV && (maintainerList?.length || 0) > pageSize"
-        class="get-more"
-        @click="getMoreClick"
-      >
-        <span>{{
-          isFullyDisplayed ? $t('common.collapse') : $t('common.more')
-        }}</span>
-        <OIcon :class="{ reversal: isFullyDisplayed }">
-          <IconChevronDown />
-        </OIcon>
-      </div>
-    </OScroller>
+        <!-- <div
+          v-if="lePadV && (maintainerList?.length || 0) > pageSize"
+          class="get-more"
+          @click="getMoreClick"
+        >
+          <span>{{
+            isFullyDisplayed ? $t('common.collapse') : $t('common.more')
+          }}</span>
+          <OIcon :class="{ reversal: isFullyDisplayed }">
+            <IconChevronDown />
+          </OIcon>
+        </div> -->
+      </OScroller>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+.sig-core {
+  font-weight: 500;
+  margin-bottom: 24px;
+  @include h4;
+}
 .sig-member {
   padding: 24px;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  height: min-content;
+  height: 100%;
   @include respond-to('<=laptop') {
     padding: 20px 32px;
     height: auto;
@@ -122,14 +191,14 @@ const getMoreClick = () => {
   .sig-member-title {
     font-weight: 500;
     @include h4;
-    @include respond-to('<=laptop') {
-      display: none;
-    }
+  }
+
+  .sig-committer-title {
+    margin-top: 24px;
   }
 
   .member-list {
-    margin-top: 24px;
-    height: 700px;
+    margin-top: 16px;
     @include respond-to('<=laptop') {
       margin-top: 0;
       height: auto;
@@ -139,7 +208,7 @@ const getMoreClick = () => {
       display: flex;
       align-items: center;
       & + .member-info {
-        margin-top: 16px;
+        margin-top: 12px;
         @include respond-to('<=laptop') {
           margin-top: 8px;
         }
@@ -147,37 +216,35 @@ const getMoreClick = () => {
 
       .member-info-left {
         --avatar-width: 40px;
-        --info-width: 165px;
         --avatar-gap: 16px;
+        margin-right: auto;
         @include respond-to('<=laptop') {
           --avatar-width: 32px;
-          --info-width: 125px;
         }
 
         display: flex;
-        min-width: var(--info-width);
 
         .info {
           margin-left: var(--avatar-gap);
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          @include tip1;
 
-          .member-name {
+          .member-id {
+            color: var(--o-color-info1);
+            @include tip1;
             @include text-truncate(1);
-
-            width: calc(
-              var(--info-width) - var(--avatar-width) - var(--avatar-gap)
-            );
             word-break: break-all;
             font-weight: 500;
+          }
+          .member-name {
+            color: var(--o-color-info4);
+            @include tip2;
           }
         }
       }
 
       .member-info-right {
-        margin-left: auto;
         display: flex;
         align-items: center;
         height: 100%;
@@ -190,7 +257,7 @@ const getMoreClick = () => {
       }
 
       .o-divider {
-        --o-divider-label-gap: 0 24px;
+        --o-divider-label-gap: 0 16px;
 
         height: 40px;
       }

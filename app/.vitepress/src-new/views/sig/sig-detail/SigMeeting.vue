@@ -23,12 +23,23 @@ import {
   OTag,
   OSelect,
   OOption,
+  ODivider,
+  OTab,
+  OTabPane,
 } from '@opensig/opendesign';
+
+import activityData from '~@/data/activity';
+
+import { type CalendarValueT } from '~@/@type/type-home';
 
 import IconTips from '~icons/app-new/icon-help.svg';
 import notFoundImg_light from '@/assets/illustrations/404.png';
 import notFoundImg_dark from '@/assets/illustrations/404_dark.png';
 import IconMeet from '~icons/home/icon-meet.svg';
+import IconAll from '~icons/home/icon-all.svg';
+import IconEvent from '~icons/home/icon-event.svg';
+import IconArrowLeft from '~icons/app-new/icon-arrow-left.svg';
+import IconArrowRight from '~icons/app-new/icon-arrow-right.svg';
 
 const props = defineProps({
   meetingData: {
@@ -53,12 +64,83 @@ let currentMeet = reactive<TableDataT>({
   timeData: [],
 });
 
-const { isPhone } = useScreen();
+const { lePadV } = useScreen();
 
 const renderData = ref<TableDataT>({
   date: '',
   timeData: [],
 });
+
+const currentPage = ref(1);
+const splitArray = (arr, size) => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i += size) {
+    newArr.push(arr.slice(i, i + size));
+  }
+  return newArr;
+};
+
+const prevPage = () => {
+  currentPage.value--;
+};
+const nextPage = () => {
+  currentPage.value++;
+};
+
+// 会议日期数据
+const meetingDays = ref();
+
+// 获取会议日期数据
+const getMeetingData = () => {
+  const dataList = new Map();
+  props.meetingData.forEach((item) => {
+    const dateParts = item.date.split('-');
+    const month = `${dateParts[0]}/${dateParts[1]}`;
+    const day = parseInt(dateParts[2]);
+
+    // 初始化月份数据
+    if (!dataList.has(month)) {
+      dataList.set(month, []);
+    }
+
+    // 检查是否已经存在相同日期的会议
+    const existingDay = dataList.get(month).find((d) => d.day === day);
+    if (!existingDay) {
+      dataList.get(month).push({ day, date: item.date });
+    }
+  });
+  meetingDays.value = splitArray(Array.from(dataList), 3);
+};
+
+watch(
+  () => props.meetingData,
+  () => {
+    getMeetingData();
+  },
+  { immediate: true }
+);
+
+const activityType = ['线下', '线上', '线上 + 线下'];
+
+const titleList = [
+  {
+    label: '全部',
+    value: 'all',
+    icon: IconAll,
+  },
+  {
+    label: '会议',
+    value: 'meetings',
+    icon: IconMeet,
+  },
+  {
+    label: '活动',
+    value: 'activity',
+    icon: IconEvent,
+  },
+];
+
+const tabType = ref(titleList[0].value);
 
 // 构造日期数据
 const transformDateArrayToMap = computed(() => {
@@ -93,17 +175,72 @@ const detailItem = [
   { text: '回放链接', key: 'video_url' },
 ];
 
-function setMeetingDay(select: string | number) {
-  const meetingData = JSON.parse(JSON.stringify(props.meetingData));
-  currentMeet = meetingData.find((item: TableDataT) => {
-    return item.date === select;
+const getSummitHighlight = (date: string, data: CalendarValueT[]) => {
+  return data.find((item) => {
+    return item.dates?.includes(date);
   });
-  // 会议时间
-  if (currentMeet?.date) {
-    renderData.value = currentMeet;
-    activeDay.value = select.toString();
+};
+
+const getMeetingHighlight = (date: string) => {
+  return props.meetingData.find((item) => {
+    return item.date?.includes(date);
+  });
+};
+
+const paramGetDaysData = (params: { date: string; type: string }) => {
+  renderData.value.timeData = [];
+  const dataMap = {
+    all: [...props.meetingData, ...activityData],
+    meetings: props.meetingData,
+    activity: activityData,
+  };
+  const data = dataMap[params.type];
+
+  const meetingData = data.filter((item) => {
+    return item?.date?.includes(params.date);
+  });
+  const activeData = data.filter((item) => {
+    return item?.dates?.includes(params.date);
+  });
+
+  let arr = [];
+  meetingData.forEach((item) => {
+    arr.push(...item.timeData);
+  });
+
+  activeDay.value = params.date.toString();
+  renderData.value.timeData = [...arr, ...activeData];
+
+  // 当天只有一个日程，直接展开，多个日程，全部折叠
+  if (renderData.value.timeData.length === 1) {
+    activeName.value = [0];
+  } else {
+    // 会议时间排序
+    activeName.value = [];
+    renderData.value.timeData.sort((a: DayDataT, b: DayDataT) => {
+      return (
+        parseInt(a.startTime?.replace(':', '')) -
+        parseInt(b.startTime?.replace(':', ''))
+      );
+    });
+    renderData.value.timeData.map((item2) => {
+      if (item2?.etherpad) {
+        item2['duration_time'] = `${item2.startTime}-${item2.endTime}`;
+      }
+      if (item2?.activity_type && !item2.dates) {
+        item2.activity_type = activityType[Number(item2.activity_type) - 1];
+      }
+    });
   }
-}
+};
+
+const setMeetingDay = (date: string) => {
+  tabType.value = 'all';
+  paramGetDaysData({
+    date: date,
+    type: tabType.value,
+  });
+};
 // 判断会议时间修改提示
 const isActive = ref(false);
 const getTimeTip = (item: DayDataT) => {
@@ -147,55 +284,105 @@ const transformKey = (key: string) => {
       return key;
   }
 };
+
+// 活动会议筛选
+const selectTab = () => {
+  nextTick(() => {
+    paramGetDaysData({
+      date: activeDay.value,
+      type: tabType.value,
+    });
+  });
+};
 const activeName = ref<number[]>([0]);
 </script>
 <template>
-  <div class="sig-meeting">
-    <div v-if="!isPhone" class="card-title">
-      <OPopover position="top" trigger="hover" wrap-class="popup-tip">
-        <template #target>
-          <OIcon class="server-tips">
-            <IconTips />
-          </OIcon>
-        </template>
-        <p class="tips-text">
-          {{ $t('sig.sigMeetingTip') }}
+  <div v-if="!lePadV" class="sig-meeting-pc">
+    <div class="left-date">
+      <div class="card-title">
+        <p>
+          {{
+            $t('sig.latestMeeting', { date: activeDay.replaceAll('-', '/') })
+          }}
         </p>
-      </OPopover>
-      {{ $t('sig.latestMeeting', { date: activeDay.replaceAll('-', '/') }) }}
-    </div>
-    <div v-else class="card-title-mo">
-      <OSelect v-model="activeDay" @change="(val) => setMeetingDay(val)">
-        <OOption
-          v-for="item in meetingData"
-          :key="item.date"
-          :value="item.date"
-        />
-      </OSelect>
-    </div>
-    <div class="card-body">
-      <OScroller class="date-list" show-type="hover" size="small">
-        <div class="card-body-date">
+        <OPopover position="top" trigger="hover" wrap-class="popup-tip">
+          <template #target>
+            <OIcon class="server-tips">
+              <IconTips />
+            </OIcon>
+          </template>
+          <p class="tips-text">
+            {{ $t('sig.sigMeetingTip') }}
+          </p>
+        </OPopover>
+      </div>
+      <ODivider :style="{ '--o-divider-gap': '0' }" />
+      <div class="date-content">
+        <OScroller class="content-box" show-type="hover" size="small">
           <div
-            v-for="([year, dates], index) in transformDateArrayToMap"
-            :key="index"
-            class="year-date"
+            v-for="[month, days] in meetingDays[currentPage - 1]"
+            :key="month"
+            class="meeting-days"
           >
-            <div class="year">
-              {{ year }}
-            </div>
-            <div
-              v-for="(date, dateIndex) in dates"
-              :key="dateIndex"
-              class="month"
-              :class="{ active: date === activeDay }"
-              @click="setMeetingDay(date)"
-            >
-              {{ date.split('-')[1] + '/' + date.split('-')[2] }}
+            <p class="month">{{ month }}</p>
+            <div class="meeting-days-box">
+              <div
+                v-for="d in days"
+                :key="d.day"
+                class="day"
+                @click="setMeetingDay(d.date)"
+                :class="activeDay === d.date ? 'active' : ''"
+              >
+                <p>{{ d.day }}</p>
+                <div class="icon-box">
+                  <OIcon class="meeting" v-if="getMeetingHighlight(d.date)">
+                    <IconMeet></IconMeet>
+                  </OIcon>
+                  <OIcon
+                    class="activity"
+                    v-if="getSummitHighlight(d.date, activityData)"
+                  >
+                    <IconEvent></IconEvent>
+                  </OIcon>
+                </div>
+              </div>
             </div>
           </div>
+        </OScroller>
+        <div v-if="meetingDays.length > 1" class="page">
+          <OIcon
+            :class="{ 'icon-disable': currentPage === 1 }"
+            @click="prevPage"
+          >
+            <IconArrowLeft></IconArrowLeft>
+          </OIcon>
+          <OIcon
+            :class="{ 'icon-disable': currentPage === meetingDays?.length }"
+            @click="nextPage"
+          >
+            <IconArrowRight></IconArrowRight>
+          </OIcon>
         </div>
-      </OScroller>
+      </div>
+    </div>
+    <div class="right-meeting">
+      <div class="title-list">
+        <OTab v-model="tabType" @change="selectTab" :line="false">
+          <OTabPane
+            v-for="item in titleList"
+            :key="item.value"
+            :value="item.value"
+          >
+            <template #nav>
+              <OIcon>
+                <component :is="item.icon"></component>
+              </OIcon>
+              {{ item.label }}
+            </template>
+          </OTabPane>
+        </OTab>
+      </div>
+      <ODivider :style="{ '--o-divider-gap': '0' }" />
       <div class="card-body-info">
         <OScroller class="meeting-list" show-type="hover" size="small">
           <OCollapse
@@ -210,8 +397,93 @@ const activeName = ref<number[]>([0]);
               :value="index"
             >
               <template #title>
-                <OIcon :class="item.type || 'meeting'">
-                  <IconMeet></IconMeet>
+                <OIcon :class="item.type || 'meeting'" class="icon-type">
+                  <IconEvent v-if="item.type === 'activity'"></IconEvent>
+                  <IconMeet v-else></IconMeet>
+                </OIcon>
+                <div class="meet-title" :title="item.name || item.title">
+                  <div class="top-line">
+                    <div class="text">
+                      {{ item.name || item.title }}
+                    </div>
+                    <OTag>
+                      {{ getTimeTip(item) }}
+                    </OTag>
+                  </div>
+                  <div class="sig-name">
+                    {{ $t('sig.sigName', { sig: item.group_name }) }}
+                  </div>
+                </div>
+              </template>
+              <div class="calendar-info">
+                <template v-for="keys in detailItem" :key="keys.key">
+                  <div
+                    v-if="isValidKey(keys.key, item) && item[keys.key]"
+                    class="info-item"
+                  >
+                    <div class="item-title">{{ keys.text }}:</div>
+                    <a
+                      v-if="
+                            typeof item[keys.key] === 'string' &&
+                            (item[keys.key] as string).startsWith('http')
+                          "
+                      :href="item[keys.key]"
+                      target="_blank"
+                      >{{ item[keys.key] }}</a
+                    >
+                    <p v-else>
+                      {{
+                        keys.key === 'platform'
+                          ? transformKey(item[keys.key])
+                          : item[keys.key]
+                      }}
+                    </p>
+                  </div>
+                </template>
+              </div>
+            </OCollapseItem>
+          </OCollapse>
+          <div v-else class="empty">
+            <img
+              v-if="commonStore.theme === 'light'"
+              :src="notFoundImg_light"
+              alt=""
+            />
+            <img v-else :src="notFoundImg_dark" alt="" />
+            <p>{{ i18n.EMPTY_TEXT }}</p>
+          </div>
+        </OScroller>
+      </div>
+    </div>
+  </div>
+  <div v-else class="sig-meeting">
+    <div class="card-title">
+      <OSelect v-model="activeDay" @change="(val) => setMeetingDay(val)">
+        <OOption
+          v-for="item in meetingData"
+          :key="item.date"
+          :value="item.date"
+        />
+      </OSelect>
+    </div>
+    <div class="card-body">
+      <div class="card-body-info">
+        <OScroller class="meeting-list" show-type="hover" size="small">
+          <OCollapse
+            v-if="renderData.timeData.length"
+            v-model="activeName"
+            accordion
+            :style="{ '--collapse-padding': '0' }"
+          >
+            <OCollapseItem
+              v-for="(item, index) in renderData.timeData"
+              :key="index"
+              :value="index"
+            >
+              <template #title>
+                <OIcon :class="item.type || 'meeting'" class="icon-type">
+                  <IconEvent v-if="item.type === 'activity'"></IconEvent>
+                  <IconMeet v-else></IconMeet>
                 </OIcon>
                 <div class="meet-title" :title="item.name || item.title">
                   <div class="top-line">
@@ -270,32 +542,258 @@ const activeName = ref<number[]>([0]);
   </div>
 </template>
 <style lang="scss" scoped>
+.meeting {
+  background-color: #007af0;
+  z-index: 3;
+}
+.activity {
+  background-color: #ffa122;
+  z-index: 1;
+}
+.sig-meeting-pc {
+  width: 100%;
+  display: flex;
+  border-radius: var(--o-radius-xs);
+  background-color: var(--o-color-fill2);
+  .left-date {
+    width: 28%;
+    .card-title {
+      display: flex;
+      align-items: center;
+      padding: 16px 24px;
+      font-weight: 500;
+      @include text1;
+
+      .o-icon {
+        cursor: pointer;
+        margin-left: 8px;
+        color: var(--o-color-control3);
+        font-size: var(--o-icon_size-xs);
+      }
+    }
+  }
+  .date-content {
+    padding: 16px 16px 10px 24px;
+    border-right: 1px solid var(--o-color-control4);
+  }
+  .content-box {
+    height: 312px;
+  }
+  .meeting-days {
+    + .meeting-days {
+      margin-top: 12px;
+    }
+    .month {
+      @include tip1;
+      color: var(--o-color-info3);
+      margin-bottom: 8px;
+    }
+    .meeting-days-box {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(2, 1fr);
+      .day {
+        @include text1;
+        color: var(--o-color-info1);
+        border-radius: 8px;
+        padding: 8px 12px;
+        background: var(--o-color-control2-light);
+        border: 1px solid var(--o-color-control2-light);
+        cursor: pointer;
+        transition: all 0.3s;
+        &.active {
+          background: var(--o-color-control3-light);
+          border-color: var(--o-color-primary1);
+        }
+      }
+    }
+  }
+  .icon-box {
+    display: flex;
+    margin-top: 4px;
+    color: var(--o-color-white);
+    height: 20px;
+    .o-icon {
+      flex-shrink: 0;
+      position: relative;
+      border-radius: 50%;
+      padding: 2px;
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      margin-left: -6px;
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+  .page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    .o-icon {
+      color: var(--o-color-primary1);
+      --icon-size: 24px;
+      cursor: pointer;
+    }
+    .o-icon + .o-icon {
+      margin-left: 140px;
+    }
+    .icon-disable {
+      color: var(--o-color-primary4);
+    }
+  }
+  .right-meeting {
+    width: 72%;
+  }
+  .title-list {
+    width: 100%;
+  }
+  .o-tab {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 56px;
+    @include respond-to('pad_v-laptop') {
+      --tab-nav-padding: 0 0 14px;
+    }
+  }
+
+  :deep(.o-collapse) {
+    .o-collapse-item {
+      position: relative;
+      border-top: none;
+      @include hover {
+        .text {
+          color: var(--o-color-primary1);
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 2 * 24px);
+        height: 1px;
+        background-color: var(--collapse-division-color);
+      }
+    }
+
+    .o-collapse-item-icon {
+      height: min-content;
+    }
+
+    .o-collapse-item-header {
+      align-items: center;
+      padding: 16px 24px;
+    }
+
+    .o-collapse-item-body {
+      background-color: #f7f9fd;
+      margin-bottom: 0;
+
+      a {
+        word-break: break-all;
+      }
+    }
+  }
+  .card-body-info {
+    width: 100%;
+    .meeting-list {
+      height: 366px;
+    }
+  }
+
+  :deep(.o-collapse-item-title) {
+    display: flex;
+  }
+
+  .icon-type {
+    flex-shrink: 0;
+    padding: 2px;
+    border-radius: 50%;
+    overflow: hidden;
+    color: var(--o-color-white);
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+  }
+
+  .meet-title {
+    display: flex;
+    flex-direction: column;
+    color: var(--o-color-info1);
+    @include text2;
+
+    .top-line {
+      display: flex;
+    }
+
+    .sig-name {
+      margin-top: 8px;
+      color: var(--o-color-info3);
+      @include tip1;
+    }
+
+    .text {
+      @include text-truncate(1);
+
+      display: block;
+      width: 100%;
+      margin-right: 8px;
+    }
+  }
+  .calendar-info {
+    display: flex;
+    color: var(--o-color-info3);
+    flex-direction: column;
+    padding: 16px 60px;
+    @include tip1;
+
+    .info-item {
+      display: flex;
+      margin-top: 8px;
+
+      .item-title {
+        min-width: 110px;
+      }
+    }
+
+    .info-item:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    @include text1;
+    color: var(--o-color-info1);
+    padding: 24px;
+    img {
+      height: 180px;
+    }
+    p {
+      margin-top: 16px;
+    }
+  }
+}
 .sig-meeting {
   display: flex;
   flex-direction: column;
   border-radius: var(--o-radius-xs);
   background-color: var(--o-color-fill2);
-  height: 400px;
-  @include respond-to('<=pad_v') {
-    height: fit-content;
-  }
+  height: fit-content;
+  margin-top: 24px;
 
   .card-title {
-    display: flex;
-    align-items: center;
-    padding: 16px 24px;
-    font-weight: 500;
-    @include text1;
-
-    .o-icon {
-      cursor: pointer;
-      margin-right: 8px;
-      color: var(--o-color-control3);
-      font-size: var(--o-icon_size-xs);
-    }
-  }
-
-  .card-title-mo {
     padding: 16px 12px;
 
     .o-select {
@@ -311,45 +809,7 @@ const activeName = ref<number[]>([0]);
     height: 100%;
     max-height: calc(400px - 54px);
     border-top: 1px solid var(--o-color-control4);
-    @include respond-to('phone') {
-      flex-direction: column;
-    }
-
-    .date-list {
-      padding: 24px;
-      flex-shrink: 0;
-      border-right: 1px solid var(--o-color-control4);
-      @include respond-to('phone') {
-        display: none;
-      }
-    }
-
-    .card-body-date {
-      .year-date {
-        font-weight: 500;
-        @include tip1;
-
-        &:not(:first-child) {
-          margin-top: 12px;
-        }
-
-        & > div:not(:first-child) {
-          margin-top: 8px;
-        }
-
-        .month {
-          cursor: pointer;
-          padding: 8px 24px;
-          border: 1px solid var(--o-color-control4);
-          border-radius: var(--o-radius-xs);
-          width: fit-content;
-        }
-
-        .active {
-          border-color: var(--o-color-primary1);
-        }
-      }
-    }
+    flex-direction: column;
 
     :deep(.o-collapse) {
       .o-collapse-item {
@@ -390,10 +850,7 @@ const activeName = ref<number[]>([0]);
 
       .o-collapse-item-header {
         align-items: center;
-        padding: 16px 24px;
-        @include respond-to('<=pad_v') {
-          padding: 12px 16px;
-        }
+        padding: 12px 16px;
       }
 
       .o-collapse-item-body {
@@ -417,22 +874,16 @@ const activeName = ref<number[]>([0]);
       display: flex;
     }
 
-    .meeting {
-      background-color: #007af0;
+    .icon-type {
       flex-shrink: 0;
       padding: 2px;
       border-radius: 50%;
       overflow: hidden;
       color: var(--o-color-white);
       margin-right: 12px;
-      width: 24px;
-      height: 24px;
-      font-size: 24px;
-      @include respond-to('<=pad_v') {
-        font-size: 20px;
-        width: 20px;
-        height: 20px;
-      }
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
     }
 
     .meet-title {
@@ -461,31 +912,21 @@ const activeName = ref<number[]>([0]);
     }
 
     .meet-info {
-      margin-left: calc($icon-size + 12px);
+      margin-left: 32px;
       margin-top: 8px;
       display: flex;
       align-items: center;
       color: var(--o-color-info3);
       text-decoration: none;
       @include tip1;
-      @include respond-to('<=pad_v') {
-        margin-left: 32px;
-      }
-
-      .o-divider {
-        @include tip1;
-      }
     }
 
     .calendar-info {
       display: flex;
       color: var(--o-color-info3);
       flex-direction: column;
-      padding: 16px 60px;
+      padding: 12px 16px;
       @include tip1;
-      @include respond-to('<=pad_v') {
-        padding: 12px 16px;
-      }
 
       .info-item {
         display: flex;

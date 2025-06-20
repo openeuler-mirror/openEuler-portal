@@ -1,14 +1,13 @@
 import { request, type AxiosResponse } from '~@/shared/axios';
 
 import {
-  FeatureInfoT,
   GroupInfoT,
   SigCompleteListT,
   SigContributeArrT,
   SigDetailT,
   SigCompleteItemT,
   SigRepoT,
-} from '@/shared/@types/type-sig';
+} from '~@/@types/type-sig';
 /**
  * 获取sig landscape
  * @returns {Promise<GroupInfoT[]>}
@@ -98,11 +97,11 @@ export function querySigUserContribute(params: object): Promise<{
  * @returns {Object}
  */
 export function getSigDetail(params: object): Promise<{
-    code: number;
-    data: SigCompleteItemT[];
-    msg: string;
-    update_at: string;
-  }> {
-    const url = '/api-dsapi/query/sig/info';
-    return request.get(url, { params }).then((res: AxiosResponse) => res.data);
-  }
+  code: number;
+  data: SigCompleteItemT[];
+  msg: string;
+  update_at: string;
+}> {
+  const url = '/api-dsapi/query/sig/info';
+  return request.get(url, { params }).then((res: AxiosResponse) => res.data);
+}

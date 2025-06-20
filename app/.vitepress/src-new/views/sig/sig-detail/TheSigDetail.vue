@@ -8,7 +8,17 @@ import { SIG_ADDRESS } from '~@/shared/config/sig';
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 
-import { OBreadcrumb, OBreadcrumbItem, vLoading } from '@opensig/opendesign';
+import IconNotice from '~icons/sig/icon-notice.svg';
+import IconWork from '~icons/sig/icon-working.svg';
+
+import {
+  OBreadcrumb,
+  OBreadcrumbItem,
+  vLoading,
+  OLink,
+  OIcon,
+  OButton,
+} from '@opensig/opendesign';
 import SigDetailInfoCard from './SigDetailInfoCard.vue';
 import SigMember from './SigMember.vue';
 import SigMeeting from './SigMeeting.vue';
@@ -22,12 +32,16 @@ import { getSigMeeting, getSigDetail } from '~@/api/api-sig';
 import type { SigCompleteItemT } from '~@/@types/type-sig';
 
 const { leLaptop, isPadVToLaptop, lePadV } = useScreen();
-const { locale } = useLocale();
+const { locale, t } = useLocale();
 const { lang, params } = useData();
 const router = useRouter();
 
 const sigName = computed(() => {
   return params.value?.sig || '';
+});
+
+const meetingSummaryLink = computed(() => {
+  return `https://etherpad.openeuler.org/p/${sigName.value}-meetings`;
 });
 
 const pageParams = reactive({
@@ -38,7 +52,8 @@ const pageParams = reactive({
 const mail = ref('');
 const sigMeetingData: any = ref([]);
 const sigDetailInfo = ref<SigCompleteItemT>();
-const memberList: any = ref([]);
+const maintainerInfo: any = ref([]);
+const committerInfo: any = ref([]);
 const isLoading = ref(true);
 
 // 获取sig会议数据
@@ -66,9 +81,10 @@ const queryGetSigDetail = () => {
       const data = res.data[0];
       sigDetailInfo.value = data;
       mail.value = data.mailing_list;
-      const { maintainer_info } = data || [];
+      const { maintainer_info, committer_info } = data || [];
       if (maintainer_info) {
-        memberList.value = maintainer_info;
+        maintainerInfo.value = maintainer_info;
+        committerInfo.value = committer_info;
       }
     }
   });
@@ -120,14 +136,69 @@ onMounted(() => {
     />
     <div class="sig-detail-content">
       <!-- SIG成员 -->
-      <SigMember class="sig-member" :maintainer-list="memberList" />
+      <SigMember
+        class="sig-member-pc"
+        :maintainer-list="maintainerInfo"
+        :committer-list="committerInfo"
+      />
       <div class="sig-floor">
         <div v-if="locale !== 'en'" class="meeting-floot sig-floor-item">
-          <div class="meeting-title">
-            {{ $t('sig.sigMeeting') }}
-          </div>
-          <div class="meeting-title-intro">
-            {{ $t('sig.sigMeetingIntro') }}
+          <div class="meeting-detail">
+            <p class="detail-title">{{ t('sig.sigMettingActive') }}</p>
+            <div class="meeting-detail-card">
+              <div class="sig-info-item">
+                <div class="title-top">
+                  <OIcon>
+                    <IconWork />
+                  </OIcon>
+                  <p class="text">{{ t('sig.workMeeting') }}</p>
+                  <OLink
+                    :href="meetingSummaryLink"
+                    target="_blank"
+                    color="primary"
+                  >
+                    {{ t('sig.meetingSummary') }}
+                  </OLink>
+                </div>
+                <!-- <p class="quote">
+                  {{
+                    isZh ? getRepoInfo.workMeeting : getRepoInfo.workMeetingEn
+                  }}
+                </p> -->
+                <p class="tip">
+                  {{ t('sig.sigMeetingIntro') }}
+                </p>
+              </div>
+              <div class="email-link">
+                <div class="title-top">
+                  <OIcon>
+                    <IconNotice />
+                  </OIcon>
+                  <p class="text">{{ t('sig.mailList') }}</p>
+                </div>
+                <OLink
+                  color="primary"
+                  :href="`mailto:${sigDetailInfo?.mailing_list}`"
+                  target="_blank"
+                  class="icon-link"
+                >
+                  {{ sigDetailInfo?.mailing_list }}
+                </OLink>
+                <OButton
+                  v-if="
+                    sigDetailInfo?.mailing_list?.split('@').length &&
+                    sigDetailInfo?.mailing_list?.split('@')[1] ===
+                      'openeuler.org'
+                  "
+                  color="primary"
+                  :href="`https://mailweb.openeuler.org/postorius/lists/${sigDetailInfo?.mailing_list}/`"
+                  target="_blank"
+                  size="medium"
+                >
+                  {{ $t('sig.subscribe') }}
+                </OButton>
+              </div>
+            </div>
           </div>
           <div v-loading="isLoading" class="meeting-card">
             <SigMeeting
@@ -151,13 +222,11 @@ onMounted(() => {
           </div>
         </div>
         <!-- SIG成员移动端 -->
-        <div v-if="leLaptop" class="sig-member-title">
-          {{ $t('sig.sigMember', { num: memberList?.length }) }}
-        </div>
         <SigMember
           v-if="leLaptop"
           class="sig-member-mo sig-floor-item"
-          :maintainer-list="memberList"
+          :maintainer-list="maintainerInfo"
+          :committer-list="committerInfo"
         />
         <!-- SIG仓库 -->
         <SigRepo class="sig-floor-item" />
@@ -189,7 +258,7 @@ onMounted(() => {
     }
   }
 
-  .sig-member {
+  .sig-member-pc {
     @include respond-to('<=laptop') {
       display: none;
     }
@@ -197,9 +266,45 @@ onMounted(() => {
 
   .sig-floor {
     width: 100%;
-    .meeting-title {
+
+    .detail-title {
       font-weight: 500;
+      color: var(--o-color-info1);
+      margin-bottom: 24px;
       @include h4;
+    }
+    .meeting-detail-card {
+      border-radius: var(--o-radius-xs);
+      background-color: var(--o-color-fill2);
+      padding: 16px 24px;
+      .o-btn {
+        margin-left: 8px;
+      }
+    }
+    .title-top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      .o-icon {
+        --icon-size: 24px;
+      }
+      .text {
+        font-weight: 500;
+        color: var(--o-color-info1);
+        margin-left: 12px;
+        @include text2;
+      }
+      .o-link {
+        margin-left: auto;
+      }
+    }
+    .tip {
+      color: var(--o-color-info3);
+      margin-top: 8px;
+      @include tip2;
+    }
+    .email-link {
+      margin-top: 16px;
     }
 
     .meeting-card {
@@ -208,11 +313,6 @@ onMounted(() => {
       @include respond-to('<=laptop') {
         margin-top: 12px;
       }
-    }
-
-    .meeting-title-intro {
-      margin-top: 8px;
-      @include text1;
     }
 
     .sig-floor-item {
@@ -258,6 +358,25 @@ onMounted(() => {
 .breadcrumb {
   @include respond-to('<=pad_v') {
     display: none;
+  }
+}
+
+@include respond-to('<=pad_v') {
+  .sig-detail-content {
+    .sig-floor {
+      .detail-title {
+        margin-bottom: 12px;
+      }
+      .title-top {
+        margin-bottom: 8px;
+        .o-icon {
+          --icon-size: 16px;
+        }
+        .o-link {
+          @include text2;
+        }
+      }
+    }
   }
 }
 </style>

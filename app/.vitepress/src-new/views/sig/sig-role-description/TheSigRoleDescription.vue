@@ -16,7 +16,7 @@ import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
 
-import banner from '~@/assets/category/sig/banner-role-description.png';
+import banner from '~@/assets/category/sig/sig-role-banner.jpg';
 import IconRight from '~icons/sig/icon-right.svg';
 
 import {
@@ -67,7 +67,6 @@ const getSectionBg = (item: any) => {
     <BannerLevel3
       :background-image="banner"
       :title="$t('sig.roleDescription')"
-      :subtitle="$t('sig.roleDescriptionIntro')"
     />
 
     <ContentWrapper :vertical-padding="verticalPadding">
@@ -165,6 +164,58 @@ const getSectionBg = (item: any) => {
 </template>
 
 <style scoped lang="scss">
+:deep(.banner-level3 .wrap) {
+  .banner-text {
+    max-width: 60%;
+    .banner-title {
+      @include display2;
+      color: var(--o-color-black);
+    }
+    .banner-subtitle {
+      @include text2;
+      color: var(--o-color-black);
+      margin-top: var(--o-gap-2);
+    }
+  }
+
+  height: 280px;
+
+  @media screen and (max-width: 1680px) {
+    height: 220px;
+
+    .banner-text {
+      .banner-title {
+        font-size: 40px;
+        line-height: 56px;
+      }
+      .banner-subtitle {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .banner-operation {
+        margin-top: var(--o-gap-4);
+
+        .o-btn {
+          --btn-height: 32px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    height: 180px;
+
+    .banner-text {
+      .banner-title {
+        @include display2;
+      }
+      .banner-subtitle {
+        @include text2;
+      }
+    }
+  }
+}
+
 .sig-role-description {
   :deep(.o-breadcrumb-item-separator) {
     font-size: 20px;
@@ -226,19 +277,19 @@ const getSectionBg = (item: any) => {
         border-radius: 4px;
 
         @include respond-to('<=laptop') {
-          background-size:  100% auto;
+          background-size: 100% auto;
           padding: 28px 24px 24px;
         }
 
         @include respond-to('<=pad') {
           padding: 28px 20px 20px;
-          background-size:  100% 100%;
+          background-size: 100% 100%;
         }
 
         @include respond-to('<=pad_v') {
           padding: 16px;
           min-height: 152px;
-          background-size:  100% auto;
+          background-size: 100% auto;
         }
 
         .member-type-item-title {

@@ -4,8 +4,7 @@ import SigWelcomeJoin from './SigWelcomeJoin.vue';
 import SigAbout from './SigAbout.vue';
 import SigList from './SigList.vue';
 
-import banner from '~@/assets/category/sig/sig-center-banner.png';
-
+import banner from '~@/assets/category/sig/sig-center-banner.jpg';
 </script>
 <template>
   <BannerLevel2
@@ -21,6 +20,60 @@ import banner from '~@/assets/category/sig/sig-center-banner.png';
 </template>
 
 <style scoped lang="scss">
+.sig-banner {
+  :deep(.wrap) {
+    .banner-text {
+      max-width: 60%;
+      .banner-title {
+        @include display2;
+        color: var(--o-color-black);
+      }
+      .banner-subtitle {
+        @include text2;
+        color: var(--o-color-black);
+        margin-top: var(--o-gap-2);
+      }
+    }
+
+    height: 280px;
+
+    @media screen and (max-width: 1680px) {
+      height: 220px;
+
+      .banner-text {
+        .banner-title {
+          font-size: 40px;
+          line-height: 56px;
+        }
+        .banner-subtitle {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .banner-operation {
+          margin-top: var(--o-gap-4);
+
+          .o-btn {
+            --btn-height: 32px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      height: 180px;
+
+      .banner-text {
+        .banner-title {
+          @include display2;
+        }
+        .banner-subtitle {
+          @include text2;
+        }
+      }
+    }
+  }
+}
+
 .sig-banner {
   @include respond-to('<=pad_v') {
     display: none;
