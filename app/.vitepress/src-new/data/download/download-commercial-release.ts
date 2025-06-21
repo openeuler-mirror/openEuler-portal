@@ -2,6 +2,21 @@ export default {
   zh: {
     COMMERCIAL_RELEASE_LIST: [
       {
+        NAME: '汇智TeligenOS服务器操作系统 V3',
+        DOWNLOAD_URL: 'http://www.teligen.net',
+        DESC: '汇智TeligenOS服务器操作系统 V3由广州汇智通信技术有限公司研发，具有高效、稳定、安全等核心特性，可为数据库、大数据、云计算及人工智能等企业级应用提供可靠的运行支撑。该系统全面支持X86、ARM、龙芯和申威等主流CPU架构，并完成与国内主要芯片及整机厂商的适配。同时，其技术架构覆盖从底层芯片、系统内核、虚拟化平台到上层应用的全栈体系，确保高效性、可靠性和安全性。',
+        MANUFACTURER: '广州汇智通信技术有限公司',
+        PUBLISH_DATE: '2025/2',
+        DETAILED_LINK: [
+          {
+            ARCH: 'x86_64',
+          },
+          {
+            ARCH: 'AArch64',
+          },
+        ],
+      },
+      {
         NAME: '浪潮云启操作系统 23.12 LTS SP2',
         DOWNLOAD_URL:
           'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP2/',
@@ -245,6 +260,27 @@ export default {
           },
           {
             ARCH: 'LoongArch64',
+          },
+        ],
+      },
+      {
+        NAME: '新华三 磐宁操作系统（NingOS) V3.0',
+        DOWNLOAD_URL: 'http://mirrors.h3c.com/h3c-os/1.0/ISOS/',
+        DESC: '新华三 磐宁操作系统（NingOS) V3.0 是新华三集团基于 Linux 内核、融合openEuler等开源技术自主研发的新一代安全可信操作系统产品，支持 x86、ARM、LoongArch、SW64、RISC-V 等主流架构处理器，具备成熟的 CentOS 迁移和替换能力，为数据中心关键业务提供了强大支持。旨在满足云计算、数据库、大数据、人工智能，网络安全等业务要求，已广泛应用于金融、政企和运营商等行业，是国内领先的数字基础设施操作系统。',
+        MANUFACTURER: '新华三技术有限公司',
+        PUBLISH_DATE: '2021/12',
+        DETAILED_LINK: [
+          {
+            ARCH: 'x86_64',
+          },
+          {
+            ARCH: 'AArch64',
+          },
+          {
+            ARCH: 'LoongArch64',
+          },
+          {
+            ARCH: 'sw_64',
           },
         ],
       },

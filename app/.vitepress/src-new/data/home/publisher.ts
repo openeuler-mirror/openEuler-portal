@@ -26,6 +26,7 @@ import seaway from '~@/assets/category/home/publisher/light/seaway.png';
 import langchaoyun_light from '~@/assets/category/home/publisher/light/langchaoyun.png';
 import geidi_light from '~@/assets/category/home/publisher/light/geidi.png';
 import bochuan_light from '~@/assets/category/home/publisher/light/bochuan.png';
+import huizhi_light from '~@/assets/category/home/publisher/light/huizhi.png';
 
 import baodeLogo_dark from '~@/assets/category/home/publisher/dark/baode.png';
 import xfusionLogo_dark from '~@/assets/category/home/publisher/dark/xfusion.png';
@@ -55,6 +56,7 @@ import seaway_dark from '~@/assets/category/home/publisher/dark/seaway.png';
 import langchaoyun_dark from '~@/assets/category/home/publisher/dark/langchaoyun.png';
 import geidi_dark from '~@/assets/category/home/publisher/dark/geidi.png';
 import bochuan_dark from '~@/assets/category/home/publisher/dark/bochuan.png';
+import huizhi_dark from '~@/assets/category/home/publisher/dark/huizhi.png';
 
 export const publisher = [
   {
@@ -101,6 +103,13 @@ export const publisher = [
       dark: hengsheng_dark,
     },
     href: 'https://www.hundsun.com/',
+  },
+  {
+    logo: {
+      light: huizhi_light,
+      dark: huizhi_dark,
+    },
+    href: 'http://www.teligen.net/',
   },
   {
     logo: {
