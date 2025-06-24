@@ -197,9 +197,6 @@ watch(
   }
 );
 
-queryGetSigList();
-constructLandscapeMap();
-
 // option 渲染的 maintainers
 const renderMaintainers = computed(() => {
   return sigList.value
@@ -417,6 +414,8 @@ const listenScroll = () => {
 const throttleEvent = useThrottleFn(listenScroll, 300);
 
 onMounted(() => {
+  queryGetSigList();
+  constructLandscapeMap();
   window.addEventListener('scroll', throttleEvent);
 });
 
