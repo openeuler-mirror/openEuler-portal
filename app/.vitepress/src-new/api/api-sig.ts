@@ -105,3 +105,12 @@ export function getSigDetail(params: object): Promise<{
   const url = '/api-dsapi/query/sig/info';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
+
+/**
+ * sig列表搜索
+ * @returns {Object}
+ */
+export function getSigFilter(params: object) {
+  const url = `/api-search/sigsearch/docs`;
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
+}

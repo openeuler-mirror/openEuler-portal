@@ -86,8 +86,10 @@ const getSectionBg = (item: any) => {
     <AppSection
       class="community-member"
       :title="communityMember.title[locale]"
-      :subtitle="communityMember.subtitle[locale]"
     >
+      <template #subtitle>
+        <div v-dompurify-html="communityMember.subtitle[locale]"></div>
+      </template>
       <div class="member-type-list">
         <div
           v-for="(item, i) in communityMember.types"
@@ -244,6 +246,7 @@ const getSectionBg = (item: any) => {
     }
 
     :deep(.section-subtitle) {
+      max-width: 1175px;
       @include respond-to('<=pad') {
         white-space: normal;
       }
@@ -272,18 +275,16 @@ const getSectionBg = (item: any) => {
         display: flex;
         flex-direction: column;
         padding: 38px 32px 32px;
-        background-size: 100% 100%;
+        background-size: auto 100%;
         background-repeat: no-repeat;
         border-radius: 4px;
 
         @include respond-to('<=laptop') {
-          background-size: 100% auto;
           padding: 28px 24px 24px;
         }
 
         @include respond-to('<=pad') {
           padding: 28px 20px 20px;
-          background-size: 100% 100%;
         }
 
         @include respond-to('<=pad_v') {

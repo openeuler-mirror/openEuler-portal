@@ -4,7 +4,7 @@ import { ref, onMounted, computed, watch, onUnmounted, nextTick } from 'vue';
 import { useRouter } from 'vitepress';
 import { storeToRefs } from 'pinia';
 
-import { useDebounceFn, useThrottleFn } from '@vueuse/core';
+import { useDebounceFn, useThrottleFn, onClickOutside } from '@vueuse/core';
 
 import { useCommon } from '@/stores/common';
 
@@ -36,7 +36,7 @@ import { useScreen } from '~@/composables/useScreen';
 
 import type { SigCompleteItemT, GroupInfoT } from '~@/@types/type-sig';
 
-import { getSigLandscape, getSigList } from '~@/api/api-sig';
+import { getSigLandscape, getSigList, getSigFilter } from '~@/api/api-sig';
 
 import IconGitee from '~icons/app-new/icon-gitee.svg';
 import IconSearch from '~icons/app-new/icon-search.svg';
@@ -93,7 +93,7 @@ const sigOptions = [
   },
   {
     label: t('sig.repo'),
-    value: 'repo',
+    value: 'repos',
     placeholder: t('sig.searchSigRepo'),
   },
   {
@@ -197,35 +197,49 @@ watch(
   }
 );
 
-// option 渲染的 maintainers
-const renderMaintainers = computed(() => {
-  return sigList.value
-    .flatMap((sigInfo) => sigInfo.maintainer_info)
-    .filter(
-      (value, index, self) =>
-        self.findIndex((e) => e.gitee_id === value.gitee_id) === index
-    )
-    .sort((a, b) => a.gitee_id.localeCompare(b.gitee_id));
-});
-
-// option 渲染的 仓库
-const renderRepos = computed(() => {
-  return sigList.value.flatMap((sigInfo) => sigInfo.repos);
-});
-
-// option 渲染的 sigs
-const renderSigs = computed(() => {
-  return sigList.value.map((sigInfo) => sigInfo.sig_name);
-});
-
 // -------------------- 搜索 input字段做防抖处理，不统一使用useVModels  --------------------
 const sigInput = ref('');
 const showPanel = ref(false);
+const hasSearchData = ref();
+
+const sigSearch = () => {
+  hasSearchData.value = [];
+  const params = {
+    keyword: sigInput.value,
+    keywordType: searchType.value,
+  }
+  getSigFilter(params).then((res) => {
+    const list = [
+      {
+        id: 'sig',
+        label: t('sig.sigGroup'),
+        list: res['name.keyword'] || [],
+      },
+      {
+        id: 'repos',
+        label: t('sig.repo'),
+        list: res['repos'] || [],
+      },
+      {
+        id: 'maintainer',
+        label: 'Maintainer',
+        list: res['giteeIds'] || [],
+      },
+    ];
+    if (searchType.value === 'all') {
+      hasSearchData.value = list;
+    } else {
+      const arr = list.find((item) => item.id === searchType.value);
+      hasSearchData.value = [arr];
+    }
+  })
+}
 
 const updataSig = (val: string) => {
   sigInput.value = val;
   sigQuery.value.page = 1;
   sigQuery.value.pageSize = 10;
+  sigSearch()
 };
 const debounceFn = useDebounceFn(updataSig, 300);
 const debounceSig = computed({
@@ -237,62 +251,30 @@ const debounceSig = computed({
   },
 });
 
-const hasSearchData = ref();
-
-watch(
-  () => sigInput.value,
-  (val) => {
-    hasSearchData.value = [];
-
-    const sigFilterList = val
-      ? renderSigs.value.filter((item) =>
-          item.toLowerCase().includes(val.toLowerCase())
-        )
-      : [];
-    const repoFilterList = val
-      ? renderRepos.value.filter((item) =>
-          item.toLowerCase().includes(val.toLowerCase())
-        )
-      : [];
-    const maintainerFilterList = val
-      ? renderMaintainers.value.filter((item) =>
-          item.gitee_id.toLowerCase().includes(val.toLowerCase())
-        )
-      : [];
-    const list = [
-      {
-        id: 'sig',
-        label: t('sig.sigGroup'),
-        list: sigFilterList || [],
-      },
-      {
-        id: 'repo',
-        label: t('sig.repo'),
-        list: repoFilterList || [],
-      },
-      {
-        id: 'maintainer',
-        label: 'Maintainer',
-        list: maintainerFilterList || [],
-      },
-    ];
-    if (searchType.value === 'all') {
-      hasSearchData.value = list;
-    } else {
-      const arr = list.find((item) => item.id === searchType.value);
-      hasSearchData.value = [arr];
-    }
-  }
-);
-
 const showSearchData = computed(() => {
   return hasSearchData.value?.some((item) => item.list.length);
 });
 
+const nameRegex = (val: string) => {
+  const regex = />(.*?)</;
+  const match = val?.match(regex);
+  return match ? match[1] : val;
+}
+
 const clickItem = (val: string) => {
-  sigInput.value = val;
+  const regex = />(.*?)</;
+  const match = val?.match(regex);
+  
+  if (match) {
+    sigInput.value = match[1];
+  }
   showPanel.value = false;
 };
+
+const panelRef = ref()
+onClickOutside(panelRef, () => {
+  showPanel.value = false;
+});
 
 const toSigDetail = (sigName: string) => {
   router.go(`/${locale.value}/sig/${sigName}`);
@@ -325,23 +307,26 @@ watch(
         item.sig_name.includes(val[2])
       );
     }
-    if (val[1] === 'repo' && val[2]) {
-      filterSearchData.value = filterFeatureType.filter((item) =>
-        item.repos.includes(val[2])
-      );
+    if (val[1] === 'repos' && val[2]) {
+      filterSearchData.value = filterFeatureType.filter((item) => {
+        const index = item.repos.findIndex(text => text.includes(val[2]))
+        return index > -1
+      });
     }
     if (val[1] === 'maintainer' && val[2]) {
-      filterSearchData.value = filterFeatureType.filter((item) =>
-        item.maintainers.includes(val[2])
-      );
+      filterSearchData.value = filterFeatureType.filter((item) => {
+        const index = item.maintainers.findIndex(text => text.includes(val[2]))
+        return index > -1
+      });
     }
     if (val[1] === 'all' && val[2]) {
       filterSearchData.value = filterFeatureType.filter(
-        (item) =>
-          item.sig_name.includes(val[2]) ||
-          item.repos.includes(val[2]) ||
-          item.maintainers.includes(val[2])
-      );
+        (item) => {
+          const name = item.sig_name.includes(val[2])
+          const repoIndex = item.repos.findIndex(text => text.includes(val[2]))
+          const maintainerIndex = item.maintainers.findIndex(text => text.includes(val[2]))
+          return name || repoIndex > -1 || maintainerIndex > -1
+        });
     }
     if (!val[2]) {
       filterSearchData.value = filterFeatureType;
@@ -459,7 +444,7 @@ onUnmounted(() => {
         direction="h"
         :style="{ '--o-divider-gap': '16px' }"
       />
-      <div class="filter-select">
+      <div ref="panelRef" class="filter-select">
         <OSelect
           v-model="searchType"
           size="large"
@@ -477,7 +462,6 @@ onUnmounted(() => {
         <OInput
           v-model="debounceSig"
           @focus="showPanel = true"
-          @blur="showPanel = false"
           size="large"
           :placeholder="placeholderType"
         >
@@ -492,13 +476,12 @@ onUnmounted(() => {
               <template v-if="item.list.length">
                 <OScroller showType="always" size="small">
                   <template v-for="it in item.list" :key="it || it.gitee_id">
-                    <div @click="clickItem(it)" class="panel-item">
+                    <div @click.stop="clickItem(it?.name)" class="panel-item">
                       <span
-                        v-dompurify-html="it?.gitee_id || it"
-                        :title="it?.gitee_id || it"
+                        v-dompurify-html="it?.name"
+                        :title="nameRegex(it?.name)"
                         class="title"
                       ></span>
-                      <span v-if="it.name" class="name">{{ it.name }}</span>
                     </div>
                   </template>
                 </OScroller>
@@ -896,11 +879,19 @@ onUnmounted(() => {
     :deep(.o-select) {
       --select-height: 40px;
       max-width: 135px;
+      border-radius: var(--o-radius_control-xs) 0 0 var(--o-radius_control-xs);
     }
     .o-input {
       :deep(.o_box) {
         width: 320px;
         --box-height: 40px;
+        .o_box-main {
+          border-left: none;
+          border-radius: 0 var(--o-radius_control-xs) var(--o-radius_control-xs) 0;
+        }
+        .o_input {
+          width: 100%;
+        }
       }
     }
 
@@ -989,6 +980,7 @@ onUnmounted(() => {
   .sig-card-list {
     margin-top: 24px;
     .sig-card {
+      height: 100%;
       background-color: var(--o-color-fill2);
       padding: 24px 32px;
       border-radius: var(--o-radius-xs);
@@ -1025,7 +1017,6 @@ onUnmounted(() => {
     .sig-description {
       margin-top: 12px;
       color: var(--o-color-info2);
-      height: 44px;
       @include text-truncate(2);
       @include tip1;
       @include respond-to('<=pad_v') {

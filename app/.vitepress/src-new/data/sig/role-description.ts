@@ -31,11 +31,11 @@ import maintainerMbDark2 from '~@/assets/category/sig/maintainer-mb-dark2.png';
 export const communityMember = {
   title: {
     zh: '社区成员',
-    en: 'Community Member',
+    en: 'Community Roles',
   },
   subtitle: {
-    zh: '大部分角色的职责限于这些 SIG(Special Interest Group)内；Maintainer 和 Committer 在 Gitee 的权限上不做区分，两者的区分主要是集中在 SIG 治理的管理范围上。\n详细可见下面的描述',
-    en: 'The responsibilities of most contributor are limited to SIG (Special Interest groups). The permissions of Maintainer and Committer are the same on Gitee, and the difference lies in the scope of SIG governance. The detailed informationes are described below.',
+    zh: '在openEuler社区，大部分角色的职责限于 SIG (Special Interest Group)内。Maintainer 和 Committer 在 Gitee 的权限上不做区分，两者的区分主要是集中在 SIG 治理的管理范围，详细可见下面的描述。关于SIG角色划分与管理运作的更多信息，请<a href="https://www.openeuler.org/zh/sig/role-description/" target="_blank" rel="noopener noreferrer">点击查看</a>',
+    en: 'In the openEuler community, most roles operate within the scope of Special Interest Groups (SIGs). While maintainers and committers have identical permissions on Gitee, they differ primarily in their SIG governance responsibilities, as outlined below. For more on SIG role division and operational management, click <a href="https://www.openeuler.org/en/sig/role-description/" target="_blank" rel="noopener noreferrer">here</a>.',
   },
   viewDetail: {
     zh: '查看详情',
@@ -49,8 +49,8 @@ export const communityMember = {
         en: 'Contributor',
       },
       responsibilitiy: {
-        zh: '职责范围：项目的贡献者',
-        en: 'Responsibilities: Contributors of the project',
+        zh: '职责范围：SIG组及项目的重要贡献者，代码仓库问题的主要修复者和代码开发者',
+        en: 'Responsibilities: Key contributors to SIGs and projects, serving as primary developers and issue resolvers for code repositories',
       },
       href:'contributor'
     },
@@ -61,12 +61,12 @@ export const communityMember = {
         en: 'Committer',
       },
       responsibilitiy: {
-        zh: '职责范围：审核其他成员的贡献',
-        en: 'Responsibilities: Review and approve the contributions submitted',
+        zh: '职责范围：SIG组部分仓库的看护者，是这部分仓库的第一责任人，审核其他成员的贡献',
+        en: 'Responsibilities: Stewards of designated SIG repositories, acting as primary custodians who review contributions from other members',
       },
       requirement: {
         zh: '要求：SIG 的积极贡献者，经验丰富，愿意投入精力参与到审核工作',
-        en: 'Requirement: Frequently contributing to SIG, experienced,and willing to undertake review work',
+        en: 'Requirements: Active SIG contributors with extensive experience and willingness to dedicate time to review activities',
       },
       href:'committer'
     },
@@ -77,12 +77,12 @@ export const communityMember = {
         en: 'Maintainer',
       },
       responsibilitiy: {
-        zh: '职责范围：项目 Owner',
-        en: 'Responsibilities: Owner of the project',
+        zh: '职责范围：SIG组组长、牵引者和规划者，需做好SIG组的发展和演进，同时也可能是项目Owner',
+        en: 'Responsibilities: SIG leaders, coordinators, and strategic planners responsible for guiding SIG development and evolution, potentially serving as project owners',
       },
       requirement: {
         zh: '要求：经验丰富，富有责任心、出色的技术能力和管理能力',
-        en: 'Requirement：Experienced, responsible, outstanding technologies and management skills',
+        en: 'Requirements: Seasoned professionals with strong sense of responsibility, exceptional technical expertise, and proven management skills',
       },
       href:'maintainer'
     },
@@ -106,8 +106,8 @@ export const communityMember = {
         en: 'Existing Community Member',
       },
       desc: {
-        zh: '既有的社区成员应证明能够遵守本文中的原则，熟悉 SIG 的组织、角色、政策、软件、约定等，以及相关的技术和/或写作能力。社区成员角色的期望、职责和要求，请参考下面的内容',
-        en: `Existing community members should follow the principles in this article and be familiar with SIG's organization, roles, policies, software, and etc. At the same time, they should have corresponding technical and writing skills. The detailed informatione of responsibilities and requirements of the community member are described below.`,
+        zh: '既有的社区成员应遵守<a href="https://gitee.com/openeuler/community/blob/master/code-of-conduct.md" target="_blank" rel="noopener noreferrer">openEuler 社区的行为守则</a>以及<a href="https://gitee.com/openeuler/community/blob/master/zh/technical-committee/governance/openEuler%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%A1%8C%E4%B8%BA%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer">openEuler 社区开发行为规范</a>，熟悉 SIG 的组织、角色、政策、软件、约定等，以及相关的技术和/或写作能力。社区成员角色的期望、职责和要求，请参考下面的内容',
+        en: `Existing community members must adhere to the <a href="https://gitee.com/openeuler/community/blob/master/code-of-conduct_en.md" target="_blank" rel="noopener noreferrer">openEuler Community Code of Conduct</a> and <a href="https://gitee.com/openeuler/community/blob/master/zh/technical-committee/governance/openEuler%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%A1%8C%E4%B8%BA%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer">openEuler Community Code of Conduct for Development</a>, demonstrate familiarity with SIG structures, roles, policies, software tools, and conventions, along with relevant technical and/or documentation skills. Refer to the following content for detailed expectations, responsibilities, and requirements for community roles.`,
       },
     },
   ],
@@ -120,8 +120,8 @@ export const contributor = {
     en: 'Contributor',
   },
   subtitle: {
-    zh: '贡献者是社区中持续活跃的贡献者，他们可以认领问题和 PR，可以参与 SIG 组活动，并且可以为 PR 提交前完成测试',
-    en: 'Contributors are people who frequently contribute to the community. They take part in SIG group activities, resolve questions, review PR, and complete tests before submitting the PR.',
+    zh: '贡献者是openEuler社区中持续活跃的成员，他们通过代码提交、文档编写、项目开发、社区维护、问题解决、会议活动等方式参与openEuler，推动社区的持续发展',
+    en: `Contributors are continuously active members within the openEuler community who engage with openEuler through various means including code contributions, documentation creation, project development, community maintenance, issue resolution, and participation in meetings and events, thereby driving the community's ongoing growth.`,
   },
   cardPointBg: contributorPoint,
   cards: [
@@ -196,8 +196,8 @@ export const committer = {
     en: 'Committer',
   },
   subtitle: {
-    zh: '审核者能够在 SIG 或 SIG 的某些部分中审核代码的质量和正确性。审核者对代码库和软件工程原理非常了解\n定义：openEuler SIG 拥有的存储库中 sig-info.yaml 文件中的 Committer 条目',
-    en: 'Committers can review the quality and correctness of code in SIG or some parts of SIG. Committers should have a good knowledge of code repository and software engineering principles.\nDefinition：developer entry in the OWNERS file owned by each SIG',
+    zh: '审核者是拥有代码合入权限的核心贡献者，也是代码仓库的看护者，确保代码质量和正确性，对项目发展负有重要责任\n定义：openEuler SIG 拥有的存储库中 sig-info.yaml 文件中的 Committer 条目',
+    en: 'Reviewers are core contributors who possess code merge privileges and serve as stewards of code repositories, ensuring code quality while bearing significant responsibility for project advancement.\nReviewers are specified in the "Committer" entries in the sig-info.yaml file in SIG repositories.',
   },
   cardPointBg: committerPoint,
   cards: [
@@ -275,8 +275,8 @@ export const maintainer = {
     en: 'Maintainer',
   },
   subtitle: {
-    zh: '维护者是 SIG 组的组长或者管理委员会成员，也是软件包的维护者，能够像 Committer 一样审查和批准代码贡献。代码审查的重点是代码质量和正确性，而批准的重点是对贡献的整体接受度。所有 Committer 的责任与权力，Maintainer 均具有。除此之外，Maintainer 还承担了团队的技术路线、内外协调等工作\n定义：openEuler SIG 拥有的存储库中 sig-info.yaml 文件中的 Maintainer 条目',
-    en: 'Maintainer is the leader of SIG group or member of management Committee, and also the maintainer of software package. They can review and approve code like committers. The key of code review is the code quality and correctness, while the approvals focus on overall acceptance of contributions. Maintainer has all the responsibility and privilege of Committer . In addition, Maintainer is also need to work out technical roadmap and undertake coordination within and outside the team.\nDefinition：developer entry in the OWNERS file owned by openEuler SIG.',
+    zh: '维护者是 SIG 组的管理者、牵引者、规划者，他们主导相关代码的审核、更新和修复，确保其稳定性和兼容性，是项目生态的关键角色。所有审核者的责任与权力，维护者均具有。除此之外，维护者还需承担SIG团队的技术路线、内外协调等工作\n定义：openEuler SIG 拥有的存储库中 sig-info.yaml 文件中的 Maintainer 条目',
+    en: 'Maintainers serve as managers, leaders, and strategic planners of SIGs, spearheading the review, updates, and fixes of code to ensure stability and compatibility, making them pivotal figures in the project ecosystem. Maintainers hold all the responsibilities and authorities that reviewers possess. Additionally, maintainers are responsible for technical roadmap planning and both internal and external coordination efforts for their SIGs.\nMaintainers are specified in the "Maintainer" entries in the sig-info.yaml file in SIG repositories.',
   },
   cardPointBg: maintainerPoint,
   cards: [
