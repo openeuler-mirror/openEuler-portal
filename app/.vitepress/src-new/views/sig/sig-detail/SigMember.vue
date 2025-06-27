@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { ref, computed, type PropType } from 'vue';
+import { ref, computed, type PropType, watch } from 'vue';
 
-import { OIcon, ODivider, OScroller } from '@opensig/opendesign';
+import { OIcon, ODivider } from '@opensig/opendesign';
 
 import WordAvatar from '~@/components/WordAvatar.vue';
 
@@ -13,7 +13,9 @@ import { GITEE_ADDRESS } from '~@/shared/config/sig';
 
 import { sigMaintainerT } from '~@/@types/type-sig';
 
+import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
+import { useCommon } from '@/stores/common';
 
 const props = defineProps({
   maintainerList: {
@@ -34,44 +36,83 @@ const props = defineProps({
   },
 });
 
+const { t } = useLocale();
 const { lePadV } = useScreen();
-const pageSize = ref(5);
-const currentPage = ref(1);
+const commonStore = useCommon();
+const isDark = computed(() => {
+  return commonStore.theme === 'dark';
+});
 
-const renderMaintainer = computed(() => {
+const currentMaintainerPage = ref(1);
+const currentCommitterPage = ref(1);
+const pageSize = ref(5);
+
+const isAllMaintainer = ref(false);
+const viewAllMaintainer = () => {
+  isAllMaintainer.value = !isAllMaintainer.value
+}
+const maintainerData = computed(() => {
   if (!lePadV.value) {
-    return props.maintainerList;
+    return isAllMaintainer.value ? props.maintainerList : props.maintainerList.slice(0, 11);
   } else {
-    return props.maintainerList?.slice(0, currentPage.value * pageSize.value);
+    return props.maintainerList?.slice(0, currentMaintainerPage.value * pageSize.value);
   }
 });
-const isFullyDisplayed = computed(() => {
-  return (
-    currentPage.value * pageSize.value >= (props.maintainerList?.length || 0)
-  );
-});
-const getMoreClick = () => {
-  if (isFullyDisplayed.value) {
-    currentPage.value = 1;
+
+const isAllCommitter = ref(false);
+const viewAllCommitter = () => {
+  isAllCommitter.value = !isAllCommitter.value;
+}
+const committerData = computed(() => {
+  if (!lePadV.value) {
+    return isAllCommitter.value ? props.committerList : props.committerList.slice(0, 11);
   } else {
-    currentPage.value++;
+    return props.committerList?.slice(0, currentCommitterPage.value * pageSize.value);
   }
-};
+});
+
+const isAllMaintainerData = ref(false);
+const isAllCommitterData = ref(false);
+const viewMore = () => {
+  if (!isAllMaintainerData.value) {
+    currentMaintainerPage.value++;
+  } else {
+    currentCommitterPage.value++;
+  }
+
+  if (isAllMaintainerData.value && isAllCommitterData.value) {
+    currentMaintainerPage.value = 1;
+    currentCommitterPage.value = 1;
+  }
+}
+
+watch(
+  () => currentMaintainerPage.value,
+  (val) => {
+    isAllMaintainerData.value = val * pageSize.value >= props.maintainerList.length;
+  }
+)
+watch(
+  () => currentCommitterPage.value,
+  (val) => {
+    isAllCommitterData.value = val * pageSize.value >= props.committerList.length;
+  }
+)
 </script>
 <template>
   <div>
     <P class="sig-core">{{
-      $t('sig.sigCore', {
+      t('sig.sigCore', {
         num: maintainerList?.length + committerList?.length,
       })
     }}</P>
     <div class="sig-member">
-      <div class="sig-member-title">
-        {{ $t('sig.sigMaintainer', { num: maintainerList?.length }) }}
+      <div v-if="maintainerList?.length" class="sig-member-title">
+        {{ t('sig.sigMaintainer', { num: maintainerList?.length }) }}
       </div>
-      <OScroller class="member-list" size="small">
-        <div v-for="member in maintainerList" class="member-info">
-          <div class="member-info-left">
+      <div class="member-list" :class="{'member-list-all': isAllMaintainer || maintainerList?.length < 12, 'member-list-dark': isDark}">
+        <div v-for="member in maintainerData" class="member-info">
+          <div class="member-info-left" :class="{'member-info-id': !member.name}">
             <WordAvatar
               :name="member?.gitee_id"
               size="medium"
@@ -104,25 +145,22 @@ const getMoreClick = () => {
             </a>
           </div>
         </div>
-        <!-- <div
-          v-if="lePadV && (maintainerList?.length || 0) > pageSize"
-          class="get-more"
-          @click="getMoreClick"
-        >
-          <span>{{
-            isFullyDisplayed ? $t('common.collapse') : $t('common.more')
-          }}</span>
-          <OIcon :class="{ reversal: isFullyDisplayed }">
-            <IconChevronDown />
-          </OIcon>
-        </div> -->
-      </OScroller>
-      <div class="sig-member-title sig-committer-title">
-        {{ $t('sig.sigCommitter', { num: committerList?.length }) }}
       </div>
-      <OScroller class="member-list" size="small">
-        <div v-for="member in committerList" class="member-info">
-          <div class="member-info-left">
+      <div v-if="!lePadV && maintainerList?.length > 11" class="more-btn">
+        <div
+          class="view-all"
+          @click="viewAllMaintainer"
+        >
+          <span>{{ isAllMaintainer ? t('common.collapse') : t('sig.viewAll') }}</span>
+          <OIcon :class="{ reversal: isAllMaintainer }"><IconChevronDown /></OIcon>
+        </div>
+      </div>
+      <div v-if="(committerList?.length && isAllMaintainerData) || (committerList?.length && !lePadV)" class="sig-member-title sig-committer-title">
+        {{ t('sig.sigCommitter', { num: committerList?.length }) }}
+      </div>
+      <div v-if="isAllMaintainerData || !lePadV" class="member-list" :class="{'member-list-all': isAllCommitter || committerList?.length < 12, 'member-list-dark': isDark}">
+        <div v-for="member in committerData" class="member-info">
+          <div class="member-info-left" :class="{'member-info-id': !member.name}">
             <WordAvatar
               :name="member?.gitee_id"
               size="medium"
@@ -155,19 +193,25 @@ const getMoreClick = () => {
             </a>
           </div>
         </div>
-        <!-- <div
-          v-if="lePadV && (maintainerList?.length || 0) > pageSize"
-          class="get-more"
-          @click="getMoreClick"
+      </div>
+      <div v-if="!lePadV && committerList?.length > 11" class="more-btn">
+        <div
+          class="view-all"
+          @click="viewAllCommitter"
         >
-          <span>{{
-            isFullyDisplayed ? $t('common.collapse') : $t('common.more')
-          }}</span>
-          <OIcon :class="{ reversal: isFullyDisplayed }">
-            <IconChevronDown />
-          </OIcon>
-        </div> -->
-      </OScroller>
+          <span>{{ isAllCommitter ? t('common.collapse') : t('sig.viewAll') }}</span>
+          <OIcon :class="{ reversal: isAllCommitter }"><IconChevronDown /></OIcon>
+        </div>
+      </div>
+    </div>
+    <div v-if="lePadV" class="more-btn">
+      <div
+        class="view-more view-all"
+        @click="viewMore"
+      >
+        <span>{{ isAllMaintainerData && isAllCommitterData ? t('common.collapse') : t('common.more') }}</span>
+        <OIcon :class="{ reversal: isAllMaintainerData && isAllCommitterData }"><IconChevronDown /></OIcon>
+      </div>
     </div>
   </div>
 </template>
@@ -177,20 +221,25 @@ const getMoreClick = () => {
   font-weight: 500;
   margin-bottom: 24px;
   @include h4;
+
+  @include respond-to('<=pad_v') {
+    margin-bottom: 12px;
+    @include h3;
+  }
 }
 .sig-member {
   padding: 24px;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  height: 100%;
+  height: calc(100% - 48px);
   @include respond-to('<=laptop') {
-    padding: 20px 32px;
+    padding: 16px 24px;
     height: auto;
   }
 
   .sig-member-title {
     font-weight: 500;
-    @include h4;
+    @include text2;
   }
 
   .sig-committer-title {
@@ -199,9 +248,24 @@ const getMoreClick = () => {
 
   .member-list {
     margin-top: 16px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 25px;
+      background-image: linear-gradient(180deg, rgba(var(--o-mixedgray-1), 0) 0%, rgba(var(--o-mixedgray-1), 1.0) 100%);
+    }
     @include respond-to('<=laptop') {
       margin-top: 0;
       height: auto;
+    }
+    @include respond-to('<=pad_v') {
+      &::before {
+        display: none;
+      }
     }
 
     .member-info {
@@ -236,12 +300,21 @@ const getMoreClick = () => {
             @include text-truncate(1);
             word-break: break-all;
             font-weight: 500;
+            @include respond-to('<=pad_v') {
+              @include text1;
+            }
           }
           .member-name {
             color: var(--o-color-info4);
             @include tip2;
+            @include respond-to('<=pad_v') {
+              @include text1;
+            }
           }
         }
+      }
+      .member-info-id {
+        align-items: center;
       }
 
       .member-info-right {
@@ -263,21 +336,39 @@ const getMoreClick = () => {
       }
     }
   }
-  .get-more {
-    cursor: pointer;
-    margin-top: 12px;
-    display: flex;
-    justify-content: center;
-    @include text1;
-    color: var(--o-color-info3);
-    .o-icon {
-      margin-left: 8px;
-      font-size: var(--o-icon_size-xs);
-      transition: all 0.3s;
+  .member-list-all {
+    &::before {
+      display: none;
     }
   }
-  .reversal {
-    transform: rotate(180deg);
+  .member-list-dark {
+    &::before {
+      background-image: linear-gradient(180deg, rgba(var(--o-mixedgray-4), 0) 0%, rgba(var(--o-mixedgray-4), 1.0) 100%);
+    }
   }
+}
+
+.more-btn {
+  text-align: center;
+}
+.view-all {
+  cursor: pointer;
+  margin-top: 6px;
+  display: inline-flex;
+  justify-content: center;
+  color: var(--o-color-info3);
+  @include tip1;
+  .o-icon {
+    margin-left: 6px;
+    font-size: var(--o-icon_size-xs);
+    transition: all 0.3s;
+  }
+}
+.reversal {
+  transform: rotate(180deg);
+}
+
+.view-more {
+  padding: 4px 0;
 }
 </style>

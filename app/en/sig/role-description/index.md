@@ -1,5 +1,6 @@
 ---
 title: '角色说明'
+simpleHeader: '/en/sig/sig-list/'
 ---
 
 <script setup lang="ts">

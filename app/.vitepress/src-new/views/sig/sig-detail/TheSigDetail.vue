@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed, reactive, onMounted } from 'vue';
+import { ref, computed, reactive, onMounted, onUnmounted } from 'vue';
 
 import { useData, useRouter } from 'vitepress';
 
@@ -30,6 +30,8 @@ import ResultEmpty from '~@/components/ResultEmpty.vue';
 import { getSigMeeting, getSigDetail } from '~@/api/api-sig';
 
 import type { SigCompleteItemT } from '~@/@types/type-sig';
+
+import { useHeaderTitle } from '~@/stores/common';
 
 const { leLaptop, isPadVToLaptop, lePadV } = useScreen();
 const { locale, t } = useLocale();
@@ -83,23 +85,12 @@ const queryGetSigDetail = () => {
       mail.value = data.mailing_list;
       const { maintainer_info, committer_info } = data || [];
       if (maintainer_info) {
-        maintainerInfo.value = maintainer_info;
-        committerInfo.value = committer_info;
+        maintainerInfo.value = maintainer_info || [];
+        committerInfo.value = committer_info || [];
       }
     }
   });
 };
-
-const breadCrumbs = ref([
-  {
-    title: 'SIG',
-    to: `/${locale.value}/sig/sig-list/`,
-  },
-  {
-    title: sigName.value,
-    to: '',
-  },
-]);
 
 const verticalPadding = computed(() => {
   if (isPadVToLaptop.value) {
@@ -111,24 +102,21 @@ const verticalPadding = computed(() => {
   }
 });
 onMounted(() => {
+  useHeaderTitle().$patch({ headerTitle: sigName.value });
   queryGetSigDetail();
   queryGetSigMeeting();
+});
+onUnmounted(() => {
+  useHeaderTitle().$patch({ headerTitle: '' });
 });
 </script>
 <template>
   <ContentWrapper :vertical-padding="verticalPadding">
     <OBreadcrumb class="breadcrumb">
-      <OBreadcrumbItem
-        v-for="breadCrumb in breadCrumbs"
-        :title="breadCrumb.title"
-      >
-        <a :href="breadCrumb.to">
-          {{ breadCrumb.title }}
-        </a>
-      </OBreadcrumbItem>
+      <OBreadcrumbItem :href="`/${locale}/sig/sig-list/`">{{ t('sig.sigCenter') }}</OBreadcrumbItem>
+      <OBreadcrumbItem>{{ sigName }}</OBreadcrumbItem>
     </OBreadcrumb>
     <SigDetailInfoCard
-      v-if="sigDetailInfo?.description"
       :description="sigDetailInfo?.description"
       :sig-name="sigDetailInfo?.sig_name"
       :gitee-address="`${SIG_ADDRESS}${sigDetailInfo?.sig_name}`"
@@ -238,8 +226,13 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
+.o-breadcrumb {
+  --breadcrumb-color-hover: var(--o-color-primary1);
+  --breadcrumb-color-active: var(--o-color-primary1);
+  --breadcrumb-color-selected: var(--o-color-primary1);
+}
 .sig-detail-content {
-  margin-top: 18px;
+  margin-top: 24px;
   display: grid;
   grid-template-columns: 348px 1fr;
   gap: 32px;
@@ -299,9 +292,9 @@ onMounted(() => {
       }
     }
     .tip {
-      color: var(--o-color-info3);
+      color: var(--o-color-info2);
       margin-top: 8px;
-      @include tip2;
+      @include text1;
     }
     .email-link {
       margin-top: 16px;
@@ -362,19 +355,26 @@ onMounted(() => {
 }
 
 @include respond-to('<=pad_v') {
+  .content-wrapper {
+    --content-wrapper-vertical-paddingTop: 16px !important;
+  }
   .sig-detail-content {
     .sig-floor {
       .detail-title {
         margin-bottom: 12px;
+        @include h3;
       }
       .title-top {
         margin-bottom: 8px;
-        .o-icon {
-          --icon-size: 16px;
-        }
         .o-link {
           @include text2;
         }
+        .text {
+          margin-left: 8px;
+        }
+      }
+      .tip {
+        @include text1;
       }
     }
   }

@@ -13,6 +13,7 @@ import { isValidKey, isBrowser } from '@/shared/utils';
 import { TableDataT, DayDataT } from '@/shared/@types/type-calendar';
 import { useCommon } from '@/stores/common';
 import { useScreen } from '~@/composables/useScreen';
+import { useData } from 'vitepress';
 
 import {
   OPopover,
@@ -40,6 +41,8 @@ import IconAll from '~icons/home/icon-all.svg';
 import IconEvent from '~icons/home/icon-event.svg';
 import IconArrowLeft from '~icons/app-new/icon-arrow-left.svg';
 import IconArrowRight from '~icons/app-new/icon-arrow-right.svg';
+
+const { params } = useData();
 
 const props = defineProps({
   meetingData: {
@@ -87,14 +90,24 @@ const nextPage = () => {
   currentPage.value++;
 };
 
+// 过滤当前sig组的活动
+const sigActivityData = (data: CalendarValueT) => {
+  return data.filter(
+    (item) => {
+      return item.group_name === params.value?.sig;
+    });
+};
+
 // 会议日期数据
 const meetingDays = ref();
 
 // 获取会议日期数据
 const getMeetingData = () => {
   const dataList = new Map();
-  props.meetingData.forEach((item) => {
-    const dateParts = item.date.split('-');
+  const meetingArr = [...props.meetingData, ...sigActivityData(activityData)];
+  meetingArr.forEach((item) => {
+    const itemJson = JSON.parse(JSON.stringify(item));
+    const dateParts = itemJson?.date ? itemJson?.date?.split('-') : itemJson?.dates[0].split('-');
     const month = `${dateParts[0]}/${dateParts[1]}`;
     const day = parseInt(dateParts[2]);
 
@@ -106,7 +119,7 @@ const getMeetingData = () => {
     // 检查是否已经存在相同日期的会议
     const existingDay = dataList.get(month).find((d) => d.day === day);
     if (!existingDay) {
-      dataList.get(month).push({ day, date: item.date });
+      dataList.get(month).push({ day, date: itemJson.date || itemJson.dates[0] });
     }
   });
   meetingDays.value = splitArray(Array.from(dataList), 3);
@@ -173,6 +186,7 @@ const detailItem = [
   { text: '线上链接', key: 'online_url' },
   { text: '回放链接', key: 'replay_url' },
   { text: '回放链接', key: 'video_url' },
+  { text: '活动内容', key: 'url' },
 ];
 
 const getSummitHighlight = (date: string, data: CalendarValueT[]) => {
@@ -190,9 +204,9 @@ const getMeetingHighlight = (date: string) => {
 const paramGetDaysData = (params: { date: string; type: string }) => {
   renderData.value.timeData = [];
   const dataMap = {
-    all: [...props.meetingData, ...activityData],
+    all: [...props.meetingData, ...sigActivityData(activityData)],
     meetings: props.meetingData,
-    activity: activityData,
+    activity: sigActivityData(activityData),
   };
   const data = dataMap[params.type];
 
@@ -340,7 +354,7 @@ const activeName = ref<number[]>([0]);
                   </OIcon>
                   <OIcon
                     class="activity"
-                    v-if="getSummitHighlight(d.date, activityData)"
+                    v-if="getSummitHighlight(d.date, sigActivityData(activityData))"
                   >
                     <IconEvent></IconEvent>
                   </OIcon>
@@ -425,11 +439,11 @@ const activeName = ref<number[]>([0]);
                     <a
                       v-if="
                             typeof item[keys.key] === 'string' &&
-                            (item[keys.key] as string).startsWith('http')
+                            ((item[keys.key] as string).startsWith('http') || (item[keys.key] as string).startsWith('/'))
                           "
                       :href="item[keys.key]"
                       target="_blank"
-                      >{{ item[keys.key] }}</a
+                      >{{ item.type === 'activity' ? '查看详情' : item[keys.key] }}</a
                     >
                     <p v-else>
                       {{
@@ -509,11 +523,11 @@ const activeName = ref<number[]>([0]);
                     <a
                       v-if="
                             typeof item[keys.key] === 'string' &&
-                            (item[keys.key] as string).startsWith('http')
+                            ((item[keys.key] as string).startsWith('http') || (item[keys.key] as string).startsWith('/'))
                           "
                       :href="item[keys.key]"
                       target="_blank"
-                      >{{ item[keys.key] }}</a
+                      >{{ item.type === 'activity' ? '查看详情' : item[keys.key] }}</a
                     >
                     <p v-else>
                       {{
@@ -574,7 +588,6 @@ const activeName = ref<number[]>([0]);
   }
   .date-content {
     padding: 16px 16px 10px 24px;
-    border-right: 1px solid var(--o-color-control4);
   }
   .content-box {
     height: 312px;
@@ -595,7 +608,7 @@ const activeName = ref<number[]>([0]);
       .day {
         @include text1;
         color: var(--o-color-info1);
-        border-radius: 8px;
+        border-radius: var(--o-radius-xs);
         padding: 8px 12px;
         background: var(--o-color-control2-light);
         border: 1px solid var(--o-color-control2-light);
@@ -674,9 +687,8 @@ const activeName = ref<number[]>([0]);
         position: absolute;
         content: '';
         bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(100% - 2 * 24px);
+        left: 24px;
+        width: calc(100% - 24px);
         height: 1px;
         background-color: var(--collapse-division-color);
       }
@@ -702,6 +714,7 @@ const activeName = ref<number[]>([0]);
   }
   .card-body-info {
     width: 100%;
+    border-left: 1px solid var(--o-color-control4);
     .meeting-list {
       height: 366px;
     }
@@ -737,6 +750,10 @@ const activeName = ref<number[]>([0]);
       margin-top: 8px;
       color: var(--o-color-info3);
       @include tip1;
+
+      @include respond-to('<=pad_v') {
+        @include text1;
+      }
     }
 
     .text {
@@ -890,6 +907,7 @@ const activeName = ref<number[]>([0]);
       display: flex;
       flex-direction: column;
       color: var(--o-color-info1);
+      width: calc(100% - 32px);
       @include text2;
 
       .top-line {
@@ -900,6 +918,10 @@ const activeName = ref<number[]>([0]);
         margin-top: 8px;
         color: var(--o-color-info3);
         @include tip1;
+
+        @include respond-to('<=pad_v') {
+          @include text1;
+        }
       }
 
       .text {
@@ -940,11 +962,22 @@ const activeName = ref<number[]>([0]);
       .info-item:first-child {
         margin-top: 0;
       }
+
+      @include respond-to('<=pad_v') {
+        @include text1;
+      }
     }
   }
 }
 
 @include in-dark {
+  .sig-meeting-pc {
+    :deep(.o-collapse) {
+      .o-collapse-item-body {
+        background-color: #2b2b2f;
+      }
+    }
+  }
   .sig-meeting {
     .card-body {
       :deep(.o-collapse) {

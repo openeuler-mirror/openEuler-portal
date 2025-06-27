@@ -13,7 +13,10 @@ import banner from '~@/assets/category/sig/sig-center-banner.jpg';
     :subtitle="$t('sig.subtitle')"
     :background-image="banner"
   />
-  <div class="mo-title">{{ $t('sig.sigCenter') }}</div>
+  <div class="mo-banner">
+    <p class="mo-title">{{ $t('sig.sigCenter') }}</p>
+    <p class="mo-subtitle">{{ $t('sig.subtitle') }}</p>
+  </div>
   <SigWelcomeJoin class="sig-welcome" />
   <SigAbout />
   <SigList />
@@ -80,13 +83,28 @@ import banner from '~@/assets/category/sig/sig-center-banner.jpg';
   }
 }
 
-.mo-title {
+.mo-banner {
   display: none;
   @include respond-to('<=pad_v') {
-    margin-top: 16px;
     display: block;
-    text-align: center;
-    @include display1;
+    padding: 24px 24px 20px;
+    .mo-title {
+      font-weight: 600;
+      @include display3;
+    }
+    .mo-subtitle {
+      color: var(--o-color-info2);
+      margin-top: 8px;
+      @include tip1;
+    }
+  }
+  @include respond-to('phone') {
+    .mo-title {
+      @include display1;
+    }
+    .mo-subtitle {
+      @include text1;
+    }
   }
 }
 

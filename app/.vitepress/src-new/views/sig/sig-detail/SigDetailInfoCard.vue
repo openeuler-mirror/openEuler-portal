@@ -1,18 +1,11 @@
 <script lang="ts" setup>
-import { ref, onMounted, computed, watch, nextTick } from 'vue';
-
-import { useData } from 'vitepress';
-
-import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 
 import { OIcon, ODivider, OLink } from '@opensig/opendesign';
 
 import IconOutlink from '~icons/sig/icon-outlink.svg';
 
-const { isPhone, isPad, isPadVToLaptop, lePadV } = useScreen();
-const { locale } = useLocale();
-const { lang, params } = useData();
+const { t } = useLocale();
 
 defineProps({
   sigName: {
@@ -40,7 +33,7 @@ defineProps({
         target="_blank"
         class="more-gitee"
       >
-        <span>在Gitee上查看更多内容</span>
+        <span>{{ t('sig.giteeMore') }}</span>
         <OIcon><IconOutlink /></OIcon>
       </OLink>
     </div>
@@ -57,8 +50,8 @@ defineProps({
   position: relative;
   padding: 24px 40px;
   border-radius: var(--o-radius-xs);
-  background-size: 100% auto;
-  background-position: right top;
+  background-size: cover;
+  background-position: right bottom;
   background-repeat: no-repeat;
   background-image: url('~@/assets/category/sig/sig-card_bg_light.png'),
     linear-gradient(163deg, #e3f0ff 0%, #cae4ff 100%);
@@ -120,6 +113,11 @@ defineProps({
   .sig-detail-info-card {
     background-image: url('~@/assets/category/sig/sig-card_bg_dark.png'),
       linear-gradient(163deg, #30364e 0%, #1d2855 100%);
+  }
+  @include respond-to('<=pad_v') {
+    .sig-detail-info-card {
+      background-image: none;
+    }
   }
 }
 </style>

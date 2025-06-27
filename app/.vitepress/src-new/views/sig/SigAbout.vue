@@ -11,10 +11,20 @@ import AppSection from '~@/components/AppSection.vue';
 import sigProcess from '~icons/sig/sig-process.svg';
 import processImg from '~@/assets/category/sig/process.png';
 
+import sigProcessDark from '~icons/sig/sig-process-dark.svg';
+
+import { useCommon } from '@/stores/common';
+
 const { locale } = useLocale();
 const { lePadV } = useScreen();
+const commonStore = useCommon();
 
 const activeStep = ref(0);
+const activeStepMb = ref([0]);
+
+const isDark = computed(() => {
+  return commonStore.theme === 'dark';
+});
 
 const processDetail = computed(() => {
   return applicationProcess[activeStep.value].detail[locale.value];
@@ -38,7 +48,7 @@ const processDetail = computed(() => {
         >
           <template #title>
             <OIcon class="icon">
-              <component :is="card.icon"></component>
+              <component :is="isDark ? card.iconDark : card.icon"></component>
             </OIcon>
             <div class="title">
               {{ card.title[locale] }}
@@ -53,7 +63,9 @@ const processDetail = computed(() => {
         class="application-process"
       >
         <template #title>
-          <OIcon class="icon"><sigProcess /> </OIcon>
+          <OIcon class="icon">
+            <component :is="isDark ? sigProcessDark : sigProcess"></component>
+          </OIcon>
           <div class="title-box">
             <div class="title">
               {{ $t('sig.applicationProcess') }}
@@ -99,7 +111,7 @@ const processDetail = computed(() => {
       <div v-else class="application-process-mo">
         <div class="title">{{ $t('sig.applicationProcess') }}</div>
         <OCollapse
-          v-model="activeStep"
+          v-model="activeStepMb"
           accordion
           :style="{ '--collapse-padding': '0' }"
         >
@@ -142,12 +154,21 @@ const processDetail = computed(() => {
 
         .o-icon {
           font-size: var(--o-icon_size-2xl);
+          @include respond-to('<=pad_v') {
+            display: none;
+          }
         }
 
         .title {
           margin-left: 12px;
           font-weight: 500;
           @include h4;
+          @include respond-to('<=pad_v') {
+            margin-left: 0;
+          }
+          @include respond-to('phone') {
+            @include h3;
+          }
         }
       }
     }
@@ -275,7 +296,7 @@ const processDetail = computed(() => {
         @for $i from 0 through 5 {
           .step-#{$i} {
             &::after {
-              border-bottom-color: mix(#f6f9ff, #e9f5fe, $i * 20%) !important;
+              border-bottom-color: mix(#f6f9ff, #e7efff, $i * 20%) !important;
             }
           }
         }
@@ -375,6 +396,11 @@ const processDetail = computed(() => {
 [data-o-theme='dark'] {
   .sig-about {
     .sig-about-card-box {
+      .sig-about-card {
+        img {
+          @include img-in-dark;
+        }
+      }
       .application-process {
         .o-card-content {
           .process-step {

@@ -294,7 +294,8 @@ const renderData = computed(() => {
           ></div>
           <div v-for="(item, index) in renderData" class="rank-line">
             <div class="rank-nub">
-              {{ (currentPage - 1) * 10 + index + 1 }}
+              <span v-if="!lePadV">{{ (currentPage - 1) * 10 + index + 1 }}</span>
+              <span v-else>{{ index + 1 }}</span>
             </div>
             <ListProgress
               :giteeName="item.gitee_id"
@@ -353,6 +354,10 @@ const renderData = computed(() => {
 .sig-contribute-title {
   font-weight: 500;
   @include h4;
+  @include respond-to('<=pad_v') {
+    margin-bottom: 12px;
+    @include h3;
+  }
 }
 
 .sig-contribute-intro {
@@ -490,7 +495,7 @@ const renderData = computed(() => {
 
       .rank-nub {
         border-right: 1px solid var(--o-color-control4);
-        padding: 16px 0;
+        padding: 9px 0;
         width: 44px;
         text-align: center;
         @include tip1;
@@ -511,6 +516,7 @@ const renderData = computed(() => {
   font-family: 500;
 
   .yellow-box {
+    font-weight: 500;
     @include text2;
     &:not(:last-child) {
       margin-right: 24px;
@@ -520,8 +526,8 @@ const renderData = computed(() => {
     align-items: center;
 
     .box {
-      width: 12px;
-      height: 12px;
+      width: 8px;
+      height: 8px;
       font-size: 10px;
       color: var(--e-color-white);
       line-height: 12px;

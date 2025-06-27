@@ -47,3 +47,12 @@ export const useCookieStore = defineStore('cookie', {
     },
   },
 });
+
+// -------------------- 移动端 --------------------
+export const useHeaderTitle = defineStore('headerTitle', {
+  state: () => {
+    return {
+      headerTitle: '',
+    }
+  },
+});

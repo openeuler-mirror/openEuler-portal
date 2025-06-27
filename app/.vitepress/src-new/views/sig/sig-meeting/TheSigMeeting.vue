@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 
 import BannerLevel3 from '~@/components/BannerLevel3.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
@@ -11,7 +11,7 @@ import { useScreen } from '~@/composables/useScreen';
 
 import { typeOfMeeting } from '~@/data/sig/sig-meeting';
 
-import banner from '~@/assets/category/sig/banner-role-description.png';
+import banner from '~@/assets/category/sig/sig-role-banner.jpg';
 
 import {
   OBreadcrumb,
@@ -21,14 +21,15 @@ import {
   OCol,
 } from '@opensig/opendesign';
 
-const { locale, t } = useLocale();
-const { isPhone, lePad, lePadV } = useScreen();
+import { useHeaderTitle } from '~@/stores/common';
 
 import { useCommon } from '@/stores/common';
 
 import cubeTow from '~@/assets/category/home/calendar/cube-2.png';
 import cubeTowDark from '~@/assets/category/home/calendar/cube-2_dark.png';
 
+const { locale, t } = useLocale();
+const { isPhone, lePad, lePadV } = useScreen();
 const commonStore = useCommon();
 
 const flexGap = computed(() =>
@@ -43,16 +44,12 @@ const verticalPadding = computed(() => {
   }
 });
 
-const breadCrumbs = ref([
-  {
-    title: t('sig.sigCenter'),
-    to: `/${locale.value}/sig/sig-list/`,
-  },
-  {
-    title: t('sig.meetingBannerTitle'),
-    to: '',
-  },
-]);
+onMounted(() => {
+  useHeaderTitle().$patch({ headerTitle: t('sig.meetingBannerTitle') });
+});
+onUnmounted(() => {
+  useHeaderTitle().$patch({ headerTitle: '' });
+});
 </script>
 <template>
   <div class="sig-meeting">
@@ -62,24 +59,18 @@ const breadCrumbs = ref([
       :subtitle="$t('sig.meetingBannerSubtitle')"
     />
     <ContentWrapper :vertical-padding="verticalPadding">
-      <OBreadcrumb>
-        <OBreadcrumbItem
-          v-for="breadCrumb in breadCrumbs"
-          :title="breadCrumb.title"
-        >
-          <a :href="breadCrumb.to">
-            {{ breadCrumb.title }}
-          </a>
-        </OBreadcrumbItem>
+      <OBreadcrumb class="breadcrumb">
+        <OBreadcrumbItem :href="`/${locale}/sig/sig-list/`">{{
+          t('sig.sigCenter')
+        }}</OBreadcrumbItem>
+        <OBreadcrumbItem>{{ t('sig.meetingBannerTitle') }}</OBreadcrumbItem>
       </OBreadcrumb>
     </ContentWrapper>
     <!-- 会议介绍 -->
     <AppSection class="meeting-intro" :title="$t('sig.meetingIntroTitle')">
       <div class="sig-meeting-content">
         <div class="conference-introduction">
-          <p>
-            {{ $t('sig.meetingIntro1') }}
-          </p>
+          <p v-dompurify-html="t('sig.meetingIntro1')"></p>
           <p>
             {{ $t('sig.meetingIntro2') }}
           </p>
@@ -123,6 +114,63 @@ const breadCrumbs = ref([
 </template>
 
 <style scoped lang="scss">
+:deep(.banner-level3 .wrap) {
+  .banner-text {
+    max-width: 60%;
+    .banner-title {
+      @include display2;
+      color: var(--o-color-black);
+    }
+    .banner-subtitle {
+      @include text2;
+      color: var(--o-color-black);
+      margin-top: var(--o-gap-2);
+    }
+  }
+
+  height: 280px;
+
+  @media screen and (max-width: 1680px) {
+    height: 220px;
+
+    .banner-text {
+      .banner-title {
+        font-size: 40px;
+        line-height: 56px;
+      }
+      .banner-subtitle {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .banner-operation {
+        margin-top: var(--o-gap-4);
+
+        .o-btn {
+          --btn-height: 32px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    height: 180px;
+
+    .banner-text {
+      .banner-title {
+        @include display2;
+      }
+      .banner-subtitle {
+        @include text2;
+      }
+    }
+  }
+}
+
+.o-breadcrumb {
+  --breadcrumb-color-hover: var(--o-color-primary1);
+  --breadcrumb-color-active: var(--o-color-primary1);
+  --breadcrumb-color-selected: var(--o-color-primary1);
+}
 .meeting-intro {
   :deep(.section-wrapper) {
     margin-top: 0;
@@ -132,16 +180,44 @@ const breadCrumbs = ref([
   }
 }
 
+:deep(.underline-link) {
+  --link-color-hover: var(--o-color-primary1);
+  --link-underline-x: 100%;
+
+  color: var(--o-color-primary1);
+  background: linear-gradient(0deg, var(--link-color-hover), var(--link-color-hover)) no-repeat var(--link-underline-x) bottom;
+  background-size: 0 1px;
+  transition: background-size var(--o-easing-standard) var(--o-duration-m2);
+
+  @include hover {
+    background-size: var(--link-underline-x) 1px;
+    background-position-x: left;
+  }
+}
+
 .sig-meeting-content {
   color: var(--o-color-info1);
-
+  padding: 24px 32px;
+  border-radius: var(--o-radius-xs);
+  background-color: var(--o-color-fill2);
   .conference-introduction {
-    text-align: center;
     @include text1;
 
     p:last-child {
       margin-top: 12px;
       @include respond-to('<=pad_v') {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  @include respond-to('<=pad_v') {
+    background-color: transparent;
+    padding: 0;
+    .conference-introduction {
+      @include text2;
+
+      p:last-child {
         margin-top: 8px;
       }
     }
@@ -158,6 +234,7 @@ const breadCrumbs = ref([
   background-position: 0 bottom;
   background-size: 100% 40%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 
   .content-wrapper {
     @include respond-to('<=pad_v') {

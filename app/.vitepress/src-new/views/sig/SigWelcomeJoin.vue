@@ -23,9 +23,7 @@ const { lePadV } = useScreen();
             <div class="title">
               {{ card.title[locale] }}
             </div>
-            <div :v-clamp-text="lePadV ? 3 : false" class="subtitle">
-              {{ card.subtitle[locale] }}
-            </div>
+            <div :v-clamp-text="lePadV ? 3 : false" v-dompurify-html="card.subtitle[locale]" class="subtitle"></div>
           </div>
         </div>
       </template>
@@ -43,6 +41,7 @@ const { lePadV } = useScreen();
     gap: 80px;
     background-color: var(--o-color-fill2);
     padding: 24px 48px;
+    border-radius: var(--o-radius-xs);
     @include respond-to('<=pad_v') {
       display: flex;
       flex-direction: column;
@@ -93,6 +92,9 @@ const { lePadV } = useScreen();
         @include respond-to('<=pad_v') {
           margin-top: 0;
         }
+        @include respond-to('phone') {
+          @include h3;
+        }
       }
 
       .subtitle {
@@ -101,6 +103,9 @@ const { lePadV } = useScreen();
         @include tip1;
         @include respond-to('<=pad_v') {
           margin-top: 8px;
+        }
+        @include respond-to('phone') {
+          @include text1;
         }
       }
 
@@ -112,6 +117,21 @@ const { lePadV } = useScreen();
           margin-left: 12px;
         }
       }
+    }
+  }
+
+  :deep(.underline-link) {
+    --link-color-hover: var(--o-color-primary1);
+    --link-underline-x: 100%;
+
+    color: var(--o-color-primary1);
+    background: linear-gradient(0deg, var(--link-color-hover), var(--link-color-hover)) no-repeat var(--link-underline-x) bottom;
+    background-size: 0 1px;
+    transition: background-size var(--o-easing-standard) var(--o-duration-m2);
+
+    @include hover {
+      background-size: var(--link-underline-x) 1px;
+      background-position-x: left;
     }
   }
 

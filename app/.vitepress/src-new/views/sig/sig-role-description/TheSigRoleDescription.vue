@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue';
+import { computed, onMounted, onUnmounted } from 'vue';
 import {
   OBreadcrumb,
   OBreadcrumbItem,
@@ -15,6 +15,7 @@ import AppSection from '~@/components/AppSection.vue';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
+import { useHeaderTitle } from '~@/stores/common';
 
 import banner from '~@/assets/category/sig/sig-role-banner.jpg';
 import IconRight from '~icons/sig/icon-right.svg';
@@ -41,17 +42,6 @@ const verticalPadding = computed(() => {
   }
 });
 
-const breadCrumbs = ref([
-  {
-    title: t('sig.sigCenter'),
-    to: `/${locale.value}/sig/sig-list/`,
-  },
-  {
-    title: t('sig.roleDescription'),
-    to: '',
-  },
-]);
-
 const sections = [contributor, committer, maintainer];
 const getSectionBg = (item: any) => {
   if (lePadV.value) {
@@ -60,25 +50,28 @@ const getSectionBg = (item: any) => {
     return isDark.value ? item.bgDark : item.bg;
   }
 };
+
+onMounted(() => {
+  useHeaderTitle().$patch({ headerTitle: t('sig.roleDescription') });
+});
+onUnmounted(() => {
+  useHeaderTitle().$patch({ headerTitle: '' });
+});
 </script>
 
 <template>
   <div class="sig-role-description">
     <BannerLevel3
       :background-image="banner"
-      :title="$t('sig.roleDescription')"
+      :title="t('sig.roleDescription')"
     />
 
     <ContentWrapper :vertical-padding="verticalPadding">
       <OBreadcrumb class="breadcrumb">
-        <OBreadcrumbItem
-          v-for="breadCrumb in breadCrumbs"
-          :title="breadCrumb.title"
-        >
-          <a :href="breadCrumb.to">
-            {{ breadCrumb.title }}
-          </a>
-        </OBreadcrumbItem>
+        <OBreadcrumbItem :href="`/${locale}/sig/sig-list/`">{{
+          t('sig.sigCenter')
+        }}</OBreadcrumbItem>
+        <OBreadcrumbItem>{{ t('sig.roleDescription') }}</OBreadcrumbItem>
       </OBreadcrumb>
     </ContentWrapper>
 
@@ -95,8 +88,9 @@ const getSectionBg = (item: any) => {
           v-for="(item, i) in communityMember.types"
           :key="i"
           class="member-type-item"
-          :style="{ backgroundImage: `url(${item.bg})` }"
+          :style="{ backgroundImage: `url(${lePadV ? item.bgMb : item.bg})` }"
         >
+          <img :src="lePadV ? item.imgTitleMb : item.imgTitle" class="title-img" />
           <div class="member-type-item-title">{{ item.name[locale] }}</div>
           <div class="member-type-item-desc">
             <div>{{ item.responsibilitiy[locale] }}</div>
@@ -130,6 +124,9 @@ const getSectionBg = (item: any) => {
       :title="section.title[locale]"
       :subtitle="section.subtitle[locale]"
     >
+      <template #subtitle>
+        <div v-for="(item, i) in section.subtitle[locale]" :key="i" v-dompurify-html="item"></div>
+      </template>
       <div :class="`common-section-list section-${section.id}`">
         <div
           v-for="(item, i) in section.cards"
@@ -152,7 +149,7 @@ const getSectionBg = (item: any) => {
               :key="subIndex"
               class="point-list-item"
             >
-              <OIcon :class="`icon-right icon-right-${section.id}`">
+              <OIcon :class="`icon-right icon-right-${section.id} icon-right-${commonStore.theme}`">
                 <IconRight />
               </OIcon>
               <span v-dompurify-html="subItem"></span>
@@ -224,6 +221,9 @@ const getSectionBg = (item: any) => {
   }
 
   .breadcrumb {
+    --breadcrumb-color-hover: var(--o-color-primary1);
+    --breadcrumb-color-active: var(--o-color-primary1);
+    --breadcrumb-color-selected: var(--o-color-primary1);
     @include respond-to('<=pad_v') {
       display: none;
     }
@@ -246,9 +246,11 @@ const getSectionBg = (item: any) => {
     }
 
     :deep(.section-subtitle) {
-      max-width: 1175px;
+      max-width: 1305px;
       @include respond-to('<=pad') {
         white-space: normal;
+        text-align: left;
+        @include text2;
       }
     }
 
@@ -274,23 +276,35 @@ const getSectionBg = (item: any) => {
       .member-type-item {
         display: flex;
         flex-direction: column;
-        padding: 38px 32px 32px;
-        background-size: auto 100%;
+        padding: 24px 32px;
+        background-size: cover;
         background-repeat: no-repeat;
         border-radius: 4px;
+        position: relative;
 
         @include respond-to('<=laptop') {
-          padding: 28px 24px 24px;
+          padding: 24px;
         }
 
         @include respond-to('<=pad') {
-          padding: 28px 20px 20px;
+          padding: 16px;
         }
 
         @include respond-to('<=pad_v') {
           padding: 16px;
           min-height: 152px;
-          background-size: 100% auto;
+        }
+
+        .title-img {
+          position: absolute;
+          width: 54%;
+          top: 20px;
+          @include respond-to('<=pad') {
+            top: 14px;
+          }
+          @include respond-to('<=pad_v') {
+            width: 182px;
+          }
         }
 
         .member-type-item-title {
@@ -406,6 +420,7 @@ const getSectionBg = (item: any) => {
           }
 
           .item-title {
+            font-weight: 500;
             @include h3;
           }
 
@@ -431,6 +446,16 @@ const getSectionBg = (item: any) => {
   }
 
   .common-section {
+    :deep(.section-subtitle) {
+      max-width: 1305px;
+      flex-direction: column;
+      div + div {
+        margin-top: 8px;
+      }
+      @include respond-to('<=pad') {
+        white-space: normal;
+      }
+    }
     .common-section-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -451,15 +476,14 @@ const getSectionBg = (item: any) => {
 
       .common-section-list-item {
         padding: 32px 24px;
-        background-size: 100% 100%;
-        background-position: left bottom;
+        background-size: cover;
+        background-position: right bottom;
         background-repeat: no-repeat;
         border-radius: 4px;
         background-color: var(--o-color-fill2);
 
         @include respond-to('<=pad_v') {
           padding: 16px;
-          background-size: 100% auto;
         }
 
         .title-wrap {
@@ -533,10 +557,16 @@ const getSectionBg = (item: any) => {
 
             .icon-right-contributor {
               color: #3d14bf;
+              &.icon-right-dark {
+                color: #5a3acc;
+              }
             }
 
             .icon-right-committer {
               color: #002fa7;
+              &.icon-right-dark {
+                color: #497af8;
+              }
             }
 
             .icon-right-maintainer {
@@ -555,6 +585,27 @@ const getSectionBg = (item: any) => {
         grid-gap: 12px;
       }
     }
+  }
+}
+
+:deep(.underline-link) {
+  --link-color-hover: var(--o-color-primary1);
+  --link-underline-x: 100%;
+
+  color: var(--o-color-primary1);
+  background: linear-gradient(0deg, var(--link-color-hover), var(--link-color-hover)) no-repeat var(--link-underline-x) bottom;
+  background-size: 0 1px;
+  transition: background-size var(--o-easing-standard) var(--o-duration-m2);
+
+  @include hover {
+    background-size: var(--link-underline-x) 1px;
+    background-position-x: left;
+  }
+}
+
+@include in-dark {
+  .sig-role-description .community-member .member-type-list .member-type-item {
+    @include img-in-dark;
   }
 }
 </style>

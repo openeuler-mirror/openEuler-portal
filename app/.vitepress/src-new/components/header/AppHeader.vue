@@ -17,9 +17,12 @@ import IconClose from '~icons/app-new/icon-close.svg';
 import IconMenu from '~icons/app-new/icon-header-menu.svg';
 import IconBack from '~icons/app-new/icon-arrow-left.svg';
 
+import { useHeaderTitle } from '~@/stores/common';
+
 const router = useRouter();
 const { lang, frontmatter } = useData();
 const { lePadV } = useScreen();
+const headerStore = useHeaderTitle();
 
 const routerPath = ref(router.route.path);
 const langShow = ref(['zh', 'en']);
@@ -142,7 +145,7 @@ const mobileClick = () => {
           <IconBack />
         </OIcon>
         <span>
-          {{ frontmatter.backTitle }}
+          {{ headerStore.headerTitle || frontmatter.backTitle }}
         </span>
       </div>
       <SearchHeaderMo v-if="isSearchPage && lePadV" />
@@ -211,6 +214,7 @@ const mobileClick = () => {
     align-items: center;
     @include h4;
     color: var(--o-color-info1);
+    font-weight: 500;
     .o-icon {
       cursor: pointer;
       margin-right: 16px;

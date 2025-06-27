@@ -11,6 +11,9 @@ import operateIcon from '~icons/sig/operate.svg';
 import meetingGuide from '~icons/sig/sig-meeting.svg';
 import roleDescription from '~icons/sig/role-description.svg';
 
+import meetingGuideDark from '~icons/sig/sig-meeting.svg';
+import roleDescriptionDark from '~icons/sig/role-description.svg';
+
 import meetingGuide_bg from '~@/assets/category/sig/meeting-guide_bg.png';
 import roleDescription_bg from '~@/assets/category/sig/role-description_bg.png';
 
@@ -58,8 +61,8 @@ export const welcomeJoin = [
       en: 'Contributing to SIGs',
     },
     subtitle: {
-      zh: '每一个SIG在Gitee上都会拥有一个或多个项目，这些项目会拥有一个或多个Repository，SIG的交付成果会保存在这些Repository内。您可以通过提交Issue或PR、会议讨论、检视代码等参与SIG贡献，详情请查看贡献指南',
-      en: 'Each SIG maintains one or more projects on Gitee, with each project containing one or more repositories where SIG deliverables are stored. You can contribute to SIGs by submitting issues or pull requests, participating in discussions, conducting code reviews, and more. Refer to the contribution guide for details.',
+      zh: '每一个SIG在Gitee上都会拥有一个或多个项目，这些项目会拥有一个或多个Repository，SIG的交付成果会保存在这些Repository内。您可以通过提交Issue或PR、会议讨论、检视代码等参与SIG贡献，详情请查看<a href="/zh/community/contribution" target="_blank" rel="noopener noreferrer" class="underline-link">贡献指南</a>',
+      en: 'Each SIG maintains one or more projects on Gitee, with each project containing one or more repositories where SIG deliverables are stored. You can contribute to SIGs by submitting issues or pull requests, participating in discussions, conducting code reviews, and more. Refer to the <a href="/en/community/contribution" target="_blank" rel="noopener noreferrer" class="underline-link">contribution guide</a> for details.',
     },
   },
 ];
@@ -67,6 +70,7 @@ export const welcomeJoin = [
 export const aboutSig = [
   {
     icon: roleDescription,
+    iconDark: roleDescriptionDark,
     title: {
       zh: 'SIG角色说明',
       en: 'SIG Member Roles',
@@ -83,6 +87,7 @@ export const aboutSig = [
   },
   {
     icon: meetingGuide,
+    iconDark: meetingGuideDark,
     title: {
       zh: 'SIG会议指南',
       en: '',
@@ -118,7 +123,7 @@ export const applicationProcess = [
       en: 'Apply',
     },
     detail: {
-      zh: '按照成立 SIG 组的成立流程，在 Gitee 上创建申请文件，发起 Pull Request ；预约技术委员会会议的时间。',
+      zh: '按照成立 SIG 组的成立流程，在 Gitee 上创建申请文件，发起 Pull Request ；预约技术委员会会议的时间',
       en: 'Create an application file on Gitee and initiate a pull request (PR) according to the procedure for setting up a SIG. Make an appointment for attending the Technical Committee (TC) meeting.',
     },
   },
@@ -129,7 +134,7 @@ export const applicationProcess = [
       en: 'Discuss',
     },
     detail: {
-      zh: '在技术委员会的例会上就技术范围、维护的目标等和与会成员沟通，在 SIG 目标范围及维护上达成一致。',
+      zh: '在技术委员会的例会上就技术范围、维护的目标等和与会成员沟通，在 SIG 目标范围及维护上达成一致',
       en: 'At the regular TC meeting, discuss and reach an agreement on the technical scope and maintenance objectives of the SIG.',
     },
   },
@@ -140,7 +145,7 @@ export const applicationProcess = [
       en: 'Approve',
     },
     detail: {
-      zh: '技术委员会批准成立，对应的 Pull Request 合入代码仓库，基础设施会自动建立对应的仓库。',
+      zh: '技术委员会批准成立，对应的 Pull Request 合入代码仓库，基础设施会自动建立对应的仓库',
       en: 'The TC approves the establishment of the SIG. The corresponding PR is merged into the code repository, and the infrastructure automatically establishes the corresponding repository.',
     },
   },
@@ -151,7 +156,7 @@ export const applicationProcess = [
       en: 'Operate',
     },
     detail: {
-      zh: 'SIG 开始正式运作，通过邮件列表/例行会议等进行沟通运作。',
+      zh: 'SIG 开始正式运作，通过邮件列表/例行会议等进行沟通运作',
       en: 'The SIG starts to operate. Members use the mailing list and regular meetings for discussion and operation.',
     },
   },
@@ -162,7 +167,7 @@ export const applicationProcess = [
       en: 'Improve',
     },
     detail: {
-      zh: '技术委员会周期 Review SIG 的运作情况，给出指导意见。',
+      zh: '技术委员会周期 Review SIG 的运作情况，给出指导意见',
       en: 'The TC periodically reviews the SIG operation and provides guidance.',
     },
   },

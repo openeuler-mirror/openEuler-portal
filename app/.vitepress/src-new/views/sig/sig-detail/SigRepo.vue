@@ -110,7 +110,7 @@ const columns = [
   {
     label: t('sig.repositoryName'),
     key: 'repo',
-    style: 'width:120px',
+    style: 'width:140px',
   },
   {
     label: t('sig.maintainerEn'),
@@ -151,7 +151,7 @@ onMounted(() => {
         class="repo-table"
         :columns="columns"
         :small="true"
-        border="row-frame"
+        border="row"
         :data="repositoryList"
       >
         <template #header>
@@ -261,6 +261,10 @@ onMounted(() => {
   .repo-title {
     font-weight: 500;
     @include h4;
+    @include respond-to('<=pad_v') {
+      margin-bottom: 12px;
+      @include h3;
+    }
   }
 
   .table-warpper {
@@ -271,12 +275,26 @@ onMounted(() => {
     margin-top: 24px;
     @include respond-to('<=pad_v') {
       margin-top: 12px;
+      --table-cell-padding: 8px 12px;
+      :deep(td),
+      :deep(th) {
+        @include text1;
+      }
     }
     :deep(.o-table-wrap) {
       overflow: visible;
       table {
         table-layout: fixed;
         background-color: var(--o-color-fill2);
+        border-radius: var(--o-radius-xs);
+        thead tr th {
+          &:first-of-type {
+            border-radius: var(--o-radius-xs) 0 0 0;
+          }
+          &:last-of-type {
+            border-radius: 0 var(--o-radius-xs) 0 0;
+          }
+        }
       }
     }
   }
