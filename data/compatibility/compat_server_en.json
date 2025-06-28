@@ -29753,6 +29753,67 @@
       "hardDiskDrive": "BROADCOM MR9560-8i"
     }
   },
+  {
+    "hardwareFactory": "baixin",
+    "hardwareModel": "Hengshan AI346RA",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "aarch64",
+    "date": "2025/06/25",
+    "friendlyLink": "",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2025/06/25",
+        "sha256": "271d0cf9c7cdb2de5ceced9a0612627fbe52fa0f277b3ce6f09dea2bdec3bea5",
+        "driverSize": "69500",
+        "chipVendor": "BROADCOM",
+        "boardModel": "MegaRAID 9560-8i 4GB",
+        "chipModel": "SAS3908",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "15b3",
+        "deviceID": "1017",
+        "svID": "19e5",
+        "ssID": "d135",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "mlx5_core",
+        "version": "23.07-0.5.1",
+        "type": "NIC",
+        "date": "2025/06/25",
+        "sha256": "f66311d210df8fc9632879ba35a831bc35277ed5f8df3b1950eb30ca01a173d1",
+        "driverSize": "3178928",
+        "chipVendor": "Mellanox",
+        "boardModel": "SP382",
+        "chipModel": "CX5",
+        "item": "03026PUN",
+        "downloadLink": "https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "",
+      "certificationTime": "2025/6/25",
+      "commitID": "",
+      "mainboardModel": "S920X10",
+      "biosUefi": "01.24.00.08",
+      "cpu": "HUAWEI Kunpeng 920 7260",
+      "ram": "16*32G DIMMs",
+      "portsBusTypes": "x16 PCI Express x16,x4 PCI Express x4,x4 PCI Express x4,x4 PCI Express x4,x4 PCI Express x4",
+      "videoAdapter": "Hi171x",
+      "hostBusAdapter": "Huawei",
+      "hardDiskDrive": "BROADCOM MR9560-8i"
+    }
+  },
 {
     "hardwareFactory": "inspur",
     "hardwareModel": "CS5280H3",
