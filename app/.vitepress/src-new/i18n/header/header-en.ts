@@ -24,10 +24,17 @@ export default {
           NAME: 'Get openEuler',
           CHILDREN: [
             {
+              NAME: 'openEuler 24.03 LTS SP2',
+              DESCRIPTION:
+                'Enhanced 24.03 LTS SP2 on kernel 6.6. Better experience for users and devs.',
+              TAG: TAG_TYPE.NEW,
+              URL: '/download/#openEuler 24.03 LTS SP2',
+            },
+            {
               NAME: 'openEuler 25.03',
               DESCRIPTION:
                 'Experience server, cloud, edge, embedded innovations based on Linux kernel 6.6.',
-              TAG: TAG_TYPE.NEW,
+              TAG: null,
               URL: '/download/#openEuler 25.03',
             },
             {
@@ -36,13 +43,6 @@ export default {
                 'Enhanced 24.03 LTS SP1 on kernel 6.6. Better experience for users and devs.',
               TAG: null,
               URL: '/download/#openEuler 24.03 LTS SP1',
-            },
-            {
-              NAME: 'openEuler 22.03 LTS SP4',
-              DESCRIPTION:
-                'A patch version of openEuler 22.03 LTS. Both versions share the same lifecycle.',
-              TAG: null,
-              URL: '/download/#openEuler 22.03 LTS SP4',
             },
             {
               NAME: 'More',
@@ -89,16 +89,16 @@ export default {
           URL: '/other/lifecycle/',
         },
         {
+          NAME: 'openEuler 24.03 LTS SP2 Installation Guide',
+          URL: `${
+            import.meta.env.VITE_SERVICE_DOCS_URL
+          }/en/docs/24.03_LTS_SP2/server/installation_upgrade/installation/installation_preparations.html`,
+        },
+        {
           NAME: 'openEuler 25.03 Installation Guide',
           URL: `${
             import.meta.env.VITE_SERVICE_DOCS_URL
           }/en/docs/25.03/server/installation_upgrade/installation/installation-preparations.html`,
-        },
-        {
-          NAME: 'openEuler 24.03 LTS SP1 Installation Guide',
-          URL: `${
-            import.meta.env.VITE_SERVICE_DOCS_URL
-          }/en/docs/24.03_LTS_SP1/docs/Installation/Installation.html`,
         },
         {
           NAME: 'Technical White Papers',
@@ -241,17 +241,23 @@ export default {
               DESCRIPTION:
                 'Learn the community essentials in 10 minutes, build and grow quickly.',
               TAG: TAG_TYPE.HOT,
-              URL: `${
-                import.meta.env.VITE_SERVICE_DOCS_URL
-              }/en/docs/25.03/server/quickstart/quickstart/quick-start.html`,
+              URL: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP2/server/quickstart/quickstart/quick_start.html`,
             },
             {
               NAME: 'Installation Guide',
               DESCRIPTION:
                 'Step-by-step instructions for installing openEuler.',
-              URL: `${
-                import.meta.env.VITE_SERVICE_DOCS_URL
-              }/en/docs/25.03/server/installation_upgrade/installation/installation-preparations.html`,
+              URL: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP2/server/installation_upgrade/installation/installation_preparations.html`,
+            },
+            {
+              NAME: 'Frequently Asked Questions',
+              DESCRIPTION: 'Get answers to common questions and troubleshooting tips.',
+              URL: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/common/faq/general/general_faq.html`,
+            },
+            {
+              NAME: 'Documentation Development Guide',
+              DESCRIPTION: 'Discover how you can contribute to document development.',
+              URL: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/common/contribute/directory_structure_introductory.html`,
             },
           ],
         },

@@ -1,6 +1,6 @@
 export default {
   atomText:
-    'openEuler is an open source project incubated and operated by the OpenAtom Foundation.',
+    'openEuler, an open source OS incubated by the OpenAtom Foundation for digital infrastructure in server, cloud, edge, embedded scenarios, across Arm, x86, RISC-V, LoongArch, PowerPC, and SW-64 architectures.',
   mail: 'contact@openeuler.io',
   copyRight: 'Copyright © {year} openEuler. All rights reserved.',
   license_1: 'Licensed under',

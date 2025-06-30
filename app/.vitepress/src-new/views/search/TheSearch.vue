@@ -13,7 +13,7 @@ import { useCookieStore } from '~@/stores/common';
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 
-import { getUrlParam } from '~@/utils/common';
+import { getUrlParam, replaceUrlParam } from '~@/utils/common';
 
 import SearchBanner from './SearchBanner.vue';
 import SearchResult from './SearchResult.vue';
@@ -280,7 +280,7 @@ function handleSelectChange(val: string) {
   history.pushState(
     null,
     '',
-    `?search=${encodeURIComponent(val)}&type=${currentTab.value}`
+    `?q=${encodeURIComponent(val)}&type=${currentTab.value}`
   );
 }
 
@@ -290,8 +290,10 @@ onMounted(() => {
     currentTab.value = getUrlParam('type');
     searchType.value = currentTab.value;
   }
-  if (getUrlParam('search')) {
-    searchValue.value = getUrlParam('search');
+
+  replaceUrlParam('search', 'q');
+  if (getUrlParam('q')) {
+    searchValue.value = getUrlParam('q');
     currentSearchVal.value = searchValue.value;
   }
 

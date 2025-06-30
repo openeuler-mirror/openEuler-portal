@@ -26,10 +26,17 @@ export default {
           NAME: '获取openEuler',
           CHILDREN: [
             {
+              NAME: 'openEuler 24.03 LTS SP2',
+              DESCRIPTION:
+                '基于6.6内核的LTS版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+              TAG: TAG_TYPE.NEW,
+              URL: '/download/#openEuler 24.03 LTS SP2',
+            },
+            {
               NAME: 'openEuler 25.03',
               DESCRIPTION:
                 '基于6.6内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
-              TAG: TAG_TYPE.NEW,
+              TAG: null,
               URL: '/download/#openEuler 25.03',
             },
             {
@@ -38,13 +45,6 @@ export default {
                 '基于6.6内核的24.03 LTS版本增强扩展版本，面向服务器、云、边缘计算和嵌入式场景，持续提供更多新特性和功能扩展，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
               TAG: null,
               URL: '/download/#openEuler 24.03 LTS SP1',
-            },
-            {
-              NAME: 'openEuler 22.03 LTS SP4',
-              DESCRIPTION:
-                'openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同',
-              TAG: null,
-              URL: '/download/#openEuler 22.03 LTS SP4',
             },
             {
               NAME: '其他获取方式',
@@ -96,16 +96,16 @@ export default {
           URL: '/other/lifecycle/',
         },
         {
+          NAME: '24.03 LTS SP2安装指南',
+          URL: `${
+            import.meta.env.VITE_SERVICE_DOCS_URL
+          }/zh/docs/24.03_LTS_SP2/server/installation_upgrade/installation/installation_preparations.html`,
+        },
+        {
           NAME: '25.03安装指南',
           URL: `${
             import.meta.env.VITE_SERVICE_DOCS_URL
           }/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html`,
-        },
-        {
-          NAME: '24.03 LTS SP1安装指南',
-          URL: `${
-            import.meta.env.VITE_SERVICE_DOCS_URL
-          }/zh/docs/24.03_LTS_SP1/docs/Installation/installation.html`,
         },
         {
           NAME: '技术白皮书',
@@ -287,16 +287,12 @@ export default {
               NAME: '新手入门',
               DESCRIPTION: '10分钟玩转社区，快速构建与成长',
               TAG: TAG_TYPE.HOT,
-              URL: `${
-                import.meta.env.VITE_SERVICE_DOCS_URL
-              }/zh/docs/25.03/server/quickstart/quickstart/quick-start.html`,
+              URL: `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP2/server/quickstart/quickstart/quick_start.html`,
             },
             {
               NAME: '安装指南',
               DESCRIPTION: '指导用户顺利完成 openEuler 操作系统安装',
-              URL: `${
-                import.meta.env.VITE_SERVICE_DOCS_URL
-              }/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html`,
+              URL: `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP2/server/installation_upgrade/installation/installation_preparations.html`,
             },
             {
               NAME: '常见问题',

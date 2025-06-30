@@ -22,6 +22,24 @@ export function getUrlParam(query: string) {
 }
 
 /**
+ * 替换当前路由的参数
+ * @param {string} oldQuery 需要的参数
+ * @param {string} newQuery 需要的参数
+ */
+export function replaceUrlParam(oldQuery: string, newQuery: string) {
+  const params = new URLSearchParams(window.location.search);
+  const searchValue = params.get(oldQuery);
+  
+  if (searchValue && !params.get(newQuery)) {
+    params.delete(oldQuery);
+    params.set(newQuery, searchValue);
+    
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState(null, '', newUrl);
+  }
+}
+
+/**
  * 获取指定key的cookie值
  * @param {string} key
  * @returns {string} 值

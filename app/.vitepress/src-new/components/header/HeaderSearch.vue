@@ -61,7 +61,7 @@ function handleSearchEvent(report?: boolean) {
     });
   }
   window.open(
-    `/${lang.value}/other/search/?search=${encodeURIComponent(input)}`,
+    `/${lang.value}/other/search/?q=${encodeURIComponent(input)}`,
     '_self'
   );
 }

@@ -11,7 +11,6 @@ import dianxing_light from '@/assets/category/member/dianxing_light.png';
 import liantong_light from '@/assets/category/member/liantong_light.png';
 import yidong_light from '@/assets/category/member/yidong_light.png';
 
-import turbolinux_light from '@/assets/category/member/turbolinux_light.png';
 import baolande_light from '@/assets/category/member/baolande_light.png';
 import feiten_light from '@/assets/category/member/feiten_light.png';
 import iscas_light from '@/assets/category/member/iscas_light.png';
@@ -37,7 +36,6 @@ import guangfa_light from '@/assets/category/member/guangfa_light.png';
 import intel_light from '@/assets/category/member/intel_light.png';
 import intel_dark from '@/assets/category/member/intel_dark.png';
 
-import turbolinux_dark from '@/assets/category/member/turbolinux_dark.png';
 import baolande_dark from '@/assets/category/member/baolande_dark.png';
 import feiten_dark from '@/assets/category/member/feiten_dark.png';
 import iscas_dark from '@/assets/category/member/iscas_dark.png';
@@ -182,11 +180,6 @@ export default [
         noIcon: true,
       },
       {
-        img_light: turbolinux_light,
-        img_dark: turbolinux_dark,
-        noIcon: true,
-      },
-      {
         img_light: boyun_light,
         img_dark: boyun_dark,
         noIcon: true,
@@ -214,7 +207,7 @@ export default [
       {
         img_light: langchaoyun_light,
         img_dark: langchaoyun_dark,
-        noIcon: false,
+        noIcon: true,
       },
     ],
   },
