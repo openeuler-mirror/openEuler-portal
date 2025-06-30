@@ -157,7 +157,7 @@ const filterList = computed(() => {
 onMounted(() => {
   setTagManufacturer();
   setTagArch();
-  searchVal.value = decodeURIComponent(getUrlParam('search'));
+  searchVal.value = decodeURIComponent(getUrlParam('q'));
 });
 // 搜索功能
 const searchVal = ref('');
@@ -174,7 +174,7 @@ const onInput = useDebounceFn((val: string) => {
 
 const changeSearchVal = (val: string) => {
   if (val.trim()) {
-    history.replaceState(null, '', `?search=${encodeURIComponent(val)}`);
+    history.replaceState(null, '', `?q=${encodeURIComponent(val)}`);
     onInput(val);
   } else {
     history.replaceState(null, '', window.location.pathname);

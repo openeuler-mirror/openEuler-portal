@@ -6,6 +6,23 @@ export default {
   zh: {
     COMMUNITY_LIST: [
       {
+        NAME: 'openEuler 24.03 LTS SP2',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP2/',
+        DESC: 'openEuler 24.03 LTS SP2 是基于6.6内核的LTS版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/zh/docs/24.03_LTS_SP2/server/releasenotes/releasenotes/introduction.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/zh/docs/24.03_LTS_SP2/server/installation_upgrade/installation/installation_preparations.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '',
+        LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+        PUBLISH_DATE: '2025/06',
+        LTS: true,
+        VERSION: '24.03-LTS-SP2',
+        PLANNED_EOL: '2026/03',
+      },
+      {
         NAME: 'openEuler 25.03',
         DOWNLOAD_URL: 'https://repo.openeuler.org/25.03/',
         DESC: 'openEuler 25.03 是基于6.6内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
@@ -402,6 +419,23 @@ export default {
   },
   en: {
     COMMUNITY_LIST: [
+      {
+        NAME: 'openEuler 24.03 LTS SP2',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP2/',
+        DESC: 'openEuler 24.03 LTS SP2, built on Linux kernel 6.6, is suited for server, cloud, edge, and embedded deployments. With best-in-class features, it delivers brand-new experience to developers and users spanning diverse industries.',
+        RELEASE_DESC_URL:
+          'https://docs.openeuler.org/en/docs/24.03_LTS_SP2/server/releasenotes/releasenotes/introduction.html',
+        INSTALL_GUIDENCE_URL:
+          'https://docs.openeuler.org/en/docs/24.03_LTS_SP2/server/installation_upgrade/installation/installation_preparations.html',
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '',
+        LIFE_CYCLE_URL: '/en/other/lifecycle/',
+        PUBLISH_DATE: '2025/06',
+        LTS: true,
+        VERSION: '24.03-LTS-SP2',
+        PLANNED_EOL: '2026/03',
+      },
       {
         NAME: 'openEuler 25.03',
         DOWNLOAD_URL: 'https://repo.openeuler.org/25.03/',
