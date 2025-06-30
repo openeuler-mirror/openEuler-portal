@@ -82,6 +82,7 @@ import lichenbing from '@/assets/category/organization/user/lichenbing.png';
 import rongtao from '@/assets/category/organization/user/rongtao.png';
 import xutianyuan from '@/assets/category/organization/user/xutianyuan.png';
 import dushaohui from '@/assets/category/organization/user/dushaohui.png';
+import shiguangyin from '@/assets/category/organization/user/shiguangyin.png';
 
 // 业务发展工作组
 import huangweixu from '@/assets/category/organization/user/huangweixu.png';
@@ -585,6 +586,12 @@ export default {
             name: '荣涛',
             position: ['委员'],
             email: 'rongtao@cestc.cn',
+          },
+          {
+            img: shiguangyin,
+            name: '石光银',
+            position: ['委员'],
+            email: 'shiguangyin@inspur.com',
           },
           {
             img: xulei,
@@ -1167,6 +1174,12 @@ export default {
             name: 'Rong Tao',
             position: ['Committee member'],
             email: 'rongtao@cestc.cn',
+          },
+          {
+            img: shiguangyin,
+            name: 'Shi Guangyin',
+            position: ['Committee member'],
+            email: 'shiguangyin@inspur.com',
           },
           {
             img: xulei,
