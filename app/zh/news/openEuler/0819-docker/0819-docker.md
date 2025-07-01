@@ -27,7 +27,7 @@ Hub，以便开发者下载使用。
 
  欢迎访问 Get openEuler OS 查看详情：
 
-https://www.openeuler.org/zh/download/get-os/
+https://www.openeuler.org/zh/download/#get-openeuler
 
 Docker Hub上的OSS (Open Source Software)
 镜像是指由开源软件项目（open-source
