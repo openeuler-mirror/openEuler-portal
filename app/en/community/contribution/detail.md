@@ -34,7 +34,7 @@ The openEuler open source community works with global developers to build an ope
 
 ### 1.1 Experience the openEuler OS
 
-openEuler community versions include long-term support (LTS) versions and innovation versions, as described in [openEuler Community Version Lifecycle Management](https://www.openeuler.org/en/other/lifecycle/). You can [download](https://www.openeuler.org/en/download/get-os/) and experience openEuler community versions.
+openEuler community versions include long-term support (LTS) versions and innovation versions, as described in [openEuler Community Version Lifecycle Management](https://www.openeuler.org/en/other/lifecycle/). You can [download](https://www.openeuler.org/en/download/#get-openeuler) and experience openEuler community versions.
 
 ### 1.2 Experience Original Open Source Projects
 

@@ -85,7 +85,7 @@ In terms of compatibility and adaptation, LTF is developed using Shell, independ
 poissonsearch-oss modifies the Elasticsearch commercial license code, retains all Apache License 2.0 capabilities of elasticsearch-oss 7.10.2, ensures seamless compatibilities of elasticsearch-oss 7.10.2 ecosystem components while addressing known vulnerabilities in 7.10.2. Moving forward, the project aims to leverage community collaboration to enhance functionalities such as retrieval and analysis, performance, latency stability, scalability, security, and usability.
 
 ### The download page on the openEuler website is updated
-openEuler images for different scenarios have been released on multiple mainstream platforms. Therefore, we optimized the [download page](https://www.openeuler.org/en/download/get-os/) on the official website to further enhance user experience.
+openEuler images for different scenarios have been released on multiple mainstream platforms. Therefore, we optimized the [download page](https://www.openeuler.org/en/download/#get-openeuler) on the official website to further enhance user experience.
 
 ![](./images/图片8.png)
 

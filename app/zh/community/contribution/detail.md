@@ -35,7 +35,7 @@ openEuler 开源社区通过开放的社区形式与全球的开发者共同构�
 
 ### 1.1 体验 openEuler 操作系统
 
-openEuler 社区版本分为长期支持版本（LTS）和创新版本[（生命周期管理规范）](https://www.openeuler.org/zh/other/lifecycle/)。您可以通过：[https://www.openeuler.org/zh/download/get-os/](https://www.openeuler.org/zh/download/get-os/) 获取并体验 openEuler 操作系统。
+openEuler 社区版本分为长期支持版本（LTS）和创新版本[（生命周期管理规范）](https://www.openeuler.org/zh/other/lifecycle/)。您可以通过：[https://www.openeuler.org/zh/download/#get-openeuler](https://www.openeuler.org/zh/download/#get-openeuler) 获取并体验 openEuler 操作系统。
 
 ### 1.2 体验原创开源项目
 

@@ -6,7 +6,7 @@ category: wiki
 # Quick Links
 
 - openEuler website: <https://www.openeuler.org/>
-- How to Get openEuler OS: <https://www.openeuler.org/en/download/get-os/>
+- How to Get openEuler OS: <https://www.openeuler.org/en/download/#get-openeuler>
 - Mirrors: <https://www.openeuler.org/en/mirror/list/>
 - openEuler User Repo: <https://eur.openeuler.openatom.cn/>
 - Migrate to openEuler: <https://www.openeuler.org/en/migration/>

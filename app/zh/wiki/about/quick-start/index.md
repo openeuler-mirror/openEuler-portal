@@ -6,7 +6,7 @@ category: wiki
 # 快速链接
 
 - 官方网站：[https://www.openeuler.org/](https://www.openeuler.org/)
-- Get openEuler OS：[https://www.openeuler.org/zh/download/get-os/](https://www.openeuler.org/zh/download/get-os/)
+- Get openEuler OS：[https://www.openeuler.org/zh/download/#get-openeuler](https://www.openeuler.org/zh/download/#get-openeuler)
 - 镜像仓列表：[https://www.openeuler.org/zh/mirror/list/](https://www.openeuler.org/zh/mirror/list/)
 - 用户软件仓：[https://eur.openeuler.openatom.cn/coprs/](https://eur.openeuler.openatom.cn/coprs/)
 - OS 迁移专区：[https://www.openeuler.org/zh/migration/](https://www.openeuler.org/zh/migration/)
