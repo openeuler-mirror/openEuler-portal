@@ -137,9 +137,14 @@ onMounted(async () => {
   }
 }
 .login {
+  height: 24px;
   .icon {
-    font-size: var(--o-icon_size-s);
+    font-size: var(--o-icon_size-m);
     cursor: pointer;
+
+    &:hover {
+      color: var(--o-color-primary1);
+    }
   }
 }
 

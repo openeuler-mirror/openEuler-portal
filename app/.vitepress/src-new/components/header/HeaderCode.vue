@@ -58,12 +58,16 @@ const itemChange = (data: any) => {
     height: 100%;
     display: flex;
     align-items: center;
+    color: var(--o-color-info1);
     cursor: pointer;
+
+    &:hover {
+      color: var(--o-color-primary1);
+    }
 
     .title {
       display: flex;
       align-items: center;
-      color: var(--o-color-info1);
       cursor: pointer;
       height: 100%;
       @include tip1;
