@@ -16363,7 +16363,7 @@
     "driverSize": "1.9M",
     "chipVendor": "Huawei",
     "boardModel": "SP686C-M-40i 4G",
-    "chipModel": "Hi1880",
+    "chipModel": "B80121",
     "item": "02313XXC",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/aarch64/Packages/TaiShanServeriDriver-openEuler20.03SP3-Driver_2.0.0.zip"
   },
@@ -16401,7 +16401,7 @@
     "driverSize": "2.0M",
     "chipVendor": "Huawei",
     "boardModel": "SP686C-M-40i 4G",
-    "chipModel": "Hi1880",
+    "chipModel": "B80121",
     "item": "02313XXC",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS/contrib/drivers/aarch64/Packages/TaiShanServeriDriver-openEuler22.03-Driver_2.0.0.zip"
   },
@@ -25996,7 +25996,7 @@
         "driverSize": "1.1M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-MH-32i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26148,7 +26148,7 @@
         "driverSize": "1.1M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26167,7 +26167,7 @@
         "driverSize": "1.1M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26186,7 +26186,7 @@
         "driverSize": "1.1M",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-32i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26205,7 +26205,7 @@
         "driverSize": "1.1M",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-40i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26224,7 +26224,7 @@
         "driverSize": "1.1M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26243,7 +26243,7 @@
         "driverSize": "1.1M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26262,7 +26262,7 @@
         "driverSize": "1.1M",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-16i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26281,7 +26281,7 @@
         "driverSize": "1.05M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-MH-32i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26319,7 +26319,7 @@
         "driverSize": "1.05M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26338,7 +26338,7 @@
         "driverSize": "1.05M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26357,7 +26357,7 @@
         "driverSize": "1.05M",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-32i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26376,7 +26376,7 @@
         "driverSize": "1.05M",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-40i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26395,7 +26395,7 @@
         "driverSize": "1.05M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26414,7 +26414,7 @@
         "driverSize": "1.05M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26433,7 +26433,7 @@
         "driverSize": "1.05M",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-16i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26452,7 +26452,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-MH-32i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26471,7 +26471,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26490,7 +26490,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26509,7 +26509,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-32i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26528,7 +26528,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-40i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26547,7 +26547,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26566,7 +26566,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26585,7 +26585,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-16i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26604,7 +26604,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-MH-32i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26623,7 +26623,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26642,7 +26642,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26661,7 +26661,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-32i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26680,7 +26680,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-40i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26699,7 +26699,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26718,7 +26718,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26737,7 +26737,7 @@
         "driverSize": "1.29M",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-16i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26756,7 +26756,7 @@
         "driverSize": "814k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-MH-32i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26775,7 +26775,7 @@
         "driverSize": "814k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26794,7 +26794,7 @@
         "driverSize": "814k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26813,7 +26813,7 @@
         "driverSize": "814k",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-32i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26832,7 +26832,7 @@
         "driverSize": "814k",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-40i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26851,7 +26851,7 @@
         "driverSize": "814k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26870,7 +26870,7 @@
         "driverSize": "814k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26889,7 +26889,7 @@
         "driverSize": "814k",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-16i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26908,7 +26908,7 @@
         "driverSize": "69k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-MH-32i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26927,7 +26927,7 @@
         "driverSize": "69k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26946,7 +26946,7 @@
         "driverSize": "69k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26965,7 +26965,7 @@
         "driverSize": "69k",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-32i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -26984,7 +26984,7 @@
         "driverSize": "69k",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-40i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27003,7 +27003,7 @@
         "driverSize": "69k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27022,7 +27022,7 @@
         "driverSize": "69k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27041,7 +27041,7 @@
         "driverSize": "69k",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-16i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27060,7 +27060,7 @@
         "driverSize": "817k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-MH-32i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27079,7 +27079,7 @@
         "driverSize": "817k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27098,7 +27098,7 @@
         "driverSize": "817k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27117,7 +27117,7 @@
         "driverSize": "817k",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-32i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27136,7 +27136,7 @@
         "driverSize": "817k",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-40i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27155,7 +27155,7 @@
         "driverSize": "817k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27174,7 +27174,7 @@
         "driverSize": "817k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27193,7 +27193,7 @@
         "driverSize": "817k",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-16i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27212,7 +27212,7 @@
         "driverSize": "818k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-MH-32i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27231,7 +27231,7 @@
         "driverSize": "818k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27250,7 +27250,7 @@
         "driverSize": "818k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-40i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27269,7 +27269,7 @@
         "driverSize": "818k",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-32i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27288,7 +27288,7 @@
         "driverSize": "818k",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-40i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27307,7 +27307,7 @@
         "driverSize": "818k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 2G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27326,7 +27326,7 @@
         "driverSize": "818k",
         "chipVendor": "Huawei",
         "boardModel": "SP686C-M-16i 4G",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
@@ -27345,7 +27345,7 @@
         "driverSize": "818k",
         "chipVendor": "Huawei",
         "boardModel": "SP186-M-16i",
-        "chipModel": "Hi1880",
+        "chipModel": "B80121",
         "item": "",
         "downloadLink": "https://support.huawei.com/enterprise/zh/management-software/computing-component-idriver-pid-259488843/software"
     },
