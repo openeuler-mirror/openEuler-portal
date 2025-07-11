@@ -18,7 +18,7 @@ const router = useRouter();
 const bannerData = {
   bannerImg: banner,
   bannerTitle: computed(() => {
-    return userCaseData.value.whilePaper;
+    return userCaseData.value.whitePaper;
   }),
   bannerIllustration: illustration,
 };
@@ -33,7 +33,7 @@ const tabsData = reactive({
     },
     {
       label: computed(() => {
-        return userCaseData.value.IndustryWhilePaper;
+        return userCaseData.value.IndustryWhitePaper;
       }),
       name: 'industry-white-paper',
     },

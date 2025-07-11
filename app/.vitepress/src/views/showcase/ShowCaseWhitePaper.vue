@@ -4,6 +4,11 @@ import { useI18n } from '@/i18n';
 
 import whitePaperData from '@/data/showcase/showcase';
 import NotFound from '@/NotFound.vue';
+import { useData } from 'vitepress';
+
+type Language = 'zh' | 'en';
+const { lang } = useData();
+const technicalData = whitePaperData[lang.value as Language];
 
 const i18n = useI18n();
 
@@ -14,19 +19,19 @@ const currentPage = ref(1);
 const pageSize = ref(12);
 
 const randerPaperList = computed(() => {
-  if (whitePaperData.length > pageSize.value) {
-    return whitePaperData.slice(
+  if (technicalData.length > pageSize.value) {
+    return technicalData.slice(
       (currentPage.value - 1) * pageSize.value,
       currentPage.value * pageSize.value
     );
   } else {
-    return whitePaperData;
+    return technicalData;
   }
 });
 
 // 数据总条数
 const total = computed(() => {
-  return whitePaperData.length;
+  return technicalData.length;
 });
 // 分页器总页数
 const totalPage = computed(() => {

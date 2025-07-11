@@ -49,13 +49,6 @@ function jumpPage(page: number) {
 </script>
 
 <template>
-  <BannerLevel2
-    v-if="lang === 'en'"
-    :background-image="banner"
-    background-text="COMMNUNITY"
-    :title="userCaseData.technicalWhilePaper"
-    :illustration="technicalIll"
-  />
   <div class="user-case">
     <div class="case-list">
       <OCard
