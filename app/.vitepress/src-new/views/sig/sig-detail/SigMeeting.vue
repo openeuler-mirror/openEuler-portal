@@ -122,7 +122,7 @@ const getMeetingData = () => {
       dataList.get(month).push({ day, date: itemJson.date || itemJson.dates[0] });
     }
   });
-  meetingDays.value = splitArray(Array.from(dataList), 3);
+  meetingDays.value = splitArray(Array.from(dataList).sort((a, b) => b[0].localeCompare(a[0])), 3);
 };
 
 watch(
@@ -259,10 +259,10 @@ const setMeetingDay = (date: string) => {
 const isActive = ref(false);
 const getTimeTip = (item: DayDataT) => {
   const startTime = new Date(
-    currentMeet?.date + ' ' + item.startTime + ':00'
+    item.type === 'activity' ? item.start_date : (currentMeet?.date + ' ' + item.startTime + ':00')
   ).getTime();
   const endTime = new Date(
-    currentMeet?.date + ' ' + item.endTime + ':00'
+    item.type === 'activity' ? item.end_date : (currentMeet?.date + ' ' + item.endTime + ':00')
   ).getTime();
   const newDate = new Date().getTime();
   if (newDate > startTime && newDate < endTime) {
