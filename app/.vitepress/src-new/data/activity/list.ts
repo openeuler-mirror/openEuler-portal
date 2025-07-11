@@ -1,13 +1,22 @@
-import beijing from '~@/assets/category/event/list/beijing.jpg';
-import beijingMb from '~@/assets/category/event/list/beijing-mb.jpg';
+import beijing from '~@/assets/category/user-group/city/beijing.jpg';
+import beijingMb from '~@/assets/category/event/city/beijing-mb.jpg';
 import beijingDetail from '~@/assets/category/event/list/beijing-detail.jpg';
 
-import tianjin from '~@/assets/category/event/list/tianjin.jpg';
-import tianjinMb from '~@/assets/category/event/list/tianjin-mb.jpg';
+import tianjin from '~@/assets/category/user-group/city/tianjin.jpg';
+import tianjinMb from '~@/assets/category/event/city/tianjin-mb.jpg';
 import detail_250524 from '~@/assets/category/event/list/250524.jpg';
-import chengdu from '~@/assets/category/event/list/chengdu.jpg';
-import chengduMb from '~@/assets/category/event/list/chengdu-mb.jpg';
+
+import chengdu from '~@/assets/category/user-group/city/chengdu.jpg';
+import chengduMb from '~@/assets/category/event/city/chengdu-mb.jpg';
 import detail_250527 from '~@/assets/category/event/list/250527.jpg';
+
+import shenzhen from '~@/assets/category/user-group/city/shenzhen.jpg';
+import shenzhenMb from '~@/assets/category/event/city/shenzhen-mb.jpg';
+import detail_250612 from '~@/assets/category/event/list/250612.jpg';
+
+import xianggang from '~@/assets/category/user-group/city/xianggang.jpg';
+import xianggangMb from '~@/assets/category/event/city/xianggang-mb.jpg';
+import detail_250718 from '~@/assets/category/event/list/250718.jpg';
 
 export const EventSeries = new Map([
   [
@@ -117,6 +126,38 @@ export const EventState = new Map([
 
 export const MEETUP_DATA = {
   zh: [
+    {
+      id: 4,
+      title: 'openEuler SIG-ARM Meetup 深圳站',
+      date: '2025-07-18 14:00-17:30',
+      activity_type: 2,
+      synopsis:
+        '本场Meetup是openEuler Arm SIG 年度技术聚会。我们将汇聚Arm生态头部芯片厂商与软件巨头嘉宾，深度剖析openEuler在Arm架构的最新性能优化与创新实践，并带来云原生/AI等关键负载在Arm服务器上的迁移、部署与调优实战指南。活动聚焦核心挑战，分享数据库、中间件等关键基础软件栈的Arm适配经验与解决方案，并探讨Arm服务器生态的未来趋势与标准化进展。',
+      address: '南山区海天一路软件产业基地4栋B座1楼 禾木HOMEY SPACE（雅禾厅）',
+      city: '深圳市',
+      isAdditional: true,
+      posterImg: shenzhen,
+      posterImgMb: shenzhenMb,
+      series: '3',
+      detail_img: detail_250718,
+      signup_url: 'https://openatomcon.openatom.cn/registration/?activityNo=HD20250701103704',
+      signup_url_mb: 'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20250701103704',
+    },
+    {
+      id: 3,
+      title: 'openEuler Meetup 香港站',
+      date: '2025-06-12 14:00-17:00',
+      activity_type: 1,
+      synopsis:
+        'openEuler首次香港线下meetup，该活动由香港开源高校联盟OSCA-HK协办，邀请来自openEule社区运营组组长、SIG maintainer、RustSBI Maintainer以及香港城市大学数据科学系博士后为大家带来openEuler开源社区进展与香港高校科研进展等。',
+      address: '香港城市大学杨建文学术楼G4702',
+      city: '中国 香港',
+      isAdditional: true,
+      posterImg: xianggang,
+      posterImgMb: xianggangMb,
+      series: '3',
+      detail_img: detail_250612,
+    },
     {
       id: 2,
       title: 'openEuler云原生开源中间件Meetup天津站',

@@ -1,5 +1,6 @@
 ---
 title: Technical White Papers
+category: white-paper
 ---
 
 <script setup lang="ts">

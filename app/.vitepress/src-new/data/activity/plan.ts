@@ -75,7 +75,15 @@ export const yearPlanData = {
             },
           ],
         },
-        { month: '7' },
+        {
+          month: '7',
+          actives: [
+            {
+              location: '中国 北京',
+              activeName: '开放原子开源生态大会2025',
+            },
+          ],
+        },
         {
           month: '8',
           actives: [
@@ -94,10 +102,6 @@ export const yearPlanData = {
         {
           month: '9',
           actives: [
-            {
-              location: '中国 TBD',
-              activeName: '开放原子开源生态大会2025',
-            },
             {
               location: '意大利 米兰',
               activeName: 'KVM Forum 2025',
@@ -213,8 +217,26 @@ export const yearPlanData = {
             },
           ],
         },
-        { month: '6' },
-        { month: '7' },
+        { month: '6',
+          actives: [
+            {
+              location: '中国 香港',
+              activeName: 'openEuler Meetup 香港站',
+            },
+            {
+              location: 'Online',
+              activeName: 'openEuler Bigdata SIG Meetup',
+            },
+          ]
+        },
+        { month: '7',
+          actives: [
+            {
+              location: '中国 深圳',
+              activeName: 'openEuler SIG-ARM Meetup 深圳站',
+            },
+          ]
+        },
         { month: '8' },
         { month: '9' },
         { month: '10' },
