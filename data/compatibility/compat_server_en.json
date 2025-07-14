@@ -29814,6 +29814,123 @@
       "hardDiskDrive": "BROADCOM MR9560-8i"
     }
   },
+  {
+    "hardwareFactory": "New H3C Technologies Co., Ltd.",
+    "hardwareModel": "H3C UniServer R4970 G7",
+    "osVersion": "openEuler 24.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2024/12/24",
+    "friendlyLink": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Dualway_Server/R4970_G7/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "10fb",
+        "svID": "ffff",
+        "ssID": "ffff",
+        "architecture": "aarch64",
+        "os": "openEuler 24.03 LTS SP1",
+        "driverName": "ixgbe",
+        "version": "6.6.0-59.0.0.62.oe2403sp1.x86_64",
+        "type": "NIC",
+        "date": "2024/12/20",
+        "sha256": "59af8b9c876616db488b7af9f7a657658450c60ddfbc2cab168d51a93ed1a085",
+        "driverSize": "143K",
+        "chipVendor": "Intel",
+        "boardModel": "560F-B2",
+        "chipModel": "82599ES",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "aarch64",
+        "os": "openEuler 24.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "07.725.01.00-rc1",
+        "type": "raid",
+        "date": "2024/12/20",
+        "sha256": "e5023610f918d35ef6c90978c3d78b4cedc2d1a55789a7df7a3cb66b190afcf6",
+        "driverSize": "69K",
+        "chipVendor": "Broadcom",
+        "boardModel": "9560-8i",
+        "chipModel": "SAS39xx",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Dualway_Server/R4970_G7/",
+      "certificationTime": "2024/12/24",
+      "commitID": "IBDJQ4",
+      "mainboardModel": "Rack Mount Chassis",
+      "biosUefi": "7.60.15",
+      "cpu": "S5000C-64",
+      "ram": "2*32G RDIMMs",
+      "portsBusTypes": "X18 PCI Express 5 x16",
+      "videoAdapter": "",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "HUH721212AL5200"
+    }
+  },
+  {
+    "hardwareFactory": "New H3C Technologies Co., Ltd.",
+    "hardwareModel": "H3C UniServer R4930 G5",
+    "osVersion": "openEuler 24.03 LTS SP1",
+    "architecture": "x86_64",
+    "date": "2025/07/08",
+    "friendlyLink": "https://www.h3c.com/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "193d",
+        "ssID": "1005",
+        "architecture": "x86_64",
+        "os": "openEuler 24.03 LTS SP1",
+        "driverName": "igb",
+        "version": "6.6.0-59.0.0.62.oe2403sp1.x86_64",
+        "type": "NIC",
+        "sha256": "d93a73f773a846b9f69ffd36e9c7a3c5b75aa544a70ecfb091b2735c2cf33b2e",
+        "driverSize": "127K",
+        "chipVendor": "Intel",
+        "boardModel": "360T-B",
+        "chipModel": "I350",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "0x1000",
+        "deviceID": "0x10E6",
+        "svID": "Ox1000",
+        "ssID": "0x40D0",
+        "architecture": "x86_64",
+        "os": "openEuler 24.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "07.725.01.00-rc1",
+        "type": "RAID",
+        "sha256": "2178b29b6be9176a6d5669297746c3444774c393724dc134c3523c50dd243b21",
+        "driverSize": "208896k",
+        "chipVendor": "Broadcom",
+        "boardModel": "HBA-LSI-9540-LP-8i",
+        "chipModel": "SAS38xx",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com/",
+      "certificationTime": "2024/11/29",
+      "commitID": "NA",
+      "mainboardModel": "0302A2N30000",
+      "cpu": "Hygon C86 7390 32-Core Processor *2",
+      "ram": "2*32G Micron DDR5",
+      "portsBusTypes": "x16 PCI Express 3 x16",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "SEAGATE ST2400MM0129 C004"
+    }
+  },
 {
     "hardwareFactory": "inspur",
     "hardwareModel": "CS5280H3",
