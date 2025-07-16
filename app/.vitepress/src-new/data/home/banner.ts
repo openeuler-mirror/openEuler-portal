@@ -8,8 +8,22 @@ import opensource_summer_text from '~@/assets/category/home/banner/opensource-su
 import opensource_summer_mb from '~@/assets/category/home/banner/opensource-summer/mb.jpg';
 import opensource_summer_pad from '~@/assets/category/home/banner/opensource-summer/pad.jpg';
 
+import survey_pc from '~@/assets/category/home/banner/satisfaction-survey/pc.jpg';
+import survey_pad from '~@/assets/category/home/banner/satisfaction-survey/pad.jpg';
+import survey_mb from '~@/assets/category/home/banner/satisfaction-survey/mb.jpg';
+
 export default {
   zh: [
+    {
+      bg_pc: survey_pc,
+      bg_pad: survey_pad,
+      bg_mb: survey_mb,
+      bg_theme: 'light',
+      title: ['openEuler用户满意度调研问卷'],
+      btn: '查看详情',
+      href: '/zh/news/2025-satisfaction-survey/2025-satisfaction-survey',
+      isBlank: true,
+    },
     {
       bg_pc: opensource_summer_pc,
       bg_pad: opensource_summer_pad,

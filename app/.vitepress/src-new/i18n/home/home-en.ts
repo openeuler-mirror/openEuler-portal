@@ -8,7 +8,7 @@ export default {
   communityVitality: 'Community Vitality',
   viewDetails: 'Learn More',
   // 社区动态
-  trend: 'What’s New',
+  trend: "What's New",
   blog: 'Blog',
   news: 'News',
   case: 'Success Stories',
