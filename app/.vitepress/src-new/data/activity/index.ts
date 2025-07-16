@@ -48,5 +48,6 @@ export default [
     end_date: '2025-07-18 17:30',
     activity_type: '线下',
     type: 'activity',
+    group_name:'sig-Arm'
   },
 ];
