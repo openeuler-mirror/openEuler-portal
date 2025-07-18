@@ -341,7 +341,9 @@ const toSigDetail = (sigName: string) => {
 watch(
   () => sigInput.value,
   (val) => {
+    showPanel.value = true;
     if (!val) {
+      showPanel.value = false;
       enterSearchInput.value = val;
     }
   }
@@ -560,7 +562,7 @@ onUnmounted(() => {
           </OSelect>
           <OInput
             v-model="debounceSig"
-            @focus="showPanel = true"
+            @focus.capture="showPanel = true"
             size="large"
             clearable
             :placeholder="placeholderType"

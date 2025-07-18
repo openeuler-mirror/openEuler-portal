@@ -27,6 +27,7 @@ import {
   ODivider,
   OTab,
   OTabPane,
+  OLink,
 } from '@opensig/opendesign';
 
 import activityData from '~@/data/activity';
@@ -41,6 +42,7 @@ import IconAll from '~icons/home/icon-all.svg';
 import IconEvent from '~icons/home/icon-event.svg';
 import IconArrowLeft from '~icons/app-new/icon-arrow-left.svg';
 import IconArrowRight from '~icons/app-new/icon-arrow-right.svg';
+import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 
 const { params } = useData();
 
@@ -84,10 +86,14 @@ const splitArray = (arr, size) => {
 };
 
 const prevPage = () => {
-  currentPage.value--;
+  if (currentPage.value > 1) {
+    currentPage.value--
+  }
 };
 const nextPage = () => {
-  currentPage.value++;
+  if (currentPage.value < meetingDays.value?.length) {
+    currentPage.value++
+  }
 };
 
 // 过滤当前sig组的活动
@@ -100,38 +106,7 @@ const sigActivityData = (data: CalendarValueT) => {
 
 // 会议日期数据
 const meetingDays = ref();
-
-// 获取会议日期数据
-const getMeetingData = () => {
-  const dataList = new Map();
-  const meetingArr = [...props.meetingData, ...sigActivityData(activityData)];
-  meetingArr.forEach((item) => {
-    const itemJson = JSON.parse(JSON.stringify(item));
-    const dateParts = itemJson?.date ? itemJson?.date?.split('-') : itemJson?.dates[0].split('-');
-    const month = `${dateParts[0]}/${dateParts[1]}`;
-    const day = parseInt(dateParts[2]);
-
-    // 初始化月份数据
-    if (!dataList.has(month)) {
-      dataList.set(month, []);
-    }
-
-    // 检查是否已经存在相同日期的会议
-    const existingDay = dataList.get(month).find((d) => d.day === day);
-    if (!existingDay) {
-      dataList.get(month).push({ day, date: itemJson.date || itemJson.dates[0] });
-    }
-  });
-  meetingDays.value = splitArray(Array.from(dataList).sort((a, b) => b[0].localeCompare(a[0])), 3);
-};
-
-watch(
-  () => props.meetingData,
-  () => {
-    getMeetingData();
-  },
-  { immediate: true }
-);
+const latestDate = ref();
 
 const activityType = ['线下', '线上', '线上 + 线下'];
 
@@ -186,7 +161,6 @@ const detailItem = [
   { text: '线上链接', key: 'online_url' },
   { text: '回放链接', key: 'replay_url' },
   { text: '回放链接', key: 'video_url' },
-  { text: '活动内容', key: 'url' },
 ];
 
 const getSummitHighlight = (date: string, data: CalendarValueT[]) => {
@@ -200,6 +174,8 @@ const getMeetingHighlight = (date: string) => {
     return item.date?.includes(date);
   });
 };
+
+const activeName = ref<number[]>([0]);
 
 const paramGetDaysData = (params: { date: string; type: string }) => {
   renderData.value.timeData = [];
@@ -222,7 +198,8 @@ const paramGetDaysData = (params: { date: string; type: string }) => {
     arr.push(...item.timeData);
   });
 
-  activeDay.value = params.date.toString();
+  activeDay.value = params.date?.toString();
+
   renderData.value.timeData = [...arr, ...activeData];
 
   // 当天只有一个日程，直接展开，多个日程，全部折叠
@@ -276,9 +253,62 @@ const getTimeTip = (item: DayDataT) => {
     return '精彩回顾';
   }
 };
-onMounted(() => {
-  setMeetingDay(props.meetingData[0].date);
-});
+
+const dateOption = ref([])
+// 获取会议日期数据
+const getMeetingData = () => {
+  const dataList = new Map();
+  const meetingArr = [...props.meetingData, ...sigActivityData(activityData)];
+  meetingArr.forEach((item) => {
+    const itemJson = JSON.parse(JSON.stringify(item));
+    const dateParts = itemJson?.date ? itemJson?.date?.split('-') : itemJson?.dates[0].split('-');
+    const month = `${dateParts[0]}/${dateParts[1]}`;
+    const day = parseInt(dateParts[2]);
+
+    // 初始化月份数据
+    if (!dataList.has(month)) {
+      dataList.set(month, []);
+    }
+
+    // 检查是否已经存在相同日期的会议
+    const existingDay = dataList.get(month).find((d) => d.day === day);
+    if (!existingDay) {
+      dataList.get(month).push({ day, date: itemJson.date || itemJson.dates[0] });
+    }
+
+    // 距离当前时间最近的日期
+    const timestamp = new Date().getTime() - 24 * 60 * 60 * 1000;
+    const date = itemJson?.date || itemJson?.dates[0];
+    const dateStamp = new Date(date).getTime()
+    item.timeInterval = dateStamp - timestamp;
+  });
+  meetingDays.value = splitArray(Array.from(dataList).sort((a, b) => b[0].localeCompare(a[0])), 3);
+
+  const arr = meetingArr.sort((a, b) => b.timeInterval - a.timeInterval);
+  arr.forEach((item) => {
+    const itemJson = JSON.parse(JSON.stringify(item));
+    const date = itemJson?.date || itemJson?.dates[0];
+    dateOption.value.push({
+      date: date,
+      value: date,
+    })
+  })
+
+  const dataMeetingLaster = meetingArr.filter(item => item.timeInterval > 0).sort((a, b) => a.timeInterval - b.timeInterval)[0];
+  const dataMeetingFirst = meetingArr.filter(item => item.timeInterval < 0).sort((a, b) => b.timeInterval - a.timeInterval)[0];
+  latestDate.value = dataMeetingLaster?.date || dataMeetingLaster?.dates[0] || dataMeetingFirst?.date || dataMeetingFirst?.dates[0];
+
+  setMeetingDay(latestDate.value);
+};
+
+watch(
+  () => props.meetingData,
+  () => {
+    getMeetingData();
+  },
+  { immediate: true }
+);
+
 const i18n = {
   SIG_GROUP: 'SIG组:',
   NEW_DATE: '最新日程：',
@@ -308,7 +338,6 @@ const selectTab = () => {
     });
   });
 };
-const activeName = ref<number[]>([0]);
 </script>
 <template>
   <div v-if="!lePadV" class="sig-meeting-pc">
@@ -316,7 +345,7 @@ const activeName = ref<number[]>([0]);
       <div class="card-title">
         <p>
           {{
-            $t('sig.latestMeeting', { date: activeDay.replaceAll('-', '/') })
+            $t('sig.latestMeeting', { date: latestDate?.replaceAll('-', '/') })
           }}
         </p>
         <OPopover position="top" trigger="hover" wrap-class="popup-tip">
@@ -427,6 +456,12 @@ const activeName = ref<number[]>([0]);
                   <div class="sig-name">
                     {{ $t('sig.sigName', { sig: item.group_name }) }}
                   </div>
+                  <OLink v-if="item.type" :href="item.url" target="_blank">
+                    {{ i18n.LEARN_MORE }}
+                    <template #suffix>
+                      <OIcon><IconChevronRight /> </OIcon>
+                    </template>
+                  </OLink>
                 </div>
               </template>
               <div class="calendar-info">
@@ -474,7 +509,7 @@ const activeName = ref<number[]>([0]);
     <div class="card-title">
       <OSelect v-model="activeDay" @change="(val) => setMeetingDay(val)">
         <OOption
-          v-for="item in meetingData"
+          v-for="item in dateOption"
           :key="item.date"
           :value="item.date"
         />
@@ -511,6 +546,12 @@ const activeName = ref<number[]>([0]);
                   <div class="sig-name">
                     {{ $t('sig.sigName', { sig: item.group_name }) }}
                   </div>
+                  <OLink v-if="item.type" :href="item.url" target="_blank">
+                    {{ i18n.LEARN_MORE }}
+                    <template #suffix>
+                      <OIcon><IconChevronRight /> </OIcon>
+                    </template>
+                  </OLink>
                 </div>
               </template>
               <div class="calendar-info">
@@ -764,6 +805,12 @@ const activeName = ref<number[]>([0]);
       margin-right: 8px;
     }
   }
+  .o-link {
+    font-weight: 400;
+    padding: 0;
+    margin-top: 8px;
+    @include tip1;
+  }
   .calendar-info {
     display: flex;
     color: var(--o-color-info3);
@@ -919,6 +966,16 @@ const activeName = ref<number[]>([0]);
         color: var(--o-color-info3);
         @include tip1;
 
+        @include respond-to('<=pad_v') {
+          @include text1;
+        }
+      }
+
+      .o-link {
+        font-weight: 400;
+        padding: 0;
+        margin-top: 8px;
+        @include tip1;
         @include respond-to('<=pad_v') {
           @include text1;
         }
