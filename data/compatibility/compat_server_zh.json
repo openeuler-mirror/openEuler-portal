@@ -30418,5 +30418,89 @@
       "hostBusAdapter": "BCM 9560-8i Tri-Mode RAID",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "R2250H0",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2025/05/23",
+    "friendlyLink": "https://www.cancon.com.cn/",
+    "boardCards": [
+      {
+        "vendorID": "8088",
+        "deviceID": "0101",
+        "svID": "8088",
+        "ssID": "8201",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "ngbe",
+        "version": "1.1.0oe",
+        "type": "NIC",
+        "date": "2025/05/23",
+        "sha256": "66498355110d93685f8bf9754bbce34bf5c2aa1103dfc343b3af261252161790",
+        "driverSize": "391819",
+        "chipVendor": " Net-Swift",
+        "boardModel": "Net-Swift WX1860A2 2-port 1G RJ45 NIC",
+        "chipModel": "WX1860A2",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn/",
+      "certificationTime": "2025/05/23",
+      "commitID": "IC9YT8",
+      "mainboardModel": "22DD4",
+      "biosUefi": "CXH1050012",
+      "cpu": "Hygon C86-4G (OPN:3490)",
+      "ram": "2*16GB DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "85:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": " ",
+      "hardDiskDrive": "SAMSUNG MZ7L31T9 304Q"
+    }
+  },
+  {
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "R2250H0",
+    "osVersion": "openEuler 22.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2025/05/23",
+    "friendlyLink": "https://www.cancon.com.cn/",
+    "boardCards": [
+      {
+        "vendorID": "8088",
+        "deviceID": "0101",
+        "svID": "8088",
+        "ssID": "8201",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "ngbe",
+        "version": "1.2.2oe",
+        "type": "NIC",
+        "date": "2025/05/23",
+        "sha256": "9c7203faa22eba3766a5ff464c0ae234368c18e08f46fe7100226f20f574c8b3",
+        "driverSize": "98688",
+        "chipVendor": " Net-Swift",
+        "boardModel": "Net-Swift WX1860A2 2-port 1G RJ45 NIC",
+        "chipModel": "WX1860A2",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn/",
+      "certificationTime": "2025/05/23",
+      "commitID": "IC9YT8",
+      "mainboardModel": "22DD4",
+      "biosUefi": "CXH1050012",
+      "cpu": "Hygon C86-4G (OPN:3490)",
+      "ram": "2*16GB DIMMs",
+      "portsBusTypes": "Type:x16 PCI Express 5、Type:x4 PCI Express 5 x16、Type:x4 PCI Express 5 x16、Type:x2 PCI Express",
+      "videoAdapter": "85:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "SAMSUNG MZ7L31T9 304Q"
+    }
   }
 ]
