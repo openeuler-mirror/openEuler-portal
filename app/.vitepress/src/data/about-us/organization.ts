@@ -123,6 +123,29 @@ import rentao from '@/assets/category/organization/operation/rentao.png';
 import tiankehui from '@/assets/category/organization/operation/tiankehui.png';
 import zhenzhengyu from '@/assets/category/organization/operation/zhenzhengyu.png';
 
+// AI
+import wangqingjun from '@/assets/category/organization/ai/wangqingjun.png';
+import quemingjian from '@/assets/category/organization/ai/quemingjian.png';
+import jinlong from '@/assets/category/organization/ai/jinlong.png';
+import zhannianke from '@/assets/category/organization/ai/zhannianke.png';
+import yangxili from '@/assets/category/organization/ai/yangxili.png';
+import wotianyu from '@/assets/category/organization/ai/wotianyu.png';
+import dingweijie from '@/assets/category/organization/ai/dingweijie.png';
+import FredHuang from '@/assets/category/organization/ai/Fred Huang.png';
+import jiangyuwei from '@/assets/category/organization/ai/jiangyuwei.png';
+import guoyibin from '@/assets/category/organization/ai/guoyibin.png';
+import chenrong from '@/assets/category/organization/ai/chenrong.png';
+import sunzhenghua from '@/assets/category/organization/ai/sunzhenghua.png';
+import dengyiping from '@/assets/category/organization/ai/dengyiping.png';
+import xuyang from '@/assets/category/organization/ai/xuyang.png';
+import jiangzhengxiong from '@/assets/category/organization/ai/jiangzhengxiong.png';
+import xiangyuanhong from '@/assets/category/organization/ai/xiangyuanhong.png';
+import shenguoliang from '@/assets/category/organization/ai/shenguoliang.png';
+import gaowei from '@/assets/category/organization/ai/gaowei.png';
+import xiazhiyuan from '@/assets/category/organization/ai/xiazhiyuan.png';
+import yanhaishuang from '@/assets/category/organization/ai/yanhaishuang.png';
+
+
 export default {
   zh: {
     memberList: [
@@ -686,6 +709,34 @@ export default {
           { img: xinpeng, name: '邢鹏', position: ['组员'] },
         ],
       },
+      {
+        title: 'openEuler AI联合工作组',
+        list: [
+          { img: huxinwei, name: '胡欣蔚', position: ['组长'] },
+          { img: chenrong, name: '陈榕', position: ['组员'] },
+          { img: dengyiping, name: '邓益平', position: ['组员'] },
+          { img: dingweijie, name: '丁为杰', position: ['组员'] },
+          { img: gaowei, name: '高伟', position: ['组员'] },
+          { img: guoyibin, name: '郭祎斌', position: ['组员'] },
+          { img: houjian, name: '侯健', position: ['组员'] },
+          { img: FredHuang, name: 'Fred Huang', position: ['组员'] },
+          { img: jiangzhengxiong, name: '江政雄', position: ['组员'] },
+          { img: jiangyuwei, name: '蒋雨薇', position: ['组员'] },
+          { img: jinlong, name: '金龙', position: ['组员'] },
+          { img: quemingjian, name: '阙鸣健', position: ['组员'] },
+          { img: shenguoliang, name: '沈国良', position: ['组员'] },
+          { img: sunzhenghua, name: '孙政华', position: ['组员'] },
+          { img: tiankehui, name: '田可辉', position: ['组员'] },
+          { img: wangqingjun, name: '王清珺', position: ['组员'] },
+          { img: wotianyu, name: '沃天宇', position: ['组员'] },
+          { img: xiazhiyuan, name: '夏知渊', position: ['组员'] },
+          { img: xiangyuanhong, name: '相元红', position: ['组员'] },
+          { img: xuyang, name: '徐洋', position: ['组员'] },
+          { img: yanhaishuang, name: '严海双', position: ['组员'] },
+          { img: yangxili, name: '杨西利', position: ['组员'] },
+          { img: zhannianke, name: '詹年科', position: ['组员'] },
+        ],
+      },
     ],
     idList: [
       '顾问专家委员会',
@@ -697,6 +748,7 @@ export default {
       '社区运营工作组',
       '教育工作组',
       '法务工作组',
+      'AI联合工作组',
     ],
     notice: '注：按照姓名汉语拼音排序',
   },
