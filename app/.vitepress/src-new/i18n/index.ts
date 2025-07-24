@@ -19,6 +19,7 @@ import cve from './cve';
 import eventOverview from './event-overview';
 import usergroup from './user-group';
 import intelligence from './intelligence';
+import sig from './sig';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -75,6 +76,7 @@ const messages = {
     eventOverview: eventOverview.zh,
     usergroup: usergroup.zh,
     intelligence: intelligence.zh,
+    sig: sig.zh,
   },
   en: {
     // 公共模块
@@ -94,6 +96,7 @@ const messages = {
     cve: cve.en,
     eventOverview: eventOverview.en,
     intelligence: intelligence.en,
+    sig: sig.en,
   },
 };
 

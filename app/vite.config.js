@@ -69,6 +69,12 @@ export default defineConfig({
             './.vitepress/src-new/assets/category/search/svg-icons'
           )
         ),
+        sig: FileSystemIconLoader(
+          path.resolve(
+            __dirname,
+            './.vitepress/src-new/assets/category/sig/sig-icons'
+          )
+        ),
         footer: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src/assets/common/footer')
         ),
@@ -125,11 +131,12 @@ export default defineConfig({
         rewrite: (url) => url.replace(/^\/api-certification/, ''),
       },
       '/api-search/': {
-        target: 'https://www.openeuler.org',
+        target: 'https://doc-search.test.osinfra.cn',
         changeOrigin: true,
         headers: {
           Referer: '',
         },
+        rewrite: (path) => path.replace(/^\/api-search/, ''),
       },
       '/api-meeting/': {
         target: 'https://meetings.openeuler.openatom.cn/',

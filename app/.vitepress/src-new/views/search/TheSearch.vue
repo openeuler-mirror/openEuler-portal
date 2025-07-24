@@ -296,7 +296,6 @@ onMounted(() => {
     searchValue.value = getUrlParam('q');
     currentSearchVal.value = searchValue.value;
   }
-
   searchAll();
 });
 

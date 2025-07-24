@@ -21,6 +21,8 @@ import IconLoading from '~icons/app-new/icon-loading.svg';
 import { useCheckbox } from '~@/composables/useCheckbox';
 import useScrollBottom from '~@/composables/useScrollBottom';
 
+import { useCommon } from '@/stores/common';
+
 type ValueT = string | { label: string; value: string };
 
 const props = defineProps({
@@ -56,6 +58,11 @@ const props = defineProps({
   filterValuesDisplayMapper: {
     type: Function as PropType<(val: any) => string>,
   },
+});
+
+const commonStore = useCommon();
+const isDark = computed(() => {
+  return commonStore.theme === 'dark';
 });
 
 const emit = defineEmits<{
@@ -229,6 +236,7 @@ const reset = () => {
       <div
         ref="popupRef"
         class="filterable-checkboxes-wrap"
+        :class="{'filterable-checkboxes-wrap-dark': isDark}"
         :style="searchable ? {} : { paddingTop: '0' }"
       >
         <div v-if="searchable" class="input-wrap">
@@ -277,10 +285,7 @@ const reset = () => {
             </OCheckboxGroup>
           </template>
           <template v-else>
-            <!-- <div class="check-all-wrap">
-              <ORadio v-model="radioVal" :value="''">全选</ORadio>
-            </div> -->
-            <ORadioGroup v-model="radioVal" direction="v">
+            <ORadioGroup v-model="radioVal" direction="v" :class="{'radio-group-dark': isDark}">
               <ORadio
                 v-for="item in displayOptions"
                 :key="item.value"
@@ -292,10 +297,10 @@ const reset = () => {
         </OScroller>
         <ODivider direction="h"></ODivider>
         <div class="btn-wrap">
-          <OLink color="primary" @click="reset">{{ $t('common.reset') }}</OLink>
-          <OLink class="confirm-link" color="primary" @click="filterConfirm">{{
-            $t('common.confirm')
-          }}</OLink>
+          <div color="primary" @click="reset">{{ $t('common.reset') }}</div>
+          <div class="confirm-link" color="primary" @click="filterConfirm">
+            {{ $t('common.confirm') }}
+          </div>
         </div>
       </div>
     </OPopup>
@@ -303,6 +308,10 @@ const reset = () => {
 </template>
 
 <style lang="scss" scoped>
+.header-cell {
+  display: flex;
+  align-items: center;
+}
 :deep(.o-divider-line) {
   position: absolute;
   left: 0;
@@ -311,6 +320,9 @@ const reset = () => {
 .input-wrap {
   width: 100%;
   padding: 6px 6px 0 6px;
+  :deep(.o_box) {
+    width: 100%;
+  }
 }
 .filter-icon {
   cursor: pointer;
@@ -321,6 +333,13 @@ const reset = () => {
   display: flex;
   justify-content: center;
   padding: 0 16px;
+  & > div {
+    cursor: pointer;
+    color: var(--o-color-primary1);
+    @include hover {
+      color: var(--o-color-primary2);
+    }
+  }
 
   .confirm-link {
     margin-left: 24px;
@@ -331,18 +350,12 @@ const reset = () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 100%;
   height: 100%;
-  background-color: var(--o-color-fill2);
-  z-index: 2;
-  left: 0;
-  top: 0;
 
   .info {
-    margin-top: 12px;
+    color: var(--o-color-info3);
     @include tip1;
-    color: var(--o-color-info1);
   }
 }
 
@@ -359,12 +372,24 @@ const reset = () => {
   .filter-input {
     --input-radius: 4px;
     width: 100%;
+    :deep(.o_box) {
+      --box-bg-color: transparent;
+      .o_input {
+        width: 100%;
+      }
+      .o-icon {
+        --icon-size: 16px;
+      }
+    }
   }
 
   .content {
     padding: 12px;
     padding-bottom: 0;
     max-height: 200px;
+    :deep(.o-scrollbar-rail) {
+      height: 100%;
+    }
   }
 
   .check-all-wrap {
@@ -374,8 +399,29 @@ const reset = () => {
   .o-radio-group {
     align-items: flex-start;
     .o-radio {
+      --radio-input-bg-color: transparent;
       margin-left: 0;
+      padding: 8px 0;
+      width: 100%;
+      border-radius: var(--o-radius-xs);
+
+      @include hover {
+        background-color: var(--o-color-control2-light);
+      }
     }
   }
+  .radio-group-dark {
+    .o-radio {
+      @include hover {
+        background-color: #2b2b2f;
+      }
+    }
+  }
+}
+.o-radio + .o-radio {
+  margin-top: 0;
+}
+.filterable-checkboxes-wrap-dark {
+  background-color: #3f3f43;
 }
 </style>

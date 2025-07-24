@@ -15,7 +15,7 @@ export default [
     dates: ['2025-05-27'],
     address: '天津市天津职业技术师范大学（天津市津南区）',
     start_date: '2025-05-27 14:00',
-    end_date: '2025-5-27 17:30',
+    end_date: '2025-05-27 17:30',
     activity_type: '线下',
     type: 'activity',
   },
@@ -48,5 +48,6 @@ export default [
     end_date: '2025-07-18 17:30',
     activity_type: '线下',
     type: 'activity',
+    group_name:'sig-Arm'
   },
 ];
