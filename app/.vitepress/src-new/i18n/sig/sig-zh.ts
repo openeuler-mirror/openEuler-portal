@@ -1,12 +1,12 @@
 export default {
   sigCenter: 'SIG中心',
   subtitle:
-    'SIG 全称是 Special Interest Groups，即“特别兴趣小组”。openEuler社区按照不同的 SIG 来组织，以便更好地管理和改善工作流程。SIG 组均是开放的，欢迎任何人来参与',
+    'SIG 全称是 Special Interest Group，即“特别兴趣小组”。openEuler社区按照不同的 SIG 来组织，以便更好地管理和改善工作流程。SIG 组均是开放的，欢迎任何人来参与',
   welcomeJoin: '欢迎参与SIG',
   aboutSig: '了解SIG',
   applicationProcess: 'SIG申请流程',
   applicationProcessSubTitle:
-    '申请创建一个新的SIG（Special Interests Group）来组织特定领域的开发工作',
+    '申请创建一个新的SIG（Special Interest Group）来组织特定领域的开发工作',
   sigList: 'openEuler SIGs',
   repo: '仓库',
   searchSig: '搜索SIG相关的信息',
@@ -58,7 +58,7 @@ export default {
   meetingBannerSubtitle: 'openEuler SIG组工作会议指南',
   meetingIntroTitle: '会议规划',
   meetingIntro1:
-    'openEuler 开源社区按照不同的 SIG(Special Interests Group) 来组织开发及版本发布工作，openEuler 开源社区的主要技术产品通过 openEuler 开源操作系统承载，它在每年的 3 月和 9 月发布两个版本。当一个版本发布完成后，openEuler 开源社区将召开下一个版本的开发规划会议，会议以 SIG 组为单位，时长为 0.5~1 天，用于集中讨各 SIG 组未来 6 个月的规划、工作事项、任务分工、优先级等相关内容。openEuler 开源社区将为各 SIG 组的规划会议提供场地和技术支持。除了上述版本规划工作会议之外，在日常的运作中，SIG组团队需根据本SIG组的发展每月定期召开1~2次工作例会，用于讨论当前进展、特性需求、开发任务等，推动社区健康发展。具体可<a href="/zh/meeting/" target="_blank" rel="noopener noreferrer" class="underline-link">点击查看</a>',
+    'openEuler 开源社区按照不同的 SIG(Special Interest Group) 来组织开发及版本发布工作，openEuler 开源社区的主要技术产品通过 openEuler 开源操作系统承载，它在每年的 3 月和 9 月发布两个版本。当一个版本发布完成后，openEuler 开源社区将召开下一个版本的开发规划会议，会议以 SIG 组为单位，时长为 0.5~1 天，用于集中讨各 SIG 组未来 6 个月的规划、工作事项、任务分工、优先级等相关内容。openEuler 开源社区将为各 SIG 组的规划会议提供场地和技术支持。除了上述版本规划工作会议之外，在日常的运作中，SIG组团队需根据本SIG组的发展每月定期召开1~2次工作例会，用于讨论当前进展、特性需求、开发任务等，推动社区健康发展。具体可<a href="/zh/meeting/" target="_blank" rel="noopener noreferrer" class="underline-link">点击查看</a>',
   meetingIntro2:
     'SIG 版本规划工作会议遵循开源、开放原则，议题收集、技术讨论、会议纪要等各讨论过程均对外开放',
   meetingTypeTitle: '会议类型',
