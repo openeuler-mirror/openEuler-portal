@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { computed, onMounted, watch, ref } from 'vue';
+import { computed, onMounted, watch } from 'vue';
 import { useCommon } from '@/stores/common';
 import { useScreen } from '~@/composables/useScreen';
 import { setCustomCookie, getCustomCookie } from '@/shared/utils';
 
-import IconSun from '~icons/app/icon-sun-outline.svg';
+import IconSun from '~icons/app-new/icon-sun-outline.svg';
 import IconMoon from '~icons/app-new/icon-header-moon.svg';
 
 // 风格切换
@@ -88,8 +88,14 @@ watch(
 <style lang="scss" scoped>
 .theme-box-pc {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
   .icon {
-    font-size: var(--o-icon_size-s);
+    font-size: var(--o-icon_size-m);
+    &:hover {
+      color: var(--o-color-primary1);
+    }
   }
   @include respond-to('<=pad_v') {
     display: none;

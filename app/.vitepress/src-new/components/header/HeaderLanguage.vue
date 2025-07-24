@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { ref, Ref, watch, computed } from 'vue';
+import { ref, Ref, watch } from 'vue';
 import { useRouter, useData } from 'vitepress';
 import { OIcon, ODropdown, ODropdownItem } from '@opensig/opendesign';
 import { useScreen } from '~@/composables/useScreen';
 
-import IconChevronDown from '~icons/app-new/icon-chevron-down.svg';
+import IconLocale from '~icons/app-new/icon-locale.svg';
 
 const props = defineProps({
   show: {
@@ -63,8 +63,10 @@ watch(
   { immediate: true }
 );
 
-const getLang = (lang: String) => {
-  return lang === 'zh' ? '中文' : 'EN';
+const getLang = (lang: String, simple?: boolean) => {
+  return lePadV.value ? 
+  lang === 'zh' ? '中文' : 'EN'
+  : lang === 'zh' ? simple ? '中' : '简体中文' : simple ? 'EN' : 'English';
 };
 </script>
 
@@ -78,9 +80,11 @@ const getLang = (lang: String) => {
       optionPosition="bottom"
       option-wrap-class="dropdown"
     >
-      <div class="info-wrap hover-icon-rotate">
-        <span class="title">{{ getLang(lang) }}</span>
-        <OIcon class="icon"><IconChevronDown /></OIcon>
+      <div class="info-wrap">
+        <OIcon class="icon">
+          <IconLocale />
+          <div :class="['locale-tag', { 'is-en': lang === 'en' }]">{{ getLang(lang, true) }}</div>
+        </OIcon>
       </div>
 
       <template #dropdown>
@@ -88,7 +92,7 @@ const getLang = (lang: String) => {
           v-for="item in langList"
           @click="changeLanguage(item.id)"
           :key="item.id"
-          class="list"
+          :class="['list', { 'is-active': lang === item.id }]"
         >
           {{ getLang(item.id) }}
         </ODropdownItem>
@@ -111,11 +115,6 @@ const getLang = (lang: String) => {
 </template>
 
 <style lang="scss" scoped>
-.icon {
-  font-size: var(--o-icon_size_control-xs);
-  margin-left: var(--o-gap-1);
-}
-
 .hide-lang {
   display: none;
 }
@@ -131,13 +130,31 @@ const getLang = (lang: String) => {
     align-items: center;
     cursor: pointer;
 
-    .title {
-      display: flex;
-      align-items: center;
+    .icon {
+      font-size: var(--o-icon_size_control-m);
+      position: relative;
       color: var(--o-color-info1);
-      cursor: pointer;
-      height: 100%;
-      @include tip1;
+
+      &:hover {
+        color: var(--o-color-primary1);
+      }
+    }
+    .locale-tag {
+      position: absolute;
+      font-size: 10px;
+      height: 12px;
+      width: 12px;
+      background-color: var(--o-color-fill2);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 12px;
+      top: 11px;
+
+      &.is-en {
+        width: 16px;
+      }
     }
   }
   .list {
@@ -150,17 +167,6 @@ const getLang = (lang: String) => {
   }
 }
 
-.hover-icon-rotate {
-  .o-icon {
-    transition: all var(--o-duration-m1) var(--o-easing-standard-in);
-  }
-
-  @include hover {
-    .o-icon {
-      transform: rotate(-180deg);
-    }
-  }
-}
 .o-dropdown {
   height: 100%;
 }
@@ -171,10 +177,15 @@ const getLang = (lang: String) => {
   padding: var(--o-gap-1);
   min-width: 144px;
   height: 40px;
+  color: var(--o-color-info1);
 
   @include hover {
-    color: var(--o-color-primary1);
     background: var(--o-color-control2-light);
+  }
+
+  &.is-active {
+    color: var(--o-color-primary1);
+    background: var(--o-color-control3-light);
   }
 }
 .dropdown {
