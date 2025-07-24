@@ -30538,7 +30538,7 @@
       "commitID": "ICGL54",
       "mainboardModel": "62DC24",
       "biosUefi": "CXH1050012",
-      "cpu": "Hygon C86-4G (OPN:7480)",
+      "cpu": "Hygon C86-4G",
       "ram": "2*16GB DIMMs",
       "portsBusTypes": "",
       "videoAdapter": "85:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
@@ -30580,12 +30580,96 @@
       "commitID": "ICGL54",
       "mainboardModel": "62DC24",
       "biosUefi": "CXH1050012",
-      "cpu": "Hygon C86-4G (OPN:7480)",
+      "cpu": "Hygon C86-4G",
       "ram": "2*16GB DIMMs",
       "portsBusTypes": "Type:x16 PCI Express 5、Type:x4 PCI Express 5 x16、Type:x4 PCI Express 5 x16、Type:x2 PCI Express",
       "videoAdapter": "85:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
       "hostBusAdapter": "",
       "hardDiskDrive": "SAMSUNG MZ7L31T9 304Q"
+    }
+  },
+  {
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "X7950H0",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2025/7/22",
+    "friendlyLink": "https://www.cancon.cm.cm/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1563",
+        "svID": "1dcf",
+        "ssID": "0307",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "ixgbe",
+        "version": "5.1.0-k",
+        "type": "NIC",
+        "date": "2025/07/22",
+        "sha256": "e68c2b62a901b21b99e6add214a639279e5555e99fd10e395b2a9f46f5cc94cb",
+        "driverSize": "723k",
+        "chipVendor": " Intel",
+        "boardModel": "SND E10GI2-X550 2-port 10G RJ45 NIC",
+        "chipModel": "X550",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.cm.cm/",
+      "certificationTime": "2025/07/22",
+      "commitID": "ICOIKC",
+      "mainboardModel": "62DC24X_U8",
+      "biosUefi": "CYH1050018",
+      "cpu": "Hygon C86 7490 64-core Processor",
+      "ram": "24*96G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "08:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": " ",
+      "hardDiskDrive": "SSSTC ER3-GD480  402、SAMSUNG MZ7L3480 604Q"
+    }
+  },
+  {
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "X7950H0",
+    "osVersion": "openEuler 22.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2025/07/21",
+    "friendlyLink": "https://www.cancon.cm.cm/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1563",
+        "svID": "1dcf",
+        "ssID": "0307",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "ixgbe",
+        "version": "5.10.0-216.0.0.115.oe2203sp4.x86_64 SMP mod_unload modversions",
+        "type": "NIC",
+        "date": "2025/07/21",
+        "sha256": "5aa8b35c6c12e7c92c0439d935d80929e8f03c25a4aec75578d292b262ffab34",
+        "driverSize": "166696",
+        "chipVendor": "Intel",
+        "boardModel": "SND E10GI2-X550 2-port 10G RJ45 NIC",
+        "chipModel": "X550",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.cm.cm/",
+      "certificationTime": "2025/07/21",
+      "commitID": "ICOIKC",
+      "mainboardModel": "62DC24X_U8",
+      "biosUefi": "CYH1050018",
+      "cpu": " Hygon C86 7490 64-core Processor ",
+      "ram": "24*96G DIMMs",
+      "portsBusTypes": "x16 PCI Express 5",
+      "videoAdapter": "08:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": " ",
+      "hardDiskDrive": "SSSTC ER3-GD480"
     }
   }
 ]
