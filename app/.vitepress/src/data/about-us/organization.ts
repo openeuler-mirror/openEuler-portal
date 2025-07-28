@@ -144,7 +144,10 @@ import shenguoliang from '@/assets/category/organization/ai/shenguoliang.png';
 import gaowei from '@/assets/category/organization/ai/gaowei.png';
 import xiazhiyuan from '@/assets/category/organization/ai/xiazhiyuan.png';
 import yanhaishuang from '@/assets/category/organization/ai/yanhaishuang.png';
-
+import heshoucheng from '@/assets/category/organization/ai/heshoucheng.png';
+import jiangyiwen from '@/assets/category/organization/ai/jiangyiwen.png';
+import qinbinjuan from '@/assets/category/organization/ai/qinbinjuan.png';
+import wubin from '@/assets/category/organization/ai/wubin.png';
 
 export default {
   zh: {
@@ -714,21 +717,26 @@ export default {
         list: [
           { img: huxinwei, name: '胡欣蔚', position: ['组长'] },
           { img: chenrong, name: '陈榕', position: ['组员'] },
+          { img: chenyaqiang, name: '陈亚强', position: ['组员'] },
           { img: dengyiping, name: '邓益平', position: ['组员'] },
           { img: dingweijie, name: '丁为杰', position: ['组员'] },
           { img: gaowei, name: '高伟', position: ['组员'] },
           { img: guoyibin, name: '郭祎斌', position: ['组员'] },
+          { img: heshoucheng, name: '何守成', position: ['组员'] },
           { img: houjian, name: '侯健', position: ['组员'] },
           { img: FredHuang, name: 'Fred Huang', position: ['组员'] },
-          { img: jiangzhengxiong, name: '江政雄', position: ['组员'] },
+          { img: jiangyiwen, name: '江毅文', position: ['组员'] },
           { img: jiangyuwei, name: '蒋雨薇', position: ['组员'] },
+          { img: jiangzhengxiong, name: '江政雄', position: ['组员'] },
           { img: jinlong, name: '金龙', position: ['组员'] },
+          { img: qinbinjuan, name: '秦彬娟', position: ['组员'] },
           { img: quemingjian, name: '阙鸣健', position: ['组员'] },
           { img: shenguoliang, name: '沈国良', position: ['组员'] },
           { img: sunzhenghua, name: '孙政华', position: ['组员'] },
           { img: tiankehui, name: '田可辉', position: ['组员'] },
           { img: wangqingjun, name: '王清珺', position: ['组员'] },
           { img: wotianyu, name: '沃天宇', position: ['组员'] },
+          { img: wubin, name: '吴斌', position: ['组员'] },
           { img: xiazhiyuan, name: '夏知渊', position: ['组员'] },
           { img: xiangyuanhong, name: '相元红', position: ['组员'] },
           { img: xuyang, name: '徐洋', position: ['组员'] },
