@@ -18,6 +18,7 @@ import HomeShowCase from './HomeShowCase.vue';
 import HomePartner from './HomePartner.vue';
 import HomeCalendar from './HomeCalendar.vue';
 import HomeTrend from './HomeTrend.vue';
+import HomeFriendlyCommunity from './HomeFriendlyCommunity.vue';
 import { oaReport } from '@/shared/analytics';
 import { useEventListener, useIntersectionObserver } from '@vueuse/core';
 
@@ -60,6 +61,7 @@ const calendarRef = ref<ComponentPublicInstance>();
 const showcaseRef = ref<ComponentPublicInstance>();
 const trendRef = ref<ComponentPublicInstance>();
 const partnerRef = ref<ComponentPublicInstance>();
+const friendlyCommunityRef = ref<ComponentPublicInstance>();
 
 useIntersectionObserver(
   [
@@ -68,7 +70,8 @@ useIntersectionObserver(
     calendarRef,
     showcaseRef,
     trendRef,
-    partnerRef
+    partnerRef,
+    friendlyCommunityRef,
   ],
   (entries) => {
     for (const ent of entries) {
@@ -134,6 +137,7 @@ if (typeof document !== 'undefined') {
     />
     <HomeShowCase ref="showcaseRef" data-aos="fade-up" />
     <HomeTrend ref="trendRef" data-aos="fade-up" />
+    <HomeFriendlyCommunity ref="friendlyCommunityRef" data-aos="fade-up" />
     <ClientOnly>
       <HomePartner ref="partnerRef" />
     </ClientOnly>
