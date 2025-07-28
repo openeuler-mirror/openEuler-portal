@@ -1,0 +1,15 @@
+export default {
+  defectCenter: 'Bug Center',
+  summary: 'Synopsis',
+  release: 'Release',
+  update: 'Updated',
+  overview: 'Overview',
+  brief_introduction: 'BriefIntroduction',
+  severityLevel: 'Severity',
+  description: 'description',
+  affectedComponent: 'Affected Component',
+  cve: 'CVE',
+  reference: 'referenceDocuments',
+  updated_packages: 'Updated software packages',
+  updated_hot_patches: 'Security Advisories',
+};

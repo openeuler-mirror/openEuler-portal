@@ -63,7 +63,7 @@ const { isEn } = useLocale();
 }
 .swiper-list {
   display: flex;
-  animation: marque 100s linear infinite;
+  animation: marque 300s linear infinite;
   @include respond-to('>phone') {
     @include hover {
       animation-play-state: paused;
@@ -71,7 +71,7 @@ const { isEn } = useLocale();
   }
 }
 .swiper-reverse {
-  animation: marquere 100s linear infinite;
+  animation: marquere 300s linear infinite;
 }
 
 .swiper-item {

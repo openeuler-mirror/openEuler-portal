@@ -8,7 +8,7 @@ export const subscriptionProcess = [
     img: step1,
     title: {
       zh: '选择订阅的SIG组',
-      en: '选择订阅的SIG组',
+      en: 'Select Your SIG',
     },
     detail: {
       zh: '在邮件列表页面选择要订阅的邮件列表',
@@ -19,7 +19,7 @@ export const subscriptionProcess = [
     img: step2,
     title: {
       zh: '填写信息',
-      en: '填写信息',
+      en: 'Enter Details',
     },
     detail: {
       zh: '填入邮件地址和名字，名字可选，点击订阅',
@@ -30,7 +30,7 @@ export const subscriptionProcess = [
     img: step3,
     title: {
       zh: '确认订阅邮件',
-      en: '确认订阅邮件',
+      en: 'Review & Confirm',
     },
     detail: {
       zh: '您的邮箱将收到一封来自邮件列表的电子邮件，要求您确认订阅了邮件列表，点击确认链接确认订阅',
@@ -41,7 +41,7 @@ export const subscriptionProcess = [
     img: step4,
     title: {
       zh: '成功订阅',
-      en: '',
+      en: 'You\'re Subscribed!',
     },
     detail: {
       zh: '您的邮箱收到来自一封来自邮件列表的欢迎邮件，即成功订阅该邮件列表。如需退订，请参考 <a href="/zh/blog/liuqi/2021-10-14-unsubscribe-mailing-list.html" target="_blank" rel="noopener noreferrer" class="underline-link">此操作</a>',

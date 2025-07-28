@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import AppSection from '~@/components/AppSection.vue';
-import { useScreen } from '~@/composables/useScreen';
 import HomeSwiper from './HomeSwiper.vue';
 import { vAnalytics } from '~@/directive/analytics';
 
 import { publisher } from '~@/data/home/publisher';
 
-const publisher1 = [...publisher.slice(0, 8), ...publisher.slice(0, 8)];
-const publisher2 = [...publisher.slice(8, 16), ...publisher.slice(8, 16)];
-const publisher3 = [...publisher.slice(16), ...publisher.slice(16)];
+const publisher1 = Array(5).fill(publisher.slice(0, 8)).flat();
+const publisher2 = Array(8).fill(publisher.slice(8, 16)).flat();
+const publisher3 = Array(5).fill(publisher.slice(16)).flat();
 </script>
 
 <template>

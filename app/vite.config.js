@@ -99,6 +99,9 @@ export default defineConfig({
         intelligence: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src-new/assets/category/intelligence/svg-icons')
         ),
+        'online-meeting': FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src-new/assets/category/online-meeting/svg-icons')
+        ),
       },
     }),
     viteStaticCopy({

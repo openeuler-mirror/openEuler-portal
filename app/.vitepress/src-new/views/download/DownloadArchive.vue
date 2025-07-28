@@ -594,6 +594,10 @@ const onClickLink = (item: any) => {
           }
         }
       }
+      .o-toggle {
+        --toggle-bg-color: var(--o-color-control2-light);
+        --toggle-bg-color-hover: var(--o-color-control3-light);
+      }
     }
     .filter-card:not(:first-child) {
       margin-top: 8px;

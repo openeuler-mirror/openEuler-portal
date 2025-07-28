@@ -5,5 +5,6 @@ export default {
   describe: '描述',
   mailingAddress: '邮件地址',
   mailFile: '归档',
+  viewArchive: '查看归档',
   subscriptionEmail: '订阅邮件',
 };

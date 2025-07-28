@@ -1,0 +1,15 @@
+export default {
+  defectCenter: '缺陷中心',
+  summary: '概要',
+  release: '发布',
+  update: '更新',
+  overview: '概述',
+  brief_introduction: '简介',
+  severityLevel: '严重级别',
+  description: '描述',
+  affectedComponent: '影响组件',
+  cve: 'CVE',
+  reference: '参考',
+  updated_packages: '更新的软件包',
+  updated_hot_patches: '更新的热补丁',
+};

@@ -257,4 +257,8 @@ export default [
     name: 'nestos',
     lang: ['zh'],
   },
+  {
+    name: 'meeting',
+    lang: ['zh'],
+  },
 ];
