@@ -98,8 +98,8 @@ const closeSearchBox = () => {
 };
 
 onMounted(() => {
-  if (getUrlParam('search')) {
-    searchInput.value = getUrlParam('search');
+  if (getUrlParam('q')) {
+    searchInput.value = getUrlParam('q');
   }
 });
 // ----------------- 联想搜索 -------------------------

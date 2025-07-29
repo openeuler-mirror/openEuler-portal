@@ -41,8 +41,8 @@ const replaceWinUrl = (v: string) => {
   //   });
 };
 onMounted(() => {
-  if (getUrlParam('search')) {
-    searchValue.value = decodeURIComponent(getUrlParam('search'));
+  if (getUrlParam('q')) {
+    searchValue.value = decodeURIComponent(getUrlParam('q'));
   }
 });
 watch(

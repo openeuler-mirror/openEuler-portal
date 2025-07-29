@@ -28,7 +28,7 @@ const { locale } = useLocale();
 const SERVICE_SOFTWARE_URL = import.meta.env.VITE_SERVICE_SOFTWARE_URL;
 
 const searchValue = computed(() => {
-  return getUrlParam('search') || '';
+  return getUrlParam('q') || '';
 });
 </script>
 <template>
