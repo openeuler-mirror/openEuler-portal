@@ -15,4 +15,7 @@ export default {
   more: 'View More',
   publisher: 'Vendors with openEuler-based Commercial Releases',
   publisherTips: 'Listed in no particular order',
+  friendlyCommunity: 'Ecosystem Partners',
+  friendlyCommunityDesc: 'As a key force in foundational open source software, openEuler actively engages with international open source organizations to co-develop standards, share technologies, and foster sustainable ecosystem growth.',
+  sortTips: 'Listed alphabetically',
 };

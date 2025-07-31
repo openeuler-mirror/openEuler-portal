@@ -16,4 +16,7 @@ export default {
   more: '查看更多',
   publisher: '发行厂商',
   publisherTips: '注：排名不分先后',
+  friendlyCommunity: '友好社区',
+  friendlyCommunityDesc: 'openEuler作为开源基础软件的重要力量，积极与国际开源组织建立联系，推动标准共建、技术共享与生态可持续发展',
+  sortTips: '注：按首字母排序',
 };
