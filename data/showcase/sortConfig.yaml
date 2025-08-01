@@ -75,6 +75,40 @@ showcase:
     summary: "中科通达智慧交通管控平台"
     typeOrder: 1
 
+  - title: "中国南方电网"
+    summary: "信息业务系统，平滑完成操作系统迁移，实现完全系统升级"
+    typeOrder: 12
+  - title: "国家电网"
+    summary: "国家电网河北智慧标杆站” 智慧工地系统，平滑完成操作系统创新，实现业务高效稳定运行"
+    typeOrder: 11
+  - title: "华电芜湖电厂"
+    summary: "华电芜湖电厂 DCS 核心控制系统平滑完成操作系统迁移，实现业务高效稳定运行"
+    typeOrder: 10
+  - title: "南京瀚元科技有限公司（智能边缘服务器）"
+    summary: "A-OPS智能运维助力边缘服务器运维效率提升30%，软总线提升对端设备扩展接入能力；"
+    typeOrder: 9
+  - title: "新能源风场电力监控系统"
+    summary: "全面基于国内主流安全操作系统进行大规模建设"
+    typeOrder: 8
+  - title: "大唐集团"
+    summary: "大唐集团向阳山等风电厂 SCADA 系统 平滑完成系统迁移，实现业务高效稳定运行"
+    typeOrder: 7
+  - title: "国家电网"
+    summary: "国家电网配网自动化系统"
+    typeOrder: 6
+  - title: "国家电网"
+    summary: "智能调度系统 D5000 工程，实现对电力核心调度系统的操作系统迁移改造"
+    typeOrder: 5
+  - title: "中国电建集团华东勘测设计研究院有限公司"
+    summary: "面向新能源领域的国产操作系统O-PowerOS"
+    typeOrder: 4
+  - title: "光伏发电功率预测系统"
+    summary: "基于openEuler实现等保四级安全防护建设"
+    typeOrder: 3
+  - title: "迁移适配后产品支持多架构，部署时长大幅降低"
+    summary: "成品油资质管理平台迁移适配"
+    typeOrder: 2
+
   - title: "中国工商银行"
     summary: "云数智一体化算力生态建设方案"
     allOrder: 12
