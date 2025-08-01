@@ -30175,13 +30175,13 @@
       "hardDiskDrive": ""
     }
   },
-{
-    "hardwareFactory": "Lenovo",
+  {
+    "hardwareFactory": "Lenovo Kaitian",
     "hardwareModel": "KR522h G3-s",
     "osVersion": "openEuler 20.03 LTS SP4",
     "architecture": "x86_64",
     "date": "2025/04/22",
-    "friendlyLink": "https://www.lenovo.com.cn",
+    "friendlyLink": "https://www.legendkaitian.com.cn/",
     "boardCards": [
       {
         "vendorID": "1000",
@@ -30196,9 +30196,9 @@
         "date": "2025/04/22",
         "sha256": "1321b4bd6917fb1cd86a317ce7d77bde4fd4d96f69cf4d2df062ff333d54ba91",
         "driverSize": "296459",
-        "chipVendor": "Broadcom",
+        "chipVendor": " Broadcom",
         "boardModel": "BCM 9560-8i Tri-Mode RAID",
-        "chipModel": "SAS3908",
+        "chipModel": "RAID_SAS3908",
         "item": "",
         "downloadLink": "inbox"
       },
@@ -30211,38 +30211,38 @@
         "os": "openEuler 20.03 LTS SP4",
         "driverName": "mlx5_core",
         "version": "5.0-0",
-        "type": "NIC",
+        "type": "nic",
         "date": "2025/04/22",
         "sha256": "7f48e90903bb797e976f6187b8fa62fc3fdf950fdb0442545c13909f743dd70a",
         "driverSize": "1434867",
         "chipVendor": "Mellanox",
-        "boardModel": "MCX631102AN-ADAT",
-        "chipModel": "ConnextX-6 Lx",
+        "boardModel": "MLX MCX631102AN-ADAT 2-port 25G SFP28 NIC",
+        "chipModel": " ConnectX-6 Lx ",
         "item": "",
         "downloadLink": "inbox"
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://www.lenovo.com.cn",
+      "productInformation": "https://www.legendkaitian.com.cn/",
       "certificationTime": "2025/04/22",
       "commitID": "IC3KLZ",
       "mainboardModel": "52DC16",
       "biosUefi": "CHH2051022",
-      "cpu": "Hygon C86-4G (OPN:5480)",
+      "cpu": "Hygon C86-4G ",
       "ram": "8*64G DIMMs",
       "portsBusTypes": "",
-      "videoAdapter": "0d:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "videoAdapter": "0d:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
       "hostBusAdapter": "BCM 9560-8i Tri-Mode RAID",
       "hardDiskDrive": ""
     }
   },
-{
-    "hardwareFactory": "Lenovo",
+  {
+    "hardwareFactory": "Lenovo Kaitian",
     "hardwareModel": "KR522h G3-s",
     "osVersion": "openEuler 22.03 LTS SP4",
     "architecture": "x86_64",
     "date": "2025/04/22",
-    "friendlyLink": "https://www.inspur.com.cn/",
+    "friendlyLink": "https://www.legendkaitian.com.cn/",
     "boardCards": [
       {
         "vendorID": "1000",
@@ -30257,9 +30257,9 @@
         "date": "2025/04/22",
         "sha256": "f228e241a1e1970163a5423feccf8cf46f72b1d895a9fa186ee7cffbac304924",
         "driverSize": "75588",
-        "chipVendor": "Broadcom",
+        "chipVendor": " Broadcom",
         "boardModel": "BCM 9560-8i Tri-Mode RAID",
-        "chipModel": "SAS3908",
+        "chipModel": "RAID_SAS3908",
         "item": "",
         "downloadLink": "inbox"
       },
@@ -30271,29 +30271,29 @@
         "architecture": "x86_64",
         "os": "openEuler 22.03 LTS SP4",
         "driverName": "mlx5_core",
-        "version": "5.0-0",
-        "type": "NIC",
+        "version": "5.10-0",
+        "type": "nic",
         "date": "2025/04/22",
         "sha256": "a3fa07170cb3227b24cfc1ce63d4ea81a619eddce9de2ad55acca49a85052596",
         "driverSize": "431024",
         "chipVendor": "Mellanox",
-        "boardModel": "MCX631102AN-ADAT",
-        "chipModel": "ConnextX-6 Lx",
+        "boardModel": "MLX MCX631102AN-ADAT 2-port 25G SFP28 NIC",
+        "chipModel": " ConnectX-6 Lx ",
         "item": "",
         "downloadLink": "inbox"
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://www.lenovo.com.cn",
+      "productInformation": "https://www.legendkaitian.com.cn/",
       "certificationTime": "2025/04/22",
       "commitID": "IC3KLZ",
       "mainboardModel": "52DC16",
       "biosUefi": "CHH2051022",
-      "cpu": "Hygon C86-4G (OPN:5480)",
+      "cpu": " Hygon C86-4G",
       "ram": "8*64G DIMMs",
       "portsBusTypes": "",
-      "videoAdapter": "0d:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
-      "hostBusAdapter": "BCM 9560-8i Tri-Mode RAID",
+      "videoAdapter": "07:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": " BCM 9560-8i Tri-Mode RAID",
       "hardDiskDrive": ""
     }
   },
@@ -30970,6 +30970,149 @@
       "videoAdapter": "Hi171x",
       "hostBusAdapter": "HiSilicon SAS 3.0 HBA",
       "hardDiskDrive": "SAMSUNG MZ7LH480/MR9560-8i"
+    }
+  },
+  {
+    "hardwareFactory": "Suma",
+    "hardwareModel": "R6450H5",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2025/07/30",
+    "friendlyLink": "https://www.cancon.com.cn/",
+    "boardCards": [
+      {
+        "vendorID": "8088",
+        "deviceID": "0101",
+        "svID": "8088",
+        "ssID": "8201",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "ngbe",
+        "version": "1.1.0oe",
+        "type": "NIC",
+        "date": "2025/05/23",
+        "sha256": "66498355110d93685f8bf9754bbce34bf5c2aa1103dfc343b3af261252161790",
+        "driverSize": "391819",
+        "chipVendor": " Net-Swift",
+        "boardModel": "Net-Swift WX1860A2 2-port 1G RJ45 NIC",
+        "chipModel": "WX1860A2",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn/",
+      "certificationTime": "2025/07/30",
+      "commitID": "ICPSLD",
+      "mainboardModel": "62DC24",
+      "biosUefi": "CXH1050012",
+      "cpu": "Hygon C86-4G",
+      "ram": "4*64GB DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "85:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": " ",
+      "hardDiskDrive": "SAMSUNG MZ7L31T9 304Q"
+    }
+  },
+  {
+    "hardwareFactory": "Suma",
+    "hardwareModel": "R6450H5",
+    "osVersion": "openEuler 22.03 LTSSP4",
+    "architecture": "x86_64",
+    "date": "2025/7/30",
+    "friendlyLink": "https://www.cancon.com.cn/",
+    "boardCards": [
+      {
+        "vendorID": "8088",
+        "deviceID": "0101",
+        "svID": "8088",
+        "ssID": "8201",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "ngbe",
+        "version": "1.2.2oe",
+        "type": "NIC",
+        "date": "2025/05/23",
+        "sha256": "9c7203faa22eba3766a5ff464c0ae234368c18e08f46fe7100226f20f574c8b3",
+        "driverSize": "98688",
+        "chipVendor": " Net-Swift",
+        "boardModel": "Net-Swift WX1860A2 2-port 1G RJ45 NIC",
+        "chipModel": "WX1860A2",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.cancon.com.cn/",
+      "certificationTime": "2025/07/30",
+      "commitID": "ICPSLD",
+      "mainboardModel": "62DC24",
+      "biosUefi": "CXH1050012",
+      "cpu": "Hygon C86-4G",
+      "ram": "4*64GB DIMMs",
+      "portsBusTypes": "Type:x16 PCI Express 5、Type:x4 PCI Express 5 x16、Type:x2 PCI Express",
+      "videoAdapter": "85:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "SAMSUNG MZ7L31T9 304Q"
+    }
+  },
+  {
+    "hardwareFactory": "HuaKun",
+    "hardwareModel": "HuaKun TG225 B2",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "aarch64",
+    "date": "2025/07/29",
+    "friendlyLink": "https://www.schkzy.com/product_solution/product/product_detail?id\u003d1730478427623944194",
+    "boardCards": [
+      {
+        "vendorID": "19e5",
+        "deviceID": "0222",
+        "svID": "19e5",
+        "ssID": "0051",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "hisdk3",
+        "version": "17.7.7.1",
+        "type": "NIC",
+        "date": "2025/07/29",
+        "sha256": "271d0cf9c7cdb2de5ceced9a0612627fbe52fa0f277b3ce6f09dea2bdec3bea5",
+        "driverSize": "69500",
+        "chipVendor": "Broadcom",
+        "boardModel": "SP681 ",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "19e5",
+        "deviceID": "3758",
+        "svID": "19e5",
+        "ssID": "01a4",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "hiraid",
+        "version": "1.3.13.16",
+        "type": "raid",
+        "date": "2025/05/22",
+        "sha256": "7da581820a51baf1b91c7de1274c6ad4cdd273c7b39f9804f20cd16b6220f10c",
+        "driverSize": "58536",
+        "chipVendor": "",
+        "boardModel": "SP686C-M-16i",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.schkzy.com/product_solution/product/product_detail?id\u003d1730478427623944194",
+      "certificationTime": "2025/07/29",
+      "commitID": "IC9ARR",
+      "mainboardModel": "",
+      "biosUefi": "6.60",
+      "cpu": "Kunpeng 920",
+      "ram": "16*32G DIMMs",
+      "portsBusTypes": "x8 PCI Express x8,x8 PCI Express x8,x4 PCI Express x4,x4 PCI Express x4,x4 PCI Express x4",
+      "videoAdapter": "Hi171x",
+      "hostBusAdapter": "Huawei",
+      "hardDiskDrive": "BROADCOM MR9560-8i"
     }
   }
 ]
