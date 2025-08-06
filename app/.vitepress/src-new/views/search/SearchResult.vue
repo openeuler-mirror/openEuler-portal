@@ -247,7 +247,7 @@ const reportSearch = (data: Record<string, any>) => {
     'click',
     {
       module: 'search_result',
-      content: props.searchVal,
+      content: decodeURIComponent(location.search.match(/\bq=([^&]+)&?/)?.[1] || ''),
       ...data,
     },
     'search_portal'
