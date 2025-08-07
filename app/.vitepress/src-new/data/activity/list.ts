@@ -130,7 +130,7 @@ export const MEETUP_DATA = {
       id: 4,
       title: 'openEuler SIG-ARM Meetup 深圳站',
       date: '2025-07-18 14:00-17:30',
-      activity_type: 2,
+      activity_type: 1,
       synopsis:
         '本场Meetup是openEuler Arm SIG 年度技术聚会。我们将汇聚Arm生态头部芯片厂商与软件巨头嘉宾，深度剖析openEuler在Arm架构的最新性能优化与创新实践，并带来云原生/AI等关键负载在Arm服务器上的迁移、部署与调优实战指南。活动聚焦核心挑战，分享数据库、中间件等关键基础软件栈的Arm适配经验与解决方案，并探讨Arm服务器生态的未来趋势与标准化进展。',
       address: '南山区海天一路软件产业基地4栋B座1楼 禾木HOMEY SPACE（雅禾厅）',
