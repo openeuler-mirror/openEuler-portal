@@ -62,9 +62,7 @@ function getQueryStr(params: PkgIdsT) {
   }
 }
 const jumpTo = (id: PkgIdsT, type?: PkgTypeT) => {
-  return `${import.meta.env.VITE_SERVICE_SOFTWARE_URL}/${
-    locale.value
-  }/field/detail?${type ? `type=${type}&` : ''}${getQueryStr(id)}`;
+  return `${import.meta.env.VITE_SERVICE_SOFTWARE_URL}/zh/field/detail?${type ? `type=${type}&` : ''}${getQueryStr(id)}`;
 };
 
 const repeatTags = (v: string) => {
