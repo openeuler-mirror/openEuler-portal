@@ -35,7 +35,7 @@ const onClickLink = () => {
 <template>
   <div class="search-download-zone">
     <div class="download-title">
-      <div class="title">{{ $t('search.gaussWant') }}</div>
+      <div class="title">{{ $t('search.guess') }}</div>
     </div>
     <div class="download-version">
       {{ $t('search.latest') }}: {{ localeCommunityVersionData[0].NAME }}
