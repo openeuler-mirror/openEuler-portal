@@ -1,11 +1,11 @@
 ---
 title: oeDeploy 专题3：基于 MCP 的软件部署效率提升
 category: blog 
-date: 2025-07-29
+date: 2025-04-29
 tags:
     - oeDeploy
     - MCP
-archives: 2025-07-29
+archives: 2025-04-29
 author:  openEuler
 summary:  随着大模型的快速发展与近期 MCP 协议的火热，我们的开发模式正在快速转向自动化、智能化。本期专题，我们将演示如何用 oeDeploy + MCP，进一步提升开发者的安装部署效率。
 ---
