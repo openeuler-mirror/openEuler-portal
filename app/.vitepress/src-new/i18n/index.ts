@@ -20,6 +20,9 @@ import eventOverview from './event-overview';
 import usergroup from './user-group';
 import intelligence from './intelligence';
 import sig from './sig';
+import mailing from './mailing';
+import onlineMeeting from './online-meeting';
+import defectCenter from './defect-center';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -77,6 +80,9 @@ const messages = {
     usergroup: usergroup.zh,
     intelligence: intelligence.zh,
     sig: sig.zh,
+    mailing: mailing.zh,
+    onlineMeeting: onlineMeeting.zh,
+    defectCenter: defectCenter.zh,
   },
   en: {
     // 公共模块
@@ -97,6 +103,8 @@ const messages = {
     eventOverview: eventOverview.en,
     intelligence: intelligence.en,
     sig: sig.en,
+    mailing: mailing.en,
+    defectCenter: defectCenter.en,
   },
 };
 

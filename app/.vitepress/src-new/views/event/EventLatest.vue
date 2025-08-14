@@ -465,7 +465,8 @@ const handleConfirm = () => {
   max-height: 32px;
   color: var(--o-color-info1);
   border: 1px solid var(--o-color-control2-light);
-  background-color: var(--o-color-control2-light);
+  --toggle-bg-color: var(--o-color-control2-light);
+  --toggle-bg-color-hover: var(--o-color-control3-light);
   @include text1;
 }
 .o-radio + .o-radio {

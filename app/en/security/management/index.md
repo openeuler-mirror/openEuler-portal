@@ -3,9 +3,19 @@ title: 'Bug Management'
 ---
 
 <script setup lang="ts">
+import {
+  OBreadcrumb,
+  OBreadcrumbItem,
+} from '@opensig/opendesign';
+
+import ContentWrapper from '~@/components/ContentWrapper.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue'
 import banner from '@/assets/banner/banner-security.png';
 import illustration from '@/assets/illustrations/support/vulnerability-reporting.png';
+
+import { useScreen } from '~@/composables/useScreen';
+
+const { lePadV } = useScreen();
 </script>
 
 <ClientOnly>
@@ -13,7 +23,13 @@ import illustration from '@/assets/illustrations/support/vulnerability-reporting
     :background-image="banner"
     title="Bug Management"
     :illustration="illustration"
-/>
+  />
+  <ContentWrapper :vertical-padding="['32px', '0']">
+    <OBreadcrumb v-if="!lePadV">
+      <OBreadcrumbItem href="/en/security/bug-bulletins/">Bug Center</OBreadcrumbItem>
+      <OBreadcrumbItem>Bug Management</OBreadcrumbItem>
+    </OBreadcrumb>
+  </ContentWrapper>
 </ClientOnly>
 
 <div class='markdown'>
@@ -138,15 +154,15 @@ The bug severity evaluation principles are developed by the QA SIG of the openEu
 
 | Gitee ID      | Name          | Email                     |
 | ------------- | ------------- | ------------------------ |
-| wu_fengguang  | wufengguang   | wufengguang@huawei.com   |
-| walkingwalk   | wubodong      | wubodong@huawei.com      |
-| lemon-higgins | lemon.higgins | lemon.higgins@aliyun.com |
-| lutianxiong   | lutianxiong   | lutianxiong@huawei.com   |
-| rigorous      | yanjin        | yanjin.yan@huawei.com    |
-| SupMario      | tangjie       | tangjie18@huawei.com     |
-| charlie_li    | liyongqiang   | liyongqiang329@163.com   |
-| disnight      | fanjiachen    | fanjiachen3@huawei.com   |
-| Ethan-Zhang   | zhangyizheng  | ethanzhang55@outlook.com |
+| wu_fengguang  | wufengguang   | <wufengguang@huawei.com>   |
+| walkingwalk   | wubodong      | <wubodong@huawei.com>      |
+| lemon-higgins | lemon.higgins | <lemon.higgins@aliyun.com> |
+| lutianxiong   | lutianxiong   | <lutianxiong@huawei.com>   |
+| rigorous      | yanjin        | <yanjin.yan@huawei.com>    |
+| SupMario      | tangjie       | <tangjie18@huawei.com>     |
+| charlie_li    | liyongqiang   | <liyongqiang329@163.com>   |
+| disnight      | fanjiachen    | <fanjiachen3@huawei.com>   |
+| Ethan-Zhang   | zhangyizheng  | <ethanzhang55@outlook.com> |
 
 
 
@@ -154,10 +170,10 @@ The bug severity evaluation principles are developed by the QA SIG of the openEu
 
 | Gitee ID    | Name           | Email                      |
 | ----------- | -------------- | ------------------------- |
-| yaqiangchen | chenyaqiang    | chenyaqiang@huawei.com    |
-| solarhu     | Hufeng         | solar.hu@huawei.com       |
-| paul-huang  | Huangchengpiao | huangchengpiao@huawei.com |
-| gitee-cmd   | chemingdao     | chemingdao@huawei.com     |
+| yaqiangchen | chenyaqiang    | <chenyaqiang@huawei.com>    |
+| solarhu     | Hufeng         | <solar.hu@huawei.com>       |
+| paul-huang  | Huangchengpiao | <huangchengpiao@huawei.com> |
+| gitee-cmd   | chemingdao     | <chemingdao@huawei.com>     |
 
 </div>
 

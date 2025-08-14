@@ -159,19 +159,19 @@ const dlgAction: DialogActionT[] = [
 ];
 // 表格配置
 const columns = [
-  { label: t('download.MIRROR_ALL_NAME'), key: 'name', style: 'width: 30%' },
+  { label: t('download.MIRROR_ALL_NAME'), key: 'name', style: { 'min-width': '220px' } },
   {
     label: t('download.MIRROR_ALL_LOCATION'),
     key: 'location',
-    style: 'width: 15%',
+    style: { 'min-width': '220px' },
   },
   {
     label: t('download.MIRROR_ALL_SPONSOR'),
     key: 'sponsor',
-    style: 'width: 15%',
+    style: { width: '100px' },
   },
-  { label: t('download.protocol'), key: 'rsnc', style: 'width: 20%' },
-  { label: t('download.MIRROR_ALL_Mbs'), key: 'netband', style: 'width: 20%' },
+  { label: t('download.protocol'), key: 'rsnc', style: { width: '200px' } },
+  { label: t('download.MIRROR_ALL_Mbs'), key: 'netband', style: { width: '200px' } },
 ];
 const COUNT_PER_PAGE = [12, 18, 24, 36];
 const rsyncCode =

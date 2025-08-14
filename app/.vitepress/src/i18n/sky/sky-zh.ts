@@ -47,7 +47,7 @@ export default {
     EVENT_COLLECTION:
       '“openEuler Call for X 计划” \n 资源面向openEuler社区所有成员开放，欢迎与openEuler社区共同组织开发者活动，繁荣openEuler生态。',
     EVENT_COLLECTION1: '活动征集',
-    EVENT_COLLECTION_URL: '/zh/interaction/event-list/collect/',
+    EVENT_COLLECTION_URL: '/zh/interaction/event-list/',
   },
   TECHNICAL_TULTORIAL: {
     BREAD1: 'openEuler Call for X 计划',

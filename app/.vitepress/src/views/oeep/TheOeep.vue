@@ -50,6 +50,13 @@ window.onpopstate = function () {
   });
 };
 
+const breadTitle = () => {
+  const arr = decodeURI(getUrlParam('name'))?.split(' ');
+  const text = arr.slice(1).join(' ');
+
+  return text;
+}
+
 onMounted(() => {
   useOeep().setMarkDownData();
   nextTick(() => {
@@ -72,7 +79,7 @@ watch(
       v-show="!getUrlParam('name')?.includes('oEEP-0000')"
       class="bread"
       bread1="oEEP-index"
-      :bread2="decodeURI(getUrlParam('name'))?.split(' ')[0]"
+      :bread2="breadTitle()"
       :link1="`/zh/oEEP/?name=oEEP-0000%20oEEP%20%20索引`"
       @click="handleGo(`/zh/oEEP/?name=oEEP-0000%20oEEP%20%20索引`)"
     />
@@ -129,6 +136,7 @@ img {
 }
 .oeep-markdown {
   width: calc(100% - 340px);
+  overflow-x: auto;
   @media screen and (max-width: 1520px) {
     width: calc(100% - 32px);
   }
@@ -139,8 +147,19 @@ img {
       padding-right: 32px;
       max-width: 30%;
       min-width: 144px;
+      text-align: left !important;
       @media screen and (max-width: 768px) {
         padding: 0 4px;
+      }
+    }
+    tr {
+      td {
+        &:nth-child(4) {
+          white-space: pre-wrap;
+        }
+        &:nth-child(5) {
+          min-width: 150px;
+        }
       }
     }
   }

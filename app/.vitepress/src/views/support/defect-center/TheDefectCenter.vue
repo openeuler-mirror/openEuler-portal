@@ -255,6 +255,7 @@ watch(queryData, () => {
     :title="i18n.safetyBulletin.DEFECT_CENTER"
     subtitle=""
     :illustration="satetyBulletin"
+    class="bulletin-banner"
   >
     <template #default>
       <OButton
@@ -591,6 +592,62 @@ watch(queryData, () => {
 </template>
 
 <style lang="scss" scoped>
+.bulletin-banner {
+  :deep(.wrap) {
+    .banner-text {
+      max-width: 60%;
+      margin: 72px 0;
+      .banner-title {
+        margin-top: 0;
+        @include display2;
+      }
+    }
+    
+    @media screen and (max-width: 1680px) {
+      min-height: 220px;
+
+      .banner-text {
+        margin: 42px 0;
+        .banner-title {
+          font-size: 40px;
+          line-height: 56px;
+        }
+      }
+
+      .banner-illustration {
+        img {
+          max-height: 160px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      min-height: 180px;
+
+      .banner-text {
+        margin: 32px 0;
+        .banner-title {
+          @include display2;
+        }
+      }
+      .banner-illustration {
+        img {
+          max-height: 94px;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      min-height: 126px;
+
+      .banner-text {
+        margin: 24px 0;
+        .banner-title {
+          @include display3;
+        }
+      }
+    }
+  }
+}
 .el-dropdown__popper {
   .el-checkbox {
     margin-right: 0;

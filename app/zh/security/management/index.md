@@ -3,9 +3,20 @@ title: '缺陷管理'
 ---
 
 <script setup lang="ts">
+import {
+  OBreadcrumb,
+  OBreadcrumbItem,
+} from '@opensig/opendesign';
+
+import ContentWrapper from '~@/components/ContentWrapper.vue';
+
 import BannerLevel2 from '@/components/BannerLevel2.vue'
 import banner from '@/assets/banner/banner-security.png';
 import illustration from '@/assets/illustrations/support/vulnerability-reporting.png';
+
+import { useScreen } from '~@/composables/useScreen';
+
+const { lePadV } = useScreen();
 </script>
 
 <ClientOnly>
@@ -13,7 +24,13 @@ import illustration from '@/assets/illustrations/support/vulnerability-reporting
     :background-image="banner"
     title="缺陷管理"
     :illustration="illustration"
-/>
+  />
+  <ContentWrapper :vertical-padding="['32px', '0']">
+    <OBreadcrumb v-if="!lePadV">
+      <OBreadcrumbItem href="/zh/security/bug-bulletins/">缺陷中心</OBreadcrumbItem>
+      <OBreadcrumbItem>缺陷管理</OBreadcrumbItem>
+    </OBreadcrumb>
+  </ContentWrapper>
 </ClientOnly>
 
 <div class='markdown'>
@@ -138,15 +155,15 @@ openEuler-xxxx-xxxx:是/否
 
 | gitee id      | 名称          | 邮箱                     |
 | ------------- | ------------- | ------------------------ |
-| wu_fengguang  | wufengguang   | wufengguang@huawei.com   |
-| walkingwalk   | wubodong      | wubodong@huawei.com      |
-| lemon-higgins | lemon.higgins | lemon.higgins@aliyun.com |
-| lutianxiong   | lutianxiong   | lutianxiong@huawei.com   |
-| rigorous      | yanjin        | yanjin.yan@huawei.com    |
-| SupMario      | tangjie       | tangjie18@huawei.com     |
-| charlie_li    | liyongqiang   | liyongqiang329@163.com   |
-| disnight      | fanjiachen    | fanjiachen3@huawei.com   |
-| Ethan-Zhang   | zhangyizheng  | ethanzhang55@outlook.com |
+| wu_fengguang  | wufengguang   | <wufengguang@huawei.com>   |
+| walkingwalk   | wubodong      | <wubodong@huawei.com>      |
+| lemon-higgins | lemon.higgins | <lemon.higgins@aliyun.com> |
+| lutianxiong   | lutianxiong   | <lutianxiong@huawei.com>   |
+| rigorous      | yanjin        | <yanjin.yan@huawei.com>    |
+| SupMario      | tangjie       | <tangjie18@huawei.com>     |
+| charlie_li    | liyongqiang   | <liyongqiang329@163.com>   |
+| disnight      | fanjiachen    | <fanjiachen3@huawei.com>   |
+| Ethan-Zhang   | zhangyizheng  | <ethanzhang55@outlook.com> |
 
 
 
@@ -154,13 +171,17 @@ openEuler-xxxx-xxxx:是/否
 
 | gitee id    | 名称           | 邮箱                      |
 | ----------- | -------------- | ------------------------- |
-| yaqiangchen | chenyaqiang    | chenyaqiang@huawei.com    |
-| solarhu     | Hufeng         | solar.hu@huawei.com       |
-| paul-huang  | Huangchengpiao | huangchengpiao@huawei.com |
-| gitee-cmd   | chemingdao     | chemingdao@huawei.com     |
+| yaqiangchen | chenyaqiang    | <chenyaqiang@huawei.com>    |
+| solarhu     | Hufeng         | <solar.hu@huawei.com>       |
+| paul-huang  | Huangchengpiao | <huangchengpiao@huawei.com> |
+| gitee-cmd   | chemingdao     | <chemingdao@huawei.com>     |
 
 </div>
 
 <style lang="scss" scoped>
-
+.o-breadcrumb {
+  --breadcrumb-color-hover: var(--o-color-primary1);
+  --breadcrumb-color-active: var(--o-color-primary1);
+  --breadcrumb-color-selected: var(--o-color-primary1);
+}
 </style>

@@ -67,8 +67,7 @@ async function getRankData() {
 }
 const toggleRankState = () => {
   if (isRankUnfold.value) {
-    renderData.value = rankInfo.value && rankInfo.value.slice(3, 10);
-    window.location.href = '#rank';
+    renderData.value = rankInfo.value && rankInfo.value.slice(3, 10);  
   } else {
     renderData.value = rankInfo.value && rankInfo.value.slice(3);
   }
@@ -140,7 +139,7 @@ onMounted(() => {
           </div>
         </div>
         <div v-if="isAllVisible" class="view-all">
-          <a @click="toggleRankState()">
+          <div class="view-btn" @click="toggleRankState()">
             {{ !isRankUnfold ? rank.viewAll : rank.packUp }}
             <div>
               <img
@@ -149,7 +148,7 @@ onMounted(() => {
                 alt=""
               />
             </div>
-          </a>
+          </div>
         </div>
       </div>
       <div v-else class="rank404">
@@ -344,13 +343,14 @@ onMounted(() => {
   .view-all {
     padding-top: 15px;
     font-size: 14px;
+    text-align: center;
     @media (max-width: 1000px) {
       padding-top: 20px;
       font-size: var(--e-font-size-tip);
     }
-    a {
+    .view-btn {
       cursor: pointer;
-      display: flex;
+      display: inline-flex;
       justify-content: center;
       color: var(--e-color-text1);
       div {

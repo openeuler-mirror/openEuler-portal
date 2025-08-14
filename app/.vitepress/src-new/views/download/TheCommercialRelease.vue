@@ -554,6 +554,9 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
         margin: 0;
       }
     }
+    .o-toggle {
+      --toggle-bg-color-hover: var(--o-color-control3-light);
+    }
   }
   .filter-card:not(:first-child) {
     margin-top: 16px;

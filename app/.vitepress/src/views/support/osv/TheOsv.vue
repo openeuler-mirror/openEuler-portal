@@ -2,10 +2,14 @@
 import { reactive, ref, watch, onMounted, computed } from 'vue';
 import { useRouter, useData } from 'vitepress';
 
+import { OTable } from '@opensig/opendesign';
+
 import { useI18n } from '@/i18n';
 
 import { OsvQueryT, OsvListT } from '@/shared/@types/type-support';
 import { getOsName, getOsType, getOsTableData } from '@/api/api-security';
+
+import { useScreen } from '~@/composables/useScreen';
 
 import AppContent from '@/components/AppContent.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
@@ -15,6 +19,7 @@ import banner from '@/assets/banner/banner-security.png';
 import osv from '@/assets/illustrations/support/osv.png';
 
 const router = useRouter();
+const { lePad } = useScreen();
 
 const i18n = useI18n();
 const { lang } = useData();
@@ -27,6 +32,17 @@ const all = computed(() => {
     return '全部';
   }
 });
+
+const columns = [
+  { label: i18n.value.approve.TABLE_COLUMN.ARCHITECTURE, key: 'arch', style: { width: '124px' } },
+  { label: i18n.value.approve.TABLE_COLUMN.COMPANY, key: 'osvName', style: { width: lePad.value ? '160px' : '240px' } },
+  { label: i18n.value.approve.TABLE_COLUMN.VERSION, key: 'osVersion', style: { width: lePad.value ? '160px' : '240px' } },
+  { label: i18n.value.approve.TABLE_COLUMN.DOWNLOAD, key: 'osDownloadLink', style: { width: lePad.value ? '160px' : '240px' } },
+  { label: i18n.value.approve.TABLE_COLUMN.TYPE, key: 'type', style: { width: '96px' } },
+  { label: i18n.value.approve.TABLE_COLUMN.DATE, key: 'date', style: { width: '130px' } },
+  { label: i18n.value.approve.TABLE_COLUMN.DETAILS, key: 'details', style: { width: '104px' } },
+  { label: i18n.value.approve.TABLE_COLUMN.LINK, key: 'friendlyLink', style: { width: '124px' } },
+];
 
 const inputName = ref('');
 const osNames = ref([`${all.value}`]);
@@ -218,54 +234,34 @@ watch(queryData, () => getOsTableList(queryData));
       </div>
     </OCard>
 
-    <OTable class="pc-list" :data="osvList" style="width: 100%">
-      <OTableColumn :label="i18n.approve.TABLE_COLUMN.ARCHITECTURE" prop="arch">
-      </OTableColumn>
-      <OTableColumn :label="i18n.approve.TABLE_COLUMN.COMPANY" prop="osvName">
-      </OTableColumn>
-      <OTableColumn :label="i18n.approve.TABLE_COLUMN.VERSION" prop="osVersion">
-      </OTableColumn>
-
-      <el-table-column :label="i18n.approve.TABLE_COLUMN.DOWNLOAD" width="220">
-        <template #default="scope">
-          <span v-if="!scope.row.osDownloadLink.startsWith('http')">
-            {{ scope.row.osDownloadLink }}
-          </span>
-          <a
-            v-else
-            :href="scope.row.osDownloadLink"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link"
-            >{{ scope.row.osDownloadLink }}</a
-          >
-        </template>
-      </el-table-column>
-
-      <OTableColumn :label="i18n.approve.TABLE_COLUMN.TYPE" prop="type">
-      </OTableColumn>
-      <OTableColumn :label="i18n.approve.TABLE_COLUMN.DATE" prop="date">
-      </OTableColumn>
-
-      <el-table-column :label="i18n.approve.TABLE_COLUMN.DETAILS" width="140">
-        <template #default="scope">
-          <span class="link" @click="goApproveInfo(scope.row.id)">{{
-            scope.row.details
-          }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column :label="i18n.approve.TABLE_COLUMN.DETAILS" width="160">
-        <template #default="scope">
-          <a
-            :href="scope.row.friendlyLink"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link"
-            >{{ i18n.approve.TABLE_COLUMN.LINK }}</a
-          >
-        </template>
-      </el-table-column>
+    <OTable class="pc-list" :columns="columns" :data="osvList" style="width: 100%">
+      <template #td_osDownloadLink="{ row }">
+        <a
+          v-if="row.osDownloadLink.startsWith('http') || row.osDownloadLink.startsWith('www')"
+          :href="row.osDownloadLink"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link"
+          >{{ row.osDownloadLink }}</a
+        >
+        <span v-else>
+          {{ row.osDownloadLink }}
+        </span>
+      </template>
+      <template #td_details="{ row }">
+        <span class="link" @click="goApproveInfo(row.id)">{{
+          row.details
+        }}</span>
+      </template>
+      <template #td_friendlyLink="{ row }">
+        <a
+          :href="row.friendlyLink"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link"
+          >{{ i18n.approve.TABLE_COLUMN.LINK }}</a
+        >
+      </template>
     </OTable>
 
     <ul class="mobile-list">
@@ -488,6 +484,11 @@ watch(queryData, () => getOsTableList(queryData));
   .link {
     color: var(--e-color-link1);
     cursor: pointer;
+  }
+  :deep(.el-scrollbar__view) {
+    .el-table__body {
+      width: auto !important;
+    }
   }
 }
 .empty-status {
