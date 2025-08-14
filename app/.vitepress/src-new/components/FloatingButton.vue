@@ -40,21 +40,16 @@ const isDark = computed(() => {
 const TITLES1 = ['您向他人推荐 ', '您对 '];
 const TITLES2 = [
   'openEuler社区',
-  '获取方式',
-  '社区发行版',
-  '其他版本',
-  '下载服务',
-  '课程中心',
-  '迁移与运维',
-  '技术展示',
+  '下载板块',
+  '学习板块',
+  '社区板块',
+  '动态板块',
+  '开发者贡献',
+  '构建板块',
+  '项目板块',
   '兼容性专区',
-  '支持与服务',
-  '关于社区',
-  '贡献与成长',
-  '项目',
-  '社区交流',
-  '社区活动',
-  '资讯',
+  '迁移与运维',
+  '安全公告',
 ];
 const TITLES3 = [' 的可能性有多大？', ' 的整体满意度如何？'];
 
@@ -102,48 +97,57 @@ interface TitleItemT {
 }
 
 const tipsObj: TitleItemT = {
+  // 默认为【openEuler社区】
   '/zh/': TITLES2[0],
-  '/download/': TITLES2[2],
-  '/download/get-os/': TITLES2[1],
-  '/download/commercial-release/': TITLES2[3],
-  '/mirror/list/': TITLES2[4],
-  '/interaction/live-list/': TITLES2[5],
-  '/learn/mooc/': TITLES2[5],
-  '/blog/openeuler/20240428-security.html': TITLES2[5],
-  '/migration/': TITLES2[6],
-  '/om/': TITLES2[6],
-  '/showcase/': TITLES2[7],
-  '/showcase/technical-white-paper/': TITLES2[7],
-  '/showcase/market-report/': TITLES2[7],
+  // 【下载板块】：社区发行版/商业发行版/软件中心/镜像仓列表
+  '/download/': TITLES2[1],
+  '/download/commercial-release/': TITLES2[1],
+  '/mirror/list/': TITLES2[1],
+  // 【学习板块】：课程中心/高校/人才培养/开源实习
+  '/learn/mooc/': TITLES2[2],
+  '/universities/': TITLES2[2],
+  '/internship/': TITLES2[2],
+  '/talent-assessment/': TITLES2[2],
+  // 【社区板块】：组织架构/社区章程/选举条例/行为准则/运作制度/成员单位/社区荣誉/城市用户组/贡献看板/联系我们/用户案例/白皮书/市场研究报告/论坛/邮件列表/线上会议/QuickIssue
+  '/community/organization/': TITLES2[3],
+  '/community/charter/': TITLES2[3],
+  '/community/member/': TITLES2[3],
+  '/community/honor/': TITLES2[3],
+  '/community/vote/': TITLES2[3],
+  '/community/conduct/': TITLES2[3],
+  '/community/meeting-system/': TITLES2[3],
+  '/community/user-group/': TITLES2[3],
+  '/contact-us/': TITLES2[3],
+  '/showcase/technical-white-paper/': TITLES2[3],
+  '/showcase/market-report/': TITLES2[3],
+  '/showcase/industry-white-paper/': TITLES2[3],
+  '/community/mailing-list/': TITLES2[3],
+  '/meeting/': TITLES2[3],
+  // 【动态板块】：活动/峰会/CallForX/新闻/博客/月刊
+  '/interaction/event-list/': TITLES2[4],
+  '/interaction/summit-list/': TITLES2[4],
+  '/community/program/': TITLES2[4],
+  '/interaction/news-list/': TITLES2[4],
+  '/interaction/blog-list/': TITLES2[4],
+  '/blog/': TITLES2[4],
+  '/news/': TITLES2[4],
+  '/monthly-bulletins/': TITLES2[4],
+  // 【开发者贡献】：SIG中心/贡献攻略/oEEP
+  '/sig/': TITLES2[5],
+  '/community/contribution/': TITLES2[5],
+  '/oEEP/': TITLES2[5],
+  // 【构建板块】：软件包贡献
+  // 【项目板块】：A-Tune/iSula/secGear/NestOS/StratoVirt/OpenJDK/智能解决方案
+  '/other/projects/': TITLES2[7],
+  '/nestos/': TITLES2[7],
+  // 【兼容性专区】：兼容性列表/兼容性技术测评/OSV技术测评/镜像仓列表
   '/compatibility/': TITLES2[8],
-  '/approve/': TITLES2[9],
-  '/security/security-bulletins/': TITLES2[9],
-  '/security/bug-bulletins/': TITLES2[9],
-  '/faq/': TITLES2[9],
-  '/community/organization/': TITLES2[10],
-  '/community/charter/': TITLES2[10],
-  '/community/member/': TITLES2[10],
-  '/community/honor/': TITLES2[10],
-  '/oEEP/': TITLES2[10],
-  '/community/user-group/': TITLES2[10],
-  '/overview/': TITLES2[10],
-  '/sig/sig-list/': TITLES2[11],
-  '/community/contribution/': TITLES2[11],
-  '/universities/': TITLES2[11],
-  '/internship/': TITLES2[11],
-  '/other/projects/atune/': TITLES2[12],
-  '/other/projects/isula/': TITLES2[12],
-  '/other/projects/stratovirt/': TITLES2[12],
-  '/other/projects/bishengjdk/': TITLES2[12],
-  '/other/projects/secgear/': TITLES2[12],
-  '/community/mailing-list/': TITLES2[13],
-  '/meeting/': TITLES2[13],
-  '/interaction/event-list/': TITLES2[14],
-  '/interaction/summit-list/summit2024/': TITLES2[14],
-  '/community/program/': TITLES2[14],
-  '/interaction/news-list/': TITLES2[15],
-  '/interaction/blog-list/': TITLES2[15],
-  '/monthly-bulletins': TITLES2[15],
+  '/approve/': TITLES2[8],
+  // 【迁移与运维】：迁移专区/运维专区
+  '/migration/': TITLES2[9],
+  '/om/': TITLES2[9],
+  // 【安全公告】：安全公告/CVE/漏洞管理/证书中心/缺陷中心/缺陷管理
+  '/security/': TITLES2[10],
 };
 
 const title1 = computed(() => {
@@ -272,8 +276,9 @@ function submitFeedback() {
         closePopup();
         dialogVisible.value = false;
       } else {
+        const errMsg = res.code === 429 ? '提交过于频繁，请稍后再试！' : res.msg
         ElMessage({
-          message: res.msg,
+          message: errMsg,
           type: 'error',
         });
       }
@@ -527,6 +532,8 @@ onUnmounted(() => {
                 <OButton
                   size="medium"
                   color="primary"
+                  variant="solid"
+                  :disabled="!Boolean(inputText.length)"
                   @click="handleClickSubmit"
                 >
                   {{ infoData.submit }}
