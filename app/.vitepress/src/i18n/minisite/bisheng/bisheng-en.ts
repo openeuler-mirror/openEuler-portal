@@ -105,7 +105,7 @@ export default {
       IMG: tckImg,
       DARK_IMG: tckImg,
       TITLE: 'TCK Affidavit of BiSheng JDK 8',
-      LINK_LIST: ['/other/projects/bishengjdk/tck-affidavit/'],
+      LINK_LIST: [`${import.meta.env.VITE_MAIN_DOMAIN_URL}/zh/other/projects/bishengjdk/tck-affidavit/`],
       SHOW: false,
     },
   ],
@@ -190,7 +190,7 @@ export default {
         LINK: [
           {
             TEXT: 'BiSheng JDK Software',
-            LINK: 'https://www.hikunpeng.com/en/developer/devkit/compiler/jdk',
+            LINK: 'https://www.hikunpeng.com/developer/devkit/download/jdk',
           },
         ],
         BACKGROUND: {
@@ -206,15 +206,15 @@ export default {
     LINK_LIST: [
       {
         TEXT: 'BiSheng JDK (Kunpeng Community)',
-        LINK: 'https://www.hikunpeng.com/en/developer/devkit/compiler/jdk',
+        LINK: 'https://www.hikunpeng.com/developer/devkit/download/jdk',
       },
       {
         TEXT: 'BiSheng Compiler (Kunpeng Community)',
-        LINK: 'https://www.hikunpeng.com/en/developer/devkit/compiler/bisheng',
+        LINK: 'https://www.hikunpeng.com/developer/devkit/download/bishengcompiler',
       },
       {
-        TEXT: 'BiSheng Compiler (Kunpeng Community)',
-        LINK: 'https://www.hikunpeng.com/en/developer/devkit/compiler/gcc',
+        TEXT: 'GCC for openEuler (Kunpeng Community)',
+        LINK: 'https://www.hikunpeng.com/developer/devkit/download/gcc',
       },
     ],
   },
