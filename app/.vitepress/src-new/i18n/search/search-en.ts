@@ -19,7 +19,7 @@ export default {
   cancel: 'Cancel',
   more: 'View More',
   allVersion: 'All',
-  gaussWant: "Guess you're looking for: Download openEuler",
+  guess: "Guess you're looking for: Download openEuler",
   softwareZoneTitle: '{searchVal} download',
   downloadZoneTitle: '{searchVal} download',
   listEnd: "It's already at the bottom!",

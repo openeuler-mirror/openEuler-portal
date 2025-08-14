@@ -18,7 +18,7 @@ export default {
   cancel: '取消',
   more: '查看更多',
   allVersion: '全部版本',
-  gaussWant: '猜你想找：openEuler版本下载',
+  guess: '猜你想找：openEuler版本下载',
   softwareZoneTitle: '{searchVal}软件中心下载包',
   downloadZoneTitle: '{searchVal}下载',
   goDownload: '前往下载',
