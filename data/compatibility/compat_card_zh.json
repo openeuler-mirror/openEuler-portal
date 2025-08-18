@@ -30327,8 +30327,8 @@
     "sha256": "2066ff3a8ddec8385e41b2bc45b49a8e4a6bcc5034b303ff337464faf0414897",
     "driverSize": "331800",
     "chipVendor": "灵达科技（天津）有限公司",
-    "boardModel": "LD 3260-18i Tri-Mode RAID",
-    "chipModel": "3260-18i",
+    "boardModel": "LD 3260 Tri-Mode RAID",
+    "chipModel": "3260",
     "item": "NA",
     "downloadLink": "NA"
   },
@@ -30346,8 +30346,8 @@
     "sha256": "9abc68aa39062b72fc8745722f7ee3fd1e7128b5a5d818979ca9d7f9597d952a  /lib/modules/6.6.0-98.0.0.103.oe2403sp2.aarch64/kernel/drivers/scsi/linkdata/ps3stor/ps3stor.ko.xz",
     "driverSize": "248096",
     "chipVendor": "灵达科技（天津）有限公司",
-    "boardModel": "LD 2230-18i Tri-Mode HBA",
-    "chipModel": "2230-18i",
+    "boardModel": "LD 2230 Tri-Mode HBA",
+    "chipModel": "2230",
     "item": "NA",
     "downloadLink": "NA"
   }
