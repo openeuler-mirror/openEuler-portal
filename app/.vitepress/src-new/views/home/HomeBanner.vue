@@ -121,21 +121,15 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
                 v-if="info.bg_text"
                 :style="{
                   backgroundImage: `url(${info.bg_text})`,
+                  '--pc-width': info.pc_text_width,
+                  '--pc-height': info.pc_text_height,
+                  '--pad-width': info.pad_text_width,
+                  '--pad-height': info.pad_text_height,
                 }"
               ></div>
               <!-- 操作按钮 -->
               <div v-if="info.btn" class="banner-opts" v-analytics.bubble="{ target: info.href }">
                 <OButton
-                  v-if="info.bg_theme === 'dark'"
-                  :href="info.href"
-                  target="_blank"
-                  size="large"
-                >
-                  {{ info.btn }}
-                </OButton>
-                <!-- TODO:遗留banner 待删除 -->
-                <OButton
-                  v-else
                   :href="info.href"
                   target="_blank"
                   variant="solid"
@@ -251,16 +245,16 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 }
 
 .banner-text {
-  height: 90px;
-  width: 426px;
+  height: var(--pc-height, 90px);
+  width: var(--pc-width, 426px);
   --d: 10px;
 
   background-size: contain;
   background-repeat: no-repeat;
 
   @include respond-to('pad') {
-    width: 282px;
-    height: 60px;
+    height: var(--pad-height, 60px);
+    width: var(--pad-width, 282px);
   }
 }
 
