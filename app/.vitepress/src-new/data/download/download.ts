@@ -429,7 +429,7 @@ export default {
           'https://docs.openeuler.org/en/docs/24.03_LTS_SP2/server/installation_upgrade/installation/installation_preparations.html',
         SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
-        WHITE_PAPER: '',
+        WHITE_PAPER: '/whitepaper/en/openEuler 24.03 LTS SP2 Technical White Paper.pdf',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         PUBLISH_DATE: '2025/06',
         LTS: true,
