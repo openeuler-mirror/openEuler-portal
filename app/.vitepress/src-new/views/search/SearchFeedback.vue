@@ -118,7 +118,7 @@ const vBtnAnalyze: Directive<HTMLButtonElement> = {
 
 onMounted(() => {
   searchContent.value =
-    new URLSearchParams(location.search).get('search') ?? '';
+    new URLSearchParams(location.search).get('q') ?? '';
 });
 </script>
 

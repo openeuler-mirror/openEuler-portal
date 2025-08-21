@@ -5,7 +5,7 @@ category: news
 tags:
   - openEuler
   - 社区运作
-banner: 'img/banners/offline-technical-committee-meeting-01'
+banner: 'img/banners/offline-technical-committee-meeting-01.png'
 author: 'openEuler'
 summary: '生态聚力，openEuler 技术委员会会议在润和软件圆满召开！'
 ---

@@ -25,7 +25,7 @@ const onClickLink = () => {
     {
       type: 'topic_download',
       module: 'search_result',
-      content: new URLSearchParams(location.search).get('search'),
+      content: new URLSearchParams(location.search).get('q'),
       target: t('search.goDownload'),
     },
     'search_portal'
