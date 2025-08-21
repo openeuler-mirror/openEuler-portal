@@ -76,7 +76,7 @@ const onClickLink = (e: MouseEvent) => {
       type: 'topic_software',
       module: 'search_result',
       target: (e.currentTarget as HTMLElement).textContent,
-      content: new URLSearchParams(location.search).get('search'),
+      content: new URLSearchParams(location.search).get('q'),
     },
     'search_portal'
   );
