@@ -300,7 +300,7 @@ const tdks: {
     keywords: 'OS, download, mirror, Linux, ISO',
   },
   'en/other/brand': {
-    title: 'Brand Resources',
+    title: 'Trademarks',
     description:
       'Download openEuler logos and access brand guidelines. Get the resources you need to use and represent our open source OS.',
     keywords: 'OS, logo, trademark, brand, open source software',

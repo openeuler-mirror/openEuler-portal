@@ -102,6 +102,9 @@ export default defineConfig({
         'online-meeting': FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src-new/assets/category/online-meeting/svg-icons')
         ),
+        brand: FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src-new/assets/category/brand/svg-icons')
+        ),
       },
     }),
     viteStaticCopy({

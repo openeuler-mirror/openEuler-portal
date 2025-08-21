@@ -23,6 +23,7 @@ import sig from './sig';
 import mailing from './mailing';
 import onlineMeeting from './online-meeting';
 import defectCenter from './defect-center';
+import brand from './brand'
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -83,6 +84,7 @@ const messages = {
     mailing: mailing.zh,
     onlineMeeting: onlineMeeting.zh,
     defectCenter: defectCenter.zh,
+    brand: brand.zh,
   },
   en: {
     // 公共模块
@@ -105,6 +107,7 @@ const messages = {
     sig: sig.en,
     mailing: mailing.en,
     defectCenter: defectCenter.en,
+    brand: brand.en,
   },
 };
 
