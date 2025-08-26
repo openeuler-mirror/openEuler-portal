@@ -49,7 +49,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E8%AE%A4%E8%AF%86secGear.md',
+            LINK: 'https://gitee.com/openeuler/secGear/blob/master/docs/zh/2403_LTS_SP2/introduction_to_secgear.md',
           },
         ],
         BACKGROUND: {
@@ -64,7 +64,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E5%AE%89%E8%A3%85secGear.md',
+            LINK: 'https://gitee.com/openeuler/secGear/blob/master/docs/zh/2403_LTS_SP2/secgear_installation.md',
           },
         ],
         BACKGROUND: {
@@ -79,7 +79,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E5%BC%80%E5%8F%91secGear%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.md',
+            LINK: 'https://gitee.com/openeuler/secGear/blob/master/docs/zh/2403_LTS_SP2/developer_guide.md',
           },
         ],
         BACKGROUND: {
@@ -94,7 +94,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E4%BD%BF%E7%94%A8secGear%E5%B7%A5%E5%85%B7.md',
+            LINK: 'https://gitee.com/openeuler/secGear/blob/master/docs/zh/2403_LTS_SP2/using_secgear_tools.md',
           },
         ],
         BACKGROUND: {
@@ -109,7 +109,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E6%8E%A5%E5%8F%A3%E5%8F%82%E8%80%83.md',
+            LINK: 'https://gitee.com/openeuler/secGear/blob/master/docs/zh/2403_LTS_SP2/api_reference.md',
           },
         ],
         BACKGROUND: {
@@ -124,7 +124,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF.md',
+            LINK: 'https://gitee.com/openeuler/secGear/blob/master/docs/zh/2403_LTS_SP2/application_scenarios.md',
           },
         ],
         BACKGROUND: {

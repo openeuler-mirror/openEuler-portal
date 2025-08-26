@@ -135,7 +135,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/StratoVirt%E4%BB%8B%E7%BB%8D.md',
+            LINK: 'https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/stratovirt_introduction.md',
           },
         ],
         BACKGROUND: {
@@ -149,7 +149,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E5%AE%89%E8%A3%85StratoVirt.md',
+            LINK: 'https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/install_stratovirt.md',
           },
         ],
         BACKGROUND: {
@@ -163,7 +163,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E5%87%86%E5%A4%87%E4%BD%BF%E7%94%A8%E7%8E%AF%E5%A2%83.md',
+            LINK: 'https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/prepare_env.md',
           },
         ],
         BACKGROUND: {
@@ -177,7 +177,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE.md',
+            LINK: 'https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/vm_configuration.md',
           },
         ],
         BACKGROUND: {
@@ -191,7 +191,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86.md',
+            LINK: 'https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/vm_management.md',
           },
         ],
         BACKGROUND: {
@@ -205,7 +205,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E5%AF%B9%E6%8E%A5iSula%E5%AE%89%E5%85%A8%E5%AE%B9%E5%99%A8.md',
+            LINK: 'https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/interconnect_isula.md',
           },
         ],
         BACKGROUND: {
