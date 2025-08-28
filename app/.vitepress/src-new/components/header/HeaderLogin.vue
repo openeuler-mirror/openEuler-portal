@@ -130,6 +130,7 @@ onMounted(async () => {
     margin-left: 8px;
     white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
     width: 72px;
     @include respond-to('<=pad_v') {
       display: none;

@@ -9,10 +9,9 @@ import qusheng from '@/assets/category/organization/qusheng.png';
 import zhanglei from '@/assets/category/organization/zhanglei.png';
 import zhangshenju from '@/assets/category/organization/zhangshenju.png';
 import zhongxin from '@/assets/category/organization/zhongxin.png';
-import yangjiguo from '@/assets/category/organization/yangjiguo.png';
 import xiongwei from '@/assets/category/organization/xiongwei.png';
 import huzhengce from '@/assets/category/organization/huzhengce.png';
-import xujian from '@/assets/category/organization/xujian.png';
+import yuli from '@/assets/category/organization/yuli.png';
 
 // 技术委员会
 import huxinwei from '@/assets/category/organization/technical/huxinwei.png';
@@ -244,19 +243,19 @@ export default {
                 position: ['天翼云科技有限公司'],
               },
               {
+                img: tianjun,
+                name: '田俊',
+                position: ['英特尔（中国）有限公司'],
+              },
+              {
                 img: wanghao,
                 name: '王皓',
                 position: ['超聚变数字技术有限公司'],
               },
               {
-                img: xujian,
-                name: '徐键',
+                img: yuli,
+                name: '于力',
                 position: ['南方电网数字电网科技有限（广东）公司'],
-              },
-              {
-                img: yangjiguo,
-                name: '杨继国',
-                position: ['英特尔（中国）有限公司'],
               },
               {
                 img: yuping,
@@ -864,19 +863,19 @@ export default {
                 position: ['China Telecom e-Cloud Technology Co., Ltd.'],
               },
               {
+                img: tianjun,
+                name: 'Tian Jun',
+                position: ['Intel China Ltd.'],
+              },
+              {
                 img: wanghao,
                 name: 'Wang Hao',
                 position: ['xFusion Digital Technologies Co., Ltd.'],
               },
               {
-                img: xujian,
-                name: 'Xu Jian',
+                img: yuli,
+                name: 'Yu Li',
                 position: ['China Southern Power Grid'],
-              },
-              {
-                img: yangjiguo,
-                name: 'Yang Jiguo',
-                position: ['Intel China Ltd.'],
               },
               {
                 img: yuping,
