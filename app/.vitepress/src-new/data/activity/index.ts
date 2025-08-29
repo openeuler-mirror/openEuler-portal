@@ -50,4 +50,25 @@ export default [
     type: 'activity',
     group_name:'sig-Arm'
   },
+  {
+    name: 'openEuler SIG-Long 异构融合技术Meetup北京站',
+    url: '/zh/interaction/event-list/detail/?id=5&isAdditional=true',
+    dates: ['2025-08-22'],
+    address: '北京中关村皇冠假日酒店四层会议室8',
+    start_date: '2025-08-22 14:00',
+    end_date: '2025-08-22 17:30',
+    activity_type: '线下',
+    type: 'activity',
+    group_name:'sig-Long'
+  },
+  {
+    name: 'openEuler 多样性算力Meetup北京站',
+    url: '/zh/interaction/event-list/detail/?id=6&isAdditional=true',
+    dates: ['2025-09-06'],
+    address: '北京海淀区中关村北理工亚朵S酒店3楼精工厅',
+    start_date: '2025-09-06 13:00',
+    end_date: '2025-09-06 17:00',
+    activity_type: '线下',
+    type: 'activity',
+  },
 ];
