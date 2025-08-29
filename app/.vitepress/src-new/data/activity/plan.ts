@@ -237,8 +237,22 @@ export const yearPlanData = {
             },
           ]
         },
-        { month: '8' },
-        { month: '9' },
+        { month: '8',
+          actives: [
+            {
+              location: '中国 北京',
+              activeName: 'openEuler SIG-Long 异构融合技术Meetup北京站',
+            },
+          ]
+        },
+        { month: '9',
+          actives: [
+            {
+              location: '中国 北京',
+              activeName: 'openEuler 多样性算力Meetup北京站',
+            },
+          ]
+        },
         { month: '10' },
         { month: '11' },
         { month: '12' },

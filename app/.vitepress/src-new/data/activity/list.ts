@@ -18,6 +18,9 @@ import xianggang from '~@/assets/category/user-group/city/xianggang.jpg';
 import xianggangMb from '~@/assets/category/event/city/xianggang-mb.jpg';
 import detail_250718 from '~@/assets/category/event/list/250718.jpg';
 
+import detail_250822 from '~@/assets/category/event/list/250822.jpg';
+import detail_250905 from '~@/assets/category/event/list/250905.jpg';
+
 export const EventSeries = new Map([
   [
     'all',
@@ -126,6 +129,39 @@ export const EventState = new Map([
 
 export const MEETUP_DATA = {
   zh: [
+    {
+      id: 6,
+      title: 'openEuler 多样性算力Meetup北京站',
+      date: '2025-09-06 13:00-17:00',
+      activity_type: 2,
+      synopsis:
+        'openEuler多样性算力 Meetup 将在北京举办，诚邀开发者、企业技术专家及开源爱好者共同参与！openEuler 社区长期致力于推动开源操作系统的发展，构建繁荣的软件生态体系。本次 Meetup 北京站将进一步聚焦多样性算力，汇聚各方力量，深入交流创新实践与技术成果，携手推动多样性算力的落地与生态繁荣。',
+      address: '北京海淀区中关村北理工亚朵S酒店3楼精工厅',
+      city: '北京市',
+      isAdditional: true,
+      posterImg: beijing,
+      posterImgMb: beijingMb,
+      series: '3',
+      detail_img: detail_250905,
+      signup_url: 'https://openatomcon.openatom.cn/registration/?activityNo=HD20250828152038',
+      signup_url_mb: 'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20250828152038',
+    },
+    {
+      id: 5,
+      title: 'openEuler SIG-Long 异构融合技术Meetup北京站',
+      date: '2025-08-22 14:00-17:30',
+      activity_type: 1,
+      synopsis:
+        '本次活动以异构融合技术为核心，特邀多位来自北京大学、北京航空航天大学、京东、Intel、华为的技术专家，深入探讨异构融合技术的发展与落地。openEuler sig-Long 致力于构建异构融合计算基础设施框架，实现算力统一接入、异构融合内存、异构融合虚拟化、算力切分、资源优先级配置、弹性迁移等关键能力。',
+      address: '北京中关村皇冠假日酒店四层会议室8',
+      city: '北京市',
+      isAdditional: true,
+      posterImg: beijing,
+      posterImgMb: beijingMb,
+      series: '3',
+      detail_img: detail_250822,
+      new_url: 'https://www.openeuler.org/zh/news/20250826-sig-long-review/20250826-sig-long-review.html',
+    },
     {
       id: 4,
       title: 'openEuler SIG-ARM Meetup 深圳站',
