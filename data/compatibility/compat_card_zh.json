@@ -30366,7 +30366,7 @@
     "driverSize": "256324",
     "chipVendor": "灵达科技（天津）有限公司",
     "boardModel": "LD 2230 Tri-Mode HBA",
-    "chipModel": "2230",
+    "chipModel": "IOC 2250",
     "item": "NA",
     "downloadLink": "NA"
   },
@@ -30385,7 +30385,7 @@
     "driverSize": "99260",
     "chipVendor": "灵达科技（天津）有限公司",
     "boardModel": "LD 1160-2X 2-port 10G SFP+ NIC",
-    "chipModel": "1160-2X",
+    "chipModel": "NIC 1160",
     "item": "NA",
     "downloadLink": "NA"
   },
@@ -30404,7 +30404,7 @@
     "driverSize": "256324",
     "chipVendor": "灵达科技（天津）有限公司",
     "boardModel": "LD 3260 Tri-Mode RAID",
-    "chipModel": "3260",
+    "chipModel": "ROC 3250",
     "item": "NA",
     "downloadLink": "NA"
   }
