@@ -138,3 +138,15 @@ export interface ShowcaseDataT {
   title: string; // 标题
   category: string; // 类别
 }
+
+export interface OverviewDataT {
+  comment_all: number; // 评审comment数
+  company_all: number; // 单位成员数
+  contributor_all: number; // 贡献者数
+  issue_all: number; // Issue数
+  isv_all: number; // ISV数
+  merged_pr_all: number; // 合并请求PR数
+  osv_all: number; // 商用OSV数
+  repo_all: number; // 代码仓库数
+  sig_all: number; // SIG数
+}
