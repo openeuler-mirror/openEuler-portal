@@ -1,18 +1,20 @@
-import osseu_pc from '~@/assets/category/home/banner/osseu/pc.jpg';
-import osseu_text from '~@/assets/category/home/banner/osseu/text.png';
-import osseu_mb from '~@/assets/category/home/banner/osseu/mb.jpg';
-import osseu_pad from '~@/assets/category/home/banner/osseu/pad.jpg';
+import download_pc from '~@/assets/category/home/banner/download/pc.jpg';
+import download_pad from '~@/assets/category/home/banner/download/pad.jpg';
+import download_mb_zh from '~@/assets/category/home/banner/download/banner-mb-zh.jpg';
+import download_mb_en from '~@/assets/category/home/banner/download/banner-mb-en.jpg';
 
 export default {
   zh: [
     {
-      bg_pc: osseu_pc,
-      bg_pad: osseu_pad,
-      bg_mb: osseu_mb,
-      bg_text: osseu_text,
+      bg_pc: download_pc,
+      bg_pad: download_pad,
+      bg_mb: download_mb_zh,
+      bg_text: '',
       bg_theme: 'light',
+      title: '获取openEuler',
+      subtitle: '一站式资源下载获取，欢迎使用',
       btn: '查看详情',
-      href: 'https://events.linuxfoundation.org/open-source-summit-europe/',
+      href: '/zh/download',
       isBlank: true,
       pc_text_width: '658px',
       pc_text_height: '158px',
@@ -22,13 +24,15 @@ export default {
   ],
   en: [
     {
-      bg_pc: osseu_pc,
-      bg_pad: osseu_pad,
-      bg_mb: osseu_mb,
-      bg_text: osseu_text,
+      bg_pc: download_pc,
+      bg_pad: download_pad,
+      bg_mb: download_mb_en,
+      bg_text: '',
       bg_theme: 'light',
+      title: 'Get openEuler',
+      subtitle: 'Find all resources in one place',
       btn: 'View More',
-      href: 'https://events.linuxfoundation.org/open-source-summit-europe/',
+      href: '/en/download',
       isBlank: true,
       pc_text_width: '658px',
       pc_text_height: '158px',
