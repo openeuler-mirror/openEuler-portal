@@ -12,6 +12,7 @@ import type {
   RelevantQueryT,
   StatisticT,
   SearchRecommendT,
+  OverviewDataT,
 } from '@/shared/@types/type-search';
 import type { SearchBlogT } from '@/shared/@types/type-blog';
 /**
@@ -120,11 +121,21 @@ export function getPop(params: string): Promise<{
 
 export function getStatistic(): Promise<{
   code: number;
-  data: StatisticT;
-  msg: string;
-  update_at: string;
+  data: OverviewDataT;
+  message: string;
+  timestamp: number;
 }> {
-  const url = '/api-dsapi/query/all?community=openEuler';
+  const url = '/api-magic/stat/overview/count?community=openeuler';
+  return request.get(url).then((res: AxiosResponse) => res.data);
+}
+
+export function getDownloadTotal(): Promise<{
+  code: number;
+  data: { total_count: number };
+  message: string;
+  timestamp: number;
+}> {
+  const url = '/api-magic/community/download/total?community=openeuler';
   return request.get(url).then((res: AxiosResponse) => res.data);
 }
 

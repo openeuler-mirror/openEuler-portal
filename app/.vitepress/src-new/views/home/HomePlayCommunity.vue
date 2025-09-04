@@ -11,7 +11,7 @@ import { useCommon } from '@/stores/common';
 
 import { playCommunity, vitalityConfig } from '~@/data/home/play-community';
 
-import { getStatistic } from '@/api/api-search';
+import { getStatistic, getDownloadTotal } from '@/api/api-search';
 
 import logo from '~@/assets/category/home/play-community/logo.png';
 import floorBg from '~@/assets/category/home/play-community/floor-bg.png';
@@ -37,10 +37,22 @@ const vitalityData = ref<VitalityValueT>();
 
 const { theme } = storeToRefs(useCommon());
 
-onMounted(() => {
-  getStatistic().then((res) => {
-    vitalityData.value = res.data;
-  });
+onMounted(async () => {
+    const [statisticRes, downloadRes] = await Promise.all([
+      getStatistic(),
+      getDownloadTotal()
+    ]);
+    
+    const data = statisticRes?.data || {};
+    const users = downloadRes?.data || {};
+    
+    vitalityData.value = {
+      contributors: data.contributor_all,
+      repos: data.repo_all,
+      sigs: data.sig_all,
+      users: users.total_count,
+      businessosv: data.osv_all,
+    };
 });
 
 // ------------埋点------------

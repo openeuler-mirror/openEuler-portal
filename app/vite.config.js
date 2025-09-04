@@ -169,6 +169,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (url) => url.replace(/^\/api-dsapi/, ''),
       },
+      '/api-magic/': {
+        target: 'https://magicapi.osinfra.cn/',
+        changeOrigin: true,
+        rewrite: (url) => url.replace(/^\/api-magic/, ''),
+      },
       '/api-mail/': {
         target: 'https://mailweb.openeuler.org/',
         changeOrigin: true,
