@@ -31602,5 +31602,66 @@
       "hostBusAdapter": "Broadcom / LSI MegaRAID 12GSAS/PCIe Secure SAS39xx",
       "hardDiskDrive": "Micron 5400 Pro SSD 3.84TB"
     }
+  },
+  {
+    "hardwareFactory": "baixin",
+    "hardwareModel": "Hengshan AI326TA",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "aarch64",
+    "date": "2025/09/04",
+    "friendlyLink": "NA",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2025/09/04",
+        "sha256": "271d0cf9c7cdb2de5ceced9a0612627fbe52fa0f277b3ce6f09dea2bdec3bea5",
+        "driverSize": "69500",
+        "chipVendor": "BROADCOM",
+        "boardModel": "MegaRAID 9560-8i 4GB",
+        "chipModel": "SAS3908",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "19e5",
+        "deviceID": "a221",
+        "svID": "19e5",
+        "ssID": "08cc",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "hns3",
+        "version": "5.10.0-182.0.0.95.oe2203sp3.aar",
+        "type": "NIC",
+        "date": "2025/09/04",
+        "sha256": "7da581820a51baf1b91c7de1274c6ad4cdd273c7b39f9804f20cd16b6220f10c",
+        "driverSize": "58536",
+        "chipVendor": "Huawei",
+        "boardModel": "TM210",
+        "chipModel": "CPU Integration",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.100trust.cn/product/64.html",
+      "certificationTime": "2025/09/04",
+      "commitID": "baixin",
+      "mainboardModel": "IT21SK4E-5250-AA",
+      "biosUefi": "7.40",
+      "cpu": "HUAWEI Kunpeng 920 5250",
+      "ram": "16*32G DIMMs",
+      "portsBusTypes": "x8 PCI Express x8",
+      "videoAdapter": "Huawei Technologies Co., Ltd. Hi171x Series [iBMC Intelligent Management system chip w/VGA support] (rev 01)",
+      "hostBusAdapter": "Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA (rev 21)、Huawei Technologies Co., Ltd. HiSilicon AHCI HBA (rev 21)",
+      "hardDiskDrive": "HWE62ST3480L003N、SE005-1920GB-H、SAMSUNG MZQLB3T8HALS-00007__1"
+    }
   }
 ]
