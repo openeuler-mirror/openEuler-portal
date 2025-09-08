@@ -7,6 +7,9 @@ import AppSection from '~@/components/AppSection.vue';
 
 import banner from '~@/assets/category/brand/banner.jpg';
 import logo from '~@/assets/category/brand/logo.png';
+import logoDark from '~@/assets/category/brand/logo-dark.png';
+import stratoVirtLogo from '~@/assets/category/brand/StratoVirt-logo.png';
+import stratoVirtLogoDark from '~@/assets/category/brand/StratoVirt-logo-dark.png';
 
 import IconBrandPlay from '~icons/brand/icon-brand-play.svg';
 
@@ -96,7 +99,7 @@ const gap = computed(() => {
           </div>
           <div class="item-text">
             <span class="label">{{ t('brand.logo') }}</span>
-            <img :src="logo" />
+            <img :src="isDark ? logoDark : logo" />
           </div>
         </div>
       </OCol>
@@ -120,7 +123,7 @@ const gap = computed(() => {
             <div class="stratoVirt-img item-img">
               <p>{{ t('brand.stratoVirt') }}</p>
               <div class="item-bottom">
-                <OFigure src="/img/other/brand/StratoVirt-logo-png.png" />
+                <OFigure :src="isDark ? stratoVirtLogoDark : stratoVirtLogo" />
               </div>
             </div>
             <ODivider direction="v" />

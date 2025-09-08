@@ -113,9 +113,9 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
               />
 
               <!-- 标题 -->
-              <div class="banner-title" v-if="info.title && info.title.length">
-                <p v-for="(title, i) in info.title">{{ title }}</p>
-              </div>
+              <div class="banner-title" v-if="info.title">{{ info.title }}</div>
+              <!-- 副标题 -->
+              <div class="banner-subtitle" v-if="info.subtitle">{{ info.subtitle }}</div>
               <div
                 class="banner-text"
                 v-if="info.bg_text"
@@ -241,6 +241,14 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 .banner-title {
   @include display1;
   color: var(--o-color-info1);
+  font-weight: 500;
+  --d: 10px;
+}
+
+.banner-subtitle {
+  @include h2;
+  color: var(--o-color-info1);
+  margin-top: 8px;
   --d: 10px;
 }
 
@@ -276,6 +284,9 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 
 .current-slide {
   .banner-title {
+    animation: fade-up 400ms ease-in;
+  }
+  .banner-subtitle {
     animation: fade-up 400ms ease-in;
   }
   .banner-text {
