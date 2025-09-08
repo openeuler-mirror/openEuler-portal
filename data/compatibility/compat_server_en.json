@@ -8363,7 +8363,7 @@
         "boardModel": "X520-2",
         "chipModel": "82599ES",
         "downloadLink": "inbox"
-      }    
+      }
     ]
   },
   {
@@ -8483,7 +8483,7 @@
         "boardModel": "X520-2",
         "chipModel": "82599ES",
         "downloadLink": "inbox"
-      }    
+      }
     ]
   },
   {
@@ -8542,7 +8542,7 @@
         "boardModel": "9361-8i",
         "chipModel": "SAS-3 3108",
         "downloadLink": "inbox"
-      }    
+      }
     ]
   },
   {
@@ -8637,7 +8637,7 @@
         "boardModel": "9361-8i",
         "chipModel": "SAS-3 3108",
         "downloadLink": "inbox"
-      } 
+      }
     ]
   },
   {
@@ -8696,7 +8696,7 @@
         "boardModel": "9361-8i",
         "chipModel": "SAS-3 3108",
         "downloadLink": "inbox"
-      } 
+      }
     ]
   },
   {
@@ -8791,7 +8791,7 @@
         "boardModel": "9361-8i",
         "chipModel": "SAS-3 3108",
         "downloadLink": "inbox"
-      } 
+      }
     ]
   },
   {
@@ -8850,7 +8850,7 @@
         "boardModel": "9361-8i",
         "chipModel": "SAS-3 3108",
         "downloadLink": "inbox"
-      }    
+      }
     ]
   },
   {
@@ -8945,7 +8945,7 @@
         "boardModel": "9361-8i",
         "chipModel": "SAS-3 3108",
         "downloadLink": "inbox"
-      } 
+      }
     ]
   },
   {
@@ -9040,7 +9040,7 @@
         "boardModel": "9361-8i",
         "chipModel": "SAS-3 3108",
         "downloadLink": "inbox"
-      } 
+      }
     ]
   },
   {
@@ -9480,7 +9480,7 @@
         "chipModel": "SAS-3 3108",
         "item": "02311PCJ",
         "downloadLink": "inbox"
-      }	  
+      }
     ],
     "compatibilityConfiguration": {
       "productInformation": "https://support.xfusion.com/support/#/zh/rack-servers/2288h-v5-pid-21872244/document",
@@ -9541,7 +9541,7 @@
         "chipModel": "SAS3408",
         "item": "02312HFD",
         "downloadLink": "inbox"
-      }	  
+      }
     ],
     "compatibilityConfiguration": {
       "productInformation": "https://e.huawei.com/cn/products/servers/taishan-server",
@@ -9602,7 +9602,7 @@
         "chipModel": "SAS3508",
         "item": "",
         "downloadLink": "inbox"
-      }	  
+      }
     ],
     "compatibilityConfiguration": {
       "productInformation": "https://e.huawei.com/cn/products/servers/kunpeng/server-board/kunpeng-server-board",
@@ -11754,7 +11754,7 @@
         "boardModel": "BCM57454",
         "chipModel": "Broadcom 57454 10GBASE-T 4-port OCP Ethernet Adapter",
         "item": "",
-        "downloadLink": "inbox"    
+        "downloadLink": "inbox"
       },
       {
        "vendorID": "1000",
@@ -11773,7 +11773,7 @@
        "boardModel": "530-8i",
        "chipModel": "SAS3408",
        "item": "",
-       "downloadLink": "inbox"   
+       "downloadLink": "inbox"
       }
     ],
     "compatibilityConfiguration": {
@@ -11815,7 +11815,7 @@
         "boardModel": "BCM57454",
         "chipModel": "Broadcom 57454 10GBASE-T 4-port OCP Ethernet Adapter",
         "item": "",
-        "downloadLink": "inbox"    
+        "downloadLink": "inbox"
       },
       {
        "vendorID": "1000",
@@ -11834,7 +11834,7 @@
        "boardModel": "530-8i",
        "chipModel": "SAS3408",
        "item": "",
-       "downloadLink": "inbox"   
+       "downloadLink": "inbox"
       }
     ],
     "compatibilityConfiguration": {
@@ -12749,7 +12749,7 @@
       "hostBusAdapter": "Chengdu Haiguang IC Design Co., Ltd. PSPCCP Command DMA Processor",
       "hardDiskDrive": "SA MZ7KH960HAJR-5 960G 2.5SATA 6Gb M SSD"
     }
-  }, 
+  },
   {
     "hardwareFactory": "Suma",
     "hardwareModel": "R6440H0",
@@ -12806,7 +12806,7 @@
         "boardModel": "9560-8i",
         "chipModel": "SAS3908",
         "downloadLink": "inbox"
-      } 
+      }
     ]
   },
   {
@@ -17009,7 +17009,7 @@
     "date": "2023/08/30",
     "friendlyLink": "https://www.yunke-china.com/index.php?m=content&c=index&a=show&catid=79&id=316",
     "boardCards": [
-      { 
+      {
         "vendorID": "19e5",
         "deviceID": "a222",
         "svID": "19e5",
@@ -17028,7 +17028,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "1f3f",
         "deviceID": "2200",
         "svID": "1f3f",
@@ -17070,7 +17070,7 @@
     "date": "2023/08/30",
     "friendlyLink": "https://www.yunke-china.com/index.php?m=content&c=index&a=show&catid=79&id=316",
     "boardCards": [
-      { 
+      {
         "vendorID": "19e5",
         "deviceID": "a222",
         "svID": "19e5",
@@ -17089,7 +17089,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "1f3f",
         "deviceID": "2200",
         "svID": "1f3f",
@@ -17131,7 +17131,7 @@
     "date": "2023/08/30",
     "friendlyLink": "https://www.yunke-china.com/index.php?m=content&c=index&a=show&catid=79&id=316",
     "boardCards": [
-      { 
+      {
         "vendorID": "19e5",
         "deviceID": "a222",
         "svID": "19e5",
@@ -17150,7 +17150,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "1f3f",
         "deviceID": "2200",
         "svID": "1f3f",
@@ -17432,7 +17432,7 @@
     "date": "2024/03/07",
     "friendlyLink": "https://www.cancon.com.cn/",
     "boardCards": [
-      { 
+      {
         "vendorID": "1000",
         "deviceID": "10E2",
         "svID": "1000",
@@ -17451,7 +17451,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "15B3",
         "deviceID": "1015",
         "svID": "15B3",
@@ -17470,7 +17470,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "8086",
         "deviceID": "1521",
         "svID": "1DCF",
@@ -18093,7 +18093,7 @@
            "boardModel": "9560-16i",
            "chipModel": "SAS39xx",
            "item": "",
-           "downloadLink": "inbox"		  
+           "downloadLink": "inbox"
       }
     ],
       "compatibilityConfiguration": {
@@ -20572,7 +20572,7 @@
            "boardModel": "9560-8i",
            "chipModel": "SAS39xx",
            "item": "",
-           "downloadLink": "inbox"		  
+           "downloadLink": "inbox"
       }
     ],
       "compatibilityConfiguration": {
@@ -20633,7 +20633,7 @@
            "boardModel": "9560-8i",
            "chipModel": "SAS39xx",
            "item": "",
-           "downloadLink": "inbox"		  
+           "downloadLink": "inbox"
       }
     ],
       "compatibilityConfiguration": {
@@ -20694,7 +20694,7 @@
            "boardModel": "9560-16i",
            "chipModel": "SAS39xx",
            "item": "",
-           "downloadLink": "inbox"		  
+           "downloadLink": "inbox"
       }
     ],
       "compatibilityConfiguration": {
@@ -20719,7 +20719,7 @@
     "date": "2024/03/07",
     "friendlyLink": "https://www.cancon.com.cn/",
     "boardCards": [
-      { 
+      {
         "vendorID": "15b3",
         "deviceID": "1015",
         "svID": "15b3",
@@ -20738,7 +20738,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "1000",
         "deviceID": "10e2",
         "svID": "1000",
@@ -20757,7 +20757,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "8086",
         "deviceID": "1521",
         "svID": "1dcf",
@@ -20799,7 +20799,7 @@
     "date": "2024/03/07",
     "friendlyLink": "https://www.cancon.com.cn/",
     "boardCards": [
-      { 
+      {
         "vendorID": "1000",
         "deviceID": "10E2",
         "svID": "1000",
@@ -20818,7 +20818,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "15B3",
         "deviceID": "1015",
         "svID": "15B3",
@@ -20837,7 +20837,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "8086",
         "deviceID": "1521",
         "svID": "1DCF",
@@ -20879,7 +20879,7 @@
     "date": "2024/03/07",
     "friendlyLink": "https://www.cancon.com.cn/",
     "boardCards": [
-      { 
+      {
         "vendorID": "15b3",
         "deviceID": "1015",
         "svID": "15b3",
@@ -20898,7 +20898,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "1000",
         "deviceID": "10e2",
         "svID": "1000",
@@ -20917,7 +20917,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "8086",
         "deviceID": "1521",
         "svID": "1dcf",
@@ -20959,7 +20959,7 @@
     "date": "2024/05/21",
     "friendlyLink": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Dualway_Server/R4950_G6/",
     "boardCards": [
-      { 
+      {
         "vendorID": "8086",
         "deviceID": "15ff",
         "svID": "193d",
@@ -20978,7 +20978,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "1000",
         "deviceID": "10e2",
         "svID": "1000",
@@ -21020,7 +21020,7 @@
     "date": "2024/05/21",
     "friendlyLink": "https://www.h3c.com/cn/Products_And_Solution/Server/",
     "boardCards": [
-      { 
+      {
         "vendorID": "15b3",
         "deviceID": "101d",
         "svID": "15b3",
@@ -21039,7 +21039,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "1000",
         "deviceID": "10e2",
         "svID": "1000",
@@ -21081,7 +21081,7 @@
     "date": "2024/05/21",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-2280e",
     "boardCards": [
-      { 
+      {
         "vendorID": "1000",
         "deviceID": "0017",
         "svID": "1000",
@@ -21100,7 +21100,7 @@
         "item": "02312QWY",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "14e4",
         "deviceID": "16d7",
         "svID": "14e4",
@@ -21142,7 +21142,7 @@
     "date": "2024/05/21",
     "friendlyLink": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Dualway_Server/R4950_G5/",
     "boardCards": [
-      { 
+      {
         "vendorID": "8086",
         "deviceID": "1521",
         "svID": "193d",
@@ -21161,7 +21161,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "1000",
         "deviceID": "0016",
         "svID": "1000",
@@ -21987,7 +21987,7 @@
         "chipModel": "E810-XXV",
         "item": "06310219",
         "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-24.03-LTS/contrib/drivers/source/Packages/ice-1.13.7.tar.gz"
-      }, 
+      },
       {
         "vendorID": "1000",
         "deviceID": "0017",
@@ -22530,7 +22530,7 @@
         "chipModel": "ConnectX-6 Lx",
         "downloadLink": "inbox"
       },
-      {  
+      {
         "vendorID": "1000",
         "deviceID": "10e2",
         "svID": "1000",
@@ -23759,7 +23759,7 @@
         "chipModel": "E810-XXV",
         "item": "06310219",
         "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS-SP4/contrib/drivers/source/Packages/ice-1.14.9.tar.gz"
-      }, 
+      },
       {
         "vendorID": "1000",
         "deviceID": "0017",
@@ -26484,7 +26484,7 @@
             "boardModel": "I350",
             "chipModel": "I350",
             "item": "",
-            "downloadLink": "inbox" 
+            "downloadLink": "inbox"
         },
         {
             "vendorID": "1000",
@@ -26545,7 +26545,7 @@
             "boardModel": "I350",
             "chipModel": "I350",
             "item": "",
-            "downloadLink": "inbox" 
+            "downloadLink": "inbox"
         },
         {
             "vendorID": "1000",
@@ -31601,6 +31601,67 @@
       "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
       "hostBusAdapter": "Broadcom / LSI MegaRAID 12GSAS/PCIe Secure SAS39xx",
       "hardDiskDrive": "Micron 5400 Pro SSD 3.84TB"
+    }
+  },
+  {
+    "hardwareFactory": "baixin",
+    "hardwareModel": "Hengshan AI326TA",
+    "osVersion": "openEuler 22.03 LTS SP3",
+    "architecture": "aarch64",
+    "date": "2025/09/04",
+    "friendlyLink": "NA",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "date": "2025/09/04",
+        "sha256": "271d0cf9c7cdb2de5ceced9a0612627fbe52fa0f277b3ce6f09dea2bdec3bea5",
+        "driverSize": "69500",
+        "chipVendor": "BROADCOM",
+        "boardModel": "MegaRAID 9560-8i 4GB",
+        "chipModel": "SAS3908",
+        "item": "NA",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "19e5",
+        "deviceID": "a221",
+        "svID": "19e5",
+        "ssID": "08cc",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP3",
+        "driverName": "hns3",
+        "version": "5.10.0-182.0.0.95.oe2203sp3.aar",
+        "type": "NIC",
+        "date": "2025/09/04",
+        "sha256": "7da581820a51baf1b91c7de1274c6ad4cdd273c7b39f9804f20cd16b6220f10c",
+        "driverSize": "58536",
+        "chipVendor": "Huawei",
+        "boardModel": "TM210",
+        "chipModel": "CPU Integration",
+        "item": "NA",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.100trust.cn/product/64.html",
+      "certificationTime": "2025/09/04",
+      "commitID": "baixin",
+      "mainboardModel": "IT21SK4E-5250-AA",
+      "biosUefi": "7.40",
+      "cpu": "HUAWEI Kunpeng 920 5250",
+      "ram": "16*32G DIMMs",
+      "portsBusTypes": "x8 PCI Express x8",
+      "videoAdapter": "Huawei Technologies Co., Ltd. Hi171x Series [iBMC Intelligent Management system chip w/VGA support] (rev 01)",
+      "hostBusAdapter": "Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA (rev 21)?Huawei Technologies Co., Ltd. HiSilicon AHCI HBA (rev 21)",
+      "hardDiskDrive": "HWE62ST3480L003N?SE005-1920GB-H?SAMSUNG MZQLB3T8HALS-00007__1"
     }
   }
 ]
