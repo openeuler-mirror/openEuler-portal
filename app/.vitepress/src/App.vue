@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useData } from 'vitepress';
+import { useData, useRouter } from 'vitepress';
 import type { Component } from 'vue';
 import { computed, onMounted, watch } from 'vue';
 
@@ -37,9 +37,11 @@ import AppTour from '~@/components/AppTour.vue';
 import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
 import { useLocale } from '~@/composables/useLocale';
+import { hideNssRoutes } from './data/common/nss';
 
 const { changeLocale, isZh } = useLocale();
 const { frontmatter, lang } = useData();
+const router = useRouter();
 
 const elLocale = computed(() => {
   return lang.value === 'zh' ? zhCn : en;
@@ -87,6 +89,10 @@ const isReport = computed(() => {
 });
 // ----------------------------- new ----------------------------
 
+const showNss = computed(() => {
+  return !hideNssRoutes.some(route => router?.route?.path?.includes(route));
+})
+
 watch(
   () => lang.value,
   () => {
@@ -110,8 +116,8 @@ onMounted(() => {
         <main :class="frontmatter.class ? frontmatter.class : ''">
           <component :is="comp" v-if="isCustomLayout"></component>
           <Content v-else />
-          <FloatingButton v-if="lang === 'zh' && !isReport" />
-          <FloatingButtonEn v-else-if="!isReport" />
+          <FloatingButton v-if="lang === 'zh' && !isReport && showNss" />
+          <FloatingButtonEn v-else-if="!isReport && showNss" />
         </main>
       </el-config-provider>
     </OConfigProvider>
