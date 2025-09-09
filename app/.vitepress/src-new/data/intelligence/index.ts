@@ -26,6 +26,14 @@ export const deployList = [
         text: '构建知识库 - 构建本地问答助手',
         href: 'https://docs.openeuler.org/zh/docs/25.03/tools/ai/euler-copilot-framework/openEuler_intelligence/intelligent_assistant/advance/knowledge_base/deploy_guide/witChainD_deployment.html',
       },
+      {
+        text: '智能调优 - ​自主调优助力主力场景性能提升',
+        href: 'https://gitee.com/openeuler/A-Tune/blob/euler-copilot-tune/README.md',
+      },
+      {
+        text: '智能运维 - ​全栈协同观测支撑运维效率提升',
+        href: 'https://gitee.com/openeuler/sysTrace/blob/master/docs/0.quickstart.md',
+      },
     ],
   },
   {

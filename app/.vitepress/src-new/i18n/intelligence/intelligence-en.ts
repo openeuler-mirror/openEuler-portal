@@ -1,7 +1,8 @@
 export default {
   title: 'openEuler Intelligence',
   subtitle: 'Large language model platform powered by openEuler',
-  introduction: 'Key Features',
+  synopsis: 'Overview',
+  introduction: 'Features',
   introductionDesc:
     'openEuler Intelligence is a comprehensive large language model (LLM) platform built on openEuler. It offers fundamental capabilities for integrating with OpenAI APIs and creating custom local knowledge bases. The platform also enables users to register semantic interfaces and Model Context Protocol (MCP) services, and develop Agent-based applications and workflows. Available in both web and client versions, it delivers exceptional convenience for developers and enterprises alike.',
   developer: 'For developers:',
@@ -21,10 +22,20 @@ export default {
   intelligence: 'Agent applications',
   intelligenceDesc:
     'Enterprises and individuals can register local MCP services and easily organize them to build Agent applications. These applications enable intelligent orchestration and scheduling of MCP services to accomplish complex tasks in production environments.',
+  buildApply: 'Build Intelligent Applications',
+  invokeApply: 'Invoke Intelligent Applications',
+  tuning: 'Intelligent Tuning',
+  tuningDesc: 'Unlock 10%+ performance gains with the native tuning agent for individuals and enterprises across four key domains: databases, big data, distributed storage, and virtualization.',
+  operations: 'Intelligent O&M',
+  operationsDesc: 'Create intelligent O&M assistants with the native O&M agent. Whether for individuals or enterprises, these assistants seamlessly integrate with system tools to help you rapidly find and fix issues.',
+  invokeAnswer: 'Intelligent Q&A',
+  invokeAnswerDesc: 'Get instant, accurate answers to your questions based on the pre-configured knowledge base or LLM.',
+  invokeShell: 'Shell',
+  invokeWeb: 'WebUI',
   framework: 'Architecture',
   applyLayer: 'openEuler Intelligence application layer',
   applyLayerDesc:
-    'Functioning as the central hub for user interaction with LLMs, this layer empowers enterprises and developers to build AI applications through intuitive visual interfaces and low-code development. It streamlines deployment across intelligent operations, smart office solutions, and data analytics scenarios, boosting productivity significantly.',
+    'Go from ideas to AI applications in minutes with a user-friendly visual interface and low-code capabilities. This core hub for interacting with LLMs provides powerful native intelligent agents for Q&A, tuning, O&M, and more to streamline your workflow and supercharge productivity.',
   compatible: 'Full-stack compatibility',
   compatibleDesc:
     'openEuler Intelligence delivers complete compatibility with leading AI software stacks, including drivers, SDKs, training/inference frameworks, and models, while integrating seamlessly across the broader AI ecosystem. This end-to-end solution connects hardware infrastructure to the application layer, eliminates interoperability barriers, and establishes a robust foundation for AI application implementation.',

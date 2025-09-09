@@ -95,10 +95,6 @@ const darkImgMb = {
 </template>
 
 <style scoped lang="scss">
-.app-section {
-  --o-gap-section: 0;
-}
-
 .framework {
   display: flex;
   align-items: flex-start;
