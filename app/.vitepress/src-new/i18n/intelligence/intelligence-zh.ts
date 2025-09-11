@@ -1,6 +1,7 @@
 export default {
   title: 'openEuler 智能化解决方案',
   subtitle: '搭载在 openEuler 上的大模型平台',
+  synopsis: '简介',
   introduction: '功能介绍',
   introductionDesc:
     'openEuler 智能化解决方案是搭载在 openEuler 上的大模型平台，具有对接支持 openAI 大模型、构建本地知识库的基础功能；也具备注册语义接口和mcp服务、构建Agent和工作流应用等功能。支持web和客户端两种形式，为开发者和企业的使用提供了巨大的便利',
@@ -21,10 +22,20 @@ export default {
   intelligence: '智能体应用',
   intelligenceDesc:
     '支持企业/个人进行本地MCP服务注册，通过简易的方式组织MCP服务，构建Agent应用，实现智能编排和调度MCP服务，完成生产环境复杂任务',
+  buildApply: '构建智能应用',
+  invokeApply: '调用智能应用',
+  tuning: '智能调优',
+  tuningDesc: '支持企业/个人调用原生智能调优智能体，支持四大主力场景（数据库/大数据/分布式存储/虚拟化）智能调优，性能提升10%以上',
+  operations: '智能运维',
+  operationsDesc: '支持企业/个人调用原生智能运维智能体，构筑运维智能助手，智能调用系统工具，快速定位解决问题',
+  invokeAnswer: '智能问答',
+  invokeAnswerDesc: '企业 / 个人开发者调用智能问答助手，其能依据用户的问题，结合预设知识库检索或大模型推理，生成准确、通俗的答复',
+  invokeShell: 'Shell端调用',
+  invokeWeb: 'Web端调用',
   framework: '架构',
   applyLayer: 'openEuler Intelligence 应用层',
   applyLayerDesc:
-    '作为用户与大模型交互的核心枢纽，通过可视化操作界面与低代码开发能力，赋能企业和开发者快速构建 AI 应用，实现智能运维、智能办公、数据分析等场景的高效落地，显著提升工作效能',
+    '作为用户与大模型交互的核心枢纽，通过可视化操作界面与低代码开发能力，赋能企业和开发者快速构建 AI 应用，提供原生智能体能力，知识问答智能体、调优智能体、运维智能体等，显著提升工作效能',
   compatible: '全栈兼容',
   compatibleDesc:
     'openEuler Intelligence 全面兼容主流 AI 软件栈（驱动、SDK、训推框架、模型等），且致力于广泛兼容 AI 南北向生态，实现从底层硬件到上层应用的全链路贯通，保障各环节协同运作，为 AI 应用落地提供坚实生态支撑',

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, onMounted, computed } from 'vue';
+import { ref, computed } from 'vue';
 import {
   ORow,
   OCol,
@@ -9,24 +9,50 @@ import {
   OCarouselItem,
   OFigure,
   ODialog,
+  OTab,
+  OTabPane,
+  OTag,
 } from '@opensig/opendesign';
 
 import AppSection from '~@/components/AppSection.vue';
 
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Autoplay } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/autoplay';
+
 import IconDeveloper from '~icons/intelligence/icon-developer.svg';
 import IconEnterprise from '~icons/intelligence/icon-enterprise.svg';
+import iconBuildTab from '~icons/intelligence/icon-build-tab.svg';
+import iconInvokeTab from '~icons/intelligence/icon-invoke-tab.svg';
+import IconInvokeTuning from '~icons/intelligence/icon-invoke-tuning.svg';
+import iconInvokeoperations from '~icons/intelligence/icon-invoke-operations.svg';
+import iconInvokeAnswer from '~icons/intelligence/icon-invoke-answer.svg';
 
 import IconQuestionAnswer from '~icons/intelligence/icon-question-answer.svg';
 import IconWorkflowApplication from '~icons/intelligence/icon-workflow-application.svg';
 import IconIntelligenceApplication from '~icons/intelligence/icon-intelligence-application.svg';
 
-import questionAnswerZh from '~@/assets/category/intelligence/question-answer-zh.jpg';
-import workflowApplicationZh from '~@/assets/category/intelligence/workflow-application-zh.jpg';
-import intelligenceApplicationZh from '~@/assets/category/intelligence/intelligence-application-zh.jpg';
+import questionAnswerZh from '~@/assets/category/intelligence/question-answer-zh.png';
+import workflowApplicationZh from '~@/assets/category/intelligence/workflow-application-zh.png';
+import intelligenceApplicationZh from '~@/assets/category/intelligence/intelligence-application-zh.png';
 
-import questionAnswerEn from '~@/assets/category/intelligence/question-answer-en.jpg';
-import workflowApplicationEn from '~@/assets/category/intelligence/workflow-application-en.jpg';
-import intelligenceApplicationEn from '~@/assets/category/intelligence/intelligence-application-en.jpg';
+import questionAnswerEn from '~@/assets/category/intelligence/question-answer-en.png';
+import workflowApplicationEn from '~@/assets/category/intelligence/workflow-application-en.png';
+import intelligenceApplicationEn from '~@/assets/category/intelligence/intelligence-application-en.png';
+
+import tuningWebZh from '~@/assets/category/intelligence/invoke/tuning-web-zh.jpg';
+import tuningWebEn from '~@/assets/category/intelligence/invoke/tuning-web-en.jpg';
+import tuningShellZh from '~@/assets/category/intelligence/invoke/tuning-shell-zh.jpg';
+
+import operationsWebZh from '~@/assets/category/intelligence/invoke/operations-web-zh.jpg';
+import operationsWebEn from '~@/assets/category/intelligence/invoke/operations-web-en.jpg';
+import operationsShellZh from '~@/assets/category/intelligence/invoke/operations-shell-zh.jpg';
+
+import answerWebZh from '~@/assets/category/intelligence/invoke/answer-web-zh.jpg';
+import answerWebEn from '~@/assets/category/intelligence/invoke/answer-web-en.jpg';
+import answerShwllZh from '~@/assets/category/intelligence/invoke/answer-shell-zh.jpg';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -35,7 +61,7 @@ import { useCommon } from '@/stores/common';
 const commonStore = useCommon();
 
 const { t, locale } = useLocale();
-const { lePadV, lePad } = useScreen();
+const { lePadV, lePad, isPhone } = useScreen();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 
 const introList = [
@@ -52,6 +78,8 @@ const introList = [
     description: t('intelligence.enterpriseDesc'),
   },
 ];
+
+// -------------------- 切换tab --------------------
 const introCarousel = [
   {
     id: 'auestion-answer',
@@ -84,15 +112,75 @@ const introCarousel = [
     },
   },
 ];
+const introCarouselMb = [...introCarousel, ...introCarousel];
 
-const slidesRef = ref<InstanceType<typeof OCarousel> | null>(null);
+const invokeList = [
+{
+    id: 'invoke-tuning',
+    icon: IconInvokeTuning,
+    title: t('intelligence.tuning'),
+    description: t('intelligence.tuningDesc'),
+    shell: {
+      zh: tuningShellZh,
+      en: tuningShellZh,
+    },
+    web: {
+      zh: tuningWebZh,
+      en: tuningWebEn,
+    },
+  },
+  {
+    id: 'invoke-operations',
+    icon: iconInvokeoperations,
+    title: t('intelligence.operations'),
+    description: t('intelligence.operationsDesc'),
+    shell: {
+      zh: operationsShellZh,
+      en: operationsShellZh,
+    },
+    web: {
+      zh: operationsWebZh,
+      en: operationsWebEn,
+    },
+  },
+  {
+    id: 'intelligence-invokeAnswer',
+    icon: iconInvokeAnswer,
+    title: t('intelligence.invokeAnswer'),
+    description: t('intelligence.invokeAnswerDesc'),
+    shell: {
+      zh: answerShwllZh,
+      en: answerShwllZh,
+    },
+    web: {
+      zh: answerWebZh,
+      en: answerWebEn,
+    },
+  },
+]
+const invokeListMb = [...invokeList, ...invokeList];
 
-const currentIndex = ref(0);
-const carouselHeight = ref(0);
+const activeTab = ref(0);
 
-const positionCarousel = (val: number) => {
-  slidesRef.value?.active(val);
+const introCurrentIndex = ref(0);
+const buildApplyImg = computed(() => introCarousel[introCurrentIndex.value].img);
+const introClick = (val: number) => {
+  introCurrentIndex.value = val;
+}
+
+const invokeCurrentIndex = ref(0);
+const invokeClick = (val: number) => {
+  invokeCurrentIndex.value = val;
+}
+
+const isChecked = ref(false);
+const switchTab = (val: boolean) => {
+  isChecked.value = val;
 };
+
+const invokeApplyImg = computed(() => {
+  return isChecked.value ? invokeList[invokeCurrentIndex.value].web : invokeList[invokeCurrentIndex.value].shell;
+});
 
 const scaleVisible = ref(false);
 const img = ref();
@@ -101,21 +189,29 @@ const imgScale = (val: any) => {
   scaleVisible.value = true;
 };
 
-onMounted(() => {
-  if (lePad.value) {
+const currentIndexImg = ref([0, 0, 0, 0, 0, 0]);
+const carouselHeight = ref(0);
+
+const heightImg = computed(() => {
+  if (isPhone.value) {
+    return '165px';
+  }
+  return '250px';
+});
+const changeTabMb = (val: number) => {
+  if (val === 1) {
     setTimeout(() => {
       const carousel = document.querySelector(
-        '.o-carousel .carousel-item'
+        '.o-carousel .carousel-item-invoke'
       ) as HTMLElement;
       carouselHeight.value = carousel?.offsetHeight;
     }, 500);
   }
-});
+};
 </script>
 <template>
   <AppSection
-    :title="t('intelligence.introduction')"
-    :class="{ 'app-section-en': locale === 'en' }"
+    :title="t('intelligence.synopsis')"
   >
     <div class="introduction" :class="{ 'introduction-dark': isDark }">
       <p class="desc">{{ t('intelligence.introductionDesc') }}</p>
@@ -146,137 +242,173 @@ onMounted(() => {
         </OCol>
       </ORow>
     </div>
-    <div
-      v-if="!lePad"
-      class="introduction-list"
-      :class="{ 'introduction-list-dark': isDark }"
-    >
-      <ORow gap="0 32px" wrap="wrap">
-        <OCol
-          flex="0 0 100%"
-          v-for="(item, i) in introCarousel"
-          :key="item.id"
-          @click="positionCarousel(i)"
-        >
-          <div
-            class="title-top"
-            :class="{ 'title-active': currentIndex === i }"
-          >
-            <OIcon><component :is="item.icon"></component></OIcon>
-            <p class="item-title">{{ item.title }}</p>
-          </div>
-          <div class="item-desc" :class="{ 'desc-active': currentIndex === i }">
-            <p v-for="val in item.description" :key="val">
-              {{ val }}
-            </p>
-          </div>
-        </OCol>
-      </ORow>
-      <div class="carousel">
-        <OCarousel
-          v-model:active-index="currentIndex"
-          ref="slidesRef"
-          class="intro-carousel"
-          effect="toggle"
-          active-class="current-slide"
-          indicator-click
-          auto-play
-          arrow="never"
-        >
-          <OCarouselItem v-for="item in introCarousel" :key="item.id">
-            <OFigure
-              :src="item.img[locale]"
-              @click="imgScale(item.img[locale])"
-            ></OFigure>
-          </OCarouselItem>
-        </OCarousel>
-      </div>
-    </div>
-    <OCarousel
-      v-else
-      v-model:active-index="currentIndex"
-      effect="gallery"
-      arrow="never"
-      indicator-click
-      :auto-play="false"
-      :style="{ height: carouselHeight ? carouselHeight + 'px' : '350px' }"
-    >
-      <OCarouselItem v-for="(item, idx) in introCarousel" :key="item.id">
-        <div class="carousel-item">
-          <div class="title-top">
-            <OIcon><component :is="item.icon"></component></OIcon>
-            <p class="item-title">{{ item.title }}</p>
-          </div>
-          <div class="item-desc" :class="{ 'item-desc-en': locale === 'en' }">
-            <p v-for="val in item.description" :key="val">{{ val }}</p>
-          </div>
+  </AppSection>
+  <AppSection
+    :title="t('intelligence.introduction')"
+    class="swiper-section"
+  >
+    <OTab v-if="!lePad" v-model="activeTab" :line="false">
+      <OTabPane :value="0">
+        <template #nav><OIcon :icon="iconBuildTab" />{{t('intelligence.buildApply')}}</template>
+        <div class="build apply-bg" :class="{ 'apply-bg-dark': isDark, 'build-en': locale === 'en' }">
+          <ORow gap="0 0" wrap="wrap">
+            <OCol
+              flex="0 0 100%"
+              v-for="(item, i) in introCarousel"
+              :key="item.id"
+              @click="introClick(i)"
+            >
+              <div
+                class="title-top"
+                :class="{ 'title-active': introCurrentIndex === i }"
+              >
+                <OIcon><component :is="item.icon"></component></OIcon>
+                <p class="item-title">{{ item.title }}</p>
+              </div>
+              <div class="item-desc" :class="{ 'desc-active': introCurrentIndex === i }">
+                <p v-for="val in item.description" :key="val">
+                  {{ val }}
+                </p>
+              </div>
+              <ODivider v-if="i < introCarousel.length - 1" />
+            </OCol>
+          </ORow>
           <OFigure
-            :src="item.img[locale]"
-            @click="imgScale(item.img[locale])"
+            :src="buildApplyImg[locale]"
+            @click="imgScale(buildApplyImg[locale])"
           ></OFigure>
         </div>
-      </OCarouselItem>
-    </OCarousel>
+      </OTabPane>
+      <OTabPane :value="1">
+        <template #nav><OIcon :icon="iconInvokeTab" />{{t('intelligence.invokeApply')}}</template>
+        <div class="invoke apply-bg" :class="{ 'apply-bg-dark': isDark }">
+          <ORow gap="0 0" wrap="wrap">
+            <OCol
+              flex="0 0 100%"
+              v-for="(item, i) in invokeList"
+              :key="item.id"
+              @click="invokeClick(i)"
+            >
+              <div
+                class="title-top"
+                :class="{ 'title-active': invokeCurrentIndex === i }"
+              >
+                <OIcon><component :is="item.icon"></component></OIcon>
+                <p class="item-title">{{ item.title }}</p>
+              </div>
+              <div class="item-desc" :class="{ 'desc-active': invokeCurrentIndex === i }">
+                {{ item.description }}
+              </div>
+              <ODivider v-if="i < invokeList.length - 1" />
+            </OCol>
+          </ORow>
+          <div class="right-box">
+            <div class="switch-tab" :class="{'switch-checked': isChecked}">
+              <div class="switch-handler" :class="{'switch-active': !isChecked}" @click="switchTab(false)">{{t('intelligence.invokeShell')}}</div>
+              <div class="switch-handler" :class="{'switch-active': isChecked}" @click="switchTab(true)">{{t('intelligence.invokeWeb')}}</div>
+            </div>
+            <div class="img-box">
+              <OFigure
+                :src="invokeApplyImg[locale]"
+                @click="imgScale(invokeApplyImg[locale])"
+              ></OFigure>
+            </div>
+          </div>
+        </div>
+      </OTabPane>
+    </OTab>
+    <OTab v-else v-model="activeTab" :line="false" @change="changeTabMb">
+      <OTabPane :value="0">
+        <template #nav>{{t('intelligence.buildApply')}}</template>
+        <div class="build-mb"  :class="{ 'build-mb-dark': isDark }">
+          <Swiper
+            :modules="[Autoplay]"
+            slides-per-view="auto"
+            :space-between="12"
+            :loop="true"
+            :centered-slides="true"
+          >
+            <SwiperSlide v-for="(item, i) in introCarouselMb" :key="i" class="swiper-swiping">
+              <slot :item="item">
+                <div class="carousel-item">
+                  <div class="title-top">
+                    <OIcon><component :is="item.icon"></component></OIcon>
+                    <p class="item-title">{{ item.title }}</p>
+                  </div>
+                  <div class="item-desc" :class="{ 'item-desc-en': locale === 'en' }">
+                    <p v-for="val in item.description" :key="val">{{ val }}</p>
+                  </div>
+                  <OFigure
+                    :src="item.img[locale]"
+                    @click="imgScale(item.img[locale])"
+                  ></OFigure>
+                </div>
+              </slot>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </OTabPane>
+      <OTabPane :value="1">
+        <template #nav>{{t('intelligence.invokeApply')}}</template>
+        <div class="invoke-mb build-mb" :class="{ 'build-mb-dark': isDark }">
+          <Swiper
+            :modules="[Autoplay]"
+            slides-per-view="auto"
+            :space-between="12"
+            :initial-slide="3"
+            :loop="true"
+            :centered-slides="true"
+          >
+            <SwiperSlide v-for="(item, i) in invokeListMb" :key="i" class="swiper-swiping">
+              <slot :item="item">
+                <div class="carousel-item">
+                  <div class="title-top">
+                    <OIcon><component :is="item.icon"></component></OIcon>
+                    <p class="item-title">{{ item.title }}</p>
+                  </div>
+                  <div class="item-desc" :class="{ 'item-desc-en': locale === 'en' }">
+                    {{ item.description }}
+                  </div>
+                  <div class="carousel-invoke">
+                    <OCarousel
+                      v-model:active-index="currentIndexImg[i]"
+                      ref="slidesRef"
+                      effect="toggle"
+                      indicator-click
+                      arrow="never"
+                      :style="{ height: carouselHeight ? carouselHeight + 'px' : heightImg }"
+                      :auto-play="true"
+                    >
+                      <OCarouselItem v-for="(val, k) in [item.shell, item.web]" :key="k">
+                        <div class="carousel-item-invoke" :class="{'carousel-item-dark': k === 0}">
+                          <OFigure
+                            :src="val[locale]"
+                            @click="imgScale(val[locale])"
+                          >
+                            <OTag variant="solid" class="invoke-tag"  :class="{ 'invoke-tag-dark': isDark }">{{ currentIndexImg[i] === 0 ? t('intelligence.invokeShell') : t('intelligence.invokeWeb') }}</OTag>
+                          </OFigure>
+                        </div>
+                      </OCarouselItem>
+                    </OCarousel>
+                  </div>
+                </div>
+              </slot>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </OTabPane>
+    </OTab>
   </AppSection>
   <ODialog
     v-model:visible="scaleVisible"
-    :style="{ '--layer-align': 'center' }"
+    :style="{ 'text-align': 'center', '--dlg-radius': '4px' }"
+    class="figure-dialog"
   >
     <OFigure :src="img"></OFigure>
   </ODialog>
 </template>
 
 <style scoped lang="scss">
-.app-section {
-  --o-gap-section: 40px;
-  padding-bottom: 72px;
-  overflow: hidden;
-  background-image: url('~@/assets/category/intelligence/introduction-img-bg.png');
-  background-repeat: no-repeat;
-  background-size: auto 723px;
-  background-position: right calc(50% - 265px) bottom calc(-50% + 96px);
-
-  @include respond-to('<=laptop') {
-    --o-gap-section: 32px;
-    padding-bottom: 56px;
-
-    background-size: auto 580px;
-    background-position: right -40px bottom calc(-50% + 96px);
-  }
-  @include respond-to('pad_h') {
-    padding-bottom: 40px;
-  }
-  @include respond-to('<=pad') {
-    background-image: none;
-  }
-  @include respond-to('<=pad_v') {
-    padding-bottom: 32px;
-  }
-  @include respond-to('phone') {
-    --o-gap-section: 32px;
-  }
-}
-
-.app-section-en {
-  background-size: auto 670px;
-  background-position: right calc(50% - 240px) bottom calc(-50% + 315px);
-
-  @media (max-width: 1480px) {
-    background-position: right calc(50% - 240px) bottom calc(-50% + 365px);
-  }
-  @include respond-to('<=laptop') {
-    background-size: auto 550px;
-    background-position: right -40px bottom calc(-50% + 180px);
-  }
-  @media (max-width: 1380px) {
-    background-size: auto 550px;
-    background-position: right -18px bottom calc(-50% + 240px);
-  }
-  @media (max-width: 1260px) {
-    background-position: right -40px bottom calc(-50% + 325px);
-  }
-}
-
 .introduction {
   padding: 32px;
   border-radius: var(--o-radius-xs);
@@ -330,17 +462,45 @@ onMounted(() => {
   --o-divider-label-gap: 0;
 }
 
-.introduction-list {
+:deep(.o-tab) {
+  .o-tab-head {
+    margin-bottom: 24px;
+  }
+}
+
+.apply-bg {
+  background-image: url('~@/assets/category/intelligence/apply-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
   display: flex;
-  align-items: center;
-  margin-top: 32px;
+  padding: 32px 40px;
+  border-radius: var(--o-radius-xs);
+  background-color: var(--o-color-fill2);
   .o-row {
-    margin-right: 48px;
+    margin: 8px 0;
   }
   .o-col {
     cursor: pointer;
   }
+  .o-divider {
+    --o-divider-gap: 16px;
+  }
 }
+.build {
+  .o-row {
+    width: 100%;
+    margin-right: 74px;
+  }
+  .o-figure {
+    height: 100%;
+    cursor: pointer;
+  }
+}
+.build-en {
+  align-items: center;
+}
+
 .title-top {
   display: flex;
   align-items: center;
@@ -369,71 +529,116 @@ onMounted(() => {
 .desc-active {
   color: var(--o-color-info1);
 }
-.carousel {
-  width: 822px;
-  height: 500px;
-  flex-shrink: 0;
-  .o-carousel {
-    height: 462px;
-    --carousel-indicator-offset: -36px;
+
+.invoke {
+  padding: 24px 40px;
+  .o-row {
+    width: 100%;
+    margin: 16px 0;
+  }
+  .right-box {
+    margin-left: 190px;
+    margin-bottom: 20px;
+  }
+  .switch-tab {
+    display: inline-flex;
+    background-color: var(--o-color-fill1);
+    border-radius: var(--o-radius-xs);
+    padding: 4px;
+    position: relative;
+    @include text1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 109px;
+      height: 26px;
+      top: 4px;
+      left: 4px;
+      background-color: var(--o-color-fill2);
+      border-radius: var(--o-radius-xs);
+      z-index: 1;
+      transition: left .2s cubic-bezier(0.2, 0, 0, 1);
+      box-shadow: 0 1px 3px rgba(var(--o-mixedgray-14), 0.1);
+    }
+    .switch-handler {
+      width: 109px;
+      padding: 2px 12px;
+      z-index: 2;
+      text-align: center;
+      cursor: pointer;
+    }
+    .switch-handler + .switch-handler {
+      margin-left: 1px;
+    }
+    .switch-active {
+      color: var(--o-color-link1);
+      font-weight: 500;
+    }
+  }
+  .switch-checked {
+    &::before {
+      left: 114px;
+    }
+  }
+  .img-box {
+    margin-top: 16px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 20px;
+      left: -20px;
+      background-color: var(--o-color-fill2);
+      border-radius: var(--o-radius-xs);
+      background-image: linear-gradient(
+        130deg,
+        rgba(182, 207, 247, 1) 0%,
+        rgba(205, 210, 246, 1) 30%,
+        rgba(227, 235, 255, 0.43) 81%,
+        rgba(var(--o-mixedgray-14), 0) 100%
+      );
+      z-index: 1;
+    }
   }
   .o-figure {
     --figure-radius: var(--o-radius-xs);
-    border: 1px solid var(--o-color-control4);
+    z-index: 2;
     cursor: pointer;
   }
 }
 
 @include respond-to('laptop') {
-  .introduction-list {
-    margin-top: 24px;
+  .build {
     .o-row {
-      margin-right: 32px;
-    }
-    .col-developer {
-      padding-right: 32px;
-    }
-    .col-enterprise {
-      padding-left: 32px;
+      margin-right: 40px;
     }
   }
-  .item-desc {
-    margin-left: 32px;
-  }
-  .carousel {
-    width: 658px;
-    height: 400px;
-    .o-carousel {
-      height: 370px;
-      --carousel-indicator-offset: -24px;
+  .invoke {
+    .right-box {
+      margin-left: 100px;
     }
   }
 }
 @include respond-to('pad_h') {
-  .introduction-list {
-    .o-row {
-      margin-right: 24px;
-    }
-    .col-developer {
-      padding-right: 24px;
-    }
-    .col-enterprise {
-      padding-left: 24px;
-    }
-  }
   .item-desc {
     margin-top: 8px;
-    margin-left: 32px;
+  }
+  .build {
+    .o-row {
+      margin-right: 32px;
+    }
+  }
+  .invoke {
+    .right-box {
+      margin-left: 70px;
+    }
   }
 }
 
 @include respond-to('<=pad') {
-  .app-section {
-    :deep(.section-body) {
-      padding-bottom: 20px;
-    }
-  }
-
   .introduction {
     padding: 12px;
     margin-top: 12px;
@@ -454,43 +659,76 @@ onMounted(() => {
     display: flex;
     align-items: center;
   }
-
-  .o-carousel {
-    height: 350px;
-    width: 472px;
-    margin: 12px auto 0;
-    --carousel-indicator-offset: -20px;
+  .apply-bg {
+    background-image: none;
   }
-  :deep(.o-carousel-container-gallery) {
-    margin-left: 6px;
-  }
-  :deep(.o-carousel-item-gallery) {
-    width: calc(100% + 12px);
-    height: 100%;
-  }
-  .carousel-item {
-    width: calc(100% - 12px);
-    height: auto;
-    padding: 16px;
-    border-radius: var(--o-radius-xs);
-    background-color: var(--o-color-fill2);
-    margin-right: 12px;
-  }
-  .item-title {
-    margin-left: 8px;
-  }
-  .item-desc {
-    margin: 12px 0 0;
-    height: 96px;
-  }
-  .o-figure {
-    --figure-radius: var(--o-radius-xs);
-    border: 1px solid var(--o-color-control4);
-    margin-top: 24px;
+  .apply-bg-dark {
+    background-image: none;
   }
 
-  .item-desc-en {
-    height: 162px;
+  .swiper-section {
+    :deep(.section-body) {
+      padding: 0;
+    }
+  }
+
+  .build-mb {
+    .swiper-slide {
+      width: 472px;
+    }
+    .carousel-item {
+      width: 100%;
+      height: auto;
+      padding: 16px;
+      border-radius: var(--o-radius-xs);
+      background-color: var(--o-color-fill2);
+      box-sizing: border-box;
+    }
+    .item-title {
+      margin-left: 8px;
+    }
+    .item-desc {
+      margin: 12px 0 0;
+      height: 96px;
+    }
+    .o-figure {
+      --figure-radius: var(--o-radius-xs);
+      border: 1px solid var(--o-color-control4);
+      margin-top: 24px;
+    }
+
+    .item-desc-en {
+      height: 162px;
+    }
+  }
+
+  .invoke-mb {
+    .item-desc {
+      height: 44px;
+    }
+    .item-desc-en {
+      height: 88px;
+    }
+    .invoke-tag {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      --tag-radius: 2px;
+      --tag-color: var(--o-color-white);
+      border: none;
+      --tag-bg-color: rgba(var(--o-mixedgray-14), 0.4);
+    }
+    .invoke-tag-dark {
+      --tag-bg-color: rgba(var(--o-mixedgray-1), 0.25);
+    }
+    .carousel-item-dark {
+      .invoke-tag {
+        --tag-bg-color: rgba(var(--o-mixedgray-1), 0.25);
+      }
+      .invoke-tag-dark {
+        --tag-bg-color: rgba(var(--o-mixedgray-14), 0.25);
+      }
+    }
   }
 }
 
@@ -527,23 +765,67 @@ onMounted(() => {
       @include text1;
     }
   }
-  .o-carousel {
-    width: 100%;
+  .build-mb {
+    .swiper-slide {
+      width: calc(100% - 48px);
+    }
+    .item-desc {
+      height: 80px;
+    }
+    .item-desc-en {
+      height: 144px;
+    }
   }
-  .item-desc {
-    height: 80px;
-  }
-  .item-desc-en {
-    height: 144px;
+  .invoke-mb {
+    .item-desc {
+      height: 54px;
+    }
+    .item-desc-en {
+      height: 72px;
+    }
   }
 }
 
 .introduction-dark {
   background-image: url('~@/assets/category/intelligence/introduction-bg-dark.png');
 }
-.introduction-list-dark {
+.apply-bg-dark {
+  background-image: url('~@/assets/category/intelligence/apply-bg-dark.jpg');
+  .img-box {
+    &::before {
+      background-image: linear-gradient(
+        130deg,
+        rgba(66, 106, 170, 0.4) 0%,
+        rgba(59, 65, 107, 0.7) 25%,
+        rgba(54, 73, 124, 0.42) 80%,
+        rgba(75, 91, 112, 0) 100%
+      );
+    }
+  }
   .o-figure {
-    @include img-in-dark;
+    :deep(img) {
+      @include img-in-dark;
+    }
+  }
+}
+.build-mb-dark {
+  .o-figure {
+    :deep(img) {
+      @include img-in-dark;
+    }
+  }
+}
+
+.figure-dialog {
+  .o-figure {
+    height: 100%;
+  }
+}
+</style>
+<style lang="scss">
+.figure-dialog {
+  .o-dlg-main {
+    aspect-ratio: 1.72;
   }
 }
 </style>
