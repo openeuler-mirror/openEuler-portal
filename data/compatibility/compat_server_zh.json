@@ -31665,8 +31665,8 @@
     }
   },
   {
-    "hardwareFactory": "广州广电五舟科技股份有限公司",
-    "hardwareModel": "S627H6 V1.0",
+    "hardwareFactory": "广电五舟",
+    "hardwareModel": "S627H6",
     "osVersion": "openEuler 22.03 LTS SP3",
     "architecture": "x86_64",
     "date": "2025/09/09",
@@ -31725,7 +31725,7 @@
   },
   {
     "hardwareFactory": "联想（北京）信息技术有限公司",
-    "hardwareModel": "Lenovo WenTian WA5480 G3 Sapphire Rapids",
+    "hardwareModel": "Lenovo WenTian WA5480 G3 (Sapphire Rapids)",
     "osVersion": "openEuler 24.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2025/09/03",
@@ -31786,7 +31786,7 @@
   },
   {
     "hardwareFactory": "联想（北京）信息技术有限公司",
-    "hardwareModel": "Lenovo WenTian WA5480 G3 Emerald Rapids",
+    "hardwareModel": "Lenovo WenTian WA5480 G3 (Emerald Rapids)",
     "osVersion": "openEuler 24.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2025/09/03",
