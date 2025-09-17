@@ -251,6 +251,14 @@ export const yearPlanData = {
               location: '中国 北京',
               activeName: 'openEuler 多样性算力Meetup北京站',
             },
+            {
+              location: '中国 武汉',
+              activeName: 'openEuler云原生开源中间件Meetup 武汉站',
+            },
+            {
+              location: '中国 西安',
+              activeName: 'openEuler Meetup X openGauss Meetup 西安站',
+            },
           ]
         },
         { month: '10' },

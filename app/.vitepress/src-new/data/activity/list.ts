@@ -21,6 +21,14 @@ import detail_250718 from '~@/assets/category/event/list/250718.jpg';
 import detail_250822 from '~@/assets/category/event/list/250822.jpg';
 import detail_250905 from '~@/assets/category/event/list/250905.jpg';
 
+import wuhan from '~@/assets/category/user-group/city/wuhan.jpg';
+import wuhanMb from '~@/assets/category/event/city/wuhan-mb.jpg';
+import detail_250925 from '~@/assets/category/event/list/250925.jpg';
+
+import xian from '~@/assets/category/user-group/city/xian.jpg';
+import xianMb from '~@/assets/category/event/city/xian-mb.jpg';
+import detail_250926 from '~@/assets/category/event/list/250926.jpg';
+
 export const EventSeries = new Map([
   [
     'all',
@@ -130,10 +138,44 @@ export const EventState = new Map([
 export const MEETUP_DATA = {
   zh: [
     {
+      id: 8,
+      title: 'openEuler Meetup X openGauss Meetup \n西安站',
+      date: '2025-09-26 14:00-17:30',
+      activity_type: 2,
+      synopsis:
+        'openEuler开源社区与openGauss开源社区携手陕西鲲鹏创新中心、西北工业大学，将于西安举办Meetup。本次活动聚焦操作系统与数据库两大核心领域，围绕openEuler与openGauss的最新技术进展、内核优化实践、AI融合创新以及鲲鹏生态赋能等热点话题，邀请资深技术专家与开发者进行深度分享与交流。',
+      address: '西安软件新城二期C2座3F陕西华为联合学院多功能厅',
+      city: '西安市',
+      isAdditional: true,
+      posterImg: xian,
+      posterImgMb: xianMb,
+      series: '3',
+      detail_img: detail_250926,
+      signup_url: 'https://openatomcon.openatom.cn/registration/?activityNo=HD20250915103542',
+      signup_url_mb: 'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20250915103542',
+    },
+    {
+      id: 7,
+      title: 'openEuler云原生开源中间件Meetup 武汉站',
+      date: '2025-09-25 13:45-17:00',
+      activity_type: 2,
+      synopsis:
+        '9月25日，openEuler社区联合东方通、武汉职业技术大学联合将在武汉职业技术大学举办以“轻舟泛海，云翼冲天”为主题的Meetup。此次交流活动特邀多位业内专家，分享实战案例与前沿技术解析，为技术爱好者、行业从业者、高校学生等加油充电，深化技术交流与学习，同时还将进行实习宣讲互动，为高校学生解读东方通开源实习项目，提供更多宝贵的实践机会。',
+      address: '武汉职业技术大学关山校区-凌峰楼C11',
+      city: '武汉市',
+      isAdditional: true,
+      posterImg: wuhan,
+      posterImgMb: wuhanMb,
+      series: '3',
+      detail_img: detail_250925,
+      signup_url: 'https://openatomcon.openatom.cn/registration/?activityNo=HD20250909090628',
+      signup_url_mb: 'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20250909090628',
+    },
+    {
       id: 6,
       title: 'openEuler 多样性算力Meetup北京站',
       date: '2025-09-06 13:00-17:00',
-      activity_type: 2,
+      activity_type: 1,
       synopsis:
         'openEuler多样性算力 Meetup 将在北京举办，诚邀开发者、企业技术专家及开源爱好者共同参与！openEuler 社区长期致力于推动开源操作系统的发展，构建繁荣的软件生态体系。本次 Meetup 北京站将进一步聚焦多样性算力，汇聚各方力量，深入交流创新实践与技术成果，携手推动多样性算力的落地与生态繁荣。',
       address: '北京海淀区中关村北理工亚朵S酒店3楼精工厅',
@@ -143,8 +185,7 @@ export const MEETUP_DATA = {
       posterImgMb: beijingMb,
       series: '3',
       detail_img: detail_250905,
-      signup_url: 'https://openatomcon.openatom.cn/registration/?activityNo=HD20250828152038',
-      signup_url_mb: 'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20250828152038',
+      new_url: 'https://www.openeuler.org/zh/news/20250909-multi-computing-meetup-review/20250909-multi-computing-meetup-review.html',
     },
     {
       id: 5,
