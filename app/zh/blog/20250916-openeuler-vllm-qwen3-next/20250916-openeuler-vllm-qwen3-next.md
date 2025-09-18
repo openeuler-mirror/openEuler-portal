@@ -10,18 +10,6 @@ author:  openEuler
 summary: KServe 是一种基于 Kubernetes 的模型服务（Model Serving）平台，能够简化机器学习模型在生产环境中的部署和管理。通过标准化的接口和 CRD（自定义资源定义），KServe 支持多种主流推理后端（如 TensorFlow Serving、TorchServe、Triton Inference Server 及 Hugging Face Server），适用于各类深度学习模型的在线推理服务。本文将演示如何在 OpenAtom openEuler（简称“openEuler”）操作系统上部署并使用 KServe，进行 Hugging Face Qwen3 模型的文本生成任务。
 ---
 
-# 元信息
-- 网页类型: 普通网站
-- 标题: openEuler + vLLM Ascend 快速上手Qwen3-Next，实操指南
-
-# 内容
-
-![cover_image]()
-
-## openEuler + vLLM Ascend 快速上手Qwen3-Next，实操指南
-
-[OpenAtom openEuler]()  _2025年09月16日 20:11_ _广东_
-
 9 月 12 日，阿里云通义团队宣布推出其下一代基础模型架构 Qwen3-Next，并开源了基于该架构的 Qwen3-Next-80B-A3B 系列模型，包括：Qwen3-Next-80B-A3B-Instruct 和 Qwen3-Next-80B-A3B-Thinking。相较于 Qwen3 MoE，Qwen3-Next 采用全新的模型架构：混合架构创新、极致稀疏 MoE、更稳的训练以及多 token 预测机制（MTP），进一步提升了模型在长上下文和大规模总参数场景下的训练和推理效率。
 
 vLLM 是 PyTorch Foundation 下的开源 LLM 推理引擎，为用户和开发者提供快速、易用的 LLM 推理能力。vLLM 社区在 9 月 15 日发布了 vLLM Ascend v0.10.2rc1 版本，提供了昇腾对 Qwen3-Next 的支持。本指南将帮助你在 openEuler （简称：“openEuler”或“开源欧拉”）上使用 vLLM Ascend 运行 Qwen3-Next。
