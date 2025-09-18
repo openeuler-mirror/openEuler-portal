@@ -325,7 +325,7 @@ const handleConfirm = () => {
                 </OTag>
               </div>
               <div class="card-content">
-                <p class="title">{{ item.title }}</p>
+                <p v-dompurify-html="item.title" class="title"></p>
                 <div class="card-bottom">
                   <p class="date">
                     {{ changeTimeStamp(new Date(item.date.substring(0, 10))) }}
@@ -547,6 +547,7 @@ const handleConfirm = () => {
   .title {
     font-weight: 500;
     height: auto;
+    white-space: pre-wrap;
     @include h2;
     @include text-truncate(3);
   }
@@ -578,6 +579,14 @@ const handleConfirm = () => {
 @include respond-to('laptop') {
   .card-content {
     padding: 24px;
+  }
+}
+
+@include respond-to('<=pad') {
+  .card-content {
+    .title {
+      white-space: normal;
+    }
   }
 }
 
