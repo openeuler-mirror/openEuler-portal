@@ -69,7 +69,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/server/performance/system_optimization/atune/getting_to_know_a_tune.md',
+            LINK: 'https://gitee.com/openeuler/A-Tune/blob/master/docs/zh/24.03_LTS_SP2/getting_to_know_a_tune.md',
           },
         ],
         BACKGROUND: {
@@ -84,7 +84,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/server/performance/system_optimization/atune/installation_and_deployment.md',
+            LINK: 'https://gitee.com/openeuler/A-Tune/blob/master/docs/zh/24.03_LTS_SP2/installation_and_deployment.md',
           },
         ],
         BACKGROUND: {
@@ -99,7 +99,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/server/performance/system_optimization/atune/usage_instructions.md',
+            LINK: 'https://gitee.com/openeuler/A-Tune/blob/master/docs/zh/24.03_LTS_SP2/usage_instructions.md',
           },
         ],
         BACKGROUND: {

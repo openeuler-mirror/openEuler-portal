@@ -132,7 +132,7 @@ export const LOGO_DOWNLOAD = [
   },
 ];
 
-export const guide = 'https://legacy.openatom.cn/brandguide';
+export const guide = 'https://www.openatom.cn/brand-guide';
 
 export const INNOVATION_LOGO_DOWNLOAD = [
   {

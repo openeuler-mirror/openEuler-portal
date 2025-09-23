@@ -9,7 +9,6 @@ import SummitBanner from './components/SummitBanner.vue';
 import SummitGuest from './components/SummitGuest.vue';
 import SummitPartner from './components/SummitPartner.vue';
 import SummitAgent from './components/SummitAgent.vue';
-import SummitLive from './components/SummitLive.vue';
 
 import liveLight from '@/assets/category/summit/summit2022/live.png';
 import liveDark from '@/assets/category/summit/summit2022/live-dark.png';
@@ -52,9 +51,6 @@ const summit2024 = localAgendaData.value.find(
 )?.content?.sections;
 agendaData.value = summit2024.find((item) => item.type === 'AGENDA');
 guestData.value = summit2024.find((item) => item.type === 'GUEST');
-
-//-------- 直播 --------
-const isLiveShown = ref(0);
 </script>
 <template>
   <SummitBanner :banner-data="summitData.banner" />
@@ -70,41 +66,7 @@ const isLiveShown = ref(0);
       </ul>
       <p v-if="summitData?.introduce4">{{ summitData.introduce4 }}</p>
     </div>
-    <div v-if="lang === 'zh'" id="live" class="live">
-      <h3 class="title-bar">
-        {{ lang === 'zh' ? summitData.live.title : summitData.live.titleEn }}
-      </h3>
-      <div>
-        <OTabs v-model="isLiveShown" class="schedule-tabs">
-          <el-tab-pane
-            v-for="(item, index) in summitData.live.date"
-            :key="index"
-            :name="index"
-          >
-            <template #label>
-              <div class="time-tabs">
-                {{ item }}
-              </div>
-            </template>
-          </el-tab-pane>
-        </OTabs>
-        <ClientOnly>
-          <SummitLive
-            v-if="isLiveShown === 0"
-            :live-data="summitData.live.liveData1"
-            class-name="live-btn1"
-            class="live-box"
-          />
-          <SummitLive
-            v-if="isLiveShown === 1"
-            :live-data="summitData.live.liveData2"
-            class-name="live-btn2"
-            class="live-box"
-          />
-        </ClientOnly>
-      </div>
-    </div>
-    <SummitAgent class="agenda-floor" :data="agendaData" />
+    <SummitAgent id="agenda" class="agenda-floor" :data="agendaData" />
 
     <SummitGuest v-if="guestData" class="guest" :data="guestData" />
     <SummitPartner />
@@ -194,93 +156,6 @@ const isLiveShown = ref(0);
     margin-top: var(--e-spacing-h2);
     @media (max-width: 767px) {
       margin-top: var(--e-spacing-h4);
-    }
-  }
-}
-.live {
-  &::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 80px;
-    margin-top: -80px;
-    overflow: hidden;
-  }
-  .schedule-tabs {
-    text-align: center;
-    margin-top: 24px;
-
-    :deep(.el-tabs__nav-wrap) {
-      display: flex;
-      justify-content: center;
-      .el-tabs__nav {
-        display: inline-flex;
-        .el-tabs__active-bar {
-          display: none;
-        }
-        .el-tabs__item {
-          padding: 0;
-        }
-      }
-    }
-    .time-tabs {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      // margin: 0 0 24px;
-      cursor: pointer;
-      border: 1px solid var(--e-color-border2);
-      color: var(--e-color-text1);
-      width: 120px;
-      text-align: center;
-      background: var(--e-color-bg2);
-      font-size: var(--e-font-size-text);
-      line-height: 38px;
-      padding: 0 var(--e-spacing-h5);
-      .o-icon {
-        margin-left: 12px;
-      }
-      @media (max-width: 1100px) {
-        width: 80px;
-        line-height: 28px;
-        font-size: var(--e-font-size-tip);
-        padding: 0 var(--e-spacing-h6);
-      }
-    }
-
-    .is-active .time-tabs {
-      color: #fff;
-      background: var(--e-color-brand1);
-      border-color: var(--e-color-brand2);
-    }
-    .other-tabs {
-      margin-bottom: 24px;
-      :deep(.el-tabs__nav) {
-        @media (max-width: 1100px) {
-          line-height: 44px;
-        }
-      }
-      :deep(.el-tabs__header) {
-        text-align: center;
-        .el-tabs__item {
-          @media (max-width: 1100px) {
-            font-size: var(--e-font-size-tip);
-            line-height: var(--e-line-height-tip);
-          }
-        }
-      }
-    }
-  }
-  .time-box {
-    margin-top: 24px;
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    .o-button {
-      color: var(--e-color-text1);
-      :deep(.suffix-icon) {
-        color: var(--e-color-brand1);
-      }
     }
   }
 }

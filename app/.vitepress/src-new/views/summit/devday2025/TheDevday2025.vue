@@ -6,7 +6,6 @@ import MinisiteCard from './components/MinisiteCard.vue';
 import MinisiteAgenda from './components/MinisiteAgenda.vue';
 import MinisiteReview from './components/MinisiteReview.vue';
 import MinisiteAnchor from './components/MinisiteAnchor.vue';
-import MinisiteLive from './components/MinisiteLive.vue';
 import MinisiteGuide from './components/MinisiteGuide.vue';
 import data from './data/data_zh';
 </script>
@@ -19,7 +18,6 @@ import data from './data/data_zh';
       :introduce-data="data.introduce"
       id="minisite-introduction"
     />
-    <MinisiteLive :live-data="data.live" id="minisite-live" />
     <MinisiteCard :topic-data="data.topic" />
     <MinisiteAgenda :agenda-data="data.agenda" id="minisite-agenda" />
     <MinisiteGuide :guide-data="data.guide" id="venue-guide" />
