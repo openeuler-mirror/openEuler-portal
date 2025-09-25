@@ -6,7 +6,7 @@ export default {
   desc2: '，确保规范使用。',
   desc3: '咨询联系方式',
   guide: '《开放原子开源基金会品牌使用指南》',
-  specification: '《openEuler项目商标使用规范》',
+  specification: '《openEuler标志视觉识别规范》',
   brandTitle: 'openEuler项目品牌',
   brandTitleTip: '（包含英文名称、中文名称及Logo）',
   brandInnovationTitle: 'openEuler社区创新项目品牌',

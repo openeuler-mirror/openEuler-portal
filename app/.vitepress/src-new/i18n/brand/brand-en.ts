@@ -6,7 +6,7 @@ export default {
   desc2: '',
   desc3: 'For any questions regarding the use of above trademarks, contact ',
   guide: 'OpenAtom Foundation Brand Use Guidelines',
-  specification: 'openEuler Trademark Usage Specifications.',
+  specification: 'openEuler Visual Identity System Management Manual',
   brandTitle: 'openEuler Trademark',
   brandTitleTip: '',
   brandInnovationTitle: 'openEuler Innovation Project Trademarks',

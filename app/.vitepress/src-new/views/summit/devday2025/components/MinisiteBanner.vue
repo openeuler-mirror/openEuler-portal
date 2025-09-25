@@ -35,7 +35,7 @@ const enrollUrl = computed(() => {
     ? isPhone.value
       ? props.bannerData.signUpHrefMo
       : props.bannerData.signUpHrefPc
-    : '#minisite-live';
+    : '#minisite-agenda';
 });
 </script>
 
