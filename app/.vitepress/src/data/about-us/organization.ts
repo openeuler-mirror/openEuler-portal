@@ -53,13 +53,13 @@ import wuheshuan from '@/assets/category/organization/expert/wuheshuan.png';
 // 品牌委员会
 import liangbin from '@/assets/category/organization/brand/liangbin.png';
 import huangzhaowei from '@/assets/category/organization/brand/huangzhaowei.png';
-import zhengchuanrong from '@/assets/category/organization/brand/zhengchuanrong.png';
 import xulu from '@/assets/category/organization/brand/xulu.png';
 import lizhenning from '@/assets/category/organization/brand/lizhenning.png';
 import zhengli from '@/assets/category/organization/brand/zhengli.png';
 import wendan from '@/assets/category/organization/brand/wendan.png';
 import humingyue from '@/assets/category/organization/brand/humingyu.png';
 import pengyaying from '@/assets/category/organization/brand/pengyaying.png';
+import xuyanli from '@/assets/category/organization/brand/xuyanli.png';
 
 // 用户委员会
 import gaohonghe from '@/assets/category/organization/user/gaohonghe.png';
@@ -544,10 +544,10 @@ export default {
             email: 'xu_lu2@hoperun.com',
           },
           {
-            img: zhengchuanrong,
-            name: '郑传荣',
+            img: xuyanli,
+            name: '徐嫣莉',
             position: ['委员'],
-            email: 'zhengchuanrong@uniontech.com',
+            email: 'xuyanli@uniontech.com',
           },
           {
             img: zhengli,
@@ -1178,10 +1178,10 @@ export default {
             email: 'xu_lu2@hoperun.com',
           },
           {
-            img: zhengchuanrong,
-            name: 'Zheng Chuanrong',
+            img: xuyanli,
+            name: 'Xu Yanli',
             position: ['Committee member'],
-            email: 'zhengchuanrong@uniontech.com',
+            email: 'xuyanli@uniontech.com',
           },
           {
             img: zhengli,
@@ -1298,6 +1298,105 @@ export default {
           },
         ],
       },
+    {
+        title: 'openEuler Service Development Working Group',
+        list: [
+          { img: liyang, name: 'Li Yang', position: ['Lead'] },
+          { img: huangweixu, name: 'Huang Weixu', position: ['Co-Lead'] },
+          { img: zhangmuliang, name: 'Zhang Muliang', position: ['Co-Lead'] },
+          { img: lichengpeng, name: 'Li Chengpeng', position: ['Member'] },
+          { img: liuhuajie, name: 'Liu Huajie', position: ['Member'] },
+          { img: liumingjie, name: 'Liu Mingjie', position: ['Member'] },
+          { img: liushenghang, name: 'Liu Shenghang', position: ['Member'] },
+          { img: zhangjian, name: 'Zhang Jian', position: ['Member'] },
+          { img: zuwenyu, name: 'Zhu Wenyu', position: ['Member'] },
+        ],
+      },
+      {
+        title: 'openEuler Operations Working Group',
+        list: [
+          { img: zhenzhengyu, name: 'Zheng Zhenyu', position: ['Lead'] },
+          { img: huxiaojie, name: 'Hu Xiaojie', position: ['Co-Lead'] },
+          { img: chenjing, name: 'Chen Jing', position: ['Member'] },
+          { img: liuhuajie, name: 'Liu Huajie', position: ['Member'] },
+          { img: liming, name: 'Liu Min', position: ['Member'] },
+          { img: liumingjie, name: 'Liu Mingjie', position: ['Member'] },
+          { img: rentao, name: 'Ren Tao', position: ['Member'] },
+          { img: tiankehui, name: 'Tian Kehui', position: ['Member'] },
+          { img: xulu, name: 'Xu Lu', position: ['Member'] },
+        ],
+      },
+      {
+        title: 'openEuler Education Working Group',
+        list: [
+          { img: zhaolichao, name: 'Zhao Lichao', position: ['Lead'] },
+          { img: yangdongjie, name: 'Yang Dongjie', position: ['Co-Lead'] },
+          { img: fanglili, name: 'Fang Lili', position: ['Member'] },
+          { img: fenxiaoliang, name: 'Feng Xiaoliang', position: ['Member'] },
+          { img: gaoliqun, name: 'Gao Liqun', position: ['Member'] },
+          { img: guoquanyou, name: 'Guo Quanyou', position: ['Member'] },
+          { img: linzhenxing, name: 'Lin Zhenxing', position: ['Member'] },
+          { img: menxiaokang, name: 'Men Xiaokang', position: ['Member'] },
+          { img: qinxuefen, name: 'Qin Xuefeng', position: ['Member'] },
+          { img: xieyu, name: 'Xie Yu', position: ['Member'] },
+          { img: yangheyue, name: 'Yang Heyue', position: ['Member'] },
+        ],
+      },
+      {
+        title: 'openEuler Legal Affairs Working Group',
+        list: [
+          { img: zhangwei, name: 'Zhang Wei', position: ['Lead'] },
+          { img: liuwei, name: 'Liu Wei', position: ['Co-Lead'] },
+          { img: libo, name: 'Li Bo', position: ['Member'] },
+          { img: songlipin, name: 'Song Liping', position: ['Member'] },
+          { img: wangsiyang, name: 'Wang Siyang', position: ['Member'] },
+          { img: xinpeng, name: 'Xing Peng', position: ['Member'] },
+        ],
+      },
+      {
+        title: 'openEuler AI Joint Working Group',
+        list: [
+          { img: huxinwei, name: 'Hu Xinwei', position: ['Lead'] },
+          { img: chenrong, name: 'Chen Rong', position: ['Member'] },
+          { img: chenyaqiang, name: 'Chen Yaqiang', position: ['Member'] },
+          { img: dengyiping, name: 'Deng Yiping', position: ['Member'] },
+          { img: dingweijie, name: 'Ding Weijie', position: ['Member'] },
+          { img: gaowei, name: 'Gao Wei', position: ['Member'] },
+          { img: guoyibin, name: 'Guo Yibin', position: ['Member'] },
+          { img: heshoucheng, name: 'He Shoucheng', position: ['Member'] },
+          { img: houjian, name: 'Hou Jian', position: ['Member'] },
+          { img: FredHuang, name: 'Fred Huang', position: ['Member'] },
+          { img: huangjun, name: 'Huang Jun', position: ['Member'] },
+          { img: jiangyiwen, name: 'Jiang Yiwen', position: ['Member'] },
+          { img: jiangyuwei, name: 'Jiang Yuwei', position: ['Member'] },
+          { img: jiangzhengxiong, name: 'Jiang Zhengxiong', position: ['Member'] },
+          { img: jinlong, name: 'Jin Long', position: ['Member'] },
+          { img: qinbinjuan, name: 'Qin Binjuan', position: ['Member'] },
+          { img: quemingjian, name: 'Que Mingjian', position: ['Member'] },
+          { img: shenguoliang, name: 'Shen Guoliang', position: ['Member'] },
+          { img: sunzhenghua, name: 'Sun Zhenghua', position: ['Member'] },
+          { img: tiankehui, name: 'Tian Kehui', position: ['Member'] },
+          { img: wangqingjun, name: 'Wang Qingjun', position: ['Member'] },
+          { img: wotianyu, name: 'Wo Tianyu', position: ['Member'] },
+          { img: wubin, name: 'Wu Bin', position: ['Member'] },
+          { img: xiazhiyuan, name: 'Xia Zhiyuan', position: ['Member'] },
+          { img: xiangyuanhong, name: 'Xiang Yuanhong', position: ['Member'] },
+          { img: xuyang, name: 'Xu Yang', position: ['Member'] },
+          { img: yanhaishuang, name: 'Yan Haishuang', position: ['Member'] },
+          { img: yangxili, name: 'Yang Xili', position: ['Member'] },
+          { img: zhannianke, name: 'Zhan Nianke', position: ['Member'] },
+        ],
+      },
+      {
+        title: 'openEuler Globalization Working Group',
+        list: [
+          { img: zhounan, name: 'Zhou Nan', position: ['Lead'] },
+          { img: caijuanyang, name: 'Cai Juanyang', position: ['Member'] },
+          { img: lichengpeng_globalization, name: 'Li Chengpeng', position: ['Member'] },
+          { img: liumingjie_globalization, name: 'Liu Mingjie', position: ['Member'] },
+          { img: renzidong, name: 'Ren Zidong', position: ['Member'] },
+        ],
+      },
     ],
     idList: [
       'advisory-committee',
@@ -1305,6 +1404,12 @@ export default {
       'technical-committee',
       'marketing-committee',
       'user-committee',
+      'service-development-working-group',
+      'operations-working-group',
+      'education-working-group',
+      'legal-affairs-working-group',
+      'AI-joint-working-group',
+      'globalization-working-group',
     ],
     notice: 'Note: The names are sorted in alphabetical order.',
   },
