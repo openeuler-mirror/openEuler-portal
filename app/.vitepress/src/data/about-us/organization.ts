@@ -66,13 +66,11 @@ import liwei from '@/assets/category/organization/brand/liwei.png';
 // 用户委员会
 import gaohonghe from '@/assets/category/organization/user/gaohonghe.png';
 import wangjun from '@/assets/category/organization/user/wangjun.png';
-import wangyouhai from '@/assets/category/organization/user/wangyouhai.png';
 import weijiangang from '@/assets/category/organization/user/weijiangang.png';
 import zhangjian from '@/assets/category/organization/user/zhangjian.png';
 import zhangqingnan from '@/assets/category/organization/user/zhangqingnan.png';
 import xulei from '@/assets/category/organization/user/xulei.png';
 import zuchen from '@/assets/category/organization/user/zuchen.png';
-import weibin from '@/assets/category/organization/user/weishan.png';
 import zhenzhenyu from '@/assets/category/organization/user/zhenzhenyu.png';
 import chenjin from '@/assets/category/organization/user/chenjin.png';
 import cuiji from '@/assets/category/organization/user/cuiji.png';
@@ -1333,7 +1331,7 @@ export default {
           },
         ],
       },
-    {
+      {
         title: 'openEuler Service Development Working Group',
         list: [
           { img: liyang, name: 'Li Yang', position: ['Lead'] },

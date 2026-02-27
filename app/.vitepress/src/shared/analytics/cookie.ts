@@ -1,4 +1,5 @@
-export let isCookieAgreed = () => document.cookie.match(/\bagreed-cookiepolicy=(.+?);?/)?.[1] === '1';
+export let isCookieAgreed = () =>
+  document.cookie.match(/\bagreed-cookiepolicy=(.+?);?/)?.[1] === '1';
 
 export function setIsCookieAgreed(fn: () => boolean) {
   isCookieAgreed = fn;
@@ -6,7 +7,10 @@ export function setIsCookieAgreed(fn: () => boolean) {
 
 // 监听cookie set
 export default function startListenCookieSet(callback: () => void) {
-  const origDesc = Object.getOwnPropertyDescriptor(Document.prototype, 'cookie')!;
+  const origDesc = Object.getOwnPropertyDescriptor(
+    Document.prototype,
+    'cookie'
+  )!;
   Object.defineProperty(Document.prototype, '_cookie', origDesc);
   Object.defineProperty(Document.prototype, 'cookie', {
     ...origDesc,

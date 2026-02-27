@@ -57,7 +57,9 @@ export default {
       IMG: tvImg,
       DARK_IMG: tvImg,
       TITLE: '加入StratoVirt大家庭',
-      LINK_LIST: ['https://atomgit.com/openeuler/community/tree/master/sig/Virt'],
+      LINK_LIST: [
+        'https://atomgit.com/openeuler/community/tree/master/sig/Virt',
+      ],
       SHOW: false,
     },
     {

@@ -16,7 +16,7 @@ const slugify = (s: string) =>
       .replace(' ', '-')
   );
 export function convertGiteePath(markdown: string) {
-  const regex = /(\]\()(oEEP-[^\)]+)/g;
+  const regex = /(\]\()(oEEP-[^)]+)/g;
   markdown = markdown?.replace(
     regex,
     (match, p1, p2) =>

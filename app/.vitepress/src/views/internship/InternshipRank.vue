@@ -62,12 +62,12 @@ async function getRankData() {
       throw new Error(res.code + ' ' + res.message);
     }
   } catch (error: any) {
-    console.error(error);
+    throw new Error(error);
   }
 }
 const toggleRankState = () => {
   if (isRankUnfold.value) {
-    renderData.value = rankInfo.value && rankInfo.value.slice(3, 10);  
+    renderData.value = rankInfo.value && rankInfo.value.slice(3, 10);
   } else {
     renderData.value = rankInfo.value && rankInfo.value.slice(3);
   }

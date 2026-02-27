@@ -364,6 +364,11 @@ html[lang='zh'] {
   &.show {
     opacity: 1;
   }
+  svg {
+    width: 16px;
+    height: 16px;
+    color: #fff;
+  }
 }
 :deep(.swiper-button-next) {
   width: 32px;
@@ -382,6 +387,11 @@ html[lang='zh'] {
   }
   &.show {
     opacity: 1;
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+    color: #fff;
   }
 }
 </style>

@@ -174,7 +174,7 @@ const pageTotal = computed(() =>
       <template v-if="newsCardData.length">
         <div class="news-list">
           <OCard
-            v-for="item in newsCardData.slice(0,9)"
+            v-for="item in newsCardData.slice(0, 9)"
             :key="item.path"
             class="news-list-item"
             shadow="hover"

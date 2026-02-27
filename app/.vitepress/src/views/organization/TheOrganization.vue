@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, computed } from 'vue';
+import { computed } from 'vue';
 import { useData } from 'vitepress';
 
 import ORGANIZATION_DATA from '@/data/about-us/organization';
@@ -81,6 +81,7 @@ const organizationData: any = computed(() => {
     </ul>
     <template
       v-for="(groupInfo, index) in organizationData.memberList.slice(3)"
+      :key="index"
     >
       <h2 :id="organizationData.idList[index + 3]" class="council-counselor">
         {{ groupInfo.title }}

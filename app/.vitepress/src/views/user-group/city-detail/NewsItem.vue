@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { PropType } from 'vue';
-import { useRouter } from 'vitepress';
 
 import type { NewsDataT } from '@/shared/@types/type-news';
 
@@ -13,7 +12,6 @@ defineProps({
   },
 });
 
-const router = useRouter();
 const toNewsContent = (path: string) => {
   window.open('/' + path + '.html', '_blank');
 };

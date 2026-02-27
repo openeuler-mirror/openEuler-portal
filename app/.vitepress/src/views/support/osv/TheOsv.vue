@@ -34,14 +34,46 @@ const all = computed(() => {
 });
 
 const columns = [
-  { label: i18n.value.approve.TABLE_COLUMN.ARCHITECTURE, key: 'arch', style: { width: '124px' } },
-  { label: i18n.value.approve.TABLE_COLUMN.COMPANY, key: 'osvName', style: { width: lePad.value ? '160px' : '240px' } },
-  { label: i18n.value.approve.TABLE_COLUMN.VERSION, key: 'osVersion', style: { width: lePad.value ? '160px' : '240px' } },
-  { label: i18n.value.approve.TABLE_COLUMN.DOWNLOAD, key: 'osDownloadLink', style: { width: lePad.value ? '160px' : '240px' } },
-  { label: i18n.value.approve.TABLE_COLUMN.TYPE, key: 'type', style: { width: '96px' } },
-  { label: i18n.value.approve.TABLE_COLUMN.DATE, key: 'date', style: { width: '130px' } },
-  { label: i18n.value.approve.TABLE_COLUMN.DETAILS, key: 'details', style: { width: '104px' } },
-  { label: i18n.value.approve.TABLE_COLUMN.LINK, key: 'friendlyLink', style: { width: '124px' } },
+  {
+    label: i18n.value.approve.TABLE_COLUMN.ARCHITECTURE,
+    key: 'arch',
+    style: { width: '124px' },
+  },
+  {
+    label: i18n.value.approve.TABLE_COLUMN.COMPANY,
+    key: 'osvName',
+    style: { width: lePad.value ? '160px' : '240px' },
+  },
+  {
+    label: i18n.value.approve.TABLE_COLUMN.VERSION,
+    key: 'osVersion',
+    style: { width: lePad.value ? '160px' : '240px' },
+  },
+  {
+    label: i18n.value.approve.TABLE_COLUMN.DOWNLOAD,
+    key: 'osDownloadLink',
+    style: { width: lePad.value ? '160px' : '240px' },
+  },
+  {
+    label: i18n.value.approve.TABLE_COLUMN.TYPE,
+    key: 'type',
+    style: { width: '96px' },
+  },
+  {
+    label: i18n.value.approve.TABLE_COLUMN.DATE,
+    key: 'date',
+    style: { width: '130px' },
+  },
+  {
+    label: i18n.value.approve.TABLE_COLUMN.DETAILS,
+    key: 'details',
+    style: { width: '104px' },
+  },
+  {
+    label: i18n.value.approve.TABLE_COLUMN.LINK,
+    key: 'friendlyLink',
+    style: { width: '124px' },
+  },
 ];
 
 const inputName = ref('');
@@ -234,10 +266,18 @@ watch(queryData, () => getOsTableList(queryData));
       </div>
     </OCard>
 
-    <OTable class="pc-list" :columns="columns" :data="osvList" style="width: 100%">
+    <OTable
+      class="pc-list"
+      :columns="columns"
+      :data="osvList"
+      style="width: 100%"
+    >
       <template #td_osDownloadLink="{ row }">
         <a
-          v-if="row.osDownloadLink.startsWith('http') || row.osDownloadLink.startsWith('www')"
+          v-if="
+            row.osDownloadLink.startsWith('http') ||
+            row.osDownloadLink.startsWith('www')
+          "
           :href="row.osDownloadLink"
           target="_blank"
           rel="noopener noreferrer"

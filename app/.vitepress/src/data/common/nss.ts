@@ -6,4 +6,4 @@ export const hideNssRoutes = [
   '/community/vote', // 选举条例
   '/community/conduct', // 行为准则
   '/community/meeting-system', // 会议制度
-]
+];

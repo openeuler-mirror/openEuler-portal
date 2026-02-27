@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, shallowRef, onMounted, computed, onUnmounted, watch } from 'vue';
+import { ref, onMounted, computed, onUnmounted, watch } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 
@@ -32,11 +32,6 @@ const isVideoVisible = ref(false);
 const { lang } = useData();
 const i18n = useI18n();
 
-interface flowPathList {
-  THEME: string;
-  TIME: string;
-  SPEAKER: any;
-}
 const isLatest = computed(() => {
   if (detailObj.value?.date) {
     return (

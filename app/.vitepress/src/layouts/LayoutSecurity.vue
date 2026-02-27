@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { reactive, computed, ref, onMounted, onUpdated } from 'vue';
+import { reactive, computed, ref, onMounted } from 'vue';
 import { useData, useRouter } from 'vitepress';
 
 import { OButton, OTab, OTabPane } from '@opensig/opendesign';
@@ -113,7 +113,7 @@ onMounted(() => {
         </OButton>
       </div>
     </BannerLevel2>
-    <OTab v-model="activeTab" :line="false" :key="lang" @change="clickTab">
+    <OTab :key="lang" v-model="activeTab" :line="false" @change="clickTab">
       <OTabPane
         v-for="item in tabsData.tabPane"
         :key="item.name"

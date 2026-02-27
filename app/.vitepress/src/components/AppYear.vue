@@ -21,7 +21,7 @@ onMounted(() => {
     const summaryClose = sessionStorage.getItem('close_summary');
     isShow.value = summaryClose === null;
   }
-})
+});
 
 function closeYear() {
   isShow.value = false;
@@ -36,8 +36,8 @@ const yearImg = computed(() => {
       ? yearImgZhMb
       : yearImgZh
     : lePadV.value
-      ? yearImgEnMb
-      : yearImgEn;
+    ? yearImgEnMb
+    : yearImgEn;
 });
 </script>
 <template>
