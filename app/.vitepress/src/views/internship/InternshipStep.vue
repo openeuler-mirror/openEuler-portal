@@ -41,6 +41,7 @@ const STEP = {
       '。发送后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。',
     DONWLOAD: '实习申请材料模板下载',
     TIP: '（注：组织方会根据所提交的资料对报名学生进行一定的审核筛选）',
+    DESC: '注：自2026年3月1日起，openEuler开源实习offer发放时间调整为：实习积分满10分后。',
   },
   ATTENTION: '注意',
   STEP_TOW: {
@@ -159,6 +160,9 @@ const STEP = {
               class="download download-module"
               >{{ STEP.STEP_ONE.DONWLOAD }}</a
             >
+            <p class="orange" style="margin-top: 10px;">
+              {{ STEP.STEP_ONE.DESC }}
+            </p>
           </div>
         </div>
       </div>
