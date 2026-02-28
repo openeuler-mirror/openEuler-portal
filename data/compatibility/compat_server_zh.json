@@ -34374,5 +34374,111 @@
       "hostBusAdapter": "",
       "hardDiskDrive": "Broadcom 9560-16i"
     }
+  },
+  {
+    "hardwareFactory": "超聚变数字技术有限公司",
+    "hardwareModel": "2288H V6",
+    "osVersion": "openEuler 24.03 LTS SP2",
+    "architecture": "x86_64",
+    "date": "2026/02/04",
+    "friendlyLink": "https://www.xfusion.com/cn/product/rack-server/fusionserver-2288h-v6",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1f24",
+        "ssID": "200b",
+        "architecture": "x86_64",
+        "os": "openEuler 24.03 LTS SP2",
+        "driverName": "igb",
+        "version": "6.6.0-98.0.0.103.oe2403sp2.x86_64",
+        "type": "NIC",
+        "date": "2026/02/04",
+        "sha256": "44c7724c4151ddc6f9a333692d9d4546694a238cc39948d21a7849d6f66ebf74",
+        "driverSize": "129692",
+        "chipVendor": "intel",
+        "boardModel": "xc310",
+        "chipModel": "i350",
+        "item": "NA",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.xfusion.com/cn/product/rack-server/fusionserver-2288h-v6",
+      "certificationTime": "2026/02/04",
+      "commitID": "NA",
+      "mainboardModel": "\tBC13MBSB",
+      "biosUefi": "1.83 (U1007)",
+      "cpu": "\tIntel(R) Xeon(R) Gold 6342 CPU @ 2.80GHz",
+      "ram": "2*16G DIMMs",
+      "portsBusTypes": "x16 PCI Express 5 x16",
+      "videoAdapter": "Hi171x",
+      "hostBusAdapter": "SAS3508",
+      "hardDiskDrive": "BROADCOM SAS3808-iMR 5.22"
+    }
+  },
+  {
+    "hardwareFactory": "超聚变数字技术有限公司",
+    "hardwareModel": "2288H V7",
+    "osVersion": "openEuler 24.03 LTS SP2",
+    "architecture": "x86_64",
+    "date": "2026/02/04",
+    "friendlyLink": "https://www.xfusion.com/cn/product/rack-server/fusionserver-2288h-v7",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1f24",
+        "ssID": "200b",
+        "architecture": "x86_64",
+        "os": "openEuler 24.03 LTS SP2",
+        "driverName": "igb",
+        "version": "6.6.0-98.0.0.103.oe2403sp2.x86_64",
+        "type": "NIC",
+        "date": "2026/02/04",
+        "sha256": "44c7724c4151ddc6f9a333692d9d4546694a238cc39948d21a7849d6f66ebf74",
+        "driverSize": "129692",
+        "chipVendor": "intel",
+        "boardModel": "xc310",
+        "chipModel": "i350",
+        "item": "NA",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.xfusion.com/cn/product/rack-server/fusionserver-2288h-v7",
+      "certificationTime": "2026/02/04",
+      "commitID": "NA",
+      "mainboardModel": "BC15MBSA",
+      "biosUefi": "01.01.08.07 (U6216)",
+      "cpu": "Intel(R) Xeon(R) Platinum 8490H",
+      "ram": "2*16G DIMMs",
+      "portsBusTypes": "x16 PCI Express 5 x16",
+      "videoAdapter": "Hi171x",
+      "hostBusAdapter": "MegaRAID 9540-16i",
+      "hardDiskDrive": "BROADCOM MR9540-16i 5.22 "
+    }
+  },
+  {
+    "hardwareFactory": "新华三技术有限公司",
+    "hardwareModel": "H3C UniServer R4930 G7",
+    "osVersion": "openEuler 24.03 LTS SP2",
+    "architecture": "x86_64",
+    "date": "2026/02/13",
+    "friendlyLink": "https://www.h3c.com/",
+    "boardCards": [],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com/",
+      "certificationTime": "2026/02/13",
+      "commitID": "NA",
+      "mainboardModel": "RS42M2C10S0",
+      "biosUefi": "7.50.31",
+      "cpu": "Hygon C86-4G (OPN:7490)*2",
+      "ram": "2*96G Hynix RDIMM",
+      "portsBusTypes": "x16 PCI Express 5 x16",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family",
+      "hostBusAdapter": "SAS3808",
+      "hardDiskDrive": "SAMSUNG MZ7L33T8HBNA-00B7C; SAMSUNG MZ7L33T8HBLT-00B7C"
+    }
   }
 ]
