@@ -15550,5 +15550,77 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "南京启诺信息技术有限公司",
+    "os_version": "EbainaOS-HiEulerPi-aarch64-V1.0",
+    "arch": "aarch64",
+    "checksum": " \n55ea4512a33ddb63ef08a0465021bfc5",
+    "base_openeuler_version": "openEuler Embedded 24.03 LTS",
+    "os_download_link": "https://www.ebaina.com/ai/58",
+    "friendly_link": "https://www.ebaina.com/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2026/03/02",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 ]
