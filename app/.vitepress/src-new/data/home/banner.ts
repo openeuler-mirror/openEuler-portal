@@ -12,29 +12,8 @@ import annual_report_pad from '~@/assets/category/home/banner/annual-report/pad.
 import annual_report_mb_zh from '~@/assets/category/home/banner/annual-report/mb.jpg';
 import annual_report_mb_en from '~@/assets/category/home/banner/annual-report/mb_en.jpg';
 
-import festival_bg from '~@/assets/category/home/banner/festival/background.jpg';
-import festival_pad_bg from '~@/assets/category/home/banner/festival/background_pad.jpg';
-import festival_mb_zh from '~@/assets/category/home/banner/festival/festival_mb_zh.jpg';
-import festival_mb_en from '~@/assets/category/home/banner/festival/festival_mb_en.jpg';
-import festival_text_zh from '~@/assets/category/home/banner/festival/festival_text_zh.png';
-import festival_text_en from '~@/assets/category/home/banner/festival/festival_text_en.png';
-
 export default {
   zh: [
-    {
-      bg_pc: festival_bg,
-      bg_pad: festival_pad_bg,
-      bg_mb: festival_mb_zh,
-      bg_text: festival_text_zh,
-      bg_theme: 'light',
-      title: '',
-      btn: '',
-      href: '',
-      pc_text_width: '688px',
-      pc_text_height: '160px',
-      pad_text_width: '395px',
-      pad_text_height: '95px',
-    },
     {
       bg_pc: annual_report_pc,
       bg_pad: annual_report_pad,
@@ -76,20 +55,6 @@ export default {
     },
   ],
   en: [
-    {
-      bg_pc: festival_bg,
-      bg_pad: festival_pad_bg,
-      bg_mb: festival_mb_en,
-      bg_text: festival_text_en,
-      bg_theme: 'light',
-      title: '',
-      btn: '',
-      href: '',
-      pc_text_width: '688px',
-      pc_text_height: '160px',
-      pad_text_width: '395px',
-      pad_text_height: '95px',
-    },
     {
       bg_pc: annual_report_pc,
       bg_pad: annual_report_pad,
