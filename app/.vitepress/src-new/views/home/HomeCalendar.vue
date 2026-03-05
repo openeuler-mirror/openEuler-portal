@@ -237,13 +237,13 @@ const displayCalendarData = computed(() => {
         endTime: cycle_end,
         cycleType,
       });
-      hasObsData = obsData.some((t) => t.sub_id === v.cycle_sub.find((z) => z.date === date)?.sub_id);
+      hasObsData = obsData.some((t) => t.sub_id === v.cycle_sub.find((z) => z.date === selectedDateStr.value)?.sub_id);
     } else {
       hasObsData = obsData.length > 0;
     }
 
     if (hasObsData) {
-      replay_url = `${location.origin}/${locale.value}/video/${v.group_name}/${v.mid}/${date}`;
+      replay_url = `${location.origin}/${locale.value}/video/${v.group_name}/${v.mid}/${selectedDateStr.value}`;
     } else if (v?.video_url) {
       replay_url = v?.video_url;
     }
