@@ -178,9 +178,9 @@ const onClickLink = (e: MouseEvent) => {
     }
   }
   .pkg-os {
-    @include tip1;
     color: var(--o-color-info2);
     margin-top: 6px;
+    @include tip1;
   }
   .pkg-info {
     display: flex;
@@ -202,7 +202,6 @@ const onClickLink = (e: MouseEvent) => {
     }
   }
   .name-info {
-    @include h3;
     color: var(--o-color-info1);
     flex: 1;
     word-break: break-word;
@@ -215,6 +214,7 @@ const onClickLink = (e: MouseEvent) => {
     -webkit-box-orient: vertical;
     position: relative;
     word-break: break-all;
+    @include h3;
     @include respond-to('<=pad_v') {
       height: 32px;
     }
@@ -233,7 +233,6 @@ const onClickLink = (e: MouseEvent) => {
       }
     }
     .maintainers {
-      @include tip1;
       color: var(--o-color-info3);
       white-space: nowrap;
       overflow: hidden;
@@ -241,6 +240,7 @@ const onClickLink = (e: MouseEvent) => {
       display: flex;
       align-items: center;
       margin-top: 16px;
+      @include tip1;
       @include respond-to('<=pad_v') {
         margin-top: 8px;
       }
@@ -316,14 +316,14 @@ const onClickLink = (e: MouseEvent) => {
     position: relative;
     word-break: break-all;
     height: 48px;
+    --linear-gradient: var(--o-mixedgray-1);
+    @include text1;
     @include respond-to('<=pad_v') {
       height: 36px;
     }
-    --linear-gradient: var(--o-mixedgray-1);
     &.dark {
       --linear-gradient: var(--o-mixedgray-4);
     }
-    @include text1;
     &::after {
       background-image: linear-gradient(
         90deg,

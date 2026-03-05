@@ -115,8 +115,8 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
     justify-content: center;
     color: var(--o-color-info1);
     text-align: center;
-    @include display3;
     font-weight: 500;
+    @include display3;
   }
 
   .section-subtitle {
@@ -155,9 +155,9 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
 
     display: flex;
     justify-content: center;
-    @include text1;
-
+    
     margin-top: 32px;
+    @include text1;
 
     @include respond-to('<=laptop') {
       margin-top: 16px;

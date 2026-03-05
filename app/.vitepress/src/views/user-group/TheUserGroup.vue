@@ -78,9 +78,9 @@ const jumpTo = (path: string) => {
 }
 
 .banner-subtitle {
-  @include h4;
   color: rgb(var(--o-white));
   margin-bottom: var(--o-gap-3);
+  @include h4;
   @include respond-to('>laptop') {
     min-width: 800px;
   }

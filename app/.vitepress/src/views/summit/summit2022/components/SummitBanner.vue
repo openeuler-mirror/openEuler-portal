@@ -164,6 +164,12 @@ html[lang='zh'] {
 .summit-banner {
   height: 380px;
   position: relative;
+  @media screen and (max-width: 1100px) {
+    height: 400px;
+  }
+  @media screen and (max-width: 824px) {
+    height: 300px;
+  }
   .banner-panel {
     position: absolute;
     background-color: var(--e-color-bg2);
@@ -175,6 +181,9 @@ html[lang='zh'] {
     height: 100%;
     opacity: 1;
     transition: all 0.33s;
+    @media screen and (max-width: 767px) {
+      position: static !important;
+    }
     &-content {
       box-sizing: border-box;
       max-width: 1504px;
@@ -204,19 +213,6 @@ html[lang='zh'] {
       }
 
       .desc {
-        @media screen and (min-width: 1439px) {
-          // max-width: 500px;
-        }
-        .inline-desc {
-          &:nth-child(2) {
-            padding-left: 30px;
-            @media screen and (max-width: 768px) {
-              padding: 0;
-              display: block;
-            }
-          }
-        }
-
         font-size: var(--e-font-size-h5);
         font-weight: normal;
         line-height: var(--e-line-height-h5);
@@ -230,6 +226,15 @@ html[lang='zh'] {
           margin-top: var(--e-spacing-h9);
           font-size: var(--e-font-size-text);
           line-height: var(--e-line-height-text);
+        }
+        .inline-desc {
+          &:nth-child(2) {
+            padding-left: 30px;
+            @media screen and (max-width: 768px) {
+              padding: 0;
+              display: block;
+            }
+          }
         }
       }
       .action {
@@ -294,16 +299,6 @@ html[lang='zh'] {
         height: 300px;
       }
     }
-
-    @media screen and (max-width: 767px) {
-      position: static !important;
-    }
-  }
-  @media screen and (max-width: 1100px) {
-    height: 400px;
-  }
-  @media screen and (max-width: 824px) {
-    height: 300px;
   }
   :deep(.swiper-pagination) {
     width: 1416px !important;
@@ -311,18 +306,6 @@ html[lang='zh'] {
     left: 50% !important;
     transform: translateX(-50%);
     text-align: left;
-    .swiper-pagination-bullet {
-      width: 40px;
-      height: 2px;
-      opacity: 1;
-      background: rgba(207, 211, 215, 0.6);
-      border-radius: 0;
-      margin: 0 4px;
-    }
-    .swiper-pagination-bullet-active {
-      background: var(--e-color-yellow5);
-      opacity: 1;
-    }
     @media screen and (max-width: 1439px) {
       width: 1080px !important;
       padding: 0 16px;
@@ -342,6 +325,18 @@ html[lang='zh'] {
       transform: translateX(-50%);
       text-align: center;
       bottom: 24px;
+    }
+    .swiper-pagination-bullet {
+      width: 40px;
+      height: 2px;
+      opacity: 1;
+      background: rgba(207, 211, 215, 0.6);
+      border-radius: 0;
+      margin: 0 4px;
+    }
+    .swiper-pagination-bullet-active {
+      background: var(--e-color-yellow5);
+      opacity: 1;
     }
   }
 }

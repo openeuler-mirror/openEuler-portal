@@ -242,10 +242,10 @@ useInViewDuration(container, (duration) => {
     justify-content: space-between;
     margin-top: 8px;
     color: var(--o-color-info2);
-    @include text1;
     border-bottom: 4px solid transparent;
     padding-bottom: 24px;
     border-image: linear-gradient(90deg, #95b2fb 0%, #002fa7 100%) 1;
+    @include text1;
 
     @include respond-to('<=laptop') {
       .o-btn {
@@ -344,10 +344,10 @@ useInViewDuration(container, (duration) => {
           padding: 12px 16px;
         }
         .card-intro {
-          @include text-truncate(2);
-          @include text1;
           color: var(--o-color-info2);
           word-break: break-word;
+          @include text-truncate(2);
+          @include text1;
         }
         .btn-box {
           margin-top: 32px;
@@ -404,7 +404,6 @@ useInViewDuration(container, (duration) => {
     }
     .vitality-text {
       display: flex;
-      @include h1;
       align-items: center;
       font-weight: 500;
       @media screen and (max-width: 1000px) {
@@ -414,6 +413,7 @@ useInViewDuration(container, (duration) => {
       @include respond-to('<=pad_v') {
         width: 100%;
       }
+      @include h1;
       img {
         margin-left: 12px;
         width: 56px;
@@ -561,11 +561,11 @@ useInViewDuration(container, (duration) => {
         }
         .label {
           margin-top: 4px;
-          @include text1;
           color: rgba(255, 255, 255, 0.8);
           @include respond-to('<=pad') {
             margin-top: 2px;
           }
+          @include text1;
         }
       }
     }

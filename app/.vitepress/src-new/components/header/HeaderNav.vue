@@ -316,8 +316,8 @@ const onClickShortCutLink = (item: any) => {
       height: 100%;
       color: var(--o-color-info1);
       cursor: pointer;
-      @include text1;
       transition: all var(--o-duration-s) var(--o-easing-standard);
+      @include text1;
 
       @include hover {
         z-index: 99;
@@ -592,13 +592,13 @@ const onClickShortCutLink = (item: any) => {
           }
 
           .review-title {
-            @include text1;
-            @include text-truncate(2);
             word-break: normal;
             max-height: 48px;
             color: var(--o-color-info1);
             font-weight: 500;
             cursor: pointer;
+            @include text-truncate(2);
+            @include text1;
 
             @include hover {
               color: var(--o-color-primary1);
@@ -609,11 +609,11 @@ const onClickShortCutLink = (item: any) => {
           }
 
           .review-property {
-            @include tip2;
             color: var(--o-color-info3);
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            @include tip2;
           }
         }
       }
@@ -633,10 +633,10 @@ const onClickShortCutLink = (item: any) => {
     }
 
     .content-title {
-      @include tip1;
       display: inline-block;
       margin-bottom: var(--o-gap-3);
       color: var(--o-color-info3);
+      @include tip1;
 
       @include respond-to('laptop') {
         @include text1;
@@ -1156,15 +1156,15 @@ html[lang='en'] {
 }
 
 .nav-scroller {
-  :deep(.o-scrollbar) {
-    --scrollbar-height: 100%;
-  }
-
   height: 100%;
   width: 100%;
   overflow-x: auto;
   overflow-y: auto;
   white-space: nowrap;
+  
+  :deep(.o-scrollbar) {
+    --scrollbar-height: 100%;
+  }
 
   @include respond-to('<=pad_v') {
     --scroller-padding: 0 var(--layout-content-padding);

@@ -32,20 +32,19 @@ const { lePadV } = useScreen();
 <style lang="scss" scoped>
 .user-group-banner {
   :deep(.banner-level2 .wrap) {
+    height: 280px;
     .banner-text {
       max-width: 60%;
     }
     .banner-title {
-      @include display2;
       color: rgba(var(--o-black));
+      @include display2;
     }
     .banner-subtitle {
-      @include text2;
       color: rgba(var(--o-black));
       margin-top: var(--o-gap-2);
+      @include text2;
     }
-
-    height: 280px;
 
     @media screen and (max-width: 1680px) {
       height: 220px;

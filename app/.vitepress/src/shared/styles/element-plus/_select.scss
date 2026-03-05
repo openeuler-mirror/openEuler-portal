@@ -1,3 +1,5 @@
+@use "~@/assets/style/mixin/font.scss" as *;
+
 .el-scrollbar {
   background-color: var(--o-color-fill2);
   padding: 8px 6px;

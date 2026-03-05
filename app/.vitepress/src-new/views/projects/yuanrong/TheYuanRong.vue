@@ -91,6 +91,7 @@ const frameworkList = [
 .yuanrong-banner {
   background-color: transparent;
   :deep(.wrap) {
+    height: 280px;
     .banner-text {
       max-width: 60%;
       .banner-title {
@@ -103,8 +104,6 @@ const frameworkList = [
         @include text2;
       }
     }
-
-    height: 280px;
 
     @media screen and (max-width: 1680px) {
       height: 220px;

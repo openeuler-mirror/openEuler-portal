@@ -555,8 +555,8 @@ const onClickLink = (item: any) => {
     padding: 12px;
   }
   .detail-last {
-    @include text1;
     color: var(--o-color-info1);
+    @include text1;
   }
   .filter-box {
     margin-top: 24px;
@@ -573,10 +573,10 @@ const onClickLink = (item: any) => {
         align-items: flex-start;
       }
       .label {
-        @include text1;
         color: var(--o-color-info1);
         min-width: 64px;
         margin-right: 32px;
+        @include text1;
         @include respond-to('<=pad_v') {
           min-width: auto;
         }
@@ -612,8 +612,8 @@ const onClickLink = (item: any) => {
       color: var(--o-color-primary1);
     }
     .o-divider-v {
-      @include text1;
       border-color: var(--o-color-info1);
+      @include text1;
     }
     .scenario-box {
       display: flex;
@@ -630,6 +630,7 @@ const onClickLink = (item: any) => {
     .version-line {
       margin-top: 8px;
       display: flex;
+      color: var(--o-color-info1);
       @include h4;
       &:first-child {
         margin-top: 0;
@@ -637,7 +638,6 @@ const onClickLink = (item: any) => {
       &:last-child {
         margin-bottom: var(--collapse-item-gap);
       }
-      color: var(--o-color-info1);
       .label {
         min-width: 84px;
         color: var(--o-color-info2);

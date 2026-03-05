@@ -174,16 +174,11 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .trend-scroller {
-  :deep(.o-scrollbar) {
-    --scrollbar-height: 100%;
-  }
-
   height: 100%;
   overflow-x: auto;
   overflow-y: auto;
   white-space: nowrap;
   padding: 32px 0 36px;
-
   @include respond-to('<=laptop') {
     padding: 16px 0 24px;
   }
@@ -199,6 +194,9 @@ onMounted(() => {
 
   @include respond-to('phone') {
     padding: 12px 0 0;
+  }
+  :deep(.o-scrollbar) {
+    --scrollbar-height: 100%;
   }
 }
 

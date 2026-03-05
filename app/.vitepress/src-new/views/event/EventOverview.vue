@@ -666,8 +666,8 @@ watch(
   margin-top: 8px;
   @include tip1;
   .o-icon {
-    @include text1;
     margin-top: 3px;
+    @include text1;
   }
 }
 .text-box {
@@ -992,8 +992,8 @@ watch(
     padding: 0 12px;
     @include text1;
     .o-icon {
-      @include h2;
       margin-top: 0;
+      @include h2;
     }
     .o-link {
       :deep(.o-link-label) {

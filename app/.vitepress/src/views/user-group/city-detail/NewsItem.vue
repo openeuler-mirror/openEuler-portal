@@ -142,8 +142,8 @@ const toNewsContent = (path: string) => {
         line-height: var(--e-line-height-h7);
         font-size: var(--e-font-size-h7);
         margin-bottom: var(--e-spacing-h10);
-        @include showline();
         -webkit-line-clamp: 2;
+        @include showline();
         @media (max-width: 500px) {
           height: auto;
           line-height: var(--e-line-height-text);
@@ -164,10 +164,10 @@ const toNewsContent = (path: string) => {
       }
       .news-content {
         margin-top: var(--e-spacing-h5);
-        @include showline();
         -webkit-line-clamp: 2;
         font-size: var(--e-font-size-text);
         line-height: var(--e-line-height-text);
+        @include showline();
         @media (max-width: 500px) {
           line-height: var(--e-line-height-tip);
           font-size: var(--e-font-size-tip);

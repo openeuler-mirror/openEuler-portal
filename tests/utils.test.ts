@@ -1,5 +1,5 @@
 import { expect, describe, it, vi } from 'vitest';
-import { isValidKey, isBrowser, getNowFormatDate, getUrlParams, isTestEmail, isTestPhone, setCustomCookie, getCustomCookie, removeCustomCookie } from '../app/.vitepress/src/shared/utils';
+import { isValidKey, isBrowser, getNowFormatDate, getUrlParams, isTestEmail, isTestPhone, setCustomCookie, getCustomCookie, removeCustomCookie, firstToUpper } from '../app/.vitepress/src/shared/utils';
 
 describe('测试 isValidKey', () => {
   it('key 为 string', () => {
@@ -103,5 +103,17 @@ describe('测试 cookie 功能', () => {
     expect(getCustomCookie(KEY)).toBe(undefined);
     setCustomCookie(KEY, '1', 1);
     expect(getCustomCookie(KEY)).toBe('1');
+  });
+});
+
+describe('测试 firstToUpper', () => {
+  it('应该将单个单词的首字母大写', () => {
+    expect(firstToUpper('hello')).toBe('Hello');
+  });
+  it('应该将多个单词的首字母大写（Title Case）', () => {
+    expect(firstToUpper('hello world')).toBe('Hello World');
+  });
+  it('应该处理全大写的输入，将其转为首字母大写，其余小写', () => {
+    expect(firstToUpper('HELLO WORLD')).toBe('Hello World');
   });
 });

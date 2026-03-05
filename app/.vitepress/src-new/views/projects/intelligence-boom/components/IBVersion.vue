@@ -142,8 +142,8 @@ const versionInfo = computed(() => {
       flex: 0 0 calc(50% - var(--o-gap-6));
 
       .feature-title {
-        @include h3;
         font-weight: 600;
+        @include h3;
       }
 
       .feature-list {
@@ -153,11 +153,11 @@ const versionInfo = computed(() => {
         gap: var(--o-gap-1);
 
         .feature-item {
-          @include text1;
           position: relative;
           color: var(--o-color-info3);
           display: flex;
           flex-direction: row;
+          @include text1;
 
           @include respond-to('phone') {
             font-size: 14px;

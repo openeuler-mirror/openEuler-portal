@@ -259,12 +259,12 @@ useInViewDuration(
 .item-tab {
   display: flex;
   align-items: center;
-  @include text2;
   color: var(--o-color-info1);
   padding: 6px 48px;
   border-radius: var(--o-radius-xs);
   cursor: pointer;
   z-index: 2;
+  @include text2;
   @include hover {
     color: var(--o-color-primary1);
   }
@@ -337,20 +337,20 @@ useInViewDuration(
   align-items: center;
   justify-content: space-between;
   .company {
-    @include h2;
     color: var(--o-color-info1);
     font-weight: 500;
     @include text-truncate(1);
+    @include h2;
   }
   .company-icon {
     @include h1;
   }
 }
 .summary {
-  @include text1;
   color: var(--o-color-info2);
   margin-top: 12px;
   @include text-truncate(1);
+  @include text1;
 }
 
 .case-img {
@@ -490,11 +490,11 @@ useInViewDuration(
     white-space: nowrap;
   }
   .item-tab {
-    @include text2;
     color: var(--o-color-info2);
     padding: 0;
     cursor: pointer;
     margin-left: 16px;
+    @include text2;
     &:first-of-type {
       margin-left: 0;
     }
@@ -564,8 +564,8 @@ useInViewDuration(
   }
   .summary {
     padding: 0 16px 0 8px;
-    @include text1;
     margin-top: 2px;
+    @include text1;
   }
 }
 

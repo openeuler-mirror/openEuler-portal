@@ -590,14 +590,14 @@ const generatePdfUrl = (page) => {
   }
 
   .pagination-slot {
-    @include tip1;
     font-weight: 400;
+    @include tip1;
   }
   .end {
     margin-top: 24px;
     color: var(--o-color-info3);
-    @include text1;
     text-align: center;
+    @include text1;
   }
   .filter-line {
     display: flex;
@@ -693,10 +693,10 @@ const generatePdfUrl = (page) => {
             background-color: var(--o-color-fill2);
           }
           h3 {
-            @include h4;
             cursor: pointer;
             color: var(--o-color-info1);
             font-weight: 500;
+            @include h4;
             :deep(span) {
               color: var(--o-color-primary1);
             }
@@ -707,8 +707,8 @@ const generatePdfUrl = (page) => {
           .detail {
             cursor: pointer;
             margin-top: 8px;
-            @include text1;
             color: var(--o-color-info1);
+            @include text1;
             @include text-truncate(2);
             :deep(span) {
               color: var(--o-color-primary1);
@@ -723,11 +723,11 @@ const generatePdfUrl = (page) => {
             }
           }
           .from {
-            @include tip2;
             margin-top: 8px;
             display: flex;
             align-items: center;
             color: var(--o-color-info3);
+            @include tip2;
           }
           .version {
             margin-top: 8px;
@@ -768,12 +768,12 @@ const generatePdfUrl = (page) => {
             }
 
             .page-container {
-              @include tip2;
               display: flex;
               color: var(--o-color-info3);
               margin-top: var(--o-gap-2);
               align-items: flex-start;
               width: 100%;
+              @include tip2;
 
               .page-text {
                 white-space: nowrap;
@@ -854,8 +854,8 @@ const generatePdfUrl = (page) => {
 :deep(.breadcrumb) {
   display: flex;
   align-items: center;
-  @include tip2;
   color: var(--o-color-info3);
+  @include tip2;
   .breadcrumb-item-label {
     display: flex;
     align-items: center;

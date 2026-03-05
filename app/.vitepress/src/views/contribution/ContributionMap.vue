@@ -120,10 +120,10 @@ const goLink = (url: string, isBlank: boolean) => {
     margin: 0 auto;
     text-align: center;
     @media screen and (max-width: 1264px) {
+      width: 375px;
       .content-map-print {
         display: none;
       }
-      width: 375px;
     }
     img {
       width: 1034px;

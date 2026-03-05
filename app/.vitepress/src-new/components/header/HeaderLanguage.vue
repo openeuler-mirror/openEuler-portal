@@ -211,8 +211,8 @@ const getLang = (lang: String, simple?: boolean) => {
     color: var(--o-color-info1);
     margin-right: var(--o-gap-1);
     text-align: center;
-    @include text1;
     cursor: pointer;
+    @include text1;
     &.active {
       color: var(--o-color-primary1);
       font-weight: 500;

@@ -667,6 +667,16 @@ watch(windowWidth, () => {
     }
   }
   .detail-title {
+    margin-bottom: var(--e-spacing-h4);
+    font-size: var(--e-font-size-h5);
+    line-height: var(--e-line-height-h5);
+    color: var(--e-color-text1);
+    font-weight: 400;
+    @media screen and (max-width: 768px) {
+      margin: 0;
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
+    }
     &::before {
       content: '';
       display: block;
@@ -677,16 +687,6 @@ watch(windowWidth, () => {
         height: 120px;
         margin-top: -120px;
       }
-    }
-    margin-bottom: var(--e-spacing-h4);
-    font-size: var(--e-font-size-h5);
-    line-height: var(--e-line-height-h5);
-    color: var(--e-color-text1);
-    font-weight: 400;
-    @media screen and (max-width: 768px) {
-      margin: 0;
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
     }
   }
   .synopsis {
@@ -821,10 +821,10 @@ watch(windowWidth, () => {
         height: 76px;
         font-size: var(--e-font-size-h6);
         line-height: var(--e-line-height-h6);
+        --el-table-row-hover-bg-color: var(--e-color-bg2);
         &:hover {
           background-color: var(--e-color-bg2);
         }
-        --el-table-row-hover-bg-color: var(--e-color-bg2);
         &:last-child {
           .el-table__cell {
             border-bottom: none;

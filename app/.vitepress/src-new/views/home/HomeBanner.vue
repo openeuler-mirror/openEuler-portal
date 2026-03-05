@@ -255,10 +255,10 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 }
 
 .banner-title {
-  @include display1;
   color: var(--o-color-info1);
   font-weight: 500;
   --d: 10px;
+  @include display1;
 
   &.banner-btn-light {
     color: white;
@@ -266,10 +266,10 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 }
 
 .banner-subtitle {
-  @include h2;
   color: var(--o-color-info1);
   margin-top: 8px;
   --d: 10px;
+  @include h2;
 }
 
 .banner-text {

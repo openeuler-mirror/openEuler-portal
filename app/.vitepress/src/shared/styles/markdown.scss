@@ -2,19 +2,19 @@
   max-width: calc(
     var(--layout-content-max-width) - var(--layout-content-padding) * 2
   );
-  @media screen and (min-width: 1440px) and (max-width: 1547px) {
-    max-width: calc(100% - var(--layout-content-padding) * 2);
-  }
   min-height: calc(100vh - 443px);
   padding: 40px;
   margin: var(--e-spacing-h2) auto;
   margin-bottom: var(--e-spacing-h1);
   background-color: var(--e-color-bg2);
   box-shadow: var(--e-shadow-l1);
+  --e-color-table: var(--e-color-border2);
   & > *:first-child {
     margin-top: 0 !important;
   }
-  --e-color-table: var(--e-color-border2);
+  @media screen and (min-width: 1440px) and (max-width: 1547px) {
+    max-width: calc(100% - var(--layout-content-padding) * 2);
+  }
   @media (max-width: 768px) {
     min-height: calc(100vh - 395px);
     padding: var(--e-spacing-h5);

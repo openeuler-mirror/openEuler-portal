@@ -323,9 +323,9 @@ watch(
   }
 
   .card-title {
-    @include h3;
     color: var(--o-color-info1);
     font-weight: 500;
+    @include h3;
   }
   .bottom {
     display: flex;

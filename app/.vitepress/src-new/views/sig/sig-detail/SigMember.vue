@@ -306,11 +306,10 @@ watch(
         --avatar-width: 40px;
         --avatar-gap: 16px;
         margin-right: auto;
+        display: flex;
         @include respond-to('<=laptop') {
           --avatar-width: 32px;
         }
-
-        display: flex;
 
         .info {
           margin-left: var(--avatar-gap);
@@ -320,10 +319,10 @@ watch(
 
           .member-id {
             color: var(--o-color-info1);
-            @include tip1;
-            @include text-truncate(1);
             word-break: break-all;
             font-weight: 500;
+            @include tip1;
+            @include text-truncate(1);
             @include respond-to('<=pad_v') {
               @include text1;
             }

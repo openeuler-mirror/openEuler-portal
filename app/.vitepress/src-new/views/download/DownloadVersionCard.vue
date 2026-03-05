@@ -649,15 +649,15 @@ const onClickDownload = (row: any) => {
   .title {
     display: flex;
     align-items: center;
-    @include h1;
     color: var(--o-color-info1);
     font-weight: 500;
+    @include h1;
     .o-tag {
       color: var(--o-color-white);
       margin-left: 16px;
       --tag-padding: 3px 12px;
-      @include tip2;
       border: none;
+      @include tip2;
       @include respond-to('<=pad_v') {
         margin-left: 8px;
       }
@@ -694,10 +694,10 @@ const onClickDownload = (row: any) => {
         align-items: flex-start;
       }
       .label {
-        @include text1;
         color: var(--o-color-info1);
         min-width: 32px;
         margin-right: 32px;
+        @include text1;
         @include respond-to('<=pad_v') {
           min-width: auto;
         }
@@ -733,8 +733,8 @@ const onClickDownload = (row: any) => {
     }
   }
   .download-table-pc {
-    @include text1;
     color: var(--o-color-info1);
+    @include text1;
     .name-info {
       display: flex;
       align-items: center;
@@ -777,8 +777,8 @@ html[lang='en'] {
     .info-line {
       margin-top: 12px;
       display: flex;
-      @include h4;
       color: var(--o-color-info1);
+      @include h4;
       .label {
         color: var(--o-color-info2);
         margin-right: 16px;
@@ -818,10 +818,10 @@ html[lang='en'] {
     max-height: max-content;
     // padding: 8px;
     .select-text {
-      @include tip2;
       color: var(--o-color-info4);
       margin-bottom: 4px;
       padding: 0 12px;
+      @include tip2;
     }
     .mirror-list {
       display: flex;

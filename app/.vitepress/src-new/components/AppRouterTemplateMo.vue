@@ -111,8 +111,8 @@ const subTitle = computed(() => {
   color: var(--o-color-white);
   .left-info {
     span {
-      @include h4;
       margin-right: 8px;
+      @include h4;
     }
     .o-tag {
       background-color: rgba($color: #000000, $alpha: 0.25);

@@ -97,19 +97,19 @@ defineExpose({ handleSearch });
   .history {
     display: flex;
     margin-bottom: 12px;
-    @include tip1;
     color: var(--o-color-info3);
+    @include tip1;
   }
   .recommend-item {
-    & + .recommend-item {
-      margin-top: 4px;
-    }
     padding: 4px 8px;
     cursor: pointer;
     color: var(--o-color-info1);
     border-radius: var(--o-radius-xs);
     @include hover {
       background-color: var(--o-color-control2-light);
+    }
+    & + .recommend-item {
+      margin-top: 4px;
     }
   }
 }

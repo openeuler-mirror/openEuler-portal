@@ -361,8 +361,8 @@ const closeSearch = () => {
 <style lang="scss" scoped>
 .icon {
   cursor: pointer;
-  @include h4;
   color: var(--o-color-info1);
+  @include h4;
 
   &.close {
     @include x-svg-hover;
@@ -480,13 +480,13 @@ const closeSearch = () => {
 
     .hots {
       .hots-title {
-        @include tip2;
         color: var(--o-color-info3);
+        @include tip2;
 
         @include respond-to('<=pad_v') {
-          @include text2;
           color: var(--o-color-info1);
           margin-bottom: var(--o-gap-3);
+          @include text2;
         }
       }
       .hots-list {
@@ -504,8 +504,8 @@ const closeSearch = () => {
         }
 
         @include respond-to('<=pad_v') {
-          @include text1;
           display: block;
+          @include text1;
         }
       }
     }
@@ -560,12 +560,12 @@ const closeSearch = () => {
 
 .history-container {
   .title {
-    @include tip2;
     color: var(--o-color-info3);
+    @include tip2;
 
     @include respond-to('<=pad_v') {
-      @include text2;
       color: var(--o-color-info1);
+      @include text2;
     }
   }
   .history-title {
@@ -656,12 +656,12 @@ const closeSearch = () => {
   margin-bottom: var(--o-gap-3);
 
   .recommend-item {
+    cursor: pointer;
     @include tip2;
     & + .recommend-item {
       margin-top: var(--o-gap-3);
     }
 
-    cursor: pointer;
     @include hover {
       color: var(--o-color-primary1);
     }
@@ -887,8 +887,8 @@ const closeSearch = () => {
 </style>
 <style lang="scss">
 .mo-upload-tooltip-popup {
-  @include tip2;
   padding: var(--o-gap-3) var(--o-gap-4);
   max-width: 240px;
+  @include tip2;
 }
 </style>

@@ -99,18 +99,18 @@ onMounted(() => {
         position: relative;
         z-index: 1;
         color: var(--o-color-white);
-        @include h1;
         line-height: var(--o-font_size-h1);
         margin-bottom: 0;
         font-weight: 500;
+        @include h1;
       }
 
       .banner-subtitle {
         position: relative;
         margin-top: 12px;
-        @include text1;
         color: var(--o-color-white);
         z-index: 1;
+        @include text1;
       }
 
     }

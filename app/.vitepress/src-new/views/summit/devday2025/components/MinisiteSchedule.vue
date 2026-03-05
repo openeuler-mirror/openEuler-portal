@@ -75,7 +75,6 @@ const windowWidth = ref(useWindowResize());
   }
 }
 .type {
-  @include h4;
   width: 160px;
   background-image: linear-gradient(
     270deg,
@@ -87,6 +86,7 @@ const windowWidth = ref(useWindowResize());
   font-weight: 500;
   position: relative;
   border-radius: var(--o-radius-xs);
+  @include h4;
   &::before {
     content: '';
     position: absolute;
@@ -121,11 +121,11 @@ const windowWidth = ref(useWindowResize());
     display: flex;
     align-items: flex-end;
     .title {
-      @include h3;
       color: var(--o-color-info1);
       font-weight: 500;
       margin-left: 14px;
       position: relative;
+      @include h3;
       &::before {
         content: '';
         position: absolute;
@@ -146,8 +146,8 @@ const windowWidth = ref(useWindowResize());
     .subtitle-content {
       display: flex;
       .subtitle {
-        @include text1;
         margin-left: var(--o-gap-2);
+        @include text1;
       }
 
       @include respond-to('<=pad_v') {
@@ -162,12 +162,12 @@ const windowWidth = ref(useWindowResize());
     }
   }
   .bottom {
-    @include text1;
     display: flex;
     align-items: center;
     color: var(--o-color-info1);
     font-weight: 400;
     margin-top: var(--o-gap-5);
+    @include text1;
     .date {
       display: flex;
       align-items: flex-start;

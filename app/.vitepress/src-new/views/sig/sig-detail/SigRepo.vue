@@ -320,8 +320,8 @@ onMounted(() => {
     margin-top: 12px;
     display: flex;
     justify-content: center;
-    @include text1;
     color: var(--o-color-info3);
+    @include text1;
     .o-icon {
       margin-left: 8px;
       font-size: var(--o-icon_size-xs);

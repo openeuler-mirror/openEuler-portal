@@ -307,15 +307,15 @@ const linkClick = () => {
       }
 
       .content-title {
-        @include text1;
         color: var(--o-color-info3);
         font-weight: 500;
+        @include text1;
       }
 
       .content-title-url {
-        @include text2;
         color: var(--o-color-primary1);
         margin: var(--o-gap-4) 0;
+        @include text2;
 
         .icon {
           height: 16px;
@@ -374,8 +374,8 @@ const linkClick = () => {
 
     > li {
       position: relative;
-      @include nav-item;
       text-align: center;
+      @include nav-item;
     }
   }
 }

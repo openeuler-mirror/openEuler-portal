@@ -187,14 +187,14 @@ $color: #fff;
   @include tip2;
 }
 .footer {
+  overflow: hidden;
+  background: #121214;
   &.is-doc {
     margin-left: 300px;
     @media (max-width: 1100px) {
       margin-left: 0;
     }
   }
-  overflow: hidden;
-  background: #121214;
   :deep(.app-content) {
     padding-bottom: 0;
   }
@@ -218,13 +218,13 @@ $color: #fff;
   }
 
   .footer-content {
-    @include tip1;
     background: url('~@/assets/category/footer/footer-bg.png') no-repeat bottom
       center;
     @include respond-to('<=pad_v') {
       background: url('~@/assets/category/footer/footer-bg-mo.png') no-repeat
         bottom center;
     }
+    @include tip1;
     .quick-nav {
       margin: 16px auto 0;
       display: flex;
@@ -235,8 +235,8 @@ $color: #fff;
       }
       .category {
         .category-title {
-          @include h4;
           color: var(--o-color-white);
+          @include h4;
         }
         .navs {
           display: flex;
@@ -261,9 +261,9 @@ $color: #fff;
       margin-top: 16px;
       padding-bottom: 12px;
       display: flex;
-      @include tip2;
       //TODO: 颜色变量
       border-bottom: 1px solid rgba(229, 229, 229, 0.12);
+      @include tip2;
       @include respond-to('<=pad_v') {
         flex-direction: column;
         padding-bottom: 16px;
@@ -283,13 +283,13 @@ $color: #fff;
       }
       .friendship-link-item {
         white-space: nowrap;
+        color: rgba(255, 255, 255, 0.6);
         &:not(:last-of-type) {
           margin-right: 24px;
           @include respond-to('<=pad') {
             margin-right: 12px;
           }
         }
-        color: rgba(255, 255, 255, 0.6);
         @include hover {
           color: rgba(255, 255, 255, 1);
         }
@@ -382,6 +382,9 @@ $color: #fff;
 
   .footer-option {
     text-align: center;
+    @include respond-to('<=pad_v') {
+      order: -1;
+    }
     @include tip1;
     .link {
       color: $color;
@@ -389,9 +392,6 @@ $color: #fff;
     }
     .footer-option-item {
       align-items: center;
-    }
-    @include respond-to('<=pad_v') {
-      order: -1;
     }
   }
 

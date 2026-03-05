@@ -86,10 +86,10 @@ const isDark = computed(() => {
   .item-title {
     margin-bottom: 16px;
     .title {
-      @include h2;
       font-weight: 500;
       color: var(--o-color-info1);
       margin-right: var(--o-gap-4);
+      @include h2;
     }
 
     .title-desc {
@@ -106,18 +106,18 @@ const isDark = computed(() => {
       }
 
       .tips {
-        @include tip1;
         font-weight: 400;
         margin-right: var(--o-gap-4);
+        @include tip1;
       }
     }
   }
 
   .desc {
-    @include text1;
     text-align: justify;
     font-weight: 400;
     color: var(--o-color-info2);
+    @include text1;
     &:last-of-type {
       margin-bottom: 16px;
     }
@@ -135,8 +135,8 @@ const isDark = computed(() => {
       }
     }
     .text {
-      @include text1;
       margin-right: 4px;
+      @include text1;
     }
     .o-icon {
       font-size: var(--o-icon_size-m);
@@ -206,10 +206,10 @@ const isDark = computed(() => {
 }
 
 .topic-desc {
-  @include h4;
   color: var(--o-color-info2);
   text-align: justify;
   margin-bottom: 40px;
+  @include h4;
 
   @include respond-to('<=pad_v') {
     font-size: 12px;

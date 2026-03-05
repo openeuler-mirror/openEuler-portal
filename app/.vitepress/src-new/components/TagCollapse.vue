@@ -95,8 +95,8 @@ onUnmounted(() => {
     align-items: center;
     width: fit-content;
     height: fit-content;
-    @include text1;
     min-width: 60px;
+    @include text1;
     .icon {
       transition: all 0.3s;
       font-size: var(--o-icon_size-m);

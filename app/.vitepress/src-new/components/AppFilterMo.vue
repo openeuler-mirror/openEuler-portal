@@ -24,8 +24,8 @@ defineProps({
   cursor: pointer;
   justify-content: flex-end;
   align-items: center;
-  @include text2;
   color: var(--o-color-info2);
+  @include text2;
   .o-icon {
     margin-left: 2px;
     // TODO: 为什么有22px 大小的高保真
