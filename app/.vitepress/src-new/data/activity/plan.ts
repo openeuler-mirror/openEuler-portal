@@ -250,18 +250,18 @@ export const yearPlanData = {
       events: [
         { month: '1' },
         { month: '2' },
-        {
-          month: '3',
-          actives: [
-            {
-              location: '3.30',
-              activeName: '26.03',
-            },
-          ],
-        },
+        { month: '3' },
         { month: '4' },
         { month: '5' },
-        { month: '6' },
+        { 
+          month: '6',
+          actives: [
+            {
+              location: '6.30',
+              activeName: '24.03 LTS SP4',
+            },
+          ], 
+        },
         { month: '7' },
         { month: '8' },
         {
@@ -275,7 +275,15 @@ export const yearPlanData = {
         },
         { month: '10' },
         { month: '11' },
-        { month: '12' },
+        { 
+          month: '12',
+          actives: [
+            {
+              location: '12.30',
+              activeName: '24.03 LTS SP5',
+            },
+          ], 
+        },
       ],
     },
   },
