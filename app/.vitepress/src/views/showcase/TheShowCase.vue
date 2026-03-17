@@ -10,7 +10,6 @@ import { useI18n } from '@/i18n';
 
 import type { ShowcaseDataT } from '@/shared/@types/type-search';
 
-import { useCookieStore } from '@/stores/common';
 import { uniqueId } from '@/shared/utils';
 
 import useWindowScroll from '@/components/hooks/useWindowScroll';
@@ -26,7 +25,6 @@ import search from '@/assets/illustrations/search.png';
 
 const i18n = useI18n();
 const { lang } = useData();
-const cookieStore = useCookieStore();
 
 const userCaseData = computed(() => i18n.value.showcase);
 
@@ -53,7 +51,7 @@ const parmes = reactive({
 });
 
 const handleSearchChange = (val: string) => {
-  if (cookieStore.isAllAgreed && val) {
+  if (val) {
     reportSearch(val);
   }
   parmes.keyword = val;
@@ -136,9 +134,7 @@ const pathResolving = (path: string) => {
 // 点击跳转案例详情页面
 function goDetail(link: string, item: any, index: number) {
   const search_result_url = pathResolving(link);
-  if (cookieStore.isAllAgreed) {
-    reportSelectSearchResult(search_result_url, item, index);
-  }
+  reportSelectSearchResult(search_result_url, item, index);
   window.open(search_result_url);
 }
 

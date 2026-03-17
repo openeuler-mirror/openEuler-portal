@@ -9,7 +9,6 @@ import type { SearchCountResItemT, AppItemT } from '~@/@types/type-search';
 import { getSoftwareDocs } from '~@/api/api-search';
 
 import { useSearchValue } from '~@/stores/search';
-import { useCookieStore } from '~@/stores/common';
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 
@@ -141,9 +140,6 @@ const total = computed(() => {
 const suggestList = ref([]);
 //
 const activeVersion = ref('');
-
-// cookie
-const cookieStore = useCookieStore();
 
 function getVersionTag() {
   versionList.value = communityVersionData[locale.value].COMMUNITY_LIST.reduce(

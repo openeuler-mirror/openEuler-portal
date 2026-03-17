@@ -37,8 +37,6 @@ import { SCENARIO_LIST, archMap } from '~@/data/download/download';
 
 import type { AppItemT } from '~@/@types/type-search';
 
-import { useCookieStore } from '@/stores/common';
-
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 
 import NotFound from '@/NotFound.vue';
@@ -126,7 +124,6 @@ const { searchType, currentPage, pageSize, activeVersion, activeSort } =
   useVModels(props, emits);
 
 const { locale } = useLocale();
-const cookieStore = useCookieStore();
 const { lePadV, lePad } = useScreen();
 
 const contentRef = ref();
@@ -186,9 +183,7 @@ const getLink = (data: any) => {
 };
 
 function handleLinkClick(data: any, index: number) {
-  if (cookieStore.isAllAgreed) {
-    reportSelectSearchResult(data, index, getLink(data), props.searchVal);
-  }
+  reportSelectSearchResult(data, index, getLink(data));
 }
 //
 const downloadZoneData = computed(() => {

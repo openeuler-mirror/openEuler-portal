@@ -2,7 +2,7 @@
 import { computed, onMounted, ref } from 'vue';
 import { useRouter, useData } from 'vitepress';
 
-import { useCommon, useCookieStore } from '@/stores/common';
+import { useCommon } from '@/stores/common';
 import { getUrlParams } from '@/shared/utils';
 
 import AppContext from '@/components/AppContent.vue';

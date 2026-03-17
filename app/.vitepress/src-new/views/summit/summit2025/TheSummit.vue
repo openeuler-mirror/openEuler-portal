@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { computed, watch, onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { OTab, OTabPane } from '@opensig/opendesign';
 
 import { oaReport } from '@/shared/analytics';
 import { getUrlParams } from '~@/utils/common';
-import { useCookieStore } from '~@/stores/common';
 
 import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
@@ -18,7 +17,6 @@ import SummitPrevious from './components/SummitPrevious.vue';
 import data_zh from './data/data_zh';
 import data_en from './data/data_en';
 
-const cookieStore = useCookieStore();
 import { useLocale } from '~@/composables/useLocale';
 
 const { locale } = useLocale();
@@ -44,14 +42,7 @@ function collectAdvertisedData() {
 }
 
 onMounted(() => {
-  watch(
-    () => cookieStore.isAllAgreed,
-    (val) => {
-      if (!val) return;
-      collectAdvertisedData();
-    },
-    { immediate: true }
-  );
+  collectAdvertisedData();
 });
 //-------- 直播 --------
 const tabLive = ref(0)
