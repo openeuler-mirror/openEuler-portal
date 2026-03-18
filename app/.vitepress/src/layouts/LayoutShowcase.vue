@@ -47,4 +47,8 @@ const { frontmatter } = useData();
     padding-top: 16px;
   }
 }
+.markdown {
+  border-radius: var(--o-radius-xs);
+  box-shadow: none;
+}
 </style>

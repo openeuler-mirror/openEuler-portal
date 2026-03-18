@@ -32,6 +32,8 @@ import intelligenceBoom from './intelligence-boom'
 import blog from './blog';
 import news from './news';
 import compatibility from './compatibility';
+import showcase from './showcase';
+import lifecycle from './lifecycle';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -101,6 +103,8 @@ const messages = {
     blog: blog.zh,
     news: news.zh,
     compatibility: compatibility.zh,
+    showcase: showcase.zh,
+    lifecycle: lifecycle.zh,
   },
   en: {
     // 公共模块
@@ -132,6 +136,8 @@ const messages = {
     blog: blog.en,
     news: news.en,
     compatibility: compatibility.en,
+    showcase: showcase.en,
+    lifecycle: lifecycle.en,
   },
 };
 

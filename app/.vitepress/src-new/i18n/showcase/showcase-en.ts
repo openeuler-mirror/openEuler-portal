@@ -1,0 +1,18 @@
+export default {
+  title: 'Success Stories',
+  tips: '展示各行业用户在自身业务场景中使用openEuler操作系统和openEuler社区中各技术项目的案例以及所带来的积极效果。欢迎投稿至',
+  type: 'Category',
+  all: 'All',
+  finance: 'Finance',
+  carrier: 'Carrier',
+  energy: 'Energy',
+  logistics: 'Logistics',
+  education: 'education',
+  cloudComputing: 'cloud-computing',
+  other: 'Others',
+  placeholder: 'Search',
+  find1: 'Found',
+  find2: 'Cases',
+  downloadCase: 'Download Use Cases',
+  view: 'Learn More',
+};
