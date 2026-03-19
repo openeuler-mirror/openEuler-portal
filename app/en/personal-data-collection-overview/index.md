@@ -86,4 +86,11 @@ Regarding the purpose of collecting personal data, the types of personal data, t
 - **Collection method**: user input
 - **Personal data fields**: **personal token**, **email address**, **email verification code**, token name, granted permissions, validity period
 
+## 12. Meeting Service
+
+- **Purpose**: Configure meeting permissions and send meeting invitation emails.
+- **Personal data type**: data you voluntarily submit
+- **Collection method**: user input
+- **Personal data fields**: **AtomGit ID** and **email address**
+
 </div>
