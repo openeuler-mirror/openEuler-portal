@@ -7,7 +7,7 @@ import IconArrowRight from '~icons/app/icon-arrow-right';
     <div class="wrapper">
       <h2 class="title">openEuler开源实习</h2>
       <div class="action">
-        <a href="#task">
+        <a href="https://gitcode.com/openeuler/opensource-intern/issues" target="_blank">
           <OButton size="large" type="primary">
             <span>领取任务</span>
             <OIcon><IconArrowRight /></OIcon

@@ -106,7 +106,7 @@ const goTop = () => {
       margin: 0 auto;
     }
     &.internship-line {
-      height: 300px;
+      height: 270px;
       position: relative;
       &::after {
         width: 2px;

@@ -4,6 +4,9 @@ import step_1 from '@/assets/category/internship/step_1.png';
 import step_2 from '@/assets/category/internship/step_2.png';
 import step_3 from '@/assets/category/internship/step_3.png';
 import step_4 from '@/assets/category/internship/step_4.png';
+
+import IconOutLink from '~icons/app/icon-out-link.svg';
+
 const activeStepIndex = ref(0);
 function setActiveStep(index: number) {
   activeStepIndex.value = index;
@@ -36,38 +39,50 @@ const STEP = {
     TEXT3: '并提供PR链接。',
     TEXT4: '（3）填写报名资料表。',
     ATTENTION1:
-      '在申请材料模板下载里仔细阅读实习报名流程，在线表单填写完毕后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。',
+      '在《实习申请材料模板》里仔细阅读实习报名流程，在线表单填写完毕后等待审核，组织方将以邮件反馈审核结果。组织方会根据所提交的资料对报名学生进行一定的审核筛选。审核通过后，将分配账号开始实习。',
     ATTENTION2:
       '。发送后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。',
-    DONWLOAD: '实习申请材料模板下载',
+    DONWLOAD: '《实习申请材料模板》下载',
     TIP: '（注：组织方会根据所提交的资料对报名学生进行一定的审核筛选）',
     DESC: '注：自2026年3月1日起，openEuler开源实习offer发放时间调整为：实习积分满10分后。',
   },
   ATTENTION: '注意',
   STEP_TOW: {
     TITLE: '领取任务',
+    P_TEXT_ONE: [
+      '（1）在AtomGit ',
+      '查看任务',
+      '，找到你想做的任务 Issue。',
+    ],
     P_TEXT: [
-      '（1）在AtomGit查看任务，找到你想做的任务issue。',
-      '（2）在任务issue下方评论区输入',
+      '（1）在AtomGit查看任务，找到你想做的任务 Issue。',
+      '（2）在任务 Issue下方评论区输入',
       '/intern-assign',
       '命令，认领该任务，然后发送邮件给任务导师请求审核。邮件需包括你的简历和该任务的开发方案。',
-      '（3）导师收到邮件后对申请人进行评审，在该任务issue评论下通过输入命令反馈结果，',
+      '（3）导师收到邮件后对申请人进行评审，在该任务 Issue 评论下通过输入命令反馈结果。',
       '/intern-approve',
-      '代表审核通过，学生成功领取任务,可以开始进行任务处理；',
+      '代表审核通过，学生成功领取任务，可以开始进行任务处理；',
       '/intern-unapprove',
       '代表领取失败，该学生可再去领取其他任务。',
-      '（4）如果领取后无法完成，可通过在issue下输入',
+      '（4）如果领取后无法完成，可通过在 Issue下输入',
       '/intern-unassign',
       '放弃任务。',
       '放弃超过3次，账号被限制一个月不能领取任务。',
     ],
     ATTENTION_TEXT: [
-      '每个任务只能有一个人认领，每人一次最多只能有2个认领中的任务。',
+      '每个任务只能有一个人认领，每人一次最多只能有 2 个认领中的任务。',
       '输入',
       '/intern-assign',
       '命令后两周内没有发简历和方案给导师的，认领自动失效，任务被释放。',
     ],
-    DONWLOAD: '实习任务认领邮件模板下载',
+    DONWLOAD: '《实习任务认领邮件模板》下载',
+    OTHER: [
+      '关于参加其他开源社区的实习',
+      '若您在实习有效期内，已经完成了openEuler实习任务，可以继续参加 MindSpore 社区及 Ascend 开源实习。',
+      'MindSpore 开源实习官网',
+      'Ascend 开源实习官网',
+      '注：在进行MindSpore社区及Ascend开源实习之前，均需通过前置机考测试。'
+    ],
   },
   STEP_ThREE: {
     TITLE: '提交成果',
@@ -97,11 +112,13 @@ const STEP = {
       '提出申请。',
     ],
     P_TEXT: [
-      '满20分可获得工资总计1000元；',
-      '满40分可获得工资总计2500元；',
-      '满60分可获得工资总计4000元；',
-      '满80分可获得工资总计6000元；',
-      '满100分可获得工资总计8000元；',
+      '满10积分可获得工资总计500元；',
+      '满20积分可获得工资总计1000元；',
+      '满30积分可获得工资总计1500元；',
+      '满45积分可获得工资总计2750元；',
+      '满60积分可获得工资总计4000元；',
+      '满80积分可获得工资总计6000元；',
+      '满100积分可获得工资总计8000元。',
     ],
     ATTENTION_TEXT: [
       '以上工资金额为总计金额，每月月初按上月积分结算一次应发工资，在月底发放到实习生账户。应发工资为达到相应积分标准的总计工资金额减去已结算金额。',
@@ -109,8 +126,19 @@ const STEP = {
     ],
     ATTENTION_LINK:
       'https://edu.hicomputing.huawei.com/openeuler-opengauss-talent',
-    DONWLOAD: '实习证明申请材料和邮件模板下载',
+    DONWLOAD: '《实习证明申请材料和邮件模板》下载',
   },
+};
+
+const downloadByUrl = (url: string) => {
+  const len = url.split('/').length;
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = url.split('/')[len - 1];
+  document.body.appendChild(a);
+  a.click();
+  window.URL.revokeObjectURL(url);
+  document.body.removeChild(a);
 };
 </script>
 
@@ -152,17 +180,14 @@ const STEP = {
           <div class="attention">
             <p>
               {{ STEP.STEP_ONE.ATTENTION1 }}
-              <span class="orange">{{ STEP.STEP_ONE.TIP }}</span>
             </p>
-            <a
-              href="/category/internship/实习申请材料模板.zip"
-              download
-              class="download download-module"
-              >{{ STEP.STEP_ONE.DONWLOAD }}</a
-            >
             <p class="orange" style="margin-top: 10px;">
               {{ STEP.STEP_ONE.DESC }}
             </p>
+            <a
+              @click="downloadByUrl('/category/internship/实习申请材料模板.rar')"
+              class="download download-module"
+            >{{ STEP.STEP_ONE.DONWLOAD }}</a>
           </div>
         </div>
       </div>
@@ -174,19 +199,38 @@ const STEP = {
         />
         <h4>{{ STEP.STEP_TOW.TITLE }}</h4>
         <div class="main-text">
-          <p>{{ STEP.STEP_TOW.P_TEXT[0] }}</p>
+          <div class="main-text-link">
+            <span>{{ STEP.STEP_TOW.P_TEXT_ONE[0] }}</span>
+            <a
+              href="https://gitcode.com/openeuler/opensource-intern/issues"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ STEP.STEP_TOW.P_TEXT_ONE[1] }}</a
+            >
+            <span>{{ STEP.STEP_TOW.P_TEXT_ONE[2] }}</span>
+          </div>
           <p>
             {{ STEP.STEP_TOW.P_TEXT[1] }}
             <span class="orange">{{ STEP.STEP_TOW.P_TEXT[2] }}</span>
             {{ STEP.STEP_TOW.P_TEXT[3] }}
           </p>
-          <p>
-            {{ STEP.STEP_TOW.P_TEXT[4] }}
-            <span class="orange">{{ STEP.STEP_TOW.P_TEXT[5] }}</span>
-            {{ STEP.STEP_TOW.P_TEXT[6] }}
-            <span class="orange">{{ STEP.STEP_TOW.P_TEXT[7] }}</span>
-            {{ STEP.STEP_TOW.P_TEXT[8] }}
-          </p>
+          <a
+            href="/category/internship/实习任务认领邮件模板.txt"
+            download
+            class="download download-link"
+            >{{ STEP.STEP_TOW.DONWLOAD }}</a
+          >
+          <div class="step-warp">
+            <span>{{ STEP.STEP_TOW.P_TEXT[4] }}</span>
+            <div class="step-warp-left">
+              <span class="orange">{{ STEP.STEP_TOW.P_TEXT[5] }}</span>
+              {{ STEP.STEP_TOW.P_TEXT[6] }}
+            </div>
+            <div class="step-warp-left">
+              <span class="orange">{{ STEP.STEP_TOW.P_TEXT[7] }}</span>
+              {{ STEP.STEP_TOW.P_TEXT[8] }}
+            </div>
+          </div>
           <p>
             {{ STEP.STEP_TOW.P_TEXT[9] }}
             <span class="orange">{{ STEP.STEP_TOW.P_TEXT[10] }}</span>
@@ -201,12 +245,32 @@ const STEP = {
               <span class="orange">{{ STEP.STEP_TOW.ATTENTION_TEXT[2] }}</span>
               {{ STEP.STEP_TOW.ATTENTION_TEXT[3] }}
             </p>
-            <a
-              href="/category/internship/实习任务认领邮件模板.zip"
-              download
-              class="download"
-              >{{ STEP.STEP_TOW.DONWLOAD }}</a
-            >
+          </div>
+          <div class="attention-other">
+            <div class="attention-title">{{ STEP.STEP_TOW.OTHER[0] }}</div>
+            <p>{{ STEP.STEP_TOW.OTHER[1] }}</p>
+            <div class="other-link">
+              <a
+                href="https://www.mindspore.cn/internship"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ STEP.STEP_TOW.OTHER[2] }}</a
+              >
+              <OIcon class="icon">
+                <IconOutLink />
+              </OIcon>
+              <a
+                href="https://www.chaspark.com/#/s/vllmascendInternship?multi=zh"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-ascend"
+                >{{ STEP.STEP_TOW.OTHER[3] }}</a
+              >
+              <OIcon class="icon">
+                <IconOutLink />
+              </OIcon>
+            </div>
+            <p>{{ STEP.STEP_TOW.OTHER[4] }}</p>
           </div>
         </div>
       </div>
@@ -292,8 +356,7 @@ const STEP = {
               {{ STEP.STEP_FOUR.ATTENTION_TEXT[3] }}
             </p>
             <a
-              href="/category/internship/实习证明申请材料和邮件模板.zip"
-              download
+              @click="downloadByUrl('/category/internship/实习证明申请材料和邮件模板.rar')"
               class="download"
               >{{ STEP.STEP_FOUR.DONWLOAD }}</a
             >
@@ -366,7 +429,7 @@ const STEP = {
     .step-body {
       margin-top: -1px;
       padding: 32px 30px 37px;
-      height: 410px;
+      height: 500px;
       background: url(@/assets/category/internship/step-background.png)
         no-repeat;
       background-size: 100% 100%;
@@ -378,6 +441,9 @@ const STEP = {
         .step-text:nth-child(2) {
           .download {
             padding-bottom: 44px;
+          }
+          .download-link {
+            padding-bottom: 0;
           }
         }
         .step-text:nth-child(4) {
@@ -447,6 +513,9 @@ const STEP = {
             width: 268px;
           }
         }
+        .download-link {
+          margin: 8px 0 8px 12px !important;
+        }
       }
       .number {
         display: none;
@@ -458,20 +527,26 @@ const STEP = {
       h4 {
         margin-bottom: 10px;
         font-size: 18px;
-        font-weight: normal;
+        font-weight: 600;
         color: #000000;
         line-height: 24px;
       }
-      p {
-        font-size: 14px;
-        color: rgba(0, 0, 0, 0.5);
+      p,
+      .step-warp,
+      .main-text-link {
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.8);
         line-height: 24px;
+        margin-top: 4px;
         @media (max-width: 1000px) {
           font-size: 12px;
           a {
             font-size: 12px;
           }
         }
+      }
+      .step-warp-left {
+        margin-left: 30px;
       }
       .blue {
         color: #0d8dff;
@@ -482,9 +557,10 @@ const STEP = {
       .attention {
         margin: 10px 14px 0 35px;
         .attention-title {
-          font-size: 14px;
-          color: #000000;
+          font-size: 16px;
+          color: rgba(0, 0, 0, 1);
           line-height: 24px;
+          font-weight: 500;
         }
         .download {
           display: inline-block;
@@ -508,6 +584,32 @@ const STEP = {
           width: 4px;
           background: rgba(0, 0, 0, 0.5);
           border-radius: 50%;
+        }
+      }
+      .download-link {
+        margin: 8px 0 8px 30px;
+        display: block;
+      }
+      .attention-other {
+        margin-top: 8px;
+        .attention-title {
+          font-size: 18px;
+          font-weight: 600;
+          color: #000000;
+          line-height: 24px;
+          margin: 24px 0 8px;
+        }
+        .other-link {
+          margin: 8px 0;
+          display: flex;
+          align-items: center;
+          .icon {
+            margin-left: 8px;
+            color: var(--e-color-link1);
+          }
+          .link-ascend {
+            margin-left: 24px;
+          }
         }
       }
       .flow-chart {
