@@ -5,8 +5,6 @@ import { useCommon } from '@/stores/common';
 import AppContent from '@/components/AppContent.vue';
 import InternshipBanner from './InternshipBanner.vue';
 import InternshipStep from './InternshipStep.vue';
-import InternshipTask from './InternshipTask.vue';
-import InternshipRank from './InternshipRank.vue';
 import InternshipTitleNav from './InternshipTitleNav.vue';
 
 import qrCode from '@/assets/category/internship/qrCode.png';
@@ -16,7 +14,6 @@ import iscas_light from '@/assets/category/internship/logo/iscas_light.png';
 import mindSpore_light from '@/assets/category/internship/logo/mindspore_light.png';
 import openEuler_light from '@/assets/category/internship/logo/openeuler_light.png';
 import openGauss_light from '@/assets/category/internship/logo/opengauss_light.png';
-import openLookeng_light from '@/assets/category/internship/logo/openlookeng_light.png';
 import qiLin_light from '@/assets/category/internship/logo/qilin_light.png';
 import tongXin_light from '@/assets/category/internship/logo/tongxin_light.png';
 import xinAn_light from '@/assets/category/internship/logo/xinan_light.png';
@@ -25,18 +22,16 @@ import iscas_dark from '@/assets/category/internship/logo/iscas_dark.png';
 import mindSpore_dark from '@/assets/category/internship/logo/mindspore_dark.png';
 import openEuler_dark from '@/assets/category/internship/logo/openeuler_dark.png';
 import openGauss_dark from '@/assets/category/internship/logo/opengauss_dark.png';
-import openLookeng_dark from '@/assets/category/internship/logo/openlookeng_dark.png';
 import qiLin_dark from '@/assets/category/internship/logo/qilin_dark.png';
 import tongXin_dark from '@/assets/category/internship/logo/tongxin_dark.png';
 import xinAn_dark from '@/assets/category/internship/logo/xinan_dark.png';
 
-import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 const commonStore = useCommon();
 const INTEGRAL_DATA = [
   {
     HEAD: '1、实习工资',
     TEXT: [
-      '实习有效期6个月内满20分以上，可获得不同级别的实习工资。具体见以上“申请步骤4”里的工资说明。',
+      '实习有效期6个月内满10分以上，可获得不同级别的实习工资。具体见以上“申请步骤4”里的工资说明。',
     ],
     SUPPLEMENT: '',
   },
@@ -53,7 +48,8 @@ const INTEGRAL_DATA = [
   {
     HEAD: '3、优秀实习生证书',
     TEXT: ['申请本年度内积分达到150分', '至少找1位导师写优秀推荐评语'],
-    SUPPLEMENT: '满足以上条件，可向社区助手申请发放优秀实习生证书。',
+    SUPPLEMENT: ['满足以上条件，可向社区发邮件申请发放优秀实习生证书，联系邮箱：', 'intern@openeuler.sh。'],
+    SUPPLEMENT_LINK: 'intern@openeuler.sh'
   },
 ];
 const RULE = {
@@ -74,7 +70,7 @@ const RULE = {
         'A：可以，但积分不能再用于领取证明和奖金，一年内累计到150积分可获得openEuler社区高校“开源之星”荣誉。',
     },
   ],
-  MORE: ['更多问题，请移步', '本帖', '评论区提问。'],
+  MORE: ['更多问题，请添加', 'openEuler', '小助手进行咨询'],
 };
 
 const PARTNER_DATA = computed(() => {
@@ -112,10 +108,6 @@ const PARTNER_DATA = computed(() => {
         IMG: openGauss_light,
         LINK: '',
       },
-      {
-        IMG: openLookeng_light,
-        LINK: '',
-      },
     ];
   } else {
     return [
@@ -151,10 +143,6 @@ const PARTNER_DATA = computed(() => {
         IMG: openGauss_dark,
         LINK: '',
       },
-      {
-        IMG: openLookeng_dark,
-        LINK: '',
-      },
     ];
   }
 });
@@ -163,7 +151,7 @@ const HELP = {
   INFO: [
     '联系邮箱:',
     'intern@openeuler.sh',
-    '扫码添加openEuler小助手微信，加入交流群，备注高校及年级，更多问题群内咨询。',
+    '扫码添加openEuler小助手微信，回复“开源实习进群”加入交流群，备注高校及年级，更多问题群内咨询。',
   ],
   ITEM: {
     IMG: qrCode,
@@ -200,16 +188,12 @@ const navList = [
     name: '申请步骤',
   },
   {
-    key: '#task',
-    name: '实习任务',
+    key: '#rule',
+    name: '实习规则',
   },
   {
     key: '#integral ',
     name: '激励规则',
-  },
-  {
-    key: '#rule',
-    name: '实习规则',
   },
   {
     key: '#partner',
@@ -278,94 +262,27 @@ onUnmounted(() => {
         </div>
         <InternshipStep />
       </section>
-      <section id="task" class="panel nav">
-        <div class="task-title title">
-          <div class="title-img">实习任务</div>
-          <ul class="tab-list">
-            <li
-              v-for="(item, index) in tabList"
-              :key="item"
-              :class="{ active: tabIndex === index }"
-              @click="changeTabIndex(index)"
-            >
-              {{ item }}
-            </li>
-          </ul>
+      <section id="rule" class="panel nav">
+        <div class="rule-title title">
+          <div class="title-img">实习规则</div>
         </div>
-        <InternshipTask v-show="tabIndex === 0" />
-        <div v-show="tabIndex === 1" class="opengauss-task task-wrap">
-          <p class="title">
-            <a
-              href="https://opengauss.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ openGaussTask.title }}</a
-            >
-          </p>
-          <p class="intriduce">{{ openGaussTask.intriduce }}</p>
-          <div class="btn">
-            <a
-              href="https://atomgit.com/opengauss/opensource-intership/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openlookeng-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=newest&state=open&target_project&skip_mobile=true"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <OButton type="primary" class="task-btn"
-                >实习任务
-                <OIcon><IconArrowRight /></OIcon>
-              </OButton>
-            </a>
-            <a
-              href="https://opengauss.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <OButton class="detail-btn">
-                <span>官网详情</span>
-                <OIcon><IconArrowRight /></OIcon>
-              </OButton>
-            </a>
-          </div>
-        </div>
-        <div v-show="tabIndex === 2" class="mindspore-task task-wrap">
-          <p class="title">
-            <a
-              href="https://www.mindspore.cn/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ mindSporeTask.title }}</a
-            >
-          </p>
-          <div>
-            <p
-              v-for="item in mindSporeTask.intriduce"
-              :key="item"
-              class="intriduce"
-            >
-              {{ item }}
-            </p>
-          </div>
-
-          <div class="btn">
-            <a
-              href="https://gitee.com/mindspore/community/issues/I55QGD?from=project-issue&skip_mobile=true"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <OButton class="task-btn">
-                <span>实习任务</span>
-                <OIcon><IconArrowRight /></OIcon>
-              </OButton>
-            </a>
-            <a
-              href="https://www.mindspore.cn/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <OButton class="detail-btn">
-                <span>官网详情</span>
-                <OIcon><IconArrowRight /></OIcon>
-              </OButton>
-            </a>
+        <div class="rule-border">
+          <div class="rule-content">
+            <div class="wrapper">
+              <div
+                v-for="(item, index) in RULE.RULE_DATA"
+                :key="index"
+                class="rule-item"
+              >
+                <div class="question">{{ item.QUESTION }}</div>
+                <div class="answer">{{ item.ANSWER }}</div>
+              </div>
+              <div class="more-question orange">
+                {{ RULE.MORE[0] }}
+                {{ RULE.MORE[1] }}
+                {{ RULE.MORE[2] }}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -405,60 +322,14 @@ onUnmounted(() => {
               <div v-if="item.SUPPLEMENT_LINK" class="supplement">
                 {{ item.SUPPLEMENT[0] }}
                 <a
-                  :href="item.SUPPLEMENT_LINK"
+                  :href="`mailto:${item.SUPPLEMENT_LINK}`"
                   target="_blank"
                   rel="noopener noreferrer"
                   >{{ item.SUPPLEMENT[1] }}</a
                 >
-                {{ item.SUPPLEMENT[2] }}
               </div>
               <div v-else class="supplement">
                 {{ item.SUPPLEMENT }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="rank" class="panel">
-        <div class="rank-title">
-          <img
-            class="web"
-            src="@/assets/category/internship/rank-title.png"
-            alt=""
-          />
-          <img
-            class="mobile"
-            src="@/assets/category/internship/rank-title-mo.png"
-            alt=""
-          />
-        </div>
-        <InternshipRank />
-      </section>
-      <section id="rule" class="panel nav">
-        <div class="rule-title title">
-          <div class="title-img">实习规则</div>
-        </div>
-        <div class="rule-border">
-          <div class="rule-content">
-            <div class="wrapper">
-              <div
-                v-for="(item, index) in RULE.RULE_DATA"
-                :key="index"
-                class="rule-item"
-              >
-                <div class="question">{{ item.QUESTION }}</div>
-                <div class="answer">{{ item.ANSWER }}</div>
-              </div>
-              <div class="more-question orange">
-                {{ RULE.MORE[0] }}
-                <a
-                  class="this-post"
-                  href="https://atomgit.com/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >{{ RULE.MORE[1] }}</a
-                >
-                {{ RULE.MORE[2] }}
               </div>
             </div>
           </div>

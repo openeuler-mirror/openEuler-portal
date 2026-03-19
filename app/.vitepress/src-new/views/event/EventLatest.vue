@@ -119,8 +119,6 @@ const currentList = ref<any>([]);
 
 const activityList = () => {
   latestList.value = MEETUP_DATA[locale.value];
-  params.currentPage = 1;
-  params.pageSize = 12;
   // 活动系列
   const seriesList = latestList.value.filter((item) => {
     if (params.series) {
@@ -140,7 +138,7 @@ const activityList = () => {
     (item) =>
       item.title.includes(params.keyword) || item.city.includes(params.keyword)
   );
-  currentList.value = seachList;
+  currentList.value = seachList.slice((params.currentPage - 1) * params.pageSize, params.currentPage * params.pageSize);
   total.value = seachList?.length;
 };
 
@@ -148,8 +146,10 @@ onMounted(() => {
   activityList();
 });
 watch(
-  () => params,
+  () => [params.series, params.state, params.keyword],
   () => {
+    params.currentPage = 1;
+    params.pageSize = 12;
     activityList();
   },
   {
@@ -160,13 +160,13 @@ watch(
 // -------------------- 分页 --------------------
 const onPaginationChange = (val: { page: number; pageSize: number }) => {
   // 当 pageSize 变化时将page_num 置为1
-  if (val.pageSize !== params.currentPage) {
+  if (val.pageSize !== params.pageSize) {
     params.currentPage = 1;
   } else {
     params.currentPage = val.page;
   }
   params.pageSize = val.pageSize;
-  paramsGetSalon();
+  activityList();
 };
 
 // 精彩回顾下展示列表
@@ -354,6 +354,7 @@ const handleConfirm = () => {
         :page-sizes="COUNT_PER_PAGE"
         :layout="['total', 'jumper', 'pager', 'pagesize']"
         :show-more="false"
+        :simple="lePadV"
         @change="onPaginationChange"
       ></OPagination>
     </div>
