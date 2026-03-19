@@ -14,8 +14,7 @@ The OpenAtom Foundation (hereinafter referred to as "we," "us," or "foundation")
 
 Please carefully review the following updates to this Privacy Statement:
 
-1. Deleted the section "Third-Party SDK Privacy and Security Policy".
-2. Optimized some description.
+1. Added description about the meeting service.
 
 ## 1. How We Collect and Process Your Personal Data
 
@@ -26,12 +25,12 @@ Please carefully review the following updates to this Privacy Statement:
   1. When you register for an openEuler community account, we will collect your **user name**, **email address**, **phone number**, **password**, and **email/phone verification code**. A unique account identifier will be automatically generated. Refusal to provide this information will prevent account creation.
   2. When you log in to the openEuler community using your **user name**, **email address**, or **phone number**, we will collect your **user name**, **email address**, **phone number**, **password** and **email/phone verification code** for authentication. Refusal to provide this information will prevent login.
   3. When you log in using a third-party account (Gitee, GitHub, OpenAtom, or AtomGit), we will collect the following information based on your login mode for authentication and code repository access management:
-    - **Gitee UUID**、**Gitee ID**、Gitee nickname、**Gitee email address**、and Gitee avatar;
-    - **Github UUID**、**Github ID**、Github nickname、**Github email address**、and GitHub avatar;
-    - **OpenAtom UUID**、**OpenAtom user name**、OpenAtom nickname、**OpenAtom email address**、and OpenAtom avatar;
-    - **AtomGit UUID**、**AtomGit ID**AtomGit nickname、**AtomGit email address**、and AtomGit avatar;
+      - **Gitee UUID**, **Gitee ID**, Gitee nickname, **Gitee email address** and Gitee avatar;
+      - **Github UUID**, **Github ID**, Github nickname, **Github email address** and GitHub avatar;
+      - **OpenAtom UUID**, **OpenAtom user name**, OpenAtom nickname, **OpenAtom email address** and OpenAtom avatar;
+      - **AtomGit UUID**, **AtomGit ID**, AtomGit nickname, **AtomGit email address** and AtomGit avatar;
 
-      When you log in using a third-party account without binding to any existing openEuler account, a new openEuler account with a unique identifier will be automatically generated from your **Gitee ID**  **GitHub ID**, **OpenAtom user name** or 、**AtomGit ID**. Refusal to provide this information will prevent login via third-party accounts.
+      When you log in using a third-party account without binding to any existing openEuler account, a new openEuler account with a unique identifier will be automatically generated from your **Gitee ID**, **GitHub ID**, **OpenAtom user name** or **AtomGit ID**. Refusal to provide this information will prevent login via third-party accounts.
 
   4. After logging in, you can optionally provide your avatar, nickname, and company in User Center. This information is not mandatory for using openEuler community features.
   5. After logging in, you can modify your **email address**, **phone number**, and **password** in User Center. We will collect your **email address**, **phone number**, **password** and **email/phone verification code** for authentication.
@@ -67,6 +66,8 @@ Please carefully review the following updates to this Privacy Statement:
 **j) EulerMaker**. When you use the EulerMaker service, we will collect your **user name**, **email address** from your openEuler account for authentication.
 
 **k) Personal Tokens**. When generating a **personal token**, we will collect your **email address** and **email verification code** for authentication. Upon successful authentication, we will collect your token name, granted permissions, and validity period, and will generate the **personal token**. The **personal token** can then be used to access the target API endpoint.
+
+**l) Meeting Service**. When you use our meeting service, we will collect your **AtomGit ID** to configure permissions. When you book a meeting, we will collect the **email addresses** that you provide to send meeting invitations.
 
 <br/>
 
@@ -157,8 +158,8 @@ If you want to contact us or exercise your rights, please contact us at:
 
 Email: **<contact@openeuler.io>**
 
-Last updated: **Jan 30, 2026**
+Last updated: **March 5, 2026**
 
-Privacy policy version: **v20260130**
+Privacy policy version: **v20260305**
 
 </div>
