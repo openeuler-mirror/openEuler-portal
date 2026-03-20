@@ -36,12 +36,12 @@ Please carefully review the following updates to this Privacy Statement:
   5. After logging in, you can modify your **email address**, **phone number**, and **password** in User Center. We will collect your **email address**, **phone number**, **password** and **email/phone verification code** for authentication.
   6. After logging in, you can bind your openEuler account to a third-party account (**GitHub**, **Gitee**, **OpenAtom** or **AtomGit**) in User Center. We will collect the following information about that third-party account accordingly:
 
-    - **Gitee UUID**、**Gitee ID**、Gitee nickname、**Gitee email address**、and Gitee avatar;
-    - **Github UUID**、**Github ID**、Github nickname、**Github email address**、and Github avatar;
-    - **OpenAtom UUID**、**OpenAtom user name**、OpenAtom nickname、**OpenAtom email address**、and OpenAtom avatar;
-    - **AtomGit UUID**、**AtomGit ID**AtomGit nickname、**AtomGit email address**、and AtomGit avatar;
+      - **Gitee UUID**, **Gitee ID**, Gitee nickname、**Gitee email address** and Gitee avatar;
+      - **Github UUID**, **Github ID**, Github nickname, **Github email address** and Github avatar;
+      - **OpenAtom UUID**, **OpenAtom user name**,OpenAtom nickname, **OpenAtom email address** and OpenAtom avatar;
+      - **AtomGit UUID**, **AtomGit ID**, AtomGit nickname, **AtomGit email address** and AtomGit avatar;
 
-    Refusal to provide this information will prevent third-party account binding for login purposes.
+      Refusal to provide this information will prevent third-party account binding for login purposes.
 
 **b) Forum Service**
 
