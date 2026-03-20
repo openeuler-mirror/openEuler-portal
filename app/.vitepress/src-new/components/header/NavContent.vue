@@ -36,7 +36,9 @@ const descMouseenter = (e: MouseEvent) => {
 // ------------导航埋点------------
 const onClickNav = (item: any) => {
   if (Array.isArray(item._PATH)) {
+    const url = typeof item.URL === 'string' ? (item.URL.startsWith('/') ? location.origin + item.URL : item.URL) : '';
     return {
+      url,
       ...(item._PATH as string[]).reduce((levels, navName, index) => {
         levels[`level${index + 1}`] = navName;
         return levels;
