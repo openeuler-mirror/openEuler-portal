@@ -12,6 +12,7 @@ import '@opensig/opendesign/es/index.css';
 import '@opendesign-plus/components/styles';
 import '~@/assets/style/theme/index.scss';
 import '~@/assets/style/theme/media.token.scss';
+import '~@/assets/style/markdown-new.scss';
 
 import ElementPlus from 'element-plus';
 import OpenDesign from 'opendesign';
