@@ -263,7 +263,8 @@ const reportSearch = (data: Record<string, any>) => {
       content: decodeURIComponent(location.search.match(/\bq=([^&]+)&?/)?.[1] || ''),
       ...data,
     },
-    'search_portal'
+    'search_portal',
+    { immediate: true }
   );
 };
 
