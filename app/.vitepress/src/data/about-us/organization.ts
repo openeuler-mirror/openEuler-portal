@@ -148,6 +148,8 @@ import jiangyiwen from '@/assets/category/organization/ai/jiangyiwen.png';
 import qinbinjuan from '@/assets/category/organization/ai/qinbinjuan.png';
 import wubin from '@/assets/category/organization/ai/wubin.png';
 import huangjun from '@/assets/category/organization/ai/huangjun.png';
+import AndrewWafaa from '@/assets/category/organization/ai/AndrewWafaa.png';
+import songmeng from '@/assets/category/organization/ai/songmeng.png';
 
 // 全球化工作组
 import caijuanyang from '@/assets/category/organization/globalization/caijuanyang.png';
@@ -723,6 +725,7 @@ export default {
         title: 'openEuler AI联合工作组',
         list: [
           { img: huxinwei, name: '胡欣蔚', position: ['组长'] },
+          { img: AndrewWafaa, name: 'Andrew Wafaa', position: ['组员'] },
           { img: chenrong, name: '陈榕', position: ['组员'] },
           { img: chenyaqiang, name: '陈亚强', position: ['组员'] },
           { img: dengyiping, name: '邓益平', position: ['组员'] },
@@ -740,6 +743,7 @@ export default {
           { img: qinbinjuan, name: '秦彬娟', position: ['组员'] },
           { img: quemingjian, name: '阙鸣健', position: ['组员'] },
           { img: shenguoliang, name: '沈国良', position: ['组员'] },
+          { img: songmeng, name: '宋梦', position: ['组员'] },
           { img: sunzhenghua, name: '孙政华', position: ['组员'] },
           { img: tiankehui, name: '田可辉', position: ['组员'] },
           { img: wangqingjun, name: '王清珺', position: ['组员'] },
@@ -1357,6 +1361,7 @@ export default {
         title: 'openEuler AI Joint Working Group',
         list: [
           { img: huxinwei, name: 'Hu Xinwei', position: ['Lead'] },
+          { img: AndrewWafaa, name: 'Andrew Wafaa', position: ['Member'] },
           { img: chenrong, name: 'Chen Rong', position: ['Member'] },
           { img: chenyaqiang, name: 'Chen Yaqiang', position: ['Member'] },
           { img: dengyiping, name: 'Deng Yiping', position: ['Member'] },
@@ -1374,6 +1379,7 @@ export default {
           { img: qinbinjuan, name: 'Qin Binjuan', position: ['Member'] },
           { img: quemingjian, name: 'Que Mingjian', position: ['Member'] },
           { img: shenguoliang, name: 'Shen Guoliang', position: ['Member'] },
+          { img: songmeng, name: 'Song Meng', position: ['Member'] },
           { img: sunzhenghua, name: 'Sun Zhenghua', position: ['Member'] },
           { img: tiankehui, name: 'Tian Kehui', position: ['Member'] },
           { img: wangqingjun, name: 'Wang Qingjun', position: ['Member'] },
