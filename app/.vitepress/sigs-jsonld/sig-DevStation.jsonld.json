@@ -1,0 +1,119 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-DevStation SIG",
+    "description": "DevStation SIG is dedicated to providing developers with a a better openEuler development experience",
+    "url": "https://www.openeuler.org/zh/sig/sig-DevStation",
+    "email": "DevStation@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 11
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2025-12-04",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Duan Pengjie",
+        "url": "https://atomgit.com/duan_pengjie",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zhu Zexu",
+        "url": "https://atomgit.com/superninesun",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Li Ping",
+        "url": "https://atomgit.com/lipingEmmaSiguyi",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yuan Lipeng",
+        "url": "https://atomgit.com/randy1568",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Ding Jiahui",
+        "url": "https://atomgit.com/dingjiahuichina",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-DevStation SIG 代码仓库列表",
+    "description": "openEuler sig-DevStation SIG 维护的 8 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-DevStation",
+    "numberOfItems": 8,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-DevStation SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-DevStation SIG（Special Interest Group，特别兴趣小组）负责 DevStation SIG is dedicated to providing developers with a a better openEuler development experience。该 SIG 共有 11 名核心成员，维护 8 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-DevStation SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-DevStation SIG 的方式：1）向相关仓库（如 openeuler/DevStore、src-openeuler/DevStore、src-openeuler/opencode）提交 Pull Request；2）订阅邮件列表 DevStation@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-DevStation SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-DevStation SIG 共维护 8 个代码仓库，主要包括：openeuler/DevStore、src-openeuler/DevStore、src-openeuler/opencode 等。完整列表见 https://www.openeuler.org/zh/sig/sig-DevStation。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-DevStation SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-DevStation SIG 现有 5 名 Maintainer，包括：Duan Pengjie、Zhu Zexu、Li Ping。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

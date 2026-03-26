@@ -1,0 +1,92 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Others SIG",
+    "description": "The team is responsible for the development and maintenance of OS system no sig group packages in openeuler community",
+    "url": "https://www.openeuler.org/zh/sig/Others",
+    "email": "NA",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 6
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-03-26",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "kaitian Du",
+        "url": "https://atomgit.com/kaitiandu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "senlin Xia",
+        "url": "https://atomgit.com/small_leek",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Others SIG 代码仓库列表",
+    "description": "openEuler Others SIG 维护的 113 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/Others",
+    "numberOfItems": 113,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler Others SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Others SIG（Special Interest Group，特别兴趣小组）负责 The team is responsible for the development and maintenance of OS system no sig group packages in openeuler community。该 SIG 共有 6 名核心成员，维护 113 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler Others SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler Others SIG 的方式：1）向相关仓库（如 src-openeuler/mac-robber、src-openeuler/marisa、src-openeuler/mt-st）提交 Pull Request；2）订阅邮件列表 NA；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler Others SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Others SIG 共维护 113 个代码仓库，主要包括：src-openeuler/mac-robber、src-openeuler/marisa、src-openeuler/mt-st 等。完整列表见 https://www.openeuler.org/zh/sig/Others。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler Others SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Others SIG 现有 2 名 Maintainer，包括：kaitian Du、senlin Xia。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

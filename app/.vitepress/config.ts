@@ -1,9 +1,27 @@
-import type { HeadConfig, UserConfig } from 'vitepress';
+import type { HeadConfig, PageData, UserConfig } from 'vitepress';
 import tdks from './tdks';
 import generateLLMsTxt from './plugins/generateLLMsTxt';
 import LLMsTxtSections from './LLMsTxtSections';
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
+
+const JSONLD_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'sigs-jsonld');
+/**
+ * 为sig详情页设置title和JSON-LD
+ */
+const sigDetailPageAddTitleAndJSONLD = async (pageData: PageData) => {
+  if (!pageData.params?.sig) return;
+  const content = await readFile(path.join(JSONLD_DIR, `${pageData.params.sig}.jsonld.json`), { encoding: 'utf8' });
+  pageData.title = pageData.params.sig;
+  (pageData.frontmatter.head ??= []).push([
+    'script',
+    { type: 'application/ld+json' },
+    content
+  ]);
+}
 
 const config: UserConfig = {
   sitemap: {
@@ -45,6 +63,9 @@ const config: UserConfig = {
   appearance: false, // enable dynamic scripts for dark mode
   titleTemplate: false, //  vitepress supports pageTitileTemplate since 1.0.0
   async transformPageData(pageData) {
+    if (pageData.frontmatter.sigPageType === 'detail') {
+      await sigDetailPageAddTitleAndJSONLD(pageData);
+    }
     const filePath = pageData.filePath;
     let lookupKey: string;
     if (filePath.endsWith('index.md')) {

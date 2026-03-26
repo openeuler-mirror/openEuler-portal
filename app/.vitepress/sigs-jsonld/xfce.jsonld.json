@@ -1,0 +1,109 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler xfce SIG",
+    "description": "The xfce team is responsible for Xfce and LXDE Desktop",
+    "url": "https://www.openeuler.org/zh/sig/xfce",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 4
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "dingwenlong",
+        "url": "https://atomgit.com/dwl301",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "turbolinux"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "zhanglin",
+        "url": "https://atomgit.com/zhang__3125",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "turbolinux"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "fangyafen",
+        "url": "https://atomgit.com/woqidaideshi",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "iscas"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "douyan",
+        "url": "https://atomgit.com/dou33",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler xfce SIG 代码仓库列表",
+    "description": "openEuler xfce SIG 维护的 89 个代码仓库，涵盖 桌面与图形界面 领域",
+    "url": "https://www.openeuler.org/zh/sig/xfce",
+    "numberOfItems": 89,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler xfce SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler xfce SIG（Special Interest Group，特别兴趣小组）负责 The xfce team is responsible for Xfce and LXDE Desktop。该 SIG 共有 4 名核心成员，维护 89 个代码仓库，属于 桌面与图形界面 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler xfce SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler xfce SIG 的方式：1）向相关仓库（如 src-openeuler/hddtemp、src-openeuler/xfdashboard、src-openeuler/xfce4-settings）提交 Pull Request；2）订阅邮件列表 dev@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler xfce SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler xfce SIG 共维护 89 个代码仓库，主要包括：src-openeuler/hddtemp、src-openeuler/xfdashboard、src-openeuler/xfce4-settings 等。完整列表见 https://www.openeuler.org/zh/sig/xfce。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler xfce SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler xfce SIG 现有 4 名 Maintainer，包括：dingwenlong、zhanglin、fangyafen。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

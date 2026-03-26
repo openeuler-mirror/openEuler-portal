@@ -1,0 +1,103 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler security-committee SIG",
+    "description": "The openEuler Security Committee (SC) receives and responds to openEuler security issues, provides community security guidance, and carries out security governance. It is built to enhance the security of openEuler products and development environment.",
+    "url": "https://www.openeuler.org/zh/sig/security-committee",
+    "email": "openeuler-security@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 9
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Zhu Jianwei",
+        "url": "https://atomgit.com/zhujianwei001"
+      },
+      {
+        "@type": "Person",
+        "name": "Cui Lei",
+        "url": "https://atomgit.com/kylincuilei"
+      },
+      {
+        "@type": "Person",
+        "name": "Tan Jingguo",
+        "url": "https://atomgit.com/tanjingguo"
+      },
+      {
+        "@type": "Person",
+        "name": "Luo Yukai",
+        "url": "https://atomgit.com/luoyukai"
+      },
+      {
+        "@type": "Person",
+        "name": "Liu Jingang",
+        "url": "https://gitee.com/liujingang09"
+      },
+      {
+        "@type": "Person",
+        "name": "Tang Jie",
+        "url": "https://atomgit.com/tangjie"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler security-committee SIG 代码仓库列表",
+    "description": "openEuler security-committee SIG 维护的 2 个代码仓库，涵盖 安全 领域",
+    "url": "https://www.openeuler.org/zh/sig/security-committee",
+    "numberOfItems": 2,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler security-committee SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler security-committee SIG（Special Interest Group，特别兴趣小组）负责 The openEuler Security Committee (SC) receives and responds to openEuler security issues, provides community security guidance, and carries out security governance. It is built to enhance the security of openEuler products and development environment.。该 SIG 共有 9 名核心成员，维护 2 个代码仓库，属于 安全 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler security-committee SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler security-committee SIG 的方式：1）向相关仓库（如 openeuler/security-committee、openeuler/security-committee-private）提交 Pull Request；2）订阅邮件列表 openeuler-security@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler security-committee SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler security-committee SIG 共维护 2 个代码仓库，主要包括：openeuler/security-committee、openeuler/security-committee-private 等。完整列表见 https://www.openeuler.org/zh/sig/security-committee。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler security-committee SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler security-committee SIG 现有 9 名 Maintainer，包括：Zhu Jianwei、Cui Lei、Tan Jingguo。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

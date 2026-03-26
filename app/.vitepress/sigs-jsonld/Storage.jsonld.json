@@ -1,0 +1,104 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Storage SIG",
+    "description": "Storage sig is committed to continuously explore and build the ecology and competitiveness in the technical area of storage.",
+    "url": "https://www.openeuler.org/zh/sig/Storage",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 19
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2019-12-30",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Zhiqiang Liu",
+        "url": "https://atomgit.com/liuzhiqiang26"
+      },
+      {
+        "@type": "Person",
+        "name": "Feilong Lin",
+        "url": "https://atomgit.com/dragon1147e3"
+      },
+      {
+        "@type": "Person",
+        "name": "Hongxiang Lou",
+        "url": "https://atomgit.com/louhongxiang"
+      },
+      {
+        "@type": "Person",
+        "name": "Weifeng Su",
+        "url": "https://atomgit.com/swf504"
+      },
+      {
+        "@type": "Person",
+        "name": "Bo Liu",
+        "url": "https://atomgit.com/VICTORY2017"
+      },
+      {
+        "@type": "Person",
+        "name": "Wenqi Kou",
+        "url": "https://atomgit.com/kouwq"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Storage SIG 代码仓库列表",
+    "description": "openEuler Storage SIG 维护的 87 个代码仓库，涵盖 存储 领域",
+    "url": "https://www.openeuler.org/zh/sig/Storage",
+    "numberOfItems": 87,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler Storage SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Storage SIG（Special Interest Group，特别兴趣小组）负责 Storage sig is committed to continuously explore and build the ecology and competitiveness in the technical area of storage.。该 SIG 共有 19 名核心成员，维护 87 个代码仓库，属于 存储 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler Storage SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler Storage SIG 的方式：1）向相关仓库（如 src-openeuler/system-storage-manager、src-openeuler/parted、src-openeuler/tcmu-runner）提交 Pull Request；2）订阅邮件列表 dev@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler Storage SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Storage SIG 共维护 87 个代码仓库，主要包括：src-openeuler/system-storage-manager、src-openeuler/parted、src-openeuler/tcmu-runner 等。完整列表见 https://www.openeuler.org/zh/sig/Storage。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler Storage SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Storage SIG 现有 6 名 Maintainer，包括：Zhiqiang Liu、Feilong Lin、Hongxiang Lou。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

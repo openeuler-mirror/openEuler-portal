@@ -1,0 +1,103 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-Hygon SIG",
+    "description": "openEuler Hygon SIG",
+    "url": "https://www.openeuler.org/zh/sig/sig-Hygon",
+    "email": "sig-hygon@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 12
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Hao Feng",
+        "url": "https://gitee.com/fenghao176"
+      },
+      {
+        "@type": "Person",
+        "name": "Xin Jiang",
+        "url": "https://gitee.com/jiangxin00"
+      },
+      {
+        "@type": "Person",
+        "name": "Wei Li",
+        "url": "https://atomgit.com/Allen846356"
+      },
+      {
+        "@type": "Person",
+        "name": "Baoshun Fang",
+        "url": "https://atomgit.com/fang_baoshun"
+      },
+      {
+        "@type": "Person",
+        "name": "Shan Chen",
+        "url": "https://gitee.com/OliveU"
+      },
+      {
+        "@type": "Person",
+        "name": "Haibo Tu",
+        "url": "https://gitee.com/haibotu"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-Hygon SIG 代码仓库列表",
+    "description": "openEuler sig-Hygon SIG 维护的 4 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-Hygon",
+    "numberOfItems": 4,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-Hygon SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Hygon SIG（Special Interest Group，特别兴趣小组）负责 openEuler Hygon SIG。该 SIG 共有 12 名核心成员，维护 4 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-Hygon SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-Hygon SIG 的方式：1）向相关仓库（如 openeuler/hygon-kernel、openeuler/hygon-devkit、openeuler/hygon-qemu）提交 Pull Request；2）订阅邮件列表 sig-hygon@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-Hygon SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Hygon SIG 共维护 4 个代码仓库，主要包括：openeuler/hygon-kernel、openeuler/hygon-devkit、openeuler/hygon-qemu 等。完整列表见 https://www.openeuler.org/zh/sig/sig-Hygon。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-Hygon SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Hygon SIG 现有 6 名 Maintainer，包括：Hao Feng、Xin Jiang、Wei Li。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

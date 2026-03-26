@@ -1,0 +1,106 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-Space SIG",
+    "description": "SIG-Space focuses on building a high-reliability, strong real-time, and intelligent full-scenario collaborative open-source ecosystem for space computing, covering aerospace (satellite constellations, deep space exploration) and low-altitude (UAV, eVTOL) domains based on openEuler.",
+    "url": "https://www.openeuler.org/zh/sig/sig-Space",
+    "email": "sig-Space@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 17
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2026-03-05",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Wayne Ren",
+        "url": "https://atomgit.com/vonhust"
+      },
+      {
+        "@type": "Person",
+        "name": "蔡鑫奇",
+        "url": "https://atomgit.com/openHongYu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "北京航天微系统与信息技术研究所"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "郑国玲",
+        "url": "https://atomgit.com/zhengguoling",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "成都菁蓉联创科技有限公司"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "李弘宇",
+        "url": "https://atomgit.com/LHY1999",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "北京邮电大学/一苇宇航（北京）科技有限公司"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-Space SIG 代码仓库列表",
+    "description": "openEuler sig-Space SIG 维护的 0 个代码仓库，涵盖 嵌入式与物联网 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-Space",
+    "numberOfItems": 0,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-Space SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Space SIG（Special Interest Group，特别兴趣小组）负责 SIG-Space focuses on building a high-reliability, strong real-time, and intelligent full-scenario collaborative open-source ecosystem for space computing, covering aerospace (satellite constellations, deep space exploration) and low-altitude (UAV, eVTOL) domains based on openEuler.。该 SIG 共有 17 名核心成员，维护 0 个代码仓库，属于 嵌入式与物联网 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-Space SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-Space SIG 的方式：1）向相关仓库（如 见页面仓库列表）提交 Pull Request；2）订阅邮件列表 sig-Space@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-Space SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Space SIG 共维护 0 个代码仓库，主要包括：见页面仓库列表 等。完整列表见 https://www.openeuler.org/zh/sig/sig-Space。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-Space SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Space SIG 现有 4 名 Maintainer，包括：Wayne Ren、蔡鑫奇、郑国玲。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

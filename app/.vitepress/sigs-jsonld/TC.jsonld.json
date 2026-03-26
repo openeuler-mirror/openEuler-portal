@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler TC SIG",
+    "description": "The openEuler Technical Committee (TC) is responsible for technical decision-making and resource coordination in the openEuler community.",
+    "url": "https://www.openeuler.org/zh/sig/TC",
+    "email": "tc@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 27
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2019-12-31",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Cao Zhi",
+        "url": "https://atomgit.com/georgecao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Chen Maodong",
+        "url": "https://atomgit.com/chenmaodong",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "xFusion"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Chen Qide",
+        "url": "https://atomgit.com/dillon_chen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Chen Yaqiang",
+        "url": "https://atomgit.com/yaqiangchen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Du Kaitian",
+        "url": "https://atomgit.com/kaitiandu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Gao Guijin",
+        "url": "https://atomgit.com/blue0613",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler TC SIG 代码仓库列表",
+    "description": "openEuler TC SIG 维护的 5 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/TC",
+    "numberOfItems": 5,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler TC SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler TC SIG（Special Interest Group，特别兴趣小组）负责 The openEuler Technical Committee (TC) is responsible for technical decision-making and resource coordination in the openEuler community.。该 SIG 共有 27 名核心成员，维护 5 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler TC SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler TC SIG 的方式：1）向相关仓库（如 openeuler/TC、openeuler/community、openeuler/community-issue）提交 Pull Request；2）订阅邮件列表 tc@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler TC SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler TC SIG 共维护 5 个代码仓库，主要包括：openeuler/TC、openeuler/community、openeuler/community-issue 等。完整列表见 https://www.openeuler.org/zh/sig/TC。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler TC SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler TC SIG 现有 27 名 Maintainer，包括：Cao Zhi、Chen Maodong、Chen Qide。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

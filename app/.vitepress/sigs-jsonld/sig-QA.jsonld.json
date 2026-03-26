@@ -1,0 +1,127 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-QA SIG",
+    "description": "QA team aims to test softwares make up openEuler release, our goal is to improve openEuler community quality and testing capability.",
+    "url": "https://www.openeuler.org/zh/sig/sig-QA",
+    "email": "qa@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 43
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "wufengguang",
+        "url": "https://atomgit.com/wu_fengguang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "wubodong",
+        "url": "https://atomgit.com/walkingwalk",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "lemon.higgins",
+        "url": "https://atomgit.com/lemon-higgins",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "lutianxiong",
+        "url": "https://atomgit.com/lutianxiong",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "yanjin",
+        "url": "https://atomgit.com/Rigorous",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "tangjie",
+        "url": "https://atomgit.com/SupMario",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-QA SIG 代码仓库列表",
+    "description": "openEuler sig-QA SIG 维护的 22 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-QA",
+    "numberOfItems": 22,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-QA SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-QA SIG（Special Interest Group，特别兴趣小组）负责 QA team aims to test softwares make up openEuler release, our goal is to improve openEuler community quality and testing capability.。该 SIG 共有 43 名核心成员，维护 22 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-QA SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-QA SIG 的方式：1）向相关仓库（如 openeuler/avocado-vt、openeuler/tp-qemu、openeuler/test-tools）提交 Pull Request；2）订阅邮件列表 qa@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-QA SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-QA SIG 共维护 22 个代码仓库，主要包括：openeuler/avocado-vt、openeuler/tp-qemu、openeuler/test-tools 等。完整列表见 https://www.openeuler.org/zh/sig/sig-QA。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-QA SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-QA SIG 现有 14 名 Maintainer，包括：wufengguang、wubodong、lemon.higgins。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

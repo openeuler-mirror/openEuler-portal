@@ -1,0 +1,119 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler ai SIG",
+    "description": "Build an AI infrastructure framework to provide key capabilities such as unified access of southbound XPUs (such as CPUs, GPUs, and NPUs), heterogeneous converged memory, heterogeneous converged virtualization, computing power segmentation, training resource priority configuration, and elastic migration. Enables full-stack adaptation of AI applications and helps enterprises build AI infrastructure solutions in scenarios such as training and promotion acceleration and hybrid deployment of training and promotion.",
+    "url": "https://www.openeuler.org/zh/sig/ai",
+    "email": "ai-infra@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 13
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2022-04-11",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "dukaitian",
+        "url": "https://atomgit.com/kaitiandu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "zhuweixi",
+        "url": "https://gitee.com/weixizhu94",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "zhengxian",
+        "url": "https://atomgit.com/sinever",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "zhushoukui",
+        "url": "https://gitee.com/zhushoukui",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "JD"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "anhongkui",
+        "url": "https://gitee.com/anhongkui",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "JD"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler ai SIG 代码仓库列表",
+    "description": "openEuler ai SIG 维护的 68 个代码仓库，涵盖 AI 与机器学习 领域",
+    "url": "https://www.openeuler.org/zh/sig/ai",
+    "numberOfItems": 68,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler ai SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler ai SIG（Special Interest Group，特别兴趣小组）负责 Build an AI infrastructure framework to provide key capabilities such as unified access of southbound XPUs (such as CPUs, GPUs, and NPUs), heterogeneous converged memory, heterogeneous converged virtualization, computing power segmentation, training resource priority configuration, and elastic migration. Enables full-stack adaptation of AI applications and helps enterprises build AI infrastructure solutions in scenarios such as training and promotion acceleration and hybrid deployment of training and promotion.。该 SIG 共有 13 名核心成员，维护 68 个代码仓库，属于 AI 与机器学习 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler ai SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler ai SIG 的方式：1）向相关仓库（如 src-openeuler/incubator-mxnet、src-openeuler/nccl、src-openeuler/glpk）提交 Pull Request；2）订阅邮件列表 ai-infra@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler ai SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler ai SIG 共维护 68 个代码仓库，主要包括：src-openeuler/incubator-mxnet、src-openeuler/nccl、src-openeuler/glpk 等。完整列表见 https://www.openeuler.org/zh/sig/ai。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler ai SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler ai SIG 现有 5 名 Maintainer，包括：dukaitian、zhuweixi、zhengxian。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

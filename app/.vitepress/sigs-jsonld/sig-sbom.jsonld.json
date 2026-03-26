@@ -1,0 +1,109 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-sbom SIG",
+    "description": "sig-sbom is a working group dedicated to incubating sbom applications and toolchains, with a vision to integrate sbom tools.",
+    "url": "https://www.openeuler.org/zh/sig/sig-sbom",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 8
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2024-05-22",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Yukai Luo",
+        "url": "https://atomgit.com/luoyukai",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Quansong Du",
+        "url": "https://atomgit.com/kentado",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "ZhaoYu Jiang",
+        "url": "https://atomgit.com/Fa1c0n",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Mao Yihui",
+        "url": "https://atomgit.com/albert-leo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "linxSoft"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-sbom SIG 代码仓库列表",
+    "description": "openEuler sig-sbom SIG 维护的 7 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-sbom",
+    "numberOfItems": 7,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-sbom SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-sbom SIG（Special Interest Group，特别兴趣小组）负责 sig-sbom is a working group dedicated to incubating sbom applications and toolchains, with a vision to integrate sbom tools.。该 SIG 共有 8 名核心成员，维护 7 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-sbom SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-sbom SIG 的方式：1）向相关仓库（如 openeuler/sbom-service、openeuler/sbom-tools、openeuler/sbom-website）提交 Pull Request；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-sbom SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-sbom SIG 共维护 7 个代码仓库，主要包括：openeuler/sbom-service、openeuler/sbom-tools、openeuler/sbom-website 等。完整列表见 https://www.openeuler.org/zh/sig/sig-sbom。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-sbom SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-sbom SIG 现有 4 名 Maintainer，包括：Yukai Luo、Quansong Du、ZhaoYu Jiang。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

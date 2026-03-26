@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-sw-arch SIG",
+    "description": "The SW-Arch SIG adds SW architure support into openEuler community, be engaged in the migration, adaptation and optimization for SW platform, and mainly responsible for the planning, maintenance and upgrade for software releases related to SW architecture in openEuler.",
+    "url": "https://www.openeuler.org/zh/sig/sig-sw-arch",
+    "email": "NA",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 11
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2021-10-13",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "yaojiawei",
+        "url": "https://gitee.com/georyi-yao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "i-Soft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "xuxiangxiang",
+        "url": "https://gitee.com/xu-think-about-it",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "i-Soft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "yinjintao",
+        "url": "https://atomgit.com/yinjintao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "i-Soft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "mayongsheng",
+        "url": "https://gitee.com/mayongsheng666",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "esage"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "wuzixuan",
+        "url": "https://atomgit.com/wuzx065891",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "wxiat"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "qiuwenjuan",
+        "url": "https://atomgit.com/sunny_winni",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "i-Soft"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-sw-arch SIG 代码仓库列表",
+    "description": "openEuler sig-sw-arch SIG 维护的 1 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-sw-arch",
+    "numberOfItems": 1,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-sw-arch SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-sw-arch SIG（Special Interest Group，特别兴趣小组）负责 The SW-Arch SIG adds SW architure support into openEuler community, be engaged in the migration, adaptation and optimization for SW platform, and mainly responsible for the planning, maintenance and upgrade for software releases related to SW architecture in openEuler.。该 SIG 共有 11 名核心成员，维护 1 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-sw-arch SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-sw-arch SIG 的方式：1）向相关仓库（如 openeuler/sw-committee）提交 Pull Request；2）订阅邮件列表 NA；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-sw-arch SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-sw-arch SIG 共维护 1 个代码仓库，主要包括：openeuler/sw-committee 等。完整列表见 https://www.openeuler.org/zh/sig/sig-sw-arch。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-sw-arch SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-sw-arch SIG 现有 11 名 Maintainer，包括：yaojiawei、xuxiangxiang、yinjintao。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

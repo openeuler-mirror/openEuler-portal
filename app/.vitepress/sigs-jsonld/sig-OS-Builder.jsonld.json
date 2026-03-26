@@ -1,0 +1,103 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-OS-Builder SIG",
+    "description": ".",
+    "url": "https://www.openeuler.org/zh/sig/sig-OS-Builder",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 24
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "yanan",
+        "url": "https://atomgit.com/yanan-rock"
+      },
+      {
+        "@type": "Person",
+        "name": "fengtao",
+        "url": "https://atomgit.com/t_feng"
+      },
+      {
+        "@type": "Person",
+        "name": "zhangrui",
+        "url": "https://atomgit.com/anonymous_z"
+      },
+      {
+        "@type": "Person",
+        "name": "yangyang shen",
+        "url": "https://atomgit.com/shenyangyang"
+      },
+      {
+        "@type": "Person",
+        "name": "xiaowen he",
+        "url": "https://atomgit.com/overweight"
+      },
+      {
+        "@type": "Person",
+        "name": "Trainey",
+        "url": "https://atomgit.com/zhuchunyi"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-OS-Builder SIG 代码仓库列表",
+    "description": "openEuler sig-OS-Builder SIG 维护的 32 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-OS-Builder",
+    "numberOfItems": 32,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-OS-Builder SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OS-Builder SIG（Special Interest Group，特别兴趣小组）负责 .。该 SIG 共有 24 名核心成员，维护 32 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-OS-Builder SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-OS-Builder SIG 的方式：1）向相关仓库（如 src-openeuler/anaconda-user-help、src-openeuler/anaconda、src-openeuler/grub2）提交 Pull Request；2）订阅邮件列表 dev@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-OS-Builder SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OS-Builder SIG 共维护 32 个代码仓库，主要包括：src-openeuler/anaconda-user-help、src-openeuler/anaconda、src-openeuler/grub2 等。完整列表见 https://www.openeuler.org/zh/sig/sig-OS-Builder。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-OS-Builder SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OS-Builder SIG 现有 9 名 Maintainer，包括：yanan、fengtao、zhangrui。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

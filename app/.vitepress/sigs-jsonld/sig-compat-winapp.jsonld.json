@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-compat-winapp SIG",
+    "description": "Compatibility Winapp sig group is mainly dedicated to introducing massive Windows applications for X86 platform into openeuler system with X86/arm architecture.",
+    "url": "https://www.openeuler.org/zh/sig/sig-compat-winapp",
+    "email": "compat-winapp@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 11
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2021-05-08",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Liang Keming",
+        "url": "https://atomgit.com/liangkeming",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Liu Buquan",
+        "url": "https://atomgit.com/sunshower",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Mu Ruichao",
+        "url": "https://gitee.com/mu_ruichao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Lin Chaochao",
+        "url": "https://gitee.com/linchaochao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Guo Hao",
+        "url": "https://gitee.com/guohaocs2c",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Fu Zhengwei",
+        "url": "https://gitee.com/fzw0910",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-compat-winapp SIG 代码仓库列表",
+    "description": "openEuler sig-compat-winapp SIG 维护的 26 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-compat-winapp",
+    "numberOfItems": 26,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-compat-winapp SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-compat-winapp SIG（Special Interest Group，特别兴趣小组）负责 Compatibility Winapp sig group is mainly dedicated to introducing massive Windows applications for X86 platform into openeuler system with X86/arm architecture.。该 SIG 共有 11 名核心成员，维护 26 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-compat-winapp SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-compat-winapp SIG 的方式：1）向相关仓库（如 openeuler/compat-winapp、openeuler/wine-app、src-openeuler/tslib）提交 Pull Request；2）订阅邮件列表 compat-winapp@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-compat-winapp SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-compat-winapp SIG 共维护 26 个代码仓库，主要包括：openeuler/compat-winapp、openeuler/wine-app、src-openeuler/tslib 等。完整列表见 https://www.openeuler.org/zh/sig/sig-compat-winapp。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-compat-winapp SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-compat-winapp SIG 现有 9 名 Maintainer，包括：Liang Keming、Liu Buquan、Mu Ruichao。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

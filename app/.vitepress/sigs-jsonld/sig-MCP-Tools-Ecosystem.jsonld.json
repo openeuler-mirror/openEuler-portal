@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-MCP-Tools-Ecosystem SIG",
+    "description": "The goal of sig-MCP-Tools-Ecosystem is to build an open, unified, and extensible system command service platform, driving the continuous evolution of commands from \"tools\" to \"services\", and ultimately to \"intelligent interfaces\".",
+    "url": "https://www.openeuler.org/zh/sig/sig-MCP-Tools-Ecosystem",
+    "email": "sig-mcp-tools-ecosystem@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 23
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2025-10-30",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Jiang Shaotao",
+        "url": "https://atomgit.com/pzxmx",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CTyunOS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Qin Yong",
+        "url": "https://atomgit.com/smileQiny",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CTyunOS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Fu Guangzhe",
+        "url": "https://atomgit.com/free_stor",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CTyunOS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Tan Liyong",
+        "url": "https://atomgit.com/huskartang1",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CTyunOS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yang Tao",
+        "url": "https://atomgit.com/xhuacmer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CTyunOS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Jiang Zhengxiong",
+        "url": "https://gitee.com/davidjzx",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CTyunOS"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-MCP-Tools-Ecosystem SIG 代码仓库列表",
+    "description": "openEuler sig-MCP-Tools-Ecosystem SIG 维护的 7 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-MCP-Tools-Ecosystem",
+    "numberOfItems": 7,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-MCP-Tools-Ecosystem SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-MCP-Tools-Ecosystem SIG（Special Interest Group，特别兴趣小组）负责 The goal of sig-MCP-Tools-Ecosystem is to build an open, unified, and extensible system command service platform, driving the continuous evolution of commands from \"tools\" to \"services\", and ultimately to \"intelligent interfaces\".。该 SIG 共有 23 名核心成员，维护 7 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-MCP-Tools-Ecosystem SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-MCP-Tools-Ecosystem SIG 的方式：1）向相关仓库（如 openeuler/syskits、openeuler/workflowkits、openeuler/SysAIFrame）提交 Pull Request；2）订阅邮件列表 sig-mcp-tools-ecosystem@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-MCP-Tools-Ecosystem SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-MCP-Tools-Ecosystem SIG 共维护 7 个代码仓库，主要包括：openeuler/syskits、openeuler/workflowkits、openeuler/SysAIFrame 等。完整列表见 https://www.openeuler.org/zh/sig/sig-MCP-Tools-Ecosystem。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-MCP-Tools-Ecosystem SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-MCP-Tools-Ecosystem SIG 现有 11 名 Maintainer，包括：Jiang Shaotao、Qin Yong、Fu Guangzhe。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-OpenDesign SIG",
+    "description": "The OpenDesign team is responsible for user experience of the openEuler community.",
+    "url": "https://www.openeuler.org/zh/sig/sig-OpenDesign",
+    "email": "opendesign@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 7
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Zhe Sun",
+        "url": "https://atomgit.com/stan1023"
+      },
+      {
+        "@type": "Person",
+        "name": "Sting Zhang",
+        "url": "https://gitee.com/pig-s-trotters"
+      },
+      {
+        "@type": "Person",
+        "name": "Wendong Cao",
+        "url": "https://atomgit.com/devin-cwd"
+      },
+      {
+        "@type": "Person",
+        "name": "Quanyi Ma",
+        "url": "https://atomgit.com/genedna"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhuangbang Gong",
+        "url": "https://atomgit.com/gzbang"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-OpenDesign SIG 代码仓库列表",
+    "description": "openEuler sig-OpenDesign SIG 维护的 17 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-OpenDesign",
+    "numberOfItems": 17,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-OpenDesign SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OpenDesign SIG（Special Interest Group，特别兴趣小组）负责 The OpenDesign team is responsible for user experience of the openEuler community.。该 SIG 共有 7 名核心成员，维护 17 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-OpenDesign SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-OpenDesign SIG 的方式：1）向相关仓库（如 openeuler/opendesign、openeuler/opendesign-components、openeuler/opendesign-analytics）提交 Pull Request；2）订阅邮件列表 opendesign@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-OpenDesign SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OpenDesign SIG 共维护 17 个代码仓库，主要包括：openeuler/opendesign、openeuler/opendesign-components、openeuler/opendesign-analytics 等。完整列表见 https://www.openeuler.org/zh/sig/sig-OpenDesign。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-OpenDesign SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OpenDesign SIG 现有 5 名 Maintainer，包括：Zhe Sun、Sting Zhang、Wendong Cao。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

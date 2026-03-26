@@ -1,0 +1,101 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-message-middleware SIG",
+    "description": "This sig maintain messaging middleware software packages for upstream open source communities,and incubate the new open source self-developed message middleware.",
+    "url": "https://www.openeuler.org/zh/sig/sig-message-middleware",
+    "email": "message-middleware@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 14
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2023-6-21",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "huzongtang",
+        "url": "https://gitee.com/hu-zongtang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ChinaMobile"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "jianghaiting",
+        "url": "https://gitee.com/jas0n918",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Tencent"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "dingwei",
+        "url": "https://gitee.com/dingwei-hello",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-message-middleware SIG 代码仓库列表",
+    "description": "openEuler sig-message-middleware SIG 维护的 10 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-message-middleware",
+    "numberOfItems": 10,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-message-middleware SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-message-middleware SIG（Special Interest Group，特别兴趣小组）负责 This sig maintain messaging middleware software packages for upstream open source communities,and incubate the new open source self-developed message middleware.。该 SIG 共有 14 名核心成员，维护 10 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-message-middleware SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-message-middleware SIG 的方式：1）向相关仓库（如 src-openeuler/rocketmq、src-openeuler/rabbitmq-java-client、src-openeuler/rabbitmq-server）提交 Pull Request；2）订阅邮件列表 message-middleware@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-message-middleware SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-message-middleware SIG 共维护 10 个代码仓库，主要包括：src-openeuler/rocketmq、src-openeuler/rabbitmq-java-client、src-openeuler/rabbitmq-server 等。完整列表见 https://www.openeuler.org/zh/sig/sig-message-middleware。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-message-middleware SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-message-middleware SIG 现有 3 名 Maintainer，包括：huzongtang、jianghaiting、dingwei。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

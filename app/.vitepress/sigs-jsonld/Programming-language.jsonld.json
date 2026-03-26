@@ -1,0 +1,92 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Programming-language SIG",
+    "description": "Language components running in the development environment of openEuler",
+    "url": "https://www.openeuler.org/zh/sig/Programming-language",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 15
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2019-12-31",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Luo Shengwei",
+        "url": "https://atomgit.com/lostway1",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yongqiang Li",
+        "url": "https://atomgit.com/Charlie_li1",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "xFusion"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Programming-language SIG 代码仓库列表",
+    "description": "openEuler Programming-language SIG 维护的 372 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/Programming-language",
+    "numberOfItems": 372,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler Programming-language SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Programming-language SIG（Special Interest Group，特别兴趣小组）负责 Language components running in the development environment of openEuler。该 SIG 共有 15 名核心成员，维护 372 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler Programming-language SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler Programming-language SIG 的方式：1）向相关仓库（如 src-openeuler/xcb-proto、src-openeuler/xcb-util-renderutil、src-openeuler/xcb-util-keysyms）提交 Pull Request；2）订阅邮件列表 dev@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler Programming-language SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Programming-language SIG 共维护 372 个代码仓库，主要包括：src-openeuler/xcb-proto、src-openeuler/xcb-util-renderutil、src-openeuler/xcb-util-keysyms 等。完整列表见 https://www.openeuler.org/zh/sig/Programming-language。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler Programming-language SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Programming-language SIG 现有 2 名 Maintainer，包括：Luo Shengwei、Yongqiang Li。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

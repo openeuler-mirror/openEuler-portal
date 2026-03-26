@@ -1,0 +1,98 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Kernel SIG",
+    "description": "openEuler Kernel SIG",
+    "url": "https://www.openeuler.org/zh/sig/Kernel",
+    "email": "kernel@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 118
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Xie XiuQi",
+        "url": "https://atomgit.com/oekernel"
+      },
+      {
+        "@type": "Person",
+        "name": "Hanjun Guo",
+        "url": "https://atomgit.com/hanjunguo"
+      },
+      {
+        "@type": "Person",
+        "name": "Zheng Zengkai",
+        "url": "https://atomgit.com/zhengzengkai"
+      },
+      {
+        "@type": "Person",
+        "name": "sanglipeng",
+        "url": "https://atomgit.com/sanglipeng"
+      },
+      {
+        "@type": "Person",
+        "name": "Jason Zeng",
+        "url": "https://atomgit.com/zeng_zhaorong"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Kernel SIG 代码仓库列表",
+    "description": "openEuler Kernel SIG 维护的 21 个代码仓库，涵盖 操作系统内核 领域",
+    "url": "https://www.openeuler.org/zh/sig/Kernel",
+    "numberOfItems": 21,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler Kernel SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Kernel SIG（Special Interest Group，特别兴趣小组）负责 openEuler Kernel SIG。该 SIG 共有 118 名核心成员，维护 21 个代码仓库，属于 操作系统内核 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler Kernel SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler Kernel SIG 的方式：1）向相关仓库（如 openeuler/kernel、src-openeuler/kernel、openeuler/kbuild-standalone）提交 Pull Request；2）订阅邮件列表 kernel@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler Kernel SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Kernel SIG 共维护 21 个代码仓库，主要包括：openeuler/kernel、src-openeuler/kernel、openeuler/kbuild-standalone 等。完整列表见 https://www.openeuler.org/zh/sig/Kernel。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler Kernel SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Kernel SIG 现有 5 名 Maintainer，包括：Xie XiuQi、Hanjun Guo、Zheng Zengkai。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

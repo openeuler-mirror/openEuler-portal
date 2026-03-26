@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-mate-desktop SIG",
+    "description": "The MATE desktop environment is a continuation of GNOME2. It provides an intuitive and attractive desktop environment for Linux and other Unix-like operating systems.",
+    "url": "https://www.openeuler.org/zh/sig/sig-mate-desktop",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 7
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-03-21",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "liujiajie",
+        "url": "https://gitee.com/isoftljj",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "i-Soft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "liguoqiang",
+        "url": "https://gitee.com/li_guoqiang9",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "i-Soft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "yangxianzhao",
+        "url": "https://atomgit.com/yangxianzhao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "i-Soft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "tangjie",
+        "url": "https://atomgit.com/tangjie02",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSec"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "yueyaoqiang",
+        "url": "https://atomgit.com/yueyaoqiang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "i-Soft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "xuxiangxiang",
+        "url": "https://gitee.com/xu-think-about-it",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "i-Soft"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-mate-desktop SIG 代码仓库列表",
+    "description": "openEuler sig-mate-desktop SIG 维护的 64 个代码仓库，涵盖 桌面与图形界面 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-mate-desktop",
+    "numberOfItems": 64,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-mate-desktop SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-mate-desktop SIG（Special Interest Group，特别兴趣小组）负责 The MATE desktop environment is a continuation of GNOME2. It provides an intuitive and attractive desktop environment for Linux and other Unix-like operating systems.。该 SIG 共有 7 名核心成员，维护 64 个代码仓库，属于 桌面与图形界面 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-mate-desktop SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-mate-desktop SIG 的方式：1）向相关仓库（如 src-openeuler/wireless-tools、src-openeuler/wireless-regdb、src-openeuler/re2c）提交 Pull Request；2）订阅邮件列表 dev@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-mate-desktop SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-mate-desktop SIG 共维护 64 个代码仓库，主要包括：src-openeuler/wireless-tools、src-openeuler/wireless-regdb、src-openeuler/re2c 等。完整列表见 https://www.openeuler.org/zh/sig/sig-mate-desktop。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-mate-desktop SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-mate-desktop SIG 现有 7 名 Maintainer，包括：liujiajie、liguoqiang、yangxianzhao。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

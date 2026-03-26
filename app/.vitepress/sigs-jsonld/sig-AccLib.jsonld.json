@@ -1,0 +1,93 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-AccLib SIG",
+    "description": "The AccLib team is responsible for exploring high-performance acceleration technologies and solutions such as accelerator hardware engines and acceleration instructions.",
+    "url": "https://www.openeuler.org/zh/sig/sig-AccLib",
+    "email": "acc@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 10
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "fanghao",
+        "url": "https://atomgit.com/hao-fang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhangfei Gao",
+        "url": "https://gitee.com/gaozhangfei"
+      },
+      {
+        "@type": "Person",
+        "name": "wujunhao",
+        "url": "https://atomgit.com/wujunhaoo"
+      },
+      {
+        "@type": "Person",
+        "name": "liuyang",
+        "url": "https://atomgit.com/lauyarn"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-AccLib SIG 代码仓库列表",
+    "description": "openEuler sig-AccLib SIG 维护的 25 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-AccLib",
+    "numberOfItems": 25,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-AccLib SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-AccLib SIG（Special Interest Group，特别兴趣小组）负责 The AccLib team is responsible for exploring high-performance acceleration technologies and solutions such as accelerator hardware engines and acceleration instructions.。该 SIG 共有 10 名核心成员，维护 25 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-AccLib SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-AccLib SIG 的方式：1）向相关仓库（如 openeuler/uadk、openeuler/uadk_engine、openeuler/libwd）提交 Pull Request；2）订阅邮件列表 acc@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-AccLib SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-AccLib SIG 共维护 25 个代码仓库，主要包括：openeuler/uadk、openeuler/uadk_engine、openeuler/libwd 等。完整列表见 https://www.openeuler.org/zh/sig/sig-AccLib。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-AccLib SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-AccLib SIG 现有 4 名 Maintainer，包括：fanghao、Zhangfei Gao、wujunhao。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]
