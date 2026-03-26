@@ -1,5 +1,7 @@
 import type { HeadConfig, UserConfig } from 'vitepress';
 import tdks from './tdks';
+import generateLLMsTxt from './plugins/generateLLMsTxt';
+import LLMsTxtSections from './LLMsTxtSections';
 
 const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
 
@@ -125,6 +127,13 @@ const config: UserConfig = {
   },
   cleanUrls: true,
   vite: {
+    plugins: [
+      generateLLMsTxt({
+        title: 'openEuler | 开源社区',
+        description: 'openEuler是一个开源、免费的 Linux 发行版平台，通过开放的形式与全球的开发者共同构建一个开放、多元和架构包容的软件生态体系。',
+        sections: LLMsTxtSections
+      })
+    ],
     ssr: {
       noExternal: ['@opendesign-plus/components', 'element-plus']
     }
