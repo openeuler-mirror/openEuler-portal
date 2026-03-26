@@ -131,7 +131,6 @@ import yangxili from '@/assets/category/organization/ai/yangxili.png';
 import wotianyu from '@/assets/category/organization/ai/wotianyu.png';
 import dingweijie from '@/assets/category/organization/ai/dingweijie.png';
 import FredHuang from '@/assets/category/organization/ai/Fred Huang.png';
-import jiangyuwei from '@/assets/category/organization/ai/jiangyuwei.png';
 import guoyibin from '@/assets/category/organization/ai/guoyibin.png';
 import chenrong from '@/assets/category/organization/ai/chenrong.png';
 import sunzhenghua from '@/assets/category/organization/ai/sunzhenghua.png';
@@ -150,6 +149,7 @@ import wubin from '@/assets/category/organization/ai/wubin.png';
 import huangjun from '@/assets/category/organization/ai/huangjun.png';
 import AndrewWafaa from '@/assets/category/organization/ai/AndrewWafaa.png';
 import songmeng from '@/assets/category/organization/ai/songmeng.png';
+import gongyuanbo from '@/assets/category/organization/ai/gongyuanbo.png'
 
 // 全球化工作组
 import caijuanyang from '@/assets/category/organization/globalization/caijuanyang.png';
@@ -731,13 +731,13 @@ export default {
           { img: dengyiping, name: '邓益平', position: ['组员'] },
           { img: dingweijie, name: '丁为杰', position: ['组员'] },
           { img: gaowei, name: '高伟', position: ['组员'] },
+          { img: gongyuanbo, name: '巩远波', position: ['组员'] },
           { img: guoyibin, name: '郭祎斌', position: ['组员'] },
           { img: heshoucheng, name: '何守成', position: ['组员'] },
           { img: houjian, name: '侯健', position: ['组员'] },
           { img: FredHuang, name: 'Fred Huang', position: ['组员'] },
           { img: huangjun, name: '黄俊', position: ['组员'] },
           { img: jiangyiwen, name: '江毅文', position: ['组员'] },
-          { img: jiangyuwei, name: '蒋雨薇', position: ['组员'] },
           { img: jiangzhengxiong, name: '江政雄', position: ['组员'] },
           { img: jinlong, name: '金龙', position: ['组员'] },
           { img: qinbinjuan, name: '秦彬娟', position: ['组员'] },
@@ -1367,13 +1367,13 @@ export default {
           { img: dengyiping, name: 'Deng Yiping', position: ['Member'] },
           { img: dingweijie, name: 'Ding Weijie', position: ['Member'] },
           { img: gaowei, name: 'Gao Wei', position: ['Member'] },
+          { img: gongyuanbo, name: 'Gong Yuanbo', position: ['Member'] },
           { img: guoyibin, name: 'Guo Yibin', position: ['Member'] },
           { img: heshoucheng, name: 'He Shoucheng', position: ['Member'] },
           { img: houjian, name: 'Hou Jian', position: ['Member'] },
           { img: FredHuang, name: 'Fred Huang', position: ['Member'] },
           { img: huangjun, name: 'Huang Jun', position: ['Member'] },
           { img: jiangyiwen, name: 'Jiang Yiwen', position: ['Member'] },
-          { img: jiangyuwei, name: 'Jiang Yuwei', position: ['Member'] },
           { img: jiangzhengxiong, name: 'Jiang Zhengxiong', position: ['Member'] },
           { img: jinlong, name: 'Jin Long', position: ['Member'] },
           { img: qinbinjuan, name: 'Qin Binjuan', position: ['Member'] },
