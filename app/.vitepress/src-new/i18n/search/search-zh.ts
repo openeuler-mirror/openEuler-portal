@@ -37,5 +37,8 @@ export default {
   emptyVersion2: '请尝试其他搜索词或切换版本为“',
   emptyVersion3: '”查看',
   mostRelevant: '最相关页面',
-  pageX: '第{page}页'
+  pageX: '第{page}页',
+  imageUploadTooltip: '一键解读图片内容，支持jpg、png、jepg等，最大10M',
+  searchPlaceholder: '输入文字搜索，支持粘贴或上传图片搜索',
+  imagePlaceholder: '按下回车立即搜索，或补充更多信息进行搜索',
 };
