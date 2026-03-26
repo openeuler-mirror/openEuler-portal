@@ -353,6 +353,10 @@ html[lang='zh'] {
   border-radius: 50%;
   opacity: 0;
   transition: all 0.3s;
+  svg {
+    height: 20px;
+    color: #fff;
+  }
   &:after {
     font-size: 20px;
     color: #fff;
@@ -368,6 +372,10 @@ html[lang='zh'] {
   border-radius: 50%;
   opacity: 0;
   transition: all 0.3s;
+  svg {
+    height: 20px;
+    color: #fff;
+  }
   &:after {
     font-size: 20px;
     color: #fff;
