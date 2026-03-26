@@ -50,3 +50,15 @@ export const getSigmeetings = async (group_name: string) => {
   const res = await request.get(`/api-meeting-v2/meeting/sigmeetings/${group_name}/`, { headers: { token } });
   return res.data.data;
 };
+
+/**
+ * 获取sig组信息
+ * @returns {Promise<GroupItemT[]>} sig组信息列表
+ */
+export const getGroupInfosApi = async () => {
+  const { token } = getUserAuth();
+  if (!token) return [];
+  const url = '/api-meeting-v2/meeting/web/group_info/';
+  const res = await request.get(url, { global: true, showError: false, headers: { token } });
+  return res.data?.data || [];
+};

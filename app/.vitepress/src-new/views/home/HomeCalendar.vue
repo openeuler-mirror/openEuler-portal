@@ -45,7 +45,7 @@ import { oaReport } from '@/shared/analytics';
 import { vAnalytics } from '~@/directive/analytics';
 import useInViewDuration from '~@/composables/useInViewDuration';
 
-import { getMeetingDateListApi, getMeetingListApi, getRoles } from '~@/api/api-meeting';
+import { getMeetingDateListApi, getMeetingListApi, getGroupInfosApi } from '~@/api/api-meeting';
 import { showGuard, getUserAuth } from '@/shared/login';
 import { useLocale } from '~@/composables/useLocale';
 import { formatDate } from '~@/utils/common';
@@ -327,17 +327,13 @@ const getRecentMeetingDates = async () => {
 
 // -------------------- 获取会议权限 --------------------
 const hasPermMeeting = ref(false);
-const hasPermLoading = ref(false);
 const getPermissionMeeting = () => {
-  getRoles('openeuler')
+  getGroupInfosApi()
     .then((res) => {
-      let data = [] as string[];
-      res.data?.forEach((item) => {
-        data.push(...item.roles);
-      });
-      hasPermMeeting.value = data.filter((val) => !val?.includes('activity')).length > 0;
-    }).finally(() => {
-      hasPermLoading.value = true;
+      hasPermMeeting.value = res.some((item) => item.group_name);
+    })
+    .catch(() => {
+      hasPermMeeting.value = false;
     });
 };
 
