@@ -1,12 +1,13 @@
 import type { HeadConfig, PageData, UserConfig } from 'vitepress';
 import tdks from './tdks';
-import generateLLMsTxt from './plugins/generateLLMsTxt';
+import { buildLlmsFullTxt, viteLlmsTxt } from './plugins/generateLLMsTxtNew';
 import LLMsTxtSections from './LLMsTxtSections';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
+
 
 const JSONLD_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'sigs-jsonld');
 /**
@@ -149,7 +150,7 @@ const config: UserConfig = {
   cleanUrls: true,
   vite: {
     plugins: [
-      generateLLMsTxt({
+      viteLlmsTxt({
         title: 'openEuler | 开源社区',
         description: 'openEuler是一个开源、免费的 Linux 发行版平台，通过开放的形式与全球的开发者共同构建一个开放、多元和架构包容的软件生态体系。',
         sections: LLMsTxtSections
@@ -158,6 +159,13 @@ const config: UserConfig = {
     ssr: {
       noExternal: ['@opendesign-plus/components', 'element-plus']
     }
-  }
+  },
+  async buildEnd(siteConfig) {
+    await buildLlmsFullTxt(siteConfig.outDir, {
+      title: 'openEuler | 开源社区',
+      description: 'openEuler是一个开源、免费的 Linux 发行版平台，通过开放的形式与全球的开发者共同构建一个开放、多元和架构包容的软件生态体系。',
+      sections: LLMsTxtSections
+    });
+  },
 };
 export default config;
