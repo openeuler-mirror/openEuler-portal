@@ -481,7 +481,9 @@ export default {
     TOPSEARCH: 'Top search',
     CHANGE: 'Change',
     PLEACHOLDER: 'Please enter...',
-    PLEACHOLDER_EXTEND: 'Please enter the content',
+    PLEACHOLDER_EXTEND: 'Press Enter to start, or refine your search with more info',
+    PLEACHOLDER_IMAGE: 'Search by text or image',
+    UPLOAD_TOOLTIP: 'JPG, PNG, JPEG supported (max 10 MB)',
     TEXT: 'Search',
   },
   SOURCE_CODE: [

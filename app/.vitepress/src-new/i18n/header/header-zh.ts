@@ -623,7 +623,9 @@ export default {
     TOPSEARCH: '热门搜索',
     CHANGE: '换一批',
     PLEACHOLDER: '搜索',
-    PLEACHOLDER_EXTEND: '请输入搜索内容',
+    PLEACHOLDER_EXTEND: '按下回车立即搜索，或补充更多信息进行搜索',
+    PLEACHOLDER_IMAGE: '输入文字搜索，支持粘贴或上传图片搜索',
+    UPLOAD_TOOLTIP: '一键解读图片内容，支持jpg、png、jepg等，最大10M',
     TEXT: '搜索',
   },
   SOURCE_CODE: [
