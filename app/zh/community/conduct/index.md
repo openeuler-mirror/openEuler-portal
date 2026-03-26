@@ -1,6 +1,57 @@
 ---
 title: 行为准则
 category: about-us
+
+head: 
+  - - script
+    - { type: "application/ld+json" }
+    - |
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "openEuler社区行为准则是什么？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "openEuler社区行为准则是规范所有社区参与者行为的准则，旨在建立开放、包容、无骚扰的协作环境，适用于代码仓库、邮件列表、官方媒体和线下活动等所有社区互动场景。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "openEuler社区明确禁止哪些行为？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "明确禁止：发布色情/暴力相关内容、骚扰或攻击其他参与者（公开或私下）、侮辱/贬损评论、人身及政治攻击、未经授权发布他人个人信息（如住址、电子邮箱）。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "openEuler社区Maintainer有哪些执法权限？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Maintainer有权删除、编辑或拒绝违规的评论、提交、代码、Wiki编辑和Issue；可临时或永久封禁违规参与者。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "如果遭受openEuler社区骚扰该怎么办？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "可向该项目的Maintainer反映，Maintainer有义务妥善公正地处理不当行为。严重情况可向openEuler委员会或项目群办公室上报。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "openEuler行为准则在哪些场景下适用？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "适用于所有以openEuler身份参与的场合，包括：使用官方电子邮件通信、通过官方媒体账号发布内容、作为社区指定代表参与线上或线下活动。"
+            }
+          }
+        ]
+      }
 ---
 
 
