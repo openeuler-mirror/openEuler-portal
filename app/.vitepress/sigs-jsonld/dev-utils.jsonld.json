@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler dev-utils SIG",
+    "description": "The dev-utils team is responsible for maintain the SDK and libraries which help developers for OpenEuler.",
+    "url": "https://www.openeuler.org/zh/sig/dev-utils",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 49
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-06-07",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "wei Xiong",
+        "url": "https://gitee.com/myeuler",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "shiyuan Hu",
+        "url": "https://gitee.com/love_hangzhou",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "forrest_ly",
+        "url": "https://gitee.com/forrest_ly",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "anolis"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "cihua Li",
+        "url": "https://atomgit.com/licihua",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "fangsen Ming",
+        "url": "https://gitee.com/ethan848",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "wei Wei",
+        "url": "https://atomgit.com/fcwicky",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler dev-utils SIG 代码仓库列表",
+    "description": "openEuler dev-utils SIG 维护的 301 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/dev-utils",
+    "numberOfItems": 301,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler dev-utils SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler dev-utils SIG（Special Interest Group，特别兴趣小组）负责 The dev-utils team is responsible for maintain the SDK and libraries which help developers for OpenEuler.。该 SIG 共有 49 名核心成员，维护 301 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler dev-utils SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler dev-utils SIG 的方式：1）向相关仓库（如 src-openeuler/btop、openeuler/c2rust、src-openeuler/c2rust）提交 Pull Request；2）订阅邮件列表 dev@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler dev-utils SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler dev-utils SIG 共维护 301 个代码仓库，主要包括：src-openeuler/btop、openeuler/c2rust、src-openeuler/c2rust 等。完整列表见 https://www.openeuler.org/zh/sig/dev-utils。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler dev-utils SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler dev-utils SIG 现有 9 名 Maintainer，包括：wei Xiong、shiyuan Hu、forrest_ly。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler bigdata SIG",
+    "description": "Bigdata sig aims at that the openEuler community needs to consider how to give full play to the role of data in production and life from a technical perspective, and build the capacity related to big data processing.",
+    "url": "https://www.openeuler.org/zh/sig/bigdata",
+    "email": "bigdata@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 9
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2022-04-11",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "yangzhao",
+        "url": "https://atomgit.com/yangzhao_kl",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "wuzeyi",
+        "url": "https://gitee.com/wuzeyi1"
+      },
+      {
+        "@type": "Person",
+        "name": "chenqiang",
+        "url": "https://atomgit.com/macchen1",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler bigdata SIG 代码仓库列表",
+    "description": "openEuler bigdata SIG 维护的 71 个代码仓库，涵盖 大数据 领域",
+    "url": "https://www.openeuler.org/zh/sig/bigdata",
+    "numberOfItems": 71,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler bigdata SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler bigdata SIG（Special Interest Group，特别兴趣小组）负责 Bigdata sig aims at that the openEuler community needs to consider how to give full play to the role of data in production and life from a technical perspective, and build the capacity related to big data processing.。该 SIG 共有 9 名核心成员，维护 71 个代码仓库，属于 大数据 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler bigdata SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler bigdata SIG 的方式：1）向相关仓库（如 openeuler/openeuler-wiki-bot、openeuler/vectorBlas、openeuler/bigdata）提交 Pull Request；2）订阅邮件列表 bigdata@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler bigdata SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler bigdata SIG 共维护 71 个代码仓库，主要包括：openeuler/openeuler-wiki-bot、openeuler/vectorBlas、openeuler/bigdata 等。完整列表见 https://www.openeuler.org/zh/sig/bigdata。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler bigdata SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler bigdata SIG 现有 3 名 Maintainer，包括：yangzhao、wuzeyi、chenqiang。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

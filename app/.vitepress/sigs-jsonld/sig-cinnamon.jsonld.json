@@ -1,0 +1,110 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-cinnamon SIG",
+    "description": "The cinnamon SIG is committed to introducing cinnamon desktop into the openEuler community, and performing related adaptation, migration and optimization, making it one of the server desktop environments officially supported by the openEuler community.",
+    "url": "https://www.openeuler.org/zh/sig/sig-cinnamon",
+    "email": "NA",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 6
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2022-04-29",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "DingWenlong",
+        "url": "https://atomgit.com/dwl301",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "TurboLinux"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "ZhangLin",
+        "url": "https://atomgit.com/zhang__3125",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "TurboLinux"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "DengWeijin",
+        "url": "https://gitee.com/weijin-deng",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "TurboLinux"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "ZhuangXiaofan",
+        "url": "https://gitee.com/zxf-tl",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "TurboLinux"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-cinnamon SIG 代码仓库列表",
+    "description": "openEuler sig-cinnamon SIG 维护的 31 个代码仓库，涵盖 桌面与图形界面 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-cinnamon",
+    "numberOfItems": 31,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-cinnamon SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-cinnamon SIG（Special Interest Group，特别兴趣小组）负责 The cinnamon SIG is committed to introducing cinnamon desktop into the openEuler community, and performing related adaptation, migration and optimization, making it one of the server desktop environments officially supported by the openEuler community.。该 SIG 共有 6 名核心成员，维护 31 个代码仓库，属于 桌面与图形界面 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-cinnamon SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-cinnamon SIG 的方式：1）向相关仓库（如 src-openeuler/cinnamon、src-openeuler/cinnamon-control-center、src-openeuler/cinnamon-desktop）提交 Pull Request；2）订阅邮件列表 NA；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-cinnamon SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-cinnamon SIG 共维护 31 个代码仓库，主要包括：src-openeuler/cinnamon、src-openeuler/cinnamon-control-center、src-openeuler/cinnamon-desktop 等。完整列表见 https://www.openeuler.org/zh/sig/sig-cinnamon。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-cinnamon SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-cinnamon SIG 现有 4 名 Maintainer，包括：DingWenlong、ZhangLin、DengWeijin。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

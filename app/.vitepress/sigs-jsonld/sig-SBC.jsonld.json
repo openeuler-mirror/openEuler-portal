@@ -1,0 +1,115 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-SBC SIG",
+    "description": "The SBC SIG aims at migrating openEuler to various single-board computers, in order to reduce the threshold for using openEuler and promote openEuler to new users.",
+    "url": "https://www.openeuler.org/zh/sig/sig-SBC",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 8
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Wang Jianmin",
+        "url": "https://atomgit.com/jimmieme"
+      },
+      {
+        "@type": "Person",
+        "name": "Wayne Ren",
+        "url": "https://atomgit.com/vonhust"
+      },
+      {
+        "@type": "Person",
+        "name": "Fang Yafen",
+        "url": "https://atomgit.com/woqidaideshi",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ISCAS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Ma Liang",
+        "url": "https://gitee.com/tideao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ISCAS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Qifeng Liang",
+        "url": "https://atomgit.com/weixin_37738399"
+      },
+      {
+        "@type": "Person",
+        "name": "Huang Yan",
+        "url": "https://atomgit.com/huangyan_jrlc",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "cdjrlc"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-SBC SIG 代码仓库列表",
+    "description": "openEuler sig-SBC SIG 维护的 17 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-SBC",
+    "numberOfItems": 17,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-SBC SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-SBC SIG（Special Interest Group，特别兴趣小组）负责 The SBC SIG aims at migrating openEuler to various single-board computers, in order to reduce the threshold for using openEuler and promote openEuler to new users.。该 SIG 共有 8 名核心成员，维护 17 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-SBC SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-SBC SIG 的方式：1）向相关仓库（如 openeuler/SBC-sig、openeuler/allwinner-kernel、openeuler/phytium-kernel）提交 Pull Request；2）订阅邮件列表 dev@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-SBC SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-SBC SIG 共维护 17 个代码仓库，主要包括：openeuler/SBC-sig、openeuler/allwinner-kernel、openeuler/phytium-kernel 等。完整列表见 https://www.openeuler.org/zh/sig/sig-SBC。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-SBC SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-SBC SIG 现有 7 名 Maintainer，包括：Wang Jianmin、Wayne Ren、Fang Yafen。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

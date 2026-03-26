@@ -1,0 +1,103 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Desktop SIG",
+    "description": ".",
+    "url": "https://www.openeuler.org/zh/sig/Desktop",
+    "email": "Desktop@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 34
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Luo Shengwei",
+        "url": "https://atomgit.com/lostway1"
+      },
+      {
+        "@type": "Person",
+        "name": "senlin Xia",
+        "url": "https://atomgit.com/small_leek"
+      },
+      {
+        "@type": "Person",
+        "name": "yanan",
+        "url": "https://atomgit.com/yanan-rock"
+      },
+      {
+        "@type": "Person",
+        "name": "fengtao",
+        "url": "https://atomgit.com/t_feng"
+      },
+      {
+        "@type": "Person",
+        "name": "xiaopeng wang",
+        "url": "https://atomgit.com/wangxp006"
+      },
+      {
+        "@type": "Person",
+        "name": "wenlong ding",
+        "url": "https://atomgit.com/dwl301"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Desktop SIG 代码仓库列表",
+    "description": "openEuler Desktop SIG 维护的 433 个代码仓库，涵盖 桌面与图形界面 领域",
+    "url": "https://www.openeuler.org/zh/sig/Desktop",
+    "numberOfItems": 433,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler Desktop SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Desktop SIG（Special Interest Group，特别兴趣小组）负责 .。该 SIG 共有 34 名核心成员，维护 433 个代码仓库，属于 桌面与图形界面 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler Desktop SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler Desktop SIG 的方式：1）向相关仓库（如 src-openeuler/ibus-libzhuyin、src-openeuler/xorg-x11-apps、src-openeuler/luit）提交 Pull Request；2）订阅邮件列表 Desktop@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler Desktop SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Desktop SIG 共维护 433 个代码仓库，主要包括：src-openeuler/ibus-libzhuyin、src-openeuler/xorg-x11-apps、src-openeuler/luit 等。完整列表见 https://www.openeuler.org/zh/sig/Desktop。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler Desktop SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Desktop SIG 现有 13 名 Maintainer，包括：Luo Shengwei、senlin Xia、yanan。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

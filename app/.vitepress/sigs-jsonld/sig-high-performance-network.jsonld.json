@@ -1,0 +1,107 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-high-performance-network SIG",
+    "description": "The high-performance-network team is responsible for the development and maintenance of network acceleration technology in openeuler community",
+    "url": "https://www.openeuler.org/zh/sig/sig-high-performance-network",
+    "email": "high-performance-network@openeuler.org dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 19
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "huangliming",
+        "url": "https://atomgit.com/LemmyHuang"
+      },
+      {
+        "@type": "Person",
+        "name": "wuchangye",
+        "url": "https://atomgit.com/perfectwcy"
+      },
+      {
+        "@type": "Person",
+        "name": "liuxin",
+        "url": "https://atomgit.com/bitcoffee"
+      },
+      {
+        "@type": "Person",
+        "name": "liyangyang",
+        "url": "https://gitee.com/li-yangyang20"
+      },
+      {
+        "@type": "Person",
+        "name": "lilijun",
+        "url": "https://gitee.com/lilijun606"
+      },
+      {
+        "@type": "Person",
+        "name": "liangchangwei",
+        "url": "https://gitee.com/together17",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-high-performance-network SIG 代码仓库列表",
+    "description": "openEuler sig-high-performance-network SIG 维护的 25 个代码仓库，涵盖 网络 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-high-performance-network",
+    "numberOfItems": 25,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-high-performance-network SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-high-performance-network SIG（Special Interest Group，特别兴趣小组）负责 The high-performance-network team is responsible for the development and maintenance of network acceleration technology in openeuler community。该 SIG 共有 19 名核心成员，维护 25 个代码仓库，属于 网络 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-high-performance-network SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-high-performance-network SIG 的方式：1）向相关仓库（如 src-openeuler/libvma、src-openeuler/polycube、src-openeuler/cilium）提交 Pull Request；2）订阅邮件列表 high-performance-network@openeuler.org dev@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-high-performance-network SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-high-performance-network SIG 共维护 25 个代码仓库，主要包括：src-openeuler/libvma、src-openeuler/polycube、src-openeuler/cilium 等。完整列表见 https://www.openeuler.org/zh/sig/sig-high-performance-network。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-high-performance-network SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-high-performance-network SIG 现有 6 名 Maintainer，包括：huangliming、wuchangye、liuxin。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

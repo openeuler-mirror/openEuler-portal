@@ -1,0 +1,115 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-QT SIG",
+    "description": "The QT team is responsible for the development and maintenance of QT in the openeuler community.",
+    "url": "https://www.openeuler.org/zh/sig/sig-QT",
+    "email": "qt@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 5
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2023-02-14",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Dou Yan",
+        "url": "https://atomgit.com/dou33",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Pei Jiankang",
+        "url": "https://atomgit.com/peijiankang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "WeiDong",
+        "url": "https://atomgit.com/weidongkl",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "UnionTech"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "liweigang",
+        "url": "https://atomgit.com/openbot"
+      },
+      {
+        "@type": "Person",
+        "name": "Wang Jingwei",
+        "url": "https://atomgit.com/Jingwiw",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ISCAS"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-QT SIG 代码仓库列表",
+    "description": "openEuler sig-QT SIG 维护的 94 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-QT",
+    "numberOfItems": 94,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-QT SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-QT SIG（Special Interest Group，特别兴趣小组）负责 The QT team is responsible for the development and maintenance of QT in the openeuler community.。该 SIG 共有 5 名核心成员，维护 94 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-QT SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-QT SIG 的方式：1）向相关仓库（如 src-openeuler/adwaita-qt、src-openeuler/libdbusextended-qt5、src-openeuler/libmpris-qt5）提交 Pull Request；2）订阅邮件列表 qt@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-QT SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-QT SIG 共维护 94 个代码仓库，主要包括：src-openeuler/adwaita-qt、src-openeuler/libdbusextended-qt5、src-openeuler/libmpris-qt5 等。完整列表见 https://www.openeuler.org/zh/sig/sig-QT。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-QT SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-QT SIG 现有 5 名 Maintainer，包括：Dou Yan、Pei Jiankang、WeiDong。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

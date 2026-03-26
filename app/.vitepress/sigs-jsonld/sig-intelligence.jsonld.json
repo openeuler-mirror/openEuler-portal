@@ -1,0 +1,120 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-intelligence SIG",
+    "description": "sig-intelligence is a working group dedicated to incubating intelligent agent applications and toolchains, with a vision to integrate intelligent operating systems, expedite the dissemination of AI technologies, and advance explorations in their applications.",
+    "url": "https://www.openeuler.org/zh/sig/sig-intelligence",
+    "email": "intelligence@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 72
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2024-05-08",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Zhengce Hu",
+        "url": "https://atomgit.com/huzhengce",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Shoucheng He",
+        "url": "https://atomgit.com/fromhsc",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Kaitian Du",
+        "url": "https://atomgit.com/kaitiandu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Liangyi Hu",
+        "url": "https://atomgit.com/lyhu"
+      },
+      {
+        "@type": "Person",
+        "name": "Haishuang Yan",
+        "url": "https://atomgit.com/gogoxiaoxiao"
+      },
+      {
+        "@type": "Person",
+        "name": "Qianli Wang",
+        "url": "https://atomgit.com/wqianli",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-intelligence SIG 代码仓库列表",
+    "description": "openEuler sig-intelligence SIG 维护的 112 个代码仓库，涵盖 AI 与机器学习 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-intelligence",
+    "numberOfItems": 112,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-intelligence SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-intelligence SIG（Special Interest Group，特别兴趣小组）负责 sig-intelligence is a working group dedicated to incubating intelligent agent applications and toolchains, with a vision to integrate intelligent operating systems, expedite the dissemination of AI technologies, and advance explorations in their applications.。该 SIG 共有 72 名核心成员，维护 112 个代码仓库，属于 AI 与机器学习 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-intelligence SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-intelligence SIG 的方式：1）向相关仓库（如 openeuler/witty、openeuler/witty-opencode、src-openeuler/witty-opencode）提交 Pull Request；2）订阅邮件列表 intelligence@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-intelligence SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-intelligence SIG 共维护 112 个代码仓库，主要包括：openeuler/witty、openeuler/witty-opencode、src-openeuler/witty-opencode 等。完整列表见 https://www.openeuler.org/zh/sig/sig-intelligence。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-intelligence SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-intelligence SIG 现有 7 名 Maintainer，包括：Zhengce Hu、Shoucheng He、Kaitian Du。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

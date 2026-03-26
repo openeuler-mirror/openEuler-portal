@@ -1,0 +1,118 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-UnifiedBus SIG",
+    "description": "sig-UnifiedBus is responsible for the evolution and maintenance of the UB OS component in the community.",
+    "url": "https://www.openeuler.org/zh/sig/sig-UnifiedBus",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 46
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2025-9-24",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Hanjun Guo",
+        "url": "https://atomgit.com/hanjunguo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Liang Li",
+        "url": "https://atomgit.com/liliang_euler",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "LiJun Li",
+        "url": "https://atomgit.com/jerry_lilijun",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "YunSheng Lin",
+        "url": "https://atomgit.com/linyunsheng",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Tao Niu",
+        "url": "https://atomgit.com/will_niutao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-UnifiedBus SIG 代码仓库列表",
+    "description": "openEuler sig-UnifiedBus SIG 维护的 19 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-UnifiedBus",
+    "numberOfItems": 19,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-UnifiedBus SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-UnifiedBus SIG（Special Interest Group，特别兴趣小组）负责 sig-UnifiedBus is responsible for the evolution and maintenance of the UB OS component in the community.。该 SIG 共有 46 名核心成员，维护 19 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-UnifiedBus SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-UnifiedBus SIG 的方式：1）向相关仓库（如 openeuler/cdma、src-openeuler/cdma、openeuler/ummu）提交 Pull Request；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-UnifiedBus SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-UnifiedBus SIG 共维护 19 个代码仓库，主要包括：openeuler/cdma、src-openeuler/cdma、openeuler/ummu 等。完整列表见 https://www.openeuler.org/zh/sig/sig-UnifiedBus。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-UnifiedBus SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-UnifiedBus SIG 现有 5 名 Maintainer，包括：Hanjun Guo、Liang Li、LiJun Li。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

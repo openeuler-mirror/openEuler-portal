@@ -1,0 +1,92 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler user-committee SIG",
+    "description": "Collect user feedback from end users of the openEuler operating system and open source platform projects, communicate with community developers, and promote user requirements to be accepted in the community.",
+    "url": "https://www.openeuler.org/zh/sig/user-committee",
+    "email": "end-user@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 2
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2021-05-10",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "maquanyi",
+        "url": "https://atomgit.com/genedna",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "qusheng",
+        "url": "https://gitee.com/allesgute",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ISCAS"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler user-committee SIG 代码仓库列表",
+    "description": "openEuler user-committee SIG 维护的 1 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/user-committee",
+    "numberOfItems": 1,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler user-committee SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler user-committee SIG（Special Interest Group，特别兴趣小组）负责 Collect user feedback from end users of the openEuler operating system and open source platform projects, communicate with community developers, and promote user requirements to be accepted in the community.。该 SIG 共有 2 名核心成员，维护 1 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler user-committee SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler user-committee SIG 的方式：1）向相关仓库（如 openeuler/user-committee）提交 Pull Request；2）订阅邮件列表 end-user@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler user-committee SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler user-committee SIG 共维护 1 个代码仓库，主要包括：openeuler/user-committee 等。完整列表见 https://www.openeuler.org/zh/sig/user-committee。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler user-committee SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler user-committee SIG 现有 2 名 Maintainer，包括：maquanyi、qusheng。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

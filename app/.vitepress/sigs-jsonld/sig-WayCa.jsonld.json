@@ -1,0 +1,101 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-WayCa SIG",
+    "description": "The WayCa team is responsible for developing and maintaining some tools which run in the enabling-hardware layer of Kunpeng.",
+    "url": "https://www.openeuler.org/zh/sig/sig-WayCa",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 7
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2022-08-26",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Fred Kimmy",
+        "url": "https://atomgit.com/kongzizaixian",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Jenkins Jiang",
+        "url": "https://atomgit.com/jenkins-jiang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yonglong Liu",
+        "url": "https://atomgit.com/liuyonglong86",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-WayCa SIG 代码仓库列表",
+    "description": "openEuler sig-WayCa SIG 维护的 5 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-WayCa",
+    "numberOfItems": 5,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-WayCa SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-WayCa SIG（Special Interest Group，特别兴趣小组）负责 The WayCa team is responsible for developing and maintaining some tools which run in the enabling-hardware layer of Kunpeng.。该 SIG 共有 7 名核心成员，维护 5 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-WayCa SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-WayCa SIG 的方式：1）向相关仓库（如 openeuler/WayCa、openeuler/hikptool、src-openeuler/hikptool）提交 Pull Request；2）订阅邮件列表 dev@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-WayCa SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-WayCa SIG 共维护 5 个代码仓库，主要包括：openeuler/WayCa、openeuler/hikptool、src-openeuler/hikptool 等。完整列表见 https://www.openeuler.org/zh/sig/sig-WayCa。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-WayCa SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-WayCa SIG 现有 3 名 Maintainer，包括：Fred Kimmy、Jenkins Jiang、Yonglong Liu。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

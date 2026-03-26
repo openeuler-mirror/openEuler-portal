@@ -1,0 +1,126 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-ebpf SIG",
+    "description": "eBPF is a revolutionary technology with origins in the Linux kernel that can run sandboxed programs in an operating system kernel. It is used to safely and efficiently extend the capabilities of the kernel without requiring to change kernel source code or load kernel modules.",
+    "url": "https://www.openeuler.org/zh/sig/sig-ebpf",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 28
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Leon Wang",
+        "url": "https://atomgit.com/wonleing",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CTyun"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "luzhihao",
+        "url": "https://atomgit.com/MrRlu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "weiyongjun",
+        "url": "https://atomgit.com/weiyj__lk",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "xuqingwei",
+        "url": "https://gitee.com/DevinRTK",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "SANGFOR"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "huyadi",
+        "url": "https://gitee.com/huyd12",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CTyun"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "jiangbiao",
+        "url": "https://atomgit.com/happyseeker",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CTyun"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-ebpf SIG 代码仓库列表",
+    "description": "openEuler sig-ebpf SIG 维护的 19 个代码仓库，涵盖 操作系统内核 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-ebpf",
+    "numberOfItems": 19,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-ebpf SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-ebpf SIG（Special Interest Group，特别兴趣小组）负责 eBPF is a revolutionary technology with origins in the Linux kernel that can run sandboxed programs in an operating system kernel. It is used to safely and efficiently extend the capabilities of the kernel without requiring to change kernel source code or load kernel modules.。该 SIG 共有 28 名核心成员，维护 19 个代码仓库，属于 操作系统内核 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-ebpf SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-ebpf SIG 的方式：1）向相关仓库（如 openeuler/CTinspector、openeuler/Agith、src-openeuler/eunomia-bpf）提交 Pull Request；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-ebpf SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-ebpf SIG 共维护 19 个代码仓库，主要包括：openeuler/CTinspector、openeuler/Agith、src-openeuler/eunomia-bpf 等。完整列表见 https://www.openeuler.org/zh/sig/sig-ebpf。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-ebpf SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-ebpf SIG 现有 7 名 Maintainer，包括：Leon Wang、luzhihao、weiyongjun。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Networking SIG",
+    "description": "The networking team is responsible for network function development and maintenance of the openEuler community.",
+    "url": "https://www.openeuler.org/zh/sig/Networking",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 32
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "zengwefeng",
+        "url": "https://atomgit.com/Apricity_HW"
+      },
+      {
+        "@type": "Person",
+        "name": "luzhihao",
+        "url": "https://atomgit.com/MrRlu"
+      },
+      {
+        "@type": "Person",
+        "name": "robertxw",
+        "url": "https://atomgit.com/robert-xingwang"
+      },
+      {
+        "@type": "Person",
+        "name": "sunsuwan",
+        "url": "https://atomgit.com/sunsuwan"
+      },
+      {
+        "@type": "Person",
+        "name": "huyizhen",
+        "url": "https://gitee.com/xiangyu2020"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Networking SIG 代码仓库列表",
+    "description": "openEuler Networking SIG 维护的 156 个代码仓库，涵盖 网络 领域",
+    "url": "https://www.openeuler.org/zh/sig/Networking",
+    "numberOfItems": 156,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler Networking SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Networking SIG（Special Interest Group，特别兴趣小组）负责 The networking team is responsible for network function development and maintenance of the openEuler community.。该 SIG 共有 32 名核心成员，维护 156 个代码仓库，属于 网络 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler Networking SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler Networking SIG 的方式：1）向相关仓库（如 openeuler/curl-rust、src-openeuler/curl-rust、openeuler/PRIP）提交 Pull Request；2）订阅邮件列表 dev@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler Networking SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Networking SIG 共维护 156 个代码仓库，主要包括：openeuler/curl-rust、src-openeuler/curl-rust、openeuler/PRIP 等。完整列表见 https://www.openeuler.org/zh/sig/Networking。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler Networking SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Networking SIG 现有 5 名 Maintainer，包括：zengwefeng、luzhihao、robertxw。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

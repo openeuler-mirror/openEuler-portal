@@ -1,0 +1,92 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-perl-modules SIG",
+    "description": "This SIG contains all perl modules which are created by automation tools",
+    "url": "https://www.openeuler.org/zh/sig/sig-perl-modules",
+    "email": "dev@openerler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 17
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-06-18",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "wei Xiong",
+        "url": "https://gitee.com/myeuler",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "xinwei Hu",
+        "url": "https://atomgit.com/shinwell_hu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-perl-modules SIG 代码仓库列表",
+    "description": "openEuler sig-perl-modules SIG 维护的 1460 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-perl-modules",
+    "numberOfItems": 1460,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-perl-modules SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-perl-modules SIG（Special Interest Group，特别兴趣小组）负责 This SIG contains all perl modules which are created by automation tools。该 SIG 共有 17 名核心成员，维护 1460 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-perl-modules SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-perl-modules SIG 的方式：1）向相关仓库（如 src-openeuler/biber、src-openeuler/mod_perl、src-openeuler/perl-generators）提交 Pull Request；2）订阅邮件列表 dev@openerler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-perl-modules SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-perl-modules SIG 共维护 1460 个代码仓库，主要包括：src-openeuler/biber、src-openeuler/mod_perl、src-openeuler/perl-generators 等。完整列表见 https://www.openeuler.org/zh/sig/sig-perl-modules。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-perl-modules SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-perl-modules SIG 现有 2 名 Maintainer，包括：wei Xiong、xinwei Hu。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

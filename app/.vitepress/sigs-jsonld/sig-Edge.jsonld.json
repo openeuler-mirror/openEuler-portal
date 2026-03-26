@@ -1,0 +1,119 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-Edge SIG",
+    "description": "Edge sig.",
+    "url": "https://www.openeuler.org/zh/sig/sig-Edge",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 13
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2019-12-31",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Shouyong Liu",
+        "url": "https://gitee.com/pangbanme",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "kjsmart"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Xiaojing Xu",
+        "url": "https://gitee.com/xuxj1973",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "kjsmart"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Fengtu Wang",
+        "url": "https://atomgit.com/FengtuWang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "kjsmart"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yuxi Wang",
+        "url": "https://gitee.com/wangyx0704",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "kjsmart"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Jiezhang Wang",
+        "url": "https://gitee.com/Poorunga"
+      },
+      {
+        "@type": "Person",
+        "name": "Keyan Wang",
+        "url": "https://gitee.com/wang-ke-yan"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-Edge SIG 代码仓库列表",
+    "description": "openEuler sig-Edge SIG 维护的 10 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-Edge",
+    "numberOfItems": 10,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-Edge SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Edge SIG（Special Interest Group，特别兴趣小组）负责 Edge sig.。该 SIG 共有 13 名核心成员，维护 10 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-Edge SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-Edge SIG 的方式：1）向相关仓库（如 openeuler/sig-Edge、src-openeuler/kubeedge、src-openeuler/dpkg）提交 Pull Request；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-Edge SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Edge SIG 共维护 10 个代码仓库，主要包括：openeuler/sig-Edge、src-openeuler/kubeedge、src-openeuler/dpkg 等。完整列表见 https://www.openeuler.org/zh/sig/sig-Edge。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-Edge SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Edge SIG 现有 11 名 Maintainer，包括：Shouyong Liu、Xiaojing Xu、Fengtu Wang。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

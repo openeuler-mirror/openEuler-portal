@@ -1,0 +1,110 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-power-efficient SIG",
+    "description": "This SIG is dedicated to improving server energy efficiency through OS tuning.",
+    "url": "https://www.openeuler.org/zh/sig/sig-power-efficient",
+    "email": "power-efficient@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 4
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2022-06-20",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Que Yanwen",
+        "url": "https://atomgit.com/queyanwen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Wu Haotian",
+        "url": "https://atomgit.com/wuhaotian315",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Jiang Yi",
+        "url": "https://gitee.com/jimmy-jiang-junior",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "He Peng",
+        "url": "https://atomgit.com/heppen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-power-efficient SIG 代码仓库列表",
+    "description": "openEuler sig-power-efficient SIG 维护的 6 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-power-efficient",
+    "numberOfItems": 6,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-power-efficient SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-power-efficient SIG（Special Interest Group，特别兴趣小组）负责 This SIG is dedicated to improving server energy efficiency through OS tuning.。该 SIG 共有 4 名核心成员，维护 6 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-power-efficient SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-power-efficient SIG 的方式：1）向相关仓库（如 openeuler/powerapi、openeuler/eagle、openeuler/dcs）提交 Pull Request；2）订阅邮件列表 power-efficient@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-power-efficient SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-power-efficient SIG 共维护 6 个代码仓库，主要包括：openeuler/powerapi、openeuler/eagle、openeuler/dcs 等。完整列表见 https://www.openeuler.org/zh/sig/sig-power-efficient。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-power-efficient SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-power-efficient SIG 现有 4 名 Maintainer，包括：Que Yanwen、Wu Haotian、Jiang Yi。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

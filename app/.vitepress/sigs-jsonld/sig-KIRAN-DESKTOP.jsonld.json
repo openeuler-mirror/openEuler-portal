@@ -1,0 +1,106 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-KIRAN-DESKTOP SIG",
+    "description": "The KIRAN-DESKTOP SIG is committed to introducing KIRAN-DESKTOP into the openEuler community, and performing related adaptation, migration and optimization, making it one of the server desktop environments officially supported by the openEuler community.",
+    "url": "https://www.openeuler.org/zh/sig/sig-KIRAN-DESKTOP",
+    "email": "sig-KIRAN-DESKTOP@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 5
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-08-20",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "ShiYong",
+        "url": "https://atomgit.com/stonefly128",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSec OS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "TangJie",
+        "url": "https://atomgit.com/tangjie02"
+      },
+      {
+        "@type": "Person",
+        "name": "LiuXinHao",
+        "url": "https://atomgit.com/liubuguiii",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSec OS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "YangFeng",
+        "url": "https://atomgit.com/itisyang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSec OS"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-KIRAN-DESKTOP SIG 代码仓库列表",
+    "description": "openEuler sig-KIRAN-DESKTOP SIG 维护的 64 个代码仓库，涵盖 桌面与图形界面 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-KIRAN-DESKTOP",
+    "numberOfItems": 64,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-KIRAN-DESKTOP SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-KIRAN-DESKTOP SIG（Special Interest Group，特别兴趣小组）负责 The KIRAN-DESKTOP SIG is committed to introducing KIRAN-DESKTOP into the openEuler community, and performing related adaptation, migration and optimization, making it one of the server desktop environments officially supported by the openEuler community.。该 SIG 共有 5 名核心成员，维护 64 个代码仓库，属于 桌面与图形界面 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-KIRAN-DESKTOP SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-KIRAN-DESKTOP SIG 的方式：1）向相关仓库（如 openeuler/kiran-desktop、openeuler/kiran-cc-daemon、openeuler/kiran-session-manager）提交 Pull Request；2）订阅邮件列表 sig-KIRAN-DESKTOP@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-KIRAN-DESKTOP SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-KIRAN-DESKTOP SIG 共维护 64 个代码仓库，主要包括：openeuler/kiran-desktop、openeuler/kiran-cc-daemon、openeuler/kiran-session-manager 等。完整列表见 https://www.openeuler.org/zh/sig/sig-KIRAN-DESKTOP。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-KIRAN-DESKTOP SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-KIRAN-DESKTOP SIG 现有 4 名 Maintainer，包括：ShiYong、TangJie、LiuXinHao。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

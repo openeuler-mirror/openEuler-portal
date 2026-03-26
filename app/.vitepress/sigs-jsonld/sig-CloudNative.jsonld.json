@@ -1,0 +1,123 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-CloudNative SIG",
+    "description": "CloudNative SIG is committed to providing a convenient and easy-to-use cloud native infrastructure for users, developers, and enthusiasts, providing a simple and efficient cloud native application development hosting environment to build cloud native ecology.",
+    "url": "https://www.openeuler.org/zh/sig/sig-CloudNative",
+    "email": "cloudnative@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 42
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Zhao Yang",
+        "url": "https://atomgit.com/yangzhao_kl",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Wang Jianmin",
+        "url": "https://atomgit.com/jimmieme"
+      },
+      {
+        "@type": "Person",
+        "name": "Baohui Wei",
+        "url": "https://atomgit.com/weibaohui",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "China Mobile"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Hao Liu",
+        "url": "https://atomgit.com/duguhaotian",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Leon Wang",
+        "url": "https://atomgit.com/wonleing",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CTyun"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Tao Zhong",
+        "url": "https://atomgit.com/taotao-sauce",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-CloudNative SIG 代码仓库列表",
+    "description": "openEuler sig-CloudNative SIG 维护的 138 个代码仓库，涵盖 云计算与容器 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-CloudNative",
+    "numberOfItems": 138,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-CloudNative SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-CloudNative SIG（Special Interest Group，特别兴趣小组）负责 CloudNative SIG is committed to providing a convenient and easy-to-use cloud native infrastructure for users, developers, and enthusiasts, providing a simple and efficient cloud native application development hosting environment to build cloud native ecology.。该 SIG 共有 42 名核心成员，维护 138 个代码仓库，属于 云计算与容器 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-CloudNative SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-CloudNative SIG 的方式：1）向相关仓库（如 openeuler/ktib、src-openeuler/ktib、openeuler/NestOS）提交 Pull Request；2）订阅邮件列表 cloudnative@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-CloudNative SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-CloudNative SIG 共维护 138 个代码仓库，主要包括：openeuler/ktib、src-openeuler/ktib、openeuler/NestOS 等。完整列表见 https://www.openeuler.org/zh/sig/sig-CloudNative。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-CloudNative SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-CloudNative SIG 现有 9 名 Maintainer，包括：Zhao Yang、Wang Jianmin、Baohui Wei。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

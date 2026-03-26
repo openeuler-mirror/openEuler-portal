@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler ecopkg SIG",
+    "description": "The ecopkg sig aims to manage the software packages contributed by developers, and these packages cannot be determined which sig they belong to at the moment.",
+    "url": "https://www.openeuler.org/zh/sig/ecopkg",
+    "email": "ecopkg@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 31
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2023-04-07",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Chen Qide",
+        "url": "https://atomgit.com/dillon_chen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Cao Zhi",
+        "url": "https://atomgit.com/georgecao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Hou Jian",
+        "url": "https://atomgit.com/jimmy_hou",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Hu Feng",
+        "url": "https://atomgit.com/solarhu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Hu Xinwei",
+        "url": "https://atomgit.com/shinwell_hu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Li Yongqiang",
+        "url": "https://atomgit.com/Charlie_li1",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "xFusion"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler ecopkg SIG 代码仓库列表",
+    "description": "openEuler ecopkg SIG 维护的 87 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/ecopkg",
+    "numberOfItems": 87,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler ecopkg SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler ecopkg SIG（Special Interest Group，特别兴趣小组）负责 The ecopkg sig aims to manage the software packages contributed by developers, and these packages cannot be determined which sig they belong to at the moment.。该 SIG 共有 31 名核心成员，维护 87 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler ecopkg SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler ecopkg SIG 的方式：1）向相关仓库（如 src-openeuler/python-pickleshare、src-openeuler/cargo2rpm、src-openeuler/SoapySDR）提交 Pull Request；2）订阅邮件列表 ecopkg@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler ecopkg SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler ecopkg SIG 共维护 87 个代码仓库，主要包括：src-openeuler/python-pickleshare、src-openeuler/cargo2rpm、src-openeuler/SoapySDR 等。完整列表见 https://www.openeuler.org/zh/sig/ecopkg。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler ecopkg SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler ecopkg SIG 现有 18 名 Maintainer，包括：Chen Qide、Cao Zhi、Hou Jian。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

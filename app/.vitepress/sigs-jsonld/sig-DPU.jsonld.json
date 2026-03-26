@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-DPU SIG",
+    "description": "Sig-DPU is expected to sommon DPU vendors and developers over domestic and international, exploring DPU's ability to provide better programmability and customizability for data-center and cloud.",
+    "url": "https://www.openeuler.org/zh/sig/sig-DPU",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 12
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2021-11-22",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Li Cheng",
+        "url": "https://gitee.com/lic121",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "China Telecom"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Li Chunhui",
+        "url": "https://atomgit.com/lch-lichunhui",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Deng Guangxing",
+        "url": "https://atomgit.com/minknov",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zou Ming",
+        "url": "https://gitee.com/victorzoum",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "China Telecom"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Chen Fu",
+        "url": "https://atomgit.com/C0reFast",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Sina"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Liu Haichang",
+        "url": "https://gitee.com/liuhaic",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "YUSUR"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-DPU SIG 代码仓库列表",
+    "description": "openEuler sig-DPU SIG 维护的 3 个代码仓库，涵盖 云计算与容器 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-DPU",
+    "numberOfItems": 3,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-DPU SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-DPU SIG（Special Interest Group，特别兴趣小组）负责 Sig-DPU is expected to sommon DPU vendors and developers over domestic and international, exploring DPU's ability to provide better programmability and customizability for data-center and cloud.。该 SIG 共有 12 名核心成员，维护 3 个代码仓库，属于 云计算与容器 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-DPU SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-DPU SIG 的方式：1）向相关仓库（如 openeuler/dpu-core、openeuler/dpu-utilities、src-openeuler/dpu-utilities）提交 Pull Request；2）订阅邮件列表 dev@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-DPU SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-DPU SIG 共维护 3 个代码仓库，主要包括：openeuler/dpu-core、openeuler/dpu-utilities、src-openeuler/dpu-utilities 等。完整列表见 https://www.openeuler.org/zh/sig/sig-DPU。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-DPU SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-DPU SIG 现有 7 名 Maintainer，包括：Li Cheng、Li Chunhui、Deng Guangxing。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

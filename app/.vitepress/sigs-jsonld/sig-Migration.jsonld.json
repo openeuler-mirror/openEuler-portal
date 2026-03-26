@@ -1,0 +1,104 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-Migration SIG",
+    "description": "The sig-Migration is used to  migrate OS.",
+    "url": "https://www.openeuler.org/zh/sig/sig-Migration",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 7
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2021-05-18",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "叶青龙",
+        "url": "https://atomgit.com/yeqinglong01"
+      },
+      {
+        "@type": "Person",
+        "name": "马全一",
+        "url": "https://atomgit.com/genedna"
+      },
+      {
+        "@type": "Person",
+        "name": "郭青岚",
+        "url": "https://atomgit.com/blublue"
+      },
+      {
+        "@type": "Person",
+        "name": "weidongkl",
+        "url": "https://atomgit.com/weidongkl"
+      },
+      {
+        "@type": "Person",
+        "name": "石勇",
+        "url": "https://atomgit.com/stonefly128"
+      },
+      {
+        "@type": "Person",
+        "name": "刘兴伟",
+        "url": "https://atomgit.com/xingwei-liu"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-Migration SIG 代码仓库列表",
+    "description": "openEuler sig-Migration SIG 维护的 8 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-Migration",
+    "numberOfItems": 8,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-Migration SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Migration SIG（Special Interest Group，特别兴趣小组）负责 The sig-Migration is used to  migrate OS.。该 SIG 共有 7 名核心成员，维护 8 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-Migration SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-Migration SIG 的方式：1）向相关仓库（如 openeuler/migration-assistant、openeuler/ubackup、openeuler/openeuler-upgrader）提交 Pull Request；2）订阅邮件列表 dev@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-Migration SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Migration SIG 共维护 8 个代码仓库，主要包括：openeuler/migration-assistant、openeuler/ubackup、openeuler/openeuler-upgrader 等。完整列表见 https://www.openeuler.org/zh/sig/sig-Migration。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-Migration SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Migration SIG 现有 6 名 Maintainer，包括：叶青龙、马全一、郭青岚。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

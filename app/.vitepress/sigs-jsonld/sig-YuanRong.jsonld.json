@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-YuanRong SIG",
+    "description": "sig-YuanRong is responsible for the evolution and maintenance of the Serverless distributed computing engine within the community.",
+    "url": "https://www.openeuler.org/zh/sig/sig-YuanRong",
+    "email": "yuanrong@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 20
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2025-8-01",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Yi Liang",
+        "url": "https://atomgit.com/liangyi1234",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zhancheng Luo",
+        "url": "https://atomgit.com/luozhancheng",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "YuLin Che",
+        "url": "https://atomgit.com/yche-huawei",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "YuChao Wang",
+        "url": "https://atomgit.com/yuchaow",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Licheng Song",
+        "url": "https://atomgit.com/slichengsong",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Tianyi Ge",
+        "url": "https://atomgit.com/tianyi-huawei",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-YuanRong SIG 代码仓库列表",
+    "description": "openEuler sig-YuanRong SIG 维护的 13 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-YuanRong",
+    "numberOfItems": 13,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-YuanRong SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-YuanRong SIG（Special Interest Group，特别兴趣小组）负责 sig-YuanRong is responsible for the evolution and maintenance of the Serverless distributed computing engine within the community.。该 SIG 共有 20 名核心成员，维护 13 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-YuanRong SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-YuanRong SIG 的方式：1）向相关仓库（如 openeuler/yuanrong、src-openeuler/yuanrong、openeuler/yuanrong-functionsystem）提交 Pull Request；2）订阅邮件列表 yuanrong@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-YuanRong SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-YuanRong SIG 共维护 13 个代码仓库，主要包括：openeuler/yuanrong、src-openeuler/yuanrong、openeuler/yuanrong-functionsystem 等。完整列表见 https://www.openeuler.org/zh/sig/sig-YuanRong。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-YuanRong SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-YuanRong SIG 现有 7 名 Maintainer，包括：Yi Liang、Zhancheng Luo、YuLin Che。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

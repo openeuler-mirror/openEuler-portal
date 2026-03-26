@@ -1,0 +1,119 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-ROS SIG",
+    "description": "The ROS SIG group is committed to porting ROS to openEuler in order to lower the threshold of use of openEuler in the field of robotics and promote the popularization of openEuler users in the field of robotics",
+    "url": "https://www.openeuler.org/zh/sig/sig-ROS",
+    "email": "ros@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 9
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-06",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "wuwei",
+        "url": "https://atomgit.com/wuwei_kubuds",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "kubuds"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "anchuanxu",
+        "url": "https://atomgit.com/anchuanxu1",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ISCAS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "wangxiaoyun",
+        "url": "https://atomgit.com/xiao_yun_wang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ISCAS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "hanhaomin",
+        "url": "https://atomgit.com/davidhan008",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ISCAS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "xijiangling",
+        "url": "https://atomgit.com/simonaxi",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ISCAS"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-ROS SIG 代码仓库列表",
+    "description": "openEuler sig-ROS SIG 维护的 734 个代码仓库，涵盖 基础设施与工具 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-ROS",
+    "numberOfItems": 734,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-ROS SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-ROS SIG（Special Interest Group，特别兴趣小组）负责 The ROS SIG group is committed to porting ROS to openEuler in order to lower the threshold of use of openEuler in the field of robotics and promote the popularization of openEuler users in the field of robotics。该 SIG 共有 9 名核心成员，维护 734 个代码仓库，属于 基础设施与工具 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-ROS SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-ROS SIG 的方式：1）向相关仓库（如 openeuler/ros、src-openeuler/ros、src-openeuler/color_util）提交 Pull Request；2）订阅邮件列表 ros@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-ROS SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-ROS SIG 共维护 734 个代码仓库，主要包括：openeuler/ros、src-openeuler/ros、src-openeuler/color_util 等。完整列表见 https://www.openeuler.org/zh/sig/sig-ROS。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-ROS SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-ROS SIG 现有 5 名 Maintainer，包括：wuwei、anchuanxu、wangxiaoyun。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

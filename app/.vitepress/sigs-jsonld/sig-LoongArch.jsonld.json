@@ -1,0 +1,110 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-LoongArch SIG",
+    "description": "The LoongArch SIG provides a place for technical discussions and sharing about firmware, toolchains, kernel, basic librarys, jdk, javaScript, luaJIT and other software on LoongArch platfrom.",
+    "url": "https://www.openeuler.org/zh/sig/sig-LoongArch",
+    "email": "NA",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 4
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2022-05-11",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "houfangdong",
+        "url": "https://atomgit.com/SmallPegasus",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Loongson"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Hailiang",
+        "url": "https://atomgit.com/hailiang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "UOS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "JinXu",
+        "url": "https://atomgit.com/jinxu1992",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "zhouqiang",
+        "url": "https://atomgit.com/Dave110",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "kylinsec"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-LoongArch SIG 代码仓库列表",
+    "description": "openEuler sig-LoongArch SIG 维护的 0 个代码仓库，涵盖 操作系统内核 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-LoongArch",
+    "numberOfItems": 0,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-LoongArch SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-LoongArch SIG（Special Interest Group，特别兴趣小组）负责 The LoongArch SIG provides a place for technical discussions and sharing about firmware, toolchains, kernel, basic librarys, jdk, javaScript, luaJIT and other software on LoongArch platfrom.。该 SIG 共有 4 名核心成员，维护 0 个代码仓库，属于 操作系统内核 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-LoongArch SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-LoongArch SIG 的方式：1）向相关仓库（如 见页面仓库列表）提交 Pull Request；2）订阅邮件列表 NA；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-LoongArch SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-LoongArch SIG 共维护 0 个代码仓库，主要包括：见页面仓库列表 等。完整列表见 https://www.openeuler.org/zh/sig/sig-LoongArch。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-LoongArch SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-LoongArch SIG 现有 4 名 Maintainer，包括：houfangdong、Hailiang、JinXu。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

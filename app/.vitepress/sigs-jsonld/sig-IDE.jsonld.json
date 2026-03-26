@@ -1,0 +1,89 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-IDE SIG",
+    "description": "By establishing an Embedded IDE SIG, we can attract more developers and vendors to participate in the embedded development of industrial real-time, hard real-time, and hybrid deployment scenarios, driving the development of the embedded systems field.",
+    "url": "https://www.openeuler.org/zh/sig/sig-IDE",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 15
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2024-06-22",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "胡正策",
+        "url": "https://atomgit.com/huzhengce"
+      },
+      {
+        "@type": "Person",
+        "name": "陈功",
+        "url": "https://atomgit.com/qsemos-cg"
+      },
+      {
+        "@type": "Person",
+        "name": "王兴龙",
+        "url": "https://gitee.com/hacke2"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-IDE SIG 代码仓库列表",
+    "description": "openEuler sig-IDE SIG 维护的 6 个代码仓库，涵盖 嵌入式与物联网 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-IDE",
+    "numberOfItems": 6,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-IDE SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-IDE SIG（Special Interest Group，特别兴趣小组）负责 By establishing an Embedded IDE SIG, we can attract more developers and vendors to participate in the embedded development of industrial real-time, hard real-time, and hybrid deployment scenarios, driving the development of the embedded systems field.。该 SIG 共有 15 名核心成员，维护 6 个代码仓库，属于 嵌入式与物联网 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-IDE SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-IDE SIG 的方式：1）向相关仓库（如 src-openeuler/botron-platform、src-openeuler/botron-hybrid-deployment-plugin、src-openeuler/botron-soft-reattime-plugin）提交 Pull Request；2）订阅邮件列表 dev@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-IDE SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-IDE SIG 共维护 6 个代码仓库，主要包括：src-openeuler/botron-platform、src-openeuler/botron-hybrid-deployment-plugin、src-openeuler/botron-soft-reattime-plugin 等。完整列表见 https://www.openeuler.org/zh/sig/sig-IDE。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-IDE SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-IDE SIG 现有 3 名 Maintainer，包括：胡正策、陈功、王兴龙。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

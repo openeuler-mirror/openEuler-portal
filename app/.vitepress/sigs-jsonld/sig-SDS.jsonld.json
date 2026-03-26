@@ -1,0 +1,97 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-SDS SIG",
+    "description": "openEuler Software-Defined-Storage(SDS) SIG",
+    "url": "https://www.openeuler.org/zh/sig/sig-SDS",
+    "email": "sds@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 16
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "xinze chi",
+        "url": "https://gitee.com/chixinze",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Xsky"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "zhiqiang liu",
+        "url": "https://atomgit.com/liuzhiqiang26"
+      },
+      {
+        "@type": "Person",
+        "name": "qinfei liu",
+        "url": "https://atomgit.com/liu_qinfei"
+      },
+      {
+        "@type": "Person",
+        "name": "rixin luo",
+        "url": "https://atomgit.com/rosinL"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-SDS SIG 代码仓库列表",
+    "description": "openEuler sig-SDS SIG 维护的 17 个代码仓库，涵盖 存储 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-SDS",
+    "numberOfItems": 17,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-SDS SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-SDS SIG（Special Interest Group，特别兴趣小组）负责 openEuler Software-Defined-Storage(SDS) SIG。该 SIG 共有 16 名核心成员，维护 17 个代码仓库，属于 存储 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-SDS SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-SDS SIG 的方式：1）向相关仓库（如 src-openeuler/ceph、src-openeuler/ceph-deploy、src-openeuler/ceph-ansible）提交 Pull Request；2）订阅邮件列表 sds@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-SDS SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-SDS SIG 共维护 17 个代码仓库，主要包括：src-openeuler/ceph、src-openeuler/ceph-deploy、src-openeuler/ceph-ansible 等。完整列表见 https://www.openeuler.org/zh/sig/sig-SDS。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-SDS SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-SDS SIG 现有 4 名 Maintainer，包括：xinze chi、zhiqiang liu、qinfei liu。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]

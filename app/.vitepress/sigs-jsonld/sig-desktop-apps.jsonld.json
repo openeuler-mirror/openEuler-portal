@@ -1,0 +1,106 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-desktop-apps SIG",
+    "description": "The desktop-apps SIG hopes to provide basic application software for personal desktops, not limited to multimedia, music, small games, programmer IDE, financial stocks, etc. It is hoped that with the joint efforts of the community, openEuler has relatively rich playability and meets the basic demands of personal desktop.",
+    "url": "https://www.openeuler.org/zh/sig/sig-desktop-apps",
+    "email": "sig-desktop-apps@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 5
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-06-29",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "WeiDong",
+        "url": "https://atomgit.com/weidongkl",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "UnionTech"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "WuXu",
+        "url": "https://gitee.com/wuxu_buque_admin",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "HuaWei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "TangJie",
+        "url": "https://atomgit.com/tangjie02",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSec OS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "liweigang",
+        "url": "https://atomgit.com/openbot"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-desktop-apps SIG 代码仓库列表",
+    "description": "openEuler sig-desktop-apps SIG 维护的 48 个代码仓库，涵盖 桌面与图形界面 领域",
+    "url": "https://www.openeuler.org/zh/sig/sig-desktop-apps",
+    "numberOfItems": 48,
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler 官网",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler sig-desktop-apps SIG 是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-desktop-apps SIG（Special Interest Group，特别兴趣小组）负责 The desktop-apps SIG hopes to provide basic application software for personal desktops, not limited to multimedia, music, small games, programmer IDE, financial stocks, etc. It is hoped that with the joint efforts of the community, openEuler has relatively rich playability and meets the basic demands of personal desktop.。该 SIG 共有 5 名核心成员，维护 48 个代码仓库，属于 桌面与图形界面 领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何参与 openEuler sig-desktop-apps SIG？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参与 openEuler sig-desktop-apps SIG 的方式：1）向相关仓库（如 src-openeuler/meld、src-openeuler/stardict、src-openeuler/thunderbird）提交 Pull Request；2）订阅邮件列表 sig-desktop-apps@openeuler.org；3）参加 SIG 定期工作会议，会议信息见 openEuler 官网活动日历。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-desktop-apps SIG 包含哪些代码仓库？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-desktop-apps SIG 共维护 48 个代码仓库，主要包括：src-openeuler/meld、src-openeuler/stardict、src-openeuler/thunderbird 等。完整列表见 https://www.openeuler.org/zh/sig/sig-desktop-apps。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler sig-desktop-apps SIG 的 Maintainer 是谁？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-desktop-apps SIG 现有 4 名 Maintainer，包括：WeiDong、WuXu、TangJie。Maintainer 负责代码最终审核与合并。"
+        }
+      }
+    ]
+  }
+]
