@@ -10,8 +10,6 @@ author:  openEuler
 summary: openEuler 24.03-LTS-SP3版本正式推出Witty Assistant，更重磅打造“已知问题分析Agent”，以AI赋能运维，让“老问题”不再重复消耗精力，让故障诊断效率实现质的飞跃，解锁openEuler智能运维新体验 。
 ---
 
-# Witty Assistant重磅来袭，“已知问题分析Agent”一键搞定运维难题
-
 你是否还在为重复出现的系统故障焦头烂额？是否还在海量日志、工单、手册中翻找历史解决方案？是否明明是“老问题”，却要花费数小时重新排查、反复试错？
 
 好消息！**OpenAtom openEuler（简称“openEuler”或“开源欧拉”）24.03-LTS-SP3版本正式推出Witty Assistant，更重磅打造“已知问题分析Agent”**，以AI赋能运维，让“老问题”不再重复消耗精力，让故障诊断效率实现质的飞跃，解锁openEuler智能运维新体验 。
