@@ -484,6 +484,7 @@ export default {
     PLEACHOLDER_EXTEND: 'Press Enter to start, or refine your search with more info',
     PLEACHOLDER_IMAGE: 'Search by text or image',
     UPLOAD_TOOLTIP: 'JPG, PNG, JPEG supported (max 10 MB)',
+    UPLOAD_FAILED: 'Upload failed. Check connection and try again.',
     TEXT: 'Search',
   },
   SOURCE_CODE: [

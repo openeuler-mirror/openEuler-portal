@@ -6,8 +6,8 @@ import { useI18n } from '~@/i18n';
 
 import type { SearchRecommendT } from '@/shared/@types/type-search';
 
-import { getPop } from '@/api/api-search';
-import { getSearchRecommend } from '@/api/api-search';
+import { getPop, getSearchRecommend } from '@/api/api-search';
+import { imageUpload } from '~@/api/api-search';
 
 import { useSearchValue } from '~@/stores/search';
 import { useScreen } from '~@/composables/useScreen';
@@ -51,22 +51,33 @@ const reportSearch = (event: string, data: Record<string, any>) => {
 const localImage = ref('');
 const showThumbnail = ref(false);
 const fileInputRef = ref<HTMLInputElement>();
-const uploadBtnRef = ref();
+const uploadedImageUrl = ref('');
+const isUploading = ref(false);
+let uploadPromise: Promise<void> | null = null;
 
 const handleImageFile = (file: File) => {
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    const base64 = e.target?.result as string;
-    localImage.value = base64;
-    showThumbnail.value = true;
-  };
-  reader.readAsDataURL(file);
+  URL.revokeObjectURL(localImage.value);
+  localImage.value = URL.createObjectURL(file);
+  showThumbnail.value = true;
+
+  uploadedImageUrl.value = '';
+  isUploading.value = true;
+  uploadPromise = imageUpload({ image: file })
+    .then((res) => {
+      if (res.status === 200 && res.obj) {
+        uploadedImageUrl.value = res.obj;
+      }
+    })
+    .finally(() => {
+      isUploading.value = false;
+    });
 };
 
 const removeImage = () => {
+  URL.revokeObjectURL(localImage.value);
   localImage.value = '';
   showThumbnail.value = false;
-  sessionStorage.removeItem('searchImage');
+  uploadedImageUrl.value = '';
   // 清除图片后用当前文字重新搜索
   searchStore.setSearchState(searchInput.value, '', false);
 };
@@ -105,7 +116,7 @@ const handleDrop = (event: DragEvent) => {
 };
 
 // 搜索事件
-function handleSearchEvent(report?: boolean) {
+async function handleSearchEvent(report?: boolean) {
   if (showThumbnail.value) {
     if (report) {
       reportSearch('click', {
@@ -113,9 +124,11 @@ function handleSearchEvent(report?: boolean) {
         type: 'image_search',
       });
     }
+    if (isUploading.value && uploadPromise) {
+      await uploadPromise;
+    }
     isShowDrawer.value = false;
-    sessionStorage.setItem('searchImage', localImage.value);
-    searchStore.setSearchState(searchInput.value, localImage.value, true);
+    searchStore.setSearchState(searchInput.value, uploadedImageUrl.value, true);
     return;
   }
 
@@ -157,15 +170,11 @@ onMounted(() => {
   if (getUrlParam('q')) {
     searchInput.value = getUrlParam('q');
   }
-  // 初始化图片状态（从 sessionStorage + URL 读取，与 TheSearch 逻辑一致）
   const urlImageUrl = getUrlParam('imageUrl');
-  const hasImageSearch = urlImageUrl || getUrlParam('searchType') === 'image_search';
-  if (hasImageSearch) {
-    const stored = sessionStorage.getItem('searchImage');
-    if (stored) {
-      localImage.value = stored;
-      showThumbnail.value = true;
-    }
+  if (urlImageUrl) {
+    localImage.value = urlImageUrl;
+    showThumbnail.value = true;
+    uploadedImageUrl.value = urlImageUrl;
   }
 });
 
@@ -239,9 +248,9 @@ const closeSearch = () => {
   <div class="search-wrapper">
     <div :class="{ search: !lePadV, focus: isShowDrawer && !lePadV }">
       <div ref="searchRef" class="header-search">
-        <div class="input-focus" :class="{ 'has-image': showThumbnail }" @dragover="handleDragOver" @drop="handleDrop">
+        <div class="input-focus" :class="{ 'has-image': showThumbnail && isShowDrawer }" @dragover="handleDragOver" @drop="handleDrop">
           <OIcon @click.stop="closeSearch"><IconBack></IconBack></OIcon>
-          <div class="search-input-wrapper" :class="{ 'with-image': showThumbnail }">
+          <div class="search-input-wrapper" :class="{ 'with-image': showThumbnail && isShowDrawer }">
             <OInput
               v-model="searchInput"
               :placeholder="showThumbnail ? searchValue.PLEACHOLDER_EXTEND : searchValue.PLEACHOLDER"
@@ -252,20 +261,24 @@ const closeSearch = () => {
             >
               <template #prefix>
                 <OIcon class="icon"><IconSearch></IconSearch></OIcon>
+                <div v-if="showThumbnail && !isShowDrawer" class="input-thumbnail-wrapper">
+                  <OFigure :src="localImage" alt="" class="input-thumbnail" />
+                  <div class="thumbnail-zoom-overlay">
+                    <OIcon class="thumbnail-zoom-icon"><IconImageZoomin /></OIcon>
+                  </div>
+                  <OIcon class="thumbnail-remove" @mousedown.prevent @click.stop="removeImage"><IconImageClose /></OIcon>
+                </div>
               </template>
               <template #suffix>
-                <span ref="uploadBtnRef" class="upload-btn">
+                <span class="upload-btn">
                   <OIcon class="upload icon" @mousedown.prevent @click="handleUploadClick">
                     <IconImageUpload />
                   </OIcon>
                 </span>
-                <OPopover trigger="hover" position="bottom" :target="uploadBtnRef" body-class="mo-upload-tooltip-popup">
-                  {{ searchValue.UPLOAD_TOOLTIP }}
-                </OPopover>
                 <OIcon class="close icon" @click="closeSearchBox"><IconClose /></OIcon>
               </template>
             </OInput>
-            <div v-if="showThumbnail" class="input-image-preview">
+            <div v-if="showThumbnail && isShowDrawer" class="input-image-preview">
               <div class="preview-image-wrapper">
                 <OFigure :src="localImage" preview alt="" class="preview-image" />
                 <div class="preview-zoom-overlay">
@@ -426,6 +439,8 @@ const closeSearch = () => {
     &.has-image {
       @include respond-to('<=pad_v') {
         align-items: flex-start;
+        padding-bottom: 8px;
+        border-radius: 4px;
       }
     }
 
@@ -699,6 +714,78 @@ const closeSearch = () => {
 
 .file-input {
   display: none;
+}
+
+.input-thumbnail-wrapper {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  position: relative;
+  overflow: visible;
+  flex-shrink: 0;
+
+  @include hover {
+    .thumbnail-remove {
+      opacity: 1;
+    }
+    .thumbnail-zoom-overlay {
+      opacity: 1;
+    }
+  }
+
+  .input-thumbnail {
+    height: 24px;
+    width: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    :deep(img) {
+      height: 24px;
+      width: 24px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 4px;
+    }
+  }
+
+  .thumbnail-zoom-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--o-duration-m1);
+
+    .thumbnail-zoom-icon {
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+
+  .thumbnail-remove {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 14px;
+    height: 14px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity var(--o-duration-m1);
+
+    :deep(svg) {
+      width: 14px;
+      height: 14px;
+      fill: rgb(var(--o-mixedgray-9));
+    }
+  }
 }
 
 .upload-btn {

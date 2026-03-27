@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, watch, ref, onMounted, onUnmounted, nextTick } from 'vue';
+import { computed, watch, ref, onMounted, nextTick } from 'vue';
 
 import { getSearchData, getSearchCount, getRelevant, imageSearch } from '~@/api/api-search';
 
@@ -33,7 +33,6 @@ const currentSearchVal = ref('');
 const searchImage = ref<string>('');
 const isImageSearch = ref(false);
 const imageKeyword = ref<string>(''); // 后端返回的图片识别关键词
-const imageUrl = ref<string>(''); // 后端返回的图片OBS链接，用于分享
 
 const searchBannerRef = ref();
 
@@ -214,44 +213,37 @@ function clearSearchResult() {
 }
 
 // 获取搜索结果的数据
-const isLoading = ref(true);
+const isLoading = ref(false);
 // 获取搜索结果
 const queryGetSearchData = () => {
   isLoading.value = true;
 
   // 如果是图片搜索，调用图片搜索 API
   if (isImageSearch.value && searchImage.value) {
-    // 不论 searchImage 是 base64 还是 OBS URL，统一 fetch 拿到文件再调图片搜索接口
-    fetch(searchImage.value)
-      .then(res => res.blob())
-      .then(blob => {
-        const file = new File([blob], 'search-image.png', { type: blob.type });
+    let limit: { type: string; version: string }[] = [];
+    if (activeVersion.value) {
+      if (currentTab.value === 'all') {
+        limit = [
+          { type: 'docs', version: activeVersion.value },
+          { type: 'packages', version: activeVersion.value },
+        ];
+      } else if (currentTab.value === 'other') {
+        limit = [{ type: 'packages', version: activeVersion.value }];
+      } else {
+        limit = [{ type: currentTab.value || 'docs', version: activeVersion.value }];
+      }
+    }
 
-        let limit: { type: string; version: string }[] = [];
-        if (activeVersion.value) {
-          if (currentTab.value === 'all') {
-            limit = [
-              { type: 'docs', version: activeVersion.value },
-              { type: 'packages', version: activeVersion.value },
-            ];
-          } else if (currentTab.value === 'docs') {
-            limit = [{ type: 'docs', version: activeVersion.value }];
-          } else {
-            limit = [];
-          }
-        }
-
-        return imageSearch({
-          lang: locale.value,
-          image: file,
-          keyword: searchValue.value || undefined,
-          page: currentPage.value,
-          pageSize: pageSize.value,
-          type: searchType.value,
-          sort: activeSort.value,
-          limitString: limit.length ? JSON.stringify(limit) : undefined,
-        });
-      })
+    imageSearch({
+      lang: locale.value,
+      imageUrl: searchImage.value,
+      keyword: searchValue.value || undefined,
+      page: currentPage.value,
+      pageSize: pageSize.value,
+      type: searchType.value,
+      sort: activeSort.value,
+      limit: limit.length ? limit : undefined,
+    })
       .then((res) => {
         if (res.status === 200 && res.obj) {
           if (lePadV.value && isPageCountChange.value) {
@@ -259,18 +251,8 @@ const queryGetSearchData = () => {
           } else {
             searchResultList.value = res.obj.records;
           }
-          // 保存后端返回的图片 OBS 链接，写入 URL 以支持分享
-          if (res.obj.imageUrl) {
-            imageUrl.value = res.obj.imageUrl;
-            const params = new URLSearchParams(window.location.search);
-            params.set('imageUrl', res.obj.imageUrl);
-            params.delete('searchType');
-            history.replaceState(null, '', `?${params.toString()}`);
-          }
-          // 保存后端返回的图片识别关键词，用于后续接口调用
           if (res.obj.keyword) {
             imageKeyword.value = res.obj.keyword;
-            // 有了 keyword 后，调用其他依赖 keyword 的接口
             queryGetSearchCount();
             queryGetSoftware();
           }
@@ -374,8 +356,8 @@ function handleSelectChange(val: string) {
   const params = new URLSearchParams();
   if (val) params.set('q', val);
   params.set('type', currentTab.value);
-  if (imageUrl.value) {
-    params.set('imageUrl', imageUrl.value);
+  if (isImageSearch.value && searchImage.value) {
+    params.set('imageUrl', searchImage.value);
   }
   history.pushState(null, '', `?${params.toString()}`);
 }
@@ -390,20 +372,11 @@ onMounted(() => {
 
   replaceUrlParam('search', 'q');
 
-  // 检查 URL 是否有图片 OBS 链接（分享链接场景）
+  // 检查 URL 是否有图片 OBS 链接
   const urlImageUrl = getUrlParam('imageUrl');
   if (urlImageUrl) {
-    imageUrl.value = urlImageUrl;
     isImageSearch.value = true;
-    const storedImage = sessionStorage.getItem('searchImage');
-    searchImage.value = storedImage || urlImageUrl;
-  } else if (getUrlParam('searchType') === 'image_search') {
-    // 兼容旧格式
-    isImageSearch.value = true;
-    const storedImage = sessionStorage.getItem('searchImage');
-    if (storedImage) {
-      searchImage.value = storedImage;
-    }
+    searchImage.value = urlImageUrl;
   }
 
   if (getUrlParam('q')) {
@@ -413,17 +386,9 @@ onMounted(() => {
   searchAll();
 });
 
-// 组件卸载时清理 sessionStorage
-onUnmounted(() => {
-  if (isImageSearch.value) {
-    sessionStorage.removeItem('searchImage');
-  }
-});
-
 // 图片被清除时，同步清理 URL 中的 imageUrl 参数
 watch(isImageSearch, (val) => {
   if (!val) {
-    imageUrl.value = '';
     const params = new URLSearchParams(window.location.search);
     params.delete('imageUrl');
     params.delete('searchType');

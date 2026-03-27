@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { ref, computed, watch, nextTick, type PropType } from 'vue';
-import { OInput, OIcon, OFigure, OPopover, vOutClick, OTab, OTabPane } from '@opensig/opendesign';
+import { OInput, OIcon, OFigure, OPopover, vOutClick, OTab, OTabPane, useMessage } from '@opensig/opendesign';
+import { useI18n } from 'vue-i18n';
 
 import { useVModels } from '@vueuse/core';
 import { useLocale } from '~@/composables/useLocale';
@@ -15,6 +16,7 @@ import IconUpload from '~icons/app-new/icon-image-upload.svg';
 import IconImageClose from '~icons/app-new/icon-image-close.svg';
 import IconImageZoomin from '~icons/app-new/icon-image-zoomin.svg';
 import { oaReport } from '@/shared/analytics';
+import { imageUpload } from '~@/api/api-search';
 
 const props = defineProps({
   // 建议搜索词
@@ -86,9 +88,13 @@ const onTabChange = (val: any) => {
 
 const { lePadV } = useScreen();
 const { locale } = useLocale();
+const { t } = useI18n();
 
-const changeModelValue = () => {
+const changeModelValue = async () => {
   isFocus.value = false;
+  if (isUploading.value && uploadPromise) {
+    await uploadPromise;
+  }
   emits('search', modelValue.value);
 };
 
@@ -136,6 +142,8 @@ const uploadBtnRef = ref();
 const isPreviewOpen = ref(false);
 const justClosedPreview = ref(false);
 const focusedFigureRef = ref<InstanceType<typeof OFigure>>();
+const isUploading = ref(false);
+let uploadPromise: Promise<void> | null = null;
 
 const handleZoomClick = () => {
   isFocus.value = true;
@@ -173,22 +181,42 @@ watch(
 );
 
 const handleImageFile = (file: File) => {
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    const base64 = e.target?.result as string;
-    localImage.value = base64;
-    showThumbnail.value = true;
-    sessionStorage.setItem('searchImage', base64);
-    emits('update:searchImage', base64);
-    emits('update:isImageSearch', true);
-  };
-  reader.readAsDataURL(file);
+  localImage.value = URL.createObjectURL(file);
+  showThumbnail.value = true;
+
+  isUploading.value = true;
+  uploadPromise = imageUpload({ image: file })
+    .then((res) => {
+      if (res.status === 200 && res.obj) {
+        emits('update:searchImage', res.obj);
+        emits('update:isImageSearch', true);
+        oaReport(
+          'upload',
+          {
+            module: 'search_result',
+            content: modelValue.value,
+            type: 'image-search',
+            target: res.obj,
+          },
+          'search_portal'
+        );
+      }
+    })
+    .catch((err) => {
+      if (err?.response?.status === 403) {
+        const msg = useMessage();
+        msg.show({ content: t('search.imageUploadFailed'), status: 'danger' });
+      }
+    })
+    .finally(() => {
+      isUploading.value = false;
+    });
 };
 
 const removeImage = () => {
+  URL.revokeObjectURL(localImage.value);
   localImage.value = '';
   showThumbnail.value = false;
-  sessionStorage.removeItem('searchImage');
   emits('update:searchImage', '');
   emits('update:isImageSearch', false);
 };
@@ -462,7 +490,7 @@ defineExpose({ searchRecommendRef });</script>
   width: 24px;
   height: 24px;
   border-radius: 4px;
-  margin-right: 4px;
+  margin-right: 8px;
   cursor: pointer;
   flex-shrink: 0;
 

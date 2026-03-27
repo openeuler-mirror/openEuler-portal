@@ -145,27 +145,37 @@ export function getRelevant(params: RelevantQueryT): Promise<{
  */
 export function imageSearch(params: {
   lang: string;
-  image: File;
+  imageUrl: string;
   keyword?: string;
   page?: number;
   pageSize?: number;
   type?: string;
   sort?: string;
-  limitString?: string;
+  limit?: { type: string; version: string }[];
 }): Promise<{
   msg: string;
   obj: any;
   status: number;
 }> {
   const url = '/api-search/search/multitimodal';
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
+}
+
+/**
+ * 图片上传
+ * @param {File} image 图片文件
+ * @returns {Object}
+ */
+export function imageUpload(params: {
+  image: File;
+}): Promise<{
+  msg: string;
+  obj: any;
+  status: number;
+}> {
+  const url = '/api-search/search/sort/upload/image';
   const formData = new FormData();
-  formData.append('lang', params.lang);
   formData.append('image', params.image);
-  (['keyword', 'page', 'pageSize', 'type', 'sort', 'limitString'] as const).forEach((key) => {
-    if (params[key]) {
-      formData.append(key, String(params[key]));
-    }
-  });
   return request.post(url, formData, {
     headers: {
       'Content-Type': 'multipart/form-data',

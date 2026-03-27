@@ -3,12 +3,12 @@ import { computed, ref, onMounted, watch, nextTick } from 'vue';
 import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
 import { useI18n } from '~@/i18n';
-import { OFigure, OPopover } from '@opensig/opendesign';
+import { OFigure, OPopover, useMessage } from '@opensig/opendesign';
 
 import type { SearchRecommendT } from '@/shared/@types/type-search';
 
-import { getPop } from '@/api/api-search';
-import { getSearchRecommend } from '@/api/api-search';
+import { getPop, getSearchRecommend } from '@/api/api-search';
+import { imageUpload } from '~@/api/api-search';
 
 import useClickOutside from '@/components/hooks/useClickOutside';
 import { useScreen } from '~@/composables/useScreen';
@@ -56,22 +56,19 @@ async function handleSearchEvent(report?: boolean) {
   if (pastedFile.value) {
     if (report) {
       reportSearch('click', {
-        content: searchInput.value.trim() || '[image]',
+        content: searchInput.value.trim(),
+        image: uploadedImageUrl.value,
         type: 'image_search',
       });
     }
-    // 将图片转为 base64 并存储到 sessionStorage
-    const reader = new FileReader();
-    reader.onload = () => {
-      const base64 = reader.result as string;
-      sessionStorage.setItem('searchImage', base64);
-      const query = searchInput.value.trim();
-      const url = query
-        ? `/${lang.value}/other/search/?searchType=image_search&q=${encodeURIComponent(query)}`
-        : `/${lang.value}/other/search/?searchType=image_search`;
-      window.open(url, '_self');
-    };
-    reader.readAsDataURL(pastedFile.value);
+    if (isUploading.value) {
+      await uploadPromise;
+    }
+    const query = searchInput.value.trim();
+    const params = new URLSearchParams();
+    if (uploadedImageUrl.value) params.set('imageUrl', uploadedImageUrl.value);
+    if (query) params.set('q', query);
+    window.open(`/${lang.value}/other/search/?${params.toString()}`, '_self');
     return;
   }
 
@@ -228,6 +225,9 @@ const closeSearch = () => {
 const pastedImage = ref<string>('');
 const pastedFile = ref<File | null>(null);
 const showThumbnail = ref(false);
+const uploadedImageUrl = ref<string>('');
+const isUploading = ref(false);
+let uploadPromise: Promise<void> | null = null;
 const isPreviewOpen = ref(false);
 const justClosedPreview = ref(false);
 
@@ -258,9 +258,11 @@ const handlePaste = async (event: ClipboardEvent) => {
 };
 
 const removeImage = () => {
+  URL.revokeObjectURL(pastedImage.value);
   pastedImage.value = '';
   pastedFile.value = null;
   showThumbnail.value = false;
+  uploadedImageUrl.value = '';
 };
 
 const fileInputRef = ref<HTMLInputElement>();
@@ -286,12 +288,30 @@ const handleFileSelect = (event: Event) => {
 
 const handleImageFile = (file: File) => {
   pastedFile.value = file;
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    pastedImage.value = e.target?.result as string;
-    showThumbnail.value = true;
-  };
-  reader.readAsDataURL(file);
+  pastedImage.value = URL.createObjectURL(file);
+  showThumbnail.value = true;
+
+  uploadedImageUrl.value = '';
+  isUploading.value = true;
+  uploadPromise = imageUpload({ image: file })
+    .then((res) => {
+      if (res.status === 200 && res.obj) {
+        uploadedImageUrl.value = res.obj;
+        reportSearch('upload', {
+          image: uploadedImageUrl.value,
+          type: 'image_search',
+        });
+      }
+    })
+    .catch((err) => {
+      if (err?.response?.status === 403) {
+        const msg = useMessage();
+        msg.show({ content: searchValue.value.UPLOAD_FAILED, status: 'danger' });
+      }
+    })
+    .finally(() => {
+      isUploading.value = false;
+    });
 };
 
 const handleDragOver = (event: DragEvent) => {
@@ -339,7 +359,7 @@ const handleDrop = (event: DragEvent) => {
                     ><IconImageUpload
                   /></OIcon>
                 </span>
-                <OPopover trigger="hover" position="bottom" :target="uploadBtnRef" body-class="upload-tooltip-popup">
+                <OPopover v-if="!lePadV" trigger="hover" position="bottom" :target="uploadBtnRef" body-class="upload-tooltip-popup">
                   {{ searchValue.UPLOAD_TOOLTIP }}
                 </OPopover>
                 <OIcon class="close icon" @click="closeSearchBox"
@@ -467,6 +487,7 @@ const handleDrop = (event: DragEvent) => {
 
     &.focus {
       top: -32px;
+      border-radius: 4px;
     }
   }
 }
@@ -498,21 +519,25 @@ const handleDrop = (event: DragEvent) => {
 
   .input-focus {
     padding: var(--o-gap-4);
-    border-radius: 4px 4px 0 0;
+    border-radius: 4px;
     display: flex;
     &::after {
-      content: '';
-      position: absolute;
-      height: var(--o-gap-4);
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background-color: var(--o-color-fill2);
-      z-index: 200;
+    content: '';
+    position: absolute;
+    height: var(--o-gap-4);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--o-color-fill2);
+    z-index: 200;
 
       @include respond-to('<=pad_v') {
         display: none;
       }
+    }
+
+    &.has-image::after {
+      display: none;
     }
 
     .search-text {
@@ -906,7 +931,7 @@ const handleDrop = (event: DragEvent) => {
   width: 16px;
   height: 16px;
   border-radius: 4px;
-  margin-right: 4px;
+  margin-right: 8px;
   cursor: pointer;
   flex-shrink: 0;
 
