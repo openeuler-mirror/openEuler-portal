@@ -2,13 +2,27 @@
 import { computed } from 'vue';
 import { OBreadcrumb, OBreadcrumbItem, ORow, OCol, OLink } from '@opensig/opendesign';
 
-import BannerLevel3 from '~@/components/BannerLevel3.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 import { useLocale } from '~@/composables/useLocale';
+import { useScreen } from '~@/composables/useScreen';
 
-import banner from '@/assets/nestos/banner/banner-minisite.png';
+import two_1 from '@/assets/nestos/arch/two_1.png';
+import two_2 from '@/assets/nestos/arch/two_2.png';
+import two_3 from '@/assets/nestos/arch/two_3.png';
+import three_1 from '@/assets/nestos/arch/three_1.png';
+import three_2 from '@/assets/nestos/arch/three_2.png';
+import three_3 from '@/assets/nestos/arch/three_3.png';
+import three_4 from '@/assets/nestos/arch/three_4.png';
+import three_5 from '@/assets/nestos/arch/three_5.png';
+import three_6 from '@/assets/nestos/arch/three_6.png';
+import four from '@/assets/nestos/arch/four.png';
+import five_1 from '@/assets/nestos/arch/five_1.png';
+import five_2 from '@/assets/nestos/arch/five_2.png';
+import six_before from '@/assets/nestos/arch/six_before.png';
+import six_after from '@/assets/nestos/arch/six_after.png';
 
 const { t } = useLocale();
+const { lePadV, isPadVToLaptop } = useScreen();
 
 const props = defineProps<{
   featureSlug: string;
@@ -89,7 +103,7 @@ const featureMap: Record<string, FeatureItem> = {
         content:
           'PilotGo是麒麟软件在openEuler社区孵化的插件式运维管理平台。本次PilotGo针对NestOS平台特性及最佳应用实践，为NestOS平台带来了定制化的运维管理功能及全新的架构感知插件特性。',
       },
-      { type: 'heading', content: '● 功能概览：' },
+      { type: 'heading', content: '功能概览：' },
       {
         type: 'list',
         items: [
@@ -98,13 +112,13 @@ const featureMap: Record<string, FeatureItem> = {
           '3、多机应用集群拓扑图展示。',
         ],
       },
-      { type: 'heading', content: '● 效果展示：' },
+      { type: 'heading', content: '效果展示：' },
       { type: 'text', content: '1、PilotGo 纳管 NestOS 系统；' },
-      { type: 'image', src: '/src/assets/nestos/arch/two_1.png', content: 'PilotGo 纳管 NestOS' },
+      { type: 'image', src: two_1, content: 'PilotGo 纳管 NestOS' },
       { type: 'text', content: '2、集群拓扑展示；' },
-      { type: 'image', src: '/src/assets/nestos/arch/two_2.png', content: '集群拓扑' },
+      { type: 'image', src: two_2, content: '集群拓扑' },
       { type: 'text', content: '3、集群拓扑节点信息展示。' },
-      { type: 'image', src: '/src/assets/nestos/arch/two_3.png', content: '集群拓扑节点信息' },
+      { type: 'image', src: two_3, content: '集群拓扑节点信息' },
     ],
   },
   nkd: {
@@ -120,14 +134,14 @@ const featureMap: Record<string, FeatureItem> = {
       {
         type: 'list',
         items: [
-          '● 主体模块NKDS（NestOS-kubernetes-deployer-service）：包括部署集群所需的基础设施管理和配置管理，创建系统点火阶段所需的Ignition文件；',
-          '● 升级模块housekeeper：包括部署到集群中HKO (housekeeper operator)，与集成到系统镜像中的HKD（housekeeper daemon）组件；',
-          '● NKD根据集群需求，连接基础设施提供商动态创建所需的IaaS资源，支持裸金属和虚拟化场景，目前优先实现openstack场景。',
+          '主体模块NKDS（NestOS-kubernetes-deployer-service）：包括部署集群所需的基础设施管理和配置管理，创建系统点火阶段所需的Ignition文件；',
+          '升级模块housekeeper：包括部署到集群中HKO (housekeeper operator)，与集成到系统镜像中的HKD（housekeeper daemon）组件；',
+          'NKD根据集群需求，连接基础设施提供商动态创建所需的IaaS资源，支持裸金属和虚拟化场景，目前优先实现openstack场景。',
         ],
       },
-      { type: 'image', src: '/src/assets/nestos/arch/three_1.png', content: 'NKD架构图' },
+      { type: 'image', src: three_1, content: 'NKD架构图' },
       { type: 'heading', content: '2、效果演示：' },
-      { type: 'heading', content: '● 演示环境' },
+      { type: 'heading', content: '演示环境' },
       {
         type: 'list',
         items: [
@@ -135,27 +149,27 @@ const featureMap: Record<string, FeatureItem> = {
           '(2) NestOS版本：NestOS For Container 22.03_LTS_SP2',
         ],
       },
-      { type: 'text', content: '● 部署集群基础设施' },
-      { type: 'image', src: '/src/assets/nestos/arch/three_2.png', content: '部署集群基础设施' },
-      { type: 'heading', content: '● 集群部署完成' },
+      { type: 'text', content: '部署集群基础设施' },
+      { type: 'image', src: three_2, content: '部署集群基础设施' },
+      { type: 'heading', content: '集群部署完成' },
       { type: 'text', content: '(1) 查看节点处于Ready状态' },
-      { type: 'image', src: '/src/assets/nestos/arch/three_3.png', content: '节点Ready状态' },
+      { type: 'image', src: three_3, content: '节点Ready状态' },
       { type: 'text', content: '(2) 查看Pod处于running状态' },
-      { type: 'image', src: '/src/assets/nestos/arch/three_4.png', content: 'Pod运行状态' },
-      { type: 'heading', content: '● 集群版本升级' },
+      { type: 'image', src: three_4, content: 'Pod运行状态' },
+      { type: 'heading', content: '集群版本升级' },
       { type: 'text', content: '(1) K8S版本升级前' },
-      { type: 'image', src: '/src/assets/nestos/arch/three_5.png', content: '升级前' },
+      { type: 'image', src: three_5, content: '升级前' },
       { type: 'text', content: '(2) K8S版本升级后' },
-      { type: 'image', src: '/src/assets/nestos/arch/three_6.png', content: '升级后' },
+      { type: 'image', src: three_6, content: '升级后' },
       { type: 'heading', content: '3、说明' },
       {
         type: 'link',
-        content: '● 项目地址&详细说明：',
+        content: '项目地址&详细说明：',
         href: 'https://atomgit.com/openeuler/nestos-kubernetes-deployer',
       },
       {
         type: 'text',
-        content: '● NKD目前仅处于演示阶段，暂不适用于生产环境。',
+        content: 'NKD目前仅处于演示阶段，暂不适用于生产环境。',
       },
     ],
   },
@@ -168,7 +182,7 @@ const featureMap: Record<string, FeatureItem> = {
         content:
           'Rubik是一个自适应单机算力调优和服务质量保障的容器混部引擎，NestOS For Container版本已预开启Rubik在离线混部相关内核特性，支持基于rubik容器混部引擎的整体解决方案，通过对资源进行合理调度与隔离，在保障关键业务服务质量的前提下极大提升容器云场景资源利用率。',
       },
-      { type: 'image', src: '/src/assets/nestos/arch/four.png', content: 'Rubik混部架构' },
+      { type: 'image', src: four, content: 'Rubik混部架构' },
       {
         type: 'text',
         content:
@@ -207,7 +221,7 @@ const featureMap: Record<string, FeatureItem> = {
         content:
           'NestOS for Containers，作为基于不可变基础设施思想的容器云底座操作系统，将文件系统作为一个整体进行分发和更新。这一方案在运维与安全方面带来了巨大的提升。然而，在实际生产环境中，官方发布的版本往往难以满足用户的需求，因此需要更方便的定制手段。现NestOS For Container集成ostree native container特性，可使容器云场景用户利用熟悉的技术栈，只需编写一个ContainerFile(Dockerfile)文件，即可轻松构建定制版镜像，用于自定义集成组件或后续的升级维护工作。',
       },
-      { type: 'heading', content: '● 简要定制步骤' },
+      { type: 'heading', content: '简要定制步骤' },
       {
         type: 'list',
         items: [
@@ -224,7 +238,7 @@ const featureMap: Record<string, FeatureItem> = {
         type: 'text',
         content: '3. 执行docker build或集成于CICD中构建相应镜像，推送至Registry以备使用',
       },
-      { type: 'heading', content: '● 简要部署步骤' },
+      { type: 'heading', content: '简要部署步骤' },
       {
         type: 'text',
         content:
@@ -237,14 +251,14 @@ const featureMap: Record<string, FeatureItem> = {
           'sudo rpm-ostree rebase ostree-unverified-registry:hub.oepkgs.net/nestos/nestos-test:demo-strace --bypass-driver',
       },
       { type: 'text', content: '3. 重新引导后完成定制版本部署' },
-      { type: 'heading', content: '● 效果展示' },
+      { type: 'heading', content: '效果展示' },
       { type: 'text', content: '○ 部署过程' },
-      { type: 'image', src: '/src/assets/nestos/arch/five_1.png', content: '部署过程' },
+      { type: 'image', src: five_1, content: '部署过程' },
       { type: 'text', content: '○ 完成部署' },
-      { type: 'image', src: '/src/assets/nestos/arch/five_2.png', content: '完成部署' },
+      { type: 'image', src: five_2, content: '完成部署' },
       {
         type: 'link',
-        content: '● 详细说明请参阅：NestOS For Container以OCI方式定制使用手册',
+        content: '详细说明请参阅：NestOS For Container以OCI方式定制使用手册',
         href: 'https://atomgit.com/openeuler/NestOS/blob/master/docs/zh/usr_manual/NestOS-For-Container%E4%BB%A5OCI%E6%96%B9%E5%BC%8F%E5%AE%9A%E5%88%B6%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md',
       },
     ],
@@ -258,7 +272,7 @@ const featureMap: Record<string, FeatureItem> = {
         content:
           'x2nestos是一款将通用形态操作系统转换为 NestOS For Container 版本的快捷部署工具。NestOS For Virt版本默认集成，也可通用于以yum或apt主流包管理器管理的其他通用linux操作系统。该工具基于kexec动态加载内核特性，实现跳过引导阶段完成操作系统部署，有效降低现有集群转换为NestOS For Container难度和成本。',
       },
-      { type: 'heading', content: '● 适用场景：' },
+      { type: 'heading', content: '适用场景：' },
       {
         type: 'list',
         items: [
@@ -268,7 +282,7 @@ const featureMap: Record<string, FeatureItem> = {
           '4. 个人爱好者尝鲜',
         ],
       },
-      { type: 'heading', content: '● 限制说明：' },
+      { type: 'heading', content: '限制说明：' },
       {
         type: 'list',
         items: [
@@ -277,14 +291,14 @@ const featureMap: Record<string, FeatureItem> = {
           '3. 使用本工具时需保留足够空闲内存（推荐>2G）',
         ],
       },
-      { type: 'heading', content: '● 效果演示' },
+      { type: 'heading', content: '效果演示' },
       { type: 'text', content: '○ 转换前' },
-      { type: 'image', src: '/src/assets/nestos/arch/six_before.png', content: '转换前' },
+      { type: 'image', src: six_before, content: '转换前' },
       { type: 'text', content: '○ 转换后' },
-      { type: 'image', src: '/src/assets/nestos/arch/six_after.png', content: '转换后' },
+      { type: 'image', src: six_after, content: '转换后' },
       {
         type: 'link',
-        content: '● 详细说明请参阅：https://atomgit.com/openeuler/x2nestos',
+        content: '详细说明请参阅：https://atomgit.com/openeuler/x2nestos',
         href: 'https://atomgit.com/openeuler/x2nestos',
       },
     ],
@@ -293,27 +307,31 @@ const featureMap: Record<string, FeatureItem> = {
 
 const feature = computed(() => featureMap[props.featureSlug]);
 const featureTitle = computed(() => (feature.value ? t(feature.value.titleKey) : ''));
+
+const verticalPadding = computed(() => {
+  if (isPadVToLaptop.value) {
+    return ['16px', '40px'];
+  } else if (lePadV.value) {
+    return ['16px', '32px'];
+  } else {
+    return ['32px', '72px'];
+  }
+});
 </script>
 
 <template>
   <div v-if="feature">
-    <BannerLevel3
-      :title="featureTitle"
-      :background-image="banner"
-    />
-
-    <ContentWrapper vertical-padding="48px">
+    <ContentWrapper :vertical-padding="verticalPadding">
       <!-- 面包屑 -->
-      <OBreadcrumb class="breadcrumb">
+      <OBreadcrumb>
         <OBreadcrumbItem href="/zh/other/projects/nestos/">NestOS</OBreadcrumbItem>
-        <OBreadcrumbItem href="/zh/other/projects/nestos/#features">{{ t('nestos.featuresTitle') }}</OBreadcrumbItem>
         <OBreadcrumbItem>{{ featureTitle }}</OBreadcrumbItem>
       </OBreadcrumb>
 
       <!-- 内容区 -->
       <div class="detail-body">
         <!-- 摘要描述 -->
-        <p class="detail-summary">{{ t(feature.descKey) }}</p>
+        <p class="detail-summary">{{ featureTitle }}</p>
 
         <!-- 章节内容 -->
         <div class="detail-sections">
@@ -361,14 +379,17 @@ const featureTitle = computed(() => (feature.value ? t(feature.value.titleKey) :
 </template>
 
 <style scoped lang="scss">
-.breadcrumb {
-  margin-bottom: 32px;
+.o-breadcrumb {
+  --breadcrumb-color-hover: var(--o-color-primary1);
+  --breadcrumb-color-active: var(--o-color-primary1);
+  --breadcrumb-color-selected: var(--o-color-primary1);
 }
 
 .detail-body {
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  padding: 40px 48px;
+  padding: 24px 40px;
+  margin-top: 24px;
 }
 
 .detail-summary {
@@ -387,10 +408,10 @@ const featureTitle = computed(() => (feature.value ? t(feature.value.titleKey) :
 }
 
 .section-heading {
-  @include text2;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--o-color-info1);
   margin-top: 8px;
+  @include text2;
 }
 
 .section-text {

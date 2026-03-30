@@ -4,11 +4,13 @@ import { OIcon, OTable, OSelect, OOption, OTab, OTabPane, ORadioGroup, ORadio, O
 
 import AppSection from '~@/components/AppSection.vue';
 import { useLocale } from '~@/composables/useLocale';
+import { useScreen } from '~@/composables/useScreen';
 
-import IconOutLink from '~icons/app-new/icon-outlink.svg';
+import IconOutLink from '~icons/app-new/icon-outlink-new.svg';
 import IconDownload from '~icons/app-new/icon-download.svg';
 
 const { t } = useLocale();
+const { lePadV } = useScreen();
 
 type Tab = 'mirror' | 'document' | 'other';
 
@@ -164,9 +166,9 @@ const getList = (v: VersionGroup) =>
   activeArch.value === 'x86' ? v.x86List : v.armList;
 
 const tableColumns = computed(() => [
-  { label: t('nestos.mirrorPackage'), key: 'version', style: { width: '20%' } },
-  { label: t('nestos.mirrorRepo'), key: 'name', style: { width: '55%' } },
-  { label: t('nestos.mirrorDownloadCol'), key: 'action', style: { width: '25%' } },
+  { label: t('nestos.mirrorPackage'), key: 'version', style: { width: '30%' } },
+  { label: t('nestos.mirrorRepo'), key: 'name', style: { width: '60%' } },
+  { label: t('nestos.mirrorDownloadCol'), key: 'action', style: { width: '10%' } },
 ]);
 
 // Table rows: one per version group (static — mirrorVersions never changes)
@@ -206,7 +208,7 @@ const otherLinks = [
           </div>
 
           <!-- OTable 下载表格 -->
-          <OTable :data="tableData" :columns="tableColumns" class="mirror-table">
+          <OTable :data="tableData" :columns="tableColumns" border="row-frame" class="mirror-table">
             <template #td_version="{ row }">
               <span class="version-tag">{{ row.version }}</span>
             </template>
@@ -214,7 +216,7 @@ const otherLinks = [
               <OSelect
                 v-model="selectedIdx[row.vIdx]"
                 class="repo-select"
-                size="small"
+                size="medium"
               >
                 <OOption
                   v-for="(pkg, pIdx) in getList(mirrorVersions[row.vIdx])"
@@ -230,10 +232,9 @@ const otherLinks = [
                 color="primary"
                 size="small"
                 :href="getList(mirrorVersions[row.vIdx])[selectedIdx[row.vIdx]]?.path"
-                target="_blank"
                 class="download-btn"
               >
-                <template #prefix><OIcon class="download-icon"><IconDownload /></OIcon></template>
+                <OIcon class="download-icon"><IconDownload /></OIcon>
                 {{ t('nestos.immediateDownload') }}
               </OButton>
             </template>
@@ -254,10 +255,11 @@ const otherLinks = [
               :href="item.href"
               target="_blank"
               color="primary"
-              hover-underline
             >
               {{ t('nestos.learnMore') }}
-              <OIcon class="outlink-icon"><IconOutLink /></OIcon>
+              <template #suffix>
+                <OIcon class="outlink-icon"><IconOutLink /></OIcon>
+              </template>
             </OLink>
           </div>
         </div>
@@ -276,10 +278,11 @@ const otherLinks = [
               :href="item.href"
               target="_blank"
               color="primary"
-              hover-underline
             >
               {{ t('nestos.learnMore') }}
-              <OIcon class="outlink-icon"><IconOutLink /></OIcon>
+              <template #suffix>
+                <OIcon class="outlink-icon"><IconOutLink /></OIcon>
+              </template>
             </OLink>
           </div>
         </div>
@@ -301,116 +304,102 @@ const otherLinks = [
   width: 100%;
   background-color: var(--o-color-fill2);
   border-radius: 4px;
-  padding: 24px 32px;
+  padding: 24px 32px 16px;
 }
 
 .arch-filter {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .arch-label {
-  font-size: 16px;
   font-weight: 500;
-  color: var(--o-color-info2);
+  color: var(--o-color-info1);
   flex-shrink: 0;
+  margin-right: 32px;
+  @include text1;
 }
 
 .arch-radio-group {
   display: flex;
-  gap: 8px;
+  .o-radio + .o-radio {
+    margin-left: 8px;
+  }
 }
 
 .mirror-table {
   width: 100%;
+  --table-edge-padding: 40px;
+  --table-cell-padding: 12px 20px;
 
-  :deep(thead tr) {
-    background-color: var(--o-color-primary4-light);
+  :deep(.o-table-wrap) {
+    overflow: visible;
+    &::-webkit-scrollbar {
+      display: block;
+    }
   }
 
   :deep(thead th) {
-    padding: 0 16px;
-    height: 48px;
-    font-size: 14px;
     font-weight: 500;
     color: var(--o-color-info1);
-    border-bottom: 1px solid var(--o-color-control4);
-  }
-
-  :deep(tbody tr) {
-    border-bottom: 1px solid var(--o-color-control4);
-    transition: background-color 0.15s;
-
-    &:last-child {
-      border-bottom: none;
-    }
-
-    &:hover {
-      background-color: var(--o-color-fill2);
-    }
-  }
-
-  :deep(tbody td) {
-    padding: 10px 16px;
-    height: 56px;
-    font-size: 14px;
-    color: var(--o-color-info2);
-    vertical-align: middle;
+    @include text1;
   }
 }
 
 .version-tag {
-  font-size: 14px;
   font-weight: 500;
   color: var(--o-color-info1);
+  @include text1;
 }
 
 .repo-select {
-  width: 100%;
+  width: 70%;
 }
 
 .download-btn {
+  width: 112px;
+  --btn-height: 28px;
   --btn-border-radius: 100px;
   white-space: nowrap;
 }
 
 .download-icon {
-  --icon-size: 14px;
+  --icon-size: 16px;
+  margin-right: 4px;
 }
 
 // 文档 / 其他 tab 样式
-.link-item {
-  padding: 20px 0;
-  border-bottom: 1px solid var(--o-color-control4);
-
-  &:last-child {
-    border-bottom: none;
-  }
-}
-
 .link-title {
-  font-size: 16px;
   font-weight: 600;
-  line-height: 24px;
   color: var(--o-color-info1);
-  margin-bottom: 8px;
+  @include text1;
 }
 
+.o-link {
+  margin-top: 8px;
+  padding: 8px 0;
+  @include text1;
+}
 .outlink-icon {
-  --icon-size: 14px;
+  --icon-size: 24px;
+}
+
+@include respond-to('<=laptop') {
+  .outlink-icon {
+    --icon-size: 16px;
+  }
 }
 
 @include respond-to('laptop') {
   .resource-card {
-    padding: 20px 24px;
+    padding: 24px 24px 16px;
   }
 }
 
 @include respond-to('pad_h') {
   .resource-card {
-    padding: 18px 20px;
+    padding: 16px 16px 8px;
   }
 }
 
@@ -421,7 +410,7 @@ const otherLinks = [
   }
 
   .resource-card {
-    padding: 16px;
+    padding: 12px 16px 4px;
   }
 
   .mirror-table {
@@ -432,9 +421,17 @@ const otherLinks = [
     }
   }
 
+  .repo-select {
+    width: 100%;
+  }
+
   .download-btn {
     padding: 5px 10px;
     font-size: 12px;
+  }
+
+  .o-link {
+    @include text2;
   }
 }
 

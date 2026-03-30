@@ -7,10 +7,8 @@ import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
 
-import frameImgLightZh from '@/assets/category/minisite/bisheng/frame_light_zh.png';
-import frameImgDarkZh from '@/assets/category/minisite/bisheng/frame_dark_zh.png';
-import frameImgLightEn from '@/assets/category/minisite/bisheng/frame_light_en.png';
-import frameImgDarkEn from '@/assets/category/minisite/bisheng/frame_dark_en.png';
+import frameImgZh from '~@/assets/category/bisheng/frame_zh.png';
+import frameImgEn from '~@/assets/category/bisheng/frame_en.png';
 
 const { t, locale } = useLocale();
 const { lePadV } = useScreen();
@@ -18,20 +16,17 @@ const { lePadV } = useScreen();
 const commonStore = useCommon();
 const isDark = computed(() => commonStore.theme === 'dark');
 
-const lightImg = { zh: frameImgLightZh, en: frameImgLightEn };
-const darkImg = { zh: frameImgDarkZh, en: frameImgDarkEn };
+const img = { zh: frameImgZh, en: frameImgEn };
 </script>
 
 <template>
   <AppSection :title="t('bishengJdk.architectureTitle')">
     <div class="architecture">
       <p class="arch-desc">{{ t('bishengJdk.architectureDesc') }}</p>
-      <div class="arch-figure">
-        <OFigure
-          :src="isDark ? darkImg[locale] : lightImg[locale]"
-          class="arch-img"
-        />
-      </div>
+      <OFigure
+        :src="img[locale]"
+        class="arch-img"
+      />
     </div>
   </AppSection>
 </template>
@@ -41,43 +36,36 @@ const darkImg = { zh: frameImgDarkZh, en: frameImgDarkEn };
   width: 100%;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  padding: 32px;
+  padding: 40px 32px;
 }
 
 .arch-desc {
   color: var(--o-color-info1);
   @include text2;
-  line-height: 1.75;
-}
-
-.arch-figure {
-  margin-top: 32px;
-  display: flex;
-  justify-content: center;
 }
 
 .arch-img {
-  width: 100%;
-  max-width: 900px;
-  :deep(.o-figure-img) {
-    height: auto;
-    width: 100%;
-  }
+  max-width: 1125px;
+  --figure-radius: var(--o-radius-xs);
+  margin: 32px auto 0;
+  display: flex;
 }
 
 @include respond-to('laptop') {
   .architecture {
-    padding: 24px;
+    padding: 32px 24px;
   }
-
-  .arch-figure {
-    margin-top: 24px;
+  .arch-img {
+    margin: 24px auto 0;
   }
 }
 
 @include respond-to('pad_h') {
   .architecture {
-    padding: 20px;
+    padding: 16px;
+  }
+  .arch-img {
+    margin: 16px auto 0;
   }
 }
 
@@ -89,9 +77,8 @@ const darkImg = { zh: frameImgDarkZh, en: frameImgDarkEn };
   .arch-desc {
     @include text1;
   }
-
-  .arch-figure {
-    margin-top: 16px;
+  .arch-img {
+    margin: 12px auto 0;
   }
 }
 </style>

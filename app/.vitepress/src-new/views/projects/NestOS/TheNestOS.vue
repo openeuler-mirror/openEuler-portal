@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { OButton, OIcon, ODropdown } from '@opensig/opendesign';
+import { OButton, OIcon } from '@opensig/opendesign';
 
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import NestOSIntro from './components/NestOSIntro.vue';
@@ -12,28 +12,12 @@ import NestOSPartner from './components/NestOSPartner.vue';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
-import banner from '@/assets/nestos/banner/banner-minisite.png';
-import illustration from '@/assets/nestos/banner/banner-right.png';
+import banner from '~@/assets/category/projects/project-banner.jpg';
 
-import IconChevronDown from '~icons/app-new/icon-chevron-down.svg';
+import IconOutLink from '~icons/app-new/icon-outlink-new.svg';
 
 const { t } = useLocale();
 const { lePadV } = useScreen();
-
-const downloadLinks = [
-  {
-    text: 'NestOS 双模式-24.03-LTS',
-    href: 'https://nestos.org.cn/nestos20240904/nestos-for-all/x86_64/NestOS-24.03-LTS.20240904.0.x86_64.iso',
-  },
-  {
-    text: 'NestOS For Container-24.03-LTS',
-    href: 'https://nestos.org.cn/NestOS-release/prod/streams/2403-LTS/builds/24.03-LTS.20240904.0/x86_64/nestos-24.03-LTS.20240904.0-live.x86_64.iso',
-  },
-  {
-    text: 'NestOS For Virt-24.03-LTS',
-    href: 'https://nestos.org.cn/nestos20240904/nestos-for-virt/x86_64/NestOS-For-Virt-24.03-LTS.20240904.0.x86_64.iso',
-  },
-];
 </script>
 
 <template>
@@ -43,65 +27,56 @@ const downloadLinks = [
     :title="t('nestos.title')"
     :subtitle="t('nestos.subtitle')"
     :background-image="banner"
-    :illustration="illustration"
   >
-    <div class="banner-btns">
-      <ODropdown trigger="click" option-position="bottom" class="banner-dropdown">
-        <OButton variant="solid" color="primary" class="banner-btn">
-          {{ t('nestos.downloadTitle') }}
-          <template #suffix>
-            <OIcon><IconChevronDown /></OIcon>
-          </template>
-        </OButton>
-        <template #dropdown>
-          <div class="dropdown-list">
-            <OButton
-              v-for="item in downloadLinks"
-              :key="item.href"
-              color="normal"
-              variant="text"
-              :href="item.href"
-              target="_blank"
-              class="dropdown-item"
-            >{{ item.text }}</OButton>
-          </div>
-        </template>
-      </ODropdown>
-    </div>
+    <OButton variant="solid" color="primary" size="large" href="https://atomgit.com/openeuler/NestOS" target="_blank" class="banner-btn">
+      {{ t('nestos.buttonTitle') }}
+      <template #suffix>
+        <OIcon><IconOutLink /></OIcon>
+      </template>
+    </OButton>
   </BannerLevel2>
 
   <!-- 移动端 banner -->
   <div v-else class="mo-banner">
     <p class="mo-title">{{ t('nestos.title') }}</p>
     <p class="mo-subtitle">{{ t('nestos.subtitle') }}</p>
+    <OButton variant="solid" color="primary" href="https://atomgit.com/openeuler/NestOS" target="_blank" class="banner-btn">
+      {{ t('nestos.buttonTitle') }}
+      <template #suffix>
+        <OIcon><IconOutLink /></OIcon>
+      </template>
+    </OButton>
   </div>
 
   <NestOSIntro />
   <NestOSVersion />
   <NestOSFeatures />
   <ClientOnly><NestOSPerformance /></ClientOnly>
-  <NestOSResources />
+  <NestOSResources id="resource" />
   <NestOSPartner />
 </template>
 
 <style scoped lang="scss">
 .nestos-banner {
+  background-color: transparent;
   :deep(.wrap) {
     height: 280px;
     .banner-text {
       max-width: 60%;
       .banner-title {
-        @include display2;
+        color: var(--o-color-black);
         font-weight: 500;
+        @include display2;
       }
       .banner-subtitle {
+        color: var(--o-color-black);
         margin-top: var(--o-gap-2);
         @include text2;
       }
     }
 
     @media screen and (max-width: 1680px) {
-      height: 240px;
+      height: 220px;
       .banner-text {
         .banner-title {
           font-size: 40px;
@@ -115,38 +90,16 @@ const downloadLinks = [
     }
 
     @media screen and (max-width: 1200px) {
-      height: 200px;
+      height: 180px;
+      .banner-text {
+        .banner-title {
+          @include display2;
+        }
+        .banner-subtitle {
+          @include text2;
+        }
+      }
     }
-  }
-}
-
-.banner-btns {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.banner-btn {
-  --btn-border-radius: 4px;
-}
-
-.dropdown-list {
-  display: flex;
-  flex-direction: column;
-  min-width: 200px;
-  padding: 4px 0;
-}
-
-.dropdown-item {
-  width: 100%;
-  justify-content: flex-start;
-  padding: 8px 16px;
-  border-radius: 0;
-
-  &:hover {
-    background-color: var(--o-color-fill2);
-    color: var(--o-color-primary1);
   }
 }
 
@@ -162,6 +115,12 @@ const downloadLinks = [
     color: var(--o-color-info2);
     margin-top: 8px;
     @include tip1;
+  }
+
+  .banner-btn {
+    --btn-height: 32px;
+    margin-top: 12px;
+    @include text1;
   }
 
   @include respond-to('phone') {

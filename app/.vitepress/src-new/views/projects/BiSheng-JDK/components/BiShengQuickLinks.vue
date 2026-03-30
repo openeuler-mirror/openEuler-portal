@@ -1,12 +1,15 @@
 <script lang="ts" setup>
+import { computed } from 'vue';
 import { ORow, OCol, OLink, OIcon } from '@opensig/opendesign';
 
 import AppSection from '~@/components/AppSection.vue';
 import { useLocale } from '~@/composables/useLocale';
+import { useScreen } from '~@/composables/useScreen';
 
-import IconOutLink from '~icons/app-new/icon-outlink.svg';
+import IconOutLink from '~icons/app-new/icon-outlink-new.svg';
 
 const { t } = useLocale();
+const { lePadV, lePad, leLaptop } = useScreen();
 
 const quickLinks = [
   {
@@ -42,15 +45,26 @@ const quickLinks = [
     ],
   },
 ];
+
+const gap = computed(() => {
+  if (lePadV.value) {
+    return '0 12px';
+  } else if (lePad.value) {
+    return '16px 0';
+  } else if (leLaptop.value) {
+    return '24px 0';
+  }
+  return '32px 0';
+})
 </script>
 
 <template>
   <AppSection>
-    <ORow gap="24px" wrap="wrap" class="quick-links">
+    <ORow :gap="gap" wrap="wrap" class="quick-links">
       <OCol
         v-for="(card, i) in quickLinks"
         :key="i"
-        flex="1 1 240px"
+        :flex="lePadV ? '1 1 100%' : '1 1 33.33%'"
       >
         <div class="ql-card">
           <p class="ql-title">{{ t(card.titleKey) }}</p>
@@ -77,72 +91,79 @@ const quickLinks = [
 </template>
 
 <style scoped lang="scss">
-.quick-links {
-  width: 100%;
+.app-section {
+  :deep(.section-wrapper) {
+    margin-top: 32px;
+  }
 }
 
 .ql-card {
   height: 100%;
-  min-height: 120px;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  padding: 24px 28px;
+  padding: 24px 32px 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .ql-title {
-  font-weight: 500;
+  font-weight: 600;
   color: var(--o-color-info1);
+  margin-bottom: 16px;
   @include h3;
 }
 
 .ql-actions {
-  margin-top: 16px;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 24px;
+  margin-top: auto;
 }
 
 .ql-link {
-  :deep(.o-link-label) {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
+  padding: 8px 0;
+  @include text1;
+}
+.ql-link + .ql-link {
+  margin-left: 16px;
 }
 
 .ql-icon {
-  --icon-size: 16px;
+  --icon-size: 24px;
+}
+
+@include respond-to('<=laptop') {
+  .ql-icon {
+    --icon-size: 16px;
+  }
 }
 
 @include respond-to('laptop') {
   .ql-card {
-    padding: 20px 24px;
-    min-height: 110px;
+    padding: 24px 24px 16px;
   }
 }
 
 @include respond-to('pad_h') {
   .ql-card {
-    padding: 16px 20px;
-    min-height: 100px;
+    padding: 16px 16px 8px;
   }
 }
 
 @include respond-to('<=pad_v') {
   .ql-card {
-    padding: 16px;
-    min-height: auto;
+    padding: 12px;
   }
 
   .ql-title {
+    margin-bottom: 8px;
     @include text2;
   }
-
-  .ql-actions {
-    margin-top: 12px;
+  .ql-link {
+    padding: 5px 0;
+  }
+  .o-link {
+    @include text2;
   }
 }
 </style>

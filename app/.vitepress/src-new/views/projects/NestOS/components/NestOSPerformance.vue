@@ -68,7 +68,7 @@ onMounted(() => {
     chartInstance = echarts.init(chartRef.value);
     chartInstance.setOption({
       title: {
-        text: 'NestOS For Container-容器性能测试',
+        text: '网口宽带占用率',
         textStyle: {
           fontSize: 14,
           fontWeight: 500,
@@ -80,8 +80,7 @@ onMounted(() => {
       },
       grid: {
         left: '2%',
-        right: '4%',
-        bottom: '15%',
+        right: '2%',
         containLabel: true,
       },
       legend: {
@@ -98,6 +97,7 @@ onMounted(() => {
         axisLabel: { color: labelColor },
       },
       yAxis: {
+        name: '占用率（%）',
         axisLine: { show: false },
         splitLine: { lineStyle: { color: borderColor, type: 'dashed' } },
         axisLabel: { color: labelColor },
@@ -123,13 +123,14 @@ onBeforeUnmount(() => {
     <div class="performance-card">
       <div ref="chartRef" class="performance-chart"></div>
       <p class="performance-note">
-        * Source: podman的测试结果源于（直播视频）
+        {{ t('nestos.performanceTips') }}
         <OLink
           :href="comparisionUrl"
           target="_blank"
           color="primary"
+          hover-underline
           class="performance-link"
-        >{{ t('nestos.performanceLinkText') }}</OLink>
+        >{{ t('nestos.performanceTipsText') }}</OLink>
       </p>
     </div>
   </AppSection>
@@ -145,27 +146,18 @@ onBeforeUnmount(() => {
 
 .performance-chart {
   width: 100%;
-  height: 360px;
+  height: 350px;
 }
 
 .performance-note {
   margin-top: 16px;
-  @include tip1;
   color: var(--o-color-info3);
-  font-weight: bold;
-}
-
-.performance-link {
-  margin-left: 4px;
+  @include tip2;
 }
 
 @include respond-to('laptop') {
   .performance-card {
     padding: 24px;
-  }
-
-  .performance-chart {
-    height: 320px;
   }
 }
 
@@ -173,19 +165,11 @@ onBeforeUnmount(() => {
   .performance-card {
     padding: 20px;
   }
-
-  .performance-chart {
-    height: 280px;
-  }
 }
 
 @include respond-to('<=pad_v') {
   .performance-card {
     padding: 16px;
-  }
-
-  .performance-chart {
-    height: 240px;
   }
 }
 </style>

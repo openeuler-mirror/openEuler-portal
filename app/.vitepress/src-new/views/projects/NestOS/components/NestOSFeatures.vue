@@ -1,8 +1,13 @@
 <script lang="ts" setup>
+import { computed } from 'vue';
+import { ORow, OCol, OCard } from '@opensig/opendesign';
+
 import AppSection from '~@/components/AppSection.vue';
 import { useLocale } from '~@/composables/useLocale';
+import { useScreen } from '~@/composables/useScreen';
 
 const { t } = useLocale();
+const { lePadV, lePad, leLaptop } = useScreen();
 
 const features = [
   {
@@ -36,110 +41,69 @@ const features = [
     slug: 'x2nestos',
   },
 ];
+
+const gap = computed(() => {
+  if (lePadV.value) {
+    return '0 12px';
+  } else if (lePad.value) {
+    return '16px 16px';
+  } else if (leLaptop.value) {
+    return '24px 24px';
+  }
+  return '32px 32px';
+})
 </script>
 
 <template>
   <AppSection id="features" :title="t('nestos.featuresTitle')">
-    <div class="features-grid">
-      <a
-        v-for="(feature, i) in features"
-        :key="i"
-        :href="`/zh/other/projects/nestos/feature/${feature.slug}/`"
-        class="feature-card"
-      >
-        <p class="feature-title">{{ t(feature.titleKey) }}</p>
-        <p class="feature-desc">{{ t(feature.descKey) }}</p>
-      </a>
-    </div>
+    <ORow :gap="gap" wrap="wrap">
+      <OCol v-for="(item, i) in features" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 50%'">
+        <OCard hoverable :href="`/zh/other/projects/nestos/feature/${item.slug}/`" target="_blank">
+          <p class="feature-title">{{ t(item.titleKey) }}</p>
+          <p class="feature-desc">{{ t(item.descKey) }}</p>
+        </OCard>
+      </OCol>
+    </ORow>
   </AppSection>
 </template>
 
 <style scoped lang="scss">
-.features-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-}
-
-.feature-card {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 24px 32px;
-  background-color: var(--o-color-fill2);
-  border-radius: 4px;
-  text-decoration: none;
-  transition: box-shadow 0.2s;
-
-  &:hover {
-    box-shadow: var(--o-shadow-2);
-
+.o-card {
+  --card-main-padding: 24px 32px;
+  @include hover {
     .feature-title {
       color: var(--o-color-primary1);
     }
   }
 }
-
 .feature-title {
-  font-size: 22px;
   font-weight: 600;
-  line-height: 30px;
   color: var(--o-color-info1);
-  transition: color 0.2s;
+  @include h3;
 }
 
 .feature-desc {
-  font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
   color: var(--o-color-info3);
+  margin-top: 8px;
+  @include text1;
 }
 
 @include respond-to('laptop') {
-  .features-grid {
-    gap: 24px;
-  }
-
-  .feature-card {
-    padding: 20px 24px;
-  }
-
-  .feature-title {
-    font-size: 20px;
-    line-height: 28px;
+  .o-card {
+    --card-main-padding: 24px;
   }
 }
 
 @include respond-to('pad_h') {
-  .feature-card {
-    padding: 18px 20px;
-  }
-
-  .feature-title {
-    font-size: 18px;
-    line-height: 26px;
+  .o-card {
+    --card-main-padding: 16px;
   }
 }
 
 @include respond-to('<=pad_v') {
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .feature-card {
-    padding: 16px 20px;
-  }
-
-  .feature-title {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .feature-desc {
-    font-size: 14px;
-    line-height: 22px;
+  .o-card {
+    --card-main-padding: 16px;
   }
 }
 </style>

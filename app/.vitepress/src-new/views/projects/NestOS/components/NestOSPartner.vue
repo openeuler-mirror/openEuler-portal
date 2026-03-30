@@ -1,18 +1,21 @@
 <script lang="ts" setup>
-import { ORow, OCol } from '@opensig/opendesign';
+import {  computed } from 'vue';
+import { ORow, OCol, OCard, OFigure } from '@opensig/opendesign';
 
 import AppSection from '~@/components/AppSection.vue';
 import { useLocale } from '~@/composables/useLocale';
+import { useScreen } from '~@/composables/useScreen';
 
-import KylinosLogo from '@/assets/nestos/partner/kylinos.png';
+import qiling from '~@/assets/category/nestos/qiling.png';
 import SkysolidissLogo from '@/assets/nestos/partner/skysolidiss.jpg';
 
 const { t } = useLocale();
+const { lePadV, lePad, leLaptop } = useScreen();
 
 const partners = [
   {
     name: 'KylinOS',
-    logo: KylinosLogo,
+    logo: qiling,
     href: 'https://www.kylinos.cn/',
   },
   {
@@ -21,27 +24,40 @@ const partners = [
     href: 'https://www.skysolidiss.com.cn/',
   },
 ];
+
+const gap = computed(() => {
+  if (lePadV.value) {
+    return '12px 0';
+  } else if (lePad.value) {
+    return '16px 0';
+  } else if (leLaptop.value) {
+    return '24px 0';
+  }
+  return '32px 0';
+})
+const flexWidth = computed(() => {
+  if (lePadV.value) {
+    return '0 0 50%';
+  } else if (lePad.value) {
+    return '0 0 33.33%';
+  } else if (leLaptop.value) {
+    return '0 0 25%';
+  }
+  return '0 0 20%';
+})
 </script>
 
 <template>
   <AppSection :title="t('nestos.partnersTitle')">
-    <ORow gap="24px" wrap="wrap" class="partners-row">
+    <ORow :gap="gap" wrap="wrap" justify="center" class="partners-row">
       <OCol
         v-for="(partner, i) in partners"
         :key="i"
-        flex="0 0 auto"
+        :flex="flexWidth"
       >
-        <a
-          :href="partner.href"
-          target="_blank"
-          class="partner-card"
-        >
-          <img
-            :src="partner.logo"
-            :alt="partner.name"
-            class="partner-logo"
-          />
-        </a>
+        <OCard>
+          <OFigure :src="partner.logo" :class="partner.name" />
+        </OCard>
       </OCol>
     </ORow>
   </AppSection>
@@ -52,42 +68,20 @@ const partners = [
   width: 100%;
 }
 
-.partner-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 180px;
-  height: 80px;
-  background-color: var(--o-color-fill2);
-  border-radius: var(--o-radius-xs);
-  padding: 16px 24px;
-  text-decoration: none;
-  transition: box-shadow 0.2s, transform 0.2s;
-  border: 1px solid var(--o-color-control4);
-
-  &:hover {
-    box-shadow: var(--o-shadow-1);
-    transform: translateY(-2px);
+.o-card {
+  --card-main-padding: 10px;
+  :deep(.o-card-main-wrap) {
+    justify-content: center;
+    align-items: center;
   }
 }
-
-.partner-logo {
-  max-width: 100%;
-  max-height: 48px;
-  object-fit: contain;
-  filter: grayscale(0.2);
-  transition: filter 0.2s;
-
-  .partner-card:hover & {
-    filter: grayscale(0);
-  }
+.Skysolidiss {
+  height: 45px;
 }
 
-@include respond-to('<=pad_v') {
-  .partner-card {
-    width: 140px;
-    height: 64px;
-    padding: 12px 16px;
+@include respond-to('phone') {
+  .Skysolidiss {
+    height: 28px;
   }
 }
 </style>

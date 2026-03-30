@@ -28,74 +28,64 @@ const infoList = [
 </template>
 
 <style scoped lang="scss">
+.app-section {
+  :deep(.section-wrapper) {
+    margin-top: 40px;
+  }
+}
 .intro-card {
   width: 100%;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  padding: 32px;
+  padding: 40px 32px;
   color: var(--o-color-info1);
   @include text2;
 }
 
-.intro-desc {
-  @include text2;
-  line-height: 1.75;
-
-  & + .intro-desc {
-    margin-top: 12px;
-  }
-}
-
 .info-label {
-  margin-top: 20px;
-  @include text2;
+  margin-top: 12px;
   font-weight: 500;
+  @include text2;
 }
 
 .info-list {
-  margin-top: 8px;
+  margin-top: 12px;
   padding-left: 20px;
   list-style: disc;
 }
 
 .info-item {
-  @include text2;
-  line-height: 1.75;
   color: var(--o-color-info1);
-
-  & + .info-item {
-    margin-top: 4px;
-  }
 }
 
 @include respond-to('laptop') {
   .intro-card {
-    padding: 24px;
+    padding: 32px 24px;
   }
 }
 
 @include respond-to('pad_h') {
   .intro-card {
-    padding: 20px;
+    padding: 24px 16px;
   }
 }
 
 @include respond-to('<=pad_v') {
+  .app-section {
+    :deep(.section-wrapper) {
+      margin-top: 32px;
+    }
+  }
   .intro-card {
-    padding: 16px;
-  }
-
-  .intro-desc {
+    padding: 12px;
     @include text1;
   }
-
-  .info-label {
-    margin-top: 16px;
-    @include text1;
-  }
-
-  .info-item {
-    @include text1;
+}
+@include respond-to('phone') {
+  .app-section {
+    :deep(.section-wrapper) {
+      margin-top: 16px;
+    }
   }
 }
 </style>

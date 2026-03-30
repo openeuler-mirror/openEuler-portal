@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { OTab, OTabPane } from '@opensig/opendesign';
+import { OTab, OTabPane, OFigure } from '@opensig/opendesign';
 
 import AppSection from '~@/components/AppSection.vue';
 import { useLocale } from '~@/composables/useLocale';
 
-import archImg from '@/assets/nestos/architecture.png';
+import archImg from '~@/assets/category/nestos/architecture.png';
 
 const { t } = useLocale();
 </script>
@@ -15,9 +15,7 @@ const { t } = useLocale();
       <OTabPane value="container" :label="t('nestos.nfcTitle')">
         <div class="arch-content">
           <p class="arch-desc">{{ t('nestos.nfcDesc') }}</p>
-          <div class="arch-img-wrapper">
-            <img :src="archImg" alt="NestOS Architecture" class="arch-img" />
-          </div>
+          <OFigure :src="archImg" class="arch-img"></OFigure>
         </div>
       </OTabPane>
       <OTabPane value="virt" :label="t('nestos.nfvTitle')">
@@ -40,39 +38,35 @@ const { t } = useLocale();
 .arch-content {
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  padding: 32px;
+  padding: 40px 32px;
 }
 
 .arch-desc {
-  @include text2;
   color: var(--o-color-info2);
-  line-height: 1.75;
-  margin-bottom: 24px;
+  @include text2;
 }
-
-.arch-img-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .arch-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: var(--o-radius-xs);
+  max-width: 1125px;
+  --figure-radius: var(--o-radius-xs);
+  margin: 32px auto 0;
+  display: flex;
 }
 
 @include respond-to('laptop') {
   .arch-content {
-    padding: 24px;
+    padding: 32px 24px;
+  }
+  .arch-img {
+    margin: 24px auto 0;
   }
 }
 
 @include respond-to('pad_h') {
   .arch-content {
-    padding: 20px;
+    padding: 16px;
+  }
+  .arch-img {
+    margin: 16px auto 0;
   }
 }
 
@@ -83,7 +77,9 @@ const { t } = useLocale();
 
   .arch-desc {
     @include text1;
-    margin-bottom: 16px;
+  }
+  .arch-img {
+    margin: 12px auto 0;
   }
 }
 </style>

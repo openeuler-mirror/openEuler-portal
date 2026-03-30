@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { OButton, OIcon, ODropdown } from '@opensig/opendesign';
+import { OButton, OIcon, ODropdown, ODropdownItem, OLink } from '@opensig/opendesign';
 
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import BiShengIntro from './components/BiShengIntro.vue';
@@ -11,8 +11,7 @@ import BiShengLinks from './components/BiShengLinks.vue';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
-import banner from '@/assets/banner/banner-minisite.png';
-import illustration from '@/assets/illustrations/minisite/bisheng.png';
+import banner from '~@/assets/category/projects/project-banner.jpg';
 
 import IconChevronDown from '~icons/app-new/icon-chevron-down.svg';
 
@@ -41,10 +40,9 @@ const feedbackLinks = [
     :title="t('bishengJdk.title')"
     :subtitle="t('bishengJdk.subtitle')"
     :background-image="banner"
-    :illustration="illustration"
   >
     <div class="banner-btns">
-      <ODropdown trigger="click" option-position="bottom" class="banner-dropdown">
+      <ODropdown trigger="hover" option-position="bottom" class="banner-dropdown">
         <OButton variant="solid" color="primary" class="banner-btn">
           {{ t('bishengJdk.startJourney') }}
           <template #suffix>
@@ -52,38 +50,22 @@ const feedbackLinks = [
           </template>
         </OButton>
         <template #dropdown>
-          <div class="dropdown-list">
-            <OButton
-              v-for="item in journeyLinks"
-              :key="item.href"
-              color="normal"
-              variant="text"
-              :href="item.href"
-              target="_blank"
-              class="dropdown-item"
-            >{{ t(item.text) }}</OButton>
-          </div>
+          <ODropdownItem v-for="item in journeyLinks" :key="item.href" class="dropdown-item">
+            <OLink :href="item.href" target="_blank">{{ t(item.text) }}</OLink>
+          </ODropdownItem>
         </template>
       </ODropdown>
-      <ODropdown trigger="click" option-position="bottom" class="banner-dropdown">
-        <OButton variant="outline" color="primary" class="banner-btn banner-btn-outline">
+      <ODropdown trigger="hover" option-position="bottom" class="banner-dropdown">
+        <OButton variant="outline" color="primary" class="banner-btn">
           {{ t('bishengJdk.feedbackTitle') }}
           <template #suffix>
             <OIcon><IconChevronDown /></OIcon>
           </template>
         </OButton>
         <template #dropdown>
-          <div class="dropdown-list">
-            <OButton
-              v-for="item in feedbackLinks"
-              :key="item.href"
-              color="normal"
-              variant="text"
-              :href="item.href"
-              target="_blank"
-              class="dropdown-item"
-            >{{ t(item.text) }}</OButton>
-          </div>
+          <ODropdownItem v-for="item in feedbackLinks" :key="item.href" class="dropdown-item">
+            <OLink :href="item.href" target="_blank">{{ t(item.text) }}</OLink>
+          </ODropdownItem>
         </template>
       </ODropdown>
     </div>
@@ -93,6 +75,34 @@ const feedbackLinks = [
   <div v-else class="mo-banner">
     <p class="mo-title">{{ t('bishengJdk.title') }}</p>
     <p class="mo-subtitle">{{ t('bishengJdk.subtitle') }}</p>
+    <div class="banner-btns">
+      <ODropdown trigger="click" option-position="bottom" class="banner-dropdown">
+        <OButton variant="solid" color="primary" class="banner-btn">
+          {{ t('bishengJdk.startJourney') }}
+          <template #suffix>
+            <OIcon><IconChevronDown /></OIcon>
+          </template>
+        </OButton>
+        <template #dropdown>
+          <ODropdownItem v-for="item in journeyLinks" :key="item.href" class="dropdown-item">
+            <OLink :href="item.href" target="_blank">{{ t(item.text) }}</OLink>
+          </ODropdownItem>
+        </template>
+      </ODropdown>
+      <ODropdown trigger="click" option-position="bottom" class="banner-dropdown">
+        <OButton variant="outline" color="primary" class="banner-btn">
+          {{ t('bishengJdk.feedbackTitle') }}
+          <template #suffix>
+            <OIcon><IconChevronDown /></OIcon>
+          </template>
+        </OButton>
+        <template #dropdown>
+          <ODropdownItem v-for="item in feedbackLinks" :key="item.href" class="dropdown-item">
+            <OLink :href="item.href" target="_blank">{{ t(item.text) }}</OLink>
+          </ODropdownItem>
+        </template>
+      </ODropdown>
+    </div>
   </div>
 
   <BiShengIntro />
@@ -104,22 +114,25 @@ const feedbackLinks = [
 
 <style scoped lang="scss">
 .bisheng-banner {
+  background-color: transparent;
   :deep(.wrap) {
     height: 280px;
     .banner-text {
       max-width: 60%;
       .banner-title {
-        @include display2;
+        color: var(--o-color-black);
         font-weight: 500;
+        @include display2;
       }
       .banner-subtitle {
+        color: var(--o-color-black);
         margin-top: var(--o-gap-2);
         @include text2;
       }
     }
 
     @media screen and (max-width: 1680px) {
-      height: 240px;
+      height: 220px;
       .banner-text {
         .banner-title {
           font-size: 40px;
@@ -133,7 +146,15 @@ const feedbackLinks = [
     }
 
     @media screen and (max-width: 1200px) {
-      height: 200px;
+      height: 180px;
+      .banner-text {
+        .banner-title {
+          @include display2;
+        }
+        .banner-subtitle {
+          @include text2;
+        }
+      }
     }
   }
 }
@@ -141,44 +162,33 @@ const feedbackLinks = [
 .banner-btns {
   display: flex;
   align-items: center;
-  gap: 16px;
   flex-wrap: wrap;
 }
 
 .banner-btn {
   --btn-border-radius: 4px;
+  --btn-padding: 0 23px;
+  --btn-height: 40px;
+  @include text1;
+}
+.o-dropdown + .o-dropdown {
+  margin-left: 16px;
 }
 
-.banner-btn-outline {
-  border-color: var(--o-color-white) !important;
-  color: var(--o-color-white) !important;
+.o-dropdown-item {
+  background: var(--o-color-fill2);
+  cursor: pointer;
+  --dropdown-item-radius: var(--o-radius-xs);
+  --dropdown-item-justify: flex-start;
+  --dropdown-item-padding: 0;
 
-  :deep(.o-btn-label) {
-    color: var(--o-color-white);
-  }
-
-  :deep(.o-btn-suffix) {
-    color: var(--o-color-white);
-  }
-}
-
-.dropdown-list {
-  display: flex;
-  flex-direction: column;
-  min-width: 160px;
-  padding: 4px 0;
-}
-
-.dropdown-item {
-  width: 100%;
-  justify-content: flex-start;
-  padding: 8px 16px;
-  border-radius: 0;
-
-  &:hover {
-    background-color: var(--o-color-fill2);
+  @include hover {
     color: var(--o-color-primary1);
+    background: var(--o-color-control2-light);
   }
+}
+.o-link {
+  padding: 8px 12px;
 }
 
 .mo-banner {
@@ -202,6 +212,29 @@ const feedbackLinks = [
     .mo-subtitle {
       @include text1;
     }
+  }
+}
+
+@include respond-to('<=pad_v') {
+  .banner-btn {
+    --btn-padding: 0 15px;
+    --btn-height: 32px;
+    @include text1;
+  }
+  .o-dropdown {
+    margin-top: 12px;
+  }
+  .o-dropdown + .o-dropdown {
+    margin-left: 12px;
+  }
+}
+@include respond-to('phone') {
+  .banner-btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .o-dropdown + .o-dropdown {
+    margin-left: 0;
   }
 }
 </style>

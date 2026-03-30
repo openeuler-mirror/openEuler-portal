@@ -1,6 +1,7 @@
 export default {
   title: 'NestOS',
   subtitle: '基于欧拉开源操作系统的云底座操作系统',
+  buttonTitle: '开始NestOS之旅',
 
   // Banner 操作按钮
   downloadTitle: '获取 NestOS 资源',
@@ -14,8 +15,8 @@ export default {
     '目前 NestOS-24.03-LTS 版本已发布，欢迎大家下载体验，或者有什么想对 NestOS 说的，可以提 Issue 反馈。',
   introDesc2Pre: '目前 NestOS-24.03-LTS 版本已发布，欢迎大家',
   introDesc2Link1: '下载体验',
-  introDesc2Mid: '，或者有什么想对 NestOS 说的，可以',
-  introDesc2Link2: '提 Issue 反馈',
+  introDesc2Mid: '，或者有什么',
+  introDesc2Link2: '说给NestOS听',
   introDesc2Post: '。',
   moreInfo: '更多信息：',
   infoLicense: 'License：采用 Mulan PSL v2 协议。',
@@ -60,6 +61,8 @@ export default {
   // 性能对比
   performanceTitle: '性能对比',
   performanceLinkText: '查看性能测试详情',
+  performanceTips: '*Docker、podman的测试数据详见>>',
+  performanceTipsText: '[ 性能对比 ]',
 
   // 资源下载
   resourcesTitle: '资源',

@@ -1,6 +1,7 @@
 export default {
   title: 'NestOS',
   subtitle: 'A cloud-foundation operating system based on openEuler',
+  buttonTitle: 'Start NestOS',
 
   // Banner buttons
   downloadTitle: 'Get NestOS Resources',
@@ -60,6 +61,8 @@ export default {
   // Performance Comparison
   performanceTitle: 'Performance Comparison',
   performanceLinkText: 'View Performance Test Details',
+  performanceTips: '*Docker、podman的测试数据详见>> ',
+  performanceTipsText: '[ 性能对比 ]',
 
   // Resources
   resourcesTitle: 'Resources',

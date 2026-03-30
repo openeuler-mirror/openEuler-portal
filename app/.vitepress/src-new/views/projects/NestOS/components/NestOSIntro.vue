@@ -5,6 +5,14 @@ import AppSection from '~@/components/AppSection.vue';
 import { useLocale } from '~@/composables/useLocale';
 
 const { t } = useLocale();
+
+const handleScroll = () => {
+  document.querySelector('#resource')?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+    inline: 'nearest',
+  });
+};
 </script>
 
 <template>
@@ -12,39 +20,44 @@ const { t } = useLocale();
     <div class="intro-card">
       <p class="intro-desc">{{ t('nestos.introDesc1') }}</p>
       <p class="intro-desc">
-        {{ t('nestos.introDesc2Pre') }}<OLink
-          href="https://nestos.org.cn/"
-          target="_blank"
+        {{ t('nestos.introDesc2Pre') }}
+        <OLink
           color="primary"
           class="intro-link"
-        >{{ t('nestos.introDesc2Link1') }}</OLink>{{ t('nestos.introDesc2Mid') }}<OLink
-          href="https://gitee.com/openeuler/NestOS/issues"
+          hover-underline
+          @click="handleScroll"
+        >{{ t('nestos.introDesc2Link1') }}</OLink>
+        {{ t('nestos.introDesc2Mid') }}
+        <OLink
+          href="https://atomgit.com/openeuler/NestOS/issues"
           target="_blank"
           color="primary"
+          hover-underline
           class="intro-link"
-        >{{ t('nestos.introDesc2Link2') }}</OLink>{{ t('nestos.introDesc2Post') }}
+        >{{ t('nestos.introDesc2Link2') }}</OLink>
+        {{ t('nestos.introDesc2Post') }}
       </p>
     </div>
   </AppSection>
 </template>
 
 <style scoped lang="scss">
+.app-section {
+  :deep(.section-wrapper) {
+    margin-top: 40px;
+  }
+}
 .intro-card {
   width: 100%;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  padding: 32px;
+  padding: 40px 32px;
   color: var(--o-color-info1);
 }
 
 .intro-desc {
+  color: var(--o-color-info1);
   @include text2;
-  line-height: 1.75;
-  color: var(--o-color-info2);
-
-  & + .intro-desc {
-    margin-top: 12px;
-  }
 }
 
 .intro-link {
@@ -66,6 +79,11 @@ const { t } = useLocale();
 }
 
 @include respond-to('<=pad_v') {
+  .app-section {
+    :deep(.section-wrapper) {
+      margin-top: 32px;
+    }
+  }
   .intro-card {
     padding: 16px;
   }
