@@ -15622,5 +15622,221 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "广州广哈通信股份有限公司",
+    "os_version": "GhtEulerOS_V1-update.img",
+    "arch": "aarch64",
+    "checksum": "e3d4a7c81c0480813c991f4b0e0aad2e",
+    "base_openeuler_version": "openEuler Embedded 24.03 LTS",
+    "os_download_link": " https://www.ghtchina.com/show_list.php?id=75",
+    "friendly_link": " https://www.ghtchina.com",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2026/03/31",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "北京星辰天合科技股份有限公司",
+    "os_version": "XSKYOS-Linux-2506-x86_64-dvd.iso",
+    "arch": "x86_64",
+    "checksum": "1d4638e035d9181b70342d7d5e658006",
+    "base_openeuler_version": "openEuler 22.03 LTS SP4",
+    "os_download_link": "https://download.xsky.com/XSKYOS/2506/XSKYOS-Linux-2506-x86_64-dvd.iso",
+    "friendly_link": "https://www.xsky.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2026/03/31",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "北京星辰天合科技股份有限公司",
+    "os_version": "XSKYOS-Linux-2506-aarch64-dvd.iso",
+    "arch": "aarch64",
+    "checksum": "9e13c0e5a02c80df592706217e9f3d0d",
+    "base_openeuler_version": "openEuler 22.03 LTS SP4",
+    "os_download_link": "https://download.xsky.com/XSKYOS/2506/XSKYOS-Linux-2506-aarch64-dvd.iso",
+    "friendly_link": "https://www.xsky.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2026/03/31",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 ]
