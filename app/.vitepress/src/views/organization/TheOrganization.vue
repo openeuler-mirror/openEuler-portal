@@ -87,7 +87,9 @@ const organizationData: any = computed(() => {
       </h2>
       <div class="council-list">
         <OrganizationGuests
-          :lecturer-list="groupInfo.list"
+          v-for="(item, idx) in (Array.isArray(groupInfo.list[0]) ? groupInfo.list : [groupInfo.list])"
+          :key="idx"
+          :lecturer-list="item"
           shape="circle"
           :web-columns-num="6"
           :mobile-columns-num="2"
