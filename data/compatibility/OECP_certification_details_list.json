@@ -4465,7 +4465,7 @@
   },
   {
     "osv_name": "华为云计算技术有限公司",
-    "os_version": "HCE-2.0-x86_64-dvd.iso",
+    "os_version": "华为云欧拉操作系统 V2",
     "arch": "x86_64",
     "checksum": "6034f469dc9194143ee349101a770c92",
     "base_openeuler_version": "openEuler 22.03 LTS",
@@ -7993,7 +7993,7 @@
   },
   {
     "osv_name": "华为云计算技术有限公司",
-    "os_version": "HCE-2.0-aarch64-dvd.iso",
+    "os_version": "华为云欧拉操作系统 V2",
     "arch": "aarch64",
     "checksum": "1b2533c1b9c077c3a0941b873ab3d7b1",
     "base_openeuler_version": "openEuler 22.03 LTS",
@@ -13537,7 +13537,7 @@
   },
   {
     "osv_name": "华为云计算技术有限公司",
-    "os_version": "HCE-3.0-aarch64-dvd.iso",
+    "os_version": "华为云欧拉操作系统 V3",
     "arch": "aarch64",
     "checksum": "1a4b5fbd179b2b308f22319cbfbcd799",
     "base_openeuler_version": "openEuler 24.03 LTS SP1",
@@ -13609,7 +13609,7 @@
   },
   {
     "osv_name": "华为云计算技术有限公司",
-    "os_version": "HCE-3.0-x86_64-dvd.iso",
+    "os_version": "华为云欧拉操作系统 V3",
     "arch": "x86_64",
     "checksum": "caaeff2b0149f3b854e98885bc565f35",
     "base_openeuler_version": "openEuler 24.03 LTS SP1",
@@ -15409,7 +15409,7 @@
   },
   {
     "osv_name": "麒麟软件有限公司",
-    "os_version": "Kylin-Server-V11-2503-Release-General-20250715-X86_64.iso",
+    "os_version": "银河麒麟高级服务器操作系统 V11",
     "arch": "x86_64",
     "checksum": "6f583bc68f264586d6fc219c57261289",
     "base_openeuler_version": "openEuler 24.03 LTS SP1",
@@ -15481,7 +15481,7 @@
   },
   {
     "osv_name": "麒麟软件有限公司",
-    "os_version": "Kylin-Server-V11-2503-Release-General-20250715-ARM64.iso",
+    "os_version": "银河麒麟高级服务器操作系统 V11",
     "arch": "aarch64",
     "checksum": "854dd620425ebd718437688889db5096",
     "base_openeuler_version": "openEuler 24.03 LTS SP1",
