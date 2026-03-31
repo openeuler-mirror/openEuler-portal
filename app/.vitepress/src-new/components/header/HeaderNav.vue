@@ -175,6 +175,7 @@ const onClickShortCutLink = (item: any) => {
                             >
                               <NavLink
                                 :url="shortcut.URL"
+                                :is-blank="shortcut.isBlank"
                                 @link-click="linkClick"
                                 class="shortcut-link"
                                 v-analytics.bubble="

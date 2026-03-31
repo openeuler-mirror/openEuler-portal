@@ -13,6 +13,12 @@ const props = defineProps({
       return '';
     },
   },
+  isBlank: {
+    type: Boolean,
+    default() {
+      return false;
+    },
+  }
 });
 
 const downloadStore = useDownload();
@@ -47,7 +53,7 @@ const getDownloadQuery = (url: string) => {
 
 <template>
   <a
-    v-if="isExternal()"
+    v-if="isExternal() || isBlank"
     :href="url"
     target="_blank"
     class="link"

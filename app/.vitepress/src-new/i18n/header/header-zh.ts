@@ -94,7 +94,8 @@ export default {
         },
         {
           NAME: '版本生命周期',
-          URL: '/other/lifecycle/',
+          URL: '/zh/other/lifecycle/',
+          isBlank: true,
         },
         {
           NAME: '24.03 LTS SP3安装指南',

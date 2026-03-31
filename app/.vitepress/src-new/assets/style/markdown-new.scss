@@ -1,0 +1,137 @@
+@use './mixin/screen.scss' as *;
+@use './mixin/font.scss' as *;
+@use './mixin/common.scss' as *;
+
+.markdown-new {
+  color: var(--o-color-info1);
+
+  & > *:first-child {
+    margin-top: 0 !important;
+  }
+  ol,
+  ul {
+    list-style: inherit;
+  }
+
+  a {
+    word-break: break-all;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--o-color-info1);
+    font-weight: normal;
+  }
+
+  hr {
+    margin: 24px 0;
+    border: none;
+    height: 1px;
+    background-color: rgb(var(--o-gray-5));
+    @include respond-to('phone') {
+      margin: 24px 0;
+    }
+  }
+
+  h1 {
+    margin: 48px 0 16px;
+    @include h2;
+    @include respond-to('phone') {
+      margin: 24px 0 8px;
+    }
+  }
+
+  h2 {
+    margin: 48px 0 16px;
+    @include h2;
+    @include respond-to('phone') {
+      margin: 24px 0 8px;
+    }
+  }
+
+  h3 {
+    margin: 48px 0 16px;
+    @include h3;
+
+    @include respond-to('phone') {
+      margin: 24px 0 8px;
+    }
+  }
+
+  h4 {
+    margin: 32px 0 16px;
+    @include h4;
+    @media screen and (max-width: 768px) {
+      margin: 24px 0 8px;
+    }
+    @include respond-to('phone') {
+      margin: 24px 0 8px;
+    }
+  }
+
+  h5 {
+    margin-top: 24px;
+    @include text1;
+  }
+  p + p {
+    margin-top: 12px;
+  }
+  p,
+  ul,
+  ol,
+  li,
+  div {
+    font-weight: normal;
+    word-break: break-word;
+    color: var(--o-color-info2);
+    @include text1;
+  }
+
+  ul,
+  ol {
+    padding-left: 1em;
+
+    li {
+      margin: 12px 0;
+      &::marker {
+        color: var(--o-color-info1);
+      }
+      @include respond-to('<=pad_v') {
+        margin: 8px 0;
+      }
+    }
+  }
+  ul + p {
+    margin-bottom: 12px;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+}
+
+.dark .markdown img {
+  filter: brightness(80%) grayscale(20%) contrast(1.2);
+}
+
+@include in-dark {
+  .markdown img {
+    @include img-in-dark;
+  }
+}
+.md-content {
+  padding: 40px 56px;
+  @include respond-to('laptop') {
+    padding: 24px 56px;
+  }
+  @include respond-to('pad') {
+    padding: 16px 40px;
+  }
+  @include respond-to('phone') {
+    padding: 12px 24px;
+  }
+}

@@ -85,7 +85,8 @@ export default {
         },
         {
           NAME: 'openEuler Lifecycle',
-          URL: '/other/lifecycle/',
+          URL: '/en/other/lifecycle/',
+          isBlank: true,
         },
         {
           NAME: 'openEuler 24.03 LTS SP3 Installation Guide',
