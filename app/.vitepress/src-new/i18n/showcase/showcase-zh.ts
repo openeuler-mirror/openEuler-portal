@@ -1,0 +1,18 @@
+export default {
+  title: '用户案例',
+  tips: '展示各行业用户在自身业务场景中使用openEuler操作系统和openEuler社区中各技术项目的案例以及所带来的积极效果。欢迎投稿至',
+  type: '案例类别',
+  all: '全部',
+  finance: '金融',
+  carrier: '运营商',
+  energy: '能源',
+  logistics: '物流',
+  education: '高校&科研',
+  cloudComputing: '云计算',
+  other: '其他',
+  placeholder: '搜索用户案例',
+  find1: '发现',
+  find2: '个案例研究',
+  downloadCase: '下载 《openEuler 开源操作系统行业应用案例集》',
+  view: '阅读案例',
+};
