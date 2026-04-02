@@ -11,7 +11,8 @@ head:
 ---
 
 <script setup lang="ts">
-    import TheNestOS from '@/views/nestos/TheNestOS.vue'
+    // import TheNestOS from '@/views/nestos/TheNestOS.vue'
+    import TheNestOS from '~@/views/projects/NestOS/TheNestOS.vue'
 </script>
 
 <TheNestOS />

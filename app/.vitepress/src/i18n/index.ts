@@ -6,7 +6,6 @@ import brand from './brand';
 import common from './common';
 import mooc from './learn';
 import atune from './minisite/atune';
-import bisheng from './minisite/bisheng';
 import isula from './minisite/isula';
 import secgear from './minisite/secgear';
 import stratovirt from './minisite/stratovirt';
@@ -27,7 +26,6 @@ import university from './university';
 import cookie from './cookie';
 import migration from './migration';
 import faq from './faq';
-import nestos from './nestos';
 
 const i18n: { [key: string]: any } = {
   zh: {
@@ -36,7 +34,6 @@ const i18n: { [key: string]: any } = {
     common: common.zh,
     mooc: mooc.zh,
     atune: atune.zh,
-    bisheng: bisheng.zh,
     isula: isula.zh,
     secgear: secgear.zh,
     stratovirt: stratovirt.zh,
@@ -57,14 +54,12 @@ const i18n: { [key: string]: any } = {
     cookie: cookie.zh,
     migration: migration.zh,
     faq: faq.zh,
-    nestos: nestos.zh,
   },
   en: {
     sig: sig.en,
     brand: brand.en,
     common: common.en,
     atune: atune.en,
-    bisheng: bisheng.en,
     isula: isula.en,
     secgear: secgear.en,
     stratovirt: stratovirt.en,
