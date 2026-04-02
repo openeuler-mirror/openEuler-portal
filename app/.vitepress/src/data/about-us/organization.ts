@@ -12,6 +12,7 @@ import zhongxin from '@/assets/category/organization/zhongxin.png';
 import xiongwei from '@/assets/category/organization/xiongwei.png';
 import huzhengce from '@/assets/category/organization/huzhengce.png';
 import yuli from '@/assets/category/organization/yuli.png';
+import liufei from '@/assets/category/organization/liufei.png';
 
 // 技术委员会
 import huxinwei from '@/assets/category/organization/technical/huxinwei.png';
@@ -60,6 +61,7 @@ import wendan from '@/assets/category/organization/brand/wendan.png';
 import humingyue from '@/assets/category/organization/brand/humingyu.png';
 import pengyaying from '@/assets/category/organization/brand/pengyaying.png';
 import xuyanli from '@/assets/category/organization/brand/xuyanli.png';
+import liwei from '@/assets/category/organization/brand/liwei.png';
 
 // 用户委员会
 import gaohonghe from '@/assets/category/organization/user/gaohonghe.png';
@@ -288,8 +290,8 @@ export default {
             title: '执行总监',
             personalList: [
               {
-                img: huzhengce,
-                name: '胡正策',
+                img: liufei,
+                name: '刘飞',
                 position: ['华为技术有限公司'],
               },
             ],
@@ -522,6 +524,12 @@ export default {
             email: 'Ming.yue.hu@intel.com',
           },
           {
+            img: liwei,
+            name: '李伟',
+            position: ['委员'],
+            email: 'allenli@hygon.cn',
+          },
+          {
             img: lizhenning,
             name: '李震宁',
             position: ['委员'],
@@ -615,6 +623,12 @@ export default {
             name: '李荣青',
             position: ['委员'],
             email: 'lirongqing@baidu.com',
+          },
+          {
+            img: liwei,
+            name: '李伟',
+            position: ['委员'],
+            email: 'allenli@hygon.cn',
           },
           {
             img: rongtao,
@@ -760,11 +774,16 @@ export default {
       {
         title: 'openEuler 全球化工作组',
         list: [
-          { img: zhounan, name: '周楠', position: ['组长'] },
-          { img: caijuanyang, name: '蔡镌洋', position: ['组员'] },
-          { img: lichengpeng_globalization, name: '李成鹏', position: ['组员'] },
-          { img: liumingjie_globalization, name: '刘明杰', position: ['组员'] },
-          { img: renzidong, name: '任紫东', position: ['组员'] },
+          [
+            { img: zhounan, name: '周楠', position: ['组长'] },
+            { img: caijuanyang, name: '蔡镌洋', position: ['组员'] },
+            { img: lichengpeng_globalization, name: '李成鹏', position: ['组员'] },
+            { img: liumingjie_globalization, name: '刘明杰', position: ['组员'] },
+            { img: renzidong, name: '任紫东', position: ['组员'] },
+          ],
+          [
+            { img: huzhengce, name: '胡正策', position: ['开源欧拉全球生态官'] },
+          ]
         ],
       },
     ],
@@ -924,8 +943,8 @@ export default {
             title: 'Executive Director',
             personalList: [
               {
-                img: huzhengce,
-                name: 'Hu Zhengce',
+                img: liufei,
+                name: 'Liu Fei',
                 position: ['Huawei Technologies Co., Ltd.'],
               },
             ],
@@ -1158,6 +1177,12 @@ export default {
             email: 'Ming.yue.hu@intel.com',
           },
           {
+            img: liwei,
+            name: 'Li Wei',
+            position: ['Committee member'],
+            email: 'allenli@hygon.cn',
+          },
+          {
             img: lizhenning,
             name: 'Li Zhenning',
             position: ['Committee member'],
@@ -1251,6 +1276,12 @@ export default {
             name: 'Li Rongqing',
             position: ['Committee member'],
             email: 'lirongqing@baidu.com',
+          },
+          {
+            img: liwei,
+            name: 'Li Wei',
+            position: ['Committee member'],
+            email: 'allenli@hygon.cn',
           },
           {
             img: rongtao,
@@ -1396,11 +1427,16 @@ export default {
       {
         title: 'openEuler Globalization Working Group',
         list: [
-          { img: zhounan, name: 'Zhou Nan', position: ['Lead'] },
-          { img: caijuanyang, name: 'Cai Juanyang', position: ['Member'] },
-          { img: lichengpeng_globalization, name: 'Li Chengpeng', position: ['Member'] },
-          { img: liumingjie_globalization, name: 'Liu Mingjie', position: ['Member'] },
-          { img: renzidong, name: 'Ren Zidong', position: ['Member'] },
+          [
+            { img: zhounan, name: 'Zhou Nan', position: ['Lead'] },
+            { img: caijuanyang, name: 'Cai Juanyang', position: ['Member'] },
+            { img: lichengpeng_globalization, name: 'Li Chengpeng', position: ['Member'] },
+            { img: liumingjie_globalization, name: 'Liu Mingjie', position: ['Member'] },
+            { img: renzidong, name: 'Ren Zidong', position: ['Member'] },
+          ],
+          [
+            { img: huzhengce, name: 'Hu Zhengce', position: ['openEuler Global Advocate'] },
+          ]
         ],
       },
     ],

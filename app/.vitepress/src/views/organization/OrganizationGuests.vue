@@ -123,6 +123,13 @@ onMounted(() => {
     }
   }
 }
+.council-lis + .council-lis {
+  margin-top: 32px;
+
+  @media (max-width: 780px) {
+    margin-top: 16px;
+  }
+}
 .council-lis {
   width: 100%;
   display: grid;
