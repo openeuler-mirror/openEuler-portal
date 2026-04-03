@@ -26,6 +26,22 @@ const sigDetailPageAddTitleAndJSONLD = async (pageData: PageData) => {
   ]);
 }
 
+import { readFileSync, existsSync } from 'fs';
+import { resolve } from 'path';
+
+function readEnvVar(key: string): string | undefined {
+  const envFile = resolve(process.cwd(), '.env.production');
+  if (!existsSync(envFile)) return undefined;
+  const match = readFileSync(envFile, 'utf-8').match(
+    new RegExp(`^${key}\\s*=\\s*(.+)$`, 'm')
+  );
+  return match ? match[1].trim() : undefined;
+}
+
+const sitemapHostname =
+  readEnvVar('VITE_MAIN_DOMAIN_URL') || 'https://www.openeuler.org';
+
+
 const config: UserConfig = {
   sitemap: {
     hostname: 'https://www.openeuler.org',
@@ -71,6 +87,9 @@ const config: UserConfig = {
         },
       }
     ),
+    hostname: sitemapHostname,
+    transformItems: (items) =>
+      items.filter((item) => !item.url.startsWith('/en/approve')),
   },
   lastUpdated: true,
   base: '/',
