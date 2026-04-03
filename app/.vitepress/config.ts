@@ -5,9 +5,11 @@ import LLMsTxtSections from './LLMsTxtSections';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import viteLastModifiedPlugin from './plugins/lastModifiedPlugin';
+import { readFileSync } from 'node:fs';
+import sitemapItemTransformer from './sitemap-items-transformer';
 
 const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
-
 
 const JSONLD_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'sigs-jsonld');
 /**
@@ -27,8 +29,48 @@ const sigDetailPageAddTitleAndJSONLD = async (pageData: PageData) => {
 const config: UserConfig = {
   sitemap: {
     hostname: 'https://www.openeuler.org',
-    transformItems: (items) =>
-      items.filter((item) => !item.url.startsWith('/en/approve')),
+    transformItems: sitemapItemTransformer(
+      items => {
+        try {
+          const lastmodeTimeStamp = JSON.parse(readFileSync('./last-modified.json', 'utf-8')) as Record<string, number>;
+          for (const item of items) {
+            const key = item.url.endsWith('.html') ? item.url.replace('.html', '.md') : (item.url.endsWith('/') ? `${item.url}index.md` : `${item.url}/index.md`);
+            const timestamp = lastmodeTimeStamp[key];
+            if (timestamp) {
+              item.lastmod = timestamp;
+            }
+          }
+        } catch {}
+        return items;
+      },
+      {
+        // 首页
+        '^(zh/|en/)?$': { priority: 1.0 },
+        // 核心功能页：下载、镜像
+        '^(zh|en)/(download|mirror)/?$': { priority: 0.8 },
+        'zh/sig/sig-list/': { priority: 0.8 },
+        'en/sig/sig-list/': { priority: 0.8 },
+        // 核心功能页：迁移子页面
+        '^(zh|en)/migration/(download|background|guidance|advantage|user-cases|transplantation-cases)/?$': {
+          priority: 0.8
+        },
+        // 列表页（高频更新）
+        '^(zh|en)/interaction/(blog-list|news-list|event-list)/?$': {
+          priority: 0.8
+        },
+        // 重要栏目首页
+        '^(zh|en)/(community|sig|security|learn|compatibility|internship|migration|other/projects)/?': {
+          priority: 0.8
+        },
+        // 单篇文章：blog / news / showcase
+        '^(zh|en)/(news|showcase)/.+': {
+          priority: 0.6
+        },
+        '^(zh|en)/(blog)/.+': {
+          priority: 0.5
+        },
+      }
+    ),
   },
   lastUpdated: true,
   base: '/',
@@ -150,6 +192,10 @@ const config: UserConfig = {
   cleanUrls: true,
   vite: {
     plugins: [
+      viteLastModifiedPlugin({
+        ignore: ['**/blog/**', '**/news/**'],
+        ignoreDeps: ['**/shared/**', '**/utils/**', '**/composables/**', '**/i18n/**', '**/assets/**']
+      }),
       viteLlmsTxt({
         title: 'openEuler | 开源社区',
         description: 'openEuler是一个开源、免费的 Linux 发行版平台，通过开放的形式与全球的开发者共同构建一个开放、多元和架构包容的软件生态体系。',

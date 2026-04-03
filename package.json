@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev app",
-    "build": "vitepress build app",
+    "build": "git fetch --unshallow && vitepress build app",
     "lint": "eslint \"app/.vitepress/src/**/*.{js,ts,vue,jsx,tsx}\"",
     "fix": "eslint --fix \"app/.vitepress/src/**/*.{js,ts,vue,jsx,tsx}\"",
     "preview": "vitepress preview app",
@@ -60,6 +60,8 @@
     "glob": "^11.0.2",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "minimatch": "^10.2.5",
+    "p-limit": "^7.3.0",
     "prettier": "^2.7.1",
     "sass": "^1.79.3",
     "turndown": "^7.2.2",
