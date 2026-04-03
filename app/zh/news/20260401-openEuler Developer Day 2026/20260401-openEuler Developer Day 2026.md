@@ -9,4 +9,4 @@ author: 'openEuler'
 summary: 'openEuler Developer Day 2026 定档 4月25日·长沙'
 ---
 
-![alt text](image.png)
+![alt text](image.jpg)
