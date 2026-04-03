@@ -1,13 +1,17 @@
 import type { HeadConfig, PageData, UserConfig } from 'vitepress';
+
 import tdks from './tdks';
+
 import { buildLlmsFullTxt, viteLlmsTxt } from './plugins/generateLLMsTxtNew';
 import LLMsTxtSections from './LLMsTxtSections';
+import viteLastModifiedPlugin from './plugins/lastModifiedPlugin';
+import sitemapItemTransformer from './sitemap-items-transformer';
+
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
+import { existsSync, readFileSync} from 'node:fs';
+import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import viteLastModifiedPlugin from './plugins/lastModifiedPlugin';
-import { readFileSync } from 'node:fs';
-import sitemapItemTransformer from './sitemap-items-transformer';
 
 const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
 
@@ -26,8 +30,6 @@ const sigDetailPageAddTitleAndJSONLD = async (pageData: PageData) => {
   ]);
 }
 
-import { readFileSync, existsSync } from 'fs';
-import { resolve } from 'path';
 
 function readEnvVar(key: string): string | undefined {
   const envFile = resolve(process.cwd(), '.env.production');
@@ -44,7 +46,7 @@ const sitemapHostname =
 
 const config: UserConfig = {
   sitemap: {
-    hostname: 'https://www.openeuler.org',
+    hostname: sitemapHostname,
     transformItems: sitemapItemTransformer(
       items => {
         try {
@@ -87,9 +89,6 @@ const config: UserConfig = {
         },
       }
     ),
-    hostname: sitemapHostname,
-    transformItems: (items) =>
-      items.filter((item) => !item.url.startsWith('/en/approve')),
   },
   lastUpdated: true,
   base: '/',
