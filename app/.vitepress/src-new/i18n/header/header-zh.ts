@@ -3,7 +3,7 @@ import { markRaw } from 'vue';
 import Summit from '~@/assets/category/header/summit.jpg';
 import SummitDark from '~@/assets/category/header/summit-dark.jpg';
 
-import Odd from '~@/assets/category/header/odd.png';
+import Odd from '~@/assets/category/header/odd.jpg';
 
 import IconOutLink from '~icons/app/icon-out-link.svg';
 import IconArrowRight from '~icons/app-new/icon-header-next.svg';
@@ -560,7 +560,7 @@ export default {
             {
               NAME: '峰会',
               DESCRIPTION: '查看openEuler年度大会详情',
-              URL: '/interaction/summit-list/summit2025/',
+              URL: '/interaction/summit-list/devday2026/',
             },
             {
               NAME: 'openEuler Call for X计划',
@@ -592,6 +592,15 @@ export default {
       ],
       SHORTCUT: [
         {
+          NAME: 'openEuler Developer Day 2026',
+          PICTURE: Odd,
+          DESCRIPTION:
+            'openEuler Developer Day 2026 （简称 ODD 2026）是开放原子开源基金会孵化及运营的 openEuler 社区发起的开发者大会。',
+          REMARK: '时间：2026/04/25 | 长沙',
+          TYPE: 'PICTURE',
+          URL: '/interaction/summit-list/devday2026/',
+        },
+        {
           NAME: '操作系统大会 & openEuler Summit 2025',
           PICTURE: Summit,
           PICTURE_PARK: SummitDark,
@@ -600,15 +609,6 @@ export default {
           REMARK: '时间：2025/11/14 - 2025/11/15 | 北京',
           TYPE: 'PICTURE',
           URL: '/interaction/summit-list/summit2025/',
-        },
-        {
-          NAME: 'openEuler Developer Day 2025',
-          PICTURE: Odd,
-          DESCRIPTION:
-            'openEuler Developer Day 2025 （简称 ODD 2025）是开放原子开源基金会孵化及运营的 openEuler 社区发起的开发者大会。',
-          REMARK: '时间：2025/04/11 | 杭州',
-          TYPE: 'PICTURE',
-          URL: '/interaction/summit-list/devday2025/',
         },
       ],
     },

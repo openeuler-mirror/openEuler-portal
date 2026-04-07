@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "#cms": [
+        "./.cms/export/index.ts"
+      ]
+    }
+  }
+}

@@ -1,0 +1,264 @@
+[
+  {
+    "id": "gXDGnHHHTaTIctAXEdEVW",
+    "contentTypeUid": "api::devday2026.devday2026",
+    "attributes": {
+      "floor": [
+        {
+          "id": "introduction",
+          "title": "活动简介",
+          "description": [
+            "openEuler Developer Day 2026（ODD 2026）是开放原子开源基金会孵化及运营的 openEuler 社区发起的年度开发者大会。\n在 AI、算力与多样性架构全面加速的时代，操作系统正跃升为技术创新核心引擎与生态基石。大会聚焦 AI 时代操作系统创新，展示社区最新AI技术成果与行业实践，SIG Gathering上围绕未来 LTS 及创新版本规划凝聚技术共识，协同版本路线与联合创新。",
+            "秉承 “我参与，我做主” 的开源精神，openEuler Developer Day 2026 开启全面征集，欢迎广大开发者、单位组织申报，共筑软件根基，共创属于开发者的 openEuler 时代。"
+          ]
+        },
+        {
+          "id": "SIG-Gathering",
+          "title": "Call for : SIG Gathering",
+          "card_list": [
+            {
+              "title": "Kernel&基础服务",
+              "description": [
+                "本专题聚焦 openEuler 内核及周边基础库，围绕竞争力与稳定性提升、上游社区贡献、CVE 高效响应、多样性算力平台支持 四大方向展开深入探讨，旨在持续提升内核的健壮性、安全性与生态适配能力，为上层应用提供坚实底座。"
+              ],
+              "label": "申报议题",
+              "url": "https://etherpad.openeuler.org/p/ODD26-SIG-Kernel",
+              "bg_light": {
+                "id": "card_bg2_light.png",
+                "name": "card_bg2_light.png",
+                "url": ".cms/content/devday2026/media/card_bg2_light.png",
+                "mime": "image/png",
+                "size": 12135,
+                "previewUri": "https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/Administrator/Desktop/atomgit/openEuler-portal/.cms/content/devday2026/media/card_bg2_light.png"
+              }
+            },
+            {
+              "title": "AI生态支持&技术创新",
+              "description": [
+                "openEuler 作为基础设施中间层，面向通用算力与智能算力多样化进行使能。本专题聚焦 AI 生态工具的适配集成与 AI Infra 技术创新，共同构建开放、高效的 AI 基础软件栈。"
+              ],
+              "label": "申报议题",
+              "url": "https://etherpad.openeuler.org/p/ODD26-SIG-AIEco",
+              "bg_light": {
+                "id": "card_bg2_light.png",
+                "name": "card_bg2_light.png",
+                "url": ".cms/content/devday2026/media/card_bg2_light.png",
+                "mime": "image/png",
+                "size": 12135,
+                "previewUri": "https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/Administrator/Desktop/atomgit/openEuler-portal/.cms/content/devday2026/media/card_bg2_light.png"
+              }
+            },
+            {
+              "title": "超节点技术创新",
+              "description": [
+                "面向超节点场景，聚焦硬件使能、中间件与应用创新，围绕内存统一编址、设备池化管理、异构资源融合、全局资源视图等技术特点，充分释放超节点算力潜能。"
+              ],
+              "label": "申报议题",
+              "url": "https://etherpad.openeuler.org/p/ODD26-SIG-SuperNode",
+              "bg_light": {
+                "id": "card_bg2_light.png",
+                "name": "card_bg2_light.png",
+                "url": ".cms/content/devday2026/media/card_bg2_light.png",
+                "mime": "image/png",
+                "size": 12135,
+                "previewUri": "https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/Administrator/Desktop/atomgit/openEuler-portal/.cms/content/devday2026/media/card_bg2_light.png"
+              }
+            },
+            {
+              "title": "全场景&Agent Infra",
+              "description": [
+                "探讨openEuler在云原生、大数据、数据库等领域的技术生态满足度提升、技术创新、领域Top开源社区集成和联合创新等相关内容，为全场景领域开发者和用户提供极致体验；探索AI Agent时代的安全沙箱等技术创新，打造可靠的Agent基础设施。"
+              ],
+              "label": "申报议题",
+              "url": "https://etherpad.openeuler.org/p/ODD26-SIG-CloudNativeAgent",
+              "bg_light": {
+                "id": "card_bg2_light.png",
+                "name": "card_bg2_light.png",
+                "url": ".cms/content/devday2026/media/card_bg2_light.png",
+                "mime": "image/png",
+                "size": 12135,
+                "previewUri": "https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/Administrator/Desktop/atomgit/openEuler-portal/.cms/content/devday2026/media/card_bg2_light.png"
+              }
+            },
+            {
+              "title": "具身智能&嵌入式",
+              "description": [
+                "面向新型工业自动化与具身智能场景，聚焦嵌入式核心技术（MICA、UniProton、嵌入式虚拟化）的演进，探索实时性与智能化融合的技术创新。"
+              ],
+              "label": "申报议题",
+              "url": "https://etherpad.openeuler.org/p/ODD26-SIG-Embedded",
+              "bg_light": {
+                "id": "card_bg2_light.png",
+                "name": "card_bg2_light.png",
+                "url": ".cms/content/devday2026/media/card_bg2_light.png",
+                "mime": "image/png",
+                "size": 12135,
+                "previewUri": "https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/Administrator/Desktop/atomgit/openEuler-portal/.cms/content/devday2026/media/card_bg2_light.png"
+              }
+            },
+            {
+              "title": "AI时代高效开发与生态包管理",
+              "description": [
+                "面向 AI 时代开发者，围绕社区基础设施、构建测试服务、工具链，优化“基于 openEuler 做开发”的体验，并探讨软件包管理流程与技术改进。"
+              ],
+              "label": "申报议题",
+              "url": "https://etherpad.openeuler.org/p/ODD26-SIG-DevPackage",
+              "bg_light": {
+                "id": "card_bg2_light.png",
+                "name": "card_bg2_light.png",
+                "url": ".cms/content/devday2026/media/card_bg2_light.png",
+                "mime": "image/png",
+                "size": 12135,
+                "previewUri": "https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/Administrator/Desktop/atomgit/openEuler-portal/.cms/content/devday2026/media/card_bg2_light.png"
+              }
+            },
+            {
+              "title": "AI使能安全与漏洞处理",
+              "description": [
+                "围绕 openEuler 社区安全技术与流程，探讨 CVE 修复的工具链、最佳实践，以及 AI 技术在漏洞感知、分析与修复中的应用。"
+              ],
+              "label": "申报议题",
+              "url": "https://etherpad.openeuler.org/p/ODD26-SIG-AISecurity",
+              "bg_light": {
+                "id": "card_bg2_light.png",
+                "name": "card_bg2_light.png",
+                "url": ".cms/content/devday2026/media/card_bg2_light.png",
+                "mime": "image/png",
+                "size": 12135,
+                "previewUri": "https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/Administrator/Desktop/atomgit/openEuler-portal/.cms/content/devday2026/media/card_bg2_light.png"
+              }
+            },
+            {
+              "title": "RISC-V ",
+              "description": [
+                "探讨 openEuler 在 RISC-V 架构上的最新进展、应用案例与发展方向，持续提升多样性算力支持能力，推动 RISC-V 生态繁荣。"
+              ],
+              "label": "申报议题",
+              "url": "https://etherpad.openeuler.org/p/ODD26-SIG-RISC-V",
+              "bg_light": {
+                "id": "card_bg2_light.png",
+                "name": "card_bg2_light.png",
+                "url": ".cms/content/devday2026/media/card_bg2_light.png",
+                "mime": "image/png",
+                "size": 12135,
+                "previewUri": "https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/Administrator/Desktop/atomgit/openEuler-portal/.cms/content/devday2026/media/card_bg2_light.png"
+              }
+            }
+          ]
+        },
+        {
+          "id": "Demo-Showcase",
+          "title": "Call for : Demo Showcase",
+          "card_list": [
+            {
+              "title": "Call for : Demo Showcase",
+              "description": [
+                "本次Demo Showcase公开招募多个可上手体验的openEuler 技术实践，集中亮相，聚焦“技术落地+深度交流”，让每一个展示都成为社区共创的鲜活成果。"
+              ],
+              "time": "截止时间：4月10日18:00",
+              "label": "申报入口",
+              "url": "https://openeuler.feishu.cn/share/base/form/shrcnvNuJnC6wJyzwxb7DaVknNe",
+              "bg_light": {
+                "id": "card_bg2_light.png",
+                "name": "card_bg2_light.png",
+                "url": ".cms/content/devday2026/media/card_bg2_light.png",
+                "mime": "image/png",
+                "size": 12135,
+                "previewUri": "https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/Administrator/Desktop/atomgit/openEuler-portal/.cms/content/devday2026/media/card_bg2_light.png"
+              }
+            }
+          ]
+        },
+        {
+          "title": "Call for : Poster Session",
+          "id": "Poster-Session",
+          "card_list": [
+            {
+              "title": "Call for : Poster Session",
+              "description": [
+                "把你的硬核技术，摆满整个技术交流区\n为深化 Developer Day 技术沉淀，推动成果从“讲台”走向“交流区”，我们正式启动 Poster Session 征集啦！",
+                "让技术成果全程发光、深度落地！"
+              ],
+              "time": "截止时间：4月10日18:00",
+              "label": "申报入口",
+              "url": "https://openeuler.feishu.cn/share/base/form/shrcncPzHt1XJ87KayGrz35lYeW",
+              "bg_light": {
+                "id": "card_bg2_light.png",
+                "name": "card_bg2_light.png",
+                "url": ".cms/content/devday2026/media/card_bg2_light.png",
+                "mime": "image/png",
+                "size": 12135,
+                "previewUri": "https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/Administrator/Desktop/atomgit/openEuler-portal/.cms/content/devday2026/media/card_bg2_light.png"
+              }
+            }
+          ]
+        },
+        {
+          "title": "Call for :  合作伙伴",
+          "id": "partner",
+          "description": [],
+          "card_list": [
+            {
+              "description": [
+                "社区希望与更多同频伙伴一起把大会共建为属于openEuler开发者的聚乐部。现面向开源社区、产学研组织、科技媒体等公开招募合作伙伴，联动宣发、共享曝光，让更多关注openEuler开发者相聚现场。"
+              ],
+              "label": "申报入口",
+              "time": "截止时间：4月10日18:00",
+              "title": "Call for :  合作伙伴",
+              "url": "https://openeuler.feishu.cn/share/base/form/shrcnxtHfcGhwtoxWcgbeUREyde",
+              "bg_light": {
+                "id": "card_bg2_light.png",
+                "name": "card_bg2_light.png",
+                "url": ".cms/content/devday2026/media/card_bg2_light.png",
+                "mime": "image/png",
+                "size": 12135,
+                "previewUri": "https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/Administrator/Desktop/atomgit/openEuler-portal/.cms/content/devday2026/media/card_bg2_light.png"
+              }
+            }
+          ]
+        },
+        {
+          "title": "精彩回顾",
+          "id": "summit-review",
+          "links": [
+            {
+              "label": "openEuler Summit 2025",
+              "url": "/zh/interaction/summit-list/summit2025/"
+            },
+            {
+              "label": "openEuler Developer Day 2025",
+              "url": "/zh/interaction/summit-list/devday2025/"
+            },
+            {
+              "label": "操作系统大会 & openEuler Summit 2024",
+              "url": "/zh/interaction/summit-list/summit2024/"
+            },
+            {
+              "label": "openEuler SIG Gathering 2024",
+              "url": "/zh/interaction/summit-list/sig-gathering-2024/"
+            },
+            {
+              "url": "/zh/interaction/summit-list/summit2023/",
+              "label": "openEuler Summit 2023"
+            },
+            {
+              "url": "/zh/interaction/summit-list/devday2023/",
+              "label": "openEuler Developer Day 2023"
+            },
+            {
+              "url": "/zh/interaction/summit-list/summit2022/",
+              "label": "openEuler Summit 2022"
+            },
+            {
+              "url": "/zh/interaction/summit-list/summit2022-changsha/",
+              "label": "湖南欧拉操作系统生态大会"
+            }
+          ]
+        }
+      ]
+    },
+    "createdAt": "2026-04-03T07:47:00.682Z",
+    "updatedAt": "2026-04-07T08:14:32.689Z",
+    "publishedAt": "2026-04-03T07:47:02.712Z"
+  }
+]
