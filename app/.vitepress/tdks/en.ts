@@ -1228,6 +1228,538 @@ const tdks: {
       'Discover how to set up openEuler on WSL, connect via remote desktop, and utilize user-contributed packages.',
     keywords: 'openEuler, WSL, Linux, Windows, operating system',
   },
+  "en/talent-assessment": {
+    title: "openEuler Talent Certification & Ecosystem Jobs",
+    description: "openEuler talent certification (OECA/OECP) is jointly operated by the Open Atom Foundation and openEuler Education SIG. Explore ecosystem job opportunities from partners like Kylinsec, Linx Software, and more."
+  },
+  "en/projects": {
+    title: "Open Source Projects from openEuler Community | openEuler",
+    description: "Explore innovative open source projects from openEuler, including Intelligence BooM, A-Tune, iSula, secGear, and UB components for modern OS ecosystems."
+  },
+  "en/sig/xfce.html": {
+    title: "XFCE SIG | openEuler",
+    description: "The XFCE SIG brings lightweight desktop environment support to openEuler, maintaining XFCE packages and delivering fast, resource-efficient computing for users."
+  },
+  "en/sig/Virt.html": {
+    title: "Virt SIG | openEuler",
+    description: "openEuler Virt SIG drives virtualization innovation for diverse computing scenarios, maintaining packages, guiding tech decisions, and supporting users across all workloads."
+  },
+  "en/sig/user-committee.html": {
+    title: "User-Committee SIG | openEuler",
+    description: "The User-Committee SIG collects end-user feedback for openEuler, bridging users and developers to ensure community needs are heard and accepted."
+  },
+  "en/sig/TC.html": {
+    title: "TC SIG | openEuler",
+    description: "The openEuler Technical Committee (TC) is the governing body for technical decisions, SIG oversight, and community resource coordination in the openEuler project."
+  },
+  "en/sig/System-tool.html": {
+    title: "System-Tool SIG | openEuler",
+    description: "The System-Tool SIG integrates system management tools into openEuler, improves OS efficiency, enables cross-architecture software, and contributes upstream."
+  },
+  "en/sig/Storage.html": {
+    title: "Storage SIG | openEuler",
+    description: "The Storage SIG maintains storage components for openEuler, resolves issues, and builds a competitive storage ecosystem with tools like mdadm and btrfs."
+  },
+  "en/sig/sig-Zephyr.html": {
+    title: "Zephyr SIG | openEuler",
+    description: "Zephyr SIG bridges openEuler and Zephyr communities, promoting IoT embedded platform development, real-time microcontroller support, and open-source collaboration in China."
+  },
+  "en/sig/sig-YuanRong.html": {
+    title: "sig-YuanRong SIG | openEuler",
+    description: "sig-YuanRong drives LingQu Serverless distributed computing engine evolution in openEuler, enabling simplified function programming and efficient scheduling."
+  },
+  "en/sig/sig-WayCa.html": {
+    title: "WayCa SIG | openEuler",
+    description: "WayCa SIG enables Kunpeng hardware on openEuler, covering high-speed networking, accelerators, debugging tools, fault handling, and power management."
+  },
+  "en/sig/sig-UnifiedBus.html": {
+    title: "sig-UnifiedBus SIG | openEuler",
+    description: "sig-UnifiedBus maintains the openEuler UnifiedBus component, handling architecture review, feature design, development, testing, vulnerability fixes, and technical training."
+  },
+  "en/sig/sig-UKUI.html": {
+    title: "UKUI SIG | openEuler",
+    description: "UKUI SIG maintains a lightweight Linux desktop for openEuler, designed for Windows users. Covers UKUI package planning, maintenance, and community support."
+  },
+  "en/sig/sig-UB-ServiceCore.html": {
+    title: "sig-UB-ServiceCore SIG | openEuler",
+    description: "sig-UB-ServiceCore drives UB LingQu super-node high-level OS services, covering architecture review, development, API governance, and developer enablement."
+  },
+  "en/sig/sig-Talent-and-Service.html": {
+    title: "sig-Talent-and-Service SIG | openEuler",
+    description: "The openEuler Talent and Service SIG focuses on building talent capability frameworks and service capability standards for the openEuler community ecosystem."
+  },
+  "en/sig/sig-sw-arch.html": {
+    title: "sw-arch SIG | openEuler",
+    description: "The sw-arch SIG adds Shenwei architecture support to openEuler, handling porting, adaptation, optimization, and package maintenance for the SW platform."
+  },
+  "en/sig/sig-Space.html": {
+    title: "sig-Space SIG | openEuler",
+    description: "openEuler SIG for space and low-altitude computing: real-time OS, reliable BSP, embedded AI for satellites, drones, and eVTOL platforms."
+  },
+  "en/sig/sig-security-facility.html": {
+    title: "sig-security-facility SIG | openEuler",
+    description: "Enables Linux security features for openEuler, providing security tools, libraries, SELinux, TPM2, OpenSSL, and infrastructure to enhance system security."
+  },
+  "en/sig/sig-SDS.html": {
+    title: "sig-SDS SIG | openEuler",
+    description: "sig-SDS drives high-quality distributed storage for openEuler, optimizing Ceph, Lustre & OpenZFS on ARM with an upstream-first approach."
+  },
+  "en/sig/sig-sbom.html": {
+    title: "SBOM SIG | openEuler",
+    description: "openEuler SBOM SIG builds software supply chain security, enables SBOM disclosure, and drives open-source compliance standards for the community."
+  },
+  "en/sig/sig-SBC.html": {
+    title: "SBC SIG | openEuler",
+    description: "openEuler SBC SIG adapts openEuler for single-board computers like Raspberry Pi and Rockchip, maintaining kernel sources, build scripts, and official images."
+  },
+  "en/sig/sig-ruby.html": {
+    title: "Ruby SIG | openEuler",
+    description: "The openEuler Ruby SIG maintains Ruby packages, converts rubygems to RPM, enriches the Ruby ecosystem, and contributes upstream."
+  },
+  "en/sig/sig-ROS.html": {
+    title: "ROS SIG | openEuler",
+    description: "openEuler ROS SIG integrates ROS and ROS2 support into openEuler, porting components across releases and providing documentation and user support."
+  },
+  "en/sig/sig-RISC-V.html": {
+    title: "RISC-V SIG | openEuler",
+    description: "openEuler RISC-V SIG delivers the openEuler RISC-V port, offering package builds, system guides, and resources for developers on RISC-V architecture."
+  },
+  "en/sig/sig-release-management.html": {
+    title: "sig-release-management SIG | openEuler",
+    description: "Coordinates openEuler release cycles, approves technical integrations, manages package collections, and oversees software delivery conditions for end users."
+  },
+  "en/sig/sig-recycle.html": {
+    title: "sig-recycle SIG | openEuler",
+    description: "A placeholder SIG for packages not maintained in openEuler. The Technical Committee regularly reviews package status and determines next steps."
+  },
+  "en/sig/sig-QT.html": {
+    title: "QT SIG | openEuler",
+    description: "The QT SIG ports Qt6 components to openEuler, maintains and upgrades Qt packages, and provides timely support for user feedback and issues."
+  },
+  "en/sig/sig-QA.html": {
+    title: "QA SIG | openEuler",
+    description: "openEuler QA SIG ensures community quality through open-source testing tools, release standards, and collaborative test open day events for developers."
+  },
+  "en/sig/sig-python-modules.html": {
+    title: "sig-python-modules SIG | openEuler",
+    description: "The sig-python-modules SIG manages Python module packages for openEuler, including automation-generated libraries for web, storage, and data tools."
+  },
+  "en/sig/sig-power-efficient.html": {
+    title: "sig-power-efficient SIG | openEuler",
+    description: "Improving server energy efficiency via OS tuning. Provides unified Power APIs, CPU frequency scaling, core isolation, and disk/NIC power management."
+  },
+  "en/sig/sig-porting-platform-winapp.html": {
+    title: "Porting Platform WinApp SIG | openEuler",
+    description: "Porting Platform WinApp SIG drives Windows application migration on openEuler, maintaining tools like vs2qt to streamline app porting workflows."
+  },
+  "en/sig/sig-perl-modules.html": {
+    title: "sig-perl-modules SIG | openEuler",
+    description: "The sig-perl-modules SIG manages all Perl modules automatically generated for openEuler, providing SPEC templates and maintaining module quality."
+  },
+  "en/sig/sig-OSCourse.html": {
+    title: "sig-OSCourse SIG | openEuler",
+    description: "openEuler OSCourse SIG provides free OS course materials—textbooks, slides, and training content—for researchers, students, and open-source contributors worldwide."
+  },
+  "en/sig/sig-OS-Builder.html": {
+    title: "sig-OS-Builder SIG | openEuler",
+    description: "sig-OS-Builder maintains openEuler's ISO build, installation, and upgrade toolchain, including bootloaders, anaconda, dnf, and custom ISO solutions."
+  },
+  "en/sig/sig-ops.html": {
+    title: "sig-Ops SIG | openEuler",
+    description: "sig-Ops SIG drives system operation automation, visualization, and hot patch technology for high-reliability, uninterrupted open source OS infrastructure."
+  },
+  "en/sig/sig-openstack.html": {
+    title: "sig-openstack SIG | openEuler",
+    description: "The openEuler OpenStack SIG maintains and enhances OpenStack support on openEuler, enabling cloud infrastructure deployment and collaboration for developers."
+  },
+  "en/sig/sig-OpenDesign.html": {
+    title: "OpenDesign SIG | openEuler",
+    description: "OpenDesign SIG builds design systems, UI component libraries, and frontend tools for openEuler and open source communities to improve developer experience."
+  },
+  "en/sig/sig-OceanBase.html": {
+    title: "sig-OceanBase SIG | openEuler",
+    description: "OceanBase SIG integrates the open-source distributed relational database by Ant Group into openEuler, enabling high availability and linear scalability via Paxos."
+  },
+  "en/sig/sig-nodejs.html": {
+    title: "Node.js SIG | openEuler",
+    description: "The Node.js SIG maintains and upgrades Node.js packages on openEuler, enriches the ecosystem, and develops npm-to-rpm conversion tools."
+  },
+  "en/sig/sig-minzuchess.html": {
+    title: "sig-minzuchess SIG | openEuler",
+    description: "Preserving ethnic minority chess as intangible cultural heritage through digital means, collecting samples and developing AI programs on openEuler."
+  },
+  "en/sig/sig-Migration.html": {
+    title: "Migration SIG | openEuler",
+    description: "Migration SIG provides compatibility tools and solutions to simplify migration to openEuler OS and domestic hardware for enterprise users."
+  },
+  "en/sig/sig-message-middleware.html": {
+    title: "sig-message-middleware SIG | openEuler",
+    description: "openEuler SIG for message middleware: maintains RocketMQ, Kafka, RabbitMQ, Pulsar, and incubates cloud-native middleware solutions on openEuler."
+  },
+  "en/sig/sig-memsafety.html": {
+    title: "memsafety SIG | openEuler",
+    description: "openEuler's memsafety SIG focuses on memory safety using Rust, maintaining projects like utsudo, utshell, curl-rust, and other Rust-rewritten system libraries."
+  },
+  "en/sig/sig-MCP-Tools-Ecosystem.html": {
+    title: "MCP Tools Ecosystem SIG | openEuler",
+    description: "Modernizing system commands into intelligent, service-oriented interfaces on openEuler, enabling AI-ready tool ecosystems for cloud-native and ops automation."
+  },
+  "en/sig/sig-mate-desktop.html": {
+    title: "mate-desktop SIG | openEuler",
+    description: "The mate-desktop SIG maintains the MATE desktop environment on openEuler, a GNOME2 continuation offering an intuitive, GTK3-based desktop with 42 components."
+  },
+  "en/sig/sig-LoongArch.html": {
+    title: "LoongArch SIG | openEuler",
+    description: "The LoongArch SIG advances openEuler support for LoongArch architecture, syncing toolchain, kernel, VM, and core libraries with upstream releases."
+  },
+  "en/sig/sig-Long.html": {
+    title: "sig-Long SIG | openEuler",
+    description: "Explore heterogeneous computing fusion on openEuler. sig-Long builds unified infrastructure for diverse hardware, resource scheduling, and elastic migration."
+  },
+  "en/sig/sig-KIRAN-DESKTOP.html": {
+    title: "KIRAN-DESKTOP SIG | openEuler",
+    description: "Maintains Kiran Desktop Environment projects for openEuler, delivering an attractive, user-friendly Linux desktop OS as an officially supported server desktop."
+  },
+  "en/sig/sig-KDE.html": {
+    title: "sig-KDE SIG | openEuler",
+    description: "The openEuler sig-KDE SIG maintains the KDE desktop environment for Linux, FreeBSD, and Unix, including KDE Frameworks 5 and related graphical components."
+  },
+  "en/sig/sig-K8sDistro.html": {
+    title: "sig-K8sDistro SIG | openEuler",
+    description: "openEuler K8sDistro SIG adapts and maintains Kubernetes distributions including KubeSphere, OKD, NestOS, and NKD, simplifying cloud-native adoption on openEuler."
+  },
+  "en/sig/sig-Java.html": {
+    title: "sig-Java SIG | openEuler",
+    description: "openEuler Java SIG integrates Maven, Tomcat, Jetty and more into openEuler, with packaging automation, build macros, and Docker images for Java developers."
+  },
+  "en/sig/sig-intelligence.html": {
+    title: "sig-intelligence SIG | openEuler",
+    description: "openEuler sig-intelligence SIG incubates AI agent apps and toolchains, accelerating AI technology adoption by integrating intelligent operating system capabilities."
+  },
+  "en/sig/sig-Intel-Arch.html": {
+    title: "Intel Arch SIG | openEuler",
+    description: "Intel Arch SIG enables Intel hardware features on openEuler, accelerating software stack support across kernel, virtualization, toolchain, and AI workloads."
+  },
+  "en/sig/sig-industrial-control.html": {
+    title: "Industrial-Control SIG | openEuler",
+    description: "Industrial-Control SIG adapts openEuler into a real-time OS for industrial control, supporting Xenomai, Preempt_RT, fieldbus protocols, and RTOS virtualization."
+  },
+  "en/sig/sig-IDE.html": {
+    title: "sig-IDE SIG | openEuler",
+    description: "openEuler SIG for building a professional, efficient embedded IDE with rich dev tools, debugging features, and customizable workflows for embedded systems development."
+  },
+  "en/sig/sig-Hygon.html": {
+    title: "Hygon SIG | openEuler",
+    description: "Hygon SIG enables openEuler support for Hygon hardware platforms, covering kernel, virtualization, toolchain, security, and AI software stack optimization."
+  },
+  "en/sig/sig-HPC.html": {
+    title: "HPC SIG | openEuler",
+    description: "openEuler HPC SIG optimizes top HPC applications in meteorology, manufacturing, and molecular dynamics, building a thriving HPC open-source ecosystem."
+  },
+  "en/sig/sig-high-performance-network.html": {
+    title: "sig-high-performance-network SIG | openEuler",
+    description: "openEuler SIG for high-performance networking using DPDK, RDMA, XDP, and UMDK. Maintains packages, develops user-space stacks, and advances network acceleration."
+  },
+  "en/sig/sig-haskell.html": {
+    title: "sig-haskell SIG | openEuler",
+    description: "Haskell SIG brings functional programming tools and ecosystem packages — including GHC, Pandoc, Alex, and Happy — to the openEuler platform."
+  },
+  "en/sig/sig-Ha.html": {
+    title: "Ha SIG | openEuler",
+    description: "openEuler Ha SIG adds High Availability support, handles ARM64 porting and optimization, maintains Ha packages, and contributes upstream."
+  },
+  "en/sig/sig-golang.html": {
+    title: "sig-golang SIG | openEuler",
+    description: "openEuler Golang SIG maintains Go language packages for openEuler, collaborates with CloudNative SIG, and hosts biweekly meetings to drive Go ecosystem development."
+  },
+  "en/sig/sig-Gatekeeper.html": {
+    title: "sig-Gatekeeper SIG | openEuler",
+    description: "sig-Gatekeeper maintains openEuler's CI infrastructure, including CI bots, Jenkins gating, and OBS build services to streamline community development workflows."
+  },
+  "en/sig/sig-FangTian.html": {
+    title: "FangTian SIG | openEuler",
+    description: "FangTian is a window engine on openEuler focused on display and window management, delivering high-performance, low-power multi-ecosystem compatibility."
+  },
+  "en/sig/sig-epol.html": {
+    title: "sig-epol SIG | openEuler",
+    description: "Epol SIG expands openEuler's ecosystem with extra packages, ensuring security, privacy, and quality compliance while incubating mature software."
+  },
+  "en/sig/sig-epkg.html": {
+    title: "epkg SIG | openEuler",
+    description: "The epkg SIG builds a next-gen package manager for openEuler with multi-version support, atomic upgrades, safe rollback, and cloud-native compatibility."
+  },
+  "en/sig/sig-embedded.html": {
+    title: "Embedded SIG | openEuler",
+    description: "Embedded SIG develops openEuler Embedded, enabling broad deployment on embedded devices. Explore the project and join our biweekly community meetings."
+  },
+  "en/sig/sig-Edge.html": {
+    title: "sig-Edge SIG | openEuler",
+    description: "sig-Edge SIG focuses on edge computing middleware and solutions built on OpenEuler, supporting Intel, ARM, and RISC-V platforms for open collaboration."
+  },
+  "en/sig/sig-ebpf.html": {
+    title: "eBPF SIG | openEuler",
+    description: "openEuler eBPF SIG advances kernel programmability for cloud-native networking, security, observability, and AI integration, driving innovation with upstream Linux contributions."
+  },
+  "en/sig/sig-EasyLife.html": {
+    title: "EasyLife SIG | openEuler",
+    description: "EasyLife SIG automates openEuler package maintenance: tracking upstream releases, sending update alerts, and enabling semi-automated upgrades for maintainers."
+  },
+  "en/sig/sig-DPU.html": {
+    title: "DPU SIG | openEuler",
+    description: "openEuler DPU SIG drives DPU driver development, customized OS support, and unified programming frameworks for data processing unit hardware acceleration."
+  },
+  "en/sig/sig-distributed-middleware.html": {
+    title: "sig-distributed-middleware SIG | openEuler",
+    description: "Enabling distributed file systems, data management, and soft bus technology on openEuler to achieve seamless interoperability across servers, terminals, and embedded devices."
+  },
+  "en/sig/sig-DevStation.html": {
+    title: "sig-DevStation SIG | openEuler",
+    description: "openEuler DevStation SIG builds an AI-powered developer workstation enabling seamless OS interaction via large models, fostering an Agentic OS ecosystem."
+  },
+  "en/sig/sig-desktop-apps.html": {
+    title: "desktop-apps SIG | openEuler",
+    description: "The desktop-apps SIG delivers essential desktop applications for openEuler, including multimedia, music, games, developer IDEs, and finance tools to enrich the personal desktop experience."
+  },
+  "en/sig/sig-DDE.html": {
+    title: "sig-DDE SIG | openEuler",
+    description: "The sig-DDE SIG builds and maintains DDE desktop environment packages for openEuler, enabling a full desktop experience and driving desktop technology research."
+  },
+  "en/sig/sig-confidential-computing.html": {
+    title: "sig-confidential-computing SIG | openEuler",
+    description: "openEuler's Confidential Computing SIG delivers easy-to-use TEE software stacks and solutions, lowering barriers and advancing the confidential computing ecosystem."
+  },
+  "en/sig/sig-compliance.html": {
+    title: "sig-compliance SIG | openEuler",
+    description: "The openEuler Compliance SIG builds license compliance frameworks, tools, and workflows to manage open source component licenses across thousands of integrated packages."
+  },
+  "en/sig/sig-Compatibility-Infra.html": {
+    title: "sig-Compatibility-Infra SIG | openEuler",
+    description: "Explores OS compatibility with servers, hardware, and applications on openEuler. Covers driver/BIOS/BMC testing, app whitelists, and POSIX/LSB compliance standards."
+  },
+  "en/sig/sig-compat-winapp.html": {
+    title: "sig-compat-winapp SIG | openEuler",
+    description: "The compat-winapp SIG brings Windows applications to openEuler on x86 and ARM architectures, providing build solutions and guides for contributors."
+  },
+  "en/sig/sig-CloudNative.html": {
+    title: "CloudNative SIG | openEuler",
+    description: "CloudNative SIG builds cloud-native infrastructure and app hosting environments for openEuler, maintaining packages and driving cloud-native ecosystem growth."
+  },
+  "en/sig/sig-cinnamon.html": {
+    title: "sig-cinnamon SIG | openEuler",
+    description: "The sig-cinnamon SIG maintains Cinnamon desktop environment projects for openEuler, delivering a beautiful, efficient Linux desktop experience."
+  },
+  "en/sig/sig-CICD.html": {
+    title: "sig-CICD SIG | openEuler",
+    description: "The openEuler CICD SIG develops and maintains compass-ci, enabling continuous integration and delivery across openEuler projects."
+  },
+  "en/sig/sig-BMC.html": {
+    title: "sig-BMC SIG | openEuler",
+    description: "SIG-BMC advances open-source Baseboard Management Controller solutions on openEuler, supporting X86, ARM, RISC-V platforms for computing infrastructure."
+  },
+  "en/sig/sig-bio.html": {
+    title: "SIG-Bio SIG | openEuler",
+    description: "SIG-Bio builds an official bioinformatics software repository on openEuler, providing compatible, easy-to-install open-source packages for HPC and cloud research."
+  },
+  "en/sig/sig-Arm.html": {
+    title: "sig-Arm SIG | openEuler",
+    description: "sig-Arm SIG supports Kunpeng, Phytium & Arm architectures on openEuler, resolving upstream issues, collecting ecosystem needs, and advancing optimization tools."
+  },
+  "en/sig/sig-AccLib.html": {
+    title: "sig-AccLib SIG | openEuler",
+    description: "sig-AccLib drives hardware accelerator and instruction optimization on openEuler, delivering high-performance acceleration for encryption, compression, networking, and video transcoding."
+  },
+  "en/sig/security-committee.html": {
+    title: "Security Committee SIG | openEuler",
+    description: "openEuler Security Committee handles vulnerability fixes, security issue response, secure coding guidance, and code reviews to protect the community."
+  },
+  "en/sig/Runtime.html": {
+    title: "Runtime SIG | openEuler",
+    description: "The Runtime SIG focuses on runtime environment components for openEuler, maintaining core libraries and tools that support application execution across the OS ecosystem."
+  },
+  "en/sig/Programming-language.html": {
+    title: "Programming-language SIG | openEuler",
+    description: "The Programming-language SIG brings dev environment components to openEuler, enabling cross-architecture support, workflow optimization, and upstream contributions."
+  },
+  "en/sig/Packaging.html": {
+    title: "Packaging SIG | openEuler",
+    description: "The Packaging SIG maintains packaging standards, manages public packages, and coordinates dependency resolution for openEuler community releases."
+  },
+  "en/sig/oVirt.html": {
+    title: "oVirt SIG | openEuler",
+    description: "The oVirt SIG integrates oVirt virtualization into openEuler, handling ARM64 porting, package maintenance, upstream contributions, and multi-language docs."
+  },
+  "en/sig/Others.html": {
+    title: "Others SIG | openEuler",
+    description: "Explore the Others SIG on openEuler, a community group managing miscellaneous projects, collaboration, and contributions beyond dedicated SIG scopes."
+  },
+  "en/sig/Networking.html": {
+    title: "Networking SIG | openEuler",
+    description: "The Networking SIG maintains networking packages for openEuler, handling planning, selection, and upstream contributions while supporting community feedback."
+  },
+  "en/sig/Marketing.html": {
+    title: "Marketing SIG | openEuler",
+    description: "The openEuler Marketing SIG organizes community events including Meetups, Summits, and live streams, coordinating promotion and outreach across the community."
+  },
+  "en/sig/Kernel.html": {
+    title: "Kernel SIG | openEuler",
+    description: "The Kernel SIG maintains the openEuler Linux kernel with security patches, hardware support, and long-term stable (LTS) versions for OS distributions."
+  },
+  "en/sig/iSulad.html": {
+    title: "iSulad SIG | openEuler",
+    description: "The iSulad SIG oversees the lightweight container engine for openEuler, driving technical decisions, package maintenance, and user issue resolution."
+  },
+  "en/sig/Infrastructure.html": {
+    title: "Infrastructure SIG | openEuler",
+    description: "The Infrastructure SIG oversees openEuler community system development and maintenance, including code repositories, CI builds, the community portal, and mailing infrastructure."
+  },
+  "en/sig/GNOME.html": {
+    title: "GNOME SIG | openEuler",
+    description: "The GNOME SIG maintains and integrates the GNOME desktop environment for openEuler, handling package planning, upgrades, and community support on *NIX systems."
+  },
+  "en/sig/G11N.html": {
+    title: "G11N SIG | openEuler",
+    description: "G11N SIG drives openEuler's globalization, providing internationalization (I18N), localization (L10N), translation support, and multilingual services worldwide."
+  },
+  "en/sig/ecopkg.html": {
+    title: "ecopkg SIG | openEuler",
+    description: "ecopkg SIG manages openEuler ecosystem packages not yet assigned to specific SIG groups, ensuring all packages are maintained and governed."
+  },
+  "en/sig/doc.html": {
+    title: "doc SIG | openEuler",
+    description: "The openEuler doc SIG builds and maintains project documentation, handles multilingual translation, and supports developer contributions to improve the docs experience."
+  },
+  "en/sig/dev-utils.html": {
+    title: "dev-utils SIG | openEuler",
+    description: "The dev-utils SIG focuses on developer tools, SDKs, and libraries for openEuler, maintaining utilities like htop, netperf, slurm, and more."
+  },
+  "en/sig/Desktop.html": {
+    title: "Desktop SIG | openEuler",
+    description: "The Desktop SIG integrates desktop and graphics components into openEuler, supporting cross-architecture libraries, third-party apps, and upstream contribution."
+  },
+  "en/sig/DB.html": {
+    title: "DB SIG | openEuler",
+    description: "DB SIG maintains MySQL, MariaDB, PostgreSQL, and openGauss on openEuler, introducing OLTP databases and ecosystem tools to build a complete database software ecosystem."
+  },
+  "en/sig/Computing.html": {
+    title: "Computing SIG | openEuler",
+    description: "openEuler Computing SIG manages OS base packages, C/C++ libraries, device management, and multimedia components, exploring new computing technologies."
+  },
+  "en/sig/Compiler.html": {
+    title: "Compiler SIG | openEuler",
+    description: "The openEuler Compiler SIG drives development of GCC, LLVM, and OpenJDK technologies, fostering collaboration between academics and industry experts on program optimization."
+  },
+  "en/sig/bigdata.html": {
+    title: "bigdata SIG | openEuler",
+    description: "openEuler Big Data SIG enables data collection, transmission, storage, analysis, and visualization, integrating big data platforms and optimizing performance on openEuler."
+  },
+  "en/sig/Base-service.html": {
+    title: "Base-service SIG | openEuler",
+    description: "The Base-service SIG maintains core build tools (gcc, make, git), essential runtime libraries (dbus, systemd), and common applications (vim, zip) for openEuler."
+  },
+  "en/sig/Application.html": {
+    title: "Application SIG | openEuler",
+    description: "openEuler Application SIG ports server applications to openEuler, enables multi-arch support, drives optimization, and contributes improvements upstream."
+  },
+  "en/sig/ai.html": {
+    title: "AI SIG | openEuler",
+    description: "openEuler AI SIG builds AI infrastructure supporting XPU (CPU/GPU/NPU), heterogeneous computing, and ML frameworks like TensorFlow and PyTorch."
+  },
+  "en/sig/A-Tune.html": {
+    title: "A-Tune SIG | openEuler",
+    description: "A-Tune SIG explores AI-assisted performance analysis and system tuning technologies on openEuler, optimizing workloads for better efficiency."
+  },
+  "en/personal-data-collection-overview": {
+    title: "Personal Data & Privacy Collection Overview | openEuler",
+    description: "Learn how openEuler collects and protects your personal data across account, forum, and other services, with full transparency and security compliance."
+  },
+  "en/data-sharing-with-third-parties": {
+    title: "Third-Party Data Sharing Policy | openEuler",
+    description: "Learn how openEuler shares data with third-party partners like Baidu Analytics and Authing for site analytics and user authentication management."
+  },
+  "en/contact-us": {
+    title: "Contact openEuler: Community & Support | openEuler",
+    description: "Reach the openEuler team via email, mailing lists, or forum. Connect on social media and explore docs, OS downloads, and community contributions."
+  },
+  "en/approve": {
+    title: "OSV Technical Evaluation for openEuler Distributions | openEuler",
+    description: "Explore the OSV technical evaluation list for openEuler. Check certified OS vendors, versions, and download links with full compatibility and ecosystem testing results."
+  },
+  "en/showcase/industry-white-paper": {
+    title: "Download openEuler Industry White Papers | openEuler",
+    description: "Explore openEuler industry white papers covering OS solutions for finance and enterprise sectors. Download technical insights and real-world deployment reports."
+  },
+  "en/projects/yuanrong": {
+    title: "openYuanrong: Serverless Distributed Engine | openEuler",
+    description: "openYuanrong is a Serverless distributed compute engine for AI, big data, and microservices. Write local code, execute at scale with dynamic scheduling."
+  },
+  "en/projects/intelligence-boom": {
+    title: "Intelligence BooM: Open Source AI Inference | openEuler",
+    description: "Intelligence BooM is an open source full-stack AI inference platform with 20+ components for LLM deployment, fine-tuning, and agentic workflows on heterogeneous hardware."
+  },
+  "en/projects/ub-os-component": {
+    title: "UB OS Component: Unified Hardware Abstraction | openEuler",
+    description: "UB OS Component extends the OS framework to abstract heterogeneous hardware, enabling unified memory space and global resource scheduling for UnifiedBus."
+  },
+  "en/projects/ub-service-core": {
+    title: "UB Service Core: Cluster Services for SuperPoDs | openEuler",
+    description: "UB Service Core delivers five open-source cluster-level services for UnifiedBus SuperPoDs, boosting app performance 30-50% with peer-to-peer architecture."
+  },
+  "en/projects/intelligence": {
+    title: "openEuler Intelligence: AI Agent & LLM Platform | openEuler",
+    description: "Build AI-powered apps with openEuler Intelligence. Supports RAG knowledge Q&A, workflow orchestration, Agent apps, and MCP services for developers and enterprises."
+  },
+  "en/projects/docs/UB-Service-Core-SW-Arch-RD-2.0-en.html": {
+    title: "UB Service Core Software Architecture RD 2.0 | openEuler",
+    description: "Explore the UB Service Core Software Architecture Requirements Document v2.0 on openEuler. Access detailed architecture design and specifications for core services."
+  },
+  "en/interaction/post-news": {
+    title: "Submit News to openEuler: Step-by-Step Guide | openEuler",
+    description: "Learn how to submit news to openEuler using Gitee and Markdown. Follow our step-by-step guide to fork, write, and create a pull request."
+  },
+  "en/interaction/live-list": {
+    title: "openEuler Live: Tech Sessions & Highlights | openEuler",
+    description: "Watch openEuler live sessions on StratoVirt virtualization, CPU/memory/IO subsystems, and Avocado-VT testing. Explore recorded highlights from expert developers."
+  },
+  "en/compatibility/software-info": {
+    title: "Software Compatibility & Driver Info | openEuler",
+    description: "Browse openEuler's software compatibility list with verified configurations, adapter drivers, chip vendors, and board models per openEuler Compatibility Policies."
+  },
+  "en/approve/approve-info": {
+    title: "OSV Technical Assessment Report & Compatibility | openEuler",
+    description: "View OSV technical assessment reports for openEuler compatibility, covering COMPATIBLE tool checks, kernel KABI, ABI interface, and platform validation."
+  },
+  "en/wiki/install/raspberry-pi": {
+    title: "Install openEuler on Raspberry Pi 24.03 LTS | openEuler",
+    description: "Learn how to install openEuler 24.03 LTS on Raspberry Pi. Download the aarch64 image, verify its integrity with SHA256, and get started fast."
+  },
+  "en/wiki/install/macos": {
+    title: "Get openEuler on macOS with OrbStack | openEuler",
+    description: "Learn how to run openEuler on macOS using OrbStack, a lightweight VM platform. Download OrbStack, click +, and launch your openEuler VM in minutes."
+  },
+  "en/annual-report/openEuler-annual-report-2025": {
+    title: "openEuler 2025 Annual Report: Year in Review | openEuler",
+    description: "Explore the openEuler 2025 Annual Report. Discover key milestones, community growth, technical innovations, and contributions from the open source OS ecosystem."
+  },
+  "en/annual-report/openEuler-annual-report-2024": {
+    title: "openEuler 2024 Annual Report: Year in Review | openEuler",
+    description: "Explore the openEuler 2024 Annual Report. Discover key milestones, community growth, technical innovations, and the open-source OS ecosystem's progress."
+  },
+  "en/security/bug-bulletins/detail": {
+    title: "Security Vulnerability Advisory Details | openEuler",
+    description: "View detailed openEuler security advisory info including synopsis, severity rating, affected components, and release date. Keep your system protected."
+  },
+  "en/other/brand/specification": {
+    title: "Logo & Brand Specification Guidelines | openEuler",
+    description: "Explore openEuler's official brand guidelines covering logo variations, color specifications, grid proportions, co-branding rules, and correct logo usage."
+  },
+  "en/interaction/summit-list/summit2025": {
+    title: "openEuler Summit 2025: AI-Driven OS Conference | openEuler",
+    description: "Join openEuler Summit 2025 in Beijing, Nov 14–15. Explore AI-powered OS innovation with global leaders, keynotes, and next-gen computing breakthroughs."
+  },
+  "en/wiki/install/cloud/introduction": {
+    title: "openEuler Public Cloud Image User Guide | openEuler",
+    description: "Deploy openEuler on public cloud platforms with ease. This guide covers cloud image usage on Huawei Cloud, with links to other cloud provider guides."
+  }
 };
 
 export default tdks;

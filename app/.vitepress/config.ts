@@ -14,8 +14,8 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
-
-const JSONLD_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'sigs-jsonld');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const JSONLD_DIR = path.resolve(__dirname, 'sigs-jsonld');
 /**
  * 为sig详情页设置title和JSON-LD
  */
@@ -50,12 +50,12 @@ const config: UserConfig = {
     transformItems: sitemapItemTransformer(
       items => {
         try {
-          const lastmodeTimeStamp = JSON.parse(readFileSync('./last-modified.json', 'utf-8')) as Record<string, number>;
+          const lastmodeTimeStamp = JSON.parse(readFileSync(path.resolve(__dirname, './last-modified.json'), 'utf-8')) as Record<string, number>;
           for (const item of items) {
             const key = item.url.endsWith('.html') ? item.url.replace('.html', '.md') : (item.url.endsWith('/') ? `${item.url}index.md` : `${item.url}/index.md`);
-            const timestamp = lastmodeTimeStamp[key];
-            if (timestamp) {
-              item.lastmod = timestamp;
+            const generatedItem = lastmodeTimeStamp[key];
+            if (generatedItem) {
+              Object.assign(item, generatedItem);
             }
           }
         } catch {}
