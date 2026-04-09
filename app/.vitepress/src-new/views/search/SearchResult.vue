@@ -21,7 +21,6 @@ import {
   OPagination,
   OSelect,
   OOption,
-  useLoading,
 } from '@opensig/opendesign';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 import SearchFeedback from './SearchFeedback.vue';
@@ -29,6 +28,7 @@ import SearchDownloadZone from './SearchDownloadZone.vue';
 import SearchSoftwareZone from './SearchSoftwareZone.vue';
 import SearchDownloadAggre from './SearchDownloadAggre.vue';
 import ExternalLink from '~@/components/ExternalLink.vue';
+import SearchResultSkeleton from './SearchResultSkeleton.vue';
 
 import { getOSType } from '@/shared/download';
 import { uniqueId } from '@/shared/utils';
@@ -110,6 +110,14 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  searchImage: {
+    type: String,
+    default: '',
+  },
+  isImageSearch: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const emits = defineEmits([
@@ -128,36 +136,23 @@ const { lePadV, lePad } = useScreen();
 
 const contentRef = ref();
 
-const loadingFn = useLoading(
-  {
-    mask: false,
-  },
-  contentRef
-);
-
 const sortType = ['commercialRelease', 'mail', 'news', 'blog', 'whitepaper'];
-
-watch(
-  () => props.loading,
-  (val: boolean) => {
-    loadingFn.toggle(val);
-  }
-);
 
 watch(
   () => props.searchResultList,
   (val) => {
-    if (!val?.length) return;
-    val.forEach((res: any) => {
-      if (res.type === 'whitepaper') {
-        res.pageIndex = 0;
+    if (val?.length) {
+      val.forEach((res: any) => {
+        if (res.type === 'whitepaper') {
+          res.pageIndex = 0;
 
-        res.aggreList?.forEach((page: any) => {
-          page.obsUrl = generatePdfUrl(page);
-        })
-      }
-    })
-    localSearchResultList.value = JSON.parse(JSON.stringify(val));
+          res.aggreList?.forEach((page: any) => {
+            page.obsUrl = generatePdfUrl(page);
+          })
+        }
+      })
+    }
+    localSearchResultList.value = JSON.parse(JSON.stringify(val || []));
   }, { deep: true }
 );
 
@@ -346,7 +341,12 @@ const generatePdfUrl = (page) => {
     <div class="search-content">
       <!-- 搜索内容列表 -->
       <div ref="contentRef" class="content-box">
-        <div v-if="localSearchResultList.length" class="content-list">
+        <!-- 骨架屏 -->
+        <div v-if="loading" class="skeleton-container">
+          <SearchResultSkeleton />
+        </div>
+        
+        <div v-else-if="localSearchResultList.length" class="content-list">
           <div v-if="zoneShownCondition" class="search-zone">
             <SearchDownloadAggre v-if="downloadAggre && !downloadZoneData" />
             <SearchDownloadZone
@@ -446,13 +446,11 @@ const generatePdfUrl = (page) => {
                     )
                   "
                 >
-                  {{
-                    getOSType(
+                  {{ getOSType(
                       item.path.split('/').at(-1),
                       item.version,
                       item.arch
-                    )
-                  }}
+                    ) }}
                 </OTag>
               </div>
               <div class="from">
@@ -871,5 +869,9 @@ const generatePdfUrl = (page) => {
   .whitepaper-preview {
     @include img-in-dark;
   }
+}
+
+/* 骨架屏样式 */
+.skeleton-container {
 }
 </style>

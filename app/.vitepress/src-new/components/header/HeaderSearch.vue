@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { computed, ref, onMounted, watch } from 'vue';
+import { computed, ref, onMounted, watch, nextTick } from 'vue';
 import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
 import { useI18n } from '~@/i18n';
+import { OFigure, OPopover, useMessage } from '@opensig/opendesign';
 
 import type { SearchRecommendT } from '@/shared/@types/type-search';
 
-import { getPop } from '@/api/api-search';
-import { getSearchRecommend } from '@/api/api-search';
+import { getPop, getSearchRecommend } from '@/api/api-search';
+import { imageUpload } from '~@/api/api-search';
 
 import useClickOutside from '@/components/hooks/useClickOutside';
 import { useScreen } from '~@/composables/useScreen';
@@ -17,6 +18,9 @@ import IconSearch from '~icons/app-new/icon-header-search.svg';
 import IconDelete from '~icons/app-new/icon-header-delete.svg';
 import IconDeleteAll from '~icons/app-new/icon-delete.svg';
 import IconBack from '~icons/app-new/icon-header-back.svg';
+import IconImageUpload from '~icons/app-new/icon-image-upload.svg';
+import IconImageClose from '~icons/app-new/icon-image-close.svg';
+import IconImageZoomin from '~icons/app-new/icon-image-zoomin.svg';
 import { useDebounceFn } from '@vueuse/core';
 import { oaReport } from '@/shared/analytics';
 
@@ -48,11 +52,29 @@ const reportSearch = (event: string, data: Record<string, any>) => {
 };
 
 // 搜索事件
-function handleSearchEvent(report?: boolean) {
+async function handleSearchEvent(report?: boolean) {
+  if (pastedFile.value) {
+    if (report) {
+      reportSearch('click', {
+        content: searchInput.value.trim(),
+        image: uploadedImageUrl.value,
+        type: 'image_search',
+      });
+    }
+    if (isUploading.value) {
+      await uploadPromise;
+    }
+    const query = searchInput.value.trim();
+    const params = new URLSearchParams();
+    if (uploadedImageUrl.value) params.set('imageUrl', uploadedImageUrl.value);
+    if (query) params.set('q', query);
+    window.open(`/${lang.value}/other/search/?${params.toString()}`, '_self');
+    return;
+  }
+
   const input = searchInput.value.trim();
   if (!input) return;
 
-  isShowDrawer.value = false;
   handleSearch(input);
   if (report) {
     reportSearch('click', {
@@ -82,6 +104,12 @@ const onTopSearchItemClick = (
 };
 
 const searchValue = computed(() => i18n.value.header.SEARCH);
+// 图片搜索占位符
+const currentPlaceholder = computed(() => {
+  if (showThumbnail.value) return searchValue.value.PLEACHOLDER_EXTEND;
+  if (isShowDrawer.value) return searchValue.value.PLEACHOLDER_IMAGE;
+  return searchValue.value.PLEACHOLDER;
+});
 // 显示/移除搜索框
 const isShowBox = ref(false);
 const popList = ref<string[]>([]);
@@ -103,6 +131,7 @@ const showDrawer = () => {
 // 关闭搜索框
 const closeSearchBox = () => {
   searchInput.value = '';
+  removeImage();
   emits('search-click', isShowBox.value);
   if (!lePadV.value) {
     isShowBox.value = false;
@@ -113,7 +142,7 @@ const closeSearchBox = () => {
 
 onMounted(() => {
   window.addEventListener('click', () => {
-    if (isClickOutside.value && !lePadV.value) {
+    if (isClickOutside.value && !lePadV.value && !isPreviewOpen.value && !justClosedPreview.value) {
       closeSearchBox();
     }
   });
@@ -186,43 +215,175 @@ const deleteHistory = (data: string) => {
 
 const closeSearch = () => {
   searchInput.value = '';
+  removeImage();
   isShowBox.value = false;
   commonStore.iconMenuShow = true;
   isShowDrawer.value = false;
   emits('search-click', isShowBox.value);
+};
+
+const pastedImage = ref<string>('');
+const pastedFile = ref<File | null>(null);
+const showThumbnail = ref(false);
+const uploadedImageUrl = ref<string>('');
+const isUploading = ref(false);
+let uploadPromise: Promise<void> | null = null;
+const isPreviewOpen = ref(false);
+const justClosedPreview = ref(false);
+
+const onPreviewChange = (visible: boolean) => {
+  isPreviewOpen.value = visible;
+  if (!visible) {
+    justClosedPreview.value = true;
+    setTimeout(() => {
+      justClosedPreview.value = false;
+    }, 100);
+  }
+};
+
+const handlePaste = async (event: ClipboardEvent) => {
+  const items = event.clipboardData?.items;
+  if (!items) return;
+
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    if (item.type.indexOf('image') !== -1) {
+      const file = item.getAsFile();
+      if (file) {
+        handleImageFile(file);
+      }
+      break;
+    }
+  }
+};
+
+const removeImage = () => {
+  URL.revokeObjectURL(pastedImage.value);
+  pastedImage.value = '';
+  pastedFile.value = null;
+  showThumbnail.value = false;
+  uploadedImageUrl.value = '';
+};
+
+const fileInputRef = ref<HTMLInputElement>();
+const uploadBtnRef = ref();
+const oInputRef = ref();
+
+const handleUploadClick = () => {
+  // 重置 value，确保选同一张图片也能触发 change 事件
+  if (fileInputRef.value) {
+    fileInputRef.value.value = '';
+  }
+  fileInputRef.value?.click();
+};
+
+const handleFileSelect = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  const file = target.files?.[0];
+  if (file) {
+    handleImageFile(file);
+    nextTick(() => oInputRef.value?.focus());
+  }
+};
+
+const handleImageFile = (file: File) => {
+  pastedFile.value = file;
+  pastedImage.value = URL.createObjectURL(file);
+  showThumbnail.value = true;
+
+  uploadedImageUrl.value = '';
+  isUploading.value = true;
+  uploadPromise = imageUpload({ image: file })
+    .then((res) => {
+      if (res.status === 200 && res.obj) {
+        uploadedImageUrl.value = res.obj;
+        reportSearch('upload', {
+          image: uploadedImageUrl.value,
+          type: 'image_search',
+        });
+      }
+    })
+    .catch((err) => {
+      if (err?.response?.status === 403) {
+        const msg = useMessage();
+        msg.show({ content: searchValue.value.UPLOAD_FAILED, status: 'danger' });
+      }
+    })
+    .finally(() => {
+      isUploading.value = false;
+    });
+};
+
+const handleDragOver = (event: DragEvent) => {
+  event.preventDefault();
+  event.stopPropagation();
+};
+
+const handleDrop = (event: DragEvent) => {
+  event.preventDefault();
+  event.stopPropagation();
+  
+  const file = event.dataTransfer?.files?.[0];
+  if (file && file.type.indexOf('image') !== -1) {
+    handleImageFile(file);
+  }
 };
 </script>
 <template>
   <div class="search-wrapper">
     <div :class="{ search: !lePadV, focus: isShowDrawer && !lePadV }">
       <div ref="searchRef" class="header-search">
-        <div :class="{ 'input-focus': isShowDrawer }">
+        <div :class="{ 'input-focus': isShowDrawer, 'has-image': showThumbnail }" @dragover="handleDragOver" @drop="handleDrop">
           <OIcon v-if="lePadV && isShowDrawer" @click.stop="closeSearch"
             ><IconBack></IconBack
           ></OIcon>
-          <OInput
-            v-model="searchInput"
-            :placeholder="
-              isShowDrawer
-                ? searchValue.PLEACHOLDER_EXTEND
-                : searchValue.PLEACHOLDER
-            "
-            @keyup.enter="handleSearchEvent(true)"
-            @focus="showDrawer"
-            class="normal"
-          >
-            <template #prefix>
-              <OIcon class="icon"><IconSearch></IconSearch></OIcon>
-            </template>
-            <template
-              v-if="(!lePadV && isShowDrawer) || (lePadV && searchInput)"
-              #suffix
+          <div class="search-input-wrapper" :class="{ 'with-image': showThumbnail }">
+            <OInput
+              ref="oInputRef"
+              v-model="searchInput"
+              :placeholder="currentPlaceholder"
+              @keyup.enter="handleSearchEvent(true)"
+              @focus="showDrawer"
+              @paste="handlePaste"
+              class="normal"
             >
-              <OIcon class="close icon" @click="closeSearchBox"
-                ><IconClose
-              /></OIcon>
-            </template>
-          </OInput>
+              <template #prefix>
+                <OIcon class="icon"><IconSearch></IconSearch></OIcon>
+              </template>
+              <template
+                v-if="isShowDrawer"
+                #suffix
+              >
+                <span ref="uploadBtnRef" class="upload-btn">
+                  <OIcon class="upload icon" @mousedown.prevent @click="handleUploadClick"
+                    ><IconImageUpload
+                  /></OIcon>
+                </span>
+                <OPopover v-if="!lePadV" trigger="hover" position="bottom" :target="uploadBtnRef" body-class="upload-tooltip-popup">
+                  {{ searchValue.UPLOAD_TOOLTIP }}
+                </OPopover>
+                <OIcon class="close icon" @click="closeSearchBox"
+                  ><IconClose
+                /></OIcon>
+              </template>
+            </OInput>
+            <div v-if="showThumbnail" class="input-image-preview">
+              <div class="preview-image-wrapper">
+                <OFigure :src="pastedImage" preview alt="" class="preview-image" @preview="onPreviewChange" />
+                <div class="preview-zoom-overlay">
+                  <OIcon class="preview-zoom-icon"><IconImageZoomin /></OIcon>
+                </div>
+                <OIcon class="preview-remove" @click.stop="removeImage"><IconImageClose /></OIcon>
+              </div>
+            </div>
+          </div>
+          <input
+            ref="fileInputRef"
+            type="file"
+            accept="image/*"
+            class="file-input"
+            @change="handleFileSelect"
+          />
           <OIcon class="only-icon" @click="showDrawer"
             ><IconSearch></IconSearch
           ></OIcon>
@@ -234,60 +395,64 @@ const closeSearch = () => {
           >
         </div>
 
-        <div v-show="isShowDrawer" class="drawer">
-          <div
-            v-if="recommendData.length && searchInput"
-            class="search-recommend"
-          >
-            <div
-              v-for="item in recommendData"
-              class="recommend-item"
-              @click="onTopSearchItemClick(item.key, 'suggest')"
-              :key="item.key"
-            >
-              {{ item.key }}
-            </div>
-          </div>
-          <div v-else-if="searchHistory.length" class="history-container">
-            <div class="history-title">
-              <span class="title">{{ searchValue.BROWSEHISTORY }}</span>
-              <OIcon class="icon" @click.stop="deleteHistory('')">
-                <IconDeleteAll></IconDeleteAll>
-              </OIcon>
-            </div>
-            <div class="history">
+        <Transition name="search-drawer">
+          <div v-if="isShowDrawer && (!showThumbnail || lePadV)" class="drawer">
+            <template v-if="!showThumbnail">
               <div
-                v-for="item in searchHistory"
-                class="history-item"
-                :class="{ dark: isDark }"
-                @click="onTopSearchItemClick(item)"
-                :key="item"
+                v-if="recommendData.length && searchInput"
+                class="search-recommend"
               >
-                <span class="history-text">{{ item }}</span>
-                <OIcon class="icon-container" @click.stop="deleteHistory(item)"
-                  ><IconDelete class="icon"></IconDelete
-                ></OIcon>
+                <div
+                  v-for="item in recommendData"
+                  class="recommend-item"
+                  @click="onTopSearchItemClick(item.key, 'suggest')"
+                  :key="item.key"
+                >
+                  {{ item.key }}
+                </div>
               </div>
-            </div>
-            <div class="split-line"></div>
+              <div v-else-if="searchHistory.length" class="history-container">
+                  <div class="history-title">
+                    <span class="title">{{ searchValue.BROWSEHISTORY }}</span>
+                    <OIcon class="icon" @click.stop="deleteHistory('')">
+                      <IconDeleteAll></IconDeleteAll>
+                    </OIcon>
+                  </div>
+                  <div class="history">
+                    <div
+                      v-for="item in searchHistory"
+                      class="history-item"
+                      :class="{ dark: isDark }"
+                      @click="onTopSearchItemClick(item)"
+                      :key="item"
+                    >
+                      <span class="history-text">{{ item }}</span>
+                      <OIcon class="icon-container" @click.stop="deleteHistory(item)"
+                        ><IconDelete class="icon"></IconDelete
+                      ></OIcon>
+                    </div>
+                  </div>
+                  <div class="split-line"></div>
+                </div>
+                <div class="hots">
+                  <div class="hots-title">
+                    <p>{{ searchValue.TOPSEARCH }}</p>
+                  </div>
+                  <div class="hots-list">
+                    <div
+                      v-for="item in popList"
+                      :key="item"
+                      type="text"
+                      class="hots-list-item"
+                      @click="onTopSearchItemClick(item, 'popular')"
+                    >
+                      {{ item }}
+                    </div>
+                  </div>
+                </div>
+            </template>
           </div>
-          <div class="hots">
-            <div class="hots-title">
-              <p>{{ searchValue.TOPSEARCH }}</p>
-            </div>
-            <div class="hots-list">
-              <div
-                v-for="item in popList"
-                :key="item"
-                type="text"
-                class="hots-list-item"
-                @click="onTopSearchItemClick(item, 'popular')"
-              >
-                {{ item }}
-              </div>
-            </div>
-          </div>
-        </div>
+        </Transition>
       </div>
       <OIcon @click="showDrawer" class="icon search-icon"
         ><IconSearch></IconSearch
@@ -322,6 +487,7 @@ const closeSearch = () => {
 
     &.focus {
       top: -32px;
+      border-radius: 4px;
     }
   }
 }
@@ -353,21 +519,25 @@ const closeSearch = () => {
 
   .input-focus {
     padding: var(--o-gap-4);
-    border-radius: 4px 4px 0 0;
+    border-radius: 4px;
     display: flex;
     &::after {
-      content: '';
-      position: absolute;
-      height: var(--o-gap-4);
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background-color: var(--o-color-fill2);
-      z-index: 200;
+    content: '';
+    position: absolute;
+    height: var(--o-gap-4);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--o-color-fill2);
+    z-index: 200;
 
       @include respond-to('<=pad_v') {
         display: none;
       }
+    }
+
+    &.has-image::after {
+      display: none;
     }
 
     .search-text {
@@ -382,6 +552,12 @@ const closeSearch = () => {
       width: 100%;
       gap: var(--o-gap-4);
       align-items: center;
+    }
+
+    &.has-image {
+      @include respond-to('<=pad_v') {
+        align-items: flex-start;
+      }
     }
 
     .normal {
@@ -628,5 +804,154 @@ const closeSearch = () => {
     border: 1px solid var(--o-color-primary1);
     box-shadow: unset;
   }
+}
+
+// 抽屉展开时，始终保持主色边框，避免因短暂失焦导致边框颜色闪变
+.input-focus :deep(.o-input.el-input .el-input__wrapper) {
+  border: 1px solid var(--o-color-primary1);
+  box-shadow: none;
+}
+
+.search-input-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: var(--o-radius-xs);
+  transition: border-color var(--o-duration-m1);
+
+  &.with-image {
+    border-color: var(--o-color-primary1);
+
+    :deep(.o-input.el-input .el-input__wrapper) {
+      border: none !important;
+      border-radius: var(--o-radius-xs) var(--o-radius-xs) 0 0;
+      box-shadow: none !important;
+    }
+
+    .input-image-preview {
+      margin-top: 8px;
+    }
+  }
+}
+
+.input-image-preview {
+  padding: 0 12px 8px;
+
+  .preview-image-wrapper {
+    position: relative;
+    display: inline-flex;
+    overflow: visible;
+
+    @include hover {
+      .preview-remove {
+        opacity: 1;
+      }
+      .preview-zoom-overlay {
+        opacity: 1;
+      }
+    }
+  }
+
+  .preview-zoom-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--o-duration-m1);
+
+    .preview-zoom-icon {
+      color: #fff;
+      font-size: 24px;
+    }
+  }
+
+  .preview-image {
+    height: 72px;
+    width: 72px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    :deep(img) {
+      height: 72px;
+      width: 72px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 4px;
+    }
+  }
+
+  .preview-remove {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity var(--o-duration-m1);
+
+    :deep(svg) {
+      width: 16px;
+      height: 16px;
+      fill: rgb(var(--o-mixedgray-9));
+    }
+  }
+}
+
+.file-input {
+  display: none;
+}
+
+
+.search-preview-enter-active {
+  transition: opacity var(--o-duration-m1) ease var(--o-duration-m1);
+}
+.search-preview-leave-active {
+  transition: opacity var(--o-duration-m1) ease;
+}
+.search-preview-enter-from,
+.search-preview-leave-to {
+  opacity: 0;
+}
+
+.upload-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  margin-right: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  @include hover {
+    background-color: var(--o-color-control2-light);
+
+    .upload.icon {
+      color: var(--o-color-primary2);
+    }
+  }
+}
+
+.icon.upload {
+  color: var(--o-color-info1);
+}
+</style>
+<style lang="scss">
+.upload-tooltip-popup {
+  @include tip2;
+  padding: var(--o-gap-3) var(--o-gap-4);
+  max-width: 240px;
 }
 </style>

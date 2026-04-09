@@ -130,3 +130,55 @@ export function getRelevant(params: RelevantQueryT): Promise<{
   const url = `/api-search/search/sugg`;
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
+
+/**
+ * 图片搜索
+ * @param {Object} params
+ * @param {string} params.lang 语言
+ * @param {File} params.image 图片文件
+ * @param {string} params.keyword 可选的文本查询
+ * @param {number} params.page 页码
+ * @param {number} params.pageSize 每页数量
+ * @param {string} params.type 搜索类型
+ * @param {string} params.sort 排序方式
+ * @returns {Object}
+ */
+export function imageSearch(params: {
+  lang: string;
+  imageUrl: string;
+  keyword?: string;
+  page?: number;
+  pageSize?: number;
+  type?: string;
+  sort?: string;
+  limit?: { type: string; version: string }[];
+}): Promise<{
+  msg: string;
+  obj: any;
+  status: number;
+}> {
+  const url = '/api-search/search/multitimodal';
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
+}
+
+/**
+ * 图片上传
+ * @param {File} image 图片文件
+ * @returns {Object}
+ */
+export function imageUpload(params: {
+  image: File;
+}): Promise<{
+  msg: string;
+  obj: any;
+  status: number;
+}> {
+  const url = '/api-search/search/sort/upload/image';
+  const formData = new FormData();
+  formData.append('image', params.image);
+  return request.post(url, formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data',
+    },
+  }).then((res: AxiosResponse) => res.data);
+}

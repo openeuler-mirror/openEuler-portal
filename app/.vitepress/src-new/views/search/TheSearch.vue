@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, watch, ref, onMounted, nextTick } from 'vue';
 
-import { getSearchData, getSearchCount, getRelevant } from '~@/api/api-search';
+import { getSearchData, getSearchCount, getRelevant, imageSearch } from '~@/api/api-search';
 
 import communityVersionData from '~@/data/download/download';
 
@@ -29,6 +29,9 @@ const pageSize = ref(12);
 // 搜索内容
 const searchValue = ref('');
 const currentSearchVal = ref('');
+const searchImage = ref<string>('');
+const isImageSearch = ref(false);
+const imageKeyword = ref<string>(''); // 后端返回的图片识别关键词
 
 const searchBannerRef = ref();
 
@@ -104,7 +107,7 @@ const docParams = computed(() => {
 // 获取 type 数量
 const countParams = computed(() => {
   return {
-    keyword: searchValue.value,
+    keyword: isImageSearch.value ? imageKeyword.value : searchValue.value,
     lang: locale.value,
     docsVersion: activeVersion.value,
     limit: [
@@ -165,8 +168,10 @@ function clearSearchInput() {
 
 function queryGetSoftware() {
   softwareList.value = [];
+  const keyword = isImageSearch.value ? imageKeyword.value : searchValue.value;
+  if (!keyword) return;
   getSoftwareDocs({
-    keyword: searchValue.value,
+    keyword: keyword,
     keywordType: 'name',
     pageNum: 1,
     pageSize: 6,
@@ -195,11 +200,74 @@ function getSussageData() {
     suggestList.value = res?.obj?.suggestList || [];
   });
 }
+function clearSearchResult() {
+  searchResultList.value = [];
+  if (currentTab.value === 'all') {
+    searchTypeCount.value = [];
+  }
+  suggestList.value = [];
+}
+
 // 获取搜索结果的数据
-const isLoading = ref(true);
+const isLoading = ref(false);
 // 获取搜索结果
 const queryGetSearchData = () => {
   isLoading.value = true;
+
+  // 如果是图片搜索，调用图片搜索 API
+  if (isImageSearch.value && searchImage.value) {
+    let limit: { type: string; version: string }[] = [];
+    if (activeVersion.value) {
+      if (currentTab.value === 'all') {
+        limit = [
+          { type: 'docs', version: activeVersion.value },
+          { type: 'packages', version: activeVersion.value },
+        ];
+      } else if (currentTab.value === 'other') {
+        limit = [{ type: 'packages', version: activeVersion.value }];
+      } else {
+        limit = [{ type: currentTab.value || 'docs', version: activeVersion.value }];
+      }
+    }
+
+    imageSearch({
+      lang: locale.value,
+      imageUrl: searchImage.value,
+      keyword: searchValue.value || undefined,
+      page: currentPage.value,
+      pageSize: pageSize.value,
+      type: searchType.value,
+      sort: activeSort.value,
+      limit: limit.length ? limit : undefined,
+    })
+      .then((res) => {
+        if (res.status === 200 && res.obj) {
+          if (lePadV.value && isPageCountChange.value) {
+            searchResultList.value.push(...res.obj.records);
+          } else {
+            searchResultList.value = res.obj.records;
+          }
+          if (res.obj.keyword) {
+            imageKeyword.value = res.obj.keyword;
+            queryGetSearchCount();
+            queryGetSoftware();
+          }
+        } else {
+          clearSearchResult();
+        }
+      })
+      .catch(() => {
+        clearSearchResult();
+      })
+      .finally(() => {
+        isPageCountChange.value = false;
+        isLoading.value = false;
+        flag.value = false;
+      });
+    return;
+  }
+
+  // 传统文本搜索逻辑
   // 版本为全部时 limit 不传
   if (!activeVersion.value) {
     docParams.value.limit = [];
@@ -242,7 +310,7 @@ const queryGetSearchData = () => {
           searchResultList.value = res.obj.records;
         }
       } else {
-        searchResultList.value = [];
+        clearSearchResult();
       }
     })
     .finally(() => {
@@ -255,44 +323,73 @@ const queryGetSearchData = () => {
 const flag = ref(false);
 // 获取搜索结果的所有内容
 function searchAll(valueChange?: boolean) {
-  if (searchValue.value) {
+  // 图片搜索或文本搜索
+  if (searchValue.value || isImageSearch.value) {
     currentPage.value = 1;
     // 是否重置tab
     if (valueChange) {
       currentTab.value = 'all';
       searchType.value = '';
     }
-    searchBannerRef.value.searchRecommendRef?.handleSearch(searchValue.value);
-    queryGetSearchCount();
-    queryGetSearchData();
-    queryGetSoftware();
+    if (searchValue.value) {
+      searchBannerRef.value.searchRecommendRef?.handleSearch(searchValue.value);
+    }
+    // 始终更新 URL，图片搜索（无文字）时也需要写入 type
     handleSelectChange(searchValue.value);
+    // 图片搜索时，queryGetSearchCount 和 queryGetSoftware 在 queryGetSearchData 的回调中执行
+    // 因为需要等待后端返回 keyword
+    if (!isImageSearch.value) {
+      queryGetSearchCount();
+      queryGetSoftware();
+    }
+    queryGetSearchData();
   } else {
     clearSearchInput();
   }
 }
 
 function handleSelectChange(val: string) {
-  history.pushState(
-    null,
-    '',
-    `?q=${encodeURIComponent(val)}&type=${currentTab.value}`
-  );
+  const params = new URLSearchParams();
+  if (val) params.set('q', val);
+  params.set('type', currentTab.value);
+  if (isImageSearch.value && searchImage.value) {
+    params.set('imageUrl', searchImage.value);
+  }
+  history.pushState(null, '', `?${params.toString()}`);
 }
 
 onMounted(() => {
   getVersionTag();
   if (getUrlParam('type')) {
-    currentTab.value = getUrlParam('type');
-    searchType.value = currentTab.value;
+    const typeParam = getUrlParam('type');
+    currentTab.value = typeParam;
+    searchType.value = typeParam === 'all' ? '' : typeParam;
   }
 
   replaceUrlParam('search', 'q');
+
+  // 检查 URL 是否有图片 OBS 链接
+  const urlImageUrl = getUrlParam('imageUrl');
+  if (urlImageUrl) {
+    isImageSearch.value = true;
+    searchImage.value = urlImageUrl;
+  }
+
   if (getUrlParam('q')) {
     searchValue.value = getUrlParam('q');
     currentSearchVal.value = searchValue.value;
   }
   searchAll();
+});
+
+// 图片被清除时，同步清理 URL 中的 imageUrl 参数
+watch(isImageSearch, (val) => {
+  if (!val) {
+    const params = new URLSearchParams(window.location.search);
+    params.delete('imageUrl');
+    params.delete('searchType');
+    history.replaceState(null, '', `?${params.toString()}`);
+  }
 });
 
 // ------------------------  导航分类 --------------------------
@@ -357,9 +454,11 @@ const pageSizeChange = () => {
 
 const searchStore = useSearchValue();
 
-// 移动端导航搜索事件
+// 移动端导航搜索事件（文字 + 图片搜索均通过 store 同步）
 searchStore.$subscribe((mutation, state) => {
   searchValue.value = state.searchValue;
+  searchImage.value = state.searchImage;
+  isImageSearch.value = state.isImageSearch;
   searchAll(true);
 });
 
@@ -389,6 +488,8 @@ const handleTabChange = () => {
       class="search-banner"
       v-model="searchValue"
       v-model:current-tab="currentTab"
+      v-model:search-image="searchImage"
+      v-model:is-image-search="isImageSearch"
       @update:current-tab="handleTabChange"
       @search="searchAll"
       ref="searchBannerRef"
@@ -417,6 +518,8 @@ const handleTabChange = () => {
       :search-type-count="searchTypeCount"
       :total="total"
       :sort-options="sortOptions"
+      :search-image="searchImage"
+      :is-image-search="isImageSearch"
     />
   </div>
 </template>
