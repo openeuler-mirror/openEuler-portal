@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { OFigure } from '@opensig/opendesign';
+import { OFigure, OButton } from '@opensig/opendesign';
 
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
@@ -27,12 +27,18 @@ onMounted(() => {
 
 <template>
   <div class="minisite-banner">
-    <div class="banner-bg" :style="{ backgroundImage: `url(${lePadV ? bannerData.bgMb : bannerData.bg})` }"></div>
+    <div class="banner-bg"></div>
     <div v-if="!lePadV" class="banner-content">
       <ContentWrapper data-aos="fade-up">
         <OFigure :src="bannerData.textImg" class="text-img" />
+        <OButton class="banner-btn" variant="solid" color="primary" size="large" :href="bannerData.href" target="_blank">
+          {{ bannerData.btn }}
+        </OButton>
       </ContentWrapper>
     </div>
+    <OButton v-else class="banner-btn" variant="solid" color="primary" size="medium" :href="bannerData.hrefMb" target="_blank">
+      {{ bannerData.btn }}
+    </OButton>
   </div>
 </template>
 
@@ -44,6 +50,7 @@ onMounted(() => {
   .banner-bg {
     height: 100%;
     margin: 0 auto;
+    background-image: url('../img//banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -69,6 +76,9 @@ onMounted(() => {
       width: auto;
     }
   }
+  .o-btn {
+    margin-top: 24px;
+  }
 }
 
 @include respond-to('<=laptop') {
@@ -89,7 +99,17 @@ onMounted(() => {
   .minisite-banner {
     height: 300px;
     .banner-bg {
-      background-position: center;
+      background-image: url('../img/banner-mb.jpg'), url('../img/mb.jpg');;
+      background-repeat: no-repeat, no-repeat;
+      background-size: auto 100%,cover, cover;
+      background-position: center, center;
+    }
+    .o-btn {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 12px;
+      --btn-min-width: 96px;
     }
   }
 }
