@@ -9,6 +9,13 @@ import type { Plugin } from 'vite';
 
 const execAsync = promisify(exec);
 
+export type ChangeFreq = 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+
+export interface PageInfo {
+  lastmod: number;
+  changefreq: ChangeFreq;
+}
+
 export interface LastModifiedPluginOptions {
   /** Absolute path to the git repository root.
    *  Default: 3 levels up from this file. */
@@ -21,6 +28,8 @@ export interface LastModifiedPluginOptions {
   outputFile?: string;
   /** Max number of concurrent `git log` processes. Default: 20. */
   concurrency?: number;
+  /** Number of recent commits to fetch per file for changefreq calculation. Default: 10. */
+  commitCount?: number;
   /** Glob patterns (relative to appDir) to exclude MD pages from analysis. */
   ignore?: string | string[];
   /** Glob patterns (relative to appDir) to exclude dependency files from traversal and timestamp calculation. */
@@ -32,12 +41,32 @@ function toFwdSlash(p: string): string {
   return p.replace(/\\/g, '/');
 }
 
+/**
+ * Derive a changefreq value from a sorted list of commit timestamps (ms).
+ * Uses the average interval between consecutive commits.
+ */
+function calcChangefreq(timestamps: number[]): ChangeFreq {
+  if (timestamps.length < 2) return 'never';
+  const sorted = [...timestamps].sort((a, b) => a - b);
+  let total = 0;
+  for (let i = 1; i < sorted.length; i++) {
+    total += sorted[i] - sorted[i - 1];
+  }
+  const avgDays = total / (sorted.length - 1) / 86_400_000;
+  if (avgDays <= 1) return 'daily';
+  if (avgDays <= 7) return 'weekly';
+  if (avgDays <= 30) return 'monthly';
+  if (avgDays <= 365) return 'yearly';
+  return 'never';
+}
+
 export default function viteLastModifiedPlugin(options: LastModifiedPluginOptions = {}): Plugin {
   // Always store as forward-slash paths to match Vite module IDs
   const gitRoot = toFwdSlash(options.gitRoot ?? path.resolve(__dirname, '../../../'));
   const appDir = toFwdSlash(options.appDir ?? path.resolve(__dirname, '../../'));
   const outputFile = options.outputFile ?? path.resolve(__dirname, '../last-modified.json');
   const concurrency = options.concurrency ?? 20;
+  const commitCount = options.commitCount ?? 10;
   const ignorePatterns = options.ignore
     ? Array.isArray(options.ignore) ? options.ignore : [options.ignore]
     : [];
@@ -45,7 +74,7 @@ export default function viteLastModifiedPlugin(options: LastModifiedPluginOption
     ? Array.isArray(options.ignoreDeps) ? options.ignoreDeps : [options.ignoreDeps]
     : [];
 
-  const result: Record<string, number> = {};
+  const result: Record<string, PageInfo> = {};
   let isSsr: boolean;
 
   return {
@@ -59,11 +88,11 @@ export default function viteLastModifiedPlugin(options: LastModifiedPluginOption
       if (isSsr) {
         return;
       }
-      // Per-build cache and concurrency limiter
-      const cache = new Map<string, Promise<number>>();
+      // Per-build cache: file id -> Promise<timestamps[]> (ms, newest first)
+      const cache = new Map<string, Promise<number[]>>();
       const limit = pLimit(concurrency);
 
-      const getGitTimestamp = (absolutePath: string): Promise<number> => {
+      const getGitTimestamps = (absolutePath: string): Promise<number[]> => {
         if (cache.has(absolutePath)) {
           return cache.get(absolutePath)!;
         }
@@ -75,13 +104,14 @@ export default function viteLastModifiedPlugin(options: LastModifiedPluginOption
               : absolutePath;
             const rel = path.relative(gitRoot, cleanPath).replace(/\\/g, '/');
             const { stdout } = await execAsync(
-              `git log --follow -1 --format=%at -- "${rel}"`,
+              `git log --follow -n ${commitCount} --format=%at -- "${rel}"`,
               { cwd: gitRoot },
             );
-            const out = stdout.trim();
-            return out ? parseInt(out, 10) * 1000 : 0;
+            return stdout.trim()
+              ? stdout.trim().split('\n').map((l) => parseInt(l, 10) * 1000)
+              : [];
           } catch {
-            return 0;
+            return [];
           }
         });
         cache.set(absolutePath, promise);
@@ -146,13 +176,15 @@ export default function viteLastModifiedPlugin(options: LastModifiedPluginOption
           allFiles.add(dep);
         }
       }
-      await Promise.all([...allFiles].map(getGitTimestamp));
+      await Promise.all([...allFiles].map(getGitTimestamps));
 
-      // Phase 3: compute max timestamp per MD page (git results already cached)
+      // Phase 3: compute lastmod + changefreq per MD page (git results already cached)
       for (const [mdFile, deps] of mdDepMap) {
         const relKey = mdFile.slice(appDir.length).replace(/^\//, '');
-        const times = await Promise.all([...deps].map(getGitTimestamp));
-        result[relKey] = Math.max(0, ...times);
+        const allTimestamps = (await Promise.all([...deps].map(getGitTimestamps))).flat();
+        const lastmod = allTimestamps.length > 0 ? Math.max(...allTimestamps) : 0;
+        const changefreq = calcChangefreq(allTimestamps);
+        result[relKey] = { lastmod, changefreq };
       }
     },
 

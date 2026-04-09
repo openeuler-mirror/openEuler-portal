@@ -12,22 +12,78 @@ import path from 'node:path';
 import { existsSync, readFileSync} from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import generalJsonLd from './jsonld/general';
 
 const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
-
-const JSONLD_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'sigs-jsonld');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const JSONLD_DIR = path.resolve(__dirname, 'jsonld');
 /**
- * 为sig详情页设置title和JSON-LD
+ * 设置JSON-LD
  */
-const sigDetailPageAddTitleAndJSONLD = async (pageData: PageData) => {
-  if (!pageData.params?.sig) return;
-  const content = await readFile(path.join(JSONLD_DIR, `${pageData.params.sig}.jsonld.json`), { encoding: 'utf8' });
-  pageData.title = pageData.params.sig;
-  (pageData.frontmatter.head ??= []).push([
-    'script',
-    { type: 'application/ld+json' },
-    content
-  ]);
+const setJSONLD = async (pageData: PageData, pagePath: string) => {
+  if (pageData.frontmatter.sigPageType === 'detail' && pageData.params?.sig) {
+    const content = await readFile(path.join(JSONLD_DIR, `sigs/${pageData.params.sig}.jsonld.json`), { encoding: 'utf8' });
+    (pageData.frontmatter.head ??= []).push([
+      'script',
+      { type: 'application/ld+json' },
+      content
+    ]);
+    return;
+  }
+  const content = generalJsonLd[pagePath]
+  if (content) {
+    (pageData.frontmatter.head ??= []).push([
+      'script',
+      { type: 'application/ld+json' },
+      content
+    ]);
+  }
+}
+
+const setTdk = (pageData: PageData, pagePath: string) => {
+  const locale = pageData.filePath.slice(0, 2) as 'zh' | 'en';
+  const tdkInfo = tdks[locale]?.[pagePath];
+  if (pagePath === 'zh') {
+    pageData.titleTemplate = 'openEuler社区官网';
+  } else if (pagePath === 'en') {
+    pageData.titleTemplate = 'openEuler';
+  } else {
+    pageData.titleTemplate = `:title | ${tdks.titleSuffix[locale]}`;
+  }
+  if (!tdkInfo) {
+    if (isBlog.test(pagePath)) {
+      const frontmatter = pageData.frontmatter;
+      const description = frontmatter?.summary || frontmatter?.Summary;
+      if (!pageData.description && description) {
+        pageData.description = description;
+      }
+    }
+    return;
+  }
+  const { title, description, keywords } = tdkInfo;
+  if (description) {
+    pageData.description = description;
+  }
+  if (title) {
+    pageData.title = title;
+  }
+  if (keywords) {
+    pageData.frontmatter.head ??= [];
+    const keywordsIndex = pageData.frontmatter.head.findIndex(
+      (item: HeadConfig) => item[1]?.name === 'keywords'
+    );
+    if (keywordsIndex !== -1) {
+      pageData.frontmatter.head.splice(keywordsIndex, 1, [
+        'meta',
+        { name: 'keywords', content: keywords },
+      ]);
+      return;
+    }
+    pageData.frontmatter.head.push([
+      'meta',
+      { name: 'keywords', content: keywords },
+    ]);
+  }
 }
 
 
@@ -50,12 +106,12 @@ const config: UserConfig = {
     transformItems: sitemapItemTransformer(
       items => {
         try {
-          const lastmodeTimeStamp = JSON.parse(readFileSync('./last-modified.json', 'utf-8')) as Record<string, number>;
+          const lastmodeTimeStamp = JSON.parse(readFileSync(path.resolve(__dirname, './last-modified.json'), 'utf-8')) as Record<string, number>;
           for (const item of items) {
             const key = item.url.endsWith('.html') ? item.url.replace('.html', '.md') : (item.url.endsWith('/') ? `${item.url}index.md` : `${item.url}/index.md`);
-            const timestamp = lastmodeTimeStamp[key];
-            if (timestamp) {
-              item.lastmod = timestamp;
+            const generatedItem = lastmodeTimeStamp[key];
+            if (generatedItem) {
+              Object.assign(item, generatedItem);
             }
           }
         } catch {}
@@ -124,9 +180,6 @@ const config: UserConfig = {
   appearance: false, // enable dynamic scripts for dark mode
   titleTemplate: false, //  vitepress supports pageTitileTemplate since 1.0.0
   async transformPageData(pageData) {
-    if (pageData.frontmatter.sigPageType === 'detail') {
-      await sigDetailPageAddTitleAndJSONLD(pageData);
-    }
     const filePath = pageData.filePath;
     let lookupKey: string;
     if (filePath.endsWith('index.md')) {
@@ -134,49 +187,8 @@ const config: UserConfig = {
     } else {
       lookupKey = encodeURI(filePath.slice(0, -2).concat('html'));
     }
-    const locale = filePath.slice(0, 2) as 'zh' | 'en';
-    const tdkInfo = tdks[locale]?.[lookupKey];
-    if (lookupKey === 'zh') {
-      pageData.titleTemplate = 'openEuler社区官网';
-    } else if (lookupKey === 'en') {
-      pageData.titleTemplate = 'openEuler';
-    } else {
-      pageData.titleTemplate = `:title | ${tdks.titleSuffix[locale]}`;
-    }
-    if (!tdkInfo) {
-      if (isBlog.test(lookupKey)) {
-        const frontmatter = pageData.frontmatter;
-        const description = frontmatter?.summary || frontmatter?.Summary;
-        if (!pageData.description && description) {
-          pageData.description = description;
-        }
-      }
-      return;
-    }
-    const { title, description, keywords } = tdkInfo;
-    if (description) {
-      pageData.description = description;
-    }
-    if (title) {
-      pageData.title = title;
-    }
-    if (keywords) {
-      pageData.frontmatter.head ??= [];
-      const keywordsIndex = pageData.frontmatter.head.findIndex(
-        (item: HeadConfig) => item[1]?.name === 'keywords'
-      );
-      if (keywordsIndex !== -1) {
-        pageData.frontmatter.head.splice(keywordsIndex, 1, [
-          'meta',
-          { name: 'keywords', content: keywords },
-        ]);
-        return;
-      }
-      pageData.frontmatter.head.push([
-        'meta',
-        { name: 'keywords', content: keywords },
-      ]);
-    }
+    await setJSONLD(pageData, lookupKey);
+    setTdk(pageData, lookupKey);
   },
   locales: {
     root: {
