@@ -329,6 +329,7 @@ defineExpose({ searchRecommendRef });
             ref="searchRecommendRef"
             @search-click="handleSearchHistory"
             :value="modelValue"
+            :lang="locale"
           />
         </ClientOnly>
       </div>

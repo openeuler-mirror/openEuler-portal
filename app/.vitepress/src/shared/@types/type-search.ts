@@ -122,6 +122,8 @@ export interface MeetupDataT {
 export interface SearchRecommendT {
   key: string;
   count: number;
+  path?: string;
+  type?: string;
 }
 
 export interface ShowcaseDataT {

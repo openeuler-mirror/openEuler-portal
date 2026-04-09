@@ -40,6 +40,9 @@ export default {
   pageX: '第{page}页',
   imageUploadTooltip: '一键解读图片内容，支持jpg、png、jepg等，最大10M',
   imageUploadFailed: '图片上传失败，请检查网络后重试',
+  onestep: '导航搜索直达',
+  noData: '暂无数据',
+  searchSuggest: '搜索建议',
   searchPlaceholder: '输入文字搜索，支持粘贴或上传图片搜索',
   imagePlaceholder: '按下回车立即搜索，或补充更多信息进行搜索',
 };
