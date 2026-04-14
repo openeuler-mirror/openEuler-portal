@@ -221,6 +221,11 @@ const config: UserConfig = {
   },
   cleanUrls: true,
   vite: {
+    resolve: {
+      alias: {
+        '#cms': resolve(__dirname, '../../.cms/export/index.client.ts'),
+      },
+    },
     plugins: [
       viteLastModifiedPlugin({
         ignore: ['**/blog/**', '**/news/**'],
