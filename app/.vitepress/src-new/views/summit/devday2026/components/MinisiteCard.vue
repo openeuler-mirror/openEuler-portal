@@ -3,6 +3,8 @@ import { computed } from 'vue';
 import { ORow, OCol, OCard, OLink, OIcon } from '@opensig/opendesign';
 
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
+import IconAddress from '~icons/app-new/icon-address.svg';
+import IconTime from '~icons/app-new/icon-time.svg';
 
 import { useCommon } from '@/stores/common';
 import { useScreen } from '~@/composables/useScreen';
@@ -39,6 +41,16 @@ const gap = computed(() => {
           <template #card>
             <div class="card-content" :class="`card-content-${commonStore.theme}`">
               <p class="card-title">{{ item.title }}</p>
+              <div class="card-info">
+                <div class="item-info">
+                  <OIcon><IconAddress /></OIcon>
+                  <span>{{ item.address }}</span>
+                </div>
+                <div class="item-info">
+                  <OIcon><IconTime /></OIcon>
+                  <span>{{ item.time }}</span>
+                </div>
+              </div>
               <p v-for="(desc, d) in item.description" :key="d" class="card-desc">{{ desc }}</p>
               <div class="card-link">
                 <OLink color="primary" :href="item.url" target="_blank" hover-underline>
@@ -68,7 +80,7 @@ const gap = computed(() => {
 }
 .card-content {
   padding: 24px;
-  height: 270px;
+  height: 294px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -96,8 +108,25 @@ const gap = computed(() => {
 .card-title {
   color: var(--o-color-info1);
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   @include h3;
+}
+.card-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.item-info {
+  display: flex;
+  align-items: center;
+  color: var(--o-color-info1);
+  @include tip1;
+  .o-icon {
+    margin-right: 4px;
+  }
+}
+.item-info + .item-info {
+  margin-left: 16px;
 }
 .card-desc {
   color: var(--o-color-info2);

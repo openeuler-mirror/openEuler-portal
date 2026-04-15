@@ -3,27 +3,21 @@ import ContentWrapper from '~@/components/ContentWrapper.vue';
 import MinisiteBanner from './components/MinisiteBanner.vue';
 import MinisiteIntroduce from './components/MinisiteIntroduce.vue';
 import MinisiteCard from './components/MinisiteCard.vue';
-import MinisiteCardLong from './components/MinisiteCardLong.vue';
+import MinisiteAgenda from './components/MinisiteAgenda.vue';
 import MinisiteReview from './components/MinisiteReview.vue';
-
-import showcaseQRCode from './img/showcase.png';
-import posterQRCode from './img/poster.png';
-import partnerQRCode from './img/partner.png';
 
 import data from './data/data_zh';
 
-import devday2026 from '../../../../../../.cms/export/devday2026.json';
+import { devday2026s } from '#cms'
 </script>
 
 <template>
   <MinisiteBanner :banner-data="data.banner" />
-  <ContentWrapper v-if="devday2026" :vertical-padding="['0', '72px']">
-    <MinisiteIntroduce :introduce-data="devday2026.data[0].floor[0]" />
-    <MinisiteCard :card-data="devday2026.data[0].floor[1]" />
-    <MinisiteCardLong :card-data="devday2026.data[0].floor[2]" :img="showcaseQRCode" />
-    <MinisiteCardLong :card-data="devday2026.data[0].floor[3]" :img="posterQRCode" />
-    <MinisiteCardLong :card-data="devday2026.data[0].floor[4]" :img="partnerQRCode" />
-    <MinisiteReview :review-data="devday2026.data[0].floor[5]" />
+  <ContentWrapper v-if="devday2026s" :vertical-padding="['0', '72px']">
+    <MinisiteIntroduce :introduce-data="devday2026s[0].floor" />
+    <MinisiteCard :card-data="devday2026s[1].floor" />
+    <MinisiteAgenda :agenda-data="devday2026s[2].floor" />
+    <MinisiteReview :review-data="devday2026s[3].floor" />
   </ContentWrapper>
 </template>
 

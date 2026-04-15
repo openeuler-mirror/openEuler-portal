@@ -3,24 +3,25 @@
   "name": "Developer Day 2026",
   "slug": "devday2026",
   "description": "",
+  "kind": "collection",
   "fields": [
     {
       "key": "floor",
       "label": "楼层",
       "type": "component",
       "required": false,
-      "multiple": true,
+      "multiple": false,
       "componentFields": [
         {
-          "key": "id",
-          "label": "id",
+          "key": "title",
+          "label": "标题",
           "type": "string",
           "required": false,
           "multiple": false
         },
         {
-          "key": "title",
-          "label": "标题",
+          "key": "id",
+          "label": "id",
           "type": "string",
           "required": false,
           "multiple": false
@@ -54,8 +55,15 @@
               "multiple": true
             },
             {
+              "key": "address",
+              "label": "地址",
+              "type": "string",
+              "required": false,
+              "multiple": false
+            },
+            {
               "key": "time",
-              "label": "截止时间",
+              "label": "时间",
               "type": "string",
               "required": false,
               "multiple": false
@@ -101,6 +109,59 @@
           ]
         },
         {
+          "key": "agenda",
+          "label": "会议议程",
+          "type": "component",
+          "required": false,
+          "multiple": true,
+          "componentFields": [
+            {
+              "key": "date",
+              "label": "日期",
+              "type": "string",
+              "required": false,
+              "multiple": false
+            },
+            {
+              "key": "content",
+              "label": "会议内容",
+              "type": "component",
+              "required": false,
+              "multiple": true,
+              "componentFields": [
+                {
+                  "key": "time",
+                  "label": "时间",
+                  "type": "string",
+                  "required": false,
+                  "multiple": false
+                },
+                {
+                  "key": "title",
+                  "label": "标题",
+                  "type": "string",
+                  "required": false,
+                  "multiple": false
+                },
+                {
+                  "key": "name",
+                  "label": "演讲人",
+                  "type": "string",
+                  "required": false,
+                  "multiple": false
+                },
+                {
+                  "key": "post",
+                  "label": "演讲人头衔",
+                  "type": "string",
+                  "required": false,
+                  "multiple": false
+                }
+              ]
+            }
+          ]
+        },
+        {
           "key": "links",
           "label": "链接",
           "type": "component",
@@ -126,6 +187,6 @@
       ]
     }
   ],
-  "createdAt": "2026-04-03T07:46:37.779Z",
-  "updatedAt": "2026-04-03T07:46:37.779Z"
+  "createdAt": "2026-04-14T03:03:17.447Z",
+  "updatedAt": "2026-04-14T06:07:01.821Z"
 }
