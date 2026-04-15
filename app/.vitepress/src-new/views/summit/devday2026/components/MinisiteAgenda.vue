@@ -3,6 +3,10 @@ import { OIcon } from '@opensig/opendesign';
 
 import IconTime from '~icons/app-new/icon-time.svg';
 
+import { useCommon } from '@/stores/common';
+
+const commonStore = useCommon();
+
 defineProps({
   agendaData: {
     type: Object,
@@ -17,7 +21,7 @@ defineProps({
     <p class="floor-title">{{ agendaData.title }}</p>
     <div v-for="item in agendaData.agenda" :key="item.date" class="agenda-box">
       <p class="date">{{ item.date }}</p>
-      <div class="agenda-card">
+      <div class="agenda-card" :class="`agenda-card-${commonStore.theme}`">
         <div v-for="(content, i) in item.content" :key="i" class="item-agenda">
           <div class="time">
             <OIcon><IconTime /></OIcon>
@@ -55,15 +59,24 @@ defineProps({
     .agenda-card {
       background-image: url('../img/agenda_bg1.png'), linear-gradient(135deg, rgba(var(--o-mixedgray-1), 1), rgba(245,249,255,1) 100%);
     }
+    .agenda-card-dark {
+      background-image: url('../img/agenda_bg1.png'), linear-gradient(135deg, rgba(var(--o-mixedgray-4), 1), rgba(25, 37, 66, 1) 100%);
+    }
   }
   &:nth-of-type(2) {
     .agenda-card {
       background-image: url('../img/agenda_bg2.png'), linear-gradient(135deg, rgba(var(--o-mixedgray-1), 1), rgba(245,249,255,1) 100%);
     }
+    .agenda-card-dark {
+      background-image: url('../img/agenda_bg2.png'), linear-gradient(135deg, rgba(var(--o-mixedgray-4), 1), rgba(25, 37, 66, 1) 100%);
+    }
   }
   &:nth-of-type(3) {
     .agenda-card {
       background-image: url('../img/agenda_bg3.png'), linear-gradient(135deg, rgba(var(--o-mixedgray-1), 1), rgba(245,249,255,1) 100%);
+    }
+    .agenda-card-dark {
+      background-image: url('../img/agenda_bg3.png'), linear-gradient(135deg, rgba(var(--o-mixedgray-4), 1), rgba(25, 37, 66, 1) 100%);
     }
   }
 }
