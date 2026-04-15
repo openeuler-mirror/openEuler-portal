@@ -542,6 +542,12 @@ export default {
             import.meta.env.VITE_MAIN_DOMAIN_URL
           }/whitepaper/openEuler %E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E4%BB%8B%E7%BB%8D.pdf`,
         },
+        {
+          NAME: '《Linux Magazine》权威解读：openEuler 焦点指南',
+          URL: `${
+            import.meta.env.VITE_MAIN_DOMAIN_URL
+          }/category/technology/Linux Magazine Focus Guide-openEuler.pdf`,
+        },
       ],
     },
     {
