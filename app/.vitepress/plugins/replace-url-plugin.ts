@@ -60,6 +60,8 @@ export default function replaceUrlPlugin() {
         join(process.cwd(), 'app/.vitepress/dist/file/zh/legal'),
       ];
 
+      const ROBOTS_TXT = join(process.cwd(), 'app/.vitepress/dist/robots.txt');
+
       await Promise.all(
         DIRS_TO_PROCESS.map(async (dir) => {
           if (!existsSync(dir)) {
@@ -96,6 +98,23 @@ export default function replaceUrlPlugin() {
           });
         })
       );
+
+      if (existsSync(ROBOTS_TXT)) {
+        try {
+          const content = readFileSync(ROBOTS_TXT, 'utf8');
+          const regex = new RegExp(sourceUrl, 'g');
+          const newContent = content.replace(regex, envVar);
+
+          if (newContent !== content) {
+            writeFileSync(ROBOTS_TXT, newContent);
+            console.log(`[replaceUrlPlugin] 替换文件: ${ROBOTS_TXT}`);
+          }
+        } catch (err) {
+          console.error(
+            `[replaceUrlPlugin] 处理文件 ${ROBOTS_TXT} 失败: ${err.message}`
+          );
+        }
+      }
     },
   };
 }
