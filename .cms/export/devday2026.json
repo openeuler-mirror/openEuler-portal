@@ -64,24 +64,24 @@
             "time": "上午"
           },
           {
-            "title": "全场景&Agent Infra",
-            "description": [
-              "探讨openEuler在云原生、大数据、数据库等领域的技术生态满足度提升、技术创新、领域Top开源社区集成和联合创新等相关内容，为全场景领域开发者和用户提供极致体验；探索AI Agent时代的安全沙箱等技术创新，打造可靠的Agent基础设施。"
-            ],
-            "address": "多功能厅7 + 8",
-            "time": "上午",
-            "label": "查看议题",
-            "url": "https://etherpad.openeuler.org/p/ODD26-SIG-CloudNativeAgent"
-          },
-          {
             "title": "AI时代高效开发与生态包管理",
             "description": [
               "面向 AI 时代开发者，围绕社区基础设施、构建测试服务、工具链，优化“基于 openEuler 做开发”的体验，并探讨软件包管理流程与技术改进。"
             ],
-            "address": "多功能厅5",
-            "time": "下午",
+            "address": "多功能厅7 + 8",
+            "time": "上午",
             "url": "https://etherpad.openeuler.org/p/ODD26-SIG-DevPackage",
             "label": "查看议题"
+          },
+          {
+            "title": "全场景&Agent Infra",
+            "description": [
+              "探讨openEuler在云原生、大数据、数据库等领域的技术生态满足度提升、技术创新、领域Top开源社区集成和联合创新等相关内容，为全场景领域开发者和用户提供极致体验；探索AI Agent时代的安全沙箱等技术创新，打造可靠的Agent基础设施。"
+            ],
+            "address": "多功能厅5",
+            "time": "下午",
+            "label": "查看议题",
+            "url": "https://etherpad.openeuler.org/p/ODD26-SIG-CloudNativeAgent"
           },
           {
             "title": "AI使能安全与漏洞处理",
@@ -106,7 +106,7 @@
         ]
       },
       "createdAt": "2026-04-14T03:31:17.658Z",
-      "updatedAt": "2026-04-15T01:47:23.495Z",
+      "updatedAt": "2026-04-21T09:32:58.047Z",
       "publishedAt": "2026-04-14T03:33:24.307Z",
       "locale": "zh"
     },
@@ -121,25 +121,31 @@
             "date": "上午",
             "content": [
               {
-                "time": "9:00-9:05",
+                "time": "8:30-8:35",
                 "title": "开场",
                 "name": "",
                 "post": ""
               },
               {
+                "title": "云开天地阔，再赴新智程",
+                "name": "刘飞",
+                "post": "开放原子开源欧拉委员会执行总监",
+                "time": "8:35-8:40"
+              },
+              {
+                "time": "8:40-9:20",
                 "title": "面向AI时代的操作系统技术创新解读与展示",
                 "name": "胡欣蔚",
-                "post": "OpenAtom openEuler 社区技术委员会主席",
-                "time": "9:05-9:50"
+                "post": "开放原子开源欧拉技术委员会主席"
               },
               {
-                "time": "9:50-10:00",
+                "time": "9:20-9:30",
                 "title": "SIG Gathering 整体介绍",
                 "name": "郑振宇",
-                "post": "OpenAtom openEuler 社区运营组组长"
+                "post": "开放原子开源欧拉社区运营组组长"
               },
               {
-                "time": "10:00-12:00",
+                "time": "9:30-12:00",
                 "title": "SIG Gathering 专题研讨"
               }
             ]
@@ -181,7 +187,7 @@
         ]
       },
       "createdAt": "2026-04-14T03:31:56.481Z",
-      "updatedAt": "2026-04-15T07:27:04.731Z",
+      "updatedAt": "2026-04-21T11:35:34.965Z",
       "publishedAt": "2026-04-14T03:33:24.307Z",
       "locale": "zh"
     },
