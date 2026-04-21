@@ -178,20 +178,19 @@ const reportIntroLinkClick = (ev: Event) => {
 
 <style scoped lang="scss">
 :deep(.banner-level3 .wrap) {
+  height: 280px;
   .banner-text {
     max-width: 60%;
     .banner-title {
-      @include display2;
       color: var(--o-color-black);
+      @include display2;
     }
     .banner-subtitle {
-      @include text2;
       color: var(--o-color-black);
       margin-top: var(--o-gap-2);
+      @include text2;
     }
   }
-
-  height: 280px;
 
   @media screen and (max-width: 1680px) {
     height: 220px;

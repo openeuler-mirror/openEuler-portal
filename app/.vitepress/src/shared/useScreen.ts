@@ -1,13 +1,12 @@
 import { computed, ref, reactive, onMounted, nextTick, onUnmounted } from 'vue';
-/* eslint-disable no-unused-vars */
+
 export enum Size {
   Phone = 'phone',
   PadV = 'pad_v',
   PadH = 'pad_h',
   Laptop = 'laptop',
 }
-// Now, we enable the no-unused-vars rule again
-/* eslint-enable no-unused-vars */
+
 export type ScreenSizeT =
   | typeof Size.Phone
   | Size.PadV

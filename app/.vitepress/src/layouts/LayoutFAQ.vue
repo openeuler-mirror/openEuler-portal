@@ -58,7 +58,7 @@ const IconMenuShow = computed(() => {
         <h2 class="faq-title">{{ i18n.faq.faqTitle }}</h2>
         <div class="toc-box">
           <a
-            v-for="(item, index) in tocInfo"
+            v-for="item in tocInfo"
             :key="item.label"
             class="toc-item"
             :class="[{ active: item.link === activeId }]"
@@ -89,7 +89,7 @@ const IconMenuShow = computed(() => {
           </h2>
           <div class="toc-box">
             <a
-              v-for="(item, index) in tocInfo"
+              v-for="item in tocInfo"
               :key="item.label"
               class="toc-item"
               :class="[{ active: item.link === activeId }]"

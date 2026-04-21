@@ -50,7 +50,7 @@ function messageEvent() {
       let data = '';
       try {
         data = JSON.parse(event.data);
-      } catch (e) {
+      } catch {
         data = event.data;
       }
       // data.state=2,直播结束

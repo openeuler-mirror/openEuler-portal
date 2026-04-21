@@ -203,9 +203,9 @@ const onClickNav = (item: any) => {
     .item-desc {
       color: var(--o-color-info2);
       margin: 0;
-      @include tip2;
-      @include text-truncate(2);
       word-break: normal;
+      @include text-truncate(2);
+      @include tip2;
     }
   }
 
@@ -242,9 +242,9 @@ const onClickNav = (item: any) => {
   margin-top: var(--o-gap-3);
 
   .content-subtitle {
-    @include text2;
     font-weight: 500;
     color: var(--o-color-primary1);
+    @include text2;
   }
 
   .content-tag {
@@ -259,9 +259,9 @@ const onClickNav = (item: any) => {
       color: var(--o-color-info2);
       margin-top: var(--o-gap-1);
       text-align: justify;
-      @include text1;
-      @include text-truncate(2);
       word-break: normal;
+      @include text-truncate(2);
+      @include text1;
     }
   }
 

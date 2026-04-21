@@ -298,22 +298,22 @@ onUnmounted(() => {
     padding: 24px 24px 32px;
   }
   .tour-title {
-    @include tip1;
     font-weight: 500;
+    @include tip1;
   }
   .tour-desc {
-    @include tip2;
     margin-top: 16px;
     color: var(--o-color-info2);
+    @include tip2;
   }
   .tour-extra {
-    @include tip2;
     font-weight: 500;
     margin-top: 16px;
+    @include tip2;
   }
   .indicator-text {
-    @include tip2;
     color: var(--o-color-info4);
+    @include tip2;
   }
 
   .tour-footer {
@@ -341,18 +341,18 @@ onUnmounted(() => {
     }
   }
   .prev-step {
-    @include tip2;
     margin-right: 14px;
     color: var(--o-color-info3);
     cursor: pointer;
+    @include tip2;
     @include hover {
       color: var(--o-color-info1);
     }
   }
   .next-step {
-    @include tip2;
     padding: 13px 11px;
     border-radius: var(--o-radius-l);
+    @include tip2;
   }
 
   .el-tour__footer {
@@ -405,25 +405,24 @@ onUnmounted(() => {
   .title {
     display: flex;
     align-items: center;
-    @include tip1;
     color: var(--o-color-info1);
     font-weight: 500;
+    @include tip1;
     img {
       width: 118px;
       margin-left: 8px;
     }
   }
   .desc {
-    @include tip2;
     color: var(--o-color-info2);
     margin-top: 20px;
+    @include tip2;
   }
   .tab {
     margin-top: 20px;
   }
   .item-tab {
     width: 100%;
-    @include text1;
     color: var(--o-color-info1);
     border-radius: var(--o-radius-xs);
     margin-top: 4px;
@@ -431,6 +430,7 @@ onUnmounted(() => {
     padding: 8px 24px;
     cursor: pointer;
     transition: all var(--o-duration-s) var(--o-easing-standard);
+    @include text1;
     &.item-tab-active {
       color: var(--o-color-info1-inverse);
       background-color: var(--o-color-link1);

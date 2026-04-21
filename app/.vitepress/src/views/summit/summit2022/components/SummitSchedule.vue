@@ -100,9 +100,6 @@ function changeIndexShow(index: number) {
     align-items: center;
     min-height: 64px;
     position: relative;
-    & + .data-item {
-      border-top: 1px solid var(--e-color-border2);
-    }
     @media screen and (max-width: 1328px) {
       grid-template-columns: 192px 450px 400px;
     }
@@ -111,6 +108,9 @@ function changeIndexShow(index: number) {
       padding: 6px 0;
       min-height: 36px;
       position: static;
+    }
+    & + .data-item {
+      border-top: 1px solid var(--e-color-border2);
     }
     &:hover {
       background-color: var(--e-color-bg4);

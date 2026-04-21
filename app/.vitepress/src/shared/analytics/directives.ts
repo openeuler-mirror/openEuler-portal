@@ -7,19 +7,24 @@ interface AnalyzeDataInternal {
   properties?: Record<string, any>;
 }
 
-type AnalyzeData = AnalyzeDataInternal | AnalyzeDataInternal['properties'] | undefined;
+type AnalyzeData =
+  | AnalyzeDataInternal
+  | AnalyzeDataInternal['properties']
+  | undefined;
 
 const fromBubble = {};
 
 /**
  * 判断变量类型是否为对象
  */
-const isObj = (val: any): val is Record<string, any> => typeof val === 'object' && val !== null;
+const isObj = (val: any): val is Record<string, any> =>
+  typeof val === 'object' && val !== null;
 
 /**
  * 判断事件是否来自子元素自定义指令的冒泡
  */
-const isFromBubble = (ev: Event): ev is CustomEvent => ev instanceof CustomEvent && fromBubble === ev.detail?.fromBubble;
+const isFromBubble = (ev: Event): ev is CustomEvent =>
+  ev instanceof CustomEvent && fromBubble === ev.detail?.fromBubble;
 
 /**
  * 将元素与所监听的事件和指令传值绑定
@@ -41,7 +46,11 @@ const getDirectiveBindingValue = (el: HTMLElement, event: string) => {
   return bindingVal;
 };
 
-const dispatchBubbleCustomEvent = (el: HTMLElement, event: string, data: any) => {
+const dispatchBubbleCustomEvent = (
+  el: HTMLElement,
+  event: string,
+  data: any
+) => {
   el.dispatchEvent(
     new CustomEvent(event, {
       detail: { data, fromBubble },
@@ -52,12 +61,18 @@ const dispatchBubbleCustomEvent = (el: HTMLElement, event: string, data: any) =>
 
 const handledEventSet = new WeakSet<Event>();
 
-export const vAnalytics: Directive<HTMLElement, AnalyzeData | ((ev: Event) => AnalyzeData) | undefined> = {
+export const vAnalytics: Directive<
+  HTMLElement,
+  AnalyzeData | ((ev: Event) => AnalyzeData) | undefined
+> = {
   mounted(el, binding) {
     const originalEvent = binding.arg || 'click';
 
     const isBubble = binding.modifiers.bubble;
-    const listeningEvent = isBubble || binding.modifiers.catchBubble ? '_v-analytics_' + originalEvent : originalEvent;
+    const listeningEvent =
+      isBubble || binding.modifiers.catchBubble
+        ? '_v-analytics_' + originalEvent
+        : originalEvent;
 
     if (isBubble && !binding.modifiers.noTrigger) {
       // 如果指令被设置为冒泡类型，且在当前元素上触发了事件，则分发一个自定义事件
@@ -69,7 +84,8 @@ export const vAnalytics: Directive<HTMLElement, AnalyzeData | ((ev: Event) => An
         }
         handledEventSet.add(ev);
         const bindingValue = getDirectiveBindingValue(el, listeningEvent);
-        const currentData = typeof bindingValue === 'function' ? bindingValue(ev) : bindingValue;
+        const currentData =
+          typeof bindingValue === 'function' ? bindingValue(ev) : bindingValue;
         if (!isObj(currentData)) {
           return;
         }
@@ -87,7 +103,8 @@ export const vAnalytics: Directive<HTMLElement, AnalyzeData | ((ev: Event) => An
     el.addEventListener(listeningEvent, (ev: Event) => {
       // 获取指令传值
       const bindingValue = getDirectiveBindingValue(el, listeningEvent);
-      const currentData = typeof bindingValue === 'function' ? bindingValue(ev) : bindingValue;
+      const currentData =
+        typeof bindingValue === 'function' ? bindingValue(ev) : bindingValue;
       if (!isObj(currentData)) {
         return;
       }
@@ -115,11 +132,19 @@ export const vAnalytics: Directive<HTMLElement, AnalyzeData | ((ev: Event) => An
               ...ev.detail.data,
             },
           } as AnalyzeDataInternal;
-          oaReport(reportData.event || originalEvent, reportData.properties, reportData.service);
+          oaReport(
+            reportData.event || originalEvent,
+            reportData.properties,
+            reportData.service
+          );
         }
       } else {
         // 普通地触发上报
-        oaReport(currentData.event || originalEvent, currentData.properties, currentData.service);
+        oaReport(
+          currentData.event || originalEvent,
+          currentData.properties,
+          currentData.service
+        );
       }
     });
     // 以dom元素为键，{ event: binding.value }为值存入weakMap中
@@ -133,7 +158,10 @@ export const vAnalytics: Directive<HTMLElement, AnalyzeData | ((ev: Event) => An
   updated(el, binding) {
     // 自定义指令
     const event = binding.arg || 'click';
-    const listeningEvent = binding.modifiers.bubble || binding.modifiers.catchBubble ? '_v-analytics_' + event : event;
+    const listeningEvent =
+      binding.modifiers.bubble || binding.modifiers.catchBubble
+        ? '_v-analytics_' + event
+        : event;
     // 更新元素上特定事件的指令传值
     const mapItem = bindingValueMap.get(el);
     if (mapItem) {

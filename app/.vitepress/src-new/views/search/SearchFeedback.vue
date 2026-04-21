@@ -315,6 +315,7 @@ onMounted(() => {
   background-color: var(--o-color-fill2);
   .o-btn {
     position: relative;
+    flex: 1;
     @include hover() {
       :deep(.o-btn-prefix) {
         color: var(--o-color-info1);
@@ -330,7 +331,6 @@ onMounted(() => {
         background-color: var(--o-color-control1-light);
       }
     }
-    flex: 1;
   }
 }
 .search-feedback {

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { ref, onMounted, onUnmounted } from 'vue';
 import { useI18n } from '@/i18n';
 
 import { useData } from 'vitepress';

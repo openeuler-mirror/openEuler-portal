@@ -91,9 +91,8 @@ const tabType = ref(0);
 const renderData: any = computed(() => {
   if (tabType.value === 1) {
     return getData.value.content.content.slice(1);
-  } else if (getData.value) {
-    return getData.value.content.content.slice(0, 1);
   }
+  return getData.value?.content?.content.slice(0, 1) || [];
 });
 const dateList = [
   { day: 15, month: 'DEC' },
@@ -122,7 +121,7 @@ onMounted(() => {
       <p v-if="summitData.introduce3">{{ summitData.introduce3 }}</p>
       <p v-if="summitData.introduce4">{{ summitData.introduce4 }}</p>
       <ul v-if="summitData.list">
-        <li v-for="li in summitData.list">
+        <li v-for="(li, i) in summitData.list" :key="i">
           {{ li }}
         </li>
       </ul>
@@ -381,7 +380,7 @@ onMounted(() => {
             to process your invitation request.
           </li>
           <li>
-            For questions, please contact <a href="mailto:visa@openeuler.sh"
+            For questions, please contact <a href="mailto:visa@openeuler.sh"
               >visa@openeuler.sh.</a
             >
           </li>
@@ -424,7 +423,7 @@ onMounted(() => {
               href="/en/other/privacy/"
               target="_blank"
               rel="noopener noreferrer"
-              >openEuler’s Privacy Statement.</a
+              >openEuler’s Privacy Statement.</a
             >
           </p>
         </div>

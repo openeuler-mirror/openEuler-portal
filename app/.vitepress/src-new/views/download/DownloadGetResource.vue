@@ -71,13 +71,13 @@ const onClickCard = (item: any) => {
       font-size: var(--o-icon_size-xl);
     }
     .title {
-      @include h3;
       color: var(--o-color-info1);
+      @include h3;
     }
     .label {
       margin-top: 12px;
-      @include text1;
       color: var(--o-color-info2);
+      @include text1;
     }
   }
 }

@@ -1,16 +1,9 @@
 import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
-import { fetchEventSource } from '@microsoft/fetch-event-source';
 import { getUserAuth } from '@/shared/login';
 import type {
   SortObjT,
   TimeTagsT,
-  SearchDrowdownT,
-  SearchCountQueryT,
-  SearchCountResT,
-  SearchRamDataT,
-  RelevantQueryT,
-  StatisticT,
   SearchRecommendT,
   OverviewDataT,
 } from '@/shared/@types/type-search';

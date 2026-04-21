@@ -6,7 +6,7 @@ const props = defineProps({
   data: {
     type: Object,
     default() {
-      return [];
+      return {};
     },
   },
   defaultProps: {

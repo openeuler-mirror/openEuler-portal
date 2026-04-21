@@ -65,9 +65,9 @@ const { t } = useI18n();
     flex: 1;
 
     .desc {
-      @include text1;
       color: var(--o-color-info2);
       width: 100%;
+      @include text1;
     }
 
     .button {
@@ -84,9 +84,9 @@ const { t } = useI18n();
     }
 
     .tip {
-      @include tip1;
       color: var(--o-color-info3);
       margin-left: var(--o-gap-4);
+      @include tip1;
     }
   }
   .guide-right-mb {
@@ -100,10 +100,10 @@ const { t } = useI18n();
   }
 
   .title {
-    @include text2;
     margin-bottom: var(--o-gap-3);
     font-weight: 500;
     color: var(--o-color-info1);
+    @include text2;
   }
 
   .code {

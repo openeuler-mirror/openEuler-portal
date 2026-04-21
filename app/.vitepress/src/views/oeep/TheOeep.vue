@@ -55,7 +55,7 @@ const breadTitle = () => {
   const text = arr.slice(1).join(' ');
 
   return text;
-}
+};
 
 onMounted(() => {
   useOeep().setMarkDownData();

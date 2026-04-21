@@ -238,7 +238,6 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 }
 
 .left-sidebar {
-  @include layer-border;
   max-width: 124px;
   padding: 10px;
   display: flex;
@@ -246,10 +245,11 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
   justify-content: center;
   align-items: center;
   text-align: center;
+  @include layer-border;
   
   .sidebar-title {
-    @include text1;
     margin-bottom: 10px;
+    @include text1;
   }
 }
 
@@ -261,17 +261,17 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 }
 
 .layer-row {
-  @include layer-border;
   display: flex;
   gap: 20px;
   align-items: center;
   padding: 8px;
+  @include layer-border;
 }
 
 .layer-title-text {
-  @include text1;
   width: 116px;
   padding: 10px;
+  @include text1;
 }
 
 .layer-content-area {
@@ -308,10 +308,10 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 
   .folder-name {
     &.clickable {
-      @include text1;
       font-weight: 600;
       text-align: center;
       cursor: pointer;
+      @include text1;
     }
   }
 
@@ -322,12 +322,12 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
     align-items: center;
 
     .folder-name {
-      @include tip1;
       padding: 10px;
       font-weight: unset;
       width: 140px;
       padding: unset;
       text-align: center;
+      @include tip1;
     }
   }
 }
@@ -386,8 +386,8 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
   }
   
   &.component-light {
-    @include layer-border;
     background-color: var(--o-color-fill2);
+    @include layer-border;
 
     & .component-name {
       color: var(--o-color-info3);
@@ -401,12 +401,12 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
   }
   
   .component-name {
-    @include text1;
     text-align: center;
     font-weight: 600;
     word-break: normal;
     word-wrap: break-word;
     hyphens: none;
+    @include text1;
   }
 }
 

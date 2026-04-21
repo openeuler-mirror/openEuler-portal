@@ -24,7 +24,7 @@ export function isValidKey(
  * @returns 首字母大写其他字母小写的字符串
  */
 export function firstToUpper(str: string): string {
-  return str.replace(/(w)(w*)/g, function ($0, $1, $2) {
+  return str.replace(/\b(\w)(\w*)/g, function ($0, $1, $2) {
     return $1.toUpperCase() + $2.toLowerCase();
   });
 }

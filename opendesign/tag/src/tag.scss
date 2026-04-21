@@ -1,4 +1,4 @@
-@import './var.scss';
+@use './var.scss';
 
 .e-tag {
   padding: var(--e-tag-padding);

@@ -393,12 +393,12 @@ const verticalPadding = computed(() => {
 }
 
 .detail-summary {
-  @include text2;
   color: var(--o-color-info2);
   line-height: 1.8;
   padding-bottom: 24px;
   margin-bottom: 24px;
   border-bottom: 1px solid var(--o-color-control4);
+  @include text2;
 }
 
 .detail-sections {
@@ -415,10 +415,10 @@ const verticalPadding = computed(() => {
 }
 
 .section-text {
-  @include text2;
   color: var(--o-color-info2);
   line-height: 1.8;
   padding-left: 16px;
+  @include text2;
 }
 
 .section-list {
@@ -429,10 +429,10 @@ const verticalPadding = computed(() => {
 }
 
 .section-list-item {
-  @include text2;
   color: var(--o-color-info2);
   line-height: 1.8;
   list-style: none;
+  @include text2;
 }
 
 .section-code {
@@ -440,12 +440,12 @@ const verticalPadding = computed(() => {
   color: var(--o-color-info1);
   border-radius: var(--o-radius-xs);
   padding: 16px 20px;
-  @include text1;
   font-family: 'Courier New', Courier, monospace;
   white-space: pre-wrap;
   word-break: break-all;
   margin: 4px 0;
   border: 1px solid var(--o-color-control4);
+  @include text1;
 }
 
 .section-image {

@@ -739,8 +739,8 @@ const cancel = () => {
         .right-title {
           display: flex;
           align-items: center;
-          @include text2;
           color: var(--o-color-info2);
+          @include text2;
           @include respond-to('<=pad_v') {
             display: none;
           }
@@ -983,13 +983,13 @@ const cancel = () => {
       }
       @include respond-to('<=pad_v') {
         .current-day {
-          @include text2;
           display: flex;
           margin: 16px 16px 12px;
           padding: 7px 12px;
           justify-content: center;
           border-radius: var(--o-radius-s);
           background-color: var(--o-color-control4-light);
+          @include text2;
         }
       }
       .o-tab {
@@ -1039,8 +1039,8 @@ const cancel = () => {
           }
         }
         .text {
-          @include text-truncate(1);
           display: block;
+          @include text-truncate(1);
         }
       }
       .meet-info {
@@ -1051,10 +1051,10 @@ const cancel = () => {
         align-items: center;
         color: var(--o-color-info3);
         text-decoration: none;
-        @include tip1;
         @include respond-to('<=pad_v') {
           margin-left: 32px;
         }
+        @include tip1;
 
         .o-divider {
           @include tip1;
@@ -1094,9 +1094,9 @@ const cancel = () => {
           max-width: 165px;
         }
         p {
-          @include text1;
           color: var(--o-color-info3);
           margin-top: 16px;
+          @include text1;
         }
       }
     }
@@ -1151,13 +1151,13 @@ const cancel = () => {
 
     .calendar-info {
       display: flex;
-      @include tip1;
       color: var(--o-color-info3);
       flex-direction: column;
       padding: 16px 60px;
       @include respond-to('<=pad_v') {
         padding: 12px 16px;
       }
+      @include tip1;
       .info-item {
         display: flex;
         margin-top: 8px;

@@ -78,9 +78,9 @@ const columns = [
 </template>
 <style lang="scss" scoped>
 .mirror-text {
-  @include text1;
   color: var(--o-color-info1);
   text-align: center;
+  @include text1;
 }
 
 .mirror-size {
@@ -116,9 +116,9 @@ const columns = [
     display: flex;
     padding: 12px;
     justify-content: space-between;
-    @include text2;
     font-weight: 500;
     border-bottom: 1px solid var(--o-color-control4);
+    @include text2;
     &:last-child {
       border-bottom: none;
     }

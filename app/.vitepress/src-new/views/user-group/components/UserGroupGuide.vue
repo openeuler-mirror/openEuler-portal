@@ -111,16 +111,16 @@ import IconWechat from '~icons/user-group/wechat.svg';
   }
 
   .subtitle {
-    @include h3;
     margin-bottom: var(--o-gap-5);
     font-weight: 500;
     color: var(--o-color-info1);
+    @include h3;
   }
 
   .desc {
-    @include text1;
     color: var(--o-color-info2);
     text-align: justify;
+    @include text1;
   }
 
   .contact-item {
@@ -134,8 +134,8 @@ import IconWechat from '~icons/user-group/wechat.svg';
   }
 
   .tip {
-    @include tip1;
     color: var(--o-color-info2);
+    @include tip1;
   }
 }
 
@@ -167,8 +167,8 @@ import IconWechat from '~icons/user-group/wechat.svg';
       }
 
       .desc {
-        @include text2;
         font-weight: 400;
+        @include text2;
       }
       .method-right {
         justify-content: space-between;

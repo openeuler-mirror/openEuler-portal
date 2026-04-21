@@ -60,11 +60,11 @@ const theme = computed(() =>
 }
 .right-main {
   --right-bg: rgba(230, 231, 234, 0.3);
+  padding: 40px;
+  margin-top: 40px;
   &.dark {
     --right-bg: rgba(64, 111, 231, 0.05);
   }
-  padding: 40px;
-  margin-top: 40px;
   @media screen and (max-width: 1100px) {
     padding: 24px;
   }

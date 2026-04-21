@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref, reactive, onMounted } from 'vue';
+import { computed, ref, reactive } from 'vue';
 import { ElMessage, FormInstance, FormRules } from 'element-plus';
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { meetupApplyForm } from '@/api/api-search';
@@ -244,10 +244,9 @@ async function meetupApply() {
       }
     });
   } catch (error: any) {
-    console.error(error);
+    throw new Error(error);
   }
 }
-
 </script>
 
 <template>

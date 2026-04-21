@@ -644,16 +644,15 @@ const selectTab = () => {
       margin-top: 12px;
     }
     .month {
-      @include tip1;
       color: var(--o-color-info3);
       margin-bottom: 8px;
+      @include tip1;
     }
     .meeting-days-box {
       display: grid;
       gap: 8px;
       grid-template-columns: repeat(2, 1fr);
       .day {
-        @include text1;
         color: var(--o-color-info1);
         border-radius: var(--o-radius-xs);
         padding: 8px 12px;
@@ -661,6 +660,7 @@ const selectTab = () => {
         border: 1px solid var(--o-color-control2-light);
         cursor: pointer;
         transition: all 0.3s;
+        @include text1;
         &.active {
           background: var(--o-color-control3-light);
           border-color: var(--o-color-primary1);
@@ -804,11 +804,10 @@ const selectTab = () => {
     }
 
     .text {
-      @include text-truncate(1);
-
       display: block;
       width: 100%;
       margin-right: 8px;
+      @include text-truncate(1);
     }
   }
   .o-link {
@@ -844,9 +843,9 @@ const selectTab = () => {
     align-items: center;
     justify-content: center;
     height: 100%;
-    @include text1;
     color: var(--o-color-info1);
     padding: 24px;
+    @include text1;
     img {
       height: 180px;
     }
@@ -988,11 +987,10 @@ const selectTab = () => {
       }
 
       .text {
-        @include text-truncate(1);
-
         display: block;
         width: 100%;
         margin-right: 8px;
+        @include text-truncate(1);
       }
     }
 

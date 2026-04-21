@@ -91,8 +91,8 @@ const goDetail = (url: string) => {
     display: flex;
     justify-content: space-between;
     .title {
-      @include text2;
       font-weight: 500;
+      @include text2;
       .brand-color {
         color: var(--o-color-primary1);
       }
@@ -119,8 +119,8 @@ const goDetail = (url: string) => {
     display: flex;
     align-items: center;
     margin-top: 8px;
-    @include tip1;
     color: var(--o-color-info3);
+    @include tip1;
     .breadcrumb-item-label {
       display: flex;
       align-items: center;

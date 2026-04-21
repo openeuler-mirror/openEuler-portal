@@ -350,31 +350,6 @@ export interface SolutionDataT {
   stratovirtVersion: string;
   updateTime: string;
 }
-export interface SolutionDataT {
-  OVSVersion: string;
-  architecture: string;
-  biosUefi: string;
-  certificationType: string;
-  cpu: string;
-  date: string;
-  driver: string;
-  hardDiskDrive: string;
-  id: number;
-  introduceLink: string;
-  lang: string;
-  libvirtVersion: string;
-  networkCard: string;
-  os: string;
-  product: string;
-  qemuVersion: string;
-  raid: string;
-  ram: string;
-  serverModel: string;
-  serverVendor: string;
-  solution: string;
-  stratovirtVersion: string;
-  updateTime: string;
-}
 export interface SoftwareListItemT {
   arch: string;
   bin: string;

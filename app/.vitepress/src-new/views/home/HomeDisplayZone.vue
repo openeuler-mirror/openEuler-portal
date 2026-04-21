@@ -107,16 +107,16 @@ const { theme } = storeToRefs(useCommon());
       }
       .display-zone-title {
         color: var(--o-color-info1);
-        @include text2;
         font-weight: 500;
+        @include text2;
       }
       .display-zone-description {
         color: var(--o-color-info2);
-        @include tip1;
         text-align: left;
         @include respond-to('<=pad_v') {
           display: none;
         }
+        @include tip1;
       }
       @include hover {
         .display-zone-title,

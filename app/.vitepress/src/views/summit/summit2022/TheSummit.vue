@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
-import { useRouter } from 'vitepress';
 import { useCommon } from '@/stores/common';
 import AOS from 'aos';
 
@@ -39,7 +38,6 @@ import zhongguan from '@/assets/category/summit/summit2022/logo/zhongguan.png';
 import zhongguanDark from '@/assets/category/summit/summit2022/logo/zhongguan-dark.png';
 import intel from '@/assets/category/summit/summit2022/logo/intel.png';
 import intelDark from '@/assets/category/summit/summit2022/logo/intel-dark.png';
-import celebratingEntryImg from '@/assets/category/summit/summit2022/celebrating-entry.png';
 
 import bes from '@/assets/category/summit/summit2022/logo/bes.png';
 import besDark from '@/assets/category/summit/summit2022/logo/bes-dark.png';
@@ -167,7 +165,6 @@ import exhibitionImg from '@/assets/category/summit/summit2022/exhibition.png';
 import IconTime from '~icons/app/icon-time.svg';
 
 const commonStore = useCommon();
-const router = useRouter();
 const liveImg = computed(() =>
   commonStore.theme === 'light' ? liveLight : liveDark
 );

@@ -172,6 +172,8 @@ useInViewDuration(
         align-items: center;
         // 左侧icon宽度
         --intro-gap: 72px;
+        // 左侧icon宽度
+        --icon-width: 58px;
         @include respond-to('laptop') {
           --intro-gap: 56px;
         }
@@ -184,16 +186,6 @@ useInViewDuration(
         @media screen and (max-width: 1000px) {
           --intro-gap: 16px;
         }
-        &:last-child {
-          .circle {
-            display: none;
-          }
-        }
-        &:not(:last-child) {
-          margin-bottom: var(--intro-gap);
-        }
-        // 左侧icon宽度
-        --icon-width: 58px;
         @include respond-to('laptop') {
           --icon-width: 52px;
         }
@@ -205,6 +197,14 @@ useInViewDuration(
         }
         @media screen and (max-width: 1000px) {
           --icon-width: 28px;
+        }
+        &:last-child {
+          .circle {
+            display: none;
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: var(--intro-gap);
         }
         .intro-list-icon {
           position: relative;
@@ -282,9 +282,9 @@ useInViewDuration(
       margin-left: 24px;
 
       .title {
-        @include h3;
         font-weight: 500;
         color: var(--o-color-info1);
+        @include h3;
       }
       @media screen and (max-width: 1200px) {
         .intro-list-item {
@@ -298,8 +298,8 @@ useInViewDuration(
       }
       .description {
         margin-top: 4px;
-        @include text1;
         color: var(--o-color-info2);
+        @include text1;
       }
       @include hover {
         .title {

@@ -57,7 +57,8 @@ function handleTabClick(val: any) {
       :illustration="bannerData.bannerIllustration"
     >
       <a
-        v-for="btn in btnDatas"
+        v-for="(btn, i) in btnDatas"
+        :key="i"
         :href="btn.link.value"
         target="_blank"
         rel="noopener noreferrer"

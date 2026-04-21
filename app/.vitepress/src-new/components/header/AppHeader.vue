@@ -234,9 +234,9 @@ const mobileClick = () => {
   .simple-header {
     display: flex;
     align-items: center;
-    @include h4;
     color: var(--o-color-info1);
     font-weight: 500;
+    @include h4;
     .o-icon {
       cursor: pointer;
       margin-right: 16px;

@@ -25,7 +25,7 @@ const i18n = useI18n();
 <template>
   <div class="case-list" :class="options.length < 3 ? 'center' : ''">
     <OCard
-      v-for="(item, index) in options"
+      v-for="item in options"
       :key="item.path"
       shadow="hover"
       class="case-card"

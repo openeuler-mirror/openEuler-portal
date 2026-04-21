@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, onUnmounted, watch, nextTick } from 'vue';
+import { computed, onMounted, ref, onUnmounted, watch } from 'vue';
 import { useRouter, useData } from 'vitepress';
-import { useCommon } from '@/stores/common';
 import { useI18n } from '@/i18n';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
@@ -33,7 +32,6 @@ const isMobile = computed(() => (screenWidth.value <= 1100 ? true : false));
 const router = useRouter();
 const { lang } = useData();
 const i18n = useI18n();
-const commonStore = useCommon();
 
 // 导航数据
 const navRouterNew = computed(() => i18n.value.common.NAV_ROUTER_CONFIG_NEW);

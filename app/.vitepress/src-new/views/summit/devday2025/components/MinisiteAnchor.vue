@@ -97,7 +97,6 @@ useIntersectionObserver(target, ([entry]) => {
           --anchor-item-link-gap: 0px;
 
           .o-anchor-item-link {
-            @include text1;
             --anchor-item-link-bg-color-active: var(--o-color-control5-light);
             --anchor-item-link-color-active: var(--o-color-primary1);
             --anchor-item-link-color-hover: var(--o-color-primary1);
@@ -106,6 +105,7 @@ useIntersectionObserver(target, ([entry]) => {
             font-weight: 500;
             display: block;
             text-align: center;
+            @include text1;
           }
         }
       }

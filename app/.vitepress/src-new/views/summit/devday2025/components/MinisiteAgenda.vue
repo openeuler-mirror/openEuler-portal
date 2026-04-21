@@ -62,10 +62,10 @@ const isDark = computed(() => {
   :deep(.el-tabs__header) {
     border-bottom: 1px solid rgba(#002fa7, 0.1);
     .el-tabs__item {
-      @include h3;
       padding-top: 0;
       padding-bottom: 18px;
       font-weight: 500;
+      @include h3;
       @include respond-to('<=pad_v') {
         padding-bottom: 4px;
       }

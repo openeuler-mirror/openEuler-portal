@@ -151,9 +151,9 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .intro {
-  @include text1;
   color: var(--o-color-info2);
   text-align: center;
+  @include text1;
 }
 .download-community {
   :deep(.section-wrapper) {

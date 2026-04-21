@@ -145,11 +145,11 @@ const isDark = computed(() => {
     display: flex;
     align-items: flex-end;
     .title {
-      @include h3;
       color: var(--o-color-info1);
       font-weight: 500;
       margin-left: 14px;
       position: relative;
+      @include h3;
       &::before {
         content: '';
         position: absolute;
@@ -166,18 +166,18 @@ const isDark = computed(() => {
       display: flex;
       .name,
       .post {
-        @include text1;
         margin-left: var(--o-gap-2);
+        @include text1;
       }
     }
   }
   .bottom {
-    @include text1;
     display: flex;
     align-items: center;
     color: var(--o-color-info1);
     font-weight: 400;
     margin-top: var(--o-gap-5);
+    @include text1;
     .item-bottom {
       display: flex;
       align-items: center;

@@ -5,10 +5,6 @@ import { useI18n } from '@/i18n';
 
 import technicalDataTotal from '@/data/showcase/technical-while-paper';
 import NotFound from '@/NotFound.vue';
-import BannerLevel2 from '@/components/BannerLevel2.vue';
-
-import banner from '@/assets/banner/banner-community.png';
-import technicalIll from '@/assets/illustrations/technical-white-paper.png';
 
 type Language = 'zh' | 'en';
 

@@ -10,7 +10,7 @@ import en from 'element-plus/es/locale/lang/en';
 import zhCN from '@opensig/opendesign/es/locale/lang/zh-cn';
 import enUS from '@opensig/opendesign/es/locale/lang/en-us';
 
-import { isClient, OScroller, OConfigProvider } from '@opensig/opendesign';
+import { OConfigProvider } from '@opensig/opendesign';
 
 import AppHeader from '~@/components/header/AppHeader.vue';
 // import AppHeader from '@/components/AppHeader.vue';
@@ -37,7 +37,10 @@ import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
 import { useLocale } from '~@/composables/useLocale';
 import { hideNssRoutes } from './data/common/nss';
-import { OCookieNotice, OPlusConfigProvider } from '@opendesign-plus/components';
+import {
+  OCookieNotice,
+  OPlusConfigProvider,
+} from '@opendesign-plus/components';
 import { useCookieStore } from '~@/stores/common';
 
 const { changeLocale, isZh } = useLocale();
@@ -91,8 +94,8 @@ const isReport = computed(() => {
 // ----------------------------- new ----------------------------
 
 const showNss = computed(() => {
-  return !hideNssRoutes.some(route => router?.route?.path?.includes(route));
-})
+  return !hideNssRoutes.some((route) => router?.route?.path?.includes(route));
+});
 
 watch(
   () => lang.value,
@@ -135,7 +138,13 @@ watch(
       </el-config-provider>
     </OConfigProvider>
     <OPlusConfigProvider :locale="lang">
-      <OCookieNotice ref="cookieRef" v-model:visible="cookieStore.isNoticeVisible" community="openEuler" :detail-url="`/${lang}/other/cookies`" :cookie-domain="COOKIE_DOMAIN" />
+      <OCookieNotice
+        ref="cookieRef"
+        v-model:visible="cookieStore.isNoticeVisible"
+        community="openEuler"
+        :detail-url="`/${lang}/other/cookies`"
+        :cookie-domain="COOKIE_DOMAIN"
+      />
     </OPlusConfigProvider>
     <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
     <ClientOnly>

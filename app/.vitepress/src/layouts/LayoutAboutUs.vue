@@ -354,9 +354,9 @@ const handleNodeClick = (node: any) => {
   height: min-content;
   flex-shrink: 0;
 
-    &::after {
-      bottom: 0;
-    }
+  &::after {
+    bottom: 0;
+  }
 }
 </style>
 

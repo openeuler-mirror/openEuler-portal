@@ -264,7 +264,8 @@ const handleDrop = (event: DragEvent) => {
   }
 };
 
-defineExpose({ searchRecommendRef });</script>
+defineExpose({ searchRecommendRef });
+</script>
 <template>
   <div class="search-banner">
     <ContentWrapper :vertical-padding="verticalPadding">
@@ -417,15 +418,15 @@ defineExpose({ searchRecommendRef });</script>
     display: flex;
     margin: 8px 0 0;
     color: var(--o-color-white);
-    @include h4;
     align-items: center;
     flex-wrap: wrap;
+    @include h4;
     @include respond-to('<=pad_v') {
       display: none;
     }
     .suggest-label {
-      @include tip1;
       color: rgba($color: var(--o-white), $alpha: 0.8);
+      @include tip1;
     }
     .suggest-list {
       display: flex;
@@ -447,8 +448,8 @@ defineExpose({ searchRecommendRef });</script>
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    @include h4;
     border-bottom: 1px solid var(--o-color-control4);
+    @include h4;
     @include respond-to('<=pad_v') {
       margin-top: 0;
       border-bottom: inherit;
@@ -666,8 +667,8 @@ defineExpose({ searchRecommendRef });</script>
 </style>
 <style lang="scss">
 .search-upload-tooltip-popup {
-  @include tip2;
   padding: var(--o-gap-3) var(--o-gap-4);
   max-width: 240px;
+  @include tip2;
 }
 </style>

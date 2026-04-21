@@ -542,11 +542,11 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
       display: flex;
       align-items: center;
       height: 32px;
-      @include text1;
       color: var(--o-color-info1);
       min-width: 32px;
       margin-right: 32px;
       flex-shrink: 0;
+      @include text1;
     }
     .o-checkbox-group {
       gap: 16px 8px;
@@ -634,9 +634,9 @@ html[lang='en'] {
       width: 100%;
       :deep(.o-card-header) {
         .o-card-title {
-          @include h2;
           font-weight: 500;
           height: fit-content;
+          @include h2;
         }
       }
       .download-card-list {
@@ -684,11 +684,11 @@ html[lang='en'] {
         .btn-mo {
           display: none;
           @include respond-to('<=pad_v') {
-            @include h4;
             display: flex;
             justify-content: space-between;
             align-items: center;
             color: var(--o-color-info1);
+            @include h4;
             .o-icon {
               font-size: var(--o-icon_size-xs);
             }
@@ -701,12 +701,12 @@ html[lang='en'] {
     margin-top: 24px;
   }
   .pagination {
-    @include respond-to('<=pad_v') {
-      display: none;
-    }
     margin-top: 32px;
     display: flex;
     justify-content: flex-end;
+    @include respond-to('<=pad_v') {
+      display: none;
+    }
   }
 }
 

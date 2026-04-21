@@ -60,7 +60,9 @@ export default {
       IMG: tvImg,
       DARK_IMG: tvImg,
       TITLE: 'Join Us',
-      LINK_LIST: ['https://atomgit.com/openeuler/community/tree/master/sig/Virt'],
+      LINK_LIST: [
+        'https://atomgit.com/openeuler/community/tree/master/sig/Virt',
+      ],
       SHOW: false,
     },
     {

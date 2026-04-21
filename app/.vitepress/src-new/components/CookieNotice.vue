@@ -293,9 +293,9 @@ watch(
   }
 
   .cookie-desc {
-    @include tip2;
     color: var(--o-color-info2);
     margin-top: 8px;
+    @include tip2;
   }
 }
 
@@ -333,10 +333,10 @@ watch(
   position: absolute;
   top: 12px;
   right: var(--layout-content-padding);
-  @include x-hover;
   cursor: pointer;
   color: var(--o-color-info1);
   transform-origin: center;
+  @include x-hover;
   @include h4;
 
   @include hover {
@@ -362,24 +362,24 @@ watch(
         display: flex;
         align-items: center;
         .item-title {
-          @include h4;
           color: var(--o-color-info1);
           font-weight: 500;
+          @include h4;
         }
 
         .item-extra {
           display: flex;
           align-items: center;
-          @include tip1;
           color: var(--o-color-info3);
           margin-left: 24px;
+          @include tip1;
         }
       }
 
       .item-detail {
-        @include text1;
         color: var(--o-color-info2);
         margin-top: 12px;
+        @include text1;
       }
     }
   }

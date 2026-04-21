@@ -6,7 +6,6 @@ import xujikui from '../img/guest/xujikui.png';
 import yangbin from '../img/guest/yangbin.png';
 
 import daniel from '../img/guest/daniel.png';
-import dengqiong from '../img/guest/dengqiong.png';
 import huxinwei from '../img/guest/huxinwei.png';
 import jiangdayong from '../img/guest/jiangdayong.png';
 import lixiangkai from '../img/guest/lixiangkai.png';

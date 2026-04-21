@@ -113,21 +113,21 @@ const bannerImage = computed(() => {
   justify-content: space-between;
 
   .title {
-    @include h2;
     color: var(--o-color-info1);
     font-weight: 500;
     margin-bottom: var(--o-gap-4);
+    @include h2;
   }
 
   .org-title {
-    @include text1;
     color: var(--o-color-info3);
     margin-right: var(--o-gap-6);
+    @include text1;
   }
 
   .org-name {
-    @include text1;
     color: var(--o-color-info1);
+    @include text1;
   }
 
   .tip-content {
@@ -145,9 +145,9 @@ const bannerImage = computed(() => {
     }
 
     .tip {
-      @include text1;
       margin-left: var(--o-gap-2);
       color: var(--o-color-info2);
+      @include text1;
       @include hover {
         color: var(--o-color-link2);
       }

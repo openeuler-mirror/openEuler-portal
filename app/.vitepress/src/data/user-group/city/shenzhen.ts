@@ -1,4 +1,3 @@
-import 姜召阳 from '@/assets/category/user-group/beijing/姜召阳.png';
 import chenyunliang from '@/assets/category/user-group/chenyunliang.png';
 import luochu from '@/assets/category/user-group/luochu.png';
 import wangjianzhong from '@/assets/category/user-group/wangjianzhong.png';

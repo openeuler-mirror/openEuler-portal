@@ -131,17 +131,17 @@ const searchValue = computed(() => {
     }
   }
   .from {
-    @include tip2;
     margin-top: 8px;
     display: flex;
     align-items: center;
     color: var(--o-color-info3);
+    @include tip2;
   }
   .breadcrumb {
     display: flex;
     align-items: center;
-    @include tip2;
     color: var(--o-color-info3);
+    @include tip2;
     .breadcrumb-item-label {
       display: flex;
       align-items: center;

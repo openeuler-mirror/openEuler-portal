@@ -107,15 +107,15 @@ const { t } = useI18n();
         margin-bottom: var(--o-gap-7);
       }
       .role-name {
-        @include h1;
         color: var(--o-color-info1);
         margin-bottom: var(--o-gap-3);
         font-weight: 500;
+        @include h1;
       }
 
       .role-desc {
-        @include text1;
         color: var(--o-color-info2);
+        @include text1;
       }
     }
 
@@ -125,18 +125,18 @@ const { t } = useI18n();
   }
 
   .section {
-    @include text2;
     color: var(--o-color-info3);
     padding-bottom: var(--o-gap-3);
     border-bottom: 1px solid var(--o-color-control4);
     margin-bottom: var(--o-gap-4);
+    @include text2;
   }
 
   .section-item {
-    @include text1;
     display: flex;
     gap: var(--o-gap-2);
     align-items: flex-start;
+    @include text1;
 
     &:not(:last-child) {
       margin-bottom: var(--o-gap-3);

@@ -70,14 +70,14 @@ const visionData = computed(() => VISION_DATA[lang.value as LocaleT]);
     }
 
     .vision-title {
-      @include h3;
       font-weight: 600;
+      @include h3;
     }
 
     .vision-desc {
-      @include text1;
       color: var(--o-color-info3);
       margin-top: var(--o-gap-3);
+      @include text1;
     }
 
     @include respond-to('<=pad_v') {

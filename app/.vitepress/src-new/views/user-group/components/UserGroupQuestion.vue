@@ -65,15 +65,15 @@ import IconHook from '~icons/user-group/hook.svg';
       padding: var(--o-gap-7);
 
       .title {
-        @include h2;
         font-weight: 500;
         margin-bottom: var(--o-gap-5);
         color: var(--o-color-info1);
+        @include h2;
       }
 
       .desc {
-        @include text1;
         color: var(--o-color-info1);
+        @include text1;
       }
     }
   }
@@ -113,8 +113,8 @@ import IconHook from '~icons/user-group/hook.svg';
     }
 
     .tip {
-      @include text1;
       color: var(--o-color-info2);
+      @include text1;
     }
   }
 }

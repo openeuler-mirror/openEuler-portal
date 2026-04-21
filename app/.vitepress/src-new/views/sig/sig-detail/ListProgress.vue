@@ -146,11 +146,11 @@ watch(
           flex-shrink: 0;
         }
         .gitee-name {
-          @include text-truncate(1);
           text-align: left;
           margin-left: 8px;
           word-break: break-all;
           min-width: 80px;
+          @include text-truncate(1);
         }
       }
     }

@@ -21,7 +21,7 @@ const props = defineProps({
   tableData: {
     type: Array as PropType<string[]>,
     default: () => {
-      return {};
+      return [];
     },
   },
 });
@@ -193,7 +193,7 @@ function watchChange(element: HTMLElement) {
   });
 }
 const resolveDate = (date: string) => {
-  const reg = /(\d{4})\-(\d{2})\-(\d{2})/;
+  const reg = /(\d{4})-(\d{2})-(\d{2})/;
   date = date.replace(reg, '$1年$2月$3日');
   if (date.charAt(5) === '0') {
     date = date.substring(6);
