@@ -5,6 +5,7 @@ import { OTab, OTabPane } from '@opensig/opendesign';
 import AppSection from '~@/components/AppSection.vue';
 
 import communityVersionData from '~@/data/download/download';
+import { fileTree, mirrorList } from '~@/data/download/download-new';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useDownload } from '~@/stores/download';
@@ -26,6 +27,7 @@ const { locale, t } = useLocale();
 const activeTab = ref('latest');
 // TODO:从 导航配置取数据
 const shownNameList: string[] = [
+  'openEuler Embedded 26.03',
   'openEuler-24.03-LTS-SP3',
   'openEuler-24.03-LTS-SP2',
   'openEuler-24.03-LTS-SP1',
@@ -57,6 +59,19 @@ const queryGetDownloadLink = (version: string, scenario?: string) => {
         item.versionData = versionData;
       }
     });
+  });
+};
+
+const queryGetDownloadLinkNew = (version: string, scenario?: string) => {
+  const versionData = constructDownloadData(fileTree, version, t);
+  latestVersions.value.map((item) => {
+    if (
+      item.latestCommunityVersionData.NAME === version.replaceAll('-', ' ')
+    ) {
+      item.latestCommunityVersionData.scenario = scenario || '';
+      item.mirrorList = mirrorList;
+      item.versionData = versionData;
+    }
   });
 };
 
@@ -114,7 +129,11 @@ onMounted(() => {
     if (decodeURIComponent(hash) === version.replaceAll('-', ' ')) {
       scenario.value = decodeURIComponent(getUrlParam('scenario'));
     }
-    queryGetDownloadLink(version, scenario.value);
+    if (version !== 'openEuler Embedded 26.03') {
+      queryGetDownloadLink(version, scenario.value);
+    } else {
+      queryGetDownloadLinkNew(version, 'embedded_img');
+    }
   });
 });
 </script>
