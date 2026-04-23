@@ -101,7 +101,7 @@ defineProps({
   }
 }
 .title {
-  width: 508px;
+  width: 580px;
   font-weight: 600;
   margin-left: 32px;
   flex-shrink: 0;

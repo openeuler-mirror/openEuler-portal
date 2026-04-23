@@ -25,22 +25,22 @@
         "id": "SIG-Gathering",
         "card_list": [
           {
-            "title": "AI生态支持&技术创新",
-            "description": [
-              "openEuler 作为基础设施中间层，面向通用算力与智能算力多样化进行使能。本专题聚焦 AI 生态工具的适配集成与 AI Infra 技术创新，共同构建开放、高效的 AI 基础软件栈。"
-            ],
-            "label": "查看议题",
-            "url": "https://etherpad.openeuler.org/p/ODD26-SIG-AIEco",
-            "address": "多功能厅1",
-            "time": "全天"
-          },
-          {
             "title": "Kernel&基础服务",
             "description": [
               "本专题聚焦 openEuler 内核及周边基础库，围绕竞争力与稳定性提升、上游社区贡献、CVE 高效响应、多样性算力平台支持 四大方向展开深入探讨，旨在持续提升内核的健壮性、安全性与生态适配能力，为上层应用提供坚实底座。"
             ],
             "label": "查看议题",
             "url": "https://etherpad.openeuler.org/p/ODD26-SIG-Kernel",
+            "address": "多功能厅1",
+            "time": "全天"
+          },
+          {
+            "title": "AI生态支持&技术创新",
+            "description": [
+              "openEuler 作为基础设施中间层，面向通用算力与智能算力多样化进行使能。本专题聚焦 AI 生态工具的适配集成与 AI Infra 技术创新，共同构建开放、高效的 AI 基础软件栈。"
+            ],
+            "label": "查看议题",
+            "url": "https://etherpad.openeuler.org/p/ODD26-SIG-AIEco",
             "address": "多功能厅2",
             "time": "全天"
           },
@@ -108,7 +108,7 @@
       }
     },
     "createdAt": "2026-04-14T03:31:17.658Z",
-    "updatedAt": "2026-04-21T09:32:58.047Z",
+    "updatedAt": "2026-04-22T08:03:45.380Z",
     "publishedAt": "2026-04-14T03:33:24.307Z"
   },
   {
@@ -136,7 +136,7 @@
               },
               {
                 "time": "8:40-9:20",
-                "title": "面向AI时代的操作系统技术创新解读与展示",
+                "title": "openEuler技术前沿与展望：夯实超节点算力底座，面向Agentic AI演进",
                 "name": "胡欣蔚",
                 "post": "开放原子开源欧拉技术委员会主席"
               },
@@ -190,7 +190,7 @@
       }
     },
     "createdAt": "2026-04-14T03:31:56.481Z",
-    "updatedAt": "2026-04-21T11:35:34.965Z",
+    "updatedAt": "2026-04-22T08:07:17.470Z",
     "publishedAt": "2026-04-14T03:33:24.307Z"
   },
   {
