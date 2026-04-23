@@ -6,6 +6,22 @@ export default {
   zh: {
     COMMUNITY_LIST: [
       {
+        NAME: 'openEuler Embedded 26.03',
+        DOWNLOAD_URL: '',
+        DESC: 'openEuler Embedded 26.03 版本基于IB-Robot具身智能全栈架构，面向hi3403、3591等硬件发布镜像。该版本提供具身claw，支持自主精准控制，依托ROS 2 Driver统一接入相机、雷达、麦克风等感知设备，支持VR手柄、手机等遥操作采集数据；通过tensormsg实现消息与张量安全转换，提供VLA大模型及策略模型推理服务；由统一执行器完成动作调度与轨迹执行，支持MoveIt 2规划；并以YAML配置驱动机器人本体，可一键切换仿真与实机环境。',
+        RELEASE_DESC_URL: '',
+        INSTALL_GUIDENCE_URL: '',
+        SEEK_HELP_URL: '',
+        GET_ISO_URL: '',
+        WHITE_PAPER: '',
+        LIFE_CYCLE_URL: '',
+        PUBLISH_DATE: '',
+        LTS: true,
+        VERSION: '26.03',
+        PLANNED_EOL: '',
+        notTag: true,
+      },
+      {
         NAME: 'openEuler 24.03 LTS SP3',
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP3/',
         DESC: '2025年12月30日，openEuler首个支持超节点的版本正式发布。新版本openEuler 24.03 LTS SP3是基于6.6内核的24.03-LTS版本增强扩展版本（参见版本生命周期），面向服务器、云、AI场景，持续提供更多新特性和功能扩展，包括内核优化、异构协同推理、智能诊断、机密虚机、编译器、RISC-V架构优化、智能开发者桌面、安全加固、灵衢超节点、身份认证、虚拟化等，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
@@ -454,6 +470,22 @@ export default {
   },
   en: {
     COMMUNITY_LIST: [
+      {
+        NAME: 'openEuler Embedded 26.03',
+        DOWNLOAD_URL: '',
+        DESC: 'openEuler Embedded 26.03, based on the full-stack IB-Robot embodied intelligence architecture, releases images for Hi3403, Hi3591 and other hardware.It provides an embodied claw for autonomous precise control, unifies access to cameras, LiDARs, microphones and other sensors via ROS 2 Driver, and supports teleoperation data collection with VR controllers and mobile devices. With tensormsg for secure message-tensor conversion, it delivers inference services for VLA and policy models. A unified actuator performs motion scheduling and trajectory execution with MoveIt 2 planning support. The robot is YAML-configurable, enabling one-click switching between simulation and physical deployment.',
+        RELEASE_DESC_URL: '',
+        INSTALL_GUIDENCE_URL: '',
+        SEEK_HELP_URL: '',
+        GET_ISO_URL: '',
+        WHITE_PAPER: '',
+        LIFE_CYCLE_URL: '',
+        PUBLISH_DATE: '',
+        LTS: true,
+        VERSION: '26.03',
+        PLANNED_EOL: '',
+        notTag: true,
+      },
       {
         NAME: 'openEuler 24.03 LTS SP3',
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP3/',

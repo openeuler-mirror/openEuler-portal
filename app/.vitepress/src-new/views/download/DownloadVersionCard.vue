@@ -324,10 +324,10 @@ const onClickDownload = (row: any) => {
     <!-------------- 版本基本信息 -------------->
     <h2 class="title">
       {{ contentData?.NAME }}
-      <OTag v-if="contentData?.LTS" class="lts">{{ $t('download.lts') }}</OTag>
-      <OTag v-else class="innovation"> {{ $t('download.innovation') }}</OTag>
+      <OTag v-if="contentData?.LTS && !contentData?.notTag" class="lts">{{ $t('download.lts') }}</OTag>
+      <OTag v-if="!contentData?.LTS && !contentData?.notTag" class="innovation"> {{ $t('download.innovation') }}</OTag>
     </h2>
-    <p class="subtitle">Planned EOL: {{ contentData?.PLANNED_EOL }}</p>
+    <p v-if="contentData?.PLANNED_EOL" class="subtitle">Planned EOL: {{ contentData?.PLANNED_EOL }}</p>
     <div class="other-link">
       <template v-for="(linkData, index) in linkConfigs">
         <a
@@ -369,7 +369,7 @@ const onClickDownload = (row: any) => {
           </ORadio>
         </ORadioGroup>
       </div>
-      <div class="filter-card">
+      <div v-if="contentData?.NAME !== 'openEuler Embedded 26.03'" class="filter-card">
         <div class="label">
           {{ $t('download.SCENARIO2') }}
         </div>
