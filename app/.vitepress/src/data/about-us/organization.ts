@@ -1,14 +1,10 @@
 import yuping from '@/assets/category/organization/yuping.png';
 import gaopei from '@/assets/category/organization/gaopei.png';
 import hannaiping from '@/assets/category/organization/hannaiping.png';
-import wanghao from '@/assets/category/organization/wanghao.png';
-import lipeiyuan from '@/assets/category/organization/lipeiyuan.png';
 import liuwenqing from '@/assets/category/organization/liuwenqing.png';
 import liuyanfei from '@/assets/category/organization/liuyanfei.png';
 import qusheng from '@/assets/category/organization/qusheng.png';
 import zhanglei from '@/assets/category/organization/zhanglei.png';
-import zhangshenju from '@/assets/category/organization/zhangshenju.png';
-import zhongxin from '@/assets/category/organization/zhongxin.png';
 import xiongwei from '@/assets/category/organization/xiongwei.png';
 import huzhengce from '@/assets/category/organization/huzhengce.png';
 import yuli from '@/assets/category/organization/yuli.png';
@@ -53,7 +49,6 @@ import wuheshuan from '@/assets/category/organization/expert/wuheshuan.png';
 
 // 品牌委员会
 import liangbin from '@/assets/category/organization/brand/liangbin.png';
-import huangzhaowei from '@/assets/category/organization/brand/huangzhaowei.png';
 import xulu from '@/assets/category/organization/brand/xulu.png';
 import lizhenning from '@/assets/category/organization/brand/lizhenning.png';
 import zhengli from '@/assets/category/organization/brand/zhengli.png';
@@ -248,19 +243,9 @@ export default {
                 position: ['软通动力信息技术（集团）股份有限公司'],
               },
               {
-                img: lipeiyuan,
-                name: '李培源',
-                position: ['天翼云科技有限公司'],
-              },
-              {
                 img: tianjun,
                 name: '田俊',
                 position: ['英特尔（中国）有限公司'],
-              },
-              {
-                img: wanghao,
-                name: '王皓',
-                position: ['超聚变数字技术有限公司'],
               },
               {
                 img: yuli,
@@ -271,16 +256,6 @@ export default {
                 img: yuping,
                 name: '于萍',
                 position: ['江苏润和软件股份有限公司'],
-              },
-              {
-                img: zhangshenju,
-                name: '张胜举',
-                position: ['中国移动云能力中心'],
-              },
-              {
-                img: zhongxin,
-                name: '钟忻',
-                position: ['联通数字科技有限公司'],
               },
             ],
           },
@@ -508,12 +483,6 @@ export default {
             name: '梁冰',
             position: ['主席'],
             email: 'liangbing11@huawei.com',
-          },
-          {
-            img: huangzhaowei,
-            name: '黄兆伟',
-            position: ['委员'],
-            email: 'huangzhaowei@xfusion.com',
           },
           {
             img: humingyue,
@@ -899,19 +868,9 @@ export default {
                 ],
               },
               {
-                img: lipeiyuan,
-                name: 'Li Peiyuan',
-                position: ['China Telecom e-Cloud Technology Co., Ltd.'],
-              },
-              {
                 img: tianjun,
                 name: 'Tian Jun',
                 position: ['Intel China Ltd.'],
-              },
-              {
-                img: wanghao,
-                name: 'Wang Hao',
-                position: ['xFusion Digital Technologies Co., Ltd.'],
               },
               {
                 img: yuli,
@@ -922,18 +881,6 @@ export default {
                 img: yuping,
                 name: 'Yu Ping',
                 position: ['Jiangsu HopeRun Software Co., Ltd.'],
-              },
-              {
-                img: zhangshenju,
-                name: 'Zhang Shengju',
-                position: [
-                  'China Mobile (Suzhou) Software Technology Co., Ltd.',
-                ],
-              },
-              {
-                img: zhongxin,
-                name: 'Zhong Xin',
-                position: ['China Unicom Digital Technology Co., Ltd.'],
               },
             ],
           },
@@ -1161,12 +1108,6 @@ export default {
             name: 'Liang Bing',
             position: ['Chairperson'],
             email: 'liangbing11@huawei.com',
-          },
-          {
-            img: huangzhaowei,
-            name: 'Huang Zhaowei',
-            position: ['Committee member'],
-            email: 'huangzhaowei@xfusion.com',
           },
           {
             img: humingyue,
