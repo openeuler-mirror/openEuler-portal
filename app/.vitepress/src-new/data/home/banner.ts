@@ -12,31 +12,8 @@ import annual_report_pad from '~@/assets/category/home/banner/annual-report/pad.
 import annual_report_mb_zh from '~@/assets/category/home/banner/annual-report/mb.jpg';
 import annual_report_mb_en from '~@/assets/category/home/banner/annual-report/mb_en.jpg';
 
-import odd2026_pc from '~@/assets/category/home/banner/odd2026/pc.jpg';
-import odd2026_pad from '~@/assets/category/home/banner/odd2026/pc.jpg';
-import bg_text from '~@/assets/category/home/banner/odd2026/banner-text.png';
-import odd2026_mb_zh from '~@/assets/category/home/banner/odd2026/mb.jpg';
-
 export default {
   zh: [
-    {
-      bg_pc: odd2026_pc,
-      bg_pad: odd2026_pad,
-      bg_mb: odd2026_mb_zh,
-      bg_text: bg_text,
-      bg_theme: 'light',
-      title: '',
-      btn: '查看详情',
-      text_theme: 'dark',
-      href: '/zh/interaction/summit-list/devday2026/',
-      isBlank: true,
-      pc_text_width: '375px',
-      pc_text_height: '214px',
-      pad_text_width: '280px',
-      pad_text_height: '160px',
-      padv_text_width: '280px',
-      padv_text_height: '160px',
-    },
     {
       bg_pc: annual_report_pc,
       bg_pad: annual_report_pad,

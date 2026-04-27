@@ -5,7 +5,6 @@ import MinisiteIntroduce from './components/MinisiteIntroduce.vue';
 import MinisiteCard from './components/MinisiteCard.vue';
 import MinisiteAgenda from './components/MinisiteAgenda.vue';
 import MinisiteReview from './components/MinisiteReview.vue';
-import MinisiteLive from './components/MinisiteLive.vue';
 
 import data from './data/data_zh';
 
@@ -16,7 +15,6 @@ import { devday2026s } from '#cms'
   <MinisiteBanner :banner-data="data.banner" />
   <ContentWrapper v-if="devday2026s" :vertical-padding="['0', '72px']">
     <MinisiteIntroduce :introduce-data="devday2026s[0].floor" />
-    <MinisiteLive :live-data="data.live" />
     <MinisiteCard :card-data="devday2026s[1].floor" />
     <MinisiteAgenda :agenda-data="devday2026s[2].floor" />
     <MinisiteReview :review-data="devday2026s[3].floor" />

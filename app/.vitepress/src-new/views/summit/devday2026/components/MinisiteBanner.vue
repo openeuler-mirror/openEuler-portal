@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { OFigure, OButton } from '@opensig/opendesign';
+import { OFigure, OButton, OIcon } from '@opensig/opendesign';
 
 import ContentWrapper from '~@/components/ContentWrapper.vue';
+
+import IconOutLink from '~icons/app-new/icon-outlink.svg';
 
 import AOS from 'aos';
 
 import { useScreen } from '~@/composables/useScreen';
 
-const props = defineProps({
+defineProps({
   bannerData: {
     type: Object,
     required: true,
@@ -31,13 +33,19 @@ onMounted(() => {
     <div v-if="!lePadV" class="banner-content">
       <ContentWrapper data-aos="fade-up">
         <OFigure :src="bannerData.textImg" class="text-img" />
-        <OButton class="banner-btn" variant="solid" color="primary" size="large" :href="bannerData.href" target="_blank">
+        <OButton v-if="bannerData.href" class="banner-btn" variant="solid" color="primary" size="large" :href="bannerData.href" target="_blank">
           {{ bannerData.btn }}
+          <template #suffix>
+            <OIcon><IconOutLink /></OIcon>
+          </template>
         </OButton>
       </ContentWrapper>
     </div>
-    <OButton v-else class="banner-btn" variant="solid" color="primary" size="medium" :href="bannerData.hrefMb" target="_blank">
+    <OButton v-if="lePadV && bannerData.href" class="banner-btn" variant="solid" color="primary" size="medium" :href="bannerData.href" target="_blank">
       {{ bannerData.btn }}
+      <template #suffix>
+        <OIcon><IconOutLink /></OIcon>
+      </template>
     </OButton>
   </div>
 </template>
