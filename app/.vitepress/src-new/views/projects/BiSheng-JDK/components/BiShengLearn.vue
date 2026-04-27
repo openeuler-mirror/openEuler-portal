@@ -9,14 +9,14 @@ import { useScreen } from '~@/composables/useScreen';
 import IconOutLink from '~icons/app-new/icon-outlink-new.svg';
 import IconChevronDown from '~icons/app-new/icon-chevron-down.svg';
 
-const { t, isEn } = useLocale();
+const { t } = useLocale();
 const { lePadV, lePad, leLaptop } = useScreen();
 
 const jdkDocLinks = [
-  { textKey: 'bishengJdk.jdk8', href: 'https://atomgit.com/openeuler/bishengjdk-8/wikis/Home' },
-  { textKey: 'bishengJdk.jdk11', href: 'https://atomgit.com/openeuler/bishengjdk-11/wikis/Home' },
-  { textKey: 'bishengJdk.jdk17', href: 'https://atomgit.com/openeuler/bishengjdk-17/wikis/Home' },
-  { textKey: 'bishengJdk.jdk21', href: 'https://atomgit.com/openeuler/bishengjdk-21/wikis/Home' },
+  { textKey: 'bishengJdk.jdk8', href: 'https://atomgit.com/openeuler/bishengjdk-8/wiki/Home.md' },
+  { textKey: 'bishengJdk.jdk11', href: 'https://atomgit.com/openeuler/bishengjdk-11/wiki/Home.md' },
+  { textKey: 'bishengJdk.jdk17', href: 'https://atomgit.com/openeuler/bishengjdk-17/wiki/Home.md' },
+  { textKey: 'bishengJdk.jdk21', href: 'https://atomgit.com/openeuler/bishengjdk-21/wiki/Home.md' },
 ];
 
 const learnItems = [

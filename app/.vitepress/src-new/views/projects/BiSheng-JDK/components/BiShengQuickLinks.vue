@@ -16,12 +16,8 @@ const quickLinks = [
     titleKey: 'bishengJdk.sigTitle',
     links: [
       {
-        textKey: 'bishengJdk.sig2021',
-        href: 'https://atomgit.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234',
-      },
-      {
         textKey: 'bishengJdk.sig2022',
-        href: 'https://etherpad.openeuler.org/p/Compiler-meetings',
+        href: '/zh/sig/Compiler',
       },
     ],
   },
@@ -30,17 +26,7 @@ const quickLinks = [
     links: [
       {
         textKey: 'bishengJdk.viewDetails',
-        href: 'https://atomgit.com/openeuler/bishengjdk-8/wikis/%E9%A1%B9%E7%9B%AE%E8%B7%AF%E6%A0%87?sort_id=4182245',
-      },
-    ],
-  },
-  {
-    titleKey: 'bishengJdk.tckTitle',
-    links: [
-      {
-        textKey: 'bishengJdk.viewDetails',
-        href: '/other/projects/bishengjdk/tck-affidavit/',
-        isInternal: true,
+        href: 'https://atomgit.com/openeuler/bishengjdk-8/wiki/%E9%A1%B9%E7%9B%AE%E8%B7%AF%E6%A0%87.md',
       },
     ],
   },
@@ -64,7 +50,7 @@ const gap = computed(() => {
       <OCol
         v-for="(card, i) in quickLinks"
         :key="i"
-        :flex="lePadV ? '1 1 100%' : '1 1 33.33%'"
+        :flex="lePadV ? '1 1 100%' : '1 1 50%'"
       >
         <div class="ql-card">
           <p class="ql-title">{{ t(card.titleKey) }}</p>
