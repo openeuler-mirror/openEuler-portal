@@ -9,7 +9,7 @@ export default {
     bgMb: bannerMb,
     textImg: text,
     btn: '观看回放',
-    href: '',
+    href: 'https://www.bilibili.com/video/BV13FoyBnEZH/?vd_source=544d9ea25c0bc3a2570734b5b21104be',
   },
   live: {
     title: '活动直播',
