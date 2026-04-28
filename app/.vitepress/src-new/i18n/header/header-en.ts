@@ -493,7 +493,7 @@ export default {
     NO_DATA: 'No data',
     PLEACHOLDER: 'Please enter...',
     PLEACHOLDER_EXTEND: 'Press Enter to start, or refine your search with more info',
-    PLEACHOLDER_IMAGE: 'Search by text or image',
+    PLEACHOLDER_IMAGE: 'Search by text or upload image of any error',
     UPLOAD_TOOLTIP: 'JPG, PNG, JPEG supported (max 10 MB)',
     UPLOAD_FAILED: 'Upload failed. Check connection and try again.',
     TEXT: 'Search',

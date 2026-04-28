@@ -133,10 +133,15 @@ const showDrawer = () => {
     popList.value = res.obj;
   });
 };
-// 关闭搜索框
-const closeSearchBox = () => {
+// 清空输入框内容（保持搜索框展开状态）
+const clearSearchInput = () => {
   searchInput.value = '';
   removeImage();
+};
+
+// 关闭搜索框
+const closeSearchBox = () => {
+  clearSearchInput();
   emits('search-click', isShowBox.value);
   if (!lePadV.value) {
     isShowBox.value = false;
@@ -393,7 +398,7 @@ const handleDrop = (event: DragEvent) => {
                 <OPopover v-if="!lePadV" trigger="hover" position="bottom" :target="uploadBtnRef" body-class="upload-tooltip-popup">
                   {{ searchValue.UPLOAD_TOOLTIP }}
                 </OPopover>
-                <OIcon class="close icon" @click="closeSearchBox"
+                <OIcon class="close icon" @mousedown.prevent @click="clearSearchInput"
                   ><IconClose
                 /></OIcon>
               </template>

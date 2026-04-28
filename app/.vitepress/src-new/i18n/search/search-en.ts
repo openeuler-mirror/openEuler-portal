@@ -45,6 +45,6 @@ export default {
   onestep: 'Quick Navigation',
   noData: 'No data',
   searchSuggest: 'Search Suggestions',
-  searchPlaceholder: 'Search by text or image',
+  searchPlaceholder: 'Search by text or upload image of any error',
   imagePlaceholder: 'Press Enter to start, or refine your search with more info',
 };
