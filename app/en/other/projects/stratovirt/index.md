@@ -72,7 +72,7 @@ BootLoader: StratoVirt abandons the conventional BIOS + GRUB boot mode and imple
 
 MicroVM: This is the virtualization layer that leverages software and hardware collaboration to simplify the device management and support low-latency resource scaling.
 
-![示意图](./assets/business.png)
+![示意图](./assets/business.jpg)
 
 </MarkdownLayout>
 

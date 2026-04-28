@@ -13,15 +13,19 @@ const props = defineProps({
 
 <template>
   <div class="common-layout">
-    <div v-for="(node, index) in data" :key="index">
+    <template v-for="(node, index) in data" :key="index">
       <div v-if="['h2', 'h3'].includes(node.type) && node.content" class="section-title">{{ node.content }}</div>
+      <div v-if="node.type === 'strong' && node.content" class="strong">{{ node.content }}</div>
       <div v-if="node.type === 'p' && node.content" class="section-content">{{ node.content }}</div>
+      <ul v-if="node.type === 'ul' && node.content" class="list">
+        <li v-for="(item, i) in node.content" :key="i">{{ item }}</li>
+      </ul>
       <div v-if="node.type === 'img'" class="section-image">
         <MarkdownImage>
           <img :src="node.src" :alt="node.alt" >
         </MarkdownImage>
       </div>
-    </div>
+    </template>
   </div>
 </template>
 
@@ -29,8 +33,7 @@ const props = defineProps({
 .common-layout {
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  padding: 24px 32px;
-  margin-top: 12px;
+  padding: 40px 32px;
 
   .section-title {
     color: var(--o-color-info1);
@@ -39,16 +42,56 @@ const props = defineProps({
     @include h3;
   }
 
-  .section-content {
-    color: var(--o-color-info2);
-    margin: 8px 0;
-    @include text1;
+  .strong,
+  .section-content,
+  .list {
+    color: var(--o-color-info1);
+    @include text2;
+  }
+
+  .strong {
+    font-weight: 600;
+  }
+
+  .strong + .list {
+    margin-top: 12px;
+  }
+
+  .section-content + .section-content {
+    margin-top: 12px;
   }
 
   .section-image {
-    padding: 12px 0;
     display: flex;
     align-items: center;
+    margin-top: 32px;
+  }
+}
+
+@include respond-to('<=laptop') {
+  .common-layout {
+    padding: 24px;
+    .section-image {
+      margin-top: 24px;
+    }
+  }
+}
+
+@include respond-to('<=pad') {
+  .common-layout {
+    padding: 16px;
+    .section-image {
+      margin-top: 16px;
+    }
+  }
+}
+
+@include respond-to('<=pad_v') {
+  .common-layout {
+    padding: 12px;
+    .section-image {
+      margin-top: 12px;
+    }
   }
 }
 </style>

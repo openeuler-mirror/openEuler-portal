@@ -56,7 +56,7 @@ watch(
       bottom: 0;
       width: 100vw;
       height: 100%;
-      background-image: url('~@/assets/category/intelligence-boom/bottom_background.png');
+      // background-image: url('~@/assets/category/intelligence-boom/bottom_background.png');
       background-repeat: no-repeat;
       background-size: 100vw auto;
       background-position: center bottom;

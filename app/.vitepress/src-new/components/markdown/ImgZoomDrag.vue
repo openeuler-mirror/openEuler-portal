@@ -289,6 +289,7 @@ onBeforeUnmount(() => {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: var(--o-radius-xs);
 
   @include respond-to('phone') {
     max-width: calc(100vw - 32px);
@@ -301,10 +302,12 @@ onBeforeUnmount(() => {
   transform-origin: 50% 50%;
   user-select: none;
   -webkit-user-drag: none;
+  border-radius: var(--o-radius-xs);
 }
 
 img {
   width: 100%;
+  border-radius: var(--o-radius-xs);
 }
 
 @include in-dark {

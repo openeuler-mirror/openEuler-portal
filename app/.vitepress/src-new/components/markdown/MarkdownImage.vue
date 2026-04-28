@@ -7,6 +7,7 @@ import ImgZoomDrag from './ImgZoomDrag.vue';
 import IconExitFullScreen from '~icons/app-new/icon-zoom-out.svg';
 
 import { useScreen } from '~@/composables/useScreen';
+import { useCommon } from '@/stores/common';
 
 const { isPhone, gtLaptop } = useScreen();
 const containerRef = ref<HTMLElement>();
@@ -17,6 +18,9 @@ const zoomImgUrl = ref('');
 const zoomVisible = ref(false);
 const zoomWidth = ref(0);
 const zoomHeight = ref(0);
+
+const commonStore = useCommon();
+const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 
 watch(zoomEnabled, () => {
   const img = containerRef.value?.querySelector<HTMLImageElement>('img');
@@ -44,7 +48,7 @@ const onCloseZoom = () => {
       <span class="img-expand-btn"></span>
       <span class="img-mask"></span>
     </template>
-    <div class="img-container">
+    <div class="img-container" :class="{'img-container-dark': isDark}">
       <slot></slot>
     </div>
   </span>
@@ -120,6 +124,13 @@ const onCloseZoom = () => {
   .img-container {
     :deep(img) {
       max-width: min(936px, 100%);
+      border-radius: var(--o-radius-xs);
+    }
+  }
+
+  .img-container-dark {
+    :deep(img) {
+      @include img-in-dark;
     }
   }
 
@@ -130,8 +141,9 @@ const onCloseZoom = () => {
     }
   }
 
-  @include respond-to('phone') {
+  @include respond-to('<=pad_v') {
     max-width: 100%;
+    padding: 0;
     .img-expand-btn,
     .img-mask {
       display: none;

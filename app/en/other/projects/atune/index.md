@@ -42,7 +42,7 @@ The interaction system layer monitors and configures various system resources. T
 
 The tuning model library contains the tuning configurations for 20+ application scenarios of 10 categories.
 
-![示意图](./assets/business.png)
+![示意图](./assets/business.jpg)
 
 </MarkdownLayout>
 

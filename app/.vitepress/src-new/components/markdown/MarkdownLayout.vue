@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, useSlots, computed } from 'vue';
+import { OLink } from '@opensig/opendesign';
 import MarkdownCardLayout from './MarkdownCardLayout.vue';
 import MarkdownFlatLayout from './MarkdownFlatLayout.vue';
 import MarkdownTabsLayout from './MarkdownTabsLayout.vue';
@@ -34,15 +35,23 @@ onMounted(() => {
       // 链接或图片
       if (Array.isArray(node.children)) {
         const child = node.children[0];
-        targetNode  = child.type === 'a' ?
-        {
-          type: child.type,
-          content: child.children,
-          link: child.props.href,
-        } : {
-          type: child.type,
-          alt: child.props.alt,
-          src: child.props.src,
+        if (child.type === 'a') {
+          targetNode = {
+            type: child.type,
+            content: child.children,
+            link: child.props.href,
+          }
+        } else if (child.type === 'strong') {
+          targetNode  = {
+            type: child.type,
+            content: child.children,
+          }
+        } else {
+          targetNode = {
+            type: child.type,
+            alt: child.props.alt,
+            src: child.props.src,
+          }
         }
       } else {
         targetNode  = {
@@ -76,6 +85,12 @@ onMounted(() => {
         type: node.type,
         columns: thead,
         data: tableData,
+      }
+    } else if (node.type === 'ul') {
+      const list = node.children.map(li => li.children);
+      targetNode  = {
+        type: node.type,
+        content: list,
       }
     }
     return targetNode;
@@ -132,6 +147,13 @@ const componentType = computed(() => {
   return 'common';
 })
 
+const footerVisible = computed(() => {
+  const url = sectionFooter.value?.link;
+  if (typeof url === 'string') {
+    return url.includes('mailto:');
+  }
+  return false;
+})
 </script>
 
 <template>
@@ -150,21 +172,27 @@ const componentType = computed(() => {
     <MarkdownLogoList v-if="componentType === 'image'" :data="nodesData" />
     <MarkdownCommonLayout v-if="componentType === 'common'" :data="nodesData" />
     <MarkdownTable v-if="componentType === 'table'" :data="nodesData" />
+    <template v-if="footerVisible" #footer>
+      <span>{{sectionFooter.content }}</span>
+      <OLink :href="sectionFooter.link" target="_blank" color="primary" hover-underline v-analytics.bubble="{ target: sectionFooter.content }">
+        {{ sectionFooter?.link.replace('mailto:', '') }}
+      </OLink>
+    </template>
   </AppSection>
 </template>
 
 <style lang="scss" scoped>
-  .markdown-section {
-    :deep(.section-subtitle) {
-      margin-top: var(--o-gap-4);
-    }
-
-    :deep(.section-body) {
-      margin-top: var(--o-gap-5);
-    }
-
-    :deep(.o-tab-body) {
-      margin-top: var(--o-gap-5);
-    }
+.markdown-section {
+  :deep(.section-subtitle) {
+    margin-top: var(--o-gap-4);
   }
+
+  :deep(.section-body) {
+    margin-top: var(--o-gap-7);
+  }
+
+  :deep(.o-tab-body) {
+    margin-top: var(--o-gap-5);
+  }
+}
 </style>

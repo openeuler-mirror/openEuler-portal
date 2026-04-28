@@ -46,20 +46,9 @@ const infos = computed(() => {
 
 <style lang="scss" scoped>
 .flat {
-  --o-gap-section: 72px;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  padding: 24px 32px;
-
-  @include respond-to('<=laptop') {
-    --o-gap-section: 56px;
-  }
-  @include respond-to('pad_h') {
-    --o-gap-section: 40px;
-  }
-  @include respond-to('<=pad_v') {
-    --o-gap-section: 32px;
-  }
+  padding: 32px;
 }
 
 .item-title {
@@ -73,58 +62,73 @@ const infos = computed(() => {
 }
 
 .flat-item {
-  margin-left: 16px;
-  margin-top: 1px;
+  text-align: center;
 }
 .flat-list {
   .o-col {
-    padding: 16px;
-    &:not(:nth-last-child(-n+2)) {
-      border-bottom: 1px solid var(--o-color-control4);
+    margin-top: 32px;
+    &:nth-child(-n + 2) {
+      margin-top: 0px;
     }
     // 奇数列（左边项目）都有右边框
     &:nth-child(odd) {
-      border-right: 1px solid var(--o-color-control4);
+      padding-right: 16px;
     
       &:last-child:not(:nth-child(2)) {
         // 如果是奇数个项目时的最后一个（独占一行）
-        border-right: none;
         flex: 0 0 100%;
+      }
+    }
+    &:nth-child(even) {
+      padding-left: 16px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 1px;
+        height: calc(100% - 30px);
+        background-color: var(--o-color-control4);
       }
     }
   }
 }
 
-@include respond-to('pad_h') {
+@include respond-to('<=laptop') {
+  .flat {
+    padding: 24px;
+  }
+}
+
+@include respond-to('<=pad') {
+  .flat {
+    padding: 16px;
+  }
   .item-desc {
     margin-top: 8px;
-  }
-  .flat-list {
-    .o-col {
-      padding: 8px;
-    }
   }
 }
 
 @include respond-to('<=pad_v') {
+  .flat {
+    padding: 12px;
+  }
   .flat-item {
     margin-left: 0;
     margin-top: 0;
     display: flex;
     flex-direction: column;
   }
-  .item-desc {
-    margin-top: 8px;
-  }
   .flat-list {
     .o-col {
-      padding: 12px;
-      &:nth-child(odd) {
-        border-right: none;
+      padding: 0 !important;
+      &::before {
+        display: none;
       }
-      &:nth-last-child(2) {
-        border-bottom: 1px solid var(--o-color-control4);
-      }
+    }
+    .o-col + .o-col {
+      margin-top: 12px;
     }
   }
 }

@@ -53,7 +53,7 @@ Scalability: provides a plug-in architecture that allows you to develop custom p
 
 iSulad is not restricted by hardware specifications and architectures. It features minimal background noise, making it a perfect option for many fields.
 
-![示意图](./assets/business.png)
+![示意图](./assets/business.jpg)
 
 ## isula-build
 
@@ -63,7 +63,7 @@ isula-build usually runs in the build environment and provides template containe
 
 During the build operation, isula-build reads Dockerfile as the input to quickly build container images that comply with the Docker and OCI image specifications. Then, isula-build distributes the images to the iSulad/Docker on the same node, local TAR packages, or remote container image repositories.
 
-![示意图](./assets/business.png)
+![示意图](./assets/business.jpg)
 
 ## isula-transform
 
@@ -71,7 +71,7 @@ During the build operation, isula-build reads Dockerfile as the input to quickly
 
 isula-transform was released together with iSulad 2.0 to convert containers managed by the Docker container engine and migrate them to the iSulad engine. After the migration, iSulad allows you to effortlessly manage the lifecycle of containers.
 
-![示意图](./assets/business.png)
+![示意图](./assets/business.jpg)
 
 </MarkdownLayout>
 

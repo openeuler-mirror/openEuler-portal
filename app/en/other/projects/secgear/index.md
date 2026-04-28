@@ -38,7 +38,7 @@ The middleware layer provides common security protocol components and various se
 
 The base layer provides rich enclave development APIs or tools, including code generation tools and enclave life cycle management APIs. POSIX APIs and standard OpenSSL APIs are supported on the secure side. You can develop secure applications based on these APIs.
 
-![示意图](./assets/business.png)
+![示意图](./assets/business.jpg)
 
 </MarkdownLayout>
 

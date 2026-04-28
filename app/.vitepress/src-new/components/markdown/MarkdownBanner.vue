@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import { onMounted, useSlots } from 'vue';
 import AOS from 'aos';
-import { OButton } from '@opensig/opendesign';
-import IconOutlink from '~icons/sig/icon-outlink.svg';
+import { OButton, OIcon } from '@opensig/opendesign';
+import IconOutlink from '~icons/app-new/icon-outlink-new.svg';
+
+import { useScreen } from '~@/composables/useScreen';
+
+const { lePadV } = useScreen();
 
 const slots = useSlots();
 
@@ -49,24 +53,24 @@ const isSelfDomain = (url: string) => {
           <OButton
             variant="solid"
             color="primary"
-            size="large"
+            :size="lePadV ? 'medium' : 'large'"
             :href="props.data[3]?.link"
             target="_blank"
           >
             {{ props.data[3]?.content }}
-            <template #suffix v-if="!isSelfDomain(props.data[3]?.link)"><IconOutlink /></template>
+            <template #suffix v-if="!isSelfDomain(props.data[3]?.link)"><OIcon><IconOutlink /></OIcon></template>
           </OButton>
           <OButton
            v-if="props.data[4]?.type === 'a'"
             variant="outline"
             color="primary"
-            size="large"
+            :size="lePadV ? 'medium' : 'large'"
             class="certificate-btn"
             :href="props.data[4]?.link"
             target="_blank"
           >
             {{ props.data[4]?.content }}
-            <template #suffix v-if="!isSelfDomain(props.data[4]?.link)"><IconOutlink /></template>
+            <template #suffix v-if="!isSelfDomain(props.data[4]?.link)"><OIcon><IconOutlink /></OIcon></template>
           </OButton>
         </div>
       </div>
@@ -77,21 +81,21 @@ const isSelfDomain = (url: string) => {
 <style lang="scss" scoped>
 // 公共样式 mixin
 @mixin mixin-title {
-  @include display2;
   color: rgba(var(--o-black));
   position: relative;
   z-index: 1;
   margin-bottom: 0;
   font-weight: 500;
+  @include display2;
 }
 
 @mixin mixin-subtitle {
-  @include text2;
   position: relative;
   color: rgba(var(--o-black));
   margin-top: var(--o-gap-2);
   z-index: 1;
   font-weight: unset;
+  @include text2;
 }
 
 .dark {
@@ -163,15 +167,40 @@ const isSelfDomain = (url: string) => {
     }
 
     .banner-btn {
-      margin-top: var(--o-gap-5);
       display: flex;
-      gap: var(--o-gap-5);
+      flex-wrap: wrap;
+      .o-btn {
+        margin-top: var(--o-gap-5);
+        &:first-child {
+          margin-right: 24px;
+        }
+      }
+      .o-icon {
+        --icon-size: 24px;
+      }
+    }
+  }
+}
+
+@include respond-to('<=laptop') {
+  .banner-markdown {
+    .wrap {
+      .banner-btn {
+        .o-btn {
+          &:first-child {
+            margin-right: 16px;
+          }
+        }
+        .o-icon {
+          --icon-size: 16px;
+        }
+      }
     }
   }
 }
 
 // 移动端样式
-@media screen and (max-width: 840px) {
+@include respond-to('<=pad_v') {
   .banner-markdown {
     background-color: unset;
     
@@ -197,6 +226,18 @@ const isSelfDomain = (url: string) => {
           color: var(--o-color-info2);
           margin-top: var(--o-gap-2);
           @include text1;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to('phone') {
+  .banner-markdown {
+    .wrap {
+      .banner-btn {
+        .o-btn {
+          margin-top: 12px;
         }
       }
     }
