@@ -1443,111 +1443,155 @@ const jsonLdData = {
   }
 ]
 `,
-  'zh/download':`
-[
+  'zh/download':`[
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.openeuler.org/zh/download",
-    "url": "https://www.openeuler.org/zh/download",
-    "name": "openEuler下载 | openEuler ISO镜像 | openEuler社区",
-    "description": "openEuler是面向数字基础设施的操作系统,支持服务器、云计算、边缘计算、嵌入式等应用场景,支持多样性计算,致力于提供安全、稳定、易用的开源服务器Linux操作系统。欢迎访问openEuler官网，下载使用。",
-    "inLanguage": "zh",
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": "https://www.openeuler.org/",
-      "url": "https://www.openeuler.org/",
-      "name": "openEuler社区",
-      "inLanguage": "zh"
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "首页",
-          "item": "https://www.openeuler.org/zh/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "下载",
-          "item": "https://www.openeuler.org/zh/download"
-        }
-      ]
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "openEuler",
-    "operatingSystem": "Linux",
-    "applicationCategory": "OperatingSystem",
-    "url": "https://www.openeuler.org/zh/download",
-    "description": "openEuler是面向数字基础设施的操作系统，支持服务器、云计算、边缘计算、嵌入式等应用场景，支持多样性计算，致力于提供安全、稳定、易用的开源服务器Linux操作系统。",
-    "publisher": {
-      "@type": "Organization",
-      "name": "openEuler社区",
-      "url": "https://www.openeuler.org/"
-    },
-    "offers": [
+    "@type": "BreadcrumbList",
+    "itemListElement": [
       {
-        "@type": "Offer",
-        "name": "openEuler 24.03 LTS SP3",
-        "description": "openEuler 24.03 LTS SP3是基于6.6内核的24.03-LTS版本增强扩展版本，面向服务器、云、AI场景，持续提供更多新特性和功能扩展，包括内核优化、异构协同推理、智能诊断、机密虚机、编译器、RISC-V架构优化、智能开发者桌面、安全加固、灵衢超节点、身份认证、虚拟化等。",
-        "url": "https://www.openeuler.org/zh/download",
-        "price": "0",
-        "priceCurrency": "CNY",
-        "availability": "https://schema.org/InStock"
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://www.openeuler.org/zh/"
       },
       {
-        "@type": "Offer",
-        "name": "openEuler 24.03 LTS SP2",
-        "description": "openEuler 24.03 LTS SP2 是基于6.6内核的LTS版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验。",
-        "url": "https://www.openeuler.org/zh/download",
-        "price": "0",
-        "priceCurrency": "CNY",
-        "availability": "https://schema.org/InStock"
-      },
-      {
-        "@type": "Offer",
-        "name": "openEuler 24.03 LTS SP1",
-        "description": "openEuler 24.03 LTS SP1 是基于6.6内核的24.03 LTS版本增强扩展版本，面向服务器、云、边缘计算和嵌入式场景，持续提供更多新特性和功能扩展。",
-        "url": "https://www.openeuler.org/zh/download",
-        "price": "0",
-        "priceCurrency": "CNY",
-        "availability": "https://schema.org/InStock"
+        "@type": "ListItem",
+        "position": 2,
+        "name": "下载",
+        "item": "https://www.openeuler.org/zh/download/"
       }
     ]
   },
   {
     "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "openEuler",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux",
+    "description": "面向数字基础设施的开源操作系统，支持服务器、云计算、边缘计算、嵌入式等应用场景，支持多样性计算，致力于提供安全、稳定、易用的开源服务器Linux操作系统。",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CNY",
+      "availability": "https://schema.org/InStock",
+      "description": "openEuler社区版完全免费开源"
+    },
+    "softwareVersion": "24.03 LTS SP3",
+    "downloadUrl": "https://www.openeuler.org/zh/download/",
+    "license": "https://license.coscl.org.cn/MulanPSL2",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.org/"
+    },
+    "featureList": [
+      "支持x86_64架构",
+      "支持aarch64架构",
+      "支持ARM32架构",
+      "支持RISC-V架构",
+      "面向服务器场景",
+      "面向云计算场景",
+      "面向边缘计算场景",
+      "面向嵌入式场景",
+      "面向AI场景"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "openEuler 社区发行版下载列表",
-    "description": "openEuler 社区版分为长期支持版本（LTS）和创新版本，支持x86_64、aarch64、ARM32、RISC-V等架构",
-    "url": "https://www.openeuler.org/zh/download",
+    "name": "openEuler社区发行版下载列表",
+    "description": "openEuler社区版分为长期支持版本（LTS）和创新版本，支持x86_64、aarch64、ARM32、RISC-V等架构",
+    "numberOfItems": 3,
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "openEuler 24.03 LTS SP3",
-        "description": "长期支持版本，Planned EOL: 2027/12。基于6.6内核，面向服务器、云、AI场景，支持x86_64、aarch64、ARM32、RISC-V架构。",
-        "url": "https://www.openeuler.org/zh/download"
+        "name": "openEuler 24.03 LTS SP3 长期支持版本",
+        "description": "2025年12月30日发布，Planned EOL: 2027/12。基于6.6内核，面向服务器、云、AI场景，包括内核优化、异构协同推理、智能诊断、机密虚机、编译器、RISC-V架构优化、智能开发者桌面、安全加固、灵衢超节点、身份认证、虚拟化等新特性。",
+        "url": "https://www.openeuler.org/zh/download/"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "openEuler 24.03 LTS SP2",
-        "description": "长期支持版本，Planned EOL: 2026/03。基于6.6内核，面向服务器、云、边缘计算和嵌入式场景，支持x86_64、aarch64、ARM32、RISC-V架构。",
-        "url": "https://www.openeuler.org/zh/download"
+        "name": "openEuler 24.03 LTS SP2 长期支持版本",
+        "description": "Planned EOL: 2026/03。基于6.6内核的LTS版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能。",
+        "url": "https://www.openeuler.org/zh/download/"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "openEuler 24.03 LTS SP1",
-        "description": "长期支持版本，Planned EOL: 2026/12。基于6.6内核，面向服务器、云、边缘计算和嵌入式场景，支持x86_64、aarch64、ARM32、RISC-V架构。",
-        "url": "https://www.openeuler.org/zh/download"
+        "name": "openEuler 24.03 LTS SP1 长期支持版本",
+        "description": "Planned EOL: 2026/12。基于6.6内核的24.03 LTS版本增强扩展版本，面向服务器、云、边缘计算和嵌入式场景，持续提供更多新特性和功能扩展。",
+        "url": "https://www.openeuler.org/zh/download/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "openEuler Embedded 26.03",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux",
+    "description": "openEuler Embedded 26.03 版本基于IB-Robot具身智能全栈架构，面向hi3403、3591等硬件发布镜像。提供具身claw支持自主精准控制，依托ROS 2 Driver统一接入相机、雷达、麦克风等感知设备，支持VR手柄、手机等遥操作采集数据；通过tensormsg实现消息与张量安全转换，提供VLA大模型及策略模型推理服务；由统一执行器完成动作调度与轨迹执行，支持MoveIt 2规划；并以YAML配置驱动机器人本体，可一键切换仿真与实机环境。",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CNY",
+      "availability": "https://schema.org/InStock"
+    },
+    "featureList": [
+      "具身claw自主精准控制",
+      "ROS 2 Driver统一接入感知设备",
+      "VR手柄、手机遥操作",
+      "tensormsg消息与张量安全转换",
+      "VLA大模型推理服务",
+      "策略模型推理服务",
+      "MoveIt 2规划支持",
+      "YAML配置驱动机器人本体",
+      "一键切换仿真与实机环境"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "如何下载openEuler",
+    "description": "openEuler社区发行版下载安装指南",
+    "totalTime": "PT10M",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "CNY",
+      "value": "0"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "选择版本类型",
+        "text": "选择openEuler版本：长期支持版本（LTS）如24.03 LTS SP3/SP2/SP1，或创新版本如Embedded 26.03"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "选择处理器架构",
+        "text": "根据硬件平台选择架构：x86_64、aarch64、ARM32或RISC-V"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "选择应用场景",
+        "text": "选择应用场景：服务器、云计算、边缘计算、嵌入式或DevStation开发者桌面"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "下载ISO镜像",
+        "text": "点击下载链接获取ISO镜像文件，系统会根据访问IP推荐最优镜像仓下载源"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "验证镜像完整性",
+        "text": "使用页面提供的完整性校验文件验证下载的镜像是否完整"
       }
     ]
   },
@@ -1557,10 +1601,10 @@ const jsonLdData = {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "如何下载openEuler社区发行版？",
+        "name": "openEuler支持哪些架构？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "openEuler社区发行版分为长期支持版本（LTS）和创新版本，支持x86_64、aarch64、ARM32、RISC-V等架构。您可以在下载页面选择所需版本、架构及场景（服务器、边缘计算、云计算、嵌入式、DevStation）进行下载。"
+          "text": "openEuler社区版支持x86_64、aarch64、ARM32、RISC-V等架构。不同版本和场景支持的架构有所不同，可在下载页面筛选查看。"
         }
       },
       {
@@ -1568,21 +1612,52 @@ const jsonLdData = {
         "name": "openEuler支持哪些公有云平台？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "openEuler官方镜像已在多个主流公有云平台正式发布，包括Amazon AWS、Microsoft Azure、阿里云、华为云、腾讯云等。"
+          "text": "openEuler官方镜像已在Amazon AWS、Microsoft Azure、阿里云、华为云、腾讯云等主流公有云平台正式发布，可直接在云市场获取openEuler云镜像。"
         }
       },
       {
         "@type": "Question",
-        "name": "openEuler支持哪些容器镜像平台？",
+        "name": "openEuler容器镜像在哪里获取？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "openEuler提供官方容器镜像，可在Docker Hub和Quay.io上获取基础容器镜像和应用容器镜像，此外中科院软件所oepkgs也提供openEuler软件包服务。"
+          "text": "openEuler官方容器镜像可在Docker Hub、Quay.io上获取基础容器镜像和应用容器镜像。此外oepkgs开放软件包服务也提供openEuler软件包和容器镜像服务。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何在Windows上运行openEuler？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "通过Windows Subsystem For Linux (WSL)可在Windows上使用openEuler环境。openEuler已将多个版本WSL镜像上架到微软应用商店，可直接下载体验openEuler开发环境。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何在MacOS上运行openEuler？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "使用OrbStack可在MacOS上运行openEuler容器镜像。OrbStack是快速、轻量级的虚拟机平台，支持Docker容器和Linux虚拟机。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler支持虚拟化安装吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "是的。可使用Oracle VirtualBox等虚拟机软件安装openEuler。openEuler官方软件仓提供虚拟机镜像，可直接下载使用。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler支持树莓派吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "是的。openEuler官方软件仓提供树莓派镜像，可在树莓派硬件平台上体验openEuler操作系统。"
         }
       }
     ]
   }
-]
-`,
+]`,
   'zh/data-sharing-with-third-parties':`
 [
   {
@@ -3999,82 +4074,46 @@ const jsonLdData = {
   }
 ]
 `,
-  "zh/other/lifecycle": `
-[
+  "zh/other/lifecycle": `[
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.openeuler.org/zh/other/lifecycle",
-    "url": "https://www.openeuler.org/zh/other/lifecycle",
-    "name": "openEuler 生命周期管理 | 其他信息 | openEuler社区",
-    "description": "探索openEuler软件的生命周期管理，确保高效的版本管理和技术支持。",
-    "inLanguage": "zh-CN",
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": "https://www.openeuler.org/",
-      "url": "https://www.openeuler.org/",
-      "name": "openEuler社区",
-      "inLanguage": "zh-CN"
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "首页",
-          "item": "https://www.openeuler.org/zh/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "其他信息",
-          "item": "https://www.openeuler.org/zh/other/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "生命周期管理",
-          "item": "https://www.openeuler.org/zh/other/lifecycle"
-        }
-      ]
-    },
-    "about": {
-      "@type": "SoftwareApplication",
-      "name": "openEuler",
-      "url": "https://www.openeuler.org/zh/",
-      "applicationCategory": "OperatingSystem",
-      "operatingSystem": "Linux",
-      "publisher": {
-        "@type": "Organization",
-        "name": "openEuler社区",
-        "url": "https://www.openeuler.org/"
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://www.openeuler.org/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "其他信息",
+        "item": "https://www.openeuler.org/zh/other/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "生命周期管理",
+        "item": "https://www.openeuler.org/zh/other/lifecycle/"
       }
-    }
+    ]
   },
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "headline": "openEuler 生命周期管理",
+    "headline": "openEuler社区版本生命周期管理",
     "description": "探索openEuler软件的生命周期管理，确保高效的版本管理和技术支持。",
-    "url": "https://www.openeuler.org/zh/other/lifecycle",
+    "url": "https://www.openeuler.org/zh/other/lifecycle/",
     "inLanguage": "zh-CN",
-    "publisher": {
-      "@type": "Organization",
-      "name": "openEuler社区",
-      "url": "https://www.openeuler.org/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.openeuler.org/favicon.ico"
-      }
-    },
     "articleSection": [
       "openEuler社区版本生命周期管理规范（总体）",
       "openEuler社区版本生命周期管理规范（LTS+SP）"
     ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.openeuler.org/zh/other/lifecycle"
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.org/"
     },
     "about": [
       {
@@ -4098,7 +4137,7 @@ const jsonLdData = {
         "name": "openEuler社区版本是如何命名的？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "社区版本按照交付年份和月份进行版本号命名。例如，openEuler 20.09于2020年09月发布。"
+          "text": "社区版本按照交付年份和月份进行版本号命名。例如，openEuler 20.09于2020年09月发布，openEuler 22.03于2022年03月发布。"
         }
       },
       {
@@ -4106,7 +4145,7 @@ const jsonLdData = {
         "name": "openEuler长期支持版本（LTS）的生命周期是多长？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "LTS版本全版本生命周期4年（2+2），到生命周期结束前半年~1年由相关团队组建联合维护团队，可申请延长至6年。发布间隔周期定为2年，提供4年社区支持。"
+          "text": "LTS版本全版本生命周期4年（2年维护支持+2年扩展支持），到生命周期结束前半年至1年可申请延长至6年。发布间隔周期定为2年，偶数年3月发布新一代LTS首版本。"
         }
       },
       {
@@ -4114,7 +4153,7 @@ const jsonLdData = {
         "name": "openEuler社区创新版本多久发布一次？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "openEuler每隔6个月会发布一个社区创新版本，提供6个月社区支持。偶数年9月，奇数年3月、9月发布创新版本。"
+          "text": "openEuler每隔6个月会发布一个社区创新版本，提供6个月社区支持。发布时间：偶数年9月，奇数年3月、9月发布创新版本。"
         }
       },
       {
@@ -4122,21 +4161,28 @@ const jsonLdData = {
         "name": "openEuler LTS版本的SP版本生命周期如何划分？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "LTS版本SP版本生命周期原则上按照小SP（6月份Release，可选）9个月，大SP（12月份Release）24个月执行。大规模使用建议选择大SP。SP0默认执行大SP策略，SP3作为LTS最后一个SP，随LTS全版本生命周期结束。"
+          "text": "LTS版本SP版本生命周期：小SP（6月份Release，可选）9个月，大SP（12月份Release）24个月。大规模使用建议选择大SP。SP0默认执行大SP策略，SP3作为LTS最后一个SP，随LTS全版本生命周期结束。"
         }
       },
       {
         "@type": "Question",
-        "name": "openEuler Maintenance Support和Extend Support的区别是什么？",
+        "name": "openEuler维护支持（Maintenance Support）和扩展支持（Extend Support）有什么区别？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Maintenance Support包括：CVE修复、Bugfix、新硬件支持和少量新特性（保证LTS内前向兼容的情况）。Extend Support仅修复"主要"以上CVE和Bug。"
+          "text": "维护支持（Maintenance Support）包括：CVE修复、Bugfix、新硬件支持和少量新特性（保证LTS内前向兼容）。扩展支持（Extend Support）仅修复"主要"以上CVE和Bug。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler有哪些版本类型？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler社区版本分为长期支持版本（LTS）和社区创新版本两种类型。LTS版本提供长期稳定支持，适合生产环境；创新版本提供最新特性，适合开发者体验新功能。"
         }
       }
     ]
   }
-]
-`,
+]`,
   "zh/other/cookies": `
 [
   {
@@ -6629,54 +6675,37 @@ const jsonLdData = {
   }
 ]
 `,
-  "zh/download/commercial-release": `
-[
+  "zh/download/commercial-release": `[
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.openeuler.org/zh/download/commercial-release",
-    "url": "https://www.openeuler.org/zh/download/commercial-release",
-    "name": "openEuler商业发行版 | openEuler下载 | openEuler社区",
-    "description": "openEuler是面向数字基础设施的操作系统,支持服务器、云计算、边缘计算、嵌入式等应用场景,支持多样性计算,致力于提供安全、稳定、易用的开源服务器Linux操作系统。欢迎访问openEuler官网，下载使用。",
-    "inLanguage": "zh",
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": "https://www.openeuler.org/",
-      "url": "https://www.openeuler.org/",
-      "name": "openEuler社区",
-      "inLanguage": "zh"
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "首页",
-          "item": "https://www.openeuler.org/zh/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "下载中心",
-          "item": "https://www.openeuler.org/zh/download/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "商业发行版",
-          "item": "https://www.openeuler.org/zh/download/commercial-release"
-        }
-      ]
-    }
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://www.openeuler.org/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "下载中心",
+        "item": "https://www.openeuler.org/zh/download/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "商业发行版",
+        "item": "https://www.openeuler.org/zh/download/commercial-release/"
+      }
+    ]
   },
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "基于openEuler的商业发行版列表",
     "description": "基于openEuler发布的商业发行版，提供多种厂商的企业级Linux操作系统",
-    "url": "https://www.openeuler.org/zh/download/commercial-release",
-    "numberOfItems": 7,
+    "numberOfItems": 11,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -6684,21 +6713,14 @@ const jsonLdData = {
         "item": {
           "@type": "SoftwareApplication",
           "name": "青云 PrimusOS 操作系统 24.03 LTS SP1",
-          "description": "青云 PrimusOS 操作系统 24.03 LTS SP1 是青云科技依托 Linux 内核，深度融合 openEuler 等主流开源技术，自主打造的新一代安全可靠、高性能的操作系统。该系统全面支持 x86、ARM 等主流处理器架构，可有效支撑数据中心核心业务的稳定运行。面向云计算、数据库、大数据、人工智能及网络安全等关键应用场景，PrimusOS 提供了坚实可靠的底层支撑，致力于满足金融、政府、企业、运营商等行业的数字化转型需求，是国产化环境下领先的数字基础设施操作系统解决方案。",
+          "applicationCategory": "Operating System",
           "operatingSystem": "Linux",
-          "applicationCategory": "OperatingSystem",
-          "releaseNotes": "支持架构: x86_64, AArch64",
-          "datePublished": "2025-10-01",
           "publisher": {
             "@type": "Organization",
             "name": "北京青云科技集团股份有限公司"
           },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "CNY",
-            "availability": "https://schema.org/InStock"
-          }
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2025-10"
         }
       },
       {
@@ -6707,21 +6729,14 @@ const jsonLdData = {
         "item": {
           "@type": "SoftwareApplication",
           "name": "银河麒麟高级服务器操作系统V11",
-          "description": "银河麒麟高级服务器操作系统 V11 是针对云计算、人工智能、大数据、工业互联网时代对主机系统高可靠性、安全性、高性能、灵活性以及实时响应的需求，依据 CMMI5 级标准研制的提供云原生支持、人工智能支持、国产硬件平台深度优化、内生安全、高性能、易管理、广泛兼容的新一代企业级服务器操作系统产品；统一基于Linux Kernel 6.6构建，对外接口遵循 POSIX 标准，同源支持飞腾、鲲鹏、龙芯、海光、兆芯、申威自主平台。",
+          "applicationCategory": "Operating System",
           "operatingSystem": "Linux",
-          "applicationCategory": "OperatingSystem",
-          "releaseNotes": "支持架构: x86_64, AArch64",
-          "datePublished": "2025-08-01",
           "publisher": {
             "@type": "Organization",
             "name": "麒麟软件有限公司"
           },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "CNY",
-            "availability": "https://schema.org/InStock"
-          }
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2025-08"
         }
       },
       {
@@ -6730,21 +6745,14 @@ const jsonLdData = {
         "item": {
           "@type": "SoftwareApplication",
           "name": "汇智TeligenOS服务器操作系统 V3",
-          "description": "汇智TeligenOS服务器操作系统 V3由广州汇智通信技术有限公司研发，具有高效、稳定、安全等核心特性，可为数据库、大数据、云计算及人工智能等企业级应用提供可靠的运行支撑。该系统全面支持X86、ARM、龙芯和申威等主流CPU架构，并完成与国内主要芯片及整机厂商的适配。",
+          "applicationCategory": "Operating System",
           "operatingSystem": "Linux",
-          "applicationCategory": "OperatingSystem",
-          "releaseNotes": "支持架构: x86_64, AArch64",
-          "datePublished": "2025-02-01",
           "publisher": {
             "@type": "Organization",
             "name": "广州汇智通信技术有限公司"
           },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "CNY",
-            "availability": "https://schema.org/InStock"
-          }
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2025-02"
         }
       },
       {
@@ -6753,21 +6761,14 @@ const jsonLdData = {
         "item": {
           "@type": "SoftwareApplication",
           "name": "浪潮云启操作系统 23.12 LTS SP2",
-          "description": "浪潮云启操作系统（英文简称InLinux）是安全高效、稳定可靠的企业级服务器操作系统，全面支持云计算、大数据、物联网、智能计算等应用场景，具备性能高效、灵活定制、稳定可靠等特性。",
+          "applicationCategory": "Operating System",
           "operatingSystem": "Linux",
-          "applicationCategory": "OperatingSystem",
-          "releaseNotes": "支持架构: x86_64, AArch64",
-          "datePublished": "2024-12-01",
           "publisher": {
             "@type": "Organization",
             "name": "浪潮云信息技术股份公司"
           },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "CNY",
-            "availability": "https://schema.org/InStock"
-          }
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2024-12"
         }
       },
       {
@@ -6776,21 +6777,14 @@ const jsonLdData = {
         "item": {
           "@type": "SoftwareApplication",
           "name": "鼎桥TDOS服务器操作系统 V1.0",
-          "description": "鼎桥操作系统（简称TDOS）是鼎桥基于openEuler22.03版本，面向运营商、金融、政企等行业的关键业务而设计开发的企业级服务器操作系统软件。其在openEuler社区版的基础上，融入了众多的自研竞争力特性，完善了生态支持和专业的技术保障。TDOS可广泛适用于数据库、大数据、云计算、WEB服务等应用场景，支持光盘、U盘和网络等多种安装方式，可部署在物理服务器、虚拟机和容器等环境中。",
+          "applicationCategory": "Operating System",
           "operatingSystem": "Linux",
-          "applicationCategory": "OperatingSystem",
-          "releaseNotes": "支持架构: x86_64, AArch64",
-          "datePublished": "2024-05-01",
           "publisher": {
             "@type": "Organization",
             "name": "成都鼎桥通信技术有限公司"
           },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "CNY",
-            "availability": "https://schema.org/InStock"
-          }
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2024-05"
         }
       },
       {
@@ -6799,21 +6793,14 @@ const jsonLdData = {
         "item": {
           "@type": "SoftwareApplication",
           "name": "浪潮云启操作系统 23.12 LTS SP1",
-          "description": "浪潮云启操作系统（英文简称InLinux）是安全高效、稳定可靠的企业级服务器操作系统，全面支持云计算、大数据、物联网、智能计算等应用场景，具备性能高效、灵活定制、稳定可靠等特性。",
+          "applicationCategory": "Operating System",
           "operatingSystem": "Linux",
-          "applicationCategory": "OperatingSystem",
-          "releaseNotes": "支持架构: x86_64, AArch64",
-          "datePublished": "2024-05-01",
           "publisher": {
             "@type": "Organization",
             "name": "浪潮云信息技术股份公司"
           },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "CNY",
-            "availability": "https://schema.org/InStock"
-          }
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2024-05"
         }
       },
       {
@@ -6822,36 +6809,121 @@ const jsonLdData = {
         "item": {
           "@type": "SoftwareApplication",
           "name": "SeawayEdge V1.00",
-          "description": "SeawayEdge是中科海微基于openEuler开源社区构建，结合边缘、嵌入式领域场景探索，打造全场景协同的面向数字基础设施的开源操作系统。",
+          "applicationCategory": "Operating System",
           "operatingSystem": "Linux",
-          "applicationCategory": "OperatingSystem",
-          "releaseNotes": "支持架构: x86_64",
-          "datePublished": "2023-09-01",
           "publisher": {
             "@type": "Organization",
             "name": "中科海微（北京）科技有限公司"
           },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "CNY",
-            "availability": "https://schema.org/InStock"
-          }
+          "releaseNotes": "支持架构: x86_64",
+          "datePublished": "2023-09"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "麒麟信安操作系统",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "麒麟信安 Kylinsec"
+          },
+          "releaseNotes": "支持架构: x86_64, AArch64, LoongArch64, sw_64",
+          "datePublished": "2023-09"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "中软国际openEuler发行版",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "中软国际科技服务有限公司"
+          },
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2023-07"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "润和软件openEuler发行版",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "江苏润和软件股份有限公司"
+          },
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2023-05"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "恒生电子openEuler发行版",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "恒生电子股份有限公司"
+          },
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2023-05"
         }
       }
     ]
   },
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://www.openeuler.org/#organization",
-    "name": "openEuler社区",
-    "url": "https://www.openeuler.org/",
-    "logo": "https://www.openeuler.org/assets/logo.png",
-    "description": "openEuler是面向数字基础设施的操作系统，支持服务器、云计算、边缘计算、嵌入式等应用场景，支持多样性计算，致力于提供安全、稳定、易用的开源服务器Linux操作系统。"
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "什么是openEuler商业发行版？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler商业发行版是基于openEuler开源社区版本发布的企业级Linux操作系统，由麒麟软件、青云科技、浪潮云、鼎桥通信等厂商提供商业支持服务和技术保障。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler商业发行版支持哪些架构？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "商业发行版支持多种处理器架构，包括x86_64、AArch64、LoongArch64、sw_64等。不同厂商产品支持的架构有所不同，可根据需求在页面筛选查看。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "有哪些厂商提供openEuler商业发行版？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "已发布商业发行版的厂商包括：北京青云科技集团股份有限公司、麒麟软件有限公司、广州汇智通信技术有限公司、浪潮云信息技术股份公司、成都鼎桥通信技术有限公司、中科海微（北京）科技有限公司、麒麟信安、中软国际科技服务有限公司、江苏润和软件股份有限公司、恒生电子股份有限公司、广东中兴新支点技术有限公司等。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "商业发行版与社区版有什么区别？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "社区版完全免费开源，由openEuler社区维护。商业发行版由各厂商基于社区版发布，提供企业级支持服务、技术保障、行业适配优化等，部分厂商提供增值特性。"
+        }
+      }
+    ]
   }
-]
-`,
+]`,
   "zh/download/archive": `
 [
   {
@@ -40689,121 +40761,224 @@ const jsonLdData = {
   }
 ]
 `,
-  "en/download": `
-[
+  "en/download": `[
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.openeuler.org/en/download",
-    "url": "https://www.openeuler.org/en/download",
-    "name": "Download Community Release | openEuler",
-    "description": "Download the latest openEuler community release. Find the next go-to Linux distro for your deployments.",
-    "inLanguage": "en",
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": "https://www.openeuler.org/",
-      "url": "https://www.openeuler.org/",
-      "name": "openEuler"
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.org/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Download",
+        "item": "https://www.openeuler.org/en/download/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "openEuler",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux",
+    "description": "openEuler community versions are classified into Long Term Support (LTS) versions and innovation versions. openEuler supports the x86, AArch, Arm, and RISC-V architectures.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "description": "Free and open source Linux distribution"
     },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "openEuler",
-          "item": "https://www.openeuler.org/en/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Download Center",
-          "item": "https://www.openeuler.org/en/download"
-        }
-      ]
+    "downloadUrl": "https://www.openeuler.org/en/download/",
+    "license": "https://license.coscl.org.cn/MulanPSL2",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org/"
     },
-    "potentialAction": {
-      "@type": "DownloadAction",
-      "name": "Download openEuler",
-      "target": "https://www.openeuler.org/en/download"
-    }
+    "featureList": [
+      "Long Term Support (LTS) versions",
+      "Innovation versions",
+      "x86 architecture support",
+      "AArch architecture support",
+      "Arm architecture support",
+      "RISC-V architecture support"
+    ]
   },
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "openEuler Community Releases",
-    "description": "openEuler community versions are classified into Long Term Support (LTS) versions and innovation versions. openEuler supports the x86, AArch, Arm, and RISC-V architectures.",
-    "url": "https://www.openeuler.org/en/download",
-    "numberOfItems": 3,
+    "description": "openEuler community versions: LTS versions and innovation versions, supporting x86, AArch, Arm, and RISC-V architectures",
+    "numberOfItems": 4,
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "item": {
-          "@type": "SoftwareApplication",
-          "@id": "https://www.openeuler.org/en/download#openEuler-24.03-LTS-SP3",
-          "name": "openEuler 24.03 LTS SP3",
-          "description": "openEuler 24.03 LTS SP3, built on Linux Kernel 6.6, introduces support for the groundbreaking UnifiedBus SuperPoD architecture. Engineered for server, cloud, and AI workloads, it delivers robust performance and scalability for next-generation digital infrastructure.",
-          "applicationCategory": "OperatingSystem",
-          "operatingSystem": "Linux",
-          "softwareVersion": "24.03 LTS SP3",
-          "url": "https://www.openeuler.org/en/download",
-          "releaseNotes": "https://www.openeuler.org/en/download",
-          "processorRequirements": "x86, AArch64, ARM, RISC-V",
-          "keywords": "Linux, openEuler, LTS, server, cloud, AI, embedded, edge computing",
-          "publisher": {
-            "@type": "Organization",
-            "name": "openEuler",
-            "url": "https://www.openeuler.org/"
-          }
-        }
+        "name": "openEuler 24.03 LTS SP3 Long-Term Supported Version",
+        "description": "Planned EOL: 2027/12. Built on Linux Kernel 6.6, introduces support for UnifiedBus SuperPoD architecture. Engineered for server, cloud, and AI workloads.",
+        "url": "https://www.openeuler.org/en/download/"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "SoftwareApplication",
-          "@id": "https://www.openeuler.org/en/download#openEuler-24.03-LTS-SP2",
-          "name": "openEuler 24.03 LTS SP2",
-          "description": "openEuler 24.03 LTS SP2, built on Linux kernel 6.6, is suited for server, cloud, edge, and embedded deployments. With best-in-class features, it delivers brand-new experience to developers and users spanning diverse industries.",
-          "applicationCategory": "OperatingSystem",
-          "operatingSystem": "Linux",
-          "softwareVersion": "24.03 LTS SP2",
-          "url": "https://www.openeuler.org/en/download",
-          "processorRequirements": "x86, AArch64, ARM, RISC-V",
-          "keywords": "Linux, openEuler, LTS, server, cloud, edge, embedded",
-          "publisher": {
-            "@type": "Organization",
-            "name": "openEuler",
-            "url": "https://www.openeuler.org/"
-          }
-        }
+        "name": "openEuler 24.03 LTS SP2 Long-Term Supported Version",
+        "description": "Planned EOL: 2026/03. Built on Linux kernel 6.6, suited for server, cloud, edge, and embedded deployments.",
+        "url": "https://www.openeuler.org/en/download/"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "SoftwareApplication",
-          "@id": "https://www.openeuler.org/en/download#openEuler-24.03-LTS-SP1",
-          "name": "openEuler 24.03 LTS SP1",
-          "description": "openEuler 24.03 LTS SP1, an enhanced version of the 24.03 LTS release based on the 6.6 kernel, is designed for server, cloud, edge computing, and embedded deployments, offering new features and functionality for developers and users across diverse domains.",
-          "applicationCategory": "OperatingSystem",
-          "operatingSystem": "Linux",
-          "softwareVersion": "24.03 LTS SP1",
-          "url": "https://www.openeuler.org/en/download",
-          "processorRequirements": "x86, AArch64, ARM, RISC-V",
-          "keywords": "Linux, openEuler, LTS, server, cloud, edge, embedded",
-          "publisher": {
-            "@type": "Organization",
-            "name": "openEuler",
-            "url": "https://www.openeuler.org/"
-          }
+        "name": "openEuler 24.03 LTS SP1 Long-Term Supported Version",
+        "description": "Planned EOL: 2026/12. Based on 6.6 kernel, designed for server, cloud, edge computing, and embedded deployments.",
+        "url": "https://www.openeuler.org/en/download/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "openEuler Embedded 26.03",
+        "description": "Based on full-stack IB-Robot embodied intelligence architecture. Provides embodied claw for autonomous precise control, ROS 2 Driver for sensors, MoveIt 2 planning support, YAML-configurable robot with one-click simulation/physical deployment switching.",
+        "url": "https://www.openeuler.org/en/download/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "openEuler Embedded 26.03",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux",
+    "description": "Based on full-stack IB-Robot embodied intelligence architecture for Hi3403, Hi3591 hardware. Features: embodied claw autonomous precise control, ROS 2 Driver for cameras/LiDARs/microphones, VR controller and mobile teleoperation, tensormsg message-tensor conversion, VLA and policy model inference, MoveIt 2 planning, YAML-configurable robot, one-click simulation/physical switching.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "featureList": [
+      "Embodied claw autonomous precise control",
+      "ROS 2 Driver unified sensor access",
+      "VR controller and mobile teleoperation",
+      "tensormsg secure message-tensor conversion",
+      "VLA model inference services",
+      "Policy model inference services",
+      "MoveIt 2 planning support",
+      "YAML-configurable robot",
+      "One-click simulation/physical deployment switching"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Download openEuler",
+    "description": "openEuler community release download guide",
+    "totalTime": "PT10M",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "USD",
+      "value": "0"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Select Version Type",
+        "text": "Choose openEuler version: Long Term Support (LTS) versions like 24.03 LTS SP3/SP2/SP1, or innovation versions like Embedded 26.03"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Select Architecture",
+        "text": "Select processor architecture: x86, AArch, Arm, or RISC-V based on your hardware platform"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Select Scenario",
+        "text": "Choose deployment scenario: server, cloud, edge computing, embedded, or DevStation developer desktop"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Download ISO Image",
+        "text": "Click download link to get ISO image file. Recommended mirror sites are based on your IP address"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Verify Image Integrity",
+        "text": "Use the integrity check file provided on the page to verify the downloaded image"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What architectures does openEuler support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler supports x86, AArch, Arm, and RISC-V architectures. Different versions and scenarios support different architectures, which can be filtered on the download page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which public cloud platforms support openEuler?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler official images are available on Amazon AWS, Microsoft Azure, Alibaba Cloud, and Huawei Cloud Marketplace. Deploy openEuler-based environments directly from these cloud platforms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I get openEuler container images?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler official container images are available on Docker Hub and Quay.io, including base and application container images. oepkgs also provides openEuler software packages and container images."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I run openEuler on Windows?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Using Windows Subsystem for Linux (WSL), you can run openEuler on Windows. openEuler WSL images are available on Microsoft Store for direct download."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I run openEuler on macOS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Using OrbStack, a fast and lightweight VM platform, you can run openEuler container images on macOS for Docker containers and Linux VMs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does openEuler support virtualization?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Use Oracle VirtualBox to install openEuler VMs. openEuler VM images are available in the official software repository."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is openEuler available for Raspberry Pi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. openEuler Raspberry Pi images are available in the official software repository for this popular single-board computer."
         }
       }
     ]
   }
-]
-`,
+]`,
   "en/contact-us": `
 [
   {
@@ -44082,94 +44257,78 @@ const jsonLdData = {
   }
 ]
 `,
-  "en/other/lifecycle": `
-[
+  "en/other/lifecycle": `[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.org/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Other",
+        "item": "https://www.openeuler.org/en/other/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Version Lifecycles",
+        "item": "https://www.openeuler.org/en/other/lifecycle/"
+      }
+    ]
+  },
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "@id": "https://www.openeuler.org/en/other/lifecycle#article",
-    "headline": "Version Lifecycles | openEuler",
+    "headline": "openEuler Community Release Lifecycle Management",
     "description": "Understand the version lifecycles of openEuler, featuring innovation versions and long-term support (LTS) releases.",
-    "url": "https://www.openeuler.org/en/other/lifecycle",
+    "url": "https://www.openeuler.org/en/other/lifecycle/",
     "inLanguage": "en",
     "articleSection": [
       "openEuler Community Version Lifecycle Management (Overall)",
       "openEuler Community Version Lifecycle Management (LTS+SP)"
     ],
-    "about": {
-      "@type": "SoftwareApplication",
-      "name": "openEuler",
-      "url": "https://www.openeuler.org/",
-      "applicationCategory": "OperatingSystem"
-    },
     "publisher": {
       "@type": "Organization",
-      "name": "openEuler",
-      "url": "https://www.openeuler.org/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.openeuler.org/logo.svg"
-      }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.openeuler.org/en/other/lifecycle"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.openeuler.org/en/other/lifecycle",
-    "url": "https://www.openeuler.org/en/other/lifecycle",
-    "name": "Version Lifecycles | openEuler",
-    "description": "Understand the version lifecycles of openEuler, featuring innovation versions and long-term support (LTS) releases.",
-    "inLanguage": "en",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "openEuler",
+      "name": "openEuler Community",
       "url": "https://www.openeuler.org/"
     },
-    "about": {
-      "@type": "SoftwareApplication",
-      "name": "openEuler",
-      "url": "https://www.openeuler.org/",
-      "applicationCategory": "OperatingSystem"
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.openeuler.org/en/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Other",
-          "item": "https://www.openeuler.org/en/other/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Version Lifecycles",
-          "item": "https://www.openeuler.org/en/other/lifecycle"
-        }
-      ]
-    }
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Long Term Support (LTS) Version",
+        "description": "Released every two years in March of even-numbered years. Lifecycle: 4 years total (2 years maintenance support + 2 years extended support). Can apply for extension to 6 years."
+      },
+      {
+        "@type": "Thing",
+        "name": "Innovation Version",
+        "description": "Released every six months: September of even-numbered years, March and September of odd-numbered years. Provides 6 months community support."
+      }
+    ]
   },
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "url": "https://www.openeuler.org/en/other/lifecycle",
     "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How are openEuler community versions named?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Community versions are named based on the release year and month. For example, openEuler 20.09 was released in September 2020, openEuler 22.03 was released in March 2022."
+        }
+      },
       {
         "@type": "Question",
         "name": "What are the types of openEuler community versions?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "openEuler community versions are classified into Long Term Support (LTS) versions and innovation versions. Community versions are named based on the release year and month — for example, openEuler 20.09 was released in September 2020."
+          "text": "openEuler community versions are classified into Long Term Support (LTS) versions and innovation versions. LTS versions provide long-term stability for production; innovation versions deliver latest features for developers."
         }
       },
       {
@@ -44177,7 +44336,7 @@ const jsonLdData = {
         "name": "How long is the lifecycle of an openEuler LTS version?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The lifecycle of a full LTS version is four years: two years of maintenance support and two years of extended support. A joint maintenance team may be set up half a year to one year before the lifecycle ends to apply for another two years of joint maintenance. LTS versions are released every two years, in March of even-numbered years."
+          "text": "LTS version lifecycle is 4 years total: 2 years maintenance support and 2 years extended support. A joint maintenance team can be set up before lifecycle ends to apply for extension to 6 years. LTS versions are released every two years in March of even-numbered years."
         }
       },
       {
@@ -44185,21 +44344,28 @@ const jsonLdData = {
         "name": "How long is the lifecycle of an openEuler innovation version?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Innovation versions are released every six months and provide community support for six months. They are released in September of even-numbered years, and in March and September of odd-numbered years."
+          "text": "Innovation versions are released every six months and provide 6 months community support. Release schedule: September of even-numbered years, March and September of odd-numbered years."
         }
       },
       {
         "@type": "Question",
-        "name": "What is the lifecycle of a service pack (SP) of an openEuler LTS version?",
+        "name": "What is the lifecycle of an LTS version Service Pack (SP)?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The lifecycle of a service pack (SP) of an LTS version is 9 months for an optional minor SP released in June, or 24 months for a major SP released in December. Major SPs are recommended for large-scale use. By default, the lifecycle of an initial LTS release (SP0) is the same as that of a major SP."
+          "text": "LTS SP lifecycle: minor SP (June release, optional) - 9 months; major SP (December release) - 24 months. Major SPs recommended for large-scale deployment. SP0 follows major SP lifecycle. SP3 is the last SP, ending with the LTS version lifecycle."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Maintenance Support and Extended Support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Maintenance Support includes CVE fixes, bug fixes, new hardware support, and minor new features (maintaining LTS forward compatibility). Extended Support only fixes 'major' and above CVEs and bugs."
         }
       }
     ]
   }
-]
-`,
+]`,
   "en/other/legal": `
 [
   {
@@ -44742,185 +44908,189 @@ const jsonLdData = {
   }
 ]
 `,
-  "en/download/commercial-release": `
-[
+  "en/download/commercial-release": `[
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": "https://www.openeuler.org/en/download/commercial-release",
-    "url": "https://www.openeuler.org/en/download/commercial-release",
-    "name": "Download Commercial Edition | openEuler",
-    "description": "Get the openEuler commercial editions. Download ISOs, find supported architectures, and explore vendor options.",
-    "inLanguage": "en",
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": "https://www.openeuler.org/",
-      "url": "https://www.openeuler.org/",
-      "name": "openEuler"
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.openeuler.org/en/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Download Center",
-          "item": "https://www.openeuler.org/en/download/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Commercial Releases",
-          "item": "https://www.openeuler.org/en/download/commercial-release"
-        }
-      ]
-    },
-    "mainEntity": {
-      "@type": "ItemList",
-      "name": "Commercial Releases based on openEuler",
-      "description": "Enterprise commercial Linux distributions based on the openEuler community, available for download across multiple processor architectures.",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "TurboLinux Enterprise Server 15 (TLES15)",
-            "alternateName": "TurboLinux Enterprise server v15",
-            "description": "Turbolinux Enterprise Server 15 (TLES15) is the enterprise commercial Linux distribution based on the openEuler community, designed for the x86_64 and AArch64 processor architecture.",
-            "operatingSystem": "Linux",
-            "applicationCategory": "OperatingSystem",
-            "datePublished": "2022-06-01",
-            "publisher": {
-              "@type": "Organization",
-              "name": "TurboLinux"
-            },
-            "processorRequirements": "x86_64, AArch64",
-            "url": "https://www.openeuler.org/en/download/commercial-release"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "RedFlag Asianux Server - 8.1",
-            "description": "Red Flag Asianux Server OS (openEuler) is a commercial release based on the secondary development of openEuler 20.03 LTS SP1. The current kernel version is 4.19.",
-            "operatingSystem": "Linux",
-            "applicationCategory": "OperatingSystem",
-            "datePublished": "2021-03-01",
-            "publisher": {
-              "@type": "Organization",
-              "name": "Red Flag Asianux Server"
-            },
-            "processorRequirements": "AArch64",
-            "url": "https://www.openeuler.org/en/download/commercial-release"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "HopeStage Enterprise Linux",
-            "alternateName": "HopeStage",
-            "description": "HopeStage Enterprise Linux is an enterprise-level Linux operating system based on openEuler, which has the advantages of high efficiency, stability and security. HopeStage is committed to providing a safe and stable operating basis for enterprise-level databases, big data, cloud computing and artificial intelligence platforms.",
-            "operatingSystem": "Linux",
-            "applicationCategory": "OperatingSystem",
-            "datePublished": "2020-09-01",
-            "publisher": {
-              "@type": "Organization",
-              "name": "HOPERUN"
-            },
-            "processorRequirements": "x86_64, AArch64",
-            "url": "https://www.openeuler.org/en/download/commercial-release"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "Kylinsec",
-            "operatingSystem": "Linux",
-            "applicationCategory": "OperatingSystem",
-            "publisher": {
-              "@type": "Organization",
-              "name": "Kylinsec"
-            },
-            "processorRequirements": "x86_64, AArch64",
-            "url": "https://www.openeuler.org/en/download/commercial-release"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "HopeEdge Linux for Edge Computing",
-            "alternateName": "HopeEdge",
-            "description": "HopeEdge Linux for Edge Computing is an edge computing operating system based on openEuler, which is oriented to IoT scenarios. It has four key characteristics: lightweight security, independent innovation, efficient interconnection and rapid deployment. HopeEdge also provides equipment management, data acquisition, cloud-edge collaboration, artificial intelligence and other characteristics.",
-            "operatingSystem": "Linux",
-            "applicationCategory": "OperatingSystem",
-            "datePublished": "2020-07-01",
-            "publisher": {
-              "@type": "Organization",
-              "name": "HOPERUN"
-            },
-            "processorRequirements": "x86_64, AArch64",
-            "url": "https://www.openeuler.org/en/download/commercial-release"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "iSoftServerOS-Kunpeng-5.1",
-            "operatingSystem": "Linux",
-            "applicationCategory": "OperatingSystem",
-            "publisher": {
-              "@type": "Organization",
-              "name": "iSoft"
-            },
-            "processorRequirements": "x86_64, AArch64",
-            "url": "https://www.openeuler.org/en/download/commercial-release"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "EulixOS Server",
-            "description": "The EulixOS is a server OS distribution based on the openEuler OS. The EulixOS supports multiple processor architectures.",
-            "operatingSystem": "Linux",
-            "applicationCategory": "OperatingSystem",
-            "url": "https://www.openeuler.org/en/download/commercial-release"
-          }
-        }
-      ]
-    }
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.org/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Download Center",
+        "item": "https://www.openeuler.org/en/download/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Commercial Releases",
+        "item": "https://www.openeuler.org/en/download/commercial-release/"
+      }
+    ]
   },
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://www.openeuler.org/#organization",
-    "name": "openEuler",
-    "url": "https://www.openeuler.org/",
-    "logo": "https://www.openeuler.org/favicon.ico",
-    "sameAs": [
-      "https://github.com/openeuler-mirror"
+    "@type": "ItemList",
+    "name": "openEuler Commercial Releases",
+    "description": "Commercial distributions based on openEuler, provided by various vendors",
+    "numberOfItems": 7,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "TurboLinux openEuler Edition",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "TurboLinux"
+          },
+          "releaseNotes": "Architecture: x86_64, AArch64",
+          "datePublished": "2022-06"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Red Flag Asianux Server",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Red Flag"
+          },
+          "releaseNotes": "Architecture: AArch64",
+          "datePublished": "2021-03"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "HOPERUN openEuler Edition (2020/09)",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "HOPERUN"
+          },
+          "releaseNotes": "Architecture: x86_64, AArch64",
+          "datePublished": "2020-09"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Kylinsec openEuler Edition",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Kylinsec"
+          },
+          "releaseNotes": "Architecture: x86_64, AArch64"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "HOPERUN openEuler Edition (2020/07)",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "HOPERUN"
+          },
+          "releaseNotes": "Architecture: x86_64, AArch64",
+          "datePublished": "2020-07"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "iSoft openEuler Edition",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "iSoft"
+          },
+          "releaseNotes": "Architecture: x86_64, AArch64"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "ISCAS openEuler Edition",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "ISCAS"
+          },
+          "releaseNotes": "Architecture: AArch64, RISC-V",
+          "datePublished": "2020-05"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are openEuler commercial releases?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler commercial releases are enterprise Linux distributions based on the openEuler community version, provided by vendors like TurboLinux, Red Flag, HOPERUN, Kylinsec, iSoft, and ISCAS with commercial support services."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What architectures do commercial releases support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Commercial releases support multiple processor architectures including x86_64, AArch64, and RISC-V. Different vendor products support different architectures - filter on the page to find compatible options."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which vendors provide openEuler commercial releases?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vendors providing commercial releases include: TurboLinux, Red Flag, HOPERUN, Kylinsec, iSoft, and ISCAS (Institute of Software Chinese Academy of Sciences)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between community releases and commercial releases?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Community releases are free and open source, maintained by the openEuler community. Commercial releases are based on community versions, provided by vendors with enterprise-level support, technical assurance, and industry-specific optimizations."
+        }
+      }
     ]
   }
-]
-`,
+]`,
   "en/interaction/live-list": `
 [
   {
@@ -51552,8 +51722,83 @@ const jsonLdData = {
       }
     ]
   }
-]
-`
+]`,
+  'en': `[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Community",
+    "alternateName": "openEuler",
+    "url": "https://www.openeuler.org/en/",
+    "logo": "https://www.openeuler.org/assets/logo.XeUCiAZu.svg",
+    "description": "An open source OS run by the OpenAtom Foundation that builds a global community to enhance digital infrastructure and support diverse architectures.",
+    "sameAs": [
+      "https://github.com/openeuler"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contact@openeuler.io",
+      "contactType": "customer service"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "OpenAtom Foundation",
+      "alternateName": "开放原子开源基金会"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Linux Foundation",
+      "description": "openEuler is an Associate Member of the Linux Foundation"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "openEuler",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux",
+    "description": "An open source OS for digital infrastructure in server, cloud, edge, and embedded scenarios, across Arm, x86, RISC-V, LoongArch, PowerPC, and SW-64 architectures.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "description": "openEuler community release is free and open source"
+    },
+    "downloadUrl": "https://www.openeuler.org/en/download/",
+    "license": "https://license.coscl.org.cn/MulanPSL2",
+    "featureList": [
+      "Various Devices Support",
+      "All-Scenario Applications",
+      "Complete Development Tool Chain",
+      "Server Scenario",
+      "Cloud Scenario",
+      "Edge Scenario",
+      "Embedded Scenario"
+    ],
+    "supportedArchitecture": [
+      "ARM",
+      "x86",
+      "RISC-V",
+      "LoongArch",
+      "PowerPC",
+      "SW-64"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.org/en/"
+      }
+    ]
+  }
+]`,
+
 } as Record<string, string>;
 
 export default jsonLdData;
