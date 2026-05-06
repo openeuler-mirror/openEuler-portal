@@ -4,7 +4,7 @@ date: '2026-04-21'
 category: news
 tags:
   - openEuler
-banner: 'img/news/20260421-openEuler SIG Meetup/0421banner.jpg'
+banner: 'img/news/20260421-openEuler SIG-Meetup/0421banner.jpg'
 author: 'openEuler'
 summary: 'openEuler AI 时代软件供应链安全与运维实践 Meetup 成都站圆满举办'
 ---
@@ -39,7 +39,7 @@ openEuler SlG Intelligence Maintainer何守成带来 Witty 智能运维套件主
 
 ## AI 时代软件供应链安全实践：SBOM 的工程化路径与落地
 
-![alt text](042106.JPG)
+![alt text](042106.jpg)
 
 openEuler SBOM SlG Maintainer、凝思软件研发专家毛翼辉分享 AI 时代 SBOM 工程化落地路径。他指出，传统 SBOM 已无法覆盖模型、数据集、Agent 等新型物料，需要向扩展 SBOM 演进。演讲提出覆盖对象、来源、关系、生命周期的最小信息模型，并给出开发、构建、发布、运行全流程采集与治理方案，实现全链路溯源、漏洞快速排查、合规审查与运行漂移检测，推动 SBOM 从静态文档转变为持续运营的安全能力。
 
