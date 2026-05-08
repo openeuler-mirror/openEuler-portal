@@ -5,10 +5,6 @@ import sig from './sig';
 import brand from './brand';
 import common from './common';
 import mooc from './learn';
-import atune from './minisite/atune';
-import isula from './minisite/isula';
-import secgear from './minisite/secgear';
-import stratovirt from './minisite/stratovirt';
 import showcase from './showcase';
 import interaction from './interaction';
 import live from './interaction/live';
@@ -33,10 +29,6 @@ const i18n: { [key: string]: any } = {
     brand: brand.zh,
     common: common.zh,
     mooc: mooc.zh,
-    atune: atune.zh,
-    isula: isula.zh,
-    secgear: secgear.zh,
-    stratovirt: stratovirt.zh,
     showcase: showcase.zh,
     interaction: interaction.zh,
     live: live.zh,
@@ -59,10 +51,6 @@ const i18n: { [key: string]: any } = {
     sig: sig.en,
     brand: brand.en,
     common: common.en,
-    atune: atune.en,
-    isula: isula.en,
-    secgear: secgear.en,
-    stratovirt: stratovirt.en,
     showcase: showcase.en,
     interaction: interaction.en,
     live: live.en,
