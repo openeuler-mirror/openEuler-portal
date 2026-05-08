@@ -8,6 +8,7 @@ import {
   SearchCountResT,
   RelevantQueryT,
   SearchDocsQueryT,
+  SearchRecommendT,
 } from '~@/@types/type-search';
 /**
  * es搜索获取首页新闻
@@ -181,4 +182,20 @@ export function imageUpload(params: {
       'Content-Type': 'multipart/form-data',
     },
   }).then((res: AxiosResponse) => res.data);
+}
+
+/**
+ * 关联搜索
+ * @param {Object} params 申请表格数据
+ * @return  {Object}
+ */
+export function getOnestepSearch(params: { query: string, lang: string }): Promise<{
+  status: number;
+  obj: {
+    word: SearchRecommendT[];
+  };
+  msg: string;
+}> {
+  const url = `/api-search/search/webword?query=${params.query}`;
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
 }

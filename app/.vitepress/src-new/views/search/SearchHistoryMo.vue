@@ -7,13 +7,13 @@ import { useI18n } from '~@/i18n';
 import type { SearchRecommendT } from '@/shared/@types/type-search';
 
 import { getPop, getSearchRecommend } from '@/api/api-search';
-import { imageUpload } from '~@/api/api-search';
+import { imageUpload, getOnestepSearch } from '~@/api/api-search';
 
 import { useSearchValue } from '~@/stores/search';
 import { useScreen } from '~@/composables/useScreen';
 import { getUrlParam } from '~@/utils/common';
 
-import { OFigure, OPopover } from '@opensig/opendesign';
+import { OFigure, OPopover, useMessage } from '@opensig/opendesign';
 
 import IconClose from '~icons/app-new/icon-close.svg';
 import IconSearch from '~icons/app-new/icon-header-search.svg';
@@ -66,6 +66,12 @@ const handleImageFile = (file: File) => {
     .then((res) => {
       if (res.status === 200 && res.obj) {
         uploadedImageUrl.value = res.obj;
+      }
+    })
+    .catch((err) => {
+      if (err?.response?.status === 403) {
+        const msg = useMessage();
+        msg.show({ content: searchValue.value.UPLOAD_FAILED, status: 'danger' });
       }
     })
     .finally(() => {
@@ -140,14 +146,19 @@ async function handleSearchEvent(report?: boolean) {
   searchStore.setSearchState(searchInput.value, '', false);
 }
 
-type SearchItemClickType = 'history' | 'popular' | 'suggest';
+type SearchItemClickType = 'history' | 'popular' | 'suggest' | 'onestep';
 
 const onTopSearchItemClick = (
   val: string,
   type: SearchItemClickType = 'history'
 ) => {
-  searchInput.value = val;
-  handleSearchEvent();
+  if (type === 'onestep') {
+    const url = /^https?:\/\//.test(val) ? val : `/${lang.value}${val.startsWith('/') ? '' : '/'}${val}`;
+    window.open(url, '_blank');
+  } else {
+    searchInput.value = val;
+    handleSearchEvent();
+  }
   reportSearch('click', { type, target: val });
 };
 
@@ -180,6 +191,7 @@ onMounted(() => {
 
 // ----------------- 联想搜索 -------------------------
 const recommendData = ref<SearchRecommendT[]>([]);
+const onestepData = ref<SearchRecommendT[]>([]);
 
 const reportSearchInput = useDebounceFn(
   (content: string) => reportSearch('input', { content }),
@@ -188,8 +200,11 @@ const reportSearchInput = useDebounceFn(
 
 const queryGetSearchRecommend = (val: string) => {
   reportSearchInput(val);
-  getSearchRecommend({ query: val }).then((res) => {
+  getSearchRecommend({ query: val, lang: lang.value }).then((res) => {
     recommendData.value = res.obj.word;
+  });
+  getOnestepSearch({ query: val, lang: lang.value }).then((res) => {
+    onestepData.value = res.obj.word;
   });
 };
 
@@ -200,9 +215,27 @@ watch(
       queryGetSearchRecommend(val);
     } else {
       recommendData.value = [];
+      onestepData.value = [];
     }
   }
 );
+
+const highlightText = (text: string) => {
+  const keyword = searchInput.value.trim();
+  if (!keyword) return [{ text, match: false }];
+  const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const parts: { text: string; match: boolean }[] = [];
+  let lastIndex = 0;
+  const regex = new RegExp(escaped, 'gi');
+  let m: RegExpExecArray | null;
+  while ((m = regex.exec(text)) !== null) {
+    if (m.index > lastIndex) parts.push({ text: text.slice(lastIndex, m.index), match: false });
+    parts.push({ text: m[0], match: true });
+    lastIndex = m.index + m[0].length;
+  }
+  if (lastIndex < text.length) parts.push({ text: text.slice(lastIndex), match: false });
+  return parts;
+};
 
 // ----------------------- 历史搜索记录 -----------------------
 const searchHistory = ref<string[]>([]);
@@ -275,7 +308,7 @@ const closeSearch = () => {
                     <IconImageUpload />
                   </OIcon>
                 </span>
-                <OIcon class="close icon" @click="closeSearchBox"><IconClose /></OIcon>
+                <OIcon v-if="searchInput || showThumbnail" class="close icon" @click="closeSearchBox"><IconClose /></OIcon>
               </template>
             </OInput>
             <div v-if="showThumbnail && isShowDrawer" class="input-image-preview">
@@ -301,20 +334,39 @@ const closeSearch = () => {
         </div>
 
         <div v-show="isShowDrawer && !showThumbnail" class="drawer">
-          <div
-            v-if="recommendData.length && searchInput"
-            class="search-recommend"
-          >
-            <div
-              v-for="item in recommendData"
-              class="recommend-item"
-              @click="onTopSearchItemClick(item.key)"
-              :key="item.key"
-            >
-              {{ item.key }}
+          <template v-if="searchInput">
+            <div v-if="onestepData.length">
+              <div class="search-recommend search-onestep">
+                <div class="recommend-section-title">{{ searchValue.ONESTEP }}</div>
+                <div
+                  v-for="item in onestepData"
+                  class="recommend-item"
+                  @click="onTopSearchItemClick(item.path as string, 'onestep')"
+                  :key="item.key"
+                >
+                  <template v-for="part in highlightText(item.key)" :key="part.text + part.match"><span :class="{ 'highlight-keyword': part.match }">{{ part.text }}</span></template>
+                  <div class="onestep-tag">{{ item.type }}</div>
+                </div>
+              </div>
+              <div class="split-line"></div>
             </div>
-          </div>
-          <div v-else-if="searchHistory.length" class="history-container">
+            <div class="search-recommend">
+              <div class="recommend-section-title">{{ searchValue.SUGGEST }}</div>
+              <template v-if="recommendData.length">
+                <div
+                  v-for="item in recommendData"
+                  class="recommend-item"
+                  @click="onTopSearchItemClick(item.key, 'suggest')"
+                  :key="item.key"
+                >
+                  <template v-for="part in highlightText(item.key)" :key="part.text + part.match"><span :class="{ 'highlight-keyword': part.match }">{{ part.text }}</span></template>
+                </div>
+              </template>
+              <div v-else class="recommend-no-data">{{ searchValue.NO_DATA }}</div>
+            </div>
+          </template>
+          <template v-else>
+            <div v-if="searchHistory.length" class="history-container">
             <div class="history-title">
               <span class="title">{{ searchValue.BROWSEHISTORY }}</span>
               <OIcon class="icon" @click.stop="deleteHistory('')">
@@ -353,6 +405,7 @@ const closeSearch = () => {
               </div>
             </div>
           </div>
+          </template>
         </div>
       </div>
     </div>
@@ -365,6 +418,7 @@ const closeSearch = () => {
   @include h4;
 
   &.close {
+    font-size: 24px;
     @include x-svg-hover;
   }
 }
@@ -463,7 +517,7 @@ const closeSearch = () => {
     box-shadow: var(--o-shadow-2);
     backdrop-filter: blur(5px);
     padding: var(--o-gap-5);
-    padding-top: var(--o-gap-2);
+    padding-top: 0;
     background: var(--o-color-fill2);
     border-radius: 0 0 4px 4px;
 
@@ -652,19 +706,59 @@ const closeSearch = () => {
     margin-bottom: var(--o-gap-5);
   }
 }
-.search-recommend {
+.search-onestep {
   margin-bottom: var(--o-gap-3);
 
+  & .recommend-item {
+    display: flex;
+    align-items: center;
+    white-space: pre-wrap;
+  }
+}
+
+.search-recommend {
+  .recommend-section-title {
+    @include text2;
+    color: var(--o-color-info3);
+    margin-bottom: var(--o-gap-3);
+    font-weight: 400;
+  }
+
   .recommend-item {
+    @include text2;
+    padding: 4px 8px;
     cursor: pointer;
-    @include tip2;
-    & + .recommend-item {
-      margin-top: var(--o-gap-3);
+    color: var(--o-color-info2);
+    border-radius: 4px;
+
+    &:hover {
+      background-color: var(--o-color-control2-light);
     }
 
-    @include hover {
-      color: var(--o-color-primary1);
+    &:active {
+      background-color: var(--o-color-control3-light);
     }
+
+    .onestep-tag {
+      @include tip2;
+      height: 20px;
+      display: inline;
+      padding: 1px 8px;
+      border-radius: 4px;
+      font-weight: 400;
+      margin-left: 8px;
+      border: 1px solid var(--o-color-control4);
+    }
+
+    .highlight-keyword {
+      color: var(--o-color-primary1);
+      font-weight: 600;
+    }
+  }
+
+  .recommend-no-data {
+    @include tip2;
+    color: var(--o-color-info3);
 
     @include respond-to('<=pad_v') {
       @include text1;
@@ -809,7 +903,9 @@ const closeSearch = () => {
 }
 
 .icon.upload {
+  font-size: 24px;
   color: var(--o-color-info1);
+  margin-right: var(--o-gap-2);
 }
 
 .input-image-preview {

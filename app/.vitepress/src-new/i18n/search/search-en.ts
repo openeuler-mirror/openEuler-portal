@@ -42,6 +42,9 @@ export default {
   pageX: 'Page {page}',
   imageUploadTooltip: 'JPG, PNG, JPEG supported (max 10 MB)',
   imageUploadFailed: 'Image upload failed. Please check your network and try again.',
-  searchPlaceholder: 'Search by text or image',
+  onestep: 'Quick Navigation',
+  noData: 'No data',
+  searchSuggest: 'Search Suggestions',
+  searchPlaceholder: 'Search by text or upload image of any error',
   imagePlaceholder: 'Press Enter to start, or refine your search with more info',
 };
