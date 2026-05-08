@@ -27,6 +27,8 @@ import { installer } from '@/shared/analytics';
 import { reporAnalytics } from '@/api/api-analytics';
 import { removeCustomCookie } from '@/shared/utils';
 
+import MarkdownLayout from '~@/components/markdown/MarkdownLayout.vue';
+
 export default {
   Layout,
   NotFound,
@@ -91,6 +93,7 @@ export default {
     });
     app.directive('clamp-text', clampTextDirective);
     app.directive('scroll-bottom', scrollBottomDirective);
+    app.component('MarkdownLayout', MarkdownLayout);
     app.use(VueDOMPurifyHTML);
     app.use(SeoBox as any);
     app.use(createPinia());
