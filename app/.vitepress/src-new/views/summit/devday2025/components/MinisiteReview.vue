@@ -55,9 +55,9 @@ const isDark = computed(() => {
       }
     }
     a {
-      @include text2;
       font-weight: 500;
       display: inline-block;
+      @include text2;
       & + a {
         margin-top: var(--o-gap-3);
         @include respond-to('<=pad_v') {

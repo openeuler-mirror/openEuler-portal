@@ -15622,5 +15622,726 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "广州广哈通信股份有限公司",
+    "os_version": "GhtEulerOS_V1-update.img",
+    "arch": "aarch64",
+    "checksum": "e3d4a7c81c0480813c991f4b0e0aad2e",
+    "base_openeuler_version": "openEuler Embedded 24.03 LTS",
+    "os_download_link": " https://www.ghtchina.com/show_list.php?id=75",
+    "friendly_link": " https://www.ghtchina.com",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2026/03/31",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "北京星辰天合科技股份有限公司",
+    "os_version": "XSKYOS-Linux-2506-x86_64-dvd.iso",
+    "arch": "x86_64",
+    "checksum": "1d4638e035d9181b70342d7d5e658006",
+    "base_openeuler_version": "openEuler 22.03 LTS SP4",
+    "os_download_link": "https://download.xsky.com/XSKYOS/2506/XSKYOS-Linux-2506-x86_64-dvd.iso",
+    "friendly_link": "https://www.xsky.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2026/03/31",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "北京星辰天合科技股份有限公司",
+    "os_version": "XSKYOS-Linux-2506-aarch64-dvd.iso",
+    "arch": "aarch64",
+    "checksum": "9e13c0e5a02c80df592706217e9f3d0d",
+    "base_openeuler_version": "openEuler 22.03 LTS SP4",
+    "os_download_link": "https://download.xsky.com/XSKYOS/2506/XSKYOS-Linux-2506-aarch64-dvd.iso",
+    "friendly_link": "https://www.xsky.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2026/03/31",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+   {
+    "osv_name": "中国兵器工业计算机应用技术研究所",
+    "os_version": "velu-v1.0-image-d2000.img",
+    "arch": "aarch64",
+    "checksum": "76b9313e0c1e170c738d6f7e869dc91c",
+    "base_openeuler_version": "openEuler Embedded 22.03 LTS SP4",
+    "os_download_link": "https://pan.baidu.com/share/init?surl=tcJSAgvEkEcpFg6hD7vlkA&pwd=6hih",
+    "friendly_link": "http://www.norincogroup.com.cn",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2026/04/14",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "中国兵器工业计算机应用技术研究所",
+    "os_version": "velu-v1.0-image-e2000.img",
+    "arch": "aarch64",
+    "checksum": "1132420f1c2519dfb428b5c67ca92e30",
+    "base_openeuler_version": "openEuler Embedded 22.03 LTS SP4",
+    "os_download_link": "https://pan.baidu.com/share/init?surl=tcJSAgvEkEcpFg6hD7vlkA&pwd=6hih",
+    "friendly_link": "http://www.norincogroup.com.cn",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2026/04/14",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "北京国科环宇科技股份有限公司",
+    "os_version": "OneWo-rtEuler v1.00.update.img",
+    "arch": "aarch64",
+    "checksum": "4b4ed6aeb21207dbedeba0cabef15208",
+    "base_openeuler_version": "openEuler Embedded 24.03 LTS",
+    "os_download_link": "https://www.onewos.com/resource-center/iso/free",
+    "friendly_link": " https://ucas.com.cn/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2026/04/20",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "中移（苏州）软件技术有限公司",
+    "os_version": "BCLinux-21.10U5-dvd-aarch64.iso",
+    "arch": "aarch64",
+    "checksum": "2cfd8a1a74efe25b52e35014c5481ec0",
+    "base_openeuler_version": "openEuler 22.03 LTS SP4",
+    "os_download_link": "https://mirrors.cmecloud.cn/",
+    "friendly_link": "https://ecloud.10086.cn/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2026/04/30",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "中移（苏州）软件技术有限公司",
+    "os_version": "BCLinux-21.10U5-dvd-x86_64.iso",
+    "arch": "x86_64",
+    "checksum": "79ed51e98e0d20571caaac82263325c0",
+    "base_openeuler_version": "openEuler 22.03 LTS SP4",
+    "os_download_link": "https://mirrors.cmecloud.cn/",
+    "friendly_link": "https://ecloud.10086.cn/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2026/04/30",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "软通动力信息技术（集团）股份有限公司",
+    "os_version": "ISSEOS-V24-SP3-aarch64-dvd.iso",
+    "arch": "aarch64",
+    "checksum": "eb6d0e6c2137099af2f80a5537a52fbf",
+    "base_openeuler_version": "openEuler 24.03 LTS SP3",
+    "os_download_link": "http://124.70.55.232:8980/issel/V24_SP3/aarch64/",
+    "friendly_link": "https://www.isoftstone.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2026/04/25",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "软通动力信息技术（集团）股份有限公司",
+    "os_version": "ISSEOS-V24-SP3-x86_64-dvd.iso",
+    "arch": "x86_64",
+    "checksum": "fc01ecbe885e83f2fbb8c2bb94f082e3",
+    "base_openeuler_version": "openEuler 24.03 LTS SP3",
+    "os_download_link": "http://124.70.55.232:8980/issel/V24_SP3/x86_64/",
+    "friendly_link": "https://www.isoftstone.com/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2026/04/25",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
+
 ]

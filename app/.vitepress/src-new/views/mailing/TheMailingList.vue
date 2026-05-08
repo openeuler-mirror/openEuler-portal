@@ -138,6 +138,7 @@ const colFlex = computed(() => {
 <style scoped lang="scss">
 .mail-banner {
   :deep(.wrap) {
+    height: 280px;
     .banner-text {
       max-width: 60%;
       .banner-title {
@@ -145,8 +146,6 @@ const colFlex = computed(() => {
         @include display2;
       }
     }
-
-    height: 280px;
 
     @media screen and (max-width: 1680px) {
       height: 220px;

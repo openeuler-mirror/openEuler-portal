@@ -348,8 +348,8 @@ watch(
       }
       .repo-t-list {
         padding: 16px 12px;
-        @include text1;
         font-weight: 400;
+        @include text1;
         .repo-t-row + .repo-t-row {
           margin-top: 8px;
         }

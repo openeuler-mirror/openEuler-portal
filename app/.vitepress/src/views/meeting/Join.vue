@@ -31,11 +31,8 @@ onMounted(() => {
             <div class="join-des">{{ join.des }}</div>
           </div>
           <div class="join-btn">
-            <a v-for="btn in join.btn" :href="btn.url">
+            <a v-for="btn in join.btn" :key="btn.url" :href="btn.url">
               <OButton :animation="btn.animation" size="mini" :type="btn.type">
-                <template #[btn.postion]>
-                  <OIcon><component :is="btn.icon"></component></OIcon>
-                </template>
                 {{ btn.text }}
                 <template #[btn.postion]>
                   <OIcon><component :is="btn.icon"></component></OIcon>

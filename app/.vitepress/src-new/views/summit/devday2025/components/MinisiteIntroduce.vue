@@ -33,10 +33,10 @@ const isDark = computed(() => {
 
 <style lang="scss" scoped>
 li {
-  @include h4;
   color: var(--o-color-info2);
   margin-top: 40px;
   text-align: justify;
+  @include h4;
   &:first-of-type {
     margin-top: 0;
   }

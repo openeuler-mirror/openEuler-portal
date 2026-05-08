@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed, onMounted, reactive } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { useI18n } from '@/i18n';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
@@ -116,7 +116,7 @@ onMounted(() => {
               <p class="content-detail">
                 <span
                   v-for="itemDeatil in itemContent.description.split('/n')"
-                  :kry="itemDeatil"
+                  :key="itemDeatil"
                   >{{ itemDeatil }}</span
                 >
               </p>

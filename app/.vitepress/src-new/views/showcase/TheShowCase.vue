@@ -278,7 +278,7 @@ const handleConfirm = () => {
           class="filter-btn"
           @click="filterVisible = true"
         >
-          <span>{{ t('eventOverview.filter') }}</span>
+          <span>{{ t('common.filter') }}</span>
           <template #suffix>
             <OIcon><IconFilter /></OIcon>
           </template>
@@ -345,11 +345,11 @@ const handleConfirm = () => {
     />
     <ODialog v-model:visible="filterVisible" size="medium" class="filter-body-showcase">
       <template #header>
-        <span class="del-title">{{ t('eventOverview.filter') }}</span>
+        <span class="del-title">{{ t('common.filter') }}</span>
       </template>
       <div class="dlg-body">
         <div class="filter">
-          <p class="filter-title">{{ t('eventOverview.series') }}</p>
+          <p class="filter-title">{{ t('showcase.type') }}</p>
           <ORadioGroup
             v-model="typeValue"
             :style="{ gap: '8px 8px' }"
@@ -375,11 +375,11 @@ const handleConfirm = () => {
       <template #footer>
         <div class="dialog-footer">
           <OButton variant="text" @click="handleReset">{{
-            t('eventOverview.reset')
+            t('common.reset')
           }}</OButton>
           <ODivider direction="v" class="divider-btn" />
           <OButton variant="text" @click="handleConfirm">{{
-            t('eventOverview.confirm')
+            t('common.confirm')
           }}</OButton>
         </div>
       </template>

@@ -2,7 +2,14 @@
 import { ref, computed, onMounted } from 'vue';
 import AOS from 'aos';
 
-import { OButton, OIcon, ODropdown, ODropdownItem, OLink, ODialog } from '@opensig/opendesign';
+import {
+  OButton,
+  OIcon,
+  ODropdown,
+  ODropdownItem,
+  OLink,
+  ODialog,
+} from '@opensig/opendesign';
 
 import { useCommon } from '@/stores/common';
 
@@ -38,7 +45,7 @@ const dialogVisible = ref(false);
 const dropdownVisible = ref(false);
 const visibleChange = (val: boolean) => {
   dropdownVisible.value = val;
-}
+};
 
 const viewBtn = (url: string) => {
   window.open(url, '_blank');
@@ -57,10 +64,14 @@ const viewBtn = (url: string) => {
         />
         <div v-if="bannerData.btn" data-aos="fade-up" class="action">
           <ClientOnly>
-            <div v-if="!isMobile" class="btn-dropdown" :class="{'dropdown-visible': dropdownVisible}">
+            <div
+              v-if="!isMobile"
+              class="btn-dropdown"
+              :class="{ 'dropdown-visible': dropdownVisible }"
+            >
               <ODropdown
                 trigger="hover"
-                optionPosition="bottom"
+                option-position="bottom"
                 option-wrap-class="dropdown"
                 @visible-change="visibleChange"
               >
@@ -75,7 +86,7 @@ const viewBtn = (url: string) => {
                     <OIcon><IconChevronDown /></OIcon>
                   </template>
                 </OButton>
-  
+
                 <template #dropdown>
                   <ODropdownItem
                     v-for="item in bannerData.list"
@@ -100,7 +111,7 @@ const viewBtn = (url: string) => {
               color="normal"
               size="large"
               class="view-btn"
-              :class="{'view-btn-visible': dialogVisible}"
+              :class="{ 'view-btn-visible': dialogVisible }"
               @click="dialogVisible = true"
             >
               {{ bannerData.btn }}

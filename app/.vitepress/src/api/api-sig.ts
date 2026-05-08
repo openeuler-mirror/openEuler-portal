@@ -2,8 +2,6 @@ import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
 import { getUserAuth } from '@/shared/login';
 import {
-  FeatureInfoT,
-  GroupInfoT,
   SigContributeArrT,
   SigDetailT,
   SigCompleteItemT,

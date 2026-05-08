@@ -1,19 +1,15 @@
 import icon1_light from '@/assets/category/euler-sky/oevp/oevp-1_light.png';
 import icon2_light from '@/assets/category/euler-sky/oevp/oevp-2_light.png';
 import icon3_light from '@/assets/category/euler-sky/oevp/oevp-3_light.png';
-import icon4_light from '@/assets/category/euler-sky/oevp/oevp-4_light.png';
 import icon5_light from '@/assets/category/euler-sky/oevp/oevp-5_light.png';
 
 import icon1_dark from '@/assets/category/euler-sky/oevp/oevp-1_dark.png';
 import icon2_dark from '@/assets/category/euler-sky/oevp/oevp-2_dark.png';
 import icon3_dark from '@/assets/category/euler-sky/oevp/oevp-3_dark.png';
-import icon4_dark from '@/assets/category/euler-sky/oevp/oevp-4_dark.png';
 import icon5_dark from '@/assets/category/euler-sky/oevp/oevp-5_dark.png';
 
 import bg_1 from '@/assets/category/euler-sky/bg-1.png';
 import bg_2 from '@/assets/category/euler-sky/bg-2.png';
-import bg_3 from '@/assets/category/euler-sky/bg-3.png';
-import bg_4 from '@/assets/category/euler-sky/bg-4.png';
 
 export default {
   VIEW_MORE: 'View More',

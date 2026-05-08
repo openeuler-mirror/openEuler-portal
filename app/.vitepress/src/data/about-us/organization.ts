@@ -1,17 +1,14 @@
 import yuping from '@/assets/category/organization/yuping.png';
 import gaopei from '@/assets/category/organization/gaopei.png';
 import hannaiping from '@/assets/category/organization/hannaiping.png';
-import wanghao from '@/assets/category/organization/wanghao.png';
-import lipeiyuan from '@/assets/category/organization/lipeiyuan.png';
 import liuwenqing from '@/assets/category/organization/liuwenqing.png';
 import liuyanfei from '@/assets/category/organization/liuyanfei.png';
 import qusheng from '@/assets/category/organization/qusheng.png';
 import zhanglei from '@/assets/category/organization/zhanglei.png';
-import zhangshenju from '@/assets/category/organization/zhangshenju.png';
-import zhongxin from '@/assets/category/organization/zhongxin.png';
 import xiongwei from '@/assets/category/organization/xiongwei.png';
 import huzhengce from '@/assets/category/organization/huzhengce.png';
 import yuli from '@/assets/category/organization/yuli.png';
+import liufei from '@/assets/category/organization/liufei.png';
 
 // 技术委员会
 import huxinwei from '@/assets/category/organization/technical/huxinwei.png';
@@ -52,7 +49,6 @@ import wuheshuan from '@/assets/category/organization/expert/wuheshuan.png';
 
 // 品牌委员会
 import liangbin from '@/assets/category/organization/brand/liangbin.png';
-import huangzhaowei from '@/assets/category/organization/brand/huangzhaowei.png';
 import xulu from '@/assets/category/organization/brand/xulu.png';
 import lizhenning from '@/assets/category/organization/brand/lizhenning.png';
 import zhengli from '@/assets/category/organization/brand/zhengli.png';
@@ -60,17 +56,16 @@ import wendan from '@/assets/category/organization/brand/wendan.png';
 import humingyue from '@/assets/category/organization/brand/humingyu.png';
 import pengyaying from '@/assets/category/organization/brand/pengyaying.png';
 import xuyanli from '@/assets/category/organization/brand/xuyanli.png';
+import liwei from '@/assets/category/organization/brand/liwei.png';
 
 // 用户委员会
 import gaohonghe from '@/assets/category/organization/user/gaohonghe.png';
 import wangjun from '@/assets/category/organization/user/wangjun.png';
-import wangyouhai from '@/assets/category/organization/user/wangyouhai.png';
 import weijiangang from '@/assets/category/organization/user/weijiangang.png';
 import zhangjian from '@/assets/category/organization/user/zhangjian.png';
 import zhangqingnan from '@/assets/category/organization/user/zhangqingnan.png';
 import xulei from '@/assets/category/organization/user/xulei.png';
 import zuchen from '@/assets/category/organization/user/zuchen.png';
-import weibin from '@/assets/category/organization/user/weishan.png';
 import zhenzhenyu from '@/assets/category/organization/user/zhenzhenyu.png';
 import chenjin from '@/assets/category/organization/user/chenjin.png';
 import cuiji from '@/assets/category/organization/user/cuiji.png';
@@ -248,19 +243,9 @@ export default {
                 position: ['软通动力信息技术（集团）股份有限公司'],
               },
               {
-                img: lipeiyuan,
-                name: '李培源',
-                position: ['天翼云科技有限公司'],
-              },
-              {
                 img: tianjun,
                 name: '田俊',
                 position: ['英特尔（中国）有限公司'],
-              },
-              {
-                img: wanghao,
-                name: '王皓',
-                position: ['超聚变数字技术有限公司'],
               },
               {
                 img: yuli,
@@ -272,24 +257,14 @@ export default {
                 name: '于萍',
                 position: ['江苏润和软件股份有限公司'],
               },
-              {
-                img: zhangshenju,
-                name: '张胜举',
-                position: ['中国移动云能力中心'],
-              },
-              {
-                img: zhongxin,
-                name: '钟忻',
-                position: ['联通数字科技有限公司'],
-              },
             ],
           },
           {
             title: '执行总监',
             personalList: [
               {
-                img: huzhengce,
-                name: '胡正策',
+                img: liufei,
+                name: '刘飞',
                 position: ['华为技术有限公司'],
               },
             ],
@@ -510,16 +485,16 @@ export default {
             email: 'liangbing11@huawei.com',
           },
           {
-            img: huangzhaowei,
-            name: '黄兆伟',
-            position: ['委员'],
-            email: 'huangzhaowei@xfusion.com',
-          },
-          {
             img: humingyue,
             name: '胡明月',
             position: ['委员'],
             email: 'Ming.yue.hu@intel.com',
+          },
+          {
+            img: liwei,
+            name: '李伟',
+            position: ['委员'],
+            email: 'allenli@hygon.cn',
           },
           {
             img: lizhenning,
@@ -615,6 +590,12 @@ export default {
             name: '李荣青',
             position: ['委员'],
             email: 'lirongqing@baidu.com',
+          },
+          {
+            img: liwei,
+            name: '李伟',
+            position: ['委员'],
+            email: 'allenli@hygon.cn',
           },
           {
             img: rongtao,
@@ -760,11 +741,16 @@ export default {
       {
         title: 'openEuler 全球化工作组',
         list: [
-          { img: zhounan, name: '周楠', position: ['组长'] },
-          { img: caijuanyang, name: '蔡镌洋', position: ['组员'] },
-          { img: lichengpeng_globalization, name: '李成鹏', position: ['组员'] },
-          { img: liumingjie_globalization, name: '刘明杰', position: ['组员'] },
-          { img: renzidong, name: '任紫东', position: ['组员'] },
+          [
+            { img: zhounan, name: '周楠', position: ['组长'] },
+            { img: caijuanyang, name: '蔡镌洋', position: ['组员'] },
+            { img: lichengpeng_globalization, name: '李成鹏', position: ['组员'] },
+            { img: liumingjie_globalization, name: '刘明杰', position: ['组员'] },
+            { img: renzidong, name: '任紫东', position: ['组员'] },
+          ],
+          [
+            { img: huzhengce, name: '胡正策', position: ['开源欧拉全球生态官'] },
+          ]
         ],
       },
     ],
@@ -882,19 +868,9 @@ export default {
                 ],
               },
               {
-                img: lipeiyuan,
-                name: 'Li Peiyuan',
-                position: ['China Telecom e-Cloud Technology Co., Ltd.'],
-              },
-              {
                 img: tianjun,
                 name: 'Tian Jun',
                 position: ['Intel China Ltd.'],
-              },
-              {
-                img: wanghao,
-                name: 'Wang Hao',
-                position: ['xFusion Digital Technologies Co., Ltd.'],
               },
               {
                 img: yuli,
@@ -906,26 +882,14 @@ export default {
                 name: 'Yu Ping',
                 position: ['Jiangsu HopeRun Software Co., Ltd.'],
               },
-              {
-                img: zhangshenju,
-                name: 'Zhang Shengju',
-                position: [
-                  'China Mobile (Suzhou) Software Technology Co., Ltd.',
-                ],
-              },
-              {
-                img: zhongxin,
-                name: 'Zhong Xin',
-                position: ['China Unicom Digital Technology Co., Ltd.'],
-              },
             ],
           },
           {
             title: 'Executive Director',
             personalList: [
               {
-                img: huzhengce,
-                name: 'Hu Zhengce',
+                img: liufei,
+                name: 'Liu Fei',
                 position: ['Huawei Technologies Co., Ltd.'],
               },
             ],
@@ -1146,16 +1110,16 @@ export default {
             email: 'liangbing11@huawei.com',
           },
           {
-            img: huangzhaowei,
-            name: 'Huang Zhaowei',
-            position: ['Committee member'],
-            email: 'huangzhaowei@xfusion.com',
-          },
-          {
             img: humingyue,
             name: 'Hu Mingyue',
             position: ['Committee member'],
             email: 'Ming.yue.hu@intel.com',
+          },
+          {
+            img: liwei,
+            name: 'Li Wei',
+            position: ['Committee member'],
+            email: 'allenli@hygon.cn',
           },
           {
             img: lizhenning,
@@ -1253,6 +1217,12 @@ export default {
             email: 'lirongqing@baidu.com',
           },
           {
+            img: liwei,
+            name: 'Li Wei',
+            position: ['Committee member'],
+            email: 'allenli@hygon.cn',
+          },
+          {
             img: rongtao,
             name: 'Rong Tao',
             position: ['Committee member'],
@@ -1302,7 +1272,7 @@ export default {
           },
         ],
       },
-    {
+      {
         title: 'openEuler Service Development Working Group',
         list: [
           { img: liyang, name: 'Li Yang', position: ['Lead'] },
@@ -1396,11 +1366,16 @@ export default {
       {
         title: 'openEuler Globalization Working Group',
         list: [
-          { img: zhounan, name: 'Zhou Nan', position: ['Lead'] },
-          { img: caijuanyang, name: 'Cai Juanyang', position: ['Member'] },
-          { img: lichengpeng_globalization, name: 'Li Chengpeng', position: ['Member'] },
-          { img: liumingjie_globalization, name: 'Liu Mingjie', position: ['Member'] },
-          { img: renzidong, name: 'Ren Zidong', position: ['Member'] },
+          [
+            { img: zhounan, name: 'Zhou Nan', position: ['Lead'] },
+            { img: caijuanyang, name: 'Cai Juanyang', position: ['Member'] },
+            { img: lichengpeng_globalization, name: 'Li Chengpeng', position: ['Member'] },
+            { img: liumingjie_globalization, name: 'Liu Mingjie', position: ['Member'] },
+            { img: renzidong, name: 'Ren Zidong', position: ['Member'] },
+          ],
+          [
+            { img: huzhengce, name: 'Hu Zhengce', position: ['openEuler Global Advocate'] },
+          ]
         ],
       },
     ],

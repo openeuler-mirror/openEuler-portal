@@ -143,11 +143,11 @@ if (typeof document !== 'undefined') {
 }
 
 :deep(h3) {
-  @include display3;
   font-weight: 500;
   color: var(--o-color-info1);
   text-align: center;
   margin-top: var(--o-gap-section);
+  @include display3;
 }
 .home {
   overflow: hidden;

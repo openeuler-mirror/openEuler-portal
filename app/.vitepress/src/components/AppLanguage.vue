@@ -9,7 +9,7 @@ const props = defineProps({
   show: {
     type: Object,
     default() {
-      return [];
+      return {};
     },
   },
 });

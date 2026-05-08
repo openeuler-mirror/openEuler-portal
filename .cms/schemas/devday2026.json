@@ -1,0 +1,192 @@
+{
+  "uid": "api::devday2026.devday2026",
+  "name": "Developer Day 2026",
+  "slug": "devday2026",
+  "description": "",
+  "kind": "collection",
+  "fields": [
+    {
+      "key": "floor",
+      "label": "楼层",
+      "type": "component",
+      "required": false,
+      "multiple": false,
+      "componentFields": [
+        {
+          "key": "title",
+          "label": "标题",
+          "type": "string",
+          "required": false,
+          "multiple": false
+        },
+        {
+          "key": "id",
+          "label": "id",
+          "type": "string",
+          "required": false,
+          "multiple": false
+        },
+        {
+          "key": "description",
+          "label": "描述",
+          "type": "text",
+          "required": false,
+          "multiple": true
+        },
+        {
+          "key": "card_list",
+          "label": "卡片列表",
+          "type": "component",
+          "required": false,
+          "multiple": true,
+          "componentFields": [
+            {
+              "key": "title",
+              "label": "标题",
+              "type": "string",
+              "required": false,
+              "multiple": false
+            },
+            {
+              "key": "description",
+              "label": "描述",
+              "type": "text",
+              "required": false,
+              "multiple": true
+            },
+            {
+              "key": "address",
+              "label": "地址",
+              "type": "string",
+              "required": false,
+              "multiple": false
+            },
+            {
+              "key": "time",
+              "label": "时间",
+              "type": "string",
+              "required": false,
+              "multiple": false
+            },
+            {
+              "key": "label",
+              "label": "链接文本",
+              "type": "string",
+              "required": false,
+              "multiple": false
+            },
+            {
+              "key": "url",
+              "label": "链接地址",
+              "type": "string",
+              "required": false,
+              "multiple": false
+            },
+            {
+              "key": "bg_light",
+              "label": "背景图",
+              "type": "media",
+              "required": false,
+              "multiple": false,
+              "mediaKind": "image"
+            },
+            {
+              "key": "bg_dark",
+              "label": "暗色模式背景图",
+              "type": "media",
+              "required": false,
+              "multiple": false,
+              "mediaKind": "image"
+            },
+            {
+              "key": "img",
+              "label": "图片",
+              "type": "media",
+              "required": false,
+              "multiple": false,
+              "mediaKind": "image"
+            }
+          ]
+        },
+        {
+          "key": "agenda",
+          "label": "会议议程",
+          "type": "component",
+          "required": false,
+          "multiple": true,
+          "componentFields": [
+            {
+              "key": "date",
+              "label": "日期",
+              "type": "string",
+              "required": false,
+              "multiple": false
+            },
+            {
+              "key": "content",
+              "label": "会议内容",
+              "type": "component",
+              "required": false,
+              "multiple": true,
+              "componentFields": [
+                {
+                  "key": "time",
+                  "label": "时间",
+                  "type": "string",
+                  "required": false,
+                  "multiple": false
+                },
+                {
+                  "key": "title",
+                  "label": "标题",
+                  "type": "string",
+                  "required": false,
+                  "multiple": false
+                },
+                {
+                  "key": "name",
+                  "label": "演讲人",
+                  "type": "string",
+                  "required": false,
+                  "multiple": false
+                },
+                {
+                  "key": "post",
+                  "label": "演讲人头衔",
+                  "type": "string",
+                  "required": false,
+                  "multiple": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "links",
+          "label": "链接",
+          "type": "component",
+          "required": false,
+          "multiple": true,
+          "componentFields": [
+            {
+              "key": "label",
+              "label": "链接文本",
+              "type": "string",
+              "required": false,
+              "multiple": false
+            },
+            {
+              "key": "url",
+              "label": "链接地址",
+              "type": "string",
+              "required": false,
+              "multiple": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-04-14T03:03:17.447Z",
+  "updatedAt": "2026-04-14T06:07:01.821Z"
+}

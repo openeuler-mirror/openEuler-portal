@@ -155,16 +155,6 @@ html[lang='zh'] {
         }
       }
       .desc {
-        .inline-desc {
-          &:nth-child(2) {
-            padding-left: 30px;
-            @media screen and (max-width: 768px) {
-              padding: 0;
-              display: block;
-            }
-          }
-        }
-
         font-size: var(--e-font-size-h5);
         font-weight: normal;
         line-height: var(--e-line-height-h5);
@@ -177,6 +167,15 @@ html[lang='zh'] {
           margin-top: var(--e-spacing-h9);
           font-size: var(--e-font-size-text);
           line-height: var(--e-line-height-text);
+        }
+        .inline-desc {
+          &:nth-child(2) {
+            padding-left: 30px;
+            @media screen and (max-width: 768px) {
+              padding: 0;
+              display: block;
+            }
+          }
         }
       }
       .action {
@@ -218,7 +217,7 @@ html[lang='zh'] {
       background-size: cover;
       width: 100%;
       height: 100%;
-      @media screen and (max-width:768px) {
+      @media screen and (max-width: 768px) {
         background-image: url(../img/banner_mo.png);
       }
     }

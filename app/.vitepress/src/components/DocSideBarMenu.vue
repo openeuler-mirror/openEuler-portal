@@ -56,7 +56,7 @@ const clickMenuItem = (id: string) => {
       <OIcon class="menu-title-icon"> <IconArrowTraingleRight /></OIcon>
     </div>
     <transition name="menu">
-      <ul class="menu-list">
+      <ul v-if="info.children" class="menu-list">
         <li
           v-for="item in info.children"
           :key="item.link"

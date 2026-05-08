@@ -17,5 +17,5 @@ export default {
       path: '/whitepaper/en/openEuler-based OSs in Finance.pdf',
       summary: 'openEuler-based OSs in Finance',
     },
-  ]
-}
+  ],
+};

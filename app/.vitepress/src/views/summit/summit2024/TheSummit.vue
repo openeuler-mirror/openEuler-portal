@@ -60,7 +60,7 @@ guestData.value = summit2024.find((item) => item.type === 'GUEST');
       <p>{{ summitData.introduce2 }}</p>
       <p v-if="summitData.introduce3">{{ summitData.introduce3 }}</p>
       <ul v-if="summitData.list">
-        <li v-for="li in summitData.list">
+        <li v-for="(li, i) in summitData.list" :key="i">
           {{ li }}
         </li>
       </ul>

@@ -15,6 +15,8 @@ import IconSearch from '~icons/app/icon-search.svg';
 import { getSortData, getTagsData } from '@/api/api-search';
 import type { NewsDataT, ParamsTypeT } from '@/shared/@types/type-news';
 
+import pdfData from '@/data/monthly';
+
 const router = useRouter();
 const { lang } = useData();
 
@@ -54,7 +56,14 @@ const userCaseData = computed(() => i18n.value.interaction);
 const loading = ref(true);
 
 const toNewsContent = (path: string) => {
-  router.go(`/${path}`);
+  const targetPath = path.startsWith('/') ? path : `/${path}`;
+  // 判断是否为 PDF 文件
+  if (targetPath.endsWith('.pdf')) {
+    // 在新标签页中打开 PDF，绕过 Vue Router
+    window.open(targetPath, '_blank');
+  } else {
+    router.go(targetPath);
+  }
 };
 
 //筛选数据
@@ -93,54 +102,8 @@ const getListData = (params: ParamsTypeT) => {
           newsCardData.value[i].banner = '/' + newsCardData.value[i].banner;
         }
 
-        // TODO:特殊处理24年年报，待后续年报单独作为一个栏目
-        if (lang.value === 'zh') {
-          const yearData = [{
-            banner: '/img/banners/annual-report-2025.jpg',
-            archives: '2026-01',
-            author: ['openEuler'],
-            date: '2026-01-19',
-            lang: 'zh',
-            title: 'openEuler 2025 社区年报',
-            summary: 'openEuler 2025 社区年报',
-            tags: ['openEuler', '社区运作报告'],
-            path: 'zh/annual-report/openEuler-annual-report-2025/',
-          }, {
-            banner: '/img/banners/annual-report-2024.jpg',
-            archives: '2025-01',
-            author: ['openEuler'],
-            date: '2025-01-24',
-            lang: 'zh',
-            title: 'openEuler 2024 社区年报',
-            summary: 'openEuler 2024 社区年报',
-            tags: ['openEuler', '社区运作报告'],
-            path: 'zh/annual-report/openEuler-annual-report-2024/',
-          }];
-          newsCardData.value.unshift(...yearData);
-        } else {
-          const yearData = [{
-            banner: '/img/banners/annual-report-2025-en.jpg',
-            archives: '2026-02',
-            author: ['openEuler'],
-            date: '2026-02-11',
-            lang: 'en',
-            title: 'openEuler 2025 Annual Report',
-            summary: 'openEuler 2025  Annual Report',
-            tags: ['openEuler'],
-            path: 'en/annual-report/openEuler-annual-report-2025/',
-          }, {
-            banner: '/img/banners/annual-report-2024-en.jpg',
-            archives: '2025-01',
-            author: ['openEuler'],
-            date: '2025-01-24',
-            lang: 'en',
-            title: 'openEuler 2024 Annual Report',
-            summary: 'openEuler 2024 Annual Report',
-            tags: ['openEuler'],
-            path: 'en/annual-report/openEuler-annual-report-2024/',
-          }];
-          newsCardData.value.unshift(...yearData);
-        }
+        // TODO:特殊处理年报及运营需求的特殊PDF文档，待后续单独作为一个栏目
+        newsCardData.value.unshift(...pdfData[lang.value]);
       }
     })
     .finally(() => {
@@ -211,7 +174,7 @@ const pageTotal = computed(() =>
       <template v-if="newsCardData.length">
         <div class="news-list">
           <OCard
-            v-for="item in newsCardData.slice(0,9)"
+            v-for="item in newsCardData.slice(0, 9)"
             :key="item.path"
             class="news-list-item"
             shadow="hover"
@@ -417,8 +380,8 @@ const pageTotal = computed(() =>
         line-height: var(--e-line-height-h7);
         font-size: var(--e-font-size-h7);
         margin-bottom: var(--e-spacing-h10);
-        @include showline();
         -webkit-line-clamp: 2;
+        @include showline();
         @media (max-width: 500px) {
           height: auto;
           line-height: var(--e-line-height-text);
@@ -439,10 +402,10 @@ const pageTotal = computed(() =>
       }
       .news-content {
         margin-top: var(--e-spacing-h5);
-        @include showline();
         -webkit-line-clamp: 2;
         font-size: var(--e-font-size-text);
         line-height: var(--e-line-height-text);
+        @include showline();
         @media (max-width: 500px) {
           line-height: var(--e-line-height-tip);
           font-size: var(--e-font-size-tip);

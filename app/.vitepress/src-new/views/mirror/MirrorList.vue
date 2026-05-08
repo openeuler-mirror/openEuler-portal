@@ -400,9 +400,9 @@ const rsyncCode =
   }
 }
 .mirror-text {
-  @include text1;
   color: var(--o-color-info1);
   text-align: center;
+  @include text1;
   .rsync-box {
     display: flex;
     align-items: center;
@@ -450,10 +450,10 @@ const rsyncCode =
     display: flex;
     align-items: center;
     .label {
-      @include text1;
       color: var(--o-color-info1);
       min-width: 32px;
       margin-right: 32px;
+      @include text1;
     }
     .o-radio-group .o-radio + .o-radio {
       margin-left: 8px;
@@ -502,8 +502,8 @@ html[lang='en'] {
     padding: 16px;
     background-color: var(--o-color-fill2);
     .name {
-      @include h3;
       font-weight: 500;
+      @include h3;
     }
     .info-line {
       display: flex;
@@ -539,9 +539,9 @@ html[lang='en'] {
     }
     .view-detail {
       display: flex;
-      @include text2;
       color: var(--o-color-info1);
       justify-content: space-between;
+      @include text2;
       .o-icon {
         font-size: var(--o-icon_size-xs);
       }
@@ -550,12 +550,12 @@ html[lang='en'] {
 }
 
 .pagination {
-  @include respond-to('<=pad_v') {
-    display: none;
-  }
   margin-top: 32px;
   display: flex;
   justify-content: flex-end;
+  @include respond-to('<=pad_v') {
+    display: none;
+  }
 }
 .icon-copy {
   cursor: pointer;

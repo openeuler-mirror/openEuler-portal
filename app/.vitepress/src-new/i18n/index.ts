@@ -34,6 +34,8 @@ import news from './news';
 import compatibility from './compatibility';
 import showcase from './showcase';
 import lifecycle from './lifecycle';
+import bishengJdk from './bisheng-jdk';
+import nestos from './nestos';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -105,6 +107,8 @@ const messages = {
     compatibility: compatibility.zh,
     showcase: showcase.zh,
     lifecycle: lifecycle.zh,
+    bishengJdk: bishengJdk.zh,
+    nestos: nestos.zh,
   },
   en: {
     // 公共模块
@@ -138,6 +142,8 @@ const messages = {
     compatibility: compatibility.en,
     showcase: showcase.en,
     lifecycle: lifecycle.en,
+    bishengJdk: bishengJdk.en,
+    nestos: nestos.en,
   },
 };
 

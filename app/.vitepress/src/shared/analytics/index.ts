@@ -1,5 +1,12 @@
-import { OpenAnalytics, OpenEventKeys, getClientInfo } from '@opensig/open-analytics';
-import startListenCookieSet, { isCookieAgreed, setIsCookieAgreed } from './cookie';
+import {
+  OpenAnalytics,
+  OpenEventKeys,
+  getClientInfo,
+} from '@opensig/open-analytics';
+import startListenCookieSet, {
+  isCookieAgreed,
+  setIsCookieAgreed,
+} from './cookie';
 import startListenHistoryChange from './history';
 import { vAnalytics } from './directives';
 
@@ -22,7 +29,8 @@ export const installer = (
   }
 ) => {
   appKey = options.appKey;
-  if (typeof options.isCookieAgreed === 'function') setIsCookieAgreed(options.isCookieAgreed);
+  if (typeof options.isCookieAgreed === 'function')
+    setIsCookieAgreed(options.isCookieAgreed);
   oa = new OpenAnalytics({
     appKey: options.appKey,
     request: (data) => {
@@ -31,15 +39,25 @@ export const installer = (
         return;
       }
       if (typeof options.request === 'string') {
-        fetch(options.request, { body: JSON.stringify(data), method: 'POST', headers: { 'Content-Type': 'application/json' } });
+        fetch(options.request, {
+          body: JSON.stringify(data),
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+        });
       } else if (typeof options.request === 'function') {
         options.request(data);
       }
     },
   });
-  if (typeof options.onEnable === 'function' || typeof options.onDisable === 'function') {
+  if (
+    typeof options.onEnable === 'function' ||
+    typeof options.onDisable === 'function'
+  ) {
     const enableReporting = OpenAnalytics.prototype.enableReporting;
-    OpenAnalytics.prototype.enableReporting = function (this: OpenAnalytics, enable: boolean) {
+    OpenAnalytics.prototype.enableReporting = function (
+      this: OpenAnalytics,
+      enable: boolean
+    ) {
       try {
         if (enable) {
           options.onEnable?.();
@@ -88,7 +106,11 @@ export const enableOA = () => {
  */
 export const disableOA = () => {
   oa?.enableReporting(false);
-  [`oa-${appKey}-client`, `oa-${appKey}-events`, `oa-${appKey}-session`].forEach((key) => {
+  [
+    `oa-${appKey}-client`,
+    `oa-${appKey}-events`,
+    `oa-${appKey}-session`,
+  ].forEach((key) => {
     localStorage.removeItem(key);
   });
 };
@@ -98,7 +120,7 @@ export const disableOA = () => {
  * @param $referrer 从哪一个页面跳转过来
  */
 export const reportPV = (options?: Record<string, any> | void) => {
-  oaReport(OpenEventKeys.PV, (options || null));
+  oaReport(OpenEventKeys.PV, options || null);
 };
 
 /**
@@ -144,7 +166,9 @@ export function oaReport<T extends Record<string, any>>(
     async (...opt) => {
       return {
         $service,
-        ...(typeof eventData === 'function' ? await eventData(...opt) : eventData),
+        ...(typeof eventData === 'function'
+          ? await eventData(...opt)
+          : eventData),
       };
     },
     options

@@ -24,6 +24,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         charset: false,
+        api: 'modern-compiler',
         additionalData: `
         @use "~@/assets/style/mixin/screen.scss" as *;
         @use "~@/assets/style/mixin/font.scss" as *;

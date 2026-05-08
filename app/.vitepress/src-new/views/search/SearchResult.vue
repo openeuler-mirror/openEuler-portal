@@ -21,7 +21,6 @@ import {
   OPagination,
   OSelect,
   OOption,
-  useLoading,
 } from '@opensig/opendesign';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 import SearchFeedback from './SearchFeedback.vue';
@@ -29,6 +28,7 @@ import SearchDownloadZone from './SearchDownloadZone.vue';
 import SearchSoftwareZone from './SearchSoftwareZone.vue';
 import SearchDownloadAggre from './SearchDownloadAggre.vue';
 import ExternalLink from '~@/components/ExternalLink.vue';
+import SearchResultSkeleton from './SearchResultSkeleton.vue';
 
 import { getOSType } from '@/shared/download';
 import { uniqueId } from '@/shared/utils';
@@ -110,6 +110,14 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  searchImage: {
+    type: String,
+    default: '',
+  },
+  isImageSearch: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const emits = defineEmits([
@@ -128,36 +136,23 @@ const { lePadV, lePad } = useScreen();
 
 const contentRef = ref();
 
-const loadingFn = useLoading(
-  {
-    mask: false,
-  },
-  contentRef
-);
-
 const sortType = ['commercialRelease', 'mail', 'news', 'blog', 'whitepaper'];
-
-watch(
-  () => props.loading,
-  (val: boolean) => {
-    loadingFn.toggle(val);
-  }
-);
 
 watch(
   () => props.searchResultList,
   (val) => {
-    if (!val?.length) return;
-    val.forEach((res: any) => {
-      if (res.type === 'whitepaper') {
-        res.pageIndex = 0;
+    if (val?.length) {
+      val.forEach((res: any) => {
+        if (res.type === 'whitepaper') {
+          res.pageIndex = 0;
 
-        res.aggreList?.forEach((page: any) => {
-          page.obsUrl = generatePdfUrl(page);
-        })
-      }
-    })
-    localSearchResultList.value = JSON.parse(JSON.stringify(val));
+          res.aggreList?.forEach((page: any) => {
+            page.obsUrl = generatePdfUrl(page);
+          })
+        }
+      })
+    }
+    localSearchResultList.value = JSON.parse(JSON.stringify(val || []));
   }, { deep: true }
 );
 
@@ -346,7 +341,12 @@ const generatePdfUrl = (page) => {
     <div class="search-content">
       <!-- 搜索内容列表 -->
       <div ref="contentRef" class="content-box">
-        <div v-if="localSearchResultList.length" class="content-list">
+        <!-- 骨架屏 -->
+        <div v-if="loading" class="skeleton-container">
+          <SearchResultSkeleton />
+        </div>
+        
+        <div v-else-if="localSearchResultList.length" class="content-list">
           <div v-if="zoneShownCondition" class="search-zone">
             <SearchDownloadAggre v-if="downloadAggre && !downloadZoneData" />
             <SearchDownloadZone
@@ -446,13 +446,11 @@ const generatePdfUrl = (page) => {
                     )
                   "
                 >
-                  {{
-                    getOSType(
+                  {{ getOSType(
                       item.path.split('/').at(-1),
                       item.version,
                       item.arch
-                    )
-                  }}
+                    ) }}
                 </OTag>
               </div>
               <div class="from">
@@ -592,14 +590,14 @@ const generatePdfUrl = (page) => {
   }
 
   .pagination-slot {
-    @include tip1;
     font-weight: 400;
+    @include tip1;
   }
   .end {
     margin-top: 24px;
     color: var(--o-color-info3);
-    @include text1;
     text-align: center;
+    @include text1;
   }
   .filter-line {
     display: flex;
@@ -695,10 +693,10 @@ const generatePdfUrl = (page) => {
             background-color: var(--o-color-fill2);
           }
           h3 {
-            @include h4;
             cursor: pointer;
             color: var(--o-color-info1);
             font-weight: 500;
+            @include h4;
             :deep(span) {
               color: var(--o-color-primary1);
             }
@@ -709,8 +707,8 @@ const generatePdfUrl = (page) => {
           .detail {
             cursor: pointer;
             margin-top: 8px;
-            @include text1;
             color: var(--o-color-info1);
+            @include text1;
             @include text-truncate(2);
             :deep(span) {
               color: var(--o-color-primary1);
@@ -725,11 +723,11 @@ const generatePdfUrl = (page) => {
             }
           }
           .from {
-            @include tip2;
             margin-top: 8px;
             display: flex;
             align-items: center;
             color: var(--o-color-info3);
+            @include tip2;
           }
           .version {
             margin-top: 8px;
@@ -770,12 +768,12 @@ const generatePdfUrl = (page) => {
             }
 
             .page-container {
-              @include tip2;
               display: flex;
               color: var(--o-color-info3);
               margin-top: var(--o-gap-2);
               align-items: flex-start;
               width: 100%;
+              @include tip2;
 
               .page-text {
                 white-space: nowrap;
@@ -856,8 +854,8 @@ const generatePdfUrl = (page) => {
 :deep(.breadcrumb) {
   display: flex;
   align-items: center;
-  @include tip2;
   color: var(--o-color-info3);
+  @include tip2;
   .breadcrumb-item-label {
     display: flex;
     align-items: center;
@@ -871,5 +869,9 @@ const generatePdfUrl = (page) => {
   .whitepaper-preview {
     @include img-in-dark;
   }
+}
+
+/* 骨架屏样式 */
+.skeleton-container {
 }
 </style>

@@ -95,3 +95,10 @@ export interface SearchDocsQueryT {
   type: string;
   limit: LimitArrItemT[];
 }
+
+export interface SearchRecommendT {
+  key: string;
+  count: number;
+  path?: string;
+  type?: string;
+}

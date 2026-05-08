@@ -167,6 +167,8 @@ const processDetail = computed(() => {
 </template>
 
 <style scoped lang="scss">
+@use "sass:color";
+
 .sig-about {
   .sig-about-card-box {
     display: grid;
@@ -245,11 +247,10 @@ const processDetail = computed(() => {
         }
 
         .subtitle {
-          @include text-truncate(3);
-
           margin-top: 4px;
           color: var(--o-color-info2);
           @include tip1;
+          @include text-truncate(3);
         }
       }
 
@@ -325,7 +326,7 @@ const processDetail = computed(() => {
         @for $i from 0 through 5 {
           .step-#{$i} {
             &::after {
-              border-bottom-color: mix(#f6f9ff, #e7efff, $i * 20%) !important;
+              border-bottom-color: color.mix(#f6f9ff, #e7efff, $i * 20%) !important;
             }
           }
         }
@@ -425,8 +426,8 @@ const processDetail = computed(() => {
           grid-column: 1 / -1;
         }
         .process-detail {
-          @include tip1;
           padding: 16px 24px;
+          @include tip1;
         }
 
         .o-card-content {
@@ -470,7 +471,7 @@ const processDetail = computed(() => {
           @for $i from 0 through 5 {
             .step-#{$i} {
               &::after {
-                border-bottom-color: mix(#2d2d31, #353539, $i * 20%) !important;
+                border-bottom-color: color.mix(#2d2d31, #353539, $i * 20%) !important;
               }
             }
           }

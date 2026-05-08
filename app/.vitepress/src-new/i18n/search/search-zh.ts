@@ -37,5 +37,12 @@ export default {
   emptyVersion2: '请尝试其他搜索词或切换版本为“',
   emptyVersion3: '”查看',
   mostRelevant: '最相关页面',
-  pageX: '第{page}页'
+  pageX: '第{page}页',
+  imageUploadTooltip: '报错截图搜索，支持jpg、png、jpeg等，最大10M',
+  imageUploadFailed: '图片上传失败，请检查网络后重试',
+  onestep: '导航搜索直达',
+  noData: '暂无数据',
+  searchSuggest: '搜索建议',
+  searchPlaceholder: '输入文字搜索，支持粘贴或上传报错截图',
+  imagePlaceholder: '按下回车立即搜索，或补充更多信息进行搜索',
 };

@@ -2,8 +2,8 @@
 defineProps({
   descList: {
     type: Object,
-    default: function () {
-      return [];
+    default: () => {
+      return {};
     },
   },
   darkImg: {

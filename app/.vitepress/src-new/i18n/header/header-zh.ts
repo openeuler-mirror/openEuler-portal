@@ -3,7 +3,7 @@ import { markRaw } from 'vue';
 import Summit from '~@/assets/category/header/summit.jpg';
 import SummitDark from '~@/assets/category/header/summit-dark.jpg';
 
-import Odd from '~@/assets/category/header/odd.png';
+import Odd from '~@/assets/category/header/odd.jpg';
 
 import IconOutLink from '~icons/app/icon-out-link.svg';
 import IconArrowRight from '~icons/app-new/icon-header-next.svg';
@@ -542,6 +542,12 @@ export default {
             import.meta.env.VITE_MAIN_DOMAIN_URL
           }/whitepaper/openEuler %E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E4%BB%8B%E7%BB%8D.pdf`,
         },
+        {
+          NAME: '《Linux Magazine》权威解读：openEuler 焦点指南',
+          URL: `${
+            import.meta.env.VITE_MAIN_DOMAIN_URL
+          }/category/technology/Linux Magazine Focus Guide-openEuler.pdf`,
+        },
       ],
     },
     {
@@ -560,7 +566,7 @@ export default {
             {
               NAME: '峰会',
               DESCRIPTION: '查看openEuler年度大会详情',
-              URL: '/interaction/summit-list/summit2025/',
+              URL: '/interaction/summit-list/devday2026/',
             },
             {
               NAME: 'openEuler Call for X计划',
@@ -592,6 +598,15 @@ export default {
       ],
       SHORTCUT: [
         {
+          NAME: 'openEuler Developer Day 2026',
+          PICTURE: Odd,
+          DESCRIPTION:
+            'openEuler Developer Day 2026 （简称 ODD 2026）是开放原子开源基金会孵化及运营的 openEuler 社区发起的开发者大会。',
+          REMARK: '时间：2026/04/25 | 长沙',
+          TYPE: 'PICTURE',
+          URL: '/interaction/summit-list/devday2026/',
+        },
+        {
           NAME: '操作系统大会 & openEuler Summit 2025',
           PICTURE: Summit,
           PICTURE_PARK: SummitDark,
@@ -600,15 +615,6 @@ export default {
           REMARK: '时间：2025/11/14 - 2025/11/15 | 北京',
           TYPE: 'PICTURE',
           URL: '/interaction/summit-list/summit2025/',
-        },
-        {
-          NAME: 'openEuler Developer Day 2025',
-          PICTURE: Odd,
-          DESCRIPTION:
-            'openEuler Developer Day 2025 （简称 ODD 2025）是开放原子开源基金会孵化及运营的 openEuler 社区发起的开发者大会。',
-          REMARK: '时间：2025/04/11 | 杭州',
-          TYPE: 'PICTURE',
-          URL: '/interaction/summit-list/devday2025/',
         },
       ],
     },
@@ -623,8 +629,14 @@ export default {
     CLEAN: '清除',
     TOPSEARCH: '热门搜索',
     CHANGE: '换一批',
+    ONESTEP: '导航搜索直达',
+    SUGGEST: '搜索建议',
+    NO_DATA: '暂无数据',
     PLEACHOLDER: '搜索',
-    PLEACHOLDER_EXTEND: '请输入搜索内容',
+    PLEACHOLDER_EXTEND: '按下回车立即搜索，或补充更多信息进行搜索',
+    PLEACHOLDER_IMAGE: '输入文字搜索，支持粘贴或上传报错截图',
+    UPLOAD_TOOLTIP: '报错截图搜索，支持jpg、png、jpeg等，最大10M',
+    UPLOAD_FAILED: '图片上传失败，请检查网络后重试',
     TEXT: '搜索',
   },
   SOURCE_CODE: [

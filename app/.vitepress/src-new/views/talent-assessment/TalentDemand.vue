@@ -74,10 +74,10 @@ const { isPhone } = useScreen();
 }
 .talent-demand-card {
   margin-top: 40px;
+  color: var(--o-color-info1);
   &:not(:first-child) {
     margin-top: 24px;
   }
-  color: var(--o-color-info1);
   @include respond-to('phone') {
     margin-top: 16px;
   }
@@ -104,8 +104,8 @@ const { isPhone } = useScreen();
       }
       .company {
         font-weight: 500;
-        @include h3;
         color: var(--o-color-info1);
+        @include h3;
       }
       .company-introduce {
         margin-top: 16px;
@@ -117,8 +117,8 @@ const { isPhone } = useScreen();
       .post-title {
         font-weight: 500;
         margin-top: 24px;
-        @include text1;
         color: var(--o-color-info1);
+        @include text1;
         @include respond-to('phone') {
           margin-top: 12px;
         }

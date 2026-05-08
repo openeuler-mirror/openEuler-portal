@@ -1,16 +1,9 @@
 import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
-import { fetchEventSource } from '@microsoft/fetch-event-source';
 import { getUserAuth } from '@/shared/login';
 import type {
   SortObjT,
   TimeTagsT,
-  SearchDrowdownT,
-  SearchCountQueryT,
-  SearchCountResT,
-  SearchRamDataT,
-  RelevantQueryT,
-  StatisticT,
   SearchRecommendT,
   OverviewDataT,
 } from '@/shared/@types/type-search';
@@ -166,7 +159,7 @@ export function meetupApplyForm(params: any): Promise<{
  * @param {Object} params 申请表格数据
  * @return  {Object}
  */
-export function getSearchRecommend(params: { query: string }): Promise<{
+export function getSearchRecommend(params: { query: string, lang: string }): Promise<{
   status: number;
   obj: {
     word: SearchRecommendT[];

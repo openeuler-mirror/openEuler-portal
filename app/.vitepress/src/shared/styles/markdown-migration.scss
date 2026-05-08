@@ -6,6 +6,7 @@
   padding: 64px 120px;
   margin-left: 300px;
   background-color: var(--o-color-fill1);
+  --e-color-table: var(--e-color-border2); // 表格边框
   @media screen and (max-width: 1750px) {
     padding: 40px 40px;
   }
@@ -27,7 +28,6 @@
   & > *:first-child {
     margin-top: 0 !important;
   }
-  --e-color-table: var(--e-color-border2); // 表格边框
 
   ol,
   ul {

@@ -80,11 +80,11 @@ const { isPhone } = useScreen();
         margin-top: 24px;
       }
       @include respond-to('<=laptop') {
+        padding: 16px;
         .o-btn {
           margin-top: 12px;
           width: min-content;
         }
-        padding: 16px;
       }
       @include respond-to('phone') {
         padding: 0;

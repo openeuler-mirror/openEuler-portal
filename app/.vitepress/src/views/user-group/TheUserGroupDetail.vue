@@ -85,10 +85,7 @@ onMounted(() => {
           社区鼓励用广组成员白发举办活动，社区将给子活动资源支持，并给子组织者柴誉身份和社区纪念品。欢迎申办活动。
         </p>
         <div class="city-action">
-          <OButton
-            type="primary"
-            class="button-size-large"
-            size="large"
+          <OButton type="primary" class="button-size-large" size="large"
             >申请举办活动</OButton
           >
         </div>

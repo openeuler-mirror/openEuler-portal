@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useData, useRouter } from 'vitepress';
-import { ref, watch, computed } from 'vue';
+import { ref, computed } from 'vue';
 
 import { useCommon } from '@/stores/common';
 import useWindowResize from '@/components/hooks/useWindowResize';

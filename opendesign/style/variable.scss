@@ -1,7 +1,7 @@
-@import './_color.scss';
-@import './_shadow.scss';
-@import './_font.scss';
-@import './_spacing.scss';
+@use './_color.scss';
+@use './_shadow.scss';
+@use './_font.scss';
+@use './_spacing.scss';
 
 html.dark {
   color-scheme: dark;

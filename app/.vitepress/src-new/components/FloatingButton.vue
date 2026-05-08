@@ -743,17 +743,17 @@ onUnmounted(() => {
         @include text1;
       }
       .tip-detail {
-        @include tip2;
         color: var(--o-color-info1);
+        @include tip2;
       }
       .tip-handle {
         margin-top: 8px;
         display: flex;
         justify-content: end;
         .tip-konwed {
-          @include tip1;
           color: var(--o-color-info1);
           cursor: pointer;
+          @include tip1;
 
           @include hover {
             color: var(--o-color-primary1);
@@ -801,8 +801,8 @@ onUnmounted(() => {
         }
 
         .icon-cancel {
-          @include h4;
           transition: all var(--o-duration-m1) var(--o-easing-standard-in);
+          @include h4;
 
           @include hover {
             transform: rotate(180deg);
@@ -822,10 +822,10 @@ onUnmounted(() => {
         .slider {
           --el-slider-button-wrapper-offset: -14px;
           .slider-title {
-            @include tip1;
             color: var(--o-color-info1);
             text-align: center;
             white-space: nowrap;
+            @include tip1;
             .title-name {
               font-weight: 600;
             }
@@ -990,8 +990,8 @@ onUnmounted(() => {
           .more-info {
             margin-top: 8px;
             color: var(--o-color-info4);
-            @include tip2;
             text-align: center;
+            @include tip2;
 
             a {
               color: var(--o-color-primary1);

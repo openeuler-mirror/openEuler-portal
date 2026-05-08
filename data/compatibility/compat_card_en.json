@@ -30713,6 +30713,44 @@
     "chipModel": "YMTC X4-9060",
     "item": "",
     "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "0731",
+    "deviceID": "1100",
+    "svID": "",
+    "ssID": "",
+    "architecture": "aarch64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "mwv207d-mesa-dkms-1.1.12-20260325.0342.ky3_4.aarch64.rpm",
+    "version": "1.1.12",
+    "type": "GPU卡",
+    "date": "2026/03/25",
+    "sha256": "c704f17e403db6d2c5a7a48e1999c269130e7ebfa13cf058f66d28d1af4a977b",
+    "driverSize": "5.9M",
+    "chipVendor": "Jingjia Microelectronics",
+    "boardModel": "GPU",
+    "chipModel": "JM1100",
+    "item": "",
+    "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "0731",
+    "deviceID": "1100",
+    "svID": "",
+    "ssID": "",
+    "architecture": "aarch64",
+    "os": "openEuler 24.03 LTS",
+    "driverName": "mwv207d-mesa-dkms-1.1.12-20260325.0010.ks6.aarch64.rpm",
+    "version": "1.1.12",
+    "type": "GPU",
+    "date": "2026/03/25",
+    "sha256": "6de996c04bda3d1ba925162474a11ae36b82bec5d3f382308ee68980299eb2e7",
+    "driverSize": "5.6M",
+    "chipVendor": "Jingjia Microelectronics",
+    "boardModel": "GPU",
+    "chipModel": "JM1100",
+    "item": "",
+    "downloadLink": "inbox"
   }
 
 ]

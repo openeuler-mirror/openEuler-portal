@@ -522,13 +522,13 @@ const renderData = computed(() => {
 
   .yellow-box {
     font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include text2;
     &:not(:last-child) {
       margin-right: 24px;
     }
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     .box {
       width: 8px;
@@ -552,8 +552,8 @@ const renderData = computed(() => {
   margin-top: 12px;
   display: flex;
   justify-content: center;
-  @include text1;
   color: var(--o-color-info3);
+  @include text1;
   .o-icon {
     margin-left: 8px;
     font-size: var(--o-icon_size-xs);

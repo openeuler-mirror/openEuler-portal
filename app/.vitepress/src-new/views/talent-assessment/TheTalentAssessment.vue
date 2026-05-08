@@ -39,11 +39,11 @@ const verticalPadding = computed(() => {
 
 <style scoped lang="scss">
 :deep(.talent-title) {
-  @include display3;
   font-weight: 500;
   color: var(--o-color-info1);
   text-align: center;
   margin-top: 72px;
+  @include display3;
   @include respond-to('phone') {
     margin-top: 32px;
   }

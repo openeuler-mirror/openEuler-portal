@@ -15,9 +15,13 @@ defineProps({
 
 <template>
   <div class="summit-subforum">
-    <div v-for="cardInfo in agendaData.content" class="subforum-card">
+    <div
+      v-for="(cardInfo, i) in agendaData.content"
+      :key="i"
+      class="subforum-card"
+    >
       <p class="subforum-name">{{ cardInfo.name }}</p>
-      <p v-for="title in cardInfo.content" class="subforum-topic">
+      <p v-for="(title, j) in cardInfo.content" :key="j" class="subforum-topic">
         {{ title.desc }}
       </p>
     </div>

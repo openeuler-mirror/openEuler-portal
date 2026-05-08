@@ -13,7 +13,9 @@ function setCookie(cname: string, cvalue: string, isDelete?: boolean) {
     const domain = import.meta.env.VITE_COOKIE_DOMAIN;
     const expires = `${deleteStr}path=/; domain=${domain}`;
     document.cookie = `${cname}=${cvalue}; ${expires}`;
-  } catch {}
+  } catch (error: any) {
+    throw new Error(error);
+  }
 }
 
 function getCookie(cname: string) {

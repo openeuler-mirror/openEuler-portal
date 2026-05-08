@@ -191,7 +191,6 @@ const dialogVisible = ref(false);
   }
 
   .title-bg {
-    @include h2;
     flex: 1;
     border-radius: var(--o-radius-xs);
     padding: var(--o-gap-3) var(--o-gap-5);
@@ -200,6 +199,7 @@ const dialogVisible = ref(false);
     display: flex;
     align-items: center;
     isolation: isolate;
+    @include h2;
   }
 }
 
@@ -228,9 +228,9 @@ const dialogVisible = ref(false);
       margin-bottom: var(--o-gap1);
 
       .name {
-        @include text2;
         color: var(--o-color-info1);
         font-weight: 500;
+        @include text2;
       }
 
       .icon-honor {
@@ -243,9 +243,9 @@ const dialogVisible = ref(false);
     }
 
     .position {
-      @include tip1;
       color: var(--o-color-info3);
       margin-bottom: var(--o-gap-2);
+      @include tip1;
     }
 
     .tag-list {
@@ -255,10 +255,10 @@ const dialogVisible = ref(false);
       flex-wrap: wrap;
 
       .tag {
-        @include tip2;
         border-radius: var(--o-radius-xs);
         padding: 3px var(--o-gap-3);
         background-color: var(--o-color-control2-light);
+        @include tip2;
       }
     }
 
@@ -276,17 +276,17 @@ const dialogVisible = ref(false);
   }
 }
 .popover-title {
-  @include text1;
   color: var(--o-color-info1);
   margin-bottom: var(--o-gap-1);
   font-weight: 500;
+  @include text1;
 }
 .popover-desc {
-  @include tip1;
   color: var(--o-color-info2);
   max-height: 72px;
   max-width: 310px;
   overflow-y: auto;
+  @include tip1;
 }
 .organizer {
   .color-block {
@@ -405,14 +405,14 @@ const dialogVisible = ref(false);
   }
 
   .empty-title {
-    @include h3;
     color: var(--o-color-info1);
     margin-bottom: var(--o-gap-2);
+    @include h3;
   }
 
   .empty-desc {
-    @include text1;
     color: var(--o-color-info1);
+    @include text1;
   }
 
   .empty-button {
@@ -427,16 +427,16 @@ const dialogVisible = ref(false);
 
 .member-dialog-body {
   .dialog-desc {
-    @include text1;
     color: var(--o-color-info2);
+    @include text1;
   }
 
   .dialog-title {
-    @include text2;
     margin-bottom: var(--o-gap-4);
     margin-top: var(--o-gap-5);
     color: var(--o-color-info2);
     font-weight: 500;
+    @include text2;
   }
 
   .tip-item {
@@ -458,8 +458,8 @@ const dialogVisible = ref(false);
     }
 
     .tip {
-      @include text1;
       color: var(--o-color-info1);
+      @include text1;
     }
   }
 

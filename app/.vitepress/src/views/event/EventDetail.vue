@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, shallowRef, onMounted, computed, onUnmounted, watch } from 'vue';
+import { ref, onMounted, computed, onUnmounted, watch } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 
@@ -32,11 +32,6 @@ const isVideoVisible = ref(false);
 const { lang } = useData();
 const i18n = useI18n();
 
-interface flowPathList {
-  THEME: string;
-  TIME: string;
-  SPEAKER: any;
-}
 const isLatest = computed(() => {
   if (detailObj.value?.date) {
     return (
@@ -672,6 +667,16 @@ watch(windowWidth, () => {
     }
   }
   .detail-title {
+    margin-bottom: var(--e-spacing-h4);
+    font-size: var(--e-font-size-h5);
+    line-height: var(--e-line-height-h5);
+    color: var(--e-color-text1);
+    font-weight: 400;
+    @media screen and (max-width: 768px) {
+      margin: 0;
+      font-size: var(--e-font-size-text);
+      line-height: var(--e-line-height-text);
+    }
     &::before {
       content: '';
       display: block;
@@ -682,16 +687,6 @@ watch(windowWidth, () => {
         height: 120px;
         margin-top: -120px;
       }
-    }
-    margin-bottom: var(--e-spacing-h4);
-    font-size: var(--e-font-size-h5);
-    line-height: var(--e-line-height-h5);
-    color: var(--e-color-text1);
-    font-weight: 400;
-    @media screen and (max-width: 768px) {
-      margin: 0;
-      font-size: var(--e-font-size-text);
-      line-height: var(--e-line-height-text);
     }
   }
   .synopsis {
@@ -826,10 +821,10 @@ watch(windowWidth, () => {
         height: 76px;
         font-size: var(--e-font-size-h6);
         line-height: var(--e-line-height-h6);
+        --el-table-row-hover-bg-color: var(--e-color-bg2);
         &:hover {
           background-color: var(--e-color-bg2);
         }
-        --el-table-row-hover-bg-color: var(--e-color-bg2);
         &:last-child {
           .el-table__cell {
             border-bottom: none;

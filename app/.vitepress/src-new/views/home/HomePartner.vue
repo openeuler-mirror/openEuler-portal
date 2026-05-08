@@ -54,9 +54,9 @@ const publisher3 = Array(5).fill(publisher.slice(16)).flat();
 }
 
 .parterner-tips {
-  @include tip1;
   text-align: center;
   color: var(--o-color-info3);
+  @include tip1;
 }
 </style>
 

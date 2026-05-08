@@ -52,12 +52,6 @@ export const yearPlanData = {
         },
         { 
           month: '4',
-          actives: [
-            {
-              location: '沙特 利雅得',
-              activeName: '2026中国沙特AI科技及信息技术展',
-            },
-          ],
         },
         {
           month: '5',
@@ -91,7 +85,7 @@ export const yearPlanData = {
           month: '9',
           actives: [
             {
-              location: 'TBD',
+              location: '中国 上海',
               activeName: 'KubeCON + CloudNativeCon China',
             },
             {
@@ -104,7 +98,7 @@ export const yearPlanData = {
           month: '10',
           actives: [
             {
-              location: 'TBD',
+              location: '捷克 布拉格',
               activeName: 'Open Source Summit Europe 2026',
             },
           ],
@@ -149,17 +143,17 @@ export const yearPlanData = {
             },
           ],
         },
-        { month: '4' },
-        { month: '5' },
         { 
-          month: '6',
+          month: '4',
           actives: [
             {
-              location: 'TBD',
+              location: '中国 长沙',
               activeName: 'openEuler Developer Day 2026',
             },
           ],
         },
+        { month: '5' },
+        { month: '6' },
         { month: '7' },
         { month: '8' },
         { month: '9' },
@@ -202,7 +196,23 @@ export const yearPlanData = {
         },
         { month: '2' },
         { month: '3' },
-        { month: '4' },
+        { 
+          month: '4',
+          actives: [
+            {
+              location: '中国 成都',
+              activeName: 'openEuler SIG-Sbom Meetup',
+            },
+            {
+              location: '中国 青岛',
+              activeName: 'openEuler 云原生 Meetup',
+            },
+            {
+              location: '新加坡',
+              activeName: 'Free and Open Source Singapore & openEuler Meetup',
+            },
+          ],
+        },
         { month: '5' },
         { month: '6' },
         { month: '7' },
@@ -304,15 +314,7 @@ export const yearPlanData = {
             },
           ],
         },
-        { 
-          month: '4',
-          actives: [
-            {
-              location: 'Riyadh Exhibition & Convention Center, Malham',
-              activeName: 'LEAP 2026',
-            },
-          ],
-        },
+        { month: '4' },
         {
           month: '5',
           actives: [
@@ -345,7 +347,7 @@ export const yearPlanData = {
           month: '9',
           actives: [
             {
-              location: 'TBD',
+              location: 'Shanghai, China',
               activeName: 'KubeCON + CloudNativeCon China',
             },
             {
@@ -358,7 +360,7 @@ export const yearPlanData = {
           month: '10',
           actives: [
             {
-              location: 'TBD',
+              location: 'Prague, Czech Republic',
               activeName: 'Open Source Summit Europe 2026',
             },
           ],
@@ -403,17 +405,17 @@ export const yearPlanData = {
             },
           ],
         },
-        { month: '4' },
-        { month: '5' },
         { 
-          month: '6',
+          month: '4',
           actives: [
             {
-              location: 'TBD',
+              location: 'Changsha, China',
               activeName: 'openEuler Developer Day 2026',
             },
           ],
         },
+        { month: '5' },
+        { month: '6' },
         { month: '7' },
         { month: '8' },
         { month: '9' },

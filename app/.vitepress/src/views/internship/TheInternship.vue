@@ -43,7 +43,8 @@ const INTEGRAL_DATA = [
       '实习评语',
       '提交实习报告',
     ],
-    SUPPLEMENT: '满足以上3条，实习评语与实习报告经评审合格后发放实习证明。具体见以上“申请步骤4“里的实习证明说明。',
+    SUPPLEMENT:
+      '满足以上3条，实习评语与实习报告经评审合格后发放实习证明。具体见以上“申请步骤4“里的实习证明说明。',
   },
   {
     HEAD: '3、优秀实习生证书',
@@ -158,23 +159,7 @@ const HELP = {
     IMG_DARK: qrCodeDark,
   },
 };
-const openGaussTask = {
-  title: 'openGauss',
-  intriduce: '一款高性能、高安全、高可靠的企业级开源关系型数据库',
-};
-const mindSporeTask = {
-  title: 'MindSpore开源实习招聘要求（公开）',
-  intriduce: [
-    '1、全日制大三大四本科生或在读研究生，计算机、软件、人工智能、电子信息、数学、计算物理、计算生物、计算化学等相关专业；',
-    '2、熟悉C++/Python编程，编码能力优秀，具有扎实的计算机基础；',
-    '3、至少熟悉一种主流深度学习框架，如MindSpore、Tensorflow、PyTorch等；',
-    '4、优选条件',
-    ' （1）熟悉以下任一技术方向：分布式系统、并行计算、异构计算、深度学习编译优化、模型压缩、推理部署、算子开发、模型开发等；',
-    ' （2）在高水平国际会议和学术期刊发表过相关论文或有高水平竞赛获奖经历；',
-    ' （3）MindSpore社区优秀开发者、资深开发者、优秀布道师、资深布道师。',
-    '注：申请MindSpore 社区实习的同学，在申请材料初选通过后，需参加机考，择优录取。',
-  ],
-};
+
 // 右侧导航
 const isNavShow = ref(false);
 const activeIndex = ref(0);
@@ -204,11 +189,6 @@ const navList = [
     name: '帮助咨询',
   },
 ];
-const tabList = ['openEuler', 'openGauss', '昇思'];
-const tabIndex = ref(0);
-function changeTabIndex(index: number) {
-  tabIndex.value = index;
-}
 
 const navRef: any = ref([]);
 const handleScrollEvent = () => {
@@ -253,7 +233,10 @@ onUnmounted(() => {
           开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。由社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证明和实习工资。
         </p>
         <p class="text">
-          盛情邀请社区各位资深开发者成为开源实习活动导师，请发送报名至活动邮箱<a href="mailto:intern@openeuler.sh">intern@openeuler.sh</a>。
+          盛情邀请社区各位资深开发者成为开源实习活动导师，请发送报名至活动邮箱<a
+            href="mailto:intern@openeuler.sh"
+            >intern@openeuler.sh</a
+          >。
         </p>
       </section>
       <section id="step" class="panel nav">
@@ -367,7 +350,14 @@ onUnmounted(() => {
                 <p class="pc-number">{{ HELP.INFO[3] }}</p>
               </div>
               <div class="help-right">
-                <img :src="commonStore.theme === 'light' ? HELP.ITEM.IMG : HELP.ITEM.IMG_DARK" alt="" />
+                <img
+                  :src="
+                    commonStore.theme === 'light'
+                      ? HELP.ITEM.IMG
+                      : HELP.ITEM.IMG_DARK
+                  "
+                  alt=""
+                />
                 <p class="mo-number">{{ HELP.INFO[3] }}</p>
               </div>
             </div>

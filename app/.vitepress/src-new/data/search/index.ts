@@ -279,6 +279,15 @@ export const subModuleMap = new Map([
       },
     },
   ],
+  [
+    'witty',
+    {
+      from: {
+        zh: ['Witty智能运维案例库'],
+        en: ['Witty Ops Cases'],
+      },
+    },
+  ],
 ]);
 
 // maintainer

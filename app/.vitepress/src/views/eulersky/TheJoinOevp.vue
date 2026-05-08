@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed, onMounted } from 'vue';
-import {  useData } from 'vitepress';
+import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 import AOS from 'aos';
 
@@ -50,13 +50,13 @@ onMounted(() => {
       <OContainer class="oevp-container" :level-index="1">
         <div class="container-left word-style">
           <h3>{{ oevpI18n.CARD_TITLE }}</h3>
-          <p class="oevp-container-introduction">
+          <div class="oevp-container-introduction">
             {{ oevpI18n.CARD_INTRODUCTION }}
             <div v-if="lang === 'zh'">
-             申请加入请联系：
-            <a href="mailto:events@openeuler.sh">events@openeuler.sh</a>
+              申请加入请联系：
+              <a href="mailto:events@openeuler.sh">events@openeuler.sh</a>
+            </div>
           </div>
-          </p>
         </div>
       </OContainer>
       <div class="oevp-list">

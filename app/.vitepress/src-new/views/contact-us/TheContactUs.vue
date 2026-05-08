@@ -380,9 +380,9 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
           justify-content: space-around;
           padding: 0;
           .follow-link-item {
-            @include h3;
             text-align: center;
             color: #fff;
+            @include h3;
             @include respond-to('phone') {
               @include text2;
             }

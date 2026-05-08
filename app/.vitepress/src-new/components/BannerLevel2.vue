@@ -140,25 +140,25 @@ onMounted(() => {
         top: 0;
         color: var(--o-color-white);
         opacity: 0.14;
-        @include display1;
         font-weight: bold;
         user-select: none;
+        @include display1;
       }
       .banner-title {
         position: relative;
         z-index: 1;
         color: var(--o-color-white);
-        @include display1;
         margin-bottom: 0;
         font-weight: 500;
+        @include display1;
       }
 
       .banner-subtitle {
         position: relative;
         margin-top: 16px;
-        @include h4;
         color: var(--o-color-white);
         z-index: 1;
+        @include h4;
       }
 
       .banner-operation {

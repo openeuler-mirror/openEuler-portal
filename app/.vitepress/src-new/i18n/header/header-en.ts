@@ -404,7 +404,14 @@ export default {
           ],
         },
       ],
-      SHORTCUT: [],
+      SHORTCUT: [
+        {
+          NAME: 'Featured in Linux Magazine: A Comprehensive Focus Guide on openEuler',
+          URL: `${
+            import.meta.env.VITE_MAIN_DOMAIN_URL
+          }/category/technology/Linux Magazine Focus Guide-openEuler.pdf`,
+        },
+      ],
     },
     {
       NAME: 'Stay Updated',
@@ -477,12 +484,18 @@ export default {
   CODE: 'Code',
   QUICKLINK: 'Quick Link',
   SEARCH: {
-    BROWSEHISTORY: 'History',
+    BROWSEHISTORY: 'Recent',
     CLEAN: 'Clean up',
-    TOPSEARCH: 'Top search',
+    TOPSEARCH: 'Popular',
     CHANGE: 'Change',
+    ONESTEP: 'Quick Navigation',
+    SUGGEST: 'Suggestions',
+    NO_DATA: 'No data',
     PLEACHOLDER: 'Please enter...',
-    PLEACHOLDER_EXTEND: 'Please enter the content',
+    PLEACHOLDER_EXTEND: 'Press Enter to start, or refine your search with more info',
+    PLEACHOLDER_IMAGE: 'Search by text or upload image of any error',
+    UPLOAD_TOOLTIP: 'JPG, PNG, JPEG supported (max 10 MB)',
+    UPLOAD_FAILED: 'Upload failed. Check connection and try again.',
     TEXT: 'Search',
   },
   SOURCE_CODE: [

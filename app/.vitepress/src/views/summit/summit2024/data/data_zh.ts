@@ -18,8 +18,8 @@ export default {
       {
         text: '11月16日',
         url: 'https://www.bilibili.com/video/BV1pNnuzYEDz/',
-      }
-    ]
+      },
+    ],
   },
   introduce:
     '操作系统是产业数字化、智能化发展的坚实底座。openEuler作为数智基础设施的开源操作系统，开源5年，产业共建、生态繁荣；openEuler系市场份额屡攀新高；技术不断创新，使能AI，加速OS智能化，让数智无所不能；源于中国，贡献全球，已成长为企业级全球开源操作系统社区的重要一员。',
