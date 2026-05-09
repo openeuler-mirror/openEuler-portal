@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev app",
+    "prebuild": "node app/.vitepress/scripts/set-json-ld-domain.mjs",
     "build": "git fetch --unshallow && vitepress build app",
     "lint": "eslint \"app/.vitepress/src/**/*.{js,ts,vue,jsx,tsx}\"",
     "fix": "eslint --fix \"app/.vitepress/src/**/*.{js,ts,vue,jsx,tsx}\"",
