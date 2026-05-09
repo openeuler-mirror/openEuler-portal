@@ -7,8 +7,8 @@ import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
 
-import frameImgZh from '~@/assets/category/bisheng/frame_zh.png';
-import frameImgEn from '~@/assets/category/bisheng/frame_en.png';
+import frameImgZh from '~@/assets/category/bisheng/frame_zh.jpg';
+import frameImgEn from '~@/assets/category/bisheng/frame_en.jpg';
 
 const { t, locale } = useLocale();
 const { lePadV } = useScreen();
@@ -21,7 +21,7 @@ const img = { zh: frameImgZh, en: frameImgEn };
 
 <template>
   <AppSection :title="t('bishengJdk.architectureTitle')">
-    <div class="architecture">
+    <div class="architecture" :class="{ 'architecture-dark': isDark }">
       <p class="arch-desc">{{ t('bishengJdk.architectureDesc') }}</p>
       <OFigure
         :src="img[locale]"
@@ -49,6 +49,12 @@ const img = { zh: frameImgZh, en: frameImgEn };
   --figure-radius: var(--o-radius-xs);
   margin: 32px auto 0;
   display: flex;
+}
+
+.architecture-dark {
+  .o-figure {
+    @include img-in-dark;
+  }
 }
 
 @include respond-to('laptop') {
