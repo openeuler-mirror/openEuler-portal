@@ -34,31 +34,26 @@ const frameworkList = [
   {
     title: t('ubServiceCore.engine'),
     desc: t('ubServiceCore.engineDesc'),
-    tag: t('ubServiceCore.already'),
     class: 'already',
   },
   {
     title: t('ubServiceCore.virt'),
     desc: t('ubServiceCore.virtDesc'),
-    tag: t('ubServiceCore.plan'),
     class: 'plan',
   },
   {
     title: t('ubServiceCore.mem'),
     desc: t('ubServiceCore.memDesc'),
-    tag: t('ubServiceCore.plan'),
     class: 'plan',
   },
   {
     title: t('ubServiceCore.comm'),
     desc: t('ubServiceCore.commDesc'),
-    tag: t('ubServiceCore.already'),
     class: 'already',
   },
   {
     title: t('ubServiceCore.io'),
     desc: t('ubServiceCore.ioDesc'),
-    tag: t('ubServiceCore.plan'),
     class: 'plan',
   },
 ]
@@ -85,12 +80,6 @@ const viewWhitepaper = (lang: LocaleT) => {
         <div v-for="(item, i) in frameworkList" :key="i" class="item">
           <div class="item-title" :class="{'item-title-dark': isDark}">
             <span class="title-box">{{ item.title }}</span>
-            <OTag
-              :class="`${item.class}-tag`"
-              :style="{ '--tag-radius': '4px' }"
-            >
-              {{ item.tag }}
-            </OTag>
           </div>
           <p class="item-desc">{{ item.desc }}</p>
         </div>

@@ -1,19 +1,23 @@
 <script lang="ts" setup>
+import { computed } from 'vue';
 import { OTab, OTabPane, OFigure } from '@opensig/opendesign';
 
 import AppSection from '~@/components/AppSection.vue';
 import { useLocale } from '~@/composables/useLocale';
+import { useCommon } from '@/stores/common';
 
-import archImg from '~@/assets/category/nestos/architecture.png';
+import archImg from '~@/assets/category/nestos/architecture.jpg';
 
 const { t } = useLocale();
+const commonStore = useCommon();
+const isDark = computed(() => commonStore.theme === 'dark');
 </script>
 
 <template>
   <AppSection :title="t('nestos.archTitle')">
     <OTab default-value="container" variant="text" :line="false" class="arch-tab">
       <OTabPane value="container" :label="t('nestos.nfcTitle')">
-        <div class="arch-content">
+        <div class="arch-content" :class="{ 'arch-content-dark': isDark }">
           <p class="arch-desc">{{ t('nestos.nfcDesc') }}</p>
           <OFigure :src="archImg" class="arch-img"></OFigure>
         </div>
@@ -39,6 +43,12 @@ const { t } = useLocale();
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
   padding: 40px 32px;
+}
+
+.arch-content-dark {
+  .o-figure {
+    @include img-in-dark;
+  }
 }
 
 .arch-desc {
