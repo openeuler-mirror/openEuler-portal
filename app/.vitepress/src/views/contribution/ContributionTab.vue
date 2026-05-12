@@ -10,15 +10,18 @@ const i18n = useI18n();
 const { lang } = useData();
 const router = useRouter();
 const activeName = ref('');
+const preName = ref('');
 // init:
 if (router.route.path.includes('detail')) {
   activeName.value = 'second';
+  preName.value = 'second';
 } else {
   activeName.value = 'first';
+  preName.value = 'first';
 }
-const handleClick = (tab: TabsPaneContext) => {
-  if (tab.props.name === activeName.value) return;
-  if (tab.props.name === 'first') {
+const handleClick = () => {
+  if (preName.value === activeName.value) return;
+  if (activeName.value === 'first') {
     router.go(`/${lang.value}/community/contribution/`);
   } else {
     router.go(`/${lang.value}/community/contribution/detail`);
