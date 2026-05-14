@@ -4,7 +4,7 @@ date: '2026-05-13'
 category: news
 tags:
   - openEuler
-banner: 'app/.vitepress/public/img/news/20260311-FOSSASIA Summit 2026/photo01.jpg'
+banner: 'img/news/20260513-openEuler Space/0513banner.jpg'
 author: 'openEuler'
 summary: 'openEuler携生态伙伴亮相 FOSSASIA Summit 2026'
 ---
