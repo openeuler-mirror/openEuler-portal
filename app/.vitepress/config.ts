@@ -136,6 +136,10 @@ const config: UserConfig = {
         '^(zh|en)/(community|sig|security|learn|compatibility|internship|migration|other/projects)/?': {
           priority: 0.8
         },
+        // 漏洞报告页面
+        '^(zh|en)/security/vulnerability-reporting/?$': {
+          priority: 0.5
+        },
         // 单篇文章：blog / news / showcase
         '^(zh|en)/(news|showcase)/.+': {
           priority: 0.6
