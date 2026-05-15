@@ -1,8 +1,7 @@
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { readEnvVar } from './utils.mjs';
-import { createReadStream, readFileSync, writeFileSync } from "node:fs";
-import { pipeline } from "node:stream/promises";
+import { readFileSync, writeFileSync } from "node:fs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -15,7 +14,7 @@ async function main() {
   let hostname;
   try {
     hostname = new URL(domain).hostname;
-  } catch (error) {
+  } catch {
     console.log(`parse VITE_MAIN_DOMAIN_URL(${domain}) failed`)
     return;
   }
@@ -23,7 +22,7 @@ async function main() {
     return;
   }
 
-  const originalFile = join(__dirname, '../jsonld', 'general.ts');
+  const originalFile = join(__dirname, '../../../.geo/jsonld/general.ts');
 
   const oldContent = readFileSync(originalFile, 'utf-8');
   const regex = /www\.openeuler\.org/g;
