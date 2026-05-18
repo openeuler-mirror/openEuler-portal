@@ -23,6 +23,9 @@ const geoDir = path.resolve(__dirname, '../../.geo')
  */
 const setJSONLD = async (pageData: PageData, pagePath: string) => {
   if (pageData.frontmatter.sigPageType === 'detail' && pageData.params?.sig) {
+    if (!existsSync(path.join(geoDir, `jsonld/sigs/${pageData.params.sig}.jsonld.json`))) {
+      return;
+    }
     const content = await readFile(path.join(geoDir, `jsonld/sigs/${pageData.params.sig}.jsonld.json`), { encoding: 'utf8' });
     (pageData.frontmatter.head ??= []).push([
       'script',
