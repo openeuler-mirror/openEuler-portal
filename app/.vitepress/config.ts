@@ -1,28 +1,29 @@
 import type { HeadConfig, PageData, UserConfig } from 'vitepress';
 
-import tdks from './tdks';
+import tdks from '../../.geo/tdks';
 
-import { buildLlmsFullTxt, viteLlmsTxt } from './plugins/generateLLMsTxtNew';
+import { viteLlmsTxt } from './plugins/generateLLMsTxtNew';
 import LLMsTxtSections from './LLMsTxtSections';
-import viteLastModifiedPlugin from './plugins/lastModifiedPlugin';
-import sitemapItemTransformer from './sitemap-items-transformer';
+import viteLastModifiedPlugin from '@opendesign-plus/plugins/vite/generate-lastmod-changefreq';
+import sitemapItemTransformer from '@opendesign-plus/geo-scripts/vitepress-sitemap-transformer';
+import generateLLMsFull from '@opendesign-plus/geo-scripts/generate-llms-full';
 
 import { readFile } from 'node:fs/promises';
-import path from 'node:path';
+import path, { join } from 'node:path';
 import { existsSync, readFileSync} from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import generalJsonLd from './jsonld/general';
+import generalJsonLd from '../../.geo/jsonld/general';
 
 const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const JSONLD_DIR = path.resolve(__dirname, 'jsonld');
+const geoDir = path.resolve(__dirname, '../../.geo')
 /**
  * 设置JSON-LD
  */
 const setJSONLD = async (pageData: PageData, pagePath: string) => {
   if (pageData.frontmatter.sigPageType === 'detail' && pageData.params?.sig) {
-    const content = await readFile(path.join(JSONLD_DIR, `sigs/${pageData.params.sig}.jsonld.json`), { encoding: 'utf8' });
+    const content = await readFile(path.join(geoDir, `jsonld/sigs/${pageData.params.sig}.jsonld.json`), { encoding: 'utf8' });
     (pageData.frontmatter.head ??= []).push([
       'script',
       { type: 'application/ld+json' },
@@ -106,7 +107,7 @@ const config: UserConfig = {
     transformItems: sitemapItemTransformer(
       items => {
         try {
-          const lastmodeTimeStamp = JSON.parse(readFileSync(path.resolve(__dirname, './last-modified.json'), 'utf-8')) as Record<string, number>;
+          const lastmodeTimeStamp = JSON.parse(readFileSync(path.resolve(geoDir, 'last-modified.json'), 'utf-8')) as Record<string, number>;
           for (const item of items) {
             const key = item.url.endsWith('.html') ? item.url.replace('.html', '.md') : (item.url.endsWith('/') ? `${item.url}index.md` : `${item.url}/index.md`);
             const generatedItem = lastmodeTimeStamp[key];
@@ -228,8 +229,10 @@ const config: UserConfig = {
     },
     plugins: [
       viteLastModifiedPlugin({
-        ignore: ['**/blog/**', '**/news/**'],
-        ignoreDeps: ['**/shared/**', '**/utils/**', '**/composables/**', '**/i18n/**', '**/assets/**']
+        rootDir: join(__dirname, '../'),
+        pageEntryPattern: ['zh/**/*.md', 'en/**/*.md'],
+        ignoreDeps: ['**/shared/**', '**/utils/**', '**/composables/**', '**/i18n/**', '**/assets/**'],
+        outputFile: join(geoDir, 'last-modified.json')
       }),
       viteLlmsTxt({
         title: 'openEuler | 开源社区',
@@ -241,11 +244,17 @@ const config: UserConfig = {
       noExternal: ['@opendesign-plus/components', 'element-plus']
     }
   },
-  async buildEnd(siteConfig) {
-    await buildLlmsFullTxt(siteConfig.outDir, {
-      title: 'openEuler | 开源社区',
-      description: 'openEuler是一个开源、免费的 Linux 发行版平台，通过开放的形式与全球的开发者共同构建一个开放、多元和架构包容的软件生态体系。',
-      sections: LLMsTxtSections
+  async buildEnd() {
+    await generateLLMsFull({
+      prefix: `# openEuler | 开源社区
+
+> openEuler是一个开源、免费的 Linux 发行版平台，通过开放的形式与全球的开发者共同构建一个开放、多元和架构包容的软件生态体系。
+ `,
+      site: sitemapHostname,
+      exclude: [/(zh|en)\/blog\//, /(zh|en)\/news\//],
+      removeClass: ['feedback', 'feedback-md'],
+      htmlDir: join(__dirname, 'dist'),
+      output: join(__dirname, 'dist/llms-full.txt')
     });
   },
 };
