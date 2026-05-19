@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev app",
-    "prebuild": "node app/.vitepress/scripts/set-json-ld-domain.mjs && node scripts/check-git-shallow.js",
-    "build": "vitepress build app",
-    "build:geo": "vitepress build app --exclude=**/blog/**/*,**/news/**/*",
+    "prebuild": "node app/.vitepress/scripts/set-json-ld-domain.mjs",
+    "build": "node scripts/check-git-shallow.js && vitepress build app",
+    "build:geo": "node scripts/check-git-shallow.js && vitepress build app --exclude=**/blog/**/*,**/news/**/*",
     "lint": "eslint \"app/.vitepress/src/**/*.{js,ts,vue,jsx,tsx}\"",
     "fix": "eslint --fix \"app/.vitepress/src/**/*.{js,ts,vue,jsx,tsx}\"",
     "preview": "vitepress preview app",
