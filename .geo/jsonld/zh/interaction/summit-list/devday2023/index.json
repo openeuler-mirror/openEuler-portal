@@ -1,0 +1,261 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "openEuler Developer Day 2023",
+    "alternateName": "ODD 2023",
+    "description": "openEuler Developer Day 2023（简称 ODD 2023）是 openEuler 社区年度顶级会议，由开放原子开源基金会旗下 openEuler 社区发起的开发者峰会。旨在持续推动操作系统乃至基础软件的创新和突破，全面展示全新发布的23.03创新版本特性、多样性计算和全场景协同的技术成果，分享各行各业基于 openEuler 的商业实践。",
+    "url": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/devday2023",
+    "startDate": "2023-04-20",
+    "endDate": "2023-04-21",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "inLanguage": "zh-CN",
+    "organizer": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "sponsor": {
+      "@type": "Organization",
+      "name": "开放原子开源基金会",
+      "url": "https://www.openatom.org"
+    },
+    "subEvent": [
+      {
+        "@type": "Event",
+        "name": "openEuler开发者峰会主论坛",
+        "startDate": "2023-04-21T10:00:00+08:00",
+        "endDate": "2023-04-21T12:10:00+08:00",
+        "description": "openEuler开发者峰会主论坛，包含主题演讲、成果展示、行业应用实践分享等环节。"
+      },
+      {
+        "@type": "Event",
+        "name": "电力行业技术创新及应用闭门会",
+        "startDate": "2023-04-20T09:30:00+08:00",
+        "endDate": "2023-04-20T11:30:00+08:00",
+        "organizer": {
+          "@type": "Organization",
+          "name": "麒麟信安"
+        }
+      },
+      {
+        "@type": "Event",
+        "name": "行业应用创新和生态发展闭门会",
+        "startDate": "2023-04-20T09:30:00+08:00",
+        "endDate": "2023-04-20T11:30:00+08:00",
+        "organizer": {
+          "@type": "Organization",
+          "name": "统信软件"
+        }
+      },
+      {
+        "@type": "Event",
+        "name": "金融行业技术创新及应用闭门会",
+        "startDate": "2023-04-20T14:00:00+08:00",
+        "endDate": "2023-04-20T16:30:00+08:00",
+        "organizer": {
+          "@type": "Organization",
+          "name": "麒麟软件"
+        }
+      }
+    ],
+    "performer": [
+      {
+        "@type": "Person",
+        "name": "王金磊",
+        "jobTitle": "软件开发工程师",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "中移（苏州）软件技术有限公司"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "赵磊",
+        "jobTitle": "专家级工程师",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "江苏润和软件股份有限公司"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "冯成文",
+        "jobTitle": "资深工程师",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "华为技术有限公司"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "黄河清",
+        "jobTitle": "高级工程师",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "华为技术有限公司"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "游益锋",
+        "jobTitle": "后台开发工程师",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "天翼云科技有限公司"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "胡科开",
+        "jobTitle": "资深安全专家",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "华为技术有限公司"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "周广伟",
+        "jobTitle": "安全技术专家",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "华为技术有限公司"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "杨牧天",
+        "jobTitle": "CEO",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "北京中科微澜科技有限公司"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "柳鑫浩",
+        "jobTitle": "高级工程师",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "湖南麒麟信安科技股份有限公司"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "李崇",
+        "jobTitle": "系统软件架构师",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "英特尔"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "班有容",
+        "jobTitle": "项目经理",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "中国移动研究院"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "陈华才",
+        "jobTitle": "内核开发工程师",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "龙芯中科"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "庄浩坚",
+        "jobTitle": "Senior Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Linaro"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "纪涛",
+        "jobTitle": "OEPKGS 产品经理",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "中国科学院软件研究所"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "张道龙",
+        "jobTitle": "云计算开发专家",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "软通动力信息技术（集团）股份有限公司"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "曾宏安",
+        "jobTitle": "北京研发中心总经理",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "北京凝思软件股份有限公司"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "openEuler Developer Day 2023 | 峰会活动 | openEuler社区",
+    "description": "参加openEuler Developer Day 2023活动，交流技术经验与资源。",
+    "url": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/devday2023",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "峰会活动",
+          "item": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "openEuler Developer Day 2023",
+          "item": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/devday2023"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn",
+    "logo": "https://www.openeuler.openatom.cn/logo.png",
+    "sameAs": [
+      "https://gitee.com/openeuler"
+    ],
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "开放原子开源基金会",
+      "url": "https://www.openatom.org"
+    }
+  }
+]

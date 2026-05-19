@@ -1,0 +1,102 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/community/contribution/detail",
+    "url": "https://www.openeuler.openatom.cn/en/community/contribution/detail",
+    "name": "Complete Guide for Contributing to openEuler",
+    "description": "Access detailed docs with step-by-step guidance on making meaningful contributions to our community.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Community",
+          "item": "https://www.openeuler.openatom.cn/en/community/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Contribution",
+          "item": "https://www.openeuler.openatom.cn/en/community/contribution/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Complete Guide",
+          "item": "https://www.openeuler.openatom.cn/en/community/contribution/detail"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "openEuler Contribution Guide",
+      "description": "A comprehensive guide for contributing to the openEuler open source community, covering CLA signing, issue submission, pull requests, code contribution, and community participation."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Contribute to openEuler",
+    "description": "Step-by-step guide for making meaningful contributions to the openEuler open source community",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Sign CLA",
+        "text": "Sign the Contributor License Agreement (CLA) to participate in openEuler community contributions",
+        "position": 1
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Explore Projects",
+        "text": "Explore openEuler projects and find areas matching your interests and skills",
+        "position": 2
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Submit Issues",
+        "text": "Submit issues to report bugs, suggest features, or document problems",
+        "position": 3
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Submit Pull Requests",
+        "text": "Submit pull requests with code changes, documentation improvements, or other contributions",
+        "position": 4
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Participate in Activities",
+        "text": "Apply for community activities and programs to grow your open source involvement",
+        "position": 5
+      }
+    ],
+    "totalTime": "P1D",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "USD",
+      "value": "0"
+    },
+    "inLanguage": "en",
+    "url": "https://www.openeuler.openatom.cn/en/community/contribution/detail"
+  }
+]

@@ -1,0 +1,85 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/provider/005p41c5-a0b2-e850f4211aa0",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/005p41c5-a0b2-e850f4211aa0",
+    "name": "浙江移动核心业务系统适配 | openEuler社区",
+    "description": "基于国产芯片服务器与操作系统构建自主可控集群",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "商业案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "浙江移动核心业务系统适配",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/provider/005p41c5-a0b2-e850f4211aa0"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "浙江移动核心业务系统适配",
+    "description": "基于国产芯片服务器与操作系统构建自主可控集群，完成业务大厅与客户中心等业务系统与国产操作系统、mesos 与 k8s 容器集群、国产芯片服务器的联调适配。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/005p41c5-a0b2-e850f4211aa0",
+    "inLanguage": "zh",
+    "datePublished": "2021-08-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "国产操作系统适配"
+      },
+      {
+        "@type": "Thing",
+        "name": "自主可控集群"
+      },
+      {
+        "@type": "Thing",
+        "name": "容器集群"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "统信软件",
+        "description": "统信服务器操作系统 V20 提供商"
+      },
+      {
+        "@type": "Organization",
+        "name": "浙江移动",
+        "description": "中国移动通信集团浙江有限公司"
+      }
+    ],
+    "text": "整体方案主要涉及业务大厅与客户中心等业务系统与国产操作系统、mesos 与 k8s 容器集群、国产芯片服务器的联调适配，基于国产芯片服务器与操作系统构建自主可控集群，并通过标签约束隔离技术，将业务系统到指定自主可控集群。实现了业务代码不变的前提下，完成由芯片到操作系统的国产化替换工作，本次适配成果保证了后续同类架构替换可以实现零改造、规模化推广。2021年8月，浙江移动顺利完成联调适配，验证了自主可控服务器操作系统可以在电信运营商最核心交易系统上稳定运行，这是通信行业首家采用全自主可控技术的核心业务系统。"
+  }
+]

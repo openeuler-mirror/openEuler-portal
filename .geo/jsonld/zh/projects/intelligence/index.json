@@ -1,0 +1,152 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "openEuler 智能化解决方案",
+      "alternateName": "openEuler Intelligence",
+      "url": "https://www.openeuler.openatom.cn/zh/projects/intelligence",
+      "description": "openEuler 智能化解决方案是搭载在 openEuler 上的大模型平台，支持 RAG 知识问答、工作流应用、Agent 智能体及智能调优运维。低代码可视化编排，兼容主流 AI 软件栈，助力企业和开发者 1 天构建专属 AI 应用。",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "openEuler",
+      "inLanguage": "zh",
+      "featureList": [
+        "RAG知识问答：支持 pdf、docx、pptx 等主流文档格式解析，1 天构建专属智能问答助手",
+        "工作流应用：以 openApi 形式上传本地接口定义，可视化编排工作流，降低二次开发成本",
+        "智能体应用：支持本地 MCP 服务注册，构建 Agent 应用，完成生产环境复杂任务",
+        "智能调优：支持数据库/大数据/分布式存储/虚拟化四大场景智能调优，性能提升10%以上",
+        "智能运维：构筑运维智能助手，智能调用系统工具，快速定位解决问题",
+        "智能问答：结合预设知识库检索或大模型推理，生成准确、通俗的答复"
+      ],
+      "softwareHelp": [
+        {
+          "@type": "CreativeWork",
+          "name": "智能助手 CLI 用户手册",
+          "url": "https://www.openeuler.openatom.cn/zh/projects/intelligence"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "智能助手 Web 用户手册",
+          "url": "https://www.openeuler.openatom.cn/zh/projects/intelligence"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "AI容器镜像用户指南",
+          "url": "https://www.openeuler.openatom.cn/zh/projects/intelligence"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "AI大模型服务镜像使用指南",
+          "url": "https://www.openeuler.openatom.cn/zh/projects/intelligence"
+        }
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "openEuler 社区",
+        "url": "https://www.openeuler.openatom.cn",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "intelligence@openeuler.org",
+          "contactType": "technical support"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler 社区",
+        "url": "https://www.openeuler.openatom.cn"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "openEuler 智能化解决方案：低代码构建 Agent 与知识问答应用 | openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/zh/projects/intelligence",
+      "description": "openEuler 智能化解决方案是搭载在 openEuler 上的大模型平台，支持 RAG 知识问答、工作流应用、Agent 智能体及智能调优运维。低代码可视化编排，兼容主流 AI 软件栈，助力企业和开发者 1 天构建专属 AI 应用。",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler 社区",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "openEuler 社区",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "项目",
+            "item": "https://www.openeuler.openatom.cn/zh/projects/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "openEuler 智能化解决方案",
+            "item": "https://www.openeuler.openatom.cn/zh/projects/intelligence"
+          }
+        ]
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "openEuler 智能化解决方案",
+        "url": "https://www.openeuler.openatom.cn/zh/projects/intelligence"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler 社区",
+        "url": "https://www.openeuler.openatom.cn"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "openEuler 智能化解决方案是什么？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "openEuler 智能化解决方案是搭载在 openEuler 上的大模型平台，具有对接支持 openAI 大模型、构建本地知识库的基础功能；也具备注册语义接口和 MCP 服务、构建 Agent 和工作流应用等功能。支持 web 和客户端两种形式，为开发者和企业的使用提供了巨大的便利。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "openEuler 智能化解决方案对开发者有什么价值？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "对于开发者，openEuler 智能化解决方案是一个灵活且轻量化的智能化平台，能构建个人的智能助手解决日常问题。企业 / 个人开发者借助知识库、本地文档、内置知识库与大模型，1 天即可构建专属智能问答助手。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "openEuler 智能化解决方案对企业有什么价值？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "对于企业，openEuler 智能化解决方案是一套中心化的智能体解决方案，通过工作流和 Agent 应用的形式，使传统的 ISV 和 OSV 软件智能化，降低二次开发成本。支持企业调用原生智能调优智能体，支持数据库/大数据/分布式存储/虚拟化四大主力场景智能调优，性能提升10%以上。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "openEuler 智能化解决方案有哪些主要功能？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "主要功能包括：RAG知识问答（支持 pdf、docx、pptx 等主流文档格式）、工作流应用（可视化编排工作流）、智能体应用（支持本地 MCP 服务注册、构建 Agent 应用）、智能调优（四大场景智能调优，性能提升10%以上）、智能运维（构筑运维智能助手）、智能问答（结合知识库检索或大模型推理生成答复）。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何联系 openEuler 智能化解决方案团队？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以通过关注 sig intelligence 邮箱联系：intelligence@openeuler.org"
+          }
+        }
+      ]
+    }
+  ]
+]

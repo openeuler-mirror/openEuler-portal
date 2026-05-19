@@ -1,0 +1,71 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/en/security/bug-bulletins",
+      "url": "https://www.openeuler.openatom.cn/en/security/bug-bulletins",
+      "name": "Latest Bugs | openEuler",
+      "description": "Track the latest software bugs in openEuler. Visit our bug bulletin for up-to-date issue reports and fixes.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://www.openeuler.openatom.cn/#organization",
+          "name": "openEuler",
+          "url": "https://www.openeuler.openatom.cn/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.openeuler.openatom.cn/logo.png"
+          }
+        }
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Software Bug Bulletins",
+        "description": "Security and software bug advisories for the openEuler operating system, including severity levels, affected products and components, and release dates."
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.openeuler.openatom.cn/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Security",
+            "item": "https://www.openeuler.openatom.cn/en/security/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Bug Bulletins",
+            "item": "https://www.openeuler.openatom.cn/en/security/bug-bulletins"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.openeuler.openatom.cn/#organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      },
+      "sameAs": [
+        "https://github.com/openeuler-mirror"
+      ]
+    }
+  ]
+]

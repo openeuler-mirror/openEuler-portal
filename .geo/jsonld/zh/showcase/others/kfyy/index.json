@@ -1,0 +1,53 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "湖南省康复医院",
+  "description": "助力医疗行业操作系统自主创新，提升可靠性与安全性",
+  "author": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.openeuler.openatom.cn/img/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/kfyy/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "openEuler",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux"
+  },
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "湖南省康复医院"
+    },
+    {
+      "@type": "Thing",
+      "name": "医疗行业"
+    },
+    {
+      "@type": "Thing",
+      "name": "操作系统自主创新"
+    },
+    {
+      "@type": "Thing",
+      "name": "医疗信息化"
+    }
+  ],
+  "articleSection": [
+    "医疗行业",
+    "操作系统迁移"
+  ],
+  "inLanguage": "zh-CN"
+}

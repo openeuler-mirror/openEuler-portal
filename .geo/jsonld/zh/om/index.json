@@ -1,0 +1,120 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/om",
+      "url": "https://www.openeuler.openatom.cn/zh/om",
+      "name": "openEuler运维工具 | openEuler运维专区 | openEuler社区",
+      "description": "openEuler开源社区及伙伴构建了一系列专、精的运维组件，以及各种统一运维工具，协助用户更好地使用openEuler操作系统。想要了解更多信息，欢迎访问openEuler官网。",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "OSMind",
+        "description": "OSMind是一款openEuler运维管理工具套件",
+        "applicationCategory": "SystemApplication",
+        "operatingSystem": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/zh/om",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "CNY"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "openEuler社区",
+          "url": "https://www.openeuler.openatom.cn"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.openeuler.openatom.cn/assets/openeuler-logo.png"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "运维专区",
+          "item": "https://www.openeuler.openatom.cn/zh/om"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "openEuler运维全集",
+      "description": "openEuler运维专区提供的系统运维能力分类",
+      "url": "https://www.openeuler.openatom.cn/zh/om",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "系统运维",
+          "description": "日常维护、告警管理、补丁升级、系统巡检、安全扫描、日志监控、应急恢复"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "系统管理",
+          "description": "部署迁移、镜像管理、热补丁、备份恢复、预警整改、配置溯源"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "系统优化",
+          "description": "系统调优、业务调优、网络调优"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "自动化",
+          "description": "运维编排、自动部署、自动恢复、故障处理"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "工具",
+          "description": "日志收集、远程操作、故障分析、故障诊断、巡检修复、安全加固、告警修复、异常检测"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "数据",
+          "description": "监控大屏、数据报表、智能探针、架构感知"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "运维支撑",
+          "description": "标准规范：系统巡检标准、运维流程规范、升级流程规范、安全加固标准、故障处理规范、应急恢复流程"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "维护管理",
+          "description": "权限管理、版本管理、配置管理、变更管理、资产管理、主机管理、知识管理"
+        }
+      ]
+    }
+  ]
+]

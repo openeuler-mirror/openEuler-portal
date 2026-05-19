@@ -1,0 +1,186 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "操作系统大会＆openEuler Summit 2024",
+    "alternateName": "openEuler Summit 2024",
+    "url": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/summit2024",
+    "startDate": "2024-11-15",
+    "endDate": "2024-11-16",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "description": "操作系统大会＆openEuler Summit 2024，汇聚全球产业发展力量，邀请思想引领者、商业精英、技术专家、合作伙伴以及全球开源基金会等业界同仁，共同探讨操作系统产业发展方向和未来机遇，联合伙伴展示最新合作成果，分享数字化转型实践，以技术驱动创新不断激发新质生产力。",
+    "location": {
+      "@type": "Place",
+      "name": "北京中关村国际创新中心",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "北京",
+        "addressCountry": "CN"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "performer": [
+      {
+        "@type": "Person",
+        "name": "倪光南",
+        "jobTitle": "院士",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "中国工程院"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "江大勇",
+        "jobTitle": "主席",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "openEuler委员会"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "吕仲涛",
+        "jobTitle": "董事长",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "北京金融科技产业联盟"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "史磊",
+        "jobTitle": "副总经理",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "百度智能云混合云部"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Andrew Wafaa",
+        "jobTitle": "Senior Director & Fellow, Software Communities",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Arm"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "武成岗",
+        "jobTitle": "研究员",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "北京中关村实验室 / 中国科学院计算技术研究所"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "熊伟",
+        "jobTitle": "执行总监",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "openEuler委员会"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "胡欣蔚",
+        "jobTitle": "主席",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "openEuler技术委员会"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Keith Chan",
+        "jobTitle": "Director of Strategic Planning",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Linux Foundation APAC"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Kendall Nelson",
+        "jobTitle": "Senior Upstream Developer Advocate",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "OpenInfra"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Elton Yang",
+        "jobTitle": "开源技术总监",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Intel中国"
+        }
+      }
+    ],
+    "subEvent": [
+      {
+        "@type": "Event",
+        "name": "操作系统大会 2024 主论坛",
+        "startDate": "2024-11-15T09:30:00+08:00",
+        "endDate": "2024-11-15T11:40:00+08:00",
+        "location": {
+          "@type": "Place",
+          "name": "北京中关村国际创新中心"
+        }
+      },
+      {
+        "@type": "Event",
+        "name": "openEuler Summit 2024 主论坛",
+        "startDate": "2024-11-16",
+        "location": {
+          "@type": "Place",
+          "name": "北京中关村国际创新中心"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "openEuler 2024 峰会 | 峰会活动 | openEuler社区",
+    "url": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/summit2024",
+    "description": "查看openEuler 2024年峰会的相关信息，参与开源交流盛会。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "峰会活动",
+          "item": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "openEuler Summit 2024",
+          "item": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/summit2024"
+        }
+      ]
+    }
+  }
+]

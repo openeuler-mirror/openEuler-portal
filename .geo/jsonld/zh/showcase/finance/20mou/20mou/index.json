@@ -1,0 +1,83 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "某银行云原生操作系统创新探索 | openEuler社区",
+    "description": "云原生操作系统创新探索",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/20mou/20mou.html",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "金融",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "某银行云原生操作系统创新探索",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/20mou/20mou.html"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "某银行云原生操作系统创新探索",
+    "description": "某行联合openEuler KubeOS打造云原生操作系统，实现不可变基础设施OS，提升OS启动性能4倍以上，减少OS资源消耗4倍以上，降低对云底座厂商的依赖。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/20mou/20mou.html",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler KubeOS",
+        "applicationCategory": "OperatingSystem",
+        "description": "为云原生场景而设计的轻量安全云原生操作系统，基于Kubernetes的云原生操作系统统一运维解决方案，通过极简组件、根目录只读、dm-verity等方式减少漏洞和攻击面。",
+        "url": "https://www.openeuler.openatom.cn/zh/",
+        "operatingSystem": "Linux",
+        "softwareVersion": "KubeOS"
+      }
+    ],
+    "articleBody": "某行期望联合openEuler打造云原生操作系统，逐步改善云底座底噪OS资源消耗大、维护敏捷性不足、响应慢等业务痛点问题，加速全栈创新提升竞争力。openEuler KubeOS项目与某行共同围绕安全可控和灵活弹性目标打造不可变基础设施OS，并对接行内云原生管理平台，打通云原生OS和容器应用运维管理边界，提供云原生化的操作系统统一配置、管理和运维体验。相比于现有云底座，提升OS启动性能4倍以上，减少OS资源消耗4倍以上，降低对云底座厂商的依赖。",
+    "keywords": [
+      "云原生操作系统",
+      "KubeOS",
+      "openEuler",
+      "不可变基础设施",
+      "Kubernetes",
+      "金融行业",
+      "云底座",
+      "容器云平台"
+    ]
+  }
+]

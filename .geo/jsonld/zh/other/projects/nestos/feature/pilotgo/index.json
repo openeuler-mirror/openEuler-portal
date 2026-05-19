@@ -1,0 +1,57 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "PilotGo 插件式运维管理平台 | NestOS | openEuler | openEuler社区",
+    "description": "PilotGo 是麒麟软件在 openEuler 社区孵化的插件式运维管理平台，为 NestOS 带来定制化运维管理功能及架构感知插件特性。",
+    "url": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/feature/pilotgo/",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "NestOS",
+          "item": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "PilotGo 插件式运维管理平台",
+          "item": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/feature/pilotgo/"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PilotGo",
+    "description": "PilotGo 是麒麟软件在 openEuler 社区孵化的插件式运维管理平台，为 NestOS 带来定制化运维管理功能及架构感知插件特性。",
+    "url": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/feature/pilotgo/",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "NestOS",
+    "featureList": [
+      "插件式运维管理平台",
+      "定制化运维管理功能",
+      "架构感知插件特性",
+      "专为 NestOS 提供运维管理"
+    ],
+    "provider": {
+      "@type": "Organization",
+      "name": "麒麟软件"
+    }
+  }
+]

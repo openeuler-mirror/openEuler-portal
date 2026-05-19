@@ -1,0 +1,68 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/18/18.html",
+    "name": "四川蜀天梦图数据科技有限公司 | openEuler社区",
+    "description": "基于openEuler系操作系统的GDMBASE图数据库管理系统",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "showcase",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "四川蜀天梦图数据科技有限公司",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/18/18.html"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "GDMBASE图数据库管理系统V3",
+      "description": "基于银河麒麟高级服务器操作系统V10（openEuler 20.03LTS商业发行版操作系统）深度适配优化，结合鲲鹏硬件，提供全栈式高可靠、高性能、高安全的图数据基础平台。",
+      "applicationCategory": "DatabaseApplication",
+      "operatingSystem": "openEuler 20.03 LTS",
+      "featureList": [
+        "全栈式优化：利用openEuler系操作系统和鲲鹏硬件的高性能特性，提供全栈式高可靠、高性能、高安全的图数据基础平台",
+        "性能显著提升：计算分析能力综合提升20%，磁盘读写性能提升约15%，网络吞吐性能提升5%",
+        "图数据库软件支撑：提供图存储、查询、计算等上层业务，实现软硬件高度兼容和高效协同",
+        "分布式架构：支持存储节点横向扩展，兼顾性能表现和存储占用",
+        "图计算能力：提供多种图计算算法，支持联机分析和联机事务处理",
+        "图原生存储：采用基于免索引邻接的图原生存储，优化数据存储结构，提升查询效率"
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "四川蜀天梦图数据科技有限公司",
+    "alternateName": "蜀天梦图",
+    "description": "致力于帮助企业实现数字化转型，通过图数据库管理系统提升决策效率，从经验驱动转向数字驱动。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/18/18.html",
+    "knowsAbout": [
+      "图数据库管理系统",
+      "数字化转型",
+      "大数据解决方案",
+      "图计算",
+      "分布式架构"
+    ]
+  }
+]

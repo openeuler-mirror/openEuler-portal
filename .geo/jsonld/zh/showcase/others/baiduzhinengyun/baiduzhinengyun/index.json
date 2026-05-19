@@ -1,0 +1,103 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/baiduzhinengyun/baiduzhinengyun.html",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/baiduzhinengyun/baiduzhinengyun.html",
+    "name": "百度智能云 | openEuler社区",
+    "description": "基于openEuler打造百度智能云基座",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "百度智能云",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/baiduzhinengyun/baiduzhinengyun.html"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/baiduzhinengyun/baiduzhinengyun.html#article",
+    "headline": "基于openEuler打造百度智能云基座",
+    "description": "BaiduLinux Cloud OS是百度公司基于openEuler自主构建的一款高性能操作系统，深度服务于百度内部业务，同时广泛支持百度外部客户的多样化需求。",
+    "inLanguage": "zh-CN",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/baiduzhinengyun/baiduzhinengyun.html",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/baiduzhinengyun/baiduzhinengyun.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "BaiduLinux Cloud OS",
+      "description": "BaiduLinux Cloud OS是百度公司基于openEuler自主构建的一款高性能操作系统，面向云底座、云原生、AI平台和应用的AI原生操作系统，为用户提供高效、稳定、安全的运行环境。",
+      "applicationCategory": "OperatingSystem",
+      "operatingSystem": "Linux",
+      "creator": {
+        "@type": "Organization",
+        "name": "百度智能云",
+        "url": "https://cloud.baidu.com/"
+      },
+      "featureList": [
+        "稳定可靠，安全合规：具备对代码的完整掌控能力，可及时评估和修复安全风险及漏洞",
+        "性能卓越，体验升级：搭载百度自研第三代操作系统内核，通过CPU离线调度与编排、NUMA亲和进程管理、Cache预取智能调优等技术创新提升性能",
+        "多形态云环境纳管与优化：广泛兼容Intel、AMD、鲲鹏、海光等芯片处理器架构及NVIDIA、昇腾、昆仑芯等主流AI处理器",
+        "生态开放，智算原生：内置AI工作环境所需驱动、开发库和管理软件，提供开箱即用的开发体验"
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CaseStudy",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/baiduzhinengyun/baiduzhinengyun.html#casestudy",
+    "name": "百度智能云基于openEuler构建BaiduLinux Cloud OS",
+    "description": "百度与openEuler社区紧密合作，BaiduLinux CloudOS基于openEuler 5.10内核构建，并已将关键kernel特性贡献至openEuler 6.6内核，已在核心业务场景实现规模化部署。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/baiduzhinengyun/baiduzhinengyun.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "customer": {
+      "@type": "Organization",
+      "name": "百度智能云"
+    }
+  }
+]

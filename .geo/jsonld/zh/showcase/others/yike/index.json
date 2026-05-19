@@ -1,0 +1,118 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/yike",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/yike",
+    "name": "易科机器人实验室 | openEuler社区",
+    "description": "易科基于openEuler Embedded 助力高校集群机器人实验平台长期演进",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "易科机器人实验室",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/yike"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/yike#article",
+    "headline": "易科机器人实验室：基于openEuler Embedded助力高校集群机器人实验平台长期演进",
+    "description": "易科基于openEuler Embedded 助力高校集群机器人实验平台长期演进",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/yike",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/img/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler Embedded",
+        "operatingSystem": "openEuler",
+        "applicationCategory": "EmbeddedApplication",
+        "url": "https://www.openeuler.openatom.cn/zh/other/projects/embedded/"
+      },
+      {
+        "@type": "Thing",
+        "name": "KKSwarm",
+        "description": "开源集群机器人项目，旨在为研究人员搭建一个高效、易用的集群研究平台，适用于多车编队、集群算法的验证与开发"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "易科实验室",
+        "description": "由智能机器人开发者精英组建的开放、开源、协作组织，致力于机器人技术的创新与分享"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "ROS2",
+        "alternateName": "Robot Operating System 2",
+        "description": "采用全新架构，底层基于DDS通信机制，在实时性、嵌入式、分布式等方面改进大"
+      }
+    ],
+    "articleSection": ["应用场景", "业务挑战", "解决方案", "客户价值"],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/yike"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/yike#techarticle",
+    "headline": "KKSwarm集群机器人平台基于openEuler Embedded的操作系统迁移实践",
+    "description": "易科实验室将KKSwarm平台工控机操作系统从Ubuntu迁移至openEuler Embedded，完成ROS1到ROS2升级，实现集群机器人平台长期演进。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/yike",
+    "inLanguage": "zh",
+    "proficiencyLevel": "Expert",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "dependencies": "openEuler 22.03, ROS2, X86架构",
+    "articleBody": "易科实验室是由智能机器人开发者精英组建的开放、开源、协作组织，致力于机器人技术的创新与分享。其打造的开源集群机器人项目KKSwarm，旨在为研究人员搭建一个高效、易用的集群研究平台。该平台适用于多车编队、集群算法的验证与开发，方案广泛应用于高校和院所。为响应国家科技自主创新战略，加强信息安全建设，易科实验室与欧拉社区联合对KKSwarm平台进行操作系统改造，将Ubuntu替换为openEuler Embedded操作系统。KKSwarm底层物理硬件采用X86芯片，操作系统采用openEuler 22.03版本。openEuler面向机器人领域解决了嵌入式ROS定制的高门槛问题，已对ROS2完成900+软件包的移植。轻量化的openEuler嵌入式版本在镜像体积和实时性能方面均得到提升，进一步增强了KKSwarm的产品竞争力。",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/yike"
+    }
+  }
+]

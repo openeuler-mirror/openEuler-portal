@@ -1,0 +1,62 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/data-sharing-with-third-parties",
+    "url": "https://www.openeuler.openatom.cn/en/data-sharing-with-third-parties",
+    "name": "Third-Party Data Sharing Policy | openEuler",
+    "description": "Learn how openEuler shares data with third-party partners like Baidu Analytics and Authing for site analytics and user authentication management.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/en/",
+      "url": "https://www.openeuler.openatom.cn/en/",
+      "name": "openEuler",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.openeuler.openatom.cn/en/",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/en/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.openeuler.openatom.cn/logo.png"
+        }
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Data Sharing with Third Parties",
+          "item": "https://www.openeuler.openatom.cn/en/data-sharing-with-third-parties"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Third-Party Data Sharing Policy",
+      "description": "Policy disclosing how the OpenAtom Foundation shares user data with third-party partners for website analytics and authentication services."
+    },
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "Beijing Baidu Netcom Science Technology Co., Ltd.",
+        "description": "Provider of Baidu Statistics SDK used for daily data analysis of community operations on the openEuler website.",
+        "url": "https://tongji.baidu.com/web/help/article?id=330&type=0"
+      },
+      {
+        "@type": "Organization",
+        "name": "Beijing Steamory Technology Co., Ltd.",
+        "description": "Provider of Authing account services used for authentication and personal data management of openEuler community users."
+      }
+    ]
+  }
+]

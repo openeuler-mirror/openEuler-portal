@@ -1,0 +1,38 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "News | openEuler",
+    "description": "Catch up with the latest developments, releases, and community updates from openEuler.",
+    "url": "https://www.openeuler.openatom.cn/en/interaction/news-list/",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Interaction",
+          "item": "https://www.openeuler.openatom.cn/en/interaction/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "News",
+          "item": "https://www.openeuler.openatom.cn/en/interaction/news-list/"
+        }
+      ]
+    }
+  }
+]

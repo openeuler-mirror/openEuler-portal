@@ -54,22 +54,39 @@ sitemap: {
 ## 二、TDK 设置 (Title, Description, Keywords)
 
 ### 1. 数据来源
-`.geo/tdks/` 目录结构:
+`.geo/tdks/` 目录结构（按页面路径组织）:
 ```
 .geo/tdks/
-├── index.ts    # 入口文件，聚合 zh/en + titleSuffix
-├── zh.ts       # 中文页面 TDK
-├── en.ts       # 英文页面 TDK
+├── zh/                           # 中文页面 TDK
+│   ├── index.json                # zh 首页
+│   ├── approve/
+│   │   └── index.json            # zh/approve 页面
+│   ├── migration/
+│   │   └── index.json            # zh/migration 页面
+│   │   ├── download/
+│   │   │   └── index.json        # zh/migration/download 页面
+│   ├── sig/
+│   │   ├── Kernel/
+│   │   │   └── index.json        # zh/sig/Kernel 页面
+│   └── ... (按实际路径组织)
+└── en/                           # 英文页面 TDK
+    ├── index.json                # en 首页
+    ├── approve/
+    │   └── index.json            # en/approve 页面
+    └── ... (按实际路径组织)
 ```
 
+**路径对应规则**: 文件目录路径与真实页面路径一致
+- 页面路径 `zh/migration` → 文件 `.geo/tdks/zh/migration/index.json`
+- 页面路径 `en/approve` → 文件 `.geo/tdks/en/approve/index.json`
+
 ### 2. TDK 数据结构
-```typescript
+```json
+// .geo/tdks/zh/migration/index.json
 {
-  [path: string]: {
-    title: string;
-    description: string;
-    keywords?: string;
-  }
+  "title": "openEuler迁移方案 | openEuler迁移中心",
+  "description": "openEuler助力企业简单、平稳、高效进行操作系统迁移...",
+  "keywords": "openEuler迁移,迁移工具,CentOS迁移"
 }
 ```
 
@@ -86,23 +103,34 @@ if (filePath.endsWith('index.md')) {
 }
 ```
 
-#### 3.2 titleTemplate 设置
+#### 3.2 文件路径映射
+根据 lookupKey 直接映射到文件路径:
+```
+lookupKey: "zh/migration"
+→ TDK文件: .geo/tdks/zh/migration/index.json
+
+lookupKey: "en/approve"
+→ TDK文件: .geo/tdks/en/approve/index.json
+```
+
+#### 3.3 titleTemplate 设置
 - 首页 (`zh`/`en`): 使用固定模板
 - 其他页面: `:title | ${tdks.titleSuffix[locale]}`
 
-#### 3.3 TDK 应用逻辑
+#### 3.4 TDK 应用逻辑
 ```
 1. 获取 locale (从 filePath 截取前2字符)
-2. 从 tdks[locale][pagePath] 获取配置
-3. 若无配置且是 blog/news/showcase 页面:
+2. 根据 lookupKey 定位文件: .geo/tdks/{locale}/{path}/index.json
+3. 读取文件内容，获取 { title, description, keywords }
+4. 若文件不存在且是 blog/news/showcase 页面:
    - 使用 frontmatter.summary 作为 description
-4. 若有配置:
+5. 若有配置:
    - 设置 pageData.description
    - 设置 pageData.title
    - 添加/替换 keywords meta 标签
 ```
 
-#### 3.4 keywords meta 标签处理
+#### 3.5 keywords meta 标签处理
 - 查找现有 keywords 标签索引
 - 存在 → 替换
 - 不存在 → 新增到 `frontmatter.head`
@@ -136,31 +164,35 @@ TDK 数据的批量生成使用了 `sitemap-meta-tags-batch-generator` skill。
 ```
 1. 扫描 HTML 文件
    └── glob 查找 <dist_directory>/**/*.html
-   
+    
 2. 解析 HTML 内容
    └── 提取 <title>、<meta description>、<meta keywords>
    └── 提取 <h1>、<main> 等内容作为参考
-   
+    
 3. 生成路径键
    └── zh/migration/index.html → zh/migration
-   
+    
 4. 批量生成 TDK
    └── 使用 meta-tags-optimizer skill 优化
    └── 按语言 (zh/en) 分组
-   
-5. 输出到 .geo/tdks/
+    
+5. 输出到 .geo/tdks/{locale}/{path}/index.json
 ```
 
 #### 4.2 输出结构
-```typescript
-// 最终输出文件格式
-export const metaTags: Record<string, { title: string; description: string }> = {
-  "/zh/migration": {
-    title: "openEuler迁移方案 | openEuler迁移中心",
-    description: "openEuler助力企业简单、平稳、高效进行操作系统迁移..."
-  },
-  // ...
-};
+```json
+// .geo/tdks/zh/migration/index.json
+{
+  "title": "openEuler迁移方案 | openEuler迁移中心",
+  "description": "openEuler助力企业简单、平稳、高效进行操作系统迁移...",
+  "keywords": "openEuler迁移,迁移工具,CentOS迁移"
+}
+```
+
+**目录结构**: 文件路径与页面路径对应
+```
+.geo/tdks/zh/migration/download/index.json  → zh/migration/download
+.geo/tdks/en/approve/index.json              → en/approve
 ```
 
 #### 4.3 生成规则
@@ -176,47 +208,83 @@ export const metaTags: Record<string, { title: string; description: string }> = 
 ## 三、JSON-LD Schema 设置
 
 ### 1. 数据来源
-`.geo/jsonld/` 目录结构:
+`.geo/jsonld/` 目录结构（按页面路径组织）:
 ```
 .geo/jsonld/
-├── general.ts           # 通用页面的 JSON-LD 配置
-└── sigs/                # SIG 详情页专用 JSON-LD
-    ├── Kernel.jsonld.json
-    ├── sig-Arm.jsonld.json
-    └── ... (约100个SIG)
+├── zh/                           # 中文页面 JSON-LD
+│   ├── index.json                # zh 首页
+│   ├── approve/
+│   │   ├── index.json            # zh/approve 页面
+│   │   └── approve-info/
+│   │   │   └── index.json        # zh/approve/approve-info 页面
+│   ├── community/
+│   │   ├── conduct/
+│   │   │   └── index.json        # zh/community/conduct 页面
+│   ├── sig/                      # SIG 详情页（已分散到各自路径）
+│   │   ├── Kernel/
+│   │   │   └── index.json        # zh/sig/Kernel 页面
+│   │   ├── ai/
+│   │   │   └── index.json        # zh/sig/ai 页面
+│   │   └── ... (约100个SIG)
+│   └── ... (按实际路径组织)
+└── en/                           # 英文页面 JSON-LD
+    ├── index.json                # en 首页
+    ├── approve/
+    │   └── index.json            # en/approve 页面
+    ├── community/
+    │   ├── conduct/
+    │   │   └── index.json        # en/community/conduct 页面
+    └── ... (按实际路径组织)
 ```
+
+**路径对应规则**: 文件目录路径与真实页面路径一致
+- 页面路径 `zh/sig/Kernel` → 文件 `.geo/jsonld/zh/sig/Kernel/index.json`
+- 页面路径 `en/approve` → 文件 `.geo/jsonld/en/approve/index.json`
+
+**SIG数据已分散**: 之前集中的 `.geo/jsonld/sigs/` 目录现在改为按路径组织
 
 ### 2. 设置流程 (`setJSONLD` 函数，config.ts 第 24-42 行)
 
-#### 2.1 SIG 详情页处理
-- 检测条件: `frontmatter.sigPageType === 'detail'` && `params?.sig`
-- 读取文件: `.geo/jsonld/sigs/${params.sig}.jsonld.json`
-- 添加到 head:
-```typescript
-['script', { type: 'application/ld+json' }, content]
+#### 2.1 文件路径映射
+根据 lookupKey 直接映射到文件路径:
+```
+lookupKey: "zh/sig/Kernel"
+→ JSON-LD文件: .geo/jsonld/zh/sig/Kernel/index.json
+
+lookupKey: "en/community/conduct"
+→ JSON-LD文件: .geo/jsonld/en/community/conduct/index.json
 ```
 
-#### 2.2 通用页面处理
-- 从 `generalJsonLd[pagePath]` 获取配置
-- 存在则添加到 head
+#### 2.2 统一处理逻辑
+```
+1. 根据 lookupKey 定位文件: .geo/jsonld/{locale}/{path}/index.json
+2. 读取文件内容（JSON数组）
+3. 添加到 head:
+   ['script', { type: 'application/ld+json' }, JSON.stringify(content)]
+```
+
+**注意**: SIG 页面不再特殊处理，所有页面统一按路径映射
 
 ### 3. JSON-LD Schema 类型示例
 
-#### 3.1 SIG 页面 (Kernel.jsonld.json)
+#### 3.1 SIG 页面 (zh/sig/Kernel/index.json)
 包含多个 schema 类型:
-- `Organization`: SIG 组织信息、成员、仓库数量
-- `CollectionPage`: 代码仓库列表信息
-- `FAQPage`: 常见问题问答
+```json
+[
+  { "@type": "Organization", "name": "openEuler Kernel SIG", ... },
+  { "@type": "CollectionPage", "numberOfItems": 21, ... },
+  { "@type": "FAQPage", "mainEntity": [...] }
+]
+```
 
-#### 3.2 通用页面 (general.ts)
+#### 3.2 通用页面 (en/approve/index.json)
 包含多种 schema 类型:
-- `WebPage`: 页面基本信息、面包屑导航
-- `BreadcrumbList`: 导航层级
-- `HowTo`: 操作步骤指南
-- `FAQPage`: 问答页面
-- `ItemList`: 列表页面
-- `Organization`: 组织结构
-- `Dataset`: 数据集页面
+```json
+[
+  { "@type": "WebPage", "name": "...", "breadcrumb": {...} },
+  { "@type": "Dataset", "name": "...", "variableMeasured": [...] }
+]
+```
 
 ### 4. JSON-LD 批量生成工具 (sitemap-schema-batch-generator skill)
 
@@ -247,45 +315,55 @@ JSON-LD Schema 数据的批量生成使用了 `sitemap-schema-batch-generator` s
 ```
 1. 扫描 HTML 文件
    └── glob 查找 <dist_directory>/**/*.html
-   
+    
 2. 分析页面类型
    └── /sig/{name}/ → Organization + FAQPage
    └── /contribution/detail → HowTo
    └── /conduct → FAQPage
    └── /sig-list → ItemList
-   
+    
 3. 提取内容
    └── 标题、描述、面包屑、FAQ问答、步骤列表等
-   
+    
 4. 批量生成 Schema
-   └── SIG页面 → .geo/jsonld/sigs/{sig-name}.jsonld.json
-   └── 其他页面 → .geo/jsonld/general.ts
-   
-5. 输出到 .geo/jsonld/
+   └── 所有页面统一输出到 .geo/jsonld/{locale}/{path}/index.json
+    
+5. 输出到 .geo/jsonld/{locale}/{path}/index.json
 ```
 
 #### 4.2 输出结构
-```typescript
-// 最终输出文件格式 (general.ts)
-const jsonLdData = {
-  "/zh/approve": `[{"@context": "https://schema.org", "@type": "WebPage", ...}]`,
-  "/zh/community/conduct": `{...}`,
-  // ...
-};
+```json
+// .geo/jsonld/zh/approve/index.json
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "openEuler OSV技术测评列表",
+    "breadcrumb": { "@type": "BreadcrumbList", ... }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "OSV技术测评列表"
+  }
+]
 ```
 
-#### 4.3 SIG 页面专项生成
+#### 4.3 SIG 页面输出
 ```
-.geo/jsonld/sigs/
-├── Kernel.jsonld.json     # SIG 详情页专用 schema
-├── sig-Arm.jsonld.json
-└── ... (约100个SIG文件)
+.geo/jsonld/zh/sig/Kernel/index.json    → zh/sig/Kernel 页面
+.geo/jsonld/zh/sig/ai/index.json        → zh/sig/ai 页面
+.geo/jsonld/en/sig/Compatibility/index.json → en/sig/Compatibility 页面
 ```
 
 每个 SIG 页面包含:
-- `Organization`: SIG 组织信息、成员列表、仓库数量
-- `CollectionPage`: 代码仓库列表信息
-- `FAQPage`: 常见问题问答
+```json
+[
+  { "@type": "Organization", "name": "openEuler Kernel SIG", ... },
+  { "@type": "CollectionPage", "numberOfItems": 21, ... },
+  { "@type": "FAQPage", "mainEntity": [...] }
+]
+```
 
 #### 4.4 生成规则
 - **内容忠实性**: Schema 必须仅包含页面可见数据，不能虚构
@@ -319,16 +397,40 @@ async transformPageData(pageData) {
 │   └── .vitepress/
 │       └── config.ts          # 主配置，sitemap/transformPageData
 ├── .geo/
-│   ├── tdks/
-│   │   ├── index.ts           # TDK 入口
-│   │   ├── zh.ts              # 中文 TDK
-│   │   └── en.ts              # 英文 TDK
-│   ├── jsonld/
-│   │   ├── general.ts         # 通用 JSON-LD
-│   │   └── sigs/              # SIG JSON-LD (约100个)
+│   ├── tdks/                  # TDK 配置（按页面路径组织）
+│   │   ├── zh/
+│   │   │   ├── index.json     # zh 首页
+│   │   │   ├── migration/
+│   │   │   │   └── index.json # zh/migration
+│   │   │   └── sig/
+│   │   │       └── Kernel/
+│   │   │           └── index.json # zh/sig/Kernel
+│   │   │   └── ... (按实际路径组织)
+│   │   └── en/
+│   │   │   ├── index.json     # en 首页
+│   │   │   └── ... (按实际路径组织)
+│   ├── jsonld/                 # JSON-LD 配置（按页面路径组织）
+│   │   ├── zh/
+│   │   │   ├── index.json     # zh 首页
+│   │   │   ├── approve/
+│   │   │   │   └── index.json # zh/approve
+│   │   │   └── sig/           # SIG 页面（已分散到各自路径）
+│   │   │       └── Kernel/
+│   │   │           └── index.json # zh/sig/Kernel
+│   │   │       └── ai/
+│   │   │           └── index.json # zh/sig/ai
+│   │   │       └── ... (约100个SIG)
+│   │   └── en/
+│   │   │   ├── index.json     # en 首页
+│   │   │   └── ... (按实际路径组织)
 │   └── last-modified.json     # 构建时生成
 └── .env.production            # 环境变量 (域名配置)
 ```
+
+**关键变化**:
+- TDK 和 JSON-LD 现在按页面路径组织，每个页面独立文件
+- 文件目录路径与真实页面路径一一对应
+- SIG 数据已从集中目录 `.geo/jsonld/sigs/` 分散到 `.geo/jsonld/zh/sig/{sig-name}/`
 
 ---
 
@@ -391,7 +493,7 @@ Command: /generate-tdk-local <dist_directory>
   ↓
 Skill执行 Mode 2 Workflow
   ↓
-输出: .geo/tdks/zh.ts, .geo/tdks/en.ts
+输出: .geo/tdks/{locale}/{path}/index.json
 ```
 
 **Schema批量生成参数传递**:
@@ -405,7 +507,7 @@ Command: /generate-schema-local <dist_directory>
   ↓
 Skill执行 Mode 2 Workflow
   ↓
-输出: .geo/jsonld/general.ts, .geo/jsonld/sigs/*.jsonld.json
+输出: .geo/jsonld/{locale}/{path}/index.json
 ```
 
 ### 6. Skill 参数定义
@@ -425,3 +527,93 @@ Skill执行 Mode 2 Workflow
 | `sitemap_url` | string | 条件 | Sitemap URL (sitemap模式必需) |
 | `local_directory` | string | 条件 | 本地HTML目录 (local模式必需) |
 | `output_directory` | string | 否 | 输出目录，默认 `.geo/jsonld` |
+
+---
+
+## 八、文件结构设计说明
+
+### 1. 按路径组织的设计理念
+
+新的 `.geo/` 目录结构采用**页面路径映射**设计，而非之前的集中文件设计。
+
+**之前的设计**（集中式）:
+```
+.geo/tdks/zh.ts          # 所有中文页面TDK集中在一个文件
+.geo/jsonld/general.ts   # 所有通用页面JSON-LD集中在一个文件
+.geo/jsonld/sigs/*.jsonld.json  # 所有SIG集中在一个目录
+```
+
+**现在的设计**（分布式）:
+```
+.geo/tdks/zh/{path}/index.json    # 每个页面独立文件
+.geo/jsonld/zh/{path}/index.json  # 每个页面独立文件
+```
+
+### 2. 设计优势
+
+| 维度 | 集中式设计 | 分布式设计（当前） |
+|-----|-----------|------------------|
+| **可维护性** | 单文件庞大，难以维护 | 每个页面独立，易于维护 |
+| **增量更新** | 需修改整个文件 | 只修改单个文件 |
+| **路径对应** | 需要查找键映射 | 文件路径即页面路径 |
+| **SIG管理** | 需单独目录 | 与其他页面统一管理 |
+| **Git历史** | 单文件修改频繁 | 修改分散，历史清晰 |
+
+### 3. 文件路径映射规则
+
+```
+页面路径 → 文件路径
+
+zh/migration → .geo/tdks/zh/migration/index.json
+en/approve/approve-info → .geo/jsonld/en/approve/approve-info/index.json
+zh/sig/Kernel → .geo/jsonld/zh/sig/Kernel/index.json
+```
+
+**统一规则**: 所有页面使用 `{locale}/{page-path}/index.json` 格式
+
+### 4. SIG 页面变化说明
+
+**之前**: SIG 页面单独存储在 `.geo/jsonld/sigs/{sig-name}.jsonld.json`
+
+**现在**: SIG 页面与其他页面统一存储在 `.geo/jsonld/zh/sig/{sig-name}/index.json`
+
+**好处**:
+- SIG 页面查找方式与其他页面一致
+- 无需特殊处理逻辑
+- 文件结构与页面URL结构完全对应
+
+### 5. 文件格式
+
+**TDK文件** (`\u200b.geo/tdks/zh/migration/index.json`):
+```json
+{
+  "title": "...",
+  "description": "...",
+  "keywords": "..."
+}
+```
+
+**JSON-LD文件** (`\u200b.geo/jsonld/zh/sig/Kernel/index.json`):
+```json
+[
+  { "@type": "Organization", ... },
+  { "@type": "CollectionPage", ... },
+  { "@type": "FAQPage", ... }
+]
+```
+
+### 6. 读取逻辑变化
+
+**之前**（集中式读取）:
+```typescript
+// 从大对象中查找
+const tdk = tdks[locale][pagePath];
+const jsonLd = generalJsonLd[pagePath];
+```
+
+**现在**（文件路径读取）:
+```typescript
+// 直接读取对应路径文件
+const tdkPath = `.geo/tdks/${locale}/${pagePath}/index.json`;
+const jsonLdPath = `.geo/jsonld/${locale}/${pagePath}/index.json`;
+```

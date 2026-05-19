@@ -1,0 +1,86 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/experts",
+    "url": "https://www.openeuler.openatom.cn/zh/experts",
+    "name": "openEuler 委员会顾问专家委员会 | 组织架构 | openEuler社区",
+    "description": "了解openEuler的顾问专家委员会，获取专业建议与支持。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "openEuler 社区顾问专家",
+    "description": "openEuler社区顾问专家委员会成员列表，按姓氏拼音首字母顺序排序。",
+    "url": "https://www.openeuler.openatom.cn/zh/experts",
+    "numberOfItems": 4,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Person",
+          "name": "霍太稳",
+          "jobTitle": "极客邦科技创始人兼CEO"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Person",
+          "name": "陆首群",
+          "jobTitle": "中国开源软件联盟名誉主席，原国务院信息办常务副主任"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Person",
+          "name": "倪光南",
+          "jobTitle": "中国工程院院士"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Person",
+          "name": "周明辉",
+          "jobTitle": "北京大学计算机系教授，北大博雅特聘教授"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "组织架构",
+        "item": "https://www.openeuler.openatom.cn/zh/community/organization/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "顾问专家委员会",
+        "item": "https://www.openeuler.openatom.cn/zh/experts"
+      }
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "不可变模式转换工具（x2NestOS） | NestOS | openEuler | openEuler社区",
+    "description": "x2NestOS 提供将 NestOS For Virt 或其他通用形态 OS 转换为不可变模式的能力。",
+    "url": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/feature/x2nestos/",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "NestOS",
+          "item": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "不可变模式转换工具（x2NestOS）",
+          "item": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/feature/x2nestos/"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "x2NestOS",
+    "description": "x2NestOS 提供将 NestOS For Virt 或其他通用形态 OS 转换为不可变模式的能力，支持系统形态转换和不可变部署。",
+    "url": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/feature/x2nestos/",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "NestOS",
+    "featureList": [
+      "将 NestOS For Virt 转换为不可变模式",
+      "支持其他通用形态 OS 转换",
+      "提供不可变模式转换能力"
+    ],
+    "provider": {
+      "@type": "Organization",
+      "name": "openEuler社区"
+    }
+  }
+]

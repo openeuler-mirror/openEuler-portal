@@ -1,0 +1,120 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/bada",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/bada",
+    "name": "武汉吧哒科技股份有限公司 | openEuler社区",
+    "description": "基于openEuler操作系统，共同打造信服易备鲲鹏灾备一体机，满足数据保护的管理、灾备行业和信息系统灾难恢复的需求。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "武汉吧哒科技股份有限公司",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/bada"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "武汉吧哒科技股份有限公司基于openEuler的数据安全与灾备解决方案",
+    "description": "基于openEuler操作系统，共同打造信服易备鲲鹏灾备一体机，满足数据保护的管理、灾备行业和信息系统灾难恢复的需求。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/bada",
+    "inLanguage": "zh-CN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "数据安全"
+      },
+      {
+        "@type": "Thing",
+        "name": "容灾备份"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler操作系统"
+      },
+      {
+        "@type": "Thing",
+        "name": "鲲鹏处理器"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "武汉吧哒科技股份有限公司",
+        "alternateName": "吧哒科技",
+        "foundingDate": "1999-01",
+        "description": "立足国内大数据安全保障产品和服务提供商的战略定位，专注数据安全与容灾备份，为云上云下提供全面数据安全保障。"
+      }
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/bada"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "信服易备数据安全管理软件",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "openEuler",
+    "description": "采用软硬件一体化配置与服务方案，实现数据库、文件、应用、虚拟机等数据的备份和恢复，对核心业务数据以实时同步方式进行持续保护，快速响应业务需求。",
+    "version": "V4.0",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "CNY"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "武汉吧哒科技股份有限公司",
+      "alternateName": "吧哒科技",
+      "foundingDate": "1999-01"
+    },
+    "featureList": [
+      "数据库备份与恢复",
+      "文件备份与恢复",
+      "应用备份与恢复",
+      "虚拟机备份与恢复",
+      "实时数据同步",
+      "灾难恢复",
+      "KAE加解密加速",
+      "SSL/TLS握手优化"
+    ],
+    "award": "湖北省2022年工业软件优秀产品",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/bada"
+  }
+]

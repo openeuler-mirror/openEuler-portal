@@ -1,0 +1,112 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html",
+    "name": "中国邮政集团资源池项目 | openEuler社区",
+    "description": "中邮信息科技（北京）有限公司在核心业务系统安全平稳运行和大数据平台、AI能力中心及AIOps智能运维系统等业务模块平滑迁移方面取得重大进展。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "showcase",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "中国邮政集团资源池项目",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "中国邮政集团资源池项目",
+      "description": "中邮信息科技（北京）有限公司与麒麟软件厂商基于openEuler开源项目，搭建国产化云原生平台，实现约4000多套操作系统的切换上线，支撑邮务、电商等多个业务板块。"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "中国邮政集团资源池项目",
+    "description": "中邮信息科技（北京）有限公司在核心业务系统安全平稳运行和大数据平台、AI能力中心及AIOps智能运维系统等业务模块平滑迁移方面取得重大进展。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "openEuler"
+      },
+      {
+        "@type": "Thing",
+        "name": "银河麒麟高级服务器操作系统V10"
+      },
+      {
+        "@type": "Thing",
+        "name": "云原生平台"
+      },
+      {
+        "@type": "Thing",
+        "name": "国产化操作系统"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "中邮信息科技（北京）有限公司"
+      },
+      {
+        "@type": "Organization",
+        "name": "麒麟软件"
+      }
+    ],
+    "articleBody": "自2023年起中邮信息科技（北京）有限公司与麒麟软件厂商开展面向寄递行业的服务器操作系统关键技术研究，搭建了基于"国产服务器+国产操作系统+国产数据库"架构的自主创新技术栈，并推动如智能客服、大数据平台、AI能力中心、CRM系统及AIOps智能运维等关键应用系统的自主适配改造，并于2024年9月实现约4000多套操作系统的切换上线，全面支撑到邮务、电商等多个业务板块及智能化运维等业务系统。基于银河麒麟高级服务器操作系统V10构建的云原生平台，针对中国邮政邮务、电商等板块业务对系统的安全性需求，银河麒麟操作系统通过自主软硬件、密码技术的内核与应用一体化的内生本质安全体系，自研内核安全执行控制机制KYSEC、生物识别管理框架和安全管理工具，支持多策略融合的强制访问控制机制，并支持国密算法SMx和可信计算TCM/TPCM、TPM2.0等安全策略，为人工智能计算场景提供稳定、安全的运行环境。中邮信息科技（北京）有限公司在核心业务系统安全平稳运行和大数据平台、AI能力中心及AIOps智能运维系统等业务模块平滑迁移方面取得重大进展，不仅彰显了该公司在技术创新与自身业务融合方面的深厚实力，也充分验证了openEuler开源项目在实际行业应用中的成功运作成果。"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CaseStudy",
+    "name": "中国邮政集团资源池项目",
+    "description": "中邮信息科技（北京）有限公司在核心业务系统安全平稳运行和大数据平台、AI能力中心及AIOps智能运维系统等业务模块平滑迁移方面取得重大进展。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "about": {
+      "@type": "Organization",
+      "name": "中邮信息科技（北京）有限公司",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "中国邮政集团"
+      }
+    }
+  }
+]

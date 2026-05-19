@@ -1,0 +1,53 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "浙江省委党校办公与学习系统",
+  "description": "构建政务内网下的办公学习一体化云",
+  "author": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.openeuler.openatom.cn/img/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/dangxiao/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "openEuler",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux"
+  },
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "浙江省委党校"
+    },
+    {
+      "@type": "Thing",
+      "name": "办公学习系统"
+    },
+    {
+      "@type": "Thing",
+      "name": "政务内网"
+    },
+    {
+      "@type": "Thing",
+      "name": "一体化云"
+    }
+  ],
+  "articleSection": [
+    "政务系统",
+    "教育培训"
+  ],
+  "inLanguage": "zh-CN"
+}

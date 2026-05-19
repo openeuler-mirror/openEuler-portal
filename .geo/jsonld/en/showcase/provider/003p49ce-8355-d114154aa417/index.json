@@ -1,0 +1,92 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "China Mobile (Zhejiang) | openEuler",
+    "description": "Smooth OS Porting and More Stable Core Systems",
+    "url": "https://www.openeuler.openatom.cn/en/showcase/provider/003p49ce-8355-d114154aa417",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "China Mobile (Zhejiang)",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/provider/003p49ce-8355-d114154aa417"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "China Mobile (Zhejiang): Smooth OS Porting and More Stable Core Systems",
+    "description": "China Mobile (Zhejiang) completed a core system adaptation test in August 2021, smoothly migrated the OS, and pioneered the use of Galaxy Kylin Advanced Server Operating System V10 in core systems in the telecom industry.",
+    "url": "https://www.openeuler.openatom.cn/en/showcase/provider/003p49ce-8355-d114154aa417",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "OS Migration",
+        "description": "Migration of core systems to Galaxy Kylin Advanced Server Operating System V10"
+      },
+      {
+        "@type": "Thing",
+        "name": "Galaxy Kylin Advanced Server Operating System V10",
+        "description": "Server operating system used in core telecom systems"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "China Mobile (Zhejiang)",
+        "description": "A leading provincial mobile company in China"
+      },
+      {
+        "@type": "Organization",
+        "name": "Galaxy Kylin",
+        "url": "https://www.openeuler.openatom.cn/en/showcase/provider/003p49ce-8355-d114154aa417"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "China Mobile (Zhejiang) Core System OS Migration Solution",
+    "description": "Technical case study of China Mobile (Zhejiang) migrating core telecom systems to Galaxy Kylin Advanced Server Operating System V10 using x86 and Huawei Kunpeng servers, Mesos and Kubernetes container cloud.",
+    "url": "https://www.openeuler.openatom.cn/en/showcase/provider/003p49ce-8355-d114154aa417",
+    "inLanguage": "en",
+    "datePublished": "2021-08-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "dependencies": "x86 servers, Huawei Kunpeng servers, Galaxy Kylin Advanced Server Operating System V10, Mesos, Kubernetes",
+    "proficiencyLevel": "Expert",
+    "articleBody": "As a leading provincial mobile company in China, China Mobile (Zhejiang) needs to be able to offer many complex services, so it has some seemingly unusual and stringent requirements for the support system. Migrating the service system without affecting user experience is a major concern. In August 2021, China Mobile (Zhejiang) completed a core system adaptation test, smoothly migrated the OS, and pioneered the use of Galaxy Kylin Advanced Server Operating System V10 in core systems in the telecom industry. The solution utilized x86 and Huawei Kunpeng servers, Galaxy Kylin Advanced Server Operating System V10, Mesos and Kubernetes clusters for container cloud, with a microservice-based, container-based, dual-plane running, and unified service release IT architecture. Benefits included improved operational stability, successful migration of core systems, and a foundation for large-scale promotion of Galaxy Kylin Advanced Server Operating System V10."
+  }
+]

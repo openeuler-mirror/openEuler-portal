@@ -1,0 +1,81 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "secGear",
+    "url": "https://www.openeuler.openatom.cn/en/other/projects/secgear",
+    "description": "secGear is a confidential computing development suite used to develop secure applications in the computing industry. It aims to provide a unified development framework for different hardware devices, shielding the differences between underlying confidential computing architectures and APIs. Currently, secGear supports Intel® SGX hardware and Arm TrustZone (iTrustee supported).",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "openEuler",
+    "softwareVersion": "latest",
+    "featureList": [
+      "Unified development framework for confidential computing",
+      "Intel SGX hardware support",
+      "Arm TrustZone (iTrustee) support",
+      "Enclave life cycle management APIs",
+      "POSIX APIs support on secure side",
+      "OpenSSL APIs support on secure side",
+      "Code generation tools",
+      "PKCS11 security protocol components",
+      "PAKE security protocol components",
+      "Three-layer architecture: service layer, middleware layer, base layer"
+    ],
+    "isPartOf": {
+      "@type": "SoftwareApplication",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "downloadUrl": "https://www.openeuler.openatom.cn/en/other/projects/secgear",
+    "softwareHelp": {
+      "@type": "CreativeWork",
+      "url": "https://www.openeuler.openatom.cn/en/other/projects/secgear",
+      "name": "secGear Documentation"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "secGear - Confidential Computing Dev Kit | openEuler",
+    "url": "https://www.openeuler.openatom.cn/en/other/projects/secgear",
+    "description": "secGear offers a unified framework for simplified development of secure apps across various architectures.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://www.openeuler.openatom.cn/en/other/projects/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "secGear",
+          "item": "https://www.openeuler.openatom.cn/en/other/projects/secgear"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "secGear",
+      "description": "Confidential computing framework for developing secure applications"
+    }
+  }
+]

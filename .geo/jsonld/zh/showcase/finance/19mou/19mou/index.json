@@ -1,0 +1,72 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "某银行高可靠 OS 创新探索 | openEuler社区",
+    "description": "可以实现端到端的协同，从而在硬盘故障发生时，快速响应，保障核心业务的连续运行。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/19mou/19mou.html",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "金融",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "某银行高可靠 OS 创新探索",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/19mou/19mou.html"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "openEuler",
+      "applicationCategory": "OperatingSystem",
+      "operatingSystem": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/zh/",
+      "description": "openEuler 是面向数字基础设施的开源操作系统，支持金融场景下高可靠的慢 IO 检测技术，实现端到端协同，保障核心业务连续运行。"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "某银行高可靠 OS 创新探索",
+    "description": "可以实现端到端的协同，从而在硬盘故障发生时，快速响应，保障核心业务的连续运行。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/19mou/19mou.html",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "articleSection": "金融行业案例",
+    "keywords": "openEuler, 银行, 高可靠, 操作系统, 慢IO检测, 硬盘故障, 数据库高可用, sysSentry, ebpf, 金融科技",
+    "articleBody": "数据库，作为银行核心系统的心脏，其稳定性直接关系到金融服务的连续性和客户的信任度。硬盘作为数据库运行的物理基础，其健康状况对数据库的可用性有着决定性的影响。因此，提升操作系统对硬盘故障的慢 IO 感知和检测能力，是确保数据库高可用性的关键。通过基于 openEuler 的开放协作，共同探索和构建高效的慢 IO 检测技术，可以实现端到端的协同，从而在硬盘故障发生时，快速响应，保障核心业务的连续运行。解决方案包括：Kernel 内核支持无锁磁盘 IO 跟踪能力以及基于 ebpf 的 IO 信息采集能力；sysSentry 提供轻量级数据采集、慢 IO 诊断以及秒级事件通知服务；数据库等服务通过接收操作系统上报的慢 IO 事件，快速感知故障并进行业务恢复。客户价值：高可靠，最快故障检测时间 6s，慢 IO 检测准确率大于80%；易运维，提供内核 IO 全栈的信息采集以及异常检测能力。"
+  }
+]

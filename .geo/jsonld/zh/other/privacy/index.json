@@ -1,0 +1,48 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "openEuler 隐私声明",
+    "description": "了解openEuler的隐私声明，保护您的个人信息和数据。",
+    "url": "https://www.openeuler.openatom.cn/zh/other/privacy",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "其他信息",
+          "item": "https://www.openeuler.openatom.cn/zh/other/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "隐私声明",
+          "item": "https://www.openeuler.openatom.cn/zh/other/privacy"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "隐私政策",
+      "description": "openEuler社区个人信息收集、处理和保护的相关声明"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "开放原子开源基金会",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  }
+]

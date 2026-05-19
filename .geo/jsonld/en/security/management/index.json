@@ -1,0 +1,95 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/en/security/management",
+      "url": "https://www.openeuler.openatom.cn/en/security/management",
+      "name": "Bug Management | openEuler",
+      "description": "Get to know how openEuler handles bugs promptly for quick resolution.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.openeuler.openatom.cn/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Security",
+            "item": "https://www.openeuler.openatom.cn/en/security/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Bug Management",
+            "item": "https://www.openeuler.openatom.cn/en/security/management"
+          }
+        ]
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Bug Management",
+        "description": "The process by which the openEuler community responds to, analyzes, and fixes reported bugs across its LTS releases and service packs."
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "url": "https://www.openeuler.openatom.cn/en/security/management",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is responsible for bug management in openEuler?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Release and QA SIGs are jointly responsible for the quality of openEuler releases. The openEuler QA SIG controls the software quality of the community by formulating bug management policies and working with test teams to carry out tests on openEuler releases. The Release SIG manages releases by coordinating the openEuler community, developers, and test teams to ensure high-quality delivery of milestones of the development version and iterations of the maintenance versions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which openEuler releases does the bug response process cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The bug response process is designed for LTS versions of the openEuler community and their service packs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the openEuler community handle reported bugs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After an issue is submitted to the openEuler community, the maintainers or committers of the corresponding SIG are responsible for analyzing and handling the issue. The QA and Release SIGs periodically review version bugs in the community and promote the community to handle issues as soon as possible based on priorities, following an end-to-end bug fixing process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can bugs be reported to the openEuler community?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The openEuler community relies on Gitee issues for bug management. The openEuler community provides a dedicated issue feedback template that interconnects with the community awareness tool. Developers are advised to use this template to submit issues to the src-openEuler software package repository."
+          }
+        }
+      ]
+    }
+  ]
+]

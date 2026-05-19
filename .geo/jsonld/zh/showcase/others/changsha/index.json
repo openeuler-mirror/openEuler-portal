@@ -1,0 +1,53 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "长沙市民政局",
+  "description": "长沙智慧民政国产操作系统迁移，树立政务系统建设优秀示范",
+  "author": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.openeuler.openatom.cn/img/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/changsha/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "openEuler",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux"
+  },
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "长沙市民政局"
+    },
+    {
+      "@type": "Thing",
+      "name": "智慧民政"
+    },
+    {
+      "@type": "Thing",
+      "name": "国产操作系统迁移"
+    },
+    {
+      "@type": "Thing",
+      "name": "政务系统"
+    }
+  ],
+  "articleSection": [
+    "政务系统",
+    "操作系统迁移"
+  ],
+  "inLanguage": "zh-CN"
+}

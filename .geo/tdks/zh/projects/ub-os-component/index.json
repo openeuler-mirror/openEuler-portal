@@ -1,0 +1,1 @@
+{"title":"UB OS Component 操作系统灵衢组件——异构硬件统一抽象与高性能通信 | openEuler社区","description":"UB OS Component（操作系统灵衢组件）在OS原有内存管理、通信、设备管理和虚拟化框架上扩展支持灵衢，实现异构硬件统一抽象解耦、统一内存地址空间，支持资源全局调度、计算资源动态组合扩展及设备间高性能通信，充分释放灵衢硬件能力。欢迎访问 sig-UnifiedBus 了解更多详情。","keywords":"openEuler,UB OS Component,操作系统灵衢组件,异构硬件,统一抽象,高性能通信,内存管理,虚拟化,sig-UnifiedBus,开源操作系统"}

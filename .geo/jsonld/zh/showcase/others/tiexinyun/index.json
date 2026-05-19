@@ -1,0 +1,99 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun",
+    "name": "铁信云 | openEuler社区",
+    "description": "铁信云自主创新平台建设自主创新云平台助力铁信业务系统稳定运行",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "铁信云",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "铁信云自主创新平台建设",
+    "description": "铁信云自主创新平台建设自主创新云平台助力铁信业务系统稳定运行",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "铁信云",
+        "description": "铁路行业业务系统的重要基础设施，承接了大部分的业务和存储能力"
+      },
+      {
+        "@type": "Thing",
+        "name": "银河麒麟高级服务器操作系统V10",
+        "description": "作为铁信云和分布式存储的重要支撑部分，为行业应用、大数据、云计算和分布式存储系统提供支撑"
+      }
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "铁信云自主创新平台解决方案",
+    "description": "铁信云自主创新云平台解决方案，包含基础硬件、网络平面、云平台、操作系统、数据库、中间件及业务系统的完整技术栈",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun",
+    "inLanguage": "zh",
+    "proficiencyLevel": "Expert",
+    "articleSection": "用户案例",
+    "keywords": "铁信云, openEuler, 银河麒麟, 铁路行业, 自主创新, 云平台, 分布式存储",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun"
+    }
+  }
+]

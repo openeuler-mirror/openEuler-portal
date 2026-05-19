@@ -1,0 +1,65 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "System Management | FAQs | openEuler",
+    "description": "Get answers to frequently asked questions about system management on openEuler.",
+    "url": "https://www.openeuler.openatom.cn/en/faq/system-management",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When the NFS service is enabled on openEuler 22.03 SP1, why does the server response speed drop sharply from more than a gigabit to around 2 MB/s after less than a day of write operations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The performance drops sharply when the NFS server's cache uses more than 50% memory. This is mainly due to issues with memory allocation and reclamation mechanisms. The system reclaims memory in the background rather than during the memory allocation process. This is slower and will increase the waiting time (e.g., 500 ms latency) when the system cannot allocate enough memory in time. This issue is particularly pronounced under heavy loads since the NFS server requires substantial memory to process client requests. As the service runtime increases, the reduction in available memory leads to a dramatic performance drop, especially when there are intensive write operations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do I do if a file fails to be created on openEuler due to an inode error of the Ext4 file system?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Set the rec_len field of the dx_node block as follows: 1) Use ext4_rec_len_from_disk() to convert rec_len to 65536 and then perform a comparison. This ensures that the rec_len field is correctly set when a new dx_node block is added. 2) Calculate and set a correct checksum for the node. This correction will prevent the inode error caused by incorrect checksums and thus allow the system to create and manage a large number of files correctly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to reduce the excessive memory usage of service processes on openEuler due to the use of glibc tcache?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Disable the tcache feature by setting the environment variables before starting the program. Specifically, add GLIBC_TUNABLES=glibc.malloc.tcache_count=0 to bash_profile to disable tcache. After the process starts, verify the process environment variables in /proc/pid/environ to ensure that the variable has been set correctly."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "openEuler",
+        "item": "https://www.openeuler.openatom.cn/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQs",
+        "item": "https://www.openeuler.openatom.cn/en/faq/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "System Management",
+        "item": "https://www.openeuler.openatom.cn/en/faq/system-management"
+      }
+    ]
+  }
+]

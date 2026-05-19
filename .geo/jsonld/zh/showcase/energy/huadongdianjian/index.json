@@ -1,0 +1,148 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "中国电建集团华东勘测设计研究院有限公司 | openEuler社区",
+    "description": "面向新能源领域的国产操作系统O-PowerOS",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/huadongdianjian",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "能源",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "中国电建集团华东勘测设计研究院有限公司",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/huadongdianjian"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "O-PowerOS",
+      "description": "面向新能源领域的国产操作系统，基于openEuler 2203 LTS长稳版本定制研发，支持服务器与嵌入式形态，原生支持鲲鹏、海光、兆芯、飞腾、昇腾等国产芯片（兼容Intel/AMD/ARM系列）",
+      "applicationCategory": "OperatingSystem",
+      "operatingSystem": "Linux",
+      "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/huadongdianjian",
+      "creator": {
+        "@type": "Organization",
+        "name": "中国电建集团华东勘测设计研究院有限公司",
+        "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/huadongdianjian"
+      },
+      "isBasedOn": {
+        "@type": "SoftwareApplication",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "中国电建集团华东勘测设计研究院有限公司",
+    "alternateName": "华东院",
+    "description": "1954年建院，是中国电力建设集团的特级企业。名列中国勘察设计综合实力百强单位（排名第7位）、中国工程设计企业60强（排名第8位）、中国承包商80强（排名第29位）、中国监理行业十大品牌企业。",
+    "foundingDate": "1954",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/huadongdianjian",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "中国电力建设集团"
+    },
+    "knowsAbout": [
+      "新能源",
+      "电力建设",
+      "勘察设计",
+      "国产操作系统",
+      "信息化系统国产化"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "中国电建集团华东勘测设计研究院有限公司基于openEuler构建面向新能源领域的国产操作系统O-PowerOS",
+    "description": "面向新能源领域的国产操作系统O-PowerOS",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/huadongdianjian",
+    "inLanguage": "zh",
+    "image": "https://www.openeuler.openatom.cn/zh/showcase/energy/huadongdianjian/huadongdianjian.png",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "O-PowerOS",
+        "description": "基于openEuler 2203 LTS长稳版本衍生开发，面向新能源领域的国产操作系统"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      {
+        "@type": "Thing",
+        "name": "新能源数字基础设施"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "O-PowerOS",
+        "applicationCategory": "OperatingSystem",
+        "description": "面向新能源领域的国产操作系统，支持高可靠、高安全、高性能运行"
+      }
+    ],
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "O-PowerOS解决方案特点",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "高可用性支撑",
+          "description": "基于高可靠、智能运维以及多维度更新升级等特色组件，支撑新能源领域系统与业务的高可用性"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "全栈密码应用",
+          "description": "在通用安全机制与可信度量的基础上，软件全栈内嵌密码应用能力，替代外挂式密码应用的现状"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "分布式安全PLC基础能力",
+          "description": "改造优化分布式软总线，通过其异构组网、跨协议通信等特性构建下一代分布式安全PLC基础能力"
+        }
+      ]
+    }
+  }
+]

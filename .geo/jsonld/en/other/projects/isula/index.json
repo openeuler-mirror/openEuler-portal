@@ -1,0 +1,88 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "iSula",
+    "alternateName": "iSulad",
+    "url": "https://www.openeuler.openatom.cn/en/other/projects/isula",
+    "description": "iSula is a lightweight container engine built for enhanced efficiency and security on openEuler. iSulad provides a unified architecture for different CT and IT requirements, featuring a lightweight, fast, and flexible design. It supports multiple languages (C/C++ with Rust planned), CRI northbound interface connecting to Kubernetes, OCI runtime and image specifications, multiple container forms (system and VM), and a plug-in architecture for custom extensions.",
+    "applicationCategory": "DeveloperApplication",
+    "applicationSubCategory": "Container Engine",
+    "operatingSystem": "Linux, openEuler",
+    "featureList": [
+      "Multiple language support: C/C++ and Rust (planned)",
+      "Northbound CRI interface connecting to Kubernetes",
+      "Southbound OCI runtime and image specification support",
+      "Multiple container forms: system and VM",
+      "Plug-in architecture for custom extensions",
+      "Lightweight with minimal background noise",
+      "Hardware-agnostic: not restricted by hardware specifications and architectures"
+    ],
+    "isPartOf": {
+      "@type": "SoftwareApplication",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "iSulad",
+        "description": "iSulad provides a unified architecture for different CT and IT requirements. It features a lightweight, fast, and flexible design supporting CRI, OCI runtime, and image specifications.",
+        "applicationCategory": "DeveloperApplication"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "isula-build",
+        "description": "isula-build runs in the build environment and provides template container images for the runtime system. It reads Dockerfile as input to quickly build container images compliant with Docker and OCI image specifications, then distributes images to iSulad/Docker, local TAR packages, or remote container image repositories.",
+        "applicationCategory": "DeveloperApplication"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "isula-transform",
+        "description": "isula-transform was released together with iSulad 2.0 to convert containers managed by the Docker container engine and migrate them to the iSulad engine, enabling effortless lifecycle management of containers.",
+        "applicationCategory": "DeveloperApplication"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "iSula - Lightweight Container Engine | openEuler",
+    "url": "https://www.openeuler.openatom.cn/en/other/projects/isula",
+    "description": "Experience the power of iSula, a lightweight container engine built for enhanced efficiency and security on openEuler.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://www.openeuler.openatom.cn/en/other/projects/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "iSula",
+          "item": "https://www.openeuler.openatom.cn/en/other/projects/isula"
+        }
+      ]
+    }
+  }
+]

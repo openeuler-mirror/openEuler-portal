@@ -1,0 +1,115 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "openEuler 虚拟化安装指南",
+      "description": "深入了解如何在openEuler中进行虚拟化安装，提升系统效率。本文介绍在Windows下使用Oracle VirtualBox安装openEuler虚拟机的完整步骤。",
+      "url": "https://www.openeuler.openatom.cn/zh/wiki/install/virtualization",
+      "inLanguage": "zh",
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "about": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "openEuler",
+          "operatingSystem": "Linux",
+          "url": "https://www.openeuler.openatom.cn/zh/download"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Oracle VM VirtualBox",
+          "version": "6.1.4",
+          "operatingSystem": "Windows 10 64-bit",
+          "applicationCategory": "VirtualizationSoftware",
+          "url": "https://www.virtualbox.org"
+        }
+      ],
+      "dependencies": "Windows 10 64位, Oracle VM VirtualBox 6.1.4"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Windows 下使用 VirtualBox 安装 openEuler",
+      "description": "本文介绍如何在Windows系统下使用Oracle VirtualBox安装openEuler虚拟机，包括环境准备、创建虚拟机和安装操作系统三个主要步骤。",
+      "url": "https://www.openeuler.openatom.cn/zh/wiki/install/virtualization",
+      "inLanguage": "zh",
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Oracle VM VirtualBox 6.1.4"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "openEuler-20.03-LTS-x86_64-dvd.iso"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Windows 10 64位操作系统"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "openEuler 20.03 LTS 镜像文件"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "下载安装 VirtualBox",
+          "text": "在VirtualBox官网（https://www.virtualbox.org/wiki/Downloads）下载安装程序。安装时可自定义安装路径，然后一路next完成安装。安装结束后使用Ctrl+G打开全局设置，修改默认虚拟电脑位置，方便之后查找。",
+          "url": "https://www.openeuler.openatom.cn/zh/wiki/install/virtualization#下载安装-virtual-box"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "创建虚拟机",
+          "text": "选择【控制】-->【新建】，填写虚拟机配置信息：名称设为openEuler，类型选Linux，版本选Other Linux(64-bit)。设置虚拟机内存为4G，创建虚拟硬盘，硬盘文件类型选VDI，选择动态分配，硬盘大小设为64G。",
+          "url": "https://www.openeuler.openatom.cn/zh/wiki/install/virtualization#创建虚拟机"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "安装 openEuler",
+          "text": "启动创建好的虚拟机，加载下载好的openEuler-20.03-LTS-x86_64-dvd.iso镜像文件，选择启动进入安装界面，选择【Install openEuler 20.03-LTS】回车进行安装，选择安装目标磁盘，点击Begin Installation开始安装，并设置root用户密码。",
+          "url": "https://www.openeuler.openatom.cn/zh/wiki/install/virtualization#安装-openeuler"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Wiki",
+          "item": "https://www.openeuler.openatom.cn/zh/wiki/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "安装指南",
+          "item": "https://www.openeuler.openatom.cn/zh/wiki/install/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "虚拟化安装指南",
+          "item": "https://www.openeuler.openatom.cn/zh/wiki/install/virtualization"
+        }
+      ]
+    }
+  ]
+]

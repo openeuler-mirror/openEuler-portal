@@ -1,0 +1,69 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/community/program",
+    "url": "https://www.openeuler.openatom.cn/en/community/program",
+    "name": "Call for X Program | openEuler",
+    "description": "Contribute to openEuler's Call for X Program. Share ideas, collaborate, and innovate digital infrastructure.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Community",
+          "item": "https://www.openeuler.openatom.cn/en/community/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Call for X Program",
+          "item": "https://www.openeuler.openatom.cn/en/community/program"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Organization",
+      "@id": "https://www.openeuler.openatom.cn/#organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/",
+      "description": "openEuler is an open source OS tailor-made for digital infrastructure and harnesses collaborative efforts to pioneer innovation and integrate advanced technologies."
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "openEuler Call for X Program Categories",
+    "description": "openEuler Call for X is a program that encourages community members and open source enthusiasts to contribute, share experiences, and exchange resources.",
+    "url": "https://www.openeuler.openatom.cn/en/community/program",
+    "numberOfItems": 2,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Call for openEuler Valuable Professional",
+        "url": "https://www.openeuler.openatom.cn/en/community/program"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Call for Tutorials",
+        "url": "https://www.openeuler.openatom.cn/en/community/program"
+      }
+    ]
+  }
+]

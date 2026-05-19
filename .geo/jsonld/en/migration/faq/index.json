@@ -1,0 +1,89 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "url": "https://www.openeuler.openatom.cn/en/migration/faq",
+    "name": "Migration FAQs | openEuler",
+    "description": "Get answers to common questions about migrating to openEuler, including upgrade tutorials, VM support, hardware compatibility tests, and more.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where can I find tutorials or documents for in-place upgrade?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer learning materials in the form of documents. Refer to the x2openEuler User Guide for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does x2openEuler support VM upgrade?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, x2openEuler supports upgrades for both VMs and physical machines."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which OSs are supported by x2openEuler in-place upgrades?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For details, see the x2openEuler User Guide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I handle exceptions that occur during the upgrade?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Exceptions can occur during in-place upgrades. For specific troubleshooting operations, refer to FAQs in the x2openEuler User Guide. If there are no details related to your system, you can submit an issue through QuickIssue to ask for support and track the resolution."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I roll back the migration if an exception causes an upgrade operation to fail?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can roll back the migration using x2openEuler. For details, see the x2openEuler User Guide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does openEuler do compatibility tests with hardware vendors? Do compatibility tests incur additional charges?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "These tests are free for community members. Details can be found in the Overall Introduction to the openEuler Hardware Compatibility Test, and you can also join the compatibility SIG or the openEuler innovation center. For further details, see the Compatibility List."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.openatom.cn/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Migration Center",
+        "item": "https://www.openeuler.openatom.cn/en/migration/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "FAQs",
+        "item": "https://www.openeuler.openatom.cn/en/migration/faq"
+      }
+    ]
+  }
+]

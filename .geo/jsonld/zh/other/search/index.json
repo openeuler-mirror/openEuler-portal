@@ -1,0 +1,46 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "openEuler 网站搜索",
+    "description": "使用openEuler网站搜索功能，快速找到您需要的信息和资源。",
+    "url": "https://www.openeuler.openatom.cn/zh/other/search",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/zh/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.openeuler.openatom.cn/zh/other/search?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "其他信息",
+          "item": "https://www.openeuler.openatom.cn/zh/other/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "网站搜索",
+          "item": "https://www.openeuler.openatom.cn/zh/other/search"
+        }
+      ]
+    }
+  }
+]

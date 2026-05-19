@@ -1,0 +1,49 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "openEuler CVE 漏洞详情 | 安全信息 | openEuler社区",
+      "description": "获取openEuler CVE漏洞的详细信息，了解漏洞影响及修复方案。",
+      "url": "https://www.openeuler.openatom.cn/zh/security/cve/detail",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "安全信息",
+            "item": "https://www.openeuler.openatom.cn/zh/security/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "CVE 漏洞详情",
+            "item": "https://www.openeuler.openatom.cn/zh/security/cve/detail"
+          }
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.openeuler.openatom.cn/logo.png"
+        }
+      }
+    }
+  ]
+]

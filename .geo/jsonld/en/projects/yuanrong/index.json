@@ -1,0 +1,91 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "openYuanrong",
+      "alternateName": "Yuan Rong Serverless Distributed Engine",
+      "description": "openYuanrong is a Serverless distributed compute engine that unifies diverse applications, from AI and big data to microservices, on a single, streamlined architecture. It provides multi-language function interfaces that simplify the development of complex distributed applications to feel just like writing a local program.",
+      "url": "https://www.openeuler.openatom.cn/en/projects/yuanrong",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "programmingLanguage": [
+        "Python",
+        "Java",
+        "C++"
+      ],
+      "featureList": [
+        "Multi-language Function Runtime supporting Python, Java, and C++",
+        "Dynamic scheduling for maximum cluster resource utilization",
+        "Multi-level distributed caching system with object and stream semantics",
+        "Serverless distributed compute for AI, big data, and microservices",
+        "Single-machine coding experience with distributed execution"
+      ],
+      "softwareHelp": {
+        "@type": "CreativeWork",
+        "url": "https://www.openeuler.openatom.cn/en/projects/yuanrong",
+        "name": "openYuanrong Documentation"
+      },
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "openYuanrong: Serverless Distributed Engine | openEuler",
+      "description": "openYuanrong is a Serverless distributed compute engine for AI, big data, and microservices. Write local code, execute at scale with dynamic scheduling.",
+      "url": "https://www.openeuler.openatom.cn/en/projects/yuanrong",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.openeuler.openatom.cn/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://www.openeuler.openatom.cn/en/projects/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "openYuanrong",
+            "item": "https://www.openeuler.openatom.cn/en/projects/yuanrong"
+          }
+        ]
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "openYuanrong",
+        "url": "https://www.openeuler.openatom.cn/en/projects/yuanrong"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/"
+      }
+    }
+  ]
+]

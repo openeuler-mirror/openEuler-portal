@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "openEuler委员会会议运作制度规定什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "本制度规定了openEuler委员会例行会议和临时会议的参会人员构成、会议纪要撰写与审核流程、材料归档规则等操作规范，由openEuler委员会决策批准后生效，由项目群办公室负责管理。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "openEuler委员会会议记录会公开吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "会议材料（包括议题材料、会议纪要和录像）默认对openEuler委员会全体委员公开（只读权限），归档于委员会共享空间，保存4年。特殊情况不便公开时需经执行总监确认并记录。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "谁可以出席openEuler委员会会议？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "参会人员分4类：全程与会人（委员会委员、执行总监、执行秘书）；全程列席人（技术/品牌/用户委员会主席）；议题相关人（仅在相关议题时参会）；经执行总监批准的会务支撑人员。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "openEuler委员会会议纪要如何处理？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "会议结束后2日内，执行秘书向各议题纪要人收集纪要，经执行总监审核后以邮件发送。全程与会人和列席人收到全部纪要；议题相关人仅收到其参与议题的纪要。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "openEuler委员会会议材料保存多久？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "所有会议材料归档至openEuler委员会共享空间，保存4年，即两届openEuler委员会任期。"
+      }
+    }
+  ]
+}

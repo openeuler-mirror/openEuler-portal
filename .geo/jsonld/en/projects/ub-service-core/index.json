@@ -1,0 +1,120 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "UB Service Core",
+      "alternateName": "UBS",
+      "url": "https://www.openeuler.openatom.cn/en/projects/ub-service-core",
+      "description": "UB Service Core delivers five open-source cluster-level services for UnifiedBus SuperPoDs, boosting app performance 30-50% with peer-to-peer architecture.",
+      "applicationCategory": "SystemApplication",
+      "operatingSystem": "Linux",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "UB Service Core Engine (UBS Engine): Resource pooling and dynamic scheduling for memory and DPU resources, distributed automatic primary node selection, N-1 HA, core control-plane reference implementation for the UB computing system.",
+        "UB Service Core Virt (UBS Virt): Virtualization pooling, live migration policy decision-making, quick disaster recovery, and efficient VM/container communication.",
+        "UB Service Core Memory (UBS Mem): Unified memory semantics programming for memory sharing and pooling of UB-based SuperPoDs.",
+        "UB Service Core Communication (UBS Comm): High-performance, high-reliability, ecosystem-compatible communication protocols (user-space socket/Verbs over UB) on UB-based SuperPoDs.",
+        "UB Service Core IO (UBS IO): High-level I/O services for application-affinity global data read/write caching systems (SSU passthrough and KV cache) based on SuperPoDs."
+      ],
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "license": "https://opensource.org/licenses",
+      "softwareVersion": "Open Source",
+      "hasPart": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "UB Service Core Engine",
+          "alternateName": "UBS Engine",
+          "description": "Provides resource pooling and dynamic scheduling for memory and DPU resources, supports distributed automatic primary node selection, and implements N-1 HA. Serves as the core control-plane reference implementation for the UB computing system.",
+          "applicationCategory": "SystemApplication"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "UB Service Core Virt",
+          "alternateName": "UBS Virt",
+          "description": "Supports virtualization pooling, live migration policy decision-making, quick disaster recovery, and efficient VM/container communication, improving virtualization performance.",
+          "applicationCategory": "SystemApplication",
+          "datePublished": "2026-03-30"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "UB Service Core Memory",
+          "alternateName": "UBS Mem",
+          "description": "Supports unified memory semantics programming to implement memory sharing and pooling of UB-based SuperPoDs.",
+          "applicationCategory": "SystemApplication",
+          "datePublished": "2026-03-30"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "UB Service Core Communication",
+          "alternateName": "UBS Comm",
+          "description": "Provides high-performance, high-reliability, and ecosystem-compatible (user-space socket/Verbs over UB) communication protocols built on UB-based SuperPoDs.",
+          "applicationCategory": "SystemApplication"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "UB Service Core IO",
+          "alternateName": "UBS IO",
+          "description": "Provides high-level I/O services for application-affinity global data read/write caching systems (such as SSU passthrough and KV cache) based on SuperPoDs.",
+          "applicationCategory": "SystemApplication",
+          "datePublished": "2026-03-30"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "UB Service Core: Cluster Services for SuperPoDs | openEuler",
+      "url": "https://www.openeuler.openatom.cn/en/projects/ub-service-core",
+      "description": "UB Service Core delivers five open-source cluster-level services for UnifiedBus SuperPoDs, boosting app performance 30-50% with peer-to-peer architecture.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "UB Service Core",
+        "url": "https://www.openeuler.openatom.cn/en/projects/ub-service-core"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "openEuler",
+            "item": "https://www.openeuler.openatom.cn/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://www.openeuler.openatom.cn/en/projects/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "UB Service Core",
+            "item": "https://www.openeuler.openatom.cn/en/projects/ub-service-core"
+          }
+        ]
+      }
+    }
+  ]
+]

@@ -1,0 +1,100 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "上海霄云信息科技有限公司基于openEuler操作系统的碧海分布式存储解决方案",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/12/12.html",
+    "description": "基于openEuler操作系统的碧海分布式存储解决方案",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "案例展示",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "上海霄云信息科技有限公司基于openEuler操作系统的碧海分布式存储解决方案",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/12/12.html"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "上海霄云信息科技有限公司基于openEuler操作系统的碧海分布式存储解决方案",
+    "description": "基于openEuler操作系统的碧海分布式存储解决方案",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/12/12.html",
+    "inLanguage": "zh",
+    "author": {
+      "@type": "Organization",
+      "name": "上海霄云信息科技有限公司",
+      "description": "专注于为数据密集型行业提供先进的数据存储解决方案"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/assets/openEuler-logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "碧海分布式存储系统",
+        "applicationCategory": "StorageApplication",
+        "operatingSystem": "openEuler",
+        "description": "基于openEuler系操作系统构建，结合鲲鹏硬件和BoostKit应用使能套件的分布式存储系统，IOPS性能达到国际开源软件和传统高端存储的2倍以上",
+        "featureList": [
+          "深度优化：利用银河麒麟高级服务器操作系统V10特性，通过BoostKit进行深度优化，显著提升存储性能",
+          "高性能：IOPS性能达到国际开源软件和传统高端存储的2倍以上",
+          "灵活性和可扩展性：根据业务需求灵活配置和扩展存储资源",
+          "高可靠性：采用多副本和强一致性策略，以及多层次数据修复机制，实现从磁盘级到机架级的全面容错"
+        ]
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "上海市胸科医院"
+      },
+      {
+        "@type": "Organization",
+        "name": "复旦大学附属肿瘤医院"
+      },
+      {
+        "@type": "Organization",
+        "name": "华东医院"
+      },
+      {
+        "@type": "Organization",
+        "name": "上海中医药大学附属龙华医院"
+      }
+    ],
+    "articleBody": "上海霄云信息科技有限公司（以下简称"霄云科技"）专注于为数据密集型行业提供先进的数据存储解决方案。霄云科技推出的碧海分布式存储系统，基于openEuler系操作系统构建，结合鲲鹏硬件和BoostKit应用使能套件。碧海分布式存储在单线程文件存储读写性能提升70%以上，多线程性能提升约30%。已成功应用于上海市胸科医院、复旦大学附属肿瘤医院、华东医院、上海中医药大学附属龙华医院等多个医疗机构。"
+  }
+]

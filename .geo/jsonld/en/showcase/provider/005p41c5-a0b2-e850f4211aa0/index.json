@@ -1,0 +1,80 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/showcase/provider/005p41c5-a0b2-e850f4211aa0",
+    "url": "https://www.openeuler.openatom.cn/en/showcase/provider/005p41c5-a0b2-e850f4211aa0",
+    "name": "China Mobile | openEuler",
+    "description": "Smooth OS Porting for Core Service Systems",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "China Mobile",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/provider/005p41c5-a0b2-e850f4211aa0"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "China Mobile: Smooth OS Porting for Core Service Systems",
+    "description": "China Mobile (Zhejiang) completed joint commissioning and adaptation between service systems and UnionTech OS Server 20, Mesos and Kubernetes container clusters, and servers, becoming the first communications company to use fully independent and controllable technologies.",
+    "url": "https://www.openeuler.openatom.cn/en/showcase/provider/005p41c5-a0b2-e850f4211aa0",
+    "inLanguage": "en",
+    "datePublished": "2021-08-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "OS Migration and Containerization",
+      "description": "Joint commissioning and adaptation between service systems and operating systems, Mesos and Kubernetes container clusters, and servers for independent and controllable IT infrastructure."
+    },
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "China Mobile (Zhejiang)",
+        "description": "First communications company to use fully independent and controllable technologies for core service systems on homegrown OSs."
+      },
+      {
+        "@type": "Organization",
+        "name": "UnionTech",
+        "url": "https://www.openeuler.openatom.cn/en/showcase/provider/005p41c5-a0b2-e850f4211aa0"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "UnionTech OS Server 20",
+        "applicationCategory": "OperatingSystem"
+      }
+    ]
+  }
+]

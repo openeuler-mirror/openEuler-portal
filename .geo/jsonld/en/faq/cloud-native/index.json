@@ -1,0 +1,73 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Cloud Native FAQs | openEuler",
+    "description": "Get answers to frequently asked questions related to cloud native on openEuler.",
+    "url": "https://www.openeuler.openatom.cn/en/faq/cloud-native",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why does the container fail to start when the default runtime of iSulad is changed to lxc and the error message "failed to initialize engine or runtime" is displayed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The default runtime of iSulad is runc. When the default runtime is set to lxc, dependencies might be missing. If you need to change the default runtime of iSulad to lxc, you need to install the lcr and lxc software packages and set runtime in the iSulad configuration file to lcr. Alternatively, you can specify --runtime lcr when starting the container. After the container is started, do not uninstall the lcr and lxc software packages; otherwise, residual resources may remain when the container is deleted."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is the error message "rpc error: code = Unimplemented desc =" displayed when the iSulad CRI V1 interface is used?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "iSulad supports both CRI V1alpha2 and CRI V1 interfaces. By default, CRI V1alpha2 is used. To use CRI V1, you need to enable the CRI V1 configuration in the iSulad configuration file /etc/isulad/daemon.json by setting {"enable-cri-v1": true}. If you are compiling iSulad from the source code, add the cmake compilation option -D ENABLE_CRI_API_V1=ON during compilation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does isula-build fail to pull images and the error message "pinging container registry xx: get xx: dial tcp host:repo: connect: connection refused" is displayed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The pulled image may come from an unauthorized repository. You can modify the configuration file /etc/isula-build/registries.toml of the isula-build image repository, add the untrusted repository to [registries.insecure], and restart isula-build."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does deployment of Kubernetes + Docker fail?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Starting from version 1.21, Kubernetes no longer supports deploying clusters with Docker. To resolve this, you can use cri-dockerd + Docker, or opt for containerd or iSulad as the container runtime."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.openatom.cn/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQs",
+        "item": "https://www.openeuler.openatom.cn/en/faq/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Cloud Native",
+        "item": "https://www.openeuler.openatom.cn/en/faq/cloud-native"
+      }
+    ]
+  }
+]

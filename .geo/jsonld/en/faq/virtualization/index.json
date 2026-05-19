@@ -1,0 +1,57 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Virtualization FAQs | openEuler",
+    "description": "Get answers to frequently asked questions about virtualization on openEuler.",
+    "url": "https://www.openeuler.openatom.cn/en/faq/virtualization",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I prepare the environment and check the prerequisites for VM live migration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Before performing a VM live migration, it is essential to prepare two PMs (source and destination) and check necessary conditions to ensure a smooth migration process. These checks include: Permission check: ensures that the current user has permission to perform live migration. Network check: verifies network connectivity between the source and destination PMs, ensuring they are in the same network segment. Storage resource check: verifies that the source and destination PMs can access the same storage resources and ensure the destination PM has sufficient CPU, memory, and storage resources. VM state check: confirms that the VM to be migrated is running. Additionally, you need to set live migration parameters such as maximum downtime and bandwidth during migration as required. You also need to identify whether shared or non-shared storage is being used. If the storage mode is non-shared, you may need to perform additional operations such as using NFS to achieve shared storage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is VM live migration and how does it differ from cold migration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Virtual machine (VM) live migration is a technology that enables the seamless migration of a running VM, including its in-memory and on-drive data, to another physical server without shutting down the VM. This process is transparent to users, meaning that there is no perceived service interruption or performance degradation. Live migration is typically used for hardware maintenance, upgrades, load balancing, and ensuring high availability of critical services. In contrast, VM cold migration (also known as static migration) requires VM shutdown before migration. This means services on the VM are unavailable during the migration process. Cold migration is suitable for scenarios where downtime is acceptable, such as batch processing."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.openatom.cn/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQs",
+        "item": "https://www.openeuler.openatom.cn/en/faq/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Virtualization",
+        "item": "https://www.openeuler.openatom.cn/en/faq/virtualization"
+      }
+    ]
+  }
+]

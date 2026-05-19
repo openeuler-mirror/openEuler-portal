@@ -1,0 +1,76 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Mirrors | openEuler",
+    "description": "Find fast and reliable openEuler repository mirrors worldwide. Download everything you need to install & run openEuler.",
+    "url": "https://www.openeuler.openatom.cn/en/mirror/list",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Mirrors",
+          "item": "https://www.openeuler.openatom.cn/en/mirror/list"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "openEuler Release Repository Sizes",
+    "description": "Size of each openEuler release available for rsync synchronization to a local mirror directory.",
+    "url": "https://www.openeuler.openatom.cn/en/mirror/list",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "openEuler 20.03 LTS", "description": "Repository size: 211 GB"},
+      {"@type": "ListItem", "position": 2, "name": "openEuler 20.03 LTS SP1", "description": "Repository size: 537 GB"},
+      {"@type": "ListItem", "position": 3, "name": "openEuler 20.03 LTS SP2", "description": "Repository size: 255 GB"},
+      {"@type": "ListItem", "position": 4, "name": "openEuler 20.03 LTS SP3", "description": "Repository size: 404 GB"},
+      {"@type": "ListItem", "position": 5, "name": "openEuler 20.03 LTS SP4", "description": "Repository size: 445 GB"},
+      {"@type": "ListItem", "position": 6, "name": "openEuler 22.03 LTS", "description": "Repository size: 616 GB"},
+      {"@type": "ListItem", "position": 7, "name": "openEuler 22.03 LTS SP1", "description": "Repository size: 562 GB"},
+      {"@type": "ListItem", "position": 8, "name": "openEuler 22.03 LTS SP2", "description": "Repository size: 399 GB"},
+      {"@type": "ListItem", "position": 9, "name": "openEuler 22.03 LTS SP3", "description": "Repository size: 686 GB"},
+      {"@type": "ListItem", "position": 10, "name": "openEuler 22.03 LTS SP4", "description": "Repository size: 631 GB"},
+      {"@type": "ListItem", "position": 11, "name": "openEuler 23.03", "description": "Repository size: 257 GB"},
+      {"@type": "ListItem", "position": 12, "name": "openEuler 23.09", "description": "Repository size: 313 GB"},
+      {"@type": "ListItem", "position": 13, "name": "openEuler 24.03 LTS", "description": "Repository size: 804 GB"},
+      {"@type": "ListItem", "position": 14, "name": "openEuler 24.09", "description": "Repository size: 460 GB"},
+      {"@type": "ListItem", "position": 15, "name": "openEuler 24.03 LTS SP1", "description": "Repository size: 768 GB"},
+      {"@type": "ListItem", "position": 16, "name": "openEuler 24.03 LTS SP2", "description": "Repository size: 777 GB"},
+      {"@type": "ListItem", "position": 17, "name": "openEuler 24.03 LTS SP3", "description": "Repository size: 456 GB"},
+      {"@type": "ListItem", "position": 18, "name": "openEuler 25.03", "description": "Repository size: 530 GB"},
+      {"@type": "ListItem", "position": 19, "name": "openEuler 25.09", "description": "Repository size: 531 GB"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Synchronize openEuler Images Using rsync",
+    "description": "Steps to synchronize openEuler images to a local mirror directory using rsync.",
+    "url": "https://www.openeuler.openatom.cn/en/mirror/list",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Run rsync command",
+        "text": "To synchronize openEuler images, run the following command: rsync -av --partial --progress --delete rsync://root@repo.openeuler.openatom.cn/openeuler/***(localDirectory)",
+        "url": "https://www.openeuler.openatom.cn/en/mirror/list"
+      }
+    ]
+  }
+]

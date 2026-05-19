@@ -1,0 +1,89 @@
+"https://schema.org",
+    "@type": "WebPage",
+    "name": "华电芜湖电厂 | openEuler社区",
+    "description": "华电芜湖电厂 DCS 核心控制系统平滑完成操作系统迁移，实现业务高效稳定运行",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/huadian",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "showcase",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "能源",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "华电芜湖电厂",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/huadian"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "华电芜湖电厂 DCS 核心控制系统平滑完成操作系统迁移，实现业务高效稳定运行",
+    "description": "华电芜湖电厂 DCS 核心控制系统平滑完成操作系统迁移，实现业务高效稳定运行",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/huadian",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "DCS智能分散控制系统"
+      },
+      {
+        "@type": "Thing",
+        "name": "华电睿蓝"
+      },
+      {
+        "@type": "Thing",
+        "name": "操作系统迁移"
+      },
+      {
+        "@type": "Thing",
+        "name": "工控安全"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "中国华电集团",
+        "description": "聚焦工控领域核心信息基础设施安全防护，推进发电领域关键核心技术攻关"
+      },
+      {
+        "@type": "Organization",
+        "name": "中国电子信息产业集团"
+      }
+    ],
+    "articleBody": "中国华电集团聚焦工控领域核心信息基础设施安全防护，前瞻性谋划并推进发电领域关键核心技术攻关，集中优势科研资源开展新一代DCS系统建设工作，成功研制出DCS——"华电睿蓝"智能分散控制系统，并成功在华电旗下的华电芜湖电厂实现示范应用。项目中使用飞腾处理器、中国长城服务器以及银河麒麟高级服务器操作系统V10（工作站版），搭载达梦数据库+华电睿蓝DCS平台软件。该项目是国内首个创新型的高参数、大容量发电领域核心控制系统，为电力行业工控生产领域提供了针对性的标准系统版本。"
+  }
+]

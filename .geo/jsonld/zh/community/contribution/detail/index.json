@@ -1,0 +1,108 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/community/contribution/detail",
+    "url": "https://www.openeuler.openatom.cn/zh/community/contribution/detail",
+    "name": "openEuler贡献攻略文字版",
+    "description": "阅读这篇完整指南，快速了解参与openEuler社区贡献全流程。我们将介绍关于社区贡献的完整流程，包括签署CLA、项目体验、提交issue、提交pr、代码贡献、活动申请、开源成长等等。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "社区",
+          "item": "https://www.openeuler.openatom.cn/zh/community/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "贡献攻略",
+          "item": "https://www.openeuler.openatom.cn/zh/community/contribution/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "贡献攻略文字版",
+          "item": "https://www.openeuler.openatom.cn/zh/community/contribution/detail"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "openEuler贡献攻略",
+      "description": "参与openEuler社区贡献的完整指南，包括签署CLA、项目体验、提交issue、提交PR、代码贡献、活动申请、开源成长等流程"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "如何参与openEuler社区贡献",
+    "description": "参与openEuler开源社区贡献的完整流程指南",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "签署CLA",
+        "text": "签署贡献者许可协议（CLA）以参与openEuler社区贡献",
+        "position": 1
+      },
+      {
+        "@type": "HowToStep",
+        "name": "项目体验",
+        "text": "探索openEuler项目，找到符合您兴趣和技能的领域",
+        "position": 2
+      },
+      {
+        "@type": "HowToStep",
+        "name": "提交Issue",
+        "text": "提交Issue报告问题、建议功能或记录缺陷",
+        "position": 3
+      },
+      {
+        "@type": "HowToStep",
+        "name": "提交PR",
+        "text": "提交Pull Request进行代码修改、文档改进或其他贡献",
+        "position": 4
+      },
+      {
+        "@type": "HowToStep",
+        "name": "活动申请",
+        "text": "申请社区活动和项目以扩展开源参与",
+        "position": 5
+      },
+      {
+        "@type": "HowToStep",
+        "name": "开源成长",
+        "text": "通过持续贡献在开源社区中成长",
+        "position": 6
+      }
+    ],
+    "totalTime": "P1D",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "CNY",
+      "value": "0"
+    },
+    "inLanguage": "zh-CN",
+    "url": "https://www.openeuler.openatom.cn/zh/community/contribution/detail"
+  }
+]

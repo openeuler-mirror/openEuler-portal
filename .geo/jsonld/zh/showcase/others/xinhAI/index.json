@@ -1,0 +1,93 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "新华社科技创新应用项目 | openEuler社区",
+    "description": "共筑 AI 创新方案安全智能加速内容生态建设",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/xinhAI",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "showcase",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "新华社科技创新应用项目",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/xinhAI"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "新华较真 AI 内容安全解决方案",
+      "description": "麒麟软件联合新华社技术局，针对公文内容校对核稿场景，推出基于银河麒麟操作系统的 AI 内容安全解决方案，建设新华较真内容安全，让校对工作更加准确和高效。",
+      "applicationCategory": "AIApplication",
+      "operatingSystem": "银河麒麟高级服务器操作系统 V10",
+      "provider": {
+        "@type": "Organization",
+        "name": "麒麟软件",
+        "url": "https://www.openeuler.openatom.cn/zh/showcase/others/xinhAI"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "新华社科技创新应用项目：基于 openEuler 的 AI 内容安全解决方案",
+    "description": "麒麟软件联合新华社技术局推出基于银河麒麟操作系统的 AI 内容安全解决方案——新华较真，针对公文内容校对核稿场景，已向中央部委、大型报业集团、国有企业、融媒体中心等数十家机构提供商业服务。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/xinhAI",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "AI 内容安全"
+      },
+      {
+        "@type": "Thing",
+        "name": "内容校对"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "新华社",
+        "description": "建立了覆盖全球的新闻信息采集网络，形成了多语种、多媒体、多层次渠道的新闻发布体系"
+      },
+      {
+        "@type": "Organization",
+        "name": "麒麟软件",
+        "description": "联合新华社技术局推出基于银河麒麟操作系统的 AI 内容安全解决方案"
+      }
+    ]
+  }
+]

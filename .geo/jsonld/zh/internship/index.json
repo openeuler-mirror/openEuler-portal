@@ -1,0 +1,234 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/internship",
+      "url": "https://www.openeuler.openatom.cn/zh/internship",
+      "name": "线上实习 | openEuler开源实习 | openEuler社区",
+      "description": "openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。欢迎访问openEuler官网。",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler社区",
+        "inLanguage": "zh"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "openEuler社区",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "openEuler开源实习",
+            "item": "https://www.openeuler.openatom.cn/zh/internship"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOccupationalProgram",
+      "name": "openEuler开源实习",
+      "description": "开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。由社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证明和实习工资。",
+      "url": "https://www.openeuler.openatom.cn/zh/internship",
+      "provider": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn/",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "intern@openeuler.sh",
+          "contactType": "实习咨询"
+        }
+      },
+      "occupationalCategory": "开源软件开发",
+      "timeToComplete": "P6M",
+      "educationalProgramMode": "online",
+      "programPrerequisites": "年满18周岁的在校学生，无专业年级限制",
+      "offers": {
+        "@type": "Offer",
+        "description": "实习积分达到10分后发放offer；6个月内满60积分可获得实习证明；按积分阶梯发放实习工资，最高满100积分可获得8000元。",
+        "price": "0",
+        "priceCurrency": "CNY"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "哪些人可以报名openEuler开源实习？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "开源实习面向全国范围内年满18周岁的在校学生招募，无专业年级限制，欢迎感兴趣的同学踊跃报名。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "实习有效期6个月是如何计算的？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在申请实习时需签署实习劳务合同，实习有效期即劳务合同上填写的实习有效期，为6个月期限，6个月期限内未满60积分则不能获得实习证明。线上实习时间管理相对自由，可根据自身情况安排时间，可提前结束实习。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "超过了6个月或者完成了100积分还能继续在社区做任务吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以，但积分不能再用于领取证明和奖金，一年内累计到150积分可获得openEuler社区高校相关荣誉。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "openEuler开源实习的工资如何发放？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在实习合同里约定的6个月期限内，学生可凭积分获得实习工资：满10积分可获得工资总计500元；满20积分可获得工资总计1000元；满30积分可获得工资总计1500元；满45积分可获得工资总计2750元；满60积分可获得工资总计4000元；满80积分可获得工资总计6000元；满100积分可获得工资总计8000元。每月月初按上月积分结算一次应发工资，在月底发放到实习生账户。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何获得实习证明？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在实习有效期6个月内满60分即可开具实习证明，如需开具实习证明，发送邮件给实习官方邮箱 intern@openeuler.sh 提出申请。证明开具后视为实习结束，不再计算实习工资。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何领取实习任务？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在AtomGit查看任务，找到你想做的任务Issue。在任务Issue下方评论区输入 /intern-assign 命令，认领该任务，然后发送邮件给任务导师请求审核。邮件需包括你的简历和该任务的开发方案。导师收到邮件后对申请人进行评审，/intern-approve 代表审核通过，学生成功领取任务；/intern-unapprove 代表领取失败。每个任务只能有一个人认领，每人一次最多只能有2个认领中的任务。"
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/internship",
+      "url": "https://www.openeuler.openatom.cn/zh/internship",
+      "name": "线上实习 | openEuler开源实习 | openEuler社区",
+      "description": "openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。欢迎访问openEuler官网。",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler社区",
+        "inLanguage": "zh"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "openEuler社区",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "openEuler开源实习",
+            "item": "https://www.openeuler.openatom.cn/zh/internship"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOccupationalProgram",
+      "name": "openEuler开源实习",
+      "description": "开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。由社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证明和实习工资。",
+      "url": "https://www.openeuler.openatom.cn/zh/internship",
+      "provider": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn/",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "intern@openeuler.sh",
+          "contactType": "实习咨询"
+        }
+      },
+      "occupationalCategory": "开源软件开发",
+      "timeToComplete": "P6M",
+      "educationalProgramMode": "online",
+      "programPrerequisites": "年满18周岁的在校学生，无专业年级限制",
+      "offers": {
+        "@type": "Offer",
+        "description": "实习积分达到10分后发放offer；6个月内满60积分可获得实习证明；按积分阶梯发放实习工资，最高满100积分可获得8000元。",
+        "price": "0",
+        "priceCurrency": "CNY"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "哪些人可以报名openEuler开源实习？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "开源实习面向全国范围内年满18周岁的在校学生招募，无专业年级限制，欢迎感兴趣的同学踊跃报名。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "实习有效期6个月是如何计算的？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在申请实习时需签署实习劳务合同，实习有效期即劳务合同上填写的实习有效期，为6个月期限，6个月期限内未满60积分则不能获得实习证明。线上实习时间管理相对自由，可根据自身情况安排时间，可提前结束实习。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "超过了6个月或者完成了100积分还能继续在社区做任务吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以，但积分不能再用于领取证明和奖金，一年内累计到150积分可获得openEuler社区高校相关荣誉。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "openEuler开源实习的工资如何发放？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在实习合同里约定的6个月期限内，学生可凭积分获得实习工资：满10积分可获得工资总计500元；满20积分可获得工资总计1000元；满30积分可获得工资总计1500元；满45积分可获得工资总计2750元；满60积分可获得工资总计4000元；满80积分可获得工资总计6000元；满100积分可获得工资总计8000元。每月月初按上月积分结算一次应发工资，在月底发放到实习生账户。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何获得实习证明？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在实习有效期6个月内满60分即可开具实习证明，如需开具实习证明，发送邮件给实习官方邮箱 intern@openeuler.sh 提出申请。证明开具后视为实习结束，不再计算实习工资。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何领取实习任务？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在AtomGit查看任务，找到你想做的任务Issue。在任务Issue下方评论区输入 /intern-assign 命令，认领该任务，然后发送邮件给任务导师请求审核。邮件需包括你的简历和该任务的开发方案。导师收到邮件后对申请人进行评审，/intern-approve 代表审核通过，学生成功领取任务；/intern-unapprove 代表领取失败。每个任务只能有一个人认领，每人一次最多只能有2个认领中的任务。"
+          }
+        }
+      ]
+    }
+  ]
+]

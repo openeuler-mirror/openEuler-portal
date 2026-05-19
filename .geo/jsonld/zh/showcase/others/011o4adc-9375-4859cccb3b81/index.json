@@ -1,0 +1,86 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/011o4adc-9375-4859cccb3b81",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/011o4adc-9375-4859cccb3b81",
+    "name": "华润集团 | openEuler社区",
+    "description": "创新云专区项目——华润集团基于ARM芯片、紫光恒越服务器、银河麒麟操作系统V10及华润云平台完成全栈自主创新基础平台部署，实现业务系统稳定运行。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "showcase",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "华润集团",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/011o4adc-9375-4859cccb3b81"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Organization",
+      "name": "华润集团",
+      "description": "华润集团完成了华润云、业务系统及终端应用的迁移适配，积累了丰富的自主创新技术和运维经验，是集团的第一个自主创新试点项目。"
+    },
+    "mentions": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "银河麒麟高级服务器操作系统 V10",
+        "operatingSystem": "银河麒麟",
+        "applicationCategory": "OperatingSystem"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "华润云",
+        "applicationCategory": "CloudPlatform"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Coremail 安全邮件",
+        "applicationCategory": "BusinessApplication"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "YIGO 供应链管理系统",
+        "applicationCategory": "BusinessApplication"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "华润集团自主创新试点项目——全栈自主创新基础平台部署",
+    "description": "华润集团基于ARM（FT-2000+/64）芯片、紫光恒越服务器、银河麒麟高级服务器操作系统V10及华润云平台，完成全栈自主创新基础平台部署，实现业务系统稳定运行，为集团后续大规模自主产品使用奠定基础。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/011o4adc-9375-4859cccb3b81",
+    "inLanguage": "zh-CN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "articleSection": "用户案例",
+    "keywords": "华润集团, 自主创新, 鲲鹏, ARM, 银河麒麟, 华润云, openEuler, 信创"
+  }
+]

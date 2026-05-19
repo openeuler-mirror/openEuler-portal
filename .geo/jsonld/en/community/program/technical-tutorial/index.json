@@ -1,0 +1,97 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://www.openeuler.openatom.cn/en/community/program/technical-tutorial",
+    "url": "https://www.openeuler.openatom.cn/en/community/program/technical-tutorial",
+    "name": "Call for Tutorials | openEuler",
+    "description": "Share your expertise with openEuler! Contribute tutorials and help us build a richer resource base for our community.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Community",
+          "item": "https://www.openeuler.openatom.cn/en/community/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Program",
+          "item": "https://www.openeuler.openatom.cn/en/community/program/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Call for Tutorials",
+          "item": "https://www.openeuler.openatom.cn/en/community/program/technical-tutorial"
+        }
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "TechArticle",
+        "name": "01-Kdump",
+        "isPartOf": {
+          "@id": "https://www.openeuler.openatom.cn/en/community/program/technical-tutorial"
+        }
+      },
+      {
+        "@type": "TechArticle",
+        "name": "02-Linux PCI Subsystem",
+        "isPartOf": {
+          "@id": "https://www.openeuler.openatom.cn/en/community/program/technical-tutorial"
+        }
+      },
+      {
+        "@type": "TechArticle",
+        "name": "03-Crash Utility-1/2",
+        "isPartOf": {
+          "@id": "https://www.openeuler.openatom.cn/en/community/program/technical-tutorial"
+        }
+      },
+      {
+        "@type": "TechArticle",
+        "name": "04-Crash Utility-2/2",
+        "isPartOf": {
+          "@id": "https://www.openeuler.openatom.cn/en/community/program/technical-tutorial"
+        }
+      },
+      {
+        "@type": "TechArticle",
+        "name": "05-Top Down Performance Analysis",
+        "isPartOf": {
+          "@id": "https://www.openeuler.openatom.cn/en/community/program/technical-tutorial"
+        }
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "events@openeuler.sh",
+        "contactType": "community support"
+      }
+    }
+  }
+]

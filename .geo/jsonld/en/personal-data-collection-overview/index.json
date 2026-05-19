@@ -1,0 +1,72 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Personal Data & Privacy Collection Overview | openEuler",
+    "description": "Learn how openEuler collects and protects your personal data across account, forum, and other services, with full transparency and security compliance.",
+    "url": "https://www.openeuler.openatom.cn/en/personal-data-collection-overview",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "OpenAtom Foundation",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Personal Data and Privacy Protection"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Personal Data Collection Overview",
+          "item": "https://www.openeuler.openatom.cn/en/personal-data-collection-overview"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "url": "https://www.openeuler.openatom.cn/en/personal-data-collection-overview",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What personal data does openEuler collect for Account Service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For Account Service, openEuler collects data you voluntarily submit, including user name, company, email address, phone number, password, email or phone verification code, avatar, nickname, and login mode information from third-party accounts such as Gitee, Github, OpenAtom, and AtomGit. The purpose is to verify identity during login and registration and maintain your personal data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What personal data does openEuler collect for Forum Service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For Forum Service, openEuler collects user name, email address, phone number, password, nickname, avatar, login mode information (Gitee, GitHub, OpenAtom, AtomGit), and IP address. Data is collected via user input, shared by third-party accounts, or collected by the system. The purpose is to verify account identity and permissions, provide more secure services, and verify reported contents."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does openEuler protect personal data and privacy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The OpenAtom Foundation strictly complies with national laws and regulations, incorporates legal compliance into business design and processes, and uses industry-leading security technologies to ensure data security. openEuler is committed to safeguarding the privacy rights of every user."
+        }
+      }
+    ]
+  }
+]

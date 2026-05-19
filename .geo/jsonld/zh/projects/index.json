@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/projects/index.html",
+    "url": "https://www.openeuler.openatom.cn/zh/projects/index.html",
+    "name": "项目 | openEuler社区",
+    "description": "openEuler 社区创新开源项目列表，涵盖 Intelligence BooM、UB Service Core、A-Tune、iSula、secGear、NestOS、StratoVirt、BiSheng JDK 等多个开源项目。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler",
+      "description": "openEuler 是一个开源、免费的 Linux 发行版平台，将通过开放的社区形式与全球的开发者共同构建一个开放、多元和架构包容的软件生态体系。同时，openEuler 也是一个创新的平台，鼓励任何人在该平台上提出新想法、开拓新思路、实践新方案。",
+      "inLanguage": "zh"
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Intelligence BooM",
+        "description": "AI开源基础软件栈是联合多家社区、伙伴成员一起打造的大模型全栈开源解决方案，包含异构融合平台、任务管理平台、数据管理平台、运行加速平台、智能应用平台及全栈安全平台等7大平台，20+开源组件。",
+        "url": "https://www.openeuler.openatom.cn/zh/projects/index.html",
+        "applicationCategory": "AI Infrastructure",
+        "operatingSystem": "openEuler"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "UB Service Core",
+        "description": "UB Service Core构筑5大集群级系统服务，支持不同OS并全面开源至openEuler社区，释放超节点平等互联架构优势，全面使能应用加速30~50%，促进灵衢系统软件生态构筑。",
+        "url": "https://www.openeuler.openatom.cn/zh/projects/index.html",
+        "applicationCategory": "System Service",
+        "operatingSystem": "openEuler"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "UB OS Component",
+        "description": "操作系统灵衢组件（UB OS Component）是在OS原有内存管理、通信、设备管理和虚拟化框架上扩展支持灵衢，实现异构硬件统一抽象解耦、统一内存地址空间，支持资源全局调度、计算资源动态组合扩展、设备间高性能通信，释放灵衢硬件能力。",
+        "url": "https://www.openeuler.openatom.cn/zh/projects/index.html",
+        "applicationCategory": "Operating System Component",
+        "operatingSystem": "openEuler"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "A-Tune",
+        "description": "A-Tune是一款基于openEuler开发的，自动化、智能化性能调优引擎。它利用人工智能技术，对运行在操作系统上的业务建立精准模型，动态感知业务特征并推理出具体应用，根据业务负载情况动态调节并给出最佳的参数配置组合，从而使业务处于最佳运行状态。",
+        "url": "https://atomgit.com/openeuler/A-Tune",
+        "applicationCategory": "Performance Tuning",
+        "operatingSystem": "openEuler"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "iSula",
+        "description": "iSulad 是一个新的通用容器引擎，提供统一的架构设计来满足CT和IT领域的不同需求。",
+        "url": "https://atomgit.com/openeuler/iSulad",
+        "applicationCategory": "Container Engine",
+        "operatingSystem": "openEuler"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "secGear",
+        "description": "secGear是面向计算产业的机密计算安全应用开发套件，旨在方便开发者在不同的硬件设备上提供统一开发框架，让用户不感知底层各种机密计算架构和接口的差异，目前secGear支持Intel SGX硬件和ARM Trustzone(安全os支持iTrustee)。",
+        "url": "https://atomgit.com/openeuler/secGear",
+        "applicationCategory": "Security",
+        "operatingSystem": "openEuler"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "NestOS",
+        "description": "NestOS正式推出双模式版本，该版本整合了NestOS For Container 和 NestOS For Virt这两个模式到一个ISO镜像中，旨在满足云场景中容器化和虚拟化两种主要场景下用户的多样需求，专注于提供最佳的容器主机和虚拟化解决方案。",
+        "url": "https://atomgit.com/openeuler/NestOS",
+        "applicationCategory": "Operating System",
+        "operatingSystem": "openEuler"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "StratoVirt",
+        "description": "StratoVirt是面向云数据中心的企业级虚拟化VMM (Virtual Machine Monitor)，实现一套架构对虚拟机、容器、Serverless三种场景的统一支持。在轻量低噪、软硬协同、Rust语言级安全等方面具备关键技术竞争优势。",
+        "url": "https://atomgit.com/openeuler/stratovirt",
+        "applicationCategory": "Virtualization",
+        "operatingSystem": "openEuler"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "BiSheng JDK",
+        "description": "毕昇JDK作为OpenJDK的下游，是一款高性能、可用于生产环境的OpenJDK发行版。毕昇JDK对华为内部应用场景中遇到的一些性能问题和稳定性问题进行了修复，并在ARM架构上进行了性能优化和稳定性增强，在ARM架构上更稳定，在大数据等场景下可以获得更好的性能。",
+        "url": "https://atomgit.com/openeuler/bishengjdk-11",
+        "applicationCategory": "Java Runtime",
+        "operatingSystem": "openEuler",
+        "programmingLanguage": "Java"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler 智能化解决方案",
+        "description": "openEuler 智能化解决方案是搭载在 openEuler 上的大模型平台，具有对接支持 openAI 大模型、构建本地知识库的基础功能；也具备注册语义接口和mcp服务、构建Agent和工作流应用等功能。支持web和客户端两种形式，为开发者和企业的使用提供了巨大的便利。",
+        "url": "https://atomgit.com/openeuler",
+        "applicationCategory": "AI Platform",
+        "operatingSystem": "openEuler"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "openYuanrong",
+        "description": "openYuanrong是一个Serverless分布式计算引擎，致力于以一套统一Serverless结构支持AI、大数据、微服务等各类分布式应用。它提供多语言函数编程接口，以单机编程体验简化分布式应用开发；提供分布式动态调度和数据共享能力，实现分布式应用的高性能运行和集群的高效资源利用。",
+        "url": "https://atomgit.com/openeuler",
+        "applicationCategory": "Distributed Computing",
+        "operatingSystem": "openEuler"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "openEuler",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "项目",
+        "item": "https://www.openeuler.openatom.cn/zh/projects/index.html"
+      }
+    ]
+  }
+]

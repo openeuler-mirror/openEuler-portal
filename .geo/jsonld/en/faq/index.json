@@ -1,0 +1,71 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "FAQs | openEuler",
+    "description": "Get answers to frequently asked questions about openEuler.",
+    "url": "https://www.openeuler.openatom.cn/en/faq",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The OpenAtom openEuler project, short for openEuler, is an open-source OS project incubated and operated by the OpenAtom Foundation. It is a digital infrastructure OS that fits into any server, cloud computing, edge computing, and embedded deployment. This Linux distribution is compatible with multiple instruction set architectures and ideal for a wide range of operational technology applications, enabling OT-ICT convergence."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the openEuler community like?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Established officially on December 31, 2019, the openEuler community operates as a global hub for developers worldwide, aiming to foster an open, diverse, and architecture-inclusive software ecosystem tailored for wide-ranging digital infrastructure needs. openEuler collaborates closely with both upstream and downstream communities to ensure continuous tech improvement and timely release of new versions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What instruction set architectures does openEuler support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "With active collaboration from leading chip vendors like Intel and AMD, openEuler supports multiple processor architectures, including x86, Arm, SW64, RISC-V, and LoongArch, with plans to expand to PowerPC. openEuler is optimized for a wide range of CPU chips, such as Loongson 3 series, Zhaoxin KaiXian and KaiSheng, Intel Sierra Forest and Granite Rapids, and AMD EPYC Milan and Genoa. openEuler's compatibility extends beyond the CPU, encompassing NIC, RAID, Fibre Channel, GPU & AI, DPU, SSD, and security cards. By offering a unified OS that can run on various devices, openEuler facilitates streamlined application development, allowing developers to target a wide range of hardware without significant code modification."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often does openEuler release a new version?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler releases two types of community versions: long-term support (LTS) and innovation versions. LTS versions provide long-term stability and support, while innovation versions deliver the latest features and technologies."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.openatom.cn/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQs",
+        "item": "https://www.openeuler.openatom.cn/en/faq"
+      }
+    ]
+  }
+]

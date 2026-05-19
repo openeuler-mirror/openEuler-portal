@@ -1,0 +1,72 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Software Compatibility | openEuler",
+    "description": "Enhance your project's efficiency by exploring compatibility options for software within the openEuler ecosystem.",
+    "url": "https://www.openeuler.openatom.cn/en/compatibility/software",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Compatibility",
+          "item": "https://www.openeuler.openatom.cn/en/compatibility/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Software Compatibility",
+          "item": "https://www.openeuler.openatom.cn/en/compatibility/software"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "openEuler Software Compatibility Test Process",
+    "description": "openEuler provides a series of tools, documents, and operation procedures to help you test the compatibility between openEuler and software.",
+    "url": "https://www.openeuler.openatom.cn/en/compatibility/software",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Create an issue",
+        "text": "Create an issue under the oec-application project in the openEuler community and specify the software information in the issue. The SIG will give feedback on the issue in a timely manner.",
+        "url": "https://atomgit.com/openeuler/oec-application"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Perform the compatibility test",
+        "text": "After the issue is created, perform the compatibility test. openEuler provides the Compass-CI automated testing platform and user guide to help you complete the test."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Submit the result for review",
+        "text": "After the compatibility test is completed and passed, update the test result to the issue. Include group_id in the issue."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Release the result",
+        "text": "The SIG will review the submitted result and add the software to the Compatibility List after it is approved."
+      }
+    ]
+  }
+]

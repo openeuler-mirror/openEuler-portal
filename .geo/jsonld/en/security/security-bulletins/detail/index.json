@@ -1,0 +1,67 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/security/security-bulletins/detail",
+    "url": "https://www.openeuler.openatom.cn/en/security/security-bulletins/detail",
+    "name": "Security Advisory Details | openEuler",
+    "description": "Get detailed information on the security advisories for openEuler.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.openeuler.openatom.cn/#organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.openeuler.openatom.cn/img/logo.png"
+        }
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Security",
+          "item": "https://www.openeuler.openatom.cn/en/security/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Security Bulletins",
+          "item": "https://www.openeuler.openatom.cn/en/security/security-bulletins/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Security Advisory Details",
+          "item": "https://www.openeuler.openatom.cn/en/security/security-bulletins/detail"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Security Advisory",
+      "description": "Detailed information about a specific openEuler security advisory, including synopsis, release date, severity, affected components, and CVE references."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.openeuler.openatom.cn/#organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/"
+    }
+  }
+]

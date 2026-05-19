@@ -1,0 +1,47 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/monthly-bulletins",
+    "url": "https://www.openeuler.openatom.cn/zh/monthly-bulletins",
+    "name": "openEuler月刊 | 社区运作报告 | openEuler社区",
+    "description": "openEuler月刊是面向社区所有开发者展现社区运作情况，包括社区治理、技术、生态、活动等方方面面的发展情况。月刊每月发布一次。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.openatom.cn/zh/"},
+        {"@type": "ListItem", "position": 2, "name": "月刊与年报", "item": "https://www.openeuler.openatom.cn/zh/monthly-bulletins"}
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Periodical",
+    "name": "openEuler月刊",
+    "description": "openEuler月刊是面向社区所有开发者展现社区运作情况，包括社区治理、技术、生态、活动等方方面面的发展情况。月刊每月发布一次。",
+    "url": "https://www.openeuler.openatom.cn/zh/monthly-bulletins",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    }
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "科来网络技术股份有限公司（全流量安全分析解决方案）",
+  "description": "基于openEuler打造全流量安全分析解决方案，助力用户提升安全防御水平。",
+  "author": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.openeuler.openatom.cn/img/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/kelai2/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "openEuler",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux"
+  },
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "科来网络技术股份有限公司"
+    },
+    {
+      "@type": "Thing",
+      "name": "全流量安全分析"
+    },
+    {
+      "@type": "Thing",
+      "name": "网络安全防御"
+    }
+  ],
+  "articleSection": [
+    "网络安全",
+    "流量分析"
+  ],
+  "inLanguage": "zh-CN"
+}

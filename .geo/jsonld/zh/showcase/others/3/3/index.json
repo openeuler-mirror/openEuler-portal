@@ -1,0 +1,82 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/3/3.html",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/3/3.html",
+    "name": "格尔安全认证网关 | openEuler社区",
+    "description": "为实现网络环境的安全性和合规性提供了有力支持",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "格尔安全认证网关",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/3/3.html"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "格尔安全认证网关",
+    "description": "为实现网络环境的安全性和合规性提供了有力支持",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/3/3.html",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "格尔安全认证网关",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "openEuler",
+      "description": "格尔软件股份有限公司推出的基于openEuler系操作系统的安全认证网关，提供国密SSL链路加密、证书认证与签名验签功能，整体性能提升175%。",
+      "featureList": [
+        "全栈调优：利用银河麒麟高级服务器操作系统v10的高性能特性，结合鲲鹏应用使能套件BoostKit，对网关进行全面的性能优化",
+        "国密SSL链路加密：提供基于国家商用密码算法的SSL链路加密功能，确保数据传输的安全性",
+        "证书认证与签名验签：实现证书认证和签名验签功能，保障用户身份的真实性、数据的机密性和完整性，以及操作的不可否认性",
+        "性能提升：基于毕昇JDK和KAE硬件加速引擎，网关的整体性能提升了175%"
+      ]
+    },
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "格尔软件股份有限公司"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "银河麒麟高级服务器操作系统v10",
+        "operatingSystem": "openEuler"
+      }
+    ]
+  }
+]
