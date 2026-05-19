@@ -103,6 +103,17 @@ function readEnvVar(key: string): string | undefined {
 const sitemapHostname =
   readEnvVar('VITE_MAIN_DOMAIN_URL') || 'https://www.openeuler.org';
 
+const excludes = process.argv
+  .filter(arg => arg.startsWith('--exclude='))
+  .flatMap(arg => {
+    const val = arg.split('=')[1];
+    if (val.includes(',')) {
+      return val.split(',').map(v => v.trim());
+    }
+    return val;
+  });
+
+console.log(`exclude: ${excludes}`);
 
 const config: UserConfig = {
   sitemap: {
@@ -152,6 +163,7 @@ const config: UserConfig = {
   },
   lastUpdated: true,
   base: '/',
+  srcExclude: excludes,
   head: [
     [
       'link',
