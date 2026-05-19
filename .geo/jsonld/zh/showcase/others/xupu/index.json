@@ -1,0 +1,69 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/xupu",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/xupu",
+    "name": "旭普实景三维时空数据运营系统 | openEuler社区",
+    "description": "三维数据加载渲染提高24.75%，多图层空间分析性能提升34.17%、百万级矢量数据性能提升21.75%。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "旭普实景三维时空数据运营系统",
+      "description": "旭普实景三维时空数据运营系统是以地理信息技术为基础，结合实景三维、BIM、大数据集成等技术进行研发的全流程信息平台。平台以实景三维地理数据为底板，融合自然资源、政务数据、物联网、城市数据等多种数据，实现时空数据统一管理、分析与展现。",
+      "applicationCategory": "GeographicInformationSystem",
+      "operatingSystem": "openEuler",
+      "featureList": [
+        "多源时空数据统一化归集、统一存储、统一治理、统一服务管理",
+        "海量实景三维数据、矢量数据秒级加载渲染及高效服务",
+        "三维数据加载渲染提高24.75%",
+        "多图层空间分析性能提升34.17%",
+        "百万级矢量数据性能提升21.75%",
+        "多级别、多业务的统一管理与服务"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "旭普云智慧空间信息技术有限公司",
+        "foundingDate": "2007-02",
+        "description": "旭普云智慧空间信息技术有限公司系普瑞时空信息产业发展集团成员企业，主要为省、市、县各级政府以及自然资源、农业农村、住建、林业、生态环境、水利、交通等行业主管部门提供"时空大数据+"一站式全流程综合解决方案。"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "用户案例",
+        "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "其他",
+        "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "旭普实景三维时空数据运营系统",
+        "item": "https://www.openeuler.openatom.cn/zh/showcase/others/xupu"
+      }
+    ]
+  }
+]

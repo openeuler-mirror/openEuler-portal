@@ -1,0 +1,108 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "openEuler社区发行版 | openEuler下载 | openEuler社区",
+    "description": "openEuler是面向数字基础设施的操作系统,支持服务器、云计算、边缘计算、嵌入式等应用场景,支持多样性计算,致力于提供安全、稳定、易用的开源服务器Linux操作系统。欢迎访问openEuler官网，下载使用。",
+    "url": "https://www.openeuler.openatom.cn/zh/download/archive",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "下载",
+          "item": "https://www.openeuler.openatom.cn/zh/download/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "社区发行版归档",
+          "item": "https://www.openeuler.openatom.cn/zh/download/archive"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "openEuler",
+    "operatingSystem": "Linux",
+    "applicationCategory": "OperatingSystem",
+    "description": "openEuler是面向数字基础设施的操作系统,支持服务器、云计算、边缘计算、嵌入式等应用场景,支持多样性计算,致力于提供安全、稳定、易用的开源服务器Linux操作系统。",
+    "url": "https://www.openeuler.openatom.cn/zh/download/archive",
+    "downloadUrl": "https://www.openeuler.openatom.cn/zh/download/archive",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CNY",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "下载",
+        "item": "https://www.openeuler.openatom.cn/zh/download/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "openEuler社区发行版下载列表",
+    "description": "openEuler社区版分为长期支持版本（LTS）和创新版本，支持x86_64、aarch64、ARM32、RISC-V等架构",
+    "numberOfItems": 3,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "openEuler 24.03 LTS SP3 长期支持版本",
+        "description": "2025年12月30日发布，Planned EOL: 2027/12。基于6.6内核，面向服务器、云、AI场景，包括内核优化、异构协同推理、智能诊断、机密虚机、编译器、RISC-V架构优化、智能开发者桌面、安全加固、灵衢超节点、身份认证、虚拟化等新特性。",
+        "url": "https://www.openeuler.openatom.cn/zh/download/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "openEuler 24.03 LTS SP2 长期支持版本",
+        "description": "面向服务器、云计算、边缘计算、嵌入式等场景，基于6.6内核",
+        "url": "https://www.openeuler.openatom.cn/zh/download/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "openEuler 24.03 LTS SP1 长期支持版本",
+        "description": "面向服务器、云计算、边缘计算、嵌入式等场景",
+        "url": "https://www.openeuler.openatom.cn/zh/download/"
+      }
+    ]
+  }
+]

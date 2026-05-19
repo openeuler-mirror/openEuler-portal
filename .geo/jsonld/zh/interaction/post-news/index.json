@@ -1,0 +1,133 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/interaction/post-news",
+    "url": "https://www.openeuler.openatom.cn/zh/interaction/post-news",
+    "name": "新闻发布 | 互动中心 | openEuler社区",
+    "description": "查阅openEuler社区的新闻发布，获取最新资讯与技术分享。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "互动中心",
+          "item": "https://www.openeuler.openatom.cn/zh/interaction/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "新闻发布",
+          "item": "https://www.openeuler.openatom.cn/zh/interaction/post-news"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "如何向openEuler社区发布新闻",
+    "description": "本指南介绍如何通过AtomGit向openEuler社区提交新闻，包括注册账号、理解新闻格式、提交Pull Request等完整流程。",
+    "inLanguage": "zh",
+    "url": "https://www.openeuler.openatom.cn/zh/interaction/post-news",
+    "step": [
+      {
+        "@type": "HowToSection",
+        "name": "准备",
+        "position": 1,
+        "itemListElement": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "注册AtomGit账号",
+            "text": "参考 http://git.mydoc.io/?t=179267 注册 AtomGit 账号。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "设置主邮箱地址",
+            "text": "在 AtomGit 个人设置中设置主邮箱地址，访问 https://atomgit.com/profile/emails。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "签署贡献者协议",
+            "text": "签署贡献者协议，访问 https://www.openeuler.openatom.cn/zh/other/cla。",
+            "url": "https://www.openeuler.openatom.cn/zh/other/cla"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "准备git环境",
+            "text": "参考 http://git.mydoc.io/?t=180692 准备你的git环境。"
+          }
+        ]
+      },
+      {
+        "@type": "HowToSection",
+        "name": "理解新闻格式",
+        "position": 2,
+        "itemListElement": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "了解Markdown新闻格式",
+            "text": "openEuler 是用 markdown 格式写新闻的。新闻文件头需要包含 title、date、tags、banner、author、sig、summary 等字段。"
+          }
+        ]
+      },
+      {
+        "@type": "HowToSection",
+        "name": "提交新闻",
+        "position": 3,
+        "itemListElement": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Fork项目",
+            "text": "Fork openEuler 新闻项目 https://atomgit.com/openeuler/openEuler-portal 到你自己的 AtomGit 上。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Clone代码",
+            "text": "使用命令 git clone https://atomgit.com/<your-atomgit-id>/openEuler-portal 克隆代码到本地。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "创建分支",
+            "text": "使用命令 git checkout -b <branch-name> 创建新分支。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "创建工作路径并编写新闻",
+            "text": "如果你发表中文新闻，工作路径是 app/zh/news。在对应目录下创建以 YEAR-MONTH-DAY-title.md 格式命名的新闻文件。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "提交新闻",
+            "text": "使用 git add、git commit 提交你的新闻，然后通过 Pull Request 提交到 openEuler-portal 项目。"
+          }
+        ]
+      }
+    ]
+  }
+]

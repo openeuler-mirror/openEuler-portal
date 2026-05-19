@@ -1,0 +1,96 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "中信银行 | openEuler社区",
+    "description": "基于 Kmesh 提升服务网格数据面性能，网联交易场景转发性能提升40%。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/17kesh/17kesh.html",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "金融",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "中信银行",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/17kesh/17kesh.html"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "中信银行基于 Kmesh 提升服务网格数据面性能",
+    "description": "基于 Kmesh 提升服务网格数据面性能，网联交易场景转发性能提升40%。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/17kesh/17kesh.html",
+    "inLanguage": "zh",
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "服务网格",
+        "description": "通过服务网格架构将流量治理抽象成基础设施，简化业务逻辑，将通信的复杂度从业务中解耦"
+      },
+      {
+        "@type": "Thing",
+        "name": "Kmesh",
+        "description": "基于可编程内核实现的高性能服务网格数据面，具备高性能、低开销及安全可靠等特点"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/17kesh/17kesh.html"
+    },
+    "articleBody": "中信银行当前在基于服务网格架构做行内业务改造，面向未来 mesh 架构统一化，数据面性能面临挑战。Kmesh 是基于可编程内核实现的高性能服务网格数据面，具备高性能、低开销及安全可靠等特点；通过将 L4、L7 流量治理能力卸载到内核，使得服务转发性能分别提升 50%、60%，底噪开销降低 70%。基于 Kmesh 提升服务网格数据面性能，网联交易场景转发性能提升 40%，助力客户构筑金融级高性能服务网格架构，树立行业标杆。"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CaseStudy",
+    "name": "中信银行基于 Kmesh 提升服务网格数据面性能案例",
+    "description": "基于 Kmesh 提升服务网格数据面性能，网联交易场景转发性能提升40%。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/17kesh/17kesh.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "customer": {
+      "@type": "Organization",
+      "name": "中信银行",
+      "industry": "金融"
+    },
+    "result": "网联交易场景转发性能提升40%，服务转发性能分别提升50%、60%，底噪开销降低70%"
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "东方盛行电子有限责任公司",
+  "description": "东方盛行基于超聚变操作系统打造私有协议媒体安全服务系统提供高安全、高性能、高可靠的运行环境",
+  "author": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.openeuler.openatom.cn/img/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/df/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "openEuler",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux"
+  },
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "东方盛行电子有限责任公司"
+    },
+    {
+      "@type": "Thing",
+      "name": "私有协议媒体安全服务系统"
+    },
+    {
+      "@type": "Thing",
+      "name": "超聚变操作系统"
+    },
+    {
+      "@type": "Thing",
+      "name": "媒体安全"
+    }
+  ],
+  "articleSection": [
+    "媒体安全",
+    "私有协议"
+  ],
+  "inLanguage": "zh-CN"
+}

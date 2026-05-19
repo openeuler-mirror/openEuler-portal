@@ -1,0 +1,72 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "openEuler邮件列表 | openEuler社区",
+    "description": "邮件列表是开源社区最重要的基本交流工具之一，欢迎订阅openEuler邮件列表，即可通过邮件与我们交流。 想要了解更多相关信息，欢迎访问openEuler官网。",
+    "url": "https://www.openeuler.openatom.cn/zh/community/mailing-list",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "社区",
+          "item": "https://www.openeuler.openatom.cn/zh/community/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "邮件列表",
+          "item": "https://www.openeuler.openatom.cn/zh/community/mailing-list"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "如何订阅openEuler SIG邮件列表",
+    "description": "通过以下步骤订阅openEuler SIG邮件列表，即可通过邮件与社区成员交流。",
+    "url": "https://www.openeuler.openatom.cn/zh/community/mailing-list",
+    "inLanguage": "zh",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "选择订阅的SIG组",
+        "text": "从邮件列表中选择您希望订阅的SIG（Special Interest Group）组。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "填写信息",
+        "text": "填写您的订阅信息，包括邮件地址等必要内容。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "确认订阅邮件",
+        "text": "查收系统发送的确认邮件，并按照提示完成确认操作。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "成功订阅",
+        "text": "完成确认后即成功订阅该SIG组的邮件列表，可通过邮件参与社区交流。"
+      }
+    ]
+  }
+]

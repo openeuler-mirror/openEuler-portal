@@ -1,0 +1,340 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://www.openeuler.openatom.cn/en/community/organization",
+    "url": "https://www.openeuler.openatom.cn/en/community/organization",
+    "name": "Governance Structure | openEuler",
+    "description": "Explore the openEuler community's organizational structure, committees, and code of conduct.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Community",
+          "item": "https://www.openeuler.openatom.cn/en/community/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Governance Structure",
+          "item": "https://www.openeuler.openatom.cn/en/community/organization"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Organization",
+      "@id": "https://www.openeuler.openatom.cn/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.openeuler.openatom.cn/#organization",
+    "name": "openEuler",
+    "url": "https://www.openeuler.openatom.cn/",
+    "description": "openEuler is an open source community with an organizational structure comprising the Advisory Committee, the openEuler Committee, and the openEuler Technical Committee.",
+    "subOrganization": [
+      {
+        "@type": "Organization",
+        "name": "Advisory Committee of the openEuler Committee",
+        "description": "The advisory body providing strategic guidance to the openEuler Committee.",
+        "member": [
+          {
+            "@type": "Person",
+            "name": "Lu Shouqun",
+            "jobTitle": "Honorary Chairman of China OSS Promotion Union; Former Executive Deputy Director of the Informatization Office of the State Council"
+          },
+          {
+            "@type": "Person",
+            "name": "Ni Guangnan",
+            "jobTitle": "Academician of Chinese Academy of Engineering"
+          },
+          {
+            "@type": "Person",
+            "name": "Liao Xiangke",
+            "jobTitle": "Academician of Chinese Academy of Engineering"
+          },
+          {
+            "@type": "Person",
+            "name": "Wang Huaimin",
+            "jobTitle": "Academician of Chinese Academy of Sciences"
+          },
+          {
+            "@type": "Person",
+            "name": "Wu Hequan",
+            "jobTitle": "Academician of Chinese Academy of Engineering"
+          },
+          {
+            "@type": "Person",
+            "name": "Zhou Minghui",
+            "jobTitle": "Professor of School of Computer Science, Peking University; Boya Chair Professor"
+          },
+          {
+            "@type": "Person",
+            "name": "Huo Taiwen",
+            "jobTitle": "Founder and CEO of Geekbang Technology"
+          }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler Committee",
+        "description": "The governing committee of the openEuler community responsible for strategic decisions and community direction.",
+        "member": [
+          {
+            "@type": "Person",
+            "name": "Xiong Wei",
+            "jobTitle": "Chairperson",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "Huawei Technologies Co., Ltd."
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Han Naiping",
+            "jobTitle": "Standing Committee Member",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "Kylinsoft Co., Ltd."
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Liu Wenqing",
+            "jobTitle": "Standing Committee Member",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "Hunan Kylinsec Technology Co., Ltd."
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Qu Sheng",
+            "jobTitle": "Standing Committee Member",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "Institute of Software, Chinese Academy of Sciences"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Zhang Lei",
+            "jobTitle": "Standing Committee Member",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "UnionTech Software Technology Co., Ltd."
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Gao Pei",
+            "jobTitle": "Committee Member",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "iSoftStone Information Technology (Group) Co., Ltd."
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Li Peiyuan",
+            "jobTitle": "Committee Member",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "China Telecom e-Cloud Technology Co., Ltd."
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Tian Jun",
+            "jobTitle": "Committee Member",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "Intel China Ltd."
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Wang Hao",
+            "jobTitle": "Committee Member",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "xFusion Digital Technologies Co., Ltd."
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Yu Li",
+            "jobTitle": "Committee Member",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "China Southern Power Grid"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Yu Ping",
+            "jobTitle": "Committee Member",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "Jiangsu HopeRun Software Co., Ltd."
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Zhang Shengju",
+            "jobTitle": "Committee Member",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "China Mobile (Suzhou) Software Technology Co., Ltd."
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Zhong Xin",
+            "jobTitle": "Committee Member",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "China Unicom Digital Technology Co., Ltd."
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Hu Zhengce",
+            "jobTitle": "Executive Director",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "Huawei Technologies Co., Ltd."
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Liu Yanfei",
+            "jobTitle": "Executive Secretary",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "OpenAtom Foundation"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler Technical Committee",
+        "description": "The technical governing body of the openEuler community responsible for technical decisions and direction.",
+        "member": [
+          {
+            "@type": "Person",
+            "name": "Hu Xinwei",
+            "jobTitle": "Chairperson"
+          },
+          {
+            "@type": "Person",
+            "name": "Cao Zhi",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Chen Maodong",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Chen Qide",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Chenn Yaqiang",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Du Kaitian",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Gao Guijin",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Hou Jian",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Hu Feng",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Li Yongqiang",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Liu Kai",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Lv Congqing",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Ma Quanyi",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Ren Wei",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Shi Yong",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Tang Geliang",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Tian Jun",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Wang Jianmin",
+            "jobTitle": "Committee Member"
+          },
+          {
+            "@type": "Person",
+            "name": "Wang Jingwei",
+            "jobTitle": "Committee Member"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,148 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "在树莓派上安装 openEuler 24.03 LTS 完整教程",
+    "description": "本文详细介绍在树莓派 3B/3B+/4B 上安装 openEuler 24.03 LTS 的完整流程，包括树莓派镜像的下载获取、SHA256 完整性校验步骤、硬件兼容性要求及最小配置说明。按照本指南，您可以快速完成 openEuler 在树莓派上的部署，开启嵌入式 Linux 开发之旅。",
+    "url": "https://www.openeuler.openatom.cn/zh/wiki/install/raspberry-pi",
+    "inLanguage": "zh",
+    "author": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/wiki/install/raspberry-pi"
+    },
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler 24.03 LTS",
+        "operatingSystem": "Linux",
+        "applicationCategory": "OperatingSystem",
+        "url": "https://www.openeuler.openatom.cn/zh/download"
+      }
+    ],
+    "dependencies": "树莓派 3B / 3B+ / 4B"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "在树莓派上安装 openEuler 24.03 LTS",
+    "description": "介绍 openEuler 操作系统安装在树莓派的方法，以 openEuler 24.03 LTS 为例介绍整体的安装流程。",
+    "url": "https://www.openeuler.openatom.cn/zh/wiki/install/raspberry-pi",
+    "inLanguage": "zh",
+    "tool": [
+      {
+        "@type": "HowToTool",
+        "name": "树莓派 3B / 3B+ / 4B"
+      },
+      {
+        "@type": "HowToTool",
+        "name": "openEuler 24.03 LTS 树莓派镜像 (openEuler-24.03-LTS-raspi-aarch64.img.xz)"
+      }
+    ],
+    "step": [
+      {
+        "@type": "HowToSection",
+        "name": "获取安装源",
+        "itemListElement": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "登录 openEuler Repo 网站",
+            "text": "登录 openEuler Repo（https://repo.openeuler.org/）网站。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "选择版本",
+            "text": "在列表内选择需要的版本，进入该版本的下载列表，本文以"openEuler 24.03 LTS"为例介绍整体的安装流程。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "进入树莓派镜像下载列表",
+            "text": "单击"raspi_img"，进入树莓派镜像的下载列表。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "下载树莓派镜像",
+            "text": "单击"openEuler-24.03-LTS-raspi-aarch64.img.xz"，将 openEuler 发布的树莓派镜像下载到本地。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "下载校验文件",
+            "text": "单击"openEuler-24.03-LTS-raspi-aarch64.img.xz.sha256sum"，将 openEuler 发布的树莓派镜像的校验文件下载到本地。"
+          }
+        ]
+      },
+      {
+        "@type": "HowToSection",
+        "name": "镜像完整性校验",
+        "itemListElement": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "获取校验文件中的校验值",
+            "text": "获取校验文件中的校验值，执行命令：cat openEuler-24.03-LTS-raspi-aarch64.img.xz.sha256sum"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "计算文件的 SHA256 校验值",
+            "text": "计算文件的 sha256 校验值，执行命令：sha256sum openEuler-24.03-LTS-raspi-aarch64.img.xz。命令执行完成后，输出校验值。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "对比校验值",
+            "text": "对比步骤 1 和步骤 2 计算的校验值是否一致。如果校验值一致说明下载的文件完整性没有被破坏，如果校验值不一致则可以确认文件完整性已被破坏，需要重新获取。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "openEuler社区",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Wiki",
+        "item": "https://www.openeuler.openatom.cn/zh/wiki/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "安装",
+        "item": "https://www.openeuler.openatom.cn/zh/wiki/install/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "在树莓派上安装 openEuler 24.03 LTS 完整教程",
+        "item": "https://www.openeuler.openatom.cn/zh/wiki/install/raspberry-pi"
+      }
+    ]
+  }
+]

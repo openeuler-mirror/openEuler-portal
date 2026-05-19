@@ -1,0 +1,77 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "软通动力园区管理平台迁移适配 | openEuler社区",
+    "description": "开源软件维护量减少30%；园区部署时长降低37%；园区人力投入减少28%；迁移后性能提升3%",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/ruantong",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "软通动力园区管理平台迁移适配",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/ruantong"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "园区智能管理平台",
+      "operatingSystem": "openEuler 22.03 LTS",
+      "applicationCategory": "BusinessApplication",
+      "description": "软通动力基于CentOS平台自研的园区智能管理平台，已在全国20多个局点商用，经迁移适配后运行于openEuler操作系统。"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "软通动力园区管理平台迁移适配",
+    "description": "开源软件维护量减少30%；园区部署时长降低37%；园区人力投入减少28%；迁移后性能提升3%",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/ruantong",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "articleBody": "软通动力基于CentOS平台自研的园区智能管理平台已在全国20多个局点商用，为了响应客户的诉求对现有操作系统迁移，本案例基于openEuler操作系统对当前的园区智能管理平台进行迁移适配。迁移方案涉及使用的软件包总计35个，分为：中间件、数据库、依赖包等，其中主业务软件采用java和vue编写，其他组件多为开源组件。开源组件经过前期的DevKit工具评估，其中有20款软件需要重新编译适配，6款软件可以使用系统自带软件包进行替换。其余都为业务软件编译依赖，不需要适配。操作系统选用openEuler 22.03 LTS版本，并将原有x86架构的业务恢复到arm架构新系统上。解决了传统系统跨架构无法兼容、性能存在瓶颈、系统维护难度大、维护成本高的问题。开源软件维护量减少30%；园区部署时长降低37%；园区人力投入减少28%；迁移后性能提升3%。基于openEuler迁移的软通动力园区智能管理平台凭借在效率、性能、易用性等方面的优化，获得2022鲲鹏应用创新大赛陕西赛区银奖。",
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "软通动力",
+        "description": "软通动力信息技术（集团）股份有限公司，本案例园区智能管理平台的研发方"
+      }
+    ],
+    "award": "2022鲲鹏应用创新大赛陕西赛区银奖"
+  }
+]

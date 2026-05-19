@@ -1,0 +1,117 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "中国光大银行 | openEuler社区",
+    "description": "基于全栈云的数字化基础设施体系建设项目",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/gd6/gd6",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "金融",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "中国光大银行",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/gd6/gd6"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "中国光大银行基于全栈云的数字化基础设施体系建设项目",
+    "description": "基于全栈云的数字化基础设施体系建设项目",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/gd6/gd6",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "云计算",
+        "description": "金融行业数字化转型的核心驱动力"
+      },
+      {
+        "@type": "Thing",
+        "name": "信创",
+        "description": "基于openEuler的全栈信创软件基础设施"
+      },
+      {
+        "@type": "Thing",
+        "name": "分布式云平台",
+        "description": "支撑新一代核心等项目的分布式架构转型"
+      }
+    ],
+    "mentions": {
+      "@type": "Organization",
+      "name": "中国光大银行",
+      "url": "https://www.cebbank.com",
+      "industry": "金融"
+    },
+    "articleBody": "随着近年来金融科技的快速发展，云计算平台逐渐成为金融行业数字化转型的核心驱动力。为构建数字化基础设施体系，践行金融科技的创新发展，提供全资源、全服务，满足金融全业务场景需求，提升基础设施的运营运维能力，建设分布式云平台，支撑新一代核心等项目的分布式架构转型。本项目基于"双栈并举、一栈多芯"的技术架构建设，提升安全自主可控能力同时加速推进金融领域科技能力国产化。项目建设采用国芯X86和ARM平台双栈资源池，支持海光、鲲鹏硬件芯片；同时建设以openEuler的银河麒麟为基础，承载国产数据库、中间件及应用系统运行的全栈信创软件基础设施，降低了对商业和封闭软硬件依赖，打造安全可控云技术生态。"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CaseStudy",
+    "name": "中国光大银行：基于全栈云的数字化基础设施体系建设",
+    "description": "中国光大银行基于"双栈并举、一栈多芯"技术架构，以openEuler为基础构建全栈信创软件基础设施，实现金融行业数字化转型。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/gd6/gd6",
+    "provider": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "customer": {
+      "@type": "Organization",
+      "name": "中国光大银行",
+      "industry": "金融",
+      "url": "https://www.cebbank.com"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "云计算"
+      },
+      {
+        "@type": "Thing",
+        "name": "信创"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler"
+      }
+    ]
+  }
+]

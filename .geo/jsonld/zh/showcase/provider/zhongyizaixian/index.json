@@ -1,0 +1,101 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/provider/zhongyizaixian",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/zhongyizaixian",
+    "name": "中移在线核心业务系统 | openEuler社区",
+    "description": "两天，总计六个小时，中移在线核心业务系统顺利完成1050套欧拉操作系统迁移上线",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "中移在线核心业务系统",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/provider/zhongyizaixian"
+        }
+      ]
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/zhongyizaixian/1.jpeg"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "中移在线核心业务系统顺利完成1050套openEuler操作系统迁移上线",
+    "description": "两天，总计六个小时，中移在线核心业务系统顺利完成1050套欧拉操作系统迁移上线",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/zhongyizaixian",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/zhongyizaixian/1.jpeg"
+    },
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "openEuler操作系统迁移"
+      },
+      {
+        "@type": "Thing",
+        "name": "CentOS迁移"
+      },
+      {
+        "@type": "Thing",
+        "name": "x2openEuler迁移工具"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "中国移动在线营销服务中心",
+        "alternateName": "中移在线"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler 20.03 LTS SP3",
+        "operatingSystem": "Linux",
+        "applicationCategory": "OperatingSystem"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "x2openEuler",
+        "description": "openEuler社区发布的操作系统迁移工具，支持CentOS到openEuler的自动化迁移",
+        "operatingSystem": "Linux",
+        "applicationCategory": "DeveloperApplication"
+      }
+    ],
+    "articleBody": "历时两天，总计六个小时，中国移动在线营销服务中心（简称中移在线）正式启动内部核心业务系统全网呼叫平台的迁移工作。首批1050套操作系统完成从CentOS（系统版本7.2、7.4和7.6）到openEuler高效平滑迁移。中移在线拥有全球最大的呼叫平台，采用"中心+边缘"的部署架构，本次迁移工作涉及17个分中心，1000+业务实例。本次迁移中，首次使用openEuler"三热"特性（内核热补丁、内核热替换、操作系统热升级），整个迁移过程平稳高效，迁移进度可视化，业务零中断，用户无感知。中移在线已完成近3万套操作系统迁移，预计到年底将加速完成超过7万套迁移工作。"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "奥卡云OrcaFS分布式并行文件存储系统 | openEuler社区",
+    "description": "集群平均响应时间降低66%，满足HPC应用性能要求",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/OSF",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "奥卡云OrcaFS分布式并行文件存储系统",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/OSF"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "OrcaFS分布式并行文件存储V3.0",
+      "alternateName": "OrcaFS",
+      "description": "OrcaFS分布式并行文件存储V3.0是一款面向高性能计算和大数据应用的存储产品，采用存储服务与元数据服务分离部署的方式，拥有独立的分布式文件系统缓存OrcaOND，支持高效的突发缓存系统Burst Buffer，支持跨节点的副本和纠删技术，拥有快照、配额管理、域管理、在线升级等功能。",
+      "applicationCategory": "存储软件",
+      "operatingSystem": "openEuler",
+      "featureList": [
+        "多客户端并行访问，提供更高带宽",
+        "OrcaOND高效突发缓存系统，解决突发性IO浪涌问题",
+        "支持副本、纠删、RAID等数据保护机制",
+        "RAID-M元RAID支持三重校验，保证三块硬盘同时故障数据不丢失",
+        "支持POSIX、CIFS、NFS、FTP、FTPS、HTTP等网络共享协议",
+        "4k随机读写性能分别提升45%和30%",
+        "4k顺序读写性能分别提升115%和34%"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "西安奥卡云数据科技有限公司",
+        "description": "以软件定义存储、智慧物联网为核心，双核并进，持续赋能企业数据管理及智能运维的高新技术企业",
+        "areaServed": "CN"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "奥卡云OrcaFS分布式并行文件存储系统",
+    "description": "集群平均响应时间降低66%，满足HPC应用性能要求",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/OSF",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "西安奥卡云数据科技有限公司"
+    },
+    "about": [
+      "高性能计算",
+      "分布式文件存储",
+      "HPC",
+      "openEuler",
+      "鲲鹏"
+    ],
+    "articleBody": "OrcaFS分布式并行文件存储V3.0基于鲲鹏基座，利用鲲鹏应用使能套件BoostKit、鲲鹏开发套件DevKit、openEuler、openGauss等进行全栈优化，使得OrcaFS更加适合高性能计算领域海量小文件和非对齐IO对低延时高IOPS的要求。基于鲲鹏BoostKit调优后，4k随机读写性能分别提升45%和30%，4k顺序读写性能分别提升115%和34%，解决高性能计算带来的突发性IO浪涌问题。集群平均响应时间降低66%，满足HPC应用性能要求。"
+  }
+]

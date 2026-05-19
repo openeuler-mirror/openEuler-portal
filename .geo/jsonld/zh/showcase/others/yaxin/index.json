@@ -1,0 +1,113 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/yaxin",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/yaxin",
+    "name": "亚信科技（大数据基础平台产品） | openEuler社区",
+    "description": "openEuler替代原有操作系统，大数据平台平滑迁移，文件读写性能平均提升20% ，业务稳定高效运行。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "展示台",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "亚信科技（大数据基础平台产品）",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/yaxin"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/",
+      "applicationCategory": "OperatingSystem",
+      "operatingSystem": "openEuler",
+      "description": "openEuler是一个开放、多元和架构包容的软件生态体系。"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "亚信科技大数据基础平台基于openEuler的迁移实践",
+    "description": "openEuler替代原有操作系统，大数据平台平滑迁移，文件读写性能平均提升20% ，业务稳定高效运行。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/yaxin",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "大数据平台迁移",
+        "description": "亚信大数据基础平台使用openEuler20.03适配改造，替代原有操作系统，完成产品升级。"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler操作系统",
+        "description": "openEuler是一个开放、多元和架构包容的软件生态体系。"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "亚信科技控股有限公司",
+        "description": "亚信科技控股有限公司始于1993年，注册在北京，是中国领先的软件产品及相关服务提供商，致力成为5G时代大型企业数字化转型的使能者。"
+      }
+    ],
+    "articleBody": "亚信科技控股有限公司始于1993年，注册在北京，是中国领先的软件产品及相关服务提供商，致力成为5G时代大型企业数字化转型的使能者。亚信大数据基础平台产品，提供大数据领域的数据采集、存储，分析，处理，管控、运维能力，已用于电信、交通、政务、能源等行业，为各行业提供稳定、安全、高效的大数据技术底座。大规模分布式Hadoop集群，约200个数据节点，数据量15PB，可用Vcore 1万个，需要平滑升级到openEuler操作系统，并保持数据分析业务的稳定运行。亚信大数据基础平台基于鲲鹏硬件（TaiShan 2280）适配改造，完成了产品的安装部署；使用openEuler20.03适配改造，替代原有操作系统，完成产品升级；毕昇JDK针对鲲鹏多核环境进行优化，为大数据基础平台提供更好的配置和性能优化支持；升级过程中保持服务不中断，在线平滑升级后高效稳定运行。客户价值：大数据平台平滑迁移，业务稳定高效运行；与原有操作系统相比，文件读写性能平均提升20%；满足数字化转型需求，帮助快速构建海量数据信息处理平台，优化运营效率。"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "亚信科技控股有限公司",
+    "foundingDate": "1993",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "北京",
+      "addressCountry": "CN"
+    },
+    "description": "亚信科技控股有限公司始于1993年，注册在北京，是中国领先的软件产品及相关服务提供商，致力成为5G时代大型企业数字化转型的使能者。",
+    "knowsAbout": [
+      "大数据平台",
+      "数字化转型",
+      "5G",
+      "软件产品",
+      "数据采集",
+      "数据存储",
+      "数据分析"
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhejiang",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhejiang",
+    "name": "浙商银行 | openEuler社区",
+    "description": "浙商银行全栈财务管理系统完成操作系统迁移，对金融行业财务系统建设具有示范作用",
+    "inLanguage": "zh",
+    "isPartOf": {"@type": "WebSite", "@id": "https://www.openeuler.openatom.cn/", "url": "https://www.openeuler.openatom.cn/", "name": "openEuler社区"},
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "openEuler社区", "item": "https://www.openeuler.openatom.cn/zh/"},
+        {"@type": "ListItem", "position": 2, "name": "用户案例", "item": "https://www.openeuler.openatom.cn/zh/showcase/"},
+        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"},
+        {"@type": "ListItem", "position": 4, "name": "浙商银行", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhejiang"}
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "浙商银行全栈财务管理系统完成操作系统迁移",
+    "description": "浙商银行全栈财务管理系统完成操作系统迁移，对金融行业财务系统建设具有示范作用",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhejiang",
+    "inLanguage": "zh",
+    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn/", "logo": {"@type": "ImageObject", "url": "https://www.openeuler.openatom.cn/logo.png"}},
+    "about": [
+      {"@type": "Thing", "name": "操作系统迁移"},
+      {"@type": "Thing", "name": "财务管理系统"},
+      {"@type": "Thing", "name": "金融信息化"}
+    ],
+    "mentions": [
+      {"@type": "Organization", "name": "浙商银行股份有限公司"},
+      {"@type": "SoftwareApplication", "name": "用友 NC Cloud 财务软件"},
+      {"@type": "SoftwareApplication", "name": "达梦数据库"},
+      {"@type": "SoftwareApplication", "name": "麒麟服务器操作系统 V10"}
+    ],
+    "articleBody": "浙商银行股份有限公司为浙江金融二期试点的股份制银行，为了响应国科技自立自强战略，加强银行信息化系统的安全性。针对单位原先使用的财务管理系统进行改造升级，集成用友 NC Cloud 财务软件、达梦数据库、用友稳件中间件等软件，完成全建设并成功上线，运行平稳、服务效率提升，对金融行业财务系统建设具有示范作用。解决方案采用虹信（鲲鹏）服务器，产品类型为麒麟服务器操作系统 V10+达梦数据库+用友中间件+用友 NC Cloud 财务软件，用户规模为10套服务器操作系统，核心功能包括对接业务系统、自动对账、动态配置、报表自动生成等。在系统改造中，利用该解决方案进行功能升级，优化系统功能和用户体验，减轻工作人员负担，推动财务部门转型，促进账表一体化、业财融合等现代财务管理念在企业的落地，为企业改进财务管理办法、革新财务数字化体系提供范例。"
+  }
+]

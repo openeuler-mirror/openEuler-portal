@@ -1,0 +1,70 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "openEuler 3.0.0 补丁说明",
+    "description": "下载openEuler 3.0.0版本的补丁说明，确保系统的安全与稳定。",
+    "url": "https://www.openeuler.openatom.cn/zh/migration/download/patch_description-3.0.0",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "迁移专区",
+          "item": "https://www.openeuler.openatom.cn/zh/migration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "openEuler 3.0.0 补丁说明",
+          "item": "https://www.openeuler.openatom.cn/zh/migration/download/patch_description-3.0.0"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "x2openEuler 3.0.0 补丁包",
+    "description": "openEuler 3.0.0版本补丁说明，包含修复目标操作系统名称过长导致数据库无法写入问题的补丁及新增系统巡检项的升级补丁。",
+    "softwareVersion": "3.0.0-630",
+    "operatingSystem": "openEuler",
+    "applicationCategory": "SystemSoftware",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "x2openEuler-core-patch-3.0.0（修复目标操作系统名称过长导致数据库无法写入的问题）",
+        "url": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-core-patch-3.0.0-20230713.x86_64.rpm",
+        "price": "0",
+        "priceCurrency": "CNY",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "x2openEuler-upgrade-patch-3.0.0（新增系统巡检项）",
+        "url": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-upgrade-patch-3.0.0-20230731.x86_64.rpm",
+        "price": "0",
+        "priceCurrency": "CNY",
+        "availability": "https://schema.org/InStock"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  }
+]

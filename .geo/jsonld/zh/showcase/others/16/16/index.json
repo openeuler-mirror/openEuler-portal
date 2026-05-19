@@ -1,0 +1,111 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/16/16.html",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/16/16.html",
+    "name": "星际空间（天津）科技发展有限公司基于openEuler操作系统的多维空间信息管理服务 | openEuler社区",
+    "description": "基于openEuler操作系统的多维空间信息管理服务",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "星际空间（天津）科技发展有限公司基于openEuler操作系统的多维空间信息管理服务",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/16/16.html"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "STARGIS EARTH",
+      "applicationCategory": "地理信息系统（GIS）平台",
+      "operatingSystem": "银河麒麟高级服务器操作系统v10（openEuler商业发行版）",
+      "description": "STARGIS EARTH平台基于银河麒麟高级服务器操作系统v10（openEuler商业发行版操作系统）构建，提供多维空间信息管理服务，支持城市规划、资源管理和环境监测等关键领域。",
+      "featureList": [
+        "全栈性能调优：基于openEuler系操作系统和openGauss数据库进行全栈性能调优",
+        "多维空间信息整合：高效管理和分析地理空间数据",
+        "高并发高吞吐量服务：支持大规模空间数据处理",
+        "流畅加载渲染：优化大范围高精细模型的加载和渲染能力",
+        "空间体拓扑运算：支持复杂的空间分析",
+        "地下空间建模：地下空间实体语义化实时建模"
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "星际空间（天津）科技发展有限公司基于openEuler操作系统的多维空间信息管理服务",
+    "description": "基于openEuler操作系统的多维空间信息管理服务",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/16/16.html",
+    "inLanguage": "zh-CN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "openEuler",
+        "description": "openEuler是一款开源操作系统，具有开源、稳定和安全的特性"
+      },
+      {
+        "@type": "Thing",
+        "name": "地理信息系统",
+        "alternateName": "GIS",
+        "description": "用于城市规划、资源管理和环境监测等关键领域的地理信息系统"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "星际空间（天津）科技发展有限公司",
+        "description": "致力于提供创新的地理信息服务，支持城市规划、资源管理和环境监测等关键领域"
+      },
+      {
+        "@type": "Organization",
+        "name": "天津市大数据中心"
+      },
+      {
+        "@type": "Organization",
+        "name": "天津市规划和自然资源局"
+      },
+      {
+        "@type": "Organization",
+        "name": "成都双流区规资局"
+      }
+    ]
+  }
+]

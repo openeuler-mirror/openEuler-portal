@@ -1,0 +1,112 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/woyun",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/woyun",
+    "name": "联通沃云信创云 | openEuler社区",
+    "description": "基于云原生定制化改造适配，以开源软件OpenStack+KVM为基础打造自主、安全可靠的强大云平台，适配鲲鹏、海光等国内主流芯片，支持银河麒麟操作系统。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "云计算",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "联通沃云信创云",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/woyun"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "联通沃云信创云 — 基于云原生定制化改造适配",
+    "description": "基于云原生定制化改造适配，以开源软件OpenStack+KVM为基础打造自主、安全可靠的强大云平台，适配鲲鹏、海光等国内主流芯片，选用银河麒麟操作系统，提供云服务器、云硬盘、裸金属、负载均衡、虚拟私有云等IaaS和PaaS产品。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/woyun",
+    "inLanguage": "zh-CN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "信创云",
+        "description": "基于国产化技术栈构建的自主可控云计算平台"
+      },
+      {
+        "@type": "Thing",
+        "name": "OpenStack",
+        "description": "开源云计算基础设施平台"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler",
+        "description": "开源操作系统"
+      }
+    ],
+    "keywords": "联通沃云,信创云,云原生,OpenStack,KVM,鲲鹏,海光,银河麒麟,openEuler,IaaS,PaaS",
+    "articleSection": "云计算成功案例",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/woyun"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "联通沃云信创云",
+    "description": "以开源软件OpenStack+KVM为基础打造的自主、安全可靠的强大云平台，自主开发计算、存储、网络、中间件等组件，全面适配国内服务器和操作系统，提供IaaS和PaaS产品。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/woyun",
+    "applicationCategory": "CloudPlatform",
+    "operatingSystem": "银河麒麟高级服务器操作系统 V10",
+    "softwareRequirements": "openEuler, OpenStack, Kubernetes",
+    "featureList": [
+      "云服务器",
+      "云硬盘",
+      "裸金属",
+      "负载均衡",
+      "虚拟私有云",
+      "适配鲲鹏芯片",
+      "适配海光芯片",
+      "IaaS产品",
+      "PaaS产品"
+    ],
+    "creator": {
+      "@type": "Organization",
+      "name": "中国联合网络通信集团有限公司",
+      "alternateName": "联通沃云"
+    }
+  }
+]

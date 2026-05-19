@@ -1,0 +1,54 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "成都菁蓉联创科技有限公司（卫星载荷欧拉嵌入式操作系统产品）",
+  "description": "利用openEuler操作系统构建商业卫星数智基座",
+  "author": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.openeuler.openatom.cn/img/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/jingrong2/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "openEuler Embedded",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux"
+  },
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "成都菁蓉联创科技有限公司"
+    },
+    {
+      "@type": "Thing",
+      "name": "卫星载荷操作系统"
+    },
+    {
+      "@type": "Thing",
+      "name": "商业卫星"
+    },
+    {
+      "@type": "Thing",
+      "name": "数智基座"
+    }
+  ],
+  "articleSection": [
+    "航空航天",
+    "嵌入式系统",
+    "卫星载荷"
+  ],
+  "inLanguage": "zh-CN"
+}

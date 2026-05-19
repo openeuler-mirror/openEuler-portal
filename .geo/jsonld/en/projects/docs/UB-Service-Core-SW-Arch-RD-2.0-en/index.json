@@ -1,0 +1,63 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://www.openeuler.openatom.cn/en/projects/docs/UB-Service-Core-SW-Arch-RD-2.0-en.html",
+    "headline": "UB Service Core Software Architecture Requirements Document 2.0",
+    "name": "UB Service Core Software Architecture RD 2.0",
+    "description": "Explore the UB Service Core Software Architecture Requirements Document v2.0 on openEuler. Access detailed architecture design and specifications for core services.",
+    "url": "https://www.openeuler.openatom.cn/en/projects/docs/UB-Service-Core-SW-Arch-RD-2.0-en.html",
+    "inLanguage": "en",
+    "version": "2.0",
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "UB Service Core",
+      "operatingSystem": "openEuler",
+      "applicationCategory": "SystemApplication"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.openatom.cn/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "https://www.openeuler.openatom.cn/en/projects/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Docs",
+        "item": "https://www.openeuler.openatom.cn/en/projects/docs/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "UB Service Core Software Architecture RD 2.0",
+        "item": "https://www.openeuler.openatom.cn/en/projects/docs/UB-Service-Core-SW-Arch-RD-2.0-en.html"
+      }
+    ]
+  }
+]

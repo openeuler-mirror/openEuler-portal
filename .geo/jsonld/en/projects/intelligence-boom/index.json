@@ -1,0 +1,95 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Intelligence BooM",
+    "url": "https://www.openeuler.openatom.cn/en/projects/intelligence-boom",
+    "description": "Intelligence BooM is an open source full-stack AI inference platform with 20+ components for LLM deployment, fine-tuning, and agentic workflows on heterogeneous hardware.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Linux",
+    "softwareVersion": "25.11",
+    "releaseNotes": "Intelligence BooM 25.11 (Qiaoyu Noodle) empowers domain-specific AI with the pioneering OS-level fine-tuning model and seamless NPU orchestration.",
+    "featureList": [
+      "Heterogeneous convergence platform",
+      "Task management platform",
+      "Data management platform",
+      "Runtime acceleration platform",
+      "Domain model platform",
+      "Intelligent application platform",
+      "Full-stack security platform",
+      "High-throughput, low-cost inference via convergence and allocation of heterogeneous computing power",
+      "50%+ lower TTFT for multi-turn and long-context dialogues via multi-tier caching",
+      "AIKG for Ascend: production-ready performance and 5x+ faster Triton operator development",
+      "Cost-efficient fine-tuning with Atlas 300 series and 50+ pre-trained models",
+      "Seamless Dify integration for out-of-the-box agentic workflows",
+      "Decoupled MindSpore graph mode for PyTorch",
+      "Co-launched vLLM-omni and LMCache-Ascend through upstream partnerships"
+    ],
+    "isPartOf": {
+      "@type": "SoftwareApplication",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "license": "https://opensource.org/licenses/",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Intelligence BooM: Open Source AI Inference | openEuler",
+    "url": "https://www.openeuler.openatom.cn/en/projects/intelligence-boom",
+    "description": "Intelligence BooM is an open source full-stack AI inference platform with 20+ components for LLM deployment, fine-tuning, and agentic workflows on heterogeneous hardware.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "Intelligence BooM"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://www.openeuler.openatom.cn/en/projects/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Intelligence BooM",
+          "item": "https://www.openeuler.openatom.cn/en/projects/intelligence-boom"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler",
+    "url": "https://www.openeuler.openatom.cn",
+    "logo": "https://www.openeuler.openatom.cn/assets/logo.png",
+    "sameAs": [
+      "https://github.com/openeuler"
+    ]
+  }
+]

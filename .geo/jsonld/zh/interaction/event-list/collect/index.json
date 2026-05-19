@@ -1,0 +1,122 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/interaction/event-list/collect",
+    "url": "https://www.openeuler.openatom.cn/zh/interaction/event-list/collect",
+    "name": "活动收集 | 社区活动 | openEuler社区",
+    "description": "收集openEuler社区的各类活动信息，获取更多参与机会。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "社区活动",
+          "item": "https://www.openeuler.openatom.cn/zh/interaction/event-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "活动收集",
+          "item": "https://www.openeuler.openatom.cn/zh/interaction/event-list/collect"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "如何申请举办 openEuler Meetup",
+    "description": "在所在城市申请举办 openEuler Meetup 社区开发者活动的完整流程，包括申请、审核、赋能支持、活动举办及成果反馈。",
+    "inLanguage": "zh-CN",
+    "url": "https://www.openeuler.openatom.cn/zh/interaction/event-list/collect",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "提交申请",
+        "text": "如果您有兴趣在所在城市举办 openEuler Meetup，在举办社区开发者活动前，需要在申请页面提交申请。",
+        "url": "https://www.openeuler.openatom.cn/zh/interaction/event-list/meetup-form/"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "等待申办审核",
+        "text": "如果申请符合申办要求，openEuler 社区会在 5 个工作日内审核并通过电子邮件 events@openeuler.sh 与您联系，提供 openEuler Meetup 赋能支持并与 openEuler 社区冠名联合主办。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "获取赋能支持",
+        "text": "审核通过后可获得活动物料模板（易拉宝、宣传海报、主 KV、横幅、拍照异形牌、直播背景框等源文件）、宣传资源支持（报名小程序、官网、公众号、社群等渠道宣传）、openEuler B 站直播间资源（如需直播）以及社区纪念品（支持 100 人规模以下的实际人数申请）。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "举办活动",
+        "text": "申办单位作为联合主办方参与筹办 Meetup，活动物料使用符合 openEuler 社区品牌规范，作为主导力量推动活动全流程，保证活动的顺利进行。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "提交活动成果反馈",
+        "text": "在活动结束后 3 个工作日内，主办方需向社区提供验收反馈资料。活动成果反馈请联系 events@openeuler.sh。"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "url": "https://www.openeuler.openatom.cn/zh/interaction/event-list/collect",
+    "inLanguage": "zh-CN",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "如何申请举办 openEuler Meetup？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "如果您有兴趣在所在城市举办 openEuler Meetup，在举办社区开发者活动前，需要在申请页面（https://www.openeuler.openatom.cn/zh/interaction/event-list/meetup-form/）提交申请。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "申请 openEuler Meetup 后多久会收到审核结果？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "如果申请符合申办要求，openEuler 社区会在 5 个工作日内审核，并通过电子邮件 events@openeuler.sh 与您联系。即便申请不合适，也会通过电子邮件通知您。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "举办 openEuler Meetup 可以获得哪些赋能支持？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "审核通过后可获得：活动物料模板（易拉宝、宣传海报、主 KV、横幅、拍照异形牌、直播背景框等源文件）；宣传资源支持（报名小程序、官网、公众号、社群等渠道宣传）；openEuler B 站直播间资源（如需直播）；社区纪念品（支持 100 人规模以下的实际人数申请）。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "活动结束后需要提交什么资料？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "在活动结束后 3 个工作日内，主办方需向社区提供验收反馈资料。活动成果反馈请联系 events@openeuler.sh。"
+        }
+      }
+    ]
+  }
+]

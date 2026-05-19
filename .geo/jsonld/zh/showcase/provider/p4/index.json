@@ -1,0 +1,76 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "联通智能化运营平台 | openEuler社区",
+    "description": "构建全栈自主创新的基础设施服务层",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/p4",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "案例展示",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "联通智能化运营平台",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/provider/p4"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "联通智能化运营平台",
+      "description": "联通系统集成公司基于数十年丰富的IT运营管理经验，依托自主研发能力构建的一体化、全生命周期的智能运营工具链，覆盖智能监控平台、CMDB配置管理平台、自动化运维平台、ITOM运维服务管理平台、运维大数据分析平台五大子平台。",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "银河麒麟高级服务器操作系统 V10",
+      "featureList": [
+        "智能监控平台",
+        "CMDB配置管理平台",
+        "自动化运维平台",
+        "ITOM运维服务管理平台",
+        "运维大数据分析平台"
+      ],
+      "provider": {
+        "@type": "Organization",
+        "name": "联通系统集成公司",
+        "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/p4"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "联通智能化运营平台 — 全栈自主创新基础设施解决方案",
+    "description": "联通系统集成公司采用飞腾服务器与银河麒麟高级服务器操作系统V10技术路线，构建全栈自主创新的基础设施服务层，实现联通智能化运营平台的自主创新适配与稳定运行。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/p4",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "articleSection": "案例展示",
+    "keywords": "联通智能化运营平台, openEuler, 飞腾服务器, 银河麒麟, 自主创新, 智能运维, CMDB, ITOM"
+  }
+]

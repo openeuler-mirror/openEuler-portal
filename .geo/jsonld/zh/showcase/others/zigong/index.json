@@ -1,0 +1,120 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/zigong",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zigong",
+    "name": "自贡市第一人民医院 | openEuler社区",
+    "description": "基于openEuler对现有平台进行转型升级",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "自贡市第一人民医院",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/zigong"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "openEuler医疗行业数字化转型",
+      "description": "自贡市第一人民医院基于openEuler完成医院基础设施数字化转型升级，采用容器化与超融合方案，利用Kubernetes编排引擎实现弹性伸缩，降低硬件投资成本。"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "自贡市第一人民医院基于openEuler完成医院数字化转型升级",
+    "description": "自贡市第一人民医院信息科团队使用openEuler完成医院基础设施新数字化转型的升级替代，利用容器特性完美承载医院核心业务升级改造，降低医院硬件投资的同时完成对现有平台进行改造。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zigong",
+    "inLanguage": "zh-CN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "articleSection": "成功案例",
+    "keywords": "openEuler, 医疗行业, 数字化转型, 容器化, Kubernetes, 超融合, 海光x86, 信息安全",
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "openEuler操作系统"
+      },
+      {
+        "@type": "Thing",
+        "name": "医疗信息化"
+      },
+      {
+        "@type": "Thing",
+        "name": "容器化改造"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler",
+        "version": "22.03 LTS",
+        "applicationCategory": "操作系统",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Kubernetes (K8S)",
+        "applicationCategory": "容器编排引擎"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CaseStudy",
+    "name": "自贡市第一人民医院 openEuler 数字化转型案例",
+    "description": "自贡市第一人民医院基于openEuler对现有平台进行转型升级，采用应用容器化与超融合方案，完成医院核心业务架构的升级替换，实现弹性伸缩与资源高效利用。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zigong",
+    "provider": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "subjectOf": {
+      "@type": "Organization",
+      "name": "自贡市第一人民医院",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "自贡市",
+        "addressCountry": "CN"
+      }
+    }
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/hengsheng",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/hengsheng",
+    "name": "恒生电子 | openEuler社区",
+    "description": "基于openEuler打造金融证券场景深度定制开发的商业版本LightOS操作系统",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "案例展示",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "金融",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "恒生电子",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/hengsheng"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "恒生电子基于openEuler打造金融证券场景LightOS操作系统",
+    "description": "基于openEuler打造金融证券场景深度定制开发的商业版本LightOS操作系统",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/hengsheng",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "LightOS",
+        "description": "恒生电子基于开源openEuler22.03 LTS SP1进行金融证券场景深度定制开发的商业版本操作系统，为证券行业用户打造的国产化操作系统替代最佳实践解决方案",
+        "applicationCategory": "OperatingSystem",
+        "operatingSystem": "openEuler 22.03 LTS SP1",
+        "featureList": [
+          "针对证券交易场景进行深度裁剪，提升系统部署效率、运维效率与安全性",
+          "针对恒生JRES、LDP两个底座平台进行专门优化",
+          "IAR网关、Redis、Kafka、低延迟消息总线等组件吞吐量大幅提高",
+          "国密算法支持，提供国密算法库、国密证书、国密安全传输协议等密码服务",
+          "总体性能提升超过10%"
+        ]
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "恒生电子",
+        "description": "以技术为核心竞争力，聚焦于财富资产管理领域，为证券、银行、基金、期货、信托、保险等金融机构提供整体的IT解决方案和服务的全领域金融IT服务商"
+      },
+      {
+        "@type": "Organization",
+        "name": "江苏润和软件股份有限公司",
+        "description": "与恒生电子合作提供系统常规支持、补丁升级、技术培训、开发支持以及现场交付等全生命周期的运维支持服务"
+      }
+    ]
+  }
+]

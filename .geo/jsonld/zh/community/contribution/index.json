@@ -1,0 +1,93 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/community/contribution",
+    "url": "https://www.openeuler.openatom.cn/zh/community/contribution",
+    "name": "openEuler贡献攻略地图 | openEuler贡献攻略 | openEuler社区",
+    "description": "阅读这篇完整指南，快速了解参与openEuler社区贡献全流程。我们将介绍关于社区贡献的完整流程，包括签署CLA、项目体验、提交issue、提交pr、代码贡献、活动申请、开源成长等等。想要了解更多信息，欢迎访问openEuler官网。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "社区",
+          "item": "https://www.openeuler.openatom.cn/zh/community/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "贡献攻略地图",
+          "item": "https://www.openeuler.openatom.cn/zh/community/contribution"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "如何参与openEuler社区贡献",
+    "description": "阅读这篇完整指南，快速了解参与openEuler社区贡献全流程。我们将介绍关于社区贡献的完整流程，包括签署CLA、项目体验、提交issue、提交pr、代码贡献、活动申请、开源成长等等。",
+    "inLanguage": "zh",
+    "url": "https://www.openeuler.openatom.cn/zh/community/contribution",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "签署CLA",
+        "text": "参与openEuler社区贡献前，需要先签署贡献者许可协议（CLA）。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "项目体验",
+        "text": "了解并体验openEuler社区中的各类开源项目。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "提交issue",
+        "text": "在项目仓库中提交问题（issue），反馈缺陷或建议。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "提交PR",
+        "text": "向项目提交Pull Request，贡献代码或文档改进。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "代码贡献",
+        "text": "持续为openEuler社区项目贡献代码，提升开源影响力。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 6,
+        "name": "活动申请",
+        "text": "参与或申请举办openEuler社区相关活动。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 7,
+        "name": "开源成长",
+        "text": "在openEuler社区中持续成长，成为资深开源贡献者。"
+      }
+    ]
+  }
+]

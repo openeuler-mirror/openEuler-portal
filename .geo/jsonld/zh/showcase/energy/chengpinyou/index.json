@@ -1,0 +1,84 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "成品油资质管理平台迁移适配 | openEuler社区",
+    "description": "迁移适配后产品支持多架构，部署时长大幅降低",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/chengpinyou",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "能源",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "成品油资质管理平台迁移适配",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/chengpinyou"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "成品油资质管理平台",
+      "operatingSystem": "openEuler 22.03 LTS",
+      "applicationCategory": "BusinessApplication",
+      "description": "依托成品油资质管理平台，对加油站的资质信息、管理制度、设施设备情况进行统一管理，实现加油站安全生产的信息化。实现创新完善商务局在成品油流通领域的管理手段，同时加强信息的归集共享，是落实"放管服"和"一网通办"的有力体现，充分满足国家商务部的"互联网+监管"要求。"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CaseStudy",
+    "name": "成品油资质管理平台迁移适配",
+    "description": "迁移适配后产品支持多架构，部署时长大幅降低",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/chengpinyou",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      {
+        "@type": "Thing",
+        "name": "鲲鹏920"
+      },
+      {
+        "@type": "Thing",
+        "name": "ARM64多架构迁移适配"
+      }
+    ],
+    "result": [
+      "开源软件维护量减少35%，一键式多平台部署，时长降低50%",
+      "迁移人力投入减少50%，迁移后性能提升2%",
+      "迁移后部署实现了平台差异用户无感知，充分发挥了联合解决方案的优势，提升了产品的竞争力"
+    ]
+  }
+]

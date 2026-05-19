@@ -1,0 +1,116 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "OSV技术测评报告 | OSV技术测评 | openEuler社区",
+    "description": "本页面提供openEuler的OSV技术测评报告，包括适用范围、申请流程等详细内容。",
+    "url": "https://www.openeuler.openatom.cn/zh/approve/approve-info",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "OSV技术测评",
+          "item": "https://www.openeuler.openatom.cn/zh/approve/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "OSV技术测评报告",
+          "item": "https://www.openeuler.openatom.cn/zh/approve/approve-info"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "OSV技术测评",
+      "description": "针对基于openEuler的OSV版本进行技术兼容性测评，涵盖COMPATIBLE工具检测与平台验证两大类检测项目。"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "OSV技术测评检测项目列表",
+      "description": "OSV技术测评报告包含COMPATIBLE工具检测和平台验证两大类检测项目",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "核心包一致性检测",
+          "description": "检测项：核心包；检测点描述：核心包一致性比例"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "软件包一致性检测",
+          "description": "检测项：软件包；检测点描述：L1/L2软件包一致性比例"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "内核KABI接口检测",
+          "description": "检测项：内核KABI接口；检测点描述：OSV内核KABI接口白名单与openEuler内核KABI接口白名单一致性比例"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "用户态ABI接口检测",
+          "description": "检测项：用户态ABI接口；检测点描述：OSV软件包ABI接口与openEuler软件包ABI一致性比例"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Service默认配置检测",
+          "description": "检测项：Service默认配置；检测点描述：OSV软件包Service文件与openEuler软件包Service文件一致性比例"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "软件包默认配置检测",
+          "description": "检测项：软件包默认配置；检测点描述：OSV软件包配置文件与openEuler软件包配置文件一致性比例"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "内核特性配置检测",
+          "description": "检测项：内核特性配置；检测点描述：OSV的内核配置与openEuler一致性比例"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "仓库安装验证",
+          "description": "检测项：仓库；检测点描述：EPOL仓/软件所仓库在OSV版本上安装成功比例"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "基本功能验证",
+          "description": "检测项：基本功能；检测点描述：社区AT用例运行结果"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "基础性能验证",
+          "description": "检测项：基础性能；检测点描述：基础性能测试结果"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "运行时默认配置验证",
+          "description": "检测项：运行时默认配置；检测点描述：OSV版本运行时默认配置一致性"
+        }
+      ]
+    }
+  }
+]

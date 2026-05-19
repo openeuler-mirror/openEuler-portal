@@ -1,0 +1,120 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "如何使用WSL在Windows上安装openEuler",
+    "description": "学习如何在Windows子系统Linux（WSL）上安装openEuler。本文介绍通过微软应用商店或sideload方式在Windows中安装openEuler 24.03的完整步骤。",
+    "url": "https://www.openeuler.openatom.cn/zh/wiki/install/wsl",
+    "inLanguage": "zh",
+    "author": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/wiki/install/wsl"
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "openEuler WSL",
+      "operatingSystem": "Windows",
+      "applicationCategory": "DeveloperApplication",
+      "url": "https://www.openeuler.openatom.cn/zh/download"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "如何使用WSL在Windows上安装openEuler",
+    "description": "使用WSL（Windows Subsystem For Linux）在Windows上安装openEuler 24.03的步骤指南。",
+    "url": "https://www.openeuler.openatom.cn/zh/wiki/install/wsl",
+    "inLanguage": "zh",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "在Windows Server中安装WSL",
+        "text": "下载最新发布的openEuler 24.03-LTS的WSL sideload安装包（openEuler-WSL-24.03.zip），或通过微软应用商店安装。如通过应用商店安装，可跳过证书安装步骤。",
+        "url": "https://www.openeuler.openatom.cn/zh/wiki/install/wsl"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "安装证书",
+        "text": "双击压缩包中的DistroLauncher-Appx_2403.0.1.0_x64_ARM64.cer，依次选择安装证书 -> 本地计算机 -> 将所有的证书都放入下列存储 -> 受信任的人。",
+        "url": "https://www.openeuler.openatom.cn/zh/wiki/install/wsl"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "安装sideload应用",
+        "text": "以管理员权限开启一个PowerShell终端，并执行压缩包中的Add-AppDevPackage.ps1脚本。",
+        "url": "https://www.openeuler.openatom.cn/zh/wiki/install/wsl"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "初始化WSL环境",
+        "text": "安装完成后，在开始菜单即可找到openEuler 24.03的应用图标，双击即可启动，启动后跟随引导初始化账号密码即可开始体验WSL环境。",
+        "url": "https://www.openeuler.openatom.cn/zh/wiki/install/wsl"
+      }
+    ],
+    "tool": [
+      {
+        "@type": "HowToTool",
+        "name": "Windows Subsystem For Linux (WSL)"
+      },
+      {
+        "@type": "HowToTool",
+        "name": "PowerShell"
+      }
+    ],
+    "supply": [
+      {
+        "@type": "HowToSupply",
+        "name": "openEuler 24.03-LTS WSL安装包",
+        "url": "https://repo.openeuler.org/openEuler-24.03-LTS/WSL/openEuler-WSL-24.03.zip"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "openEuler社区",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Wiki",
+        "item": "https://www.openeuler.openatom.cn/zh/wiki/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "安装",
+        "item": "https://www.openeuler.openatom.cn/zh/wiki/install/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "openEuler WSL 安装指南",
+        "item": "https://www.openeuler.openatom.cn/zh/wiki/install/wsl"
+      }
+    ]
+  }
+]

@@ -1,0 +1,120 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/showcase/provider/tianyiyun0330",
+    "url": "https://www.openeuler.openatom.cn/en/showcase/provider/tianyiyun0330",
+    "name": "Seamless OS Migration to CTyunOS | openEuler",
+    "description": "China Telecom deployed 30,000 CTyunOS instances based on openEuler, seamlessly replacing the original OS across all scenarios using openEuler's six-step migration solution and x2openEuler tool, boosting overall platform performance by over 10%.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Seamless OS Migration to CTyunOS",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/provider/tianyiyun0330"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Seamless OS Migration to CTyunOS",
+    "description": "China Telecom deployed 30,000 CTyunOS instances based on openEuler, seamlessly replacing the original OS across all scenarios using openEuler's six-step migration solution and x2openEuler tool, boosting overall platform performance by over 10%.",
+    "url": "https://www.openeuler.openatom.cn/en/showcase/provider/tianyiyun0330",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "CTyunOS",
+        "operatingSystem": "Linux",
+        "applicationCategory": "OperatingSystem",
+        "description": "Self-developed OS by China Telecom based on openEuler, fully adapted to China Telecom eCloud services by August 2022."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "x2openEuler",
+        "operatingSystem": "Linux",
+        "applicationCategory": "DeveloperApplication",
+        "description": "openEuler migration assessment and in-place upgrade tool that migrates existing CentOS to openEuler within two hours without redeploying services or reconfiguring parameters.",
+        "url": "https://www.openeuler.openatom.cn/en/"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "China Telecom",
+        "description": "Released self-developed CTyunOS based on openEuler in 2021 and deployed 30,000 CTyunOS instances to support cloudification and digital transformation."
+      }
+    ],
+    "mainEntity": {
+      "@type": "HowTo",
+      "name": "openEuler Six-Step OS Migration Solution",
+      "description": "CTyunOS adopts openEuler's six-step migration solution for seamless OS replacement from CentOS to openEuler.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Create a migration support team",
+          "text": "Establish a dedicated team to oversee and support the OS migration process."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Conduct migration analysis",
+          "text": "Use x2openEuler to perform thorough analysis of hardware, software, and configurations, including upper-layer software interface changes, dependency versions, and post-migration OS configurations."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Design a migration plan",
+          "text": "Develop a comprehensive migration plan based on the analysis results."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Adapt software before migration",
+          "text": "Ensure all software is adapted and compatible before the actual migration begins."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Implement migration",
+          "text": "Use x2openEuler in-place upgrade to migrate existing CentOS to openEuler within two hours, without redeploying services or reconfiguring parameters."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Perform testing and rollout",
+          "text": "Conduct thorough testing and execute the rollout to production environments."
+        }
+      ]
+    }
+  }
+]

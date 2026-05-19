@@ -1,0 +1,86 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/wiki/about/introduce",
+      "url": "https://www.openeuler.openatom.cn/zh/wiki/about/introduce",
+      "name": "openEuler 项目介绍 | Wiki | openEuler社区",
+      "description": "了解openEuler项目的整体介绍与背景，获取基本信息。",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler社区",
+        "inLanguage": "zh"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "openEuler社区",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Wiki",
+            "item": "https://www.openeuler.openatom.cn/zh/wiki/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "openEuler 项目介绍",
+            "item": "https://www.openeuler.openatom.cn/zh/wiki/about/introduce"
+          }
+        ]
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "@id": "https://www.openeuler.openatom.cn/#openeuler",
+        "name": "openEuler",
+        "alternateName": "OpenAtom openEuler",
+        "description": "openEuler 是面向数字基础设施的开源操作系统，支持服务器、云计算、边缘计算、嵌入式等应用场景，支持多样性计算，致力于提供安全、稳定、易用的操作系统。",
+        "applicationCategory": "OperatingSystem",
+        "operatingSystem": "Linux",
+        "url": "https://www.openeuler.openatom.cn/zh/",
+        "funder": {
+          "@type": "Organization",
+          "name": "开放原子开源基金会",
+          "url": "https://www.openatom.org/"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.openeuler.openatom.cn/#organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/zh/",
+      "description": "openEuler 社区通过开放的社区形式与全球的开发者共同构建一个开放、多元和架构包容的软件生态体系，孵化支持多种处理器架构、覆盖数字设施全场景，推动企业数字基础设施软硬件、应用生态繁荣发展。",
+      "foundingOrganization": {
+        "@type": "Organization",
+        "name": "开放原子开源基金会",
+        "url": "https://www.openatom.org/"
+      },
+      "subOrganization": [
+        {
+          "@type": "Organization",
+          "name": "技术委员会",
+          "url": "https://www.openeuler.openatom.cn/zh/community/organization/#%E6%8A%80%E6%9C%AF%E5%A7%94%E5%91%98%E4%BC%9A"
+        },
+        {
+          "@type": "Organization",
+          "name": "SIG 中心",
+          "url": "https://www.openeuler.openatom.cn/zh/sig/sig-list/"
+        }
+      ],
+      "sameAs": [
+        "https://www.openeuler.openatom.cn/zh/community/organization/"
+      ]
+    }
+  ]
+]

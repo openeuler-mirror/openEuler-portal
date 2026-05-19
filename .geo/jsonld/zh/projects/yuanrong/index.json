@@ -1,0 +1,69 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "openYuanrong Serverless分布式计算引擎，简化AI与大数据应用开发",
+      "url": "https://www.openeuler.openatom.cn/zh/projects/yuanrong",
+      "description": "openYuanrong是openEuler社区的Serverless分布式计算引擎，提供多语言函数编程接口，以单机编程体验实现分布式高性能运行。支持Python、Java、C++，涵盖分布式动态调度、异构多级缓存与数据共享，助力AI、大数据、微服务应用高效开发与部署。",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "openYuanrong",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Linux",
+        "url": "https://www.openeuler.openatom.cn/zh/projects/yuanrong",
+        "description": "openYuanrong是一个Serverless分布式计算引擎，致力于以一套统一Serverless架构支持AI、大数据、微服务等各类分布式应用。它提供多语言函数编程接口，以单机编程体验简化分布式应用开发；提供分布式动态调度和数据共享能力，实现分布式应用的高性能运行和集群的高效资源利用。",
+        "featureList": [
+          "多语言函数运行时：支持Python、Java、C++语言，实现类单机编程高性能分布式运行",
+          "函数系统：提供大规模分布式动态调度，支持函数实例极速弹性扩缩和跨节点迁移",
+          "数据系统：提供异构分布式多级缓存，支持Object/Stream语义，实现函数实例间高性能数据共享及传递"
+        ],
+        "programmingLanguage": [
+          "Python",
+          "Java",
+          "C++"
+        ],
+        "author": {
+          "@type": "Organization",
+          "name": "openEuler社区",
+          "url": "https://www.openeuler.openatom.cn"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "openEuler社区",
+          "url": "https://www.openeuler.openatom.cn"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://www.openeuler.openatom.cn/zh/projects/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "openYuanrong",
+          "item": "https://www.openeuler.openatom.cn/zh/projects/yuanrong"
+        }
+      ]
+    }
+  ]
+]

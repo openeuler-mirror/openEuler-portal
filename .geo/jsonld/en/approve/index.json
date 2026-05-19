@@ -1,0 +1,66 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "OSV Technical Evaluation for openEuler Distributions",
+    "description": "Explore the OSV technical evaluation list for openEuler. Check certified OS vendors, versions, and download links with full compatibility and ecosystem testing results.",
+    "url": "https://www.openeuler.openatom.cn/en/approve",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "OSV Technical Evaluation",
+      "description": "A technical evaluation program focusing on openEuler kernel and base packages, verifying that partner secondary distributions retain core ecosystem features and maintain key configurations. Evaluates L1/L2 package versions, packaging methods, interface consistency, KABI whitelisting, architecture features (ARM/X86), and performance optimization configurations."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "OSV Technical Evaluation",
+          "item": "https://www.openeuler.openatom.cn/en/approve"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "OSV Technical Evaluation List for openEuler",
+    "description": "A catalog of OS vendors (OSVs) that have completed technical evaluation for openEuler distributions, including certification status, OS versions, download links, evaluation dates, and compatibility testing results.",
+    "url": "https://www.openeuler.openatom.cn/en/approve",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "variableMeasured": [
+      "OS Vendor",
+      "OS Version",
+      "Architecture",
+      "Evaluation Date",
+      "Evaluation Details"
+    ],
+    "license": "https://www.openeuler.openatom.cn/en/other/privacy/"
+  }
+]

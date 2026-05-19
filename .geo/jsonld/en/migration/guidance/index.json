@@ -1,0 +1,97 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/migration/guidance",
+    "url": "https://www.openeuler.openatom.cn/en/migration/guidance",
+    "name": "Guidelines for Migrating to openEuler | openEuler",
+    "description": "Effortlessly migrate to openEuler with our comprehensive solutions, enhancing system efficiency, security, and performance",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/"
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Migration",
+          "item": "https://www.openeuler.openatom.cn/en/migration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Guidelines for Migrating to openEuler",
+          "item": "https://www.openeuler.openatom.cn/en/migration/guidance"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Migrate to openEuler",
+    "description": "A comprehensive six-step guide for migrating your operating system to openEuler, including team setup, needs analysis, planning, software adaptation, OS migration, and testing.",
+    "url": "https://www.openeuler.openatom.cn/en/migration/guidance",
+    "image": "https://www.openeuler.openatom.cn/en/migration/guidance/process.png",
+    "tool": {
+      "@type": "HowToTool",
+      "name": "x2openEuler",
+      "url": "https://www.openeuler.openatom.cn/en/migration/download/"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Create a Migration Support Team",
+        "text": "Set up a migration support team comprising members from your company's service, IT, and maintenance departments, as well as from the OSV and ISV. The team will provide technical support and organizational assurance during the operation."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Analyze Migration Needs",
+        "text": "Determine the project overview by collecting the names and requirements of services to be migrated, and the software stacks, deployment modes, and server hardware information. Filter information by service provider, OS, and hardware environment, with specified service priority. Assess compatibility in an assessment report."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Design a Migration Plan",
+        "text": "Based on the migration analysis, design a comprehensive migration plan that addresses all identified compatibility and operational requirements."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Adapt Software",
+        "text": "Adapt the required software components before migration using x2openEuler to perform compatibility tests and batch analysis of nodes to be upgraded."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Migrate the OS",
+        "text": "Use x2openEuler to perform in-place upgrade of OSs in batches. Batch add nodes to be upgraded, then batch upgrade the adapted nodes to achieve an end-to-end seamless migration to openEuler."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 6,
+        "name": "Perform Testing and Service Rollout",
+        "text": "Conduct thorough testing and perform service rollout to validate the migration was successful and ensure system stability and performance."
+      }
+    ]
+  }
+]

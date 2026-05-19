@@ -1,0 +1,225 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Annual Events & Releases | openEuler",
+    "description": "Stay informed with openEuler's community calendar. Explore key events, conferences, and release schedules for the year, and never miss any update.",
+    "url": "https://www.openeuler.openatom.cn/en/interaction/event-list",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.openatom.cn/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Interaction",
+        "item": "https://www.openeuler.openatom.cn/en/interaction/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Event List",
+        "item": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "2026 openEuler Event Plan",
+    "description": "A comprehensive list of open source summits, tech conferences, and openEuler community events planned for 2026.",
+    "url": "https://www.openeuler.openatom.cn/en/interaction/event-list",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Event",
+          "name": "FOSSASIA Summit 2026",
+          "description": "Open source summit organized by FOSSASIA.",
+          "location": {
+            "@type": "Place",
+            "name": "Bangkok, Thailand",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Bangkok",
+              "addressCountry": "TH"
+            }
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "FOSSASIA"
+          },
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2026",
+          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Event",
+          "name": "LEAP 2026",
+          "description": "LEAP technology conference held in Riyadh, Saudi Arabia.",
+          "location": {
+            "@type": "Place",
+            "name": "Riyadh Exhibition & Convention Center, Malham, Riyadh, Saudi Arabia",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Riyadh",
+              "addressCountry": "SA"
+            }
+          },
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2026",
+          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Event",
+          "name": "Linaro Connect 2025",
+          "description": "Linaro Connect open source technology conference.",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2025",
+          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Event",
+          "name": "2026 OpenAtom Open Source ECO-Conference",
+          "description": "OpenAtom Foundation's open source ecosystem conference.",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2026",
+          "organizer": {
+            "@type": "Organization",
+            "name": "OpenAtom Foundation"
+          },
+          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Event",
+          "name": "LEAP EAST 2026",
+          "description": "LEAP EAST technology conference in Hong Kong, China.",
+          "location": {
+            "@type": "Place",
+            "name": "Hong Kong, China",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Hong Kong",
+              "addressCountry": "CN"
+            }
+          },
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2026",
+          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Event",
+          "name": "KubeCon + CloudNativeCon China 2026",
+          "description": "KubeCon and CloudNativeCon China, a premier cloud native computing conference.",
+          "location": {
+            "@type": "Place",
+            "name": "Singapore"
+          },
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2026",
+          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Event",
+          "name": "Data Centre World Asia 2026",
+          "description": "Data Centre World Asia conference.",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2026",
+          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "Event",
+          "name": "Open Source Summit Europe 2026",
+          "description": "The Linux Foundation's Open Source Summit Europe.",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2026",
+          "organizer": {
+            "@type": "Organization",
+            "name": "The Linux Foundation"
+          },
+          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "Event",
+          "name": "Operating System Conference & openEuler Summit 2026",
+          "description": "Annual operating system conference co-hosted with the openEuler Summit.",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2026",
+          "organizer": {
+            "@type": "Organization",
+            "name": "openEuler",
+            "url": "https://www.openeuler.openatom.cn"
+          },
+          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "Event",
+          "name": "GITEX Global 2026",
+          "description": "GITEX Global technology conference.",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2026",
+          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+        }
+      }
+    ]
+  }
+]

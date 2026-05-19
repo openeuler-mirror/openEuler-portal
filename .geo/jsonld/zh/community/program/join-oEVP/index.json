@@ -1,0 +1,80 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "加入oEVP计划 | 社区贡献 | openEuler社区",
+    "description": "加入openEuler的oEVP计划，共同推动社区的发展与创新。",
+    "url": "https://www.openeuler.openatom.cn/zh/community/program/join-oEVP",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "社区贡献",
+          "item": "https://www.openeuler.openatom.cn/zh/community/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "加入oEVP计划",
+          "item": "https://www.openeuler.openatom.cn/zh/community/program/join-oEVP"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProgramMembership",
+    "name": "openEuler Valuable Professional (oEVP)",
+    "description": "openEuler最具价值专家（openEuler Valuable Professional）是openEuler社区颁发给技术专家的一项荣誉认证，以此表彰他们热衷实践、乐于分享的布道精神，为openEuler社区建设和技术传播做出卓越贡献。",
+    "url": "https://www.openeuler.openatom.cn/zh/community/program/join-oEVP",
+    "membershipNumber": "oEVP",
+    "hostingOrganization": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "email": "events@openeuler.sh"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "成为openEuler Valuable Professional的申请条件",
+    "description": "申请审核将参考以下条件",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "社区领导者、行业大会重量级演讲嘉宾"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "某技术领域具有影响力的技术专家"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "活跃在开发者社区，热衷对开发者进行技术答疑等"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "有技术内容产出：技术教程，代码示例，出版著作，发表博客文章和视频等"
+      }
+    ]
+  }
+]

@@ -1,0 +1,126 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/migration",
+    "url": "https://www.openeuler.openatom.cn/en/migration",
+    "name": "Migrate to openEuler | openEuler",
+    "description": "Discover seamless OS migration with openEuler and elevate your system's performance and security.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Migration Center",
+          "item": "https://www.openeuler.openatom.cn/en/migration"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "x2openEuler",
+    "version": "3.0.0-2024930",
+    "applicationCategory": "SystemApplication",
+    "operatingSystem": ["x86_64", "AArch64"],
+    "description": "The x2openEuler migration tool suite helps you prepare, perform, and test your OS migration and services.",
+    "url": "https://www.openeuler.openatom.cn/en/migration",
+    "downloadUrl": "https://www.openeuler.openatom.cn/en/migration",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Six Steps to Migrate to openEuler",
+    "description": "A comprehensive end-to-end guide for migrating your operating system to openEuler, covering preparation, implementation, and testing.",
+    "url": "https://www.openeuler.openatom.cn/en/migration",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Prepare",
+        "text": "Create a support team, analyze the project, design a migration plan, and port software before migration."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Implement - In-place Upgrade",
+        "text": "Upgrade the source OS directly using the in-place upgrade path, which typically takes approximately 1 hour."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Implement - Migration After Adaptation",
+        "text": "Automatically install the OS and synchronize configurations, then install applications. This path typically takes approximately 4 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Test and Roll Out",
+        "text": "Perform system monitoring, inspection and detection, security vulnerability updates, and secure intelligent O&M to verify the migration."
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is x2openEuler?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "x2openEuler is a migration tool suite provided by openEuler that helps users prepare, perform, and test their OS migration and services. The latest version is x2openEuler 3.0.0-2024930, available for x86_64 and AArch64 architectures."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What migration paths does openEuler support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler supports two main migration paths: In-place Upgrade (approximately 1 hour) which directly upgrades the source OS, and Migration After Adaptation (approximately 4 hours) which automatically installs the OS, synchronizes configurations, and installs applications."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the advantages of migrating to openEuler?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler provides easy, stable, and efficient OS migration with an end-to-end solution, easy-to-use tools, and comprehensive and responsive support. It is an open source OS designed for digital infrastructure with key kernel innovation for multi-architecture computing and full-stack optimization for diverse scenarios."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I get support for openEuler migration issues?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you have issues or requirements relating to system migration, you can submit them through QuickIssue. You can also join the openEuler Discord group to connect with the community and share experiences. FAQs are also available on the migration page."
+        }
+      }
+    ]
+  }
+]

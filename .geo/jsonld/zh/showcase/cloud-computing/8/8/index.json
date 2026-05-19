@@ -1,0 +1,115 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "天玑科技数据库私有云平台 | openEuler社区",
+      "description": "构建高效、可靠的数据库私有云",
+      "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/8/8.html",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "openEuler社区",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "成功案例",
+            "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "云计算",
+            "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "天玑科技数据库私有云平台",
+            "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/8/8.html"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "天玑科技数据库私有云平台",
+      "description": "构建高效、可靠的数据库私有云。上海天玑科技股份有限公司推出的自主创新数据库私有云平台，基于openEuler系操作系统，为企业提供"一云多芯"、"一云多库"的解决方案。",
+      "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/8/8.html",
+      "inLanguage": "zh",
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        }
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "数据库私有云"
+        },
+        {
+          "@type": "Thing",
+          "name": "openEuler操作系统"
+        },
+        {
+          "@type": "Thing",
+          "name": "分布式存储"
+        },
+        {
+          "@type": "Thing",
+          "name": "云计算"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "Organization",
+          "name": "上海天玑科技股份有限公司"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "银河麒麟高级服务器操作系统V10",
+          "operatingSystem": "openEuler"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "天玑科技数据库私有云平台",
+      "description": "上海天玑科技股份有限公司推出的自主创新数据库私有云平台，基于openEuler系操作系统，为企业提供"一云多芯"、"一云多库"的解决方案，已在金融保险行业中得到应用。",
+      "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/8/8.html",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "openEuler",
+      "featureList": [
+        "openEuler系操作系统支持，银河麒麟高级服务器操作系统V10提供稳定安全运行环境",
+        "全栈优化，使用鲲鹏应用使能套件BoostKit进行全栈调优",
+        "分布式存储系统，支持数据库基础架构建设、大数据分析和数据库容灾",
+        "智能可视化运维，通过智能分区技术实现资源安全隔离和数据库云化部署"
+      ],
+      "provider": {
+        "@type": "Organization",
+        "name": "上海天玑科技股份有限公司"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "金融保险等行业企业"
+      }
+    }
+  ]
+]

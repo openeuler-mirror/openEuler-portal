@@ -1,0 +1,115 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/wuhan",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/wuhan",
+    "name": "中科通达智慧交通管控平台 | openEuler社区",
+    "description": "中科通达智慧交通管控平台基于openEuler系操作系统，结合云计算、大数据技术，实现高性能计算、全栈优化、分布式存储与计算及微服务架构，助力智慧交通管理提升30%数据吞吐性能。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "中科通达智慧交通管控平台",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/wuhan"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "中科通达智慧交通管控平台",
+    "description": "中科通达智慧交通综合管控平台基于统信服务器操作系统v20（基于openEuler 20.03LTS），结合云计算与大数据技术，实现交通数据吞吐性能提升30%，提升交通管理智能化水平。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/wuhan",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "智慧交通管控平台",
+        "description": "武汉中科通达高新技术股份有限公司开发的智慧交通综合管控平台，采用openEuler系操作系统，实现智能交通管理与治理。"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler操作系统",
+        "url": "https://www.openeuler.openatom.cn/zh/"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "武汉中科通达高新技术股份有限公司",
+        "alternateName": "中科通达",
+        "location": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "武汉",
+            "addressCountry": "CN"
+          }
+        }
+      }
+    ],
+    "articleSection": "用户案例",
+    "keywords": "智慧交通,交通管控平台,openEuler,中科通达,KAE硬件加速,GaussDB,FusionInsight,微服务架构,鲲鹏BoostKit"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "中科通达智慧交通综合管控平台",
+    "description": "中科通达开发的智慧交通综合管控平台，采用统信服务器操作系统v20（基于openEuler 20.03LTS的商业发行版），结合云计算、大数据技术，实现高性能计算、全栈优化、分布式存储与计算及微服务架构，交通数据吞吐性能提升30%。",
+    "applicationCategory": "交通管理软件",
+    "operatingSystem": "统信服务器操作系统v20（基于openEuler 20.03LTS）",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/wuhan",
+    "author": {
+      "@type": "Organization",
+      "name": "武汉中科通达高新技术股份有限公司",
+      "alternateName": "中科通达"
+    },
+    "featureList": [
+      "高性能计算：通过KAE硬件加速引擎提升数据处理速度和分析能力",
+      "全栈优化：使用鲲鹏应用使能套件BoostKit进行全面性能调优",
+      "分布式存储与计算：采用GaussDB数据库和FusionInsight分布式计算引擎",
+      "微服务架构：实现资源高重复利用和快速产品迭代",
+      "智能交通事件处理：智能识别交通事件和违法行为",
+      "数据共享与分发：接口与现网业务系统兼容"
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "openEuler兼容性列表",
+    "url": "https://www.openeuler.openatom.cn/zh/compatibility",
+    "description": "openEuler为用户测试openEuler与硬件的兼容性提供了两条路径，分别是社区认证和创新中心认证。社区认证能使用户在短期内完成兼容性测试并将测试结果展示于兼容性列表上。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "兼容性列表",
+          "item": "https://www.openeuler.openatom.cn/zh/compatibility"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "openEuler兼容性列表",
+    "description": "openEuler兼容性列表，涵盖硬件兼容性（整机、板卡）、商业软件兼容性及解决方案认证等数据，支持按架构、CPU、操作系统、硬件厂家等条件查询。",
+    "url": "https://www.openeuler.openatom.cn/zh/compatibility",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "hasPart": [
+      {
+        "@type": "Dataset",
+        "name": "整机硬件兼容性列表",
+        "description": "openEuler整机硬件兼容性认证数据，包含架构、硬件厂家、硬件型号、操作系统、CPU、日期及兼容性配置等信息。"
+      },
+      {
+        "@type": "Dataset",
+        "name": "板卡兼容性列表",
+        "description": "openEuler板卡兼容性认证数据，包含架构、驱动名称、操作系统、版本、类型、芯片厂家、板卡型号、芯片型号及日期等信息。"
+      },
+      {
+        "@type": "Dataset",
+        "name": "商业软件兼容性列表",
+        "description": "openEuler商业软件兼容性技术测评数据，包含软件名称、版本、软件类型、操作系统、硬件型号、芯片厂家及测试机构等信息。"
+      },
+      {
+        "@type": "Dataset",
+        "name": "解决方案兼容性列表",
+        "description": "openEuler解决方案认证数据，包含架构、解决方案、类型、芯片厂家、型号、操作系统及日期等信息。"
+      }
+    ]
+  }
+]

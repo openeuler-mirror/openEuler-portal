@@ -1,0 +1,94 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/11feiteng/11feiteng.html",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/11feiteng/11feiteng.html",
+    "name": "飞腾保险行业新保险合同准则平台方案 | openEuler社区",
+    "description": "方案可适用于人寿、养老、财险、再保寿险、再保财险等保险全业态，为保险行业提供示范性借鉴。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "金融",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "飞腾保险行业新保险合同准则平台方案",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/11feiteng/11feiteng.html"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "飞腾保险行业新保险合同准则平台方案",
+    "description": "方案可适用于人寿、养老、财险、再保寿险、再保财险等保险全业态，为保险行业提供示范性借鉴。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/11feiteng/11feiteng.html",
+    "inLanguage": "zh-CN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "新保险合同会计准则",
+        "description": "IFRS 17 / CAS25 保险合同会计准则，计划于2026年起正式执行"
+      },
+      {
+        "@type": "Thing",
+        "name": "信创",
+        "description": "基于飞腾芯片与麒麟操作系统（openEuler）的国产化信息技术应用创新"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "新保险合同准则平台",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "麒麟操作系统（基于openEuler）",
+        "description": "基于湖仓一体化/分层数据设计/功能架构，集成保险业务全域数据，生成符合准则要求的财务报告，解决海量数据模型处理和全流程任务监控及数据追溯等难题。",
+        "featureList": [
+          "数据平台",
+          "计量平台",
+          "会计引擎",
+          "全栈信创技术支持",
+          "湖仓一体化架构",
+          "分层数据设计"
+        ]
+      }
+    ],
+    "keywords": "飞腾,保险行业,新保险合同准则,IFRS17,CAS25,信创,openEuler,麒麟操作系统,湖仓一体化,会计引擎"
+  }
+]

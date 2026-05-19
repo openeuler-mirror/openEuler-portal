@@ -1,0 +1,80 @@
+"https://schema.org",
+    "@type": "WebPage",
+    "name": "某银行全栈可观测创新探索 | openEuler社区",
+    "description": "这一方案有潜力大规模应用于银行内部的大部分业务，提升整体运维效率约 15%。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/21mou/21mou.html",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "金融",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "某银行全栈可观测创新探索",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/21mou/21mou.html"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "全栈可观测技术",
+      "description": "以应用视角实现从IaaS层到PaaS层的全栈云一体化运维能力，解决进程级异常追踪和POD节点关联历史追溯问题"
+    },
+    "mentions": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn",
+        "applicationCategory": "操作系统"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "某银行全栈可观测创新探索",
+    "description": "这一方案有潜力大规模应用于银行内部的大部分业务，提升整体运维效率约 15%。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/21mou/21mou.html",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "articleSection": "用户案例",
+    "keywords": "全栈可观测, 银行, openEuler, 云原生, 微服务, 运维, POD, TCP/IO, 进程级异常追踪",
+    "articleBody": "在当前云原生技术加速发展以及微服务体系逐步完善的背景下，银行业的运维挑战日益复杂。某银行面临诸如资源争用导致性能瓶颈、进程级异常难以快速定位、动态环境下的节点关联管理复杂等问题。针对这一现状，某银行联合openEuler启动了以应用为视角的可观测技术验证课题，旨在实现典型故障（如TCP/IO问题）的快速定界与定位，协同行内现有的可观测工具体系，助力实现行内1-5-10的可观测运维目标。本方案通过与某银行的深度合作，构建了某银行全栈可观测技术体系，并协同华为软硬件一体化方案，着力实现于以"应用视角"的全栈云一体化运维能力。这一方案有潜力大规模应用于银行内部的大部分业务，提升整体运维效率约15%。",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  }
+]

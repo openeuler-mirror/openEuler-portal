@@ -1,0 +1,119 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/migration/advantage",
+    "url": "https://www.openeuler.openatom.cn/en/migration/advantage",
+    "name": "Advantages of x2openEuler | Migration Tool | openEuler",
+    "description": "Find out what makes x2openEuler a great choice for migrating your OS to openEuler.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "x2openEuler",
+      "applicationCategory": "SystemApplication",
+      "operatingSystem": "Linux",
+      "description": "x2openEuler is an openEuler tool designed for migration assessment and in-place upgrades. It performs thorough analysis of hardware, software, and configurations, including changes in upper-layer software interfaces, dependency versions, and post-migration OS configurations.",
+      "url": "https://www.openeuler.openatom.cn/en/migration/advantage",
+      "featureList": [
+        "In-place OS upgrade to openEuler within one hour",
+        "Migration after adaptation support",
+        "Hardware, software, and configuration analysis",
+        "Upper-layer software interface change analysis",
+        "Dependency version analysis",
+        "Post-migration OS configuration analysis",
+        "No service redeployment required",
+        "No parameter reconfiguration required",
+        "Direct use of original server resources"
+      ],
+      "provider": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "openEuler offers complimentary OS migration consultations for community members."
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.openatom.cn/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Migration Center",
+        "item": "https://www.openeuler.openatom.cn/en/migration/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Advantages",
+        "item": "https://www.openeuler.openatom.cn/en/migration/advantage"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Migrate Your OS to openEuler",
+    "description": "The openEuler migration solution provides a simple, reliable, and efficient process for migrating operating systems to openEuler across servers, clouds, edges, and embedded systems.",
+    "tool": {
+      "@type": "HowToTool",
+      "name": "x2openEuler"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Create a Migration Support Team",
+        "text": "Assemble a dedicated team to oversee and support the OS migration process."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Analyze Migration Needs",
+        "text": "Assess the current OS environment, hardware, software, and configuration requirements for migration."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Design a Plan",
+        "text": "Create a comprehensive migration plan addressing performance, compatibility, and system environment restoration."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Adapt Software",
+        "text": "Adapt existing software to ensure compatibility with openEuler, including upper-layer software interfaces and dependency versions."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Perform Migration",
+        "text": "Execute the migration using x2openEuler, which supports in-place upgrade (completing within one hour) or migration after adaptation."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 6,
+        "name": "Conduct Testing and Rollout",
+        "text": "Test the migrated system and roll out the new openEuler OS environment to production."
+      }
+    ]
+  }
+]

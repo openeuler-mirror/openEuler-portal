@@ -1,0 +1,97 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "云原生常见问题",
+    "description": "获取openEuler云原生相关的常见问题解答，提升您的使用体验。",
+    "url": "https://www.openeuler.openatom.cn/zh/faq/cloud-native",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "修改iSulad默认运行时为lxc，启动容器报错：Failed to initialize engine or runtime",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "若需修改iSulad默认运行时为lxc，需要安装lcr、lxc软件包依赖，且配置iSulad配置文件中runtime为lcr 或者启动容器时指定--runtime lcr。启动容器后不应该随意卸载lcr、lxc软件包，否则可能会导致删除容器时的资源残留。详情请查看iSulad容器引擎的常见问题：https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Container/isula%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "使用iSulad CRI V1接口，报错：rpc error: code = Unimplemented desc =",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "在iSulad配置文件/etc/isulad/daemon.json中开启CRI V1的配置。详情请查看iSulad容器引擎的常见问题：https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Container/isula%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "isula-build拉取镜像报错：pinging container registry xx: get xx: dial tcp host:repo: connect: connection refused",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "拉取的镜像来源于非授信仓库，因此需要修改isula-build镜像仓库的配置文件/etc/isula-build/registries.toml，将该非授信仓库加入[registries.insecure]，重启isula-build。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kubernetes + docker为什么无法部署",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kubernetes自1.21版本开始不再支持Kubernetes + docker部署Kubernetes集群。需要改为使用cri-dockerd+docker部署集群，也可以使用containerd或者iSulad部署集群。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler无法通过yum直接安装Kubernetes相关的rpm包",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参考 https://forum.openeuler.org/t/topic/768 中repo源，重新配置环境中的EPOL源。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "在使用集群启动模式时，若没有配置控制面程序ip信息，Kmesh服务启动后会报错退出",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "参考安装与部署章节中集群启动模式，设置正确的控制面程序ip信息。详见：https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Kmesh/%E5%AE%89%E8%A3%85%E4%B8%8E%E9%83%A8%E7%BD%B2.html"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kmesh服务在启动时，提示"get kube config error!"",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "集群启动模式下，Kmesh服务会根据k8s的配置，自动获取控制面程序ip信息，若环境中没有配置k8s的kubeconfig路径，会导致获取kubeconfig失败，然后提示上述信息。若已经手动修改Kmesh的配置文件，正确配置控制面程序ip信息，该问题可忽略。具体解决方式请参考文档Kmesh用户指南的常见问题2：https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Kmesh/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "openEuler社区",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "常见问题",
+        "item": "https://www.openeuler.openatom.cn/zh/faq/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "云原生常见问题",
+        "item": "https://www.openeuler.openatom.cn/zh/faq/cloud-native"
+      }
+    ]
+  }
+]

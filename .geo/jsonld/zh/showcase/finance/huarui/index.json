@@ -1,0 +1,118 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "华锐分布式核心交易平台 | openEuler社区",
+    "description": "低时延、高可用，微秒级时延，I/O总带宽提升66%",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/huarui",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "金融",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "华锐分布式核心交易平台",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/huarui"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "华锐分布式核心交易平台",
+    "description": "低时延、高可用，微秒级时延，I/O总带宽提升66%",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/huarui",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "分布式核心交易平台"
+      },
+      {
+        "@type": "Thing",
+        "name": "证券核心交易系统"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler操作系统"
+      },
+      {
+        "@type": "Thing",
+        "name": "低时延金融基础设施"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "华锐分布式技术实验室",
+        "foundingDate": "2017-04",
+        "description": "中国证券行业第一家专注于分布式低时延基础技术的研究机构"
+      }
+    ],
+    "articleBody": "华锐分布式技术实验室创立于2017年4月，是中国证券行业第一家专注于分布式低时延基础技术的研究机构。华锐主要面向新一代国产分布式金融核心系统，可为上层应用提供更高的性能、更低的时延、更高的可靠性和可用性。华锐技术基于openEuler+鲲鹏底座推出证券核心交易平台ATP（Archforce Trading Platform），用于服务国内证券公司。证券核心交易平台ATP使用鲲鹏应用使能套件BoostKit加速特性全面优化，同时使用openEuler+毕昇JDK提升性能，实现低时延、高可用的交易服务。利用鲲鹏超低时延、超强算力、高吞吐传输的优势，处理上万笔订单，每笔仅需微秒级时延，有效提升存储以及各类加速器的性能，I/O总带宽提升66%。"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ATP（Archforce Trading Platform）证券核心交易平台",
+    "description": "华锐技术基于openEuler+鲲鹏底座推出的证券核心交易平台，具有高吞吐、低时延、松耦合、高可用、易扩展、接口易用、平台开放等特性，为投资者提供高品质的交易服务。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/huarui",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "openEuler",
+    "offers": {
+      "@type": "Offer",
+      "description": "面向证券、基金、期货公司、银行等机构提供低时延高可用交易服务"
+    },
+    "featureList": [
+      "高吞吐",
+      "低时延",
+      "松耦合",
+      "高可用",
+      "易扩展",
+      "接口易用",
+      "平台开放",
+      "微秒级时延",
+      "I/O总带宽提升66%"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "华锐分布式技术实验室",
+      "foundingDate": "2017-04",
+      "description": "中国证券行业第一家专注于分布式低时延基础技术的研究机构"
+    }
+  }
+]

@@ -1,0 +1,145 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "openEuler 快速开始指南 | Wiki | openEuler社区",
+      "description": "获取openEuler的快速开始指南，帮助用户迅速上手使用。",
+      "url": "https://www.openeuler.openatom.cn/zh/wiki/about/quick-start",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Wiki",
+            "item": "https://www.openeuler.openatom.cn/zh/wiki/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "快速开始指南",
+            "item": "https://www.openeuler.openatom.cn/zh/wiki/about/quick-start"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "openEuler 快速链接",
+      "description": "openEuler社区快速开始所需的常用资源链接列表",
+      "url": "https://www.openeuler.openatom.cn/zh/wiki/about/quick-start",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "官方网站",
+          "url": "https://www.openeuler.openatom.cn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Get openEuler OS",
+          "url": "https://www.openeuler.openatom.cn/zh/download/#get-openeuler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "镜像仓列表",
+          "url": "https://www.openeuler.openatom.cn/zh/mirror/list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "用户软件仓",
+          "url": "https://eur.openeuler.openatom.cn/coprs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "OS 迁移专区",
+          "url": "https://www.openeuler.openatom.cn/zh/migration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "OSV 技术测评",
+          "url": "https://www.openeuler.openatom.cn/zh/approve/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "QuickIssue",
+          "url": "https://quickissue.openeuler.org/zh/issues/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "兼容性列表",
+          "url": "https://www.openeuler.openatom.cn/zh/compatibility/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "开发者贡献指南",
+          "url": "https://www.openeuler.openatom.cn/zh/community/contribution/detail.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "代码仓",
+          "url": "https://atomgit.com/openeuler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "软件包仓",
+          "url": "https://atomgit.com/src-openeuler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "GitHub 镜像仓",
+          "url": "https://github.com/openeuler-mirror"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "博客",
+          "url": "https://www.openeuler.openatom.cn/zh/interaction/blog-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "月刊",
+          "url": "https://www.openeuler.openatom.cn/zh/monthly-bulletins/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "论坛",
+          "url": "https://forum.openeuler.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "邮件列表",
+          "url": "https://www.openeuler.openatom.cn/zh/community/mailing-list/"
+        }
+      ]
+    }
+  ]
+]

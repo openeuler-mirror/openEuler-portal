@@ -1,0 +1,76 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Mailing Lists | openEuler",
+    "url": "https://www.openeuler.openatom.cn/en/community/mailing-list",
+    "description": "Discuss and stay updated on Linux, cloud computing, and open source innovation through our mailing lists.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Mailing Lists",
+      "description": "Subscribe to SIG mailing lists to discuss and collaborate on Linux, cloud computing, and open source innovation within the openEuler community."
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Community",
+          "item": "https://www.openeuler.openatom.cn/en/community/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mailing Lists",
+          "item": "https://www.openeuler.openatom.cn/en/community/mailing-list"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Subscribe to an openEuler SIG Mailing List",
+    "url": "https://www.openeuler.openatom.cn/en/community/mailing-list",
+    "description": "Follow these steps to subscribe to a Special Interest Group (SIG) mailing list on openEuler.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Select Your SIG",
+        "text": "Choose the Special Interest Group (SIG) you want to subscribe to from the available mailing lists."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Enter Details",
+        "text": "Provide your subscription details including your email address."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Review & Confirm",
+        "text": "Review your subscription information and confirm your request."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "You're Subscribed!",
+        "text": "Your subscription is complete. You will receive mailing list updates from the selected SIG."
+      }
+    ]
+  }
+]

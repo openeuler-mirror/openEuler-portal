@@ -1,0 +1,117 @@
+"https://schema.org",
+    "@type": "WebPage",
+    "name": "南京瀚元科技有限公司（智能边缘服务器） | openEuler社区",
+    "description": "A-OPS智能运维助力边缘服务器运维效率提升30%，软总线提升对端设备扩展接入能力；",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/hanyuan",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "能源",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "南京瀚元科技有限公司（智能边缘服务器）",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/hanyuan"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Organization",
+      "name": "南京瀚元科技有限公司",
+      "foundingDate": "2019",
+      "description": "南京瀚元科技有限公司成立于2019年，坐落于南京市江宁开发区，是业内领先的智能化、数字化解决方案供应商。重点着眼于数字电网及AIoT业务领域，以"AI+大数据"为核心，融合物联网、云计算、区块链等技术手段，为能源、电力、石化、轨道交通、政府等行业发展提供助力。",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "南京市",
+        "addressRegion": "江宁开发区",
+        "addressCountry": "CN"
+      },
+      "areaServed": ["能源", "电力", "石化", "轨道交通", "政府"],
+      "knowsAbout": ["数字电网", "AIoT", "AI", "大数据", "物联网", "云计算", "区块链", "边缘计算"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "南京瀚元科技有限公司基于openEuler的智能边缘服务器解决方案",
+    "description": "A-OPS智能运维助力边缘服务器运维效率提升30%，软总线提升对端设备扩展接入能力；",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/hanyuan",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler",
+        "applicationCategory": "OperatingSystem",
+        "operatingSystem": "Linux",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      {
+        "@type": "Product",
+        "name": "瀚元边缘服务器 HYG800",
+        "description": "基于openEuler 22.03-LTS-SP1的智能边缘服务器，集无线通讯、物联接入、AI识别、边缘计算、本地可视化等多种技术为一体，实现云边协同、边端联动、区域自治。",
+        "brand": {
+          "@type": "Brand",
+          "name": "南京瀚元科技有限公司"
+        },
+        "category": "智能边缘服务器",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "A-OPS智能运维",
+        "description": "openEuler的A-ops组件，用于系统监测，引入后设备系统测试系统级及隐患故障发现数量多出接近30%。",
+        "applicationCategory": "SystemSoftware"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "分布式软总线",
+        "description": "为设备间互通提供统一的分布式协同能力，实现设备无感发现和高效传输，解决移动运维终端便捷发现网关的问题。",
+        "applicationCategory": "SystemSoftware"
+      }
+    ],
+    "mainEntity": {
+      "@type": "TechArticle",
+      "headline": "瀚元站房解决方案：基于openEuler构建云边协同智能边缘服务器",
+      "description": "瀚元站房解决方案通过打造云边协同、边端联动、算力下沉、区域自治的智能模式，实现数据采集、终端控制、数据通讯、AI推断、场景联动等功能，构建配电站房智慧运维体系。",
+      "proficiencyLevel": "Expert",
+      "dependencies": "openEuler 22.03-LTS-SP1"
+    }
+  }
+]

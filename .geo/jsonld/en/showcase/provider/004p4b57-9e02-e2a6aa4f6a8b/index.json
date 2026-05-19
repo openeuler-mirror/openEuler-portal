@@ -1,0 +1,79 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/showcase/provider/004p4b57-9e02-e2a6aa4f6a8b",
+    "url": "https://www.openeuler.openatom.cn/en/showcase/provider/004p4b57-9e02-e2a6aa4f6a8b",
+    "name": "China Unicom | openEuler",
+    "description": "Smooth OS Upgrade and a More Stable Mobile Service System",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "China Unicom",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/provider/004p4b57-9e02-e2a6aa4f6a8b"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "China Unicom: Smooth OS Upgrade and a More Stable Mobile Service System",
+    "description": "China Unicom's internal mobile service system used by over 400,000 employees underwent an innovative OS upgrade covering push service, AI assistant, basic services, and app store modules, deployed on Galaxy Kylin Advanced Server Operating System V10 with openEuler.",
+    "url": "https://www.openeuler.openatom.cn/en/showcase/provider/004p4b57-9e02-e2a6aa4f6a8b",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/",
+        "applicationCategory": "OperatingSystem"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Galaxy Kylin Advanced Server Operating System V10",
+        "applicationCategory": "OperatingSystem"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "China Unicom",
+        "description": "China Unicom's internal mobile service system (Suiwoxing) used by more than 400,000 employees, upgraded with innovative OS deployment covering push service, AI assistant, basic services, and app store."
+      },
+      {
+        "@type": "Organization",
+        "name": "Galaxy Kylin (Qiling)",
+        "description": "Partner providing Galaxy Kylin Advanced Server Operating System V10 for the solution."
+      }
+    ],
+    "articleBody": "China Unicom's internal mobile service system is used on a daily basis by more than 400,000 China Unicom employees in a wide range of scenarios. The innovative OS upgrade covers four service modules: push service, AI assistant, basic services, and app store. The solution uses Great Wall server (Phytium), Galaxy Kylin Advanced Server Operating System V10, China Unicom's Tiangong platform for container cloud, and the Suiwoxing mobile service system, built on a microservice-based, container-based, and unified service release IT architecture. Deployment in microservice and container mode reduces dependency on the host status and meets requirements for functionality, usability, and compatibility. Innovative deployment ensures the stable running of core service systems."
+  }
+]

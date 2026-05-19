@@ -1,0 +1,788 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/en/talent-assessment",
+      "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+      "name": "openEuler Talent Certification & Ecosystem Jobs | openEuler",
+      "description": "openEuler talent certification (OECA/OECP) is jointly operated by the Open Atom Foundation and openEuler Education SIG. Explore ecosystem job opportunities from partners like Kylinsec, Linx Software, and more.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.openeuler.openatom.cn/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Talent Assessment",
+            "item": "https://www.openeuler.openatom.cn/en/talent-assessment"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "openEuler Talent Certification Program",
+      "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+      "description": "openEuler talent certification (OECA/OECP) jointly operated by the Open Atom Foundation and openEuler Education Working Group. Certification content has been fully migrated to the Open Atom Open Source Foundation official website.",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "openEuler Community",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Open Atom Open Source Foundation",
+        "url": "https://www.openatom.org/"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "oecxonline@openeuler.sh",
+        "contactType": "Certificate Inquiry",
+        "description": "For certification certificates from August 2022 to July 2024, send email to query."
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "openEuler Ecosystem Partner Companies – Job Opportunities",
+      "description": "Job opportunities from openEuler ecosystem partners for talent in the openEuler community.",
+      "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Organization",
+            "name": "Kylinsec (麒麟信安)",
+            "alternateName": "湖南麒麟信安科技股份有限公司",
+            "foundingDate": "2015",
+            "numberOfEmployees": {
+              "@type": "QuantitativeValue",
+              "minValue": 500
+            },
+            "description": "Kylinsec focuses on R&D and application of technologies in the field of national critical information infrastructure, mainly engaged in operating system product R&D and technical services. As one of the first openEuler commercial distribution vendors, Kylinsec uses openEuler as its sole technical route.",
+            "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+            "knowsAbout": [
+              "Operating System",
+              "Cloud Computing",
+              "Information Security",
+              "openEuler"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Organization",
+            "name": "Linx Software (凝思软件)",
+            "alternateName": "北京凝思软件股份有限公司",
+            "foundingDate": "2016",
+            "numberOfEmployees": {
+              "@type": "QuantitativeValue",
+              "minValue": 500
+            },
+            "description": "Linx Software focuses on server operating systems, primarily providing OS software and related products and services for critical business systems in industries such as power grid, finance, communications, railway, and energy.",
+            "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+            "knowsAbout": [
+              "Linux Operating System",
+              "Server OS",
+              "Cloud Computing",
+              "Edge Computing",
+              "openEuler"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Organization",
+            "name": "iSoftStone (软通动力)",
+            "alternateName": "软通动力信息技术（集团）股份有限公司",
+            "numberOfEmployees": {
+              "@type": "QuantitativeValue",
+              "minValue": 90000
+            },
+            "description": "iSoftStone is a leading Chinese digital technology products and services innovation enterprise. It has independently developed the enterprise-level server operating system TianHe OS and launched 'openEuler managed by iSoftStone'.",
+            "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+            "knowsAbout": [
+              "Operating System",
+              "Cloud Native",
+              "openEuler",
+              "Digital Transformation"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Organization",
+            "name": "Chinasoft International (中软国际)",
+            "alternateName": "中软国际",
+            "foundingDate": "2000",
+            "numberOfEmployees": {
+              "@type": "QuantitativeValue",
+              "minValue": 70000
+            },
+            "description": "Chinasoft International is a leading enterprise listed on the Hong Kong main board, focused on software and IT services, with global service coverage in 47 countries. Ranked 73rd in Gartner's global IT services top 100 in 2023.",
+            "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+            "knowsAbout": [
+              "Operating System",
+              "Cloud Technology",
+              "AI",
+              "Digital Transformation",
+              "openEuler"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Organization",
+            "name": "Digitalchina (神州数码)",
+            "alternateName": "神州数码集团股份有限公司",
+            "foundingDate": "2000",
+            "description": "Digitalchina is committed to becoming a leading digital transformation partner, proposing an 'AI-accelerated cloud-data integration' strategy to provide agile IT capabilities and data-driven capabilities for customers across industries.",
+            "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+            "knowsAbout": [
+              "Digital Transformation",
+              "Cloud Computing",
+              "AI",
+              "openEuler"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html",
+      "url": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html",
+      "name": "openEuler 人才认证与生态就业 | openEuler社区",
+      "description": "openEuler 人才认证由开放原子开源基金会与 openEuler 社区教育工作组联合运营，提供 OECA/OECP 等级认证。同时汇聚麒麟信安、凝思软件等生态伙伴的 Linux/操作系统岗位需求，助力开发者职业发展。",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler社区",
+        "inLanguage": "zh"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "openEuler社区",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "人才认证与生态就业",
+            "item": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html"
+          }
+        ]
+      },
+      "mainEntity": {
+        "@type": "EducationalOrganization",
+        "name": "openEuler社区教育工作组",
+        "url": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html",
+        "description": "openEuler人才认证运作组织，由开放原子开源基金会与openEuler社区教育工作组联合运营，提供OECA/OECP等级认证。",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "开放原子开源基金会",
+          "url": "https://www.openatom.org/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "OECA 认证",
+            "description": "openEuler工程师认证（OECA），由开放原子开源基金会与openEuler社区教育工作组联合颁发。",
+            "url": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html"
+          },
+          {
+            "@type": "Offer",
+            "name": "OECP 认证",
+            "description": "openEuler专业认证（OECP），由开放原子开源基金会与openEuler社区教育工作组联合颁发。",
+            "url": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "openEuler生态人才需求岗位列表",
+      "description": "openEuler生态伙伴发布的人才需求岗位，助力开发者职业发展。",
+      "url": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "JobPosting",
+            "title": "操作系统开发工程师 / 技术支持工程师 / 测试工程师",
+            "description": "麒麟信安招聘操作系统开发工程师、技术支持工程师、测试工程师，专注于国家关键信息基础设施领域相关技术的研发与应用。",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "湖南麒麟信安科技股份有限公司",
+              "description": "麒麟信安成立于2015年，专注于国家关键信息基础设施领域，从事操作系统产品研发及技术服务，是首批openEuler商业发行版厂商。",
+              "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "minValue": 500
+              }
+            },
+            "jobLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "CN"
+              }
+            },
+            "employmentType": "FULL_TIME"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "JobPosting",
+            "title": "Linux高级研发工程师 / Linux操作系统开发工程师 / Linux安全开发工程师",
+            "description": "凝思软件招聘Linux高级研发工程师、Linux操作系统开发工程师、Linux安全开发工程师，专注于服务器操作系统，服务电网、金融、通信、铁路和能源等行业。",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "北京凝思软件股份有限公司",
+              "description": "凝思软件成立于2016年，拥有500多名员工，专注于服务器操作系统，为电网、金融、通信、铁路和能源等行业提供操作系统软件及相关产品和服务。",
+              "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "minValue": 500
+              }
+            },
+            "jobLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "北京",
+                "addressCountry": "CN"
+              }
+            },
+            "employmentType": "FULL_TIME"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "JobPosting",
+            "title": "系统运维工程师 / 容器运维工程师",
+            "description": "软通动力招聘系统运维工程师、容器运维工程师，软通动力是中国数字技术产品和服务创新领导企业，自主研发了企业级服务器操作系统天鹤OS。",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "软通动力信息技术（集团）股份有限公司",
+              "description": "软通动力是中国数字技术产品和服务创新领导企业，员工近90000人，在全球40余个城市设有近百个分支机构。",
+              "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "minValue": 90000
+              }
+            },
+            "jobLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "CN"
+              }
+            },
+            "employmentType": "FULL_TIME"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "JobPosting",
+            "title": "操作系统运维工程师 / 操作系统研发工程师",
+            "description": "中软国际招聘操作系统运维工程师、操作系统研发工程师，中软国际是专注软件与信息技术服务的行业领军企业，全球服务覆盖47国，员工逾7万。",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "中软国际",
+              "description": "中软国际成立于2000年，香港主板上市公司，专注软件与信息技术服务，全球服务覆盖47国，员工逾7万，连续五年位列Gartner全球IT服务百强。",
+              "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "minValue": 70000
+              }
+            },
+            "jobLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "CN"
+              }
+            },
+            "employmentType": "FULL_TIME"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "JobPosting",
+            "title": "运维工程师",
+            "description": "神州数码招聘运维工程师，神州数码致力于成为领先的数字化转型合作伙伴，围绕企业数字化提出以AI加速的数云融合战略。",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "神州数码集团股份有限公司",
+              "description": "神州数码成立于2000年，以数字中国为使命，致力于成为领先的数字化转型合作伙伴，为各个行业客户提供泛在的敏捷IT能力和融合的数据驱动能力。"
+            },
+            "jobLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "CN"
+              }
+            },
+            "employmentType": "FULL_TIME"
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "如何查询2022年8月至2024年7月的openEuler人才认证证书？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "如需获取2022年8月至2024年7月的认证证书，请发送邮件至 oecxonline@openeuler.sh 进行查询。邮件主题填写openEuler人才认证证书查询，正文需包含姓名、认证等级（如OECA/OECP-M）、考试日期（如2022年8月15日）及考试单位（如麒麟信安/软通教育等）。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "openEuler人才认证运作组织是哪个机构？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "自2024年8月起，openEuler人才认证运作组织由openEuler Talent-and-Service SIG变更为开放原子开源基金会与openEuler社区教育工作组，具体认证内容已全部迁移至开放原子开源基金会官网。"
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/en/talent-assessment",
+      "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+      "name": "openEuler Talent Certification & Ecosystem Jobs | openEuler",
+      "description": "openEuler talent certification (OECA/OECP) is jointly operated by the Open Atom Foundation and openEuler Education SIG. Explore ecosystem job opportunities from partners like Kylinsec, Linx Software, and more.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.openeuler.openatom.cn/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Talent Assessment",
+            "item": "https://www.openeuler.openatom.cn/en/talent-assessment"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "openEuler Talent Certification Program",
+      "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+      "description": "openEuler talent certification (OECA/OECP) jointly operated by the Open Atom Foundation and openEuler Education Working Group. Certification content has been fully migrated to the Open Atom Open Source Foundation official website.",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "openEuler Community",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Open Atom Open Source Foundation",
+        "url": "https://www.openatom.org/"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "oecxonline@openeuler.sh",
+        "contactType": "Certificate Inquiry",
+        "description": "For certification certificates from August 2022 to July 2024, send email to query."
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "openEuler Ecosystem Partner Companies – Job Opportunities",
+      "description": "Job opportunities from openEuler ecosystem partners for talent in the openEuler community.",
+      "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Organization",
+            "name": "Kylinsec (麒麟信安)",
+            "alternateName": "湖南麒麟信安科技股份有限公司",
+            "foundingDate": "2015",
+            "numberOfEmployees": {
+              "@type": "QuantitativeValue",
+              "minValue": 500
+            },
+            "description": "Kylinsec focuses on R&D and application of technologies in the field of national critical information infrastructure, mainly engaged in operating system product R&D and technical services. As one of the first openEuler commercial distribution vendors, Kylinsec uses openEuler as its sole technical route.",
+            "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+            "knowsAbout": [
+              "Operating System",
+              "Cloud Computing",
+              "Information Security",
+              "openEuler"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Organization",
+            "name": "Linx Software (凝思软件)",
+            "alternateName": "北京凝思软件股份有限公司",
+            "foundingDate": "2016",
+            "numberOfEmployees": {
+              "@type": "QuantitativeValue",
+              "minValue": 500
+            },
+            "description": "Linx Software focuses on server operating systems, primarily providing OS software and related products and services for critical business systems in industries such as power grid, finance, communications, railway, and energy.",
+            "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+            "knowsAbout": [
+              "Linux Operating System",
+              "Server OS",
+              "Cloud Computing",
+              "Edge Computing",
+              "openEuler"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Organization",
+            "name": "iSoftStone (软通动力)",
+            "alternateName": "软通动力信息技术（集团）股份有限公司",
+            "numberOfEmployees": {
+              "@type": "QuantitativeValue",
+              "minValue": 90000
+            },
+            "description": "iSoftStone is a leading Chinese digital technology products and services innovation enterprise. It has independently developed the enterprise-level server operating system TianHe OS and launched 'openEuler managed by iSoftStone'.",
+            "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+            "knowsAbout": [
+              "Operating System",
+              "Cloud Native",
+              "openEuler",
+              "Digital Transformation"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Organization",
+            "name": "Chinasoft International (中软国际)",
+            "alternateName": "中软国际",
+            "foundingDate": "2000",
+            "numberOfEmployees": {
+              "@type": "QuantitativeValue",
+              "minValue": 70000
+            },
+            "description": "Chinasoft International is a leading enterprise listed on the Hong Kong main board, focused on software and IT services, with global service coverage in 47 countries. Ranked 73rd in Gartner's global IT services top 100 in 2023.",
+            "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+            "knowsAbout": [
+              "Operating System",
+              "Cloud Technology",
+              "AI",
+              "Digital Transformation",
+              "openEuler"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Organization",
+            "name": "Digitalchina (神州数码)",
+            "alternateName": "神州数码集团股份有限公司",
+            "foundingDate": "2000",
+            "description": "Digitalchina is committed to becoming a leading digital transformation partner, proposing an 'AI-accelerated cloud-data integration' strategy to provide agile IT capabilities and data-driven capabilities for customers across industries.",
+            "url": "https://www.openeuler.openatom.cn/en/talent-assessment",
+            "knowsAbout": [
+              "Digital Transformation",
+              "Cloud Computing",
+              "AI",
+              "openEuler"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html",
+      "url": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html",
+      "name": "openEuler 人才认证与生态就业 | openEuler社区",
+      "description": "openEuler 人才认证由开放原子开源基金会与 openEuler 社区教育工作组联合运营，提供 OECA/OECP 等级认证。同时汇聚麒麟信安、凝思软件等生态伙伴的 Linux/操作系统岗位需求，助力开发者职业发展。",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler社区",
+        "inLanguage": "zh"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "openEuler社区",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "人才认证与生态就业",
+            "item": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html"
+          }
+        ]
+      },
+      "mainEntity": {
+        "@type": "EducationalOrganization",
+        "name": "openEuler社区教育工作组",
+        "url": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html",
+        "description": "openEuler人才认证运作组织，由开放原子开源基金会与openEuler社区教育工作组联合运营，提供OECA/OECP等级认证。",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "开放原子开源基金会",
+          "url": "https://www.openatom.org/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "OECA 认证",
+            "description": "openEuler工程师认证（OECA），由开放原子开源基金会与openEuler社区教育工作组联合颁发。",
+            "url": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html"
+          },
+          {
+            "@type": "Offer",
+            "name": "OECP 认证",
+            "description": "openEuler专业认证（OECP），由开放原子开源基金会与openEuler社区教育工作组联合颁发。",
+            "url": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "openEuler生态人才需求岗位列表",
+      "description": "openEuler生态伙伴发布的人才需求岗位，助力开发者职业发展。",
+      "url": "https://www.openeuler.openatom.cn/zh/talent-assessment/index.html",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "JobPosting",
+            "title": "操作系统开发工程师 / 技术支持工程师 / 测试工程师",
+            "description": "麒麟信安招聘操作系统开发工程师、技术支持工程师、测试工程师，专注于国家关键信息基础设施领域相关技术的研发与应用。",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "湖南麒麟信安科技股份有限公司",
+              "description": "麒麟信安成立于2015年，专注于国家关键信息基础设施领域，从事操作系统产品研发及技术服务，是首批openEuler商业发行版厂商。",
+              "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "minValue": 500
+              }
+            },
+            "jobLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "CN"
+              }
+            },
+            "employmentType": "FULL_TIME"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "JobPosting",
+            "title": "Linux高级研发工程师 / Linux操作系统开发工程师 / Linux安全开发工程师",
+            "description": "凝思软件招聘Linux高级研发工程师、Linux操作系统开发工程师、Linux安全开发工程师，专注于服务器操作系统，服务电网、金融、通信、铁路和能源等行业。",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "北京凝思软件股份有限公司",
+              "description": "凝思软件成立于2016年，拥有500多名员工，专注于服务器操作系统，为电网、金融、通信、铁路和能源等行业提供操作系统软件及相关产品和服务。",
+              "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "minValue": 500
+              }
+            },
+            "jobLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "北京",
+                "addressCountry": "CN"
+              }
+            },
+            "employmentType": "FULL_TIME"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "JobPosting",
+            "title": "系统运维工程师 / 容器运维工程师",
+            "description": "软通动力招聘系统运维工程师、容器运维工程师，软通动力是中国数字技术产品和服务创新领导企业，自主研发了企业级服务器操作系统天鹤OS。",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "软通动力信息技术（集团）股份有限公司",
+              "description": "软通动力是中国数字技术产品和服务创新领导企业，员工近90000人，在全球40余个城市设有近百个分支机构。",
+              "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "minValue": 90000
+              }
+            },
+            "jobLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "CN"
+              }
+            },
+            "employmentType": "FULL_TIME"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "JobPosting",
+            "title": "操作系统运维工程师 / 操作系统研发工程师",
+            "description": "中软国际招聘操作系统运维工程师、操作系统研发工程师，中软国际是专注软件与信息技术服务的行业领军企业，全球服务覆盖47国，员工逾7万。",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "中软国际",
+              "description": "中软国际成立于2000年，香港主板上市公司，专注软件与信息技术服务，全球服务覆盖47国，员工逾7万，连续五年位列Gartner全球IT服务百强。",
+              "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "minValue": 70000
+              }
+            },
+            "jobLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "CN"
+              }
+            },
+            "employmentType": "FULL_TIME"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "JobPosting",
+            "title": "运维工程师",
+            "description": "神州数码招聘运维工程师，神州数码致力于成为领先的数字化转型合作伙伴，围绕企业数字化提出以AI加速的数云融合战略。",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "神州数码集团股份有限公司",
+              "description": "神州数码成立于2000年，以数字中国为使命，致力于成为领先的数字化转型合作伙伴，为各个行业客户提供泛在的敏捷IT能力和融合的数据驱动能力。"
+            },
+            "jobLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "CN"
+              }
+            },
+            "employmentType": "FULL_TIME"
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "如何查询2022年8月至2024年7月的openEuler人才认证证书？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "如需获取2022年8月至2024年7月的认证证书，请发送邮件至 oecxonline@openeuler.sh 进行查询。邮件主题填写openEuler人才认证证书查询，正文需包含姓名、认证等级（如OECA/OECP-M）、考试日期（如2022年8月15日）及考试单位（如麒麟信安/软通教育等）。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "openEuler人才认证运作组织是哪个机构？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "自2024年8月起，openEuler人才认证运作组织由openEuler Talent-and-Service SIG变更为开放原子开源基金会与openEuler社区教育工作组，具体认证内容已全部迁移至开放原子开源基金会官网。"
+          }
+        }
+      ]
+    }
+  ]
+]

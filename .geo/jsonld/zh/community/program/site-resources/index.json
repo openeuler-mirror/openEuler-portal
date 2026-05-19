@@ -1,0 +1,378 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "活动场地 | 社区贡献 | openEuler社区",
+    "description": "欢迎查看、贡献活动场地资源，帮助开发者更好地组织openEuler活动。",
+    "url": "https://www.openeuler.openatom.cn/zh/community/program/site-resources",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "社区贡献",
+          "item": "https://www.openeuler.openatom.cn/zh/community/program/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "活动场地",
+          "item": "https://www.openeuler.openatom.cn/zh/community/program/site-resources"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "openEuler社区活动场地资源列表",
+    "description": "openEuler社区成员单位共建场地资源池，供社区活动使用",
+    "url": "https://www.openeuler.openatom.cn/zh/community/program/site-resources",
+    "numberOfItems": 11,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Place",
+          "name": "开放原子开源基金会openEuler项目群活动场地",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "北京",
+            "addressCountry": "CN"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "规模",
+              "value": "30人"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "场地类型",
+              "value": "会议室"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "所属单位",
+              "value": "开放原子开源基金会openEuler项目群"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Place",
+          "name": "北京凝思软件股份有限公司活动场地",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "北京",
+            "addressCountry": "CN"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "规模",
+              "value": "25人"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "场地类型",
+              "value": "会议室"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "所属单位",
+              "value": "北京凝思软件股份有限公司"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Place",
+          "name": "湖南麒麟信安科技股份有限公司活动场地（北京）",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "北京",
+            "addressCountry": "CN"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "规模",
+              "value": "25人"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "场地类型",
+              "value": "会议室"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "所属单位",
+              "value": "湖南麒麟信安科技股份有限公司"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Place",
+          "name": "南京软通动力信息技术服务有限公司活动场地",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "南京",
+            "addressCountry": "CN"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "规模",
+              "value": "70人"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "场地类型",
+              "value": "多功能室"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "所属单位",
+              "value": "南京软通动力信息技术服务有限公司"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Place",
+          "name": "江苏润和软件股份有限公司活动场地",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "南京",
+            "addressCountry": "CN"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "规模",
+              "value": "30人"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "场地类型",
+              "value": "会议室"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "所属单位",
+              "value": "江苏润和软件股份有限公司"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Place",
+          "name": "湖南麒麟信安科技股份有限公司活动场地（南京）",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "南京",
+            "addressCountry": "CN"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "规模",
+              "value": "20人"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "场地类型",
+              "value": "会议室"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "所属单位",
+              "value": "湖南麒麟信安科技股份有限公司"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Place",
+          "name": "湖南麒麟信安科技股份有限公司活动场地（长春）",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "长春",
+            "addressCountry": "CN"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "规模",
+              "value": "8人"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "场地类型",
+              "value": "会议室"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "所属单位",
+              "value": "湖南麒麟信安科技股份有限公司"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "Place",
+          "name": "湖南麒麟信安科技股份有限公司活动场地（西安）",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "西安",
+            "addressCountry": "CN"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "规模",
+              "value": "22人"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "场地类型",
+              "value": "会议室"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "所属单位",
+              "value": "湖南麒麟信安科技股份有限公司"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "Place",
+          "name": "湖南麒麟信安科技股份有限公司活动场地（长沙）",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "长沙",
+            "addressCountry": "CN"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "规模",
+              "value": "50人"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "场地类型",
+              "value": "会议室"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "所属单位",
+              "value": "湖南麒麟信安科技股份有限公司"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "Place",
+          "name": "上海鲲鹏生态创新中心活动场地",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "上海",
+            "addressCountry": "CN"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "规模",
+              "value": "50人"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "场地类型",
+              "value": "会议室"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "所属单位",
+              "value": "上海鲲鹏生态创新中心"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "Place",
+          "name": "四川鲲鹏生态创新中心活动场地",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "成都",
+            "addressCountry": "CN"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "规模",
+              "value": "50人"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "场地类型",
+              "value": "会议室"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "所属单位",
+              "value": "四川鲲鹏生态创新中心"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,91 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "openEuler兼容性测评 | openEuler兼容性列表 | openEuler社区",
+    "description": "openEuler为用户测试openEuler与硬件的兼容性提供了两条路径，分别是社区认证和创新中心认证。社区认证能使用户在短期内完成兼容性测试并将测试结果展示于兼容性列表上。",
+    "url": "https://www.openeuler.openatom.cn/zh/compatibility/hardware",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "兼容性列表",
+          "item": "https://www.openeuler.openatom.cn/zh/compatibility/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "硬件兼容性认证",
+          "item": "https://www.openeuler.openatom.cn/zh/compatibility/hardware"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "openEuler硬件兼容性认证流程",
+    "description": "openEuler为用户测试openEuler与硬件的兼容性提供了两条路径，分别是社区认证和创新中心认证。社区认证能使用户在短期内完成兼容性测试并将测试结果展示于兼容性列表上。",
+    "url": "https://www.openeuler.openatom.cn/zh/compatibility/hardware",
+    "inLanguage": "zh",
+    "totalTime": "P16D",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "成为openEuler社区开发者",
+        "text": "成为openEuler社区开发者（0.5天）"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "申请兼容性测试",
+        "text": "申请兼容性测试（0.5天）"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "了解兼容性策略",
+        "text": "了解兼容性策略（0.5天）"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "创建issue",
+        "text": "创建issue（0.5天）"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "测试兼容性",
+        "text": "测试兼容性（10天）"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 6,
+        "name": "提交测试结果审核",
+        "text": "提交测试结果审核（2天），提交内容应包含测试日志（整机/板卡）及兼容性信息发布清单"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 7,
+        "name": "发布到兼容性列表",
+        "text": "发布到兼容性列表（2天），通过审核后，硬件信息将被添加到兼容性列表"
+      }
+    ]
+  }
+]

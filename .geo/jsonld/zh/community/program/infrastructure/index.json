@@ -1,0 +1,49 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/community/program/infrastructure",
+    "url": "https://www.openeuler.openatom.cn/zh/community/program/infrastructure",
+    "name": "基础设施资源贡献 | 社区贡献 | openEuler社区",
+    "description": "获取关于openEuler基础设施计划的信息，参与提升社区基础设施建设。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "社区贡献",
+          "item": "https://www.openeuler.openatom.cn/zh/community/program/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "基础设施资源贡献",
+          "item": "https://www.openeuler.openatom.cn/zh/community/program/infrastructure"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.openeuler.openatom.cn/#organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn/",
+    "description": "openEuler是一个开源操作系统社区，社区基础设施由Infrastructure SIG管理和运维，为社区提供南北向兼容性测试、代码门禁检查、软件包及操作系统镜像构建、软件包仓库等众多服务。"
+  }
+]

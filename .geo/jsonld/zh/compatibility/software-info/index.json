@@ -1,0 +1,86 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/compatibility/software-info",
+    "url": "https://www.openeuler.openatom.cn/zh/compatibility/software-info",
+    "name": "openEuler软件兼容性信息 | 兼容性中心 | openEuler社区",
+    "description": "获取openEuler各类软件的兼容性信息，支持软件运行的稳定性。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "兼容性中心",
+          "item": "https://www.openeuler.openatom.cn/zh/compatibility/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "软件兼容性信息",
+          "item": "https://www.openeuler.openatom.cn/zh/compatibility/software-info"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "openEuler软件兼容性信息",
+    "description": "获取openEuler各类软件的兼容性信息，包含产品配置信息及适配驱动列表，支持软件运行的稳定性。",
+    "url": "https://www.openeuler.openatom.cn/zh/compatibility/software-info",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "variableMeasured": [
+      {
+        "@type": "PropertyValue",
+        "name": "Driver Name",
+        "description": "驱动名称"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Version",
+        "description": "驱动版本"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Type",
+        "description": "驱动类型"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chip Vendor",
+        "description": "芯片厂商"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Board Model",
+        "description": "板卡型号"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chip Model",
+        "description": "芯片型号"
+      }
+    ]
+  }
+]

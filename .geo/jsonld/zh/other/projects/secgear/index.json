@@ -1,0 +1,132 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "secGear",
+    "alternateName": "secGear机密计算框架",
+    "description": "secGear是面向计算产业的机密计算安全应用开发套件，旨在方便开发者在不同的硬件设备上提供统一开发框架，让用户不感知底层各种机密计算架构和接口的差异，目前secGear支持Intel SGX硬件和ARM Trustzone(安全os支持iTrustee)。secGear同时在中间件层和服务层提供丰富的扩展能力，让开发者能够方便得调用安全组件，乃至直接使用机密计算安全服务。",
+    "url": "https://www.openeuler.openatom.cn/zh/other/projects/secgear",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": "Linux",
+    "inLanguage": "zh",
+    "featureList": [
+      "支持Intel SGX硬件",
+      "支持ARM Trustzone（安全OS支持iTrustee）",
+      "服务层：提供完整的基于机密计算的安全服务",
+      "中间件层：提供常见的安全协议组件以及各种安全函数库",
+      "基础层：提供丰富的enclave开发接口或工具，包含代码生成工具和enclave生命周期管理等接口",
+      "安全侧支持POSIX APIs和标准OpenSSL接口"
+    ],
+    "isPartOf": {
+      "@type": "SoftwareApplication",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "secGear | 机密计算框架 | openEuler社区",
+    "description": "secGear是面向计算产业的机密计算安全应用开发套件，旨在方便开发者在不同的硬件设备上提供统一开发框架，目前secGear支持Intel SGX硬件和ARM Trustzone(安全os支持iTrustee)。想要了解更多信息，欢迎访问openEuler官网。",
+    "url": "https://www.openeuler.openatom.cn/zh/other/projects/secgear",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.openatom.cn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "项目",
+          "item": "https://www.openeuler.openatom.cn/zh/other/projects/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "secGear",
+          "item": "https://www.openeuler.openatom.cn/zh/other/projects/secgear"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "secGear",
+    "alternateName": "secGear机密计算框架",
+    "description": "secGear是面向计算产业的机密计算安全应用开发套件，旨在方便开发者在不同的硬件设备上提供统一开发框架，让用户不感知底层各种机密计算架构和接口的差异，目前secGear支持Intel SGX硬件和ARM Trustzone(安全os支持iTrustee)。secGear同时在中间件层和服务层提供丰富的扩展能力，让开发者能够方便得调用安全组件，乃至直接使用机密计算安全服务。",
+    "url": "https://www.openeuler.openatom.cn/zh/other/projects/secgear",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": "Linux",
+    "inLanguage": "zh",
+    "featureList": [
+      "支持Intel SGX硬件",
+      "支持ARM Trustzone（安全OS支持iTrustee）",
+      "服务层：提供完整的基于机密计算的安全服务",
+      "中间件层：提供常见的安全协议组件以及各种安全函数库",
+      "基础层：提供丰富的enclave开发接口或工具，包含代码生成工具和enclave生命周期管理等接口",
+      "安全侧支持POSIX APIs和标准OpenSSL接口"
+    ],
+    "isPartOf": {
+      "@type": "SoftwareApplication",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "secGear | 机密计算框架 | openEuler社区",
+    "description": "secGear是面向计算产业的机密计算安全应用开发套件，旨在方便开发者在不同的硬件设备上提供统一开发框架，目前secGear支持Intel SGX硬件和ARM Trustzone(安全os支持iTrustee)。想要了解更多信息，欢迎访问openEuler官网。",
+    "url": "https://www.openeuler.openatom.cn/zh/other/projects/secgear",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.openatom.cn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "项目",
+          "item": "https://www.openeuler.openatom.cn/zh/other/projects/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "secGear",
+          "item": "https://www.openeuler.openatom.cn/zh/other/projects/secgear"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/migration/contribution",
+    "url": "https://www.openeuler.openatom.cn/zh/migration/contribution",
+    "name": "openEuler 迁移指南 | 迁移专区 | openEuler社区",
+    "description": "了解如何将您的系统平滑迁移至openEuler。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "迁移专区",
+          "item": "https://www.openeuler.openatom.cn/zh/migration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "贡献迁移案例",
+          "item": "https://www.openeuler.openatom.cn/zh/migration/contribution"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "如何向 openEuler 迁移专区贡献迁移最佳实践或迁移案例",
+    "description": "如果您已经完成了操作系统迁移，欢迎您将迁移过程总结成最佳实践或迁移案例，贡献到 openEuler 迁移专区。",
+    "inLanguage": "zh",
+    "url": "https://www.openeuler.openatom.cn/zh/migration/contribution",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "撰写并发布迁移博客",
+        "text": "伙伴贡献迁移最佳实践或迁移移植案例到博客，具体可参考发博攻略，title 中请注明关键词"迁移最佳实践"或"迁移移植案例"。",
+        "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog/"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "兼容性 SIG 组评审博客",
+        "text": "兼容性 sig 组定期 review 博客，并答复"/lgtm"。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "openDesign SIG 组上线博客",
+        "text": "由 openDesign sig 组将已评审博客上线到迁移专区。"
+      }
+    ]
+  }
+]

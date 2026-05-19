@@ -1,0 +1,92 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "系统管理常见问题",
+    "description": "查阅openEuler在系统管理方面的常见问题解答，提升管理效率。",
+    "url": "https://www.openeuler.openatom.cn/zh/faq/system-management",
+    "inLanguage": "zh",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "为什么在 openEuler 22.03 SP1 系统中，启动 NFS 服务后，尽管最初可以达到千兆网络速率，但经过不到一天的写入操作，客户端的响应速度会急剧下降到大约 2MB/s？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "这个性能下降的主要原因是 NFS 服务端的缓存上涨至 50% 时，其性能会骤降。这种现象主要是由于内存分配和回收机制的问题。在申请内存的过程中，系统不会立即同步回收内存，而是依赖于较慢的后台内存回收机制。当系统无法及时申请到足够的内存时，会导致等待时间（如 500 毫秒的延迟）。这个问题在高负载下尤为明显，因为 NFS 服务端需要大量内存来处理客户端的请求。随着服务运行时间的增长，可用内存的减少会导致性能急剧下降，特别是在密集的写入操作中。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何解决 openEuler 系统中由于 ext4 文件系统的 inode 错误而导致的文件创建失败问题？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "为了解决这个问题，应该在处理 dx_node 块的 rec_len 字段时使用正确的方法。正确的做法是使用 ext4_rec_len_from_disk() 函数来转换 rec_len 为 65536，然后进行比较。这样可以确保在添加新的 dx_node 块时，正确地设置 rec_len 字段，并为节点计算并设置正确的校验和。这个更正将避免由于校验和不正确导致的 inode 错误，从而允许系统正常创建和管理大量文件。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何解决 openEuler 系统中业务进程因 glibc 线程缓存特性导致的内存占用过高问题？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "解决这个问题的方法是关闭 glibc 的线程缓存特性。这可以通过在启动程序之前设置环境变量来实现。具体操作是在 bash_profile 中添加 GLIBC_TUNABLES=glibc.malloc.tcache_count=0，这样可以关闭线程缓存。在进程启动后，还需要检查进程的环境变量（/proc/pid/environ）以确保成功添加。关闭 glibc 的 tcache 之后，进程的内存管理将与 glibc 2.17 版本一致，不会有其他副作用。根据客户反馈，实施这一修改方案后，内存占用明显降低，且相比于 CentOS，openEuler 的内存占用也变得更低。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "为什么在 ARM 架构上进行 fio 压测多盘场景时，性能仅为 X86 架构的一半？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "在 ARM 架构下进行 fio 压测时，性能低于 X86 架构的主要原因是中断处理机制的差异。在 ARM 环境中，8 盘同时压测时，所有盘的中断都集中在了 0、32、64 核心上，导致处理这些中断的 CPU 被压满。这个瓶颈主要是由于 ARM 架构下的 LPI (Large Payload Interface) 中断和 X86 架构下的 APIC 中断的实现机制不同。X86 架构通过 APIC 实现了中断负载均衡，而 ARM 架构的 LPI 中断主要由 ITS (Interrupt Translation Service) 驱动程序处理，它会默认将中断分配到最低编号的 CPU，导致单核处理中断出现瓶颈。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "为什么在机器掉电后，系统启动时 xfs 文件系统会出现问题，执行 ls 命令时显示 input/output error？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "机器掉电可以导致 xfs 文件系统损坏，因为掉电可能发生在文件系统写入操作的过程中，导致数据未能完全写入磁盘。当系统重新启动后，xfs 文件系统可能处于不一致的状态，这种状态下执行文件系统操作，如 ls 命令，可能会遇到输入/输出错误。这类错误通常表明文件系统的某些部分未能正确加载或读取，可能是由于文件系统元数据损坏或者未完成的写入操作造成的。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何解决系统启动时未使用新内核的问题？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "要解决这个问题，用户需要将 /boot/grub2/grub.cfg 文件的内容替换为 /boot/efi/EFI/xxxx/grub.cfg 中的内容。这样做可以确保在启动时系统会读取包含新内核的正确配置文件。此外，检查并确认系统的引导模式（UEFI 或 legacy）也是解决此类问题的重要步骤。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "使用systemctl和top命令查询libvirtd服务占用内存不同，原因是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "systemd管理的服务（包括systemctl和systemd-cgtop）中显示的内存通过查询CGroup对应的memory.usage_in_bytes得到。top是直接统计/proc下内存相关信息计算得出。两者的统计方法不同，不能直接比较。"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "openEuler社区",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQ",
+        "item": "https://www.openeuler.openatom.cn/zh/faq/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "系统管理常见问题",
+        "item": "https://www.openeuler.openatom.cn/zh/faq/system-management"
+      }
+    ]
+  }
+]

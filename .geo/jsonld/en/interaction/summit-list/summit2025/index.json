@@ -1,0 +1,217 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Operating System Conference & openEuler Summit 2025",
+    "alternateName": "openEuler Summit 2025",
+    "url": "https://www.openeuler.openatom.cn/en/interaction/summit-list/summit2025",
+    "description": "Join openEuler Summit 2025 in Beijing, Nov 14–15. Explore AI-powered OS innovation with global leaders, keynotes, and next-gen computing breakthroughs.",
+    "startDate": "2025-11-14",
+    "endDate": "2025-11-15",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "ZhongGuanCun International Innovation Center",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Beijing",
+        "addressCountry": "CN"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "OpenAtom Foundation",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "openEuler open source operating system",
+      "description": "AI-driven open source operating system supporting diversified computing power"
+    },
+    "performer": [
+      {
+        "@type": "Person",
+        "name": "Ni Guangnan",
+        "jobTitle": "Academician",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Chinese Academy of Engineering"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Cheng Xiaoming",
+        "jobTitle": "Chairman",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "OpenAtom Foundation"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yang Chaobin",
+        "jobTitle": "Director, CEO of the ICT Business Group",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Shao Guanglu",
+        "jobTitle": "Director of Science and Technology Committee and Former General Manager",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "China Telecom Group"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Xiong Wei",
+        "jobTitle": "Chairperson",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "OpenAtom openEuler Committee"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Du Hai",
+        "jobTitle": "General Manager of Hybrid Cloud",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Baidu AI Cloud"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zeng Wenbin",
+        "jobTitle": "Director of Operating System",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Meituan"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yang Mingming",
+        "jobTitle": "Vice President",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Phoenix Contact China"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Ritchie Peng",
+        "jobTitle": "Director of the ICT Strategy & Business Development Dept",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Tang Xiaolei",
+        "jobTitle": "Vice President",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "AMD"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Andrew Wafaa",
+        "jobTitle": "Senior Director Software Communities & Fellow PyTorch Board",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Arm"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Hu Xinwei",
+        "jobTitle": "Technical Committee Chairperson",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "OpenAtom openEuler"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Hu Chunming",
+        "jobTitle": "Dean, School of Software",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Beihang University"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Grant Likely",
+        "jobTitle": "CTO",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Linaro"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Lin Zhenfu",
+        "jobTitle": "Technology Expert",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "CSG Digital Power Grid"
+        }
+      }
+    ],
+    "superEvent": {
+      "@type": "Event",
+      "name": "Operating System Conference 2025"
+    },
+    "inLanguage": "en"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "openEuler Summit 2025: AI-Driven OS Conference | openEuler",
+    "url": "https://www.openeuler.openatom.cn/en/interaction/summit-list/summit2025",
+    "description": "Join openEuler Summit 2025 in Beijing, Nov 14–15. Explore AI-powered OS innovation with global leaders, keynotes, and next-gen computing breakthroughs.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Interaction",
+          "item": "https://www.openeuler.openatom.cn/en/interaction/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Summit List",
+          "item": "https://www.openeuler.openatom.cn/en/interaction/summit-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "openEuler Summit 2025",
+          "item": "https://www.openeuler.openatom.cn/en/interaction/summit-list/summit2025"
+        }
+      ]
+    }
+  }
+]

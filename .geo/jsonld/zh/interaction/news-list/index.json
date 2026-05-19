@@ -1,0 +1,38 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler新闻资讯 | openEuler社区",
+    "description": "openEuler新闻资讯，为您提供关于openEuler官方发布的第一手资讯。",
+    "url": "https://www.openeuler.openatom.cn/zh/interaction/news-list/",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "互动中心",
+          "item": "https://www.openeuler.openatom.cn/zh/interaction/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "新闻",
+          "item": "https://www.openeuler.openatom.cn/zh/interaction/news-list/"
+        }
+      ]
+    }
+  }
+]

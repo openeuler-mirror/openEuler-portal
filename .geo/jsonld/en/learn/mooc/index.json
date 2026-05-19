@@ -1,0 +1,65 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "MOOCs | openEuler",
+    "description": "Dive into no-cost tutorials and hands-on projects to learn everything from the basics to advanced features of openEuler.",
+    "url": "https://www.openeuler.openatom.cn/en/learn/mooc",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn",
+      "applicationCategory": "OperatingSystem"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Learn",
+          "item": "https://www.openeuler.openatom.cn/en/learn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "MOOCs",
+          "item": "https://www.openeuler.openatom.cn/en/learn/mooc"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "openEuler Mini Courses",
+    "description": "Dive into no-cost tutorials and hands-on projects to learn everything from the basics to advanced features of openEuler.",
+    "url": "https://www.openeuler.openatom.cn/en/learn/mooc",
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "provider": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "educationalLevel": "Beginner to Advanced",
+    "courseMode": "online",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "PT0S"
+    }
+  }
+]

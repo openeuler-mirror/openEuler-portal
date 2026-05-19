@@ -1,0 +1,44 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Blogs | openEuler",
+    "description": "Gain in-depth knowledge and fresh perspectives on openEuler through our insightful blogs.",
+    "url": "https://www.openeuler.openatom.cn/en/interaction/blog-list/",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.openatom.cn/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Stay Updated",
+        "item": "https://www.openeuler.openatom.cn/en/interaction/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Blogs",
+        "item": "https://www.openeuler.openatom.cn/en/interaction/blog-list/"
+      }
+    ]
+  }
+]

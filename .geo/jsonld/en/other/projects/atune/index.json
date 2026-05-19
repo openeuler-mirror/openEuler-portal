@@ -1,0 +1,76 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "A-Tune",
+    "alternateName": "A-Tune AI-based Tuning Engine",
+    "description": "A-Tune is an automatic and intelligent performance tuning engine developed based on openEuler. It adopts AI technologies to ensure the optimal service running. A-Tune builds precise models for services running on the operating system, understands service features dynamically to infer specific applications, and adjusts the parameters based on service loads to provide the optimal parameter configurations.",
+    "url": "https://www.openeuler.openatom.cn/en/other/projects/atune",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "openEuler",
+    "featureList": [
+      "Online static tuning",
+      "Offline dynamic tuning",
+      "Intelligent decision-making",
+      "System profiling",
+      "Automatic feature engineering",
+      "Two-layer classification model",
+      "Tuning model library with 20+ application scenarios of 10 categories"
+    ],
+    "softwareHelp": {
+      "@type": "CreativeWork",
+      "url": "https://www.openeuler.openatom.cn/en/other/projects/atune"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "isPartOf": {
+      "@type": "SoftwareApplication",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "A-Tune - AI-Powered Performance Tuning | openEuler",
+    "description": "A-Tune leverages AI for dynamic service optimization and resource configuration.",
+    "url": "https://www.openeuler.openatom.cn/en/other/projects/atune",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "A-Tune",
+      "url": "https://www.openeuler.openatom.cn/en/other/projects/atune"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://www.openeuler.openatom.cn/en/other/projects/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "A-Tune",
+          "item": "https://www.openeuler.openatom.cn/en/other/projects/atune"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,89 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "黑龙江省烟草公司 | openEuler社区",
+    "description": "安全邮件系统建设项目",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/012o426d-974e-21437c6c5d56",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "黑龙江省烟草公司",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/012o426d-974e-21437c6c5d56"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "黑龙江省烟草公司安全邮件系统建设项目",
+    "description": "黑龙江省烟草公司在服务器上部署中标麒麟安全增强电子邮件系统 V6.0，通过安全邮件 web 端和客户端传输邮件，满足用户邮件传输及保存需求。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/012o426d-974e-21437c6c5d56",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "安全邮件系统"
+      },
+      {
+        "@type": "Thing",
+        "name": "中标麒麟安全增强电子邮件系统 V6.0"
+      },
+      {
+        "@type": "Thing",
+        "name": "银河麒麟高级服务器操作系统 V10"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "黑龙江省烟草公司"
+      },
+      {
+        "@type": "Organization",
+        "name": "中标麒麟"
+      },
+      {
+        "@type": "Organization",
+        "name": "浪潮英信"
+      }
+    ]
+  }
+]

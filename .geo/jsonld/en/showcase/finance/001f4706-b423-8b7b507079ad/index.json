@@ -1,0 +1,91 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/showcase/finance/001f4706-b423-8b7b507079ad",
+    "url": "https://www.openeuler.openatom.cn/en/showcase/finance/001f4706-b423-8b7b507079ad",
+    "name": "China Construction Bank | openEuler",
+    "description": "Improved Operational Stability for the Distributed Credit Card Core Banking System",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Finance",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "China Construction Bank",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/finance/001f4706-b423-8b7b507079ad"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "China Construction Bank: Improved Operational Stability for the Distributed Credit Card Core Banking System",
+    "description": "Improved Operational Stability for the Distributed Credit Card Core Banking System",
+    "url": "https://www.openeuler.openatom.cn/en/showcase/finance/001f4706-b423-8b7b507079ad",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Distributed Credit Card Core Banking System"
+      },
+      {
+        "@type": "Thing",
+        "name": "Galaxy Kylin Advanced Server Operating System V10"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "China Construction Bank",
+        "alternateName": "CCB",
+        "url": "https://www.ccb.com/"
+      },
+      {
+        "@type": "Organization",
+        "name": "Galaxy Kylin",
+        "alternateName": "麒麟软件"
+      }
+    ],
+    "articleBody": "As a state-owned banking institution in China, the credit card core banking system of China Construction Bank (CCB) serves many customers and handles credit on a tremendous scale. CCB upgraded its original infrastructure (x86+Red Hat+Oracle) by leveraging the Galaxy Kylin Advanced Server Operating System V10, GaussDB, and TaiShan 200 servers. The solution built a distributed credit card core banking system running on both ARM and x86 platforms, supporting microservice-based agile processing and massive data processing for distributed jobs. Benefits include cost-effectiveness, high processing efficiency, scalability, strong error tolerance, and overall security and reliability."
+  }
+]

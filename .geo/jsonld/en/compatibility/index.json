@@ -1,0 +1,83 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/compatibility",
+    "url": "https://www.openeuler.openatom.cn/en/compatibility",
+    "name": "Certified Hardware & Software | Compatibility | openEuler",
+    "description": "Check hardware and software compatibility with openEuler. Explore servers, cards, and software certified for different openEuler OS versions.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler",
+      "description": "openEuler is an open source Linux distribution platform.",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.openeuler.openatom.cn/logo.png"
+        }
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Compatibility",
+          "item": "https://www.openeuler.openatom.cn/en/compatibility"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Hardware and Software Compatibility",
+      "description": "openEuler provides a complete process and tools for hardware compatibility testing, including certified CPUs, drivers, solutions, and virtualization information for different openEuler OS versions."
+    },
+    "mainEntity": {
+      "@type": "Dataset",
+      "name": "openEuler Compatibility List",
+      "description": "A searchable database of hardware and software certified for openEuler OS, including servers, network cards, solutions, and virtualization platforms.",
+      "url": "https://www.openeuler.openatom.cn/en/compatibility",
+      "creator": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      "variableMeasured": [
+        {
+          "@type": "PropertyValue",
+          "name": "CPU Compatibility",
+          "description": "Searchable by Architecture, Vendor, Model, OS, CPU, and Date"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Driver Compatibility",
+          "description": "Searchable by Architecture, OS Version, Type, Chip Vendor, Card Model, and Chip Model"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Solution Authentication",
+          "description": "Searchable by Architecture, Solution Type, Chip Vendor, Model, OS, and Date"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Virtualization Information",
+          "description": "Searchable by Architecture, Type, Version, and Date"
+        }
+      ]
+    }
+  }
+]

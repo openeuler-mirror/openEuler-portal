@@ -1,0 +1,98 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Intelligence BooM",
+    "alternateName": "Intelligence BooM AI开源基础软件栈",
+    "url": "https://www.openeuler.openatom.cn/zh/projects/intelligence-boom",
+    "description": "Intelligence BooM 是 openEuler 社区联合多方打造的大模型全栈开源 AI 软件栈，涵盖异构融合、任务管理、运行加速等7大平台与20+开源组件，支持 NPU/GPU/CPU 协同推理，提供一键部署与智能体开发能力，助力企业快速落地 AI 应用。",
+    "applicationCategory": "ArtificialIntelligenceApplication",
+    "operatingSystem": "openEuler",
+    "inLanguage": "zh",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CNY",
+      "availability": "https://schema.org/InStock"
+    },
+    "featureList": [
+      "异构融合平台：支持 NPU/GPU/CPU 协同推理及算力切分混部",
+      "任务管理平台：openYuanrong、RAY、openFuyao、K8S、oeDeploy",
+      "数据管理平台：openGauss",
+      "运行加速平台：vLLM、SGLang、LLaMA Factory、MindSpore、PyTorch、LMCache",
+      "智能应用平台：openEuler Intelligence，支持智能调优、智能运维、智能问答、深度研究",
+      "全栈安全平台：保证软件平台自身安全可信，保护业务数据和模型资产安全",
+      "领域模型平台：openEuler OS Model，业界首发4B领域模型，系统调优效果持平DeepSeek 671B",
+      "一键式部署：结合oeDeploy工具，一个命令15分钟完成分布式部署",
+      "支持50+主流开源模型，0 day适配",
+      "多轮、长序列对话场景TTFT降低50%+"
+    ],
+    "softwareVersion": "2.0",
+    "releaseNotes": "第二版本（敲鱼面）：支持NPU抢占混部，降低微调门槛，业界首发操作系统领域模型；首版本（烩面）：构建推理+智能体的开源解决方案，一键部署，开箱即用",
+    "author": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Intelligence BooM 大模型全栈开源推理解决方案 | openEuler社区",
+    "url": "https://www.openeuler.openatom.cn/zh/projects/intelligence-boom",
+    "description": "Intelligence BooM 是 openEuler 社区联合多方打造的大模型全栈开源 AI 软件栈，涵盖异构融合、任务管理、运行加速等7大平台与20+开源组件，支持 NPU/GPU/CPU 协同推理，提供一键部署与智能体开发能力，助力企业快速落地 AI 应用。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "Intelligence BooM",
+      "url": "https://www.openeuler.openatom.cn/zh/projects/intelligence-boom"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://www.openeuler.openatom.cn/zh/projects/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Intelligence BooM",
+          "item": "https://www.openeuler.openatom.cn/zh/projects/intelligence-boom"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn",
+    "description": "openEuler 是一个开源、免费的 Linux 发行版平台，由 openEuler 社区联合多家企业共同打造。",
+    "sameAs": [
+      "https://www.openeuler.openatom.cn/zh/"
+    ],
+    "memberOf": {
+      "@type": "ProgramMembership",
+      "name": "openEuler AI 联合工作组"
+    }
+  }
+]
