@@ -122,3 +122,4 @@ app/.vitepress/cache
 app/.vitepress/.cache
 app/.vitepress/.temp
 app/.vitepress/dist
+.geo/last-modified.json
