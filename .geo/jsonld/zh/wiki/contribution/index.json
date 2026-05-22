@@ -6,7 +6,7 @@
       "@id": "https://www.openeuler.openatom.cn/zh/wiki/contribution",
       "url": "https://www.openeuler.openatom.cn/zh/wiki/contribution",
       "name": "openEuler 贡献指南 | Wiki | openEuler社区",
-      "description": "学习如何参与openEuler社区贡献，参与到开源社区建设中。",
+      "description": "openEuler 社区按照不同 SIG 组织管理社区工作。开发者可通过 Issue、邮件列表、SIG 例会等形式沟通协作。参与贡献方式多样，不局限于编码，包括提交 Issue/PR、软件包贡献等，每种贡献都受社区欢迎。",
       "inLanguage": "zh-CN",
       "isPartOf": {
         "@type": "WebSite",
@@ -57,7 +57,7 @@
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "如何参与openEuler社区贡献",
-      "description": "学习如何参与openEuler社区贡献，参与到开源社区建设中。",
+      "description": "openEuler 社区按照不同 SIG 组织管理社区工作。开发者可通过 Issue、邮件列表、SIG 例会等形式沟通协作。参与贡献方式多样，不局限于编码，包括提交 Issue/PR、软件包贡献等，每种贡献都受社区欢迎。",
       "inLanguage": "zh-CN",
       "url": "https://www.openeuler.openatom.cn/zh/wiki/contribution",
       "publisher": {
