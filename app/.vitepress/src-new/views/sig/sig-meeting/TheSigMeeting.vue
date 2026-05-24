@@ -28,7 +28,7 @@ import { useCommon } from '@/stores/common';
 import cubeTow from '~@/assets/category/home/calendar/cube-2.png';
 import cubeTowDark from '~@/assets/category/home/calendar/cube-2_dark.png';
 import { inBrowser } from 'vitepress';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 
 const { locale, t } = useLocale();
 const { isPhone, lePad, lePadV } = useScreen();

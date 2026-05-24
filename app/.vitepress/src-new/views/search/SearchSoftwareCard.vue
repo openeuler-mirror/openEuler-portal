@@ -16,7 +16,7 @@ import { maintainerDefaults } from '~@/data/search';
 
 import defaultImg from '~@/assets/category/search/default-logo.png';
 import IconUser from '~icons/app-new/icon-user.svg';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 
 defineProps({
   data: {

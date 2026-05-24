@@ -41,7 +41,7 @@ import cubeOneDark from '~@/assets/category/home/calendar/cube-1_dark.png';
 import cubeTowDark from '~@/assets/category/home/calendar/cube-2_dark.png';
 
 import AppSection from '~@/components/AppSection.vue';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { vAnalytics } from '~@/directive/analytics';
 import useInViewDuration from '~@/composables/useInViewDuration';
 

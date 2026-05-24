@@ -28,7 +28,7 @@ import { vAnalytics } from '~@/directive/analytics';
 import { type VitalityValueT } from '~@/@type/type-home';
 import { useI18n } from 'vue-i18n';
 import useInViewDuration from '~@/composables/useInViewDuration';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 
 const { locale } = useLocale();
 const { isPhone, lePadV, leLaptop } = useScreen();

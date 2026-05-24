@@ -18,7 +18,7 @@ import lineDark from '~@/assets/category/home/intro/line_dark.png';
 import circleDark from '~@/assets/category/home/intro/circle_dark.png';
 import { vAnalytics } from '~@/directive/analytics';
 import useInViewDuration from '~@/composables/useInViewDuration';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { useI18n } from 'vue-i18n';
 
 const { locale, isZh } = useLocale();

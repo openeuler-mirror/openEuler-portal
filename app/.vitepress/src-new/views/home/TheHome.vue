@@ -18,7 +18,7 @@ import HomePartner from './HomePartner.vue';
 import HomeCalendar from './HomeCalendar.vue';
 import HomeTrend from './HomeTrend.vue';
 import HomeFriendlyCommunity from './HomeFriendlyCommunity.vue';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { useEventListener, useIntersectionObserver } from '@vueuse/core';
 
 const { isPhone, isPadV } = useScreen();

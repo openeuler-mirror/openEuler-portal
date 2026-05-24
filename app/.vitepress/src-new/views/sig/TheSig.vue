@@ -5,7 +5,7 @@ import SigAbout from './SigAbout.vue';
 import SigList from './SigList.vue';
 
 import banner from '~@/assets/category/sig/sig-center-banner.jpg';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { onBeforeUnmount, onMounted, shallowRef } from 'vue';
 
 const obs = shallowRef<IntersectionObserver>();

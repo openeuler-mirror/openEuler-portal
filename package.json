@@ -21,7 +21,7 @@
   "dependencies": {
     "@opendesign-plus/components": "0.0.1-rc.6",
     "@opendesign-plus/geo-scripts": "0.0.1-rc.1",
-    "@opendesign-plus/plugins": "0.0.1-rc.5",
+    "@opendesign-plus/plugins": "0.0.1-rc.7",
     "@opensig/open-analytics": "^0.0.8",
     "@opensig/opendesign": "0.0.69",
     "@vueuse/core": "10.11.1",

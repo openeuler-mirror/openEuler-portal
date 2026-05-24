@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppContent from '@/components/AppContent.vue';
 import OmCard from './OmCard.vue';

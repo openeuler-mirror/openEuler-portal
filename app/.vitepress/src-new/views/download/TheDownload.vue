@@ -12,7 +12,7 @@ import DownloadGetResource from './DownloadGetResource.vue';
 import DownloadSupportService from './DownloadSupportService.vue';
 
 import { anchorList } from '~@/data/download/download';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();

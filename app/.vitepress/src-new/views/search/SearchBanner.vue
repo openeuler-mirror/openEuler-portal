@@ -15,7 +15,7 @@ import IconClose from '~icons/app-new/icon-close.svg';
 import IconUpload from '~icons/app-new/icon-image-upload.svg';
 import IconImageClose from '~icons/app-new/icon-image-close.svg';
 import IconImageZoomin from '~icons/app-new/icon-image-zoomin.svg';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { imageUpload } from '~@/api/api-search';
 
 const props = defineProps({
