@@ -12,7 +12,7 @@ import AppRouterTemplateMo from '~@/components/AppRouterTemplateMo.vue';
 import banner from '~@/assets/category/download/download-banner.png';
 import IconCommunityReleases from '~icons/download/community-releases.svg';
 import IconCommercaialReleases from '~icons/download/commercaial-releases.svg';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 
 const { lang } = useData();
 const { t, locale } = useLocale();

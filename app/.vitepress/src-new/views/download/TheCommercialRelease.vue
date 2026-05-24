@@ -34,7 +34,7 @@ import {
 import IconOutLink from '~icons/app-new/icon-outlink.svg';
 import IconSearch from '~icons/app-new/icon-header-search.svg';
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { useDebounceFn } from '@vueuse/core';
 
 const { t, locale } = useLocale();

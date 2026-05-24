@@ -26,7 +26,7 @@ import {
   committer,
   maintainer,
 } from '~@/data/sig/role-description';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { inBrowser } from 'vitepress';
 
 const { locale, t } = useLocale();

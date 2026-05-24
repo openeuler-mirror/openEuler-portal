@@ -23,7 +23,7 @@ import clampTextDirective from '~@/directive/clamp-text';
 
 import Layout from '@/App.vue';
 import NotFound from '@/NotFound.vue';
-import { installer } from '@/shared/analytics';
+import { initOpenDesignAnalytics } from '@opendesign-plus/plugins/analytics';
 import { reporAnalytics } from '@/api/api-analytics';
 import { removeCustomCookie } from '@/shared/utils';
 
@@ -38,7 +38,7 @@ export default {
       global.window = {};
       global.__VUE_PROD_DEVTOOLS__ = false;
     }
-    app.use(installer, {
+    app.use(initOpenDesignAnalytics, {
       appKey: 'openEuler',
       isCookieAgreed() {
         return location.pathname.startsWith('/zh') ? true : document.cookie.includes('agreed-cookiepolicy-en=1');

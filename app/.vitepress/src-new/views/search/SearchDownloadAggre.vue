@@ -9,7 +9,7 @@ import communityVersionData from '~@/data/download/download';
 import { useLocale } from '~@/composables/useLocale';
 
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { useI18n } from 'vue-i18n';
 
 const { locale } = useLocale();
