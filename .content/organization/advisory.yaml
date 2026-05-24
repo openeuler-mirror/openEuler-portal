@@ -1,0 +1,60 @@
+# 顾问专家委员会 / Advisory Committee
+#
+# 文件名 advisory 就是这个 section 的 slug,在页面侧的 SECTIONS 数组里被引用。
+# 平铺成员列表用 members:,每个成员一个块,看起来像一张张名片。
+
+title: openEuler 委员会顾问专家委员会
+title_en: Advisory Committee of the openEuler Committee
+id: advisory-committee
+id_zh: 顾问专家委员会
+
+members:
+  - name: 陆首群
+    name_en: Lu Shouqun
+    image: expert/lusouqun.png
+    position:
+      - 中国开源软件联盟名誉主席
+      - 原国务院信息办常务副主任
+    position_en:
+      - Honorary Chairman of China OSS Promotion Union
+      - Former Executive Deputy Director of the Informatization Office of the State Council
+
+  - name: 倪光南
+    name_en: Ni Guangnan
+    image: expert/niguangnan.png
+    position: 中国工程院院士
+    position_en: Academician of Chinese Academy of Engineering
+
+  - name: 廖湘科
+    name_en: Liao Xiangke
+    image: expert/liaoxiangke.png
+    position: 中国工程院院士
+    position_en: Academicians of Chinese Academy of Engineering
+
+  - name: 王怀民
+    name_en: Wang Huaimin
+    image: expert/wanghuaimin.png
+    position: 中国科学院院士
+    position_en: Academician of Chinese Academy of Sciences
+
+  - name: 邬贺铨
+    name_en: Wu Hequan
+    image: expert/wuheshuan.png
+    position: 中国工程院院士
+    position_en: Academicians of Chinese Academy of Engineering
+
+  - name: 周明辉
+    name_en: Zhou Minghui
+    image: expert/zhouminghui.png
+    position:
+      - 北京大学计算机系教授
+      - 北大博雅特聘教授
+    position_en:
+      - Professor of School of Computer Science, Peking University
+      - Peking University Boya Chair Professor
+
+  - name: 霍太稳
+    name_en: Huo Taiwen
+    image: expert/huotaiwen.png
+    position: 极客邦科技创始人兼CEO
+    position_en: Founder and CEO of Geekbang Technology
