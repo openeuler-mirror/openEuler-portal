@@ -68,3 +68,14 @@ openEuler VitePress 官网项目，使用 `.geo/` 目录管理 SEO/GEO 配置。
 ## 相关文档
 
 - [geo-implementation-summary.md](./geo-implementation-summary.md) - SEO 完整实现文档
+
+---
+
+## 代码规范
+
+@rules/01-naming.md
+@rules/02-components.md
+@rules/03-typescript.md
+@rules/04-api-and-state.md
+@rules/05-styling.md
+@rules/06-git.md
