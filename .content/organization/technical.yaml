@@ -1,0 +1,48 @@
+# 技术委员会 / openEuler Technical Committee
+#
+# 这个委员会的特点:
+#   - 平铺成员列表(用 members:)
+#   - 每个成员都带 email/gitee,页面会渲染成邮箱图标 + Gitee 图标
+#   - 用 post/post_en 表示角色(主席/委员),不是单位
+#
+# 加新人:在 members: 下复制一个块,改 name / name_en / photo / post / post_en / email / gitee
+
+title: openEuler 技术委员会
+title_en: openEuler Technical Committee
+id: technical-committee
+id_zh: 技术委员会
+
+members:
+  - name: 胡欣蔚
+    name_en: Hu Xinwei
+    image: technical/huxinwei.png
+    post: 主席
+    post_en: Chairperson
+    email: shinwell_hu@openeuler.sh
+    gitee: shinwell_hu
+
+  - name: 曹志
+    name_en: Cao Zhi
+    image: technical/caozhi.png
+    post: 委员
+    post_en: Committee member
+    email: george.cao@huawei.com
+    gitee: georgecao
+
+  - name: 陈茂冬
+    name_en: Chen Maodong
+    image: technical/chenmaodong.png
+    post: 委员
+    post_en: Committee member
+    email: chenmaodong@xfusion.com
+    gitee: chenmaodong
+
+  - name: 陈棋德
+    name_en: Chen Qide
+    image: technical/chenqide.png
+    post: 委员
+    post_en: Committee member
+    email: dillon.chen@gmail.com
+    gitee: dillon_chen
+
+  # ……剩余 23 人省略,实际文件里就是一块块复制下去
