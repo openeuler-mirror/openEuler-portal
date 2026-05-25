@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, computed, shallowRef } from 'vue';
+import { useData } from 'vitepress';
 
-import { isValidKey } from '@/shared/utils';
+import { getLoginUrl, isValidKey } from '@/shared/utils';
 import { useCommon } from '@/stores/common';
 
 import {
@@ -46,7 +47,7 @@ import { vAnalytics } from '~@/directive/analytics';
 import useInViewDuration from '~@/composables/useInViewDuration';
 
 import { getMeetingDateListApi, getMeetingListApi, getGroupInfosApi } from '~@/api/api-meeting';
-import { showGuard, getUserAuth } from '@/shared/login';
+import { doLogin, useLoginStore } from '@opendesign-plus/composables';
 import { useLocale } from '~@/composables/useLocale';
 import { formatDate } from '~@/utils/common';
 import { getPointStr } from '~@/utils/meeting';
@@ -65,12 +66,15 @@ const commonStore = useCommon();
 const message = useMessage();
 const { t, locale } = useLocale();
 const identitiesStore = useIdentities();
+const { lang } = useData();
+const loginStore = useLoginStore();
 
 const TODAY = dayjs(new Date()).format('YYYY-MM-DD');
 
 const recentMeetingDates = ref([] as string[]);
 
 const activeName = ref<number[]>([]);
+const loginUrl = ref('');
 
 // 日历展示时间限制
 const limitTime = '2021 年 1 月';
@@ -93,7 +97,6 @@ const activityItem = [
   { text: t('home.activityAddress'), key: 'address' },
 ];
 
-const activityType = ['线下', '线上', '线上 + 线下'];
 const titleList = [
   {
     label: t('home.meetingTypeAll'),
@@ -338,8 +341,9 @@ const getPermissionMeeting = () => {
 };
 
 onMounted(async () => {
+  loginUrl.value = getLoginUrl();
+
   selectedDate.value = new Date();
-  getPermissionMeeting();
   // 设置右侧 日程列表高度
   const tbody = document.querySelector(
     '.calendar-body .el-calendar__body'
@@ -357,6 +361,14 @@ onMounted(async () => {
     getSummitHighlight(selectedDateStr.value, summitData)
   ) {
     queryMeetingDates(selectedDateStr.value, '');
+  }
+});
+
+watch(() => loginStore.isLogined, async (val) => {
+  if (val) {
+    await getPermissionMeeting();
+  } else {
+    hasPermMeeting.value = false;
   }
 });
 
@@ -394,10 +406,8 @@ watch(
 const bindVisible = ref(false);
 const toCreateMeeting = () => {
   const identitiesVisible = identitiesStore.identities?.some(item => item.identity === 'gitee' || item.identity === 'gitcode');
-
-  const { token } = getUserAuth();
-  if (!token) {
-    showGuard();
+  if (!loginStore.isLogined) {
+    doLogin(loginUrl.value);
   } else if (!identitiesVisible) {
     bindVisible.value = true;
   } else if (!hasPermMeeting.value) {

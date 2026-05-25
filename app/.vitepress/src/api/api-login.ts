@@ -4,24 +4,19 @@
 
 import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
-import { getUserAuth } from '@/shared/login';
+import { getUserAuth } from '@opendesign-plus/composables';
 import { ElMessage } from 'element-plus';
 
-/**
- * 获取授权的相关回调链接
- */
-type queryPermissionParams = {
-  community: string;
-};
-export function queryPermission(params: queryPermissionParams) {
+export function queryPermission() {
   const url = '/api-omapi/oneid/user/permission';
-  const { token } = getUserAuth();
+  const params = { community: 'openeuler' };
+  const { csrfCookie  } = getUserAuth();
   return request
     .get(url, {
       params,
       global: true,
       headers: {
-        token,
+        token: csrfCookie,
       },
     })
     .then((res: AxiosResponse) => res.data)
@@ -41,12 +36,12 @@ export function queryPermission(params: queryPermissionParams) {
  */
 export function modifyUser(body: any) {
   const url = '/api-omapi/oneid/update/baseInfo';
-  const { token } = getUserAuth();
+  const { csrfCookie  } = getUserAuth();
   return request
     .post(url, body, {
       global: true,
       headers: {
-        token,
+        token: csrfCookie ,
       },
     })
     .then((res: AxiosResponse) => res.data)
@@ -66,11 +61,11 @@ export function modifyUser(body: any) {
  */
 export function queryPersonalInfo() {
   const url = '/api-omapi/oneid/personal/center/user?community=openeuler';
-  const { token } = getUserAuth();
+  const { csrfCookie } = getUserAuth();
   return request
     .get(url, {
       headers: {
-        token,
+        token: csrfCookie,
       },
     })
     .then((res: AxiosResponse) => res.data)

@@ -34,7 +34,6 @@ import FloatingButtonEn from '~@/components/FloatingButtonEn.vue';
 import AppTour from '~@/components/AppTour.vue';
 
 import categories from '@/data/common/category';
-import { setStoreData } from './shared/login';
 import { useLocale } from '~@/composables/useLocale';
 import { hideNssRoutes } from './data/common/nss';
 import {
@@ -42,6 +41,9 @@ import {
   OPlusConfigProvider,
 } from '@opendesign-plus/components';
 import { useCookieStore } from '~@/stores/common';
+import { tryLogin } from '@opendesign-plus/composables';
+import { queryPermission } from './api/api-login';
+import { useUserInfoStore } from './stores/user';
 
 const { changeLocale, isZh } = useLocale();
 const { frontmatter, lang } = useData();
@@ -107,8 +109,13 @@ watch(
   }
 );
 
-onMounted(() => {
-  setStoreData();
+ onMounted(async () => {
+  const userInfoStore = useUserInfoStore();
+  const userInfo = await tryLogin(queryPermission as any);
+
+  if (userInfo) {
+    userInfoStore.setGuardAuthClient(userInfo);
+  }
 });
 
 const COOKIE_DOMAIN = import.meta.env.VITE_COOKIE_DOMAIN;

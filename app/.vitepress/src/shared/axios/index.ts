@@ -13,7 +13,8 @@ import handleError from './handleError';
 import setConfig from './setConfig';
 import { ElLoading, ElMessage } from 'element-plus';
 import { LoadingInstance } from 'element-plus/lib/components/loading/src/loading';
-import { tokenFailIndicateLogin } from '../login';
+import { clearUserAuth, doLogin } from '@opendesign-plus/composables';
+import { getLanguage } from '../utils';
 
 interface RequestConfig<D = any> extends AxiosRequestConfig {
   data?: D;
@@ -180,7 +181,10 @@ const responseInterceptorId = request.interceptors.response.use(
 
     // token过期，重新登录
     if (err.response?.status === 401) {
-      tokenFailIndicateLogin();
+      const language = getLanguage();
+      clearUserAuth();
+      const loginUrl = `${import.meta.env.VITE_LOGIN_ORIGIN}/login?redirect_uri=${encodeURIComponent(location?.href)}&lang=${language.lang}`;
+      doLogin(loginUrl);
     }
 
     return Promise.reject(err).catch(() => {});

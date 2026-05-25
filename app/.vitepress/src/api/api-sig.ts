@@ -1,6 +1,6 @@
 import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
-import { getUserAuth } from '@/shared/login';
+import { getUserAuth } from '@opendesign-plus/composables';
 import {
   SigContributeArrT,
   SigDetailT,
@@ -147,14 +147,14 @@ export function applySigGathering(params: any): Promise<{
   msg: string;
   update_at: string;
 }> {
-  const { token } = getUserAuth();
+  const { csrfCookie } = getUserAuth();
   const url = '/api-dsapi/query/sigGathering?community=openeuler';
   return request
     .post(url, params, {
       showLoading: true,
       showError: true,
       headers: {
-        token,
+        token: csrfCookie,
       },
     })
     .then((res: AxiosResponse) => res?.data);
