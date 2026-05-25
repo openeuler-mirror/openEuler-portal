@@ -78,7 +78,7 @@
         "name": "openEuler维护支持（Maintenance Support）和扩展支持（Extend Support）有什么区别？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "维护支持（Maintenance Support）包括：CVE修复、Bugfix、新硬件支持和少量新特性（保证LTS内前向兼容）。扩展支持（Extend Support）仅修复"主要"以上CVE和Bug。"
+          "text": "维护支持（Maintenance Support）包括：CVE修复、Bugfix、新硬件支持和少量新特性（保证LTS内前向兼容）。扩展支持（Extend Support）仅修复\"主要\"以上CVE和Bug。"
         }
       },
       {
