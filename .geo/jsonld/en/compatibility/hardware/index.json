@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/compatibility/hardware",
-    "url": "https://www.openeuler.openatom.cn/en/compatibility/hardware",
+    "@id": "https://www.openeuler.org/en/compatibility/hardware",
+    "url": "https://www.openeuler.org/en/compatibility/hardware",
     "name": "Hardware Compatibility Test | openEuler",
     "description": "Test your hardware's compatibility with openEuler and get ready for seamless integration.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler"
     },
     "breadcrumb": {
@@ -20,19 +20,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Compatibility",
-          "item": "https://www.openeuler.openatom.cn/en/compatibility/"
+          "item": "https://www.openeuler.org/en/compatibility/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Hardware Compatibility Test",
-          "item": "https://www.openeuler.openatom.cn/en/compatibility/hardware"
+          "item": "https://www.openeuler.org/en/compatibility/hardware"
         }
       ]
     }
@@ -42,7 +42,7 @@
     "@type": "HowTo",
     "name": "openEuler Hardware Compatibility Test Process",
     "description": "Step-by-step process to test your hardware's compatibility with openEuler and get certified.",
-    "url": "https://www.openeuler.openatom.cn/en/compatibility/hardware",
+    "url": "https://www.openeuler.org/en/compatibility/hardware",
     "totalTime": "PT16D",
     "step": [
       {
@@ -50,49 +50,49 @@
         "position": 1,
         "name": "Apply to join the openEuler community",
         "text": "Apply to join the openEuler community. Estimated time: 0.5 days.",
-        "url": "https://www.openeuler.openatom.cn/en/compatibility/hardware#step1"
+        "url": "https://www.openeuler.org/en/compatibility/hardware#step1"
       },
       {
         "@type": "HowToStep",
         "position": 2,
         "name": "Apply for a compatibility test",
         "text": "Apply for a compatibility test. Estimated time: 0.5 days.",
-        "url": "https://www.openeuler.openatom.cn/en/compatibility/hardware#step2"
+        "url": "https://www.openeuler.org/en/compatibility/hardware#step2"
       },
       {
         "@type": "HowToStep",
         "position": 3,
         "name": "Understand the compatibility policies",
         "text": "Understand the compatibility policies. Estimated time: 0.5 days.",
-        "url": "https://www.openeuler.openatom.cn/en/compatibility/hardware#step3"
+        "url": "https://www.openeuler.org/en/compatibility/hardware#step3"
       },
       {
         "@type": "HowToStep",
         "position": 4,
         "name": "Create an issue",
         "text": "Create an issue in the openEuler repository. Estimated time: 0.5 days.",
-        "url": "https://www.openeuler.openatom.cn/en/compatibility/hardware#step4"
+        "url": "https://www.openeuler.org/en/compatibility/hardware#step4"
       },
       {
         "@type": "HowToStep",
         "position": 5,
         "name": "Perform the compatibility test",
         "text": "Perform the compatibility test on your hardware. Estimated time: 10 days.",
-        "url": "https://www.openeuler.openatom.cn/en/compatibility/hardware#step5"
+        "url": "https://www.openeuler.org/en/compatibility/hardware#step5"
       },
       {
         "@type": "HowToStep",
         "position": 6,
         "name": "Submit results for review",
         "text": "Submit the test results for review. Estimated time: 2 days.",
-        "url": "https://www.openeuler.openatom.cn/en/compatibility/hardware#step6"
+        "url": "https://www.openeuler.org/en/compatibility/hardware#step6"
       },
       {
         "@type": "HowToStep",
         "position": 7,
         "name": "Get published in compatibility list",
         "text": "After approval, your hardware will be listed in the openEuler compatibility list. Estimated time: 2 days.",
-        "url": "https://www.openeuler.openatom.cn/en/compatibility/hardware#step7"
+        "url": "https://www.openeuler.org/en/compatibility/hardware#step7"
       }
     ]
   }
