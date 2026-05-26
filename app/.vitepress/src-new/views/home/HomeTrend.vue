@@ -38,17 +38,17 @@ const calcBlogStyle = (idx: number) => {
   if (idx % 3 === 0) {
     return {
       bg: blogBg1,
-      theme: 'dark',
+      theme: 'e.dark',
     };
   } else if (idx % 3 === 1) {
     return {
       bg: blogBg2,
-      theme: 'light',
+      theme: 'e.light',
     };
   } else if (idx % 3 === 2) {
     return {
       bg: blogBg3,
-      theme: 'light',
+      theme: 'e.light',
     };
   }
 };
@@ -105,6 +105,7 @@ onMounted(() => {
             :title-max-row="2"
             :detail-max-row="2"
             :detail="!lePadV ? blog.summary : ''"
+            text-overflow="ellipsis"
             :cover="calcBlogStyle(idx)?.bg"
             :cover-ratio="
               gtLaptop

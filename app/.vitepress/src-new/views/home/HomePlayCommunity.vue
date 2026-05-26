@@ -120,6 +120,7 @@ useInViewDuration(container, (duration) => {
               v-if="card.textBtn"
               :href="card.textBtn.link"
               target="_blank"
+              :hover-underline="false"
               rel="noopener noreferrer"
               v-analytics.bubble="{
                 level2: card.title,
@@ -163,6 +164,7 @@ useInViewDuration(container, (duration) => {
         :style="{ '--link-color': 'rgba(255, 255, 255, 0.8)' }"
         class="vitality-btn"
         target="_blank"
+        :hover-underline="false"
         rel="noopener noreferrer"
         v-analytics.bubble="{
           target: t('home.viewDetails'),
@@ -351,10 +353,8 @@ useInViewDuration(container, (duration) => {
         .btn-box {
           margin-top: 32px;
           @include text1;
-          a {
-            & + a {
-              margin-left: 16px;
-            }
+          :deep(.o-link) {
+            margin-left: 16px;
           }
           @include respond('<=laptop') {
             margin-top: 24px;
@@ -364,10 +364,8 @@ useInViewDuration(container, (duration) => {
           }
           @include respond('phone') {
             margin-top: 12px;
-            a {
-              & + a {
-                margin-left: 12px;
-              }
+            :deep(.o-link) {
+              margin-left: 12px;
             }
           }
         }

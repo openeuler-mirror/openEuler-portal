@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed, onMounted, watch } from 'vue';
+import { isClient, OIcon } from '@opensig/opendesign';
 import { useCommon } from '@/stores/common';
 import { useScreen } from '~@/composables/useScreen';
 import { setCustomCookie, getCustomCookie } from '@/shared/utils';
@@ -52,6 +53,9 @@ watch(
     return commonStore.theme;
   },
   (val) => {
+    if (!isClient) {
+      return;
+    }
     const documentElement = document.documentElement;
     if (val === 'dark') {
       documentElement.setAttribute('data-o-theme', 'e.dark'); 

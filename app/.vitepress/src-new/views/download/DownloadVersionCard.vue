@@ -402,15 +402,16 @@ const onClickDownload = (row: any) => {
     </h2>
     <p v-if="contentData?.PLANNED_EOL" class="subtitle">Planned EOL: {{ contentData?.PLANNED_EOL }}</p>
     <div class="other-link">
-      <template v-for="(linkData, index) in linkConfigs">
-        <a
+      <template v-for="(linkData, index) in linkConfigs" :key="index">
+        <OLink
           v-if="contentData[linkData.urlKey]"
           :href="contentData[linkData.urlKey]"
           target="_blank"
+          color="primary"
           rel="noopener noreferrer"
         >
           {{ $t(linkData.textKey) }}
-        </a>
+        </OLink>
         <ODivider
           v-if="contentData[linkData.urlKey] && index < linkConfigs.length - 1"
           :style="{

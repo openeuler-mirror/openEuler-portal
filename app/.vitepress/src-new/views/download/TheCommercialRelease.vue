@@ -629,7 +629,6 @@ html[lang='en'] {
       grid-template-columns: repeat(1, 1fr);
     }
     .o-card {
-      --card-main-padding: 24px;
       height: 100%;
       width: 100%;
       :deep(.o-card-header) {

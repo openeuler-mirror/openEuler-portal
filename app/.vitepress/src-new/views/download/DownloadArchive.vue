@@ -557,6 +557,24 @@ const onClickLink = (item: any) => {
   .detail-last {
     color: var(--o-color-info1);
     @include text1;
+    a {
+      --link-color-hover: var(--e-color-link1);
+      --link-underline-x: 100%;
+
+      color: var(--e-color-link1);
+      background: linear-gradient(0deg, var(--link-color-hover), var(--link-color-hover)) no-repeat var(--link-underline-x) bottom;
+      background-size: 0 1px;
+      transition: background-size var(--o-easing-standard) var(--o-duration-m2);
+
+      @include hover {
+        background-size: var(--link-underline-x) 1px;
+        background-position-x: left;
+        color: var(--e-color-link2);
+      }
+      &:active {
+        color: var(--e-color-link3);
+      }
+    }
   }
   .filter-box {
     margin-top: 24px;

@@ -61,7 +61,7 @@ const bannerInfo = computed(() => {
 const theme = ref('');
 const onBeforeChange = (idx: number) => {
   setTimeout(() => {
-    theme.value = bannerInfo.value[idx].bg_theme ?? 'light';
+    theme.value = bannerInfo.value[idx].bg_theme ?? 'e.light';
   }, 100);
 };
 

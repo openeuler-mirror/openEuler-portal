@@ -1,4 +1,4 @@
-@use './screen.scss' as *;
+@use "@opensig/opendesign/es/_styles/mixin.scss" as *;
 
 @mixin in-dark {
   [data-o-theme='e.dark'] {
@@ -54,11 +54,10 @@
   }
 }
 
-
 @mixin title-margin-bottom {
   margin-bottom: 40px;
 
-  @include respond('laptop-pc') {
+  @include respond('laptop') {
     margin-bottom: 24px;
   }
   @include respond('pad_h') {
@@ -75,7 +74,7 @@
 @mixin title-padding-bottom {
   padding-bottom: 72px;
 
-  @include respond('laptop-pc') {
+  @include respond('laptop') {
     padding-bottom: 56px;
   }
   @include respond('pad_h') {
@@ -92,7 +91,7 @@
 @mixin title-margin-top {
   margin-top: 72px;
 
-  @include respond('laptop-pc') {
+  @include respond('laptop') {
     margin-top: 56px;
   }
   @include respond('pad_h') {
@@ -109,7 +108,7 @@
 @mixin title-margin-top2 {
   margin-top: 40px;
 
-  @include respond('laptop-pc') {
+  @include respond('laptop') {
     margin-top: 24px;
   }
   @include respond('pad_h') {
@@ -126,7 +125,7 @@
 @mixin title-margin-top3 {
   margin-top: 24px;
 
-  @include respond('laptop-pc') {
+  @include respond('laptop') {
     margin-top: 16px;
   }
   @include respond('pad_h') {
@@ -143,7 +142,7 @@
 @mixin title-margin-top4 {
   margin-top: 16px;
 
-  @include respond('laptop-pc') {
+  @include respond('laptop') {
     margin-top: 12px;
   }
   @include respond('pad_h') {

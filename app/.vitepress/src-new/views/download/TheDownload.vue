@@ -102,23 +102,15 @@ const reportDownload = (data: Record<string, any>) => {
           flex-wrap: wrap;
         }
 
+        .o-anchor-item-lines {
+          display: none;
+        }
+
         .o-anchor-item {
           --anchor-item-width: auto;
           --anchor-item-min-width: auto;
-          --anchor-item-link-bg-color-hover: transparent;
-          --anchor-item-link-bg-color-active: transparent;
-          --anchor-item-link-color: var(--o-color-info3);
-          --anchor-item-link-color-active: var(--o-color-info1);
-          --anchor-item-link-color-hover: --anchor-item-link-gap: 0;
+          --anchor-item-link-gap: 0;
           --anchor-item-link-padding: 0 32px 0 0;
-
-          .o-anchor-item-link {
-            @include hover {
-              &:not(.is-active) {
-                color: var(--o-color-info2);
-              }
-            }
-          }
         }
       }
     }

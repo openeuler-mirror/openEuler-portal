@@ -118,8 +118,7 @@ const { theme } = storeToRefs(useCommon());
         @include tip1;
       }
       @include hover {
-        .display-zone-title,
-        .display-zone-description {
+        .display-zone-title {
           color: var(--o-color-primary1);
         }
       }

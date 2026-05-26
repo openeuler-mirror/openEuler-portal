@@ -466,7 +466,7 @@ onUnmounted(() => {
                 <OButton
                   size="medium"
                   color="primary"
-                  variant="solid"
+                  variant="outline"
                   :disabled="!Boolean(inputText.length)"
                   @click="handleClickSubmit"
                 >
