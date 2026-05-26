@@ -4,7 +4,7 @@ import { computed, type PropType, ref, watch } from 'vue';
 import { OLink, OFigure } from '@opensig/opendesign';
 
 import { useData } from 'vitepress';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 
 import { useVModels } from '@vueuse/core';
 import { moduleMap, subModuleMap } from '~@/data/search';

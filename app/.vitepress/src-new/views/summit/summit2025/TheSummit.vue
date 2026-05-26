@@ -2,7 +2,7 @@
 import { computed, onMounted, ref } from 'vue';
 import { OTab, OTabPane } from '@opensig/opendesign';
 
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { getUrlParams } from '~@/utils/common';
 
 import AppContext from '@/components/AppContent.vue';

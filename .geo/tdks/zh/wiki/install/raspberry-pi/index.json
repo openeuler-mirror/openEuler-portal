@@ -1,0 +1,1 @@
+{"title":"在树莓派上安装 openEuler 24.03 LTS 完整教程 | openEuler社区","description":"本文详细介绍在树莓派 3B/3B+/4B 上安装 openEuler 24.03 LTS 的完整流程，包括树莓派镜像的下载获取、SHA256 完整性校验步骤、硬件兼容性要求及最小配置说明。按照本指南，您可以快速完成 openEuler 在树莓派上的部署，开启嵌入式 Linux 开发之旅。","keywords":"openEuler,树莓派,Raspberry Pi,openEuler 24.03 LTS,树莓派镜像,aarch64,SHA256校验,嵌入式Linux,openEuler安装教程,Linux操作系统"}

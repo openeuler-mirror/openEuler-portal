@@ -43,7 +43,7 @@ import IconUser from '~icons/sig/icon-user.svg';
 import IconSigSpace from '~icons/sig/sig-space.svg';
 import IconNotice from '~icons/sig/icon-notice.svg';
 import IconFilter from '~icons/sig/icon-filter.svg';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { useI18n } from '~@/i18n';
 
 const { locale, t } = useLocale();

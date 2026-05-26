@@ -22,7 +22,7 @@ import IconImageUpload from '~icons/app-new/icon-image-upload.svg';
 import IconImageClose from '~icons/app-new/icon-image-close.svg';
 import IconImageZoomin from '~icons/app-new/icon-image-zoomin.svg';
 import { useDebounceFn } from '@vueuse/core';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 
 const { lang } = useData();
 const searchRef = ref();

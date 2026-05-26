@@ -36,7 +36,7 @@ import { getSigmeetings } from '~@/api/api-meeting';
 import type { SigCompleteItemT } from '~@/@types/type-sig';
 
 import { useHeaderTitle } from '~@/stores/common';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 
 const { leLaptop, isPadVToLaptop, lePadV } = useScreen();
 const { locale, t } = useLocale();

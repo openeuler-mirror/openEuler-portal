@@ -24,7 +24,7 @@ import { casesZh, casesEn } from '~@/data/home/case';
 import { getHomeShowCases } from '~@/api/api-search';
 import { vAnalytics } from '~@/directive/analytics';
 import useInViewDuration from '~@/composables/useInViewDuration';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 
 const emit = defineEmits(['result']);
 

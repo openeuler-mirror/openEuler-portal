@@ -30,7 +30,7 @@ const props = defineProps({
 import IconFound from '~icons/app-new/icon-good.svg';
 import IconNotFound from '~icons/app-new/icon-bad.svg';
 import IconFeedback from '~icons/app-new/icon-feedback.svg';
-import { oaReport } from '@/shared/analytics';
+import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { Directive } from 'vue';
 import { onMounted } from 'vue';
 import { useDebounceFn } from '@vueuse/core';

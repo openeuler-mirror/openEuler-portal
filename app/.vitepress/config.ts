@@ -1,59 +1,44 @@
 import type { HeadConfig, PageData, UserConfig } from 'vitepress';
 
-import tdks from '../../.geo/tdks';
-
 import { viteLlmsTxt } from './plugins/generateLLMsTxtNew';
 import LLMsTxtSections from './LLMsTxtSections';
 import viteLastModifiedPlugin from '@opendesign-plus/plugins/vite/generate-lastmod-changefreq';
 import sitemapItemTransformer from '@opendesign-plus/geo-scripts/vitepress-sitemap-transformer';
 import generateLLMsFull from '@opendesign-plus/geo-scripts/generate-llms-full';
+import yaml from '@modyfi/vite-plugin-yaml';
 
-import { readFile } from 'node:fs/promises';
 import path, { join } from 'node:path';
 import { existsSync, readFileSync} from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import generalJsonLd from '../../.geo/jsonld/general';
 
 const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const geoDir = path.resolve(__dirname, '../../.geo')
+const currentHostname = readEnvVar('VITE_MAIN_DOMAIN_URL') || 'https://www.openeuler.org';
+
 /**
  * 设置JSON-LD
  */
 const setJSONLD = async (pageData: PageData, pagePath: string) => {
-  if (pageData.frontmatter.sigPageType === 'detail' && pageData.params?.sig) {
-    if (!existsSync(path.join(geoDir, `jsonld/sigs/${pageData.params.sig}.jsonld.json`))) {
-      return;
-    }
-    const content = await readFile(path.join(geoDir, `jsonld/sigs/${pageData.params.sig}.jsonld.json`), { encoding: 'utf8' });
-    (pageData.frontmatter.head ??= []).push([
-      'script',
-      { type: 'application/ld+json' },
-      content
-    ]);
+  const jsonFile = join(geoDir, 'jsonld', pagePath, 'index.json');
+  if (!existsSync(jsonFile)) {
     return;
   }
-  const content = generalJsonLd[pagePath]
+  let content = readFileSync(jsonFile, 'utf-8');
   if (content) {
     (pageData.frontmatter.head ??= []).push([
       'script',
       { type: 'application/ld+json' },
-      content
+      currentHostname !== 'https://www.openeuler.org' ? content.replaceAll('https://www.openeuler.org', currentHostname) : content
     ]);
   }
 }
 
 const setTdk = (pageData: PageData, pagePath: string) => {
-  const locale = pageData.filePath.slice(0, 2) as 'zh' | 'en';
-  const tdkInfo = tdks[locale]?.[pagePath];
-  if (pagePath === 'zh') {
-    pageData.titleTemplate = 'openEuler社区官网';
-  } else if (pagePath === 'en') {
-    pageData.titleTemplate = 'openEuler';
-  } else {
-    pageData.titleTemplate = `:title | ${tdks.titleSuffix[locale]}`;
-  }
+  pageData.titleTemplate = `:title | ${pagePath.startsWith('zh') ? 'openEuler社区官网' : 'openEuler'}`;
+  const jsonFile = join(geoDir, 'tdks', pagePath, 'index.json');
+  const tdkInfo = existsSync(jsonFile) ? JSON.parse(readFileSync(jsonFile, 'utf-8')) : null;
   if (!tdkInfo) {
     if (isBlog.test(pagePath)) {
       const frontmatter = pageData.frontmatter;
@@ -90,8 +75,8 @@ const setTdk = (pageData: PageData, pagePath: string) => {
   }
 }
 
-
 function readEnvVar(key: string): string | undefined {
+  // eslint-disable-next-line
   const envFile = resolve(process.cwd(), '.env.production');
   if (!existsSync(envFile)) return undefined;
   const match = readFileSync(envFile, 'utf-8').match(
@@ -100,9 +85,7 @@ function readEnvVar(key: string): string | undefined {
   return match ? match[1].trim() : undefined;
 }
 
-const sitemapHostname =
-  readEnvVar('VITE_MAIN_DOMAIN_URL') || 'https://www.openeuler.org';
-
+// eslint-disable-next-line
 const excludes = process.argv
   .filter(arg => arg.startsWith('--exclude='))
   .flatMap(arg => {
@@ -113,11 +96,9 @@ const excludes = process.argv
     return val;
   });
 
-console.log(`exclude: ${excludes}`);
-
 const config: UserConfig = {
   sitemap: {
-    hostname: sitemapHostname,
+    hostname: currentHostname,
     transformItems: sitemapItemTransformer(
       items => {
         try {
@@ -195,15 +176,15 @@ const config: UserConfig = {
   ],
   appearance: false, // enable dynamic scripts for dark mode
   titleTemplate: false, //  vitepress supports pageTitileTemplate since 1.0.0
-  async transformPageData(pageData) {
+  transformPageData(pageData) {
     const filePath = pageData.filePath;
     let lookupKey: string;
     if (filePath.endsWith('index.md')) {
       lookupKey = encodeURI(filePath.slice(0, -9));
     } else {
-      lookupKey = encodeURI(filePath.slice(0, -2).concat('html'));
+      lookupKey = encodeURI(filePath.slice(0, -3));
     }
-    await setJSONLD(pageData, lookupKey);
+    setJSONLD(pageData, lookupKey);
     setTdk(pageData, lookupKey);
   },
   locales: {
@@ -243,6 +224,7 @@ const config: UserConfig = {
       },
     },
     plugins: [
+      yaml(),
       viteLastModifiedPlugin({
         rootDir: join(__dirname, '../'),
         pageEntryPattern: ['zh/**/*.md', 'en/**/*.md'],
@@ -265,7 +247,7 @@ const config: UserConfig = {
 
 > openEuler是一个开源、免费的 Linux 发行版平台，通过开放的形式与全球的开发者共同构建一个开放、多元和架构包容的软件生态体系。
  `,
-      site: sitemapHostname,
+      site: currentHostname,
       exclude: [/(zh|en)\/blog\//, /(zh|en)\/news\//],
       removeClass: ['feedback', 'feedback-md'],
       htmlDir: join(__dirname, 'dist'),
