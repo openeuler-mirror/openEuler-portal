@@ -1,0 +1,47 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "最新活动 | 社区活动 | openEuler社区",
+    "description": "浏览openEuler社区的最新活动信息，及时参与感兴趣的活动。",
+    "url": "https://www.openeuler.openatom.cn/zh/interaction/event-list/latest",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "社区活动",
+          "item": "https://www.openeuler.openatom.cn/zh/interaction/event-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "最新活动",
+          "item": "https://www.openeuler.openatom.cn/zh/interaction/event-list/latest"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "openEuler社区最新活动列表",
+    "description": "浏览openEuler社区的最新活动信息，及时参与感兴趣的活动。",
+    "url": "https://www.openeuler.openatom.cn/zh/interaction/event-list/latest",
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "numberOfItems": 0
+  }
+]

@@ -1,0 +1,197 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Master openEuler on Clouds",
+      "description": "Learn to get openEuler images on AWS, Azure, and more with ease.",
+      "url": "https://www.openeuler.openatom.cn/en/wiki/install/cloud",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "about": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "openEuler",
+          "applicationCategory": "OperatingSystem",
+          "operatingSystem": "Linux",
+          "url": "https://www.openeuler.openatom.cn"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Obtaining the openEuler Image on AWS",
+      "description": "Steps to find and use the openEuler community AMI on Amazon Web Services (AWS) EC2.",
+      "url": "https://www.openeuler.openatom.cn/en/wiki/install/cloud",
+      "inLanguage": "en",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Log in to the AWS Console",
+          "text": "Log in to the AWS Console at https://console.aws.amazon.com."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Navigate to EC2",
+          "text": "Expand the Services tab, select Compute and then EC2."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Open AMI Catalog",
+          "text": "In the Images list, choose AMI Catalog."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Search for openEuler",
+          "text": "Choose Community AMIs and search for "openEuler"."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Create a VM",
+          "text": "Select an openEuler version to create a VM."
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Obtaining the openEuler Shared Image on Azure",
+      "description": "Steps to find and use the openEuler shared image on Microsoft Azure.",
+      "url": "https://www.openeuler.openatom.cn/en/wiki/install/cloud",
+      "inLanguage": "en",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Log in to the Azure Portal",
+          "text": "Log in to the Azure Portal at https://portal.azure.com/."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Search for Community images",
+          "text": "Go to the account home page and search for "Community images"."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Find openEuler images",
+          "text": "On the Community images page, search for "openEuler" to view available openEuler images."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Create a VM",
+          "text": "Click the target image and create a VM."
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Obtaining the openEuler Image on Alibaba Cloud",
+      "description": "Steps to find and use the openEuler community image on Alibaba Cloud Elastic Compute Service.",
+      "url": "https://www.openeuler.openatom.cn/en/wiki/install/cloud",
+      "inLanguage": "en",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Log in to Alibaba Cloud Console",
+          "text": "Log in to the Alibaba Cloud Console at https://cn.aliyun.com."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Navigate to Elastic Compute Service",
+          "text": "Expand the Home tab and choose Elastic Compute Service."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Search for openEuler",
+          "text": "In the Images list, choose Community Images, and search for "openEuler"."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Create a VM",
+          "text": "Select an openEuler version to create a VM."
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Obtaining the openEuler Image on Huawei Cloud",
+      "description": "Steps to create a cloud host (instance) on Huawei Cloud using the openEuler image.",
+      "url": "https://www.openeuler.openatom.cn/en/wiki/install/cloud",
+      "inLanguage": "en",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Log in to HUAWEI CLOUD",
+          "text": "Log in to the HUAWEI CLOUD website and click Console."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Select Elastic Cloud Server",
+          "text": "Select Elastic Cloud Server."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Buy and configure an ECS",
+          "text": "Buy and configure an ECS, including configuring computing resources."
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Wiki",
+          "item": "https://www.openeuler.openatom.cn/en/wiki/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Install",
+          "item": "https://www.openeuler.openatom.cn/en/wiki/install/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Cloud",
+          "item": "https://www.openeuler.openatom.cn/en/wiki/install/cloud"
+        }
+      ]
+    }
+  ]
+]

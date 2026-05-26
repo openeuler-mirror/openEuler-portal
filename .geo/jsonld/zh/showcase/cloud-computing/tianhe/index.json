@@ -1,0 +1,116 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/tianhe",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/tianhe",
+    "name": "XSKY星辰天合公司 | openEuler社区",
+    "description": "天合翔宇系列鲲鹏计算型存储解决方案一体机",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "云计算",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "XSKY星辰天合公司",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/tianhe"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "XSKY星辰天合公司天合翔宇分布式存储解决方案",
+    "description": "天合翔宇分布式存储系统是XSKY星辰天合公司面向信创生态的企业级软件定义存储产品，基于openEuler及鲲鹏算法优化，实现读写性能提升10%以上，为大规模信创云环境提供可靠的存储基础架构支撑。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/tianhe",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "软件定义存储"
+      },
+      {
+        "@type": "Thing",
+        "name": "信创生态"
+      },
+      {
+        "@type": "Thing",
+        "name": "鲲鹏计算"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler"
+      }
+    ],
+    "mentions": {
+      "@type": "Organization",
+      "name": "XSKY星辰天合公司",
+      "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/tianhe"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "天合翔宇分布式存储解决方案特性",
+    "description": "XSKY星辰天合天合翔宇分布式存储系统核心解决方案特性列表",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/tianhe",
+    "numberOfItems": 4,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "一池多芯",
+        "description": "同一个集群或者存储池可异构支持多种架构CPU和OS"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "全场景一体化",
+        "description": "支持虚拟化，本地应用，非结构化等；支持块，文件和对象共池，支持全场景EC和压缩；支持全协议同城双活，多站点，上下云，数据归档"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "关键业务可用",
+        "description": "支持块、文件和对象，全协议双活；对象生命周期管理，多站点同步，小文件归并；文件异地灾备，目录快照，目录QoS、负载均衡，整池扩容；块云备份、异步复制、VAAI、在线迁移等高级功能，保证关键业务可用"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "数据自由流动",
+        "description": "解耦底层硬件，统一支持信创生态和非信创生态，实现业务无感知的平滑生态融合、生态过渡和生态迁移"
+      }
+    ]
+  }
+]

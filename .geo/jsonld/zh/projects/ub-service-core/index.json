@@ -1,0 +1,105 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "url": "https://www.openeuler.openatom.cn/zh/projects/ub-service-core",
+      "name": "UB Service Core灵衢超节点集群服务，加速应用性能30~50% | openEuler社区",
+      "description": "UB Service Core构筑5大集群级系统服务，涵盖内存、IO、通信、虚拟化与计算引擎，支持不同OS并全面开源至openEuler社区。释放灵衢超节点平等互联架构优势，全面使能应用加速30~50%，助力构建灵衢系统软件生态。",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler社区"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "openEuler社区",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "项目",
+            "item": "https://www.openeuler.openatom.cn/zh/projects/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "UB Service Core",
+            "item": "https://www.openeuler.openatom.cn/zh/projects/ub-service-core"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "UB Service Core",
+      "alternateName": "UBS",
+      "url": "https://www.openeuler.openatom.cn/zh/projects/ub-service-core",
+      "description": "UB Service Core构筑5大集群级系统服务，支持不同OS并全面开源至openEuler社区，释放超节点平等互联架构优势，全面使能应用加速30~50%，促进灵衢系统软件生态构筑。",
+      "applicationCategory": "SystemApplication",
+      "operatingSystem": "openEuler",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "UB Service Core Engine (UBS Engine) - 支持内存、DPU资源池化管理与动态调度，支持分布式自选主，支持N节点场景下最多N-1节点失效的高可用",
+        "UB Service Core Virt (UBS Virt) - 支持虚拟化池化，热迁移策略决策，极速快恢与容灾，虚机/容器间极速通信",
+        "UB Service Core Memory (UBS Mem) - 支持统一内存编程，实现灵衢超节点的共享内存、池化内存",
+        "UB Service Core Communication (UBS Comm) - 基于超节点提供高性能、高可靠以及生态兼容的通信协议",
+        "UB Service Core IO (UBS IO) - 基于超节点，提供应用亲和的全局数据读写缓存系统高阶IO服务"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      "hasPart": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "UB Service Core Engine",
+          "alternateName": "UBS Engine",
+          "description": "支持内存、DPU资源池化管理与动态调度，支持分布式自选主，支持N节点场景下最多N-1节点失效的高可用，是灵衢计算系统的控制面核心参考实现。",
+          "releaseNotes": "已开源"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "UB Service Core Virt",
+          "alternateName": "UBS Virt",
+          "description": "支持虚拟化池化，热迁移策略决策，极速快恢与容灾，虚机/容器间极速通信等能力，使能虚拟化性能提升。",
+          "releaseNotes": "计划2026-03-30开源"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "UB Service Core Memory",
+          "alternateName": "UBS Mem",
+          "description": "支持统一内存编程，实现灵衢超节点的共享内存、池化内存。",
+          "releaseNotes": "计划2026-03-30开源"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "UB Service Core Communication",
+          "alternateName": "UBS Comm",
+          "description": "基于超节点提供高性能、高可靠以及生态兼容（用户态Socket/Verbs over UB）的通信协议。",
+          "releaseNotes": "已开源"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "UB Service Core IO",
+          "alternateName": "UBS IO",
+          "description": "基于超节点，提供应用亲和的全局数据读写缓存系统高阶IO服务。",
+          "releaseNotes": "计划2026-03-30开源"
+        }
+      ]
+    }
+  ]
+]

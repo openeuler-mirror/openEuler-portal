@@ -1,0 +1,91 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/migration/background",
+    "url": "https://www.openeuler.openatom.cn/en/migration/background",
+    "name": "Why Migrate to openEuler | openEuler",
+    "description": "Discover why openEuler is a must-try alternative Linux distro.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "openEuler",
+      "applicationCategory": "OperatingSystem",
+      "operatingSystem": "Linux",
+      "url": "https://www.openeuler.openatom.cn/",
+      "description": "openEuler is an open source OS oriented to digital infrastructure that fits any server, cloud computing, edge computing, and embedded deployment. It is secure, stable, and easy-to-use and can connect with multiple computing architectures.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Migration",
+          "item": "https://www.openeuler.openatom.cn/en/migration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Why Migrate to openEuler",
+          "item": "https://www.openeuler.openatom.cn/en/migration/background"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "url": "https://www.openeuler.openatom.cn/en/migration/background",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why should enterprises migrate to openEuler?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As the EOM for the original OS approaches, migrating to a new OS becomes imperative to ensure service continuity and security. Digital transformation now requires OSs must adapt to new architectures and scenarios, requiring systematic migration solutions and tools to ensure seamless migration. Enterprises must adopt future-oriented strategies. Comprehensive support, reliability, and stability are needed for sustainable development and product innovation. openEuler provides an efficient and reliable platform on which to migrate and port your systems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is openEuler?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler is an open source OS oriented to digital infrastructure that fits any server, cloud computing, edge computing, and embedded deployment. It is secure, stable, and easy-to-use and can connect with multiple computing architectures."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What kernel innovations does openEuler offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler is a native open source OS that evolves independently to meet needs for sustainable development. For the kernel, openEuler has made innovations in multi-core scheduling, diverse compute, and support for memory-centric architectures. Since 2012, openEuler has made countless contributions to the Linux Kernel community, ranking No.1 in kernel code contribution in Linux Kernel 5.10/5.14."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What components make up the openEuler architecture?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An innovative architecture is the foundation for full-stack optimization, helping unleash excellent compute and support digital infrastructure. It consists of the acceleration libraries, virtualization, kernel, driver, compiler, OS tool, OpenJDK, and other components."
+        }
+      }
+    ]
+  }
+]

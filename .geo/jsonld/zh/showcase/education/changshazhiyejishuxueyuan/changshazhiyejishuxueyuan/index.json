@@ -1,0 +1,83 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "长沙职业技术学院 | openEuler社区",
+    "description": "麒麟信安服务器操作系统在长沙职业技术学院成功部署，优化学校的管理、教学等信息服务",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/changshazhiyejishuxueyuan/changshazhiyejishuxueyuan.html",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "教育",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "长沙职业技术学院",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/changshazhiyejishuxueyuan/changshazhiyejishuxueyuan.html"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "长沙职业技术学院 | openEuler社区",
+    "description": "麒麟信安服务器操作系统在长沙职业技术学院成功部署，优化学校的管理、教学等信息服务",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/changshazhiyejishuxueyuan/changshazhiyejishuxueyuan.html",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": {
+      "@type": "EducationalOrganization",
+      "name": "长沙职业技术学院",
+      "description": "长沙职业技术学院，通过将关键业务系统迁移到麒麟信安服务器操作系统，保障了学院日常业务的稳定运行。"
+    },
+    "mentions": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "麒麟信安服务器操作系统",
+        "applicationCategory": "操作系统",
+        "operatingSystem": "Linux",
+        "description": "率先且连续8次通过公安部信息安全产品检测中心结构化保护等级（四级）安全认证，具有高稳定性和高安全性"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler",
+        "applicationCategory": "操作系统",
+        "url": "https://www.openeuler.openatom.cn",
+        "operatingSystem": "Linux"
+      }
+    ],
+    "articleBody": "长沙职业技术学院部署的VMware虚拟化平台，运行着该校数据中台、教务系统、学工系统以及学校官网等各类业务系统。随着CentOS停服，学校将关键业务系统迁移至麒麟信安服务器操作系统，结合深信服超融合HCI平台，保障了业务稳定运行，提升了信息安全水平，积极响应国家信息技术自主创新要求。"
+  }
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e",
+    "url": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e",
+    "name": "State Grid Corporation of China | openEuler",
+    "description": "Smooth OS Porting for CHD Wuhu Power Plant's Distributed Control System",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Energy",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/energy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "State Grid Corporation of China",
+          "item": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e#article",
+    "url": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e",
+    "headline": "Smooth OS Porting for CHD Wuhu Power Plant's Distributed Control System",
+    "description": "China Huadian Corporation (CHD) built a next-generation Distributed Control System (DCS) using openEuler-based OS, Phytium processors, China Great Wall servers, and Dameng databases, deployed at CHD Wuhu Power Plant as the first innovative core control system in China's high-parameter large-capacity power generation field.",
+    "inLanguage": "en",
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Distributed Control System",
+        "description": "Next-generation DCS built by China Huadian Corporation for power generation industrial control"
+      },
+      {
+        "@type": "Thing",
+        "name": "Industrial Control",
+        "description": "Security of core information infrastructure in the industrial control field for power generation"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "China Huadian Corporation",
+        "alternateName": "CHD"
+      },
+      {
+        "@type": "Organization",
+        "name": "Guodian Nanjing Automation"
+      },
+      {
+        "@type": "Organization",
+        "name": "China Electronics Information Industry Group"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e#solution",
+    "name": "CHD Wuhu Power Plant Distributed Control System",
+    "description": "A next-generation Distributed Control System (DCS) for the CHD Wuhu Power Plant built using Phytium processors, China Great Wall servers, Galaxy Kylin Advanced Server Operating System V10, Dameng databases, and CHD DCS platform software.",
+    "applicationCategory": "IndustrialApplication",
+    "operatingSystem": "Galaxy Kylin Advanced Server Operating System V10",
+    "featureList": [
+      "Strategic cooperation between China Electronics Information Industry Group and CHD",
+      "First innovative core control system in high-parameter and large-capacity power generation field in China",
+      "Standard system version for industrial control and production in the electric power industry"
+    ],
+    "softwareRequirements": "Phytium processors, China Great Wall servers",
+    "provider": {
+      "@type": "Organization",
+      "name": "China Huadian Corporation",
+      "alternateName": "CHD"
+    }
+  }
+]

@@ -1,0 +1,99 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "兰州大学超算中心 | openEuler社区",
+    "description": "openEuler + 鲲鹏全栈实现HPC性能倍增",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/landa",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "showcase",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "教育",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "兰州大学超算中心",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/landa"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "高性能计算（HPC）解决方案",
+      "description": "基于openEuler操作系统与华为鲲鹏全栈软硬件的高性能计算集群，支持分子动力学、气象学和生命科学领域的大规模科学计算。"
+    },
+    "mentions": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler",
+        "version": "21.03",
+        "applicationCategory": "OperatingSystem",
+        "url": "https://www.openeuler.openatom.cn"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "兰州大学超算中心：openEuler + 鲲鹏全栈实现HPC性能倍增",
+    "description": "兰州大学超算中心拥有1.2P高性能计算平台，基于华为鲲鹏全栈软硬件与openEuler操作系统，完成GROMACS、CP2K、NEMO等12款科学计算软件向鲲鹏ARM架构的迁移与优化，覆盖分子动力学、气象学、生命科学三大领域。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/landa",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "高性能计算"
+      },
+      {
+        "@type": "Thing",
+        "name": "鲲鹏架构"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler操作系统"
+      }
+    ],
+    "keywords": "兰州大学超算中心, openEuler, 鲲鹏, HPC, 高性能计算, 分子动力学, 气象学, 生命科学, GROMACS, ARM架构",
+    "articleSection": "用户案例",
+    "articleBody": "兰州大学是教育部直属全国重点综合性大学，兰州大学超算中心拥有1.2P的高性能计算平台，为学校师生开展高水平科研提供计算支撑。本团队基于华为鲲鹏全栈软硬件，移植优化生命、气象、分子动力学三大应用领域的GROMACS、CP2K、NEMO等12款软件。利用openEuler操作系统、毕昇编译器、以及鲲鹏开发套件中的Hyper MPI通信库以及KML数学库，充分展示了这些应用软件在ARM架构体系下的计算性能。"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "name": "兰州大学",
+    "description": "教育部直属全国重点综合性大学",
+    "department": {
+      "@type": "Organization",
+      "name": "兰州大学超算中心",
+      "description": "拥有1.2P高性能计算平台，为学校师生开展高水平科研提供计算支撑"
+    }
+  }
+]

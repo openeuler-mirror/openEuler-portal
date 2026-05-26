@@ -1,0 +1,86 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/lanling/lanling.html",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/lanling/lanling.html",
+    "name": "蓝凌数字化办公平台软件EKP-N | openEuler社区",
+    "description": "蓝凌软件选择了openEuler操作系统，以期通过其优化特性，提高系统性能和安全性。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "蓝凌数字化办公平台软件EKP-N",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "openEuler",
+      "description": "蓝凌软件的数字化办公产品EKP-N旨在通过定制多场景办公解决方案，提升企业运营效率，全面适配openEuler操作系统及鲲鹏硬件等基础软硬件环境。"
+    },
+    "mentions": {
+      "@type": "Organization",
+      "name": "蓝凌软件",
+      "description": "蓝凌软件提供数字化办公产品EKP-N，将政府、金融、新基建等行业最佳实践融入基于openEuler体系的数字化办公。"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "蓝凌数字化办公平台软件EKP-N适配openEuler案例",
+    "description": "蓝凌软件选择了openEuler操作系统，以期通过其优化特性，提高系统性能和安全性。经过调优后，EKP-N产品整体性能提升30%-50%以上。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/lanling/lanling.html",
+    "inLanguage": "zh-CN",
+    "author": {
+      "@type": "Organization",
+      "name": "蓝凌软件"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "articleBody": "蓝凌软件的数字化办公产品EKP-N旨在通过定制多场景办公解决方案，提升企业运营效率。EKP-N全面适配openEuler操作系统，以及其他基础软硬件环境，如鲲鹏硬件、海量数据库、宝兰德中间件、金格流版软件等，确保系统高效稳定运行。基于三员管理机制构建的安全保障平台，全面保障数据安全。经过调优后，部分性能实现了翻倍，整体达到了30%-50%以上的提升。构建完整的鲲鹏软硬件体系，流程数据秒吞吐量提升2倍，平均响应时间降低至1/6，流程效率提高85%。国信证券、中信证券、招商证券、易方达、南方基金、博时基金等知名企业选择蓝凌EKP-N作为其数字化办公平台。",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/lanling/lanling.html"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "openEuler社区",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "用户案例",
+        "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "其他",
+        "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "蓝凌数字化办公平台软件EKP-N",
+        "item": "https://www.openeuler.openatom.cn/zh/showcase/others/lanling/lanling.html"
+      }
+    ]
+  }
+]

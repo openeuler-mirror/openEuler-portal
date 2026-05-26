@@ -1,0 +1,94 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.openatom.cn/zh/"},
+      {"@type": "ListItem", "position": 2, "name": "其他信息", "item": "https://www.openeuler.openatom.cn/zh/other/"},
+      {"@type": "ListItem", "position": 3, "name": "生命周期管理", "item": "https://www.openeuler.openatom.cn/zh/other/lifecycle/"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "openEuler社区版本生命周期管理",
+    "description": "探索openEuler软件的生命周期管理，确保高效的版本管理和技术支持。",
+    "url": "https://www.openeuler.openatom.cn/zh/other/lifecycle/",
+    "inLanguage": "zh-CN",
+    "articleSection": [
+      "openEuler社区版本生命周期管理规范（总体）",
+      "openEuler社区版本生命周期管理规范（LTS+SP）"
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "长期支持版本（LTS）",
+        "description": "发布间隔周期定为2年，提供4年社区支持。偶数年3月发布新一代LTS首版本，偶数年12月，奇数年6月、12月发布对应SP版本。"
+      },
+      {
+        "@type": "Thing",
+        "name": "社区创新版本",
+        "description": "openEuler每隔6个月会发布一个社区创新版本，提供6个月社区支持。偶数年9月，奇数年3月、9月发布创新版本。"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openEuler社区版本是如何命名的？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "社区版本按照交付年份和月份进行版本号命名。例如，openEuler 20.09于2020年09月发布，openEuler 22.03于2022年03月发布。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler长期支持版本（LTS）的生命周期是多长？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LTS版本全版本生命周期4年（2年维护支持+2年扩展支持），到生命周期结束前半年至1年可申请延长至6年。发布间隔周期定为2年，偶数年3月发布新一代LTS首版本。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler社区创新版本多久发布一次？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler每隔6个月会发布一个社区创新版本，提供6个月社区支持。发布时间：偶数年9月，奇数年3月、9月发布创新版本。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler LTS版本的SP版本生命周期如何划分？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LTS版本SP版本生命周期：小SP（6月份Release，可选）9个月，大SP（12月份Release）24个月。大规模使用建议选择大SP。SP0默认执行大SP策略，SP3作为LTS最后一个SP，随LTS全版本生命周期结束。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler维护支持（Maintenance Support）和扩展支持（Extend Support）有什么区别？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "维护支持（Maintenance Support）包括：CVE修复、Bugfix、新硬件支持和少量新特性（保证LTS内前向兼容）。扩展支持（Extend Support）仅修复\"主要\"以上CVE和Bug。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler有哪些版本类型？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler社区版本分为长期支持版本（LTS）和社区创新版本两种类型。LTS版本提供长期稳定支持，适合生产环境；创新版本提供最新特性，适合开发者体验新功能。"
+        }
+      }
+    ]
+  }
+]

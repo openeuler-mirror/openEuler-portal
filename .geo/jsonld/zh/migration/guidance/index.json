@@ -1,0 +1,117 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/migration/guidance",
+    "url": "https://www.openeuler.openatom.cn/zh/migration/guidance",
+    "name": "openEuler迁移方案 | 服务器系统迁移 | openEuler社区",
+    "description": "openEuler 提供端到端的迁移方案，包括成立迁移保障组织、迁移分析、方案设计、移植适配、迁移实施和测试上线六个阶段，同时通过 x2openEuler 工具的迁移评估和原地升级技术，实现了全场景业务的"简单、平稳、高效"的迁移。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "x2openEuler",
+      "url": "https://www.openeuler.openatom.cn/zh/migration/download/",
+      "applicationCategory": "SystemSoftware",
+      "operatingSystem": "Linux",
+      "description": "x2openEuler 是一款将源操作系统迁移到目标操作系统的迁移工具套件，具有批量化原地升级能力，当前支持将源 OS 升级至 openEuler 20.03。",
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn/"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "openEuler 操作系统迁移方案",
+    "description": "openEuler 提供端到端的迁移方案，包括成立迁移保障组织、迁移分析、方案设计、移植适配、迁移实施和测试上线六个阶段，通过 x2openEuler 工具实现全场景业务的"简单、平稳、高效"迁移。",
+    "url": "https://www.openeuler.openatom.cn/zh/migration/guidance",
+    "inLanguage": "zh-CN",
+    "tool": [
+      {
+        "@type": "HowToTool",
+        "name": "x2openEuler",
+        "url": "https://www.openeuler.openatom.cn/zh/migration/download/"
+      }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "成立迁移保障组织",
+        "text": "客户业务部门、IT 部门、维护部门以及 OSV、ISV 需要成立迁移保障组织，为操作系统迁移提供技术支持和组织保障。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "迁移分析",
+        "text": "收集需要迁移的业务名称、迁移诉求、软件栈、业务部署形态、服务器硬件信息，形成迁移项目全景图。使用 x2openEuler 工具对操作系统的硬件、软件和配置进行兼容性评估，生成兼容性报告。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "方案设计",
+        "text": "根据兼容性报告和业务迁移的优先级，结合业务场景设计每个业务节点的迁移策略，再根据业务的部署形态、是否可并行替换、是否可中断等自身特点定制整体搬迁方案。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "移植适配",
+        "text": "对不兼容的软件包进行补全或者替代，完成应用软件的移植适配工作，确保业务软件在 openEuler 系统上正常运行。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "迁移实施",
+        "text": "使用 x2openEuler 工具对已适配的待升级节点进行批量升级，实现端到端的无感迁移。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 6,
+        "name": "测试上线",
+        "text": "完成迁移后进行测试验证，确认业务正常运行后正式上线。"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "openEuler社区",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "迁移专区",
+        "item": "https://www.openeuler.openatom.cn/zh/migration/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "迁移方案",
+        "item": "https://www.openeuler.openatom.cn/zh/migration/guidance"
+      }
+    ]
+  }
+]

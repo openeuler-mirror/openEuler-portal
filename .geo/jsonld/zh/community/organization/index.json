@@ -1,0 +1,354 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/community/organization",
+    "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+    "name": "openEuler组织架构 | openEuler社区",
+    "description": "了解openEuler的委员会成员。想要了解更多信息，欢迎访问openEuler官网。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "社区",
+          "item": "https://www.openeuler.openatom.cn/zh/community/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "组织架构",
+          "item": "https://www.openeuler.openatom.cn/zh/community/organization"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.openeuler.openatom.cn/#organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn/zh/",
+    "logo": "https://www.openeuler.openatom.cn/logo.svg",
+    "description": "openEuler是一个开源的Linux发行版平台，凝聚各地优秀开发者共同推进开源技术的发展。",
+    "subOrganization": [
+      {
+        "@type": "Organization",
+        "name": "openEuler 委员会",
+        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "member": [
+          {
+            "@type": "Person",
+            "name": "熊伟",
+            "jobTitle": "主席",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "华为技术有限公司"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "韩乃平",
+            "jobTitle": "常务委员会委员",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "麒麟软件有限公司"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "刘文清",
+            "jobTitle": "常务委员会委员",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "湖南麒麟信安科技股份有限公司"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "屈晟",
+            "jobTitle": "常务委员会委员",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "中国科学院软件研究所"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "张磊",
+            "jobTitle": "常务委员会委员",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "统信软件技术有限公司"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "胡正策",
+            "jobTitle": "执行总监",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "华为技术有限公司"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "刘彦飞",
+            "jobTitle": "执行秘书",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "开放原子开源基金会"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler 委员会顾问专家委员会",
+        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "member": [
+          {
+            "@type": "Person",
+            "name": "陆首群",
+            "jobTitle": "中国开源软件联盟名誉主席，原国务院信息办常务副主任"
+          },
+          {
+            "@type": "Person",
+            "name": "倪光南",
+            "jobTitle": "中国工程院院士"
+          },
+          {
+            "@type": "Person",
+            "name": "廖湘科",
+            "jobTitle": "中国工程院院士"
+          },
+          {
+            "@type": "Person",
+            "name": "王怀民",
+            "jobTitle": "中国科学院院士"
+          },
+          {
+            "@type": "Person",
+            "name": "邬贺铨",
+            "jobTitle": "中国工程院院士"
+          },
+          {
+            "@type": "Person",
+            "name": "周明辉",
+            "jobTitle": "北京大学计算机系教授，北大博雅特聘教授"
+          },
+          {
+            "@type": "Person",
+            "name": "霍太稳",
+            "jobTitle": "极客邦科技创始人兼CEO"
+          }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler 技术委员会",
+        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "member": [
+          {
+            "@type": "Person",
+            "name": "胡欣蔚",
+            "jobTitle": "主席"
+          },
+          {"@type": "Person", "name": "曹志", "jobTitle": "委员"},
+          {"@type": "Person", "name": "陈茂冬", "jobTitle": "委员"},
+          {"@type": "Person", "name": "陈棋德", "jobTitle": "委员"},
+          {"@type": "Person", "name": "陈亚强", "jobTitle": "委员"},
+          {"@type": "Person", "name": "杜开田", "jobTitle": "委员"},
+          {"@type": "Person", "name": "高贵锦", "jobTitle": "委员"},
+          {"@type": "Person", "name": "侯健", "jobTitle": "委员"},
+          {"@type": "Person", "name": "胡峰", "jobTitle": "委员"},
+          {"@type": "Person", "name": "李永强", "jobTitle": "委员"},
+          {"@type": "Person", "name": "刘恺", "jobTitle": "委员"},
+          {"@type": "Person", "name": "吕从庆", "jobTitle": "委员"},
+          {"@type": "Person", "name": "马全一", "jobTitle": "委员"},
+          {"@type": "Person", "name": "任慰", "jobTitle": "委员"},
+          {"@type": "Person", "name": "石勇", "jobTitle": "委员"},
+          {"@type": "Person", "name": "唐葛亮", "jobTitle": "委员"},
+          {"@type": "Person", "name": "田俊", "jobTitle": "委员"},
+          {"@type": "Person", "name": "王建民", "jobTitle": "委员"},
+          {"@type": "Person", "name": "王经纬", "jobTitle": "委员"},
+          {"@type": "Person", "name": "王志钢", "jobTitle": "委员"},
+          {"@type": "Person", "name": "魏建刚", "jobTitle": "委员"},
+          {"@type": "Person", "name": "吴峰光", "jobTitle": "委员"},
+          {"@type": "Person", "name": "谢秀奇", "jobTitle": "委员"},
+          {"@type": "Person", "name": "叶青龙", "jobTitle": "委员"},
+          {"@type": "Person", "name": "岳龙广", "jobTitle": "委员"},
+          {"@type": "Person", "name": "赵川峰", "jobTitle": "委员"},
+          {"@type": "Person", "name": "朱健伟", "jobTitle": "委员"}
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler 品牌委员会",
+        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "member": [
+          {"@type": "Person", "name": "梁冰", "jobTitle": "主席"},
+          {"@type": "Person", "name": "黄兆伟", "jobTitle": "委员"},
+          {"@type": "Person", "name": "胡明月", "jobTitle": "委员"},
+          {"@type": "Person", "name": "李震宁", "jobTitle": "委员"},
+          {"@type": "Person", "name": "彭雅莹", "jobTitle": "委员"},
+          {"@type": "Person", "name": "文丹", "jobTitle": "委员"},
+          {"@type": "Person", "name": "徐露", "jobTitle": "委员"},
+          {"@type": "Person", "name": "徐嫣莉", "jobTitle": "委员"},
+          {"@type": "Person", "name": "郑莉", "jobTitle": "委员"}
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler 用户委员会",
+        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "member": [
+          {"@type": "Person", "name": "王军", "jobTitle": "主席"},
+          {"@type": "Person", "name": "陈静", "jobTitle": "委员"},
+          {"@type": "Person", "name": "崔骥", "jobTitle": "委员"},
+          {"@type": "Person", "name": "杜韶辉", "jobTitle": "委员"},
+          {"@type": "Person", "name": "龚鹏程", "jobTitle": "委员"},
+          {"@type": "Person", "name": "高洪鹤", "jobTitle": "委员"},
+          {"@type": "Person", "name": "胡勇", "jobTitle": "委员"},
+          {"@type": "Person", "name": "李晨斌", "jobTitle": "委员"},
+          {"@type": "Person", "name": "李荣青", "jobTitle": "委员"},
+          {"@type": "Person", "name": "荣涛", "jobTitle": "委员"},
+          {"@type": "Person", "name": "石光银", "jobTitle": "委员"},
+          {"@type": "Person", "name": "徐磊", "jobTitle": "委员"},
+          {"@type": "Person", "name": "徐田原", "jobTitle": "委员"},
+          {"@type": "Person", "name": "张剑", "jobTitle": "委员"},
+          {"@type": "Person", "name": "张庆南", "jobTitle": "委员"},
+          {"@type": "Person", "name": "郑振宇", "jobTitle": "委员"},
+          {"@type": "Person", "name": "朱晨", "jobTitle": "委员"}
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler 业务发展工作组",
+        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "member": [
+          {"@type": "Person", "name": "李扬", "jobTitle": "组长"},
+          {"@type": "Person", "name": "黄伟旭", "jobTitle": "副组长"},
+          {"@type": "Person", "name": "张木梁", "jobTitle": "副组长"},
+          {"@type": "Person", "name": "李成鹏", "jobTitle": "组员"},
+          {"@type": "Person", "name": "刘华杰", "jobTitle": "组员"},
+          {"@type": "Person", "name": "刘明杰", "jobTitle": "组员"},
+          {"@type": "Person", "name": "刘胜航", "jobTitle": "组员"},
+          {"@type": "Person", "name": "张剑", "jobTitle": "组员"},
+          {"@type": "Person", "name": "朱文玉", "jobTitle": "组员"}
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler 社区运营工作组",
+        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "member": [
+          {"@type": "Person", "name": "郑振宇", "jobTitle": "组长"},
+          {"@type": "Person", "name": "胡骁杰", "jobTitle": "副组长"},
+          {"@type": "Person", "name": "陈静", "jobTitle": "组员"},
+          {"@type": "Person", "name": "刘华杰", "jobTitle": "组员"},
+          {"@type": "Person", "name": "刘敏", "jobTitle": "组员"},
+          {"@type": "Person", "name": "刘明杰", "jobTitle": "组员"},
+          {"@type": "Person", "name": "任涛", "jobTitle": "组员"},
+          {"@type": "Person", "name": "田可辉", "jobTitle": "组员"},
+          {"@type": "Person", "name": "徐露", "jobTitle": "组员"}
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler 教育工作组",
+        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "member": [
+          {"@type": "Person", "name": "赵立超", "jobTitle": "组长"},
+          {"@type": "Person", "name": "杨东杰", "jobTitle": "副组长"},
+          {"@type": "Person", "name": "方丽丽", "jobTitle": "组员"},
+          {"@type": "Person", "name": "冯潇靓", "jobTitle": "组员"},
+          {"@type": "Person", "name": "高立群", "jobTitle": "组员"},
+          {"@type": "Person", "name": "郭全友", "jobTitle": "组员"},
+          {"@type": "Person", "name": "林振行", "jobTitle": "组员"},
+          {"@type": "Person", "name": "门小康", "jobTitle": "组员"},
+          {"@type": "Person", "name": "秦学峰", "jobTitle": "组员"},
+          {"@type": "Person", "name": "谢宇", "jobTitle": "组员"},
+          {"@type": "Person", "name": "杨和悦", "jobTitle": "组员"}
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler 法务工作组",
+        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "member": [
+          {"@type": "Person", "name": "张伟", "jobTitle": "组长"},
+          {"@type": "Person", "name": "刘伟", "jobTitle": "副组长"},
+          {"@type": "Person", "name": "李博", "jobTitle": "组员"},
+          {"@type": "Person", "name": "宋李萍", "jobTitle": "组员"},
+          {"@type": "Person", "name": "王思扬", "jobTitle": "组员"},
+          {"@type": "Person", "name": "邢鹏", "jobTitle": "组员"}
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler AI联合工作组",
+        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "member": [
+          {"@type": "Person", "name": "胡欣蔚", "jobTitle": "组长"},
+          {"@type": "Person", "name": "Andrew Wafaa", "jobTitle": "组员"},
+          {"@type": "Person", "name": "陈榕", "jobTitle": "组员"},
+          {"@type": "Person", "name": "陈亚强", "jobTitle": "组员"},
+          {"@type": "Person", "name": "邓益平", "jobTitle": "组员"},
+          {"@type": "Person", "name": "丁为杰", "jobTitle": "组员"},
+          {"@type": "Person", "name": "高伟", "jobTitle": "组员"},
+          {"@type": "Person", "name": "巩远波", "jobTitle": "组员"},
+          {"@type": "Person", "name": "郭祎斌", "jobTitle": "组员"},
+          {"@type": "Person", "name": "何守成", "jobTitle": "组员"},
+          {"@type": "Person", "name": "侯健", "jobTitle": "组员"},
+          {"@type": "Person", "name": "Fred Huang", "jobTitle": "组员"},
+          {"@type": "Person", "name": "黄俊", "jobTitle": "组员"},
+          {"@type": "Person", "name": "江毅文", "jobTitle": "组员"},
+          {"@type": "Person", "name": "江政雄", "jobTitle": "组员"},
+          {"@type": "Person", "name": "金龙", "jobTitle": "组员"},
+          {"@type": "Person", "name": "秦彬娟", "jobTitle": "组员"},
+          {"@type": "Person", "name": "阙鸣健", "jobTitle": "组员"},
+          {"@type": "Person", "name": "沈国良", "jobTitle": "组员"},
+          {"@type": "Person", "name": "宋梦", "jobTitle": "组员"},
+          {"@type": "Person", "name": "孙政华", "jobTitle": "组员"},
+          {"@type": "Person", "name": "田可辉", "jobTitle": "组员"},
+          {"@type": "Person", "name": "王清珺", "jobTitle": "组员"},
+          {"@type": "Person", "name": "沃天宇", "jobTitle": "组员"},
+          {"@type": "Person", "name": "吴斌", "jobTitle": "组员"},
+          {"@type": "Person", "name": "夏知渊", "jobTitle": "组员"},
+          {"@type": "Person", "name": "相元红", "jobTitle": "组员"},
+          {"@type": "Person", "name": "徐洋", "jobTitle": "组员"},
+          {"@type": "Person", "name": "严海双", "jobTitle": "组员"},
+          {"@type": "Person", "name": "杨西利", "jobTitle": "组员"},
+          {"@type": "Person", "name": "詹年科", "jobTitle": "组员"}
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler 全球化工作组",
+        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "member": [
+          {"@type": "Person", "name": "周楠", "jobTitle": "组长"},
+          {"@type": "Person", "name": "蔡镌洋", "jobTitle": "组员"},
+          {"@type": "Person", "name": "李成鹏", "jobTitle": "组员"},
+          {"@type": "Person", "name": "刘明杰", "jobTitle": "组员"},
+          {"@type": "Person", "name": "任紫东", "jobTitle": "组员"}
+        ]
+      }
+    ]
+  }
+]

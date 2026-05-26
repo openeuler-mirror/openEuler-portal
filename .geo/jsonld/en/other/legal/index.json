@@ -1,0 +1,53 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/other/legal",
+    "url": "https://www.openeuler.openatom.cn/en/other/legal",
+    "name": "Legal Notice | openEuler",
+    "description": "View the legal notice and disclaimer for openEuler, the open source OS for various scenarios.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/en/",
+      "url": "https://www.openeuler.openatom.cn/en/",
+      "name": "openEuler",
+      "description": "openEuler is an open source operating system for various scenarios.",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.openeuler.openatom.cn/#organization",
+        "name": "openEuler Community",
+        "url": "https://www.openeuler.openatom.cn/"
+      }
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Legal Notice and Policies",
+      "description": "Legal policies for the openEuler Community, including terms and conditions for accessing openEuler websites and protection of personal information."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.openeuler.openatom.cn/#organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.openeuler.openatom.cn/en/"},
+        {"@type": "ListItem", "position": 2, "name": "Other", "item": "https://www.openeuler.openatom.cn/en/other/"},
+        {"@type": "ListItem", "position": 3, "name": "Legal Notice", "item": "https://www.openeuler.openatom.cn/en/other/legal"}
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.openeuler.openatom.cn/#organization",
+    "name": "openEuler Community",
+    "url": "https://www.openeuler.openatom.cn/",
+    "sameAs": [
+      "https://www.openeuler.openatom.cn"
+    ]
+  }
+]

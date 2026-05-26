@@ -1,0 +1,106 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "openEuler 3.0.0 特性说明",
+    "url": "https://www.openeuler.openatom.cn/zh/migration/download/characteristic-description-3.0.0",
+    "description": "深入了解openEuler 3.0.0版本的新特性及功能，掌握使用要点。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "迁移专区",
+          "item": "https://www.openeuler.openatom.cn/zh/migration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "下载",
+          "item": "https://www.openeuler.openatom.cn/zh/migration/download/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "openEuler 3.0.0 特性说明",
+          "item": "https://www.openeuler.openatom.cn/zh/migration/download/characteristic-description-3.0.0"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "x2openEuler",
+      "applicationCategory": "系统迁移工具",
+      "operatingSystem": "openEuler",
+      "softwareVersion": "3.0.0",
+      "description": "x2openEuler是一款支持将CentOS、Ubuntu等操作系统迁移至openEuler的自动化迁移工具，支持兼容性扫描、自动化部署、升级回滚等功能。",
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "releaseNotes": "https://www.openeuler.openatom.cn/zh/migration/download/characteristic-description-3.0.0",
+      "featureList": [
+        "支持.NET Framework框架Web应用迁移至openEuler-20.03-LTS-SP1",
+        "支持对.NET Framework框架Web应用的源码进行兼容性扫描",
+        "支持对中间件Nginx和Httpd的自动化部署",
+        "支持CentOS 6/7/8、openEuler 20.03/22.03升级到openEuler 24.03",
+        "支持Ubuntu18.04系列向openEuler的迁移",
+        "支持用户自定义检查项、用户自定义SMT脚本",
+        "支持在迁移的每一个阶段进行回滚",
+        "支持迁移后的环境清理"
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "openEuler 3.0.0 特性说明",
+    "description": "深入了解openEuler 3.0.0版本的新特性及功能，掌握使用要点。",
+    "url": "https://www.openeuler.openatom.cn/zh/migration/download/characteristic-description-3.0.0",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/img/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "x2openEuler 3.0.0-20250104",
+        "description": "支持.NET Framework框架Web应用迁移至openEuler-20.03-LTS-SP1，支持兼容性扫描、中间件Nginx和Httpd自动化部署、服务启动、迁移回滚及环境清理。"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "x2openEuler 3.0.0-20240930",
+        "description": "支持CentOS 6/7/8、openEuler 20.03/22.03升级到openEuler 24.03，新增内核参数差异展示、用户自定义检查项与SMT脚本、静默安装等功能，并修复多项升级问题。"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "x2openEuler 3.0.0-20240630",
+        "description": "支持Ubuntu18.04系列向openEuler的迁移，仅支持方案2升级，安装包瘦身至125MB，修复多项升级后遗留问题。"
+      }
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/migration/download/characteristic-description-3.0.0"
+    }
+  }
+]

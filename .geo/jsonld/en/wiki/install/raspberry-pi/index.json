@@ -1,0 +1,163 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "@id": "https://www.openeuler.openatom.cn/en/wiki/install/raspberry-pi",
+      "headline": "Install openEuler on Raspberry Pi 24.03 LTS",
+      "description": "Learn how to install openEuler 24.03 LTS on Raspberry Pi. Download the aarch64 image, verify its integrity with SHA256, and get started fast.",
+      "url": "https://www.openeuler.openatom.cn/en/wiki/install/raspberry-pi",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.openeuler.openatom.cn/logo.png"
+        }
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "openEuler 24.03 LTS",
+        "operatingSystem": "openEuler",
+        "applicationCategory": "OperatingSystem",
+        "softwareVersion": "24.03 LTS",
+        "downloadUrl": "https://repo.openeuler.org/",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Install openEuler 24.03 LTS on Raspberry Pi",
+      "description": "Step-by-step guide to download and install openEuler 24.03 LTS on Raspberry Pi, including image download and SHA256 integrity verification.",
+      "url": "https://www.openeuler.openatom.cn/en/wiki/install/raspberry-pi",
+      "inLanguage": "en",
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Raspberry Pi (aarch64 compatible)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "openEuler-24.03-LTS-raspi-aarch64.img.xz"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "openEuler-24.03-LTS-raspi-aarch64.img.xz.sha256sum"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToSection",
+          "name": "Download the Installation Source",
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Visit openEuler Repo",
+              "text": "Visit https://repo.openeuler.org/ to access the openEuler repository.",
+              "url": "https://www.openeuler.openatom.cn/en/wiki/install/raspberry-pi#installation-source"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Select openEuler 24.03 LTS",
+              "text": "Choose openEuler 24.03 LTS from the repository listing.",
+              "url": "https://www.openeuler.openatom.cn/en/wiki/install/raspberry-pi#installation-source"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Navigate to raspi_img",
+              "text": "Click raspi_img to display the download list of Raspberry Pi images.",
+              "url": "https://www.openeuler.openatom.cn/en/wiki/install/raspberry-pi#installation-source"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "Download the Raspberry Pi image",
+              "text": "Click openEuler-24.03-LTS-raspi-aarch64.img.xz to download the openEuler Raspberry Pi image to the local PC.",
+              "url": "https://www.openeuler.openatom.cn/en/wiki/install/raspberry-pi#installation-source"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 5,
+              "name": "Download the verification file",
+              "text": "Click openEuler-24.03-LTS-raspi-aarch64.img.xz.sha256sum to download the SHA256 verification file.",
+              "url": "https://www.openeuler.openatom.cn/en/wiki/install/raspberry-pi#installation-source"
+            }
+          ]
+        },
+        {
+          "@type": "HowToSection",
+          "name": "Verify Image Integrity",
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Ensure required files are available",
+              "text": "Before verifying, ensure both the image file openEuler-24.03-LTS-raspi-aarch64.img.xz and the verification file openEuler-24.03-LTS-raspi-aarch64.img.xz.sha256sum are available locally.",
+              "url": "https://www.openeuler.openatom.cn/en/wiki/install/raspberry-pi#verifying-the-image-integrity"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Obtain the SHA256 verification value",
+              "text": "Obtain the verification value from the SHA256 verification file by running the appropriate command.",
+              "url": "https://www.openeuler.openatom.cn/en/wiki/install/raspberry-pi#verifying-the-image-integrity"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Compare verification values",
+              "text": "Compare the verification value recorded in the verification file with the manually calculated verification value. If the two values are the same, the downloaded file is complete; otherwise, re-download the image.",
+              "url": "https://www.openeuler.openatom.cn/en/wiki/install/raspberry-pi#verifying-the-image-integrity"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Wiki",
+          "item": "https://www.openeuler.openatom.cn/en/wiki/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Install",
+          "item": "https://www.openeuler.openatom.cn/en/wiki/install/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Installation on Raspberry Pi",
+          "item": "https://www.openeuler.openatom.cn/en/wiki/install/raspberry-pi"
+        }
+      ]
+    }
+  ]
+]

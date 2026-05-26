@@ -1,0 +1,108 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/gs/gs",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/gs/gs",
+    "name": "中国工商银行 | openEuler社区",
+    "description": "云数智一体化算力生态建设方案",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "金融",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "中国工商银行",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/gs/gs"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "云数智一体化算力生态",
+      "description": "工商银行基于云原生技术打造云数智一体化算力生态，构建涵盖通用算力、大数据算力、人工智能算力的一云多算新架构"
+    },
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "中国工商银行",
+        "alternateName": "工商银行",
+        "url": "https://www.icbc.com.cn/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/",
+        "applicationCategory": "OperatingSystem",
+        "operatingSystem": "Linux"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "中国工商银行云数智一体化算力生态建设方案",
+    "description": "云数智一体化算力生态建设方案",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/gs/gs",
+    "inLanguage": "zh-CN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "articleSection": "金融行业成功案例",
+    "keywords": "openEuler,工商银行,云原生,算力,混部,一云多算,大数据,人工智能,金融",
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "云原生技术"
+      },
+      {
+        "@type": "Thing",
+        "name": "算力混部"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler内核隔离技术"
+      },
+      {
+        "@type": "Thing",
+        "name": "一云多算架构"
+      }
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/gs/gs"
+    }
+  }
+]

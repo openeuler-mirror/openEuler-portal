@@ -1,0 +1,81 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "咪咕视讯 | openEuler社区",
+    "description": "咪咕视讯搬迁，openEuler或成数字基建最优解。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/migu",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "咪咕视讯",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/migu"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "openEuler操作系统迁移",
+      "description": "咪咕视讯从CentOS/RHEL迁移至openEuler操作系统的成功案例，采用x2openEuler与原地升级技术，实现不停服敏捷部署，并通过云原生混合部署提升资源利用率。"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "咪咕视讯搬迁，openEuler或成数字基建最优解",
+    "description": "咪咕视讯搬迁，openEuler或成数字基建最优解。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/migu",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/assets/logo.png"
+      }
+    },
+    "articleSection": "成功案例",
+    "keywords": "咪咕视讯, openEuler, 操作系统迁移, x2openEuler, 云原生, 混合部署, CentOS迁移, 数字基础设施",
+    "about": [
+      {
+        "@type": "Organization",
+        "name": "咪咕视讯",
+        "description": "咪咕视讯成立于2014年，是中国移动咪咕公司旗下唯一聚焦于视频运营的实体单位，旗下拥有"咪咕视频"、"移动高清"等产品，是国内首个聚齐足篮排"三大球"顶级赛事、唯一聚齐欧洲足球五大联赛的体育内容平台。",
+        "foundingDate": "2014",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "中国移动咪咕公司"
+        }
+      }
+    ],
+    "mainEntity": {
+      "@type": "TechArticle",
+      "name": "咪咕视讯操作系统迁移至openEuler解决方案",
+      "description": "咪咕视频采用x2openEuler与原地升级技术，结合双机房、双活及容灾系统优势，实现从CentOS/RHEL向openEuler的不停服迁移，并引入云原生混合部署引擎rubik提升资源利用率，预计节省服务器数百台，降低采购成本数百万。",
+      "proficiencyLevel": "Expert",
+      "dependencies": "openEuler, x2openEuler, rubik混合部署引擎, Cluster Autoscaler"
+    }
+  }
+]

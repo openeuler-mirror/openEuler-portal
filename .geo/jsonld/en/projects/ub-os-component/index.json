@@ -1,0 +1,70 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/en/projects/ub-os-component",
+      "url": "https://www.openeuler.openatom.cn/en/projects/ub-os-component",
+      "name": "UB OS Component: Unified Hardware Abstraction | openEuler",
+      "description": "UB OS Component extends the OS framework to abstract heterogeneous hardware, enabling unified memory space and global resource scheduling for UnifiedBus.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.openeuler.openatom.cn/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://www.openeuler.openatom.cn/en/projects/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "UB OS Component",
+            "item": "https://www.openeuler.openatom.cn/en/projects/ub-os-component"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "UB OS Component",
+      "url": "https://www.openeuler.openatom.cn/en/projects/ub-os-component",
+      "description": "UB OS Component extends the OS framework to better support UB. It abstracts and decouples heterogeneous hardware, and creates a unified memory address space. This enables global resource scheduling, dynamic combination and scaling of computing resources, and efficient communication across devices, thereby unlocking the full potential of UnifiedBus hardware.",
+      "applicationCategory": "SystemSoftware",
+      "operatingSystem": "openEuler",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      "featureList": [
+        "Heterogeneous hardware abstraction and decoupling",
+        "Unified memory address space creation",
+        "Global resource scheduling",
+        "Dynamic combination and scaling of computing resources",
+        "Efficient communication across devices",
+        "UnifiedBus hardware support"
+      ],
+      "releatedLink": "https://www.openeuler.openatom.cn/en/sig/sig-detail/?name=sig-UnifiedBus"
+    }
+  ]
+]

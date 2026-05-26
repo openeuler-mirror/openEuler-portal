@@ -1,0 +1,112 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.openatom.cn/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Download",
+        "item": "https://www.openeuler.openatom.cn/en/download/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "openEuler",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux",
+    "description": "openEuler community versions are classified into Long Term Support (LTS) versions and innovation versions. openEuler supports the x86, AArch, Arm, and RISC-V architectures.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "description": "Free and open source Linux distribution"
+    },
+    "downloadUrl": "https://www.openeuler.openatom.cn/en/download/",
+    "license": "https://license.coscl.org.cn/MulanPSL2",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "featureList": [
+      "Long Term Support (LTS) versions",
+      "Innovation versions",
+      "x86 architecture support",
+      "AArch architecture support",
+      "Arm architecture support",
+      "RISC-V architecture support"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "openEuler Community Releases",
+    "description": "openEuler community versions: LTS versions and innovation versions, supporting x86, AArch, Arm, and RISC-V architectures",
+    "numberOfItems": 4,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "openEuler 24.03 LTS SP3 Long-Term Supported Version",
+        "description": "Planned EOL: 2027/12. Built on Linux Kernel 6.6, introduces support for UnifiedBus SuperPoD architecture. Engineered for server, cloud, and AI workloads.",
+        "url": "https://www.openeuler.openatom.cn/en/download/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "openEuler 24.03 LTS SP2 Long-Term Supported Version",
+        "description": "Planned EOL: 2026/03. Built on Linux kernel 6.6, suited for server, cloud, edge, and embedded deployments.",
+        "url": "https://www.openeuler.openatom.cn/en/download/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "openEuler 24.03 LTS SP1 Long-Term Supported Version",
+        "description": "Planned EOL: 2026/12. Based on 6.6 kernel, designed for server, cloud, edge computing, and embedded deployments.",
+        "url": "https://www.openeuler.openatom.cn/en/download/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "openEuler Embedded 26.03",
+        "description": "Based on full-stack IB-Robot embodied intelligence architecture. Provides embodied claw for autonomous precise control, ROS 2 Driver for sensors, MoveIt 2 planning support, YAML-configurable robot with one-click simulation/physical deployment switching.",
+        "url": "https://www.openeuler.openatom.cn/en/download/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "openEuler Embedded 26.03",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux",
+    "description": "Based on full-stack IB-Robot embodied intelligence architecture for Hi3403, Hi3591 hardware. Features: embodied claw autonomous precise control, ROS 2 Driver for cameras/LiDARs/microphones, VR controller and mobile teleoperation, tensormsg message-tensor conversion, VLA and policy model inference, MoveIt 2 planning, YAML-configurable robot, one-click simulation/physical switching.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "featureList": [
+      "Embodied claw autonomous precise control",
+      "ROS 2 Driver unified sensor access",
+      "VR controller and mobile teleoperation",
+      "tensormsg secure message-tensor conversion",
+      "VLA model inference services",
+      "Policy model inference services",
+      "MoveIt 2 planning support",
+      "YAML-configurable robot",
+      "One-click simulation/physical deployment switching"
+    ]
+  }
+]

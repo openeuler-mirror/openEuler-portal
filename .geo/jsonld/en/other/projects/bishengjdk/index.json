@@ -1,0 +1,84 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BiSheng JDK",
+    "alternateName": "BiSheng JDK",
+    "url": "https://www.openeuler.openatom.cn/en/other/projects/bishengjdk",
+    "description": "BiSheng JDK is a high-performance OpenJDK distribution that can be used in production environments. It fixes performance and stability issues, optimizes performance and enhances stability on the ARM architecture, and delivers improved performance in big data scenarios.",
+    "applicationCategory": "DeveloperApplication",
+    "applicationSubCategory": "Java Development Kit",
+    "operatingSystem": [
+      "Linux/AArch64",
+      "Linux/x86_64"
+    ],
+    "softwareVersion": "8, 11, 17, 21",
+    "license": "https://openjdk.org/legal/gplv2+ce.html",
+    "softwareRequirements": "glibc version 2.18 or later",
+    "releaseNotes": "https://www.openeuler.openatom.cn/en/other/projects/bishengjdk",
+    "featureList": [
+      "High-performance Java Virtual Machine",
+      "Enhanced stability on ARM architecture",
+      "Improved performance in big data scenarios",
+      "Supports Java 8 (LTS), 11 (LTS), 17 (LTS) and 21 (LTS)",
+      "Supports Linux/AArch64 and Linux/x86_64 architectures",
+      "Compatible with mainstream Linux operating systems"
+    ],
+    "isBasedOn": {
+      "@type": "SoftwareApplication",
+      "name": "OpenJDK",
+      "url": "https://openjdk.org/"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "downloadUrl": "https://www.openeuler.openatom.cn/en/other/projects/bishengjdk",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "BiSheng JDK - JDK for Enterprise Performance | openEuler",
+    "url": "https://www.openeuler.openatom.cn/en/other/projects/bishengjdk",
+    "description": "BiSheng JDK delivers enhanced performance and stability for cloud, edge, and enterprise applications.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "BiSheng JDK"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://www.openeuler.openatom.cn/en/other/projects/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "BiSheng JDK",
+          "item": "https://www.openeuler.openatom.cn/en/other/projects/bishengjdk"
+        }
+      ]
+    }
+  }
+]

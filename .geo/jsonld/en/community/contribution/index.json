@@ -1,0 +1,53 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/community/contribution",
+    "url": "https://www.openeuler.openatom.cn/en/community/contribution",
+    "name": "Contribute to openEuler | openEuler",
+    "description": "Explore our infographic roadmap to see how you can get involved and make an impact in our community.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "about": {
+      "@type": "Organization",
+      "@id": "https://www.openeuler.openatom.cn/#organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.openeuler.openatom.cn/#organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.openatom.cn/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Community",
+        "item": "https://www.openeuler.openatom.cn/en/community/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Contribution",
+        "item": "https://www.openeuler.openatom.cn/en/community/contribution"
+      }
+    ]
+  }
+]

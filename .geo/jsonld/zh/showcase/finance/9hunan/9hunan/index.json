@@ -1,0 +1,108 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "湖南省农村信用社联合社 | openEuler社区",
+    "description": "基于银河麒麟操作系统的 CentOS 迁移替换方案",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/9hunan/9hunan.html",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "金融",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "湖南省农村信用社联合社",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/9hunan/9hunan.html"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "湖南省农村信用社联合社：基于银河麒麟操作系统的 CentOS 迁移替换方案",
+    "description": "基于银河麒麟操作系统的 CentOS 迁移替换方案",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/9hunan/9hunan.html",
+    "inLanguage": "zh",
+    "image": "https://www.openeuler.openatom.cn/zh/showcase/finance/9hunan/media/image1.png",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "CentOS 迁移替换"
+      },
+      {
+        "@type": "Thing",
+        "name": "银河麒麟操作系统"
+      },
+      {
+        "@type": "Thing",
+        "name": "国产操作系统"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "湖南省农村信用社联合社"
+      },
+      {
+        "@type": "Organization",
+        "name": "麒麟软件"
+      }
+    ],
+    "articleBody": "2020年，CentOS社区宣布CentOS系列操作系统于2024年6月停止维护，所有使用CentOS的用户将无法获取官方升级和补丁支持，可能导致用户业务系统面临服务中断、数据泄露的风险。按照国家部委相关文件精神，湖南农信需要一款安全稳定的基于国内根社区开发的国产操作系统作为CentOS的替换方案。针对CentOS停服事件及湖南农信社业务需求，麒麟软件联合农信社制定了CentOS替换方案，并基于银河麒麟迁移运维管理平台，结合湖南农信现有业务需求，协同研发了自动化迁移替换脚本，实现了自动化、批量CentOS操作系统的原机替换。目前已完成550余套迁移替换工作，涉及辖内40多家农商行87个业务系统，迁移替换完后系统运行良好，无异常。"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CaseStudy",
+    "name": "湖南省农村信用社联合社 CentOS 迁移替换案例",
+    "description": "基于银河麒麟操作系统的 CentOS 迁移替换方案，完成550余套迁移替换工作，涉及40多家农商行87个业务系统",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/9hunan/9hunan.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": {
+      "@type": "Organization",
+      "name": "湖南省农村信用社联合社",
+      "description": "湖南省农村信用社联合社，涵盖辖内40多家农商行，拥有87个业务系统"
+    }
+  }
+]

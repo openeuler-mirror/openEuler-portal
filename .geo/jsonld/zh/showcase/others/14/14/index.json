@@ -1,0 +1,65 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "西安前沿动力重叠网格计算流体力学软件OverCFDLab | openEuler社区",
+    "description": "为航空等行业提供了强大的计算流体力学（CFD）解决方案",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/14/14.html",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "西安前沿动力重叠网格计算流体力学软件OverCFDLab",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/14/14.html"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "OverCFDLab",
+      "description": "西安前沿动力的OverCFDLab软件，基于openEuler系操作系统和GCC for openEuler编译器，为航空等行业提供了强大的计算流体力学（CFD）解决方案。支持亿级网格和万核CPU以上的大规模并行计算，计算效率比ANSYS-FLUENT高出约3倍。",
+      "applicationCategory": "EngineeringApplication",
+      "operatingSystem": "openEuler（银河麒麟高级服务器操作系统v10）",
+      "featureList": [
+        "基于openEuler系操作系统运行",
+        "使用GCC for openEuler编译器编译，与鲲鹏硬件高效协同",
+        "鲲鹏硬件适配，并行计算效率比传统平台提升10%~20%",
+        "计算精度与ANSYS-FLUENT相当，计算效率高出约3倍",
+        "支持亿级网格和万核CPU以上的大规模并行计算",
+        "打破国外专业软件禁运限制，支持自主创新"
+      ],
+      "applicationSubCategory": "计算流体力学（CFD）软件",
+      "author": {
+        "@type": "Organization",
+        "name": "西安前沿动力",
+        "url": "https://www.openeuler.openatom.cn/zh/showcase/others/14/14.html"
+      }
+    }
+  }
+]

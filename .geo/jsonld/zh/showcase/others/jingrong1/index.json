@@ -1,0 +1,74 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "成都菁蓉联创（无人装备统一操作系统）",
+  "description": "结合openEuler，KubeEdge及iSulad技术，打造出无人装备统一操作系统。",
+  "author": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.openeuler.openatom.cn/img/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/jingrong1/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "无人装备统一操作系统",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux"
+  },
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "成都菁蓉联创"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "openEuler",
+      "applicationCategory": "Operating System"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "KubeEdge",
+      "applicationCategory": "Edge Computing Platform"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "iSulad",
+      "applicationCategory": "Container Runtime"
+    },
+    {
+      "@type": "Thing",
+      "name": "无人机"
+    },
+    {
+      "@type": "Thing",
+      "name": "无人车"
+    },
+    {
+      "@type": "Thing",
+      "name": "机器狗"
+    },
+    {
+      "@type": "Thing",
+      "name": "边端协同"
+    }
+  ],
+  "articleSection": [
+    "应用场景",
+    "业务挑战",
+    "解决方案",
+    "客户价值"
+  ],
+  "inLanguage": "zh-CN"
+}

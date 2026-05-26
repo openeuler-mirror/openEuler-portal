@@ -1,0 +1,84 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "openEuler 迁移常见问题",
+    "description": "查看openEuler迁移过程中常见问题的解答，助您顺利完成迁移。",
+    "url": "https://www.openeuler.openatom.cn/zh/migration/faq",
+    "inLanguage": "zh",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "如何获取原地升级的教程或者文档？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "我们提供了视频或文档，方便您学习。请参见 x2openEuler工具使用视频，获取教程；请参见 x2openEuler用户指南，获取官方指导文档。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "x2openEuler是否支持虚拟机升级？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "x2openEuler支持虚拟机升级，同时也支持物理机升级。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "x2openEuler支持哪些操作系统原地升级？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "我们将逐步支持更多的OS，具体支持的OS请参考 x2openEuler用户指南。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何处理升级过程中出现的异常？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "升级过程中若出现异常，可先在 x2openEuler用户指南 的FAQ中进行查找；如果没有同类问题，可在社区提 issue 来跟踪解决。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "原地升级迁移过程中出现异常导致迁移失败，是否支持回滚？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "原地升级迁移过程中出现异常导致迁移失败时，支持回滚。x2openEuler的备份回滚操作，请参考 x2openEuler用户指南。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler 如何和硬件厂商的兼容性测试？兼容性测试是否需要额外的费用？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "可参考 openEuler硬件兼容性测试整体介绍，加入openEuler社区兼容性SIG组，或openEuler创新中心，可进行兼容性测试。兼容性测试不需要额外支付费用。目前openEuler社区硬件兼容性测试已与创新中心对接，用户可以通过社区的兼容性测评平台进行认证，并获取认证证书，同时会同步发布社区兼容性列表。"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "openEuler社区",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "迁移专区",
+        "item": "https://www.openeuler.openatom.cn/zh/migration/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "FAQ",
+        "item": "https://www.openeuler.openatom.cn/zh/migration/faq"
+      }
+    ]
+  }
+]

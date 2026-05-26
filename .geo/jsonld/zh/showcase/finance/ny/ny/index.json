@@ -1,0 +1,101 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "中国农业银行 | openEuler社区",
+    "description": "全面建设以一体化云平台和分布式数据库为关键基础的分布式架构体系，打造新一代云计算平台方案",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/ny/ny",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "金融",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "中国农业银行",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/ny/ny"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "中国农业银行基于openEuler的分布式架构云平台解决方案",
+    "description": "全面建设以一体化云平台和分布式数据库为关键基础的分布式架构体系，打造新一代云计算平台方案",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/ny/ny",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "openEuler",
+        "description": "基于openEuler的银河麒麟操作系统"
+      },
+      {
+        "@type": "Thing",
+        "name": "分布式架构",
+        "description": "一体化云平台和分布式数据库为关键基础的分布式架构体系"
+      },
+      {
+        "@type": "Thing",
+        "name": "金融科技",
+        "description": "农业银行金融科技数字化转型"
+      }
+    ],
+    "mentions": {
+      "@type": "Organization",
+      "name": "中国农业银行",
+      "description": "中国农业银行不断加大金融科技研发力度，推动数字化转型进入深水区，全面建设以一体化云平台和分布式数据库为关键基础的分布式架构体系",
+      "industry": "金融"
+    },
+    "articleBody": "近年来，农业银行不断加大金融科技研发力度，推动数字化转型进入深水区，全面建设以一体化云平台和分布式数据库为关键基础的分布式架构体系，满足核心、关键业务对基础设施健壮性的要求，为分布式核心系统下移奠定基础，为全集团应用系统提供虚拟化、容器、数据库、应用中间件等基础云服务。方案实现"银河麒麟 OS+ 云平台 + 分布式数据库"等基础设施的云化。一是采用基于 openEuler 的银河麒麟操作系统替代存量老旧操作系统，满足存量硬件设备利旧使用要求。二是实现支持 ARM、海光 X86、Intel X86 等服务器的"一云多芯"架构。三是麒麟操作系统适配各类基础软件，提供物理机、虚拟机、容器、分布式数据库、存算分离大数据等解决方案。银河麒麟 OS 规模化推广，部署容器云节点 5000 余个，数据库节点 3000 余个，应用模块约 600 个。"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CaseStudy",
+    "name": "中国农业银行 openEuler 分布式架构转型案例",
+    "description": "全面建设以一体化云平台和分布式数据库为关键基础的分布式架构体系，打造新一代云计算平台方案",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/ny/ny",
+    "provider": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "customer": {
+      "@type": "Organization",
+      "name": "中国农业银行"
+    }
+  }
+]

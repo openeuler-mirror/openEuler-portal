@@ -1,0 +1,91 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/16shhai/16shhai.html",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/16shhai/16shhai.html",
+    "name": "上海证券交易所 | openEuler社区",
+    "description": "下一代核心交易系统，在安全可控场景下提供更低的时延",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "金融",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "上海证券交易所",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/16shhai/16shhai.html"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "上海证券交易所基于openEuler的下一代核心交易系统低时延解决方案",
+    "description": "下一代核心交易系统，在安全可控场景下提供更低的时延",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/16shhai/16shhai.html",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "openEuler操作系统"
+      },
+      {
+        "@type": "Thing",
+        "name": "低时延交易系统"
+      },
+      {
+        "@type": "Thing",
+        "name": "Gazelle用户态协议栈"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "上海证券交易所",
+        "description": "全球三大交易所之一，正在研发基于openEuler和鲲鹏服务器的下一代核心交易系统"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Gazelle",
+        "description": "采用Kernel bypass技术的高性能用户态协议栈，基于DPDK在用户态直接读写网卡报文，共享大页内存传递报文，使用轻量级LwIP协议栈",
+        "applicationCategory": "NetworkingApplication",
+        "operatingSystem": "openEuler"
+      }
+    ],
+    "articleBody": "上交所作为全球三大交易所之一，交易所交易系统是证券行业关键基础系统，其基于价格优先、时间优先的竞价原则进行全市场的交易撮合。上交所正在研发的下一代核心交易系统为了在安全可控场景下提供更低的时延，当前基于鲲鹏服务器，通过openEuler低时延操作系统中用户态协议栈Gazelle，在核心交易系统模拟场景下能够大幅降低节点间时延。在网卡基础性能时延受到硬件限制的情况下，通过软件协议栈的优化，数据穿越网络协议栈的耗时降低50%，在交易系统实际订单交易测试中总体时延降低10%。"
+  }
+]

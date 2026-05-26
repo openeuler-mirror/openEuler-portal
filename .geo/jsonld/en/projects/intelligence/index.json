@@ -1,0 +1,120 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "@id": "https://www.openeuler.openatom.cn/en/projects/intelligence",
+      "name": "openEuler Intelligence",
+      "alternateName": "openEuler Intelligence LLM Platform",
+      "url": "https://www.openeuler.openatom.cn/en/projects/intelligence",
+      "description": "Build AI-powered apps with openEuler Intelligence. Supports RAG knowledge Q&A, workflow orchestration, Agent apps, and MCP services for developers and enterprises.",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "AI Platform",
+      "operatingSystem": "openEuler",
+      "softwareVersion": "latest",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "RAG-based knowledge Q&A",
+        "Workflow applications",
+        "Agent applications",
+        "Model Context Protocol (MCP) services",
+        "OpenAI API integration",
+        "Custom local knowledge bases",
+        "Intelligent Tuning"
+      ],
+      "audience": [
+        {
+          "@type": "Audience",
+          "audienceType": "Developers"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Enterprises"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/en/projects/intelligence#webpage",
+      "url": "https://www.openeuler.openatom.cn/en/projects/intelligence",
+      "name": "openEuler Intelligence: AI Agent & LLM Platform | openEuler",
+      "description": "Build AI-powered apps with openEuler Intelligence. Supports RAG knowledge Q&A, workflow orchestration, Agent apps, and MCP services for developers and enterprises.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "openEuler Intelligence"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.openeuler.openatom.cn/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://www.openeuler.openatom.cn/en/projects/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "openEuler Intelligence",
+            "item": "https://www.openeuler.openatom.cn/en/projects/intelligence"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "openEuler Intelligence Features",
+      "description": "Key features of the openEuler Intelligence LLM platform",
+      "url": "https://www.openeuler.openatom.cn/en/projects/intelligence",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "RAG-based knowledge Q&A",
+          "description": "The knowledge base module supports parsing mainstream document formats such as PDF, DOCX, and PPTX. Enterprises and individual developers can build personalized intelligent Q&A assistants in just one day by leveraging the knowledge base, local documents, built-in knowledge bases, and LLMs."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Workflow applications",
+          "description": "Enterprises and individuals can upload local API definitions through OpenAPI, then visually orchestrate workflows to create applications that intelligently and precisely schedule API capabilities, reducing secondary development costs."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Agent applications",
+          "description": "Enterprises and individuals can register local MCP services and easily organize them to build Agent applications that enable intelligent orchestration and scheduling of MCP services to accomplish complex tasks in production environments."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Intelligent Tuning",
+          "description": "Unlock 10%+ performance gains with the native tuning agent for intelligent system optimization."
+        }
+      ]
+    }
+  ]
+]

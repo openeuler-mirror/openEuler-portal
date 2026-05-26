@@ -1,0 +1,75 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.openeuler.openatom.cn/en/faq/migration#faqpage",
+    "url": "https://www.openeuler.openatom.cn/en/faq/migration",
+    "name": "Migrate to openEuler | FAQs | openEuler",
+    "description": "Get answers to frequently asked questions about migrating to openEuler.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/#website",
+      "url": "https://www.openeuler.openatom.cn",
+      "name": "openEuler"
+    },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What guidelines and resources can I refer to during migration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can refer to the following resources to help you migrate to openEuler: the openEuler Migration page (https://www.openeuler.openatom.cn/en/migration/), the x2openEuler Usage Guide, the x2openEuler tool download, the x2openEuler source on the openEuler forum, and the x2openEuler migration demo video."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does openEuler have less available memory than CentOS even when the amount of allocated physical memory is the same?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The difference in available memory is due to the difference in the amount of memory allocated for the crashkernel (memory area used during kernel crashes). For instance, with 4 GB of physical memory: CentOS has 3.7 GB available (161 MB reserved for crashkernel), while openEuler has 3.3 GB available (512 MB reserved for crashkernel). To match CentOS's memory availability, you can reduce openEuler's crashkernel reservation to 256 MB in the GRUB configuration file (/boot/grub2/grub.cfg)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do I do if software packages cannot be parsed by macros during migration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This issue often occurs during the migration from CentOS or Fedora to other systems and is caused by different operating systems having different macro definitions. There are two solutions: 1. Query the specific meaning of the macros and replace them in the SPEC file with their expanded values. 2. Introduce the software packages that provide the macro definitions into the corresponding repository and add them to BuildRequires. This allows the software packages that fail to run to be parsed by macros."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is hardware compatibility testing necessary during migration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hardware compatibility testing is necessary during migration to ensure that all hardware components are fully supported by openEuler. Differences in kernel versions and driver support between source and target operating systems can cause hardware components to behave differently or not function at all after migration. Compatibility testing helps identify and resolve such issues before the migration is finalized."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "openEuler",
+        "item": "https://www.openeuler.openatom.cn/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQs",
+        "item": "https://www.openeuler.openatom.cn/en/faq/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Migration",
+        "item": "https://www.openeuler.openatom.cn/en/faq/migration"
+      }
+    ]
+  }
+]

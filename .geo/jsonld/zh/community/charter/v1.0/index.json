@@ -1,0 +1,88 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/community/charter/v1.0",
+    "url": "https://www.openeuler.openatom.cn/zh/community/charter/v1.0",
+    "name": "社区章程 | 社区规范 | openEuler社区",
+    "description": "查看openEuler社区的章程版本，了解社区成员的权利和义务。",
+    "inLanguage": "zh-CN",
+    "dateModified": "2022-12",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "社区",
+          "item": "https://www.openeuler.openatom.cn/zh/community/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "社区规范",
+          "item": "https://www.openeuler.openatom.cn/zh/community/charter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "社区章程 v1.0",
+          "item": "https://www.openeuler.openatom.cn/zh/community/charter/v1.0"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Organization",
+      "@id": "https://www.openeuler.openatom.cn/#organization",
+      "name": "openEuler社区",
+      "alternateName": "OpenAtom openEuler",
+      "url": "https://www.openeuler.openatom.cn/",
+      "description": "openEuler项目群是由开放原子开源基金会孵化及运营的开源项目群，是一个面向数字基础设施操作系统的开源社区。",
+      "foundingOrganization": {
+        "@type": "Organization",
+        "name": "开放原子开源基金会",
+        "url": "https://openatom.org/"
+      },
+      "mission": "为世界提供开源软件，为开源软件提供指导、虚拟协作空间、创新平台和服务，在社区开发、管理和孵化开源软件，并与其他许多开源社区合作。",
+      "slogan": "为世界提供数字基础设施的开源操作系统"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "openEuler项目群开源治理制度",
+    "description": "查看openEuler社区的章程版本，了解社区成员的权利和义务。",
+    "url": "https://www.openeuler.openatom.cn/zh/community/charter/v1.0",
+    "inLanguage": "zh-CN",
+    "dateModified": "2022-12-01",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.openeuler.openatom.cn/#organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/assets/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/community/charter/v1.0"
+    },
+    "articleSection": "社区规范",
+    "keywords": "openEuler社区章程,开源治理制度,社区行为准则,项目群成员,openEuler委员会,开放原子开源基金会"
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "openEuler软件兼容性测试介绍",
+    "url": "https://www.openeuler.openatom.cn/zh/compatibility/software",
+    "description": "了解openEuler支持的软件兼容性信息，确保您的应用正常运行。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "兼容性中心",
+          "item": "https://www.openeuler.openatom.cn/zh/compatibility/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "软件兼容性测试介绍",
+          "item": "https://www.openeuler.openatom.cn/zh/compatibility/software"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "openEuler软件兼容性测试流程",
+    "description": "openEuler提供了一系列的工具、文档和操作流程帮助用户测试openEuler与软件的兼容性。",
+    "url": "https://www.openeuler.openatom.cn/zh/compatibility/software",
+    "inLanguage": "zh",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "创建issue",
+        "text": "您需要在openEuler社区的oec-application项目下创建issue，将所需认证的软件信息在issue中明确。openEuler团队会及时了解issue信息，并给出建议。",
+        "url": "https://atomgit.com/openeuler/oec-application"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "兼容性测试",
+        "text": "完成issue创建后，即可开展兼容性测试。openEuler团队提供了自动化测试平台compass-ci以及使用指南，根据使用指南自助完成兼容性测试。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "提交结果审核",
+        "text": "完成兼容性测试并通过后，需要您把测试结果更新到issue中。issue中需要给出group_id。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "结果发布",
+        "text": "openEuler团队会针对提交结果进行审核，如果通过，会将软件添加到兼容性列表中。"
+      }
+    ]
+  }
+]

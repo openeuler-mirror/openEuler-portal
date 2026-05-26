@@ -1,0 +1,117 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "iSulad",
+    "alternateName": "iSula",
+    "url": "https://www.openeuler.openatom.cn/zh/other/projects/isula",
+    "description": "iSulad 是一个新的通用容器引擎，提供统一的架构设计来满足CT和IT领域的不同需求。它具有轻、快、易、灵的特点，这与子弹蚂蚁"小个头、大能量"的形象不谋而合。iSulad 支持系统容器、虚机容器等多种容器形态，提供插件化架构，可根据用户需要开发定制化插件。",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Linux",
+    "inLanguage": "zh-CN",
+    "programmingLanguage": ["C", "C++", "Rust"],
+    "featureList": [
+      "轻量级容器引擎，使用 C/C++ 实现，Rust on the way",
+      "北向接口提供 CRI 接口，支持对接 Kubernetes，同时提供便捷使用的命令行",
+      "南向接口支持 OCI runtime 和镜像规范，支持平滑替换",
+      "支持系统容器、虚机容器等多种容器形态",
+      "提供插件化架构，可根据用户需要开发定制化插件"
+    ],
+    "isPartOf": {
+      "@type": "SoftwareApplication",
+      "name": "iSula",
+      "url": "https://www.openeuler.openatom.cn/zh/other/projects/isula"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "maintainer": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "iSulad | 通用容器引擎 | openEuler社区",
+    "url": "https://www.openeuler.openatom.cn/zh/other/projects/isula",
+    "description": "iSulad 是一个新的通用容器引擎，提供统一的架构设计来满足CT和IT领域的不同需求。它具有轻、快、易、灵的特点，这与子弹蚂蚁"小个头、大能量"的形象不谋而合。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "项目",
+          "item": "https://www.openeuler.openatom.cn/zh/other/projects/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "iSulad",
+          "item": "https://www.openeuler.openatom.cn/zh/other/projects/isula"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "iSulad",
+      "url": "https://www.openeuler.openatom.cn/zh/other/projects/isula"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/assets/openeuler-logo.png"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "iSula 项目组件列表",
+    "description": "iSula 项目包含的核心组件",
+    "url": "https://www.openeuler.openatom.cn/zh/other/projects/isula",
+    "numberOfItems": 3,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "iSulad",
+        "description": "iSulad 是一个新的通用容器引擎，提供统一的架构设计来满足CT和IT领域的不同需求。它具有轻、快、易、灵的特点，支持系统容器、虚机容器等多种容器形态，提供插件化架构。",
+        "url": "https://www.openeuler.openatom.cn/zh/other/projects/isula"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "isula-build",
+        "description": "isula-build 通常运行于构建侧环境，为运行侧环境提供构建好的容器镜像。构建时，isula-build 读取 Dockerfile 作为输入，快速构建符合 Docker 镜像和 OCI 镜像规范的容器镜像，最后将镜像分发至同节点的 iSulad/docker、本地tar包或远端容器镜像仓库。",
+        "url": "https://www.openeuler.openatom.cn/zh/other/projects/isula"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "isula-transform",
+        "description": "isula-transform 配合 iSulad 2.0 推出，支持将 Docker 容器引擎管理的容器转换、迁移给 iSulad 引擎进行管理。迁移完成后，就可以通过 iSulad 完成容器的生命周期管理功能。",
+        "url": "https://www.openeuler.openatom.cn/zh/other/projects/isula"
+      }
+    ]
+  }
+]

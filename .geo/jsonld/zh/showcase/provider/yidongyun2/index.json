@@ -1,0 +1,91 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "中国移动云能力中心云主机操作系统迁移方案 | openEuler社区",
+    "description": "打造运营商行业级迁移解决方案",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/yidongyun2",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "中国移动云能力中心云主机操作系统迁移方案",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/provider/yidongyun2"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "BC-Linux for Euler 21.10",
+      "operatingSystem": "openEuler",
+      "applicationCategory": "云主机操作系统",
+      "description": "移动云云主机操作系统迁移方案，支持由BC-Linux/RHEL/CentOS 7平滑迁移至BC-Linux for Euler 21.10，已为移动集团内部迁移操作系统超过8万套。"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "中国移动云能力中心云主机操作系统迁移方案",
+    "description": "打造运营商行业级迁移解决方案。中国移动云能力中心的天元"易行"迁移解决方案，可以帮助已有的业务系统实现无缝迁移，保证业务的稳定性和高可用性。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/yidongyun2",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/assets/logo.png"
+      }
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "中国移动云能力中心",
+      "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/yidongyun2"
+    },
+    "articleSection": "成功案例",
+    "keywords": "openEuler,云主机,操作系统迁移,CentOS迁移,BC-Linux,虚拟化热迁移,中国移动云,混元架构",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/showcase/provider/yidongyun2"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "中国移动云能力中心",
+    "description": "中国移动云能力中心"混元"分布式计算系统是移动云自主研发的新一代算力管控系统，依托3AZ高可靠布局，采用一云多芯、多元异构分布式云原生架构。",
+    "knowsAbout": [
+      "云主机",
+      "操作系统迁移",
+      "虚拟化热迁移",
+      "分布式云原生架构",
+      "openEuler"
+    ],
+    "memberOf": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  }
+]

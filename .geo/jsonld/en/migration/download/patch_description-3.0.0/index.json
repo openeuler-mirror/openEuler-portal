@@ -1,0 +1,86 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/migration/download/patch_description-3.0.0",
+    "url": "https://www.openeuler.openatom.cn/en/migration/download/patch_description-3.0.0",
+    "name": "x2openEuler Patches | Migration Tool | openEuler",
+    "description": "Download and install the patches for x2openEuler.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Migration",
+          "item": "https://www.openeuler.openatom.cn/en/migration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "x2openEuler Patches 3.0.0",
+          "item": "https://www.openeuler.openatom.cn/en/migration/download/patch_description-3.0.0"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "DataDownload",
+    "name": "x2openEuler Core Patch 3.0.0-20230713",
+    "description": "Resolved the issue that data cannot be written into the database because the target OS name is too long.",
+    "encodingFormat": "application/x-rpm",
+    "contentUrl": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-core-patch-3.0.0-20230713.x86_64.rpm",
+    "datePublished": "2023-07-13",
+    "version": "3.0.0-20230713",
+    "isPartOf": {
+      "@type": "SoftwareApplication",
+      "name": "x2openEuler",
+      "version": "3.0.0",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/en/migration/download/patch_description-3.0.0",
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "DataDownload",
+    "name": "x2openEuler Upgrade Patch 3.0.0-20230731",
+    "description": "Added system inspection items.",
+    "encodingFormat": "application/x-rpm",
+    "contentUrl": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-upgrade-patch-3.0.0-20230731.x86_64.rpm",
+    "datePublished": "2023-07-31",
+    "version": "3.0.0-20230731",
+    "isPartOf": {
+      "@type": "SoftwareApplication",
+      "name": "x2openEuler",
+      "version": "3.0.0",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/en/migration/download/patch_description-3.0.0",
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/"
+      }
+    }
+  }
+]

@@ -1,0 +1,69 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "openEuler BiSheng JDK TCK 宣誓书",
+      "description": "查看openEuler BiSheng JDK TCK的正式宣誓书，了解相关认证信息。",
+      "url": "https://www.openeuler.openatom.cn/zh/other/projects/bishengjdk/tck-affidavit",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "openEuler社区",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "其他信息",
+            "item": "https://www.openeuler.openatom.cn/zh/other/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "BiSheng JDK",
+            "item": "https://www.openeuler.openatom.cn/zh/other/projects/bishengjdk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "TCK 宣誓书",
+            "item": "https://www.openeuler.openatom.cn/zh/other/projects/bishengjdk/tck-affidavit"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Huawei BiSheng JDK 8",
+      "description": "All Huawei BiSheng(JDK 8) binaries have passed all requirements of the then-current Java SE 8 Compatibility test suite(JCK tests), and are compliant and compatible implementations.",
+      "url": "https://www.openeuler.openatom.cn/zh/other/projects/bishengjdk/tck-affidavit",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "softwareVersion": "8",
+      "programmingLanguage": "Java",
+      "isAccessibleForFree": true,
+      "downloadUrl": "https://mirror.iscas.ac.cn/kunpeng/archive/compiler/bisheng_jdk/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Huawei",
+        "url": "https://www.huawei.com"
+      },
+      "maintainer": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn"
+      }
+    }
+  ]
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.openeuler.openatom.cn/en/"},
+      {"@type": "ListItem", "position": 2, "name": "Other", "item": "https://www.openeuler.openatom.cn/en/other/"},
+      {"@type": "ListItem", "position": 3, "name": "Version Lifecycles", "item": "https://www.openeuler.openatom.cn/en/other/lifecycle/"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "openEuler Community Release Lifecycle Management",
+    "description": "Understand the version lifecycles of openEuler, featuring innovation versions and long-term support (LTS) releases.",
+    "url": "https://www.openeuler.openatom.cn/en/other/lifecycle/",
+    "inLanguage": "en",
+    "articleSection": [
+      "openEuler Community Version Lifecycle Management (Overall)",
+      "openEuler Community Version Lifecycle Management (LTS+SP)"
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Long Term Support (LTS) Version",
+        "description": "Released every two years in March of even-numbered years. Lifecycle: 4 years total (2 years maintenance support + 2 years extended support). Can apply for extension to 6 years."
+      },
+      {
+        "@type": "Thing",
+        "name": "Innovation Version",
+        "description": "Released every six months: September of even-numbered years, March and September of odd-numbered years. Provides 6 months community support."
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How are openEuler community versions named?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Community versions are named based on the release year and month. For example, openEuler 20.09 was released in September 2020, openEuler 22.03 was released in March 2022."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the types of openEuler community versions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler community versions are classified into Long Term Support (LTS) versions and innovation versions. LTS versions provide long-term stability for production; innovation versions deliver latest features for developers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is the lifecycle of an openEuler LTS version?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LTS version lifecycle is 4 years total: 2 years maintenance support and 2 years extended support. A joint maintenance team can be set up before lifecycle ends to apply for extension to 6 years. LTS versions are released every two years in March of even-numbered years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is the lifecycle of an openEuler innovation version?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Innovation versions are released every six months and provide 6 months community support. Release schedule: September of even-numbered years, March and September of odd-numbered years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the lifecycle of an LTS version Service Pack (SP)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LTS SP lifecycle: minor SP (June release, optional) - 9 months; major SP (December release) - 24 months. Major SPs recommended for large-scale deployment. SP0 follows major SP lifecycle. SP3 is the last SP, ending with the LTS version lifecycle."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Maintenance Support and Extended Support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Maintenance Support includes CVE fixes, bug fixes, new hardware support, and minor new features (maintaining LTS forward compatibility). Extended Support only fixes 'major' and above CVEs and bugs."
+        }
+      }
+    ]
+  }
+]

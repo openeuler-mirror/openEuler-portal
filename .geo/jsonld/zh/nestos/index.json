@@ -1,0 +1,192 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/nestos",
+      "url": "https://www.openeuler.openatom.cn/zh/nestos",
+      "name": "NestOS - 基于欧拉开源操作系统的云底座操作系统 | openEuler社区",
+      "description": "NestOS是基于openEuler的云底座操作系统，整合了NestOS For Container和NestOS For Virt双模式，专注于提供最佳的容器主机和虚拟化解决方案，支持K8S、openStack等平台。",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler社区",
+        "inLanguage": "zh"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "openEuler社区",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "NestOS",
+            "item": "https://www.openeuler.openatom.cn/zh/nestos"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "NestOS",
+      "alternateName": "NestOS 双模式",
+      "description": "NestOS是基于openEuler的云底座操作系统，整合了NestOS For Container和NestOS For Virt两个模式，旨在满足云场景中容器化和虚拟化两种主要场景下用户的多样需求。NestOS For Container集成了rpm-ostree支持、ignition配置等技术，采用双根文件系统，原子化更新的设计思路。",
+      "applicationCategory": "OperatingSystem",
+      "operatingSystem": "Linux",
+      "url": "https://www.openeuler.openatom.cn/zh/nestos",
+      "downloadUrl": "https://www.openeuler.openatom.cn/zh/nestos",
+      "softwareVersion": "24.03-LTS",
+      "isBasedOn": {
+        "@type": "SoftwareApplication",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      "featureList": [
+        "内核特性增强，独立维护NestOS内核分支，基于openEuler主线版本针对云场景进一步特性增强",
+        "PilotGo插件式运维管理平台，专为NestOS提供定制化运维管理功能及架构感知插件特性",
+        "云原生一体化运维工具NKD（nestos-kubernetes-deployer），基于NestOS部署Kubernetes集群",
+        "支持Rubik在离线混部，预开启Rubik在离线混部相关内核特性",
+        "支持以编写Dockerfile形式轻松定制容器镜像格式的系统镜像",
+        "提供x2NestOS工具，支持将NestOS For Virt或其他通用形态OS转换为不可变模式"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "NestOS 双模式-24.03-LTS ISO (x86_64)",
+          "price": "0",
+          "priceCurrency": "CNY",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "NestOS 双模式-24.03-LTS ISO (aarch64)",
+          "price": "0",
+          "priceCurrency": "CNY",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "NestOS For Container-24.03-LTS ISO (x86_64)",
+          "price": "0",
+          "priceCurrency": "CNY",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "NestOS For Virt-24.03-LTS ISO (x86_64)",
+          "price": "0",
+          "priceCurrency": "CNY",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/nestos",
+      "url": "https://www.openeuler.openatom.cn/zh/nestos",
+      "name": "NestOS - 基于欧拉开源操作系统的云底座操作系统 | openEuler社区",
+      "description": "NestOS是基于openEuler的云底座操作系统，整合了NestOS For Container和NestOS For Virt双模式，专注于提供最佳的容器主机和虚拟化解决方案，支持K8S、openStack等平台。",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.openatom.cn/",
+        "name": "openEuler社区",
+        "inLanguage": "zh"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "openEuler社区",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "NestOS",
+            "item": "https://www.openeuler.openatom.cn/zh/nestos"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "NestOS",
+      "alternateName": "NestOS 双模式",
+      "description": "NestOS是基于openEuler的云底座操作系统，整合了NestOS For Container和NestOS For Virt两个模式，旨在满足云场景中容器化和虚拟化两种主要场景下用户的多样需求。NestOS For Container集成了rpm-ostree支持、ignition配置等技术，采用双根文件系统，原子化更新的设计思路。",
+      "applicationCategory": "OperatingSystem",
+      "operatingSystem": "Linux",
+      "url": "https://www.openeuler.openatom.cn/zh/nestos",
+      "downloadUrl": "https://www.openeuler.openatom.cn/zh/nestos",
+      "softwareVersion": "24.03-LTS",
+      "isBasedOn": {
+        "@type": "SoftwareApplication",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn/"
+      },
+      "featureList": [
+        "内核特性增强，独立维护NestOS内核分支，基于openEuler主线版本针对云场景进一步特性增强",
+        "PilotGo插件式运维管理平台，专为NestOS提供定制化运维管理功能及架构感知插件特性",
+        "云原生一体化运维工具NKD（nestos-kubernetes-deployer），基于NestOS部署Kubernetes集群",
+        "支持Rubik在离线混部，预开启Rubik在离线混部相关内核特性",
+        "支持以编写Dockerfile形式轻松定制容器镜像格式的系统镜像",
+        "提供x2NestOS工具，支持将NestOS For Virt或其他通用形态OS转换为不可变模式"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "NestOS 双模式-24.03-LTS ISO (x86_64)",
+          "price": "0",
+          "priceCurrency": "CNY",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "NestOS 双模式-24.03-LTS ISO (aarch64)",
+          "price": "0",
+          "priceCurrency": "CNY",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "NestOS For Container-24.03-LTS ISO (x86_64)",
+          "price": "0",
+          "priceCurrency": "CNY",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "NestOS For Virt-24.03-LTS ISO (x86_64)",
+          "price": "0",
+          "priceCurrency": "CNY",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    }
+  ]
+]

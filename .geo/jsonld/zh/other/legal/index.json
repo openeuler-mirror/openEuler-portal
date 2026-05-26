@@ -1,0 +1,58 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/other/legal",
+    "url": "https://www.openeuler.openatom.cn/zh/other/legal",
+    "name": "openEuler 法律声明",
+    "description": "阅读openEuler的法律声明及相关政策，确保合法合规使用资源。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.openatom.cn/zh/"},
+        {"@type": "ListItem", "position": 2, "name": "其他信息", "item": "https://www.openeuler.openatom.cn/zh/other/"},
+        {"@type": "ListItem", "position": 3, "name": "法律声明", "item": "https://www.openeuler.openatom.cn/zh/other/legal"}
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "法律声明",
+      "description": "openEuler社区法律政策，包括网站访问规则、个人信息保护、免责声明、著作权说明及商标政策。"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.openeuler.openatom.cn/#organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@openeuler.io",
+        "contactType": "customer support"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.openeuler.openatom.cn/#organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn/",
+    "logo": "https://www.openeuler.openatom.cn/favicon.ico",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contact@openeuler.io",
+      "contactType": "customer support"
+    },
+    "sameAs": [
+      "https://www.openeuler.openatom.cn/"
+    ]
+  }
+]

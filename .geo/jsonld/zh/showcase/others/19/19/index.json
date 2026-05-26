@@ -1,0 +1,94 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/19/19.html",
+    "name": "西安数峰信息科技有限公司 | openEuler社区",
+    "description": "基于openEuler系操作系统的DBSolver仿真软件——西安数峰信息科技有限公司专注于CFD计算流体动力学软件自主研发，为航空航天、核工业等关键工业领域提供高效仿真软件解决方案。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://www.openeuler.openatom.cn",
+      "name": "openEuler社区"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "西安数峰信息科技有限公司",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/19/19.html"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "西安数峰信息科技有限公司基于openEuler系操作系统的DBSolver仿真软件",
+    "description": "西安数峰信息科技有限公司专注于CFD（计算流体动力学）软件自主研发，开发的DBSolver仿真软件基于openEuler 20.03LTS构建，利用毕昇编译器和鲲鹏技术栈优化，求解器效率提升20%，已在西安交通大学、哈尔滨工程大学、中航工业集团等机构成功应用。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/19/19.html",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "DBSolver",
+        "description": "西安数峰信息科技有限公司自主研发的CFD仿真软件，基于openEuler 20.03LTS（银河麒麟高级服务器操作系统V10）构建，采用C++面向对象分层设计，支持有限容积法（FVM）、有限元法（FEM）和格子玻尔兹曼法（LBM）。",
+        "applicationCategory": "仿真软件",
+        "operatingSystem": "openEuler 20.03LTS",
+        "softwareVersion": "DBSolver",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "西安数峰信息科技有限公司",
+        "description": "专注于CFD（计算流体动力学）软件自主研发，为航空航天、核工业等关键工业领域提供高效、自主化的仿真软件解决方案。"
+      },
+      {
+        "@type": "Organization",
+        "name": "西安交通大学"
+      },
+      {
+        "@type": "Organization",
+        "name": "哈尔滨工程大学"
+      },
+      {
+        "@type": "Organization",
+        "name": "中山大学"
+      },
+      {
+        "@type": "Organization",
+        "name": "中航工业集团"
+      }
+    ]
+  }
+]

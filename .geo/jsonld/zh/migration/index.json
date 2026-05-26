@@ -1,0 +1,127 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/migration",
+    "url": "https://www.openeuler.openatom.cn/zh/migration",
+    "name": "openEuler迁移方案 | openEuler迁移中心 | openEuler社区",
+    "description": "openEuler 助力企业简单、平稳、高效进行操作系统迁移。为用户提供x2openEuler工具的迁移评估和原地升级技术， 实现了全场景业务的"简单、平稳、高效"的迁移。想要了解更多信息，欢迎访问openEuler官网。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "迁移中心",
+          "item": "https://www.openeuler.openatom.cn/zh/migration"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "x2openEuler",
+    "version": "3.0.0-20250104",
+    "description": "x2openEuler工具是一款将源操作系统升级为目标操作系统的搬迁工具套件，提供迁移评估和原地升级技术，支持Linux迁移和Windows迁移。",
+    "operatingSystem": "Linux, Windows",
+    "applicationCategory": "SystemApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CNY"
+    },
+    "downloadUrl": "https://www.openeuler.openatom.cn/zh/migration",
+    "softwareVersion": "3.0.0-20250104",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "openEuler六步法端到端操作系统迁移方案",
+    "description": "提供用户迁移旅程中的准备、实施、测试上线等各环节的方法及工具，方便开发者快速完成迁移",
+    "url": "https://www.openeuler.openatom.cn/zh/migration",
+    "inLanguage": "zh-CN",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "迁移准备",
+        "text": "成立保障组织，为迁移工作做好前期准备"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "迁移分析",
+        "text": "进行方案设计，分析现有系统环境与迁移需求"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "迁移适配",
+        "text": "工具助力，化繁为简，完成系统与应用的适配工作"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "迁移实施",
+        "text": "支持原地升级和适配升级两种迁移路径，一键迁移，高效可靠"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "测试与上线",
+        "text": "进行业务监控与业务巡检，确保系统稳定运行"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 6,
+        "name": "安全运维",
+        "text": "安全漏洞更新，安全放心，智能运维"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "url": "https://www.openeuler.openatom.cn/zh/migration#faq",
+    "name": "openEuler迁移常见问题解答",
+    "inLanguage": "zh-CN",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "如何快速开始使用x2openEuler进行操作系统迁移？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "可通过下载x2openEuler工具套件（支持x86_64和aarch64架构），参考使用指南，支持Linux迁移和Windows迁移，并提供视频实操教程帮助轻松上手。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler支持哪些迁移路径？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler支持两种迁移路径：原地升级（约1小时，在原有系统上一键升级）和适配迁移（约4小时，自动安装操作系统和同步配置、安装应用）。"
+        }
+      }
+    ]
+  }
+]

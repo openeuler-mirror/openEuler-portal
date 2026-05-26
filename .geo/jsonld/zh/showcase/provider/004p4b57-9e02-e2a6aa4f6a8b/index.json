@@ -1,0 +1,80 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "中国联通软件研究院随沃行移动端业务系统 | openEuler社区",
+    "description": "平滑完成操作系统无感知创新升级，实现业务高效稳定运行",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/004p4b57-9e02-e2a6aa4f6a8b",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "中国联通软件研究院随沃行移动端业务系统",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/provider/004p4b57-9e02-e2a6aa4f6a8b"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "中国联通软件研究院随沃行移动端业务系统",
+    "description": "平滑完成操作系统无感知创新升级，实现业务高效稳定运行",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/004p4b57-9e02-e2a6aa4f6a8b",
+    "inLanguage": "zh",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+      }
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "随沃行移动端业务系统",
+        "description": "中国联通内部用户移动端业务系统，承载联通超过40万员工的日常移动应用，覆盖推送服务、AI助手、基础服务和应用商店四个业务模块"
+      },
+      {
+        "@type": "Thing",
+        "name": "openEuler操作系统",
+        "description": "openEuler开源操作系统在电信行业核心业务系统的创新部署实践"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "中国联通软件研究院",
+        "description": "中国联通旗下软件研究机构，随沃行移动端业务系统运营方"
+      },
+      {
+        "@type": "Organization",
+        "name": "银河麒麟",
+        "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/004p4b57-9e02-e2a6aa4f6a8b/qiling.png"
+      }
+    ],
+    "text": "随沃行是中国联通内部用户移动端业务系统，用户群体庞大、应用覆盖范围广，系统承载联通超过40万员工的日常移动应用。本次创新升级覆盖范围主要包括随沃行推送服务、AI助手、基础服务和应用商店四个业务模块。解决方案采用长城服务器（飞腾）、银河麒麟高级服务器操作系统V10、联通云天宫平台，实现微服务化、容器化、业务统一发布的IT架构。以微服务容器模式部署，降低了对主机状态的强依赖，证明了已具备电信行业核心业务系统云底座的支持能力。"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "天弘基金业务系统建设项目 | openEuler社区",
+    "description": "以服务器操作系统配合完成邮件与OA的改造",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/tianhong",
+    "inLanguage": "zh",
+    "isPartOf": {"@type": "WebSite", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn"},
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.openatom.cn/zh/"},
+        {"@type": "ListItem", "position": 2, "name": "用户案例", "item": "https://www.openeuler.openatom.cn/zh/showcase/"},
+        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"},
+        {"@type": "ListItem", "position": 4, "name": "天弘基金业务系统建设项目", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/tianhong"}
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "天弘基金业务系统建设项目",
+    "description": "以服务器操作系统配合完成邮件与OA的改造",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/tianhong",
+    "inLanguage": "zh",
+    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn", "logo": {"@type": "ImageObject", "url": "https://www.openeuler.openatom.cn/favicon.ico"}},
+    "about": [
+      {"@type": "Thing", "name": "金融行业数字化转型"},
+      {"@type": "Thing", "name": "服务器操作系统国产化"},
+      {"@type": "Thing", "name": "OA系统改造"}
+    ],
+    "mentions": [
+      {"@type": "Organization", "name": "天弘基金", "description": "阿里集团旗下天弘基金，开展OA及邮件系统国产化改造项目"},
+      {"@type": "SoftwareApplication", "name": "银河麒麟服务器操作系统", "applicationCategory": "ServerApplication", "description": "支持多策略融合的访问控制机制，内核安全执行控制KYSEC，与阿里云兼容性强"}
+    ]
+  }
+]

@@ -1,0 +1,99 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "openEuler缺陷管理 | openEuler缺陷中心 | openEuler社区",
+      "description": "openEuler 欢迎和鼓励社区开发者能主动识别或修复CVE， 不断提升openEuler 社区的软件使用体验，基于社区反馈我们会快速的响应、分析和解决上报的缺陷并及时发布。欢迎访问openEuler官网。",
+      "url": "https://www.openeuler.openatom.cn/zh/security/management",
+      "inLanguage": "zh",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "openEuler",
+            "item": "https://www.openeuler.openatom.cn/zh/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "缺陷中心",
+            "item": "https://www.openeuler.openatom.cn/zh/security/management/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "缺陷管理",
+            "item": "https://www.openeuler.openatom.cn/zh/security/management"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "缺陷管理",
+      "description": "openEuler 社区缺陷管理策略，包括缺陷响应、支持版本、缺陷处理流程及缺陷提交方式。",
+      "url": "https://www.openeuler.openatom.cn/zh/security/management",
+      "inLanguage": "zh",
+      "author": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.openeuler.openatom.cn/assets/openEuler-logo.png"
+        }
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "缺陷管理",
+          "description": "openEuler社区版本缺陷管理策略，由Release SIG与QA SIG联合负责版本质量。"
+        },
+        {
+          "@type": "Thing",
+          "name": "CVE修复",
+          "description": "openEuler鼓励社区开发者主动识别或修复CVE，提升社区软件使用体验。"
+        }
+      ],
+      "mainEntity": {
+        "@type": "HowTo",
+        "name": "如何向openEuler社区提交缺陷",
+        "description": "通过gitee issue提交缺陷至src-openEuler对应软件仓库的步骤说明",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "准备缺陷信息",
+            "text": "收集缺陷相关信息，包括内核信息、缺陷归属组件、缺陷归属的版本、缺陷简述、环境信息（硬件、软件、网络）、问题复现步骤及实际结果。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "使用issue模板提交",
+            "text": "前往gitee上src-openEuler对应软件仓库，使用openEuler提供的专门issue反馈模板提交缺陷，以便社区SIG感知工具能够快速感知并处理。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "等待SIG处理",
+            "text": "issue提交后，对应领域SIG组的maintainer或committer作为第一责任人负责分析和处理。openEuler社区QA SIG和Release SIG会定期审视并推动社区问题尽快修复。"
+          }
+        ]
+      }
+    }
+  ]
+]

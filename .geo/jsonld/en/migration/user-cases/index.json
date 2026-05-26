@@ -1,0 +1,89 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/migration/user-cases",
+    "url": "https://www.openeuler.openatom.cn/en/migration/user-cases",
+    "name": "Migration Best Practices | openEuler",
+    "description": "Discover real cases and best practices for migrating to openEuler in big data, storage, virtualization, container, and database scenarios.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler",
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn/"
+      }
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "OS Migration to openEuler",
+      "description": "Migration strategies and best practices for transitioning to openEuler across mainstream scenarios including big data, distributed storage, virtualization, container, and database software."
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Migration",
+          "item": "https://www.openeuler.openatom.cn/en/migration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Migration Best Practices",
+          "item": "https://www.openeuler.openatom.cn/en/migration/user-cases"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "openEuler Migration Scenarios",
+    "description": "Migration strategies and best practices for migrating to openEuler in various mainstream scenarios.",
+    "url": "https://www.openeuler.openatom.cn/en/migration/user-cases",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Big Data Migration to openEuler",
+        "description": "Migration best practices and strategies for big data scenarios on openEuler."
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Distributed Storage Migration to openEuler",
+        "description": "Migration best practices and strategies for distributed storage scenarios on openEuler."
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Virtualization Migration to openEuler",
+        "description": "Migration best practices and strategies for virtualization scenarios on openEuler."
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Container Migration to openEuler",
+        "description": "Migration best practices and strategies for container scenarios on openEuler."
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Database Migration to openEuler",
+        "description": "Migration best practices and strategies for database software scenarios on openEuler."
+      }
+    ]
+  }
+]

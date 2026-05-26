@@ -1,0 +1,147 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/starvcenter",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/starvcenter",
+    "name": "四川中电启明星技术有限公司（StarVCenter云平台） | openEuler社区",
+    "description": "性能卓越，稳定可靠，环境级高可用， 智能运维，安全性，自主可控，可移植、易操作",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "StarVCenter云平台",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/starvcenter"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "StarVCenter",
+      "description": "StarVCenter是基于openEuler定制的自主创新云平台，帮助企业自建私有云，提供云主机、云网络等基础设施服务，兼容鲲鹏、飞腾、海光、兆芯等芯片服务器，满足企业对异构算力的需求。",
+      "applicationCategory": "Cloud Computing Platform",
+      "operatingSystem": "openEuler",
+      "softwareVersion": "50+",
+      "provider": {
+        "@type": "Organization",
+        "name": "四川中电启明星信息技术有限公司",
+        "foundingDate": "1999",
+        "description": "四川中电启明星信息技术有限公司成立于1999年，本部设在成都，主要服务于能源企业和大中型集团。公司以云网大数据为依托，全面支撑新型电力系统建设，致力于成为国内领先的智慧能源平台型互联网企业。",
+        "areaServed": "CN",
+        "url": "https://www.openeuler.openatom.cn/zh/showcase/others/starvcenter"
+      },
+      "featureList": [
+        "超融合I/O性能提升20%",
+        "CEPH超融合场景支持Nvme SSD+智能预取",
+        "低负载场景CPU与内存利用率提升100%",
+        "虚拟机能效提升80%",
+        "虚拟机网络性能提升200%",
+        "容器调用性能提升260%"
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "四川中电启明星信息技术有限公司",
+    "foundingDate": "1999",
+    "description": "四川中电启明星信息技术有限公司成立于1999年，本部设在成都，主要服务于能源企业和大中型集团。公司以云网大数据为依托，全面支撑新型电力系统建设，致力于成为国内领先的智慧能源平台型互联网企业。",
+    "location": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "成都",
+        "addressRegion": "四川",
+        "addressCountry": "CN"
+      }
+    },
+    "areaServed": [
+      "能源企业",
+      "大中型集团",
+      "电力行业",
+      "医药行业",
+      "IDC",
+      "科研院所",
+      "教育",
+      "医疗"
+    ],
+    "knowsAbout": [
+      "云计算",
+      "私有云",
+      "云主机",
+      "云网络",
+      "虚拟化",
+      "ARM架构",
+      "异构算力",
+      "智慧能源"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "StarVCenter云平台核心技术优势",
+    "description": "StarVCenter基于openEuler的技术性能提升数据",
+    "itemListOrder": "https://schema.org/ItemListUnordered",
+    "numberOfItems": 6,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "超融合I/O性能",
+        "description": "CEPH超融合场景，结合openEuler全局缓存、KAEzip块压缩，I/O综合性能提升20%"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "存储读性能",
+        "description": "CEPH超融合场景，采用Nvme SSD+智能预取组件"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "资源利用率",
+        "description": "低负载场景，采用虚拟机V-Turbo、资源超分，CPU与内存利用率提升100%"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "虚拟机能效",
+        "description": "得益于鲲鹏处理器的高效能和BoostKit套件对KVM的深度优化，虚拟机能效提升80%"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "虚拟机网络性能",
+        "description": "结合SR-IOV与OVS流表网卡加速，对虚拟机业务网络综合性能提升200%"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "容器性能",
+        "description": "基于openEuler的轻量级容器iSula定制应用部署，开销更小，容器调用性能提升260%"
+      }
+    ]
+  }
+]

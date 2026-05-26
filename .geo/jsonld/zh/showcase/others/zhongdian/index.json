@@ -1,0 +1,86 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongdian",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongdian",
+    "name": "四川中电启明星技术有限公司（SKE容器云平台） | openEuler社区",
+    "description": "可弹性伸缩、资源动态调度、高可用、便于快速开发持续交付的PaaS云平台",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh-CN"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "四川中电启明星技术有限公司（SKE容器云平台）",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongdian"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "SKE容器云平台",
+      "description": "启明星容器云平台运行于openEuler操作系统之上，集成了isula或Docker容器运行时，并与Kubernetes无缝结合，构建了一个面向租户的serverless应用管理平台。借助DevOps和其他云原生技术，平台实现了资源的弹性伸缩、动态调度与高可用性，为用户提供了便捷的PaaS云服务。",
+      "applicationCategory": "PaaS云平台",
+      "operatingSystem": "openEuler",
+      "featureList": [
+        "分布式调度：提供完整分布式调度能力，支持跨地域的多个资源池的统一调度和管理",
+        "弹性伸缩：可实时监控容器的关键性能指标，并根据调度策略进行实时运算，针对已过载的容器进行动态扩容",
+        "安全可控：支持创建并使用用户私有镜像，同时确保镜像的分享安全，团队的协作便利",
+        "性能优化：使得基于欧拉生态的容器云产品能够为客户提供更高效的运行环境",
+        "生态协同：结合欧拉生态丰富软件资源和BoostKit应用使能，容器云产品能够为各类应用提供全面的支持",
+        "创新驱动：客户可以通过使用容器云产品，获取到最新的技术成果，提升业务的竞争力"
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "四川中电启明星信息技术有限公司",
+    "description": "四川中电启明星信息技术有限公司成立于1999年，本部设在成都，注册资金3.7亿元，人员规模1000余人，是国家规划布局内的重点软件企业。主要服务于能源企业和大中型集团。公司以云网大数据为依托，全面支撑新型电力系统建设，致力于成为国内领先的智慧能源平台型互联网企业。",
+    "foundingDate": "1999",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "minValue": 1000
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "成都",
+      "addressCountry": "CN"
+    },
+    "knowsAbout": [
+      "云原生技术",
+      "容器云平台",
+      "智慧能源",
+      "PaaS云服务",
+      "Kubernetes",
+      "DevOps"
+    ]
+  }
+]

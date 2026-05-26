@@ -1,0 +1,89 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "轻松定制系统镜像 | NestOS | openEuler | openEuler社区",
+    "description": "NestOS For Container 支持以编写 Dockerfile 形式轻松定制容器镜像格式的系统镜像。",
+    "url": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/feature/custom-image/",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "NestOS",
+          "item": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "轻松定制系统镜像",
+          "item": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/feature/custom-image/"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "轻松定制系统镜像 - NestOS For Container",
+    "description": "NestOS For Container 支持以编写 Dockerfile 形式轻松定制容器镜像格式的系统镜像。通过编写 Dockerfile 定义系统内容，执行构建并推送镜像，最后部署到 NestOS 环境。",
+    "url": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/feature/custom-image/",
+    "inLanguage": "zh",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "编写 Dockerfile 定义系统内容",
+        "text": "基于 NestOS For Container 镜像编写 Dockerfile，定义所需安装的软件包或构建组件",
+        "position": 1
+      },
+      {
+        "@type": "HowToStep",
+        "name": "执行构建步骤",
+        "text": "执行自定义构建步骤，例如安装软件或拷贝自构建组件",
+        "position": 2
+      },
+      {
+        "@type": "HowToStep",
+        "name": "构建并推送镜像",
+        "text": "执行 docker build 或集成于 CI/CD 中构建相应镜像，推送至 Registry 以备使用",
+        "position": 3
+      },
+      {
+        "@type": "HowToStep",
+        "name": "部署定制版本",
+        "text": "在已部署 NestOS For Container 的环境中执行 rpm-ostree rebase 命令部署定制版本",
+        "position": 4
+      },
+      {
+        "@type": "HowToStep",
+        "name": "完成部署",
+        "text": "重新引导后完成定制版本部署",
+        "position": 5
+      }
+    ],
+    "totalTime": "PT30M",
+    "tool": [
+      {
+        "@type": "HowToTool",
+        "name": "Docker"
+      },
+      {
+        "@type": "HowToTool",
+        "name": "rpm-ostree"
+      }
+    ]
+  }
+]

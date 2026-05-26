@@ -1,0 +1,75 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "华中科技大学/武汉理工大学（PFlows产品） | openEuler社区",
+    "description": "基于openEuler+鲲鹏打造超大规模计算流体力学平台",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/pf",
+    "inLanguage": "zh",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "教育",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "华中科技大学/武汉理工大学（PFlows产品）",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/pf"
+        }
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/zh/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "PFlows",
+      "description": "PFlows是华中科技大学与武汉理工大学合作开发的可大规模高效并行计算的颗粒两相流直接数值模拟软件，基于openEuler+鲲鹏920+GPU异构计算平台，实现千卡级异构高效并行。",
+      "applicationCategory": "ScientificApplication",
+      "operatingSystem": "openEuler（银河麒麟高级服务器操作系统V10 Kylin V10 SP2）",
+      "featureList": [
+        "颗粒两相流全解析直接数值模拟（FDNS）",
+        "CPU-GPU异构体系超大规模高效并行计算",
+        "最大计算网格规模1000亿以上",
+        "最高GPU卡使用规模千卡以上",
+        "大规模并行效率80%以上",
+        "支持OpenACC/CUDA/HIP等多种同构和异构MPI大规模并行加速计算"
+      ],
+      "author": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "华中科技大学",
+          "url": "https://www.hust.edu.cn/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "武汉理工大学",
+          "url": "https://www.whut.edu.cn/"
+        }
+      ]
+    }
+  }
+]

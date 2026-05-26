@@ -1,0 +1,131 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "下载中心",
+        "item": "https://www.openeuler.openatom.cn/zh/download/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "商业发行版",
+        "item": "https://www.openeuler.openatom.cn/zh/download/commercial-release/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "基于openEuler的商业发行版列表",
+    "description": "基于openEuler发布的商业发行版，提供多种厂商的企业级Linux操作系统",
+    "numberOfItems": 11,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "青云 PrimusOS 操作系统 24.03 LTS SP1",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "北京青云科技集团股份有限公司"
+          },
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2025-10"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "银河麒麟高级服务器操作系统V11",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "麒麟软件有限公司"
+          },
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2025-08"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "汇智TeligenOS服务器操作系统 V3",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "广州汇智通信技术有限公司"
+          },
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2025-02"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "浪潮云启操作系统 23.12 LTS SP2",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "浪潮云信息技术股份公司"
+          },
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2024-12"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "鼎桥TDOS服务器操作系统 V1.0",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "成都鼎桥通信技术有限公司"
+          },
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2024-05"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "浪潮云启操作系统 23.12 LTS SP1",
+          "applicationCategory": "Operating System",
+          "operatingSystem": "Linux",
+          "publisher": {
+            "@type": "Organization",
+            "name": "浪潮云信息技术股份公司"
+          },
+          "releaseNotes": "支持架构: x86_64, AArch64",
+          "datePublished": "2024-05"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Share Your OS Migration Story | openEuler",
+    "description": "Help others by sharing your openEuler migration experiences. Contribute best practices, follow our guides, and make migration smoother for everyone.",
+    "url": "https://www.openeuler.openatom.cn/en/migration/contribution",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Migration",
+          "item": "https://www.openeuler.openatom.cn/en/migration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Contribution",
+          "item": "https://www.openeuler.openatom.cn/en/migration/contribution"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Contribute Your OS Migration Best Practices to openEuler",
+    "description": "A step-by-step guide for sharing your openEuler migration experiences as best practices or migration cases with the openEuler Migration Center.",
+    "url": "https://www.openeuler.openatom.cn/en/migration/contribution",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Publish Your Migration Best Practices",
+        "text": "Publish your migration best practices or porting guides in the openEuler blog pages. Be sure to include keywords in your title, like "migration best practice" or "porting guide" for better visibility.",
+        "url": "https://www.openeuler.openatom.cn/en/interaction/post-blog/"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Receive Approval from Compatibility SIG",
+        "text": "If your blog is selected as a best practice or porting guide, the Compatibility SIG responds with "/lgtm" to indicate approval."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Publication in Migration Center",
+        "text": "Once approved, the openDesign SIG publishes the blog in the openEuler Migration Center for the community to benefit from."
+      }
+    ]
+  }
+]

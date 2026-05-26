@@ -1,0 +1,65 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/migration/background",
+    "url": "https://www.openeuler.openatom.cn/zh/migration/background",
+    "name": "openEuler移植案例 | 迁移专区 | openEuler社区",
+    "description": "openEuler 提供端到端的迁移方案，包括成立迁移保障组织、迁移分析、方案设计、移植适配、迁移实施和测试上线六个阶段，同时通过 x2openEuler 工具的迁移评估和原地升级技术，实现了全场景业务的"简单、平稳、高效"的迁移。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "迁移专区",
+          "item": "https://www.openeuler.openatom.cn/zh/migration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "迁移背景",
+          "item": "https://www.openeuler.openatom.cn/zh/migration/background"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/zh/",
+      "applicationCategory": "OperatingSystem",
+      "operatingSystem": "Linux",
+      "description": "openEuler 开源操作系统是面向数字基础设施的开源操作系统，支持服务器、云计算、边缘计算、嵌入式等应用场景，支持多样性计算，致力于提供安全、稳定、易用的操作系统。",
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn/zh/"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn/zh/",
+    "logo": "https://www.openeuler.openatom.cn/logo.png",
+    "sameAs": [
+      "https://gitee.com/openeuler"
+    ],
+    "description": "openEuler 是面向数字基础设施的开源操作系统，支持服务器、云计算、边缘计算、嵌入式等应用场景，支持多样性计算，致力于提供安全、稳定、易用的操作系统。"
+  }
+]

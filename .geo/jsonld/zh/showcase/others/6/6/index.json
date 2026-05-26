@@ -1,0 +1,102 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/6/6.html",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/6/6.html",
+    "name": "核能装备焊接数字化平台 | openEuler社区",
+    "description": "实现了焊接全业务流程的数字化智慧管控",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "核能装备焊接数字化平台",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/6/6.html"
+        }
+      ]
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "核能装备焊接数字化平台",
+      "description": "基于openEuler操作系统，实现了焊接全业务流程的数字化智慧管控，涵盖工艺管理、生产过程管理、焊机群控和数据采集、智能焊材库等功能。",
+      "applicationCategory": "工业互联网",
+      "operatingSystem": "openEuler",
+      "featureList": [
+        "工艺管理：标准化管理焊接项目和焊缝任务，利用人工智能图像识别技术自动识别焊缝分布图",
+        "生产过程管理：实现生产在线排产，跨产品快速完成排产，实时在线跟踪反馈",
+        "焊机群控和数据采集：支持400+台焊接设备的群控和数据采集，实时在线监控和超规范自动报警",
+        "智能焊材库：全流程管理焊材，基于三维可视化货位快速查询库存和材料位置"
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "核能装备焊接数字化平台",
+    "description": "兰石爱特工业互联网科技公司推出的核能装备焊接数字化平台，基于openEuler操作系统，实现了焊接全业务流程的数字化智慧管控。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/6/6.html",
+    "inLanguage": "zh-CN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/logo.png"
+      }
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "兰石爱特工业互联网科技公司"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/6/6.html"
+    },
+    "keywords": "核能装备,焊接数字化,openEuler,工业互联网,鲲鹏,智慧管控,工艺管理,焊机群控"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CaseStudy",
+    "name": "核能装备焊接数字化平台案例",
+    "description": "兰石爱特工业互联网科技公司基于openEuler操作系统构建核能装备焊接数字化平台，通过鲲鹏应用使能套件BoostKit优化，TPS性能提升22.5%，QPS性能提升17.2%，数据解析周期平均4ms，较传统服务器提升12.5%。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/6/6.html",
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler操作系统",
+        "url": "https://www.openeuler.openatom.cn/"
+      }
+    ],
+    "provider": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "subjectOf": {
+      "@type": "Organization",
+      "name": "兰石爱特工业互联网科技公司"
+    }
+  }
+]

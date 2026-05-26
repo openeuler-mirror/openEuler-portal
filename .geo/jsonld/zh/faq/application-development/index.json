@@ -1,0 +1,44 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "应用开发常见问题",
+    "description": "查阅openEuler应用开发的常见问题解答，快速解决开发过程中的疑惑。",
+    "url": "https://www.openeuler.openatom.cn/zh/faq/application-development",
+    "inLanguage": "zh-CN",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "部分依赖java-devel的应用程序自编译失败",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "为了提供更新的openjdk特性和对广大java应用程序的兼容，openEuler同时提供了openjdk-1.8.0、openjdk-11等多个版本的openjdk。部分应用程序在编译时需要依赖java-devel包，安装java-devel包时系统会默认安装更高版本的java-11-openjdk，从而导致这些应用的编译失败。因此用户需手动使用命令 `yum install java-1.8.0-openjdk` 安装java-1.8.0-openjdk后再使用rpmbuild命令进行自编译。"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "openEuler社区",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQ",
+        "item": "https://www.openeuler.openatom.cn/zh/faq/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "应用开发常见问题",
+        "item": "https://www.openeuler.openatom.cn/zh/faq/application-development"
+      }
+    ]
+  }
+]

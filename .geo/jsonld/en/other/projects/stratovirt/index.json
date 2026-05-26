@@ -1,0 +1,73 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "StratoVirt",
+    "url": "https://www.openeuler.openatom.cn/en/other/projects/stratovirt",
+    "description": "StratoVirt is an enterprise-grade virtualization cloud platform that uses a single architecture to support VM, containers, and serverless data center scenarios. StratoVirt has competitive advantages in key technologies such as lightweight and low noise, software and hardware collaboration, as well as premium security using Rust language.",
+    "applicationCategory": "Virtualization Software",
+    "operatingSystem": "Linux",
+    "softwareVersion": "latest",
+    "featureList": [
+      "Enhanced Security using Rust language with seccomp support for multi-tenant isolation",
+      "Lightweight and Low Noise: startup time under 50 ms, memory noise floor less than 4 MB",
+      "Fast Scaling: device scaling within milliseconds for lightweight loads",
+      "Software and Hardware Collaboration: supports x86 VT and Kunpeng-V for multi-system hardware acceleration",
+      "High Scalability: device model extensible to support PCI and standard VMs",
+      "Enhanced Heterogeneity: flexible allocation of heterogeneous computing power via Ascend software definition"
+    ],
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "license": "https://opensource.org/licenses/MulanPSL-2.0",
+    "programmingLanguage": "Rust",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "StratoVirt - Enterprise Virtualization Platform | openEuler",
+    "url": "https://www.openeuler.openatom.cn/en/other/projects/stratovirt",
+    "description": "StratoVirt is a lightweight, secure, open source virtualization platform. Learn more about its features & benefits.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://www.openeuler.openatom.cn/en/other/projects/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "StratoVirt",
+          "item": "https://www.openeuler.openatom.cn/en/other/projects/stratovirt"
+        }
+      ]
+    }
+  }
+]

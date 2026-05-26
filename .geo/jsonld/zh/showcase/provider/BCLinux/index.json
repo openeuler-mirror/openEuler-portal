@@ -1,0 +1,80 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "中国移动云能力中心 | openEuler社区",
+    "description": "基于 openEuler 打造 BC-Linux，分布式块存储，读 IOPS 提升 100%",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/BCLinux",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "展示案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "中国移动云能力中心",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/provider/BCLinux"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "中国移动云能力中心基于 openEuler 打造 BC-Linux 分布式块存储解决方案",
+    "description": "基于 openEuler 打造 BC-Linux，分布式块存储，读 IOPS 提升 100%",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/BCLinux",
+    "inLanguage": "zh",
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "BC-Linux",
+        "operatingSystem": "Linux",
+        "applicationCategory": "OperatingSystem",
+        "description": "BC-Linux 针对移动云业务应用场景，对 openEuler 进行了深度定制和优化，新增核心组件热升级、虚拟化及容器特性增强、系统安全加固、DPDK 加速库、集中部署运维工具等特色功能，集成 KAE 插件，软硬协同完成从应用到系统全堆栈的性能优化，充分释放多样性算力。"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "中国移动云能力中心",
+        "description": "中国移动面向政企、事业单位、开发者等客户推出移动云服务，是建立在中国移动"大云"基础上自主技术研发而成的公有云平台。"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CaseStudy",
+    "name": "中国移动云能力中心 BC-Linux 分布式块存储案例",
+    "description": "基于 openEuler 打造 BC-Linux，分布式块存储，读 IOPS 提升 100%",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/BCLinux",
+    "inLanguage": "zh",
+    "provider": {
+      "@type": "Organization",
+      "name": "中国移动云能力中心"
+    },
+    "result": "自 2020 年起，BC-Linux ARM 版已在移动云块存储集群部署 380 套，为 60PB（裸容量）存储数据服务提供良好支撑；同等配置条件下，鲲鹏服务器随机读 IOPS 提升 100%，时延降低 30%。"
+  }
+]

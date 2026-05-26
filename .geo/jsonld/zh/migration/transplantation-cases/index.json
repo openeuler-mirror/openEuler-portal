@@ -1,0 +1,52 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/migration/transplantation-cases",
+    "url": "https://www.openeuler.openatom.cn/zh/migration/transplantation-cases",
+    "name": "openEuler迁移案例 | 移植指南",
+    "description": "openEuler助力企业简单、平稳、高效进行操作系统升级。移植案例移植指南专区涵盖MySQL移植案例、Apache移植指南、Nginx移植指南、Dubbo移植指南。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "操作系统迁移与软件移植",
+      "description": "操作系统迁移时，软件也需要同步适配移植，openEuler提供典型软件移植指南供参考。"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://www.openeuler.openatom.cn/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "迁移专区",
+        "item": "https://www.openeuler.openatom.cn/zh/migration/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "移植案例",
+        "item": "https://www.openeuler.openatom.cn/zh/migration/transplantation-cases"
+      }
+    ]
+  }
+]

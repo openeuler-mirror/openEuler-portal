@@ -1,0 +1,105 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Use openEuler on WSL",
+      "description": "Discover how to set up openEuler on WSL, connect via remote desktop, and utilize user-contributed packages.",
+      "url": "https://www.openeuler.openatom.cn/en/wiki/install/wsl",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        }
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "openEuler WSL",
+        "operatingSystem": "Windows",
+        "applicationCategory": "DeveloperApplication",
+        "description": "openEuler Linux distribution for Windows Subsystem for Linux (WSL)",
+        "downloadUrl": "https://repo.openeuler.org/openEuler-24.03-LTS/WSL/openEuler-WSL-24.03.zip",
+        "softwareVersion": "24.03 LTS",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Install openEuler on WSL via Sideload",
+      "description": "Step-by-step instructions to install openEuler WSL on Windows through sideloading without using Microsoft Store.",
+      "url": "https://www.openeuler.openatom.cn/en/wiki/install/wsl",
+      "inLanguage": "en",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Download the WSL sideload package",
+          "text": "Download the WSL sideload package of openEuler 24.03 LTS from https://repo.openeuler.org/openEuler-24.03-LTS/WSL/openEuler-WSL-24.03.zip. If you install the WSL application from Microsoft Store, you can skip the certificate and sideload steps."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Install the certificate",
+          "text": "Double-click DistroLauncher-Appx_2403.0.1.0_x64_ARM64.cer in the package and choose Install Certificate > Local Machine > Place all certificates in the following store > Trusted People."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Install the sideload application",
+          "text": "Start a PowerShell terminal as an administrator and run the Add-AppDevPackage.ps1 script in the package."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Initialize the WSL environment",
+          "text": "After the installation is complete, click the icon of the openEuler 24.03 application in the Start menu. After the application is started, initialize the user and password as prompted to start the WSL environment."
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Wiki",
+          "item": "https://www.openeuler.openatom.cn/en/wiki/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Install",
+          "item": "https://www.openeuler.openatom.cn/en/wiki/install/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Use openEuler on WSL",
+          "item": "https://www.openeuler.openatom.cn/en/wiki/install/wsl"
+        }
+      ]
+    }
+  ]
+]

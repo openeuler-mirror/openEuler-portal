@@ -1,0 +1,203 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "openEuler 云安装指南",
+      "description": "查阅openEuler在云环境中的安装指南，保障快速上手。",
+      "url": "https://www.openeuler.openatom.cn/zh/wiki/install/cloud",
+      "inLanguage": "zh",
+      "author": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.openatom.cn",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.openeuler.openatom.cn/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.openeuler.openatom.cn/zh/wiki/install/cloud"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "openEuler",
+        "operatingSystem": "Linux",
+        "applicationCategory": "OperatingSystem",
+        "url": "https://www.openeuler.openatom.cn"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "在云平台获取并使用openEuler镜像",
+      "description": "介绍如何在AWS、Azure、阿里云、华为云等主流云平台上获取openEuler镜像并创建云实例。",
+      "url": "https://www.openeuler.openatom.cn/zh/wiki/install/cloud",
+      "inLanguage": "zh",
+      "step": [
+        {
+          "@type": "HowToSection",
+          "name": "在AWS获取openEuler镜像",
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "登录AWS控制台",
+              "text": "登陆AWS控制台 https://console.aws.amazon.com"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "进入EC2",
+              "text": "展开主页选项卡，进入计算列表，选择EC2"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "进入映像列表",
+              "text": "进入映像列表，选择AMI目录"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "搜索openEuler",
+              "text": "选择社区AMI，搜索openEuler"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 5,
+              "name": "创建实例",
+              "text": "选择目标版本创建实例"
+            }
+          ]
+        },
+        {
+          "@type": "HowToSection",
+          "name": "在Azure获取openEuler共享镜像",
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "登录Azure Portal",
+              "text": "登录 Azure Portal https://portal.azure.com/"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "进入Community images服务",
+              "text": "进入账户主页搜索：Community images 服务并进入"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "搜索openEuler镜像",
+              "text": "在 Community images 服务页面搜索关键词：openEuler，即可看到可用的 openEuler 镜像"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "创建VM",
+              "text": "点击目标镜像，即可创建 VM"
+            }
+          ]
+        },
+        {
+          "@type": "HowToSection",
+          "name": "在阿里云获取openEuler镜像",
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "登录阿里云控制台",
+              "text": "登录阿里云控制台 https://cn.aliyun.com"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "选择云服务器ECS",
+              "text": "展开主页选项卡，选择云服务器 ECS"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "搜索openEuler镜像",
+              "text": "进入镜像列表，选择社区镜像，搜索 openEuler"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "创建虚机",
+              "text": "选择目标版本创建虚机"
+            }
+          ]
+        },
+        {
+          "@type": "HowToSection",
+          "name": "在华为云获取openEuler镜像",
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "登录华为云控制台",
+              "text": "登陆华为云并进入控制台"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "选择弹性云服务器ECS",
+              "text": "选择弹性云服务器 ECS"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "购买并配置弹性云服务器",
+              "text": "购买弹性云服务器，配置算力资源、选择 openEuler 镜像、进行网络配置、设置登录方式"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "完成购买并登录使用",
+              "text": "完成购买，等待云主机状态变成运行中后进行远程登录。默认用户为 openeuler，需通过控制台修改 /etc/ssh/sshd_config 以满足登录要求"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Wiki",
+          "item": "https://www.openeuler.openatom.cn/zh/wiki/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "安装指南",
+          "item": "https://www.openeuler.openatom.cn/zh/wiki/install/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "云安装指南",
+          "item": "https://www.openeuler.openatom.cn/zh/wiki/install/cloud"
+        }
+      ]
+    }
+  ]
+]

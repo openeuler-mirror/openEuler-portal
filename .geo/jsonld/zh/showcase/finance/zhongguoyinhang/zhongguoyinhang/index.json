@@ -1,0 +1,44 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "中国银行 | openEuler社区",
+    "description": "基于openEuler系操作系统大规模应用实践",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhongguoyinhang/zhongguoyinhang",
+    "inLanguage": "zh",
+    "isPartOf": {"@type": "WebSite", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn"},
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.openatom.cn/zh/"},
+        {"@type": "ListItem", "position": 2, "name": "成功案例", "item": "https://www.openeuler.openatom.cn/zh/showcase/"},
+        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"},
+        {"@type": "ListItem", "position": 4, "name": "中国银行", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhongguoyinhang/zhongguoyinhang"}
+      ]
+    },
+    "about": {"@type": "Thing", "name": "openEuler操作系统在中国银行的大规模应用实践"},
+    "mainEntity": {
+      "@type": "Article",
+      "headline": "中国银行基于openEuler系操作系统大规模应用实践",
+      "description": "中国银行自2020年起全面推进IT基础设施自主创新建设，累计部署麒麟服务器操作系统十余万套，占比达70%以上，支撑金融核心业务系统稳定运行。",
+      "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhongguoyinhang/zhongguoyinhang",
+      "inLanguage": "zh",
+      "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn"},
+      "about": [
+        {"@type": "Thing", "name": "麒麟操作系统"},
+        {"@type": "Thing", "name": "IT基础设施自主创新"},
+        {"@type": "Thing", "name": "金融数字化转型"}
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CaseStudy",
+    "name": "中国银行基于openEuler系操作系统大规模应用实践",
+    "description": "中国银行积极响应国家关于信息技术应用创新的号召，自2020年起全面启动IT基础设施自主创新建设，累计部署麒麟服务器操作系统十余万套，占比达70%以上，支撑华为IaaS、腾讯PaaS等多类平台及OA、手机银行等关键业务系统。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhongguoyinhang/zhongguoyinhang",
+    "provider": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn"},
+    "customer": {"@type": "BankOrCreditUnion", "name": "中国银行", "description": "国有大型商业银行，在金融行业数字化建设处于领先地位", "industry": "金融业"},
+    "result": "部署麒麟服务器操作系统十余万套，占比达70%以上，实现了数字化转型和科技创新，降低了开发难度和成本，提升了网信速度和系统质效"
+  }
+]

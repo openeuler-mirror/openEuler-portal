@@ -1,0 +1,77 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "openEuler 联系方式 | 迁移专区",
+    "description": "获取openEuler迁移的联系方式，如有疑问，请随时联系我们。",
+    "url": "https://www.openeuler.openatom.cn/zh/migration/contact",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "迁移专区",
+          "item": "https://www.openeuler.openatom.cn/zh/migration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "联系方式",
+          "item": "https://www.openeuler.openatom.cn/zh/migration/contact"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "technical support",
+        "name": "迁移社区 SIG（兼容性 SIG）",
+        "url": "https://atomgit.com/openeuler/oec-application/issues",
+        "description": "迁移问题可在兼容性 SIG 提交相关问题。",
+        "availableLanguage": {
+          "@type": "Language",
+          "name": "Chinese"
+        }
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "name": "openEuler 公众号",
+        "description": "进入迁移专区，点击"加群"，进入技术交流群，可在群内直接提问，我们会有专人为您解答。",
+        "availableLanguage": {
+          "@type": "Language",
+          "name": "Chinese"
+        }
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "name": "openEuler 小助手",
+        "description": "备注"迁移"进入技术交流群，可在群内直接提问，我们会有专人为您解答。",
+        "availableLanguage": {
+          "@type": "Language",
+          "name": "Chinese"
+        }
+      }
+    ]
+  }
+]

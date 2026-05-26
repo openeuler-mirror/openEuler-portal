@@ -1,0 +1,78 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/contact-us",
+    "url": "https://www.openeuler.openatom.cn/zh/contact-us",
+    "name": "联系openEuler社区：邮件、微信及活动合作渠道一览",
+    "description": "openEuler社区提供多种联系方式，包括资金捐赠、社区活动、品牌合作等专属邮箱，以及开发者邮件列表 dev@openeuler.org。您还可通过微信号 openeuler123 联系社区小助手，或关注微信公众号、X、LinkedIn、YouTube、Bilibili 等平台，随时获取最新动态与技术支持。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "联系我们",
+          "item": "https://www.openeuler.openatom.cn/zh/contact-us"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.openeuler.openatom.cn/#organization",
+    "name": "openEuler社区",
+    "url": "https://www.openeuler.openatom.cn/",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "email": "gaofei@openatom.org",
+        "contactType": "资金捐赠",
+        "areaServed": "CN",
+        "availableLanguage": "zh"
+      },
+      {
+        "@type": "ContactPoint",
+        "email": "events@openeuler.sh",
+        "contactType": "社区活动",
+        "areaServed": "CN",
+        "availableLanguage": "zh"
+      },
+      {
+        "@type": "ContactPoint",
+        "email": "marketing@openeuler.org",
+        "contactType": "品牌合作",
+        "areaServed": "CN",
+        "availableLanguage": "zh"
+      },
+      {
+        "@type": "ContactPoint",
+        "email": "dev@openeuler.org",
+        "contactType": "开发者邮件列表",
+        "areaServed": "Worldwide",
+        "availableLanguage": ["zh", "en"]
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/company/openeuler",
+      "https://twitter.com/openEuler",
+      "https://www.youtube.com/@openEuler",
+      "https://space.bilibili.com/527064077"
+    ]
+  }
+]

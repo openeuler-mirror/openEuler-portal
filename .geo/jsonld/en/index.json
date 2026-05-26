@@ -1,0 +1,75 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Community",
+    "alternateName": "openEuler",
+    "url": "https://www.openeuler.openatom.cn/en/",
+    "logo": "https://www.openeuler.openatom.cn/assets/logo.XeUCiAZu.svg",
+    "description": "An open source OS run by the OpenAtom Foundation that builds a global community to enhance digital infrastructure and support diverse architectures.",
+    "sameAs": [
+      "https://github.com/openeuler"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contact@openeuler.io",
+      "contactType": "customer service"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "OpenAtom Foundation",
+      "alternateName": "开放原子开源基金会"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Linux Foundation",
+      "description": "openEuler is an Associate Member of the Linux Foundation"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "openEuler",
+    "applicationCategory": "Operating System",
+    "operatingSystem": "Linux",
+    "description": "An open source OS for digital infrastructure in server, cloud, edge, and embedded scenarios, across Arm, x86, RISC-V, LoongArch, PowerPC, and SW-64 architectures.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "description": "openEuler community release is free and open source"
+    },
+    "downloadUrl": "https://www.openeuler.openatom.cn/en/download/",
+    "license": "https://license.coscl.org.cn/MulanPSL2",
+    "featureList": [
+      "Various Devices Support",
+      "All-Scenario Applications",
+      "Complete Development Tool Chain",
+      "Server Scenario",
+      "Cloud Scenario",
+      "Edge Scenario",
+      "Embedded Scenario"
+    ],
+    "supportedArchitecture": [
+      "ARM",
+      "x86",
+      "RISC-V",
+      "LoongArch",
+      "PowerPC",
+      "SW-64"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.openeuler.openatom.cn/en/"
+      }
+    ]
+  }
+]

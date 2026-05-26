@@ -1,0 +1,89 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "誉托科技 | openEuler社区",
+    "description": "誉托科技智慧工地平台 平滑完成操作系统迁移，整体性能提升 30%",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/O6",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "用户案例",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "其他",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "誉托科技",
+          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/O6"
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "openEuler操作系统迁移",
+      "description": "从CentOS迁移到openEuler开源操作系统的智慧工地业务系统案例"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "誉托科技智慧工地平台 平滑完成操作系统迁移，整体性能提升 30%",
+    "description": "誉托科技与中软国际合作，完成智能工地业务系统服务器从 CentOS 到 openEuler 开源操作系统的迁移，性能提升 30%。",
+    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/O6",
+    "inLanguage": "zh",
+    "image": "https://www.openeuler.openatom.cn/zh/showcase/others/O6/O6.png",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.openatom.cn",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.openatom.cn/assets/logo.png"
+      }
+    },
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler LTS 20.03 SP3",
+        "applicationCategory": "OperatingSystem",
+        "operatingSystem": "Linux",
+        "url": "https://www.openeuler.openatom.cn"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "誉托科技",
+        "description": "智慧工地平台提供商，完成从CentOS到openEuler的操作系统迁移"
+      },
+      {
+        "@type": "Organization",
+        "name": "中软国际",
+        "description": "与誉托科技合作完成智能工地业务系统迁移的合作伙伴"
+      }
+    ],
+    "articleBody": "誉托科技与中软国际合作完成了智能工地业务系统服务器从 CentOS 到欧拉开源操作系统的迁移。保持原有 x86 浪潮物理服务器不变，操作系统采用 openEuler LTS 20.03 SP3。保持原有的 MySQL 数据库应用不变，完成对数据库数据的迁移。迁移过程中将原有数据库根据业务进行拆分，智慧工地与抗疫复工子模块拆封为 2 个独立的数据库，性能提升 30%。"
+  }
+]

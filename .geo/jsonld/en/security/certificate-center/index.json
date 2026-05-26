@@ -1,0 +1,68 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Public Keys & Certificates | openEuler",
+      "description": "Access the essential public key and certificate to secure your OS.",
+      "url": "https://www.openeuler.openatom.cn/en/security/certificate-center",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "openEuler",
+        "url": "https://www.openeuler.openatom.cn"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.openeuler.openatom.cn/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Security",
+            "item": "https://www.openeuler.openatom.cn/en/security/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Certificate Center",
+            "item": "https://www.openeuler.openatom.cn/en/security/certificate-center"
+          }
+        ]
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "openEuler Certificate Center",
+        "description": "openEuler certificate center is used to store the public key and certificate information used in each system of the community."
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "openEuler Certificates and Public Keys",
+      "description": "List of public keys and certificates available from the openEuler Certificate Center.",
+      "url": "https://www.openeuler.openatom.cn/en/security/certificate-center",
+      "numberOfItems": 1,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "DigitalDocument",
+            "name": "openEuler Shim Default CA",
+            "description": "openEuler Shim Default CA certificate in X509 format with RSA-4096 algorithm. Certificate fingerprint: c813cda25ee2749e5551b8919a0537db.",
+            "encodingFormat": "application/x-x509-ca-cert",
+            "dateCreated": "2023-11-14",
+            "expires": "2053-12-31",
+            "url": "https://www.openeuler.openatom.cn/certificates/openEuler-x509ca.cer.pem"
+          }
+        }
+      ]
+    }
+  ]
+]
