@@ -1,18 +1,21 @@
 <script lang="ts" setup>
 import { useData } from 'vitepress';
-import { showGuard, logout, useStoreData, getUserAuth } from '../shared/login';
+import { getLoginUrl, getLogoutUrl, useStoreData } from '../shared/utils';
+import { doLogout, doLogin, useLoginStore } from '@opendesign-plus/composables';
 import { useI18n } from '@/i18n';
 
 import IconLogin from '~icons/app/icon-login.svg';
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import { getUnreadMsgCount } from '@/api/api-messageCenter';
 import AppBadge from './badge/AppBadge.vue';
 import { queryPersonalInfo } from '@/api/api-login';
 
 const { lang } = useData();
-const { token } = getUserAuth();
 const { guardAuthClient } = useStoreData();
 const i18n = useI18n();
+const logoutUrl = ref('');
+const loginUrl = ref('');
+const loginStore = useLoginStore();
 
 const jumpToUserZone = () => {
   const language = lang.value === 'zh' ? 'zh' : 'en';
@@ -27,7 +30,12 @@ const jumpToMsgCenter = () => {
 const unreadMsgCount = ref(0);
 
 onMounted(async () => {
-  if (token) {
+  logoutUrl.value = getLogoutUrl();
+  loginUrl.value = getLoginUrl();
+});
+
+watch(() => loginStore.isLogined, async (val) => {
+  if (val) {
     const { data: userInfo } = await queryPersonalInfo();
     const giteeLoginName: string | undefined = (
       userInfo.identities as any[]
@@ -37,13 +45,17 @@ onMounted(async () => {
       (count, val) => count + val,
       0
     );
+  } else {
+    unreadMsgCount.value = 0;
   }
+}, {
+  immediate: true,
 });
 </script>
 
 <template>
   <div v-if="lang !== 'ru'" class="opt-user">
-    <div v-if="token">
+    <div v-if="loginStore.isLogined">
       <div class="el-dropdown-link opt-info">
         <AppBadge v-if="unreadMsgCount" :value="unreadMsgCount">
           <img
@@ -77,10 +89,10 @@ onMounted(async () => {
             {{ i18n.common.MESSAGE_CENTER }}
           </template>
         </li>
-        <li @click="logout()">{{ i18n.common.LOGOUT }}</li>
+        <li @click="doLogout(logoutUrl)">{{ i18n.common.LOGOUT }}</li>
       </ul>
     </div>
-    <div v-else class="login" @click="showGuard()">
+    <div v-else class="login" @click="doLogin(loginUrl)">
       <OIcon class="icon">
         <IconLogin />
       </OIcon>

@@ -27,7 +27,6 @@ import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 
 import IconClose from '~icons/app-new/icon-close.svg';
-import { useLogin } from '@/stores/login';
 
 const route = useRoute();
 

@@ -1,5 +1,8 @@
+import { useUserInfoStore } from '@/stores/user';
 import Cookies from 'js-cookie';
+import { storeToRefs } from 'pinia';
 import { v4 as uuidV4 } from 'uuid';
+import { useData } from 'vitepress';
 
 // 格式化数字
 export function formatNumber(num: number) {
@@ -181,4 +184,33 @@ export function isBoolean(val: unknown): val is boolean {
  */
 export function uniqueId(): string {
   return uuidV4();
+}
+
+export function getLoginUrl(): string {
+  const { lang } = useData();
+  return `${import.meta.env.VITE_LOGIN_ORIGIN}/login?redirect_uri=${encodeURIComponent(location.href)}&lang=${lang.value}`;
+}
+
+export function getLogoutUrl(): string {
+  const { lang } = useData();
+  return `${import.meta.env.VITE_LOGIN_ORIGIN}/logout?redirect_uri=${encodeURIComponent(location.href)}&lang=${lang.value}`;
+}
+
+export function useStoreData() {
+  const userInfoStore = useUserInfoStore();
+  const stores = storeToRefs(userInfoStore);
+  return stores;
+}
+
+export function getLanguage() {
+  if (location.pathname.includes('/zh/')) {
+    return {
+      lang: 'zh',
+      language: 'zh-CN',
+    };
+  }
+  return {
+    lang: 'en',
+    language: 'en-US',
+  };
 }

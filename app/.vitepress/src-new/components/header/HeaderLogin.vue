@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { useData } from 'vitepress';
-import { showGuard, logout, useStoreData, getUserAuth } from '@/shared/login';
 import { OIcon, ODropdown, ODropdownItem } from '@opensig/opendesign';
 import { useScreen } from '~@/composables/useScreen';
-
+import { getLoginUrl, getLogoutUrl, useStoreData } from '@/shared/utils';
+import { doLogin, doLogout, useLoginStore } from '@opendesign-plus/composables';
 import AppBadge from '@/components/badge/AppBadge.vue';
 import { getUnreadMsgCount } from '@/api/api-messageCenter';
 import { queryPersonalInfo } from '@/api/api-login';
@@ -13,11 +13,13 @@ import IconLogin from '~icons/app-new/icon-header-person.svg';
 import { useIdentities } from '~@/stores/common';
 
 const { lang } = useData();
-const { token } = getUserAuth();
 const { guardAuthClient } = useStoreData();
 const { lePadV } = useScreen();
+const loginStore = useLoginStore();
 
 const identitiesStore = useIdentities();
+const loginUrl = ref('');
+const logoutUrl = ref('');
 
 const jumpToUserZone = () => {
   const language = lang.value === 'zh' ? 'zh' : 'en';
@@ -32,7 +34,12 @@ const jumpToMsgCenter = () => {
 const unreadMsgCount = ref(0);
 
 onMounted(async () => {
-  if (token) {
+  logoutUrl.value = getLogoutUrl();
+  loginUrl.value = getLoginUrl();
+});
+
+watch(() => loginStore.isLogined, async (val) => {
+  if (val) {
     const { data: userInfo } = await queryPersonalInfo();
     identitiesStore.$patch({
       identities: userInfo.identities,
@@ -45,14 +52,18 @@ onMounted(async () => {
       (count, val) => count + val,
       0
     );
+  } else {
+    unreadMsgCount.value = 0;
   }
+}, {
+  immediate: true,
 });
 </script>
 
 <template>
   <div class="opt-user">
     <ODropdown
-      v-if="token"
+      v-if="loginStore.isLogined"
       trigger="hover"
       optionPosition="bottom"
       option-wrap-class="dropdown"
@@ -94,12 +105,12 @@ onMounted(async () => {
             {{ $t('header.MESSAGE_CENTER') }}
           </div>
         </ODropdownItem>
-        <ODropdownItem @click="logout()">{{
+        <ODropdownItem @click="doLogout(logoutUrl)">{{
           $t('header.LOGOUT')
         }}</ODropdownItem>
       </template>
     </ODropdown>
-    <div v-else class="login" @click="showGuard()">
+    <div v-else class="login" @click="doLogin(loginUrl)">
       <OIcon class="icon">
         <IconLogin />
       </OIcon>
