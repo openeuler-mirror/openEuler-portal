@@ -5,7 +5,7 @@ import LLMsTxtSections from './LLMsTxtSections';
 import viteLastModifiedPlugin from '@opendesign-plus/plugins/vite/generate-lastmod-changefreq';
 import sitemapItemTransformer from '@opendesign-plus/geo-scripts/vitepress-sitemap-transformer';
 import generateLLMsFull from '@opendesign-plus/geo-scripts/generate-llms-full';
-import yaml from '@modyfi/vite-plugin-yaml';
+import contentYamlPlugin from './plugins/vite-plugin-content-yaml';
 
 import path, { join } from 'node:path';
 import { existsSync, readFileSync} from 'node:fs';
@@ -221,10 +221,11 @@ const config: UserConfig = {
     resolve: {
       alias: {
         '#cms': resolve(__dirname, '../../.cms/export/index.client.ts'),
+        '#content': resolve(__dirname, '../../.content'),
       },
     },
     plugins: [
-      yaml(),
+      contentYamlPlugin(),
       viteLastModifiedPlugin({
         rootDir: join(__dirname, '../'),
         pageEntryPattern: ['zh/**/*.md', 'en/**/*.md'],
