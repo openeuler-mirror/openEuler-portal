@@ -2,3 +2,7 @@ allowBuilds:
   '@parcel/watcher': true
   esbuild: true
   vue-demi: true
+overrides:
+  uuid: 14.0.0
+  js-cookie: 3.0.7
+  dayjs: 1.11.13

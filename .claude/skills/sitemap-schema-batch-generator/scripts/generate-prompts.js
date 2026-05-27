@@ -8,7 +8,7 @@ async function fetchSitemap(sitemapUrl) {
 }
 
 function parseSitemapUrls(xml) {
-  const urlRegex = /<loc>([^<]+)</loc>/g;
+  const urlRegex = /<loc>([^<]+)<\/loc>/g;
   const urls = [];
   let match;
   while ((match = urlRegex.exec(xml)) !== null) {

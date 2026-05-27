@@ -1,5 +1,27 @@
-import { expect, describe, it, vi } from 'vitest';
-import { isValidKey, isBrowser, getNowFormatDate, getUrlParams, isTestEmail, isTestPhone, setCustomCookie, getCustomCookie, removeCustomCookie, firstToUpper } from '../app/.vitepress/src/shared/utils';
+import { expect, describe, it, vi, beforeEach, afterEach } from 'vitest';
+import { setActivePinia, createPinia } from 'pinia';
+import { isValidKey, isBrowser, getNowFormatDate, getUrlParams, isTestEmail, isTestPhone, setCustomCookie, getCustomCookie, removeCustomCookie, firstToUpper, getLoginUrl, getLogoutUrl, useStoreData, getLanguage } from '../app/.vitepress/src/shared/utils';
+
+// vitepress 的 useData 在 SSG 环境注入，单测环境需 mock
+vi.mock('vitepress', () => ({
+  useData: () => ({
+    lang: { value: 'zh' },
+  }),
+}));
+
+// user store 依赖 analytics、@opendesign-plus/composables 等浏览器模块，单测中替换为最小实现
+vi.mock('@/stores/user', async () => {
+  const pinia = await vi.importActual<typeof import('pinia')>('pinia');
+  const vue = await vi.importActual<typeof import('vue')>('vue');
+  return {
+    useUserInfoStore: pinia.defineStore('userInfo', () => {
+      const guardAuthClient = vue.ref({ email: '', photo: '', username: '' });
+      const setGuardAuthClient = vi.fn();
+      const clearGuardAuthClient = vi.fn();
+      return { guardAuthClient, setGuardAuthClient, clearGuardAuthClient };
+    }),
+  };
+});
 
 describe('测试 isValidKey', () => {
   it('key 为 string', () => {
@@ -115,5 +137,94 @@ describe('测试 firstToUpper', () => {
   });
   it('应该处理全大写的输入，将其转为首字母大写，其余小写', () => {
     expect(firstToUpper('HELLO WORLD')).toBe('Hello World');
+  });
+});
+
+describe('测试 getLoginUrl', () => {
+  beforeEach(() => {
+    vi.stubEnv('VITE_LOGIN_ORIGIN', 'https://login.openeuler.org');
+  });
+
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  it('应返回拼接 origin、redirect_uri 与 lang 的登录 URL', () => {
+    const url = getLoginUrl();
+    expect(url).toContain('https://login.openeuler.org/login');
+    expect(url).toContain(`redirect_uri=${encodeURIComponent(location.href)}`);
+    expect(url).toContain('lang=zh');
+  });
+});
+
+describe('测试 getLogoutUrl', () => {
+  beforeEach(() => {
+    vi.stubEnv('VITE_LOGIN_ORIGIN', 'https://login.openeuler.org');
+  });
+
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  it('应返回拼接 origin、redirect_uri 与 lang 的登出 URL', () => {
+    const url = getLogoutUrl();
+    expect(url).toContain('https://login.openeuler.org/logout');
+    expect(url).toContain(`redirect_uri=${encodeURIComponent(location.href)}`);
+    expect(url).toContain('lang=zh');
+  });
+});
+
+describe('测试 useStoreData', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia());
+  });
+
+  it('应返回 user store 中的响应式引用', () => {
+    const stores = useStoreData();
+    expect(stores).toHaveProperty('guardAuthClient');
+    expect(stores.guardAuthClient.value).toEqual({
+      email: '',
+      photo: '',
+      username: '',
+    });
+  });
+
+  it('修改 store 后引用值应同步更新', () => {
+    const stores = useStoreData();
+    stores.guardAuthClient.value = {
+      email: 'test@openeuler.org',
+      photo: '',
+      username: 'tester',
+    };
+    expect(stores.guardAuthClient.value.username).toBe('tester');
+    expect(stores.guardAuthClient.value.email).toBe('test@openeuler.org');
+  });
+});
+
+describe('测试 getLanguage', () => {
+  const originalPath = window.location.pathname;
+
+  afterEach(() => {
+    window.history.pushState({}, '', originalPath);
+  });
+
+  it('路径中包含 /zh/ 时应返回中文配置', () => {
+    window.history.pushState({}, '', '/zh/sig/Kernel');
+    expect(getLanguage()).toEqual({ lang: 'zh', language: 'zh-CN' });
+  });
+
+  it('路径中包含 /en/ 时应返回英文配置', () => {
+    window.history.pushState({}, '', '/en/sig/Kernel');
+    expect(getLanguage()).toEqual({ lang: 'en', language: 'en-US' });
+  });
+
+  it('根路径应返回英文配置', () => {
+    window.history.pushState({}, '', '/');
+    expect(getLanguage()).toEqual({ lang: 'en', language: 'en-US' });
+  });
+
+  it('其他不包含 /zh/ 的路径应返回英文配置', () => {
+    window.history.pushState({}, '', '/blog/2026/something');
+    expect(getLanguage()).toEqual({ lang: 'en', language: 'en-US' });
   });
 });
