@@ -4,13 +4,10 @@
 #   - 加新人:找到对应子组,在它的 members: 下复制一个块
 #   - 加新子组:在 groups: 下复制一段
 #
-# 注:田俊的头像在 assets/technical/(他同时也是技术委员会成员,共用一张图)。
-# 跨子目录引图就写完整相对路径即可。
+# 注:田俊同时是技术委员会成员,两边共用同一张图(直接引用同一个文件名即可)。
 
 title: openEuler 委员会
 title_en: openEuler Committee
-id: committee
-id_zh: 委员会
 
 groups:
   - title: 主席
@@ -18,7 +15,7 @@ groups:
     members:
       - name: 熊伟
         name_en: Xiong Wei
-        image: xiongwei.png
+        image: ./images/xiongwei.png
         position: 华为技术有限公司
         position_en: Huawei Technologies Co., Ltd.
 
@@ -27,25 +24,25 @@ groups:
     members:
       - name: 韩乃平
         name_en: Han Naiping
-        image: hannaiping.png
+        image: ./images/hannaiping.png
         position: 麒麟软件有限公司
         position_en: Kylinsoft Co., Ltd.
 
       - name: 刘文清
         name_en: Liu Wenqing
-        image: liuwenqing.png
+        image: ./images/liuwenqing.png
         position: 湖南麒麟信安科技股份有限公司
         position_en: Hunan Kylinsec Technology Co., Ltd.
 
       - name: 屈晟
         name_en: Qu Sheng
-        image: qusheng.png
+        image: ./images/qusheng.png
         position: 中国科学院软件研究所
         position_en: Institute of Software, Chinese Academy of Sciences
 
       - name: 张磊
         name_en: Zhang Lei
-        image: zhanglei.png
+        image: ./images/zhanglei.png
         position: 统信软件技术有限公司
         position_en: UnionTech Software Technology Co., Ltd.
 
@@ -54,25 +51,25 @@ groups:
     members:
       - name: 高培
         name_en: Gao Pei
-        image: gaopei.png
+        image: ./images/gaopei.png
         position: 软通动力信息技术（集团）股份有限公司
         position_en: "iSoftStone Information Technology (Group) Co., Ltd."
 
       - name: 田俊
         name_en: Tian Jun
-        image: technical/tianjun.png
+        image: ./images/tianjun.png
         position: 英特尔（中国）有限公司
         position_en: Intel China Ltd.
 
       - name: 于力
         name_en: Yu Li
-        image: yuli.png
+        image: ./images/yuli.png
         position: 南方电网数字电网科技有限（广东）公司
         position_en: China Southern Power Grid
 
       - name: 于萍
         name_en: Yu Ping
-        image: yuping.png
+        image: ./images/yuping.png
         position: 江苏润和软件股份有限公司
         position_en: Jiangsu HopeRun Software Co., Ltd.
 
@@ -81,7 +78,7 @@ groups:
     members:
       - name: 刘飞
         name_en: Liu Fei
-        image: liufei.png
+        image: ./images/liufei.png
         position: 华为技术有限公司
         position_en: Huawei Technologies Co., Ltd.
 
@@ -90,6 +87,6 @@ groups:
     members:
       - name: 刘彦飞
         name_en: Liu Yanfei
-        image: liuyanfei.png
+        image: ./images/liuyanfei.png
         position: 开放原子开源基金会
         position_en: OpenAtom Foundation

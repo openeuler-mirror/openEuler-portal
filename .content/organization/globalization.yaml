@@ -8,44 +8,42 @@
 
 title: openEuler 全球化工作组
 title_en: openEuler Globalization Working Group
-id: globalization-working-group
-id_zh: 全球化工作组
 
 rows:
   # 第一行:主组成员
   - - name: 周楠
       name_en: Zhou Nan
-      image: globalization/zhounan.png
+      image: ./images/zhounan.png
       position: 组长
       position_en: Lead
 
     - name: 蔡镌洋
       name_en: Cai Juanyang
-      image: globalization/caijuanyang.png
+      image: ./images/caijuanyang.png
       position: 组员
       position_en: Member
 
     - name: 李成鹏
       name_en: Li Chengpeng
-      image: globalization/lichengpeng.png
+      image: ./images/lichengpeng-globalization.png
       position: 组员
       position_en: Member
 
     - name: 刘明杰
       name_en: Liu Mingjie
-      image: globalization/liumingjie.png
+      image: ./images/liumingjie-globalization.png
       position: 组员
       position_en: Member
 
     - name: 任紫东
       name_en: Ren Zidong
-      image: globalization/renzidong.png
+      image: ./images/renzidong.png
       position: 组员
       position_en: Member
 
   # 第二行:全球生态官
   - - name: 胡正策
       name_en: Hu Zhengce
-      image: huzhengce.png
+      image: ./images/huzhengce.png
       position: 开源欧拉全球生态官
       position_en: openEuler Global Advocate

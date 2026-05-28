@@ -12,6 +12,6 @@ openEuler is an open source OS oriented to digital infrastructure that fits into
 The openEuler community works with global developers to build an open, diversified, and architecture-inclusive software ecosystem. It covers all scenarios of digital facilities, and empowers enterprises to develop their hardware and software as well as application ecosystems.
 
 - [Organizational Structure](https://www.openeuler.org/en/community/organization/)
-- [Technical Committee](https://www.openeuler.org/en/community/organization/#technical-committee)
+- [Technical Committee](https://www.openeuler.org/en/community/organization/#openeuler-technical-committee)
 - [Security Committee](https://gitee.com/openeuler/security-committee)
 - [Special Interest Groups](https://www.openeuler.org/en/sig/sig-list/)

@@ -1,0 +1,44 @@
+# 法务工作组 / Legal Affairs Working Group
+#
+# 文件名 legal 就是这个 section 的 slug,在页面侧的 SECTIONS 数组里被引用。
+# 平铺成员列表用 members:,每个成员一个块,看起来像一张张名片。
+
+title: openEuler 法务工作组
+title_en: openEuler Legal Affairs Working Group
+
+members:
+  - name: 张伟
+    name_en: Zhang Wei
+    image: ./images/zhangwei.png
+    position: 组长
+    position_en: Lead
+
+  - name: 刘伟
+    name_en: Liu Wei
+    image: ./images/liuwei.png
+    position: 副组长
+    position_en: Co-Lead
+
+  - name: 李博
+    name_en: Li Bo
+    image: ./images/libo.png
+    position: 组员
+    position_en: Member
+
+  - name: 宋李萍
+    name_en: Song Liping
+    image: ./images/songlipin.png
+    position: 组员
+    position_en: Member
+
+  - name: 王思扬
+    name_en: Wang Siyang
+    image: ./images/wangsiyang.png
+    position: 组员
+    position_en: Member
+
+  - name: 邢鹏
+    name_en: Xing Peng
+    image: ./images/xinpeng.png
+    position: 组员
+    position_en: Member

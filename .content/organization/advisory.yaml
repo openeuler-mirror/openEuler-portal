@@ -5,13 +5,11 @@
 
 title: openEuler 委员会顾问专家委员会
 title_en: Advisory Committee of the openEuler Committee
-id: advisory-committee
-id_zh: 顾问专家委员会
 
 members:
   - name: 陆首群
     name_en: Lu Shouqun
-    image: expert/lusouqun.png
+    image: ./images/lusouqun.png
     position:
       - 中国开源软件联盟名誉主席
       - 原国务院信息办常务副主任
@@ -21,31 +19,31 @@ members:
 
   - name: 倪光南
     name_en: Ni Guangnan
-    image: expert/niguangnan.png
+    image: ./images/niguangnan.png
     position: 中国工程院院士
     position_en: Academician of Chinese Academy of Engineering
 
   - name: 廖湘科
     name_en: Liao Xiangke
-    image: expert/liaoxiangke.png
+    image: ./images/liaoxiangke.png
     position: 中国工程院院士
     position_en: Academicians of Chinese Academy of Engineering
 
   - name: 王怀民
     name_en: Wang Huaimin
-    image: expert/wanghuaimin.png
+    image: ./images/wanghuaimin.png
     position: 中国科学院院士
     position_en: Academician of Chinese Academy of Sciences
 
   - name: 邬贺铨
     name_en: Wu Hequan
-    image: expert/wuheshuan.png
+    image: ./images/wuheshuan.png
     position: 中国工程院院士
     position_en: Academicians of Chinese Academy of Engineering
 
   - name: 周明辉
     name_en: Zhou Minghui
-    image: expert/zhouminghui.png
+    image: ./images/zhouminghui.png
     position:
       - 北京大学计算机系教授
       - 北大博雅特聘教授
@@ -55,6 +53,6 @@ members:
 
   - name: 霍太稳
     name_en: Huo Taiwen
-    image: expert/huotaiwen.png
+    image: ./images/huotaiwen.png
     position: 极客邦科技创始人兼CEO
     position_en: Founder and CEO of Geekbang Technology

@@ -1,0 +1,74 @@
+# 教育工作组 / Education Working Group
+#
+# 文件名 education 就是这个 section 的 slug,在页面侧的 SECTIONS 数组里被引用。
+# 平铺成员列表用 members:,每个成员一个块,看起来像一张张名片。
+
+title: openEuler 教育工作组
+title_en: openEuler Education Working Group
+
+members:
+  - name: 赵立超
+    name_en: Zhao Lichao
+    image: ./images/zhaolichao.png
+    position: 组长
+    position_en: Lead
+
+  - name: 杨东杰
+    name_en: Yang Dongjie
+    image: ./images/yangdongjie.png
+    position: 副组长
+    position_en: Co-Lead
+
+  - name: 方丽丽
+    name_en: Fang Lili
+    image: ./images/fanglili.png
+    position: 组员
+    position_en: Member
+
+  - name: 冯潇靓
+    name_en: Feng Xiaoliang
+    image: ./images/fenxiaoliang.png
+    position: 组员
+    position_en: Member
+
+  - name: 高立群
+    name_en: Gao Liqun
+    image: ./images/gaoliqun.png
+    position: 组员
+    position_en: Member
+
+  - name: 郭全友
+    name_en: Guo Quanyou
+    image: ./images/guoquanyou.png
+    position: 组员
+    position_en: Member
+
+  - name: 林振行
+    name_en: Lin Zhenxing
+    image: ./images/linzhenxing.png
+    position: 组员
+    position_en: Member
+
+  - name: 门小康
+    name_en: Men Xiaokang
+    image: ./images/menxiaokang.png
+    position: 组员
+    position_en: Member
+
+  - name: 秦学峰
+    name_en: Qin Xuefeng
+    image: ./images/qinxuefen.png
+    position: 组员
+    position_en: Member
+
+  - name: 谢宇
+    name_en: Xie Yu
+    image: ./images/xieyu.png
+    position: 组员
+    position_en: Member
+
+  - name: 杨和悦
+    name_en: Yang Heyue
+    image: ./images/yangheyue.png
+    position: 组员
+    position_en: Member

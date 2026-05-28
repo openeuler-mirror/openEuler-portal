@@ -2,7 +2,11 @@
 import { computed } from 'vue';
 import { useData } from 'vitepress';
 
-import ORGANIZATION_DATA from '@/data/about-us/organization';
+import { foldI18n, type Lang } from '~@/shared/content';
+import { useI18n } from '@/i18n';
+import type { OrgT } from '@/@types/type-organization';
+
+import organizationRaw from '#content/organization';
 
 import OrganizationGuests from './OrganizationGuests.vue';
 
@@ -10,58 +14,81 @@ import IconEmailFill from '~icons/app/icon-email-fill.svg';
 
 import IconGit from '@/assets/category/organization/icon-git.svg';
 
-const { lang } = useData();
+// 渲染顺序是产品决策,显式列出而非按文件名排序。
+const SECTIONS = [
+  'advisory', 'committee', 'technical', 'marketing',
+  'user', 'business', 'operations', 'education',
+  'legal', 'ai', 'globalization',
+] as const;
 
-const organizationData: any = computed(() => {
-  if (lang.value === 'en') {
-    return ORGANIZATION_DATA.en;
-  } else {
-    return ORGANIZATION_DATA.zh;
-  }
-});
+function deriveAnchor(titleEn: string): string {
+  return titleEn
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+const { lang } = useData();
+const i18n = useI18n();
+
+// anchor 在 foldI18n 之前注入,才读得到 title_en。
+const sections = computed<OrgT[]>(() =>
+  SECTIONS.map((slug) => {
+    const raw = organizationRaw[slug];
+    const enriched = { ...raw, anchor: deriveAnchor(raw.title_en) };
+    return foldI18n(enriched, lang.value as Lang) as unknown as OrgT;
+  }),
+);
+
+const notice = computed(() => i18n.value.about.ORGANIZATION_NOTICE);
 </script>
 
 <template>
   <div class="council">
-    <h2 :id="organizationData.idList[0]" class="council-counselor">
-      {{ organizationData.memberList[0].title }}
+    <!-- Advisory: flat members -->
+    <h2 :id="sections[0].anchor" class="council-counselor">
+      {{ sections[0].title }}
     </h2>
     <div class="council-list">
       <OrganizationGuests
-        :lecturer-list="organizationData.memberList[0].list"
+        :lecturer-list="sections[0].members"
         shape="circle"
         :web-columns-num="6"
         :mobile-columns-num="2"
       ></OrganizationGuests>
     </div>
-    <h2 :id="organizationData.idList[1]" class="council-committee">
-      {{ organizationData.memberList[1].title }}
+
+    <!-- Committee: groups (chair / standing / member / etc.) -->
+    <h2 :id="sections[1].anchor" class="council-committee">
+      {{ sections[1].title }}
     </h2>
     <div class="council-list">
       <div
-        v-for="item in organizationData.memberList[1].list"
-        :key="item.title"
+        v-for="group in sections[1].groups"
+        :key="group.title"
         class="council-item"
       >
-        <h4>{{ item.title }}</h4>
+        <h4>{{ group.title }}</h4>
         <OrganizationGuests
-          :lecturer-list="item.personalList"
+          :lecturer-list="group.members"
           shape="circle"
           :web-columns-num="6"
           :mobile-columns-num="2"
         ></OrganizationGuests>
       </div>
     </div>
-    <h2 :id="organizationData.idList[2]" class="council-technology">
-      {{ organizationData.memberList[2].title }}
+
+    <!-- Technical committee: flat members but custom layout (post + email + gitee) -->
+    <h2 :id="sections[2].anchor" class="council-technology">
+      {{ sections[2].title }}
     </h2>
     <ul class="council-list list-technology">
       <li
-        v-for="(item, index) in organizationData.memberList[2].list"
+        v-for="(item, index) in sections[2].members"
         :key="index"
         data-aos="fade-up"
       >
-        <img class="avatar" loading="lazy" :src="item.img" :alt="item.name" />
+        <img class="avatar" loading="lazy" :src="item.image" :alt="item.name" />
         <p class="personal-name">{{ item.name }}</p>
         <p class="personal-post">{{ item.post }}</p>
         <p class="links">
@@ -79,25 +106,34 @@ const organizationData: any = computed(() => {
         </p>
       </li>
     </ul>
-    <template
-      v-for="(groupInfo, index) in organizationData.memberList.slice(3)"
-      :key="index"
-    >
-      <h2 :id="organizationData.idList[index + 3]" class="council-counselor">
-        {{ groupInfo.title }}
+
+    <!-- Remaining sections: members (flat) or rows (multi-row) -->
+    <template v-for="sec in sections.slice(3)" :key="sec.anchor">
+      <h2 :id="sec.anchor" class="council-counselor">
+        {{ sec.title }}
       </h2>
       <div class="council-list">
+        <template v-if="sec.rows">
+          <OrganizationGuests
+            v-for="(row, idx) in sec.rows"
+            :key="idx"
+            :lecturer-list="row"
+            shape="circle"
+            :web-columns-num="6"
+            :mobile-columns-num="2"
+          ></OrganizationGuests>
+        </template>
         <OrganizationGuests
-          v-for="(item, idx) in (Array.isArray(groupInfo.list[0]) ? groupInfo.list : [groupInfo.list])"
-          :key="idx"
-          :lecturer-list="item"
+          v-else
+          :lecturer-list="sec.members ?? []"
           shape="circle"
           :web-columns-num="6"
           :mobile-columns-num="2"
         ></OrganizationGuests>
       </div>
     </template>
-    <p class="notice">{{ organizationData.notice }}</p>
+
+    <p class="notice">{{ notice }}</p>
   </div>
 </template>
 
