@@ -37,4 +37,4 @@ summary: 'openEuler AI 与操作系统融合创新 Meetup 北京站活动报名'
 
 操作系统开发者、AI算法工程师、开源爱好者、行业技术从业者
 
-![alt text](image.jpg)
+![alt text](0528.jpg)
