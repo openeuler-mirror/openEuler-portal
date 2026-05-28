@@ -9,13 +9,11 @@
 
 title: openEuler 技术委员会
 title_en: openEuler Technical Committee
-id: technical-committee
-id_zh: 技术委员会
 
 members:
   - name: 胡欣蔚
     name_en: Hu Xinwei
-    image: technical/huxinwei.png
+    image: ./images/huxinwei-technical.png
     post: 主席
     post_en: Chairperson
     email: shinwell_hu@openeuler.sh
@@ -23,7 +21,7 @@ members:
 
   - name: 曹志
     name_en: Cao Zhi
-    image: technical/caozhi.png
+    image: ./images/caozhi.png
     post: 委员
     post_en: Committee member
     email: george.cao@huawei.com
@@ -31,7 +29,7 @@ members:
 
   - name: 陈茂冬
     name_en: Chen Maodong
-    image: technical/chenmaodong.png
+    image: ./images/chenmaodong.png
     post: 委员
     post_en: Committee member
     email: chenmaodong@xfusion.com
@@ -39,10 +37,192 @@ members:
 
   - name: 陈棋德
     name_en: Chen Qide
-    image: technical/chenqide.png
+    image: ./images/chenqide.png
     post: 委员
     post_en: Committee member
     email: dillon.chen@gmail.com
     gitee: dillon_chen
 
-  # ……剩余 23 人省略,实际文件里就是一块块复制下去
+  - name: 陈亚强
+    name_en: Chen Yaqiang
+    image: ./images/chenyaqiang-technical.png
+    post: 委员
+    post_en: Committee member
+    email: chen_yaqiang@foxmail.com
+    gitee: yaqiangchen
+
+  - name: 杜开田
+    name_en: Du Kaitian
+    image: ./images/dukaitian.png
+    post: 委员
+    post_en: Committee member
+    email: dukaitian@huawei.com
+    gitee: jimmy_hero
+
+  - name: 高贵锦
+    name_en: Gao Guijin
+    image: ./images/gaoguijin.png
+    post: 委员
+    post_en: Committee member
+    email: gaoguijin@huawei.com
+    gitee: blue0613
+
+  - name: 侯健
+    name_en: Hou Jian
+    image: ./images/houjian-technical.png
+    post: 委员
+    post_en: Committee member
+    email: houjian@kylinos.cn
+    gitee: hjimmy
+
+  - name: 胡峰
+    name_en: Hu Feng
+    image: ./images/hufeng.png
+    post: 委员
+    post_en: Committee member
+    email: solar.hu@huawei.com
+    gitee: solarhu
+
+  - name: 李永强
+    name_en: Li Yongqiang
+    image: ./images/liyongqiang.png
+    post: 委员
+    post_en: Committee member
+    email: liyongqiang@xfusion.com
+    gitee: charlie_li
+
+  - name: 刘恺
+    name_en: Liu Kai
+    image: ./images/liukai.png
+    post: 委员
+    post_en: Committee member
+    email: kraml.liu@gmail.com
+    gitee: kailiu42
+
+  - name: 吕从庆
+    name_en: Lv Congqing
+    image: ./images/lvcongqing.png
+    post: 委员
+    post_en: Committee member
+    email: lvcongqing@uniontech.com
+    gitee: HelloWorld_lvcongqing
+
+  - name: 马全一
+    name_en: Ma Quanyi
+    image: ./images/maquanyi.png
+    post: 委员
+    post_en: Committee member
+    email: eli@patch.sh
+    gitee: genedna
+
+  - name: 任慰
+    name_en: Ren Wei
+    image: ./images/renwei.png
+    post: 委员
+    post_en: Committee member
+    email: renwei41@huawei.com
+    gitee: vonhust
+
+  - name: 石勇
+    name_en: Shi Yong
+    image: ./images/shiyong.png
+    post: 委员
+    post_en: Committee member
+    email: shiyong@kylinsec.com.cn
+    gitee: stonefly128
+
+  - name: 唐葛亮
+    name_en: Tang Geliang
+    image: ./images/tanggeliang.png
+    post: 委员
+    post_en: Committee member
+    email: geliang@kernel.org
+    gitee: geliangtang
+
+  - name: 田俊
+    name_en: Tian Jun
+    image: ./images/tianjun.png
+    post: 委员
+    post_en: Committee member
+    email: jun.j.tian@intel.com
+    gitee: juntianlinux
+
+  - name: 王建民
+    name_en: Wang Jianmin
+    image: ./images/wangjianmin.png
+    post: 委员
+    post_en: Committee member
+    email: jianmin@iscas.ac.cn
+    gitee: cellfaint
+
+  - name: 王经纬
+    name_en: Wang Jingwei
+    image: ./images/wangjingwei.png
+    post: 委员
+    post_en: Committee member
+    email: wangjingwei@iscas.ac.cn
+    gitee: Jingwiw
+
+  - name: 王志钢
+    name_en: Wang Zhigang
+    image: ./images/wangzhigang.png
+    post: 委员
+    post_en: Committee member
+    email: wangzhigang17@huawei.com
+    gitee: jianminw
+
+  - name: 魏建刚
+    name_en: Wei Jiangang
+    image: ./images/weijiangang-user.png
+    post: 委员
+    post_en: Committee member
+    email: wei_jiangang@hoperun.com
+    gitee: bugflyfly
+
+  - name: 吴峰光
+    name_en: Wu Fengguang
+    image: ./images/wufengguang.png
+    post: 委员
+    post_en: Committee member
+    email: wfg@mail.ustc.edu.cn
+    gitee: wu_fengguang
+
+  - name: 谢秀奇
+    name_en: Xie Xiuqi
+    image: ./images/xiexiuqi.png
+    post: 委员
+    post_en: Committee member
+    email: xiexiuqi@huawei.com
+    gitee: xiexiuqi
+
+  - name: 叶青龙
+    name_en: Ye Qinglong
+    image: ./images/yeqinglong.png
+    post: 委员
+    post_en: Committee member
+    email: yeqinglong@kylinsec.com.cn
+    gitee: yeqinglong01
+
+  - name: 岳龙广
+    name_en: Yue Longguang
+    image: ./images/yuelongguang.png
+    post: 委员
+    post_en: Committee member
+    email: yuelg@chinaunicom.cn
+    gitee: bigclouds99
+
+  - name: 赵川峰
+    name_en: Zhao Chuanfeng
+    image: ./images/zhaochuanfeng.png
+    post: 委员
+    post_en: Committee member
+    email: zhaochuanfeng@huawei.com
+    gitee: cf-zhao
+
+  - name: 朱健伟
+    name_en: Zhu Jianwei
+    image: ./images/zhujianwei.png
+    post: 委员
+    post_en: Committee member
+    email: zhujianwei7@huawei.com
+    gitee: zhujianwei001

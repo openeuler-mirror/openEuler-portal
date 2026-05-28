@@ -3,13 +3,24 @@ import AOS from 'aos';
 import { onMounted } from 'vue';
 import IconEmailFill from '~icons/app/icon-email-fill.svg';
 
-defineProps({
-  lecturerList: {
-    type: Object,
-    required: true,
-    default: () => null,
-  },
-});
+// Member shape matches `.content/organization/*.yaml` (post-applyLang).
+interface Member {
+  name: string;
+  image: string;
+  position?: string | string[];
+  post?: string;
+  email?: string;
+  gitee?: string;
+}
+
+defineProps<{ lecturerList: Member[] }>();
+
+// `position` can be a single string or an array — keeping operations YAML
+// terse for the common (single role) case. The component is the right place
+// to absorb that since it owns the v-for.
+const toArr = (v: string | string[] | undefined): string[] =>
+  v === undefined ? [] : Array.isArray(v) ? v : [v];
+
 onMounted(() => {
   AOS.init({
     offset: 200,
@@ -22,14 +33,14 @@ onMounted(() => {
 <template>
   <ul class="council-lis list-technologyt">
     <li v-for="(item, index) in lecturerList" :key="index" data-aos="fade-up">
-      <img class="avatar" loading="lazy" :src="item.img" :alt="item.name" />
+      <img class="avatar" loading="lazy" :src="item.image" :alt="item.name" />
       <p class="personal-name">{{ item.name }}</p>
       <p
-        v-for="itemPost in item.position"
-        :key="itemPost"
+        v-for="p in toArr(item.position)"
+        :key="p"
         class="personal-post"
       >
-        {{ itemPost }}
+        {{ p }}
       </p>
       <span v-if="item.email" class="mail">
         <a :href="'mailto:' + item.email"

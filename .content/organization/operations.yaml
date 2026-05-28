@@ -1,0 +1,62 @@
+# 社区运营工作组 / Operations Working Group
+#
+# 文件名 operations 就是这个 section 的 slug,在页面侧的 SECTIONS 数组里被引用。
+# 平铺成员列表用 members:,每个成员一个块,看起来像一张张名片。
+
+title: openEuler 社区运营工作组
+title_en: openEuler Operations Working Group
+
+members:
+  - name: 郑振宇
+    name_en: Zheng Zhenyu
+    image: ./images/zhenzhengyu.png
+    position: 组长
+    position_en: Lead
+
+  - name: 胡骁杰
+    name_en: Hu Xiaojie
+    image: ./images/huxiaojie.png
+    position: 副组长
+    position_en: Co-Lead
+
+  - name: 陈静
+    name_en: Chen Jing
+    image: ./images/chenjing.png
+    position: 组员
+    position_en: Member
+
+  - name: 刘华杰
+    name_en: Liu Huajie
+    image: ./images/liuhuajie.png
+    position: 组员
+    position_en: Member
+
+  - name: 刘敏
+    name_en: Liu Min
+    image: ./images/liming.png
+    position: 组员
+    position_en: Member
+
+  - name: 刘明杰
+    name_en: Liu Mingjie
+    image: ./images/liumingjie-operation.png
+    position: 组员
+    position_en: Member
+
+  - name: 任涛
+    name_en: Ren Tao
+    image: ./images/rentao.png
+    position: 组员
+    position_en: Member
+
+  - name: 田可辉
+    name_en: Tian Kehui
+    image: ./images/tiankehui-operation.png
+    position: 组员
+    position_en: Member
+
+  - name: 徐露
+    name_en: Xu Lu
+    image: ./images/xulu.png
+    position: 组员
+    position_en: Member

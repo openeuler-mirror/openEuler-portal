@@ -1,0 +1,195 @@
+# AI联合工作组 / AI Joint Working Group
+#
+# 文件名 ai 就是这个 section 的 slug,在页面侧的 SECTIONS 数组里被引用。
+# 平铺成员列表用 members:,每个成员一个块,看起来像一张张名片。
+# 注:含英文姓名的成员头像文件名带空格或特殊格式,需加引号。
+
+title: openEuler AI联合工作组
+title_en: openEuler AI Joint Working Group
+
+members:
+  - name: 胡欣蔚
+    name_en: Hu Xinwei
+    image: ./images/huxinwei-technical.png
+    position: 组长
+    position_en: Lead
+
+  - name: Andrew Wafaa
+    name_en: Andrew Wafaa
+    image: ./images/AndrewWafaa.png
+    position: 组员
+    position_en: Member
+
+  - name: 陈榕
+    name_en: Chen Rong
+    image: ./images/chenrong.png
+    position: 组员
+    position_en: Member
+
+  - name: 陈亚强
+    name_en: Chen Yaqiang
+    image: ./images/chenyaqiang-technical.png
+    position: 组员
+    position_en: Member
+
+  - name: 邓益平
+    name_en: Deng Yiping
+    image: ./images/dengyiping.png
+    position: 组员
+    position_en: Member
+
+  - name: 丁为杰
+    name_en: Ding Weijie
+    image: ./images/dingweijie.png
+    position: 组员
+    position_en: Member
+
+  - name: 高伟
+    name_en: Gao Wei
+    image: ./images/gaowei.png
+    position: 组员
+    position_en: Member
+
+  - name: 巩远波
+    name_en: Gong Yuanbo
+    image: ./images/gongyuanbo.png
+    position: 组员
+    position_en: Member
+
+  - name: 郭祎斌
+    name_en: Guo Yibin
+    image: ./images/guoyibin.png
+    position: 组员
+    position_en: Member
+
+  - name: 何守成
+    name_en: He Shoucheng
+    image: ./images/heshoucheng.png
+    position: 组员
+    position_en: Member
+
+  - name: 侯健
+    name_en: Hou Jian
+    image: ./images/houjian-technical.png
+    position: 组员
+    position_en: Member
+
+  - name: Fred Huang
+    name_en: Fred Huang
+    image: "./images/Fred Huang.png"
+    position: 组员
+    position_en: Member
+
+  - name: 黄俊
+    name_en: Huang Jun
+    image: ./images/huangjun.png
+    position: 组员
+    position_en: Member
+
+  - name: 江毅文
+    name_en: Jiang Yiwen
+    image: ./images/jiangyiwen.png
+    position: 组员
+    position_en: Member
+
+  - name: 江政雄
+    name_en: Jiang Zhengxiong
+    image: ./images/jiangzhengxiong.png
+    position: 组员
+    position_en: Member
+
+  - name: 金龙
+    name_en: Jin Long
+    image: ./images/jinlong.png
+    position: 组员
+    position_en: Member
+
+  - name: 秦彬娟
+    name_en: Qin Binjuan
+    image: ./images/qinbinjuan.png
+    position: 组员
+    position_en: Member
+
+  - name: 阙鸣健
+    name_en: Que Mingjian
+    image: ./images/quemingjian.png
+    position: 组员
+    position_en: Member
+
+  - name: 沈国良
+    name_en: Shen Guoliang
+    image: ./images/shenguoliang.png
+    position: 组员
+    position_en: Member
+
+  - name: 宋梦
+    name_en: Song Meng
+    image: ./images/songmeng.png
+    position: 组员
+    position_en: Member
+
+  - name: 孙政华
+    name_en: Sun Zhenghua
+    image: ./images/sunzhenghua.png
+    position: 组员
+    position_en: Member
+
+  - name: 田可辉
+    name_en: Tian Kehui
+    image: ./images/tiankehui-operation.png
+    position: 组员
+    position_en: Member
+
+  - name: 王清珺
+    name_en: Wang Qingjun
+    image: ./images/wangqingjun.png
+    position: 组员
+    position_en: Member
+
+  - name: 沃天宇
+    name_en: Wo Tianyu
+    image: ./images/wotianyu.png
+    position: 组员
+    position_en: Member
+
+  - name: 吴斌
+    name_en: Wu Bin
+    image: ./images/wubin.png
+    position: 组员
+    position_en: Member
+
+  - name: 夏知渊
+    name_en: Xia Zhiyuan
+    image: ./images/xiazhiyuan.png
+    position: 组员
+    position_en: Member
+
+  - name: 相元红
+    name_en: Xiang Yuanhong
+    image: ./images/xiangyuanhong.png
+    position: 组员
+    position_en: Member
+
+  - name: 徐洋
+    name_en: Xu Yang
+    image: ./images/xuyang.png
+    position: 组员
+    position_en: Member
+
+  - name: 严海双
+    name_en: Yan Haishuang
+    image: ./images/yanhaishuang.png
+    position: 组员
+    position_en: Member
+
+  - name: 杨西利
+    name_en: Yang Xili
+    image: ./images/yangxili.png
+    position: 组员
+    position_en: Member
+
+  - name: 詹年科
+    name_en: Zhan Nianke
+    image: ./images/zhannianke.png
+    position: 组员
+    position_en: Member
