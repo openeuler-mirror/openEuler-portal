@@ -61,6 +61,12 @@ groups:
         position: 英特尔（中国）有限公司
         position_en: Intel China Ltd.
 
+      - name: 杨继国
+        name_en: Yang Jiguo
+        image: ./images/yangjiguo.png
+        position: 海光信息技术股份有限公司
+        position_en: Hygon Information Technology Co., Ltd.
+
       - name: 于力
         name_en: Yu Li
         image: ./images/yuli.png
