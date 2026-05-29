@@ -1,7 +1,7 @@
 export default {
   title: '品牌',
   useTitle: '品牌使用说明',
-  useDesc: '开放原子开源欧拉（“OpenAtom openEuler”，简称“开源欧拉”或“openEuler”）是由开放原子开源基金会孵化的开源操作系统项目，面向数字基础设施四大核心场景（服务器、云计算、边缘计算、嵌入式），全面支持ARM、x86、RISC-V、loongArch、PowerPC、SW-64等多样性计算架构。',
+  useDesc: '开放原子开源欧拉（“OpenAtom openEuler”，简称“开源欧拉”或“openEuler”）是由开放原子开源基金会孵化的开源操作系统项目，面向数字基础设施四大核心场景（服务器、云计算、边缘计算、嵌入式），全面支持ARM、x86、RISC-V、LoongArch、PowerPC、SW-64等多样性计算架构。',
   desc1: '在使用openEuler项目相关的全部品牌前，请查阅',
   desc2: '，确保规范使用。',
   desc3: '咨询联系方式',
