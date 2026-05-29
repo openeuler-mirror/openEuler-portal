@@ -1719,7 +1719,7 @@ export default {
                     time: '14:30-14:45',
                     content: [
                       {
-                        title: '基于loongarch 的trampoline和kexec_file功能开发',
+                        title: '基于LoongArch 的trampoline和kexec_file功能开发',
                         name: '姜浩然',
                         post: '麒麟软件 研发工程师',
                       }
