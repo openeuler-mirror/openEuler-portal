@@ -81,7 +81,7 @@ export default function contentYamlPlugin(): Plugin {
       // 字段名不限,只看值:相对路径 + 图片扩展名即视为资源。
       const replaced = walk(data, (val) => {
         if (typeof val !== 'string') return val;
-        if (!val.startsWith('./') && !val.startsWith('../')) return val;
+        if (!val.startsWith('./') && !val.startsWith('../') && !val.startsWith('~@/')) return val;
         if (!ASSET_EXT.test(val)) return val;
         const idx = imports.length;
         imports.push(`import __a${idx} from ${JSON.stringify(val)};`);

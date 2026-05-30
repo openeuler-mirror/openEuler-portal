@@ -20,8 +20,7 @@ import {
   ODialog,
 } from '@opensig/opendesign';
 
-import summitData from '~@/data/summit';
-import activityData from '~@/data/activity';
+import activityContent from '#content/activity';
 import { type CalendarValueT } from '~@/@type/type-home';
 
 import dayjs from 'dayjs';
@@ -68,6 +67,9 @@ const { t, locale } = useLocale();
 const identitiesStore = useIdentities();
 const { lang } = useData();
 const loginStore = useLoginStore();
+
+const activityData = activityContent.calendar as CalendarValueT[];
+const summitData = (activityContent.summit ?? []) as CalendarValueT[];
 
 const TODAY = dayjs(new Date()).format('YYYY-MM-DD');
 

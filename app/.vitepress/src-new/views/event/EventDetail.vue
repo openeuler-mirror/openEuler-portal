@@ -13,7 +13,13 @@ import ContentWrapper from '~@/components/ContentWrapper.vue';
 
 import { getUrlParam } from '@/shared/utils';
 
-import { EventState, MEETUP_DATA } from '~@/data/activity/list';
+import activityContent from '#content/activity';
+
+const _filters = activityContent.filters as { series: { value: string | number; label: string; label_en: string }[]; state: { value: number; label: string; label_en: string }[] };
+const _meetups = activityContent.meetups as { zh: any[]; en: any[] };
+
+const EventState = new Map(_filters.state.map((s) => [s.value, { value: s.value, label: { zh: s.label, en: s.label_en } }]));
+const MEETUP_DATA = _meetups;
 
 import banner from '~@/assets/category/event/list/banner.png';
 import bannerDark from '~@/assets/category/event/list/banner-dark.png';
