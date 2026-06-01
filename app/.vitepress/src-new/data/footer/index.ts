@@ -409,7 +409,7 @@ export const friendshipLinks = {
     },
     {
       link: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian',
-      title: 'infoQ',
+      title: 'InfoQ',
     },
     {
       link: 'https://kaiyuanshe.cn/',
@@ -447,7 +447,7 @@ export const friendshipLinks = {
   en: [
     {
       link: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian',
-      title: 'infoQ',
+      title: 'InfoQ',
     },
     {
       link: 'https://www.authing.cn/',
