@@ -16342,6 +16342,78 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "广州技象科技有限公司",
+    "os_version": "TpEdge-OS-V1.0.zip",
+    "arch": "aarch64",
+    "checksum": "3cc43de54f908b6741e93f2b258f4239",
+    "base_openeuler_version": "openEuler Embedded 24.03 LTS",
+    "os_download_link": "https://pan.baidu.com/s/1S-9Lpxi1bWEqOsb7ttC2Lw",
+    "friendly_link": "https://www.techphant.cn/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2026/05/09",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 
 ]
