@@ -21,7 +21,14 @@ import { useRouter } from 'vitepress';
 import AppSection from '~@/components/AppSection.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';
 
-import { EventSeries, EventState, MEETUP_DATA } from '~@/data/activity/list';
+import activityContent from '#content/activity';
+
+const _filters = activityContent.filters as { series: { value: string | number; label: string; label_en: string }[]; state: { value: number; label: string; label_en: string }[] };
+const _meetups = activityContent.meetups as { zh: any[]; en: any[] };
+
+const EventSeries = new Map(_filters.series.map((s) => [s.value, { value: s.value, label: { zh: s.label, en: s.label_en } }]));
+const EventState = new Map(_filters.state.map((s) => [s.value, { value: s.value, label: { zh: s.label, en: s.label_en } }]));
+const MEETUP_DATA = _meetups;
 
 import { useDebounceSearch } from '~@/composables/useDebounceSearch';
 

@@ -30,7 +30,7 @@ import {
   OLink,
 } from '@opensig/opendesign';
 
-import activityData from '~@/data/activity';
+import activityContent from '#content/activity';
 
 import { type CalendarValueT } from '~@/@type/type-home';
 
@@ -95,6 +95,8 @@ const nextPage = () => {
     currentPage.value++
   }
 };
+
+const activityData = activityContent.calendar as CalendarValueT[];
 
 // 过滤当前sig组的活动
 const sigActivityData = (data: CalendarValueT) => {

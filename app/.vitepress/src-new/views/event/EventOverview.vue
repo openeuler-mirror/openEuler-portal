@@ -12,11 +12,27 @@ import {
 
 import AppSection from '~@/components/AppSection.vue';
 
-import { yearPlanData, months, applyData } from '~@/data/activity/plan';
-
 import IconDone from '~icons/app-new/icon-done.svg';
 import IconDownload from '~icons/app-new/icon-download.svg';
 import IconChevronDown from '~icons/app-new/icon-chevron-down.svg';
+import IconOpensource from '~icons/event/icon-opensource.svg';
+import IconDeveloper from '~icons/event/icon-developer.svg';
+import IconCollege from '~icons/event/icon-college.svg';
+import IconRelease from '~icons/event/icon-release.svg';
+
+import activityContent from '#content/activity';
+import { applyData } from '~@/data/event/apply';
+
+const _plan = activityContent.plan as any;
+const months: string[] = _plan.months;
+const yearPlanData = _plan.year_plan;
+
+const ICON_MAP: Record<string, unknown> = {
+  opensource: IconOpensource,
+  developer: IconDeveloper,
+  college: IconCollege,
+  release: IconRelease,
+};
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -37,22 +53,21 @@ const activeNames = ref([
 ]);
 
 const yearPlan = computed(() => {
-  return yearPlanData[locale.value];
+  const plan = yearPlanData[locale.value];
+  if (!plan) return plan;
+  const result: Record<string, unknown> = {};
+  for (const [key, val] of Object.entries(plan as Record<string, any>)) {
+    result[key] = { ...val, icon: ICON_MAP[(val as any).icon] ?? (val as any).icon };
+  }
+  return result;
 });
 
-const applySep1 = computed(() => {
-  return [applyData[locale.value][0], applyData[locale.value][1]];
-});
-const applySep2 = computed(() => {
-  return [applyData[locale.value][3], applyData[locale.value][4]];
-});
-const applySep3 = computed(() => {
-  return applyData[locale.value][2];
-});
+const applySteps = computed(() => (applyData[locale.value] ?? []) as any[]);
 
-const applyMb = computed(() => {
-  return applyData[locale.value];
-});
+const applySep1 = computed(() => [applySteps.value[0], applySteps.value[1]]);
+const applySep2 = computed(() => [applySteps.value[3], applySteps.value[4]]);
+const applySep3 = computed(() => applySteps.value[2]);
+const applyMb = computed(() => applySteps.value);
 
 watch(
   () => lePadV.value,

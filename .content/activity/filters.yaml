@@ -1,0 +1,41 @@
+# 活动筛选枚举 / Activity Filter Options
+#
+# 用于活动列表页（EventLatest.vue）的系列和状态筛选下拉。
+# label 是中文，label_en 是英文，遵循项目 _en 后缀约定。
+#
+# series.value 对应 meetups.yaml 中每个 Meetup 的 series 字段。
+# state.value 对应 meetups.yaml 中每个 Meetup 的 activity_type 字段（1=已结束，2=进行中）。
+
+series:
+  - value: ''
+    label: 全部
+    label_en: All
+  - value: '1'
+    label: 国际开源会议
+    label_en: Open Source Summits
+  - value: '2'
+    label: 生态技术会议
+    label_en: Ecosystem Tech Conferences
+  - value: '3'
+    label: Call for X 开发者活动
+    label_en: Call for X 开发者活动
+  - value: '4'
+    label: 赛事 & 高校
+    label_en: 赛事 & 高校
+  - value: '5'
+    label: 版本发布计划
+    label_en: Release Plan
+  - value: '6'
+    label: 其他
+    label_en: Other
+
+state:
+  - value: 0
+    label: 全部
+    label_en: All
+  - value: 2
+    label: 进行中
+    label_en: Ongoing
+  - value: 1
+    label: 已结束
+    label_en: Completed
