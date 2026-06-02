@@ -1559,6 +1559,13 @@
    * @name 
    * @type color
    * @group control
+   * @description 常规-浅，常用于背景
+   */
+  --o-color-control6-light: rgb(var(--o-mixedgray-5), 0.4);
+  /**
+   * @name 
+   * @type color
+   * @group control
    * @description 很浅，常用于表格背景色
    */
   --o-color-control-light: rgb(var(--o-mixedgray-1), 1.0);

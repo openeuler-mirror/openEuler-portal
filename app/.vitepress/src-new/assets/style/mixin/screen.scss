@@ -21,6 +21,7 @@ $breakpoints: (
   'laptop': (1201px, 1440px),
   '<=laptop': (0, 1440px),
   '>laptop': 1441px,
+  'laptop-pc': (1201px, 1680px),
   'pad-laptop': (601px, 1440px),
   'pad_v-laptop': (841px, 1440px)
 );

@@ -1,3 +1,5 @@
+@use './screen.scss' as *;
+
 @mixin in-dark {
   [data-o-theme='dark'] {
     @content;
@@ -79,5 +81,108 @@
     svg {
       transform: rotate(180deg);
     }
+  }
+}
+
+
+@mixin title-margin-bottom {
+  margin-bottom: 40px;
+
+  @include respond-to('laptop-pc') {
+    margin-bottom: 24px;
+  }
+  @include respond-to('pad_h') {
+    margin-bottom: 16px;
+  }
+  @include respond-to('pad_v') {
+    margin-bottom: 12px;
+  }
+  @include respond-to('phone') {
+    margin-bottom: 12px;
+  }
+}
+
+@mixin title-padding-bottom {
+  padding-bottom: 72px;
+
+  @include respond-to('laptop-pc') {
+    padding-bottom: 56px;
+  }
+  @include respond-to('pad_h') {
+    padding-bottom: 40px;
+  }
+  @include respond-to('pad_v') {
+    padding-bottom: 36px;
+  }
+  @include respond-to('phone') {
+    padding-bottom: 32px;
+  }
+}
+
+@mixin title-margin-top {
+  margin-top: 72px;
+
+  @include respond-to('laptop-pc') {
+    margin-top: 56px;
+  }
+  @include respond-to('pad_h') {
+    margin-top: 40px;
+  }
+  @include respond-to('pad_v') {
+    margin-top: 32px;
+  }
+  @include respond-to('phone') {
+    margin-top: 32px;
+  }
+}
+
+@mixin title-margin-top2 {
+  margin-top: 40px;
+
+  @include respond-to('laptop-pc') {
+    margin-top: 24px;
+  }
+  @include respond-to('pad_h') {
+    margin-top: 16px;
+  }
+  @include respond-to('pad_v') {
+    margin-top: 12px;
+  }
+  @include respond-to('phone') {
+    margin-top: 12px;
+  }
+}
+
+@mixin title-margin-top3 {
+  margin-top: 24px;
+
+  @include respond-to('laptop-pc') {
+    margin-top: 16px;
+  }
+  @include respond-to('pad_h') {
+    margin-top: 12px;
+  }
+  @include respond-to('pad_v') {
+    margin-top: 12px;
+  }
+  @include respond-to('phone') {
+    margin-top: 12px;
+  }
+}
+
+@mixin title-margin-top4 {
+  margin-top: 16px;
+
+  @include respond-to('laptop-pc') {
+    margin-top: 12px;
+  }
+  @include respond-to('pad_h') {
+    margin-top: 8px;
+  }
+  @include respond-to('pad_v') {
+    margin-top: 8px;
+  }
+  @include respond-to('phone') {
+    margin-top: 8px;
   }
 }
