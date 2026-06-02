@@ -2,7 +2,7 @@
 import { ref, onMounted, watch, computed, shallowRef } from 'vue';
 import { useData } from 'vitepress';
 
-import { getLoginUrl, isValidKey } from '@/shared/utils';
+import { login, isValidKey } from '@/shared/utils';
 import { useCommon } from '@/stores/common';
 
 import {
@@ -46,7 +46,7 @@ import { vAnalytics } from '~@/directive/analytics';
 import useInViewDuration from '~@/composables/useInViewDuration';
 
 import { getMeetingDateListApi, getMeetingListApi, getGroupInfosApi } from '~@/api/api-meeting';
-import { doLogin, useLoginStore } from '@opendesign-plus/composables';
+import { useLoginStore } from '@opendesign-plus/composables';
 import { useLocale } from '~@/composables/useLocale';
 import { formatDate } from '~@/utils/common';
 import { getPointStr } from '~@/utils/meeting';
@@ -76,7 +76,6 @@ const TODAY = dayjs(new Date()).format('YYYY-MM-DD');
 const recentMeetingDates = ref([] as string[]);
 
 const activeName = ref<number[]>([]);
-const loginUrl = ref('');
 
 // 日历展示时间限制
 const limitTime = '2021 年 1 月';
@@ -343,7 +342,6 @@ const getPermissionMeeting = () => {
 };
 
 onMounted(async () => {
-  loginUrl.value = getLoginUrl();
 
   selectedDate.value = new Date();
   // 设置右侧 日程列表高度
@@ -409,7 +407,7 @@ const bindVisible = ref(false);
 const toCreateMeeting = () => {
   const identitiesVisible = identitiesStore.identities?.some(item => item.identity === 'gitee' || item.identity === 'gitcode');
   if (!loginStore.isLogined) {
-    doLogin(loginUrl.value);
+    login(lang.value);
   } else if (!identitiesVisible) {
     bindVisible.value = true;
   } else if (!hasPermMeeting.value) {

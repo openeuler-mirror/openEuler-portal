@@ -1,8 +1,8 @@
 import { useUserInfoStore } from '@/stores/user';
+import { doLogout, doLogin } from '@opendesign-plus/composables';
 import Cookies from 'js-cookie';
 import { storeToRefs } from 'pinia';
 import { v4 as uuidV4 } from 'uuid';
-import { useData } from 'vitepress';
 
 // 格式化数字
 export function formatNumber(num: number) {
@@ -186,14 +186,14 @@ export function uniqueId(): string {
   return uuidV4();
 }
 
-export function getLoginUrl(): string {
-  const { lang } = useData();
-  return `${import.meta.env.VITE_LOGIN_ORIGIN}/login?redirect_uri=${encodeURIComponent(location.href)}&lang=${lang.value}`;
+export function login(lang: string) {
+  const url = `${import.meta.env.VITE_LOGIN_ORIGIN}/login?redirect_uri=${encodeURIComponent(location.href)}&lang=${lang}`;
+  doLogin(url);
 }
 
-export function getLogoutUrl(): string {
-  const { lang } = useData();
-  return `${import.meta.env.VITE_LOGIN_ORIGIN}/logout?redirect_uri=${encodeURIComponent(location.href)}&lang=${lang.value}`;
+export function logout(lang: string) {
+  const url =  `${import.meta.env.VITE_LOGIN_ORIGIN}/logout?redirect_uri=${encodeURIComponent(location.href)}&lang=${lang}`;
+  doLogout(url);
 }
 
 export function useStoreData() {
