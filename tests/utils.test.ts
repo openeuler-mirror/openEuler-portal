@@ -1,6 +1,6 @@
 import { expect, describe, it, vi, beforeEach, afterEach } from 'vitest';
 import { setActivePinia, createPinia } from 'pinia';
-import { isValidKey, isBrowser, getNowFormatDate, getUrlParams, isTestEmail, isTestPhone, setCustomCookie, getCustomCookie, removeCustomCookie, firstToUpper, getLoginUrl, getLogoutUrl, useStoreData, getLanguage } from '../app/.vitepress/src/shared/utils';
+import { isValidKey, isBrowser, getNowFormatDate, getUrlParams, isTestEmail, isTestPhone, setCustomCookie, getCustomCookie, removeCustomCookie, firstToUpper, useStoreData, getLanguage, login, logout } from '../app/.vitepress/src/shared/utils';
 
 // vitepress 的 useData 在 SSG 环境注入，单测环境需 mock
 vi.mock('vitepress', () => ({
@@ -22,6 +22,13 @@ vi.mock('@/stores/user', async () => {
     }),
   };
 });
+
+// mock @opendesign-plus/composables 中的 doLogin 和 doLogout
+vi.mock('@opendesign-plus/composables', () => ({
+  doLogin: vi.fn(),
+  doLogout: vi.fn(),
+  useLoginStore: vi.fn(() => ({ isLogined: false })),
+}));
 
 describe('测试 isValidKey', () => {
   it('key 为 string', () => {
@@ -140,40 +147,6 @@ describe('测试 firstToUpper', () => {
   });
 });
 
-describe('测试 getLoginUrl', () => {
-  beforeEach(() => {
-    vi.stubEnv('VITE_LOGIN_ORIGIN', 'https://login.openeuler.org');
-  });
-
-  afterEach(() => {
-    vi.unstubAllEnvs();
-  });
-
-  it('应返回拼接 origin、redirect_uri 与 lang 的登录 URL', () => {
-    const url = getLoginUrl();
-    expect(url).toContain('https://login.openeuler.org/login');
-    expect(url).toContain(`redirect_uri=${encodeURIComponent(location.href)}`);
-    expect(url).toContain('lang=zh');
-  });
-});
-
-describe('测试 getLogoutUrl', () => {
-  beforeEach(() => {
-    vi.stubEnv('VITE_LOGIN_ORIGIN', 'https://login.openeuler.org');
-  });
-
-  afterEach(() => {
-    vi.unstubAllEnvs();
-  });
-
-  it('应返回拼接 origin、redirect_uri 与 lang 的登出 URL', () => {
-    const url = getLogoutUrl();
-    expect(url).toContain('https://login.openeuler.org/logout');
-    expect(url).toContain(`redirect_uri=${encodeURIComponent(location.href)}`);
-    expect(url).toContain('lang=zh');
-  });
-});
-
 describe('测试 useStoreData', () => {
   beforeEach(() => {
     setActivePinia(createPinia());
@@ -226,5 +199,55 @@ describe('测试 getLanguage', () => {
   it('其他不包含 /zh/ 的路径应返回英文配置', () => {
     window.history.pushState({}, '', '/blog/2026/something');
     expect(getLanguage()).toEqual({ lang: 'en', language: 'en-US' });
+  });
+});
+
+describe('测试 login', () => {
+  beforeEach(() => {
+    vi.stubEnv('VITE_LOGIN_ORIGIN', 'https://login.openeuler.org');
+  });
+
+  afterEach(() => {
+    vi.unstubAllEnvs();
+    vi.clearAllMocks();
+  });
+
+  it('应该构建正确的登录 URL 并调用 doLogin', async () => {
+    const { doLogin } = await import('@opendesign-plus/composables');
+    login('zh');
+    const expectedUrl = `https://login.openeuler.org/login?redirect_uri=${encodeURIComponent(location.href)}&lang=zh`;
+    expect(doLogin).toHaveBeenCalledWith(expectedUrl);
+  });
+
+  it('应该支持多语言参数', async () => {
+    const { doLogin } = await import('@opendesign-plus/composables');
+    login('en');
+    const expectedUrl = `https://login.openeuler.org/login?redirect_uri=${encodeURIComponent(location.href)}&lang=en`;
+    expect(doLogin).toHaveBeenCalledWith(expectedUrl);
+  });
+});
+
+describe('测试 logout', () => {
+  beforeEach(() => {
+    vi.stubEnv('VITE_LOGIN_ORIGIN', 'https://login.openeuler.org');
+  });
+
+  afterEach(() => {
+    vi.unstubAllEnvs();
+    vi.clearAllMocks();
+  });
+
+  it('应该构建正确的登出 URL 并调用 doLogout', async () => {
+    const { doLogout } = await import('@opendesign-plus/composables');
+    logout('zh');
+    const expectedUrl = `https://login.openeuler.org/logout?redirect_uri=${encodeURIComponent(location.href)}&lang=zh`;
+    expect(doLogout).toHaveBeenCalledWith(expectedUrl);
+  });
+
+  it('应该支持多语言参数', async () => {
+    const { doLogout } = await import('@opendesign-plus/composables');
+    logout('en');
+    const expectedUrl = `https://login.openeuler.org/logout?redirect_uri=${encodeURIComponent(location.href)}&lang=en`;
+    expect(doLogout).toHaveBeenCalledWith(expectedUrl);
   });
 });

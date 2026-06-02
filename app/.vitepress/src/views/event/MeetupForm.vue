@@ -1,23 +1,20 @@
 <script lang="ts" setup>
-import { computed, ref, reactive, onMounted } from 'vue';
+import { computed, ref, reactive } from 'vue';
 import { useData } from 'vitepress';
 import { ElMessage, FormInstance, FormRules } from 'element-plus';
 import useWindowResize from '@/components/hooks/useWindowResize';
 import { meetupApplyForm } from '@/api/api-search';
-import { doLogin, useLoginStore } from '@opendesign-plus/composables';
-import { getLoginUrl, isTestEmail, isTestPhone } from '@/shared/utils';
+import { useLoginStore } from '@opendesign-plus/composables';
+import { login, isTestEmail, isTestPhone } from '@/shared/utils';
 
 import AppContent from '@/components/AppContent.vue';
-
-const { lang } = useData();
 const screenWidth = ref(useWindowResize());
 const isMobile = computed(() => (screenWidth.value <= 1100 ? true : false));
 
 const ruleFormRef = ref<FormInstance>();
 const labelPosition = ref(isMobile.value ? 'top' : 'left');
 const loginStore = useLoginStore();
-
-const loginUrl = ref('');
+const { lang } = useData();
 
 const meetupData = ref({
   topic: '',
@@ -215,10 +212,6 @@ const supportsFormat = () => {
 };
 
 const meetupPrivacy = ref('');
-
-onMounted(() => {
-  loginUrl.value = getLoginUrl();
-});
 
 const submitMeetupForm = async (formEl: FormInstance | undefined) => {
   if (meetupPrivacy.value.length < 1) {
@@ -420,7 +413,7 @@ async function meetupApply() {
       </template>
       <template v-else>
         <div class="auth-box">
-          <OButton type="primary" @click="doLogin(loginUrl)"
+          <OButton type="primary" @click="login(lang)"
             >请先登录后，再填写</OButton
           >
         </div>

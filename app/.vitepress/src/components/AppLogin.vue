@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { useData } from 'vitepress';
-import { getLoginUrl, getLogoutUrl, useStoreData } from '../shared/utils';
-import { doLogout, doLogin, useLoginStore } from '@opendesign-plus/composables';
+import { login, logout, useStoreData } from '../shared/utils';
+import { useLoginStore } from '@opendesign-plus/composables';
 import { useI18n } from '@/i18n';
 
 import IconLogin from '~icons/app/icon-login.svg';
-import { onMounted, ref, watch } from 'vue';
+import { ref, watch } from 'vue';
 import { getUnreadMsgCount } from '@/api/api-messageCenter';
 import AppBadge from './badge/AppBadge.vue';
 import { queryPersonalInfo } from '@/api/api-login';
@@ -13,8 +13,6 @@ import { queryPersonalInfo } from '@/api/api-login';
 const { lang } = useData();
 const { guardAuthClient } = useStoreData();
 const i18n = useI18n();
-const logoutUrl = ref('');
-const loginUrl = ref('');
 const loginStore = useLoginStore();
 
 const jumpToUserZone = () => {
@@ -28,11 +26,6 @@ const jumpToMsgCenter = () => {
 };
 
 const unreadMsgCount = ref(0);
-
-onMounted(async () => {
-  logoutUrl.value = getLogoutUrl();
-  loginUrl.value = getLoginUrl();
-});
 
 watch(() => loginStore.isLogined, async (val) => {
   if (val) {
@@ -89,10 +82,10 @@ watch(() => loginStore.isLogined, async (val) => {
             {{ i18n.common.MESSAGE_CENTER }}
           </template>
         </li>
-        <li @click="doLogout(logoutUrl)">{{ i18n.common.LOGOUT }}</li>
+        <li @click="logout(lang)">{{ i18n.common.LOGOUT }}</li>
       </ul>
     </div>
-    <div v-else class="login" @click="doLogin(loginUrl)">
+    <div v-else class="login" @click="login(lang)">
       <OIcon class="icon">
         <IconLogin />
       </OIcon>

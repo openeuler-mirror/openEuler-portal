@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { ref, onMounted, watch } from 'vue';
+import { ref, watch } from 'vue';
 import { useData } from 'vitepress';
 import { OIcon, ODropdown, ODropdownItem } from '@opensig/opendesign';
 import { useScreen } from '~@/composables/useScreen';
-import { getLoginUrl, getLogoutUrl, useStoreData } from '@/shared/utils';
-import { doLogin, doLogout, useLoginStore } from '@opendesign-plus/composables';
+import { login, logout, useStoreData } from '@/shared/utils';
+import { useLoginStore } from '@opendesign-plus/composables';
 import AppBadge from '@/components/badge/AppBadge.vue';
 import { getUnreadMsgCount } from '@/api/api-messageCenter';
 import { queryPersonalInfo } from '@/api/api-login';
@@ -18,8 +18,6 @@ const { lePadV } = useScreen();
 const loginStore = useLoginStore();
 
 const identitiesStore = useIdentities();
-const loginUrl = ref('');
-const logoutUrl = ref('');
 
 const jumpToUserZone = () => {
   const language = lang.value === 'zh' ? 'zh' : 'en';
@@ -32,11 +30,6 @@ const jumpToMsgCenter = () => {
 };
 
 const unreadMsgCount = ref(0);
-
-onMounted(async () => {
-  logoutUrl.value = getLogoutUrl();
-  loginUrl.value = getLoginUrl();
-});
 
 watch(() => loginStore.isLogined, async (val) => {
   if (val) {
@@ -105,12 +98,12 @@ watch(() => loginStore.isLogined, async (val) => {
             {{ $t('header.MESSAGE_CENTER') }}
           </div>
         </ODropdownItem>
-        <ODropdownItem @click="doLogout(logoutUrl)">{{
+        <ODropdownItem @click="logout(lang)">{{
           $t('header.LOGOUT')
         }}</ODropdownItem>
       </template>
     </ODropdown>
-    <div v-else class="login" @click="doLogin(loginUrl)">
+    <div v-else class="login" @click="login(lang)">
       <OIcon class="icon">
         <IconLogin />
       </OIcon>
