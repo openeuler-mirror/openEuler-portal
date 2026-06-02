@@ -22,6 +22,7 @@ import university from './university';
 import cookie from './cookie';
 import migration from './migration';
 import faq from './faq';
+import internship from './internship/internship-zh';
 
 const i18n: { [key: string]: any } = {
   zh: {
@@ -46,6 +47,7 @@ const i18n: { [key: string]: any } = {
     cookie: cookie.zh,
     migration: migration.zh,
     faq: faq.zh,
+    internship,
   },
   en: {
     sig: sig.en,
@@ -68,6 +70,7 @@ const i18n: { [key: string]: any } = {
     mooc: mooc.en,
     migration: migration.en,
     faq: faq.en,
+    internship,
   },
 };
 
