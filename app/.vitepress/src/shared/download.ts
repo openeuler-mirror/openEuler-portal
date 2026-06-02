@@ -2,6 +2,10 @@ import type {
   DetailedLinkItemT,
   VersionInfoT,
 } from '@/shared/@types/type-download';
+import { useMessage } from '@opensig/opendesign';
+import i18n from '~@/i18n';
+
+const { t } = i18n.global;
 
 // 构造所需显示的文件信息
 export const constructDownloadData = (
@@ -142,4 +146,26 @@ export const getOSType = (name: string, version: string, arch: string) => {
     return 'Offline Standard ISO';
   }
   return '';
+};
+
+export const downloadByUrl = async (url: string, filename: string): Promise<any> => {
+  const message = useMessage();
+  try {
+    const response = await fetch(url);
+    const blob = await response.blob();
+    const blobUrl = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = blobUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    // 清理URL对象
+    URL.revokeObjectURL(blobUrl);
+  } catch {
+    message.danger({
+      content: t('internship.downloadFail'),
+    });
+  }
 };
