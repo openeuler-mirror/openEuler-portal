@@ -49,12 +49,9 @@ year_plan:
               href: ''
         - month: '4'
         - month: '5'
-          actives:
-            - location: TBD
-              activeName: Linaro Connect 2025
         - month: '6'
           actives:
-            - location: TBD
+            - location: 中国 北京
               activeName: 开放原子开源生态大会2026
         - month: '7'
           actives:
@@ -128,13 +125,17 @@ year_plan:
         - month: '4'
           actives:
             - location: 中国 成都
-              activeName: openEuler SIG-Sbom Meetup
+              activeName: openEuler SBOM &Intelligence SIG Meetup成都站
             - location: 中国 青岛
-              activeName: openEuler 云原生 Meetup
-            - location: 新加坡
-              activeName: Free and Open Source Singapore & openEuler Meetup
+              activeName: openEuler社区云原生开源中间件Meetup-山东站
         - month: '5'
+          actives:
+            - location: 中国 北京
+              activeName: openEuler AI与操作系统融合创新 Meetup 北京站
         - month: '6'
+          actives:
+            - location: 中国 西安
+              activeName: openEuler社区云原生开源中间件Meetup-西安站
         - month: '7'
         - month: '8'
         - month: '9'
@@ -204,12 +205,9 @@ year_plan:
               activeName: FOSSASIA Summit 2026
         - month: '4'
         - month: '5'
-          actives:
-            - location: TBD
-              activeName: Linaro Connect 2025
         - month: '6'
           actives:
-            - location: TBD
+            - location: Beijing, China
               activeName: 2026 OpenAtom open source ECO-Conference
         - month: '7'
           actives:
