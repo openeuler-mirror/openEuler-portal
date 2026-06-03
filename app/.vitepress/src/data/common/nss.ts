@@ -5,5 +5,6 @@ export const hideNssRoutes = [
   '/community/charter', // 社区章程
   '/community/vote', // 选举条例
   '/community/conduct', // 行为准则
+  '/community/aigc', // 社区生成式AI工具使用与贡献策略
   '/community/meeting-system', // 会议制度
 ];
