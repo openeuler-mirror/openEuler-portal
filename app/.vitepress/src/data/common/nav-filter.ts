@@ -166,6 +166,10 @@ export default [
     lang: ['zh'],
   },
   {
+    name: 'aigc',
+    lang: ['zh'],
+  },
+  {
     name: 'member',
     lang: ['zh', 'en'],
   },

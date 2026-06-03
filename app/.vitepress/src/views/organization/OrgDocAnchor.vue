@@ -66,8 +66,7 @@ watch(
     >
       <div class="anchor-link-inner">
         {{
-          item.id.split('-').splice(1, item.id.split('-').length).join('-') ||
-          item.id
+          item.id.split('-').filter((s: string) => /[\u4e00-\u9fff]/.test(s)).pop() || item.id
         }}
       </div>
     </a>
