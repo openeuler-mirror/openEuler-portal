@@ -22,6 +22,8 @@ category: about-us
 
 (5) Demonstrating kindness toward other people.
 
+(6) Compliant code submissions, proper use of permissions, and safeguarding project supply chain and infrastructure security.
+
 ##### 3. Unacceptable behaviors in the program and community include:
 
 (1) Use of sexualized and violent language or imagery;
@@ -32,7 +34,9 @@ category: about-us
 
 (4) Publishing others' information, such as physical and email addresses, without their explicit authorization;
 
-(5) Other conduct that can reasonably be considered as a violation of this Code of Conduct.
+(5) Implanting malicious backdoors, polluting project dependencies, destroying project assets, and other violations that endanger community security;
+
+(6) Other conduct that can reasonably be considered as a violation of this Code of Conduct.
 
 ##### 4. Community project maintainers are responsible for clarifying and enforcing our standards of "proper conduct" and will take appropriate and fair corrective action in response to any conduct that they deem inappropriate. Community project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, and issues that violate this Code of Conduct, and will temporarily or permanently ban any participant because of the behavior they consider to be threatening, offensive, or harmful.
 
