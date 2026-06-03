@@ -25,6 +25,10 @@ export default {
           link: 'conduct',
         },
         {
+          label: '社区生成式AI工具使用与贡献策略',
+          link: 'aigc',
+        },
+        {
           label: '运作制度',
           link: 'meeting-system',
           children: [
