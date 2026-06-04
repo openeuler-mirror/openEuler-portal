@@ -85,7 +85,7 @@ git add app/.vitepress/src-new/views/sig/SigDetail.vue
 pnpm lint
 
 # 3. StyleLint 检查
-pnpm slint
+pnpm lint:style
 
 # 4. 确认无报错后提交
 git commit -m "feat(sig): 新增 SIG 详情页会议列表"

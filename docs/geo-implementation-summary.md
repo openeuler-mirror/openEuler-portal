@@ -3,7 +3,7 @@
 ## 一、Sitemap 生成
 
 ### 1. 配置位置
-`app/.vitepress/config.ts` 第 105-149 行
+`app/.vitepress/config.ts`
 
 ### 2. 流程概述
 

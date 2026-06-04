@@ -123,3 +123,19 @@ app/.vitepress/.cache
 app/.vitepress/.temp
 app/.vitepress/dist
 .geo/last-modified.json
+
+# Claude Code 本地个性化设置（settings.json 是团队共享，提交；settings.local.json 是本地覆盖，忽略）
+.claude/settings.local.json
+
+# skills CLI 残留（如有人误用 pnpx skills add 时会生成）
+.agents/
+
+# .claude/skills/ —
+#   - opendesign-*（4 个）  : 由 scripts/sync-opendesign-skills.js 从 atomgit 自动恢复（pnpm install / dev 触发）
+#   - 项目自有 5 个        : 入 git，直接维护
+.claude/skills/*/
+!.claude/skills/meta-tags-optimizer/
+!.claude/skills/schema-markup-generator/
+!.claude/skills/sitemap-meta-tags-batch-generator/
+!.claude/skills/sitemap-schema-batch-generator/
+!.claude/skills/vue-best-practices/
