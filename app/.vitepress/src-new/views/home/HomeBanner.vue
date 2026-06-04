@@ -77,6 +77,7 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 
 <template>
   <div class="home-banner">
+    <ClientOnly>
     <OCarousel
       v-if="!isPhone"
       class="banner-carousel"
@@ -178,6 +179,77 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
         </ContentWrapper>
       </OCarouselItem>
     </OCarousel>
+
+      <template #fallback>
+        <OCarousel
+          class="banner-carousel"
+          effect="toggle"
+          active-class="current-slide"
+          indicator-click
+          :auto-play="false"
+        >
+          <OCarouselItem
+            v-for="(info, index) in bannerInfo"
+            :key="index"
+            class="banner-item"
+            :class="`banner-item${index}`"
+          >
+            <OFigure
+              class="banner-bg"
+              :src="info.bg"
+              :class="{
+                'with-sticky-bg': info.withStickyBg,
+                'in-dark': !isLight,
+              }"
+              :style="{
+                '--pad-offset': info.pad_offset,
+              }"
+            >
+              <ContentWrapper class="banner-wrapper">
+                <div class="banner-content">
+                  <img
+                    v-if="info.attach"
+                    :src="info.attach"
+                    class="banner-attach"
+                  />
+                  <div v-if="info.title">
+                    <div v-if="Array.isArray(info.title)" :class="{ 'banner-btn-light': info.text_theme === 'dark', 'banner-title': true }">
+                      <div v-for="(item, index) in info.title" :key="index">{{ item }}</div>
+                    </div>
+                    <div v-else class="banner-title">{{ info.title }}</div>
+                  </div>
+                  <div class="banner-subtitle" v-if="info.subtitle">{{ info.subtitle }}</div>
+                  <div
+                    class="banner-text"
+                    v-if="info.bg_text"
+                    :style="{
+                      backgroundImage: `url(${info.bg_text})`,
+                      '--pc-width': info.pc_text_width,
+                      '--pc-height': info.pc_text_height,
+                      '--pad-width': info.pad_text_width,
+                      '--pad-height': info.pad_text_height,
+                      '--padv-width': info.padv_text_width,
+                      '--padv-height': info.padv_text_height,
+                    }"
+                  ></div>
+                  <div v-if="info.btn" class="banner-opts">
+                    <OButton
+                      :href="info.href"
+                      target="_blank"
+                      variant="solid"
+                      color="primary"
+                      size="large"
+                    >
+                      {{ info.btn }}
+                    </OButton>
+                  </div>
+                </div>
+              </ContentWrapper>
+            </OFigure>
+          </OCarouselItem>
+        </OCarousel>
+      </template>
+    </ClientOnly>
   </div>
 </template>
 

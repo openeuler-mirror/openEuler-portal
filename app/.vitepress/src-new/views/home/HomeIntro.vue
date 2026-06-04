@@ -73,6 +73,7 @@ useInViewDuration(
     :data-v-analytics-title="t('home.introTitle')"
   >
     <div class="intro-container" :level-index="1" ref="container">
+      <ClientOnly>
       <div v-if="!lePadV" class="intro-pc">
         <div class="intro-card-pc">
           <div class="intro-content-pc">
@@ -144,6 +145,56 @@ useInViewDuration(
           </div>
         </OCollapseItem>
       </OCollapse>
+
+      <template #fallback>
+        <div class="intro-pc">
+          <div class="intro-card-pc">
+            <div class="intro-content-pc">
+              <div
+                class="intro-list-pc"
+                :class="[locale !== 'zh' ? 'intro-list-pc-en' : '']"
+              >
+                <div
+                  v-for="(item, index) in introData"
+                  :key="item.title[locale]"
+                  class="intro-list-item"
+                >
+                  <div class="intro-list-icon">
+                    <img :src="item.icon[theme]" alt="" />
+                    <img
+                      class="circle"
+                      :src="theme === 'light' ? circle : circleDark"
+                    />
+                  </div>
+                  <div
+                    :class="[
+                      'intro-info-pc',
+                      active === index ? 'active' : '',
+                      locale !== 'zh' ? 'intro-info-pc-en' : '',
+                    ]"
+                  >
+                    <div class="title" :class="{ 'en-title': !isZh }">
+                      {{ item.title[locale] }}
+                    </div>
+                    <div v-if="isZh" class="description">
+                      {{ item.description }}
+                    </div>
+                  </div>
+                  <img
+                    class="line"
+                    :src="theme === 'light' ? line : lineDark"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="intro-img-pc">
+                <img :src="imgSrc" alt="openEuler" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
+      </ClientOnly>
     </div>
   </AppSection>
 </template>

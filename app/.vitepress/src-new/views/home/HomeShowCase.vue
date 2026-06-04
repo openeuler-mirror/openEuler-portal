@@ -234,9 +234,16 @@ useInViewDuration(
             </ORow>
           </div>
         </li>
-        <li v-if="!isPhone" class="case-img">
-          <OFigure :src="cases[activeTab].img" colorful class="right-img" />
-        </li>
+        <ClientOnly>
+          <li v-if="!isPhone" class="case-img">
+            <OFigure :src="cases[activeTab].img" colorful class="right-img" />
+          </li>
+          <template #fallback>
+            <li class="case-img">
+              <OFigure :src="cases[activeTab].img" colorful class="right-img" />
+            </li>
+          </template>
+        </ClientOnly>
       </ul>
     </div>
   </AppSection>

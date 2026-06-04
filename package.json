@@ -45,7 +45,6 @@
     "pinia": "^2.0.13",
     "swiper": "12.1.2",
     "uuid": "14.0.0",
-    "vitest": "4.1.0",
     "vue": "3.4.38",
     "vue-dompurify-html": "^4.0.0",
     "vue-i18n": "latest",
@@ -82,7 +81,8 @@
     "unplugin-element-plus": "^0.4.1",
     "unplugin-icons": "^0.14.1",
     "vite-plugin-static-copy": "^2.2.0",
-    "vitepress": "1.6.4"
+    "vitepress": "1.6.4",
+    "vitest": "3.2.6"
   },
   "lint-staged": {
     "app/.vitepress/src/**/*.{js,ts,vue,jsx,tsx}": [
