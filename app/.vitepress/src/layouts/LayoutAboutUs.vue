@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
+import { computed, ref, watch, onMounted, nextTick } from 'vue';
 import { useData, useRouter } from 'vitepress';
 
 import TOC_INFO from '@/data/about-us/about-us-toc';
@@ -89,6 +89,74 @@ const handleNodeClick = (node: any) => {
     toggleMenu(false);
   }
 };
+
+// 复制文本到剪贴板,降级兼容不支持 Clipboard API 的环境
+const copyText = (text: string) => {
+  if (navigator?.clipboard?.writeText) {
+    return navigator.clipboard.writeText(text);
+  }
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+  return Promise.resolve();
+};
+
+// 为 markdown 渲染出的代码块注入复制按钮
+const setupCodeCopy = () => {
+  if (typeof document === 'undefined') {
+    return;
+  }
+  const preList = document.querySelectorAll<HTMLPreElement>('.about-markdown pre');
+  preList.forEach((pre) => {
+    // 复制按钮挂到 language- 容器上,避免代码横向滚动时按钮被带走
+    const wrapper = pre.parentElement;
+    const host =
+      wrapper && /language-/.test(wrapper.className) ? wrapper : pre;
+    if (host.querySelector(':scope > .copy')) {
+      return;
+    }
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'copy';
+    btn.setAttribute('aria-label', 'copy code');
+
+    let resetTimer = 0;
+    btn.addEventListener('click', async () => {
+      const code = pre.querySelector('code');
+      const text = code?.textContent ?? pre.textContent ?? '';
+      try {
+        await copyText(text);
+        btn.classList.add('copied');
+        window.clearTimeout(resetTimer);
+        resetTimer = window.setTimeout(() => {
+          btn.classList.remove('copied');
+        }, 2000);
+      } catch (error) {
+        console.error('复制代码失败:', error);
+      }
+    });
+
+    host.appendChild(btn);
+  });
+};
+
+onMounted(() => {
+  nextTick(setupCodeCopy);
+});
+
+// 路由切换后内容重新渲染,需要重新注入复制按钮
+watch(
+  () => router.route.path,
+  () => {
+    nextTick(setupCodeCopy);
+  }
+);
 </script>
 
 <template>
@@ -519,12 +587,14 @@ const handleNodeClick = (node: any) => {
     display: none;
   }
   div[class*='language-'] {
+    position: relative;
     pre {
       background-color: #272822;
     }
   }
   code,
-  pre {
+  pre,
+  xmp {
     text-align: left;
     white-space: pre;
     word-spacing: normal;
@@ -537,42 +607,116 @@ const handleNodeClick = (node: any) => {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+    color: var(--o-color-info2);
+  }
+
+  .copy {
+    position: absolute;
+    display:block;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.2s, background-color 0.2s;
+    z-index: 11;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin: 6px auto;
+      background-color: rgba(255, 255, 255, 0.7);
+      -webkit-mask: url(@/assets/svg-icons/icon-copy.svg) no-repeat center / contain;
+      mask: url(@/assets/svg-icons/icon-copy.svg) no-repeat center / contain;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.18);
+      &::before {
+        background-color: #ffffff;
+      }
+    }
+
+    // 复制成功后切换为对勾图标
+    &.copied {
+      &::before {
+        background-color: var(--o-color-success1, #41ba41);
+        -webkit-mask-image: url(@/assets/svg-icons/icon-done.svg);
+        mask-image: url(@/assets/svg-icons/icon-done.svg);
+      }
+    }
+
+    @include respond-to('phone') {
+      opacity: 1;
+    }
+  }
+
+  div[class*='language-']:hover .copy,
+  pre:hover .copy {
+    opacity: 1;
   }
 
   pre {
     position: relative;
-    margin: 8px 0;
-    background-color: var(--e-color-bg1);
-    box-shadow: var(--e-shadow-l1);
+    margin: 16px 0;
+    background-color: var(--o-color-fill1);
     overflow-x: auto;
     z-index: 1;
-    padding: 24px 32px;
-    @media screen and (max-width: 768px) {
-      padding: 12px 24px;
+    padding: 24px;
+    color: var(--o-color-info1);
+    @include respond-to('<=pad_v') {
+      border-radius: 8px;
+      margin: 12px 0;
     }
+
     &::-webkit-scrollbar-track {
-      border-radius: 4px;
-      background-color: var(--e-color-bg2);
+      background: rgba(255, 255, 255, 0.35)  !important;
     }
 
     &::-webkit-scrollbar {
-      height: 8px;
-      background-color: var(--e-color-bg2);
+      width: 6px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.55)  !important;
     }
 
     &::-webkit-scrollbar-thumb {
-      border-radius: 4px;
-      background: var(--e-color-bg4);
+      background-color: rgba(93, 93, 93, 0.35) !important;
     }
   }
 
+
+
   code {
     padding: 0;
-    line-height: var(--e-line-height-text);
-    font-size: var(--e-font-size-text);
-    color: var(--e-color-text1);
+    @include tip1;
   }
 }
+
+.dark .about-markdown {
+    pre {
+    &::-webkit-scrollbar-track {
+      background-color: var(--o-color-fill1) !important;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      background-color: var(--o-color-fill1) !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--o-color-control1) !important;
+    }
+    }
+}
+
 
 .about-content {
   & > *:first-child {

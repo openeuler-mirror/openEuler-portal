@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "name": "openEuler 社区生成式 AI 工具使用与开源贡献策略",
+    "name": "openEuler社区生成式AI工具使用与开源贡献策略",
     "description": "openEuler社区生成式AI工具使用与开源贡献策略，涵盖开放策略、适用范围、法律合规、Agent规范、禁止行为、贡献者责任及审查规则。",
     "url": "https://www.openeuler.org/zh/community/aigc",
     "inLanguage": "zh-CN",

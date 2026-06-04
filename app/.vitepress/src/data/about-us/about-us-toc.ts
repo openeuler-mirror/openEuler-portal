@@ -25,7 +25,7 @@ export default {
           link: 'conduct',
         },
         {
-          label: '社区生成式AI工具使用与贡献策略',
+          label: '生成式AI工具使用与贡献策略',
           link: 'aigc',
         },
         {

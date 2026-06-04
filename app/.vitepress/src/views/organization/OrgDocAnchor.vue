@@ -90,7 +90,7 @@ watch(
     background-color: var(--e-color-bg4);
     z-index: 0;
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1680px) {
     display: none;
   }
   .anchor-link {

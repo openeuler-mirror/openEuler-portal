@@ -14,10 +14,10 @@ describe('about-us-toc.ts — zh 侧边栏 AIGC 条目', () => {
     expect(zhPolicies!.children).toBeDefined();
   });
 
-  it('"政策和规则"分组中包含"社区生成式AI工具使用与贡献策略"条目', () => {
+  it('"政策和规则"分组中包含"生成式AI工具使用与贡献策略"条目', () => {
     const aigcEntry = zhPolicies!.children!.find((c) => c.link === 'aigc');
     expect(aigcEntry).toBeDefined();
-    expect(aigcEntry!.label).toBe('社区生成式AI工具使用与贡献策略');
+    expect(aigcEntry!.label).toBe('生成式AI工具使用与贡献策略');
   });
 
   it('AIGC 条目位于"行为准则"之后', () => {
