@@ -1,6 +1,6 @@
 # openEuler Portal — Agent 指南
 
-> 本文件是所有 AI 编码助手（Claude Code、OpenCode、Cursor、Codex 等）的**唯一入口**，遵循 [agents.md](https://agents.md) 业界标准。
+> 本文件是所有 AI 编码工具（Claude Code、OpenCode、Cursor、Codex 等）的**唯一入口**，遵循 [agents.md](https://agents.md) 业界标准。
 > Claude Code 新版本会自动回退读取 AGENTS.md，无需额外 CLAUDE.md。
 
 ---
@@ -58,13 +58,13 @@ openEuler-portal/
 ├── docs/
 │   ├── geo-implementation-summary.md   # SEO 实现深度文档
 │   └── content-self-service.md
-├── rules/                           # 代码规范（被本文件 @ 引用）
-│   ├── 01-naming.md
-│   ├── 02-components.md
-│   ├── 03-typescript.md
-│   ├── 04-api-and-state.md
-│   ├── 05-styling.md
-│   └── 06-git.md
+├── rules/                           # 代码规范（工具无关，本文件以相对链接索引，任何 AI 工具按需 Read）
+│   ├── naming.md
+│   ├── components.md
+│   ├── typescript.md
+│   ├── api-and-state.md
+│   ├── styling.md
+│   └── git.md
 ├── scripts/
 │   ├── check-git-shallow.js
 │   └── sync-opendesign-skills.js   # OpenDesign skills 增量同步
@@ -164,14 +164,16 @@ openEuler-portal/
 
 ## 5. 代码规范（必读）
 
-以下 6 个文件由 Claude Code 自动加载（通过 `@rules/*` 引用），其他 agent 请按需阅读。
+详细规则放在仓库根 `rules/` 目录（工具无关，任何 AI 工具 —— Claude Code / OpenCode / Cursor / Codex / Trae —— 按需 Read）：
 
-@rules/01-naming.md
-@rules/02-components.md
-@rules/03-typescript.md
-@rules/04-api-and-state.md
-@rules/05-styling.md
-@rules/06-git.md
+| 规范领域 | 文件 |
+|---------|------|
+| 命名约定 | [rules/naming.md](rules/naming.md) |
+| 组件规范 | [rules/components.md](rules/components.md) |
+| TypeScript 规范 | [rules/typescript.md](rules/typescript.md) |
+| API 与状态 | [rules/api-and-state.md](rules/api-and-state.md) |
+| 样式规范 | [rules/styling.md](rules/styling.md) |
+| Git 工作流 | [rules/git.md](rules/git.md) |
 
 ### 红线（出现频次最高的"踩坑"）
 
@@ -211,7 +213,7 @@ openEuler-portal/
 - `any` → ESLint warn，特殊情况必须注释说明原因，禁止 `@ts-ignore`
 - 空 `catch {}` → 必须 `console.error(...)` 或处理
 - `console.log` / `debugger` → 提交前必须清理
-- StyleLint 禁止 `!important`、禁止超过 3 层嵌套（详见 [rules/05-styling.md](./rules/05-styling.md)）
+- StyleLint 禁止 `!important`、禁止超过 3 层嵌套（详见 [rules/styling.md](./rules/styling.md)）
 
 ### Pre-commit 钩子现状
 
@@ -251,7 +253,7 @@ pnpm lint-staged
 
 - Commit：`type(scope): 描述`（支持中文），type ∈ `feat|fix|refactor|style|docs|test|chore|perf|revert`
 - 禁止 `git push --force`、禁止直推 `master`、禁止提交 `console.log`/`debugger`/构建产物/敏感信息
-- 详见 [rules/06-git.md](./rules/06-git.md)
+- 详见 [rules/git.md](./rules/git.md)
 
 ---
 
