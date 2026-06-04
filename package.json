@@ -45,7 +45,7 @@
     "pinia": "^2.0.13",
     "swiper": "12.1.2",
     "uuid": "14.0.0",
-    "vitest": "3.2.6",
+    "vitest": "4.1.0",
     "vue": "3.4.38",
     "vue-dompurify-html": "^4.0.0",
     "vue-i18n": "latest",
