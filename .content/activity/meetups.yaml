@@ -21,6 +21,45 @@
 # 加新活动：在 zh: 下方插入新对象（id 递增），同时在 calendar.yaml 中添加对应日历条目。
 
 zh:
+  - id: 14
+    title: openEuler SBOM &Intelligence SIG Meetup成都站
+    date: '2026-04-17 13:30-17:00'
+    activity_type: 2
+    synopsis: 本次 Meetup 由 openEuler SBOM & Intelligence SIG 主办，聚焦 SBOM（软件物料清单）与 AI Intelligence 在开源操作系统中的实践与探索。邀请社区开发者与供应链安全专家，共同交流 SBOM 生成、治理与合规实践经验，以及 Intelligence 技术在 openEuler 上的创新应用。
+    address: 四川省成都市锦江区锦鹏二街69号白鹭湾科技生态园B区1栋1单元6层601号
+    city: 成都市
+    isAdditional: true
+    posterImg: ~@/assets/category/user-group/city/chengdu.jpg
+    posterImgMb: ~@/assets/category/event/city/chengdu-mb.jpg
+    series: '3'
+    detail_img: ./images/detail-260417.jpg
+
+  - id: 15
+    title: openEuler社区云原生开源中间件Meetup-山东站
+    date: '2026-04-28 14:00-17:30'
+    activity_type: 2
+    synopsis: openEuler 云原生开源中间件 Meetup 山东站，聚焦云原生中间件在开源操作系统中的技术创新与实践落地。邀请东方通等生态伙伴与社区开发者，深度交流中间件迁移、适配与云原生部署实战经验，助力企业数字化转型升级。
+    address: TBD
+    city: 青岛市
+    isAdditional: true
+    posterImg: ~@/assets/category/user-group/city/default-one.jpg
+    posterImgMb: ~@/assets/category/event/city/default-one-mb.jpg
+    series: '3'
+    detail_img: ./images/detail-260428.jpg
+
+  - id: 16
+    title: openEuler AI与操作系统融合创新 Meetup 北京站
+    date: '2026-05-30 14:00-17:30'
+    activity_type: 2
+    synopsis: openEuler AI 与操作系统融合创新 Meetup 北京站，聚焦 AI 技术与操作系统的深度融合与创新实践。邀请行业专家与社区开发者，共同探讨智能操作系统架构、AI 推理引擎优化、大模型部署与运行时调优等前沿技术方向，推动 AI 与 OS 的协同演进。
+    address: TBD
+    city: 北京市
+    isAdditional: true
+    posterImg: ~@/assets/category/user-group/city/beijing.jpg
+    posterImgMb: ~@/assets/category/event/city/beijing-mb.jpg
+    series: '3'
+    detail_img: ./images/detail-260530.jpg
+
   - id: 13
     title: openEuler AI 创新应用技术Meetup 苏州站
     date: '2025-12-26 14:00-16:30'

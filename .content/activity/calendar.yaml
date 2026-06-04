@@ -164,3 +164,41 @@
   end_date: '2025-12-26 16:30'
   activity_type: 线下
   type: activity
+
+- name: openEuler SBOM &Intelligence SIG Meetup成都站
+  url: /zh/interaction/event-list/detail/?id=14&isAdditional=true
+  dates:
+    - '2026-04-17'
+  address: 四川省成都市锦江区锦鹏二街69号白鹭湾科技生态园B区1栋1单元6层601号
+  start_date: '2026-04-17 13:30'
+  end_date: '2026-04-17 17:00'
+  activity_type: 线下
+  type: activity
+
+- name: openEuler社区云原生开源中间件Meetup-山东站
+  url: /zh/interaction/event-list/detail/?id=15&isAdditional=true
+  dates:
+    - '2026-04-28'
+  address: TBD
+  start_date: '2026-04-28 14:00'
+  end_date: '2026-04-28 17:30'
+  activity_type: 线下
+  type: activity
+
+- name: openEuler AI与操作系统融合创新 Meetup 北京站
+  url: /zh/interaction/event-list/detail/?id=16&isAdditional=true
+  dates:
+    - '2026-05-30'
+  address: TBD
+  start_date: '2026-05-30 14:00'
+  end_date: '2026-05-30 17:30'
+  activity_type: 线下
+  type: activity
+
+- name: openEuler社区云原生开源中间件Meetup-西安站
+  dates:
+    - '2026-06-15'
+  start_date: '2026-06-15 14:00'
+  end_date: '2026-06-15 17:30'
+  activity_type: 线下
+  type: activity
