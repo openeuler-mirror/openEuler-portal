@@ -1,0 +1,71 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/sig/role-description",
+    "url": "https://www.openeuler.openatom.cn/en/sig/role-description",
+    "name": "Community Roles | openEuler",
+    "description": "Learn about the different roles within the openEuler community - contributor, committer, and maintainer.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SIG Center",
+          "item": "https://www.openeuler.openatom.cn/en/sig/sig-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Community Roles",
+          "item": "https://www.openeuler.openatom.cn/en/sig/role-description"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "url": "https://www.openeuler.openatom.cn/en/sig/role-description",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the roles in openEuler SIG groups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The main roles in openEuler SIG groups include: Maintainer (responsible for final code review and merging), Committer (has merge permissions for specific scopes), and Contributor (participates through Pull Requests)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to become a Maintainer in openEuler?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Becoming a Maintainer requires sustained high-quality contributions over time, recommendation by existing Maintainers, and approval through SIG group discussion. Maintainers handle code review, release management, and SIG direction decisions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Contributor and Committer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contributors submit Pull Requests to participate in code contributions but do not have merge permissions; Committers, after sustained contributions, gain merge permissions for specific modules and can review and merge other Contributors' PRs."
+        }
+      }
+    ]
+  }
+]

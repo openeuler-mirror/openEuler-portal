@@ -1,0 +1,75 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/sig/sig-guidance",
+    "url": "https://www.openeuler.openatom.cn/zh/sig/sig-guidance",
+    "name": "openEuler 特别兴趣组指导原则 | SIG专区 | openEuler社区官网",
+    "description": "查阅openEuler特别兴趣组（sig组）的指导原则，了解参与和贡献的方式。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SIG中心",
+          "item": "https://www.openeuler.openatom.cn/zh/sig/sig-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "指导原则",
+          "item": "https://www.openeuler.openatom.cn/zh/sig/sig-guidance"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "如何申请建立openEuler SIG组",
+    "description": "查阅openEuler特别兴趣组（sig组）的指导原则，了解参与和贡献的方式。",
+    "url": "https://www.openeuler.openatom.cn/zh/sig/sig-guidance",
+    "inLanguage": "zh",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "提交申请",
+        "text": "向openEuler/community仓库提交SIG组创建申请PR，填写SIG组基本信息和目标。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "技术委员会审核",
+        "text": "openEuler技术委员会（TC）审核SIG组申请，评估技术方向和社区价值。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "组建团队",
+        "text": "获批后组建SIG组初始团队，任命Maintainer和Committer。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "开始运作",
+        "text": "SIG组正式成立，开始定期会议、代码贡献和版本发布工作。"
+      }
+    ]
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/annual-report/openEuler-annual-report-2024",
+    "url": "https://www.openeuler.openatom.cn/en/annual-report/openEuler-annual-report-2024",
+    "name": "openEuler 2024 Annual Report: Year in Review | openEuler",
+    "description": "Explore the openEuler 2024 Annual Report. Discover key milestones, community growth, technical innovations, and the open-source OS ecosystem's progress.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Annual Report",
+          "item": "https://www.openeuler.openatom.cn/en/annual-report/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "2024 Annual Report",
+          "item": "https://www.openeuler.openatom.cn/en/annual-report/openEuler-annual-report-2024"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Report",
+    "name": "openEuler 2024 Annual Report",
+    "description": "Explore the openEuler 2024 Annual Report. Discover key milestones, community growth, technical innovations, and the open-source OS ecosystem's progress.",
+    "url": "https://www.openeuler.openatom.cn/en/annual-report/openEuler-annual-report-2024",
+    "inLanguage": "en",
+    "datePublished": "2024",
+    "author": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn/"
+    },
+    "about": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "description": "openEuler is an open-source OS platform incubated by OpenAtom Foundation"
+    }
+  }
+]
