@@ -21,11 +21,37 @@
 # 加新活动：在 zh: 下方插入新对象（id 递增），同时在 calendar.yaml 中添加对应日历条目。
 
 zh:
+  - id: 16
+    title: openEuler AI与操作系统融合创新 Meetup 北京站
+    date: '2026-05-30 14:00-17:30'
+    activity_type: 1
+    synopsis: 本次Meetup由openEuler社区与联通数科联合举办，以”智驱未来：AI与操作系统融合创新”为主题，旨在汇聚国内AI与操作系统领域的专家、社区开发者和技术爱好者，讨论和探索AIOS的未来发展之路。聚焦AI与操作系统融合的底层技术、前沿技术和应用实践，深入探讨行业难题，分享实践经验和创新思路。AI与操作系统两者相得益彰，AI使操作系统更加智能，操作系统使AI的开发应用更便捷高效。
+    address: 北京海淀区北四环西路北京辽宁大厦七层锦州厅
+    city: 北京市
+    isAdditional: true
+    posterImg: ~@/assets/category/user-group/city/beijing.jpg
+    posterImgMb: ~@/assets/category/event/city/beijing-mb.jpg
+    series: '3'
+    detail_img: ./images/detail-260530.jpg
+
+  - id: 15
+    title: openEuler社区云原生开源中间件Meetup-山东站
+    date: '2026-04-28 08:00-11:30'
+    activity_type: 1
+    synopsis: openEuler社区云原生开源中间件Meetup-山东站特邀多位业内专家，分享实战案例与前沿技术解析，活动将重点解读 openEuler 社区开源协作模式与介绍开源实习，指导参会者掌握开源项目贡献路径，助力高校师生与企业技术人员深度参与开源生态建设，同时，本次活动将探索 openEuler 生态下中间件技术的最佳实践，为学术研究提供技术参考，为企业应用落地提供可复用的解决方案”。
+    address: 山东省青岛市黄岛区长江西路66号中国石油大学（华东）唐岛湾校区文理楼110
+    city: 青岛市
+    isAdditional: true
+    posterImg: ~@/assets/category/event/city/default-one.jpg
+    posterImgMb: ~@/assets/category/event/city/default-one-mb.jpg
+    series: '3'
+    detail_img: ./images/detail-260428.jpg
+
   - id: 14
     title: openEuler SBOM &Intelligence SIG Meetup成都站
     date: '2026-04-17 13:30-17:00'
-    activity_type: 2
-    synopsis: 本次 Meetup 由 openEuler SBOM & Intelligence SIG 主办，聚焦 SBOM（软件物料清单）与 AI Intelligence 在开源操作系统中的实践与探索。邀请社区开发者与供应链安全专家，共同交流 SBOM 生成、治理与合规实践经验，以及 Intelligence 技术在 openEuler 上的创新应用。
+    activity_type: 1
+    synopsis: 本次活动将聚焦关键行业真实场景，围绕SBOM技术体系、工程实践路径及AI时代下供应链安全新挑战展开深入交流，促进产业界与社区协同创新，推动SBOM生态发展。
     address: 四川省成都市锦江区锦鹏二街69号白鹭湾科技生态园B区1栋1单元6层601号
     city: 成都市
     isAdditional: true
@@ -33,32 +59,6 @@ zh:
     posterImgMb: ~@/assets/category/event/city/chengdu-mb.jpg
     series: '3'
     detail_img: ./images/detail-260417.jpg
-
-  - id: 15
-    title: openEuler社区云原生开源中间件Meetup-山东站
-    date: '2026-04-28 14:00-17:30'
-    activity_type: 2
-    synopsis: openEuler 云原生开源中间件 Meetup 山东站，聚焦云原生中间件在开源操作系统中的技术创新与实践落地。邀请东方通等生态伙伴与社区开发者，深度交流中间件迁移、适配与云原生部署实战经验，助力企业数字化转型升级。
-    address: TBD
-    city: 青岛市
-    isAdditional: true
-    posterImg: ~@/assets/category/user-group/city/default-one.jpg
-    posterImgMb: ~@/assets/category/event/city/default-one-mb.jpg
-    series: '3'
-    detail_img: ./images/detail-260428.jpg
-
-  - id: 16
-    title: openEuler AI与操作系统融合创新 Meetup 北京站
-    date: '2026-05-30 14:00-17:30'
-    activity_type: 2
-    synopsis: openEuler AI 与操作系统融合创新 Meetup 北京站，聚焦 AI 技术与操作系统的深度融合与创新实践。邀请行业专家与社区开发者，共同探讨智能操作系统架构、AI 推理引擎优化、大模型部署与运行时调优等前沿技术方向，推动 AI 与 OS 的协同演进。
-    address: TBD
-    city: 北京市
-    isAdditional: true
-    posterImg: ~@/assets/category/user-group/city/beijing.jpg
-    posterImgMb: ~@/assets/category/event/city/beijing-mb.jpg
-    series: '3'
-    detail_img: ./images/detail-260530.jpg
 
   - id: 13
     title: openEuler AI 创新应用技术Meetup 苏州站

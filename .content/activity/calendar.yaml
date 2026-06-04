@@ -179,17 +179,17 @@
   url: /zh/interaction/event-list/detail/?id=15&isAdditional=true
   dates:
     - '2026-04-28'
-  address: TBD
-  start_date: '2026-04-28 14:00'
-  end_date: '2026-04-28 17:30'
+  address: 山东省青岛市黄岛区长江西路66号中国石油大学（华东）唐岛湾校区文理楼110
+  start_date: '2026-04-28 08:00'
+  end_date: '2026-04-28 11:30'
   activity_type: 线下
   type: activity
 
-- name: openEuler AI与操作系统融合创新 Meetup 北京站
+- name: openEuler AI 与操作系统融合创新 Meetup 北京站
   url: /zh/interaction/event-list/detail/?id=16&isAdditional=true
   dates:
     - '2026-05-30'
-  address: TBD
+  address: 北京海淀区北四环西路北京辽宁大厦七层锦州厅
   start_date: '2026-05-30 14:00'
   end_date: '2026-05-30 17:30'
   activity_type: 线下
@@ -197,8 +197,9 @@
 
 - name: openEuler社区云原生开源中间件Meetup-西安站
   dates:
-    - '2026-06-15'
-  start_date: '2026-06-15 14:00'
-  end_date: '2026-06-15 17:30'
+    - '2026-06-10'
+  adress: 西安电子科技大学（长安校区）网络安全研究创新大楼A-103报告厅
+  start_date: '2026-06-10 13:30'
+  end_date: '2026-06-10 17:15'
   activity_type: 线下
   type: activity

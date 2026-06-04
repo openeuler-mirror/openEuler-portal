@@ -136,6 +136,8 @@ year_plan:
           actives:
             - location: 中国 西安
               activeName: openEuler社区云原生开源中间件Meetup-西安站
+            - location: 新加坡 
+              activeName: Free and Open Source Singapore & openEuler Meetup
         - month: '7'
         - month: '8'
         - month: '9'
