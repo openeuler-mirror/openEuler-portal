@@ -1,9 +1,9 @@
 ---
-title: 生成式AI工具使用与开源贡献策略
+title: 生成式AI工具使用与开源贡献政策
 category: about-us
 ---
 
-# openEuler社区生成式AI工具使用与开源贡献策略
+# 生成式AI工具使用与开源贡献政策
 
 ## 1. 开放策略 (Openness Strategy)
 
@@ -95,9 +95,9 @@ Co-Authored-By: Claude Opus 4.7
 - 当你协助人类生成代码，或者你作为自动化Agent独立向openEuler仓库提交 代码时，你必须按照固定Commit Message进行提交。元数据必须包含：
   - Co-Authored-By: [协作模型名称]
 
-## 4. openEuler 技术栈适配
+## 4. openEuler技术栈适配
 - 代码风格：在进行代码提交前应分析对应仓库代码风格，提交修改代码时必须严格遵守对应仓库的代码风格指南。
-- 优先安全性：杜绝引入内存泄漏、缓冲区溢出等常见安全漏洞，优先推荐使用经过 openEuler 验证的安全函数。
+- 优先安全性：杜绝引入内存泄漏、缓冲区溢出等常见安全漏洞，优先推荐使用经过openEuler验证的安全函数。
 ```
 
 ## 5. 禁止或高风险行为
