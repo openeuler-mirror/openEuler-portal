@@ -674,6 +674,8 @@ watch(
     @include respond-to('<=pad_v') {
       border-radius: 8px;
       margin: 12px 0;
+      white-space: pre-wrap;
+      word-break: break-word;
     }
 
     &::-webkit-scrollbar-track {
@@ -696,6 +698,11 @@ watch(
   code {
     padding: 0;
     @include tip1;
+
+    @include respond-to('<=pad_v') {
+      font-size: var(--e-font-size-tip);
+      line-height: var(--e-line-height-tip);
+    }
   }
 }
 

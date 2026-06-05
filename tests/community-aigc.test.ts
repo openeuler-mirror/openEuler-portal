@@ -14,10 +14,10 @@ describe('about-us-toc.ts — zh 侧边栏 AIGC 条目', () => {
     expect(zhPolicies!.children).toBeDefined();
   });
 
-  it('"政策和规则"分组中包含"生成式AI工具使用与贡献策略"条目', () => {
+  it('"政策和规则"分组中包含"生成式AI工具使用与开源贡献政策"条目', () => {
     const aigcEntry = zhPolicies!.children!.find((c) => c.link === 'aigc');
     expect(aigcEntry).toBeDefined();
-    expect(aigcEntry!.label).toBe('生成式AI工具使用与贡献策略');
+    expect(aigcEntry!.label).toBe('生成式AI工具使用与开源贡献政策');
   });
 
   it('AIGC 条目位于"行为准则"之后', () => {
@@ -159,12 +159,12 @@ describe('AIGC 页面 MD 文件 — app/zh/community/aigc/index.md', () => {
     expect(fs.existsSync(mdPath), `MD 文件应存在: ${mdPath}`).toBe(true);
   });
 
-  it('frontmatter 包含 title 字段且值为"社区生成式AI工具使用与贡献策略"', () => {
+  it('frontmatter 包含 title 字段且值为"生成式AI工具使用与开源贡献政策"', () => {
     const content = fs.readFileSync(mdPath, 'utf8');
     const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
     expect(frontmatterMatch, 'MD 文件应有 frontmatter').toBeDefined();
     const frontmatter = frontmatterMatch![1];
-    expect(frontmatter).toContain('title: 社区生成式AI工具使用与贡献策略');
+    expect(frontmatter).toContain('title: 生成式AI工具使用与开源贡献政策');
   });
 
   it('frontmatter 包含 category: about-us（与 conduct 等政策页同模式）', () => {
@@ -173,17 +173,17 @@ describe('AIGC 页面 MD 文件 — app/zh/community/aigc/index.md', () => {
     expect(frontmatterMatch![1]).toContain('category: about-us');
   });
 
-  it('页面正文包含主要章节标题（背景/术语/规范与要求等）', () => {
+  it('页面正文包含主要章节标题（开放策略/适用范围/法律与合规等）', () => {
     const content = fs.readFileSync(mdPath, 'utf8');
-    expect(content).toContain('## 背景/目标/原则');
-    expect(content).toContain('## 术语');
-    expect(content).toContain('## 规范与要求');
+    expect(content).toContain('## 1. 开放策略');
+    expect(content).toContain('## 2. 适用范围');
+    expect(content).toContain('## 3. 法律与合规');
   });
 
-  it('页面正文包含披露要求（Assisted-by / Generated-by）', () => {
+  it('页面正文包含披露要求（Co-Authored-By / Agent平台）', () => {
     const content = fs.readFileSync(mdPath, 'utf8');
-    expect(content).toContain('Assisted-by');
-    expect(content).toContain('Generated-by');
+    expect(content).toContain('Co-Authored-By');
+    expect(content).toContain('Agent平台');
   });
 });
 
