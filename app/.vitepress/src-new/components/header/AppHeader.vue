@@ -4,7 +4,7 @@ import { useRouter, useData } from 'vitepress';
 
 import { useScreen } from '~@/composables/useScreen';
 import navFilterConfig from '@/data/common/nav-filter';
-import { arList } from '~@/data/header';
+import { arList, SUPPORTED_LOCALES } from '~@/data/header';
 
 import HeaderNav from './HeaderNav.vue';
 import SearchHeaderMo from '~@/views/search/SearchHeaderMo.vue';
@@ -26,7 +26,7 @@ const { lePadV } = useScreen();
 const headerStore = useHeaderTitle();
 
 const routerPath = ref(router.route.path);
-const langShow = ref(['zh', 'en']);
+const langShow = ref([...SUPPORTED_LOCALES]);
 const isNewsorBlog = computed(() =>
   /^\/(zh|en)\/(news|blog)\//g.test(router.route.path)
 );
@@ -66,56 +66,49 @@ const isArabicSupported = (path: string) => {
 };
 
 watch(
-  () => router.route.path,
-  (val: string) => {
-    routerPath.value = val;
-    
-    // 默认显示中文和英文
-    langShow.value = ['zh', 'en'];
+  [() => router.route.path, () => frontmatter.value?.availableLocales],
+  ([newPath, newAvailable], [oldPath]) => {
+    const isPathChange = oldPath === undefined || newPath !== oldPath;
 
-    // 首页
-    if (isHome.value) {
-      langShow.value = ['zh', 'en', 'ar'];
-      return;
-    }
+    if (isPathChange) {
+      routerPath.value = newPath;
+      langShow.value = [...SUPPORTED_LOCALES];
 
-    // 新闻、博客不一定存在对应中文
-    if (isNewsorBlog.value) {
-      langShow.value = [lang.value];
-      return;
-    }
+      if (isHome.value) {
+        langShow.value = [...SUPPORTED_LOCALES, 'ar'];
+      } else if (isNewsorBlog.value) {
+        langShow.value = [lang.value];
+      } else if (lang.value === 'en') {
+        if (isArabicSupported(newPath)) {
+          langShow.value = [...SUPPORTED_LOCALES, 'ar'];
+        }
+      } else {
+        for (let i = 0, len = navFilterConfig.length; i < len; i++) {
+          const routeArr = routerPath.value.split('/');
+          const routeName = routeArr[routeArr.length - 2];
+          const names = navFilterConfig[i].name.split('/');
+          const name = names[0];
 
-    // 英文页面：检查是否有对应的阿语版本
-    if (lang.value === 'en') {
-      if (isArabicSupported(val)) {
-        langShow.value = ['zh', 'en', 'ar'];
-      }
-      return;
-    }
-
-    // 语言过滤
-    for (let i = 0, len = navFilterConfig.length; i < len; i++) {
-      // 其他
-      const routeArr = routerPath.value.split('/');
-      const routeName = routeArr[routeArr.length - 2];
-      // TODO:目前只支持一级
-      const names = navFilterConfig[i].name.split('/');
-      const name = names[0];
-
-      if (
-        // 路径后缀匹配
-        routeName === name ||
-        // 路径全匹配
-        routerPath.value === name ||
-        // 子路径匹配
-        (names[1] && names[1] === '**' && routerPath.value.includes(name))
-      ) {
-        langShow.value = navFilterConfig[i].lang;
-        break;
+          if (
+            routeName === name ||
+            routerPath.value === name ||
+            (names[1] && names[1] === '**' && routerPath.value.includes(name))
+          ) {
+            langShow.value = navFilterConfig[i].lang;
+            break;
+          }
+        }
+        if (isArabicSupported(newPath)) {
+          langShow.value = [...SUPPORTED_LOCALES, 'ar'];
+        }
       }
     }
-    if (isArabicSupported(val)) {
-      langShow.value = ['zh', 'en', 'ar'];
+
+    if (newAvailable) {
+      langShow.value = langShow.value.filter(l => {
+        if (!SUPPORTED_LOCALES.includes(l)) return true;
+        return newAvailable.includes(l);
+      });
     }
   },
   { immediate: true }

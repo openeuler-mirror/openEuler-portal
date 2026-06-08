@@ -13,3 +13,5 @@ export const arList = [
 ];
 
 export const AR_URL = 'https://ar.openeuler.org'
+
+export const SUPPORTED_LOCALES = ['zh', 'en']

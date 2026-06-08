@@ -3,7 +3,7 @@ import { ref, Ref, watch } from 'vue';
 import { useRouter, useData } from 'vitepress';
 import { OIcon, ODropdown, ODropdownItem } from '@opensig/opendesign';
 import { useScreen } from '~@/composables/useScreen';
-import { AR_URL } from '~@/data/header';
+import { AR_URL, SUPPORTED_LOCALES } from '~@/data/header';
 
 import IconLocale from '~icons/app-new/icon-locale.svg';
 
@@ -17,7 +17,7 @@ const props = defineProps({
 });
 
 const router = useRouter();
-const { lang } = useData();
+const { lang, frontmatter } = useData();
 const { lePadV } = useScreen();
 
 // 选择语言;
@@ -30,12 +30,16 @@ const langOptions = [
 // 选择语言
 const emits = defineEmits(['language-click']);
 const changeLanguageMobile = (newlang: string) => {
-  changeLanguage(newlang);
-  emits('language-click');
+  const switched = changeLanguage(newlang);
+  if (switched) {
+    emits('language-click');
+  }
 };
 
-function changeLanguage(newlang: string) {
-  if (lang.value === newlang) return;
+function changeLanguage(newlang: string): boolean {
+  if (lang.value === newlang) return false;
+  const available = frontmatter.value?.availableLocales;
+  if (available && SUPPORTED_LOCALES.includes(newlang) && !available.includes(newlang)) return false;
   const { pathname, search } = window.location;
   if ( newlang === 'ar' ) {
     window.location.href = `${AR_URL}${pathname.replace(`/${lang.value}/`, `/${newlang}/`)}`;
@@ -43,6 +47,7 @@ function changeLanguage(newlang: string) {
     const newHref = pathname.replace(`/${lang.value}/`, `/${newlang}/`);
     router.go(newHref + search);
   }
+  return true;
 }
 
 interface LangType {

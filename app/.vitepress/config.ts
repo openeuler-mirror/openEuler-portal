@@ -11,6 +11,7 @@ import path, { join } from 'node:path';
 import { existsSync, readFileSync} from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { SUPPORTED_LOCALES } from './src-new/data/header';
 
 const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -186,6 +187,19 @@ const config: UserConfig = {
     }
     setJSONLD(pageData, lookupKey);
     setTdk(pageData, lookupKey);
+
+    const matchedLocale = SUPPORTED_LOCALES.find(prefix => filePath.startsWith(`${prefix}/`));
+    if (matchedLocale) {
+      const available = [matchedLocale];
+      for (const other of SUPPORTED_LOCALES) {
+        if (other === matchedLocale) continue;
+        const siblingPath = filePath.replace(`${matchedLocale}/`, `${other}/`);
+        if (existsSync(path.resolve(__dirname, '..', siblingPath))) {
+          available.push(other);
+        }
+      }
+      pageData.frontmatter.availableLocales = available;
+    }
   },
   locales: {
     root: {
