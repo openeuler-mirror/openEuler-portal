@@ -64,6 +64,7 @@ openEuler-portal/
 │   ├── typescript.md
 │   ├── api-and-state.md
 │   ├── styling.md
+│   ├── jsonld.md
 │   └── git.md
 ├── scripts/
 │   ├── check-git-shallow.js
@@ -174,6 +175,7 @@ openEuler-portal/
 | API 与状态 | [rules/api-and-state.md](rules/api-and-state.md) |
 | 样式规范 | [rules/styling.md](rules/styling.md) |
 | Git 工作流 | [rules/git.md](rules/git.md) |
+| JSON-LD / 结构化数据 | [rules/jsonld.md](rules/jsonld.md) |
 
 ### 红线（出现频次最高的"踩坑"）
 
@@ -185,6 +187,7 @@ openEuler-portal/
 6. **SSR 安全**：`window`/`document` 只能在 `onMounted` 或 `import.meta.client` 中访问，浏览器专属组件用 `<ClientOnly>`。
 7. **i18n 双语同步**：通过 `useLocale()` 拿 `t`，zh/en 翻译文件必须同步更新。
 8. **类型命名约定**：`SigItemT`（单条）/ `SigListT`（列表）/ `SigDetailT`（详情）/ `SigQueryT`（参数）。
+9. **JSON-LD 单一来源 + 禁止手动域名硬编码**：`.geo/jsonld/` 是唯一来源，frontmatter 不内嵌 `<script type="application/ld+json">`；`setJSONLD` 构建钩子自动替换域名，禁止手动硬编码 `www.openeuler.org`（会叠加双重替换）。详见 [rules/jsonld.md](rules/jsonld.md)。
 
 ---
 
