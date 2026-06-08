@@ -17,6 +17,24 @@ export default {
         ],
       },
       {
+        NAME: '浪潮云启操作系统 23.12 LTS SP3',
+        DOWNLOAD_URL:
+          'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP3/',
+        DESC: '浪潮云启操作系统（英文简称InLinux）是安全高效、稳定可靠的企业级服务器操作系统，全面支持云计算、大数据、物联网、智能计算等应用场景，具备性能高效、灵活定制、稳定可靠等特性。',
+        MANUFACTURER: '浪潮云信息技术股份公司',
+        PUBLISH_DATE: '2025/10',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP3/everything/x86_64/',
+            ARCH: 'x86_64',
+          },
+          {
+            LINK: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP3/everything/aarch64/',
+            ARCH: 'AArch64',
+          },
+        ],
+      },
+      {
         NAME: '银河麒麟高级服务器操作系统V11',
         DOWNLOAD_URL: 'https://www.kylinos.cn/admin#/admin/login.html',
         DESC: '银河麒麟高级服务器操作系统 V11 是针对云计算、人工智能、大数据、工业互联网时代对主机系统高可靠性、安全性、高性能、灵活性以及实时响应的需求，依据 CMMI5 级标准研制的提供云原生支持、人工智能支持、国产硬件平台深度优化、内生安全、高性能、易管理、广泛兼容的新一代企业级服务器操作系统产品；统一基于Linux Kernel 6.6构建，对外接口遵循 POSIX 标准，同源支持飞腾、鲲鹏、龙芯、海光、兆芯、申威自主平台。可协同支撑人工智能应用、容器云平台、构建大型数据中心服务器高可用集群、负载均衡集群、分布式集群文件系统、虚拟化应用等，可部署在物理服务器和虚拟化环境、私有云、公有云和混合云环境等多种环境；广泛应用于政府、金融、教育、财税、公安、审计、交通、医疗、制造等领域。',
@@ -477,6 +495,24 @@ export default {
   },
   en: {
     COMMERCIAL_RELEASE_LIST: [
+      {
+        NAME: 'InLinux 23.12 LTS SP3',
+        DOWNLOAD_URL:
+          'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP3/',
+        DESC: 'InLinux (Inspur Cloud OS) is a secure, efficient, and reliable enterprise server operating system that fully supports cloud computing, big data, IoT, and intelligent computing scenarios, featuring high performance, flexible customization, and stable reliability.',
+        MANUFACTURER: 'Inspur Cloud Information Technology Co., Ltd.',
+        PUBLISH_DATE: '2025/10',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP3/everything/x86_64/',
+            ARCH: 'x86_64',
+          },
+          {
+            LINK: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP3/everything/aarch64/',
+            ARCH: 'AArch64',
+          },
+        ],
+      },
       {
         NAME: 'TurboLinux Enterprise server v15',
         DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8013/',
