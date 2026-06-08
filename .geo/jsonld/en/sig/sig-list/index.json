@@ -1,0 +1,90 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/sig/sig-list",
+    "url": "https://www.openeuler.openatom.cn/en/sig/sig-list",
+    "name": "Special Interest Groups | openEuler",
+    "description": "Discover openEuler's SIGs covering Linux, cloud, AI, and more. Collaborate on diverse projects with SIG members.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SIG Center",
+          "item": "https://www.openeuler.openatom.cn/en/sig/sig-list/"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler SIG Group Directory",
+    "description": "Discover openEuler's SIGs covering Linux, cloud, AI, and more. Collaborate on diverse projects with SIG members.",
+    "url": "https://www.openeuler.openatom.cn/en/sig/sig-list",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "url": "https://www.openeuler.openatom.cn/en/sig/sig-list",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are openEuler SIG groups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler SIGs (Special Interest Groups) are the fundamental collaborative units of the openEuler open-source community, each focusing on code maintenance, review, and release management in specific technical domains."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to join an openEuler SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Join an existing SIG by submitting a PR to its repository. To create a new SIG, submit a PR to the openEuler/community repository; after TC review, approval typically takes about 2 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many SIG groups does openEuler have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As of 2025, the openEuler community has over 100 SIG groups covering core technical areas such as kernel, virtualization, cloud native, embedded, AI, and security."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What roles exist in openEuler SIG groups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Main SIG roles include: Maintainer (responsible for final code merges), Committer (has merge permissions for specific scopes), and Contributor (participates through Pull Requests)."
+        }
+      }
+    ]
+  }
+]

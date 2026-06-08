@@ -1,0 +1,74 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/en/sig/sig-guidance",
+    "url": "https://www.openeuler.openatom.cn/en/sig/sig-guidance",
+    "name": "Set up a SIG | openEuler",
+    "description": "Learn how to establish a SIG within openEuler. Follow our guide to start your own SIG and drive innovation in key technology areas.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.openatom.cn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SIG Center",
+          "item": "https://www.openeuler.openatom.cn/en/sig/sig-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Set up a SIG",
+          "item": "https://www.openeuler.openatom.cn/en/sig/sig-guidance"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Set Up a SIG in openEuler",
+    "description": "Learn how to establish a SIG within openEuler. Follow our guide to start your own SIG and drive innovation in key technology areas.",
+    "url": "https://www.openeuler.openatom.cn/en/sig/sig-guidance",
+    "inLanguage": "en",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Submit application",
+        "text": "Submit a SIG creation PR to the openEuler/community repository with basic SIG information and objectives."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Technical Committee review",
+        "text": "The openEuler Technical Committee (TC) reviews the SIG application, evaluating its technical direction and community value."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Build the team",
+        "text": "After approval, form the initial SIG team and appoint Maintainers and Committers."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Start operations",
+        "text": "The SIG officially launches, beginning regular meetings, code contributions, and release management."
+      }
+    ]
+  }
+]

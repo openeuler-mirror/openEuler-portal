@@ -1,0 +1,69 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/sig/meeting-guide",
+    "url": "https://www.openeuler.openatom.cn/zh/sig/meeting-guide",
+    "name": "openEuler 特别兴趣组会议指南 | SIG专区 | openEuler社区官网",
+    "description": "深入了解openEuler特别兴趣组的会议安排和参与指南，积极参与社区活动。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SIG中心",
+          "item": "https://www.openeuler.openatom.cn/zh/sig/sig-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "会议指南",
+          "item": "https://www.openeuler.openatom.cn/zh/sig/meeting-guide"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "openEuler SIG 会议参与指南",
+    "description": "深入了解openEuler特别兴趣组的会议安排和参与指南，积极参与社区活动。",
+    "url": "https://www.openeuler.openatom.cn/zh/sig/meeting-guide",
+    "inLanguage": "zh",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "查看会议安排",
+        "text": "浏览openEuler社区各SIG组的会议时间表和会议议程安排。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "选择感兴趣的SIG",
+        "text": "根据技术方向和兴趣选择合适的SIG组进行参与。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "加入会议",
+        "text": "通过会议链接或日历订阅方式加入SIG组的定期会议。"
+      }
+    ]
+  }
+]

@@ -1,0 +1,91 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.openatom.cn/zh/sig/sig-list",
+    "url": "https://www.openeuler.openatom.cn/zh/sig/sig-list",
+    "name": "openEuler SIG组 | openEuler SIG中心 | openEuler社区官网",
+    "description": "本篇提供openEuler社区完整的SIG组列表及其成员、仓库查询、SIG组申请、SIG组会议等，任何人均可参与。openEuler 社区按照不同的 SIG 来组织，以便于更好的管理和改善工作流程。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.openatom.cn/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.openatom.cn/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SIG中心",
+          "item": "https://www.openeuler.openatom.cn/zh/sig/sig-list/"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler SIG组列表",
+    "description": "openEuler社区完整的SIG组列表及其成员、仓库查询、SIG组申请、SIG组会议等，任何人均可参与。",
+    "url": "https://www.openeuler.openatom.cn/zh/sig/sig-list",
+    "inLanguage": "zh-CN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler官网",
+      "url": "https://www.openeuler.openatom.cn"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "url": "https://www.openeuler.openatom.cn/zh/sig/sig-list",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "什么是 openEuler SIG 组？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler SIG（Special Interest Group，特别兴趣小组）是 openEuler 开源社区的基本协作单元，每个 SIG 专注于特定技术领域的代码维护、评审和版本发布工作。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何申请加入 openEuler SIG 组？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "加入现有 SIG 只需向该 SIG 仓库提交 PR 即可开始贡献。创建新 SIG 需向 openEuler/community 仓库提交申请 PR，经 TC 审核后约 2 周获批。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler 有多少个 SIG 组？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "截至 2025 年，openEuler 社区共设有 100 余个 SIG 组，覆盖内核、虚拟化、云原生、嵌入式、AI、安全等核心技术领域。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "openEuler SIG 组的角色有哪些？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SIG 组主要角色包括：Maintainer（维护者，负责最终代码合并）、Committer（提交者，有特定范围合并权限）、Contributor（贡献者，通过 PR 参与贡献）。"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+{"title":"轻松定制系统镜像 | NestOS | openEuler社区官网","description":"NestOS For Container 支持以编写 Dockerfile 形式轻松定制容器镜像格式的系统镜像，通过编写 Dockerfile 定义系统内容，执行构建并推送镜像，最后部署到 NestOS 环境。","keywords":"NestOS,定制系统镜像,Dockerfile,容器镜像,rpm-ostree,系统构建,openEuler"}
