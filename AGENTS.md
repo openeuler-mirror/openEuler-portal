@@ -185,6 +185,7 @@ openEuler-portal/
 6. **SSR 安全**：`window`/`document` 只能在 `onMounted` 或 `import.meta.client` 中访问，浏览器专属组件用 `<ClientOnly>`。
 7. **i18n 双语同步**：通过 `useLocale()` 拿 `t`，zh/en 翻译文件必须同步更新。
 8. **类型命名约定**：`SigItemT`（单条）/ `SigListT`（列表）/ `SigDetailT`（详情）/ `SigQueryT`（参数）。
+9. **多端适配必覆盖**：凡涉及 header/导航/语言切换等有 PC 端与移动端双版本的组件，任何逻辑变更（拦截、过滤、校验等）必须在 `changeLanguage` 与 `changeLanguageMobile`（及其他同名 Mobile 变体）中同步实现，不允许只改一端。踩坑：`changeLanguageMobile` 遗漏 `availableLocales` 兜底拦截，移动端仍可跳转至不存在页面。
 
 ---
 

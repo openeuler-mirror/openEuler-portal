@@ -255,6 +255,18 @@ const { t, isZh, locale } = useLocale();
 
 ---
 
+## Locale 配置不得硬编码
+
+涉及 locale 列表/前缀/路径替换的逻辑，必须引用集中定义的配置常量（如 `SUPPORTED_LOCALES`），禁止在组件或 config 中直接硬编码 `'zh'`、`'en'` 等字符串。踩坑：`config.ts`、`AppHeader`、`HeaderLanguage` 中多处硬编码 `zh/en` 前缀，新增 locale 时需改多处且易遗漏。
+
+---
+
+## 避免冗余 Vue watch
+
+当多个 reactive 源（如 `route.path` + `frontmatter.xxx`）触发同一份计算逻辑时，应合并为单一 `watch([source1, source2], ...)` 而非分别写多个 watcher。合并后通过新旧值对比区分触发来源，消除逻辑重复。踩坑：`AppHeader` 对 `router.route.path` 和 `frontmatter.availableLocales` 分别写了两个 watch，导致同一份过滤逻辑重复执行。
+
+---
+
 ## 禁止事项
 
 - 禁止在 `<template>` 中写复杂业务逻辑，抽取为 computed 或 method
