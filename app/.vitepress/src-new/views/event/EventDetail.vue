@@ -14,12 +14,8 @@ import ContentWrapper from '~@/components/ContentWrapper.vue';
 import { getUrlParam } from '@/shared/utils';
 
 import activityContent from '#content/activity';
-
-const _filters = activityContent.filters as { series: { value: string | number; label: string; label_en: string }[]; state: { value: number; label: string; label_en: string }[] };
-const _meetups = activityContent.meetups as { zh: any[]; en: any[] };
-
-const EventState = new Map(_filters.state.map((s) => [s.value, { value: s.value, label: { zh: s.label, en: s.label_en } }]));
-const MEETUP_DATA = _meetups;
+import { foldI18n } from '~@/shared/content';
+import { EVENT_STATUS } from '~@/data/event/filters';
 
 import banner from '~@/assets/category/event/list/banner.png';
 import bannerDark from '~@/assets/category/event/list/banner-dark.png';
@@ -41,9 +37,12 @@ const activityId = ref('');
 
 const detailObj = ref<any>();
 
+const EventState = new Map(EVENT_STATUS.map((s) => [s.value, { value: s.value, label: { zh: s.label_zh, en: s.label_en } }]));
+
 const getActivitiesData = () => {
   activityId.value = getUrlParam('id');
-  detailObj.value = MEETUP_DATA[locale.value].find(
+  const events = foldI18n(activityContent.events, locale.value);
+  detailObj.value = events.find(
     (item) => item.id === Number(activityId.value)
   );
 };
@@ -56,6 +55,16 @@ const verticalPadding = computed(() => {
   } else {
     return ['32px', '72px'];
   }
+});
+
+const dateDisplay = computed(() => {
+  if (!detailObj.value) return '';
+  const { start_date, end_date } = detailObj.value;
+  if (!start_date || !end_date) return '';
+  const startTime = start_date.split(' ')[1] || '';
+  const endTime = end_date.split(' ')[1] || '';
+  const datePart = start_date.split(' ')[0] || '';
+  return `${datePart} ${startTime}-${endTime}`;
 });
 
 onMounted(() => {
@@ -82,19 +91,19 @@ onMounted(() => {
           <div class="title-box">
             <span class="title">{{ detailObj?.title }}</span>
             <OTag
-              v-if="detailObj?.activity_type"
+              v-if="detailObj?.status"
               class="type-tag"
-              :class="{ 'tag-completed': detailObj?.activity_type === 1 }"
+              :class="{ 'tag-completed': detailObj?.status === 'ended' }"
             >
               <span class="tag-text">
-                {{ EventState.get(detailObj?.activity_type)?.label[locale] }}
+                {{ EventState.get(detailObj?.status)?.label[locale] }}
               </span>
             </OTag>
           </div>
           <p class="synopsis">{{ detailObj?.synopsis }}</p>
           <div class="date">
             <OIcon><IconTime /></OIcon>
-            {{ detailObj?.date }}
+            {{ dateDisplay }}
           </div>
           <div class="address">
             <OIcon><IconAddress /></OIcon>
@@ -102,18 +111,18 @@ onMounted(() => {
           </div>
         </div>
         <OButton
-          v-if="detailObj?.activity_type === 1 && detailObj?.new_url"
+          v-if="detailObj?.status === 'ended' && detailObj?.review_url"
           variant="solid"
           color="primary"
           :size="lePadV ? 'medium' : 'large'"
-          :href="detailObj?.new_url"
+          :href="detailObj?.review_url"
           target="_blank"
           class="review-btn"
         >
           <span>{{ t('eventOverview.review') }}</span>
         </OButton>
         <OButton
-          v-if="detailObj?.activity_type === 2 && detailObj?.signup_url"
+          v-if="detailObj?.status === 'ongoing' && detailObj?.signup_url"
           variant="solid"
           color="primary"
           :size="lePadV ? 'medium' : 'large'"
@@ -126,7 +135,7 @@ onMounted(() => {
       </div>
       <div class="content" :class="{ 'content-dark': isDark }">
         <p class="title">{{ t('eventOverview.agenda') }}</p>
-        <OFigure :src="detailObj?.detail_img" class="figure"></OFigure>
+        <OFigure :src="detailObj?.agenda_image" class="figure"></OFigure>
       </div>
     </ContentWrapper>
   </div>

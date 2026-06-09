@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, computed, shallowRef } from 'vue';
-import { useData } from 'vitepress';
-
 import { login, isValidKey } from '@/shared/utils';
 import { useCommon } from '@/stores/common';
 
@@ -21,6 +19,7 @@ import {
 } from '@opensig/opendesign';
 
 import activityContent from '#content/activity';
+import { foldI18n } from '~@/shared/content';
 import { type CalendarValueT } from '~@/@type/type-home';
 
 import dayjs from 'dayjs';
@@ -65,11 +64,42 @@ const commonStore = useCommon();
 const message = useMessage();
 const { t, locale } = useLocale();
 const identitiesStore = useIdentities();
-const { lang } = useData();
 const loginStore = useLoginStore();
 
-const activityData = activityContent.calendar as CalendarValueT[];
-const summitData = (activityContent.summit ?? []) as CalendarValueT[];
+const expandDates = (start: string, end: string): string[] => {
+  if (!start || !end) return [];
+  const dates: string[] = [];
+  const s = dayjs(start.split(' ')[0]);
+  const e = dayjs(end.split(' ')[0]);
+  let cur = s;
+  while (cur.isBefore(e) || cur.isSame(e, 'day')) {
+    dates.push(cur.format('YYYY-MM-DD'));
+    cur = cur.add(1, 'day');
+  }
+  return dates;
+};
+
+const FORMAT_LABEL: Record<string, string> = { offline: '线下', online: '线上', hybrid: '线上 + 线下' };
+
+const activityData = foldI18n(activityContent.events, locale.value).map((ev) => ({
+  ...ev,
+  name: ev.title,
+  dates: expandDates(ev.start_date, ev.end_date),
+  address: ev.address,
+  type: 'activity',
+  activity_type: FORMAT_LABEL[ev.format] || '',
+  url: (ev.poster_image || ev.agenda_image) ? `/${locale.value}/interaction/event-list/detail/?id=${ev.id}` : '',
+}));
+
+const summitData = foldI18n(activityContent.summit ?? [], locale.value).map((ev) => ({
+  ...ev,
+  name: ev.title,
+  dates: expandDates(ev.start_date || '', ev.end_date || ''),
+  address: ev.address,
+  type: 'summit',
+  activity_type: FORMAT_LABEL[ev.format || ''] || '',
+  url: ev.id ? `/${locale.value}/interaction/summit-list/${ev.id}/` : '',
+}));
 
 const TODAY = dayjs(new Date()).format('YYYY-MM-DD');
 

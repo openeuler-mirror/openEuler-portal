@@ -1,268 +1,178 @@
 # 年度活动计划 / Year Plan
 #
-# 用于活动总览页（EventOverview.vue）时间轴部分。
-# 包含两个顶层字段：
-#   months    - 英文月份缩写数组，用于时间轴列头
-#   year_plan - 年度计划，zh / en 两份
-#
-# year_plan 分 5 类，每类包含：
-#   title / id / icon（图标名） / desc（可选）/ email（可选）
-#   events 按月份排列（1~12），有活动时含 actives 列表
-#     actives 字段：activeName（必填）、location（可选）、href/activelink（可选链接）
-#   college 类特殊：直接用 actives，每项有 startTime（开始月）和 duration（持续月数）
-#
-# icon 取值：opensource / developer / college / release
-# （在 EventOverview.vue 中映射为对应的 SVG 组件）
-#
-# 加新活动：在对应月份的 actives: 下新增一条，或者给已有月份加上 actives: 字段。
-# 申请 Meetup 流程（apply）为固定网站内容，见 ~@/data/event/apply.ts
+# 字段说明：
+#   id            类别标识
+#   title_zh/en   中英文标题
+#   icon          图标名：opensource | developer | college | release
+#   desc_zh/en    描述（可选）
+#   email         联系邮箱（可选）
+#   events        活动列表，只存有实际发生的活动
+#     name_zh/en      中英文活动名
+#     location_zh/en  中英文地点（普通类别）
+#     month           月份 1-12（前端按此定位时间轴列）
+#     start_month     起始月份（college 类替代 month）
+#     duration        持续月数（college 类）
+#     link            可选链接（college 类）
+#     deadline        截止日期（release 类替代 location）
 
-months:
-  - Jan
-  - Feb
-  - Mar
-  - Apr
-  - May
-  - Jun
-  - Jul
-  - Aug
-  - Sep
-  - Oct
-  - Nov
-  - Dec
+- id: opensource
+  title_zh: 国际开源会议
+  title_en: Open Source Summits
+  icon: opensource
+  desc_zh: '对开源会议有任何疑问或建议，请联系：'
+  desc_en: 'For any questions about open source summits, contact:'
+  email: marketing@openeuler.org
+  events:
+    - name_zh: FOSSASIA Summit 2026
+      name_en: FOSSASIA Summit 2026
+      location_zh: 泰国 曼谷
+      location_en: Bangkok, Thailand
+      month: 3
+    - name_zh: 开放原子开源生态大会2026
+      name_en: 2026 OpenAtom Open Source ECO-Conference
+      location_zh: 中国 北京
+      location_en: Beijing, China
+      month: 6
+    - name_zh: 2026亚洲香港科技及信息技术展
+      name_en: LEAP EAST 2026
+      location_zh: 中国 香港
+      location_en: Hong Kong, China
+      month: 7
+    - name_zh: KubeCON + CloudNativeCon China
+      name_en: KubeCON + CloudNativeCon China
+      location_zh: 中国 上海
+      location_en: Shanghai, China
+      month: 9
+    - name_zh: Data Centre World Asia
+      name_en: Data Centre World Asia
+      location_zh: 新加坡
+      location_en: Singapore
+      month: 9
+    - name_zh: Open Source Summit Europe 2026
+      name_en: Open Source Summit Europe 2026
+      location_zh: 捷克 布拉格
+      location_en: Prague, Czech Republic
+      month: 10
+    - name_zh: 操作系统大会 & openEuler Summit 2026
+      name_en: Operating System Conference & openEuler Summit 2026
+      location_zh: TBD
+      location_en: TBD
+      month: 11
+    - name_zh: GITEX Global
+      name_en: GITEX Global
+      location_zh: TBD
+      location_en: TBD
+      month: 12
+    - name_zh: 开放原子开源开发者大会 2026
+      name_en: The 2026 OpenAtom Developer Conference
+      location_zh: TBD
+      location_en: TBD
+      month: 12
 
-year_plan:
-  zh:
-    opensource:
-      title: 国际开源会议
-      id: opensource
-      icon: opensource
-      desc: 对开源会议有任何疑问或建议，请联系：
-      email: marketing@openeuler.org
-      events:
-        - month: '1'
-        - month: '2'
-        - month: '3'
-          actives:
-            - location: 泰国 曼谷
-              activeName: FOSSASIA Summit 2026
-              href: ''
-        - month: '4'
-        - month: '5'
-        - month: '6'
-          actives:
-            - location: 中国 北京
-              activeName: 开放原子开源生态大会2026
-        - month: '7'
-          actives:
-            - location: 中国 香港
-              activeName: 2026亚洲香港科技及信息技术展
-        - month: '8'
-        - month: '9'
-          actives:
-            - location: 中国 上海
-              activeName: KubeCON + CloudNativeCon China
-            - location: 新加坡
-              activeName: Data Centre World Asia
-        - month: '10'
-          actives:
-            - location: 捷克 布拉格
-              activeName: Open Source Summit Europe 2026
-        - month: '11'
-          actives:
-            - location: TBD
-              activeName: 操作系统大会 & openEuler Summit 2026
-        - month: '12'
-          actives:
-            - location: TBD
-              activeName: GITEX Global
-            - location: TBD
-              activeName: 开放原子开源开发者大会 2026
+- id: ecology
+  title_zh: 生态技术会议
+  title_en: Ecosystem Tech Conferences
+  icon: opensource
+  events:
+    - name_zh: KCD Beijing 2026
+      name_en: KCD Beijing 2026
+      location_zh: 中国 北京
+      location_en: Beijing, China
+      month: 3
+    - name_zh: openEuler Developer Day 2026
+      name_en: openEuler Developer Day 2026
+      location_zh: 中国 长沙
+      location_en: Changsha, China
+      month: 4
+    - name_zh: GOSIM China 2026
+      name_en: GOSIM China 2026
+      location_zh: 中国 深圳
+      location_en: Shenzhen, China
+      month: 10
+    - name_zh: CLK 2026
+      name_en: CLK 2026
+      location_zh: TBD
+      location_en: TBD
+      month: 11
 
-    ecology:
-      title: 生态技术会议
-      id: ecology
-      icon: opensource
-      events:
-        - month: '1'
-        - month: '2'
-        - month: '3'
-          actives:
-            - location: 中国 北京
-              activeName: KCD Beijing 2026
-        - month: '4'
-          actives:
-            - location: 中国 长沙
-              activeName: openEuler Developer Day 2026
-        - month: '5'
-        - month: '6'
-        - month: '7'
-        - month: '8'
-        - month: '9'
-        - month: '10'
-          actives:
-            - location: 中国 深圳
-              activeName: GOSIM China 2026
-        - month: '11'
-          actives:
-            - location: TBD
-              activeName: CLK 2026
-        - month: '12'
+- id: developer
+  title_zh: Call for X 开发者活动
+  title_en: Call for X Developer Events
+  icon: developer
+  desc_zh: '如果您想组织社区活动，参与议题分享，请联系：'
+  desc_en: 'If you want to organize community events or share topics, contact:'
+  email: events@openeuler.sh
+  events:
+    - name_zh: 灵衢互联工作会议Online
+      name_en: LingQu Interconnect Working Meeting Online
+      location_zh: Online
+      location_en: Online
+      month: 1
+    - name_zh: openEuler SBOM &Intelligence SIG Meetup成都站
+      name_en: openEuler SBOM & Intelligence SIG Meetup Chengdu
+      location_zh: 中国 成都
+      location_en: Chengdu, China
+      month: 4
+    - name_zh: openEuler社区云原生开源中间件Meetup-山东站
+      name_en: openEuler Cloud Native Middleware Meetup - Shandong
+      location_zh: 中国 青岛
+      location_en: Qingdao, China
+      month: 4
+    - name_zh: openEuler AI与操作系统融合创新 Meetup 北京站
+      name_en: openEuler AI & OS Innovation Meetup Beijing
+      location_zh: 中国 北京
+      location_en: Beijing, China
+      month: 5
+    - name_zh: openEuler社区云原生开源中间件Meetup-西安站
+      name_en: openEuler Cloud Native Middleware Meetup - Xi'an
+      location_zh: 中国 西安
+      location_en: Xi'an, China
+      month: 6
+    - name_zh: Free and Open Source Singapore & openEuler Meetup
+      name_en: Free and Open Source Singapore & openEuler Meetup
+      location_zh: 新加坡
+      location_en: Singapore
+      month: 6
 
-    developer:
-      title: Call for X 开发者活动
-      id: developer
-      icon: developer
-      desc: 如果您想组织社区活动，参与议题分享，请联系：
-      email: events@openeuler.sh
-      events:
-        - month: '1'
-          actives:
-            - location: Online
-              activeName: 灵衢互联工作会议Online
-        - month: '2'
-        - month: '3'
-        - month: '4'
-          actives:
-            - location: 中国 成都
-              activeName: openEuler SBOM &Intelligence SIG Meetup成都站
-            - location: 中国 青岛
-              activeName: openEuler社区云原生开源中间件Meetup-山东站
-        - month: '5'
-          actives:
-            - location: 中国 北京
-              activeName: openEuler AI与操作系统融合创新 Meetup 北京站
-        - month: '6'
-          actives:
-            - location: 中国 西安
-              activeName: openEuler社区云原生开源中间件Meetup-西安站
-            - location: 新加坡 
-              activeName: Free and Open Source Singapore & openEuler Meetup
-        - month: '7'
-        - month: '8'
-        - month: '9'
-        - month: '10'
-        - month: '11'
-        - month: '12'
+- id: college
+  title_zh: 赛事 & 高校
+  title_en: Competitions & Universities
+  icon: college
+  events:
+    - name_zh: 全年 开源实习
+      name_en: Year-round Open Source Internship
+      start_month: 1
+      duration: 12
+      link: /zh/internship/
+    - name_zh: 全年 开放原子校源行
+      name_en: Year-round OpenAtom Campus Tour
+      start_month: 1
+      duration: 12
+      link: https://xiaoyuanxing.openatom.cn/#/dashboard
+    - name_zh: 4月 - 11月 第六届开源之夏
+      name_en: Apr - Nov OSPP 2026
+      start_month: 4
+      duration: 8
+      link: https://summer-ospp.ac.cn/
+    - name_zh: 8月 - 10月 2026年度Hackthon软件难题挑战赛
+      name_en: Aug - Oct 2026 Hackathon Software Challenge
+      start_month: 8
+      duration: 3
 
-    college:
-      title: 赛事 & 高校
-      id: college
-      icon: college
-      actives:
-        - activeName: 全年 开源实习
-          startTime: 1
-          duration: 12
-          activelink: /zh/internship/
-        - activeName: 全年 开放原子校源行
-          startTime: 1
-          duration: 12
-          activelink: https://xiaoyuanxing.openatom.cn/#/dashboard
-        - activeName: 4月 - 11月 第六届开源之夏
-          activelink: https://summer-ospp.ac.cn/
-          startTime: 4
-          duration: 8
-        - activeName: 8月 - 10月 2026年度Hackthon软件难题挑战赛
-          startTime: 8
-          duration: 3
-
-    release:
-      title: 版本发布计划
-      id: release
-      icon: release
-      events:
-        - month: '1'
-        - month: '2'
-        - month: '3'
-        - month: '4'
-        - month: '5'
-        - month: '6'
-          actives:
-            - location: '6.30'
-              activeName: 24.03 LTS SP4
-        - month: '7'
-        - month: '8'
-        - month: '9'
-          actives:
-            - location: '9.30'
-              activeName: '26.09'
-        - month: '10'
-        - month: '11'
-        - month: '12'
-          actives:
-            - location: '12.30'
-              activeName: 24.03 LTS SP5
-
-  en:
-    opensource:
-      title: Open Source Summits
-      id: opensource
-      icon: opensource
-      events:
-        - month: '1'
-        - month: '2'
-        - month: '3'
-          actives:
-            - location: Bangkok, Thailand
-              activeName: FOSSASIA Summit 2026
-        - month: '4'
-        - month: '5'
-        - month: '6'
-          actives:
-            - location: Beijing, China
-              activeName: 2026 OpenAtom open source ECO-Conference
-        - month: '7'
-          actives:
-            - location: Hong Kong, China
-              activeName: LEAP EAST 2026
-        - month: '8'
-        - month: '9'
-          actives:
-            - location: Shanghai, China
-              activeName: KubeCON + CloudNativeCon China
-            - location: Singapore
-              activeName: Data Centre World Asia
-        - month: '10'
-          actives:
-            - location: Prague, Czech Republic
-              activeName: Open Source Summit Europe 2026
-        - month: '11'
-          actives:
-            - location: TBD
-              activeName: Operating System Conference &openEuler Summit 2026
-        - month: '12'
-          actives:
-            - location: TBD
-              activeName: GITEX Global
-            - location: TBD
-              activeName: The 2026 OpenAtom Developer Conference
-
-    ecology:
-      title: Ecosystem Tech Conferences
-      id: ecology
-      icon: opensource
-      events:
-        - month: '1'
-        - month: '2'
-        - month: '3'
-          actives:
-            - location: Beijing, China
-              activeName: KCD Beijing 2026
-        - month: '4'
-          actives:
-            - location: Changsha, China
-              activeName: openEuler Developer Day 2026
-        - month: '5'
-        - month: '6'
-        - month: '7'
-        - month: '8'
-        - month: '9'
-        - month: '10'
-          actives:
-            - location: Shenzhen,China
-              activeName: GOSIM China 2026
-        - month: '11'
-          actives:
-            - location: TBD
-              activeName: CLK 2026
-        - month: '12'
+- id: release
+  title_zh: 版本发布计划
+  title_en: Release Plan
+  icon: release
+  events:
+    - name_zh: 24.03 LTS SP4
+      name_en: 24.03 LTS SP4
+      deadline: '6.30'
+      month: 6
+    - name_zh: '26.09'
+      name_en: '26.09'
+      deadline: '9.30'
+      month: 9
+    - name_zh: 24.03 LTS SP5
+      name_en: 24.03 LTS SP5
+      deadline: '12.30'
+      month: 12

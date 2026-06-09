@@ -1,48 +1,48 @@
-# 峰会日历数据 / Summit Calendar
+# 峰会数据 / Summit Entities
 #
-# 用于首页日历（HomeCalendar.vue）高亮显示峰会日期。
-# 只有填写了 dates 字段的条目才会在日历上显示蓝色高亮。
-#
-# 加新峰会：在末尾复制一个块，填写 name / url / dates / start_date / end_date / address
-# dates 是数组，支持多天峰会写多个日期
+# 字段说明：
+#   id            唯一键，前端拼接 /summit-list/${id}/
+#   title_zh/en   中英文标题
+#   start_date    开始日期 YYYY-MM-DD（可选）
+#   end_date      结束日期（可选）
+#   address_zh/en 地址（可选）
+#   format        offline | online | hybrid（可选）
 
-- name: openEuler Summit 2024
-  url: /zh/interaction/summit-list/summit2024/
-  dates:
-    - '2024-11-15'
-    - '2024-11-16'
-  address: 北京中关村国际创新中心
-  start_date: '2024-11-15'
-  end_date: '2024-11-16'
-  activity_type: 线上 + 线下
-  type: summit
-
-- name: openEuler Developer Day 2025
-  url: /zh/interaction/summit-list/devday2025/
-  dates:
-    - '2025-04-11'
-  address: 杭州萧山万怡酒店
-  start_date: '2025-04-11'
-  end_date: '2025-04-11'
-  activity_type: 线上 + 线下
-  type: summit
-
-- name: openEuler Summit 2025
-  url: /zh/interaction/summit-list/summit2025/
-  dates:
-    - '2025-11-14'
-    - '2025-11-15'
-  address: 北京中关村国际创新中心
+- id: summit2025
+  title_zh: openEuler Summit 2025
+  title_en: openEuler Summit 2025
   start_date: '2025-11-14'
   end_date: '2025-11-15'
-  activity_type: 线上 + 线下
-  type: summit
+  address_zh: 北京中关村国际创新中心
+  address_en: Beijing Zhongguancun International Innovation Center
+  format: hybrid
 
-- name: openEuler Summit 2023
-  url: /zh/interaction/summit-list/summit2023/
+- id: devday2025
+  title_zh: openEuler Developer Day 2025
+  title_en: openEuler Developer Day 2025
+  start_date: '2025-04-11'
+  end_date: '2025-04-11'
+  address_zh: 杭州萧山万怡酒店
+  address_en: Courtyard by Marriott, Xiaoshan, Hangzhou
+  format: hybrid
 
-- name: openEuler Developer Day 2023
-  url: /zh/interaction/summit-list/devday2023/
+- id: summit2024
+  title_zh: openEuler Summit 2024
+  title_en: openEuler Summit 2024
+  start_date: '2024-11-15'
+  end_date: '2024-11-16'
+  address_zh: 北京中关村国际创新中心
+  address_en: Beijing Zhongguancun International Innovation Center
+  format: hybrid
 
-- name: openEuler Summit 2022
-  url: /zh/interaction/summit-list/summit2022/
+- id: summit2023
+  title_zh: openEuler Summit 2023
+  title_en: openEuler Summit 2023
+
+- id: devday2023
+  title_zh: openEuler Developer Day 2023
+  title_en: openEuler Developer Day 2023
+
+- id: summit2022
+  title_zh: openEuler Summit 2022
+  title_en: openEuler Summit 2022

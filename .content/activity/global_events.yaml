@@ -1,0 +1,82 @@
+# 全球活动回顾 / Global Event Reviews
+#
+# 英文专属数据，仅在英文页面展示。
+#
+# 字段说明：
+#   title_en      英文标题
+#   date          活动日期 YYYY-MM-DD
+#   location_en   英文地点
+#   cover         封面图 ./images/<文件名>
+#   videos        视频链接数组
+#     platform    平台名称（YouTube / Bilibili）
+#     url         视频链接
+
+- title_en: 'OpenChain Workshop 2024 -  openEuler Case Studies'
+  date: '2024-03-18'
+  location_en: Japan
+  cover: ./images/openChain.jpg
+  videos:
+    - platform: YouTube
+      url: 'https://www.youtube.com/watch?v=-T-rryofyQY&list=TLPQMjYwMzIwMjQO5Inws8Rlvw&index=1'
+    - platform: Bilibili
+      url: 'https://www.bilibili.com/video/BV1c6421c7qx/?spm_id_from=333.999.0.0'
+
+- title_en: openEuler Global Ecosystem Collaboration Workshop 2024
+  date: '2024-02-27'
+  location_en: Spain
+  cover: ./images/openEuler-Global-Ecosystem.jpg
+  videos:
+    - platform: YouTube
+      url: 'https://www.youtube.com/watch?v=DFQ1-u11uqg&list=PLtDfk9jvMAzgu0w75z2k2u-n9XkrWCDVC'
+    - platform: Bilibili
+      url: 'https://www.bilibili.com/video/BV1w2421N7u9/?spm_id_from=333.999.0.0&vd_source=544d9ea25c0bc3a2570734b5b21104be'
+
+- title_en: OSSUMMIT EU 2023
+  date: '2023-09-19'
+  location_en: Spain
+  cover: ./images/OSSUMMIT-2023.jpg
+  videos:
+    - platform: YouTube
+      url: 'https://www.youtube.com/watch?v=X84l-20gH4Q&list=PLtDfk9jvMAzhsDa0-zbTdg6J2QyE5Aorj'
+    - platform: Bilibili
+      url: 'https://www.bilibili.com/video/BV181421U7Fd/?spm_id_from=333.999.0.0&vd_source=544d9ea25c0bc3a2570734b5b21104be'
+
+- title_en: 'openEuler Meetup - Container Runtime: The Future of Sandbox'
+  date: '2023-05-31'
+  location_en: Online
+  cover: ./images/container-runtime.jpg
+  videos:
+    - platform: YouTube
+      url: 'https://youtu.be/oR-J7VcnMqs'
+    - platform: Bilibili
+      url: 'https://www.bilibili.com/video/BV1wu411x7av/?spm_id_from=333.999.0.0&vd_source=544d9ea25c0bc3a2570734b5b21104be'
+
+- title_en: FOSSASIA Summit 2023
+  date: '2023-04-13'
+  location_en: Singapore
+  cover: ./images/FOSSASIA-Summit-2023.jpg
+  videos:
+    - platform: YouTube
+      url: 'https://www.youtube.com/watch?v=RDJlVS-Bfdc&list=PLtDfk9jvMAzga2P1SuhecZEIRDrRweN7U'
+    - platform: Bilibili
+      url: 'https://www.bilibili.com/video/BV1PV4y1f7xh/?vd_source=544d9ea25c0bc3a2570734b5b21104be'
+
+- title_en: 'openEuler Techday -  Leap into the future with the openEuler RISC-V SIG'
+  date: '2023-04-10'
+  location_en: Online
+  cover: ./images/openEuler-Techday.jpg
+  videos:
+    - platform: YouTube
+      url: 'https://youtu.be/ehAik7Svmtk?feature=shared'
+    - platform: Bilibili
+      url: 'https://www.bilibili.com/video/BV1Kh411j75z/?share_source=copy_web&vd_source=7c02f229a33e65d52ccf5d366ed5dd3f'
+
+- title_en: openEuler Embedded Meetup
+  date: '2023-02-28'
+  location_en: Online
+  cover: ./images/embedded.jpg
+  videos:
+    - platform: YouTube
+      url: 'https://youtu.be/YNq5kFMTGGM'
+    - platform: Bilibili
+      url: 'https://www.bilibili.com/video/BV1pM41147FC/?share_source=copy_web&vd_source=7c02f229a33e65d52ccf5d366ed5dd3f'

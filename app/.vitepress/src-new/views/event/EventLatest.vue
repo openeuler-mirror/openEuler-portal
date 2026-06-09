@@ -22,13 +22,11 @@ import AppSection from '~@/components/AppSection.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';
 
 import activityContent from '#content/activity';
+import { foldI18n } from '~@/shared/content';
+import { EVENT_SERIES, EVENT_STATUS } from '~@/data/event/filters';
 
-const _filters = activityContent.filters as { series: { value: string | number; label: string; label_en: string }[]; state: { value: number; label: string; label_en: string }[] };
-const _meetups = activityContent.meetups as { zh: any[]; en: any[] };
-
-const EventSeries = new Map(_filters.series.map((s) => [s.value, { value: s.value, label: { zh: s.label, en: s.label_en } }]));
-const EventState = new Map(_filters.state.map((s) => [s.value, { value: s.value, label: { zh: s.label, en: s.label_en } }]));
-const MEETUP_DATA = _meetups;
+const EventSeries = new Map(EVENT_SERIES.map((s) => [s.value, { value: s.value, label: { zh: s.label_zh, en: s.label_en } }]));
+const EventState = new Map(EVENT_STATUS.map((s) => [s.value, { value: s.value, label: { zh: s.label_zh, en: s.label_en } }]));
 
 import { useDebounceSearch } from '~@/composables/useDebounceSearch';
 
@@ -89,7 +87,7 @@ EventState.forEach((item) => {
 const clearCheckedState = (checked: boolean) => {
   if (checked) {
     setTimeout(() => {
-      params.state = 0;
+      params.state = '';
     });
   }
 };
@@ -112,7 +110,7 @@ const debounceSearch = computed({
 const params = reactive({
   series: '',
   keyword: '',
-  state: 0,
+  state: '',
   currentPage: 1,
   pageSize: 12,
 });
@@ -125,25 +123,22 @@ const latestList = ref<any>([]);
 const currentList = ref<any>([]);
 
 const activityList = () => {
-  latestList.value = MEETUP_DATA[locale.value];
-  // 活动系列
+  latestList.value = foldI18n(activityContent.events, locale.value).filter((item) => item.poster_image);
   const seriesList = latestList.value.filter((item) => {
     if (params.series) {
       return item.series === params.series;
     }
     return item;
   });
-  // 活动状态
   const stateList = seriesList.filter((item) => {
     if (params.state) {
-      return item.activity_type === params.state;
+      return item.status === params.state;
     }
     return item;
   });
-  // 搜索
   const seachList = stateList.filter(
     (item) =>
-      item.title.includes(params.keyword) || item.city.includes(params.keyword)
+      (item.title || '').includes(params.keyword) || (item.city || '').includes(params.keyword)
   );
   currentList.value = seachList.slice((params.currentPage - 1) * params.pageSize, params.currentPage * params.pageSize);
   total.value = seachList?.length;
@@ -177,18 +172,14 @@ const onPaginationChange = (val: { page: number; pageSize: number }) => {
 };
 
 // 精彩回顾下展示列表
-const goDetail = (item: {
-  id: number;
-  windowOpen: string;
-  isAdditional: boolean;
-}) => {
-  if (item.windowOpen) {
-    window.open(item.windowOpen);
+const goDetail = (item: { id: number; review_url?: string }) => {
+  if (item.review_url) {
+    window.open(item.review_url);
   } else {
     router.go(
       '/' +
         locale.value +
-        `/interaction/event-list/detail/?id=${item.id}&isAdditional=true`
+        `/interaction/event-list/detail/?id=${item.id}`
     );
   }
 };
@@ -196,11 +187,11 @@ const goDetail = (item: {
 // -------------------- 移动端 --------------------
 const filterVisible = ref(false);
 const seriesValue = ref('');
-const stateValue = ref(0);
+const stateValue = ref('');
 
 const handleReset = () => {
   params.series = '';
-  params.state = 0;
+  params.state = '';
   filterVisible.value = false;
 };
 const handleConfirm = () => {
@@ -312,7 +303,7 @@ const handleConfirm = () => {
           <template #cover>
             <OFigure
               hoverable
-              :src="lePadV ? item.posterImgMb : item.posterImg"
+              :src="lePadV ? item.poster_image_mb : item.poster_image"
             >
               <div class="tags">
                 <OTag v-if="item?.series" class="series-tag">
@@ -323,11 +314,11 @@ const handleConfirm = () => {
                 </OTag>
 
                 <OTag
-                  v-if="item?.activity_type"
-                  :class="{ 'tag-ongoing': item?.activity_type === 2 }"
+                  v-if="item?.status"
+                  :class="{ 'tag-ongoing': item?.status === 'ongoing' }"
                 >
                   <span class="tag-text">
-                    {{ EventState.get(item?.activity_type)?.label[locale] }}
+                    {{ EventState.get(item?.status)?.label[locale] }}
                   </span>
                 </OTag>
               </div>
@@ -335,7 +326,7 @@ const handleConfirm = () => {
                 <p v-dompurify-html="item.title" class="title"></p>
                 <div class="card-bottom">
                   <p class="date">
-                    {{ changeTimeStamp(new Date(item.date.substring(0, 10))) }}
+                    {{ changeTimeStamp(new Date(item.start_date.substring(0, 10))) }}
                   </p>
                   <ODivider v-if="lePadV" direction="v" class="divider-mb" />
                   <p class="city">{{ item.city }}</p>
