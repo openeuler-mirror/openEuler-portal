@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun",
+    "@id": "https://www.openeuler.org/zh/showcase/others/tiexinyun",
+    "url": "https://www.openeuler.org/zh/showcase/others/tiexinyun",
     "name": "铁信云 | openEuler社区",
     "description": "铁信云自主创新平台建设自主创新云平台助力铁信业务系统稳定运行",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "铁信云",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun"
+          "item": "https://www.openeuler.org/zh/showcase/others/tiexinyun"
         }
       ]
     }
@@ -48,15 +48,15 @@
     "@type": "Article",
     "headline": "铁信云自主创新平台建设",
     "description": "铁信云自主创新平台建设自主创新云平台助力铁信业务系统稳定运行",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun",
+    "url": "https://www.openeuler.org/zh/showcase/others/tiexinyun",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "about": [
@@ -73,7 +73,7 @@
     ],
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun"
+      "@id": "https://www.openeuler.org/zh/showcase/others/tiexinyun"
     }
   },
   {
@@ -81,7 +81,7 @@
     "@type": "TechArticle",
     "headline": "铁信云自主创新平台解决方案",
     "description": "铁信云自主创新云平台解决方案，包含基础硬件、网络平面、云平台、操作系统、数据库、中间件及业务系统的完整技术栈",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun",
+    "url": "https://www.openeuler.org/zh/showcase/others/tiexinyun",
     "inLanguage": "zh",
     "proficiencyLevel": "Expert",
     "articleSection": "用户案例",
@@ -89,11 +89,11 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/tiexinyun"
+      "@id": "https://www.openeuler.org/zh/showcase/others/tiexinyun"
     }
   }
 ]

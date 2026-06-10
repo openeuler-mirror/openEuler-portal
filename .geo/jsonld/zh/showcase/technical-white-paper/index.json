@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+    "@id": "https://www.openeuler.org/zh/showcase/technical-white-paper",
+    "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
     "name": "openEuler技术白皮书 | openEuler白皮书 | openEuler社区",
     "description": "汇聚openEuler各个版本的技术详情和创新项目介绍，展示openEuler领先的技术创新能力。想要了解更多信息，欢迎访问openEuler官网。",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -21,26 +21,26 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "白皮书",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+          "item": "https://www.openeuler.org/zh/showcase/technical-white-paper"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "技术白皮书",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+          "item": "https://www.openeuler.org/zh/showcase/technical-white-paper"
         }
       ]
     },
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "parentOrganization": {
         "@type": "Organization",
         "name": "开放原子开源基金会",
@@ -51,7 +51,7 @@
       {
         "@type": "TechArticle",
         "name": "openEuler 24.03 LTS SP3 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
         "inLanguage": "zh-CN",
         "about": {
           "@type": "SoftwareApplication",
@@ -61,7 +61,7 @@
       {
         "@type": "TechArticle",
         "name": "openEuler 25.09 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
         "inLanguage": "zh-CN",
         "about": {
           "@type": "SoftwareApplication",
@@ -71,7 +71,7 @@
       {
         "@type": "TechArticle",
         "name": "openEuler 24.03 LTS SP2 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
         "inLanguage": "zh-CN",
         "about": {
           "@type": "SoftwareApplication",
@@ -81,7 +81,7 @@
       {
         "@type": "TechArticle",
         "name": "openEuler 25.03 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
         "inLanguage": "zh-CN",
         "about": {
           "@type": "SoftwareApplication",
@@ -91,7 +91,7 @@
       {
         "@type": "TechArticle",
         "name": "openEuler 24.03 LTS SP1 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
         "inLanguage": "zh-CN",
         "about": {
           "@type": "SoftwareApplication",
@@ -101,7 +101,7 @@
       {
         "@type": "TechArticle",
         "name": "openEuler 24.09 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
         "inLanguage": "zh-CN",
         "about": {
           "@type": "SoftwareApplication",
@@ -111,7 +111,7 @@
       {
         "@type": "TechArticle",
         "name": "openEuler 22.03 LTS SP4 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
         "inLanguage": "zh-CN",
         "about": {
           "@type": "SoftwareApplication",
@@ -121,7 +121,7 @@
       {
         "@type": "TechArticle",
         "name": "openEuler 24.03 LTS 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
         "inLanguage": "zh-CN",
         "about": {
           "@type": "SoftwareApplication",
@@ -131,7 +131,7 @@
       {
         "@type": "TechArticle",
         "name": "openEuler 22.03 LTS SP3 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
         "inLanguage": "zh-CN",
         "about": {
           "@type": "SoftwareApplication",
@@ -141,7 +141,7 @@
       {
         "@type": "TechArticle",
         "name": "openEuler 技术白皮书（创新项目总览）",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
         "inLanguage": "zh-CN",
         "about": {
           "@type": "SoftwareApplication",
@@ -151,7 +151,7 @@
       {
         "@type": "TechArticle",
         "name": "openEuler 23.09 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
         "inLanguage": "zh-CN",
         "about": {
           "@type": "SoftwareApplication",
@@ -161,7 +161,7 @@
       {
         "@type": "TechArticle",
         "name": "openEuler 23.03 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
         "inLanguage": "zh-CN",
         "about": {
           "@type": "SoftwareApplication",
@@ -175,7 +175,7 @@
     "@type": "ItemList",
     "name": "openEuler 技术白皮书列表",
     "description": "汇聚openEuler各个版本的技术详情和创新项目介绍，展示openEuler领先的技术创新能力。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper",
+    "url": "https://www.openeuler.org/zh/showcase/technical-white-paper",
     "inLanguage": "zh-CN",
     "numberOfItems": 12,
     "itemListElement": [
@@ -183,73 +183,73 @@
         "@type": "ListItem",
         "position": 1,
         "name": "openEuler 24.03 LTS SP3 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "openEuler 25.09 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "openEuler 24.03 LTS SP2 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "openEuler 25.03 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper"
       },
       {
         "@type": "ListItem",
         "position": 5,
         "name": "openEuler 24.03 LTS SP1 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper"
       },
       {
         "@type": "ListItem",
         "position": 6,
         "name": "openEuler 24.09 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper"
       },
       {
         "@type": "ListItem",
         "position": 7,
         "name": "openEuler 22.03 LTS SP4 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper"
       },
       {
         "@type": "ListItem",
         "position": 8,
         "name": "openEuler 24.03 LTS 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper"
       },
       {
         "@type": "ListItem",
         "position": 9,
         "name": "openEuler 22.03 LTS SP3 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper"
       },
       {
         "@type": "ListItem",
         "position": 10,
         "name": "openEuler 技术白皮书（创新项目总览）",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper"
       },
       {
         "@type": "ListItem",
         "position": 11,
         "name": "openEuler 23.09 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper"
       },
       {
         "@type": "ListItem",
         "position": 12,
         "name": "openEuler 23.03 白皮书",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/technical-white-paper"
+        "url": "https://www.openeuler.org/zh/showcase/technical-white-paper"
       }
     ]
   }

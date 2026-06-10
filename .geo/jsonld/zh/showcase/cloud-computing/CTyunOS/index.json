@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "天翼云科技有限公司 | openEuler社区",
     "description": "基于 openEuler 打造CTyunOS，服务电信集团云改数转战略，助力数字经济发展",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/CTyunOS",
+    "url": "https://www.openeuler.org/zh/showcase/cloud-computing/CTyunOS",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "展示案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "云计算",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/"
+          "item": "https://www.openeuler.org/zh/showcase/cloud-computing/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "天翼云科技有限公司",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/CTyunOS"
+          "item": "https://www.openeuler.org/zh/showcase/cloud-computing/CTyunOS"
         }
       ]
     },
@@ -46,7 +46,7 @@
       "description": "天翼云基于 openEuler 推出的自研操作系统，针对云计算场景进行深度优化，对 CPU 调度、内存管理、I/O、进程管理等核心模块进行专项优化，具备高性能、高可靠、强安全、易扩展等关键特征，支持多业务场景和多样性算力的异构统一调度。",
       "operatingSystem": "openEuler LTS 20.03 SP1",
       "applicationCategory": "OperatingSystem",
-      "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/CTyunOS",
+      "url": "https://www.openeuler.org/zh/showcase/cloud-computing/CTyunOS",
       "provider": {
         "@type": "Organization",
         "name": "天翼云科技有限公司",

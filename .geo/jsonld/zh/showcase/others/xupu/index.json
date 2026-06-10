@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/xupu",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/xupu",
+    "@id": "https://www.openeuler.org/zh/showcase/others/xupu",
+    "url": "https://www.openeuler.org/zh/showcase/others/xupu",
     "name": "旭普实景三维时空数据运营系统 | openEuler社区",
     "description": "三维数据加载渲染提高24.75%，多图层空间分析性能提升34.17%、百万级矢量数据性能提升21.75%。",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -44,25 +44,25 @@
         "@type": "ListItem",
         "position": 1,
         "name": "首页",
-        "item": "https://www.openeuler.openatom.cn/zh/"
+        "item": "https://www.openeuler.org/zh/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "用户案例",
-        "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+        "item": "https://www.openeuler.org/zh/showcase/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "其他",
-        "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+        "item": "https://www.openeuler.org/zh/showcase/others/"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "旭普实景三维时空数据运营系统",
-        "item": "https://www.openeuler.openatom.cn/zh/showcase/others/xupu"
+        "item": "https://www.openeuler.org/zh/showcase/others/xupu"
       }
     ]
   }

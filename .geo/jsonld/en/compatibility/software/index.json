@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "Software Compatibility | openEuler",
     "description": "Enhance your project's efficiency by exploring compatibility options for software within the openEuler ecosystem.",
-    "url": "https://www.openeuler.openatom.cn/en/compatibility/software",
+    "url": "https://www.openeuler.org/en/compatibility/software",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Compatibility",
-          "item": "https://www.openeuler.openatom.cn/en/compatibility/"
+          "item": "https://www.openeuler.org/en/compatibility/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Software Compatibility",
-          "item": "https://www.openeuler.openatom.cn/en/compatibility/software"
+          "item": "https://www.openeuler.org/en/compatibility/software"
         }
       ]
     }
@@ -40,7 +40,7 @@
     "@type": "HowTo",
     "name": "openEuler Software Compatibility Test Process",
     "description": "openEuler provides a series of tools, documents, and operation procedures to help you test the compatibility between openEuler and software.",
-    "url": "https://www.openeuler.openatom.cn/en/compatibility/software",
+    "url": "https://www.openeuler.org/en/compatibility/software",
     "step": [
       {
         "@type": "HowToStep",

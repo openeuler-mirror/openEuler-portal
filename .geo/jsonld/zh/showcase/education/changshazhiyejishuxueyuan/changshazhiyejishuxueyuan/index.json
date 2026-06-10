@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "长沙职业技术学院 | openEuler社区",
     "description": "麒麟信安服务器操作系统在长沙职业技术学院成功部署，优化学校的管理、教学等信息服务",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/changshazhiyejishuxueyuan/changshazhiyejishuxueyuan.html",
+    "url": "https://www.openeuler.org/zh/showcase/education/changshazhiyejishuxueyuan/changshazhiyejishuxueyuan.html",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "教育",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/"
+          "item": "https://www.openeuler.org/zh/showcase/education/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "长沙职业技术学院",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/changshazhiyejishuxueyuan/changshazhiyejishuxueyuan.html"
+          "item": "https://www.openeuler.org/zh/showcase/education/changshazhiyejishuxueyuan/changshazhiyejishuxueyuan.html"
         }
       ]
     }
@@ -46,15 +46,15 @@
     "@type": "Article",
     "headline": "长沙职业技术学院 | openEuler社区",
     "description": "麒麟信安服务器操作系统在长沙职业技术学院成功部署，优化学校的管理、教学等信息服务",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/changshazhiyejishuxueyuan/changshazhiyejishuxueyuan.html",
+    "url": "https://www.openeuler.org/zh/showcase/education/changshazhiyejishuxueyuan/changshazhiyejishuxueyuan.html",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "about": {
@@ -74,7 +74,7 @@
         "@type": "SoftwareApplication",
         "name": "openEuler",
         "applicationCategory": "操作系统",
-        "url": "https://www.openeuler.openatom.cn",
+        "url": "https://www.openeuler.org",
         "operatingSystem": "Linux"
       }
     ],

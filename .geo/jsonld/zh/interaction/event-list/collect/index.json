@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/interaction/event-list/collect",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/event-list/collect",
+    "@id": "https://www.openeuler.org/zh/interaction/event-list/collect",
+    "url": "https://www.openeuler.org/zh/interaction/event-list/collect",
     "name": "活动收集 | 社区活动 | openEuler社区",
     "description": "收集openEuler社区的各类活动信息，获取更多参与机会。",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -21,19 +21,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "社区活动",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/event-list/"
+          "item": "https://www.openeuler.org/zh/interaction/event-list/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "活动收集",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/event-list/collect"
+          "item": "https://www.openeuler.org/zh/interaction/event-list/collect"
         }
       ]
     }
@@ -44,14 +44,14 @@
     "name": "如何申请举办 openEuler Meetup",
     "description": "在所在城市申请举办 openEuler Meetup 社区开发者活动的完整流程，包括申请、审核、赋能支持、活动举办及成果反馈。",
     "inLanguage": "zh-CN",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/event-list/collect",
+    "url": "https://www.openeuler.org/zh/interaction/event-list/collect",
     "step": [
       {
         "@type": "HowToStep",
         "position": 1,
         "name": "提交申请",
         "text": "如果您有兴趣在所在城市举办 openEuler Meetup，在举办社区开发者活动前，需要在申请页面提交申请。",
-        "url": "https://www.openeuler.openatom.cn/zh/interaction/event-list/meetup-form/"
+        "url": "https://www.openeuler.org/zh/interaction/event-list/meetup-form/"
       },
       {
         "@type": "HowToStep",
@@ -82,7 +82,7 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/event-list/collect",
+    "url": "https://www.openeuler.org/zh/interaction/event-list/collect",
     "inLanguage": "zh-CN",
     "mainEntity": [
       {
@@ -90,7 +90,7 @@
         "name": "如何申请举办 openEuler Meetup？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "如果您有兴趣在所在城市举办 openEuler Meetup，在举办社区开发者活动前，需要在申请页面（https://www.openeuler.openatom.cn/zh/interaction/event-list/meetup-form/）提交申请。"
+          "text": "如果您有兴趣在所在城市举办 openEuler Meetup，在举办社区开发者活动前，需要在申请页面（https://www.openeuler.org/zh/interaction/event-list/meetup-form/）提交申请。"
         }
       },
       {

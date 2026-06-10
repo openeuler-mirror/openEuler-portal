@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/community/contribution/detail",
-    "url": "https://www.openeuler.openatom.cn/zh/community/contribution/detail",
+    "@id": "https://www.openeuler.org/zh/community/contribution/detail",
+    "url": "https://www.openeuler.org/zh/community/contribution/detail",
     "name": "openEuler贡献攻略文字版",
     "description": "阅读这篇完整指南，快速了解参与openEuler社区贡献全流程。我们将介绍关于社区贡献的完整流程，包括签署CLA、项目体验、提交issue、提交pr、代码贡献、活动申请、开源成长等等。",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "社区",
-          "item": "https://www.openeuler.openatom.cn/zh/community/"
+          "item": "https://www.openeuler.org/zh/community/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "贡献攻略",
-          "item": "https://www.openeuler.openatom.cn/zh/community/contribution/"
+          "item": "https://www.openeuler.org/zh/community/contribution/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "贡献攻略文字版",
-          "item": "https://www.openeuler.openatom.cn/zh/community/contribution/detail"
+          "item": "https://www.openeuler.org/zh/community/contribution/detail"
         }
       ]
     },
@@ -50,7 +50,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     }
   },
   {
@@ -103,6 +103,6 @@
       "value": "0"
     },
     "inLanguage": "zh-CN",
-    "url": "https://www.openeuler.openatom.cn/zh/community/contribution/detail"
+    "url": "https://www.openeuler.org/zh/community/contribution/detail"
   }
 ]

@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/education/huanan",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/huanan",
+    "@id": "https://www.openeuler.org/zh/showcase/education/huanan",
+    "url": "https://www.openeuler.org/zh/showcase/education/huanan",
     "name": "华南理工大学 | openEuler社区",
     "description": "华南理工异构计算平台并行加速解决方案：依托openEuler，推动AI创新发展",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh"
     },
@@ -21,25 +21,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "教育",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/"
+          "item": "https://www.openeuler.org/zh/showcase/education/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "华南理工大学",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/huanan"
+          "item": "https://www.openeuler.org/zh/showcase/education/huanan"
         }
       ]
     },
@@ -52,7 +52,7 @@
       {
         "@type": "Thing",
         "name": "openEuler操作系统",
-        "url": "https://www.openeuler.openatom.cn/zh/"
+        "url": "https://www.openeuler.org/zh/"
       },
       {
         "@type": "Thing",
@@ -78,15 +78,15 @@
     "@type": "Article",
     "headline": "华南理工大学异构计算平台并行加速解决方案：依托openEuler推动AI创新发展",
     "description": "华南理工大学基于"鲲鹏+昇腾+FusionOS"打造异构计算平台并行加速解决方案，使异构并行高性能计算平台更高效、更好用，实现AI算力底座基础上的应用从国外平台计算生态上迁移到openEuler国产主流的计算平台。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/huanan",
+    "url": "https://www.openeuler.org/zh/showcase/education/huanan",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/assets/logo.png"
+        "url": "https://www.openeuler.org/img/for-cdn/logo.png"
       }
     },
     "author": {
@@ -99,7 +99,7 @@
       "name": "openEuler",
       "operatingSystem": "Linux",
       "applicationCategory": "OperatingSystem",
-      "url": "https://www.openeuler.openatom.cn/zh/"
+      "url": "https://www.openeuler.org/zh/"
     },
     "articleBody": "华南理工大学基于"鲲鹏+昇腾+FusionOS"打造异构计算平台并行加速解决方案，使异构并行高性能计算平台更高效、更好用。在构建异构计算平台的并行加速解决方案的过程中，陆璐教授领导的团队从仿真模型的构建、算力平台的优化、操作系统层面的改进、到网络环境的优化，全方位地提升了异构计算平台的性能。华南理工异构计算平台并行加速解决方案基于主流计算平台进行并行加速，包含应用层、加速层、组件层、算力层、基础软件层、硬件层，实现了"鲲鹏＋昇腾"异构平台搭建以及计算仿真模型资源评估；核心算子库（GEMM、FFT等）优化；HPL、HPL-AI基准测试平台搭建和优化；经过优化后的算子库性能提升了50%。"
   },
@@ -108,7 +108,7 @@
     "@type": "ResearchProject",
     "name": "华南理工大学异构计算平台并行加速解决方案",
     "description": "基于"鲲鹏+昇腾+FusionOS"打造的异构计算平台并行加速解决方案，涵盖加速层、组件层和性能优化，实现AI算力底座基础上的应用从国外平台迁移到openEuler国产主流计算平台。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/huanan",
+    "url": "https://www.openeuler.org/zh/showcase/education/huanan",
     "member": {
       "@type": "Person",
       "name": "陆璐",

@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/tianhe",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/tianhe",
+    "@id": "https://www.openeuler.org/zh/showcase/cloud-computing/tianhe",
+    "url": "https://www.openeuler.org/zh/showcase/cloud-computing/tianhe",
     "name": "XSKY星辰天合公司 | openEuler社区",
     "description": "天合翔宇系列鲲鹏计算型存储解决方案一体机",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "成功案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "云计算",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/"
+          "item": "https://www.openeuler.org/zh/showcase/cloud-computing/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "XSKY星辰天合公司",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/tianhe"
+          "item": "https://www.openeuler.org/zh/showcase/cloud-computing/tianhe"
         }
       ]
     }
@@ -48,12 +48,12 @@
     "@type": "TechArticle",
     "headline": "XSKY星辰天合公司天合翔宇分布式存储解决方案",
     "description": "天合翔宇分布式存储系统是XSKY星辰天合公司面向信创生态的企业级软件定义存储产品，基于openEuler及鲲鹏算法优化，实现读写性能提升10%以上，为大规模信创云环境提供可靠的存储基础架构支撑。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/tianhe",
+    "url": "https://www.openeuler.org/zh/showcase/cloud-computing/tianhe",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "about": [
       {
@@ -76,7 +76,7 @@
     "mentions": {
       "@type": "Organization",
       "name": "XSKY星辰天合公司",
-      "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/tianhe"
+      "url": "https://www.openeuler.org/zh/showcase/cloud-computing/tianhe"
     }
   },
   {
@@ -84,7 +84,7 @@
     "@type": "ItemList",
     "name": "天合翔宇分布式存储解决方案特性",
     "description": "XSKY星辰天合天合翔宇分布式存储系统核心解决方案特性列表",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/tianhe",
+    "url": "https://www.openeuler.org/zh/showcase/cloud-computing/tianhe",
     "numberOfItems": 4,
     "itemListElement": [
       {

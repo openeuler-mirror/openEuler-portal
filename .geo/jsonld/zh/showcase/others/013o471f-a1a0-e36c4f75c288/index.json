@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "江西省医保局 | openEuler社区",
     "description": "江西省医保局云平台建设项目",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/013o471f-a1a0-e36c4f75c288",
+    "url": "https://www.openeuler.org/zh/showcase/others/013o471f-a1a0-e36c4f75c288",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "江西省医保局",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/013o471f-a1a0-e36c4f75c288"
+          "item": "https://www.openeuler.org/zh/showcase/others/013o471f-a1a0-e36c4f75c288"
         }
       ]
     }
@@ -46,15 +46,15 @@
     "@type": "Article",
     "headline": "江西省医保局云平台建设项目",
     "description": "江西省医保局云平台建设项目，采用银河麒麟高级服务器操作系统 V10，在阿里云和华为云上部署，推进医保信息平台国产化改造。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/013o471f-a1a0-e36c4f75c288",
+    "url": "https://www.openeuler.org/zh/showcase/others/013o471f-a1a0-e36c4f75c288",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "about": [
@@ -85,11 +85,11 @@
     "@type": "CaseStudy",
     "name": "江西省医保局云平台建设项目",
     "description": "国家医疗保障局在国家发改委总立项，江西省医保局云平台采购 1000 台服务器，部署银河麒麟高级服务器操作系统 V10，支撑医保相关业务系统稳定运行，推进医保云国产化改造和医疗行业应用国产化。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/013o471f-a1a0-e36c4f75c288",
+    "url": "https://www.openeuler.org/zh/showcase/others/013o471f-a1a0-e36c4f75c288",
     "provider": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "customer": {
       "@type": "GovernmentOrganization",

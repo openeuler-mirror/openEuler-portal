@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "云原生一体化运维工具（NKD） | NestOS | openEuler | openEuler社区",
     "description": "nestos-kubernetes-deployer（NKD）是基于 NestOS 部署 Kubernetes 集群运维而准备的解决方案。",
-    "url": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/feature/nkd/",
+    "url": "https://www.openeuler.org/zh/other/projects/nestos/feature/nkd/",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "NestOS",
-          "item": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/"
+          "item": "https://www.openeuler.org/zh/other/projects/nestos/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "云原生一体化运维工具（NKD）",
-          "item": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/feature/nkd/"
+          "item": "https://www.openeuler.org/zh/other/projects/nestos/feature/nkd/"
         }
       ]
     }
@@ -40,7 +40,7 @@
     "@type": "SoftwareApplication",
     "name": "nestos-kubernetes-deployer（NKD）",
     "description": "NKD 是基于 NestOS 部署 Kubernetes 集群运维而准备的解决方案，为云原生环境提供一体化的运维管理能力。",
-    "url": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/feature/nkd/",
+    "url": "https://www.openeuler.org/zh/other/projects/nestos/feature/nkd/",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "NestOS",
     "featureList": [

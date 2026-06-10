@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/zhihui",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zhihui",
+    "@id": "https://www.openeuler.org/zh/showcase/others/zhihui",
+    "url": "https://www.openeuler.org/zh/showcase/others/zhihui",
     "name": "智慧检务统一业务系统 | openEuler社区",
     "description": "智慧检务统一业务系统平滑完成操作系统迁移提供安全可信、稳定可靠运行环境",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "成功案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "智慧检务统一业务系统",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/zhihui"
+          "item": "https://www.openeuler.org/zh/showcase/others/zhihui"
         }
       ]
     }
@@ -46,23 +46,23 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/zhihui#article",
+    "@id": "https://www.openeuler.org/zh/showcase/others/zhihui#article",
     "headline": "智慧检务统一业务系统",
     "description": "智慧检务统一业务系统平滑完成操作系统迁移提供安全可信、稳定可靠运行环境",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zhihui",
+    "url": "https://www.openeuler.org/zh/showcase/others/zhihui",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/zhihui"
+      "@id": "https://www.openeuler.org/zh/showcase/others/zhihui"
     },
     "articleSection": "成功案例",
     "about": [
@@ -81,12 +81,12 @@
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/zhihui#software",
+    "@id": "https://www.openeuler.org/zh/showcase/others/zhihui#software",
     "name": "智慧检务统一业务系统",
     "description": "基于创新技术的检察统一业务2.0系统，在全面兼容统一业务应用系统1.0所积累数据的基础上建设，包括操作系统、数据库、身份认证、电子印(签)章、域名跨网交换、协同办案、即时通讯等功能模块。",
     "applicationCategory": "GovernmentApplication",
     "operatingSystem": "银河麒麟高级服务器操作系统 V10",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zhihui",
+    "url": "https://www.openeuler.org/zh/showcase/others/zhihui",
     "featureList": [
       "基于ARM技术路线，银河麒麟高级服务器操作系统V10作为云平台Guest OS支持业务系统运行",
       "结合鲲鹏CPU建立安全创新软硬件平台，适配多款新型GPU",
@@ -97,7 +97,7 @@
     "provider": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     }
   }
 ]

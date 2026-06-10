@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/showcase/others/013o471f-a1a0-e36c4f75c288",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/others/013o471f-a1a0-e36c4f75c288",
+    "@id": "https://www.openeuler.org/en/showcase/others/013o471f-a1a0-e36c4f75c288",
+    "url": "https://www.openeuler.org/en/showcase/others/013o471f-a1a0-e36c4f75c288",
     "name": "Jiangxi Province Healthcare Security Administration | openEuler",
     "description": "Jiangxi Province Healthcare Security Administration deployed Galaxy Kylin Advanced Server Operating System V10 on Alibaba Cloud and Huawei Cloud to improve independent innovation capabilities, supporting medical insurance cloud platforms and healthcare industry applications.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Showcase",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/"
+          "item": "https://www.openeuler.org/en/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Others",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/others/"
+          "item": "https://www.openeuler.org/en/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "Jiangxi Province Healthcare Security Administration",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/others/013o471f-a1a0-e36c4f75c288"
+          "item": "https://www.openeuler.org/en/showcase/others/013o471f-a1a0-e36c4f75c288"
         }
       ]
     }
@@ -46,10 +46,10 @@
   {
     "@context": "https://schema.org",
     "@type": "CaseStudy",
-    "@id": "https://www.openeuler.openatom.cn/en/showcase/others/013o471f-a1a0-e36c4f75c288#casestudy",
+    "@id": "https://www.openeuler.org/en/showcase/others/013o471f-a1a0-e36c4f75c288#casestudy",
     "name": "Jiangxi Province Healthcare Security Administration Cloud Platform Project",
     "description": "Jiangxi Province Healthcare Security Administration deployed Galaxy Kylin Advanced Server Operating System V10 on Alibaba Cloud and Huawei Cloud to improve independent innovation capabilities, deploying 1,000 servers to support stable operation of medical insurance systems.",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/others/013o471f-a1a0-e36c4f75c288",
+    "url": "https://www.openeuler.org/en/showcase/others/013o471f-a1a0-e36c4f75c288",
     "about": {
       "@type": "Organization",
       "name": "Jiangxi Province Healthcare Security Administration",
@@ -58,7 +58,7 @@
     "provider": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "mentions": [
       {

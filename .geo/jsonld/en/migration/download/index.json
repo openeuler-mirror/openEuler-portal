@@ -3,7 +3,7 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "x2openEuler",
-    "url": "https://www.openeuler.openatom.cn/en/migration/download",
+    "url": "https://www.openeuler.org/en/migration/download",
     "description": "x2openEuler is a migration tool that streamlines the move of source OSs to openEuler. To negate the manual and inaccurate operations of conventional methods, an easy-to-use UI lets you perform in-place upgrade of OSs in batches. You can batch add nodes to be upgraded for analysis, planning, and compatibility tests. Then batch upgrade the adapted nodes to achieve an end-to-end seamless migration.",
     "applicationCategory": "SystemUtilitiesApplication",
     "operatingSystem": "Linux",
@@ -13,13 +13,13 @@
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock"
     },
-    "downloadUrl": "https://www.openeuler.openatom.cn/en/migration/download",
+    "downloadUrl": "https://www.openeuler.org/en/migration/download",
     "softwareVersion": "3.0.0-2024930",
-    "releaseNotes": "https://www.openeuler.openatom.cn/en/migration/download",
+    "releaseNotes": "https://www.openeuler.org/en/migration/download",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "featureList": [
       "In-place upgrade of OSs in batches",
@@ -32,13 +32,13 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Download x2openEuler for Easy Migration | openEuler",
-    "url": "https://www.openeuler.openatom.cn/en/migration/download",
+    "url": "https://www.openeuler.org/en/migration/download",
     "description": "Get the x2openEuler migration tool to perform in-place upgrade of OSs in batches.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -47,19 +47,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Migration Center",
-          "item": "https://www.openeuler.openatom.cn/en/migration/"
+          "item": "https://www.openeuler.org/en/migration/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Download x2openEuler",
-          "item": "https://www.openeuler.openatom.cn/en/migration/download"
+          "item": "https://www.openeuler.org/en/migration/download"
         }
       ]
     }
@@ -69,37 +69,37 @@
     "@type": "ItemList",
     "name": "x2openEuler Software Versions",
     "description": "Available versions of x2openEuler migration tool for download",
-    "url": "https://www.openeuler.openatom.cn/en/migration/download",
+    "url": "https://www.openeuler.org/en/migration/download",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "name": "x2openEuler 3.0.0-2024930",
-        "url": "https://www.openeuler.openatom.cn/en/migration/download"
+        "url": "https://www.openeuler.org/en/migration/download"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "x2openEuler 3.0.0-2024630",
-        "url": "https://www.openeuler.openatom.cn/en/migration/download"
+        "url": "https://www.openeuler.org/en/migration/download"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "x2openEuler 3.0.0-20231230",
-        "url": "https://www.openeuler.openatom.cn/en/migration/download"
+        "url": "https://www.openeuler.org/en/migration/download"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "x2openEuler 3.0.0-2023930",
-        "url": "https://www.openeuler.openatom.cn/en/migration/download"
+        "url": "https://www.openeuler.org/en/migration/download"
       },
       {
         "@type": "ListItem",
         "position": 5,
         "name": "x2openEuler 3.0.0-2023630",
-        "url": "https://www.openeuler.openatom.cn/en/migration/download"
+        "url": "https://www.openeuler.org/en/migration/download"
       }
     ]
   }

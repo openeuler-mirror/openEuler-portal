@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/yunshang",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/yunshang",
+    "@id": "https://www.openeuler.org/zh/showcase/others/yunshang",
+    "url": "https://www.openeuler.org/zh/showcase/others/yunshang",
     "name": "云上贵州智能运维平台 | openEuler社区",
     "description": "云上贵州智能运维平台，性能提升75%，提供涵盖云、网、端全面的运维保障服务",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh"
     },
@@ -21,25 +21,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "云上贵州智能运维平台",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/yunshang"
+          "item": "https://www.openeuler.org/zh/showcase/others/yunshang"
         }
       ]
     },
@@ -61,15 +61,15 @@
     "@type": "TechArticle",
     "headline": "云上贵州智能运维平台",
     "description": "云上贵州智能运维平台，性能提升75%，提供涵盖云、网、端全面的运维保障服务",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/yunshang",
+    "url": "https://www.openeuler.org/zh/showcase/others/yunshang",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "about": [

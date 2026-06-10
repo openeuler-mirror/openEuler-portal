@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/migration",
-    "url": "https://www.openeuler.openatom.cn/en/migration",
+    "@id": "https://www.openeuler.org/en/migration",
+    "url": "https://www.openeuler.org/en/migration",
     "name": "Migrate to openEuler | openEuler",
     "description": "Discover seamless OS migration with openEuler and elevate your system's performance and security.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler"
     },
     "breadcrumb": {
@@ -20,13 +20,13 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Migration Center",
-          "item": "https://www.openeuler.openatom.cn/en/migration"
+          "item": "https://www.openeuler.org/en/migration"
         }
       ]
     }
@@ -39,8 +39,8 @@
     "applicationCategory": "SystemApplication",
     "operatingSystem": ["x86_64", "AArch64"],
     "description": "The x2openEuler migration tool suite helps you prepare, perform, and test your OS migration and services.",
-    "url": "https://www.openeuler.openatom.cn/en/migration",
-    "downloadUrl": "https://www.openeuler.openatom.cn/en/migration",
+    "url": "https://www.openeuler.org/en/migration",
+    "downloadUrl": "https://www.openeuler.org/en/migration",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -49,7 +49,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     }
   },
   {
@@ -57,7 +57,7 @@
     "@type": "HowTo",
     "name": "Six Steps to Migrate to openEuler",
     "description": "A comprehensive end-to-end guide for migrating your operating system to openEuler, covering preparation, implementation, and testing.",
-    "url": "https://www.openeuler.openatom.cn/en/migration",
+    "url": "https://www.openeuler.org/en/migration",
     "step": [
       {
         "@type": "HowToStep",

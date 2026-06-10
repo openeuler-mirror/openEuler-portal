@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/xingwang",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/xingwang",
+    "@id": "https://www.openeuler.org/zh/showcase/others/xingwang",
+    "url": "https://www.openeuler.org/zh/showcase/others/xingwang",
     "name": "深圳星网信通科技股份有限公司 | openEuler社区",
     "description": "基于openEuler部署可靠、高质量的音视频融合通信系统，实现全灾种统一指挥、全链条有效覆盖、全过程综合管理",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -21,25 +21,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "深圳星网信通科技股份有限公司",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/xingwang"
+          "item": "https://www.openeuler.org/zh/showcase/others/xingwang"
         }
       ]
     }
@@ -47,18 +47,18 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/xingwang#article",
+    "@id": "https://www.openeuler.org/zh/showcase/others/xingwang#article",
     "headline": "深圳星网信通科技股份有限公司基于openEuler的音视频融合通信解决方案",
     "description": "基于openEuler部署可靠、高质量的音视频融合通信系统，实现全灾种统一指挥、全链条有效覆盖、全过程综合管理",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/xingwang",
+    "url": "https://www.openeuler.org/zh/showcase/others/xingwang",
     "inLanguage": "zh-CN",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "about": [
@@ -86,7 +86,7 @@
     "@type": "Organization",
     "name": "深圳星网信通科技股份有限公司",
     "description": "专注音视频融合通信软件开发和系统集成18年，秉承"咨询为先导、产品为依托、服务为核心"的业务模式，致力于成为融合通信行业龙头，为政府、金融、电力、能源、互联网、公共事业、大企业等客户提供融合通信整体解决方案以及综合性IT解决方案。",
-    "logo": "https://www.openeuler.openatom.cn/zh/showcase/others/xingwang/logo.png",
+    "logo": "https://www.openeuler.org/zh/showcase/others/xingwang/logo.png",
     "knowsAbout": [
       "音视频融合通信",
       "系统集成",

@@ -3,7 +3,7 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "StratoVirt",
-    "url": "https://www.openeuler.openatom.cn/zh/other/projects/stratovirt",
+    "url": "https://www.openeuler.org/zh/other/projects/stratovirt",
     "description": "StratoVirt是面向云数据中心的企业级虚拟化VMM (Virtual Machine Monitor)，实现一套架构对虚拟机、容器、Serverless三种场景的统一支持。在轻量低噪、软硬协同、Rust语言级安全等方面具备关键技术竞争优势。",
     "applicationCategory": "Virtualization",
     "operatingSystem": "Linux",
@@ -19,28 +19,28 @@
     "isPartOf": {
       "@type": "SoftwareApplication",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "softwareVersion": "latest",
     "programmingLanguage": "Rust",
-    "license": "https://www.openeuler.openatom.cn/zh/other/projects/stratovirt"
+    "license": "https://www.openeuler.org/zh/other/projects/stratovirt"
   },
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "StratoVirt | 数据中心企业级虚拟化 | openEuler社区",
-    "url": "https://www.openeuler.openatom.cn/zh/other/projects/stratovirt",
+    "url": "https://www.openeuler.org/zh/other/projects/stratovirt",
     "description": "StratoVirt是面向云数据中心的企业级虚拟化VMM (Virtual Machine Monitor)，实现一套架构对虚拟机、容器、Serverless三种场景的统一支持。在轻量低噪、软硬协同、Rust语言级安全等方面具备关键技术竞争优势。想要了解更多信息，欢迎访问openEuler官网。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -49,19 +49,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler",
-          "item": "https://www.openeuler.openatom.cn/"
+          "item": "https://www.openeuler.org/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "其他项目",
-          "item": "https://www.openeuler.openatom.cn/zh/other/projects/"
+          "item": "https://www.openeuler.org/zh/other/projects/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "StratoVirt",
-          "item": "https://www.openeuler.openatom.cn/zh/other/projects/stratovirt"
+          "item": "https://www.openeuler.org/zh/other/projects/stratovirt"
         }
       ]
     }
@@ -70,7 +70,7 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "StratoVirt",
-    "url": "https://www.openeuler.openatom.cn/zh/other/projects/stratovirt",
+    "url": "https://www.openeuler.org/zh/other/projects/stratovirt",
     "description": "StratoVirt是面向云数据中心的企业级虚拟化VMM (Virtual Machine Monitor)，实现一套架构对虚拟机、容器、Serverless三种场景的统一支持。在轻量低噪、软硬协同、Rust语言级安全等方面具备关键技术竞争优势。",
     "applicationCategory": "Virtualization",
     "operatingSystem": "Linux",
@@ -86,28 +86,28 @@
     "isPartOf": {
       "@type": "SoftwareApplication",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "softwareVersion": "latest",
     "programmingLanguage": "Rust",
-    "license": "https://www.openeuler.openatom.cn/zh/other/projects/stratovirt"
+    "license": "https://www.openeuler.org/zh/other/projects/stratovirt"
   },
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "StratoVirt | 数据中心企业级虚拟化 | openEuler社区",
-    "url": "https://www.openeuler.openatom.cn/zh/other/projects/stratovirt",
+    "url": "https://www.openeuler.org/zh/other/projects/stratovirt",
     "description": "StratoVirt是面向云数据中心的企业级虚拟化VMM (Virtual Machine Monitor)，实现一套架构对虚拟机、容器、Serverless三种场景的统一支持。在轻量低噪、软硬协同、Rust语言级安全等方面具备关键技术竞争优势。想要了解更多信息，欢迎访问openEuler官网。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -116,19 +116,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler",
-          "item": "https://www.openeuler.openatom.cn/"
+          "item": "https://www.openeuler.org/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "其他项目",
-          "item": "https://www.openeuler.openatom.cn/zh/other/projects/"
+          "item": "https://www.openeuler.org/zh/other/projects/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "StratoVirt",
-          "item": "https://www.openeuler.openatom.cn/zh/other/projects/stratovirt"
+          "item": "https://www.openeuler.org/zh/other/projects/stratovirt"
         }
       ]
     }

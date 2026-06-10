@@ -2,19 +2,19 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/xingye",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/xingye",
+    "@id": "https://www.openeuler.org/zh/showcase/finance/xingye",
+    "url": "https://www.openeuler.org/zh/showcase/finance/xingye",
     "name": "兴业银行 | openEuler社区",
     "description": "超聚变和厦门大学助力兴业银行构建智慧金融隐私计算平台，助力信用卡业务精准营销",
     "inLanguage": "zh-CN",
-    "isPartOf": {"@type": "WebSite", "@id": "https://www.openeuler.openatom.cn/", "url": "https://www.openeuler.openatom.cn/", "name": "openEuler社区"},
+    "isPartOf": {"@type": "WebSite", "@id": "https://www.openeuler.org/", "url": "https://www.openeuler.org/", "name": "openEuler社区"},
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "openEuler", "item": "https://www.openeuler.openatom.cn/zh/"},
-        {"@type": "ListItem", "position": 2, "name": "用户案例", "item": "https://www.openeuler.openatom.cn/zh/showcase/"},
-        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"},
-        {"@type": "ListItem", "position": 4, "name": "兴业银行", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/xingye"}
+        {"@type": "ListItem", "position": 1, "name": "openEuler", "item": "https://www.openeuler.org/zh/"},
+        {"@type": "ListItem", "position": 2, "name": "用户案例", "item": "https://www.openeuler.org/zh/showcase/"},
+        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.org/zh/showcase/finance/"},
+        {"@type": "ListItem", "position": 4, "name": "兴业银行", "item": "https://www.openeuler.org/zh/showcase/finance/xingye"}
       ]
     }
   },
@@ -23,9 +23,9 @@
     "@type": "Article",
     "headline": "兴业银行：超聚变与厦门大学联合打造智慧金融隐私计算平台",
     "description": "超聚变和厦门大学助力兴业银行构建智慧金融隐私计算平台，助力信用卡业务精准营销",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/xingye",
+    "url": "https://www.openeuler.org/zh/showcase/finance/xingye",
     "inLanguage": "zh-CN",
-    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn/", "logo": {"@type": "ImageObject", "url": "https://www.openeuler.openatom.cn/logo.png"}},
+    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.org/", "logo": {"@type": "ImageObject", "url": "https://www.openeuler.org/logo.png"}},
     "about": [
       {"@type": "Thing", "name": "隐私计算"},
       {"@type": "Thing", "name": "机密计算"},
@@ -37,13 +37,13 @@
       {"@type": "Organization", "name": "超聚变数字技术有限公司", "description": "提供FusionOS操作系统、FusionServer服务器、FusionDB数据库等全链路可信解决方案"},
       {"@type": "Organization", "name": "厦门大学", "description": "提供先进的算法模型及科研能力"}
     ],
-    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/xingye"}
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.openeuler.org/zh/showcase/finance/xingye"}
   },
   {
     "@context": "https://schema.org",
     "@type": "CaseStudy",
     "name": "兴业银行智慧金融隐私计算平台",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/xingye",
+    "url": "https://www.openeuler.org/zh/showcase/finance/xingye",
     "description": "兴业银行与超聚变数字技术有限公司、厦门大学携手，联合打造软硬结合的全链路可信隐私计算一体机方案，共同打造智慧金融隐私计算平台，赋能信用卡精准营销业务。",
     "provider": {"@type": "Organization", "name": "超聚变数字技术有限公司"},
     "about": {"@type": "Organization", "name": "兴业银行", "industry": "金融"},

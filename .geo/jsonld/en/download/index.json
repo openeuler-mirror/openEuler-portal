@@ -7,13 +7,13 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.openeuler.openatom.cn/en/"
+        "item": "https://www.openeuler.org/en/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Download",
-        "item": "https://www.openeuler.openatom.cn/en/download/"
+        "item": "https://www.openeuler.org/en/download/"
       }
     ]
   },
@@ -31,12 +31,12 @@
       "availability": "https://schema.org/InStock",
       "description": "Free and open source Linux distribution"
     },
-    "downloadUrl": "https://www.openeuler.openatom.cn/en/download/",
+    "downloadUrl": "https://www.openeuler.org/en/download/",
     "license": "https://license.coscl.org.cn/MulanPSL2",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler Community",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "featureList": [
       "Long Term Support (LTS) versions",
@@ -59,28 +59,28 @@
         "position": 1,
         "name": "openEuler 24.03 LTS SP3 Long-Term Supported Version",
         "description": "Planned EOL: 2027/12. Built on Linux Kernel 6.6, introduces support for UnifiedBus SuperPoD architecture. Engineered for server, cloud, and AI workloads.",
-        "url": "https://www.openeuler.openatom.cn/en/download/"
+        "url": "https://www.openeuler.org/en/download/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "openEuler 24.03 LTS SP2 Long-Term Supported Version",
         "description": "Planned EOL: 2026/03. Built on Linux kernel 6.6, suited for server, cloud, edge, and embedded deployments.",
-        "url": "https://www.openeuler.openatom.cn/en/download/"
+        "url": "https://www.openeuler.org/en/download/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "openEuler 24.03 LTS SP1 Long-Term Supported Version",
         "description": "Planned EOL: 2026/12. Based on 6.6 kernel, designed for server, cloud, edge computing, and embedded deployments.",
-        "url": "https://www.openeuler.openatom.cn/en/download/"
+        "url": "https://www.openeuler.org/en/download/"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "openEuler Embedded 26.03",
         "description": "Based on full-stack IB-Robot embodied intelligence architecture. Provides embodied claw for autonomous precise control, ROS 2 Driver for sensors, MoveIt 2 planning support, YAML-configurable robot with one-click simulation/physical deployment switching.",
-        "url": "https://www.openeuler.openatom.cn/en/download/"
+        "url": "https://www.openeuler.org/en/download/"
       }
     ]
   },

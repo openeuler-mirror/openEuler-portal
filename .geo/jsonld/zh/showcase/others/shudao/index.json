@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/shudao",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/shudao",
+    "@id": "https://www.openeuler.org/zh/showcase/others/shudao",
+    "url": "https://www.openeuler.org/zh/showcase/others/shudao",
     "name": "蜀道集团高速公路 ETC 门架系统自主创新建设项目 | openEuler社区",
     "description": "蜀道集团高速公路 ETC 门架系统自主创新建设项目，基于飞腾CPU与银河麒麟服务器操作系统，成功实现高速公路ETC门架系统软硬件自主创新改造，打破Windows系统长期垄断局面。",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -21,19 +21,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "蜀道集团高速公路 ETC 门架系统自主创新建设项目",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/shudao"
+          "item": "https://www.openeuler.org/zh/showcase/others/shudao"
         }
       ]
     }
@@ -43,15 +43,15 @@
     "@type": "Article",
     "headline": "蜀道集团高速公路 ETC 门架系统自主创新建设项目",
     "description": "蜀道集团高速公路 ETC 门架系统自主创新建设项目，采用飞腾CPU与银河麒麟高级服务器操作系统V10，成功上线ETC门架业务系统，实现软硬件自主创新改造。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/shudao",
+    "url": "https://www.openeuler.org/zh/showcase/others/shudao",
     "inLanguage": "zh-CN",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "about": [

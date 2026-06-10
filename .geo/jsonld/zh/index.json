@@ -4,8 +4,8 @@
     "@type": "Organization",
     "name": "openEuler社区",
     "alternateName": "openEuler",
-    "url": "https://www.openeuler.openatom.cn/zh/",
-    "logo": "https://www.openeuler.openatom.cn/assets/logo.XeUCiAZu.svg",
+    "url": "https://www.openeuler.org/zh/",
+    "logo": "https://www.openeuler.org/img/for-cdn/logo.png",
     "description": "openEuler是一个开源、免费的 Linux 发行版平台，通过开放的形式与全球的开发者共同构建一个开放、多元和架构包容的软件生态体系。",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -32,13 +32,9 @@
     },
     "description": "面向数字基础设施的开源操作系统，支持服务器、云计算、边缘计算、嵌入式四大场景，支持ARM、x86、RISC-V、LoongArch、PowerPC、SW-64六种处理器架构。",
     "softwareVersion": "24.03 LTS SP3",
-    "releaseNotes": "https://www.openeuler.openatom.cn/zh/",
-    "downloadUrl": "https://www.openeuler.openatom.cn/zh/download/",
+    "releaseNotes": "https://www.openeuler.org/zh/interaction/summit-list/2403-version-release/",
+    "downloadUrl": "https://www.openeuler.org/zh/download/",
     "license": "https://license.coscl.org.cn/MulanPSL2",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "description": "中国服务器操作系统市场占有率 36.8%（2023年）"
-    },
     "featureList": [
       "支持多样性设备",
       "全量组件原子化，构建服务自助化",
@@ -46,18 +42,6 @@
       "一次开发，覆盖数字基础设施全场景",
       "完整开发工具链",
       "统一API跨多设备调用"
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "首页",
-        "item": "https://www.openeuler.openatom.cn/zh/"
-      }
     ]
   }
 ]

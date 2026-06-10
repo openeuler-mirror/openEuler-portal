@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/",
-    "url": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/",
+    "@id": "https://www.openeuler.org/zh/other/projects/nestos/",
+    "url": "https://www.openeuler.org/zh/other/projects/nestos/",
     "name": "NestOS | 云底座操作系统 | openEuler社区",
     "description": "NestOS 是基于欧拉开源操作系统的云底座操作系统，整合了 NestOS For Container 和 NestOS For Virt 两种模式，旨在满足云场景中容器化和虚拟化的多样需求，提供最佳的容器主机和虚拟化解决方案。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh"
     },
@@ -21,13 +21,13 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "NestOS",
-          "item": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/"
+          "item": "https://www.openeuler.org/zh/other/projects/nestos/"
         }
       ]
     }
@@ -40,17 +40,17 @@
     "description": "NestOS 是基于欧拉开源操作系统的云底座操作系统，整合了 NestOS For Container 和 NestOS For Virt 两种模式，旨在满足云场景中容器化和虚拟化的多样需求，提供最佳的容器主机和虚拟化解决方案。",
     "applicationCategory": "OperatingSystem",
     "operatingSystem": "Linux",
-    "url": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/",
-    "downloadUrl": "https://www.openeuler.openatom.cn/zh/other/projects/nestos/",
+    "url": "https://www.openeuler.org/zh/other/projects/nestos/",
+    "downloadUrl": "https://www.openeuler.org/zh/other/projects/nestos/",
     "isBasedOn": {
       "@type": "SoftwareApplication",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "featureList": [
       "双根文件系统，原子化更新",

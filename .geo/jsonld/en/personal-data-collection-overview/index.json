@@ -4,17 +4,17 @@
     "@type": "WebPage",
     "name": "Personal Data & Privacy Collection Overview | openEuler",
     "description": "Learn how openEuler collects and protects your personal data across account, forum, and other services, with full transparency and security compliance.",
-    "url": "https://www.openeuler.openatom.cn/en/personal-data-collection-overview",
+    "url": "https://www.openeuler.org/en/personal-data-collection-overview",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "publisher": {
       "@type": "Organization",
       "name": "OpenAtom Foundation",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": {
       "@type": "Thing",
@@ -27,13 +27,13 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Personal Data Collection Overview",
-          "item": "https://www.openeuler.openatom.cn/en/personal-data-collection-overview"
+          "item": "https://www.openeuler.org/en/personal-data-collection-overview"
         }
       ]
     }
@@ -41,7 +41,7 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "url": "https://www.openeuler.openatom.cn/en/personal-data-collection-overview",
+    "url": "https://www.openeuler.org/en/personal-data-collection-overview",
     "mainEntity": [
       {
         "@type": "Question",

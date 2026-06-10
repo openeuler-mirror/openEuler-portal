@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "openEuler课程中心 | openEuler社区",
     "description": "提供openEuler社区各类学习资源。帮助开发者更好地了解openEuler，学习开源操作系统知识，提升自身技能。想要了解更多信息，欢迎访问openEuler官网。",
-    "url": "https://www.openeuler.openatom.cn/zh/learn/mooc",
+    "url": "https://www.openeuler.org/zh/learn/mooc",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "学习",
-          "item": "https://www.openeuler.openatom.cn/zh/learn/"
+          "item": "https://www.openeuler.org/zh/learn/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "课程中心",
-          "item": "https://www.openeuler.openatom.cn/zh/learn/mooc"
+          "item": "https://www.openeuler.org/zh/learn/mooc"
         }
       ]
     }
@@ -40,7 +40,7 @@
     "@type": "ItemList",
     "name": "openEuler课程中心",
     "description": "提供openEuler社区各类学习资源，包括认证培训课程、精品课程、视频教程、直播课程及安全知识培训。",
-    "url": "https://www.openeuler.openatom.cn/zh/learn/mooc",
+    "url": "https://www.openeuler.org/zh/learn/mooc",
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -49,11 +49,11 @@
           "@type": "Course",
           "name": "HCIA-openEuler 认证培训课程",
           "description": "欢迎学习HCIA-openEuler华为认证openEuler工程师在线课程。",
-          "url": "https://www.openeuler.openatom.cn/zh/learn/mooc",
+          "url": "https://www.openeuler.org/zh/learn/mooc",
           "provider": {
             "@type": "Organization",
             "name": "openEuler社区",
-            "url": "https://www.openeuler.openatom.cn"
+            "url": "https://www.openeuler.org"
           },
           "courseMode": "online",
           "inLanguage": "zh"
@@ -66,11 +66,11 @@
           "@type": "Course",
           "name": "openEuler精品课程",
           "description": "开源基础软件学习培训",
-          "url": "https://www.openeuler.openatom.cn/zh/learn/mooc",
+          "url": "https://www.openeuler.org/zh/learn/mooc",
           "provider": {
             "@type": "Organization",
             "name": "openEuler社区",
-            "url": "https://www.openeuler.openatom.cn"
+            "url": "https://www.openeuler.org"
           },
           "courseMode": "online",
           "inLanguage": "zh"
@@ -83,11 +83,11 @@
           "@type": "Course",
           "name": "Tutorials",
           "description": "openEuler官方出品的迷你视频课程",
-          "url": "https://www.openeuler.openatom.cn/zh/learn/mooc",
+          "url": "https://www.openeuler.org/zh/learn/mooc",
           "provider": {
             "@type": "Organization",
             "name": "openEuler社区",
-            "url": "https://www.openeuler.openatom.cn"
+            "url": "https://www.openeuler.org"
           },
           "courseMode": "online",
           "inLanguage": "zh"
@@ -100,11 +100,11 @@
           "@type": "Course",
           "name": "openEuler直播",
           "description": "众多大咖精彩课程直播",
-          "url": "https://www.openeuler.openatom.cn/zh/learn/mooc",
+          "url": "https://www.openeuler.org/zh/learn/mooc",
           "provider": {
             "@type": "Organization",
             "name": "openEuler社区",
-            "url": "https://www.openeuler.openatom.cn"
+            "url": "https://www.openeuler.org"
           },
           "courseMode": "online",
           "inLanguage": "zh"
@@ -117,11 +117,11 @@
           "@type": "Course",
           "name": "openEuler安全知识培训",
           "description": "openEuler基础安全意识与能力培训",
-          "url": "https://www.openeuler.openatom.cn/zh/learn/mooc",
+          "url": "https://www.openeuler.org/zh/learn/mooc",
           "provider": {
             "@type": "Organization",
             "name": "openEuler社区",
-            "url": "https://www.openeuler.openatom.cn"
+            "url": "https://www.openeuler.org"
           },
           "courseMode": "online",
           "inLanguage": "zh"

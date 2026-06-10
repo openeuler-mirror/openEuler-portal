@@ -5,7 +5,7 @@
       "@type": "SoftwareApplication",
       "name": "UB Service Core",
       "alternateName": "UBS",
-      "url": "https://www.openeuler.openatom.cn/en/projects/ub-service-core",
+      "url": "https://www.openeuler.org/en/projects/ub-service-core",
       "description": "UB Service Core delivers five open-source cluster-level services for UnifiedBus SuperPoDs, boosting app performance 30-50% with peer-to-peer architecture.",
       "applicationCategory": "SystemApplication",
       "operatingSystem": "Linux",
@@ -25,12 +25,12 @@
       "isPartOf": {
         "@type": "SoftwareApplication",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       "publisher": {
         "@type": "Organization",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       "license": "https://opensource.org/licenses",
       "softwareVersion": "Open Source",
@@ -79,18 +79,18 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "UB Service Core: Cluster Services for SuperPoDs | openEuler",
-      "url": "https://www.openeuler.openatom.cn/en/projects/ub-service-core",
+      "url": "https://www.openeuler.org/en/projects/ub-service-core",
       "description": "UB Service Core delivers five open-source cluster-level services for UnifiedBus SuperPoDs, boosting app performance 30-50% with peer-to-peer architecture.",
       "inLanguage": "en",
       "isPartOf": {
         "@type": "WebSite",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       "about": {
         "@type": "SoftwareApplication",
         "name": "UB Service Core",
-        "url": "https://www.openeuler.openatom.cn/en/projects/ub-service-core"
+        "url": "https://www.openeuler.org/en/projects/ub-service-core"
       },
       "breadcrumb": {
         "@type": "BreadcrumbList",
@@ -99,19 +99,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "openEuler",
-            "item": "https://www.openeuler.openatom.cn/en/"
+            "item": "https://www.openeuler.org/en/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Projects",
-            "item": "https://www.openeuler.openatom.cn/en/projects/"
+            "item": "https://www.openeuler.org/en/projects/"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "UB Service Core",
-            "item": "https://www.openeuler.openatom.cn/en/projects/ub-service-core"
+            "item": "https://www.openeuler.org/en/projects/ub-service-core"
           }
         ]
       }

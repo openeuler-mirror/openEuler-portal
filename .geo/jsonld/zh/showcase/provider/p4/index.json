@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "联通智能化运营平台 | openEuler社区",
     "description": "构建全栈自主创新的基础设施服务层",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/p4",
+    "url": "https://www.openeuler.org/zh/showcase/provider/p4",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "案例展示",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "联通智能化运营平台",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/provider/p4"
+          "item": "https://www.openeuler.org/zh/showcase/provider/p4"
         }
       ]
     },
@@ -50,7 +50,7 @@
       "provider": {
         "@type": "Organization",
         "name": "联通系统集成公司",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/p4"
+        "url": "https://www.openeuler.org/zh/showcase/provider/p4"
       }
     }
   },
@@ -59,15 +59,15 @@
     "@type": "TechArticle",
     "headline": "联通智能化运营平台 — 全栈自主创新基础设施解决方案",
     "description": "联通系统集成公司采用飞腾服务器与银河麒麟高级服务器操作系统V10技术路线，构建全栈自主创新的基础设施服务层，实现联通智能化运营平台的自主创新适配与稳定运行。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/p4",
+    "url": "https://www.openeuler.org/zh/showcase/provider/p4",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "articleSection": "案例展示",

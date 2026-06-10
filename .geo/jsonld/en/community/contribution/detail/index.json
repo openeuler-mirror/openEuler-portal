@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/community/contribution/detail",
-    "url": "https://www.openeuler.openatom.cn/en/community/contribution/detail",
+    "@id": "https://www.openeuler.org/en/community/contribution/detail",
+    "url": "https://www.openeuler.org/en/community/contribution/detail",
     "name": "Complete Guide for Contributing to openEuler",
     "description": "Access detailed docs with step-by-step guidance on making meaningful contributions to our community.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Community",
-          "item": "https://www.openeuler.openatom.cn/en/community/"
+          "item": "https://www.openeuler.org/en/community/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Contribution",
-          "item": "https://www.openeuler.openatom.cn/en/community/contribution/"
+          "item": "https://www.openeuler.org/en/community/contribution/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "Complete Guide",
-          "item": "https://www.openeuler.openatom.cn/en/community/contribution/detail"
+          "item": "https://www.openeuler.org/en/community/contribution/detail"
         }
       ]
     },
@@ -50,7 +50,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     }
   },
   {
@@ -97,6 +97,6 @@
       "value": "0"
     },
     "inLanguage": "en",
-    "url": "https://www.openeuler.openatom.cn/en/community/contribution/detail"
+    "url": "https://www.openeuler.org/en/community/contribution/detail"
   }
 ]

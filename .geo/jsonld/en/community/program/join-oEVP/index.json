@@ -2,21 +2,21 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/community/program/join-oEVP",
-    "url": "https://www.openeuler.openatom.cn/en/community/program/join-oEVP",
+    "@id": "https://www.openeuler.org/en/community/program/join-oEVP",
+    "url": "https://www.openeuler.org/en/community/program/join-oEVP",
     "name": "Call for openEuler Valuable Professionals | openEuler",
     "description": "Meet the openEuler Valuable Professionals, experts contributing significantly to the openEuler community.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler",
       "publisher": {
         "@type": "Organization",
-        "@id": "https://www.openeuler.openatom.cn/#organization",
+        "@id": "https://www.openeuler.org/#organization",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       }
     },
     "about": {
@@ -25,9 +25,9 @@
       "description": "openEuler Valuable Professional is a title of honor given by the openEuler community to technical experts, in recognition of their enthusiasm, commitment to sharing knowledge, and contributions to the growth of the community.",
       "hostingOrganization": {
         "@type": "Organization",
-        "@id": "https://www.openeuler.openatom.cn/#organization",
+        "@id": "https://www.openeuler.org/#organization",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       }
     }
   },
@@ -39,37 +39,37 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.openeuler.openatom.cn/en/"
+        "item": "https://www.openeuler.org/en/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Community",
-        "item": "https://www.openeuler.openatom.cn/en/community/"
+        "item": "https://www.openeuler.org/en/community/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Program",
-        "item": "https://www.openeuler.openatom.cn/en/community/program/"
+        "item": "https://www.openeuler.org/en/community/program/"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Call for openEuler Valuable Professionals",
-        "item": "https://www.openeuler.openatom.cn/en/community/program/join-oEVP"
+        "item": "https://www.openeuler.org/en/community/program/join-oEVP"
       }
     ]
   },
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://www.openeuler.openatom.cn/#organization",
+    "@id": "https://www.openeuler.org/#organization",
     "name": "openEuler",
-    "url": "https://www.openeuler.openatom.cn/",
+    "url": "https://www.openeuler.org/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.openeuler.openatom.cn/logo.png"
+      "url": "https://www.openeuler.org/logo.png"
     }
   }
 ]

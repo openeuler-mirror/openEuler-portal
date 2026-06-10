@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "誉托科技 | openEuler社区",
     "description": "誉托科技智慧工地平台 平滑完成操作系统迁移，整体性能提升 30%",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/O6",
+    "url": "https://www.openeuler.org/zh/showcase/others/O6",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "誉托科技",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/O6"
+          "item": "https://www.openeuler.org/zh/showcase/others/O6"
         }
       ]
     },
@@ -51,16 +51,16 @@
     "@type": "Article",
     "headline": "誉托科技智慧工地平台 平滑完成操作系统迁移，整体性能提升 30%",
     "description": "誉托科技与中软国际合作，完成智能工地业务系统服务器从 CentOS 到 openEuler 开源操作系统的迁移，性能提升 30%。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/O6",
+    "url": "https://www.openeuler.org/zh/showcase/others/O6",
     "inLanguage": "zh",
-    "image": "https://www.openeuler.openatom.cn/zh/showcase/others/O6/O6.png",
+    "image": "https://www.openeuler.org/zh/showcase/others/O6/O6.png",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/assets/logo.png"
+        "url": "https://www.openeuler.org/img/for-cdn/logo.png"
       }
     },
     "about": [
@@ -69,7 +69,7 @@
         "name": "openEuler LTS 20.03 SP3",
         "applicationCategory": "OperatingSystem",
         "operatingSystem": "Linux",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       }
     ],
     "mentions": [

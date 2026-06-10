@@ -5,12 +5,12 @@
       "@type": "WebPage",
       "name": "openEuler 安全漏洞公告",
       "description": "了解openEuler发布的安全漏洞公告，确保您及时获取安全更新。",
-      "url": "https://www.openeuler.openatom.cn/zh/security/bug-bulletins",
+      "url": "https://www.openeuler.org/zh/security/bug-bulletins",
       "inLanguage": "zh",
       "isPartOf": {
         "@type": "WebSite",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       "breadcrumb": {
         "@type": "BreadcrumbList",
@@ -19,19 +19,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "首页",
-            "item": "https://www.openeuler.openatom.cn/zh/"
+            "item": "https://www.openeuler.org/zh/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "安全信息",
-            "item": "https://www.openeuler.openatom.cn/zh/security/"
+            "item": "https://www.openeuler.org/zh/security/"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "安全漏洞公告",
-            "item": "https://www.openeuler.openatom.cn/zh/security/bug-bulletins"
+            "item": "https://www.openeuler.org/zh/security/bug-bulletins"
           }
         ]
       }
@@ -40,8 +40,8 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
-      "logo": "https://www.openeuler.openatom.cn/favicon.ico"
+      "url": "https://www.openeuler.org",
+      "logo": "https://www.openeuler.org/favicon.ico"
     }
   ]
 ]

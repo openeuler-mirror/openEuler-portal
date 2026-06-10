@@ -5,12 +5,12 @@
       "@type": "WebPage",
       "name": "openEuler 安全漏洞公告详情 | 安全信息 | openEuler社区",
       "description": "获取openEuler安全漏洞公告的详细信息。",
-      "url": "https://www.openeuler.openatom.cn/zh/security/bug-bulletins/detail",
+      "url": "https://www.openeuler.org/zh/security/bug-bulletins/detail",
       "inLanguage": "zh",
       "isPartOf": {
         "@type": "WebSite",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       "breadcrumb": {
         "@type": "BreadcrumbList",
@@ -19,25 +19,25 @@
             "@type": "ListItem",
             "position": 1,
             "name": "首页",
-            "item": "https://www.openeuler.openatom.cn/zh/"
+            "item": "https://www.openeuler.org/zh/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "安全信息",
-            "item": "https://www.openeuler.openatom.cn/zh/security/"
+            "item": "https://www.openeuler.org/zh/security/"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "缺陷公告",
-            "item": "https://www.openeuler.openatom.cn/zh/security/bug-bulletins/"
+            "item": "https://www.openeuler.org/zh/security/bug-bulletins/"
           },
           {
             "@type": "ListItem",
             "position": 4,
             "name": "安全漏洞公告详情",
-            "item": "https://www.openeuler.openatom.cn/zh/security/bug-bulletins/detail"
+            "item": "https://www.openeuler.org/zh/security/bug-bulletins/detail"
           }
         ]
       }

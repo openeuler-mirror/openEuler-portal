@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "西安前沿动力重叠网格计算流体力学软件OverCFDLab | openEuler社区",
     "description": "为航空等行业提供了强大的计算流体力学（CFD）解决方案",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/14/14.html",
+    "url": "https://www.openeuler.org/zh/showcase/others/14/14.html",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "西安前沿动力重叠网格计算流体力学软件OverCFDLab",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/14/14.html"
+          "item": "https://www.openeuler.org/zh/showcase/others/14/14.html"
         }
       ]
     },
@@ -58,7 +58,7 @@
       "author": {
         "@type": "Organization",
         "name": "西安前沿动力",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/others/14/14.html"
+        "url": "https://www.openeuler.org/zh/showcase/others/14/14.html"
       }
     }
   }

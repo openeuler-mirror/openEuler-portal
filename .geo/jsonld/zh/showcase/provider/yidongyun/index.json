@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/provider/yidongyun",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/yidongyun",
+    "@id": "https://www.openeuler.org/zh/showcase/provider/yidongyun",
+    "url": "https://www.openeuler.org/zh/showcase/provider/yidongyun",
     "name": "中移苏州研究院公有云平台 | openEuler社区",
     "description": "中移苏州研究院完成服务器操作系统无感知迁移，实现业务高效稳定运行",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -21,19 +21,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "中移苏州研究院公有云平台",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/provider/yidongyun"
+          "item": "https://www.openeuler.org/zh/showcase/provider/yidongyun"
         }
       ]
     }
@@ -43,15 +43,15 @@
     "@type": "TechArticle",
     "headline": "中移苏州研究院公有云平台",
     "description": "中移苏州研究院完成服务器操作系统无感知迁移，实现业务高效稳定运行",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/yidongyun",
+    "url": "https://www.openeuler.org/zh/showcase/provider/yidongyun",
     "inLanguage": "zh-CN",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "about": [
@@ -66,7 +66,7 @@
         "name": "openEuler 20.03 LTS SP3",
         "operatingSystem": "Linux",
         "applicationCategory": "OperatingSystem",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       }
     ],
     "mentions": [

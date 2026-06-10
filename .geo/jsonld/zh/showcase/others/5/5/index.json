@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/5/5.html",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/5/5.html",
+    "@id": "https://www.openeuler.org/zh/showcase/others/5/5.html",
+    "url": "https://www.openeuler.org/zh/showcase/others/5/5.html",
     "name": "简实信息远程区域协同平台 | openEuler社区",
     "description": "致力于实现医疗服务的远程化、智能化和高效化",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -21,25 +21,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "简实信息远程区域协同平台",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/5/5.html"
+          "item": "https://www.openeuler.org/zh/showcase/others/5/5.html"
         }
       ]
     },
@@ -62,15 +62,15 @@
     "@type": "Article",
     "headline": "简实信息远程区域协同平台",
     "description": "致力于实现医疗服务的远程化、智能化和高效化",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/5/5.html",
+    "url": "https://www.openeuler.org/zh/showcase/others/5/5.html",
     "inLanguage": "zh-CN",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "articleBody": "随着医疗数字化转型的不断深入，远程医疗服务网络的建设和完善成为提升医疗服务效率和质量的关键。简实信息推出的远程区域协同平台，基于openEuler操作系统，致力于实现医疗服务的远程化、智能化和高效化。该平台解决方案包括：利用openEuler操作系统的稳定性和安全性为平台提供坚实基础；通过毕昇JDK、MySQL细粒度优化和无锁优化技术全面提升平台性能；基于鲲鹏底座快速响应业务需求变更；提供图形用户接口使用户易于掌握和使用。平台已在洛宁县人民医院、漯河市中心医院等多家医疗机构得到应用。",
@@ -97,7 +97,7 @@
       {
         "@type": "SoftwareApplication",
         "name": "openEuler操作系统",
-        "url": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.org/",
         "applicationCategory": "OperatingSystem"
       }
     ]

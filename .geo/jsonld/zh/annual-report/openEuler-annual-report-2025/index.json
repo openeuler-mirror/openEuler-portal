@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/annual-report/openEuler-annual-report-2025",
-    "url": "https://www.openeuler.openatom.cn/zh/annual-report/openEuler-annual-report-2025",
+    "@id": "https://www.openeuler.org/zh/annual-report/openEuler-annual-report-2025",
+    "url": "https://www.openeuler.org/zh/annual-report/openEuler-annual-report-2025",
     "name": "openEuler 2025 社区年报：技术创新与生态发展全景回顾 | openEuler社区",
     "description": "openEuler 2025 社区年报全面呈现过去一年的技术突破、生态建设与社区发展成果。涵盖版本发布、贡献者增长、合作伙伴拓展及开源项目进展，见证 openEuler 在操作系统领域的持续创新与全球影响力提升。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh"
     },
@@ -21,19 +21,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "年报",
-          "item": "https://www.openeuler.openatom.cn/zh/annual-report/"
+          "item": "https://www.openeuler.org/zh/annual-report/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "2025 社区年报",
-          "item": "https://www.openeuler.openatom.cn/zh/annual-report/openEuler-annual-report-2025"
+          "item": "https://www.openeuler.org/zh/annual-report/openEuler-annual-report-2025"
         }
       ]
     }
@@ -43,13 +43,13 @@
     "@type": "Report",
     "name": "openEuler 2025 社区年报",
     "description": "openEuler 2025 社区年报全面呈现过去一年的技术突破、生态建设与社区发展成果。",
-    "url": "https://www.openeuler.openatom.cn/zh/annual-report/openEuler-annual-report-2025",
+    "url": "https://www.openeuler.org/zh/annual-report/openEuler-annual-report-2025",
     "inLanguage": "zh",
     "datePublished": "2025",
     "author": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "about": {
       "@type": "Organization",

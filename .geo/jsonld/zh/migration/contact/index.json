@@ -4,12 +4,12 @@
     "@type": "ContactPage",
     "name": "openEuler 联系方式 | 迁移专区",
     "description": "获取openEuler迁移的联系方式，如有疑问，请随时联系我们。",
-    "url": "https://www.openeuler.openatom.cn/zh/migration/contact",
+    "url": "https://www.openeuler.org/zh/migration/contact",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "迁移专区",
-          "item": "https://www.openeuler.openatom.cn/zh/migration/"
+          "item": "https://www.openeuler.org/zh/migration/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "联系方式",
-          "item": "https://www.openeuler.openatom.cn/zh/migration/contact"
+          "item": "https://www.openeuler.org/zh/migration/contact"
         }
       ]
     }
@@ -39,7 +39,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "openEuler社区",
-    "url": "https://www.openeuler.openatom.cn",
+    "url": "https://www.openeuler.org",
     "contactPoint": [
       {
         "@type": "ContactPoint",

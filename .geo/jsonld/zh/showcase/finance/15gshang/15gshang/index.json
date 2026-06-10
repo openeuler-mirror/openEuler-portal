@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "工商银行资源混合部署创新探索 | openEuler社区",
     "description": "为提升生产的资源利用率，工商银行结合业界通用的混部方案，实现基于工商银行场景的资源混部技术，从资源调度和资源隔离两个大的方面进行规划建设。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/15gshang/15gshang.html",
+    "url": "https://www.openeuler.org/zh/showcase/finance/15gshang/15gshang.html",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "金融",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+          "item": "https://www.openeuler.org/zh/showcase/finance/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "工商银行资源混合部署创新探索",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/15gshang/15gshang.html"
+          "item": "https://www.openeuler.org/zh/showcase/finance/15gshang/15gshang.html"
         }
       ]
     }
@@ -46,15 +46,15 @@
     "@type": "Article",
     "headline": "工商银行资源混合部署创新探索",
     "description": "为提升生产的资源利用率，工商银行结合业界通用的混部方案，实现基于工商银行场景的资源混部技术，从资源调度和资源隔离两个大的方面进行规划建设。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/15gshang/15gshang.html",
+    "url": "https://www.openeuler.org/zh/showcase/finance/15gshang/15gshang.html",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "articleBody": "工商银行自研的PaaS云平台承载行内核心业务，集群规模庞大，不同应用对性能容量需求各异，除数据库、大数据以外的联机、批量等各类应用负载，均在同一类计算资源池中进行调度部署，存在资源配额配置普遍偏高、资源利用率较低等情况。为提升生产的资源利用率，工商银行结合业界通用的混部方案，实现基于工商银行场景的资源混部技术，从资源调度和资源隔离两个大的方面进行规划建设。落地混合部署技术，实现个人电子银行、量化投资交易、资产管理估值核算等多个不同优先级业务的混部部署，单节点部署密度提升50%以上，对于低优先级应用为CPU消耗型的场景，节点的资源利用率可提升到35%以上，同时通过资源隔离、干扰检测和驱逐等保障手段，高优先级应用的QoS影响可以控制在5%范围之内。",
@@ -83,7 +83,7 @@
       {
         "@type": "SoftwareApplication",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn",
+        "url": "https://www.openeuler.org",
         "applicationCategory": "OperatingSystem"
       }
     ]

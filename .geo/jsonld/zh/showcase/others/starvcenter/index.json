@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/starvcenter",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/starvcenter",
+    "@id": "https://www.openeuler.org/zh/showcase/others/starvcenter",
+    "url": "https://www.openeuler.org/zh/showcase/others/starvcenter",
     "name": "四川中电启明星技术有限公司（StarVCenter云平台） | openEuler社区",
     "description": "性能卓越，稳定可靠，环境级高可用， 智能运维，安全性，自主可控，可移植、易操作",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -21,19 +21,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "StarVCenter云平台",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/starvcenter"
+          "item": "https://www.openeuler.org/zh/showcase/others/starvcenter"
         }
       ]
     },
@@ -50,7 +50,7 @@
         "foundingDate": "1999",
         "description": "四川中电启明星信息技术有限公司成立于1999年，本部设在成都，主要服务于能源企业和大中型集团。公司以云网大数据为依托，全面支撑新型电力系统建设，致力于成为国内领先的智慧能源平台型互联网企业。",
         "areaServed": "CN",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/others/starvcenter"
+        "url": "https://www.openeuler.org/zh/showcase/others/starvcenter"
       },
       "featureList": [
         "超融合I/O性能提升20%",

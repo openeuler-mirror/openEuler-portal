@@ -4,15 +4,15 @@
     "@type": "FAQPage",
     "name": "FAQs | openEuler",
     "description": "Get answers to frequently asked questions about openEuler.",
-    "url": "https://www.openeuler.openatom.cn/en/faq",
+    "url": "https://www.openeuler.org/en/faq",
     "inLanguage": "en",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "mainEntity": [
@@ -58,13 +58,13 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.openeuler.openatom.cn/en/"
+        "item": "https://www.openeuler.org/en/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "FAQs",
-        "item": "https://www.openeuler.openatom.cn/en/faq"
+        "item": "https://www.openeuler.org/en/faq"
       }
     ]
   }

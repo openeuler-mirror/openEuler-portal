@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/education/beijingjiaotong",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/beijingjiaotong",
+    "@id": "https://www.openeuler.org/zh/showcase/education/beijingjiaotong",
+    "url": "https://www.openeuler.org/zh/showcase/education/beijingjiaotong",
     "name": "北京交通大学 | openEuler社区",
     "description": "RPA智能人工系统减少管理平台50%人员投入",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "教育",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/"
+          "item": "https://www.openeuler.org/zh/showcase/education/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "北京交通大学",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/beijingjiaotong"
+          "item": "https://www.openeuler.org/zh/showcase/education/beijingjiaotong"
         }
       ]
     }
@@ -46,23 +46,23 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/education/beijingjiaotong#article",
+    "@id": "https://www.openeuler.org/zh/showcase/education/beijingjiaotong#article",
     "headline": "北京交通大学：RPA智能人工系统减少管理平台50%人员投入",
     "description": "北京交通大学通过使用新纽RPA一体机解决方案，结合基于openEuler的普华太极服务器操作系统，实现低碳绿色的快速开发，节省50%人力投入。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/beijingjiaotong",
+    "url": "https://www.openeuler.org/zh/showcase/education/beijingjiaotong",
     "inLanguage": "zh",
     "author": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/img/logo.png"
+        "url": "https://www.openeuler.org/img/logo.png"
       }
     },
     "about": [
@@ -94,10 +94,10 @@
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/education/beijingjiaotong#solution",
+    "@id": "https://www.openeuler.org/zh/showcase/education/beijingjiaotong#solution",
     "headline": "新纽RPA一体机解决方案在北京交通大学的落地实践",
     "description": "新纽RPA一体机解决方案结合NewLink RPA机器人流程自动化平台V3.1、华鲲振宇天宫鲲鹏CPU服务器及基于openEuler的普华太极服务器操作系统，联合形成算力底座支撑，人力成本节省50%。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/beijingjiaotong",
+    "url": "https://www.openeuler.org/zh/showcase/education/beijingjiaotong",
     "inLanguage": "zh",
     "proficiencyLevel": "Expert",
     "dependencies": "NewLink RPA机器人流程自动化平台V3.1, 华鲲振宇天宫鲲鹏CPU服务器, 普华太极服务器操作系统（基于openEuler）, TiDB",

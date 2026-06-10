@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/rongze",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/rongze",
+    "@id": "https://www.openeuler.org/zh/showcase/others/rongze",
+    "url": "https://www.openeuler.org/zh/showcase/others/rongze",
     "name": "荣泽科技 | openEuler社区",
     "description": "打造高性能可信数据要素流通平台",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "展示案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "荣泽科技",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/rongze"
+          "item": "https://www.openeuler.org/zh/showcase/others/rongze"
         }
       ]
     }
@@ -48,15 +48,15 @@
     "@type": "Article",
     "headline": "荣泽科技基于openEuler打造高性能可信数据要素流通平台",
     "description": "打造高性能可信数据要素流通平台",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/rongze",
+    "url": "https://www.openeuler.org/zh/showcase/others/rongze",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "about": [
@@ -83,7 +83,7 @@
     ],
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/rongze"
+      "@id": "https://www.openeuler.org/zh/showcase/others/rongze"
     }
   },
   {
@@ -93,7 +93,7 @@
     "description": "基于区块链的晓数通产品，通过可信采集原始数据，建立标准台账模板，一键生成目标报表，实现从台账到企业一套表上报的全流程管理和上报，实现目标报表的数出有据。",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "openEuler 22.03 LTS",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/rongze",
+    "url": "https://www.openeuler.org/zh/showcase/others/rongze",
     "author": {
       "@type": "Organization",
       "name": "江苏荣泽信息科技股份有限公司",

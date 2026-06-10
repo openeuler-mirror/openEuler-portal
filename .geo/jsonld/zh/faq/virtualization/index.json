@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "url": "https://www.openeuler.openatom.cn/zh/faq/virtualization",
+    "url": "https://www.openeuler.org/zh/faq/virtualization",
     "name": "虚拟化常见问题 | FAQ | openEuler社区",
     "description": "获取openEuler虚拟化相关的常见问题及解决方案，助您更好使用虚拟化技术。",
     "inLanguage": "zh-CN",
@@ -49,19 +49,19 @@
         "@type": "ListItem",
         "position": 1,
         "name": "openEuler社区",
-        "item": "https://www.openeuler.openatom.cn/zh/"
+        "item": "https://www.openeuler.org/zh/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "FAQ",
-        "item": "https://www.openeuler.openatom.cn/zh/faq/"
+        "item": "https://www.openeuler.org/zh/faq/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "虚拟化常见问题",
-        "item": "https://www.openeuler.openatom.cn/zh/faq/virtualization"
+        "item": "https://www.openeuler.org/zh/faq/virtualization"
       }
     ]
   }

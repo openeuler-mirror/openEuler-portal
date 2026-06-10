@@ -3,21 +3,21 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "个人信息收集清单",
-    "url": "https://www.openeuler.openatom.cn/zh/personal-data-collection-overview/index.html",
+    "url": "https://www.openeuler.org/zh/personal-data-collection-overview/index.html",
     "description": "openEuler 社区个人信息收集清单，详细说明账号服务、论坛服务、邮件列表服务、服务优化、贡献者许可协议签署、内容发布及 Meetup 申请等场景下收集的个人信息类型、目的及方式。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "publisher": {
       "@type": "Organization",
       "name": "开放原子开源基金会",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "breadcrumb": {
@@ -27,13 +27,13 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "个人信息收集清单",
-          "item": "https://www.openeuler.openatom.cn/zh/personal-data-collection-overview/index.html"
+          "item": "https://www.openeuler.org/zh/personal-data-collection-overview/index.html"
         }
       ]
     }
@@ -42,12 +42,12 @@
     "@context": "https://schema.org",
     "@type": "PrivacyPolicy",
     "name": "个人信息收集清单",
-    "url": "https://www.openeuler.openatom.cn/zh/personal-data-collection-overview/index.html",
+    "url": "https://www.openeuler.org/zh/personal-data-collection-overview/index.html",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "开放原子开源基金会",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": {
       "@type": "Thing",

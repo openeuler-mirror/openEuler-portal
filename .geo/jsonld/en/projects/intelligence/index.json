@@ -3,10 +3,10 @@
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "@id": "https://www.openeuler.openatom.cn/en/projects/intelligence",
+      "@id": "https://www.openeuler.org/en/projects/intelligence",
       "name": "openEuler Intelligence",
       "alternateName": "openEuler Intelligence LLM Platform",
-      "url": "https://www.openeuler.openatom.cn/en/projects/intelligence",
+      "url": "https://www.openeuler.org/en/projects/intelligence",
       "description": "Build AI-powered apps with openEuler Intelligence. Supports RAG knowledge Q&A, workflow orchestration, Agent apps, and MCP services for developers and enterprises.",
       "applicationCategory": "DeveloperApplication",
       "applicationSubCategory": "AI Platform",
@@ -39,21 +39,21 @@
       "publisher": {
         "@type": "Organization",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       }
     },
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/en/projects/intelligence#webpage",
-      "url": "https://www.openeuler.openatom.cn/en/projects/intelligence",
+      "@id": "https://www.openeuler.org/en/projects/intelligence#webpage",
+      "url": "https://www.openeuler.org/en/projects/intelligence",
       "name": "openEuler Intelligence: AI Agent & LLM Platform | openEuler",
       "description": "Build AI-powered apps with openEuler Intelligence. Supports RAG knowledge Q&A, workflow orchestration, Agent apps, and MCP services for developers and enterprises.",
       "inLanguage": "en",
       "isPartOf": {
         "@type": "WebSite",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       "about": {
         "@type": "SoftwareApplication",
@@ -66,19 +66,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.openeuler.openatom.cn/en/"
+            "item": "https://www.openeuler.org/en/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Projects",
-            "item": "https://www.openeuler.openatom.cn/en/projects/"
+            "item": "https://www.openeuler.org/en/projects/"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "openEuler Intelligence",
-            "item": "https://www.openeuler.openatom.cn/en/projects/intelligence"
+            "item": "https://www.openeuler.org/en/projects/intelligence"
           }
         ]
       }
@@ -88,7 +88,7 @@
       "@type": "ItemList",
       "name": "openEuler Intelligence Features",
       "description": "Key features of the openEuler Intelligence LLM platform",
-      "url": "https://www.openeuler.openatom.cn/en/projects/intelligence",
+      "url": "https://www.openeuler.org/en/projects/intelligence",
       "itemListElement": [
         {
           "@type": "ListItem",

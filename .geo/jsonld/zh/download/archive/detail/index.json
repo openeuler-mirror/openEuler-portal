@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "openEuler所有版本下载 | 下载中心 | openEuler社区",
     "description": "访问查看openEuler的历史版本及资源。",
-    "url": "https://www.openeuler.openatom.cn/zh/download/archive/detail",
+    "url": "https://www.openeuler.org/zh/download/archive/detail",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "下载中心",
-          "item": "https://www.openeuler.openatom.cn/zh/download/"
+          "item": "https://www.openeuler.org/zh/download/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "所有版本下载",
-          "item": "https://www.openeuler.openatom.cn/zh/download/archive/detail"
+          "item": "https://www.openeuler.org/zh/download/archive/detail"
         }
       ]
     }
@@ -41,7 +41,7 @@
     "name": "openEuler",
     "operatingSystem": "Linux",
     "applicationCategory": "OperatingSystemApplication",
-    "url": "https://www.openeuler.openatom.cn/zh/download/archive/detail",
+    "url": "https://www.openeuler.org/zh/download/archive/detail",
     "description": "访问查看openEuler的历史版本及资源。",
     "offers": {
       "@type": "Offer",
@@ -51,7 +51,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     }
   },
   {
@@ -62,13 +62,13 @@
         "@type": "ListItem",
         "position": 1,
         "name": "首页",
-        "item": "https://www.openeuler.openatom.cn/zh/"
+        "item": "https://www.openeuler.org/zh/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "下载",
-        "item": "https://www.openeuler.openatom.cn/zh/download/"
+        "item": "https://www.openeuler.org/zh/download/"
       }
     ]
   },
@@ -87,12 +87,12 @@
       "description": "openEuler社区版完全免费开源"
     },
     "softwareVersion": "24.03 LTS SP3",
-    "downloadUrl": "https://www.openeuler.openatom.cn/zh/download/",
+    "downloadUrl": "https://www.openeuler.org/zh/download/",
     "license": "https://license.coscl.org.cn/MulanPSL2",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "featureList": [
       "支持x86_64架构",

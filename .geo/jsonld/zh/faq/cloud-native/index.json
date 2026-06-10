@@ -4,12 +4,12 @@
     "@type": "FAQPage",
     "name": "云原生常见问题",
     "description": "获取openEuler云原生相关的常见问题解答，提升您的使用体验。",
-    "url": "https://www.openeuler.openatom.cn/zh/faq/cloud-native",
+    "url": "https://www.openeuler.org/zh/faq/cloud-native",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "mainEntity": [
       {
@@ -78,19 +78,19 @@
         "@type": "ListItem",
         "position": 1,
         "name": "openEuler社区",
-        "item": "https://www.openeuler.openatom.cn/zh/"
+        "item": "https://www.openeuler.org/zh/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "常见问题",
-        "item": "https://www.openeuler.openatom.cn/zh/faq/"
+        "item": "https://www.openeuler.org/zh/faq/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "云原生常见问题",
-        "item": "https://www.openeuler.openatom.cn/zh/faq/cloud-native"
+        "item": "https://www.openeuler.org/zh/faq/cloud-native"
       }
     ]
   }

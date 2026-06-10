@@ -5,32 +5,32 @@
       "@type": "TechArticle",
       "headline": "在 Mac 上通过 OrbStack 安装并运行 openEuler 虚拟机",
       "description": "介绍如何在 macOS 平台使用轻量级虚拟机工具 OrbStack 快速获取并运行 openEuler 系统。下载 OrbStack 后，只需点击创建虚拟机并选择 openEuler 版本，即可在命令行中流畅使用 openEuler，操作简单高效，适合开发者快速上手体验。",
-      "url": "https://www.openeuler.openatom.cn/zh/wiki/install/macos",
+      "url": "https://www.openeuler.org/zh/wiki/install/macos",
       "inLanguage": "zh-CN",
       "author": {
         "@type": "Organization",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       "publisher": {
         "@type": "Organization",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn",
+        "url": "https://www.openeuler.org",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.openeuler.openatom.cn/logo.png"
+          "url": "https://www.openeuler.org/logo.png"
         }
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://www.openeuler.openatom.cn/zh/wiki/install/macos"
+        "@id": "https://www.openeuler.org/zh/wiki/install/macos"
       },
       "about": {
         "@type": "SoftwareApplication",
         "name": "openEuler",
         "operatingSystem": "macOS",
         "applicationCategory": "OperatingSystem",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       }
     },
     {
@@ -38,7 +38,7 @@
       "@type": "HowTo",
       "name": "在 Mac 上通过 OrbStack 安装并运行 openEuler 虚拟机",
       "description": "介绍如何在 macOS 平台使用轻量级虚拟机工具 OrbStack 快速获取并运行 openEuler 系统。",
-      "url": "https://www.openeuler.openatom.cn/zh/wiki/install/macos",
+      "url": "https://www.openeuler.org/zh/wiki/install/macos",
       "inLanguage": "zh-CN",
       "tool": {
         "@type": "SoftwareApplication",
@@ -53,21 +53,21 @@
           "position": 1,
           "name": "下载 OrbStack",
           "text": "访问 https://orbstack.dev/download 下载适用于 macOS 的 OrbStack 轻量级虚拟机平台。",
-          "url": "https://www.openeuler.openatom.cn/zh/wiki/install/macos"
+          "url": "https://www.openeuler.org/zh/wiki/install/macos"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "创建虚拟机并选择 openEuler",
           "text": "安装并打开 OrbStack 后，点击创建虚拟机，在发行版列表中选择 openEuler 版本。",
-          "url": "https://www.openeuler.openatom.cn/zh/wiki/install/macos"
+          "url": "https://www.openeuler.org/zh/wiki/install/macos"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "在命令行中使用 openEuler",
           "text": "虚拟机创建成功后，即可在命令行中流畅使用 openEuler 系统。",
-          "url": "https://www.openeuler.openatom.cn/zh/wiki/install/macos"
+          "url": "https://www.openeuler.org/zh/wiki/install/macos"
         }
       ]
     },
@@ -79,25 +79,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Wiki",
-          "item": "https://www.openeuler.openatom.cn/zh/wiki/"
+          "item": "https://www.openeuler.org/zh/wiki/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "安装指南",
-          "item": "https://www.openeuler.openatom.cn/zh/wiki/install/"
+          "item": "https://www.openeuler.org/zh/wiki/install/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "在 Mac 上通过 OrbStack 安装并运行 openEuler 虚拟机",
-          "item": "https://www.openeuler.openatom.cn/zh/wiki/install/macos"
+          "item": "https://www.openeuler.org/zh/wiki/install/macos"
         }
       ]
     }

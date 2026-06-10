@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/provider/005p41c5-a0b2-e850f4211aa0",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/005p41c5-a0b2-e850f4211aa0",
+    "@id": "https://www.openeuler.org/zh/showcase/provider/005p41c5-a0b2-e850f4211aa0",
+    "url": "https://www.openeuler.org/zh/showcase/provider/005p41c5-a0b2-e850f4211aa0",
     "name": "浙江移动核心业务系统适配 | openEuler社区",
     "description": "基于国产芯片服务器与操作系统构建自主可控集群",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区"
     },
     "breadcrumb": {
@@ -20,19 +20,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "商业案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "浙江移动核心业务系统适配",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/provider/005p41c5-a0b2-e850f4211aa0"
+          "item": "https://www.openeuler.org/zh/showcase/provider/005p41c5-a0b2-e850f4211aa0"
         }
       ]
     }
@@ -42,16 +42,16 @@
     "@type": "TechArticle",
     "headline": "浙江移动核心业务系统适配",
     "description": "基于国产芯片服务器与操作系统构建自主可控集群，完成业务大厅与客户中心等业务系统与国产操作系统、mesos 与 k8s 容器集群、国产芯片服务器的联调适配。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/005p41c5-a0b2-e850f4211aa0",
+    "url": "https://www.openeuler.org/zh/showcase/provider/005p41c5-a0b2-e850f4211aa0",
     "inLanguage": "zh",
     "datePublished": "2021-08-01",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "about": [

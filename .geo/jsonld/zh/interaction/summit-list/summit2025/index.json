@@ -4,7 +4,7 @@
     "@type": "Event",
     "name": "操作系统大会 & openEuler Summit 2025",
     "alternateName": "OS Summit & openEuler Summit 2025",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/summit2025",
+    "url": "https://www.openeuler.org/zh/interaction/summit-list/summit2025",
     "description": "操作系统大会 & openEuler Summit 2025 将于2025年11月14-15日在北京中关村国际创新中心举办。大会聚焦 AI For OS、OS For AI 战略，发布 openEuler 在 AI 领域的重磅技术版本，汇聚全球顶尖嘉宾与合作伙伴，共同开启 openEuler 下一个五年新篇章。",
     "startDate": "2025-11-14",
     "endDate": "2025-11-15",
@@ -23,7 +23,7 @@
     "organizer": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": [
       {
@@ -255,13 +255,13 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "操作系统大会 & openEuler Summit 2025：AI驱动开源操作系统变革峰会",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/summit2025",
+    "url": "https://www.openeuler.org/zh/interaction/summit-list/summit2025",
     "description": "操作系统大会 & openEuler Summit 2025 将于2025年11月14-15日在北京中关村国际创新中心举办。大会聚焦 AI For OS、OS For AI 战略，发布 openEuler 在 AI 领域的重磅技术版本，汇聚全球顶尖嘉宾与合作伙伴，共同开启 openEuler 下一个五年新篇章。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -270,25 +270,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "互动交流",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/"
+          "item": "https://www.openeuler.org/zh/interaction/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "峰会列表",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/"
+          "item": "https://www.openeuler.org/zh/interaction/summit-list/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "操作系统大会 & openEuler Summit 2025",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/summit2025"
+          "item": "https://www.openeuler.org/zh/interaction/summit-list/summit2025"
         }
       ]
     }

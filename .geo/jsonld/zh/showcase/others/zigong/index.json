@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/zigong",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zigong",
+    "@id": "https://www.openeuler.org/zh/showcase/others/zigong",
+    "url": "https://www.openeuler.org/zh/showcase/others/zigong",
     "name": "自贡市第一人民医院 | openEuler社区",
     "description": "基于openEuler对现有平台进行转型升级",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -21,25 +21,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "成功案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "自贡市第一人民医院",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/zigong"
+          "item": "https://www.openeuler.org/zh/showcase/others/zigong"
         }
       ]
     },
@@ -54,15 +54,15 @@
     "@type": "Article",
     "headline": "自贡市第一人民医院基于openEuler完成医院数字化转型升级",
     "description": "自贡市第一人民医院信息科团队使用openEuler完成医院基础设施新数字化转型的升级替代，利用容器特性完美承载医院核心业务升级改造，降低医院硬件投资的同时完成对现有平台进行改造。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zigong",
+    "url": "https://www.openeuler.org/zh/showcase/others/zigong",
     "inLanguage": "zh-CN",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "articleSection": "成功案例",
@@ -87,7 +87,7 @@
         "name": "openEuler",
         "version": "22.03 LTS",
         "applicationCategory": "操作系统",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       },
       {
         "@type": "SoftwareApplication",
@@ -101,11 +101,11 @@
     "@type": "CaseStudy",
     "name": "自贡市第一人民医院 openEuler 数字化转型案例",
     "description": "自贡市第一人民医院基于openEuler对现有平台进行转型升级，采用应用容器化与超融合方案，完成医院核心业务架构的升级替换，实现弹性伸缩与资源高效利用。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zigong",
+    "url": "https://www.openeuler.org/zh/showcase/others/zigong",
     "provider": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "subjectOf": {
       "@type": "Organization",

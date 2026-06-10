@@ -2,8 +2,8 @@
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "@id": "https://www.openeuler.openatom.cn/en/migration/download/characteristic-description-3.0.0",
-    "url": "https://www.openeuler.openatom.cn/en/migration/download/characteristic-description-3.0.0",
+    "@id": "https://www.openeuler.org/en/migration/download/characteristic-description-3.0.0",
+    "url": "https://www.openeuler.org/en/migration/download/characteristic-description-3.0.0",
     "headline": "x2openEuler Feature Updates | Migration Tool | openEuler",
     "description": "Find out about the new features, enhancements, and resolved issues in x2openEuler.",
     "inLanguage": "en",
@@ -13,26 +13,26 @@
       "applicationCategory": "SystemApplication",
       "operatingSystem": "openEuler",
       "softwareVersion": "3.0.0",
-      "url": "https://www.openeuler.openatom.cn/en/migration/",
+      "url": "https://www.openeuler.org/en/migration/",
       "publisher": {
         "@type": "Organization",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       }
     },
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/assets/openeuler-logo.png"
+        "url": "https://www.openeuler.org/assets/openeuler-logo.png"
       }
     },
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     }
   },
   {
@@ -43,25 +43,25 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.openeuler.openatom.cn/en/"
+        "item": "https://www.openeuler.org/en/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Migration",
-        "item": "https://www.openeuler.openatom.cn/en/migration/"
+        "item": "https://www.openeuler.org/en/migration/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Download",
-        "item": "https://www.openeuler.openatom.cn/en/migration/download/"
+        "item": "https://www.openeuler.org/en/migration/download/"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "x2openEuler 3.0.0 Feature Updates",
-        "item": "https://www.openeuler.openatom.cn/en/migration/download/characteristic-description-3.0.0"
+        "item": "https://www.openeuler.org/en/migration/download/characteristic-description-3.0.0"
       }
     ]
   },
@@ -70,11 +70,11 @@
     "@type": "SoftwareApplication",
     "name": "x2openEuler",
     "softwareVersion": "3.0.0",
-    "url": "https://www.openeuler.openatom.cn/en/migration/",
+    "url": "https://www.openeuler.org/en/migration/",
     "applicationCategory": "SystemApplication",
     "operatingSystem": "openEuler, CentOS",
     "description": "x2openEuler is a migration tool that supports OS upgrade solutions including upgrades from CentOS 6 to openEuler and from openEuler 20.03 to openEuler 22.03.",
-    "releaseNotes": "https://www.openeuler.openatom.cn/en/migration/download/characteristic-description-3.0.0",
+    "releaseNotes": "https://www.openeuler.org/en/migration/download/characteristic-description-3.0.0",
     "featureList": [
       "Supported the English GUI",
       "Optimized the upgrade process of solution 2",
@@ -88,7 +88,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     }
   }
 ]

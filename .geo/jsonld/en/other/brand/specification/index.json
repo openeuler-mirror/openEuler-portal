@@ -2,34 +2,34 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/other/brand/specification",
-    "url": "https://www.openeuler.openatom.cn/en/other/brand/specification",
+    "@id": "https://www.openeuler.org/en/other/brand/specification",
+    "url": "https://www.openeuler.org/en/other/brand/specification",
     "name": "Logo & Brand Specification Guidelines | openEuler",
     "description": "Explore openEuler's official brand guidelines covering logo variations, color specifications, grid proportions, co-branding rules, and correct logo usage.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler",
       "publisher": {
         "@type": "Organization",
-        "@id": "https://www.openeuler.openatom.cn/#organization",
+        "@id": "https://www.openeuler.org/#organization",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.org/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.openeuler.openatom.cn/logo.png"
+          "url": "https://www.openeuler.org/logo.png"
         }
       }
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.openeuler.openatom.cn/en/"},
-        {"@type": "ListItem", "position": 2, "name": "Other", "item": "https://www.openeuler.openatom.cn/en/other/"},
-        {"@type": "ListItem", "position": 3, "name": "Brand", "item": "https://www.openeuler.openatom.cn/en/other/brand/"},
-        {"@type": "ListItem", "position": 4, "name": "Logo & Brand Specification Guidelines", "item": "https://www.openeuler.openatom.cn/en/other/brand/specification"}
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.openeuler.org/en/"},
+        {"@type": "ListItem", "position": 2, "name": "Other", "item": "https://www.openeuler.org/en/other/"},
+        {"@type": "ListItem", "position": 3, "name": "Brand", "item": "https://www.openeuler.org/en/other/brand/"},
+        {"@type": "ListItem", "position": 4, "name": "Logo & Brand Specification Guidelines", "item": "https://www.openeuler.org/en/other/brand/specification"}
       ]
     },
     "about": {
@@ -55,13 +55,13 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://www.openeuler.openatom.cn/#organization",
+    "@id": "https://www.openeuler.org/#organization",
     "name": "openEuler",
-    "url": "https://www.openeuler.openatom.cn/",
+    "url": "https://www.openeuler.org/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.openeuler.openatom.cn/logo.png",
-      "contentUrl": "https://www.openeuler.openatom.cn/logo.png"
+      "url": "https://www.openeuler.org/logo.png",
+      "contentUrl": "https://www.openeuler.org/logo.png"
     },
     "sameAs": [
       "https://github.com/openeuler-mirror"

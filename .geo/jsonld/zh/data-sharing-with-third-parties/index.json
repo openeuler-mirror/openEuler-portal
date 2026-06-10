@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/data-sharing-with-third-parties",
-    "url": "https://www.openeuler.openatom.cn/zh/data-sharing-with-third-parties",
+    "@id": "https://www.openeuler.org/zh/data-sharing-with-third-parties",
+    "url": "https://www.openeuler.org/zh/data-sharing-with-third-parties",
     "name": "openEuler社区第三方共享信息清单：合作伙伴数据使用说明",
     "description": "本页面列出openEuler社区（开放原子开源基金会）与第三方合作伙伴共享用户信息的完整清单，包括百度统计SDK采集的设备与访问数据，以及Authing账号系统所处理的用户身份信息，明确说明各方数据使用目的、共享方式及个人信息处理规则，保障用户知情权。",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -21,13 +21,13 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "第三方共享信息清单",
-          "item": "https://www.openeuler.openatom.cn/zh/data-sharing-with-third-parties"
+          "item": "https://www.openeuler.org/zh/data-sharing-with-third-parties"
         }
       ]
     },
@@ -38,7 +38,7 @@
       "parentOrganization": {
         "@type": "Organization",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       }
     },
     "about": {
@@ -50,7 +50,7 @@
   {
     "@context": "https://schema.org",
     "@type": "PrivacyPolicy",
-    "url": "https://www.openeuler.openatom.cn/zh/data-sharing-with-third-parties",
+    "url": "https://www.openeuler.org/zh/data-sharing-with-third-parties",
     "name": "第三方共享信息清单",
     "description": "openEuler社区（开放原子开源基金会）与第三方合作伙伴共享用户信息的完整清单，明确说明各方数据使用目的、共享方式及个人信息处理规则",
     "inLanguage": "zh-CN",

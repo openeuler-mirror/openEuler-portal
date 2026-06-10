@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/provider/tianyiyun",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/tianyiyun",
+    "@id": "https://www.openeuler.org/zh/showcase/provider/tianyiyun",
+    "url": "https://www.openeuler.org/zh/showcase/provider/tianyiyun",
     "name": "天翼云FaaS产品 | openEuler社区",
     "description": "基于stratovirt的安全容器为函数计算提供完善的租户隔离和安全运行环境，并且在内存底噪、启动速度、并发、密度上具备较大优势。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh"
     },
@@ -21,19 +21,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "天翼云FaaS产品",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/provider/tianyiyun"
+          "item": "https://www.openeuler.org/zh/showcase/provider/tianyiyun"
         }
       ]
     }
@@ -43,15 +43,15 @@
     "@type": "TechArticle",
     "headline": "天翼云FaaS产品",
     "description": "基于stratovirt的安全容器为函数计算提供完善的租户隔离和安全运行环境，并且在内存底噪、启动速度、并发、密度上具备较大优势。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/tianyiyun",
+    "url": "https://www.openeuler.org/zh/showcase/provider/tianyiyun",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "about": [
@@ -79,7 +79,7 @@
     ],
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/showcase/provider/tianyiyun"
+      "@id": "https://www.openeuler.org/zh/showcase/provider/tianyiyun"
     }
   }
 ]

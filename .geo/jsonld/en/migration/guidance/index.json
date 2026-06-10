@@ -2,21 +2,21 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/migration/guidance",
-    "url": "https://www.openeuler.openatom.cn/en/migration/guidance",
+    "@id": "https://www.openeuler.org/en/migration/guidance",
+    "url": "https://www.openeuler.org/en/migration/guidance",
     "name": "Guidelines for Migrating to openEuler | openEuler",
     "description": "Effortlessly migrate to openEuler with our comprehensive solutions, enhancing system efficiency, security, and performance",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler",
       "publisher": {
         "@type": "Organization",
-        "@id": "https://www.openeuler.openatom.cn/",
+        "@id": "https://www.openeuler.org/",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       }
     },
     "breadcrumb": {
@@ -26,19 +26,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Migration",
-          "item": "https://www.openeuler.openatom.cn/en/migration/"
+          "item": "https://www.openeuler.org/en/migration/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Guidelines for Migrating to openEuler",
-          "item": "https://www.openeuler.openatom.cn/en/migration/guidance"
+          "item": "https://www.openeuler.org/en/migration/guidance"
         }
       ]
     }
@@ -48,12 +48,12 @@
     "@type": "HowTo",
     "name": "How to Migrate to openEuler",
     "description": "A comprehensive six-step guide for migrating your operating system to openEuler, including team setup, needs analysis, planning, software adaptation, OS migration, and testing.",
-    "url": "https://www.openeuler.openatom.cn/en/migration/guidance",
-    "image": "https://www.openeuler.openatom.cn/en/migration/guidance/process.png",
+    "url": "https://www.openeuler.org/en/migration/guidance",
+    "image": "https://www.openeuler.org/en/migration/guidance/process.png",
     "tool": {
       "@type": "HowToTool",
       "name": "x2openEuler",
-      "url": "https://www.openeuler.openatom.cn/en/migration/download/"
+      "url": "https://www.openeuler.org/en/migration/download/"
     },
     "step": [
       {

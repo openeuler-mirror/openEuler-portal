@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/showcase/energy/006e41a2-9e5f-621a3b40396e",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/energy/006e41a2-9e5f-621a3b40396e",
+    "@id": "https://www.openeuler.org/en/showcase/energy/006e41a2-9e5f-621a3b40396e",
+    "url": "https://www.openeuler.org/en/showcase/energy/006e41a2-9e5f-621a3b40396e",
     "name": "State Grid Corporation of China | openEuler",
     "description": "OS Porting for the Smart Dispatch System — State Grid Corporation of China (SGCC) migrated the D5000 dispatch system to Kylinsec OS (openEuler distribution) on the Huawei Kunpeng platform for enhanced power grid information security.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Showcase",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/"
+          "item": "https://www.openeuler.org/en/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Energy",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/energy/"
+          "item": "https://www.openeuler.org/en/showcase/energy/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "State Grid Corporation of China",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/energy/006e41a2-9e5f-621a3b40396e"
+          "item": "https://www.openeuler.org/en/showcase/energy/006e41a2-9e5f-621a3b40396e"
         }
       ]
     }
@@ -48,7 +48,7 @@
     "@type": "TechArticle",
     "headline": "OS Porting for the Smart Dispatch System — State Grid Corporation of China",
     "description": "State Grid Corporation of China (SGCC) migrated its D5000 power dispatch system to the Kylinsec OS (openEuler distribution) on TaiShan 200 servers with Kunpeng 920 processors to meet Classified Protection of Cybersecurity Level 4 requirements.",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/energy/006e41a2-9e5f-621a3b40396e",
+    "url": "https://www.openeuler.org/en/showcase/energy/006e41a2-9e5f-621a3b40396e",
     "inLanguage": "en",
     "about": [
       {
@@ -76,17 +76,17 @@
       {
         "@type": "Organization",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.org/",
         "description": "Open-source Linux distribution community providing the base for Kylinsec OS"
       }
     ],
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "articleSection": "Energy",

@@ -4,7 +4,7 @@
     "@type": "Event",
     "name": "Operating System Conference & openEuler Summit 2023",
     "alternateName": "openEuler Summit 2023",
-    "url": "https://www.openeuler.openatom.cn/en/interaction/summit-list/summit2023",
+    "url": "https://www.openeuler.org/en/interaction/summit-list/summit2023",
     "description": "Discover emerging OS technologies at openEuler Summit 2023, where AI intersects with digital intelligence innovation. The Operating System Conference & openEuler Summit 2023 is a premier event that brings together major global players from across the industry chain to discuss core capabilities of base software, lead continuous innovations, build a thriving open source community, and promote the development of intelligent OSs for a digital future.",
     "startDate": "2023-12-15",
     "endDate": "2023-12-16",
@@ -13,12 +13,12 @@
     "organizer": {
       "@type": "Organization",
       "name": "OpenAtom openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "sponsor": {
       "@type": "Organization",
       "name": "OpenAtom Foundation",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "performer": [
       {
@@ -57,7 +57,7 @@
     ],
     "inLanguage": "en",
     "isAccessibleForFree": true,
-    "image": "https://www.openeuler.openatom.cn/en/interaction/summit-list/summit2023"
+    "image": "https://www.openeuler.org/en/interaction/summit-list/summit2023"
   },
   {
     "@context": "https://schema.org",
@@ -67,25 +67,25 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.openeuler.openatom.cn/en/"
+        "item": "https://www.openeuler.org/en/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Interaction",
-        "item": "https://www.openeuler.openatom.cn/en/interaction/"
+        "item": "https://www.openeuler.org/en/interaction/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Summit List",
-        "item": "https://www.openeuler.openatom.cn/en/interaction/summit-list/"
+        "item": "https://www.openeuler.org/en/interaction/summit-list/"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "openEuler Summit 2023",
-        "item": "https://www.openeuler.openatom.cn/en/interaction/summit-list/summit2023"
+        "item": "https://www.openeuler.org/en/interaction/summit-list/summit2023"
       }
     ]
   }

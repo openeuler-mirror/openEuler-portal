@@ -3,29 +3,29 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/en/wiki/about/introduce",
-      "url": "https://www.openeuler.openatom.cn/en/wiki/about/introduce",
+      "@id": "https://www.openeuler.org/en/wiki/about/introduce",
+      "url": "https://www.openeuler.org/en/wiki/about/introduce",
       "name": "About openEuler | Wiki | openEuler",
       "description": "Explore the basics of openEuler, an open source OS for digital infrastructure with a vibrant community-driven ecosystem.",
       "inLanguage": "en",
       "isPartOf": {
         "@type": "WebSite",
-        "@id": "https://www.openeuler.openatom.cn/",
-        "url": "https://www.openeuler.openatom.cn/",
+        "@id": "https://www.openeuler.org/",
+        "url": "https://www.openeuler.org/",
         "name": "openEuler",
         "description": "openEuler is an open source OS oriented to digital infrastructure that fits into any server, cloud computing, edge computing, and embedded deployment.",
         "inLanguage": "en"
       },
       "about": {
         "@type": "SoftwareApplication",
-        "@id": "https://www.openeuler.openatom.cn/en/",
+        "@id": "https://www.openeuler.org/en/",
         "name": "openEuler",
         "alternateName": "OpenAtom openEuler",
         "description": "openEuler is an open source OS oriented to digital infrastructure that fits into any server, cloud computing, edge computing, and embedded deployment. This secure, stable, and easy-to-use open source OS is compatible with multiple computing architectures.",
         "applicationCategory": "OperatingSystem",
         "operatingSystem": "Linux",
-        "url": "https://www.openeuler.openatom.cn/en/",
-        "downloadUrl": "https://www.openeuler.openatom.cn/en/download/",
+        "url": "https://www.openeuler.org/en/",
+        "downloadUrl": "https://www.openeuler.org/en/download/",
         "featureList": [
           "Server deployment",
           "Cloud computing",
@@ -48,19 +48,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.openeuler.openatom.cn/en/"
+            "item": "https://www.openeuler.org/en/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Wiki",
-            "item": "https://www.openeuler.openatom.cn/en/wiki/"
+            "item": "https://www.openeuler.org/en/wiki/"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "About openEuler",
-            "item": "https://www.openeuler.openatom.cn/en/wiki/about/introduce"
+            "item": "https://www.openeuler.org/en/wiki/about/introduce"
           }
         ]
       }
@@ -68,9 +68,9 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "@id": "https://www.openeuler.openatom.cn/en/#organization",
+      "@id": "https://www.openeuler.org/en/#organization",
       "name": "openEuler Community",
-      "url": "https://www.openeuler.openatom.cn/en/",
+      "url": "https://www.openeuler.org/en/",
       "description": "The openEuler community works with global developers to build an open, diversified, and architecture-inclusive software ecosystem. It covers all scenarios of digital facilities, and empowers enterprises to develop their hardware and software as well as application ecosystems.",
       "foundingOrganization": {
         "@type": "Organization",
@@ -81,7 +81,7 @@
         {
           "@type": "Organization",
           "name": "Technical Committee",
-          "url": "https://www.openeuler.openatom.cn/en/community/organization/#technical-committee"
+          "url": "https://www.openeuler.org/en/community/organization/#technical-committee"
         },
         {
           "@type": "Organization",
@@ -95,8 +95,8 @@
         "url": "https://www.openatom.org/"
       },
       "sameAs": [
-        "https://www.openeuler.openatom.cn/en/community/organization/",
-        "https://www.openeuler.openatom.cn/en/sig/sig-list/"
+        "https://www.openeuler.org/en/community/organization/",
+        "https://www.openeuler.org/en/sig/sig-list/"
       ]
     }
   ]

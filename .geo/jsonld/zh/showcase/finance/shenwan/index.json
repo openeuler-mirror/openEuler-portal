@@ -4,20 +4,20 @@
     "@type": "WebPage",
     "name": "申万宏源证券有限公司 | openEuler社区",
     "description": "超聚变操作系统助力申万宏源打造速度更快的高频量化交易平台",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/shenwan",
+    "url": "https://www.openeuler.org/zh/showcase/finance/shenwan",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.openatom.cn/zh/"},
-        {"@type": "ListItem", "position": 2, "name": "成功案例", "item": "https://www.openeuler.openatom.cn/zh/showcase/"},
-        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"},
-        {"@type": "ListItem", "position": 4, "name": "申万宏源证券有限公司", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/shenwan"}
+        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.org/zh/"},
+        {"@type": "ListItem", "position": 2, "name": "成功案例", "item": "https://www.openeuler.org/zh/showcase/"},
+        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.org/zh/showcase/finance/"},
+        {"@type": "ListItem", "position": 4, "name": "申万宏源证券有限公司", "item": "https://www.openeuler.org/zh/showcase/finance/shenwan"}
       ]
     }
   },
@@ -26,9 +26,9 @@
     "@type": "Article",
     "headline": "超聚变操作系统助力申万宏源打造速度更快的高频量化交易平台",
     "description": "申万宏源证券有限公司联合超聚变，基于openEuler打造的FusionOS服务器操作系统，通过软硬件深度协同调优，使高频量化交易节点平均穿透时延降低约25%。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/shenwan",
+    "url": "https://www.openeuler.org/zh/showcase/finance/shenwan",
     "inLanguage": "zh",
-    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn", "logo": {"@type": "ImageObject", "url": "https://www.openeuler.openatom.cn/logo.png"}},
+    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.org", "logo": {"@type": "ImageObject", "url": "https://www.openeuler.org/logo.png"}},
     "about": [
       {"@type": "Thing", "name": "高频量化交易", "description": "具有低时延、高频次、低隔夜持仓、高报撤单频率及高换手率特点的证券交易方式"},
       {"@type": "Thing", "name": "FusionOS", "description": "基于openEuler打造的超聚变服务器操作系统"},

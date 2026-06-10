@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/interaction/live-list",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list",
+    "@id": "https://www.openeuler.org/zh/interaction/live-list",
+    "url": "https://www.openeuler.org/zh/interaction/live-list",
     "name": "直播列表 | 社区活动 | openEuler社区",
     "description": "浏览openEuler社区的直播活动列表，参与实时互动。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -19,19 +19,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "社区活动",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/"
+          "item": "https://www.openeuler.org/zh/interaction/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "直播列表",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/live-list"
+          "item": "https://www.openeuler.org/zh/interaction/live-list"
         }
       ]
     }
@@ -41,7 +41,7 @@
     "@type": "ItemList",
     "name": "openEuler社区直播活动列表",
     "description": "浏览openEuler社区的直播活动列表，参与实时互动。",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list",
+    "url": "https://www.openeuler.org/zh/interaction/live-list",
     "numberOfItems": 6,
     "itemListElement": [
       {
@@ -56,7 +56,7 @@
           "organizer": {
             "@type": "Organization",
             "name": "openEuler社区",
-            "url": "https://www.openeuler.openatom.cn"
+            "url": "https://www.openeuler.org"
           },
           "performer": {
             "@type": "Person",
@@ -64,9 +64,9 @@
           },
           "location": {
             "@type": "VirtualLocation",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list"
+            "url": "https://www.openeuler.org/zh/interaction/live-list"
           },
-          "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list"
+          "url": "https://www.openeuler.org/zh/interaction/live-list"
         }
       },
       {
@@ -81,7 +81,7 @@
           "organizer": {
             "@type": "Organization",
             "name": "openEuler社区",
-            "url": "https://www.openeuler.openatom.cn"
+            "url": "https://www.openeuler.org"
           },
           "performer": {
             "@type": "Person",
@@ -89,9 +89,9 @@
           },
           "location": {
             "@type": "VirtualLocation",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list"
+            "url": "https://www.openeuler.org/zh/interaction/live-list"
           },
-          "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list"
+          "url": "https://www.openeuler.org/zh/interaction/live-list"
         }
       },
       {
@@ -106,7 +106,7 @@
           "organizer": {
             "@type": "Organization",
             "name": "openEuler社区",
-            "url": "https://www.openeuler.openatom.cn"
+            "url": "https://www.openeuler.org"
           },
           "performer": {
             "@type": "Person",
@@ -114,9 +114,9 @@
           },
           "location": {
             "@type": "VirtualLocation",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list"
+            "url": "https://www.openeuler.org/zh/interaction/live-list"
           },
-          "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list"
+          "url": "https://www.openeuler.org/zh/interaction/live-list"
         }
       },
       {
@@ -131,7 +131,7 @@
           "organizer": {
             "@type": "Organization",
             "name": "openEuler社区",
-            "url": "https://www.openeuler.openatom.cn"
+            "url": "https://www.openeuler.org"
           },
           "performer": {
             "@type": "Person",
@@ -139,9 +139,9 @@
           },
           "location": {
             "@type": "VirtualLocation",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list"
+            "url": "https://www.openeuler.org/zh/interaction/live-list"
           },
-          "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list"
+          "url": "https://www.openeuler.org/zh/interaction/live-list"
         }
       },
       {
@@ -156,7 +156,7 @@
           "organizer": {
             "@type": "Organization",
             "name": "openEuler社区",
-            "url": "https://www.openeuler.openatom.cn"
+            "url": "https://www.openeuler.org"
           },
           "performer": {
             "@type": "Person",
@@ -164,9 +164,9 @@
           },
           "location": {
             "@type": "VirtualLocation",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list"
+            "url": "https://www.openeuler.org/zh/interaction/live-list"
           },
-          "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list"
+          "url": "https://www.openeuler.org/zh/interaction/live-list"
         }
       },
       {
@@ -181,7 +181,7 @@
           "organizer": {
             "@type": "Organization",
             "name": "openEuler社区",
-            "url": "https://www.openeuler.openatom.cn"
+            "url": "https://www.openeuler.org"
           },
           "performer": {
             "@type": "Person",
@@ -189,9 +189,9 @@
           },
           "location": {
             "@type": "VirtualLocation",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list"
+            "url": "https://www.openeuler.org/zh/interaction/live-list"
           },
-          "url": "https://www.openeuler.openatom.cn/zh/interaction/live-list"
+          "url": "https://www.openeuler.org/zh/interaction/live-list"
         }
       }
     ]

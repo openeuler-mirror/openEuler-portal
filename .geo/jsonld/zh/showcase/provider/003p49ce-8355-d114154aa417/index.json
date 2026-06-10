@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "浙江移动客户中心、业务大厅等核心系统 | openEuler社区",
     "description": "平滑完成操作系统无感知迁移，实现业务高效稳定运行",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/003p49ce-8355-d114154aa417",
+    "url": "https://www.openeuler.org/zh/showcase/provider/003p49ce-8355-d114154aa417",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "案例展示",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "浙江移动客户中心、业务大厅等核心系统",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/provider/003p49ce-8355-d114154aa417"
+          "item": "https://www.openeuler.org/zh/showcase/provider/003p49ce-8355-d114154aa417"
         }
       ]
     }
@@ -40,17 +40,17 @@
     "@type": "Article",
     "headline": "浙江移动客户中心、业务大厅等核心系统",
     "description": "平滑完成操作系统无感知迁移，实现业务高效稳定运行",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/003p49ce-8355-d114154aa417",
+    "url": "https://www.openeuler.org/zh/showcase/provider/003p49ce-8355-d114154aa417",
     "inLanguage": "zh",
-    "image": "https://www.openeuler.openatom.cn/zh/showcase/provider/003p49ce-8355-d114154aa417/p1.jpg",
+    "image": "https://www.openeuler.org/zh/showcase/provider/003p49ce-8355-d114154aa417/p1.jpg",
     "datePublished": "2021-08-01",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "about": [
@@ -76,7 +76,7 @@
       {
         "@type": "Organization",
         "name": "银河麒麟",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/003p49ce-8355-d114154aa417/qiling.png"
+        "url": "https://www.openeuler.org/zh/showcase/provider/003p49ce-8355-d114154aa417/qiling.png"
       }
     ],
     "articleBody": "作为我国省级移动公司的领先者，浙江移动的业务体量、业务复杂度均在国内名列前茅，因此对支撑系统提出了极为严苛的要求，如何完成业务系统无感知的迁移成为用户最关心的需求。浙江移动在2021年8月完成客户中心、业务大厅等核心系统的适配测试工作，顺利平滑的完成了操作系统迁移，在电信行业内首次完成基于银河麒麟高级服务器操作系统V10在运营商核心系统投产。解决方案采用x86服务器和华为鲲鹏服务器，操作系统为银河麒麟高级服务器操作系统V10，容器云选择了Mesos集群和K8S集群，业务系统包括前台业务大厅系统和中台客户中心系统，IT架构实现微服务化、容器化、双平面统一运行、业务统一发布。"

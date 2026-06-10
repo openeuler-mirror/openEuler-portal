@@ -1,56 +1,7 @@
 ---
 title: 选举条例
 category: about-us
-head:
-  - - script
-    - { type: "application/ld+json" }
-    - |
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "openEuler选举管理条例规定什么？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "本条例规定了openEuler委员会主席及技术委员会、品牌委员会、用户委员会各主席和委员的选举程序、候选资格审查规则和投票机制，依据《openEuler项目群开源治理制度》制定。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "如何参选openEuler技术委员会委员？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "候选人必须是openEuler项目群现任SIG或子项目Maintainer，并通过捐赠人提名、技术委员会提名，或自荐（需获得至少8名现任技术委员会委员书面推荐）之一方式产生。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "openEuler委员会主席如何选举产生？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "常务委员会委员提交参选申请并通过资格审查后，由全体委员投票选出。第一轮按简单多数当选；平票则进入第二轮；若仍平票则由基金会秘书处裁决。最终由基金会秘书处正式任命。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "什么情况下会被取消openEuler选举资格？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "因违反社区规章被终止资格者、违背社区行为准则者、有损害社区利益言行者均被禁止参选。担任openEuler委员会主席/副主席/执行总监者不得参选技术/品牌/用户委员会主席。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "openEuler在线投票如何进行？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "在线投票启动后5个工作日内为有效投票时间，超时未投记为弃权。赞成票须超过全体委员数量的半数方为通过。若5个工作日内参与投票委员不足半数，需重新发起投票。"
-            }
-          }
-        ]
-      }
+
 ---
 
 # 开放原子开源基金会

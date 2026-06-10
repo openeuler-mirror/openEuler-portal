@@ -3,9 +3,9 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.openeuler.openatom.cn/en/"},
-      {"@type": "ListItem", "position": 2, "name": "Other", "item": "https://www.openeuler.openatom.cn/en/other/"},
-      {"@type": "ListItem", "position": 3, "name": "Version Lifecycles", "item": "https://www.openeuler.openatom.cn/en/other/lifecycle/"}
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.openeuler.org/en/"},
+      {"@type": "ListItem", "position": 2, "name": "Other", "item": "https://www.openeuler.org/en/other/"},
+      {"@type": "ListItem", "position": 3, "name": "Version Lifecycles", "item": "https://www.openeuler.org/en/other/lifecycle/"}
     ]
   },
   {
@@ -13,7 +13,7 @@
     "@type": "TechArticle",
     "headline": "openEuler Community Release Lifecycle Management",
     "description": "Understand the version lifecycles of openEuler, featuring innovation versions and long-term support (LTS) releases.",
-    "url": "https://www.openeuler.openatom.cn/en/other/lifecycle/",
+    "url": "https://www.openeuler.org/en/other/lifecycle/",
     "inLanguage": "en",
     "articleSection": [
       "openEuler Community Version Lifecycle Management (Overall)",
@@ -22,7 +22,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler Community",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "about": [
       {

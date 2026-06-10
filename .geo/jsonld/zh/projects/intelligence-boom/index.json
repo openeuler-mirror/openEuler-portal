@@ -4,7 +4,7 @@
     "@type": "SoftwareApplication",
     "name": "Intelligence BooM",
     "alternateName": "Intelligence BooM AI开源基础软件栈",
-    "url": "https://www.openeuler.openatom.cn/zh/projects/intelligence-boom",
+    "url": "https://www.openeuler.org/zh/projects/intelligence-boom",
     "description": "Intelligence BooM 是 openEuler 社区联合多方打造的大模型全栈开源 AI 软件栈，涵盖异构融合、任务管理、运行加速等7大平台与20+开源组件，支持 NPU/GPU/CPU 协同推理，提供一键部署与智能体开发能力，助力企业快速落地 AI 应用。",
     "applicationCategory": "ArtificialIntelligenceApplication",
     "operatingSystem": "openEuler",
@@ -32,30 +32,30 @@
     "author": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Intelligence BooM 大模型全栈开源推理解决方案 | openEuler社区",
-    "url": "https://www.openeuler.openatom.cn/zh/projects/intelligence-boom",
+    "url": "https://www.openeuler.org/zh/projects/intelligence-boom",
     "description": "Intelligence BooM 是 openEuler 社区联合多方打造的大模型全栈开源 AI 软件栈，涵盖异构融合、任务管理、运行加速等7大平台与20+开源组件，支持 NPU/GPU/CPU 协同推理，提供一键部署与智能体开发能力，助力企业快速落地 AI 应用。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": {
       "@type": "SoftwareApplication",
       "name": "Intelligence BooM",
-      "url": "https://www.openeuler.openatom.cn/zh/projects/intelligence-boom"
+      "url": "https://www.openeuler.org/zh/projects/intelligence-boom"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -64,19 +64,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Projects",
-          "item": "https://www.openeuler.openatom.cn/zh/projects/"
+          "item": "https://www.openeuler.org/zh/projects/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Intelligence BooM",
-          "item": "https://www.openeuler.openatom.cn/zh/projects/intelligence-boom"
+          "item": "https://www.openeuler.org/zh/projects/intelligence-boom"
         }
       ]
     }
@@ -85,10 +85,10 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "openEuler社区",
-    "url": "https://www.openeuler.openatom.cn",
+    "url": "https://www.openeuler.org",
     "description": "openEuler 是一个开源、免费的 Linux 发行版平台，由 openEuler 社区联合多家企业共同打造。",
     "sameAs": [
-      "https://www.openeuler.openatom.cn/zh/"
+      "https://www.openeuler.org/zh/"
     ],
     "memberOf": {
       "@type": "ProgramMembership",

@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/woyun",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/woyun",
+    "@id": "https://www.openeuler.org/zh/showcase/cloud-computing/woyun",
+    "url": "https://www.openeuler.org/zh/showcase/cloud-computing/woyun",
     "name": "联通沃云信创云 | openEuler社区",
     "description": "基于云原生定制化改造适配，以开源软件OpenStack+KVM为基础打造自主、安全可靠的强大云平台，适配鲲鹏、海光等国内主流芯片，支持银河麒麟操作系统。",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "成功案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "云计算",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/"
+          "item": "https://www.openeuler.org/zh/showcase/cloud-computing/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "联通沃云信创云",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/woyun"
+          "item": "https://www.openeuler.org/zh/showcase/cloud-computing/woyun"
         }
       ]
     }
@@ -48,15 +48,15 @@
     "@type": "TechArticle",
     "headline": "联通沃云信创云 — 基于云原生定制化改造适配",
     "description": "基于云原生定制化改造适配，以开源软件OpenStack+KVM为基础打造自主、安全可靠的强大云平台，适配鲲鹏、海光等国内主流芯片，选用银河麒麟操作系统，提供云服务器、云硬盘、裸金属、负载均衡、虚拟私有云等IaaS和PaaS产品。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/woyun",
+    "url": "https://www.openeuler.org/zh/showcase/cloud-computing/woyun",
     "inLanguage": "zh-CN",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "about": [
@@ -80,7 +80,7 @@
     "articleSection": "云计算成功案例",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/woyun"
+      "@id": "https://www.openeuler.org/zh/showcase/cloud-computing/woyun"
     }
   },
   {
@@ -88,7 +88,7 @@
     "@type": "SoftwareApplication",
     "name": "联通沃云信创云",
     "description": "以开源软件OpenStack+KVM为基础打造的自主、安全可靠的强大云平台，自主开发计算、存储、网络、中间件等组件，全面适配国内服务器和操作系统，提供IaaS和PaaS产品。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/woyun",
+    "url": "https://www.openeuler.org/zh/showcase/cloud-computing/woyun",
     "applicationCategory": "CloudPlatform",
     "operatingSystem": "银河麒麟高级服务器操作系统 V10",
     "softwareRequirements": "openEuler, OpenStack, Kubernetes",

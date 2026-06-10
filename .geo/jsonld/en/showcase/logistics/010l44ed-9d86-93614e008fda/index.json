@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/showcase/logistics/010l44ed-9d86-93614e008fda",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/logistics/010l44ed-9d86-93614e008fda",
+    "@id": "https://www.openeuler.org/en/showcase/logistics/010l44ed-9d86-93614e008fda",
+    "url": "https://www.openeuler.org/en/showcase/logistics/010l44ed-9d86-93614e008fda",
     "name": "China Post | openEuler",
     "description": "OA System Porting — China Post Group Corporation migrated its innovation cloud platform and OA system to UOS V20 using openEuler-based infrastructure, leveraging Kunpeng servers and the 1+N architecture for cloud container management.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Showcase",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/"
+          "item": "https://www.openeuler.org/en/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Logistics",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/logistics/"
+          "item": "https://www.openeuler.org/en/showcase/logistics/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "China Post",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/logistics/010l44ed-9d86-93614e008fda"
+          "item": "https://www.openeuler.org/en/showcase/logistics/010l44ed-9d86-93614e008fda"
         }
       ]
     }
@@ -46,16 +46,16 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": "https://www.openeuler.openatom.cn/en/showcase/logistics/010l44ed-9d86-93614e008fda#article",
+    "@id": "https://www.openeuler.org/en/showcase/logistics/010l44ed-9d86-93614e008fda#article",
     "headline": "China Post OA System Porting to UOS V20 on openEuler",
     "description": "China Post Group Corporation successfully migrated its innovation cloud platform and OA system to UOS V20 in October 2021, using Kunpeng S920X00K servers, H3C cloud infrastructure, and a 1+N CCE architecture for secure, compliant cloud management.",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/logistics/010l44ed-9d86-93614e008fda",
+    "url": "https://www.openeuler.org/en/showcase/logistics/010l44ed-9d86-93614e008fda",
     "inLanguage": "en",
     "datePublished": "2021-10-01",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "about": [
       {

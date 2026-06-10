@@ -4,7 +4,7 @@
     "@type": "SoftwareApplication",
     "name": "iSula",
     "alternateName": "iSulad",
-    "url": "https://www.openeuler.openatom.cn/en/other/projects/isula",
+    "url": "https://www.openeuler.org/en/other/projects/isula",
     "description": "iSula is a lightweight container engine built for enhanced efficiency and security on openEuler. iSulad provides a unified architecture for different CT and IT requirements, featuring a lightweight, fast, and flexible design. It supports multiple languages (C/C++ with Rust planned), CRI northbound interface connecting to Kubernetes, OCI runtime and image specifications, multiple container forms (system and VM), and a plug-in architecture for custom extensions.",
     "applicationCategory": "DeveloperApplication",
     "applicationSubCategory": "Container Engine",
@@ -21,7 +21,7 @@
     "isPartOf": {
       "@type": "SoftwareApplication",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "hasPart": [
       {
@@ -46,20 +46,20 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "iSula - Lightweight Container Engine | openEuler",
-    "url": "https://www.openeuler.openatom.cn/en/other/projects/isula",
+    "url": "https://www.openeuler.org/en/other/projects/isula",
     "description": "Experience the power of iSula, a lightweight container engine built for enhanced efficiency and security on openEuler.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -68,19 +68,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Projects",
-          "item": "https://www.openeuler.openatom.cn/en/other/projects/"
+          "item": "https://www.openeuler.org/en/other/projects/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "iSula",
-          "item": "https://www.openeuler.openatom.cn/en/other/projects/isula"
+          "item": "https://www.openeuler.org/en/other/projects/isula"
         }
       ]
     }
