@@ -71,7 +71,7 @@ const loginStore = useLoginStore();
 const activityData = activityContent.calendar as CalendarValueT[];
 const summitData = (activityContent.summit ?? []) as CalendarValueT[];
 
-const TODAY = dayjs(new Date()).format('YYYY-MM-DD');
+const TODAY = ref('');
 
 const recentMeetingDates = ref([] as string[]);
 
@@ -171,7 +171,7 @@ const latestSchedule = computed(() => {
     }
 
     // 如果有即将发生的活动就返回，否则返回第一个日期
-    latest = minUpcomingDate || recentMeetingDates.value[0] || TODAY;
+    latest = minUpcomingDate || recentMeetingDates.value[0] || TODAY.value;
   }
 
   return latest;
@@ -344,6 +344,7 @@ const getPermissionMeeting = () => {
 onMounted(async () => {
 
   selectedDate.value = new Date();
+  TODAY.value = dayjs(new Date()).format('YYYY-MM-DD');
   // 设置右侧 日程列表高度
   const tbody = document.querySelector(
     '.calendar-body .el-calendar__body'
