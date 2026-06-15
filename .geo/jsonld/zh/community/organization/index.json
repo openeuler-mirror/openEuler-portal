@@ -209,7 +209,8 @@
           {"@type": "Person", "name": "文丹", "jobTitle": "委员"},
           {"@type": "Person", "name": "徐露", "jobTitle": "委员"},
           {"@type": "Person", "name": "徐嫣莉", "jobTitle": "委员"},
-          {"@type": "Person", "name": "郑莉", "jobTitle": "委员"}
+          {"@type": "Person", "name": "郑莉", "jobTitle": "委员"},
+          {"@type": "Person", "name": "李明", "jobTitle": "委员"}
         ]
       },
       {
@@ -233,7 +234,8 @@
           {"@type": "Person", "name": "张剑", "jobTitle": "委员"},
           {"@type": "Person", "name": "张庆南", "jobTitle": "委员"},
           {"@type": "Person", "name": "郑振宇", "jobTitle": "委员"},
-          {"@type": "Person", "name": "朱晨", "jobTitle": "委员"}
+          {"@type": "Person", "name": "朱晨", "jobTitle": "委员"},
+          {"@type": "Person", "name": "冯伟", "jobTitle": "委员"}
         ]
       },
       {

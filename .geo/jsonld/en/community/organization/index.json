@@ -334,6 +334,51 @@
             "jobTitle": "Committee Member"
           }
         ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler Marketing Committee",
+        "description": "The marketing committee responsible for the openEuler community's brand strategy and outreach.",
+        "url": "https://www.openeuler.openatom.cn/en/community/organization",
+        "member": [
+          {"@type": "Person", "name": "Liang Bing", "jobTitle": "Chairperson"},
+          {"@type": "Person", "name": "Hu Mingyue", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Li Wei", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Li Zhenning", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Peng Yaying", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Wen Dan", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Xu Lu", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Xu Yanli", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Zheng Li", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Li Ming", "jobTitle": "Committee Member"}
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler User Committee",
+        "description": "The user committee representing openEuler community users and their interests.",
+        "url": "https://www.openeuler.openatom.cn/en/community/organization",
+        "member": [
+          {"@type": "Person", "name": "Wang Jun", "jobTitle": "Chairperson"},
+          {"@type": "Person", "name": "Chen Jing", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Cui Ji", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Du Shaohui", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Gong Chenpeng", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Gao Honghe", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Hu Yong", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Li Chenbin", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Li Rongqing", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Li Wei", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Rong Tao", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Shi Guangyin", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Xu Lei", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Xu Tianyuan", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Zhang Jian", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Zhang Qingnan", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Zheng Zhenyu", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Zhu Chen", "jobTitle": "Committee Member"},
+          {"@type": "Person", "name": "Feng Wei", "jobTitle": "Committee Member"}
+        ]
       }
     ]
   }
