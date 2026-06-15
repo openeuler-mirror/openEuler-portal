@@ -36,6 +36,13 @@ members:
     position_en: Committee member
     email: dush1@csg.cn
 
+  - name: 冯伟
+    name_en: Feng Wei
+    image: ./images/fengwei.png
+    position: 委员
+    position_en: Committee member
+    email: f.fengwei@huawei.com
+
   - name: 龚鹏程
     name_en: Gong Chenpeng
     image: ./images/gongchengpeng.png

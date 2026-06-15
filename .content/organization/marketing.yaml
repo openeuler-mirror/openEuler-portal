@@ -21,6 +21,13 @@ members:
     position_en: Committee member
     email: Ming.yue.hu@intel.com
 
+  - name: 李明
+    name_en: Li Ming
+    image: ./images/liming-marketing.png
+    position: 委员
+    position_en: Committee member
+    email: liming107@huawei.com
+
   - name: 李伟
     name_en: Li Wei
     image: ./images/liwei.png

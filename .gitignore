@@ -139,3 +139,6 @@ app/.vitepress/dist
 !.claude/skills/sitemap-meta-tags-batch-generator/
 !.claude/skills/sitemap-schema-batch-generator/
 !.claude/skills/vue-best-practices/
+
+# CodeGraph MCP server artifacts (local tool, not business code)
+.codegraph/
