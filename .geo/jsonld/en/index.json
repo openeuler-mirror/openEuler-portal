@@ -4,8 +4,8 @@
     "@type": "Organization",
     "name": "openEuler Community",
     "alternateName": "openEuler",
-    "url": "https://www.openeuler.openatom.cn/en/",
-    "logo": "https://www.openeuler.openatom.cn/assets/logo.XeUCiAZu.svg",
+    "url": "https://www.openeuler.org/en/",
+    "logo": "https://www.openeuler.org/img/for-cdn/logo.png",
     "description": "An open source OS run by the OpenAtom Foundation that builds a global community to enhance digital infrastructure and support diverse architectures.",
     "sameAs": [
       "https://github.com/openeuler"
@@ -40,7 +40,7 @@
       "availability": "https://schema.org/InStock",
       "description": "openEuler community release is free and open source"
     },
-    "downloadUrl": "https://www.openeuler.openatom.cn/en/download/",
+    "downloadUrl": "https://www.openeuler.org/en/download/",
     "license": "https://license.coscl.org.cn/MulanPSL2",
     "featureList": [
       "Various Devices Support",
@@ -58,18 +58,6 @@
       "LoongArch",
       "PowerPC",
       "SW-64"
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.openeuler.openatom.cn/en/"
-      }
     ]
   }
 ]

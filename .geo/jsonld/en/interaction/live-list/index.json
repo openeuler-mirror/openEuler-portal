@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": "https://www.openeuler.openatom.cn/en/interaction/live-list",
-    "url": "https://www.openeuler.openatom.cn/en/interaction/live-list",
+    "@id": "https://www.openeuler.org/en/interaction/live-list",
+    "url": "https://www.openeuler.org/en/interaction/live-list",
     "name": "openEuler Live: Tech Sessions & Highlights",
     "description": "Watch openEuler live sessions on StratoVirt virtualization, CPU/memory/IO subsystems, and Avocado-VT testing. Explore recorded highlights from expert developers.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler"
     },
     "breadcrumb": {
@@ -20,19 +20,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Interaction",
-          "item": "https://www.openeuler.openatom.cn/en/interaction/"
+          "item": "https://www.openeuler.org/en/interaction/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Live Highlights",
-          "item": "https://www.openeuler.openatom.cn/en/interaction/live-list"
+          "item": "https://www.openeuler.org/en/interaction/live-list"
         }
       ]
     }
@@ -42,7 +42,7 @@
     "@type": "ItemList",
     "name": "openEuler Live Highlights",
     "description": "Recorded live tech sessions by openEuler expert developers covering StratoVirt virtualization and Avocado-VT testing.",
-    "url": "https://www.openeuler.openatom.cn/en/interaction/live-list",
+    "url": "https://www.openeuler.org/en/interaction/live-list",
     "numberOfItems": 6,
     "itemListElement": [
       {
@@ -52,7 +52,7 @@
           "@type": "VideoObject",
           "name": "手把手教你编写Avocado-VT用例",
           "description": "A hands-on guide to writing Avocado-VT test cases for virtualization testing.",
-          "url": "https://www.openeuler.openatom.cn/en/interaction/live-list",
+          "url": "https://www.openeuler.org/en/interaction/live-list",
           "uploadDate": "2020-12-14",
           "author": {
             "@type": "Person",
@@ -61,7 +61,7 @@
           "publisher": {
             "@type": "Organization",
             "name": "openEuler",
-            "url": "https://www.openeuler.openatom.cn/"
+            "url": "https://www.openeuler.org/"
           }
         }
       },
@@ -72,7 +72,7 @@
           "@type": "VideoObject",
           "name": "玩转虚拟化测试Avocado-VT",
           "description": "Mastering virtualization testing with Avocado-VT.",
-          "url": "https://www.openeuler.openatom.cn/en/interaction/live-list",
+          "url": "https://www.openeuler.org/en/interaction/live-list",
           "uploadDate": "2020-12-01",
           "author": {
             "@type": "Person",
@@ -81,7 +81,7 @@
           "publisher": {
             "@type": "Organization",
             "name": "openEuler",
-            "url": "https://www.openeuler.openatom.cn/"
+            "url": "https://www.openeuler.org/"
           }
         }
       },
@@ -92,7 +92,7 @@
           "@type": "VideoObject",
           "name": "StratoVirt之IO子系统剖析",
           "description": "An in-depth analysis of the IO subsystem in StratoVirt virtualization.",
-          "url": "https://www.openeuler.openatom.cn/en/interaction/live-list",
+          "url": "https://www.openeuler.org/en/interaction/live-list",
           "uploadDate": "2020-11-17",
           "author": {
             "@type": "Person",
@@ -101,7 +101,7 @@
           "publisher": {
             "@type": "Organization",
             "name": "openEuler",
-            "url": "https://www.openeuler.openatom.cn/"
+            "url": "https://www.openeuler.org/"
           }
         }
       },
@@ -112,7 +112,7 @@
           "@type": "VideoObject",
           "name": "StratoVirt之内存子系统剖析",
           "description": "An in-depth analysis of the memory subsystem in StratoVirt virtualization.",
-          "url": "https://www.openeuler.openatom.cn/en/interaction/live-list",
+          "url": "https://www.openeuler.org/en/interaction/live-list",
           "uploadDate": "2020-11-10",
           "author": {
             "@type": "Person",
@@ -121,7 +121,7 @@
           "publisher": {
             "@type": "Organization",
             "name": "openEuler",
-            "url": "https://www.openeuler.openatom.cn/"
+            "url": "https://www.openeuler.org/"
           }
         }
       },
@@ -132,7 +132,7 @@
           "@type": "VideoObject",
           "name": "StratoVirt之CPU子系统剖析",
           "description": "An in-depth analysis of the CPU subsystem in StratoVirt virtualization.",
-          "url": "https://www.openeuler.openatom.cn/en/interaction/live-list",
+          "url": "https://www.openeuler.org/en/interaction/live-list",
           "uploadDate": "2020-11-03",
           "author": {
             "@type": "Person",
@@ -141,7 +141,7 @@
           "publisher": {
             "@type": "Organization",
             "name": "openEuler",
-            "url": "https://www.openeuler.openatom.cn/"
+            "url": "https://www.openeuler.org/"
           }
         }
       },
@@ -152,7 +152,7 @@
           "@type": "VideoObject",
           "name": "如何安装并使用StratoVirt",
           "description": "A guide on how to install and use StratoVirt virtualization.",
-          "url": "https://www.openeuler.openatom.cn/en/interaction/live-list",
+          "url": "https://www.openeuler.org/en/interaction/live-list",
           "uploadDate": "2020-10-27",
           "author": {
             "@type": "Person",
@@ -161,7 +161,7 @@
           "publisher": {
             "@type": "Organization",
             "name": "openEuler",
-            "url": "https://www.openeuler.openatom.cn/"
+            "url": "https://www.openeuler.org/"
           }
         }
       }

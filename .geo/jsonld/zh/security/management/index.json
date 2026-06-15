@@ -5,12 +5,12 @@
       "@type": "WebPage",
       "name": "openEuler缺陷管理 | openEuler缺陷中心 | openEuler社区",
       "description": "openEuler 欢迎和鼓励社区开发者能主动识别或修复CVE， 不断提升openEuler 社区的软件使用体验，基于社区反馈我们会快速的响应、分析和解决上报的缺陷并及时发布。欢迎访问openEuler官网。",
-      "url": "https://www.openeuler.openatom.cn/zh/security/management",
+      "url": "https://www.openeuler.org/zh/security/management",
       "inLanguage": "zh",
       "isPartOf": {
         "@type": "WebSite",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       "breadcrumb": {
         "@type": "BreadcrumbList",
@@ -19,19 +19,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "openEuler",
-            "item": "https://www.openeuler.openatom.cn/zh/"
+            "item": "https://www.openeuler.org/zh/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "缺陷中心",
-            "item": "https://www.openeuler.openatom.cn/zh/security/management/"
+            "item": "https://www.openeuler.org/zh/security/management/"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "缺陷管理",
-            "item": "https://www.openeuler.openatom.cn/zh/security/management"
+            "item": "https://www.openeuler.org/zh/security/management"
           }
         ]
       }
@@ -41,20 +41,20 @@
       "@type": "TechArticle",
       "headline": "缺陷管理",
       "description": "openEuler 社区缺陷管理策略，包括缺陷响应、支持版本、缺陷处理流程及缺陷提交方式。",
-      "url": "https://www.openeuler.openatom.cn/zh/security/management",
+      "url": "https://www.openeuler.org/zh/security/management",
       "inLanguage": "zh",
       "author": {
         "@type": "Organization",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       "publisher": {
         "@type": "Organization",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn",
+        "url": "https://www.openeuler.org",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.openeuler.openatom.cn/assets/openEuler-logo.png"
+          "url": "https://www.openeuler.org/assets/openEuler-logo.png"
         }
       },
       "about": [

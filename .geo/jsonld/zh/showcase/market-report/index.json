@@ -2,21 +2,21 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/market-report",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/market-report",
+    "@id": "https://www.openeuler.org/zh/showcase/market-report",
+    "url": "https://www.openeuler.org/zh/showcase/market-report",
     "name": "openEuler市场研究报告",
     "description": "了解openEuler在行业的市场研究情况。想要了解更多信息，欢迎访问openEuler官网。",
     "inLanguage": "zh-CN",
-    "isPartOf": {"@type": "WebSite", "@id": "https://www.openeuler.openatom.cn/", "url": "https://www.openeuler.openatom.cn/", "name": "openEuler社区", "inLanguage": "zh-CN"},
+    "isPartOf": {"@type": "WebSite", "@id": "https://www.openeuler.org/", "url": "https://www.openeuler.org/", "name": "openEuler社区", "inLanguage": "zh-CN"},
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "openEuler社区", "item": "https://www.openeuler.openatom.cn/zh/"},
-        {"@type": "ListItem", "position": 2, "name": "用户案例", "item": "https://www.openeuler.openatom.cn/zh/showcase/"},
-        {"@type": "ListItem", "position": 3, "name": "市场研究报告", "item": "https://www.openeuler.openatom.cn/zh/showcase/market-report"}
+        {"@type": "ListItem", "position": 1, "name": "openEuler社区", "item": "https://www.openeuler.org/zh/"},
+        {"@type": "ListItem", "position": 2, "name": "用户案例", "item": "https://www.openeuler.org/zh/showcase/"},
+        {"@type": "ListItem", "position": 3, "name": "市场研究报告", "item": "https://www.openeuler.org/zh/showcase/market-report"}
       ]
     },
-    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn/"},
+    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.org/"},
     "about": {"@type": "Thing", "name": "openEuler市场研究报告", "description": "openEuler在服务器操作系统行业的市场研究情况"}
   },
   {
@@ -27,7 +27,7 @@
     "inLanguage": "zh-CN",
     "author": {"@type": "Organization", "name": "赛迪顾问"},
     "about": {"@type": "Thing", "name": "中国服务器操作系统市场"},
-    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn/"},
-    "isPartOf": {"@type": "CollectionPage", "url": "https://www.openeuler.openatom.cn/zh/showcase/market-report", "name": "openEuler市场研究报告"}
+    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.org/"},
+    "isPartOf": {"@type": "CollectionPage", "url": "https://www.openeuler.org/zh/showcase/market-report", "name": "openEuler市场研究报告"}
   }
 ]

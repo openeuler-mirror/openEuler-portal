@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/bada",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/bada",
+    "@id": "https://www.openeuler.org/zh/showcase/others/bada",
+    "url": "https://www.openeuler.org/zh/showcase/others/bada",
     "name": "武汉吧哒科技股份有限公司 | openEuler社区",
     "description": "基于openEuler操作系统，共同打造信服易备鲲鹏灾备一体机，满足数据保护的管理、灾备行业和信息系统灾难恢复的需求。",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -21,19 +21,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "武汉吧哒科技股份有限公司",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/bada"
+          "item": "https://www.openeuler.org/zh/showcase/others/bada"
         }
       ]
     }
@@ -43,15 +43,15 @@
     "@type": "Article",
     "headline": "武汉吧哒科技股份有限公司基于openEuler的数据安全与灾备解决方案",
     "description": "基于openEuler操作系统，共同打造信服易备鲲鹏灾备一体机，满足数据保护的管理、灾备行业和信息系统灾难恢复的需求。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/bada",
+    "url": "https://www.openeuler.org/zh/showcase/others/bada",
     "inLanguage": "zh-CN",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "about": [
@@ -83,7 +83,7 @@
     ],
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/bada"
+      "@id": "https://www.openeuler.org/zh/showcase/others/bada"
     }
   },
   {
@@ -115,6 +115,6 @@
       "SSL/TLS握手优化"
     ],
     "award": "湖北省2022年工业软件优秀产品",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/bada"
+    "url": "https://www.openeuler.org/zh/showcase/others/bada"
   }
 ]

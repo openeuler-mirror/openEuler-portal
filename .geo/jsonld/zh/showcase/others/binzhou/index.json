@@ -6,20 +6,20 @@
   "author": {
     "@type": "Organization",
     "name": "openEuler社区",
-    "url": "https://www.openeuler.openatom.cn"
+    "url": "https://www.openeuler.org"
   },
   "publisher": {
     "@type": "Organization",
     "name": "openEuler社区",
-    "url": "https://www.openeuler.openatom.cn",
+    "url": "https://www.openeuler.org",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.openeuler.openatom.cn/img/logo.png"
+      "url": "https://www.openeuler.org/img/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/binzhou/"
+    "@id": "https://www.openeuler.org/zh/showcase/others/binzhou/"
   },
   "about": {
     "@type": "SoftwareApplication",

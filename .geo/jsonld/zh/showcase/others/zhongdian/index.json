@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongdian",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongdian",
+    "@id": "https://www.openeuler.org/zh/showcase/others/zhongdian",
+    "url": "https://www.openeuler.org/zh/showcase/others/zhongdian",
     "name": "四川中电启明星技术有限公司（SKE容器云平台） | openEuler社区",
     "description": "可弹性伸缩、资源动态调度、高可用、便于快速开发持续交付的PaaS云平台",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -21,25 +21,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "四川中电启明星技术有限公司（SKE容器云平台）",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongdian"
+          "item": "https://www.openeuler.org/zh/showcase/others/zhongdian"
         }
       ]
     },

@@ -2,21 +2,21 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": "https://www.openeuler.openatom.cn/en/showcase/industry-white-paper",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/industry-white-paper",
+    "@id": "https://www.openeuler.org/en/showcase/industry-white-paper",
+    "url": "https://www.openeuler.org/en/showcase/industry-white-paper",
     "name": "Download openEuler Industry White Papers",
     "description": "Explore openEuler industry white papers covering OS solutions for finance and enterprise sectors. Download technical insights and real-world deployment reports.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler",
       "publisher": {
         "@type": "Organization",
-        "@id": "https://www.openeuler.openatom.cn/#organization",
+        "@id": "https://www.openeuler.org/#organization",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       }
     },
     "breadcrumb": {
@@ -26,19 +26,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Showcase",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/"
+          "item": "https://www.openeuler.org/en/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Industry White Papers",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/industry-white-paper"
+          "item": "https://www.openeuler.org/en/showcase/industry-white-paper"
         }
       ]
     },
@@ -47,12 +47,12 @@
         "@type": "Article",
         "name": "openEuler-based OSs in Finance",
         "description": "Industry white paper covering openEuler-based operating system solutions deployed in the finance sector.",
-        "url": "https://www.openeuler.openatom.cn/en/showcase/industry-white-paper",
+        "url": "https://www.openeuler.org/en/showcase/industry-white-paper",
         "publisher": {
           "@type": "Organization",
-          "@id": "https://www.openeuler.openatom.cn/#organization",
+          "@id": "https://www.openeuler.org/#organization",
           "name": "openEuler",
-          "url": "https://www.openeuler.openatom.cn/"
+          "url": "https://www.openeuler.org/"
         },
         "genre": "Industry White Paper",
         "about": {

@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/education/nanxinda",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/nanxinda",
+    "@id": "https://www.openeuler.org/zh/showcase/education/nanxinda",
+    "url": "https://www.openeuler.org/zh/showcase/education/nanxinda",
     "name": "南京信息工程大学气象灾害重点实验室 | openEuler社区",
     "description": "极端高温干旱天气模拟与预测平台，有效及时发现预警极端气候，提升应急处置能力，性能提升58%",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -21,25 +21,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "教育",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/"
+          "item": "https://www.openeuler.org/zh/showcase/education/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "南京信息工程大学气象灾害重点实验室",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/nanxinda"
+          "item": "https://www.openeuler.org/zh/showcase/education/nanxinda"
         }
       ]
     }
@@ -49,7 +49,7 @@
     "@type": "TechArticle",
     "headline": "南京信息工程大学气象灾害重点实验室 | openEuler社区",
     "description": "极端高温干旱天气模拟与预测平台，有效及时发现预警极端气候，提升应急处置能力，性能提升58%",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/nanxinda",
+    "url": "https://www.openeuler.org/zh/showcase/education/nanxinda",
     "inLanguage": "zh-CN",
     "about": [
       {
@@ -72,7 +72,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "mentions": [
       {
@@ -94,7 +94,7 @@
     "description": "基于鲲鹏软硬件底座、openEuler开源操作系统，使用鲲鹏应用使能套件BoostKit深度调优，实现对过往极端天气事件的高精度模拟以及未来可能出现的极端事件的预报，整体性能提升58%",
     "applicationCategory": "科学计算软件",
     "operatingSystem": "openEuler",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/nanxinda",
+    "url": "https://www.openeuler.org/zh/showcase/education/nanxinda",
     "author": {
       "@type": "Organization",
       "name": "南京信息工程大学气象灾害教育部重点实验室"

@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/hengsheng",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/hengsheng",
+    "@id": "https://www.openeuler.org/zh/showcase/finance/hengsheng",
+    "url": "https://www.openeuler.org/zh/showcase/finance/hengsheng",
     "name": "恒生电子 | openEuler社区",
     "description": "基于openEuler打造金融证券场景深度定制开发的商业版本LightOS操作系统",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "案例展示",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "金融",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+          "item": "https://www.openeuler.org/zh/showcase/finance/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "恒生电子",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/hengsheng"
+          "item": "https://www.openeuler.org/zh/showcase/finance/hengsheng"
         }
       ]
     }
@@ -48,12 +48,12 @@
     "@type": "TechArticle",
     "headline": "恒生电子基于openEuler打造金融证券场景LightOS操作系统",
     "description": "基于openEuler打造金融证券场景深度定制开发的商业版本LightOS操作系统",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/hengsheng",
+    "url": "https://www.openeuler.org/zh/showcase/finance/hengsheng",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "about": [
       {

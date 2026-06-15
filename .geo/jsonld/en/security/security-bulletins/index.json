@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/security/security-bulletins",
-    "url": "https://www.openeuler.openatom.cn/en/security/security-bulletins",
+    "@id": "https://www.openeuler.org/en/security/security-bulletins",
+    "url": "https://www.openeuler.org/en/security/security-bulletins",
     "name": "CVEs | Security | openEuler",
     "description": "Get the latest CVE details and security patches. Stay protected with the openEuler vulnerability bulletin.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler",
       "description": "openEuler is an open source Linux distribution for enterprise computing."
     },
@@ -26,19 +26,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Security",
-          "item": "https://www.openeuler.openatom.cn/en/security/"
+          "item": "https://www.openeuler.org/en/security/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Security Bulletins",
-          "item": "https://www.openeuler.openatom.cn/en/security/security-bulletins"
+          "item": "https://www.openeuler.org/en/security/security-bulletins"
         }
       ]
     }
@@ -48,14 +48,14 @@
     "@type": "Dataset",
     "name": "openEuler CVE Security Bulletins",
     "description": "Get the latest CVE details and security patches. Stay protected with the openEuler vulnerability bulletin. Includes advisory synopsis, severity ratings, affected products, affected components, release dates, and update history.",
-    "url": "https://www.openeuler.openatom.cn/en/security/security-bulletins",
+    "url": "https://www.openeuler.org/en/security/security-bulletins",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "variableMeasured": [

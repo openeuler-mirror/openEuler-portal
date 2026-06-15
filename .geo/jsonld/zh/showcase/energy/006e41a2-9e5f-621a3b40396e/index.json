@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "国家电网 | openEuler社区",
     "description": "智能调度系统 D5000 工程，实现对电力核心调度系统的操作系统迁移改造",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/006e41a2-9e5f-621a3b40396e",
+    "url": "https://www.openeuler.org/zh/showcase/energy/006e41a2-9e5f-621a3b40396e",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "能源",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/"
+          "item": "https://www.openeuler.org/zh/showcase/energy/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "国家电网",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/006e41a2-9e5f-621a3b40396e"
+          "item": "https://www.openeuler.org/zh/showcase/energy/006e41a2-9e5f-621a3b40396e"
         }
       ]
     }
@@ -46,15 +46,15 @@
     "@type": "Article",
     "headline": "国家电网智能调度系统 D5000 操作系统迁移改造",
     "description": "智能调度系统 D5000 工程，实现对电力核心调度系统的操作系统迁移改造",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/006e41a2-9e5f-621a3b40396e",
+    "url": "https://www.openeuler.org/zh/showcase/energy/006e41a2-9e5f-621a3b40396e",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "about": [
@@ -78,7 +78,7 @@
       {
         "@type": "Organization",
         "name": "麒麟信安",
-        "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/006e41a2-9e5f-621a3b40396e"
+        "url": "https://www.openeuler.org/zh/showcase/energy/006e41a2-9e5f-621a3b40396e"
       }
     ],
     "articleBody": "电力系统是国家的重要设施，其稳定运行关乎国计民生。电力调度系统属国家信息安全等级保护四级的系统。国家电网公司 2009 年启动《电网信息安全等级保护纵深防御示范工程》信息安全专项工作，提出智能电网发展规划。国家电网 D5000 调度系统软件运行平台从 2009 年开始进行操作系统的迁移工作，选择了麒麟信安操作系统作为软件运行平台，陆续完成了 x86 平台上的操作系统迁移。从 2019 年开始向华为鲲鹏服务器平台迁移，操作系统选用麒麟信安操作系统（欧拉版），逐渐实现核心调度系统软件的基础软硬件平台的安全创新。"
@@ -88,14 +88,14 @@
     "@type": "TechArticle",
     "headline": "国家电网 D5000 调度系统迁移至麒麟信安操作系统（欧拉版）解决方案",
     "description": "智能调度系统 D5000 工程，实现对电力核心调度系统的操作系统迁移改造，部署于华为鲲鹏服务器平台",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/006e41a2-9e5f-621a3b40396e",
+    "url": "https://www.openeuler.org/zh/showcase/energy/006e41a2-9e5f-621a3b40396e",
     "inLanguage": "zh",
     "proficiencyLevel": "Expert",
     "dependencies": "麒麟信安操作系统（欧拉版）、华为鲲鹏服务器",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     }
   }
 ]

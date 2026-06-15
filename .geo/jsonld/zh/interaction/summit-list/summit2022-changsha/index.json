@@ -5,7 +5,7 @@
       "@type": "Event",
       "name": "openEuler 2022 长沙峰会",
       "description": "了解openEuler 2022年长沙峰会的具体信息，查看议题和演讲嘉宾。",
-      "url": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/summit2022-changsha",
+      "url": "https://www.openeuler.org/zh/interaction/summit-list/summit2022-changsha",
       "inLanguage": "zh",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
@@ -80,13 +80,13 @@
         {
           "@type": "Organization",
           "name": "openEuler社区",
-          "url": "https://www.openeuler.openatom.cn"
+          "url": "https://www.openeuler.org"
         }
       ],
       "about": {
         "@type": "SoftwareApplication",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn",
+        "url": "https://www.openeuler.org",
         "applicationCategory": "OperatingSystem"
       }
     },
@@ -98,19 +98,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "峰会活动",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/"
+          "item": "https://www.openeuler.org/zh/interaction/summit-list/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "openEuler 2022 长沙峰会",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/summit2022-changsha"
+          "item": "https://www.openeuler.org/zh/interaction/summit-list/summit2022-changsha"
         }
       ]
     }

@@ -2,12 +2,12 @@
     "@type": "WebPage",
     "name": "南京瀚元科技有限公司（智能边缘服务器） | openEuler社区",
     "description": "A-OPS智能运维助力边缘服务器运维效率提升30%，软总线提升对端设备扩展接入能力；",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/hanyuan",
+    "url": "https://www.openeuler.org/zh/showcase/energy/hanyuan",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -16,25 +16,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "能源",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/"
+          "item": "https://www.openeuler.org/zh/showcase/energy/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "南京瀚元科技有限公司（智能边缘服务器）",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/hanyuan"
+          "item": "https://www.openeuler.org/zh/showcase/energy/hanyuan"
         }
       ]
     },
@@ -58,15 +58,15 @@
     "@type": "Article",
     "headline": "南京瀚元科技有限公司基于openEuler的智能边缘服务器解决方案",
     "description": "A-OPS智能运维助力边缘服务器运维效率提升30%，软总线提升对端设备扩展接入能力；",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/hanyuan",
+    "url": "https://www.openeuler.org/zh/showcase/energy/hanyuan",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "about": [
@@ -75,7 +75,7 @@
         "name": "openEuler",
         "applicationCategory": "OperatingSystem",
         "operatingSystem": "Linux",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       {
         "@type": "Product",

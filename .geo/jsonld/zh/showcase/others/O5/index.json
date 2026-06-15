@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "湖南省烟草专卖局 | openEuler社区",
     "description": "湖南省烟草专卖局业务系统建设项目 打造高可靠、高稳定和强安全的信息化系统",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/O5",
+    "url": "https://www.openeuler.org/zh/showcase/others/O5",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "湖南省烟草专卖局",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/O5"
+          "item": "https://www.openeuler.org/zh/showcase/others/O5"
         }
       ]
     }
@@ -46,15 +46,15 @@
     "@type": "Article",
     "headline": "湖南省烟草专卖局业务系统建设项目",
     "description": "湖南省烟草专卖局业务系统建设项目 打造高可靠、高稳定和强安全的信息化系统",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/O5",
+    "url": "https://www.openeuler.org/zh/showcase/others/O5",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "about": [

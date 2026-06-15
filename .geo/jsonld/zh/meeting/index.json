@@ -5,32 +5,32 @@
       "@type": "WebPage",
       "name": "openEuler线上会议 | openEuler开发者日历 | openEuler社区",
       "description": "openEuler线上会议，为您提供关于openEuler社区SIG会议、SIG工作会议、社区直播等openEuler线上活动消息。想要了解更多相关信息，欢迎访问openEuler官网。",
-      "url": "https://www.openeuler.openatom.cn/zh/meeting",
+      "url": "https://www.openeuler.org/zh/meeting",
       "inLanguage": "zh",
       "isPartOf": {
         "@type": "WebSite",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       "about": {
         "@type": "Organization",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       "mainEntity": {
         "@type": "Event",
         "name": "openEuler线上会议",
         "description": "openEuler社区定期组织线上会议，包括SIG例会、版本开发规划会议及技术直播等活动，遵循开源开放原则，任何人均可申报需求，参与讨论。",
-        "url": "https://www.openeuler.openatom.cn/zh/meeting",
+        "url": "https://www.openeuler.org/zh/meeting",
         "organizer": {
           "@type": "Organization",
           "name": "openEuler社区",
-          "url": "https://www.openeuler.openatom.cn"
+          "url": "https://www.openeuler.org"
         },
         "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
         "location": {
           "@type": "VirtualLocation",
-          "url": "https://www.openeuler.openatom.cn/zh/meeting"
+          "url": "https://www.openeuler.org/zh/meeting"
         }
       }
     },
@@ -38,35 +38,35 @@
       "@context": "https://schema.org",
       "@type": "ItemList",
       "name": "openEuler线上会议参与方式",
-      "url": "https://www.openeuler.openatom.cn/zh/meeting",
+      "url": "https://www.openeuler.org/zh/meeting",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "版本开发规划会议",
           "description": "当一个版本发布完成后，openEuler社区会召开关于下一个版本的开发规划会议，会议以SIG组为单位，集中探讨未来6个月的技术发展规划、工作事项、优先级等。该会议遵循开源开放原则，任何人均可申报需求，参与讨论。",
-          "url": "https://www.openeuler.openatom.cn/zh/meeting"
+          "url": "https://www.openeuler.org/zh/meeting"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "SIG例会",
           "description": "openEuler SIG组会定期组织线上会议，以便SIG成员了解各项目的进展与状态，推动交付成果输出，让其成为openEuler发行的一部分或openEuler扩展包的一部分。",
-          "url": "https://www.openeuler.openatom.cn/zh/meeting"
+          "url": "https://www.openeuler.org/zh/meeting"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "技术直播",
           "description": "openEuler社区B站直播开放预约中，如果您想分享您的技术实践、项目成果、开源经验等，欢迎联系社区小助手（微信号：openeuler123）预定。",
-          "url": "https://www.openeuler.openatom.cn/zh/meeting"
+          "url": "https://www.openeuler.org/zh/meeting"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "订阅邮件列表",
           "description": "开发者可前往SIG中心查看感兴趣的SIG，订阅SIG邮件列表，随时获取各SIG组的会议动态。",
-          "url": "https://www.openeuler.openatom.cn/zh/sig/sig-list/"
+          "url": "https://www.openeuler.org/zh/sig/sig-list/"
         }
       ]
     }

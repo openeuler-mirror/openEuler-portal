@@ -2,12 +2,12 @@
     "@type": "WebPage",
     "name": "国家电网 | openEuler社区",
     "description": "国家电网配网自动化系统",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/guojiadianw",
+    "url": "https://www.openeuler.org/zh/showcase/energy/guojiadianw",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -16,25 +16,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "能源",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/"
+          "item": "https://www.openeuler.org/zh/showcase/energy/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "国家电网",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/guojiadianw"
+          "item": "https://www.openeuler.org/zh/showcase/energy/guojiadianw"
         }
       ]
     },
@@ -49,11 +49,11 @@
     "@type": "CaseStudy",
     "name": "国家电网配网自动化系统",
     "description": "国家电网采用基于openEuler发行的麒麟信安服务器操作系统V3，结合鲲鹏等国内主流芯片架构服务器，构建新一代配电自动化系统，实现配电网运行监控与调度支撑。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/guojiadianw",
+    "url": "https://www.openeuler.org/zh/showcase/energy/guojiadianw",
     "provider": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": [
       {
@@ -75,15 +75,15 @@
     "@type": "TechArticle",
     "headline": "国家电网配网自动化系统解决方案",
     "description": "国家电网采用openEuler操作系统构建新一代配电自动化系统，实现配电网运行监控与运维管理的一体化应用。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/guojiadianw",
+    "url": "https://www.openeuler.org/zh/showcase/energy/guojiadianw",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "articleBody": "新一代配电自动化系统主站以大运行与大检修为应用主体，遵循国网最新的配电主站系统架构规范，按照"地县一体化"部署，依据分区采集的原则，强化边界防护，安全接入光纤/无线、专网/公网等通讯方式的三遥终端、二遥终端及故障定位装置，具备横跨生产控制大区与管理信息大区一体化支撑能力。操作系统采用基于openEuler发行的麒麟信安服务器操作系统V3，硬件采用鲲鹏等国内主流芯片架构的服务器。遵循《GB/T 20272-2019 信息安全技术 操作系统安全技术要求》第四级标准，实现可信计算度量规模应用。",

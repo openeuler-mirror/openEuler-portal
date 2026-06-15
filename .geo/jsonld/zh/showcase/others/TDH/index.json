@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "一站式大数据平台TDH | openEuler社区",
     "description": "星环大数据存算分离方案，计算性能提升25%，助力企业数字化转型、加速商业创新",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/TDH",
+    "url": "https://www.openeuler.org/zh/showcase/others/TDH",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "成功案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "一站式大数据平台TDH",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/TDH"
+          "item": "https://www.openeuler.org/zh/showcase/others/TDH"
         }
       ]
     }
@@ -48,7 +48,7 @@
     "description": "TDH是星环科技自主研发的企业级一站式数据管理平台，操作系统选用银河麒麟高级服务器操作系统V10(openEuler)。拥有创新多模型技术架构、统一数据管理、支持9种存储引擎、10种存储模型、存算解耦、统一SQL语句、超高性能等8大核心优势，帮助企业加速数字化转型。",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "openEuler",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/TDH",
+    "url": "https://www.openeuler.org/zh/showcase/others/TDH",
     "featureList": [
       "统一多模、统一存储、自由架构、自主创新",
       "整体性能提升25%，TCO成本降低36%",

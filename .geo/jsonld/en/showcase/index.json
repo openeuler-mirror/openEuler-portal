@@ -2,24 +2,24 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": "https://www.openeuler.openatom.cn/en/showcase",
-    "url": "https://www.openeuler.openatom.cn/en/showcase",
+    "@id": "https://www.openeuler.org/en/showcase",
+    "url": "https://www.openeuler.org/en/showcase",
     "name": "Success Stories | openEuler",
     "description": "Success stories and case studies of projects launched with openEuler.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/en/",
-      "url": "https://www.openeuler.openatom.cn/en/",
+      "@id": "https://www.openeuler.org/en/",
+      "url": "https://www.openeuler.org/en/",
       "name": "openEuler",
       "publisher": {
         "@type": "Organization",
-        "@id": "https://www.openeuler.openatom.cn/#organization",
+        "@id": "https://www.openeuler.org/#organization",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.org/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.openeuler.openatom.cn/logo.png"
+          "url": "https://www.openeuler.org/logo.png"
         }
       }
     },
@@ -37,13 +37,13 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.openeuler.openatom.cn/en/"
+        "item": "https://www.openeuler.org/en/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Success Stories",
-        "item": "https://www.openeuler.openatom.cn/en/showcase"
+        "item": "https://www.openeuler.org/en/showcase"
       }
     ]
   }

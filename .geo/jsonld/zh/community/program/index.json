@@ -4,17 +4,17 @@
     "@type": "WebPage",
     "name": "openEuler Call for X 计划 | openEuler社区",
     "description": ""openEuler Call for X 计划"是一个开放的社区项目，鼓励所有社区成员以及开源爱好者积极贡献、乐于分享、热衷实践，希望通过多元化的贡献一起丰富社区生态。想要了解更多信息，欢迎访问openEuler官网。",
-    "url": "https://www.openeuler.openatom.cn/zh/community/program",
+    "url": "https://www.openeuler.org/zh/community/program",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -23,19 +23,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "社区",
-          "item": "https://www.openeuler.openatom.cn/zh/community/"
+          "item": "https://www.openeuler.org/zh/community/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Call for X 计划",
-          "item": "https://www.openeuler.openatom.cn/zh/community/program"
+          "item": "https://www.openeuler.org/zh/community/program"
         }
       ]
     }
@@ -45,31 +45,31 @@
     "@type": "ItemList",
     "name": "openEuler Call for X 计划活动项目",
     "description": ""openEuler Call for X 计划"资源面向openEuler社区所有成员开放，欢迎与openEuler社区共同组织开发者活动，繁荣openEuler生态。",
-    "url": "https://www.openeuler.openatom.cn/zh/community/program",
+    "url": "https://www.openeuler.org/zh/community/program",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "name": "Call for openEuler Valuable Professional",
-        "url": "https://www.openeuler.openatom.cn/zh/community/program"
+        "url": "https://www.openeuler.org/zh/community/program"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Call for 技术教程贡献",
-        "url": "https://www.openeuler.openatom.cn/zh/community/program"
+        "url": "https://www.openeuler.org/zh/community/program"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Call for 基础设施资源贡献",
-        "url": "https://www.openeuler.openatom.cn/zh/community/program"
+        "url": "https://www.openeuler.org/zh/community/program"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Call for 场地资源贡献",
-        "url": "https://www.openeuler.openatom.cn/zh/community/program"
+        "url": "https://www.openeuler.org/zh/community/program"
       }
     ]
   }

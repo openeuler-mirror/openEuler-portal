@@ -1,6 +1,9 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "@id": "https://www.openeuler.org/zh/community/charter",
+  "url": "https://www.openeuler.org/zh/community/charter",
+  "inLanguage": "zh",
   "mainEntity": [
     {
       "@type": "Question",
@@ -31,7 +34,7 @@
       "name": "openEuler社区的知识产权如何管理？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "贡献到openEuler项目群的代码须以开源许可证发布，贡献者须签署原创声明或贡献协议（CLA）。知识产权管理符合开放原子开源基金会知识产权策略。"
+        "text": "贡献到openEuler项目群的代码须以开源许可证发布，贡献者须签署原创声明或贡献协议（CLA）。"
       }
     },
     {

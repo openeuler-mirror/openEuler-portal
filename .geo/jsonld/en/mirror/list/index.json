@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "Mirrors | openEuler",
     "description": "Find fast and reliable openEuler repository mirrors worldwide. Download everything you need to install & run openEuler.",
-    "url": "https://www.openeuler.openatom.cn/en/mirror/list",
+    "url": "https://www.openeuler.org/en/mirror/list",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,13 +18,13 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Mirrors",
-          "item": "https://www.openeuler.openatom.cn/en/mirror/list"
+          "item": "https://www.openeuler.org/en/mirror/list"
         }
       ]
     }
@@ -34,7 +34,7 @@
     "@type": "ItemList",
     "name": "openEuler Release Repository Sizes",
     "description": "Size of each openEuler release available for rsync synchronization to a local mirror directory.",
-    "url": "https://www.openeuler.openatom.cn/en/mirror/list",
+    "url": "https://www.openeuler.org/en/mirror/list",
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "openEuler 20.03 LTS", "description": "Repository size: 211 GB"},
       {"@type": "ListItem", "position": 2, "name": "openEuler 20.03 LTS SP1", "description": "Repository size: 537 GB"},
@@ -62,14 +62,14 @@
     "@type": "HowTo",
     "name": "How to Synchronize openEuler Images Using rsync",
     "description": "Steps to synchronize openEuler images to a local mirror directory using rsync.",
-    "url": "https://www.openeuler.openatom.cn/en/mirror/list",
+    "url": "https://www.openeuler.org/en/mirror/list",
     "step": [
       {
         "@type": "HowToStep",
         "position": 1,
         "name": "Run rsync command",
-        "text": "To synchronize openEuler images, run the following command: rsync -av --partial --progress --delete rsync://root@repo.openeuler.openatom.cn/openeuler/***(localDirectory)",
-        "url": "https://www.openeuler.openatom.cn/en/mirror/list"
+        "text": "To synchronize openEuler images, run the following command: rsync -av --partial --progress --delete rsync://root@repo.openeuler.org/openeuler/***(localDirectory)",
+        "url": "https://www.openeuler.org/en/mirror/list"
       }
     ]
   }

@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/provider/zhongyizaixian",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/zhongyizaixian",
+    "@id": "https://www.openeuler.org/zh/showcase/provider/zhongyizaixian",
+    "url": "https://www.openeuler.org/zh/showcase/provider/zhongyizaixian",
     "name": "中移在线核心业务系统 | openEuler社区",
     "description": "两天，总计六个小时，中移在线核心业务系统顺利完成1050套欧拉操作系统迁移上线",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh"
     },
@@ -21,25 +21,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "中移在线核心业务系统",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/provider/zhongyizaixian"
+          "item": "https://www.openeuler.org/zh/showcase/provider/zhongyizaixian"
         }
       ]
     },
     "image": {
       "@type": "ImageObject",
-      "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/zhongyizaixian/1.jpeg"
+      "url": "https://www.openeuler.org/zh/showcase/provider/zhongyizaixian/1.jpeg"
     }
   },
   {
@@ -47,19 +47,19 @@
     "@type": "Article",
     "headline": "中移在线核心业务系统顺利完成1050套openEuler操作系统迁移上线",
     "description": "两天，总计六个小时，中移在线核心业务系统顺利完成1050套欧拉操作系统迁移上线",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/zhongyizaixian",
+    "url": "https://www.openeuler.org/zh/showcase/provider/zhongyizaixian",
     "image": {
       "@type": "ImageObject",
-      "url": "https://www.openeuler.openatom.cn/zh/showcase/provider/zhongyizaixian/1.jpeg"
+      "url": "https://www.openeuler.org/zh/showcase/provider/zhongyizaixian/1.jpeg"
     },
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "about": [

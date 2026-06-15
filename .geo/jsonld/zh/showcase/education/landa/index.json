@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "兰州大学超算中心 | openEuler社区",
     "description": "openEuler + 鲲鹏全栈实现HPC性能倍增",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/landa",
+    "url": "https://www.openeuler.org/zh/showcase/education/landa",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "showcase",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "教育",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/"
+          "item": "https://www.openeuler.org/zh/showcase/education/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "兰州大学超算中心",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/education/landa"
+          "item": "https://www.openeuler.org/zh/showcase/education/landa"
         }
       ]
     },
@@ -51,7 +51,7 @@
         "name": "openEuler",
         "version": "21.03",
         "applicationCategory": "OperatingSystem",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       }
     ]
   },
@@ -60,12 +60,12 @@
     "@type": "TechArticle",
     "headline": "兰州大学超算中心：openEuler + 鲲鹏全栈实现HPC性能倍增",
     "description": "兰州大学超算中心拥有1.2P高性能计算平台，基于华为鲲鹏全栈软硬件与openEuler操作系统，完成GROMACS、CP2K、NEMO等12款科学计算软件向鲲鹏ARM架构的迁移与优化，覆盖分子动力学、气象学、生命科学三大领域。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/education/landa",
+    "url": "https://www.openeuler.org/zh/showcase/education/landa",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": [
       {

@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "OSV Technical Evaluation for openEuler Distributions",
     "description": "Explore the OSV technical evaluation list for openEuler. Check certified OS vendors, versions, and download links with full compatibility and ecosystem testing results.",
-    "url": "https://www.openeuler.openatom.cn/en/approve",
+    "url": "https://www.openeuler.org/en/approve",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": {
       "@type": "Thing",
@@ -19,10 +19,10 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "breadcrumb": {
@@ -32,13 +32,13 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "OSV Technical Evaluation",
-          "item": "https://www.openeuler.openatom.cn/en/approve"
+          "item": "https://www.openeuler.org/en/approve"
         }
       ]
     }
@@ -48,11 +48,11 @@
     "@type": "Dataset",
     "name": "OSV Technical Evaluation List for openEuler",
     "description": "A catalog of OS vendors (OSVs) that have completed technical evaluation for openEuler distributions, including certification status, OS versions, download links, evaluation dates, and compatibility testing results.",
-    "url": "https://www.openeuler.openatom.cn/en/approve",
+    "url": "https://www.openeuler.org/en/approve",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "variableMeasured": [
       "OS Vendor",
@@ -61,6 +61,6 @@
       "Evaluation Date",
       "Evaluation Details"
     ],
-    "license": "https://www.openeuler.openatom.cn/en/other/privacy/"
+    "license": "https://www.openeuler.org/en/other/privacy/"
   }
 ]

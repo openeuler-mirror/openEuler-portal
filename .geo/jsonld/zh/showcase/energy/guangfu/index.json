@@ -2,13 +2,13 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/guangfu",
+    "url": "https://www.openeuler.org/zh/showcase/energy/guangfu",
     "name": "光伏发电功率预测系统 | openEuler社区",
     "description": "基于openEuler实现等保四级安全防护建设，为光伏发电功率预测系统提供等保四级安全防护能力，完成CentOS、Redhat替换，实现供应链安全。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区"
     },
     "breadcrumb": {
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "成功案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "能源",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/"
+          "item": "https://www.openeuler.org/zh/showcase/energy/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "光伏发电功率预测系统",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/guangfu"
+          "item": "https://www.openeuler.org/zh/showcase/energy/guangfu"
         }
       ]
     }
@@ -46,16 +46,16 @@
     "@type": "Article",
     "headline": "光伏发电功率预测系统",
     "description": "基于openEuler实现等保四级安全防护建设，为光伏发电功率预测系统提供等保四级安全防护能力，完成CentOS、Redhat替换，实现供应链安全。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/guangfu",
+    "url": "https://www.openeuler.org/zh/showcase/energy/guangfu",
     "inLanguage": "zh",
-    "image": "https://www.openeuler.openatom.cn/zh/showcase/energy/guangfu/guangfu.jpg",
+    "image": "https://www.openeuler.org/zh/showcase/energy/guangfu/guangfu.jpg",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "about": [
@@ -67,7 +67,7 @@
       {
         "@type": "Thing",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       },
       {
         "@type": "Thing",
@@ -97,14 +97,14 @@
     "@type": "TechArticle",
     "headline": "光伏发电功率预测系统基于openEuler实现等保四级安全防护建设",
     "description": "将光伏电场的光伏功率预测系统进行改造，将原有的CentOS、Redhat等Linux操作系统替换成国内四级安全操作系统，采用基于openEuler LTS 20.03 SP1发行的麒麟信安服务器操作系统V3。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/guangfu",
+    "url": "https://www.openeuler.org/zh/showcase/energy/guangfu",
     "inLanguage": "zh",
     "proficiencyLevel": "Expert",
     "dependencies": "openEuler LTS 20.03 SP1, 麒麟信安服务器操作系统V3, 鲲鹏架构服务器",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     }
   }
 ]

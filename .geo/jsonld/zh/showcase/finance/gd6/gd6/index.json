@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "中国光大银行 | openEuler社区",
     "description": "基于全栈云的数字化基础设施体系建设项目",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/gd6/gd6",
+    "url": "https://www.openeuler.org/zh/showcase/finance/gd6/gd6",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "成功案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "金融",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+          "item": "https://www.openeuler.org/zh/showcase/finance/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "中国光大银行",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/gd6/gd6"
+          "item": "https://www.openeuler.org/zh/showcase/finance/gd6/gd6"
         }
       ]
     }
@@ -46,15 +46,15 @@
     "@type": "Article",
     "headline": "中国光大银行基于全栈云的数字化基础设施体系建设项目",
     "description": "基于全栈云的数字化基础设施体系建设项目",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/gd6/gd6",
+    "url": "https://www.openeuler.org/zh/showcase/finance/gd6/gd6",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "about": [
@@ -87,11 +87,11 @@
     "@type": "CaseStudy",
     "name": "中国光大银行：基于全栈云的数字化基础设施体系建设",
     "description": "中国光大银行基于"双栈并举、一栈多芯"技术架构，以openEuler为基础构建全栈信创软件基础设施，实现金融行业数字化转型。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/gd6/gd6",
+    "url": "https://www.openeuler.org/zh/showcase/finance/gd6/gd6",
     "provider": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "customer": {
       "@type": "Organization",

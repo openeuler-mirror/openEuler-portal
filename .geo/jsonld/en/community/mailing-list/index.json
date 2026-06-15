@@ -3,13 +3,13 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Mailing Lists | openEuler",
-    "url": "https://www.openeuler.openatom.cn/en/community/mailing-list",
+    "url": "https://www.openeuler.org/en/community/mailing-list",
     "description": "Discuss and stay updated on Linux, cloud computing, and open source innovation through our mailing lists.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": {
       "@type": "Thing",
@@ -23,19 +23,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Community",
-          "item": "https://www.openeuler.openatom.cn/en/community/"
+          "item": "https://www.openeuler.org/en/community/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Mailing Lists",
-          "item": "https://www.openeuler.openatom.cn/en/community/mailing-list"
+          "item": "https://www.openeuler.org/en/community/mailing-list"
         }
       ]
     }
@@ -44,7 +44,7 @@
     "@context": "https://schema.org",
     "@type": "HowTo",
     "name": "How to Subscribe to an openEuler SIG Mailing List",
-    "url": "https://www.openeuler.openatom.cn/en/community/mailing-list",
+    "url": "https://www.openeuler.org/en/community/mailing-list",
     "description": "Follow these steps to subscribe to a Special Interest Group (SIG) mailing list on openEuler.",
     "step": [
       {

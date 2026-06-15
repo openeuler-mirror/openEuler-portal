@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html",
+    "@id": "https://www.openeuler.org/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html",
+    "url": "https://www.openeuler.org/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html",
     "name": "中国邮政集团资源池项目 | openEuler社区",
     "description": "中邮信息科技（北京）有限公司在核心业务系统安全平稳运行和大数据平台、AI能力中心及AIOps智能运维系统等业务模块平滑迁移方面取得重大进展。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh"
     },
@@ -21,19 +21,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "showcase",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "中国邮政集团资源池项目",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html"
+          "item": "https://www.openeuler.org/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html"
         }
       ]
     },
@@ -48,15 +48,15 @@
     "@type": "Article",
     "headline": "中国邮政集团资源池项目",
     "description": "中邮信息科技（北京）有限公司在核心业务系统安全平稳运行和大数据平台、AI能力中心及AIOps智能运维系统等业务模块平滑迁移方面取得重大进展。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html",
+    "url": "https://www.openeuler.org/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "about": [
@@ -94,11 +94,11 @@
     "@type": "CaseStudy",
     "name": "中国邮政集团资源池项目",
     "description": "中邮信息科技（北京）有限公司在核心业务系统安全平稳运行和大数据平台、AI能力中心及AIOps智能运维系统等业务模块平滑迁移方面取得重大进展。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html",
+    "url": "https://www.openeuler.org/zh/showcase/others/zhongguoyouzheng2/zhongguoyouzheng2.html",
     "provider": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "about": {
       "@type": "Organization",

@@ -4,7 +4,7 @@
     "@type": "Event",
     "name": "操作系统大会＆openEuler Summit 2024",
     "alternateName": "openEuler Summit 2024",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/summit2024",
+    "url": "https://www.openeuler.org/zh/interaction/summit-list/summit2024",
     "startDate": "2024-11-15",
     "endDate": "2024-11-16",
     "eventStatus": "https://schema.org/EventScheduled",
@@ -22,7 +22,7 @@
     "organizer": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "performer": [
       {
@@ -151,13 +151,13 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "openEuler 2024 峰会 | 峰会活动 | openEuler社区",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/summit2024",
+    "url": "https://www.openeuler.org/zh/interaction/summit-list/summit2024",
     "description": "查看openEuler 2024年峰会的相关信息，参与开源交流盛会。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -166,19 +166,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "峰会活动",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/"
+          "item": "https://www.openeuler.org/zh/interaction/summit-list/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "openEuler Summit 2024",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/summit-list/summit2024"
+          "item": "https://www.openeuler.org/zh/interaction/summit-list/summit2024"
         }
       ]
     }

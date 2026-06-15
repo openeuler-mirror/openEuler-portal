@@ -3,15 +3,15 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/wiki/contribution",
-      "url": "https://www.openeuler.openatom.cn/zh/wiki/contribution",
+      "@id": "https://www.openeuler.org/zh/wiki/contribution",
+      "url": "https://www.openeuler.org/zh/wiki/contribution",
       "name": "openEuler 贡献指南 | Wiki | openEuler社区",
       "description": "openEuler 社区按照不同 SIG 组织管理社区工作。开发者可通过 Issue、邮件列表、SIG 例会等形式沟通协作。参与贡献方式多样，不局限于编码，包括提交 Issue/PR、软件包贡献等，每种贡献都受社区欢迎。",
       "inLanguage": "zh-CN",
       "isPartOf": {
         "@type": "WebSite",
-        "@id": "https://www.openeuler.openatom.cn/",
-        "url": "https://www.openeuler.openatom.cn/",
+        "@id": "https://www.openeuler.org/",
+        "url": "https://www.openeuler.org/",
         "name": "openEuler社区",
         "inLanguage": "zh-CN"
       },
@@ -22,29 +22,29 @@
             "@type": "ListItem",
             "position": 1,
             "name": "openEuler社区",
-            "item": "https://www.openeuler.openatom.cn/zh/"
+            "item": "https://www.openeuler.org/zh/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Wiki",
-            "item": "https://www.openeuler.openatom.cn/zh/wiki/"
+            "item": "https://www.openeuler.org/zh/wiki/"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "贡献指南",
-            "item": "https://www.openeuler.openatom.cn/zh/wiki/contribution"
+            "item": "https://www.openeuler.org/zh/wiki/contribution"
           }
         ]
       },
       "publisher": {
         "@type": "Organization",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.org/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.openeuler.openatom.cn/favicon.ico"
+          "url": "https://www.openeuler.org/favicon.ico"
         }
       },
       "about": {
@@ -59,11 +59,11 @@
       "name": "如何参与openEuler社区贡献",
       "description": "openEuler 社区按照不同 SIG 组织管理社区工作。开发者可通过 Issue、邮件列表、SIG 例会等形式沟通协作。参与贡献方式多样，不局限于编码，包括提交 Issue/PR、软件包贡献等，每种贡献都受社区欢迎。",
       "inLanguage": "zh-CN",
-      "url": "https://www.openeuler.openatom.cn/zh/wiki/contribution",
+      "url": "https://www.openeuler.org/zh/wiki/contribution",
       "publisher": {
         "@type": "Organization",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       },
       "step": [
         {
@@ -91,7 +91,7 @@
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "url": "https://www.openeuler.openatom.cn/zh/wiki/contribution",
+      "url": "https://www.openeuler.org/zh/wiki/contribution",
       "name": "openEuler社区贡献常见问题",
       "inLanguage": "zh-CN",
       "mainEntity": [

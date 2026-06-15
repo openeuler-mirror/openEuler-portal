@@ -2,21 +2,21 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": "https://www.openeuler.openatom.cn/en/projects",
-    "url": "https://www.openeuler.openatom.cn/en/projects",
+    "@id": "https://www.openeuler.org/en/projects",
+    "url": "https://www.openeuler.org/en/projects",
     "name": "Open Source Projects from openEuler Community | openEuler",
     "description": "Explore innovative open source projects from openEuler, including Intelligence BooM, A-Tune, iSula, secGear, and UB components for modern OS ecosystems.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/en/",
-      "url": "https://www.openeuler.openatom.cn/en/",
+      "@id": "https://www.openeuler.org/en/",
+      "url": "https://www.openeuler.org/en/",
       "name": "openEuler",
       "publisher": {
         "@type": "Organization",
-        "@id": "https://www.openeuler.openatom.cn/",
+        "@id": "https://www.openeuler.org/",
         "name": "openEuler Community",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       }
     },
     "breadcrumb": {
@@ -26,13 +26,13 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Projects",
-          "item": "https://www.openeuler.openatom.cn/en/projects"
+          "item": "https://www.openeuler.org/en/projects"
         }
       ]
     }
@@ -42,7 +42,7 @@
     "@type": "ItemList",
     "name": "Innovative Open Source Projects of the openEuler Community",
     "description": "Explore innovative open source projects from openEuler, including Intelligence BooM, A-Tune, iSula, secGear, and UB components for modern OS ecosystems.",
-    "url": "https://www.openeuler.openatom.cn/en/projects",
+    "url": "https://www.openeuler.org/en/projects",
     "numberOfItems": 6,
     "itemListElement": [
       {
@@ -54,7 +54,7 @@
           "description": "Intelligence BooM is an open source AI foundational software solution, the result of a joint effort by community members and partners. It comprises over 20 open source components and the 7 major platforms: heterogeneous convergence, task management, data management, runtime acceleration, domain model platform, intelligent application platform, and full-stack security.",
           "applicationCategory": "AI & Machine Learning Software",
           "operatingSystem": "openEuler",
-          "url": "https://www.openeuler.openatom.cn/en/projects",
+          "url": "https://www.openeuler.org/en/projects",
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -63,7 +63,7 @@
           "publisher": {
             "@type": "Organization",
             "name": "openEuler Community",
-            "url": "https://www.openeuler.openatom.cn/"
+            "url": "https://www.openeuler.org/"
           }
         }
       },
@@ -76,7 +76,7 @@
           "description": "Fully open sourced to the openEuler community with multi-OS support, UB Service Core delivers five essential cluster-level system services. By leveraging a peer-to-peer interconnect architecture, it boosts application performance by 30%-50%, fostering a robust software ecosystem for UnifiedBus.",
           "applicationCategory": "System Software",
           "operatingSystem": "openEuler",
-          "url": "https://www.openeuler.openatom.cn/en/projects",
+          "url": "https://www.openeuler.org/en/projects",
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -85,7 +85,7 @@
           "publisher": {
             "@type": "Organization",
             "name": "openEuler Community",
-            "url": "https://www.openeuler.openatom.cn/"
+            "url": "https://www.openeuler.org/"
           }
         }
       },
@@ -98,7 +98,7 @@
           "description": "UB OS Component extends the OS framework to better support UB. It abstracts and decouples heterogeneous hardware, and creates a unified memory address space. This enables global resource scheduling, dynamic combination and scaling of computing resources, and efficient communication across devices, thereby unlocking the full potential of UnifiedBus hardware.",
           "applicationCategory": "System Software",
           "operatingSystem": "openEuler",
-          "url": "https://www.openeuler.openatom.cn/en/projects",
+          "url": "https://www.openeuler.org/en/projects",
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -107,7 +107,7 @@
           "publisher": {
             "@type": "Organization",
             "name": "openEuler Community",
-            "url": "https://www.openeuler.openatom.cn/"
+            "url": "https://www.openeuler.org/"
           }
         }
       },
@@ -120,7 +120,7 @@
           "description": "A-Tune is an automatic and intelligent performance tuning engine developed based on openEuler. It adopts AI technologies to ensure the optimal service running. A-Tune builds precise models for services running on the operating system, understands service features dynamically to infer specific applications. And it adjusts the parameters based on service loads to provide the optimal parameter configurations.",
           "applicationCategory": "System Optimization Software",
           "operatingSystem": "openEuler",
-          "url": "https://www.openeuler.openatom.cn/en/projects",
+          "url": "https://www.openeuler.org/en/projects",
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -129,7 +129,7 @@
           "publisher": {
             "@type": "Organization",
             "name": "openEuler Community",
-            "url": "https://www.openeuler.openatom.cn/"
+            "url": "https://www.openeuler.org/"
           }
         }
       },
@@ -142,7 +142,7 @@
           "description": "iSulad provides a unified architecture for different CT and IT requirements.",
           "applicationCategory": "Container Software",
           "operatingSystem": "openEuler",
-          "url": "https://www.openeuler.openatom.cn/en/projects",
+          "url": "https://www.openeuler.org/en/projects",
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -151,7 +151,7 @@
           "publisher": {
             "@type": "Organization",
             "name": "openEuler Community",
-            "url": "https://www.openeuler.openatom.cn/"
+            "url": "https://www.openeuler.org/"
           }
         }
       },
@@ -164,7 +164,7 @@
           "description": "secGear is a confidential computing development suite used to develop secure applications in the computing industry. It aims to provide a unified development framework for different hardware devices, shielding the differences between underlying confidential computing hardware.",
           "applicationCategory": "Security Software",
           "operatingSystem": "openEuler",
-          "url": "https://www.openeuler.openatom.cn/en/projects",
+          "url": "https://www.openeuler.org/en/projects",
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -173,7 +173,7 @@
           "publisher": {
             "@type": "Organization",
             "name": "openEuler Community",
-            "url": "https://www.openeuler.openatom.cn/"
+            "url": "https://www.openeuler.org/"
           }
         }
       }

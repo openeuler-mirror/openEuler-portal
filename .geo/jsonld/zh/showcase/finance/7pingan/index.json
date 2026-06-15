@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/7pingan.html",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/7pingan.html",
+    "@id": "https://www.openeuler.org/zh/showcase/finance/7pingan.html",
+    "url": "https://www.openeuler.org/zh/showcase/finance/7pingan.html",
     "name": "平安银行 | openEuler社区",
     "description": "引入openEuler 操作系统，显著降低了金融信息系统的 OS软件成本，同时提升了操作系统的自主可控性与安全性。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh"
     },
@@ -21,25 +21,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "成功案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "金融",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+          "item": "https://www.openeuler.org/zh/showcase/finance/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "平安银行",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/7pingan.html"
+          "item": "https://www.openeuler.org/zh/showcase/finance/7pingan.html"
         }
       ]
     }
@@ -47,8 +47,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/7pingan.html#article",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/7pingan.html",
+    "@id": "https://www.openeuler.org/zh/showcase/finance/7pingan.html#article",
+    "url": "https://www.openeuler.org/zh/showcase/finance/7pingan.html",
     "headline": "平安银行引入openEuler操作系统，推进金融信创转型",
     "description": "引入openEuler 操作系统，显著降低了金融信息系统的 OS软件成本，同时提升了操作系统的自主可控性与安全性。",
     "inLanguage": "zh",
@@ -57,7 +57,7 @@
       {
         "@type": "Thing",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       },
       {
         "@type": "Thing",
@@ -72,7 +72,7 @@
       {
         "@type": "SoftwareApplication",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.org/",
         "applicationCategory": "操作系统",
         "operatingSystem": "Linux"
       }
@@ -80,28 +80,28 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/7pingan.html"
+      "@id": "https://www.openeuler.org/zh/showcase/finance/7pingan.html"
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "CaseStudy",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/7pingan.html#casestudy",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/7pingan.html",
+    "@id": "https://www.openeuler.org/zh/showcase/finance/7pingan.html#casestudy",
+    "url": "https://www.openeuler.org/zh/showcase/finance/7pingan.html",
     "name": "平安银行openEuler操作系统信创转型案例",
     "description": "引入openEuler 操作系统，显著降低了金融信息系统的 OS软件成本，同时提升了操作系统的自主可控性与安全性。",
     "provider": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "customer": {
       "@type": "Organization",

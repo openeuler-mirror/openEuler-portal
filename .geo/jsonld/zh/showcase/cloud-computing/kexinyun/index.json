@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "中国移动云能力中心 | openEuler社区",
     "description": "基于openEuler的安全可信技术探索和实践",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/kexinyun",
+    "url": "https://www.openeuler.org/zh/showcase/cloud-computing/kexinyun",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "云计算",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/"
+          "item": "https://www.openeuler.org/zh/showcase/cloud-computing/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "中国移动云能力中心",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/kexinyun"
+          "item": "https://www.openeuler.org/zh/showcase/cloud-computing/kexinyun"
         }
       ]
     },
@@ -51,15 +51,15 @@
     "@type": "TechArticle",
     "headline": "中国移动云能力中心：基于openEuler的安全可信技术探索和实践",
     "description": "基于openEuler的安全可信技术探索和实践，将可信计算能力与中国商用密码算法体系相结合，实现云主机全方位安全可信保障。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/kexinyun",
+    "url": "https://www.openeuler.org/zh/showcase/cloud-computing/kexinyun",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "articleSection": "云计算用户案例",
@@ -70,7 +70,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "中国移动云能力中心",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/cloud-computing/kexinyun",
+    "url": "https://www.openeuler.org/zh/showcase/cloud-computing/kexinyun",
     "description": "中国移动云能力中心基于openEuler探索和实践安全可信技术，将可信计算与商密算法结合，为银行、券商、保险、互联网金融等行业提供云主机安全解决方案。",
     "parentOrganization": {
       "@type": "Organization",

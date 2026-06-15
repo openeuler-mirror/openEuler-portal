@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/community/member",
-    "url": "https://www.openeuler.openatom.cn/zh/community/member",
+    "@id": "https://www.openeuler.org/zh/community/member",
+    "url": "https://www.openeuler.org/zh/community/member",
     "name": "openEuler成员单位 | openEuler社区",
     "description": "了解openEuler的捐赠单位。想要了解更多信息，欢迎访问openEuler官网。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler",
       "inLanguage": "zh"
     },
@@ -21,19 +21,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "社区",
-          "item": "https://www.openeuler.openatom.cn/zh/community/"
+          "item": "https://www.openeuler.org/zh/community/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "成员单位",
-          "item": "https://www.openeuler.openatom.cn/zh/community/member"
+          "item": "https://www.openeuler.org/zh/community/member"
         }
       ]
     }
@@ -41,9 +41,9 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://www.openeuler.openatom.cn/#organization",
+    "@id": "https://www.openeuler.org/#organization",
     "name": "openEuler社区",
-    "url": "https://www.openeuler.openatom.cn/zh/",
+    "url": "https://www.openeuler.org/zh/",
     "description": "openEuler是一个开源操作系统社区，汇聚了战略捐赠人、白金捐赠人、黄金捐赠人、白银捐赠人、青铜捐赠人及学术机构和非营利组织等多层次成员单位。",
     "contactPoint": {
       "@type": "ContactPoint",

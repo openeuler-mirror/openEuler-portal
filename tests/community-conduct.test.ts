@@ -95,38 +95,35 @@ describe('zh conduct 页 — 不应行为列表', () => {
   });
 });
 
-describe('zh conduct 页 — JSON-LD 禁止行为 answer 同步更新', () => {
-  const content = fs.readFileSync(ZH_MD, 'utf8');
+describe('zh conduct 页 — JSON-LD 禁止行为 answer 同步更新（数据源从 frontmatter 迁移至 .geo/jsonld）', () => {
+  const jsonldPath = path.join(PROJECT_ROOT, '.geo/jsonld/zh/community/conduct/index.json');
+  const jsonld = JSON.parse(fs.readFileSync(jsonldPath, 'utf-8'));
 
-  it('JSON-LD frontmatter 中"禁止哪些行为" answer 包含安全违规关键词', () => {
-    const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
-    expect(frontmatterMatch, 'MD 文件应有 frontmatter').toBeDefined();
-    const frontmatter = frontmatterMatch![1];
-    expect(frontmatter).toContain('恶意后门');
-    expect(frontmatter).toContain('污染项目依赖');
-    expect(frontmatter).toContain('损毁项目资产');
-    expect(frontmatter).toContain('安全');
+  it('JSON-LD "禁止哪些行为" answer 包含安全违规关键词', () => {
+    const prohibitQuestion = jsonld.mainEntity.find((q: any) => q.name.includes('禁止'));
+    expect(prohibitQuestion).toBeDefined();
+    const answer = prohibitQuestion!.acceptedAnswer.text;
+    expect(answer).toContain('恶意后门');
+    expect(answer).toContain('污染项目依赖');
+    expect(answer).toContain('损毁项目资产');
+    expect(answer).toContain('安全');
   });
 
-  it('JSON-LD"禁止哪些行为" answer 同时包含既有内容和新内容', () => {
-    const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
-    const frontmatter = frontmatterMatch![1];
-    expect(frontmatter).toContain('未经授权发布他人个人信息');
-    expect(frontmatter).toContain('植入恶意后门');
+  it('JSON-LD "禁止哪些行为" answer 同时包含既有内容和新内容', () => {
+    const prohibitQuestion = jsonld.mainEntity.find((q: any) => q.name.includes('禁止'));
+    const answer = prohibitQuestion!.acceptedAnswer.text;
+    expect(answer).toContain('未经授权发布他人个人信息');
+    expect(answer).toContain('植入恶意后门');
   });
 
   it('JSON-LD 包含 schema.org 结构标记（@context、@type、mainEntity）', () => {
-    const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
-    const frontmatter = frontmatterMatch![1];
-    expect(frontmatter).toContain('"@context": "https://schema.org"');
-    expect(frontmatter).toContain('"@type": "FAQPage"');
-    expect(frontmatter).toContain('"mainEntity"');
+    expect(jsonld['@context']).toBe('https://schema.org');
+    expect(jsonld['@type']).toBe('FAQPage');
+    expect(jsonld.mainEntity).toBeDefined();
   });
 
   it('JSON-LD 包含 5 个 Question 条目', () => {
-    const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
-    const frontmatter = frontmatterMatch![1];
-    const questionCount = (frontmatter.match(/"@type": "Question"/g) || []).length;
+    const questionCount = jsonld.mainEntity.filter((q: any) => q['@type'] === 'Question').length;
     expect(questionCount, '应包含 5 个 Question 条目').toBe(5);
   });
 });

@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "博客 | 互动中心 | openEuler社区",
     "description": "探索openEuler社区的博客文章，获取最新资讯与技术分享。",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog",
+    "url": "https://www.openeuler.org/zh/interaction/post-blog",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "互动中心",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/"
+          "item": "https://www.openeuler.org/zh/interaction/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "博客",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/post-blog"
+          "item": "https://www.openeuler.org/zh/interaction/post-blog"
         }
       ]
     }
@@ -40,7 +40,7 @@
     "@type": "HowTo",
     "name": "如何向openEuler社区提交博客",
     "description": "本指南介绍如何注册AtomGit账号、准备开发环境、撰写符合格式的Markdown博客并通过Pull Request提交到openEuler社区。",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog",
+    "url": "https://www.openeuler.org/zh/interaction/post-blog",
     "inLanguage": "zh",
     "step": [
       {
@@ -53,28 +53,28 @@
             "position": 1,
             "name": "注册AtomGit账号",
             "text": "参考相关文档注册AtomGit账号。",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog"
+            "url": "https://www.openeuler.org/zh/interaction/post-blog"
           },
           {
             "@type": "HowToStep",
             "position": 2,
             "name": "设置主邮箱地址",
             "text": "在AtomGit个人设置中设置主邮箱地址。",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog"
+            "url": "https://www.openeuler.org/zh/interaction/post-blog"
           },
           {
             "@type": "HowToStep",
             "position": 3,
             "name": "签署贡献者协议",
             "text": "签署CLA（贡献者许可协议）。",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog"
+            "url": "https://www.openeuler.org/zh/interaction/post-blog"
           },
           {
             "@type": "HowToStep",
             "position": 4,
             "name": "准备git环境",
             "text": "按照文档指引配置本地git开发环境。",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog"
+            "url": "https://www.openeuler.org/zh/interaction/post-blog"
           }
         ]
       },
@@ -88,14 +88,14 @@
             "position": 1,
             "name": "了解Markdown博客格式",
             "text": "openEuler使用Markdown格式写博客，文件头需包含title、date、category、tags、sig、author、summary等字段。",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog"
+            "url": "https://www.openeuler.org/zh/interaction/post-blog"
           },
           {
             "@type": "HowToStep",
             "position": 2,
             "name": "遵守格式规则",
             "text": "文件名禁止含+号，图片命名禁止空格且大小写敏感，避免使用已弃用的HTML标签，HTML标签需闭合，暂不支持c++代码块语言标识。",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog"
+            "url": "https://www.openeuler.org/zh/interaction/post-blog"
           }
         ]
       },
@@ -109,28 +109,28 @@
             "position": 1,
             "name": "Fork openEuler博客项目",
             "text": "在AtomGit上Fork openEuler-portal项目到自己的账号下。",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog"
+            "url": "https://www.openeuler.org/zh/interaction/post-blog"
           },
           {
             "@type": "HowToStep",
             "position": 2,
             "name": "Clone代码并创建分支",
             "text": "使用git clone克隆代码，并使用git checkout -b创建新分支。",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog"
+            "url": "https://www.openeuler.org/zh/interaction/post-blog"
           },
           {
             "@type": "HowToStep",
             "position": 3,
             "name": "创建工作路径并撰写博客",
             "text": "在app/zh/blog目录下以AtomGit账号为名创建文件夹，并以YEAR-MONTH-DAY-title.md格式命名博客文件。",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog"
+            "url": "https://www.openeuler.org/zh/interaction/post-blog"
           },
           {
             "@type": "HowToStep",
             "position": 4,
             "name": "提交Pull Request",
             "text": "完成博客撰写后，通过AtomGit的PR（Pull Request）流程提交博客到openEuler社区。",
-            "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog"
+            "url": "https://www.openeuler.org/zh/interaction/post-blog"
           }
         ]
       }

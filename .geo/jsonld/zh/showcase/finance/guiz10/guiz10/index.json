@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/guiz10/guiz10",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/guiz10/guiz10",
+    "@id": "https://www.openeuler.org/zh/showcase/finance/guiz10/guiz10",
+    "url": "https://www.openeuler.org/zh/showcase/finance/guiz10/guiz10",
     "name": "贵州省农村信用社联合社 | openEuler社区",
     "description": "贵州省农村信用社联合社（贵州农信）通过将企业网银平台的数据库服务器、操作系统、数据库软件整体替换为本土创新技术软硬件产品，实现了关键核心系统软件供应链安全，提升业务查询和交易处理性能。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "金融",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+          "item": "https://www.openeuler.org/zh/showcase/finance/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "贵州省农村信用社联合社",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/guiz10/guiz10"
+          "item": "https://www.openeuler.org/zh/showcase/finance/guiz10/guiz10"
         }
       ]
     }
@@ -46,8 +46,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/guiz10/guiz10#article",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/guiz10/guiz10",
+    "@id": "https://www.openeuler.org/zh/showcase/finance/guiz10/guiz10#article",
+    "url": "https://www.openeuler.org/zh/showcase/finance/guiz10/guiz10",
     "headline": "贵州省农村信用社联合社 | openEuler社区",
     "description": "贵州省农村信用社联合社率先投入本土创新技术改造实践，将企业网银平台整体替换为本土创新技术软硬件产品，实现供应链安全、性能提升和运维成本降低。",
     "inLanguage": "zh",
@@ -77,15 +77,15 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/guiz10/guiz10"
+      "@id": "https://www.openeuler.org/zh/showcase/finance/guiz10/guiz10"
     }
   }
 ]

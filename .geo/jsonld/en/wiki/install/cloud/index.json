@@ -5,17 +5,17 @@
       "@type": "TechArticle",
       "headline": "Master openEuler on Clouds",
       "description": "Learn to get openEuler images on AWS, Azure, and more with ease.",
-      "url": "https://www.openeuler.openatom.cn/en/wiki/install/cloud",
+      "url": "https://www.openeuler.org/en/wiki/install/cloud",
       "inLanguage": "en",
       "publisher": {
         "@type": "Organization",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       "isPartOf": {
         "@type": "WebSite",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       "about": [
         {
@@ -23,7 +23,7 @@
           "name": "openEuler",
           "applicationCategory": "OperatingSystem",
           "operatingSystem": "Linux",
-          "url": "https://www.openeuler.openatom.cn"
+          "url": "https://www.openeuler.org"
         }
       ]
     },
@@ -32,7 +32,7 @@
       "@type": "HowTo",
       "name": "Obtaining the openEuler Image on AWS",
       "description": "Steps to find and use the openEuler community AMI on Amazon Web Services (AWS) EC2.",
-      "url": "https://www.openeuler.openatom.cn/en/wiki/install/cloud",
+      "url": "https://www.openeuler.org/en/wiki/install/cloud",
       "inLanguage": "en",
       "step": [
         {
@@ -72,7 +72,7 @@
       "@type": "HowTo",
       "name": "Obtaining the openEuler Shared Image on Azure",
       "description": "Steps to find and use the openEuler shared image on Microsoft Azure.",
-      "url": "https://www.openeuler.openatom.cn/en/wiki/install/cloud",
+      "url": "https://www.openeuler.org/en/wiki/install/cloud",
       "inLanguage": "en",
       "step": [
         {
@@ -106,7 +106,7 @@
       "@type": "HowTo",
       "name": "Obtaining the openEuler Image on Alibaba Cloud",
       "description": "Steps to find and use the openEuler community image on Alibaba Cloud Elastic Compute Service.",
-      "url": "https://www.openeuler.openatom.cn/en/wiki/install/cloud",
+      "url": "https://www.openeuler.org/en/wiki/install/cloud",
       "inLanguage": "en",
       "step": [
         {
@@ -140,7 +140,7 @@
       "@type": "HowTo",
       "name": "Obtaining the openEuler Image on Huawei Cloud",
       "description": "Steps to create a cloud host (instance) on Huawei Cloud using the openEuler image.",
-      "url": "https://www.openeuler.openatom.cn/en/wiki/install/cloud",
+      "url": "https://www.openeuler.org/en/wiki/install/cloud",
       "inLanguage": "en",
       "step": [
         {
@@ -171,25 +171,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Wiki",
-          "item": "https://www.openeuler.openatom.cn/en/wiki/"
+          "item": "https://www.openeuler.org/en/wiki/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Install",
-          "item": "https://www.openeuler.openatom.cn/en/wiki/install/"
+          "item": "https://www.openeuler.org/en/wiki/install/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "Cloud",
-          "item": "https://www.openeuler.openatom.cn/en/wiki/install/cloud"
+          "item": "https://www.openeuler.org/en/wiki/install/cloud"
         }
       ]
     }

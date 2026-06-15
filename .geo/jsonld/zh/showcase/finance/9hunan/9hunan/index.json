@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "湖南省农村信用社联合社 | openEuler社区",
     "description": "基于银河麒麟操作系统的 CentOS 迁移替换方案",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/9hunan/9hunan.html",
+    "url": "https://www.openeuler.org/zh/showcase/finance/9hunan/9hunan.html",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "金融",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+          "item": "https://www.openeuler.org/zh/showcase/finance/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "湖南省农村信用社联合社",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/9hunan/9hunan.html"
+          "item": "https://www.openeuler.org/zh/showcase/finance/9hunan/9hunan.html"
         }
       ]
     }
@@ -46,16 +46,16 @@
     "@type": "Article",
     "headline": "湖南省农村信用社联合社：基于银河麒麟操作系统的 CentOS 迁移替换方案",
     "description": "基于银河麒麟操作系统的 CentOS 迁移替换方案",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/9hunan/9hunan.html",
+    "url": "https://www.openeuler.org/zh/showcase/finance/9hunan/9hunan.html",
     "inLanguage": "zh",
-    "image": "https://www.openeuler.openatom.cn/zh/showcase/finance/9hunan/media/image1.png",
+    "image": "https://www.openeuler.org/zh/showcase/finance/9hunan/media/image1.png",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "about": [
@@ -93,11 +93,11 @@
     "@type": "CaseStudy",
     "name": "湖南省农村信用社联合社 CentOS 迁移替换案例",
     "description": "基于银河麒麟操作系统的 CentOS 迁移替换方案，完成550余套迁移替换工作，涉及40多家农商行87个业务系统",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/9hunan/9hunan.html",
+    "url": "https://www.openeuler.org/zh/showcase/finance/9hunan/9hunan.html",
     "provider": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": {
       "@type": "Organization",

@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/approve",
-    "url": "https://www.openeuler.openatom.cn/zh/approve",
+    "@id": "https://www.openeuler.org/zh/approve",
+    "url": "https://www.openeuler.org/zh/approve",
     "name": "openEuler OSV技术测评列表 | openEuler社区",
     "description": "openEuler提供了完整的测试流程和工具，检测伙伴二次发行版生态核心特性不丢失，关键配置不更改，帮助牵引实现扩展仓库openEuler系共享、共用，主流行业应用在openEuler系不同的OSV生态复用度。",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh-CN"
     },
@@ -21,20 +21,20 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "OSV技术测评列表",
-          "item": "https://www.openeuler.openatom.cn/zh/approve"
+          "item": "https://www.openeuler.org/zh/approve"
         }
       ]
     },
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/",
+      "url": "https://www.openeuler.org/",
       "parentOrganization": {
         "@type": "Organization",
         "name": "开放原子开源基金会",
@@ -50,7 +50,7 @@
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "url": "https://www.openeuler.openatom.cn/zh/approve",
+    "url": "https://www.openeuler.org/zh/approve",
     "name": "OSV技术测评列表",
     "description": "openEuler OSV（操作系统供应商）技术测评通过列表，涵盖各架构、OS厂商、OS版本及下载地址等信息",
     "inLanguage": "zh-CN",
@@ -60,7 +60,7 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "openEuler OSV技术测评工具",
-    "url": "https://www.openeuler.openatom.cn/zh/approve",
+    "url": "https://www.openeuler.org/zh/approve",
     "description": "工具聚焦openEuler内核和基础包，检测伙伴二次发行版生态核心特性不丢失，关键配置不更改，结合社区选包策略及软件包等级策略，检查L1、L2软件包版本、打包方式、接口一致性，KABI白名单，架构特性（如ARM/X86特性）使能，性能优化配置。",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "openEuler",
@@ -68,7 +68,7 @@
     "provider": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     }
   }
 ]

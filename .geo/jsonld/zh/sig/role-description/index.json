@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/sig/role-description",
-    "url": "https://www.openeuler.openatom.cn/zh/sig/role-description",
+    "@id": "https://www.openeuler.org/zh/sig/role-description",
+    "url": "https://www.openeuler.org/zh/sig/role-description",
     "name": "openEuler 特别兴趣组角色描述 | SIG专区 | openEuler社区官网",
     "description": "了解openEuler特别兴趣组（sig组）中各角色的职责和工作内容，参与共建。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh"
     },
@@ -21,19 +21,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "SIG中心",
-          "item": "https://www.openeuler.openatom.cn/zh/sig/sig-list/"
+          "item": "https://www.openeuler.org/zh/sig/sig-list/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "角色描述",
-          "item": "https://www.openeuler.openatom.cn/zh/sig/role-description"
+          "item": "https://www.openeuler.org/zh/sig/role-description"
         }
       ]
     }
@@ -41,7 +41,7 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "url": "https://www.openeuler.openatom.cn/zh/sig/role-description",
+    "url": "https://www.openeuler.org/zh/sig/role-description",
     "mainEntity": [
       {
         "@type": "Question",

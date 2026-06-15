@@ -3,7 +3,7 @@
     "@context": "https://schema.org",
     "@type": "Event",
     "name": "Operating System Conference & openEuler Summit 2024",
-    "url": "https://www.openeuler.openatom.cn/en/interaction/summit-list/summit2024",
+    "url": "https://www.openeuler.org/en/interaction/summit-list/summit2024",
     "description": "Discover the future of OS innovation and AI at openEuler Summit 2024. Connect with industry pioneers. This event brings together global leaders, visionaries, business executives, tech experts, partners, and open source foundations to explore the future of the OS industry and uncover new opportunities.",
     "startDate": "2024-11-15",
     "endDate": "2024-11-16",
@@ -21,11 +21,11 @@
     "organizer": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "offers": {
       "@type": "Offer",
-      "url": "https://www.openeuler.openatom.cn/en/interaction/summit-list/summit2024",
+      "url": "https://www.openeuler.org/en/interaction/summit-list/summit2024",
       "availability": "https://schema.org/InStock",
       "validFrom": "2024-01-01"
     },
@@ -111,13 +111,13 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "openEuler Summit 2024 | openEuler",
-    "url": "https://www.openeuler.openatom.cn/en/interaction/summit-list/summit2024",
+    "url": "https://www.openeuler.org/en/interaction/summit-list/summit2024",
     "description": "Discover the future of OS innovation and AI at openEuler Summit 2024. Connect with industry pioneers.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -126,25 +126,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Interaction",
-          "item": "https://www.openeuler.openatom.cn/en/interaction/"
+          "item": "https://www.openeuler.org/en/interaction/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Summit List",
-          "item": "https://www.openeuler.openatom.cn/en/interaction/summit-list/"
+          "item": "https://www.openeuler.org/en/interaction/summit-list/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "openEuler Summit 2024",
-          "item": "https://www.openeuler.openatom.cn/en/interaction/summit-list/summit2024"
+          "item": "https://www.openeuler.org/en/interaction/summit-list/summit2024"
         }
       ]
     }

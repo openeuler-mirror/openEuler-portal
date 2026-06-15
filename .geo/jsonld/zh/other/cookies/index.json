@@ -3,26 +3,26 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "openEuler Cookie政策",
-    "url": "https://www.openeuler.openatom.cn/zh/other/cookies",
+    "url": "https://www.openeuler.org/zh/other/cookies",
     "description": "了解openEuler网站的Cookie政策，保护您的隐私权。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "openEuler社区", "item": "https://www.openeuler.openatom.cn/zh/"},
-        {"@type": "ListItem", "position": 2, "name": "其他信息", "item": "https://www.openeuler.openatom.cn/zh/other/"},
-        {"@type": "ListItem", "position": 3, "name": "Cookie政策", "item": "https://www.openeuler.openatom.cn/zh/other/cookies"}
+        {"@type": "ListItem", "position": 1, "name": "openEuler社区", "item": "https://www.openeuler.org/zh/"},
+        {"@type": "ListItem", "position": 2, "name": "其他信息", "item": "https://www.openeuler.org/zh/other/"},
+        {"@type": "ListItem", "position": 3, "name": "Cookie政策", "item": "https://www.openeuler.org/zh/other/cookies"}
       ]
     },
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": {
       "@type": "Thing",

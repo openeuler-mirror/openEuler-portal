@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/16shhai/16shhai.html",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/16shhai/16shhai.html",
+    "@id": "https://www.openeuler.org/zh/showcase/finance/16shhai/16shhai.html",
+    "url": "https://www.openeuler.org/zh/showcase/finance/16shhai/16shhai.html",
     "name": "上海证券交易所 | openEuler社区",
     "description": "下一代核心交易系统，在安全可控场景下提供更低的时延",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -19,25 +19,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "成功案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "金融",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+          "item": "https://www.openeuler.org/zh/showcase/finance/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "上海证券交易所",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/16shhai/16shhai.html"
+          "item": "https://www.openeuler.org/zh/showcase/finance/16shhai/16shhai.html"
         }
       ]
     }
@@ -47,15 +47,15 @@
     "@type": "Article",
     "headline": "上海证券交易所基于openEuler的下一代核心交易系统低时延解决方案",
     "description": "下一代核心交易系统，在安全可控场景下提供更低的时延",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/16shhai/16shhai.html",
+    "url": "https://www.openeuler.org/zh/showcase/finance/16shhai/16shhai.html",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "about": [

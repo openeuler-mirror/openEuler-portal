@@ -1,6 +1,9 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "@id": "https://www.openeuler.org/zh/community/vote",
+  "url": "https://www.openeuler.org/zh/community/vote",
+  "inLanguage": "zh",
   "mainEntity": [
     {
       "@type": "Question",
@@ -39,7 +42,7 @@
       "name": "openEuler在线投票如何进行？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "在线投票启动后5个工作日内为有效投票时间，超时未投记为弃权。赞成票须超过全体委员数量的半数方为通过。若5个工作日内参与投票委员不足半数，需重新发起投票。"
+        "text": "在线投票有效期为启动后5个工作日，超时记弃权；赞成票须超全体委员半数方为通过，参与不足半数则重新发起投票。"
       }
     }
   ]

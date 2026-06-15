@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e",
+    "@id": "https://www.openeuler.org/en/showcase/energy/008e41fd-9185-f62d7485475e",
+    "url": "https://www.openeuler.org/en/showcase/energy/008e41fd-9185-f62d7485475e",
     "name": "State Grid Corporation of China | openEuler",
     "description": "Smooth OS Porting for CHD Wuhu Power Plant's Distributed Control System",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Showcase",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/"
+          "item": "https://www.openeuler.org/en/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Energy",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/energy/"
+          "item": "https://www.openeuler.org/en/showcase/energy/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "State Grid Corporation of China",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e"
+          "item": "https://www.openeuler.org/en/showcase/energy/008e41fd-9185-f62d7485475e"
         }
       ]
     }
@@ -46,8 +46,8 @@
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "@id": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e#article",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e",
+    "@id": "https://www.openeuler.org/en/showcase/energy/008e41fd-9185-f62d7485475e#article",
+    "url": "https://www.openeuler.org/en/showcase/energy/008e41fd-9185-f62d7485475e",
     "headline": "Smooth OS Porting for CHD Wuhu Power Plant's Distributed Control System",
     "description": "China Huadian Corporation (CHD) built a next-generation Distributed Control System (DCS) using openEuler-based OS, Phytium processors, China Great Wall servers, and Dameng databases, deployed at CHD Wuhu Power Plant as the first innovative core control system in China's high-parameter large-capacity power generation field.",
     "inLanguage": "en",
@@ -81,17 +81,17 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e"
+      "@id": "https://www.openeuler.org/en/showcase/energy/008e41fd-9185-f62d7485475e"
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "@id": "https://www.openeuler.openatom.cn/en/showcase/energy/008e41fd-9185-f62d7485475e#solution",
+    "@id": "https://www.openeuler.org/en/showcase/energy/008e41fd-9185-f62d7485475e#solution",
     "name": "CHD Wuhu Power Plant Distributed Control System",
     "description": "A next-generation Distributed Control System (DCS) for the CHD Wuhu Power Plant built using Phytium processors, China Great Wall servers, Galaxy Kylin Advanced Server Operating System V10, Dameng databases, and CHD DCS platform software.",
     "applicationCategory": "IndustrialApplication",

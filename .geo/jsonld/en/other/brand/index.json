@@ -3,19 +3,19 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Trademarks | openEuler",
-    "url": "https://www.openeuler.openatom.cn/en/other/brand",
+    "url": "https://www.openeuler.org/en/other/brand",
     "description": "Download openEuler logos and access brand guidelines. Get the resources you need to use and represent our open source OS.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn",
-      "logo": "https://www.openeuler.openatom.cn/en/other/brand",
+      "url": "https://www.openeuler.org",
+      "logo": "https://www.openeuler.org/en/other/brand",
       "email": "trademarks@openeuler.sh",
       "foundingOrganization": {
         "@type": "Organization",
@@ -28,9 +28,9 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.openeuler.openatom.cn/en/"},
-      {"@type": "ListItem", "position": 2, "name": "Other", "item": "https://www.openeuler.openatom.cn/en/other/"},
-      {"@type": "ListItem", "position": 3, "name": "Trademarks", "item": "https://www.openeuler.openatom.cn/en/other/brand"}
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.openeuler.org/en/"},
+      {"@type": "ListItem", "position": 2, "name": "Other", "item": "https://www.openeuler.org/en/other/"},
+      {"@type": "ListItem", "position": 3, "name": "Trademarks", "item": "https://www.openeuler.org/en/other/brand"}
     ]
   },
   {
@@ -38,15 +38,15 @@
     "@type": "ItemList",
     "name": "openEuler Logo Downloads",
     "description": "Official openEuler logo assets available for download in JPG, PNG, and SVG formats.",
-    "url": "https://www.openeuler.openatom.cn/en/other/brand",
+    "url": "https://www.openeuler.org/en/other/brand",
     "numberOfItems": 6,
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "openEuler Standard Logo (Male) - JPG", "url": "https://www.openeuler.openatom.cn/en/other/brand"},
-      {"@type": "ListItem", "position": 2, "name": "openEuler Standard Logo (Female) - JPG", "url": "https://www.openeuler.openatom.cn/en/other/brand"},
-      {"@type": "ListItem", "position": 3, "name": "openEuler Monochrome Logo - JPG/PNG/SVG", "url": "https://www.openeuler.openatom.cn/en/other/brand"},
-      {"@type": "ListItem", "position": 4, "name": "openEuler Black Logo - JPG/PNG/SVG", "url": "https://www.openeuler.openatom.cn/en/other/brand"},
-      {"@type": "ListItem", "position": 5, "name": "A-Tune Innovation Project Logo - JPG/PNG", "url": "https://www.openeuler.openatom.cn/en/other/brand"},
-      {"@type": "ListItem", "position": 6, "name": "StratoVirt Innovation Project Logo - JPG/PNG/SVG", "url": "https://www.openeuler.openatom.cn/en/other/brand"}
+      {"@type": "ListItem", "position": 1, "name": "openEuler Standard Logo (Male) - JPG", "url": "https://www.openeuler.org/en/other/brand"},
+      {"@type": "ListItem", "position": 2, "name": "openEuler Standard Logo (Female) - JPG", "url": "https://www.openeuler.org/en/other/brand"},
+      {"@type": "ListItem", "position": 3, "name": "openEuler Monochrome Logo - JPG/PNG/SVG", "url": "https://www.openeuler.org/en/other/brand"},
+      {"@type": "ListItem", "position": 4, "name": "openEuler Black Logo - JPG/PNG/SVG", "url": "https://www.openeuler.org/en/other/brand"},
+      {"@type": "ListItem", "position": 5, "name": "A-Tune Innovation Project Logo - JPG/PNG", "url": "https://www.openeuler.org/en/other/brand"},
+      {"@type": "ListItem", "position": 6, "name": "StratoVirt Innovation Project Logo - JPG/PNG/SVG", "url": "https://www.openeuler.org/en/other/brand"}
     ]
   }
 ]

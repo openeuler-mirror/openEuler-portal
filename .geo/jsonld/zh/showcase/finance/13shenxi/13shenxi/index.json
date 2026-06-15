@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "山西证券股份有限公司 | openEuler社区",
     "description": "域名解析系统重构改造——山西证券基于openEuler 22.03 LTS构建信创域名系统，采用Bind9域名服务、Keepalive高可用方案，实现两地三中心数据中心的域名解析服务。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/13shenxi/13shenxi.html",
+    "url": "https://www.openeuler.org/zh/showcase/finance/13shenxi/13shenxi.html",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "案例展示",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "金融",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"
+          "item": "https://www.openeuler.org/zh/showcase/finance/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "山西证券股份有限公司",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/13shenxi/13shenxi.html"
+          "item": "https://www.openeuler.org/zh/showcase/finance/13shenxi/13shenxi.html"
         }
       ]
     }
@@ -46,16 +46,16 @@
     "@type": "Article",
     "headline": "山西证券股份有限公司域名解析系统重构改造",
     "description": "山西证券基于openEuler 22.03 LTS和国产海光x86服务器，使用Bind9、Keepalive等开源组件，完成域名系统信创改造，实现两地三中心高可用域名解析服务。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/13shenxi/13shenxi.html",
+    "url": "https://www.openeuler.org/zh/showcase/finance/13shenxi/13shenxi.html",
     "inLanguage": "zh",
     "articleSection": "金融行业案例",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "about": [
@@ -84,7 +84,7 @@
     ],
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/13shenxi/13shenxi.html"
+      "@id": "https://www.openeuler.org/zh/showcase/finance/13shenxi/13shenxi.html"
     }
   },
   {
@@ -92,7 +92,7 @@
     "@type": "TechArticle",
     "headline": "山西证券域名解析系统重构改造解决方案",
     "description": "基于openEuler 22.03 LTS、Bind9、Keepalive构建的金融行业高可用DNS系统，支持IPv4/IPv6双栈、多地多运营商接入。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/13shenxi/13shenxi.html",
+    "url": "https://www.openeuler.org/zh/showcase/finance/13shenxi/13shenxi.html",
     "inLanguage": "zh",
     "proficiencyLevel": "Expert",
     "dependencies": "openEuler 22.03 LTS, Bind9, Keepalive, Python, Shell",
@@ -100,7 +100,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     }
   }
 ]

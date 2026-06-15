@@ -3,15 +3,15 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/nestos",
-      "url": "https://www.openeuler.openatom.cn/zh/nestos",
+      "@id": "https://www.openeuler.org/zh/nestos",
+      "url": "https://www.openeuler.org/zh/nestos",
       "name": "NestOS - 基于欧拉开源操作系统的云底座操作系统 | openEuler社区",
       "description": "NestOS是基于openEuler的云底座操作系统，整合了NestOS For Container和NestOS For Virt双模式，专注于提供最佳的容器主机和虚拟化解决方案，支持K8S、openStack等平台。",
       "inLanguage": "zh",
       "isPartOf": {
         "@type": "WebSite",
-        "@id": "https://www.openeuler.openatom.cn/",
-        "url": "https://www.openeuler.openatom.cn/",
+        "@id": "https://www.openeuler.org/",
+        "url": "https://www.openeuler.org/",
         "name": "openEuler社区",
         "inLanguage": "zh"
       },
@@ -22,13 +22,13 @@
             "@type": "ListItem",
             "position": 1,
             "name": "openEuler社区",
-            "item": "https://www.openeuler.openatom.cn/zh/"
+            "item": "https://www.openeuler.org/zh/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "NestOS",
-            "item": "https://www.openeuler.openatom.cn/zh/nestos"
+            "item": "https://www.openeuler.org/zh/nestos"
           }
         ]
       }
@@ -41,18 +41,18 @@
       "description": "NestOS是基于openEuler的云底座操作系统，整合了NestOS For Container和NestOS For Virt两个模式，旨在满足云场景中容器化和虚拟化两种主要场景下用户的多样需求。NestOS For Container集成了rpm-ostree支持、ignition配置等技术，采用双根文件系统，原子化更新的设计思路。",
       "applicationCategory": "OperatingSystem",
       "operatingSystem": "Linux",
-      "url": "https://www.openeuler.openatom.cn/zh/nestos",
-      "downloadUrl": "https://www.openeuler.openatom.cn/zh/nestos",
+      "url": "https://www.openeuler.org/zh/nestos",
+      "downloadUrl": "https://www.openeuler.org/zh/nestos",
       "softwareVersion": "24.03-LTS",
       "isBasedOn": {
         "@type": "SoftwareApplication",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       },
       "publisher": {
         "@type": "Organization",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       },
       "featureList": [
         "内核特性增强，独立维护NestOS内核分支，基于openEuler主线版本针对云场景进一步特性增强",
@@ -98,15 +98,15 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/nestos",
-      "url": "https://www.openeuler.openatom.cn/zh/nestos",
+      "@id": "https://www.openeuler.org/zh/nestos",
+      "url": "https://www.openeuler.org/zh/nestos",
       "name": "NestOS - 基于欧拉开源操作系统的云底座操作系统 | openEuler社区",
       "description": "NestOS是基于openEuler的云底座操作系统，整合了NestOS For Container和NestOS For Virt双模式，专注于提供最佳的容器主机和虚拟化解决方案，支持K8S、openStack等平台。",
       "inLanguage": "zh",
       "isPartOf": {
         "@type": "WebSite",
-        "@id": "https://www.openeuler.openatom.cn/",
-        "url": "https://www.openeuler.openatom.cn/",
+        "@id": "https://www.openeuler.org/",
+        "url": "https://www.openeuler.org/",
         "name": "openEuler社区",
         "inLanguage": "zh"
       },
@@ -117,13 +117,13 @@
             "@type": "ListItem",
             "position": 1,
             "name": "openEuler社区",
-            "item": "https://www.openeuler.openatom.cn/zh/"
+            "item": "https://www.openeuler.org/zh/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "NestOS",
-            "item": "https://www.openeuler.openatom.cn/zh/nestos"
+            "item": "https://www.openeuler.org/zh/nestos"
           }
         ]
       }
@@ -136,18 +136,18 @@
       "description": "NestOS是基于openEuler的云底座操作系统，整合了NestOS For Container和NestOS For Virt两个模式，旨在满足云场景中容器化和虚拟化两种主要场景下用户的多样需求。NestOS For Container集成了rpm-ostree支持、ignition配置等技术，采用双根文件系统，原子化更新的设计思路。",
       "applicationCategory": "OperatingSystem",
       "operatingSystem": "Linux",
-      "url": "https://www.openeuler.openatom.cn/zh/nestos",
-      "downloadUrl": "https://www.openeuler.openatom.cn/zh/nestos",
+      "url": "https://www.openeuler.org/zh/nestos",
+      "downloadUrl": "https://www.openeuler.org/zh/nestos",
       "softwareVersion": "24.03-LTS",
       "isBasedOn": {
         "@type": "SoftwareApplication",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       },
       "publisher": {
         "@type": "Organization",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       },
       "featureList": [
         "内核特性增强，独立维护NestOS内核分支，基于openEuler主线版本针对云场景进一步特性增强",

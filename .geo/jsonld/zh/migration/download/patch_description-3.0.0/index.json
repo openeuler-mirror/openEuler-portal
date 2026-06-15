@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "openEuler 3.0.0 补丁说明",
     "description": "下载openEuler 3.0.0版本的补丁说明，确保系统的安全与稳定。",
-    "url": "https://www.openeuler.openatom.cn/zh/migration/download/patch_description-3.0.0",
+    "url": "https://www.openeuler.org/zh/migration/download/patch_description-3.0.0",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "迁移专区",
-          "item": "https://www.openeuler.openatom.cn/zh/migration/"
+          "item": "https://www.openeuler.org/zh/migration/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "openEuler 3.0.0 补丁说明",
-          "item": "https://www.openeuler.openatom.cn/zh/migration/download/patch_description-3.0.0"
+          "item": "https://www.openeuler.org/zh/migration/download/patch_description-3.0.0"
         }
       ]
     }
@@ -64,7 +64,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     }
   }
 ]

@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "Share Your OS Migration Story | openEuler",
     "description": "Help others by sharing your openEuler migration experiences. Contribute best practices, follow our guides, and make migration smoother for everyone.",
-    "url": "https://www.openeuler.openatom.cn/en/migration/contribution",
+    "url": "https://www.openeuler.org/en/migration/contribution",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Migration",
-          "item": "https://www.openeuler.openatom.cn/en/migration/"
+          "item": "https://www.openeuler.org/en/migration/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Contribution",
-          "item": "https://www.openeuler.openatom.cn/en/migration/contribution"
+          "item": "https://www.openeuler.org/en/migration/contribution"
         }
       ]
     }
@@ -40,14 +40,14 @@
     "@type": "HowTo",
     "name": "How to Contribute Your OS Migration Best Practices to openEuler",
     "description": "A step-by-step guide for sharing your openEuler migration experiences as best practices or migration cases with the openEuler Migration Center.",
-    "url": "https://www.openeuler.openatom.cn/en/migration/contribution",
+    "url": "https://www.openeuler.org/en/migration/contribution",
     "step": [
       {
         "@type": "HowToStep",
         "position": 1,
         "name": "Publish Your Migration Best Practices",
         "text": "Publish your migration best practices or porting guides in the openEuler blog pages. Be sure to include keywords in your title, like "migration best practice" or "porting guide" for better visibility.",
-        "url": "https://www.openeuler.openatom.cn/en/interaction/post-blog/"
+        "url": "https://www.openeuler.org/en/interaction/post-blog/"
       },
       {
         "@type": "HowToStep",

@@ -4,20 +4,20 @@
     "@type": "CollectionPage",
     "name": "Annual Events & Releases | openEuler",
     "description": "Stay informed with openEuler's community calendar. Explore key events, conferences, and release schedules for the year, and never miss any update.",
-    "url": "https://www.openeuler.openatom.cn/en/interaction/event-list",
+    "url": "https://www.openeuler.org/en/interaction/event-list",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     }
   },
@@ -29,19 +29,19 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.openeuler.openatom.cn/en/"
+        "item": "https://www.openeuler.org/en/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Interaction",
-        "item": "https://www.openeuler.openatom.cn/en/interaction/"
+        "item": "https://www.openeuler.org/en/interaction/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Event List",
-        "item": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+        "item": "https://www.openeuler.org/en/interaction/event-list"
       }
     ]
   },
@@ -50,7 +50,7 @@
     "@type": "ItemList",
     "name": "2026 openEuler Event Plan",
     "description": "A comprehensive list of open source summits, tech conferences, and openEuler community events planned for 2026.",
-    "url": "https://www.openeuler.openatom.cn/en/interaction/event-list",
+    "url": "https://www.openeuler.org/en/interaction/event-list",
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -74,7 +74,7 @@
           },
           "eventStatus": "https://schema.org/EventScheduled",
           "startDate": "2026",
-          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+          "url": "https://www.openeuler.org/en/interaction/event-list"
         }
       },
       {
@@ -95,7 +95,7 @@
           },
           "eventStatus": "https://schema.org/EventScheduled",
           "startDate": "2026",
-          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+          "url": "https://www.openeuler.org/en/interaction/event-list"
         }
       },
       {
@@ -107,7 +107,7 @@
           "description": "Linaro Connect open source technology conference.",
           "eventStatus": "https://schema.org/EventScheduled",
           "startDate": "2025",
-          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+          "url": "https://www.openeuler.org/en/interaction/event-list"
         }
       },
       {
@@ -123,7 +123,7 @@
             "@type": "Organization",
             "name": "OpenAtom Foundation"
           },
-          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+          "url": "https://www.openeuler.org/en/interaction/event-list"
         }
       },
       {
@@ -144,7 +144,7 @@
           },
           "eventStatus": "https://schema.org/EventScheduled",
           "startDate": "2026",
-          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+          "url": "https://www.openeuler.org/en/interaction/event-list"
         }
       },
       {
@@ -160,7 +160,7 @@
           },
           "eventStatus": "https://schema.org/EventScheduled",
           "startDate": "2026",
-          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+          "url": "https://www.openeuler.org/en/interaction/event-list"
         }
       },
       {
@@ -172,7 +172,7 @@
           "description": "Data Centre World Asia conference.",
           "eventStatus": "https://schema.org/EventScheduled",
           "startDate": "2026",
-          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+          "url": "https://www.openeuler.org/en/interaction/event-list"
         }
       },
       {
@@ -188,7 +188,7 @@
             "@type": "Organization",
             "name": "The Linux Foundation"
           },
-          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+          "url": "https://www.openeuler.org/en/interaction/event-list"
         }
       },
       {
@@ -203,9 +203,9 @@
           "organizer": {
             "@type": "Organization",
             "name": "openEuler",
-            "url": "https://www.openeuler.openatom.cn"
+            "url": "https://www.openeuler.org"
           },
-          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+          "url": "https://www.openeuler.org/en/interaction/event-list"
         }
       },
       {
@@ -217,7 +217,7 @@
           "description": "GITEX Global technology conference.",
           "eventStatus": "https://schema.org/EventScheduled",
           "startDate": "2026",
-          "url": "https://www.openeuler.openatom.cn/en/interaction/event-list"
+          "url": "https://www.openeuler.org/en/interaction/event-list"
         }
       }
     ]

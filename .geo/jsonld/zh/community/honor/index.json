@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "openEuler社区荣誉墙",
     "description": "了解与openEuler相关的荣誉奖项。想要了解更多信息，欢迎访问openEuler官网。",
-    "url": "https://www.openeuler.openatom.cn/zh/community/honor",
+    "url": "https://www.openeuler.org/zh/community/honor",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "社区",
-          "item": "https://www.openeuler.openatom.cn/zh/community/"
+          "item": "https://www.openeuler.org/zh/community/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "荣誉墙",
-          "item": "https://www.openeuler.openatom.cn/zh/community/honor"
+          "item": "https://www.openeuler.org/zh/community/honor"
         }
       ]
     }
@@ -39,8 +39,8 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "openEuler社区",
-    "url": "https://www.openeuler.openatom.cn",
-    "logo": "https://www.openeuler.openatom.cn/favicon.ico",
+    "url": "https://www.openeuler.org",
+    "logo": "https://www.openeuler.org/favicon.ico",
     "award": "openEuler社区荣誉奖项"
   }
 ]

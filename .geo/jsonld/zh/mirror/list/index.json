@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/mirror/list",
-    "url": "https://www.openeuler.openatom.cn/zh/mirror/list",
+    "@id": "https://www.openeuler.org/zh/mirror/list",
+    "url": "https://www.openeuler.org/zh/mirror/list",
     "name": "openEuler镜像仓列表 | openEuler下载 | openEuler社区",
     "description": "openEuler是面向数字基础设施的操作系统,支持服务器、云计算、边缘计算、嵌入式等应用场景,支持多样性计算,致力于提供安全、稳定、易用的开源服务器Linux操作系统。欢迎访问openEuler官网，下载使用。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "description": "openEuler是面向数字基础设施的操作系统，支持服务器、云计算、边缘计算、嵌入式等应用场景。",
       "inLanguage": "zh"
@@ -18,9 +18,9 @@
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.openatom.cn/zh/"},
-        {"@type": "ListItem", "position": 2, "name": "下载", "item": "https://www.openeuler.openatom.cn/zh/mirror/list/"},
-        {"@type": "ListItem", "position": 3, "name": "镜像仓列表", "item": "https://www.openeuler.openatom.cn/zh/mirror/list"}
+        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.org/zh/"},
+        {"@type": "ListItem", "position": 2, "name": "下载", "item": "https://www.openeuler.org/zh/mirror/list/"},
+        {"@type": "ListItem", "position": 3, "name": "镜像仓列表", "item": "https://www.openeuler.org/zh/mirror/list"}
       ]
     }
   },
@@ -29,7 +29,7 @@
     "@type": "ItemList",
     "name": "openEuler各版本镜像存储空间列表",
     "description": "openEuler各版本镜像占用存储空间，供使用rsync同步到本地或镜像站时参考。",
-    "url": "https://www.openeuler.openatom.cn/zh/mirror/list",
+    "url": "https://www.openeuler.org/zh/mirror/list",
     "numberOfItems": 27,
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "openEuler 20.03 LTS — 211 GB"},
@@ -66,14 +66,14 @@
     "@type": "HowTo",
     "name": "如何同步openEuler镜像",
     "description": "使用rsync命令同步openEuler镜像到本地或镜像站的步骤说明。",
-    "url": "https://www.openeuler.openatom.cn/zh/mirror/list",
+    "url": "https://www.openeuler.org/zh/mirror/list",
     "inLanguage": "zh",
     "step": [
       {
         "@type": "HowToStep",
         "position": 1,
         "name": "执行rsync同步命令",
-        "text": "同步openEuler镜像，请执行以下命令：rsync -av --partial --progress --delete rsync://root@repo.openeuler.openatom.cn/openeuler/***(localDirectory)"
+        "text": "同步openEuler镜像，请执行以下命令：rsync -av --partial --progress --delete rsync://root@repo.openeuler.org/openeuler/***(localDirectory)"
       },
       {
         "@type": "HowToStep",

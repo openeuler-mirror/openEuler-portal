@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "Meetup申请 | 社区活动 | openEuler社区",
     "description": "填写Meetup的申请表，参与组织openEuler社区聚会。",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/event-list/meetup-form",
+    "url": "https://www.openeuler.org/zh/interaction/event-list/meetup-form",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "社区活动",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/event-list/"
+          "item": "https://www.openeuler.org/zh/interaction/event-list/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Meetup申请",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/event-list/meetup-form"
+          "item": "https://www.openeuler.org/zh/interaction/event-list/meetup-form"
         }
       ]
     }

@@ -4,16 +4,16 @@
     "@type": "WebPage",
     "name": "阳光保险大数据平台 | openEuler社区",
     "description": "降低对外部技术支持的依赖，提高系统的自主管理和控制能力。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/yangguangdabaoxian/yangguangdabaoxian",
+    "url": "https://www.openeuler.org/zh/showcase/finance/yangguangdabaoxian/yangguangdabaoxian",
     "inLanguage": "zh",
-    "isPartOf": {"@type": "WebSite", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn"},
+    "isPartOf": {"@type": "WebSite", "name": "openEuler社区", "url": "https://www.openeuler.org"},
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.openatom.cn/zh/"},
-        {"@type": "ListItem", "position": 2, "name": "成功案例", "item": "https://www.openeuler.openatom.cn/zh/showcase/"},
-        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"},
-        {"@type": "ListItem", "position": 4, "name": "阳光保险大数据平台", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/yangguangdabaoxian/yangguangdabaoxian"}
+        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.org/zh/"},
+        {"@type": "ListItem", "position": 2, "name": "成功案例", "item": "https://www.openeuler.org/zh/showcase/"},
+        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.org/zh/showcase/finance/"},
+        {"@type": "ListItem", "position": 4, "name": "阳光保险大数据平台", "item": "https://www.openeuler.org/zh/showcase/finance/yangguangdabaoxian/yangguangdabaoxian"}
       ]
     }
   },
@@ -22,11 +22,11 @@
     "@type": "Article",
     "headline": "阳光保险大数据平台——业务平滑迁移，优化后性能提升10%左右",
     "description": "降低对外部技术支持的依赖，提高系统的自主管理和控制能力。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/yangguangdabaoxian/yangguangdabaoxian",
+    "url": "https://www.openeuler.org/zh/showcase/finance/yangguangdabaoxian/yangguangdabaoxian",
     "inLanguage": "zh",
     "articleBody": "随着信息安全重要性日益凸显，阳光保险对现有平台改造，以提高信息安全性。为了确保业务的连续性和安全性，企业急需将原操作系统的业务应用迁移到openEuler操作系统上。润和软件提供了基于现有操作系统的HDP、CDH、FusionInsight HD大数据原地迁移场景解决方案。在基础服务器硬件和上层应用不变的情况下，可以将大数据应用及数据库等组件平滑原地迁移到openEuler/HopeOS操作系统上，帮助企业轻松、顺利、高效地完成操作系统迁移，保障业务的持续运行和稳定性。",
-    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn"},
-    "about": {"@type": "SoftwareApplication", "name": "openEuler", "url": "https://www.openeuler.openatom.cn", "operatingSystem": "openEuler"},
+    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.org"},
+    "about": {"@type": "SoftwareApplication", "name": "openEuler", "url": "https://www.openeuler.org", "operatingSystem": "openEuler"},
     "mentions": [
       {"@type": "Organization", "name": "阳光保险", "description": "阳光保险集团，金融保险行业企业，通过openEuler完成大数据平台迁移。"},
       {"@type": "Organization", "name": "润和软件", "description": "提供基于openEuler的大数据原地迁移场景解决方案的合作伙伴。"}

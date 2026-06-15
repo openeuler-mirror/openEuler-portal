@@ -4,26 +4,26 @@
     "@type": "BlogPosting",
     "headline": "博客编写示例",
     "description": "访问openEuler社区的编写示例，了解社区博客分享。",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog/blog_example/20220901-sample-post.html",
+    "url": "https://www.openeuler.org/zh/interaction/post-blog/blog_example/20220901-sample-post.html",
     "inLanguage": "zh-CN",
     "datePublished": "2022-09-01",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/favicon.ico"
+        "url": "https://www.openeuler.org/favicon.ico"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/interaction/post-blog/blog_example/20220901-sample-post.html"
+      "@id": "https://www.openeuler.org/zh/interaction/post-blog/blog_example/20220901-sample-post.html"
     },
     "isPartOf": {
       "@type": "Blog",
       "name": "openEuler社区博客",
-      "url": "https://www.openeuler.openatom.cn/zh/interaction/post-blog/"
+      "url": "https://www.openeuler.org/zh/interaction/post-blog/"
     }
   },
   {
@@ -34,19 +34,19 @@
         "@type": "ListItem",
         "position": 1,
         "name": "openEuler社区",
-        "item": "https://www.openeuler.openatom.cn/zh/"
+        "item": "https://www.openeuler.org/zh/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "博客",
-        "item": "https://www.openeuler.openatom.cn/zh/interaction/post-blog/"
+        "item": "https://www.openeuler.org/zh/interaction/post-blog/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "博客编写示例",
-        "item": "https://www.openeuler.openatom.cn/zh/interaction/post-blog/blog_example/20220901-sample-post.html"
+        "item": "https://www.openeuler.org/zh/interaction/post-blog/blog_example/20220901-sample-post.html"
       }
     ]
   }

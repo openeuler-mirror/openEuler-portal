@@ -2,13 +2,13 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/19/19.html",
+    "url": "https://www.openeuler.org/zh/showcase/others/19/19.html",
     "name": "西安数峰信息科技有限公司 | openEuler社区",
     "description": "基于openEuler系操作系统的DBSolver仿真软件——西安数峰信息科技有限公司专注于CFD计算流体动力学软件自主研发，为航空航天、核工业等关键工业领域提供高效仿真软件解决方案。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "name": "openEuler社区"
     },
     "breadcrumb": {
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "西安数峰信息科技有限公司",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/19/19.html"
+          "item": "https://www.openeuler.org/zh/showcase/others/19/19.html"
         }
       ]
     }
@@ -46,12 +46,12 @@
     "@type": "Article",
     "headline": "西安数峰信息科技有限公司基于openEuler系操作系统的DBSolver仿真软件",
     "description": "西安数峰信息科技有限公司专注于CFD（计算流体动力学）软件自主研发，开发的DBSolver仿真软件基于openEuler 20.03LTS构建，利用毕昇编译器和鲲鹏技术栈优化，求解器效率提升20%，已在西安交通大学、哈尔滨工程大学、中航工业集团等机构成功应用。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/19/19.html",
+    "url": "https://www.openeuler.org/zh/showcase/others/19/19.html",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": [
       {

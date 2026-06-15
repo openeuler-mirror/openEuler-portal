@@ -4,7 +4,7 @@
     "@type": "Event",
     "name": "Operating System Conference & openEuler Summit 2025",
     "alternateName": "openEuler Summit 2025",
-    "url": "https://www.openeuler.openatom.cn/en/interaction/summit-list/summit2025",
+    "url": "https://www.openeuler.org/en/interaction/summit-list/summit2025",
     "description": "Join openEuler Summit 2025 in Beijing, Nov 14–15. Explore AI-powered OS innovation with global leaders, keynotes, and next-gen computing breakthroughs.",
     "startDate": "2025-11-14",
     "endDate": "2025-11-15",
@@ -22,7 +22,7 @@
     "organizer": {
       "@type": "Organization",
       "name": "OpenAtom Foundation",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": {
       "@type": "Thing",
@@ -176,13 +176,13 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "openEuler Summit 2025: AI-Driven OS Conference | openEuler",
-    "url": "https://www.openeuler.openatom.cn/en/interaction/summit-list/summit2025",
+    "url": "https://www.openeuler.org/en/interaction/summit-list/summit2025",
     "description": "Join openEuler Summit 2025 in Beijing, Nov 14–15. Explore AI-powered OS innovation with global leaders, keynotes, and next-gen computing breakthroughs.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -191,25 +191,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Interaction",
-          "item": "https://www.openeuler.openatom.cn/en/interaction/"
+          "item": "https://www.openeuler.org/en/interaction/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Summit List",
-          "item": "https://www.openeuler.openatom.cn/en/interaction/summit-list/"
+          "item": "https://www.openeuler.org/en/interaction/summit-list/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "openEuler Summit 2025",
-          "item": "https://www.openeuler.openatom.cn/en/interaction/summit-list/summit2025"
+          "item": "https://www.openeuler.org/en/interaction/summit-list/summit2025"
         }
       ]
     }

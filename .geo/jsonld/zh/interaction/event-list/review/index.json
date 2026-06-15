@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "活动反馈 | 社区活动 | openEuler社区",
     "description": "提交您对openEuler社区活动的反馈，帮助我们改进。",
-    "url": "https://www.openeuler.openatom.cn/zh/interaction/event-list/review",
+    "url": "https://www.openeuler.org/zh/interaction/event-list/review",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "活动",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/event-list/"
+          "item": "https://www.openeuler.org/zh/interaction/event-list/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "活动反馈",
-          "item": "https://www.openeuler.openatom.cn/zh/interaction/event-list/review"
+          "item": "https://www.openeuler.org/zh/interaction/event-list/review"
         }
       ]
     }

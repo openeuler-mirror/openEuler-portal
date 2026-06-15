@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/showcase/others/011o4adc-9375-4859cccb3b81",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/others/011o4adc-9375-4859cccb3b81",
+    "@id": "https://www.openeuler.org/en/showcase/others/011o4adc-9375-4859cccb3b81",
+    "url": "https://www.openeuler.org/en/showcase/others/011o4adc-9375-4859cccb3b81",
     "name": "China Resources Group | openEuler",
     "description": "Innovation Cloud Zone Project - China Resources Group deployed a full-stack independent innovation platform using ARM processors, Galaxy Kylin OS, and China Resources Cloud, achieving stable business operations and laying the groundwork for large-scale domestic technology adoption.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": {
       "@type": "Organization",
@@ -47,15 +47,15 @@
     "@type": "Article",
     "headline": "China Resources Group Innovation Cloud Zone Project",
     "description": "China Resources Group deployed a full-stack independent innovation platform using ARM (FT-2000+/64) processors, UNISYUE servers, Galaxy Kylin Advanced Server OS V10, and China Resources Cloud, completing porting of cloud services, service systems, and terminal applications.",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/others/011o4adc-9375-4859cccb3b81",
+    "url": "https://www.openeuler.org/en/showcase/others/011o4adc-9375-4859cccb3b81",
     "inLanguage": "en",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/logo.png"
+        "url": "https://www.openeuler.org/logo.png"
       }
     },
     "articleBody": "Software and hardware devices were purchased and the full-stack independent innovation platform was deployed to ensure stable operating of the business systems. The solution uses ARM (FT-2000+/64) processors, UNISYUE servers, Galaxy Kylin Advanced Server Operating System V10, China Resources Cloud platform, MySQL database, and service systems including Coremail email system, YIGO supply chain management system, and office software. This project was China Resources Group's pilot project for independent innovation. Through this project, China Resources Group completed the porting of the China Resources Cloud, service systems, and terminal applications, and accumulated valuable technical innovation and O&M experience, laying the groundwork for the group to use other products such as the Kylin OS on a larger scale.",
@@ -65,7 +65,7 @@
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/en/showcase/others/011o4adc-9375-4859cccb3b81"
+      "@id": "https://www.openeuler.org/en/showcase/others/011o4adc-9375-4859cccb3b81"
     }
   },
   {
@@ -76,25 +76,25 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.openeuler.openatom.cn/en/"
+        "item": "https://www.openeuler.org/en/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Showcase",
-        "item": "https://www.openeuler.openatom.cn/en/showcase/"
+        "item": "https://www.openeuler.org/en/showcase/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Others",
-        "item": "https://www.openeuler.openatom.cn/en/showcase/others/"
+        "item": "https://www.openeuler.org/en/showcase/others/"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "China Resources Group",
-        "item": "https://www.openeuler.openatom.cn/en/showcase/others/011o4adc-9375-4859cccb3b81"
+        "item": "https://www.openeuler.org/en/showcase/others/011o4adc-9375-4859cccb3b81"
       }
     ]
   }

@@ -2,25 +2,25 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/other/cookies",
-    "url": "https://www.openeuler.openatom.cn/en/other/cookies",
+    "@id": "https://www.openeuler.org/en/other/cookies",
+    "url": "https://www.openeuler.org/en/other/cookies",
     "name": "Cookies | openEuler",
     "description": "openEuler respects your privacy. Read more about how we collect information about your use of our websites.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler",
       "description": "openEuler is an open source operating system community.",
       "publisher": {
         "@type": "Organization",
-        "@id": "https://www.openeuler.openatom.cn/#organization",
+        "@id": "https://www.openeuler.org/#organization",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.org/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.openeuler.openatom.cn/logo.png"
+          "url": "https://www.openeuler.org/logo.png"
         }
       }
     },
@@ -32,9 +32,9 @@
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.openeuler.openatom.cn/en/"},
-        {"@type": "ListItem", "position": 2, "name": "Other", "item": "https://www.openeuler.openatom.cn/en/other/"},
-        {"@type": "ListItem", "position": 3, "name": "Cookies", "item": "https://www.openeuler.openatom.cn/en/other/cookies"}
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.openeuler.org/en/"},
+        {"@type": "ListItem", "position": 2, "name": "Other", "item": "https://www.openeuler.org/en/other/"},
+        {"@type": "ListItem", "position": 3, "name": "Cookies", "item": "https://www.openeuler.org/en/other/cookies"}
       ]
     }
   },
@@ -42,9 +42,9 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.openeuler.openatom.cn/en/"},
-      {"@type": "ListItem", "position": 2, "name": "Other", "item": "https://www.openeuler.openatom.cn/en/other/"},
-      {"@type": "ListItem", "position": 3, "name": "Cookies", "item": "https://www.openeuler.openatom.cn/en/other/cookies"}
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.openeuler.org/en/"},
+      {"@type": "ListItem", "position": 2, "name": "Other", "item": "https://www.openeuler.org/en/other/"},
+      {"@type": "ListItem", "position": 3, "name": "Cookies", "item": "https://www.openeuler.org/en/other/cookies"}
     ]
   }
 ]

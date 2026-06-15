@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/universities/index.html",
-    "url": "https://www.openeuler.openatom.cn/zh/universities/index.html",
+    "@id": "https://www.openeuler.org/zh/universities/index.html",
+    "url": "https://www.openeuler.org/zh/universities/index.html",
     "name": "openEuler高校技术小组 | openEuler社区",
     "description": "openEuler高校技术小组是在高校内围绕openEuler进行学习、科研及参与社区贡献的组织，欢迎加入。想要了解更多信息，欢迎访问openEuler官网。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh"
     },
@@ -18,14 +18,14 @@
       "@type": "Organization",
       "name": "openEuler高校技术小组",
       "description": "openEuler高校技术小组是在院校内围绕openEuler进行学习、科研及参与社区贡献的组织，该技术小组由高校老师指导学生学习openEuler相关知识、产出openEuler相关科研成果，或直接参与到社区贡献，同时社区及社区生态伙伴整合资源为技术小组的学习与科研提供支持和赋能。",
-      "url": "https://www.openeuler.openatom.cn/zh/universities/index.html"
+      "url": "https://www.openeuler.org/zh/universities/index.html"
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "openEuler高校技术小组列表",
-    "url": "https://www.openeuler.openatom.cn/zh/universities/index.html",
+    "url": "https://www.openeuler.org/zh/universities/index.html",
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -231,7 +231,7 @@
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "openEuler高校活动与大赛",
-    "url": "https://www.openeuler.openatom.cn/zh/universities/index.html",
+    "url": "https://www.openeuler.org/zh/universities/index.html",
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -243,10 +243,10 @@
           "organizer": {
             "@type": "Organization",
             "name": "openEuler社区",
-            "url": "https://www.openeuler.openatom.cn/"
+            "url": "https://www.openeuler.org/"
           },
           "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-          "url": "https://www.openeuler.openatom.cn/zh/universities/index.html"
+          "url": "https://www.openeuler.org/zh/universities/index.html"
         }
       },
       {
@@ -314,7 +314,7 @@
             "@type": "Organization",
             "name": "中国科学院软件研究所"
           },
-          "url": "https://www.openeuler.openatom.cn/zh/universities/index.html"
+          "url": "https://www.openeuler.org/zh/universities/index.html"
         }
       }
     ]
@@ -324,7 +324,7 @@
     "@type": "SoftwareSourceCode",
     "name": "嵌入式实时虚拟机ZVM（Zephyr-based Virtual Machine）",
     "description": "嵌入式实时虚拟机ZVM是由湖南大学嵌入式与网络计算湖南省重点实验室主任谢国琪教授主导设计并开发的虚拟化软件。该软件基于实时操作系统（RTOS）Zephyr开发，可同时启动Linux与Zephyr 2个Guest OS，从而在同一硬件平台上实现混合内核部署。",
-    "codeRepository": "https://www.openeuler.openatom.cn/",
+    "codeRepository": "https://www.openeuler.org/",
     "programmingLanguage": "C",
     "author": {
       "@type": "Person",
@@ -338,7 +338,7 @@
     "isPartOf": {
       "@type": "SoftwareApplication",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     }
   }
 ]

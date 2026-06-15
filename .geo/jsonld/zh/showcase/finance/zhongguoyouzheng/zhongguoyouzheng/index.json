@@ -4,45 +4,45 @@
     "@type": "WebPage",
     "name": "中国邮政储蓄银行 | openEuler社区",
     "description": "大型核心业务系统迁移改造",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhongguoyouzheng/zhongguoyouzheng",
+    "url": "https://www.openeuler.org/zh/showcase/finance/zhongguoyouzheng/zhongguoyouzheng",
     "inLanguage": "zh",
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.openatom.cn/zh/"},
-        {"@type": "ListItem", "position": 2, "name": "成功案例", "item": "https://www.openeuler.openatom.cn/zh/showcase/"},
-        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"},
-        {"@type": "ListItem", "position": 4, "name": "中国邮政储蓄银行", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhongguoyouzheng/zhongguoyouzheng"}
+        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.org/zh/"},
+        {"@type": "ListItem", "position": 2, "name": "成功案例", "item": "https://www.openeuler.org/zh/showcase/"},
+        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.org/zh/showcase/finance/"},
+        {"@type": "ListItem", "position": 4, "name": "中国邮政储蓄银行", "item": "https://www.openeuler.org/zh/showcase/finance/zhongguoyouzheng/zhongguoyouzheng"}
       ]
     },
-    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn/zh/"}
+    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.org/zh/"}
   },
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "中国邮政储蓄银行大型核心业务系统迁移改造",
     "description": "邮储银行基于银河麒麟操作系统（openEuler系）完成大型核心业务系统迁移改造，部署麒麟系统超4万套，涵盖160余个业务系统，承载用户规模约8亿。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhongguoyouzheng/zhongguoyouzheng",
+    "url": "https://www.openeuler.org/zh/showcase/finance/zhongguoyouzheng/zhongguoyouzheng",
     "inLanguage": "zh",
-    "image": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhongguoyouzheng/media/image1.png",
+    "image": "https://www.openeuler.org/zh/showcase/finance/zhongguoyouzheng/media/image1.png",
     "articleSection": "金融行业案例",
     "keywords": "openEuler,银河麒麟,邮政储蓄银行,信息技术应用创新,核心业务系统迁移,异构资源池,分布式微服务,金融数字化",
     "about": [
-      {"@type": "Thing", "name": "openEuler操作系统", "url": "https://www.openeuler.openatom.cn/zh/"},
+      {"@type": "Thing", "name": "openEuler操作系统", "url": "https://www.openeuler.org/zh/"},
       {"@type": "Thing", "name": "信息技术应用创新"},
       {"@type": "Thing", "name": "银行核心系统迁移"}
     ],
     "mentions": [{"@type": "Organization", "name": "中国邮政储蓄银行", "description": "国有大型商业银行，承载用户规模约8亿"}],
-    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn/zh/"},
-    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhongguoyouzheng/zhongguoyouzheng"}
+    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.org/zh/"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.openeuler.org/zh/showcase/finance/zhongguoyouzheng/zhongguoyouzheng"}
   },
   {
     "@context": "https://schema.org",
     "@type": "CaseStudy",
     "name": "中国邮政储蓄银行大型核心业务系统迁移改造",
     "description": "邮储银行自2023年下半年起，基于银河麒麟V10（openEuler系操作系统），完成部署超4万套，涵盖160余个业务系统，承载用户规模约8亿。openEuler系操作系统在现有业务系统的占比约为30%。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/zhongguoyouzheng/zhongguoyouzheng",
+    "url": "https://www.openeuler.org/zh/showcase/finance/zhongguoyouzheng/zhongguoyouzheng",
     "subjectOf": {"@type": "Organization", "name": "中国邮政储蓄银行", "description": "国有大型商业银行，积极推进信息技术应用创新，自主创新核心业务系统"},
-    "provider": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn/zh/"}
+    "provider": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.org/zh/"}
   }
 ]

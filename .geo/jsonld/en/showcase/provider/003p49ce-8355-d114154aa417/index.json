@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "China Mobile (Zhejiang) | openEuler",
     "description": "Smooth OS Porting and More Stable Core Systems",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/provider/003p49ce-8355-d114154aa417",
+    "url": "https://www.openeuler.org/en/showcase/provider/003p49ce-8355-d114154aa417",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,19 +18,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Showcase",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/"
+          "item": "https://www.openeuler.org/en/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "China Mobile (Zhejiang)",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/provider/003p49ce-8355-d114154aa417"
+          "item": "https://www.openeuler.org/en/showcase/provider/003p49ce-8355-d114154aa417"
         }
       ]
     }
@@ -40,12 +40,12 @@
     "@type": "Article",
     "headline": "China Mobile (Zhejiang): Smooth OS Porting and More Stable Core Systems",
     "description": "China Mobile (Zhejiang) completed a core system adaptation test in August 2021, smoothly migrated the OS, and pioneered the use of Galaxy Kylin Advanced Server Operating System V10 in core systems in the telecom industry.",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/provider/003p49ce-8355-d114154aa417",
+    "url": "https://www.openeuler.org/en/showcase/provider/003p49ce-8355-d114154aa417",
     "inLanguage": "en",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": [
       {
@@ -68,7 +68,7 @@
       {
         "@type": "Organization",
         "name": "Galaxy Kylin",
-        "url": "https://www.openeuler.openatom.cn/en/showcase/provider/003p49ce-8355-d114154aa417"
+        "url": "https://www.openeuler.org/en/showcase/provider/003p49ce-8355-d114154aa417"
       }
     ]
   },
@@ -77,13 +77,13 @@
     "@type": "TechArticle",
     "headline": "China Mobile (Zhejiang) Core System OS Migration Solution",
     "description": "Technical case study of China Mobile (Zhejiang) migrating core telecom systems to Galaxy Kylin Advanced Server Operating System V10 using x86 and Huawei Kunpeng servers, Mesos and Kubernetes container cloud.",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/provider/003p49ce-8355-d114154aa417",
+    "url": "https://www.openeuler.org/en/showcase/provider/003p49ce-8355-d114154aa417",
     "inLanguage": "en",
     "datePublished": "2021-08-01",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "dependencies": "x86 servers, Huawei Kunpeng servers, Galaxy Kylin Advanced Server Operating System V10, Mesos, Kubernetes",
     "proficiencyLevel": "Expert",

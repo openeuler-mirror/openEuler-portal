@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/en/showcase/others/012o426d-974e-21437c6c5d56",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/others/012o426d-974e-21437c6c5d56",
+    "@id": "https://www.openeuler.org/en/showcase/others/012o426d-974e-21437c6c5d56",
+    "url": "https://www.openeuler.org/en/showcase/others/012o426d-974e-21437c6c5d56",
     "name": "Heilongjiang Tobacco | openEuler",
     "description": "Heilongjiang Tobacco Industry Co. Ltd. deployed the NeoKylin security-enhanced mail system V6.0 on ARM-based Inspur Yingxin servers running Galaxy Kylin Advanced Server Operating System V10, filtering junk and infected mail for over 7,000 users.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler"
     },
     "breadcrumb": {
@@ -20,25 +20,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.openeuler.openatom.cn/en/"
+          "item": "https://www.openeuler.org/en/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Showcase",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/"
+          "item": "https://www.openeuler.org/en/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Others",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/others/"
+          "item": "https://www.openeuler.org/en/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "Heilongjiang Tobacco",
-          "item": "https://www.openeuler.openatom.cn/en/showcase/others/012o426d-974e-21437c6c5d56"
+          "item": "https://www.openeuler.org/en/showcase/others/012o426d-974e-21437c6c5d56"
         }
       ]
     }
@@ -48,12 +48,12 @@
     "@type": "Article",
     "headline": "Heilongjiang Tobacco Security Mail System Project",
     "description": "Heilongjiang Tobacco Industry Co. Ltd. deployed the NeoKylin security-enhanced mail system V6.0 on ARM-based servers to filter junk and infected mail, serving over 7,000 users and setting an industry benchmark in Heilongjiang.",
-    "url": "https://www.openeuler.openatom.cn/en/showcase/others/012o426d-974e-21437c6c5d56",
+    "url": "https://www.openeuler.org/en/showcase/others/012o426d-974e-21437c6c5d56",
     "inLanguage": "en",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn/"
+      "url": "https://www.openeuler.org/"
     },
     "about": [
       {
@@ -64,7 +64,7 @@
       {
         "@type": "Thing",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn/"
+        "url": "https://www.openeuler.org/"
       }
     ],
     "mentions": [

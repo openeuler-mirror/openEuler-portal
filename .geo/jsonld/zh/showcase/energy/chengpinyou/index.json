@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "成品油资质管理平台迁移适配 | openEuler社区",
     "description": "迁移适配后产品支持多架构，部署时长大幅降低",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/chengpinyou",
+    "url": "https://www.openeuler.org/zh/showcase/energy/chengpinyou",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "用户案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "能源",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/"
+          "item": "https://www.openeuler.org/zh/showcase/energy/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "成品油资质管理平台迁移适配",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/energy/chengpinyou"
+          "item": "https://www.openeuler.org/zh/showcase/energy/chengpinyou"
         }
       ]
     },
@@ -53,18 +53,18 @@
     "@type": "CaseStudy",
     "name": "成品油资质管理平台迁移适配",
     "description": "迁移适配后产品支持多架构，部署时长大幅降低",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/energy/chengpinyou",
+    "url": "https://www.openeuler.org/zh/showcase/energy/chengpinyou",
     "inLanguage": "zh",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": [
       {
         "@type": "Thing",
         "name": "openEuler",
-        "url": "https://www.openeuler.openatom.cn"
+        "url": "https://www.openeuler.org"
       },
       {
         "@type": "Thing",

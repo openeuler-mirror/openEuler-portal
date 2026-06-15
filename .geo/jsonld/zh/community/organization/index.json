@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/community/organization",
-    "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+    "@id": "https://www.openeuler.org/zh/community/organization",
+    "url": "https://www.openeuler.org/zh/community/organization",
     "name": "openEuler组织架构 | openEuler社区",
     "description": "了解openEuler的委员会成员。想要了解更多信息，欢迎访问openEuler官网。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler"
     },
     "breadcrumb": {
@@ -20,19 +20,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "社区",
-          "item": "https://www.openeuler.openatom.cn/zh/community/"
+          "item": "https://www.openeuler.org/zh/community/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "组织架构",
-          "item": "https://www.openeuler.openatom.cn/zh/community/organization"
+          "item": "https://www.openeuler.org/zh/community/organization"
         }
       ]
     }
@@ -40,16 +40,16 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://www.openeuler.openatom.cn/#organization",
+    "@id": "https://www.openeuler.org/#organization",
     "name": "openEuler社区",
-    "url": "https://www.openeuler.openatom.cn/zh/",
-    "logo": "https://www.openeuler.openatom.cn/logo.svg",
+    "url": "https://www.openeuler.org/zh/",
+    "logo": "https://www.openeuler.org/logo.svg",
     "description": "openEuler是一个开源的Linux发行版平台，凝聚各地优秀开发者共同推进开源技术的发展。",
     "subOrganization": [
       {
         "@type": "Organization",
         "name": "openEuler 委员会",
-        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "url": "https://www.openeuler.org/zh/community/organization",
         "member": [
           {
             "@type": "Person",
@@ -119,7 +119,7 @@
       {
         "@type": "Organization",
         "name": "openEuler 委员会顾问专家委员会",
-        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "url": "https://www.openeuler.org/zh/community/organization",
         "member": [
           {
             "@type": "Person",
@@ -161,7 +161,7 @@
       {
         "@type": "Organization",
         "name": "openEuler 技术委员会",
-        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "url": "https://www.openeuler.org/zh/community/organization",
         "member": [
           {
             "@type": "Person",
@@ -199,7 +199,7 @@
       {
         "@type": "Organization",
         "name": "openEuler 品牌委员会",
-        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "url": "https://www.openeuler.org/zh/community/organization",
         "member": [
           {"@type": "Person", "name": "梁冰", "jobTitle": "主席"},
           {"@type": "Person", "name": "黄兆伟", "jobTitle": "委员"},
@@ -215,7 +215,7 @@
       {
         "@type": "Organization",
         "name": "openEuler 用户委员会",
-        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "url": "https://www.openeuler.org/zh/community/organization",
         "member": [
           {"@type": "Person", "name": "王军", "jobTitle": "主席"},
           {"@type": "Person", "name": "陈静", "jobTitle": "委员"},
@@ -239,7 +239,7 @@
       {
         "@type": "Organization",
         "name": "openEuler 业务发展工作组",
-        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "url": "https://www.openeuler.org/zh/community/organization",
         "member": [
           {"@type": "Person", "name": "李扬", "jobTitle": "组长"},
           {"@type": "Person", "name": "黄伟旭", "jobTitle": "副组长"},
@@ -255,7 +255,7 @@
       {
         "@type": "Organization",
         "name": "openEuler 社区运营工作组",
-        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "url": "https://www.openeuler.org/zh/community/organization",
         "member": [
           {"@type": "Person", "name": "郑振宇", "jobTitle": "组长"},
           {"@type": "Person", "name": "胡骁杰", "jobTitle": "副组长"},
@@ -271,7 +271,7 @@
       {
         "@type": "Organization",
         "name": "openEuler 教育工作组",
-        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "url": "https://www.openeuler.org/zh/community/organization",
         "member": [
           {"@type": "Person", "name": "赵立超", "jobTitle": "组长"},
           {"@type": "Person", "name": "杨东杰", "jobTitle": "副组长"},
@@ -289,7 +289,7 @@
       {
         "@type": "Organization",
         "name": "openEuler 法务工作组",
-        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "url": "https://www.openeuler.org/zh/community/organization",
         "member": [
           {"@type": "Person", "name": "张伟", "jobTitle": "组长"},
           {"@type": "Person", "name": "刘伟", "jobTitle": "副组长"},
@@ -302,7 +302,7 @@
       {
         "@type": "Organization",
         "name": "openEuler AI联合工作组",
-        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "url": "https://www.openeuler.org/zh/community/organization",
         "member": [
           {"@type": "Person", "name": "胡欣蔚", "jobTitle": "组长"},
           {"@type": "Person", "name": "Andrew Wafaa", "jobTitle": "组员"},
@@ -340,7 +340,7 @@
       {
         "@type": "Organization",
         "name": "openEuler 全球化工作组",
-        "url": "https://www.openeuler.openatom.cn/zh/community/organization",
+        "url": "https://www.openeuler.org/zh/community/organization",
         "member": [
           {"@type": "Person", "name": "周楠", "jobTitle": "组长"},
           {"@type": "Person", "name": "蔡镌洋", "jobTitle": "组员"},

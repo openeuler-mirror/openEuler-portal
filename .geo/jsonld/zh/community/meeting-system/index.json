@@ -1,6 +1,9 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "@id": "https://www.openeuler.org/zh/community/meeting-system",
+  "url": "https://www.openeuler.org/zh/community/meeting-system",
+  "inLanguage": "zh",
   "mainEntity": [
     {
       "@type": "Question",
@@ -15,7 +18,7 @@
       "name": "openEuler委员会会议记录会公开吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "会议材料（包括议题材料、会议纪要和录像）默认对openEuler委员会全体委员公开（只读权限），归档于委员会共享空间，保存4年。特殊情况不便公开时需经执行总监确认并记录。"
+        "text": "会议材料默认对openEuler委员会全体委员公开（只读权限），归档于委员会共享空间，保存4年。特殊情况不便公开时需经执行总监确认并记录。"
       }
     },
     {

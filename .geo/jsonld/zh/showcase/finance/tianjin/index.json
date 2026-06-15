@@ -2,37 +2,37 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/tianjin",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/tianjin",
+    "@id": "https://www.openeuler.org/zh/showcase/finance/tianjin",
+    "url": "https://www.openeuler.org/zh/showcase/finance/tianjin",
     "name": "天津银行 | openEuler社区",
     "description": "信息系统技术升级改造，打造新一代核心系统建设项目",
     "inLanguage": "zh",
-    "isPartOf": {"@type": "WebSite", "@id": "https://www.openeuler.openatom.cn/", "url": "https://www.openeuler.openatom.cn/", "name": "openEuler社区", "inLanguage": "zh"},
+    "isPartOf": {"@type": "WebSite", "@id": "https://www.openeuler.org/", "url": "https://www.openeuler.org/", "name": "openEuler社区", "inLanguage": "zh"},
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.openatom.cn/zh/"},
-        {"@type": "ListItem", "position": 2, "name": "用户案例", "item": "https://www.openeuler.openatom.cn/zh/showcase/"},
-        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/"},
-        {"@type": "ListItem", "position": 4, "name": "天津银行", "item": "https://www.openeuler.openatom.cn/zh/showcase/finance/tianjin"}
+        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.org/zh/"},
+        {"@type": "ListItem", "position": 2, "name": "用户案例", "item": "https://www.openeuler.org/zh/showcase/"},
+        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.org/zh/showcase/finance/"},
+        {"@type": "ListItem", "position": 4, "name": "天津银行", "item": "https://www.openeuler.org/zh/showcase/finance/tianjin"}
       ]
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/tianjin#article",
+    "@id": "https://www.openeuler.org/zh/showcase/finance/tianjin#article",
     "headline": "天津银行信息系统技术升级改造，打造新一代核心系统建设项目",
     "description": "天津银行依托银河麒麟高级服务器操作系统，开展海鸥云创新区信息系统技术升级改造工作，实现从CentOS到自主创新平台的全面迁移，助力数字化金融体系建设。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/tianjin",
+    "url": "https://www.openeuler.org/zh/showcase/finance/tianjin",
     "inLanguage": "zh",
     "about": [
       {"@type": "Thing", "name": "操作系统迁移", "description": "从CentOS操作系统迁移至银河麒麟高级服务器操作系统V10"},
       {"@type": "Thing", "name": "信息系统技术升级改造", "description": "天津银行海鸥云创新区信息系统技术升级改造项目"},
       {"@type": "Thing", "name": "数字化金融", "description": "打造数字化金融体系，推进"2234"战略规划落地"}
     ],
-    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.openatom.cn/", "logo": {"@type": "ImageObject", "url": "https://www.openeuler.openatom.cn/logo.png"}},
-    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/tianjin"},
+    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.org/", "logo": {"@type": "ImageObject", "url": "https://www.openeuler.org/logo.png"}},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.openeuler.org/zh/showcase/finance/tianjin"},
     "mentions": [
       {"@type": "Organization", "name": "天津银行", "description": "天津市城市商业银行，致力于构建"安全、敏捷、快速、智能、自主创新"的科技能力"},
       {"@type": "SoftwareApplication", "name": "银河麒麟高级服务器操作系统V10", "description": "具备高安全、高性能、稳定性、兼容性自主可控特点，兼容阿里云、整机、芯片及核心业务系统所需中间件、数据库等组件", "applicationCategory": "OperatingSystem"}
@@ -41,10 +41,10 @@
   {
     "@context": "https://schema.org",
     "@type": "CaseStudy",
-    "@id": "https://www.openeuler.openatom.cn/zh/showcase/finance/tianjin#casestudy",
+    "@id": "https://www.openeuler.org/zh/showcase/finance/tianjin#casestudy",
     "name": "天津银行信息系统技术升级改造案例",
     "description": "2023年，天津银行配合海鸥云开展创新区信息系统技术升级改造工作，选用银河麒麟高级服务器操作系统V10替换CentOS，实现核心业务系统的自主创新平台迁移，达到高可用、高安全、高性能的运行目标。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/finance/tianjin",
+    "url": "https://www.openeuler.org/zh/showcase/finance/tianjin",
     "about": {"@type": "Organization", "name": "天津银行"},
     "result": "银河麒麟高级服务器操作系统凭借高安全、高性能、稳定性、兼容性自主可控，完美适用行方需求，迁移后表现完美，无故障，助力业务增长。"
   }

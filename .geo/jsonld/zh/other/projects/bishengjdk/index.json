@@ -4,7 +4,7 @@
     "@type": "SoftwareApplication",
     "name": "毕昇JDK",
     "alternateName": "BiSheng JDK",
-    "url": "https://www.openeuler.openatom.cn/zh/other/projects/bishengjdk",
+    "url": "https://www.openeuler.org/zh/other/projects/bishengjdk",
     "description": "毕昇JDK是基于OpenJDK定制的Huawei JDK的开源版本。毕昇JDK作为OpenJDK的下游，是一款高性能、可用于生产环境的OpenJDK发行版。毕昇JDK对华为内部应用场景中遇到的一些性能问题和稳定性问题进行了修复，并在ARM架构上进行了性能优化和稳定性增强，在ARM架构上更稳定，在大数据等场景下可以获得更好的性能。",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Linux/AArch64, Linux/x86_64",
@@ -20,12 +20,12 @@
       "修复生产环境稳定性问题",
       "支持Java 8/11/17/21 LTS版本"
     ],
-    "downloadUrl": "https://www.openeuler.openatom.cn/zh/other/projects/bishengjdk",
+    "downloadUrl": "https://www.openeuler.org/zh/other/projects/bishengjdk",
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "offers": {
       "@type": "Offer",
@@ -42,13 +42,13 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "毕昇JDK | OpenJDK | openEuler社区",
-    "url": "https://www.openeuler.openatom.cn/zh/other/projects/bishengjdk",
+    "url": "https://www.openeuler.org/zh/other/projects/bishengjdk",
     "description": "毕昇JDK是基于OpenJDK定制的Huawei JDK的开源版本。研发团队积累了丰富的开发经验，解决了业务实际运行中遇到的多个疑难问题。想要了解更多信息，欢迎访问openEuler官网。",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -57,25 +57,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/other/"
+          "item": "https://www.openeuler.org/zh/other/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "项目",
-          "item": "https://www.openeuler.openatom.cn/zh/other/projects/"
+          "item": "https://www.openeuler.org/zh/other/projects/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "毕昇JDK",
-          "item": "https://www.openeuler.openatom.cn/zh/other/projects/bishengjdk"
+          "item": "https://www.openeuler.org/zh/other/projects/bishengjdk"
         }
       ]
     }
@@ -85,7 +85,7 @@
     "@type": "SoftwareApplication",
     "name": "毕昇JDK",
     "alternateName": "BiSheng JDK",
-    "url": "https://www.openeuler.openatom.cn/zh/other/projects/bishengjdk",
+    "url": "https://www.openeuler.org/zh/other/projects/bishengjdk",
     "description": "毕昇JDK是基于OpenJDK定制的Huawei JDK的开源版本。毕昇JDK作为OpenJDK的下游，是一款高性能、可用于生产环境的OpenJDK发行版。毕昇JDK对华为内部应用场景中遇到的一些性能问题和稳定性问题进行了修复，并在ARM架构上进行了性能优化和稳定性增强，在ARM架构上更稳定，在大数据等场景下可以获得更好的性能。",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Linux/AArch64, Linux/x86_64",
@@ -101,12 +101,12 @@
       "修复生产环境稳定性问题",
       "支持Java 8/11/17/21 LTS版本"
     ],
-    "downloadUrl": "https://www.openeuler.openatom.cn/zh/other/projects/bishengjdk",
+    "downloadUrl": "https://www.openeuler.org/zh/other/projects/bishengjdk",
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "offers": {
       "@type": "Offer",
@@ -123,13 +123,13 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "毕昇JDK | OpenJDK | openEuler社区",
-    "url": "https://www.openeuler.openatom.cn/zh/other/projects/bishengjdk",
+    "url": "https://www.openeuler.org/zh/other/projects/bishengjdk",
     "description": "毕昇JDK是基于OpenJDK定制的Huawei JDK的开源版本。研发团队积累了丰富的开发经验，解决了业务实际运行中遇到的多个疑难问题。想要了解更多信息，欢迎访问openEuler官网。",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -138,25 +138,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "其他",
-          "item": "https://www.openeuler.openatom.cn/zh/other/"
+          "item": "https://www.openeuler.org/zh/other/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "项目",
-          "item": "https://www.openeuler.openatom.cn/zh/other/projects/"
+          "item": "https://www.openeuler.org/zh/other/projects/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "毕昇JDK",
-          "item": "https://www.openeuler.openatom.cn/zh/other/projects/bishengjdk"
+          "item": "https://www.openeuler.org/zh/other/projects/bishengjdk"
         }
       ]
     }

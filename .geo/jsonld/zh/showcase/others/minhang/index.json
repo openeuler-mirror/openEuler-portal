@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "民航科技创新示范区工程智慧园区及数字化管理平台建设项目 | openEuler社区",
     "description": "民航科技创新示范区工程智慧园区及数字化管理平台建设项目，通过统一数字化平台打破信息孤岛，整合海光、鲲鹏和飞腾等三种架构体系，构建全面网信栈，涵盖智慧管理、智慧安全、生产经营、智慧科研和智慧办公五大板块。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/minhang",
+    "url": "https://www.openeuler.org/zh/showcase/others/minhang",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "成功案例",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/"
+          "item": "https://www.openeuler.org/zh/showcase/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "其他行业",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/"
+          "item": "https://www.openeuler.org/zh/showcase/others/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "民航科技创新示范区工程智慧园区及数字化管理平台建设项目",
-          "item": "https://www.openeuler.openatom.cn/zh/showcase/others/minhang"
+          "item": "https://www.openeuler.org/zh/showcase/others/minhang"
         }
       ]
     }
@@ -46,15 +46,15 @@
     "@type": "Article",
     "headline": "民航科技创新示范区工程智慧园区及数字化管理平台建设项目",
     "description": "民航科技创新示范区通过统一数字化平台，整合海光、鲲鹏和飞腾等三种架构体系，采用银河麒麟高级服务器操作系统V10，构建全面网信栈，实现智慧园区及数字化管理平台建设。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/minhang",
+    "url": "https://www.openeuler.org/zh/showcase/others/minhang",
     "inLanguage": "zh-CN",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn",
+      "url": "https://www.openeuler.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.openeuler.openatom.cn/assets/logo.png"
+        "url": "https://www.openeuler.org/img/for-cdn/logo.png"
       }
     },
     "about": [
@@ -83,12 +83,12 @@
     "@type": "TechArticle",
     "headline": "民航科技创新示范区工程智慧园区及数字化管理平台建设项目",
     "description": "民航科技创新示范区工程智慧园区及数字化管理平台建设项目解决方案，采用银河麒麟高级服务器操作系统V10，整合海光、鲲鹏、飞腾多架构，构建统一数字化平台。",
-    "url": "https://www.openeuler.openatom.cn/zh/showcase/others/minhang",
+    "url": "https://www.openeuler.org/zh/showcase/others/minhang",
     "inLanguage": "zh-CN",
     "publisher": {
       "@type": "Organization",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "dependencies": "银河麒麟高级服务器操作系统V10, 海光架构, 华为云, ARM架构, x86架构",
     "proficiencyLevel": "Expert",
@@ -97,7 +97,7 @@
       "name": "openEuler",
       "applicationCategory": "操作系统",
       "operatingSystem": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     }
   }
 ]

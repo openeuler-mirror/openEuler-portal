@@ -4,7 +4,7 @@
     "@type": "Event",
     "name": "openEuler SIG Gathering 2024",
     "description": "Join the excitement at openEuler's SIG Gathering 2024. Connect with developers, explore tech insights, and experience a vibrant community like no other. This year's gathering brings together developers from all 108 SIGs in the community, with a focus on the future development of openEuler in the wake of the release of openEuler 24.03 LTS.",
-    "url": "https://www.openeuler.openatom.cn/en/interaction/summit-list/sig-gathering-2024",
+    "url": "https://www.openeuler.org/en/interaction/summit-list/sig-gathering-2024",
     "startDate": "2024-07-26",
     "endDate": "2024-07-26",
     "eventStatus": "https://schema.org/EventScheduled",
@@ -21,7 +21,7 @@
     "organizer": {
       "@type": "Organization",
       "name": "openEuler",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "about": [
       {
@@ -55,7 +55,7 @@
         "description": "Aims at enhancing knowledge sharing by delivering high-quality content and improving user experience across the openEuler community."
       }
     ],
-    "image": "https://www.openeuler.openatom.cn/img/logo.png",
+    "image": "https://www.openeuler.org/img/logo.png",
     "inLanguage": "en"
   },
   {
@@ -66,25 +66,25 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.openeuler.openatom.cn/en/"
+        "item": "https://www.openeuler.org/en/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Interaction",
-        "item": "https://www.openeuler.openatom.cn/en/interaction/"
+        "item": "https://www.openeuler.org/en/interaction/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Summit List",
-        "item": "https://www.openeuler.openatom.cn/en/interaction/summit-list/"
+        "item": "https://www.openeuler.org/en/interaction/summit-list/"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "SIG Gathering 2024",
-        "item": "https://www.openeuler.openatom.cn/en/interaction/summit-list/sig-gathering-2024"
+        "item": "https://www.openeuler.org/en/interaction/summit-list/sig-gathering-2024"
       }
     ]
   }

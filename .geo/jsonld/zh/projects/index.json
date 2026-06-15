@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/projects/index.html",
-    "url": "https://www.openeuler.openatom.cn/zh/projects/index.html",
+    "@id": "https://www.openeuler.org/zh/projects/index.html",
+    "url": "https://www.openeuler.org/zh/projects/index.html",
     "name": "项目 | openEuler社区",
     "description": "openEuler 社区创新开源项目列表，涵盖 Intelligence BooM、UB Service Core、A-Tune、iSula、secGear、NestOS、StratoVirt、BiSheng JDK 等多个开源项目。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler",
       "description": "openEuler 是一个开源、免费的 Linux 发行版平台，将通过开放的社区形式与全球的开发者共同构建一个开放、多元和架构包容的软件生态体系。同时，openEuler 也是一个创新的平台，鼓励任何人在该平台上提出新想法、开拓新思路、实践新方案。",
       "inLanguage": "zh"
@@ -20,7 +20,7 @@
         "@type": "SoftwareApplication",
         "name": "Intelligence BooM",
         "description": "AI开源基础软件栈是联合多家社区、伙伴成员一起打造的大模型全栈开源解决方案，包含异构融合平台、任务管理平台、数据管理平台、运行加速平台、智能应用平台及全栈安全平台等7大平台，20+开源组件。",
-        "url": "https://www.openeuler.openatom.cn/zh/projects/index.html",
+        "url": "https://www.openeuler.org/zh/projects/index.html",
         "applicationCategory": "AI Infrastructure",
         "operatingSystem": "openEuler"
       },
@@ -28,7 +28,7 @@
         "@type": "SoftwareApplication",
         "name": "UB Service Core",
         "description": "UB Service Core构筑5大集群级系统服务，支持不同OS并全面开源至openEuler社区，释放超节点平等互联架构优势，全面使能应用加速30~50%，促进灵衢系统软件生态构筑。",
-        "url": "https://www.openeuler.openatom.cn/zh/projects/index.html",
+        "url": "https://www.openeuler.org/zh/projects/index.html",
         "applicationCategory": "System Service",
         "operatingSystem": "openEuler"
       },
@@ -36,7 +36,7 @@
         "@type": "SoftwareApplication",
         "name": "UB OS Component",
         "description": "操作系统灵衢组件（UB OS Component）是在OS原有内存管理、通信、设备管理和虚拟化框架上扩展支持灵衢，实现异构硬件统一抽象解耦、统一内存地址空间，支持资源全局调度、计算资源动态组合扩展、设备间高性能通信，释放灵衢硬件能力。",
-        "url": "https://www.openeuler.openatom.cn/zh/projects/index.html",
+        "url": "https://www.openeuler.org/zh/projects/index.html",
         "applicationCategory": "Operating System Component",
         "operatingSystem": "openEuler"
       },
@@ -115,13 +115,13 @@
         "@type": "ListItem",
         "position": 1,
         "name": "openEuler",
-        "item": "https://www.openeuler.openatom.cn/zh/"
+        "item": "https://www.openeuler.org/zh/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "项目",
-        "item": "https://www.openeuler.openatom.cn/zh/projects/index.html"
+        "item": "https://www.openeuler.org/zh/projects/index.html"
       }
     ]
   }

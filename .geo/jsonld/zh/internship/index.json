@@ -3,15 +3,15 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/internship",
-      "url": "https://www.openeuler.openatom.cn/zh/internship",
+      "@id": "https://www.openeuler.org/zh/internship",
+      "url": "https://www.openeuler.org/zh/internship",
       "name": "线上实习 | openEuler开源实习 | openEuler社区",
       "description": "openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。欢迎访问openEuler官网。",
       "inLanguage": "zh",
       "isPartOf": {
         "@type": "WebSite",
-        "@id": "https://www.openeuler.openatom.cn/",
-        "url": "https://www.openeuler.openatom.cn/",
+        "@id": "https://www.openeuler.org/",
+        "url": "https://www.openeuler.org/",
         "name": "openEuler社区",
         "inLanguage": "zh"
       },
@@ -22,13 +22,13 @@
             "@type": "ListItem",
             "position": 1,
             "name": "openEuler社区",
-            "item": "https://www.openeuler.openatom.cn/zh/"
+            "item": "https://www.openeuler.org/zh/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "openEuler开源实习",
-            "item": "https://www.openeuler.openatom.cn/zh/internship"
+            "item": "https://www.openeuler.org/zh/internship"
           }
         ]
       }
@@ -38,11 +38,11 @@
       "@type": "EducationalOccupationalProgram",
       "name": "openEuler开源实习",
       "description": "开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。由社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证明和实习工资。",
-      "url": "https://www.openeuler.openatom.cn/zh/internship",
+      "url": "https://www.openeuler.org/zh/internship",
       "provider": {
         "@type": "Organization",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.org/",
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "intern@openeuler.sh",
@@ -119,15 +119,15 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "@id": "https://www.openeuler.openatom.cn/zh/internship",
-      "url": "https://www.openeuler.openatom.cn/zh/internship",
+      "@id": "https://www.openeuler.org/zh/internship",
+      "url": "https://www.openeuler.org/zh/internship",
       "name": "线上实习 | openEuler开源实习 | openEuler社区",
       "description": "openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。欢迎访问openEuler官网。",
       "inLanguage": "zh",
       "isPartOf": {
         "@type": "WebSite",
-        "@id": "https://www.openeuler.openatom.cn/",
-        "url": "https://www.openeuler.openatom.cn/",
+        "@id": "https://www.openeuler.org/",
+        "url": "https://www.openeuler.org/",
         "name": "openEuler社区",
         "inLanguage": "zh"
       },
@@ -138,13 +138,13 @@
             "@type": "ListItem",
             "position": 1,
             "name": "openEuler社区",
-            "item": "https://www.openeuler.openatom.cn/zh/"
+            "item": "https://www.openeuler.org/zh/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "openEuler开源实习",
-            "item": "https://www.openeuler.openatom.cn/zh/internship"
+            "item": "https://www.openeuler.org/zh/internship"
           }
         ]
       }
@@ -154,11 +154,11 @@
       "@type": "EducationalOccupationalProgram",
       "name": "openEuler开源实习",
       "description": "开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。由社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证明和实习工资。",
-      "url": "https://www.openeuler.openatom.cn/zh/internship",
+      "url": "https://www.openeuler.org/zh/internship",
       "provider": {
         "@type": "Organization",
         "name": "openEuler社区",
-        "url": "https://www.openeuler.openatom.cn/",
+        "url": "https://www.openeuler.org/",
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "intern@openeuler.sh",

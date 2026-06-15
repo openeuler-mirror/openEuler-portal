@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/experts",
-    "url": "https://www.openeuler.openatom.cn/zh/experts",
+    "@id": "https://www.openeuler.org/zh/experts",
+    "url": "https://www.openeuler.org/zh/experts",
     "name": "openEuler 委员会顾问专家委员会 | 组织架构 | openEuler社区",
     "description": "了解openEuler的顾问专家委员会，获取专业建议与支持。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     }
   },
   {
@@ -18,7 +18,7 @@
     "@type": "ItemList",
     "name": "openEuler 社区顾问专家",
     "description": "openEuler社区顾问专家委员会成员列表，按姓氏拼音首字母顺序排序。",
-    "url": "https://www.openeuler.openatom.cn/zh/experts",
+    "url": "https://www.openeuler.org/zh/experts",
     "numberOfItems": 4,
     "itemListElement": [
       {
@@ -67,19 +67,19 @@
         "@type": "ListItem",
         "position": 1,
         "name": "首页",
-        "item": "https://www.openeuler.openatom.cn/zh/"
+        "item": "https://www.openeuler.org/zh/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "组织架构",
-        "item": "https://www.openeuler.openatom.cn/zh/community/organization/"
+        "item": "https://www.openeuler.org/zh/community/organization/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "顾问专家委员会",
-        "item": "https://www.openeuler.openatom.cn/zh/experts"
+        "item": "https://www.openeuler.org/zh/experts"
       }
     ]
   }

@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "@id": "https://www.openeuler.openatom.cn/en/faq/migration#faqpage",
-    "url": "https://www.openeuler.openatom.cn/en/faq/migration",
+    "@id": "https://www.openeuler.org/en/faq/migration#faqpage",
+    "url": "https://www.openeuler.org/en/faq/migration",
     "name": "Migrate to openEuler | FAQs | openEuler",
     "description": "Get answers to frequently asked questions about migrating to openEuler.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/#website",
-      "url": "https://www.openeuler.openatom.cn",
+      "@id": "https://www.openeuler.org/#website",
+      "url": "https://www.openeuler.org",
       "name": "openEuler"
     },
     "mainEntity": [
@@ -19,7 +19,7 @@
         "name": "What guidelines and resources can I refer to during migration?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can refer to the following resources to help you migrate to openEuler: the openEuler Migration page (https://www.openeuler.openatom.cn/en/migration/), the x2openEuler Usage Guide, the x2openEuler tool download, the x2openEuler source on the openEuler forum, and the x2openEuler migration demo video."
+          "text": "You can refer to the following resources to help you migrate to openEuler: the openEuler Migration page (https://www.openeuler.org/en/migration/), the x2openEuler Usage Guide, the x2openEuler tool download, the x2openEuler source on the openEuler forum, and the x2openEuler migration demo video."
         }
       },
       {
@@ -56,19 +56,19 @@
         "@type": "ListItem",
         "position": 1,
         "name": "openEuler",
-        "item": "https://www.openeuler.openatom.cn/en/"
+        "item": "https://www.openeuler.org/en/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "FAQs",
-        "item": "https://www.openeuler.openatom.cn/en/faq/"
+        "item": "https://www.openeuler.org/en/faq/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Migration",
-        "item": "https://www.openeuler.openatom.cn/en/faq/migration"
+        "item": "https://www.openeuler.org/en/faq/migration"
       }
     ]
   }

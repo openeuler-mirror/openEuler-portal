@@ -2,15 +2,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.openeuler.openatom.cn/zh/sig/sig-guidance",
-    "url": "https://www.openeuler.openatom.cn/zh/sig/sig-guidance",
+    "@id": "https://www.openeuler.org/zh/sig/sig-guidance",
+    "url": "https://www.openeuler.org/zh/sig/sig-guidance",
     "name": "openEuler 特别兴趣组指导原则 | SIG专区 | openEuler社区官网",
     "description": "查阅openEuler特别兴趣组（sig组）的指导原则，了解参与和贡献的方式。",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
-      "@id": "https://www.openeuler.openatom.cn/",
-      "url": "https://www.openeuler.openatom.cn/",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
       "name": "openEuler社区",
       "inLanguage": "zh"
     },
@@ -21,19 +21,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "openEuler社区",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "SIG中心",
-          "item": "https://www.openeuler.openatom.cn/zh/sig/sig-list/"
+          "item": "https://www.openeuler.org/zh/sig/sig-list/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "指导原则",
-          "item": "https://www.openeuler.openatom.cn/zh/sig/sig-guidance"
+          "item": "https://www.openeuler.org/zh/sig/sig-guidance"
         }
       ]
     }
@@ -43,7 +43,7 @@
     "@type": "HowTo",
     "name": "如何申请建立openEuler SIG组",
     "description": "查阅openEuler特别兴趣组（sig组）的指导原则，了解参与和贡献的方式。",
-    "url": "https://www.openeuler.openatom.cn/zh/sig/sig-guidance",
+    "url": "https://www.openeuler.org/zh/sig/sig-guidance",
     "inLanguage": "zh",
     "step": [
       {

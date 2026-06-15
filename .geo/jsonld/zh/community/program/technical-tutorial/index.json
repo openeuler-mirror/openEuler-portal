@@ -4,12 +4,12 @@
     "@type": "WebPage",
     "name": "技术教程 | 课程中心 | openEuler社区",
     "description": "提供多种技术教程，帮助开发者和用户更好地使用openEuler。",
-    "url": "https://www.openeuler.openatom.cn/zh/community/program/technical-tutorial",
+    "url": "https://www.openeuler.org/zh/community/program/technical-tutorial",
     "inLanguage": "zh",
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler社区",
-      "url": "https://www.openeuler.openatom.cn"
+      "url": "https://www.openeuler.org"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -18,25 +18,25 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://www.openeuler.openatom.cn/zh/"
+          "item": "https://www.openeuler.org/zh/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "社区",
-          "item": "https://www.openeuler.openatom.cn/zh/community/"
+          "item": "https://www.openeuler.org/zh/community/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "课程中心",
-          "item": "https://www.openeuler.openatom.cn/zh/community/program/"
+          "item": "https://www.openeuler.org/zh/community/program/"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "技术教程",
-          "item": "https://www.openeuler.openatom.cn/zh/community/program/technical-tutorial"
+          "item": "https://www.openeuler.org/zh/community/program/technical-tutorial"
         }
       ]
     }
@@ -46,38 +46,38 @@
     "@type": "ItemList",
     "name": "openEuler 技术教程",
     "description": "提供多种技术教程，帮助开发者和用户更好地使用openEuler。",
-    "url": "https://www.openeuler.openatom.cn/zh/community/program/technical-tutorial",
+    "url": "https://www.openeuler.org/zh/community/program/technical-tutorial",
     "numberOfItems": 5,
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "name": "kdump的工作原理与操作",
-        "url": "https://www.openeuler.openatom.cn/zh/community/program/technical-tutorial"
+        "url": "https://www.openeuler.org/zh/community/program/technical-tutorial"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Linux PCI子系统的基础认识",
-        "url": "https://www.openeuler.openatom.cn/zh/community/program/technical-tutorial"
+        "url": "https://www.openeuler.org/zh/community/program/technical-tutorial"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Crash Utility-1/2",
-        "url": "https://www.openeuler.openatom.cn/zh/community/program/technical-tutorial"
+        "url": "https://www.openeuler.org/zh/community/program/technical-tutorial"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Crash Utility-2/2",
-        "url": "https://www.openeuler.openatom.cn/zh/community/program/technical-tutorial"
+        "url": "https://www.openeuler.org/zh/community/program/technical-tutorial"
       },
       {
         "@type": "ListItem",
         "position": 5,
         "name": "Top Down Performance Analysis",
-        "url": "https://www.openeuler.openatom.cn/zh/community/program/technical-tutorial"
+        "url": "https://www.openeuler.org/zh/community/program/technical-tutorial"
       }
     ]
   }
