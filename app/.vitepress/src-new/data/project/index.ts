@@ -199,7 +199,7 @@ export const entranceList = {
       icon: IconDocument,
       title: 'Documentation',
       desc: 'Quickly build and effortlessly deploy scalable distributed applications with openYuanrong.',
-      href: 'http://docs.openyuanrong.org/zh-cn/latest/index.html',
+      href: 'https://docs.openyuanrong.org/en/latest/index.html',
       isOutlink: true,
     },
   ]
