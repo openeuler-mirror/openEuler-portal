@@ -4,7 +4,7 @@ date: '2026-05-09'
 category: news
 tags:
   - openEuler
-  - 运作报告
+  - 社区运作报告
 banner: 'img/news/20260509-April Monthly Report/0509banner.png'
 author: 'openEuler'
 summary: 'openEuler 社区 2026 年 4 月运作报告'

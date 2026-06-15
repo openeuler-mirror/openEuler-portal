@@ -4,6 +4,7 @@ date: '2026-06-11'
 category: news
 tags:
   - openEuler
+  - 2026开放原子开源生态大会
 banner: 'img/news/20260611-OpenAtom-openEuler/banner.png'
 author: 'openEuler'
 summary: '2026开放原子开源生态大会重磅来袭，开源欧拉使能智能化基础设施论坛蓄势待发，这场聚焦开源欧拉技术迭代、生态共建与行业落地的盛会，将于6月25日正式开启'
