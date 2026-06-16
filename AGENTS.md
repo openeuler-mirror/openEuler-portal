@@ -64,6 +64,7 @@ openEuler-portal/
 │   ├── typescript.md
 │   ├── api-and-state.md
 │   ├── styling.md
+│   ├── seo.md
 │   └── git.md
 ├── scripts/
 │   ├── check-git-shallow.js
@@ -173,6 +174,7 @@ openEuler-portal/
 | TypeScript 规范 | [rules/typescript.md](rules/typescript.md) |
 | API 与状态 | [rules/api-and-state.md](rules/api-and-state.md) |
 | 样式规范 | [rules/styling.md](rules/styling.md) |
+| SEO 规范 | [rules/seo.md](rules/seo.md) |
 | Git 工作流 | [rules/git.md](rules/git.md) |
 
 ### 红线（出现频次最高的"踩坑"）
@@ -185,6 +187,7 @@ openEuler-portal/
 6. **SSR 安全**：`window`/`document` 只能在 `onMounted` 或 `import.meta.client` 中访问，浏览器专属组件用 `<ClientOnly>`。
 7. **i18n 双语同步**：通过 `useLocale()` 拿 `t`，zh/en 翻译文件必须同步更新。
 8. **类型命名约定**：`SigItemT`（单条）/ `SigListT`（列表）/ `SigDetailT`（详情）/ `SigQueryT`（参数）。
+9. **SEO 数据驱动**：TDK / JSONLD / canonical URL 遵循 [rules/seo.md](rules/seo.md) 定义的数据驱动模式与域名适配机制，禁止在 `config.ts` 中硬编码页级 SEO 逻辑。
 
 ---
 
