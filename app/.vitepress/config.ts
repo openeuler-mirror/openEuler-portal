@@ -49,12 +49,18 @@ const setTdk = (pageData: PageData, pagePath: string) => {
     }
     return;
   }
-  const { title, description, keywords } = tdkInfo;
+  const { title, description, keywords, canonical } = tdkInfo;
   if (description) {
     pageData.description = description;
   }
   if (title) {
     pageData.title = title;
+  }
+  if (canonical) {
+    pageData.frontmatter.head ??= [];
+    pageData.frontmatter.head.push([
+      'link', { rel: 'canonical', href: `${currentHostname}${canonical}` }
+    ]);
   }
   if (keywords) {
     pageData.frontmatter.head ??= [];

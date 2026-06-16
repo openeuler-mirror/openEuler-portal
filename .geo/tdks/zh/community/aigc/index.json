@@ -1,5 +1,6 @@
 {
   "title": "openEuler生成式AI工具使用与开源贡献政策 | 社区规范",
   "description": "openEuler社区生成式AI工具使用与开源贡献政策，涵盖开放策略、适用范围、法律合规、Agent规范、禁止行为、贡献者责任及审查规则。",
-  "keywords": "openEuler, AIGC, 生成式AI, 开源贡献政策, Agent规范, CLA, AI披露"
+  "keywords": "openEuler, AIGC, 生成式AI, 开源贡献政策, Agent规范, CLA, AI披露",
+  "canonical": "/zh/community/aigc/"
 }
