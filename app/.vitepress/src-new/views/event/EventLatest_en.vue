@@ -3,7 +3,8 @@ import { ORow, OCol, OCard, OIcon, OFigure, OLink } from '@opensig/opendesign';
 
 import AppSection from '~@/components/AppSection.vue';
 
-import eventData from '@/data/salon/event';
+import activityContent from '#content/activity';
+import { foldI18n } from '~@/shared/content';
 
 import IconTime from '~icons/app-new/icon-time.svg';
 import IconAddress from '~icons/app-new/icon-address.svg';
@@ -15,7 +16,9 @@ import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
 const { lePadV } = useScreen();
-const { t } = useLocale();
+const { t, locale } = useLocale();
+
+const eventData = foldI18n(activityContent.global_events, locale.value);
 </script>
 <template>
   <AppSection :title="t('eventOverview.list')">
@@ -45,7 +48,7 @@ const { t } = useLocale();
             </div>
             <div class="btn-box">
               <OLink
-                v-for="video in item.video"
+                v-for="video in item.videos"
                 :key="video.url"
                 :href="video.url"
                 target="_blank"

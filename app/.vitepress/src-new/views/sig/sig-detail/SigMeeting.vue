@@ -31,6 +31,7 @@ import {
 } from '@opensig/opendesign';
 
 import activityContent from '#content/activity';
+import { foldI18n } from '~@/shared/content';
 
 import { type CalendarValueT } from '~@/@type/type-home';
 
@@ -96,7 +97,32 @@ const nextPage = () => {
   }
 };
 
-const activityData = activityContent.calendar as CalendarValueT[];
+const { lang } = useData();
+
+const expandDates = (start: string, end: string): string[] => {
+  if (!start || !end) return [];
+  const dates: string[] = [];
+  const s = new Date(start.split(' ')[0]);
+  const e = new Date(end.split(' ')[0]);
+  const cur = new Date(s);
+  while (cur <= e) {
+    dates.push(cur.toISOString().split('T')[0]);
+    cur.setDate(cur.getDate() + 1);
+  }
+  return dates;
+};
+
+const FORMAT_LABEL: Record<string, string> = { offline: '线下', online: '线上', hybrid: '线上 + 线下' };
+
+const activityData = foldI18n(activityContent.events, (lang.value as string).includes('en') ? 'en' : 'zh').map((ev) => ({
+  ...ev,
+  name: ev.title,
+  dates: expandDates(ev.start_date, ev.end_date),
+  address: ev.address,
+  type: 'activity',
+  activity_type: FORMAT_LABEL[ev.format] || '',
+  url: (ev.poster_image || ev.agenda_image) ? `/${lang.value}/interaction/event-list/detail/?id=${ev.id}` : '',
+})) as CalendarValueT[];
 
 // 过滤当前sig组的活动
 const sigActivityData = (data: CalendarValueT) => {
@@ -220,7 +246,7 @@ const paramGetDaysData = (params: { date: string; type: string }) => {
       if (item2?.etherpad) {
         item2['duration_time'] = `${item2.startTime}-${item2.endTime}`;
       }
-      if (item2?.activity_type && !item2.dates) {
+      if (item2?.activity_type && !item2.dates && !isNaN(Number(item2.activity_type))) {
         item2.activity_type = activityType[Number(item2.activity_type) - 1];
       }
     });

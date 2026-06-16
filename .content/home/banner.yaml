@@ -1,0 +1,59 @@
+# 首页轮播图 / Home Banner
+#
+# 字段说明：
+#   bg_pc           PC 端背景图（中英文共用）
+#   bg_pad          平板端背景图（中英文共用）
+#   bg_mb           移动端背景图（中英文共用时不加后缀）
+#   bg_mb_zh/en     移动端背景图（中英文不同时加后缀）
+#   bg_theme        背景主题 light | dark，控制指示器颜色
+#   text_theme      文字主题 dark=白色文字（可选）
+#   title_zh/en     中英文标题（字符串或数组表示多行）
+#   subtitle_zh/en  中英文副标题（可选）
+#   btn_zh/en       中英文按钮文案（可选，不填则无按钮）
+#   href_zh/en      中英文跳转链接
+#   is_blank        是否新窗口打开（可选）
+#   attach          附加装饰图（可选）
+#   locale          可见语言 zh / en / zh,en（可选，默认 zh,en）
+
+- bg_pc: ./images/annual-report/pc.jpg
+  bg_pad: ./images/annual-report/pad.jpg
+  bg_mb_zh: ./images/annual-report/mb.jpg
+  bg_mb_en: ./images/annual-report/mb_en.jpg
+  bg_theme: light
+  title_zh:
+    - OpenAtom openEuler
+    - 2025 社区年报
+  title_en:
+    - OpenAtom openEuler
+    - Annual Report 2025
+  btn_zh: 查看详情
+  btn_en: View More
+  text_theme: dark
+  href_zh: /zh/annual-report/openEuler-annual-report-2025/
+  href_en: /en/annual-report/openEuler-annual-report-2025/
+  is_blank: true
+
+- bg_pc: ./images/release/pc.jpg
+  bg_pad: ./images/release/pad.jpg
+  bg_mb: ./images/release/mb.jpg
+  bg_theme: light
+  locale: zh
+  title_zh: openEuler 24.03 LTS SP3 正式发布
+  btn_zh: 下载
+  href_zh: /zh/download/#openEuler%2024.03%20LTS%20SP3
+  is_blank: true
+
+- bg_pc: ./images/download/pc.jpg
+  bg_pad: ./images/download/pad.jpg
+  bg_mb_zh: ./images/download/banner-mb-zh.jpg
+  bg_mb_en: ./images/download/banner-mb-en.jpg
+  bg_theme: light
+  title_zh: 获取openEuler
+  title_en: Get openEuler
+  subtitle_zh: 一站式资源下载获取，欢迎使用
+  subtitle_en: Find all resources in one place
+  btn_zh: 查看详情
+  btn_en: View More
+  href_zh: /zh/download
+  href_en: /en/download
+  is_blank: true

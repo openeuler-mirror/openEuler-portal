@@ -1,0 +1,374 @@
+# 活动事件数据 / Event Entities
+#
+# 字段说明：
+#   id              唯一键，前端拼接 /event-list/detail/?id=${id}
+#   title_zh/en     中英文标题
+#   start_date      开始时间 YYYY-MM-DD HH:mm
+#   end_date        结束时间
+#   address_zh/en   地址（线上活动省略）
+#   city_zh/en      城市（用于筛选）
+#   synopsis_zh/en  简介
+#   status          ended=已结束 | ongoing=进行中
+#   format          offline=线下 | online=线上 | hybrid=混合
+#   series          系列标识（meetup）
+#   group_name      关联 SIG（可选，SIG 详情页过滤用）
+#   poster_image    PC 端海报（可选）
+#   poster_image_mb 移动端海报（可选）
+#   agenda_image    议程图 ./images/detail-<YYMMDD>.jpg（可选）
+#   signup_url      报名链接（ongoing 时填写）
+#   signup_url_mb   报名链接移动端
+#   review_url      回顾链接（ended 后填写）
+
+- id: 16
+  title_zh: openEuler AI与操作系统融合创新 Meetup 北京站
+  title_en: openEuler AI & OS Innovation Meetup Beijing
+  start_date: '2026-05-30 14:00'
+  end_date: '2026-05-30 17:30'
+  address_zh: 北京海淀区北四环西路北京辽宁大厦七层锦州厅
+  address_en: Jinzhou Hall, 7F, Liaoning Hotel, Haidian, Beijing
+  city_zh: 北京市
+  city_en: Beijing
+  synopsis_zh: 本次Meetup由openEuler社区与联通数科联合举办，以"智驱未来：AI与操作系统融合创新"为主题，旨在汇聚国内AI与操作系统领域的专家、社区开发者和技术爱好者，讨论和探索AIOS的未来发展之路。聚焦AI与操作系统融合的底层技术、前沿技术和应用实践，深入探讨行业难题，分享实践经验和创新思路。AI与操作系统两者相得益彰，AI使操作系统更加智能，操作系统使AI的开发应用更便捷高效。
+  synopsis_en: 'Co-organized by openEuler and China Unicom Digital, themed "AI-Driven Future: AI & OS Innovation", gathering experts and developers to explore AIOS development.'
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/beijing.jpg
+  poster_image_mb: ~@/assets/category/event/city/beijing-mb.jpg
+  agenda_image: ./images/detail-260530.jpg
+
+- id: 15
+  title_zh: openEuler社区云原生开源中间件Meetup-山东站
+  title_en: openEuler Cloud Native Middleware Meetup - Shandong
+  start_date: '2026-04-28 08:00'
+  end_date: '2026-04-28 11:30'
+  address_zh: 山东省青岛市黄岛区长江西路66号中国石油大学（华东）唐岛湾校区文理楼110
+  address_en: Room 110, Arts & Science Building, Tangdaowan Campus, China University of Petroleum (East China), Qingdao
+  city_zh: 青岛市
+  city_en: Qingdao
+  synopsis_zh: openEuler社区云原生开源中间件Meetup-山东站特邀多位业内专家，分享实战案例与前沿技术解析，活动将重点解读 openEuler 社区开源协作模式与介绍开源实习，指导参会者掌握开源项目贡献路径，助力高校师生与企业技术人员深度参与开源生态建设，同时，本次活动将探索 openEuler 生态下中间件技术的最佳实践，为学术研究提供技术参考，为企业应用落地提供可复用的解决方案。
+  synopsis_en: Industry experts share practical cases and cutting-edge technologies, focusing on openEuler's open source collaboration model and middleware best practices.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/event/city/default-one.jpg
+  poster_image_mb: ~@/assets/category/event/city/default-one-mb.jpg
+  agenda_image: ./images/detail-260428.jpg
+
+- id: 14
+  title_zh: openEuler SBOM &Intelligence SIG Meetup成都站
+  title_en: openEuler SBOM & Intelligence SIG Meetup Chengdu
+  start_date: '2026-04-17 13:30'
+  end_date: '2026-04-17 17:00'
+  address_zh: 四川省成都市锦江区锦鹏二街69号白鹭湾科技生态园B区1栋1单元6层601号
+  address_en: Room 601, 6F, Unit 1, Building 1, Zone B, Bailuwan Tech Eco-Park, Jinjiang, Chengdu
+  city_zh: 成都市
+  city_en: Chengdu
+  synopsis_zh: 本次活动将聚焦关键行业真实场景，围绕SBOM技术体系、工程实践路径及AI时代下供应链安全新挑战展开深入交流，促进产业界与社区协同创新，推动SBOM生态发展。
+  synopsis_en: Focusing on SBOM technology, engineering practices, and supply chain security challenges in the AI era.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/chengdu.jpg
+  poster_image_mb: ~@/assets/category/event/city/chengdu-mb.jpg
+  agenda_image: ./images/detail-260417.jpg
+
+- id: 13
+  title_zh: openEuler AI 创新应用技术Meetup 苏州站
+  title_en: openEuler AI Innovation Meetup Suzhou
+  start_date: '2025-12-26 14:00'
+  end_date: '2025-12-26 16:30'
+  address_zh: 苏州市姑苏区十梓街1号苏州大学计算机科学与技术学院504会议室
+  address_en: Room 504, School of Computer Science, Soochow University, Suzhou
+  city_zh: 苏州市
+  city_en: Suzhou
+  synopsis_zh: 本次AI 创新应用技术主题 Meetup聚焦技术落地与产业融合，旨在汇聚行业先锋与实践者，共同探索 AI 技术的创新应用、落地挑战及未来演进方向。参会者将有机会聆听来自移动云、华为等头部科技企业，以及苏州大学等科研院校的专家分享，直击智能操作系统、智能助手、大模型、推理引擎、流控算法等前沿技术动态，同时与同行深度交流实践经验，共商 AI 技术规模化应用的可行路径，助力产业高质量发展。
+  synopsis_en: Focused on AI technology landing and industrial integration, with experts from China Mobile Cloud, Huawei, and Soochow University sharing insights on intelligent OS, LLMs, and inference engines.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/suzhou.jpg
+  poster_image_mb: ~@/assets/category/event/city/suzhou-mb.jpg
+  agenda_image: ./images/detail-251226.jpg
+
+- id: 12
+  title_zh: openEuler Intelligence Meetup 香港站
+  title_en: openEuler Intelligence Meetup Hong Kong
+  start_date: '2025-12-20 13:00'
+  end_date: '2025-12-20 17:00'
+  address_zh: 香港城市大学杨建文学术楼-紫区- P4704教室
+  address_en: Room P4704, Purple Zone, Academic Building, City University of Hong Kong
+  city_zh: 香港
+  city_en: Hong Kong
+  synopsis_zh: 12月20日，openEuler Intelligence Meetup 再一次来到香港，欢迎高校开发者、企业技术专家及开源爱好者共同参与。本次Meetup 将汇聚主要软件厂商与客户，分享智能操作系统技术最新开源进展，并邀请高校开发者分享Intelligence技术实践案例。
+  synopsis_en: openEuler Intelligence Meetup returns to Hong Kong, welcoming university developers, enterprise experts, and open source enthusiasts to share the latest progress in intelligent OS technology.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/xianggang.jpg
+  poster_image_mb: ~@/assets/category/event/city/xianggang-mb.jpg
+  agenda_image: ./images/detail-251220.jpg
+
+- id: 11
+  title_zh: openEuler 云原生开源中间件Meetup
+  title_en: openEuler Cloud Native Middleware Meetup
+  start_date: '2025-11-26 14:00'
+  end_date: '2025-11-26 17:00'
+  address_zh: 北京信息科技大学沙河校区信息楼B座
+  address_en: Building B, Information Building, Shahe Campus, Beijing Information Science & Technology University
+  city_zh: 北京市
+  city_en: Beijing
+  synopsis_zh: 11月26日，东方通、openEuler社区、北京信息科技大学联合将在北京信息科技大学举办以"轻舟泛海，云翼冲天"为主题的Meetup。此次交流活动特邀多位业内专家，分享实战案例与前沿技术解析，为技术爱好者、行业从业者、高校学生等加油充电，深化技术交流与学习，同时还将进行实习宣讲互动，为高校学生解读东方通开源实习项目，提供更多宝贵的实践机会。
+  synopsis_en: Co-organized by Tongtech, openEuler, and BISTU, themed "Sailing Through Clouds", featuring expert talks on cloud native middleware and internship opportunities.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/beijing.jpg
+  poster_image_mb: ~@/assets/category/event/city/beijing-mb.jpg
+  agenda_image: ./images/detail-251126.jpg
+
+- id: 10
+  title_zh: openEuler Embedded & AGIROS具身智能技术 Meetup西安站
+  title_en: openEuler Embedded & AGIROS Embodied Intelligence Meetup Xi'an
+  start_date: '2025-10-23 14:00'
+  end_date: '2025-10-23 17:30'
+  address_zh: 西安电子科技大学北校区会议中心一层104报告厅
+  address_en: Auditorium 104, 1F, Conference Center, North Campus, Xidian University
+  city_zh: 西安市
+  city_en: Xi'an
+  synopsis_zh: 本活动围绕具身智能相关技术，包括但不限于ROS、AI框架、OS底座、具身Agent等进行分享及探讨，同时包含已有的行业优秀案例，以及对未来技术或行业发展趋势的思考。
+  synopsis_en: Discussing embodied intelligence technologies including ROS, AI frameworks, OS foundations, and embodied agents, with industry best practices and future trends.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/xian.jpg
+  poster_image_mb: ~@/assets/category/event/city/xian-mb.jpg
+  agenda_image: ./images/detail-251023.jpg
+  signup_url: https://openatomcon.openatom.cn/registration/?activityNo=HD20251010094557
+  signup_url_mb: https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20251010094557
+
+- id: 9
+  title_zh: openEuler Compiler SIG Meetup 北京站
+  title_en: openEuler Compiler SIG Meetup Beijing
+  start_date: '2025-10-16 14:00'
+  end_date: '2025-10-16 17:30'
+  address_zh: 北京中关村北理工亚朵S酒店3层精工厅
+  address_en: Jinggong Hall, 3F, Atour S Hotel, Zhongguancun, Beijing
+  city_zh: 北京市
+  city_en: Beijing
+  synopsis_zh: 本次Meetup特邀来自北京航空航天大学、湖南大学、字节跳动、京东、快手、麒麟软件及华为等高校与企业的多位专家学者齐聚一堂。会议涵盖前沿编译器技术、AI图编译优化、灵衢超节点编程、编译技术业务场景实践及编译器开源社区共建等核心议题，深度链接产学研用领域技术力量，共探编译器技术创新发展之路。
+  synopsis_en: Gathering experts from Beihang, Hunan University, ByteDance, JD, Kuaishou, Kylinsoft, and Huawei to discuss compiler technology, AI graph optimization, and open source community building.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/beijing.jpg
+  poster_image_mb: ~@/assets/category/event/city/beijing-mb.jpg
+  agenda_image: ./images/detail-251016.jpg
+  signup_url: https://openatomcon.openatom.cn/registration/?activityNo=HD20251009154130
+  signup_url_mb: https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20251009154130
+
+- id: 8
+  title_zh: "openEuler Meetup X openGauss Meetup 西安站"
+  title_en: "openEuler Meetup X openGauss Meetup Xi'an"
+  start_date: '2025-09-26 14:00'
+  end_date: '2025-09-26 17:30'
+  address_zh: 西安软件新城二期C2座3F陕西华为联合学院多功能厅
+  address_en: Multi-function Hall, 3F, C2 Building, Xi'an Software New Town Phase II
+  city_zh: 西安市
+  city_en: Xi'an
+  synopsis_zh: openEuler开源社区与openGauss开源社区携手陕西鲲鹏创新中心、西北工业大学，将于西安举办Meetup。本次活动聚焦操作系统与数据库两大核心领域，围绕openEuler与openGauss的最新技术进展、内核优化实践、AI融合创新以及鲲鹏生态赋能等热点话题，邀请资深技术专家与开发者进行深度分享与交流。
+  synopsis_en: openEuler and openGauss communities join forces in Xi'an, focusing on OS and database technologies, kernel optimization, and AI innovation.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/xian.jpg
+  poster_image_mb: ~@/assets/category/event/city/xian-mb.jpg
+  agenda_image: ./images/detail-250926.jpg
+  review_url: https://www.openeuler.org/zh/news/20250928-euler-gauss-meetup-xian-review/20250917-euler-gauss-meetup-xian-review.html
+
+- id: 7
+  title_zh: openEuler云原生开源中间件Meetup 武汉站
+  title_en: openEuler Cloud Native Middleware Meetup Wuhan
+  start_date: '2025-09-25 13:45'
+  end_date: '2025-09-25 17:00'
+  address_zh: 武汉职业技术大学关山校区-凌峰楼C11
+  address_en: Room C11, Lingfeng Building, Guanshan Campus, Wuhan Polytechnic University
+  city_zh: 武汉市
+  city_en: Wuhan
+  synopsis_zh: 9月25日，openEuler社区联合东方通、武汉职业技术大学联合将在武汉职业技术大学举办以"轻舟泛海，云翼冲天"为主题的Meetup。此次交流活动特邀多位业内专家，分享实战案例与前沿技术解析，为技术爱好者、行业从业者、高校学生等加油充电，深化技术交流与学习，同时还将进行实习宣讲互动，为高校学生解读东方通开源实习项目，提供更多宝贵的实践机会。
+  synopsis_en: Co-organized by openEuler, Tongtech, and Wuhan Polytechnic University, featuring expert talks on cloud native middleware and internship opportunities.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/wuhan.jpg
+  poster_image_mb: ~@/assets/category/event/city/wuhan-mb.jpg
+  agenda_image: ./images/detail-250925.jpg
+  review_url: https://www.openeuler.org/zh/news/20250929-openuler-dongfangtong/20250929-openuler-dongfangtong.html
+
+- id: 6
+  title_zh: openEuler 多样性算力Meetup北京站
+  title_en: openEuler Diverse Computing Meetup Beijing
+  start_date: '2025-09-06 13:00'
+  end_date: '2025-09-06 17:00'
+  address_zh: 北京海淀区中关村北理工亚朵S酒店3楼精工厅
+  address_en: Jinggong Hall, 3F, Atour S Hotel, Zhongguancun, Beijing
+  city_zh: 北京市
+  city_en: Beijing
+  synopsis_zh: openEuler多样性算力 Meetup 将在北京举办，诚邀开发者、企业技术专家及开源爱好者共同参与！openEuler 社区长期致力于推动开源操作系统的发展，构建繁荣的软件生态体系。本次 Meetup 北京站将进一步聚焦多样性算力，汇聚各方力量，深入交流创新实践与技术成果，携手推动多样性算力的落地与生态繁荣。
+  synopsis_en: openEuler Diverse Computing Meetup in Beijing, gathering developers and experts to discuss heterogeneous computing innovation and ecosystem development.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/beijing.jpg
+  poster_image_mb: ~@/assets/category/event/city/beijing-mb.jpg
+  agenda_image: ./images/detail-250905.jpg
+  review_url: https://www.openeuler.org/zh/news/20250909-multi-computing-meetup-review/20250909-multi-computing-meetup-review.html
+
+- id: 5
+  title_zh: openEuler SIG-Long 异构融合技术Meetup北京站
+  title_en: openEuler SIG-Long Heterogeneous Computing Meetup Beijing
+  start_date: '2025-08-22 14:00'
+  end_date: '2025-08-22 17:30'
+  address_zh: 北京中关村皇冠假日酒店四层会议室8
+  address_en: Room 8, 4F, Crowne Plaza Zhongguancun, Beijing
+  city_zh: 北京市
+  city_en: Beijing
+  synopsis_zh: 本次活动以异构融合技术为核心，特邀多位来自北京大学、北京航空航天大学、京东、Intel、华为的技术专家，深入探讨异构融合技术的发展与落地。openEuler sig-Long 致力于构建异构融合计算基础设施框架，实现算力统一接入、异构融合内存、异构融合虚拟化、算力切分、资源优先级配置、弹性迁移等关键能力。
+  synopsis_en: Focused on heterogeneous computing infrastructure, with experts from PKU, Beihang, JD, Intel, and Huawei discussing unified computing access and heterogeneous virtualization.
+  status: ended
+  format: offline
+  series: meetup
+  group_name: sig-Long
+  poster_image: ~@/assets/category/user-group/city/beijing.jpg
+  poster_image_mb: ~@/assets/category/event/city/beijing-mb.jpg
+  agenda_image: ./images/detail-250822.jpg
+  review_url: https://www.openeuler.org/zh/news/20250826-sig-long-review/20250826-sig-long-review.html
+
+- id: 4
+  title_zh: openEuler SIG-ARM Meetup 深圳站
+  title_en: openEuler SIG-ARM Meetup Shenzhen
+  start_date: '2025-07-18 14:00'
+  end_date: '2025-07-18 17:30'
+  address_zh: 南山区海天一路软件产业基地4栋B座1楼 禾木HOMEY SPACE（雅禾厅）
+  address_en: HOMEY SPACE (Yahe Hall), 1F, Building 4B, Software Industry Base, Nanshan, Shenzhen
+  city_zh: 深圳市
+  city_en: Shenzhen
+  synopsis_zh: 本场Meetup是openEuler Arm SIG 年度技术聚会。我们将汇聚Arm生态头部芯片厂商与软件巨头嘉宾，深度剖析openEuler在Arm架构的最新性能优化与创新实践，并带来云原生/AI等关键负载在Arm服务器上的迁移、部署与调优实战指南。活动聚焦核心挑战，分享数据库、中间件等关键基础软件栈的Arm适配经验与解决方案，并探讨Arm服务器生态的未来趋势与标准化进展。
+  synopsis_en: openEuler Arm SIG annual tech gathering, with Arm ecosystem leaders discussing performance optimization, cloud native/AI workloads on Arm servers, and software stack adaptation.
+  status: ended
+  format: offline
+  series: meetup
+  group_name: sig-Arm
+  poster_image: ~@/assets/category/user-group/city/shenzhen.jpg
+  poster_image_mb: ~@/assets/category/event/city/shenzhen-mb.jpg
+  agenda_image: ./images/detail-250718.jpg
+  signup_url: https://openatomcon.openatom.cn/registration/?activityNo=HD20250701103704
+  signup_url_mb: https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20250701103704
+
+- id: 3
+  title_zh: openEuler Meetup 香港站
+  title_en: openEuler Meetup Hong Kong
+  start_date: '2025-06-12 14:00'
+  end_date: '2025-06-12 17:00'
+  address_zh: 香港城市大学杨建文学术楼G4702
+  address_en: Room G4702, Academic Building, City University of Hong Kong
+  city_zh: 香港
+  city_en: Hong Kong
+  synopsis_zh: openEuler首次香港线下meetup，该活动由香港开源高校联盟OSCA-HK协办，邀请来自openEule社区运营组组长、SIG maintainer、RustSBI Maintainer以及香港城市大学数据科学系博士后为大家带来openEuler开源社区进展与香港高校科研进展等。
+  synopsis_en: openEuler's first Hong Kong offline meetup, co-organized with OSCA-HK, featuring community updates, SIG maintainers, and university research progress.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/xianggang.jpg
+  poster_image_mb: ~@/assets/category/event/city/xianggang-mb.jpg
+  agenda_image: ./images/detail-250612.jpg
+
+- id: 2
+  title_zh: openEuler云原生开源中间件Meetup天津站
+  title_en: openEuler Cloud Native Middleware Meetup Tianjin
+  start_date: '2025-05-27 14:00'
+  end_date: '2025-05-27 17:30'
+  address_zh: 天津职业技术师范大学（天津市津南区）
+  address_en: Tianjin University of Technology and Education, Jinnan District, Tianjin
+  city_zh: 天津市
+  city_en: Tianjin
+  synopsis_zh: 由openEuler社区、东方通、天津职业技术师范大学联合举办的"轻舟泛海，云翼冲天·openEuler云原生开源中间件"为主题的Meetup将在天津职业技术师范大学举办。此次交流活动特邀多位业内专家，分享实战案例与前沿技术解析，为技术爱好者、行业从业者、高校学生等加油充电，深化技术交流与学习，同时还将进行实习宣讲互动，为高校学生解读东方通开源实习项目，提供更多宝贵的实践机会。
+  synopsis_en: Co-organized by openEuler, Tongtech, and TUTE, featuring expert talks on cloud native middleware and open source internship opportunities.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/tianjin.jpg
+  poster_image_mb: ~@/assets/category/event/city/tianjin-mb.jpg
+  agenda_image: ./images/detail-250527.jpg
+  review_url: /zh/news/20250530-dft/20250530-dft.html
+
+- id: 1
+  title_zh: openEuler & deepin Meetup成都站
+  title_en: openEuler & deepin Meetup Chengdu
+  start_date: '2025-05-24 14:00'
+  end_date: '2025-05-24 17:30'
+  address_zh: 四川省成都市原岛酒店（环球中心新会展店）5楼3号会议室
+  address_en: Meeting Room 3, 5F, Yuandao Hotel (Global Center), Chengdu
+  city_zh: 成都市
+  city_en: Chengdu
+  synopsis_zh: 在开源技术领域，开源生态建设一直是众多从业者共同关注的话题。为了深入探讨开源生态的发展之道，一场聚焦「开源生态共建」的技术聚会将在成都・菁蓉汇启幕 ── 由 openEuler 社区和deepin（深度）社区与联合主办，如意玲珑社区承办的openEuler & deepin Meetup成都站，邀你成为开源生态版图的「共建者」，无论你是刚踏入开源的「萌新」，还是深耕技术的「老炮」，希望本次活动都能为你带来新的技术视角与灵感。
+  synopsis_en: A tech gathering focused on open source ecosystem co-building, jointly organized by openEuler and deepin communities in Chengdu.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/chengdu.jpg
+  poster_image_mb: ~@/assets/category/event/city/chengdu-mb.jpg
+  agenda_image: ./images/detail-250524.jpg
+  review_url: /zh/news/20250530-deepin1/20250530-deepin1.html
+  signup_url: https://openatomcon.openatom.cn/registration/?activityNo=HD20250513141929
+  signup_url_mb: https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20250513141929
+
+- id: 1000
+  title_zh: openEuler on RISC-V & deepin Meetup-北京站
+  title_en: openEuler on RISC-V & deepin Meetup Beijing
+  start_date: '2025-03-22 14:00'
+  end_date: '2025-03-22 17:00'
+  address_zh: 北京市海淀区中国科学院软件研究所5号楼四层大报告厅
+  address_en: Auditorium, 4F, Building 5, ISCAS, Haidian, Beijing
+  city_zh: 北京市
+  city_en: Beijing
+  synopsis_zh: openEuler与deepin双社区联合打造AI×RISC-V深度探索之旅！你是否想了解 RISC-V架构的最新进展？是否想探索Linux桌面应用的新体验？是否对AI与操作系统的融合充满好奇？3月22日，OpenAtom openEuler（简称"openEuler"）社区与deepin（深度）社区将联合联合打造AI×RISC-V深度探索之旅！本次活动聚焦AI、RISC-V等前沿技术，邀请多位行业专家现场分享实践经验，无论你是RISC-V爱好者、AI技术探索者，还是Linux 开源社区参与者，都将为你带来新的技术视角与灵感。
+  synopsis_en: openEuler and deepin communities jointly present an AI×RISC-V deep exploration, featuring industry experts sharing practical experiences.
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/beijing.jpg
+  poster_image_mb: ~@/assets/category/event/city/beijing-mb.jpg
+  agenda_image: ./images/detail-beijing.jpg
+  review_url: /zh/news/openEuler/20250308-ddepin3/20250308-ddepin3.html
+
+- id: 17
+  title_zh: openEuler SDS Meetup Online
+  title_en: openEuler SDS Meetup Online
+  start_date: '2025-11-28 14:00'
+  end_date: '2025-11-28 16:25'
+  status: ended
+  format: online
+  series: meetup
+
+- id: 18
+  title_zh: openEuler Intelligence Meetup Online
+  title_en: openEuler Intelligence Meetup Online
+  start_date: '2025-11-29 14:10'
+  end_date: '2025-11-29 15:15'
+  status: ended
+  format: online
+  series: meetup
+
+- id: 19
+  title_zh: openEuler社区云原生开源中间件Meetup-西安站
+  title_en: openEuler Cloud Native Middleware Meetup - Xi'an
+  start_date: '2026-06-10 13:30'
+  end_date: '2026-06-10 17:15'
+  address_zh: 西安电子科技大学（长安校区）网络安全研究创新大楼A-103报告厅
+  address_en: Auditorium A-103, Cybersecurity Research Innovation Building, Xidian University (Chang'an Campus)
+  city_zh: 西安市
+  city_en: Xi'an
+  status: ongoing
+  format: offline
+  series: meetup

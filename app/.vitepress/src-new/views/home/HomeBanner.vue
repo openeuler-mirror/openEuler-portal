@@ -8,8 +8,9 @@ import {
 import { computed, ref } from 'vue';
 
 import { useLocale } from '~@/composables/useLocale';
+import { foldI18n } from '~@/shared/content';
 
-import banner from '~@/data/home/banner';
+import homeContent from '#content/home';
 import { useScreen } from '~@/composables/useScreen';
 
 // TODO:风格切换代码待整改
@@ -26,10 +27,10 @@ const { locale } = useLocale();
 const { isPhone, isPad, gtPad } = useScreen();
 
 const bannerInfo = computed(() => {
-  const info = banner[locale.value as 'zh' | 'en'];
+  const info = foldI18n(homeContent.banner, locale.value)
+    .filter(item => !item.locale || item.locale.split(',').includes(locale.value));
   
   return info.map(item => {
-    // 处理主题
     let themeInfo;
     if (item.light && isLight.value) {
       themeInfo = item.light;
@@ -37,7 +38,6 @@ const bannerInfo = computed(() => {
       themeInfo = item.dark;
     }
 
-    // 创建新对象，避免污染原始数据
     const newItem = { ...item };
     
     if (themeInfo) {
@@ -46,7 +46,6 @@ const bannerInfo = computed(() => {
       newItem.withStickyBg = true;
     }
 
-    // 处理响应式图片
     if (gtPad.value) {
       newItem.bg = newItem.bg_pc || item.bg_pc;
     } else if (isPad.value) {
@@ -123,19 +122,7 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
               </div>
               <!-- 副标题 -->
               <div class="banner-subtitle" v-if="info.subtitle">{{ info.subtitle }}</div>
-              <div
-                class="banner-text"
-                v-if="info.bg_text"
-                :style="{
-                  backgroundImage: `url(${info.bg_text})`,
-                  '--pc-width': info.pc_text_width,
-                  '--pc-height': info.pc_text_height,
-                  '--pad-width': info.pad_text_width,
-                  '--pad-height': info.pad_text_height,
-                  '--padv-width': info.padv_text_width,
-                  '--padv-height': info.padv_text_height,
-                }"
-              ></div>
+
               <!-- 操作按钮 -->
               <div v-if="info.btn" class="banner-opts" v-analytics.bubble="{ target: info.href }">
                 <OButton
@@ -272,24 +259,6 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
   @include h2;
 }
 
-.banner-text {
-  height: var(--pc-height, 90px);
-  width: var(--pc-width, 426px);
-  --d: 10px;
-
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  @include respond-to('pad_h') {
-    height: var(--pad-height, 60px);
-    width: var(--pad-width, 282px);
-  }
-
-  @include respond-to('pad_v') {
-    height: var(--padv-height, 100px);
-    width: var(--padv-width, 320px);
-  }
-}
 
 .banner-opts {
   margin-top: 24px;
@@ -312,9 +281,6 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
     animation: fade-up 400ms ease-in;
   }
   .banner-subtitle {
-    animation: fade-up 400ms ease-in;
-  }
-  .banner-text {
     animation: fade-up 400ms ease-in;
   }
   .banner-opts {

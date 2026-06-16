@@ -21,11 +21,8 @@ import IconCollege from '~icons/event/icon-college.svg';
 import IconRelease from '~icons/event/icon-release.svg';
 
 import activityContent from '#content/activity';
+import { foldI18n } from '~@/shared/content';
 import { applyData } from '~@/data/event/apply';
-
-const _plan = activityContent.plan as any;
-const months: string[] = _plan.months;
-const yearPlanData = _plan.year_plan;
 
 const ICON_MAP: Record<string, unknown> = {
   opensource: IconOpensource,
@@ -44,6 +41,8 @@ const { lePadV } = useScreen();
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 
+const MONTH_LABELS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 const activeNames = ref([
   'opensource',
   'ecology',
@@ -53,13 +52,22 @@ const activeNames = ref([
 ]);
 
 const yearPlan = computed(() => {
-  const plan = yearPlanData[locale.value];
-  if (!plan) return plan;
-  const result: Record<string, unknown> = {};
-  for (const [key, val] of Object.entries(plan as Record<string, any>)) {
-    result[key] = { ...val, icon: ICON_MAP[(val as any).icon] ?? (val as any).icon };
-  }
-  return result;
+  const plan = foldI18n(activityContent.plan, locale.value);
+  return plan.map((cat) => {
+    const monthSlots = Array.from({ length: 12 }, () => ({ events: [] as any[] }));
+    if (cat.id !== 'college' && cat.events) {
+      for (const ev of cat.events) {
+        if (ev.month != null) {
+          monthSlots[ev.month - 1].events.push(ev);
+        }
+      }
+    }
+    return {
+      ...cat,
+      icon: ICON_MAP[cat.icon] ?? cat.icon,
+      month_slots: monthSlots,
+    };
+  });
 });
 
 const applySteps = computed(() => (applyData[locale.value] ?? []) as any[]);
@@ -88,7 +96,7 @@ watch(
         class="months-box"
         :class="[isDark ? 'months-box-dark' : '']"
       >
-        <OCol v-for="month in months" :key="month" class="month">
+        <OCol v-for="month in MONTH_LABELS" :key="month" class="month">
           {{ month }}
         </OCol>
       </ORow>
@@ -123,32 +131,32 @@ watch(
             :class="[`content-${item.id}`, isDark ? 'content-box-dark' : '']"
           >
             <div
-              v-for="(event, e) in item.events"
+              v-for="(slot, e) in item.month_slots"
               :key="e"
               class="item-month"
-              :class="{ 'item-divider': e !== 0, 'item-none': !event.actives }"
+              :class="{ 'item-divider': e !== 0, 'item-none': !slot.events.length }"
             >
-              <ODivider v-if="lePadV && event.actives" class="divider-mb" />
-              <P v-if="lePadV && event.actives" class="month-mb">
-                {{ months[e] }}
+              <ODivider v-if="lePadV && slot.events.length" class="divider-mb" />
+              <P v-if="lePadV && slot.events.length" class="month-mb">
+                {{ MONTH_LABELS[e] }}
               </P>
               <div
-                v-for="(it, j) in event.actives"
+                v-for="(it, j) in slot.events"
                 :key="j"
                 class="event-box"
-                :class="{ 'event-hover': it.href }"
+                :class="{ 'event-hover': it.link }"
               >
-                <template v-if="it.href">
+                <template v-if="it.link">
                   <OLink
                     v-if="lePadV"
                     color="primary"
                     variant="text"
                     class="active-name"
-                    :class="{ 'active-name-link': it.href }"
-                    :href="it.href"
+                    :class="{ 'active-name-link': it.link }"
+                    :href="it.link"
                     target="_blank"
                   >
-                    {{ it.activeName }}
+                    {{ it.name }}
                   </OLink>
                   <p class="location">{{ it.location }}</p>
                   <OLink
@@ -156,16 +164,16 @@ watch(
                     color="primary"
                     variant="text"
                     class="active-name"
-                    :href="it.href"
+                    :href="it.link"
                     target="_blank"
                   >
-                    {{ it.activeName }}
+                    {{ it.name }}
                   </OLink>
                 </template>
                 <template v-else>
-                  <p v-if="lePadV" class="active-name">{{ it.activeName }}</p>
+                  <p v-if="lePadV" class="active-name">{{ it.name }}</p>
                   <p class="location">{{ it.location }}</p>
-                  <p v-if="!lePadV" class="active-name">{{ it.activeName }}</p>
+                  <p v-if="!lePadV" class="active-name">{{ it.name }}</p>
                 </template>
               </div>
             </div>
@@ -176,18 +184,18 @@ watch(
             :class="[`content-${item.id}`, isDark ? 'content-box-dark' : '']"
           >
             <div
-              v-for="(colact, c) in item.actives"
+              v-for="(colact, c) in item.events"
               :key="c"
               class="collegee-item"
             >
               <div
                 class="item-content"
                 :class="[
-                  `start${colact.startTime}`,
+                  `start${colact.start_month}`,
                   `duration${colact.duration}`,
                 ]"
               >
-                <p>{{ colact.activeName }}</p>
+                <p>{{ colact.name }}</p>
               </div>
             </div>
             <div class="collegee-line">
