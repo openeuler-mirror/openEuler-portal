@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted, watch, nextTick, computed } from 'vue';
+import { onMounted, onUnmounted, watch, nextTick, computed } from 'vue';
 import { useRouter } from 'vitepress';
 
 import { getUrlParam } from '@/shared/utils';
@@ -10,6 +10,32 @@ import MarkdownRender from '@/components/MarkdownRender.vue';
 import OeepAnchor from './OeepAnchor.vue';
 
 const router = useRouter();
+
+const CANONICAL_OEEP_MAP: Record<string, string> = {
+  'oEEP-0025': '/zh/community/aigc/',
+};
+
+const canonicalId = 'oeep-canonical-link';
+
+function updateCanonical() {
+  const name = getUrlParam('name') || '';
+  const key = Object.keys(CANONICAL_OEEP_MAP).find((k) => name.includes(k));
+  const existing = document.getElementById(canonicalId);
+  if (!key) {
+    if (existing) existing.remove();
+    return;
+  }
+  const href = `${window.location.origin}${CANONICAL_OEEP_MAP[key]}`;
+  if (existing) {
+    existing.setAttribute('href', href);
+  } else {
+    const link = document.createElement('link');
+    link.id = canonicalId;
+    link.rel = 'canonical';
+    link.href = href;
+    document.head.appendChild(link);
+  }
+}
 
 const markdownData = computed(() => {
   return useOeep().markdownData;
@@ -39,24 +65,11 @@ function handleGo(url: string | null) {
   router.go(url);
   nextTick(() => {
     useOeep().setMarkDownData();
+    updateCanonical();
   });
 }
 
-const CANONICAL_OEEP_MAP: Record<string, string> = {
-  'oEEP-0025': '/zh/community/aigc/',
-};
-
-function updateCanonical() {
-  const link = document.querySelector('link[rel="canonical"]');
-  const name = getUrlParam('name');
-  if (!link) return;
-  if (name && CANONICAL_OEEP_MAP[name]) {
-    link.setAttribute('href', `${window.location.origin}${CANONICAL_OEEP_MAP[name]}`);
-  } else if (name) {
-    link.setAttribute('href', `${window.location.origin}${window.location.pathname}?name=${encodeURIComponent(name)}`);
-  }
-}
-
+// fix 线上watch 不触发问题
 window.onpopstate = function () {
   nextTick(() => {
     useOeep().setMarkDownData();
@@ -73,10 +86,15 @@ const breadTitle = () => {
 
 onMounted(() => {
   useOeep().setMarkDownData();
+  updateCanonical();
   nextTick(() => {
     openSelf();
-    updateCanonical();
   });
+});
+
+onUnmounted(() => {
+  const existing = document.getElementById(canonicalId);
+  if (existing) existing.remove();
 });
 
 watch(
@@ -84,7 +102,6 @@ watch(
   () => {
     nextTick(() => {
       openSelf();
-      updateCanonical();
     });
   }
 );
