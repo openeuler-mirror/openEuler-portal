@@ -91,11 +91,13 @@ const handleNodeClick = (node: any) => {
           v-if="item && item.children && item.children.length"
           :info="item"
           :active-id="activeId"
+          :base-path="`/${lang}/migration/guidance/`"
           @item-click="handleItemClick"
         ></DocSideBarMenu>
-        <p
+        <a
           v-else
-          class="sidebar-title"
+          :href="item.link === 'migration' ? `/${lang}/migration/` : `/${lang}/migration/${item.link}/`"
+          class="sidebar-title sidebar-link"
           :class="[
             { active: item.link === activeId },
             { 'migration-title': index === 0 },
@@ -103,7 +105,7 @@ const handleNodeClick = (node: any) => {
           @click="handleTitleClick(item.link)"
         >
           {{ item.label }}
-        </p>
+        </a>
       </template>
     </div>
   </DocSideBar>
@@ -329,6 +331,11 @@ const handleNodeClick = (node: any) => {
 
   &.active {
     color: #feb32a;
+  }
+
+  &.sidebar-link {
+    display: block;
+    text-decoration: none;
   }
 }
 

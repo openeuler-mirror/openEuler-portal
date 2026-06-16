@@ -99,16 +99,18 @@ const handleNodeClick = (node: any) => {
         v-if="item && item.children && item.children.length"
         :info="item"
         :active-id="activeId"
+        :base-path="`/${lang}/wiki/`"
         @item-click="handleItemClick"
       ></DocSideBarMenu>
-      <p
+      <a
         v-else
-        class="sidebar-title"
+        :href="`/${lang}/wiki/${item.link}/`"
+        class="sidebar-title sidebar-link"
         :class="[{ active: item.link === activeId }]"
         @click="handleItemClick(item.link)"
       >
         {{ item.label }}
-      </p>
+      </a>
     </template>
   </DocSideBar>
 
@@ -277,6 +279,11 @@ const handleNodeClick = (node: any) => {
 
   &.active {
     color: #feb32a;
+  }
+
+  &.sidebar-link {
+    display: block;
+    text-decoration: none;
   }
 }
 

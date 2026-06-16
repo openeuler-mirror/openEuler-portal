@@ -166,6 +166,10 @@ export default [
     lang: ['zh'],
   },
   {
+    name: 'meeting-system',
+    lang: ['zh'],
+  },
+  {
     name: 'aigc',
     lang: ['zh'],
   },
