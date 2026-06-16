@@ -1,15 +1,15 @@
- ---
- 	 title: openEuler 生态：DeepSeek-V4-Flash 部署实践
- 	 category: blog 
- 	 date: 2026-06-08
- 	 tags:
- 	     - openEuler
- 	     - vLLM Ascend
- 	     - DeepSeek-V4
- 	 archives: 2026-06-08
- 	 author:  openEuler
- 	 summary: 本文记录在 openEuler 24.03 LTS SP3 环境下，基于 昇腾 Atlas 800 A3（8 卡） 部署 DeepSeek-V4-Flash-w8a8-mtp 量化模型的完整实践，涵盖 openEuler 生态中的 vLLM Ascend 推理引擎、官方容器镜像与 ModelScope 模型托管等组件的协同使用，并给出可复现的启动命令与测试数据。
- 	 ---
+---
+title: openEuler 生态：DeepSeek-V4-Flash 部署实践
+category: blog 
+date: 2026-06-08
+tags:
+    - openEuler
+    - vLLM Ascend
+    - DeepSeek-V4
+archives: 2026-06-08
+author:  openEuler
+summary: 本文记录在 openEuler 24.03 LTS SP3 环境下，基于 昇腾 Atlas 800 A3（8 卡） 部署 DeepSeek-V4-Flash-w8a8-mtp 量化模型的完整实践，涵盖 openEuler 生态中的 vLLM Ascend 推理引擎、官方容器镜像与 ModelScope 模型托管等组件的协同使用，并给出可复现的启动命令与测试数据。
+---
 
 # openEuler 生态：DeepSeek-V4-Flash 部署实践
 
