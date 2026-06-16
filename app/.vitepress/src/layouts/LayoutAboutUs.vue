@@ -169,16 +169,18 @@ watch(
             v-if="item && item.children && item.children.length"
             :info="item"
             :active-id="activeId"
+            :base-path="`/${lang}/community/`"
             @item-click="handleItemClick"
           ></DocSideBarMenu>
-          <p
+          <a
             v-else
-            class="sidebar-title"
+            :href="`/${lang}/community/${item.link}/`"
+            class="sidebar-title sidebar-link"
             :class="[{ active: item.link === activeId }]"
             @click="handleItemClick(item.link)"
           >
             {{ item.label }}
-          </p>
+          </a>
         </template>
       </div>
     </DocSideBar>
@@ -358,6 +360,11 @@ watch(
   &.active {
     color: #feb32a;
   }
+
+  &.sidebar-link {
+    display: block;
+    text-decoration: none;
+  }
 }
 
 .about-title {
@@ -372,6 +379,7 @@ watch(
   padding: 64px;
   margin-left: 300px;
   flex: 1;
+  min-width: 0;
   background-color: var(--o-color-fill1);
 
   @media screen and (max-width: 1280px) {
@@ -588,6 +596,8 @@ watch(
   }
   div[class*='language-'] {
     position: relative;
+    max-width: 100%;
+    overflow-x: auto;
     pre {
       background-color: #272822;
     }

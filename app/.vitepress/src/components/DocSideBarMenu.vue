@@ -11,6 +11,10 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  basePath: {
+    type: String,
+    default: '/',
+  },
 });
 
 const isActive = computed(() => {
@@ -39,8 +43,12 @@ const toggleVisibleSecond = (flag: boolean | undefined) => {
     isOpenSecond.value = flag;
   }
 };
-// 导航点击事件
-const clickMenuItem = (id: string) => {
+
+const buildHref = (link: string) => {
+  return `${props.basePath}${link}/`;
+};
+
+const onItemClick = (id: string) => {
   emit('item-click', id);
 };
 </script>
@@ -61,32 +69,47 @@ const clickMenuItem = (id: string) => {
           v-for="item in info.children"
           :key="item.link"
           class="menu-item"
-          :class="{ active: activeId.includes(item.link), open: isOpenSecond }"
-          @click.stop="clickMenuItem(item.link)"
+          :class="{ active: activeId.includes(item.link), open: isOpenSecond && item.children }"
         >
+          <a
+            v-if="!item.children"
+            :href="buildHref(item.link)"
+            class="menu-link"
+            :class="{ active: activeId.includes(item.link) }"
+            @click="onItemClick(item.link)"
+          >
+            {{ item.label }}
+          </a>
           <div
+            v-else
             :class="{
               open: isOpenSecond,
               active: isActive,
               secondary: item.children,
             }"
-            @click="item.children ? toggleVisibleSecond(!isOpenSecond) : ''"
+            @click="toggleVisibleSecond(!isOpenSecond)"
           >
             {{ item.label }}
-            <OIcon v-if="item.children" class="menu-title-icon">
-              <IconArrowTraingleRight
-            /></OIcon>
+            <OIcon class="menu-title-icon">
+              <IconArrowTraingleRight />
+            </OIcon>
           </div>
 
-          <ul class="menu-list">
+          <ul v-if="item.children" class="menu-list">
             <li
               v-for="subItem in item.children"
               :key="subItem.link"
               class="menu-item"
               :class="{ active: activeId[1] === subItem.link }"
-              @click.stop="clickMenuItem(subItem.link)"
             >
-              {{ subItem.label }}
+              <a
+                :href="buildHref(subItem.link)"
+                class="menu-link"
+                :class="{ active: activeId[1] === subItem.link }"
+                @click="onItemClick(subItem.link)"
+              >
+                {{ subItem.label }}
+              </a>
             </li>
           </ul>
         </li>
@@ -116,7 +139,6 @@ const clickMenuItem = (id: string) => {
       top: 0;
       width: calc(100% - 80px);
       height: 1px;
-      // background-color: #e5e5e5;
       background-color: #ffffff;
       opacity: 0.1;
       content: '';
@@ -155,7 +177,6 @@ const clickMenuItem = (id: string) => {
     .menu-item {
       cursor: pointer;
       height: min-content;
-      // overflow-y: hidden;
       align-items: center;
       font-size: var(--e-font-size-text);
       line-height: var(--e-line-height-text);
@@ -189,9 +210,26 @@ const clickMenuItem = (id: string) => {
         color: var(--e-color-yellow5);
       }
     }
+
+    .menu-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--e-color-yellow5);
+      }
+
+      &.active {
+        color: var(--e-color-yellow5);
+      }
+    }
+
     .open {
       .menu-list {
         position: relative;
+        z-index: auto;
         transform: scaleY(1);
       }
       .menu-title-icon {
