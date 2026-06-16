@@ -37,16 +37,30 @@ function handleGo(url: string | null) {
     return false;
   }
   router.go(url);
-  // fix 线上watch 不触发问题
   nextTick(() => {
     useOeep().setMarkDownData();
   });
 }
 
-// fix 线上watch 不触发问题
+const CANONICAL_OEEP_MAP: Record<string, string> = {
+  'oEEP-0025': '/zh/community/aigc/',
+};
+
+function updateCanonical() {
+  const link = document.querySelector('link[rel="canonical"]');
+  const name = getUrlParam('name');
+  if (!link) return;
+  if (name && CANONICAL_OEEP_MAP[name]) {
+    link.setAttribute('href', `${window.location.origin}${CANONICAL_OEEP_MAP[name]}`);
+  } else if (name) {
+    link.setAttribute('href', `${window.location.origin}${window.location.pathname}?name=${encodeURIComponent(name)}`);
+  }
+}
+
 window.onpopstate = function () {
   nextTick(() => {
     useOeep().setMarkDownData();
+    updateCanonical();
   });
 };
 
@@ -61,6 +75,7 @@ onMounted(() => {
   useOeep().setMarkDownData();
   nextTick(() => {
     openSelf();
+    updateCanonical();
   });
 });
 
@@ -69,6 +84,7 @@ watch(
   () => {
     nextTick(() => {
       openSelf();
+      updateCanonical();
     });
   }
 );
