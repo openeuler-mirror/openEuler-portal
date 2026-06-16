@@ -77,7 +77,7 @@ const setTdk = (pageData: PageData, pagePath: string) => {
 
 function readEnvVar(key: string): string | undefined {
   // eslint-disable-next-line
-  const envFile = resolve(process.cwd(), '.env.production');
+  const envFile = resolve(__dirname, '../.env.production');
   if (!existsSync(envFile)) return undefined;
   const match = readFileSync(envFile, 'utf-8').match(
     new RegExp(`^${key}\\s*=\\s*(.+)$`, 'm')
