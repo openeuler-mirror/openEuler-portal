@@ -336,9 +336,9 @@ export default [
             url: '/zh/community/honor/',
           },
           {
-            title: 'openEuler生成式AI工具使用与开源贡献政策',
+            title: '生成式AI工具使用与开源贡献政策',
             description: 'openEuler社区生成式AI工具使用与开源贡献政策，涵盖开放策略、适用范围、法律合规、Agent规范、禁止行为、贡献者责任及审查规则。',
-            url: '/zh/community/aigc/',
+            url: '/zh/community/ai-coding-assistants/',
           },
           {
             title: '城市用户组',

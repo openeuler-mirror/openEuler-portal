@@ -6,24 +6,24 @@ Canonical URL **必须走数据驱动路径**，禁止在 `config.ts transformPa
 
 ### 正确做法
 
-在 `.geo/tdks/{locale}/{path}/index.json` 中新增可选 `canonical` 字段（值为相对路径，如 `/zh/community/aigc/`）。`setTdk` 读取该字段后，自动向 `frontmatter.head` 注入 `<link rel="canonical" href="{currentHostname}{canonical}">`。
+在 `.geo/tdks/{locale}/{path}/index.json` 中新增可选 `canonical` 字段（值为相对路径，如 `/zh/community/ai-coding-assistants/`）。`setTdk` 读取该字段后，自动向 `frontmatter.head` 注入 `<link rel="canonical" href="{currentHostname}{canonical}">`。
 
 后续任何页面需要 canonical，只需在对应的 TDK JSON 中加 `canonical` 字段，无需改 `config.ts`。
 
 ```json
-// ✅ .geo/tdks/zh/community/aigc/index.json
+// ✅ .geo/tdks/zh/community/ai-coding-assistants/index.json
 {
   "title": "openEuler社区AI辅助贡献指南",
   "description": "面向openEuler社区贡献者的AI辅助贡献实践指引……",
-  "canonical": "/zh/community/aigc/"
+  "canonical": "/zh/community/ai-coding-assistants/"
 }
 ```
 
 ```typescript
 // ❌ 禁止在 config.ts transformPageData 中硬编码页级 canonical
-if (lookupKey === 'zh/community/aigc') {
+if (lookupKey === 'zh/community/ai-coding-assistants') {
   pageData.frontmatter.head.push([
-    'link', { rel: 'canonical', href: `${currentHostname}/zh/community/aigc/` }
+    'link', { rel: 'canonical', href: `${currentHostname}/zh/community/ai-coding-assistants/` }
   ]);
 }
 ```
@@ -46,12 +46,12 @@ TDK / canonical / JSONLD 中凡涉及完整 URL 的字段，域名部分**必须
 ```json
 // ✅ JSONLD url 使用 openeuler.org 占位符（构建时自动替换）
 {
-  "url": "https://www.openeuler.org/zh/community/aigc/"
+  "url": "https://www.openeuler.org/zh/community/ai-coding-assistants/"
 }
 
 // ❌ 禁止硬编码特定生产域名
 {
-  "url": "https://www.openeuler.openatom.cn/zh/community/aigc/"
+  "url": "https://www.openeuler.openatom.cn/zh/community/ai-coding-assistants/"
 }
 ```
 
