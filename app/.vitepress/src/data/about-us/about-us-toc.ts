@@ -26,7 +26,7 @@ export default {
         },
         {
           label: '生成式AI工具使用与开源贡献政策',
-          link: 'aigc',
+          link: 'ai-coding-assistants',
         },
         {
           label: '运作制度',

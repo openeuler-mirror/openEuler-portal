@@ -1,9 +1,9 @@
 ---
-title: 生成式AI工具使用与开源贡献政策
+title: openEuler社区生成式AI工具使用与开源贡献政策
 category: about-us
 ---
 
-# 生成式AI工具使用与开源贡献政策
+# openEuler社区生成式AI工具使用与开源贡献政策
 
 ## 1. 开放策略 (Openness Strategy)
 

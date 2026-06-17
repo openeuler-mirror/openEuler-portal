@@ -1,0 +1,6 @@
+{
+  "title": "openEuler社区生成式AI工具使用与开源贡献政策 | 社区规范",
+  "description": "openEuler社区关于使用生成式AI与智能化Agent辅助开源贡献的政策规范。坚持开放导向、开发者最终负责与透明可追溯三大原则，要求AI辅助贡献通过Co-Authored-By与Agent平台/模型/Prompt摘要等元数据完整披露，遵循CLA法律合规框架、Agent规范Prompt、禁止行为清单、贡献者责任与审查合入规则。",
+  "keywords": "openEuler, 生成式AI, 智能化Agent, 开源贡献政策, Co-Authored-By, 元数据披露, CLA, Agent规范Prompt",
+  "canonical": "/zh/community/ai-coding-assistants/"
+}

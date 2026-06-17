@@ -12,7 +12,7 @@ import OeepAnchor from './OeepAnchor.vue';
 const router = useRouter();
 
 const CANONICAL_OEEP_MAP: Record<string, string> = {
-  'oEEP-0025': '/zh/community/aigc/',
+  'oEEP-0025': '/zh/community/ai-coding-assistants/',
 };
 
 const canonicalId = 'oeep-canonical-link';

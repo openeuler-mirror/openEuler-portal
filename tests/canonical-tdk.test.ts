@@ -25,8 +25,8 @@ function simulateSetTdkCanonical(
   return head.length > 0 ? head : null;
 }
 
-describe('TDK canonical 字段 — aigc 页面', () => {
-  const tdk = readTdkJson('zh', 'community/aigc');
+describe('TDK canonical 字段 — ai-coding-assistants 页面', () => {
+  const tdk = readTdkJson('zh', 'community/ai-coding-assistants');
 
   it('TDK 配置文件存在', () => {
     expect(tdk).not.toBeNull();
@@ -40,8 +40,8 @@ describe('TDK canonical 字段 — aigc 页面', () => {
     expect(tdk!.canonical).toMatch(/^\//);
   });
 
-  it('canonical 字段值为 /zh/community/aigc/', () => {
-    expect(tdk!.canonical).toBe('/zh/community/aigc/');
+  it('canonical 字段值为 /zh/community/ai-coding-assistants/', () => {
+    expect(tdk!.canonical).toBe('/zh/community/ai-coding-assistants/');
   });
 
   it('canonical 以斜杠结尾（避免重复路径）', () => {
@@ -49,7 +49,7 @@ describe('TDK canonical 字段 — aigc 页面', () => {
   });
 
   it('canonical 路径与页面 URL 路径一致', () => {
-    expect(tdk!.canonical).toContain('community/aigc');
+    expect(tdk!.canonical).toContain('community/ai-coding-assistants');
   });
 });
 
@@ -84,14 +84,14 @@ describe('TDK canonical 字段 — oEEP 页面', () => {
 describe('setTdk canonical 注入逻辑 — 模拟验证', () => {
   const defaultHostname = 'https://www.openeuler.org';
 
-  it('aigc TDK 有 canonical 时，应注入 link 标签到 frontmatter.head', () => {
-    const tdk = readTdkJson('zh', 'community/aigc');
+  it('ai-coding-assistants TDK 有 canonical 时，应注入 link 标签到 frontmatter.head', () => {
+    const tdk = readTdkJson('zh', 'community/ai-coding-assistants');
     const result = simulateSetTdkCanonical(tdk, defaultHostname);
     expect(result).not.toBeNull();
     expect(result!.length).toBe(1);
     expect(result![0][0]).toBe('link');
     expect(result![0][1].rel).toBe('canonical');
-    expect(result![0][1].href).toBe(`${defaultHostname}/zh/community/aigc/`);
+    expect(result![0][1].href).toBe(`${defaultHostname}/zh/community/ai-coding-assistants/`);
   });
 
   it('oEEP TDK 有 canonical 时，应注入 link 标签', () => {
@@ -102,10 +102,10 @@ describe('setTdk canonical 注入逻辑 — 模拟验证', () => {
   });
 
   it('canonical href 使用 currentHostname 动态拼接（域名适配机制）', () => {
-    const tdk = readTdkJson('zh', 'community/aigc');
+    const tdk = readTdkJson('zh', 'community/ai-coding-assistants');
     const customHostname = 'https://test.openeuler.org';
     const result = simulateSetTdkCanonical(tdk, customHostname);
-    expect(result![0][1].href).toBe(`${customHostname}/zh/community/aigc/`);
+    expect(result![0][1].href).toBe(`${customHostname}/zh/community/ai-coding-assistants/`);
     expect(result![0][1].href).not.toContain('www.openeuler.org');
   });
 
@@ -145,7 +145,7 @@ describe('updateCanonical — DOM 更新逻辑验证', () => {
   };
 
   const CANONICAL_OEEP_MAP: Record<string, string> = {
-    'oEEP-0025': '/zh/community/aigc/',
+    'oEEP-0025': '/zh/community/ai-coding-assistants/',
   };
 
   function runUpdateCanonical() {
@@ -175,14 +175,14 @@ describe('updateCanonical — DOM 更新逻辑验证', () => {
     window.history.pushState({}, '', '/');
   });
 
-  it('页面有 canonical link 且 URL 含 ?name=oEEP-0025 时，通过 CANONICAL_OEEP_MAP 映射至权威路径 /zh/community/aigc/', () => {
+  it('页面有 canonical link 且 URL 含 ?name=oEEP-0025 时，通过 CANONICAL_OEEP_MAP 映射至权威路径 /zh/community/ai-coding-assistants/', () => {
     document.head.innerHTML = '<link rel="canonical" href="https://www.openeuler.org/zh/oEEP/" />';
     window.history.pushState({}, '', '/zh/oEEP/?name=oEEP-0025');
     runUpdateCanonical();
     const link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     expect(link).not.toBeNull();
     expect(link.getAttribute('href')).toBe(
-      `${window.location.origin}/zh/community/aigc/`
+      `${window.location.origin}/zh/community/ai-coding-assistants/`
     );
   });
 
@@ -193,7 +193,7 @@ describe('updateCanonical — DOM 更新逻辑验证', () => {
     const link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     expect(link.getAttribute('href')).toContain('name=');
     expect(link.getAttribute('href')).toContain('oEEP-0025');
-    expect(link.getAttribute('href')).not.toContain('/zh/community/aigc/');
+    expect(link.getAttribute('href')).not.toContain('/zh/community/ai-coding-assistants/');
   });
 
   it('URL 无 ?name= 参数时，不更新 canonical href（保持 base canonical）', () => {
@@ -211,7 +211,7 @@ describe('updateCanonical — DOM 更新逻辑验证', () => {
     expect(link).toBeNull();
   });
 
-  it('从无 query 导航到有 query(oEEP-0025) 后，canonical 应映射至权威路径 /zh/community/aigc/', () => {
+  it('从无 query 导航到有 query(oEEP-0025) 后，canonical 应映射至权威路径 /zh/community/ai-coding-assistants/', () => {
     document.head.innerHTML = '<link rel="canonical" href="https://www.openeuler.org/zh/oEEP/" />';
     window.history.pushState({}, '', '/zh/oEEP/');
     runUpdateCanonical();
@@ -220,7 +220,7 @@ describe('updateCanonical — DOM 更新逻辑验证', () => {
 
     window.history.pushState({}, '', '/zh/oEEP/?name=oEEP-0025');
     runUpdateCanonical();
-    expect(link.getAttribute('href')).toBe(`${window.location.origin}/zh/community/aigc/`);
+    expect(link.getAttribute('href')).toBe(`${window.location.origin}/zh/community/ai-coding-assistants/`);
   });
 
   it('从无 query 导航到有 query(oEEP-0001，非映射项) 后，canonical href 包含 query 参数', () => {
@@ -236,19 +236,19 @@ describe('updateCanonical — DOM 更新逻辑验证', () => {
   });
 });
 
-describe('aigc 页面 canonical — 静态页面无需 query 参数更新', () => {
-  it('aigc canonical href 不含 query 参数', () => {
-    const tdk = readTdkJson('zh', 'community/aigc');
+describe('ai-coding-assistants 页面 canonical — 静态页面无需 query 参数更新', () => {
+  it('ai-coding-assistants canonical href 不含 query 参数', () => {
+    const tdk = readTdkJson('zh', 'community/ai-coding-assistants');
     const href = `https://www.openeuler.org${tdk!.canonical}`;
     expect(href).not.toContain('?');
     expect(href).not.toContain('name=');
   });
 
-  it('aigc canonical href 为完整绝对路径格式', () => {
-    const tdk = readTdkJson('zh', 'community/aigc');
+  it('ai-coding-assistants canonical href 为完整绝对路径格式', () => {
+    const tdk = readTdkJson('zh', 'community/ai-coding-assistants');
     const href = `https://www.openeuler.org${tdk!.canonical}`;
     expect(href).toMatch(/^https:\/\/[^/]+\/.*$/);
-    expect(href).toBe('https://www.openeuler.org/zh/community/aigc/');
+    expect(href).toBe('https://www.openeuler.org/zh/community/ai-coding-assistants/');
   });
 });
 
@@ -269,25 +269,25 @@ describe('向后兼容 — 其他页面 TDK 无 canonical 不受影响', () => {
   }
 });
 
-describe('CANONICAL_OEEP_MAP — oEEP-0025 引流至权威路径 /zh/community/aigc/', () => {
+describe('CANONICAL_OEEP_MAP — oEEP-0025 引流至权威路径 /zh/community/ai-coding-assistants/', () => {
   const CANONICAL_OEEP_MAP: Record<string, string> = {
-    'oEEP-0025': '/zh/community/aigc/',
+    'oEEP-0025': '/zh/community/ai-coding-assistants/',
   };
 
   it('CANONICAL_OEEP_MAP 包含 oEEP-0025 键', () => {
     expect(CANONICAL_OEEP_MAP).toHaveProperty('oEEP-0025');
   });
 
-  it('oEEP-0025 映射至 /zh/community/aigc/', () => {
-    expect(CANONICAL_OEEP_MAP['oEEP-0025']).toBe('/zh/community/aigc/');
+  it('oEEP-0025 映射至 /zh/community/ai-coding-assistants/', () => {
+    expect(CANONICAL_OEEP_MAP['oEEP-0025']).toBe('/zh/community/ai-coding-assistants/');
   });
 
   it('映射目标路径以斜杠结尾', () => {
     expect(CANONICAL_OEEP_MAP['oEEP-0025'].endsWith('/')).toBe(true);
   });
 
-  it('映射目标与 aigc 页面 TDK canonical 一致', () => {
-    const tdk = readTdkJson('zh', 'community/aigc');
+  it('映射目标与 ai-coding-assistants 页面 TDK canonical 一致', () => {
+    const tdk = readTdkJson('zh', 'community/ai-coding-assistants');
     expect(CANONICAL_OEEP_MAP['oEEP-0025']).toBe(tdk!.canonical);
   });
 });

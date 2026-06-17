@@ -170,7 +170,7 @@ export default [
     lang: ['zh'],
   },
   {
-    name: 'aigc',
+    name: 'ai-coding-assistants',
     lang: ['zh'],
   },
   {
