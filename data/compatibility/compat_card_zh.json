@@ -30711,6 +30711,25 @@
     "chipModel": "JM1100",
     "item": "",
     "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "9999",
+    "deviceID": "4001",
+    "svID": "9999",
+    "ssID": "4001",
+    "architecture": "x86_64",
+    "os": "openEuler 24.03 LTS SP3",
+    "driverName": "metax",
+    "version": "3.8.30",
+    "type": "GPU",
+    "date": "2026/06/16",
+    "sha256": "261be4a8e6fb081e5603bda41b257620c636db27ca92fdaa14eadba91a83db75",
+    "driverSize": "525Kb",
+    "chipVendor": "MetaX",
+    "boardModel": "C500",
+    "chipModel": "C500",
+    "item": "",
+    "downloadLink": "https://www.metax-tech.com/prod.html?cid=107&id=21"
   }
 
 ]
