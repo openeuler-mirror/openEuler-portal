@@ -171,7 +171,7 @@ export default [
   },
   {
     name: 'ai-coding-assistants',
-    lang: ['zh'],
+    lang: ['zh', 'en'],
   },
   {
     name: 'member',

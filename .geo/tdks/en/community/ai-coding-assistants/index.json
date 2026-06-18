@@ -1,0 +1,6 @@
+{
+  "title": "openEuler Community Generative AI Use and Open Source Contribution Policy",
+  "description": "openEuler community policy on using generative AI and intelligent agents for open source contributions. Upholding three principles—openness-driven, developer ultimate accountability, and transparent traceability—requiring full metadata disclosure via Co-Authored-By and agent platform/model/Prompt summary, following CLA legal compliance framework, Agent Prompt specification, prohibited conduct list, contributor responsibilities, and review merge rules.",
+  "keywords": "openEuler, generative AI, intelligent agents, open source contribution policy, Co-Authored-By, metadata disclosure, CLA, Agent Prompt specification",
+  "canonical": "/en/community/ai-coding-assistants/"
+}

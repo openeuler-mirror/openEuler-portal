@@ -58,6 +58,10 @@ export default {
           label: 'Code of Conduct',
           link: 'conduct',
         },
+        {
+          label: 'Generative AI Use and Open Source Contribution Policy',
+          link: 'ai-coding-assistants',
+        },
       ],
     },
   ],

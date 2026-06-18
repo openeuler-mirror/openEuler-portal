@@ -16,6 +16,14 @@ const route = useRoute();
 const activeIndex = ref(0);
 const anchorList = ref();
 
+function anchorTitle(item: any): string {
+  const text = item.textContent
+    .replace(/^\d+(\.\d+)*\.\s*/, '')
+    .replace(/[[(（].*?[)）\]]/g, '')
+    .trim();
+  return text;
+}
+
 const throttleFnEvent = useThrottleFn(goAnchor, 300, true);
 
 function goAnchor() {
@@ -65,9 +73,7 @@ watch(
       class="anchor-link"
     >
       <div class="anchor-link-inner">
-        {{
-          item.id.split('-').filter((s: string) => /[\u4e00-\u9fff]/.test(s)).pop() || item.id
-        }}
+        {{ anchorTitle(item) }}
       </div>
     </a>
   </div>
