@@ -469,6 +469,9 @@ watch(
   h1 {
     margin-top: 0;
     text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   hr {
