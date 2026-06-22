@@ -1,7 +1,5 @@
 import type { HeadConfig, PageData, UserConfig } from 'vitepress';
 
-import { viteLlmsTxt } from './plugins/generateLLMsTxtNew';
-import LLMsTxtSections from './LLMsTxtSections';
 import viteLastModifiedPlugin from '@opendesign-plus/plugins/vite/generate-lastmod-changefreq';
 import sitemapItemTransformer from '@opendesign-plus/geo-scripts/vitepress-sitemap-transformer';
 import generateLLMsFull from '@opendesign-plus/geo-scripts/generate-llms-full';
@@ -238,11 +236,6 @@ const config: UserConfig = {
         ignoreDeps: ['**/shared/**', '**/utils/**', '**/composables/**', '**/i18n/**', '**/assets/**'],
         outputFile: join(geoDir, 'last-modified.json')
       }),
-      viteLlmsTxt({
-        title: 'openEuler | 开源社区',
-        description: 'openEuler是一个开源、免费的 Linux 发行版平台，通过开放的形式与全球的开发者共同构建一个开放、多元和架构包容的软件生态体系。',
-        sections: LLMsTxtSections
-      })
     ],
     ssr: {
       noExternal: ['@opendesign-plus/components', 'element-plus']

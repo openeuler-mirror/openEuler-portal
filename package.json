@@ -6,7 +6,7 @@
   "scripts": {
     "predev": "node scripts/sync-opendesign-skills.js",
     "dev": "vitepress dev app",
-    "build": "node scripts/check-git-shallow.js && vitepress build app",
+    "build": "node scripts/check-git-shallow.js && vitepress build app && node scripts/generate-llms-txt.js",
     "build:geo": "node scripts/check-git-shallow.js && vitepress build app --exclude=**/blog/**/*,**/news/**/*",
     "lint": "eslint \"app/.vitepress/src/**/*.{js,ts,vue,jsx,tsx}\"",
     "fix": "eslint --fix \"app/.vitepress/src/**/*.{js,ts,vue,jsx,tsx}\"",
