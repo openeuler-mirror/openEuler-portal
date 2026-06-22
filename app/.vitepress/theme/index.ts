@@ -5,12 +5,12 @@ import { SeoBox } from '@/components/seo-box';
 import 'aos/dist/aos.css';
 import '@/shared/styles/element-plus/index.scss';
 import '@/shared/styles/index.scss';
+import 'element-plus/theme-chalk/src/dark/css-vars.scss'
 //--------------------------------------
 import '@opensig/opendesign/es/theme/openeuler/index.scss';
 import '@opensig/opendesign-token/themes/e.light.token.css';
 import '@opensig/opendesign-token/themes/e.dark.token.css';
 import '@opendesign-plus/components/styles';
-import '@opendesign-plus-test/components/styles';
 import '~@/assets/style/theme/index.scss';
 import '~@/assets/style/theme/media.token.scss';
 import '~@/assets/style/markdown-new.scss';
@@ -27,7 +27,7 @@ import NotFound from '@/NotFound.vue';
 import { initOpenDesignAnalytics } from '@opendesign-plus/plugins/analytics';
 import { reporAnalytics } from '@/api/api-analytics';
 import { removeCustomCookie } from '@/shared/utils';
-import { createTheme } from '@opendesign-plus-test/composables';
+import { createTheme } from '@opendesign-plus/composables';
 
 import MarkdownLayout from '~@/components/markdown/MarkdownLayout.vue';
 

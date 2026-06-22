@@ -68,8 +68,8 @@ defineProps({
     font-weight: 500;
     @include h2;
   }
-  .more-gitee {
-    :deep(.o-link-label) {
+  :deep(.o-link) {
+    .o-link-label {
       display: flex;
       align-items: center;
       .o-icon {

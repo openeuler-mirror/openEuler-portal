@@ -32,7 +32,7 @@ import { hideNssRoutes } from './data/common/nss';
 import {
   OCookieNotice,
   OPlusConfigProvider,
-} from '@opendesign-plus-test/components';
+} from '@opendesign-plus/components';
 import { useCookieStore } from '~@/stores/common';
 import { tryLogin } from '@opendesign-plus/composables';
 import { queryPermission } from './api/api-login';
@@ -207,7 +207,7 @@ main {
   --layout-content-padding: 64px;
   --layout-header-height: 72px;
 
-  @include respond('<=laptop') {
+  @include respond('<=laptop_s') {
     --layout-content-max-width: 100%;
     --layout-content-padding: 40px;
   }

@@ -1,22 +1,17 @@
 <script setup lang="ts">
-import { onMounted, ref, watch, reactive, computed } from 'vue';
+import { onMounted, ref, watch, reactive } from 'vue';
 import {
   ORadioGroup,
   ORadio,
   OToggle,
   OInput,
   OIcon,
-  ORow,
-  OCol,
-  OCard,
-  OPagination,
-  OFigure,
-  OTag,
   OButton,
   ODivider,
   ODialog,
 } from '@opensig/opendesign';
-import { useRouter } from 'vitepress';
+
+import { OEventsList } from '@opendesign-plus/components';
 
 import AppSection from '~@/components/AppSection.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';
@@ -29,8 +24,6 @@ const EventSeries = new Map(EVENT_SERIES.map((s) => [s.value, { value: s.value, 
 const EventState = new Map(EVENT_STATUS.map((s) => [s.value, { value: s.value, label: { zh: s.label_zh, en: s.label_en } }]));
 
 import { useDebounceSearch } from '~@/composables/useDebounceSearch';
-
-import { changeTimeStamp } from '~@/utils/common';
 
 import IconSearch from '~icons/app-new/icon-header-search.svg';
 import IconDeveloperTag from '~icons/event/icon-developer-tag.svg';
@@ -50,7 +43,6 @@ interface OptionT {
 
 const { lePadV } = useScreen();
 const { t, isZh, locale } = useLocale();
-const router = useRouter();
 
 // -------------------- 活动系列 --------------------
 const seriesOptions = ref<OptionT[]>([]);
@@ -93,18 +85,10 @@ const clearCheckedState = (checked: boolean) => {
 };
 
 // -------------------- 搜索 input字段做防抖处理 -------------------
-const updataKeyword = (val: string) => {
+const searchValue = ref();
+const onInput = useDebounceSearch((val: string) => {
   params.keyword = val;
-};
-const debounceTextFn = useDebounceSearch(updataKeyword, 300);
-const debounceSearch = computed({
-  get() {
-    return params.keyword;
-  },
-  set(val) {
-    debounceTextFn(val as string);
-  },
-});
+}, 300);
 
 // -------------------- 列表数据 -------------------
 const params = reactive({
@@ -116,14 +100,26 @@ const params = reactive({
 });
 const total = ref(0);
 
-const COUNT_PER_PAGE = [12, 24, 36, 48];
-
 // 本月及以后最新活动列表
 const latestList = ref<any>([]);
 const currentList = ref<any>([]);
 
 const activityList = () => {
-  latestList.value = foldI18n(activityContent.events, locale.value).filter((item) => item.poster_image);
+  latestList.value = foldI18n(activityContent.events, locale.value).filter((item) => item.poster_image).map((act) => {
+    return {
+      ...act,
+      name: act.title,
+      link: act.review_url ? act.review_url : `/${locale.value}/interaction/event-list/detail/?id=${act.id}`,
+      startDate: act.start_date,
+      endDate: act.end_date,
+      tags: [
+        {
+          icon: IconDeveloperTag,
+          title: EventSeries.get(act?.series)?.label[locale.value]
+        }
+      ]
+    };
+  });
   const seriesList = latestList.value.filter((item) => {
     if (params.series) {
       return item.series === params.series;
@@ -159,9 +155,7 @@ watch(
   }
 );
 
-// -------------------- 分页 --------------------
-const onPaginationChange = (val: { page: number; pageSize: number }) => {
-  // 当 pageSize 变化时将page_num 置为1
+const search = (val: any) => {
   if (val.pageSize !== params.pageSize) {
     params.currentPage = 1;
   } else {
@@ -169,19 +163,6 @@ const onPaginationChange = (val: { page: number; pageSize: number }) => {
   }
   params.pageSize = val.pageSize;
   activityList();
-};
-
-// 精彩回顾下展示列表
-const goDetail = (item: { id: number; review_url?: string }) => {
-  if (item.review_url) {
-    window.open(item.review_url);
-  } else {
-    router.go(
-      '/' +
-        locale.value +
-        `/interaction/event-list/detail/?id=${item.id}`
-    );
-  }
 };
 
 // -------------------- 移动端 --------------------
@@ -203,159 +184,106 @@ const handleConfirm = () => {
 
 <template>
   <AppSection :title="t('eventOverview.list')" class="event-latest">
-    <div v-if="!lePadV" class="filter-card">
-      <div class="filter">
-        <p class="filter-title">{{ t('eventOverview.series') }}</p>
-        <ORadioGroup
-          v-model="params.series"
-          :style="{ gap: lePadV ? '4px 4px' : '16px 8px' }"
-        >
-          <ORadio
-            v-for="option in seriesOptions"
-            :key="option.value"
-            :value="option.value"
-          >
-            <template #radio="{ checked }">
-              <OToggle
-                @click="clearCheckedSeries(checked)"
-                :class="{ active: checked }"
-                :checked="checked"
-              >
-                {{ isZh ? option.label.zh : option.label.en }}
-              </OToggle>
-            </template>
-          </ORadio>
-        </ORadioGroup>
-      </div>
-      <div class="filter">
-        <p class="filter-title">{{ t('eventOverview.state') }}</p>
-        <ORadioGroup
-          v-model="params.state"
-          :style="{ gap: lePadV ? '4px 4px' : '16px 8px' }"
-        >
-          <ORadio
-            v-for="option in stateOptions"
-            :key="option.value"
-            :value="option.value"
-          >
-            <template #radio="{ checked }">
-              <OToggle
-                @click="clearCheckedState(checked)"
-                :class="{ active: checked }"
-                :checked="checked"
-              >
-                {{ isZh ? option.label.zh : option.label.en }}
-              </OToggle>
-            </template>
-          </ORadio>
-        </ORadioGroup>
-      </div>
-      <div class="search-box">
-        <OInput
-          v-model="debounceSearch"
-          :placeholder="t('eventOverview.search')"
-          size="large"
-          clearable
-          class="input-search"
-        >
-          <template #prefix>
-            <OIcon><IconSearch /></OIcon>
-          </template>
-        </OInput>
-      </div>
-    </div>
-    <div v-else class="filter-card-mb">
-      <OInput
-        v-model="debounceSearch"
-        :placeholder="t('eventOverview.search')"
-        size="large"
-        class="input-search"
-      >
-        <template #prefix>
-          <OIcon><IconSearch /></OIcon>
-        </template>
-      </OInput>
-      <div class="filter-btn-mb">
-        <OButton
-          variant="text"
-          color="normal"
-          class="filter-btn"
-          @click="filterVisible = true"
-        >
-          <span>{{ t('eventOverview.filter') }}</span>
-          <template #suffix>
-            <OIcon><IconFilter /></OIcon>
-          </template>
-        </OButton>
-      </div>
-    </div>
-    <ORow
-      v-if="currentList.length"
-      :gap="lePadV ? '0 12px' : '32px 32px'"
-      wrap="wrap"
-    >
-      <OCol
-        :flex="lePadV ? ' 0 0 100%' : '0 0 25%'"
-        v-for="(item, i) in currentList"
-        :key="i"
-      >
-        <OCard class="event-item" @click="goDetail(item)">
-          <template #cover>
-            <OFigure
-              hoverable
-              :src="lePadV ? item.poster_image_mb : item.poster_image"
+    <OEventsList :data="currentList" :page="params.currentPage" :total="total" :pageSize="params.pageSize" @search="search">
+      <template #filter>
+        <div v-if="!lePadV" class="filter-card">
+          <div class="filter">
+            <p class="filter-title">{{ t('eventOverview.series') }}</p>
+            <ORadioGroup
+              v-model="params.series"
+              :style="{ gap: lePadV ? '4px 4px' : '16px 8px' }"
             >
-              <div class="tags">
-                <OTag v-if="item?.series" class="series-tag">
-                  <OIcon><IconDeveloperTag /></OIcon>
-                  <span class="tag-text">
-                    {{ EventSeries.get(item?.series)?.label[locale] }}
-                  </span>
-                </OTag>
-
-                <OTag
-                  v-if="item?.status"
-                  :class="{ 'tag-ongoing': item?.status === 'ongoing' }"
-                >
-                  <span class="tag-text">
-                    {{ EventState.get(item?.status)?.label[locale] }}
-                  </span>
-                </OTag>
-              </div>
-              <div class="card-content">
-                <p v-dompurify-html="item.title" class="title"></p>
-                <div class="card-bottom">
-                  <p class="date">
-                    {{ changeTimeStamp(new Date(item.start_date.substring(0, 10))) }}
-                  </p>
-                  <ODivider v-if="lePadV" direction="v" class="divider-mb" />
-                  <p class="city">{{ item.city }}</p>
-                </div>
-              </div>
-            </OFigure>
-          </template>
-        </OCard>
-      </OCol>
-    </ORow>
-    <ResultEmpty
-      v-else
-      class="nofound"
-      :description="t('eventOverview.empty')"
-    />
-
-    <!-- 分页 -->
-    <div v-if="total > COUNT_PER_PAGE[0]" class="pagination">
-      <OPagination
-        :total="total"
-        :page="params.currentPage"
-        :page-size="params.pageSize"
-        :page-sizes="COUNT_PER_PAGE"
-        :layout="['total', 'jumper', 'pager', 'pagesize']"
-        :show-more="false"
-        :simple="lePadV"
-        @change="onPaginationChange"
-      ></OPagination>
-    </div>
+              <ORadio
+                v-for="option in seriesOptions"
+                :key="option.value"
+                :value="option.value"
+              >
+                <template #radio="{ checked }">
+                  <OToggle
+                    @click="clearCheckedSeries(checked)"
+                    :class="{ active: checked }"
+                    :checked="checked"
+                  >
+                    {{ isZh ? option.label.zh : option.label.en }}
+                  </OToggle>
+                </template>
+              </ORadio>
+            </ORadioGroup>
+          </div>
+          <div class="filter">
+            <p class="filter-title">{{ t('eventOverview.state') }}</p>
+            <ORadioGroup
+              v-model="params.state"
+              :style="{ gap: lePadV ? '4px 4px' : '16px 8px' }"
+            >
+              <ORadio
+                v-for="option in stateOptions"
+                :key="option.value"
+                :value="option.value"
+              >
+                <template #radio="{ checked }">
+                  <OToggle
+                    @click="clearCheckedState(checked)"
+                    :class="{ active: checked }"
+                    :checked="checked"
+                  >
+                    {{ isZh ? option.label.zh : option.label.en }}
+                  </OToggle>
+                </template>
+              </ORadio>
+            </ORadioGroup>
+          </div>
+          <div class="search-box">
+            <OInput
+              v-model="searchValue"
+              :placeholder="t('eventOverview.search')"
+              @input="(e) => onInput(e.target?.value)"
+              size="large"
+              clearable
+              @clear="onInput('')"
+              class="input-search"
+            >
+              <template #prefix>
+                <OIcon><IconSearch /></OIcon>
+              </template>
+            </OInput>
+          </div>
+        </div>
+        <div v-else class="filter-card-mb">
+          <OInput
+            v-model="searchValue"
+            :placeholder="t('eventOverview.search')"
+            size="large"
+            @input="(e) => onInput(e.target?.value)"
+            @clear="onInput('')"
+            class="input-search"
+          >
+            <template #prefix>
+              <OIcon><IconSearch /></OIcon>
+            </template>
+          </OInput>
+          <div class="filter-btn-mb">
+            <OButton
+              variant="text"
+              color="normal"
+              class="filter-btn"
+              @click="filterVisible = true"
+            >
+              <span>{{ t('eventOverview.filter') }}</span>
+              <template #suffix>
+                <OIcon><IconFilter /></OIcon>
+              </template>
+            </OButton>
+          </div>
+        </div>
+      </template>
+      <template #empty>
+        <ResultEmpty
+          class="nofound"
+          :description="t('eventOverview.empty')"
+        />
+      </template>
+    </OEventsList>
     <ODialog v-model:visible="filterVisible" size="medium" class="filter-body">
       <template #header>
         <span class="del-title">{{ t('eventOverview.filter') }}</span>
@@ -427,18 +355,19 @@ const handleConfirm = () => {
 <style lang="scss" scoped>
 .app-section {
   --o-gap-section: 40px;
+  padding-bottom: 32px;
 
   @include respond('<=laptop') {
     --o-gap-section: 32px;
+    padding-bottom: 24px;
   }
-  @include respond('phone') {
-    --o-gap-section: 16px;
+  @include respond('pad_h') {
+    padding-bottom: 8px;
   }
-}
-.filter-card {
-  background-color: var(--o-color-fill2);
-  padding: 24px 32px;
-  border-radius: var(--o-radius-xs);
+  @include respond('<=pad_v') {
+    --o-gap-section: 32px;
+    padding-bottom: 0;
+  }
 }
 .filter {
   display: flex;
@@ -449,12 +378,18 @@ const handleConfirm = () => {
 }
 
 .filter-title {
-  min-width: 64px;
   color: var(--o-color-info1);
   font-weight: 500;
-  margin-right: 32px;
+  margin-right: 40px;
   margin-top: 4px;
+  flex-shrink: 0;
   @include text1;
+  @include respond('laptop') {
+    margin-right: 24px;
+  }
+  @include respond('pad_h') {
+    margin-right: 16px;
+  }
 }
 
 .o-toggle {
@@ -466,6 +401,7 @@ const handleConfirm = () => {
   border: 1px solid var(--o-color-control2-light);
   --toggle-bg-color: var(--o-color-control2-light);
   --toggle-bg-color-hover: var(--o-color-control3-light);
+  border: none;
   @include text1;
 }
 .o-radio + .o-radio {
@@ -492,132 +428,13 @@ const handleConfirm = () => {
   }
 }
 
-.o-row {
-  margin-top: 32px;
-}
-
-.tags {
-  position: absolute;
-  right: 12px;
-  top: 12px;
-  display: flex;
-  justify-content: flex-end;
-  column-gap: 8px;
-  width: calc(100% - 8px);
-
-  .o-tag {
-    --tag-bg-color: var(--o-color-info4);
-    --tag-bd-color: var(--o-color-info4);
-    backdrop-filter: blur(6px);
-    border: none;
-    --tag-color: var(--o-color-white);
-
-    :deep(.o-tag-label) {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      white-space: normal;
-
-      .o-icon {
-        margin-right: 4px;
-        @include text1;
-      }
-    }
-  }
-  .tag-ongoing {
-    --tag-bg-color: rgba(var(--o-blue-6));
-    --tag-bd-color: rgba(var(--o-blue-6));
-  }
-}
-
-.card-content {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  color: var(--o-color-white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  cursor: pointer;
-  padding: 32px;
-  .title {
-    font-weight: 500;
-    height: auto;
-    white-space: pre-wrap;
-    @include h2;
-    @include text-truncate(3);
-  }
-  .date {
-    margin-top: 24px;
-    @include text1;
-  }
-  .city {
-    @include text1;
-  }
-}
-
 .o-figure {
   width: 100%;
-}
-
-.pagination {
-  margin-top: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
 }
 
 .nofound {
   margin-top: 40px;
   --result-desc-color: var(--o-color-info1);
-}
-
-@include respond('laptop') {
-  .card-content {
-    padding: 24px;
-  }
-}
-
-@include respond('<=pad') {
-  .card-content {
-    .title {
-      white-space: normal;
-    }
-  }
-}
-
-@include respond('pad_h') {
-  .tags {
-    .o-tag {
-      :deep(.o-tag-label) {
-        font-size: 10px;
-        white-space: nowrap;
-      }
-    }
-    .series-tag {
-      --tag-padding: 0;
-      width: 104px;
-      :deep(.o-tag-label) {
-        margin-right: 11px;
-      }
-    }
-  }
-  .card-content {
-    padding: 40px 16px 24px;
-    .title {
-      @include text1;
-    }
-    .date {
-      margin-top: 8px;
-      @include tip1;
-    }
-    .city {
-      @include tip1;
-    }
-  }
 }
 
 @include respond('<=pad_v') {
@@ -637,33 +454,6 @@ const handleConfirm = () => {
     display: flex;
     justify-content: flex-end;
     margin-top: 12px;
-  }
-  .o-row {
-    margin-top: 12px;
-  }
-  .card-content {
-    .title {
-      height: auto;
-      padding: 0 32px;
-      @include h2;
-    }
-    .card-bottom {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 12px;
-    }
-    .date {
-      margin-top: 0;
-      @include tip1;
-    }
-    .city {
-      @include tip1;
-    }
-    .divider-mb {
-      --o-divider-color: var(--o-color-info1-inverse);
-      --o-divider-bd-color: var(--o-color-info1-inverse);
-    }
   }
   .filter {
     flex-direction: column;
@@ -686,12 +476,6 @@ const handleConfirm = () => {
   }
   .divider-btn {
     --o-divider-label-gap: 0 8px;
-  }
-}
-
-@include respond('phone') {
-  .card-content {
-    padding: 16px 16px 0;
   }
 }
 </style>

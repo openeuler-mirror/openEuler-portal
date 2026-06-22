@@ -64,3 +64,11 @@ export const getGroupInfosApi = async () => {
   const res = await request.get(url, { global: true, showError: false, headers: { token: csrfCookie } });
   return res.data?.data || [];
 };
+
+/**
+ * 获取全部的sig组
+ */
+export const getSigAll = async () => {
+  const res = await request.get(`/api-meeting-v2/meeting/group_name/`);
+  return res.data?.data || [];
+};

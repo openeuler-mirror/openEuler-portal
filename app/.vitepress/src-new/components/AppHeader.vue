@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { watch, computed, ref, onMounted } from 'vue';
 import { useRouter, useData } from 'vitepress';
-import { OHeader, OHeaderMobile, OHeaderSourceCode, OHeaderSearch, OHeaderLanguageSwitcher, OHeaderTheme, OHeaderUser } from '@opendesign-plus-test/components';
-import type { OSearchRecommendItem, OSearchUploadImageFn } from '@opendesign-plus-test/components';
-import { useTheme, getUserAuth } from '@opendesign-plus-test/composables';
+import { OHeader, OHeaderMobile, OHeaderSourceCode, OHeaderSearch, OHeaderLanguageSwitcher, OHeaderTheme, OHeaderUser } from '@opendesign-plus/components';
+import type { OSearchRecommendItem, OSearchUploadImageFn } from '@opendesign-plus/components';
+import { useTheme, getUserAuth } from '@opendesign-plus/composables';
 import { useLocale, useLoginStore } from '@opendesign-plus/composables';
 import { useDebounceFn } from '@vueuse/core';
 
