@@ -249,7 +249,7 @@ watch(
 }
 
 .cookie-notice-content {
-  background-color: rgba(var(--o-mixedgray-1), 0.9);
+  background-color: rgba(var(--o-grey-1), 0.9);
   backdrop-filter: blur(5px);
   box-shadow: var(--o-shadow-1);
 }
@@ -261,7 +261,7 @@ watch(
   justify-content: space-between;
   position: relative;
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding-top: 16px;
     padding-bottom: 16px;
     flex-direction: column;
@@ -272,11 +272,11 @@ watch(
 .cookie-notice-left {
   width: 60%;
 
-  @include respond-to('<=pad') {
+  @include respond('<=pad') {
     width: 58%;
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     width: 100%;
   }
 
@@ -284,7 +284,7 @@ watch(
     @include text1;
     color: var(--o-color-info1);
     font-weight: 500;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       font-size: 16px;
       line-height: 24px;
       text-align: center;
@@ -303,17 +303,17 @@ watch(
   align-items: center;
   margin-top: 12px;
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     width: 100%;
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     flex-direction: column;
     align-items: center;
   }
 
   .o-btn {
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       width: 100%;
     }
   }
@@ -321,7 +321,7 @@ watch(
   .o-btn + .o-btn {
     margin-left: 16px;
 
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-left: 0;
       margin-top: 12px;
     }

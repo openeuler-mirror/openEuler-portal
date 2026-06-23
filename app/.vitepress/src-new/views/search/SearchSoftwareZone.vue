@@ -98,7 +98,7 @@ const searchValue = computed(() => {
     right: 0;
   }
   border-radius: var(--o-radius-xs);
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 12px 16px;
   }
   .software-card {
@@ -106,7 +106,7 @@ const searchValue = computed(() => {
   }
   :deep(.o-scrollbar-container) {
     padding-bottom: 16px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       padding-bottom: 0;
     }
   }
@@ -125,7 +125,7 @@ const searchValue = computed(() => {
     margin-top: 24px;
     display: flex;
     gap: 24px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 8px;
       gap: 16px;
     }

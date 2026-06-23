@@ -44,7 +44,7 @@ const verticalPadding = computed(() => {
   text-align: center;
   margin-top: 72px;
   @include display3;
-  @include respond-to('phone') {
+  @include respond('phone') {
     margin-top: 32px;
   }
 }

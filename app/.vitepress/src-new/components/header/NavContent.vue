@@ -165,12 +165,12 @@ const onClickNav = (item: any) => {
       margin-top: 0;
     }
 
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       width: 170px;
       margin-top: 16px;
     }
 
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       width: 132px;
       margin-top: 16px;
     }
@@ -188,7 +188,7 @@ const onClickNav = (item: any) => {
     }
     .content-tag {
       margin-left: var(--o-gap-2);
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         display: none;
       }
     }

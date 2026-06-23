@@ -267,7 +267,7 @@ const onClickShortCutLink = (item: any) => {
   margin: 5px 0;
   margin-left: 20px;
 
-  @include respond-to('pad_v-laptop') {
+  @include respond('pad_v-laptop') {
     gap: var(--o-gap-4);
   }
 }
@@ -276,10 +276,10 @@ const onClickShortCutLink = (item: any) => {
   height: 100%;
   position: relative;
 
-  @include respond-to('>laptop') {
+  @include respond('>laptop') {
     width: calc(100% - 184px);
   }
-  @media (min-width: 1001px) and (max-width: 1440px) {
+  @media (min-width: 1001px) and (max-width: 1680px) {
     width: calc(100% - 144px);
   }
   @media (max-width: 1000px) {
@@ -303,8 +303,8 @@ const onClickShortCutLink = (item: any) => {
       top: 0;
       background-image: linear-gradient(
         90deg,
-        rgba(var(--o-mixedgray-1), 0) 0%,
-        rgba(var(--o-mixedgray-1), 1) 100%
+        rgba(var(--o-grey-1), 0) 0%,
+        rgba(var(--o-grey-1), 1) 100%
       );
       z-index: 0;
     }
@@ -348,10 +348,10 @@ const onClickShortCutLink = (item: any) => {
         display: block;
         padding: 22px var(--o-gap-4);
 
-        @include respond-to('laptop') {
+        @include respond('laptop') {
           padding: 22px 14px;
         }
-        @include respond-to('pad_h') {
+        @include respond('pad_h') {
           padding: 22px 10px;
         }
         &.en {
@@ -385,14 +385,14 @@ const onClickShortCutLink = (item: any) => {
     box-shadow: 0 3px 6px rgba(#001255, 0.08);
   }
 
-  @include respond-to('laptop') {
+  @include respond('laptop') {
     min-height: 300px;
   }
-  @include respond-to('pad_h') {
+  @include respond('pad_h') {
     min-height: 260px;
   }
 
-  @include respond-to('>pad_v') {
+  @include respond('>pad_v') {
     &.dark {
       &:after {
         content: '';
@@ -422,7 +422,7 @@ const onClickShortCutLink = (item: any) => {
     background-size: cover;
     z-index: -1;
 
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       display: none;
     }
   }
@@ -437,7 +437,7 @@ const onClickShortCutLink = (item: any) => {
     background-size: cover;
     z-index: -1;
 
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       display: none;
     }
   }
@@ -454,11 +454,11 @@ const onClickShortCutLink = (item: any) => {
 
       width: 100%;
 
-      @include respond-to('laptop') {
+      @include respond('laptop') {
         padding: var(--o-gap-5) var(--o-gap-4) var(--o-gap-5) 0;
       }
 
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         padding: var(--o-gap-5) 0;
       }
 
@@ -474,16 +474,16 @@ const onClickShortCutLink = (item: any) => {
       padding-bottom: var(--o-gap-6);
       padding-left: var(--o-gap-4);
 
-      @include respond-to('laptop') {
+      @include respond('laptop') {
         width: 261px;
         padding: var(--o-gap-5) 0 var(--o-gap-5) var(--o-gap-4);
       }
 
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         width: 261px;
       }
 
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         display: none;
       }
 
@@ -499,12 +499,12 @@ const onClickShortCutLink = (item: any) => {
         cursor: pointer;
         @include tip1;
 
-        @include respond-to('laptop') {
+        @include respond('laptop') {
           width: 245px;
           @include text1;
         }
 
-        @include respond-to('pad_h') {
+        @include respond('pad_h') {
           width: 245px;
           @include text1;
         }
@@ -541,11 +541,11 @@ const onClickShortCutLink = (item: any) => {
         align-items: unset;
         position: relative;
 
-        @include respond-to('laptop') {
+        @include respond('laptop') {
           width: 245px;
         }
 
-        @include respond-to('pad_h') {
+        @include respond('pad_h') {
           width: 245px;
           &:not(:last-child) {
             &:after {
@@ -571,7 +571,7 @@ const onClickShortCutLink = (item: any) => {
           object-fit: contain;
           border-radius: 6px;
 
-          @include respond-to('<=laptop') {
+          @include respond('<=laptop') {
             display: none;
           }
         }
@@ -585,7 +585,7 @@ const onClickShortCutLink = (item: any) => {
           justify-content: space-between;
           white-space: normal;
 
-          @include respond-to('<=laptop') {
+          @include respond('<=laptop') {
             margin-left: unset;
             height: auto;
           }
@@ -602,7 +602,7 @@ const onClickShortCutLink = (item: any) => {
             @include hover {
               color: var(--o-color-primary1);
             }
-            @include respond-to('pad_v-laptop') {
+            @include respond('pad_v-laptop') {
               max-height: 44px;
             }
           }
@@ -623,10 +623,10 @@ const onClickShortCutLink = (item: any) => {
       min-height: 320px;
       flex-shrink: 0;
 
-      @include respond-to('laptop') {
+      @include respond('laptop') {
         min-height: 300px;
       }
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         display: none;
       }
     }
@@ -637,7 +637,7 @@ const onClickShortCutLink = (item: any) => {
       color: var(--o-color-info3);
       @include tip1;
 
-      @include respond-to('laptop') {
+      @include respond('laptop') {
         @include text1;
       }
     }
@@ -662,7 +662,7 @@ const onClickShortCutLink = (item: any) => {
         }
       }
 
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         margin-left: 24px;
         &:nth-of-type(1) {
           .content-container {
@@ -679,7 +679,7 @@ const onClickShortCutLink = (item: any) => {
         }
       }
 
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         &:nth-of-type(1) {
           .content-container {
             width: 344px;
@@ -688,7 +688,7 @@ const onClickShortCutLink = (item: any) => {
       }
     }
 
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       .content-left {
         .item-sub {
           max-width: 25%;
@@ -719,20 +719,20 @@ const onClickShortCutLink = (item: any) => {
         margin-left: 0;
       }
 
-      @include respond-to('>laptop') {
+      @include respond('>laptop') {
         width: 200px;
       }
 
-      @include respond-to('laptop') {
+      @include respond('laptop') {
         width: 170px;
       }
 
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         width: 132px;
       }
     }
 
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       .content-left {
         .item-sub {
           flex: 1 1 auto;
@@ -763,29 +763,29 @@ const onClickShortCutLink = (item: any) => {
               margin-right: 0;
             }
 
-            @include respond-to('<=laptop') {
+            @include respond('<=laptop') {
               margin-right: 24px;
             }
           }
-          @media (min-width: 1441px) and (max-width: 1505px) {
+          @media (min-width: 1681px) and (max-width: 1505px) {
             :deep(.content-item) {
               margin-right: 40px;
             }
           }
-          @include respond-to('>laptop') {
+          @include respond('>laptop') {
             width: 992px;
           }
-          @include respond-to('laptop') {
+          @include respond('laptop') {
             width: 752px;
           }
-          @include respond-to('pad_h') {
+          @include respond('pad_h') {
             width: auto;
           }
         }
       }
     }
 
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       .content-left {
         .item-sub {
           max-width: 80%;
@@ -821,7 +821,7 @@ const onClickShortCutLink = (item: any) => {
         }
       }
 
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         margin-left: 24px;
         &:nth-of-type(2) {
           .content-container {
@@ -833,7 +833,7 @@ const onClickShortCutLink = (item: any) => {
         }
       }
 
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         &:nth-of-type(2) {
           .content-container {
             width: auto;
@@ -842,7 +842,7 @@ const onClickShortCutLink = (item: any) => {
       }
     }
 
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       .content-left {
         .item-sub {
           max-width: 25%;
@@ -885,7 +885,7 @@ const onClickShortCutLink = (item: any) => {
         }
       }
 
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         margin-left: 24px;
         &:nth-of-type(1) {
           .content-container {
@@ -903,7 +903,7 @@ const onClickShortCutLink = (item: any) => {
         }
       }
 
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         &:nth-of-type(n) {
           .content-container {
             width: auto;
@@ -912,7 +912,7 @@ const onClickShortCutLink = (item: any) => {
       }
     }
 
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       .content-left {
         .item-sub {
           max-width: 20%;
@@ -943,7 +943,7 @@ const onClickShortCutLink = (item: any) => {
         }
       }
 
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         &:nth-child(n) {
           .content-container {
             width: 170px;
@@ -951,7 +951,7 @@ const onClickShortCutLink = (item: any) => {
         }
       }
 
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         &:nth-child(n) {
           .content-container {
             width: 132px;
@@ -960,7 +960,7 @@ const onClickShortCutLink = (item: any) => {
       }
     }
 
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       .content-left {
         .item-sub {
           .content-container {
@@ -1004,7 +1004,7 @@ const onClickShortCutLink = (item: any) => {
         }
       }
 
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         margin-left: 24px;
         &:nth-of-type(1) {
           .content-container {
@@ -1015,7 +1015,7 @@ const onClickShortCutLink = (item: any) => {
         }
       }
 
-      @include respond-to('laptop') {
+      @include respond('laptop') {
         &:nth-of-type(1) {
           .content-container {
             width: 558px;
@@ -1028,7 +1028,7 @@ const onClickShortCutLink = (item: any) => {
         }
       }
 
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         &:nth-of-type(1) {
           .content-container {
             width: auto;
@@ -1042,7 +1042,7 @@ const onClickShortCutLink = (item: any) => {
       }
     }
 
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       .content-left {
         .item-sub {
           max-width: 20%;
@@ -1085,7 +1085,7 @@ const onClickShortCutLink = (item: any) => {
         margin-left: 0;
       }
 
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         margin-left: 24px;
         .content-container {
           :deep(.content-item) {
@@ -1093,20 +1093,20 @@ const onClickShortCutLink = (item: any) => {
           }
         }
       }
-      @include respond-to('laptop') {
+      @include respond('laptop') {
         .content-container {
           width: 364px;
         }
       }
 
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         .content-container {
           width: auto;
         }
       }
     }
 
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       .content-left {
         .item-sub {
           max-width: 40%;
@@ -1146,8 +1146,8 @@ html[lang='en'] {
       &::after {
         background-image: linear-gradient(
           90deg,
-          rgba(var(--o-mixedgray-4), 0) 0%,
-          rgba(var(--o-mixedgray-4), 1) 100%
+          rgba(var(--o-grey-4), 0) 0%,
+          rgba(var(--o-grey-4), 1) 100%
         );
       }
     }
@@ -1165,7 +1165,7 @@ html[lang='en'] {
     --scrollbar-height: 100%;
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     --scroller-padding: 0 var(--layout-content-padding);
   }
 }

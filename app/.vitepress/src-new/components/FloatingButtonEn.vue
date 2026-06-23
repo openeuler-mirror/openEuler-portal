@@ -618,7 +618,7 @@ onUnmounted(() => {
   right: 80px;
   z-index: 10;
 
-  @include respond-to('<=pad') {
+  @include respond('<=pad') {
     display: none;
   }
 
@@ -632,7 +632,7 @@ onUnmounted(() => {
     right: 44px;
   }
 
-  @include respond-to('laptop') {
+  @include respond('laptop') {
     right: 24px;
   }
 
@@ -960,7 +960,7 @@ onUnmounted(() => {
   padding-right: var(--layout-content-padding);
   display: none;
 
-  @include respond-to('<=pad') {
+  @include respond('<=pad') {
     display: block;
   }
 

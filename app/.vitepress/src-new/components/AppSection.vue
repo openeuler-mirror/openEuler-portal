@@ -129,11 +129,11 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
     color: var(--o-color-info2);
     @include text1;
 
-    @include respond-to('pad-laptop') {
+    @include respond('pad-laptop') {
       margin-top: 8px;
     }
 
-    @include respond-to('phone') {
+    @include respond('phone') {
       margin-top: 12px;
       text-align: center;
     }
@@ -158,11 +158,11 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
     margin-top: 32px;
     @include text1;
 
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       margin-top: 16px;
     }
 
-    @include respond-to('phone') {
+    @include respond('phone') {
       margin-top: 12px;
     }
   }

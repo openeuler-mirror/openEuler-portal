@@ -123,7 +123,7 @@ const { lePadV } = useScreen();
     @include text1;
   }
 
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }

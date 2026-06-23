@@ -294,7 +294,7 @@ const linkClick = () => {
           top: 0;
           width: 100%;
           height: 1px;
-          background-color: rgba(var(--o-mixedgray-14), 0.1);
+          background-color: rgba(var(--o-grey-14), 0.1);
         }
       }
 

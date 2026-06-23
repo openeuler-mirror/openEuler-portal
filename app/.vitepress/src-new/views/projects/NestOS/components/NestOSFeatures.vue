@@ -89,19 +89,19 @@ const gap = computed(() => {
   @include text1;
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .o-card {
     --card-main-padding: 24px;
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .o-card {
     --card-main-padding: 16px;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .o-card {
     --card-main-padding: 16px;
   }

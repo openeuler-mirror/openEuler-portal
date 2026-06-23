@@ -53,10 +53,15 @@ watch(
   },
   (val) => {
     const documentElement = document.documentElement;
-    val === 'light' && documentElement.removeAttribute('data-o-theme');
-    val === 'dark' && documentElement.setAttribute('data-o-theme', 'dark');
-    val === 'light' && documentElement.classList.remove('dark');
-    val === 'dark' && documentElement.classList.add('dark');
+    if (val === 'dark') {
+      documentElement.setAttribute('data-o-theme', 'e.dark'); 
+      documentElement.classList.remove('light');
+      documentElement.classList.add('dark');
+    } else {
+      documentElement.setAttribute('data-o-theme', 'e.light');
+      documentElement.classList.remove('dark');
+      documentElement.classList.add('light');
+    }
   },
   {
     immediate: true,
@@ -97,14 +102,14 @@ watch(
       color: var(--o-color-primary1);
     }
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: none;
   }
 }
 .theme-box-mobile {
   display: none;
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: block;
   }
 }

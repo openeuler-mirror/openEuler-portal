@@ -206,7 +206,7 @@ openEuler-portal/
 2. **Vue API 必须显式 import**（VitePress 没有 Nuxt 式自动注入）：`import { ref, computed, ... } from 'vue'`。
 3. **新功能只用 `~@/` 别名**（`@/` 是旧版兼容路径，禁止新增引用）。
 4. **API 调用必须 `try/catch` + `loading`**，axios 实例只能从 `~@/shared/axios` 拿，禁止 `axios.create`。
-5. **样式必须用 CSS 变量**（`var(--o-color-info1)`、`var(--o-spacing-h4)`），断点必须用 `respond-to` mixin，禁止硬编码。
+5. **样式必须用 CSS 变量**（`var(--o-color-info1)`、`var(--o-spacing-h4)`），断点必须用 `respond` mixin，禁止硬编码。
 6. **SSR 安全**：`window`/`document` 只能在 `onMounted` 或 `import.meta.client` 中访问，浏览器专属组件用 `<ClientOnly>`。
 7. **i18n 双语同步**：通过 `useLocale()` 拿 `t`，zh/en 翻译文件必须同步更新。
 8. **类型命名约定**：`SigItemT`（单条）/ `SigListT`（列表）/ `SigDetailT`（详情）/ `SigQueryT`（参数）。

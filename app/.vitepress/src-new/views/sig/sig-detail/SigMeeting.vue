@@ -743,7 +743,7 @@ const selectTab = () => {
     justify-content: center;
     align-items: flex-end;
     height: 56px;
-    @include respond-to('pad_v-laptop') {
+    @include respond('pad_v-laptop') {
       --tab-nav-padding: 0 0 14px;
     }
   }
@@ -826,7 +826,7 @@ const selectTab = () => {
       color: var(--o-color-info3);
       @include tip1;
 
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         @include text1;
       }
     }
@@ -917,7 +917,7 @@ const selectTab = () => {
             color: var(--o-color-primary1);
           }
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           &::after {
             width: calc(100% - 2 * 16px);
           }
@@ -999,7 +999,7 @@ const selectTab = () => {
         color: var(--o-color-info3);
         @include tip1;
 
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           @include text1;
         }
       }
@@ -1009,7 +1009,7 @@ const selectTab = () => {
         padding: 0;
         margin-top: 8px;
         @include tip1;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           @include text1;
         }
       }
@@ -1052,7 +1052,7 @@ const selectTab = () => {
         margin-top: 0;
       }
 
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         @include text1;
       }
     }

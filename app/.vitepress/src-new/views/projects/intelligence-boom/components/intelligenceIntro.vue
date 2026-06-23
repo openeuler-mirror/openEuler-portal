@@ -80,7 +80,7 @@ const visionData = computed(() => VISION_DATA[lang.value as LocaleT]);
       @include text1;
     }
 
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       flex-direction: column;
       gap: var(--o-gap-2);
       text-align: left;
@@ -104,7 +104,7 @@ const visionData = computed(() => VISION_DATA[lang.value as LocaleT]);
   }
 }
 
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .introduction {
     padding: 12px;
     margin-top: 12px;
@@ -114,7 +114,7 @@ const visionData = computed(() => VISION_DATA[lang.value as LocaleT]);
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .introduction {
     background-image: none;
 

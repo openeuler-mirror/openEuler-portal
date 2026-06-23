@@ -188,7 +188,7 @@ main {
     content: '';
     display: table;
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding-top: 48px;
   }
   &.download-page {
@@ -211,16 +211,16 @@ main {
   --layout-content-padding: 64px;
   --layout-header-height: 80px;
 
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     --layout-content-max-width: 100%;
     --layout-content-padding: 40px;
   }
 
-  @include respond-to('<=pad') {
+  @include respond('<=pad') {
     --layout-content-padding: 32px;
   }
 
-  @include respond-to('phone') {
+  @include respond('phone') {
     --layout-content-padding: 24px;
   }
 }

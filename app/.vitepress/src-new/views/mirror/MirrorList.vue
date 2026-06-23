@@ -376,13 +376,13 @@ const rsyncCode =
 .app-section {
   --o-gap-section: 40px;
   --o-gap-t2c: 16px;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     --o-gap-section: 16px;
   }
 }
 .app-filter-mo {
   display: none;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: flex;
     margin-top: 24px;
   }
@@ -408,14 +408,14 @@ const rsyncCode =
     align-items: center;
     margin-top: 12px;
     justify-content: center;
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       flex-direction: column;
     }
   }
   .rsync-tip {
     display: flex;
     align-items: center;
-    @include respond-to('<=pad') {
+    @include respond('<=pad') {
       flex-direction: column;
     }
     .rsync-code {
@@ -425,7 +425,7 @@ const rsyncCode =
       background-color: var(--o-color-control2-light);
       border-radius: var(--o-radius-xs);
       margin: 0 12px;
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         margin-top: 8px;
         padding: 6px 8px;
         align-items: flex-start;
@@ -443,7 +443,7 @@ const rsyncCode =
   background-color: var(--o-color-fill2);
   padding: 16px 32px;
   border-radius: var(--o-radius-xs);
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: none;
   }
   .filter-card {
@@ -474,7 +474,7 @@ html[lang='en'] {
 }
 .o-table {
   margin-top: 24px;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: none;
   }
 
@@ -494,7 +494,7 @@ html[lang='en'] {
   margin-top: 12px;
   grid-template-columns: 1fr;
   gap: 12px;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: grid;
   }
   .mirror-card {
@@ -553,7 +553,7 @@ html[lang='en'] {
   margin-top: 32px;
   display: flex;
   justify-content: flex-end;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: none;
   }
 }

@@ -90,7 +90,7 @@ const columns = [
   display: flex;
   gap: 32px;
   border-radius: var(--o-radius-xs);
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 24px;
     padding: 12px;
   }

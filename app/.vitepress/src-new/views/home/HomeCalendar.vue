@@ -711,7 +711,7 @@ const cancel = () => {
   color: var(--o-color-info2);
   column-gap: var(--o-gap-5);
   margin-top: var(--o-gap-t2c);
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 12px;
   }
 }
@@ -728,7 +728,7 @@ const cancel = () => {
     border-radius: var(--o-radius-xs);
     background-color: var(--o-color-fill2);
     overflow: hidden;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 12px;
       background-color: transparent;
       flex-direction: column;
@@ -737,7 +737,7 @@ const cancel = () => {
       width: 56%;
       --el-calendar-borde: none;
       --el-calendar-selected-bg-color: none;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         width: 100%;
         flex-direction: column;
         background-color: var(--o-color-fill2);
@@ -747,7 +747,7 @@ const cancel = () => {
         height: 60px;
         padding: 14px 24px;
         border-bottom: 1px solid var(--o-color-control4);
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           justify-content: center;
           padding: 16px 16px 12px;
           height: auto;
@@ -781,7 +781,7 @@ const cancel = () => {
           align-items: center;
           color: var(--o-color-info2);
           @include text2;
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             display: none;
           }
         }
@@ -795,7 +795,7 @@ const cancel = () => {
             text-align: left;
             color: var(--o-color-info3);
             @include text1;
-            @include respond-to('<=pad_v') {
+            @include respond('<=pad_v') {
               padding: 0;
               text-align: center;
             }
@@ -811,7 +811,7 @@ const cancel = () => {
             margin-bottom: 0 !important;
           }
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           border: none;
           padding: 0 16px 16px;
           thead {
@@ -846,10 +846,10 @@ const cancel = () => {
         max-width: 100px;
         height: 64px;
         color: var(--o-color-info1);
-        @include respond-to('<=pad') {
+        @include respond('<=pad') {
           height: fit-content;
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           display: flex;
           justify-content: center;
           padding: 0;
@@ -867,7 +867,7 @@ const cancel = () => {
           @include tip1;
           @include hover {
             background-color: var(--o-color-control3-light);
-            @include respond-to('<=pad_v') {
+            @include respond('<=pad_v') {
               @include hover {
                 background-color: inherit;
                 border: 1px solid transparent;
@@ -894,7 +894,7 @@ const cancel = () => {
               height: 20px;
               font-size: 20px;
               margin-left: -6px;
-              @include respond-to('<=pad_v') {
+              @include respond('<=pad_v') {
                 height: 6px;
                 width: 6px;
                 margin-left: -2px;
@@ -904,7 +904,7 @@ const cancel = () => {
               }
             }
           }
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             background-color: transparent;
             padding: 0;
             margin: 6px 8px;
@@ -943,7 +943,7 @@ const cancel = () => {
         .out-box {
           background-color: var(--o-color-control3-light);
           border: 1px solid var(--o-color-primary1);
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             background-color: transparent;
             border: 1px solid transparent;
             .date-calender {
@@ -989,7 +989,7 @@ const cancel = () => {
             border-radius: 50%;
             z-index: -1;
           }
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             height: auto;
             width: auto;
             &::after {
@@ -1010,18 +1010,18 @@ const cancel = () => {
     }
     .detail-list {
       width: 44%;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 12px;
         background-color: var(--o-color-fill2);
         width: 100%;
         border-radius: var(--o-radius-xs);
       }
-      @include respond-to('>pad_v') {
+      @include respond('>pad_v') {
         .current-day {
           display: none;
         }
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         .current-day {
           display: flex;
           margin: 16px 16px 12px;
@@ -1038,10 +1038,10 @@ const cancel = () => {
         align-items: flex-end;
         height: 60px;
         border-bottom: 1px solid var(--o-color-control4);
-        @include respond-to('pad_v-laptop') {
+        @include respond('pad_v-laptop') {
           --tab-nav-padding: 0 0 14px;
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           height: auto;
           .o-icon {
             display: none;
@@ -1072,7 +1072,7 @@ const cancel = () => {
           width: 24px;
           height: 24px;
           font-size: 24px;
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             font-size: 20px;
             width: 20px;
             height: 20px;
@@ -1091,7 +1091,7 @@ const cancel = () => {
         align-items: center;
         color: var(--o-color-info3);
         text-decoration: none;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           margin-left: 32px;
         }
         @include tip1;
@@ -1120,7 +1120,7 @@ const cancel = () => {
     }
     .meeting-list {
       height: v-bind('calendarHeight');
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         height: auto;
       }
       .empty {
@@ -1159,7 +1159,7 @@ const cancel = () => {
             color: var(--o-color-primary1);
           }
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           &::after {
             width: calc(100% - 2 * 16px);
           }
@@ -1176,7 +1176,7 @@ const cancel = () => {
       .o-collapse-item-header {
         align-items: center;
         padding: 16px 24px;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           padding: 12px 16px;
         }
       }
@@ -1194,7 +1194,7 @@ const cancel = () => {
       color: var(--o-color-info3);
       flex-direction: column;
       padding: 16px 60px;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         padding: 12px 16px;
       }
       @include tip1;
@@ -1231,19 +1231,19 @@ const cancel = () => {
   left: -110px;
   width: 320px;
   z-index: -1;
-  @include respond-to('laptop') {
+  @include respond('laptop') {
     width: 327px;
     top: -180px;
     left: -210px;
   }
-  @include respond-to('pad_h') {
+  @include respond('pad_h') {
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     width: 84px;
     top: -50px;
     left: -4px;
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     width: 54px;
     top: -32px;
     left: 3px;
@@ -1255,16 +1255,16 @@ const cancel = () => {
   width: 380px;
   bottom: -181px;
   right: -220px;
-  @include respond-to('laptop') {
+  @include respond('laptop') {
     width: 400px;
     bottom: -200px;
     right: -240px;
   }
-  @include respond-to('pad_h') {
+  @include respond('pad_h') {
     right: -140px;
     bottom: -150px;
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     width: 71px;
     bottom: -40px;
     right: -8px;

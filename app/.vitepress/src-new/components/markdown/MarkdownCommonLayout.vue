@@ -68,7 +68,7 @@ const props = defineProps({
   }
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .common-layout {
     padding: 24px;
     .section-image {
@@ -77,7 +77,7 @@ const props = defineProps({
   }
 }
 
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .common-layout {
     padding: 16px;
     .section-image {
@@ -86,7 +86,7 @@ const props = defineProps({
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .common-layout {
     padding: 12px;
     .section-image {

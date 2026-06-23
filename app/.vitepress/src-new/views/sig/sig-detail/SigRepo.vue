@@ -269,7 +269,7 @@ onMounted(() => {
   .repo-title {
     font-weight: 500;
     @include h4;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-bottom: 12px;
       @include h3;
     }
@@ -281,7 +281,7 @@ onMounted(() => {
 
   .repo-table {
     margin-top: 24px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 12px;
       --table-cell-padding: 8px 12px;
       :deep(td),
@@ -311,7 +311,7 @@ onMounted(() => {
     margin-top: 32px;
     display: flex;
     justify-content: flex-end;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: none;
     }
   }

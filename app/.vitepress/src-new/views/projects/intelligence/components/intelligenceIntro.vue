@@ -559,7 +559,7 @@ const changeTabMb = (val: number) => {
       border-radius: var(--o-radius-xs);
       z-index: 1;
       transition: left .2s cubic-bezier(0.2, 0, 0, 1);
-      box-shadow: 0 1px 3px rgba(var(--o-mixedgray-14), 0.1);
+      box-shadow: 0 1px 3px rgba(var(--o-grey-14), 0.1);
     }
     .switch-handler {
       width: 109px;
@@ -598,7 +598,7 @@ const changeTabMb = (val: number) => {
         rgba(182, 207, 247, 1) 0%,
         rgba(205, 210, 246, 1) 30%,
         rgba(227, 235, 255, 0.43) 81%,
-        rgba(var(--o-mixedgray-14), 0) 100%
+        rgba(var(--o-grey-14), 0) 100%
       );
       z-index: 1;
     }
@@ -610,7 +610,7 @@ const changeTabMb = (val: number) => {
   }
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .build {
     .o-row {
       margin-right: 40px;
@@ -622,7 +622,7 @@ const changeTabMb = (val: number) => {
     }
   }
 }
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .item-desc {
     margin-top: 8px;
   }
@@ -638,7 +638,7 @@ const changeTabMb = (val: number) => {
   }
 }
 
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .introduction {
     padding: 12px;
     margin-top: 12px;
@@ -716,23 +716,23 @@ const changeTabMb = (val: number) => {
       --tag-radius: 2px;
       --tag-color: var(--o-color-white);
       border: none;
-      --tag-bg-color: rgba(var(--o-mixedgray-14), 0.4);
+      --tag-bg-color: rgba(var(--o-grey-14), 0.4);
     }
     .invoke-tag-dark {
-      --tag-bg-color: rgba(var(--o-mixedgray-1), 0.25);
+      --tag-bg-color: rgba(var(--o-grey-1), 0.25);
     }
     .carousel-item-dark {
       .invoke-tag {
-        --tag-bg-color: rgba(var(--o-mixedgray-1), 0.25);
+        --tag-bg-color: rgba(var(--o-grey-1), 0.25);
       }
       .invoke-tag-dark {
-        --tag-bg-color: rgba(var(--o-mixedgray-14), 0.25);
+        --tag-bg-color: rgba(var(--o-grey-14), 0.25);
       }
     }
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .introduction {
     background-image: none;
     .o-row {
@@ -759,7 +759,7 @@ const changeTabMb = (val: number) => {
     background-image: none !important;
   }
 }
-@include respond-to('phone') {
+@include respond('phone') {
   .introduction {
     .desc {
       @include text1;

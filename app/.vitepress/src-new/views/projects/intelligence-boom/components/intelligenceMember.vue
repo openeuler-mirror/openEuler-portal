@@ -41,7 +41,7 @@ const { t } = useLocale();
     margin-top: 0;
   }
 }
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .logo-list {
     margin-top: 24px;
   }
@@ -58,7 +58,7 @@ const { t } = useLocale();
     }
   }
 }
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .logo-list {
     margin-top: 16px;
   }
@@ -75,7 +75,7 @@ const { t } = useLocale();
     }
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .logo-list {
     margin-top: 12px;
   }

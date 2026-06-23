@@ -119,7 +119,7 @@ import IconHook from '~icons/user-group/hook.svg';
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .ques-section {
     :deep(.section-subtitle) {
       text-align: unset;
@@ -159,7 +159,7 @@ import IconHook from '~icons/user-group/hook.svg';
   }
 }
 
-[data-o-theme='dark'] {
+[data-o-theme='e.dark'] {
   .card.organizer::before {
     filter: brightness(80%) grayscale(20%) contrast(1.2);
   }

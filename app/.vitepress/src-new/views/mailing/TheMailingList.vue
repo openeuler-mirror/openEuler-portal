@@ -171,14 +171,14 @@ const colFlex = computed(() => {
 }
 
 .mo-banner {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 24px 24px 20px;
     .mo-title {
       font-weight: 500;
       @include display3;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }
@@ -233,21 +233,21 @@ const colFlex = computed(() => {
     }
   }
 
-  @include respond-to('laptop') {
+  @include respond('laptop') {
     padding: 32px 52px;
     .o-figure {
       width: 128px;
     }
   }
 
-  @include respond-to('pad_h') {
+  @include respond('pad_h') {
     padding: 32px;
     .o-figure {
       width: 102px;
     }
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 24px;
     .title {
       @include h4;
@@ -259,7 +259,7 @@ const colFlex = computed(() => {
       width: 82px;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     padding: 16px;
     .num {
       @include display1;
@@ -303,17 +303,17 @@ const colFlex = computed(() => {
     white-space: nowrap;
   }
 
-  @include respond-to('laptop') {
+  @include respond('laptop') {
     --table-edge-padding: 32px;
   }
 
-  @include respond-to('pad_h') {
+  @include respond('pad_h') {
     --table-edge-padding: 24px;
     --table-cell-padding: 8px;
     --table-head-cell-padding: 8px;
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     --table-edge-padding: 16px;
     --table-cell-padding: 8px;
     --table-head-cell-padding: 8px;
@@ -354,7 +354,7 @@ const colFlex = computed(() => {
     }
   }
 
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mail-item {
       .item-title {
         @include h3;

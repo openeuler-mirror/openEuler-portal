@@ -63,7 +63,7 @@ const { isEn } = useLocale();
 .swiper-list {
   display: flex;
   animation: marque 300s linear infinite;
-  @include respond-to('>phone') {
+  @include respond('>phone') {
     @include hover {
       animation-play-state: paused;
     }
@@ -116,7 +116,7 @@ const { isEn } = useLocale();
   }
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .swiper-card {
     width: 160px;
     margin-right: 12px;

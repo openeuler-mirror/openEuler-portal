@@ -122,7 +122,7 @@ const dlgAction: DialogActionT[] = [
 <style lang="scss" scoped>
 .download-detail-filter {
   min-width: 276px;
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     display: none;
   }
   .filter-title {
@@ -152,7 +152,7 @@ const dlgAction: DialogActionT[] = [
 }
 .o-select {
   display: none;
-  @include respond-to('pad_v-laptop') {
+  @include respond('pad_v-laptop') {
     display: inline-flex;
     max-width: 312px;
   }
@@ -160,7 +160,7 @@ const dlgAction: DialogActionT[] = [
 .content-wrapper {
   margin: 0;
   display: none;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: block;
   }
 }

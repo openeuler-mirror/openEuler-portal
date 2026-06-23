@@ -246,7 +246,7 @@ watch(
   margin-bottom: 24px;
   @include h4;
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-bottom: 12px;
     @include h3;
   }
@@ -256,7 +256,7 @@ watch(
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
   height: calc(100% - 48px);
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     padding: 16px 24px;
     height: auto;
   }
@@ -280,13 +280,13 @@ watch(
       bottom: 0;
       width: 100%;
       height: 25px;
-      background-image: linear-gradient(180deg, rgba(var(--o-mixedgray-1), 0) 0%, rgba(var(--o-mixedgray-1), 1.0) 100%);
+      background-image: linear-gradient(180deg, rgba(var(--o-grey-1), 0) 0%, rgba(var(--o-grey-1), 1.0) 100%);
     }
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       margin-top: 0;
       height: auto;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       &::before {
         display: none;
       }
@@ -297,7 +297,7 @@ watch(
       align-items: center;
       & + .member-info {
         margin-top: 12px;
-        @include respond-to('<=laptop') {
+        @include respond('<=laptop') {
           margin-top: 8px;
         }
       }
@@ -307,7 +307,7 @@ watch(
         --avatar-gap: 16px;
         margin-right: auto;
         display: flex;
-        @include respond-to('<=laptop') {
+        @include respond('<=laptop') {
           --avatar-width: 32px;
         }
 
@@ -323,14 +323,14 @@ watch(
             font-weight: 500;
             @include tip1;
             @include text-truncate(1);
-            @include respond-to('<=pad_v') {
+            @include respond('<=pad_v') {
               @include text1;
             }
           }
           .member-name {
             color: var(--o-color-info4);
             @include tip2;
-            @include respond-to('<=pad_v') {
+            @include respond('<=pad_v') {
               @include text1;
             }
           }
@@ -366,7 +366,7 @@ watch(
   }
   .member-list-dark {
     &::before {
-      background-image: linear-gradient(180deg, rgba(var(--o-mixedgray-4), 0) 0%, rgba(var(--o-mixedgray-4), 1.0) 100%);
+      background-image: linear-gradient(180deg, rgba(var(--o-grey-4), 0) 0%, rgba(var(--o-grey-4), 1.0) 100%);
     }
   }
 }

@@ -182,7 +182,7 @@ const isSelfDomain = (url: string) => {
   }
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .banner-markdown {
     .wrap {
       .banner-btn {
@@ -200,7 +200,7 @@ const isSelfDomain = (url: string) => {
 }
 
 // 移动端样式
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .banner-markdown {
     background-color: unset;
     
@@ -232,7 +232,7 @@ const isSelfDomain = (url: string) => {
   }
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .banner-markdown {
     .wrap {
       .banner-btn {

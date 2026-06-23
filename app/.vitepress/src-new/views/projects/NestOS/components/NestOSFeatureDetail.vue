@@ -470,19 +470,19 @@ const verticalPadding = computed(() => {
   word-break: break-all;
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .detail-body {
     padding: 32px 36px;
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .detail-body {
     padding: 24px 28px;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .breadcrumb {
     margin-bottom: 24px;
   }

@@ -58,13 +58,13 @@ const faqList = computed(() => [
   @include title-margin-top3;
 }
 
-@include respond-to('>pc_b') {
+@include respond('>pc_b') {
   .internship-faq-container {
     padding: 32px;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .internship-faq-container {
     padding: 12px;
   }

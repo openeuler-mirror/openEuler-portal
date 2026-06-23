@@ -204,7 +204,7 @@ const isDark = computed(() => {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .item-row {
     padding: 16px;
     .item-content + .item-content {
@@ -212,7 +212,7 @@ const isDark = computed(() => {
     }
   }
 }
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .item-row {
     padding: 12px;
     .content {
@@ -232,7 +232,7 @@ const isDark = computed(() => {
     }
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .item-row {
     padding: 8px 0;
     flex-direction: column;

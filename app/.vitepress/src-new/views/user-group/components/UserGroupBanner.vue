@@ -78,7 +78,7 @@ const { lePadV } = useScreen();
     }
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     :deep(.banner-level2) {
       background-color: unset;
 

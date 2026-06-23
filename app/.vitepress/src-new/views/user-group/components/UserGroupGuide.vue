@@ -54,7 +54,7 @@ import IconWechat from '~icons/user-group/wechat.svg';
   :deep(.section-wrapper) {
     margin-top: var(--o-gap-7);
 
-    @include respond-to('phone') {
+    @include respond('phone') {
       margin-top: 28px;
     }
   }
@@ -139,7 +139,7 @@ import IconWechat from '~icons/user-group/wechat.svg';
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .guide {
     padding: var(--o-gap-3);
     flex-direction: column;
@@ -183,7 +183,7 @@ import IconWechat from '~icons/user-group/wechat.svg';
   }
 }
 
-@include respond-to('pad_v-laptop') {
+@include respond('pad_v-laptop') {
   .guide {
     flex-direction: column;
     gap: var(--o-gap-5);

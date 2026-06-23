@@ -40,7 +40,7 @@ li {
   &:first-of-type {
     margin-top: 0;
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     font-size: 12px;
     line-height: 18px;
     margin-top: 16px;

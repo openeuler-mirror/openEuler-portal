@@ -108,7 +108,7 @@ const toNewsContent = (path: string) => {
   }
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .sevent-section {
     :deep(.section-footer) {
       margin-top: var(--o-gap-5);
@@ -128,7 +128,7 @@ const toNewsContent = (path: string) => {
     }
   }
 }
-@include respond-to('pad_v') {
+@include respond('pad_v') {
   .news-list {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: var(--o-gap-3);
@@ -138,7 +138,7 @@ const toNewsContent = (path: string) => {
     }
   }
 }
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .news-list {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: var(--o-gap-6);

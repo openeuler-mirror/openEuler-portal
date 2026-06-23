@@ -384,10 +384,10 @@ watch(
 .app-section {
   --o-gap-section: 40px;
 
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     --o-gap-section: 32px;
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     --o-gap-section: 16px;
   }
 }
@@ -500,7 +500,7 @@ watch(
     90deg,
     rgba(var(--o-violet-6), 0.09) 0%,
     rgba(var(--o-violet-6), 0.2) 100%,
-    rgba(var(--o-mixedgray-1), 1) 100%
+    rgba(var(--o-grey-1), 1) 100%
   );
   filter: blur(0px);
   border-radius: var(--o-radius-xs);
@@ -516,7 +516,7 @@ watch(
       90deg,
       rgba(255, 161, 34, 0.09) 0%,
       rgba(255, 161, 34, 0.2) 100%,
-      rgba(var(--o-mixedgray-1), 1) 100%
+      rgba(var(--o-grey-1), 1) 100%
     );
   }
 }
@@ -526,7 +526,7 @@ watch(
       90deg,
       rgba(0, 167, 179, 0.09) 0%,
       rgba(0, 167, 179, 0.2) 100%,
-      rgba(var(--o-mixedgray-1), 1) 100%
+      rgba(var(--o-grey-1), 1) 100%
     );
   }
 }
@@ -536,7 +536,7 @@ watch(
       90deg,
       rgba(var(--o-kleinblue-6), 0.09) 0%,
       rgba(var(--o-kleinblue-6), 0.2) 100%,
-      rgba(var(--o-mixedgray-1), 1) 100%
+      rgba(var(--o-grey-1), 1) 100%
     );
   }
 }
@@ -745,7 +745,7 @@ watch(
   }
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .apply-card {
     height: 270px;
     background-position: center bottom;
@@ -776,7 +776,7 @@ watch(
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .apply-card {
     height: 270px;
     background-position: center bottom;
@@ -820,7 +820,7 @@ watch(
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   :deep(.el-collapse-item__header) {
     padding: 12px 16px;
     border-bottom: none;

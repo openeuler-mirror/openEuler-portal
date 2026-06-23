@@ -47,14 +47,14 @@ const isDark = computed(() => {
 <style lang="scss" scoped>
 .sig-agenda {
   margin-top: 72px;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 40px;
   }
 }
 .agenda {
   position: relative;
   margin-top: 53px;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 16px;
   }
 }
@@ -66,7 +66,7 @@ const isDark = computed(() => {
       padding-bottom: 18px;
       font-weight: 500;
       @include h3;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         padding-bottom: 4px;
       }
     }
@@ -80,7 +80,7 @@ const isDark = computed(() => {
   position: absolute;
   top: 0;
   right: 0;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     font-size: 16px;
   }
 }

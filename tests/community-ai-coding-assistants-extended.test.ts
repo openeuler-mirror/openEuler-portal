@@ -165,39 +165,39 @@ describe('LayoutAboutUs.vue — 移动端样式响应式适配', () => {
     expect(fs.existsSync(vuePath)).toBe(true);
   });
 
-  it('.about-markdown pre 在 respond-to("<=pad_v") 内包含 white-space: pre-wrap', () => {
+  it('.about-markdown pre 在 respond("<=pad_v") 内包含 white-space: pre-wrap', () => {
     const content = fs.readFileSync(vuePath, 'utf8');
     const scssContent = content.substring(content.indexOf('<style'));
     expect(scssContent).toMatch(
-      /pre\s*\{[^}]*@include respond-to\('<=pad_v'\)\s*\{[^}]*white-space:\s*pre-wrap/
+      /pre\s*\{[^}]*@include respond\('<=pad_v'\)\s*\{[^}]*white-space:\s*pre-wrap/
     );
   });
 
-  it('.about-markdown pre 在 respond-to("<=pad_v") 内包含 word-break: break-word', () => {
+  it('.about-markdown pre 在 respond("<=pad_v") 内包含 word-break: break-word', () => {
     const content = fs.readFileSync(vuePath, 'utf8');
     const scssContent = content.substring(content.indexOf('<style'));
-    expect(scssContent).toMatch(/@include respond-to\('<=pad_v'\)\s*\{[^}]*word-break:\s*break-word/);
+    expect(scssContent).toMatch(/@include respond\('<=pad_v'\)\s*\{[^}]*word-break:\s*break-word/);
   });
 
-  it('.about-markdown code 在 respond-to("<=pad_v") 内包含 font-size 降级', () => {
+  it('.about-markdown code 在 respond("<=pad_v") 内包含 font-size 降级', () => {
     const content = fs.readFileSync(vuePath, 'utf8');
     const scssContent = content.substring(content.indexOf('<style'));
     const codeBlockMatch = scssContent.match(
-      /code\s*\{[^}]*@include respond-to\('<=pad_v'\)\s*\{[^}]*font-size:\s*var\(--e-font-size-tip\)/s
+      /code\s*\{[^}]*@include respond\('<=pad_v'\)\s*\{[^}]*font-size:\s*var\(--e-font-size-tip\)/s
     );
     expect(codeBlockMatch).toBeDefined();
   });
 
-  it('.about-markdown code 在 respond-to("<=pad_v") 内包含 line-height 降级', () => {
+  it('.about-markdown code 在 respond("<=pad_v") 内包含 line-height 降级', () => {
     const content = fs.readFileSync(vuePath, 'utf8');
     const scssContent = content.substring(content.indexOf('<style'));
     const codeBlockMatch = scssContent.match(
-      /code\s*\{[^}]*@include respond-to\('<=pad_v'\)\s*\{[^}]*line-height:\s*var\(--e-line-height-tip\)/s
+      /code\s*\{[^}]*@include respond\('<=pad_v'\)\s*\{[^}]*line-height:\s*var\(--e-line-height-tip\)/s
     );
     expect(codeBlockMatch).toBeDefined();
   });
 
-  it('新增的移动端样式使用 respond-to mixin 而非硬编码 @media', () => {
+  it('新增的移动端样式使用 respond mixin 而非硬编码 @media', () => {
     const content = fs.readFileSync(vuePath, 'utf8');
     const scssContent = content.substring(content.indexOf('<style'));
     const aboutMarkdownSection = scssContent.substring(
@@ -206,8 +206,8 @@ describe('LayoutAboutUs.vue — 移动端样式响应式适配', () => {
     const preSection = aboutMarkdownSection.substring(
       aboutMarkdownSection.indexOf('pre {')
     );
-    const respondToBlocks = preSection.match(/@include respond-to\('<=pad_v'\)\s*\{/g);
-    expect(respondToBlocks, 'pre 和 code 应各有一处 respond-to').toHaveLength(2);
+    const respondToBlocks = preSection.match(/@include respond\('<=pad_v'\)\s*\{/g);
+    expect(respondToBlocks, 'pre 和 code 应各有一处 respond').toHaveLength(2);
   });
 });
 

@@ -64,7 +64,7 @@ const windowWidth = ref(useWindowResize());
       display: none;
     }
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin: var(--o-gap-4) 0 0 var(--o-gap-4);
     &::before {
       width: 1px;
@@ -97,7 +97,7 @@ const windowWidth = ref(useWindowResize());
     left: -32px;
     background-color: var(--o-color-primary1);
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     width: 128px;
     &::before {
       width: 8px;
@@ -138,7 +138,7 @@ const windowWidth = ref(useWindowResize());
       }
     }
 
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       flex-direction: column;
       align-items: flex-start;
     }
@@ -150,7 +150,7 @@ const windowWidth = ref(useWindowResize());
         @include text1;
       }
 
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: var(--o-gap-3);
         margin-left: 6px;
       }
@@ -181,7 +181,7 @@ const windowWidth = ref(useWindowResize());
       margin-left: var(--o-gap-4);
     }
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: var(--o-gap-4);
     background-size: cover;
     background-position: top;

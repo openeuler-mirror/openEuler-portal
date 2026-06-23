@@ -266,7 +266,7 @@ html[lang='zh'] {
         }
       }
 
-      @media screen and (max-width: 1440px) {
+      @media screen and (max-width: 1680px) {
         padding: 0 16px;
       }
       @media screen and (max-width: 824px) {

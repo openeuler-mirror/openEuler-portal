@@ -178,20 +178,20 @@ onMounted(() => {
   overflow-y: auto;
   white-space: nowrap;
   padding: 32px 0 36px;
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     padding: 16px 0 24px;
   }
 
-  @include respond-to('<=pad') {
+  @include respond('<=pad') {
     padding: 12px 0 24px;
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding-bottom: 0;
     --scroller-padding: 0 var(--layout-content-padding);
   }
 
-  @include respond-to('phone') {
+  @include respond('phone') {
     padding: 12px 0 0;
   }
   :deep(.o-scrollbar) {
@@ -212,24 +212,24 @@ onMounted(() => {
     margin-left: var(--trend-card-gap);
   }
 
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     --trend-card-gap: 24px;
     --card-main-padding: 24px;
     --card-content-gap: 18px;
   }
 
-  @include respond-to('<=pad') {
+  @include respond('<=pad') {
     --trend-card-gap: 18px;
     --card-main-padding: 18px;
     --card-content-gap: 12px;
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     width: calc((100% - var(--trend-card-gap) * 2) / 2.5);
     --card-content-gap: 12px;
   }
 
-  @include respond-to('phone') {
+  @include respond('phone') {
     width: calc(50vw - 30px);
     --trend-card-gap: 12px;
     --card-main-padding: 12px;

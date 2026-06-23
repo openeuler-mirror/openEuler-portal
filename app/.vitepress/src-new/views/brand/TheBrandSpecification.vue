@@ -86,19 +86,19 @@ const isDark = computed(() => {
       flex-shrink: 0;
     }
 
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       .o-figure {
         width: 374px;
         margin-left: 24px;
       }
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       .o-figure {
         width: 300px;
         margin-left: 16px;
       }
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       .item-box {
         display: flex;
         flex-direction: column;
@@ -112,14 +112,14 @@ const isDark = computed(() => {
   }
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .item-box {
     .o-figure {
       margin-top: 24px;
     }
   }
 }
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .item-box {
     padding: 16px;
     .o-figure {
@@ -127,7 +127,7 @@ const isDark = computed(() => {
     }
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .item-box {
     padding: 12px;
     .o-figure {

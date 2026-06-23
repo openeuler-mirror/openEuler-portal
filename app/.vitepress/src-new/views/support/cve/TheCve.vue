@@ -182,18 +182,10 @@ const columnsGlossary = [
 ];
 
 // -------------------- 搜索 input字段做防抖处理 -------------------
-const updataKeyword = (val: string) => {
+const searchValue = ref();
+const onInput = useDebounceSearch((val: string) => {
   queryData.keyword = val;
-};
-const debounceTextFn = useDebounceSearch(updataKeyword, 300);
-const debounceSearch = computed({
-  get() {
-    return queryData.keyword;
-  },
-  set(val) {
-    debounceTextFn(val as string);
-  },
-});
+}, 300);
 
 // -------------------- 表格数据 --------------------
 const tableData = ref<CveListsT[]>([]);
@@ -327,10 +319,12 @@ onUnmounted(() => {
           <span>{{ t('cve.glossary') }}</span>
         </OButton>
         <OInput
-          v-model="debounceSearch"
+          v-model="searchValue"
           :placeholder="t('cve.searchCve')"
+          @input="(e) => onInput(e.target?.value)"
           size="large"
           clearable
+          @clear="onInput('')"
           class="input-search"
         >
           <template #prefix>
@@ -404,9 +398,12 @@ onUnmounted(() => {
   </AppSection>
   <AppSection v-else>
     <OInput
-      v-model="debounceSearch"
+      v-model="searchValue"
       :placeholder="t('cve.searchCve')"
+      @input="(e) => onInput(e.target?.value)"
       size="large"
+      clearable
+      @clear="onInput('')"
       class="input-search-mb"
     >
       <template #prefix>
@@ -567,10 +564,10 @@ onUnmounted(() => {
 .app-section {
   --o-gap-section: 40px;
 
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     --o-gap-section: 32px;
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     --o-gap-section: 16px;
   }
 }
@@ -767,7 +764,7 @@ ul {
   list-style-type: disc;
   padding-left: 16px;
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .app-section {
     &:last-child {
       :deep(.section-wrapper) {

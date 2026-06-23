@@ -72,7 +72,7 @@ const { t } = useLocale();
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .intelligence-banner {
     &.banner-level2 {
       background-color: unset;

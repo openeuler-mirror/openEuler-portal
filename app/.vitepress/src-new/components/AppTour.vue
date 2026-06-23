@@ -368,7 +368,7 @@ onUnmounted(() => {
   .tour-close {
     width: 32px;
     height: 32px;
-    background-color: rgba(var(--o-mixedgray-14), 0.25);
+    background-color: rgba(var(--o-grey-14), 0.25);
     border-radius: 50%;
     font-size: 24px;
     color: var(--o-color-fill2);
@@ -507,7 +507,7 @@ onUnmounted(() => {
   .tour-close {
     width: 32px;
     height: 32px;
-    background-color: rgba(var(--o-mixedgray-14), 0.25);
+    background-color: rgba(var(--o-grey-14), 0.25);
     border-radius: 50%;
     font-size: 24px;
     color: var(--o-color-fill2);
@@ -539,7 +539,7 @@ onUnmounted(() => {
   }
 }
 
-[data-o-theme='dark'] {
+[data-o-theme='e.dark'] {
   .change-tour {
     .el-tour__content {
       background: #1a1a1c;

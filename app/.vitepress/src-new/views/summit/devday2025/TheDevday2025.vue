@@ -34,7 +34,7 @@ import data from './data/data_zh';
   margin-bottom: 40px;
   text-align: center;
   position: relative;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     font-size: 18px;
     line-height: 26px;
     margin-bottom: 16px;
@@ -45,7 +45,7 @@ import data from './data/data_zh';
     left: 50%;
     transform: translateX(-50%);
     height: 31px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       height: 18px;
       top: -4px;
     }

@@ -41,7 +41,7 @@ const { isEn } = useLocale();
 
 <style lang="scss" scoped>
 .friendly-community-section {
-  @include respond-to('>phone') {
+  @include respond('>phone') {
     :deep(.section-subtitle) {
       width: 90%;
       text-align: center;
@@ -76,7 +76,7 @@ const { isEn } = useLocale();
     height: 90px;
   }
 
-  @include respond-to('>pad') {
+  @include respond('>pad') {
     /* 情况1：最后一行只有1个元素 */
     .community:nth-last-child(1):nth-child(4n + 1) {
       grid-column: 2 / 4; /* 让单个元素占据第2-3列中间位置 */
@@ -102,7 +102,7 @@ const { isEn } = useLocale();
     }
   }
 
-  @include respond-to('pad_v-laptop') {
+  @include respond('pad_v-laptop') {
     padding: 24px 72px;
 
     .community-logo {
@@ -111,11 +111,11 @@ const { isEn } = useLocale();
     }
   }
 
-  @include respond-to('pad_h') {
+  @include respond('pad_h') {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  @include respond-to('pad_v') {
+  @include respond('pad_v') {
     padding: 12px 0;
     row-gap: 36px;
 
@@ -133,7 +133,7 @@ const { isEn } = useLocale();
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  @include respond-to('phone') {
+  @include respond('phone') {
     padding: 12px 0;
     display: flex;
     flex-wrap: wrap;

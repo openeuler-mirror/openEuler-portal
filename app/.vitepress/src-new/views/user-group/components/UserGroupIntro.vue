@@ -185,7 +185,7 @@ const { t } = useI18n();
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .intro-section {
     :deep(.section-subtitle) {
       text-align: unset;
@@ -236,7 +236,7 @@ const { t } = useI18n();
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .intro-list {
     flex-direction: column;
 

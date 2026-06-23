@@ -29,18 +29,18 @@ import { devday2026s } from '#cms'
   margin-top: 72px;
   @include display3;
 
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     margin-top: 56px;
   }
-  @include respond-to('<=pad') {
+  @include respond('<=pad') {
     margin-top: 40px;
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 32px;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .content-wrapper {
     --content-wrapper-vertical-paddingBottom: 40px !important;
   }

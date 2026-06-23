@@ -428,10 +428,10 @@ const handleConfirm = () => {
 .app-section {
   --o-gap-section: 40px;
 
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     --o-gap-section: 32px;
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     --o-gap-section: 16px;
   }
 }
@@ -575,13 +575,13 @@ const handleConfirm = () => {
   --result-desc-color: var(--o-color-info1);
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .card-content {
     padding: 24px;
   }
 }
 
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .card-content {
     .title {
       white-space: normal;
@@ -589,7 +589,7 @@ const handleConfirm = () => {
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .tags {
     .o-tag {
       :deep(.o-tag-label) {
@@ -620,7 +620,7 @@ const handleConfirm = () => {
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .event-latest {
     min-height: calc(100vh - 250px);
   }
@@ -689,14 +689,14 @@ const handleConfirm = () => {
   }
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .card-content {
     padding: 16px 16px 0;
   }
 }
 </style>
 <style lang="scss">
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .filter-body {
     --layer-align: flex-end;
     --dlg-margin: 16px;

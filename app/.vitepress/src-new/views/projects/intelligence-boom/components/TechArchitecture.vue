@@ -416,7 +416,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
   .bottom-block {
     flex: 0 0 124px;
 
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       flex: 0 0 114px;
     }
   }

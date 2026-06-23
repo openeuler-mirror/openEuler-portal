@@ -118,25 +118,25 @@ const gap = computed(() => {
   --icon-size: 24px;
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .ql-icon {
     --icon-size: 16px;
   }
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .ql-card {
     padding: 24px 24px 16px;
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .ql-card {
     padding: 16px 16px 8px;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .ql-card {
     padding: 12px;
   }

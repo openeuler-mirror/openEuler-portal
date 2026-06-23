@@ -550,7 +550,7 @@ const onClickLink = (item: any) => {
   background-color: var(--o-color-fill2);
   padding: 32px;
   border-radius: var(--o-radius-xs);
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 16px;
     padding: 12px;
   }
@@ -560,13 +560,13 @@ const onClickLink = (item: any) => {
   }
   .filter-box {
     margin-top: 24px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 16px;
     }
     .filter-card {
       display: flex;
       align-items: center;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 12px;
         justify-content: flex-start;
         flex-direction: column;
@@ -577,18 +577,18 @@ const onClickLink = (item: any) => {
         min-width: 64px;
         margin-right: 32px;
         @include text1;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           min-width: auto;
         }
       }
       .o-radio-group {
         .o-radio + .o-radio {
           margin-left: 8px;
-          @include respond-to('<=laptop') {
+          @include respond('<=laptop') {
             margin-left: 0;
           }
         }
-        @include respond-to('<=laptop') {
+        @include respond('<=laptop') {
           .o-radio {
             margin: 8px 8px 0 0;
           }
@@ -601,7 +601,7 @@ const onClickLink = (item: any) => {
     }
     .filter-card:not(:first-child) {
       margin-top: 8px;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 12px;
       }
     }

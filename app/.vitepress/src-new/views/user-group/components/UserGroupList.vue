@@ -60,30 +60,30 @@ const { lang } = useData();
       font-weight: 500;
       color: rgba(var(--o-white));
 
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         @include h2;
       }
     }
   }
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .city-list {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: var(--o-gap-3);
   }
 }
-@include respond-to('pad_v') {
+@include respond('pad_v') {
   .city-list {
     grid-gap: var(--o-gap-4);
   }
 }
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .city-list {
     grid-gap: var(--o-gap-5);
   }
 }
-@include respond-to('laptop') {
+@include respond('laptop') {
   .city-list {
     grid-gap: var(--o-gap-6);
   }

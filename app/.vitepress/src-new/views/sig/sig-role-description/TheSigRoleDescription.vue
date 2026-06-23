@@ -313,13 +313,13 @@ const reportSectionLinkClick = (
     --breadcrumb-color-hover: var(--o-color-primary1);
     --breadcrumb-color-active: var(--o-color-primary1);
     --breadcrumb-color-selected: var(--o-color-primary1);
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: none;
     }
   }
 
   :deep(.banner-level3) {
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: none;
     }
   }
@@ -336,7 +336,7 @@ const reportSectionLinkClick = (
 
     :deep(.section-subtitle) {
       max-width: 1305px;
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         white-space: normal;
         text-align: left;
         @include text2;
@@ -349,15 +349,15 @@ const reportSectionLinkClick = (
       grid-gap: 32px;
       color: rgba(var(--o-black));
 
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         grid-gap: 24px;
       }
 
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         grid-gap: 16px;
       }
 
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 12px;
       }
@@ -371,15 +371,15 @@ const reportSectionLinkClick = (
         border-radius: 4px;
         position: relative;
 
-        @include respond-to('<=laptop') {
+        @include respond('<=laptop') {
           padding: 24px;
         }
 
-        @include respond-to('<=pad') {
+        @include respond('<=pad') {
           padding: 16px;
         }
 
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           padding: 16px;
           min-height: 152px;
         }
@@ -388,10 +388,10 @@ const reportSectionLinkClick = (
           position: absolute;
           width: 54%;
           top: 20px;
-          @include respond-to('<=pad') {
+          @include respond('<=pad') {
             top: 14px;
           }
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             width: 182px;
           }
         }
@@ -409,11 +409,11 @@ const reportSectionLinkClick = (
           div {
             padding-top: 8px;
 
-            @include respond-to('<=laptop') {
+            @include respond('<=laptop') {
               padding-top: 6px;
             }
 
-            @include respond-to('<=pad') {
+            @include respond('<=pad') {
               padding-top: 4px;
             }
           }
@@ -425,15 +425,15 @@ const reportSectionLinkClick = (
           margin-top: 20px;
           @include text1;
 
-          @include respond-to('<=laptop') {
+          @include respond('<=laptop') {
             margin-top: 18px;
           }
 
-          @include respond-to('<=pad') {
+          @include respond('<=pad') {
             margin-top: 16px;
           }
 
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             font-size: var(--e-font-size-text);
           }
 
@@ -450,17 +450,17 @@ const reportSectionLinkClick = (
       grid-gap: 32px;
       margin-top: 32px;
 
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         grid-gap: 24px;
         margin-top: 24px;
       }
 
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         grid-gap: 16px;
         margin-top: 16px;
       }
 
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         grid-template-columns: repeat(1, 1fr);
         margin-top: 12px;
         grid-gap: 16px;
@@ -473,30 +473,30 @@ const reportSectionLinkClick = (
         background-color: var(--o-color-fill2);
         border-radius: 4px;
 
-        @include respond-to('<=laptop') {
+        @include respond('<=laptop') {
           padding: 20px 28px;
         }
 
-        @include respond-to('<=pad') {
+        @include respond('<=pad') {
           padding: 16px 24px;
         }
 
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           padding: 12px;
         }
 
         .item-icon {
           font-size: 48px;
 
-          @include respond-to('<=laptop') {
+          @include respond('<=laptop') {
             font-size: 42px;
           }
 
-          @include respond-to('<=pad') {
+          @include respond('<=pad') {
             font-size: 38px;
           }
 
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             font-size: 32px;
           }
         }
@@ -504,7 +504,7 @@ const reportSectionLinkClick = (
         .item-right {
           margin-left: 16px;
 
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             margin-left: 12px;
           }
 
@@ -517,15 +517,15 @@ const reportSectionLinkClick = (
             margin-top: 18px;
             @include text1;
 
-            @include respond-to('<=laptop') {
+            @include respond('<=laptop') {
               margin-top: 16px;
             }
 
-            @include respond-to('<=pad') {
+            @include respond('<=pad') {
               margin-top: 12px;
             }
 
-            @include respond-to('<=pad_v') {
+            @include respond('<=pad_v') {
               margin-top: 8px;
             }
           }
@@ -541,7 +541,7 @@ const reportSectionLinkClick = (
       div + div {
         margin-top: 8px;
       }
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         white-space: normal;
       }
     }
@@ -550,15 +550,15 @@ const reportSectionLinkClick = (
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 32px;
 
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         grid-gap: 24px;
       }
 
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         grid-gap: 16px;
       }
 
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 12px;
       }
@@ -571,7 +571,7 @@ const reportSectionLinkClick = (
         border-radius: 4px;
         background-color: var(--o-color-fill2);
 
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           padding: 16px;
         }
 
@@ -582,16 +582,16 @@ const reportSectionLinkClick = (
           .icon-requrement {
             margin-right: 8px;
             width: 32px;
-            @include respond-to('laptop') {
+            @include respond('laptop') {
               width: 20px;
             }
-            @include respond-to('pad_h') {
+            @include respond('pad_h') {
               width: 20px;
             }
-            @include respond-to('pad_v') {
+            @include respond('pad_v') {
               width: 18px;
             }
-            @include respond-to('phone') {
+            @include respond('phone') {
               width: 16px;
             }
           }
@@ -607,7 +607,7 @@ const reportSectionLinkClick = (
             font-weight: 500;
             @include text1;
 
-            @include respond-to('<=pad_v') {
+            @include respond('<=pad_v') {
               margin-top: 4px;
             }
           }
@@ -618,7 +618,7 @@ const reportSectionLinkClick = (
           color: var(--o-color-info2);
           @include tip1;
 
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             padding-top: 6px;
           }
 
@@ -627,7 +627,7 @@ const reportSectionLinkClick = (
             align-items: start;
             padding-bottom: 16px;
 
-            @include respond-to('<=pad_v') {
+            @include respond('<=pad_v') {
               padding-bottom: 6px;
             }
 
@@ -635,11 +635,11 @@ const reportSectionLinkClick = (
               margin: 0 8px;
               @include h2;
 
-              @include respond-to('<=laptop') {
+              @include respond('<=laptop') {
                 margin: 0 4px;
               }
 
-              @include respond-to('<=pad_v') {
+              @include respond('<=pad_v') {
                 margin-right: 4px;
               }
             }
@@ -669,7 +669,7 @@ const reportSectionLinkClick = (
     .section-committer {
       grid-template-columns: 3fr 7fr;
 
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 12px;
       }

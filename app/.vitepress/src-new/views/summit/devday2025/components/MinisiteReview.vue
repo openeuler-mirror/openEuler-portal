@@ -35,7 +35,7 @@ const isDark = computed(() => {
 <style lang="scss" scoped>
 .review {
   margin-top: 72px;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 40px;
   }
 }
@@ -43,14 +43,14 @@ const isDark = computed(() => {
   margin-top: var(--o-gap-7);
   width: 100%;
   text-align: center;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     width: 100%;
     margin-top: var(--o-gap-3);
   }
   p {
     & ~ p {
       margin-top: var(--o-gap-5);
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: var(--o-gap-4);
       }
     }
@@ -60,7 +60,7 @@ const isDark = computed(() => {
       @include text2;
       & + a {
         margin-top: var(--o-gap-3);
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           margin-top: var(--o-gap-2);
         }
       }

@@ -559,7 +559,7 @@ const blur = () => {
 }
 
 .mo-banner {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 16px 24px;
     .mo-title {
       font-weight: 500;
@@ -569,7 +569,7 @@ const blur = () => {
       margin-top: 12px;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }
@@ -579,10 +579,10 @@ const blur = () => {
 .app-section {
   --o-gap-section: 40px;
 
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     --o-gap-section: 32px;
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     --o-gap-section: 0;
     --o-gap-t2c: 0;
   }
@@ -629,7 +629,7 @@ const blur = () => {
     svg {
       display: none;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       mask: url('~@/assets/svg-icons/icon-calendar.svg') no-repeat center / 16px;
     }
   }
@@ -650,7 +650,7 @@ const blur = () => {
     @include hover {
       @include x-hover;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       mask: url('~@/assets/svg-icons/icon-close.svg') no-repeat center/16px;
     }
   }
@@ -663,7 +663,7 @@ const blur = () => {
       }
       .el-range__close-icon {
         width: 24px;
-        @include respond-to('phone') {
+        @include respond('phone') {
           width: 16px;
         }
       }
@@ -677,7 +677,7 @@ const blur = () => {
     }
     .el-range__close-icon {
       width: 24px;
-      @include respond-to('phone') {
+      @include respond('phone') {
         width: 16px;
       }
     }
@@ -804,21 +804,21 @@ const blur = () => {
   margin-top: 16px;
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   :deep(.el-date-editor) {
     .el-range-input {
       @include text2;
     }
   }
 }
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   :deep(.el-date-editor) {
     .el-range-input {
       @include h4;
     }
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .time {
     color: var(--o-color-info2);
     margin-bottom: 8px;
@@ -897,7 +897,7 @@ const blur = () => {
 .el-picker__popper {
   --el-popper-border-radius: var(--o-radius-xs);
 }
-@include respond-to('phone') {
+@include respond('phone') {
   .el-picker__popper {
     width: calc(100% - 48px) !important;
   }

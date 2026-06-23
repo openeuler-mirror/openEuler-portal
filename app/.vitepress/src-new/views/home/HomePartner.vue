@@ -38,15 +38,15 @@ const publisher3 = Array(5).fill(publisher.slice(16)).flat();
   & + .partner-swiper {
     margin-top: 24px;
 
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       margin-top: 20px;
     }
 
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       margin-top: 16px;
     }
 
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 12px;
     }
   }

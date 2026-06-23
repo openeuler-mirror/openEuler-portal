@@ -45,7 +45,7 @@ const { isPhone } = useScreen();
 .talent-certification-card {
   margin-top: 40px;
   color: var(--o-color-info1);
-  @include respond-to('phone') {
+  @include respond('phone') {
     margin-top: 16px;
     background-color: transparent;
     :deep(.o-card-main) {
@@ -60,10 +60,10 @@ const { isPhone } = useScreen();
       margin-right: 40px;
       overflow: hidden;
       border-radius: var(--o-radius-xs);
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         max-width: 300px;
       }
-      @include respond-to('phone') {
+      @include respond('phone') {
         display: none;
       }
     }
@@ -79,14 +79,14 @@ const { isPhone } = useScreen();
       .o-btn {
         margin-top: 24px;
       }
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         padding: 16px;
         .o-btn {
           margin-top: 12px;
           width: min-content;
         }
       }
-      @include respond-to('phone') {
+      @include respond('phone') {
         padding: 0;
         align-items: center;
         .o-btn {

@@ -57,26 +57,26 @@ defineProps({
 .agenda-box {
   &:nth-of-type(1) {
     .agenda-card {
-      background-image: url('../img/agenda_bg1.png'), linear-gradient(135deg, rgba(var(--o-mixedgray-1), 1), rgba(245,249,255,1) 100%);
+      background-image: url('../img/agenda_bg1.png'), linear-gradient(135deg, rgba(var(--o-grey-1), 1), rgba(245,249,255,1) 100%);
     }
     .agenda-card-dark {
-      background-image: url('../img/agenda_bg1.png'), linear-gradient(135deg, rgba(var(--o-mixedgray-4), 1), rgba(25, 37, 66, 1) 100%);
+      background-image: url('../img/agenda_bg1.png'), linear-gradient(135deg, rgba(var(--o-grey-4), 1), rgba(25, 37, 66, 1) 100%);
     }
   }
   &:nth-of-type(2) {
     .agenda-card {
-      background-image: url('../img/agenda_bg2.png'), linear-gradient(135deg, rgba(var(--o-mixedgray-1), 1), rgba(245,249,255,1) 100%);
+      background-image: url('../img/agenda_bg2.png'), linear-gradient(135deg, rgba(var(--o-grey-1), 1), rgba(245,249,255,1) 100%);
     }
     .agenda-card-dark {
-      background-image: url('../img/agenda_bg2.png'), linear-gradient(135deg, rgba(var(--o-mixedgray-4), 1), rgba(25, 37, 66, 1) 100%);
+      background-image: url('../img/agenda_bg2.png'), linear-gradient(135deg, rgba(var(--o-grey-4), 1), rgba(25, 37, 66, 1) 100%);
     }
   }
   &:nth-of-type(3) {
     .agenda-card {
-      background-image: url('../img/agenda_bg3.png'), linear-gradient(135deg, rgba(var(--o-mixedgray-1), 1), rgba(245,249,255,1) 100%);
+      background-image: url('../img/agenda_bg3.png'), linear-gradient(135deg, rgba(var(--o-grey-1), 1), rgba(245,249,255,1) 100%);
     }
     .agenda-card-dark {
-      background-image: url('../img/agenda_bg3.png'), linear-gradient(135deg, rgba(var(--o-mixedgray-4), 1), rgba(25, 37, 66, 1) 100%);
+      background-image: url('../img/agenda_bg3.png'), linear-gradient(135deg, rgba(var(--o-grey-4), 1), rgba(25, 37, 66, 1) 100%);
     }
   }
 }
@@ -120,7 +120,7 @@ defineProps({
   color: var(--o-color-info3);
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .date {
     margin-top: 24px;
   }
@@ -145,7 +145,7 @@ defineProps({
     margin-left: 24px;
   }
 }
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .time {
     width: 124px;
     .o-icon {
@@ -164,7 +164,7 @@ defineProps({
     margin-left: 16px;
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .date {
     margin-top: 16px;
   }

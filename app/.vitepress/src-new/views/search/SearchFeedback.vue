@@ -339,35 +339,35 @@ onMounted(() => {
     background: var(--o-color-fill1);
     margin: 40px 0 0;
     border-radius: var(--o-radius-xs);
-    @include respond-to('<=pad') {
+    @include respond('<=pad') {
       margin: 24px 0;
       border-radius: 8px;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       padding: 16px;
       margin: 24px 0;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       background: var(--o-color-fill2);
       margin: 0 0 12px;
     }
     .top {
       display: flex;
       align-items: center;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         flex-direction: column;
         align-items: flex-start;
       }
       .action {
         margin: 0 0 0 72px;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           margin: 12px 0 0;
         }
       }
     }
     .search-feedback-content {
       padding-left: 32px;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         padding: 0;
       }
     }
@@ -393,7 +393,7 @@ onMounted(() => {
       position: absolute;
       top: calc(100% + 24px);
       left: 0;
-      @include respond-to('phone') {
+      @include respond('phone') {
         top: calc(50% - 24px);
       }
     }
@@ -420,7 +420,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   margin: 16px 0 0;
-  @include respond-to('phone') {
+  @include respond('phone') {
     width: 100%;
   }
   .o-btn + .o-btn {
@@ -432,12 +432,12 @@ onMounted(() => {
   :deep(.o-textarea) {
     width: 100%;
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     margin: 12px 0 0;
   }
 }
 :deep(.o-btn) {
-  @include respond-to('phone') {
+  @include respond('phone') {
     flex: 1;
   }
   .o-btn-prefix {
@@ -446,7 +446,7 @@ onMounted(() => {
       width: 24px;
       height: 24px;
       fill: currentColor;
-      @include respond-to('phone') {
+      @include respond('phone') {
         width: 16px;
         height: 16px;
       }

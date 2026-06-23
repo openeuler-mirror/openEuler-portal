@@ -206,7 +206,7 @@ const mobileClick = () => {
   box-shadow: var(--o-shadow-1);
   backdrop-filter: blur(5px);
 
-  @include respond-to('>pad_v') {
+  @include respond('>pad_v') {
     &.dark {
       &:after {
         content: '';
@@ -247,10 +247,10 @@ const mobileClick = () => {
   .app-header-wrap {
     display: flex;
     align-items: center;
-    @include respond-to('>pad_v') {
+    @include respond('>pad_v') {
       height: 80px;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       height: 48px;
       justify-content: space-between;
       position: relative;
@@ -264,19 +264,19 @@ const mobileClick = () => {
 .logo {
   cursor: pointer;
 
-  @include respond-to('>pad_v') {
+  @include respond('>pad_v') {
     height: 32px;
     width: 136px;
     margin-right: var(--o-gap-7);
 
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       margin-right: 28px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       margin-right: var(--o-gap-2);
     }
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     height: 24px;
     width: 136px;
     position: absolute;

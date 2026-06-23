@@ -440,14 +440,14 @@ const gap = computed(() => {
 }
 
 .mo-banner {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 24px 24px 20px;
     .mo-title {
       font-weight: 500;
       @include display3;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }
@@ -456,7 +456,7 @@ const gap = computed(() => {
 
 .blog-section {
   :deep(.section-wrapper) {
-    @include respond-to('phone') {
+    @include respond('phone') {
       margin-top: 16px;
     }
   }
@@ -598,7 +598,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .filter-box {
     padding: 16px 24px;
   }
@@ -619,7 +619,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .label {
     margin-right: 16px;
   }
@@ -643,7 +643,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .filter-box {
     background-color: transparent;
     flex-direction: column;
@@ -696,7 +696,7 @@ const gap = computed(() => {
 }
 </style>
 <style lang="scss">
-@include respond-to('phone') {
+@include respond('phone') {
   .blog-select {
     --option-list-max-height-default: 200px;
   }

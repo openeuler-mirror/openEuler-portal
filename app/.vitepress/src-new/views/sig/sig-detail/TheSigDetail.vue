@@ -440,7 +440,7 @@ onUnmounted(() => {
   grid-template-columns: 348px 1fr;
   gap: 32px;
   width: 100%;
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     display: block;
   }
 
@@ -449,13 +449,13 @@ onUnmounted(() => {
     font-weight: 500;
     display: none;
     @include h4;
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       display: block;
     }
   }
 
   .sig-member-pc {
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       display: none;
     }
   }
@@ -506,7 +506,7 @@ onUnmounted(() => {
     .meeting-card {
       position: relative;
       margin-top: 24px;
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         margin-top: 12px;
       }
     }
@@ -536,7 +536,7 @@ onUnmounted(() => {
 
     .sig-member-mo {
       display: none;
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         margin-top: 12px;
         display: block;
       }
@@ -546,18 +546,18 @@ onUnmounted(() => {
 
 .sig-detail-info-card {
   margin-top: 32px;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 0;
   }
 }
 
 .breadcrumb {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: none;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .content-wrapper {
     --content-wrapper-vertical-paddingTop: 16px !important;
   }

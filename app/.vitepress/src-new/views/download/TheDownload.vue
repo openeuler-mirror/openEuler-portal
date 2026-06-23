@@ -81,9 +81,9 @@ const reportDownload = (data: Record<string, any>) => {
     height: 48px;
     backdrop-filter: blur(10px);
     z-index: 10;
-    background-color: rgba($color: var(--o-mixedgray-1), $alpha: 0.25);
+    background-color: rgba($color: var(--o-grey-1), $alpha: 0.25);
     @include text1;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: none;
     }
 
@@ -124,6 +124,6 @@ const reportDownload = (data: Record<string, any>) => {
     }
 }
 .dark {
-  background-color: rgba($color: var(--o-mixedgray-4), $alpha: 0.25);
+  background-color: rgba($color: var(--o-grey-4), $alpha: 0.25);
 }
 </style>

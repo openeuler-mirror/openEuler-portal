@@ -62,7 +62,7 @@ const isDark = computed(() => {
 <style lang="scss" scoped>
 .topic {
   margin-top: 72px;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 40px;
   }
 }
@@ -100,7 +100,7 @@ const isDark = computed(() => {
         font-size: var(--o-icon_size-m);
         margin-right: var(--o-gap-1);
 
-        @include respond-to('<=laptop') {
+        @include respond('<=laptop') {
           font-size: var(--o-icon_size-xs);
         }
       }
@@ -166,7 +166,7 @@ const isDark = computed(() => {
   background-position: top left;
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .item-topic {
     width: calc(50% - 12px);
     min-height: 196px;
@@ -178,7 +178,7 @@ const isDark = computed(() => {
   }
 }
 
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .item-topic {
     width: 100%;
     height: auto !important;
@@ -191,7 +191,7 @@ const isDark = computed(() => {
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .item-topic {
     width: 100%;
     min-height: 132px;
@@ -211,7 +211,7 @@ const isDark = computed(() => {
   margin-bottom: 40px;
   @include h4;
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     font-size: 12px;
     line-height: 18px;
     margin-bottom: 16px;

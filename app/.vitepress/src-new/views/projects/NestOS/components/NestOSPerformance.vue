@@ -155,19 +155,19 @@ onBeforeUnmount(() => {
   @include tip2;
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .performance-card {
     padding: 24px;
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .performance-card {
     padding: 20px;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .performance-card {
     padding: 16px;
   }

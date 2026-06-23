@@ -1,5 +1,7 @@
-@use '../mixin//common.scss' as *;
-
+.o-link {
+  display: inline-flex;
+}
 .o-link-normal {
+  --link-color: var(--o-color-info2);
   --link-color-hover: var(--o-color-link1);
 }

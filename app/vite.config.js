@@ -28,7 +28,7 @@ export default defineConfig({
         charset: false,
         api: 'modern-compiler',
         additionalData: `
-        @use "~@/assets/style/mixin/screen.scss" as *;
+        @use "@opensig/opendesign/es/_styles/mixin.scss" as *;
         @use "~@/assets/style/mixin/font.scss" as *;
         @use "~@/assets/style/mixin/common.scss" as *;`,
       },

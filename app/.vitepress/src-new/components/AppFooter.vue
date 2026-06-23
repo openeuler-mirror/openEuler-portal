@@ -210,7 +210,7 @@ $color: #fff;
     .atom-logo {
       height: 32px;
       margin-top: 12px;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 16px;
         height: 30px;
       }
@@ -220,7 +220,7 @@ $color: #fff;
   .footer-content {
     background: url('~@/assets/category/footer/footer-bg.png') no-repeat bottom
       center;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       background: url('~@/assets/category/footer/footer-bg-mo.png') no-repeat
         bottom center;
     }
@@ -230,7 +230,7 @@ $color: #fff;
       display: flex;
       justify-content: space-between;
       max-width: 1140px;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         display: none;
       }
       .category {
@@ -264,7 +264,7 @@ $color: #fff;
       //TODO: 颜色变量
       border-bottom: 1px solid rgba(229, 229, 229, 0.12);
       @include tip2;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         flex-direction: column;
         padding-bottom: 16px;
         .friendship-link-box {
@@ -276,7 +276,7 @@ $color: #fff;
       .friendship-link-title {
         color: var(--o-color-white);
         margin-right: 38px;
-        @include respond-to('<=pad') {
+        @include respond('<=pad') {
           margin-right: 24px;
           min-width: 48px;
         }
@@ -286,7 +286,7 @@ $color: #fff;
         color: rgba(255, 255, 255, 0.6);
         &:not(:last-of-type) {
           margin-right: 24px;
-          @include respond-to('<=pad') {
+          @include respond('<=pad') {
             margin-right: 12px;
           }
         }
@@ -301,7 +301,7 @@ $color: #fff;
       justify-content: space-between;
       padding: 8px 0 32px;
       position: relative;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin: 0 auto;
         padding: 12px 0 24px;
         flex-direction: column;
@@ -321,7 +321,7 @@ $color: #fff;
     .show-mo {
       display: none;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       text-align: center;
       margin: 16px 0;
       .show-pc {
@@ -343,11 +343,11 @@ $color: #fff;
     display: flex;
     gap: var(--o-gap-2);
 
-    @include respond-to('<=pad') {
+    @include respond('<=pad') {
       flex-direction: column;
       gap: 6px;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 4px;
       gap: 4px;
     }
@@ -375,14 +375,14 @@ $color: #fff;
     span {
       color: rgba(255, 255, 255, 0.6);
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 4px;
     }
   }
 
   .footer-option {
     text-align: center;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       order: -1;
     }
     @include tip1;
@@ -437,7 +437,7 @@ $color: #fff;
             transform: translateX(-50%);
             display: block;
           }
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             display: block;
             position: initial;
             background: none;
@@ -456,17 +456,17 @@ $color: #fff;
             display: block;
           }
         }
-        @include respond-to('pad_h') {
+        @include respond('pad_h') {
           height: 18px;
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           height: auto;
           > img {
             display: none;
           }
         }
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         justify-content: space-between;
       }
     }
@@ -483,11 +483,11 @@ $color: #fff;
         padding: 0 14px;
         background-color: #2b2b2f;
         border-radius: var(--o-radius-xs);
-        @include respond-to('pad_h') {
+        @include respond('pad_h') {
           height: 26px;
           padding: 0 8px;
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           height: 26px;
           padding: 0 8px;
         }
@@ -495,10 +495,10 @@ $color: #fff;
           object-fit: cover;
         }
       }
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         margin-left: 32px;
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         justify-content: center;
         display: flex;
         text-align: center;
@@ -511,7 +511,7 @@ $color: #fff;
           padding: 0 9px;
           height: 20px;
         }
-        @include respond-to('<=pad') {
+        @include respond('<=pad') {
           display: flex;
           flex-wrap: wrap;
           text-align: center;
@@ -534,7 +534,7 @@ $color: #fff;
   .footer {
     .footer-content {
       .inner {
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           margin: 0 auto;
           max-width: fit-content;
           padding: 14px 0 24px;

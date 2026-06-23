@@ -107,7 +107,7 @@ const activeRoute = computed(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       max-width: calc(100% - var(--layout-content-padding));
     }
   }

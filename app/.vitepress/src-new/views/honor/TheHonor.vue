@@ -352,14 +352,14 @@ watch(
 }
 
 .mo-banner {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 24px 24px 20px;
     .mo-title {
       font-weight: 500;
       @include display3;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }
@@ -562,7 +562,7 @@ img {
   @include text1;
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   :deep(.o-tab) {
     .o-tab-body {
       padding: 40px 0 56px;
@@ -594,7 +594,7 @@ img {
     --card-main-padding: 16px 24px;
   }
 }
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   :deep(.o-tab) {
     .o-tab-body {
       padding: 40px 0;
@@ -646,7 +646,7 @@ img {
     }
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   :deep(.o-tab) {
     .o-tab-body {
       padding: 40px 0 32px;
@@ -709,7 +709,7 @@ img {
     }
   }
 }
-@include respond-to('phone') {
+@include respond('phone') {
   .o-link {
     @include text2;
   }

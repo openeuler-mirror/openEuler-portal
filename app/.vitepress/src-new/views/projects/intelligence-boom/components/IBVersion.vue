@@ -101,7 +101,7 @@ const versionInfo = computed(() => {
   border-radius: var(--o-radius-xs);
   background-color: var(--o-color-fill2);
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 4px;
   }
 
@@ -159,7 +159,7 @@ const versionInfo = computed(() => {
           flex-direction: row;
           @include text1;
 
-          @include respond-to('phone') {
+          @include respond('phone') {
             font-size: 14px;
             line-height: 22px;
           }
@@ -179,7 +179,7 @@ const versionInfo = computed(() => {
               transform: translate(-50%, -50%);
             }
 
-            @include respond-to('phone') {
+            @include respond('phone') {
               width: 16px;
               flex: 0 0 16px;
             }
@@ -193,7 +193,7 @@ const versionInfo = computed(() => {
     }
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     flex-direction: column;
     padding: 16px;
     gap: 12px;

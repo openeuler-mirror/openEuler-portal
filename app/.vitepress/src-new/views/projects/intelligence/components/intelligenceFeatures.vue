@@ -90,13 +90,13 @@ const features = [
 .app-section {
   --o-gap-section: 72px;
 
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     --o-gap-section: 56px;
   }
-  @include respond-to('pad_h') {
+  @include respond('pad_h') {
     --o-gap-section: 40px;
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     --o-gap-section: 32px;
   }
 }
@@ -144,7 +144,7 @@ const features = [
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .item-desc {
     margin-top: 8px;
   }
@@ -166,7 +166,7 @@ const features = [
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .features-item {
     flex-direction: column;
     .o-icon {

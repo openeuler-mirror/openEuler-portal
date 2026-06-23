@@ -81,7 +81,7 @@ const jumpTo = (path: string) => {
   color: rgb(var(--o-white));
   margin-bottom: var(--o-gap-3);
   @include h4;
-  @include respond-to('>laptop') {
+  @include respond('>laptop') {
     min-width: 800px;
   }
 }

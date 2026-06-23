@@ -55,7 +55,7 @@ useIntersectionObserver(target, ([entry]) => {
     z-index: 10;
     background-color: var(--o-color-control2-light);
     @include text1;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       top: 48px;
       height: 54px;
     }
@@ -67,7 +67,7 @@ useIntersectionObserver(target, ([entry]) => {
       max-width: 920px;
       margin: 0 auto;
       height: 68px;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         height: 54px;
       }
 

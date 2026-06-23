@@ -117,7 +117,7 @@ watch(() => loginStore.isLogined, async (val) => {
   display: flex;
   align-items: center;
   position: relative;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-left: var(--o-gap-2);
   }
 
@@ -131,7 +131,7 @@ watch(() => loginStore.isLogined, async (val) => {
       border-radius: 50%;
       cursor: pointer;
       vertical-align: middle;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         width: 28px;
         height: 28px;
       }
@@ -146,7 +146,7 @@ watch(() => loginStore.isLogined, async (val) => {
     text-overflow: ellipsis;
     overflow: hidden;
     width: 72px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: none;
     }
   }

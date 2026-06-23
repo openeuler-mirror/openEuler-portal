@@ -84,29 +84,29 @@ secGear的开发指南
 
 <style lang="scss" scoped>
 .first-section {
-  @include respond-to('>pad_v') {
+  @include respond('>pad_v') {
     :deep(.section-wrapper) {
       margin-top: 40px;
     }
   }
 }
 .app-section {
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     :deep(.section-body) {
       margin-top: 32px;
     }
   }
-  @include respond-to('pad_h') {
+  @include respond('pad_h') {
     :deep(.section-body) {
       margin-top: 24px;
     }
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     :deep(.section-body) {
       margin-top: 16px;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     :deep(.section-wrapper) {
       margin-top: 16px;
     }

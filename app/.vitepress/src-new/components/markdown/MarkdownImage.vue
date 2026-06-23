@@ -141,7 +141,7 @@ const onCloseZoom = () => {
     }
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     max-width: 100%;
     padding: 0;
     .img-expand-btn,
@@ -175,7 +175,7 @@ const onCloseZoom = () => {
     font-size: 24px;
   }
 
-  @include respond-to('phone') {
+  @include respond('phone') {
     display: none;
   }
 }

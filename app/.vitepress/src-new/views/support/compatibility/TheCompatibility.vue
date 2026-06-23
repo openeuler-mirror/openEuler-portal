@@ -1004,14 +1004,14 @@ const gap = computed(() => {
 }
 
 .mo-banner {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 24px var(--layout-content-padding) 20px;
     .mo-title {
       font-weight: 500;
       @include display3;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }
@@ -1024,13 +1024,13 @@ const gap = computed(() => {
     padding-bottom: 72px !important;
   }
 
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     --o-gap-section: 32px;
     .section-wrapper {
       padding-bottom: 48px !important;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     --o-gap-section: 16px;
     .section-wrapper {
       padding-bottom: 24px !important;
@@ -1162,7 +1162,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .filter-box {
     padding: 16px 24px;
   }
@@ -1201,7 +1201,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .filter-box {
     flex-direction: column;
     align-items: flex-start;
@@ -1275,7 +1275,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .o-tab {
     --tab-nav-padding: 0;
     --tab-nav-gap: 16px;
@@ -1398,7 +1398,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .item-title {
     @include text2;
   }

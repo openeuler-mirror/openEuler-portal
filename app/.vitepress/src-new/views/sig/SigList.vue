@@ -3,7 +3,8 @@ import { ref, onMounted, computed, watch, onUnmounted, nextTick } from 'vue';
 
 import { useRouter } from 'vitepress';
 
-import { useDebounceFn, useThrottleFn, onClickOutside } from '@vueuse/core';
+import { useThrottleFn, onClickOutside } from '@vueuse/core';
+import { useDebounceSearch } from '~@/composables/useDebounceSearch';
 
 import { useCommon } from '@/stores/common';
 
@@ -282,25 +283,17 @@ const sigSearch = () => {
   });
 }
 
+const sigName = ref();
 const updataSig = (val: string) => {
   sigInput.value = val;
   sigQuery.value.page = 1;
   sigQuery.value.pageSize = 10;
   sigSearch()
 };
-const debounceFn = useDebounceFn(updataSig, 300);
-const debounceSig = computed({
-  get() {
-    return sigInput.value.trim();
-  },
-  set(val) {
-    debounceFn(val as string);
-  },
-});
-
-const showSearchData = computed(() => {
-  return hasSearchData.value?.some((item) => item.list.length);
-});
+const onInputSigName = useDebounceSearch((value: string) => {
+  updataSig(value);
+  onSearchInput();
+}, 300);
 
 const enterSearchType = ref();
 const enterSearchInput = ref();
@@ -513,14 +506,14 @@ onUnmounted(() => {
 
 // ============埋点============
 const i18n = useI18n();
-const onSearchInput = useDebounceFn(() => {
+const onSearchInput = () => {
   oaReport('input', {
     level1: i18n.value.sig.sigCenter,
     level2: i18n.value.sig.sigList,
     type: 'search-input',
     content: sigInput.value
   }, 'sig');
-}, 300);
+};
 
 const onSearchPressEnter = (e: KeyboardEvent) => {
   if (e.key !== 'Enter') return;
@@ -620,14 +613,14 @@ const onClickSearchRes = (type: string, ev: Event) => {
             />
           </OSelect>
           <OInput
-            v-model="debounceSig"
+            v-model="sigName"
+            @input="(e) => onInputSigName(e.target?.value)"
             @focus.capture="showPanel = true"
             size="large"
             clearable
             :placeholder="placeholderType"
             @press-enter="(v) => changeSearchInput(v)"
             @clear="clearInput"
-            @input="onSearchInput"
             v-analytics="{
               properties: {
                 level1: $t('sig.sigCenter'),
@@ -1154,14 +1147,10 @@ const onClickSearchRes = (type: string, ev: Event) => {
     }
 
     .o-input {
-      :deep(.o_box) {
+      :deep(.o_box-main) {
         width: 320px;
         --box-height: 40px;
-        --box-bd-color-hover: var(--o-color-control1);
-        --box-bd-color-focus: var(--o-color-control1);
-        .o_box-main {
-          border: none;
-        }
+        border: none;
         .o_input {
           width: 100%;
         }
@@ -1239,7 +1228,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
     }
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     .filter-box {
       background-color: transparent;
       padding: 0;
@@ -1286,7 +1275,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
     .num {
       color: var(--o-color-info1);
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 16px;
       @include text2;
     }
@@ -1327,7 +1316,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
       :deep(.o-link-label) {
         display: flex;
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         @include text2;
       }
     }
@@ -1346,10 +1335,10 @@ const onClickSearchRes = (type: string, ev: Event) => {
       height: 44px;
       @include text-truncate(2);
       @include tip1;
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         height: 36px;
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 6px;
         order: 1;
         height: auto;
@@ -1377,7 +1366,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
       .text {
         cursor: pointer;
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         @include text1;
       }
     }
@@ -1397,26 +1386,26 @@ const onClickSearchRes = (type: string, ev: Event) => {
     margin-top: 32px;
     display: flex;
     justify-content: flex-end;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: none;
     }
   }
 
-  @include respond-to('laptop') {
+  @include respond('laptop') {
     .sig-card-list {
       .sig-card {
         padding: 16px 24px;
       }
     }
   }
-  @include respond-to('pad_h') {
+  @include respond('pad_h') {
     .sig-card-list {
       .sig-card {
         padding: 16px;
       }
     }
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     .sig-card-list {
       .sig-card {
         padding: 20px 16px 16px;
@@ -1482,7 +1471,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
     max-height: 100%;
     padding: 0 16px;
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     width: 200px;
   }
 }

@@ -385,25 +385,25 @@ const otherLinks = [
   --icon-size: 24px;
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .outlink-icon {
     --icon-size: 16px;
   }
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .resource-card {
     padding: 24px 24px 16px;
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .resource-card {
     padding: 16px 16px 8px;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .tab-btn {
     padding: 8px 16px;
     font-size: 16px;
@@ -435,7 +435,7 @@ const otherLinks = [
   }
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .mirror-table {
     overflow-x: auto;
 

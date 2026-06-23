@@ -150,14 +150,14 @@ onBeforeUnmount(() => {
 }
 
 .sig-banner {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: none;
   }
 }
 
 .mo-banner {
   display: none;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: block;
     padding: 24px 24px 20px;
     .mo-title {
@@ -170,7 +170,7 @@ onBeforeUnmount(() => {
       @include tip1;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }
@@ -183,7 +183,7 @@ onBeforeUnmount(() => {
 .sig-welcome {
   :deep(.section-wrapper) {
     margin-top: 40px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 12px;
     }
   }

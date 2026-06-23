@@ -1,4 +1,4 @@
-@use '../mixin//common.scss' as *;
+@use "@opensig/opendesign/es/_styles/mixin.scss" as *;
 
 .o-btn {
   --btn-radius: var(--btn-height);
@@ -10,11 +10,11 @@
   --btn-color-active: var(--o-color-info1-inverse);
 
   --btn-bd-color: var(--o-color-info1);
-  --btn-bd-color-hover: rgba(var(--o-mixedgray-14));
-  --btn-bd-color-active: rgba(var(--o-mixedgray-13));
+  --btn-bd-color-hover: rgba(var(--o-grey-14));
+  --btn-bd-color-active: rgba(var(--o-grey-13));
 
-  --btn-bg-color-hover: rgba(var(--o-mixedgray-14));
-  --btn-bg-color-active: rgba(var(--o-mixedgray-13));
+  --btn-bg-color-hover: rgba(var(--o-grey-14));
+  --btn-bg-color-active: rgba(var(--o-grey-13));
 
   @include hover {
     background-color: var(--btn-bg-color-hover);

@@ -136,7 +136,7 @@ const frameworkList = [
 }
 
 .mo-banner {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 24px 24px 0;
     .mo-title {
       font-weight: 500;
@@ -148,7 +148,7 @@ const frameworkList = [
       @include tip1;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }
@@ -267,7 +267,7 @@ const frameworkList = [
   @include text1;
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .framework-content {
     padding: 24px;
   }
@@ -285,7 +285,7 @@ const frameworkList = [
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .framework-content {
     padding: 16px;
   }
@@ -309,7 +309,7 @@ const frameworkList = [
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .introduction {
     :deep(.section-wrapper) {
       margin-top: 32px;

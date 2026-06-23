@@ -63,7 +63,7 @@ watch(
       z-index: 0;
       pointer-events: none;
 
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         background-image: unset;
       }
     }

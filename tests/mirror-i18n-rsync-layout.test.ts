@@ -135,14 +135,14 @@ describe('MirrorList.vue .rsync-tip 布局样式（设计 §3 CSS 改动）', ()
     expect(rsyncTipMatch).not.toBeNull();
   });
 
-  it('.rsync-tip flex-direction: column 不被 respond-to 断点覆盖', () => {
+  it('.rsync-tip flex-direction: column 不被 respond 断点覆盖', () => {
     const rsyncTipBlock = styleSection.match(
       /\.rsync-tip\s*\{([\s\S]*?)\}/
     );
     expect(rsyncTipBlock).not.toBeNull();
     const blockContent = rsyncTipBlock![1];
     const respondToBlocks = blockContent.match(
-      /@include\s+respond-to\([^)]*\)\s*\{([^}]*)\}/g
+      /@include\s+respond\([^)]*\)\s*\{([^}]*)\}/g
     );
     if (respondToBlocks) {
       for (const block of respondToBlocks) {
@@ -154,7 +154,7 @@ describe('MirrorList.vue .rsync-tip 布局样式（设计 §3 CSS 改动）', ()
 
   it('.rsync-tip 始终上下排列，无响应式切换 flex-direction', () => {
     const responsiveColumnInTip = styleSection.match(
-      /@include\s+respond-to[^}]*\.rsync-tip[^}]*flex-direction/
+      /@include\s+respond[^}]*\.rsync-tip[^}]*flex-direction/
     );
     expect(responsiveColumnInTip).toBeNull();
   });

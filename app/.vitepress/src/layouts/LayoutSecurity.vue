@@ -225,7 +225,7 @@ onMounted(() => {
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .banner-mb {
     padding: 16px 24px 0;
     .title {

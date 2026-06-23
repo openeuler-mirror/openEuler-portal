@@ -87,13 +87,13 @@ const gap = computed(() => {
 .app-section {
   --o-gap-section: 72px;
 
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     --o-gap-section: 56px;
   }
-  @include respond-to('pad_h') {
+  @include respond('pad_h') {
     --o-gap-section: 40px;
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     --o-gap-section: 32px;
   }
 }
@@ -102,13 +102,13 @@ const gap = computed(() => {
   :deep(.section-wrapper) {
     margin-top: 0;
 
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       margin-top: 0;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       margin-top: 0;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 0;
     }
   }
@@ -160,7 +160,7 @@ const gap = computed(() => {
   @include text2;
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .deploy-item {
     padding: 24px;
     .item-title {
@@ -175,7 +175,7 @@ const gap = computed(() => {
     }
   }
 }
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .item-desc {
     margin-top: 8px;
   }
@@ -195,7 +195,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .deploy-item {
     height: auto;
     padding: 16px;

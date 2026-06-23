@@ -1,23 +1,23 @@
-@use '~@/assets/style/mixin/screen.scss' as *;
+@use "@opensig/opendesign/es/_styles/mixin.scss" as *;
 
 // 一级数据展示
 @mixin display1 {
   & {
     font-size: 56px;
     line-height: 80px;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       font-size: 48px;
       line-height: 64px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       font-size: 40px;
       line-height: 56px;
     }
-    @include respond-to('pad_v') {
+    @include respond('pad_v') {
       font-size: 40px;
       line-height: 56px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       font-size: 22px;
       line-height: 30px;
     }
@@ -29,19 +29,19 @@
   & {
     font-size: 48px;
     line-height: 64px;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       font-size: 40px;
       line-height: 56px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       font-size: 32px;
       line-height: 44px;
     }
-    @include respond-to('pad_v') {
+    @include respond('pad_v') {
       font-size: 32px;
       line-height: 44px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       font-size: 20px;
       line-height: 28px;
     }
@@ -53,19 +53,19 @@
   & {
     font-size: 40px;
     line-height: 56px;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       font-size: 32px;
       line-height: 44px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       font-size: 24px;
       line-height: 32px;
     }
-    @include respond-to('pad_v') {
+    @include respond('pad_v') {
       font-size: 22px;
       line-height: 30px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       font-size: 18px;
       line-height: 26px;
     }
@@ -77,19 +77,19 @@
   & {
     font-size: 32px;
     line-height: 44px;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       font-size: 20px;
       line-height: 28px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       font-size: 20px;
       line-height: 28px;
     }
-    @include respond-to('pad_v') {
+    @include respond('pad_v') {
       font-size: 18px;
       line-height: 26px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       font-size: 16px;
       line-height: 24px;
     }
@@ -101,19 +101,19 @@
   & {
     font-size: 24px;
     line-height: 32px;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       font-size: 20px;
       line-height: 28px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       font-size: 18px;
       line-height: 26px;
     }
-    @include respond-to('pad_v') {
+    @include respond('pad_v') {
       font-size: 18px;
       line-height: 26px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       font-size: 16px;
       line-height: 24px;
     }
@@ -125,19 +125,19 @@
   & {
     font-size: 22px;
     line-height: 30px;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       font-size: 18px;
       line-height: 26px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       font-size: 16px;
       line-height: 24px;
     }
-    @include respond-to('pad_v') {
+    @include respond('pad_v') {
       font-size: 16px;
       line-height: 24px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       font-size: 16px;
       line-height: 24px;
     }
@@ -149,19 +149,19 @@
   & {
     font-size: 20px;
     line-height: 28px;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       font-size: 18px;
       line-height: 26px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       font-size: 16px;
       line-height: 24px;
     }
-    @include respond-to('pad_v') {
+    @include respond('pad_v') {
       font-size: 16px;
       line-height: 24px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       font-size: 14px;
       line-height: 22px;
     }
@@ -173,19 +173,19 @@
   & {
     font-size: 16px;
     line-height: 24px;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       font-size: 14px;
       line-height: 22px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       font-size: 14px;
       line-height: 22px;
     }
-    @include respond-to('pad_v') {
+    @include respond('pad_v') {
       font-size: 14px;
       line-height: 22px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       font-size: 14px;
       line-height: 22px;
     }
@@ -197,19 +197,19 @@
   & {
     font-size: 18px;
     line-height: 26px;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       font-size: 16px;
       line-height: 24px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       font-size: 14px;
       line-height: 22px;
     }
-    @include respond-to('pad_v') {
+    @include respond('pad_v') {
       font-size: 14px;
       line-height: 22px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       font-size: 14px;
       line-height: 22px;
     }
@@ -221,19 +221,19 @@
   & {
     font-size: 14px;
     line-height: 22px;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       font-size: 12px;
       line-height: 18px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       font-size: 12px;
       line-height: 18px;
     }
-    @include respond-to('pad_v') {
+    @include respond('pad_v') {
       font-size: 12px;
       line-height: 18px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       font-size: 10px;
       line-height: 16px;
     }
@@ -245,19 +245,19 @@
   & {
     font-size: 12px;
     line-height: 18px;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       font-size: 12px;
       line-height: 18px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       font-size: 12px;
       line-height: 18px;
     }
-    @include respond-to('pad_v') {
+    @include respond('pad_v') {
       font-size: 12px;
       line-height: 18px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       font-size: 10px;
       line-height: 16px;
     }

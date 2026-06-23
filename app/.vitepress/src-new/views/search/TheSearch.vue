@@ -530,11 +530,11 @@ const handleTabChange = () => {
   width: 100%;
   min-height: calc(100vh - var(--layout-header-height) - 114px);
   background-color: var(--o-color-fill2);
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     background-color: var(--o-color-fill1);
   }
   .search-banner {
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       background: var(--o-color-fill2) !important;
       box-shadow: var(--o-shadow-1);
       position: sticky;

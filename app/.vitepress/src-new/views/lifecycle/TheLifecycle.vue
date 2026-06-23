@@ -92,14 +92,14 @@ const md = new Markdown({
 }
 
 .mo-banner {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 24px 24px 20px;
     .mo-title {
       font-weight: 500;
       @include display3;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }
@@ -139,19 +139,19 @@ const md = new Markdown({
   filter: brightness(80%) grayscale(20%) contrast(1.2);
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .lifecycle-markdown {
     padding: 40px 32px;
   }
 }
 
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .lifecycle-markdown {
     padding: 32px 24px;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .lifecycle-markdown {
     padding: 16px;
   }

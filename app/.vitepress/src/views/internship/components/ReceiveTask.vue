@@ -247,7 +247,7 @@ const { lePadV } = useScreen();
   border-radius: 0;
 }
 
-@include respond-to('>pc_b') {
+@include respond('>pc_b') {
   .jump-out-icon {
     width: 24px;
     height: 24px;

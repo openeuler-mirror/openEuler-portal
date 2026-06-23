@@ -1,4 +1,5 @@
 @use '../mixin/font.scss' as *;
+@use "@opensig/opendesign/es/_styles/mixin.scss" as *;
 .o-table {
   --table-edge-padding: 32px;
   --table-cell-padding: 16px 20px;
@@ -32,6 +33,18 @@
 
   table td:last-child {
     padding-right: var(--table-edge-padding);
+  }
+  thead {
+    &:after {
+      display: none;
+    }
+  }
+  tr {
+    @include hover {
+      td {
+        background-color: var(--table-row-hover);
+      }
+    }
   }
   th {
     font-weight: 500;

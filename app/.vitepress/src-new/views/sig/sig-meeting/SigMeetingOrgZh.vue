@@ -159,7 +159,7 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
   .sig-meeting-content {
     position: relative;
     padding-left: 76px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       padding: 16px;
       border-radius: var(--o-radius-xs);
       background-color: var(--o-color-fill2);
@@ -167,7 +167,7 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
 
     &:not(:first-child) {
       margin-top: 26px;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 12px;
       }
     }
@@ -204,7 +204,7 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
         left: 0;
         top: 0;
         font-size: var(--o-icon_size-2xl);
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           position: relative;
           margin-right: 8px;
         }
@@ -219,7 +219,7 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
       background-color: var(--o-color-fill2);
       color: var(--o-color-info2);
       @include text1;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 12px;
         padding: 0;
       }
@@ -314,7 +314,7 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
   }
 }
 
-[data-o-theme='dark'] {
+[data-o-theme='e.dark'] {
   .sig-meeting-org {
     .sig-meeting-content {
       .sig-meeting-org-card {

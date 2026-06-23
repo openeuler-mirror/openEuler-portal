@@ -155,7 +155,7 @@ const bannerImage = computed(() => {
   }
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .detail-banner {
     padding: var(--o-gap-5);
   }

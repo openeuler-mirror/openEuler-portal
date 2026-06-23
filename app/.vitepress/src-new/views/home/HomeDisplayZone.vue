@@ -48,13 +48,13 @@ const { theme } = storeToRefs(useCommon());
   background: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
   z-index: 1;
-  @include respond-to('laptop') {
+  @include respond('laptop') {
     padding: 16px 54px;
   }
-  @include respond-to('pad_h') {
+  @include respond('pad_h') {
     padding: 16px 24px;
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     position: relative;
     grid-template-columns: repeat(4, 1fr);
     padding: 0;
@@ -72,7 +72,7 @@ const { theme } = storeToRefs(useCommon());
       }
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     gap: 12px;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -82,7 +82,7 @@ const { theme } = storeToRefs(useCommon());
     display: flex;
     align-items: flex-start;
     border-radius: var(--o-radius-xs);
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       align-items: center;
       padding: 16px;
       background: var(--o-color-fill2);
@@ -99,7 +99,7 @@ const { theme } = storeToRefs(useCommon());
     }
     .display-zone-text {
       margin-left: 12px;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         text-align: center;
         margin-top: 8px;
         margin-left: 0;
@@ -112,7 +112,7 @@ const { theme } = storeToRefs(useCommon());
       .display-zone-description {
         color: var(--o-color-info2);
         text-align: left;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           display: none;
         }
         @include tip1;
