@@ -135,73 +135,84 @@ lookupKey: "en/approve"
 - 存在 → 替换
 - 不存在 → 新增到 `frontmatter.head`
 
-### 4. TDK 批量生成工具 (sitemap-meta-tags-batch-generator skill)
+### 4. TDK / JSON-LD 生成工具 (scripts/geo-fix-tdk-schema.js)
 
-TDK 数据的批量生成使用了 `sitemap-meta-tags-batch-generator` skill。
+**Agent 使用指南**: 当需要为任意 URL 批量生成 TDK 或 JSON-LD 时，直接调用此脚本。
 
-#### 4.1 工作流程
+#### 4.1 脚本用法
 
-支持两种数据来源模式:
+```bash
+# 生成 TDK
+node scripts/geo-fix-tdk-schema.js --urls=https://example.com/zh/page1,https://example.com/en/page2 --type=tdk
 
-**模式一: Sitemap URL**
-```
-1. 获取 sitemap.xml
-   └── WebFetch 从网站根目录获取 sitemap.xml
-   └── 解析提取所有 <loc> URL
-
-2. 并行派发 subAgents
-   └── 每个 URL 启动一个 general subAgent
-   └── 每个 subAgent 必须使用 meta-tags-optimizer skill
-   └── 基于实际页面内容生成 title/description
-   └── 保存到单个 JSON 文件
-
-3. 合并结果
-   └── 读取所有生成的 meta tag 文件
-   └── 合并为 TypeScript 模块输出
+# 生成 JSON-LD
+node scripts/geo-fix-tdk-schema.js --urls=https://example.com/zh/sig/Kernel,https://example.com/en/download --type=jsonld
 ```
 
-**模式二: 本地HTML文件**
+**参数说明**:
+- `--urls`: 逗号分隔的 URL 列表（必须为完整 URL）
+- `--type`: 生成类型，`tdk` 或 `jsonld`
+
+#### 4.2 工作流程
+
 ```
-1. 扫描 HTML 文件
-   └── glob 查找 <dist_directory>/**/*.html
-    
-2. 解析 HTML 内容
-   └── 提取 <title>、<meta description>、<meta keywords>
-   └── 提取 <h1>、<main> 等内容作为参考
-    
-3. 生成路径键
-   └── zh/migration/index.html → zh/migration
-    
-4. 批量生成 TDK
-   └── 使用 meta-tags-optimizer skill 优化
-   └── 按语言 (zh/en) 分组
-    
-5. 输出到 .geo/tdks/{locale}/{path}/index.json
+1. 解析命令行参数
+   └── 提取 URL 列表和生成类型
+
+2. 并行处理（基于 CPU 核心数）
+   └── 每个 URL 启动独立的 opencode 进程
+   └── TDK: 使用 meta-tags-optimizer skill
+   └── JSON-LD: 使用 schema-markup-generator skill
+
+3. 自动路径映射
+   └── URL: https://example.com/zh/sig/Kernel
+   └── 输出: .geo/tdks/zh/sig/Kernel/index.json (TDK)
+   └── 输出: .geo/jsonld/zh/sig/Kernel/index.json (JSON-LD)
+
+4. 质量校验（内置二级 subAgent）
+   └── 检查生成内容是否完全基于页面实际内容
+   └── 确保无虚构信息（如错误的社区名称）
+   └── 输出修改建议并自动修正
 ```
 
-#### 4.2 输出结构
-```json
-// .geo/tdks/zh/migration/index.json
-{
-  "title": "openEuler迁移方案 | openEuler迁移中心",
-  "description": "openEuler助力企业简单、平稳、高效进行操作系统迁移...",
-  "keywords": "openEuler迁移,迁移工具,CentOS迁移"
-}
+#### 4.3 输出路径规则
+
+| 类型 | 输出路径 |
+|------|---------|
+| TDK | `.geo/tdks/{locale}/{path}/index.json` |
+| JSON-LD | `.geo/jsonld/{locale}/{path}/index.json` |
+
+**示例**:
+```
+URL: https://openeuler.org/zh/sig/Kernel
+→ TDK:     .geo/tdks/zh/sig/Kernel/index.json
+→ JSON-LD: .geo/jsonld/zh/sig/Kernel/index.json
+
+URL: https://openeuler.org/en/download
+→ TDK:     .geo/tdks/en/download/index.json
+→ JSON-LD: .geo/jsonld/en/download/index.json
 ```
 
-**目录结构**: 文件路径与页面路径对应
-```
-.geo/tdks/zh/migration/download/index.json  → zh/migration/download
-.geo/tdks/en/approve/index.json              → en/approve
-```
+#### 4.4 生成质量保证
 
-#### 4.3 生成规则
-- **Title**: 50-60字符，关键词前置
-- **Description**: 150-160字符，包含CTA
-- **内容忠实性**: 必须基于页面可见内容，不能虚构信息
+脚本内置**三级校验机制**：
 
-#### 4.4 Skill 位置
-`.claude\skills\sitemap-meta-tags-batch-generator\`
+1. **生成阶段**: skill 根据页面内容生成 TDK/JSON-LD
+2. **检查阶段**: 启动独立 subAgent 校验内容忠实性
+3. **修正阶段**: 根据检查结果自动修正问题
+
+**校验规则**:
+- TDK/JSON-LD 信息必须完全来自页面实际内容
+- 禁止虚构不存在的信息（如错误的社区名称）
+- 仅修改 `.geo/` 目录下的 JSON 文件
+
+#### 4.5 日志输出
+
+所有生成日志保存在 `.geo-temp-agent-logs/jsonld/` 目录：
+```
+.geo-temp-agent-logs/jsonld/zh_sig_Kernel.log
+.geo-temp-agent-logs/jsonld/en_download.log
+```
 
 ---
 
@@ -216,7 +227,7 @@ TDK 数据的批量生成使用了 `sitemap-meta-tags-batch-generator` skill。
 │   ├── approve/
 │   │   ├── index.json            # zh/approve 页面
 │   │   └── approve-info/
-│   │   │   └── index.json        # zh/approve/approve-info 页面
+│   │       └── index.json        # zh/approve/approve-info 页面
 │   ├── community/
 │   │   ├── conduct/
 │   │   │   └── index.json        # zh/community/conduct 页面
@@ -286,92 +297,64 @@ lookupKey: "en/community/conduct"
 ]
 ```
 
-### 4. JSON-LD 批量生成工具 (sitemap-schema-batch-generator skill)
+### 4. SIG 页面 JSON-LD 生成工具 (generate-sig-jsonld)
 
-JSON-LD Schema 数据的批量生成使用了 `sitemap-schema-batch-generator` skill。
+**Agent 使用指南**: 为 `{zh,en}/sig/*` 页面生成 JSON-LD 时，**优先调用 `generate-sig-jsonld` tool 来生成**，而非 `geo-fix-tdk-schema.js`。
 
-#### 4.1 工作流程
+#### 4.1 数据来源
 
-支持两种数据来源模式:
+脚本自动从 API 获取 SIG 结构化数据：
 
-**模式一: Sitemap URL**
-```
-1. 获取 sitemap.xml
-   └── WebFetch 从网站根目录获取 sitemap.xml
-   └── 解析提取所有 <loc> URL
+| API 端点 | 数据内容 |
+|---------|---------|
+| `/api-magic/stat/sig/info` | SIG 基本信息（名称、描述、maintainer、committer） |
+| `/api-magic/sig/new/repo/committers` | SIG 仓库列表及仓库成员 |
 
-2. 并行派发 subAgents
-   └── 每个 URL 启动一个 general subAgent
-   └── 每个 subAgent 必须使用 schema-markup-generator skill
-   └── 分析页面内容，选择合适的 schema 类型
-   └── 生成 JSON-LD 并保存到单个 JSON 文件
+**优势**: 无需手动输入，数据来自官方 API，保证准确性。
 
-3. 合并结果
-   └── 读取所有生成的 schema 文件
-   └── 合并为 TypeScript 模块输出
-```
+#### 4.2 生成的 JSON-LD 结构
 
-**模式二: 本地HTML文件**
-```
-1. 扫描 HTML 文件
-   └── glob 查找 <dist_directory>/**/*.html
-    
-2. 分析页面类型
-   └── /sig/{name}/ → Organization + FAQPage
-   └── /contribution/detail → HowTo
-   └── /conduct → FAQPage
-   └── /sig-list → ItemList
-    
-3. 提取内容
-   └── 标题、描述、面包屑、FAQ问答、步骤列表等
-    
-4. 批量生成 Schema
-   └── 所有页面统一输出到 .geo/jsonld/{locale}/{path}/index.json
-    
-5. 输出到 .geo/jsonld/{locale}/{path}/index.json
-```
-
-#### 4.2 输出结构
 ```json
-// .geo/jsonld/zh/approve/index.json
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "openEuler OSV技术测评列表",
-    "breadcrumb": { "@type": "BreadcrumbList", ... }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "OSV技术测评列表"
-  }
-]
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "openEuler SIG - Kernel",
+  "description": "Kernel SIG 致力于...",
+  "url": "https://www.openeuler.org/zh/sig/Kernel",
+  "member": [
+    {
+      "@type": "Person",
+      "name": "username",
+      "role": "Maintainer",
+      "email": "user@example.com",
+      "affiliation": "华为",
+      "url": "https://..."
+    }
+  ],
+  "hasPart": [
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "openeuler/kernel",
+      "codeRepository": "https://atomgit.com/openeuler/kernel",
+      "maintainers": [...],
+      "committers": [...]
+    }
+  ]
+}
 ```
 
-#### 4.3 SIG 页面输出
-```
-.geo/jsonld/zh/sig/Kernel/index.json    → zh/sig/Kernel 页面
-.geo/jsonld/zh/sig/ai/index.json        → zh/sig/ai 页面
-.geo/jsonld/en/sig/Compatibility/index.json → en/sig/Compatibility 页面
-```
+#### 4.3 与 geo-fix-tdk-schema.js 的区别
 
-每个 SIG 页面包含:
-```json
-[
-  { "@type": "Organization", "name": "openEuler Kernel SIG", ... },
-  { "@type": "CollectionPage", "numberOfItems": 21, ... },
-  { "@type": "FAQPage", "mainEntity": [...] }
-]
-```
+| 特性 | generate-sig-jsonld | geo-fix-tdk-schema.js |
+|------|------------------------|----------------------|
+| 适用页面 | 仅 SIG 页面（`{zh,en}/sig/*`） | 所有页面 |
+| 数据来源 | API 自动获取 | URL 抓取页面内容 |
+| 生成类型 | JSON-LD | TDK 或 JSON-LD |
+| 使用场景 | SIG 页面专用，数据准确 | 通用批量生成 |
 
-#### 4.4 生成规则
-- **内容忠实性**: Schema 必须仅包含页面可见数据，不能虚构
-- **类型选择**: 根据页面内容自动选择合适的 schema 类型
-- **验证**: 使用 schema-markup-generator skill 进行验证
-
-#### 4.5 Skill 位置
-`.claude\skills\sitemap-schema-batch-generator\`
+**推荐流程**:
+1. SIG 页面 → 调用 `generate-sig-jsonld`（数据来自 API，更准确）
+2. 其他页面 → 使用 `geo-fix-tdk-schema.js`
 
 ---
 
