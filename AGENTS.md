@@ -142,24 +142,7 @@ openEuler-portal/
 
 ## 4. SEO/GEO 配置
 
-**路径规则**：文件路径与页面 URL 一一对应
-
-```
-页面 zh/sig/Kernel  →  .geo/tdks/zh/sig/Kernel/index.json
-                    →  .geo/jsonld/zh/sig/Kernel/index.json
-```
-
-**配置优先级**：md frontmatter > `.geo/` 配置 > 自动生成
-
-**新增页面流程**：
-1. 在 `app/zh/` 或 `app/en/` 创建 `.md`
-2. 创建对应 `.geo/tdks/{locale}/{path}/index.json` 和 `.geo/jsonld/{locale}/{path}/index.json`
-3. 或在 md frontmatter 内嵌 `seoTitle` / `seoDescription` / `jsonLd`
-
-**关键代码位置**：
-- `app/.vitepress/config.ts` 第 24-42 行（`setJSONLD`）
-- `app/.vitepress/config.ts` 第 44-88 行（`setTdk`）
-- 完整说明：[docs/geo-implementation-summary.md](./docs/geo-implementation-summary.md)
+- 完整说明：[docs/geo-implementation-summary.md](./docs/geo-implementation-summary.md) @docs/geo-implementation-summary.md
 
 ---
 
