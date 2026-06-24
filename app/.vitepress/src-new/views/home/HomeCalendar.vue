@@ -101,7 +101,7 @@ const summitData = foldI18n(activityContent.summit ?? [], locale.value).map((ev)
   url: ev.id ? `/${locale.value}/interaction/summit-list/${ev.id}/` : '',
 }));
 
-const TODAY = dayjs(new Date()).format('YYYY-MM-DD');
+const TODAY = ref('');
 
 const recentMeetingDates = ref([] as string[]);
 
@@ -201,7 +201,7 @@ const latestSchedule = computed(() => {
     }
 
     // 如果有即将发生的活动就返回，否则返回第一个日期
-    latest = minUpcomingDate || recentMeetingDates.value[0] || TODAY;
+    latest = minUpcomingDate || recentMeetingDates.value[0] || TODAY.value;
   }
 
   return latest;
@@ -374,6 +374,7 @@ const getPermissionMeeting = () => {
 onMounted(async () => {
 
   selectedDate.value = new Date();
+  TODAY.value = dayjs(new Date()).format('YYYY-MM-DD');
   // 设置右侧 日程列表高度
   const tbody = document.querySelector(
     '.calendar-body .el-calendar__body'
