@@ -135,87 +135,6 @@ lookupKey: "en/approve"
 - 存在 → 替换
 - 不存在 → 新增到 `frontmatter.head`
 
-### 4. TDK / JSON-LD 生成工具 (scripts/geo-fix-tdk-schema.js)
-
-**Agent 使用指南**: 当需要为任意 URL 批量生成 TDK 或 JSON-LD 时，直接调用此脚本。
-
-#### 4.1 脚本用法
-
-```bash
-# 生成 TDK
-node scripts/geo-fix-tdk-schema.js --urls=https://example.com/zh/page1,https://example.com/en/page2 --type=tdk
-
-# 生成 JSON-LD
-node scripts/geo-fix-tdk-schema.js --urls=https://example.com/zh/sig/Kernel,https://example.com/en/download --type=jsonld
-```
-
-**参数说明**:
-- `--urls`: 逗号分隔的 URL 列表（必须为完整 URL）
-- `--type`: 生成类型，`tdk` 或 `jsonld`
-
-#### 4.2 工作流程
-
-```
-1. 解析命令行参数
-   └── 提取 URL 列表和生成类型
-
-2. 并行处理（基于 CPU 核心数）
-   └── 每个 URL 启动独立的 opencode 进程
-   └── TDK: 使用 meta-tags-optimizer skill
-   └── JSON-LD: 使用 schema-markup-generator skill
-
-3. 自动路径映射
-   └── URL: https://example.com/zh/sig/Kernel
-   └── 输出: .geo/tdks/zh/sig/Kernel/index.json (TDK)
-   └── 输出: .geo/jsonld/zh/sig/Kernel/index.json (JSON-LD)
-
-4. 质量校验（内置二级 subAgent）
-   └── 检查生成内容是否完全基于页面实际内容
-   └── 确保无虚构信息（如错误的社区名称）
-   └── 输出修改建议并自动修正
-```
-
-#### 4.3 输出路径规则
-
-| 类型 | 输出路径 |
-|------|---------|
-| TDK | `.geo/tdks/{locale}/{path}/index.json` |
-| JSON-LD | `.geo/jsonld/{locale}/{path}/index.json` |
-
-**示例**:
-```
-URL: https://openeuler.org/zh/sig/Kernel
-→ TDK:     .geo/tdks/zh/sig/Kernel/index.json
-→ JSON-LD: .geo/jsonld/zh/sig/Kernel/index.json
-
-URL: https://openeuler.org/en/download
-→ TDK:     .geo/tdks/en/download/index.json
-→ JSON-LD: .geo/jsonld/en/download/index.json
-```
-
-#### 4.4 生成质量保证
-
-脚本内置**三级校验机制**：
-
-1. **生成阶段**: skill 根据页面内容生成 TDK/JSON-LD
-2. **检查阶段**: 启动独立 subAgent 校验内容忠实性
-3. **修正阶段**: 根据检查结果自动修正问题
-
-**校验规则**:
-- TDK/JSON-LD 信息必须完全来自页面实际内容
-- 禁止虚构不存在的信息（如错误的社区名称）
-- 仅修改 `.geo/` 目录下的 JSON 文件
-
-#### 4.5 日志输出
-
-所有生成日志保存在 `.geo-temp-agent-logs/jsonld/` 目录：
-```
-.geo-temp-agent-logs/jsonld/zh_sig_Kernel.log
-.geo-temp-agent-logs/jsonld/en_download.log
-```
-
----
-
 ## 三、JSON-LD Schema 设置
 
 ### 1. 数据来源
@@ -252,8 +171,6 @@ URL: https://openeuler.org/en/download
 - 页面路径 `zh/sig/Kernel` → 文件 `.geo/jsonld/zh/sig/Kernel/index.json`
 - 页面路径 `en/approve` → 文件 `.geo/jsonld/en/approve/index.json`
 
-**SIG数据已分散**: 之前集中的 `.geo/jsonld/sigs/` 目录现在改为按路径组织
-
 ### 2. 设置流程 (`setJSONLD` 函数，config.ts 第 24-42 行)
 
 #### 2.1 文件路径映射
@@ -272,29 +189,6 @@ lookupKey: "en/community/conduct"
 2. 读取文件内容（JSON数组）
 3. 添加到 head:
    ['script', { type: 'application/ld+json' }, JSON.stringify(content)]
-```
-
-**注意**: SIG 页面不再特殊处理，所有页面统一按路径映射
-
-### 3. JSON-LD Schema 类型示例
-
-#### 3.1 SIG 页面 (zh/sig/Kernel/index.json)
-包含多个 schema 类型:
-```json
-[
-  { "@type": "Organization", "name": "openEuler Kernel SIG", ... },
-  { "@type": "CollectionPage", "numberOfItems": 21, ... },
-  { "@type": "FAQPage", "mainEntity": [...] }
-]
-```
-
-#### 3.2 通用页面 (en/approve/index.json)
-包含多种 schema 类型:
-```json
-[
-  { "@type": "WebPage", "name": "...", "breadcrumb": {...} },
-  { "@type": "Dataset", "name": "...", "variableMeasured": [...] }
-]
 ```
 
 ### 4. SIG 页面 JSON-LD 生成工具 (generate-sig-jsonld)
@@ -358,6 +252,79 @@ lookupKey: "en/community/conduct"
 
 ---
 
+## 四、 TDK / JSON-LD 生成工具 (@scripts/geo-fix-tdk-schema.js)
+
+**Agent 使用指南**: 当需要为任意 URL 批量生成 TDK 或 JSON-LD 时，直接调用此脚本。
+
+### 1 脚本用法
+
+```bash
+# 生成 TDK
+node scripts/geo-fix-tdk-schema.js --urls=https://example.com/zh/page1,https://example.com/en/page2 --type=tdk
+
+# 生成 JSON-LD
+node scripts/geo-fix-tdk-schema.js --urls=https://example.com/zh/sig/Kernel,https://example.com/en/download --type=jsonld
+```
+
+**参数说明**:
+- `--urls`: 逗号分隔的 URL 列表（必须为完整 URL）
+- `--type`: 生成类型，`tdk` 或 `jsonld`
+
+### 2 工作流程
+
+```
+1. 解析命令行参数
+   └── 提取 URL 列表和生成类型
+
+2. 并行处理（基于 CPU 核心数）
+   └── 每个 URL 启动独立的 opencode 进程
+   └── TDK: 使用 meta-tags-optimizer skill
+   └── JSON-LD: 使用 schema-markup-generator skill
+
+3. 自动路径映射
+   └── URL: https://example.com/zh/sig/Kernel
+   └── 输出: .geo/tdks/zh/sig/Kernel/index.json (TDK)
+   └── 输出: .geo/jsonld/zh/sig/Kernel/index.json (JSON-LD)
+
+4. 质量校验（内置二级 subAgent）
+   └── 检查生成内容是否完全基于页面实际内容
+   └── 确保无虚构信息（如错误的社区名称）
+   └── 输出修改建议并自动修正
+```
+
+### 3 输出路径规则
+
+| 类型 | 输出路径 |
+|------|---------|
+| TDK | `.geo/tdks/{locale}/{path}/index.json` |
+| JSON-LD | `.geo/jsonld/{locale}/{path}/index.json` |
+
+**示例**:
+```
+URL: https://openeuler.org/zh/sig/Kernel
+→ TDK:     .geo/tdks/zh/sig/Kernel/index.json
+→ JSON-LD: .geo/jsonld/zh/sig/Kernel/index.json
+
+URL: https://openeuler.org/en/download
+→ TDK:     .geo/tdks/en/download/index.json
+→ JSON-LD: .geo/jsonld/en/download/index.json
+```
+
+#### 4.4 生成质量保证
+
+脚本内置**三级校验机制**：
+
+1. **生成阶段**: skill 根据页面内容生成 TDK/JSON-LD
+2. **检查阶段**: 启动独立 subAgent 校验内容忠实性
+3. **修正阶段**: 根据检查结果自动修正问题
+
+**校验规则**:
+- TDK/JSON-LD 信息必须完全来自页面实际内容
+- 禁止虚构不存在的信息（如错误的社区名称）
+- 仅修改 `.geo/` 目录下的 JSON 文件
+
+---
+
 ## 五、触发时机
 
 所有 SEO 设置在 `transformPageData` 钩子中统一执行 (config.ts 第 184-194 行):
@@ -372,52 +339,7 @@ async transformPageData(pageData) {
 
 ---
 
-## 六、文件目录结构总览
-
-```
-/
-├── app/
-│   └── .vitepress/
-│       └── config.ts          # 主配置，sitemap/transformPageData
-├── .geo/
-│   ├── tdks/                  # TDK 配置（按页面路径组织）
-│   │   ├── zh/
-│   │   │   ├── index.json     # zh 首页
-│   │   │   ├── migration/
-│   │   │   │   └── index.json # zh/migration
-│   │   │   └── sig/
-│   │   │       └── Kernel/
-│   │   │           └── index.json # zh/sig/Kernel
-│   │   │   └── ... (按实际路径组织)
-│   │   └── en/
-│   │   │   ├── index.json     # en 首页
-│   │   │   └── ... (按实际路径组织)
-│   ├── jsonld/                 # JSON-LD 配置（按页面路径组织）
-│   │   ├── zh/
-│   │   │   ├── index.json     # zh 首页
-│   │   │   ├── approve/
-│   │   │   │   └── index.json # zh/approve
-│   │   │   └── sig/           # SIG 页面（已分散到各自路径）
-│   │   │       └── Kernel/
-│   │   │           └── index.json # zh/sig/Kernel
-│   │   │       └── ai/
-│   │   │           └── index.json # zh/sig/ai
-│   │   │       └── ... (约100个SIG)
-│   │   └── en/
-│   │   │   ├── index.json     # en 首页
-│   │   │   └── ... (按实际路径组织)
-│   └── last-modified.json     # 构建时生成
-└── .env.production            # 环境变量 (域名配置)
-```
-
-**关键变化**:
-- TDK 和 JSON-LD 现在按页面路径组织，每个页面独立文件
-- 文件目录路径与真实页面路径一一对应
-- SIG 数据已从集中目录 `.geo/jsonld/sigs/` 分散到 `.geo/jsonld/zh/sig/{sig-name}/`
-
----
-
-## 七、关键依赖与工具
+## 六、关键依赖与工具
 
 ### 1. NPM 依赖包
 
@@ -429,174 +351,7 @@ async transformPageData(pageData) {
 
 ### 2. Skills 工具
 
-| 功能 | Skill 名称 | 位置 |
-|-----|-----------|------|
-| TDK 批量生成 | `sitemap-meta-tags-batch-generator` | `.claude/skills/sitemap-meta-tags-batch-generator/` |
-| JSON-LD 批量生成 | `sitemap-schema-batch-generator` | `.claude/skills/sitemap-schema-batch-generator/` |
-| 单页 meta 优化 | `meta-tags-optimizer` | (被批量 skill 调用) |
-| 单页 schema 生成 | `schema-markup-generator` | (被批量 skill 调用) |
-
-### 3. Skills 使用方式
-
-**从 Sitemap URL 生成**:
-```bash
-# TDK 批量生成
-Generate meta tags for all pages in sitemap: https://www.openeuler.org
-
-# JSON-LD 批量生成
-Generate schema for all pages in sitemap: https://www.openeuler.org
-```
-
-**从本地HTML文件生成**:
-```bash
-# TDK 批量生成
-/generate-tdk-local app/.vitepress/dist
-
-# JSON-LD 批量生成  
-/generate-schema-local app/.vitepress/dist
-```
-
-### 4. Commands 位置
-
-| Command | 文件位置 | 用途 |
-|---------|---------|------|
-| `/generate-tdk-local` | `.opencode/commands/generate-tdk-local.md` | 从本地HTML生成TDK |
-| `/generate-schema-local` | `.opencode/commands/generate-schema-local.md` | 从本地HTML生成Schema |
-
-### 5. Command → Skill 参数传递
-
-**TDK批量生成参数传递**:
-```
-Command: /generate-tdk-local <dist_directory>
-  ↓
-传递参数给 sitemap-meta-tags-batch-generator skill:
-  - source_mode: "local"
-  - local_directory: <dist_directory>
-  - output_directory: ".geo/tdks"
-  ↓
-Skill执行 Mode 2 Workflow
-  ↓
-输出: .geo/tdks/{locale}/{path}/index.json
-```
-
-**Schema批量生成参数传递**:
-```
-Command: /generate-schema-local <dist_directory>
-  ↓
-传递参数给 sitemap-schema-batch-generator skill:
-  - source_mode: "local"
-  - local_directory: <dist_directory>
-  - output_directory: ".geo/jsonld"
-  ↓
-Skill执行 Mode 2 Workflow
-  ↓
-输出: .geo/jsonld/{locale}/{path}/index.json
-```
-
-### 6. Skill 参数定义
-
-**sitemap-meta-tags-batch-generator**:
-| 参数 | 类型 | 必需 | 说明 |
-|-----|------|-----|------|
-| `source_mode` | string | 否 | `sitemap` 或 `local`，默认 `sitemap` |
-| `sitemap_url` | string | 条件 | Sitemap URL (sitemap模式必需) |
-| `local_directory` | string | 条件 | 本地HTML目录 (local模式必需) |
-| `output_directory` | string | 否 | 输出目录，默认 `.geo/tdks` |
-
-**sitemap-schema-batch-generator**:
-| 参数 | 类型 | 必需 | 说明 |
-|-----|------|-----|------|
-| `source_mode` | string | 否 | `sitemap` 或 `local`，默认 `sitemap` |
-| `sitemap_url` | string | 条件 | Sitemap URL (sitemap模式必需) |
-| `local_directory` | string | 条件 | 本地HTML目录 (local模式必需) |
-| `output_directory` | string | 否 | 输出目录，默认 `.geo/jsonld` |
-
----
-
-## 八、文件结构设计说明
-
-### 1. 按路径组织的设计理念
-
-新的 `.geo/` 目录结构采用**页面路径映射**设计，而非之前的集中文件设计。
-
-**之前的设计**（集中式）:
-```
-.geo/tdks/zh.ts          # 所有中文页面TDK集中在一个文件
-.geo/jsonld/general.ts   # 所有通用页面JSON-LD集中在一个文件
-.geo/jsonld/sigs/*.jsonld.json  # 所有SIG集中在一个目录
-```
-
-**现在的设计**（分布式）:
-```
-.geo/tdks/zh/{path}/index.json    # 每个页面独立文件
-.geo/jsonld/zh/{path}/index.json  # 每个页面独立文件
-```
-
-### 2. 设计优势
-
-| 维度 | 集中式设计 | 分布式设计（当前） |
-|-----|-----------|------------------|
-| **可维护性** | 单文件庞大，难以维护 | 每个页面独立，易于维护 |
-| **增量更新** | 需修改整个文件 | 只修改单个文件 |
-| **路径对应** | 需要查找键映射 | 文件路径即页面路径 |
-| **SIG管理** | 需单独目录 | 与其他页面统一管理 |
-| **Git历史** | 单文件修改频繁 | 修改分散，历史清晰 |
-
-### 3. 文件路径映射规则
-
-```
-页面路径 → 文件路径
-
-zh/migration → .geo/tdks/zh/migration/index.json
-en/approve/approve-info → .geo/jsonld/en/approve/approve-info/index.json
-zh/sig/Kernel → .geo/jsonld/zh/sig/Kernel/index.json
-```
-
-**统一规则**: 所有页面使用 `{locale}/{page-path}/index.json` 格式
-
-### 4. SIG 页面变化说明
-
-**之前**: SIG 页面单独存储在 `.geo/jsonld/sigs/{sig-name}.jsonld.json`
-
-**现在**: SIG 页面与其他页面统一存储在 `.geo/jsonld/zh/sig/{sig-name}/index.json`
-
-**好处**:
-- SIG 页面查找方式与其他页面一致
-- 无需特殊处理逻辑
-- 文件结构与页面URL结构完全对应
-
-### 5. 文件格式
-
-**TDK文件** (`\u200b.geo/tdks/zh/migration/index.json`):
-```json
-{
-  "title": "...",
-  "description": "...",
-  "keywords": "..."
-}
-```
-
-**JSON-LD文件** (`\u200b.geo/jsonld/zh/sig/Kernel/index.json`):
-```json
-[
-  { "@type": "Organization", ... },
-  { "@type": "CollectionPage", ... },
-  { "@type": "FAQPage", ... }
-]
-```
-
-### 6. 读取逻辑变化
-
-**之前**（集中式读取）:
-```typescript
-// 从大对象中查找
-const tdk = tdks[locale][pagePath];
-const jsonLd = generalJsonLd[pagePath];
-```
-
-**现在**（文件路径读取）:
-```typescript
-// 直接读取对应路径文件
-const tdkPath = `.geo/tdks/${locale}/${pagePath}/index.json`;
-const jsonLdPath = `.geo/jsonld/${locale}/${pagePath}/index.json`;
-```
+| 功能 | Skill 名称 |
+|-----|-----------|
+| 单页 meta 优化 | `meta-tags-optimizer` |
+| 单页 schema 生成 | `schema-markup-generator` |

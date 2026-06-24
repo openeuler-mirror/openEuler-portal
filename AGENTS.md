@@ -142,7 +142,47 @@ openEuler-portal/
 
 ## 4. SEO/GEO 配置
 
-- 完整说明：[docs/geo-implementation-summary.md](./docs/geo-implementation-summary.md) @docs/geo-implementation-summary.md
+完整说明：[docs/geo-implementation-summary.md](./docs/geo-implementation-summary.md) @docs/geo-implementation-summary.md
+
+### Agent 工作流（Issue 修复必读）
+
+**遇到 SEO/GEO 相关 issue 提及 TDK/Schema 问题时，遵循以下决策链**：
+
+```
+是 SIG 页面？
+├─ 是 → 调用 generate-sig-jsonld tool（数据来自 API，更准确）
+└─ 否 → 是批量页面？
+         ├─ 是 → 调用 geo-fix-tdk-schema.js 脚本
+         └─ 否 → 使用 skill（meta-tags-optimizer / schema-markup-generator）
+```
+
+**批量处理优先原则**：
+- **禁止**逐页手动编辑 `.geo/tdks/` 或 `.geo/jsonld/` 文件
+- **必须**先评估是否可用脚本/工具批量生成
+- 脚本调用示例：
+  ```bash
+  # 批量生成 TDK
+  node scripts/geo-fix-tdk-schema.js --urls=https://example.com/zh/page1,https://example.com/en/page2 --type=tdk
+  
+  # 批量生成 JSON-LD
+  node scripts/geo-fix-tdk-schema.js --urls=https://example.com/zh/sig/Kernel,https://example.com/en/download --type=jsonld
+  ```
+
+### 快速决策表
+
+| 场景 | 工具/脚本 | 数据来源 | 输出路径 |
+|------|----------|---------|---------|
+| SIG 页面 JSON-LD | `generate-sig-jsonld` tool | API 自动获取 | `.geo/jsonld/{locale}/sig/{name}/index.json` |
+| 批量 TDK | `geo-fix-tdk-schema.js` 脚本 | URL 抓取页面 | `.geo/tdks/{locale}/{path}/index.json` |
+| 批量 JSON-LD | `geo-fix-tdk-schema.js` 脚本 | URL 抓取页面 | `.geo/jsonld/{locale}/{path}/index.json` |
+| 单页 TDK | `meta-tags-optimizer` skill | 手动输入 | `.geo/tdks/{locale}/{path}/index.json` |
+| 单页 JSON-LD | `schema-markup-generator` skill | 手动输入 | `.geo/jsonld/{locale}/{path}/index.json` |
+
+### 关键约束
+
+1. **路径对应规则**：`.geo/tdks/zh/migration/index.json` 对应页面路径 `zh/migration`
+2. **双语必须同步**：修复 TDK/Schema 时，zh/en 两个 locale 都要处理
+3. **质量保证**：生成的 TDK/Schema 必须基于页面实际内容，禁止虚构信息
 
 ---
 
