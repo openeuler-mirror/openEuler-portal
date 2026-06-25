@@ -40,6 +40,7 @@ export default {
   HISTORY: 'All Versions',
   ARCHITECTURE2: 'Architecture',
   SCENARIO2: 'Scenario',
+  INSTRUCTION_SET: 'Instruction Set',
   ARCHITECTUREList: ['x86_64', 'AArch64', 'ARM32'],
   SCENARIOS: ['Server', 'Edge Cloud', 'Cloud Computing', 'Embedded'],
   SCENARIOS_ISO: 'Server',
