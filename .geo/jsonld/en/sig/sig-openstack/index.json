@@ -1,0 +1,103 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-openstack SIG",
+    "description": "The OpenStack sig provide native OpenStack on top of openEuler to build an open and reliable cloud computing technology stack.",
+    "url": "https://www.openeuler.org/en/sig/sig-openstack",
+    "email": "openstack@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 12
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "chenshuo",
+        "url": "https://gitee.com/joec88"
+      },
+      {
+        "@type": "Person",
+        "name": "likunshan",
+        "url": "https://gitee.com/liksh"
+      },
+      {
+        "@type": "Person",
+        "name": "zhangying",
+        "url": "https://gitee.com/zhangy1317"
+      },
+      {
+        "@type": "Person",
+        "name": "huangtianhua",
+        "url": "https://atomgit.com/huangtianhua"
+      },
+      {
+        "@type": "Person",
+        "name": "wangxiyuan",
+        "url": "https://atomgit.com/wangxiyuan"
+      },
+      {
+        "@type": "Person",
+        "name": "zhangfan",
+        "url": "https://gitee.com/zh-f"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-openstack SIG Repository List",
+    "description": "openEuler sig-openstack SIG maintains 458 repositories in the Cloud Computing and Containers domain",
+    "url": "https://www.openeuler.org/en/sig/sig-openstack",
+    "numberOfItems": 458,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-openstack SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-openstack SIG (Special Interest Group) is responsible for The OpenStack sig provide native OpenStack on top of openEuler to build an open and reliable cloud computing technology stack.. The SIG has 12 core members and maintains 458 repositories in the Cloud Computing and Containers domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-openstack SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-openstack SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at openstack@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-openstack SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-openstack SIG maintains 458 repositories. Full list at https://www.openeuler.org/en/sig/sig-openstack."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-openstack SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-openstack SIG has 6 Maintainers, including: chenshuo, likunshan, zhangying. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

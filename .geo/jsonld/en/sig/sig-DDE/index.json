@@ -1,0 +1,94 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-DDE SIG",
+    "description": "The deepin desktop enviroment sig.",
+    "url": "https://www.openeuler.org/en/sig/sig-DDE",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 9
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-06-24",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "mahailiang",
+        "url": "https://atomgit.com/hailianguniontech"
+      },
+      {
+        "@type": "Person",
+        "name": "lvgenggeng",
+        "url": "https://atomgit.com/lvgenggeng"
+      },
+      {
+        "@type": "Person",
+        "name": "yangxiaoxuan",
+        "url": "https://atomgit.com/ut-layne-yang"
+      },
+      {
+        "@type": "Person",
+        "name": "lvcongqing",
+        "url": "https://atomgit.com/HelloWorld_lvcongqing"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-DDE SIG Repository List",
+    "description": "openEuler sig-DDE SIG maintains 82 repositories in the Desktop and Graphics domain",
+    "url": "https://www.openeuler.org/en/sig/sig-DDE",
+    "numberOfItems": 82,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-DDE SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-DDE SIG (Special Interest Group) is responsible for The deepin desktop enviroment sig.. The SIG has 9 core members and maintains 82 repositories in the Desktop and Graphics domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-DDE SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-DDE SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-DDE SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-DDE SIG maintains 82 repositories. Full list at https://www.openeuler.org/en/sig/sig-DDE."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-DDE SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-DDE SIG has 4 Maintainers, including: mahailiang, lvgenggeng, yangxiaoxuan. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

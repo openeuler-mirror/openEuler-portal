@@ -1,0 +1,82 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-Talent-and-Service SIG",
+    "description": "Talent and Service",
+    "url": "https://www.openeuler.org/en/sig/sig-Talent-and-Service",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 6
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Huilong Deng",
+        "url": "https://gitee.com/denghuilong88"
+      },
+      {
+        "@type": "Person",
+        "name": "Lichao Zhao",
+        "url": "https://atomgit.com/zhaolichao1234"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-Talent-and-Service SIG Repository List",
+    "description": "openEuler sig-Talent-and-Service SIG maintains 2 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-Talent-and-Service",
+    "numberOfItems": 2,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-Talent-and-Service SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Talent-and-Service SIG (Special Interest Group) is responsible for Talent and Service. The SIG has 6 core members and maintains 2 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-Talent-and-Service SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-Talent-and-Service SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at sig-Talent-and-Service@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-Talent-and-Service SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Talent-and-Service SIG maintains 2 repositories. Full list at https://www.openeuler.org/en/sig/sig-Talent-and-Service."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-Talent-and-Service SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Talent-and-Service SIG has 2 Maintainers, including: Huilong Deng, Lichao Zhao. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-LoongArch SIG",
+    "description": "The LoongArch SIG provides a place for technical discussions and sharing about firmware, toolchains, kernel, basic librarys, jdk, javaScript, luaJIT and other software on LoongArch platfrom.",
+    "url": "https://www.openeuler.org/en/sig/sig-LoongArch",
+    "email": "NA",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 4
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2022-05-11",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "houfangdong",
+        "url": "https://atomgit.com/SmallPegasus",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Loongson"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Hailiang",
+        "url": "https://atomgit.com/hailiang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "UOS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "JinXu",
+        "url": "https://atomgit.com/jinxu1992",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "zhouqiang",
+        "url": "https://atomgit.com/Dave110",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "kylinsec"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-LoongArch SIG Repository List",
+    "description": "openEuler sig-LoongArch SIG repository list",
+    "url": "https://www.openeuler.org/en/sig/sig-LoongArch",
+    "numberOfItems": 0,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-LoongArch SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-LoongArch SIG (Special Interest Group) is responsible for The LoongArch SIG provides a place for technical discussions and sharing about firmware, toolchains, kernel, basic librarys, jdk, javaScript, luaJIT and other software on LoongArch platfrom.. The SIG has 4 core members and maintains 0 repositories in the Operating System Kernel domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-LoongArch SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-LoongArch SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at NA; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-LoongArch SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-LoongArch SIG maintains 0 repositories. Full list at https://www.openeuler.org/en/sig/sig-LoongArch."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-LoongArch SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-LoongArch SIG has 4 Maintainers, including: houfangdong, Hailiang, JinXu. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

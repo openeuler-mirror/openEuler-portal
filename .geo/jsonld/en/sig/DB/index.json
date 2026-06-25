@@ -1,0 +1,93 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler DB SIG",
+    "description": "openEuler DB SIG which is focus on openEuler DB software and technology ecosystem",
+    "url": "https://www.openeuler.org/en/sig/DB",
+    "email": "NA",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 37
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2019-12-31",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Qide Chen",
+        "url": "https://atomgit.com/dillon_chen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zhenyu Zheng",
+        "url": "https://atomgit.com/ZhengZhenyu"
+      },
+      {
+        "@type": "Person",
+        "name": "Chutian Xi",
+        "url": "https://atomgit.com/xicoding"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler DB SIG Repository List",
+    "description": "openEuler DB SIG maintains 56 repositories in the Database domain",
+    "url": "https://www.openeuler.org/en/sig/DB",
+    "numberOfItems": 56,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler DB SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler DB SIG (Special Interest Group) is responsible for openEuler DB SIG which is focus on openEuler DB software and technology ecosystem. The SIG has 37 core members and maintains 56 repositories in the Database domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler DB SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler DB SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at NA; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler DB SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler DB SIG maintains 56 repositories. Full list at https://www.openeuler.org/en/sig/DB."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler DB SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler DB SIG has 3 Maintainers, including: Qide Chen, Zhenyu Zheng, Chutian Xi. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler security-committee SIG",
+    "description": "The openEuler Security Committee (SC) receives and responds to openEuler security issues, provides community security guidance, and carries out security governance. It is built to enhance the security of openEuler products and development environment.",
+    "url": "https://www.openeuler.org/en/sig/security-committee",
+    "email": "openeuler-security@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 9
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Zhu Jianwei",
+        "url": "https://atomgit.com/zhujianwei001"
+      },
+      {
+        "@type": "Person",
+        "name": "Cui Lei",
+        "url": "https://atomgit.com/kylincuilei"
+      },
+      {
+        "@type": "Person",
+        "name": "Tan Jingguo",
+        "url": "https://atomgit.com/tanjingguo"
+      },
+      {
+        "@type": "Person",
+        "name": "Luo Yukai",
+        "url": "https://atomgit.com/luoyukai"
+      },
+      {
+        "@type": "Person",
+        "name": "Liu Jingang",
+        "url": "https://gitee.com/liujingang09"
+      },
+      {
+        "@type": "Person",
+        "name": "Tang Jie",
+        "url": "https://atomgit.com/tangjie"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler security-committee SIG Repository List",
+    "description": "openEuler security-committee SIG maintains 2 repositories in the Security domain",
+    "url": "https://www.openeuler.org/en/sig/security-committee",
+    "numberOfItems": 2,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler security-committee SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler security-committee SIG (Special Interest Group) is responsible for The openEuler Security Committee (SC) receives and responds to openEuler security issues, provides community security guidance, and carries out security governance. It is built to enhance the security of openEuler products and development environment.. The SIG has 9 core members and maintains 2 repositories in the Security domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler security-committee SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler security-committee SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at openeuler-security@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler security-committee SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler security-committee SIG maintains 2 repositories. Full list at https://www.openeuler.org/en/sig/security-committee."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler security-committee SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler security-committee SIG has 6 Maintainers, including: Zhu Jianwei, Cui Lei, Tan Jingguo. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

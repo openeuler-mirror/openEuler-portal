@@ -1,0 +1,119 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-epkg SIG",
+    "description": "epkg is a package manager for installing multi-version software in multiple environments",
+    "url": "https://www.openeuler.org/en/sig/sig-epkg",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 9
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2025-04-02",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Fengguang Wu",
+        "url": "https://atomgit.com/wu_fengguang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Kai Liu",
+        "url": "https://atomgit.com/kailiu42",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Wind River"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Wayne Ren",
+        "url": "https://atomgit.com/vonhust"
+      },
+      {
+        "@type": "Person",
+        "name": "Funda Wang",
+        "url": "https://atomgit.com/fundawang"
+      },
+      {
+        "@type": "Person",
+        "name": "Duan Pengjie",
+        "url": "https://atomgit.com/duan_pengjie",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yaqiang Chen",
+        "url": "https://atomgit.com/yaqiangchen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-epkg SIG Repository List",
+    "description": "openEuler sig-epkg SIG maintains 8 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-epkg",
+    "numberOfItems": 8,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-epkg SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-epkg SIG (Special Interest Group) is responsible for epkg is a package manager for installing multi-version software in multiple environments. The SIG has 9 core members and maintains 8 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-epkg SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-epkg SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at sig-epkg@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-epkg SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-epkg SIG maintains 8 repositories. Full list at https://www.openeuler.org/en/sig/sig-epkg."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-epkg SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-epkg SIG has 6 Maintainers, including: Fengguang Wu, Kai Liu, Wayne Ren. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

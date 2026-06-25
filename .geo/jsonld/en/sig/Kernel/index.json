@@ -1,0 +1,98 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Kernel SIG",
+    "description": "openEuler Kernel SIG",
+    "url": "https://www.openeuler.org/en/sig/Kernel",
+    "email": "kernel@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 118
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Xie XiuQi",
+        "url": "https://atomgit.com/oekernel"
+      },
+      {
+        "@type": "Person",
+        "name": "Hanjun Guo",
+        "url": "https://atomgit.com/hanjunguo"
+      },
+      {
+        "@type": "Person",
+        "name": "Zheng Zengkai",
+        "url": "https://atomgit.com/zhengzengkai"
+      },
+      {
+        "@type": "Person",
+        "name": "sanglipeng",
+        "url": "https://atomgit.com/sanglipeng"
+      },
+      {
+        "@type": "Person",
+        "name": "Jason Zeng",
+        "url": "https://atomgit.com/zeng_zhaorong"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Kernel SIG Repository List",
+    "description": "openEuler Kernel SIG maintains 21 repositories in the Operating System Kernel domain",
+    "url": "https://www.openeuler.org/en/sig/Kernel",
+    "numberOfItems": 21,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler Kernel SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Kernel SIG (Special Interest Group) is responsible for openEuler Kernel SIG. The SIG has 118 core members and maintains 21 repositories in the Operating System Kernel domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler Kernel SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler Kernel SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at kernel@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler Kernel SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Kernel SIG maintains 21 repositories. Full list at https://www.openeuler.org/en/sig/Kernel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler Kernel SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Kernel SIG has 5 Maintainers, including: Xie XiuQi, Hanjun Guo, Zheng Zengkai. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

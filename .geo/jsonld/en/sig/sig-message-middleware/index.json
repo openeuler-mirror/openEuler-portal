@@ -1,0 +1,101 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-message-middleware SIG",
+    "description": "This sig maintain messaging middleware software packages for upstream open source communities,and incubate the new open source self-developed message middleware.",
+    "url": "https://www.openeuler.org/en/sig/sig-message-middleware",
+    "email": "message-middleware@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 14
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2023-6-21",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "huzongtang",
+        "url": "https://gitee.com/hu-zongtang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ChinaMobile"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "jianghaiting",
+        "url": "https://gitee.com/jas0n918",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Tencent"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "dingwei",
+        "url": "https://gitee.com/dingwei-hello",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-message-middleware SIG Repository List",
+    "description": "openEuler sig-message-middleware SIG maintains 10 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-message-middleware",
+    "numberOfItems": 10,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-message-middleware SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-message-middleware SIG (Special Interest Group) is responsible for This sig maintain messaging middleware software packages for upstream open source communities,and incubate the new open source self-developed message middleware.. The SIG has 14 core members and maintains 10 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-message-middleware SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-message-middleware SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at message-middleware@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-message-middleware SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-message-middleware SIG maintains 10 repositories. Full list at https://www.openeuler.org/en/sig/sig-message-middleware."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-message-middleware SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-message-middleware SIG has 3 Maintainers, including: huzongtang, jianghaiting, dingwei. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

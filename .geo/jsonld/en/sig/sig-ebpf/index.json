@@ -1,0 +1,126 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-ebpf SIG",
+    "description": "eBPF is a revolutionary technology with origins in the Linux kernel that can run sandboxed programs in an operating system kernel. It is used to safely and efficiently extend the capabilities of the kernel without requiring to change kernel source code or load kernel modules.",
+    "url": "https://www.openeuler.org/en/sig/sig-ebpf",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 28
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Leon Wang",
+        "url": "https://atomgit.com/wonleing",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CTyun"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "luzhihao",
+        "url": "https://atomgit.com/MrRlu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "weiyongjun",
+        "url": "https://atomgit.com/weiyj__lk",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "xuqingwei",
+        "url": "https://gitee.com/DevinRTK",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "SANGFOR"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "huyadi",
+        "url": "https://gitee.com/huyd12",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CTyun"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "jiangbiao",
+        "url": "https://atomgit.com/happyseeker",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CTyun"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-ebpf SIG Repository List",
+    "description": "openEuler sig-ebpf SIG maintains 19 repositories in the Operating System Kernel domain",
+    "url": "https://www.openeuler.org/en/sig/sig-ebpf",
+    "numberOfItems": 19,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-ebpf SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-ebpf SIG (Special Interest Group) is responsible for eBPF is a revolutionary technology with origins in the Linux kernel that can run sandboxed programs in an operating system kernel. It is used to safely and efficiently extend the capabilities of the kernel without requiring to change kernel source code or load kernel modules.. The SIG has 28 core members and maintains 19 repositories in the Operating System Kernel domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-ebpf SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-ebpf SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at sig-ebpf@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-ebpf SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-ebpf SIG maintains 19 repositories. Full list at https://www.openeuler.org/en/sig/sig-ebpf."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-ebpf SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-ebpf SIG has 6 Maintainers, including: Leon Wang, luzhihao, weiyongjun. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

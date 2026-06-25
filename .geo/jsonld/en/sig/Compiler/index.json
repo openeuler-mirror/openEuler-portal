@@ -1,0 +1,127 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Compiler SIG",
+    "description": "The Compiler SIG provides a place for technical discussions and sharing about compilers, covering GCC, LLVM, OpenJDK, and other program optimization technologies. We are eager to work with academics and industry experts to promote the development of compilation technologies.",
+    "url": "https://www.openeuler.org/en/sig/Compiler",
+    "email": "compiler@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 64
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "dongbo He",
+        "url": "https://gitee.com/jvmboy",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "zhiheng Xie",
+        "url": "https://atomgit.com/eastb233",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "kun Wang",
+        "url": "https://atomgit.com/kuenking111_admin",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "chuanfeng Zhao",
+        "url": "https://atomgit.com/cf-zhao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "yancheng Li",
+        "url": "https://atomgit.com/li-yancheng",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Shanyao Chen",
+        "url": "https://atomgit.com/SegFault",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Compiler SIG Repository List",
+    "description": "openEuler Compiler SIG maintains 122 repositories in the Compiler and Toolchain domain",
+    "url": "https://www.openeuler.org/en/sig/Compiler",
+    "numberOfItems": 122,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler Compiler SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Compiler SIG (Special Interest Group) is responsible for The Compiler SIG provides a place for technical discussions and sharing about compilers, covering GCC, LLVM, OpenJDK, and other program optimization technologies. We are eager to work with academics and industry experts to promote the development of compilation technologies.. The SIG has 64 core members and maintains 122 repositories in the Compiler and Toolchain domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler Compiler SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler Compiler SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at compiler@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler Compiler SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Compiler SIG maintains 122 repositories. Full list at https://www.openeuler.org/en/sig/Compiler."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler Compiler SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Compiler SIG has 6 Maintainers, including: dongbo He, zhiheng Xie, kun Wang. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

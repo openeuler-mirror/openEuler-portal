@@ -1,0 +1,93 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-AccLib SIG",
+    "description": "The AccLib team is responsible for exploring high-performance acceleration technologies and solutions such as accelerator hardware engines and acceleration instructions.",
+    "url": "https://www.openeuler.org/en/sig/sig-AccLib",
+    "email": "acc@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 10
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "fanghao",
+        "url": "https://atomgit.com/hao-fang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhangfei Gao",
+        "url": "https://gitee.com/gaozhangfei"
+      },
+      {
+        "@type": "Person",
+        "name": "wujunhao",
+        "url": "https://atomgit.com/wujunhaoo"
+      },
+      {
+        "@type": "Person",
+        "name": "liuyang",
+        "url": "https://atomgit.com/lauyarn"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-AccLib SIG Repository List",
+    "description": "openEuler sig-AccLib SIG maintains 25 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-AccLib",
+    "numberOfItems": 25,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-AccLib SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-AccLib SIG (Special Interest Group) is responsible for The AccLib team is responsible for exploring high-performance acceleration technologies and solutions such as accelerator hardware engines and acceleration instructions.. The SIG has 10 core members and maintains 25 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-AccLib SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-AccLib SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at acc@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-AccLib SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-AccLib SIG maintains 25 repositories. Full list at https://www.openeuler.org/en/sig/sig-AccLib."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-AccLib SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-AccLib SIG has 4 Maintainers, including: fanghao, Zhangfei Gao, wujunhao. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-QA SIG",
+    "description": "QA team aims to test softwares make up openEuler release, our goal is to improve openEuler community quality and testing capability.",
+    "url": "https://www.openeuler.org/en/sig/sig-QA",
+    "email": "qa@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 43
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "wufengguang",
+        "url": "https://atomgit.com/wu_fengguang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "wubodong",
+        "url": "https://atomgit.com/walkingwalk",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "lemon.higgins",
+        "url": "https://atomgit.com/lemon-higgins",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "lutianxiong",
+        "url": "https://atomgit.com/lutianxiong",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "yanjin",
+        "url": "https://atomgit.com/Rigorous",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "tangjie",
+        "url": "https://atomgit.com/SupMario",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-QA SIG Repository List",
+    "description": "openEuler sig-QA SIG maintains 22 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-QA",
+    "numberOfItems": 22,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-QA SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-QA SIG (Special Interest Group) is responsible for QA team aims to test softwares make up openEuler release, our goal is to improve openEuler community quality and testing capability.. The SIG has 43 core members and maintains 22 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-QA SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-QA SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at qa@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-QA SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-QA SIG maintains 22 repositories. Full list at https://www.openeuler.org/en/sig/sig-QA."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-QA SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-QA SIG has 6 Maintainers, including: wufengguang, wubodong, lemon.higgins. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

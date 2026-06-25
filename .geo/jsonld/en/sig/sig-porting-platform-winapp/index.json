@@ -1,0 +1,124 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-porting-platform-winapp SIG",
+    "description": "The Porting Platform WinApp SIG group focuses on technology and software development related to the migration of Windows applications to openEuler.",
+    "url": "https://www.openeuler.org/en/sig/sig-porting-platform-winapp",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 8
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2023-07-26",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Liu Dong",
+        "url": "https://gitee.com/ld-linzhuotech",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "linzhuotech"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Wen Yan",
+        "url": "https://atomgit.com/celestialwy",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "linzhuotech"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Wang Jianmin",
+        "url": "https://atomgit.com/jimmieme"
+      },
+      {
+        "@type": "Person",
+        "name": "Wang Zhi",
+        "url": "https://atomgit.com/ksana123",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "openEuler"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Fu Tao",
+        "url": "https://atomgit.com/ftboy",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "openEuler"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Li Fei",
+        "url": "https://gitee.com/ldf-hahaha",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "linzhuotech"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-porting-platform-winapp SIG Repository List",
+    "description": "openEuler sig-porting-platform-winapp SIG maintains 4 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-porting-platform-winapp",
+    "numberOfItems": 4,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-porting-platform-winapp SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-porting-platform-winapp SIG (Special Interest Group) is responsible for The Porting Platform WinApp SIG group focuses on technology and software development related to the migration of Windows applications to openEuler.. The SIG has 8 core members and maintains 4 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-porting-platform-winapp SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-porting-platform-winapp SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-porting-platform-winapp SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-porting-platform-winapp SIG maintains 4 repositories. Full list at https://www.openeuler.org/en/sig/sig-porting-platform-winapp."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-porting-platform-winapp SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-porting-platform-winapp SIG has 6 Maintainers, including: Liu Dong, Wen Yan, Wang Jianmin. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

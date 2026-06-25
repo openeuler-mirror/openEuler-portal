@@ -1,0 +1,105 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-OSCourse SIG",
+    "description": "This is a sig for Operating System Course.",
+    "url": "https://www.openeuler.org/en/sig/sig-OSCourse",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 8
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Chen Zheng",
+        "url": "https://gitee.com/zhengchen87",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ISCAS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Siyang Tian",
+        "url": "https://gitee.com/iscassiyang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zheng Zhenyu",
+        "url": "https://atomgit.com/ZhengZhenyu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Ma Quanyi",
+        "url": "https://atomgit.com/genedna",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-OSCourse SIG Repository List",
+    "description": "openEuler sig-OSCourse SIG maintains 16 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-OSCourse",
+    "numberOfItems": 16,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-OSCourse SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OSCourse SIG (Special Interest Group) is responsible for This is a sig for Operating System Course.. The SIG has 8 core members and maintains 16 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-OSCourse SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-OSCourse SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-OSCourse SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OSCourse SIG maintains 16 repositories. Full list at https://www.openeuler.org/en/sig/sig-OSCourse."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-OSCourse SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OSCourse SIG has 4 Maintainers, including: Chen Zheng, Siyang Tian, Zheng Zhenyu. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

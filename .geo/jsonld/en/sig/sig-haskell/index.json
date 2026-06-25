@@ -1,0 +1,110 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-haskell SIG",
+    "description": "Haskell SIG taking care of porting haskell compiler and others software components to openEuler ecosystem",
+    "url": "https://www.openeuler.org/en/sig/sig-haskell",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 4
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2023-11-11",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Runze Lin",
+        "url": "https://atomgit.com/lrzlin",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "NA"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Kai Liu",
+        "url": "https://atomgit.com/kailiu42",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Wind River"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Fengguang Wu",
+        "url": "https://atomgit.com/wu_fengguang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Xinwei Hu",
+        "url": "https://atomgit.com/shinwell_hu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "openEuler"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-haskell SIG Repository List",
+    "description": "openEuler sig-haskell SIG maintains 250 repositories in the Compiler and Toolchain domain",
+    "url": "https://www.openeuler.org/en/sig/sig-haskell",
+    "numberOfItems": 250,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-haskell SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-haskell SIG (Special Interest Group) is responsible for Haskell SIG taking care of porting haskell compiler and others software components to openEuler ecosystem. The SIG has 4 core members and maintains 250 repositories in the Compiler and Toolchain domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-haskell SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-haskell SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-haskell SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-haskell SIG maintains 250 repositories. Full list at https://www.openeuler.org/en/sig/sig-haskell."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-haskell SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-haskell SIG has 4 Maintainers, including: Runze Lin, Kai Liu, Fengguang Wu. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]
