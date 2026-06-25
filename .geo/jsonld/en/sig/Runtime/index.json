@@ -1,0 +1,92 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Runtime SIG",
+    "description": "The Runtime team is responsible for the development and maintenance of OS system Runtime in openeuler community.",
+    "url": "https://www.openeuler.org/en/sig/Runtime",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 5
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-03-26",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Yongqiang Li",
+        "url": "https://atomgit.com/Charlie_li1",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "xfusion"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Senlin Xia",
+        "url": "https://atomgit.com/small_leek",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Runtime SIG Repository List",
+    "description": "openEuler Runtime SIG maintains 39 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/Runtime",
+    "numberOfItems": 39,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler Runtime SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Runtime SIG (Special Interest Group) is responsible for The Runtime team is responsible for the development and maintenance of OS system Runtime in openeuler community.. The SIG has 5 core members and maintains 39 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler Runtime SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler Runtime SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler Runtime SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Runtime SIG maintains 39 repositories. Full list at https://www.openeuler.org/en/sig/Runtime."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler Runtime SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Runtime SIG has 2 Maintainers, including: Yongqiang Li, Senlin Xia. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

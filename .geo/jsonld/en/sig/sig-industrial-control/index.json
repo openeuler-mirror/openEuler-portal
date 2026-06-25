@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-industrial-control SIG",
+    "description": "The Industrial control  SIG group is mainly dedicated to developing OpenEuler as a real-time operating system for industrial control or embedded applications.",
+    "url": "https://www.openeuler.org/en/sig/sig-industrial-control",
+    "email": "industrial-control@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 16
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2021-04-07",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Guo Hao",
+        "url": "https://gitee.com/guohaocs2c",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Wu Chunguang",
+        "url": "https://gitee.com/wuchunguang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Ma Yukun",
+        "url": "https://atomgit.com/kylin-mayukun",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zhang Yuanhang",
+        "url": "https://gitee.com/zhangyh1992",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zhang Yu",
+        "url": "https://atomgit.com/zhangyuge001",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Li Yulei",
+        "url": "https://gitee.com/r2018",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-industrial-control SIG Repository List",
+    "description": "openEuler sig-industrial-control SIG maintains 26 repositories in the Embedded and IoT domain",
+    "url": "https://www.openeuler.org/en/sig/sig-industrial-control",
+    "numberOfItems": 26,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-industrial-control SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-industrial-control SIG (Special Interest Group) is responsible for The Industrial control  SIG group is mainly dedicated to developing OpenEuler as a real-time operating system for industrial control or embedded applications.. The SIG has 16 core members and maintains 26 repositories in the Embedded and IoT domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-industrial-control SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-industrial-control SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at industrial-control@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-industrial-control SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-industrial-control SIG maintains 26 repositories. Full list at https://www.openeuler.org/en/sig/sig-industrial-control."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-industrial-control SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-industrial-control SIG has 6 Maintainers, including: Guo Hao, Wu Chunguang, Ma Yukun. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

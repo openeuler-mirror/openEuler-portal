@@ -1,0 +1,92 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler user-committee SIG",
+    "description": "Collect user feedback from end users of the openEuler operating system and open source platform projects, communicate with community developers, and promote user requirements to be accepted in the community.",
+    "url": "https://www.openeuler.org/en/sig/user-committee",
+    "email": "end-user@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 2
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2021-05-10",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "maquanyi",
+        "url": "https://atomgit.com/genedna",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "qusheng",
+        "url": "https://gitee.com/allesgute",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ISCAS"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler user-committee SIG Repository List",
+    "description": "openEuler user-committee SIG maintains 1 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/user-committee",
+    "numberOfItems": 1,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler user-committee SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler user-committee SIG (Special Interest Group) is responsible for Collect user feedback from end users of the openEuler operating system and open source platform projects, communicate with community developers, and promote user requirements to be accepted in the community.. The SIG has 2 core members and maintains 1 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler user-committee SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler user-committee SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at end-user@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler user-committee SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler user-committee SIG maintains 1 repositories. Full list at https://www.openeuler.org/en/sig/user-committee."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler user-committee SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler user-committee SIG has 2 Maintainers, including: maquanyi, qusheng. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

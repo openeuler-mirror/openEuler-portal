@@ -1,0 +1,118 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-confidential-computing SIG",
+    "description": "The sig for confidential computing technologies.",
+    "url": "https://www.openeuler.org/en/sig/sig-confidential-computing",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 18
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Guijin Gao",
+        "url": "https://atomgit.com/blue0613",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Maodong Chen",
+        "url": "https://atomgit.com/chenmaodong",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Xfusion"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Linhao Zhang",
+        "url": "https://atomgit.com/wolfkernel",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Dongdong Yao",
+        "url": "https://atomgit.com/dongdo-yao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Mingyong Hou",
+        "url": "https://atomgit.com/houmingyong",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-confidential-computing SIG Repository List",
+    "description": "openEuler sig-confidential-computing SIG maintains 19 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-confidential-computing",
+    "numberOfItems": 19,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-confidential-computing SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-confidential-computing SIG (Special Interest Group) is responsible for The sig for confidential computing technologies.. The SIG has 18 core members and maintains 19 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-confidential-computing SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-confidential-computing SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-confidential-computing SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-confidential-computing SIG maintains 19 repositories. Full list at https://www.openeuler.org/en/sig/sig-confidential-computing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-confidential-computing SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-confidential-computing SIG has 5 Maintainers, including: Guijin Gao, Maodong Chen, Linhao Zhang. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

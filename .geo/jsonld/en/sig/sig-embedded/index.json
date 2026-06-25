@@ -1,0 +1,88 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-embedded SIG",
+    "description": "sig-embedded is working on providing openEuler Embedded covering infrastructure, key components etc..",
+    "url": "https://www.openeuler.org/en/sig/sig-embedded",
+    "email": "NA",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 19
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Wayne Ren",
+        "url": "https://atomgit.com/vonhust"
+      },
+      {
+        "@type": "Person",
+        "name": "Xinyu Li",
+        "url": "https://atomgit.com/alichinese_admin"
+      },
+      {
+        "@type": "Person",
+        "name": "Linxu Fang",
+        "url": "https://atomgit.com/fanglinxu2025"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-embedded SIG Repository List",
+    "description": "openEuler sig-embedded SIG maintains 48 repositories in the Embedded and IoT domain",
+    "url": "https://www.openeuler.org/en/sig/sig-embedded",
+    "numberOfItems": 48,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-embedded SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-embedded SIG (Special Interest Group) is responsible for sig-embedded is working on providing openEuler Embedded covering infrastructure, key components etc... The SIG has 19 core members and maintains 48 repositories in the Embedded and IoT domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-embedded SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-embedded SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at NA; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-embedded SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-embedded SIG maintains 48 repositories. Full list at https://www.openeuler.org/en/sig/sig-embedded."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-embedded SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-embedded SIG has 3 Maintainers, including: Wayne Ren, Xinyu Li, Linxu Fang. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

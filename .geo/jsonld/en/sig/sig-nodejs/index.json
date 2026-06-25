@@ -1,0 +1,97 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-nodejs SIG",
+    "description": "The nodejs team is responsible for maintain the nodejs-related packages for OpenEuler.",
+    "url": "https://www.openeuler.org/en/sig/sig-nodejs",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 7
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-08-26",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "feng Hu",
+        "url": "https://atomgit.com/solarhu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "yuhang zheng",
+        "url": "https://gitee.com/zhengyuhanghans"
+      },
+      {
+        "@type": "Person",
+        "name": "huaxin Lu",
+        "url": "https://atomgit.com/qq_28851361",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-nodejs SIG Repository List",
+    "description": "openEuler sig-nodejs SIG maintains 361 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-nodejs",
+    "numberOfItems": 361,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-nodejs SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-nodejs SIG (Special Interest Group) is responsible for The nodejs team is responsible for maintain the nodejs-related packages for OpenEuler.. The SIG has 7 core members and maintains 361 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-nodejs SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-nodejs SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-nodejs SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-nodejs SIG maintains 361 repositories. Full list at https://www.openeuler.org/en/sig/sig-nodejs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-nodejs SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-nodejs SIG has 3 Maintainers, including: feng Hu, yuhang zheng, huaxin Lu. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

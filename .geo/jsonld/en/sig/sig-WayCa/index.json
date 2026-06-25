@@ -1,0 +1,101 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-WayCa SIG",
+    "description": "The WayCa team is responsible for developing and maintaining some tools which run in the enabling-hardware layer of Kunpeng.",
+    "url": "https://www.openeuler.org/en/sig/sig-WayCa",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 7
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2022-08-26",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Fred Kimmy",
+        "url": "https://atomgit.com/kongzizaixian",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Jenkins Jiang",
+        "url": "https://atomgit.com/jenkins-jiang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yonglong Liu",
+        "url": "https://atomgit.com/liuyonglong86",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-WayCa SIG Repository List",
+    "description": "openEuler sig-WayCa SIG maintains 5 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-WayCa",
+    "numberOfItems": 5,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-WayCa SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-WayCa SIG (Special Interest Group) is responsible for The WayCa team is responsible for developing and maintaining some tools which run in the enabling-hardware layer of Kunpeng.. The SIG has 7 core members and maintains 5 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-WayCa SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-WayCa SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-WayCa SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-WayCa SIG maintains 5 repositories. Full list at https://www.openeuler.org/en/sig/sig-WayCa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-WayCa SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-WayCa SIG has 3 Maintainers, including: Fred Kimmy, Jenkins Jiang, Yonglong Liu. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

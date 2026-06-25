@@ -1,0 +1,69 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/sig/meeting-guide",
+    "url": "https://www.openeuler.org/en/sig/meeting-guide",
+    "name": "openEuler SIG Meeting Guide | SIG Zone | openEuler",
+    "description": "Learn about openEuler SIG meeting schedules and participation guides, and get involved in community activities.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SIG Center",
+          "item": "https://www.openeuler.org/en/sig/sig-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Meeting Guide",
+          "item": "https://www.openeuler.org/en/sig/meeting-guide"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "openEuler SIG Meeting Participation Guide",
+    "description": "Learn about openEuler SIG meeting schedules and participation guides, and get involved in community activities.",
+    "url": "https://www.openeuler.org/en/sig/meeting-guide",
+    "inLanguage": "en",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Check Meeting Schedule",
+        "text": "Browse the meeting schedules and agendas for each openEuler SIG."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Select a SIG",
+        "text": "Choose a SIG group based on your technical direction and interests."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Join the Meeting",
+        "text": "Join SIG regular meetings via meeting links or calendar subscriptions."
+      }
+    ]
+  }
+]

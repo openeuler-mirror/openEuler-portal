@@ -1,0 +1,110 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-OceanBase SIG",
+    "description": "The OceanBase SIG provides a place for technical discussions and sharing about OceanBase server, client, toolchains, dependency libraries and other software in OceanBase ecosystem.",
+    "url": "https://www.openeuler.org/en/sig/sig-OceanBase",
+    "email": "open_contact@oceanbase.com",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 5
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2024-04-11",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Zhongyan Feng",
+        "url": "https://gitee.com/longdafeng",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "OceanBase"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Feizhi Cai",
+        "url": "https://gitee.com/caifeizhi",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "OceanBase"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Rongfeng Fu",
+        "url": "https://gitee.com/frf12",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "OceanBase"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zelin Wang",
+        "url": "https://atomgit.com/LINGuanRen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "OceanBase"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-OceanBase SIG Repository List",
+    "description": "openEuler sig-OceanBase SIG maintains 1 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-OceanBase",
+    "numberOfItems": 1,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-OceanBase SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OceanBase SIG (Special Interest Group) is responsible for The OceanBase SIG provides a place for technical discussions and sharing about OceanBase server, client, toolchains, dependency libraries and other software in OceanBase ecosystem.. The SIG has 5 core members and maintains 1 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-OceanBase SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-OceanBase SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at open_contact@oceanbase.com; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-OceanBase SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OceanBase SIG maintains 1 repositories. Full list at https://www.openeuler.org/en/sig/sig-OceanBase."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-OceanBase SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OceanBase SIG has 4 Maintainers, including: Zhongyan Feng, Feizhi Cai, Rongfeng Fu. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

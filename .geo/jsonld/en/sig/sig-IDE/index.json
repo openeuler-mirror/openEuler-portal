@@ -1,0 +1,89 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-IDE SIG",
+    "description": "By establishing an Embedded IDE SIG, we can attract more developers and vendors to participate in the embedded development of industrial real-time, hard real-time, and hybrid deployment scenarios, driving the development of the embedded systems field.",
+    "url": "https://www.openeuler.org/en/sig/sig-IDE",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 15
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2024-06-22",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "胡正策",
+        "url": "https://atomgit.com/huzhengce"
+      },
+      {
+        "@type": "Person",
+        "name": "陈功",
+        "url": "https://atomgit.com/qsemos-cg"
+      },
+      {
+        "@type": "Person",
+        "name": "王兴龙",
+        "url": "https://gitee.com/hacke2"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-IDE SIG Repository List",
+    "description": "openEuler sig-IDE SIG maintains 6 repositories in the Embedded and IoT domain",
+    "url": "https://www.openeuler.org/en/sig/sig-IDE",
+    "numberOfItems": 6,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-IDE SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-IDE SIG (Special Interest Group) is responsible for By establishing an Embedded IDE SIG, we can attract more developers and vendors to participate in the embedded development of industrial real-time, hard real-time, and hybrid deployment scenarios, driving the development of the embedded systems field.. The SIG has 15 core members and maintains 6 repositories in the Embedded and IoT domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-IDE SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-IDE SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-IDE SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-IDE SIG maintains 6 repositories. Full list at https://www.openeuler.org/en/sig/sig-IDE."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-IDE SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-IDE SIG has 3 Maintainers, including: 胡正策, 陈功, 王兴龙. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

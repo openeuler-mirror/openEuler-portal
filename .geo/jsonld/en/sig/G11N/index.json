@@ -1,0 +1,127 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler G11N SIG",
+    "description": "The SIG aims to accelerate the globalization of openEuler and make openEuler ubiquitously accessible to people of all language backgrounds.",
+    "url": "https://www.openeuler.org/en/sig/G11N",
+    "email": "g11n@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 6
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Judith",
+        "url": "https://atomgit.com/Judithsq",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yanhuiling",
+        "url": "https://gitee.com/yanhuiling",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "zwy",
+        "url": "https://gitee.com/zwyopen2021",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "hcy1012",
+        "url": "https://atomgit.com/hcy1012",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Liupeng",
+        "url": "https://atomgit.com/liupengroc",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "lshelen",
+        "url": "https://gitee.com/lshelen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler G11N SIG Repository List",
+    "description": "openEuler G11N SIG maintains 2 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/G11N",
+    "numberOfItems": 2,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler G11N SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler G11N SIG (Special Interest Group) is responsible for The SIG aims to accelerate the globalization of openEuler and make openEuler ubiquitously accessible to people of all language backgrounds.. The SIG has 6 core members and maintains 2 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler G11N SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler G11N SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at g11n@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler G11N SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler G11N SIG maintains 2 repositories. Full list at https://www.openeuler.org/en/sig/G11N."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler G11N SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler G11N SIG has 6 Maintainers, including: Judith, Yanhuiling, zwy. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

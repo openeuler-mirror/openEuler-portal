@@ -1,0 +1,127 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Base-service SIG",
+    "description": "The Base-service team is responsible for maintain the basic package for linux.",
+    "url": "https://www.openeuler.org/en/sig/Base-service",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 44
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "overweight",
+        "url": "https://atomgit.com/overweight",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Monday",
+        "url": "https://atomgit.com/licihua",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "zhujianwei001",
+        "url": "https://atomgit.com/zhujianwei001",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "xiezhipeng1",
+        "url": "https://gitee.com/xiezhipeng1",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "chenqide",
+        "url": "https://atomgit.com/dillon_chen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "yangyang shen",
+        "url": "https://atomgit.com/shenyangyang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Base-service SIG Repository List",
+    "description": "openEuler Base-service SIG maintains 533 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/Base-service",
+    "numberOfItems": 533,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler Base-service SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Base-service SIG (Special Interest Group) is responsible for The Base-service team is responsible for maintain the basic package for linux.. The SIG has 44 core members and maintains 533 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler Base-service SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler Base-service SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler Base-service SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Base-service SIG maintains 533 repositories. Full list at https://www.openeuler.org/en/sig/Base-service."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler Base-service SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Base-service SIG has 6 Maintainers, including: overweight, Monday, zhujianwei001. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

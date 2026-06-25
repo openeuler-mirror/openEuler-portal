@@ -1,0 +1,109 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-distributed-middleware SIG",
+    "description": "The distributed system collaboration capability is introduced to the openEuler operating system base.",
+    "url": "https://www.openeuler.org/en/sig/sig-distributed-middleware",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 15
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2023-03-22",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "李洋",
+        "url": "https://atomgit.com/thegameisfives",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "玉凯",
+        "url": "https://gitee.com/yukaii",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "陆兵",
+        "url": "https://gitee.com/lubing6",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Archermind"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "魏建刚",
+        "url": "https://atomgit.com/bugflyfly",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Hoperun"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-distributed-middleware SIG Repository List",
+    "description": "openEuler sig-distributed-middleware SIG maintains 28 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-distributed-middleware",
+    "numberOfItems": 28,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-distributed-middleware SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-distributed-middleware SIG (Special Interest Group) is responsible for The distributed system collaboration capability is introduced to the openEuler operating system base.. The SIG has 15 core members and maintains 28 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-distributed-middleware SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-distributed-middleware SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at sig-distributed-middleware@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-distributed-middleware SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-distributed-middleware SIG maintains 28 repositories. Full list at https://www.openeuler.org/en/sig/sig-distributed-middleware."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-distributed-middleware SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-distributed-middleware SIG has 4 Maintainers, including: 李洋, 玉凯, 陆兵. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

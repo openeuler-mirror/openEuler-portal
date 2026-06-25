@@ -1,0 +1,98 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Networking SIG",
+    "description": "The networking team is responsible for network function development and maintenance of the openEuler community.",
+    "url": "https://www.openeuler.org/en/sig/Networking",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 32
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "zengwefeng",
+        "url": "https://atomgit.com/Apricity_HW"
+      },
+      {
+        "@type": "Person",
+        "name": "luzhihao",
+        "url": "https://atomgit.com/MrRlu"
+      },
+      {
+        "@type": "Person",
+        "name": "robertxw",
+        "url": "https://atomgit.com/robert-xingwang"
+      },
+      {
+        "@type": "Person",
+        "name": "sunsuwan",
+        "url": "https://atomgit.com/sunsuwan"
+      },
+      {
+        "@type": "Person",
+        "name": "huyizhen",
+        "url": "https://gitee.com/xiangyu2020"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Networking SIG Repository List",
+    "description": "openEuler Networking SIG maintains 156 repositories in the Networking domain",
+    "url": "https://www.openeuler.org/en/sig/Networking",
+    "numberOfItems": 156,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler Networking SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Networking SIG (Special Interest Group) is responsible for The networking team is responsible for network function development and maintenance of the openEuler community.. The SIG has 32 core members and maintains 156 repositories in the Networking domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler Networking SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler Networking SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler Networking SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Networking SIG maintains 156 repositories. Full list at https://www.openeuler.org/en/sig/Networking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler Networking SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Networking SIG has 5 Maintainers, including: zengwefeng, luzhihao, robertxw. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

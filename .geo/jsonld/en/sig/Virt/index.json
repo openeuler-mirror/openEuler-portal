@@ -1,0 +1,127 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Virt SIG",
+    "description": "The virt team is responsible for exploration of the virtualization and cloud native runtime technology.",
+    "url": "https://www.openeuler.org/en/sig/Virt",
+    "email": "virt@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 37
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "WuBin",
+        "url": "https://atomgit.com/RootWB",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "ZhiGang",
+        "url": "https://atomgit.com/cellfaint",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "alexchen",
+        "url": "https://atomgit.com/zhendongchen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Chuan",
+        "url": "https://atomgit.com/Chuan-Zheng",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "imxcc",
+        "url": "https://atomgit.com/imxcc",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "KevinZhu",
+        "url": "https://atomgit.com/kevinzhu1",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Virt SIG Repository List",
+    "description": "openEuler Virt SIG maintains 28 repositories in the Virtualization domain",
+    "url": "https://www.openeuler.org/en/sig/Virt",
+    "numberOfItems": 28,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler Virt SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Virt SIG (Special Interest Group) is responsible for The virt team is responsible for exploration of the virtualization and cloud native runtime technology.. The SIG has 37 core members and maintains 28 repositories in the Virtualization domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler Virt SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler Virt SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at virt@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler Virt SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Virt SIG maintains 28 repositories. Full list at https://www.openeuler.org/en/sig/Virt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler Virt SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Virt SIG has 6 Maintainers, including: WuBin, ZhiGang, alexchen. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

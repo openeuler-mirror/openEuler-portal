@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-sw-arch SIG",
+    "description": "The SW-Arch SIG adds SW architure support into openEuler community, be engaged in the migration, adaptation and optimization for SW platform, and mainly responsible for the planning, maintenance and upgrade for software releases related to SW architecture in openEuler.",
+    "url": "https://www.openeuler.org/en/sig/sig-sw-arch",
+    "email": "NA",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 11
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2021-10-13",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "yaojiawei",
+        "url": "https://gitee.com/georyi-yao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "i-Soft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "xuxiangxiang",
+        "url": "https://gitee.com/xu-think-about-it",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "i-Soft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "yinjintao",
+        "url": "https://atomgit.com/yinjintao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "i-Soft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "mayongsheng",
+        "url": "https://gitee.com/mayongsheng666",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "esage"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "wuzixuan",
+        "url": "https://atomgit.com/wuzx065891",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "wxiat"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "qiuwenjuan",
+        "url": "https://atomgit.com/sunny_winni",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "i-Soft"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-sw-arch SIG Repository List",
+    "description": "openEuler sig-sw-arch SIG maintains 1 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-sw-arch",
+    "numberOfItems": 1,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-sw-arch SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-sw-arch SIG (Special Interest Group) is responsible for The SW-Arch SIG adds SW architure support into openEuler community, be engaged in the migration, adaptation and optimization for SW platform, and mainly responsible for the planning, maintenance and upgrade for software releases related to SW architecture in openEuler.. The SIG has 11 core members and maintains 1 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-sw-arch SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-sw-arch SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at NA; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-sw-arch SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-sw-arch SIG maintains 1 repositories. Full list at https://www.openeuler.org/en/sig/sig-sw-arch."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-sw-arch SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-sw-arch SIG has 6 Maintainers, including: yaojiawei, xuxiangxiang, yinjintao. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

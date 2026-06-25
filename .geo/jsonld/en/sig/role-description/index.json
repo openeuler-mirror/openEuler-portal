@@ -4,14 +4,15 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/en/sig/role-description",
     "url": "https://www.openeuler.org/en/sig/role-description",
-    "name": "Community Roles | openEuler",
-    "description": "Learn about the different roles within the openEuler community - contributor, committer, and maintainer.",
+    "name": "openEuler SIG Role Description | SIG Zone | openEuler",
+    "description": "Learn about the responsibilities and work of each role in openEuler SIGs, and participate in community building.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
       "@id": "https://www.openeuler.org/",
       "url": "https://www.openeuler.org/",
-      "name": "openEuler"
+      "name": "openEuler",
+      "inLanguage": "en"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -19,7 +20,7 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
+          "name": "openEuler",
           "item": "https://www.openeuler.org/en/"
         },
         {
@@ -31,7 +32,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Community Roles",
+          "name": "Role Description",
           "item": "https://www.openeuler.org/en/sig/role-description"
         }
       ]
@@ -44,18 +45,18 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What are the roles in openEuler SIG groups?",
+        "name": "What are the roles in openEuler SIG?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The main roles in openEuler SIG groups include: Maintainer (responsible for final code review and merging), Committer (has merge permissions for specific scopes), and Contributor (participates through Pull Requests)."
+          "text": "The main roles in openEuler SIGs include: Maintainer (responsible for final code review and merging), Committer (has merge permissions for specific areas), and Contributor (participates in code contributions via PRs)."
         }
       },
       {
         "@type": "Question",
-        "name": "How to become a Maintainer in openEuler?",
+        "name": "How to become a Maintainer in openEuler SIG?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Becoming a Maintainer requires sustained high-quality contributions over time, recommendation by existing Maintainers, and approval through SIG group discussion. Maintainers handle code review, release management, and SIG direction decisions."
+          "text": "To become a Maintainer, you need to accumulate long-term high-quality contributions, be recommended by existing Maintainers, and be appointed after SIG discussion. Maintainers are responsible for code review, release management, and SIG direction decisions."
         }
       },
       {
@@ -63,7 +64,7 @@
         "name": "What is the difference between Contributor and Committer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Contributors submit Pull Requests to participate in code contributions but do not have merge permissions; Committers, after sustained contributions, gain merge permissions for specific modules and can review and merge other Contributors' PRs."
+          "text": "Contributors participate in code contributions by submitting Pull Requests but do not have merge permissions. Committers, after long-term contributions, gain merge permissions for specific modules and can review and merge other Contributors' PRs."
         }
       }
     ]

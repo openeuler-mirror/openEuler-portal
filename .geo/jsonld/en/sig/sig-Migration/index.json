@@ -1,0 +1,104 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-Migration SIG",
+    "description": "The sig-Migration is used to  migrate OS.",
+    "url": "https://www.openeuler.org/en/sig/sig-Migration",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 7
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2021-05-18",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "叶青龙",
+        "url": "https://atomgit.com/yeqinglong01"
+      },
+      {
+        "@type": "Person",
+        "name": "马全一",
+        "url": "https://atomgit.com/genedna"
+      },
+      {
+        "@type": "Person",
+        "name": "郭青岚",
+        "url": "https://atomgit.com/blublue"
+      },
+      {
+        "@type": "Person",
+        "name": "weidongkl",
+        "url": "https://atomgit.com/weidongkl"
+      },
+      {
+        "@type": "Person",
+        "name": "石勇",
+        "url": "https://atomgit.com/stonefly128"
+      },
+      {
+        "@type": "Person",
+        "name": "刘兴伟",
+        "url": "https://atomgit.com/xingwei-liu"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-Migration SIG Repository List",
+    "description": "openEuler sig-Migration SIG maintains 8 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-Migration",
+    "numberOfItems": 8,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-Migration SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Migration SIG (Special Interest Group) is responsible for The sig-Migration is used to  migrate OS.. The SIG has 7 core members and maintains 8 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-Migration SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-Migration SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-Migration SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Migration SIG maintains 8 repositories. Full list at https://www.openeuler.org/en/sig/sig-Migration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-Migration SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Migration SIG has 6 Maintainers, including: 叶青龙, 马全一, 郭青岚. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

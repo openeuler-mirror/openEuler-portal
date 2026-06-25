@@ -1,0 +1,92 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Others SIG",
+    "description": "The team is responsible for the development and maintenance of OS system no sig group packages in openeuler community",
+    "url": "https://www.openeuler.org/en/sig/Others",
+    "email": "NA",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 6
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-03-26",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "kaitian Du",
+        "url": "https://atomgit.com/kaitiandu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "senlin Xia",
+        "url": "https://atomgit.com/small_leek",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Others SIG Repository List",
+    "description": "openEuler Others SIG maintains 113 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/Others",
+    "numberOfItems": 113,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler Others SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Others SIG (Special Interest Group) is responsible for The team is responsible for the development and maintenance of OS system no sig group packages in openeuler community. The SIG has 6 core members and maintains 113 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler Others SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler Others SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at NA; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler Others SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Others SIG maintains 113 repositories. Full list at https://www.openeuler.org/en/sig/Others."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler Others SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Others SIG has 2 Maintainers, including: kaitian Du, senlin Xia. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

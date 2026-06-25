@@ -1,0 +1,115 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-SBC SIG",
+    "description": "The SBC SIG aims at migrating openEuler to various single-board computers, in order to reduce the threshold for using openEuler and promote openEuler to new users.",
+    "url": "https://www.openeuler.org/en/sig/sig-SBC",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 8
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Wang Jianmin",
+        "url": "https://atomgit.com/jimmieme"
+      },
+      {
+        "@type": "Person",
+        "name": "Wayne Ren",
+        "url": "https://atomgit.com/vonhust"
+      },
+      {
+        "@type": "Person",
+        "name": "Fang Yafen",
+        "url": "https://atomgit.com/woqidaideshi",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ISCAS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Ma Liang",
+        "url": "https://gitee.com/tideao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ISCAS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Qifeng Liang",
+        "url": "https://atomgit.com/weixin_37738399"
+      },
+      {
+        "@type": "Person",
+        "name": "Huang Yan",
+        "url": "https://atomgit.com/huangyan_jrlc",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "cdjrlc"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-SBC SIG Repository List",
+    "description": "openEuler sig-SBC SIG maintains 17 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-SBC",
+    "numberOfItems": 17,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-SBC SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-SBC SIG (Special Interest Group) is responsible for The SBC SIG aims at migrating openEuler to various single-board computers, in order to reduce the threshold for using openEuler and promote openEuler to new users.. The SIG has 8 core members and maintains 17 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-SBC SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-SBC SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-SBC SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-SBC SIG maintains 17 repositories. Full list at https://www.openeuler.org/en/sig/sig-SBC."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-SBC SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-SBC SIG has 6 Maintainers, including: Wang Jianmin, Wayne Ren, Fang Yafen. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

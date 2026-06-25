@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-DPU SIG",
+    "description": "Sig-DPU is expected to sommon DPU vendors and developers over domestic and international, exploring DPU's ability to provide better programmability and customizability for data-center and cloud.",
+    "url": "https://www.openeuler.org/en/sig/sig-DPU",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 12
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2021-11-22",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Li Cheng",
+        "url": "https://gitee.com/lic121",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "China Telecom"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Li Chunhui",
+        "url": "https://atomgit.com/lch-lichunhui",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Deng Guangxing",
+        "url": "https://atomgit.com/minknov",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zou Ming",
+        "url": "https://gitee.com/victorzoum",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "China Telecom"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Chen Fu",
+        "url": "https://atomgit.com/C0reFast",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Sina"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Liu Haichang",
+        "url": "https://gitee.com/liuhaic",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "YUSUR"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-DPU SIG Repository List",
+    "description": "openEuler sig-DPU SIG maintains 3 repositories in the Cloud Computing and Containers domain",
+    "url": "https://www.openeuler.org/en/sig/sig-DPU",
+    "numberOfItems": 3,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-DPU SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-DPU SIG (Special Interest Group) is responsible for Sig-DPU is expected to sommon DPU vendors and developers over domestic and international, exploring DPU's ability to provide better programmability and customizability for data-center and cloud.. The SIG has 12 core members and maintains 3 repositories in the Cloud Computing and Containers domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-DPU SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-DPU SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-DPU SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-DPU SIG maintains 3 repositories. Full list at https://www.openeuler.org/en/sig/sig-DPU."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-DPU SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-DPU SIG has 6 Maintainers, including: Li Cheng, Li Chunhui, Deng Guangxing. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

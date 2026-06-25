@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-Arm SIG",
+    "description": "SIG Arm focus on Kunpeng, Phytium and other Arm architecture hardware software ecosystem adoption.",
+    "url": "https://www.openeuler.org/en/sig/sig-Arm",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 9
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2023-11-05",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Gu Jian",
+        "url": "https://gitee.com/gookevin2019",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Phytium"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Mao Hongbo",
+        "url": "https://gitee.com/mao-hongbo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Phytium"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Shuai Jiakun",
+        "url": "https://atomgit.com/shuaijiakun",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Phytium"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zhao Shuai",
+        "url": "https://gitee.com/kevinzs",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Linaro"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Kong Xinwei",
+        "url": "https://atomgit.com/kongzizaixian",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Jiang Jianyuan",
+        "url": "https://atomgit.com/jenkins-jiang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-Arm SIG Repository List",
+    "description": "openEuler sig-Arm SIG maintains 1 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-Arm",
+    "numberOfItems": 1,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-Arm SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Arm SIG (Special Interest Group) is responsible for SIG Arm focus on Kunpeng, Phytium and other Arm architecture hardware software ecosystem adoption.. The SIG has 9 core members and maintains 1 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-Arm SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-Arm SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-Arm SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Arm SIG maintains 1 repositories. Full list at https://www.openeuler.org/en/sig/sig-Arm."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-Arm SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Arm SIG has 6 Maintainers, including: Gu Jian, Mao Hongbo, Shuai Jiakun. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

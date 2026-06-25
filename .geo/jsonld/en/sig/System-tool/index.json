@@ -1,0 +1,101 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler System-tool SIG",
+    "description": "Introduce the open system management tool to the openEuler community to improve OS management efficiency.",
+    "url": "https://www.openeuler.org/en/sig/System-tool",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 11
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-03-26",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "yongqiang Li",
+        "url": "https://atomgit.com/Charlie_li1",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "xfusion"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Luo Shengwei",
+        "url": "https://atomgit.com/lostway1",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "chunyi Zhu",
+        "url": "https://atomgit.com/zhuchunyi",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler System-tool SIG Repository List",
+    "description": "openEuler System-tool SIG maintains 94 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/System-tool",
+    "numberOfItems": 94,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler System-tool SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler System-tool SIG (Special Interest Group) is responsible for Introduce the open system management tool to the openEuler community to improve OS management efficiency.. The SIG has 11 core members and maintains 94 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler System-tool SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler System-tool SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler System-tool SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler System-tool SIG maintains 94 repositories. Full list at https://www.openeuler.org/en/sig/System-tool."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler System-tool SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler System-tool SIG has 3 Maintainers, including: yongqiang Li, Luo Shengwei, chunyi Zhu. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler TC SIG",
+    "description": "The openEuler Technical Committee (TC) is responsible for technical decision-making and resource coordination in the openEuler community.",
+    "url": "https://www.openeuler.org/en/sig/TC",
+    "email": "tc@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 27
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2019-12-31",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Cao Zhi",
+        "url": "https://atomgit.com/georgecao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Chen Maodong",
+        "url": "https://atomgit.com/chenmaodong",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "xFusion"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Chen Qide",
+        "url": "https://atomgit.com/dillon_chen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Chen Yaqiang",
+        "url": "https://atomgit.com/yaqiangchen",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Du Kaitian",
+        "url": "https://atomgit.com/kaitiandu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Gao Guijin",
+        "url": "https://atomgit.com/blue0613",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler TC SIG Repository List",
+    "description": "openEuler TC SIG maintains 5 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/TC",
+    "numberOfItems": 5,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler TC SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler TC SIG (Special Interest Group) is responsible for The openEuler Technical Committee (TC) is responsible for technical decision-making and resource coordination in the openEuler community.. The SIG has 27 core members and maintains 5 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler TC SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler TC SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at tc@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler TC SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler TC SIG maintains 5 repositories. Full list at https://www.openeuler.org/en/sig/TC."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler TC SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler TC SIG has 6 Maintainers, including: Cao Zhi, Chen Maodong, Chen Qide. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

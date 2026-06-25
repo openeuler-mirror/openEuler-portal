@@ -1,0 +1,109 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-Long SIG",
+    "description": "The goal of sig-Long is to explore the future development of openEuler by integrating heterogeneous computing power.",
+    "url": "https://www.openeuler.org/en/sig/sig-Long",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 59
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2024-11-09",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Binjuan Qin",
+        "url": "https://gitee.com/qinbinjuan",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Jun Tian",
+        "url": "https://atomgit.com/juntianlinux",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Intel"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Jianhai Luan",
+        "url": "https://atomgit.com/luanjianhai",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Xian Zheng",
+        "url": "https://atomgit.com/sinever",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-Long SIG Repository List",
+    "description": "openEuler sig-Long SIG maintains 24 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-Long",
+    "numberOfItems": 24,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-Long SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Long SIG (Special Interest Group) is responsible for The goal of sig-Long is to explore the future development of openEuler by integrating heterogeneous computing power.. The SIG has 59 core members and maintains 24 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-Long SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-Long SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at sig-Long@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-Long SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Long SIG maintains 24 repositories. Full list at https://www.openeuler.org/en/sig/sig-Long."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-Long SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Long SIG has 4 Maintainers, including: Binjuan Qin, Jun Tian, Jianhai Luan. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

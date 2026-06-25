@@ -1,0 +1,118 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-security-facility SIG",
+    "description": "Sig-security mainly discusses the existing or future planned security technologies in the openEuler community version.",
+    "url": "https://www.openeuler.org/en/sig/sig-security-facility",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 66
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "zhujianwei",
+        "url": "https://atomgit.com/zhujianwei001",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "zhangxiangfeng",
+        "url": "https://atomgit.com/mailofzxf",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "xFusion"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "robertosassu",
+        "url": "https://atomgit.com/robertosassu",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "weigang",
+        "url": "https://gitee.com/gwei3",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "wucaijun",
+        "url": "https://gitee.com/wucaijun2001",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-security-facility SIG Repository List",
+    "description": "openEuler sig-security-facility SIG maintains 104 repositories in the Security domain",
+    "url": "https://www.openeuler.org/en/sig/sig-security-facility",
+    "numberOfItems": 104,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-security-facility SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-security-facility SIG (Special Interest Group) is responsible for Sig-security mainly discusses the existing or future planned security technologies in the openEuler community version.. The SIG has 66 core members and maintains 104 repositories in the Security domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-security-facility SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-security-facility SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-security-facility SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-security-facility SIG maintains 104 repositories. Full list at https://www.openeuler.org/en/sig/sig-security-facility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-security-facility SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-security-facility SIG has 5 Maintainers, including: zhujianwei, zhangxiangfeng, robertosassu. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

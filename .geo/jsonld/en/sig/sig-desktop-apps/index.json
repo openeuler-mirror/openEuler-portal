@@ -1,0 +1,106 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-desktop-apps SIG",
+    "description": "The desktop-apps SIG hopes to provide basic application software for personal desktops, not limited to multimedia, music, small games, programmer IDE, financial stocks, etc. It is hoped that with the joint efforts of the community, openEuler has relatively rich playability and meets the basic demands of personal desktop.",
+    "url": "https://www.openeuler.org/en/sig/sig-desktop-apps",
+    "email": "sig-desktop-apps@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 5
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-06-29",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "WeiDong",
+        "url": "https://atomgit.com/weidongkl",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "UnionTech"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "WuXu",
+        "url": "https://gitee.com/wuxu_buque_admin",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "HuaWei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "TangJie",
+        "url": "https://atomgit.com/tangjie02",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSec OS"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "liweigang",
+        "url": "https://atomgit.com/openbot"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-desktop-apps SIG Repository List",
+    "description": "openEuler sig-desktop-apps SIG maintains 48 repositories in the Desktop and Graphics domain",
+    "url": "https://www.openeuler.org/en/sig/sig-desktop-apps",
+    "numberOfItems": 48,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-desktop-apps SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-desktop-apps SIG (Special Interest Group) is responsible for The desktop-apps SIG hopes to provide basic application software for personal desktops, not limited to multimedia, music, small games, programmer IDE, financial stocks, etc. It is hoped that with the joint efforts of the community, openEuler has relatively rich playability and meets the basic demands of personal desktop.. The SIG has 5 core members and maintains 48 repositories in the Desktop and Graphics domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-desktop-apps SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-desktop-apps SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at sig-desktop-apps@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-desktop-apps SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-desktop-apps SIG maintains 48 repositories. Full list at https://www.openeuler.org/en/sig/sig-desktop-apps."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-desktop-apps SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-desktop-apps SIG has 4 Maintainers, including: WeiDong, WuXu, TangJie. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-Hygon SIG",
+    "description": "openEuler Hygon SIG",
+    "url": "https://www.openeuler.org/en/sig/sig-Hygon",
+    "email": "sig-hygon@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 12
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Hao Feng",
+        "url": "https://gitee.com/fenghao176"
+      },
+      {
+        "@type": "Person",
+        "name": "Xin Jiang",
+        "url": "https://gitee.com/jiangxin00"
+      },
+      {
+        "@type": "Person",
+        "name": "Wei Li",
+        "url": "https://atomgit.com/Allen846356"
+      },
+      {
+        "@type": "Person",
+        "name": "Baoshun Fang",
+        "url": "https://atomgit.com/fang_baoshun"
+      },
+      {
+        "@type": "Person",
+        "name": "Shan Chen",
+        "url": "https://gitee.com/OliveU"
+      },
+      {
+        "@type": "Person",
+        "name": "Haibo Tu",
+        "url": "https://gitee.com/haibotu"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-Hygon SIG Repository List",
+    "description": "openEuler sig-Hygon SIG maintains 4 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-Hygon",
+    "numberOfItems": 4,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-Hygon SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Hygon SIG (Special Interest Group) is responsible for openEuler Hygon SIG. The SIG has 12 core members and maintains 4 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-Hygon SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-Hygon SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at sig-hygon@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-Hygon SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Hygon SIG maintains 4 repositories. Full list at https://www.openeuler.org/en/sig/sig-Hygon."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-Hygon SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Hygon SIG has 6 Maintainers, including: Hao Feng, Xin Jiang, Wei Li. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler Computing SIG",
+    "description": "The Computing team is a interest group related to the OS pan-computing filed, responsible for basic function software packages, C/C++ libraries, device management and other underlying libraries such as multimedia-related libraries.",
+    "url": "https://www.openeuler.org/en/sig/Computing",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 14
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Qingqing Li",
+        "url": "https://atomgit.com/liqingqing_1229",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Bin Wang",
+        "url": "https://atomgit.com/Kephale224",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Chao Liu",
+        "url": "https://atomgit.com/SuperSix173",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yan Zhu",
+        "url": "https://atomgit.com/juyin",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yanchao Yang",
+        "url": "https://atomgit.com/yang_yanchao",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler Computing SIG Repository List",
+    "description": "openEuler Computing SIG maintains 71 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/Computing",
+    "numberOfItems": 71,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler Computing SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Computing SIG (Special Interest Group) is responsible for The Computing team is a interest group related to the OS pan-computing filed, responsible for basic function software packages, C/C++ libraries, device management and other underlying libraries such as multimedia-related libraries.. The SIG has 14 core members and maintains 71 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler Computing SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler Computing SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler Computing SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Computing SIG maintains 71 repositories. Full list at https://www.openeuler.org/en/sig/Computing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler Computing SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler Computing SIG has 5 Maintainers, including: Qingqing Li, Bin Wang, Chao Liu. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

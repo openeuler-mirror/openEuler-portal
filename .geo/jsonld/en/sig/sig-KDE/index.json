@@ -1,0 +1,128 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-KDE SIG",
+    "description": "The KDE team is responsible for the development and maintenance of KDE desktop in openeuler community.",
+    "url": "https://www.openeuler.org/en/sig/sig-KDE",
+    "email": "kde@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 11
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-09-22",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Pan Chenbo",
+        "url": "https://atomgit.com/panchenbo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "UnionTech"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Hou Jian",
+        "url": "https://atomgit.com/jimmy_hou",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Wei Dong",
+        "url": "https://atomgit.com/weidongkl",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "UnionTech"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Dou Yan",
+        "url": "https://atomgit.com/dou33",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Pei Jiankang",
+        "url": "https://atomgit.com/peijiankang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "KylinSoft"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Xin Liu",
+        "url": "https://atomgit.com/misaka00251",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "iscas"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-KDE SIG Repository List",
+    "description": "openEuler sig-KDE SIG maintains 352 repositories in the Desktop and Graphics domain",
+    "url": "https://www.openeuler.org/en/sig/sig-KDE",
+    "numberOfItems": 352,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-KDE SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-KDE SIG (Special Interest Group) is responsible for The KDE team is responsible for the development and maintenance of KDE desktop in openeuler community.. The SIG has 11 core members and maintains 352 repositories in the Desktop and Graphics domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-KDE SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-KDE SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at kde@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-KDE SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-KDE SIG maintains 352 repositories. Full list at https://www.openeuler.org/en/sig/sig-KDE."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-KDE SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-KDE SIG has 6 Maintainers, including: Pan Chenbo, Hou Jian, Wei Dong. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

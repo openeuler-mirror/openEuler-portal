@@ -1,0 +1,104 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-Gatekeeper SIG",
+    "description": "Support routine CI tasks in the community, monitor community access control and build OBS packages.",
+    "url": "https://www.openeuler.org/en/sig/sig-Gatekeeper",
+    "email": "gatekeeper@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 7
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-08-13",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "George.Cao",
+        "url": "https://atomgit.com/georgecao"
+      },
+      {
+        "@type": "Person",
+        "name": "solarhu",
+        "url": "https://atomgit.com/solarhu"
+      },
+      {
+        "@type": "Person",
+        "name": "TommyLike",
+        "url": "https://atomgit.com/TommyLike"
+      },
+      {
+        "@type": "Person",
+        "name": "YangChaohao",
+        "url": "https://atomgit.com/yang-chaohao"
+      },
+      {
+        "@type": "Person",
+        "name": "DingXudong",
+        "url": "https://atomgit.com/xiaoniuzi"
+      },
+      {
+        "@type": "Person",
+        "name": "disnight",
+        "url": "https://atomgit.com/disnight"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-Gatekeeper SIG Repository List",
+    "description": "openEuler sig-Gatekeeper SIG maintains 10 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-Gatekeeper",
+    "numberOfItems": 10,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-Gatekeeper SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Gatekeeper SIG (Special Interest Group) is responsible for Support routine CI tasks in the community, monitor community access control and build OBS packages.. The SIG has 7 core members and maintains 10 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-Gatekeeper SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-Gatekeeper SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at gatekeeper@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-Gatekeeper SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Gatekeeper SIG maintains 10 repositories. Full list at https://www.openeuler.org/en/sig/sig-Gatekeeper."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-Gatekeeper SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Gatekeeper SIG has 6 Maintainers, including: George.Cao, solarhu, TommyLike. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

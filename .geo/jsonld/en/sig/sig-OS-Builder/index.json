@@ -1,0 +1,103 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-OS-Builder SIG",
+    "description": ".",
+    "url": "https://www.openeuler.org/en/sig/sig-OS-Builder",
+    "email": "dev@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 24
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "yanan",
+        "url": "https://atomgit.com/yanan-rock"
+      },
+      {
+        "@type": "Person",
+        "name": "fengtao",
+        "url": "https://atomgit.com/t_feng"
+      },
+      {
+        "@type": "Person",
+        "name": "zhangrui",
+        "url": "https://atomgit.com/anonymous_z"
+      },
+      {
+        "@type": "Person",
+        "name": "yangyang shen",
+        "url": "https://atomgit.com/shenyangyang"
+      },
+      {
+        "@type": "Person",
+        "name": "xiaowen he",
+        "url": "https://atomgit.com/overweight"
+      },
+      {
+        "@type": "Person",
+        "name": "Trainey",
+        "url": "https://atomgit.com/zhuchunyi"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-OS-Builder SIG Repository List",
+    "description": "openEuler sig-OS-Builder SIG maintains 32 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-OS-Builder",
+    "numberOfItems": 32,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-OS-Builder SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OS-Builder SIG (Special Interest Group) is responsible for .. The SIG has 24 core members and maintains 32 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-OS-Builder SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-OS-Builder SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at dev@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-OS-Builder SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OS-Builder SIG maintains 32 repositories. Full list at https://www.openeuler.org/en/sig/sig-OS-Builder."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-OS-Builder SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-OS-Builder SIG has 6 Maintainers, including: yanan, fengtao, zhangrui. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

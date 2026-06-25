@@ -1,0 +1,104 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-Compatibility-Infra SIG",
+    "description": "Exploration on the compatibility of community server, motherboard and app",
+    "url": "https://www.openeuler.org/en/sig/sig-Compatibility-Infra",
+    "email": "oecompatibility@openeuler.org",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 30
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2020-12-31",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Yang Hanchi",
+        "url": "https://atomgit.com/qq_43791210"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhu Zexu",
+        "url": "https://atomgit.com/superninesun"
+      },
+      {
+        "@type": "Person",
+        "name": "Li Junyi",
+        "url": "https://gitee.com/lovelijunyi"
+      },
+      {
+        "@type": "Person",
+        "name": "Du Kaitian",
+        "url": "https://atomgit.com/kaitiandu"
+      },
+      {
+        "@type": "Person",
+        "name": "Haishuang Yan",
+        "url": "https://atomgit.com/gogoxiaoxiao"
+      },
+      {
+        "@type": "Person",
+        "name": "Liu Yanze",
+        "url": "https://atomgit.com/ygn-ndwd-official"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-Compatibility-Infra SIG Repository List",
+    "description": "openEuler sig-Compatibility-Infra SIG maintains 31 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-Compatibility-Infra",
+    "numberOfItems": 31,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-Compatibility-Infra SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Compatibility-Infra SIG (Special Interest Group) is responsible for Exploration on the compatibility of community server, motherboard and app. The SIG has 30 core members and maintains 31 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-Compatibility-Infra SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-Compatibility-Infra SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at oecompatibility@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-Compatibility-Infra SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Compatibility-Infra SIG maintains 31 repositories. Full list at https://www.openeuler.org/en/sig/sig-Compatibility-Infra."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-Compatibility-Infra SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Compatibility-Infra SIG has 6 Maintainers, including: Yang Hanchi, Zhu Zexu, Li Junyi. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

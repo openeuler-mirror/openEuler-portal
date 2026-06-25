@@ -1,0 +1,89 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-memsafety SIG",
+    "description": "This is a memsafety sig.",
+    "url": "https://www.openeuler.org/en/sig/sig-memsafety",
+    "email": "NA",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 12
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2023-06-02",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "wanglujun",
+        "url": "https://atomgit.com/lujunwang"
+      },
+      {
+        "@type": "Person",
+        "name": "uos_caopeiqing",
+        "url": "https://gitee.com/hustcao4"
+      },
+      {
+        "@type": "Person",
+        "name": "huangduirong",
+        "url": "https://atomgit.com/huangduirong"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-memsafety SIG Repository List",
+    "description": "openEuler sig-memsafety SIG maintains 30 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-memsafety",
+    "numberOfItems": 30,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-memsafety SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-memsafety SIG (Special Interest Group) is responsible for This is a memsafety sig.. The SIG has 12 core members and maintains 30 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-memsafety SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-memsafety SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at NA; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-memsafety SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-memsafety SIG maintains 30 repositories. Full list at https://www.openeuler.org/en/sig/sig-memsafety."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-memsafety SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-memsafety SIG has 3 Maintainers, including: wanglujun, uos_caopeiqing, huangduirong. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]

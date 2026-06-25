@@ -1,0 +1,119 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler sig-Edge SIG",
+    "description": "Edge sig.",
+    "url": "https://www.openeuler.org/en/sig/sig-Edge",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 13
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler Community",
+      "url": "https://www.openeuler.org"
+    },
+    "foundingDate": "2019-12-31",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Shouyong Liu",
+        "url": "https://gitee.com/pangbanme",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "kjsmart"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Xiaojing Xu",
+        "url": "https://gitee.com/xuxj1973",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "kjsmart"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Fengtu Wang",
+        "url": "https://atomgit.com/FengtuWang",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "kjsmart"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yuxi Wang",
+        "url": "https://gitee.com/wangyx0704",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "kjsmart"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Jiezhang Wang",
+        "url": "https://gitee.com/Poorunga"
+      },
+      {
+        "@type": "Person",
+        "name": "Keyan Wang",
+        "url": "https://gitee.com/wang-ke-yan"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "openEuler sig-Edge SIG Repository List",
+    "description": "openEuler sig-Edge SIG maintains 10 repositories in the Infrastructure and Tools domain",
+    "url": "https://www.openeuler.org/en/sig/sig-Edge",
+    "numberOfItems": 10,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler Official Website",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is openEuler sig-Edge SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Edge SIG (Special Interest Group) is responsible for Edge sig.. The SIG has 13 core members and maintains 10 repositories in the Infrastructure and Tools domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to participate in openEuler sig-Edge SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To participate in openEuler sig-Edge SIG: 1) Submit Pull Requests to relevant repositories; 2) Subscribe to the mailing list at sig-Edge@openeuler.org; 3) Attend SIG regular meetings, see the openEuler website calendar for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What repositories does openEuler sig-Edge SIG include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Edge SIG maintains 10 repositories. Full list at https://www.openeuler.org/en/sig/sig-Edge."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who are the Maintainers of openEuler sig-Edge SIG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "openEuler sig-Edge SIG has 6 Maintainers, including: Shouyong Liu, Xiaojing Xu, Fengtu Wang. Maintainers are responsible for final code review and merging."
+        }
+      }
+    ]
+  }
+]
