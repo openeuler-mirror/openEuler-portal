@@ -27,9 +27,9 @@ const { locale, t } = useLocale();
 const activeTab = ref('latest');
 // TODO:从 导航配置取数据
 const shownNameList: string[] = [
+  'openEuler-24.03-LTS-SP4',
   'openEuler Embedded 26.03',
   'openEuler-24.03-LTS-SP3',
-  'openEuler-24.03-LTS-SP2',
   'openEuler-24.03-LTS-SP1',
 ];
 
