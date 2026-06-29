@@ -1,5 +1,15 @@
-**摘要**
-Conch 为 AI Agent 提供可启动、可分发、可恢复的完整沙箱镜像体系
+---
+title: openEuler Conch沙箱引擎：AI Agent 需要什么样的“完整沙箱镜像”
+category: blog 
+date: 2026-06-27
+tags:
+    - openEuler
+    - Conch沙箱引擎
+    - AI Agent
+archives: 2026-06-27
+author:  openEuler
+summary: 当前 Conch 镜像系统已经打通从 OCI rootfs 格式转换、sandbox-image 构建、三类路径生成 sandbox-snapshot、镜像仓库标准化分发、目标节点自动 pull&unpack 还原组件关系、沙箱冷启动/快照恢复的端到端完整业务闭环，可支撑 AI Agent 沙箱环境标准化交付、运行现场跨节点迁移与任务断点续跑的核心场景。
+---
 
 ## **导语：**
 
