@@ -15,6 +15,13 @@ members:
     position_en: Chairperson
     email: junwangs@isoftstone.com
 
+  - name: 蔡镌洋
+    name_en: Cai Juanyang
+    image: ./images/caijuanyang.png
+    position: 委员
+    position_en: Committee member
+    email: cai_juanyang@hoperun.com
+
   - name: 陈静
     name_en: Chen Jing
     image: ./images/chenjin.png
@@ -112,13 +119,6 @@ members:
     position: 委员
     position_en: Committee member
     email: xu.tianyuan@h3c.com
-
-  - name: 张剑
-    name_en: Zhang Jian
-    image: ./images/zhangjian.png
-    position: 委员
-    position_en: Committee member
-    email: zhang_jian7@hoperun.com
 
   - name: 张庆南
     name_en: Zhang Qingnan

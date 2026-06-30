@@ -171,14 +171,6 @@ members:
     email: wangzhigang17@huawei.com
     gitee: jianminw
 
-  - name: 魏建刚
-    name_en: Wei Jiangang
-    image: ./images/weijiangang-user.png
-    post: 委员
-    post_en: Committee member
-    email: wei_jiangang@hoperun.com
-    gitee: bugflyfly
-
   - name: 吴峰光
     name_en: Wu Fengguang
     image: ./images/wufengguang.png
@@ -210,6 +202,13 @@ members:
     post_en: Committee member
     email: yuelg@chinaunicom.cn
     gitee: bigclouds99
+
+  - name: 张剑
+    name_en: Zhang Jian
+    image: ./images/zhangjian.png
+    post: 委员
+    post_en: Committee member
+    email: zhang_jian7@hoperun.com
 
   - name: 赵川峰
     name_en: Zhao Chuanfeng
