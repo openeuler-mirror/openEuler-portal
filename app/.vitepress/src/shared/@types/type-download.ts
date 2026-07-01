@@ -56,6 +56,7 @@ export interface LinkListItemT {
   Tips: string;
   Order: number;
   index: number;
+  Sub?: LinkListItemT[];
 }
 export interface DetailedLinkItemT {
   Order: number;

@@ -23,18 +23,18 @@ export default {
           NAME: 'Get openEuler',
           CHILDREN: [
             {
+              NAME: 'openEuler 24.03 LTS SP4',
+              DESCRIPTION:
+                'Enhance server, cloud, and AI workloads with upgraded reliability, inference, O&M, and security.',
+              TAG: TAG_TYPE.NEW,
+              URL: '/download/#openEuler 24.03 LTS SP4',
+            },
+            {
               NAME: 'openEuler 24.03 LTS SP3',
               DESCRIPTION:
                 'Explore the UnifiedBus SuperPoD architecture on openEuler.',
-              TAG: TAG_TYPE.NEW,
-              URL: '/download/#openEuler 24.03 LTS SP3',
-            },
-            {
-              NAME: 'openEuler 24.03 LTS SP2',
-              DESCRIPTION:
-                'Enhanced 24.03 LTS SP2 on kernel 6.6. Better experience for users and devs.',
               TAG: null,
-              URL: '/download/#openEuler 24.03 LTS SP2',
+              URL: '/download/#openEuler 24.03 LTS SP3',
             },
             {
               NAME: 'openEuler 24.03 LTS SP1',
@@ -89,10 +89,10 @@ export default {
           isBlank: true,
         },
         {
-          NAME: 'openEuler 24.03 LTS SP3 Installation Guide',
+          NAME: 'openEuler 24.03 LTS SP4 Installation Guide',
           URL: `${
             import.meta.env.VITE_SERVICE_DOCS_URL
-          }/en/docs/24.03_LTS_SP3/server/installation_upgrade/installation/installation_preparations.html`,
+          }/en/docs/24.03_LTS_SP4/server/installation_upgrade/installation/installation_preparations.html`,
         },
         {
           NAME: 'openEuler 25.09 Installation Guide',
@@ -231,13 +231,13 @@ export default {
               DESCRIPTION:
                 'Learn the community essentials in 10 minutes, build and grow quickly.',
               TAG: TAG_TYPE.HOT,
-              URL: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP3/server/quickstart/quickstart/quick_start.html`,
+              URL: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP4/server/quickstart/quickstart/quick_start.html`,
             },
             {
               NAME: 'Installation Guide',
               DESCRIPTION:
                 'Step-by-step instructions for installing openEuler.',
-              URL: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP3/server/installation_upgrade/installation/installation_preparations.html`,
+              URL: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP4/server/installation_upgrade/installation/installation_preparations.html`,
             },
             {
               NAME: 'Frequently Asked Questions',

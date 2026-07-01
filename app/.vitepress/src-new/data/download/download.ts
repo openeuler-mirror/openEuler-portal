@@ -6,6 +6,23 @@ export default {
   zh: {
     COMMUNITY_LIST: [
       {
+        NAME: 'openEuler 24.03 LTS SP4',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP4/',
+        DESC: '2026年6月30日，发布openEuler 24.03 LTS SP4，基于6.6内核的24.03-LTS版本增强扩展版本（参见版本生命周期），面向服务器、云、AI场景，持续提供更多新特性和功能扩展，包括内核优化、灵衢超节点可靠性&易用性、NPU算力切分、推理服务快恢、E2B沙箱、智能诊断&调优&运维、编译器、机密虚机等，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+        RELEASE_DESC_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP4/server/releasenotes/releasenotes/introduction.html`,
+        INSTALL_GUIDENCE_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP4/server/installation_upgrade/installation/installation_preparations.html`,
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '/whitepaper/openEuler 24.03 LTS SP4 技术白皮书.pdf',
+        LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+        PUBLISH_DATE: '2026/06',
+        LTS: true,
+        VERSION: '24.03-LTS-SP4',
+        PLANNED_EOL: '2027/03',
+      },
+      {
         NAME: 'openEuler Embedded 26.03',
         DOWNLOAD_URL: '',
         DESC: 'openEuler Embedded 26.03 版本基于IB-Robot具身智能全栈架构，面向hi3403、3591等硬件发布镜像。该版本提供具身claw，支持自主精准控制，依托ROS 2 Driver统一接入相机、雷达、麦克风等感知设备，支持VR手柄、手机等遥操作采集数据；通过tensormsg实现消息与张量安全转换，提供VLA大模型及策略模型推理服务；由统一执行器完成动作调度与轨迹执行，支持MoveIt 2规划；并以YAML配置驱动机器人本体，可一键切换仿真与实机环境。',
@@ -470,6 +487,23 @@ export default {
   },
   en: {
     COMMUNITY_LIST: [
+      {
+        NAME: 'openEuler 24.03 LTS SP4',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP4/',
+        DESC: 'openEuler 24.03 LTS SP4, built on kernel 6.6, is an enhanced extension tailored for server, cloud, and AI scenarios. This release introduces new features and enhancements, including kernel optimizations, UnifiedBus SuperPoD reliability & usability, NPU slicing, rapid recovery for inference services, E2B sandboxes, intelligent O&M (diagnosis & tuning), compilers, and confidential virtual machines (CVMs). It delivers a brand-new experience to developers and users, extending its reach to broader industries.',
+        RELEASE_DESC_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP4/server/releasenotes/releasenotes/introduction.html`,
+        INSTALL_GUIDENCE_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP4/server/installation_upgrade/installation/installation_preparations.html`,
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '/whitepaper/en/openEuler 24.03 LTS SP4 Technical White Paper.pdf',
+        LIFE_CYCLE_URL: '/en/other/lifecycle/',
+        PUBLISH_DATE: '2026/06',
+        LTS: true,
+        VERSION: '24.03-LTS-SP4',
+        PLANNED_EOL: '2027/03',
+      },
       {
         NAME: 'openEuler Embedded 26.03',
         DOWNLOAD_URL: '',

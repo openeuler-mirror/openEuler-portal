@@ -42,6 +42,7 @@ export default {
   HISTORY: '所有版本下载',
   ARCHITECTURE2: '架构',
   SCENARIO2: '场景',
+  INSTRUCTION_SET: '指令集',
   ARCHITECTUREList: ['x86_64', 'AArch64', 'ARM32'],
   SCENARIOS: ['服务器', '边缘计算', '云计算', '嵌入式'],
   SCENARIOS_ISO: '服务器',

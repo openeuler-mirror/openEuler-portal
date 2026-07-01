@@ -15,6 +15,16 @@
 #   attach          附加装饰图（可选）
 #   locale          可见语言 zh / en / zh,en（可选，默认 zh,en）
 
+- bg_pc: ./images/release/pc.jpg
+  bg_pad: ./images/release/pad.jpg
+  bg_mb: ./images/release/mb.jpg
+  bg_theme: light
+  locale: zh
+  title_zh: openEuler 24.03 LTS SP4 正式发布
+  btn_zh: 下载
+  href_zh: /zh/download/#openEuler%2024.03%20LTS%20SP4
+  is_blank: true
+
 - bg_pc: ./images/annual-report/pc.jpg
   bg_pad: ./images/annual-report/pad.jpg
   bg_mb_zh: ./images/annual-report/mb.jpg
@@ -31,16 +41,6 @@
   text_theme: dark
   href_zh: /zh/annual-report/openEuler-annual-report-2025/
   href_en: /en/annual-report/openEuler-annual-report-2025/
-  is_blank: true
-
-- bg_pc: ./images/release/pc.jpg
-  bg_pad: ./images/release/pad.jpg
-  bg_mb: ./images/release/mb.jpg
-  bg_theme: light
-  locale: zh
-  title_zh: openEuler 24.03 LTS SP3 正式发布
-  btn_zh: 下载
-  href_zh: /zh/download/#openEuler%2024.03%20LTS%20SP3
   is_blank: true
 
 - bg_pc: ./images/download/pc.jpg
