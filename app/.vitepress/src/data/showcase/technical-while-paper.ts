@@ -1,6 +1,10 @@
 export default {
   zh: [
     {
+      path: '/whitepaper/openEuler%2024.03%20LTS%20SP4%20技术白皮书.pdf',
+      summary: 'openEuler 24.03 LTS SP4 白皮书',
+    },
+    {
       path: '/whitepaper/openEuler%2024.03%20LTS%20SP3%20技术白皮书.pdf',
       summary: 'openEuler 24.03 LTS SP3 白皮书',
     },
@@ -78,6 +82,11 @@ export default {
     },
   ],
   en: [
+    // TODO: SP4 en PDF 待提供,PDF 到手后取消注释以下条目
+    // {
+    //   path: '/whitepaper/en/openEuler 24.03 LTS SP4 Technical White Paper.pdf',
+    //   summary: 'openEuler 24.03 LTS SP4 Technical White Paper',
+    // },
     {
       path: '/whitepaper/en/openEuler 24.03 LTS SP3 Technical White Paper.pdf',
       summary: 'openEuler 24.03 LTS SP3 Technical White Paper',

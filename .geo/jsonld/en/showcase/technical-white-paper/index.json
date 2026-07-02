@@ -23,6 +23,20 @@
     "hasPart": [
       {
         "@type": "TechArticle",
+        "name": "openEuler 24.03 LTS SP4 Technical White Paper",
+        "url": "https://www.openeuler.org/en/showcase/technical-white-paper",
+        "about": {
+          "@type": "SoftwareApplication",
+          "name": "openEuler 24.03 LTS SP4",
+          "operatingSystem": "Linux"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "openEuler"
+        }
+      },
+      {
+        "@type": "TechArticle",
         "name": "openEuler 24.03 LTS SP3 Technical White Paper",
         "url": "https://www.openeuler.org/en/showcase/technical-white-paper",
         "about": {
