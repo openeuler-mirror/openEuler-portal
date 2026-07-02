@@ -408,7 +408,7 @@ const rsyncCode =
     align-items: center;
     margin-top: 12px;
     justify-content: center;
-    @include respond-to('<=pad') {
+    @include respond-to('<=laptop') {
       flex-direction: column;
     }
   }

@@ -147,7 +147,7 @@ export default {
   MIRROR_ALL_RELEASE: 'Release',
   MIRROR_ALL_SIZE: 'Size',
   MIRROR_ALL_CONTENT_0:
-    'openEuler welcomes new mirror sites. If you are considering to set up a public mirror site for openEuler, please follow the mirror guidelines to make sure that your mirror is consistent with the other mirror sites. Any questions, feel free to',
+    'openEuler welcomes new mirror sites. If you are considering to set up a public mirror site for openEuler, please follow the mirror guidelines to make sure that your mirror is consistent with the other mirror sites. Any questions, feel free to {email}',
   MIRROR_ALL_CONTENT_1: 'contact us',
   area: 'Region',
   protocol: 'Protocol',
