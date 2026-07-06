@@ -30806,6 +30806,44 @@
     "chipModel": "Hi1872",
     "item": "SP233",
     "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "1ff2",
+    "deviceID": "10b1",
+    "svID": "1ff2",
+    "ssID": "0c21",
+    "architecture": "x86_64",
+    "os": "openEuler 24.03 LTS SP2",
+    "driverName": "sxe2",
+    "version": "2.1.0.8",
+    "type": "NIC",
+    "date": "2026/6/10",
+    "sha256": "00a976a2a9fbf79429569bca79660d3893cf932dae72729232f4413838eaca67",
+    "driverSize": "510k",
+    "chipVendor": "Linkdata",
+    "boardModel": "LD 1260-2A 2-port 25G SFP28 NIC",
+    "chipModel": "NIC 1260",
+    "item": "",
+    "downloadLink": ""
+  },
+  {
+    "vendorID": "1ff2",
+    "deviceID": "10b1",
+    "svID": "1ff2",
+    "ssID": "0c21",
+    "architecture": "x86_64",
+    "os": "openEuler 22.03 LTS SP4",
+    "driverName": "sxe2",
+    "version": "2.1.0.9",
+    "type": "NIC",
+    "date": "2026/6/10",
+    "sha256": "4d8d91ddbbe3bbc8ba526f14eeb48380f7e79ece25a7acf2f032d6bec3c90ded",
+    "driverSize": "336148",
+    "chipVendor": "Linkdata",
+    "boardModel": "LD 1260-2A 2-port 25G SFP28 NIC",
+    "chipModel": "NIC 1260",
+    "item": "",
+    "downloadLink": ""
   }
 
 ]
