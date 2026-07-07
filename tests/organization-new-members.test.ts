@@ -93,8 +93,8 @@ describe('品牌委员会 — 李明新增成员数据完整性', () => {
 describe('用户委员会 — 冯伟新增成员数据完整性', () => {
   const user = loadYaml('user');
 
-  it('user.yaml 用户委员会成员总数为 19(王军主席 + 17 委员 + 冯伟)', () => {
-    expect(user.members).toHaveLength(19);
+  it('user.yaml 用户委员会成员总数为 18(王军主席 + 16 委员 + 冯伟)', () => {
+    expect(user.members).toHaveLength(18);
   });
 
   it('冯伟条目存在且字段完整', () => {
@@ -265,7 +265,7 @@ describe('YAML 与 JSON-LD 新增成员交叉验证', () => {
     expect(marketingOrg.member.length).toBe(marketing.members.length);
   });
 
-  it('en User Committee JSON-LD member 数与 YAML members 数一致(19)', () => {
+  it('en User Committee JSON-LD member 数与 YAML members 数一致(18)', () => {
     const userOrg = enOrg.subOrganization.find((s: any) =>
       s.name === 'openEuler User Committee'
     );
