@@ -8,7 +8,6 @@ import {
 import { computed, ref } from 'vue';
 
 import { useLocale } from '~@/composables/useLocale';
-import { foldI18n } from '~@/shared/content';
 
 import homeContent from '#content/home';
 import { useScreen } from '~@/composables/useScreen';
@@ -22,12 +21,15 @@ const isLight = computed(() => {
   return commonStore.theme === 'light';
 });
 
-const { locale } = useLocale();
+const { isZh } = useLocale();
 const { isPhone, isPad, gtPad } = useScreen();
 
+const homeData = computed(() => (isZh.value ? homeContent.zh : homeContent.en));
+
 const bannerInfo = computed(() => {
-  const info = foldI18n(homeContent.banner, locale.value)
-    .filter(item => !item.locale || item.locale.split(',').includes(locale.value));
+  const lang = isZh.value ? 'zh' : 'en';
+  const info = homeData.value.banner
+    .filter(item => !item.locale || item.locale.split(',').includes(lang));
   
   return info.map(item => {
     let themeInfo;
@@ -152,6 +154,7 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
     >
       <OCarouselItem
         v-for="(info, index) in bannerInfo"
+        :key="index"
         class="banner-item"
         :class="`banner-item${index}`"
       >

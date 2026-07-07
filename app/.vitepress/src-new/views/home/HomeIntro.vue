@@ -4,13 +4,13 @@ import { ref, computed } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useCommon } from '@/stores/common';
 
-import { OButton, OIcon, OCollapse, OCollapseItem } from '@opensig/opendesign';
+import { OCollapse, OCollapseItem } from '@opensig/opendesign';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
 import AppSection from '~@/components/AppSection.vue';
 
-import introData from '~@/data/home/intro';
+import homeContent from '#content/home';
 
 import line from '~@/assets/category/home/intro/line.png';
 import circle from '~@/assets/category/home/intro/circle.png';
@@ -21,17 +21,27 @@ import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { useI18n } from 'vue-i18n';
 
 const { locale, isZh } = useLocale();
-const { isPhone, lePadV } = useScreen();
+const { lePadV } = useScreen();
 const { theme } = storeToRefs(useCommon());
 
 const active = ref(0);
 
 const activeMobile = ref([0]);
 
+const homeData = computed(() => (isZh.value ? homeContent.zh : homeContent.en));
+
+const introData = computed(() =>
+  homeData.value.intro.map((item) => ({
+    ...item,
+    icon: { light: item.icon_light, dark: item.icon_dark },
+    img: { pc: item.img_pc, mo: item.img_mo },
+  }))
+);
+
 const imgSrc = computed(() => {
   return lePadV.value
-    ? introData[active.value].img[locale.value].mo
-    : introData[active.value].img[locale.value].pc;
+    ? introData.value[active.value].img.mo
+    : introData.value[active.value].img.pc;
 });
 
 const handleChangeActive = (index: number) => {
@@ -81,9 +91,9 @@ useInViewDuration(
             >
               <div
                 v-for="(item, index) in introData"
-                :key="item.title[locale]"
+                :key="item.title"
                 class="intro-list-item"
-                v-analytics.bubble="{ target: item.title[locale] }"
+                v-analytics.bubble="{ target: item.title }"
               >
                 <div class="intro-list-icon">
                   <img :src="item.icon[theme]" alt="" />
@@ -101,7 +111,7 @@ useInViewDuration(
                   @click="handleChangeActive(index)"
                 >
                   <div class="title" :class="{ 'en-title': !isZh }">
-                    {{ item.title[locale] }}
+                    {{ item.title }}
                   </div>
                   <div v-if="isZh" class="description">
                     {{ item.description }}
@@ -131,12 +141,12 @@ useInViewDuration(
       >
         <OCollapseItem
           v-for="(item, index) in introData"
-          :key="item.title[locale]"
+          :key="item.title"
           :value="index"
           class="intro-card-mobile"
         >
           <template #title>
-            <img :src="item.icon[theme]" alt="" /> {{ item.title[locale] }}
+            <img :src="item.icon[theme]" alt="" /> {{ item.title }}
           </template>
           <div class="intro-img-mobile">
             <img :src="imgSrc" alt="openEuler" />

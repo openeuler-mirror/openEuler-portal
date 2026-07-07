@@ -1,37 +1,47 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { storeToRefs } from 'pinia';
 
 import { useCommon } from '@/stores/common';
 import { useLocale } from '~@/composables/useLocale';
 
-import displayZoneData from '~@/data/home/display-zone';
+import homeContent from '#content/home';
 
-const { locale } = useLocale();
+const { isZh } = useLocale();
 const { theme } = storeToRefs(useCommon());
+
+const homeData = computed(() => (isZh.value ? homeContent.zh : homeContent.en));
+
+const displayZoneData = computed(() =>
+  homeData.value.display_zone.map((item) => ({
+    ...item,
+    icon: { light: item.icon_light, dark: item.icon_dark },
+  }))
+);
 </script>
 
 <template>
   <div class="home-display-zone" v-analytics.bubble.noTrigger="{ level1: 'QuickLink' }">
     <a
       v-for="item in displayZoneData"
-      :key="item.link[locale]"
-      :href="item.link[locale]"
+      :key="item.link"
+      :href="item.link"
       target="_blank"
       class="display-zone-item"
-      v-analytics.bubble="{ target: item.title[locale] }"
+      v-analytics.bubble="{ target: item.title }"
     >
       <div class="display-zone-icon">
         <img
-          :src="item.icon[theme]"
+          :src="item.icon[theme as ('light' | 'dark')]"
           alt="openEuler"
           class="display-zone-item-icon"
         />
       </div>
       <div class="display-zone-text">
         <h4 class="display-zone-title">
-          {{ item.title[locale] }}
+          {{ item.title }}
         </h4>
-        <p class="display-zone-description">{{ item.description[locale] }}</p>
+        <p class="display-zone-description">{{ item.description }}</p>
       </div>
     </a>
   </div>

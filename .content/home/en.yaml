@@ -1,0 +1,246 @@
+# Home page data (en)
+#
+# Top-level object indexed by section name. All fields use baseline names (no _zh/_en suffix).
+# Image paths start with ./ and are rewritten to imports by vite-plugin-content-yaml.
+
+# banner: Home top banner
+#   title:        Title (string or array for multi-line)
+#   subtitle:     Subtitle (optional)
+#   btn:          Button text (optional, omit for no button)
+#   href:         Button link
+#   bg_pc/bg_pad/bg_mb: PC/Tablet/Mobile background images
+#   bg_theme:     light | dark, controls indicator color
+#   text_theme:   dark=white text (optional)
+#   is_blank:     Open in new window (optional)
+#   attach:       Decorative attachment image (optional)
+#   locale:       Visible language zh / en / zh,en (optional, default zh,en)
+banner:
+  - title:
+      - OpenAtom openEuler
+      - Annual Report 2025
+    btn: View More
+    href: /en/annual-report/openEuler-annual-report-2025/
+    bg_pc: ./images/annual-report/pc.jpg
+    bg_pad: ./images/annual-report/pad.jpg
+    bg_mb: ./images/annual-report/mb_en.jpg
+    bg_theme: light
+    text_theme: dark
+    is_blank: true
+
+  - title: Get openEuler
+    subtitle: Find all resources in one place
+    btn: View More
+    href: /en/download
+    bg_pc: ./images/download/pc.jpg
+    bg_pad: ./images/download/pad.jpg
+    bg_mb: ./images/download/banner-mb-en.jpg
+    bg_theme: light
+    is_blank: true
+
+# display_zone: Home quick links
+#   title:          Entry title
+#   icon_light/dark: Light/dark theme icons
+#   description:    Entry description
+#   link:           Entry link
+display_zone:
+  - title: Technical White Papers
+    icon_light: ./images/display-zone/white-paper_light.svg
+    icon_dark: ./images/display-zone/white-paper_dark.svg
+    description: Learn the tech details of each openEuler version.
+    link: /en/showcase/technical-white-paper/
+
+  - title: Security Center
+    icon_light: ./images/display-zone/security_light.svg
+    icon_dark: ./images/display-zone/security_dark.svg
+    description: View security advisories and other security information.
+    link: /en/security/security-bulletins/
+
+  - title: Migration Center
+    icon_light: ./images/display-zone/migration_light.svg
+    icon_dark: ./images/display-zone/migration_dark.svg
+    description: Learn how to migrate to openEuler.
+    link: /en/migration/
+
+  - title: Events Center
+    icon_light: ./images/display-zone/event_light.svg
+    icon_dark: ./images/display-zone/event_dark.svg
+    description: Stay updated on the latest openEuler events.
+    link: /en/interaction/event-list/
+
+# intro: Home intro cards
+#   title:          Card title
+#   img_pc/img_mo:  PC/Mobile images
+#   icon_light/dark: Light/dark theme icons
+#   description:    Description (only shown on zh page, kept here for structure parity)
+intro:
+  - title: Various Devices
+    img_pc: ./images/intro/computing-arch_en_pc.jpg
+    img_mo: ./images/intro/computing-arch_en_mo.png
+    icon_light: ./images/intro/computing-arch_light.png
+    icon_dark: ./images/intro/computing-arch_dark.png
+    description: 全量组件原子化，构建服务自助化
+
+  - title: All-Scenario Applications
+    img_pc: ./images/intro/cover-all_en_pc.jpg
+    img_mo: ./images/intro/cover-all_en_mo.png
+    icon_light: ./images/intro/cover-all_light.png
+    icon_dark: ./images/intro/cover-all_dark.png
+    description: 一次开发，覆盖数字基础设施全场景
+
+  - title: Development Tool Chain
+    img_pc: ./images/intro/development-tool_en_pc.jpg
+    img_mo: ./images/intro/development-tool_en_mo.png
+    icon_light: ./images/intro/development-tool_light.png
+    icon_dark: ./images/intro/development-tool_dark.png
+    description: 统一API跨多设备调用
+
+# play_community: Play community cards
+#   title:    Card title
+#   bg:       Card background image
+#   intro:    Card intro
+#   btn:      Primary button { label, link }
+#   textBtn:  Text button { label, link } (optional)
+play_community:
+  - title: Start Contributing
+    bg: ./images/play-community/card-1.png
+    intro: Contribute code, modify docs, and join our discussions.
+    btn:
+      label: Contribution Guide
+      link: /en/community/contribution/detail.html
+    textBtn:
+      label: View SIGs
+      link: /zh/sig/sig-list/
+
+  - title: Become a Member
+    bg: ./images/play-community/card-2.png
+    intro: Welcome to openEuler! We're thrilled to have you as a member of our community dedicated to building an open source OS for digital infrastructure.
+    btn:
+      label: Members
+      link: /en/community/member/
+
+# publisher: Partners
+#   logo_light/dark: Light/dark theme logo
+#   href:            Link (en variant already resolved)
+publisher:
+  - logo_light: ./images/publisher/light/baode.png
+    logo_dark: ./images/publisher/dark/baode.png
+    href: http://en.powerleader.com.cn/
+  - logo_light: ./images/publisher/light/bochuan.png
+    logo_dark: ./images/publisher/dark/bochuan.png
+    href: https://www.qsemos.com/
+  - logo_light: ./images/publisher/light/xfusion.png
+    logo_dark: ./images/publisher/dark/xfusion.png
+    href: https://www.xfusion.com/en/
+  - logo_light: ./images/publisher/light/dingqiao.png
+    logo_dark: ./images/publisher/dark/dingqiao.png
+    href: https://www.td-tech.com/en/
+  - logo_light: ./images/publisher/light/fenhuo.png
+    logo_dark: ./images/publisher/dark/fenhuo.png
+    href: https://www.fhss.com.cn/
+  - logo_light: ./images/publisher/light/hengsheng.png
+    logo_dark: ./images/publisher/dark/hengsheng.png
+    href: https://www.hundsun.com/
+  - logo_light: ./images/publisher/light/huizhi.png
+    logo_dark: ./images/publisher/dark/huizhi.png
+    href: http://www.teligen.net/
+  - logo_light: ./images/publisher/light/intewellLogo.png
+    logo_dark: ./images/publisher/dark/intewellLogo.png
+    href: https://www.kyland.com.cn/
+  - logo_light: ./images/publisher/light/kaihong.png
+    logo_dark: ./images/publisher/dark/kaihong.png
+    href: https://www.kaihong.com/
+  - logo_light: ./images/publisher/light/langchaoyun.png
+    logo_dark: ./images/publisher/dark/langchaoyun.png
+    href: https://cloud.inspur.com/
+  - logo_light: ./images/publisher/light/ruidun.png
+    logo_dark: ./images/publisher/dark/ruidun.png
+    href: http://www.sgepri.sgcc.com.cn
+  - logo_light: ./images/publisher/light/linsiLogo.png
+    logo_dark: ./images/publisher/dark/linsiLogo.png
+    href: http://www.linx-info.com/#/
+  - logo_light: ./images/publisher/light/cetc.png
+    logo_dark: ./images/publisher/dark/cetc.png
+    href: http://www.i-soft.com.cn/
+  - logo_light: ./images/publisher/light/qiling.png
+    logo_dark: ./images/publisher/dark/qiling.png
+    href: https://www.kylinos.cn/
+  - logo_light: ./images/publisher/light/xinan.png
+    logo_dark: ./images/publisher/dark/xinan.png
+    href: http://www.kylinsec.com.cn/
+  - logo_light: ./images/publisher/light/hopeRun.png
+    logo_dark: ./images/publisher/dark/hope-run.png
+    href: http://www.hoperun.com/
+  - logo_light: ./images/publisher/light/geidi.png
+    logo_dark: ./images/publisher/dark/geidi.png
+    href: http://www.grid-elec.com/
+  - logo_light: ./images/publisher/light/suse.png
+    logo_dark: ./images/publisher/dark/suse.png
+    href: https://www.suse.com/
+  - logo_light: ./images/publisher/light/turbo.png
+    logo_dark: ./images/publisher/dark/turbo.png
+    href: https://www.turbolinux.com.cn/
+  - logo_light: ./images/publisher/light/tongYuan.png
+    logo_dark: ./images/publisher/dark/tong-yuan.png
+    href: http://www.tongyuanos.com/
+  - logo_light: ./images/publisher/light/tongxin.png
+    logo_dark: ./images/publisher/dark/tongxin.png
+    href: https://www.uniontech.com/
+  - logo_light: ./images/publisher/light/h3cLogo.png
+    logo_dark: ./images/publisher/dark/h3cLogo.png
+    href: https://www.h3c.com/cn/
+  - logo_light: ./images/publisher/light/iscas.png
+    logo_dark: ./images/publisher/dark/iscas.png
+    href: http://www.iscas.ac.cn/
+  - logo_light: ./images/publisher/light/ruantong.png
+    logo_dark: ./images/publisher/dark/ruantong.png
+    href: https://www.isoftstone.com/en/
+  - logo_light: ./images/publisher/light/zhongruan.png
+    logo_dark: ./images/publisher/dark/zhongruan.png
+    href: https://www.chinasofti.com/
+  - logo_light: ./images/publisher/light/zhongkeLogo.png
+    logo_dark: ./images/publisher/dark/zhongkeLogo.png
+    href: https://www.thundersoft.com/
+  - logo_light: ./images/publisher/light/zhongkefangde.png
+    logo_dark: ./images/publisher/dark/zhongkefangde.png
+    href: https://www.nfschina.com/
+  - logo_light: ./images/publisher/light/zhongkehongqi.png
+    logo_dark: ./images/publisher/dark/zhongkehongqi.png
+    href: http://www.chinaredflag.cn/
+  - logo_light: ./images/publisher/light/seaway.png
+    logo_dark: ./images/publisher/dark/seaway.png
+    href: http://new.haiwei.tech/
+
+# friendly_community: Friendly communities
+#   logo_light/dark: Light/dark theme logo
+#   url:             Community link
+#   desc:            Description (optional)
+friendly_community:
+  - logo_light: ./images/friendly-community/light/linaro.png
+    logo_dark: ./images/friendly-community/dark/linaro.png
+    url: https://www.linaro.org/
+  - logo_light: ./images/friendly-community/light/linux foundation.png
+    logo_dark: ./images/friendly-community/dark/linux foundation.png
+    url: https://www.linuxfoundation.org/
+    desc: '* openEuler is an Associate Member of the Linux Foundation.'
+  - logo_light: ./images/friendly-community/light/OpenChain.png
+    logo_dark: ./images/friendly-community/dark/OpenChain.png
+    url: https://openchainproject.org/
+    desc: ''
+  - logo_light: ./images/friendly-community/light/OpenHPC.png
+    logo_dark: ./images/friendly-community/dark/OpenHPC.png
+    url: https://openhpc.community/
+  - logo_light: ./images/friendly-community/light/OpenInfra.png
+    logo_dark: ./images/friendly-community/dark/OpenInfra.png
+    url: https://openinfra.org/
+  - logo_light: ./images/friendly-community/light/opea.png
+    logo_dark: ./images/friendly-community/dark/opea.png
+    url: https://opea.dev/
+  - logo_light: ./images/friendly-community/light/RISC-V.png
+    logo_dark: ./images/friendly-community/dark/RISC-V.png
+    url: https://riscv.org/
+  - logo_light: ./images/friendly-community/light/ai-data.png
+    logo_dark: ./images/friendly-community/dark/ai-data.png
+    url: https://lfaidata.foundation/
+  - logo_light: ./images/friendly-community/light/Zephyr.png
+    logo_dark: ./images/friendly-community/dark/Zephyr.png
+    url: https://zephyrproject.org/

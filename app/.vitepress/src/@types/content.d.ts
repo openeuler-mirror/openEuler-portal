@@ -1,38 +1,9 @@
-// `#content/<domain>` 虚拟模块由 vite-plugin-content-yaml 合成,每新增 domain 在此声明一条。
+// `#content/<domain>` 虚拟模块由 vite-plugin-content-yaml 合成,每新增 domain 在 `src-new/@types/content/<第一层>.d.ts` 声明。
+// home 声明已移至 `src-new/@types/content/home.d.ts`。
 
 declare module '#content/organization' {
   import type { OrgRawT } from '@/@types/type-organization';
   const data: Record<string, OrgRawT>;
-  export default data;
-}
-
-declare module '#content/home' {
-  interface BannerItemT {
-    bg_pc: string;
-    bg_pad: string;
-    bg_mb?: string;
-    bg_mb_zh?: string;
-    bg_mb_en?: string;
-    bg_theme: 'light' | 'dark';
-    text_theme?: 'dark' | 'light';
-    title_zh: string | string[];
-    title_en: string | string[];
-    subtitle_zh?: string;
-    subtitle_en?: string;
-    btn_zh?: string;
-    btn_en?: string;
-    href_zh: string;
-    href_en: string;
-    is_blank?: boolean;
-    attach?: string;
-    locale?: string;
-    light?: Partial<BannerItemT>;
-    dark?: Partial<BannerItemT>;
-  }
-
-  const data: {
-    banner: BannerItemT[];
-  };
   export default data;
 }
 

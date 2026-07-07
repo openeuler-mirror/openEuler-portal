@@ -1,0 +1,259 @@
+# 首页中文数据 / Home page data (zh)
+#
+# 顶层对象，按板块名索引。所有字段用基线名（无 _zh/_en 后缀）。
+# 图片路径以 ./ 开头，由 vite-plugin-content-yaml 重写为 import 走 Vite 资源管线。
+
+# banner: 首页顶部轮播图
+#   title:        标题（字符串或数组表示多行）
+#   subtitle:     副标题（可选）
+#   btn:          按钮文案（可选，不填则无按钮）
+#   href:         跳转链接
+#   bg_pc/bg_pad/bg_mb: PC/平板/移动端背景图
+#   bg_theme:     light | dark，控制指示器颜色
+#   text_theme:   dark=白色文字（可选）
+#   is_blank:     是否新窗口打开（可选）
+#   attach:       附加装饰图（可选）
+#   locale:       可见语言 zh / en / zh,en（可选，默认 zh,en）
+banner:
+  - title: openEuler 24.03 LTS SP4 正式发布
+    btn: 下载
+    href: /zh/download/#openEuler%2024.03%20LTS%20SP4
+    bg_pc: ./images/release/pc.jpg
+    bg_pad: ./images/release/pad.jpg
+    bg_mb: ./images/release/mb.jpg
+    bg_theme: light
+    locale: zh
+    is_blank: true
+
+  - title:
+      - OpenAtom openEuler
+      - 2025 社区年报
+    btn: 查看详情
+    href: /zh/annual-report/openEuler-annual-report-2025/
+    bg_pc: ./images/annual-report/pc.jpg
+    bg_pad: ./images/annual-report/pad.jpg
+    bg_mb: ./images/annual-report/mb.jpg
+    bg_theme: light
+    text_theme: dark
+    is_blank: true
+
+  - title: 获取openEuler
+    subtitle: 一站式资源下载获取，欢迎使用
+    btn: 查看详情
+    href: /zh/download
+    bg_pc: ./images/download/pc.jpg
+    bg_pad: ./images/download/pad.jpg
+    bg_mb: ./images/download/banner-mb-zh.jpg
+    bg_theme: light
+    is_blank: true
+
+# display_zone: 首页快捷入口
+#   title:          入口标题
+#   icon_light/dark: 亮/暗主题图标
+#   description:    入口描述
+#   link:           入口链接
+display_zone:
+  - title: 技术白皮书
+    icon_light: ./images/display-zone/white-paper_light.svg
+    icon_dark: ./images/display-zone/white-paper_dark.svg
+    description: 了解openEuler各版本的技术详情
+    link: /zh/showcase/technical-white-paper/
+
+  - title: 安全中心
+    icon_light: ./images/display-zone/security_light.svg
+    icon_dark: ./images/display-zone/security_dark.svg
+    description: 查看安全公告等安全问题
+    link: /zh/security/security-bulletins/
+
+  - title: 迁移专区
+    icon_light: ./images/display-zone/migration_light.svg
+    icon_dark: ./images/display-zone/migration_dark.svg
+    description: 教你替换操作系统成openEuler
+    link: /zh/migration/
+
+  - title: 活动专区
+    icon_light: ./images/display-zone/event_light.svg
+    icon_dark: ./images/display-zone/event_dark.svg
+    description: 了解openEuler最新活动
+    link: /zh/interaction/event-list/
+
+# intro: 首页介绍卡片
+#   title:          卡片标题
+#   img_pc/img_mo:  PC/移动端图片
+#   icon_light/dark: 亮/暗主题图标
+#   description:    描述（仅中文版展示）
+intro:
+  - title: 支持多样性设备
+    img_pc: ./images/intro/computing-arch_zh_pc.jpg
+    img_mo: ./images/intro/computing-arch_zh_mo.png
+    icon_light: ./images/intro/computing-arch_light.png
+    icon_dark: ./images/intro/computing-arch_dark.png
+    description: 全量组件原子化，构建服务自助化
+
+  - title: 覆盖全场景应用
+    img_pc: ./images/intro/cover-all_zh_pc.jpg
+    img_mo: ./images/intro/cover-all_zh_mo.png
+    icon_light: ./images/intro/cover-all_light.png
+    icon_dark: ./images/intro/cover-all_dark.png
+    description: 一次开发，覆盖数字基础设施全场景
+
+  - title: 完整开发工具链
+    img_pc: ./images/intro/development-tool_zh_pc.jpg
+    img_mo: ./images/intro/development-tool_zh_mo.png
+    icon_light: ./images/intro/development-tool_light.png
+    icon_dark: ./images/intro/development-tool_dark.png
+    description: 统一API跨多设备调用
+
+# play_community: 玩转社区卡片
+#   title:    卡片标题
+#   bg:       卡片背景图
+#   intro:    卡片简介
+#   btn:      主按钮 { label, link }
+#   textBtn:  文字按钮 { label, link }（可选）
+play_community:
+  - title: 成为社区贡献者
+    bg: ./images/play-community/card-1.png
+    intro: openEuler 欢迎大家以各种形式参与社区贡献，包括但不限于提交issue、参与讨论、代码贡献、文档捉虫等。一起加入openEuler参与贡献吧
+    btn:
+      label: 贡献攻略
+      link: /zh/community/contribution/detail.html
+    textBtn:
+      label: 进入SIG中心
+      link: /zh/sig/sig-list/
+
+  - title: 成为项目群捐赠人
+    bg: ./images/play-community/card-2.png
+    intro: openEuler项目群，是由开放原子开源基金会孵化及运营的开源项目群。欢迎各企业参与共建，成为项目群成员。资金捐赠请联系 liyang@openatom.org
+    btn:
+      label: 成员单位
+      link: /zh/community/member/
+    textBtn:
+      label: 查看捐赠权益
+      link: /zh/community/charter/#第八条-项目群捐赠人的开源治理参与方式
+
+# publisher: 合作伙伴
+#   logo_light/dark: 亮/暗主题 logo
+#   href:            链接
+publisher:
+  - logo_light: ./images/publisher/light/baode.png
+    logo_dark: ./images/publisher/dark/baode.png
+    href: http://www.powerleader.com.cn
+  - logo_light: ./images/publisher/light/bochuan.png
+    logo_dark: ./images/publisher/dark/bochuan.png
+    href: https://www.qsemos.com/
+  - logo_light: ./images/publisher/light/xfusion.png
+    logo_dark: ./images/publisher/dark/xfusion.png
+    href: https://www.xfusion.com/cn/
+  - logo_light: ./images/publisher/light/dingqiao.png
+    logo_dark: ./images/publisher/dark/dingqiao.png
+    href: https://www.td-tech.com/
+  - logo_light: ./images/publisher/light/fenhuo.png
+    logo_dark: ./images/publisher/dark/fenhuo.png
+    href: https://www.fhss.com.cn/
+  - logo_light: ./images/publisher/light/hengsheng.png
+    logo_dark: ./images/publisher/dark/hengsheng.png
+    href: https://www.hundsun.com/
+  - logo_light: ./images/publisher/light/huizhi.png
+    logo_dark: ./images/publisher/dark/huizhi.png
+    href: http://www.teligen.net/
+  - logo_light: ./images/publisher/light/intewellLogo.png
+    logo_dark: ./images/publisher/dark/intewellLogo.png
+    href: https://www.kyland.com.cn/
+  - logo_light: ./images/publisher/light/kaihong.png
+    logo_dark: ./images/publisher/dark/kaihong.png
+    href: https://www.kaihong.com/
+  - logo_light: ./images/publisher/light/langchaoyun.png
+    logo_dark: ./images/publisher/dark/langchaoyun.png
+    href: https://cloud.inspur.com/
+  - logo_light: ./images/publisher/light/ruidun.png
+    logo_dark: ./images/publisher/dark/ruidun.png
+    href: http://www.sgepri.sgcc.com.cn
+  - logo_light: ./images/publisher/light/linsiLogo.png
+    logo_dark: ./images/publisher/dark/linsiLogo.png
+    href: http://www.linx-info.com/#/
+  - logo_light: ./images/publisher/light/cetc.png
+    logo_dark: ./images/publisher/dark/cetc.png
+    href: http://www.i-soft.com.cn/
+  - logo_light: ./images/publisher/light/qiling.png
+    logo_dark: ./images/publisher/dark/qiling.png
+    href: https://www.kylinos.cn/
+  - logo_light: ./images/publisher/light/xinan.png
+    logo_dark: ./images/publisher/dark/xinan.png
+    href: http://www.kylinsec.com.cn/
+  - logo_light: ./images/publisher/light/hopeRun.png
+    logo_dark: ./images/publisher/dark/hope-run.png
+    href: http://www.hoperun.com/
+  - logo_light: ./images/publisher/light/geidi.png
+    logo_dark: ./images/publisher/dark/geidi.png
+    href: http://www.grid-elec.com/
+  - logo_light: ./images/publisher/light/suse.png
+    logo_dark: ./images/publisher/dark/suse.png
+    href: https://www.suse.com/
+  - logo_light: ./images/publisher/light/turbo.png
+    logo_dark: ./images/publisher/dark/turbo.png
+    href: https://www.turbolinux.com.cn/
+  - logo_light: ./images/publisher/light/tongYuan.png
+    logo_dark: ./images/publisher/dark/tong-yuan.png
+    href: http://www.tongyuanos.com/
+  - logo_light: ./images/publisher/light/tongxin.png
+    logo_dark: ./images/publisher/dark/tongxin.png
+    href: https://www.uniontech.com/
+  - logo_light: ./images/publisher/light/h3cLogo.png
+    logo_dark: ./images/publisher/dark/h3cLogo.png
+    href: https://www.h3c.com/cn/
+  - logo_light: ./images/publisher/light/iscas.png
+    logo_dark: ./images/publisher/dark/iscas.png
+    href: http://www.iscas.ac.cn/
+  - logo_light: ./images/publisher/light/ruantong.png
+    logo_dark: ./images/publisher/dark/ruantong.png
+    href: https://www.isoftstone.com
+  - logo_light: ./images/publisher/light/zhongruan.png
+    logo_dark: ./images/publisher/dark/zhongruan.png
+    href: https://www.chinasofti.com/
+  - logo_light: ./images/publisher/light/zhongkeLogo.png
+    logo_dark: ./images/publisher/dark/zhongkeLogo.png
+    href: https://www.thundersoft.com/
+  - logo_light: ./images/publisher/light/zhongkefangde.png
+    logo_dark: ./images/publisher/dark/zhongkefangde.png
+    href: https://www.nfschina.com/
+  - logo_light: ./images/publisher/light/zhongkehongqi.png
+    logo_dark: ./images/publisher/dark/zhongkehongqi.png
+    href: http://www.chinaredflag.cn/
+  - logo_light: ./images/publisher/light/seaway.png
+    logo_dark: ./images/publisher/dark/seaway.png
+    href: http://new.haiwei.tech/
+
+# friendly_community: 友好社区
+#   logo_light/dark: 亮/暗主题 logo
+#   url:             社区链接
+#   desc:            描述（可选）
+friendly_community:
+  - logo_light: ./images/friendly-community/light/linaro.png
+    logo_dark: ./images/friendly-community/dark/linaro.png
+    url: https://www.linaro.org/
+  - logo_light: ./images/friendly-community/light/linux foundation.png
+    logo_dark: ./images/friendly-community/dark/linux foundation.png
+    url: https://www.linuxfoundation.org/
+    desc: '* openEuler是Linux Foundation的Associate Member'
+  - logo_light: ./images/friendly-community/light/OpenChain.png
+    logo_dark: ./images/friendly-community/dark/OpenChain.png
+    url: https://openchainproject.org/
+    desc: ''
+  - logo_light: ./images/friendly-community/light/OpenHPC.png
+    logo_dark: ./images/friendly-community/dark/OpenHPC.png
+    url: https://openhpc.community/
+  - logo_light: ./images/friendly-community/light/OpenInfra.png
+    logo_dark: ./images/friendly-community/dark/OpenInfra.png
+    url: https://openinfra.org/
+  - logo_light: ./images/friendly-community/light/opea.png
+    logo_dark: ./images/friendly-community/dark/opea.png
+    url: https://opea.dev/
+  - logo_light: ./images/friendly-community/light/RISC-V.png
+    logo_dark: ./images/friendly-community/dark/RISC-V.png
+    url: https://riscv.org/
+  - logo_light: ./images/friendly-community/light/ai-data.png
+    logo_dark: ./images/friendly-community/dark/ai-data.png
+    url: https://lfaidata.foundation/
+  - logo_light: ./images/friendly-community/light/Zephyr.png
+    logo_dark: ./images/friendly-community/dark/Zephyr.png
+    url: https://zephyrproject.org/
