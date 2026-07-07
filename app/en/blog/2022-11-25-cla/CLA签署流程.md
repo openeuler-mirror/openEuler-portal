@@ -21,7 +21,7 @@ A Contributor License Agreement (CLA) is usually required for a developer to con
 
 2.1 Visit the openEuler CLA signing address: [https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340 ](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340)
 
-![images](./images/1.jpg)
+![images](./images/cla-en-1.png)
 
  <p style='text-align:center'>Sign Corporation CLA</p>
 
@@ -93,7 +93,7 @@ In the active employee list, the system administrator can set an employee to the
 
 Click **Sign Employee CLA**.
 
-![images](./images/5.jpg)
+![images](./images/cla-en-2.png)
 
  <p style='text-align:center'> Sign Employee CLA</p>
 
