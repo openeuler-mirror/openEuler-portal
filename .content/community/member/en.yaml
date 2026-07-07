@@ -1,0 +1,149 @@
+# Community Members (en)
+#
+# Top-level object indexed by section name. All fields use baseline names (no _zh/_en suffix).
+# Image paths start with ./ and are rewritten to imports by vite-plugin-content-yaml.
+
+# donor_levels: Donor level list (from highest to lowest)
+#   id:          Anchor ID (shared by zh/en)
+#   donor_title: Level title
+#   logo_list:   Logo array
+#     img_light/img_dark: Light/dark theme logos (shared by zh/en)
+#     alt:         Image alt text (company name, shared by zh/en)
+#     no_icon:     Hide corner mark (true=hidden, omit=shown)
+donor_levels:
+  - id: Strategic-Donors
+    donor_title: Strategic Donors
+    logo_list:
+      - img_light: ./images/huawei_light.png
+        img_dark: ./images/huawei_dark.png
+        alt: 华为技术有限公司
+        no_icon: true
+
+  - id: Platinum-Donors
+    donor_title: Platinum Donors
+    logo_list:
+      - img_light: ./images/qilin_light.png
+        img_dark: ./images/qilin_dark.png
+        alt: 湖南麒麟信安科技股份有限公司
+        no_icon: true
+      - img_light: ./images/qilin-soft_light.png
+        img_dark: ./images/qilin-soft_dark.png
+        alt: 麒麟软件有限公司
+        no_icon: true
+      - img_light: ./images/tongxin_light.png
+        img_dark: ./images/tongxin_dark.png
+        alt: 统信软件技术有限公司
+        no_icon: true
+
+  - id: Gold-Donors
+    donor_title: Gold Donors
+    logo_list:
+      - img_light: ./images/intel_light.png
+        img_dark: ./images/intel_dark.png
+        alt: 英特尔（中国）有限公司
+        no_icon: true
+      - img_light: ./images/ruantong_light.png
+        img_dark: ./images/ruantong_dark.png
+        alt: 软通动力信息技术（集团）股份有限公司
+        no_icon: true
+      - img_light: ./images/runhe_light.png
+        img_dark: ./images/runhe_dark.png
+        alt: 江苏润和软件股份有限公司
+        no_icon: true
+      - img_light: ./images/nanfangdianwang_light.png
+        img_dark: ./images/nanfangdianwang_dark.png
+        alt: 南方电网数字电网科技有限（广东）公司
+        no_icon: true
+      - img_light: ./images/zhongkehaiguang_light.png
+        img_dark: ./images/zhongkehaiguang_dark.png
+        alt: 中科海光信息技术股份有限公司
+        no_icon: true
+      - img_light: ./images/dianxing_light.png
+        img_dark: ./images/dianxing_dark.png
+        alt: 天翼云科技有限公司
+      - img_light: ./images/liantong_light.png
+        img_dark: ./images/liantong_dark.png
+        alt: 联通数字科技有限公司
+      - img_light: ./images/yidong_light.png
+        img_dark: ./images/yidong_dark.png
+        alt: 中国移动云能力中心
+
+  - id: Silver-Donors
+    donor_title: Silver Donors
+    logo_list:
+      - img_light: ./images/aosiwei_light.png
+        img_dark: ./images/aosiwei_dark.png
+        alt: 奥思维科技
+        no_icon: true
+      - img_light: ./images/AMD_light.png
+        img_dark: ./images/AMD_dark.png
+        alt: AMD
+        no_icon: true
+      - img_light: ./images/arm_light.png
+        img_dark: ./images/arm_dark.png
+        alt: Arm
+        no_icon: true
+      - img_light: ./images/baiduyun_light.png
+        img_dark: ./images/baiduyun_dark.png
+        alt: 百度智能云
+        no_icon: true
+      - img_light: ./images/boyun_light.png
+        img_dark: ./images/boyun_dark.png
+        alt: 博云科技
+        no_icon: true
+      - img_light: ./images/xinhua_light.png
+        img_dark: ./images/xinhua_dark.png
+        alt: 新华三技术有限公司
+        no_icon: true
+      - img_light: ./images/yinke_light.png
+        img_dark: ./images/yinke_dark.png
+        alt: 银科控股
+        no_icon: true
+      - img_light: ./images/langchaoyun_light.png
+        img_dark: ./images/langchaoyun_dark.png
+        alt: 浪潮云信息技术股份有限公司
+        no_icon: true
+      - img_light: ./images/ningsi_light.png
+        img_dark: ./images/ningsi_dark.png
+        alt: 宁思科技
+        no_icon: true
+      - img_light: ./images/shenzhoushuma_light.png
+        img_dark: ./images/shenzhoushuma_dark.png
+        alt: 神州数码控股有限公司
+        no_icon: true
+      - img_light: ./images/afusion_light.png
+        img_dark: ./images/afusion_dark.png
+        alt: 聚变数字技术有限公司
+        no_icon: true
+      - img_light: ./images/dianziyun_light.png
+        img_dark: ./images/dianziyun_dark.png
+        alt: 中国电子云
+        no_icon: true
+
+  - id: Bronze-Donors
+    donor_title: Bronze Donors
+    logo_list:
+      - img_light: ./images/baolande_light.png
+        img_dark: ./images/baolande_dark.png
+        alt: 北京宝兰德软件股份有限公司
+        no_icon: true
+      - img_light: ./images/feiten_light.png
+        img_dark: ./images/feiten_dark.png
+        alt: 飞腾信息技术有限公司
+        no_icon: true
+      - img_light: ./images/huazhi_light.png
+        img_dark: ./images/huazhi_dark.png
+        alt: 华智科技
+        no_icon: true
+      - img_light: ./images/zhaoxin_light.png
+        img_dark: ./images/zhaoxin_dark.png
+        alt: 上海兆芯集成电路股份有限公司
+        no_icon: true
+
+  - id: Academic-Institutions
+    donor_title: Academic Institutions
+    logo_list:
+      - img_light: ./images/iscas_light.png
+        img_dark: ./images/iscas_dark.png
+        alt: 中国科学院软件研究所
+        no_icon: true

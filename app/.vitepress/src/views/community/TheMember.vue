@@ -1,27 +1,33 @@
 <script lang="ts" setup>
+import { computed } from 'vue';
+
 import { useI18n } from '@/i18n';
 
 import { useData } from 'vitepress';
 
-import MEMBER_DATA from '@/data/about-us/member-data';
+import memberContent from '#content/community/member';
 import { useCommon } from '@/stores/common';
+
+console.log(memberContent);
 
 const { lang } = useData();
 
 const i18n = useI18n();
 
 const commonStore = useCommon();
+
+const memberData = computed(() => (lang.value === 'zh' ? memberContent.zh.donor_levels : memberContent.en.donor_levels));
 </script>
 <template>
   <div class="member">
-    <div v-for="line in MEMBER_DATA" :key="line.ID" class="member-line">
-      <h2 :id="line.ID" class="member-title">{{ line.donorTitle[lang] }}</h2>
+    <div v-for="line in memberData" :key="line.id" class="member-line">
+      <h2 :id="line.id" class="member-title">{{ line.donor_title }}</h2>
       <div class="logo-list">
         <span
-          v-for="img in line.logoList"
+          v-for="img in line.logo_list"
           :key="img.img_light"
           class="logo"
-          :class="img.noIcon ? 'no-icon' : ''"
+          :class="img.no_icon ? 'no-icon' : ''"
         >
           <img
             :src="commonStore.theme === 'light' ? img.img_light : img.img_dark"
