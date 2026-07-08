@@ -1,0 +1,619 @@
+# 组织架构数据 / Organization Structure (zh)
+#
+# 顶层对象，按委员会/工作组 slug 索引。
+# 渲染顺序由 TheOrganization.vue 的 SECTIONS 数组决定（产品决策，写在视图代码里）。
+# 图片路径以 ./ 开头，由 vite-plugin-content-yaml 重写为 import 走 Vite 资源管线。
+# anchor 字段为页面 HTML 锚点 ID（zh/en 共用同一英文 anchor，显式写在 yaml 里）。
+#
+# 每个 section 形态三选一（互斥）：
+#   - members: 平铺成员列表（最常见）
+#   - groups:  子分组（按职位分组，如主席/常委/委员）
+#   - rows:    分行渲染（数组的数组，每行是一组同级成员）
+#
+# 成员字段：
+#   name:      姓名
+#   image:     头像（相对当前 yaml 文件，./images/xxx.png）
+#   position:  单位或职位（字符串或字符串数组）
+#   post:      角色标签（主席/委员，技术委员会用这个）
+#   email:     邮箱（可选，渲染成 mailto 图标）
+#   gitee:     Gitee 账号（可选，渲染成 Gitee 图标）
+
+# advisory: 顾问专家委员会
+advisory:
+  title: openEuler 委员会顾问专家委员会
+  anchor: advisory-committee-of-the-openeuler-committee
+  members:
+    - name: 陆首群
+      image: ./images/lusouqun.png
+      position:
+        - 中国开源软件联盟名誉主席
+        - 原国务院信息办常务副主任
+    - name: 倪光南
+      image: ./images/niguangnan.png
+      position: 中国工程院院士
+    - name: 廖湘科
+      image: ./images/liaoxiangke.png
+      position: 中国工程院院士
+    - name: 王怀民
+      image: ./images/wanghuaimin.png
+      position: 中国科学院院士
+    - name: 邬贺铨
+      image: ./images/wuheshuan.png
+      position: 中国工程院院士
+    - name: 周明辉
+      image: ./images/zhouminghui.png
+      position:
+        - 北京大学计算机系教授
+        - 北大博雅特聘教授
+    - name: 霍太稳
+      image: ./images/huotaiwen.png
+      position: 极客邦科技创始人兼CEO
+
+# committee: 委员会
+committee:
+  title: openEuler 委员会
+  anchor: openeuler-committee
+  groups:
+    - title: 主席
+      members:
+        - name: 熊伟
+          image: ./images/xiongwei.png
+          position: 华为技术有限公司
+    - title: 常务委员会委员
+      members:
+        - name: 韩乃平
+          image: ./images/hannaiping.png
+          position: 麒麟软件有限公司
+        - name: 刘文清
+          image: ./images/liuwenqing.png
+          position: 湖南麒麟信安科技股份有限公司
+        - name: 屈晟
+          image: ./images/qusheng.png
+          position: 中国科学院软件研究所
+        - name: 张磊
+          image: ./images/zhanglei.png
+          position: 统信软件技术有限公司
+    - title: 委员
+      members:
+        - name: 高培
+          image: ./images/gaopei.png
+          position: 软通动力信息技术（集团）股份有限公司
+        - name: 田俊
+          image: ./images/tianjun.png
+          position: 英特尔（中国）有限公司
+        - name: 杨继国
+          image: ./images/yangjiguo.png
+          position: 海光信息技术股份有限公司
+        - name: 于力
+          image: ./images/yuli.png
+          position: 南方电网数字电网科技有限（广东）公司
+        - name: 于萍
+          image: ./images/yuping.png
+          position: 江苏润和软件股份有限公司
+    - title: 执行总监
+      members:
+        - name: 刘飞
+          image: ./images/liufei.png
+          position: 华为技术有限公司
+    - title: 执行秘书
+      members:
+        - name: 刘彦飞
+          image: ./images/liuyanfei.png
+          position: 开放原子开源基金会
+
+# technical: 技术委员会
+technical:
+  title: openEuler 技术委员会
+  anchor: openeuler-technical-committee
+  members:
+    - name: 胡欣蔚
+      image: ./images/huxinwei-technical.png
+      post: 主席
+      email: shinwell_hu@openeuler.sh
+      gitee: shinwell_hu
+    - name: 曹志
+      image: ./images/caozhi.png
+      post: 委员
+      email: george.cao@huawei.com
+      gitee: georgecao
+    - name: 陈茂冬
+      image: ./images/chenmaodong.png
+      post: 委员
+      email: chenmaodong@xfusion.com
+      gitee: chenmaodong
+    - name: 陈棋德
+      image: ./images/chenqide.png
+      post: 委员
+      email: dillon.chen@gmail.com
+      gitee: dillon_chen
+    - name: 陈亚强
+      image: ./images/chenyaqiang-technical.png
+      post: 委员
+      email: chen_yaqiang@foxmail.com
+      gitee: yaqiangchen
+    - name: 杜开田
+      image: ./images/dukaitian.png
+      post: 委员
+      email: dukaitian@huawei.com
+      gitee: jimmy_hero
+    - name: 高贵锦
+      image: ./images/gaoguijin.png
+      post: 委员
+      email: gaoguijin@huawei.com
+      gitee: blue0613
+    - name: 侯健
+      image: ./images/houjian-technical.png
+      post: 委员
+      email: houjian@kylinos.cn
+      gitee: hjimmy
+    - name: 胡峰
+      image: ./images/hufeng.png
+      post: 委员
+      email: solar.hu@huawei.com
+      gitee: solarhu
+    - name: 李永强
+      image: ./images/liyongqiang.png
+      post: 委员
+      email: liyongqiang@xfusion.com
+      gitee: charlie_li
+    - name: 刘恺
+      image: ./images/liukai.png
+      post: 委员
+      email: kraml.liu@gmail.com
+      gitee: kailiu42
+    - name: 吕从庆
+      image: ./images/lvcongqing.png
+      post: 委员
+      email: lvcongqing@uniontech.com
+      gitee: HelloWorld_lvcongqing
+    - name: 马全一
+      image: ./images/maquanyi.png
+      post: 委员
+      email: eli@patch.sh
+      gitee: genedna
+    - name: 任慰
+      image: ./images/renwei.png
+      post: 委员
+      email: renwei41@huawei.com
+      gitee: vonhust
+    - name: 石勇
+      image: ./images/shiyong.png
+      post: 委员
+      email: shiyong@kylinsec.com.cn
+      gitee: stonefly128
+    - name: 唐葛亮
+      image: ./images/tanggeliang.png
+      post: 委员
+      email: geliang@kernel.org
+      gitee: geliangtang
+    - name: 田俊
+      image: ./images/tianjun.png
+      post: 委员
+      email: jun.j.tian@intel.com
+      gitee: juntianlinux
+    - name: 王建民
+      image: ./images/wangjianmin.png
+      post: 委员
+      email: jianmin@iscas.ac.cn
+      gitee: cellfaint
+    - name: 王经纬
+      image: ./images/wangjingwei.png
+      post: 委员
+      email: wangjingwei@iscas.ac.cn
+      gitee: Jingwiw
+    - name: 王志钢
+      image: ./images/wangzhigang.png
+      post: 委员
+      email: wangzhigang17@huawei.com
+      gitee: jianminw
+    - name: 吴峰光
+      image: ./images/wufengguang.png
+      post: 委员
+      email: wfg@mail.ustc.edu.cn
+      gitee: wu_fengguang
+    - name: 谢秀奇
+      image: ./images/xiexiuqi.png
+      post: 委员
+      email: xiexiuqi@huawei.com
+      gitee: xiexiuqi
+    - name: 叶青龙
+      image: ./images/yeqinglong.png
+      post: 委员
+      email: yeqinglong@kylinsec.com.cn
+      gitee: yeqinglong01
+    - name: 岳龙广
+      image: ./images/yuelongguang.png
+      post: 委员
+      email: yuelg@chinaunicom.cn
+      gitee: bigclouds99
+    - name: 张剑
+      image: ./images/zhangjian.png
+      post: 委员
+      email: zhang_jian7@hoperun.com
+    - name: 赵川峰
+      image: ./images/zhaochuanfeng.png
+      post: 委员
+      email: zhaochuanfeng@huawei.com
+      gitee: cf-zhao
+    - name: 朱健伟
+      image: ./images/zhujianwei.png
+      post: 委员
+      email: zhujianwei7@huawei.com
+      gitee: zhujianwei001
+
+# marketing: 品牌委员会
+marketing:
+  title: openEuler 品牌委员会
+  anchor: openeuler-marketing-committee
+  members:
+    - name: 梁冰
+      image: ./images/liangbin.png
+      position: 主席
+      email: liangbing11@huawei.com
+    - name: 胡明月
+      image: ./images/humingyu.png
+      position: 委员
+      email: Ming.yue.hu@intel.com
+    - name: 李明
+      image: ./images/liming-marketing.png
+      position: 委员
+      email: liming107@huawei.com
+    - name: 李伟
+      image: ./images/liwei.png
+      position: 委员
+      email: allenli@hygon.cn
+    - name: 李震宁
+      image: ./images/lizhenning.png
+      position: 委员
+      email: lizhenning@kylinos.cn
+    - name: 彭雅莹
+      image: ./images/pengyaying.png
+      position: 委员
+      email: 260060281@qq.com
+    - name: 文丹
+      image: ./images/wendan.png
+      position: 委员
+      email: wendan@kylinsec.com.cn
+    - name: 徐露
+      image: ./images/xulu.png
+      position: 委员
+      email: xu_lu2@hoperun.com
+    - name: 徐嫣莉
+      image: ./images/xuyanli.png
+      position: 委员
+      email: xuyanli@uniontech.com
+    - name: 郑莉
+      image: ./images/zhengli.png
+      position: 委员
+      email: lizhengq@isoftstone.com
+
+# user: 用户委员会
+user:
+  title: openEuler 用户委员会
+  anchor: openeuler-user-committee
+  members:
+    - name: 王军
+      image: ./images/wangjun.png
+      position: 主席
+      email: junwangs@isoftstone.com
+    - name: 蔡镌洋
+      image: ./images/caijuanyang.png
+      position: 委员
+      email: cai_juanyang@hoperun.com
+    - name: 陈静
+      image: ./images/chenjin.png
+      position: 委员
+      email: chenjingc@uniontech.com
+    - name: 崔骥
+      image: ./images/cuiji.png
+      position: 委员
+      email: cuiji@beyondcent.com
+    - name: 杜韶辉
+      image: ./images/dushaohui.png
+      position: 委员
+      email: dush1@csg.cn
+    - name: 冯伟
+      image: ./images/fengwei.png
+      position: 委员
+      email: f.fengwei@huawei.com
+    - name: 龚鹏程
+      image: ./images/gongchengpeng.png
+      position: 委员
+      email: 4705317@QQ.com
+    - name: 高洪鹤
+      image: ./images/gaohonghe.png
+      position: 委员
+      email: gaohonghe@kylinsec.com.cn
+    - name: 胡勇
+      image: ./images/huyong.png
+      position: 委员
+      email: yong.hu@intel.com
+    - name: 李晨斌
+      image: ./images/lichenbing.png
+      position: 委员
+      email: cbli@linx-info.com
+    - name: 李荣青
+      image: ./images/lirongqing.png
+      position: 委员
+      email: lirongqing@baidu.com
+    - name: 李伟
+      image: ./images/liwei.png
+      position: 委员
+      email: allenli@hygon.cn
+    - name: 荣涛
+      image: ./images/rongtao.png
+      position: 委员
+      email: rongtao@cestc.cn
+    - name: 石光银
+      image: ./images/shiguangyin.png
+      position: 委员
+      email: shiguangyin@inspur.com
+    - name: 徐磊
+      image: ./images/xulei.png
+      position: 委员
+      email: stone.xulei@xfusion.com
+    - name: 徐田原
+      image: ./images/xutianyuan.png
+      position: 委员
+      email: xu.tianyuan@h3c.com
+    - name: 张庆南
+      image: ./images/zhangqingnan.png
+      position: 委员
+      email: zhangqingnan001@chinasofti.com
+    - name: 朱晨
+      image: ./images/zuchen.png
+      position: 委员
+      email: zhuchen@kylinos.cn
+
+# business: 业务发展工作组
+business:
+  title: openEuler 业务发展工作组
+  anchor: openeuler-service-development-working-group
+  members:
+    - name: 李扬
+      image: ./images/liyang.png
+      position: 组长
+    - name: 黄伟旭
+      image: ./images/huangweixu.png
+      position: 副组长
+    - name: 张木梁
+      image: ./images/zhangmuliang.png
+      position: 副组长
+    - name: 李成鹏
+      image: ./images/lichengpeng-development.png
+      position: 组员
+    - name: 刘华杰
+      image: ./images/liuhuajie.png
+      position: 组员
+    - name: 刘明杰
+      image: ./images/liumingjie-operation.png
+      position: 组员
+    - name: 刘胜航
+      image: ./images/liushenghang.png
+      position: 组员
+    - name: 张剑
+      image: ./images/zhangjian.png
+      position: 组员
+    - name: 朱文玉
+      image: ./images/zuwenyu.png
+      position: 组员
+
+# operations: 社区运营工作组
+operations:
+  title: openEuler 社区运营工作组
+  anchor: openeuler-operations-working-group
+  members:
+    - name: 郑振宇
+      image: ./images/zhenzhengyu.png
+      position: 组长
+    - name: 胡骁杰
+      image: ./images/huxiaojie.png
+      position: 副组长
+    - name: 陈静
+      image: ./images/chenjing.png
+      position: 组员
+    - name: 刘华杰
+      image: ./images/liuhuajie.png
+      position: 组员
+    - name: 刘敏
+      image: ./images/liming.png
+      position: 组员
+    - name: 刘明杰
+      image: ./images/liumingjie-operation.png
+      position: 组员
+    - name: 任涛
+      image: ./images/rentao.png
+      position: 组员
+    - name: 田可辉
+      image: ./images/tiankehui-operation.png
+      position: 组员
+    - name: 徐露
+      image: ./images/xulu.png
+      position: 组员
+
+# education: 教育工作组
+education:
+  title: openEuler 教育工作组
+  anchor: openeuler-education-working-group
+  members:
+    - name: 赵立超
+      image: ./images/zhaolichao.png
+      position: 组长
+    - name: 杨东杰
+      image: ./images/yangdongjie.png
+      position: 副组长
+    - name: 方丽丽
+      image: ./images/fanglili.png
+      position: 组员
+    - name: 冯潇靓
+      image: ./images/fenxiaoliang.png
+      position: 组员
+    - name: 高立群
+      image: ./images/gaoliqun.png
+      position: 组员
+    - name: 郭全友
+      image: ./images/guoquanyou.png
+      position: 组员
+    - name: 林振行
+      image: ./images/linzhenxing.png
+      position: 组员
+    - name: 门小康
+      image: ./images/menxiaokang.png
+      position: 组员
+    - name: 秦学峰
+      image: ./images/qinxuefen.png
+      position: 组员
+    - name: 谢宇
+      image: ./images/xieyu.png
+      position: 组员
+    - name: 杨和悦
+      image: ./images/yangheyue.png
+      position: 组员
+
+# legal: 法务工作组
+legal:
+  title: openEuler 法务工作组
+  anchor: openeuler-legal-affairs-working-group
+  members:
+    - name: 张伟
+      image: ./images/zhangwei.png
+      position: 组长
+    - name: 刘伟
+      image: ./images/liuwei.png
+      position: 副组长
+    - name: 李博
+      image: ./images/libo.png
+      position: 组员
+    - name: 宋李萍
+      image: ./images/songlipin.png
+      position: 组员
+    - name: 王思扬
+      image: ./images/wangsiyang.png
+      position: 组员
+    - name: 邢鹏
+      image: ./images/xinpeng.png
+      position: 组员
+
+# ai: AI 联合工作组
+ai:
+  title: openEuler AI联合工作组
+  anchor: openeuler-ai-joint-working-group
+  members:
+    - name: 胡欣蔚
+      image: ./images/huxinwei-technical.png
+      position: 组长
+    - name: Andrew Wafaa
+      image: ./images/AndrewWafaa.png
+      position: 组员
+    - name: 陈榕
+      image: ./images/chenrong.png
+      position: 组员
+    - name: 陈亚强
+      image: ./images/chenyaqiang-technical.png
+      position: 组员
+    - name: 邓益平
+      image: ./images/dengyiping.png
+      position: 组员
+    - name: 丁为杰
+      image: ./images/dingweijie.png
+      position: 组员
+    - name: 高伟
+      image: ./images/gaowei.png
+      position: 组员
+    - name: 巩远波
+      image: ./images/gongyuanbo.png
+      position: 组员
+    - name: 郭祎斌
+      image: ./images/guoyibin.png
+      position: 组员
+    - name: 何守成
+      image: ./images/heshoucheng.png
+      position: 组员
+    - name: 侯健
+      image: ./images/houjian-technical.png
+      position: 组员
+    - name: Fred Huang
+      image: ./images/Fred Huang.png
+      position: 组员
+    - name: 黄俊
+      image: ./images/huangjun.png
+      position: 组员
+    - name: 江毅文
+      image: ./images/jiangyiwen.png
+      position: 组员
+    - name: 江政雄
+      image: ./images/jiangzhengxiong.png
+      position: 组员
+    - name: 金龙
+      image: ./images/jinlong.png
+      position: 组员
+    - name: 秦彬娟
+      image: ./images/qinbinjuan.png
+      position: 组员
+    - name: 阙鸣健
+      image: ./images/quemingjian.png
+      position: 组员
+    - name: 沈国良
+      image: ./images/shenguoliang.png
+      position: 组员
+    - name: 宋梦
+      image: ./images/songmeng.png
+      position: 组员
+    - name: 孙政华
+      image: ./images/sunzhenghua.png
+      position: 组员
+    - name: 田可辉
+      image: ./images/tiankehui-operation.png
+      position: 组员
+    - name: 王清珺
+      image: ./images/wangqingjun.png
+      position: 组员
+    - name: 沃天宇
+      image: ./images/wotianyu.png
+      position: 组员
+    - name: 吴斌
+      image: ./images/wubin.png
+      position: 组员
+    - name: 夏知渊
+      image: ./images/xiazhiyuan.png
+      position: 组员
+    - name: 相元红
+      image: ./images/xiangyuanhong.png
+      position: 组员
+    - name: 徐洋
+      image: ./images/xuyang.png
+      position: 组员
+    - name: 严海双
+      image: ./images/yanhaishuang.png
+      position: 组员
+    - name: 杨西利
+      image: ./images/yangxili.png
+      position: 组员
+    - name: 詹年科
+      image: ./images/zhannianke.png
+      position: 组员
+
+# globalization: 全球化工作组
+globalization:
+  title: openEuler 全球化工作组
+  anchor: openeuler-globalization-working-group
+  rows:
+    - - name: 周楠
+        image: ./images/zhounan.png
+        position: 组长
+      - name: 蔡镌洋
+        image: ./images/caijuanyang.png
+        position: 组员
+      - name: 李成鹏
+        image: ./images/lichengpeng-globalization.png
+        position: 组员
+      - name: 刘明杰
+        image: ./images/liumingjie-globalization.png
+        position: 组员
+      - name: 任紫东
+        image: ./images/renzidong.png
+        position: 组员
+    - - name: 胡正策
+        image: ./images/huzhengce.png
+        position: 开源欧拉全球生态官
+

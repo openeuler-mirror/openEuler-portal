@@ -2,8 +2,8 @@ import { expect, describe, it } from 'vitest';
 import { foldI18n } from '../app/.vitepress/src-new/shared/content';
 
 // 与 TheOrganization.vue 内联的实现保持一致。
-function deriveAnchor(titleEn: string): string {
-  return titleEn
+function deriveAnchor(raw: string): string {
+  return raw
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
@@ -53,7 +53,7 @@ describe('foldI18n — i18n 字段合并', () => {
   });
 });
 
-describe('deriveAnchor — 从 title_en 派生 HTML anchor', () => {
+describe('deriveAnchor — anchor 规范化(兜底处理 yaml 中可能误写的不规范 anchor)', () => {
   it('小写 + 非字母数字字符替换为连字符(GFM/URL slug 规范)', () => {
     expect(deriveAnchor('openEuler Technical Committee')).toBe('openeuler-technical-committee');
   });
@@ -73,7 +73,13 @@ describe('deriveAnchor — 从 title_en 派生 HTML anchor', () => {
     expect(deriveAnchor('(Note)')).toBe('note');
   });
 
-  it('zh/en 派生结果一致(因为只看 title_en,跟 lang 无关)', () => {
+  it('已是规范形式的 anchor 原样返回(idempotent)', () => {
+    expect(deriveAnchor('openeuler-technical-committee')).toBe('openeuler-technical-committee');
+    expect(deriveAnchor('advisory-committee-of-the-openeuler-committee'))
+      .toBe('advisory-committee-of-the-openeuler-committee');
+  });
+
+  it('对同一输入,zh/en 派生结果一致(因为只看字符串本身,跟 lang 无关)', () => {
     const titleEn = 'openEuler Technical Committee';
     expect(deriveAnchor(titleEn)).toBe(deriveAnchor(titleEn));
   });
@@ -147,11 +153,11 @@ describe('foldI18n — 边界情况', () => {
 });
 
 describe('foldI18n — 完整 organization YAML 形状', () => {
-  it('模拟一个真实的 section YAML(技术委员会形态),含注入的 anchor', () => {
+  it('模拟一个真实的 section YAML(技术委员会形态),含 anchor 字段', () => {
     const yaml = {
       title: 'openEuler 技术委员会',
       title_en: 'openEuler Technical Committee',
-      anchor: deriveAnchor('openEuler Technical Committee'),
+      anchor: 'openeuler-technical-committee',
       members: [
         {
           name: '胡欣蔚',
@@ -185,7 +191,7 @@ describe('foldI18n — 完整 organization YAML 形状', () => {
     const yaml = {
       title: 'openEuler 委员会',
       title_en: 'openEuler Committee',
-      anchor: deriveAnchor('openEuler Committee'),
+      anchor: 'openeuler-committee',
       groups: [
         {
           title: '主席',
@@ -212,41 +218,42 @@ describe('foldI18n — 完整 organization YAML 形状', () => {
   });
 });
 
-// 集成测试:走真实 Vite 插件管线,验证目录 import 与单文件 import 都能拿到 URL 化的 image。
-import organizationAll from '#content/organization';
-import advisoryDirect from '#content/organization/advisory.yaml';
+// 集成测试:走真实 Vite 插件管线,验证目录 import 拿到 URL 化的 image。
+import organizationContent from '#content/community/organization';
 
 describe('集成: vite-plugin-content-yaml 真实 YAML', () => {
-  const advisory = organizationAll.advisory;
+  const zhAdvisory = organizationContent.zh.advisory;
+  const enAdvisory = organizationContent.en.advisory;
 
-  it('目录 import 拿到了所有 11 个 section', () => {
-    expect(Object.keys(organizationAll).length, '虚拟目录模块返回空 → 核对 #content alias / 插件 configResolved').toBe(11);
-    expect(advisory, '没找到 advisory.yaml,核对 vitest.config.js 的 #content alias').toBeDefined();
+  it('虚拟目录模块按 locale 拆分为 zh / en 两个对象', () => {
+    expect(Object.keys(organizationContent).sort(), '虚拟模块应包含 zh/en 两个 locale').toEqual(['en', 'zh']);
   });
 
-  it('advisory.yaml 已被插件解析为 JS 对象', () => {
-    expect(advisory.title).toBe('openEuler 委员会顾问专家委员会');
-    expect(advisory.title_en).toBe('Advisory Committee of the openEuler Committee');
+  it('zh/en 两个 locale 都拿到了所有 11 个 section', () => {
+    expect(Object.keys(organizationContent.zh).length, 'zh locale 下的 section 数应为 11').toBe(11);
+    expect(Object.keys(organizationContent.en).length, 'en locale 下的 section 数应为 11').toBe(11);
+    expect(zhAdvisory, '没找到 advisory section,核对 vitest.config.js 的 #content alias').toBeDefined();
+  });
+
+  it('zh.yaml 的 advisory title 是中文,en.yaml 的 advisory title 是英文', () => {
+    expect(zhAdvisory.title).toBe('openEuler 委员会顾问专家委员会');
+    expect(enAdvisory.title).toBe('Advisory Committee of the openEuler Committee');
   });
 
   it('image 字段已被插件转成 URL(不是原始的 ./images/ 路径)', () => {
-    const first = advisory.members![0];
+    const first = zhAdvisory.members![0];
     expect(first.image, 'image 必须是 URL 或绝对/data URL,不能还是 ./images/...')
       .not.toMatch(/^\.\/images\//);
   });
 
-  it('单文件 import 与目录 import 拿到的是同一对象 (referential equality)', () => {
-    expect(advisoryDirect).toBe(advisory);
+  it('zh/en 的 image 字段指向同一 URL(zh/en 共用同一张头像)', () => {
+    const zhFirst = zhAdvisory.members![0];
+    const enFirst = enAdvisory.members![0];
+    expect(enFirst.image).toBe(zhFirst.image);
   });
 
-  it('zh foldI18n 后 title 是中文、_en 字段消失', () => {
-    const zh = foldI18n(advisory, 'zh') as Record<string, unknown>;
-    expect(zh.title).toBe('openEuler 委员会顾问专家委员会');
-    expect(zh.title_en).toBeUndefined();
-  });
-
-  it('en foldI18n 后 title 是英文', () => {
-    const en = foldI18n(advisory, 'en') as Record<string, unknown>;
-    expect(en.title).toBe('Advisory Committee of the openEuler Committee');
+  it('数据已按 locale 拆分,无 _en 兄弟字段', () => {
+    const leftover = Object.keys(zhAdvisory).filter((k) => k.endsWith('_en'));
+    expect(leftover, `zh.yaml 残留 _en 字段: ${leftover.join(', ')}`).toEqual([]);
   });
 });

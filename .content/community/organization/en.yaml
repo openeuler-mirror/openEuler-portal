@@ -1,0 +1,619 @@
+# Organization Structure (en)
+#
+# Top-level object indexed by committee/working-group slug.
+# Render order is determined by TheOrganization.vue's SECTIONS array (product decision, in view code).
+# Image paths start with ./ and are rewritten to imports by vite-plugin-content-yaml.
+# anchor field is the page HTML anchor ID (shared by zh/en, explicitly written in yaml).
+#
+# Each section is one of three mutually-exclusive shapes:
+#   - members: Flat member list (most common)
+#   - groups:  Subgroups (e.g. Chairperson/Standing/Members)
+#   - rows:    Multi-row render (array of arrays, each row is a peer group)
+#
+# Member fields:
+#   name:      Name
+#   image:     Avatar (relative to this yaml, ./images/xxx.png)
+#   position:  Organization or role (string or string array)
+#   post:      Role label (Chairperson/Member; used by Technical Committee)
+#   email:     Email (optional, renders as mailto icon)
+#   gitee:     Gitee account (optional, renders as Gitee icon)
+
+# advisory: Advisory Committee
+advisory:
+  title: Advisory Committee of the openEuler Committee
+  anchor: advisory-committee-of-the-openeuler-committee
+  members:
+    - name: Lu Shouqun
+      image: ./images/lusouqun.png
+      position:
+        - Honorary Chairman of China OSS Promotion Union
+        - Former Executive Deputy Director of the Informatization Office of the State Council
+    - name: Ni Guangnan
+      image: ./images/niguangnan.png
+      position: Academician of Chinese Academy of Engineering
+    - name: Liao Xiangke
+      image: ./images/liaoxiangke.png
+      position: Academicians of Chinese Academy of Engineering
+    - name: Wang Huaimin
+      image: ./images/wanghuaimin.png
+      position: Academician of Chinese Academy of Sciences
+    - name: Wu Hequan
+      image: ./images/wuheshuan.png
+      position: Academicians of Chinese Academy of Engineering
+    - name: Zhou Minghui
+      image: ./images/zhouminghui.png
+      position:
+        - Professor of School of Computer Science, Peking University
+        - Peking University Boya Chair Professor
+    - name: Huo Taiwen
+      image: ./images/huotaiwen.png
+      position: Founder and CEO of Geekbang Technology
+
+# committee: openEuler Committee
+committee:
+  title: openEuler Committee
+  anchor: openeuler-committee
+  groups:
+    - title: Chairperson
+      members:
+        - name: Xiong Wei
+          image: ./images/xiongwei.png
+          position: Huawei Technologies Co., Ltd.
+    - title: Standing Committee Members
+      members:
+        - name: Han Naiping
+          image: ./images/hannaiping.png
+          position: Kylinsoft Co., Ltd.
+        - name: Liu Wenqing
+          image: ./images/liuwenqing.png
+          position: Hunan Kylinsec Technology Co., Ltd.
+        - name: Qu Sheng
+          image: ./images/qusheng.png
+          position: Institute of Software, Chinese Academy of Sciences
+        - name: Zhang Lei
+          image: ./images/zhanglei.png
+          position: UnionTech Software Technology Co., Ltd.
+    - title: Committee Members
+      members:
+        - name: Gao Pei
+          image: ./images/gaopei.png
+          position: iSoftStone Information Technology (Group) Co., Ltd.
+        - name: Tian Jun
+          image: ./images/tianjun.png
+          position: Intel China Ltd.
+        - name: Yang Jiguo
+          image: ./images/yangjiguo.png
+          position: Hygon Information Technology Co., Ltd.
+        - name: Yu Li
+          image: ./images/yuli.png
+          position: China Southern Power Grid
+        - name: Yu Ping
+          image: ./images/yuping.png
+          position: Jiangsu HopeRun Software Co., Ltd.
+    - title: Executive Director
+      members:
+        - name: Liu Fei
+          image: ./images/liufei.png
+          position: Huawei Technologies Co., Ltd.
+    - title: Executive Secretary
+      members:
+        - name: Liu Yanfei
+          image: ./images/liuyanfei.png
+          position: OpenAtom Foundation
+
+# technical: Technical Committee
+technical:
+  title: openEuler Technical Committee
+  anchor: openeuler-technical-committee
+  members:
+    - name: Hu Xinwei
+      image: ./images/huxinwei-technical.png
+      post: Chairperson
+      email: shinwell_hu@openeuler.sh
+      gitee: shinwell_hu
+    - name: Cao Zhi
+      image: ./images/caozhi.png
+      post: Committee member
+      email: george.cao@huawei.com
+      gitee: georgecao
+    - name: Chen Maodong
+      image: ./images/chenmaodong.png
+      post: Committee member
+      email: chenmaodong@xfusion.com
+      gitee: chenmaodong
+    - name: Chen Qide
+      image: ./images/chenqide.png
+      post: Committee member
+      email: dillon.chen@gmail.com
+      gitee: dillon_chen
+    - name: Chen Yaqiang
+      image: ./images/chenyaqiang-technical.png
+      post: Committee member
+      email: chen_yaqiang@foxmail.com
+      gitee: yaqiangchen
+    - name: Du Kaitian
+      image: ./images/dukaitian.png
+      post: Committee member
+      email: dukaitian@huawei.com
+      gitee: jimmy_hero
+    - name: Gao Guijin
+      image: ./images/gaoguijin.png
+      post: Committee member
+      email: gaoguijin@huawei.com
+      gitee: blue0613
+    - name: Hou Jian
+      image: ./images/houjian-technical.png
+      post: Committee member
+      email: houjian@kylinos.cn
+      gitee: hjimmy
+    - name: Hu Feng
+      image: ./images/hufeng.png
+      post: Committee member
+      email: solar.hu@huawei.com
+      gitee: solarhu
+    - name: Li Yongqiang
+      image: ./images/liyongqiang.png
+      post: Committee member
+      email: liyongqiang@xfusion.com
+      gitee: charlie_li
+    - name: Liu Kai
+      image: ./images/liukai.png
+      post: Committee member
+      email: kraml.liu@gmail.com
+      gitee: kailiu42
+    - name: Lv Congqing
+      image: ./images/lvcongqing.png
+      post: Committee member
+      email: lvcongqing@uniontech.com
+      gitee: HelloWorld_lvcongqing
+    - name: Ma Quanyi
+      image: ./images/maquanyi.png
+      post: Committee member
+      email: eli@patch.sh
+      gitee: genedna
+    - name: Ren Wei
+      image: ./images/renwei.png
+      post: Committee member
+      email: renwei41@huawei.com
+      gitee: vonhust
+    - name: Shi Yong
+      image: ./images/shiyong.png
+      post: Committee member
+      email: shiyong@kylinsec.com.cn
+      gitee: stonefly128
+    - name: Tang Geliang
+      image: ./images/tanggeliang.png
+      post: Committee member
+      email: geliang@kernel.org
+      gitee: geliangtang
+    - name: Tian Jun
+      image: ./images/tianjun.png
+      post: Committee member
+      email: jun.j.tian@intel.com
+      gitee: juntianlinux
+    - name: Wang Jianmin
+      image: ./images/wangjianmin.png
+      post: Committee member
+      email: jianmin@iscas.ac.cn
+      gitee: cellfaint
+    - name: Wang Jingwei
+      image: ./images/wangjingwei.png
+      post: Committee member
+      email: wangjingwei@iscas.ac.cn
+      gitee: Jingwiw
+    - name: Wang Zhigang
+      image: ./images/wangzhigang.png
+      post: Committee member
+      email: wangzhigang17@huawei.com
+      gitee: jianminw
+    - name: Wu Fengguang
+      image: ./images/wufengguang.png
+      post: Committee member
+      email: wfg@mail.ustc.edu.cn
+      gitee: wu_fengguang
+    - name: Xie Xiuqi
+      image: ./images/xiexiuqi.png
+      post: Committee member
+      email: xiexiuqi@huawei.com
+      gitee: xiexiuqi
+    - name: Ye Qinglong
+      image: ./images/yeqinglong.png
+      post: Committee member
+      email: yeqinglong@kylinsec.com.cn
+      gitee: yeqinglong01
+    - name: Yue Longguang
+      image: ./images/yuelongguang.png
+      post: Committee member
+      email: yuelg@chinaunicom.cn
+      gitee: bigclouds99
+    - name: Zhang Jian
+      image: ./images/zhangjian.png
+      post: Committee member
+      email: zhang_jian7@hoperun.com
+    - name: Zhao Chuanfeng
+      image: ./images/zhaochuanfeng.png
+      post: Committee member
+      email: zhaochuanfeng@huawei.com
+      gitee: cf-zhao
+    - name: Zhu Jianwei
+      image: ./images/zhujianwei.png
+      post: Committee member
+      email: zhujianwei7@huawei.com
+      gitee: zhujianwei001
+
+# marketing: Marketing Committee
+marketing:
+  title: openEuler Marketing Committee
+  anchor: openeuler-marketing-committee
+  members:
+    - name: Liang Bing
+      image: ./images/liangbin.png
+      position: Chairperson
+      email: liangbing11@huawei.com
+    - name: Hu Mingyue
+      image: ./images/humingyu.png
+      position: Committee member
+      email: Ming.yue.hu@intel.com
+    - name: Li Ming
+      image: ./images/liming-marketing.png
+      position: Committee member
+      email: liming107@huawei.com
+    - name: Li Wei
+      image: ./images/liwei.png
+      position: Committee member
+      email: allenli@hygon.cn
+    - name: Li Zhenning
+      image: ./images/lizhenning.png
+      position: Committee member
+      email: lizhenning@kylinos.cn
+    - name: Peng Yaying
+      image: ./images/pengyaying.png
+      position: Committee member
+      email: 260060281@qq.com
+    - name: Wen Dan
+      image: ./images/wendan.png
+      position: Committee member
+      email: wendan@kylinsec.com.cn
+    - name: Xu Lu
+      image: ./images/xulu.png
+      position: Committee member
+      email: xu_lu2@hoperun.com
+    - name: Xu Yanli
+      image: ./images/xuyanli.png
+      position: Committee member
+      email: xuyanli@uniontech.com
+    - name: Zheng Li
+      image: ./images/zhengli.png
+      position: Committee member
+      email: lizhengq@isoftstone.com
+
+# user: User Committee
+user:
+  title: openEuler User Committee
+  anchor: openeuler-user-committee
+  members:
+    - name: Wang Jun
+      image: ./images/wangjun.png
+      position: Chairperson
+      email: junwangs@isoftstone.com
+    - name: Cai Juanyang
+      image: ./images/caijuanyang.png
+      position: Committee member
+      email: cai_juanyang@hoperun.com
+    - name: Chen Jing
+      image: ./images/chenjin.png
+      position: Committee member
+      email: chenjingc@uniontech.com
+    - name: Cui Ji
+      image: ./images/cuiji.png
+      position: Committee member
+      email: cuiji@beyondcent.com
+    - name: Du Shaohui
+      image: ./images/dushaohui.png
+      position: Committee member
+      email: dush1@csg.cn
+    - name: Feng Wei
+      image: ./images/fengwei.png
+      position: Committee member
+      email: f.fengwei@huawei.com
+    - name: Gong Chenpeng
+      image: ./images/gongchengpeng.png
+      position: Committee member
+      email: 4705317@QQ.com
+    - name: Gao Honghe
+      image: ./images/gaohonghe.png
+      position: Committee member
+      email: gaohonghe@kylinsec.com.cn
+    - name: Hu Yong
+      image: ./images/huyong.png
+      position: Committee member
+      email: yong.hu@intel.com
+    - name: Li Chenbin
+      image: ./images/lichenbing.png
+      position: Committee member
+      email: cbli@linx-info.com
+    - name: Li Rongqing
+      image: ./images/lirongqing.png
+      position: Committee member
+      email: lirongqing@baidu.com
+    - name: Li Wei
+      image: ./images/liwei.png
+      position: Committee member
+      email: allenli@hygon.cn
+    - name: Rong Tao
+      image: ./images/rongtao.png
+      position: Committee member
+      email: rongtao@cestc.cn
+    - name: Shi Guangyin
+      image: ./images/shiguangyin.png
+      position: Committee member
+      email: shiguangyin@inspur.com
+    - name: Xu Lei
+      image: ./images/xulei.png
+      position: Committee member
+      email: stone.xulei@xfusion.com
+    - name: Xu Tianyuan
+      image: ./images/xutianyuan.png
+      position: Committee member
+      email: xu.tianyuan@h3c.com
+    - name: Zhang Qingnan
+      image: ./images/zhangqingnan.png
+      position: Committee member
+      email: zhangqingnan001@chinasofti.com
+    - name: Zhu Chen
+      image: ./images/zuchen.png
+      position: Committee member
+      email: zhuchen@kylinos.cn
+
+# business: Service Development Working Group
+business:
+  title: openEuler Service Development Working Group
+  anchor: openeuler-service-development-working-group
+  members:
+    - name: Li Yang
+      image: ./images/liyang.png
+      position: Lead
+    - name: Huang Weixu
+      image: ./images/huangweixu.png
+      position: Co-Lead
+    - name: Zhang Muliang
+      image: ./images/zhangmuliang.png
+      position: Co-Lead
+    - name: Li Chengpeng
+      image: ./images/lichengpeng-development.png
+      position: Member
+    - name: Liu Huajie
+      image: ./images/liuhuajie.png
+      position: Member
+    - name: Liu Mingjie
+      image: ./images/liumingjie-operation.png
+      position: Member
+    - name: Liu Shenghang
+      image: ./images/liushenghang.png
+      position: Member
+    - name: Zhang Jian
+      image: ./images/zhangjian.png
+      position: Member
+    - name: Zhu Wenyu
+      image: ./images/zuwenyu.png
+      position: Member
+
+# operations: Operations Working Group
+operations:
+  title: openEuler Operations Working Group
+  anchor: openeuler-operations-working-group
+  members:
+    - name: Zheng Zhenyu
+      image: ./images/zhenzhengyu.png
+      position: Lead
+    - name: Hu Xiaojie
+      image: ./images/huxiaojie.png
+      position: Co-Lead
+    - name: Chen Jing
+      image: ./images/chenjing.png
+      position: Member
+    - name: Liu Huajie
+      image: ./images/liuhuajie.png
+      position: Member
+    - name: Liu Min
+      image: ./images/liming.png
+      position: Member
+    - name: Liu Mingjie
+      image: ./images/liumingjie-operation.png
+      position: Member
+    - name: Ren Tao
+      image: ./images/rentao.png
+      position: Member
+    - name: Tian Kehui
+      image: ./images/tiankehui-operation.png
+      position: Member
+    - name: Xu Lu
+      image: ./images/xulu.png
+      position: Member
+
+# education: Education Working Group
+education:
+  title: openEuler Education Working Group
+  anchor: openeuler-education-working-group
+  members:
+    - name: Zhao Lichao
+      image: ./images/zhaolichao.png
+      position: Lead
+    - name: Yang Dongjie
+      image: ./images/yangdongjie.png
+      position: Co-Lead
+    - name: Fang Lili
+      image: ./images/fanglili.png
+      position: Member
+    - name: Feng Xiaoliang
+      image: ./images/fenxiaoliang.png
+      position: Member
+    - name: Gao Liqun
+      image: ./images/gaoliqun.png
+      position: Member
+    - name: Guo Quanyou
+      image: ./images/guoquanyou.png
+      position: Member
+    - name: Lin Zhenxing
+      image: ./images/linzhenxing.png
+      position: Member
+    - name: Men Xiaokang
+      image: ./images/menxiaokang.png
+      position: Member
+    - name: Qin Xuefeng
+      image: ./images/qinxuefen.png
+      position: Member
+    - name: Xie Yu
+      image: ./images/xieyu.png
+      position: Member
+    - name: Yang Heyue
+      image: ./images/yangheyue.png
+      position: Member
+
+# legal: Legal Affairs Working Group
+legal:
+  title: openEuler Legal Affairs Working Group
+  anchor: openeuler-legal-affairs-working-group
+  members:
+    - name: Zhang Wei
+      image: ./images/zhangwei.png
+      position: Lead
+    - name: Liu Wei
+      image: ./images/liuwei.png
+      position: Co-Lead
+    - name: Li Bo
+      image: ./images/libo.png
+      position: Member
+    - name: Song Liping
+      image: ./images/songlipin.png
+      position: Member
+    - name: Wang Siyang
+      image: ./images/wangsiyang.png
+      position: Member
+    - name: Xing Peng
+      image: ./images/xinpeng.png
+      position: Member
+
+# ai: AI Joint Working Group
+ai:
+  title: openEuler AI Joint Working Group
+  anchor: openeuler-ai-joint-working-group
+  members:
+    - name: Hu Xinwei
+      image: ./images/huxinwei-technical.png
+      position: Lead
+    - name: Andrew Wafaa
+      image: ./images/AndrewWafaa.png
+      position: Member
+    - name: Chen Rong
+      image: ./images/chenrong.png
+      position: Member
+    - name: Chen Yaqiang
+      image: ./images/chenyaqiang-technical.png
+      position: Member
+    - name: Deng Yiping
+      image: ./images/dengyiping.png
+      position: Member
+    - name: Ding Weijie
+      image: ./images/dingweijie.png
+      position: Member
+    - name: Gao Wei
+      image: ./images/gaowei.png
+      position: Member
+    - name: Gong Yuanbo
+      image: ./images/gongyuanbo.png
+      position: Member
+    - name: Guo Yibin
+      image: ./images/guoyibin.png
+      position: Member
+    - name: He Shoucheng
+      image: ./images/heshoucheng.png
+      position: Member
+    - name: Hou Jian
+      image: ./images/houjian-technical.png
+      position: Member
+    - name: Fred Huang
+      image: ./images/Fred Huang.png
+      position: Member
+    - name: Huang Jun
+      image: ./images/huangjun.png
+      position: Member
+    - name: Jiang Yiwen
+      image: ./images/jiangyiwen.png
+      position: Member
+    - name: Jiang Zhengxiong
+      image: ./images/jiangzhengxiong.png
+      position: Member
+    - name: Jin Long
+      image: ./images/jinlong.png
+      position: Member
+    - name: Qin Binjuan
+      image: ./images/qinbinjuan.png
+      position: Member
+    - name: Que Mingjian
+      image: ./images/quemingjian.png
+      position: Member
+    - name: Shen Guoliang
+      image: ./images/shenguoliang.png
+      position: Member
+    - name: Song Meng
+      image: ./images/songmeng.png
+      position: Member
+    - name: Sun Zhenghua
+      image: ./images/sunzhenghua.png
+      position: Member
+    - name: Tian Kehui
+      image: ./images/tiankehui-operation.png
+      position: Member
+    - name: Wang Qingjun
+      image: ./images/wangqingjun.png
+      position: Member
+    - name: Wo Tianyu
+      image: ./images/wotianyu.png
+      position: Member
+    - name: Wu Bin
+      image: ./images/wubin.png
+      position: Member
+    - name: Xia Zhiyuan
+      image: ./images/xiazhiyuan.png
+      position: Member
+    - name: Xiang Yuanhong
+      image: ./images/xiangyuanhong.png
+      position: Member
+    - name: Xu Yang
+      image: ./images/xuyang.png
+      position: Member
+    - name: Yan Haishuang
+      image: ./images/yanhaishuang.png
+      position: Member
+    - name: Yang Xili
+      image: ./images/yangxili.png
+      position: Member
+    - name: Zhan Nianke
+      image: ./images/zhannianke.png
+      position: Member
+
+# globalization: Globalization Working Group
+globalization:
+  title: openEuler Globalization Working Group
+  anchor: openeuler-globalization-working-group
+  rows:
+    - - name: Zhou Nan
+        image: ./images/zhounan.png
+        position: Lead
+      - name: Cai Juanyang
+        image: ./images/caijuanyang.png
+        position: Member
+      - name: Li Chengpeng
+        image: ./images/lichengpeng-globalization.png
+        position: Member
+      - name: Liu Mingjie
+        image: ./images/liumingjie-globalization.png
+        position: Member
+      - name: Ren Zidong
+        image: ./images/renzidong.png
+        position: Member
+    - - name: Hu Zhengce
+        image: ./images/huzhengce.png
+        position: openEuler Global Advocate
+

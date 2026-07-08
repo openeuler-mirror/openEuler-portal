@@ -3,7 +3,7 @@ import AOS from 'aos';
 import { onMounted } from 'vue';
 import IconEmailFill from '~icons/app/icon-email-fill.svg';
 
-// Member shape matches `.content/organization/*.yaml` (post-applyLang).
+// Member shape matches `.content/community/organization/{zh,en}.yaml` (post-locale-fold).
 interface Member {
   name: string;
   image: string;

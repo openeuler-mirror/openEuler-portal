@@ -1,11 +1,6 @@
 // `#content/<domain>` 虚拟模块由 vite-plugin-content-yaml 合成,每新增 domain 在 `src-new/@types/content/<第一层>.d.ts` 声明。
 // home 声明已移至 `src-new/@types/content/home.d.ts`。
-
-declare module '#content/organization' {
-  import type { OrgRawT } from '@/@types/type-organization';
-  const data: Record<string, OrgRawT>;
-  export default data;
-}
+// organization 声明已移至 `src-new/@types/content/community.d.ts`（数据目录迁至 `.content/community/organization/`）。
 
 declare module '#content/activity' {
   interface EventItemT {
