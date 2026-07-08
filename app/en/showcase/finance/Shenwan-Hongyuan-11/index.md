@@ -9,5 +9,5 @@ img: /category/showcase/finance.png
 ---
 
 
-<img src="./media/openEuler2025案例集英文版_11.jpg"  >
+<img src="./media/openEuler2025案例集英文版_11.png"  >
 

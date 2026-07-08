@@ -9,4 +9,4 @@ img: /category/showcase/energy.png
 ---
 
 
-<img src="./media/openEuler2025案例集英文版_32.jpg"  >
+<img src="./media/openEuler2025案例集英文版_32.png"  >

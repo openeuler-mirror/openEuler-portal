@@ -9,5 +9,5 @@ img: /category/showcase/others.png
 ---
 
 
-<img src="./media/openEuler2025案例集英文版_47.jpg"  >
+<img src="./media/openEuler2025案例集英文版_47.png"  >
 

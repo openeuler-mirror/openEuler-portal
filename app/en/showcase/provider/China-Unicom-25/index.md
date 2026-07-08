@@ -9,6 +9,4 @@ img: /category/showcase/provider.png
 ---
 
 
-<img src="./media/openEuler2025案例集英文版_25.jpg"  >
-
-∏
+<img src="./media/openEuler2025案例集英文版_25.png"  >
