@@ -43,7 +43,7 @@ export default {
     },
     {
       name: '赵育科',
-      position: '超聚变数字技术有限公司',
+      position: '超聚变数字技术股份有限公司',
       homePage: 'https://forum.openeuler.org/u/yk_zhao/activity',
       avatar: zhaoyuke,
     },

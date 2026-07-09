@@ -6,11 +6,11 @@ import 陈翟洋子 from '@/assets/category/user-group/zhenzhou/陈翟洋子.png
 import 于铁锋 from '@/assets/category/user-group/zhenzhou/于铁锋.png';
 export default {
   title: '郑州用户组',
-  organizational: '超聚变数字技术有限公司',
+  organizational: '超聚变数字技术股份有限公司',
   organizer: [
     {
       name: '苏伟锋',
-      position: '超聚变数字技术有限公司',
+      position: '超聚变数字技术股份有限公司',
       technology: [],
       homePage: '',
       email: 'suweifeng@xfusion.com',
@@ -32,7 +32,7 @@ export default {
   member: [
     {
       name: '陈瞿洋子',
-      position: '超聚变数字技术有限公司',
+      position: '超聚变数字技术股份有限公司',
       technology: [],
       homePage: '',
       avatar: 陈翟洋子,

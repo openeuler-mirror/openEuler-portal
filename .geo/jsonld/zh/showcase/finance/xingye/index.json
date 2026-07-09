@@ -34,7 +34,7 @@
     ],
     "mentions": [
       {"@type": "Organization", "name": "兴业银行", "description": "中国领先的股份制商业银行"},
-      {"@type": "Organization", "name": "超聚变数字技术有限公司", "description": "提供FusionOS操作系统、FusionServer服务器、FusionDB数据库等全链路可信解决方案"},
+      {"@type": "Organization", "name": "超聚变数字技术股份有限公司", "description": "提供FusionOS操作系统、FusionServer服务器、FusionDB数据库等全链路可信解决方案"},
       {"@type": "Organization", "name": "厦门大学", "description": "提供先进的算法模型及科研能力"}
     ],
     "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.openeuler.org/zh/showcase/finance/xingye"}
@@ -44,8 +44,8 @@
     "@type": "CaseStudy",
     "name": "兴业银行智慧金融隐私计算平台",
     "url": "https://www.openeuler.org/zh/showcase/finance/xingye",
-    "description": "兴业银行与超聚变数字技术有限公司、厦门大学携手，联合打造软硬结合的全链路可信隐私计算一体机方案，共同打造智慧金融隐私计算平台，赋能信用卡精准营销业务。",
-    "provider": {"@type": "Organization", "name": "超聚变数字技术有限公司"},
+    "description": "兴业银行与超聚变数字技术股份有限公司、厦门大学携手，联合打造软硬结合的全链路可信隐私计算一体机方案，共同打造智慧金融隐私计算平台，赋能信用卡精准营销业务。",
+    "provider": {"@type": "Organization", "name": "超聚变数字技术股份有限公司"},
     "about": {"@type": "Organization", "name": "兴业银行", "industry": "金融"},
     "result": [
       "发卡成功率高达90%，超过同类企业联合发卡的平均成功率",

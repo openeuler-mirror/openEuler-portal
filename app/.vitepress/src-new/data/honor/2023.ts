@@ -628,7 +628,7 @@ export const year2023 = {
               '   b.参与openEuler峰会，并在会议中，提供个人意见',
               '   c. 解答来自社区贡献者关于QA相关问题',
             ],
-            post: ['超聚变数字技术有限公司', 'lemon-higgins'],
+            post: ['超聚变数字技术股份有限公司', 'lemon-higgins'],
             img: xujun,
           },
           {

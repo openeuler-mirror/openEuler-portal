@@ -56,7 +56,7 @@ export default {
     {
       avator: huangzhaowei,
       name: '黄兆伟',
-      company: '超聚变数字技术有限公司',
+      company: '超聚变数字技术股份有限公司',
       labels: ['操作系统', '云计算', 'AI'],
       base: '深圳',
     },
@@ -203,7 +203,7 @@ export default {
     {
       avator: xieliuhua,
       name: '谢留华',
-      company: '超聚变数字技术有限公司',
+      company: '超聚变数字技术股份有限公司',
       labels: ['Linux服务器操作系统', '生态构建'],
       base: '北京',
     },

@@ -290,7 +290,7 @@ export default {
       {
         img: xulei,
         name: '徐磊',
-        position: ['超聚变数字技术有限公司操作系统业务', '总经理'],
+        position: ['超聚变数字技术股份有限公司操作系统业务', '总经理'],
         nameEn: 'Xu Lei',
         positionEn: ['General Manager', 'xFusion Operating Systems Business'],
       },

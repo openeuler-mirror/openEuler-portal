@@ -201,7 +201,7 @@ export default {
         DOWNLOAD_URL:
           'https://eco.xfusion.com/solutions/market/application/419662379870064640',
         DESC: 'FusionOS 22是一款基于openEuler操作系统，面向运营商、金融、政企等行业关键业务设计开发的企业级服务器操作系统。为了让广大的用户能更便捷、更低成本地获得FusionOS 22的极致业务体验，超聚变提供了超聚变服务器操作系统FusionOS 22（免费使用授权）。',
-        MANUFACTURER: '超聚变数字技术有限公司',
+        MANUFACTURER: '超聚变数字技术股份有限公司',
         PUBLISH_DATE: '2023/03',
         DETAILED_LINK: [
           {

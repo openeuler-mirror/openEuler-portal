@@ -5,11 +5,11 @@ import wushuyue_dark from '~@/assets/category/user-group/zhenzhou/wushuyue-dark.
 
 export default {
   title: '郑州用户组',
-  organizational: '超聚变数字技术有限公司',
+  organizational: '超聚变数字技术股份有限公司',
   organizer: [
     {
       name: '苏伟锋',
-      position: '超聚变数字技术有限公司',
+      position: '超聚变数字技术股份有限公司',
       technology: [],
       homePage: '',
       email: 'suweifeng@xfusion.com',
