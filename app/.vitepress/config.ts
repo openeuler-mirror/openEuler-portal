@@ -108,6 +108,7 @@ const config: UserConfig = {
         try {
           const lastmodeTimeStamp = JSON.parse(readFileSync(path.resolve(geoDir, 'last-modified.json'), 'utf-8')) as Record<string, number>;
           for (const item of items) {
+            item.priority = 0.5;
             const key = item.url.endsWith('.html') ? item.url.replace('.html', '.md') : (item.url.endsWith('/') ? `${item.url}index.md` : `${item.url}/index.md`);
             const generatedItem = lastmodeTimeStamp[key];
             if (generatedItem) {
