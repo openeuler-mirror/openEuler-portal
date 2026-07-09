@@ -127,13 +127,6 @@ members:
     position_en: Committee member
     email: zhangqingnan001@chinasofti.com
 
-  - name: 郑振宇
-    name_en: Zheng Zhenyu
-    image: ./images/zhenzhenyu.png
-    position: 委员
-    position_en: Committee member
-    email: zhengzhenyu@openeuler.sh
-
   - name: 朱晨
     name_en: Zhu Chen
     image: ./images/zuchen.png
