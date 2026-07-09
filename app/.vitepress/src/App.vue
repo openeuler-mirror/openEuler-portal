@@ -12,7 +12,7 @@ import enUS from '@opensig/opendesign/es/locale/lang/en-us';
 
 import { OConfigProvider } from '@opensig/opendesign';
 
-import AppHeader from '~@/components/header/AppHeader.vue';
+import AppHeaderNew from '~@/components/header/AppHeaderNew.vue';
 // import AppHeader from '@/components/AppHeader.vue';
 import AppFooter from '~@/components/AppFooter.vue';
 import LayoutBlog from '@/layouts/LayoutBlog.vue';
@@ -133,7 +133,7 @@ watch(
 
 <template>
   <template v-if="!isReport">
-    <AppHeader />
+    <AppHeaderNew />
     <OConfigProvider :locale="isZh ? zhCN : enUS">
       <el-config-provider :locale="elLocale">
         <main :class="frontmatter.class ? frontmatter.class : ''">
@@ -209,7 +209,7 @@ main {
 #app {
   --layout-content-max-width: 1544px;
   --layout-content-padding: 64px;
-  --layout-header-height: 80px;
+  --layout-header-height: 72px;
 
   @include respond('<=laptop') {
     --layout-content-max-width: 100%;

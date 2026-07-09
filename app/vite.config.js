@@ -167,7 +167,7 @@ export default defineConfig({
         rewrite: (url) => url.replace(/^\/api-cve/, ''),
       },
       '/api-omapi/': {
-        target: 'https://omapi.osinfra.cn/',
+        target: 'https://omapi.test.osinfra.cn/',
         changeOrigin: true,
         rewrite: (url) => url.replace(/^\/api-omapi/, ''),
       },

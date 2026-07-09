@@ -284,7 +284,7 @@ watch(
 
 .catalog {
   position: fixed;
-  top: 12px;
+  top: 16px;
   left: 48px;
   z-index: 99;
   font-size: 24px;
