@@ -438,7 +438,7 @@ const bindVisible = ref(false);
 const toCreateMeeting = () => {
   const identitiesVisible = identitiesStore.identities?.some(item => item.identity === 'gitee' || item.identity === 'gitcode');
   if (!loginStore.isLogined) {
-    login(lang.value);
+    login(locale.value);
   } else if (!identitiesVisible) {
     bindVisible.value = true;
   } else if (!hasPermMeeting.value) {
