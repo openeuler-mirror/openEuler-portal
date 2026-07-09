@@ -11,6 +11,7 @@ import {
 import BannerLevel3 from '~@/components/BannerLevel3.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 import AppSection from '~@/components/AppSection.vue';
+import InlineSvg from '~@/components/InlineSvg.vue';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -20,12 +21,7 @@ import { useHeaderTitle } from '~@/stores/common';
 import banner from '~@/assets/category/sig/sig-role-banner.jpg';
 import IconRight from '~icons/sig/icon-right.svg';
 
-import {
-  communityMember,
-  contributor,
-  committer,
-  maintainer,
-} from '~@/data/sig/role-description';
+import roleDescriptionData from '#content/sig/role-description';
 import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { inBrowser } from 'vitepress';
 
@@ -44,12 +40,18 @@ const verticalPadding = computed(() => {
   }
 });
 
-const sections = [contributor, committer, maintainer];
+const localeData = computed(() => roleDescriptionData[locale.value]);
+const communityMember = computed(() => localeData.value.community_member);
+const sections = computed(() => [
+  localeData.value.contributor,
+  localeData.value.committer,
+  localeData.value.maintainer,
+]);
 const getSectionBg = (item: any) => {
   if (lePadV.value) {
-    return isDark.value ? item.bgMbDark : item.bgMb;
+    return isDark.value ? item.bg_mb_dark : item.bg_mb_light;
   } else {
-    return isDark.value ? item.bgDark : item.bg;
+    return isDark.value ? item.bg_dark : item.bg_light;
   }
 };
 
@@ -105,7 +107,7 @@ const reportMemberCardLinkClick = (e: Event, name: string) => {
   return {
     properties: {
       level1: t('sig.roleDescription'),
-      level2: communityMember.title[locale.value],
+      level2: communityMember.value.title,
       level3: name,
       target: target.textContent.trim(),
     },
@@ -115,7 +117,7 @@ const reportMemberCardLinkClick = (e: Event, name: string) => {
 
 const reportSectionLinkClick = (
   e: Event,
-  section: typeof sections[number],
+  section: (typeof sections.value)[number],
   name: string
 ) => {
   const target = getClickedLink(e);
@@ -124,7 +126,7 @@ const reportSectionLinkClick = (
   return {
     properties: {
       level1: t('sig.roleDescription'),
-      level2: section.title[locale.value],
+      level2: section.title,
       level3: name,
       target: target.textContent.trim(),
     },
@@ -159,22 +161,22 @@ const reportSectionLinkClick = (
     </ContentWrapper>
 
     <!-- 社区成员 -->
-    <AppSection class="community-member" :title="communityMember.title[locale]">
+    <AppSection class="community-member" :title="communityMember.title">
       <template #subtitle>
-        <div v-dompurify-html="communityMember.subtitle[locale]"></div>
+        <div v-dompurify-html="communityMember.subtitle"></div>
       </template>
       <div class="member-type-list">
         <div
           v-for="(item, i) in communityMember.types"
           :key="i"
           class="member-type-item"
-          :style="{ backgroundImage: `url(${lePadV ? item.bgMb : item.bg})` }"
+          :style="{ backgroundImage: `url(${lePadV ? item.bg_mb : item.bg})` }"
         >
           <img :src="lePadV ? item.imgTitleMb : item.imgTitle" class="title-img" />
-          <div class="member-type-item-title">{{ item.name[locale] }}</div>
+          <div class="member-type-item-title">{{ item.name }}</div>
           <div class="member-type-item-desc">
-            <div>{{ item.responsibilitiy[locale] }}</div>
-            <div v-if="item.requirement">{{ item.requirement[locale] }}</div>
+            <div>{{ item.responsibilitiy }}</div>
+            <div v-if="item.requirement">{{ item.requirement }}</div>
           </div>
 
           <OLink
@@ -184,23 +186,23 @@ const reportSectionLinkClick = (
             v-analytics="{
               properties: {
                 level1: t('sig.roleDescription'),
-                level2: communityMember.title[locale],
-                level3: item.name.zh,
-                target: communityMember.viewDetail.zh,
+                level2: communityMember.title,
+                level3: item.name,
+                target: communityMember.view_detail,
               },
               service: 'sig',
             }"
-            >{{ communityMember.viewDetail[locale] }}</OLink
+            >{{ communityMember.view_detail }}</OLink
           >
         </div>
       </div>
 
       <div class="member-card-list">
-        <div v-for="item in communityMember.cards" class="member-card-item">
-          <OIcon class="item-icon"> <component :is="item.icon" /></OIcon>
+        <div v-for="item in communityMember.cards" :key="item.name" class="member-card-item">
+          <OIcon class="item-icon"> <InlineSvg :raw="item.icon" /></OIcon>
           <div class="item-right">
-            <div class="item-title">{{ item.name[locale] }}</div>
-            <div class="item-desc" v-dompurify-html="item.desc[locale]" v-analytics="(ev: Event) => reportMemberCardLinkClick(ev, item.name[locale])"></div>
+            <div class="item-title">{{ item.name }}</div>
+            <div class="item-desc" v-dompurify-html="item.desc" v-analytics="(ev: Event) => reportMemberCardLinkClick(ev, item.name)"></div>
           </div>
         </div>
       </div>
@@ -208,13 +210,14 @@ const reportSectionLinkClick = (
 
     <AppSection
       v-for="section in sections"
+      :key="section.id"
       class="common-section"
       :id="section.id"
-      :title="section.title[locale]"
-      :subtitle="section.subtitle[locale]"
+      :title="section.title"
+      :subtitle="section.subtitle"
     >
       <template #subtitle>
-        <div v-for="(item, i) in section.subtitle[locale]" :key="i" v-dompurify-html="item"></div>
+        <div v-for="(item, i) in section.subtitle" :key="i" v-dompurify-html="item"></div>
       </template>
       <div :class="`common-section-list section-${section.id}`">
         <div
@@ -222,20 +225,20 @@ const reportSectionLinkClick = (
           :key="i"
           class="common-section-list-item"
           :style="{ backgroundImage: `url(${getSectionBg(item)})` }"
-          v-analytics="(e: Event) => reportSectionLinkClick(e, section, item.title.zh)"
+          v-analytics="(e: Event) => reportSectionLinkClick(e, section, item.title)"
         >
           <div class="title-wrap">
-            <img class="icon-requrement" :src="section.cardPointBg" />
-            <div class="title">{{ item.title[locale] }}</div>
+            <img class="icon-requrement" :src="section.card_point_bg" />
+            <div class="title">{{ item.title }}</div>
           </div>
-          <div v-if="item.desc[locale]" class="title-wrap">
+          <div v-if="item.desc" class="title-wrap">
             <img class="icon-requrement" style="visibility: hidden" />
-            <div class="desc">{{ item.desc[locale] }}</div>
+            <div class="desc">{{ item.desc }}</div>
           </div>
 
           <div class="point-list">
             <div
-              v-for="(subItem, subIndex) in item.points[locale]"
+              v-for="(subItem, subIndex) in item.points"
               :key="subIndex"
               class="point-list-item"
             >
@@ -244,7 +247,7 @@ const reportSectionLinkClick = (
               </OIcon>
               <span v-dompurify-html="subItem"></span>
             </div>
-            <div v-if="item?.notice">{{ item.notice[locale] }}</div>
+            <div v-if="item?.notice">{{ item.notice }}</div>
           </div>
         </div>
       </div>
@@ -397,13 +400,14 @@ const reportSectionLinkClick = (
         }
 
         .member-type-item-title {
+          color: var(--o-color-info1);
           font-weight: 500;
           @include h2;
         }
 
         .member-type-item-desc {
           flex: 1;
-          color: rgba(var(--o-black), 0.8);
+          color: var(--o-color-info2);
           @include text1;
 
           div {
@@ -420,7 +424,7 @@ const reportSectionLinkClick = (
         }
 
         .detail-link {
-          --link-color: rgba(var(--o-black), 0.8);
+          --link-color: var(--o-color-info2);
 
           margin-top: 20px;
           @include text1;

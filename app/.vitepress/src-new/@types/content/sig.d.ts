@@ -41,3 +41,66 @@ declare module '#content/sig/sig-list' {
   const data: { zh: SigListDataT; en: SigListDataT };
   export default data;
 }
+
+// `#content/sig/role-description` 虚拟模块由 vite-plugin-content-yaml 合成。
+// 数据源：`.content/sig/role-description/zh.yaml` + `.content/sig/role-description/en.yaml`
+// 顶层按 locale 索引（zh / en），每个 locale 下为 RoleDescriptionDataT 结构。
+//
+// icon 字段为 SVG 路径带 `?raw` 后缀（`./images/xxx.svg?raw`），由 Vite 返回 SVG
+// 字符串，组件用 InlineSvg 渲染成 inline SVG（支持 currentColor/暗黑切换）。
+declare module '#content/sig/role-description' {
+  interface CommunityMemberTypeT {
+    bg: string;
+    bg_mb: string;
+    name: string;
+    responsibilitiy: string;
+    requirement?: string;
+    href: string;
+  }
+
+  interface CommunityMemberCardT {
+    icon: string;
+    name: string;
+    desc: string;
+  }
+
+  interface CommunityMemberT {
+    title: string;
+    subtitle: string;
+    view_detail: string;
+    types: CommunityMemberTypeT[];
+    cards: CommunityMemberCardT[];
+  }
+
+  interface RoleCardT {
+    bg_light: string;
+    bg_dark: string;
+    bg_mb_light: string;
+    bg_mb_dark: string;
+    title: string;
+    desc: string;
+    notice?: string;
+    points: string[];
+  }
+
+  interface RoleSectionT {
+    id: string;
+    title: string;
+    subtitle: string[];
+    card_point_bg: string;
+    cards: RoleCardT[];
+  }
+
+  interface RoleDescriptionDataT {
+    community_member: CommunityMemberT;
+    contributor: RoleSectionT;
+    committer: RoleSectionT;
+    maintainer: RoleSectionT;
+  }
+
+  const roleDescriptionData: {
+    zh: RoleDescriptionDataT;
+    en: RoleDescriptionDataT;
+  };
+  export default roleDescriptionData;
+}
