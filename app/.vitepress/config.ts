@@ -247,7 +247,7 @@ const config: UserConfig = {
       }),
     ],
     ssr: {
-      noExternal: ['@opendesign-plus/components', 'element-plus']
+      noExternal: ['@opendesign-plus/components', '@opendesign-plus-test/components', 'element-plus']
     }
   },
   async buildEnd() {

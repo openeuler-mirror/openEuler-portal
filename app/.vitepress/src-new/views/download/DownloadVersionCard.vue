@@ -406,6 +406,7 @@ const onClickDownload = (row: any) => {
         <OLink
           v-if="contentData[linkData.urlKey]"
           :href="contentData[linkData.urlKey]"
+          :hover-underline="false"
           target="_blank"
           color="primary"
           rel="noopener noreferrer"

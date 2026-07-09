@@ -25,7 +25,7 @@ export const getCodeRepository = () => {
   const { t } = i18n.global;
   return {
     label: t('header.SOURCE_CODE'),
-    list: [
+    children: [
       {
         label: t('header.CODE_REPOSITORY'),
         href: 'https://atomgit.com/openeuler',
@@ -51,7 +51,7 @@ export const getCodeRepository = () => {
 
 export const langData = {
   label: '语言切换',
-  list: [
+  children: [
     {
       id: 'zh',
       label: '简体中文',

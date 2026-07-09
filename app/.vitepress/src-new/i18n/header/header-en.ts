@@ -23,18 +23,18 @@ export default {
           label: 'Get openEuler',
           children: [
             {
+              label: 'openEuler 24.03 LTS SP4',
+              description:
+                'Enhance server, cloud, and AI workloads with upgraded reliability, inference, O&M, and security.',
+              tag: TAG_TYPE.NEW,
+              href: '/en/download/#openEuler 24.03 LTS SP4',
+            },
+            {
               label: 'openEuler 24.03 LTS SP3',
               description:
                 'Explore the UnifiedBus SuperPoD architecture on openEuler.',
-              tag: TAG_TYPE.NEW,
-              href: '/en/download/#openEuler 24.03 LTS SP3',
-            },
-            {
-              label: 'openEuler 24.03 LTS SP2',
-              description:
-                'Enhanced 24.03 LTS SP2 on kernel 6.6. Better experience for users and devs.',
               tag: null,
-              href: '/en/download/#openEuler 24.03 LTS SP2',
+              URL: '/en/download/#openEuler 24.03 LTS SP3',
             },
             {
               label: 'openEuler 24.03 LTS SP1',

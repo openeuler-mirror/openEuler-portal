@@ -487,6 +487,10 @@ html[lang='en'] {
   .rsync {
     display: flex;
     align-items: center;
+    color: var(--o-color-info1);
+    @include hover {
+      color: var(--o-color-primary2);
+    }
   }
 }
 .mirror-mo {
@@ -559,11 +563,7 @@ html[lang='en'] {
 }
 .icon-copy {
   cursor: pointer;
-  color: var(--o-color-primary1);
   font-size: var(--o-icon_size-m);
   margin-left: 8px;
-  @include hover {
-    color: var(--o-color-primary2);
-  }
 }
 </style>

@@ -334,7 +334,6 @@ useInViewDuration(
 .item-title {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   .company {
     color: var(--o-color-info1);
     font-weight: 500;

@@ -8,4 +8,5 @@ export default {
   expand: 'Expand',
   collapse: 'Collapse',
   more: 'View More',
+  lang: 'Language',
 };
