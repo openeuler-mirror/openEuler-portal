@@ -1,18 +1,22 @@
 <script lang="ts" setup>
-import { welcomeJoin } from '~@/data/sig';
+import sigListContent from '#content/sig/sig-list';
 import { useLocale } from '~@/composables/useLocale';
 
 import { OIcon } from '@opensig/opendesign';
+import { computed } from 'vue';
 
 import { useScreen } from '~@/composables/useScreen';
 
 import AppSection from '~@/components/AppSection.vue';
+import InlineSvg from '~@/components/InlineSvg.vue';
 import { useI18n } from '~@/i18n';
 
 const { locale } = useLocale();
 const { lePadV } = useScreen();
 
 const i18n = useI18n();
+
+const welcomeJoin = computed(() => sigListContent[locale.value].welcome_join);
 
 const reportLinkClick = (ev: Event) => {
   let target = ev.target as HTMLElement;
@@ -37,16 +41,16 @@ const reportLinkClick = (ev: Event) => {
 <template>
   <AppSection :title="$t('sig.welcomeJoin')" class="sig-welcome">
     <div class="sig-welcome-card">
-      <template v-for="(card, index) in welcomeJoin" :key="card.title[locale]">
+      <template v-for="card in welcomeJoin" :key="card.title">
         <div class="card-item" v-analytics="reportLinkClick">
           <OIcon class="icon">
-            <component :is="card.icon"></component>
+            <InlineSvg :raw="card.icon" />
           </OIcon>
           <div class="sig-info">
             <div class="title">
-              {{ card.title[locale] }}
+              {{ card.title }}
             </div>
-            <div :v-clamp-text="lePadV ? 3 : false" v-dompurify-html="card.subtitle[locale]" class="subtitle"></div>
+            <div :v-clamp-text="lePadV ? 3 : false" v-dompurify-html="card.subtitle" class="subtitle"></div>
           </div>
         </div>
       </template>

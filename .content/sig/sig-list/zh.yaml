@@ -1,0 +1,70 @@
+# SIG 列表页中文数据 / SIG list page data (zh)
+#
+# 顶层对象，按板块名索引。所有字段用基线名（无 _zh/_en 后缀）。
+# 图片路径以 ./ 开头，由 vite-plugin-content-yaml 重写为 import 走 Vite 资源管线。
+# icon 字段为 ./images/xxx.svg?raw，插件透传 ?raw 由 Vite 返回 SVG 字符串，组件渲染为 inline SVG。
+
+# banner: 页面顶部 banner 背景图（zh/en 共用）
+#   bg: 背景图
+banner:
+  bg: ./images/sig-center-banner.jpg
+
+# welcome_join: 欢迎参与 SIG 卡片
+#   icon: SVG 路径（./images/xxx.svg，渲染为 inline SVG）
+#   title: 卡片标题
+#   subtitle: 卡片描述（支持 HTML）
+welcome_join:
+  - icon: ./images/operate-sig.svg?raw
+    title: 了解SIG运转
+    subtitle: 'SIG都是针对特定的一个或多个技术主题而成立的。SIG的核心成员主导SIG的治理，SIG内的成员推动交付成果输出，并争取让交付成果成为openEuler社区发行的一部分'
+  - icon: ./images/exchange-sig.svg?raw
+    title: 进行SIG交流
+    subtitle: '在SIG团队项目代码仓的README.md文件中，可以找到该项目所属的SIG信息和联系方式，欢迎通过邮件列表、公开例会及README.md 文件中提到的联系方式积极参与SIG交流'
+  - icon: ./images/join-sig.svg?raw
+    title: 参与SIG贡献
+    subtitle: '每一个SIG在AtomGit上都会拥有一个或多个项目，这些项目会拥有一个或多个Repository，SIG的交付成果会保存在这些Repository内。您可以通过提交Issue或PR、会议讨论、检视代码等参与SIG贡献，详情请查看<a href="/zh/community/contribution" target="_blank" rel="noopener noreferrer" class="underline-link">贡献指南</a>'
+
+# about_sig: 关于 SIG 卡片
+#   icon: 亮色 SVG 路径
+#   icon_dark: 暗色 SVG 路径
+#   title: 卡片标题
+#   subtitle: 卡片描述
+#   path: 卡片链接（为空则该卡片不显示）
+#   background: 卡片背景图
+about_sig:
+  - icon: ./images/role-description.svg?raw
+    icon_dark: ./images/role-description-dark.svg?raw
+    title: SIG角色说明
+    subtitle: 了解openEuler 社区贡献者的角色及其职责
+    path: /zh/sig/role-description/
+    background: ./images/role-description_bg.png
+  - icon: ./images/sig-meeting.svg?raw
+    icon_dark: ./images/sig-meeting-dark.svg?raw
+    title: SIG会议指南
+    subtitle: 'openEuler SIG工作会议是SIG成员根据SIG的规划发展定期召开的会议， 用于讨论技术方案、开发进度、问题解决及未来规划等，推动相关模块的持续发展和社区写作'
+    path: /zh/sig/meeting-guide/
+    background: ./images/meeting-guide_bg.png
+
+# application_process: SIG 申请流程
+#   icon: 步骤 SVG 路径
+#   process: 步骤名
+#   detail: 步骤详情（支持 HTML）
+application_process:
+  - icon: ./images/looking-someone.svg?raw
+    process: 寻人
+    detail: '个人或公司在openEuler社区中寻找2 - 3个具有共同目标的人讨论决定成立SIG组，维护openEuler社区中的某一个技术方向软件包或发起孵化项目'
+  - icon: ./images/apply-for.svg?raw
+    process: 申请
+    detail: '按照成立 SIG 组的<a href="https://atomgit.com/openeuler/community/blob/master/zh/technical-committee/governance/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">成立流程</a>，在 AtomGit 上创建申请文件，发起 Pull Request ；预约技术委员会会议的时间'
+  - icon: ./images/communicate.svg?raw
+    process: 沟通
+    detail: '在技术委员会的例会上就技术范围、维护的目标等和与会成员沟通，在 SIG 目标范围及维护上达成一致'
+  - icon: ./images/approved.svg?raw
+    process: 获批
+    detail: '技术委员会批准成立，对应的 Pull Request 合入代码仓库，基础设施会自动建立对应的仓库'
+  - icon: ./images/operate.svg?raw
+    process: 运作
+    detail: 'SIG 开始正式运作，通过邮件列表/例行会议等进行沟通运作'
+  - icon: ./images/improve.svg?raw
+    process: 改进
+    detail: '技术委员会周期 Review SIG 的运作情况，给出指导意见'
