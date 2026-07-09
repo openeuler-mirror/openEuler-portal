@@ -3,12 +3,12 @@ import { computed, onMounted, Ref, ref } from 'vue';
 
 import { useScreen } from '@/shared/useScreen';
 
-import type {
-  DownloadCommercialDataT,
-  DetailedLinkCommercialItemT,
-} from '@/shared/@types/type-download';
+import commercialReleaseData from '#content/download/commercial-release';
 
-import commercialReleaseData from '~@/data/download/download-commercial-release';
+type CommercialReleaseItemT =
+  (typeof commercialReleaseData.zh.commercial_release_list)[number];
+type DetailedLinkItemT =
+  NonNullable<NonNullable<CommercialReleaseItemT['detailed_link']>[number]>;
 
 import AppSection from '~@/components/AppSection.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';
@@ -41,7 +41,7 @@ const { t, locale } = useLocale();
 const { lePadV, isPadV } = useScreen();
 
 const localeCommercialReleaseData = computed(() => {
-  return commercialReleaseData[locale.value].COMMERCIAL_RELEASE_LIST;
+  return commercialReleaseData[locale.value].commercial_release_list;
 });
 //分页与数据项目
 const currentPage = ref(1);
@@ -99,15 +99,15 @@ const activeManufacturer: Ref<string[]> = ref(['']);
 const tagArch: Ref<string[]> = ref([]);
 const activeArch: Ref<string[]> = ref(['']);
 
-const allList: DownloadCommercialDataT[] = JSON.parse(
+const allList: CommercialReleaseItemT[] = JSON.parse(
   JSON.stringify(localeCommercialReleaseData.value)
 );
 const setTagArch = () => {
-  allList.forEach((item: DownloadCommercialDataT) => {
-    if (item.DETAILED_LINK) {
-      item.DETAILED_LINK.forEach((itemLink: DetailedLinkCommercialItemT) => {
-        if (!tagArch.value.includes(itemLink.ARCH)) {
-          tagArch.value.push(itemLink.ARCH);
+  allList.forEach((item: CommercialReleaseItemT) => {
+    if (item.detailed_link) {
+      item.detailed_link.forEach((itemLink: DetailedLinkItemT) => {
+        if (!tagArch.value.includes(itemLink.arch)) {
+          tagArch.value.push(itemLink.arch);
         }
       });
     }
@@ -116,7 +116,7 @@ const setTagArch = () => {
 const setTagManufacturer = () => {
   const temp = allList;
   const manufacturer = temp.map((item) => {
-    return item.MANUFACTURER;
+    return item.manufacturer;
   });
   tagManufacturer.value = Array.from(new Set(manufacturer));
   tagManufacturer.value.sort((a, b) => {
@@ -128,25 +128,25 @@ const setTagManufacturer = () => {
 const filterList = computed(() => {
   // 初始化页数
   currentPage.value = 1;
-  return allList.filter((item: DownloadCommercialDataT) => {
+  return allList.filter((item: CommercialReleaseItemT) => {
     // 按 MANUFACTURER 筛选
     if (
       !activeManufacturer.value.includes('') &&
-      !activeManufacturer.value.includes(item.MANUFACTURER)
+      !activeManufacturer.value.includes(item.manufacturer)
     ) {
       return false;
     }
     // 按 ARCH 筛选
     if (!activeArch.value.includes('')) {
-      const matchArch = item.DETAILED_LINK?.some((link) =>
-        activeArch.value.includes(link.ARCH)
+      const matchArch = item.detailed_link?.some((link) =>
+        activeArch.value.includes(link.arch)
       );
       if (!matchArch) return false;
     }
     // 搜索
     if (
-      !item.NAME.toLowerCase().includes(searchVal.value.toLowerCase()) &&
-      !item.MANUFACTURER.toLowerCase().includes(searchVal.value.toLowerCase())
+      !item.name.toLowerCase().includes(searchVal.value.toLowerCase()) &&
+      !item.manufacturer.toLowerCase().includes(searchVal.value.toLowerCase())
     ) {
       return false;
     }
@@ -182,11 +182,11 @@ const changeSearchVal = (val: string) => {
 };
 
 // 获取该软件所有支持的架构
-const getItemArchList = (link: DetailedLinkCommercialItemT[]) => {
+const getItemArchList = (link: DetailedLinkItemT[]) => {
   const itemArchList: string[] = [];
-  link.forEach((item: DetailedLinkCommercialItemT) => {
-    if (!itemArchList.includes(item.ARCH)) {
-      itemArchList.push(item.ARCH);
+  link.forEach((item: DetailedLinkItemT) => {
+    if (!itemArchList.includes(item.arch)) {
+      itemArchList.push(item.arch);
     }
   });
   return itemArchList;
@@ -262,7 +262,7 @@ const checkboxValues = computed(() => {
 const onClickDownload = (data: any) => {
   reportAnalytics({
     ...checkboxValues.value,
-    level1: data.NAME,
+    level1: data.name,
     target: t('download.DOWNLOADGO'),
   });
 };
@@ -362,26 +362,26 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
       >
         <OCard
           v-for="download in dataList"
-          :key="download.NAME"
+          :key="download.name"
           :title-row="2"
-          :title="download.NAME"
+          :title="download.name"
           :title-max-row="2"
           :detail-max-row="2"
-          :detail="download.DESC"
+          :detail="download.desc"
           class="download-list-item"
         >
           <div class="download-list-content">
             <!-- //  厂商，发布时间，架构 -->
             <div class="download-card-list">
               <!-- <div class="title">
-                {{ download.NAME }}
+                {{ download.name }}
               </div> -->
               <div class="download-line">
                 <span class="class-title">{{
                   t('download.PUBLISH_FACTURER')
                 }}</span>
                 <div class="label">
-                  {{ download.MANUFACTURER }}
+                  {{ download.manufacturer }}
                 </div>
               </div>
               <div class="download-line">
@@ -389,16 +389,16 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
                   t('download.PUBLISH_DATE1')
                 }}</span>
                 <div class="label">
-                  {{ download.PUBLISH_DATE || t('download.EMPTY_TIP') }}
+                  {{ download.publish_date || t('download.EMPTY_TIP') }}
                 </div>
               </div>
               <div class="download-line">
                 <span class="class-title">{{
                   t('download.APPROVE_ARCH')
                 }}</span>
-                <div v-if="download.DETAILED_LINK" class="arch-class">
+                <div v-if="download.detailed_link" class="arch-class">
                   <OTag
-                    v-for="item in getItemArchList(download.DETAILED_LINK)"
+                    v-for="item in getItemArchList(download.detailed_link)"
                     size="medium"
                     :style="{ '--tag-bg-color': 'var(--o-color-fill3)' }"
                     :key="item"
@@ -415,7 +415,7 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
           <template #footer>
             <ODivider class="footer-divider" />
             <a
-              :href="download.DOWNLOAD_URL"
+              :href="download.download_url"
               class="footer-link"
               target="_blank"
               rel="noopener noreferrer"

@@ -1,0 +1,308 @@
+# 商业发行版列表数据 / Commercial release list data
+#
+# commercial_release_list: 商业发行版卡片列表（页面顶部至底部按厂商发布时间倒序）
+#   name: 发行版名称
+#   download_url: 下载链接（厂商官网或镜像站）
+#   desc: 发行版描述
+#   manufacturer: 厂商
+#   publish_date: 发布日期（格式 YYYY/MM 或 YYYY/MM/DD，可为空字符串）
+#   lts: 是否 LTS 版本（可选，默认不写即非 LTS）
+#   detailed_link: 架构链接列表（可选，缺失表示仅有官网下载入口）
+#     link: 架构对应的具体下载链接（可选，缺失表示无独立架构镜像）
+#     arch: 处理器架构（x86_64 / AArch64 / LoongArch64 / sw_64 / RISC-V）
+
+commercial_release_list:
+  - name: '麒麟信安 Kylinsec V6 SP1'
+    download_url: 'https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/'
+    desc: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。'
+    manufacturer: '麒麟信安 Kylinsec'
+    publish_date: '2026/06'
+    detailed_link:
+      - link: 'https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/x86_64/'
+        arch: 'x86_64'
+      - link: 'https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/aarch64/'
+        arch: 'AArch64'
+      - link: 'https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/loongarch64/'
+        arch: 'LoongArch64'
+
+  - name: '麒麟信安 Kylinsec V3.4.5-Update2'
+    download_url: 'https://mirrorlists.kylinsec.com.cn/iso/V3.4-5-update2/'
+    desc: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。'
+    manufacturer: '麒麟信安 Kylinsec'
+    publish_date: '2026/06'
+    detailed_link:
+      - link: 'https://mirrorlists.kylinsec.com.cn/iso/V3.4-5-update2/x86_64/'
+        arch: 'x86_64'
+      - link: 'https://mirrorlists.kylinsec.com.cn/iso/V3.4-5-update2/aarch64/'
+        arch: 'AArch64'
+
+  - name: '青云 PrimusOS 操作系统 24.03 LTS SP1'
+    download_url: 'https://www.qingcloud.com'
+    desc: '青云 PrimusOS 操作系统 24.03 LTS SP1 是青云科技依托 Linux 内核，深度融合 openEuler 等主流开源技术，自主打造的新一代安全可靠、高性能的操作系统。该系统全面支持 x86、ARM 等主流处理器架构，可有效支撑数据中心核心业务的稳定运行。面向云计算、数据库、大数据、人工智能及网络安全等关键应用场景，PrimusOS 提供了坚实可靠的底层支撑，致力于满足金融、政府、企业、运营商等行业的数字化转型需求，是国产化环境下领先的数字基础设施操作系统解决方案。'
+    manufacturer: '北京青云科技集团股份有限公司'
+    publish_date: '2025/10'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+
+  - name: '银河麒麟高级服务器操作系统V11'
+    download_url: 'https://www.kylinos.cn/admin#/admin/login.html'
+    desc: '银河麒麟高级服务器操作系统 V11 是针对云计算、人工智能、大数据、工业互联网时代对主机系统高可靠性、安全性、高性能、灵活性以及实时响应的需求，依据 CMMI5 级标准研制的提供云原生支持、人工智能支持、国产硬件平台深度优化、内生安全、高性能、易管理、广泛兼容的新一代企业级服务器操作系统产品；统一基于Linux Kernel 6.6构建，对外接口遵循 POSIX 标准，同源支持飞腾、鲲鹏、龙芯、海光、兆芯、申威自主平台。可协同支撑人工智能应用、容器云平台、构建大型数据中心服务器高可用集群、负载均衡集群、分布式集群文件系统、虚拟化应用等，可部署在物理服务器和虚拟化环境、私有云、公有云和混合云环境等多种环境；广泛应用于政府、金融、教育、财税、公安、审计、交通、医疗、制造等领域。'
+    manufacturer: '麒麟软件有限公司'
+    publish_date: '2025/08'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+
+  - name: '汇智TeligenOS服务器操作系统 V3'
+    download_url: 'http://www.teligen.net'
+    desc: '汇智TeligenOS服务器操作系统 V3由广州汇智通信技术有限公司研发，具有高效、稳定、安全等核心特性，可为数据库、大数据、云计算及人工智能等企业级应用提供可靠的运行支撑。该系统全面支持X86、ARM、龙芯和申威等主流CPU架构，并完成与国内主要芯片及整机厂商的适配。同时，其技术架构覆盖从底层芯片、系统内核、虚拟化平台到上层应用的全栈体系，确保高效性、可靠性和安全性。'
+    manufacturer: '广州汇智通信技术有限公司'
+    publish_date: '2025/2'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+
+  - name: '麒麟信安 Kylinsec V6'
+    download_url: 'https://mirrorlists.kylinsec.com.cn/iso/V6/'
+    desc: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。'
+    manufacturer: '麒麟信安 Kylinsec'
+    publish_date: '2025/01'
+    detailed_link:
+      - link: 'https://mirrorlists.kylinsec.com.cn/iso/V6/x86_64/'
+        arch: 'x86_64'
+      - link: 'https://mirrorlists.kylinsec.com.cn/iso/V6/aarch64/'
+        arch: 'AArch64'
+      - link: 'https://mirrorlists.kylinsec.com.cn/iso/V6/loongarch64/'
+        arch: 'LoongArch64'
+
+  - name: '浪潮云启操作系统 23.12 LTS SP2'
+    download_url: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP2/'
+    desc: '浪潮云启操作系统（英文简称InLinux）是安全高效、稳定可靠的企业级服务器操作系统，全面支持云计算、大数据、物联网、智能计算等应用场景，具备性能高效、灵活定制、稳定可靠等特性。'
+    manufacturer: '浪潮云信息技术股份公司'
+    publish_date: '2024/12'
+    detailed_link:
+      - link: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP2/everything/x86_64/'
+        arch: 'x86_64'
+      - link: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP2/everything/aarch64/'
+        arch: 'AArch64'
+
+  - name: '鼎桥TDOS服务器操作系统 V1.0'
+    download_url: 'https://www.td-tech.com/'
+    desc: '鼎桥操作系统（简称TDOS）是鼎桥基于openEuler22.03版本，面向运营商、金融、政企等行业的关键业务而设计开发的企业级服务器操作系统软件。其在openEuler社区版的基础上，融入了众多的自研竞争力特性，完善了生态支持和专业的技术保障。TDOS可广泛适用于数据库、大数据、云计算、WEB服务等应用场景，支持光盘、U盘和网络等多种安装方式，可部署在物理服务器、虚拟机和容器等环境中，同时可为客户提供灵活的部署、升级和迁移方案。'
+    manufacturer: '成都鼎桥通信技术有限公司'
+    publish_date: '2024/05'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+
+  - name: '浪潮云启操作系统 23.12 LTS SP1'
+    download_url: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP1/'
+    desc: '浪潮云启操作系统（英文简称InLinux）是安全高效、稳定可靠的企业级服务器操作系统，全面支持云计算、大数据、物联网、智能计算等应用场景，具备性能高效、灵活定制、稳定可靠等特性。'
+    manufacturer: '浪潮云信息技术股份公司'
+    publish_date: '2024/05'
+    detailed_link:
+      - link: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP1/everything/x86_64/'
+        arch: 'x86_64'
+      - link: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS-SP1/everything/AArch64/'
+        arch: 'AArch64'
+
+  - name: 'SeawayEdgeV1.00'
+    download_url: 'https://haiwei.tech/'
+    desc: 'SeawayEdge是中科海微基于openEuler开源社区构建，结合边缘、嵌入式领域场景探索，打造全场景协同的面向数字基础设施的开源操作系统。'
+    manufacturer: '中科海微（北京）科技有限公司'
+    publish_date: '2023/09'
+    detailed_link:
+      - link: 'https://haiwei.tech/'
+        arch: 'x86_64'
+
+  - name: '麒麟信安 Kylinsec V3.5.2'
+    download_url: 'https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/'
+    desc: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。'
+    manufacturer: '麒麟信安 Kylinsec'
+    publish_date: '2023/09'
+    detailed_link:
+      - link: 'https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/x86_64/'
+        arch: 'x86_64'
+      - link: 'https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/aarch64/'
+        arch: 'AArch64'
+      - link: 'https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/loongarch64/'
+        arch: 'LoongArch64'
+
+  - name: '磐石操作系统 CSIOS V1.0.0'
+    download_url: 'http://openlab.chinasoftinc.com/official/'
+    desc: '磐石操作系统（简称CSIOS）是中软国际基于openEuler 22.03版本，面向运营商、金融、政企等行业的关键业务而设计开发的企业级服务器操作系统软件。其在openEuler社区版的基础上，融入了众多的自研竞争力特性，完善了生态支持和专业的技术保障。CSIOS可广泛适用于数据库、大数据、云计算、WEB服务等应用场景，支持光盘、U盘和网络等多种安装方式，可部署在物理服务器、虚拟机和容器等环境中，同时可为客户提供灵活的部署、升级和迁移方案。'
+    manufacturer: '中软国际科技服务有限公司'
+    publish_date: '2023/07'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+
+  - name: '润和企业级服务器操作系统 HopeOS V22'
+    download_url: 'https://www.hoperun.com/'
+    desc: '润和企业级服务器操作系统 HopeOS V22（简称HopeOS V22）是江苏润和软件股份有限公司基于openEuler 22.03 LTS SP1 版本，面向运营商、金融、政企等行业的关键业务而设计开发的企业级服务器操作系统软件。其在openEuler社区版的基础上，融入了众多的自研竞争力特性，完善了生态支持和专业的技术保障。HopeOS V22 可广泛适用于数据库、大数据、云计算、WEB服务等应用场景，支持光盘、U盘和网络等多种安装方式，可部署在物理服务器、虚拟机和容器等环境中，同时可为客户提供灵活的部署、升级和迁移方案。'
+    manufacturer: '江苏润和软件股份有限公司'
+    publish_date: '2023/05'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+
+  - name: '恒生HUNDSUN LightOS操作系统V1.0'
+    download_url: 'https://uplus.hundsun.com/LightOS/LightOS1.0/index.html'
+    desc: '恒生LightOS操作系统是基于国内openEuler开源社区构建的企业级操作系统，具备高效、稳定、安全的特性，致力于为企业级的数据库、大数据、云计算、人工智能平台提供安全稳定的运行基础。'
+    manufacturer: '恒生电子股份有限公司'
+    publish_date: '2023/05'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+
+  - name: '新支点服务器操作系统 V6'
+    download_url: 'https://nsosmirrors.gd-linux.com/cgsl/V6/openEuler/'
+    desc: '新支点服务器操作系统V6是新支点基于openEuler开源社区技术的发行版本，是一款安全、稳定、可控的电信级Linux服务器操作系统产品，支持广泛的硬件平台（鲲鹏、飞腾、海光、兆芯）提供5G场景下的多层次虚拟化技术及可靠的运行支持能力，实现快速虚拟机故障切换和支持应用可持续底层升级技术，同时随着云化技术应用的不断深入，支持作为可信的边缘节点。'
+    manufacturer: '广东中兴新支点技术有限公司'
+    publish_date: '2023/03'
+    detailed_link:
+      - link: 'https://nsosmirrors.gd-linux.com/cgsl/V6/openEuler/V6.02/x86_64/'
+        arch: 'x86_64'
+      - link: 'https://nsosmirrors.gd-linux.com/cgsl/V6/openEuler/V6.02/aarch64/'
+        arch: 'AArch64'
+
+  - name: '超聚变服务器操作系统 FusionOS 22 （免费使用授权）'
+    download_url: 'https://eco.xfusion.com/solutions/market/application/419662379870064640'
+    desc: 'FusionOS 22是一款基于openEuler操作系统，面向运营商、金融、政企等行业关键业务设计开发的企业级服务器操作系统。为了让广大的用户能更便捷、更低成本地获得FusionOS 22的极致业务体验，超聚变提供了超聚变服务器操作系统FusionOS 22（免费使用授权）。'
+    manufacturer: '超聚变数字技术股份有限公司'
+    publish_date: '2023/03'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+
+  - name: '浪潮云启操作系统 23.12 LTS'
+    download_url: 'https://cloud.inspur.com/'
+    desc: '浪潮云启操作系统（英文简称InLinux）是安全高效、稳定可靠的企业级服务器操作系统，全面支持云计算、大数据、物联网、智能计算等应用场景，具备性能高效、灵活定制、稳定可靠等特性'
+    manufacturer: '浪潮云信息技术股份公司'
+    publish_date: '2023/2/6'
+    detailed_link:
+      - link: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS/everything/AArch64/'
+        arch: 'AArch64'
+      - link: 'https://repos-inlinux.inspurcloud.cn/InLinux-23.12-LTS/everything/x86_64/'
+        arch: 'x86_64'
+
+  - name: '天鹤操作系统 ISSEOS V22'
+    download_url: 'https://www.isscloud.com/template/pc/system/isseOS.html#'
+    desc: '天鹤操作系统（简称 ISSEOS）是软通动力基于 openEuler 自主研发、自主可控的企业级 Linux 操作系统，支持鲲鹏、海光、飞腾等多种处理器，同时也支持 SM2、SM3、SM4 等多种国密算法，具备高性能、高运维、高兼容以及高可靠等增强特性，适用于数据库、大数据、云计算、人工智能等应用场景，可以为各行业的客户提供高效、稳定、专业的技术支持和服务。'
+    manufacturer: '软通动力信息技术（集团）股份有限公司'
+    publish_date: '2022/12'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+
+  - name: '凝思安全操作系统V6.0'
+    download_url: 'https://www.linx-info.com/download/os/el/'
+    desc: '凝思安全操作系统V6.0基于openEuler 20.03 LTS SP3 开发，内置凝思固域安全子系统，具有高可靠、高安全、高性能和高兼容等特性，能够保障生产系统和关键业务系统的安全稳定运行。'
+    manufacturer: '北京凝思软件股份有限公司'
+    publish_date: '2022/08'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+
+  - name: '拓林思企业级服务器操作系统'
+    download_url: 'http://download.turbolinux.com.cn:8013/'
+    desc: '拓林思企业级服务器操作系统是一款基于openEuler操作系统打造的针对x86_64、AArch64处理器架构的操作系统发行版，适用于数据库、云计算、大数据、分布式计算等多种应用场景，为客户提供安全、可靠的解决系统方案，为各类应用提供标准、稳定的运行环境。'
+    manufacturer: '北京拓林思软件有限公司'
+    publish_date: '2022/06'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+
+  - name: '统信服务器操作系统V20'
+    download_url: 'https://www.chinauos.com/resource/download-server'
+    desc: '统信服务器操作系统（UnionTech OS Server）是统信操作系统（统信UOS）产品家族中面向服务器端运行环境的版本，是一款用于构建信息化基础设施环境的平台级软件。该操作系统基于Linux 稳定内核研发，集成了资源管理、运维管理、和 DDE 桌面环境等标准系统组件，服务管理、中间件、WEB 服务、办公服务等应用服务组件，国密算法、安全审计等安全服务组件，虚拟化、容器、云平台、人工智能、大数据、可视化运维、集群运维、智能调优、和迁移助手等高级服务组件。产品主要面向于我国党政军、企事业单位、教育机构，以及普通的企业型用户，着重解决客户在信息化基础建设过程中，服务端基础设施的安装部署、运行维护、应用支撑等需求。'
+    manufacturer: '统信软件技术有限公司'
+    publish_date: '2022/03'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+      - arch: 'LoongArch64'
+
+  - name: '新华三 磐宁操作系统（NingOS) V3.0'
+    download_url: 'http://mirrors.h3c.com/h3c-os/1.0/ISOS/'
+    desc: '新华三 磐宁操作系统（NingOS) V3.0 是新华三集团基于 Linux 内核、融合openEuler等开源技术自主研发的新一代安全可信操作系统产品，支持 x86、ARM、LoongArch、SW64、RISC-V 等主流架构处理器，具备成熟的 CentOS 迁移和替换能力，为数据中心关键业务提供了强大支持。旨在满足云计算、数据库、大数据、人工智能，网络安全等业务要求，已广泛应用于金融、政企和运营商等行业，是国内领先的数字基础设施操作系统。'
+    manufacturer: '新华三技术有限公司'
+    publish_date: '2021/12'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+      - arch: 'LoongArch64'
+      - arch: 'sw_64'
+
+  - name: 'BCLinux for Euler V21.10'
+    download_url: 'https://mirrors.cmecloud.cn/bclinux/oe21.10/'
+    desc: 'BC-Linux for Euler 是中国移动自主研发，以openEuler社区操作系统为基础，借助开源社区的开放优势，通过定制化手段研发的企业级Linux操作系统，具备专业化、本地化的Linux开发和运维服务能力，能充分满足顾客对于云计算和大数据通用场景、边缘计算、虚拟化及容器和PaaS业务场景需求。'
+    manufacturer: '中国移动云能中心'
+    publish_date: '2021/10'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+
+  - name: '红旗Asianux服务器操作系统V8.1'
+    download_url: 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/'
+    desc: '红旗Asianux服务器操作系统（欧拉版）是基于openEuler20.03 LTS SP1进行二次开发的商业发行版，目前内核版本为4.19。'
+    manufacturer: '中科红旗（北京）信息科技有限公司'
+    publish_date: '2021/03'
+    detailed_link:
+      - arch: 'AArch64'
+
+  - name: 'HopeStage'
+    download_url: 'http://webapp.hoperun.com:8007/HopeStage/'
+    desc: '企业级通用操作系统HopeStage是基于openEuler构建的企业级Linux操作系统，具备高效、稳定、安全的特性，致力于为企业级的数据库、大数据、云计算、人工智能平台提供安全稳定的运行基础。'
+    manufacturer: '江苏润和软件股份有限公司'
+    publish_date: '2020/09'
+    detailed_link:
+      - arch: 'x86_64'
+      - arch: 'AArch64'
+
+  - name: '银河麒麟高级服务器操作系统V10'
+    download_url: 'https://kylinos.cn/support/trial.html'
+    desc: '银河麒麟高级服务器操作系统V10是针对企业级关键业务，适应虚拟化、云计算、大数据、工业互联网时代对主机系统可靠性、安全性、性能、扩展性和实时性等需求，依据CMMI5级标准研制的提供内生本质安全、云原生支持、自主平台深入优化、 高性能、易管理的新一代自主服务器操作系统，同源支持飞腾、鲲鹏、龙芯、申威、海光、兆芯等自主平台；应用于政府、金融、教育、财税、公安、审计、交通、医疗、制造等领域。基于银河麒麟高级服务器操作系统，用户可轻松构建数据中心、高可用集群和负载均衡集群、虚拟化应用服务、分布式文件系统等，并实现对虚拟数据中心的跨物理系统、虚拟机集群进行统一的监控和管理。 银河麒麟高级服务器操作系统支持云原生应用，满足企业当前数据中心及下一代的虚拟化(含Docker容器)、大数据、云服务的需求，为用户提供融合、统一、自主创新的基础软件平台及灵活的管理服务。'
+    manufacturer: '麒麟软件有限公司'
+    publish_date: '2020/07'
+
+  - name: 'HopeEdge'
+    download_url: 'http://webapp.hoperun.com:8007/HopeEdge/'
+    desc: '物联网边缘计算操作系统HopeEdge是基于openEuler构建的、面向IoT场景的边缘计算操作系统，具备轻量安全、自主创新、高效互联、快速部署四大关键特性；提供设备管理、数据采集、云边协同、人工智能等功能。'
+    manufacturer: '江苏润和软件股份有限公司'
+    publish_date: '2020/07'
+    lts: false
+    detailed_link:
+      - link: 'http://webapp.hoperun.com:8007/HopeStage/x86_64/'
+        arch: 'x86_64'
+      - link: 'http://webapp.hoperun.com:8007/HopeStage/aarch64/'
+        arch: 'AArch64'
+
+  - name: '中科傲来服务器操作系统'
+    download_url: 'https://eulixos.com/#/download'
+    desc: '中科傲来服务器操作系统是一款基于openEuler操作系统打造的服务器操作系统发行版，支持X86_64、AArch64、RISC-V等多种处理器架构，适用于数据库、云计算、大数据、人工智能、分布式计算等多种应用场景，具备高安全、高可靠、高性能、跨平台等特点，旨在为各类应用及解决方案提供标准、安全、可靠的操作系统及服务。'
+    manufacturer: '中科院软件所'
+    publish_date: '2020/05'
+    detailed_link:
+      - link: 'https://eulixos.com/#/download'
+        arch: 'AArch64'
+      - link: 'https://eulixos.com/#/download'
+        arch: 'RISC-V'
+
+  - name: '普华服务器操作系统v5.1'
+    download_url: 'https://www.i-soft.com.cn/type/4/714.jhtml/'
+    desc: '暂无描述'
+    manufacturer: '普华软件'
+    publish_date: ''
+    detailed_link:
+      - link: 'https://www.i-soft.com.cn/type/4/714.jhtml/'
+        arch: 'x86_64'
+      - link: 'https://www.i-soft.com.cn/type/4/714.jhtml/'
+        arch: 'AArch64'
+
+  - name: '同源OS 8.1欧拉发行版'
+    download_url: 'http://repo.tongyuanos.com/TongyuanOS8.1-euler/'
+    desc: '内核源码来自于欧拉开源社区中，其它软件包来自于CentOS8.1的aarch64版，完全兼容CentOS8.1，产品发布物为标准启动安装ISO。'
+    manufacturer: '同源OS'
+    publish_date: '2020/04'
