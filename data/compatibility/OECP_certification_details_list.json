@@ -1,6 +1,6 @@
 [
   {
-    "osv_name": "超聚变数字技术有限公司",
+    "osv_name": "超聚变数字技术股份有限公司",
     "os_version": "FusionOS-22_22.0.1_x86-64",
     "arch": "x86_64",
     "checksum": "42cc85780e5a3e53cb9c33eb8e69e827",
@@ -1656,7 +1656,7 @@
     ]
   },
   {
-    "osv_name": "超聚变数字技术有限公司",
+    "osv_name": "超聚变数字技术股份有限公司",
     "os_version": "fusionos-22-everything-aarch64.iso",
     "arch": "aarch64",
     "checksum": "d066de3ad8d79c5dcb23c19d73037317",
@@ -2304,7 +2304,7 @@
     ]
   },
   {
-    "osv_name": "超聚变数字技术有限公司",
+    "osv_name": "超聚变数字技术股份有限公司",
     "os_version": "FusionOS-22_everything_aarch64.iso",
     "arch": "aarch64",
     "checksum": "fae5159643f221ebf1035f90a95e949b",
@@ -2376,7 +2376,7 @@
     ]
   },
   {
-    "osv_name": "超聚变数字技术有限公司",
+    "osv_name": "超聚变数字技术股份有限公司",
     "os_version": "FusionOS-22_everything_x86-64.iso",
     "arch": "x86",
     "checksum": "1f6e4d82bc389165a39e90046ecf71ed",
@@ -3528,7 +3528,7 @@
     ]
   },
   {
-    "osv_name": "超聚变数字技术有限公司",
+    "osv_name": "超聚变数字技术股份有限公司",
     "os_version": "FusionOS-22_22.0.4_everything_aarch64.iso",
     "arch": "aarch64",
     "checksum": "7280c8a67bab319ac0bc08ff37e57b26",
@@ -3600,7 +3600,7 @@
     ]
   },
   {
-    "osv_name": "超聚变数字技术有限公司",
+    "osv_name": "超聚变数字技术股份有限公司",
     "os_version": "FusionOS-22_22.0.4_everything_x86-64.iso",
     "arch": "X86",
     "checksum": "a14f25a5688702c606652188475bd37c",
@@ -4320,7 +4320,7 @@
     ]
   },
   {
-    "osv_name": "超聚变数字技术有限公司",
+    "osv_name": "超聚变数字技术股份有限公司",
     "os_version": "FusionOS-23_23.0.1_everything_aarch64.iso",
     "arch": "aarch64",
     "checksum": "eaef7b63c96facd291f7e0d0ac1ce2fc",
@@ -4392,7 +4392,7 @@
     ]
   },
   {
-    "osv_name": "超聚变数字技术有限公司",
+    "osv_name": "超聚变数字技术股份有限公司",
     "os_version": "FusionOS-23_23.0.1_everything_x86-64.iso",
     "arch": "x86_64",
     "checksum": "42ae408c84eb19d5536ad261d7feab19",
@@ -7416,7 +7416,7 @@
     ]
   },
   {
-    "osv_name": "超聚变数字技术有限公司",
+    "osv_name": "超聚变数字技术股份有限公司",
     "os_version": "qinggeng-image-bmc-set-aarch64-23.09-beta-001.iso",
     "arch": "aarch64",
     "checksum": "adef8d7a191f3fc74ba2b61e36f83d5e\r\n\r\n",

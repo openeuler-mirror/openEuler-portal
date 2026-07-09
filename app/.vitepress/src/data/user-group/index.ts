@@ -130,7 +130,7 @@ export default [
       },
       {
         name: '杜凌浩',
-        titles: ['超聚变数字技术有限公司', 'Ambassador'],
+        titles: ['超聚变数字技术股份有限公司', 'Ambassador'],
         forum: 'https://forum.openeuler.org/u/dulinghao/activity',
         img: dulinhao,
       },
@@ -243,7 +243,7 @@ export default [
       },
       {
         name: '赵育科',
-        titles: ['超聚变数字技术有限公司', 'Member'],
+        titles: ['超聚变数字技术股份有限公司', 'Member'],
         forum: 'https://forum.openeuler.org/u/yk_zhao/activity',
         img: zhaoyuke,
       },
