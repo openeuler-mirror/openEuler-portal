@@ -4,6 +4,7 @@ import viteLastModifiedPlugin from '@opendesign-plus/plugins/vite/generate-lastm
 import sitemapItemTransformer from '@opendesign-plus/geo-scripts/vitepress-sitemap-transformer';
 import generateLLMsFull from '@opendesign-plus/geo-scripts/generate-llms-full';
 import contentYamlPlugin from './plugins/vite-plugin-content-yaml';
+import { isNews, setNewsGeo } from './news-geo';
 
 import path, { join } from 'node:path';
 import { existsSync, readFileSync} from 'node:fs';
@@ -192,8 +193,12 @@ const config: UserConfig = {
     } else {
       lookupKey = encodeURI(filePath.slice(0, -3));
     }
-    setJSONLD(pageData, lookupKey);
-    setTdk(pageData, lookupKey);
+    if (isNews.test(filePath)) {
+      setNewsGeo(pageData, filePath, lookupKey, currentHostname);
+    } else {
+      setJSONLD(pageData, lookupKey);
+      setTdk(pageData, lookupKey);
+    }
   },
   locales: {
     root: {
