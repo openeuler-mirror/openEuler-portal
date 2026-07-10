@@ -1,0 +1,33 @@
+# 实习页数据 / Internship page data（zh）
+#
+# partners: 合作伙伴列表（logo 亮色/暗色主题变体）
+
+# partners: 合作伙伴列表
+#   name: 合作方名称（硬编码英文，不走 i18n）
+#   logo_light: 亮色主题 logo（相对当前 yaml 文件）
+#   logo_dark: 暗色主题 logo
+partners:
+  - name: ISCAS
+    logo_light: ./images/iscas_light.png
+    logo_dark: ./images/iscas_dark.png
+  - name: Klinsoft
+    logo_light: ./images/qilin_light.png
+    logo_dark: ./images/qilin_dark.png
+  - name: Kylinsec
+    logo_light: ./images/tongxin_light.png
+    logo_dark: ./images/tongxin_dark.png
+  - name: Zhanjiang Software
+    logo_light: ./images/xinan_light.png
+    logo_dark: ./images/xinan_dark.png
+  - name: AtomGit
+    logo_light: ./images/atomgit_light.png
+    logo_dark: ./images/atomgit_dark.png
+  - name: MindSpore
+    logo_light: ./images/mindspore_light.png
+    logo_dark: ./images/mindspore_dark.png
+  - name: OpenEuler
+    logo_light: ./images/openeuler_light.png
+    logo_dark: ./images/openeuler_dark.png
+  - name: openGauss
+    logo_light: ./images/opengauss_light.png
+    logo_dark: ./images/opengauss_dark.png
