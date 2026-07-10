@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref, onUpdated, computed } from 'vue';
 import { useData, useRouter } from 'vitepress';
-import { useI18n } from '@/i18n';
 import { useCommon } from '@/stores/common';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
@@ -20,19 +19,22 @@ import logo_dark from '@/assets/common/header/logo_dark.png';
 import video_bg_light from '@/assets/category/mooc/video-bg-light.png';
 import video_bg_dark from '@/assets/category/mooc/video-bg-dark.png';
 
+import moocDetailContent from '#content/learn/mooc/detail';
+
 import type {
   TeacherItemT,
   NodeItemT,
   VideoObjT,
 } from '@/shared/@types/type-mooc';
 
-const i18n = useI18n();
 const router = useRouter();
 const language = useData().lang;
 const commonStore = useCommon();
 const screenWidth = useWindowResize();
 
-const moocData = computed(() => i18n.value.mooc);
+const moocDetailData = computed(
+  () => moocDetailContent[language.value as 'zh' | 'en'] || moocDetailContent.zh
+);
 
 const isNowPlay = ref(false);
 const defaultProps = ref({
@@ -104,11 +106,11 @@ function setCheckedNode() {
 }
 // 读取要渲染的课程内容数据
 function getContent() {
-  const listData = moocData.value.MOOC_DATA.COURSE_LIST;
+  const listData = moocDetailData.value.course_list;
   listData.forEach((item: any) => {
-    menuDataList.value = item.NAV_DATA;
-    courseH1.value = item.COURSE_H1;
-    welcomeStr.value = item.WELCOME;
+    menuDataList.value = item.nav_data;
+    courseH1.value = item.course_h1;
+    welcomeStr.value = item.welcome;
   });
 }
 // 控制视频的播放和暂停
@@ -274,8 +276,8 @@ const iconMenuShow = computed(() => {
           </ODrawer>
         </ClientOnly>
         <BreadCrumbs
-          :bread1="moocData.MOOC.MOOC"
-          :bread2="moocData.MOOC.MOOC_COURSE[0].TITLE"
+          :bread1="moocDetailData.ui.mooc"
+          :bread2="moocDetailData.ui.mooc_course_title"
           link1="/zh/learn/mooc/"
           class="bread"
         />
@@ -294,7 +296,7 @@ const iconMenuShow = computed(() => {
               class="download"
             >
               <OButton type="primary" size="mini">
-                {{ moocData.MOOC.COURSE_DOWNLOAD }}
+                {{ moocDetailData.ui.course_download }}
                 <template #suffixIcon>
                   <OIcon><IconArrowRight /></OIcon>
                 </template>
@@ -313,7 +315,7 @@ const iconMenuShow = computed(() => {
               {{ item }}
             </p>
             <div v-if="currentNode.key === 'introduction0'" class="teacher">
-              <p>{{ moocData.MOOC.TEACHER_TEAM }}</p>
+              <p>{{ moocDetailData.ui.teacher_team }}</p>
               <div v-for="item in teacherList" :key="item.name" class="item">
                 <img :src="item.img" alt="" />
                 <div>
@@ -344,10 +346,10 @@ const iconMenuShow = computed(() => {
           <div class="menu-mobile">
             <div class="prev" @click="previous">
               <OIcon><IconArrowLeft /></OIcon>
-              <span>{{ moocData.MOOC.PREV_TEXT }}</span>
+              <span>{{ moocDetailData.ui.prev_text }}</span>
             </div>
             <div class="next" @click="next">
-              <span>{{ moocData.MOOC.NEXT_TEXT }}</span>
+              <span>{{ moocDetailData.ui.next_text }}</span>
               <OIcon><IconArrowRight /></OIcon>
             </div>
           </div>
@@ -355,15 +357,15 @@ const iconMenuShow = computed(() => {
       </div>
       <div v-else class="detail-pc">
         <BreadCrumbs
-          :bread1="moocData.MOOC.MOOC"
-          :bread2="moocData.MOOC.MOOC_COURSE[0].TITLE"
+          :bread1="moocDetailData.ui.mooc"
+          :bread2="moocDetailData.ui.mooc_course_title"
           link1="/zh/learn/mooc/"
         />
         <h1>{{ courseH1 }}</h1>
         <p class="entry-welcome">{{ welcomeStr }}</p>
         <div class="content">
           <div class="article-nav fl">
-            <div class="nav-top">{{ moocData.MOOC.MOOC_CATALOG }}</div>
+            <div class="nav-top">{{ moocDetailData.ui.mooc_catalog }}</div>
             <NavTree
               ref="treeRef"
               :node-key="'key'"
@@ -386,7 +388,7 @@ const iconMenuShow = computed(() => {
                     class="download"
                   >
                     <OButton type="primary" size="mini">
-                      {{ moocData.MOOC.COURSE_DOWNLOAD }}
+                      {{ moocDetailData.ui.course_download }}
                     </OButton></a
                   >
                 </p>
@@ -407,7 +409,7 @@ const iconMenuShow = computed(() => {
                 {{ item }}
               </p>
               <div v-if="currentNode.key === 'introduction0'" class="teacher">
-                <p>{{ moocData.MOOC.TEACHER_TEAM }}</p>
+                <p>{{ moocDetailData.ui.teacher_team }}</p>
                 <div class="techer-img">
                   <div
                     v-for="item in teacherList"
@@ -451,10 +453,10 @@ const iconMenuShow = computed(() => {
                 <OIcon>
                   <IconArrowLeft />
                 </OIcon>
-                <span>{{ moocData.MOOC.PREV_TEXT }}</span>
+                <span>{{ moocDetailData.ui.prev_text }}</span>
               </div>
               <div class="next" @click="next">
-                <span>{{ moocData.MOOC.NEXT_TEXT }}</span>
+                <span>{{ moocDetailData.ui.next_text }}</span>
                 <OIcon>
                   <IconArrowRight />
                 </OIcon>
