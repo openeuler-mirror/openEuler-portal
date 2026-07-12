@@ -3,11 +3,12 @@ import type { PropType } from 'vue';
 import { OCard, OButton } from '@opensig/opendesign';
 import { useI18n } from 'vue-i18n';
 import AppSection from '~@/components/AppSection.vue';
-import { linkData } from '~@/data/user-group';
+import detailContent from '#content/community/user-group/detail';
 import { useScreen } from '~@/composables/useScreen';
 import type { NewsDataT } from '@/shared/@types/type-news';
 
 const { lePadV } = useScreen();
+const linkData = detailContent.zh.link;
 
 defineProps({
   options: {

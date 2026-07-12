@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vitepress';
 import { useLocale } from '~@/composables/useLocale';
-import cityData from '~@/data/user-group/city/';
+import detailContent from '#content/community/user-group/detail';
 import DetailIntroCard from './components/DetailIntroCard.vue';
 import DetailMember from './components/DetailMember.vue';
 import DetailGuide from './components/DetailGuide.vue';
@@ -12,6 +12,7 @@ import DetailCase from './components/DetailCase.vue';
 const router = useRouter();
 const { t, locale } = useLocale();
 
+const cityData = detailContent.zh.cities;
 const groupData = ref();
 const cityGroup = ref();
 onMounted(() => {

@@ -4,15 +4,17 @@ import { useI18n } from 'vue-i18n';
 import { OPopover, OIcon, ODialog } from '@opensig/opendesign';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
-import { questionData } from '~@/data/user-group';
 import type { PersonT } from '~@/@types/type-user-group';
 import AppSection from '~@/components/AppSection.vue';
+import detailContent from '#content/community/user-group/detail';
 
 import IconHonor from '~icons/user-group/honor.svg';
 import IconMail from '~icons/user-group/mail.svg';
 import IconHook from '~icons/user-group/hook.svg';
 import empty_light from '~@/assets/category/user-group/common/empty-light.png';
 import empty_dark from '~@/assets/category/user-group/common/empty-dark.png';
+
+const questionData = detailContent.zh.question;
 
 const commonStore = useCommon();
 const isDark = computed(() => {
