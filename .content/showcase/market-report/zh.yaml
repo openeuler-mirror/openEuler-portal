@@ -1,0 +1,10 @@
+# 市场研究报告中文数据 / Market Report page data (zh)
+#
+# 按板块名索引的顶层对象。
+
+# market_reports: 市场研究报告列表
+#   path:   PDF 下载链接
+#   summary: 报告摘要标题
+market_reports:
+  - path: /whitepaper/中国服务器操作系统市场研究报告（2022H1）- 赛迪顾问.pdf
+    summary: 中国服务器操作系统市场研究报告（2022H1）– 赛迪顾问

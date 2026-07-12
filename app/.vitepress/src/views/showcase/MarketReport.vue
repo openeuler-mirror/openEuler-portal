@@ -2,9 +2,9 @@
 import { ref, computed } from 'vue';
 import { useI18n } from '@/i18n';
 
-import whitePaperData from '@/data/showcase/market-report';
 import NotFound from '@/NotFound.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
+import marketReportContent from '#content/showcase/market-report';
 
 import banner from '@/assets/banner/banner-community.png';
 import search from '@/assets/illustrations/white-paper.png';
@@ -13,12 +13,13 @@ const i18n = useI18n();
 
 const userCaseData = computed(() => i18n.value.showcase);
 
+const whitePaperData = marketReportContent.zh.market_reports;
+
 const currentPage = ref(1);
 // 每页数据
 const pageSize = ref(12);
 
 interface PaperList {
-  banner: string;
   path: string;
   summary: string;
 }
@@ -35,10 +36,7 @@ function getRenderPaperLsit(page: number, size: number) {
 }
 getRenderPaperLsit(currentPage.value, pageSize.value);
 
-// 数据总条数
-const total = computed(() => {
-  return whitePaperData.length;
-});
+const total = computed(() => whitePaperData.length);
 // 分页器总页数
 const totalPage = computed(() => {
   return Math.ceil(total.value / pageSize.value);
