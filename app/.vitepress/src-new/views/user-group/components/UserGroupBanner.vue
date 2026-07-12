@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import { OButton } from '@opensig/opendesign';
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
-
-import { bannerData } from '~@/data/user-group';
+import content from '#content/community/user-group';
 import { useScreen } from '~@/composables/useScreen';
+
+const bannerData = content.zh.banner;
 
 const { lePadV } = useScreen();
 </script>

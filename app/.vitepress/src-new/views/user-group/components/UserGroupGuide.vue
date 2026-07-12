@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import AppSection from '~@/components/AppSection.vue';
-import { guideData } from '~@/data/user-group';
-
+import content from '#content/community/user-group';
 import IconMail from '~icons/user-group/mail.svg';
 import IconWechat from '~icons/user-group/wechat.svg';
+
+const guideData = content.zh.guide;
 </script>
 
 <template>
