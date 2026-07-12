@@ -4,123 +4,56 @@ import { ORow, OIcon, OCol, OCard, OLink, ODivider } from '@opensig/opendesign';
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 import { useCommon } from '@/stores/common';
-import { useI18n } from '~@/i18n';
 
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import AppSection from '~@/components/AppSection.vue';
 
 import illustration from '~@/assets/category/contact/illustration.png';
 import banner from '~@/assets/category/contact/banner-bg.jpg';
-
-import IconContact1 from '~icons/app-new/icon-contact1.svg';
-import IconContact2 from '~icons/app-new/icon-contact2.svg';
-import IconContact3 from '~icons/app-new/icon-contact3.svg';
-import IconContact4 from '~icons/app-new/icon-contact4.svg';
-import IconContact5 from '~icons/app-new/icon-contact5.svg';
-import IconContact6 from '~icons/app-new/icon-contact6.svg';
-import IconContact7 from '~icons/app-new/icon-contact7.svg';
-
-import CodeImgXzs from '~@/assets/category/footer/code-xzs.png';
-import CodeImgZgz from '~@/assets/category/footer/code-zgz.jpg';
-
-// follow us
 import followCoverZh from '~@/assets/category/contact/follow-zh.jpg';
 import followCoverEn from '~@/assets/category/contact/follow-en.jpg';
-import ImgX from '~@/assets/category/contact/light/x.png';
-import ImgYoutube from '~@/assets/category/contact/light/youtube.png';
-import ImgBilibili from '~@/assets/category/contact/light/bilibili.png';
-import ImgLinkedin from '~@/assets/category/contact/light/LinkedIn.png';
-import ImgXDark from '~@/assets/category/contact/dark/x.png';
-import ImgYoutubeDark from '~@/assets/category/contact/dark/youtube.png';
-import ImgBilibiliDark from '~@/assets/category/contact/dark/bilibili.png';
-import ImgLinkedinDark from '~@/assets/category/contact/dark/LinkedIn.png';
-import ImgXPrimary from '~@/assets/category/contact/primary/x.png';
-import ImgYoutubePrimary from '~@/assets/category/contact/primary/youtube.png';
-import ImgBilibiliPrimary from '~@/assets/category/contact/primary/bilibili.png';
-import ImgLinkedinPrimary from '~@/assets/category/contact/primary/LinkedIn.png';
+
+import { createIcon } from '~@/components/createIcon';
+import contactUsContent from '#content/contact-us';
 
 const { isPhone, lePad, lePadV } = useScreen();
-const { t, isZh } = useLocale();
-const i18n = useI18n();
+const { isZh } = useLocale();
 const commonStore = useCommon();
-const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
+const isDark = computed(() => commonStore.theme === 'dark');
 
-// 社区联系
-const contactData = [
-  {
-    title: t('contact.communityItem1'),
-    email: 'gaofei@openatom.org',
-    icon: IconContact1,
-  },
-  {
-    title: t('contact.communityItem2'),
-    email: 'events@openeuler.sh',
-    icon: IconContact2,
-  },
-  {
-    title: t('contact.communityItem3'),
-    email: 'marketing@openeuler.org',
-    icon: IconContact3,
-  },
-  {
-    title: t('contact.communityItem4'),
-    email: 'dev@openeuler.org',
-    icon: IconContact4,
-  },
-];
+const contentData = computed(() =>
+  isZh.value ? contactUsContent.zh : contactUsContent.en
+);
+
+const contactData = computed(() =>
+  contentData.value.contact_data.map((item) => ({
+    ...item,
+    icon: createIcon(item.icon),
+  }))
+);
 
 const flexGap = computed(() =>
   isPhone.value ? '12px 12px' : lePad.value ? '16px 16px' : '32px 32px'
 );
 
-// 公众号、小助手
-const footerCodeList = [
-  {
-    code: CodeImgZgz,
-    label: '微信公众号',
-  },
-  {
-    code: CodeImgXzs,
-    label: '小助手',
-  },
-];
+const footerCodeList = computed(() => contentData.value.footer_codes);
 
-const followLinks = [
-  {
-    icon: ImgX,
-    iconDark: ImgXDark,
-    iconPrimary: ImgXPrimary,
-    href: 'https://x.com/openeuler',
-    label: 'X',
-  },
-  {
-    icon: ImgLinkedin,
-    iconDark: ImgLinkedinDark,
-    iconPrimary: ImgLinkedinPrimary,
-    href: 'https://www.linkedin.com/company/openeuler',
-    label: 'LinkedIn',
-  },
-  {
-    icon: ImgYoutube,
-    iconDark: ImgYoutubeDark,
-    iconPrimary: ImgYoutubePrimary,
-    href: 'https://www.youtube.com/@openeuler',
-    label: 'YouTube',
-  },
-  {
-    icon: ImgBilibili,
-    iconDark: ImgBilibiliDark,
-    iconPrimary: ImgBilibiliPrimary,
-    href: 'https://space.bilibili.com/527064077',
-    label: 'Bilibili',
-  },
-];
-
-// 资源推荐
-const handyMaterialsList = computed(
-  () => i18n.value.contact.handyMaterialsList
+const followLinks = computed(() =>
+  contentData.value.follow_links.map((item) => ({
+    icon: item.icon,
+    iconDark: item.icon_dark,
+    iconPrimary: item.icon_primary,
+    href: item.href,
+    label: item.label,
+  }))
 );
-const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
+
+const handyMaterialsList = computed(() =>
+  contentData.value.handy_materials.map((item) => ({
+    ...item,
+    icon: createIcon(item.icon),
+  }))
+);
 </script>
 <template>
   <BannerLevel2
@@ -274,7 +207,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
           target="_blank"
           rel="noopener noreferrer"
           hoverable
-          :icon="handyMaterialsListIcon[index]"
+          :icon="item.icon"
           class="handy-materials"
         >
         </OCard>
