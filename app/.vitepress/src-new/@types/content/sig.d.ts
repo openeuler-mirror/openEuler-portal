@@ -104,3 +104,26 @@ declare module '#content/sig/role-description' {
   };
   export default roleDescriptionData;
 }
+
+// `#content/sig/meeting-guide` 虚拟模块由 vite-plugin-content-yaml 合成。
+// 数据源：`.content/sig/meeting-guide/zh.yaml`（仅中文，无对应 en 页面）。
+// 顶层按 slug 索引（zh），每个 slug 下为 MeetingGuideDataT 结构。
+//
+// icon 字段为 SVG 路径带 `?raw` 后缀（`./images/xxx.svg?raw`），由 Vite 返回 SVG
+// 字符串，组件用 createIcon 包裹为组件后传给 OCard :icon prop。
+declare module '#content/sig/meeting-guide' {
+  interface MeetingTypeItemT {
+    title: string;
+    icon: string;
+    intro: string;
+  }
+
+  interface MeetingGuideDataT {
+    meeting_type: MeetingTypeItemT[];
+  }
+
+  const meetingGuideData: {
+    zh: MeetingGuideDataT;
+  };
+  export default meetingGuideData;
+}
