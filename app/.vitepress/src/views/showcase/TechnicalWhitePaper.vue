@@ -3,7 +3,7 @@ import { ref, computed } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 
-import technicalDataTotal from '@/data/showcase/technical-while-paper';
+import technicalDataTotal from '#content/showcase/technical-white-paper';
 import NotFound from '@/NotFound.vue';
 
 type Language = 'zh' | 'en';
@@ -11,7 +11,7 @@ type Language = 'zh' | 'en';
 const i18n = useI18n();
 const { lang } = useData();
 
-const technicalData = technicalDataTotal[lang.value as Language];
+const technicalData = technicalDataTotal[lang.value as Language].white_papers;
 
 const userCaseData = computed(() => i18n.value.showcase);
 
