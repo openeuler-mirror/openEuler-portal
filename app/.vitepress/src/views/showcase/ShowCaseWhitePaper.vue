@@ -2,13 +2,13 @@
 import { ref, computed } from 'vue';
 import { useI18n } from '@/i18n';
 
-import whitePaperData from '@/data/showcase/showcase';
+import whitePaperData from '#content/showcase/industry-white-paper';
 import NotFound from '@/NotFound.vue';
 import { useData } from 'vitepress';
 
 type Language = 'zh' | 'en';
 const { lang } = useData();
-const technicalData = whitePaperData[lang.value as Language];
+const technicalData = whitePaperData[lang.value as Language].industry_papers;
 
 const i18n = useI18n();
 

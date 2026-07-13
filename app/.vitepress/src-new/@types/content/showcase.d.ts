@@ -37,3 +37,25 @@ declare module '#content/showcase/technical-white-paper' {
   };
   export default data;
 }
+
+// `#content/showcase/industry-white-paper` 虚拟模块由 vite-plugin-content-yaml 合成。
+// 数据源：`.content/showcase/industry-white-paper/zh.yaml` + `.content/showcase/industry-white-paper/en.yaml`
+// 顶层按 locale 索引（zh / en），每个 locale 下为 IndustryWhitePaperDataT 结构。
+
+declare module '#content/showcase/industry-white-paper' {
+  interface IndustryWhitePaperItemT {
+    path: string;
+    summary: string;
+    banner: string;
+  }
+
+  interface IndustryWhitePaperDataT {
+    industry_papers: IndustryWhitePaperItemT[];
+  }
+
+  const data: {
+    zh: IndustryWhitePaperDataT;
+    en: IndustryWhitePaperDataT;
+  };
+  export default data;
+}
