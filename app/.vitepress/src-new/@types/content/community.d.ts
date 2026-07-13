@@ -1,65 +1,94 @@
-// `#content/community/member` 虚拟模块由 vite-plugin-content-yaml 合成。
-// 数据源：`.content/community/member/zh.yaml` + `.content/community/member/en.yaml`
-// 顶层按 locale 索引（zh / en），每个 locale 下为 MemberDataT 结构。
-
-declare module '#content/community/member' {
-  interface MemberLogoItemT {
-    img_light: string;
-    img_dark: string;
-    alt: string;
-    no_icon?: boolean;
-  }
-
-  interface MemberDonorLevelT {
-    id: string;
-    donor_title: string;
-    logo_list: MemberLogoItemT[];
-  }
-
-  interface MemberDataT {
-    donor_levels: MemberDonorLevelT[];
-  }
-
-  const data: { zh: MemberDataT; en: MemberDataT };
-  export default data;
-}
-
-// `#content/community/organization` 虚拟模块由 vite-plugin-content-yaml 合成。
-// 数据源：`.content/community/organization/zh.yaml` + `.content/community/organization/en.yaml`
-// 顶层按 locale 索引（zh / en），每个 locale 下按委员会/工作组 slug 索引。
-// 渲染顺序由 TheOrganization.vue 的 SECTIONS 数组决定（产品决策，写在视图代码里）。
-
-declare module '#content/community/organization' {
-  interface OrgMemberItemT {
+declare module '#content/community/honor' {
+  interface HonorNewsItemT {
     name: string;
-    image: string;
-    position?: string | string[];
-    post?: string;
-    email?: string;
-    gitee?: string;
+    link: string;
+    certificate?: string;
   }
-
-  interface OrgGroupItemT {
+  interface HonorCompanyLogoT {
+    light: string;
+    dark: string;
+  }
+  interface HonorCompanyT {
+    title: string[];
+    list: HonorCompanyLogoT[];
+    tips?: string;
+  }
+  interface HonorPersonalCardT {
+    name: string;
+    post: string[];
+    img: string;
+    detail: string[];
+  }
+  interface HonorPersonalGroupT {
+    title?: string;
+    list: HonorPersonalCardT[];
+  }
+  interface HonorTeamItemT {
+    name: string;
+    detail: string[];
+    link: string;
+  }
+  interface HonorTeamT {
     title: string;
-    members: OrgMemberItemT[];
+    list: HonorTeamItemT[];
   }
-
-  interface OrgSectionT {
+  interface HonorContributionT {
+    title: string[];
+    personal: HonorPersonalGroupT[];
+    team?: HonorTeamT;
+    notice?: string;
+  }
+  interface HonorProjectItemT {
+    name: string;
+    detail: string[];
+    link: string;
+    link1?: string;
+  }
+  interface HonorProjectGroupT {
     title: string;
-    anchor: string;
-    members?: OrgMemberItemT[];
-    groups?: OrgGroupItemT[];
-    rows?: OrgMemberItemT[][];
+    bg: string;
+    bgDark: string;
+    list: HonorProjectItemT[];
   }
-
-  // 顶层按 slug 索引（advisory / committee / technical / marketing / user /
-  // business / operations / education / legal / ai / globalization）。
-  // 用 index signature 而非显式字段，便于运营新增 committee 时无需改类型声明，
-  // 仅需在 zh.yaml/en.yaml 加 section + 在 TheOrganization.vue 的 SECTIONS 加 slug。
-  interface OrgDataT {
-    [slug: string]: OrgSectionT;
+  interface HonorProjectT {
+    title: string[];
+    list: HonorProjectGroupT[];
   }
-
-  const data: { zh: OrgDataT; en: OrgDataT };
+  interface HonorNominationT {
+    title: string;
+    list: { name: string }[];
+  }
+  interface HonorYearDataT {
+    news?: HonorNewsItemT[];
+    company?: HonorCompanyT;
+    contribution?: HonorContributionT;
+    project?: HonorProjectT;
+    nomination?: HonorNominationT;
+    notice?: string;
+  }
+  interface HonorImagesT {
+    banner: string;
+    new_card_bg_light: string;
+    new_card_bg_dark: string;
+    personal_card_bg_light: string;
+    personal_card_bg_dark: string;
+  }
+  interface HonorUiT {
+    title: string;
+    view_news: string;
+    view_certificate: string;
+    project_address: string;
+    project_address_1: string;
+    project_address_2: string;
+  }
+  interface HonorDataT {
+    ui: HonorUiT;
+    images: HonorImagesT;
+    years: Record<string, HonorYearDataT>;
+  }
+  const data: {
+    zh: HonorDataT;
+    en?: HonorDataT;
+  };
   export default data;
 }
