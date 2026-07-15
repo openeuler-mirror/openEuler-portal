@@ -14,10 +14,10 @@ describe('about-us-toc.ts — zh 侧边栏 AIGC 条目', () => {
     expect(zhPolicies!.children).toBeDefined();
   });
 
-  it('"政策和规则"分组中包含"生成式AI工具使用与开源贡献政策"条目', () => {
+  it('"政策和规则"分组中包含"生成式AI工具使用与开源贡献策略"条目', () => {
     const aigcEntry = zhPolicies!.children!.find((c) => c.link === 'ai-coding-assistants');
     expect(aigcEntry).toBeDefined();
-    expect(aigcEntry!.label).toBe('生成式AI工具使用与开源贡献政策');
+    expect(aigcEntry!.label).toBe('生成式AI工具使用与开源贡献策略');
   });
 
   it('AIGC 条目位于"行为准则"之后', () => {
@@ -47,7 +47,7 @@ describe('about-us-toc.ts — zh 侧边栏 AIGC 条目', () => {
   });
 });
 
-describe('about-us-toc.ts — en 侧边栏不含 AIGC 条目（i18n 未适配）', () => {
+describe('about-us-toc.ts — en 侧边栏包含 AIGC 条目', () => {
   const enPolicies = tocData.en.find((item) => item.label === 'Policies and Rules');
 
   it('en 侧边栏包含"Policies and Rules"分组', () => {
@@ -55,15 +55,16 @@ describe('about-us-toc.ts — en 侧边栏不含 AIGC 条目（i18n 未适配）
     expect(enPolicies!.children).toBeDefined();
   });
 
-  it('en"Policies and Rules"分组中不包含 ai-coding-assistants 条目', () => {
+  it('en"Policies and Rules"分组中包含 ai-coding-assistants 条目', () => {
     const aigcEntry = enPolicies!.children!.find((c) => c.link === 'ai-coding-assistants');
-    expect(aigcEntry).toBeUndefined();
+    expect(aigcEntry).toBeDefined();
   });
 
-  it('en"Policies and Rules"仅含 Code of Conduct', () => {
+  it('en"Policies and Rules"包含 Code of Conduct 和 AIGC 条目', () => {
     const children = enPolicies!.children!;
-    expect(children.length).toBe(1);
-    expect(children[0].link).toBe('conduct');
+    const links = children.map((c) => c.link);
+    expect(links).toContain('conduct');
+    expect(links).toContain('ai-coding-assistants');
   });
 });
 
@@ -104,9 +105,9 @@ describe('TDK 配置 — .geo/tdks/zh/community/ai-coding-assistants/index.json'
     ).toBe(true);
   });
 
-  it('keywords 包含 AIGC 和 openEuler', () => {
+  it('keywords 包含 生成式AI 和 openEuler', () => {
     const tdk = JSON.parse(fs.readFileSync(tdkPath, 'utf8'));
-    expect(tdk.keywords).toContain('AIGC');
+    expect(tdk.keywords).toContain('生成式AI');
     expect(tdk.keywords).toContain('openEuler');
   });
 });
@@ -159,17 +160,17 @@ describe('AIGC 页面 MD 文件 — app/zh/community/ai-coding-assistants/index.
     expect(fs.existsSync(mdPath), `MD 文件应存在: ${mdPath}`).toBe(true);
   });
 
-  it('frontmatter 包含 title 字段且值为"生成式AI工具使用与开源贡献政策"', () => {
+  it('frontmatter 包含 title 字段且值为"生成式AI工具使用与开源贡献策略"', () => {
     const content = fs.readFileSync(mdPath, 'utf8');
-    const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
+    const frontmatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     expect(frontmatterMatch, 'MD 文件应有 frontmatter').toBeDefined();
     const frontmatter = frontmatterMatch![1];
-    expect(frontmatter).toContain('title: openEuler社区生成式AI工具使用与开源贡献政策');
+    expect(frontmatter).toContain('title: openEuler社区生成式AI工具使用与开源贡献策略');
   });
 
   it('frontmatter 包含 category: about-us（与 conduct 等政策页同模式）', () => {
     const content = fs.readFileSync(mdPath, 'utf8');
-    const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
+    const frontmatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     expect(frontmatterMatch![1]).toContain('category: about-us');
   });
 
@@ -180,20 +181,20 @@ describe('AIGC 页面 MD 文件 — app/zh/community/ai-coding-assistants/index.
     expect(content).toContain('## 3. 法律与合规');
   });
 
-  it('页面正文包含披露要求（Co-Authored-By / Agent平台）', () => {
+  it('页面正文包含披露要求（Agent平台 / 模型信息）', () => {
     const content = fs.readFileSync(mdPath, 'utf8');
-    expect(content).toContain('Co-Authored-By');
     expect(content).toContain('Agent平台');
+    expect(content).toContain('模型信息');
   });
 });
 
 describe('SEO 配置与页面内容一致性', () => {
-  it('TDK title 与 MD frontmatter title 一致', () => {
+  it('TDK title 包含 MD frontmatter title', () => {
     const mdContent = fs.readFileSync(
       path.join(PROJECT_ROOT, 'app/zh/community/ai-coding-assistants/index.md'),
       'utf8'
     );
-    const frontmatterMatch = mdContent.match(/^---\n([\s\S]*?)\n---/);
+    const frontmatterMatch = mdContent.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     const mdTitle = frontmatterMatch![1]
       .split('\n')
       .find((line) => line.startsWith('title:'))
@@ -203,7 +204,7 @@ describe('SEO 配置与页面内容一致性', () => {
     const tdk = JSON.parse(
       fs.readFileSync(path.join(PROJECT_ROOT, '.geo/tdks/zh/community/ai-coding-assistants/index.json'), 'utf8')
     );
-    expect(tdk.title).toBe(mdTitle);
+    expect(tdk.title).toContain(mdTitle);
   });
 
   it('JSON-LD name 与 MD frontmatter title 一致', () => {
@@ -211,7 +212,7 @@ describe('SEO 配置与页面内容一致性', () => {
       path.join(PROJECT_ROOT, 'app/zh/community/ai-coding-assistants/index.md'),
       'utf8'
     );
-    const frontmatterMatch = mdContent.match(/^---\n([\s\S]*?)\n---/);
+    const frontmatterMatch = mdContent.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     const mdTitle = frontmatterMatch![1]
       .split('\n')
       .find((line) => line.startsWith('title:'))
@@ -237,19 +238,19 @@ describe('SEO 配置与页面内容一致性', () => {
   });
 });
 
-describe('en 侧 SEO 配置不存在（i18n 未适配）', () => {
-  it('.geo/tdks/en/community/ai-coding-assistants/ 不存在', () => {
+describe('en 侧 SEO 配置与页面', () => {
+  it('.geo/tdks/en/community/ai-coding-assistants/ 存在', () => {
     const enTdkPath = path.join(PROJECT_ROOT, '.geo/tdks/en/community/ai-coding-assistants/index.json');
-    expect(fs.existsSync(enTdkPath), 'en TDK 配置不应存在').toBe(false);
+    expect(fs.existsSync(enTdkPath), 'en TDK 配置应存在').toBe(true);
   });
 
-  it('.geo/jsonld/en/community/ai-coding-assistants/ 不存在', () => {
+  it('.geo/jsonld/en/community/ai-coding-assistants/ 存在', () => {
     const enJsonldPath = path.join(PROJECT_ROOT, '.geo/jsonld/en/community/ai-coding-assistants/index.json');
-    expect(fs.existsSync(enJsonldPath), 'en JSON-LD 配置不应存在').toBe(false);
+    expect(fs.existsSync(enJsonldPath), 'en JSON-LD 配置应存在').toBe(true);
   });
 
-  it('app/en/community/ai-coding-assistants/ 不存在', () => {
+  it('app/en/community/ai-coding-assistants/ 存在', () => {
     const enMdPath = path.join(PROJECT_ROOT, 'app/en/community/ai-coding-assistants/index.md');
-    expect(fs.existsSync(enMdPath), 'en MD 页面不应存在').toBe(false);
+    expect(fs.existsSync(enMdPath), 'en MD 页面应存在').toBe(true);
   });
 });

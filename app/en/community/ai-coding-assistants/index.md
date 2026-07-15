@@ -27,7 +27,7 @@ This policy applies to all forms of contributions submitted to the openEuler com
 
 * **Source code and scripts**：including various core code, test cases, and build scripts.
 * **Technical documents and community content**：including API references, deployment guides, release logs, and Wiki pages.
-* **Configurations and metadata**：including RPM Spec files, Containerfiles/Dockerfiles, and CI/CD configuration files.
+* **Configurations and metadata**：including Containerfiles/Dockerfiles, and CI/CD configuration files.
 
 ## 3. Legal & Compliance
 
@@ -54,8 +54,8 @@ Pull request template:
 ### AI involvement in this PR:
 []  No
 [x]  Yes
-__1. AI agent platform: Claude Code 2.1.156
-__2. AI model: DeepSeek-V3
+__1. Agent platform: Claude Code 2.1.156
+__2. Model: DeepSeek-V3
 __3. Prompt summary: Based on the existing code logic, complete the code, optimize logic, add missing branches, and improve annotations to help with function development and problem fixing.
 
 ### Notes for reviewers:
