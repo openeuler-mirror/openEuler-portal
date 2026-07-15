@@ -2,6 +2,44 @@ export default {
   zh: {
     COMMERCIAL_RELEASE_LIST: [
       {
+        NAME: '麒麟信安 Kylinsec V6 SP1',
+        DOWNLOAD_URL: 'https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/',
+        DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
+        MANUFACTURER: '麒麟信安 Kylinsec',
+        PUBLISH_DATE: '2026/06',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/x86_64/',
+            ARCH: 'x86_64',
+          },
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/aarch64/',
+            ARCH: 'AArch64',
+          },
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/loongarch64/',
+            ARCH: 'LoongArch64',
+          },
+        ],
+      },
+      {
+        NAME: '麒麟信安 Kylinsec V3.4.5-Update2',
+        DOWNLOAD_URL: 'https://mirrorlists.kylinsec.com.cn/iso/V3.4-5-update2/',
+        DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
+        MANUFACTURER: '麒麟信安 Kylinsec',
+        PUBLISH_DATE: '2026/06',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V3.4-5-update2/x86_64/',
+            ARCH: 'x86_64',
+          },
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V3.4-5-update2/aarch64/',
+            ARCH: 'AArch64',
+          },
+        ],
+      },
+      {
         NAME: '青云 PrimusOS 操作系统 24.03 LTS SP1',
         DOWNLOAD_URL: 'https://www.qingcloud.com',
         DESC: '青云 PrimusOS 操作系统 24.03 LTS SP1 是青云科技依托 Linux 内核，深度融合 openEuler 等主流开源技术，自主打造的新一代安全可靠、高性能的操作系统。该系统全面支持 x86、ARM 等主流处理器架构，可有效支撑数据中心核心业务的稳定运行。面向云计算、数据库、大数据、人工智能及网络安全等关键应用场景，PrimusOS 提供了坚实可靠的底层支撑，致力于满足金融、政府、企业、运营商等行业的数字化转型需求，是国产化环境下领先的数字基础设施操作系统解决方案。',
@@ -43,6 +81,27 @@ export default {
           },
           {
             ARCH: 'AArch64',
+          },
+        ],
+      },
+      {
+        NAME: '麒麟信安 Kylinsec V6',
+        DOWNLOAD_URL: 'https://mirrorlists.kylinsec.com.cn/iso/V6/',
+        DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
+        MANUFACTURER: '麒麟信安 Kylinsec',
+        PUBLISH_DATE: '2025/01',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V6/x86_64/',
+            ARCH: 'x86_64',
+          },
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V6/aarch64/',
+            ARCH: 'AArch64',
+          },
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V6/loongarch64/',
+            ARCH: 'LoongArch64',
           },
         ],
       },
@@ -112,25 +171,22 @@ export default {
       },
       {
         NAME: '麒麟信安 Kylinsec V3.5.2',
-        DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.5.2/',
-        DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国>内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
+        DOWNLOAD_URL: 'https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/',
+        DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
         MANUFACTURER: '麒麟信安 Kylinsec',
         PUBLISH_DATE: '2023/09',
         DETAILED_LINK: [
           {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.5.2/isos/x86_64/',
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/x86_64/',
             ARCH: 'x86_64',
           },
           {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.5.2/isos/aarch64/',
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/aarch64/',
             ARCH: 'AArch64',
           },
           {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.5.2/isos/loongarch64/',
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/loongarch64/',
             ARCH: 'LoongArch64',
-          },
-          {
-            ARCH: 'sw_64',
           },
         ],
       },
@@ -364,57 +420,6 @@ export default {
         PUBLISH_DATE: '2020/07',
       },
       {
-        NAME: '麒麟信安 Kylinsec V3.5.1',
-        DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.5-1/',
-        DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
-        MANUFACTURER: '麒麟信安 Kylinsec',
-        PUBLISH_DATE: '',
-        DETAILED_LINK: [
-          {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.5-1/isos/x86_64/',
-            ARCH: 'x86_64',
-          },
-          {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.5-1/isos/aarch64/',
-            ARCH: 'AArch64',
-          },
-        ],
-      },
-      {
-        NAME: '麒麟信安 Kylinsec V3.4-5',
-        DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.4-5/',
-        DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
-        MANUFACTURER: '麒麟信安 Kylinsec',
-        PUBLISH_DATE: '',
-        DETAILED_LINK: [
-          {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.4-5/isos/x86_64/',
-            ARCH: 'x86_64',
-          },
-          {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.4-5/isos/aarch64/',
-            ARCH: 'AArch64',
-          },
-        ],
-      },
-      {
-        NAME: '麒麟信安 Kylinsec V3.4-4',
-        DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.4-4/',
-        DESC: '麒麟信安操作系统基于Linux内核开发，以openEuler LTS为基础，具备高安全、高可靠、强实时、可定制等特性，与国内主要软硬件厂商共建生态体系。该系统连续七次通过公安部四级测评，承担多项国家级重大专项任务，为国防、政务、能源、交通等领域提供行业级操作系统解决方案。',
-        MANUFACTURER: '麒麟信安 Kylinsec',
-        PUBLISH_DATE: '',
-        DETAILED_LINK: [
-          {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.4-4/isos/x86_64/',
-            ARCH: 'x86_64',
-          },
-          {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.4-4/isos/aarch64/',
-            ARCH: 'AArch64',
-          },
-        ],
-      },
-      {
         NAME: 'HopeEdge',
         DOWNLOAD_URL: 'http://webapp.hoperun.com:8007/HopeEdge/',
         DESC: '物联网边缘计算操作系统HopeEdge是基于openEuler构建的、面向IoT场景的边缘计算操作系统，具备轻量安全、自主创新、高效互联、快速部署四大关键特性；提供设备管理、数据采集、云边协同、人工智能等功能。',
@@ -478,6 +483,86 @@ export default {
   en: {
     COMMERCIAL_RELEASE_LIST: [
       {
+        NAME: 'Kylinsec V6 SP1',
+        DOWNLOAD_URL: 'https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/',
+        DESC: '',
+        MANUFACTURER: 'Kylinsec',
+        PUBLISH_DATE: '2026/06',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/x86_64/',
+            ARCH: 'x86_64',
+          },
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/aarch64/',
+            ARCH: 'AArch64',
+          },
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/loongarch64/',
+            ARCH: 'LoongArch64',
+          },
+        ],
+      },
+      {
+        NAME: 'Kylinsec V3.4.5-Update2',
+        DOWNLOAD_URL: 'https://mirrorlists.kylinsec.com.cn/iso/V3.4-5-update2/',
+        DESC: '',
+        MANUFACTURER: 'Kylinsec',
+        PUBLISH_DATE: '2026/06',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V3.4-5-update2/x86_64/',
+            ARCH: 'x86_64',
+          },
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V3.4-5-update2/aarch64/',
+            ARCH: 'AArch64',
+          },
+        ],
+      },
+      {
+        NAME: 'Kylinsec V6',
+        DOWNLOAD_URL: 'https://mirrorlists.kylinsec.com.cn/iso/V6/',
+        DESC: '',
+        MANUFACTURER: 'Kylinsec',
+        PUBLISH_DATE: '2025/01',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V6/x86_64/',
+            ARCH: 'x86_64',
+          },
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V6/aarch64/',
+            ARCH: 'AArch64',
+          },
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V6/loongarch64/',
+            ARCH: 'LoongArch64',
+          },
+        ],
+      },
+      {
+        NAME: 'Kylinsec V3.5.2',
+        DOWNLOAD_URL: 'https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/',
+        DESC: '',
+        MANUFACTURER: 'Kylinsec',
+        PUBLISH_DATE: '2023/09',
+        DETAILED_LINK: [
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/x86_64/',
+            ARCH: 'x86_64',
+          },
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/aarch64/',
+            ARCH: 'AArch64',
+          },
+          {
+            LINK: 'https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/loongarch64/',
+            ARCH: 'LoongArch64',
+          },
+        ],
+      },
+      {
         NAME: 'TurboLinux Enterprise server v15',
         DOWNLOAD_URL: 'http://download.turbolinux.com.cn:8013/',
         DESC: 'Turbolinux Enterprise Server 15 (TLES15) is the enterprise commercial Linux distribution based on the openEuler community, designed for the x86_64 and AArch64 processor architecture.',
@@ -518,22 +603,6 @@ export default {
           },
           {
             LINK: 'http://webapp.hoperun.com:8007/HopeStage/aarch64/',
-            ARCH: 'AArch64',
-          },
-        ],
-      },
-      {
-        NAME: 'Kylinsec',
-        DOWNLOAD_URL: 'https://mirrors.kylinsec.com.cn/V3.4-4/',
-        MANUFACTURER: 'Kylinsec',
-        PUBLISH_DATE: '',
-        DETAILED_LINK: [
-          {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.4-4/isos/x86_64/',
-            ARCH: 'x86_64',
-          },
-          {
-            LINK: 'https://mirrors.kylinsec.com.cn/V3.4-4/isos/aarch64/',
             ARCH: 'AArch64',
           },
         ],
