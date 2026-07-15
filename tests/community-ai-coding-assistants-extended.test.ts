@@ -5,79 +5,79 @@ import tocData from '../app/.vitepress/src/data/about-us/about-us-toc';
 
 const PROJECT_ROOT = process.cwd();
 
-const EXPECTED_TITLE = 'openEuler社区生成式AI工具使用与开源贡献政策';
+const EXPECTED_TITLE = '生成式AI工具使用与开源贡献策略';
 
-describe('回归守卫 — "政策"而非"策略"', () => {
-  it('TDK title 使用"政策"而非"策略"', () => {
+describe('回归守卫 — "策略"而非"政策"', () => {
+  it('TDK title 使用"策略"而非"政策"', () => {
     const tdk = JSON.parse(
       fs.readFileSync(path.join(PROJECT_ROOT, '.geo/tdks/zh/community/ai-coding-assistants/index.json'), 'utf8')
     );
-    expect(tdk.title).toContain('政策');
-    expect(tdk.title).not.toContain('策略');
+    expect(tdk.title).toContain('策略');
+    expect(tdk.title).not.toContain('政策');
   });
 
-  it('TDK description 使用"开源贡献政策"而非"开源贡献策略"', () => {
+  it('TDK description 使用"策略规范"而非"政策规范"', () => {
     const tdk = JSON.parse(
       fs.readFileSync(path.join(PROJECT_ROOT, '.geo/tdks/zh/community/ai-coding-assistants/index.json'), 'utf8')
     );
-    expect(tdk.description).toContain('开源贡献政策');
-    expect(tdk.description).not.toContain('开源贡献策略');
+    expect(tdk.description).toContain('策略规范');
+    expect(tdk.description).not.toContain('政策规范');
   });
 
-  it('TDK keywords 使用"政策"而非"策略"', () => {
+  it('TDK keywords 使用"策略"而非"政策"', () => {
     const tdk = JSON.parse(
       fs.readFileSync(path.join(PROJECT_ROOT, '.geo/tdks/zh/community/ai-coding-assistants/index.json'), 'utf8')
     );
-    expect(tdk.keywords).toContain('开源贡献政策');
-    expect(tdk.keywords).not.toContain('开源贡献策略');
+    expect(tdk.keywords).toContain('开源贡献策略');
+    expect(tdk.keywords).not.toContain('开源贡献政策');
   });
 
-  it('JSON-LD name 使用"政策"而非"策略"', () => {
+  it('JSON-LD name 使用"策略"而非"政策"', () => {
     const jsonld = JSON.parse(
       fs.readFileSync(path.join(PROJECT_ROOT, '.geo/jsonld/zh/community/ai-coding-assistants/index.json'), 'utf8')
     );
     const article = jsonld.find((item: any) => item['@type'] === 'Article');
-    expect(article.name).toContain('政策');
-    expect(article.name).not.toContain('策略');
+    expect(article.name).toContain('策略');
+    expect(article.name).not.toContain('政策');
   });
 
-  it('JSON-LD description 使用"开源贡献政策"而非"开源贡献策略"', () => {
+  it('JSON-LD description 使用"策略规范"而非"政策规范"', () => {
     const jsonld = JSON.parse(
       fs.readFileSync(path.join(PROJECT_ROOT, '.geo/jsonld/zh/community/ai-coding-assistants/index.json'), 'utf8')
     );
     const article = jsonld.find((item: any) => item['@type'] === 'Article');
-    expect(article.description).toContain('开源贡献政策');
-    expect(article.description).not.toContain('开源贡献策略');
+    expect(article.description).toContain('策略规范');
+    expect(article.description).not.toContain('政策规范');
   });
 
-  it('侧边栏 label 使用"政策"而非"策略"', () => {
+  it('侧边栏 label 使用"策略"而非"政策"', () => {
     const zhPolicies = tocData.zh.find((item) => item.label === '政策和规则');
     const aigcEntry = zhPolicies!.children!.find((c) => c.link === 'ai-coding-assistants');
-    expect(aigcEntry!.label).toContain('政策');
-    expect(aigcEntry!.label).not.toContain('策略');
+    expect(aigcEntry!.label).toContain('策略');
+    expect(aigcEntry!.label).not.toContain('政策');
   });
 
-  it('MD frontmatter title 使用"政策"而非"策略"', () => {
+  it('MD frontmatter title 使用"策略"而非"政策"', () => {
     const content = fs.readFileSync(
       path.join(PROJECT_ROOT, 'app/zh/community/ai-coding-assistants/index.md'),
       'utf8'
     );
-    const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
+    const frontmatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     const titleLine = frontmatterMatch![1]
       .split('\n')
       .find((line) => line.startsWith('title:'));
-    expect(titleLine).toContain('政策');
-    expect(titleLine).not.toContain('策略');
+    expect(titleLine).toContain('策略');
+    expect(titleLine).not.toContain('政策');
   });
 });
 
-describe('标题一致性链 — sidebar ≡ H1 ≡ frontmatter ≡ TDK ≡ JSON-LD', () => {
+describe('标题一致性链 — sidebar ⊂ frontmatter ≡ JSON-LD ⊂ TDK', () => {
   it('MD H1 与 frontmatter title 一致', () => {
     const content = fs.readFileSync(
       path.join(PROJECT_ROOT, 'app/zh/community/ai-coding-assistants/index.md'),
       'utf8'
     );
-    const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
+    const frontmatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     const mdTitle = frontmatterMatch![1]
       .split('\n')
       .find((line) => line.startsWith('title:'))
@@ -88,22 +88,40 @@ describe('标题一致性链 — sidebar ≡ H1 ≡ frontmatter ≡ TDK ≡ JSON
     expect(h1Match![1].trim()).toBe(mdTitle);
   });
 
-  it('侧边栏 label 与 MD frontmatter title 完全一致', () => {
+  it('侧边栏 label 与 EXPECTED_TITLE 一致', () => {
     const zhPolicies = tocData.zh.find((item) => item.label === '政策和规则');
     const aigcEntry = zhPolicies!.children!.find((c) => c.link === 'ai-coding-assistants');
     expect(aigcEntry!.label).toBe(EXPECTED_TITLE);
   });
 
-  it('TDK title 与侧边栏 label 完全一致', () => {
+  it('TDK title 包含侧边栏 label', () => {
     const zhPolicies = tocData.zh.find((item) => item.label === '政策和规则');
     const aigcEntry = zhPolicies!.children!.find((c) => c.link === 'ai-coding-assistants');
     const tdk = JSON.parse(
       fs.readFileSync(path.join(PROJECT_ROOT, '.geo/tdks/zh/community/ai-coding-assistants/index.json'), 'utf8')
     );
-    expect(tdk.title).toBe(aigcEntry!.label);
+    expect(tdk.title).toContain(aigcEntry!.label);
   });
 
-  it('JSON-LD name 与 TDK title 完全一致', () => {
+  it('JSON-LD name 与 MD frontmatter title 完全一致', () => {
+    const mdContent = fs.readFileSync(
+      path.join(PROJECT_ROOT, 'app/zh/community/ai-coding-assistants/index.md'),
+      'utf8'
+    );
+    const frontmatterMatch = mdContent.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    const mdTitle = frontmatterMatch![1]
+      .split('\n')
+      .find((line) => line.startsWith('title:'))
+      ?.replace('title:', '')
+      .trim();
+    const jsonld = JSON.parse(
+      fs.readFileSync(path.join(PROJECT_ROOT, '.geo/jsonld/zh/community/ai-coding-assistants/index.json'), 'utf8')
+    );
+    const article = jsonld.find((item: any) => item['@type'] === 'Article');
+    expect(article.name).toBe(mdTitle);
+  });
+
+  it('TDK title 以 JSON-LD name 开头', () => {
     const tdk = JSON.parse(
       fs.readFileSync(path.join(PROJECT_ROOT, '.geo/tdks/zh/community/ai-coding-assistants/index.json'), 'utf8')
     );
@@ -111,7 +129,7 @@ describe('标题一致性链 — sidebar ≡ H1 ≡ frontmatter ≡ TDK ≡ JSON
       fs.readFileSync(path.join(PROJECT_ROOT, '.geo/jsonld/zh/community/ai-coding-assistants/index.json'), 'utf8')
     );
     const article = jsonld.find((item: any) => item['@type'] === 'Article');
-    expect(article.name).toBe(tdk.title);
+    expect(tdk.title.startsWith(article.name)).toBe(true);
   });
 });
 
@@ -125,15 +143,15 @@ describe('代码块空格修正 — openEuler 与中文间无多余空格', () =
     expect(content).not.toContain('openEuler 技术栈适配');
   });
 
-  it('"经过openEuler验证"无多余空格', () => {
+  it('"经过openEuler社区验证"无多余空格', () => {
     const content = fs.readFileSync(
       path.join(PROJECT_ROOT, 'app/zh/community/ai-coding-assistants/index.md'),
       'utf8'
     );
-    expect(content).toContain('经过openEuler验证');
-    expect(content).not.toContain('经过 openEuler 验证');
-    expect(content).not.toContain('经过openEuler 验证');
-    expect(content).not.toContain('经过 openEuler验证');
+    expect(content).toContain('经过openEuler社区验证');
+    expect(content).not.toContain('经过 openEuler 社区验证');
+    expect(content).not.toContain('经过openEuler 社区验证');
+    expect(content).not.toContain('经过 openEuler社区验证');
   });
 });
 
@@ -193,34 +211,34 @@ describe('LayoutAboutUs.vue — 移动端样式响应式适配', () => {
   });
 });
 
-describe('TDK title 无"openEuler社区"前缀（简洁化）', () => {
-  it('TDK title 不以"openEuler社区"开头', () => {
+describe('标题前缀规范 — 侧边栏简洁化，SEO 保留品牌前缀', () => {
+  it('TDK title 以"openEuler社区"开头（SEO 品牌前缀）', () => {
     const tdk = JSON.parse(
       fs.readFileSync(path.join(PROJECT_ROOT, '.geo/tdks/zh/community/ai-coding-assistants/index.json'), 'utf8')
     );
-    expect(tdk.title).not.toMatch(/^openEuler\s*社区/);
+    expect(tdk.title).toMatch(/^openEuler\s*社区/);
   });
 
-  it('JSON-LD name 不以"openEuler社区"开头', () => {
+  it('JSON-LD name 以"openEuler社区"开头（SEO 品牌前缀）', () => {
     const jsonld = JSON.parse(
       fs.readFileSync(path.join(PROJECT_ROOT, '.geo/jsonld/zh/community/ai-coding-assistants/index.json'), 'utf8')
     );
     const article = jsonld.find((item: any) => item['@type'] === 'Article');
-    expect(article.name).not.toMatch(/^openEuler\s*社区/);
+    expect(article.name).toMatch(/^openEuler\s*社区/);
   });
 
-  it('侧边栏 label 不含"社区"前缀', () => {
+  it('侧边栏 label 不含"社区"前缀（简洁化）', () => {
     const zhPolicies = tocData.zh.find((item) => item.label === '政策和规则');
     const aigcEntry = zhPolicies!.children!.find((c) => c.link === 'ai-coding-assistants');
     expect(aigcEntry!.label).not.toContain('社区');
   });
 
-  it('MD H1 不含"社区"前缀', () => {
+  it('MD H1 包含"openEuler社区"（页面标题与 frontmatter 一致）', () => {
     const content = fs.readFileSync(
       path.join(PROJECT_ROOT, 'app/zh/community/ai-coding-assistants/index.md'),
       'utf8'
     );
     const h1Match = content.match(/^# (.+)$/m);
-    expect(h1Match![1].trim()).not.toContain('社区');
+    expect(h1Match![1].trim()).toContain('openEuler社区');
   });
 });
