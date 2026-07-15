@@ -7,8 +7,6 @@ import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
-import { vAnalytics } from '~@/directive/analytics';
-
 import HomeBanner from './HomeBanner.vue';
 import HomeDisplayZone from './HomeDisplayZone.vue';
 import HomeIntro from './HomeIntro.vue';

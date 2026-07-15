@@ -5,7 +5,6 @@ import { useCommon } from '@/stores/common';
 import { useLocale } from '~@/composables/useLocale';
 
 import displayZoneData from '~@/data/home/display-zone';
-import { vAnalytics } from '~@/directive/analytics';
 
 const { locale } = useLocale();
 const { theme } = storeToRefs(useCommon());

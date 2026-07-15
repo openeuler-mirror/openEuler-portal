@@ -15,7 +15,6 @@ import blogBg2 from '~@/assets/category/home/trend/blog-bg2.jpg';
 import blogBg3 from '~@/assets/category/home/trend/blog-bg3.jpg';
 
 import IconUser from '~icons/app-new/icon-user.svg';
-import { vAnalytics } from '~@/directive/analytics';
 
 const { t, locale } = useLocale();
 const { gtLaptop, gtPad, gtPadV, gtPhone, lePadV } = useScreen();

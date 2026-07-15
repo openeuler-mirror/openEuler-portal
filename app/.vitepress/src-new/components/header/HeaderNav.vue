@@ -15,7 +15,6 @@ import HeaderLogin from './HeaderLogin.vue';
 import HeaderSearch from './HeaderSearch.vue';
 import NavLink from './NavLink.vue';
 import { useLocale } from '~@/composables/useLocale';
-import { vAnalytics } from '~@/directive/analytics';
 
 const { lang } = useData();
 const { t } = useLocale();

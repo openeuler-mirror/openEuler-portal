@@ -3,7 +3,6 @@ import { ref } from 'vue';
 import { OTag, OIcon } from '@opensig/opendesign';
 
 import NavLink from './NavLink.vue';
-import { vAnalytics } from '~@/directive/analytics';
 import { PropType } from 'vue';
 
 const props = defineProps({

@@ -23,7 +23,6 @@ import vitality from '~@/assets/category/home/play-community/vitality.svg';
 import blue from '~@/assets/category/home/play-community/blue_light.png';
 import blueDark from '~@/assets/category/home/play-community/blue_dark.png';
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
-import { vAnalytics } from '~@/directive/analytics';
 
 import { type VitalityValueT } from '~@/@type/type-home';
 import { useI18n } from 'vue-i18n';

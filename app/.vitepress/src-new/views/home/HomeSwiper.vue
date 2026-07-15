@@ -5,7 +5,6 @@ import type { PropType } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useCommon } from '@/stores/common';
 import { useLocale } from '~@/composables/useLocale';
-import { vAnalytics } from '~@/directive/analytics';
 
 export interface PublisherT {
   logo: {
