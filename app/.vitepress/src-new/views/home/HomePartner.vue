@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import AppSection from '~@/components/AppSection.vue';
 import HomeSwiper from './HomeSwiper.vue';
-import { vAnalytics } from '~@/directive/analytics';
 
 import { publisher } from '~@/data/home/publisher';
 

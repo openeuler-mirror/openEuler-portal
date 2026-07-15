@@ -16,7 +16,6 @@ import { useScreen } from '~@/composables/useScreen';
 // TODO:风格切换代码待整改
 import { useCommon } from '@/stores/common';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
-import { vAnalytics } from '~@/directive/analytics';
 
 const commonStore = useCommon();
 const isLight = computed(() => {

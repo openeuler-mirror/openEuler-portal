@@ -4,7 +4,6 @@ import { OFigure, OLink } from '@opensig/opendesign';
 import { storeToRefs } from 'pinia';
 import { useLocale } from '~@/composables/useLocale';
 import { useCommon } from '@/stores/common';
-import { vAnalytics } from '~@/directive/analytics';
 import { friendlyCommunityConfig } from '~@/data/home/friendly-community';
 
 const { theme } = storeToRefs(useCommon());

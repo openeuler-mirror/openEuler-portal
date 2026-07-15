@@ -3,7 +3,6 @@ import { isArray, OLink } from '@opensig/opendesign';
 
 import OIcon from 'opendesign/icon/OIcon.vue';
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
-import { vAnalytics } from '~@/directive/analytics';
 
 interface SectionPropsT {
   title?: string | Array<string>;

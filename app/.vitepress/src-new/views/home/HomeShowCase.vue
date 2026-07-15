@@ -22,7 +22,6 @@ import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 import { casesZh, casesEn } from '~@/data/home/case';
 
 import { getHomeShowCases } from '~@/api/api-search';
-import { vAnalytics } from '~@/directive/analytics';
 import useInViewDuration from '~@/composables/useInViewDuration';
 import { oaReport } from '@opendesign-plus/plugins/analytics';
 

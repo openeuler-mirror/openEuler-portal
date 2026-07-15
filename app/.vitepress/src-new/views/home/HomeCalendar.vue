@@ -41,7 +41,6 @@ import cubeTowDark from '~@/assets/category/home/calendar/cube-2_dark.png';
 
 import AppSection from '~@/components/AppSection.vue';
 import { oaReport } from '@opendesign-plus/plugins/analytics';
-import { vAnalytics } from '~@/directive/analytics';
 import useInViewDuration from '~@/composables/useInViewDuration';
 
 import { getMeetingDateListApi, getMeetingListApi, getGroupInfosApi } from '~@/api/api-meeting';
