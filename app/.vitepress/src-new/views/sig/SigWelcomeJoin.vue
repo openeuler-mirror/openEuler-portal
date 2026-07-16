@@ -8,7 +8,7 @@ import { computed } from 'vue';
 import { useScreen } from '~@/composables/useScreen';
 
 import AppSection from '~@/components/AppSection.vue';
-import InlineSvg from '~@/components/InlineSvg.vue';
+import { createIcon } from '~@/components/createIcon';
 import { useI18n } from '~@/i18n';
 
 const { locale } = useLocale();
@@ -44,7 +44,7 @@ const reportLinkClick = (ev: Event) => {
       <template v-for="card in welcomeJoin" :key="card.title">
         <div class="card-item" v-analytics="reportLinkClick">
           <OIcon class="icon">
-            <InlineSvg :raw="card.icon" />
+            <component :is="createIcon(card.icon)" />
           </OIcon>
           <div class="sig-info">
             <div class="title">

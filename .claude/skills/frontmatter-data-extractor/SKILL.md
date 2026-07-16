@@ -129,35 +129,34 @@ SVG 资源在 yaml 中有两种写法，决定 Vite 返回值类型，进而决�
 
 > 因此：**需要作为 inline SVG 图标（继承 currentColor、暗黑切换）的 SVG，yaml 路径必须带 `?raw`**；作为普通位图使用的 SVG/位图，路径不带 `?raw`。
 
-#### 组件消费 SVG 字符串的三种方式
+#### 组件消费 SVG 字符串的两种方式
 
-1. **`InlineSvg` 组件**（推荐用于直接渲染）：`<InlineSvg :raw="item.icon" />`，把 SVG 字符串渲染为 inline SVG，支持 currentColor / 暗黑切换。适合 OIcon 包裹或需继承主题色的场景：
+1. **`createIcon` 函数**（推荐）：`createIcon(raw)` 把 SVG 字符串转成 Vue 组件，由 `v-dompurify-html` 全局指令统一消毒（SSR 阶段渲染空标签、客户端 mount 时填充）。来自 `~@/components/createIcon`。
 
-  ```vue
-  <OIcon class="icon"><InlineSvg :raw="isDark ? card.icon_dark : card.icon" /></OIcon>
-  ```
+   - **直接渲染**（OIcon 包裹 / 继承主题色）：用 `<component :is="createIcon(...)">` 就地包裹：
 
-2. **`createIcon` 函数**（推荐用于「期望 Vue 组件的 prop」）：`createIcon(raw)` 把 SVG 字符串转成 Vue 组件，传给期望组件的 prop（如 `OCard` 的 `:icon`、`OIcon` 的 `:is`）。
+     ```vue
+     <OIcon class="icon"><component :is="createIcon(isDark ? card.icon_dark : card.icon)" /></OIcon>
+     ```
 
-  - **关键约束：在模板传参处直接包裹，不要在 computed 里 `map` 数据再次转换 icon 字段**。在 computed 里 map 会产生额外的派生类型声明、且每次 locale 切换重复创建组件，徒增类型复杂度与开销。正确做法是数据 computed 保持原始结构，模板里就地包裹：
-    
-    ```vue
-    <!-- ✅ 正确：模板传参处直接包裹，数据 computed 保持原始结构 -->
-    <OCard :title="item.title" :detail="item.intro" :icon="createIcon(item.icon)" />
-    ```
+   - **作为组件 prop**（如 `OCard` 的 `:icon`）：传给期望组件的 prop：
 
-    ```ts
-    // ✅ 正确：computed 直接返回原始数据，不做字段转换
-    const typeOfMeeting = computed(
-      () => meetingGuideContent[locale.value].meeting_type
-    );
-    // ❌ 错误：在 computed 里 map 转换 icon，产生派生类型 + 重复创建
-    // const list = computed(() => data.value.map((item) => ({ ...item, icon: createIcon(item.icon) })));
-    ```
-    
-  - `createIcon` 来自 `~@/components/createIcon`，内部用 `h('span', { class: 'inline-svg', innerHTML: raw })` 渲染。
+     ```vue
+     <OCard :title="item.title" :detail="item.intro" :icon="createIcon(item.icon)" />
+     ```
 
-3. **`<img :src="item.icon" />`**：仅当 yaml 路径**不带 `?raw`**时使用，作为普通图片。
+   - **关键约束：在模板传参处直接包裹，不要在 computed 里 `map` 数据再次转换 icon 字段**。在 computed 里 map 会产生额外的派生类型声明、且每次 locale 切换重复创建组件，徒增类型复杂度与开销。正确做法是数据 computed 保持原始结构，模板里就地包裹：
+
+     ```ts
+     // ✅ 正确：computed 直接返回原始数据，不做字段转换
+     const typeOfMeeting = computed(
+       () => meetingGuideContent[locale.value].meeting_type
+     );
+     // ❌ 错误：在 computed 里 map 转换 icon，产生派生类型 + 重复创建
+     // const list = computed(() => data.value.map((item) => ({ ...item, icon: createIcon(item.icon) })));
+     ```
+
+2. **`<img :src="item.icon" />`**：仅当 yaml 路径**不带 `?raw`**时使用，作为普通图片。
 
 #### 原 unplugin-icons 来源（`~icons/xxx.svg`）的处理
 
@@ -166,14 +165,14 @@ unplugin-icons 的 `import iconX from '~icons/sig/xxx.svg'` 返回的是 **Vue �
 1. 找到对应 SVG 源文件（通常在 `app/.vitepress/src-new/assets/...` 下，按 `~icons` 别名解析）
 2. 复制到数据目录的 `images/`，**保留原文件名**
 3. yaml 中写 `./images/xxx.svg?raw`
-4. 组件改用 `InlineSvg` / `createIcon` 消费（见上）
+4. 组件改用 `createIcon` 消费（见上）
 
 #### 主题变体图标
 
 亮/暗双主题图标拆为 `icon_light` / `icon_dark` 两个字段，各指向 `./images/xxx_light.svg?raw` / `./images/xxx_dark.svg?raw`，组件按 `theme` 取值后再消费：
 
 ```vue
-<OIcon><InlineSvg :raw="isDark ? card.icon_dark : card.icon_light" /></OIcon>
+<OIcon><component :is="createIcon(isDark ? card.icon_dark : card.icon_light)" /></OIcon>
 ```
 
 ### 4. 编写 YAML 数据文件
@@ -360,7 +359,7 @@ const displayZone = computed(() =>
 - [ ] 图片已复制到 `.content/<path>/images/`，**文件名保留原名**；共用图不加后缀、不共用图加 `_zh`/`_en` 后缀、主题变体加 `_light`/`_dark` 后缀
 - [ ] yaml 中图片路径以 `./images/xxx.ext` 形式书写（**必须带 `./` 前缀**），可被 vite-plugin-content-yaml 识别
 - [ ] 需作为 inline SVG 图标的 SVG 路径带 `?raw` 后缀（`./images/xxx.svg?raw`）；普通位图/`<img>` 用法不带 `?raw`
-- [ ] SVG 图标消费方式正确：`InlineSvg`（直接渲染）或 `createIcon`（作为组件 prop，在模板传参处包裹，**不在 computed 里 map 转换**）
+- [ ] SVG 图标消费方式正确：`createIcon`（在模板传参处包裹，**不在 computed 里 map 转换**）
 - [ ] 文件顶部及每个数据板块上方有 `#` 注释说明
 - [ ] 不同数据板块之间空一行分隔
 - [ ] 多个数据板块按页面从上到下的视觉顺序排列

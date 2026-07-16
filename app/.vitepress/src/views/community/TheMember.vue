@@ -8,8 +8,6 @@ import { useData } from 'vitepress';
 import memberContent from '#content/community/member';
 import { useCommon } from '@/stores/common';
 
-console.log(memberContent);
-
 const { lang } = useData();
 
 const i18n = useI18n();

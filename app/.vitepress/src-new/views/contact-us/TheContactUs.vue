@@ -25,12 +25,7 @@ const contentData = computed(() =>
   isZh.value ? contactUsContent.zh : contactUsContent.en
 );
 
-const contactData = computed(() =>
-  contentData.value.contact_data.map((item) => ({
-    ...item,
-    icon: createIcon(item.icon),
-  }))
-);
+const contactData = computed(() => contentData.value.contact_data);
 
 const flexGap = computed(() =>
   isPhone.value ? '12px 12px' : lePad.value ? '16px 16px' : '32px 32px'
@@ -48,12 +43,7 @@ const followLinks = computed(() =>
   }))
 );
 
-const handyMaterialsList = computed(() =>
-  contentData.value.handy_materials.map((item) => ({
-    ...item,
-    icon: createIcon(item.icon),
-  }))
-);
+const handyMaterialsList = computed(() => contentData.value.handy_materials);
 </script>
 <template>
   <BannerLevel2
@@ -78,7 +68,7 @@ const handyMaterialsList = computed(() =>
       >
         <OCard
           :title="item.title"
-          :icon="item.icon"
+          :icon="createIcon(item.icon)"
           hoverable
           :layout="lePad ? 'h' : 'v'"
           class="community-contact"
@@ -207,7 +197,7 @@ const handyMaterialsList = computed(() =>
           target="_blank"
           rel="noopener noreferrer"
           hoverable
-          :icon="item.icon"
+          :icon="createIcon(item.icon)"
           class="handy-materials"
         >
         </OCard>

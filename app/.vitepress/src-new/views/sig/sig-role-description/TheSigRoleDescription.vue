@@ -11,7 +11,7 @@ import {
 import BannerLevel3 from '~@/components/BannerLevel3.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 import AppSection from '~@/components/AppSection.vue';
-import InlineSvg from '~@/components/InlineSvg.vue';
+import { createIcon } from '~@/components/createIcon';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -199,7 +199,7 @@ const reportSectionLinkClick = (
 
       <div class="member-card-list">
         <div v-for="item in communityMember.cards" :key="item.name" class="member-card-item">
-          <OIcon class="item-icon"> <InlineSvg :raw="item.icon" /></OIcon>
+          <OIcon class="item-icon"> <component :is="createIcon(item.icon)" /></OIcon>
           <div class="item-right">
             <div class="item-title">{{ item.name }}</div>
             <div class="item-desc" v-dompurify-html="item.desc" v-analytics="(ev: Event) => reportMemberCardLinkClick(ev, item.name)"></div>

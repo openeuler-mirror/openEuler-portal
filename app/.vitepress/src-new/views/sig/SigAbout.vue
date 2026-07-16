@@ -8,7 +8,7 @@ import { useScreen } from '~@/composables/useScreen';
 import { OIcon, OCard, OCollapse, OCollapseItem } from '@opensig/opendesign';
 
 import AppSection from '~@/components/AppSection.vue';
-import InlineSvg from '~@/components/InlineSvg.vue';
+import { createIcon } from '~@/components/createIcon';
 import sigProcess from '~icons/sig/sig-process.svg';
 import processImg from '~@/assets/category/sig/process.png';
 
@@ -69,7 +69,7 @@ const processDetail = computed(() => {
         >
           <template #title>
             <OIcon class="icon">
-              <InlineSvg :raw="isDark ? card.iconDark : card.icon" />
+              <component :is="createIcon(isDark ? card.icon_dark : card.icon)" />
             </OIcon>
             <div class="title">
               {{ card.title }}
@@ -115,7 +115,7 @@ const processDetail = computed(() => {
               }"
             >
               <OIcon class="icon">
-                <InlineSvg :raw="step.icon" />
+                <component :is="createIcon(step.icon)" />
               </OIcon>
               <div class="step-info">
                 <div class="num">

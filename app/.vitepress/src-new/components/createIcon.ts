@@ -1,9 +1,10 @@
-import { defineComponent, h, type Component } from 'vue';
+import { defineComponent, h, withDirectives, resolveDirective, type Component } from 'vue';
 
 export function createIcon(raw: string): Component {
   return defineComponent({
     render() {
-      return h('span', { class: 'inline-svg', innerHTML: raw });
+      const dir = resolveDirective('dompurify-html')!;
+      return withDirectives(h('span', { class: 'inline-svg' }), [[dir, raw]]);
     },
   });
 }

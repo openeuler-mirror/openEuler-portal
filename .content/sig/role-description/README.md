@@ -27,7 +27,7 @@ SIG 角色说明页（`/zh/sig/role-description/`、`/en/sig/role-description/`�
 - **字段用基线名（snake_case）**：如 `view_detail`、`card_point_bg`、`bg_light` / `bg_dark`、`bg_mb_light` / `bg_mb_dark`，禁止 `viewDetail` / `cardPointBg` / `bgDark` 等驼峰
 - **主题变体用 `_light` / `_dark` 后缀**：角色卡片背景图区分亮色/暗色主题（contributor/committer/maintainer 的 cards）；community_member.types 仅单一背景（无主题变体），保留 `bg` / `bg_mb`
 - **图片就近存放**：`images/` 下，文件名保留原名；zh/en 共用图不加后缀
-- **SVG 图标用 `?raw` 后缀**：`icon: ./images/xxx.svg?raw`，vite-plugin-content-yaml 透传 `?raw` 由 Vite 返回 SVG 字符串，组件用 InlineSvg 渲染（支持 currentColor / 暗黑切换）
+- **SVG 图标用 `?raw` 后缀**：`icon: ./images/xxx.svg?raw`，vite-plugin-content-yaml 透传 `?raw` 由 Vite 返回 SVG 字符串，组件用 createIcon 渲染（支持 currentColor / 暗黑切换）
 - **可选字段省略**：`requirement`（贡献者卡片无）、`notice`（仅 contributor 第二张卡有）、`desc` 为空时写空字符串 `''`
 
 ## 消费方式

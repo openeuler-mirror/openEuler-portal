@@ -3,7 +3,7 @@
 // 顶层按 locale 索引（zh / en），每个 locale 下为 SigListDataT 结构。
 //
 // icon 字段为 SVG 路径带 `?raw` 后缀（`./images/xxx.svg?raw`），vite-plugin-content-yaml
-// 透传 `?raw` 由 Vite 返回 SVG 字符串，组件用 InlineSvg 渲染成 inline SVG（支持 currentColor/暗黑切换）。
+// 透传 `?raw` 由 Vite 返回 SVG 字符串，组件用 createIcon 渲染成 inline SVG（支持 currentColor/暗黑切换）。
 
 declare module '#content/sig/sig-list' {
   interface SigBannerT {
@@ -47,7 +47,7 @@ declare module '#content/sig/sig-list' {
 // 顶层按 locale 索引（zh / en），每个 locale 下为 RoleDescriptionDataT 结构。
 //
 // icon 字段为 SVG 路径带 `?raw` 后缀（`./images/xxx.svg?raw`），由 Vite 返回 SVG
-// 字符串，组件用 InlineSvg 渲染成 inline SVG（支持 currentColor/暗黑切换）。
+// 字符串，组件用 createIcon 渲染成 inline SVG（支持 currentColor/暗黑切换）。
 declare module '#content/sig/role-description' {
   interface CommunityMemberTypeT {
     bg: string;

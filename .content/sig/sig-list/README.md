@@ -28,7 +28,7 @@ SIG 列表页（`/zh/sig/sig-list/`、`/en/sig/sig-list/`）数据源。按 skil
 - **主题变体用 `_dark` 后缀**：`about_sig` 的 `icon` / `icon_dark` 为亮/暗 SVG 路径（`./images/xxx.svg?raw` / `./images/xxx-dark.svg?raw`）
 - **图片就近存放**：`images/` 下，文件名保留原名
 - **zh/en 共用图**：不加后缀，两个 yaml 指向同一文件（banner、卡片背景图、图标均共用）
-- **资源管线由 `?raw` 后缀显式控制**：`vite-plugin-content-yaml` 把相对路径 + 图片扩展名的值改写为 `import`——路径带 `?raw`（如 `./images/x.svg?raw`）时 Vite 返回文件内容字符串（由 `InlineSvg` 渲染为 inline SVG，OIcon 全局 `.o-icon svg { width:1em; fill:currentColor }` 提供尺寸/主题色，支持暗黑 currentColor 切换）；不带 `?raw` 时返回带 hash 的资源 URL（用于 `<img>`/背景图）。插件不判断字段名，由 YAML 书写时显式加 `?raw` 决定
+- **资源管线由 `?raw` 后缀显式控制**：`vite-plugin-content-yaml` 把相对路径 + 图片扩展名的值改写为 `import`——路径带 `?raw`（如 `./images/x.svg?raw`）时 Vite 返回文件内容字符串（由 `createIcon` 渲染为 inline SVG，OIcon 全局 `.o-icon svg { width:1em; fill:currentColor }` 提供尺寸/主题色，支持暗黑 currentColor 切换）；不带 `?raw` 时返回带 hash 的资源 URL（用于 `<img>`/背景图）。插件不判断字段名，由 YAML 书写时显式加 `?raw` 决定
 
 ## 消费方式
 
@@ -36,12 +36,12 @@ SIG 列表页（`/zh/sig/sig-list/`、`/en/sig/sig-list/`）数据源。按 skil
 import sigListContent from '#content/sig/sig-list';
 import { useLocale } from '~@/composables/useLocale';
 import { computed } from 'vue';
-import InlineSvg from '~@/components/InlineSvg.vue';
+import { createIcon } from '~@/components/createIcon';
 
 const { locale } = useLocale();
 const welcomeJoin = computed(() => sigListContent[locale.value].welcome_join);
-// 模板：<OIcon class="icon"><InlineSvg :raw="card.icon" /></OIcon>
-// about_sig 暗黑：<InlineSvg :raw="isDark ? card.iconDark : card.icon" />
+// 模板：<OIcon class="icon"><component :is="createIcon(card.icon)" /></OIcon>
+// about_sig 暗黑：<component :is="createIcon(isDark ? card.iconDark : card.icon)" />
 ```
 
 ## Schema
