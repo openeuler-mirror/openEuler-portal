@@ -19,6 +19,36 @@
 #   signup_url_mb   报名链接移动端
 #   review_url      回顾链接（ended 后填写）
 
+- id: 18
+  title_zh: openEuler SIG Yuanrong Meetup 杭州站：Serverless X 分布式计算，共筑Agentic AI Infra
+  start_date: '2026-07-25 14:00'
+  end_date: '2026-07-25 17:30'
+  address_zh: 杭州市余杭区未来星宸6幢万斯酒店三楼多功能宴会厅
+  city_zh: 杭州市
+  city_en: Hangzhou
+  synopsis_zh: 本期openEuler SIG Yuanrong Meetup与大家相约杭州，以“Serverless X 分布式计算，共筑Agentic AI Infra”为主题，内容涵盖openYuanrong项目介绍及openYuanrong在多级缓存推理加速，AI Agent多租安全等方向上的优秀实践。我们期待与您面对面，共同探讨如何通过 openYuanrong 构建下一代 AI 原生基础设施，并聆听您对项目发展和生态建设的宝贵建议。
+  status: ongoing
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/hangzhou.jpg
+  poster_image_mb: ~@/assets/category/event/city/hangzhou-mb.jpg
+  agenda_image: ./images/detail-260725.jpeg
+
+- id: 17
+  title_zh: openEuler社区云原生开源中间件Meetup-西安站
+  start_date: '2026-06-10 13:30'
+  end_date: '2026-06-10 17:00'
+  address_zh: 西安电子科技大学（长安校区）网络安全研究创新大楼A-103报告厅
+  city_zh: 西安市
+  city_en: Xian
+  synopsis_zh: openEuler社区云原生开源中间件Meetup-西安站特邀多位业内专家，分享实战案例与前沿技术解析，活动将重点解读 openEuler 社区开源协作模式与介绍开源实习，指导参会者掌握开源项目贡献路径，助力高校师生与企业技术人员深度参与开源生态建设，同时，本次活动将探索 openEuler 生态下中间件技术的最佳实践，为学术研究提供技术参考，为企业应用落地提供可复用的解决方案。
+  status: ended
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/xian.jpg
+  poster_image_mb: ~@/assets/category/event/city/xian-mb.jpg
+  agenda_image: ./images/detail-260610.jpg
+
 - id: 16
   title_zh: openEuler AI与操作系统融合创新 Meetup 北京站
   title_en: openEuler AI & OS Innovation Meetup Beijing
