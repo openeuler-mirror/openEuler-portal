@@ -453,7 +453,6 @@ async function meetupApply() {
     }
     .el-input__wrapper {
       border-radius: 0;
-      box-shadow: 0 0 0 1px var(--e-color-border1) inset;
       height: 36px;
       line-height: 36px;
       background: var(--e-color-bg2);

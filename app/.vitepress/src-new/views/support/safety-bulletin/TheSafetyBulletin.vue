@@ -566,7 +566,6 @@ const blur = () => {
   width: 320px;
   &.el-input__wrapper {
     border-radius: var(--o-radius-xs);
-    box-shadow: 0 0 0 1px var(--o-color-control1) inset;
     height: 40px;
     line-height: 40px;
   }

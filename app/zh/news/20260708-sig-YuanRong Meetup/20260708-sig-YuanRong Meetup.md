@@ -4,7 +4,7 @@ date: '2026-07-08'
 category: news
 tags:
   - openEuler
-banner: 'img/news/20260708-SIG Yuanrong Meetup/banner.jpg'
+banner: 'img/news/20260708-sig-YuanRong Meetup/banner.jpg'
 author: 'openEuler'
 summary: '开发者速来，这场Meetup一站式解锁Agentic AI Infra搭建之路'
 ---

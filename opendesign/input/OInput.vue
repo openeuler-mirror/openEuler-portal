@@ -32,7 +32,6 @@ const attrs = useAttrs();
       border-radius: 0;
       padding: 1px 15px;
       background-color: var(--e-input-color-bg);
-      box-shadow: 0 0 0 1px var(--e-input-border-color) inset;
 
       .el-input__inner {
         height: var(--e-input-height);

@@ -120,7 +120,7 @@ const IconMenuShow = computed(() => {
     border-radius: 0 100px 100px 0;
     box-shadow: var(--o-shadow-2);
     padding: var(--o-gap-1);
-    top: 80px;
+    top: var(--layout-header-height);
     left: 0;
     z-index: 80;
   }
