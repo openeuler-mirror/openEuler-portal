@@ -64,7 +64,7 @@ const yearImg = computed(() => {
     width: 100%;
     height: calc(100% - 20px);
     bottom: 0;
-    @include respond-to('<=pad') {
+    @include respond('<=pad') {
       height: calc(100% - 16px);
     }
   }
@@ -77,14 +77,14 @@ const yearImg = computed(() => {
     height: 20px;
     border-radius: 50%;
 
-    @include respond-to('pad_v-laptop') {
+    @include respond('pad_v-laptop') {
       width: 18px;
       height: 18px;
       right: -4px;
       top: -4px;
     }
 
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       width: 16px;
       height: 16px;
       right: -4px;
@@ -94,11 +94,11 @@ const yearImg = computed(() => {
   img {
     width: 125px;
 
-    @include respond-to('pad_v-laptop') {
+    @include respond('pad_v-laptop') {
       width: 94px;
     }
 
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       width: 83px;
     }
   }

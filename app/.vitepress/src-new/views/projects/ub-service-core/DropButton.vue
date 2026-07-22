@@ -62,7 +62,7 @@ const click = (lang: LocaleT) => {
   padding-right: 0;
   --btn-min-width: 4em;
   @include text1;
-  @include respond-to('phone') {
+  @include respond('phone') {
     padding: var(--btn-padding);
     @include text2;
   }
@@ -79,7 +79,7 @@ const click = (lang: LocaleT) => {
     font-size: 20px;
     margin-left: 4px;
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     @include text2;
     .o-icon {
       font-size: 16px;

@@ -55,7 +55,7 @@ defineProps({
   background-repeat: no-repeat;
   background-image: url('~@/assets/category/sig/sig-card_bg_light.png'),
     linear-gradient(163deg, #e3f0ff 0%, #cae4ff 100%);
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 16px;
     background-image: linear-gradient(163deg, #eef4fe 0%, #dfecfe 100%);
   }
@@ -68,8 +68,8 @@ defineProps({
     font-weight: 500;
     @include h2;
   }
-  .more-gitee {
-    :deep(.o-link-label) {
+  :deep(.o-link) {
+    .o-link-label {
       display: flex;
       align-items: center;
       .o-icon {
@@ -85,13 +85,13 @@ defineProps({
 
   .divider-mo {
     display: none;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: block;
     }
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .sig-detail-info-card {
     padding: 0;
     background-image: none;
@@ -109,12 +109,12 @@ defineProps({
   }
 }
 
-[data-o-theme='dark'] {
+[data-o-theme='e.dark'] {
   .sig-detail-info-card {
     background-image: url('~@/assets/category/sig/sig-card_bg_dark.png'),
       linear-gradient(163deg, #30364e 0%, #1d2855 100%);
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     .sig-detail-info-card {
       background-image: none;
     }

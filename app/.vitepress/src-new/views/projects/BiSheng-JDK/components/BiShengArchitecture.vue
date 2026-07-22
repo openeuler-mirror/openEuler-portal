@@ -57,7 +57,7 @@ const img = { zh: frameImgZh, en: frameImgEn };
   }
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .architecture {
     padding: 32px 24px;
   }
@@ -66,7 +66,7 @@ const img = { zh: frameImgZh, en: frameImgEn };
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .architecture {
     padding: 16px;
   }
@@ -75,7 +75,7 @@ const img = { zh: frameImgZh, en: frameImgEn };
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .architecture {
     padding: 16px;
   }

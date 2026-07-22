@@ -294,14 +294,14 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
   &.zh {
     background: var(--o-color-fill2);
     .follow-us-cover {
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         display: none;
       }
       img {
-        @include respond-to('pad_h') {
+        @include respond('pad_h') {
           height: 100%;
         }
-        @include respond-to('phone') {
+        @include respond('phone') {
           height: 84px;
         }
       }
@@ -309,11 +309,11 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
   }
   &.en {
     height: 225px;
-    @include respond-to('<=pad') {
+    @include respond('<=pad') {
       padding: 0;
       height: 124px;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       height: 150px;
     }
 
@@ -322,10 +322,10 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
       inset: 0;
       width: 100%;
       img {
-        @include respond-to('<=pad') {
+        @include respond('<=pad') {
           height: auto;
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           height: 100%;
         }
       }
@@ -335,7 +335,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
       z-index: 2;
       flex-direction: inherit;
       align-items: center;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         padding: 16px;
         align-items: flex-start;
         flex-direction: column;
@@ -343,15 +343,15 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
       h3 {
         color: #fff;
         width: 225px;
-        @include respond-to('laptop') {
+        @include respond('laptop') {
           width: 150px;
           @include h1;
         }
-        @include respond-to('<=pad') {
+        @include respond('<=pad') {
           width: 123px;
           @include h2;
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           width: 100%;
           text-align: left;
         }
@@ -360,17 +360,17 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
         flex: 1;
         align-items: center;
         width: 100%;
-        @include respond-to('<=pad') {
+        @include respond('<=pad') {
           margin: 0;
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           margin-top: 20px;
         }
         .line {
           margin-top: 0;
           --o-divider-bd-color: rgba(255, 255, 255, 0.25);
 
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             display: none;
           }
         }
@@ -383,7 +383,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
             text-align: center;
             color: #fff;
             @include h3;
-            @include respond-to('phone') {
+            @include respond('phone') {
               @include text2;
             }
             img {
@@ -391,7 +391,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
               margin: 0 auto 8px;
               display: block;
 
-              @include respond-to('<=pad') {
+              @include respond('<=pad') {
                 height: 32px;
               }
               &.hover {
@@ -412,13 +412,13 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
       }
     }
   }
-  @include respond-to('laptop') {
+  @include respond('laptop') {
     height: 314px;
   }
-  @include respond-to('pad_h') {
+  @include respond('pad_h') {
     height: 203px;
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     flex-direction: column;
     padding: 8px;
     height: auto;
@@ -428,10 +428,10 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
     order: 2;
     width: 657px;
     height: 100%;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       width: 557px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       width: 360px;
     }
 
@@ -440,7 +440,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
       height: 100%;
       object-fit: cover;
 
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         border-radius: 4px;
       }
     }
@@ -452,34 +452,34 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
     flex-direction: column;
     flex: 1;
 
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       padding: 48px 40px;
     }
-    @include respond-to('<=pad') {
+    @include respond('<=pad') {
       padding: 28px;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       padding: 12px 8px;
     }
     h3 {
       color: var(--o-color-info1);
       font-weight: 500;
       @include h1;
-      @include respond-to('phone') {
+      @include respond('phone') {
         text-align: center;
       }
     }
     .follow-us-box {
       display: flex;
       align-items: center;
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         margin-top: 24px;
         justify-content: space-between;
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 16px;
       }
-      @include respond-to('phone') {
+      @include respond('phone') {
         flex-direction: column;
         margin-top: 12px;
       }
@@ -491,18 +491,18 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
         text-align: center;
         .code-img + .code-img {
           margin-left: 24px;
-          @include respond-to('pad_h') {
+          @include respond('pad_h') {
             margin-left: 12px;
           }
-          @include respond-to('phone') {
+          @include respond('phone') {
             margin-left: 0;
           }
         }
 
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           justify-content: flex-start;
         }
-        @include respond-to('phone') {
+        @include respond('phone') {
           width: 100%;
           justify-content: space-evenly;
         }
@@ -510,7 +510,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
           color: var(--o-color-info1);
           margin-top: 8px;
           @include text1;
-          @include respond-to('pad_h') {
+          @include respond('pad_h') {
             @include tip1;
           }
         }
@@ -520,12 +520,12 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
           border-radius: 4px;
           border: 1px solid var(--o-color-control4);
 
-          @include respond-to('pad_h') {
+          @include respond('pad_h') {
             width: 68px;
             height: 68px;
           }
 
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             width: 114px;
             height: 114px;
           }
@@ -534,12 +534,12 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
       .line {
         height: 85px;
         margin: 0 48px;
-        @include respond-to('pad') {
+        @include respond('pad') {
           height: 55px;
           margin: 0 16px;
         }
 
-        @include respond-to('phone') {
+        @include respond('phone') {
           height: auto;
           margin: 12px 0;
         }
@@ -548,17 +548,17 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
-        @include respond-to('<=pad') {
+        @include respond('<=pad') {
           width: 50%;
         }
-        @include respond-to('pad_h') {
+        @include respond('pad_h') {
           gap: 16px;
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           padding: 0;
           gap: 16px;
         }
-        @include respond-to('phone') {
+        @include respond('phone') {
           width: 100%;
         }
 
@@ -566,13 +566,13 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
           display: flex;
           align-items: center;
           @include text1;
-          @include respond-to('phone') {
+          @include respond('phone') {
             justify-content: center;
           }
           img {
             height: 24px;
             margin-right: 16px;
-            @include respond-to('pad_h') {
+            @include respond('pad_h') {
               height: 16px;
             }
           }
@@ -586,16 +586,16 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
   height: 100%;
 
   &.community-contact {
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       --card-main-padding: 16px;
     }
 
     .o-card-icon {
       --card-icon-size: 48px;
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         --card-icon-size: 40px;
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         --card-icon-size: 32px;
       }
       svg {
@@ -604,7 +604,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
       }
     }
     .o-card-header {
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         font-size: 16px;
         line-height: 24px;
       }
@@ -619,7 +619,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
     .o-card-icon {
       --card-icon-size: 40px;
       height: var(--card-icon-size);
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         --card-icon-size: 32px;
       }
       svg {
@@ -628,7 +628,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
       }
     }
     .o-card-main-wrap {
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         height: 32px;
         .o-card-header {
           line-height: 32px;
@@ -646,18 +646,18 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
         height: 48px;
         display: flex;
         align-items: center;
-        @include respond-to('<=laptop') {
+        @include respond('<=laptop') {
           top: 16px;
           left: calc(24px + 32px + 16px);
           height: 32px;
         }
-        @include respond-to('<=pad') {
+        @include respond('<=pad') {
           position: inherit;
           height: auto;
         }
       }
       .o-card-content {
-        @include respond-to('>pad') {
+        @include respond('>pad') {
           margin-top: 0;
         }
       }
@@ -665,7 +665,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
         color: var(--o-color-info2);
         a,
         span {
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             display: block;
             margin-top: 4px;
           }
@@ -676,12 +676,12 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
       }
       .other-text + .other-text {
         margin-top: 12px;
-        @include respond-to('<=pad') {
+        @include respond('<=pad') {
           margin-top: 4px;
         }
       }
       .o-card-icon {
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           display: none;
         }
       }

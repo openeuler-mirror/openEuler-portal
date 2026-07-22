@@ -430,7 +430,7 @@ const isExpanded = (step: InternshipStep) => expandedSteps.value.has(step);
   }
 }
 
-@include respond-to('>pc_b') {
+@include respond('>pc_b') {
   .activity-intro-container {
     padding: 32px;
   }

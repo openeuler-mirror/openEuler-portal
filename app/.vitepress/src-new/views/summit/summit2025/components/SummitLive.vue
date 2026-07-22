@@ -235,7 +235,7 @@ onMounted(async () => {
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .live-room {
     .live-room-web {
       margin-top: 16px;

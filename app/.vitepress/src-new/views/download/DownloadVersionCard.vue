@@ -402,15 +402,17 @@ const onClickDownload = (row: any) => {
     </h2>
     <p v-if="contentData?.PLANNED_EOL" class="subtitle">Planned EOL: {{ contentData?.PLANNED_EOL }}</p>
     <div class="other-link">
-      <template v-for="(linkData, index) in linkConfigs">
-        <a
+      <template v-for="(linkData, index) in linkConfigs" :key="index">
+        <OLink
           v-if="contentData[linkData.urlKey]"
           :href="contentData[linkData.urlKey]"
+          :hover-underline="false"
           target="_blank"
+          color="primary"
           rel="noopener noreferrer"
         >
           {{ $t(linkData.textKey) }}
-        </a>
+        </OLink>
         <ODivider
           v-if="contentData[linkData.urlKey] && index < linkConfigs.length - 1"
           :style="{
@@ -731,7 +733,7 @@ const onClickDownload = (row: any) => {
   padding: 32px;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 16px;
     padding: 16px 12px;
   }
@@ -747,7 +749,7 @@ const onClickDownload = (row: any) => {
       --tag-padding: 3px 12px;
       border: none;
       @include tip2;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-left: 8px;
       }
     }
@@ -760,7 +762,7 @@ const onClickDownload = (row: any) => {
   .other-link {
     margin-top: 16px;
     @include text1;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-left: 12px;
     }
     .o-divider {
@@ -773,13 +775,13 @@ const onClickDownload = (row: any) => {
     grid-template-columns: max-content 1fr;
     row-gap: 8px;
     margin-top: 24px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: block;
       margin-top: 16px;
     }
     .filter-card {
       display: contents;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         display: block;
       }
       .label {
@@ -787,7 +789,7 @@ const onClickDownload = (row: any) => {
         color: var(--o-color-info1);
         padding-right: 32px;
         @include text1;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           padding-right: 0;
         }
       }
@@ -796,11 +798,11 @@ const onClickDownload = (row: any) => {
         align-items: center;
         .o-radio + .o-radio {
           margin-left: 8px;
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             margin-left: 0;
           }
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           flex-wrap: wrap;
           .o-radio {
             margin: 8px 8px 0 0;
@@ -813,13 +815,13 @@ const onClickDownload = (row: any) => {
       }
     }
     .filter-card:not(:first-child) {
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 12px;
       }
     }
   }
   .o-divider-h {
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin: 12px 0 16px 0;
     }
   }

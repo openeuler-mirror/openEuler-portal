@@ -123,14 +123,14 @@ const gap = computed(() => {
 }
 
 .mo-banner {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 24px 24px 20px;
     .mo-title {
       font-weight: 500;
       @include display3;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }
@@ -140,10 +140,10 @@ const gap = computed(() => {
 .participate {
   :deep(.section-wrapper) {
     margin-top: 40px;
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       margin-top: 32px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       margin-top: 16px;
     }
   }
@@ -214,7 +214,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .card-item {
     padding: 16px;
     .icon {
@@ -223,7 +223,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .card-item {
     .icon {
       --icon-size: 24px;
@@ -240,7 +240,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .card-item {
     .o-link {
       :deep(.o-link-label) {
@@ -262,6 +262,6 @@ const gap = computed(() => {
 
 <style lang="scss">
 .we-chat-popup-dark {
-  --popup-bg-color: rgb(var(--o-mixedgray-7));
+  --popup-bg-color: rgb(var(--o-grey-7));
 }
 </style>

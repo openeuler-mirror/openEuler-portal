@@ -100,7 +100,7 @@ const goLink = (url: string, isBlank: boolean) => {
     @media screen and (max-width: 767px) {
       display: none;
     }
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1680px) {
       width: 1416px;
     }
     @media screen and (min-width: 768px) and (max-width: 1079px) {

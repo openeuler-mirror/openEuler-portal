@@ -8,4 +8,5 @@ export default {
   expand: '展开',
   collapse: '收起',
   more: '查看更多',
+  lang: '语言切换',
 };

@@ -65,7 +65,7 @@ const reportLinkClick = (ev: Event) => {
     background-color: var(--o-color-fill2);
     padding: 24px 48px;
     border-radius: var(--o-radius-xs);
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: flex;
       flex-direction: column;
       padding: 12px;
@@ -87,7 +87,7 @@ const reportLinkClick = (ev: Event) => {
             width: 1px;
             height: 100%;
             background-color: var(--o-color-control4);
-            @include respond-to('<=pad_v') {
+            @include respond('<=pad_v') {
               width: 100%;
               height: 1px;
               left: 0;
@@ -96,7 +96,7 @@ const reportLinkClick = (ev: Event) => {
           }
         }
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         display: flex;
         flex-direction: row;
       }
@@ -104,7 +104,7 @@ const reportLinkClick = (ev: Event) => {
       .o-icon {
         margin-bottom: var(--title-gap);
         font-size: var(--title-icon-size);
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           height: min-content;
         }
       }
@@ -112,10 +112,10 @@ const reportLinkClick = (ev: Event) => {
       .title {
         font-weight: 500;
         @include h4;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           margin-top: 0;
         }
-        @include respond-to('phone') {
+        @include respond('phone') {
           @include h3;
         }
       }
@@ -124,10 +124,10 @@ const reportLinkClick = (ev: Event) => {
         margin-top: 16px;
         color: var(--o-color-info2);
         @include tip1;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           margin-top: 8px;
         }
-        @include respond-to('phone') {
+        @include respond('phone') {
           @include text1;
         }
       }
@@ -135,7 +135,7 @@ const reportLinkClick = (ev: Event) => {
       .sig-info {
         position: relative;
         flex: 1;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           position: initial;
           margin-left: 12px;
         }
@@ -160,7 +160,7 @@ const reportLinkClick = (ev: Event) => {
 
   .o-divider {
     --o-divider-label-gap: 0 40px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: var(--o-divider-gap);
       height: auto;
     }

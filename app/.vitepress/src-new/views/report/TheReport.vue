@@ -55,7 +55,7 @@ onMounted(async () => {
 .pdf-viewer {
   --pdf-header-height: 32px;
   position: relative;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     --pdf-header-height: 24px;
   }
 }
@@ -78,7 +78,7 @@ onMounted(async () => {
   justify-content: center;
   padding: 0 32px;
   color: rgba(var(--o-white));
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 0 16px;
   }
 }
@@ -90,7 +90,7 @@ onMounted(async () => {
 .pdf-gap {
   height: 12px;
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     height: 4px;
   }
 }

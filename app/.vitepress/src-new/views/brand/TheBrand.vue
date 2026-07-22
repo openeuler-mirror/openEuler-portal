@@ -407,7 +407,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .item-col {
     padding: 24px;
   }
@@ -440,7 +440,7 @@ const gap = computed(() => {
     }
   }
 }
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .item-col {
     padding: 16px;
   }
@@ -482,7 +482,7 @@ const gap = computed(() => {
     }
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .item-col {
     padding: 12px;
   }
@@ -512,7 +512,7 @@ const gap = computed(() => {
     }
   }
 }
-@include respond-to('phone') {
+@include respond('phone') {
   .brand-col {
     .item-text {
       &:nth-of-type(1) {

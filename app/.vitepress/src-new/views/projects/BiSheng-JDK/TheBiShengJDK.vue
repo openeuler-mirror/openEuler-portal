@@ -205,7 +205,7 @@ const feedbackLinks = [
     @include tip1;
   }
 
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }
@@ -215,7 +215,7 @@ const feedbackLinks = [
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .banner-btn {
     --btn-padding: 0 15px;
     --btn-height: 32px;
@@ -228,7 +228,7 @@ const feedbackLinks = [
     margin-left: 12px;
   }
 }
-@include respond-to('phone') {
+@include respond('phone') {
   .banner-btns {
     flex-direction: column;
     align-items: flex-start;

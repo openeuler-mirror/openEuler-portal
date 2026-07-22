@@ -106,7 +106,7 @@ const bannerImage = computed(() => {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       padding: 0 40px;
     }
 
@@ -116,11 +116,11 @@ const bannerImage = computed(() => {
       background-size: contain;
       background-repeat: no-repeat;
 
-      @include respond-to('pad_v-laptop') {
+      @include respond('pad_v-laptop') {
         width: 284px;
         height: 133px;
       }
-      @include respond-to('pad_v') {
+      @include respond('pad_v') {
         width: 213px;
         height: 100px;
       }
@@ -131,7 +131,7 @@ const bannerImage = computed(() => {
   margin-top: var(--o-gap-4);
 }
 
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .banner {
     height: 270px;
     .banner-image {
@@ -142,7 +142,7 @@ const bannerImage = computed(() => {
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .banner {
     height: 180px;
     .banner-image {
@@ -162,7 +162,7 @@ const bannerImage = computed(() => {
   }
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .banner {
     height: 180px;
     .banner-image {

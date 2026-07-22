@@ -609,11 +609,11 @@ const generatePdfUrl = (page) => {
     &:empty {
       margin: 0;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       max-width: 100%;
       margin-bottom: 32px;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       flex-direction: column;
       max-width: 100%;
       margin-bottom: 16px;
@@ -624,18 +624,18 @@ const generatePdfUrl = (page) => {
   }
   .o-select {
     width: 180px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       width: 150px;
     }
   }
   .sort-select {
     width: 192px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       width: 150px;
     }
   }
   .o-radio-group {
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       gap: 8px;
       .o-radio + .o-radio {
         margin-left: 0;
@@ -663,14 +663,14 @@ const generatePdfUrl = (page) => {
       max-width: calc(
         100% - 2 * var(--o-divider-label-gap) - 1px - var(--feed-back-width)
       );
-      @include respond-to('<=pad') {
+      @include respond('<=pad') {
         max-width: 100%;
       }
       .content-list {
         & > div {
           & + div {
             margin-top: 40px;
-            @include respond-to('<=pad_v') {
+            @include respond('<=pad_v') {
               margin-top: 16px;
             }
           }
@@ -687,7 +687,7 @@ const generatePdfUrl = (page) => {
           &:empty {
             padding: 0;
           }
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             border-radius: var(--o-radius-xs);
             padding: 12px 16px;
             background-color: var(--o-color-fill2);
@@ -744,7 +744,7 @@ const generatePdfUrl = (page) => {
               justify-content: space-between;
             }
 
-            @include respond-to('<=pad_v') {
+            @include respond('<=pad_v') {
               flex-direction: column;
             }
 
@@ -820,7 +820,7 @@ const generatePdfUrl = (page) => {
                 display: none;
               }
 
-              @include respond-to('<=pad_v') {
+              @include respond('<=pad_v') {
                 margin-left: 0;
 
                 &.pdf-pc {
@@ -865,7 +865,7 @@ const generatePdfUrl = (page) => {
   }
 }
 
-[data-o-theme='dark'] {
+[data-o-theme='e.dark'] {
   .whitepaper-preview {
     @include img-in-dark;
   }

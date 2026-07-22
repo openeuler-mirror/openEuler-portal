@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed, reactive, onMounted, onUnmounted, nextTick } from 'vue';
+import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue';
 
 import { inBrowser, useData, useRouter } from 'vitepress';
 
@@ -27,9 +27,6 @@ import SigContribute from './SigContribute.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';
 
-import { getPointStr } from '~@/utils/meeting';
-import { INTERVAL_DAY, INTERVAL_WEEK, INTERVAL_MONTH } from '~@/config/meeting';
-
 import { getSigDetail } from '~@/api/api-sig';
 import { getSigmeetings } from '~@/api/api-meeting';
 
@@ -51,10 +48,6 @@ const meetingSummaryLink = computed(() => {
   return `https://etherpad.openeuler.org/p/${sigName.value}-meetings`;
 });
 
-const pageParams = reactive({
-  size: 50,
-  page: 1,
-});
 
 const mail = ref('');
 const sigMeetingData: any = ref([]);
@@ -63,94 +56,11 @@ const maintainerInfo: any = ref([]);
 const committerInfo: any = ref([]);
 const isLoading = ref(true);
 
-function convertNewToOld(newApiResponse) {
-  // 1. 按日期分组
-  const groupedByDate = {};
-
-  newApiResponse.forEach(item => {
-    const date = item.date;
-
-    if (!groupedByDate[date]) {
-      groupedByDate[date] = [];
-    }
-
-    // 2. 字段映射转换
-    let timeRange = `${item.start}-${item.end}`;
-    let replay_url = null;
-    let hasObsData = false;
-    const obsData = item.obs_data?.filter((v) => v.text_video_url) || [];
-    if (item.is_cycle) {
-      let cycleType = '';
-      if (item.cycle_type === INTERVAL_DAY) {
-        cycleType = t('home.cycleDay');
-      }
-      if (item.cycle_type === INTERVAL_WEEK) {
-        if (item.cycle_interval > 1) {
-          cycleType = t('home.cycleWeek.other', [getPointStr(item.cycle_type, item.cycle_point), item.cycle_interval]);
-        } else {
-          cycleType = t('home.cycleWeek.one', [getPointStr(item.cycle_type, item.cycle_point)]);
-        }
-      }
-      if (item.cycle_type === INTERVAL_MONTH) {
-        cycleType = t('home.cycleMonth', [getPointStr(item.cycle_type, item.cycle_point)]);
-      }
-      timeRange = t('home.cycleMeetingText2', {
-        startDate: item.cycle_start_date,
-        endDate: item.cycle_end_date,
-        startTime: item.cycle_start,
-        endTime: item.cycle_end,
-        cycleType,
-      });
-      hasObsData = obsData.some((t) => t.sub_id === item.cycle_sub.find((z) => z.date === date)?.sub_id);
-    } else {
-      hasObsData = obsData.length > 0;
-    }
-
-    if (hasObsData) {
-      replay_url = `${location.origin}/${locale.value}/video/${item.group_name}/${item.mid}/${date}`;
-    } else if (item?.video_url) {
-      replay_url = item?.video_url;
-    }
-
-    const timeDataItem = {
-      id: item.id,
-      group_name: item.group_name,
-      startTime: item.start,
-      endTime: item.end,
-      duration_time: timeRange,
-      name: item.topic,
-      creator: item.sponsor,
-      detail: item.agenda,
-      join_url: item.join_url,
-      meeting_id: item.id,
-      etherpad: item.etherpad,
-      platform: item.platform,
-      bil_url: item.bil_url,
-      video_url: replay_url,
-    };
-
-    groupedByDate[date].push(timeDataItem);
-  });
-
-  // 3. 转换为老接口格式的数组
-  const oldFormat = Object.keys(groupedByDate).map(date => {
-    return {
-      date: date,
-      timeData: groupedByDate[date]
-    };
-  });
-
-  // 4. 按日期排序（可选）
-  oldFormat.sort((a, b) => new Date(a.date) - new Date(b.date));
-
-  return oldFormat;
-}
-
 // 获取sig会议数据
 const queryGetSigMeeting = () => {
   isLoading.value = true;
   getSigmeetings(sigName.value).then((res: any) => {
-    sigMeetingData.value = convertNewToOld(res || []);
+    sigMeetingData.value = res || [];
   })
   .catch(() => {
     router.go(`${lang.value}/sig/sig-list/`);
@@ -370,6 +280,7 @@ onUnmounted(() => {
               v-if="sigMeetingData.length"
               :meeting-data="sigMeetingData"
               :mail="mail"
+              :sig-name="sigName"
               v-analytics.catchBubble="{
                 properties: {
                   module: 'sig-detail',
@@ -440,7 +351,7 @@ onUnmounted(() => {
   grid-template-columns: 348px 1fr;
   gap: 32px;
   width: 100%;
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     display: block;
   }
 
@@ -449,13 +360,13 @@ onUnmounted(() => {
     font-weight: 500;
     display: none;
     @include h4;
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       display: block;
     }
   }
 
   .sig-member-pc {
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       display: none;
     }
   }
@@ -490,7 +401,7 @@ onUnmounted(() => {
         margin-left: 12px;
         @include text2;
       }
-      .o-link {
+      :deep(.o-link) {
         margin-left: auto;
       }
     }
@@ -506,7 +417,7 @@ onUnmounted(() => {
     .meeting-card {
       position: relative;
       margin-top: 24px;
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         margin-top: 12px;
       }
     }
@@ -536,7 +447,7 @@ onUnmounted(() => {
 
     .sig-member-mo {
       display: none;
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         margin-top: 12px;
         display: block;
       }
@@ -546,18 +457,18 @@ onUnmounted(() => {
 
 .sig-detail-info-card {
   margin-top: 32px;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 0;
   }
 }
 
 .breadcrumb {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: none;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .content-wrapper {
     --content-wrapper-vertical-paddingTop: 16px !important;
   }

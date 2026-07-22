@@ -169,7 +169,7 @@ const onClickLink = (e: MouseEvent) => {
 
 :deep(.o-card-main) {
   justify-content: space-between;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 12px 16px;
   }
   &:hover {
@@ -186,7 +186,7 @@ const onClickLink = (e: MouseEvent) => {
     display: flex;
     height: 60px;
     align-items: flex-start;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       height: 32px;
     }
   }
@@ -215,7 +215,7 @@ const onClickLink = (e: MouseEvent) => {
     position: relative;
     word-break: break-all;
     @include h3;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       height: 32px;
     }
     .name span {
@@ -228,7 +228,7 @@ const onClickLink = (e: MouseEvent) => {
     justify-content: space-between;
     .tags-box {
       margin-top: 24px;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 8px;
       }
     }
@@ -241,7 +241,7 @@ const onClickLink = (e: MouseEvent) => {
       align-items: center;
       margin-top: 16px;
       @include tip1;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 8px;
       }
       .o-icon {
@@ -316,20 +316,20 @@ const onClickLink = (e: MouseEvent) => {
     position: relative;
     word-break: break-all;
     height: 48px;
-    --linear-gradient: var(--o-mixedgray-1);
+    --linear-gradient: var(--o-grey-1);
     @include text1;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       height: 36px;
     }
     &.dark {
-      --linear-gradient: var(--o-mixedgray-4);
+      --linear-gradient: var(--o-grey-4);
     }
     &::after {
       background-image: linear-gradient(
         90deg,
         rgba(var(--linear-gradient), 0),
         rgba(var(--linear-gradient), 0.8) 59%,
-        var(--o-color-control-light) 100%
+        var(--o-color-control5-light) 100%
       );
       bottom: 0;
       content: '';

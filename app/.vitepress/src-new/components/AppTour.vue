@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, computed, watch, onUnmounted } from 'vue';
-import { useResizeObserver } from '@vueuse/core';
+import { useResizeObserver, useDebounceFn } from '@vueuse/core';
 import { OButton, OFigure, OIcon, OCheckbox } from '@opensig/opendesign';
 import { useRoute, useData } from 'vitepress';
 
@@ -127,7 +127,7 @@ watch(
 );
 
 // 解决窗口尺寸改变导致遮罩不全屏的问题
-useResizeObserver(window.document.body, () => {
+const updateMask = () => {
   if (!open.value) {
     return;
   }
@@ -149,7 +149,9 @@ useResizeObserver(window.document.body, () => {
     'd',
     d.replace(/M(\d+),0 L0,0 L0,(\d+) L(\d+),(\d+) L(\d+),0 Z/, newD)
   );
-});
+};
+
+useResizeObserver(window.document.body, useDebounceFn(updateMask, 100));
 
 watch(
   () => open.value,
@@ -185,8 +187,8 @@ onUnmounted(() => {
     }"
   >
     <el-tour-step
-      v-for="item in steps"
-      :key="currentStep"
+      v-for="(item, index) in steps"
+      :key="item.target || index"
       :target="item.target || undefined"
       :placement="item.placement || undefined"
     >
@@ -368,7 +370,7 @@ onUnmounted(() => {
   .tour-close {
     width: 32px;
     height: 32px;
-    background-color: rgba(var(--o-mixedgray-14), 0.25);
+    background-color: rgba(var(--o-grey-14), 0.25);
     border-radius: 50%;
     font-size: 24px;
     color: var(--o-color-fill2);
@@ -507,7 +509,7 @@ onUnmounted(() => {
   .tour-close {
     width: 32px;
     height: 32px;
-    background-color: rgba(var(--o-mixedgray-14), 0.25);
+    background-color: rgba(var(--o-grey-14), 0.25);
     border-radius: 50%;
     font-size: 24px;
     color: var(--o-color-fill2);
@@ -539,7 +541,7 @@ onUnmounted(() => {
   }
 }
 
-[data-o-theme='dark'] {
+[data-o-theme='e.dark'] {
   .change-tour {
     .el-tour__content {
       background: #1a1a1c;

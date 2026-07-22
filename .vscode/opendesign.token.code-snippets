@@ -975,115 +975,115 @@
     "description": "[light: 0, 43, 97, dark: 233, 245, 254]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-1": {
+  "--o-grey-1": {
     "prefix": [
-      "var(--o-mixedgray-1)"
+      "var(--o-grey-1)"
     ],
-    "body": "var(--o-mixedgray-1)",
+    "body": "var(--o-grey-1)",
     "description": "[light: 255, 255, 255, dark: 0, 0, 0]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-2": {
+  "--o-grey-2": {
     "prefix": [
-      "var(--o-mixedgray-2)"
+      "var(--o-grey-2)"
     ],
-    "body": "var(--o-mixedgray-2)",
+    "body": "var(--o-grey-2)",
     "description": "[light: 243, 243, 245, dark: 18, 18, 20]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-3": {
+  "--o-grey-3": {
     "prefix": [
-      "var(--o-mixedgray-3)"
+      "var(--o-grey-3)"
     ],
-    "body": "var(--o-mixedgray-3)",
+    "body": "var(--o-grey-3)",
     "description": "[light: 237, 237, 240, dark: 26, 26, 28]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-4": {
+  "--o-grey-4": {
     "prefix": [
-      "var(--o-mixedgray-4)"
+      "var(--o-grey-4)"
     ],
-    "body": "var(--o-mixedgray-4)",
+    "body": "var(--o-grey-4)",
     "description": "[light: 232, 232, 235, dark: 36, 36, 39]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-5": {
+  "--o-grey-5": {
     "prefix": [
-      "var(--o-mixedgray-5)"
+      "var(--o-grey-5)"
     ],
-    "body": "var(--o-mixedgray-5)",
+    "body": "var(--o-grey-5)",
     "description": "[light: 222, 222, 227, dark: 43, 43, 47]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-6": {
+  "--o-grey-6": {
     "prefix": [
-      "var(--o-mixedgray-6)"
+      "var(--o-grey-6)"
     ],
-    "body": "var(--o-mixedgray-6)",
+    "body": "var(--o-grey-6)",
     "description": "[light: 212, 212, 217, dark: 53, 53, 57]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-7": {
+  "--o-grey-7": {
     "prefix": [
-      "var(--o-mixedgray-7)"
+      "var(--o-grey-7)"
     ],
-    "body": "var(--o-mixedgray-7)",
+    "body": "var(--o-grey-7)",
     "description": "[light: 186, 186, 191, dark: 63, 63, 67]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-8": {
+  "--o-grey-8": {
     "prefix": [
-      "var(--o-mixedgray-8)"
+      "var(--o-grey-8)"
     ],
-    "body": "var(--o-mixedgray-8)",
+    "body": "var(--o-grey-8)",
     "description": "[light: 149, 149, 157, dark: 85, 85, 88]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-9": {
+  "--o-grey-9": {
     "prefix": [
-      "var(--o-mixedgray-9)"
+      "var(--o-grey-9)"
     ],
-    "body": "var(--o-mixedgray-9)",
+    "body": "var(--o-grey-9)",
     "description": "[light: 111, 111, 117, dark: 118, 118, 122]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-10": {
+  "--o-grey-10": {
     "prefix": [
-      "var(--o-mixedgray-10)"
+      "var(--o-grey-10)"
     ],
-    "body": "var(--o-mixedgray-10)",
+    "body": "var(--o-grey-10)",
     "description": "[light: 85 , 85, 92, dark: 156, 156, 159]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-11": {
+  "--o-grey-11": {
     "prefix": [
-      "var(--o-mixedgray-11)"
+      "var(--o-grey-11)"
     ],
-    "body": "var(--o-mixedgray-11)",
+    "body": "var(--o-grey-11)",
     "description": "[light: 61, 61, 66, dark: 181, 181, 185]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-12": {
+  "--o-grey-12": {
     "prefix": [
-      "var(--o-mixedgray-12)"
+      "var(--o-grey-12)"
     ],
-    "body": "var(--o-mixedgray-12)",
+    "body": "var(--o-grey-12)",
     "description": "[light: 37, 37, 41, dark: 208, 208, 210]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-13": {
+  "--o-grey-13": {
     "prefix": [
-      "var(--o-mixedgray-13)"
+      "var(--o-grey-13)"
     ],
-    "body": "var(--o-mixedgray-13)",
+    "body": "var(--o-grey-13)",
     "description": "[light: 21, 21, 23, dark: 235, 235, 238]",
     "scope": "css,scss,less"
   },
-  "--o-mixedgray-14": {
+  "--o-grey-14": {
     "prefix": [
-      "var(--o-mixedgray-14)"
+      "var(--o-grey-14)"
     ],
-    "body": "var(--o-mixedgray-14)",
+    "body": "var(--o-grey-14)",
     "description": "[light: 0, 0, 0, dark: 255,255, 255]",
     "scope": "css,scss,less"
   },
@@ -1684,7 +1684,7 @@
       "var(--o-color-fill1)"
     ],
     "body": "var(--o-color-fill1)",
-    "description": "一级填充：页面背景[light: rgb(var(--o-mixedgray-2)), dark: rgb(var(--o-mixedgray-3))]",
+    "description": "一级填充：页面背景[light: rgb(var(--o-grey-2)), dark: rgb(var(--o-grey-3))]",
     "scope": "css,scss,less"
   },
   "--o-color-fill2": {
@@ -1692,7 +1692,7 @@
       "var(--o-color-fill2)"
     ],
     "body": "var(--o-color-fill2)",
-    "description": "二级填充：区块/卡片[light: rgb(var(--o-mixedgray-1)), dark: rgb(var(--o-mixedgray-4))]",
+    "description": "二级填充：区块/卡片[light: rgb(var(--o-grey-1)), dark: rgb(var(--o-grey-4))]",
     "scope": "css,scss,less"
   },
   "--o-color-fill3": {
@@ -1700,7 +1700,7 @@
       "var(--o-color-fill3)"
     ],
     "body": "var(--o-color-fill3)",
-    "description": "三级填充：卡片[light: rgb(var(--o-mixedgray-3)), dark: rgb(var(--o-mixedgray-5))]",
+    "description": "三级填充：卡片[light: rgb(var(--o-grey-3)), dark: rgb(var(--o-grey-5))]",
     "scope": "css,scss,less"
   },
   "--o-color-control1": {
@@ -1708,7 +1708,7 @@
       "var(--o-color-control1)"
     ],
     "body": "var(--o-color-control1)",
-    "description": "常规，常用于边框[light: rgba(var(--o-mixedgray-14), 0.25), dark: rgba(var(--o-mixedgray-14), 0.25)]",
+    "description": "常规，常用于边框[light: rgba(var(--o-grey-14), 0.25), dark: rgba(var(--o-grey-14), 0.25)]",
     "scope": "css,scss,less"
   },
   "--o-color-control2": {
@@ -1716,7 +1716,7 @@
       "var(--o-color-control2)"
     ],
     "body": "var(--o-color-control2)",
-    "description": "悬浮，常用于边框[light: rgba(var(--o-mixedgray-14), 0.6), dark: rgba(var(--o-mixedgray-14), 0.6)]",
+    "description": "悬浮，常用于边框[light: rgba(var(--o-grey-14), 0.6), dark: rgba(var(--o-grey-14), 0.6)]",
     "scope": "css,scss,less"
   },
   "--o-color-control3": {
@@ -1724,7 +1724,7 @@
       "var(--o-color-control3)"
     ],
     "body": "var(--o-color-control3)",
-    "description": "激活，常用于边框[light: rgba(var(--o-mixedgray-14), 0.8), dark: rgba(var(--o-mixedgray-14), 0.8)]",
+    "description": "激活，常用于边框[light: rgba(var(--o-grey-14), 0.8), dark: rgba(var(--o-grey-14), 0.8)]",
     "scope": "css,scss,less"
   },
   "--o-color-control4": {
@@ -1732,7 +1732,7 @@
       "var(--o-color-control4)"
     ],
     "body": "var(--o-color-control4)",
-    "description": "禁用，常用于边框[light: rgba(var(--o-mixedgray-14), 0.1), dark: rgba(var(--o-mixedgray-14), 0.15)]",
+    "description": "禁用，常用于边框[light: rgba(var(--o-grey-14), 0.1), dark: rgba(var(--o-grey-14), 0.15)]",
     "scope": "css,scss,less"
   },
   "--o-color-control1-light": {
@@ -1740,7 +1740,7 @@
       "var(--o-color-control1-light)"
     ],
     "body": "var(--o-color-control1-light)",
-    "description": "常规-浅，常用于背景[light: rgb(var(--o-mixedgray-5), 1.0), dark: rgb(var(--o-mixedgray-7), 1.0)]",
+    "description": "常规-浅，常用于背景[light: rgb(var(--o-grey-5), 1.0), dark: rgb(var(--o-grey-7), 1.0)]",
     "scope": "css,scss,less"
   },
   "--o-color-control2-light": {
@@ -1748,7 +1748,7 @@
       "var(--o-color-control2-light)"
     ],
     "body": "var(--o-color-control2-light)",
-    "description": "悬浮-浅，常用于背景[light: rgba(var(--o-kleinblue-1), 1), dark: rgb(var(--o-mixedgray-5), 1)]",
+    "description": "悬浮-浅，常用于背景[light: rgba(var(--o-kleinblue-1), 1), dark: rgb(var(--o-grey-5), 1)]",
     "scope": "css,scss,less"
   },
   "--o-color-control3-light": {
@@ -1756,7 +1756,7 @@
       "var(--o-color-control3-light)"
     ],
     "body": "var(--o-color-control3-light)",
-    "description": "激活-浅，常用于背景[light: rgba(var(--o-kleinblue-2), 1), dark: rgb(var(--o-mixedgray-6), 1)]",
+    "description": "激活-浅，常用于背景[light: rgba(var(--o-kleinblue-2), 1), dark: rgb(var(--o-grey-6), 1)]",
     "scope": "css,scss,less"
   },
   "--o-color-control4-light": {
@@ -1764,15 +1764,15 @@
       "var(--o-color-control4-light)"
     ],
     "body": "var(--o-color-control4-light)",
-    "description": "禁用-浅，常用于背景[light: rgb(var(--o-mixedgray-3), 1), dark: rgb(var(--o-mixedgray-5), 1)]",
+    "description": "禁用-浅，常用于背景[light: rgb(var(--o-grey-3), 1), dark: rgb(var(--o-grey-5), 1)]",
     "scope": "css,scss,less"
   },
-  "--o-color-control-light": {
+  "--o-color-control5-light": {
     "prefix": [
-      "var(--o-color-control-light)"
+      "var(--o-color-control5-light)"
     ],
-    "body": "var(--o-color-control-light)",
-    "description": "很浅，常用于表格背景色[light: rgb(var(--o-mixedgray-1), 1.0), dark: rgb(var(--o-mixedgray-4), 1.0)]",
+    "body": "var(--o-color-control5-light)",
+    "description": "很浅，常用于表格背景色[light: rgb(var(--o-grey-1), 1.0), dark: rgb(var(--o-grey-4), 1.0)]",
     "scope": "css,scss,less"
   },
   "--o-color-info1": {
@@ -1780,7 +1780,7 @@
       "var(--o-color-info1)"
     ],
     "body": "var(--o-color-info1)",
-    "description": "一级/强调/标题[light: rgba(var(--o-mixedgray-14), 1.0), dark: rgba(var(--o-mixedgray-14), 1.0)]",
+    "description": "一级/强调/标题[light: rgba(var(--o-grey-14), 1.0), dark: rgba(var(--o-grey-14), 1.0)]",
     "scope": "css,scss,less"
   },
   "--o-color-info2": {
@@ -1788,7 +1788,7 @@
       "var(--o-color-info2)"
     ],
     "body": "var(--o-color-info2)",
-    "description": "二级/次强调/正文[light: rgba(var(--o-mixedgray-14), 0.8), dark: rgba(var(--o-mixedgray-14), 0.8)]",
+    "description": "二级/次强调/正文[light: rgba(var(--o-grey-14), 0.8), dark: rgba(var(--o-grey-14), 0.8)]",
     "scope": "css,scss,less"
   },
   "--o-color-info3": {
@@ -1796,7 +1796,7 @@
       "var(--o-color-info3)"
     ],
     "body": "var(--o-color-info3)",
-    "description": "三级/辅助信息[light: rgba(var(--o-mixedgray-14), 0.6), dark: rgba(var(--o-mixedgray-14), 0.6)]",
+    "description": "三级/辅助信息[light: rgba(var(--o-grey-14), 0.6), dark: rgba(var(--o-grey-14), 0.6)]",
     "scope": "css,scss,less"
   },
   "--o-color-info4": {
@@ -1804,7 +1804,7 @@
       "var(--o-color-info4)"
     ],
     "body": "var(--o-color-info4)",
-    "description": "置灰/禁用[light: rgba(var(--o-mixedgray-14), 0.4), dark: rgba(var(--o-mixedgray-14), 0.4)]",
+    "description": "置灰/禁用[light: rgba(var(--o-grey-14), 0.4), dark: rgba(var(--o-grey-14), 0.4)]",
     "scope": "css,scss,less"
   },
   "--o-color-info1-inverse": {
@@ -1812,7 +1812,7 @@
       "var(--o-color-info1-inverse)"
     ],
     "body": "var(--o-color-info1-inverse)",
-    "description": "一级/次强调/正文反色[light: rgba(var(--o-mixedgray-1), 1.0), dark: rgba(var(--o-mixedgray-1), 1.0)]",
+    "description": "一级/次强调/正文反色[light: rgba(var(--o-grey-1), 1.0), dark: rgba(var(--o-grey-1), 1.0)]",
     "scope": "css,scss,less"
   },
   "--o-color-info2-inverse": {
@@ -1820,7 +1820,7 @@
       "var(--o-color-info2-inverse)"
     ],
     "body": "var(--o-color-info2-inverse)",
-    "description": "二级/辅助信息反色[light: rgba(var(--o-mixedgray-1), 0.8), dark: rgba(var(--o-mixedgray-1), 0.8)]",
+    "description": "二级/辅助信息反色[light: rgba(var(--o-grey-1), 0.8), dark: rgba(var(--o-grey-1), 0.8)]",
     "scope": "css,scss,less"
   },
   "--o-color-info3-inverse": {
@@ -1828,7 +1828,7 @@
       "var(--o-color-info3-inverse)"
     ],
     "body": "var(--o-color-info3-inverse)",
-    "description": "三级/辅助信息反色[light: rgba(var(--o-mixedgray-1), 0.6), dark: rgba(var(--o-mixedgray-1), 0.6)]",
+    "description": "三级/辅助信息反色[light: rgba(var(--o-grey-1), 0.6), dark: rgba(var(--o-grey-1), 0.6)]",
     "scope": "css,scss,less"
   },
   "--o-color-info4-inverse": {
@@ -1836,7 +1836,7 @@
       "var(--o-color-info4-inverse)"
     ],
     "body": "var(--o-color-info4-inverse)",
-    "description": "置灰/禁用反色[light: rgba(var(--o-mixedgray-1), 0.4), dark: rgba(var(--o-mixedgray-1), 0.4)]",
+    "description": "置灰/禁用反色[light: rgba(var(--o-grey-1), 0.4), dark: rgba(var(--o-grey-1), 0.4)]",
     "scope": "css,scss,less"
   },
   "--o-color-mask1": {
@@ -1844,7 +1844,7 @@
       "var(--o-color-mask1)"
     ],
     "body": "var(--o-color-mask1)",
-    "description": "全局遮罩[light: rgba(var(--o-mixedgray-14), 0.4), dark: rgba(var(--o-mixedgray-1), 0.4)]",
+    "description": "全局遮罩[light: rgba(var(--o-grey-14), 0.4), dark: rgba(var(--o-grey-1), 0.4)]",
     "scope": "css,scss,less"
   },
   "--o-color-mask2": {
@@ -1852,7 +1852,7 @@
       "var(--o-color-mask2)"
     ],
     "body": "var(--o-color-mask2)",
-    "description": "局部遮罩[light: rgba(var(--o-mixedgray-1), 0.2), dark: rgba(var(--o-mixedgray-4), 0.2)]",
+    "description": "局部遮罩[light: rgba(var(--o-grey-1), 0.2), dark: rgba(var(--o-grey-4), 0.2)]",
     "scope": "css,scss,less"
   },
   "--o-color-link1": {
@@ -1892,7 +1892,7 @@
       "var(--o-shadow-1)"
     ],
     "body": "var(--o-shadow-1)",
-    "description": "用于卡片、小弹窗、楼层阴影[light: 0 3px 8px rgba(var(--o-mixedgray-9), 0.08), dark: 0 3px 8px rgba(var(--o-mixedgray-1), 0.08)]",
+    "description": "用于卡片、小弹窗、楼层阴影[light: 0 3px 8px rgba(var(--o-grey-9), 0.08), dark: 0 3px 8px rgba(var(--o-grey-1), 0.08)]",
     "scope": "css,scss,less"
   },
   "--o-shadow-2": {
@@ -1900,7 +1900,7 @@
       "var(--o-shadow-2)"
     ],
     "body": "var(--o-shadow-2)",
-    "description": "用于卡片悬浮阴影[light: 0 2px 24px rgba(var(--o-mixedgray-9), 0.15), dark: 0 2px 24px rgba(var(--o-mixedgray-1), 0.15)]",
+    "description": "用于卡片悬浮阴影[light: 0 2px 24px rgba(var(--o-grey-9), 0.15), dark: 0 2px 24px rgba(var(--o-grey-1), 0.15)]",
     "scope": "css,scss,less"
   },
   "--o-shadow-3": {
@@ -1908,7 +1908,7 @@
       "var(--o-shadow-3)"
     ],
     "body": "var(--o-shadow-3)",
-    "description": "用于提示阴影[light: 0 8px 40px rgba(var(--o-mixedgray-9), 0.1), dark: 0 8px 40px rgba(var(--o-mixedgray-1), 0.1)]",
+    "description": "用于提示阴影[light: 0 8px 40px rgba(var(--o-grey-9), 0.1), dark: 0 8px 40px rgba(var(--o-grey-1), 0.1)]",
     "scope": "css,scss,less"
   },
   "--o-gap-1": {

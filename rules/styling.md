@@ -9,7 +9,7 @@ app/.vitepress/src-new/assets/style/
 ├── global.scss             # 全局样式
 ├── markdown.scss           # Markdown 内容样式
 ├── mixin/
-│   ├── screen.scss         # 响应式断点 mixin（respond-to）
+│   ├── screen.scss         # 响应式断点 mixin（respond）
 │   ├── font.scss           # 排版 mixin（display3、h4、text1 等）
 │   └── common.scss         # 通用 mixin
 └── theme/
@@ -60,7 +60,7 @@ app/.vitepress/src-new/assets/style/
 
 ## 响应式断点规范
 
-使用 `respond-to` mixin（已全局注入，无需 import）：
+使用 `respond` mixin（已全局注入，无需 import）：
 
 | 断点名 | 宽度范围 | 说明 |
 |--------|---------|------|
@@ -69,19 +69,19 @@ app/.vitepress/src-new/assets/style/
 | `pad_h` | 841 ~ 1200px | 横屏平板 |
 | `<=pad_v` | 0 ~ 840px | 竖屏平板及以下 |
 | `<=pad` | 0 ~ 1200px | 平板及以下 |
-| `laptop` | 1201 ~ 1440px | 笔记本 |
-| `>laptop` | 1441px+ | 大屏 |
+| `laptop` | 1201 ~ 1680px | 笔记本 |
+| `>laptop` | 1681px+ | 大屏 |
 
 ```scss
-// ✅ 使用 respond-to mixin
+// ✅ 使用 respond mixin
 .sig-banner {
   padding: 0 48px;
 
-  @include respond-to('<=pad') {
+  @include respond('<=pad') {
     padding: 0 24px;
   }
 
-  @include respond-to('phone') {
+  @include respond('phone') {
     padding: 0 16px;
   }
 }
@@ -144,7 +144,7 @@ const { isPhone, lePadV, isPad, gtPad, leLaptop } = useScreen();
   }
 
   // ✅ 响应式
-  @include respond-to('phone') {
+  @include respond('phone') {
     padding: var(--o-spacing-h6);
   }
 }
@@ -198,7 +198,7 @@ const { toggleTheme } = useTheme();
 
 - 禁止使用内联样式（`style="..."`），动态宽高等特殊情况除外
 - 禁止硬编码颜色值，统一使用 CSS 变量
-- 禁止硬编码断点数值，统一使用 `respond-to` mixin
+- 禁止硬编码断点数值，统一使用 `respond` mixin
 - 禁止使用 `!important`，通过提高选择器优先级解决
 - 禁止超过 3 层的 SCSS 嵌套
 - 禁止在组件 `<style>` 中手动 `@use` / `@import` 已全局注入的 mixin 文件

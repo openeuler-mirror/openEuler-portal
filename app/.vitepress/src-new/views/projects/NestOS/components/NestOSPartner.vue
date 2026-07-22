@@ -79,7 +79,7 @@ const flexWidth = computed(() => {
   height: 45px;
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .Skysolidiss {
     height: 28px;
   }

@@ -1,8 +1,16 @@
+@use "@opensig/opendesign/es/_styles/mixin.scss" as *;
+
 .o-message-list {
   z-index: 1008;
-  --app-header-height: 64px;
+  --app-header-height: 72px;
   --app-footer-height: 300px;
-
   --message-list-top-offset: calc(var(--app-header-height) + 32px);
   --message-list-bottom-offset: calc(var(--app-footer-height) + 32px);
+  @include respond('<=laptop') {
+    --app-header-height: 64px;
+  }
+
+  @include respond('<=pad') {
+    --app-header-height: 56px;
+  }
 }

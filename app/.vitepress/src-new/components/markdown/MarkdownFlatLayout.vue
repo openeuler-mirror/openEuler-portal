@@ -95,13 +95,13 @@ const infos = computed(() => {
   }
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .flat {
     padding: 24px;
   }
 }
 
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .flat {
     padding: 16px;
   }
@@ -110,7 +110,7 @@ const infos = computed(() => {
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .flat {
     padding: 12px;
   }

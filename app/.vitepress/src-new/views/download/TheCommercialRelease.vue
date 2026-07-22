@@ -522,10 +522,10 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
 .app-section {
   --o-gap-section: 40px;
 
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     --o-gap-section: 32px;
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     --o-gap-section: 16px;
   }
 }
@@ -533,7 +533,7 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
   padding: 24px 32px;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: none;
   }
   .filter-card {
@@ -587,7 +587,7 @@ html[lang='en'] {
 }
 .serach-box-mo {
   display: none;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: block;
     .o-input {
       width: 100%;
@@ -607,7 +607,7 @@ html[lang='en'] {
 .commercial-release {
   .download-filter-mobile {
     display: none;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: flex;
       margin-top: 12px;
     }
@@ -620,16 +620,15 @@ html[lang='en'] {
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 32px;
-    @include respond-to('pad_v-laptop') {
+    @include respond('pad_v-laptop') {
       grid-template-columns: repeat(2, 1fr);
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 12px;
       grid-gap: 16px;
       grid-template-columns: repeat(1, 1fr);
     }
     .o-card {
-      --card-main-padding: 24px;
       height: 100%;
       width: 100%;
       :deep(.o-card-header) {
@@ -671,19 +670,19 @@ html[lang='en'] {
       }
       .footer-divider {
         display: none;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           display: block;
         }
       }
       .footer-link {
         .o-btn {
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             display: none;
           }
         }
         .btn-mo {
           display: none;
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -704,7 +703,7 @@ html[lang='en'] {
     margin-top: 32px;
     display: flex;
     justify-content: flex-end;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: none;
     }
   }

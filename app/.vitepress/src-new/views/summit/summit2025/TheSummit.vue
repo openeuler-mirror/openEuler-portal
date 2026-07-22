@@ -86,7 +86,7 @@ const tabLive = ref(0)
     --icon-size: 32px;
     margin-left: 16px;
   }
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     .o-icon {
       --icon-size: 16px;
       margin-left: 12px;
@@ -123,13 +123,13 @@ const tabLive = ref(0)
         border-radius: 0 4px 4px 0;
       }
 
-      @include respond-to('laptop') {
+      @include respond('laptop') {
         width: 154px;
       }
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         width: 124px;
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         width: auto;
       }
     }
@@ -138,7 +138,7 @@ const tabLive = ref(0)
     margin-top: 40px;
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     --tab-nav-padding: 8px 16px;
   }
 }

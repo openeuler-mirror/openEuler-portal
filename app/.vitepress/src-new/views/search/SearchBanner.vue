@@ -372,13 +372,13 @@ defineExpose({ searchRecommendRef });
   background-image: url('~@/assets/category/search/search-banner.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     background: none;
   }
   .search-box {
     position: relative;
     width: calc(100% - 361px);
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: none;
     }
     .search-input-wrapper {
@@ -422,7 +422,7 @@ defineExpose({ searchRecommendRef });
     align-items: center;
     flex-wrap: wrap;
     @include h4;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: none;
     }
     .suggest-label {
@@ -451,24 +451,24 @@ defineExpose({ searchRecommendRef });
     align-items: center;
     border-bottom: 1px solid var(--o-color-control4);
     @include h4;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 0;
       border-bottom: inherit;
     }
     :deep(.o-tab-head) {
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         width: 100%;
       }
     }
 
     :deep(.o-tab-nav) {
       color: rgba($color: var(--o-white), $alpha: 0.8);
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         color: var(--tab-icon-color);
       }
       &.o-tab-nav-active {
         color: var(--o-color-white);
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           color: var(--tab-nav-color-active);
         }
       }
@@ -586,7 +586,7 @@ defineExpose({ searchRecommendRef });
     :deep(svg) {
       width: 16px;
       height: 16px;
-      fill: rgb(var(--o-mixedgray-9));
+      fill: rgb(var(--o-grey-9));
     }
   }
 }
@@ -661,7 +661,7 @@ defineExpose({ searchRecommendRef });
     :deep(svg) {
       width: 16px;
       height: 16px;
-      fill: rgb(var(--o-mixedgray-9));
+      fill: rgb(var(--o-grey-9));
     }
   }
 }

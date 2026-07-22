@@ -173,7 +173,7 @@ useInViewDuration(
         --intro-gap: 72px;
         // 左侧icon宽度
         --icon-width: 58px;
-        @include respond-to('laptop') {
+        @include respond('laptop') {
           --intro-gap: 56px;
         }
         @media screen and (max-width: 1200px) {
@@ -185,10 +185,10 @@ useInViewDuration(
         @media screen and (max-width: 1000px) {
           --intro-gap: 16px;
         }
-        @include respond-to('laptop') {
+        @include respond('laptop') {
           --icon-width: 52px;
         }
-        @include respond-to('pad_h') {
+        @include respond('pad_h') {
           --icon-width: 50px;
         }
         @media screen and (max-width: 1100px) {
@@ -234,7 +234,7 @@ useInViewDuration(
           left: calc(var(--icon-width) / 2);
         }
       }
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         margin: 24px 24px 24px 18px;
       }
       @media screen and (max-width: 1000px) {
@@ -265,7 +265,7 @@ useInViewDuration(
       background-size: 100% 100%;
       background-image: url(~@/assets/category/home/intro/right-bg_light.png);
       border-radius: 8px;
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         padding: 0 0 16px 16px;
         background-position: center top 16px;
       }
@@ -305,7 +305,7 @@ useInViewDuration(
           color: var(--o-color-primary1);
         }
       }
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         margin-top: 0;
       }
     }
@@ -348,7 +348,7 @@ useInViewDuration(
   }
 }
 
-[data-o-theme='dark'] {
+[data-o-theme='e.dark'] {
   .intro-pc {
     .intro-list-pc {
       &::before {

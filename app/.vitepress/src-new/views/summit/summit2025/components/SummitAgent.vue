@@ -410,7 +410,7 @@ watch(
   @include text1;
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .agent-list {
     padding: 32px;
   }
@@ -445,7 +445,7 @@ watch(
     width: calc((100% - 24px) / 2);
   }
 }
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .forum {
     .forum-title {
       padding: 8px 16px;
@@ -490,7 +490,7 @@ watch(
     }
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .forum {
     .forum-title {
       padding: 8px 16px;

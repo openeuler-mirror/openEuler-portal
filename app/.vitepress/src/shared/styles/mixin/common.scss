@@ -1,5 +1,5 @@
 @mixin in-dark {
-  [data-o-theme='dark'] {
+  [data-o-theme='e.dark'] {
     @content;
   }
 }

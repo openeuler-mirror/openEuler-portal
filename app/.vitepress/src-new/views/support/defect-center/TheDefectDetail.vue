@@ -463,7 +463,7 @@ const generateIssueUrl = (issue: String) => {
   margin-left: 16px;
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .content-wrapper {
     padding-bottom: 56px;
   }
@@ -474,7 +474,7 @@ const generateIssueUrl = (issue: String) => {
     padding: 40px 32px;
   }
 }
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .content-wrapper {
     padding-bottom: 40px;
   }
@@ -485,7 +485,7 @@ const generateIssueUrl = (issue: String) => {
     padding: 32px;
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .content-wrapper {
     padding-top: 24px;
     padding-bottom: 32px;

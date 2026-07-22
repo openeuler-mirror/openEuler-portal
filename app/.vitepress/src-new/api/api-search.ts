@@ -199,3 +199,23 @@ export function getOnestepSearch(params: { query: string, lang: string }): Promi
   const url = `/api-search/search/webword?query=${params.query}`;
   return request.post(url, params).then((res: AxiosResponse) => res.data);
 }
+
+export function getPop(params: string): Promise<{
+  msg: string;
+  obj: string[];
+  status: number;
+}> {
+  const url = `/api-search/search/pop?${params}`;
+  return request.post(url, {}).then((res: AxiosResponse) => res.data);
+}
+
+export function getSearchRecommend(params: { query: string, lang: string }): Promise<{
+  status: number;
+  obj: {
+    word: SearchRecommendT[];
+  };
+  msg: string;
+}> {
+  const url = `/api-search/search/word?query=${params.query}`;
+  return request.post(url, params).then((res: AxiosResponse) => res.data);
+}

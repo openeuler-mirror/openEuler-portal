@@ -284,7 +284,7 @@ watch(
 
 .catalog {
   position: fixed;
-  top: 12px;
+  top: 16px;
   left: 48px;
   z-index: 99;
   font-size: 24px;
@@ -300,7 +300,7 @@ watch(
     left: 0;
     z-index: 80;
   }
-  @include respond-to('pad_v') {
+  @include respond('pad_v') {
     left: 56px;
   }
 }
@@ -666,7 +666,7 @@ watch(
       }
     }
 
-    @include respond-to('phone') {
+    @include respond('phone') {
       opacity: 1;
     }
   }
@@ -684,7 +684,7 @@ watch(
     z-index: 1;
     padding: 24px;
     color: var(--o-color-info1);
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       border-radius: 8px;
       margin: 12px 0;
       white-space: pre-wrap;
@@ -712,7 +712,7 @@ watch(
     padding: 0;
     @include tip1;
 
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       font-size: var(--e-font-size-tip);
       line-height: var(--e-line-height-tip);
     }

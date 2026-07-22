@@ -58,19 +58,19 @@ const infoList = [
   color: var(--o-color-info1);
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .intro-card {
     padding: 32px 24px;
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .intro-card {
     padding: 24px 16px;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .app-section {
     :deep(.section-wrapper) {
       margin-top: 32px;
@@ -81,7 +81,7 @@ const infoList = [
     @include text1;
   }
 }
-@include respond-to('phone') {
+@include respond('phone') {
   .app-section {
     :deep(.section-wrapper) {
       margin-top: 16px;

@@ -162,7 +162,7 @@ const darkImgMb = {
   }
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .framework {
     padding: 32px 48px;
     align-items: center;
@@ -205,7 +205,7 @@ const darkImgMb = {
     }
   }
 }
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .framework {
     padding: 24px;
     @media (max-width: 935px) {
@@ -286,7 +286,7 @@ const darkImgMb = {
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .framework {
     display: flex;
     flex-direction: column;

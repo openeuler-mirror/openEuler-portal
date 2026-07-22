@@ -550,23 +550,41 @@ const onClickLink = (item: any) => {
   background-color: var(--o-color-fill2);
   padding: 32px;
   border-radius: var(--o-radius-xs);
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 16px;
     padding: 12px;
   }
   .detail-last {
     color: var(--o-color-info1);
     @include text1;
+    a {
+      --link-color-hover: var(--e-color-link1);
+      --link-underline-x: 100%;
+
+      color: var(--e-color-link1);
+      background: linear-gradient(0deg, var(--link-color-hover), var(--link-color-hover)) no-repeat var(--link-underline-x) bottom;
+      background-size: 0 1px;
+      transition: background-size var(--o-easing-standard) var(--o-duration-m2);
+
+      @include hover {
+        background-size: var(--link-underline-x) 1px;
+        background-position-x: left;
+        color: var(--e-color-link2);
+      }
+      &:active {
+        color: var(--e-color-link3);
+      }
+    }
   }
   .filter-box {
     margin-top: 24px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 16px;
     }
     .filter-card {
       display: flex;
       align-items: center;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 12px;
         justify-content: flex-start;
         flex-direction: column;
@@ -577,18 +595,18 @@ const onClickLink = (item: any) => {
         min-width: 64px;
         margin-right: 32px;
         @include text1;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           min-width: auto;
         }
       }
       .o-radio-group {
         .o-radio + .o-radio {
           margin-left: 8px;
-          @include respond-to('<=laptop') {
+          @include respond('<=laptop') {
             margin-left: 0;
           }
         }
-        @include respond-to('<=laptop') {
+        @include respond('<=laptop') {
           .o-radio {
             margin: 8px 8px 0 0;
           }
@@ -601,7 +619,7 @@ const onClickLink = (item: any) => {
     }
     .filter-card:not(:first-child) {
       margin-top: 8px;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 12px;
       }
     }

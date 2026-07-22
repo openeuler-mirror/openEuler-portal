@@ -1682,24 +1682,24 @@
         "key": "color-fill1",
         "description": "一级填充：页面背景",
         "value": {
-          "light": "rgb(var(--o-mixedgray-2))",
-          "dark": "rgb(var(--o-mixedgray-3))"
+          "light": "rgb(var(--o-grey-2))",
+          "dark": "rgb(var(--o-grey-3))"
         }
       },
       {
         "key": "color-fill2",
         "description": "二级填充：区块/卡片",
         "value": {
-          "light": "rgb(var(--o-mixedgray-1))",
-          "dark": "rgb(var(--o-mixedgray-4))"
+          "light": "rgb(var(--o-grey-1))",
+          "dark": "rgb(var(--o-grey-4))"
         }
       },
       {
         "key": "color-fill3",
         "description": "三级填充：卡片",
         "value": {
-          "light": "rgb(var(--o-mixedgray-3))",
-          "dark": "rgb(var(--o-mixedgray-5))"
+          "light": "rgb(var(--o-grey-3))",
+          "dark": "rgb(var(--o-grey-5))"
         }
       }
     ]
@@ -1713,40 +1713,40 @@
         "key": "color-control1",
         "description": "常规，常用于边框",
         "value": {
-          "light": "rgba(var(--o-mixedgray-14), 0.25)",
-          "dark": "rgba(var(--o-mixedgray-14), 0.25)"
+          "light": "rgba(var(--o-grey-14), 0.25)",
+          "dark": "rgba(var(--o-grey-14), 0.25)"
         }
       },
       {
         "key": "color-control2",
         "description": "悬浮，常用于边框",
         "value": {
-          "light": "rgba(var(--o-mixedgray-14), 0.6)",
-          "dark": "rgba(var(--o-mixedgray-14), 0.6)"
+          "light": "rgba(var(--o-grey-14), 0.6)",
+          "dark": "rgba(var(--o-grey-14), 0.6)"
         }
       },
       {
         "key": "color-control3",
         "description": "激活，常用于边框",
         "value": {
-          "light": "rgba(var(--o-mixedgray-14), 0.8)",
-          "dark": "rgba(var(--o-mixedgray-14), 0.8)"
+          "light": "rgba(var(--o-grey-14), 0.8)",
+          "dark": "rgba(var(--o-grey-14), 0.8)"
         }
       },
       {
         "key": "color-control4",
         "description": "禁用，常用于边框",
         "value": {
-          "light": "rgba(var(--o-mixedgray-14), 0.1)",
-          "dark": "rgba(var(--o-mixedgray-14), 0.15)"
+          "light": "rgba(var(--o-grey-14), 0.1)",
+          "dark": "rgba(var(--o-grey-14), 0.15)"
         }
       },
       {
         "key": "color-control1-light",
         "description": "常规-浅，常用于背景",
         "value": {
-          "light": "rgb(var(--o-mixedgray-5), 1.0)",
-          "dark": "rgb(var(--o-mixedgray-7), 1.0)"
+          "light": "rgb(var(--o-grey-5), 1.0)",
+          "dark": "rgb(var(--o-grey-7), 1.0)"
         }
       },
       {
@@ -1754,7 +1754,7 @@
         "description": "悬浮-浅，常用于背景",
         "value": {
           "light": "rgba(var(--o-kleinblue-1), 1)",
-          "dark": "rgb(var(--o-mixedgray-5), 1)"
+          "dark": "rgb(var(--o-grey-5), 1)"
         }
       },
       {
@@ -1762,23 +1762,23 @@
         "description": "激活-浅，常用于背景",
         "value": {
           "light": "rgba(var(--o-kleinblue-2), 1)",
-          "dark": "rgb(var(--o-mixedgray-6), 1)"
+          "dark": "rgb(var(--o-grey-6), 1)"
         }
       },
       {
         "key": "color-control4-light",
         "description": "禁用-浅，常用于背景",
         "value": {
-          "light": "rgb(var(--o-mixedgray-3), 1)",
-          "dark": "rgb(var(--o-mixedgray-5), 1)"
+          "light": "rgb(var(--o-grey-3), 1)",
+          "dark": "rgb(var(--o-grey-5), 1)"
         }
       },
       {
         "key": "color-control-light",
         "description": "很浅，常用于表格背景色",
         "value": {
-          "light": "rgb(var(--o-mixedgray-1), 1.0)",
-          "dark": "rgb(var(--o-mixedgray-4), 1.0)"
+          "light": "rgb(var(--o-grey-1), 1.0)",
+          "dark": "rgb(var(--o-grey-4), 1.0)"
         }
       }
     ]
@@ -1792,64 +1792,64 @@
         "key": "color-info1",
         "description": "一级/强调/标题",
         "value": {
-          "light": "rgba(var(--o-mixedgray-14), 1.0)",
-          "dark": "rgba(var(--o-mixedgray-14), 1.0)"
+          "light": "rgba(var(--o-grey-14), 1.0)",
+          "dark": "rgba(var(--o-grey-14), 1.0)"
         }
       },
       {
         "key": "color-info2",
         "description": "二级/次强调/正文",
         "value": {
-          "light": "rgba(var(--o-mixedgray-14), 0.8)",
-          "dark": "rgba(var(--o-mixedgray-14), 0.8)"
+          "light": "rgba(var(--o-grey-14), 0.8)",
+          "dark": "rgba(var(--o-grey-14), 0.8)"
         }
       },
       {
         "key": "color-info3",
         "description": "三级/辅助信息",
         "value": {
-          "light": "rgba(var(--o-mixedgray-14), 0.6)",
-          "dark": "rgba(var(--o-mixedgray-14), 0.6)"
+          "light": "rgba(var(--o-grey-14), 0.6)",
+          "dark": "rgba(var(--o-grey-14), 0.6)"
         }
       },
       {
         "key": "color-info4",
         "description": "置灰/禁用",
         "value": {
-          "light": "rgba(var(--o-mixedgray-14), 0.4)",
-          "dark": "rgba(var(--o-mixedgray-14), 0.4)"
+          "light": "rgba(var(--o-grey-14), 0.4)",
+          "dark": "rgba(var(--o-grey-14), 0.4)"
         }
       },
       {
         "key": "color-info1-inverse",
         "description": "一级/次强调/正文反色",
         "value": {
-          "light": "rgba(var(--o-mixedgray-1), 1.0)",
-          "dark": "rgba(var(--o-mixedgray-1), 1.0)"
+          "light": "rgba(var(--o-grey-1), 1.0)",
+          "dark": "rgba(var(--o-grey-1), 1.0)"
         }
       },
       {
         "key": "color-info2-inverse",
         "description": "二级/辅助信息反色",
         "value": {
-          "light": "rgba(var(--o-mixedgray-1), 0.8)",
-          "dark": "rgba(var(--o-mixedgray-1), 0.8)"
+          "light": "rgba(var(--o-grey-1), 0.8)",
+          "dark": "rgba(var(--o-grey-1), 0.8)"
         }
       },
       {
         "key": "color-info3-inverse",
         "description": "三级/辅助信息反色",
         "value": {
-          "light": "rgba(var(--o-mixedgray-1), 0.6)",
-          "dark": "rgba(var(--o-mixedgray-1), 0.6)"
+          "light": "rgba(var(--o-grey-1), 0.6)",
+          "dark": "rgba(var(--o-grey-1), 0.6)"
         }
       },
       {
         "key": "color-info4-inverse",
         "description": "置灰/禁用反色",
         "value": {
-          "light": "rgba(var(--o-mixedgray-1), 0.4)",
-          "dark": "rgba(var(--o-mixedgray-1), 0.4)"
+          "light": "rgba(var(--o-grey-1), 0.4)",
+          "dark": "rgba(var(--o-grey-1), 0.4)"
         }
       }
     ]
@@ -1863,16 +1863,16 @@
         "key": "color-mask1",
         "description": "全局遮罩",
         "value": {
-          "light": "rgba(var(--o-mixedgray-14), 0.4)",
-          "dark": "rgba(var(--o-mixedgray-1), 0.4)"
+          "light": "rgba(var(--o-grey-14), 0.4)",
+          "dark": "rgba(var(--o-grey-1), 0.4)"
         }
       },
       {
         "key": "color-mask2",
         "description": "局部遮罩",
         "value": {
-          "light": "rgba(var(--o-mixedgray-1), 0.2)",
-          "dark": "rgba(var(--o-mixedgray-4), 0.2)"
+          "light": "rgba(var(--o-grey-1), 0.2)",
+          "dark": "rgba(var(--o-grey-4), 0.2)"
         }
       }
     ]
@@ -1927,8 +1927,8 @@
         "name": "阴影1",
         "description": "用于卡片、小弹窗、楼层阴影",
         "value": {
-          "light": "0 3px 8px rgba(var(--o-mixedgray-9), 0.08)",
-          "dark": "0 3px 8px rgba(var(--o-mixedgray-1), 0.08)"
+          "light": "0 3px 8px rgba(var(--o-grey-9), 0.08)",
+          "dark": "0 3px 8px rgba(var(--o-grey-1), 0.08)"
         }
       },
       {
@@ -1936,8 +1936,8 @@
         "name": "阴影2",
         "description": "用于卡片悬浮阴影",
         "value": {
-          "light": "0 2px 24px rgba(var(--o-mixedgray-9), 0.15)",
-          "dark": "0 2px 24px rgba(var(--o-mixedgray-1), 0.15)"
+          "light": "0 2px 24px rgba(var(--o-grey-9), 0.15)",
+          "dark": "0 2px 24px rgba(var(--o-grey-1), 0.15)"
         }
       },
       {
@@ -1945,8 +1945,8 @@
         "name": "阴影3",
         "description": "用于提示阴影",
         "value": {
-          "light": "0 8px 40px rgba(var(--o-mixedgray-9), 0.1)",
-          "dark": "0 8px 40px rgba(var(--o-mixedgray-1), 0.1)"
+          "light": "0 8px 40px rgba(var(--o-grey-9), 0.1)",
+          "dark": "0 8px 40px rgba(var(--o-grey-1), 0.1)"
         }
       }
     ]

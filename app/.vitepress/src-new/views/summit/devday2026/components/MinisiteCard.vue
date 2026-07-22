@@ -73,10 +73,10 @@ const gap = computed(() => {
   margin-top: 40px;
 }
 .o-card {
-  background: linear-gradient(135deg, rgba(var(--o-mixedgray-1), 1), rgba(236, 241, 255, 1) 100%);
+  background: linear-gradient(135deg, rgba(var(--o-grey-1), 1), rgba(236, 241, 255, 1) 100%);
 }
 .card-dark {
-  background: linear-gradient(135deg, rgba(var(--o-mixedgray-4), 1), rgba(25, 37, 66, 1) 100%);
+  background: linear-gradient(135deg, rgba(var(--o-grey-4), 1), rgba(25, 37, 66, 1) 100%);
 }
 .card-content {
   padding: 24px;
@@ -143,12 +143,12 @@ const gap = computed(() => {
   --icon-size: 24px;
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .card-list {
     margin-top: 24px;
   }
 }
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .card-list {
     margin-top: 16px;
   }
@@ -160,7 +160,7 @@ const gap = computed(() => {
     --icon-size: 16px;
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .card-list {
     margin-top: 12px;
   }

@@ -351,7 +351,7 @@ const renderData = computed(() => {
   margin-top: 32px;
   display: flex;
   justify-content: flex-end;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     display: none;
   }
 }
@@ -359,7 +359,7 @@ const renderData = computed(() => {
 .sig-contribute-title {
   font-weight: 500;
   @include h4;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-bottom: 12px;
     @include h3;
   }
@@ -376,7 +376,7 @@ const renderData = computed(() => {
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
   padding: 24px;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 12px;
     padding: 12px;
   }
@@ -384,7 +384,7 @@ const renderData = computed(() => {
   .filter-card {
     display: flex;
     align-items: center;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 12px;
       justify-content: flex-start;
       flex-direction: column;
@@ -397,13 +397,13 @@ const renderData = computed(() => {
       margin-right: 32px;
       font-weight: 500;
       @include text1;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         min-width: auto;
       }
     }
 
     .o-radio-group {
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         .o-radio {
           margin: 8px 8px 0 0;
         }
@@ -411,7 +411,7 @@ const renderData = computed(() => {
 
       .o-radio + .o-radio {
         margin-left: 8px;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           margin-left: 0;
         }
       }
@@ -420,14 +420,14 @@ const renderData = computed(() => {
 
   .filter-card:not(:first-child) {
     margin-top: 8px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 12px;
     }
   }
 
   .serach-input {
     margin-left: auto;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       max-width: 100%;
       width: 100%;
     }
@@ -437,10 +437,10 @@ const renderData = computed(() => {
 
     :deep(.o_box) {
       width: 320px;
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         width: 100%;
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         width: 100%;
       }
     }
@@ -460,7 +460,7 @@ const renderData = computed(() => {
   background-color: var(--o-color-fill2);
   border: 1px solid var(--o-color-control4);
   border-radius: var(--o-radius-xs);
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 8px;
   }
 
@@ -469,7 +469,7 @@ const renderData = computed(() => {
     justify-content: space-between;
     align-items: center;
     padding: 12px 24px 12px 56px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       padding: 8px 56px;
     }
   }
@@ -504,7 +504,7 @@ const renderData = computed(() => {
         width: 44px;
         text-align: center;
         @include tip1;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           width: 38px;
         }
       }
@@ -539,7 +539,7 @@ const renderData = computed(() => {
       text-align: center;
       margin-right: 8px;
       border-radius: 50%;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         width: 8px;
         height: 8px;
       }

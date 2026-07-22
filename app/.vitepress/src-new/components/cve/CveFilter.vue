@@ -113,7 +113,7 @@ const onChange = (option: FilterOptionT) => {
   border: 1px solid var(--o-color-primary1);
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .filter-title {
     min-width: 48px;
     margin-right: 16px;

@@ -71,7 +71,7 @@ img {
   width: 354px;
   border-radius: 4px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1680px) {
   .item {
     margin-top: var(--e-spacing-h3);
 

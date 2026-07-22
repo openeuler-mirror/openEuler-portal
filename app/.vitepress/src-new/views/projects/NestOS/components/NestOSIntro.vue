@@ -66,19 +66,19 @@ const handleScroll = () => {
   }
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .intro-card {
     padding: 24px;
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .intro-card {
     padding: 20px;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .app-section {
     :deep(.section-wrapper) {
       margin-top: 32px;

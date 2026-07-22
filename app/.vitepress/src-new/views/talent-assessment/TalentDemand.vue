@@ -67,7 +67,7 @@ const { isPhone } = useScreen();
   text-align: center;
   color: var(--o-color-info1);
   @include text1;
-  @include respond-to('phone') {
+  @include respond('phone') {
     text-align: left;
     color: var(--o-color-info2);
   }
@@ -78,7 +78,7 @@ const { isPhone } = useScreen();
   &:not(:first-child) {
     margin-top: 24px;
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     margin-top: 16px;
   }
   :deep(.o-card-content) {
@@ -88,7 +88,7 @@ const { isPhone } = useScreen();
       max-width: 160px;
       margin-right: 32px;
       background-color: var(--o-white);
-      @include respond-to('phone') {
+      @include respond('phone') {
         margin: 0;
         height: 84px;
         max-width: fit-content;
@@ -99,7 +99,7 @@ const { isPhone } = useScreen();
       flex-direction: column;
       justify-content: space-between;
       @include text1;
-      @include respond-to('phone') {
+      @include respond('phone') {
         margin-top: 12px;
       }
       .company {
@@ -110,7 +110,7 @@ const { isPhone } = useScreen();
       .company-introduce {
         margin-top: 16px;
         color: var(--o-color-info2);
-        @include respond-to('phone') {
+        @include respond('phone') {
           margin-top: 4px;
         }
       }
@@ -119,7 +119,7 @@ const { isPhone } = useScreen();
         margin-top: 24px;
         color: var(--o-color-info1);
         @include text1;
-        @include respond-to('phone') {
+        @include respond('phone') {
           margin-top: 12px;
         }
       }
@@ -134,12 +134,12 @@ const { isPhone } = useScreen();
       }
       .o-btn {
         margin-top: 24px;
-        @include respond-to('phone') {
+        @include respond('phone') {
           margin-top: 16px;
         }
       }
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       flex-direction: column;
     }
   }

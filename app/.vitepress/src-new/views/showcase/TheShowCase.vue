@@ -423,14 +423,14 @@ const handleConfirm = () => {
 }
 
 .mo-banner {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 24px 24px 0;
     .mo-title {
       font-weight: 500;
       @include display3;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }
@@ -440,10 +440,10 @@ const handleConfirm = () => {
 .showcase {
   :deep(.section-wrapper) {
     margin-top: 40px !important;
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       margin-top: 32px !important;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 24px !important;
     }
   }
@@ -583,7 +583,7 @@ const handleConfirm = () => {
   }
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .filter-card {
     padding: 24px;
   }
@@ -599,7 +599,7 @@ const handleConfirm = () => {
     }
   }
 }
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .filter-card {
     padding: 16px;
   }
@@ -617,7 +617,7 @@ const handleConfirm = () => {
     }
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .tips {
     text-align: left;
     @include h4;
@@ -689,7 +689,7 @@ const handleConfirm = () => {
 }
 </style>
 <style lang="scss">
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .filter-body-showcase {
     --layer-align: flex-end;
     --dlg-margin: 16px;

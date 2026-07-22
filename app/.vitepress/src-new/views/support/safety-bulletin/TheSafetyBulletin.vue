@@ -129,18 +129,10 @@ const onPaginationChange = (val: { page: number; pageSize: number }) => {
 };
 
 // -------------------- 搜索 input字段做防抖处理 -------------------
-const updataName = (val: string) => {
+const searchValue = ref();
+const onInput = useDebounceSearch((val: string) => {
   queryData.keyword = val;
-};
-const debounceTextFn = useDebounceSearch(updataName, 300);
-const debounceSearch = computed({
-  get() {
-    return queryData.keyword;
-  },
-  set(val) {
-    debounceTextFn(val as string);
-  },
-});
+}, 300);
 
 // -------------------- 严重级别 --------------------
 const typeList = ref<TypeOptionT[]>([]);
@@ -293,10 +285,12 @@ const blur = () => {
           </ClientOnly>
         </div>
         <OInput
-          v-model="debounceSearch"
+          v-model="searchValue"
           :placeholder="t('safetyBulletin.searchPlaceholder')"
+          @input="(e) => onInput(e.target?.value)"
           size="large"
           clearable
+          @clear="onInput('')"
           class="input-search"
         >
           <template #prefix>
@@ -414,10 +408,12 @@ const blur = () => {
       <div class="search-box-mb">
         <p class="time">{{ t('safetyBulletin.search') }}</p>
         <OInput
-          v-model="debounceSearch"
+          v-model="searchValue"
           :placeholder="t('safetyBulletin.searchPlaceholder')"
+          @input="(e) => onInput(e.target?.value)"
           size="large"
           clearable
+          @clear="onInput('')"
           class="input-search-mb"
         >
           <template #prefix>
@@ -545,10 +541,10 @@ const blur = () => {
 .app-section {
   --o-gap-section: 40px;
 
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     --o-gap-section: 32px;
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     --o-gap-section: 16px;
   }
 }
@@ -594,7 +590,7 @@ const blur = () => {
     svg {
       display: none;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       mask: url('~@/assets/svg-icons/icon-calendar.svg') no-repeat center / 16px;
     }
   }
@@ -615,7 +611,7 @@ const blur = () => {
     @include hover {
       @include x-hover;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       mask: url('~@/assets/svg-icons/icon-close.svg') no-repeat center/16px;
     }
   }
@@ -628,7 +624,7 @@ const blur = () => {
       }
       .el-range__close-icon {
         width: 24px;
-        @include respond-to('phone') {
+        @include respond('phone') {
           width: 16px;
         }
       }
@@ -642,7 +638,7 @@ const blur = () => {
     }
     .el-range__close-icon {
       width: 24px;
-      @include respond-to('phone') {
+      @include respond('phone') {
         width: 16px;
       }
     }
@@ -779,21 +775,21 @@ const blur = () => {
 .data-picker-mb {
   margin-top: 16px;
 }
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   :deep(.el-date-editor) {
     .el-range-input {
       @include text2;
     }
   }
 }
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   :deep(.el-date-editor) {
     .el-range-input {
       @include h4;
     }
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .time {
     color: var(--o-color-info2);
     margin-bottom: 8px;
@@ -871,7 +867,7 @@ const blur = () => {
 .el-picker__popper {
   --el-popper-border-radius: var(--o-radius-xs);
 }
-@include respond-to('phone') {
+@include respond('phone') {
   .el-picker__popper {
     width: calc(100% - 48px) !important;
   }

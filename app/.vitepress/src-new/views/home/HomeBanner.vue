@@ -61,7 +61,7 @@ const bannerInfo = computed(() => {
 const theme = ref('');
 const onBeforeChange = (idx: number) => {
   setTimeout(() => {
-    theme.value = bannerInfo.value[idx].bg_theme ?? 'light';
+    theme.value = bannerInfo.value[idx].bg_theme ?? 'e.light';
   }, 100);
 };
 
@@ -173,11 +173,11 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
   --banner-height: 480px;
   height: var(--banner-height);
 
-  @include respond-to('<=pad') {
+  @include respond('<=pad') {
     --banner-height: 360px;
   }
 
-  @include respond-to('phone') {
+  @include respond('phone') {
     margin-top: 16px;
 
     --banner-height: calc(
@@ -189,11 +189,11 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 .banner-carousel {
   width: 100%;
   height: 100%;
-  @include respond-to('>pad_v') {
+  @include respond('>pad_v') {
     --carousel-indicator-offset: 53px;
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     --carousel-indicator-offset: 1px;
   }
 
@@ -216,14 +216,14 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
     height: 100%;
   }
 
-  @include respond-to('pad') {
+  @include respond('pad') {
     :deep(.o-figure-img) {
       transition: object-position 0.3s ease;
       object-position: var(--pad-offset);
     }
   }
 
-  @include respond-to('phone') {
+  @include respond('phone') {
     --figure-radius: 4px;
   }
 }
@@ -303,7 +303,7 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
   .banner-attach {
     height: 120px;
 
-    @include respond-to('pad') {
+    @include respond('pad') {
       height: 80px;
     }
   }
@@ -313,7 +313,7 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
   .banner-attach {
     height: 156px;
 
-    @include respond-to('pad') {
+    @include respond('pad') {
       height: 120px;
     }
   }

@@ -160,7 +160,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
   }
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .info-content {
     padding: 32px;
   }
@@ -180,7 +180,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
     padding: 16px 32px;
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .info-content {
     padding: 24px;
     margin-top: 0;
@@ -195,7 +195,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
     padding: 16px 24px;
   }
 }
-@include respond-to('phone') {
+@include respond('phone') {
   .info-content {
     padding: 16px;
   }

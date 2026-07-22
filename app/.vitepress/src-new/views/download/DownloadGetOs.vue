@@ -99,31 +99,31 @@ const onClickLink = (link: any, container: any) => {
   border-radius: var(--o-radius-xs);
   background-color: var(--o-color-fill2);
   overflow: hidden;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     background-color: inherit;
     border-radius: none;
   }
   .get-os-item {
     display: flex;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       flex-direction: column;
       border-radius: var(--o-radius-xs);
       overflow: hidden;
       background-color: var(--o-color-fill2);
     }
     & + div {
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 12px;
       }
       .grid-container {
         border-top: 1px solid transparent;
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           border-top: none;
         }
       }
       .get-os-intro {
         border-top: 1px solid var(--o-color-control4);
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           border-top: none;
         }
       }
@@ -139,7 +139,7 @@ const onClickLink = (link: any, container: any) => {
       @media (max-width: 1640px) {
         padding: 16px;
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         background-size: 100% auto;
         max-width: 100%;
         padding: 16px 12px;
@@ -154,10 +154,10 @@ const onClickLink = (link: any, container: any) => {
       }
       .o-btn {
         margin-top: 24px;
-        @include respond-to('<=laptop') {
+        @include respond('<=laptop') {
           margin-top: 12px;
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           margin-top: 8px;
         }
       }
@@ -170,7 +170,7 @@ const onClickLink = (link: any, container: any) => {
       gap: 1px;
       border-left: 1px solid transparent;
       background-color: var(--o-color-control4);
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         grid-template-columns: 1fr;
         padding: 0;
         gap: 0;
@@ -184,7 +184,7 @@ const onClickLink = (link: any, container: any) => {
         @media (max-width: 1640px) {
           padding: 16px;
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -207,7 +207,7 @@ const onClickLink = (link: any, container: any) => {
         }
         .icon-right {
           display: none;
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             display: block;
             font-size: var(--o-icon_size-l);
             margin-left: 12px;
@@ -217,10 +217,10 @@ const onClickLink = (link: any, container: any) => {
           margin-top: 12px;
           color: var(--o-color-info3);
           @include tip1;
-          @include respond-to('<=laptop') {
+          @include respond('<=laptop') {
             margin-top: 8px;
           }
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             margin-top: 4px;
             @include text-truncate(2);
           }

@@ -146,7 +146,7 @@ const verticalPadding = computed(() => {
 <style lang="scss" scoped>
 .download-detail {
   .content-wrapper {
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       padding-left: 0;
       padding-right: 0;
     }
@@ -155,12 +155,12 @@ const verticalPadding = computed(() => {
     display: flex;
     gap: 32px;
     margin-top: 24px;
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       margin-top: 16px;
       gap: 16px;
       flex-direction: column;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 0;
     }
   }
@@ -170,7 +170,7 @@ const verticalPadding = computed(() => {
     min-height: 592px;
   }
   .o-breadcrumb {
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: none;
     }
   }

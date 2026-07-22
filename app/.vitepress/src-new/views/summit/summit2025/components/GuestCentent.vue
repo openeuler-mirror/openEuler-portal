@@ -99,10 +99,10 @@ onMounted(() => {
   flex-wrap: wrap;
   .lecturer-list-item {
     width: 25%;
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       width: calc(100% / 3);
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       width: 50%;
     }
     .lecturer-list-item-square {
@@ -124,7 +124,7 @@ onMounted(() => {
         display: block;
         border-radius: 50%;
         background-color: var(--o-color-white);
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           width: 95px;
         }
       }

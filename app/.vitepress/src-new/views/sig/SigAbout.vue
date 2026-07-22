@@ -174,7 +174,7 @@ const processDetail = computed(() => {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       grid-template-columns: repeat(1, 1fr);
       gap: 12px;
     }
@@ -186,7 +186,7 @@ const processDetail = computed(() => {
 
         .o-icon {
           font-size: var(--o-icon_size-2xl);
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             display: none;
           }
         }
@@ -195,10 +195,10 @@ const processDetail = computed(() => {
           margin-left: 12px;
           font-weight: 500;
           @include h4;
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             margin-left: 0;
           }
-          @include respond-to('phone') {
+          @include respond('phone') {
             @include h3;
           }
         }
@@ -222,7 +222,7 @@ const processDetail = computed(() => {
           flex-direction: column;
           --card-content-text-size: 14px;
           height: 100%;
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             --card-content-text-size: 12px;
           }
         }
@@ -403,13 +403,13 @@ const processDetail = computed(() => {
   .sig-about {
     .sig-about-card-box {
       grid-template-columns: 484px auto;
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         grid-template-columns: 1fr 1fr;
         .o-card {
           grid-column: 1 / -1;
         }
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         grid-template-columns: 1fr 1fr;
       }
       .sig-about-card {
@@ -422,7 +422,7 @@ const processDetail = computed(() => {
       }
       .application-process {
         grid-column: auto;
-        @include respond-to('<=laptop') {
+        @include respond('<=laptop') {
           grid-column: 1 / -1;
         }
         .process-detail {
@@ -443,7 +443,7 @@ const processDetail = computed(() => {
   }
 }
 
-[data-o-theme='dark'] {
+[data-o-theme='e.dark'] {
   .sig-about {
     .sig-about-card-box {
       .sig-about-card {

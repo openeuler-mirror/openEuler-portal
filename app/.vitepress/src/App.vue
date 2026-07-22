@@ -6,14 +6,7 @@ import { computed, nextTick, onMounted, ref, watch } from 'vue';
 import zhCn from 'element-plus/es/locale/lang/zh-cn';
 import en from 'element-plus/es/locale/lang/en';
 
-//opendesign 国际化
-import zhCN from '@opensig/opendesign/es/locale/lang/zh-cn';
-import enUS from '@opensig/opendesign/es/locale/lang/en-us';
-
-import { OConfigProvider } from '@opensig/opendesign';
-
-import AppHeader from '~@/components/header/AppHeader.vue';
-// import AppHeader from '@/components/AppHeader.vue';
+import AppHeader from '~@/components/AppHeader.vue';
 import AppFooter from '~@/components/AppFooter.vue';
 import LayoutBlog from '@/layouts/LayoutBlog.vue';
 import LayoutNews from '@/layouts/LayoutNews.vue';
@@ -133,8 +126,8 @@ watch(
 
 <template>
   <template v-if="!isReport">
-    <AppHeader />
-    <OConfigProvider :locale="isZh ? zhCN : enUS">
+    <OPlusConfigProvider :locale="lang">
+      <AppHeader />
       <el-config-provider :locale="elLocale">
         <main :class="frontmatter.class ? frontmatter.class : ''">
           <component :is="comp" v-if="isCustomLayout"></component>
@@ -143,7 +136,7 @@ watch(
           <FloatingButtonEn v-else-if="!isReport && showNss" />
         </main>
       </el-config-provider>
-    </OConfigProvider>
+    </OPlusConfigProvider>
     <OPlusConfigProvider :locale="lang">
       <OCookieNotice
         ref="cookieRef"
@@ -183,13 +176,16 @@ main {
   position: relative;
   min-height: calc(100vh - 259px);
   background-color: var(--o-color-fill1);
-  padding-top: 80px;
+  padding-top: 72px;
   &::after {
     content: '';
     display: table;
   }
-  @include respond-to('<=pad_v') {
-    padding-top: 48px;
+  @include respond('<=laptop_s') {
+    padding-top: 64px;
+  }
+  @include respond('<=pad') {
+    padding-top: 56px;
   }
   &.download-page {
     @media (max-width: 1100px) {
@@ -209,18 +205,18 @@ main {
 #app {
   --layout-content-max-width: 1544px;
   --layout-content-padding: 64px;
-  --layout-header-height: 80px;
+  --layout-header-height: 72px;
 
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop_s') {
     --layout-content-max-width: 100%;
     --layout-content-padding: 40px;
   }
 
-  @include respond-to('<=pad') {
+  @include respond('<=pad') {
     --layout-content-padding: 32px;
   }
 
-  @include respond-to('phone') {
+  @include respond('phone') {
     --layout-content-padding: 24px;
   }
 }

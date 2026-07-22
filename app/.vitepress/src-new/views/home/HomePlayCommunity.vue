@@ -120,6 +120,7 @@ useInViewDuration(container, (duration) => {
               v-if="card.textBtn"
               :href="card.textBtn.link"
               target="_blank"
+              :hover-underline="false"
               rel="noopener noreferrer"
               v-analytics.bubble="{
                 level2: card.title,
@@ -163,6 +164,7 @@ useInViewDuration(container, (duration) => {
         :style="{ '--link-color': 'rgba(255, 255, 255, 0.8)' }"
         class="vitality-btn"
         target="_blank"
+        :hover-underline="false"
         rel="noopener noreferrer"
         v-analytics.bubble="{
           target: t('home.viewDetails'),
@@ -195,10 +197,10 @@ useInViewDuration(container, (duration) => {
       padding: 0 16px;
       height: 100%;
       max-height: 48px;
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         height: 32px;
       }
-      @include respond-to('phone') {
+      @include respond('phone') {
         height: 24px;
         padding: 0 8px;
       }
@@ -220,13 +222,13 @@ useInViewDuration(container, (duration) => {
         background: rgba(255, 238, 201, 0.55);
         filter: blur(50px);
       }
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         transform: translateX(calc(100% + 24px));
         img {
           height: 44px;
         }
       }
-      @include respond-to('phone') {
+      @include respond('phone') {
         transform: translateX(calc(100% + 12px));
         img {
           height: 38px;
@@ -246,26 +248,26 @@ useInViewDuration(container, (duration) => {
     border-image: linear-gradient(90deg, #95b2fb 0%, #002fa7 100%) 1;
     @include text1;
 
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       .o-btn {
         flex-shrink: 0;
         margin-left: 24px;
       }
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       padding-bottom: 12px;
       .play-intro-text {
         max-width: 480px;
       }
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       flex-direction: column;
       align-items: flex-start;
       padding-bottom: 0;
       border: none;
     }
 
-    @include respond-to('phone') {
+    @include respond('phone') {
       .o-btn {
         margin-left: 0;
         margin-top: 12px;
@@ -280,7 +282,7 @@ useInViewDuration(container, (duration) => {
         position: absolute;
         width: 330px;
         z-index: -1;
-        @include respond-to('phone') {
+        @include respond('phone') {
           display: none;
         }
       }
@@ -292,15 +294,15 @@ useInViewDuration(container, (duration) => {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       margin-top: 24px;
       gap: 24px;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 12px;
       gap: 16px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       grid-template-columns: repeat(1, 1fr);
       max-width: 100%;
       gap: 12px;
@@ -317,13 +319,13 @@ useInViewDuration(container, (duration) => {
         padding: 54px 32px 44px;
         color: var(--o-color-white);
         @include h1;
-        @include respond-to('<=laptop') {
+        @include respond('<=laptop') {
           padding: 32px 24px;
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           padding: 24px 16px;
         }
-        @include respond-to('phone') {
+        @include respond('phone') {
           padding: 16px 18px;
         }
       }
@@ -333,13 +335,13 @@ useInViewDuration(container, (duration) => {
         justify-content: space-between;
         padding: 32px;
         height: 100%;
-        @include respond-to('<=laptop') {
+        @include respond('<=laptop') {
           padding: 24px;
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           padding: 16px;
         }
-        @include respond-to('phone') {
+        @include respond('phone') {
           padding: 12px 16px;
         }
         .card-intro {
@@ -351,23 +353,19 @@ useInViewDuration(container, (duration) => {
         .btn-box {
           margin-top: 32px;
           @include text1;
-          a {
-            & + a {
-              margin-left: 16px;
-            }
+          :deep(.o-link) {
+            margin-left: 16px;
           }
-          @include respond-to('<=laptop') {
+          @include respond('<=laptop') {
             margin-top: 24px;
           }
-          @include respond-to('<=pad_v') {
+          @include respond('<=pad_v') {
             margin-top: 16px;
           }
-          @include respond-to('phone') {
+          @include respond('phone') {
             margin-top: 12px;
-            a {
-              & + a {
-                margin-left: 12px;
-              }
+            :deep(.o-link) {
+              margin-left: 12px;
             }
           }
         }
@@ -384,18 +382,18 @@ useInViewDuration(container, (duration) => {
     background-size: 100% 100%;
     border-radius: var(--o-radius-xs);
     background-image: url(~@/assets/category/home/play-community/vitality-bg_light.png);
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       margin-top: 24px;
     }
-    @include respond-to('pad_h') {
-      margin-top: 24px;
-      padding: 12px 16px;
-    }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       margin-top: 24px;
       padding: 12px 16px;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('pad_h') {
+      margin-top: 24px;
+      padding: 12px 16px;
+    }
+    @include respond('<=pad_v') {
       padding: 12px 16px;
       flex-direction: column;
       margin-top: 12px;
@@ -409,21 +407,21 @@ useInViewDuration(container, (duration) => {
         font-size: 16px;
         line-height: 24px;
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         width: 100%;
       }
       @include h1;
       img {
         margin-left: 12px;
         width: 56px;
-        @include respond-to('<=laptop') {
+        @include respond('<=laptop') {
           margin-left: 8px;
         }
-        @include respond-to('pad_h') {
+        @include respond('pad_h') {
           margin-left: 8px;
           width: 24px;
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           width: 100%;
           width: 24px;
         }
@@ -435,10 +433,10 @@ useInViewDuration(container, (duration) => {
       align-items: center;
       justify-content: space-around;
       margin-left: 52px;
-      @include respond-to('<=laptop') {
+      @include respond('<=laptop') {
         margin-left: 16px;
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         justify-content: flex-start;
         margin-left: 0;
         margin-top: 12px;
@@ -460,7 +458,7 @@ useInViewDuration(container, (duration) => {
             rgba(67, 116, 242, 0.27) 100%
           );
         }
-        @include respond-to('<=pad_v') {
+        @include respond('<=pad_v') {
           padding-left: 16px;
           margin-left: 32px;
           &:nth-child(1) {
@@ -561,7 +559,7 @@ useInViewDuration(container, (duration) => {
         .label {
           margin-top: 4px;
           color: rgba(255, 255, 255, 0.8);
-          @include respond-to('<=pad') {
+          @include respond('<=pad') {
             margin-top: 2px;
           }
           @include text1;
@@ -576,10 +574,10 @@ useInViewDuration(container, (duration) => {
       @include hover {
         color: var(--o-color-primary2);
       }
-      @include respond-to('pad_h') {
+      @include respond('pad_h') {
         margin: 0 0 0 0;
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin: 16px 0 0 0;
       }
     }
@@ -590,17 +588,17 @@ useInViewDuration(container, (duration) => {
     left: -35px;
     width: 145px;
     z-index: -1;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       width: 145px;
       top: -47px;
       left: -30px;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       width: 46px;
       top: -20px;
       left: -12px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       width: 46px;
       top: -20px;
       left: -12px;
@@ -612,17 +610,17 @@ useInViewDuration(container, (duration) => {
     left: -185px;
     width: 900px;
     z-index: -1;
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       width: 60%;
       left: 0;
     }
   }
 }
-[data-o-theme='dark'] {
+[data-o-theme='e.dark'] {
   .home-play-community {
     .vitality {
       background-image: url(~@/assets/category/home/play-community/vitality-bg_dark_pc.png);
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         background-image: url(~@/assets/category/home/play-community/vitality-bg_dark_mo.png);
       }
     }
@@ -633,7 +631,7 @@ useInViewDuration(container, (duration) => {
 }
 .o-link {
   --link-icon-size: 24px;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     --link-icon-size: 16px;
   }
 }

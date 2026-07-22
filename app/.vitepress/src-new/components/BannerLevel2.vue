@@ -126,11 +126,11 @@ onMounted(() => {
       flex-direction: column;
       position: relative;
       max-width: 54%;
-      // @include respond-to('pad_h') {
+      // @include respond('pad_h') {
       //   margin-top: 64px;
       //   margin-bottom: 64px;
       // }
-      // @include respond-to('phone') {
+      // @include respond('phone') {
       //   margin-top: 32px;
       //   margin-bottom: 32px;
       // }
@@ -171,16 +171,16 @@ onMounted(() => {
       transform: translateY(-50%);
       right: 44px;
       object-fit: fill;
-      @include respond-to('laptop') {
+      @include respond('laptop') {
         right: 16px;
       }
       img {
         user-select: none;
         max-height: 232px;
-        @include respond-to('pad_h') {
+        @include respond('pad_h') {
           max-height: 160px;
         }
-        @include respond-to('phone') {
+        @include respond('phone') {
           max-height: 94px;
         }
       }

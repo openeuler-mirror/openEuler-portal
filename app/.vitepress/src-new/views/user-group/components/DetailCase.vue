@@ -119,7 +119,7 @@ const cardIcon = (type: string) => {
   height: calc(var(--card-detail-row) * var(--card-content-text-height));
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .showcase-section {
     :deep(.section-footer) {
       margin-top: var(--o-gap-5);
@@ -140,7 +140,7 @@ const cardIcon = (type: string) => {
   }
 }
 
-@include respond-to('pad_v') {
+@include respond('pad_v') {
   .news-list {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: var(--o-gap-3);

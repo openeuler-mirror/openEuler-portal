@@ -81,7 +81,7 @@ onMounted(async () => {
 </template>
 <style lang="scss" scoped>
 .banner-level2 {
-  @include respond-to('phone') {
+  @include respond('phone') {
     display: none;
   }
 }

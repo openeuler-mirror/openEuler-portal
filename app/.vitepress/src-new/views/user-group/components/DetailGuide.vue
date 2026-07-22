@@ -114,7 +114,7 @@ const { t } = useI18n();
   }
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .group-guide {
     .guide {
       flex-direction: column;

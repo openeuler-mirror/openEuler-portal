@@ -164,7 +164,7 @@ const viewWhitepaper = (lang: LocaleT) => {
 }
 
 .mo-banner {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 24px 24px 0;
     .mo-title {
       font-weight: 500;
@@ -176,7 +176,7 @@ const viewWhitepaper = (lang: LocaleT) => {
       @include tip1;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }
@@ -370,7 +370,7 @@ const viewWhitepaper = (lang: LocaleT) => {
   }
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .intro-desc {
     padding: 32px 24px;
   }
@@ -394,7 +394,7 @@ const viewWhitepaper = (lang: LocaleT) => {
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .intro-desc {
     padding: 24px;
   }
@@ -430,7 +430,7 @@ const viewWhitepaper = (lang: LocaleT) => {
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .introduction {
     :deep(.section-wrapper) {
       margin-top: 32px;

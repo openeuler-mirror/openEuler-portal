@@ -175,14 +175,14 @@ const bannerData = {
   @include title-padding-bottom;
 }
 
-@include respond-to('>pc_b') {
+@include respond('>pc_b') {
   .internship-reward-title,
   .internship-faq-title {
     margin-top: 72px;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .internship-reward-title,
   .internship-faq-title,
   .internship-partners-title,

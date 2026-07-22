@@ -5,10 +5,11 @@ import { SeoBox } from '@/components/seo-box';
 import 'aos/dist/aos.css';
 import '@/shared/styles/element-plus/index.scss';
 import '@/shared/styles/index.scss';
+import 'element-plus/theme-chalk/src/dark/css-vars.scss'
 //--------------------------------------
-import '~@/assets/style/theme/default-light.token.css';
-import '~@/assets/style/theme/dark.token.css';
-import '@opensig/opendesign/es/index.css';
+import '@opensig/opendesign/es/theme/openeuler/index.scss';
+import '@opensig/opendesign-token/themes/e.light.token.css';
+import '@opensig/opendesign-token/themes/e.dark.token.css';
 import '@opendesign-plus/components/styles';
 import '~@/assets/style/theme/index.scss';
 import '~@/assets/style/theme/media.token.scss';
@@ -26,6 +27,7 @@ import NotFound from '@/NotFound.vue';
 import { initOpenDesignAnalytics } from '@opendesign-plus/plugins/analytics';
 import { reporAnalytics } from '@/api/api-analytics';
 import { removeCustomCookie } from '@/shared/utils';
+import { createTheme } from '@opendesign-plus/composables';
 
 import MarkdownLayout from '~@/components/markdown/MarkdownLayout.vue';
 
@@ -33,10 +35,9 @@ export default {
   Layout,
   NotFound,
   enhanceApp({ app }: { app: App }) {
-    if (typeof global !== 'undefined') {
+    if (typeof globalThis !== 'undefined') {
       // @ts-ignore
-      global.window = {};
-      global.__VUE_PROD_DEVTOOLS__ = false;
+      globalThis.__VUE_PROD_DEVTOOLS__ = false;
     }
     app.use(initOpenDesignAnalytics, {
       appKey: 'openEuler',
@@ -100,5 +101,13 @@ export default {
     app.use(ElementPlus);
     app.use(OpenDesign);
     app.use(i18n);
+    app.use(
+      createTheme({
+        cookieKey: 'openEuler-theme-appearance',
+        cookieDomain: import.meta.env.VITE_COOKIE_DOMAIN,
+        attributeLightValue: 'e.light',
+        attributeDarkValue: 'e.dark',
+      })
+    );
   },
 };

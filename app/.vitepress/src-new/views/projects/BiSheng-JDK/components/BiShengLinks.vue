@@ -93,25 +93,25 @@ const gap = computed(() => {
   --icon-size: 24px;
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .link-icon {
     --icon-size: 16px;
   }
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .link-card {
     padding: 24px 24px 16px;
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .link-card {
     padding: 16px 16px 8px;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .link-card {
     padding: 12px;
   }

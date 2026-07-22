@@ -62,7 +62,7 @@ const isDark = computed(() => commonStore.theme === 'dark');
   display: flex;
 }
 
-@include respond-to('laptop') {
+@include respond('laptop') {
   .arch-content {
     padding: 32px 24px;
   }
@@ -71,7 +71,7 @@ const isDark = computed(() => commonStore.theme === 'dark');
   }
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .arch-content {
     padding: 16px;
   }
@@ -80,7 +80,7 @@ const isDark = computed(() => commonStore.theme === 'dark');
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .arch-content {
     padding: 16px;
   }

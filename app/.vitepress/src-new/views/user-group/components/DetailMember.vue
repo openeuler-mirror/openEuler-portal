@@ -341,14 +341,14 @@ const dialogVisible = ref(false);
   }
 }
 
-[data-o-theme='dark'] {
+[data-o-theme='e.dark'] {
   .title .title-bg::before {
-    background: rgb(var(--o-mixedgray-4));
+    background: rgb(var(--o-grey-4));
     opacity: 1;
   }
 }
 
-@include respond-to('phone') {
+@include respond('phone') {
   .member-content {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -362,7 +362,7 @@ const dialogVisible = ref(false);
   }
 }
 
-@include respond-to('pad_v') {
+@include respond('pad_v') {
   .member-content {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -374,7 +374,7 @@ const dialogVisible = ref(false);
   }
 }
 
-@include respond-to('pad_v-laptop') {
+@include respond('pad_v-laptop') {
   .member-content {
     grid-template-columns: repeat(3, 1fr);
   }

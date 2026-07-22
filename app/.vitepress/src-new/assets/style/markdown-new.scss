@@ -1,4 +1,4 @@
-@use './mixin/screen.scss' as *;
+@use "@opensig/opendesign/es/_styles/mixin.scss" as *;
 @use './mixin/font.scss' as *;
 @use './mixin/common.scss' as *;
 
@@ -32,7 +32,7 @@
     border: none;
     height: 1px;
     background-color: rgb(var(--o-gray-5));
-    @include respond-to('phone') {
+    @include respond('phone') {
       margin: 24px 0;
     }
   }
@@ -40,7 +40,7 @@
   h1 {
     margin: 48px 0 16px;
     @include h2;
-    @include respond-to('phone') {
+    @include respond('phone') {
       margin: 24px 0 8px;
     }
   }
@@ -48,7 +48,7 @@
   h2 {
     margin: 48px 0 16px;
     @include h2;
-    @include respond-to('phone') {
+    @include respond('phone') {
       margin: 24px 0 8px;
     }
   }
@@ -57,7 +57,7 @@
     margin: 48px 0 16px;
     @include h3;
 
-    @include respond-to('phone') {
+    @include respond('phone') {
       margin: 24px 0 8px;
     }
   }
@@ -68,7 +68,7 @@
     @media screen and (max-width: 768px) {
       margin: 24px 0 8px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       margin: 24px 0 8px;
     }
   }
@@ -100,7 +100,7 @@
       &::marker {
         color: var(--o-color-info1);
       }
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin: 8px 0;
       }
     }
@@ -125,13 +125,13 @@
 }
 .md-content {
   padding: 40px 56px;
-  @include respond-to('laptop') {
+  @include respond('laptop') {
     padding: 24px 56px;
   }
-  @include respond-to('pad') {
+  @include respond('pad') {
     padding: 16px 40px;
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     padding: 12px 24px;
   }
 }

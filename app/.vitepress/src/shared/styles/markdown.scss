@@ -12,7 +12,7 @@
   & > *:first-child {
     margin-top: 0 !important;
   }
-  @media screen and (min-width: 1440px) and (max-width: 1547px) {
+  @media screen and (min-width: 1680px) and (max-width: 1547px) {
     max-width: calc(100% - var(--layout-content-padding) * 2);
   }
   @media (max-width: 768px) {
@@ -275,7 +275,7 @@
   max-width: 880px;
   background: var(--o-color-fill1);
   box-shadow: none;
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1680px) {
     max-width: calc(100% - var(--layout-content-padding) * 2);
   }
   ol {

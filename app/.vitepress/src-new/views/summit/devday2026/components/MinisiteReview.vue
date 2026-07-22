@@ -48,17 +48,17 @@ const gap = computed(() => {
   @include text2;
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .review-list {
     margin-top: 24px;
   }
 }
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .review-list {
     margin-top: 16px;
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .review-list {
     margin-top: 12px;
   }

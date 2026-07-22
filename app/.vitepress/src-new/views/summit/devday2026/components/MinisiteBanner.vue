@@ -89,21 +89,21 @@ onMounted(() => {
   }
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .minisite-banner {
     .text-img {
       height: 180px;
     }
   }
 }
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .minisite-banner {
     .banner-bg {
       background-position: calc(55%);
     }
   }
 }
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .minisite-banner {
     height: 300px;
     .banner-bg {

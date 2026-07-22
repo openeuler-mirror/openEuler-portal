@@ -236,7 +236,7 @@ const reportIntroLinkClick = (ev: Event) => {
 .meeting-intro {
   :deep(.section-wrapper) {
     margin-top: 0;
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       margin-top: 16px;
     }
   }
@@ -272,13 +272,13 @@ const reportIntroLinkClick = (ev: Event) => {
 
     p:last-child {
       margin-top: 12px;
-      @include respond-to('<=pad_v') {
+      @include respond('<=pad_v') {
         margin-top: 8px;
       }
     }
   }
 
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     background-color: transparent;
     padding: 0;
     .conference-introduction {
@@ -304,13 +304,13 @@ const reportIntroLinkClick = (ev: Event) => {
   background-attachment: fixed;
 
   .content-wrapper {
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: none;
     }
   }
 
   :deep(.banner-level3) {
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       display: none;
     }
   }
@@ -337,16 +337,16 @@ const reportIntroLinkClick = (ev: Event) => {
     width: 380px;
     bottom: -181px;
     right: -220px;
-    @include respond-to('laptop') {
+    @include respond('laptop') {
       width: 400px;
       bottom: -200px;
       right: -240px;
     }
-    @include respond-to('pad_h') {
+    @include respond('pad_h') {
       right: -140px;
       bottom: -150px;
     }
-    @include respond-to('<=pad_v') {
+    @include respond('<=pad_v') {
       width: 71px;
       bottom: -40px;
       right: -8px;
@@ -354,7 +354,7 @@ const reportIntroLinkClick = (ev: Event) => {
   }
 }
 
-[data-o-theme='dark'] {
+[data-o-theme='e.dark'] {
   .sig-meeting {
     background-image: linear-gradient(180deg, #1a1a1c 0%, #141b2e 100%);
   }

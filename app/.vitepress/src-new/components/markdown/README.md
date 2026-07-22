@@ -477,7 +477,7 @@ openEuler的镜像中原生包含openEuler 智能化解决方案的所有能力.
 - 颜色变量：`var(--o-color-*)`
 - 间距变量：`var(--o-gap-*)`
 - 圆角变量：`var(--o-radius-*)`
-- 响应式断点：使用 `@include respond-to(*)` mixin
+- 响应式断点：使用 `@include respond(*)` mixin
 
 ---
 

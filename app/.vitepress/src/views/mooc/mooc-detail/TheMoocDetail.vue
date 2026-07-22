@@ -719,7 +719,7 @@ const iconMenuShow = computed(() => {
           left: 0;
           z-index: 80;
         }
-        @include respond-to('pad_v') {
+        @include respond('pad_v') {
           left: 56px;
         }
       }

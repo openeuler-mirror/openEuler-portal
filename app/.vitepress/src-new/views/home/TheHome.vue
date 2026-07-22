@@ -135,7 +135,7 @@ if (typeof document !== 'undefined') {
 <style scoped lang="scss">
 .home-display-zone {
   margin-top: -41px;
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     margin-top: 0;
   }
 }
@@ -162,7 +162,7 @@ if (typeof document !== 'undefined') {
   background-size: 100% 60%;
   background-repeat: no-repeat;
 }
-[data-o-theme='dark'] {
+[data-o-theme='e.dark'] {
   .home {
     background-image: linear-gradient(
       180deg,

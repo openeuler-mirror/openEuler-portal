@@ -140,7 +140,7 @@ const gap = computed(() => {
 }
 
 .mo-banner {
-  @include respond-to('<=pad_v') {
+  @include respond('<=pad_v') {
     padding: 24px 24px 0;
     .mo-title {
       font-weight: 500;
@@ -152,7 +152,7 @@ const gap = computed(() => {
       @include tip1;
     }
   }
-  @include respond-to('phone') {
+  @include respond('phone') {
     .mo-title {
       @include display1;
     }
@@ -256,7 +256,7 @@ const gap = computed(() => {
   background-image: url('~@/assets/category/projects/participate-project-dark.jpg');
 }
 
-@include respond-to('pad_h') {
+@include respond('pad_h') {
   .title {
     .o-tag {
       --tag-height: 24px;
@@ -272,7 +272,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .project-list {
     :deep(.section-wrapper) {
       margin-top: 32px;
@@ -330,7 +330,7 @@ const gap = computed(() => {
     background-image: url('~@/assets/category/projects/participate-project-mb-dark.png');
   }
 }
-@include respond-to('phone') {
+@include respond('phone') {
   .o-card {
     --card-main-padding: 12px;
   }

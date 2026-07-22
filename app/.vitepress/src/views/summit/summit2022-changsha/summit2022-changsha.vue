@@ -220,7 +220,7 @@ const scheduleList = [
       border-color: #fff;
       color: #fff;
     }
-    @media (max-width: 1440px) {
+    @media (max-width: 1680px) {
       padding: 0 var(--e-spacing-h4);
     }
     @media (max-width: 1080px) {

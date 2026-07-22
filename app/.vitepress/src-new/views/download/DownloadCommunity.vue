@@ -177,10 +177,10 @@ onMounted(() => {
 .download-community {
   :deep(.section-wrapper) {
     margin-top: 40px;
-    @include respond-to('<=laptop') {
+    @include respond('<=laptop') {
       margin-top: 32px;
     }
-    @include respond-to('phone') {
+    @include respond('phone') {
       margin-top: 16px;
     }
   }
@@ -190,7 +190,7 @@ onMounted(() => {
 }
 .o-tab {
   margin-top: 32px;
-  @include respond-to('<=laptop') {
+  @include respond('<=laptop') {
     margin-top: 16px;
   }
 }

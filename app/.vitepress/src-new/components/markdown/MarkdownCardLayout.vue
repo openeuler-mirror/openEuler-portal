@@ -135,7 +135,7 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('<=laptop') {
+@include respond('<=laptop') {
   .card-list .card-item {
     padding: 24px;
     min-height: 112px;
@@ -148,14 +148,14 @@ const gap = computed(() => {
   }
 }
 
-@include respond-to('<=pad') {
+@include respond('<=pad') {
   .card-list .card-item {
     padding: 16px;
     min-height: 94px;
   }
 }
 
-@include respond-to('<=pad_v') {
+@include respond('<=pad_v') {
   .card-list .card-item {
     padding: 12px;
     min-height: auto;
