@@ -21,7 +21,7 @@ export default {
   // 开发者日历
   calendar: 'openEuler Developer Calendar',
   meetingDesc: 'To book a meeting, the SIG Maintainer or Committer access is required.',
-  meetingBook: 'Book Meeting',
+  meetingBook: 'Create Meeting',
   latestMeeting: 'Latest Schedule: ',
   meetingTypeAll: 'All',
   meetingTypeMeet: 'Meetings',

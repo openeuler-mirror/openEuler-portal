@@ -56,15 +56,23 @@ const expandDates = (start: string, end: string): string[] => {
 
 const FORMAT_LABEL: Record<string, string> = { offline: '线下', online: '线上', hybrid: '线上 + 线下' };
 
-const activityData = foldI18n(activityContent.events, locale.value).map((ev) => ({
-  ...ev,
-  name: ev.title,
-  dates: expandDates(ev.start_date, ev.end_date),
-  address: ev.address,
-  type: 'activity',
-  activity_type: FORMAT_LABEL[ev.format] || '',
-  url: (ev.poster_image || ev.agenda_image) ? `/${locale.value}/interaction/event-list/detail/?id=${ev.id}` : '',
-}));
+const activityData = foldI18n(activityContent.events, locale.value).map((ev) => {
+  const [start_date, start] = ev.start_date.split(' ');
+  const [end_date, end] = ev.end_date.split(' ');
+  return {
+    ...ev,
+    start_date,
+    start,
+    end_date,
+    end,
+    name: ev.title,
+    dates: expandDates(ev.start_date, ev.end_date),
+    address: ev.address,
+    type: 'activity',
+    activity_type: FORMAT_LABEL[ev.format] || '',
+    url: (ev.poster_image || ev.agenda_image) ? `/${locale.value}/interaction/event-list/detail/?id=${ev.id}` : '',
+  }
+});
 
 const summitData = foldI18n(activityContent.summit ?? [], locale.value).map((ev) => ({
   ...ev,
@@ -190,7 +198,7 @@ const cancel = () => {
         :getSummitListRequest="getSummitListRequest"
         :getEventsDatesRequest="getEventsDatesRequest"
         :getEventsListRequest="getEventsListRequest"
-        :groups="sigOptions"
+        :groups="[]"
       >
         <template #empty>
           <ResultEmpty :style="{ '--result-image-width': '140px', '--result-image-height': '170px', }">

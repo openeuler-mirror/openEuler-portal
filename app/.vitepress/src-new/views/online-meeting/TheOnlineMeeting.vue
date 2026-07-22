@@ -180,9 +180,9 @@ const gap = computed(() => {
   .link {
     margin-top: auto;
   }
-  .o-link {
+  :deep(.o-link) {
     margin-top: 16px;
-    :deep(.o-link-label) {
+    .o-link-label {
       display: flex;
       align-items: center;
     }
@@ -191,7 +191,7 @@ const gap = computed(() => {
       margin-left: 4px;
     }
   }
-  .o-link + .o-link {
+  :deep(.o-link + .o-link) {
     margin-left: 32px;
   }
   .we-chat {

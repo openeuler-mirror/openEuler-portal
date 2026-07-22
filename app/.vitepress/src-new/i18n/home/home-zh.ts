@@ -22,7 +22,7 @@ export default {
   // 开发者日历
   calendar: 'openEuler开发者日历',
   meetingDesc: '预定会议需要SIG组Maintainer或Committer身份权限',
-  meetingBook: '预定会议',
+  meetingBook: '创建会议',
   latestMeeting: '最新日程：',
   meetingTypeAll: '全部',
   meetingTypeMeet: '会议',

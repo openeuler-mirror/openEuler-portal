@@ -11,7 +11,7 @@
   position: fixed;
   right: 0;
   left: 0;
-  top: 80px;
+  top: var(--layout-header-height);
   bottom: 0;
   padding: 40px 0;
   min-height: calc(100vh - 80px);
