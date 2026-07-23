@@ -85,6 +85,10 @@ const breadTitle = () => {
 };
 
 onMounted(() => {
+  if (!getUrlParam('name')) {
+    router.go('/zh/oEEP/?name=oEEP-0000%20oEEP%20%20索引');
+    return;
+  }
   useOeep().setMarkDownData();
   updateCanonical();
   nextTick(() => {
