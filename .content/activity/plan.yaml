@@ -33,8 +33,18 @@
       location_zh: 中国 北京
       location_en: Beijing, China
       month: 6
+    - name_zh: 上海国际金融展
+      name_en: China International Financial Exhibition
+      location_zh: 中国 上海
+      location_en: Shanghai, China
+      month: 6
     - name_zh: 2026亚洲香港科技及信息技术展
       name_en: LEAP EAST 2026
+      location_zh: 中国 香港
+      location_en: Hong Kong, China
+      month: 7
+    - name_zh: 开放原子园区行香港站
+      name_en: OpenAtom Park Tour (Hong Kong Station)
       location_zh: 中国 香港
       location_en: Hong Kong, China
       month: 7
@@ -128,11 +138,11 @@
       location_zh: 中国 西安
       location_en: Xi'an, China
       month: 6
-    - name_zh: Free and Open Source Singapore & openEuler Meetup
-      name_en: Free and Open Source Singapore & openEuler Meetup
-      location_zh: 新加坡
-      location_en: Singapore
-      month: 6
+    - name_zh: openEuler SIG Yuanrong Meetup 杭州站
+      name_en: openEuler SIG Yuanrong Meetup - Hangzhou
+      location_zh: 中国 杭州
+      location_en: Hangzhou, China
+      month: 7
 
 - id: college
   title_zh: 赛事 & 高校
