@@ -152,7 +152,7 @@ const subTitle = computed(() => {
 
 .mask {
   position: fixed;
-  top: 88px;
+  top: 96px;
   left: 0;
   width: 100%;
   height: 100%;

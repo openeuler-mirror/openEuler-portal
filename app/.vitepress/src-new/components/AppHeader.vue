@@ -256,6 +256,7 @@ const onChangeTheme = (val: string) => {
 };
 
 onMounted(() => {
+  isMounted.value = true;
   let theme;
   if (!getCustomCookie(APPEARANCE_KEY)) {
     const prefereDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -374,6 +375,7 @@ const onFocus = () => {
   fetchHotItems();
 };
 
+const isMounted = ref(false);
 const isUserSimple = ref(false);
 const isSearchSimple = ref(false);
 
@@ -403,7 +405,7 @@ watch(
 <template>
   <!-- 桌面端导航 -->
   <OHeader
-    v-if="!lePadV"
+    v-if="isMounted && !lePadV"
     :logo="logoUrl"
     :nav-data="navData"
     :active-index="activeIndex"
@@ -462,7 +464,7 @@ watch(
 
   <!-- 移动端导航 -->
   <OHeaderMobile
-    v-else
+    v-if="isMounted && lePadV"
     :logo="isDark ? logoDark : logoLight"
     :is-simple-header="false"
     :lang="lang"

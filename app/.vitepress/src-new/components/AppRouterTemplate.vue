@@ -84,8 +84,14 @@ const activeRoute = computed(() => {
 }
 .tab-pane {
   display: grid;
-  min-height: 72px;
+  height: 72px;
   grid-template-columns: repeat(2, 1fr);
+  @include respond('laptop') {
+    height: 64px;
+  }
+  @include respond('pad_h') {
+    height: 48px;
+  }
 }
 .pane-content {
   color: var(--o-color-info1);
@@ -114,6 +120,12 @@ const activeRoute = computed(() => {
   .o-icon {
     margin-right: 16px;
     font-size: var(--o-icon_size-xl);
+    @include respond('laptop') {
+      font-size: 32px;
+    }
+    @include respond('pad_h') {
+      font-size: 32px;
+    }
   }
   .info {
     display: flex;
