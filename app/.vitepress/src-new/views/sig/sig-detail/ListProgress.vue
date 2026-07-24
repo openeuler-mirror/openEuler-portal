@@ -125,6 +125,7 @@ watch(
         align-items: center;
         position: relative;
         min-width: 130px !important;
+        --progress-bar-bg-color: transparent;
         &::after {
           content: attr(contributor);
           position: absolute;

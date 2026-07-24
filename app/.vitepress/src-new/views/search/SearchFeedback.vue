@@ -291,7 +291,6 @@ onMounted(() => {
     @include hover() {
       :deep(.o-btn-prefix) {
         font-size: var(--o-icon_size-xs);
-        color: var(--o-color-white);
       }
     }
     :deep(.o-btn-prefix) {

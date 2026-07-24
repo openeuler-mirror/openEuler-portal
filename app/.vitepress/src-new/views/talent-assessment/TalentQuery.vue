@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { OCard } from '@opensig/opendesign';
+import { OCard, OLink } from '@opensig/opendesign';
 </script>
 <template>
   <div class="talent-query">
@@ -9,9 +9,9 @@ import { OCard } from '@opensig/opendesign';
         <div class="query-intro">
           <i18n-t keypath="talent.certificateQueryIntro" :tag="'p'">
             <template #email>
-              <a href="mailto:oecxonline@openeuler.sh"
-                >oecxonline@openeuler.sh</a
-              >
+              <OLink color="primary" href="mailto:oecxonline@openeuler.sh" target="_blank" :hover-underline="true">
+                oecxonline@openeuler.sh
+              </OLink>
             </template>
           </i18n-t>
         </div>
@@ -22,9 +22,9 @@ import { OCard } from '@opensig/opendesign';
           <div class="row">
             <span class="label">{{ $t('talent.addressee') }}</span>
             <span class="content">
-              <a href="mailto:oecxonline@openeuler.sh"
-                >oecxonline@openeuler.sh</a
-              >
+              <OLink color="primary" href="mailto:oecxonline@openeuler.sh" target="_blank" :hover-underline="true">
+                oecxonline@openeuler.sh
+              </OLink>
             </span>
           </div>
           <div class="row">

@@ -75,8 +75,20 @@ export interface committerDetailT {
   repo: string;
 }
 
+export interface committersT {
+  atomgit_id: string;
+  email: string;
+  gitee_id: string;
+  id_platform: string;
+  name: string;
+  organization?: string;
+  role?: string;
+  user_homepage_url: string;
+  user_login: string;
+}
+
 export interface SigRepoT {
   committerDetails: committerDetailT[];
-  committers: string[];
-  maintainers: string[];
+  committers: committersT[];
+  maintainers: committersT[];
 }

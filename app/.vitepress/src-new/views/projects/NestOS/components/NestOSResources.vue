@@ -376,7 +376,7 @@ const otherLinks = [
   @include text1;
 }
 
-.o-link {
+:deep(.o-link) {
   margin-top: 8px;
   padding: 8px 0;
   @include text1;
@@ -430,7 +430,7 @@ const otherLinks = [
     font-size: 12px;
   }
 
-  .o-link {
+  :deep(.o-link) {
     @include text2;
   }
 }

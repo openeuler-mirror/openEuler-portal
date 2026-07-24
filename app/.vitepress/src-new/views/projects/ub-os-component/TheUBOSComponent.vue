@@ -176,7 +176,7 @@ const columns = [
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
   padding: 32px 24px;
-  .o-link {
+  :deep(.o-link) {
     margin-top: 24px;
     --link-gap: 8px;
     .outlink-icon {
@@ -244,7 +244,7 @@ const columns = [
   }
   .item-info {
     padding: 12px;
-    .o-link {
+    :deep(.o-link) {
       width: 100%;
       margin-top: 0;
       padding: 0;

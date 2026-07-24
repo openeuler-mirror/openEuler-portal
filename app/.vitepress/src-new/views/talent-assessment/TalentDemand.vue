@@ -3,11 +3,11 @@
 import { storeToRefs } from 'pinia';
 import { useCommon } from '@/stores/common';
 
-import { OCard, OButton, OIcon, ODivider } from '@opensig/opendesign';
+import { OCard, OLink, OIcon, ODivider } from '@opensig/opendesign';
 
 import { useScreen } from '~@/composables/useScreen';
 
-import IconOutLink from '~icons/app-new/icon-outlink.svg';
+import IconOutlink from '~icons/yuanrong/icon-outlink.svg';
 
 import talentDemand from '~@/data/talent/talent-demand';
 
@@ -38,24 +38,14 @@ const { isPhone } = useScreen();
             />
           </div>
         </div>
-        <a :href="companyData.link" target="_blank" rel="noopener noreferrer">
-          <OButton
-            color="primary"
-            hover="none"
-            variant="text"
-            :size="isPhone ? 'medium' : 'large'"
-            :style="{
-              '--btn-padding': 0,
-              '--btn-bg-color-hover': 'transparent',
-              '--btn-bg-color-active': 'transparent',
-            }"
-          >
-            {{ $t('talent.viewPost') }}
+        <div class="link">
+          <OLink :href="companyData.link" target="_blank">
+            <span>{{ $t('talent.viewPost') }}</span>
             <template #suffix>
-              <OIcon><IconOutLink /></OIcon>
+              <OIcon><IconOutlink /></OIcon>
             </template>
-          </OButton>
-        </a>
+          </OLink>
+        </div>
       </div>
     </OCard>
   </div>
@@ -129,10 +119,7 @@ const { isPhone } = useScreen();
         color: var(--o-color-info2);
         flex-wrap: wrap;
       }
-      a {
-        width: min-content;
-      }
-      .o-btn {
+      .link {
         margin-top: 24px;
         @include respond('phone') {
           margin-top: 16px;
@@ -141,6 +128,15 @@ const { isPhone } = useScreen();
     }
     @include respond('phone') {
       flex-direction: column;
+    }
+  }
+}
+
+:deep(.o-link) {
+  .o-icon {
+    --icon-size: 24px;
+    @include respond('phone') {
+      --icon-size: 16px;
     }
   }
 }

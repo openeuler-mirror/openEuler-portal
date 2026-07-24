@@ -233,12 +233,8 @@ const frameworkList = [
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
   padding: 32px 24px;
-  .o-link {
+  :deep(.o-link) {
     margin-top: 24px;
-    :deep(.o-link-label) {
-      display: flex;
-      align-items: center;
-    }
     .outlink-icon {
       --icon-size: 24px;
       margin-left: 8px;
@@ -334,7 +330,7 @@ const frameworkList = [
   }
   .item-info {
     padding: 16px;
-    .o-link {
+    :deep(.o-link) {
       margin-top: 12px;
       .outlink-icon {
         --icon-size: 16px;

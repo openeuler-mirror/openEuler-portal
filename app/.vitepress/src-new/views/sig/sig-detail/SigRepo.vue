@@ -73,9 +73,9 @@ const filterRepositoryList = () => {
       (!repositoryNameSelected.value ||
         item.repo === repositoryNameSelected.value) &&
       (!maintainerSelected.value ||
-        item.maintainers?.includes(maintainerSelected.value)) &&
+        item.maintainers?.some(m => m.user_login === maintainerSelected.value)) &&
       (!committerSelected.value ||
-        item.committers?.includes(committerSelected.value))
+        item.committers?.some(m => m.user_login === committerSelected.value))
     );
   });
   totalRepositoryList.value;
@@ -92,8 +92,8 @@ const getRepositoryList = () => {
       _totalRepositoryList.value = infos;
       filterRepositoryList();
       repositoryNameList.value = infos.map((item: any) => item.repo);
-      maintainerList.value = [...new Set(infos.flatMap(item => item.maintainers || []))];
-      committerList.value = [...new Set(infos.flatMap(item => item.committers || []))];
+      maintainerList.value = [...new Set(infos.flatMap(item => (item.maintainers || []).map(m => m.user_login)))];
+      committerList.value = [...new Set(infos.flatMap(item => (item.committers || []).map(m => m.user_login)))];
     }
   });
 };

@@ -197,7 +197,7 @@ const colFlex = computed(() => {
   }
   .num {
     font-weight: 600;
-    background-image: linear-gradient(0deg, rgba(var(--o-kleinblue-6), 0) 0, rgba(var(--o-kleinblue-6), 1) 100%);
+    background-image: linear-gradient(0deg, rgba(var(--o-brand-6), 0) 0, rgba(var(--o-brand-6), 1) 100%);
     -webkit-background-clip: text;
     color: transparent;
     opacity: 0.4;

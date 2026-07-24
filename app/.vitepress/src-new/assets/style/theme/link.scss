@@ -1,7 +1,11 @@
 .o-link {
   display: inline-flex;
-}
-.o-link-normal {
-  --link-color: var(--o-color-info2);
-  --link-color-hover: var(--o-color-link1);
+  .o-link-label {
+    display: flex;
+    align-items: center;
+  }
+  .o-link-main {
+    display: flex;
+    align-items: center;
+  }
 }

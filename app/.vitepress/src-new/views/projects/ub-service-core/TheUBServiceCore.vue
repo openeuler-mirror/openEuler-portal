@@ -327,7 +327,7 @@ const viewWhitepaper = (lang: LocaleT) => {
   padding: 24px 32px;
   display: flex;
   flex-direction: column;
-  .o-link {
+  :deep(.o-link) {
     margin-top: auto;
     --link-gap: 8px;
     .outlink-icon {
@@ -478,7 +478,7 @@ const viewWhitepaper = (lang: LocaleT) => {
     height: auto;
     padding: 12px;
     border-radius: var(--o-radius-s);
-    .o-link {
+    :deep(.o-link) {
       margin-top: 0;
       padding: 0;
       justify-content: space-between;

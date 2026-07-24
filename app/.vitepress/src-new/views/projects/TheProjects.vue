@@ -197,10 +197,6 @@ const gap = computed(() => {
   align-items: center;
 }
 .o-link {
-  :deep(.o-link-label) {
-    display: flex;
-    align-items: center;
-  }
   .o-icon {
     --icon-size: 24px;
   }
@@ -208,7 +204,7 @@ const gap = computed(() => {
     margin-right: 4px;
   }
 }
-.o-btn + .o-link {
+:deep(.o-btn + .o-link) {
   margin-left: 24px;
 }
 .view-btn.o-btn-outline {
