@@ -54,7 +54,6 @@ const faqList = computed(() => [
 }
 
 .faq-answer-tip {
-  color: var(--o-color-control3);
   @include title-margin-top3;
 }
 

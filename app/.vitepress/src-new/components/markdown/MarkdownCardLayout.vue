@@ -102,13 +102,9 @@ const gap = computed(() => {
     display: flex;
     flex-direction: column;
 
-    .o-link {
+    :deep(.o-link) {
       margin-top: auto;
       @include text1;
-      :deep(.o-link-label) {
-        display: flex;
-        align-items: center;
-      }
     }
     .download {
       .o-icon {
@@ -159,8 +155,8 @@ const gap = computed(() => {
   .card-list .card-item {
     padding: 12px;
     min-height: auto;
-    .o-link {
-      :deep(.o-link-label) {
+    :deep(.o-link) {
+      .o-link-main {
         width: 100%;
         justify-content: space-between;
       }

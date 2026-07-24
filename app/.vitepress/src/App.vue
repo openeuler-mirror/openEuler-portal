@@ -210,10 +210,12 @@ main {
   @include respond('<=laptop_s') {
     --layout-content-max-width: 100%;
     --layout-content-padding: 40px;
+    --layout-header-height: 64px;
   }
 
   @include respond('<=pad') {
     --layout-content-padding: 32px;
+    --layout-header-height: 56px;
   }
 
   @include respond('phone') {

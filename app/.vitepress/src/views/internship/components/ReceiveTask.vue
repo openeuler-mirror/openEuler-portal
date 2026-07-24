@@ -98,7 +98,7 @@ const { lePadV } = useScreen();
   padding-right: 4px;
   border: 1px solid var(--o-color-control1-light);
   border-radius: 4px;
-  background-color: var(--o-color-control6-light);
+  background-color: rgba(var(--o-grey-5), .4);
   color: var(--o-color-info1);
   margin-left: 4px;
   margin-right: 4px;
@@ -131,7 +131,7 @@ const { lePadV } = useScreen();
     margin-bottom: 16px;
    }
 
-   .o-link {
+   :deep(.o-link) {
     color: var(--o-color-link1);
 
     &:hover {

@@ -51,7 +51,7 @@ const { lePadV } = useScreen();
   color: var(--o-color-info2);
   @include text1;
 
-  .o-link {
+  :deep(.o-link) {
     color: var(--o-color-primary1);
     @include text1;
   }
@@ -88,9 +88,8 @@ const { lePadV } = useScreen();
   &:hover {
     color: var(--o-color-primary2);
 
-    .o-link {
+    :deep(.o-link) {
       color: var(--o-color-primary2);
-      text-decoration: underline;
     }
   }
 }

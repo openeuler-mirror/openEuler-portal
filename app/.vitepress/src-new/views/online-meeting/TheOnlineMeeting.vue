@@ -56,7 +56,9 @@ const gap = computed(() => {
             <div class="link" v-if="item.btn?.length">
               <OLink v-for="n in item.btn" :key="n.url" :href="n.url" target="_blank">
                 <span>{{ n.text }}</span>
-                <OIcon><IconChevronRight /></OIcon>
+                <template #suffix>
+                  <OIcon><IconChevronRight /></OIcon>
+                </template>
               </OLink>
             </div>
             <div v-if="item?.WeChat" class="we-chat">
@@ -182,10 +184,6 @@ const gap = computed(() => {
   }
   :deep(.o-link) {
     margin-top: 16px;
-    .o-link-label {
-      display: flex;
-      align-items: center;
-    }
     .o-icon {
       --icon-size: 16px;
       margin-left: 4px;
