@@ -130,14 +130,6 @@ const { lePadV } = useScreen();
    &:last-child {
     margin-bottom: 16px;
    }
-
-   :deep(.o-link) {
-    color: var(--o-color-link1);
-
-    &:hover {
-      color: var(--o-color-link2);
-    }
-   }
 }
 
 .download-file {

@@ -419,19 +419,11 @@ const reportSectionLinkClick = (
           }
         }
 
-        .detail-link {
+        :deep(.detail-link) {
           --link-color: rgba(var(--o-black), 0.8);
 
-          margin-top: 20px;
+          margin-top: 8px;
           @include text1;
-
-          @include respond('<=laptop') {
-            margin-top: 18px;
-          }
-
-          @include respond('<=pad') {
-            margin-top: 16px;
-          }
 
           @include respond('<=pad_v') {
             font-size: var(--e-font-size-text);

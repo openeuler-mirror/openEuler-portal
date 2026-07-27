@@ -253,8 +253,14 @@ onUnmounted(() => {
           >
         </div>
         <div class="footer-item">
-          <span v-if="currentStep > 0" class="prev-step" @click="prevStep()"
-            >上一步</span
+          <OButton
+            v-if="currentStep > 0"
+            class="prev-step"
+            variant="text"
+            color="primary"
+            size="small"
+            @click="prevStep()"
+            >上一步</OButton
           >
           <OButton
             class="next-step"
@@ -344,12 +350,9 @@ onUnmounted(() => {
   }
   .prev-step {
     margin-right: 14px;
-    color: var(--o-color-info3);
     cursor: pointer;
     @include tip2;
-    @include hover {
-      color: var(--o-color-info1);
-    }
+
   }
   .next-step {
     padding: 13px 11px;
