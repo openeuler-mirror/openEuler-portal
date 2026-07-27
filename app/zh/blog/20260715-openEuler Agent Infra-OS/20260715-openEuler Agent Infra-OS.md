@@ -1,5 +1,5 @@
 ---
-title: oopenEuler Agent Infra 系列 | 服务器 OS 的系统 Agent：面向系统的自治与管理中枢                      
+title: openEuler Agent Infra 系列 | 服务器 OS 的系统 Agent：面向系统的自治与管理中枢                      
 category: blog 
 date: 2026-07-15
 tags:
