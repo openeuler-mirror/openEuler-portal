@@ -220,6 +220,7 @@ useInViewDuration(
                   :href="pathResolving(item.path)"
                   target="_blank"
                   class="item-link"
+                  :hover-underline="false"
                   v-analytics.bubble="{ level2: cases[activeTab].label,  target: item.company }"
                 >
                   <div class="item-title">
@@ -321,21 +322,27 @@ useInViewDuration(
 .item-case {
   cursor: pointer;
   @include hover {
-    .company {
+    .item-title {
       color: var(--o-color-link1);
     }
   }
 }
-.item-link {
+:deep(.item-link) {
   display: block;
   width: 100%;
   padding: 0;
 }
+:deep(.o-link-main) {
+  align-items: flex-start;
+  flex-direction: column;
+}
 .item-title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--o-color-info1);
   .company {
-    color: var(--o-color-info1);
     font-weight: 500;
     @include text-truncate(1);
     @include h2;

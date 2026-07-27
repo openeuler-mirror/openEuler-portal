@@ -63,7 +63,7 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
         <!-- footer -->
         <div v-if="$slots.footer || props.footer" class="section-footer" >
           <slot name="footer">
-            <OLink :href="props.footerHref" target="_blank" :hover-underline="false" v-analytics.bubble="{ target: props.footer }">
+            <OLink :href="props.footerHref" target="_blank" v-analytics.bubble="{ target: props.footer }">
               {{ props.footer }}
               <template #suffix>
                 <OIcon class="footer-icon"><IconChevronRight /> </OIcon>
@@ -164,6 +164,9 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
 
     @include respond('phone') {
       margin-top: 12px;
+    }
+    :deep(.o-link) {
+      --link-color: var(--o-color-info2);
     }
   }
 

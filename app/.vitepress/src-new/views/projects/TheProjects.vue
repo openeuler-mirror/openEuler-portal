@@ -301,10 +301,10 @@ const gap = computed(() => {
   .o-divider {
     --o-divider-gap: 0;
   }
-  .o-link {
+  :deep(.o-link) {
     width: 100%;
     padding: 9px 0;
-    :deep(.o-link-label) {
+    .o-link-label {
       width: 100%;
       justify-content: space-between;
     }

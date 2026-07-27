@@ -120,7 +120,7 @@ useInViewDuration(container, (duration) => {
               v-if="card.textBtn"
               :href="card.textBtn.link"
               target="_blank"
-              :hover-underline="false"
+              :style="{ '--link-color': 'var(--o-color-info2)' }"
               rel="noopener noreferrer"
               v-analytics.bubble="{
                 level2: card.title,

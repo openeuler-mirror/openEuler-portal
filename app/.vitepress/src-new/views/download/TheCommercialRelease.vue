@@ -31,7 +31,7 @@ import {
   DialogActionT,
 } from '@opensig/opendesign';
 
-import IconOutLink from '~icons/app-new/icon-outlink.svg';
+import IconOutLink from '~icons/yuanrong/icon-outlink.svg';
 import IconSearch from '~icons/app-new/icon-header-search.svg';
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 import { oaReport } from '@opendesign-plus/plugins/analytics';
@@ -425,10 +425,10 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
                 color="primary"
                 @click="onClickDownload(download)"
               >
-                <template #icon>
+                <span>{{ t('download.DOWNLOADGO') }}</span>
+                <template #suffix>
                   <OIcon><IconOutLink class="download-button-icon" /></OIcon>
                 </template>
-                <span>{{ t('download.DOWNLOADGO') }}</span>
               </OButton>
               <div class="btn-mo">
                 <div class="text">{{ t('download.DOWNLOADGO') }}</div>
