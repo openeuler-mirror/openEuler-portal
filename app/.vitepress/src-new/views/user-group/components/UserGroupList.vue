@@ -3,7 +3,9 @@ import { useI18n } from 'vue-i18n';
 import { useData } from 'vitepress';
 import { OCard } from '@opensig/opendesign';
 import AppSection from '~@/components/AppSection.vue';
-import cityData from '~@/data/user-group/city/';
+import content from '#content/community/user-group';
+
+const cityData = content.zh.cityList;
 
 const { t } = useI18n();
 const { lang } = useData();

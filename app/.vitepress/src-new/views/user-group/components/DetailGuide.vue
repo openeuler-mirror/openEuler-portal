@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
 import AppSection from '~@/components/AppSection.vue';
-import { guideData } from '~@/data/user-group';
+import detailContent from '#content/community/user-group/detail';
 import { OButton } from '@opensig/opendesign';
 import { useScreen } from '~@/composables/useScreen';
 
 const { lePadV } = useScreen();
+const guideData = detailContent.zh.guide;
 
 const { t } = useI18n();
 </script>

@@ -1,0 +1,15 @@
+# 行业白皮书页面中文数据 / Industry White Paper page data (zh)
+#
+# 按板块名索引的顶层对象。
+
+# industry_papers: 行业白皮书列表
+#   path:    PDF 下载链接
+#   summary: 白皮书摘要标题
+#   banner:  卡片背景图路径（站点级共享资产）
+industry_papers:
+  - path: /whitepaper/openEuler操作系统在电力行业的应用与生态发展白皮书.pdf
+    summary: openEuler操作系统在电力行业的应用与生态发展白皮书
+    banner: /category/showcase/case-detail-bg.jpg
+  - path: /whitepaper/openEuler系操作系统在金融行业的应用与生态白皮书.pdf
+    summary: openEuler系操作系统在金融行业的应用与生态白皮书
+    banner: /category/showcase/case-detail-bg.jpg

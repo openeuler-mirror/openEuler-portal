@@ -3,13 +3,14 @@ import { computed } from 'vue';
 import { OBreadcrumb, OBreadcrumbItem } from '@opensig/opendesign';
 import { useLocale } from '~@/composables/useLocale';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
-import { detailData } from '~@/data/user-group';
+import detailContent from '#content/community/user-group/detail';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
 import IconJoinGroup from '~icons/user-group/join-group.svg';
 
 const { t, locale } = useLocale();
 const { isPhone } = useScreen();
+const detailData = detailContent.zh.detail;
 
 const commonStore = useCommon();
 const isDark = computed(() => {

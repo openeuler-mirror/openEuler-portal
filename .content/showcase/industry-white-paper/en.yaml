@@ -1,0 +1,12 @@
+# Industry White Paper page data (en)
+#
+# Top-level object indexed by section name.
+
+# industry_papers: Industry white paper list
+#   path:    PDF download link
+#   summary: White paper summary title
+#   banner:  Card background image path (site-wide shared asset)
+industry_papers:
+  - path: /whitepaper/en/openEuler-based OSs in Finance.pdf
+    summary: openEuler-based OSs in Finance
+    banner: /category/showcase/case-detail-bg.jpg

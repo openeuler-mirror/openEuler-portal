@@ -2,8 +2,10 @@
 import { useI18n } from 'vue-i18n';
 import AppSection from '~@/components/AppSection.vue';
 import { useScreen } from '~@/composables/useScreen';
-import { introData } from '~@/data/user-group';
+import content from '#content/community/user-group';
 import IconHook from '~icons/user-group/hook.svg';
+
+const introData = content.zh.intro;
 
 const { isPhone } = useScreen();
 

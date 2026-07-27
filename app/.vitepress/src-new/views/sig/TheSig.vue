@@ -4,9 +4,13 @@ import SigWelcomeJoin from './SigWelcomeJoin.vue';
 import SigAbout from './SigAbout.vue';
 import SigList from './SigList.vue';
 
-import banner from '~@/assets/category/sig/sig-center-banner.jpg';
+import sigListContent from '#content/sig/sig-list';
+import { useLocale } from '~@/composables/useLocale';
 import { oaReport } from '@opendesign-plus/plugins/analytics';
-import { onBeforeUnmount, onMounted, shallowRef } from 'vue';
+import { computed, onBeforeUnmount, onMounted, shallowRef } from 'vue';
+
+const { locale } = useLocale();
+const banner = computed(() => sigListContent[locale.value].banner.bg);
 
 const obs = shallowRef<IntersectionObserver>();
 const inViewSectionInfos = new Map<HTMLElement | Element, { start: number }>();

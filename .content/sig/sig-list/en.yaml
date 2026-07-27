@@ -1,0 +1,71 @@
+# SIG list page data (en)
+#
+# Top-level object keyed by section name. Fields use baseline names (no _zh/_en suffix).
+# Image paths starting with ./ are rewritten to imports by vite-plugin-content-yaml
+# so Vite emits hashed asset URLs.
+# The icon field is ./images/xxx.svg?raw; the plugin passes ?raw through to Vite, which returns the SVG string, rendered as inline SVG.
+
+# banner: Top banner background image (shared by zh/en)
+#   bg: Background image
+banner:
+  bg: ./images/sig-center-banner.jpg
+
+# welcome_join: Welcome / Join SIG cards
+#   icon: SVG path (./images/xxx.svg, rendered as inline SVG)
+#   title: Card title
+#   subtitle: Card description (HTML allowed)
+welcome_join:
+  - icon: ./images/operate-sig.svg?raw
+    title: SIG Operations
+    subtitle: 'An SIG is established for one or more specific technical topics. Core members of an SIG can manage each group, while SIG members collaborate to drive deliverable outcomes for the openEuler community.'
+  - icon: ./images/exchange-sig.svg?raw
+    title: SIG Communication
+    subtitle: "You can find SIG information and contact details for any project in the README.md file of the SIG's code repository. We encourage active participation in SIG communications through mailing lists, public meetings, and other contact methods specified in README.md."
+  - icon: ./images/join-sig.svg?raw
+    title: Contributing to SIGs
+    subtitle: 'Each SIG maintains one or more projects on AtomGit, with each project containing one or more repositories where SIG deliverables are stored. You can contribute to SIGs by submitting issues or pull requests, participating in discussions, conducting code reviews, and more. Refer to the <a href="/en/community/contribution" target="_blank" rel="noopener noreferrer" class="underline-link">contribution guide</a> for details.'
+
+# about_sig: About SIG cards
+#   icon: Light-theme SVG path
+#   icon_dark: Dark-theme SVG path
+#   title: Card title
+#   subtitle: Card description
+#   path: Card link (empty = card is hidden)
+#   background: Card background image
+about_sig:
+  - icon: ./images/role-description.svg?raw
+    icon_dark: ./images/role-description-dark.svg?raw
+    title: SIG Member Roles
+    subtitle: Each contributor assumes distinct roles and responsibilities within the openEuler community.
+    path: /en/sig/role-description/
+    background: ./images/role-description_bg.png
+  - icon: ./images/sig-meeting.svg?raw
+    icon_dark: ./images/sig-meeting-dark.svg?raw
+    title: ''
+    subtitle: ''
+    path: ''
+    background: ./images/meeting-guide_bg.png
+
+# application_process: SIG application process
+#   icon: Step SVG path
+#   process: Step name
+#   detail: Step detail (HTML allowed)
+application_process:
+  - icon: ./images/looking-someone.svg?raw
+    process: Find
+    detail: 'Find two or three people with shared goals in the openEuler community, whether as an individual or company, to discuss and set up a SIG that will maintain software packages in a specific technical area within the openEuler community or launch incubation projects.'
+  - icon: ./images/apply-for.svg?raw
+    process: Apply
+    detail: 'Create an application file on AtomGit and initiate a pull request (PR) according to the <a href="https://atomgit.com/openeuler/community/blob/master/en/technical-committee/governance/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">procedure</a> for setting up a SIG. Make an appointment for attending the Technical Committee (TC) meeting.'
+  - icon: ./images/communicate.svg?raw
+    process: Discuss
+    detail: 'At the regular TC meeting, discuss and reach an agreement on the technical scope and maintenance objectives of the SIG.'
+  - icon: ./images/approved.svg?raw
+    process: Approve
+    detail: 'The TC approves the establishment of the SIG. The corresponding PR is merged into the code repository, and the infrastructure automatically establishes the corresponding repository.'
+  - icon: ./images/operate.svg?raw
+    process: Operate
+    detail: 'The SIG starts to operate. Members use the mailing list and regular meetings for discussion and operation.'
+  - icon: ./images/improve.svg?raw
+    process: Improve
+    detail: 'The TC periodically reviews the SIG operation and provides guidance.'

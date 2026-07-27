@@ -1,0 +1,411 @@
+# 用户组详情页数据 / User group detail page data (zh)
+#
+# detail:   详情页顶部 banner 图片（亮色/暗色 + PC/移动端）
+# link:     活动申请和案例投稿链接
+# question: 如何成为 Organizer / Ambassador 说明
+# guide:    详情页底部加入引导（邮箱、邮件列表、微信群）
+# cities:   所有城市完整数据（organizer / ambassador / news / showcase）
+
+# detail: 详情页顶部 banner 图片
+#   banner / banner_dark: PC 端亮色/暗色
+#   banner_mb / banner_mb_dark: 移动端亮色/暗色
+detail:
+  banner: ./images/common/detail-banner.jpg
+  banner_dark: ./images/common/detail-banner-dark.jpg
+  banner_mb: ./images/common/detail-banner-mb.jpg
+  banner_mb_dark: ./images/common/detail-banner-mb-dark.jpg
+
+# link: 详情页活动申请和案例投稿链接
+#   applyEvent: 活动申请链接
+#   provideCase: 案例投稿链接
+link:
+  applyEvent: /zh/interaction/event-list/#activity-apply
+  provideCase: https://atomgit.com/openeuler/community/blob/master/zh/contributors/user-story-guideline.md
+
+# question: 如何成为 Organizer / Ambassador
+question:
+  title: 如何成为 openEuler 用户组Organizer、Ambassador？
+  desc1: 如您想申请成为某城市组的 Organizer 或 Ambassador，请将满足以上贡献要求或其他类型深度社区贡献的说明和举证材料（如照片、截图、链接等）发送至邮箱
+  desc2: 进行申请，社区运营工作组进行评审
+  mail: user@openeuler.sh
+  subtitle1: Organizer
+  intro1: Organizer 是 openEuler 用户组的组织者和管理者，需要规划用户组发展、组织用户组活动。成为Organizer，需要是 openEuler 社区活跃的贡献者或用户，在所申请的城市有连接用户的资源，组织过至少一次 openEuler 相关的线下活动。
+  subtitle2: Ambassador
+  intro2: Ambassador 是 openEuler 用户组内传播大使的角色，需要帮助解答用户疑问，分享传播 openEuler 的技术和实践经验。成为Ambassador，需要积极参与 openEuler 社区贡献和传播，包括但不限于以下任一贡献：
+  tip:
+    - 在openEuler用户组社群、openEuler交流社群、openEuler论坛、邮件列表等交流渠道有效解答用户问题20次以上
+    - 至少1次在公开的Meetup或峰会上分享openEuler相关议题
+    - 在高校内讲openEuler相关课程
+    - 在openEuler社区有代码贡献，提交过至少5个以上的PR并被社区合入
+
+# guide: 详情页底部加入城市用户组引导
+guide:
+  link1: user-group@openeuler.org
+  link2: https://mailweb.openeuler.org/postorius/lists/user-group@openeuler.org/
+  wechat: ./images/common/wechat.png
+
+# cities: 所有城市完整数据（organizer / ambassador / news / showcase）
+cities:
+  - name: 北京
+    img: ./images/city/beijing.jpg
+    data:
+      title: 北京城市用户组
+      organizational: ''
+      organizer: []
+      ambassador:
+        - name: 吕从庆
+          position: 统信软件技术有限公司
+          technology: [OS, DDE, CI&CD]
+          homePage: https://forum.openeuler.org/u/48vekpgjuhtte7sc/
+          avatar: ./images/beijing/lvcongqing.png
+          avatarDark: ./images/beijing/lvcongqing-dark.png
+          contribution: openEuler技术委员会委员。目前主要参与TC、Release、DDE等SIG组，主要参与SIG组和社区的技术决策以及SIG组所属软件包的版本选型、发布和维护。
+        - name: 杨昭
+          position: 麒麟软件有限公司
+          technology: [CloudNative, ops, bigdata]
+          homePage: https://gitee.com/yangzhao_kl
+          avatar: ./images/beijing/yangzhao.png
+          avatarDark: ./images/beijing/yangzhao-dark.png
+          contribution: 自2020年6月以来一直在openEuler社区参与社区建设工作，参与核心事务决策，在CloudNative、ops、bigdata、python-modules等重要sig担任maitainer，支撑社区软件生态扩充及维护；在QA、release-management sig担任comitter，支撑多个社区OS版本特性的发布及测试。除此之外，在openEuler社区孵化PilotGo插件式运维管理平台，丰富社区运维软件生态，促进创新运维技术的孵化及落地。
+        - name: 刘寿永
+          position: 北京孔皆智能科技有限公司
+          technology: [OS, AI, MPC]
+          homePage: https://gitee.com/pangbanme
+          avatar: ./images/beijing/liushouyong.png
+          avatarDark: ./images/beijing/liushouyong-dark.png
+          contribution: 主导成立openEuler Edge SIG组织，以openEuler为操作系统底座，面向边缘计算领域提供对应的硬件，中间件，算法和整体解决方案，目前已经支持多个硬件平台和中间件，并应用到工业，交通等多个场景。
+      salon: []
+      showcase:
+        - summary: 北京交通大学利用RPA智能人工系统减少人员投入 50%
+          path: zh/showcase/education/beijingjiaotong/
+          industry: 高校&科研
+          title: 北京交通大学
+        - summary: 基于openEuler构建工业机器人操作系统，打造"开箱即用"的机器人基础软件平台
+          path: zh/showcase/education/beihang/
+          industry: 高校&科研
+          title: 北京航空航天大学
+
+  - name: 西安
+    img: ./images/city/xian.jpg
+    data:
+      title: 西安用户组
+      organizational: 陕西鲲鹏生态创新中心
+      organizer:
+        - name: 谷羽新
+          position: 陕西鲲鹏生态创新中心
+          homePage: https://forum.openeuler.org/u/dimwind51
+          avatar: ./images/xian/guyuxin.png
+          avatarDark: ./images/xian/guyuxin-dark.png
+      ambassador:
+        - name: 魏东
+          position: 统信软件技术有限公司
+          technology: [rpm, dnf, 桌面开发]
+          homePage: https://forum.openeuler.org/u/weidongkl/activity
+          avatar: ./images/xian/weidong.png
+          avatarDark: ./images/xian/weidong-dark.png
+          contribution: 主要负责openeuler社区dde软件包组的维护。对桌面相关软件，后端开发，系统开发都有一定了解
+        - name: 王东兴
+          position: 中科创达
+          technology: [Python, AI, Openstack, Edge]
+          homePage: https://forum.openeuler.org/u/desertsailor_king
+          avatar: ./images/xian/wangdongxing.png
+          avatarDark: ./images/xian/wangdongxing-dark.png
+          contribution: 主要参与SIG：Python、OpenStack、Edge、AIPython：Committer，引入和维护软件包300+；OpenStack：Maintainer，主要投入公共Python包的维护和升级； Edge：Maintainer，主要投入组织边缘设备应用组件相关软件包引入审核等；AI：Committer，主要投入pytorch、tensorboard软件包维护
+      news:
+        - summary: 围绕openEuler 24.03LTS版本、openEuler嵌入式和基于openEuler的创新和服务进行交流探讨。
+          banner: img/banners/0705-xian.png
+          title: 【活动回顾】openEuler Meetup西安站举办，共话 openEuler新版本与嵌入式技术生态
+          path: zh/news/openEuler/20240705-xian/20240705-xian
+        - summary: 9月1日，openEuler西安用户组Meetup成功举办，本次活动由openEuler社区、软通动力、陕西鲲鹏生态创新中心联合主办，统信软件协办。
+          banner: img/banners/20230908-xi.png
+          title: 【活动回顾】openEuler西安用户组Meetup
+          path: zh/news/20230908-xian/20230908-xian
+      showcase:
+        - summary: openEuler替代原有操作系统，大数据平台平滑迁移，文件读写性能平均提升20% ，业务稳定高效运行。
+          path: zh/showcase/others/yaxin/
+          industry: 其他
+          title: 亚信科技（大数据基础平台产品）
+        - summary: 开源软件维护量减少30%；园区部署时长降低37%；园区人力投入减少28%；迁移后性能提升3%
+          path: zh/showcase/others/ruantong/
+          industry: 其他
+          title: 软通动力园区管理平台迁移适配
+
+  - name: 上海
+    img: ./images/city/shanghai.jpg
+    data:
+      title: 上海用户组
+      organizational: ''
+      organizer: []
+      ambassador: []
+      news:
+        - summary: 2024年3月23-24日，"2024全球开发者先锋大会"（GDC）在上海徐汇盛大召开。
+          banner: img/banners/0330-GDC.png
+          title: '【回顾】GDC大会：openEuler for AI,AI for openEuler'
+          path: zh/news/openEuler/20240330-GDC/20240330-GDC
+      showcase:
+        - summary: 基于openEuler打造云端的高性能计算平台
+          path: zh/showcase/cloud-computing/jisuan/
+          industry: 云计算
+          title: 上海即算科技有限公司
+
+  - name: 武汉
+    img: ./images/city/wuhan.jpg
+    data:
+      title: 武汉用户组
+      organizational: 长江欧拉生态创新中心
+      organizer:
+        - name: 王登阳
+          position: 长江欧拉生态创新中心
+          avatar: ./images/wuhan/wangdengyang.png
+          avatarDark: ./images/wuhan/wangdengyang-dark.png
+      ambassador:
+        - name: 慕冬亮
+          position: 华中科技大学
+          technology: [内核, 安全]
+          homePage: https://mudongliang.github.io/
+          avatar: ./images/wuhan/mudongliang.png
+          avatarDark: ./images/wuhan/mudongliang-dark.png
+        - name: 丁卫士
+          position: 麒麟软件有限公司
+          technology: [内核, 安全]
+          avatar: ./images/wuhan/dingweishi.png
+          avatarDark: ./images/wuhan/dingweishi-dark.png
+        - name: 杨峰
+          position: 武汉誉天互联科技有限责任公司
+          technology: [内核, 云原生, 安全]
+          homePage: https://forum.openeuler.org/u/Yang_Feng
+          avatar: ./images/wuhan/yangfeng.png
+          avatarDark: ./images/wuhan/yangfeng-dark.png
+      news:
+        - summary: 2024首场用户组Meetup在武汉未来科技城成功举办。
+          banner: img/banners/0330-yhz.png
+          title: openEuler Meetup武汉站成功举办，武汉用户组成立啦！
+          path: zh/news/openEuler/20240330-yhz/20240330-yhz
+      showcase:
+        - summary: 基于openEuler操作系统，共同打造信服易备鲲鹏灾备一体机，满足数据保护的管理、灾备行业和信息系统灾难恢复的需求。
+          path: zh/showcase/others/bada/
+          industry: 其他
+          title: 武汉吧哒科技股份有限公司
+
+  - name: 南京
+    img: ./images/city/nanjing.jpg
+    data:
+      title: 南京用户组
+      organizational: 江苏欧拉生态创新中心
+      organizer:
+        - name: 汤景仁
+          position: 江苏欧拉生态创新中心
+          forum: https://forum.openeuler.org/u/tjr1219/activity
+          avatar: ./images/nanjing/tangjingren.png
+          avatarDark: ./images/nanjing/tangjingren-dark.png
+      ambassador:
+        - name: 魏建刚
+          position: 江苏润和软件股份有限公司
+          technology: [合规, 分布式, 虚拟化以及嵌入式]
+          homePage: https://gitee.com/bugflyfly
+          avatar: ./images/nanjing/weijiangang.png
+          avatarDark: ./images/nanjing/weijiangang-dark.png
+          contribution: (1)openEuler技术委员会、用户委员会委员 (2)sig-Complaince、sig-Distributed-middleware两大SIG的发起者并担任maintainer；(3)sig-System-tool的Committer（4）作为南京用户组Ambassador在江苏信创巡展（六大地级市）、HDC.Cloud(南京)等多场合介绍传推广openEuler技术领先型；（5）以分论坛主持人、出品人、演讲者参与历届ODD、SUmmit等会议
+        - name: 朱佩韦
+          position: ''
+          technology: [嵌入式, Linux]
+          homePage: http://t.csdnimg.cn/3JYiX
+          avatar: ./images/nanjing/zhupeiwei.png
+          avatarDark: ./images/nanjing/zhupeiwei-dark.png
+          contribution: （1）在Sig yocto-meta-openeuler 里参与雪球计划（南向兼容NXP）imx8 硬件单板的欧拉支持；（2）在Embedded-SIG里贡献代码；（3）在CSDN开设openEuler技术专栏，发表系列文章，登上CSDN内容热榜。
+      news:
+        - summary: openEuler社区与江苏润和软件股份有限公司于6月21日在南京举办了一场围绕AI、嵌入式、分布式创新进展为主题的Meetup。
+          banner: img/banners/0625-nj.png
+          title: '【活动回顾】openEuler 24.03 LTS 版本与技术创新Meetup 南京站'
+          path: zh/news/openEuler/20240625-nanjing/20240625-nanjing
+        - summary: 2023年6月2日，openEuler南京用户组举办了线下交流Meetup。
+          banner: img/banners/20230609-nanjing.png
+          title: 活动回顾 | openEuler南京用户组Meetup运维专场，聚集南京区域用户交流
+          path: zh/news/20230609-nanjing/20230609-nanjing
+      showcase:
+        - summary: openEuler在汽车零部件装配线曲线管理系统中的应用
+          path: zh/showcase/others/yinhu/
+          industry: 其他
+          title: 南京银湖数字技术有限公司
+        - summary: 应用于机器人/机器视觉/工业控制，助力AI视觉产业快速发展，助力国产操作系统openEuler操作系统打入嵌入式领域。
+          path: zh/showcase/others/haiou/
+          industry: 其他
+          title: 南京启诺信息技术有限公司（欧拉派系列之海鸥派）
+        - summary: A-OPS智能运维助力边缘服务器运维效率提升30%，软总线提升对端设备扩展接入能力；
+          path: zh/showcase/energy/hanyuan/
+          industry: 能源
+          title: 南京瀚元科技有限公司（智能边缘服务器）
+        - summary: 极端高温干旱天气模拟与预测平台，有效及时发现预警极端气候，提升应急处置能力，性能提升58%
+          path: zh/showcase/education/nanxinda/
+          industry: 高校&科研
+          title: 南京信息工程大学气象灾害重点实验室
+
+  - name: 长沙
+    img: ./images/city/changsha.jpg
+    data:
+      title: 长沙用户组
+      organizational: 湖南欧拉生态创新中心
+      organizer:
+        - name: 刘华杰
+          position: 湖南欧拉生态创新中心
+          homePage: https://forum.openeuler.org/u/liuhuajie/activity
+          avatar: ./images/changsha/liuhuajie.png
+          avatarDark: ./images/changsha/liuhuajie-dark.png
+      ambassador:
+        - name: 周强
+          position: 湖南麒麟信安科技股份有限公司
+          homePage: https://forum.openeuler.org/u/dave110/summary
+          avatar: ./images/changsha/zhouqiang.png
+          avatarDark: ./images/changsha/zhouqiang-dark.png
+      news:
+        - summary: 活动对最新发布的openEuler 24.03 LTS版本进行深入分享和解读，吸引了众多技术专家、开发者和用户参加。
+          banner: img/banners/20240629-cs.webp
+          title: openEuler Meetup长沙站成功举办！共话openEuler 24.03 LTS版本与社区创新
+          path: zh/news/openEuler/20240628-changsha/20240628-changsha
+        - summary: 9月8日，由openEuler社区、麒麟信安、湖南欧拉生态创新中心以及湖南大学联合主办的openEuler嵌入式Meetup长沙站在湖南大学成功举办
+          banner: img/banners/20230915-hunan1.jpeg
+          title: 精彩回顾｜湖南大学openEuler技术小组成立！共话嵌入式技术创新未来
+          path: zh/news/20230915-hunan/20230915-hunan
+      showcase:
+        - summary: 长沙智慧民政国产操作系统迁移，树立政务系统建设优秀示范
+          path: zh/showcase/others/changsha/
+          industry: 其他
+          title: 长沙市民政局
+        - summary: 基于麒麟信安打造银行IT信息化系统安全底座
+          path: zh/showcase/finance/xiangjiang/
+          industry: 金融
+          title: 三湘银行
+        - summary: 湖南省烟草专卖局业务系统建设项目 打造高可靠、高稳定和强安全的信息化系统
+          path: zh/showcase/others/O5/
+          industry: 其他
+          title: 湖南省烟草专卖局
+
+  - name: 成都
+    img: ./images/city/chengdu.jpg
+    data:
+      title: 成都用户组
+      organizational: 四川欧拉生态创新中心
+      organizer:
+        - name: 曾强
+          position: 四川欧拉生态创新中心
+          email: zengqiang50@huawei.com
+          avatar: ./images/chengdu/zengqiang.png
+          avatarDark: ./images/chengdu/zengqiang-dark.png
+      ambassador:
+        - name: 王伟
+          position: 成都菁蓉联创科技有限公司
+          technology: [嵌入式, 边缘云, 混合部署]
+          homePage: https://gitee.com/wangwei622_admin
+          avatar: ./images/chengdu/wangwei.png
+          avatarDark: ./images/chengdu/wangwei-dark.png
+          contribution: 作为一名专注于openEuler的开发者，在openEuler embedded sig组参与BSP建设以及海鸥派的OS、AI建设；在openEuler Industrial Control SIG 组参与混合部署虚拟化建设；
+        - name: 刘鑫
+          position: 中国科学院软件研究所
+          technology: [RISC-V]
+          homePage: https://forum.openeuler.org/u/misaka00251
+          avatar: ./images/chengdu/liuxin.png
+          avatarDark: ./images/chengdu/liuxin-dark.png
+          contribution: openEuler RISC-V sig maintainer，参与 openEuler RISC-V 的各项工作。
+      news:
+        - summary: 2024年3月23日，openEuler G11N SIG 和 doc SIG 在成都联合举办了一次线下 Meetup。
+          banner: img/banners/0330-G11N.jpeg
+          title: '活动回顾 ｜ openEuler G11N & doc SIG Meetup 成都站'
+          path: zh/news/openEuler/20240330-G11N/20240330-G11N
+        - summary: openEuler成都用户组以及电子科技大学 openEuler技术小组，为四川区域用户和高校学生构建持续学习交流openEuler的平台。
+          banner: img/banners/1127-cs.jpeg
+          title: '活动回顾 | openEuler Meetup 成都站，产学研共建 openEuler 用户生态'
+          path: zh/news/20231127-cs/20231127-cs
+      showcase:
+        - summary: 性能卓越，稳定可靠，环境级高可用， 智能运维，安全性，自主可控，可移植、易操作
+          path: zh/showcase/others/starvcenter/
+          industry: 其他
+          title: 四川中电启明星技术有限公司（StarVCenter云平台）
+        - summary: IT 基础设施建设创新，引领信创云标准
+          path: zh/showcase/others/cdu/
+          industry: 其他
+          title: 成都城安院应急管理信创云平台建设项目
+        - summary: 利用openEule操作系统构建商业卫星数智基座
+          path: zh/showcase/others/jingrong2/
+          industry: 其他
+          title: 成都菁蓉联创科技有限公司（卫星载荷欧拉嵌入式操作系统产品）
+        - summary: 可弹性伸缩、资源动态调度、高可用、便于快速开发持续交付的PaaS云平台
+          path: zh/showcase/others/zhongdian/
+          industry: 其他
+          title: 四川中电启明星技术有限公司（SKE容器云平台）
+        - summary: 结合openEuler，KubeEdge及iSulad技术，打造出无人装备统一操作系统。
+          path: zh/showcase/others/jingrong1/
+          industry: 其他
+          title: 成都菁蓉联创（无人装备统一操作系统）
+
+  - name: 广州
+    img: ./images/city/guangzhou.jpg
+    data:
+      title: 广州用户组
+      organizational: ''
+      organizer:
+        - name: 尹传勇
+          position: 华南师范大学
+          homePage: https://forum.openeuler.org/u/ycy/
+          avatar: ./images/guangzhou/yinchuanyong.png
+          avatarDark: ./images/guangzhou/yinchuanyong-dark.png
+      ambassador: []
+      news:
+        - summary: 10月21日，openEuler Meetup 广州站成功举办，本次Meetup上就openEuler 嵌入式平台openEuler Embedded、智能调优工具A-Tune、智能运维项目A-ops、高性能用户协议栈Gazelle、操作系统搬迁方案进行了分享和热烈的探讨交流，并在活动中成立了广州用户组，正式启动广州地域用户、开发者的本地化交流圈子构建。
+          banner: img/banners/20221104guangzhouzhan.jpg
+          title: openEuler Meetup 广州站精彩回顾
+          path: zh/news/20221112-Guangzhou
+      showcase:
+        - summary: 信息业务系统，平滑完成操作系统迁移，实现完全系统升级
+          path: zh/showcase/energy/007e41fd-9185-f62d7485475e/
+          industry: 能源
+          title: 中国南方电网
+        - summary: 高新兴基于openEuler Embedded打造安防特种机器人更强系统底座。
+          path: zh/showcase/others/gaoxinxin/
+          industry: 其他
+          title: 高新兴
+
+  - name: 深圳
+    img: ./images/city/shenzhen.jpg
+    data:
+      title: 深圳用户组
+      organizational: ''
+      organizer: []
+      ambassador: []
+      news:
+        - summary: 3月31日，openEuler Meetup深圳站-机器人专场成功举办，本次Meetup由openEuler社区、超聚变、深圳昇腾创新中心联合主办，共同探讨openEuler在机器人领域的应用与发展。
+          banner: img/banners/20230407sz.jpg
+          title: 活动回顾 | openEuler Meetup 机器人专场，推动嵌入式用户生态发展
+          path: zh/news/20230407-sz/20230407-sz
+      showcase:
+        - summary: 基于openEuler部署可靠、高质量的音视频融合通信系统，实现全灾种统一指挥、全链条有效覆盖、全过程综合管理
+          path: zh/showcase/others/xingwang/
+          industry: 其他
+          title: 深圳星网信通科技股份有限公司
+
+  - name: 郑州
+    img: ./images/city/zhengzhou.jpg
+    data:
+      title: 郑州用户组
+      organizational: 超聚变数字技术股份有限公司
+      organizer:
+        - name: 苏伟锋
+          position: 超聚变数字技术股份有限公司
+          email: suweifeng@xfusion.com
+          avatar: ./images/zhenzhou/suweifeng.png
+          avatarDark: ./images/zhenzhou/suweifeng-dark.png
+      ambassador:
+        - name: 吴淑跃
+          position: N/A
+          technology: [嵌入式]
+          avatar: ./images/zhenzhou/wushuyue.png
+          avatarDark: ./images/zhenzhou/wushuyue-dark.png
+      news:
+        - summary: 活动围绕"能力全面升级AI赋能产业"，汇聚产学研各领域专家与创新力量，分享与探讨openEuler社区在AI领域的能力升级与实践案例。
+          banner: img/banners/1204-zz.png
+          title: 能力全面升级，AI赋能产业｜openEuler Meetup 郑州站成功举办
+          path: zh/news/openEuler/20241204-zz/20241204-zz
+        - summary: 10月27日，openEuler社区与超聚变联合举办郑州用户组线下Meetup。
+          banner: img/banners/20231102-zz.png
+          title: openEuler郑州用户组成立！openEuler与超聚变携手建设河南区域用户生态
+          path: zh/news/20231103-zhengzhou/20231103-zhengzhou
+      showcase: []

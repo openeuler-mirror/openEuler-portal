@@ -1,0 +1,142 @@
+# SIG Role Description page data
+#
+# community_member: Community roles section (top of page, 3 role cards + 2 guide cards)
+# contributor: Contributor section
+# committer: Committer section
+# maintainer: Maintainer section
+
+# ============ Community Roles ============
+community_member:
+  title: Community Roles
+  subtitle: In the openEuler community, most roles operate within the scope of Special Interest Groups (SIGs). While maintainers and committers have identical permissions on AtomGit, they differ primarily in their SIG governance responsibilities, as outlined below.
+  view_detail: Learn More
+  # types: 3 role cards (Contributor / Committer / Maintainer)
+  types:
+    - bg: ./images/role-desc-contributor.png
+      bg_mb: ./images/role-desc-contributor.png
+      name: Contributor
+      responsibilitiy: 'Responsibilities: Key contributors to SIGs and projects, serving as primary developers and issue resolvers for code repositories'
+      href: contributor
+    - bg: ./images/role-desc-committer.png
+      bg_mb: ./images/role-desc-committer.png
+      name: Committer
+      responsibilitiy: 'Responsibilities: Stewards of designated SIG repositories, acting as primary custodians who review contributions from other members'
+      requirement: 'Requirements: Active SIG contributors with extensive experience and willingness to dedicate time to review activities'
+      href: committer
+    - bg: ./images/role-desc-maintainer.png
+      bg_mb: ./images/role-desc-maintainer.png
+      name: Maintainer
+      responsibilitiy: 'Responsibilities: SIG leaders, coordinators, and strategic planners responsible for guiding SIG development and evolution, potentially serving as project owners'
+      requirement: 'Requirements: Seasoned professionals with strong sense of responsibility, exceptional technical expertise, and proven management skills'
+      href: maintainer
+  # cards: 2 guide cards (New Contributor / Existing Community Member)
+  cards:
+    - icon: ./images/icon-contributor.svg?raw
+      name: New Contributor
+      desc: 'Welcome to join the community. Start contributing by referring to: <a href="https://atomgit.com/openeuler/community/blob/master/zh/contributors/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">contribution guidience</a>'
+    - icon: ./images/icon-had-contributor.svg?raw
+      name: Existing Community Member
+      desc: 'Existing community members must adhere to the <a href="https://atomgit.com/openeuler/community/blob/master/code-of-conduct_en.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler Community Code of Conduct</a> and <a href="https://atomgit.com/openeuler/community/blob/master/zh/technical-committee/governance/openEuler%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%A1%8C%E4%B8%BA%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler Community Code of Conduct for Development</a>, demonstrate familiarity with SIG structures, roles, policies, software tools, and conventions, along with relevant technical and/or documentation skills. Refer to the following content for detailed expectations, responsibilities, and requirements for community roles.'
+
+# ============ Contributor ============
+contributor:
+  id: contributor
+  title: Contributor
+  subtitle:
+    - "Contributors are continuously active members within the openEuler community who engage with openEuler through various means including code contributions, documentation creation, project development, community maintenance, issue resolution, and participation in meetings and events, thereby driving the community's ongoing growth."
+  card_point_bg: ./images/contributor-point.png
+  cards:
+    - bg_light: ./images/contributor-light.png
+      bg_dark: ./images/contributor-dark.png
+      bg_mb_light: ./images/contributor-mb-light.png
+      bg_mb_dark: ./images/contributor-mb-dark.png
+      title: Requirement
+      desc: ''
+      points:
+        - Registered member on AtomGit
+        - 'Contribute to SIG or community in many ways, including but not limited to: Submitting or reviewing PR(Pull Request) on AtomGit; Documenting or commenting issues on AtomGit; Participating in SIG or community discussions.'
+        - 'Read <a href="https://atomgit.com/openeuler/community/blob/master/zh/contributors/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">Contribution Guideline</a>'
+        - Join one or more SIGs
+    - bg_light: ./images/contributor-light.png
+      bg_dark: ./images/contributor-dark.png
+      bg_mb_light: ./images/contributor-mb-light.png
+      bg_mb_dark: ./images/contributor-mb-dark.png
+      title: Responsibility and Powers
+      desc: ''
+      notice: "Note: Contributors should actively take part in code review and if they'd like to help more, strive to be a Committer of SIG."
+      points:
+        - Respond to assigned issues and PR(Pull Request)
+        - 'Contributed code should satisfy the criteria described below: Well tested; Passing the test correctly and completely; Resolving subsequent errors or problems.'
+        - "Agree PR by executing '/ lgtm'"
+        - 'Assign issue or PR, ask members to comment by execting/assign @username'
+        - 'Run PR test automatically. /ok-to-test is not necessary'
+        - 'Operate the PR with needs-ok-to-test label by execting /ok-to-test and close PR by execting /close.'
+
+# ============ Committer ============
+committer:
+  id: committer
+  title: Committer
+  subtitle:
+    - Reviewers are core contributors who possess code merge privileges and serve as stewards of code repositories, ensuring code quality while bearing significant responsibility for project advancement.
+    - 'Reviewers are specified in the "Committer" entries in the sig-info.yaml file in SIG repositories.'
+  card_point_bg: ./images/committer-point.png
+  cards:
+    - bg_light: ./images/committer-light1.png
+      bg_dark: ./images/committer-dark1.png
+      bg_mb_light: ./images/committer-mb-light1.png
+      bg_mb_dark: ./images/committer-mb-dark1.png
+      title: Requirement
+      desc: ''
+      points:
+        - Have worked in openEuler for At least 3 months as contributors
+        - Participated in at least 6 PR reviews as the main reviewer
+        - Review or merge at least 30 PR into the code repo
+        - Being Familiar with code repo
+        - Can be self-nominated or nominated by the committers or maintainer of the SIG
+    - bg_light: ./images/committer-light2.png
+      bg_dark: ./images/committer-dark2.png
+      bg_mb_light: ./images/committer-mb-light2.png
+      bg_mb_dark: ./images/committer-mb-dark2.png
+      title: Responsibility and Privilege
+      desc: ''
+      points:
+        - 'Review PR：Review the PR submitted by contributor. The review can refer to community coding suggestions and <a href="https://atomgit.com/openeuler/security-committee/blob/master/guide/SecureCoding_en.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler Secure Coding Guide</a>.'
+        - 'Distribute and deal with problems:Please refer to <a href="https://atomgit.com/openeuler/community/blob/master/en/contributors/issue-submit.md" target="_blank" rel="noopener noreferrer" class="underline-link">Issue Submission and Handling Guide</a>.'
+        - "Tracking dependency issues：In the development branch, software package's dependencies in the SIG may be broken due to the software package updates in other SIG. At this time, the Committer will receive an alert. Then, the committer should try to rebuild the software package. Because dependency problem may prevent users from updating the system, the build team will also participates in rebuilding packages that have dependency issues, but the Maintainer should not rely on these works."
+        - 'Notify SIG that may be affected due to interface changes：Because other SIGs or projects rely on software package of this SIG, changes to the package interface may affect them. Maintainer should review the dependency impact caused by decision changes. Then Maintainer should announce and send alert emails of API or ABI changes. Those work should be completed at least one week before the change occurs, and all SIGs that may be affected should be notified. For detailed informationes please refer to <a href="https://www.openeuler.org/en/sig/role-description/" target="_blank" rel="noopener noreferrer" class="underline-link">API Change Notification Process</a>.'
+        - 'Update and maintain package version：Follow the startegy of <a href="https://www.openeuler.org/en/sig/role-description/" target="_blank" rel="noopener noreferrer" class="underline-link">Software Package Update Quality Control Policies</a> and complete the package update.'
+        - 'Collaborate with upstream community, including: Push all changes to upstream community; Participate in upstream community mailing list; Get the account of the Bug Tracker of the upstream community, and track the important bugs of the upstream community; Push serious errors to upstream community for help For further information,'
+        - 'Collaborate with test team including: When you submit the software packages, the information how to debug and classify the packages should be provided to QA for problem classification; Provide basic functional test cases for regression testing; When you update the software package, the test cases related to fixed problems in the update package should be provided to QA'
+
+# ============ Maintainer ============
+maintainer:
+  id: maintainer
+  title: Maintainer
+  subtitle:
+    - Maintainers serve as managers, leaders, and strategic planners of SIGs, spearheading the review, updates, and fixes of code to ensure stability and compatibility, making them pivotal figures in the project ecosystem. Maintainers hold all the responsibilities and authorities that reviewers possess. Additionally, maintainers are responsible for technical roadmap planning and both internal and external coordination efforts for their SIGs.
+    - 'Maintainers are specified in the "Maintainer" entries in the sig-info.yaml file in SIG repositories.'
+  card_point_bg: ./images/maintainer-point.png
+  cards:
+    - bg_light: ./images/maintainer-light.png
+      bg_dark: ./images/maintainer-dark.png
+      bg_mb_light: ./images/maintainer-mb-light1.png
+      bg_mb_dark: ./images/maintainer-mb-dark1.png
+      title: Requirement
+      desc: ''
+      points:
+        - At least 3 months as committer
+        - Participated in at least 12 PR reviews as the main reviewer
+        - Review or merge at least 30 basic PR into the code repo
+        - Being familiar with code repo
+        - Could be self-nominated or nominated by sub-project Maintainer, and there is no objection from other sub-project Maintainers.
+    - bg_light: ./images/maintainer-light.png
+      bg_dark: ./images/maintainer-dark.png
+      bg_mb_light: ./images/maintainer-mb-light2.png
+      bg_mb_dark: ./images/maintainer-mb-dark2.png
+      title: Responsibility and Powers
+      desc: ''
+      points:
+        - 'Work out technical roadmap for SIG project：Including planning the SIG technical direction, roadmap, solution of software architecture evolution'
+        - 'Prepare release plan for SIG project: Make key requirements and release plans for project;Participate in community PM activities and coordinate SIG initiatives to match community release milestone schedules'
+        - 'Participate in community coordination activities：As a representative of SIG, Maintainer should attend the meetings and activites organized by Technical committee or the Community Council'
+        - 'Organize SIG meetings：Regularly organize SIG meetings and make decisions on contentious issues within SIG'

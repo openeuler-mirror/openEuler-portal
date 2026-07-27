@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import honorContent from '#content/community/honor';
 import { ref, watch, computed } from 'vue';
 import { OTab, OTabPane, ORow, OCol, OCard, OLink, OIcon, OLayer, OFigure, OScroller, ODivider, isClient } from '@opensig/opendesign';
 import { useRouter } from 'vitepress';
@@ -6,27 +7,14 @@ import { useRouter } from 'vitepress';
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
-import banner from '~@/assets/category/honor/honor-banner.jpg';
-
-import newCardBg from '~@/assets/category/honor/new-card-bg.jpg';
-import newCardBgDark from '~@/assets/category/honor/new-card-bg-dark.png';
-import personalCardBg from '~@/assets/category/honor/personal-card-bg.png';
-import personalCardBgDark from '~@/assets/category/honor/personal-card-bg-dark.png';
-
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 import IconOutLink from '~icons/yuanrong/icon-outlink.svg';
-
-import { year2021 } from '~@/data/honor/2021';
-import { year2022 } from '~@/data/honor/2022';
-import { year2023 } from '~@/data/honor/2023';
-import { year2024 } from '~@/data/honor/2024';
-import { year2025 } from '~@/data/honor/2025';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
 
-const { locale, t } = useLocale();
+const { locale } = useLocale();
 const { lePadV, isPhone, lePad, leLaptop } = useScreen();
 const router = useRouter();
 const commonStore = useCommon();
@@ -35,30 +23,16 @@ const isDark = computed(() => {
   return commonStore.theme === 'dark';
 });
 
-const activeTab = ref('2021');
+const honorData = computed(() =>
+  Object.entries(honorContent.zh.years).map(([year, data]) => ({
+    label: year,
+    data,
+  }))
+);
+const ui = computed(() => honorContent.zh.ui);
+const images = computed(() => honorContent.zh.images);
 
-const honorData = [
-  {
-    label: '2021',
-    data: year2021,
-  },
-  {
-    label: '2022',
-    data: year2022,
-  },
-  {
-    label: '2023',
-    data: year2023,
-  },
-  {
-    label: '2024',
-    data: year2024,
-  },
-  {
-    label: '2025',
-    data: year2025,
-  }
-];
+const activeTab = ref('2021');
 
 // -------------------- 证书图片弹窗--------------------
 const certificateVisible = ref(false);
@@ -115,9 +89,9 @@ watch(
 </script>
 
 <template>
-  <BannerLevel2 v-if="!lePadV" class="honor-banner" title="社区荣誉" :background-image="banner" />
+  <BannerLevel2 v-if="!lePadV" class="honor-banner" :title="ui.title" :background-image="images.banner" />
   <div v-else class="mo-banner">
-    <p class="mo-title">社区荣誉</p>
+    <p class="mo-title">{{ ui.title }}</p>
   </div>
   <div>
     <ClientOnly>
@@ -127,14 +101,14 @@ watch(
           <ContentWrapper v-if="tab.data?.news?.length" class="new-content">
             <ORow :gap="flexGap" flex-wrap="wrap" class="new-row">
               <OCol v-for="item in tab.data.news" :key="item.link" :flex="flexCol">
-                <OCard class="new-card" :style="{ backgroundImage: `url(${isDark ? newCardBgDark : newCardBg})` }">
+                <OCard class="new-card" :style="{ backgroundImage: `url(${isDark ? images.new_card_bg_dark : images.new_card_bg_light})` }">
                   <p class="card-name">{{ item.name }}</p>
                   <template #footer>
                     <OLink color="normal" :href="item.link" target="_blank">
-                      查看新闻<OIcon><IconChevronRight /></OIcon>
+                      {{ ui.view_news }}<OIcon><IconChevronRight /></OIcon>
                     </OLink>
                     <OLink v-if="item?.certificate" color="normal" @click="openCertificate(item.certificate)">
-                      查看证书<OIcon><IconChevronRight /></OIcon>
+                      {{ ui.view_certificate }}<OIcon><IconChevronRight /></OIcon>
                     </OLink>
                   </template>
                 </OCard>
@@ -164,7 +138,7 @@ watch(
                 <p v-if="per.title" class="subtitle">{{ per.title }}</p>
                 <ORow :gap="flexGap" flex-wrap="wrap" class="personal-row">
                   <OCol v-for="perCard in per.list" :key="perCard.name" :flex="flexCol">
-                    <OCard hoverable class="personal-card" :style="{ backgroundImage: `url(${isDark ? personalCardBgDark : personalCardBg})` }">
+                    <OCard hoverable class="personal-card" :style="{ backgroundImage: `url(${isDark ? images.personal_card_bg_dark : images.personal_card_bg_light})` }">
                       <p class="card-name">{{ perCard.name }}</p>
                       <p v-for="itemPost in perCard.post" :key="itemPost" class="card-detail card-post">
                         {{ itemPost }}
@@ -197,7 +171,7 @@ watch(
                     </div>
                     <template #footer>
                       <OLink color="normal" :href="t.link" target="_blank" hoverUnderline>
-                        项目地址<OIcon><IconChevronRight /></OIcon>
+                        {{ ui.project_address }}<OIcon><IconChevronRight /></OIcon>
                       </OLink>
                     </template>
                   </OCard>
@@ -225,11 +199,11 @@ watch(
                       <template #footer>
                         <ODivider v-if="isPhone" />
                         <OLink color="normal" :href="proItem.link" target="_blank" :hover-underline="!isPhone">
-                          {{proItem.link1 ? '项目地址1' : '项目地址'}}<OIcon><IconOutLink /></OIcon>
+                          {{proItem.link1 ? ui.project_address_1 : ui.project_address}}<OIcon><IconOutLink /></OIcon>
                         </OLink>
                         <ODivider v-if="isPhone && proItem.link1" />
                         <OLink v-if="proItem.link1" color="normal" :href="proItem.link1" target="_blank" hoverUnderline>
-                          项目地址2<OIcon><IconOutLink /></OIcon>
+                          {{ ui.project_address }}2<OIcon><IconOutLink /></OIcon>
                         </OLink>
                       </template>
                     </OCard>
@@ -249,7 +223,7 @@ watch(
                 <p v-if="per.title" class="subtitle">{{ per.title }}</p>
                 <ORow :gap="flexGap" flex-wrap="wrap" class="personal-row">
                   <OCol v-for="perCard in per.list" :key="perCard.name" :flex="flexCol">
-                    <OCard hoverable class="personal-card" :style="{ backgroundImage: `url(${isDark ? personalCardBgDark : personalCardBg})` }">
+                    <OCard hoverable class="personal-card" :style="{ backgroundImage: `url(${isDark ? images.personal_card_bg_dark : images.personal_card_bg_light})` }">
                       <p class="card-name">{{ perCard.name }}</p>
                       <p v-for="itemPost in perCard.post" :key="itemPost" class="card-detail card-post">
                         {{ itemPost }}
@@ -282,7 +256,7 @@ watch(
                     </div>
                     <template #footer>
                       <OLink color="normal" :href="t.link" target="_blank" hoverUnderline>
-                        项目地址<OIcon><IconChevronRight /></OIcon>
+                        {{ ui.project_address }}<OIcon><IconChevronRight /></OIcon>
                       </OLink>
                     </template>
                   </OCard>

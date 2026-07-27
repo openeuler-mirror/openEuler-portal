@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { storeToRefs } from 'pinia';
 
 import { OButton, OIcon, OLink } from '@opensig/opendesign';
@@ -9,7 +9,8 @@ import { useScreen } from '~@/composables/useScreen';
 
 import { useCommon } from '@/stores/common';
 
-import { playCommunity, vitalityConfig } from '~@/data/home/play-community';
+import homeContent from '#content/home';
+import { vitalityConfig } from '~@/data/home/play-community';
 
 import { getStatistic, getDownloadTotal } from '@/api/api-search';
 
@@ -24,13 +25,17 @@ import blue from '~@/assets/category/home/play-community/blue_light.png';
 import blueDark from '~@/assets/category/home/play-community/blue_dark.png';
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 
-import { type VitalityValueT } from '~@/@type/type-home';
+import { type VitalityValueT } from '~@/@types/type-home';
 import { useI18n } from 'vue-i18n';
 import useInViewDuration from '~@/composables/useInViewDuration';
 import { oaReport } from '@opendesign-plus/plugins/analytics';
 
-const { locale } = useLocale();
-const { isPhone, lePadV, leLaptop } = useScreen();
+const { locale, isZh } = useLocale();
+const { lePadV } = useScreen();
+
+const homeData = computed(() => (isZh.value ? homeContent.zh : homeContent.en));
+
+const playCommunity = computed(() => homeData.value.play_community);
 
 const vitalityData = ref<VitalityValueT>();
 
@@ -95,7 +100,7 @@ useInViewDuration(container, (duration) => {
       </div>
     </div>
     <div class="play-cards">
-      <div class="card-item" v-for="card in playCommunity[locale]">
+      <div class="card-item" v-for="card in playCommunity" :key="card.title">
         <div class="card-top" :style="{ backgroundImage: `url(${card.bg})` }">
           {{ card.title }}
         </div>

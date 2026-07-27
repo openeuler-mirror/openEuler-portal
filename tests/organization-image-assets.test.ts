@@ -4,7 +4,7 @@ import path from 'node:path';
 import yaml from 'js-yaml';
 
 const PROJECT_ROOT = process.cwd();
-const CONTENT_DIR = path.join(PROJECT_ROOT, '.content/organization');
+const CONTENT_DIR = path.join(PROJECT_ROOT, '.content/community/organization');
 const IMAGES_DIR = path.join(CONTENT_DIR, 'images');
 const YANGJIGUO_PATH = path.join(IMAGES_DIR, 'yangjiguo.png');
 
@@ -72,13 +72,15 @@ describe('yangjiguo.png 图片替换 — 尺寸校验', () => {
 });
 
 describe('yangjiguo.png 图片替换 — YAML 引用路径不变', () => {
-  it('committee.yaml 中杨继国的 image 字段仍为 ./images/yangjiguo.png', () => {
-    const committeeYaml = fs.readFileSync(path.join(CONTENT_DIR, 'committee.yaml'), 'utf8');
-    const committee = yaml.load(committeeYaml) as any;
+  it('committee section 中杨继国的 image 字段仍为 ./images/yangjiguo.png', () => {
+    const zhYaml = yaml.load(
+      fs.readFileSync(path.join(CONTENT_DIR, 'zh.yaml'), 'utf8'),
+    ) as any;
+    const committee = zhYaml.committee;
     const yangjiguo = committee.groups
       ?.flatMap((g: any) => g.members ?? [])
-      ?.find((m: any) => m.name === '杨继国' || m.name_en === 'Yang Jiguo');
-    expect(yangjiguo, 'committee.yaml 应有杨继国成员').toBeDefined();
+      ?.find((m: any) => m.name === '杨继国');
+    expect(yangjiguo, 'zh.yaml committee section 应有杨继国成员').toBeDefined();
     expect(yangjiguo.image, '杨继国 image 应为 ./images/yangjiguo.png').toBe('./images/yangjiguo.png');
   });
 });

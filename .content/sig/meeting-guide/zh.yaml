@@ -1,0 +1,13 @@
+# 会议指南 / Meeting Guide
+#
+# meeting_type: 会议类型卡片配置（页面「会议类型」板块）
+#   title: 卡片标题
+#   icon: 卡片图标（SVG 路径带 ?raw，由 createIcon 渲染为 inline SVG）
+#   intro: 卡片简介
+meeting_type:
+  - title: 单 SIG 组工作会议
+    icon: ./images/one-sig.svg?raw
+    intro: 单一 SIG 组内的工作会议，由该 SIG 组 Maintainer 进行组织，包括议题收集、议程安排、主持讨论、会议纪要输出等
+  - title: Working Group 工作会议
+    icon: ./images/more-sig.svg?raw
+    intro: Working Group（跨 SIG 组）的协作工作会议，如有两个及以上的SIG组计划一起组织工作会议，需要各相关 SIG 组 Maintainer 提前沟通，确定一名组织者统筹该工作会议，包括但不限于议题收集、议程安排、主持讨论、会议纪要输出等

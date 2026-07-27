@@ -1,0 +1,48 @@
+# 技术白皮书页面中文数据 / Technical White Paper page data (zh)
+#
+# 按板块名索引的顶层对象。
+
+# white_papers: 技术白皮书列表
+#   path:    PDF 下载链接
+#   summary: 白皮书摘要标题
+white_papers:
+  - path: /whitepaper/openEuler%2024.03%20LTS%20SP4%20技术白皮书.pdf
+    summary: openEuler 24.03 LTS SP4 白皮书
+  - path: /whitepaper/openEuler%2024.03%20LTS%20SP3%20技术白皮书.pdf
+    summary: openEuler 24.03 LTS SP3 白皮书
+  - path: /whitepaper/openEuler 25.09 技术白皮书.pdf
+    summary: openEuler 25.09 白皮书
+  - path: /whitepaper/openEuler%2024.03%20LTS%20SP2%20技术白皮书.pdf
+    summary: openEuler 24.03 LTS SP2 白皮书
+  - path: /whitepaper/openEuler 25.03 技术白皮书.pdf
+    summary: openEuler 25.03 白皮书
+  - path: /whitepaper/openEuler%2024.03%20LTS%20SP1%20技术白皮书.pdf
+    summary: openEuler 24.03 LTS SP1 白皮书
+  - path: /whitepaper/openEuler%2024.09%20技术白皮书.pdf
+    summary: openEuler 24.09 白皮书
+  - path: /whitepaper/openEuler%2022.03%20LTS%20SP4%20技术白皮书.pdf
+    summary: openEuler 22.03 LTS SP4 白皮书
+  - path: /whitepaper/openEuler%2024.03%20LTS%20技术白皮书.pdf
+    summary: openEuler 24.03 LTS 白皮书
+  - path: /whitepaper/openEuler%2022.03%20LTS%20SP3%20技术白皮书.pdf
+    summary: openEuler 22.03 LTS SP3 白皮书
+  - path: /whitepaper/openEuler 技术白皮书（创新项目总览）.pdf
+    summary: openEuler 技术白皮书（创新项目总览）
+  - path: /whitepaper/openEuler 23.09 技术白皮书.pdf
+    summary: openEuler 23.09 白皮书
+  - path: /whitepaper/openEuler-whitepaper-2303.pdf
+    summary: openEuler 23.03 白皮书
+  - path: /whitepaper/openEuler%2022.03%20LTS%20SP2%20技术白皮书.pdf
+    summary: openEuler 22.03 LTS SP2 白皮书
+  - path: /whitepaper/openEuler-whitepaper-2203-SP1.pdf
+    summary: openEuler 22.03 LTS1 白皮书
+  - path: /whitepaper/openEuler-whitepaper-2209.pdf
+    summary: openEuler 22.09 白皮书
+  - path: /whitepaper/openEuler-whitepaper-2203.pdf
+    summary: openEuler 22.03 LTS 白皮书
+  - path: /whitepaper/openEuler%2021.09%20技术白皮书.pdf
+    summary: openEuler 21.09 白皮书
+  - path: /whitepaper/openEuler-whitepaper-2103.pdf
+    summary: openEuler 21.03 白皮书
+  - path: /whitepaper/openEuler-whitepaper-2009.pdf
+    summary: openEuler 20.09 白皮书

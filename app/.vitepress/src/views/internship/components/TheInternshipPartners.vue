@@ -1,36 +1,17 @@
 <script setup lang="ts">
+import internshipContent from '#content/internship';
 import { useCommon } from '@/stores/common';
 import { computed } from 'vue';
-import iscasDark from '@/assets/category/internship/logo/iscas_dark.png';
-import iscasLight from '@/assets/category/internship/logo/iscas_light.png';
-import qilinDark from '@/assets/category/internship/logo/qilin_dark.png';
-import qilinLight from '@/assets/category/internship/logo/qilin_light.png';
-import xinanDark from '@/assets/category/internship/logo/xinan_dark.png';
-import xinanLight from '@/assets/category/internship/logo/xinan_light.png';
-import tongxinDark from '@/assets/category/internship/logo/tongxin_dark.png';
-import tongxinLight from '@/assets/category/internship/logo/tongxin_light.png';
-import atomgitDark from '@/assets/category/internship/logo/atomgit_dark.png';
-import atomgitLight from '@/assets/category/internship/logo/atomgit_light.png';
-import mindspore_dark from '@/assets/category/internship/logo/mindspore_dark.png';
-import mindspore_light from '@/assets/category/internship/logo/mindspore_light.png';
-import openeulerDark from '@/assets/category/internship/logo/openeuler_dark.png';
-import openeulerLight from '@/assets/category/internship/logo/openeuler_light.png';
-import opengaussDark from '@/assets/category/internship/logo/opengauss_dark.png';
-import opengaussLight from '@/assets/category/internship/logo/opengauss_light.png';
 
 const commonStore = useCommon();
 const isDark = computed(() => commonStore.theme === 'dark');
 
-const partners = computed(() => [
-  { name: 'ISCAS', logo: isDark.value ? iscasDark : iscasLight },
-  { name: 'Klinsoft', logo: isDark.value ? qilinDark : qilinLight },
-  { name: 'Kylinsec', logo: isDark.value ? tongxinDark : tongxinLight },
-  { name: 'Zhanjiang Software', logo: isDark.value ? xinanDark : xinanLight },
-  { name: 'AtomGit', logo: isDark.value ? atomgitDark : atomgitLight },
-  { name: 'MindSpore', logo: isDark.value ? mindspore_dark : mindspore_light },
-  { name: 'OpenEuler', logo: isDark.value ? openeulerDark : openeulerLight },
-  { name: 'openGauss', logo: isDark.value ? opengaussDark : opengaussLight },
-]);
+const partners = computed(() =>
+  internshipContent.zh.partners.map((p) => ({
+    name: p.name,
+    logo: isDark.value ? p.logo_dark : p.logo_light,
+  }))
+);
 </script>
 
 <template>

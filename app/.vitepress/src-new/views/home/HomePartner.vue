@@ -1,12 +1,24 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import AppSection from '~@/components/AppSection.vue';
 import HomeSwiper from './HomeSwiper.vue';
+import homeContent from '#content/home';
+import { useLocale } from '~@/composables/useLocale';
 
-import { publisher } from '~@/data/home/publisher';
+const { isZh } = useLocale();
 
-const publisher1 = Array(5).fill(publisher.slice(0, 8)).flat();
-const publisher2 = Array(8).fill(publisher.slice(8, 16)).flat();
-const publisher3 = Array(5).fill(publisher.slice(16)).flat();
+const homeData = computed(() => (isZh.value ? homeContent.zh : homeContent.en));
+
+const publisher = computed(() =>
+  homeData.value.publisher.map((item) => ({
+    ...item,
+    logo: { light: item.logo_light, dark: item.logo_dark },
+  }))
+);
+
+const publisher1 = computed(() => Array(5).fill(publisher.value.slice(0, 8)).flat());
+const publisher2 = computed(() => Array(8).fill(publisher.value.slice(8, 16)).flat());
+const publisher3 = computed(() => Array(5).fill(publisher.value.slice(16)).flat());
 </script>
 
 <template>

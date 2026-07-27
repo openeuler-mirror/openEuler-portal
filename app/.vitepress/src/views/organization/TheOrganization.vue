@@ -1,18 +1,15 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useData } from 'vitepress';
 
-import { foldI18n, type Lang } from '~@/shared/content';
+import { useLocale } from '~@/composables/useLocale';
 import { useI18n } from '@/i18n';
 import type { OrgT } from '@/@types/type-organization';
 
-import organizationRaw from '#content/organization';
+import organizationContent from '#content/community/organization';
 
 import OrganizationGuests from './OrganizationGuests.vue';
 
 import IconEmailFill from '~icons/app/icon-email-fill.svg';
-
-import IconGit from '@/assets/category/organization/icon-git.svg';
 
 // 渲染顺序是产品决策,显式列出而非按文件名排序。
 const SECTIONS = [
@@ -28,15 +25,13 @@ function deriveAnchor(titleEn: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
-const { lang } = useData();
+const { isZh } = useLocale();
 const i18n = useI18n();
 
-// anchor 在 foldI18n 之前注入,才读得到 title_en。
 const sections = computed<OrgT[]>(() =>
   SECTIONS.map((slug) => {
-    const raw = organizationRaw[slug];
-    const enriched = { ...raw, anchor: deriveAnchor(raw.title_en) };
-    return foldI18n(enriched, lang.value as Lang) as unknown as OrgT;
+    const data = isZh.value ? organizationContent.zh[slug] : organizationContent.en[slug];
+    return { ...data, anchor: deriveAnchor(data.anchor) } as OrgT;
   }),
 );
 
@@ -95,14 +90,6 @@ const notice = computed(() => i18n.value.about.ORGANIZATION_NOTICE);
           <a :href="'mailto:' + item.email" class="mail"
             ><OIcon><IconEmailFill /></OIcon
           ></a>
-          <a
-            v-if="false"
-            :href="'https://gitee.com/' + item.gitee"
-            class="gitee"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img :src="IconGit"
-          /></a>
         </p>
       </li>
     </ul>

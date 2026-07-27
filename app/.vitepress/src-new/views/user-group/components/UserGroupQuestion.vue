@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import AppSection from '~@/components/AppSection.vue';
-import { questionData } from '~@/data/user-group';
+import content from '#content/community/user-group';
 import IconHook from '~icons/user-group/hook.svg';
+
+const questionData = content.zh.question;
 </script>
 
 <template>

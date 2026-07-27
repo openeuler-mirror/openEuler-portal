@@ -1,0 +1,70 @@
+# Contact Us page data (en)
+#
+# Top-level object indexed by section name. Fields use baseline names (no _zh/_en suffix).
+# Image paths start with ./ and are rewritten to imports by vite-plugin-content-yaml.
+
+# contact_data: Community contact cards
+#   title: Card title
+#   email: Contact email
+#   icon: Card icon (SVG, ?raw suffix returns raw content)
+contact_data:
+  - title: Membership
+    email: gaofei@openatom.org
+    icon: ./images/icon-contact1.svg?raw
+  - title: Events
+    email: events@openeuler.sh
+    icon: ./images/icon-contact2.svg?raw
+  - title: Media/PR
+    email: marketing@openeuler.org
+    icon: ./images/icon-contact3.svg?raw
+  - title: Community Discussions
+    email: dev@openeuler.org
+    icon: ./images/icon-contact4.svg?raw
+
+# footer_codes: QR codes (empty in en, only shown on zh page)
+footer_codes: []
+
+# follow_links: Social media follow links
+#   icon/icon_dark/icon_primary: Light/dark/primary theme icons
+#   href: Link URL
+#   label: Display name
+follow_links:
+  - icon: ./images/x_light.png
+    icon_dark: ./images/x_dark.png
+    icon_primary: ./images/x_primary.png
+    href: https://x.com/openeuler
+    label: X
+  - icon: ./images/linkedin_light.png
+    icon_dark: ./images/linkedin_dark.png
+    icon_primary: ./images/linkedin_primary.png
+    href: https://www.linkedin.com/company/openeuler
+    label: LinkedIn
+  - icon: ./images/youtube_light.png
+    icon_dark: ./images/youtube_dark.png
+    icon_primary: ./images/youtube_primary.png
+    href: https://www.youtube.com/@openeuler
+    label: YouTube
+  - icon: ./images/bilibili_light.png
+    icon_dark: ./images/bilibili_dark.png
+    icon_primary: ./images/bilibili_primary.png
+    href: https://space.bilibili.com/527064077
+    label: Bilibili
+
+# handy_materials: Resource recommendations
+#   title: Card title
+#   desc: Description
+#   href: Link URL
+#   icon: Card icon (SVG, ?raw suffix returns raw content)
+handy_materials:
+  - title: Community Documentation
+    desc: Explore openEuler's release notes, installation guide, administrator guide, project usage guides, and more.
+    href: https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/Installation.html
+    icon: ./images/icon-contact5.svg?raw
+  - title: Get openEuler OS
+    desc: Get openEuler for public clouds, containers, and Windows.
+    href: https://www.openeuler.org/en/download/#get-openeuler
+    icon: ./images/icon-contact6.svg?raw
+  - title: Join Community
+    desc: Submit issues, pull requests, improve docs, or join discussions. Every contribution counts!
+    href: https://www.openeuler.org/en/community/contribution/
+    icon: ./images/icon-contact7.svg?raw

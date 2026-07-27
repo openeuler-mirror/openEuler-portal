@@ -1,7 +1,8 @@
 // 把 `.content/**/*.yaml` 接入 Vite 资源管线,支持单文件与目录粒度 import。
 //
-// - 单文件:`*.yaml` → JS module,值中形如 `./images/x.png` 的字符串改写为 `import`,
-//   让 Vite 输出带 hash 的真实资源 URL。
+// - 单文件:`*.yaml` → JS module,值中相对路径 + 图片扩展名即视为资源,改写为 `import`。
+//   默认输出带 hash 的资源 URL；若路径带 `?raw` 后缀（如 `./images/x.svg?raw`）,
+//   则得到文件内容字符串（inline SVG 等,支持 currentColor/暗黑切换）。
 // - 目录:`#content/<domain>` → 该目录下所有 yaml 按 slug 索引的虚拟模块。
 //
 // 用 `load` 而非 `transform`:VitePress 内置插件会把 `.yaml` 当 raw text 兜底,
@@ -12,7 +13,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import yaml from 'js-yaml';
 
-const ASSET_EXT = /\.(png|jpe?g|webp|svg|gif)$/i;
+const ASSET_EXT = /\.(png|jpe?g|webp|svg|gif)(\?.*)?$/i;
 const SENTINEL = '__VITE_CONTENT_ASSET_';
 const VIRTUAL_PREFIX = '\0content-dir:';
 const CONTENT_ALIAS = '#content';
@@ -78,7 +79,8 @@ export default function contentYamlPlugin(): Plugin {
       const data = yaml.load(code);
       const imports: string[] = [];
 
-      // 字段名不限,只看值:相对路径 + 图片扩展名即视为资源。
+      // 字段名不限,只看值:相对路径 + 图片扩展名即视为资源,原样改写为 import。
+      // 路径带 `?raw` 后缀时 Vite 返回文件内容字符串,否则返回带 hash 的资源 URL。
       const replaced = walk(data, (val) => {
         if (typeof val !== 'string') return val;
         if (!val.startsWith('./') && !val.startsWith('../') && !val.startsWith('~@/')) return val;

@@ -99,12 +99,12 @@
 ```text
 openEuler-portal/
 ├── .content/                                # 运营数据统一入口（与代码仓库同源）
-│   ├── organization/                        # Domain: 组织名册
-│   │   ├── README.md                        # 运营操作手册
-│   │   ├── advisory.yaml                    # Section slug = 文件名
-│   │   ├── committee.yaml
-│   │   ├── technical.yaml
-│   │   └── images/                          # Domain 级图片资源池
+│   ├── community/                           # Domain: /zh/community/* 页面
+│   │   └── organization/                    # 组织架构页(zh/en 拆分)
+│   │       ├── README.md                    # 运营操作手册
+│   │       ├── zh.yaml                      # 中文数据(按 section slug 索引)
+│   │       ├── en.yaml                      # 英文数据(按 section slug 索引)
+│   │       └── images/                      # Domain 级图片资源池
 │   ├── faq-migration/                       # Domain: 迁移 FAQ
 │   ├── nav-about-us/                        # Domain: 导航 TOC
 │   ├── events-salon/                        # Domain: 活动
@@ -270,11 +270,12 @@ export default { title: '技术委员会', members: [{ image: __a0 }, { image: _
 3. 组装 `export default { <slug>: __d0, ... }` 聚合模块
 4. Vite module graph 天然衔接：每个子 import 回溯触发单文件插件分支
 
-视图侧获取以 slug 为 key 的聚合对象，图片字段已是 hashed URL：
+视图侧获取以 locale 为顶层索引、slug 为二级索引的聚合对象，图片字段已是 hashed URL：
 
 ```ts
-import organizationRaw from '#content/organization';
-// organizationRaw.advisory.members[0].image === '/assets/avatar.<hash>.png'
+import organizationContent from '#content/community/organization';
+// organizationContent.zh.advisory.members[0].image === '/assets/avatar.<hash>.png'
+// organizationContent.en.advisory.members[0].image === '/assets/avatar.<hash>.png' (zh/en 共用同一张图)
 ```
 
 **零配置发现**: `configResolved` 时从 `resolve.alias` 读取 `#content` 的 replacement，无需手动传递 contentRoot 参数。
@@ -311,25 +312,27 @@ foldI18n({ name: '张三', name_en: 'Zhang San' }, 'en');
 ```vue
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useData } from 'vitepress';
-import { foldI18n, type Lang } from '~@/shared/content';
-import type { OrgT } from '~@/@types/type-organization';
+import { useLocale } from '~@/composables/useLocale';
+import type { OrgT } from '@/@types/type-organization';
 
-import organizationRaw from '#content/organization';
+import organizationContent from '#content/community/organization';
 
 const SECTIONS = ['advisory', 'committee', 'technical'] as const;
 
-function deriveAnchor(titleEn: string): string {
-  return titleEn.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+// 把任意字符串规范成 GFM/URL slug:小写 + 非字母数字替换为连字符 + 去首尾连字符。
+// anchor 显式写在 yaml 里,但运营可能误写大写/空格/特殊字符,这里兜底规范化。
+function deriveAnchor(raw: string): string {
+  return raw.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 }
 
-const { lang } = useData();
+const { isZh } = useLocale();
 
+// 数据已按 locale 拆分到 zh.yaml/en.yaml,无需 foldI18n。
+// anchor 显式写在 yaml 里(zh/en 共用同一英文 anchor 值),经 deriveAnchor 兜底规范化后使用。
 const sections = computed<OrgT[]>(() =>
   SECTIONS.map((slug) => {
-    const raw = organizationRaw[slug];
-    const enriched = { ...raw, anchor: deriveAnchor(raw.title_en) };
-    return foldI18n(enriched, lang.value as Lang) as unknown as OrgT;
+    const data = isZh.value ? organizationContent.zh[slug] : organizationContent.en[slug];
+    return { ...data, anchor: deriveAnchor(data.anchor) } as OrgT;
   }),
 );
 </script>
@@ -337,8 +340,10 @@ const sections = computed<OrgT[]>(() =>
 
 **设计原则**:
 - 排序 = 产品决策，显式写在视图代码中，可 review 可追溯
-- 数据加工（排序 / anchor 派生 / i18n 折叠）全部明面化，无 loader 黑盒
-- 单文件 import 也受支持：`import advisory from '#content/organization/advisory.yaml'`，与目录级 import 获取同一 module 对象（Vite module graph 保证 referential equality）
+- 数据加工（排序）全部明面化，无 loader 黑盒
+- zh/en 双语拆分到独立 yaml 文件，运营改完中文 yaml 直接提交即可，无需理解 foldI18n
+- anchor 显式写在 yaml 里（zh/en 共用同一英文 anchor 值），组件用 `deriveAnchor` 兜底规范化（避免运营误写大写/空格/特殊字符造成锚点失效），测试校验 yaml anchor 已是规范形式
+- 图片路径在 zh/en 两个 yaml 中指向同一文件（共用 `images/` 目录），插件保证 URL 一致
 
 ### 6.2 data/ 中间层淘汰策略
 
