@@ -10,7 +10,7 @@ export default {
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP4/',
         DESC: '2026年6月30日，发布openEuler 24.03 LTS SP4，基于6.6内核的24.03-LTS版本增强扩展版本（参见版本生命周期），面向服务器、云、AI场景，持续提供更多新特性和功能扩展，包括内核优化、灵衢超节点可靠性&易用性、NPU算力切分、推理服务快恢、E2B沙箱、智能诊断&调优&运维、编译器、机密虚机等，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
         RELEASE_DESC_URL:
-          `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP4/server/releasenotes/releasenotes/introduction.html`,
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP4/server/releasenotes/introduction.html`,
         INSTALL_GUIDENCE_URL:
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP4/server/installation_upgrade/installation/installation_preparations.html`,
         SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
@@ -492,7 +492,7 @@ export default {
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP4/',
         DESC: 'openEuler 24.03 LTS SP4, built on kernel 6.6, is an enhanced extension tailored for server, cloud, and AI scenarios. This release introduces new features and enhancements, including kernel optimizations, UnifiedBus SuperPoD reliability & usability, NPU slicing, rapid recovery for inference services, E2B sandboxes, intelligent O&M (diagnosis & tuning), compilers, and confidential virtual machines (CVMs). It delivers a brand-new experience to developers and users, extending its reach to broader industries.',
         RELEASE_DESC_URL:
-          `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP4/server/releasenotes/releasenotes/introduction.html`,
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP4/server/releasenotes/introduction.html`,
         INSTALL_GUIDENCE_URL:
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP4/server/installation_upgrade/installation/installation_preparations.html`,
         SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
