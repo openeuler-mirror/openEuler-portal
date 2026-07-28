@@ -89,7 +89,7 @@ export default {
           isBlank: true,
         },
         {
-          label: 'openEuler 24.03 LTS SP3 Installation Guide',
+          label: 'openEuler 24.03 LTS SP4 Installation Guide',
           href: `${
             import.meta.env.VITE_SERVICE_DOCS_URL
           }/en/docs/24.03_LTS_SP4/server/installation_upgrade/installation/installation_preparations.html`,
@@ -231,7 +231,7 @@ export default {
               description:
                 'Learn the community essentials in 10 minutes, build and grow quickly.',
               tag: TAG_TYPE.HOT,
-              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP3/server/quickstart/quickstart/quick_start.html`,
+              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP4/server/quickstart/quick_start.html`,
             },
             {
               label: 'Installation Guide',
