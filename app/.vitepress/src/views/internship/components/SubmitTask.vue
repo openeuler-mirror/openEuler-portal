@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import imgLight from '@/assets/category/internship/submit-task-light.png';
 import imgDark from '@/assets/category/internship/submit-task-dark.png';
+import { OLink } from '@opensig/opendesign';
+import { internshipTaskLinks } from './internshipTask';
 import { useScreen } from '~@/composables/useScreen';
 import { useI18n } from '@/i18n';
 import { computed } from 'vue';
@@ -36,11 +38,19 @@ const flowImg = computed(() => (isDark.value ? imgDark : imgLight));
       <span>{{ i18n.internship.reviewPr3 }}</span>
     </div>
     <div class="attention">
-      <span class="attention-text">{{ i18n.internship.attention }}</span>
+      <span class="attention-text">{{ i18n.internship.attention1 }}</span>
       <div>
-        <span>{{ i18n.internship.noPoints1 }}</span>
-        <span class="code">{{ i18n.internship.noPoints2 }}</span>
-        <span>{{ i18n.internship.noPoints3 }}</span>
+        <span>{{ i18n.internship.attention1Desc1 }}</span>
+        <OLink class="contact" :href="internshipTaskLinks.aiCodingAssistants" target="_blank">{{ i18n.internship.attention1Link }}</OLink>
+        <span>{{ i18n.internship.attention1Desc2 }}</span>
+      </div>
+    </div>
+    <div class="attention">
+      <span class="attention-text">{{ i18n.internship.attention2 }}</span>
+      <div>
+        <span>{{ i18n.internship.attention2Desc1 }}</span>
+        <span class="code">{{ i18n.internship.attention2Code }}</span>
+        <span>{{ i18n.internship.attention2Desc2 }}</span>
       </div>
     </div>
     <div class="flow-img">
@@ -91,10 +101,22 @@ const flowImg = computed(() => (isDark.value ? imgDark : imgLight));
 
   .attention-text {
     font-weight: 600;
-    margin-right: 8px;
     white-space: nowrap;
     color: var(--o-color-info1);
   }
+
+  .contact {
+    color: var(--o-color-primary1);
+    cursor: pointer;
+    &:hover {
+      color: var(--o-color-primary2);
+      text-decoration: underline;
+    }
+  }
+}
+
+.attention + .attention {
+  margin-top: 8px;
 }
 
 .flow-img {

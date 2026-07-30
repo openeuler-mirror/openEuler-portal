@@ -116,4 +116,12 @@ export default {
   helpEmailDesc: '扫码添加openEuler小助手微信，回复“开源实习进群”加入交流群，备注高校及年级，更多问题群内咨询。',
   helpContactEmail: '联系邮箱：',
   moreQuestion: '更多问题，请添加 openEuler 小助手进行咨询',
+  attention1: '注意1：',
+  attention1Desc1: '使用 AI 辅助生成的内容提交 PR 时，须严格遵守',
+  attention1Link: '社区AI贡献策略',
+  attention1Desc2: '，按规范披露 AI 工具平台、模型版本及 Prompt 摘要。',
+  attention2: '注意2：',
+  attention2Desc1: '导师有不通过任务成果的权利，如学生提交的PR离实际所需太远，或未按时提交PR，可选择输入命令',
+  attention2Code: '/intern-fail',
+  attention2Desc2: '，不通过该任务，则无积分。',
 };
