@@ -104,6 +104,9 @@ importers:
       '@modyfi/vite-plugin-yaml':
         specifier: ^1.1.1
         version: 1.1.1(vite@7.3.6(@types/node@18.19.130)(sass@1.101.0)(terser@5.49.0))
+      '@opendesign-plus/vite-plugins':
+        specifier: 0.0.1-rc.1
+        version: 0.0.1-rc.1(js-yaml@4.3.0)(vite@7.3.6(@types/node@18.19.130)(sass@1.101.0)(terser@5.49.0))
       '@opensig/opensig-scripts':
         specifier: ^0.0.16
         version: 0.0.16(@types/node@18.19.130)(typescript@5.9.3)(vite@7.3.6(@types/node@18.19.130)(sass@1.101.0)(terser@5.49.0))
@@ -1058,6 +1061,12 @@ packages:
 
   '@opendesign-plus/styles@0.0.1-rc.2':
     resolution: {integrity: sha512-mgjqcsMUDJjo+kMSjumll9MM+r5rOkFZu1W00FwIW2tu3GNbdo3VZTdb3Ax596rnT9e1+7fr7ksxmBdcAq254A==}
+
+  '@opendesign-plus/vite-plugins@0.0.1-rc.1':
+    resolution: {integrity: sha512-CZ30JDFB1hOJ1s5dpFA5OzduZ5xZdG+BDyZwWtH555YvGKnQwzxhQrnwR2xZ9IdSbvT3d/Orbb+GcRwoeunJow==}
+    peerDependencies:
+      js-yaml: 4.3.0
+      vite: 6.4.3
 
   '@opensig/open-analytics@0.0.8':
     resolution: {integrity: sha512-29aX1TKdn98zNYCGnIXHy90ZZJfgTM1ArChTtqzLmTSJOikch8gkmkaFPseDdvsl0wGCNoFtdp8oehstK5hVYg==}
@@ -5278,6 +5287,11 @@ snapshots:
       p-limit: 7.3.0
 
   '@opendesign-plus/styles@0.0.1-rc.2': {}
+
+  '@opendesign-plus/vite-plugins@0.0.1-rc.1(js-yaml@4.3.0)(vite@7.3.6(@types/node@18.19.130)(sass@1.101.0)(terser@5.49.0))':
+    dependencies:
+      js-yaml: 4.3.0
+      vite: 7.3.6(@types/node@18.19.130)(sass@1.101.0)(terser@5.49.0)
 
   '@opensig/open-analytics@0.0.8':
     dependencies:

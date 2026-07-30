@@ -2,7 +2,7 @@
 //
 // 数据来源:`.content/organization/*.yaml`。
 // 字段约定见 `app/.vitepress/src-new/shared/content.ts`(i18n 折叠规则)和
-// `app/.vitepress/plugins/vite-plugin-content-yaml.ts`(image 字段处理)。
+// `@opendesign-plus/vite-plugins` 的 OPlusYamlContentVitePlugin(image 字段处理)。
 
 // 原始 YAML 形状(applyLang 之前的字面内容,带 `_en` 兄弟字段)。
 // 在 loader 边界用,因为还要读 `title_en` 派生 anchor。

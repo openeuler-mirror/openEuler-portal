@@ -86,14 +86,14 @@ openEuler-portal/
 
 ## 3. Skills 与 Commands
 
-### Skills 来源（两类共存，共 9 个）
+### Skills 来源（两类共存，共 10 个）
 
 | 类别 | 内容 | 来源 | 入 git | 同步方式 |
 |------|------|------|--------|----------|
 | `opendesign-*`（4 个） | components / design / scripts / tokens | `atomgit.com/openeuler/opendesign-skills` | ❌ | `pnpm skills:sync` |
-| 项目自有（5 个） | meta-tags-optimizer / schema-markup-generator / sitemap-meta-tags-batch-generator / sitemap-schema-batch-generator / vue-best-practices | 项目维护 | ✅ | 直接维护 |
+| 项目自有（6 个） | meta-tags-optimizer / schema-markup-generator / sitemap-meta-tags-batch-generator / sitemap-schema-batch-generator / vue-best-practices / frontmatter-data-extractor | 项目维护 | ✅ | 直接维护 |
 
-> opendesign 4 个被 [.gitignore](./.gitignore) 排除（`.claude/skills/*/` + 5 个项目自有的 `!` 例外）。
+> opendesign 4 个被 [.gitignore](./.gitignore) 排除（`.claude/skills/*/` + 6 个项目自有的 `!` 例外）。
 > 新开发者 `git clone` 后**必须**先 `pnpm install`，postinstall 自动恢复 4 个 opendesign skill。
 >
 > meta-tags-optimizer / schema-markup-generator 原本来自上游 `aaron-he-zhu/seo-geo-claude-skills`，是 sitemap-* 工作流的依赖；为避免引入 `skills` CLI 依赖和无关的 18 个 SEO 工具，已内联入项目自有维护。其余 SEO 工具（关键词调研 / 竞品 / 外链等）不在本项目使用场景，不再纳入。
@@ -137,6 +137,7 @@ openEuler-portal/
 | Pixso 设计稿生产 | `opendesign-design` |
 | TDK 批量优化 | `sitemap-meta-tags-batch-generator` |
 | JSON-LD 批量生成 | `sitemap-schema-batch-generator` |
+| 硬编码数据外置到 md frontmatter | `frontmatter-data-extractor` |
 
 ---
 
