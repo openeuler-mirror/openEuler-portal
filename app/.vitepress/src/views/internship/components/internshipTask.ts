@@ -7,4 +7,5 @@ export const internshipTaskLinks = {
   internshipEmailTemp: '/category/internship/实习任务认领邮件模板.txt',
   applyInternshipTemp: '/category/internship/实习申请材料模板.rar',
   internshipCertTemplate: '/category/internship/实习证明申请材料和邮件模板.rar',
+  aiCodingAssistants: 'https://www.openeuler.org/zh/community/ai-coding-assistants/',
 };

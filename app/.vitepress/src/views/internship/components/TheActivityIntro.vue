@@ -275,7 +275,7 @@ const isExpanded = (step: InternshipStep) => expandedSteps.value.has(step);
     height: 32px;
 
     path {
-      fill: var(--o-color-control3) !important;
+      fill: var(--o-color-info2) !important;
     }
   }
 
@@ -386,7 +386,7 @@ const isExpanded = (step: InternshipStep) => expandedSteps.value.has(step);
       height: 20px;
       margin-right: 8px;
       path {
-        fill: var(--o-color-control3) !important;
+        fill: var(--o-color-info2) !important;
       }
     }
   }
