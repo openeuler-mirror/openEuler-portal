@@ -40,6 +40,7 @@ const { isEn } = useLocale();
         <OLink
           :href="isEn ? (item.href_en ? item.href_en : item.href) : item.href"
           target="_blank"
+          :hover-underline="false"
           v-analytics.bubble="{
             target: isEn ? item.href_en ?? item.href : item.href,
           }"

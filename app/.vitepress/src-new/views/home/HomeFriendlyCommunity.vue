@@ -21,6 +21,7 @@ const { isEn } = useLocale();
         <OLink
           :href="community.url"
           target="_blank"
+          :hover-underline="false"
           v-analytics.bubble="{
             target: community.url,
             level1: $t('home.friendlyCommunity')

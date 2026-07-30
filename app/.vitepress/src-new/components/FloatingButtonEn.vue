@@ -496,6 +496,7 @@ onUnmounted(() => {
               v-for="item in floatData"
               :key="item.link"
               :href="item.link"
+              :hover-underline="false"
               target="_blank"
               class="popup-item"
             >

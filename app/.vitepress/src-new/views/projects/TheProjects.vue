@@ -304,6 +304,9 @@ const gap = computed(() => {
   :deep(.o-link) {
     width: 100%;
     padding: 9px 0;
+    .o-link-main {
+      width: 100%;
+    }
     .o-link-label {
       width: 100%;
       justify-content: space-between;

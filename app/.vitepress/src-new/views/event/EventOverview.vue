@@ -105,22 +105,29 @@ const btnSize = computed(() => {
         </OButton>
       </template>
       <template #step3>
-        <div class="desc-list-content">
-          <div class="desc-list-item">
-            <div class="desc-list-item-title">
-              <OIcon><IconDone /></OIcon>
-              <span>{{ applySep3.downTitle }}</span>
+        <div class="step3">
+          <div v-for="(item, i) in applySep3.listData" :key="i" class="item-text">
+            <OIcon><IconDone /></OIcon>
+            <div v-if="item.href" class="text-link">
+              <span>{{ item.title }}</span>
               <OLink
-                :href="applySep3.href"
+                :href="item.href"
                 color="primary"
                 variant="text"
                 hoverUnderline
-                download
               >
                 <OIcon><IconDownload /></OIcon
                 >{{ t('eventOverview.downloadText') }}
               </OLink>
             </div>
+            <div v-else class="text-box">
+              <p>{{ item.title }}</p>
+              <p class="tips">{{ item.desc }}</p>
+            </div>
+          </div>
+          <div class="img">
+            <img class="material2" :src="applySep3.material2" alt="" />
+            <img class="material1" :src="applySep3.material1" alt="" />
           </div>
         </div>
       </template>
@@ -154,17 +161,85 @@ const btnSize = computed(() => {
   margin-top: var(--o-gap-4);
 }
 
-.desc-list-item-title {
-  :deep(.o-link) {
+:deep(.step-3) {
+  position: relative;
+}
+.item-text {
+  display: flex;
+  align-items: flex-start;
+  color: var(--o-color-white);
+  margin-top: 8px;
+  @include tip1;
+  .o-icon {
+    margin-top: 3px;
+    @include text1;
+  }
+}
+.text-box {
+  margin-left: 16px;
+}
+.text-link {
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  :deep(.o-link-label) {
+    display: flex;
+    align-items: center;
+    .o-icon {
+      margin-top: 0;
+    }
+  }
+  .o-link {
     flex-shrink: 0;
-    --link-color: var(--o-color-white);
     --link-color-hover: var(--o-color-white);
-    .o-link-label {
-      display: flex;
-      align-items: center;
-      .o-icon {
-        margin-right: 0 !important;
-      }
+  }
+}
+.tips {
+  color: var(--o-color-white);
+}
+.material2 {
+  width: 52%;
+  position: absolute;
+  right: 24px;
+  bottom: 146px;
+  z-index: 2;
+  border-radius: var(--o-radius-xs);
+  box-shadow: var(--o-shadow-2);
+}
+.material1 {
+  position: absolute;
+  width: 72%;
+  left: 24px;
+  bottom: 24px;
+  z-index: 1;
+  border-radius: var(--o-radius-xs);
+  box-shadow: var(--o-shadow-2);
+}
+
+:deep(.o-link) {
+  flex-shrink: 0;
+  --link-color: var(--o-color-white);
+  --link-color-hover: var(--o-color-white);
+}
+
+@include respond('<=pad_v') {
+  .img {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 0 12px;
+    margin-top: 12px;
+    img {
+      width: 50%;
+      border-radius: var(--o-radius-xs);
+      border: 1px solid var(--o-color-control4);
+      position: relative;
+      right: auto;
+      bottom: auto;
+      left: auto;
+    }
+    img + img {
+      margin-left: 8px;
     }
   }
 }

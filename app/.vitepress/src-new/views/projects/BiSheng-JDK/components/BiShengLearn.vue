@@ -85,7 +85,7 @@ const gap = computed(() => {
                   v-for="doc in jdkDocLinks"
                   :key="doc.href"
                 >
-                  <OLink OLink :href="doc.href" target="_blank" class="dropdown-link">{{ t(doc.textKey) }}</OLink>
+                  <OLink OLink :href="doc.href" target="_blank" class="dropdown-link" :hover-underline="false">{{ t(doc.textKey) }}</OLink>
                 </ODropdownItem>
               </template>
             </ODropdown>
@@ -156,7 +156,7 @@ const gap = computed(() => {
     background: var(--o-color-control2-light);
   }
 }
-.dropdown-link {
+:deep(.dropdown-link) {
   padding: 8px 12px;
 }
 

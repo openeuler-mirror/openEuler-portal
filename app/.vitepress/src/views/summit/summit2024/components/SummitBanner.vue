@@ -98,6 +98,7 @@ const viewBtn = (url: string) => {
                       variant="text"
                       :href="item.url"
                       target="_blank"
+                      :hover-underline="false"
                     >
                       {{ item.text }}<OIcon><IconOutLink /></OIcon>
                     </OLink>
@@ -137,6 +138,7 @@ const viewBtn = (url: string) => {
       <OLink
         v-for="item in bannerData.list"
         :key="item.text"
+        :hover-underline="false"
         color="normal"
         variant="text"
         @click="viewBtn(item.url)"
@@ -240,16 +242,12 @@ $banner-color: var(--e-color-text1);
   --dropdown-item-padding: 0;
   --dropdown-item-radius: var(--o-radius-xs);
 }
-.o-link {
+:deep(.o-link) {
   padding: 8px 17px;
   width: 100%;
   @include text1;
-  :deep(.o-link-label) {
-    display: flex;
-    align-items: center;
-    .o-icon {
-      margin-left: 8px;
-    }
+  .o-icon {
+    margin-left: 8px;
   }
 }
 
