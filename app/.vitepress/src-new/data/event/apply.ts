@@ -1,7 +1,7 @@
 import step1Bg from '~@/assets/category/event/overview/step1-bg.png';
 import step2Bg from '~@/assets/category/event/overview/step2-bg.png';
-import step3Bg from '~@/assets/category/event/overview/step3-bg.png';
-import step3BgMobile from '~@/assets/category/event/overview/step3-bg-mobile.png';
+import material1Img from '~@/assets/category/event/overview/material1.jpg';
+import material2Img from '~@/assets/category/event/overview/material2.jpg';
 import step4Bg from '~@/assets/category/event/overview/step4-bg.png';
 
 export const applyData = {
@@ -19,13 +19,12 @@ export const applyData = {
       desc: '如果您的申请符合上述申办要求，我们会在 5 个工作日内审核并通过电子邮件<a href="mailto:events@openeuler.sh">events@openeuler.sh</a>与您联系，以便提供 openEuler Meetup 赋能支持并与 openEuler 社区冠名联合主办单位；即便申请不合适，我们仍会通过电子邮件通知您，请确保申办表信息无误',
     },
     {
-      img: step3Bg,
-      imgPhone: step3BgMobile,
+      material1: material1Img,
+      material2: material2Img,
       title: '我们可以获得哪些赋能支持？',
       desc: '审核通过后，您将获得：',
-      downTitle: '《openEuler社区介绍》',
-      href: '/whitepaper/openEuler%20开源社区介绍.pdf',
-      list: [
+      listData: [
+        { title: '《openEuler社区介绍》', href: '/whitepaper/openEuler%20开源社区介绍.pdf' },
         { title: '品牌物料包', desc: '易拉宝/海报/KV等设计源文件' },
         { title: '社媒矩阵传播', desc: '官网/公众号/B站/社群同步宣传' },
         { title: '直播资源', desc: '可选openEuler官方直播间资源' },
