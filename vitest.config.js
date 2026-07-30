@@ -1,9 +1,9 @@
 import { defineConfig } from 'vitest/config';
 import { resolve } from 'node:path';
-import contentYamlPlugin from './app/.vitepress/plugins/vite-plugin-content-yaml';
+import { OPlusYamlContentVitePlugin } from '@opendesign-plus/vite-plugins';
 
 export default defineConfig({
-  plugins: [contentYamlPlugin()],
+  plugins: [OPlusYamlContentVitePlugin()],
   resolve: {
     alias: {
       '~@': resolve(__dirname, 'app/.vitepress/src-new'),

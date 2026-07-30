@@ -7,7 +7,7 @@ import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import replaceUrlPlugin from './.vitepress/plugins/replace-url-plugin';
-import contentYamlPlugin from './.vitepress/plugins/vite-plugin-content-yaml';
+import { OPlusYamlContentVitePlugin } from '@opendesign-plus/vite-plugins';
 
 export default defineConfig({
   build: {
@@ -35,7 +35,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    contentYamlPlugin(),
+    OPlusYamlContentVitePlugin(),
     vueJsx({}),
     Icons({
       compiler: 'vue3',
