@@ -30,7 +30,7 @@
       "priceCurrency": "CNY",
       "description": "openEuler社区版完全免费开源"
     },
-    "description": "面向数字基础设施的开源操作系统，支持服务器、云计算、边缘计算、嵌入式四大场景，支持ARM、x86、RISC-V、LoongArch、PowerPC、SW-64六种处理器架构。",
+    "description": "面向数字基础设施的开源操作系统，支持服务器、云计算、边缘计算、嵌入式四大场景，支持ARM、x86、RISC-V、LoongArch、PowerPC、SW-64等多样性计算架构。",
     "softwareVersion": "24.03 LTS SP3",
     "releaseNotes": "https://www.openeuler.org/zh/interaction/summit-list/2403-version-release/",
     "downloadUrl": "https://www.openeuler.org/zh/download/",
