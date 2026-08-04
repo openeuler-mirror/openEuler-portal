@@ -86,37 +86,37 @@ head:
 
 学习StratoVirt介绍
 
-[了解更多](https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/stratovirt_introduction.md)
+[了解更多](https://atomgit.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/stratovirt_introduction.md)
 
 ## 安装StratoVirt
 
 学习安装StratoVirt
 
-[了解更多](https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/install_stratovirt.md)
+[了解更多](https://atomgit.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/install_stratovirt.md)
 
 ## 准备使用环境
 
 阅读准备使用环境文档
 
-[了解更多](https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/prepare_env.md)
+[了解更多](https://atomgit.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/prepare_env.md)
 
 ## 虚拟机配置
 
 查看虚拟机配置
 
-[了解更多](https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/vm_configuration.md)
+[了解更多](https://atomgit.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/vm_configuration.md)
 
 ## 管理虚拟机
 
 学习如何管理虚拟机
 
-[了解更多](https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/vm_management.md)
+[了解更多](https://atomgit.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/vm_management.md)
 
 ## 对接iSula安全容器
 
 查看对接iSula安全容器文档
 
-[了解更多](https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/interconnect_isula.md)
+[了解更多](https://atomgit.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/interconnect_isula.md)
 
 </MarkdownLayout>
 
@@ -128,7 +128,7 @@ head:
 
 &nbsp;
 
-[查看详情](https://gitee.com/openeuler/community/tree/master/sig/Virt)
+[查看详情](https://atomgit.com/openeuler/community/tree/master/sig/Virt)
 
 ## 获取logo
 
