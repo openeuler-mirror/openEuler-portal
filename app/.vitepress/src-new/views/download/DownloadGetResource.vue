@@ -4,7 +4,8 @@ import { computed } from 'vue';
 import { ORow, OCol, OCard } from '@opensig/opendesign';
 import AppSection from '~@/components/AppSection.vue';
 
-import getResource from '~@/data/download/get-resource';
+import downloadContent from '#content/download';
+import { createSvgIcon } from '~@/composables/createSvgIcon';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -13,16 +14,18 @@ const emits = defineEmits<{
   (e: 'reportDownload', val: Record<string, string>): void;
 }>();
 const { locale, t } = useLocale();
-const { isPhone, lePad, lePadV } = useScreen();
+const { isPhone, lePad } = useScreen();
 
 const flexGap = computed(() =>
   isPhone.value ? '12px 12px' : lePad.value ? '16px 16px' : '32px 32px'
 );
 
+const getResource = computed(() => downloadContent[locale.value].get_resource);
+
 const onClickCard = (item: any) => {
   emits('reportDownload', {
     level1: t('download.getResource'),
-    level2: item[locale.value].title,
+    level2: item.title,
   });
 };
 </script>
@@ -31,7 +34,7 @@ const onClickCard = (item: any) => {
     <ORow :gap="flexGap" flex-wrap="wrap">
       <OCol
         v-for="item in getResource"
-        :key="item[locale].title"
+        :key="item.title"
         flex="0 1 50%"
         :laptop="{ flex: '0 50%' }"
         :pad="{ flex: '0 1 50%' }"
@@ -39,16 +42,16 @@ const onClickCard = (item: any) => {
         :phone="{ flex: '0 1 100%' }"
       >
         <OCard
-          :title="item[locale].title"
-          :detail="item[locale].label"
+          :title="item.title"
+          :detail="item.label"
           :detail-row="2"
           layout="h"
-          :href="item[locale].href"
+          :href="item.href"
           @click="onClickCard(item)"
           target="_blank"
           rel="noopener noreferrer"
           hoverable
-          :icon="item.icon.light"
+          :icon="createSvgIcon(item.icon_light)"
         >
         </OCard>
       </OCol>

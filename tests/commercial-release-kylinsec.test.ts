@@ -1,7 +1,13 @@
 import { expect, describe, it } from 'vitest';
-import commercialReleaseData from '../app/.vitepress/src-new/data/download/download-commercial-release';
 import { readFileSync, existsSync } from 'node:fs';
 import { join, resolve } from 'node:path';
+import yaml from 'js-yaml';
+
+const dataDir = resolve(__dirname, '../.content/download/commercial-release');
+const commercialReleaseData = {
+  zh: yaml.load(readFileSync(join(dataDir, 'zh.yaml'), 'utf-8')) as any,
+  en: yaml.load(readFileSync(join(dataDir, 'en.yaml'), 'utf-8')) as any,
+};
 
 const geoDir = resolve(__dirname, '../.geo');
 
@@ -11,8 +17,8 @@ function readJsonLdJson(locale: string, pagePath: string) {
   return JSON.parse(readFileSync(filePath, 'utf-8'));
 }
 
-const zhList = commercialReleaseData.zh.COMMERCIAL_RELEASE_LIST;
-const enList = commercialReleaseData.en.COMMERCIAL_RELEASE_LIST;
+const zhList = commercialReleaseData.zh.commercial_release;
+const enList = commercialReleaseData.en.commercial_release;
 
 function findKylinsecItems(list: any[]) {
   return list.filter((item: any) => item.MANUFACTURER.includes('Kylinsec') || item.MANUFACTURER.includes('麒麟信安'));

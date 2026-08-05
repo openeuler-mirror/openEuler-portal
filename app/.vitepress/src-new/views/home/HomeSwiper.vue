@@ -4,14 +4,11 @@ import type { PropType } from 'vue';
 
 import { storeToRefs } from 'pinia';
 import { useCommon } from '@/stores/common';
-import { useLocale } from '~@/composables/useLocale';
 
 export interface PublisherT {
-  logo: {
-    [key: string]: string;
-  };
+  logo_light: string;
+  logo_dark: string;
   href: string;
-  href_en?: string;
 }
 
 defineProps({
@@ -30,7 +27,6 @@ defineProps({
 });
 
 const { theme } = storeToRefs(useCommon());
-const { isEn } = useLocale();
 </script>
 
 <template>
@@ -38,15 +34,15 @@ const { isEn } = useLocale();
     <div class="swiper-list" :class="{ 'swiper-reverse': reverseDirection }">
       <div v-for="(item, i) in data" :key="i" class="swiper-item">
         <OLink
-          :href="isEn ? (item.href_en ? item.href_en : item.href) : item.href"
+          :href="item.href"
           target="_blank" rel="noopener noreferrer"
           :hover-underline="false"
           v-analytics.bubble="{
-            target: isEn ? item.href_en ?? item.href : item.href,
+            target: item.href,
           }"
         >
           <div class="swiper-card">
-            <OFigure :src="item.logo[theme]" />
+            <OFigure :src="theme === 'light' ? item.logo_light : item.logo_dark" />
           </div>
         </OLink>
       </div>

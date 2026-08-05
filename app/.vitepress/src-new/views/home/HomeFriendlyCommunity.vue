@@ -1,13 +1,18 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import AppSection from '~@/components/AppSection.vue';
 import { OFigure, OLink } from '@opensig/opendesign';
 import { storeToRefs } from 'pinia';
 import { useLocale } from '~@/composables/useLocale';
 import { useCommon } from '@/stores/common';
-import { friendlyCommunityConfig } from '~@/data/home/friendly-community';
+import homeContent from '#content/home';
 
 const { theme } = storeToRefs(useCommon());
-const { isEn } = useLocale();
+const { locale } = useLocale();
+
+const friendlyCommunityConfig = computed(
+  () => homeContent[locale.value].friendly_community
+);
 </script>
 
 <template>
@@ -28,10 +33,10 @@ const { isEn } = useLocale();
           }"
         >
           <div class="community-logo">
-            <OFigure :src="community.logo[theme]" />
+            <OFigure :src="theme === 'light' ? community.logo_light : community.logo_dark" />
           </div>
         </OLink>
-        <p class="community-desc">{{ isEn ? community.desc_en : community.desc }}</p>
+        <p class="community-desc">{{ community.desc }}</p>
       </div>
     </div>
     <template #footer>

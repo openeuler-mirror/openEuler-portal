@@ -1,0 +1,149 @@
+# Download page data
+#
+# Sections are ordered top-to-bottom by visual position on the page.
+# Images live in ./images/. Shared zh/en images have no suffix; theme variants
+# keep _light/_dark. SVGs consumed as inline icons (OCard :icon) use ?raw.
+
+# community_versions: Version names displayed in the "Community Releases" tab (zh/en identical)
+community_versions:
+  - openEuler-24.03-LTS-SP4
+  - openEuler Embedded 26.03
+  - openEuler-24.03-LTS-SP3
+  - openEuler-24.03-LTS-SP1
+
+# get_os: Get openEuler configurations (cloud/container/Windows/MacOS/virtualization/raspberry pi)
+#   id: Anchor ID
+#   bg_light/bg_dark: PC background (PNG, background-image, shared zh/en)
+#   bg_mo_light/bg_mo_dark: Mobile background
+#   title: Method title
+#   intro: Method intro
+#   intro1: Installation guide label (optional, only cloud/container)
+#   intro_link: Installation guide link (optional)
+#   repeat: Layout parameter (optional)
+#   links: Sub-link list
+#     href: Link URL
+#     label: Link label
+#     introduce: Link introduction
+get_os:
+  - id: cloud
+    bg_light: ./images/public.png
+    bg_dark: ./images/public_dark.png
+    bg_mo_light: ./images/public_mo.png
+    bg_mo_dark: ./images/public_mo_dark.png
+    title: Cloud Images
+    intro: openEuler has released official images on mainstream public cloud platforms.
+    intro1: Installation Guide
+    intro_link: /en/wiki/install/cloud/
+    links:
+      - href: /en/wiki/install/cloud/#obtaining-the-openeuler-image-on-aws
+        label: AWS
+        introduce: Amazon Web Services (AWS) is the largest cloud service provider in the world. AWS Marketplace now offers openEuler cloud images in multiple versions. Deploy your openEuler-based environments on AWS today!
+      - href: /en/wiki/install/cloud/#obtaining-the-openeuler-shared-image-on-azure
+        label: Azure
+        introduce: Microsoft Azure—Microsoft's public cloud service platform—has earned a reputation for cutting-edge and powerful AI services. Get started with openEuler cloud images in Azure Community Images and deploy on Azure now!
+      - href: /en/wiki/install/cloud/#obtaining-the-openeuler-image-on-alibaba-cloud
+        label: Alibaba Cloud
+        introduce: Alibaba Cloud, Alibaba's cloud computing platform, offers a wide range of products and services. openEuler cloud images are now available in Alibaba Cloud Marketplace, giving unexceptional performance and scalability in your cloud environment.
+      - href: /en/wiki/install/cloud/#obtaining-the-openeuler-image-on-huawei-cloud
+        label: Huawei Cloud
+        introduce: Huawei Cloud offers an extensive suite of cloud computing services, including Elastic Cloud Server (ECS) and Object Storage Service (OBS). Find openEuler cloud images in Huawei Cloud Marketplace and unlock the power of this open source OS!
+  - id: container
+    bg_light: ./images/docker.png
+    bg_dark: ./images/docker_dark.png
+    bg_mo_light: ./images/docker_mo.png
+    bg_mo_dark: ./images/docker_mo_dark.png
+    title: Container Images
+    intro: openEuler provides official container images.
+    intro1: Installation Guide
+    intro_link: /en/wiki/install/image/
+    links:
+      - href: https://hub.docker.com/r/openeuler/openeuler
+        label: Docker Hub
+        introduce: Docker Hub boasts the world's largest container image repository. Discover regularly updated base and application container images of openEuler on Docker Hub and unleash the potential of this open source OS!
+      - href: https://quay.io/search?q=openeuler
+        label: Quay.io
+        introduce: Quay.io is one of the leading registries for building, storage, and distributing container images. Get base and application container images on Quay.io with detailed usage instructions. Start deploying openEuler now!
+      - href: https://hub.oepkgs.net/account/sign-in?globalSearch=openeuler
+        label: ISCAS
+        introduce: oepkgs is a public platform providing software packages and container images for openEuler and other Linux distributions. oepkgs now offers over 20,000 software packages across its mirror sites. The oepkgs community builds and tests package compatibility, and manages source code repositories across the lifecycle for all available packages.
+      - href: https://images.linuxcontainers.org/
+        label: Linux Container
+        introduce: Linux Container is a toolset that provides OS-level virtualization, enabling multiple isolated Linux containers to run on the same physical server while sharing the host machine's kernel. This approach is similar to deploying VMs but promises greater efficiency and lower overheads.
+  - id: windows
+    bg_light: ./images/windows.png
+    bg_dark: ./images/windows_dark.png
+    bg_mo_light: ./images/windows_mo.png
+    bg_mo_dark: ./images/windows_mo_dark.png
+    title: Windows
+    intro: Running openEuler on Windows
+    repeat: 1
+    links:
+      - href: /en/wiki/install/wsl/
+        label: Windows Subsystem for Linux (WSL)
+        introduce: Windows Subsystem for Linux (WSL) is a Microsoft offering that enables Linux environments to directly run on Windows. Download the openEuler application for WSL on Microsoft Store to enjoy an openEuler development environment without leaving your Windows setup.Windows Subsystem for Linux (WSL) is a Microsoft offering that enables Linux environments to directly run on Windows. Download the openEuler application for WSL on Microsoft Store to enjoy an openEuler development environment without leaving your Windows setup.
+  - id: macos
+    bg_light: ./images/macos_light.png
+    bg_dark: ./images/macos_dark.png
+    bg_mo_light: ./images/macos_mo_light.png
+    bg_mo_dark: ./images/macos_mo_dark.png
+    title: MacOS
+    intro: Running openEuler on MacOS
+    repeat: 1
+    links:
+      - href: /en/wiki/install/macos/
+        label: OrbStack
+        introduce: OrbStack is a fast and lightweight VM platform designed to run Docker containers and Linux VMs on macOS. Find the container images by the openEuler community on OrbStack here.
+  - id: virtualization
+    bg_light: ./images/virtualization.png
+    bg_dark: ./images/virtualization_dark.png
+    bg_mo_light: ./images/virtualization_mo.png
+    bg_mo_dark: ./images/virtualization_mo_dark.png
+    title: Virtualization
+    intro: Running openEuler on VMs
+    repeat: 1
+    links:
+      - href: /en/wiki/install/virtualization/
+        label: Installing openEuler in VirtualBox
+        introduce: Oracle VirtualBox is a virtualization software originally developed by InnoTek Software and now maintained by Oracle as part of the Oracle xVM platform. To use openEuler VMs on VirtualBox, simply download and install openEuler VM images from the official openEuler software repository.
+  - id: raspberrypi
+    bg_light: ./images/raspberry-pi.png
+    bg_dark: ./images/raspberry-pi_dark.png
+    bg_mo_light: ./images/raspberry-pi_mo.png
+    bg_mo_dark: ./images/raspberry-pi_mo_dark.png
+    title: Raspberry Pi
+    intro: Installing openEuler on Raspberry Pi
+    repeat: 1
+    links:
+      - href: /en/wiki/install/raspberry-pi/
+        label: Raspberry Pi
+        introduce: Raspberry Pi is a compact single-board computer developed by the Raspberry Pi Foundation. Praised for its affordability and flexibility, Raspberry Pi images are now available on the official openEuler software repository.
+
+# get_resource: Related resources (mirrors + documentation)
+#   icon_light: Light theme icon (SVG, OCard :icon, path uses ?raw)
+#   title: Resource title
+#   label: Resource description
+#   href: Resource link
+get_resource:
+  - icon_light: ./images/mirror_light.svg?raw
+    title: Mirrors
+    label: All mirrors of openEuler
+    href: /en/mirror/list/
+  - icon_light: ./images/docs_light.svg?raw
+    title: Documentation
+    label: Explore openEuler's release notes, installation guide, administrator guide, projectusage guides, and more
+    href: https://docs.openeuler.org/en/
+
+# support_service: Support services (FAQs + Quickissue; forum is zh-only and omitted in en)
+#   icon_light: Light theme icon (SVG, OCard :icon, path uses ?raw)
+#   title: Service title
+#   label: Service description
+#   href: Service link
+support_service:
+  - icon_light: ./images/faqs.svg?raw
+    title: FAQs
+    label: Find the answers to common questions about openEuler
+    href: /en/faq/
+  - icon_light: ./images/quickissue.svg?raw
+    title: Quickissue
+    label: Submit and track community issues quickly and easily.
+    href: https://quickissue.openeuler.org/en/issues/

@@ -1,6 +1,7 @@
 import { expect, describe, it } from 'vitest';
 import { readFileSync, existsSync } from 'node:fs';
 import { join, resolve } from 'node:path';
+import yaml from 'js-yaml';
 
 const PROJECT_ROOT = resolve(__dirname, '..');
 const geoDir = join(PROJECT_ROOT, '.geo');
@@ -12,87 +13,65 @@ function readJsonLdJson(locale: string, pagePath: string) {
   return JSON.parse(readFileSync(filePath, 'utf-8'));
 }
 
-const dataModulePath = join(PROJECT_ROOT, 'app/.vitepress/src/data/showcase/technical-while-paper.ts');
+const dataDir = join(PROJECT_ROOT, '.content/showcase/technical-white-paper');
+const zhYamlPath = join(dataDir, 'zh.yaml');
+const enYamlPath = join(dataDir, 'en.yaml');
+const zhData = yaml.load(readFileSync(zhYamlPath, 'utf-8')) as any;
+const enData = yaml.load(readFileSync(enYamlPath, 'utf-8')) as any;
+const zhList = zhData.white_paper;
+const enList = enData.white_paper;
 
 describe('技术白皮书数据文件 — 24.03 LTS SP4 条目验证', () => {
-  let data: any;
-  let sourceContent: string;
-
-  it('数据文件 technical-while-paper.ts 存在', () => {
-    expect(existsSync(dataModulePath)).toBe(true);
+  it('zh.yaml 数据文件存在', () => {
+    expect(existsSync(zhYamlPath)).toBe(true);
   });
 
-  it('数据文件可正确导出 zh 和 en 数组', () => {
-    sourceContent = readFileSync(dataModulePath, 'utf-8');
-    expect(sourceContent).toContain('export default');
-    expect(sourceContent).toContain('zh:');
-    expect(sourceContent).toContain('en:');
+  it('zh.yaml 包含 white_paper 数组', () => {
+    expect(zhData).toHaveProperty('white_paper');
+    expect(Array.isArray(zhList)).toBe(true);
   });
 
   it('zh 数组首位为 24.03 LTS SP4 条目', () => {
-    const match = sourceContent.match(/zh:\s*\[([\s\S]*?)\]\s*,\s*en:/);
-    expect(match).not.toBeNull();
-    const zhSection = match![1];
-    const firstEntryMatch = zhSection.match(/\{[^}]+\}/);
-    expect(firstEntryMatch).not.toBeNull();
-    const firstEntry = firstEntryMatch![0];
-    expect(firstEntry).toContain('24.03%20LTS%20SP4');
-    expect(firstEntry).toContain('技术白皮书');
+    const first = zhList[0];
+    expect(first.path).toContain('24.03%20LTS%20SP4');
+    expect(first.path).toContain('技术白皮书');
   });
 
   it('zh SP4 条目 path 使用 %20 URL 编码（LTS 版本惯例）', () => {
-    const match = sourceContent.match(/zh:\s*\[([\s\S]*?)\]\s*,\s*en:/);
-    const zhSection = match![1];
-    const firstEntryMatch = zhSection.match(/\{[^}]+\}/);
-    const firstEntry = firstEntryMatch![0];
-    expect(firstEntry).toContain('%20');
-    expect(firstEntry).toContain('24.03%20LTS%20SP4%20技术白皮书.pdf');
+    const first = zhList[0];
+    expect(first.path).toContain('%20');
+    expect(first.path).toContain('24.03%20LTS%20SP4%20技术白皮书.pdf');
   });
 
   it('zh SP4 条目仅含 path 和 summary 两个字段', () => {
-    const match = sourceContent.match(/zh:\s*\[([\s\S]*?)\]\s*,\s*en:/);
-    const zhSection = match![1];
-    const firstEntryMatch = zhSection.match(/\{([^}]+)\}/);
-    const entryContent = firstEntryMatch![1];
-    expect(entryContent).toContain('path');
-    expect(entryContent).toContain('summary');
-    const fieldNames = entryContent
-      .split('\n')
-      .map(f => f.trim())
-      .filter(f => f.includes(':'))
-      .map(f => f.split(':')[0].trim().replace(/['"]/g, ''))
-      .filter(f => f.length > 0);
-    expect(fieldNames).toEqual(['path', 'summary']);
+    const first = zhList[0];
+    const keys = Object.keys(first).sort();
+    expect(keys).toEqual(['path', 'summary']);
   });
 
   it('zh 数组原有条目（SP3 等）不受影响', () => {
-    const match = sourceContent.match(/zh:\s*\[([\s\S]*?)\]\s*,\s*en:/);
-    const zhSection = match![1];
-    expect(zhSection).toContain('24.03%20LTS%20SP3');
-    expect(zhSection).toContain('25.09');
+    const paths = zhList.map((item: any) => item.path);
+    expect(paths.some((p: string) => p.includes('24.03%20LTS%20SP3'))).toBe(true);
+    expect(paths.some((p: string) => p.includes('25.09'))).toBe(true);
   });
 
-  it('en 数组首位为 24.03 LTS SP3 条目（SP4 en 条目为 TODO 注释状态）', () => {
-    const enSection = sourceContent.substring(sourceContent.indexOf('en:'));
-    const activeEntries = enSection.match(/^\s*\{[^}]+\}/gm);
-    if (activeEntries) {
-      const firstActiveEntry = activeEntries[0];
-      expect(firstActiveEntry).toContain('24.03 LTS SP3');
-    }
+  it('en 数组首位为 24.03 LTS SP3 条目（SP4 en 条目未提供）', () => {
+    const first = enList[0];
+    expect(first.path).toContain('24.03 LTS SP3');
+    expect(first.summary).toContain('24.03 LTS SP3');
   });
 
-  it('en SP4 条目为注释状态，包含 TODO 标记', () => {
-    const enSection = sourceContent.substring(sourceContent.indexOf('en:'));
-    expect(enSection).toContain('TODO');
-    expect(enSection).toContain('SP4');
+  it('en 不含 SP4 条目（SP4 en PDF 待提供）', () => {
+    const hasSp4 = enList.some((item: any) =>
+      item.summary.includes('24.03 LTS SP4') || item.path.includes('24.03 LTS SP4')
+    );
+    expect(hasSp4).toBe(false);
   });
 
   it('en SP3 条目 path 不编码空格（非编码惯例）', () => {
-    const enSection = sourceContent.substring(sourceContent.indexOf('en:'));
-    const sp3EntryMatch = enSection.match(/\{[^}]*24\.03 LTS SP3[^}]*\}/);
-    if (sp3EntryMatch) {
-      expect(sp3EntryMatch![0]).toContain('openEuler 24.03 LTS SP3 Technical White Paper.pdf');
-    }
+    const sp3 = enList.find((item: any) => item.path.includes('24.03 LTS SP3'));
+    expect(sp3).toBeDefined();
+    expect(sp3!.path).toContain('openEuler 24.03 LTS SP3 Technical White Paper.pdf');
   });
 });
 

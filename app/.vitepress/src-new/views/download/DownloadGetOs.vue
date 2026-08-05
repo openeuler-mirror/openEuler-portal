@@ -7,7 +7,7 @@ import { useCommon } from '@/stores/common';
 
 import { OButton, OIcon } from '@opensig/opendesign';
 import AppSection from '~@/components/AppSection.vue';
-import getOs from '~@/data/download/get-os';
+import downloadContent from '#content/download';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
@@ -24,7 +24,7 @@ const emits = defineEmits<{
 }>();
 
 const localeGetOsData = computed(() => {
-  return getOs[locale.value];
+  return downloadContent[locale.value].get_os;
 });
 
 const onClickLink = (link: any, container: any) => {
@@ -48,15 +48,17 @@ const onClickLink = (link: any, container: any) => {
           class="get-os-intro"
           :style="{
             backgroundImage: `url(${
-              lePadV ? container.bgMo[theme] : container.bg[theme]
+              lePadV
+                ? (theme === 'light' ? container.bg_mo_light : container.bg_mo_dark)
+                : (theme === 'light' ? container.bg_light : container.bg_dark)
             })`,
           }"
         >
           <div class="title">{{ container.title }}</div>
           <div class="intro">{{ container.intro }}</div>
           <a
-            v-if="container.introLink"
-            :href="container.introLink"
+            v-if="container.intro_link"
+              :href="container.intro_link"
             target="_blank"
             rel="noopener noreferrer"
           >

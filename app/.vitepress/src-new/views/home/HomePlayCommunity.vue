@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { storeToRefs } from 'pinia';
 
 import { OButton, OIcon, OLink } from '@opensig/opendesign';
@@ -9,7 +9,7 @@ import { useScreen } from '~@/composables/useScreen';
 
 import { useCommon } from '@/stores/common';
 
-import { playCommunity, vitalityConfig } from '~@/data/home/play-community';
+import homeContent from '#content/home';
 
 import { getStatistic, getDownloadTotal } from '@/api/api-search';
 
@@ -30,11 +30,14 @@ import useInViewDuration from '~@/composables/useInViewDuration';
 import { oaReport } from '@opendesign-plus/plugins/analytics';
 
 const { locale } = useLocale();
-const { isPhone, lePadV, leLaptop } = useScreen();
+const { lePadV } = useScreen();
 
 const vitalityData = ref<VitalityValueT>();
 
 const { theme } = storeToRefs(useCommon());
+
+const playCommunity = computed(() => homeContent[locale.value].play_community);
+const vitalityConfig = computed(() => homeContent[locale.value].vitality);
 
 onMounted(async () => {
     const [statisticRes, downloadRes] = await Promise.all([
@@ -95,7 +98,7 @@ useInViewDuration(container, (duration) => {
       </div>
     </div>
     <div class="play-cards">
-      <div class="card-item" v-for="card in playCommunity[locale]">
+      <div class="card-item" v-for="card in playCommunity" :key="card.title">
         <div class="card-top" :style="{ backgroundImage: `url(${card.bg})` }">
           {{ card.title }}
         </div>
@@ -155,7 +158,7 @@ useInViewDuration(container, (duration) => {
             {{ vitalityData[item.vitalityKey] }}
           </div>
           <div class="label">
-            {{ item.vitalityLabel[locale] }}
+            {{ item.vitalityLabel }}
           </div>
         </div>
       </div>

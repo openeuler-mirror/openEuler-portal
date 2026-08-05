@@ -93,8 +93,8 @@ describe('公司全称更名 — 旧名零残留', () => {
     expect(content!).not.toContain(OLD_NAME);
   });
 
-  it('download-commercial-release.ts 无旧名', () => {
-    const content = readFileContent('app/.vitepress/src-new/data/download/download-commercial-release.ts');
+  it('commercial-release/zh.yaml 无旧名', () => {
+    const content = readFileContent('.content/download/commercial-release/zh.yaml');
     expect(content).not.toBeNull();
     expect(content!).not.toContain(OLD_NAME);
   });
@@ -202,10 +202,10 @@ describe('公司全称更名 — 新名正确出现', () => {
     expect(content!).toContain(NEW_NAME);
   });
 
-  it('download-commercial-release.ts MANUFACTURER 含新名', () => {
-    const content = readFileContent('app/.vitepress/src-new/data/download/download-commercial-release.ts');
+  it('commercial-release/zh.yaml MANUFACTURER 含新名', () => {
+    const content = readFileContent('.content/download/commercial-release/zh.yaml');
     expect(content).not.toBeNull();
-    expect(content!).toContain(`MANUFACTURER: '${NEW_NAME}'`);
+    expect(content!).toContain(NEW_NAME);
   });
 });
 

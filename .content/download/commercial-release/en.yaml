@@ -1,0 +1,114 @@
+# Commercial Release data
+#
+# commercial_release: Commercial release list (sorted by release date desc)
+#   NAME: Release name
+#   DOWNLOAD_URL: Download URL
+#   DESC: Release description
+#   MANUFACTURER: Vendor name
+#   PUBLISH_DATE: Release date
+#   DETAILED_LINK: Architecture detail links (optional)
+#     LINK: Architecture-specific download link (optional, some have only ARCH)
+#     ARCH: Supported architecture
+#   LTS: Whether LTS version (optional)
+commercial_release:
+  - NAME: Kylinsec V6 SP1
+    DOWNLOAD_URL: https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/
+    DESC: ""
+    MANUFACTURER: Kylinsec
+    PUBLISH_DATE: '2026/06'
+    DETAILED_LINK:
+      - LINK: https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/x86_64/
+        ARCH: x86_64
+      - LINK: https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/aarch64/
+        ARCH: AArch64
+      - LINK: https://mirrorlists.kylinsec.com.cn/iso/V6-SP1/loongarch64/
+        ARCH: LoongArch64
+  - NAME: Kylinsec V3.4.5-Update2
+    DOWNLOAD_URL: https://mirrorlists.kylinsec.com.cn/iso/V3.4-5-update2/
+    DESC: ""
+    MANUFACTURER: Kylinsec
+    PUBLISH_DATE: '2026/06'
+    DETAILED_LINK:
+      - LINK: https://mirrorlists.kylinsec.com.cn/iso/V3.4-5-update2/x86_64/
+        ARCH: x86_64
+      - LINK: https://mirrorlists.kylinsec.com.cn/iso/V3.4-5-update2/aarch64/
+        ARCH: AArch64
+  - NAME: Kylinsec V6
+    DOWNLOAD_URL: https://mirrorlists.kylinsec.com.cn/iso/V6/
+    DESC: ""
+    MANUFACTURER: Kylinsec
+    PUBLISH_DATE: '2025/01'
+    DETAILED_LINK:
+      - LINK: https://mirrorlists.kylinsec.com.cn/iso/V6/x86_64/
+        ARCH: x86_64
+      - LINK: https://mirrorlists.kylinsec.com.cn/iso/V6/aarch64/
+        ARCH: AArch64
+      - LINK: https://mirrorlists.kylinsec.com.cn/iso/V6/loongarch64/
+        ARCH: LoongArch64
+  - NAME: Kylinsec V3.5.2
+    DOWNLOAD_URL: https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/
+    DESC: ""
+    MANUFACTURER: Kylinsec
+    PUBLISH_DATE: '2023/09'
+    DETAILED_LINK:
+      - LINK: https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/x86_64/
+        ARCH: x86_64
+      - LINK: https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/aarch64/
+        ARCH: AArch64
+      - LINK: https://mirrorlists.kylinsec.com.cn/iso/V3.5.2/loongarch64/
+        ARCH: LoongArch64
+  - NAME: TurboLinux Enterprise server v15
+    DOWNLOAD_URL: http://download.turbolinux.com.cn:8013/
+    DESC: "Turbolinux Enterprise Server 15 (TLES15) is the enterprise commercial Linux distribution based on the openEuler community, designed for the x86_64 and AArch64 processor architecture."
+    MANUFACTURER: TurboLinux
+    PUBLISH_DATE: '2022/06'
+    DETAILED_LINK:
+      - ARCH: x86_64
+      - ARCH: AArch64
+  - NAME: RedFlag Asianux Server - 8.1
+    DOWNLOAD_URL: http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/
+    DESC: "Red Flag Asianux Server OS (openEuler) is a commercial release based on the secondary development of openEuler 20.03 LTS SP1. The current kernel version is 4.19."
+    MANUFACTURER: Red Flag Asianux Server
+    PUBLISH_DATE: '2021/03'
+    DETAILED_LINK:
+      - LINK: http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/
+        ARCH: AArch64
+  - NAME: HopeStage
+    DOWNLOAD_URL: http://webapp.hoperun.com:8007/HopeStage/
+    DESC: "HopeStage Enterprise Linux is an enterprise-level Linux operating system based on openEuler, which has the advantages of high efficiency, stability and security. HopeStage is committed to providing a safe and stable operating basis for enterprise-level databases, big data, cloud computing and artificial intelligence platforms."
+    MANUFACTURER: HOPERUN
+    PUBLISH_DATE: '2020/09'
+    DETAILED_LINK:
+      - LINK: http://webapp.hoperun.com:8007/HopeStage/x86_64/
+        ARCH: x86_64
+      - LINK: http://webapp.hoperun.com:8007/HopeStage/aarch64/
+        ARCH: AArch64
+  - NAME: HopeEdge
+    DOWNLOAD_URL: http://webapp.hoperun.com:8007/
+    DESC: "HopeEdge Linux for Edge Computing is an edge computing operating system based on openEuler, which is oriented to IoT scenarios. It has four key characteristics: lightweight security, independent innovation, efficient interconnection and rapid deployment. HopeEdge also provides equipment management, data acquisition, cloud-edge collaboration, artificial intelligence and other characteristics."
+    MANUFACTURER: HOPERUN
+    PUBLISH_DATE: '2020/07'
+    DETAILED_LINK:
+      - LINK: http://webapp.hoperun.com:8007/HopeStage/x86_64/
+        ARCH: x86_64
+      - LINK: http://webapp.hoperun.com:8007/HopeStage/aarch64/
+        ARCH: AArch64
+  - NAME: iSoftServerOS-Kunpeng-5.1
+    DOWNLOAD_URL: http://www.i-soft.com.cn/type/4/714.jhtml
+    MANUFACTURER: iSoft
+    PUBLISH_DATE: ''
+    DETAILED_LINK:
+      - LINK: https://www.i-soft.com.cn/type/4/714.jhtml/
+        ARCH: x86_64
+      - LINK: https://www.i-soft.com.cn/type/4/714.jhtml/
+        ARCH: AArch64
+  - NAME: EulixOS Server
+    DOWNLOAD_URL: https://eulixos.com/#/download
+    DESC: "The EulixOS is a server OS distribution based on the openEuler OS. The EulixOS supports multiple processor architectures, such as x86_64, AArch64, and RISC-V, and is ideal for various application scenarios, including databases, cloud computing, big data, AI, and distributed computing. It combines high security and reliability with the ultimate performance across platforms, aiming to provide a standard, secure, and reliable operating system and quality services for diverse applications and solutions."
+    MANUFACTURER: ISCAS
+    PUBLISH_DATE: '2020/05'
+    DETAILED_LINK:
+      - LINK: https://eulixos.com/#/download
+        ARCH: AArch64
+      - LINK: https://eulixos.com/#/download
+        ARCH: RISC-V

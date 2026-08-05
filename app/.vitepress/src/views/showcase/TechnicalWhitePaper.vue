@@ -3,7 +3,7 @@ import { ref, computed } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 
-import technicalDataTotal from '@/data/showcase/technical-while-paper';
+import whitePaperContent from '#content/showcase/technical-white-paper';
 import NotFound from '@/NotFound.vue';
 
 type Language = 'zh' | 'en';
@@ -11,7 +11,7 @@ type Language = 'zh' | 'en';
 const i18n = useI18n();
 const { lang } = useData();
 
-const technicalData = technicalDataTotal[lang.value as Language];
+const technicalData = computed(() => whitePaperContent[lang.value as Language].white_paper);
 
 const userCaseData = computed(() => i18n.value.showcase);
 
@@ -20,18 +20,19 @@ const currentPage = ref(1);
 const pageSize = ref(12);
 
 const randerPaperList = computed(() => {
-  if (technicalData.length > pageSize.value) {
-    return technicalData.slice(
+  const data = technicalData.value;
+  if (data.length > pageSize.value) {
+    return data.slice(
       (currentPage.value - 1) * pageSize.value,
       currentPage.value * pageSize.value
     );
   } else {
-    return technicalData;
+    return data;
   }
 });
 
 // 数据总条数
-const total = computed(() => technicalData.length);
+const total = computed(() => technicalData.value.length);
 // 分页器总页数
 const totalPage = computed(() => Math.ceil(total.value / pageSize.value));
 

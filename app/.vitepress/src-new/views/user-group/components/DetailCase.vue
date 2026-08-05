@@ -3,7 +3,8 @@ import { PropType } from 'vue';
 import { OCard, OButton } from '@opensig/opendesign';
 import { useI18n } from 'vue-i18n';
 import AppSection from '~@/components/AppSection.vue';
-import { casesZh } from '~@/data/home/case';
+import homeContent from '#content/home';
+import { createSvgIcon } from '~@/composables/createSvgIcon';
 import { linkData } from '~@/data/user-group';
 import { useScreen } from '~@/composables/useScreen';
 import type { ShowCaseT } from '~@/@types/type-user-group';
@@ -22,7 +23,8 @@ defineProps({
 const { t } = useI18n();
 
 const cardIcon = (type: string) => {
-  return casesZh.find((item) => item.label === type)?.icon;
+  const icon = homeContent.zh.case.find((item) => item.label === type)?.icon;
+  return icon ? createSvgIcon(icon) : undefined;
 };
 </script>
 

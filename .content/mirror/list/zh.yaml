@@ -1,0 +1,83 @@
+# 镜像站列表页数据 / Mirror list page data
+#
+# 板块按页面从上到下视觉顺序排列。
+# 所有数据 zh/en 相同（版本名、地区代码、命令字符串均通用），两个文件内容一致。
+
+# area_arr: 地区筛选选项（MirrorList 筛选区）
+#   value: 地区代码
+#   label: 地区名称（英文，zh/en 共用）
+area_arr:
+  - value: AS
+    label: Asia
+  - value: EU
+    label: Europe
+  - value: NA
+    label: North America
+
+# rsync_code: rsync 同步命令（MirrorList 文本区，zh/en 共用）
+rsync_code: 'rsync -av --partial --progress --delete rsync://root@repo.openeuler.openatom.cn/openeuler/***(localDirectory)'
+
+# repo_size: 镜像仓大小列表（MirrorSize 表格）
+#   release: 版本名称
+#   size: 镜像大小
+repo_size:
+  - release: openEuler 20.03 LTS
+    size: 211 GB
+  - release: openEuler 20.03 LTS SP1
+    size: 537 GB
+  - release: openEuler 20.03 LTS SP2
+    size: 255 GB
+  - release: openEuler 20.03 LTS SP3
+    size: 404 GB
+  - release: openEuler 20.03 LTS SP4
+    size: 445 GB
+  - release: openEuler 20.09
+    size: 8.0 KB
+  - release: openEuler 21.03
+    size: 8.0 KB
+  - release: openEuler 21.09
+    size: 8.0 KB
+  - release: openEuler 22.03 LTS
+    size: 616 GB
+  - release: openEuler 22.03 LTS 64kb
+    size: 89 GB
+  - release: openEuler 22.03 LTS SP1
+    size: 562 GB
+  - release: openEuler 22.03 LTS SP2
+    size: 399 GB
+  - release: openEuler 22.03 LTS SP3
+    size: 686 GB
+  - release: openEuler 22.03 LTS SP4
+    size: 631 GB
+  - release: openEuler 22.09
+    size: 8.0 KB
+  - release: openEuler 23.03
+    size: 257 GB
+  - release: openEuler 23.09
+    size: 313 GB
+  - release: openEuler 24.03 LTS
+    size: 804 GB
+  - release: openEuler 24.09
+    size: 460 GB
+  - release: openEuler 24.03 LTS SP1
+    size: 768 GB
+  - release: openEuler 24.03 LTS SP2
+    size: 777 GB
+  - release: openEuler 24.03 LTS SP3
+    size: 456 GB
+  - release: openEuler 25.03
+    size: 530 GB
+  - release: openEuler 25.09
+    size: 531 GB
+  - release: openEuler preview
+    size: 490 GB
+  - release: openeuler1.0
+    size: 8.0 KB
+  - release: security
+    size: 1.7 GB
+  - release: upload
+    size: 4.0 KB
+  - release: bugFix
+    size: 1.2 MB
+  - release: Total
+    size: 10 TB

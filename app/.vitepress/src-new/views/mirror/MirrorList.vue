@@ -18,6 +18,7 @@ import {
 
 import AppSection from '~@/components/AppSection.vue';
 import AppFilterMo from '~@/components/AppFilterMo.vue';
+import mirrorListContent from '#content/mirror/list';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import { useClipboard } from '~@/composables/useClipboard';
@@ -63,20 +64,7 @@ const initTableData = (data: any[]): MirrorMsg[] => {
   return transformedData;
 };
 
-const areaArr = ref([
-  {
-    value: 'AS',
-    label: 'Asia',
-  },
-  {
-    value: 'EU',
-    label: 'Europe',
-  },
-  {
-    value: 'NA',
-    label: 'North America',
-  },
-]);
+const areaArr = computed(() => mirrorListContent[locale.value].area_arr);
 
 // 复制文本到剪贴板
 const handleCopyText = async (value: string, e: MouseEvent) => {
@@ -174,8 +162,7 @@ const columns = [
   { label: t('download.MIRROR_ALL_Mbs'), key: 'netband', style: { width: '200px' } },
 ];
 const COUNT_PER_PAGE = [12, 18, 24, 36];
-const rsyncCode =
-  'rsync -av --partial --progress --delete rsync://root@repo.openeuler.openatom.cn/openeuler/***(localDirectory)';
+const rsyncCode = computed(() => mirrorListContent[locale.value].rsync_code);
 </script>
 
 <template>

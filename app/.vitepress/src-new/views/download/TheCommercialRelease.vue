@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, Ref, ref } from 'vue';
+import { computed, onMounted, Ref, ref, watch } from 'vue';
 
 import { useScreen } from '@/shared/useScreen';
 
@@ -8,7 +8,7 @@ import type {
   DetailedLinkCommercialItemT,
 } from '@/shared/@types/type-download';
 
-import commercialReleaseData from '~@/data/download/download-commercial-release';
+import commercialReleaseData from '#content/download/commercial-release';
 
 import AppSection from '~@/components/AppSection.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';
@@ -38,10 +38,10 @@ import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { useDebounceFn } from '@vueuse/core';
 
 const { t, locale } = useLocale();
-const { lePadV, isPadV } = useScreen();
+const { lePadV } = useScreen();
 
 const localeCommercialReleaseData = computed(() => {
-  return commercialReleaseData[locale.value].COMMERCIAL_RELEASE_LIST;
+  return commercialReleaseData[locale.value].commercial_release;
 });
 //分页与数据项目
 const currentPage = ref(1);
@@ -126,8 +126,6 @@ const setTagManufacturer = () => {
 
 // 计算筛选之后剩下的版本
 const filterList = computed(() => {
-  // 初始化页数
-  currentPage.value = 1;
   return allList.filter((item: DownloadCommercialDataT) => {
     // 按 MANUFACTURER 筛选
     if (
@@ -161,6 +159,10 @@ onMounted(() => {
 });
 // 搜索功能
 const searchVal = ref('');
+
+watch([activeManufacturer, activeArch, searchVal], () => {
+  currentPage.value = 1;
+});
 
 const onInput = useDebounceFn((val: string) => {
   reportAnalytics(
@@ -292,7 +294,7 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
 
             <!-- 动态生成其他选项 -->
             <OCheckbox
-              v-for="(option, index) in tagManufacturer"
+              v-for="option in tagManufacturer"
               :key="option"
               :value="option"
             >
@@ -485,7 +487,7 @@ const COUNT_PER_PAGE = [12, 18, 24, 36];
 
             <!-- 动态生成其他选项 -->
             <OCheckbox
-              v-for="(option, index) in tagManufacturer"
+              v-for="option in tagManufacturer"
               :key="option"
               :value="option"
             >

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import repoData from '~@/data/download/repo-size';
+import mirrorListContent from '#content/mirror/list';
 
 import { OTable } from '@opensig/opendesign';
 
@@ -9,8 +9,10 @@ import AppSection from '~@/components/AppSection.vue';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
-const { t } = useLocale();
+const { t, locale } = useLocale();
 const { lePadV } = useScreen();
+
+const repoData = computed(() => mirrorListContent[locale.value].repo_size);
 
 const splitArrayInHalf = (arr: { release: string; size: string }[]) => {
   const mid = Math.ceil(arr.length / 2); // 找到中间位置，向上取整以保证奇数时前一半多一个
@@ -21,9 +23,9 @@ const splitArrayInHalf = (arr: { release: string; size: string }[]) => {
 
 const renderDatas = computed(() => {
   if (lePadV.value) {
-    return [repoData];
+    return [repoData.value];
   }
-  return splitArrayInHalf(repoData);
+  return splitArrayInHalf(repoData.value);
 });
 
 const columns = [

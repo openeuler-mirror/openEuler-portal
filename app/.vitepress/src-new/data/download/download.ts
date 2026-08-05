@@ -1,6 +1,6 @@
 import { computed } from 'vue';
 import i18n from '~@/i18n';
-import getOs from './get-os';
+import downloadContent from '#content/download';
 
 export default {
   zh: {
@@ -1079,7 +1079,7 @@ export const archMap = new Map([
 const anchorList = computed(() => {
   return [
     { title: i18n.global.t('download.community'), id: 'community-releases' },
-    ...getOs[i18n.global.locale.value].map((item) => ({
+    ...downloadContent[i18n.global.locale.value].get_os.map((item) => ({
       title: item.title,
       id: item.id,
     })),
