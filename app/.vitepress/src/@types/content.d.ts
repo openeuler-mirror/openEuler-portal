@@ -26,6 +26,7 @@ declare module '#content/home' {
     is_blank?: boolean;
     attach?: string;
     locale?: string;
+    title_size?: 'large' | 'small';
     light?: Partial<BannerItemT>;
     dark?: Partial<BannerItemT>;
   }
