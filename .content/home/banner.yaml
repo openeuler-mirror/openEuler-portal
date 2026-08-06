@@ -14,6 +14,21 @@
 #   is_blank        是否新窗口打开（可选）
 #   attach          附加装饰图（可选）
 #   locale          可见语言 zh / en / zh,en（可选，默认 zh,en）
+#   title_size      标题字号 large | small（可选，默认 large）
+
+- bg_pc: ./images/ai-coding-assistants/pc.jpg
+  bg_pad: ./images/ai-coding-assistants/pad.jpg
+  bg_mb_zh: ./images/ai-coding-assistants/mb.jpg
+  bg_mb_en: ./images/ai-coding-assistants/mb_en.jpg
+  bg_theme: light
+  title_zh: 《openEuler社区生成式AI工具使用与开源贡献策略》正式发布
+  title_en: openEuler Community Generative AI Use and Open Source Contribution Policy
+  btn_zh: 查看详情
+  btn_en: View More
+  href_zh: /zh/community/ai-coding-assistants/
+  href_en: /en/community/ai-coding-assistants/
+  is_blank: true
+  title_size: small
 
 - bg_pc: ./images/release/pc.jpg
   bg_pad: ./images/release/pad.jpg

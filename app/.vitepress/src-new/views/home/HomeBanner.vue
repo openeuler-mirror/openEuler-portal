@@ -114,10 +114,10 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 
               <!-- 标题 -->
               <div v-if="info.title">
-                <div v-if="Array.isArray(info.title)" :class="{ 'banner-btn-light': info.text_theme === 'dark', 'banner-title': true }">
+                <div v-if="Array.isArray(info.title)" :class="['banner-title', `banner-title--${info.title_size || 'large'}`, { 'banner-btn-light': info.text_theme === 'dark' }]">
                   <div v-for="(item, index) in info.title" :key="index">{{ item }}</div>
                 </div>
-                <div v-else class="banner-title">{{ info.title }}</div>
+                <div v-else :class="['banner-title', `banner-title--${info.title_size || 'large'}`]">{{ info.title }}</div>
               </div>
               <!-- 副标题 -->
               <div class="banner-subtitle" v-if="info.subtitle">{{ info.subtitle }}</div>
@@ -152,6 +152,7 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
     >
       <OCarouselItem
         v-for="(info, index) in bannerInfo"
+        :key="index"
         class="banner-item"
         :class="`banner-item${index}`"
       >
@@ -238,16 +239,28 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  max-width: 70%;
+
+  @include respond('pad') {
+    max-width: 80%;
+  }
 }
 
 .banner-title {
   color: var(--o-color-info1);
   font-weight: 500;
   --d: 10px;
-  @include display1;
 
   &.banner-btn-light {
     color: white;
+  }
+
+  &--large {
+    @include display1;
+  }
+
+  &--small {
+    @include display2;
   }
 }
 
