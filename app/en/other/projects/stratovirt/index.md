@@ -84,36 +84,36 @@ MicroVM: This is the virtualization layer that leverages software and hardware c
 
 &nbsp;
 
-[Read more](https://gitee.com/openeuler/Virt-docs/blob/master/docs/en/virtualization_platform/stratovirt/stratovirt_introduction.md)
+[Read more](https://atomgit.com/openeuler/Virt-docs/blob/master/docs/en/virtualization_platform/stratovirt/stratovirt_introduction.md)
 
 ## Installing StratoVirt
 
 &nbsp;
 
-[Read more](https://gitee.com/openeuler/Virt-docs/blob/master/docs/en/virtualization_platform/stratovirt/install_stratovirt.md)
+[Read more](https://atomgit.com/openeuler/Virt-docs/blob/master/docs/en/virtualization_platform/stratovirt/install_stratovirt.md)
 
 ## Preparing the Environment
 
 &nbsp;
 
-[Read more](https://gitee.com/openeuler/Virt-docs/blob/master/docs/en/virtualization_platform/stratovirt/prepare_env.md)
+[Read more](https://atomgit.com/openeuler/Virt-docs/blob/master/docs/en/virtualization_platform/stratovirt/prepare_env.md)
 
 ## Configuring VMs
 
 &nbsp;
 
-[Read more](https://gitee.com/openeuler/Virt-docs/blob/master/docs/en/virtualization_platform/stratovirt/vm_configuration.md)
+[Read more](https://atomgit.com/openeuler/Virt-docs/blob/master/docs/en/virtualization_platform/stratovirt/vm_configuration.md)
 
 ## Managing VM Lifecycle
 
 &nbsp;
 
-[Read more](https://gitee.com/openeuler/Virt-docs/blob/master/docs/en/virtualization_platform/stratovirt/vm_management.md)
+[Read more](https://atomgit.com/openeuler/Virt-docs/blob/master/docs/en/virtualization_platform/stratovirt/vm_management.md)
 
 ## Connecting to iSula Security Containers
 
 &nbsp;
 
-[Read more](https://gitee.com/openeuler/Virt-docs/blob/master/docs/en/virtualization_platform/stratovirt/interconnect_isula.md)
+[Read more](https://atomgit.com/openeuler/Virt-docs/blob/master/docs/en/virtualization_platform/stratovirt/interconnect_isula.md)
 
 </MarkdownLayout>

@@ -15,7 +15,7 @@ head:
 
 ## 小个头，大能量
 
-[开启iSula之旅](https://gitee.com/openeuler/community/tree/master/sig/iSulad)
+[开启iSula之旅](https://atomgit.com/openeuler/community/tree/master/sig/iSulad)
 
 </MarkdownLayout>
 
@@ -77,19 +77,19 @@ isula-transform 配合 iSulad 2.0 推出，支持将 Docker 容器引擎管理�
 
 阅读iSula的基础信息
 
-[了解更多](https://gitee.com/openeuler/iSulad/blob/master/README.md)
+[了解更多](https://atomgit.com/openeuler/iSulad/blob/master/README.md)
 
 ### 架构说明
 
 了解iSula的架构说明
 
-[了解更多](https://gitee.com/openeuler/iSulad/blob/master/docs/design/architecture_zh.md)
+[了解更多](https://atomgit.com/openeuler/iSulad/blob/master/docs/design/architecture_zh.md)
 
 ### 编译手册
 
 学习isula编译手册
 
-[了解更多](https://gitee.com/openeuler/iSulad/blob/master/docs/build_docs/guide/build_guide_zh.md)
+[了解更多](https://atomgit.com/openeuler/iSulad/blob/master/docs/build_docs/guide/build_guide_zh.md)
 
 ## isula-build
 
@@ -97,13 +97,13 @@ isula-transform 配合 iSulad 2.0 推出，支持将 Docker 容器引擎管理�
 
 阅读iSula基础信息
 
-[了解更多](https://gitee.com/openeuler/isula-build/blob/master/README.zh.md)
+[了解更多](https://atomgit.com/openeuler/isula-build/blob/master/README.zh.md)
 
 ### 使用手册
 
 &nbsp;
 
-[了解更多](https://gitee.com/openeuler/isula-build/blob/master/doc/manual_zh.md)
+[了解更多](https://atomgit.com/openeuler/isula-build/blob/master/doc/manual_zh.md)
 
 ## isula-transform
 
@@ -111,7 +111,7 @@ isula-transform 配合 iSulad 2.0 推出，支持将 Docker 容器引擎管理�
 
 阅读iSula基础信息
 
-[了解更多](https://gitee.com/openeuler/isula-transform/blob/master/README.md)
+[了解更多](https://atomgit.com/openeuler/isula-transform/blob/master/README.md)
 
 </MarkdownLayout>
 
