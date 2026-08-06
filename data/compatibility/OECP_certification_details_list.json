@@ -16414,6 +16414,78 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "中国航空工业集团公司西安航空计算技术研究所",
+    "os_version": "ACoreLinux-RTV1.3.0.0-Phytium.tar.gz",
+    "arch": "aarch64",
+    "checksum": "6b4aaa13360972213dd8f264aec2efcd",
+    "base_openeuler_version": "openEuler Embedded 24.03 LTS",
+    "os_download_link": "https://actri.zhiye.com",
+    "friendly_link": "https://actri.zhiye.com",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2026/07/06",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 
 ]
