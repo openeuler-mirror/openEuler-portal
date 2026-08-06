@@ -32,7 +32,7 @@ interface LanguageOptionT {
 }
 
 const router = useRouter();
-const { lang } = useData();
+const { lang, frontmatter } = useData();
 const { lePadV, size } = useScreen();
 const commonStore = useCommon();
 const i18n = useI18n();
@@ -56,15 +56,22 @@ const activeIndex = computed(() => {
   const items = navData.value;
 
   const hrefMap = new Map<string, string>();
+  const segmentMap = new Map<string, string>();
   for (const item of items) {
-    collectLocalHrefs(item.children, item.id, hrefMap, localePrefix);
-    collectLocalHrefs(item.shortcut, item.id, hrefMap, localePrefix);
+    collectLocalHrefs(item.shortcut, item.id, hrefMap, null, localePrefix);
+    collectLocalHrefs(item.children, item.id, hrefMap, segmentMap, localePrefix);
+  }
+
+  if (frontmatter.value.simpleHeader) {
+    const simpleVal = String(frontmatter.value.simpleHeader);
+    const cleanSimple = simpleVal.split('#')[0].split('?')[0].replace(/\/$/, '');
+    const parentId = hrefMap.get(cleanSimple);
+    if (parentId) return parentId;
   }
 
   let bestMatch = '';
   let bestId = '';
-  for (const [href, parentId] of hrefMap) {
-    const cleanHref = href.split('#')[0].replace(/\/$/, '');
+  for (const [cleanHref, parentId] of hrefMap) {
     if ((path.startsWith(cleanHref) || path === cleanHref) && cleanHref.length > bestMatch.length) {
       bestMatch = cleanHref;
       bestId = parentId;
@@ -78,18 +85,28 @@ const activeIndex = computed(() => {
     for (const item of items) {
       if (item.id === firstSegment) return item.id;
     }
+    const mappedId = segmentMap.get(firstSegment);
+    if (mappedId) return mappedId;
   }
   return '';
 });
 
-function collectLocalHrefs(children: any[], parentId: string, hrefMap: Map<string, string>, localePrefix: string) {
+function collectLocalHrefs(children: any[], parentId: string, hrefMap: Map<string, string>, segmentMap: Map<string, string> | null, localePrefix: string) {
   if (!children) return;
   for (const child of children) {
     if (child.children) {
-      collectLocalHrefs(child.children, parentId, hrefMap, localePrefix);
+      collectLocalHrefs(child.children, parentId, hrefMap, segmentMap, localePrefix);
     }
     if (child.href && child.href.startsWith(localePrefix)) {
-      hrefMap.set(child.href, parentId);
+      const cleanHref = child.href.split('#')[0].split('?')[0].replace(/\/$/, '');
+      hrefMap.set(cleanHref, parentId);
+      if (segmentMap) {
+        const segments = cleanHref.slice(localePrefix.length).replace(/\/$/, '').split('/');
+        for (const seg of segments) {
+          const key = seg.replace(/-list$/, '');
+          if (!segmentMap.has(key)) segmentMap.set(key, parentId);
+        }
+      }
     }
   }
 }

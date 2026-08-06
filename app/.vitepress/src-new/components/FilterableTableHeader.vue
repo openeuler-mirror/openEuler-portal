@@ -425,6 +425,7 @@ watch(
   box-shadow: var(--o-shadow-2);
   padding: 12px 0;
   border-radius: 4px;
+  max-width: 300px;
 
   .filter-input {
     --input-radius: 4px;
@@ -452,6 +453,8 @@ watch(
     width: 100%;
     max-width: 300px;
     border-radius: var(--o-radius-xs);
+    --radio-input-bd-color-hover: var(--o-color-control1);
+    --radio-input-bd-color-active: var(--o-color-control1);
 
     @include hover {
       background-color: var(--o-color-control2-light);

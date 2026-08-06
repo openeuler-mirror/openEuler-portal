@@ -2,7 +2,7 @@
 import { reactive, ref, watch, onMounted, computed } from 'vue';
 import { useRouter, useData } from 'vitepress';
 
-import { OTable } from '@opensig/opendesign';
+import { OTable, OLink } from '@opensig/opendesign';
 
 import { useI18n } from '@/i18n';
 
@@ -136,7 +136,7 @@ const handleCurrentChange = (val: number) => {
 };
 
 const goApproveInfo = (id: number) => {
-  router.go(`${router.route.path}approve-info/?id=${JSON.stringify(id)}`);
+  return `${router.route.path}approve-info/?id=${JSON.stringify(id)}`;
 };
 
 const getOsTableList = (data: OsvQueryT) => {
@@ -273,34 +273,42 @@ watch(queryData, () => getOsTableList(queryData));
       style="width: 100%"
     >
       <template #td_osDownloadLink="{ row }">
-        <a
+        <OLink
           v-if="
             row.osDownloadLink.startsWith('http') ||
             row.osDownloadLink.startsWith('www')
           "
-          :href="row.osDownloadLink"
+          color="primary"
+          variant="text"
           target="_blank"
           rel="noopener noreferrer"
-          class="link"
-          >{{ row.osDownloadLink }}</a
+          :href="row.osDownloadLink"
         >
+          {{ row.osDownloadLink }}
+        </OLink>
         <span v-else>
           {{ row.osDownloadLink }}
         </span>
       </template>
       <template #td_details="{ row }">
-        <span class="link" @click="goApproveInfo(row.id)">{{
-          row.details
-        }}</span>
+        <OLink
+          color="primary"
+          variant="text"
+          :href="goApproveInfo(row.id)"
+        >
+          {{ row.details }}
+        </OLink>
       </template>
       <template #td_friendlyLink="{ row }">
-        <a
+        <OLink
+          color="primary"
+          variant="text"
           :href="row.friendlyLink"
           target="_blank"
           rel="noopener noreferrer"
-          class="link"
-          >{{ i18n.approve.TABLE_COLUMN.LINK }}</a
         >
+          {{ i18n.approve.TABLE_COLUMN.LINK }}
+        </OLink>
       </template>
     </OTable>
 
@@ -339,10 +347,14 @@ watch(queryData, () => getOsTableList(queryData));
             <span>{{ i18n.approve.TABLE_COLUMN.DATE }}:</span>{{ item.date }}
           </li>
           <li>
-            <span>{{ i18n.approve.TABLE_COLUMN.DETAILS }}:</span
-            ><span class="link" @click="goApproveInfo(item.id)">{{
-              item.details
-            }}</span>
+            <span>{{ i18n.approve.TABLE_COLUMN.DETAILS }}:</span>
+            <OLink
+              color="primary"
+              variant="text"
+              :href="goApproveInfo(item.id)"
+            >
+              {{ item.details }}
+            </OLink>
           </li>
           <li>
             <span>{{ i18n.approve.TABLE_COLUMN.LINK }}:</span
@@ -524,6 +536,14 @@ watch(queryData, () => getOsTableList(queryData));
   .link {
     color: var(--e-color-link1);
     cursor: pointer;
+  }
+  :deep(.o-link) {
+    .o-link-main {
+      display: inline;
+    }
+    .o-link-label {
+      display: inline;
+    }
   }
   :deep(.el-scrollbar__view) {
     .el-table__body {
