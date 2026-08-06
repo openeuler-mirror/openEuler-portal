@@ -82,11 +82,10 @@ export default {
     },
   ],
   en: [
-    // TODO: SP4 en PDF 待提供,PDF 到手后取消注释以下条目
-    // {
-    //   path: '/whitepaper/en/openEuler 24.03 LTS SP4 Technical White Paper.pdf',
-    //   summary: 'openEuler 24.03 LTS SP4 Technical White Paper',
-    // },
+    {
+      path: '/whitepaper/en/openEuler 24.03 LTS SP4 Technical White Paper.pdf',
+      summary: 'openEuler 24.03 LTS SP4 Technical White Paper',
+    },
     {
       path: '/whitepaper/en/openEuler 24.03 LTS SP3 Technical White Paper.pdf',
       summary: 'openEuler 24.03 LTS SP3 Technical White Paper',
