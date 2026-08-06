@@ -382,6 +382,15 @@ onUnmounted(() => {
       <template #td_updateTime="{ row }">
         <p>{{ changeTimeStamp(new Date(row.updateTime).getTime()) }}</p>
       </template>
+      <template #empty>
+        <ResultEmpty
+          :style="{
+            'margin-top': '40px',
+            '--result-image-width': '140px',
+            '--result-image-height': '170px',
+          }"
+        />
+      </template>
     </OTable>
     <!-- 分页 -->
     <div v-if="total > COUNT_PER_PAGE[0]" class="pagination">
