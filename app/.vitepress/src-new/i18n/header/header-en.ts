@@ -75,6 +75,12 @@ export default {
               description: "Repo of openEuler's community releases.",
               href: 'https://repo.openeuler.openatom.cn/',
             },
+            {
+              label: 'SkillHub',
+              description:
+                'Explore, evaluate, and contribute openEuler skills.',
+              href: 'https://openEuler-skillhub.test.osinfra.cn',
+            },
           ],
         },
       ],

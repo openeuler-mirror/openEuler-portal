@@ -1,7 +1,7 @@
 import event_dark from '~@/assets/category/home/display-zone/event_dark.svg';
 import event_light from '~@/assets/category/home/display-zone/event_light.svg';
-import migration_dark from '~@/assets/category/home/display-zone/migration_dark.svg';
-import migration_light from '~@/assets/category/home/display-zone/migration_light.svg';
+import skillhub_dark from '~@/assets/category/home/display-zone/skillhub_dark.svg';
+import skillhub_light from '~@/assets/category/home/display-zone/skillhub.svg';
 import security_dark from '~@/assets/category/home/display-zone/security_dark.svg';
 import security_light from '~@/assets/category/home/display-zone/security_light.svg';
 import whitePaper_dark from '~@/assets/category/home/display-zone/white-paper_dark.svg';
@@ -46,20 +46,20 @@ export default [
   },
   {
     title: {
-      zh: '迁移专区',
-      en: 'Migration Center',
+      zh: 'SkillHub',
+      en: 'SkillHub',
     },
     icon: {
-      dark: migration_dark,
-      light: migration_light,
+      dark: skillhub_dark,
+      light: skillhub_light,
     },
     description: {
-      zh: '教你替换操作系统成openEuler',
-      en: 'Learn how to migrate to openEuler.',
+      zh: '探索、评估、贡献openEuler技能',
+      en: 'Explore, evaluate, and contribute openEuler skills.',
     },
     link: {
-      zh: '/zh/migration/',
-      en: '/en/migration/',
+      zh: 'https://openEuler-skillhub.test.osinfra.cn',
+      en: 'https://openEuler-skillhub.test.osinfra.cn',
     },
   },
   {
