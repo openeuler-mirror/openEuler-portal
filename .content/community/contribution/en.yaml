@@ -1,0 +1,87 @@
+# Contribution page data
+#
+# Configuration data (image paths, links) extracted from i18n/contribution.
+# Translation strings (LOOK_DESC/LOOK_MAP/PRINT_MAP) remain in i18n files.
+# Images live in ./images/. PNGs do not use ?raw (<img> consumption).
+
+# background_img: PC contribution map background (light/dark, en-differentiated)
+background_img_light: ./images/contribution-map_light_en.png
+background_img_dark: ./images/contribution-map_dark_en.png
+
+# background_img_h5: Mobile contribution map background (light/dark, en-differentiated)
+background_img_h5_light: ./images/contribution-map_light_en_mobile.png
+background_img_h5_dark: ./images/contribution-map_dark_en_mobile.png
+
+# download_pdf_url: Contribution map PDF download link
+download_pdf_url: /category/contribution/openeuler-trail-chess-en.pdf
+
+# link_list: Contribution map hotspot link list (corresponds to positioned areas on the map)
+#   url: Link URL
+#   blank: Whether to open in new window
+link_list:
+  - url: 'https://www.openeuler.org/en/download/#get-openeuler'
+    blank: true
+  - url: 'https://atomgit.com/openeuler'
+    blank: true
+  - url: '/en/other/projects/stratovirt/'
+    blank: true
+  - url: '/en/other/projects/atune/'
+    blank: true
+  - url: '/en/other/projects/secgear/'
+    blank: true
+  - url: '/en/other/projects/isula/'
+    blank: true
+  - url: 'https://pkgmanage.openeuler.org/'
+    blank: true
+  - url: 'https://compass-ci.openeuler.org/'
+    blank: true
+  - url: '/en/other/projects/bishengjdk/'
+    blank: true
+  - url: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0'
+    blank: true
+  - url: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0'
+    blank: true
+  - url: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0'
+    blank: true
+  - url: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0'
+    blank: true
+  - url: 'https://www.openeuler.org/en/blog/2022-11-25-cla/CLA%E7%AD%BE%E7%BD%B2%E6%B5%81%E7%A8%8B.html'
+    blank: true
+  - url: '/en/sig/role-description/'
+    blank: true
+  - url: '/en/sig/name=TC'
+    blank: true
+  - url: 'https://mailweb.openeuler.org/postorius/lists/tc@openeuler.org/'
+    blank: true
+  - url: 'https://atomgit.com/openeuler/community/blob/master/en/contributors/create-package.md'
+    blank: true
+  - url: 'https://atomgit.com/src-openeuler'
+    blank: true
+  - url: 'https://quickissue.openeuler.org/en/issues/'
+    blank: true
+  - url: 'https://atomgit.com/openeuler/community/blob/master/en/contributors/packaging.md'
+    blank: true
+  - url: '/en/community/contribution/detail.html#_4-2-2-submit-code'
+    blank: true
+  - url: '/en/community/contribution/detail.html#_4-2-4-review-code'
+    blank: true
+  - url: '/en/community/contribution/detail.html#_4-2-3-contribute-software-packages-or-package-community-components'
+    blank: true
+  - url: 'https://atomgit.com/openeuler/security-committee/blob/master/security-disclosure-en.md'
+    blank: true
+  - url: 'https://atomgit.com/openeuler/QA/blob/master/GuideBook/community-test-system.md'
+    blank: true
+  - url: '/en/community/program/'
+    blank: true
+  - url: 'https://forum.openeuler.org?locale=en'
+    blank: true
+  - url: '/en/interaction/blog-list/'
+    blank: true
+  - url: '/en/showcase/'
+    blank: true
+  - url: '/en/community/contribution/detail.html#_4-3-2-other-community-work'
+    blank: true
+  - url: '/en/sig/sig-list/'
+    blank: true
+  - url: '/en/sig/sig-guidance/'
+    blank: true

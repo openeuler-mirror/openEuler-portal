@@ -4,14 +4,14 @@ import { useData } from 'vitepress';
 
 import { useCommon } from '@/stores/common';
 
-import portalInfoData from '@/data/migration/migration-portal';
+import migrationContent from '#content/migration';
 
 const commonStore = useCommon();
 
 const { lang } = useData();
 
 const portalInfo = computed(() => {
-  return portalInfoData[lang.value as 'zh' | 'en'];
+  return migrationContent[lang.value as 'zh' | 'en'];
 });
 
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
@@ -22,32 +22,32 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
     <div class="migration-path-content">
       <OCard>
         <div class="content-pc">
-          <img :src="portalInfo.path.img.light" />
+          <img :src="portalInfo.path.img_light" />
         </div>
         <div class="content-mobile">
           <div class="content-mobile-item">
-            <p>{{ portalInfo.path.imgMo.top.title }}</p>
+            <p>{{ portalInfo.path.img_mo.top.title }}</p>
             <div
-              class="item-dexcription"
+              class="item-description"
               :style="{
                 color: isDark ? 'var(--e-color-white)' : '',
               }"
             >
-              {{ portalInfo.path.imgMo.top.dexcription }}
+              {{ portalInfo.path.img_mo.top.description }}
             </div>
-            <img :src="portalInfo.path.imgMo.top.img" />
+            <img :src="portalInfo.path.img_mo.top.img" />
           </div>
           <div class="content-mobile-item" :style="{ 'margin-top': '24px' }">
-            <p>{{ portalInfo.path.imgMo.bottom.title }}</p>
+            <p>{{ portalInfo.path.img_mo.bottom.title }}</p>
             <div
-              class="item-dexcription"
+              class="item-description"
               :style="{
                 color: isDark ? 'var(--e-color-white)' : '',
               }"
             >
-              {{ portalInfo.path.imgMo.bottom.dexcription }}
+              {{ portalInfo.path.img_mo.bottom.description }}
             </div>
-            <img :src="portalInfo.path.imgMo.bottom.img" />
+            <img :src="portalInfo.path.img_mo.bottom.img" />
           </div>
         </div>
       </OCard>
@@ -133,7 +133,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
             margin: 0;
           }
         }
-        .item-dexcription {
+        .item-description {
           @media screen and (max-width: 768px) {
             font-size: var(--e-font-size-tip);
             line-height: var(--e-line-height-tip);

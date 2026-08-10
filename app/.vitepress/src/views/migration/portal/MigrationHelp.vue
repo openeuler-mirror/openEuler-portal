@@ -3,12 +3,12 @@ import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
 import { computed } from 'vue';
 
-import portalInfoData from '@/data/migration/migration-portal';
+import migrationContent from '#content/migration';
 
 const { lang } = useData();
 
 const portalInfo = computed(() => {
-  return portalInfoData[lang.value as 'zh' | 'en'];
+  return migrationContent[lang.value as 'zh' | 'en'];
 });
 
 const commonStore = useCommon();
@@ -31,24 +31,24 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
                 :style="{
                   color: isDark ? 'var(--e-color-white)' : '',
                 }"
-                >{{ item.textLeft
+                >{{ item.text_left
                 }}<a
                   :href="item.link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >{{ item.linkText }}</a
-                >{{ item.textRight }}</span
+                  >{{ item.link_text }}</a
+                >{{ item.text_right }}</span
               >
             </div>
           </div>
-          <div v-if="portalInfo.help?.officalQR.img" class="help-box-qrs">
+          <div v-if="portalInfo.help?.offical_qr.img" class="help-box-qrs">
             <div class="qrs-item">
-              <img :src="portalInfo.help.officalQR.img" />
-              <p>{{ portalInfo.help.officalQR.text }}</p>
+              <img :src="portalInfo.help.offical_qr.img" />
+              <p>{{ portalInfo.help.offical_qr.text }}</p>
             </div>
             <div class="qrs-item">
-              <img :src="portalInfo.help.assistantQR.img" />
-              <p>{{ portalInfo.help.assistantQR.text }}</p>
+              <img :src="portalInfo.help.assistant_qr.img" />
+              <p>{{ portalInfo.help.assistant_qr.text }}</p>
             </div>
           </div>
         </div>

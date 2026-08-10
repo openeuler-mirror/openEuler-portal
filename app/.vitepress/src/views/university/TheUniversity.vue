@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { ref, computed, onMounted } from 'vue';
-import { useI18n } from '@/i18n';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
 
@@ -14,11 +13,19 @@ import universityIllustration from '@/assets/illustrations/university.png';
 
 import IconChevronRight from '~icons/app/icon-chevron-right.svg';
 
-const i18n = useI18n();
-const universityData = computed(() => i18n.value.university);
+import universitiesContent from '#content/universities';
+
+const universityData = computed(() => universitiesContent.zh);
 
 const screenWidth = useWindowResize();
 const isMobile = computed(() => (screenWidth.value <= 768 ? true : false));
+
+const getBgImg = (item: any) =>
+  item.bg_img_mb
+    ? screenWidth.value <= 768
+      ? item.bg_img_mb
+      : item.bg_img_pc
+    : item.bg_img_pc;
 
 // 处理导航锚点功能
 const navRef: any = ref([]);
@@ -84,17 +91,17 @@ onMounted(() => {
       />
       <div class="university-technical">
         <h2
-          :id="universityData.technicalGroup.title"
+          :id="universityData.technical_group.title"
           class="university-technical-title floor-title"
         >
-          {{ universityData.technicalGroup.title }}
+          {{ universityData.technical_group.title }}
         </h2>
         <div class="university-technical-description">
-          <span>{{ universityData.technicalGroup.description.text }}</span>
+          <span>{{ universityData.technical_group.description.text }}</span>
         </div>
         <div class="university-technical-group">
           <OCard
-            v-for="item in universityData.technicalGroup.groupList"
+            v-for="item in universityData.technical_group.group_list"
             :key="item.name"
             class="group-item"
           >
@@ -108,7 +115,7 @@ onMounted(() => {
               </div>
             </div>
             <div
-              v-for="itemContent in item.contentList"
+              v-for="itemContent in item.content_list"
               :key="itemContent.description"
               class="group-item-content"
             >
@@ -126,62 +133,62 @@ onMounted(() => {
       </div>
       <div class="university-activity">
         <h2
-          :id="universityData.activityGame.title"
+          :id="universityData.activity_game.title"
           class="university-activity-title floor-title"
         >
-          {{ universityData.activityGame.title }}
+          {{ universityData.activity_game.title }}
         </h2>
         <div class="university-activity-list">
           <OCard
-            v-for="item in universityData.activityGame.activityList"
+            v-for="item in universityData.activity_game.activity_list"
             :key="item.title"
             class="activity-item"
             :class="item.id"
-            :style="{ backgroundImage: `url(${item.bgImg})` }"
+            :style="{ backgroundImage: `url(${getBgImg(item)})` }"
           >
             <div class="activity-item-left">
               <h3 class="activity-item-title">{{ item.title }}</h3>
               <div class="activity-item-detail">{{ item.detail }}</div>
               <p v-if="!isMobile" class="activity-item-link">
                 <a
-                  :href="item.linkHref"
+                  :href="item.link_href"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {{ item.linkText }}
+                  {{ item.link_text }}
                 </a>
               </p>
               <div v-else class="activity-item-footer">
                 <a
-                  :href="item.linkHref"
+                  :href="item.link_href"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {{ item.linkText }}
+                  {{ item.link_text }}
                 </a>
-                <div v-if="item.bgInset" class="activity-item-inset">
-                  <img :src="item.bgInset" alt="" />
+                <div v-if="item.bg_inset" class="activity-item-inset">
+                  <img :src="item.bg_inset" alt="" />
                 </div>
               </div>
             </div>
-            <div v-if="item.bgInset && !isMobile" class="activity-item-right">
-              <img :src="item.bgInset" alt="" />
+            <div v-if="item.bg_inset && !isMobile" class="activity-item-right">
+              <img :src="item.bg_inset" alt="" />
             </div>
           </OCard>
         </div>
       </div>
       <div class="university-contribution">
         <h2
-          :id="universityData.universityContribution.title"
+          :id="universityData.university_contribution.title"
           class="university-contribution-title floor-title"
         >
-          {{ universityData.universityContribution.title }}
+          {{ universityData.university_contribution.title }}
         </h2>
         <div class="university-contribution-list1">
           <OCard
-            v-for="item in universityData.universityContribution
-              .universityContentList"
-            :key="item.title"
+            v-for="item in universityData.university_contribution
+              .university_content_list"
+            :key="item.name"
             class="university-item"
           >
             <div class="item-head">
@@ -193,10 +200,10 @@ onMounted(() => {
             </div>
             <div class="item-footer">
               <div class="item-tag">
-                <span class="tag-title">{{ item.contributionName }}</span>
+                <span class="tag-title">{{ item.contribution_name }}</span>
                 <p class="tag-box">
                   <span
-                    v-for="itemTag in item.contributionTagList"
+                    v-for="itemTag in item.contribution_tag_list"
                     :key="itemTag"
                     class="tag-name"
                     >{{ itemTag }}</span
@@ -205,21 +212,21 @@ onMounted(() => {
               </div>
               <p class="item-link">
                 <a
-                  v-if="item.contributionDetail"
-                  :href="item.contributionDetailLink"
+                  v-if="item.contribution_detail"
+                  :href="item.contribution_detail_link"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span>{{ item.contributionDetail }}</span>
+                  <span>{{ item.contribution_detail }}</span>
                   <OIcon class="right-icon"><IconChevronRight /></OIcon>
                 </a>
                 <a
-                  v-if="item.officialWebsite"
-                  :href="item.officialWebsiteLink"
+                  v-if="item.official_website"
+                  :href="item.official_website_link"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span>{{ item.officialWebsite }}</span>
+                  <span>{{ item.official_website }}</span>
                   <OIcon class="right-icon"><IconChevronRight /></OIcon>
                 </a>
               </p>
@@ -228,8 +235,8 @@ onMounted(() => {
         </div>
         <div class="university-contribution-list2">
           <OCard
-            v-for="item in universityData.universityContribution.universityList"
-            :key="item.title"
+            v-for="item in universityData.university_contribution.university_list"
+            :key="item.name"
             class="list2-university-item"
           >
             <div v-if="false" class="list2-item-logo">
@@ -238,16 +245,16 @@ onMounted(() => {
             <h4 class="list2-item-name">{{ item.name }}</h4>
           </OCard>
           <OCard class="list2-university-more">
-            {{ universityData.universityContribution.more }}
+            {{ universityData.university_contribution.more }}
           </OCard>
         </div>
       </div>
       <div class="university-mooc">
         <h2
-          :id="universityData.universityMooc"
+          :id="universityData.university_mooc"
           class="university-mooc-title floor-title"
         >
-          {{ universityData.universityMooc }}
+          {{ universityData.university_mooc }}
         </h2>
         <MoocContent></MoocContent>
       </div>

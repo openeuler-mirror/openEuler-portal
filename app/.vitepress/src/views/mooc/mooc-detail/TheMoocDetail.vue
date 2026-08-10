@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref, onUpdated, computed } from 'vue';
-import { useData } from 'vitepress';
+import { useData, useRouter } from 'vitepress';
+import moocDetailContent from '#content/learn/mooc/detail';
+import moocContent from '#content/learn/mooc';
 import { useI18n } from '@/i18n';
 import { useCommon } from '@/stores/common';
 import useWindowResize from '@/components/hooks/useWindowResize';
@@ -27,11 +29,13 @@ import type {
 } from '@/shared/@types/type-mooc';
 
 const i18n = useI18n();
+const router = useRouter();
 const language = useData().lang;
 const commonStore = useCommon();
 const screenWidth = useWindowResize();
 
 const moocData = computed(() => i18n.value.mooc);
+const moocDetailData = computed(() => moocDetailContent.zh.course_list);
 
 const isNowPlay = ref(false);
 const defaultProps = ref({
@@ -103,11 +107,11 @@ function setCheckedNode() {
 }
 // 读取要渲染的课程内容数据
 function getContent() {
-  const listData = moocData.value.MOOC_DATA.COURSE_LIST;
+  const listData = moocDetailData.value;
   listData.forEach((item: any) => {
-    menuDataList.value = item.NAV_DATA;
-    courseH1.value = item.COURSE_H1;
-    welcomeStr.value = item.WELCOME;
+    menuDataList.value = item.nav_data;
+    courseH1.value = item.course_h1;
+    welcomeStr.value = item.welcome;
   });
 }
 // 控制视频的播放和暂停
@@ -230,6 +234,10 @@ function next() {
   setCourseData(allNodeList.value[courseIndex.value]);
 }
 
+// 返回首页
+const goHome = () => {
+  router.go(`/${language.value}/`);
+};
 const iconMenuShow = computed(() => {
   return commonStore.iconMenuShow;
 });
@@ -250,13 +258,12 @@ const iconMenuShow = computed(() => {
           >
             <div class="nav-tree">
               <div class="nav-top">
-                <a :href="`/${language}/`">
-                  <img
-                    class="logo"
-                    :src="logo"
-                    alt="openEuler logo"
-                  />
-                </a>
+                <img
+                  class="logo"
+                  :src="logo"
+                  alt="openEuler logo"
+                  @click="goHome"
+                />
                 <OIcon @click="toggleMenu(false)"><IconCancel /></OIcon>
               </div>
               <NavTree
@@ -271,7 +278,7 @@ const iconMenuShow = computed(() => {
         </ClientOnly>
         <BreadCrumbs
           :bread1="moocData.MOOC.MOOC"
-          :bread2="moocData.MOOC.MOOC_COURSE[0].TITLE"
+          :bread2="moocContent.zh.mooc_course[0].title"
           link1="/zh/learn/mooc/"
           class="bread"
         />
@@ -352,7 +359,7 @@ const iconMenuShow = computed(() => {
       <div v-else class="detail-pc">
         <BreadCrumbs
           :bread1="moocData.MOOC.MOOC"
-          :bread2="moocData.MOOC.MOOC_COURSE[0].TITLE"
+          :bread2="moocContent.zh.mooc_course[0].title"
           link1="/zh/learn/mooc/"
         />
         <h1>{{ courseH1 }}</h1>

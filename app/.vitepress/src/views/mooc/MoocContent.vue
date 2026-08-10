@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useI18n } from '@/i18n';
+import { useData } from 'vitepress';
+import moocContent from '#content/learn/mooc';
 
 import IconArrowRight1 from '~icons/app/icon-arrow-right.svg';
 
-const i18n = useI18n();
+const { lang } = useData();
+
+const moocCourse = computed(() => moocContent[lang.value as 'zh' | 'en'].mooc_course);
 
 const pathTarget = computed(() => (path: string) => {
   return path.startsWith('https') ? '_blank' : '_self';
@@ -14,22 +17,22 @@ const pathTarget = computed(() => (path: string) => {
 <template>
   <div class="mooc-content">
     <OContainer
-      v-for="item in i18n.mooc.MOOC.MOOC_COURSE"
+      v-for="item in moocCourse"
       :key="item.id"
       class="mooc-item"
     >
       <div class="box">
-        <h3>{{ item.TITLE }}</h3>
-        <p>{{ item.DESC }}</p>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.desc }}</p>
         <div class="btn">
           <a
-            v-for="subitem in item.CHILDREN"
-            :key="subitem.NAME"
-            :href="subitem.PATH"
-            :target="pathTarget(subitem.PATH)"
+            v-for="subitem in item.children"
+            :key="subitem.name"
+            :href="subitem.path"
+            :target="pathTarget(subitem.path)"
           >
             <OButton size="mini" type="text" animation>
-              <span>{{ subitem.NAME }}</span>
+              <span>{{ subitem.name }}</span>
               <OIcon>
                 <IconArrowRight1 />
               </OIcon>
@@ -38,7 +41,7 @@ const pathTarget = computed(() => (path: string) => {
         </div>
       </div>
       <div class="cover">
-        <img :src="item.IMG" alt="" />
+        <img :src="item.img" alt="" />
       </div>
     </OContainer>
   </div>

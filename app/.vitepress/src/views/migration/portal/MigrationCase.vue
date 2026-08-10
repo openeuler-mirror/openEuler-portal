@@ -3,7 +3,7 @@ import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
 import { computed } from 'vue';
 
-import portalInfoData from '@/data/migration/migration-portal';
+import migrationContent from '#content/migration';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import { OButton } from '@opensig/opendesign';
@@ -15,7 +15,7 @@ const { lang } = useData();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 
 const portalInfo = computed(() => {
-  return portalInfoData[lang.value as 'zh' | 'en'];
+  return migrationContent[lang.value as 'zh' | 'en'];
 });
 </script>
 
@@ -38,7 +38,7 @@ const portalInfo = computed(() => {
               :style="{
                 color: isDark ? 'var(--e-color-white)' : '',
               }"
-              >{{ item.dexcription }}</span
+              >{{ item.description }}</span
             >
           </a>
         </div>

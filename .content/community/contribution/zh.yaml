@@ -1,0 +1,99 @@
+# 贡献攻略页数据 / Contribution page data
+#
+# 从 i18n/contribution 中提取的配置型数据（图片路径、链接）。
+# 翻译文案（LOOK_DESC/LOOK_MAP/PRINT_MAP）保留在 i18n 文件中。
+# 图片就近存放在 ./images/，PNG 不带 ?raw（<img> 消费）。
+
+# background_img: PC 端贡献地图背景图（亮色/暗色，zh 差异化）
+background_img_light: ./images/contribution-map_light_zh.png
+background_img_dark: ./images/contribution-map_dark_zh.png
+
+# background_img_h5: 移动端贡献地图背景图（亮色/暗色，zh 差异化）
+background_img_h5_light: ./images/contribution-map_light_zh_mobile.png
+background_img_h5_dark: ./images/contribution-map_dark_zh_mobile.png
+
+# download_pdf_url: 贡献攻略地图 PDF 下载链接
+download_pdf_url: /category/contribution/openeuler-trail-chess-zh.pdf
+
+# link_list: 贡献地图热点链接列表（与地图上的定位区域一一对应）
+#   url: 链接地址
+#   blank: 是否新窗口打开
+link_list:
+  - url: 'https://www.openeuler.org/zh/download/#get-openeuler'
+    blank: true
+  - url: 'https://atomgit.com/openeuler'
+    blank: true
+  - url: '/zh/other/projects/stratovirt/'
+    blank: true
+  - url: '/zh/other/projects/atune/'
+    blank: true
+  - url: '/zh/other/projects/secgear/'
+    blank: true
+  - url: '/zh/other/projects/isula/'
+    blank: true
+  - url: 'https://pkgmanage.openeuler.org/'
+    blank: true
+  - url: 'https://compass-ci.openeuler.org/'
+    blank: true
+  - url: '/zh/other/projects/bishengjdk/'
+    blank: true
+  - url: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0'
+    blank: true
+  - url: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0'
+    blank: true
+  - url: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0'
+    blank: true
+  - url: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0'
+    blank: true
+  - url: 'https://www.openeuler.org/zh/blog/2022-11-25-cla/CLA%E7%AD%BE%E7%BD%B2%E6%B5%81%E7%A8%8B.html'
+    blank: true
+  - url: '/zh/sig/role-description/'
+    blank: true
+  - url: '/zh/sig/TC'
+    blank: true
+  - url: 'https://mailweb.openeuler.org/postorius/lists/tc@openeuler.org/'
+    blank: true
+  - url: 'https://raw.atomgit.com/openeuler/community/raw/master/zh/contributors/openEuler%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf#page=4'
+    blank: true
+  - url: 'https://raw.atomgit.com/openeuler/community/raw/master/zh/contributors/openEuler%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf#page=4'
+    blank: true
+  - url: 'https://atomgit.com/openeuler/community/blob/master/zh/contributors/create-package.md'
+    blank: true
+  - url: 'https://atomgit.com/src-openeuler'
+    blank: true
+  - url: 'https://quickissue.openeuler.org/zh/issues/'
+    blank: true
+  - url: '/zh/community/contribution/detail.html#_4-2-3-贡献软件包-为社区组件打包'
+    blank: true
+  - url: 'https://atomgit.com/openeuler/community/blob/master/zh/contributors/packaging.md'
+    blank: true
+  - url: '/zh/community/contribution/detail.html#_4-2-2-贡献编码'
+    blank: true
+  - url: '/zh/community/contribution/detail.html#_4-2-4-检视代码'
+    blank: true
+  - url: 'https://atomgit.com/openeuler/security-committee/blob/master/security-disclosure.md'
+    blank: true
+  - url: 'https://atomgit.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E6%B5%8B%E8%AF%95%E4%BD%93%E7%B3%BB%E4%BB%8B%E7%BB%8D.md'
+    blank: true
+  - url: 'https://atomgit.com/openeuler/community/blob/master/zh/contributors/non-code-contributions.md'
+    blank: true
+  - url: '/zh/community/program/'
+    blank: true
+  - url: '/zh/community/user-group/'
+    blank: true
+  - url: 'https://forum.openeuler.org/'
+    blank: true
+  - url: '/zh/universities/'
+    blank: true
+  - url: '/zh/interaction/blog-list/'
+    blank: true
+  - url: '/zh/showcase/'
+    blank: true
+  - url: '/zh/community/contribution/detail.html#_4-3-3-社区其他工作'
+    blank: true
+  - url: '/zh/sig/sig-list/'
+    blank: true
+  - url: '/zh/sig/sig-guidance/'
+    blank: true
+  - url: 'https://www.bilibili.com/video/BV12A411o7zY/?spm_id_from=333.337.search-card.all.click&vd_source=0aa547ea87e7a7505cf544eacc2236ac'
+    blank: true

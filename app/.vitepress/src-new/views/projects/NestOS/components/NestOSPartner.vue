@@ -6,24 +6,12 @@ import AppSection from '~@/components/AppSection.vue';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
-import qiling from '~@/assets/category/nestos/qiling.png';
-import SkysolidissLogo from '@/assets/nestos/partner/skysolidiss.jpg';
+import nestosContent from '#content/nestos';
 
 const { t } = useLocale();
 const { lePadV, lePad, leLaptop } = useScreen();
 
-const partners = [
-  {
-    name: 'KylinOS',
-    logo: qiling,
-    href: 'https://www.kylinos.cn/',
-  },
-  {
-    name: 'Skysolidiss',
-    logo: SkysolidissLogo,
-    href: 'https://www.skysolidiss.com.cn/',
-  },
-];
+const partners = computed(() => nestosContent.zh.partners);
 
 const gap = computed(() => {
   if (lePadV.value) {

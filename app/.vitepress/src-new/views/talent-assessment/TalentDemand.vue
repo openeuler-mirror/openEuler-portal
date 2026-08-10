@@ -1,26 +1,24 @@
 <script lang="ts" setup>
-// TODO: 使用新主题切换 hook
+import { computed } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useCommon } from '@/stores/common';
 
 import { OCard, OLink, OIcon, ODivider } from '@opensig/opendesign';
 
-import { useScreen } from '~@/composables/useScreen';
-
 import IconOutlink from '~icons/yuanrong/icon-outlink.svg';
 
-import talentDemand from '~@/data/talent/talent-demand';
+import talentAssessmentContent from '#content/talent-assessment';
 
 const { theme } = storeToRefs(useCommon());
 
-const { isPhone } = useScreen();
+const talentDemand = computed(() => talentAssessmentContent.zh.talent_demand);
 </script>
 <template>
   <div class="talent-demand">
     <h2 class="talent-title">{{ $t('talent.talentdemandTitle') }}</h2>
     <p class="introduce">{{ $t('talent.talentdemandIntro') }}</p>
-    <OCard v-for="companyData in talentDemand" class="talent-demand-card">
-      <img class="card-img" :src="companyData.logo[theme]" alt="" />
+    <OCard v-for="companyData in talentDemand" :key="companyData.company" class="talent-demand-card">
+      <img class="card-img" :src="theme === 'light' ? companyData.logo_light : companyData.logo_dark" alt="" />
       <div class="card-info">
         <h4 class="company">{{ companyData.company }}</h4>
         <p class="company-introduce">{{ companyData.intro }}</p>

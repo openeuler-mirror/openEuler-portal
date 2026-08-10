@@ -1,0 +1,65 @@
+# Projects page data
+#
+# project_data: Project card list (ordered by display position)
+#   title: Project name
+#   desc: Project description
+#   icon: Project icon path (empty string = no icon, PNG <OFigure>)
+#   url: Project detail page link (relative to site root)
+#   atomgit_url: AtomGit repository link (optional)
+#   gitee_url: Gitee repository link (optional, some items empty string)
+#   tag: Tag (optional, e.g. NEW)
+
+project_data:
+  - title: Intelligence BooM
+    desc: 'Intelligence BooM is an open source AI foundational software solution, the result of a joint effort by community members and partners. It comprises over 20 open source components and the 7 major platforms: heterogeneous convergence, task management, data management, runtime acceleration, domain model platform, intelligent application platform, and full-stack security.'
+    icon: ''
+    url: /projects/intelligence-boom
+    gitee_url: ''
+    tag: NEW
+  - title: UB Service Core
+    desc: 'Fully open sourced to the openEuler community with multi-OS support, UB Service Core delivers five essential cluster-level system services. By leveraging a peer-to-peer interconnect architecture, it boosts application performance by 30%-50%, fostering a robust software ecosystem for UnifiedBus.'
+    icon: ''
+    url: /projects/ub-service-core
+    atomgit_url: ''
+    tag: NEW
+  - title: UB OS Component
+    desc: 'UB OS Component extends the OS framework to better support UB. It abstracts and decouples heterogeneous hardware, and creates a unified memory address space. This enables global resource scheduling, dynamic combination and scaling of computing resources, and efficient communication across devices, thereby unlocking the full potential of UnifiedBus hardware.'
+    icon: ''
+    url: /projects/ub-os-component
+    atomgit_url: ''
+    tag: NEW
+  - title: A-Tune
+    desc: 'A-Tune is an automatic and intelligent performance tuning engine developed based on openEuler. It adopts AI technologies to ensure the optimal service running. A-Tune builds precise models for services running on the operating system, understands service features dynamically to infer specific applications. And it adjusts the parameters based on service loads to provide the optimal parameter configurations.'
+    icon: ./images/a-tune.png
+    url: /other/projects/atune/
+    atomgit_url: 'https://atomgit.com/openeuler/A-Tune'
+  - title: iSula
+    desc: 'iSulad provides a unified architecture for different CT and IT requirements.'
+    icon: ./images/iSula.png
+    url: /other/projects/isula/
+    atomgit_url: 'https://atomgit.com/openeuler/iSulad'
+  - title: secGear
+    desc: 'secGear is a confidential computing development suite used to develop secure applications in the computing industry. It aims to provide a unified development framework for different hardware devices, shielding the differences between underlying confidential computing architectures and APIs. Currently, secGear supports Intel SGX hardware and Arm TrustZone (iTrustee supported).'
+    icon: ./images/secGear.png
+    url: /other/projects/secgear/
+    atomgit_url: 'https://atomgit.com/openeuler/secGear'
+  - title: StratoVirt
+    desc: 'StratoVirt is an enterprise-grade virtualization cloud platform that uses a single architecture to support VM, containers, and serverless data center scenarios. StratoVirt has competitive advantages in key technologies such as lightweight and low noise, software and hardware collaboration, as well as premium security using Rust language.'
+    icon: ./images/stratoVirt.png
+    url: /other/projects/stratovirt/
+    atomgit_url: 'https://atomgit.com/openeuler/stratovirt'
+  - title: BiSheng JDK
+    desc: 'As a downstream product of OpenJDK, BiSheng JDK is a high-performance OpenJDK distribution that can be used in production environments. BiSheng JDK fixes some performance and stability issues encountered in Huawei internal applications, optimizes performance and enhances stability on the ARM architecture, and delivers improved performance in big data scenarios.'
+    icon: ''
+    url: /other/projects/bishengjdk/
+    atomgit_url: 'https://atomgit.com/openeuler/bishengjdk-8'
+  - title: openEuler Intelligence
+    desc: 'openEuler Intelligence is a comprehensive large language model (LLM) platform built on openEuler. It offers fundamental capabilities for integrating with OpenAI APIs and creating custom local knowledge bases. The platform also enables users to register semantic interfaces and Model Context Protocol (MCP) services, and develop Agent-based applications and workflows. Available in both web and client versions, it delivers exceptional convenience for developers and enterprises alike.'
+    icon: ./images/intelligence.png
+    url: /projects/intelligence/
+    atomgit_url: 'https://atomgit.com/openeuler/euler-copilot-framework'
+  - title: openYuanrong
+    desc: 'openYuanrong is a Serverless distributed compute engine that unifies diverse applications, from AI and big data to microservices, on a single, streamlined architecture. It provides multi-language function interfaces that simplify the development of complex distributed applications to feel just like writing a local program. Powered by dynamic scheduling and efficient data sharing, openYuanrong ensures high-performance execution and maximum cluster resource utilization.'
+    icon: ./images/yuanrong.png
+    url: /projects/yuanrong
+    atomgit_url: ''

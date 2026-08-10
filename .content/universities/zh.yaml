@@ -1,0 +1,189 @@
+# 高校页面数据 / Universities page data
+#
+# 仅 zh 版本（en 页面不存在）。
+# 板块按页面从上到下视觉顺序排列。
+# 图片就近存放在 ./images/，由 OPlusYamlContentVitePlugin 接入 Vite 资源管线输出带 hash 的真实 URL。
+
+# title: 页面标题（用于 BannerLevel2）
+title: '高校'
+
+# technical_group: 高校技术小组板块
+#   title: 板块标题
+#   description: 板块描述
+#     text: 描述正文
+#     link_text: 申请加入按钮文案
+#   group_list: 技术小组列表
+#     logo: 高校 Logo（图片路径，相对当前 yaml）
+#     name: 小组名称
+#     description: 小组简介
+#     content_list: 内容卡片列表
+#       title: 卡片标题
+#       description: 卡片描述（含 /n 文本分隔符，组件按 /n 拆分横向展示）
+technical_group:
+  title: '高校技术小组'
+  description:
+    text: 'openEuler高校技术小组是在院校内围绕openEuler进行学习、科研及参与社区贡献的组织，该技术小组由高校老师指导学生学习openEuler相关知识、产出openEuler相关科研成果，或直接参与到社区贡献，同时社区及社区生态伙伴整合资源为技术小组的学习与科研提供支持和赋能。'
+    link_text: '申请加入'
+  group_list:
+    - logo: ./images/hunan.png
+      name: '湖南大学openEuler技术小组'
+      description: '湖南大学openEuler技术小组是openEuler社区、湖南欧拉生态创新中心、麒麟信安与湖南大学联合组建的高校交流平台。'
+      content_list:
+        - title: '湖南大学合作捐赠项目'
+          description: '湖南大学合作捐赠项目：嵌入式实时虚拟机ZVM（Zephyr-based Virtual Machine）是由湖南大学嵌入式与网络计算湖南省重点实验室（以下简称"湖大嵌入式实验室"）主任谢国琪教授主导设计并开发的虚拟化软件。该软件基于实时操作系统（RTOS）Zephyr开发，可同时启动Linux与Zephyr 2个Guest OS，从而在同一硬件平台上实现混合内核部署。2023年2月，湖大嵌入式实验室正式将该项目开源至openEuler社区。'
+        - title: '组织者'
+          description: '赵欢（湖南大学信息科学与工程学院副书记）'
+        - title: '指导老师'
+          description: '谢国琪（湖南大学嵌入式计算省重点实验室主任）'
+        - title: '小组成员'
+          description: '赵思蓉/n胡宇昊/n王中甲/nBekalu Nigus Dawit/n邹雨欣/n雷权/n罗健淳/n张辛宇/n杨启/n丛嘉孚/n朱佳奕/n梁玉涵/n田瑞/n曾彩怡/n廖若竹/n陈兆基/n王子文/n李江伟/n雷景旭/n郑垚'
+    - logo: ./images/chengdu.png
+      name: '成都电子科技大学技术小组'
+      description: '成都电子科技大学技术小组拟研究方向：大数据、人工智能、视觉分析、智能语义识别等方面进行创新理论研究，在深度学习、机器视觉与人工智能等方面已取得一定科研成果。'
+      content_list:
+        - title: '组织者'
+          description: '廖勇（成都电子科技大学信息与软件工程学院副院长）'
+        - title: '指导老师'
+          description: '陈佳（成都电子科技大学信息与软件工程学院副教授）'
+        - title: '小组成员'
+          description: '孔翰林/n唐炽诚/n郑嘉睦/n李沛阳/n张立蒙/n陈泓旭/n时俊华'
+    - logo: ./images/lanzhou.png
+      name: '兰州大学技术小组'
+      description: '兰州大学技术小组研究方向：围绕openEuler机密计算技术开展研究和使用。目前已经在secGear方向上发表论文多篇，完成开源之夏、开源实习项目多项。今后，将继续围绕secGear建设技术小组。'
+      content_list:
+        - title: '组织者'
+          description: '刘忻（兰州大学信息科学与工程学院副教授）'
+        - title: '指导老师'
+          description: '刘忻（兰州大学信息科学与工程学院副教授）'
+        - title: '小组成员'
+          description: '景海鲲/n杨晶晶/n林家腾/n王淼/n杨浩睿/n孙思'
+
+# activity_game: 活动与大赛板块
+#   title: 板块标题
+#   activity_list: 活动列表
+#     title: 活动标题
+#     bg_img_pc: PC 端背景图（图片路径，相对当前 yaml）
+#     bg_img_mb: 移动端背景图（可选；存在时由组件按屏宽切换，不存在时组件使用 bg_img_pc）
+#     bg_inset: 右下角内嵌图（可选，图片路径）
+#     id: 卡片样式标识（可选，如 ccf）
+#     detail: 活动详情正文
+#     link_text: 链接文案
+#     link_href: 链接 URL
+activity_game:
+  title: '活动与大赛'
+  activity_list:
+    - title: '开源实习'
+      bg_img_pc: ./images/bg-internship.png
+      bg_img_mb: ./images/bg-internship_mb.png
+      bg_inset: ''
+      detail: '开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力，在社区中成长为优秀的开源人才。由社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证明和实习工资。'
+      link_text: '前往领取任务'
+      link_href: 'https://www.openeuler.org/zh/internship/'
+    - title: '第七届CCF开源创新大赛'
+      bg_img_pc: ./images/illustration-ai.png
+      id: 'ccf'
+      detail: '第七届CCF开源创新大赛在国家自然科学基金委信息科学部的指导下，由中国计算机学会（CCF）主办，长沙理工大学、CCF 开源发展委员会联合承办。openEuler参与开源项目贡献赛道，赛事奖金10w，赛题主要聚焦在openEuler操作系统的内存池管理与用户态线程设计与调度两个方向。'
+      link_text: '大赛官网信息'
+      link_href: 'https://www.gitlink.org.cn/competitions/track1_openEuler'
+    - title: '鲲鹏应用创新大赛-openEuler开源创新赛道'
+      bg_img_pc: ./images/illustration-ai.png
+      id: 'ccf'
+      detail: '鲲鹏应用创新大赛2024是面向基础软/硬件开发者的顶级赛事，旨在鼓励广大开发者基于鲲鹏全栈根技术，围绕产业真实难题，共同打造基础软/硬件解决方案。 本届大赛开设openEuler开源创新赛道，分为基础赛（围绕openEuler 进行原生开发（初阶））与挑战赛围绕openEuler 进行原生开发（高阶）两个方向。'
+      link_text: '大赛官网信息'
+      link_href: 'https://www.hikunpeng.com/zh/developer/contests/kunpeng-competition2024?tab=4'
+    - title: '国家级大学生创新训练计划-华为命题'
+      bg_img_pc: ./images/illustration-ai.png
+      id: 'ccf'
+      detail: '国家级大学生创新训练计划，简称"国创计划"，是教育部质量工程项目中作用面积最大、涉及人数最多的项目，秉承"兴趣驱动、自主实践、重在过程"的理念，目前已经成为面向全体大学生的一项创新人才基础培育工程，聚焦国家创新与发展，引领高校创新人才改革。开设"基于openEuler 开源操作系统的实践创新"单项赛题。'
+      link_text: '大赛官网信息'
+      link_href: 'https://edu.hicomputing.huawei.com/guochuang2024'
+    - title: '中国国际大学生创新大赛（2024）'
+      bg_img_pc: ./images/illustration-ai.png
+      id: 'ccf'
+      detail: '华为深度参与中国国际大学生创新大赛（2024），输出产业命题，推进产教融合、科教融汇。操作系统是整个计算机系统的核心基础软件，上承应用，下接硬件，面向用户，对生态要求极高，在鲲鹏赛道开设基于openEuler开源操作系统三个赛题，可官网详细了解。'
+      link_text: '鲲鹏赛题-openEuler赛题报名入口'
+      link_href: 'https://edu.hicomputing.huawei.com/InternetInnovate2024?tab=kunpeng'
+    - title: '开源之夏'
+      bg_img_pc: ./images/illustration-ai.png
+      id: 'ccf'
+      detail: 'openEuler社区连续四年连续四年参与由中国科学院软件所主办的开源软件供应链点亮计划-开源之夏活动，是目前规模最大最有影响力的高校开源活动。旨在鼓励在校学生积极参与开源软件的开发维护，培养和发掘更多优秀的开发者。'
+      link_text: '开源之夏官网信息'
+      link_href: 'https://summer-ospp.ac.cn/'
+
+# university_contribution: 高校贡献板块
+#   title: 板块标题
+#   university_content_list: 高校贡献卡片列表
+#     logo: 高校 Logo（图片路径，相对当前 yaml）
+#     name: 高校名称
+#     detail: 贡献详情正文
+#     contribution_name: 贡献类型标签（如 SIG贡献）
+#     contribution_tag_list: 贡献 SIG 标签数组
+#     contribution_detail: 贡献详情链接文案（可选，为空则不展示）
+#     contribution_detail_link: 贡献详情链接 URL（可选）
+#     official_website: 前往官网链接文案
+#     official_website_link: 官网链接 URL
+#   university_list: 其他参与高校列表
+#     logo: 高校 Logo
+#     name: 高校名称
+#   more: "更多高校贡献…" 文案
+university_contribution:
+  title: '高校贡献'
+  university_content_list:
+    - logo: ./images/beihang.png
+      name: '北京航空航天大学杭州创新研究院'
+      detail: '北京航空航天大学杭州创新研究院大数据与工业智联网研究室的开发者完成了openEuler Embedded在工业领域的软硬件适配验证以及30*24H的不间断测试，基于此研究室决定将北航全部机器人底层系统迁移到openEuler生态，同时加强与openEuler社区的深入合作，继续拓展openEuler在嵌入式领域生态和应用。'
+      contribution_name: 'SIG贡献'
+      contribution_tag_list:
+        - sig-embedded
+      contribution_detail: ''
+      contribution_detail_link: ''
+      official_website: '前往官网'
+      official_website_link: 'https://hzii.buaa.edu.cn/'
+    - logo: ./images/hunan.png
+      name: '湖南大学'
+      detail: '嵌入式实时虚拟机ZVM（Zephyr-based Virtual Machine）是由湖南大学嵌入式与网络计算湖南省重点实验室（以下简称"湖大嵌入式实验室"）主任谢国琪教授主导设计并开发的虚拟化软件。该软件基于实时操作系统（RTOS）Zephyr开发，可同时启动Linux与Zephyr 2个Guest OS，从而在同一硬件平台上实现混合内核部署。2023年2月，湖大嵌入式实验室正式将该项目开源至openEuler社区。'
+      contribution_name: 'SIG贡献'
+      contribution_tag_list:
+        - Zephyr
+      contribution_detail: '贡献详情'
+      contribution_detail_link: 'https://datastat.openeuler.org/zh/sig/sig-Zephyr'
+      official_website: '前往官网'
+      official_website_link: 'https://www.hnu.edu.cn/'
+    - logo: ./images/beihang.png
+      name: '北京航空航天大学计算机学院'
+      detail: 'Rust-Shyper 是北京航空航天大学计算机学院王雷教授团队设计开发的虚拟机监控器，该系统基于 Rust 语言，实现了一个高可靠、嵌入式 Hypervisor。2023 年 2 月 15 日 Rust-Shyper 正式在 openEuler 社区开源。'
+      contribution_name: 'SIG贡献'
+      contribution_tag_list:
+        - Virt
+      contribution_detail: '贡献详情'
+      contribution_detail_link: 'https://datastat.openeuler.org/zh/sig/Virt'
+      official_website: '前往官网'
+      official_website_link: 'https://scse.buaa.edu.cn/'
+    - logo: ./images/shangjiao.png
+      name: '上海交通大学'
+      detail: '上海交通大学 IPADS 实验室将"蓬莱"TEE（可信执行环境）与 openEuler 进行整合，赋予机器学习新安全属性，以保障模型开发者、数据所有者与最终用户的隐私与权益。"蓬莱"TEE 作为 openEuler 安全计算的基石之一，将与 openEuler 社区一起，不断完善对多架构、多设备、多框架的支持，持续打造高效、安全、可信的机器学习框架。'
+      contribution_name: 'SIG贡献'
+      contribution_tag_list:
+        - sig-RISC-V
+        - doc
+      contribution_detail: ''
+      contribution_detail_link: ''
+      official_website: '前往官网'
+      official_website_link: 'https://www.sjtu.edu.cn/'
+  university_list:
+    - logo: ./images/huazhong.png
+      name: '华中科技大学网络空间安全学院'
+    - logo: ./images/beida.png
+      name: '北京大学'
+    - logo: ./images/jiangke.png
+      name: '江苏科技大学海洋装备研究院'
+    - logo: ./images/changli.png
+      name: '长沙理工大学计算机与通信工程学院'
+    - logo: ./images/jilin.png
+      name: '吉林大学'
+    - logo: ./images/zhongkuang.png
+      name: '中国矿业大学'
+  more: '更多高校贡献…'
+
+# university_mooc: 课程与培训板块标题（MoocContent 组件独立维护内容）
+university_mooc: '课程与培训'

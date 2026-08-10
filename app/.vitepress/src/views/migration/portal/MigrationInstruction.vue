@@ -2,18 +2,7 @@
 import { computed } from 'vue';
 import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
-import portalInfoData from '@/data/migration/migration-portal';
-
-import instructionBG1 from '@/assets/category/migration/portal/portal-instruction-bg-1.png';
-import instructionBG2 from '@/assets/category/migration/portal/portal-instruction-bg-2.png';
-import instructionBGMo1 from '@/assets/category/migration/portal/portal-instruction-bg-mo-1.png';
-import instructionBGMo2 from '@/assets/category/migration/portal/portal-instruction-bg-mo-2.png';
-import instructionBGMo3 from '@/assets/category/migration/portal/portal-instruction-bg-mo-3.png';
-import instructionBGDark1 from '@/assets/category/migration/portal/portal-instruction-bg-dark-1.png';
-import instructionBGDark2 from '@/assets/category/migration/portal/portal-instruction-bg-dark-2.png';
-import instructionBGMoDark1 from '@/assets/category/migration/portal/portal-instruction-bg-mo-dark-1.png';
-import instructionBGMoDark2 from '@/assets/category/migration/portal/portal-instruction-bg-mo-dark-2.png';
-import instructionBGMoDark3 from '@/assets/category/migration/portal/portal-instruction-bg-mo-dark-3.png';
+import migrationContent from '#content/migration';
 
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
@@ -21,31 +10,32 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 const { lang } = useData();
 
 const portalInfo = computed(() => {
-  return portalInfoData[lang.value as 'zh' | 'en'];
+  return migrationContent[lang.value as 'zh' | 'en'];
 });
 
 const instructionBG = computed(() => {
+  const bg = portalInfo.value.instruction.bg;
   return commonStore.theme === 'dark'
     ? {
-        url1: `url(${instructionBGDark1})`,
-        url2: `url(${instructionBGDark2})`,
-        url_mo_1: `url(${instructionBGMoDark1})`,
-        url_mo_2: `url(${instructionBGMoDark2})`,
-        url_mo_3: `url(${instructionBGMoDark3})`,
+        url1: `url(${bg.url_1_dark})`,
+        url2: `url(${bg.url_2_dark})`,
+        url_mo_1: `url(${bg.url_mo_1_dark})`,
+        url_mo_2: `url(${bg.url_mo_2_dark})`,
+        url_mo_3: `url(${bg.url_mo_3_dark})`,
       }
     : {
-        url1: `url(${instructionBG1})`,
-        url2: `url(${instructionBG2})`,
-        url_mo_1: `url(${instructionBGMo1})`,
-        url_mo_2: `url(${instructionBGMo2})`,
-        url_mo_3: `url(${instructionBGMo3})`,
+        url1: `url(${bg.url_1_light})`,
+        url2: `url(${bg.url_2_light})`,
+        url_mo_1: `url(${bg.url_mo_1_light})`,
+        url_mo_2: `url(${bg.url_mo_2_light})`,
+        url_mo_3: `url(${bg.url_mo_3_light})`,
       };
 });
 </script>
 <template>
   <div class="migration-instruction">
     <h3>{{ portalInfo.instruction.title }}</h3>
-    <p>{{ portalInfo.instruction.dexcription }}</p>
+    <p>{{ portalInfo.instruction.description }}</p>
     <div class="migration-instruction-content">
       <OCard>
         <div class="instruction-box">

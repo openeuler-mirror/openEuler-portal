@@ -1,0 +1,53 @@
+# 课程中心页数据 / MOOC page data
+#
+# mooc_course: 课程列表
+#   id: 课程 ID
+#   img: 课程封面图（PNG，<img> 消费）
+#   title: 课程标题
+#   desc: 课程描述
+#   apply_link: 报名链接（可选）
+#   children: 子链接列表
+#     name: 链接文案
+#     path: 链接地址
+
+mooc_course:
+  - id: '1'
+    img: ./images/mooc1.png
+    title: HCIA-openEuler 认证培训课程
+    desc: 欢迎学习HCIA-openEuler华为认证openEuler工程师在线课程。
+    children:
+      - name: 课程学习
+        path: /zh/learn/mooc/detail/
+      - name: 考试报名
+        path: 'https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=383&authenticationLevel=CTYPE_CARE_HCIA&technicalField=PSC&version=1.0 '
+  - id: '2'
+    img: ./images/mooc1.png
+    title: openEuler精品课程
+    desc: 开源基础软件学习培训
+    apply_link: 'https://c0605e03bb6b40dca9cd34ab5b3fb1f8.shixizhi.huawei.com/portal/1643780836745113602?pageId=1650768876006805506&activeIndex=-1&sxz-lang=zh_CN'
+    children:
+      - name: 开始学习
+        path: 'https://c0605e03bb6b40dca9cd34ab5b3fb1f8.shixizhi.huawei.com/portal/1643780836745113602?pageId=1650768876006805506&activeIndex=-1&sxz-lang=zh_CN'
+  - id: '4'
+    img: ./images/mooc1.png
+    title: Tutorials
+    desc: openEuler官方出品的迷你视频课程
+    children:
+      - name: 开始学习
+        path: 'https://space.bilibili.com/527064077/lists/1229363'
+  - id: '5'
+    img: ./images/mooc1.png
+    title: openEuler直播
+    desc: 众多大咖精彩课程直播
+    children:
+      - name: 开始学习
+        path: /zh/interaction/live-list/
+  - id: '6'
+    img: ./images/mooc1.png
+    title: openEuler安全知识培训
+    desc: openEuler基础安全意识与能力培训
+    children:
+      - name: 开始学习
+        path: 'https://space.bilibili.com/527064077/lists/2726214'
+      - name: 考试报名
+        path: /zh/blog/openeuler/20240428-security.html

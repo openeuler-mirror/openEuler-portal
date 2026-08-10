@@ -1,0 +1,37 @@
+# Hardware compatibility page data / 硬件兼容性页数据
+#
+# hardware_info: Hardware compatibility test process info (sections ordered top-to-bottom visually)
+#   title: Section title
+#   desc: Description text list (contains HTML <a> links)
+#   list: Test process step list
+#     title: Step title
+#     desc: Step description (contains HTML <a> links)
+#     tips: Tip text
+#     columns: Table column names
+#     data: Table data
+#       content: Content name
+#       info: Content description (contains HTML <a> links)
+
+# Section 1: Introduction
+hardware_info:
+  - title: Introduction
+    desc:
+      - 'openEuler provides a series of tools, documents, and operation procedures to help you test the compatibility between openEuler and hardware. If you need to perform compatibility tests on hardware such as servers, perform the following process:'
+
+  # Section 2: Compatibility Test Process (7 steps)
+  - title: Compatibility Test Process
+    list:
+      - title: 'Apply to join the openEuler community (0.5 days).'
+        desc: 'You need to apply to join the openEuler community on the AtomGit platform to become a member of the organization. Application address: <a href="https://atomgit.com/openeuler/infrastructure/blob/master/docs/openEuler-Infra-FAQ-en.md" target="_blank" rel="noopener noreferrer" class="underline-link">https://atomgit.com/openeuler/infrastructure/blob/master/docs/openEuler-Infra-FAQ-en.md</a>'
+      - title: 'Apply for a compatibility test (0.5 days).'
+        desc: 'Send a compatibility test application to the public mailbox (<a href="mailto:oecompatibility@openeuler.org" target="_blank" rel="noopener noreferrer" class="underline-link">oecompatibility@openeuler.org</a>). The email subject must contain "Apply for a Hardware Compatibility Test". After receiving the email, the SIG will contact you and sign an agreement with you. Before submit an application, sign the CLA first: <a href="https://clasign.osinfra.cn/sign/6946817fe1b3f3e542b4e2d9" target="_blank" rel="noopener noreferrer" class="underline-link">https://clasign.osinfra.cn/sign/6946817fe1b3f3e542b4e2d9</a>'
+      - title: 'Understand the compatibility policies. (0.5 days)'
+        desc: 'Before performing the compatibility test, understand the openEuler hardware compatibility policies. <a href="/category/support/compatibility/openEuler-compatibility-en.pdf" target="_blank" download="openEuler Compatibility Policies.pdf" rel="noopener noreferrer" class="underline-link">Click here to obtain the document.</a>。'
+      - title: 'Create an issue (0.5 days).'
+        desc: 'After signing the agreement, create an issue under the oec-hardware project (<a href="https://atomgit.com/openeuler/oec-hardware" target="_blank" rel="noopener noreferrer" class="underline-link">https://atomgit.com/openeuler/oec-hardware</a>) in the openEuler community and specify the hardware information in the issue. The SIG will give feedback on the issue in a timely manner.'
+      - title: 'Perform the compatibility test (10 days).'
+        desc: 'After the issue is created, perform the compatibility test. openEuler provides the compatibility test framework and user guide to help you complete the test. <a href="https://atomgit.com/src-openeuler/oec-hardware/releases" target="_blank" rel="noopener noreferrer" class="underline-link">Click here to obtain the user guide.</a>'
+      - title: 'Submit the result for review (2 days).'
+        desc: 'After the compatibility test is completed and passed, update the test result to the issue. Send the test result to the public mailbox as instructed by the user guide. Send the application for reviewing the compatibility result to <a href="mailto:oecompatibility@openeuler.org" target="_blank" rel="noopener noreferrer" class="underline-link">oecompatibility@openeuler.org.</a> The email subject must contain "xxx Hardware Compatibility Test Result", where xxx indicates the community issue ID.'
+      - title: 'Release the result (2 days).'
+        desc: 'The SIG will review the submitted result and add the hardware to the <a href="/en/compatibility/" target="_blank" rel="noopener noreferrer" class="underline-link">Compatibility List</a> after it is approved.'

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import { computed } from 'vue';
-import portalInfoData from '@/data/migration/migration-portal';
+import migrationContent from '#content/migration';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import { OButton } from '@opensig/opendesign';
@@ -9,7 +9,7 @@ import { OButton } from '@opensig/opendesign';
 const { lang } = useData();
 
 const portalInfo = computed(() => {
-  return portalInfoData[lang.value as 'zh' | 'en'];
+  return migrationContent[lang.value as 'zh' | 'en'];
 });
 </script>
 

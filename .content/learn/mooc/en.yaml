@@ -1,0 +1,20 @@
+# MOOC page data
+#
+# mooc_course: Course list
+#   id: Course ID
+#   img: Course cover image (PNG, <img>)
+#   title: Course title
+#   desc: Course description
+#   apply_link: Registration link (optional)
+#   children: Sub-link list
+#     name: Link text
+#     path: Link URL
+
+mooc_course:
+  - id: '4'
+    img: ./images/mooc1.png
+    title: Tutorials
+    desc: openEuler Mini Courses
+    children:
+      - name: Learn More
+        path: 'https://www.youtube.com/playlist?list=PLtDfk9jvMAziPyVaA-DOkXx0GgIUjXc0_'
