@@ -165,7 +165,7 @@ export default {
             {
               label: 'OEPKGS',
               description: 'A third-party extension repository for openEuler.',
-              href: 'https://oepkgs.net/en-CN',
+              href: 'https://oepkgs.net/en-US',
               icon: OutLink,
             },
           ],
