@@ -289,7 +289,7 @@ export const quickNav = {
         },
         {
           title: 'Code of Conduct',
-          link: '/en/community/charter/',
+          link: '/en/community/conduct/',
         },
         {
           title: 'Statistics',
@@ -386,7 +386,7 @@ export const quickNav = {
         },
         {
           title: 'Training',
-          link: '/zh/learn/mooc/',
+          link: '/en/learn/mooc/',
         },
       ],
     },
@@ -462,11 +462,11 @@ export const friendshipLinks = {
       title: 'MindSpore',
     },
     {
-      link: 'https://www.openubmc.cn/',
+      link: 'https://www.openubmc.cn/en/',
       title: 'openUBMC',
     },
     {
-      link: 'https://www.openfuyao.cn/',
+      link: 'https://www.openfuyao.cn/en/',
       title: 'openFuyao',
     },
     {

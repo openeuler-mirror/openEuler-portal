@@ -85,7 +85,7 @@ export const playCommunity = {
       },
       textBtn: {
         label: 'View SIGs',
-        link: '/zh/sig/sig-list/',
+        link: '/en/sig/sig-list/',
       },
     },
     {

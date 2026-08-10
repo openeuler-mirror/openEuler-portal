@@ -81,7 +81,7 @@ export const hardWareInfo = {
         },
         {
           title: 'Perform the compatibility test (10 days).',
-          desc: 'After the issue is created, perform the compatibility test. openEuler provides the compatibility test framework and user guide to help you complete the test. <a href="https://atomgit.com/src-openeuler/oec-hardware/releases" target="_blank" rel="noopener noreferrer" class="underline-link">Click here to obtain the user guide.</a>'
+          desc: 'After the issue is created, perform the compatibility test. openEuler provides the compatibility test framework and user guide to help you complete the test. <a href="https://atomgit.com/openeuler/oec-hardware/blob/master/README.en.md" target="_blank" rel="noopener noreferrer" class="underline-link">Click here to obtain the user guide.</a>'
         },
         {
           title: 'Submit the result for review (2 days).',
