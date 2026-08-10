@@ -150,7 +150,7 @@ onMounted(() => {
   }
 });
 onUnmounted(() => {
-  timer.value.clearInterval;
+  clearInterval(timer.value);
   userCase.value?.removeEventListener('mouseover', clearCaseInterval);
   userCase.value?.removeEventListener('mouseout', setCaseInterval);
 });
