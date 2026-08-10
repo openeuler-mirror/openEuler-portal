@@ -356,11 +356,7 @@ defineExpose({ searchRecommendRef });
         @change="onTabChange"
       >
         <template v-for="item in tabData" :key="item.value">
-          <OTabPane :value="item.value">
-            <template #nav>
-              {{ item.label[locale] }} ({{ item.total }})
-            </template>
-          </OTabPane>
+          <OTabPane :value="item.value" :label="`${item.label[locale]} (${item.total})`" />
         </template>
       </OTab>
     </ContentWrapper>
