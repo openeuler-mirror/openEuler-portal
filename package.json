@@ -54,7 +54,7 @@
   "devDependencies": {
     "@eslint/js": "9.39.2",
     "@modyfi/vite-plugin-yaml": "^1.1.1",
-    "@opendesign-plus/vite-plugins": "0.0.1-rc.1",
+    "@opendesign-plus/vite-plugins": "0.0.1-rc.2",
     "@opensig/opensig-scripts": "^0.0.16",
     "@types/aos": "^3.0.4",
     "@types/js-yaml": "^4.0.9",
