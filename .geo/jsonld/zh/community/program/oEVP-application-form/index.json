@@ -1,0 +1,35 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/zh/community/program/oEVP-application-form",
+    "url": "https://www.openeuler.org/zh/community/program/oEVP-application-form",
+    "name": "oEVP申请表 | 社区贡献 | openEuler社区",
+    "description": "下载和填写openEuler oEVP计划申请表，参与社区项目的申请流程。",
+    "inLanguage": "zh",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.org/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "oEVP申请表",
+          "item": "https://www.openeuler.org/zh/community/program/oEVP-application-form"
+        }
+      ]
+    }
+  }
+]

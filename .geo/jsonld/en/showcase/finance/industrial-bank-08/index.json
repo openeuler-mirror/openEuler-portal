@@ -1,0 +1,89 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/showcase/finance/industrial-bank-08",
+    "url": "https://www.openeuler.org/en/showcase/finance/industrial-bank-08",
+    "name": "Industrial Bank | openEuler",
+    "description": "Industrial Bank (CIB) embarked on a core system modernization initiative to ensure long-term security and operational independence.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.org/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Industrial Bank",
+          "item": "https://www.openeuler.org/en/showcase/finance/industrial-bank-08"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Industrial Bank Core Business System Modernization",
+    "description": "Industrial Bank (CIB) embarked on a core system modernization initiative to ensure long-term security and operational independence.",
+    "url": "https://www.openeuler.org/en/showcase/finance/industrial-bank-08",
+    "inLanguage": "en",
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Core Business System",
+        "description": "Core banking system modernized on openEuler-based OS for Industrial Bank",
+        "applicationCategory": "BusinessApplication"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "Industrial Bank",
+        "description": "Major commercial bank in China undergoing core system modernization",
+        "alternateName": "CIB"
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler",
+        "description": "Open-source Linux distribution community",
+        "url": "https://www.openeuler.org/"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.org/favicon.ico"
+      }
+    },
+    "articleSection": "Finance",
+    "keywords": [
+      "openEuler",
+      "Industrial Bank",
+      "core business system",
+      "banking modernization",
+      "OS migration",
+      "financial services"
+    ]
+  }
+]

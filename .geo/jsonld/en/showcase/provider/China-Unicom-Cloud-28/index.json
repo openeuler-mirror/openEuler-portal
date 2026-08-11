@@ -1,0 +1,88 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/showcase/provider/China-Unicom-Cloud-28",
+    "url": "https://www.openeuler.org/en/showcase/provider/China-Unicom-Cloud-28",
+    "name": "China Unicom Cloud | openEuler",
+    "description": "China Unicom Cloud Project",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.org/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "China Unicom Cloud",
+          "item": "https://www.openeuler.org/en/showcase/provider/China-Unicom-Cloud-28"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "China Unicom Cloud",
+    "description": "China Unicom Cloud Project",
+    "url": "https://www.openeuler.org/en/showcase/provider/China-Unicom-Cloud-28",
+    "inLanguage": "en",
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Unicom Cloud Platform",
+        "description": "Cloud computing platform on openEuler-based OS for China Unicom",
+        "applicationCategory": "PlatformApplication"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "China Unicom Cloud",
+        "description": "Cloud computing service by China Unicom"
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler",
+        "description": "Open-source Linux distribution community",
+        "url": "https://www.openeuler.org/"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.org/favicon.ico"
+      }
+    },
+    "articleSection": "Carrier",
+    "keywords": [
+      "openEuler",
+      "China Unicom Cloud",
+      "carrier",
+      "cloud computing",
+      "telecommunications",
+      "OS migration"
+    ]
+  }
+]

@@ -9,7 +9,8 @@
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.org"
+      "url": "https://www.openeuler.org",
+      "inLanguage": "en"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -29,12 +30,6 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Energy",
-          "item": "https://www.openeuler.org/en/showcase/energy/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
           "name": "China Southern Power Grid",
           "item": "https://www.openeuler.org/en/showcase/energy/007e41fd-9185-f62d7485475e"
         }

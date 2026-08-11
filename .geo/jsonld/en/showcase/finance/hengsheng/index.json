@@ -9,7 +9,8 @@
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.org"
+      "url": "https://www.openeuler.org",
+      "inLanguage": "en"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -29,12 +30,6 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Finance",
-          "item": "https://www.openeuler.org/en/showcase/finance/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
           "name": "Hundsun Technologies",
           "item": "https://www.openeuler.org/en/showcase/finance/hengsheng"
         }

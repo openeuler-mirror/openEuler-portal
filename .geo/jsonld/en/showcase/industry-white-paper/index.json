@@ -17,7 +17,8 @@
         "@id": "https://www.openeuler.org/#organization",
         "name": "openEuler",
         "url": "https://www.openeuler.org/"
-      }
+      },
+      "inLanguage": "en"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",

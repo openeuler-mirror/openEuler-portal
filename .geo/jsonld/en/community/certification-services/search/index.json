@@ -1,0 +1,41 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/community/certification-services/search",
+    "url": "https://www.openeuler.org/en/community/certification-services/search",
+    "name": "Query Result | Certification | openEuler",
+    "description": "Easily query your certification results to track your progress and achievements within the openEuler ecosystem.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Certification",
+          "item": "https://www.openeuler.org/en/community/certification-services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Query Result",
+          "item": "https://www.openeuler.org/en/community/certification-services/search"
+        }
+      ]
+    }
+  }
+]

@@ -12,6 +12,7 @@
       "@id": "https://www.openeuler.org/en/",
       "url": "https://www.openeuler.org/en/",
       "name": "openEuler",
+      "inLanguage": "en",
       "publisher": {
         "@type": "Organization",
         "@id": "https://www.openeuler.org/#organization",

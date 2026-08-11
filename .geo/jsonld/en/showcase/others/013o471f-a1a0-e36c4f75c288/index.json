@@ -11,7 +11,8 @@
       "@type": "WebSite",
       "@id": "https://www.openeuler.org/",
       "url": "https://www.openeuler.org/",
-      "name": "openEuler"
+      "name": "openEuler",
+      "inLanguage": "en"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -31,12 +32,6 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Others",
-          "item": "https://www.openeuler.org/en/showcase/others/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
           "name": "Jiangxi Province Healthcare Security Administration",
           "item": "https://www.openeuler.org/en/showcase/others/013o471f-a1a0-e36c4f75c288"
         }

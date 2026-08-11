@@ -9,7 +9,8 @@
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.org"
+      "url": "https://www.openeuler.org",
+      "inLanguage": "en"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",

@@ -11,7 +11,8 @@
       "@type": "WebSite",
       "@id": "https://www.openeuler.org/",
       "url": "https://www.openeuler.org/",
-      "name": "openEuler"
+      "name": "openEuler",
+      "inLanguage": "en"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -31,12 +32,6 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Logistics",
-          "item": "https://www.openeuler.org/en/showcase/logistics/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
           "name": "China Post",
           "item": "https://www.openeuler.org/en/showcase/logistics/010l44ed-9d86-93614e008fda"
         }

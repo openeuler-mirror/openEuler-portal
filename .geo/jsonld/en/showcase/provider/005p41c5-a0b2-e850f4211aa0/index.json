@@ -11,7 +11,8 @@
       "@type": "WebSite",
       "@id": "https://www.openeuler.org/",
       "url": "https://www.openeuler.org/",
-      "name": "openEuler"
+      "name": "openEuler",
+      "inLanguage": "en"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",

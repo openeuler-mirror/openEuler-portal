@@ -1,0 +1,98 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/showcase/energy/China-Huadian-Corporation-30",
+    "url": "https://www.openeuler.org/en/showcase/energy/China-Huadian-Corporation-30",
+    "name": "China Huadian Corporation | openEuler",
+    "description": "Distributed Control System for CHD Power Plant",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.org/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "China Huadian Corporation",
+          "item": "https://www.openeuler.org/en/showcase/energy/China-Huadian-Corporation-30"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "China Huadian Corporation",
+    "description": "Distributed Control System for CHD Power Plant",
+    "url": "https://www.openeuler.org/en/showcase/energy/China-Huadian-Corporation-30",
+    "inLanguage": "en",
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Kylin Advanced Server OS V10",
+        "description": "openEuler-based Linux distribution used for the DCS core control system",
+        "applicationCategory": "OperatingSystem",
+        "operatingSystem": "Linux"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Huadian Ruilan DCS",
+        "description": "Intelligent distributed control system developed by China Huadian Corporation",
+        "applicationCategory": "IndustrialApplication"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "China Huadian Corporation",
+        "description": "One of China's largest state-owned power generation companies"
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler",
+        "description": "Open-source Linux distribution community",
+        "url": "https://www.openeuler.org/"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.org/favicon.ico"
+      }
+    },
+    "articleSection": "Energy",
+    "keywords": [
+      "openEuler",
+      "China Huadian Corporation",
+      "DCS",
+      "distributed control system",
+      "Huadian Ruilan",
+      "power plant",
+      "Kylin OS",
+      "energy",
+      "OS migration"
+    ]
+  }
+]

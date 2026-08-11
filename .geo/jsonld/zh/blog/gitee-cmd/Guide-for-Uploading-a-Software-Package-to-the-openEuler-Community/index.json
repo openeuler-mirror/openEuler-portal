@@ -4,7 +4,7 @@
     "@type": "TechArticle",
     "headline": "openEuler 社区软件包引入分析指南",
     "description": "为提升软件包引入效率，保证软件包引入质量，发布本指南指导社区贡献者进行软件包引入的分析工作。",
-    "url": "https://www.openeuler.org/zh/blog/gitee-cmd/Guide-for-Uploading-a-Software-Package-to-the-openEuler-Community.html",
+    "url": "https://www.openeuler.org/zh/blog/gitee-cmd/Guide-for-Uploading-a-Software-Package-to-the-openEuler-Community",
     "datePublished": "2021-12-20",
     "inLanguage": "zh-CN",
     "author": {

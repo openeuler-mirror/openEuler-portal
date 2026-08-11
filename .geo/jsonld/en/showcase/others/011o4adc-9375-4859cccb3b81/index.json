@@ -10,7 +10,8 @@
     "isPartOf": {
       "@type": "WebSite",
       "name": "openEuler",
-      "url": "https://www.openeuler.org"
+      "url": "https://www.openeuler.org",
+      "inLanguage": "en"
     },
     "about": {
       "@type": "Organization",
@@ -87,12 +88,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Others",
-        "item": "https://www.openeuler.org/en/showcase/others/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "name": "China Resources Group",
         "item": "https://www.openeuler.org/en/showcase/others/011o4adc-9375-4859cccb3b81"
       }
