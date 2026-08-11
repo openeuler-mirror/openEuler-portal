@@ -203,10 +203,11 @@ unplugin-icons 的 `import iconX from '~icons/sig/xxx.svg'` 返回的是 **Vue �
 
 1. **字段注释**：在文件顶部用 `#` 写整体说明，每个数据板块上方用 `#` 注释字段含义
 2. **双语同步**：`zh.yaml` 和 `en.yaml` 结构必须一致，字段名相同，文案分别对应
-3. **字段命名**：因已按文件拆分 locale，**禁止**使用 `_zh` / `_en` 后缀，字段直接用基线名（如 `title`、`description`）；主题变体保留 `_light` / `_dark` 后缀
+3. **字段命名**：字段名一律使用**小写字母 + 下划线**连接（snake_case，如 `title`、`bg_pc`、`display_zone`），**禁止**使用驼峰（`bgPc`）、大写（`BgPC`）、连字符（`bg-pc`）等其它命名风格；因已按文件拆分 locale，**禁止**使用 `_zh` / `_en` 后缀，字段直接用基线名（如 `title`、`description`）；主题变体保留 `_light` / `_dark` 后缀
 4. **缩进对齐**：YAML 数组项缩进 2 空格
 5. **板块间距**：不同数据板块之间空一行分隔
 6. **板块顺序**：多个数据板块按页面从上到下的视觉顺序排列，与页面布局一致
+7. **单层数组不套壳**：若整页只有一层数据且数据本身是数组（如列表页的条目列表），yaml 顶层直接就是数组，**禁止**再额外包一层字段（如 `list:` / `items:` / `sections:`）；仅当存在多个数据板块时才按板块分字段
 
 示例（zh — `项目根目录/.content/home/zh.yaml`）：
 
@@ -310,7 +311,7 @@ mindspore `.d.ts` 命名示例：
 
 ```ts
 declare module '#content/home' {
-  interface HomeBannerItemT {
+  export interface HomeBannerItemT {
     id: string;
     banner: string;
     banner_mb: string;
@@ -326,7 +327,7 @@ declare module '#content/home' {
     jump_out?: boolean;
   }
 
-  interface HomeZoneItemT {
+  export interface HomeZoneItemT {
     title: string;
     desc: string;
     href: string;
@@ -338,6 +339,7 @@ declare module '#content/home' {
     zh: { banner: HomeBannerItemT[]; zone: HomeZoneItemT[] };
     en: { banner: HomeBannerItemT[]; zone: HomeZoneItemT[] };
   };
+  
   export default data;
 }
 ```
