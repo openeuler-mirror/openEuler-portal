@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { OLink, OButton, OIcon } from '@opensig/opendesign';
+import { OLink, OIcon } from '@opensig/opendesign';
 
 import { OEventsCalendar, OEventsApply } from '@opendesign-plus/components';
 
@@ -32,10 +32,8 @@ const ICON_COLOR: Record<string, unknown> = {
 };
 
 import { useLocale } from '~@/composables/useLocale';
-import { useScreen } from '~@/composables/useScreen';
 
 const { t, locale } = useLocale();
-const { leLaptop } = useScreen();
 
 const yearPlan = computed(() => {
   const plan = foldI18n(activityContent.plan, locale.value);
@@ -78,15 +76,7 @@ const yearPlan = computed(() => {
 
 const applySteps = computed(() => (applyData[locale.value] ?? []) as any[]);
 
-const applySep1 = computed(() => applySteps.value[0]);
 const applySep3 = computed(() => applySteps.value[2]);
-
-const btnSize = computed(() => {
-  if (leLaptop.value) {
-    return 'medium';
-  }
-  return 'large';
-});
 </script>
 
 <template>
@@ -100,10 +90,6 @@ const btnSize = computed(() => {
     id="activity-apply"
   >
     <OEventsApply :steps="applySteps">
-      <template #step1>
-        <OButton :href="applySep1.href" class="step1-btn" color="primary" :size="btnSize" round="pill" variant="solid">{{ applySep1.btn }}
-        </OButton>
-      </template>
       <template #step3>
         <div class="step3">
           <div v-for="(item, i) in applySep3.listData" :key="i" class="item-text">
@@ -155,10 +141,6 @@ const btnSize = computed(() => {
   :deep(.section-subtitle) {
     text-align: center;
   }
-}
-
-.step1-btn {
-  margin-top: var(--o-gap-4);
 }
 
 :deep(.step-3) {
