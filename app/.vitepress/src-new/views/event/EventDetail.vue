@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, computed } from 'vue';
+import { computed } from 'vue';
 import {
   OBreadcrumb,
   OBreadcrumbItem,
@@ -8,13 +8,13 @@ import {
   OFigure,
   OButton,
 } from '@opensig/opendesign';
+import { useData } from 'vitepress';
 
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
-import { getUrlParam } from '@/shared/utils';
-
 import activityContent from '#content/activity';
 import { foldI18n } from '~@/shared/content';
+import { slugifyEvent } from '~@/shared/event-slug';
 import { EVENT_STATUS } from '~@/data/event/filters';
 
 import banner from '~@/assets/category/event/list/banner.png';
@@ -29,23 +29,21 @@ import { useScreen } from '~@/composables/useScreen';
 
 const { t, locale } = useLocale();
 const { lePadV, isPadVToLaptop, isPhone } = useScreen();
+const { params } = useData();
 
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 
-const activityId = ref('');
-
-const detailObj = ref<any>();
-
 const EventState = new Map(EVENT_STATUS.map((s) => [s.value, { value: s.value, label: { zh: s.label_zh, en: s.label_en } }]));
 
-const getActivitiesData = () => {
-  activityId.value = getUrlParam('id');
-  const events = foldI18n(activityContent.events, locale.value);
-  detailObj.value = events.find(
-    (item) => item.id === Number(activityId.value)
-  );
-};
+const eventSlug = computed(() => (params.value?.event as string) || '');
+
+const detailObj = computed(() => {
+  const events = activityContent.events;
+  const idx = events.findIndex((item) => slugifyEvent(item) === eventSlug.value);
+  if (idx === -1) return undefined;
+  return foldI18n(events, locale.value)[idx];
+});
 
 const verticalPadding = computed(() => {
   if (isPadVToLaptop.value) {
@@ -65,10 +63,6 @@ const dateDisplay = computed(() => {
   const endTime = end_date.split(' ')[1] || '';
   const datePart = start_date.split(' ')[0] || '';
   return `${datePart} ${startTime}-${endTime}`;
-});
-
-onMounted(() => {
-  getActivitiesData();
 });
 </script>
 

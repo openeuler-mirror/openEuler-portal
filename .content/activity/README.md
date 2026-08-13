@@ -6,7 +6,7 @@
 
 | 文件 | 说明 |
 |------|------|
-| `events.yaml` | 活动事件实体（Meetup 等），id 为唯一键 |
+| `events.yaml` | 活动事件实体（Meetup 等），slug 为唯一键（由 title_en slugify 派生，仅 zh 路由化） |
 | `summit.yaml` | 峰会实体（Summit / Developer Day），id 为唯一键 |
 | `plan.yaml` | 年度活动计划，按类别组织 |
 | `global_events.yaml` | 全球活动回顾（英文专属），仅在英文页面展示 |
@@ -14,16 +14,20 @@
 ## 设计原则
 
 - **数据即 API 响应**：每条记录是完整实体，不做 zh/en 顶层分离
-- **无派生字段**：URL 由前端用 id 拼接，不存储
+- **slug 派生而非存储**：zh 详情页 URL 形如 `/zh/interaction/event-list/${slug}`，由 `slugifyEvent(ev)` 在构建时（`[event].paths.ts`）与运行时（`EventDetail.vue`）一致派生
+- **仅 zh 路由化**：en 版活动列表项跳外站，不读 yaml 详情，故 en 不创建动态路由
+- **旧 URL 兼容**：旧链接 `/interaction/event-list/detail/?id=X` 由重定向组件（`EventDetailRedirect.vue`）统一跳转到 latest 列表页（不精确定位）
 - **无 UI 配置**：筛选选项等页面配置不在此处
 - **snake_case**：所有字段名下划线连接
 - **多语言**：`_zh` / `_en` 后缀，通过 `foldI18n()` 折叠
 
 ## 新增活动
 
-1. 在 `events.yaml` 末尾添加一条记录（id 递增）
+1. 在 `events.yaml` 末尾添加一条记录（title_en 必填，用于派生 slug）
 2. 把议程图片放到 `images/` 目录下（命名：`detail-<YYMMDD>.jpg`）
 3. 提 PR
+
+注意：title_en 经 slugify 后必须全局唯一，否则会生成重复 slug（构建时 `[event].paths.ts` 自动去重，但会导致后插入的活动详情页 404）。
 
 ## 活动结束后的回顾
 
@@ -41,12 +45,11 @@
 
 | 字段 | 必填 | 说明 |
 |------|------|------|
-| `id` | ✅ | 数字 ID，唯一键 |
-| `title_zh` / `title_en` | ✅ | 中英文标题 |
+| `title_zh` / `title_en` | ✅ | 中英文标题，title_en 经 slugify 后作为详情页路由 slug |
 | `start_date` | ✅ | 开始时间 `YYYY-MM-DD HH:mm` |
 | `end_date` | ✅ | 结束时间 |
 | `address_zh` / `address_en` | 可选 | 地址（线上活动不填） |
-| `city_zh` / `city_en` | 可选 | 城市（线上活动不填） |
+| `city_zh` / `city_en` | 可选 | 城市（用于筛选，线上活动不填） |
 | `synopsis_zh` / `synopsis_en` | 可选 | 简介 |
 | `status` | ✅ | `ended` / `ongoing` |
 | `format` | ✅ | `offline` / `online` / `hybrid` |
@@ -57,6 +60,18 @@
 | `agenda_image` | 可选 | 议程图 `./images/detail-<YYMMDD>.jpg` |
 | `signup_url` / `signup_url_mb` | 可选 | 报名链接（`ongoing` 时填写） |
 | `review_url` | 可选 | 回顾链接（`ended` 后填写） |
+
+### slug 派生规则
+
+zh 详情页路由：`/zh/interaction/event-list/${slug}`
+
+- slug 由 `title_en` 经 slugify 派生：小写 + 移除撇号/&,/括号 + 空格转连字符 + 仅保留 `[a-z0-9-]` + 合并多余连字符，末步将 `openeuler` 还原为品牌大小写 `openEuler`（故先清洗非 `[a-z0-9-]` 再注入大写 E，避免被剥离）
+  - `openEuler Embedded Meetup Shanghai` → `openEuler-embedded-meetup-shanghai`
+  - `openEuler Cloud Native Middleware Meetup - Xi'an` → `openEuler-cloud-native-middleware-meetup-xian`
+  - `openEuler AI & OS Innovation Meetup Beijing` → `openEuler-ai-os-innovation-meetup-beijing`
+- title_en 缺失时 fallback 到 title_zh（不推荐，路径可能含非 ASCII 字符被移除后失真）
+
+派生函数：`app/.vitepress/src-new/shared/event-slug.ts` 的 `slugifyEvent(ev)`。
 
 ### summit.yaml
 

@@ -1,0 +1,52 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "openEuler Embedded Meetup 上海站",
+    "description": "8月14日，OpenAtom openEuler（简称“openEuler”或“开源欧拉”）Embedded 具身智能技术 Meetup 将在上海举办。多位来自 openEuler 社区、科研机构和产业一线的技术专家，将围绕具身智能领域的最新探索与实践展开分享，与开发者共同交流机器人智能化背后的技术挑战与创新机会。本次 Meetup 将聚焦开发者真正关心的问题，从 openEuler 社区 Embedded 技术演进，到机器人智能框架、无任务学习、机器人集群协同、工业场景实践等方向，分享前沿探索与真实案例。",
+    "startDate": "2026-08-14T14:00",
+    "endDate": "2026-08-14T17:10",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "url": "https://www.openeuler.org/zh/interaction/event-list/openEuler-embedded-meetup-shanghai",
+    "inLanguage": "zh-CN",
+    "location": {
+      "@type": "Place",
+      "name": "上海徐汇漕河泾会议中心（2F 文创厅）",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "上海市",
+        "addressRegion": "CN"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://www.openeuler.org/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "社区活动",
+        "item": "https://www.openeuler.org/zh/interaction/event-list/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "openEuler Embedded Meetup 上海站",
+        "item": "https://www.openeuler.org/zh/interaction/event-list/openEuler-embedded-meetup-shanghai"
+      }
+    ]
+  }
+]

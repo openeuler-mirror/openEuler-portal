@@ -10,6 +10,7 @@ import { OButton, useMessage, ODialog } from '@opensig/opendesign';
 
 import activityContent from '#content/activity';
 import { foldI18n } from '~@/shared/content';
+import { slugifyEvent } from '~@/shared/event-slug';
 
 import dayjs from 'dayjs';
 
@@ -56,9 +57,10 @@ const expandDates = (start: string, end: string): string[] => {
 
 const FORMAT_LABEL: Record<string, string> = { offline: '线下', online: '线上', hybrid: '线上 + 线下' };
 
-const activityData = foldI18n(activityContent.events, locale.value).map((ev) => {
+const activityData = foldI18n(activityContent.events, locale.value).map((ev, idx) => {
   const [start_date, start] = ev.start_date.split(' ');
   const [end_date, end] = ev.end_date.split(' ');
+  const rawEv = activityContent.events[idx];
   return {
     ...ev,
     start_date,
@@ -70,7 +72,7 @@ const activityData = foldI18n(activityContent.events, locale.value).map((ev) => 
     address: ev.address,
     type: 'activity',
     activity_type: FORMAT_LABEL[ev.format] || '',
-    url: (ev.poster_image || ev.agenda_image) ? `/${locale.value}/interaction/event-list/detail/?id=${ev.id}` : '',
+    url: (rawEv.poster_image || rawEv.agenda_image) ? `/zh/interaction/event-list/${slugifyEvent(rawEv)}` : '',
   }
 });
 

@@ -3,12 +3,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import yaml from 'js-yaml';
 
+import { slugifyEvent } from '../app/.vitepress/src-new/shared/event-slug';
+
 const PROJECT_ROOT = process.cwd();
 const ACTIVITY_DIR = path.join(PROJECT_ROOT, '.content/activity');
 const IMAGES_DIR = path.join(ACTIVITY_DIR, 'images');
 
 interface EventItem {
-  id: number;
   title_zh: string;
   title_en: string;
   start_date: string;
@@ -74,43 +75,50 @@ const eventsData = loadYaml('events.yaml') as EventItem[];
 const summitData = loadYaml('summit.yaml') as SummitItem[];
 const planData = loadYaml('plan.yaml') as PlanCategory[];
 
-describe('events.yaml — id 唯一性', () => {
-  it('所有 event id 互不重复', () => {
-    const ids = eventsData.map((e) => e.id);
-    const dups = ids.filter((id, i) => ids.indexOf(id) !== i);
-    expect(dups, `重复 event id: ${dups.join(', ')}`).toEqual([]);
+describe('events.yaml — slug 唯一性', () => {
+  it('所有 event slug 互不重复（slug = title_en slugify）', () => {
+    const slugs = eventsData.map((e) => slugifyEvent(e));
+    const dups = slugs.filter((s, i) => slugs.indexOf(s) !== i);
+    expect(dups, `重复 event slug: ${dups.join(', ')}（title_en 冲突，将导致详情页 404）`).toEqual([]);
+  });
+
+  it('slug 仅含字母数字与连字符', () => {
+    for (const ev of eventsData) {
+      const slug = slugifyEvent(ev);
+      expect(slug, `title="${ev.title_zh}" slug="${slug}" 含非法字符`).toMatch(/^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$/);
+    }
   });
 });
 
 describe('events.yaml — 必填字段校验', () => {
   const requiredFields: (keyof EventItem)[] = [
-    'id', 'title_zh', 'title_en', 'start_date', 'end_date', 'status', 'format', 'series',
+    'title_zh', 'title_en', 'start_date', 'end_date', 'status', 'format', 'series',
   ];
 
   it('每条 event 必填字段齐全', () => {
     for (const ev of eventsData) {
       for (const field of requiredFields) {
-        expect(ev[field], `id=${ev.id} 缺少必填字段 ${field}`).toBeDefined();
+        expect(ev[field], `title="${ev.title_zh}" 缺少必填字段 ${field}`).toBeDefined();
       }
     }
   });
 
   it('status 值仅为 ended 或 ongoing', () => {
     for (const ev of eventsData) {
-      expect(['ended', 'ongoing'], `id=${ev.id} status="${ev.status}" 不合法`).toContain(ev.status);
+      expect(['ended', 'ongoing'], `title="${ev.title_zh}" status="${ev.status}" 不合法`).toContain(ev.status);
     }
   });
 
   it('format 值仅为 offline / online / hybrid', () => {
     for (const ev of eventsData) {
-      expect(['offline', 'online', 'hybrid'], `id=${ev.id} format="${ev.format}" 不合法`).toContain(ev.format);
+      expect(['offline', 'online', 'hybrid'], `title="${ev.title_zh}" format="${ev.format}" 不合法`).toContain(ev.format);
     }
   });
 
   it('start_date 和 end_date 格式为 YYYY-MM-DD HH:mm', () => {
     for (const ev of eventsData) {
-      expect(ev.start_date, `id=${ev.id} start_date 格式错误`).toMatch(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/);
-      expect(ev.end_date, `id=${ev.id} end_date 格式错误`).toMatch(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/);
+      expect(ev.start_date, `title="${ev.title_zh}" start_date 格式错误`).toMatch(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/);
+      expect(ev.end_date, `title="${ev.title_zh}" end_date 格式错误`).toMatch(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/);
     }
   });
 });
@@ -123,7 +131,7 @@ describe('events.yaml — 含图片的条目资源存在性', () => {
       const imgPath = ev.agenda_image.replace(/^\.\//, '');
       const fp = path.join(ACTIVITY_DIR, imgPath);
       if (!fs.existsSync(fp)) {
-        missing.push(`id=${ev.id} -> ${ev.agenda_image}`);
+        missing.push(`title="${ev.title_zh}" -> ${ev.agenda_image}`);
       }
     }
     expect(missing, `缺失议程图:\n${missing.join('\n')}`).toEqual([]);
@@ -131,15 +139,15 @@ describe('events.yaml — 含图片的条目资源存在性', () => {
 });
 
 describe('events.yaml — 条目内容校验', () => {
-  it('id=14 成都站 — title_zh 含成都, city_zh 为成都市', () => {
-    const ev = eventsData.find((e) => e.id === 14)!;
+  it('成都站 — title_zh 含成都, city_zh 为成都市', () => {
+    const ev = eventsData.find((e) => e.title_zh.includes('成都') && e.city_zh === '成都市')!;
     expect(ev).toBeDefined();
     expect(ev.title_zh).toContain('成都');
     expect(ev.city_zh).toBe('成都市');
   });
 
-  it('id=16 北京站 — title_zh 含北京, city_zh 为北京市', () => {
-    const ev = eventsData.find((e) => e.id === 16)!;
+  it('北京站 — title_zh 含北京, city_zh 为北京市', () => {
+    const ev = eventsData.find((e) => e.title_zh.includes('北京') && e.city_zh === '北京市')!;
     expect(ev).toBeDefined();
     expect(ev.title_zh).toContain('北京');
     expect(ev.city_zh).toBe('北京市');
@@ -148,7 +156,7 @@ describe('events.yaml — 条目内容校验', () => {
   it('含 group_name 的条目 group_name 非空', () => {
     for (const ev of eventsData) {
       if (ev.group_name !== undefined) {
-        expect(ev.group_name, `id=${ev.id} group_name 不应为空`).toBeTruthy();
+        expect(ev.group_name, `title="${ev.title_zh}" group_name 不应为空`).toBeTruthy();
       }
     }
   });

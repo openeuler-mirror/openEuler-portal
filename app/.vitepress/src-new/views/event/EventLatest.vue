@@ -18,6 +18,7 @@ import ResultEmpty from '~@/components/ResultEmpty.vue';
 
 import activityContent from '#content/activity';
 import { foldI18n } from '~@/shared/content';
+import { slugifyEvent } from '~@/shared/event-slug';
 import { EVENT_SERIES, EVENT_STATUS } from '~@/data/event/filters';
 
 const EventSeries = new Map(EVENT_SERIES.map((s) => [s.value, { value: s.value, label: { zh: s.label_zh, en: s.label_en } }]));
@@ -105,22 +106,27 @@ const latestList = ref<any>([]);
 const currentList = ref<any>([]);
 
 const activityList = () => {
-  latestList.value = foldI18n(activityContent.events, locale.value).filter((item) => item.poster_image).map((act) => {
-    const isSameDay = act.start_date?.slice(0, 10) === act.end_date?.slice(0, 10);
-    return {
-      ...act,
-      name: act.title,
-      link: act.review_url ? act.review_url : `/${locale.value}/interaction/event-list/detail/?id=${act.id}`,
-      date: act.start_date,
-      ...(!isSameDay && { startDate: act.start_date, endDate: act.end_date }),
-      tags: [
-        {
-          icon: IconDeveloperTag,
-          title: EventSeries.get(act?.series)?.label[locale.value]
-        }
-      ]
-    };
-  });
+  const events = activityContent.events;
+  const folded = foldI18n(events, locale.value);
+  latestList.value = folded
+    .map((ev, idx) => ({ ...ev, slug: slugifyEvent(events[idx]) }))
+    .filter((item) => item.poster_image)
+    .map((act) => {
+      const isSameDay = act.start_date?.slice(0, 10) === act.end_date?.slice(0, 10);
+      return {
+        ...act,
+        name: act.title,
+        link: act.review_url ? act.review_url : `/${locale.value}/interaction/event-list/${act.slug}`,
+        date: act.start_date,
+        ...(!isSameDay && { startDate: act.start_date, endDate: act.end_date }),
+        tags: [
+          {
+            icon: IconDeveloperTag,
+            title: EventSeries.get(act?.series)?.label[locale.value]
+          }
+        ]
+      };
+    });
   const seriesList = latestList.value.filter((item) => {
     if (params.series) {
       return item.series === params.series;
