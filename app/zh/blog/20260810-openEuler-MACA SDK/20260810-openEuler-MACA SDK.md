@@ -118,7 +118,6 @@ docker run -it --rm \
 + `-v /opt/mxdriver:/opt/mxdriver`：挂载宿主机沐曦驱动目录
 + `-v /usr/bin/mx-smi:/usr/bin/mx-smi`：挂载宿主机 `mx-smi`，便于在容器内查询 GPU 状态
 
-![](截图2.png)
 
 如业务需要 InfiniBand / RDMA，可先在宿主机确认设备节点：
 
@@ -211,7 +210,7 @@ echo $LD_LIBRARY_PATH
 ls /opt
 ```
 
-![](截图3.png)
+![alt text](5.png)
 
 环境就绪后，直接在宿主机编译、运行业务即可，无需 `docker run`：
 
