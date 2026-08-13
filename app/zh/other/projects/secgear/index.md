@@ -48,37 +48,37 @@ secGear同时在中间件层和服务层提供丰富的扩展能力，让开发�
 
 查看secGear整体介绍
 
-[了解更多](https://atomgit.com/openeuler/secGear/blob/master/docs/zh/2403_LTS_SP2/introduction_to_secgear.md)
+[了解更多](https://atomgit.com/openeuler/secGear/blob/master/docs/zh/2403_lts_sp2/introduction_to_secgear.md)
 
 ## 安装
 
 学习如何安装secGear
 
-[了解更多](https://atomgit.com/openeuler/secGear/blob/master/docs/zh/2403_LTS_SP2/secgear_installation.md)
+[了解更多](https://atomgit.com/openeuler/secGear/blob/master/docs/zh/2403_lts_sp2/secgear_installation.md)
 
 ## 开发指南
 
 secGear的开发指南
 
-[了解更多](https://atomgit.com/openeuler/secGear/blob/master/docs/zh/2403_LTS_SP2/developer_guide.md)
+[了解更多](https://atomgit.com/openeuler/secGear/blob/master/docs/zh/2403_lts_sp2/developer_guide.md)
 
 ## 工具使用文档
 
 学习secGear的工具使用
 
-[了解更多](https://atomgit.com/openeuler/secGear/blob/master/docs/zh/2403_LTS_SP2/using_secgear_tools.md)
+[了解更多](https://atomgit.com/openeuler/secGear/blob/master/docs/zh/2403_lts_sp2/using_secgear_tools.md)
 
 ## API接口文档
 
 查看secGear API接口文档
 
-[了解更多](https://atomgit.com/openeuler/secGear/blob/master/docs/zh/2403_LTS_SP2/api_reference.md)
+[了解更多](https://atomgit.com/openeuler/secGear/blob/master/docs/zh/2403_lts_sp2/api_reference.md)
 
 ## 应用场景
 
 介绍secGear的典型场景机密计算解决方案。
 
-[了解更多](https://atomgit.com/openeuler/secGear/blob/master/docs/zh/2403_LTS_SP2/application_scenarios.md)
+[了解更多](https://atomgit.com/openeuler/secGear/blob/master/docs/zh/2403_lts_sp2/application_scenarios.md)
 
 </MarkdownLayout>
 
