@@ -19,6 +19,22 @@
 #   signup_url_mb   报名链接移动端
 #   review_url      回顾链接（ended 后填写）
 
+- id: 20
+  title_zh: openEuler Embedded Meetup 上海站
+  title_en: openEuler Embedded Meetup Shanghai
+  start_date: '2026-08-14 14:00'
+  end_date: '2026-08-14 17:10'
+  address_zh: 上海徐汇漕河泾会议中心（2F 文创厅）
+  city_zh: 上海市
+  city_en: Shanghai
+  synopsis_zh: 8月14日，OpenAtom openEuler（简称“openEuler”或“开源欧拉”）Embedded 具身智能技术 Meetup 将在上海举办。多位来自 openEuler 社区、科研机构和产业一线的技术专家，将围绕具身智能领域的最新探索与实践展开分享，与开发者共同交流机器人智能化背后的技术挑战与创新机会。本次 Meetup 将聚焦开发者真正关心的问题，从 openEuler 社区 Embedded 技术演进，到机器人智能框架、无任务学习、机器人集群协同、工业场景实践等方向，分享前沿探索与真实案例。
+  status: ongoing
+  format: offline
+  series: meetup
+  poster_image: ~@/assets/category/user-group/city/shanghai.jpg
+  poster_image_mb: ~@/assets/category/event/city/shanghai-mb.jpg
+  agenda_image: ./images/detail-260814.png
+
 - id: 18
   title_zh: openEuler SIG Yuanrong Meetup 杭州站：Serverless X 分布式计算，共筑Agentic AI Infra
   start_date: '2026-07-25 14:00'
@@ -27,7 +43,7 @@
   city_zh: 杭州市
   city_en: Hangzhou
   synopsis_zh: 本期openEuler SIG Yuanrong Meetup与大家相约杭州，以“Serverless X 分布式计算，共筑Agentic AI Infra”为主题，内容涵盖openYuanrong项目介绍及openYuanrong在多级缓存推理加速，AI Agent多租安全等方向上的优秀实践。我们期待与您面对面，共同探讨如何通过 openYuanrong 构建下一代 AI 原生基础设施，并聆听您对项目发展和生态建设的宝贵建议。
-  status: ongoing
+  status: ended
   format: offline
   series: meetup
   poster_image: ~@/assets/category/user-group/city/hangzhou.jpg

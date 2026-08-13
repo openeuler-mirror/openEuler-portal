@@ -177,7 +177,7 @@ onMounted(() => {
   --tag-color: var(--o-color-white);
 }
 .tag-completed {
-  --tag-bg-color: rgba(var(--o-kleinblue-3), 0.4);
+  --tag-bg-color: rgba(var(--o-brand-3), 0.4);
   --tag-bd-color: transparent;
 }
 .synopsis {

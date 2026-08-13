@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { ORow, OIcon, OCol, OCard, OLink, ODivider } from '@opensig/opendesign';
+import { ORow, OCol, OCard, OLink, ODivider } from '@opensig/opendesign';
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 import { useCommon } from '@/stores/common';
@@ -235,7 +235,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
           <ODivider :direction="lePadV ? 'h' : 'v'" class="line" />
           <div class="follow-link">
             <OLink
-              hoverUnderline
+              :hoverUnderline="false"
               v-for="item in followLinks"
               :key="item.href"
               :href="item.href"
@@ -379,6 +379,13 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
           display: flex;
           justify-content: space-around;
           padding: 0;
+          :deep(.o-link) {
+            --link-color: #fff;
+
+            & .o-link-main {
+              flex-direction: column;
+            }
+          }
           .follow-link-item {
             text-align: center;
             color: #fff;

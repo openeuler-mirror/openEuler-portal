@@ -106,12 +106,13 @@ const currentList = ref<any>([]);
 
 const activityList = () => {
   latestList.value = foldI18n(activityContent.events, locale.value).filter((item) => item.poster_image).map((act) => {
+    const isSameDay = act.start_date?.slice(0, 10) === act.end_date?.slice(0, 10);
     return {
       ...act,
       name: act.title,
       link: act.review_url ? act.review_url : `/${locale.value}/interaction/event-list/detail/?id=${act.id}`,
-      startDate: act.start_date,
-      endDate: act.end_date,
+      date: act.start_date,
+      ...(!isSameDay && { startDate: act.start_date, endDate: act.end_date }),
       tags: [
         {
           icon: IconDeveloperTag,

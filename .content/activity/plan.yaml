@@ -143,6 +143,11 @@
       location_zh: 中国 杭州
       location_en: Hangzhou, China
       month: 7
+    - name_zh: openEuler Embedded Meetup 上海站
+      name_en: openEuler Embedded Meetup - Shanghai
+      location_zh: 中国 上海
+      location_en: Shanghai, China
+      month: 8
 
 - id: college
   title_zh: 赛事 & 高校

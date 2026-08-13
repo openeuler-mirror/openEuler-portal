@@ -9,7 +9,7 @@ export const applyData = {
     {
       img: step1Bg,
       title: '如何申请',
-      desc: '如果您有兴趣在所在城市举办 openEuler Meetup，为了保证活动顺利进行，在举办社区开发者活动前，您需要',
+      desc: '如果您有兴趣在所在城市举办 openEuler Meetup，为了保证活动顺利进行，在举办社区开发者活动前，您需要将申请策划通过邮件发送至<a href="mailto:events@openeuler.sh">events@openeuler.sh</a>',
       href: '/zh/interaction/event-list/meetup-form/',
       btn: '申请活动',
     },
