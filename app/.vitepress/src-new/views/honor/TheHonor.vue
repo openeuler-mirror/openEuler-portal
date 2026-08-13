@@ -131,10 +131,16 @@ watch(
                   <p class="card-name">{{ item.name }}</p>
                   <template #footer>
                     <OLink color="normal" :href="item.link" target="_blank">
-                      查看新闻<OIcon><IconChevronRight /></OIcon>
+                      查看新闻
+                      <template #suffix>
+                        <OIcon><IconChevronRight /></OIcon>
+                      </template>
                     </OLink>
                     <OLink v-if="item?.certificate" color="normal" @click="openCertificate(item.certificate)">
-                      查看证书<OIcon><IconChevronRight /></OIcon>
+                      查看证书
+                      <template #suffix>
+                        <OIcon><IconChevronRight /></OIcon>
+                      </template>
                     </OLink>
                   </template>
                 </OCard>
@@ -197,7 +203,10 @@ watch(
                     </div>
                     <template #footer>
                       <OLink color="normal" :href="t.link" target="_blank" hoverUnderline>
-                        项目地址<OIcon><IconChevronRight /></OIcon>
+                        项目地址
+                        <template #suffix>
+                          <OIcon><IconChevronRight /></OIcon>
+                        </template>
                       </OLink>
                     </template>
                   </OCard>
@@ -225,11 +234,17 @@ watch(
                       <template #footer>
                         <ODivider v-if="isPhone" />
                         <OLink color="normal" :href="proItem.link" target="_blank" :hover-underline="!isPhone">
-                          {{proItem.link1 ? '项目地址1' : '项目地址'}}<OIcon><IconOutLink /></OIcon>
+                          {{proItem.link1 ? '项目地址1' : '项目地址'}}
+                          <template #suffix>
+                            <OIcon><IconOutLink /></OIcon>
+                          </template>
                         </OLink>
                         <ODivider v-if="isPhone && proItem.link1" />
                         <OLink v-if="proItem.link1" color="normal" :href="proItem.link1" target="_blank" hoverUnderline>
-                          项目地址2<OIcon><IconOutLink /></OIcon>
+                          项目地址2
+                          <template #suffix>
+                            <OIcon><IconOutLink /></OIcon>
+                          </template>
                         </OLink>
                       </template>
                     </OCard>
@@ -282,7 +297,10 @@ watch(
                     </div>
                     <template #footer>
                       <OLink color="normal" :href="t.link" target="_blank" hoverUnderline>
-                        项目地址<OIcon><IconChevronRight /></OIcon>
+                        项目地址
+                        <template #suffix>
+                          <OIcon><IconChevronRight /></OIcon>
+                        </template>
                       </OLink>
                     </template>
                   </OCard>
@@ -402,20 +420,15 @@ watch(
 .o-col {
   min-width: 0;
 }
-.o-link {
-  padding: 8px 0;
+:deep(.o-link) {
   --link-color: var(--o-color-info2);
   @include text1;
-  :deep(.o-link-label) {
-    display: flex;
-    align-items: center;
-  }
   .o-icon {
     --icon-size: 24px;
     margin-left: 4px;
   }
 }
-.o-link + .o-link {
+:deep(.o-link + .o-link) {
   margin-left: 16px;
 }
 
@@ -524,10 +537,9 @@ img {
   height: 270px;
 }
 .project-card {
-  height: 366px;
-}
-.project-card-2025 {
-  height: 390px;
+  height: 100%;
+  background-position: right bottom;
+  --card-footer-gap: 24px;
 }
 .project-row {
   margin-top: 16px;
@@ -625,6 +637,9 @@ img {
     height: 120px;
     --card-main-padding: 16px 24px;
   }
+  .project-card {
+    --card-footer-gap: 16px;
+  }
   .team-card,
   .project-card {
     height: 100%;
@@ -703,28 +718,25 @@ img {
       margin-top: 0;
     }
   }
-  .o-link {
+  :deep(.o-link) {
     &:last-child {
       padding-bottom: 0;
     }
   }
 }
 @include respond('phone') {
-  .o-link {
-    @include text2;
+  :deep(.o-link) {
+    padding: 4px 0;
   }
   .project-card {
     .o-divider {
       --o-divider-gap: 0;
     }
-    .o-link {
+    :deep(.o-link) {
       width: 100%;
-      :deep(.o-link-label) {
-        width: 100%;
-        justify-content: space-between;
-      }
+      justify-content: space-between;
     }
-    .o-link + .o-link {
+    :deep(.o-link + .o-link) {
       margin-left: 0;
     }
   }
