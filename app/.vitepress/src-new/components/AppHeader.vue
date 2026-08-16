@@ -355,6 +355,13 @@ const fetchHotItems = () => {
   });
 };
 
+const buildSearchPath = (rawPath?: string): string => {
+  if (!rawPath) return '';
+  if (/^https?:\/\//.test(rawPath)) return rawPath;
+  if (rawPath.startsWith(`/${lang.value}`)) return rawPath;
+  return `/${lang.value}${rawPath.startsWith('/') ? '' : '/'}${rawPath}`;
+};
+
 const fetchSuggestions = useDebounceFn((val: string) => {
   getSearchRecommend({ query: val, lang: lang.value }).then((res) => {
     suggestItems.value = (res.obj.word || []).map((item: any) => ({
@@ -367,7 +374,7 @@ const fetchSuggestions = useDebounceFn((val: string) => {
   getOnestepSearch({ query: val, lang: lang.value }).then((res) => {
     onestepItems.value = (res.obj.word || []).map((item: any) => ({
       key: item.key,
-      path: item.path?.startsWith(`/${lang.value}`) ? item.path : `/${lang.value}${item.path}`,
+      path: buildSearchPath(item.path),
       type: item.type,
       count: item.count,
     }));
