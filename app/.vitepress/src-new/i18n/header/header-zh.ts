@@ -85,7 +85,7 @@ export default {
             {
               label: 'SkillHub',
               description: '探索、评估、贡献openEuler技能',
-              href: 'https://openEuler-skillhub.test.osinfra.cn',
+              href: import.meta.env.VITE_SERVICE_SKILLHUB_URL,
             },
           ],
         },

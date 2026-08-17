@@ -58,8 +58,8 @@ export default [
       en: 'Explore, evaluate, and contribute openEuler skills.',
     },
     link: {
-      zh: 'https://openEuler-skillhub.test.osinfra.cn',
-      en: 'https://openEuler-skillhub.test.osinfra.cn',
+      zh: import.meta.env.VITE_SERVICE_SKILLHUB_URL,
+      en: import.meta.env.VITE_SERVICE_SKILLHUB_URL,
     },
   },
   {
