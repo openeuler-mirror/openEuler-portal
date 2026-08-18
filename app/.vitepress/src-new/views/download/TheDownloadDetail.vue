@@ -55,7 +55,7 @@ const localeCommunityVersionData = computed(() => {
 });
 
 // ------------------- 根据版本查询下载信息------------------
-const queryGetDownloadLink = (version: string) => {
+const queryGetDownloadLink = async (version: string) => {
   const localeCommunityVersion = localeCommunityVersionData.value.find(
     (item) => item.NAME === version.replaceAll('-', ' ')
   );
@@ -66,10 +66,13 @@ const queryGetDownloadLink = (version: string) => {
   }
   versionInfo.value = localeCommunityVersion;
   versionData.value = [];
-  getDownloadLink(version).then((res) => {
+  try {
+    const res = await getDownloadLink(version);
     mirrorList.value = res.MirrorList;
     versionData.value = constructDownloadData(res?.FileTree, version, t);
-  });
+  } catch (error) {
+    // 异常捕获，不做处理
+  }
 };
 const queryGetVersionInfo = () => {
   getVersionInfo().then((res) => {
