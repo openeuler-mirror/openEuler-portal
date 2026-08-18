@@ -518,7 +518,7 @@ const renderData = computed(() => {
 
 .contribute-list {
   display: flex;
-  font-family: 500;
+  font-weight: 500;
 
   .yellow-box {
     font-weight: 500;
