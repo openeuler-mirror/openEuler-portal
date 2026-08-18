@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { watch } from 'vue';
 import { OTable, OLink } from '@opensig/opendesign';
 import { useLocale } from '~@/composables/useLocale';
 
@@ -11,16 +10,6 @@ const props = defineProps({
     },
   },
 });
-
-watch(
-  () => props.data,
-  (val) => {
-    console.log(val);
-  }, {
-    deep: true,
-    immediate: true,
-  }
-);
 </script>
 <template>
   <OTable

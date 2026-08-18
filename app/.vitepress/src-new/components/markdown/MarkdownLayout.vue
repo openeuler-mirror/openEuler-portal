@@ -19,8 +19,7 @@ const sectionFooter = ref('');
 onMounted(() => {
   if (!slots.default) return;
   const slotContent = slots.default();
-  console.log(slotContent)
-  
+
   nodesData.value = slotContent.map(node => {
     if (!node || typeof node !== 'object') return null;
     
