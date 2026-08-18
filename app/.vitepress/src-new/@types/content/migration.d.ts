@@ -160,3 +160,58 @@ declare module '#content/migration' {
   };
   export default data;
 }
+
+declare module '#content/migration/download' {
+  // source_links[].soft_links[]: 软件包链接项（下拉选项）
+  interface MigrationDownloadPageSoftLinkT {
+    name: string;
+    link: string;
+  }
+
+  // source_links[]: 按钮项（link 与 soft_links 二选一）
+  interface MigrationDownloadPageSourceLinkT {
+    name: string;
+    link?: string;
+    soft_links?: MigrationDownloadPageSoftLinkT[];
+  }
+
+  // version_list[]: 版本项
+  interface MigrationDownloadPageVersionT {
+    version: string;
+    source_links: MigrationDownloadPageSourceLinkT[];
+  }
+
+  interface MigrationDownloadPageContentT {
+    name: string;
+    description: string;
+    version_list: MigrationDownloadPageVersionT[];
+  }
+
+  const data: {
+    zh: MigrationDownloadPageContentT;
+    en: MigrationDownloadPageContentT;
+  };
+  export default data;
+}
+
+declare module '#content/migration/user-cases' {
+  // cases[]: 案例项
+  interface MigrationUserCaseItemT {
+    path: string;
+    title: string;
+    summary: string;
+    industry: string;
+    img: string;
+  }
+
+  interface MigrationUserCaseContentT {
+    button: string;
+    cases: MigrationUserCaseItemT[];
+  }
+
+  const data: {
+    zh: MigrationUserCaseContentT;
+    en: MigrationUserCaseContentT;
+  };
+  export default data;
+}

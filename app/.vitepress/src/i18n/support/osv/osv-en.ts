@@ -11,58 +11,6 @@ export default {
     TEXT_1: '关于OSV技术测评，openEuler提供了完整的测试流程和工具，详见',
     LINK_1: ' openEuler OSV技术测评整体介绍',
   },
-  STEP_HEAD: 'openEuler OSV技术测评整体介绍',
-  STEP_TITLE: 'OSV技术测评步骤',
-  STEP_CONTENT: [
-    {
-      ID: '01',
-      TITLE: '申请加入openEuler社区',
-      TEXT_1:
-        '您需要在AtomGit平台申请加入openEuler社区，成为组织成员。申请地址：',
-      LINK_1:
-        'https://atomgit.com/openeuler/infrastructure/blob/master/docs/openEuler-Infra-FAQ.md',
-    },
-    {
-      ID: '02',
-      TITLE: '了解OSV技术测评策略',
-      TEXT_1:
-        '开展OSV技术测评之前，您需要了解OSV技术测评策略，测评标准，以及使用OSV技术测评工具进行自验证。地址如下：',
-      LINK_1: 'https://atomgit.com/openeuler/oecp',
-    },
-    {
-      ID: '03',
-      TITLE: '申请OSV技术测评',
-      TEXT_1: '您需要向公共邮箱（ ',
-      LINK_1: 'oecompatibility@openeuler.org',
-      TEXT_2:
-        '）发送OSV技术测评申请，邮件标题需要注明“申请OSV技术测评”。收到邮件后，openEuler团队中sig组会与您沟通进行协议签署，如果已经签署，请忽略。',
-      TEXT_3: 'tips：如果没有签署CLA，请先签署：',
-      LINK_2: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0',
-    },
-    {
-      ID: '04',
-      TITLE: '提交OSV技术测评申请issue',
-      TEXT_1: '完成协议签署后，您需要在openEuler社区（',
-      LINK_1: 'https://atomgit.com/openeuler/oecp/issues',
-      TEXT_2:
-        '）的OSV技术测评项目下创建issue，将所需要测评的操作系统信息在issue中明确，以及ISO镜像地址。openEuler团队会及时了解issue的信息，并提出建议。',
-    },
-    {
-      ID: '05',
-      TITLE: 'OSV技术测评',
-      TEXT_1:
-        'openEuler社区会第一时间对提供的ISO进行OSV技术测评，测评之后会联系您进行部分结果确认以及审核，之后，会将测评结果发布到 ',
-      LINK_TEXT: 'openEuler官网',
-      LINK_1: 'https://www.openeuler.org/zh/',
-      TEXT_2: ' 上。',
-    },
-    {
-      ID: '06',
-      TITLE: 'OSV技术测评结果发布',
-      TEXT_1:
-        'openEuler团队会针对提交结果进行审核，如果通过，会将OSV技术测评结果添加到OSV技术测评列表中。',
-    },
-  ],
   TABLE_TITLE: 'OSV技术测评结果',
   SELECT_PLACEHOLDER: '请选择',
   SELECT_COMPANY: 'OS厂商',

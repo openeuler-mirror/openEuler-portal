@@ -1,0 +1,30 @@
+# Migration user cases page data / 迁移实践页数据
+#
+# button: Case card button text
+# cases: Case list (ordered top-to-bottom visually)
+#   path: Case link (in-site path)
+#   title: Case title
+#   summary: Case summary
+#   industry: Industry type
+#   img: Case image (in-site public path, no ./images/ prefix)
+
+button: Learn More
+
+cases:
+  - path: '/en/showcase/provider/005p41c5-a0b2-e850f4211aa0/'
+    title: China Mobile
+    summary: 'Smooth OS Porting for Core Service Systems'
+    industry: Carrier
+    img: '/category/showcase/provider.png'
+
+  - path: '/en/showcase/provider/tianyiyun0330/'
+    title: China Telecom
+    summary: 'Seamless OS Migration to CTyunOS'
+    industry: Carrier
+    img: '/category/showcase/provider.png'
+
+  - path: '/en/blog/viikei/park-migrate.html'
+    title: iSoftStone
+    summary: 'Campus OS Migration to New Server Hardware'
+    industry: Others
+    img: '/category/showcase/others.png'

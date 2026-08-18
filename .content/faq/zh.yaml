@@ -1,0 +1,24 @@
+# FAQ 页面数据 / FAQ page data
+#
+# faq_title: 侧边栏标题（所有 FAQ 子页面共用）
+# page_content: 页内目录标题
+# toc: 侧边栏目录（6 个分类导航，所有 FAQ 子页面共用）
+#   label: 分类标签
+#   link: 分类链接（空字符串表示当前页 /zh/faq/，其余为子页面路径段）
+
+faq_title: openEuler常见问题
+page_content: 本页内容
+
+toc:
+  - label: 通用
+    link: ''
+  - label: 系统管理
+    link: system-management
+  - label: 迁移
+    link: migration
+  - label: 云原生
+    link: cloud-native
+  - label: 虚拟化
+    link: virtualization
+  - label: 应用开发
+    link: application-development

@@ -21,7 +21,6 @@ import group from './group';
 import university from './university';
 import cookie from './cookie';
 import migration from './migration';
-import faq from './faq';
 import internship from './internship/internship-zh';
 
 const i18n: { [key: string]: any } = {
@@ -46,7 +45,6 @@ const i18n: { [key: string]: any } = {
     university: university.zh,
     cookie: cookie.zh,
     migration: migration.zh,
-    faq: faq.zh,
     internship,
   },
   en: {
@@ -69,7 +67,6 @@ const i18n: { [key: string]: any } = {
     cookie: cookie.en,
     mooc: mooc.en,
     migration: migration.en,
-    faq: faq.en,
     internship,
   },
 };
