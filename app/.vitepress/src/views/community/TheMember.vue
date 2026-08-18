@@ -1,27 +1,27 @@
 <script lang="ts" setup>
-import { useI18n } from '@/i18n';
-
+import { computed } from 'vue';
 import { useData } from 'vitepress';
 
-import MEMBER_DATA from '@/data/about-us/member-data';
+import memberContent from '#content/community/member';
+
 import { useCommon } from '@/stores/common';
 
 const { lang } = useData();
 
-const i18n = useI18n();
-
 const commonStore = useCommon();
+
+const memberData = computed(() => memberContent[lang.value as 'zh' | 'en']);
 </script>
 <template>
   <div class="member">
-    <div v-for="line in MEMBER_DATA" :key="line.ID" class="member-line">
-      <h2 :id="line.ID" class="member-title">{{ line.donorTitle[lang] }}</h2>
+    <div v-for="line in memberData.donor_levels" :key="line.id" class="member-line">
+      <h2 :id="line.id" class="member-title">{{ line.donor_title }}</h2>
       <div class="logo-list">
         <span
-          v-for="img in line.logoList"
+          v-for="img in line.logo_list"
           :key="img.img_light"
           class="logo"
-          :class="img.noIcon ? 'no-icon' : ''"
+          :class="img.no_icon ? 'no-icon' : ''"
         >
           <img
             :src="commonStore.theme === 'light' ? img.img_light : img.img_dark"
@@ -32,16 +32,13 @@ const commonStore = useCommon();
       </div>
     </div>
     <div class="tip">
-      <p>{{ i18n.about.TIP1 }}</p>
-      <p>{{ i18n.about.TIP2 }}</p>
-      <div v-if="lang === 'zh'" class="contact">
-        <p>资金捐赠，请联系开放原子开源基金会。</p>
-        <p>
-          联系人：高飞；手机：13717810108；邮箱：<a
-            href="mailto:gaofei@openatom.org"
-            >gaofei@openatom.org</a
-          >。
-        </p>
+      <p v-for="(tip, i) in memberData.tips" :key="i">{{ tip }}</p>
+      <div v-if="memberData.contact" class="contact">
+        <p
+          v-for="(text, i) in memberData.contact"
+          :key="i"
+          v-dompurify-html="text"
+        ></p>
       </div>
     </div>
   </div>

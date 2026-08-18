@@ -16,11 +16,7 @@ import personalCardBgDark from '~@/assets/category/honor/personal-card-bg-dark.p
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 import IconOutLink from '~icons/yuanrong/icon-outlink.svg';
 
-import { year2021 } from '~@/data/honor/2021';
-import { year2022 } from '~@/data/honor/2022';
-import { year2023 } from '~@/data/honor/2023';
-import { year2024 } from '~@/data/honor/2024';
-import { year2025 } from '~@/data/honor/2025';
+import honorContent from '#content/community/honor';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -40,23 +36,23 @@ const activeTab = ref('2021');
 const honorData = [
   {
     label: '2021',
-    data: year2021,
+    data: honorContent['2021'],
   },
   {
     label: '2022',
-    data: year2022,
+    data: honorContent['2022'],
   },
   {
     label: '2023',
-    data: year2023,
+    data: honorContent['2023'],
   },
   {
     label: '2024',
-    data: year2024,
+    data: honorContent['2024'],
   },
   {
     label: '2025',
-    data: year2025,
+    data: honorContent['2025'],
   }
 ];
 
@@ -224,7 +220,7 @@ watch(
                 <p v-if="pro.title" class="subtitle">{{ pro.title }}</p>
                 <ORow :gap="flexGap" flex-wrap="wrap" class="project-row">
                   <OCol v-for="proItem in pro.list" :key="proItem.link" :flex="flexCol">
-                    <OCard class="project-card" :class="[`project-card-${tab.label}`]" :style="{ backgroundImage: `url(${isDark ? pro.bgDark : pro.bg})` }">
+                    <OCard class="project-card" :class="[`project-card-${tab.label}`]" :style="{ backgroundImage: `url(${isDark ? pro.bg_dark : pro.bg})` }">
                       <p class="card-name">{{ proItem.name }}</p>
                       <div class="card-detail">
                         <p v-for="itemDetail in proItem.detail" :key="itemDetail">
