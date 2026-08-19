@@ -1,0 +1,99 @@
+# Contact us page data / 联系我们页数据
+#
+# Sections are ordered top-to-bottom by visual layout.
+# Images live in ./images/; shared images have no suffix, localized images keep -zh/-en suffix, theme variants keep light/dark/primary subdirs.
+# SVGs used as inline icons (OCard :icon, inherits currentColor) carry ?raw; plain <img>/background images do not.
+# Social media icons come in light/dark/primary sets under their respective subdirectories.
+
+# banner: top banner title
+#   title: title text
+banner:
+  title: Contact Us
+
+# community_contact: Community Contact section
+#   title: section title
+#   desc: section subtitle (response time note)
+community_contact:
+  title: Community Contact
+  desc: "Got a question? Send us an email, and we'll respond within 3–5 business days."
+
+# contact_items: contact items (4 cards)
+#   title: item title (from i18n communityItem1~4)
+#   email: contact email (mailto)
+#   icon: item icon (SVG, inline, path with ?raw)
+contact_items:
+  - title: Membership
+    email: gaofei@openatom.org
+    icon: ./images/icon-contact1.svg?raw
+  - title: Events
+    email: events@openeuler.sh
+    icon: ./images/icon-contact2.svg?raw
+  - title: Media/PR
+    email: marketing@openeuler.org
+    icon: ./images/icon-contact3.svg?raw
+  - title: Community Discussions
+    email: dev@openeuler.org
+    icon: ./images/icon-contact4.svg?raw
+
+# follow_us: Follow Us section
+#   title: section title
+#   desc: section subtitle
+#   cover: cover image (localized, en uses follow-en.jpg)
+#   footer_codes: QR code list (zh-only; en uses empty array)
+#     code: QR code image
+#     label: QR code label
+#   follow_links: social media list (shared zh/en; label/href are language-agnostic)
+#     icon: light theme icon
+#     icon_dark: dark theme icon
+#     icon_primary: primary color icon (hover state)
+#     href: social link
+#     label: platform name
+follow_us:
+  title: Follow Us
+  desc: Find us on social media
+  cover: ./images/follow-en.jpg
+  footer_codes: []
+  follow_links:
+    - icon: ./images/light/x.png
+      icon_dark: ./images/dark/x.png
+      icon_primary: ./images/primary/x.png
+      href: https://x.com/openeuler
+      label: X
+    - icon: ./images/light/LinkedIn.png
+      icon_dark: ./images/dark/LinkedIn.png
+      icon_primary: ./images/primary/LinkedIn.png
+      href: https://www.linkedin.com/company/openeuler
+      label: LinkedIn
+    - icon: ./images/light/youtube.png
+      icon_dark: ./images/dark/youtube.png
+      icon_primary: ./images/primary/youtube.png
+      href: https://www.youtube.com/@openeuler
+      label: YouTube
+    - icon: ./images/light/bilibili.png
+      icon_dark: ./images/dark/bilibili.png
+      icon_primary: ./images/primary/bilibili.png
+      href: https://space.bilibili.com/527064077
+      label: Bilibili
+
+# handy_materials: Handy Materials section
+#   title: section title
+#   list: resource list
+#     title: resource title
+#     desc: resource description
+#     href: resource link
+#     icon: resource icon (SVG, inline, path with ?raw)
+handy_materials:
+  title: Handy Materials
+  list:
+    - title: Community Documentation
+      desc: "Explore openEuler's release notes, installation guide, administrator guide, project usage guides, and more."
+      href: https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/Installation.html
+      icon: ./images/icon-contact5.svg?raw
+    - title: Get openEuler OS
+      desc: "Get openEuler for public clouds, containers, and Windows."
+      href: https://www.openeuler.org/en/download/#get-openeuler
+      icon: ./images/icon-contact6.svg?raw
+    - title: Join Community
+      desc: "Submit issues, pull requests, improve docs, or join discussions. Every contribution counts!"
+      href: https://www.openeuler.org/en/community/contribution/
+      icon: ./images/icon-contact7.svg?raw

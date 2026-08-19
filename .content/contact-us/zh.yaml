@@ -1,0 +1,103 @@
+# 联系我们页数据 / Contact us page data
+#
+# 板块按页面从上到下视觉顺序排列。
+# 图片就近存放在 ./images/，zh/en 共用图不加后缀，差异化图保留 -zh/-en 后缀，主题变体保留 light/dark/primary 子目录。
+# SVG 作为 inline 图标（OCard :icon 组件消费，继承 currentColor）的路径带 ?raw，普通 <img>/背景图不带 ?raw。
+# 社交媒体图标区分亮色/暗色/主题色三套，分别存放在 light/dark/primary 子目录。
+
+# banner: 顶部 banner 标题
+#   title: 标题文案
+banner:
+  title: 联系我们
+
+# community_contact: 社区联系板块
+#   title: 板块标题
+#   desc: 板块副标题（答复周期说明）
+community_contact:
+  title: 社区联系
+  desc: 我们将在收到邮件后3-5个工作日内答复
+
+# contact_items: 联系项列表（4 项卡片）
+#   title: 联系项标题（取自 i18n communityItem1~4）
+#   email: 联系邮箱（点击 mailto）
+#   icon: 联系项图标（SVG，inline 消费，路径带 ?raw）
+contact_items:
+  - title: 资金捐赠请联系
+    email: gaofei@openatom.org
+    icon: ./images/icon-contact1.svg?raw
+  - title: 社区活动请联系
+    email: events@openeuler.sh
+    icon: ./images/icon-contact2.svg?raw
+  - title: 品牌合作请联系
+    email: marketing@openeuler.org
+    icon: ./images/icon-contact3.svg?raw
+  - title: 其他联系方式
+    email: dev@openeuler.org
+    icon: ./images/icon-contact4.svg?raw
+
+# follow_us: 欢迎关注我们板块
+#   title: 板块标题
+#   desc: 板块副标题
+#   cover: 封面图（zh/en 差异化，zh 用 follow-zh.jpg）
+#   footer_codes: 二维码列表（zh 专属，en 留空数组）
+#     code: 二维码图片
+#     label: 二维码说明
+#   follow_links: 社交媒体列表（zh/en 共用，label/href 不分语言）
+#     icon: 亮色主题图标
+#     icon_dark: 暗色主题图标
+#     icon_primary: 主题色图标（hover 态）
+#     href: 社交链接
+#     label: 平台名称
+follow_us:
+  title: 欢迎关注我们
+  desc: 您可以通过以下方式找到我们
+  cover: ./images/follow-zh.jpg
+  footer_codes:
+    - code: ./images/code-zgz.jpg
+      label: 微信公众号
+    - code: ./images/code-xzs.png
+      label: 小助手
+  follow_links:
+    - icon: ./images/light/x.png
+      icon_dark: ./images/dark/x.png
+      icon_primary: ./images/primary/x.png
+      href: https://x.com/openeuler
+      label: X
+    - icon: ./images/light/LinkedIn.png
+      icon_dark: ./images/dark/LinkedIn.png
+      icon_primary: ./images/primary/LinkedIn.png
+      href: https://www.linkedin.com/company/openeuler
+      label: LinkedIn
+    - icon: ./images/light/youtube.png
+      icon_dark: ./images/dark/youtube.png
+      icon_primary: ./images/primary/youtube.png
+      href: https://www.youtube.com/@openeuler
+      label: YouTube
+    - icon: ./images/light/bilibili.png
+      icon_dark: ./images/dark/bilibili.png
+      icon_primary: ./images/primary/bilibili.png
+      href: https://space.bilibili.com/527064077
+      label: Bilibili
+
+# handy_materials: 资源推荐板块
+#   title: 板块标题
+#   list: 资源列表
+#     title: 资源标题
+#     desc: 资源描述
+#     href: 资源链接
+#     icon: 资源图标（SVG，inline 消费，路径带 ?raw）
+handy_materials:
+  title: 资源推荐
+  list:
+    - title: openEuler社区文档
+      desc: 帮助开发者快速了解 openEuler，包括发行说明、系统安装、管理员指南、虚拟化和容器等各类项目说明与使用指导
+      href: https://docs.openeuler.org/zh/
+      icon: ./images/icon-contact5.svg?raw
+    - title: 获取openEuler OS
+      desc: 提供获取openEuler的不同方式，公有云、容器镜像、windows、MacOS等
+      href: https://www.openeuler.org/zh/download/#get-openeuler
+      icon: ./images/icon-contact6.svg?raw
+    - title: 参与社区贡献
+      desc: 欢迎大家以各种形式参与社区贡献，包括但不限于提交issue、提交pr、参与讨论、代码贡献、文档捉虫等
+      href: https://www.openeuler.org/zh/community/contribution/
+      icon: ./images/icon-contact7.svg?raw

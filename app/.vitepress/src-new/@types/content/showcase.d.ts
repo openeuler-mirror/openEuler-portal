@@ -15,3 +15,19 @@ declare module '#content/showcase/technical-white-paper' {
   };
   export default data;
 }
+
+declare module '#content/showcase' {
+  // type_map: 行业分类图标映射项
+  interface ShowcaseTypeMapItemT {
+    icon: string;
+    img_light: string;
+    img_dark: string;
+  }
+
+  interface ShowcaseContentT {
+    type_map: Record<string, ShowcaseTypeMapItemT>;
+  }
+
+  const data: { zh: ShowcaseContentT; en: ShowcaseContentT };
+  export default data;
+}

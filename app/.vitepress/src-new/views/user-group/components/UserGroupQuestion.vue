@@ -1,7 +1,10 @@
 <script lang="ts" setup>
+import { computed } from 'vue';
 import AppSection from '~@/components/AppSection.vue';
-import { questionData } from '~@/data/user-group';
+import userGroupContent from '#content/community/user-group';
 import IconHook from '~icons/user-group/hook.svg';
+
+const questionData = computed(() => userGroupContent.zh.question);
 </script>
 
 <template>

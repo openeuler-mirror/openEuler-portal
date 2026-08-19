@@ -1,13 +1,16 @@
 <script lang="ts" setup>
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import AppSection from '~@/components/AppSection.vue';
 import { useScreen } from '~@/composables/useScreen';
-import { introData } from '~@/data/user-group';
+import userGroupContent from '#content/community/user-group';
 import IconHook from '~icons/user-group/hook.svg';
 
 const { isPhone } = useScreen();
 
 const { t } = useI18n();
+
+const introData = computed(() => userGroupContent.zh.intro);
 </script>
 
 <template>

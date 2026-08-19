@@ -1,0 +1,42 @@
+# 案例中心页数据 / Showcase page data
+#
+# type_map: 行业分类图标映射（按行业名索引，用于案例卡片的行业图标和背景图）
+#   icon: 行业 SVG 图标（inline SVG，带 ?raw，用 createSvgIcon 消费）
+#   img_light: 亮色主题行业图标 PNG
+#   img_dark: 暗色主题行业图标 PNG
+
+type_map:
+  '金融':
+    icon: './images/finance.svg?raw'
+    img_light: './images/light/finance.png'
+    img_dark: './images/dark/finance.png'
+
+  '运营商':
+    icon: './images/operator.svg?raw'
+    img_light: './images/light/carrier.png'
+    img_dark: './images/dark/carrier.png'
+
+  '能源':
+    icon: './images/energy.svg?raw'
+    img_light: './images/light/energy.png'
+    img_dark: './images/dark/energy.png'
+
+  '物流':
+    icon: './images/logistics.svg?raw'
+    img_light: './images/light/logistics.png'
+    img_dark: './images/dark/logistics.png'
+
+  '高校&科研':
+    icon: './images/education.svg?raw'
+    img_light: './images/light/education.png'
+    img_dark: './images/dark/education.png'
+
+  '云计算':
+    icon: './images/cloud-computing.svg?raw'
+    img_light: './images/light/cloud-computing.png'
+    img_dark: './images/dark/cloud-computing.png'
+
+  '其他':
+    icon: './images/other.svg?raw'
+    img_light: './images/light/other.png'
+    img_dark: './images/dark/other.png'

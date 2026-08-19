@@ -145,3 +145,115 @@ declare module '#content/community/honor' {
   const data: Record<string, HonorYearDataT>;
   export default data;
 }
+
+declare module '#content/community/user-group' {
+  // banner: 顶部 banner
+  interface UserGroupBannerT {
+    bg_pc: string;
+    title: string;
+    desc: string;
+    btn: string;
+    href: string;
+  }
+
+  // guide: 用户组介绍与加入指南
+  interface UserGroupGuideT {
+    title: string;
+    subtitle1: string;
+    subtitle2: string;
+    desc1: string;
+    desc2: string;
+    desc3: string;
+    tip1: string;
+    tip2: string;
+    link1: string;
+    link2: string;
+    mail: string;
+    wechat: string;
+  }
+
+  // intro.introList[].title[]: 角色标题项
+  interface UserGroupIntroTitleItemT {
+    name: string;
+    desc: string;
+  }
+
+  // intro.introList[]: 角色介绍项
+  interface UserGroupIntroItemT {
+    title: UserGroupIntroTitleItemT[];
+    background: string;
+    logo: string;
+    rights: (string | { text: string; operation: string; url: string })[];
+    obligation: (string | { text: string; operation: string; url: string })[];
+  }
+
+  // intro: 成员角色、权益与义务
+  interface UserGroupIntroT {
+    title: string;
+    desc: string;
+    introList: UserGroupIntroItemT[];
+  }
+
+  // question: 如何成为 Organizer/Ambassador
+  interface UserGroupQuestionT {
+    title: string;
+    desc1: string;
+    desc2: string;
+    mail: string;
+    subtitle1: string;
+    intro1: string;
+    subtitle2: string;
+    intro2: string;
+    tip: string[];
+  }
+
+  // cities[].data.ambassador[] / organizer[]: 成员项
+  interface UserGroupMemberT {
+    name: string;
+    position: string;
+    technology: string[];
+    home_page?: string;
+    avatar: string;
+    avatar_dark: string;
+    contribution: string;
+    forum?: string;
+    email?: string;
+  }
+
+  // cities[].data.showcase[]: 案例项
+  interface UserGroupShowcaseItemT {
+    summary: string;
+    path: string;
+    industry: string;
+    title: string;
+  }
+
+  // cities[].data: 城市数据
+  interface UserGroupCityDataT {
+    title: string;
+    organizational: string;
+    organizer: UserGroupMemberT[];
+    ambassador: UserGroupMemberT[];
+    salon: unknown[];
+    showcase: UserGroupShowcaseItemT[];
+  }
+
+  // cities[]: 城市项
+  interface UserGroupCityItemT {
+    name: string;
+    img: string;
+    data: UserGroupCityDataT;
+  }
+
+  // 顶层
+  interface UserGroupContentT {
+    banner: UserGroupBannerT;
+    guide: UserGroupGuideT;
+    intro: UserGroupIntroT;
+    question: UserGroupQuestionT;
+    cities: UserGroupCityItemT[];
+  }
+
+  const data: { zh: UserGroupContentT };
+  export default data;
+}
