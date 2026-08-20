@@ -1,0 +1,52 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "openEuler Compiler SIG Meetup 北京站",
+    "description": "本次Meetup特邀来自北京航空航天大学、湖南大学、字节跳动、京东、快手、麒麟软件及华为等高校与企业的多位专家学者齐聚一堂。会议涵盖前沿编译器技术、AI图编译优化、灵衢超节点编程、编译技术业务场景实践及编译器开源社区共建等核心议题，深度链接产学研用领域技术力量，共探编译器技术创新发展之路。",
+    "startDate": "2025-10-16T14:00",
+    "endDate": "2025-10-16T17:30",
+    "eventStatus": "https://schema.org/EventCompleted",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "url": "https://www.openeuler.org/zh/interaction/event-list/openEuler-compiler-sig-meetup-beijing",
+    "inLanguage": "zh-CN",
+    "location": {
+      "@type": "Place",
+      "name": "北京中关村北理工亚朵S酒店3层精工厅",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "北京市",
+        "addressRegion": "CN"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://www.openeuler.org/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "社区活动",
+        "item": "https://www.openeuler.org/zh/interaction/event-list/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "openEuler Compiler SIG Meetup 北京站",
+        "item": "https://www.openeuler.org/zh/interaction/event-list/openEuler-compiler-sig-meetup-beijing"
+      }
+    ]
+  }
+]

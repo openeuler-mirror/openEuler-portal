@@ -1,0 +1,52 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "openEuler Meetup X openGauss Meetup 西安站",
+    "description": "openEuler开源社区与openGauss开源社区携手陕西鲲鹏创新中心、西北工业大学，将于西安举办Meetup。本次活动聚焦操作系统与数据库两大核心领域，围绕openEuler与openGauss的最新技术进展、内核优化实践、AI融合创新以及鲲鹏生态赋能等热点话题，邀请资深技术专家与开发者进行深度分享与交流。",
+    "startDate": "2025-09-26T14:00",
+    "endDate": "2025-09-26T17:30",
+    "eventStatus": "https://schema.org/EventCompleted",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "url": "https://www.openeuler.org/zh/interaction/event-list/openEuler-meetup-x-opengauss-meetup-xian",
+    "inLanguage": "zh-CN",
+    "location": {
+      "@type": "Place",
+      "name": "西安软件新城二期C2座3F陕西华为联合学院多功能厅",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "西安市",
+        "addressRegion": "CN"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://www.openeuler.org/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "社区活动",
+        "item": "https://www.openeuler.org/zh/interaction/event-list/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "openEuler Meetup X openGauss Meetup 西安站",
+        "item": "https://www.openeuler.org/zh/interaction/event-list/openEuler-meetup-x-opengauss-meetup-xian"
+      }
+    ]
+  }
+]

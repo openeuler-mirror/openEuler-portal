@@ -1,0 +1,52 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "openEuler社区云原生开源中间件Meetup-西安站",
+    "description": "openEuler社区云原生开源中间件Meetup-西安站特邀多位业内专家，分享实战案例与前沿技术解析，活动将重点解读 openEuler 社区开源协作模式与介绍开源实习，指导参会者掌握开源项目贡献路径，助力高校师生与企业技术人员深度参与开源生态建设，同时，本次活动将探索 openEuler 生态下中间件技术的最佳实践，为学术研究提供技术参考，为企业应用落地提供可复用的解决方案。",
+    "startDate": "2026-06-10T13:30",
+    "endDate": "2026-06-10T17:00",
+    "eventStatus": "https://schema.org/EventCompleted",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "url": "https://www.openeuler.org/zh/interaction/event-list/openEuler-cloud-native-middleware-meetup-xian",
+    "inLanguage": "zh-CN",
+    "location": {
+      "@type": "Place",
+      "name": "西安电子科技大学（长安校区）网络安全研究创新大楼A-103报告厅",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "西安市",
+        "addressRegion": "CN"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "openEuler 社区",
+      "url": "https://www.openeuler.org"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://www.openeuler.org/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "社区活动",
+        "item": "https://www.openeuler.org/zh/interaction/event-list/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "openEuler社区云原生开源中间件Meetup-西安站",
+        "item": "https://www.openeuler.org/zh/interaction/event-list/openEuler-cloud-native-middleware-meetup-xian"
+      }
+    ]
+  }
+]

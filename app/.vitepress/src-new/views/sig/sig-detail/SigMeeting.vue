@@ -8,6 +8,7 @@ import { useData } from 'vitepress';
 
 import activityContent from '#content/activity';
 import { foldI18n } from '~@/shared/content';
+import { slugifyEvent } from '~@/shared/event-slug';
 
 import { type CalendarValueT } from '~@/@type/type-home';
 
@@ -51,14 +52,14 @@ const expandDates = (start: string, end: string): string[] => {
 
 const FORMAT_LABEL: Record<string, string> = { offline: '线下', online: '线上', hybrid: '线上 + 线下' };
 
-const activityData = foldI18n(activityContent.events, (lang.value as string).includes('en') ? 'en' : 'zh').map((ev) => ({
+const activityData = foldI18n(activityContent.events, (lang.value as string).includes('en') ? 'en' : 'zh').map((ev, idx) => ({
   ...ev,
   name: ev.title,
   dates: expandDates(ev.start_date, ev.end_date),
   address: ev.address,
   type: 'activity',
   activity_type: FORMAT_LABEL[ev.format] || '',
-  url: (ev.poster_image || ev.agenda_image) ? `/${lang.value}/interaction/event-list/detail/?id=${ev.id}` : '',
+  url: (ev.poster_image || ev.agenda_image) ? `/zh/interaction/event-list/${slugifyEvent(activityContent.events[idx])}` : '',
 })) as CalendarValueT[];
 
 // 过滤当前sig组的活动
