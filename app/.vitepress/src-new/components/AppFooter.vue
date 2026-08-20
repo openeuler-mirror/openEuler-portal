@@ -387,8 +387,11 @@ $color: #fff;
     }
     @include tip1;
     .link {
-      color: $color;
+      color: rgba(255, 255, 255, 0.6);
       display: inline-block;
+      @include hover {
+        color: rgba(255, 255, 255, 1);
+      }
     }
     .footer-option-item {
       align-items: center;
