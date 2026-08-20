@@ -5,6 +5,8 @@ export default {
   version: 'Version: ',
   relative: 'Related software package',
   suggest: 'Are you looking for:',
+  correctionTip: 'Showing results for "{corrected}". Still search "{original}"',
+  relatedSearch: 'Related search',
   copy: 'Copy',
   found: 'Found',
   notFound: 'Not found',

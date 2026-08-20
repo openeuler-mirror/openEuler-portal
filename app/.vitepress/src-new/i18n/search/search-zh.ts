@@ -5,6 +5,8 @@ export default {
   version: '版本：',
   relative: '相关软件包',
   suggest: '您是不是在寻找：',
+  correctionTip: '已为您显示"{corrected}"的搜索结果，仍然搜索"{original}"',
+  relatedSearch: '相关搜索',
   copy: '复制',
   search: '搜索',
   found: '已搜到',

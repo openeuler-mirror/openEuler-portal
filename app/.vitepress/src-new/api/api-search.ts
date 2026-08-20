@@ -125,7 +125,7 @@ export function getSearchCount(params: SearchCountQueryT): Promise<{
  */
 export function getRelevant(params: RelevantQueryT): Promise<{
   msg: string;
-  obj: any;
+  obj: { suggestList: string[] };
   status: number;
 }> {
   const url = `/api-search/search/sugg`;
