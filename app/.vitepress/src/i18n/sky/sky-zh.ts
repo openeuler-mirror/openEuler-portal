@@ -10,45 +10,7 @@ import icon3_dark from '@/assets/category/euler-sky/oevp/oevp-3_dark.png';
 import icon4_dark from '@/assets/category/euler-sky/oevp/oevp-4_dark.png';
 import icon5_dark from '@/assets/category/euler-sky/oevp/oevp-5_dark.png';
 
-import bg_1 from '@/assets/category/euler-sky/bg-1.png';
-import bg_2 from '@/assets/category/euler-sky/bg-2.png';
-import bg_3 from '@/assets/category/euler-sky/bg-3.png';
-import bg_4 from '@/assets/category/euler-sky/bg-4.png';
-
 export default {
-  VIEW_MORE: '查看更多',
-  HOME: {
-    BANNER_TITLE: 'openEuler Call for X 计划',
-    BANNER_INTRODUCTION: '热衷实践 乐于分享 多元贡献',
-    PLAN_INTRODUCE:
-      '面向数字基础设施开源操作系统的 openEuler，希望通过开源开放，汇聚更多力量，不断探索科技创新的边界，驱动物理世界与数字世界的深度融合，构建万物互联的智能世界。“openEuler Call for X 计划”是一个开放的社区项目，鼓励所有社区成员以及开源爱好者积极贡献、乐于分享、热衷实践。多元化的贡献可以丰富社区生态，我们希望开发者都能感受到个人的价值和重要性。',
-    CARD_DATA: [
-      {
-        TITLE: 'Call for openEuler Valuable Professional',
-        URL: '/zh/community/program/join-oEVP/',
-        IMG: bg_1,
-      },
-      {
-        TITLE: 'Call for 技术教程贡献',
-        URL: '/zh/community/program/technical-tutorial/',
-        IMG: bg_2,
-      },
-      {
-        TITLE: 'Call for 基础设施资源贡献',
-        URL: '/zh/community/program/infrastructure/',
-        IMG: bg_3,
-      },
-      {
-        TITLE: 'Call for 场地资源贡献',
-        URL: '/zh/community/program/site-resources/',
-        IMG: bg_4,
-      },
-    ],
-    EVENT_COLLECTION:
-      '“openEuler Call for X 计划” \n 资源面向openEuler社区所有成员开放，欢迎与openEuler社区共同组织开发者活动，繁荣openEuler生态。',
-    EVENT_COLLECTION1: '活动征集',
-    EVENT_COLLECTION_URL: '/zh/interaction/event-list/',
-  },
   TECHNICAL_TULTORIAL: {
     BREAD1: 'openEuler Call for X 计划',
     BREAD1_URL: '/zh/community/program/',

@@ -15,7 +15,7 @@ import IconRelease from '~icons/event/icon-release.svg';
 
 import activityContent from '#content/activity';
 import { foldI18n } from '~@/shared/content';
-import { applyData } from '~@/data/event/apply';
+import eventListContent from '#content/interaction/event-list';
 
 const ICON_MAP: Record<string, unknown> = {
   opensource: IconOpensource,
@@ -74,7 +74,7 @@ const yearPlan = computed(() => {
   });
 });
 
-const applySteps = computed(() => (applyData[locale.value] ?? []) as any[]);
+const applySteps = computed(() => eventListContent[locale.value].apply_steps);
 
 const applySep3 = computed(() => applySteps.value[2]);
 </script>
@@ -92,7 +92,7 @@ const applySep3 = computed(() => applySteps.value[2]);
     <OEventsApply :steps="applySteps">
       <template #step3>
         <div class="step3">
-          <div v-for="(item, i) in applySep3.listData" :key="i" class="item-text">
+          <div v-for="(item, i) in applySep3.list_data" :key="i" class="item-text">
             <OIcon><IconDone /></OIcon>
             <div v-if="item.href" class="text-link">
               <span>{{ item.title }}</span>

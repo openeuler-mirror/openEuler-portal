@@ -31,3 +31,18 @@ declare module '#content/showcase' {
   const data: { zh: ShowcaseContentT; en: ShowcaseContentT };
   export default data;
 }
+
+declare module '#content/showcase/market-report' {
+  // market_report[]: 市场研究报告项
+  interface MarketReportItemT {
+    path: string;
+    summary: string;
+  }
+
+  interface MarketReportContentT {
+    market_report: MarketReportItemT[];
+  }
+
+  const data: { zh: MarketReportContentT };
+  export default data;
+}

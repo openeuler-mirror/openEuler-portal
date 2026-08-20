@@ -1,0 +1,5 @@
+# Event List page data / 活动列表页数据
+#
+# apply_steps: Event application steps (empty array for en, zh-only)
+
+apply_steps: []

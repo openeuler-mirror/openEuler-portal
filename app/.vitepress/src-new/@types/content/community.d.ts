@@ -257,3 +257,42 @@ declare module '#content/community/user-group' {
   const data: { zh: UserGroupContentT };
   export default data;
 }
+
+declare module '#content/community/mailing-list' {
+  // subscription_process[]: 订阅流程步骤项
+  interface MailingStepItemT {
+    title: string;
+    detail: string;
+    img: string;
+  }
+
+  interface MailingListContentT {
+    subscription_process: MailingStepItemT[];
+  }
+
+  const data: { zh: MailingListContentT; en: MailingListContentT };
+  export default data;
+}
+
+declare module '#content/community/program' {
+  // card_data[]: 卡片项
+  interface ProgramCardItemT {
+    title: string;
+    url: string;
+    img: string;
+  }
+
+  interface ProgramContentT {
+    banner_title: string;
+    banner_introduction: string;
+    plan_introduce: string;
+    view_more: string;
+    card_data: ProgramCardItemT[];
+    event_collection?: string;
+    event_collection1?: string;
+    event_collection_url?: string;
+  }
+
+  const data: { zh: ProgramContentT; en: ProgramContentT };
+  export default data;
+}

@@ -1,0 +1,34 @@
+# openEuler Call for X 计划页数据
+#
+# banner_title: banner 标题
+# banner_introduction: banner 介绍
+# plan_introduce: 计划介绍
+# view_more: 查看更多按钮文案
+# card_data: 卡片列表
+#   title: 卡片标题
+#   url: 卡片链接
+#   img: 卡片背景图（PNG）
+# event_collection: 活动征集标题（含 \n 换行符，用双引号包裹）
+# event_collection1: 活动征集按钮文案
+# event_collection_url: 活动征集链接
+
+banner_title: 'openEuler Call for X 计划'
+banner_introduction: '热衷实践 乐于分享 多元贡献'
+plan_introduce: '面向数字基础设施开源操作系统的 openEuler，希望通过开源开放，汇聚更多力量，不断探索科技创新的边界，驱动物理世界与数字世界的深度融合，构建万物互联的智能世界。“openEuler Call for X 计划”是一个开放的社区项目，鼓励所有社区成员以及开源爱好者积极贡献、乐于分享、热衷实践。多元化的贡献可以丰富社区生态，我们希望开发者都能感受到个人的价值和重要性。'
+view_more: '查看更多'
+card_data:
+  - title: 'Call for openEuler Valuable Professional'
+    url: '/zh/community/program/join-oEVP/'
+    img: './images/bg-1.png'
+  - title: 'Call for 技术教程贡献'
+    url: '/zh/community/program/technical-tutorial/'
+    img: './images/bg-2.png'
+  - title: 'Call for 基础设施资源贡献'
+    url: '/zh/community/program/infrastructure/'
+    img: './images/bg-3.png'
+  - title: 'Call for 场地资源贡献'
+    url: '/zh/community/program/site-resources/'
+    img: './images/bg-4.png'
+event_collection: "“openEuler Call for X 计划” \n 资源面向openEuler社区所有成员开放，欢迎与openEuler社区共同组织开发者活动，繁荣openEuler生态。"
+event_collection1: '活动征集'
+event_collection_url: '/zh/interaction/event-list/'

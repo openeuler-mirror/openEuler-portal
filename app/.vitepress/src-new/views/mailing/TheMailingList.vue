@@ -5,7 +5,7 @@ import { ORow, OCol, OFigure, OTable, OLink, OButton, OPagination } from '@opens
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import AppSection from '~@/components/AppSection.vue';
 
-import { subscriptionProcess } from '~@/data/mailing';
+import mailingListContent from '#content/community/mailing-list';
 
 import banner from '~@/assets/category/mailing/mailing-banner.jpg';
 
@@ -18,6 +18,8 @@ import type { MailingDataT } from '~@/@types/type-mailing';
 
 const { locale, t } = useLocale();
 const { lePadV, isPhone } = useScreen();
+
+const subscriptionProcess = computed(() => mailingListContent[locale.value].subscription_process);
 
 const columns = [
   { label: t('mailing.name'), key: 'display_name', style: { width: lePadV.value ? '60px' : '180px' } },
@@ -85,8 +87,8 @@ const colFlex = computed(() => {
             <p class="num">
               {{ (i + 1).toString().padStart(2, '0') }}
             </p>
-            <p class="title">{{ item.title[locale] }}</p>
-            <p v-dompurify-html="item.detail[locale]" class="desc"></p>
+            <p class="title">{{ item.title }}</p>
+            <p v-dompurify-html="item.detail" class="desc"></p>
             <OFigure :src="item.img" />
           </div>
         </OCol>

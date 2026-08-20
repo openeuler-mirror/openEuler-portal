@@ -8,29 +8,7 @@ import icon2_dark from '@/assets/category/euler-sky/oevp/oevp-2_dark.png';
 import icon3_dark from '@/assets/category/euler-sky/oevp/oevp-3_dark.png';
 import icon5_dark from '@/assets/category/euler-sky/oevp/oevp-5_dark.png';
 
-import bg_1 from '@/assets/category/euler-sky/bg-1.png';
-import bg_2 from '@/assets/category/euler-sky/bg-2.png';
-
 export default {
-  VIEW_MORE: 'View More',
-  HOME: {
-    BANNER_TITLE: 'openEuler Call for X',
-    BANNER_INTRODUCTION: 'Diverse Contributions',
-    PLAN_INTRODUCE:
-      'openEuler is an open source OS tailor-made for digital infrastructure and harnesses collaborative efforts to pioneer innovation and integrate advanced technologies. It excels in bridging the physical and digital realms to create a fully connected, intelligent world. openEuler Call for X is a program that encourages community members and open source enthusiasts to contribute, share experiences, and exchange resources. openEuler appreciates diverse contributions and aims to build a thriving community ecosystem with your involvement.',
-    CARD_DATA: [
-      {
-        TITLE: 'Call for openEuler Valuable Professional',
-        URL: '/en/community/program/join-oEVP/',
-        IMG: bg_1,
-      },
-      {
-        TITLE: 'Call for Tutorials',
-        URL: '/en/community/program/technical-tutorial/',
-        IMG: bg_2,
-      },
-    ],
-  },
   TECHNICAL_TULTORIAL: {
     BREAD1: 'openEuler Call for X',
     BREAD1_URL: '/en/community/program/',

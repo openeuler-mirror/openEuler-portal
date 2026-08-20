@@ -1,0 +1,22 @@
+# openEuler Developer Day 2026 页面数据
+#
+# banner: 顶部 banner 配置
+#   bg: banner 背景图（PC，JPG）
+#   bg_mb: banner 背景图（移动端，JPG）
+#   text_img: banner 文字图片（PNG）
+#   btn: 按钮文案
+#   href: 按钮链接（观看回放）
+# live: 直播配置（备用，模板当前未使用）
+#   title: 直播标题
+#   url: 直播链接
+
+banner:
+  bg: './images/banner.jpg'
+  bg_mb: './images/banner-mb.jpg'
+  text_img: './images/banner-text.png'
+  btn: '观看回放'
+  href: 'https://www.bilibili.com/video/BV13FoyBnEZH/?vd_source=544d9ea25c0bc3a2570734b5b21104be'
+
+live:
+  title: '活动直播'
+  url: 'https://muuwr188jil.live.inmhd.com/v1/live/news/5890432'
