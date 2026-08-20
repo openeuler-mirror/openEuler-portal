@@ -82,6 +82,11 @@ export default {
               description: '提供openEuler社区版本的repo文件',
               href: 'https://repo.openeuler.openatom.cn/',
             },
+            {
+              label: 'SkillHub',
+              description: '探索、评估、贡献openEuler技能',
+              href: import.meta.env.VITE_SERVICE_SKILLHUB_URL,
+            },
           ],
         },
       ],
