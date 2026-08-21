@@ -15,7 +15,7 @@ import IconSearch from '~icons/app/icon-search.svg';
 import { getSortData, getTagsData } from '@/api/api-search';
 import type { NewsDataT, ParamsTypeT } from '@/shared/@types/type-news';
 
-import pdfData from '@/data/monthly';
+import monthlyBulletinsContent from '#content/monthly-bulletins';
 
 const router = useRouter();
 const { lang } = useData();
@@ -103,7 +103,7 @@ const getListData = (params: ParamsTypeT) => {
         }
 
         // TODO:特殊处理年报及运营需求的特殊PDF文档，待后续单独作为一个栏目
-        newsCardData.value.unshift(...pdfData[lang.value]);
+        newsCardData.value.unshift(...monthlyBulletinsContent[lang.value as 'zh' | 'en'].bulletins);
       }
     })
     .finally(() => {

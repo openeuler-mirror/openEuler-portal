@@ -1,0 +1,49 @@
+# Monthly Bulletins page data / 月刊页数据
+#
+# bulletins: Bulletin list (reverse chronological order)
+#   banner: Banner image path (in-site public path)
+#   archives: Archive date (YYYY-MM)
+#   author: Author array
+#   date: Publish date (YYYY-MM-DD)
+#   lang: Language
+#   title: Title
+#   summary: Summary
+#   tags: Tag array
+#   path: PDF/page path
+
+bulletins:
+  - banner: '/img/banners/Linux Magazine Focus Guide-openEuler.jpg'
+    archives: '2026-04'
+    author:
+      - 'openEuler'
+    date: '2026-04-15'
+    lang: 'en'
+    title: 'Featured in Linux Magazine: A Comprehensive Focus Guide on openEuler'
+    summary: "Delve into the technical core of openEuler with this in-depth analysis originally published in Linux Magazine's Admin section."
+    tags:
+      - 'openEuler'
+    path: 'category/technology/Linux Magazine Focus Guide-openEuler.pdf'
+
+  - banner: '/img/banners/annual-report-2025-en.jpg'
+    archives: '2026-02'
+    author:
+      - 'openEuler'
+    date: '2026-02-11'
+    lang: 'en'
+    title: 'openEuler 2025 Annual Report'
+    summary: 'openEuler 2025  Annual Report'
+    tags:
+      - 'openEuler'
+    path: 'en/annual-report/openEuler-annual-report-2025/'
+
+  - banner: '/img/banners/annual-report-2024-en.jpg'
+    archives: '2025-01'
+    author:
+      - 'openEuler'
+    date: '2025-01-24'
+    lang: 'en'
+    title: 'openEuler 2024 Annual Report'
+    summary: 'openEuler 2024 Annual Report'
+    tags:
+      - 'openEuler'
+    path: 'en/annual-report/openEuler-annual-report-2024/'
