@@ -126,7 +126,7 @@ DeepSeek 开源的 Agent 运行时（Everything is a Plugin），基于 Cordis �
 
 **演示效果（视频）**：
 
-<video controls src="video/oe+witty+dsh.case01.mov" title="Title"></video>
+请点击链接查看：<https://mp.weixin.qq.com/s/YSOsJPiebYTAK5F-3B6Q5Q>
 
 
 ### Case 2：兼容性查询——查询一系列板卡在 openEuler 上的适配情况
@@ -146,7 +146,7 @@ DeepSeek 开源的 Agent 运行时（Everything is a Plugin），基于 Cordis �
 
 **演示效果（视频）**：
 
-<video controls src="video/oe+witty+dsh.case02.mov" title="Title"></video>
+请点击链接查看：<https://mp.weixin.qq.com/s/YSOsJPiebYTAK5F-3B6Q5Q>
 
 ---
 
