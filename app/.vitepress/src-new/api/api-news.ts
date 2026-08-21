@@ -2,7 +2,7 @@ import { request } from '~@/shared/axios';
 import type { ParamsT, TagsParams } from '~@/@types/type-news';
 
 /**
- * 获取tags
+ * 获取tags - 新闻/博客列表的分类筛选标签(来自 search 服务)
  * @param {TagsParams} params
  * @returns {Promise<ResponseT>} tags
  */
