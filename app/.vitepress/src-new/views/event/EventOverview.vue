@@ -102,8 +102,10 @@ const applySep3 = computed(() => applySteps.value[2]);
                 variant="text"
                 hoverUnderline
               >
-                <OIcon><IconDownload /></OIcon
-                >{{ t('eventOverview.downloadText') }}
+                <template #icon>
+                  <OIcon><IconDownload /></OIcon>
+                </template>
+                {{ t('eventOverview.downloadText') }}
               </OLink>
             </div>
             <div v-else class="text-box">

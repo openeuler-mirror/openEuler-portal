@@ -22,7 +22,7 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "@opendesign-plus/components": "0.0.1-rc.54",
+    "@opendesign-plus/components": "0.0.1-rc.67",
     "@opendesign-plus/composables": "0.0.1-rc.10",
     "@opendesign-plus/geo-scripts": "0.0.1-rc.1",
     "@opendesign-plus/plugins": "0.0.1-rc.7",

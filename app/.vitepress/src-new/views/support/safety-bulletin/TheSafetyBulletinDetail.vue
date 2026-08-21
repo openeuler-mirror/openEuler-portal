@@ -234,7 +234,10 @@ onMounted(() => {
                         hoverUnderline
                         :href="single.url"
                       >
-                        {{ single.packageName }}<OIcon><IconDownload /></OIcon>
+                        {{ single.packageName }}
+                        <template #suffix>
+                          <OIcon><IconDownload /></OIcon>
+                        </template>
                       </OLink>
                     </div>
                     <ODivider v-if="c !== item.child.length - 1" />
@@ -276,7 +279,10 @@ onMounted(() => {
                         hoverUnderline
                         :href="single.url"
                       >
-                        {{ single }}<OIcon><IconDownload /></OIcon>
+                        {{ single }}
+                        <template #suffix>
+                          <OIcon><IconDownload /></OIcon>
+                        </template>
                       </OLink>
                     </div>
                     <ODivider v-if="c !== item.child.length - 1" />

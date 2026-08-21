@@ -187,8 +187,10 @@ const feedbackLinks = [
     background: var(--o-color-control2-light);
   }
 }
-:deep(.o-link) {
-  padding: 8px 12px;
+.dropdown-item {
+  :deep(.o-link) {
+    padding: 8px 12px;
+  }
 }
 
 .mo-banner {
