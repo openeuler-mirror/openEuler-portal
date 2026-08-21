@@ -62,19 +62,25 @@ const gap = computed(() => {
             <OButton color="primary" variant="outline" size="large" class="view-btn" :href="`/${locale}${item.url}`" target="_blank">{{ t('project.viewMore') }}</OButton>
             <OLink v-if="item.atomgitUrl" color="normal" variant="text" :href="item.atomgitUrl" target="_blank">
               <span class="gitee">{{ t('project.gitee') }}</span>
-              <OIcon class="right-icon"><IconChevronRight /></OIcon>
+              <template #suffix>
+                <OIcon class="right-icon"><IconChevronRight /></OIcon>
+              </template>
             </OLink>
           </template>
           <template v-else #footer>
             <ODivider />
             <OLink color="normal" variant="text" :href="`/${locale}${item.url}`" target="_blank">
               {{ t('project.viewMore') }}
-              <OIcon class="right-icon"><IconChevronRight /></OIcon>
+              <template #suffix>
+                <OIcon class="right-icon"><IconChevronRight /></OIcon>
+              </template>
             </OLink>
             <ODivider v-if="item.atomgitUrl" />
             <OLink v-if="item.atomgitUrl" color="normal" variant="text" :href="item.atomgitUrl" target="_blank">
               <span class="gitee">{{ t('project.gitee') }}</span>
-              <OIcon class="outlink-icon"><IconOutLink /></OIcon>
+              <template #suffix>
+                <OIcon class="outlink-icon"><IconOutLink /></OIcon>
+              </template>
             </OLink>
           </template>
         </OCard>

@@ -56,7 +56,9 @@ const eventData = foldI18n(activityContent.global_events, locale.value);
                 hoverUnderline
               >
                 {{ video.platform }}
-                <OIcon><IconChevronRight /></OIcon>
+                <template #suffix>
+                  <OIcon><IconChevronRight /></OIcon>
+                </template>
               </OLink>
             </div>
           </template>
@@ -98,14 +100,7 @@ const eventData = foldI18n(activityContent.global_events, locale.value);
 }
 .btn-box {
   margin-top: 16px;
-  :deep(.o-link-label) {
-    display: flex;
-    align-items: center;
-    .o-icon {
-      margin-top: 0;
-    }
-  }
-  .o-link + .o-link {
+  :deep(.o-link + .o-link) {
     margin-left: 16px;
   }
 }

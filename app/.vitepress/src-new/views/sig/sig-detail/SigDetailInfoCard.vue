@@ -34,7 +34,9 @@ defineProps({
         class="more-gitee"
       >
         <span>{{ t('sig.giteeMore') }}</span>
-        <OIcon><IconOutlink /></OIcon>
+        <template #suffix>
+          <OIcon><IconOutlink /></OIcon>
+        </template>
       </OLink>
     </div>
     <div class="content">
