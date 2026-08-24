@@ -20,20 +20,21 @@ const canonicalId = 'oeep-canonical-link';
 function updateCanonical() {
   const name = getUrlParam('name') || '';
   const key = Object.keys(CANONICAL_OEEP_MAP).find((k) => name.includes(k));
-  const existing = document.getElementById(canonicalId);
-  if (!key) {
-    if (existing) existing.remove();
-    return;
-  }
-  const href = `${window.location.origin}${CANONICAL_OEEP_MAP[key]}`;
-  if (existing) {
-    existing.setAttribute('href', href);
-  } else {
-    const link = document.createElement('link');
-    link.id = canonicalId;
-    link.rel = 'canonical';
-    link.href = href;
-    document.head.appendChild(link);
+  const link = document.querySelector(
+    'link[rel="canonical"]'
+  ) as HTMLLinkElement | null;
+  if (!link) return;
+  link.id = canonicalId;
+  if (key) {
+    link.setAttribute(
+      'href',
+      `${window.location.origin}${CANONICAL_OEEP_MAP[key]}`
+    );
+  } else if (name) {
+    link.setAttribute(
+      'href',
+      `${window.location.origin}${window.location.pathname}?name=${name}`
+    );
   }
 }
 
