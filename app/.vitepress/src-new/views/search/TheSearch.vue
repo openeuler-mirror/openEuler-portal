@@ -95,6 +95,7 @@ const docParams = computed(() => {
     lang: locale.value,
     type: searchType.value,
     sort: activeSort.value,
+    correctEnable: correctEnable.value,
     limit: [
       {
         type: currentTab.value || 'docs',
@@ -110,6 +111,7 @@ const countParams = computed(() => {
     keyword: isImageSearch.value ? imageKeyword.value : searchValue.value,
     lang: locale.value,
     docsVersion: activeVersion.value,
+    correctEnable: correctEnable.value,
     limit: [
       {
         type: 'docs',
@@ -141,6 +143,10 @@ const total = computed(() => {
 
 // 关联词
 const suggestList = ref([]);
+// 搜索纠错词
+const correctedList = ref<string[]>([]);
+// 是否关闭纠错（仅点击原搜索词场景为 false）
+const correctEnable = ref<boolean | undefined>(undefined);
 //
 const activeVersion = ref('');
 
@@ -176,6 +182,7 @@ function queryGetSoftware() {
     pageNum: 1,
     pageSize: 6,
     dataType: 'all',
+    correctEnable: correctEnable.value,
   }).then((res) => {
     softwareList.value = res?.data?.all;
   });
@@ -216,6 +223,7 @@ const queryGetSearchData = () => {
 
   // 如果是图片搜索，调用图片搜索 API
   if (isImageSearch.value && searchImage.value) {
+    correctedList.value = [];
     let limit: { type: string; version: string }[] = [];
     if (activeVersion.value) {
       if (currentTab.value === 'all') {
@@ -303,6 +311,8 @@ const queryGetSearchData = () => {
 
   getSearchData(docParams.value)
     .then((res) => {
+      const correctedRaw = res.obj?.correction?.corrected;
+      correctedList.value = correctedRaw ? (Array.isArray(correctedRaw) ? correctedRaw : [correctedRaw]) : [];
       if (res.status === 200 && res.obj?.records[0]) {
         if (lePadV.value && isPageCountChange.value) {
           searchResultList.value.push(...res.obj.records);
@@ -326,6 +336,9 @@ function searchAll(valueChange?: boolean) {
   // 图片搜索或文本搜索
   if (searchValue.value || isImageSearch.value) {
     currentPage.value = 1;
+    // 立即清空纠错和推荐，避免旧数据残留至新结果返回
+    suggestList.value = [];
+    correctedList.value = [];
     // 是否重置tab
     if (valueChange) {
       currentTab.value = 'all';
@@ -356,6 +369,23 @@ function handleSelectChange(val: string) {
     params.set('imageUrl', searchImage.value);
   }
   history.pushState(null, '', `?${params.toString()}`);
+}
+
+function handleResultSearch(val: string) {
+  searchValue.value = val;
+  correctEnable.value = undefined;
+  searchAll(true);
+}
+
+function handleBannerSearch() {
+  correctEnable.value = undefined;
+  searchAll(true);
+}
+
+function handleCorrectionSearch(val: string) {
+  searchValue.value = val;
+  correctEnable.value = false;
+  searchAll(true);
 }
 
 onMounted(() => {
@@ -459,6 +489,7 @@ searchStore.$subscribe((mutation, state) => {
   searchValue.value = state.searchValue;
   searchImage.value = state.searchImage;
   isImageSearch.value = state.isImageSearch;
+  correctEnable.value = undefined;
   searchAll(true);
 });
 
@@ -491,9 +522,10 @@ const handleTabChange = () => {
       v-model:search-image="searchImage"
       v-model:is-image-search="isImageSearch"
       @update:current-tab="handleTabChange"
-      @search="searchAll"
+      @search="handleBannerSearch"
+      @correction-search="handleCorrectionSearch"
       ref="searchBannerRef"
-      :suggest-list="suggestList"
+      :corrected-list="correctedList"
       :tab-data="categorizedData"
     />
     <SearchResult
@@ -508,6 +540,8 @@ const handleTabChange = () => {
       @update:current-page="queryGetSearchData"
       @update:active-sort="queryGetSearchData"
       @update:active-version="searchAll()"
+      @search="handleResultSearch"
+      @correction-search="handleCorrectionSearch"
       :search-result-list="searchResultList"
       :search-value="searchValue"
       :sub-modules="categorizedData[currentTab].subModules"
@@ -520,6 +554,8 @@ const handleTabChange = () => {
       :sort-options="sortOptions"
       :search-image="searchImage"
       :is-image-search="isImageSearch"
+      :suggest-list="suggestList"
+      :corrected-list="correctedList"
     />
   </div>
 </template>

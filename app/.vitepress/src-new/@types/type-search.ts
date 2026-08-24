@@ -4,6 +4,7 @@ export interface SoftwareParamsT {
   pageNum: number;
   pageSize: number;
   keywordType: string;
+  correctEnable?: boolean;
 }
 
 export interface FeedbackParamsT {
@@ -44,6 +45,11 @@ export interface SearchDocsT {
   keyword: string; // 搜索词
   page: number;
   pageSize: number;
+  correction?: SearchCorrectionT;
+}
+
+export interface SearchCorrectionT {
+  corrected: string | string[];
 }
 
 export interface SearchDocsTArrT {
@@ -61,6 +67,7 @@ export interface SearchCountQueryT {
   keyword: string;
   lang: string;
   limit: LimitArrItemT[]; // 限制条件
+  correctEnable?: boolean;
 }
 
 export interface LimitArrItemT {
@@ -84,6 +91,7 @@ export interface RelevantQueryT {
   lang: string;
   type: string;
   limit: LimitArrItemT[];
+  correctEnable?: boolean;
 }
 
 // 搜索 docs 参数
@@ -94,6 +102,7 @@ export interface SearchDocsQueryT {
   lang: string;
   type: string;
   limit: LimitArrItemT[];
+  correctEnable?: boolean;
 }
 
 export interface SearchRecommendT {

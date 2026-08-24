@@ -19,8 +19,8 @@ import { oaReport } from '@opendesign-plus/plugins/analytics';
 import { imageUpload } from '~@/api/api-search';
 
 const props = defineProps({
-  // 建议搜索词
-  suggestList: {
+  // 搜索纠错词
+  correctedList: {
     type: Array as PropType<string[]>,
     default: () => {
       return [];
@@ -62,7 +62,7 @@ const tabDataLabelMap = computed<Map<string, any> | undefined>(() => {
   }
 });
 
-const emits = defineEmits(['search', 'update:modelValue', 'update:currentTab', 'update:searchImage', 'update:isImageSearch']);
+const emits = defineEmits(['search', 'correction-search', 'update:modelValue', 'update:currentTab', 'update:searchImage', 'update:isImageSearch']);
 
 const { modelValue } = useVModels(props, emits);
 const isFocus = ref(false);
@@ -104,14 +104,12 @@ const handleSearchHistory = (val: string) => {
   isFocus.value = false;
   emits('search', val);
 };
-const handleClickSuggest = (val: string) => {
-  val = val.replace(/<[^>]+>/g, '');
-  modelValue.value = val;
+const handleClickCorrection = () => {
   reportSearch({
-    type: 'looking_for',
-    target: val,
+    type: 'correction_original',
+    target: modelValue.value,
   });
-  emits('search', val);
+  emits('correction-search', modelValue.value);
 };
 
 const reportSearch = (data: Record<string, any>) => {
@@ -133,6 +131,8 @@ const handleInput = () => {
 const verticalPadding = computed(() =>
   lePadV.value ? ['0', '0'] : ['72px', '0']
 );
+
+const correctedTerm = computed(() => props.correctedList[0] || '');
 
 // -------- 图片搜索 --------
 const localImage = ref('');
@@ -333,18 +333,19 @@ defineExpose({ searchRecommendRef });
           />
         </ClientOnly>
       </div>
-      <div v-show="suggestList?.length" class="suggest-list-box">
-        <span class="suggest-label">{{ $t('search.suggest') }}</span>
-        <ul class="suggest-list">
-          <li
-            v-for="suggest in suggestList"
-            :key="suggest"
-            v-dompurify-html="suggest"
-            class="suggest"
-            @click="handleClickSuggest(suggest)"
-          ></li>
-        </ul>
-      </div>
+      <i18n-t
+        v-show="correctedTerm && correctedTerm !== modelValue"
+        keypath="search.correctionTip"
+        tag="div"
+        class="suggest-list-box"
+      >
+        <template #corrected>
+          <span class="correction-key">{{ correctedTerm }}</span>
+        </template>
+        <template #original>
+          <span class="correction-key correction-link" @click="handleClickCorrection">{{ modelValue }}</span>
+        </template>
+      </i18n-t>
       <OTab
         v-model="currentTab"
         :style="{
@@ -412,35 +413,21 @@ defineExpose({ searchRecommendRef });
     }
   }
   .suggest-list-box {
-    display: flex;
     margin: 8px 0 0;
-    color: var(--o-color-white);
-    align-items: center;
-    flex-wrap: wrap;
-    @include h4;
+    color: rgba($color: var(--o-white), $alpha: 0.8);
+    @include tip1;
     @include respond('<=pad_v') {
       display: none;
     }
-    .suggest-label {
-      color: rgba($color: var(--o-white), $alpha: 0.8);
-      @include tip1;
+    .correction-key {
+      color: var(--o-color-white);
     }
-    .suggest-list {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      @include tip1;
-      .suggest {
-        margin-right: 8px;
-        cursor: pointer;
-        :deep(em) {
-          color: var(--o-color-white);
-          font-style: normal;
-        }
-      }
+    .correction-link {
+      cursor: pointer;
     }
   }
   .o-tab {
+    --tab-nav-justify: start;
     margin-top: 36px;
     display: flex;
     justify-content: flex-start;
@@ -448,13 +435,12 @@ defineExpose({ searchRecommendRef });
     border-bottom: 1px solid var(--o-color-control4);
     @include h4;
     @include respond('<=pad_v') {
+      --tab-nav-justify: center;
       margin-top: 0;
       border-bottom: inherit;
     }
     :deep(.o-tab-head) {
-      @include respond('<=pad_v') {
-        width: 100%;
-      }
+      width: 100%;
     }
 
     :deep(.o-tab-nav) {

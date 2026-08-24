@@ -24,6 +24,8 @@ import {
 } from '@opensig/opendesign';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 import SearchFeedback from './SearchFeedback.vue';
+import SearchRelated from './SearchRelated.vue';
+import SearchCorrection from './SearchCorrection.vue';
 import SearchDownloadZone from './SearchDownloadZone.vue';
 import SearchSoftwareZone from './SearchSoftwareZone.vue';
 import SearchDownloadAggre from './SearchDownloadAggre.vue';
@@ -118,6 +120,18 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  suggestList: {
+    type: Array as PropType<string[]>,
+    default: () => {
+      return [];
+    },
+  },
+  correctedList: {
+    type: Array as PropType<string[]>,
+    default: () => {
+      return [];
+    },
+  },
 });
 
 const emits = defineEmits([
@@ -126,6 +140,8 @@ const emits = defineEmits([
   'update:pageSize',
   'update:activeVersion',
   'update:activeSort',
+  'search',
+  'correction-search',
 ]);
 
 const { searchType, currentPage, pageSize, activeVersion, activeSort } =
@@ -135,6 +151,9 @@ const { locale } = useLocale();
 const { lePadV, lePad } = useScreen();
 
 const contentRef = ref();
+
+// 实际生效的搜索词：纠错时为纠错后词汇，点击「仍然搜索」时为原搜索词
+const effectiveKeyword = computed(() => props.correctedList[0] || props.searchValue);
 
 const sortType = ['commercialRelease', 'mail', 'news', 'blog', 'whitepaper'];
 
@@ -271,6 +290,14 @@ const allVersion = () => {
   });
 };
 
+const handleRelatedSearch = (val: string) => {
+  emits('search', val);
+};
+
+const handleCorrectionSelect = (val: string) => {
+  emits('correction-search', val);
+};
+
 const generatePdfUrl = (page) => {
   if (!page) return;
   const obsUrl = 'https://openeuler-website-unifiedbus.obs.cn-north-4.myhuaweicloud.com';
@@ -356,11 +383,25 @@ const generatePdfUrl = (page) => {
             <SearchSoftwareZone
               v-if="softwareList.length"
               :software-zone="softwareList"
-              :search-value="searchValue"
+              :search-value="effectiveKeyword"
             />
           </div>
           <template v-for="(item, index) in localSearchResultList" :key="item.id">
             <template v-if="index === MO_FEEDBACK_INDEX && lePadV">
+              <SearchCorrection
+                class="mo-correction"
+                size="medium"
+                :corrected="correctedList[0] || ''"
+                :original="searchValue"
+                @select="handleCorrectionSelect"
+              />
+              <SearchRelated
+                class="mo-related"
+                size="medium"
+                :suggest-list="suggestList"
+                :keyword="searchValue"
+                @search="handleRelatedSearch"
+              />
               <SearchFeedback
                 class="mo-feedback"
                 size="medium"
@@ -547,12 +588,19 @@ const generatePdfUrl = (page) => {
         </div>
       </div>
       <ODivider v-if="!lePad" direction="v" />
-      <SearchFeedback
-        class="right-feed-back"
-        v-if="!lePad"
-        size="small"
-        :keyword="searchVal"
-      />
+      <div v-if="!lePad" class="right-aside">
+        <SearchRelated
+          size="small"
+          :suggest-list="suggestList"
+          :keyword="searchVal"
+          @search="handleRelatedSearch"
+        />
+        <SearchFeedback
+          class="right-feed-back"
+          size="small"
+          :keyword="searchVal"
+        />
+      </div>
     </div>
 
     <!-- 外链弹窗提示 -->
@@ -586,6 +634,12 @@ const generatePdfUrl = (page) => {
     @include text1;
   }
   .mo-feedback {
+    background-color: var(--o-color-fill2);
+  }
+  .mo-related {
+    background-color: var(--o-color-fill2);
+  }
+  .mo-correction {
     background-color: var(--o-color-fill2);
   }
 
@@ -653,6 +707,12 @@ const generatePdfUrl = (page) => {
       --o-divider-label-gap: 0 40px;
     }
     .right-feed-back {
+      min-width: var(--feed-back-width);
+    }
+    .right-aside {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
       min-width: var(--feed-back-width);
     }
     .content-box {

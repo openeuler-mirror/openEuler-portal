@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { PropType, computed } from 'vue';
+import { PropType } from 'vue';
 
 import { OIcon, OScroller, OLink } from '@opensig/opendesign';
 
@@ -13,12 +13,15 @@ import { useScreen } from '~@/composables/useScreen';
 import type { AppItemT } from '~@/@types/type-search';
 
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
-import { getUrlParam } from '~@/utils/common';
 
 defineProps({
   softwareZone: {
     type: Array as PropType<AppItemT[]>,
     default: () => [],
+  },
+  searchValue: {
+    type: String,
+    default: '',
   },
 });
 
@@ -26,10 +29,6 @@ const { lePadV } = useScreen();
 const { locale } = useLocale();
 
 const SERVICE_SOFTWARE_URL = import.meta.env.VITE_SERVICE_SOFTWARE_URL;
-
-const searchValue = computed(() => {
-  return getUrlParam('q') || '';
-});
 </script>
 <template>
   <div class="search-software-zone">
