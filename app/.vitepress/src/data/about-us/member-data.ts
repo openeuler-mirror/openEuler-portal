@@ -35,8 +35,6 @@ import intel_dark from '@/assets/category/member/intel_dark.png';
 import baolande_dark from '@/assets/category/member/baolande_dark.png';
 import feiten_dark from '@/assets/category/member/feiten_dark.png';
 import iscas_dark from '@/assets/category/member/iscas_dark.png';
-import aosiwei_light from '@/assets/category/member/aosiwei_light.png';
-import aosiwei_dark from '@/assets/category/member/aosiwei_dark.png';
 import huazhi_light from '@/assets/category/member/huazhi_light.png';
 import huazhi_dark from '@/assets/category/member/huazhi_dark.png';
 import boyun_light from '@/assets/category/member/boyun_light.png';
@@ -166,12 +164,6 @@ export default [
     },
     ID: 'Silver-Donors',
     logoList: [
-      {
-        img_light: aosiwei_light,
-        img_dark: aosiwei_dark,
-        alt: '奥思维科技',
-        noIcon: true,
-      },
       {
         img_light: AMD_light,
         img_dark: AMD_dark,
