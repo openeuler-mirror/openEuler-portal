@@ -127,7 +127,9 @@ AI Agent的安全不是某一项技术能够独立解决的命题。openEuler的
 当前以 LeRobot 为代表的具身智能框架，普遍采用”单模型 per Launch”的设计：系统启动时选定唯一的推理模型，整个运行周期内不切换。这在单一任务、固定场景的 Demo 阶段够用。但进入真实环境后，问题会明显变复杂。
 
 多模型调度要解决的问题可以概括为一句话：让对的模型，在对的时刻，跑在对的设备上。
-原文阅读：IB-Robot系列 | 实时多模型调度：动态模型编排的系统级解法
+
+原文阅读：
+[IB-Robot系列 | 实时多模型调度：动态模型编排的系统级解法](https://mp.weixin.qq.com/s/jzJzTKzyS1K6izNpe9pM5w)
 
 ### ➣基于 openEuler 和 vLLM Ascend，快速上手 GLM-5.2指南
 
@@ -180,8 +182,6 @@ PolyMind 是一个原生集成 agentd 服务的自托管 AI Agent 交互平台�
 | Bigdata | 2 | kibana、lucene | 9.4.2、10.5.0 |
 | Database | 1 | orientdb | 3.2.53 |
 | Others | 4 | next、node、pacemaker、react | 16.2.7、26.3.0、3.0.2、19.2.7 |
-
-> 说明：本期自动升级流程共触发 9 个 MR，其中 openvelinux（!2754）仅更新了版本探测脚本，未产生实际 Dockerfile 版本变更，故未计入本表。
 
 ### 新增镜像（80 个）
 
