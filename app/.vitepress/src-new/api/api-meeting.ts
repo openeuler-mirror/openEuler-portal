@@ -28,7 +28,7 @@ export const getMeetingListApi = async (date: string, group_name: string) => {
 };
 
 /**
- * 获取角色
+ * 获取角色 - 当前登录用户在指定社区的角色(workspace),未登录返回空对象
  * @param {string} community 请求参数
  * @return { Promise<ResponseT> }
  */

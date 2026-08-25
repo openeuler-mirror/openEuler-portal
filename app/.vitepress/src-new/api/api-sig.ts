@@ -9,7 +9,7 @@ import {
   SigRepoT,
 } from '~@/@types/type-sig';
 /**
- * 获取sig landscape
+ * 获取sig landscape - 社区 SIG 全景/评分概览(scoreAll)
  * @returns {Promise<GroupInfoT[]>}
  */
 export function getSigLandscape(): Promise<{
