@@ -79,7 +79,7 @@ const rewardCards = computed(() => [
           </ul>
           <p v-if="card.desc" class="card-desc">
             {{ card.desc }}
-            <OLink v-if="card.hasEmail" class="contact-email" :href="`mailto:${EMAIL_ADDRESS}`">{{ EMAIL_ADDRESS }}</OLink>
+            <OLink v-if="card.hasEmail" class="contact-email" :hover-underline="false" :href="`mailto:${EMAIL_ADDRESS}`">{{ EMAIL_ADDRESS }}</OLink>
           </p>
         </div>
       </div>
@@ -191,7 +191,6 @@ const rewardCards = computed(() => [
 
     &:hover {
       color: var(--o-color-primary2);
-      text-decoration: underline;
     }
   }
 }

@@ -16,7 +16,7 @@ const { lePadV } = useScreen();
     <h2 class="receive-task-title">{{ i18n.internship.receiveTaskTitle1 }}</h2>
     <div class="step">
       <span>{{ i18n.internship.receiveTaskDesc1 }}</span>
-      <OLink class="contact" :href="internshipTaskLinks.viewTask" target="_blank">{{ i18n.internship.receiveTaskDesc2 }}</OLink>
+      <OLink class="contact" :hover-underline="false" :href="internshipTaskLinks.viewTask" target="_blank">{{ i18n.internship.receiveTaskDesc2 }}</OLink>
       <span>{{ i18n.internship.receiveTaskDesc3 }}</span>
     </div>
     <div class="step">
@@ -69,11 +69,11 @@ const { lePadV } = useScreen();
     <div class="step">{{ i18n.internship.receiveTaskDesc8 }}</div>
     <div class="link-row" :class="{'mobile-link-row': lePadV}">
       <div class="link-group">
-        <OLink class="contact" :href="internshipTaskLinks.mindsporeLink" target="_blank">{{ i18n.internship.mindspore }}</OLink>
+        <OLink class="contact" :hover-underline="false" :href="internshipTaskLinks.mindsporeLink" target="_blank">{{ i18n.internship.mindspore }}</OLink>
         <OIcon class="jump-out-icon"><IconOutlink /></OIcon>
       </div>
       <div class="link-group">
-        <OLink class="contact" :href="internshipTaskLinks.vllmAscendLink" target="_blank">{{ i18n.internship.vLLM }}</OLink>
+        <OLink class="contact" :hover-underline="false" :href="internshipTaskLinks.vllmAscendLink" target="_blank">{{ i18n.internship.vLLM }}</OLink>
         <OIcon class="jump-out-icon"><IconOutlink /></OIcon>
       </div>
     </div>
@@ -187,7 +187,6 @@ const { lePadV } = useScreen();
       cursor: pointer;
       &:hover {
         color: var(--o-color-primary2);
-        text-decoration: underline;
       }
     }
 
