@@ -135,6 +135,14 @@ export const formatDate = (date: string = dayjs(), format: string = 'YYYY/MM/DD'
   return dayjs(new Date(date)).format(format);
 };
 
+/**
+ * 从选项数组中查找指定值对应的标签文本，未匹配则回退原值
+ * @param {string|number} value 待匹配的值
+ * @param {OptionItemT[]} options 选项数组
+ * @param {string} labelKey 标签字段名，默认 'label'
+ * @param {string} valueKey 取值字段名，默认 'value'
+ * @returns {string} 匹配到的标签；无匹配返回 value 原值
+ */
 export const findLabelFromOptions = (value: string | number, options: OptionItemT[], labelKey: string = 'label', valueKey: string = 'value') => {
   const find = options.find((o) => o[valueKey] === value);
   return find?.[labelKey] || value;
