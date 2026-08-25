@@ -1,12 +1,36 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { storeToRefs } from 'pinia';
+
+import { OLogoSwiper, OLogoSwiperItems } from '@opendesign-plus/components';
+import type { OLogoSwiperItemT } from '@opendesign-plus/components';
+
 import AppSection from '~@/components/AppSection.vue';
-import HomeSwiper from './HomeSwiper.vue';
-
 import { publisher } from '~@/data/home/publisher';
+import { useCommon } from '@/stores/common';
 
-const publisher1 = Array(5).fill(publisher.slice(0, 8)).flat();
-const publisher2 = Array(8).fill(publisher.slice(8, 16)).flat();
-const publisher3 = Array(5).fill(publisher.slice(16)).flat();
+interface PublisherT {
+  logo: { light: string; dark: string };
+  href: string;
+  href_en?: string;
+}
+
+const { theme } = storeToRefs(useCommon());
+const isDark = computed(() => theme.value === 'dark');
+
+const mapFunc = (p: PublisherT): OLogoSwiperItemT => ({
+  logo: isDark.value ? p.logo.dark : p.logo.light,
+  logoDark: p.logo.dark,
+  href: p.href,
+  hrefEn: p.href_en,
+});
+
+const partSize = Math.floor(publisher.length / 3);
+const publisherRows = computed(() => [
+  publisher.slice(0, partSize).map(mapFunc),
+  publisher.slice(partSize, partSize * 2).map(mapFunc),
+  publisher.slice(partSize * 2).map(mapFunc),
+]);
 </script>
 
 <template>
@@ -17,54 +41,20 @@ const publisher3 = Array(5).fill(publisher.slice(16)).flat();
     v-analytics.bubble="{ level1: $t('home.publisher') }"
     :data-v-analytics-title="$t('home.publisher')"
   >
-    <HomeSwiper :data="publisher1" class="partner-swiper"></HomeSwiper>
-    <HomeSwiper
-      :data="publisher2"
-      :reverse-direction="true"
-      class="partner-swiper"
-    ></HomeSwiper>
-    <HomeSwiper :data="publisher3" class="partner-swiper"></HomeSwiper>
-    <template #footer>
-      <p>{{ $t('home.publisherTips') }}</p>
-    </template>
+    <OLogoSwiper>
+      <OLogoSwiperItems
+        v-for="(row, i) in publisherRows"
+        :key="i"
+        :data="row"
+        :reverse="i % 2 === 1"
+        :duration="150"
+      />
+    </OLogoSwiper>
   </AppSection>
 </template>
 
 <style lang="scss" scoped>
 .home-partner {
   margin: 0 auto;
-}
-.partner-swiper {
-  & + .partner-swiper {
-    margin-top: 24px;
-
-    @include respond('laptop') {
-      margin-top: 20px;
-    }
-
-    @include respond('pad_h') {
-      margin-top: 16px;
-    }
-
-    @include respond('<=pad_v') {
-      margin-top: 12px;
-    }
-  }
-}
-
-.parterner-tips {
-  text-align: center;
-  color: var(--o-color-info3);
-  @include tip1;
-}
-</style>
-
-<style lang="scss">
-@include in-dark {
-  .partner-swiper {
-    .o-figure img {
-      filter: none;
-    }
-  }
 }
 </style>
