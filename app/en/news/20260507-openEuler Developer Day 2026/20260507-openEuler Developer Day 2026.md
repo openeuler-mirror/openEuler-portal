@@ -4,7 +4,7 @@ date: '2026-05-07'
 category: news
 tags:
   - openEuler
-banner: img/banners/20260507-openEuler Developer Day 2026.jpg'
+banner: 'img/banners/20260507-openEuler Developer Day 2026.jpg'
 author: 'openEuler'
 summary: 'The openEuler Developer Day 2026, hosted by the OpenAtom openEuler community, successfully convened in Changsha.'
 ---

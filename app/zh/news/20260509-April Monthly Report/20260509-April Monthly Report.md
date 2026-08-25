@@ -140,7 +140,7 @@ vLLM 是 PyTorch Foundation 下的开源 LLM 推理引擎，为用户和开发�
 
 4 月 25 日，在openEuler Developer Day 2026 ，RISC-V 分论坛围绕 openEuler on RISC-V 的技术进展、生态适配与场景实践展开交流。
 
-本次分论坛集中展示了 openEuler on RISC-V 在系统适配、内核能力、芯片验证和服务器场景中的阶段性成果。相关议题围绕 openEuler 在 RISC-V 架构上的系统适配与基础能力建设展开，涵盖 RVA23 规范适配、RISC-V 服务器平台规范适配、RVCK 内核维护、硬件板卡支持等内容；多家产业伙伴也分享了基于 openEuler 的硅前验证、内核特性支持、IOMMU/I/O 虚拟化、标准服务器平台和 AI 智融服务器 CPU 等实践进展。
+本次分论坛集中展示了 openEuler on RISC-V 在系统适配、内核能力、芯片验证和服务器场景中的阶段性成果。相关议题围绕 openEuler 在 RISC-V 架构上的系统适配与基础能力建设展开，涵盖 RVA23 规范适配、RISC-V 服务器平台规范适配、RVCK 内核维护、硬件板卡支持等内容；多家产业伙伴也分享了基于 openEuler 的硅前验证、内核特性支持、IOMMU或I/O 虚拟化、标准服务器平台和 AI 智融服务器 CPU 等实践进展。
 
 openEuler on RISC-V SIG 计划在进一步适配 RISC-V RVA23 规范与服务器平台规范的基础上，继续与各社区伙伴通力合作，面向下一代 RISC-V 商业平台完善公共底座、扩展硬件适配，持续推动 RISC-V 软硬件生态完善与落地。
 
@@ -168,9 +168,9 @@ openEuler on RISC-V SIG 计划在进一步适配 RISC-V RVA23 规范与服务器
 
 截至2026年4月30日，通过openEuler 软硬件兼容性测评的产品达2655款，2026年4月新增52款，其中北向（ISV）新增17款，南向（IHV）新增33款，OSV新增2款。
 
-- 兼容性列表：<https://www.openeuler.org/zh/compatibility/OSV>
+- 兼容性列表：<https://www.openeuler.org/zh/compatibility/>
 
-- 技术测评列表:<https://www.openeuler.org/zh/approve/>
+- OSV技术测评列表:<https://www.openeuler.org/zh/approve/>
 
 ## 安全公告
 
@@ -178,7 +178,7 @@ openEuler on RISC-V SIG 计划在进一步适配 RISC-V RVA23 规范与服务器
 
 ### ▐ 重点漏洞提醒如下漏洞评估影响较大，请重点关注
 
-**CVE-2026-33168（CVSS评分：9.1分）**
+**CVE-2026-29145（CVSS评分：9.1分）**
 
 简述：在Apache Tomcat Native中禁用软失效漏洞时，CLIENT_CERT身份验证在某些情况下不会按预期失败。此问题影响Apache Tomcat：从11.0.0-M1到11.0.18，从10.1.0-M7到10.1.52，从9.0.83到9.0.115;Apache Tomcat Native：从1.1.23到1.1.34，从1.2.0到1.2.39，从1.3.0到1.3.6，从2.0.0到2.0.13。建议用户升级到Tomcat Native 1.3.7或2.0.14版本和Tomcat 11.0.20、10.1.53和9.0.116版本，这些版本可以修复该问题。
 
@@ -199,7 +199,7 @@ openEuler-24.03-LTS-SP3
 链接：<https://www.openeuler.openatom.cn/zh/security/cve/detail/?cveId=CVE-2026-29145&packageName=tomcat>
 
 
-**CVE-2026-2049 （CVSS评分：9.1分）**
+**CVE-2026-33186（CVSS评分：9.1分）**
 
 简述：攻击者可利用此漏洞，将带有格式错误的`:path`标头的原始HTTP/2帧直接发送到gRPC服务器。版本1.79.3中的修复可确保任何`:path`不以前导斜杠开头的请求都会立即被拒绝，并出现`codes.UnExecuted`错误，从而阻止它到达具有非规范路径字符串的授权拦截器或处理程序。虽然升级是最安全和推荐的途径，但用户可以使用以下方法之一缓解漏洞：使用验证拦截器（推荐缓解）；基础设施级别的规范化；和/或策略加固。
 
