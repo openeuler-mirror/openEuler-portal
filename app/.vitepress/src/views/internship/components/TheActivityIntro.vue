@@ -65,7 +65,7 @@ const isExpanded = (step: InternshipStep) => expandedSteps.value.has(step);
       <p>{{ i18n.internship.activityDesc1 }}</p>
       <div class="intro-contact">
         <span>{{ i18n.internship.activityDesc2 }}</span>
-        <OLink class="contact" :href="`mailto:${EMAIL_ADDRESS}`">{{ EMAIL_ADDRESS }}</OLink>
+        <OLink class="contact" :hover-underline="false" :href="`mailto:${EMAIL_ADDRESS}`">{{ EMAIL_ADDRESS }}</OLink>
       </div>
       <div class="steps-container">
         <div class="custom-steps">
@@ -115,7 +115,7 @@ const isExpanded = (step: InternshipStep) => expandedSteps.value.has(step);
       <p>{{ i18n.internship.activityDesc1 }}</p>
       <div class="mobile-contact">
         <span>{{ i18n.internship.activityDesc2 }}</span>
-        <OLink class="contact" :href="`mailto:${EMAIL_ADDRESS}`">{{ EMAIL_ADDRESS }}</OLink>
+        <OLink class="contact" :hover-underline="false" :href="`mailto:${EMAIL_ADDRESS}`">{{ EMAIL_ADDRESS }}</OLink>
       </div>
     </div>
     <div class="mobile-step-list">
@@ -172,7 +172,6 @@ const isExpanded = (step: InternshipStep) => expandedSteps.value.has(step);
 
     &:hover {
       color: var(--o-color-primary2);
-      text-decoration: underline;
     }
   }
 }
@@ -350,7 +349,6 @@ const isExpanded = (step: InternshipStep) => expandedSteps.value.has(step);
 
     &:hover {
       color: var(--o-color-primary2);
-      text-decoration: underline;
     }
   }
 }

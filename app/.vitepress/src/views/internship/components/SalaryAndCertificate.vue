@@ -58,7 +58,7 @@ const mobileTableData = computed(() => [
       <span>{{ i18n.internship.applyCertificate1 }}</span>
       <span class="certificate">{{ i18n.internship.applyCertificate2 }}</span>
       <span>{{ i18n.internship.applyCertificate3 }}</span>
-      <OLink class="contact" :href="`mailto:${EMAIL_ADDRESS}`">{{ EMAIL_ADDRESS }}</OLink>
+      <OLink class="contact" :hover-underline="false" :href="`mailto:${EMAIL_ADDRESS}`">{{ EMAIL_ADDRESS }}</OLink>
       <span>{{ i18n.internship.salaryAndCertificateDesc3 }}</span>
     </div>
     <div class="attention">
@@ -115,7 +115,6 @@ const mobileTableData = computed(() => [
 
     &:hover {
       color: var(--o-color-primary2);
-      text-decoration: underline;
     }
   }
 }

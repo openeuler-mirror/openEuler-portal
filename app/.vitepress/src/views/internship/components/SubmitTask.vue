@@ -41,7 +41,7 @@ const flowImg = computed(() => (isDark.value ? imgDark : imgLight));
       <span class="attention-text">{{ i18n.internship.attention1 }}</span>
       <div>
         <span>{{ i18n.internship.attention1Desc1 }}</span>
-        <OLink class="contact" :href="internshipTaskLinks.aiCodingAssistants" target="_blank">{{ i18n.internship.attention1Link }}</OLink>
+        <OLink class="contact" :hover-underline="false" :href="internshipTaskLinks.aiCodingAssistants" target="_blank">{{ i18n.internship.attention1Link }}</OLink>
         <span>{{ i18n.internship.attention1Desc2 }}</span>
       </div>
     </div>
@@ -110,7 +110,6 @@ const flowImg = computed(() => (isDark.value ? imgDark : imgLight));
     cursor: pointer;
     &:hover {
       color: var(--o-color-primary2);
-      text-decoration: underline;
     }
   }
 }
