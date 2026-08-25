@@ -19,7 +19,6 @@
         ├─ stores // 状态管理
         ├─ views // 业务vue文件
     ├─ en // 英文页面
-    ├─ ru // 俄文页面
     ├─ zh // 中文页面
 ```
 
@@ -48,7 +47,7 @@
 1. 文件夹以及文件命名(除 Vue SFC)采用`kebab-case`
 2. Vue SFC 文件命名使用`PascalCase`, 在该文件中使用的 Vue 组件也使用`PascalCase`
 3. Vue 组件中`emit`事件使用`kebab-case`
-4. 变量以及方法命名使用`camelCase`, 资源文件使用`Snake`表明 light/dark, zh/en/ru，，`eg: homeBanner_light_zh`, 其中风格在前，语言在后
+4. 变量以及方法命名使用`camelCase`, 资源文件使用`Snake`表明 light/dark, zh/en，，`eg: homeBanner_light_zh`, 其中风格在前，语言在后
 5. CSS 使用`kebab-case`命名
 6. Icon 组件引入时增加 Icon 前缀，eg:`import IconDownload from '~icons/app/download'`
 

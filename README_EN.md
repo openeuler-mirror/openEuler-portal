@@ -19,7 +19,6 @@ The official website of the openEuler community is built with `vue3` and `typesc
         ├─ stores // Status management
         ├─ views // Service Vue files
     ├─ en // English page
-    ├─ ru // Russian page
     ├─ zh // Chinese page
 ```
 
@@ -48,7 +47,7 @@ Note: Merge commit with `git rebase -i` to ensure there is only one commit for a
 1. Use `kebab-case` for all file and file folder names (except Vue SFC).
 2. Use `PascalCase` for Vue SFC file names. For the Vue components used by the files, use `PascalCase` too.
 3. Use `kebab-case` for `emit` events of the Vue components.
-4. Use `camelCase` for variable and method names and `Snake` for resource files, with the style (light/dark) and language (zh/en/ru) specified in the style_language sequence (e.g. `eg: homeBanner_light_zh`).
+4. Use `camelCase` for variable and method names and `Snake` for resource files, with the style (light/dark) and language (zh/en) specified in the style_language sequence (e.g. `eg: homeBanner_light_zh`).
 5. Use `kebab-case` for CSS names.
 6. Add prefix Icon for Icon components to be imported (e.g. `import IconDownload from '~icons/app/download'`).
 
