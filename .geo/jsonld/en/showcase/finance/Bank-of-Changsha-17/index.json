@@ -1,0 +1,89 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/showcase/finance/Bank-of-Changsha-17",
+    "url": "https://www.openeuler.org/en/showcase/finance/Bank-of-Changsha-17",
+    "name": "Bank of Changsha | openEuler",
+    "description": "As a regional joint-stock commercial bank, the Bank of Changsha continues to provide customers with traditional financial services such as deposits, loans, and payment settlements, while actively expanding into diversified services including foreign exchange, wealth management, credit cards, and online banking.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.org/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bank of Changsha",
+          "item": "https://www.openeuler.org/en/showcase/finance/Bank-of-Changsha-17"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Bank of Changsha's Stable Cross-Platform Operation",
+    "description": "As a regional joint-stock commercial bank, the Bank of Changsha continues to provide customers with traditional financial services such as deposits, loans, and payment settlements, while actively expanding into diversified services including foreign exchange, wealth management, credit cards, and online banking.",
+    "url": "https://www.openeuler.org/en/showcase/finance/Bank-of-Changsha-17",
+    "inLanguage": "en",
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler-based OS",
+        "description": "Operating system supporting the Bank of Changsha's cross-platform operations",
+        "applicationCategory": "OperatingSystem",
+        "operatingSystem": "Linux"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "Bank of Changsha",
+        "description": "Regional joint-stock commercial bank in China"
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler",
+        "description": "Open-source Linux distribution community",
+        "url": "https://www.openeuler.org/"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.org/favicon.ico"
+      }
+    },
+    "articleSection": "Finance",
+    "keywords": [
+      "openEuler",
+      "Bank of Changsha",
+      "cross-platform",
+      "banking",
+      "financial services",
+      "OS migration"
+    ]
+  }
+]

@@ -1,0 +1,89 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/showcase/provider/China-Mobile-Zhejiang-23",
+    "url": "https://www.openeuler.org/en/showcase/provider/China-Mobile-Zhejiang-23",
+    "name": "China Mobile Zhejiang | openEuler",
+    "description": "Seamless OS Migration for China Mobile Zhejiang's Core Services",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.org/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "China Mobile Zhejiang",
+          "item": "https://www.openeuler.org/en/showcase/provider/China-Mobile-Zhejiang-23"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Seamless OS Migration for China Mobile Zhejiang's Core Services",
+    "description": "Seamless OS Migration for China Mobile Zhejiang's Core Services",
+    "url": "https://www.openeuler.org/en/showcase/provider/China-Mobile-Zhejiang-23",
+    "inLanguage": "en",
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "openEuler-based OS",
+        "description": "Operating system for China Mobile Zhejiang's core service systems",
+        "applicationCategory": "OperatingSystem",
+        "operatingSystem": "Linux"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "China Mobile Zhejiang",
+        "description": "Provincial branch of China Mobile in Zhejiang"
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler",
+        "description": "Open-source Linux distribution community",
+        "url": "https://www.openeuler.org/"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.org/favicon.ico"
+      }
+    },
+    "articleSection": "Carrier",
+    "keywords": [
+      "openEuler",
+      "China Mobile Zhejiang",
+      "OS migration",
+      "carrier",
+      "core services",
+      "telecommunications"
+    ]
+  }
+]

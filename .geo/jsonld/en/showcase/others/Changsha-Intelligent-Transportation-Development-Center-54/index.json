@@ -1,0 +1,90 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/showcase/others/Changsha-Intelligent-Transportation-Development-Center-54",
+    "url": "https://www.openeuler.org/en/showcase/others/Changsha-Intelligent-Transportation-Development-Center-54",
+    "name": "Changsha Intelligent Transportation Development Center | openEuler",
+    "description": "Smooth Migration from CentOS to Kylinsec OS to Secure Citywide Traffic Operations",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.org/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Changsha Intelligent Transportation Development Center",
+          "item": "https://www.openeuler.org/en/showcase/others/Changsha-Intelligent-Transportation-Development-Center-54"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Smooth Migration from CentOS to Kylinsec OS to Secure Citywide Traffic Operations",
+    "description": "Smooth Migration from CentOS to Kylinsec OS to Secure Citywide Traffic Operations",
+    "url": "https://www.openeuler.org/en/showcase/others/Changsha-Intelligent-Transportation-Development-Center-54",
+    "inLanguage": "en",
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Kylinsec OS",
+        "description": "openEuler-based Linux distribution replacing CentOS for traffic operations",
+        "applicationCategory": "OperatingSystem",
+        "operatingSystem": "Linux"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "Changsha Intelligent Transportation Development Center",
+        "description": "City traffic management organization in Changsha"
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler",
+        "description": "Open-source Linux distribution community",
+        "url": "https://www.openeuler.org/"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.org/favicon.ico"
+      }
+    },
+    "articleSection": "Others",
+    "keywords": [
+      "openEuler",
+      "Kylinsec OS",
+      "CentOS migration",
+      "Changsha",
+      "intelligent transportation",
+      "traffic operations",
+      "OS migration"
+    ]
+  }
+]

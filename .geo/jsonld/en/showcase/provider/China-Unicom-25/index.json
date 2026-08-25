@@ -1,0 +1,88 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/showcase/provider/China-Unicom-25",
+    "url": "https://www.openeuler.org/en/showcase/provider/China-Unicom-25",
+    "name": "China Unicom | openEuler",
+    "description": "Smooth Migration of China Unicom's Intelligent Operations Platform",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.org/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "China Unicom",
+          "item": "https://www.openeuler.org/en/showcase/provider/China-Unicom-25"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Smooth Migration of China Unicom's Intelligent Operations Platform",
+    "description": "Smooth Migration of China Unicom's Intelligent Operations Platform",
+    "url": "https://www.openeuler.org/en/showcase/provider/China-Unicom-25",
+    "inLanguage": "en",
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Intelligent Operations Platform",
+        "description": "China Unicom's intelligent operations platform migrated to openEuler-based OS",
+        "applicationCategory": "PlatformApplication"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "China Unicom",
+        "description": "One of China's major telecommunications operators"
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler",
+        "description": "Open-source Linux distribution community",
+        "url": "https://www.openeuler.org/"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.org/favicon.ico"
+      }
+    },
+    "articleSection": "Carrier",
+    "keywords": [
+      "openEuler",
+      "China Unicom",
+      "intelligent operations",
+      "carrier",
+      "OS migration",
+      "telecommunications"
+    ]
+  }
+]

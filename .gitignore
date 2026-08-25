@@ -143,3 +143,8 @@ app/.vitepress/dist
 
 # CodeGraph MCP server artifacts (local tool, not business code)
 .codegraph/
+
+# Agent tool artifacts
+.opencode/
+.aider/
+.cursor/

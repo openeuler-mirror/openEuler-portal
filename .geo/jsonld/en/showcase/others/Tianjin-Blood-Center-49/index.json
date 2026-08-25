@@ -1,0 +1,88 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/showcase/others/Tianjin-Blood-Center-49",
+    "url": "https://www.openeuler.org/en/showcase/others/Tianjin-Blood-Center-49",
+    "name": "Tianjin Blood Center | openEuler",
+    "description": "Tianjin Blood Center Business System Reconstruction",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.org/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tianjin Blood Center",
+          "item": "https://www.openeuler.org/en/showcase/others/Tianjin-Blood-Center-49"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Tianjin Blood Center Business System Reconstruction",
+    "description": "Tianjin Blood Center Business System Reconstruction",
+    "url": "https://www.openeuler.org/en/showcase/others/Tianjin-Blood-Center-49",
+    "inLanguage": "en",
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Business System",
+        "description": "Blood center business system reconstructed on openEuler-based OS",
+        "applicationCategory": "BusinessApplication"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "Tianjin Blood Center",
+        "description": "Blood collection and supply institution in Tianjin, China"
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler",
+        "description": "Open-source Linux distribution community",
+        "url": "https://www.openeuler.org/"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.org/favicon.ico"
+      }
+    },
+    "articleSection": "Others",
+    "keywords": [
+      "openEuler",
+      "Tianjin Blood Center",
+      "business system",
+      "healthcare",
+      "system reconstruction",
+      "OS migration"
+    ]
+  }
+]

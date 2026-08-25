@@ -12,7 +12,8 @@
       "@id": "https://www.openeuler.org/",
       "url": "https://www.openeuler.org/",
       "name": "openEuler",
-      "description": "openEuler - An Open Source Linux Distribution for All Scenarios"
+      "description": "openEuler - An Open Source Linux Distribution for All Scenarios",
+      "inLanguage": "en"
     },
     "publisher": {
       "@type": "Organization",

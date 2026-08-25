@@ -1,0 +1,41 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/download/get-os",
+    "url": "https://www.openeuler.org/en/download/get-os",
+    "name": "How to Get openEuler OS | openEuler Download",
+    "description": "Learn how to access openEuler OS. Find details on downloading ISO and container images for server, cloud, or edge setups.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Download",
+          "item": "https://www.openeuler.org/en/download/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Get OS",
+          "item": "https://www.openeuler.org/en/download/get-os"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/sig/sig-detail",
+    "url": "https://www.openeuler.org/en/sig/sig-detail",
+    "name": "SIG Details | openEuler",
+    "description": "Explore key information about SIGs, including maintainers, meeting schedules, repositories, contribution stats, and mailing lists for effective collaboration.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SIG Center",
+          "item": "https://www.openeuler.org/en/sig/sig-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SIG Details",
+          "item": "https://www.openeuler.org/en/sig/sig-detail"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "openEuler SIG Details",
+    "description": "openEuler SIG details page showing maintainers, meeting schedules, repositories, contribution stats, and mailing lists for effective collaboration.",
+    "url": "https://www.openeuler.org/en/sig/sig-detail",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.org"
+    }
+  }
+]

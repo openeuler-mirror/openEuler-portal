@@ -1,0 +1,83 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/showcase/energy/Refined-Oil-Product-34",
+    "url": "https://www.openeuler.org/en/showcase/energy/Refined-Oil-Product-34",
+    "name": "Refined Oil Product Qualification Management Platform | openEuler",
+    "description": "Refined Oil Product Qualification Management Platform",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.org/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Refined Oil Product Qualification Management Platform",
+          "item": "https://www.openeuler.org/en/showcase/energy/Refined-Oil-Product-34"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Refined Oil Product Qualification Management Platform",
+    "description": "Refined Oil Product Qualification Management Platform",
+    "url": "https://www.openeuler.org/en/showcase/energy/Refined-Oil-Product-34",
+    "inLanguage": "en",
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Refined Oil Product Qualification Management Platform",
+        "description": "Management platform for refined oil product qualification running on openEuler-based OS",
+        "applicationCategory": "IndustrialApplication"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "openEuler",
+        "description": "Open-source Linux distribution community",
+        "url": "https://www.openeuler.org/"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.org/favicon.ico"
+      }
+    },
+    "articleSection": "Energy",
+    "keywords": [
+      "openEuler",
+      "refined oil product",
+      "qualification management",
+      "energy",
+      "oil industry",
+      "management platform"
+    ]
+  }
+]

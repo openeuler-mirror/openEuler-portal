@@ -11,7 +11,8 @@
       "@type": "WebSite",
       "@id": "https://www.openeuler.org/",
       "url": "https://www.openeuler.org/",
-      "name": "openEuler"
+      "name": "openEuler",
+      "inLanguage": "en"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -31,12 +32,6 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Finance",
-          "item": "https://www.openeuler.org/en/showcase/finance/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
           "name": "China Construction Bank",
           "item": "https://www.openeuler.org/en/showcase/finance/001f4706-b423-8b7b507079ad"
         }

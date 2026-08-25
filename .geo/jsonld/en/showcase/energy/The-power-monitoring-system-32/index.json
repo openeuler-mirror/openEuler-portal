@@ -1,0 +1,83 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/showcase/energy/The-power-monitoring-system-32",
+    "url": "https://www.openeuler.org/en/showcase/energy/The-power-monitoring-system-32",
+    "name": "The power monitoring system | openEuler",
+    "description": "Power Monitoring System for Wind Farms",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.org/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The power monitoring system",
+          "item": "https://www.openeuler.org/en/showcase/energy/The-power-monitoring-system-32"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "The power monitoring system",
+    "description": "Power Monitoring System for Wind Farms",
+    "url": "https://www.openeuler.org/en/showcase/energy/The-power-monitoring-system-32",
+    "inLanguage": "en",
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Power Monitoring System",
+        "description": "Monitoring system for wind farm power operations running on openEuler-based OS",
+        "applicationCategory": "IndustrialApplication"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "openEuler",
+        "description": "Open-source Linux distribution community",
+        "url": "https://www.openeuler.org/"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.org/favicon.ico"
+      }
+    },
+    "articleSection": "Energy",
+    "keywords": [
+      "openEuler",
+      "power monitoring",
+      "wind farm",
+      "renewable energy",
+      "monitoring system",
+      "power operations"
+    ]
+  }
+]

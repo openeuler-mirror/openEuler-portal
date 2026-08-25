@@ -11,7 +11,8 @@
       "@type": "WebSite",
       "@id": "https://www.openeuler.org/",
       "url": "https://www.openeuler.org/",
-      "name": "openEuler"
+      "name": "openEuler",
+      "inLanguage": "en"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -31,12 +32,6 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Energy",
-          "item": "https://www.openeuler.org/en/showcase/energy/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
           "name": "State Grid Corporation of China",
           "item": "https://www.openeuler.org/en/showcase/energy/008e41fd-9185-f62d7485475e"
         }

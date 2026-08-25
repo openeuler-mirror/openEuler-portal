@@ -1,0 +1,83 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.openeuler.org/en/showcase/others/Security-and-Trustworthiness-Technology-50",
+    "url": "https://www.openeuler.org/en/showcase/others/Security-and-Trustworthiness-Technology-50",
+    "name": "Security and Trustworthiness Technology | openEuler",
+    "description": "openEuler-based Security and Trustworthiness Technology Exploration and Practice",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler",
+      "inLanguage": "en"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Showcase",
+          "item": "https://www.openeuler.org/en/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Security and Trustworthiness Technology",
+          "item": "https://www.openeuler.org/en/showcase/others/Security-and-Trustworthiness-Technology-50"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Security and Trustworthiness Technology",
+    "description": "openEuler-based Security and Trustworthiness Technology Exploration and Practice",
+    "url": "https://www.openeuler.org/en/showcase/others/Security-and-Trustworthiness-Technology-50",
+    "inLanguage": "en",
+    "about": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Security and Trustworthiness Platform",
+        "description": "Security technology platform based on openEuler for trustworthiness exploration and practice",
+        "applicationCategory": "SecurityApplication"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "openEuler",
+        "description": "Open-source Linux distribution community",
+        "url": "https://www.openeuler.org/"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler",
+      "url": "https://www.openeuler.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.org/favicon.ico"
+      }
+    },
+    "articleSection": "Others",
+    "keywords": [
+      "openEuler",
+      "security",
+      "trustworthiness",
+      "technology exploration",
+      "information security",
+      "OS migration"
+    ]
+  }
+]
