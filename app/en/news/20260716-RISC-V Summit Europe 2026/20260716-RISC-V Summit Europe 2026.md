@@ -4,7 +4,7 @@ date: '2026-07-16'
 category: news
 tags:
   - openEuler
-banner: img/banners/20260716-RISC-V Summit Europe 2026.jpg'
+banner: 'img/banners/20260716-RISC-V Summit Europe 2026.jpg'
 author: 'openEuler'
 summary: 'At RISC-V Summit Europe 2026, we joined the global RISC-V community to share how openEuler and ecosystem contributors are working together to strengthen the software foundation for RVA23-based RISC-V server platforms.'
 ---
