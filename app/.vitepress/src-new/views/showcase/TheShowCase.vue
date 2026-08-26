@@ -213,7 +213,7 @@ const handleConfirm = () => {
       <OLink
         color="primary"
         href="mailto:user@openeuler.sh"
-        target="_blank"
+        target="_blank" rel="noopener noreferrer"
       >user@openeuler.sh</OLink>
     </div>
     <div v-if="!lePadV" class="filter-card">
@@ -304,7 +304,7 @@ const handleConfirm = () => {
     </div>
     <ORow v-if="caseData?.length" v-scroll-bottom="getMoreData" :gap="gap" wrap="wrap" class="case-list">
       <OCol v-for="(item, i) in caseData" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 33.33%'">
-        <OCard hoverable :href="pathResolving(item.path)" target="_blank" :class="{'card-dark': isDark}">
+        <OCard hoverable :href="pathResolving(item.path)" target="_blank" rel="noopener noreferrer" :class="{'card-dark': isDark}">
           <template #card>
             <div
               class="card-content"

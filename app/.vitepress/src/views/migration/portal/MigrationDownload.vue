@@ -7,6 +7,8 @@ import portalInfoData from '@/data/migration/migration-portal';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import IconDownload from '~icons/app/icon-download.svg';
+import { OButton } from '@opensig/opendesign';
+import { Button as OOButton } from 'opendesign/button';
 
 const commonStore = useCommon();
 
@@ -57,12 +59,15 @@ function handleClick(item: LinkItem) {
             <div class="card-btn">
               <OButton
                 v-for="buttons in portalInfo.download.btns"
-                :key="buttons"
-                animation
-                size="mini"
+                :key="buttons.name"
+                round="0"
+                color="primary"
+                size="medium"
                 class="home-banner-btn"
-                :class="buttons.softLinks?.length ? 'hover' : ''"
-                @click="buttons.link && handleClick(buttons)"
+                :class="[buttons.softLinks?.length ? 'hover' : 'animation-btn']"
+                :href="buttons.link || undefined"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {{ buttons.name }}
                 <ul v-if="buttons.softLinks?.length">
@@ -71,10 +76,10 @@ function handleClick(item: LinkItem) {
                     :key="buttonItem.link"
                     @click="handleClick(buttonItem)"
                   >
-                    {{ buttonItem.name }}
+                    <a class="btn-expand-link" :href="buttonItem.link" @click.prevent>{{ buttonItem.name }}</a>
                   </li>
                 </ul>
-                <template #suffixIcon
+                <template #suffix
                   ><OIcon>
                     <component
                       :is="
@@ -212,9 +217,16 @@ function handleClick(item: LinkItem) {
             margin: 16px 0 0 0;
           }
 
-          .o-button {
+          .o-btn {
             position: relative;
             margin-right: var(--e-spacing-h4);
+            font-size: var(--o-font_size-tip2);
+            line-height: var(--o-line_height-tip2);
+            --btn-icon-size: var(--o-font_size-tip2);
+            .btn-expand-link {
+              text-decoration: none;
+              color: inherit;
+            }
             ul {
               display: none;
               position: absolute;

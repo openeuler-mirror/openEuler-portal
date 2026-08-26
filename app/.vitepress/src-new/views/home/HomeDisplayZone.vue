@@ -16,7 +16,7 @@ const { theme } = storeToRefs(useCommon());
       v-for="item in displayZoneData"
       :key="item.link[locale]"
       :href="item.link[locale]"
-      target="_blank"
+      target="_blank" rel="noopener noreferrer"
       class="display-zone-item"
       v-analytics.bubble="{ target: item.title[locale] }"
     >

@@ -104,7 +104,7 @@ watch(
         class="gitee-name"
         :title="giteeName"
         :href="goToUser(giteeName)"
-        target="_blank"
+        target="_blank" rel="noopener noreferrer"
         v-analytics.bubble="{
           target: giteeName
         }"

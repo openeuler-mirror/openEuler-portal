@@ -372,7 +372,7 @@ const gap = computed(() => {
   <OTab v-model="activeTab" :line="false" :key="locale" @change="clickTab">
     <OTabPane :value="0" :label="t('compatibility.completeMachine')">
       <AppSection>
-        <div class="tips">{{ t('compatibility.desc1') }} <OLink color="primary" variant="text" :href="`/${locale}/compatibility/hardware/`" target="_blank" hover-underline>{{ t('compatibility.desc2') }}</OLink></div>
+        <div class="tips">{{ t('compatibility.desc1') }} <OLink color="primary" variant="text" :href="`/${locale}/compatibility/hardware/`" target="_blank" rel="noopener noreferrer" hover-underline>{{ t('compatibility.desc2') }}</OLink></div>
         <div class="filter-box machine-filter">
           <div class="item-filter">
             <span class="item-title">{{ t('compatibility.architecture') }}</span>
@@ -437,7 +437,7 @@ const gap = computed(() => {
               color="primary"
               variant="text"
               :href="row.friendlyLink"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               hover-underline
             >
               {{ row.hardwareFactory }}
@@ -449,7 +449,7 @@ const gap = computed(() => {
               color="primary"
               variant="text"
               :href="`/${locale}/compatibility/software-info/?id=${row.id}`"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               hover-underline
             >
               {{t('compatibility.detailInfo')}}
@@ -466,7 +466,7 @@ const gap = computed(() => {
                     color="primary"
                     variant="text"
                     :href="item.friendlyLink"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     {{ item.hardwareFactory }}
                   </OLink>
@@ -497,7 +497,7 @@ const gap = computed(() => {
                     color="primary"
                     variant="text"
                     :href="`/${locale}/compatibility/software-info/?id=${item.id}`"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     class="text"
                   >
                     {{ t('compatibility.detailInfo') }}
@@ -531,7 +531,7 @@ const gap = computed(() => {
     </OTabPane>
     <OTabPane :value="1" :label="t('compatibility.board')">
       <AppSection>
-        <div class="tips">{{ t('compatibility.desc1') }} <OLink color="primary" variant="text" :href="`/${locale}/compatibility/hardware/`" target="_blank" hover-underline>{{ t('compatibility.desc2') }}</OLink></div>
+        <div class="tips">{{ t('compatibility.desc1') }} <OLink color="primary" variant="text" :href="`/${locale}/compatibility/hardware/`" target="_blank" rel="noopener noreferrer" hover-underline>{{ t('compatibility.desc2') }}</OLink></div>
         <div class="filter-box board-filter">
           <div class="item-filter">
             <span class="item-title">{{ t('compatibility.architecture') }}</span>
@@ -658,7 +658,7 @@ const gap = computed(() => {
     <OTabPane v-if="locale === 'zh'" :value="2" :label="'商业软件'">
       <AppSection>
         <div class="tips">
-          <div>{{ t('compatibility.desc3') }} <OLink color="primary" variant="text" href="https://atomgit.com/openeuler/technical-certification" target="_blank" hover-underline>{{ t('compatibility.desc4') }}</OLink></div>
+          <div>{{ t('compatibility.desc3') }} <OLink color="primary" variant="text" href="https://atomgit.com/openeuler/technical-certification" target="_blank" rel="noopener noreferrer" hover-underline>{{ t('compatibility.desc4') }}</OLink></div>
           <div>{{ t('compatibility.desc5') }}</div>
         </div>
         <div class="filter-box">
@@ -832,7 +832,7 @@ const gap = computed(() => {
               color="primary"
               variant="text"
               :href="row.introduceLink"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               hover-underline
             >
               {{t('compatibility.detailInfo')}}
@@ -882,7 +882,7 @@ const gap = computed(() => {
                     color="primary"
                     variant="text"
                     :href="item.introduceLink"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     class="text"
                   >
                     {{t('compatibility.detailInfo')}}

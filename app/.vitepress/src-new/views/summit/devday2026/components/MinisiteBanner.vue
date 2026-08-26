@@ -33,7 +33,7 @@ onMounted(() => {
     <div v-if="!lePadV" class="banner-content">
       <ContentWrapper data-aos="fade-up">
         <OFigure :src="bannerData.textImg" class="text-img" />
-        <OButton v-if="bannerData.href" class="banner-btn" variant="solid" color="primary" size="large" :href="bannerData.href" target="_blank">
+        <OButton v-if="bannerData.href" class="banner-btn" variant="solid" color="primary" size="large" :href="bannerData.href" target="_blank" rel="noopener noreferrer">
           {{ bannerData.btn }}
           <template #suffix>
             <OIcon><IconOutLink /></OIcon>
@@ -41,7 +41,7 @@ onMounted(() => {
         </OButton>
       </ContentWrapper>
     </div>
-    <OButton v-if="lePadV && bannerData.href" class="banner-btn" variant="solid" color="primary" size="medium" :href="bannerData.href" target="_blank">
+    <OButton v-if="lePadV && bannerData.href" class="banner-btn" variant="solid" color="primary" size="medium" :href="bannerData.href" target="_blank" rel="noopener noreferrer">
       {{ bannerData.btn }}
       <template #suffix>
         <OIcon><IconOutLink /></OIcon>

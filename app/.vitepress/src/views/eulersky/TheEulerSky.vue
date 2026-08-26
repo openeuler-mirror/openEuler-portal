@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { useRouter } from 'vitepress';
 
 import { useI18n } from '@/i18n';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
@@ -10,15 +9,12 @@ import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import banner from '@/assets/banner/banner-interaction.png';
 import skyIllustration from '@/assets/illustrations/euler-sky.png';
 import imgCardBg from '@/assets/category/euler-sky/round-bg.png';
+import { OButton } from '@opensig/opendesign';
 
 const i18n = useI18n();
-const router = useRouter();
 const homeI18n = computed(() => {
   return i18n.value.sky.HOME;
 });
-function goDetail(url: string) {
-  router.go(url);
-}
 </script>
 <template>
   <BannerLevel2
@@ -45,14 +41,13 @@ function goDetail(url: string) {
           <div class="item-content">
             <div class="item-title">{{ homeI18n.EVENT_COLLECTION }}</div>
             <OButton
-              animation
-              type="text"
-              size="small"
-              class="item-link"
-              @click="goDetail(homeI18n.EVENT_COLLECTION_URL)"
+              variant="text"
+              size="medium"
+              class="item-link animation-btn"
+              :href="homeI18n.EVENT_COLLECTION_URL"
             >
               {{ homeI18n.EVENT_COLLECTION1 }}
-              <template #suffixIcon>
+              <template #suffix>
                 <OIcon><IconArrowRight /></OIcon>
               </template>
             </OButton>
@@ -69,14 +64,13 @@ function goDetail(url: string) {
           <div class="item-content">
             <div class="item-title">{{ item.TITLE }}</div>
             <OButton
-              animation
-              type="text"
-              size="small"
-              class="item-link"
-              @click="goDetail(item.URL)"
+              variant="text"
+              size="medium"
+              class="item-link animation-btn"
+              :href="item.URL"
             >
               {{ i18n.sky.VIEW_MORE }}
-              <template #suffixIcon>
+              <template #suffix>
                 <OIcon><IconArrowRight /></OIcon>
               </template>
             </OButton>
@@ -154,9 +148,12 @@ function goDetail(url: string) {
       }
       .item-link {
         max-width: 256px;
+        justify-content: start;
         padding: 0;
         margin-right: var(--e-spacing-h5);
         font-size: var(--e-font-size-text);
+        --btn-color-hover: var(--e-color-text1);
+        --btn-color: var(--e-color-text1);
         line-height: var(--e-line-height-text);
         svg {
           color: var(--e-color-brand1);

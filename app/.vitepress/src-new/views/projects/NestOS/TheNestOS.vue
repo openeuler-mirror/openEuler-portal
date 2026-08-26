@@ -28,7 +28,7 @@ const { lePadV } = useScreen();
     :subtitle="t('nestos.subtitle')"
     :background-image="banner"
   >
-    <OButton variant="solid" color="primary" size="large" href="https://atomgit.com/openeuler/NestOS" target="_blank" class="banner-btn">
+    <OButton variant="solid" color="primary" size="large" href="https://atomgit.com/openeuler/NestOS" target="_blank" rel="noopener noreferrer" class="banner-btn">
       {{ t('nestos.buttonTitle') }}
       <template #suffix>
         <OIcon><IconOutLink /></OIcon>
@@ -40,7 +40,7 @@ const { lePadV } = useScreen();
   <div v-else class="mo-banner">
     <p class="mo-title">{{ t('nestos.title') }}</p>
     <p class="mo-subtitle">{{ t('nestos.subtitle') }}</p>
-    <OButton variant="solid" color="primary" href="https://atomgit.com/openeuler/NestOS" target="_blank" class="banner-btn">
+    <OButton variant="solid" color="primary" href="https://atomgit.com/openeuler/NestOS" target="_blank" rel="noopener noreferrer" class="banner-btn">
       {{ t('nestos.buttonTitle') }}
       <template #suffix>
         <OIcon><IconOutLink /></OIcon>

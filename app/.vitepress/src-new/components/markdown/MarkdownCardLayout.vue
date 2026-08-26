@@ -73,7 +73,7 @@ const gap = computed(() => {
           <p class="card-title">{{ card.title }}</p>
           <p v-if="card.description" class="card-desc">{{ card.description }}</p>
           <ODivider v-if="lePadV" />
-          <OLink v-if="card.linkText.includes('/download')" :color="lePadV ? 'normal' : 'primary'" :href="card.url" target="_blank" :hover-underline="lePadV ? false : true" download class="download">
+          <OLink v-if="card.linkText.includes('/download')" :color="lePadV ? 'normal' : 'primary'" :href="card.url" target="_blank" rel="noopener noreferrer" :hover-underline="lePadV ? false : true" download class="download">
             <template #icon v-if="!lePadV && !isSelfDomain(card.url) && !isMail(card.url)">
               <OIcon><IconDownload /></OIcon>
             </template>
@@ -82,7 +82,7 @@ const gap = computed(() => {
               <OIcon><IconDownload /></OIcon>
             </template>
           </OLink>
-          <OLink v-else :color="lePadV ? 'normal' : 'primary'" :href="card.url" target="_blank" :hover-underline="lePadV ? false : true">
+          <OLink v-else :color="lePadV ? 'normal' : 'primary'" :href="card.url" target="_blank" rel="noopener noreferrer" :hover-underline="lePadV ? false : true">
             {{ card.linkText || '查看详情' }}
             <template #suffix v-if="(lePadV || !isSelfDomain(card.url)) && !isMail(card.url)">
               <OIcon v-if="!lePadV"><IconOutlink /></OIcon>

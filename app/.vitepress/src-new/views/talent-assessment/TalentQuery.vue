@@ -9,7 +9,7 @@ import { OCard, OLink } from '@opensig/opendesign';
         <div class="query-intro">
           <i18n-t keypath="talent.certificateQueryIntro" :tag="'p'">
             <template #email>
-              <OLink color="primary" href="mailto:oecxonline@openeuler.sh" target="_blank" :hover-underline="true">
+              <OLink color="primary" href="mailto:oecxonline@openeuler.sh" target="_blank" rel="noopener noreferrer" :hover-underline="true">
                 oecxonline@openeuler.sh
               </OLink>
             </template>
@@ -22,7 +22,7 @@ import { OCard, OLink } from '@opensig/opendesign';
           <div class="row">
             <span class="label">{{ $t('talent.addressee') }}</span>
             <span class="content">
-              <OLink color="primary" href="mailto:oecxonline@openeuler.sh" target="_blank" :hover-underline="true">
+              <OLink color="primary" href="mailto:oecxonline@openeuler.sh" target="_blank" rel="noopener noreferrer" :hover-underline="true">
                 oecxonline@openeuler.sh
               </OLink>
             </span>

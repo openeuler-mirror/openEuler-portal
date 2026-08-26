@@ -140,6 +140,7 @@ app/.vitepress/dist
 !.claude/skills/sitemap-schema-batch-generator/
 !.claude/skills/vue-best-practices/
 !.claude/skills/frontmatter-data-extractor/
+!.claude/skills/anchor-link-fix/
 
 # CodeGraph MCP server artifacts (local tool, not business code)
 .codegraph/

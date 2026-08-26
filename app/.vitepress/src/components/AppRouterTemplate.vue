@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { computed, PropType } from 'vue';
 import { useRouter } from 'vitepress';
 
 import BannerLevel2 from '@/components/BannerLevel2.vue';
@@ -13,7 +13,7 @@ const props = defineProps({
     },
   },
   tabsData: {
-    type: Object,
+    type: Object as PropType<{ tabPane: { label: string; name: string; href?: string; }[] }>,
     default: () => {
       return {};
     },
@@ -80,7 +80,7 @@ function handleTabClick(val: any) {
           :key="item.name"
           :label="item.label"
           :name="item.name"
-        ></OTabPane>
+        ><template v-if="item.href" #label><a class="link-tab-item" :href="item.href" @click.prevent>{{ item.label }}</a></template></OTabPane>
       </OTabs>
     </div>
   </div>
@@ -98,6 +98,9 @@ function handleTabClick(val: any) {
     .el-tabs__nav-scroll {
       display: block;
     }
+  }
+  a.link-tab-item {
+    color: inherit !important;
   }
 }
 .post-btn {

@@ -130,7 +130,7 @@ watch(
                 <OCard class="new-card" :style="{ backgroundImage: `url(${isDark ? newCardBgDark : newCardBg})` }">
                   <p class="card-name">{{ item.name }}</p>
                   <template #footer>
-                    <OLink color="normal" :href="item.link" target="_blank">
+                    <OLink color="normal" :href="item.link" target="_blank" rel="noopener noreferrer">
                       查看新闻
                       <template #suffix>
                         <OIcon><IconChevronRight /></OIcon>
@@ -202,7 +202,7 @@ watch(
                       </p>
                     </div>
                     <template #footer>
-                      <OLink color="normal" :href="t.link" target="_blank" hoverUnderline>
+                      <OLink color="normal" :href="t.link" target="_blank" rel="noopener noreferrer" hoverUnderline>
                         项目地址
                         <template #suffix>
                           <OIcon><IconChevronRight /></OIcon>
@@ -233,14 +233,14 @@ watch(
                       </div>
                       <template #footer>
                         <ODivider v-if="isPhone" />
-                        <OLink color="normal" :href="proItem.link" target="_blank" :hover-underline="!isPhone">
+                        <OLink color="normal" :href="proItem.link" target="_blank" rel="noopener noreferrer" :hover-underline="!isPhone">
                           {{proItem.link1 ? '项目地址1' : '项目地址'}}
                           <template #suffix>
                             <OIcon><IconOutLink /></OIcon>
                           </template>
                         </OLink>
                         <ODivider v-if="isPhone && proItem.link1" />
-                        <OLink v-if="proItem.link1" color="normal" :href="proItem.link1" target="_blank" hoverUnderline>
+                        <OLink v-if="proItem.link1" color="normal" :href="proItem.link1" target="_blank" rel="noopener noreferrer" hoverUnderline>
                           项目地址2
                           <template #suffix>
                             <OIcon><IconOutLink /></OIcon>
@@ -296,7 +296,7 @@ watch(
                       </p>
                     </div>
                     <template #footer>
-                      <OLink color="normal" :href="t.link" target="_blank" hoverUnderline>
+                      <OLink color="normal" :href="t.link" target="_blank" rel="noopener noreferrer" hoverUnderline>
                         项目地址
                         <template #suffix>
                           <OIcon><IconChevronRight /></OIcon>

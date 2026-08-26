@@ -525,7 +525,7 @@ onUnmounted(() => {
               </div>
               <p class="more-info">
                 {{ infoData.more1
-                }}<a :href="infoData.more2Link" target="_blank"
+                }}<a :href="infoData.more2Link" target="_blank" rel="noopener noreferrer"
                   >{{ infoData.more2 }}
                 </a>
               </p>
@@ -569,7 +569,7 @@ onUnmounted(() => {
               :key="item.link"
               :href="item.link"
               :hover-underline="false"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               class="popup-item"
             >
               <OIcon><component :is="item.img"></component> </OIcon>
@@ -669,7 +669,7 @@ onUnmounted(() => {
           </div>
           <p class="more-info">
             {{ infoData.more1 }}
-            <a :href="infoData.more2Link" target="_blank"
+            <a :href="infoData.more2Link" target="_blank" rel="noopener noreferrer"
               >{{ infoData.more2 }}
             </a>
           </p>

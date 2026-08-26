@@ -126,7 +126,7 @@ onBeforeUnmount(() => {
         {{ t('nestos.performanceTips') }}
         <OLink
           :href="comparisionUrl"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           color="primary"
           hover-underline
           class="performance-link"

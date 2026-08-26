@@ -101,7 +101,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
               :key="itemIndex"
             >
               <div v-if="item.name && item.url" :class="{'folder-item': true, 'folder-item-center': item.labelPosition === 'center'}">
-                <OLink class="folder-name" hover-underline :href="item.url" target="_blank">
+                <OLink class="folder-name" hover-underline :href="item.url" target="_blank" rel="noopener noreferrer">
                   {{ item.name }}
                   <template #suffix><IconOutLink /></template>
                 </OLink>
@@ -125,10 +125,10 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
                         :key="componentItem.name"
                         :class="`component-box component-${componentItem.color}`"
                         :href="componentItem.url"
-                        target="_blank"
+                        target="_blank" rel="noopener noreferrer"
                       >
                         <div class="component-content">
-                          <OLink v-if="componentItem.url" :href="componentItem.url" target="_blank" class="component-name" hover-underline>
+                          <OLink v-if="componentItem.url" :href="componentItem.url" target="_blank" rel="noopener noreferrer" class="component-name" hover-underline>
                             <div v-if="Array.isArray(componentItem.name)">
                               <p v-for="itemName in componentItem.name" :key="itemName">{{itemName }}</p>
                             </div>
@@ -143,10 +143,10 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
                       v-else 
                       :class="`component-box component-${component.color}`"
                       :href="component.url"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       <div class="component-content">
-                        <OLink v-if="component.url" :href="component.url" target="_blank" class="component-name" hover-underline>
+                        <OLink v-if="component.url" :href="component.url" target="_blank" rel="noopener noreferrer" class="component-name" hover-underline>
                           {{ component.name }}
                           <template #suffix><IconOutLink /></template>
                         </OLink>
@@ -179,10 +179,10 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
                     <a 
                       :class="`component-box component-${component.color}`"
                       :href="component.url"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       <div class="component-content">
-                        <OLink v-if="component.url" :href="component.url" target="_blank" class="component-name" hover-underline>
+                        <OLink v-if="component.url" :href="component.url" target="_blank" rel="noopener noreferrer" class="component-name" hover-underline>
                           {{ component.name }}
                           <template #suffix><IconOutLink /></template>
                         </OLink>

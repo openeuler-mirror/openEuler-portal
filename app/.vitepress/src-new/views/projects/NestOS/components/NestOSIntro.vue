@@ -30,7 +30,7 @@ const handleScroll = () => {
         {{ t('nestos.introDesc2Mid') }}
         <OLink
           href="https://atomgit.com/openeuler/NestOS/issues"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           color="primary"
           hover-underline
           class="intro-link"

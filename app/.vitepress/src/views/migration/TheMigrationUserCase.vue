@@ -13,10 +13,6 @@ const practicesInfo = computed(() => {
 });
 
 const userCaseData = computed(() => i18n.value.showcase);
-
-function goDetail(link: string) {
-  window.open(link);
-}
 </script>
 <template>
   <div class="migration-user-case">
@@ -32,7 +28,7 @@ function goDetail(link: string) {
           <p class="detail">
             {{ item.summary }}
           </p>
-          <a @click="goDetail(item.path)">
+          <a :href="item.path" target="_blank" rel="noopener noreferrer">
             <OButton type="primary" size="mini" class="confirm-btn">{{
               userCaseData.button
             }}</OButton>

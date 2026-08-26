@@ -198,7 +198,7 @@ onUnmounted(() => {
                   <p class="text">{{ t('sig.workMeeting') }}</p>
                   <OLink
                     :href="meetingSummaryLink"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     color="primary"
                     v-analytics="{
                       properties: {
@@ -233,7 +233,7 @@ onUnmounted(() => {
                 <OLink
                   color="primary"
                   :href="`mailto:${sigDetailInfo?.mailing_list}`"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   class="icon-link"
                   v-analytics="{
                     properties: {
@@ -256,7 +256,7 @@ onUnmounted(() => {
                   "
                   color="primary"
                   :href="`https://mailweb.openeuler.org/postorius/lists/${sigDetailInfo?.mailing_list}/`"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   size="medium"
                   v-analytics="{
                     properties: {

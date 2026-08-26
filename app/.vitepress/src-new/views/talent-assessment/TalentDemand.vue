@@ -39,7 +39,7 @@ const { isPhone } = useScreen();
           </div>
         </div>
         <div class="link">
-          <OLink :href="companyData.link" target="_blank">
+          <OLink :href="companyData.link" target="_blank" rel="noopener noreferrer">
             <span>{{ $t('talent.viewPost') }}</span>
             <template #suffix>
               <OIcon><IconOutlink /></OIcon>

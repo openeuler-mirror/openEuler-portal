@@ -35,7 +35,7 @@ const goDetail = (url: string) => {
       </i18n-t>
       <OLink
         class="more"
-        target="_blank"
+        target="_blank" rel="noopener noreferrer"
         :href="`/${locale}/download/#community-releases`"
         >{{ $t('search.more') }}
         <template #suffix>

@@ -78,11 +78,6 @@ const toggleMenu = (flag: boolean) => {
   isShowMenu.value = flag;
 };
 
-// 返回首页
-const goHome = () => {
-  router.go(`/${lang.value}/`);
-};
-
 const handleNodeClick = (node: any) => {
   if (node.link) {
     router.go(`/${lang.value}/community/${node.link}/`);
@@ -177,7 +172,6 @@ watch(
             :href="`/${lang}/community/${item.link}/`"
             class="sidebar-title sidebar-link"
             :class="[{ active: item.link === activeId }]"
-            @click="handleItemClick(item.link)"
           >
             {{ item.label }}
           </a>
@@ -199,12 +193,13 @@ watch(
         >
           <div class="nav-tree">
             <div class="nav-top">
-              <img
-                class="logo"
-                :src="logo"
-                alt="openEuler logo"
-                @click="goHome"
-              />
+              <a :href="`/${lang}/`">
+                <img
+                  class="logo"
+                  :src="logo"
+                  alt="openEuler logo"
+                />
+              </a>
               <OIcon @click="toggleMenu(false)"><IconCancel /></OIcon>
             </div>
             <NavTree

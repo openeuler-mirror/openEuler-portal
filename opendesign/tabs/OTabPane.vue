@@ -4,6 +4,7 @@ const attrs = useAttrs();
 </script>
 <template>
   <ElTabPane v-bind="attrs">
+    <template v-if="$slots.label" #label><component :is="$slots.label"></component></template>
     <slot> </slot>
   </ElTabPane>
 </template>

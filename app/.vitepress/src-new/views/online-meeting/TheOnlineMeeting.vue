@@ -54,7 +54,7 @@ const gap = computed(() => {
             <p class="title">{{ item.title }}</p>
             <p class="desc">{{ item.desc }}</p>
             <div class="link" v-if="item.btn?.length">
-              <OLink v-for="n in item.btn" :key="n.url" :href="n.url" target="_blank">
+              <OLink v-for="n in item.btn" :key="n.url" :href="n.url" target="_blank" rel="noopener noreferrer">
                 <span>{{ n.text }}</span>
                 <template #suffix>
                   <OIcon><IconChevronRight /></OIcon>

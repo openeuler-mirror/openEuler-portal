@@ -184,7 +184,7 @@ watch(
               </div>
             </div>
             <div v-if="card.url" class="url">
-              <OLink color="normal" variant="text" size="large" hover-underline :href="card.url" target="_blank">
+              <OLink color="normal" variant="text" size="large" hover-underline :href="card.url" target="_blank" rel="noopener noreferrer">
                 {{ agentData.text }}
                 <template #suffix>
                   <OIcon><IconChevronRight /> </OIcon>

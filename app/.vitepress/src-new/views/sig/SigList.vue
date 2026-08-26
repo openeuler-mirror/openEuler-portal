@@ -1,12 +1,8 @@
 <script lang="ts" setup>
 import { ref, onMounted, computed, watch, onUnmounted, nextTick } from 'vue';
 
-import { useRouter } from 'vitepress';
-
 import { useThrottleFn, onClickOutside } from '@vueuse/core';
 import { useDebounceSearch } from '~@/composables/useDebounceSearch';
-
-import { useCommon } from '@/stores/common';
 
 import {
   OIcon,
@@ -51,13 +47,6 @@ const { locale, t } = useLocale();
 const { isLaptop, isPadH, lePadV } = useScreen();
 
 const COUNT_PER_PAGE = [10, 20, 30];
-const commonStore = useCommon();
-
-const router = useRouter();
-
-const isDark = computed(() => {
-  return commonStore.theme === 'dark';
-});
 
 interface TagOptionT {
   value: string;
@@ -328,10 +317,6 @@ const panelRef = ref()
 onClickOutside(panelRef, () => {
   showPanel.value = false;
 });
-
-const toSigDetail = (sigName: string) => {
-  router.go(`/${locale.value}/sig/${sigName}`);
-};
 
 watch(
   () => sigInput.value,
@@ -696,9 +681,9 @@ const onClickSearchRes = (type: string, ev: Event) => {
       >
         <div v-if="!lePadV" class="sig-card">
           <div class="title-top">
-            <span
-              class="sig-name" 
-              @click="toSigDetail(sig.name)"
+            <a
+              class="sig-name"
+              :href="`/${locale}/sig/${sig.name}`"
               v-analytics="{
                 properties: {
                   level1: $t('sig.sigCenter'),
@@ -710,7 +695,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
               }"
             >
               {{ sig.name }}
-            </span>
+            </a>
             <OTag variant="outline" class="type-tag">
               {{ (locale === 'zh' ? sig.feature_zh : sig.feature_en) || t('sig.other') }}
             </OTag>
@@ -718,7 +703,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
           <div class="sig-link">
             <OLink
               :href="`https://atomgit.com/openeuler/community/tree/master/sig/${sig.name}`"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               v-analytics="{
                 properties: {
                   level1: $t('sig.sigCenter'),
@@ -740,7 +725,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
             <OLink
               color="primary"
               :href="`mailto:${sig.mailing_list}`"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               v-analytics="{
                 properties: {
                   level1: $t('sig.sigCenter'),
@@ -761,7 +746,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
               size="medium"
               color="primary"
               :href="`https://mailweb.openeuler.org/postorius/lists/${sig.mailing_list}/`"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               v-analytics="{
                 properties: {
                   level1: $t('sig.sigCenter'),
@@ -787,7 +772,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
               <OLink
                 color="primary"
                 :href="`https://atomgit.com/${activeRepo}`"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 {{ activeRepo }}
               </OLink>
@@ -824,7 +809,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
                       class="repo-item"
                       color="primary"
                       :href="`https://atomgit.com/${item}`"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       {{ item + (i === sig.repositories.length - 1 ? '' : '、') }}
                     </OLink>
@@ -866,7 +851,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
                       class="repo-item"
                       color="primary"
                       :href="item.user_homepage_url"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       {{
                         item.user_login + (i === sig.maintainer_info.length - 1 ? '' : '、')
@@ -880,9 +865,9 @@ const onClickSearchRes = (type: string, ev: Event) => {
         </div>
         <div v-else class="sig-card">
           <div class="title-top">
-            <span class="sig-name" @click="toSigDetail(sig.name)">{{
+            <a class="sig-name" :href="`/${locale}/sig/${sig.name}`">{{
               sig.name
-            }}</span>
+            }}</a>
             <OTag variant="outline" class="type-tag">
               {{ (locale === 'zh' ? sig.feature_zh : sig.feature_en) || t('sig.other') }}
             </OTag>
@@ -899,7 +884,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
               <OLink
                 color="primary"
                 :href="`https://atomgit.com/${activeRepo}`"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 {{ activeRepo }}
               </OLink>
@@ -913,7 +898,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
             <OLink
               color="primary"
               :href="`https://atomgit.com/openeuler/community/tree/master/sig/${sig.name}`"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               class="icon-link"
             >
               {{ `https://atomgit.com...sig/${sig.name}` }}
@@ -926,7 +911,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
             <OLink
               color="primary"
               :href="`mailto:${sig.mailing_list}`"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               class="icon-link"
             >
               {{ sig.mailing_list }}
@@ -938,7 +923,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
               "
               color="primary"
               :href="`https://mailweb.openeuler.org/postorius/lists/${sig.mailing_list}/`"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               class="subscribe"
             >
               {{ $t('sig.subscribe') }}
@@ -963,7 +948,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
                       class="repo-item"
                       color="primary"
                       :href="`https://atomgit.com/${item}`"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       {{ item + (i === sig.repositories.length - 1 ? '' : '、') }}
                     </OLink>
@@ -993,7 +978,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
                       class="repo-item"
                       color="primary"
                       :href="item.user_homepage_url"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       {{
                         item.user_login + (i === sig.maintainer_info.length - 1 ? '' : '、')
@@ -1295,6 +1280,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
     }
     .sig-name {
       cursor: pointer;
+      text-decoration: none;
       color: var(--o-color-info1);
       font-weight: 500;
       @include h3;

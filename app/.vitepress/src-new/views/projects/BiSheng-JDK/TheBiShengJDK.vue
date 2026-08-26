@@ -51,7 +51,7 @@ const feedbackLinks = [
         </OButton>
         <template #dropdown>
           <ODropdownItem v-for="item in journeyLinks" :key="item.href" class="dropdown-item">
-            <OLink :href="item.href" target="_blank" :hover-underline="false">{{ t(item.text) }}</OLink>
+            <OLink :href="item.href" target="_blank" rel="noopener noreferrer" :hover-underline="false">{{ t(item.text) }}</OLink>
           </ODropdownItem>
         </template>
       </ODropdown>
@@ -64,7 +64,7 @@ const feedbackLinks = [
         </OButton>
         <template #dropdown>
           <ODropdownItem v-for="item in feedbackLinks" :key="item.href" class="dropdown-item">
-            <OLink :href="item.href" target="_blank" :hover-underline="false">{{ t(item.text) }}</OLink>
+            <OLink :href="item.href" target="_blank" rel="noopener noreferrer" :hover-underline="false">{{ t(item.text) }}</OLink>
           </ODropdownItem>
         </template>
       </ODropdown>
@@ -85,7 +85,7 @@ const feedbackLinks = [
         </OButton>
         <template #dropdown>
           <ODropdownItem v-for="item in journeyLinks" :key="item.href" class="dropdown-item">
-            <OLink :href="item.href" target="_blank" :hover-underline="false">{{ t(item.text) }}</OLink>
+            <OLink :href="item.href" target="_blank" rel="noopener noreferrer" :hover-underline="false">{{ t(item.text) }}</OLink>
           </ODropdownItem>
         </template>
       </ODropdown>
@@ -98,7 +98,7 @@ const feedbackLinks = [
         </OButton>
         <template #dropdown>
           <ODropdownItem v-for="item in feedbackLinks" :key="item.href" class="dropdown-item">
-            <OLink :href="item.href" target="_blank" :hover-underline="false">{{ t(item.text) }}</OLink>
+            <OLink :href="item.href" target="_blank" rel="noopener noreferrer" :hover-underline="false">{{ t(item.text) }}</OLink>
           </ODropdownItem>
         </template>
       </ODropdown>

@@ -59,19 +59,9 @@ const toggleMenu = (flag: boolean) => {
 const IconMenuShow = computed(() => {
   return commonStore.iconMenuShow;
 });
-// 返回首页
-const goHome = () => {
-  router.go(`/${lang.value}/`);
-};
 
 const handleItemClick = (link: string) => {
   router.go(`/${lang.value}/migration/guidance/${link}/`);
-};
-
-const handleTitleClick = (link: string) => {
-  link === 'migration'
-    ? router.go(`/${lang.value}/migration/`)
-    : router.go(`/${lang.value}/migration/${link}/`);
 };
 
 const handleNodeClick = (node: any) => {
@@ -102,7 +92,6 @@ const handleNodeClick = (node: any) => {
             { active: item.link === activeId },
             { 'migration-title': index === 0 },
           ]"
-          @click="handleTitleClick(item.link)"
         >
           {{ item.label }}
         </a>
@@ -124,12 +113,13 @@ const handleNodeClick = (node: any) => {
       >
         <div class="nav-tree">
           <div class="nav-top">
-            <img
-              class="logo"
-              :src="logo"
-              alt="openEuler logo"
-              @click="goHome"
-            />
+            <a :href="`/${lang}/`">
+              <img
+                class="logo"
+                :src="logo"
+                alt="openEuler logo"
+              />
+            </a>
             <OIcon @click="toggleMenu(false)"><IconCancel /></OIcon>
           </div>
           <NavTree
