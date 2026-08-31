@@ -1,6 +1,6 @@
 
 export const internshipTaskLinks = {
-  viewTask: 'https://gitcode.com/openeuler/opensource-intern/issues',
+  viewTask: 'https://atomgit.com/openeuler/opensource-intern/issues',
   internshipTestTask: 'https://atomgit.com/openeuler/opensource-intern/issues/120',
   mindsporeLink: 'https://www.mindspore.cn/internship/',
   vllmAscendLink: 'https://www.chaspark.com/#/s/vllmascendInternship?multi=zh',
