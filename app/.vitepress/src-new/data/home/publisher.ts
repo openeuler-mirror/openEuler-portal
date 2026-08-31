@@ -124,6 +124,7 @@ export const publisher = [
       dark: kaihong_dark,
     },
     href: 'https://www.kaihong.com/',
+    validity: { end: '2027-05-23' },
   },
   {
     logo: {
