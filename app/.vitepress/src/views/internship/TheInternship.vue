@@ -28,7 +28,7 @@ const bannerData = {
     v-if="!lePadV"
   >
     <div class="action">
-      <a href="https://gitcode.com/openeuler/opensource-intern/issues" target="_blank">
+      <a href="https://atomgit.com/openeuler/opensource-intern/issues" target="_blank">
         <OButton size="large" type="primary">
           <span>{{ i18n.internship.receiveTask }}</span>
           <OIcon class="jump-out-icon"><IconOutlink /></OIcon>
@@ -41,7 +41,7 @@ const bannerData = {
       <div v-if="lePadV">
         <div class="internship-title">{{ i18n.internship.internship }}</div>
         <div class="action">
-          <a href="https://gitcode.com/openeuler/opensource-intern/issues" target="_blank">
+          <a href="https://atomgit.com/openeuler/opensource-intern/issues" target="_blank">
             <OButton size="large" type="primary">
               <span>{{ i18n.internship.receiveTask }}</span>
               <OIcon class="jump-out-icon"><IconOutlink /></OIcon>
