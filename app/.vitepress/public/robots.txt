@@ -1,6 +1,7 @@
 User-agent:*
+Content-Signal: ai-train=yes,search=yes,ai-input=yes
 Allow: /
 
 Disallow: /*//
-
+LLM-Policy: https://www.openeuler.org/llms.txt
 Sitemap:https://www.openeuler.org/sitemap.xml
