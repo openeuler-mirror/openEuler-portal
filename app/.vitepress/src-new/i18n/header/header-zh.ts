@@ -283,7 +283,7 @@ export default {
               label: '新手入门',
               description: '10分钟玩转社区，快速构建与成长',
               tag: TAG_TYPE.HOT,
-              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP4/server/quickstart/quick_start.html`,
+              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP4/getting_start/quick_start.html`,
             },
             {
               label: '安装指南',
