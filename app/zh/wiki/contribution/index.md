@@ -6,7 +6,7 @@ category: wiki
 # 开源贡献
 
 openEuler 社区是按照不同的 SIG 来组织、管理社区工作。开发者们通过 Issue、邮件列表、SIG 例会、技术交流群等形式来沟通协作，以便社区更好地运转。参与社区贡献的方式有很多种，并不局限于编码。但每一种贡献都将受到社区的欢迎和重视。
-在参与社区贡献前，您需要根据自身的参与身份（个人、员工、企业），提前签署 [openEuler 社区贡献者许可协议（CLA）](https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0)。
+在参与社区贡献前，您需要根据自身的参与身份（个人、员工、企业），提前签署 [openEuler 社区贡献者许可协议（CLA）](https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=zh)。
 
 **我能做点什么**
 

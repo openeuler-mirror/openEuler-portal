@@ -133,7 +133,7 @@ export default {
             {
               label: 'CLA签署',
               description: '参与贡献前，需签署贡献者许可协议（CLA）',
-              href: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0',
+              href: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=zh',
               icon: OutLink,
             },
             {
