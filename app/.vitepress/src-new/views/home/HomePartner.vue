@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref, onMounted } from 'vue';
 import { storeToRefs } from 'pinia';
+import dayjs from 'dayjs';
 
 import { OLogoSwiper, OLogoSwiperItems } from '@opendesign-plus/components';
 import type { OLogoSwiperItemT } from '@opendesign-plus/components';
@@ -13,10 +14,28 @@ interface PublisherT {
   logo: { light: string; dark: string };
   href: string;
   href_en?: string;
+  validity?: { start?: string; end?: string };
 }
 
 const { theme } = storeToRefs(useCommon());
 const isDark = computed(() => theme.value === 'dark');
+
+const now = ref(Date.now());
+onMounted(() => {
+  now.value = Date.now();
+});
+
+const isActive = (validity: PublisherT['validity'], current: number): boolean => {
+  if (!validity) return true;
+  const { start, end } = validity;
+  if (start && current < dayjs(start).startOf('day').valueOf()) return false;
+  if (end && current > dayjs(end).endOf('day').valueOf()) return false;
+  return true;
+};
+
+const visiblePublishers = computed(() =>
+  publisher.filter((p: PublisherT) => isActive(p.validity, now.value))
+);
 
 const mapFunc = (p: PublisherT): OLogoSwiperItemT => ({
   logo: isDark.value ? p.logo.dark : p.logo.light,
@@ -25,12 +44,13 @@ const mapFunc = (p: PublisherT): OLogoSwiperItemT => ({
   hrefEn: p.href_en,
 });
 
-const partSize = Math.floor(publisher.length / 3);
-const publisherRows = computed(() => [
-  publisher.slice(0, partSize).map(mapFunc),
-  publisher.slice(partSize, partSize * 2).map(mapFunc),
-  publisher.slice(partSize * 2).map(mapFunc),
-]);
+const publisherRows = computed(() => {
+  const list = visiblePublishers.value;
+  const size = Math.floor(list.length / 3);
+  return [list.slice(0, size), list.slice(size, size * 2), list.slice(size * 2)]
+    .filter((row) => row.length)
+    .map((row) => row.map(mapFunc));
+});
 </script>
 
 <template>
