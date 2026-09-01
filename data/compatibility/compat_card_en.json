@@ -30903,6 +30903,44 @@
     "chipModel": "NIC 1260",
     "item": "",
     "downloadLink": ""
+  },
+  {
+    "vendorID": "None",
+    "deviceID": "None",
+    "svID": "None",
+    "ssID": "None",
+    "architecture": "x86_64",
+    "os": "openEuler-24.03-LTS-SP1",
+    "driverName": "ahci",
+    "version": "3.0",
+    "type": "SSD",
+    "date": "2026/8/25",
+    "sha256": "6043f23f52b377067e94429d8704c0d448691ba54fd3048a17eb7c021c25185b",
+    "driverSize": "15116",
+    "chipVendor": "长江存储",
+    "boardModel": "BWG08T01",
+    "chipModel": "YMTC X3-9070",
+    "item": "",
+    "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "1d22",
+    "deviceID": "3688",
+    "svID": "0001",
+    "ssID": "0001",
+    "architecture": "x86_64",
+    "os": "openEuler 24.03 LTS SP3",
+    "driverName": "kunlun",
+    "version": "5.34.0.0",
+    "type": "GPU",
+    "date": "2026/8/27",
+    "sha256": "668d84ba6a5c7f65c5e5accd473f5f418daa9348606a784c5ff0aeb8f2716716",
+    "driverSize": "19M",
+    "chipVendor": "Kunlun",
+    "boardModel": "P800 OAM",
+    "chipModel": "P800 OAM",
+    "item": "NA",
+    "downloadLink": "NA"
   }
 
 ]
