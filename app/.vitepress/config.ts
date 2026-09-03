@@ -4,6 +4,7 @@ import viteLastModifiedPlugin from '@opendesign-plus/plugins/vite/generate-lastm
 import sitemapItemTransformer from '@opendesign-plus/geo-scripts/vitepress-sitemap-transformer';
 import generateLLMsFull from '@opendesign-plus/geo-scripts/generate-llms-full';
 import { OPlusYamlContentVitePlugin } from '@opendesign-plus/vite-plugins';
+import publicRawPlugin from './plugins/vite-plugin-public-raw';
 import { isNews, setNewsGeo } from './news-geo';
 
 import path, { join } from 'node:path';
@@ -239,6 +240,7 @@ const config: UserConfig = {
     },
     plugins: [
       OPlusYamlContentVitePlugin(),
+      publicRawPlugin(),
       viteLastModifiedPlugin({
         rootDir: join(__dirname, '../'),
         pageEntryPattern: ['zh/**/*.md', 'en/**/*.md'],

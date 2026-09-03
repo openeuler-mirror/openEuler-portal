@@ -2,22 +2,27 @@ export default {
   zh: [
     {
       path: '/whitepaper/openEuler%2024.03%20LTS%20SP4%20技术白皮书.pdf',
+      htmlPage: '/zh/whitepaper/openEuler-24.03-LTS-SP4-Technical-White-Paper',
       summary: 'openEuler 24.03 LTS SP4 白皮书',
     },
     {
       path: '/whitepaper/openEuler%2024.03%20LTS%20SP3%20技术白皮书.pdf',
+      htmlPage: '/zh/whitepaper/openEuler-24.03-LTS-SP3-Technical-White-Paper',
       summary: 'openEuler 24.03 LTS SP3 白皮书',
     },
     {
       path: '/whitepaper/openEuler 25.09 技术白皮书.pdf',
+      htmlPage: '/zh/whitepaper/openEuler-25.09-Technical-White-Paper',
       summary: 'openEuler 25.09 白皮书',
     },
     {
       path: '/whitepaper/openEuler%2024.03%20LTS%20SP2%20技术白皮书.pdf',
+      htmlPage: '/zh/whitepaper/openEuler-24.03-LTS-SP2-Technical-White-Paper',
       summary: 'openEuler 24.03 LTS SP2 白皮书',
     },
     {
       path: '/whitepaper/openEuler 25.03 技术白皮书.pdf',
+      htmlPage: '/zh/whitepaper/openEuler-25.03-Technical-White-Paper',
       summary: 'openEuler 25.03 白皮书',
     },
     {

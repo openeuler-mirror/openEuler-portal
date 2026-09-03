@@ -15,4 +15,6 @@ export default {
   find2: 'Cases',
   downloadCase: 'Download Use Cases',
   view: 'Learn More',
+  downloadPaperPdf: 'Download PDF',
+  htmlViewerNotice: 'This is experimental HTML for accessibility. The official content is subject to the PDF file.',
 };

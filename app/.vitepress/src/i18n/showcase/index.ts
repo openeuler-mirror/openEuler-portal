@@ -2,6 +2,7 @@ export default {
   zh: {
     downloadCase: '下载 《 openEuler 开源操作系统行业应用案例集》',
     downloadPaper: '下载白皮书',
+    viewPaper: '查看白皮书',
     guideline: '案例编写指南',
     caseLink: '/whitepaper/openEuler%20industry%20user%20case%20collection.pdf',
     placeHolder: '搜索用户案例',
@@ -38,6 +39,7 @@ export default {
     technicalWhilePaper: 'Technical White Papers',
     IndustryWhitePaper: 'Industry White Papers',
     downloadPaper: 'Download',
+    viewPaper: 'View More',
     placeHolder: 'input user case',
     bannerTitle: 'Success Stories',
     guideline: '',
