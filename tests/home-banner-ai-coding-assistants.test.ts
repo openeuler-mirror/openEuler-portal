@@ -20,19 +20,21 @@ function isValidJpg(filePath: string): boolean {
 
 describe('banner.yaml — 新增 AI coding assistants 轮播条目（设计 §3）', () => {
   const banners = parseBannerYaml();
+  // 注意：call-for-submissions 条目已插入列表首位（设计 §3），AI coding assistants 条目不再位于 index 0。
+  // 按内容定位条目，避免对列表顺序的硬编码假设。
+  const first = banners.find((b) => b.bg_pc && b.bg_pc.includes('ai-coding-assistants'));
 
   it('banner.yaml 可解析为非空数组', () => {
     expect(Array.isArray(banners)).toBe(true);
     expect(banners.length).toBeGreaterThanOrEqual(4);
   });
 
-  it('第一条轮播为 AI coding assistants 条目', () => {
-    const first = banners[0];
+  it('AI coding assistants 条目存在于轮播列表中', () => {
+    expect(first).toBeDefined();
     expect(first.bg_pc).toContain('ai-coding-assistants');
   });
 
   it('AI coding assistants 条目包含所有必填字段', () => {
-    const first = banners[0];
     expect(first.bg_pc).toBeDefined();
     expect(first.bg_pad).toBeDefined();
     expect(first.bg_theme).toBeDefined();
@@ -43,50 +45,41 @@ describe('banner.yaml — 新增 AI coding assistants 轮播条目（设计 §3�
   });
 
   it('bg_mb_zh 和 bg_mb_en 均存在（中英文移动端不同）', () => {
-    const first = banners[0];
     expect(first.bg_mb_zh).toBeDefined();
     expect(first.bg_mb_en).toBeDefined();
     expect(first.bg_mb).toBeUndefined();
   });
 
   it('bg_theme 为 light', () => {
-    const first = banners[0];
     expect(first.bg_theme).toBe('light');
   });
 
   it('title_zh 包含"生成式AI"关键词', () => {
-    const first = banners[0];
     expect(first.title_zh).toContain('生成式AI');
   });
 
   it('title_en 包含 "Generative AI" 或 "AI" 关键词', () => {
-    const first = banners[0];
     expect(first.title_en).toContain('AI');
   });
 
   it('btn_zh 和 btn_en 均存在', () => {
-    const first = banners[0];
     expect(first.btn_zh).toBeDefined();
     expect(first.btn_en).toBeDefined();
   });
 
   it('href_zh 指向 openeuler.openatom.cn 中文页面', () => {
-    const first = banners[0];
     expect(first.href_zh).toContain('openeuler.openatom.cn/zh/community/ai-coding-assistants');
   });
 
   it('href_en 指向 openeuler.openatom.cn 英文页面', () => {
-    const first = banners[0];
     expect(first.href_en).toContain('openeuler.openatom.cn/en/community/ai-coding-assistants');
   });
 
   it('is_blank 为 true（新窗口打开）', () => {
-    const first = banners[0];
     expect(first.is_blank).toBe(true);
   });
 
   it('图片路径使用相对路径 ./images/ 前缀', () => {
-    const first = banners[0];
     expect(first.bg_pc).toMatch(/^\.\//);
     expect(first.bg_pad).toMatch(/^\.\//);
     expect(first.bg_mb_zh).toMatch(/^\.\//);
@@ -94,7 +87,6 @@ describe('banner.yaml — 新增 AI coding assistants 轮播条目（设计 §3�
   });
 
   it('图片路径遵循 <活动名>/pc.jpg / pad.jpg / mb.jpg / mb_en.jpg 命名约定', () => {
-    const first = banners[0];
     expect(first.bg_pc).toBe('./images/ai-coding-assistants/pc.jpg');
     expect(first.bg_pad).toBe('./images/ai-coding-assistants/pad.jpg');
     expect(first.bg_mb_zh).toBe('./images/ai-coding-assistants/mb.jpg');
