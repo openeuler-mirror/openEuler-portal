@@ -50,19 +50,19 @@ export default {
       BLANK: true,
     },
     {
-      URL: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0',
+      URL: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=zh',
       BLANK: true,
     },
     {
-      URL: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0',
+      URL: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=zh',
       BLANK: true,
     },
     {
-      URL: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0',
+      URL: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=zh',
       BLANK: true,
     },
     {
-      URL: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0',
+      URL: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=zh',
       BLANK: true,
     },
     {

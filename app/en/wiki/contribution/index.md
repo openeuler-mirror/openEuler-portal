@@ -6,7 +6,7 @@ category: wiki
 # Open Source Contribution
 
 The openEuler community is organized into Special Interest Groups (SIGs) to better coordinate and manage work processes. Developers communicate and collaborate through issues, mailing lists, SIG meetings, and technical exchange groups to ensure the smooth operation of the community. Contributions to the community extend far beyond coding. Every effort, big or small, is welcomed and valued.
-Sign the [openEuler community Contributor License Agreement (CLA)](https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0) before contributing to the community. Choose a CLA type based on whether you are contributing as an individual, an employee, or on behalf of a corporation.
+Sign the [openEuler community Contributor License Agreement (CLA)](https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=en) before contributing to the community. Choose a CLA type based on whether you are contributing as an individual, an employee, or on behalf of a corporation.
 
 ## What Can I Do?
 

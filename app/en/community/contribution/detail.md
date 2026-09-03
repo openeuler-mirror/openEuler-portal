@@ -51,7 +51,7 @@ Experience a range of original open source projects in the openEuler community.
 
 ## 2. Sign the CLA
 
-Sign the [openEuler Contributor License Agreement (CLA)](https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0) before contributing to the community. Choose a CLA type based on whether you are contributing as an individual, an employee, or on behalf of a corporation.
+Sign the [openEuler Contributor License Agreement (CLA)](https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=en) before contributing to the community. Choose a CLA type based on whether you are contributing as an individual, an employee, or on behalf of a corporation.
 
 - Individual CLA: participating in the community as an individual
 - Corporate CLA: participating in the community on behalf of a corporation

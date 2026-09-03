@@ -128,7 +128,7 @@ export default {
               label: 'CLA',
               description:
                 'Sign the CLA to protect your work—multiple options available!',
-              href: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0',
+              href: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=en',
               icon: OutLink,
             },
             {

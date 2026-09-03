@@ -51,7 +51,7 @@ openEuler 社区版本分为长期支持版本（LTS）和创新版本[（生命
 
 ## 2. 签署 CLA
 
-在参与社区贡献前，您需要根据自身的参与身份（个人、员工、企业），提前签署 [openEuler 社区贡献者许可协议（CLA）](https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0)。
+在参与社区贡献前，您需要根据自身的参与身份（个人、员工、企业），提前签署 [openEuler 社区贡献者许可协议（CLA）](https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=zh)。
 
 - 个人 CLA：以个人身份参与社区，请签署个人 CLA
 - 企业 CLA: 以企业身份参与社区，请签署企业 CLA
@@ -75,7 +75,7 @@ openEuler 社区版本分为长期支持版本（LTS）和创新版本[（生命
 
 ## 4. 参与社区贡献
 
-在签署了[CLA 协议](https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0)、找到了你想参与的[ SIG ](https://www.openeuler.org/zh/sig/sig-list/)之后，就可以开始你的社区贡献之旅啦。当然，为维护社区的友好开发和协作环境，在参与社区贡献之前，请先阅读并遵守 [openEuler 社区的行为守则](https://atomgit.com/openeuler/community/blob/master/code-of-conduct.md) 以及 [openEuler 社区开发行为规范](https://atomgit.com/openeuler/community/blob/master/zh/technical-committee/governance/openEuler%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%A1%8C%E4%B8%BA%E8%A7%84%E8%8C%83.md) 。
+在签署了[CLA 协议](https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=zh)、找到了你想参与的[ SIG ](https://www.openeuler.org/zh/sig/sig-list/)之后，就可以开始你的社区贡献之旅啦。当然，为维护社区的友好开发和协作环境，在参与社区贡献之前，请先阅读并遵守 [openEuler 社区的行为守则](https://atomgit.com/openeuler/community/blob/master/code-of-conduct.md) 以及 [openEuler 社区开发行为规范](https://atomgit.com/openeuler/community/blob/master/zh/technical-committee/governance/openEuler%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%A1%8C%E4%B8%BA%E8%A7%84%E8%8C%83.md) 。
 
 - [贡献原创开源项目](/zh/community/contribution/detail.html#_4-1-贡献原创开源项目)
 - [代码类贡献](/zh/community/contribution/detail.html#_4-2-代码类贡献)
