@@ -38,7 +38,7 @@ import { tryLogin } from '@opendesign-plus/composables';
 import { queryPermission } from './api/api-login';
 import { useUserInfoStore } from './stores/user';
 
-const { changeLocale, isZh } = useLocale();
+const { changeLocale } = useLocale();
 const { frontmatter, lang } = useData();
 const router = useRouter();
 
@@ -86,6 +86,10 @@ const isDocs = computed(() => {
 const isReport = computed(() => {
   return frontmatter.value.category === 'report';
 });
+
+const isStandalone = computed(() => {
+  return frontmatter.value.category === 'html-viewer';
+});
 // ----------------------------- new ----------------------------
 
 const showNss = computed(() => {
@@ -125,7 +129,7 @@ watch(
 </script>
 
 <template>
-  <template v-if="!isReport">
+  <template v-if="!isReport && !isStandalone">
     <OPlusConfigProvider :locale="lang">
       <AppHeader />
       <el-config-provider :locale="elLocale">
@@ -152,7 +156,7 @@ watch(
     </ClientOnly>
   </template>
   <ClientOnly v-else>
-    <Content v-if="isReport" />
+    <Content />
   </ClientOnly>
 </template>
 

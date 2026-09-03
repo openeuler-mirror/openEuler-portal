@@ -15,4 +15,6 @@ export default {
   find2: '个案例研究',
   downloadCase: '下载 《openEuler 开源操作系统行业应用案例集》',
   view: '阅读案例',
+  downloadPaperPdf: '下载 PDF',
+  htmlViewerNotice: '这是用于提升可访问性的实验性HTML，官方内容以PDF文件为准。',
 };

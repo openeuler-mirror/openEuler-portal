@@ -42,6 +42,14 @@ const paginationVisible = computed(() => (totalPage.value > 0 ? true : false));
 function jumpPage(page: number) {
   currentPage.value = page;
 }
+
+function handlePaperClick(item: { path: string; htmlPage?: string }) {
+  if (item.htmlPage) {
+    window.open(item.htmlPage, '_blank');
+  } else {
+    window.location.href = item.path;
+  }
+}
 </script>
 
 <template>
@@ -57,9 +65,9 @@ function jumpPage(page: number) {
           <p class="detail" :title="item.summary">
             {{ item.summary }}
           </p>
-          <a :href="item.path">
+          <a href="#" @click.prevent="handlePaperClick(item)">
             <OButton type="primary" size="mini" class="confirm-btn">{{
-              userCaseData.downloadPaper
+              item.htmlPage ? userCaseData.viewPaper : userCaseData.downloadPaper
             }}</OButton>
           </a>
         </div>
