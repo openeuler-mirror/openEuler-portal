@@ -11,6 +11,8 @@ summary: 'openEuler Monthly Bulletin – January to February, 2026'
 ---
 ![alt text](media/image1.png)
 
+## Overview
+
 In January and February 2026, the OpenAtom openEuler community continued to advance technology, ecosystem development, and security governance.
 
 Key technical progress included further RISC-V enhancements, openYuanrong 0.7.0 for serverless distributed workloads, and end-to-end integration with OpenSSF OSV for standardized, reusable security advisory data. openEuler Embedded added heterogeneous hybrid deployment and completed an end-to-end proof of concept for a compact edge–cloud robotics solution. The openEuler Portal MCP Server also went live, enabling AI assistants to retrieve up-to-date information directly from the website.
