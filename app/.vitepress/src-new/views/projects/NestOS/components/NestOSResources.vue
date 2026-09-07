@@ -253,7 +253,7 @@ const otherLinks = [
             <p class="link-title">{{ t(item.titleKey) }}</p>
             <OLink
               :href="item.href"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               color="primary"
             >
               {{ t('nestos.learnMore') }}
@@ -276,7 +276,7 @@ const otherLinks = [
             <p class="link-title">{{ t(item.titleKey) }}</p>
             <OLink
               :href="item.href"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               color="primary"
             >
               {{ t('nestos.learnMore') }}

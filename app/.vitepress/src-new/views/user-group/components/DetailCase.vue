@@ -21,10 +21,6 @@ defineProps({
 
 const { t } = useI18n();
 
-const toNewsContent = (path: string) => {
-  window.open(`/${path}`, '_blank');
-};
-
 const cardIcon = (type: string) => {
   return casesZh.find((item) => item.label === type)?.icon;
 };
@@ -38,8 +34,9 @@ const cardIcon = (type: string) => {
         :key="item.path"
         class="news-list-item"
         shadow="hover"
-        @click="toNewsContent(item.path)"
-        cursor="pointer"
+        :href="`/${item.path}`"
+        target="_blank"
+        rel="noopener noreferrer"
         :icon="cardIcon(item.industry)"
         hoverable
         :title="item.title"

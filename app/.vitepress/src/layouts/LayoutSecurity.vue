@@ -119,7 +119,13 @@ onMounted(() => {
         :key="item.name"
         :label="item.label"
         :value="item.name"
-      ></OTabPane>
+      >
+        <template #nav
+          ><a class="tab-link" :href="`/${lang}/security/${item.name}/`" @click.prevent
+            >{{ item.label }}
+          </a>
+        </template>
+      </OTabPane>
     </OTab>
   </div>
   <div v-else>
@@ -152,7 +158,13 @@ onMounted(() => {
           :key="item.name"
           :label="item.label"
           :value="item.name"
-        ></OTabPane>
+        >
+          <template #nav
+            ><a class="tab-link" :href="`/${lang}/security/${item.name}/`" @click.prevent
+              >{{ item.label }}
+            </a>
+          </template>
+        </OTabPane>
       </OTab>
     </div>
   </div>
@@ -169,6 +181,11 @@ onMounted(() => {
   .o-tab-head {
     background-color: var(--o-color-fill2);
   }
+}
+
+.tab-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 :deep(.banner-level2) {

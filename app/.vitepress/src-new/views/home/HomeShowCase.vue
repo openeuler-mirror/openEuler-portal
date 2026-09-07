@@ -218,7 +218,7 @@ useInViewDuration(
               >
                 <OLink
                   :href="pathResolving(item.path)"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   class="item-link"
                   :hover-underline="false"
                   v-analytics.bubble="{ level2: cases[activeTab].label,  target: item.company }"

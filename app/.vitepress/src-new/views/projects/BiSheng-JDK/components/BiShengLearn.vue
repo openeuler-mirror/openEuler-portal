@@ -85,7 +85,7 @@ const gap = computed(() => {
                   v-for="doc in jdkDocLinks"
                   :key="doc.href"
                 >
-                  <OLink OLink :href="doc.href" target="_blank" class="dropdown-link" :hover-underline="false">{{ t(doc.textKey) }}</OLink>
+                  <OLink OLink :href="doc.href" target="_blank" rel="noopener noreferrer" class="dropdown-link" :hover-underline="false">{{ t(doc.textKey) }}</OLink>
                 </ODropdownItem>
               </template>
             </ODropdown>
@@ -100,7 +100,7 @@ const gap = computed(() => {
             >
               <OLink
                 :href="link.href"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 color="primary"
                 hover-underline
                 class="learn-link"

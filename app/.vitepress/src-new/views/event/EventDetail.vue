@@ -110,7 +110,7 @@ const dateDisplay = computed(() => {
           color="primary"
           :size="lePadV ? 'medium' : 'large'"
           :href="detailObj?.review_url"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           class="review-btn"
         >
           <span>{{ t('eventOverview.review') }}</span>
@@ -121,7 +121,7 @@ const dateDisplay = computed(() => {
           color="primary"
           :size="lePadV ? 'medium' : 'large'"
           :href="isPhone ? detailObj?.signup_url_mb : detailObj?.signup_url"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           class="review-btn"
         >
           <span>{{ t('eventOverview.signup') }}</span>

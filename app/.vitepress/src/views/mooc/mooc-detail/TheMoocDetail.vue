@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref, onUpdated, computed } from 'vue';
-import { useData, useRouter } from 'vitepress';
+import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 import { useCommon } from '@/stores/common';
 import useWindowResize from '@/components/hooks/useWindowResize';
@@ -27,7 +27,6 @@ import type {
 } from '@/shared/@types/type-mooc';
 
 const i18n = useI18n();
-const router = useRouter();
 const language = useData().lang;
 const commonStore = useCommon();
 const screenWidth = useWindowResize();
@@ -231,10 +230,6 @@ function next() {
   setCourseData(allNodeList.value[courseIndex.value]);
 }
 
-// 返回首页
-const goHome = () => {
-  router.go(`/${language.value}/`);
-};
 const iconMenuShow = computed(() => {
   return commonStore.iconMenuShow;
 });
@@ -255,12 +250,13 @@ const iconMenuShow = computed(() => {
           >
             <div class="nav-tree">
               <div class="nav-top">
-                <img
-                  class="logo"
-                  :src="logo"
-                  alt="openEuler logo"
-                  @click="goHome"
-                />
+                <a :href="`/${language}/`">
+                  <img
+                    class="logo"
+                    :src="logo"
+                    alt="openEuler logo"
+                  />
+                </a>
                 <OIcon @click="toggleMenu(false)"><IconCancel /></OIcon>
               </div>
               <NavTree

@@ -39,7 +39,7 @@ const { isEn } = useLocale();
       <div v-for="(item, i) in data" :key="i" class="swiper-item">
         <OLink
           :href="isEn ? (item.href_en ? item.href_en : item.href) : item.href"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           :hover-underline="false"
           v-analytics.bubble="{
             target: isEn ? item.href_en ?? item.href : item.href,

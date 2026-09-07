@@ -53,7 +53,7 @@ const gap = computed(() => {
               </div>
               <p v-for="(desc, d) in item.description" :key="d" class="card-desc">{{ desc }}</p>
               <div class="card-link">
-                <OLink color="primary" :href="item.url" target="_blank" hover-underline>
+                <OLink color="primary" :href="item.url" target="_blank" rel="noopener noreferrer" hover-underline>
                   <p>{{ item.label }}</p>
                   <template #suffix>
                     <OIcon><IconChevronRight /></OIcon>

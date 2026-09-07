@@ -29,7 +29,7 @@ const gap = computed(() => {
     <p class="floor-title">{{ reviewData.title }}</p>
     <ORow :gap="gap" wrap="wrap" class="review-list">
       <OCol v-for="(item, i) in reviewData.links" :key="i" flex="0 0 100%">
-        <OLink color="primary" :href="item.url" target="_blank" hover-underline>
+        <OLink color="primary" :href="item.url" target="_blank" rel="noopener noreferrer" hover-underline>
           <p>{{ item.label }}</p>
         </OLink>
       </OCol>

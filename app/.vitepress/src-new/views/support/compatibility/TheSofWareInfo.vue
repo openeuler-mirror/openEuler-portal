@@ -86,7 +86,7 @@ onMounted(() => {
           color="primary"
           variant="text"
           :href="configurationInfo.friendlyLink"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           hover-underline
           >{{ configurationInfo.friendlyLink }}</OLink
         >
@@ -107,7 +107,7 @@ onMounted(() => {
           color="primary"
           variant="text"
           :href="'https://atomgit.com/src-openeuler/oec-hardware/releases'"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           hover-underline
           >{{ t('compatibility.tipsLink') }}</OLink
         >
@@ -126,7 +126,7 @@ onMounted(() => {
           color="primary"
           variant="text"
           :href="'https://atomgit.com/src-openeuler/oec-hardware/releases'"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           hover-underline
           >{{ t('compatibility.tipsLink') }}</OLink
         >

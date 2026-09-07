@@ -253,7 +253,7 @@ const blur = () => {
       color="primary"
       size="large"
       :href="`/${locale}/security/management/`"
-      target="_blank"
+      target="_blank" rel="noopener noreferrer"
     >{{ t('defectCenter.defectBtn') }}</OButton>
   </BannerLevel2>
   <div v-else class="mo-banner">
@@ -264,7 +264,7 @@ const blur = () => {
       color="primary"
       size="small"
       :href="`/${locale}/security/management/`"
-      target="_blank"
+      target="_blank" rel="noopener noreferrer"
     >{{ t('defectCenter.defectBtn') }}</OButton>
   </div>
   <AppSection v-if="!lePadV">

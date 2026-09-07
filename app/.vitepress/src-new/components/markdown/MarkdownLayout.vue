@@ -173,7 +173,7 @@ const footerVisible = computed(() => {
     <MarkdownTable v-if="componentType === 'table'" :data="nodesData" />
     <template v-if="footerVisible" #footer>
       <span>{{sectionFooter.content }}</span>
-      <OLink :href="sectionFooter.link" target="_blank" color="primary" hover-underline v-analytics.bubble="{ target: sectionFooter.content }">
+      <OLink :href="sectionFooter.link" target="_blank" rel="noopener noreferrer" color="primary" hover-underline v-analytics.bubble="{ target: sectionFooter.content }">
         {{ sectionFooter?.link.replace('mailto:', '') }}
       </OLink>
     </template>

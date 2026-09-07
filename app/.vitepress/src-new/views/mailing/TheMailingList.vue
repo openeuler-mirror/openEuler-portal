@@ -100,23 +100,23 @@ const colFlex = computed(() => {
         <div class="description-td">{{ row.description || '-' }}</div>
       </template>
       <template #td_fqdn_listname="{ row }">
-        <OLink color="primary" size="small" variant="text" :href="`mailto:${row.fqdn_listname}`" target="_blank" hover-underline>{{ row.fqdn_listname }}</OLink>
+        <OLink color="primary" size="small" variant="text" :href="`mailto:${row.fqdn_listname}`" target="_blank" rel="noopener noreferrer" hover-underline>{{ row.fqdn_listname }}</OLink>
       </template>
       <template #td_mail_file="{ row }">
-        <OLink color="primary" size="small" variant="text" :href="`https://mailweb.openeuler.org/hyperkitty/list/${row.display_name.toLowerCase()}@openeuler.org/`" target="_blank" hover-underline class="view-archive">{{ t('mailing.viewArchive') }}</OLink>
+        <OLink color="primary" size="small" variant="text" :href="`https://mailweb.openeuler.org/hyperkitty/list/${row.display_name.toLowerCase()}@openeuler.org/`" target="_blank" rel="noopener noreferrer" hover-underline class="view-archive">{{ t('mailing.viewArchive') }}</OLink>
       </template>
       <template #td_subscribe_mail="{ row }">
-        <OButton color="primary" variant="outline" :href="`https://mailweb.openeuler.org/postorius/lists/${row.fqdn_listname}/`" target="_blank">{{ t('mailing.subscriptionEmail') }}</OButton>
+        <OButton color="primary" variant="outline" :href="`https://mailweb.openeuler.org/postorius/lists/${row.fqdn_listname}/`" target="_blank" rel="noopener noreferrer">{{ t('mailing.subscriptionEmail') }}</OButton>
       </template>
     </OTable>
     <div class="mail-list" v-else>
       <div class="mail-item" v-for="(row, idx) in tableData" :key="idx">
         <div class="item-title">{{ row.display_name }}</div>
         <div class="item-desc">{{ row.description }}</div>
-        <OLink color="primary" size="small" variant="text" :href="`mailto:${row.fqdn_listname}`" target="_blank" hover-underline class="item-mail">{{ row.fqdn_listname }}</OLink>
+        <OLink color="primary" size="small" variant="text" :href="`mailto:${row.fqdn_listname}`" target="_blank" rel="noopener noreferrer" hover-underline class="item-mail">{{ row.fqdn_listname }}</OLink>
         <div class="item-btns">
-          <OLink color="primary" size="small" variant="text" :href="`https://mailweb.openeuler.org/hyperkitty/list/${row.display_name.toLowerCase()}@openeuler.org/`" target="_blank" hover-underline class="view-archive">{{ t('mailing.viewArchive') }}</OLink>
-          <OButton color="primary" variant="outline" :href="`https://mailweb.openeuler.org/postorius/lists/${row.fqdn_listname}/`" target="_blank">{{ t('mailing.subscriptionEmail') }}</OButton>
+          <OLink color="primary" size="small" variant="text" :href="`https://mailweb.openeuler.org/hyperkitty/list/${row.display_name.toLowerCase()}@openeuler.org/`" target="_blank" rel="noopener noreferrer" hover-underline class="view-archive">{{ t('mailing.viewArchive') }}</OLink>
+          <OButton color="primary" variant="outline" :href="`https://mailweb.openeuler.org/postorius/lists/${row.fqdn_listname}/`" target="_blank" rel="noopener noreferrer">{{ t('mailing.subscriptionEmail') }}</OButton>
         </div>
       </div>
     </div>

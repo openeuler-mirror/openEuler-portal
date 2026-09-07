@@ -29,12 +29,14 @@ const tabsData = reactive({
       label: computed(() => {
         return userCaseData.value.technicalWhilePaper;
       }),
+      href: computed(() => `/${lang.value}/showcase/technical-white-paper/`),
       name: 'technical-white-paper',
     },
     {
       label: computed(() => {
         return userCaseData.value.IndustryWhitePaper;
       }),
+      href: computed(() => `/${lang.value}/showcase/industry-white-paper/`),
       name: 'industry-white-paper',
     },
   ],

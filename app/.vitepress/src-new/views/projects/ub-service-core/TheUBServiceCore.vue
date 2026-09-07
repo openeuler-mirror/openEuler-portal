@@ -99,7 +99,7 @@ const viewWhitepaper = (lang: LocaleT) => {
             <p class="content-desc">{{ item.desc }}</p>
             <ODivider v-if="lePadV" />
             <DropButton v-if="item.title === '白皮书'" class="drop-button" @click="viewWhitepaper">{{ t('ubServiceCore.viewMore') }}</DropButton>
-            <OLink v-else :color="lePadV ? 'normal' : 'primary'" :href="item.href" target="_blank" :hover-underline="lePadV ? false : true">
+            <OLink v-else :color="lePadV ? 'normal' : 'primary'" :href="item.href" target="_blank" rel="noopener noreferrer" :hover-underline="lePadV ? false : true">
               <p>{{ t('ubServiceCore.viewMore') }}</p>
               <template v-if="item?.isOutlink" #suffix>
                 <OIcon class="outlink-icon"><IconOutLink /></OIcon>

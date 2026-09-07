@@ -348,7 +348,7 @@ const gap = computed(() => {
     </div>
     <ORow v-if="newsData?.length" :gap="gap" wrap="wrap" class="news-list">
       <OCol v-for="(item, i) in newsData" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 33.33%'">
-        <OCard hoverable :href="`/${item.path}.html`" target="_blank">
+        <OCard hoverable :href="`/${item.path}.html`" target="_blank" rel="noopener noreferrer">
           <template #cover>
             <OFigure :src="`/${item.banner}`"></OFigure>
           </template>

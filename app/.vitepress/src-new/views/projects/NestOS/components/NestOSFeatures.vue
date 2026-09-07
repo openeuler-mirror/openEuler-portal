@@ -58,7 +58,7 @@ const gap = computed(() => {
   <AppSection id="features" :title="t('nestos.featuresTitle')">
     <ORow :gap="gap" wrap="wrap">
       <OCol v-for="(item, i) in features" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 50%'">
-        <OCard hoverable :href="`/zh/other/projects/nestos/feature/${item.slug}/`" target="_blank">
+        <OCard hoverable :href="`/zh/other/projects/nestos/feature/${item.slug}/`" target="_blank" rel="noopener noreferrer">
           <p class="feature-title">{{ t(item.titleKey) }}</p>
           <p class="feature-desc">{{ t(item.descKey) }}</p>
         </OCard>

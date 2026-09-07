@@ -126,7 +126,7 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
               <div v-if="info.btn" class="banner-opts" v-analytics.bubble="{ target: info.href }">
                 <OButton
                   :href="info.href"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   variant="solid"
                   color="primary"
                   size="large"

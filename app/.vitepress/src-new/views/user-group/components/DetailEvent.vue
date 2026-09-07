@@ -19,10 +19,6 @@ defineProps({
 });
 
 const { t } = useI18n();
-
-const toNewsContent = (path: string) => {
-  window.open(`/${path}`, '_blank');
-};
 </script>
 
 <template>
@@ -33,8 +29,9 @@ const toNewsContent = (path: string) => {
         :key="item.path"
         class="news-list-item"
         shadow="hover"
-        @click="toNewsContent(item.path)"
-        cursor="pointer"
+        :href="`/${item.path}`"
+        target="_blank"
+        rel="noopener noreferrer"
         :cover="`/${item.banner}`"
         hoverable
         :title="item.title"

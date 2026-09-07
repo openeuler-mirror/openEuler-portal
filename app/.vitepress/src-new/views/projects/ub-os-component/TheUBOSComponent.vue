@@ -60,7 +60,7 @@ const columns = [
           <div class="info-content">
             <p class="content-desc">{{ item.desc }}</p>
             <ODivider v-if="lePadV" />
-            <OLink :color="lePadV ? 'normal' : 'primary'" :href="item.href" target="_blank" :hover-underline="lePadV ? false : true">
+            <OLink :color="lePadV ? 'normal' : 'primary'" :href="item.href" target="_blank" rel="noopener noreferrer" :hover-underline="lePadV ? false : true">
               <p>{{ t('ubOsComponent.viewDetail') }}</p>
               <template v-if="item?.isOutlink" #suffix>
                 <OIcon class="outlink-icon"><IconOutLink /></OIcon>

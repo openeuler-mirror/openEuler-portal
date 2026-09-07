@@ -51,7 +51,7 @@ const eventData = foldI18n(activityContent.global_events, locale.value);
                 v-for="video in item.videos"
                 :key="video.url"
                 :href="video.url"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 variant="text"
                 hoverUnderline
               >

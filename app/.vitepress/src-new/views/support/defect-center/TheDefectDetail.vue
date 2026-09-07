@@ -223,7 +223,7 @@ const generateIssueUrl = (issue: String) => {
                   variant="text"
                   hoverUnderline
                   :href="item.url"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   >{{ item.url }}</OLink
                 >
               </p>

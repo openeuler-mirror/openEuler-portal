@@ -56,7 +56,7 @@ const versionInfo = computed(() => {
             color="primary"
             :size="lePadV ? 'small' : 'large'"
             :href="versionInfo.url"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >{{ t('intelligenceBoom.tryItNow') }}
           <template #suffix><IconOutLink /></template>
           </OButton>

@@ -76,7 +76,7 @@ const frameworkList = [
           </div>
           <div class="info-content">
             <p class="content-desc">{{ item.desc }}</p>
-            <OLink color="primary" :href="item.href" target="_blank" hover-underline>
+            <OLink color="primary" :href="item.href" target="_blank" rel="noopener noreferrer" hover-underline>
               <p>{{ t('yuanrong.viewMore') }}</p>
               <template v-if="item?.isOutlink" #suffix>
                 <OIcon class="outlink-icon"><IconOutLink /></OIcon>

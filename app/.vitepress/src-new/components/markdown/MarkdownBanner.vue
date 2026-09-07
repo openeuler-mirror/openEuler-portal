@@ -55,7 +55,7 @@ const isSelfDomain = (url: string) => {
             color="primary"
             :size="lePadV ? 'medium' : 'large'"
             :href="props.data[3]?.link"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >
             {{ props.data[3]?.content }}
             <template #suffix v-if="!isSelfDomain(props.data[3]?.link)"><OIcon><IconOutlink /></OIcon></template>
@@ -67,7 +67,7 @@ const isSelfDomain = (url: string) => {
             :size="lePadV ? 'medium' : 'large'"
             class="certificate-btn"
             :href="props.data[4]?.link"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >
             {{ props.data[4]?.content }}
             <template #suffix v-if="!isSelfDomain(props.data[4]?.link)"><OIcon><IconOutlink /></OIcon></template>

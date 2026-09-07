@@ -30,7 +30,7 @@ defineProps({
       <OLink
         color="primary"
         :href="giteeAddress"
-        target="_blank"
+        target="_blank" rel="noopener noreferrer"
         class="more-gitee"
       >
         <span>{{ t('sig.giteeMore') }}</span>

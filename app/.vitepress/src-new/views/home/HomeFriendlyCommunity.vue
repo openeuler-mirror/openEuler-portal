@@ -20,7 +20,7 @@ const { isEn } = useLocale();
       <div v-for="community in friendlyCommunityConfig" :key="community.url" :class="['community', { 'with-desc': 'desc' in community }]">
         <OLink
           :href="community.url"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           :hover-underline="false"
           v-analytics.bubble="{
             target: community.url,

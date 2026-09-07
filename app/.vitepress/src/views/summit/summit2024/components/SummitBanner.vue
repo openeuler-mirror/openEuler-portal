@@ -97,7 +97,7 @@ const viewBtn = (url: string) => {
                       color="normal"
                       variant="text"
                       :href="item.url"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       :hover-underline="false"
                     >
                       {{ item.text }}<OIcon><IconOutLink /></OIcon>

@@ -36,7 +36,7 @@ const bannerImage = computed(() => {
 
 <template>
   <div class="banner">
-    <a v-if="isPhone" :href="bannerData.replayLink" target="_blank">
+    <a v-if="isPhone" :href="bannerData.replayLink" target="_blank" rel="noopener noreferrer">
       <div
         class="banner-image"
         :class="{ 'banner-dark': isDark }"
@@ -68,7 +68,7 @@ const bannerImage = computed(() => {
             color="primary"
             size="large"
             :href="bannerData.replayLink"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >
             {{ bannerData.signUpTitle }}
             <template #suffix>

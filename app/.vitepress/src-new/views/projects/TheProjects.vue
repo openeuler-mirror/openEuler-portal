@@ -59,8 +59,8 @@ const gap = computed(() => {
             <span :title="item.desc" class="desc">{{ item.desc }}</span>
           </template>
           <template v-if="!lePadV" #footer>
-            <OButton color="primary" variant="outline" size="large" class="view-btn" :href="`/${locale}${item.url}`" target="_blank">{{ t('project.viewMore') }}</OButton>
-            <OLink v-if="item.atomgitUrl" color="normal" variant="text" :href="item.atomgitUrl" target="_blank">
+            <OButton color="primary" variant="outline" size="large" class="view-btn" :href="`/${locale}${item.url}`" target="_blank" rel="noopener noreferrer">{{ t('project.viewMore') }}</OButton>
+            <OLink v-if="item.atomgitUrl" color="normal" variant="text" :href="item.atomgitUrl" target="_blank" rel="noopener noreferrer">
               <span class="gitee">{{ t('project.gitee') }}</span>
               <template #suffix>
                 <OIcon class="right-icon"><IconChevronRight /></OIcon>
@@ -69,14 +69,14 @@ const gap = computed(() => {
           </template>
           <template v-else #footer>
             <ODivider />
-            <OLink color="normal" variant="text" :href="`/${locale}${item.url}`" target="_blank">
+            <OLink color="normal" variant="text" :href="`/${locale}${item.url}`" target="_blank" rel="noopener noreferrer">
               {{ t('project.viewMore') }}
               <template #suffix>
                 <OIcon class="right-icon"><IconChevronRight /></OIcon>
               </template>
             </OLink>
             <ODivider v-if="item.atomgitUrl" />
-            <OLink v-if="item.atomgitUrl" color="normal" variant="text" :href="item.atomgitUrl" target="_blank">
+            <OLink v-if="item.atomgitUrl" color="normal" variant="text" :href="item.atomgitUrl" target="_blank" rel="noopener noreferrer">
               <span class="gitee">{{ t('project.gitee') }}</span>
               <template #suffix>
                 <OIcon class="outlink-icon"><IconOutLink /></OIcon>
@@ -91,8 +91,8 @@ const gap = computed(() => {
     <p class="partake-title">{{ t('project.participate') }}</p>
     <p class="partake-titdescle">{{ t('project.participateDesc') }}</p>
     <div class="btn">
-      <OButton color="primary" variant="solid" size="large" :href="`/${locale}/community/contribution/`" target="_blank">{{ t('project.strategy') }}</OButton>
-      <OButton color="primary" variant="outline" size="large" class="view-btn" :href="`/${locale}/sig/sig-list/`" target="_blank">{{ t('project.viewSig') }}</OButton>
+      <OButton color="primary" variant="solid" size="large" :href="`/${locale}/community/contribution/`" target="_blank" rel="noopener noreferrer">{{ t('project.strategy') }}</OButton>
+      <OButton color="primary" variant="outline" size="large" class="view-btn" :href="`/${locale}/sig/sig-list/`" target="_blank" rel="noopener noreferrer">{{ t('project.viewSig') }}</OButton>
     </div>
   </div>
 </template>

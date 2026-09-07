@@ -365,7 +365,7 @@ const verticalPadding = computed(() => {
             <p v-else-if="section.type === 'link'" class="section-link">
               <OLink
                 :href="section.href"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 color="primary"
                 hover-underline
                 class="detail-link"

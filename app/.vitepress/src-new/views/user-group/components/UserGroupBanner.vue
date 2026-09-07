@@ -21,7 +21,7 @@ const { lePadV } = useScreen();
         color="primary"
         :size="lePadV ? 'small' : 'large'"
         :href="bannerData.href"
-        target="_blank"
+        target="_blank" rel="noopener noreferrer"
       >
         {{ bannerData.btn }}
       </OButton>

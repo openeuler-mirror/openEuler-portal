@@ -10,6 +10,7 @@ import { useI18n } from '@/i18n';
 import banner from '@/assets/category/internship/banner.png';
 import IconOutlink from '~icons/app/icon-outlink.svg';
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
+import { OButton } from '@opensig/opendesign';
 const i18n = useI18n();
 const { lePadV } = useScreen();
 
@@ -28,12 +29,10 @@ const bannerData = {
     v-if="!lePadV"
   >
     <div class="action">
-      <a href="https://atomgit.com/openeuler/opensource-intern/issues" target="_blank">
-        <OButton size="large" type="primary">
-          <span>{{ i18n.internship.receiveTask }}</span>
-          <OIcon class="jump-out-icon"><IconOutlink /></OIcon>
-        </OButton>
-      </a>
+      <OButton href="https://atomgit.com/openeuler/opensource-intern/issues" size="large" color="primary" round="pill" variant="solid">
+        <span>{{ i18n.internship.receiveTask }}</span>
+        <OIcon class="jump-out-icon"><IconOutlink /></OIcon>
+      </OButton>
     </div>
   </BannerLevel2>
   <div class="internship-wrapper">
@@ -41,12 +40,10 @@ const bannerData = {
       <div v-if="lePadV">
         <div class="internship-title">{{ i18n.internship.internship }}</div>
         <div class="action">
-          <a href="https://atomgit.com/openeuler/opensource-intern/issues" target="_blank">
-            <OButton size="large" type="primary">
-              <span>{{ i18n.internship.receiveTask }}</span>
-              <OIcon class="jump-out-icon"><IconOutlink /></OIcon>
-            </OButton>
-          </a>
+          <OButton href="https://atomgit.com/openeuler/opensource-intern/issues" size="large" color="primary" round="pill" variant="solid">
+            <span>{{ i18n.internship.receiveTask }}</span>
+            <OIcon class="jump-out-icon"><IconOutlink /></OIcon>
+          </OButton>
         </div>
       </div>
       <!-- 活动介绍 -->
@@ -136,12 +133,13 @@ const bannerData = {
     margin-left: 8px;
   }
 
-  .o-button {
+  .o-btn {
     width: 128px;
     height: 32px;
     border-radius: 16px;
     padding: 8px 16px;
     margin-top: 12px;
+    font-size: var(--e-font-size-h8);
   }
 }
 

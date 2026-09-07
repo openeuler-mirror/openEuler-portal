@@ -41,7 +41,7 @@ const SERVICE_SOFTWARE_URL = import.meta.env.VITE_SERVICE_SOFTWARE_URL;
         </i18n-t>
         <OLink
           class="more"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           :href="`${SERVICE_SOFTWARE_URL}/zh/field?name=${searchValue}`"
           >{{ $t('search.more') }}
           <template #suffix>

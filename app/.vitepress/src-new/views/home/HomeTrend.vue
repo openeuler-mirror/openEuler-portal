@@ -119,7 +119,7 @@ onMounted(() => {
                 : 165 / 162
             "
             :href="`/${blog.path}.html`"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             v-analytics.bubble="{
               level2: $t('home.blog'),
               target: blog.title,
@@ -159,7 +159,7 @@ onMounted(() => {
             :cover="`/${news.banner}`"
             :cover-ratio="456 / 188"
             :href="`/${news.path}.html`"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             v-analytics.bubble="{
               level2: $t('home.news'),
               target: news.title,

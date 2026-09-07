@@ -6,6 +6,7 @@ import { computed } from 'vue';
 import portalInfoData from '@/data/migration/migration-portal';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
+import { OButton } from '@opensig/opendesign';
 
 const commonStore = useCommon();
 
@@ -16,10 +17,6 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 const portalInfo = computed(() => {
   return portalInfoData[lang.value as 'zh' | 'en'];
 });
-
-const handleGo = (path: string) => {
-  window.open('/' + lang.value + path, '_blank');
-};
 </script>
 
 <template>
@@ -48,12 +45,14 @@ const handleGo = (path: string) => {
         <div class="line-box"></div>
         <div class="btn-box">
           <OButton
-            animation
-            type="text"
-            class="btn-box-item"
-            @click="handleGo(portalInfo.case.btn.link)"
+            variant="text"
+            size="large"
+            class="btn-box-item animation-btn"
+            :href="`/${lang}${portalInfo.case.btn.link}`"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <template #suffixIcon>
+            <template #suffix>
               <IconArrowRight class="btn-box-item-icon"></IconArrowRight>
             </template>
             {{ portalInfo.case.btn.text }}
@@ -176,6 +175,8 @@ const handleGo = (path: string) => {
         padding: 0;
         justify-content: center;
         align-items: center;
+        --btn-color-hover: var(--e-color-text1);
+        --btn-color: var(--e-color-text1);
         @media screen and (max-width: 1080px) {
           padding: 0;
           font-size: var(--e-font-size-text);

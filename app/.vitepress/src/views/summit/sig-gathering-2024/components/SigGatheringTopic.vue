@@ -41,7 +41,7 @@ const isDark = computed(() => {
         <p class="title">{{ item.title }}</p>
         <p v-for="(desc, j) in item.desc" :key="j" class="desc">{{ desc }}</p>
         <div class="link">
-          <a :href="item.href" target="_blank">
+          <a :href="item.href" target="_blank" rel="noopener noreferrer">
             <span class="text">{{ topicData.text }}</span>
             <OIcon><IconChevronRight /></OIcon>
           </a>

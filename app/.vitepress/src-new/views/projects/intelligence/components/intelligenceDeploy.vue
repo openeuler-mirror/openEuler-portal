@@ -47,7 +47,7 @@ const gap = computed(() => {
                 variant="text"
                 hoverUnderline
                 :href="val.href"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 {{ val.text }}
               </OLink>

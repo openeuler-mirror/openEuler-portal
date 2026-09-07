@@ -406,6 +406,7 @@ onMounted(() => {
       <template #footer>
         <a
           href="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/excel/Visa.xlsx"
+          rel="noopener noreferrer"
         >
           <OButton size="mini" type="primary" @click="dialogVisible = true"
             >Download the Application Form

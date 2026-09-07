@@ -18,7 +18,7 @@ const { lePadV } = useScreen();
     <div class="step">
       <span>{{ i18n.internship.applyInternshipDesc2 }}</span>
       <span class="contact-container">
-        <OLink class="contact" :hover-underline="false" :href="internshipTaskLinks.internshipTestTask" target="_blank">{{ i18n.internship.applyInternshipDesc3 }}</OLink>
+        <OLink class="contact" :hover-underline="false" :href="internshipTaskLinks.internshipTestTask" target="_blank" rel="noopener noreferrer">{{ i18n.internship.applyInternshipDesc3 }}</OLink>
         <OIcon class="jump-out-icon"><IconOutlink /></OIcon>
       </span>
       <span>{{ i18n.internship.applyInternshipDesc4 }}</span>

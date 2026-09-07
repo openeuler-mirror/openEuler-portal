@@ -58,14 +58,14 @@ const gap = computed(() => {
           <div class="text">{{ t('brand.useDesc') }}</div>
           <div class="text">
             <span>{{ t('brand.desc1') }}</span>
-            <OLink color="primary" variant="text" :href="guide" target="_blank" hover-underline>{{ t('brand.guide') }}</OLink>
+            <OLink color="primary" variant="text" :href="guide" target="_blank" rel="noopener noreferrer" hover-underline>{{ t('brand.guide') }}</OLink>
             <span v-if="locale === 'en'"> and </span>
             <OLink color="primary" variant="text" :href="`/${locale}/other/brand/specification/`" target="_blank" hover-underline>{{ t('brand.specification') }}</OLink>
             <span>{{ t('brand.desc2') }}</span>
           </div>
           <div class="text">
             <span>{{ t('brand.desc3') }}</span>
-            <OLink color="primary" variant="text" href="mailto:trademarks@openeuler.sh" target="_blank" hover-underline>trademarks@openeuler.sh</OLink>
+            <OLink color="primary" variant="text" href="mailto:trademarks@openeuler.sh" target="_blank" rel="noopener noreferrer" hover-underline>trademarks@openeuler.sh</OLink>
           </div>
         </div>
       </OCol>
