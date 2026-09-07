@@ -5,7 +5,7 @@
     "@id": "https://www.openeuler.org/en/other/legal",
     "url": "https://www.openeuler.org/en/other/legal",
     "name": "Legal Notice | openEuler",
-    "description": "View the legal notice and disclaimer for openEuler, the open source OS for various scenarios.",
+    "description": "openEuler Legal Notice covering AI use authorization for public content, AI compliance conduct, copyright, trademarks, personal data protection, third-party links, and disclaimers for AI training and data mining.",
     "inLanguage": "en",
     "isPartOf": {
       "@type": "WebSite",
@@ -23,7 +23,7 @@
     "about": {
       "@type": "Thing",
       "name": "Legal Notice and Policies",
-      "description": "Legal policies for the openEuler Community, including terms and conditions for accessing openEuler websites and protection of personal information."
+      "description": "Legal policies for the openEuler Community covering AI use authorization for public content, AI compliance conduct, personal data protection, copyright, trademarks, third-party links, and disclaimers."
     },
     "publisher": {
       "@type": "Organization",

@@ -5,7 +5,7 @@
     "@id": "https://www.openeuler.org/zh/other/legal",
     "url": "https://www.openeuler.org/zh/other/legal",
     "name": "openEuler 法律声明",
-    "description": "阅读openEuler的法律声明及相关政策，确保合法合规使用资源。",
+    "description": "openEuler法律声明：涵盖公开内容AI使用授权、AI合规行为规范、个人信息保护、著作权与商标政策、第三方链接及免责声明，明确AI训练与数据挖掘的合规要求。",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
@@ -25,7 +25,7 @@
     "about": {
       "@type": "Thing",
       "name": "法律声明",
-      "description": "openEuler社区法律政策，包括网站访问规则、个人信息保护、免责声明、著作权说明及商标政策。"
+      "description": "openEuler社区法律政策，涵盖公开内容AI使用授权、AI合规行为规范、个人信息保护、著作权与商标政策、第三方链接及免责声明。"
     },
     "publisher": {
       "@type": "Organization",
