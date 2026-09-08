@@ -1,0 +1,29 @@
+# Wiki 中文目录数据
+# toc: Wiki 侧边导航树
+#   label: 导航节点名称
+#   link: 相对于 /{locale}/wiki/ 的页面路径
+#   children: 子导航节点（可选）
+
+toc:
+  - label: 关于openEuler
+    children:
+      - label: 介绍
+        link: about/introduce
+      - label: 快速链接
+        link: about/quick-start
+  - label: 开源贡献
+    link: contribution
+  - label: 安装指引
+    children:
+      - label: 公有云
+        link: install/cloud
+      - label: 容器镜像
+        link: install/image
+      - label: WSL
+        link: install/wsl
+      - label: MacOS
+        link: install/macos
+      - label: 虚拟化
+        link: install/virtualization
+      - label: 树莓派
+        link: install/raspberry-pi

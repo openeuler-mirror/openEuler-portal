@@ -1,10 +1,16 @@
 import { expect, describe, it } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
-import tocData from '../app/.vitepress/src/data/about-us/about-us-toc';
-import { hideNssRoutes } from '../app/.vitepress/src/data/common/nss';
+import yaml from 'js-yaml';
 
 const PROJECT_ROOT = process.cwd();
+
+const tocData = {
+  zh: yaml.load(fs.readFileSync(path.join(PROJECT_ROOT, '.content/community/zh.yaml'), 'utf8')),
+  en: yaml.load(fs.readFileSync(path.join(PROJECT_ROOT, '.content/community/en.yaml'), 'utf8')),
+};
+
+const hideNssRoutes = yaml.load(fs.readFileSync(path.join(PROJECT_ROOT, '.content/common/nss.yaml'), 'utf8'));
 
 describe('about-us-toc.ts — zh 侧边栏 AIGC 条目', () => {
   const zhPolicies = tocData.zh.find((item) => item.label === '政策和规则');

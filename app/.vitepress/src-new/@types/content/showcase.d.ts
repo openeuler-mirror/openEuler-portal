@@ -46,3 +46,21 @@ declare module '#content/showcase/market-report' {
   const data: { zh: MarketReportContentT };
   export default data;
 }
+
+declare module '#content/showcase/industry-white-paper' {
+  // industry_white_paper: 行业白皮书列表（顶层为数组）
+  //   banner: 卡片背景图路径（公开资源 URL）
+  //   path: PDF 下载链接
+  //   summary: 白皮书摘要
+  interface IndustryWhitePaperItemT {
+    banner: string;
+    path: string;
+    summary: string;
+  }
+
+  const data: {
+    zh: IndustryWhitePaperItemT[];
+    en: IndustryWhitePaperItemT[];
+  };
+  export default data;
+}

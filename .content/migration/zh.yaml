@@ -271,3 +271,30 @@ help:
   assistant_qr:
     img: ./images/portal-help-assistant.png
     text: openEuler小助手
+
+# toc: 迁移专区侧边导航
+#   label: 节点显示文案
+#   link: 节点链接路径段
+#   is_leaf: 是否为叶子节点（可选）
+toc:
+  - label: 迁移专区
+    link: migration
+  - label: 背景
+    link: background
+  - label: 迁移优势
+    link: advantage
+  - label: 迁移方案
+    link: guidance
+  - label: 下载
+    link: download
+    is_leaf: true
+  - label: 最佳实践
+    link: user-cases
+  - label: 移植案例
+    link: transplantation-cases
+  - label: 贡献攻略
+    link: contribution
+  - label: FAQ
+    link: faq
+  - label: 联系我们
+    link: contact

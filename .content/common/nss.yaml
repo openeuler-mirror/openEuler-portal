@@ -1,0 +1,12 @@
+# 隐藏 NSS 按钮组的页面路由列表 / Routes that hide NSS floating button
+#
+# 顶层为数组，每项为路由路径段。App.vue 用 some() + includes() 判断当前路径是否命中。
+# 测试用例 community-ai-coding-assistants.test.ts 校验此数组内容。
+
+- /community/organization
+- /community/member
+- /community/charter
+- /community/vote
+- /community/conduct
+- /community/ai-coding-assistants
+- /community/meeting-system

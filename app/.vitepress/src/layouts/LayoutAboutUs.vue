@@ -2,7 +2,7 @@
 import { computed, ref, watch, onMounted, nextTick } from 'vue';
 import { useData, useRouter } from 'vitepress';
 
-import TOC_INFO from '@/data/about-us/about-us-toc';
+import aboutUsContent from '#content/community';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
 import DocSideBar from '@/components/DocSideBar.vue';
@@ -31,9 +31,9 @@ const defaultProps = ref({
 
 const tocInfo = computed(() => {
   if (lang.value === 'en') {
-    return TOC_INFO.en;
+    return aboutUsContent.en;
   } else {
-    return TOC_INFO.zh;
+    return aboutUsContent.zh;
   }
 });
 

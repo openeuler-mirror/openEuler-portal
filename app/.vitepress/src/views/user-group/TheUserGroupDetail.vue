@@ -3,7 +3,7 @@ import { computed, ref, onMounted } from 'vue';
 import { useData, useRouter } from 'vitepress';
 import { useI18n } from '@/i18n';
 import { PageDataT } from '@/shared/@types/type-usergroup';
-import cityData from '@/data/user-group/city/';
+import legacyUserGroupContent from '#content/community/user-group/detail';
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import AppContent from '@/components/AppContent.vue';
 import CityMember from './city-detail/CityMember.vue';
@@ -23,6 +23,7 @@ const blogInfo = {
   name: groupI18n.value.BANNER_TITLE,
 };
 const pageData = ref<PageDataT>({} as PageDataT);
+const cityData = legacyUserGroupContent.zh.cities;
 
 // 点击跳转案例详情页面
 const jumpTo = (link: string) => {

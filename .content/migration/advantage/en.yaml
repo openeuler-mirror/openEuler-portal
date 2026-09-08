@@ -1,0 +1,24 @@
+# Migration advantage subpage data
+#
+#   description: Section description
+#   cards: Advantage card array
+#     text: Card text
+#     url: Card image
+#   tips: Contact us prompt
+#     text_1/text_2/text_3: Text segments
+#     link: Contact link (currently empty, template hardcodes URL)
+# zh/en share images (no suffix).
+
+description: "Today's digital world requires operating systems (OSs) to accommodate more computing architectures. For enterprise digital transformation, migrating OSs is a common operation, but this can often lead to like performance, compatibility, system environment restoration issues. openEuler is an open source OS that streamlines the differences between various computing architectures across servers, clouds, edges, and embedded systems. To make OS migration simple, reliable, and efficient, the openEuler migration solution comprises just six steps: create a migration support team, analyze migration needs, design a plan, adapt software, perform migration, and conduct testing and rollout. That brings us to x2openEuler, an openEuler tool designed for migration assessment and in-place upgrades."
+cards:
+  - text: 'To ensure a seamless transition of services, x2openEuler performs thorough analysis of hardware, software, and configurations, including changes in upper-layer software interfaces, dependency versions, and post-migration OS configurations.'
+    url: ./images/advantage-1.png
+  - text: 'x2openEuler supports two migration paths: in-place upgrade and migration after adaptation.'
+    url: ./images/advantage-2.png
+  - text: 'x2openEuler in-place upgrade migrates existing OSs to openEuler within one hour, without requiring services to be redeployed or parameters reconfigured, significantly cutting down on time and effort. This cost-effective option enables the direct use of original server resources to remove the need for backup servers.'
+    url: ./images/advantage-3.png
+tips:
+  text_1: 'For OS migration assistance, feel free to '
+  text_2: reach out to us
+  text_3: '. openEuler offers complimentary OS migration consultations for community members.'
+  link: ''

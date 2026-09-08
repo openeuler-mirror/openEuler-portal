@@ -38,3 +38,28 @@ declare module '#content/approve/approve-step' {
   const data: { zh: ApproveStepContentT };
   export default data;
 }
+
+declare module '#content/approve/approve-info' {
+  // template / flushbonading: OSV 测评模板
+  //   title: 板块标题
+  //   lists: 检测项数组
+  //     name: 检测项名称
+  //     desc: 检测项描述
+  //     result: 检测结果
+  interface OsvCheckItemT {
+    name: string;
+    desc: string;
+    result: string;
+  }
+  interface OsvCheckGroupT {
+    title: string;
+    lists: OsvCheckItemT[];
+  }
+  interface OsvContentT {
+    template: OsvCheckGroupT[];
+    flushbonading: OsvCheckGroupT[];
+  }
+
+  const data: { zh: OsvContentT };
+  export default data;
+}

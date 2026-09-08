@@ -3,7 +3,9 @@ import { computed } from 'vue';
 import { useI18n } from '@/i18n';
 import { useCommon } from '@/stores/common';
 
-import contributionData from '@/data/euler-sky/infra';
+import infraContent from '#content/community/program/infrastructure';
+
+const contributionData = infraContent.zh;
 
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import AppContent from '@/components/AppContent.vue';
@@ -46,12 +48,12 @@ const infraI18n = computed(() => {
         <div class="contribution-list">
           <div
             v-for="item in contributionData"
-            :key="item.LIGHT"
+            :key="item.img_light"
             class="contribution-item"
             alt=""
           >
             <img
-              :src="commonStore.theme === 'light' ? item.LIGHT : item.DARK"
+              :src="commonStore.theme === 'light' ? item.img_light : item.img_dark"
               alt=""
             />
           </div>

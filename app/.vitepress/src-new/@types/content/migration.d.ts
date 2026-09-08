@@ -144,6 +144,12 @@ declare module '#content/migration' {
     };
   }
 
+  interface MigrationTocItemT {
+    label: string;
+    link: string;
+    is_leaf?: boolean;
+  }
+
   interface MigrationContentT {
     advantage: MigrationAdvantageT;
     download: MigrationDownloadT;
@@ -152,6 +158,7 @@ declare module '#content/migration' {
     case: MigrationCaseT;
     guide: MigrationGuideT;
     help: MigrationHelpT;
+    toc: MigrationTocItemT[];
   }
 
   const data: {
@@ -212,6 +219,84 @@ declare module '#content/migration/user-cases' {
   const data: {
     zh: MigrationUserCaseContentT;
     en: MigrationUserCaseContentT;
+  };
+  export default data;
+}
+
+declare module '#content/migration/advantage' {
+  // advantage: 迁移优势子页面数据
+  //   description: 板块描述
+  //   cards: 优势卡片数组（text + url 图片）
+  //   tips: 联系我们提示文案
+  interface MigrationAdvantageCardItemT {
+    text: string;
+    url: string;
+  }
+  interface MigrationAdvantageTipsT {
+    text_1: string;
+    text_2: string;
+    text_3: string;
+    link: string;
+  }
+  interface MigrationAdvantagePageContentT {
+    description: string;
+    cards: MigrationAdvantageCardItemT[];
+    tips: MigrationAdvantageTipsT;
+  }
+  const data: {
+    zh: MigrationAdvantagePageContentT;
+    en: MigrationAdvantagePageContentT;
+  };
+  export default data;
+}
+
+declare module '#content/migration/transplantation-cases' {
+  // transplantation_cases: 移植案例列表（顶层为数组）
+  //   label: 案例标题
+  //   link: 案例链接
+  interface MigrationCaseItemT {
+    label: string;
+    link: string;
+  }
+  const data: {
+    zh: MigrationCaseItemT[];
+    en: MigrationCaseItemT[];
+  };
+  export default data;
+}
+
+declare module '#content/migration/faq' {
+  // faq: 迁移 FAQ
+  //   instruction: 说明（可选）
+  //   chats: 问答列表
+  //     question: 问题
+  //     answers: 回答片段数组
+  //       text: 文本
+  //       is_link: 是否为链接
+  //       link: 链接地址
+  interface MigrationFaqAnswerT {
+    text: string;
+    is_link: boolean;
+    link: string;
+  }
+  interface MigrationFaqChatT {
+    question: string;
+    answers: MigrationFaqAnswerT[];
+  }
+  interface MigrationFaqInstructionT {
+    title: string;
+    text_1: string;
+    link_text: string;
+    link: string;
+    text_2: string;
+  }
+  interface MigrationFaqContentT {
+    instruction?: MigrationFaqInstructionT;
+    chats: MigrationFaqChatT[];
+  }
+  const data: {
+    zh: MigrationFaqContentT;
+    en: MigrationFaqContentT;
   };
   export default data;
 }

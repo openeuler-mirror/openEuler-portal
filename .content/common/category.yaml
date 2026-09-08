@@ -1,0 +1,18 @@
+# 全站分类标识列表 / Global category identifiers
+#
+# 用于 frontmatter category 字段的合法值校验（App.vue isCustomLayout 判定）。
+# 顶层为数组，每项为一个分类标识字符串。
+
+- news
+- blog
+- showcase
+- migration
+- about-us
+- about-us-archived
+- download
+- sig-route
+- event
+- security
+- faq
+- wiki
+- white-paper

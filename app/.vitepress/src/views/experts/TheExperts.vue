@@ -2,7 +2,9 @@
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppContent from '@/components/AppContent.vue';
 
-import experts from '@/data/experts';
+import expertsContent from '#content/experts';
+
+const experts = expertsContent.zh;
 
 import banner from '@/assets/banner/banner-community.png';
 import illustration from '@/assets/illustrations/expert.png';

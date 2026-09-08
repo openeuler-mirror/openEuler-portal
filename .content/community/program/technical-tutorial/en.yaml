@@ -1,0 +1,22 @@
+# Technical tutorial videos
+#
+#   title: Video title
+#   url: Video link (Bilibili)
+#   img: Video cover image
+# Top-level is an array.
+
+- title: 01-Kdump
+  url: https://www.bilibili.com/video/BV1Bm4y1676d/?spm_id_from=333.999.0.0
+  img: ./images/course-1.jpg
+- title: 02-Linux PCI Subsystem
+  url: https://www.bilibili.com/video/BV1Zv4y157zF/?spm_id_from=333.788&vd_source=0aa547ea87e7a7505cf544eacc2236ac
+  img: ./images/course-2.jpg
+- title: 03-Crash Utility-1/2
+  url: https://www.bilibili.com/video/BV1dg4y1W7z6/?spm_id_from=333.999.0.0&vd_source=0aa547ea87e7a7505cf544eacc2236ac
+  img: ./images/course-3.jpg
+- title: 04-Crash Utility-2/2
+  url: https://www.bilibili.com/video/BV15X4y1o7zz/?spm_id_from=333.999.0.0&vd_source=0aa547ea87e7a7505cf544eacc2236ac
+  img: ./images/course-4.jpg
+- title: 05-Top Down Performance Analysis
+  url: https://www.bilibili.com/video/BV1g84y1u7qz/?spm_id_from=333.999.0.0
+  img: ./images/course-5.jpg

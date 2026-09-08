@@ -266,3 +266,30 @@ help:
   assistant_qr:
     img: ''
     text: openEuler assistant
+
+# toc: Migration sidebar navigation
+#   label: Node display text
+#   link: Node link path segment
+#   is_leaf: Whether this is a leaf node (optional)
+toc:
+  - label: Migration Center
+    link: migration
+  - label: Background
+    link: background
+  - label: Advantages
+    link: advantage
+  - label: Migration Solution
+    link: guidance
+  - label: Download
+    link: download
+    is_leaf: true
+  - label: Best Practices
+    link: user-cases
+  - label: Porting Guides
+    link: transplantation-cases
+  - label: Contribution Guide
+    link: contribution
+  - label: FAQs
+    link: faq
+  - label: Contact Us
+    link: contact

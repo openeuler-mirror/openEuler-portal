@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useData } from 'vitepress';
-import seoConfig from '@/data/common/seo';
+import commonContent from '#content/common';
 import { useRouter } from 'vitepress';
 
 import downloadInfoData from '#content/migration/download';
@@ -32,7 +32,7 @@ function handleClick(item: LinkItem) {
 </script>
 
 <template>
-  <SeoBox :seo-data="seoConfig[lang]?.migrationDownload" />
+  <SeoBox :seo-data="commonContent[lang]?.migration_download" />
   <div class="migration-download">
     <div class="migration-download-content">
       <div>

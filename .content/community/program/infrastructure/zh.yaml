@@ -1,0 +1,12 @@
+# 基础设施合作伙伴 logo / Infrastructure partner logos
+# zh 专属（en 无对应页面，未创建 en.yaml）
+#   img_light: 亮色主题 logo
+#   img_dark: 暗色主题 logo
+# 顶层为数组。
+
+- img_light: ./images/huawei.png
+  img_dark: ./images/huawei_dark.png
+- img_light: ./images/longxing_light.png
+  img_dark: ./images/longxing_dark.png
+- img_light: ./images/shenwei_light.png
+  img_dark: ./images/shenwei_dark.png

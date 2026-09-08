@@ -4,7 +4,7 @@ import { useData, useRoute } from 'vitepress';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
-import seoConfig from '@/data/common/seo';
+import commonContent from '#content/common';
 
 import AppRouterTemplate from '~@/components/AppRouterTemplate.vue';
 import AppRouterTemplateMo from '~@/components/AppRouterTemplateMo.vue';
@@ -62,7 +62,7 @@ watch(
 </script>
 <template>
   <div>
-    <SeoBox :seo-data="seoConfig[lang]?.download" />
+    <SeoBox :seo-data="commonContent[lang]?.download" />
     <component
       :is="lePadV ? AppRouterTemplateMo : AppRouterTemplate"
       :banner-data="bannerData"

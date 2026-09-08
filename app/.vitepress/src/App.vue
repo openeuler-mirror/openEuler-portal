@@ -26,9 +26,8 @@ import FloatingButtonEn from '~@/components/FloatingButtonEn.vue';
 
 import AppTour from '~@/components/AppTour.vue';
 
-import categories from '@/data/common/category';
+import commonContent from '#content/common';
 import { useLocale } from '~@/composables/useLocale';
-import { hideNssRoutes } from './data/common/nss';
 import {
   OCookieNotice,
   OPlusConfigProvider,
@@ -66,7 +65,7 @@ const compMapping: {
 const isCustomLayout = computed(() => {
   return (
     !!frontmatter.value.category &&
-    categories.indexOf(frontmatter.value.category) !== -1
+    commonContent.category.indexOf(frontmatter.value.category) !== -1
   );
 });
 
@@ -93,7 +92,7 @@ const isStandalone = computed(() => {
 // ----------------------------- new ----------------------------
 
 const showNss = computed(() => {
-  return !hideNssRoutes.some((route) => router?.route?.path?.includes(route));
+  return !commonContent.nss.some((route) => router?.route?.path?.includes(route));
 });
 
 watch(

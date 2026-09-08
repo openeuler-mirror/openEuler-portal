@@ -14,12 +14,12 @@ category: migration
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import TheMigrationCase from "@/views/migration/TheMigrationCase.vue";
-import seoConfig from '@/data/common/seo';
+import commonContent from '#content/common';
 
 const { lang } = useData();
 </script>
 
-<SeoBox :seo-data="seoConfig[lang]?.migrationCase" />
+<SeoBox :seo-data="commonContent[lang]?.migration_case" />
 <p class="migration-transplantation-desc">
   openEuler provides typical software porting guides to fit most deployment needs. You can alscontribute your successful migration cases. For details, see <a
     href="/en/migration/contribution/"

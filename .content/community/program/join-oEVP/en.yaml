@@ -1,0 +1,248 @@
+# OEVP expert list
+#
+#   avator: Avatar image
+#   name: Name
+#   company: Company
+#   labels: Expertise label array
+#   base: Location
+# Top-level is an array. zh/en share avatar images.
+
+- avator: ./images/gaopei.png
+  name: Gao Pei
+  company: iSoftStone Information Technology (Group) Co., Ltd.
+  labels:
+    - Cloud Computing
+  base: Chengdu, China
+- avator: ./images/houjian.png
+  name: Hou Jian
+  company: Kylin Software Co., Ltd.
+  labels:
+    - Server OS
+    - Cloud Computing
+    - Scale-out Storage
+    - HA
+  base: Beijing, China
+- avator: ./images/huangweixu.png
+  name: Huang Weixu
+  company: Huawei Technologies Co., Ltd.
+  labels:
+    - Cloud Computing
+    - AI
+  base: Shenzhen, China
+- avator: ./images/huangzhaowei.png
+  name: Huang Zhaowei
+  company: xFusion Digital Technologies Co., Ltd.
+  labels:
+    - OS
+    - Cloud Computing
+    - AI
+  base: Shenzhen, China
+- avator: ./images/wangjianming.png
+  name: Wang Jianmin
+  company: Institute of Software, Chinese Academy of Sciences
+  labels:
+    - Data Security
+    - OS
+    - Cloud Native
+  base: Singapore
+- avator: ./images/liupeng.png
+  name: Liu Peng
+  company: Huawei Technologies Co., Ltd.
+  labels:
+    - Cloud Service
+    - Data Storage
+    - Confidential Computing
+  base: Chengdu, China
+- avator: ./images/liuwenqing.png
+  name: Liu Wenqing
+  company: Hunan Kylinsec Technology Co., Ltd.
+  labels:
+    - OS
+    - Open Source Security
+  base: Changsha, China
+- avator: ./images/lvcpngqing.png
+  name: Lv Congqing
+  company: UnionTech Software Technology Co., Ltd.
+  labels:
+    - OS
+  base: Beijing, China
+- avator: ./images/majun.png
+  name: Ma Jun
+  company: iSoftStone Information Technology (Group) Co., Ltd.
+  labels:
+    - OS
+    - Cloud Computing
+    - Data Communication
+  base: Hangzhou, China
+- avator: ./images/wangjun.png
+  name: Wang Jun
+  company: iSoftStone Information Technology (Group) Co., Ltd.
+  labels:
+    - OS
+    - 'Enterprise Informatization & Digitalization Consulting'
+  base: Xi'an, China
+- avator: './images/weijiangang .png'
+  name: Wei Jiangang
+  company: Jiangsu HopeRun Software Co., Ltd.
+  labels:
+    - OS
+    - Virtualization
+    - Cloud Computing
+    - AI
+  base: Nanjing, China
+- avator: ./images/zhangshengju.png
+  name: Zhang Shengju
+  company: China Mobile (Suzhou) Software Technology Co., Ltd.
+  labels:
+    - OS
+    - Cloud Computing
+    - Virtualization
+  base: Suzhou, China
+- avator: ./images/kanglifeng.png
+  name: Kang Lifeng
+  company: UnionTech Software Technology Co., Ltd.
+  labels:
+    - OS
+    - Cloud Computing
+    - Data Communication
+  base: Beijing, China
+- avator: ./images/shiyong.png
+  name: Shi Yong
+  company: Hunan Kylinsec Technology Co., Ltd.
+  labels:
+    - OS
+    - Trusted Computing
+    - Embedded
+  base: Changsha, China
+- avator: ./images/caizhiwen.png
+  name: Cai Zhimin
+  company: Jiangsu HopeRun Software Co., Ltd.
+  labels:
+    - OS
+    - Cloud Computing
+    - Compiler
+  base: Nanjing, China
+- avator: ./images/zhongxin.png
+  name: Zhong Xin
+  company: China Unicom Digital Technology Co., Ltd.
+  labels:
+    - OS
+    - Cloud Storage
+  base: Beijing, China
+- avator: ./images/zhuchen.png
+  name: Zhu Chen
+  company: Kylin Software Co., Ltd.
+  labels:
+    - OS
+    - Open Source Technology
+    - Big Data
+    - Cloud Computing
+  base: Shanghai, China
+- avator: ./images/liangbing.png
+  name: Liang Bing
+  company: Huawei Technologies Co., Ltd.
+  labels:
+    - Branding
+    - Marketing
+  base: Beijing, China
+- avator: ./images/caozhi.png
+  name: Cao Zhi
+  company: Huawei Technologies Co., Ltd.
+  labels:
+    - Cloud Service development
+    - Kubernetes and Container Services
+    - Network Security
+  base: Chengdu, China
+- avator: ./images/lina.png
+  name: Li Na
+  company: Jiangsu HopeRun Software Co., Ltd.
+  labels:
+    - Embedded Software
+  base: Nanjing, China
+- avator: ./images/zhujianzhong.png
+  name: Zhu Jianzhong
+  company: UnionTech Software Technology Co., Ltd.
+  labels:
+    - OS
+    - Cloud Computing
+    - OS Technical Standards
+  base: Shanghai, China
+- avator: ./images/zhenzhengyu.png
+  name: Zheng Zhenyu
+  company: Huawei Technologies Co., Ltd.
+  labels:
+    - Container
+    - Cloud Computing
+    - Cloud Native
+    - AI
+  base: Xi'an, China
+- avator: ./images/biannaimeng.png
+  name: Bian Naimeng
+  company: Jiangsu HopeRun Software Co., Ltd.
+  labels:
+    - Open Source Compliance
+    - Virtualization
+    - Embedded
+  base: Nanjing, China
+- avator: ./images/gaokun.png
+  name: Gao Kun
+  company: Huawei Technologies Co., Ltd.
+  labels:
+    - Open Source Governance
+    - Open Source Security
+    - Open Source Compliance
+  base: Shenzhen, China
+- avator: ./images/xieliuhua.png
+  name: Xie Liuhua
+  company: xFusion Digital Technologies Co., Ltd.
+  labels:
+    - Linux Server OS
+    - Ecosystem Building
+  base: Beijing, China
+- avator: ./images/chenqide.png
+  name: Chen Qide
+  company: Kylin Software Co., Ltd.
+  labels:
+    - Linux
+  base: Beijing, China
+- avator: ./images/wangyouhai.png
+  name: Wang Youhai
+  company: UnionTech Software Technology Co., Ltd.
+  labels:
+    - Branding
+    - Marketing
+  base: Beijing, China
+- avator: ./images/lichaoran.png
+  name: Li Chaoran
+  company: Huawei Technologies Co., Ltd.
+  labels:
+    - Cloud Native
+    - Virtualization
+    - Container Image
+    - Software Package
+  base: Chengdu, China
+- avator: ./images/wangxiyuan.png
+  name: Wang Xiyuan
+  company: Huawei Technologies Co., Ltd.
+  labels:
+    - Cloud Computing
+    - AI
+    - Software Package
+  base: Xi'an, China
+- avator: ./images/jiangyikun.png
+  name: Jiang Yikun
+  company: Huawei Technologies Co., Ltd.
+  labels:
+    - Big Data
+    - Cloud Computing
+    - Cloud Native
+    - Container Image
+  base: Xi'an, China
+- avator: ./images/renyuxin.png
+  name: Ren Yuxin
+  company: Huawei Technologies Co., Ltd.
+  labels:
+    - OS
+    - Network System
+    - System Security
+  base: Beijing, China

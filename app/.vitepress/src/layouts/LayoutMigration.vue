@@ -5,7 +5,7 @@ import { ref, computed } from 'vue';
 import { useCommon } from '@/stores/common';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
-import tocInfoData from '@/data/migration/migration-toc';
+import migrationContent from '#content/migration';
 
 import DocSideBar from '@/components/DocSideBar.vue';
 import DocSideBarMenu from '@/components/DocSideBarMenu.vue';
@@ -32,7 +32,7 @@ const activeId = computed(() => {
 });
 
 const tocInfo = computed(() => {
-  return tocInfoData[lang.value as 'zh' | 'en'];
+  return migrationContent[lang.value as 'zh' | 'en'].toc;
 });
 
 const screenWidth = useWindowResize();

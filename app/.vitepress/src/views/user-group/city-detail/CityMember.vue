@@ -67,8 +67,8 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
             </template>
           </div>
           <p v-if="item.position" class="position">{{ item.position }}</p>
-          <p v-if="item.homePage && title === 'Ambassador'" class="homePage">
-            <a :href="item.homePage" target="_blank" rel="noopener noreferrer"
+          <p v-if="item.home_page && title === 'Ambassador'" class="homePage">
+            <a :href="item.home_page" target="_blank" rel="noopener noreferrer"
               >个人主页</a
             >
           </p>
@@ -97,7 +97,7 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
         </div>
         <div class="avatar">
           <template v-if="title.toLocaleLowerCase() !== 'member'">
-            <img :src="isLight ? item.avatar : item.avatarDark" />
+            <img :src="isLight ? item.avatar : item.avatar_dark" />
           </template>
           <template v-else>
             <img :src="item.avatar" />
