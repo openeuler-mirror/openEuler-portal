@@ -5,15 +5,9 @@ import { ORow, OCol, OLink, OIcon, OFigure, ODivider, OButton, OCard } from '@op
 import BannerLevel2 from '~@/components/BannerLevel3.vue';
 import AppSection from '~@/components/AppSection.vue';
 
-import banner from '~@/assets/category/brand/banner.jpg';
-import logo from '~@/assets/category/brand/logo.png';
-import logoDark from '~@/assets/category/brand/logo-dark.png';
-import stratoVirtLogo from '~@/assets/category/brand/StratoVirt-logo.png';
-import stratoVirtLogoDark from '~@/assets/category/brand/StratoVirt-logo-dark.png';
-
 import IconBrandPlay from '~icons/brand/icon-brand-play.svg';
 
-import { LOGO_DOWNLOAD, guide, INNOVATION_LOGO_DOWNLOAD, PPT_LIST, PPT_LIST_EN } from '~@/data/brand';
+import brandContent from '#content/other/brand';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -22,6 +16,10 @@ import { useCommon } from '@/stores/common';
 const { locale, t } = useLocale();
 const { lePadV, lePad, leLaptop, isPhone } = useScreen();
 const commonStore = useCommon();
+const content = computed(() => brandContent[locale.value]);
+const logoDownload = computed(() => content.value.logo_download);
+const innovationLogoDownload = computed(() => content.value.innovation_logo_download);
+const pptList = computed(() => content.value.ppt_list);
 
 const isDark = computed(() => {
   return commonStore.theme === 'dark';
@@ -50,7 +48,7 @@ const gap = computed(() => {
 </script>
 
 <template>
-  <BannerLevel2 v-if="!lePadV" class="brand-banner" :title="t('brand.title')" :background-image="banner" />
+  <BannerLevel2 v-if="!lePadV" class="brand-banner" :title="t('brand.title')" :background-image="content.banner" />
   <AppSection :title="t('brand.useTitle')" class="use-title">
     <ORow :gap="gap" wrap="wrap">
       <OCol flex="0 0 100%">
@@ -58,14 +56,14 @@ const gap = computed(() => {
           <div class="text">{{ t('brand.useDesc') }}</div>
           <div class="text">
             <span>{{ t('brand.desc1') }}</span>
-            <OLink color="primary" variant="text" :href="guide" target="_blank" rel="noopener noreferrer" hover-underline>{{ t('brand.guide') }}</OLink>
+            <OLink color="primary" variant="text" :href="content.guide" target="_blank" hover-underline>{{ t('brand.guide') }}</OLink>
             <span v-if="locale === 'en'"> and </span>
             <OLink color="primary" variant="text" :href="`/${locale}/other/brand/specification/`" target="_blank" hover-underline>{{ t('brand.specification') }}</OLink>
             <span>{{ t('brand.desc2') }}</span>
           </div>
           <div class="text">
             <span>{{ t('brand.desc3') }}</span>
-            <OLink color="primary" variant="text" href="mailto:trademarks@openeuler.sh" target="_blank" rel="noopener noreferrer" hover-underline>trademarks@openeuler.sh</OLink>
+            <OLink color="primary" variant="text" href="mailto:trademarks@openeuler.sh" target="_blank" hover-underline>trademarks@openeuler.sh</OLink>
           </div>
         </div>
       </OCol>
@@ -99,7 +97,7 @@ const gap = computed(() => {
           </div>
           <div class="item-text">
             <span class="label">{{ t('brand.logo') }}</span>
-            <img :src="isDark ? logoDark : logo" />
+            <img :src="isDark ? content.logo_dark : content.logo" />
           </div>
         </div>
       </OCol>
@@ -123,7 +121,7 @@ const gap = computed(() => {
             <div class="stratoVirt-img item-img">
               <p>{{ t('brand.stratoVirt') }}</p>
               <div class="item-bottom">
-                <OFigure :src="isDark ? stratoVirtLogoDark : stratoVirtLogo" />
+                <OFigure :src="isDark ? content.strato_virt_logo_dark : content.strato_virt_logo" />
               </div>
             </div>
             <ODivider direction="v" />
@@ -142,7 +140,7 @@ const gap = computed(() => {
     <div class="logo-download">
       <p class="subtitle">{{ t('brand.logoDownload') }}</p>
       <ORow :gap="gap" wrap="wrap">
-        <OCol v-for="(item, i) in LOGO_DOWNLOAD" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 33.33%'">
+        <OCol v-for="(item, i) in logoDownload" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 33.33%'">
           <div class="card">
             <div class="top" :class="{'top-dark': isDark}">
               <OFigure :src="item.img" />
@@ -158,7 +156,7 @@ const gap = computed(() => {
     <div class="innovation-download logo-download">
       <p class="subtitle">{{ t('brand.innovationLogoDownload') }}</p>
       <ORow :gap="gap" wrap="wrap">
-        <OCol v-for="(item, i) in INNOVATION_LOGO_DOWNLOAD" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 33.33%'">
+        <OCol v-for="(item, i) in innovationLogoDownload" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 33.33%'">
           <div class="card">
             <div class="top" :class="{'top-dark': isDark}">
               <OFigure :src="item.img" />
@@ -174,7 +172,7 @@ const gap = computed(() => {
   </AppSection>
   <AppSection :title="t('brand.pptDownload')" class="ppt-download">
     <ORow :gap="gap" wrap="wrap">
-      <OCol v-for="(item, i) in locale === 'zh' ? PPT_LIST : PPT_LIST_EN" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 33.33%'">
+      <OCol v-for="(item, i) in pptList" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 33.33%'">
         <OCard hoverable :title="item.title" :cover="item.img" :href="item.url" download></OCard>
       </OCol>
     </ORow>

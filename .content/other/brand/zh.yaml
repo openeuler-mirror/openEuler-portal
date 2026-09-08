@@ -1,0 +1,100 @@
+# 品牌主页中文数据
+# brand: 品牌主页下载资源和外部链接
+# 图片均位于当前数据目录的 images/ 子目录。
+
+banner: ./images/banner.jpg
+logo: ./images/logo.png
+logo_dark: ./images/logo-dark.png
+strato_virt_logo: ./images/StratoVirt-logo.png
+strato_virt_logo_dark: ./images/StratoVirt-logo-dark.png
+guide: https://www.openatom.cn/brand-guide
+logo_download:
+  - title: Standard
+    img: /img/other/brand/horizontal-poster.png
+    list:
+      - title: JPG
+        url: /img/other/brand/horizontal-left.jpg
+      - title: PNG
+        url: /img/other/brand/horizontal-left.png
+      - title: SVG
+        url: /img/other/brand/horizontal-left.svg
+  - title: Standard
+    img: /img/other/brand/standard-poster.png
+    list:
+      - title: JPG
+        url: /img/other/brand/vertical-left.jpg
+      - title: PNG
+        url: /img/other/brand/vertical-left.png
+      - title: SVG
+        url: /img/other/brand/vertical-left.svg
+  - title: Monochrome
+    img: /img/other/brand/white-poster.png
+    list:
+      - title: JPG
+        url: /img/other/brand/horizontal-center.jpg
+      - title: PNG
+        url: /img/other/brand/horizontal-center.png
+      - title: SVG
+        url: /img/other/brand/horizontal-center.svg
+  - title: Monochrome
+    img: /img/other/brand/mono-poster.png
+    list:
+      - title: JPG
+        url: /img/other/brand/vertical-center.jpg
+      - title: PNG
+        url: /img/other/brand/vertical-center.png
+      - title: SVG
+        url: /img/other/brand/vertical-center.svg
+  - title: Black
+    img: /img/other/brand/black-hor-poster.png
+    list:
+      - title: JPG
+        url: /img/other/brand/horizontal-right.jpg
+      - title: PNG
+        url: /img/other/brand/horizontal-right.png
+      - title: SVG
+        url: /img/other/brand/horizontal-right.svg
+  - title: Black
+    img: /img/other/brand/black-poster.png
+    list:
+      - title: JPG
+        url: /img/other/brand/vertical-right.jpg
+      - title: PNG
+        url: /img/other/brand/vertical-right.png
+      - title: SVG
+        url: /img/other/brand/vertical-right.svg
+innovation_logo_download:
+  - title: A-Tune
+    img: /img/other/brand/A-Tune-logo-png.png
+    list:
+      - title: JPG
+        url: /img/other/brand/A-Tune-logo-jpg.jpg
+      - title: PNG
+        url: /img/other/brand/A-Tune-logo-png.png
+  - title: StratoVirt
+    img: ./images/StratoVirt-logo.png
+    list:
+      - title: JPG
+        url: /img/other/brand/StratoVirt-logo-jpg.jpg
+      - title: PNG
+        url: /img/other/brand/StratoVirt-logo-png.png
+      - title: SVG
+        url: /img/other/brand/StratoVirt-logo-svg.svg
+  - title: secGear
+    img: /img/other/brand/secGear-logo-png.png
+    list:
+      - title: JPG
+        url: /img/other/brand/secGear-logo-jpg.jpg
+      - title: PNG
+        url: /img/other/brand/secGear-logo-png.png
+ppt_list:
+  - title: 中文模板
+    img: ./images/euler-ppt.jpg
+    url: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler_PPT%20Template_zh.pptx '
+  - title: 英文模板
+    img: ./images/euler-ppt.jpg
+    url: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler_PPT%20Template_en.pptx '
+ppt_list_en:
+  - title: Template
+    img: ./images/euler-ppt.jpg
+    url: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler_PPT%20Template_en.pptx '
