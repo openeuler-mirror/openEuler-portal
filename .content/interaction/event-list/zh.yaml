@@ -46,3 +46,33 @@ apply_steps:
 
   - title: '活动成果反馈'
     desc: '可以更好地了解活动的情况和效果，不断提升 openEuler Meetup 活动的质量和影响力，联合主办方的组织者在活动结束后 3 个工作日内需向社区邮箱<a href="mailto:events@openeuler.sh">events@openeuler.sh</a>提供活动总结资料'
+
+# event_series: 活动系列筛选选项
+#   value: 选项值
+#   label: 选项标签
+event_series:
+  - value: ''
+    label: 全部
+  - value: summit
+    label: 国际开源会议
+  - value: ecology
+    label: 生态技术会议
+  - value: meetup
+    label: Call for X 开发者活动
+  - value: college
+    label: 赛事 & 高校
+  - value: release
+    label: 版本发布计划
+  - value: other
+    label: 其他
+
+# event_status: 活动状态筛选选项
+#   value: 选项值
+#   label: 选项标签
+event_status:
+  - value: ''
+    label: 全部
+  - value: ongoing
+    label: 进行中
+  - value: ended
+    label: 已结束

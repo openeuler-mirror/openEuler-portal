@@ -3,3 +3,33 @@
 # apply_steps: Event application steps (empty array for en, zh-only)
 
 apply_steps: []
+
+# event_series: Event series filter options
+#   value: Option value
+#   label: Option label
+event_series:
+  - value: ''
+    label: All
+  - value: summit
+    label: Open Source Summits
+  - value: ecology
+    label: Ecosystem Tech Conferences
+  - value: meetup
+    label: Call for X Developer Events
+  - value: college
+    label: Competitions & Universities
+  - value: release
+    label: Release Plan
+  - value: other
+    label: Other
+
+# event_status: Event status filter options
+#   value: Option value
+#   label: Option label
+event_status:
+  - value: ''
+    label: All
+  - value: ongoing
+    label: Ongoing
+  - value: ended
+    label: Completed

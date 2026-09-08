@@ -18,8 +18,16 @@ declare module '#content/interaction/event-list' {
     list_data?: ApplyStepListItemT[];
   }
 
+  // event_series / event_status: 筛选选项
+  interface EventFilterOptionT {
+    value: string;
+    label: string;
+  }
+
   interface EventListContentT {
     apply_steps: ApplyStepItemT[];
+    event_series: EventFilterOptionT[];
+    event_status: EventFilterOptionT[];
   }
 
   const data: { zh: EventListContentT; en: EventListContentT };

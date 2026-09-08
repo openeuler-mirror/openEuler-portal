@@ -37,7 +37,7 @@ import IconSearch from '~icons/app-new/icon-header-search.svg';
 import IconFilter from '~icons/app-new/icon-filter.svg';
 import IconSecurityLevel from '~icons/security/icon-security-level.svg';
 
-import { statusMap, REASON, glossaryList } from '~@/data/cve';
+import cveContent from '#content/security/cve';
 import { typeMap, queryYears } from '~@/data/safety-bulletin';
 
 import { getCveList } from '~@/api/api-security';
@@ -56,6 +56,33 @@ const { lePadV } = useScreen();
 
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
+
+const cveData = computed(() => cveContent[locale.value]);
+const statusMap = computed(() => {
+  const map = new Map();
+  cveData.value.status_map.forEach((item) => {
+    map.set(item.key, {
+      value: item.value,
+      label: { zh: item.label, en: item.label },
+      tag: { zh: item.tag, en: item.tag },
+    });
+  });
+  return map;
+});
+const REASON = computed(() =>
+  cveData.value.reason.map((item) => ({
+    value: item.value,
+    label: { zh: item.label, en: item.label },
+  }))
+);
+const glossaryList = computed(() =>
+  cveData.value.glossary.map((item) => ({
+    status: item.status,
+    description: { zh: item.description, en: item.description },
+    listZh: item.list,
+    listEn: item.list,
+  }))
+);
 
 interface LabelT {
   zh: string;
@@ -93,7 +120,7 @@ const columns = [
 
 // -------------------- 状态 --------------------
 const statusOptions = ref<OptionT[]>([]);
-statusMap.forEach((item) => {
+statusMap.value.forEach((item) => {
   statusOptions.value.push({
     value: item.value,
     label: {
