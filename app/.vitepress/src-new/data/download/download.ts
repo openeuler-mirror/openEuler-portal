@@ -490,7 +490,7 @@ export default {
       {
         NAME: 'openEuler 24.03 LTS SP4',
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP4/',
-        DESC: 'openEuler 24.03 LTS SP4, built on kernel 6.6, is an enhanced extension tailored for server, cloud, and AI scenarios. This release introduces new features and enhancements, including kernel optimizations, UnifiedBus SuperPoD reliability & usability, NPU slicing, rapid recovery for inference services, E2B sandboxes, intelligent O&M (diagnosis & tuning), compilers, and confidential virtual machines (CVMs). It delivers a brand-new experience to developers and users, extending its reach to broader industries.',
+        DESC: 'openEuler 24.03 LTS SP4, built on kernel 6.6, is an enhanced extension tailored for server, cloud, and AI scenarios. This release introduces new features and enhancements, including kernel optimizations, UnifiedBus SuperPoD reliability & usability, NPU partitioning, rapid recovery for inference services, E2B sandboxes, intelligent O&M (diagnosis & tuning), compilers, and confidential virtual machines (CVMs). It delivers a brand-new experience to developers and users, extending its reach to broader industries.',
         RELEASE_DESC_URL:
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP4/server/releasenotes/introduction.html`,
         INSTALL_GUIDENCE_URL:
