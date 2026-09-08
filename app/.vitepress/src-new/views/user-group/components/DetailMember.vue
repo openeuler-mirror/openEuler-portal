@@ -127,7 +127,7 @@ const dialogVisible = ref(false);
       </div>
     </div>
     <div v-else class="empty">
-      <img :src="isDark ? empty_dark : empty_light" class="image" />
+      <img :src="isDark ? empty_dark : empty_light" class="image" alt="" />
       <p class="empty-title">{{ t('usergroup.waiting') }}</p>
       <p class="empty-desc">
         {{ t('usergroup.waitDesc')

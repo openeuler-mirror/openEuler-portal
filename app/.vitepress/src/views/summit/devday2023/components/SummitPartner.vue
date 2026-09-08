@@ -45,6 +45,7 @@ onMounted(() => {
             :src="
               commonStore.theme === 'light' ? itemLogo.img : itemLogo.img_dark
             "
+            alt=""
           />
         </a>
       </div>

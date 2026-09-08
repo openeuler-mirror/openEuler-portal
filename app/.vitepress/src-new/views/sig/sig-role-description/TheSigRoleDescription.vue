@@ -226,11 +226,11 @@ const reportSectionLinkClick = (
           v-analytics="(e: Event) => reportSectionLinkClick(e, section, item.title)"
         >
           <div class="title-wrap">
-            <img class="icon-requrement" :src="section.card_point_bg" />
+            <img class="icon-requrement" :src="section.card_point_bg" alt="" />
             <div class="title">{{ item.title }}</div>
           </div>
           <div v-if="item.desc" class="title-wrap">
-            <img class="icon-requrement" style="visibility: hidden" />
+            <img class="icon-requrement" style="visibility: hidden" alt="" />
             <div class="desc">{{ item.desc }}</div>
           </div>
 

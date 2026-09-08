@@ -81,8 +81,8 @@ const scheduleList = [
 
 <template>
   <div class="banner-box">
-    <img :src="SummitBanner" class="banner" />
-    <img :src="SummitBannerMo" class="banner banner-mo" />
+    <img :src="SummitBanner" class="banner" alt="2022湖南欧拉操作系统生态大会 2022年9月29日 湖南·长沙" />
+    <img :src="SummitBannerMo" class="banner banner-mo" alt="2022湖南欧拉操作系统生态大会 2022年9月29日 湖南·长沙" />
     <div class="btn-warper">
       <a
         target="_blank"
@@ -101,7 +101,7 @@ const scheduleList = [
   <AppContext :mobile-top="40">
     <div class="middle">
       <div class="middle-top">
-        <img :src="scheduleImg" class="headline" />
+        <img :src="scheduleImg" class="headline" alt="峰会日程" />
         <div v-show="!isMobile" class="middle-top-context">
           <OTable :data="scheduleList">
             <el-table-column width="200">
@@ -149,7 +149,7 @@ const scheduleList = [
         </div>
       </div>
       <div class="middle-bottom">
-        <img :src="cooperationImg" class="headline" />
+        <img :src="cooperationImg" class="headline" alt="合作伙伴" />
         <div class="middle-bottom-context">
           <p class="title">指导单位</p>
           <p class="details">

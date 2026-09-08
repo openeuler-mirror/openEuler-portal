@@ -86,7 +86,7 @@ const liveStyleMo = ref({
               :class="commonStore.theme"
               :style="{ backgroundImage: `url(${headGround})` }"
             >
-              <img :src="live.PHOTOPATH" class="live-background-img" />
+              <img :src="live.PHOTOPATH" class="live-background-img" alt="" />
             </div>
             <div class="live-detail-right">
               <div>

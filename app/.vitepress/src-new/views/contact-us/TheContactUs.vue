@@ -97,7 +97,7 @@ const flexGap = computed(() =>
   <AppSection :title="content.follow_us.title">
     <div class="follow-us" :class="isZh ? 'zh' : 'en'">
       <div class="follow-us-cover">
-        <img :src="content.follow_us.cover" class="cover" />
+        <img :src="content.follow_us.cover" class="cover" alt="" />
       </div>
       <div class="follow-us-content">
         <h3>{{ content.follow_us.desc }}</h3>
@@ -108,7 +108,7 @@ const flexGap = computed(() =>
               :key="item.label"
               class="code-img"
             >
-              <img :src="item.code" />
+              <img :src="item.code" alt="" />
               <p>{{ item.label }}</p>
             </div>
           </div>
@@ -119,7 +119,7 @@ const flexGap = computed(() =>
               :key="item.href"
               class="follow-link-item"
             >
-              <img :src="isDark ? item.icon_dark : item.icon" />
+              <img :src="isDark ? item.icon_dark : item.icon" alt="" />
               <OLink
                 hoverUnderline
                 :href="item.href"
@@ -143,8 +143,8 @@ const flexGap = computed(() =>
               rel="noopener noreferrer"
               class="follow-link-item"
             >
-              <img class="default" :src="item.icon_dark" />
-              <img class="hover" :src="item.icon_primary" />
+              <img class="default" :src="item.icon_dark" alt="" />
+              <img class="hover" :src="item.icon_primary" alt="" aria-hidden="true" />
               {{ item.label }}
             </OLink>
           </div>

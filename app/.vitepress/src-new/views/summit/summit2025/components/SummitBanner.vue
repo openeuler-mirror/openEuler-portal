@@ -35,8 +35,8 @@ onMounted(() => {
     <div class="banner-panel-cover" :class="{'banner-panel-cover-dark': isDark}"></div>
     <div class="banner-panel-content">
       <div data-aos="fade-up" class="banner-main">
-        <img :src="bannerData.textImg[commonStore.theme]" class="text-img" />
-        <img :src="bannerData.textImgMb[commonStore.theme]" class="text-img-mb" />
+        <img :src="bannerData.textImg[commonStore.theme]" class="text-img" :alt="bannerData.textImgAlt" />
+        <img :src="bannerData.textImgMb[commonStore.theme]" class="text-img-mb" :alt="bannerData.textImgAlt" />
         <OButton
           class="banner-btn"
           animation

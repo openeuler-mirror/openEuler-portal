@@ -35,6 +35,7 @@ interface MirrorMsg {
   name: string;
   location: string;
   sponsor: string;
+  sponsorName: string;
   sponsorLogo: string;
   http: string;
   rsnc: string;
@@ -53,6 +54,7 @@ const initTableData = (data: any[]): MirrorMsg[] => {
     name: item.Name,
     location: item.Country,
     sponsor: item.SponsorURL,
+    sponsorName: item.SponsorName,
     sponsorLogo: item.SponsorLogoURL,
     http: item.HttpURL,
     rsnc: item.RsyncURL,
@@ -251,7 +253,7 @@ const rsyncCode = computed(() => mirrorListContent[locale.value].rsync_code);
           target="_blank"
           rel="noopener noreferrer"
           class="mirror-list-img"
-          ><img :src="row.sponsorLogo"
+          ><img :src="row.sponsorLogo" :alt="row.sponsorName"
         /></a>
       </template>
       <template #td_rsnc="{ row }">
@@ -280,7 +282,7 @@ const rsyncCode = computed(() => mirrorListContent[locale.value].rsync_code);
           <div class="label">{{ t('download.MIRROR_ALL_SPONSOR') }}</div>
           <div class="value sponsor">
             <a :href="mirror.sponsor" class="mirror-list-img"
-              ><img :src="mirror.sponsorLogo"
+              ><img :src="mirror.sponsorLogo" :alt="mirror.sponsorName"
             /></a>
           </div>
         </div>

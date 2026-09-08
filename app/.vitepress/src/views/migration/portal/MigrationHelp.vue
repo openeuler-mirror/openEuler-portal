@@ -43,11 +43,11 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
           </div>
           <div v-if="portalInfo.help?.offical_qr.img" class="help-box-qrs">
             <div class="qrs-item">
-              <img :src="portalInfo.help.offical_qr.img" />
+              <img :src="portalInfo.help.offical_qr.img" alt="" />
               <p>{{ portalInfo.help.offical_qr.text }}</p>
             </div>
             <div class="qrs-item">
-              <img :src="portalInfo.help.assistant_qr.img" />
+              <img :src="portalInfo.help.assistant_qr.img" alt="" />
               <p>{{ portalInfo.help.assistant_qr.text }}</p>
             </div>
           </div>

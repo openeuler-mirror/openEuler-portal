@@ -24,7 +24,7 @@ const isDark = computed(() => {
   <div class="sig-agenda">
     <div class="title-img">
       <p class="title-text">{{ agendaData.title }}</p>
-      <img :src="isDark ? agendaData.titleImDark : agendaData.titleImg" />
+      <img :src="isDark ? agendaData.titleImDark : agendaData.titleImg" alt="" />
     </div>
     <div class="agenda">
       <OTabs v-model="tabType" class="agenda-tabs">

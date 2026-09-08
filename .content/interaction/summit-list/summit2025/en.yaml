@@ -25,6 +25,7 @@ banner:
   text_img_mb:
     light: ./images/textImg-mb-light.png
     dark: ./images/textImg-mb-dark.png
+  textImgAlt: Operating System Conference & openEuler Summit 2025, November 14-15, ZhongGuanCun International Innovation Center, Beijing, China
   sign_up_title: Register
   watch_replay: Replay
   replay_link: /en/interaction/summit-list/summit2025/#live

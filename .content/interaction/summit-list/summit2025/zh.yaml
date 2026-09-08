@@ -25,6 +25,7 @@ banner:
   text_img_mb:
     light: ./images/textImg-mb-light.png
     dark: ./images/textImg-mb-dark.png
+  textImgAlt: 操作系统大会&openEuler Summit 2025，11月14日-15日，中国·北京中关村国际创新中心
   sign_up_title: 立即报名
   watch_replay: 观看回放
   replay_link: /zh/interaction/summit-list/summit2025/#live

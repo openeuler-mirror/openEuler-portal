@@ -82,11 +82,11 @@ useInViewDuration(container, (duration) => {
   >
     <i18n-t class="play-community-title" keypath="home.playCommunity" tag="h3">
       <template #openEuler>
-        <img class="logo" :src="logo" />
+        <img class="logo" :src="logo" alt="openEuler" />
       </template>
       <template #click>
         <div class="click">
-          <img :src="click" />
+          <img :src="click" alt="" />
           <div class="click-bg"></div>
         </div>
       </template>
@@ -94,7 +94,7 @@ useInViewDuration(container, (duration) => {
     <div class="play-intro">
       <p class="play-intro-text">{{ $t('home.playIntro') }}</p>
       <div class="get-os">
-        <img @click.stop="" :src="theme === 'light' ? blue : blueDark" />
+        <img @click.stop="" :src="theme === 'light' ? blue : blueDark" alt="" />
       </div>
     </div>
     <div class="play-cards">
@@ -146,7 +146,7 @@ useInViewDuration(container, (duration) => {
         <div class="text">
           {{ $t('home.communityVitality') }}
         </div>
-        <img :src="vitality" />
+        <img :src="vitality" alt="" />
       </div>
       <div class="vitality-data">
         <div
@@ -181,8 +181,8 @@ useInViewDuration(container, (duration) => {
         </template>
       </OLink>
     </div>
-    <img class="cube" :src="theme === 'light' ? cube : cubeDark" />
-    <img class="floor-bg" :src="theme === 'light' ? floorBg : floorBgDark" />
+    <img class="cube" :src="theme === 'light' ? cube : cubeDark" alt="" />
+    <img class="floor-bg" :src="theme === 'light' ? floorBg : floorBgDark" alt="" />
   </div>
 </template>
 

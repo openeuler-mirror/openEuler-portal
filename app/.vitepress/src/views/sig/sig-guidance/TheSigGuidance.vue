@@ -47,7 +47,7 @@ const language = configData.lang;
             ]"
           >
             <div class="middle-item-bgdconfig">
-              <img :src="LEFT_IMG[index]" />
+              <img :src="LEFT_IMG[index]" alt="" />
             </div>
             <div class="middle-item-infoconfig">
               <div class="middle-item-infoconfig-circle">
@@ -69,7 +69,7 @@ const language = configData.lang;
             ]"
           >
             <div class="middle-item-bgdconfig">
-              <img :src="RIGHT_IMG[index]" />
+              <img :src="RIGHT_IMG[index]" alt="" />
             </div>
             <div class="middle-item-infoconfig">
               <div class="middle-item-infoconfig-circle">

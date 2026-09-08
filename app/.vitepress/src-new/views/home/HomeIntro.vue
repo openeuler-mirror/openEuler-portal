@@ -92,6 +92,7 @@ useInViewDuration(
                   <img
                     class="circle"
                     :src="theme === 'light' ? circle : circleDark"
+                    alt=""
                   />
                 </div>
                 <div

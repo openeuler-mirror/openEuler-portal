@@ -44,7 +44,7 @@ const guideData = computed(() => userGroupContent.zh.guide);
               <p class="tip">{{ guideData.tip1 }}</p>
               <p class="tip">{{ guideData.tip2 }}</p>
             </div>
-            <img class="code" :src="guideData.wechat" />
+            <img class="code" :src="guideData.wechat" alt="微信群二维码" />
           </div>
         </div>
       </div>

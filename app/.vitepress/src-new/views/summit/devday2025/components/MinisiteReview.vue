@@ -20,7 +20,7 @@ const isDark = computed(() => {
   <div class="review">
     <div class="title-img">
       <p class="title-text">{{ reviewData.title }}</p>
-      <img :src="isDark ? reviewData.titleImDark : reviewData.titleImg" />
+      <img :src="isDark ? reviewData.titleImDark : reviewData.titleImg" alt="" />
     </div>
     <div class="link-box">
       <p v-for="item in reviewData.list" :key="item.link">

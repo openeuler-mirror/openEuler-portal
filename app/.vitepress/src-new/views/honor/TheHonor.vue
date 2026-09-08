@@ -150,7 +150,7 @@ watch(
             </p>
             <div class="logo-list">
               <div v-for="(logo, i) in tab.data?.company.list" :key="i" class="item-logo">
-                <img :src="logo[commonStore.theme]" />
+                <img :src="logo[commonStore.theme]" :alt="logo.name || ''" />
               </div>
             </div>
             <p class="company-tips">{{ tab.data?.company.tips }}</p>

@@ -200,7 +200,7 @@ onUnmounted(() => {
         <div v-else class="header-change">
           <div class="title">
             <span>{{ NEW_CHANGE_DATA.title }}</span>
-            <img :src="NEW_CHANGE_DATA.icon" />
+            <img :src="NEW_CHANGE_DATA.icon" alt="" />
           </div>
           <p class="desc">{{ NEW_CHANGE_DATA.desc }}</p>
           <ul class="tab">

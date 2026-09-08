@@ -38,7 +38,7 @@ const { t } = useI18n();
       <div class="guide-right">
         <p class="title">{{ t('usergroup.joinWechat') }}</p>
         <div class="tip-content">
-          <img class="code" :src="guideData.wechat" />
+          <img class="code" :src="guideData.wechat" alt="微信群二维码" />
           <p class="tip">{{ t('usergroup.wechatDesc') }}</p>
         </div>
       </div>
@@ -48,7 +48,7 @@ const { t } = useI18n();
           <p class="title">{{ t('usergroup.joinWechat') }}</p>
           <p class="tip">{{ t('usergroup.wechatDesc') }}</p>
         </div>
-        <img class="code" :src="guideData.wechat" />
+        <img class="code" :src="guideData.wechat" alt="微信群二维码" />
       </div>
     </div>
   </AppSection>

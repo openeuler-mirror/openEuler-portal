@@ -25,7 +25,7 @@ const handleGo = (path: string) => {
       <OCard class="content-card">
         <div class="advantage">
           <div class="advantage-item">
-            <img :src="portalInfo.advantage.card_top_left.url" />
+            <img :src="portalInfo.advantage.card_top_left.url" alt="" />
             <div class="item-right title-center">
               <p>{{ portalInfo.advantage.card_top_left.title_01 }}</p>
               <p>{{ portalInfo.advantage.card_top_left.title_02 }}</p>
@@ -35,13 +35,15 @@ const handleGo = (path: string) => {
           <img
             class="advantage-transition"
             :src="portalInfo.advantage.transition_right"
+            alt=""
           />
           <img
             class="advantage-down"
             :src="portalInfo.advantage.transition_down"
+            alt=""
           />
           <div class="advantage-item">
-            <img :src="portalInfo.advantage.card_top_right.url" />
+            <img :src="portalInfo.advantage.card_top_right.url" alt="" />
             <div class="item-right">
               <p>{{ portalInfo.advantage.card_top_right.title_01 }}</p>
               <p v-show="portalInfo.advantage.card_top_right.title_02 != ''">
@@ -63,7 +65,7 @@ const handleGo = (path: string) => {
               class="benefit-item"
               @click="handleGo(item.link)"
             >
-              <img :src="item.icon" />
+              <img :src="item.icon" alt="" />
               <p>{{ item.title }}</p>
             </div>
           </div>
@@ -79,6 +81,7 @@ const handleGo = (path: string) => {
                       ? portalInfo.advantage.benefit.dark[0].icon
                       : portalInfo.advantage.benefit.light[0].icon
                   "
+                  alt=""
                 />
                 <p>{{ portalInfo.advantage.benefit.light[0].title }}</p>
               </div>
@@ -93,6 +96,7 @@ const handleGo = (path: string) => {
                       ? portalInfo.advantage.benefit.dark[2].icon
                       : portalInfo.advantage.benefit.light[2].icon
                   "
+                  alt=""
                 />
                 <p>{{ portalInfo.advantage.benefit.light[2].title }}</p>
               </div>
@@ -109,6 +113,7 @@ const handleGo = (path: string) => {
                       ? portalInfo.advantage.benefit.dark[1].icon
                       : portalInfo.advantage.benefit.light[1].icon
                   "
+                  alt=""
                 />
                 <p>{{ portalInfo.advantage.benefit.light[1].title }}</p>
               </div>
@@ -123,6 +128,7 @@ const handleGo = (path: string) => {
                       ? portalInfo.advantage.benefit.dark[3].icon
                       : portalInfo.advantage.benefit.light[3].icon
                   "
+                  alt=""
                 />
                 <p>{{ portalInfo.advantage.benefit.light[3].title }}</p>
               </div>
