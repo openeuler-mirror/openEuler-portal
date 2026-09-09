@@ -1,26 +1,6 @@
 import IconOutLink from '~icons/app/icon-out-link.svg';
 import i18n from '~@/i18n';
 
-export const arList = [
-  '/interaction/news-list',
-  '/interaction/blog-list',
-  '/monthly-bulletins',
-  '/download',
-  '/download/commercial-release',
-  '/community/organization',
-  '/community/member',
-  '/showcase',
-  '/other/brand',
-  '/security/security-bulletins',
-  '/community/mailing-list',
-  '/other/privacy',
-  '/personal-data-collection-overview',
-  '/data-sharing-with-third-parties',
-  '/other/cookies',
-];
-
-export const AR_URL = 'https://ar.openeuler.org';
-
 export const getCodeRepository = () => {
   const { t } = i18n.global;
   return {
@@ -47,25 +27,5 @@ export const getCodeRepository = () => {
       }
     ],
   };
-}
-
-export const langData = {
-  label: '语言切换',
-  children: [
-    {
-      id: 'zh',
-      label: '简体中文',
-      simple: '中',
-    },
-    {
-      id: 'en',
-      label: 'English',
-      simple: 'EN',
-    },
-    {
-      id: 'ar',
-      label: 'العربية',
-      simple: 'AR',
-    },
-  ],
 };
+

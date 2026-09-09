@@ -12,7 +12,9 @@ import { useCommon } from '@/stores/common';
 import { useLocale } from '~@/composables/useLocale';
 
 import { getTagsIcon } from '~@/shared/search';
-import { maintainerDefaults } from '~@/data/search';
+import searchContent from '#content/search';
+
+const maintainerDefaults = searchContent.maintainer;
 
 import defaultImg from '~@/assets/category/search/default-logo.png';
 import IconUser from '~icons/app-new/icon-user.svg';

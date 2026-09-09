@@ -1,0 +1,31 @@
+# UB Service Core 页数据 / UB Service Core page data
+#
+# entrance_list: 入口卡片列表
+#   icon: 入口图标（SVG，inline 消费，路径带 ?raw）
+#   title: 卡片标题
+#   desc: 卡片描述
+#   href: 链接地址
+#   is_outlink: 是否为外部链接（可选）
+#
+# whitepaper: 白皮书链接
+#   zh: 中文白皮书路径
+#   en: 英文白皮书路径
+
+entrance_list:
+  - icon: ./images/icon-white-paper.svg?raw
+    title: 白皮书
+    desc: 了解 UB Service Core，使用、开发、管理和维护灵衢产品
+    href: '/projects/ub-service-core/white-paper/灵衢系统高阶服务软件架构参考设计.pdf'
+  - icon: ./images/icon-code-repo.svg?raw
+    title: 代码仓列表
+    desc: 查看 UB Service Core 代码仓、联系方式等信息
+    href: /zh/sig/sig-UB-ServiceCore#repositories
+  - icon: ./images/icon-document.svg?raw
+    title: 相关文档
+    desc: 了解如何开发，使用 UB Service Core
+    href: 'https://atomgit.com/openeuler/community/tree/master/sig/sig-UB-ServiceCore '
+    is_outlink: true
+
+whitepaper:
+  zh: '/zh/projects/docs/UB-Service-Core-SW-Arch-RD-2.0-zh'
+  en: '/en/projects/docs/UB-Service-Core-SW-Arch-RD-2.0-en'

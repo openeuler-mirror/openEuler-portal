@@ -33,3 +33,29 @@ declare module '#content/security/cve' {
 
   export default data;
 }
+
+declare module '#content/security/safety-bulletin' {
+  // type_map: 严重等级映射（从 Map 转为数组，消费时重建 Map）
+  //   key: 等级键名
+  //   value: 等级值
+  //   label: 等级标签
+  //   score: 分数范围
+  interface SafetyTypeMapItemT {
+    key: string;
+    value: string;
+    label: string;
+    score: string;
+  }
+
+  interface SafetyBulletinContentT {
+    type_map: SafetyTypeMapItemT[];
+    security_notice_nos: string[];
+  }
+
+  const data: {
+    zh: SafetyBulletinContentT;
+    en: SafetyBulletinContentT;
+  };
+
+  export default data;
+}

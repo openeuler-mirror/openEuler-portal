@@ -9,13 +9,14 @@ import IconClose from '~icons/app-new/icon-close.svg';
 import { storeToRefs } from 'pinia';
 import { useCommon } from '@/stores/common';
 import { useScreen } from '~@/composables/useScreen';
+import commonContent from '#content/common';
 
-import {
-  FIRST_TOUR_STEPS,
-  NEW_CHANGE_TOUR_STEPS,
-  NEW_CHANGE_DATA,
-  NEW_GUIDE_TOUR_STEPS,
-} from '~@/data/tour';
+const {
+  first_tour_steps: FIRST_TOUR_STEPS,
+  new_change_tour_steps: NEW_CHANGE_TOUR_STEPS,
+  new_change_data: NEW_CHANGE_DATA,
+  new_guide_tour_steps: NEW_GUIDE_TOUR_STEPS,
+} = commonContent.tour;
 
 const route = useRoute();
 const { lang } = useData();

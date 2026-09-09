@@ -3,10 +3,12 @@ import AppSection from '~@/components/AppSection.vue';
 import { OFigure } from '@opensig/opendesign';
 import { useCommon } from '@/stores/common';
 import { useLocale } from '~@/composables/useLocale';
-import { INTELLIGENCE_BOOM_MEMBERS } from '~@/data/project';
+import boomContent from '#content/projects/intelligence-boom';
 
 const commonStore = useCommon();
 const { t } = useLocale();
+
+const INTELLIGENCE_BOOM_MEMBERS = boomContent.members;
 </script>
 
 <template>

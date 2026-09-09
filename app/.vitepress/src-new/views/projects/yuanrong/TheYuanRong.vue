@@ -4,7 +4,8 @@ import { OFigure, ORow, OCol, OLink } from '@opensig/opendesign';
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import AppSection from '~@/components/AppSection.vue';
 
-import { entranceList } from '~@/data/project';
+import yuanrongContent from '#content/projects/yuanrong';
+import { createSvgIcon } from '~@/composables/createSvgIcon';
 
 import banner from '~@/assets/category/yuanrong/banner.jpg';
 
@@ -21,6 +22,11 @@ import { useScreen } from '~@/composables/useScreen';
 
 const { locale, t } = useLocale();
 const { lePadV } = useScreen();
+
+const entranceList = {
+  zh: yuanrongContent.zh.entrance_list,
+  en: yuanrongContent.en.entrance_list,
+};
 
 const frameworkList = [
   {
@@ -55,7 +61,7 @@ const frameworkList = [
       <OFigure v-if="lePadV" :src="locale ==='en' ? frameworkImgEn : frameworkImgZh" class="framework-img"></OFigure>
       <div class="framework-left">
         <div v-for="(item, i) in frameworkList" :key="i" class="item">
-          <OIcon><component :is="item.icon"></component></OIcon>
+          <OIcon><component :is="createSvgIcon(item.icon)" /></OIcon>
           <div class="item-content">
             <p class="item-title">{{ item.title }}</p>
             <p class="item-desc">{{ item.desc }}</p>
@@ -71,7 +77,7 @@ const frameworkList = [
       <OCol v-for="(item, i) in entranceList[locale]" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 50%'">
         <div class="item-info">
           <div class="info-title">
-            <OIcon class="gitee-icon"><component :is="item.icon" /></OIcon>
+            <OIcon class="gitee-icon"><component :is="createSvgIcon(item.icon)" /></OIcon>
             <p class="content-title">{{ item.title }}</p>
           </div>
           <div class="info-content">

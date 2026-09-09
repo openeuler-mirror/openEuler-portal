@@ -5,7 +5,9 @@ import { useI18n } from 'vue-i18n';
 import AppSection from '~@/components/AppSection.vue';
 import homeContent from '#content/home';
 import { createSvgIcon } from '~@/composables/createSvgIcon';
-import { linkData } from '~@/data/user-group';
+import userGroupDetailContent from '#content/community/user-group/detail';
+
+const linkData = userGroupDetailContent.zh.link;
 import { useScreen } from '~@/composables/useScreen';
 import type { ShowCaseT } from '~@/@types/type-user-group';
 
@@ -60,7 +62,7 @@ const cardIcon = (type: string) => {
           color="primary"
           :size="lePadV ? 'small' : 'large'"
           class="button"
-          :href="linkData.provideCase"
+          :href="linkData.provide_case"
         >
           {{ t('usergroup.provideCase') }}
         </OButton>

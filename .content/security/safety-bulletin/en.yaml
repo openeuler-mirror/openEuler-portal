@@ -1,0 +1,38 @@
+# Safety Bulletin page data
+#
+# type_map: Severity level mapping (converted from Map to array, rebuilt at consumption)
+#   key: Level key name
+#   value: Level value
+#   label: Level label
+#   score: Score range
+#
+# security_notice_nos: Special security notice numbers
+# Top-level is an array.
+
+type_map:
+  - key: Low
+    value: Low
+    label: Low
+    score: '0.01-3.9'
+  - key: Medium
+    value: Medium
+    label: Medium
+    score: '4.0-6.9'
+  - key: Moderate
+    value: Moderate
+    label: Moderate
+    score: '4.0-6.9'
+  - key: High
+    value: High
+    label: High
+    score: '7.0-8.9'
+  - key: Critical
+    value: Critical
+    label: Critical
+    score: '9.0-10.0'
+
+security_notice_nos:
+  - openEuler-SA-2023-1487
+  - openEuler-SA-2023-1489
+  - openEuler-SA-2023-1504
+  - openEuler-SA-2023-1505

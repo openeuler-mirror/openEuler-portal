@@ -9,6 +9,7 @@
 | `category.yaml` | `category` | 全站分类标识列表，用于 frontmatter `category` 字段合法值校验 |
 | `nav_filter.yaml` | `nav_filter` | 导航语言过滤配置，控制各导航在不同语言下是否显示 |
 | `nss.yaml` | `nss` | 隐藏 NSS 浮动按钮的路由列表 |
+| `tour.yaml` | `tour` | 首页全站引导步骤和图片配置 |
 | `zh.yaml` | `zh` | SEO 关键词配置（zh 专属，en 无对应数据故未创建 `en.yaml`） |
 
 ## 数据板块
@@ -18,6 +19,7 @@
 | `category` | `string[]` | 分类标识数组 |
 | `nav_filter` | `NavFilterItemT[]` | 导航过滤配置，每项含 `name`（支持 `/**` 通配）和 `lang` |
 | `nss` | `string[]` | 需隐藏 NSS 按钮的路由路径段 |
+| `tour` | `TourContentT` | 首页引导步骤、目标选择器和主题图片 |
 | `zh` | `Record<string, SeoKeywordItemT[]>` | SEO 关键词配置，按页面 key 分组 |
 
 ## 设计原则

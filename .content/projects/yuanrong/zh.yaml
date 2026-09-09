@@ -1,0 +1,19 @@
+# openYuanrong 页数据 / openYuanrong page data
+#
+# entrance_list: 入口卡片列表
+#   icon: 入口图标（SVG，inline 消费，路径带 ?raw）
+#   title: 卡片标题
+#   desc: 卡片描述
+#   href: 链接地址
+#   is_outlink: 是否为外部链接（可选）
+
+entrance_list:
+  - icon: ./images/icon-code-repo.svg?raw
+    title: 代码仓列表
+    desc: 查看 openYuanrong 代码仓、联系方式等信息
+    href: /zh/sig/sig-YuanRong#repositories
+  - icon: ./images/icon-document.svg?raw
+    title: 查看文档
+    desc: 了解如何使用 openYuanrong 开发分布式应用
+    href: 'http://docs.openyuanrong.org/zh-cn/latest/index.html'
+    is_outlink: true

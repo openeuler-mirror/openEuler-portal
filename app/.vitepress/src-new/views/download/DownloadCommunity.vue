@@ -5,7 +5,6 @@ import { OTab, OTabPane } from '@opensig/opendesign';
 import AppSection from '~@/components/AppSection.vue';
 
 import communityVersionData from '~@/data/download/download';
-import { fileTree, mirrorList } from '~@/data/download/download-new';
 import downloadContent from '#content/download';
 
 import { useLocale } from '~@/composables/useLocale';
@@ -24,6 +23,9 @@ const emits = defineEmits<{
 }>();
 
 const { locale, t } = useLocale();
+
+const fileTree = downloadContent.new.fileTree;
+const mirrorList = downloadContent.new.mirrorList;
 
 const activeTab = ref('latest');
 const shownNameList = computed(() => downloadContent[locale.value].community_versions);

@@ -10,7 +10,8 @@ import { useDebounceFn } from '@vueuse/core';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
 import commonContent from '#content/common';
-import { arList, getCodeRepository, AR_URL } from '~@/data/header';
+import headerContent from '#content/header';
+import { getCodeRepository } from '~@/data/header';
 
 import { getUnreadMsgCount } from '@/api/api-messageCenter';
 import { queryPersonalInfo } from '@/api/api-login';
@@ -30,6 +31,9 @@ interface LanguageOptionT {
   label: string;
   simple: string;
 }
+
+const arList = headerContent.zh.ar_list;
+const AR_URL = headerContent.zh.ar_url;
 
 const router = useRouter();
 const { lang, frontmatter } = useData();

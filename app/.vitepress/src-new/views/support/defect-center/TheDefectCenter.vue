@@ -28,7 +28,14 @@ import IconSecurityLevel from '~icons/security/icon-security-level.svg';
 import { getSecurityList, getProductList, getComponentList } from '~@/api/api-security';
 import { SecurityListsT, SafetyBulletinQueryT } from '~@/@types/type-security';
 
-import { typeMap } from '~@/data/safety-bulletin';
+import safetyContent from '#content/security/safety-bulletin';
+
+const typeMap = new Map(
+  safetyContent.zh.type_map.map((item) => {
+    const en = safetyContent.en.type_map.find((e) => e.key === item.key);
+    return [item.key, { value: item.value, label: { zh: item.label, en: en?.label ?? item.label }, score: item.score }];
+  })
+);
 
 import { useDebounceSearch } from '~@/composables/useDebounceSearch';
 import { changeTimeStamp } from '~@/utils/common';

@@ -1,0 +1,38 @@
+# 安全公告页数据 / Safety Bulletin page data
+#
+# type_map: 严重等级映射（从 Map 转为数组，消费时重建 Map）
+#   key: 等级键名
+#   value: 等级值
+#   label: 等级标签
+#   score: 分数范围
+#
+# security_notice_nos: 特殊安全公告编号列表
+# 顶层为数组。
+
+type_map:
+  - key: Low
+    value: Low
+    label: 低
+    score: '0.01-3.9'
+  - key: Medium
+    value: Medium
+    label: 中
+    score: '4.0-6.9'
+  - key: Moderate
+    value: Moderate
+    label: 中
+    score: '4.0-6.9'
+  - key: High
+    value: High
+    label: 高
+    score: '7.0-8.9'
+  - key: Critical
+    value: Critical
+    label: 致命
+    score: '9.0-10.0'
+
+security_notice_nos:
+  - openEuler-SA-2023-1487
+  - openEuler-SA-2023-1489
+  - openEuler-SA-2023-1504
+  - openEuler-SA-2023-1505

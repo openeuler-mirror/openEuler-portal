@@ -8,7 +8,7 @@ import { useData } from 'vitepress';
 import { useScreen } from '~@/composables/useScreen';
 import TechArchitecture from './TechArchitecture.vue';
 
-import { VERSION_INFO } from '~@/data/project/intelligence-boom';
+import boomContent from '#content/projects/intelligence-boom';
 import { LocaleT } from '~@/@types/type-locale';
 import IconOutLink from '~icons/app-new/icon-outlink-new.svg';
 
@@ -35,9 +35,9 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 
 const versionInfo = computed(() => {
   const locale = lang.value as LocaleT;
-  const version = props.version as keyof typeof VERSION_INFO[LocaleT];
+  const version = props.version as keyof typeof boomContent[LocaleT]['version_info'];
 
-  return VERSION_INFO[locale]?.[version];
+  return boomContent[locale]?.version_info[version];
 });
 </script>
 <template>

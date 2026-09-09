@@ -1,0 +1,96 @@
+# Intelligence BooM page data
+#
+# vision: Vision list
+#   title: Vision title
+#   desc: Vision description
+#
+# version_info: Version info
+#   first: First version
+#     name: Version name
+#     desc: Version description
+#     url: Version link
+#     picture: Version image
+#     feature: Feature list
+#       title: Feature category title
+#       desc: Feature item list
+#         name: Feature item name
+#         desc: Feature item description
+#   second: Second version (same structure as first)
+
+vision:
+  - title: Break Technical Barriers
+    desc: Democratize LLM inference through full-stack open source innovation.
+  - title: Fuel Industry Transformation
+    desc: Build a collaborative AI application platform to drive industrial intelligence.
+  - title: Advance Ecosystem Collaboration
+    desc: Forge universal standards and collaboration across the community, academia, and enterprises.
+
+version_info:
+  first:
+    name: Intelligence BooM 25.07 (Hui Noodle)
+    desc: Build out-of-the-box inference + agentic workflow solutions
+    url: 'https://gitcode.com/openeuler/llm_solution/blob/master/doc/Release Notes/Version 1.0_Hui Noodle.md'
+    picture: ./images/first_version.png
+    feature:
+      - title: Versatile Compatibility
+        desc:
+          - name: ''
+            desc: Next-gen tuning and O&M agents powered by RAG
+          - name: ''
+            desc: Unified support for diverse hardware, including x86/Arm CPUs, Ascend NPUs, and NVIDIA GPUs
+      - title: Dependable Security
+        desc:
+          - name: ''
+            desc: Trusted platform foundation with robust protection for data and model privacy
+      - title: Seamless Onboarding
+        desc:
+          - name: ''
+            desc: Effortless distributed deployment in 15 minutes via oeDeploy with a single command
+          - name: ''
+            desc: 50+ mainstream open source models supported with 0-day adaptation
+          - name: ''
+            desc: Flexible scaling for DeepSeek-V3/R1 from single-node prototyping to massive-scale cluster production
+          - name: ''
+            desc: CPU+xPU collaborative inference with flexible MoE scaling and expert offloading
+      - title: Streamlined Integration
+        desc:
+          - name: ''
+            desc: Enterprise AI agent development platform with enhanced workflow integration capabilities
+          - name: ''
+            desc: Streamlined operator development based on Triton and SWFT
+          - name: ''
+            desc: Multi-agent LLMs for automated operator generation across diverse frontends and backends
+  second:
+    name: Intelligence BooM 25.11 (Qiaoyu Noodle)
+    desc: Empower domain-specific AI with the pioneering OS-level fine-tuning model and seamless NPU orchestration
+    url: 'https://atomgit.com/openeuler/llm_solution'
+    picture: ./images/second_version.png
+    feature:
+      - title: Peak Performance
+        desc:
+          - name: ''
+            desc: High-throughput, low-cost inference via convergence and allocation of heterogeneous computing power
+          - name: ''
+            desc: 50%+ lower TTFT for multi-turn and long-context dialogues via multi-tier caching
+      - title: Effortless Development
+        desc:
+          - name: ''
+            desc: 'AIKG for Ascend: production-ready performance and 5x+ faster Triton operator development'
+      - title: Full-stack Capability
+        desc:
+          - name: ''
+            desc: Cost-efficient fine-tuning with Atlas 300 series and 50+ pre-trained models
+          - name: ''
+            desc: Seamless Dify integration for out-of-the-box agentic workflows
+      - title: Hassle-free Experience
+        desc:
+          - name: ''
+            desc: < 15 minutes from image to first loss
+          - name: ''
+            desc: Decoupled MindSpore graph mode for PyTorch
+      - title: Ecosystem Building
+        desc:
+          - name: ''
+            desc: Co-launched vLLM-omni and LMCache-Ascend through upstream partnerships
+          - name: ''
+            desc: 'openEuler OS Model: 671B-equivalent performance in system tuning with a 4B footprint and CPU inference'

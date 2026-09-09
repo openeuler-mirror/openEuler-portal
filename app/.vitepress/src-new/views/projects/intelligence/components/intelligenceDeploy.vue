@@ -4,7 +4,9 @@ import { ORow, OCol, OLink } from '@opensig/opendesign';
 
 import AppSection from '~@/components/AppSection.vue';
 
-import { deployList } from '~@/data/intelligence';
+import deployContent from '#content/projects/intelligence';
+
+const deployList = deployContent.zh;
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -36,10 +38,10 @@ const gap = computed(() => {
         <div
           class="deploy-item"
           :style="{
-            backgroundImage: `url(${isDark ? item.imgDark : item.img})`,
+            backgroundImage: `url(${isDark ? item.img_dark : item.img})`,
           }"
         >
-          <p class="item-title">{{ item.title[locale] }}</p>
+          <p class="item-title">{{ item.title }}</p>
           <ul>
             <li v-for="val in item.list" :key="val.text">
               <OLink

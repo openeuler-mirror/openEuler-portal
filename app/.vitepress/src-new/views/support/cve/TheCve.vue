@@ -38,7 +38,15 @@ import IconFilter from '~icons/app-new/icon-filter.svg';
 import IconSecurityLevel from '~icons/security/icon-security-level.svg';
 
 import cveContent from '#content/security/cve';
-import { typeMap, queryYears } from '~@/data/safety-bulletin';
+import { queryYears } from '~@/data/safety-bulletin';
+import safetyContent from '#content/security/safety-bulletin';
+
+const typeMap = new Map(
+  safetyContent.zh.type_map.map((item) => {
+    const en = safetyContent.en.type_map.find((e) => e.key === item.key);
+    return [item.key, { value: item.value, label: { zh: item.label, en: en?.label ?? item.label }, score: item.score }];
+  })
+);
 
 import { getCveList } from '~@/api/api-security';
 

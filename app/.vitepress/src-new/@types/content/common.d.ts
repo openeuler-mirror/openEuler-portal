@@ -23,11 +23,35 @@ declare module '#content/common' {
 
   type SeoConfigT = Record<string, SeoKeywordItemT[]>;
 
+  interface TourStepT {
+    bg: string | { light: string; dark: string };
+    target: string;
+    color: string;
+    placement: string;
+    href: string;
+    title: string;
+    desc: string[];
+    extra: string[];
+  }
+
+  interface TourContentT {
+    first_tour_steps: TourStepT[];
+    new_change_data: {
+      title: string;
+      icon: string;
+      desc: string;
+      list: string[];
+    };
+    new_change_tour_steps: TourStepT[];
+    new_guide_tour_steps: TourStepT[];
+  }
+
   const data: {
     category: string[];
     nav_filter: NavFilterItemT[];
     nss: string[];
     zh: SeoConfigT;
+    tour: TourContentT;
   };
 
   export default data;

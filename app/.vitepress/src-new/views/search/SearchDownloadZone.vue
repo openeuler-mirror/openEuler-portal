@@ -3,7 +3,17 @@ import { useRouter } from 'vitepress';
 
 import { OIcon, OLink } from '@opensig/opendesign';
 
-import { subModuleMap } from '~@/data/search';
+import searchContent from '#content/search';
+
+const subModuleMap = new Map(
+  searchContent.zh.sub_module_map.map((item) => {
+    const en = searchContent.en.sub_module_map.find((e) => e.key === item.key);
+    return [item.key, {
+      ...(item.label ? { label: { zh: item.label, en: en?.label ?? item.label } } : {}),
+      from: { zh: item.from, en: en?.from ?? item.from },
+    }];
+  })
+);
 
 import { useLocale } from '~@/composables/useLocale';
 

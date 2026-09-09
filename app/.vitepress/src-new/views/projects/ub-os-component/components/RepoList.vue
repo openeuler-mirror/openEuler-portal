@@ -38,7 +38,7 @@ const getRowClassName = ({ row }) => {
 };
 
 const getCellClassName = ({ row, rowIndex, column, columnIndex }) => {
-  if (column.property === row.rowKey && row[`${row.rowKey}Rows`] && tableList.value.length === rowIndex + row[`${row.rowKey}Rows`]) {
+  if (column.property === row.row_key && row[`${row.row_key}Rows`] && tableList.value.length === rowIndex + row[`${row.row_key}Rows`]) {
     return 'last-row-cell';
   }
   return `last-cell-${props.columns.length - columnIndex}`;
@@ -49,8 +49,8 @@ const flattenWithHierarchy = (list) => {
   list.forEach((item1) => {
     if (item1.children?.length) {
       item1.children.forEach((item2, item2Idx) => {
-        if (item1.rowKey) {
-          item2[`${item1.rowKey}Rows`] =
+        if (item1.row_key) {
+          item2[`${item1.row_key}Rows`] =
             item2Idx === 0
               ? item1.children.reduce((prev, cur) => {
                   if (cur.children?.length) {
@@ -63,11 +63,11 @@ const flattenWithHierarchy = (list) => {
         }
         if (item2.children?.length) {
           item2.children.forEach((item3, item3Idx) => {
-            if (item2.rowKey) {
-              item3[`${item2.rowKey}Rows`] = item3Idx === 0 ? item2.children.length : 0;
+            if (item2.row_key) {
+              item3[`${item2.row_key}Rows`] = item3Idx === 0 ? item2.children.length : 0;
             }
-            if (item2[`${item1.rowKey}Rows`] !== undefined) {
-              item2[`${item1.rowKey}Rows`] = item3Idx === 0 ? item2[`${item1.rowKey}Rows`] : 0;
+            if (item2[`${item1.row_key}Rows`] !== undefined) {
+              item2[`${item1.row_key}Rows`] = item3Idx === 0 ? item2[`${item1.row_key}Rows`] : 0;
             }
             result.push({
               ...item1,
@@ -205,13 +205,13 @@ watch(
           <template v-if="col.key === 'repo'">
             <template v-if="Array.isArray(row.repo)">
               <div v-for="(repo, idx) in row.repo" :key="repo">
-                <OLink color="primary" hover-underline :href="`${urlPrefix}/${row.repoLink[idx] || repo}`" target="_blank" rel="noopener noreferrer">
+                <OLink color="primary" hover-underline :href="`${urlPrefix}/${row.repo_link[idx] || repo}`" target="_blank" rel="noopener noreferrer">
                   {{ repo }}
                 </OLink>
               </div>
             </template>
             <template v-else>
-              <OLink color="primary" hover-underline :href="`${urlPrefix}/${row.repoLink || row.repo}`" target="_blank" rel="noopener noreferrer">
+              <OLink color="primary" hover-underline :href="`${urlPrefix}/${row.repo_link || row.repo}`" target="_blank" rel="noopener noreferrer">
                 {{ row.repo }}
               </OLink>
             </template>
@@ -236,12 +236,12 @@ watch(
                   <template v-if="col.key === 'repo'">
                     <template v-if="Array.isArray(t[col.key])">
                       <div v-for="(repo, idx) in t[col.key]" :key="repo">
-                        <OLink color="primary" :href="`${urlPrefix}/${t.repoLink[idx] || repo}`" hover-underline target="_blank" rel="noopener noreferrer">
+                        <OLink color="primary" :href="`${urlPrefix}/${t.repo_link[idx] || repo}`" hover-underline target="_blank" rel="noopener noreferrer">
                           {{ repo }}
                         </OLink>
                       </div>
                     </template>
-                    <OLink v-else color="primary" :href="`${urlPrefix}/${t.repoLink || t.repo}`" hover-underline target="_blank" rel="noopener noreferrer">
+                    <OLink v-else color="primary" :href="`${urlPrefix}/${t.repo_link || t.repo}`" hover-underline target="_blank" rel="noopener noreferrer">
                       {{ t[col.key] }}
                     </OLink>
                   </template>

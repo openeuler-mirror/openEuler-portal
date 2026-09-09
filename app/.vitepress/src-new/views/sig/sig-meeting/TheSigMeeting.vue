@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { computed, onMounted, onUnmounted } from 'vue';
 
 import BannerLevel3 from '~@/components/BannerLevel3.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
@@ -9,7 +9,8 @@ import SigMeetingOrgZh from './SigMeetingOrgZh.vue';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
-import { typeOfMeeting } from '~@/data/sig/sig-meeting';
+import meetingContent from '#content/sig/meeting-guide';
+import { createSvgIcon } from '~@/composables/createSvgIcon';
 
 import banner from '~@/assets/category/sig/sig-role-banner.jpg';
 
@@ -33,6 +34,7 @@ import { oaReport } from '@opendesign-plus/plugins/analytics';
 const { locale, t } = useLocale();
 const { isPhone, lePad, lePadV } = useScreen();
 const commonStore = useCommon();
+const typeOfMeeting = meetingContent.zh.type_of_meeting;
 
 const flexGap = computed(() =>
   isPhone.value ? '12px 12px' : lePad.value ? '16px 16px' : '32px 32px'
@@ -145,7 +147,7 @@ const reportIntroLinkClick = (ev: Event) => {
       <ORow :gap="flexGap" flex-wrap="wrap">
         <OCol
           v-for="item in typeOfMeeting"
-          :key="item.title[locale]"
+          :key="item.title"
           flex="0 1 50%"
           :laptop="{ flex: '0 50%' }"
           :pad="{ flex: '0 1 50%' }"
@@ -153,12 +155,12 @@ const reportIntroLinkClick = (ev: Event) => {
           :phone="{ flex: '0 1 100%' }"
         >
           <OCard
-            :title="item.title[locale]"
-            :detail="item.intro[locale]"
+            :title="item.title"
+            :detail="item.intro"
             layout="h"
             rel="noopener noreferrer"
             hoverable
-            :icon="item.icon"
+            :icon="createSvgIcon(item.icon)"
           >
           </OCard>
         </OCol>

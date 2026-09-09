@@ -22,7 +22,15 @@ import type { PackageInfoT, HotPatchT } from '@/shared/@types/type-support';
 import IconSecurityLevel from '~icons/security/icon-security-level.svg';
 import IconDownload from '~icons/app-new/icon-download.svg';
 
-import { securityNoticeNos, typeMap } from '~@/data/safety-bulletin';
+import safetyContent from '#content/security/safety-bulletin';
+
+const typeMap = new Map(
+  safetyContent.zh.type_map.map((item) => {
+    const en = safetyContent.en.type_map.find((e) => e.key === item.key);
+    return [item.key, { value: item.value, label: { zh: item.label, en: en?.label ?? item.label }, score: item.score }];
+  })
+);
+const securityNoticeNos = safetyContent.zh.security_notice_nos;
 
 import { changeTimeStamp } from '~@/utils/common';
 

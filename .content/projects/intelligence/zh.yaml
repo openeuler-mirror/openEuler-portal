@@ -1,0 +1,47 @@
+# 智能化部署场景列表 / Intelligence deploy scenarios
+# zh 专属（组件 v-if="isZh"，en 不渲染，未创建 en.yaml）
+#
+#   id: 场景标识
+#   title: 场景标题
+#   img: 亮色主题背景图
+#   img_dark: 暗色主题背景图
+#   list: 文档链接列表
+#     text: 链接文案
+#     href: 链接地址
+# 顶层为数组。
+
+- id: quick-start
+  title: Witty Assistant
+  img: ./images/quick-start-bg.png
+  img_dark: ./images/quick-start-bg-dark.png
+  list:
+    - text: 智能助手 CLI 用户手册
+      href: 'https://docs.openeuler.openatom.cn/zh/docs/24.03_LTS_SP3/tools/ai/euler-copilot-framework/witty_assistant/witty_shell/user_guide/introduce.html'
+    - text: 智能助手 Web 用户手册
+      href: 'https://docs.openeuler.openatom.cn/zh/docs/24.03_LTS_SP3/tools/ai/euler-copilot-framework/witty_assistant/witty_web/user_guide/introduction.html'
+
+- id: advanced-master
+  title: XPU Turbo
+  img: ./images/advanced-master-bg.png
+  img_dark: ./images/advanced-master-bg-dark.png
+  list:
+    - text: XPU Turbo
+      href: 'https://docs.openeuler.openatom.cn/zh/docs/24.03_LTS_SP3/tools/ai/euler-copilot-framework/xpu_turbo/deploy_guide/deployment.html'
+
+- id: ai-master
+  title: AI全栈
+  img: ./images/ai-master-bg.png
+  img_dark: ./images/ai-master-bg-dark.png
+  list:
+    - text: AI容器镜像用户指南
+      href: 'https://docs.openeuler.openatom.cn/zh/docs/24.03_LTS_SP3/tools/ai/euler-copilot-framework/ai_full_stack/ai_container_image_userguide/ai_container_image_user_guide.html'
+    - text: AI大模型服务镜像使用指南
+      href: 'https://docs.openeuler.openatom.cn/zh/docs/24.03_LTS_SP3/tools/ai/euler-copilot-framework/ai_full_stack/ai_large_model_service_images_userguide/llm_service_image_user_guide.html'
+
+- id: more-resources
+  title: 更多资源
+  img: ./images/more-resources-bg.png
+  img_dark: ./images/more-resources-bg.png
+  list:
+    - text: 版本与兼容性信息
+      href: 'https://atomgit.com/openeuler/euler-copilot-framework/blob/master/documents/user-guide/%E7%89%88%E6%9C%AC%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%80%A7%E8%AF%B4%E6%98%8E.md'

@@ -17,7 +17,14 @@ import { getUrlParam, replaceUrlParam } from '~@/utils/common';
 import SearchBanner from './SearchBanner.vue';
 import SearchResult from './SearchResult.vue';
 
-import { moduleMap } from '~@/data/search';
+import searchContent from '#content/search';
+
+const moduleMap = new Map(
+  searchContent.zh.module_map.map((item) => {
+    const en = searchContent.en.module_map.find((e) => e.key === item.key);
+    return [item.key, { label: { zh: item.label, en: en?.label ?? item.label }, ...(item.sub_modules ? { subModules: item.sub_modules } : {}) }];
+  })
+);
 
 const { locale, t } = useLocale();
 // 当前选择类型

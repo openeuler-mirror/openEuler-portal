@@ -1,0 +1,83 @@
+# 搜索页数据 / Search page data
+#
+# module_map: 模块分类映射（从 Map 转为数组，消费时重建 Map）
+#   key: 模块键名
+#   label: 模块标签
+#   sub_modules: 子模块列表（可选，非语言相关）
+#
+# sub_module_map: 子模块映射（从 Map 转为数组，消费时重建 Map）
+#   key: 子模块键名
+#   label: 子模块标签（可选）
+#   from: 面包屑路径数组
+
+module_map:
+  - key: all
+    label: 全部
+  - key: download
+    label: 下载
+    sub_modules: [communityRelease, commercialRelease]
+  - key: develop
+    label: 开发
+    sub_modules: [sig, etherpad]
+  - key: docs
+    label: 文档
+  - key: migration
+    label: 迁移
+  - key: community
+    label: 社区
+    sub_modules: [whitepaper, showcase, mail, forum]
+  - key: update
+    label: 动态
+    sub_modules: [news, blog]
+  - key: gitee
+    label: 代码仓
+  - key: other
+    label: 其他
+
+sub_module_map:
+  - key: release
+    label: 社区发行版
+    from: [下载, 社区发行版, '{version}']
+  - key: communityRelease
+    label: 社区发行版
+    from: [下载, 社区发行版, '{version}']
+  - key: commercialRelease
+    label: 商业发行版
+    from: [下载, 其他版本, 商业发行版]
+  - key: docs
+    from: [文档, 文档中心]
+  - key: software
+    from: [下载, 下载资源, 软件中心]
+  - key: whitepaper
+    label: 白皮书
+    from: [社区, 关于社区, 白皮书]
+  - key: showcase
+    label: 用户案例
+    from: [社区, 关于社区, 用户案例]
+  - key: sig
+    label: SIG中心
+    from: [开发, 贡献, SIG中心]
+  - key: etherpad
+    label: SIG组会议纪要
+    from: [开发, 贡献, SIG中心]
+  - key: mail
+    label: 邮件列表
+    from: [社区, 社区交流, 邮件列表]
+  - key: forum
+    label: 论坛
+    from: [社区, 社区交流, 论坛]
+  - key: news
+    label: 新闻
+    from: [动态, 资讯, 新闻]
+  - key: blog
+    label: 博客
+    from: [动态, 资讯, 博客]
+  - key: service
+    from: [服务]
+  - key: migration
+    label: 迁移
+    from: [支持, 迁移与运维, 迁移专区]
+  - key: packages
+    from: [开发, 分析, Pkgship]
+  - key: witty
+    from: [Witty智能运维案例库]

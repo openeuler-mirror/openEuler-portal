@@ -3,7 +3,9 @@ import type { PropType } from 'vue';
 import { OCard, OButton } from '@opensig/opendesign';
 import { useI18n } from 'vue-i18n';
 import AppSection from '~@/components/AppSection.vue';
-import { linkData } from '~@/data/user-group';
+import userGroupDetailContent from '#content/community/user-group/detail';
+
+const linkData = userGroupDetailContent.zh.link;
 import { useScreen } from '~@/composables/useScreen';
 import type { NewsDataT } from '@/shared/@types/type-news';
 
@@ -52,7 +54,7 @@ const { t } = useI18n();
           color="primary"
           :size="lePadV ? 'small' : 'large'"
           class="button"
-          :href="linkData.applyEvent"
+          :href="linkData.apply_event"
         >
           {{ t('usergroup.applyEvent') }}
         </OButton>

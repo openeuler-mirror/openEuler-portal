@@ -17,13 +17,17 @@ import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
 
-import { COMS_REPO_LIST, relatedLinks } from '~@/data/ub-os-component';
+import ubOsComponentContent from '#content/projects/ub-os-component';
+import { createSvgIcon } from '~@/composables/createSvgIcon';
 
 const { locale, t } = useLocale();
 const { lePadV } = useScreen();
 
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
+const content = computed(() => ubOsComponentContent[locale.value]);
+const repoList = computed(() => content.value.repo_list);
+const relatedLinkList = computed(() => content.value.related_links);
 
 const columns = [
   { label: t('ubOsComponent.comName'), key: 'name', width: '190' },
@@ -47,14 +51,14 @@ const columns = [
     <OFigure :src="frameworkImg" class="framework-img" :class="{'framework-img-dark': isDark}"></OFigure>
   </AppSection>
   <AppSection :title="t('ubOsComponent.repoList')">
-    <RepoList :data="COMS_REPO_LIST" :columns="columns" mobile-filter-key="name"></RepoList>
+    <RepoList :data="repoList" :columns="columns" mobile-filter-key="name"></RepoList>
   </AppSection>
   <AppSection :title="t('ubOsComponent.entranceTitle')" class="entrance">
     <ORow :gap="lePadV ? '0 12px' : '32px 0'" wrap="wrap">
-      <OCol v-for="(item, i) in relatedLinks[locale]" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 50%'">
+      <OCol v-for="(item, i) in relatedLinkList" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 50%'">
         <div class="item-info">
           <div class="info-title">
-            <OIcon class="title-icon"><component :is="item.icon" /></OIcon>
+            <OIcon class="title-icon"><component :is="createSvgIcon(item.icon)" /></OIcon>
             <p class="content-title">{{ item.title }}</p>
           </div>
           <div class="info-content">
@@ -62,11 +66,9 @@ const columns = [
             <ODivider v-if="lePadV" />
             <OLink :color="lePadV ? 'normal' : 'primary'" :href="item.href" target="_blank" rel="noopener noreferrer" :hover-underline="lePadV ? false : true">
               <p>{{ t('ubOsComponent.viewDetail') }}</p>
-              <template v-if="item?.isOutlink" #suffix>
-                <OIcon class="outlink-icon"><IconOutLink /></OIcon>
-              </template>
-              <template v-if="lePadV && !item?.isOutlink" #suffix>
-                <OIcon class="outlink-icon"><IconChevronRight /></OIcon>
+              <template #suffix>
+                <OIcon v-if="item?.is_outlink" class="outlink-icon"><IconOutLink /></OIcon>
+                <OIcon v-else-if="lePadV" class="outlink-icon"><IconChevronRight /></OIcon>
               </template>
             </OLink>
           </div>

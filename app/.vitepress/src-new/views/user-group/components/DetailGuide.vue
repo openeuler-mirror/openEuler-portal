@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
 import AppSection from '~@/components/AppSection.vue';
-import { guideData } from '~@/data/user-group';
+import userGroupDetailContent from '#content/community/user-group/detail';
+
+const guideData = userGroupDetailContent.zh.guide;
 import { OButton } from '@opensig/opendesign';
 import { useScreen } from '~@/composables/useScreen';
 

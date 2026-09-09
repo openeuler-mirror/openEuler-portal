@@ -1,0 +1,31 @@
+# UB Service Core page data
+#
+# entrance_list: Entrance card list
+#   icon: Entrance icon (SVG, inline consumption, path uses ?raw)
+#   title: Card title
+#   desc: Card description
+#   href: Link URL
+#   is_outlink: Whether this is an external link (optional)
+#
+# whitepaper: White paper links
+#   zh: Chinese white paper path
+#   en: English white paper path
+
+entrance_list:
+  - icon: ./images/icon-white-paper.svg?raw
+    title: White Paper
+    desc: 'Deploy, build, and scale with UB Service Core.'
+    href: '/projects/ub-service-core/white-paper/灵衢系统高阶服务软件架构参考设计.pdf'
+  - icon: ./images/icon-code-repo.svg?raw
+    title: Repositories
+    desc: 'View code and connect with us.'
+    href: /en/sig/sig-UB-ServiceCore#repositories
+  - icon: ./images/icon-document.svg?raw
+    title: Documentation
+    desc: 'Learn how to build and use UB Service Core.'
+    href: 'https://atomgit.com/openeuler/community/tree/master/sig/sig-UB-ServiceCore '
+    is_outlink: true
+
+whitepaper:
+  zh: '/zh/projects/docs/UB-Service-Core-SW-Arch-RD-2.0-zh'
+  en: '/en/projects/docs/UB-Service-Core-SW-Arch-RD-2.0-en'
