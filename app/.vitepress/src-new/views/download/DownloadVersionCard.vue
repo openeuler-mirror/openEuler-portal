@@ -106,7 +106,23 @@ const showInstructionSetFilter = computed(() => {
   );
 });
 
-const instructionSetOptions = ['rva23', 'rva20'];
+const INSTRUCTION_SETS = ['rva23', 'rva20'] as const;
+const instructionSetOptions = computed<string[]>(() => {
+  const matched = versionData.value.find(
+    (item: DetailedLinkItemT) =>
+      item.Arch === activeArch.value &&
+      item.Scenario === activeScenario.value
+  );
+  if (!matched || !matched.Tree.length) return [];
+  return INSTRUCTION_SETS.filter((name) =>
+    matched.Tree.some(
+      (treeItem) =>
+        treeItem.Type === 'dir' &&
+        Array.isArray(treeItem.Sub) &&
+        treeItem.Name === name
+    )
+  );
+});
 
 const architectureList: Ref<string[]> = ref([]);
 const scenarioList = ref<{ value: string; label: ComputedRef<string> }[]>(
@@ -316,15 +332,15 @@ watch(
 );
 onMounted(async () => {
   watch(activeArch, function () {
-    if (showInstructionSetFilter.value) {
-      activeInstructionSet.value = 'rva23';
+    if (showInstructionSetFilter.value && instructionSetOptions.value.length) {
+      activeInstructionSet.value = instructionSetOptions.value[0];
     }
     getTableData();
     setTempTag();
   });
   watch(activeScenario, function () {
-    if (showInstructionSetFilter.value) {
-      activeInstructionSet.value = 'rva23';
+    if (showInstructionSetFilter.value && instructionSetOptions.value.length) {
+      activeInstructionSet.value = instructionSetOptions.value[0];
     }
     getTableData();
   });
