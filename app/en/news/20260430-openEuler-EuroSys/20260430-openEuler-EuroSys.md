@@ -10,13 +10,11 @@ author: 'openEuler'
 summary: 'openEuler at EuroSys 2026: Exploring the Future of AI and Open Source'
 ---
 
-# openEuler at EuroSys 2026: Exploring the Future of AI and Open Source
-
 From April 27 to 30, 2026, EuroSys, a premier global conference on computer systems, took place in Edinburgh, UK, bringing together leading researchers and technology companies from around the world to explore the latest advances and emerging trends in OSs and foundational software.
 
 The openEuler community was also in attendance, showcasing its distributed serverless computing engine, openYuanrong, and engaging with the global systems community through a Tutorial session, the conference banquet, and a dedicated exhibition booth. The enthusiastic response from attendees highlighted the momentum built through openEuler’s sustained engagement with Europe’s open-source ecosystem.
 
-![](eurosys-2026-media/image1.png)
+![alt text](eurosys-2026-media/image1.png)
 
 ## Event Highlights
 
@@ -26,7 +24,7 @@ On April 27, the openEuler community and Huawei jointly hosted the SysAI Tutoria
 
 Fang Chuangchuang, Senior Project Manager at SIR Lab of Huawei Technologies R&D (UK) opened the Tutorial with welcoming remarks and a brief overview of the program.
 
-![](eurosys-2026-media/image2.png)
+![alt text](eurosys-2026-media/image2.png)
 
 The Tutorial was structured around two key tracks, comprising four sessions in total.
 
@@ -34,25 +32,25 @@ The Tutorial was structured around two key tracks, comprising four sessions in t
 
 Liu Yubo, an openEuler kernel and filesystem expert, presented TrIO, a technology designed to address I/O bottlenecks in container image loading. He shared how TrIO, by flattening the data path and introducing a runtime page-cache mechanism, significantly reduces cold-start latency.
 
-![](eurosys-2026-media/image3.png)
+![alt text](eurosys-2026-media/image3.png)
 
 Dr. Mohamed Kassem, an expert from Huawei, presented openYuanrong’s elastic scheduling capabilities as a serverless AI engine for the AI era, as well as its out-of-the-box execution environment for AI applications.
 
-![](eurosys-2026-media/image4.png)
+![alt text](eurosys-2026-media/image4.png)
 
 #### Track 2: System and Distributed Scheduling Solutions for AI Workloads
 
 Dr. Sheriffo Ceesay, a cloud-native expert from the openEuler community, presented CLYDE, a data transfer acceleration engine developed by his team on openEuler. Designed for cloud-native environments, CLYDE introduces a peer-to-peer data acceleration approach that significantly improves data throughput across large-scale clusters.
 
-![](eurosys-2026-media/image5.png)
+![alt text](eurosys-2026-media/image5.png)
 
 Lu Jingxiao, an expert from the openEuler community, presented openEuler AgentOS and how it brings LLMs into the OS ecosystem, exploring new paradigms for AI-driven autonomous diagnostics and intelligent management. The sharing sparked widespread interest and lively discussion among attendees.
 
-![](eurosys-2026-media/image6.png)
+![alt text](eurosys-2026-media/image6.png)
 
 The Tutorial concluded with closing remarks from Dr. Yang Ren, Director of Boole Research Centre. He noted that the growing scale, complexity, and real-time demands of AI workloads are driving full-stack evolution across system software, from the kernel and runtime to distributed systems. In the AI era, innovation in systems software can no longer be limited to isolated optimizations; instead, it requires cross-layer collaboration across kernel mechanisms, runtime systems, distributed scheduling, data acceleration, and intelligent operations and management.
 
-![](eurosys-2026-media/image7.png)
+![alt text](eurosys-2026-media/image7.png)
 
 Looking ahead, Huawei Technologies R&D (UK) will continue to leverage open platforms such as openEuler to bring together academic innovation, open-source communities, and industry practice worldwide, working with partners to advance the open-source foundational software ecosystem for the AI era.
 
@@ -64,7 +62,7 @@ As a key member of the openEuler community, Huawei also supported the community�
 
 This high-profile setting provided an opportunity to bring openEuler’s technology vision and ecosystem to the attention of leading figures across the global systems community, further strengthening openEuler’s international brand recognition.
 
-![](eurosys-2026-media/image8.png)
+![alt text](eurosys-2026-media/image8.png)
 
 ### Booth Engagement: openEuler and openYuanrong Showcase New Frontiers for Open-Source Infrastructure in Europe
 
@@ -74,7 +72,7 @@ The booth showcased the latest advances of openEuler in OSs, industry applicatio
 
 openYuanrong made its European debut at this conference. The showcase attracted considerable attention from researchers and engineers, sparking exchanges around heterogeneous scheduling, distributed execution, and AI infrastructure.
 
-![](eurosys-2026-media/image9.png)
+![alt text](eurosys-2026-media/image9.png)
 
 ## Looking Ahead
 
