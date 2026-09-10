@@ -117,7 +117,7 @@ Agent 仓库位置：<https://atomgit.com/openeuler/euler-copilot-shell/tree/fea
 
 官方介绍参考：<https://atomgit.com/openeuler/witty/blob/master/promotional-materials/2026-07-22-witty-cli-intro.md>
 
-原文阅读：[openEuler 运维能力已 0 Day 适配 DeepSeek Harness：Witty Builtin Agents 直接集成，快速验证 CVE 查询与硬件兼容性能力]()
+原文阅读：[openEuler 运维能力已 0 Day 适配 DeepSeek Harness：Witty Builtin Agents 直接集成，快速验证 CVE 查询与硬件兼容性能力](https://mp.weixin.qq.com/s/YSOsJPiebYTAK5F-3B6Q5Q)
 
 ### ➣openYuanrong v0.10.0 版本正式发布：Agentic RL 与推理方向能力升级！
 
