@@ -26,6 +26,12 @@ const { t } = useLocale();
 const { lePadV } = useScreen();
 const { lang } = useData();
 
+const friendshipLinks = {
+  zh: footerContent.zh.friendship_links,
+  en: footerContent.en.friendship_links,
+};
+const filingData = footerContent.zh.filing;
+
 const info = computed(() => {
   return {
     title: t('footer.atomText'),
@@ -62,12 +68,6 @@ const footerOption = computed(() => {
     policeIcon: filingData.icon,
   };
 });
-
-const friendshipLinks = {
-  zh: footerContent.zh.friendship_links,
-  en: footerContent.en.friendship_links,
-};
-const filingData = footerContent.zh.filing;
 
 // 公众号、小助手
 const qrcode = [

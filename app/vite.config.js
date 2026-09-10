@@ -171,10 +171,10 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (url) => url.replace(/^\/api-omapi/, ''),
       },
+      // dsapi.test.osinfra.cn 直连会被 CloudWAF 拦截(418)，改走测试环境网关
       '/api-dsapi/': {
-        target: 'https://dsapi.test.osinfra.cn/',
+        target: 'https://openeuler.test.osinfra.cn',
         changeOrigin: true,
-        rewrite: (url) => url.replace(/^\/api-dsapi/, ''),
       },
       '/api-magic/': {
         target: 'https://magicapi.test.osinfra.cn/',

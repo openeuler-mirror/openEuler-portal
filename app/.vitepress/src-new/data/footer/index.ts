@@ -1,41 +1,41 @@
 // 隐私链接
-// 注意：linksData（孤儿）、friendshipLinks、filingData 已提取到 .content/footer/ yaml，
-// linksData2 和 quickNav 因依赖 import.meta.env 环境变量保留在此文件中。
-export const linksData2 = {
+// 注意：friendshipLinks、filingData 已提取到 .content/footer/ yaml，
+// linksData（原 linksData2）和 quickNav 因依赖 import.meta.env 环境变量保留在此文件中。
+export const linksData = {
   zh: [
     {
-      NAME: '品牌',
-      URL: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/zh/other/brand/`,
+      title: '品牌',
+      href: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/zh/other/brand/`,
     },
     {
-      NAME: '隐私声明',
-      URL: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/zh/other/privacy/`,
+      title: '隐私声明',
+      href: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/zh/other/privacy/`,
     },
     {
-      NAME: '法律声明',
-      URL: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/zh/other/legal/`,
+      title: '法律声明',
+      href: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/zh/other/legal/`,
     },
     {
-      NAME: '关于cookies',
-      URL: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/zh/other/cookies/`,
+      title: '关于cookies',
+      href: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/zh/other/cookies/`,
     },
   ],
   en: [
     {
-      NAME: 'Trademark',
-      URL: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/en/other/brand/`,
+      title: 'Trademark',
+      href: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/en/other/brand/`,
     },
     {
-      NAME: 'Privacy Statement',
-      URL: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/en/other/privacy/`,
+      title: 'Privacy Statement',
+      href: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/en/other/privacy/`,
     },
     {
-      NAME: 'Legal Notice',
-      URL: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/en/other/legal/`,
+      title: 'Legal Notice',
+      href: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/en/other/legal/`,
     },
     {
-      NAME: 'About Cookies',
-      URL: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/en/other/cookies/`,
+      title: 'About Cookies',
+      href: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/en/other/cookies/`,
     },
   ],
 };
@@ -44,81 +44,81 @@ export const quickNav = {
   zh: [
     {
       title: '关于openEuler',
-      list: [
+      children: [
         {
           title: '成员单位',
-          link: '/zh/community/member/',
+          href: '/zh/community/member/',
         },
         {
           title: '组织架构',
-          link: '/zh/community/organization/',
+          href: '/zh/community/organization/',
         },
         {
           title: '社区章程',
-          link: '/zh/community/charter/',
+          href: '/zh/community/charter/',
         },
         {
           title: '贡献看板',
-          link: `${import.meta.env.VITE_SERVICE_DATASTAT_URL}/zh/overview`,
+          href: `${import.meta.env.VITE_SERVICE_DATASTAT_URL}/zh/overview`,
         },
         {
           title: '社区介绍',
-          link: '/whitepaper/openEuler%20%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E4%BB%8B%E7%BB%8D.pdf',
+          href: '/whitepaper/openEuler%20%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E4%BB%8B%E7%BB%8D.pdf',
         },
       ],
     },
     {
       title: '新闻与资讯',
-      list: [
+      children: [
         {
           title: '新闻',
-          link: '/zh/interaction/news-list/',
+          href: '/zh/interaction/news-list/',
         },
         {
           title: '博客',
-          link: '/zh/interaction/blog-list/',
+          href: '/zh/interaction/blog-list/',
         },
         {
           title: '白皮书',
-          link: '/zh/showcase/technical-white-paper/',
+          href: '/zh/showcase/technical-white-paper/',
         },
       ],
     },
     {
       title: '获取与下载',
-      list: [
+      children: [
         {
           title: '获取openEuler操作系统',
-          link: '/zh/download/#get-openeuler',
+          href: '/zh/download/#get-openeuler',
         },
         {
           title: '最新社区发行版',
-          link: '/zh/download/',
+          href: '/zh/download/',
         },
         {
           title: '商业发行版',
-          link: '/zh/download/commercial-release/',
+          href: '/zh/download/commercial-release/',
         },
         {
           title: '软件中心',
-          link: `${import.meta.env.VITE_SERVICE_SOFTWARE_URL}/zh`,
+          href: `${import.meta.env.VITE_SERVICE_SOFTWARE_URL}/zh`,
         },
       ],
     },
     {
       title: '支持与服务',
-      list: [
+      children: [
         {
           title: '文档',
-          link: `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/`,
+          href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/`,
         },
         {
           title: 'FAQ',
-          link: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/zh/faq/`,
+          href: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/zh/faq/`,
         },
         {
           title: '联系我们',
-          link: '/zh/contact-us/',
+          href: '/zh/contact-us/',
         },
         // {
         //   title: '反馈问题',
@@ -128,35 +128,35 @@ export const quickNav = {
     },
     {
       title: '互动与交流',
-      list: [
+      children: [
         {
           title: '邮件列表',
-          link: '/zh/community/mailing-list/',
+          href: '/zh/community/mailing-list/',
         },
         {
           title: '活动',
-          link: '/zh/interaction/event-list/',
+          href: '/zh/interaction/event-list/',
         },
         {
           title: '论坛',
-          link: import.meta.env.VITE_SERVICE_FORUM_URL,
+          href: import.meta.env.VITE_SERVICE_FORUM_URL,
         },
       ],
     },
     {
       title: '贡献与成长',
-      list: [
+      children: [
         {
           title: 'SIG中心',
-          link: '/zh/sig/sig-list/',
+          href: '/zh/sig/sig-list/',
         },
         {
           title: '贡献攻略',
-          link: '/zh/community/contribution/',
+          href: '/zh/community/contribution/',
         },
         {
           title: '课程中心',
-          link: '/zh/learn/mooc/',
+          href: '/zh/learn/mooc/',
         },
       ],
     },
@@ -164,56 +164,56 @@ export const quickNav = {
   en: [
     {
       title: 'About openEuler',
-      list: [
+      children: [
         {
           title: 'Members',
-          link: '/en/community/member/',
+          href: '/en/community/member/',
         },
         {
           title: 'Governance',
-          link: '/en/community/organization/',
+          href: '/en/community/organization/',
         },
         {
           title: 'Code of Conduct',
-          link: '/en/community/conduct/',
+          href: '/en/community/conduct/',
         },
         {
           title: 'Statistics',
-          link: `${import.meta.env.VITE_SERVICE_DATASTAT_URL}/en/overview`,
+          href: `${import.meta.env.VITE_SERVICE_DATASTAT_URL}/en/overview`,
         },
       ],
     },
     {
       title: 'News & Blogs',
-      list: [
+      children: [
         {
           title: 'News',
-          link: '/en/interaction/news-list/',
+          href: '/en/interaction/news-list/',
         },
         {
           title: 'Blogs',
-          link: '/en/interaction/blog-list/',
+          href: '/en/interaction/blog-list/',
         },
         {
           title: 'White Papers',
-          link: '/en/showcase/technical-white-paper/',
+          href: '/en/showcase/technical-white-paper/',
         },
       ],
     },
     {
       title: 'Access',
-      list: [
+      children: [
         {
           title: 'openEuler Is Everywhere',
-          link: '/en/download/#get-openeuler',
+          href: '/en/download/#get-openeuler',
         },
         {
           title: 'Latest Community Releases',
-          link: '/en/download/',
+          href: '/en/download/',
         },
         {
           title: 'Commercial Releases',
-          link: '/en/download/commercial-release/',
+          href: '/en/download/commercial-release/',
         },
         // {
         //   title: '软件中心',
@@ -223,18 +223,18 @@ export const quickNav = {
     },
     {
       title: 'Services & Resources',
-      list: [
+      children: [
         {
           title: 'Documentation',
-          link: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/`,
+          href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/`,
         },
         {
           title: 'FAQ',
-          link: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/en/faq/`,
+          href: `${import.meta.env.VITE_MAIN_DOMAIN_URL}/en/faq/`,
         },
         {
           title: 'Contact Us',
-          link: '/en/contact-us/',
+          href: '/en/contact-us/',
         },
         // {
         //   title: '反馈问题',
@@ -244,35 +244,35 @@ export const quickNav = {
     },
     {
       title: 'Communicate',
-      list: [
+      children: [
         {
           title: 'Mailing Lists',
-          link: '/en/community/mailing-list/',
+          href: '/en/community/mailing-list/',
         },
         {
           title: 'Activities',
-          link: '/en/interaction/event-list/',
+          href: '/en/interaction/event-list/',
         },
         {
           title: 'Forum',
-          link: import.meta.env.VITE_SERVICE_FORUM_URL,
+          href: import.meta.env.VITE_SERVICE_FORUM_URL,
         },
       ],
     },
     {
       title: 'Contribute',
-      list: [
+      children: [
         {
           title: 'SIGs',
-          link: '/en/sig/sig-list/',
+          href: '/en/sig/sig-list/',
         },
         {
           title: 'Contribution Guide',
-          link: '/en/community/contribution/',
+          href: '/en/community/contribution/',
         },
         {
           title: 'Training',
-          link: '/en/learn/mooc/',
+          href: '/en/learn/mooc/',
         },
       ],
     },

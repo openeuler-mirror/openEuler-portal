@@ -5,7 +5,7 @@ import { ORow, OCol, OCard, OFigure, OButton, OLink, OIcon, ODivider, OTag } fro
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import AppSection from '~@/components/AppSection.vue';
 
-import { projectData } from '~@/data/project';
+import projectsContent from '#content/projects';
 
 import banner from '~@/assets/category/projects/banner.jpg';
 
@@ -18,6 +18,8 @@ import { useCommon } from '@/stores/common';
 
 const { locale, t } = useLocale();
 const { lePadV, lePad, leLaptop } = useScreen();
+
+const projectList = computed(() => projectsContent[locale.value].project_data);
 
 const commonStore = useCommon();
 const isDark = computed(() => {
@@ -44,7 +46,7 @@ const gap = computed(() => {
   </div>
   <AppSection :title="t('project.listTitle')" class="project-list">
     <ORow :gap="gap" wrap="wrap">
-      <OCol v-for="(item, i) in projectData[locale]" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 50%'">
+      <OCol v-for="(item, i) in projectList" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 50%'">
         <OCard :detail-row="2" :detail-max-row="2">
           <template #header>
             <div class="title">
@@ -60,7 +62,7 @@ const gap = computed(() => {
           </template>
           <template v-if="!lePadV" #footer>
             <OButton color="primary" variant="outline" size="large" class="view-btn" :href="`/${locale}${item.url}`" target="_blank" rel="noopener noreferrer">{{ t('project.viewMore') }}</OButton>
-            <OLink v-if="item.atomgitUrl" color="normal" variant="text" :href="item.atomgitUrl" target="_blank" rel="noopener noreferrer">
+            <OLink v-if="item.atomgit_url" color="normal" variant="text" :href="item.atomgit_url" target="_blank" rel="noopener noreferrer">
               <span class="gitee">{{ t('project.gitee') }}</span>
               <template #suffix>
                 <OIcon class="right-icon"><IconChevronRight /></OIcon>
@@ -75,8 +77,8 @@ const gap = computed(() => {
                 <OIcon class="right-icon"><IconChevronRight /></OIcon>
               </template>
             </OLink>
-            <ODivider v-if="item.atomgitUrl" />
-            <OLink v-if="item.atomgitUrl" color="normal" variant="text" :href="item.atomgitUrl" target="_blank" rel="noopener noreferrer">
+            <ODivider v-if="item.atomgit_url" />
+            <OLink v-if="item.atomgit_url" color="normal" variant="text" :href="item.atomgit_url" target="_blank" rel="noopener noreferrer">
               <span class="gitee">{{ t('project.gitee') }}</span>
               <template #suffix>
                 <OIcon class="outlink-icon"><IconOutLink /></OIcon>

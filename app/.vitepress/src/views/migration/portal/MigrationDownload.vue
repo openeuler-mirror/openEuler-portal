@@ -1,18 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useData } from 'vitepress';
-import { useCommon } from '@/stores/common';
+import { useData, useRouter } from 'vitepress';
 
-import portalInfoData from '@/data/migration/migration-portal';
+import downloadInfoData from '#content/migration/download';
 
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import IconDownload from '~icons/app/icon-download.svg';
 import { OButton } from '@opensig/opendesign';
-import { Button as OOButton } from 'opendesign/button';
 
-const commonStore = useCommon();
-
-const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
+const router = useRouter();
 
 interface LinkItem {
   name: string;
@@ -21,69 +17,72 @@ interface LinkItem {
 
 const { lang } = useData();
 
-const portalInfo = computed(() => {
-  return portalInfoData[lang.value as 'zh' | 'en'];
+const downloadInfo = computed(() => {
+  return downloadInfoData[lang.value as 'zh' | 'en'];
 });
 
 function handleClick(item: LinkItem) {
   if (item.link) {
-    window.open(item.link);
+    if (item.link.includes('http')) {
+      window.open(item.link);
+    } else {
+      router.go(item.link);
+    }
   }
 }
 </script>
 
 <template>
   <div class="migration-download">
-    <h3>{{ portalInfo.download.title }}</h3>
-    <p>{{ portalInfo.download.dexcription }}</p>
+    <h3>{{ downloadInfo.name }}</h3>
+    <p>{{ downloadInfo.description }}</p>
     <div class="migration-download-content">
-      <OCard>
+      <OCard v-for="item in downloadInfo.version_list" :key="item.version">
         <div class="card-box">
           <div class="card-box-left">
             <img
-              :src="
-                isDark
-                  ? portalInfo.download.left.img.dark
-                  : portalInfo.download.left.img.light
-              "
+              src="@/assets/illustrations/migration/download-card-left.png"
+              alt=""
             />
             <div class="card-info">
-              <span class="name">{{ portalInfo.download.left.name }}</span>
-              <span class="version">{{
-                portalInfo.download.left.version
-              }}</span>
+              <span class="name">{{ downloadInfo.name }}</span>
+              <span class="version">{{ item.version }}</span>
             </div>
           </div>
 
           <div class="card-box-right">
             <div class="card-btn">
               <OButton
-                v-for="buttons in portalInfo.download.btns"
+                v-for="buttons in item.source_links"
                 :key="buttons.name"
                 round="0"
                 color="primary"
                 size="medium"
                 class="home-banner-btn"
-                :class="[buttons.softLinks?.length ? 'hover' : 'animation-btn']"
-                :href="buttons.link || undefined"
-                target="_blank"
-                rel="noopener noreferrer"
+                :class="[buttons.soft_links?.length ? 'hover' : 'animation-btn']"
+                @click="buttons.link && handleClick(buttons)"
               >
                 {{ buttons.name }}
-                <ul v-if="buttons.softLinks?.length">
+                <ul v-if="buttons.soft_links?.length">
                   <li
-                    v-for="buttonItem in buttons.softLinks"
+                    v-for="buttonItem in buttons.soft_links"
                     :key="buttonItem.link"
-                    @click="handleClick(buttonItem)"
                   >
-                    <a class="btn-expand-link" :href="buttonItem.link" @click.prevent>{{ buttonItem.name }}</a>
+                    <a
+                      class="btn-expand-link"
+                      :href="buttonItem.link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      @click.prevent="handleClick(buttonItem)"
+                      >{{ buttonItem.name }}</a
+                    >
                   </li>
                 </ul>
                 <template #suffix
                   ><OIcon>
                     <component
                       :is="
-                        buttons.softLinks?.length
+                        buttons.soft_links?.length
                           ? IconDownload
                           : IconArrowRight
                       "
@@ -92,7 +91,10 @@ function handleClick(item: LinkItem) {
                 ></template>
               </OButton>
             </div>
-            <img :src="portalInfo.download.bgUrl" />
+            <img
+              src="@/assets/illustrations/migration/download-card-right.png"
+              alt=""
+            />
           </div>
         </div>
       </OCard>

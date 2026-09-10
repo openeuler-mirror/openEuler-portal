@@ -1,6 +1,6 @@
 # 页脚（Footer）
 
-全站页脚数据。zh/en 双语。`linksData2` 和 `quickNav` 因依赖 `import.meta.env` 未提取，仍保留在 `src-new/data/footer/index.ts`。
+全站页脚数据。zh/en 双语。`linksData` 和 `quickNav` 因依赖 `import.meta.env` 未提取，仍保留在 `src-new/data/footer/index.ts`。
 
 ## 文件说明
 
@@ -14,15 +14,14 @@
 
 | 板块 | 类型 | 用途 |
 |------|------|------|
-| `friendship_links` | 数组 | 友情社区链接 |
-| `filing` | 对象 | 备案信息（链接 + 图标） |
+| `friendship_links` | 数组 | 友情社区链接（字段：`href` 链接地址、`title` 站点名称） |
+| `filing` | 对象 | 备案信息（字段：`link` 备案链接、`icon` 备案图标） |
 
 ## 未提取数据
 
 | 数据 | 原因 |
 |------|------|
-| `linksData` | 孤儿数据（无消费者），已删除 |
-| `linksData2` | URL 依赖 `import.meta.env.VITE_MAIN_DOMAIN_URL` |
+| `linksData` | URL 依赖 `import.meta.env.VITE_MAIN_DOMAIN_URL` |
 | `quickNav` | URL 依赖多个 `import.meta.env.*` 变量 |
 
 ## 消费方式

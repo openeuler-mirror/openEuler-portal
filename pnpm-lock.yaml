@@ -15,11 +15,11 @@ importers:
   .:
     dependencies:
       '@opendesign-plus/components':
-        specifier: 0.0.1-rc.54
-        version: 0.0.1-rc.54(@opendesign-plus/composables@0.0.1-rc.10(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(js-cookie@3.0.7)(markdown-it-anchor@8.6.7(@types/markdown-it@14.1.1)(markdown-it@14.2.0))(markdown-it-async@2.2.0)(pinia@2.3.1(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))(shiki@2.5.0)(vue-i18n@11.4.6(vue@3.5.29(typescript@5.9.3))))(@opendesign-plus/styles@0.0.1-rc.2)(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(@vueuse/shared@12.8.2(typescript@5.9.3))(aos@2.3.4)(dayjs@1.11.13)(element-plus@2.9.5(vue@3.5.29(typescript@5.9.3)))(video.js@8.23.9)(vue-dompurify-html@4.1.4(vue@3.5.29(typescript@5.9.3)))(vue@3.5.29(typescript@5.9.3))
+        specifier: 0.0.1-rc.67
+        version: 0.0.1-rc.67(@opendesign-plus/composables@0.0.1-rc.10(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(js-cookie@3.0.7)(markdown-it-anchor@8.6.7(@types/markdown-it@14.1.1)(markdown-it@14.2.0))(markdown-it-async@2.2.0)(pinia@2.3.1(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))(shiki@3.23.0)(vue-i18n@11.4.8(vue@3.5.29(typescript@5.9.3))))(@opendesign-plus/styles@0.0.1-rc.2)(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(@vueuse/shared@14.4.0(vue@3.5.29(typescript@5.9.3)))(aos@2.3.4)(dayjs@1.11.13)(element-plus@2.9.5(vue@3.5.29(typescript@5.9.3)))(video.js@8.23.9)(vue-dompurify-html@4.1.4(vue@3.5.29(typescript@5.9.3)))(vue@3.5.29(typescript@5.9.3))
       '@opendesign-plus/composables':
         specifier: 0.0.1-rc.10
-        version: 0.0.1-rc.10(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(js-cookie@3.0.7)(markdown-it-anchor@8.6.7(@types/markdown-it@14.1.1)(markdown-it@14.2.0))(markdown-it-async@2.2.0)(pinia@2.3.1(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))(shiki@2.5.0)(vue-i18n@11.4.6(vue@3.5.29(typescript@5.9.3)))
+        version: 0.0.1-rc.10(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(js-cookie@3.0.7)(markdown-it-anchor@8.6.7(@types/markdown-it@14.1.1)(markdown-it@14.2.0))(markdown-it-async@2.2.0)(pinia@2.3.1(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))(shiki@3.23.0)(vue-i18n@11.4.8(vue@3.5.29(typescript@5.9.3)))
       '@opendesign-plus/geo-scripts':
         specifier: 0.0.1-rc.1
         version: 0.0.1-rc.1
@@ -94,7 +94,7 @@ importers:
         version: 4.1.4(vue@3.5.29(typescript@5.9.3))
       vue-i18n:
         specifier: latest
-        version: 11.4.6(vue@3.5.29(typescript@5.9.3))
+        version: 11.4.8(vue@3.5.29(typescript@5.9.3))
       vue-pdf-embed:
         specifier: ^2.1.2
         version: 2.1.5(vue@3.5.29(typescript@5.9.3))
@@ -887,20 +887,20 @@ packages:
   '@iconify/utils@3.1.4':
     resolution: {integrity: sha512-b1S7B1k9ohZ+iNTi2ATxbRYG9fTrJmUT0rc46bvVnNxqNRGW7dyo/vRREwyniI5IRN2RSJHDcm+s3BjWrSAjHw==}
 
-  '@intlify/core-base@11.4.6':
-    resolution: {integrity: sha512-EOeHO95XESK9IFHgHeZXunsM/WBAoCA0DlaWODvx14vKmetAuS97t+l6Xe9hTUqntPpF93vtVSjjUDafw3wXMw==}
+  '@intlify/core-base@11.4.8':
+    resolution: {integrity: sha512-A+Q7SKm5oEcy1E/cghqd7n/St4XjTqLhiiyDuieNcMrJcrHlkY5n0jp7Q9dD3txvVHzvsmBVV5M9wD5/s1zfzw==}
     engines: {node: '>= 22'}
 
-  '@intlify/devtools-types@11.4.6':
-    resolution: {integrity: sha512-wowQPpNem56b2d43IJmqbrzG2FeBKe5f/kUGlpNuBmXs6OSqncF8m1+1lxHuW8ISZJF0ma2RkW3iLkw0g0G4VA==}
+  '@intlify/devtools-types@11.4.8':
+    resolution: {integrity: sha512-MGpID+rlfzGUbNcnC20bm5NMSBHPrvx0atLTfv9dftn3kjXw1hGKDcIcwrO99tSrZEc2i+hczRL7ks8qXsHPkQ==}
     engines: {node: '>= 22'}
 
-  '@intlify/message-compiler@11.4.6':
-    resolution: {integrity: sha512-5nj3jULqeTAC1WovwMs1LQWgatTa2pM/rXN9T3XW8rdOtXW9ZF6/GLSNFTKDQmPLwclhPdgUWLJ/4w3fMeeC/Q==}
+  '@intlify/message-compiler@11.4.8':
+    resolution: {integrity: sha512-vbzk17dYwduYiv52EK61+FDCyhfVg1uPUtPmiD/d45W99uJIcXywrweOBcHv7n9/iEqmXiMGT52bgJbZDQqK3w==}
     engines: {node: '>= 22'}
 
-  '@intlify/shared@11.4.6':
-    resolution: {integrity: sha512-m1p1HHAMLhqSpTRH7VnXdrN0CQ4y+9vunFkpLkbD8soIuBsnQdawZXqMCgvwI2UVF9Ww7sVaw7g9tV2VO7shoA==}
+  '@intlify/shared@11.4.8':
+    resolution: {integrity: sha512-XbRgrv+XEuvDr7UCY55oibVrh+o4u+A0VB6nSL0F5Z8LcZxE/8j573LYG6bCrOigIcHdGpSNI7Rh5UpC5/B/eg==}
     engines: {node: '>= 22'}
 
   '@isaacs/cliui@8.0.2':
@@ -1045,8 +1045,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@opendesign-plus/components@0.0.1-rc.54':
-    resolution: {integrity: sha512-Pjf5EQfSrfaFUPfa881EzyAbITY7zd9t7iPkMMpNq4TI+nJ8OTQ/jf+P/D+HUDoNleX5ltIE0Cg3BpJ3W+9KOQ==}
+  '@opendesign-plus/components@0.0.1-rc.67':
+    resolution: {integrity: sha512-NJA/KwwGrbtUqdJjJXYMO0c7wm8eAX7hCIASZGmBKmR/wBslOv84V54o1vor0Dx3CgoWNDDfjxMrWT1gSIXrqA==}
     peerDependencies:
       '@opendesign-plus/composables': 0.0.1-rc.10
       '@opendesign-plus/styles': 0.0.1-rc.2
@@ -1398,23 +1398,41 @@ packages:
   '@shikijs/core@2.5.0':
     resolution: {integrity: sha512-uu/8RExTKtavlpH7XqnVYBrfBkUc20ngXiX9NSrBhOVZYv/7XQRKUyhtkeflY5QsxC0GbJThCerruZfsUaSldg==}
 
+  '@shikijs/core@3.23.0':
+    resolution: {integrity: sha512-NSWQz0riNb67xthdm5br6lAkvpDJRTgB36fxlo37ZzM2yq0PQFFzbd8psqC2XMPgCzo1fW6cVi18+ArJ44wqgA==}
+
   '@shikijs/engine-javascript@2.5.0':
     resolution: {integrity: sha512-VjnOpnQf8WuCEZtNUdjjwGUbtAVKuZkVQ/5cHy/tojVVRIRtlWMYVjyWhxOmIq05AlSOv72z7hRNRGVBgQOl0w==}
+
+  '@shikijs/engine-javascript@3.23.0':
+    resolution: {integrity: sha512-aHt9eiGFobmWR5uqJUViySI1bHMqrAgamWE1TYSUoftkAeCCAiGawPMwM+VCadylQtF4V3VNOZ5LmfItH5f3yA==}
 
   '@shikijs/engine-oniguruma@2.5.0':
     resolution: {integrity: sha512-pGd1wRATzbo/uatrCIILlAdFVKdxImWJGQ5rFiB5VZi2ve5xj3Ax9jny8QvkaV93btQEwR/rSz5ERFpC5mKNIw==}
 
+  '@shikijs/engine-oniguruma@3.23.0':
+    resolution: {integrity: sha512-1nWINwKXxKKLqPibT5f4pAFLej9oZzQTsby8942OTlsJzOBZ0MWKiwzMsd+jhzu8YPCHAswGnnN1YtQfirL35g==}
+
   '@shikijs/langs@2.5.0':
     resolution: {integrity: sha512-Qfrrt5OsNH5R+5tJ/3uYBBZv3SuGmnRPejV9IlIbFH3HTGLDlkqgHymAlzklVmKBjAaVmkPkyikAV/sQ1wSL+w==}
 
+  '@shikijs/langs@3.23.0':
+    resolution: {integrity: sha512-2Ep4W3Re5aB1/62RSYQInK9mM3HsLeB91cHqznAJMuylqjzNVAVCMnNWRHFtcNHXsoNRayP9z1qj4Sq3nMqYXg==}
+
   '@shikijs/themes@2.5.0':
     resolution: {integrity: sha512-wGrk+R8tJnO0VMzmUExHR+QdSaPUl/NKs+a4cQQRWyoc3YFbUzuLEi/KWK1hj+8BfHRKm2jNhhJck1dfstJpiw==}
+
+  '@shikijs/themes@3.23.0':
+    resolution: {integrity: sha512-5qySYa1ZgAT18HR/ypENL9cUSGOeI2x+4IvYJu4JgVJdizn6kG4ia5Q1jDEOi7gTbN4RbuYtmHh0W3eccOrjMA==}
 
   '@shikijs/transformers@2.5.0':
     resolution: {integrity: sha512-SI494W5X60CaUwgi8u4q4m4s3YAFSxln3tzNjOSYqq54wlVgz0/NbbXEb3mdLbqMBztcmS7bVTaEd2w0qMmfeg==}
 
   '@shikijs/types@2.5.0':
     resolution: {integrity: sha512-ygl5yhxki9ZLNuNpPitBWvcy9fsSKKaRuO4BAlMyagszQidxcpLAr0qiW/q43DtSIDxO6hEbtYLiFZNXO/hdGw==}
+
+  '@shikijs/types@3.23.0':
+    resolution: {integrity: sha512-3JZ5HXOZfYjsYSk0yPwBrkupyYSLpAE26Qc0HLghhZNGTZg/SKxXIIgoxOpmmeQP0RRSDJTk1/vPfw9tbw+jSQ==}
 
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
@@ -1539,6 +1557,9 @@ packages:
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
 
+  '@types/hast@3.0.5':
+    resolution: {integrity: sha512-rp/ezSWaD1m44dPKICGhiskI13nVr7qTloFwDa/IYkhhf5nzwP+zIQcIJh3WIFSBOy/H1PzB40jPjMDksN4F+g==}
+
   '@types/js-yaml@4.0.9':
     resolution: {integrity: sha512-k4MGaQl5TGo/iipqb2UDG2UwjXziSWkh0uysQelTlJpX1qGlpUZYm8PnO4DxG1qBomtJUdYJ6qR6xdIah10JLg==}
 
@@ -1559,6 +1580,9 @@ packages:
 
   '@types/markdown-it@14.1.2':
     resolution: {integrity: sha512-promo4eFwuiW+TfGxhi+0x3czqTYJkG8qB17ZUJiVF10Xm7NLVRSLUsfRTU/6h1e24VvRnXCx+hG7li58lkzog==}
+
+  '@types/markdown-it@14.2.0':
+    resolution: {integrity: sha512-NoQ2yGlLWj4wpxMs+TYmRKk3thDrQ97agr7sFqfLsAlvoS8SNQuTrlObhFqG9iugdTtgOE9jpJ6FNM4ZGsa5xQ==}
 
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
@@ -2020,6 +2044,11 @@ packages:
 
   '@vueuse/shared@12.8.2':
     resolution: {integrity: sha512-dznP38YzxZoNloI0qpEfpkms8knDtaoQ6Y/sfS0L7Yki4zh40LFHEhur0odJC6xTHG5dxWVPiUWBXn+wCG2s5w==}
+
+  '@vueuse/shared@14.4.0':
+    resolution: {integrity: sha512-JRgY90Sz8DDtPMsaDflvPMp9xYk69JZAmbuDvAquUVXKr2gEjqtzGNTTthLfckH0BzBqvnu31gb4a8TGLRe79g==}
+    peerDependencies:
+      vue: ^3.5.0
 
   '@vueuse/shared@9.13.0':
     resolution: {integrity: sha512-UrnhU+Cnufu4S6JLCPZnkWh0WwZGUp72ktOF2DFptMlOs3TOdVv8xJN53zhHGARmVOsz5KqOls09+J1NR6sBKw==}
@@ -3481,8 +3510,14 @@ packages:
     resolution: {integrity: sha512-1FlR+gjXK7X+AsAHso35MnyN5KqGwJRi/31ft6x0M194ht7S+rWAvd7PHss9xSKMzE0asv1pyIHaJYq+BbacAQ==}
     engines: {node: '>=12'}
 
+  oniguruma-parser@0.12.2:
+    resolution: {integrity: sha512-6HVa5oIrgMC6aA6WF6XyyqbhRPJrKR02L20+2+zpDtO5QAzGHAUGw5TKQvwi5vctNnRHkJYmjAhRVQF2EKdTQw==}
+
   oniguruma-to-es@3.1.1:
     resolution: {integrity: sha512-bUH8SDvPkH3ho3dvwJwfonjlQ4R80vjyvrU8YpxuROddv55vAEJrTuCuCVUhhsHbtlD9tGGbaNApGQckXhS8iQ==}
+
+  oniguruma-to-es@4.3.6:
+    resolution: {integrity: sha512-csuQ9x3Yr0cEIs/Zgx/OEt9iBw9vqIunAPQkx19R/fiMq2oGVTgcMqO/V3Ybqefr1TBvosI6jU539ksaBULJyA==}
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -3605,8 +3640,8 @@ packages:
   pkg-types@2.3.1:
     resolution: {integrity: sha512-y+ichcgc2LrADuhLNAx8DFjVfgz91pRxfZdI3UDhxHvcVEZsenLO+7XaU5vOp0u/7V/wZ+plyuQxtrDlZJ+yeg==}
 
-  playwright-core@1.62.1:
-    resolution: {integrity: sha512-wPYSwEBJY9GHraISXqyqtx0na0LpO3XEX7jNDhntbex7tzUS7kLnZsOlFruFJB4Hi/rhDMjXGqHewDZ68nYZVw==}
+  playwright-core@1.63.0:
+    resolution: {integrity: sha512-rYCsBF/M5HjUch52bbtVONEFjv6Xu8sm8h72dNlR5bzIE1fvC/bxgspzkjSfU+MweEMmPM8KJebG6nnyxo5mCg==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -3797,6 +3832,9 @@ packages:
 
   shiki@2.5.0:
     resolution: {integrity: sha512-mI//trrsaiCIPsja5CNfsyNOqgAZUb6VpJA+340toL42UpzQlXpwRV9nch69X6gaUxrr9kaOOa6e3y3uAkGFxQ==}
+
+  shiki@3.23.0:
+    resolution: {integrity: sha512-55Dj73uq9ZXL5zyeRPzHQsK7Nbyt6Y10k5s7OjuFZGMhpp4r/rsLBH0o/0fstIzX1Lep9VxefWljK/SKCzygIA==}
 
   siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
@@ -4307,8 +4345,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  vue-i18n@11.4.6:
-    resolution: {integrity: sha512-l0gE7Rfy0phCa5ChKYkOq543Wgd39BCK6hkktfr1Ed4D99oRkgPK9ffShASZdeC8OJxGfdWmpYoAaAH6iLEuIg==}
+  vue-i18n@11.4.8:
+    resolution: {integrity: sha512-0ULeHP6Z9CGvAm67S77ZEp41cfGXIREGL8qfhos2BMgcQQewtQcDKuojt6jjasAD/S8GwfTp2ySPmDSpwvrCMQ==}
     engines: {node: '>= 22'}
     peerDependencies:
       vue: ^3.0.0
@@ -5074,23 +5112,23 @@ snapshots:
       '@iconify/types': 2.0.0
       import-meta-resolve: 4.2.0
 
-  '@intlify/core-base@11.4.6':
+  '@intlify/core-base@11.4.8':
     dependencies:
-      '@intlify/devtools-types': 11.4.6
-      '@intlify/message-compiler': 11.4.6
-      '@intlify/shared': 11.4.6
+      '@intlify/devtools-types': 11.4.8
+      '@intlify/message-compiler': 11.4.8
+      '@intlify/shared': 11.4.8
 
-  '@intlify/devtools-types@11.4.6':
+  '@intlify/devtools-types@11.4.8':
     dependencies:
-      '@intlify/core-base': 11.4.6
-      '@intlify/shared': 11.4.6
+      '@intlify/core-base': 11.4.8
+      '@intlify/shared': 11.4.8
 
-  '@intlify/message-compiler@11.4.6':
+  '@intlify/message-compiler@11.4.8':
     dependencies:
-      '@intlify/shared': 11.4.6
+      '@intlify/shared': 11.4.8
       source-map-js: 1.2.1
 
-  '@intlify/shared@11.4.6': {}
+  '@intlify/shared@11.4.8': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -5239,13 +5277,13 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.20.1
 
-  '@opendesign-plus/components@0.0.1-rc.54(@opendesign-plus/composables@0.0.1-rc.10(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(js-cookie@3.0.7)(markdown-it-anchor@8.6.7(@types/markdown-it@14.1.1)(markdown-it@14.2.0))(markdown-it-async@2.2.0)(pinia@2.3.1(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))(shiki@2.5.0)(vue-i18n@11.4.6(vue@3.5.29(typescript@5.9.3))))(@opendesign-plus/styles@0.0.1-rc.2)(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(@vueuse/shared@12.8.2(typescript@5.9.3))(aos@2.3.4)(dayjs@1.11.13)(element-plus@2.9.5(vue@3.5.29(typescript@5.9.3)))(video.js@8.23.9)(vue-dompurify-html@4.1.4(vue@3.5.29(typescript@5.9.3)))(vue@3.5.29(typescript@5.9.3))':
+  '@opendesign-plus/components@0.0.1-rc.67(@opendesign-plus/composables@0.0.1-rc.10(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(js-cookie@3.0.7)(markdown-it-anchor@8.6.7(@types/markdown-it@14.1.1)(markdown-it@14.2.0))(markdown-it-async@2.2.0)(pinia@2.3.1(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))(shiki@3.23.0)(vue-i18n@11.4.8(vue@3.5.29(typescript@5.9.3))))(@opendesign-plus/styles@0.0.1-rc.2)(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(@vueuse/shared@14.4.0(vue@3.5.29(typescript@5.9.3)))(aos@2.3.4)(dayjs@1.11.13)(element-plus@2.9.5(vue@3.5.29(typescript@5.9.3)))(video.js@8.23.9)(vue-dompurify-html@4.1.4(vue@3.5.29(typescript@5.9.3)))(vue@3.5.29(typescript@5.9.3))':
     dependencies:
-      '@opendesign-plus/composables': 0.0.1-rc.10(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(js-cookie@3.0.7)(markdown-it-anchor@8.6.7(@types/markdown-it@14.1.1)(markdown-it@14.2.0))(markdown-it-async@2.2.0)(pinia@2.3.1(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))(shiki@2.5.0)(vue-i18n@11.4.6(vue@3.5.29(typescript@5.9.3)))
+      '@opendesign-plus/composables': 0.0.1-rc.10(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(js-cookie@3.0.7)(markdown-it-anchor@8.6.7(@types/markdown-it@14.1.1)(markdown-it@14.2.0))(markdown-it-async@2.2.0)(pinia@2.3.1(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))(shiki@3.23.0)(vue-i18n@11.4.8(vue@3.5.29(typescript@5.9.3)))
       '@opendesign-plus/styles': 0.0.1-rc.2
       '@opensig/opendesign': 1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3))
       '@vueuse/core': 10.11.1(vue@3.5.29(typescript@5.9.3))
-      '@vueuse/shared': 12.8.2(typescript@5.9.3)
+      '@vueuse/shared': 14.4.0(vue@3.5.29(typescript@5.9.3))
       aos: 2.3.4
       dayjs: 1.11.13
       element-plus: 2.9.5(vue@3.5.29(typescript@5.9.3))
@@ -5253,7 +5291,7 @@ snapshots:
       vue: 3.5.29(typescript@5.9.3)
       vue-dompurify-html: 4.1.4(vue@3.5.29(typescript@5.9.3))
 
-  '@opendesign-plus/composables@0.0.1-rc.10(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(js-cookie@3.0.7)(markdown-it-anchor@8.6.7(@types/markdown-it@14.1.1)(markdown-it@14.2.0))(markdown-it-async@2.2.0)(pinia@2.3.1(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))(shiki@2.5.0)(vue-i18n@11.4.6(vue@3.5.29(typescript@5.9.3)))':
+  '@opendesign-plus/composables@0.0.1-rc.10(@opensig/opendesign@1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3)))(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(js-cookie@3.0.7)(markdown-it-anchor@8.6.7(@types/markdown-it@14.1.1)(markdown-it@14.2.0))(markdown-it-async@2.2.0)(pinia@2.3.1(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3)))(shiki@3.23.0)(vue-i18n@11.4.8(vue@3.5.29(typescript@5.9.3)))':
     dependencies:
       '@opensig/opendesign': 1.2.4(@vueuse/core@10.11.1(vue@3.5.29(typescript@5.9.3)))(dayjs@1.11.13)(vue@3.5.29(typescript@5.9.3))
       '@vueuse/core': 10.11.1(vue@3.5.29(typescript@5.9.3))
@@ -5261,15 +5299,15 @@ snapshots:
       markdown-it-anchor: 8.6.7(@types/markdown-it@14.1.1)(markdown-it@14.2.0)
       markdown-it-async: 2.2.0
       pinia: 2.3.1(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3))
-      shiki: 2.5.0
-      vue-i18n: 11.4.6(vue@3.5.29(typescript@5.9.3))
+      shiki: 3.23.0
+      vue-i18n: 11.4.8(vue@3.5.29(typescript@5.9.3))
 
   '@opendesign-plus/geo-scripts@0.0.1-rc.1':
     dependencies:
       commander: 13.1.0
       jsdom: 24.1.3
       p-limit: 7.3.0
-      playwright-core: 1.62.1
+      playwright-core: 1.63.0
       turndown: 7.2.4
     transitivePeerDependencies:
       - bufferutil
@@ -5534,24 +5572,50 @@ snapshots:
       '@types/hast': 3.0.4
       hast-util-to-html: 9.0.5
 
+  '@shikijs/core@3.23.0':
+    dependencies:
+      '@shikijs/types': 3.23.0
+      '@shikijs/vscode-textmate': 10.0.2
+      '@types/hast': 3.0.5
+      hast-util-to-html: 9.0.5
+
   '@shikijs/engine-javascript@2.5.0':
     dependencies:
       '@shikijs/types': 2.5.0
       '@shikijs/vscode-textmate': 10.0.2
       oniguruma-to-es: 3.1.1
 
+  '@shikijs/engine-javascript@3.23.0':
+    dependencies:
+      '@shikijs/types': 3.23.0
+      '@shikijs/vscode-textmate': 10.0.2
+      oniguruma-to-es: 4.3.6
+
   '@shikijs/engine-oniguruma@2.5.0':
     dependencies:
       '@shikijs/types': 2.5.0
+      '@shikijs/vscode-textmate': 10.0.2
+
+  '@shikijs/engine-oniguruma@3.23.0':
+    dependencies:
+      '@shikijs/types': 3.23.0
       '@shikijs/vscode-textmate': 10.0.2
 
   '@shikijs/langs@2.5.0':
     dependencies:
       '@shikijs/types': 2.5.0
 
+  '@shikijs/langs@3.23.0':
+    dependencies:
+      '@shikijs/types': 3.23.0
+
   '@shikijs/themes@2.5.0':
     dependencies:
       '@shikijs/types': 2.5.0
+
+  '@shikijs/themes@3.23.0':
+    dependencies:
+      '@shikijs/types': 3.23.0
 
   '@shikijs/transformers@2.5.0':
     dependencies:
@@ -5562,6 +5626,11 @@ snapshots:
     dependencies:
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.4
+
+  '@shikijs/types@3.23.0':
+    dependencies:
+      '@shikijs/vscode-textmate': 10.0.2
+      '@types/hast': 3.0.5
 
   '@shikijs/vscode-textmate@10.0.2': {}
 
@@ -5705,6 +5774,10 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
+  '@types/hast@3.0.5':
+    dependencies:
+      '@types/unist': 3.0.3
+
   '@types/js-yaml@4.0.9': {}
 
   '@types/json-schema@7.0.15': {}
@@ -5723,6 +5796,11 @@ snapshots:
       '@types/mdurl': 2.0.0
 
   '@types/markdown-it@14.1.2':
+    dependencies:
+      '@types/linkify-it': 5.0.0
+      '@types/mdurl': 2.0.0
+
+  '@types/markdown-it@14.2.0':
     dependencies:
       '@types/linkify-it': 5.0.0
       '@types/mdurl': 2.0.0
@@ -6401,6 +6479,10 @@ snapshots:
       vue: 3.5.29(typescript@5.9.3)
     transitivePeerDependencies:
       - typescript
+
+  '@vueuse/shared@14.4.0(vue@3.5.29(typescript@5.9.3))':
+    dependencies:
+      vue: 3.5.29(typescript@5.9.3)
 
   '@vueuse/shared@9.13.0(vue@3.5.29(typescript@5.9.3))':
     dependencies:
@@ -7472,7 +7554,7 @@ snapshots:
 
   hast-util-to-html@9.0.5:
     dependencies:
-      '@types/hast': 3.0.4
+      '@types/hast': 3.0.5
       '@types/unist': 3.0.3
       ccount: 2.0.1
       comma-separated-tokens: 2.0.3
@@ -7486,7 +7568,7 @@ snapshots:
 
   hast-util-whitespace@3.0.0:
     dependencies:
-      '@types/hast': 3.0.4
+      '@types/hast': 3.0.5
 
   he@1.2.0: {}
 
@@ -7831,7 +7913,7 @@ snapshots:
 
   markdown-it-async@2.2.0:
     dependencies:
-      '@types/markdown-it': 14.1.2
+      '@types/markdown-it': 14.2.0
       markdown-it: 14.2.0
 
   markdown-it@14.2.0:
@@ -7849,7 +7931,7 @@ snapshots:
 
   mdast-util-to-hast@13.2.1:
     dependencies:
-      '@types/hast': 3.0.4
+      '@types/hast': 3.0.5
       '@types/mdast': 4.0.4
       '@ungap/structured-clone': 1.3.2
       devlop: 1.1.0
@@ -8020,9 +8102,17 @@ snapshots:
     dependencies:
       mimic-fn: 4.0.0
 
+  oniguruma-parser@0.12.2: {}
+
   oniguruma-to-es@3.1.1:
     dependencies:
       emoji-regex-xs: 1.0.0
+      regex: 6.1.0
+      regex-recursion: 6.0.2
+
+  oniguruma-to-es@4.3.6:
+    dependencies:
+      oniguruma-parser: 0.12.2
       regex: 6.1.0
       regex-recursion: 6.0.2
 
@@ -8138,7 +8228,7 @@ snapshots:
       exsolve: 1.1.0
       pathe: 2.0.3
 
-  playwright-core@1.62.1: {}
+  playwright-core@1.63.0: {}
 
   points-on-curve@0.2.0: {}
 
@@ -8333,6 +8423,17 @@ snapshots:
       '@shikijs/types': 2.5.0
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.4
+
+  shiki@3.23.0:
+    dependencies:
+      '@shikijs/core': 3.23.0
+      '@shikijs/engine-javascript': 3.23.0
+      '@shikijs/engine-oniguruma': 3.23.0
+      '@shikijs/langs': 3.23.0
+      '@shikijs/themes': 3.23.0
+      '@shikijs/types': 3.23.0
+      '@shikijs/vscode-textmate': 10.0.2
+      '@types/hast': 3.0.5
 
   siginfo@2.0.0: {}
 
@@ -8880,11 +8981,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue-i18n@11.4.6(vue@3.5.29(typescript@5.9.3)):
+  vue-i18n@11.4.8(vue@3.5.29(typescript@5.9.3)):
     dependencies:
-      '@intlify/core-base': 11.4.6
-      '@intlify/devtools-types': 11.4.6
-      '@intlify/shared': 11.4.6
+      '@intlify/core-base': 11.4.8
+      '@intlify/devtools-types': 11.4.8
+      '@intlify/shared': 11.4.8
       '@vue/devtools-api': 6.6.4
       vue: 3.5.29(typescript@5.9.3)
 

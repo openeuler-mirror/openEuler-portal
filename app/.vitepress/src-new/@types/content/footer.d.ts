@@ -1,7 +1,7 @@
 declare module '#content/footer' {
   // friendship_links: 友情链接
   interface FriendshipLinkItemT {
-    link: string;
+    href: string;
     title: string;
   }
 
