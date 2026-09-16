@@ -12,6 +12,8 @@ category: migration
 custom-layout: true
 ---
 
+<h1 class="visually-hidden">{{ $frontmatter.title }}</h1>
+
 <script setup lang="ts">
   import TheMigrationAdvantage from "@/views/migration/TheMigrationAdvantage.vue";
 </script>

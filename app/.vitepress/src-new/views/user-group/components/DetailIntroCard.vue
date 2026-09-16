@@ -74,7 +74,7 @@ const bannerImage = computed(() => {
       }"
     >
       <div>
-        <p class="title">{{ props.cityGroup }}</p>
+        <h1 class="title">{{ props.cityGroup }}</h1>
         <div v-if="organizational">
           <span class="org-title">{{ t('usergroup.organization') }}</span>
           <span class="org-name">{{ organizational }}</span>

@@ -6,4 +6,6 @@ title: "品牌规范"
   import TheBrandSpecification from "~@/views/brand/TheBrandSpecification.vue"
 </script>
 
+<h1 class="visually-hidden">品牌规范</h1>
+
 <TheBrandSpecification />

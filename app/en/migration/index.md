@@ -12,4 +12,6 @@ category: migration
   import TheMigrationPortal from "@/views/migration/portal/TheMigrationPortal.vue"
 </script>
 
+<h1 class="visually-hidden">openEuler Migration Center</h1>
+
 <TheMigrationPortal />

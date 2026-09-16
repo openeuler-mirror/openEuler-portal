@@ -71,7 +71,7 @@ const liveStyleMo = ref({
   />
   <AppContent>
     <div class="live">
-      <div class="live-top-title">{{ i18n.live.REPLAYER }}</div>
+      <h2 class="live-top-title">{{ i18n.live.REPLAYER }}</h2>
       <div class="live-list">
         <OCard
           v-for="live in showLiveList"
@@ -90,9 +90,9 @@ const liveStyleMo = ref({
             </div>
             <div class="live-detail-right">
               <div>
-                <h5 class="live-detail-title">
+                <h3 class="live-detail-title">
                   {{ live.LIVETITLE }}
-                </h5>
+                </h3>
                 <div class="live-desc">
                   <span>
                     <OIcon class="smail-icon">

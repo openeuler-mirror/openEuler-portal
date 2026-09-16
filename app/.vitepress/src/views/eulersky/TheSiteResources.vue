@@ -28,7 +28,7 @@ const { lang } = useData();
       />
       <OContainer class="site-container" :level-index="1">
         <div class="container-left word-style">
-          <h3>{{ siteI18n.CARD_TITLE }}</h3>
+          <h1>{{ siteI18n.CARD_TITLE }}</h1>
           <p class="site-container-introduction">
             {{ siteI18n.CARD_INTRODUCTION }}
           </p>
@@ -69,7 +69,7 @@ const { lang } = useData();
         <p class="tip">{{ siteI18n.TIP }}</p>
       </div>
       <OContainer class="apply-container word-style" :level-index="1">
-        <h3>{{ siteI18n.APPLY_SITE_TITLE }}</h3>
+        <h2>{{ siteI18n.APPLY_SITE_TITLE }}</h2>
         <p class="apply-container-introduction">
           {{ siteI18n.APPLY_SITE_INTRODUCTION }}
           <a :href="`mailto:${siteI18n.APPLY_SITE_INTRODUCTION1}`">{{
@@ -97,7 +97,7 @@ const { lang } = useData();
     flex-direction: column;
     margin-top: 24px;
     padding: 16px;
-    h3 {
+    h1 {
       line-height: var(--e-line-height-h7);
       font-size: var(--e-font-size-h7);
     }
@@ -108,7 +108,7 @@ const { lang } = useData();
     line-height: var(--e-line-height-text);
   }
 
-  h3 {
+  h1 {
     line-height: var(--e-line-height-h5);
     font-size: var(--e-font-size-h5);
     @media screen and (max-width: 768px) {
@@ -132,7 +132,7 @@ const { lang } = useData();
 .apply-container {
   margin-top: 40px;
   padding: 40px;
-  h3 {
+  h2 {
     line-height: var(--e-line-height-h5);
     font-size: var(--e-font-size-h5);
   }
@@ -144,7 +144,7 @@ const { lang } = useData();
   @media screen and (max-width: 768px) {
     margin-top: 24px;
     padding: 16px;
-    h3 {
+    h2 {
       font-size: var(--e-font-size-h7);
       line-height: var(--e-line-height-h7);
     }

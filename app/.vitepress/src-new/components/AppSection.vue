@@ -24,11 +24,11 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
 </script>
 
 <template>
-  <div class="app-section" :class="{ 'is-full': props.full }">
+  <section class="app-section" :class="{ 'is-full': props.full }">
     <div class="section-wrapper">
       <slot name="main">
         <!-- header -->
-        <div
+        <header
           v-if="$slots.header || props.title || props.subtitle"
           class="section-header"
           :class="{ 'is-left': !props.headerJustifyCenter }"
@@ -53,7 +53,7 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
               </slot>
             </p>
           </slot>
-        </div>
+        </header>
 
         <!-- body -->
         <div v-if="$slots.default" class="section-body">
@@ -61,7 +61,7 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
         </div>
 
         <!-- footer -->
-        <div v-if="$slots.footer || props.footer" class="section-footer" >
+        <footer v-if="$slots.footer || props.footer" class="section-footer" >
           <slot name="footer">
             <OLink :href="props.footerHref" target="_blank" rel="noopener noreferrer" v-analytics.bubble="{ target: props.footer }">
               {{ props.footer }}
@@ -70,10 +70,10 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
               </template>
             </OLink>
           </slot>
-        </div>
+        </footer>
       </slot>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>

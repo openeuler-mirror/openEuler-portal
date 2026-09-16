@@ -137,6 +137,7 @@ const verticalPadding = computed(() => {
         />
         <DownloadVersionCard
           class="download-version-card"
+          title-tag="h1"
           :version-data="versionData"
           :mirror-list="mirrorList"
           :scenario="scenario"

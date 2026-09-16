@@ -4,7 +4,7 @@ import AppContent from '@/components/AppContent.vue';
 <template>
   <AppContent :pc-top="40" :mobile-top="12">
     <div class="form">
-      <h2>openEuler SIG Gathering 2024 活动报名</h2>
+      <h1>openEuler SIG Gathering 2024 活动报名</h1>
       <div class="auth-box">
         <OButton type="primary"> 您好，活动报名已截止 </OButton>
       </div>
@@ -131,7 +131,7 @@ import AppContent from '@/components/AppContent.vue';
     padding: 16px;
   }
 
-  h2 {
+  h1 {
     font-size: 32px;
     font-weight: 500;
     margin: 0 0 40px;

@@ -83,7 +83,7 @@ const qrcode = [
 </script>
 
 <template>
-  <div id="tour_footer" class="footer">
+  <footer id="tour_footer" class="footer">
     <OFooter
       :info="info"
       :quick-nav="quickData"
@@ -93,7 +93,7 @@ const qrcode = [
       :qrcode="lang === 'en' ? {} : qrcode"
       :footer-bg-img="lePadV ? footerImgMb : footerImg"
     />
-  </div>
+  </footer>
 </template>
 
 <style lang="scss" scoped>

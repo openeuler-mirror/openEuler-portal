@@ -125,7 +125,7 @@ const isDark = computed(() => {
 
     <div class="previous">
       <div class="previous-title">
-        <h3>{{ data_zh.previous.title }}</h3>
+        <h2>{{ data_zh.previous.title }}</h2>
         <img :src="liveImg" alt="live" />
       </div>
       <div class="link-box">
@@ -371,7 +371,7 @@ const isDark = computed(() => {
   }
   .previous-title {
     display: flex;
-    h3 {
+    h2 {
       font-size: 26px;
       line-height: 30px;
       color: var(--e-color-text1);

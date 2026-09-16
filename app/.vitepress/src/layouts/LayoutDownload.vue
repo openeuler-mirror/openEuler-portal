@@ -1,10 +1,9 @@
 <script lang="ts" setup>
 import { computed, watch } from 'vue';
-import { useData, useRoute } from 'vitepress';
+import { useRoute } from 'vitepress';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
-import commonContent from '#content/common';
 
 import AppRouterTemplate from '~@/components/AppRouterTemplate.vue';
 import AppRouterTemplateMo from '~@/components/AppRouterTemplateMo.vue';
@@ -14,7 +13,6 @@ import IconCommunityReleases from '~icons/download/community-releases.svg';
 import IconCommercaialReleases from '~icons/download/commercaial-releases.svg';
 import { oaReport } from '@opendesign-plus/plugins/analytics';
 
-const { lang } = useData();
 const { t, locale } = useLocale();
 const { lePadV } = useScreen();
 
@@ -62,7 +60,6 @@ watch(
 </script>
 <template>
   <div>
-    <SeoBox :seo-data="commonContent[lang]?.download" />
     <component
       :is="lePadV ? AppRouterTemplateMo : AppRouterTemplate"
       :banner-data="bannerData"

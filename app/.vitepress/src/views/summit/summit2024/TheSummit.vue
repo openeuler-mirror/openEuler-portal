@@ -159,7 +159,8 @@ guestData.value = summit2024.find((item) => item.type === 'GUEST');
     }
   }
 }
-:deep(h3) {
+:deep(h3),
+:deep(.section > h2) {
   text-align: center;
   font-size: var(--e-font-size-h3);
   line-height: var(--e-line-height-h3);

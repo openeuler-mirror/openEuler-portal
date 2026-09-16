@@ -9,4 +9,6 @@ anchor: true
   import TheMember from "@/views/community/TheMember.vue"
 </script>
 
+<h1 class="visually-hidden">Members</h1>
+
 <TheMember />

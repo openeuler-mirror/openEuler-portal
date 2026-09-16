@@ -49,7 +49,7 @@ onMounted(() => {
       />
       <OContainer class="oevp-container" :level-index="1">
         <div class="container-left word-style">
-          <h3>{{ oevpI18n.CARD_TITLE }}</h3>
+          <h1>{{ oevpI18n.CARD_TITLE }}</h1>
           <div class="oevp-container-introduction">
             {{ oevpI18n.CARD_INTRODUCTION }}
             <div v-if="lang === 'zh'">
@@ -137,7 +137,7 @@ onMounted(() => {
       flex-direction: column;
     }
 
-    h3 {
+    h1 {
       line-height: var(--e-line-height-h5);
       font-size: var(--e-font-size-h5);
     }
@@ -161,7 +161,7 @@ onMounted(() => {
     @media screen and (max-width: 768px) {
       margin-top: 24px;
       padding: 16px;
-      h3 {
+      h1 {
         font-size: var(--e-font-size-h8);
         line-height: var(--e-line-height-h8);
       }

@@ -14,7 +14,7 @@ const props = defineProps({
 <template>
   <div class="common-layout">
     <template v-for="(node, index) in data" :key="index">
-      <div v-if="['h2', 'h3'].includes(node.type) && node.content" class="section-title">{{ node.content }}</div>
+      <component :is="node.type" v-if="['h2', 'h3'].includes(node.type) && node.content" class="section-title">{{ node.content }}</component>
       <div v-if="node.type === 'strong' && node.content" class="strong">{{ node.content }}</div>
       <div v-if="node.type === 'p' && node.content" class="section-content">{{ node.content }}</div>
       <ul v-if="node.type === 'ul' && node.content" class="list">

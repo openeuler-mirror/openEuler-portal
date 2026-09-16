@@ -2,8 +2,6 @@
 import { onMounted, ref } from 'vue';
 import { getAllMirror } from '@/api/api-mirror';
 
-import commonContent from '#content/common';
-
 import { useLocale } from '~@/composables/useLocale';
 
 import BannerLevel2 from '@/components/BannerLevel2.vue';
@@ -12,7 +10,7 @@ import banner from '@/assets/banner/banner-download.png';
 
 import MirrorList from './MirrorList.vue';
 import MirrorSize from './MirrorSize.vue';
-const { locale, t } = useLocale();
+const { t } = useLocale();
 
 // 定义接口
 interface MirrorMsg {
@@ -71,7 +69,6 @@ onMounted(async () => {
 </script>
 
 <template>
-  <SeoBox :seo-data="commonContent[locale]?.mirror_list" />
   <BannerLevel2
     :background-image="banner"
     :title="t('download.MIRROR_ALL_TITLE')"

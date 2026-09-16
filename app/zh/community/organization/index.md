@@ -206,4 +206,6 @@ head:
   import TheOrganization from "@/views/organization/TheOrganization.vue"
 </script>
 
+<h1 class="visually-hidden">组织架构</h1>
+
 <TheOrganization />

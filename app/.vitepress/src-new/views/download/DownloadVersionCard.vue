@@ -37,6 +37,10 @@ import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import { computed } from 'vue';
 
 const props = defineProps({
+  titleTag: {
+    type: String,
+    default: 'h2',
+  },
   scenario: {
     type: String,
     default: () => {
@@ -411,11 +415,11 @@ const onClickDownload = (row: any) => {
 <template>
   <div class="download-version-card">
     <!-------------- 版本基本信息 -------------->
-    <h2 class="title">
+    <component :is="props.titleTag" class="title">
       {{ contentData?.NAME }}
       <OTag v-if="contentData?.LTS && !contentData?.notTag" class="lts">{{ $t('download.lts') }}</OTag>
       <OTag v-if="!contentData?.LTS && !contentData?.notTag" class="innovation"> {{ $t('download.innovation') }}</OTag>
-    </h2>
+    </component>
     <p v-if="contentData?.PLANNED_EOL" class="subtitle">Planned EOL: {{ contentData?.PLANNED_EOL }}</p>
     <div class="other-link">
       <template v-for="(linkData, index) in linkConfigs" :key="index">

@@ -111,6 +111,7 @@ if (typeof document !== 'undefined') {
     class="home"
     v-analytics.catchBubble="{ properties: { module: 'homepage' } }"
   >
+    <h1 class="visually-hidden">openEuler</h1>
     <HomeBanner />
     <ContentWrapper :vertical-padding="verticalPadding">
       <HomeDisplayZone data-aos="fade-up" class="home-display-zone" />

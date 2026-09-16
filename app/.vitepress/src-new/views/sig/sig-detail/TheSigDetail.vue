@@ -167,8 +167,8 @@ onUnmounted(() => {
     </OBreadcrumb>
     <SigDetailInfoCard
       :description="sigDetailInfo?.description"
-      :sig-name="sigDetailInfo?.name"
-      :gitee-address="`${SIG_ADDRESS}${sigDetailInfo?.name}`"
+      :sig-name="sigDetailInfo?.name || sigName"
+      :gitee-address="`${SIG_ADDRESS}${sigDetailInfo?.name || sigName}`"
       :mail="sigDetailInfo?.mailing_list"
     />
     <div class="sig-detail-content">

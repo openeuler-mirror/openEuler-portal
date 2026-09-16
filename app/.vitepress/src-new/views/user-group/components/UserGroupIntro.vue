@@ -35,9 +35,9 @@ const introData = computed(() => userGroupContent.zh.intro);
             <p class="role-desc">{{ title.desc }}</p>
           </div>
         </div>
-        <div class="right">
-          <p class="section">{{ t('usergroup.rights') }}</p>
-          <div
+        <ul class="right">
+          <li class="section">{{ t('usergroup.rights') }}</li>
+          <li
             v-for="(right, index) in intro.rights"
             :key="index"
             class="section-item"
@@ -52,12 +52,12 @@ const introData = computed(() => userGroupContent.zh.intro);
                 right.operation
               }}</a>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
 
-        <div class="obligation">
-          <p class="section">{{ t('usergroup.obligation') }}</p>
-          <div
+        <ul class="obligation">
+          <li class="section">{{ t('usergroup.obligation') }}</li>
+          <li
             v-for="(obligation, index) in intro.obligation"
             :key="index"
             class="section-item"
@@ -72,8 +72,8 @@ const introData = computed(() => userGroupContent.zh.intro);
                 obligation.operation
               }}</a>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
   </AppSection>

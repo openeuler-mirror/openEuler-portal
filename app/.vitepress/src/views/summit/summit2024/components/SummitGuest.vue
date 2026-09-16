@@ -15,13 +15,13 @@ const getPersonInfo = (id: string) => {
 };
 </script>
 <template>
-  <div
+  <section
     v-if="props.data.guestClass?.length || props.data.datas?.length"
     class="section"
   >
-    <h3>
+    <h2>
       {{ props.data.title }}
-    </h3>
+    </h2>
     <!-- 有分类 -->
     <template v-if="props.data.guestClass?.length !== 0">
       <div
@@ -40,7 +40,7 @@ const getPersonInfo = (id: string) => {
         </template>
       </div>
     </template>
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss">

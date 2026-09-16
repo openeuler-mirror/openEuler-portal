@@ -2122,7 +2122,7 @@ onMounted(() => {
       <p v-for="item in summitData.detail" :key="item">{{ item }}</p>
     </div>
     <div class="live">
-      <h3>{{ summitData.live.title }}</h3>
+      <h2>{{ summitData.live.title }}</h2>
       <div>
         <OTabs v-model="isLiverShown" class="schedule-tabs">
           <el-tab-pane
@@ -2154,7 +2154,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="agenda">
-      <h3>{{ summitData.agenda.title }}</h3>
+      <h2>{{ summitData.agenda.title }}</h2>
       <div class="agenda-content">
         <div
           v-for="(item, index) in summitData.agenda.meetingList"
@@ -2162,9 +2162,9 @@ onMounted(() => {
           class="agenda-item"
           data-aos="fade-up"
         >
-          <h4 class="meeting-title">
+          <h3 class="meeting-title">
             {{ item.daytime }}
-          </h4>
+          </h3>
           <OTabs v-model="tabType[index]" class="schedule-tabs">
             <el-tab-pane
               v-for="itemList in summitData.agenda.meetingList[0].list"
@@ -2207,9 +2207,9 @@ onMounted(() => {
                       summitData.agenda.meetingList[index].list[1].duration
                     }}
                   </p>
-                  <!-- <h4 v-if="index === 0 && itemList.title" class="other-title">
+                  <!-- <h3 v-if="index === 0 && itemList.title" class="other-title">
                   主题： {{ itemList.title }}
-                </h4> -->
+                </h3> -->
                   <SummitSchedule
                     :options="itemList.children"
                     :detail="itemList.detail"
@@ -2222,7 +2222,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="exhibition">
-      <h3>{{ summitData.exhibition.title }}</h3>
+      <h2>{{ summitData.exhibition.title }}</h2>
       <div class="exhibition-img">
         <img :src="exhibitionImg" alt="" />
         <a
@@ -2253,22 +2253,22 @@ onMounted(() => {
       </div>
     </div>
     <div class="guest">
-      <h3 class="guest-title">{{ summitData.guest.title }}</h3>
-      <h4>{{ summitData.guest.guestListKv.title }}</h4>
+      <h2 class="guest-title">{{ summitData.guest.title }}</h2>
+      <h3>{{ summitData.guest.guestListKv.title }}</h3>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListKv.guestList"
         shape="circle"
         :web-columns-num="4"
         :mobile-columns-num="2"
       />
-      <h4>{{ summitData.guest.guestListMain.title }}</h4>
+      <h3>{{ summitData.guest.guestListMain.title }}</h3>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListMain.guestList"
         shape="circle"
         :web-columns-num="4"
         :mobile-columns-num="2"
       />
-      <h4>{{ summitData.guest.guestListSub.title }}</h4>
+      <h3>{{ summitData.guest.guestListSub.title }}</h3>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListSub.guestList"
         shape="circle"
@@ -2277,15 +2277,15 @@ onMounted(() => {
       />
     </div>
     <div class="partner">
-      <h3 class="partner-title">
+      <h2 class="partner-title">
         {{ summitData.partner.title }}
-      </h3>
+      </h2>
       <div
         v-for="item in summitData.partner.partnerList"
         :key="item.subTitle"
         class="partner-item"
       >
-        <h4>{{ item.subTitle }}</h4>
+        <h3>{{ item.subTitle }}</h3>
         <LinkPanel
           :link-list="item.logoList"
           :theme="commonStore.theme === 'light' ? 'light' : 'dark'"
@@ -2294,7 +2294,7 @@ onMounted(() => {
     </div>
     <div class="previous" data-aos="fade-up">
       <div class="previous-title">
-        <h3>{{ summitData.previous.title }}</h3>
+        <h2>{{ summitData.previous.title }}</h2>
         <img :src="liveImg" alt="live" />
       </div>
       <div class="link-box">
@@ -2336,7 +2336,7 @@ onMounted(() => {
   @media (max-width: 767px) {
     margin-top: var(--e-spacing-h2);
   }
-  h3 {
+  h2 {
     text-align: center;
     font-size: var(--e-font-size-h3);
     line-height: var(--e-line-height-h3);
@@ -2429,7 +2429,7 @@ onMounted(() => {
   @media (max-width: 767px) {
     margin-top: var(--e-spacing-h2);
   }
-  h3 {
+  h2 {
     text-align: center;
     font-size: var(--e-font-size-h3);
     line-height: var(--e-line-height-h3);
@@ -2627,7 +2627,7 @@ onMounted(() => {
   @media (max-width: 767px) {
     margin-top: var(--e-spacing-h2);
   }
-  h3 {
+  h2 {
     margin-bottom: 40px;
     text-align: center;
     font-size: var(--e-font-size-h3);
@@ -2904,7 +2904,7 @@ onMounted(() => {
   @media (max-width: 767px) {
     margin-top: var(--e-spacing-h2);
   }
-  h3 {
+  h2 {
     text-align: center;
     font-size: var(--e-font-size-h3);
     line-height: var(--e-line-height-h3);
@@ -2915,7 +2915,7 @@ onMounted(() => {
       line-height: var(--e-line-height-h8);
     }
   }
-  h4 {
+  h3 {
     margin-top: 20px;
     font-size: var(--e-font-size-h5);
     line-height: var(--e-line-height-h5);
@@ -2934,7 +2934,7 @@ onMounted(() => {
   @media screen and (max-width: 768px) {
     margin-top: var(--e-spacing-h4);
   }
-  h3 {
+  h2 {
     text-align: center;
     font-size: var(--e-font-size-h3);
     line-height: var(--e-line-height-h3);
@@ -2991,7 +2991,7 @@ onMounted(() => {
         }
       }
     }
-    h4 {
+    h3 {
       font-size: var(--e-font-size-h5);
       line-height: var(--e-line-height-h5);
       color: var(--e-color-text1);
@@ -3022,7 +3022,7 @@ onMounted(() => {
   }
   .previous-title {
     display: flex;
-    h3 {
+    h2 {
       font-size: 26px;
       line-height: 30px;
       color: var(--e-color-text1);

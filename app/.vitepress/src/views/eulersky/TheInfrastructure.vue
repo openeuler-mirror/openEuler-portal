@@ -28,7 +28,7 @@ const infraI18n = computed(() => {
       />
       <OContainer class="infra-container" :level-index="1">
         <div class="container-left word-style">
-          <h3>{{ infraI18n.CARD_TITLE }}</h3>
+          <h1>{{ infraI18n.CARD_TITLE }}</h1>
           <p class="infra-container-introduction">
             {{ infraI18n.CARD_INTRODUCTION }} <br />
           </p>
@@ -81,7 +81,7 @@ const infraI18n = computed(() => {
       flex-direction: column;
     }
 
-    h3 {
+    h1 {
       line-height: var(--e-line-height-h5);
       font-size: var(--e-font-size-h5);
     }
@@ -107,7 +107,7 @@ const infraI18n = computed(() => {
     @media screen and (max-width: 768px) {
       margin-top: 24px;
       padding: 16px;
-      h3 {
+      h1 {
         font-size: var(--e-font-size-h8);
         line-height: var(--e-line-height-h8);
       }

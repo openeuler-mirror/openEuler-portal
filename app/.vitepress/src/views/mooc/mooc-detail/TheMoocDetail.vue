@@ -74,8 +74,8 @@ const videoBg = computed(() => {
   return commonStore.theme === 'light' ? video_bg_light : video_bg_dark;
 });
 const videoBgShow = ref(true);
-onMounted(() => {
   getContent();
+onMounted(() => {
   teacherList.value = menuDataList.value[0].teacher;
   allNodeList.value = getCoursePath(menuDataList.value);
   if (screenWidth.value > 1400) {
@@ -362,7 +362,7 @@ const iconMenuShow = computed(() => {
           :bread2="moocContent.zh.mooc_course[0].title"
           link1="/zh/learn/mooc/"
         />
-        <h1>{{ courseH1 }}</h1>
+        <h1 v-if="courseH1">{{ courseH1 }}</h1>
         <p class="entry-welcome">{{ welcomeStr }}</p>
         <div class="content">
           <div class="article-nav fl">

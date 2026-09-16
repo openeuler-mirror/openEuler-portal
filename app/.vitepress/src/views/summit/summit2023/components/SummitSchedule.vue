@@ -39,7 +39,7 @@ function convertMd(data: string) {
 
 <template>
   <div class="schedule">
-    <h4 v-if="agendaData.lable">{{ agendaData.lable }}</h4>
+    <h3 v-if="agendaData.lable">{{ agendaData.lable }}</h3>
     <p
       v-if="agendaData.lable.includes('SIG组开放工作会议')"
       class="go-etherpad"
@@ -83,12 +83,12 @@ function convertMd(data: string) {
         :key="itemList.id"
         class="content"
       >
-        <h4
+        <h3
           v-if="!agendaData.content[1] && agendaData.content[0].name"
           class="other-title"
         >
           {{ itemList.name }}
-        </h4>
+        </h3>
         <div class="content-list">
           <div
             v-for="subItem in itemList.content"
@@ -172,7 +172,7 @@ function convertMd(data: string) {
 }
 .schedule {
   margin-top: 20px;
-  h4 {
+  h3 {
     margin-top: 32px;
     text-align: center;
     font-size: 20px;
