@@ -1,0 +1,54 @@
+# Intelligence BooM 成员 logo 列表 / Intelligence BooM member logos
+# 非语言相关（zh/en 共用）。每项为亮色/暗色主题 logo 对。
+#   light: 亮色主题 logo
+#   dark: 暗色主题 logo
+# 顶层为数组。
+
+- light: ./images/huakun.png
+  dark: ./images/huakun_dark.png
+- light: ./images/pansheng.png
+  dark: ./images/pansheng_dark.png
+- light: ./images/baode.png
+  dark: ./images/baode_dark.png
+- light: ./images/runhe.png
+  dark: ./images/runhe_dark.png
+- light: ./images/isoftstone.png
+  dark: ./images/isoftstone_dark.png
+- light: ./images/shenxinfu.png
+  dark: ./images/shenxinfu_dark.png
+- light: ./images/dongfangtong.png
+  dark: ./images/dongfangtong_dark.png
+- light: ./images/baolande.png
+  dark: ./images/baolande_dark.png
+- light: ./images/kylinsec.png
+  dark: ./images/kylinsec_dark.png
+- light: ./images/kylinsoft.png
+  dark: ./images/kylinsoft_dark.png
+- light: ./images/tongxin.png
+  dark: ./images/tongxin_dark.png
+- light: ./images/tianyiyun.png
+  dark: ./images/tianyiyun_dark.png
+- light: ./images/yidongyun.png
+  dark: ./images/yidongyun_dark.png
+- light: ./images/dahua.png
+  dark: ./images/dahua_dark.png
+- light: ./images/CMS.png
+  dark: ./images/CMS_dark.png
+- light: ./images/gonghang.png
+  dark: ./images/gonghang_dark.png
+- light: ./images/JDT.png
+  dark: ./images/JDT_dark.png
+- light: ./images/beihang.png
+  dark: ./images/beihang_dark.png
+- light: ./images/shangjiao.png
+  dark: ./images/shangjiao_dark.png
+- light: ./images/openEuler.png
+  dark: ./images/openEuler_dark.png
+- light: ./images/openGauss.png
+  dark: ./images/openGauss_dark.png
+- light: ./images/openFuyao.png
+  dark: ./images/openFuyao_dark.png
+- light: ./images/MindSpore.png
+  dark: ./images/MindSpore_dark.png
+- light: ./images/ascend.png
+  dark: ./images/ascend_dark.png

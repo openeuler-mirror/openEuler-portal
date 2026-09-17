@@ -1,0 +1,32 @@
+# Showcase page data / 案例中心页数据
+#
+# type_map: Industry category icon mapping (indexed by industry name, used for case card industry icons and backgrounds)
+#   icon: Industry SVG icon (inline SVG, with ?raw, consumed via createSvgIcon)
+#   img_light: Light theme industry icon PNG
+#   img_dark: Dark theme industry icon PNG
+
+type_map:
+  'Finance':
+    icon: './images/finance.svg?raw'
+    img_light: './images/light/finance.png'
+    img_dark: './images/dark/finance.png'
+
+  'Carrier':
+    icon: './images/operator.svg?raw'
+    img_light: './images/light/carrier.png'
+    img_dark: './images/dark/carrier.png'
+
+  'Energy':
+    icon: './images/energy.svg?raw'
+    img_light: './images/light/energy.png'
+    img_dark: './images/dark/energy.png'
+
+  'Logistics':
+    icon: './images/logistics.svg?raw'
+    img_light: './images/light/logistics.png'
+    img_dark: './images/dark/logistics.png'
+
+  'Others':
+    icon: './images/other.svg?raw'
+    img_light: './images/light/other.png'
+    img_dark: './images/dark/other.png'

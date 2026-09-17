@@ -6,9 +6,11 @@ import MinisiteCard from './components/MinisiteCard.vue';
 import MinisiteAgenda from './components/MinisiteAgenda.vue';
 import MinisiteReview from './components/MinisiteReview.vue';
 
-import data from './data/data_zh';
+import devdayContent from '#content/interaction/summit-list/devday2026';
 
 import { devday2026s } from '#cms'
+
+const data = devdayContent.zh;
 </script>
 
 <template>

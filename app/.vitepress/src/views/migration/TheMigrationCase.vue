@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import { computed } from 'vue';
-import caseInfoData from '@/data/migration/migration-case';
+import caseInfoData from '#content/migration/transplantation-cases';
 const lang = useData().lang;
 const caseInfo = computed(() => {
   return caseInfoData[lang.value as 'zh' | 'en'];

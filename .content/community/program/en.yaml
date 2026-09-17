@@ -1,0 +1,22 @@
+# openEuler Call for X program page data
+#
+# banner_title: Banner title
+# banner_introduction: Banner introduction
+# plan_introduce: Program introduction
+# view_more: View more button text
+# card_data: Card list
+#   title: Card title
+#   url: Card link
+#   img: Card background image (PNG)
+
+banner_title: 'openEuler Call for X'
+banner_introduction: 'Diverse Contributions'
+plan_introduce: 'openEuler is an open source OS tailor-made for digital infrastructure and harnesses collaborative efforts to pioneer innovation and integrate advanced technologies. It excels in bridging the physical and digital realms to create a fully connected, intelligent world. openEuler Call for X is a program that encourages community members and open source enthusiasts to contribute, share experiences, and exchange resources. openEuler appreciates diverse contributions and aims to build a thriving community ecosystem with your involvement.'
+view_more: 'View More'
+card_data:
+  - title: 'Call for openEuler Valuable Professional'
+    url: '/en/community/program/join-oEVP/'
+    img: './images/bg-1.png'
+  - title: 'Call for Tutorials'
+    url: '/en/community/program/technical-tutorial/'
+    img: './images/bg-2.png'

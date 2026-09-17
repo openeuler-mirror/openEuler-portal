@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
+import { useData, useRouter } from 'vitepress';
 
-import { useI18n } from '@/i18n';
+import programContent from '#content/community/program';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppContent from '@/components/AppContent.vue';
 
@@ -9,45 +10,47 @@ import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import banner from '@/assets/banner/banner-interaction.png';
 import skyIllustration from '@/assets/illustrations/euler-sky.png';
 import imgCardBg from '@/assets/category/euler-sky/round-bg.png';
-import { OButton } from '@opensig/opendesign';
 
-const i18n = useI18n();
-const homeI18n = computed(() => {
-  return i18n.value.sky.HOME;
-});
+const { lang } = useData();
+const router = useRouter();
+const homeI18n = computed(() => programContent[lang.value as 'zh' | 'en']);
+function goDetail(url: string) {
+  router.go(url);
+}
 </script>
 <template>
   <BannerLevel2
     :background-image="banner"
-    :title="homeI18n.BANNER_TITLE"
+    :title="homeI18n.banner_title"
     :illustration="skyIllustration"
     class="banner"
   >
     <template #default>
-      <p class="banner-introduction">{{ homeI18n.BANNER_INTRODUCTION }}</p>
+      <p class="banner-introduction">{{ homeI18n.banner_introduction }}</p>
     </template>
   </BannerLevel2>
   <AppContent>
     <div class="sky">
       <p class="sky-introduction word-style">
-        {{ homeI18n.PLAN_INTRODUCE }}
+        {{ homeI18n.plan_introduce }}
       </p>
       <div class="sky-card">
         <OContainer
-          v-if="homeI18n.EVENT_COLLECTION"
+          v-if="homeI18n.event_collection"
           :style="{ backgroundImage: `url(${imgCardBg})` }"
           class="item"
         >
           <div class="item-content">
-            <div class="item-title">{{ homeI18n.EVENT_COLLECTION }}</div>
+            <div class="item-title">{{ homeI18n.event_collection }}</div>
             <OButton
-              variant="text"
-              size="medium"
-              class="item-link animation-btn"
-              :href="homeI18n.EVENT_COLLECTION_URL"
+              animation
+              type="text"
+              size="small"
+              class="item-link"
+              @click="goDetail(homeI18n.event_collection_url)"
             >
-              {{ homeI18n.EVENT_COLLECTION1 }}
-              <template #suffix>
+              {{ homeI18n.event_collection1 }}
+              <template #suffixIcon>
                 <OIcon><IconArrowRight /></OIcon>
               </template>
             </OButton>
@@ -56,21 +59,22 @@ const homeI18n = computed(() => {
       </div>
       <div class="sky-card-list">
         <OContainer
-          v-for="item in homeI18n.CARD_DATA"
-          :key="item.TITLE"
-          :style="{ backgroundImage: `url(${item.IMG})` }"
+          v-for="item in homeI18n.card_data"
+          :key="item.title"
+          :style="{ backgroundImage: `url(${item.img})` }"
           class="item"
         >
           <div class="item-content">
-            <div class="item-title">{{ item.TITLE }}</div>
+            <div class="item-title">{{ item.title }}</div>
             <OButton
-              variant="text"
-              size="medium"
-              class="item-link animation-btn"
-              :href="item.URL"
+              animation
+              type="text"
+              size="small"
+              class="item-link"
+              @click="goDetail(item.url)"
             >
-              {{ i18n.sky.VIEW_MORE }}
-              <template #suffix>
+              {{ homeI18n.view_more }}
+              <template #suffixIcon>
                 <OIcon><IconArrowRight /></OIcon>
               </template>
             </OButton>
@@ -148,12 +152,9 @@ const homeI18n = computed(() => {
       }
       .item-link {
         max-width: 256px;
-        justify-content: start;
         padding: 0;
         margin-right: var(--e-spacing-h5);
         font-size: var(--e-font-size-text);
-        --btn-color-hover: var(--e-color-text1);
-        --btn-color: var(--e-color-text1);
         line-height: var(--e-line-height-text);
         svg {
           color: var(--e-color-brand1);

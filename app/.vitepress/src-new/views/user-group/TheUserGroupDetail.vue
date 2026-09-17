@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vitepress';
 import { useLocale } from '~@/composables/useLocale';
-import cityData from '~@/data/user-group/city/';
+import userGroupDetailContent from '#content/community/user-group/detail';
 import DetailIntroCard from './components/DetailIntroCard.vue';
 import DetailMember from './components/DetailMember.vue';
 import DetailGuide from './components/DetailGuide.vue';
@@ -19,7 +19,7 @@ onMounted(() => {
   if (params.has('name')) {
     const city = params.get('name');
     cityGroup.value = `${city}${t('usergroup.userGroup')}`;
-    const data = cityData.find((item) => item.name === city);
+    const data = userGroupDetailContent.zh.cities.find((item) => item.name === city);
     if (!data) router.go(`/${locale.value}/community/user-group/`);
     groupData.value = data?.data ?? {};
   } else {

@@ -1,0 +1,24 @@
+# 页头数据 / Header data
+# 非语言相关（zh/en 共用），两个 locale 内容相同。
+#
+# ar_list: 阿拉伯语路由路径列表（用于判断当前路由是否支持 AR 语言切换）
+# ar_url: 阿拉伯语站点 URL
+
+ar_list:
+  - /interaction/news-list
+  - /interaction/blog-list
+  - /monthly-bulletins
+  - /download
+  - /download/commercial-release
+  - /community/organization
+  - /community/member
+  - /showcase
+  - /other/brand
+  - /security/security-bulletins
+  - /community/mailing-list
+  - /other/privacy
+  - /personal-data-collection-overview
+  - /data-sharing-with-third-parties
+  - /other/cookies
+
+ar_url: 'https://ar.openeuler.org'

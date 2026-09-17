@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 import { getAllMirror } from '@/api/api-mirror';
 
-import seoConfig from '@/data/common/seo';
+import commonContent from '#content/common';
 
 import { useLocale } from '~@/composables/useLocale';
 
@@ -71,7 +71,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <SeoBox :seo-data="seoConfig[locale]?.mirrorList" />
+  <SeoBox :seo-data="commonContent[locale]?.mirror_list" />
   <BannerLevel2
     :background-image="banner"
     :title="t('download.MIRROR_ALL_TITLE')"

@@ -1,18 +1,22 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 import { useData } from 'vitepress';
-import { useI18n } from '@/i18n';
 
-import practicesInfoData from '@/data/migration/migration-practices';
+import userCasesContent from '#content/migration/user-cases';
 
-const i18n = useI18n();
 const { lang } = useData();
 
 const practicesInfo = computed(() => {
-  return practicesInfoData[lang.value as 'zh' | 'en'];
+  return userCasesContent[lang.value as 'zh' | 'en'].cases;
 });
 
-const userCaseData = computed(() => i18n.value.showcase);
+const userCaseData = computed(() => {
+  return userCasesContent[lang.value as 'zh' | 'en'];
+});
+
+function goDetail(link: string) {
+  window.open(link);
+}
 </script>
 <template>
   <div class="migration-user-case">
@@ -28,7 +32,7 @@ const userCaseData = computed(() => i18n.value.showcase);
           <p class="detail">
             {{ item.summary }}
           </p>
-          <a :href="item.path" target="_blank" rel="noopener noreferrer">
+          <a @click="goDetail(item.path)">
             <OButton type="primary" size="mini" class="confirm-btn">{{
               userCaseData.button
             }}</OButton>

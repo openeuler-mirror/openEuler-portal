@@ -1,0 +1,27 @@
+# 社区页侧边导航 TOC / Community sidebar TOC
+#
+# 顶层为数组，每项为一级导航节点。
+#   label: 节点显示文案
+#   link: 节点链接路径段（拼接在 /{locale}/community/ 之后，空字符串表示该节点为纯分组标题）
+#   children: 子节点数组（可选，结构与父节点相同）
+
+- label: 组织架构
+  link: organization
+- label: 成员单位
+  link: member
+- label: 政策和规则
+  link: ''
+  children:
+    - label: 社区章程
+      link: charter
+    - label: 选举条例
+      link: vote
+    - label: 行为准则
+      link: conduct
+    - label: 生成式AI工具使用与开源贡献策略
+      link: ai-coding-assistants
+    - label: 运作制度
+      link: meeting-system
+      children:
+        - label: 会议制度
+          link: meeting-system

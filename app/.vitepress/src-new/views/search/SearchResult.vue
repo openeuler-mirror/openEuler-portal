@@ -7,7 +7,23 @@ import { useData } from 'vitepress';
 import { oaReport } from '@opendesign-plus/plugins/analytics';
 
 import { useVModels } from '@vueuse/core';
-import { moduleMap, subModuleMap } from '~@/data/search';
+import searchContent from '#content/search';
+
+const moduleMap = new Map(
+  searchContent.zh.module_map.map((item) => {
+    const en = searchContent.en.module_map.find((e) => e.key === item.key);
+    return [item.key, { label: { zh: item.label, en: en?.label ?? item.label }, ...(item.sub_modules ? { subModules: item.sub_modules } : {}) }];
+  })
+);
+const subModuleMap = new Map(
+  searchContent.zh.sub_module_map.map((item) => {
+    const en = searchContent.en.sub_module_map.find((e) => e.key === item.key);
+    return [item.key, {
+      ...(item.label ? { label: { zh: item.label, en: en?.label ?? item.label } } : {}),
+      from: { zh: item.from, en: en?.from ?? item.from },
+    }];
+  })
+);
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 

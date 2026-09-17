@@ -13,12 +13,12 @@ category: migration
 
 <script setup lang="ts">
 import { useData } from 'vitepress';
-import seoConfig from '@/data/common/seo';
+import commonContent from '#content/common';
 
 const { lang } = useData();
 </script>
 
-<SeoBox :seo-data="seoConfig[lang]?.migrationBackground" />
+<SeoBox :seo-data="commonContent[lang]?.migration_background" />
 
 <h2 id='背景' style="margin-top:0;">背景</h2>
 

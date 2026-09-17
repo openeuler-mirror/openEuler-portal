@@ -31,7 +31,8 @@ import IconFilter from '~icons/app-new/icon-filter.svg';
 import { getUserCaseData } from '~@/api/api-showcase';
 import type { CasesRecordsT } from '~@/@types/type-showcase';
 
-import { typesMapZh, typesMapEn } from '~@/data/showcase';
+import showcaseContent from '#content/showcase';
+import { createSvgIcon } from '~@/composables/createSvgIcon';
 
 import { useDebounceSearch } from '~@/composables/useDebounceSearch';
 
@@ -46,6 +47,8 @@ const commonStore = useCommon();
 const isDark = computed(() => {
   return commonStore.theme === 'dark';
 });
+
+const typeMap = computed(() => showcaseContent[locale.value].type_map);
 
 // -------------------- 列表数据 -------------------
 const params = reactive({
@@ -309,12 +312,12 @@ const handleConfirm = () => {
             <div
               class="card-content"
               :style="{
-                backgroundImage: `url(${isZh ? typesMapZh.get(item.industry)?.img[commonStore.theme] : typesMapEn.get(item.industry)?.img[commonStore.theme]})`
+                backgroundImage: `url(${typeMap[item.industry]?.[commonStore.theme === 'dark' ? 'img_dark' : 'img_light']})`
               }"
             >
               <div class="title-top">
                 <OIcon class="nav-item-icon">
-                  <component :is="isZh ? typesMapZh.get(item.industry)?.icon : typesMapEn.get(item.industry)?.icon"> </component>
+                  <component :is="createSvgIcon(typeMap[item.industry]?.icon)"> </component>
                 </OIcon>
                 <span class="title">{{ item.title }}</span>
               </div>

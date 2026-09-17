@@ -1,0 +1,19 @@
+# openYuanrong page data
+#
+# entrance_list: Entrance card list
+#   icon: Entrance icon (SVG, inline consumption, path uses ?raw)
+#   title: Card title
+#   desc: Card description
+#   href: Link URL
+#   is_outlink: Whether this is an external link (optional)
+
+entrance_list:
+  - icon: ./images/icon-code-repo.svg?raw
+    title: Repositories
+    desc: 'Get immediate access to the openYuanrong repository, contact details, and more.'
+    href: /en/sig/sig-YuanRong#repositories
+  - icon: ./images/icon-document.svg?raw
+    title: Documentation
+    desc: 'Quickly build and effortlessly deploy scalable distributed applications with openYuanrong.'
+    href: 'https://docs.openyuanrong.org/en/latest/index.html'
+    is_outlink: true

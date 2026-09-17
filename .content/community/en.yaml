@@ -1,0 +1,18 @@
+# Community sidebar TOC
+#
+# Top-level is an array; each item is a first-level navigation node.
+#   label: Node display text
+#   link: Node link path segment (appended to /{locale}/community/; empty string means this node is a group title only)
+#   children: Child node array (optional, same structure as parent)
+
+- label: Organizational Structure
+  link: organization
+- label: Members
+  link: member
+- label: Policies and Rules
+  link: ''
+  children:
+    - label: Code of Conduct
+      link: conduct
+    - label: Generative AI Use and Open Source Contribution Policy
+      link: ai-coding-assistants

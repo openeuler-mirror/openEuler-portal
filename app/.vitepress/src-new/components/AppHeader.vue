@@ -9,8 +9,9 @@ import { useDebounceFn } from '@vueuse/core';
 
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
-import navFilterConfig from '@/data/common/nav-filter';
-import { arList, getCodeRepository, AR_URL } from '~@/data/header';
+import commonContent from '#content/common';
+import headerContent from '#content/header';
+import { getCodeRepository } from '~@/data/header';
 
 import { getUnreadMsgCount } from '@/api/api-messageCenter';
 import { queryPersonalInfo } from '@/api/api-login';
@@ -30,6 +31,9 @@ interface LanguageOptionT {
   label: string;
   simple: string;
 }
+
+const arList = headerContent.zh.ar_list;
+const AR_URL = headerContent.zh.ar_url;
 
 const router = useRouter();
 const { lang, frontmatter } = useData();
@@ -216,12 +220,12 @@ watch(
     }
 
     // 语言过滤
-    for (let i = 0, len = navFilterConfig.length; i < len; i++) {
+    for (let i = 0, len = commonContent.nav_filter.length; i < len; i++) {
       // 其他
       const routeArr = routerPath.value.split('/');
       const routeName = routeArr[routeArr.length - 2];
       // TODO:目前只支持一级
-      const names = navFilterConfig[i].name.split('/');
+      const names = commonContent.nav_filter[i].name.split('/');
       const name = names[0];
 
       if (
@@ -232,7 +236,7 @@ watch(
         // 子路径匹配
         (names[1] && names[1] === '**' && routerPath.value.includes(name))
       ) {
-        langShow.value = navFilterConfig[i].lang;
+        langShow.value = commonContent.nav_filter[i].lang;
         break;
       }
     }

@@ -1,0 +1,76 @@
+# OSV 技术测评步骤页数据 / OSV Assessment Step page data
+#
+# breadcrumb: 面包屑返回文案（页面顶部，点击返回上一级）
+#   text: 返回文案
+# banner: 页面顶部 banner 标题
+#   title: banner 标题
+# process: 测评流程板块
+#   title: 板块标题
+#   steps: 步骤列表（按页面从上到下视觉顺序排列，共 7 步）
+#     id: 步骤编号
+#     title: 步骤标题
+#     text_1: 步骤描述片段 1
+#     link_1: 链接 1（URL 或邮箱，组件按步骤位置决定是否加 mailto: 前缀）
+#     link_text: 链接显示文本（仅步骤 5，覆盖 link_1 的默认显示）
+#     text_2: 步骤描述片段 2
+#     text_3: 步骤描述片段 3
+#     link_2: 链接 2（URL 或邮箱）
+#     text_lits: 列表项数组（仅步骤 7）
+#     text_4: 步骤描述片段 4
+
+breadcrumb:
+  text: OSV技术测评列表
+
+banner:
+  title: openEuler OSV技术测评整体介绍
+
+process:
+  title: OSV技术测评步骤
+  steps:
+    - id: '01'
+      title: 申请加入openEuler社区
+      text_1: '您需要在AtomGit平台申请加入openEuler社区，成为组织成员。申请地址：'
+      link_1: 'https://atomgit.com/openeuler/infrastructure/blob/master/docs/openEuler-Infra-FAQ.md'
+
+    - id: '02'
+      title: 了解OSV技术测评策略
+      text_1: '开展OSV技术测评之前，您需要了解OSV技术测评策略，测评标准，以及使用OSV技术测评工具进行自验证。地址如下：'
+      link_1: 'https://atomgit.com/openeuler/oecp'
+
+    - id: '03'
+      title: 申请OSV技术测评
+      text_1: '您需要向公共邮箱（ '
+      link_1: 'compatibility@openeuler.io'
+      text_2: '）发送OSV技术测评申请，邮件标题需要注明“申请OSV技术测评”。如您提交的是嵌入式OS，请额外提交测试报告。收到邮件后，openEuler团队中sig组会与您沟通进行协议签署，如果已经签署，请忽略。'
+      text_3: 'tips：如果没有签署CLA，请先签署：'
+      link_2: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0'
+
+    - id: '04'
+      title: 提交OSV技术测评申请issue
+      text_1: '完成协议签署后，您需要在openEuler社区（'
+      link_1: 'https://atomgit.com/openeuler/oecp/issues'
+      text_2: '）的OSV技术测评项目下创建issue，将所需要测评的操作系统信息在issue中明确，以及ISO镜像地址。openEuler团队会及时了解issue的信息，并提出建议。'
+
+    - id: '05'
+      title: OSV技术测评
+      text_1: 'openEuler社区会第一时间对提供的ISO进行OSV技术测评，测评之后会联系您进行部分结果确认以及审核，之后，会将测评结果发布到 '
+      link_text: openEuler官网
+      link_1: 'https://www.openeuler.org/zh/'
+      text_2: ' 上。'
+
+    - id: '06'
+      title: OSV技术测评结果发布
+      text_1: 'openEuler团队会针对提交结果进行审核，如果通过，会将OSV技术测评结果添加到OSV技术测评列表中。'
+
+    - id: '07'
+      title: openEuler官网首页LOGO展示
+      text_1: '如果通过OSV技术测评，并已经在OSV技术测评列表（'
+      link_1: 'https://www.openeuler.org/zh/approve'
+      text_2: '）中展示，您可以联系openEuler社区（'
+      link_2: 'public@openeuler.io'
+      text_3: '），在社区官网首页“发布 openEuler 商业发行版的厂商”栏目中展示贵组织单位的LOGO。邮件标题需注明“申请在openEuler社区官网首页展示logo”，并随附下列信息：'
+      text_lits:
+        - 1.贵组织单位的全称
+        - 2.业务负责人、业务对接人的姓名和邮箱
+        - 3.OSV技术测评通过结果、OSV技术测评列表截图及OSV技术测评证书等相关证明文件
+      text_4: '收到邮件后，openEuler团队会与您沟通相关授权事宜。'

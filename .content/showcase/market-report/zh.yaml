@@ -1,0 +1,9 @@
+# 市场研究报告页数据 / Market Report page data
+#
+# market_report: 市场研究报告列表
+#   path: PDF 文件路径（相对站点根目录）
+#   summary: 报告标题
+
+market_report:
+  - path: '/whitepaper/中国服务器操作系统市场研究报告（2022H1）- 赛迪顾问.pdf'
+    summary: '中国服务器操作系统市场研究报告（2022H1）– 赛迪顾问'

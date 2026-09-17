@@ -1,11 +1,12 @@
 <script lang="ts" setup>
+import { computed } from 'vue';
 import { useRouter } from 'vitepress';
 
-import { useI18n } from '@/i18n';
+import approveStepContent from '#content/approve/approve-step';
 
 import AppContent from '@/components/AppContent.vue';
 
-const i18n = useI18n();
+const content = computed(() => approveStepContent.zh);
 const router = useRouter();
 
 function goBackPage() {
@@ -17,161 +18,161 @@ function goBackPage() {
   <AppContent :mobile-top="16">
     <div class="banner">
       <div class="breadcrumb" @click="goBackPage">
-        {{ i18n.approve.TITLE }} \
+        {{ content.breadcrumb.text }} \
       </div>
       <div class="banner-title">
-        {{ i18n.approve.STEP_HEAD }}
+        {{ content.banner.title }}
       </div>
     </div>
     <div class="hardware-content">
       <div class="hardware-content-middle">
         <div class="title">
-          {{ i18n.approve.STEP_TITLE }}
+          {{ content.process.title }}
         </div>
         <div class="content">
           <div class="content-item">
             <div class="left">
-              {{ i18n.approve.STEP_CONTENT[0].ID }}
+              {{ content.process.steps[0].id }}
             </div>
             <div class="right">
               <div class="item-title">
-                {{ i18n.approve.STEP_CONTENT[0].TITLE }}
+                {{ content.process.steps[0].title }}
               </div>
               <div class="item-content">
-                {{ i18n.approve.STEP_CONTENT[0].TEXT_1 }}
+                {{ content.process.steps[0].text_1 }}
                 <a
-                  :href="i18n.approve.STEP_CONTENT[0].LINK_1"
+                  :href="content.process.steps[0].link_1"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {{ i18n.approve.STEP_CONTENT[0].LINK_1 }} </a
+                  {{ content.process.steps[0].link_1 }} </a
                 >。
               </div>
             </div>
           </div>
           <div class="content-item">
             <div class="left">
-              {{ i18n.approve.STEP_CONTENT[1].ID }}
+              {{ content.process.steps[1].id }}
             </div>
             <div class="right">
               <div class="item-title">
-                {{ i18n.approve.STEP_CONTENT[1].TITLE }}
+                {{ content.process.steps[1].title }}
               </div>
               <div class="item-content">
-                {{ i18n.approve.STEP_CONTENT[1].TEXT_1 }}
+                {{ content.process.steps[1].text_1 }}
                 <a
-                  :href="i18n.approve.STEP_CONTENT[1].LINK_1"
+                  :href="content.process.steps[1].link_1"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {{ i18n.approve.STEP_CONTENT[1].LINK_1 }} </a
+                  {{ content.process.steps[1].link_1 }} </a
                 >。
               </div>
             </div>
           </div>
           <div class="content-item">
-            <div class="left">{{ i18n.approve.STEP_CONTENT[2].ID }}</div>
+            <div class="left">{{ content.process.steps[2].id }}</div>
             <div class="right">
               <div class="item-title">
-                {{ i18n.approve.STEP_CONTENT[2].TITLE }}
+                {{ content.process.steps[2].title }}
               </div>
               <div class="item-content">
-                {{ i18n.approve.STEP_CONTENT[2].TEXT_1 }}
-                <a :href="'mailto:' + i18n.approve.STEP_CONTENT[2].LINK_1">
-                  {{ i18n.approve.STEP_CONTENT[2].LINK_1 }}
+                {{ content.process.steps[2].text_1 }}
+                <a :href="'mailto:' + content.process.steps[2].link_1">
+                  {{ content.process.steps[2].link_1 }}
                 </a>
-                {{ i18n.approve.STEP_CONTENT[2].TEXT_2 }}
+                {{ content.process.steps[2].text_2 }}
                 <p>
-                  {{ i18n.approve.STEP_CONTENT[2].TEXT_3 }}
+                  {{ content.process.steps[2].text_3 }}
                   <a
-                    :href="i18n.approve.STEP_CONTENT[2].LINK_2"
+                    :href="content.process.steps[2].link_2"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {{ i18n.approve.STEP_CONTENT[2].LINK_2 }}
+                    {{ content.process.steps[2].link_2 }}
                   </a>
                 </p>
               </div>
             </div>
           </div>
           <div class="content-item">
-            <div class="left">{{ i18n.approve.STEP_CONTENT[3].ID }}</div>
+            <div class="left">{{ content.process.steps[3].id }}</div>
             <div class="right">
               <div class="item-title">
-                {{ i18n.approve.STEP_CONTENT[3].TITLE }}
+                {{ content.process.steps[3].title }}
               </div>
               <div class="item-content">
-                {{ i18n.approve.STEP_CONTENT[3].TEXT_1 }}
+                {{ content.process.steps[3].text_1 }}
                 <a
-                  :href="i18n.approve.STEP_CONTENT[3].LINK_1"
+                  :href="content.process.steps[3].link_1"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {{ i18n.approve.STEP_CONTENT[3].LINK_1 }}
+                  {{ content.process.steps[3].link_1 }}
                 </a>
-                {{ i18n.approve.STEP_CONTENT[3].TEXT_2 }}
+                {{ content.process.steps[3].text_2 }}
               </div>
             </div>
           </div>
           <div class="content-item">
-            <div class="left">{{ i18n.approve.STEP_CONTENT[4].ID }}</div>
+            <div class="left">{{ content.process.steps[4].id }}</div>
             <div class="right">
               <div class="item-title">
-                {{ i18n.approve.STEP_CONTENT[4].TITLE }}
+                {{ content.process.steps[4].title }}
               </div>
               <div class="item-content">
-                {{ i18n.approve.STEP_CONTENT[4].TEXT_1 }}
+                {{ content.process.steps[4].text_1 }}
                 <a
-                  :href="i18n.approve.STEP_CONTENT[4].LINK_1"
+                  :href="content.process.steps[4].link_1"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {{ i18n.approve.STEP_CONTENT[4].LINK_TEXT }}
+                  {{ content.process.steps[4].link_text }}
                 </a>
-                {{ i18n.approve.STEP_CONTENT[4].TEXT_2 }}
+                {{ content.process.steps[4].text_2 }}
               </div>
             </div>
           </div>
           <div class="content-item">
-            <div class="left">{{ i18n.approve.STEP_CONTENT[5].ID }}</div>
+            <div class="left">{{ content.process.steps[5].id }}</div>
             <div class="right">
               <div class="item-title">
-                {{ i18n.approve.STEP_CONTENT[5].TITLE }}
+                {{ content.process.steps[5].title }}
               </div>
               <div class="item-content">
-                {{ i18n.approve.STEP_CONTENT[5].TEXT_1 }}
+                {{ content.process.steps[5].text_1 }}
               </div>
             </div>
           </div>
           <div class="content-item">
-            <div class="left">{{ i18n.approve.STEP_CONTENT[6].ID }}</div>
+            <div class="left">{{ content.process.steps[6].id }}</div>
             <div class="right">
               <div class="item-title">
-                {{ i18n.approve.STEP_CONTENT[6].TITLE }}
+                {{ content.process.steps[6].title }}
               </div>
               <div class="item-content">
-                {{ i18n.approve.STEP_CONTENT[6].TEXT_1 }}
+                {{ content.process.steps[6].text_1 }}
                 <a
-                  :href="i18n.approve.STEP_CONTENT[6].LINK_1"
+                  :href="content.process.steps[6].link_1"
                   rel="noopener noreferrer"
-                  >{{ i18n.approve.STEP_CONTENT[6].LINK_1 }}</a
+                  >{{ content.process.steps[6].link_1 }}</a
                 >
-                {{ i18n.approve.STEP_CONTENT[6].TEXT_2 }}
+                {{ content.process.steps[6].text_2 }}
                 <a
-                  :href="`mailto:${i18n.approve.STEP_CONTENT[6].LINK_2}`"
+                  :href="`mailto:${content.process.steps[6].link_2}`"
                   rel="noopener noreferrer"
-                  >{{ i18n.approve.STEP_CONTENT[6].LINK_2 }}</a
+                  >{{ content.process.steps[6].link_2 }}</a
                 >
-                {{ i18n.approve.STEP_CONTENT[6].TEXT_3 }}
+                {{ content.process.steps[6].text_3 }}
                 <ul class="content-list">
                   <li
-                    v-for="item in i18n.approve.STEP_CONTENT[6].TEXT_LITS"
+                    v-for="item in content.process.steps[6].text_lits"
                     :key="item"
                   >
                     {{ item }}
                   </li>
                 </ul>
-                {{ i18n.approve.STEP_CONTENT[6].TEXT_4 }}
+                {{ content.process.steps[6].text_4 }}
               </div>
             </div>
           </div>

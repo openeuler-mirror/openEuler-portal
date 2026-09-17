@@ -1,12 +1,13 @@
 <script lang="ts" setup>
-import { ref, onMounted, computed } from 'vue';
+import { computed } from 'vue';
 import { ORow, OCol, OIcon, OLink, OPopover, OFigure } from '@opensig/opendesign';
 
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import AppSection from '~@/components/AppSection.vue';
 import HomeCalendar from '~@/views/home/HomeCalendar.vue';
 
-import { participate } from '~@/data/online-meeting';
+import meetingContent from '#content/meeting';
+import { createSvgIcon } from '~@/composables/createSvgIcon';
 
 import banner from '~@/assets/category/online-meeting/online-meeting-banner.jpg'
 import communityHelper from '~@/assets/category/online-meeting/community-helper.jpeg';
@@ -25,6 +26,8 @@ const commonStore = useCommon();
 const isDark = computed(() => {
   return commonStore.theme === 'dark';
 });
+
+const participate = computed(() => meetingContent.zh.participate);
 
 const gap = computed(() => {
   if (lePadV.value) {
@@ -48,7 +51,7 @@ const gap = computed(() => {
       <OCol v-for="(item, i) in participate" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 50%'">
         <div class="card-item">
           <OIcon class="icon">
-            <component :is="item.icon"></component>
+            <component :is="createSvgIcon(item.icon)" />
           </OIcon>
           <div class="card-content">
             <p class="title">{{ item.title }}</p>
@@ -61,7 +64,7 @@ const gap = computed(() => {
                 </template>
               </OLink>
             </div>
-            <div v-if="item?.WeChat" class="we-chat">
+            <div v-if="item.we_chat" class="we-chat">
               <OIcon><IconWechat /></OIcon>
               <OPopover
                 position="top"

@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue';
 import { useI18n } from '@/i18n';
 
-import whitePaperData from '@/data/showcase/market-report';
+import marketReportContent from '#content/showcase/market-report';
 import NotFound from '@/NotFound.vue';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 
@@ -22,22 +22,23 @@ interface PaperList {
   path: string;
   summary: string;
 }
+const marketReportData = computed(() => marketReportContent.zh.market_report);
 const randerPaperList = ref<PaperList[]>([]);
 function getRenderPaperLsit(page: number, size: number) {
-  if (whitePaperData.length > size) {
-    randerPaperList.value = whitePaperData.slice(
+  if (marketReportData.value.length > size) {
+    randerPaperList.value = marketReportData.value.slice(
       (page - 1) * size,
       page * size
     );
   } else {
-    randerPaperList.value = whitePaperData;
+    randerPaperList.value = marketReportData.value;
   }
 }
 getRenderPaperLsit(currentPage.value, pageSize.value);
 
 // 数据总条数
 const total = computed(() => {
-  return whitePaperData.length;
+  return marketReportData.value.length;
 });
 // 分页器总页数
 const totalPage = computed(() => {

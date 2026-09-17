@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import { useData } from 'vitepress';
 import { useCommon } from '@/stores/common';
-import portalInfoData from '@/data/migration/migration-portal';
+import migrationContent from '#content/migration';
 
 const commonStore = useCommon();
 
@@ -11,7 +11,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 const { lang } = useData();
 
 const portalInfo = computed(() => {
-  return portalInfoData[lang.value as 'zh' | 'en'];
+  return migrationContent[lang.value as 'zh' | 'en'];
 });
 const handleGo = (path: string) => {
   window.open('/' + lang.value + path, '_blank');
@@ -20,34 +20,34 @@ const handleGo = (path: string) => {
 <template>
   <div class="migration-advantage">
     <h3>{{ portalInfo.advantage.title }}</h3>
-    <p>{{ portalInfo.advantage.dexcription }}</p>
+    <p>{{ portalInfo.advantage.description }}</p>
     <div class="migration-advantage-content">
       <OCard class="content-card">
         <div class="advantage">
           <div class="advantage-item">
-            <img :src="portalInfo.advantage.cardTopLeft.url" />
+            <img :src="portalInfo.advantage.card_top_left.url" />
             <div class="item-right title-center">
-              <p>{{ portalInfo.advantage.cardTopLeft.title01 }}</p>
-              <p>{{ portalInfo.advantage.cardTopLeft.title02 }}</p>
-              <span>{{ portalInfo.advantage.cardTopLeft.description }}</span>
+              <p>{{ portalInfo.advantage.card_top_left.title_01 }}</p>
+              <p>{{ portalInfo.advantage.card_top_left.title_02 }}</p>
+              <span>{{ portalInfo.advantage.card_top_left.description }}</span>
             </div>
           </div>
           <img
             class="advantage-transition"
-            :src="portalInfo.advantage.transitionRight"
+            :src="portalInfo.advantage.transition_right"
           />
           <img
             class="advantage-down"
-            :src="portalInfo.advantage.transitionDown"
+            :src="portalInfo.advantage.transition_down"
           />
           <div class="advantage-item">
-            <img :src="portalInfo.advantage.cardTopRight.url" />
+            <img :src="portalInfo.advantage.card_top_right.url" />
             <div class="item-right">
-              <p>{{ portalInfo.advantage.cardTopRight.title01 }}</p>
-              <p v-show="portalInfo.advantage.cardTopRight.title02 != ''">
-                {{ portalInfo.advantage.cardTopRight.title02 }}
+              <p>{{ portalInfo.advantage.card_top_right.title_01 }}</p>
+              <p v-show="portalInfo.advantage.card_top_right.title_02 != ''">
+                {{ portalInfo.advantage.card_top_right.title_02 }}
               </p>
-              <span>{{ portalInfo.advantage.cardTopRight.description }}</span>
+              <span>{{ portalInfo.advantage.card_top_right.description }}</span>
             </div>
           </div>
         </div>

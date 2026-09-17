@@ -17,12 +17,18 @@ import AppSection from '~@/components/AppSection.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';
 
 import activityContent from '#content/activity';
+import eventListContent from '#content/interaction/event-list';
 import { foldI18n } from '~@/shared/content';
 import { slugifyEvent } from '~@/shared/event-slug';
-import { EVENT_SERIES, EVENT_STATUS } from '~@/data/event/filters';
 
-const EventSeries = new Map(EVENT_SERIES.map((s) => [s.value, { value: s.value, label: { zh: s.label_zh, en: s.label_en } }]));
-const EventState = new Map(EVENT_STATUS.map((s) => [s.value, { value: s.value, label: { zh: s.label_zh, en: s.label_en } }]));
+const EventSeries = new Map(eventListContent.zh.event_series.map((s) => [
+  s.value,
+  { value: s.value, label: { zh: s.label, en: eventListContent.en.event_series.find((e) => e.value === s.value)?.label ?? s.label } },
+]));
+const EventState = new Map(eventListContent.zh.event_status.map((s) => [
+  s.value,
+  { value: s.value, label: { zh: s.label, en: eventListContent.en.event_status.find((e) => e.value === s.value)?.label ?? s.label } },
+]));
 
 import { useDebounceSearch } from '~@/composables/useDebounceSearch';
 

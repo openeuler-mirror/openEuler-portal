@@ -3,11 +3,13 @@ import { computed } from 'vue';
 import { useI18n } from '@/i18n';
 import { useData } from 'vitepress';
 
-import siteList from '@/data/euler-sky/site';
+import siteContent from '#content/community/program/site-resources';
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import AppContent from '@/components/AppContent.vue';
 
 import bg_4 from '@/assets/category/euler-sky/bg-4.png';
+
+const siteList = siteContent.zh;
 
 const i18n = useI18n();
 const siteI18n = computed(() => {

@@ -4,7 +4,9 @@ import { useI18n } from 'vue-i18n';
 import { OPopover, OIcon, ODialog } from '@opensig/opendesign';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
-import { questionData } from '~@/data/user-group';
+import userGroupDetailContent from '#content/community/user-group/detail';
+
+const questionData = userGroupDetailContent.zh.question;
 import type { PersonT } from '~@/@types/type-user-group';
 import AppSection from '~@/components/AppSection.vue';
 
@@ -67,7 +69,7 @@ const dialogVisible = ref(false);
               class="member-item"
               :style="{
                 backgroundImage: `url(${
-                  isDark ? item.avatarDark : item.avatar
+                  isDark ? item.avatar_dark : item.avatar
                 })`,
               }"
             >
@@ -100,9 +102,9 @@ const dialogVisible = ref(false);
               </div>
 
               <div class="card-end">
-                <p v-if="item.homePage" class="home-page">
+                <p v-if="item.home_page" class="home-page">
                   <a
-                    :href="item.homePage"
+                    :href="item.home_page"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="hover-underline"

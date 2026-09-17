@@ -1,0 +1,295 @@
+# Migration portal page data
+#
+# Sections are ordered top-to-bottom by visual position on page.
+# Images are stored in ./images/, shared zh/en images have no suffix,
+# differentiated images keep original filename indication, theme variants keep _light/_dark suffix.
+# SVG consumed as <img> does not need ?raw; PNG background images do not need ?raw.
+
+# advantage: Advantages section
+#   title: Section title
+#   description: Section description
+#   card_top_left: Left card (OSs that reach EOM)
+#     url: Card image
+#     title_01: Title 1
+#     title_02: Title 2
+#     description: Description
+#   transition_right: Right transition arrow image
+#   transition_down: Down transition arrow image
+#   card_top_right: Right card (openEuler)
+#     url: Card image
+#     title_01: Title 1
+#     title_02: Title 2
+#     description: Description
+#   benefit: Benefit list (split by light/dark theme)
+#     light: Light theme card list
+#       icon: Icon
+#       title: Title
+#       link: Link
+#     dark: Dark theme card list
+#       icon: Icon
+#       title: Title
+#       link: Link
+advantage:
+  title: Advantages
+  description: Easy, stable, and efficient OS migration
+  card_top_left:
+    url: ./images/portal-advantage-left.png
+    title_01: Digital transformation
+    title_02: for OSs that reach EOM
+    description: ''
+  transition_right: ./images/portal-advantage-transition-1.png
+  transition_down: ./images/portal-advantage-transition-2.png
+  card_top_right:
+    url: ./images/portal-advantage-right.png
+    title_01: openEuler
+    title_02: ''
+    description: "An open source OS designed for digital infrastructure\nKey kernel innovation to fuel multi-architecture computing\nFull-stack optimization for diverse scenarios"
+  benefit:
+    light:
+      - icon: ./images/portal-advantage-icon-1.png
+        title: End-to-End Solution
+        link: /migration/guidance/
+      - icon: ./images/portal-advantage-icon-2.png
+        title: Easy-to-Use Tool
+        link: /migration/download/
+      - icon: ./images/portal-advantage-icon-3.png
+        title: Comprehensive and Responsive Support
+        link: /migration/contact/
+      - icon: ./images/portal-advantage-icon-4.png
+        title: Best Practices
+        link: /migration/user-cases/
+    dark:
+      - icon: ./images/portal-advantage-icon-dark-1.svg
+        title: End-to-End Solution
+        link: /migration/guidance/
+      - icon: ./images/portal-advantage-icon-dark-2.svg
+        title: Easy-to-Use Tool
+        link: /migration/download/
+      - icon: ./images/portal-advantage-icon-dark-3.svg
+        title: Comprehensive and Responsive Support
+        link: /migration/contact/
+      - icon: ./images/portal-advantage-icon-dark-4.svg
+        title: Best Practices
+        link: /migration/user-cases/
+
+# download: Download section
+#   title: Section title
+#   description: Section description
+#   left: Download tool info
+#     img_light: Light theme tool image
+#     img_dark: Dark theme tool image
+#     name: Tool name
+#     version: Version number
+#   btns: Button list
+#     name: Button name
+#     link: Button link (optional, mutually exclusive with soft_links)
+#     soft_links: Dropdown link list (optional)
+#       name: Link name
+#       link: Link URL
+#   bg_url: Background image
+download:
+  title: Download
+  description: Get the x2openEuler migration tool suite and upgrade your OS today
+  left:
+    img_light: ./images/portal-download-1.png
+    img_dark: ./images/portal-download-dark-1.png
+    name: x2openEuler
+    version: 3.0.0-2024930
+  btns:
+    - name: Download Software
+      soft_links:
+        - name: 'x86_64 '
+          link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-core-3.0.0-20241022.x86_64.rpm'
+        - name: AArch64
+          link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/aarch64/Packages/x2openEuler-core-3.0.0-20241022.aarch64.rpm'
+    - name: Feature Description
+      link: /en/migration/download/characteristic-description-3.0.0/
+    - name: Patch Description
+      link: /en/migration/download/patch_description-3.0.0/
+    - name: User Guide
+      link: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html'
+  bg_url: ./images/portal-download-bg-dark.png
+
+# instruction: Getting Started section
+#   title: Section title
+#   description: Section description
+#   list: Step list
+#     title: Step title
+#     content: Step content (multi-line with \n)
+#     sogan: Step slogan
+#   bg: Background image config (light/dark + PC/mobile)
+#     url_1_light / url_2_light: PC light background
+#     url_mo_1_light / url_mo_2_light / url_mo_3_light: Mobile light background
+#     url_1_dark / url_2_dark: PC dark background
+#     url_mo_1_dark / url_mo_2_dark / url_mo_3_dark: Mobile dark background
+instruction:
+  title: Getting Started
+  description: Find the tool to help you prepare, perform, and test your migration and services
+  list:
+    - title: Learn
+      content: "Migration background\nMigration overview\nopenEuler migration solution"
+      sogan: Six Steps to Migrate to openEuler
+    - title: Prepare
+      content: "Create a support team\nAnalyze the project\nDesign a migration plan\nPort software before migration"
+      sogan: Powerful Tool
+    - title: Implement
+      content: "In-place upgrade\nMigration after adaptation"
+      sogan: Streamlined and Reliable Migration
+    - title: Test and Roll Out
+      content: "System monitoring\nInspection and detection\nSecurity vulnerability updates"
+      sogan: Secure and Intelligent O&M
+  bg:
+    url_1_light: ./images/portal-instruction-bg-1.png
+    url_2_light: ./images/portal-instruction-bg-2.png
+    url_mo_1_light: ./images/portal-instruction-bg-mo-1.png
+    url_mo_2_light: ./images/portal-instruction-bg-mo-2.png
+    url_mo_3_light: ./images/portal-instruction-bg-mo-3.png
+    url_1_dark: ./images/portal-instruction-bg-dark-1.png
+    url_2_dark: ./images/portal-instruction-bg-dark-2.png
+    url_mo_1_dark: ./images/portal-instruction-bg-mo-dark-1.png
+    url_mo_2_dark: ./images/portal-instruction-bg-mo-dark-2.png
+    url_mo_3_dark: ./images/portal-instruction-bg-mo-dark-3.png
+
+# path: Migration Paths section
+#   title: Section title
+#   description: Section description
+#   img_light: Light theme path diagram (en differentiated, original filename: implementation.png)
+#   img_dark: Dark theme path diagram (zh/en shared)
+#   img_mo: Mobile path
+#     top: Top half
+#       title: Title
+#       description: Description
+#       img: Image
+#     bottom: Bottom half
+#       title: Title
+#       description: Description
+#       img: Image
+path:
+  title: Migration Paths
+  description: ''
+  img_light: ./images/implementation.png
+  img_dark: ./images/portal-path-content-dark.png
+  img_mo:
+    top:
+      title: In-place Upgrade (1h)
+      description: Upgrade the source OS.
+      img: ./images/portal-path-mo-top.png
+    bottom:
+      title: Migration After Adaptation (4h)
+      description: "Automatically install the OS and synchronize configurations.\nInstall applications."
+      img: ./images/portal-path-mo-bottom.png
+
+# case: Best Practices section
+#   title: Section title
+#   description: Section description
+#   list: Case list
+#     name: Case name
+#     description: Case description
+#     link: Case link
+#   btn: Button
+#     text: Button text
+#     link: Button link
+case:
+  title: Best Practices
+  description: ''
+  list:
+    - name: China Mobile (Zhejiang)
+      description: Smooth OS Porting and More Stable Core Systems
+      link: /en/showcase/provider/003p49ce-8355-d114154aa417/
+    - name: China Telecom
+      description: Seamless OS Migration to CTyunOS
+      link: /en/showcase/provider/tianyiyun0330/
+  btn:
+    text: Learn More
+    link: /migration/user-cases/
+
+# guide: Porting Guides section
+#   title: Section title
+#   description: Section description
+#   list: Guide list
+#     label: Guide title
+#     link: Guide link
+#   btn: Button
+#     text: Button text
+#     link: Button link
+guide:
+  title: Porting Guides
+  description: ''
+  list:
+    - label: MySQL 5.7.21 Porting Guide
+      link: /en/blog/randy1568/MySQL 5-7-21-migrate-guide.html
+    - label: Apache 2.4.39 Porting Guide
+      link: /en/blog/randy1568/Apache 2-4-39-porting-guide.html
+    - label: Nginx 1.14.2 Porting Guide
+      link: /en/blog/randy1568/Nginx 1-14-2-porting-guide.html
+  btn:
+    text: View More
+    link: /migration/transplantation-cases/
+
+# help: Contact section
+#   title: Section title
+#   description: Section description
+#   tips: Tip text list
+#     text_left: Left text
+#     link_text: Link text
+#     text_right: Right text
+#     link: Link
+#   offical_qr: Official WeChat account QR code
+#     img: QR code image
+#     text: Account name
+#   assistant_qr: Assistant QR code
+#     img: QR code image
+#     text: Assistant name
+help:
+  title: Contact
+  description: ''
+  tips:
+    - text_left: 'If you have questions, our '
+      link_text: FAQs
+      text_right: ' may have the answer.'
+      link: /en/migration/faq/
+    - text_left: 'If you have any issues or requirements relating to system migration, submit them through '
+      link_text: QuickIssue
+      text_right: '.'
+      link: 'https://quickissue.openeuler.org/en/new-issues/'
+    - text_left: 'Want to connect with the community or share experiences? Join our '
+      link_text: Discord group
+      text_right: ' where our team and other users can help you out.'
+      link: 'https://discord.gg/aTWFCCgsGB'
+    - text_left: 'Looking for more video tutorials? Check out our '
+      link_text: migration playlist
+      text_right: ' on the openEuler YouTube channel for detailed guides and tutorials.'
+      link: 'https://www.youtube.com/@openeuler/playlists'
+  offical_qr:
+    img: ''
+    text: openEuler official WeChat account
+  assistant_qr:
+    img: ''
+    text: openEuler assistant
+
+# toc: Migration sidebar navigation
+#   label: Node display text
+#   link: Node link path segment
+#   is_leaf: Whether this is a leaf node (optional)
+toc:
+  - label: Migration Center
+    link: migration
+  - label: Background
+    link: background
+  - label: Advantages
+    link: advantage
+  - label: Migration Solution
+    link: guidance
+  - label: Download
+    link: download
+    is_leaf: true
+  - label: Best Practices
+    link: user-cases
+  - label: Porting Guides
+    link: transplantation-cases
+  - label: Contribution Guide
+    link: contribution
+  - label: FAQs
+    link: faq
+  - label: Contact Us
+    link: contact

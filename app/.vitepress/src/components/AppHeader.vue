@@ -4,7 +4,7 @@ import { useRouter, useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 
 import useWindowResize from '@/components/hooks/useWindowResize';
-import navFilterConfig from '@/data/common/nav-filter';
+import commonContent from '#content/common';
 
 import HeaderNavNew from './HeaderNavNew.vue';
 import HeaderSearch from './HeaderSearch.vue';
@@ -87,12 +87,12 @@ watch(
     }
 
     // 语言过滤
-    for (let i = 0, len = navFilterConfig.length; i < len; i++) {
+    for (let i = 0, len = commonContent.nav_filter.length; i < len; i++) {
       // 其他
       const routeArr = routerPath.value.split('/');
       const routeName = routeArr[routeArr.length - 2];
       // TODO:目前只支持一级
-      const names = navFilterConfig[i].name.split('/');
+      const names = commonContent.nav_filter[i].name.split('/');
       const name = names[0];
 
       if (
@@ -103,7 +103,7 @@ watch(
         // 子路径匹配
         (names[1] && names[1] === '**' && routerPath.value.includes(name))
       ) {
-        langShow.value = navFilterConfig[i].lang;
+        langShow.value = commonContent.nav_filter[i].lang;
         break;
       }
     }

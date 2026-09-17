@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, onMounted, onUnmounted, watch, shallowRef } from 'vue';
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue';
 import {
   OIcon,
   ORow,
@@ -10,8 +10,6 @@ import {
   OScroller,
 } from '@opensig/opendesign';
 
-import { storeToRefs } from 'pinia';
-import { useCommon } from '@/stores/common';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
@@ -19,13 +17,12 @@ import AppSection from '~@/components/AppSection.vue';
 
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 
-import { casesZh, casesEn } from '~@/data/home/case';
+import homeContent from '#content/home';
+import { createSvgIcon } from '~@/composables/createSvgIcon';
 
 import { getHomeShowCases } from '~@/api/api-search';
 import useInViewDuration from '~@/composables/useInViewDuration';
 import { oaReport } from '@opendesign-plus/plugins/analytics';
-
-const emit = defineEmits(['result']);
 
 export interface CasesT {
   label: string;
@@ -33,15 +30,12 @@ export interface CasesT {
   img: string;
 }
 
-const { theme } = storeToRefs(useCommon());
 const { locale, t } = useLocale();
 const { isPhone, size } = useScreen();
 
 const userCase = ref<HTMLElement>();
 const activeTab = ref(0);
-const cases = shallowRef<CasesT[]>([]);
-
-cases.value = locale.value === 'zh' ? casesZh : casesEn;
+const cases = computed<CasesT[]>(() => homeContent[locale.value].case);
 
 const params = {
   category: 'showcase',
@@ -195,7 +189,7 @@ useInViewDuration(
               v-analytics.bubble="{ target: tab.label }"
             >
               <OIcon class="nav-item-icon">
-                <component :is="tab.icon"> </component>
+                <component :is="createSvgIcon(tab.icon)" />
               </OIcon>
               <span>{{ tab.label }}</span>
             </li>

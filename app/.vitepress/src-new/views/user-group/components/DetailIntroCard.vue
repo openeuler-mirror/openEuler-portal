@@ -3,7 +3,9 @@ import { computed } from 'vue';
 import { OBreadcrumb, OBreadcrumbItem } from '@opensig/opendesign';
 import { useLocale } from '~@/composables/useLocale';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
-import { detailData } from '~@/data/user-group';
+import userGroupDetailContent from '#content/community/user-group/detail';
+
+const detailData = userGroupDetailContent.zh.detail;
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
 import IconJoinGroup from '~icons/user-group/join-group.svg';

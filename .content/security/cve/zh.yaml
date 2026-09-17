@@ -1,0 +1,98 @@
+# CVE 页面数据 / CVE page data
+#
+# status_map: 状态映射（从 Map 转为数组，消费时重建 Map）
+#   key: 状态键名
+#   value: 状态值
+#   label: 状态标签
+#   tag: 状态描述
+#
+# reason: 修复原因筛选选项
+#   value: 选项值
+#   label: 选项标签
+#
+# glossary: 术语表
+#   status: 状态名称
+#   description: 状态描述
+#   list: 建议列表（可选，仅 "Will not fix" 有）
+
+status_map:
+  - key: all
+    value: ''
+    label: 全部
+    tag: ''
+  - key: Fixed
+    value: Fixed
+    label: Fixed
+    tag: '该漏洞影响到了openEuler产品，相应的修复已经发布更新'
+  - key: Unaffected
+    value: Unaffected
+    label: Unaffected
+    tag: '该漏洞不影响openEuler产品，无需修复更新'
+  - key: Affected
+    value: Affected
+    label: Affected
+    tag: '该漏洞影响到了openEuler产品，正在努力准备相应的修复更新'
+  - key: Under Investigation
+    value: Under Investigation
+    label: Under Investigation
+    tag: 'openEuler安全小组正在努力分析评估该漏洞对openEuler产品的影响，暂时还没有确认该漏洞是否影响到了openEuler相关产品。'
+
+reason:
+  - value: ''
+    label: 全部
+  - value: will fix
+    label: Will fix
+  - value: 'none_available-Vulnerabilities are still analyzing'
+    label: Vulnerabilities are still analyzing
+  - value: 'none_available-No solution or patch'
+    label: No solution or patch
+  - value: 'none_available-To be fixed through an upgraded version'
+    label: To be fixed through upgraded
+  - value: 'no_fix_planned-Out of support scope'
+    label: Out of support scope
+  - value: 'no_fix_planned-Will not fix'
+    label: Will not fix
+  - value: component_not_present
+    label: Component not present
+  - value: inline_mitigations_already_exist
+    label: Inline mitigations already exist
+  - value: vulnerable_code_cannot_be_controlled_by_adversary
+    label: Vulnerable code cannot be controlled
+  - value: vulnerable_code_not_in_execute_path
+    label: Vulnerable code not in execute path
+  - value: vulnerable_code_not_present
+    label: Vulnerable code not present
+
+glossary:
+  - status: Fixed
+    description: '该漏洞影响到了openEuler产品，相应的修复已经发布更新'
+  - status: Affected
+    description: '该漏洞影响到了openEuler产品，正在努力准备相应的修复更新'
+  - status: Vulnerabilities are still analyzing
+    description: '正在努力准备相应的修复方案'
+  - status: No solution or patch
+    description: '目前暂时没有相应的修复方案或补丁'
+  - status: To be fixed through an upgraded version
+    description: '目前等待版本升级后修复'
+  - status: Out of support scope
+    description: '该漏洞涉及的软件包或对应的影响的版本不在openEuler产品服务支持范围。建议依据openEuler对该漏洞的影响评估，采用可能的缓解方案或升级到有支持的软件包或版本。'
+  - status: Will not fix
+    description: '虽然该漏洞影响到了openEuler产品，但经openEuler安全小组分析评估后，决定暂不修复该漏洞。\n我们建议：'
+    list:
+      - '优先考虑升级你的产品；升级到已经包括该漏洞修复的，或者不受该漏洞影响的openEuler产品。'
+      - '如果该漏洞有缓解方案，可以尝试使用缓解方案。'
+      - '向我们反馈你的诉求，请说明需要修复的理由。'
+  - status: Unaffected
+    description: '该漏洞不影响openEuler产品，无需修复更新'
+  - status: Component_not_present
+    description: 'openEuler相关产品中不存在漏洞影响的相关组件'
+  - status: Inline_mitigations_already_exist
+    description: 'openEuler相关产品中已有内置的内联控制或缓解措施'
+  - status: Vulnerable code cannot be controlled
+    description: 'openEuler相关产品中漏洞代码不能被攻击者触发'
+  - status: Vulnerable code not in execute path
+    description: 'openEuler相关产品中漏洞代码不在执行路径'
+  - status: Vulnerable code not present
+    description: 'openEuler相关产品中漏洞代码不存在'
+  - status: Under Investigation
+    description: 'openEuler安全小组正在努力分析评估该漏洞对openEuler产品的影响，暂时还没有确认该漏洞是否影响到了openEuler相关产品。'

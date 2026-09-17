@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import { useI18n } from '@/i18n';
 import { useData } from 'vitepress';
-import cityData from '@/data/user-group/city/';
+import legacyUserGroupContent from '#content/community/user-group/detail';
 import { useCommon } from '@/stores/common';
 
 const { lang } = useData();
@@ -10,6 +10,7 @@ const i18n = useI18n();
 const groupData = computed(() => {
   return i18n.value.group;
 });
+const cityData = computed(() => legacyUserGroupContent.zh.cities);
 
 const jumpTo = (path: string) => {
   window.open(
@@ -34,7 +35,7 @@ const isLight = computed(() => (commonStore.theme === 'light' ? true : false));
         class="city-item"
         @click="jumpTo(item.name)"
       >
-        <img :src="isLight ? item.img : item.imgDark" alt="" />
+        <img :src="isLight ? item.img : item.img_dark" alt="" />
         <p class="name">{{ item.name }}</p>
       </div>
     </div>

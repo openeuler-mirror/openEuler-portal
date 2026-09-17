@@ -1,0 +1,221 @@
+# UB OS Component English 数据
+# repo_list: UB OS 组件代码仓列表
+# related_links: 相关入口链接
+
+repo_list:
+  - name: Device Mgmt
+    row_key: name
+    children:
+      - module: UB Device Mgmt
+        row_key: module
+        children:
+          - function: UBus Driver
+            desc: It consists of ubfi, ubus, and vendor_ubus modules. ubfi parses the UBRT tables reported by the BIOS, registers platform devices, and generates the required Bus Controller. ubus provides basic device services based on Bus Controller, including UB enumeration, UB device creation, UB device management, error handling, hot plugging, and interrupt handling. vendor_ubus handles vendor-specific hardware interactions.
+            repo_link:
+              - openeuler/kernel/tree/OLK-6.6/drivers/ub/ubus
+              - openeuler/kernel/tree/OLK-6.6/drivers/ub/ubfi
+            repo:
+              - openeuler/kernel/drivers/ub/ubus
+              - openeuler/kernel/drivers/ub/ubfi
+          - function: UVB
+            desc: It implements the kernel-space UBIOS protocol and enables interaction between the OS kernel and the BIOS.
+            repo_link: openeuler/kernel/tree/OLK-6.6/drivers/firmware/uvb
+            repo: openeuler/kernel/drivers/firmware/uvb
+          - function: ubtool
+            desc: It is the ubctl command line tool driver used to query public function configurations, module status, statistics, and firmware information.
+            repo_link: openeuler/kernel/tree/OLK-6.6/drivers/fwctl/ub
+            repo: openeuler/kernel/drivers/fwctl/ub
+      - module: UB User Driver
+        row_key: module
+        children:
+          - function: User UDMA driver
+            desc: The URMA driver is provided by the hardware vendor to access user-space UMDK.
+            repo_link: openeuler/umdk/tree/master/src/urma/hw/udma
+            repo: openeuler/umdk/src/urma/hw/udma
+          - function: libcdma
+            desc: It provides Crystal Direct Memory Access (CDMA) functionality for user-space applications, enabling asynchronous memory read and write operations between hosts or between hosts and devices.
+            repo_link: openeuler/cdma
+            repo: openeuler/cdma
+          - function: libummu
+            desc: It provides UMMU device registration, initialization, and management of configuration, address translation, and permission tables.
+            repo_link: openeuler/ummu
+            repo: openeuler/ummu
+      - module: Tools
+        row_key: module
+        children:
+          - function: ubutils
+            desc: It provides UB device management tools to support UB topology query, configuration space query, and device configuration.
+            repo_link: openeuler/ubutils
+            repo: openeuler/ubutils
+          - function: ubtool
+            desc: It is the ubctl command line tool used to query public function configurations, module status, statistics, and firmware information.
+            repo_link: openeuler/ubctl
+            repo: openeuler/ubctl
+  - name: Memory Mgmt
+    row_key: name
+    children:
+      - module: Pooled Memory Mgmt
+        row_key: module
+        children:
+          - function: OBMM
+            desc: It provides memory borrowing interfaces (EXPORT and IMPORT) and memory consistency maintenance interfaces (used only for memory sharing).
+            repo_link: openeuler/kernel/tree/OLK-6.6/drivers/ub/obmm
+            repo: openeuler/kernel/drivers/ub/obmm
+          - function: ummu-core
+            desc: It provides basic token ID management, as well as configuration and management of advanced capabilities defined in the UnifiedBus<sup>TM</sup> (UB) Base Specification 2.0.
+            repo_link: openeuler/kernel/tree/OLK-6.6/drivers/iommu/hisilicon/ummu-core
+            repo: openeuler/kernel/drivers/iommu/hisilicon/ummu-core
+          - function: sysSentry
+            desc: When emergency events such as OOM, panic, or reboot occur, it blocks the corresponding events and reports them to sysSentry Service.
+            repo_link: openeuler/kernel/tree/OLK-6.6/drivers/ub/sentry
+            repo: openeuler/kernel/drivers/ub/sentry
+      - module: UBMM Lib
+        row_key: module
+        children:
+          - function: libobmm
+            desc: It provides memory borrowing interfaces (EXPORT and IMPORT) and memory consistency maintenance interfaces (used only for memory sharing).
+            repo_link: openeuler/obmm
+            repo: openeuler/obmm
+          - function: sysSentry Service
+            desc: When emergency events such as OOM, panic, or reboot occur, it blocks the corresponding events and reports them to UBPRM to prevent data loss or service interruption. It is also responsible for unified management of UB event reports.
+            repo_link: openeuler/sysSentry
+            repo: openeuler/sysSentry
+  - name: Communication
+    row_key: name
+    children:
+      - module: Connection Mgmt & Communication
+        row_key: module
+        children:
+          - function: ubcore
+            desc: It handles core functionalities such as setting up connections, applying for Jetty and segment resources, and managing states.
+            repo_link: openeuler/kernel/tree/OLK-6.6/drivers/ub/urma/ubcore
+            repo: openeuler/kernel/drivers/ub/urma/ubcore
+          - function: uburma
+            desc: It is a message-based communication framework between the user-space library and the kernel-space layer.
+            repo_link: openeuler/kernel/tree/OLK-6.6/drivers/ub/urma/uburma
+            repo: openeuler/kernel/drivers/ub/urma/uburma
+          - function: ubagg
+            desc: It is a NIC library that aggregates NICs and distributes traffic.
+            repo_link: openeuler/kernel/tree/OLK-6.6/drivers/ub/urma/ubagg
+            repo: openeuler/kernel/drivers/ub/urma/ubagg
+          - function: UMS
+            desc: It enables Socket over UB to allow socket API access to UB without any modification.
+            repo_link: openeuler/umdk/tree/master/src/usock/ums
+            repo: openeuler/umdk/src/usock/ums
+      - module: UBComm Lib
+        row_key: module
+        children:
+          - function: liburma
+            desc: It is a high-performance UB communication library that defines both the northbound UB access interfaces and the southbound driver interfaces.
+            repo_link: openeuler/umdk/tree/master/src/urma/lib/urma/core
+            repo: openeuler/umdk/src/urma/lib/urma/core
+          - function: libubagg
+            desc: It is a NIC library that aggregates NICs and distributes traffic.
+            repo_link: openeuler/umdk/tree/master/src/urma/lib/urma/bond
+            repo: openeuler/umdk/src/urma/lib/urma/bond
+          - function: uvs
+            desc: It detects the global network and establishes, reuses, and virtualizes connections.
+            repo_link: openeuler/umdk/tree/master/src/urma/lib/uvs
+            repo: openeuler/umdk/src/urma/lib/uvs
+          - function: libdlock
+            desc: UB-based general distributed lock service.
+            repo_link: openeuler/umdk/tree/master/src/ulock/dlock
+            repo: openeuler/umdk/src/ulock/dlock
+          - function: liburpc
+            desc: UB-based high-performance RPC semantic communication library in user space.
+            repo_link: openeuler/umdk/tree/master/src/urpc/framework
+            repo: openeuler/umdk/src/urpc/framework
+          - function: libumq
+            desc: UB user-space high-performance message queue.
+            repo_link: openeuler/umdk/tree/master/src/urpc/umq
+            repo: openeuler/umdk/src/urpc/umq
+      - module: Tools
+        row_key: module
+        children:
+          - function: urma tools
+            desc: URMA management tool.
+            repo_link: openeuler/umdk/tree/master/src/urma/tools
+            repo: openeuler/umdk/src/urma/tools
+          - function: ums tools
+            desc: UMS management tool.
+            repo_link: openeuler/umdk/tree/master/src/usock/ums/tools
+            repo: openeuler/umdk/src/usock/ums/tools
+          - function: urpc tools
+            desc: URPC management tool.
+            repo_link: openeuler/umdk/tree/master/src/urpc/tools
+            repo: openeuler/umdk/src/urpc/tools
+  - name: Virtualization
+    row_key: name
+    children:
+      - module: vfio-ub
+        row_key: module
+        function: vfio-ub
+        desc: It supports UB device virtualization based on Linux's Virtual Function I/O (VFIO) framework.
+        repo_link: openeuler/kernel/tree/OLK-6.6/drivers/vfio/ubus
+        repo: openeuler/kernel/drivers/vfio/ubus
+      - module: QEMU
+        function: qemu
+        desc: It enables UB virtualization for VMs, supports UB device emulation, and allows VM passthrough access to UB devices.
+        repo_link: openeuler/qemu
+        repo: openeuler/qemu
+      - module: libvirt
+        function: libvirt
+        desc: It provides northbound APIs for the UBS Engine and XLink to manage the lifecycle of UB-native VMs. It also enables high-speed live migration of VMs in UB scenarios.
+        repo_link: openeuler/libvirt
+        repo: openeuler/libvirt
+  - name: Device driver
+    row_key: name
+    children:
+      - module: unic driver
+        function: UNIC
+        desc: It interconnects with the Linux kernel's TCP/IP protocol stack via Ethernet and UB links to provide inter-node communication for applications through socket interfaces.
+        repo_link: openeuler/kernel/tree/OLK-6.6/drivers/net/ub
+        repo: openeuler/kernel/drivers/net/ub
+      - module: udma driver
+        function: UDMA driver
+        desc: It interconnects with the URMA protocol stack to provide standard URMA APIs. It also connects to the programming interfaces of UB hardware to enable UB communication.
+        repo_link: openeuler/kernel/tree/OLK-6.6/drivers/ub/urma/hw/udma
+        repo: openeuler/kernel/drivers/ub/urma/hw/udma
+      - module: cdma driver
+        function: CDMA
+        desc: It handles CDMA device creation and destruction, orchestrates resource allocation for DMA read/write tasks, and retrieves the completion status of executed tasks.
+        repo_link: openeuler/kernel/tree/OLK-6.6/drivers/ub/cdma
+        repo: openeuler/kernel/drivers/ub/cdma
+      - module: ummu driver
+        function: ummu driver
+        desc: It provides UMMU device registration, initialization, and management of configuration, address translation, and permission tables.
+        repo_link: openeuler/kernel/tree/OLK-6.6/drivers/iommu/hisilicon
+        repo: openeuler/kernel/drivers/iommu/hisilicon
+  - name: Performance optimization
+    row_key: name
+    children:
+      - module: memlink
+        function: memlink
+        desc: It reclaims idle memory from VMs.
+        repo_link: openeuler/memlink
+        repo: openeuler/memlink
+      - module: UB Turbo
+        row_key: module
+        children:
+          - function: HAM
+            desc: It optimizes VM migration by using UB's hot/cold data identification and data migration capabilities.
+            repo_link: openeuler/ham
+            repo: openeuler/ham
+          - function: RMRS Agent
+            desc: It manages node memory resources to efficiently schedule memory among VMs for better resource utilization and performance.
+            repo_link: openeuler/ubturbo
+            repo: openeuler/ubturbo
+          - function: SMAP
+            desc: It identifies and migrates hot and cold data accessed by applications to optimize hierarchical memory performance.
+            repo_link: openeuler/ubturbo
+            repo: openeuler/ubturbo
+related_links:
+  - icon: ./images/icon-white-paper.svg?raw
+    title: UnifiedBus
+    desc: Explore UnifiedBus specifications and white paper.
+    href: https://www.unifiedbus.com/en
+    is_outlink: true
+  - icon: ./images/icon-code-repo.svg?raw
+    title: sig-UnifiedBus
+    desc: View meeting schedules and contact details.
+    href: /en/sig/sig-UnifiedBus

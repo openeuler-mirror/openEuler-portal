@@ -1,9 +1,14 @@
 import { expect, describe, it } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
-import tocData from '../app/.vitepress/src/data/about-us/about-us-toc';
+import yaml from 'js-yaml';
 
 const PROJECT_ROOT = process.cwd();
+
+const tocData = {
+  zh: yaml.load(fs.readFileSync(path.join(PROJECT_ROOT, '.content/community/zh.yaml'), 'utf8')),
+  en: yaml.load(fs.readFileSync(path.join(PROJECT_ROOT, '.content/community/en.yaml'), 'utf8')),
+};
 
 const EXPECTED_TITLE = '生成式AI工具使用与开源贡献策略';
 

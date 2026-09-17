@@ -1,0 +1,83 @@
+# Search page data
+#
+# module_map: Module category mapping (converted from Map to array, rebuilt at consumption)
+#   key: Module key name
+#   label: Module label
+#   sub_modules: Sub-module list (optional, not locale-specific)
+#
+# sub_module_map: Sub-module mapping (converted from Map to array, rebuilt at consumption)
+#   key: Sub-module key name
+#   label: Sub-module label (optional)
+#   from: Breadcrumb path array
+
+module_map:
+  - key: all
+    label: All
+  - key: download
+    label: Download
+    sub_modules: [communityRelease, commercialRelease]
+  - key: develop
+    label: Develop
+    sub_modules: [sig, etherpad]
+  - key: docs
+    label: Docs
+  - key: migration
+    label: Migration
+  - key: community
+    label: Community
+    sub_modules: [whitepaper, showcase, mail, forum]
+  - key: update
+    label: Stay Uodated
+    sub_modules: [news, blog]
+  - key: gitee
+    label: AtomGit
+  - key: other
+    label: Others
+
+sub_module_map:
+  - key: release
+    label: Community Releases
+    from: [Download, Community Releases, '{version}']
+  - key: communityRelease
+    label: Community Releases
+    from: [Download, Community Releases, '{version}']
+  - key: commercialRelease
+    label: Commercial Releases
+    from: [Download, Other Releases, Commercial Releases]
+  - key: docs
+    from: [Document, Documentation]
+  - key: software
+    from: [Download, Install, EasySoftWare]
+  - key: whitepaper
+    label: White Papers
+    from: [Community, About, White Papers]
+  - key: showcase
+    label: Success Stories
+    from: [Community, About, Success Stories]
+  - key: sig
+    label: SIG
+    from: [Develop, Contribute, SIG]
+  - key: etherpad
+    label: ''
+    from: [Develop, Contribute, SIG]
+  - key: mail
+    label: Mailing Lists
+    from: [Community, Engage with Us, Mailing Lists]
+  - key: forum
+    label: Forum
+    from: [Community, Engage with Us, Forum]
+  - key: news
+    label: News
+    from: [Stay Updated, News & Blogs, News]
+  - key: blog
+    label: Blogs
+    from: [Stay Updated, News & Blogs, Blogs]
+  - key: service
+    from: [Service]
+  - key: migration
+    label: Migration
+    from: [Support, Migration, Migrate to openEuler]
+  - key: packages
+    from: [Develop, Analyze, Pkgship]
+  - key: witty
+    from: [Witty Ops Cases]

@@ -5,6 +5,8 @@ import { useRouter, useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 import { useCommon } from '@/stores/common';
 
+import contributionContent from '#content/community/contribution';
+
 const { lang } = useData();
 const i18n = useI18n();
 const commonStore = useCommon();
@@ -12,6 +14,9 @@ const router = useRouter();
 const isDark = computed(() => {
   return commonStore.theme === 'dark' ? true : false;
 });
+
+const contributionConfig = computed(() => contributionContent[lang.value as 'zh' | 'en']);
+
 const goLink = (url: string, isBlank: boolean) => {
   if (isBlank) {
     window.open(url, '_blank');
@@ -23,30 +28,30 @@ const goLink = (url: string, isBlank: boolean) => {
 <template>
   <div class="content-map">
     <div :class="lang === 'zh' ? 'content-map-img' : 'content-map-img-en'">
-      <img v-show="!isDark" :src="i18n.contribution.BACKGROUND_IMG" />
-      <img v-show="isDark" :src="i18n.contribution.BACKGROUND_IMG_DARK" />
+      <img v-show="!isDark" :src="contributionConfig.background_img_light" />
+      <img v-show="isDark" :src="contributionConfig.background_img_dark" />
       <img
         v-show="!isDark && lang === 'en'"
-        :src="i18n.contribution.BACKGROUND_IMG_H5"
+        :src="contributionConfig.background_img_h5_light"
         class="map-mo-en"
       />
       <img
         v-show="isDark && lang === 'en'"
-        :src="i18n.contribution.BACKGROUND_IMG_H5_DARK"
+        :src="contributionConfig.background_img_h5_dark"
         class="map-mo-en"
       />
       <!-- 定位的空标签 -->
 
       <div
-        v-for="(item, index) in i18n.contribution.LINK_LIST"
+        v-for="(item, index) in contributionConfig.link_list"
         :key="index"
         :class="lang === 'zh' ? 'link' : 'link-en'"
-        @click="goLink(item.URL, item.BLANK)"
+        @click="goLink(item.url, item.blank)"
       ></div>
       <a
         class="content-map-print"
         download="trail-chess.pdf"
-        :href="i18n.contribution.DOWLOAD_PDF_URL"
+        :href="contributionConfig.download_pdf_url"
         >{{ i18n.contribution.PRINT_MAP }}</a
       >
     </div>
@@ -54,13 +59,13 @@ const goLink = (url: string, isBlank: boolean) => {
       class="content-map-mobile-img"
       :class="lang === 'zh' ? '' : 'content-map-mobile-img-en'"
     >
-      <img v-show="!isDark" :src="i18n.contribution.BACKGROUND_IMG_H5" />
-      <img v-show="isDark" :src="i18n.contribution.BACKGROUND_IMG_H5_DARK" />
+      <img v-show="!isDark" :src="contributionConfig.background_img_h5_light" />
+      <img v-show="isDark" :src="contributionConfig.background_img_h5_dark" />
       <div
-        v-for="(item, index) in i18n.contribution.LINK_LIST"
+        v-for="(item, index) in contributionConfig.link_list"
         :key="index"
         class="mobile-link"
-        @click="goLink(item.URL, item.BLANK)"
+        @click="goLink(item.url, item.blank)"
       ></div>
     </div>
   </div>

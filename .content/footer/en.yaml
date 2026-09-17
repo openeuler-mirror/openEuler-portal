@@ -1,0 +1,32 @@
+# Footer data
+#
+# friendship_links: Friendly community links
+#   href: Link URL
+#   title: Site name
+#
+# filing: Filing information
+#   link: Filing link
+#   icon: Filing icon
+#
+# Note: linksData and quickNav are NOT extracted to yaml due to
+# import.meta.env dependencies. They remain in src-new/data/footer/index.ts.
+
+friendship_links:
+  - href: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian'
+    title: 'InfoQ'
+  - href: 'https://www.authing.cn/'
+    title: 'Authing'
+  - href: 'https://www.opengauss.org/en/'
+    title: 'openGauss'
+  - href: 'https://www.mindspore.cn/en/'
+    title: 'MindSpore'
+  - href: 'https://www.openubmc.cn/en/'
+    title: 'openUBMC'
+  - href: 'https://www.openfuyao.cn/en/'
+    title: 'openFuyao'
+  - href: 'http://www.ebaina.com/'
+    title: 'Ebaina'
+
+filing:
+  link: 'https://beian.miit.gov.cn/#/Integrated/index'
+  icon: ./images/police.png

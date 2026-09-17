@@ -5,10 +5,7 @@ import { ORow, OCol, OFigure } from '@opensig/opendesign';
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import AppSection from '~@/components/AppSection.vue';
 
-import banner from '~@/assets/category/brand/zh/brand-banner.jpg';
-import bannerEn from '~@/assets/category/brand/en/brand-banner.png';
-
-import { brandSpecification, brandSpecificationEn } from '~@/data/brand';
+import specificationContent from '#content/other/brand/specification';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -17,6 +14,7 @@ import { useCommon } from '@/stores/common';
 const { locale } = useLocale();
 const { lePadV } = useScreen();
 const commonStore = useCommon();
+const content = computed(() => specificationContent[locale.value]);
 
 const isDark = computed(() => {
   return commonStore.theme === 'dark';
@@ -24,8 +22,8 @@ const isDark = computed(() => {
 </script>
 
 <template>
-  <BannerLevel2 v-if="!lePadV" class="specification-banner" :background-image="locale === 'zh' ? banner : bannerEn" />
-  <AppSection v-for="(item, i) in locale === 'zh' ? brandSpecification : brandSpecificationEn" :key="i" :title="item.title" :class="`specification-box${i}`">
+  <BannerLevel2 v-if="!lePadV" class="specification-banner" :background-image="content.banner" />
+  <AppSection v-for="(item, i) in content.sections" :key="i" :title="item.title" :class="`specification-box${i}`">
     <div class="item-box" :class="{'item-box-dark': isDark}">
       <ORow gap="0 12px" wrap="wrap">
         <OCol v-for="(val, k) in item.desc" :key="k" flex="0 0 100%">

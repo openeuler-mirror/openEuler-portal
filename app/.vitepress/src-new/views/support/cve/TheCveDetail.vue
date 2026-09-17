@@ -25,8 +25,15 @@ import type {
   AffectProductT,
 } from '@/shared/@types/type-support';
 
-import { typeMap } from '~@/data/safety-bulletin';
-import { statusMap, glossaryList } from '~@/data/cve';
+import safetyContent from '#content/security/safety-bulletin';
+
+const typeMap = new Map(
+  safetyContent.zh.type_map.map((item) => {
+    const en = safetyContent.en.type_map.find((e) => e.key === item.key);
+    return [item.key, { value: item.value, label: { zh: item.label, en: en?.label ?? item.label }, score: item.score }];
+  })
+);
+import cveContent from '#content/security/cve';
 
 import { changeTimeStamp } from '~@/utils/common';
 
@@ -47,6 +54,27 @@ const { lePadV } = useScreen();
 
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
+
+const cveData = computed(() => cveContent[locale.value]);
+const statusMap = computed(() => {
+  const map = new Map();
+  cveData.value.status_map.forEach((item) => {
+    map.set(item.key, {
+      value: item.value,
+      label: { zh: item.label, en: item.label },
+      tag: { zh: item.tag, en: item.tag },
+    });
+  });
+  return map;
+});
+const glossaryList = computed(() =>
+  cveData.value.glossary.map((item) => ({
+    status: item.status,
+    description: { zh: item.description, en: item.description },
+    listZh: item.list,
+    listEn: item.list,
+  }))
+);
 
 const cveId = ref('');
 const packageName = ref('');
@@ -173,7 +201,7 @@ const columnsGlossary = [
 
 // -------------------- hover显示详细信息--------------------
 const reasonHover = (val: string) => {
-  const item = glossaryList.find((e) => {
+  const item = glossaryList.value.find((e) => {
     return (
       e.status.replace(/[-_\s]/g, ' ').toLowerCase() ===
       val.replace(/[-_\s]/g, ' ').toLowerCase()

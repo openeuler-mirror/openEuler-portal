@@ -1,0 +1,96 @@
+# Intelligence BooM 页数据 / Intelligence BooM page data
+#
+# vision: 愿景列表
+#   title: 愿景标题
+#   desc: 愿景描述
+#
+# version_info: 版本信息
+#   first: 首版本
+#     name: 版本名称
+#     desc: 版本描述
+#     url: 版本链接
+#     picture: 版本图片
+#     feature: 特性列表
+#       title: 特性分类标题
+#       desc: 特性项列表
+#         name: 特性项名称
+#         desc: 特性项描述
+#   second: 第二版本（结构同 first）
+
+vision:
+  - title: 打破技术壁垒
+    desc: 通过全栈开源加速大模型推理技术普惠化
+  - title: 赋能行业转型
+    desc: 共建智能化应用平台支撑产业智能化升级
+  - title: 推动生态协同
+    desc: 联合社区、高校与企业统一技术标准并增强生态兼容
+
+version_info:
+  first:
+    name: '首版本：烩面'
+    desc: '构建推理+智能体的开源解决方案，一键部署，开箱即用'
+    url: 'https://gitcode.com/openeuler/llm_solution/blob/master/doc/Release Notes/Version 1.0_Hui Noodle.md'
+    picture: ./images/first_version.png
+    feature:
+      - title: 全功能
+        desc:
+          - name: 'Agent智能体支持：'
+            desc: '调优/运维智能体大幅进化，RAG检索增强生成能力'
+          - name: '支持多样性硬件：'
+            desc: 'CPU(x86、ARM)、NPU(昇腾910/310)、GPU(NV)'
+      - title: 高安全
+        desc:
+          - name: '全栈安全：'
+            desc: '保证软件平台自身安全可信，保护业务数据&模型资产安全'
+      - title: 易使用
+        desc:
+          - name: '一键式部署：'
+            desc: '结合oeDeploy工具，一个命令15分钟完成分布式部署'
+          - name: '支持主流开源模型：'
+            desc: '累计支持50+模型，0 day适配'
+          - name: '部署方式可扩展：'
+            desc: '单机/双机/四机及大集群部署DeepSeek V3/R1模型'
+          - name: 'CPU+xPU可协同：'
+            desc: '支持CPU+xPU协同推理，及MoE专家异构弹性扩展'
+      - title: 易开发
+        desc:
+          - name: '面向企业应用的Agent开发平台：'
+            desc: '强化工作流结合能力'
+          - name: '算子开发语言：'
+            desc: '基于 Triton 和 SWFT ，算子模型协同开发，降低开发门槛'
+          - name: 'AI生成算子：'
+            desc: 'Multi-Agent 架构的 LLM 算子生成框架，支持多前端和后端'
+  second:
+    name: '第二版本：敲鱼面'
+    desc: '支持NPU抢占混部，降低微调门槛，业界首发操作系统领域模型，为构建领域模型平台打下基础'
+    url: 'https://atomgit.com/openeuler/llm_solution'
+    picture: ./images/second_version.png
+    feature:
+      - title: 高性能
+        desc:
+          - name: '异构算力融合，'
+            desc: '支持算力切分混部，推理多快好省'
+          - name: '多级缓存，'
+            desc: '多轮、长序列对话场景TTFT降低50%+'
+      - title: 易开发
+        desc:
+          - name: '大模型生成昇腾算子：'
+            desc: 'AIKG 在真实场景基本可用，Triton算子开发效率x5+'
+      - title: 全功能
+        desc:
+          - name: '支持 Atlas 300等系列低成本微调，'
+            desc: '50+模型增训'
+          - name: '开箱即用：'
+            desc: '面向Agentic AI 软件生态适配 Dify 等流行方案'
+      - title: 易使用
+        desc:
+          - name: '快速微调：'
+            desc: '从镜像部署到首loss耗时小于15分钟'
+          - name: '能力解耦复用：'
+            desc: 'MindSpore 图模式能力解耦，支持 PyTorch'
+      - title: 生态构建
+        desc:
+          - name: '和上游社区开发合作，'
+            desc: '联合 vLLM 发布 vLLM-omni，联合 LMCache 发布 LMCache-Ascend'
+          - name: 'OS领域首发领域模型，'
+            desc: 'openEuler OS Model 业界首发，4B领域模型系统调优效果持平DeepSeek 671B，支持CPU推理'

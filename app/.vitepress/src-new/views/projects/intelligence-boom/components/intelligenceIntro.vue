@@ -6,7 +6,7 @@ import { useCommon } from '@/stores/common';
 import { useData } from 'vitepress';
 import { useScreen } from '~@/composables/useScreen';
 
-import { VISION_DATA } from '~@/data/project';
+import boomContent from '#content/projects/intelligence-boom';
 import { LocaleT } from '~@/@types/type-locale';
 
 const commonStore = useCommon();
@@ -14,7 +14,7 @@ const { lang } = useData();
 const { t } = useLocale();
 const { lePadV } = useScreen();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
-const visionData = computed(() => VISION_DATA[lang.value as LocaleT]);
+const visionData = computed(() => boomContent[lang.value as LocaleT].vision);
 </script>
 <template>
   <AppSection

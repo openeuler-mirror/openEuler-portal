@@ -4,7 +4,6 @@ import { ORow, OCol, OCard, OLink, ODivider } from '@opensig/opendesign';
 import { useScreen } from '~@/composables/useScreen';
 import { useLocale } from '~@/composables/useLocale';
 import { useCommon } from '@/stores/common';
-import { useI18n } from '~@/i18n';
 
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import AppSection from '~@/components/AppSection.vue';
@@ -12,130 +11,34 @@ import AppSection from '~@/components/AppSection.vue';
 import illustration from '~@/assets/category/contact/illustration.png';
 import banner from '~@/assets/category/contact/banner-bg.jpg';
 
-import IconContact1 from '~icons/app-new/icon-contact1.svg';
-import IconContact2 from '~icons/app-new/icon-contact2.svg';
-import IconContact3 from '~icons/app-new/icon-contact3.svg';
-import IconContact4 from '~icons/app-new/icon-contact4.svg';
-import IconContact5 from '~icons/app-new/icon-contact5.svg';
-import IconContact6 from '~icons/app-new/icon-contact6.svg';
-import IconContact7 from '~icons/app-new/icon-contact7.svg';
-
-import CodeImgXzs from '~@/assets/category/footer/code-xzs.png';
-import CodeImgZgz from '~@/assets/category/footer/code-zgz.jpg';
-
-// follow us
-import followCoverZh from '~@/assets/category/contact/follow-zh.jpg';
-import followCoverEn from '~@/assets/category/contact/follow-en.jpg';
-import ImgX from '~@/assets/category/contact/light/x.png';
-import ImgYoutube from '~@/assets/category/contact/light/youtube.png';
-import ImgBilibili from '~@/assets/category/contact/light/bilibili.png';
-import ImgLinkedin from '~@/assets/category/contact/light/LinkedIn.png';
-import ImgXDark from '~@/assets/category/contact/dark/x.png';
-import ImgYoutubeDark from '~@/assets/category/contact/dark/youtube.png';
-import ImgBilibiliDark from '~@/assets/category/contact/dark/bilibili.png';
-import ImgLinkedinDark from '~@/assets/category/contact/dark/LinkedIn.png';
-import ImgXPrimary from '~@/assets/category/contact/primary/x.png';
-import ImgYoutubePrimary from '~@/assets/category/contact/primary/youtube.png';
-import ImgBilibiliPrimary from '~@/assets/category/contact/primary/bilibili.png';
-import ImgLinkedinPrimary from '~@/assets/category/contact/primary/LinkedIn.png';
+import contactUsContent from '#content/contact-us';
+import { createSvgIcon } from '~@/composables/createSvgIcon';
 
 const { isPhone, lePad, lePadV } = useScreen();
-const { t, isZh } = useLocale();
-const i18n = useI18n();
+const { locale, isZh } = useLocale();
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 
-// 社区联系
-const contactData = [
-  {
-    title: t('contact.communityItem1'),
-    email: 'gaofei@openatom.org',
-    icon: IconContact1,
-  },
-  {
-    title: t('contact.communityItem2'),
-    email: 'events@openeuler.sh',
-    icon: IconContact2,
-  },
-  {
-    title: t('contact.communityItem3'),
-    email: 'marketing@openeuler.org',
-    icon: IconContact3,
-  },
-  {
-    title: t('contact.communityItem4'),
-    email: 'dev@openeuler.org',
-    icon: IconContact4,
-  },
-];
+const content = computed(() => contactUsContent[locale.value]);
 
 const flexGap = computed(() =>
   isPhone.value ? '12px 12px' : lePad.value ? '16px 16px' : '32px 32px'
 );
-
-// 公众号、小助手
-const footerCodeList = [
-  {
-    code: CodeImgZgz,
-    label: '微信公众号',
-  },
-  {
-    code: CodeImgXzs,
-    label: '小助手',
-  },
-];
-
-const followLinks = [
-  {
-    icon: ImgX,
-    iconDark: ImgXDark,
-    iconPrimary: ImgXPrimary,
-    href: 'https://x.com/openeuler',
-    label: 'X',
-  },
-  {
-    icon: ImgLinkedin,
-    iconDark: ImgLinkedinDark,
-    iconPrimary: ImgLinkedinPrimary,
-    href: 'https://www.linkedin.com/company/openeuler',
-    label: 'LinkedIn',
-  },
-  {
-    icon: ImgYoutube,
-    iconDark: ImgYoutubeDark,
-    iconPrimary: ImgYoutubePrimary,
-    href: 'https://www.youtube.com/@openeuler',
-    label: 'YouTube',
-  },
-  {
-    icon: ImgBilibili,
-    iconDark: ImgBilibiliDark,
-    iconPrimary: ImgBilibiliPrimary,
-    href: 'https://space.bilibili.com/527064077',
-    label: 'Bilibili',
-  },
-];
-
-// 资源推荐
-const handyMaterialsList = computed(
-  () => i18n.value.contact.handyMaterialsList
-);
-const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
 </script>
 <template>
   <BannerLevel2
-    :title="$t('contact.bannerTitle')"
+    :title="content.banner.title"
     :background-image="banner"
     :illustration="illustration"
   />
 
   <AppSection
-    :title="$t('contact.communityContact')"
-    :subtitle="$t('contact.communityContactDesc')"
+    :title="content.community_contact.title"
+    :subtitle="content.community_contact.desc"
   >
     <ORow :gap="flexGap" flex-wrap="wrap">
       <OCol
-        v-for="(item, index) in contactData"
+        v-for="(item, index) in content.contact_items"
         :key="item.title"
         :flex="`0 1 ${index === 3 ? '100%' : '33.33%'}`"
         :laptop="{ flex: `0 1 ${index === 3 ? '100%' : '33.33%'}` }"
@@ -145,7 +48,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
       >
         <OCard
           :title="item.title"
-          :icon="item.icon"
+          :icon="createSvgIcon(item.icon)"
           hoverable
           :layout="lePad ? 'h' : 'v'"
           class="community-contact"
@@ -191,20 +94,17 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
   </AppSection>
 
   <!-- 欢迎关注我们 -->
-  <AppSection :title="$t('contact.followUs')">
+  <AppSection :title="content.follow_us.title">
     <div class="follow-us" :class="isZh ? 'zh' : 'en'">
       <div class="follow-us-cover">
-        <img
-          :src="isZh ? (lePadV ? followCoverEn : followCoverZh) : followCoverEn"
-          class="cover"
-        />
+        <img :src="content.follow_us.cover" class="cover" />
       </div>
       <div class="follow-us-content">
-        <h3>{{ $t('contact.followUsDesc') }}</h3>
+        <h3>{{ content.follow_us.desc }}</h3>
         <div v-if="isZh" class="follow-us-box">
           <div class="code-box">
             <div
-              v-for="item in footerCodeList"
+              v-for="item in content.follow_us.footer_codes"
               :key="item.label"
               class="code-img"
             >
@@ -215,11 +115,11 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
           <ODivider :direction="isPhone ? 'h' : 'v'" class="line" />
           <div class="follow-link">
             <div
-              v-for="item in followLinks"
+              v-for="item in content.follow_us.follow_links"
               :key="item.href"
               class="follow-link-item"
             >
-              <img :src="isDark ? item.iconDark : item.icon" />
+              <img :src="isDark ? item.icon_dark : item.icon" />
               <OLink
                 hoverUnderline
                 :href="item.href"
@@ -235,16 +135,16 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
           <ODivider :direction="lePadV ? 'h' : 'v'" class="line" />
           <div class="follow-link">
             <OLink
-              :hoverUnderline="false"
-              v-for="item in followLinks"
+              hoverUnderline
+              v-for="item in content.follow_us.follow_links"
               :key="item.href"
               :href="item.href"
               target="_blank"
               rel="noopener noreferrer"
               class="follow-link-item"
             >
-              <img class="default" :src="item.iconDark" />
-              <img class="hover" :src="item.iconPrimary" />
+              <img class="default" :src="item.icon_dark" />
+              <img class="hover" :src="item.icon_primary" />
               {{ item.label }}
             </OLink>
           </div>
@@ -254,10 +154,10 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
   </AppSection>
 
   <!-- 资源推荐 -->
-  <AppSection :title="$t('contact.handyMaterials')">
+  <AppSection :title="content.handy_materials.title">
     <ORow :gap="flexGap" flex-wrap="wrap">
       <OCol
-        v-for="(item, index) in handyMaterialsList"
+        v-for="item in content.handy_materials.list"
         :key="item.title"
         flex="0 1 33.33%"
         :laptop="{ flex: '0 1 33.33%' }"
@@ -274,7 +174,7 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
           target="_blank"
           rel="noopener noreferrer"
           hoverable
-          :icon="handyMaterialsListIcon[index]"
+          :icon="createSvgIcon(item.icon)"
           class="handy-materials"
         >
         </OCard>
@@ -379,13 +279,6 @@ const handyMaterialsListIcon = [IconContact5, IconContact6, IconContact7];
           display: flex;
           justify-content: space-around;
           padding: 0;
-          :deep(.o-link) {
-            --link-color: #fff;
-
-            & .o-link-main {
-              flex-direction: column;
-            }
-          }
           .follow-link-item {
             text-align: center;
             color: #fff;

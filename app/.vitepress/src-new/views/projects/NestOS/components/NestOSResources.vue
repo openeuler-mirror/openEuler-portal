@@ -4,15 +4,13 @@ import { OIcon, OTable, OSelect, OOption, OTab, OTabPane, ORadioGroup, ORadio, O
 
 import AppSection from '~@/components/AppSection.vue';
 import { useLocale } from '~@/composables/useLocale';
-import { useScreen } from '~@/composables/useScreen';
 
 import IconOutLink from '~icons/app-new/icon-outlink-new.svg';
 import IconDownload from '~icons/app-new/icon-download.svg';
 
-const { t } = useLocale();
-const { lePadV } = useScreen();
+import nestosContent from '#content/nestos';
 
-type Tab = 'mirror' | 'document' | 'other';
+const { t } = useLocale();
 
 type Arch = 'x86' | 'arm';
 const activeArch = ref<Arch>('x86');
@@ -23,147 +21,25 @@ interface PkgItem {
 }
 
 interface VersionGroup {
-  dateTitle: string;
-  x86List: PkgItem[];
-  armList: PkgItem[];
+  date_title: string;
+  x86_list: PkgItem[];
+  arm_list: PkgItem[];
 }
 
-const mirrorVersions: VersionGroup[] = [
-  {
-    dateTitle: '【24.03-LTS】',
-    x86List: [
-      { name: 'NestOS 双模式-24.03-LTS ISO下载', path: 'https://nestos.org.cn/nestos20240904/nestos-for-all/x86_64/NestOS-24.03-LTS.20240904.0.x86_64.iso' },
-      { name: 'NestOS For Virt-24.03-LTS ISO下载', path: 'https://nestos.org.cn/nestos20240904/nestos-for-virt/x86_64/NestOS-For-Virt-24.03-LTS.20240904.0.x86_64.iso' },
-      { name: 'NestOS For Container-24.03-LTS ISO下载', path: 'https://nestos.org.cn/NestOS-release/prod/streams/2403-LTS/builds/24.03-LTS.20240904.0/x86_64/nestos-24.03-LTS.20240904.0-live.x86_64.iso' },
-      { name: 'NestOS For Container-24.03-LTS QCOW2下载', path: 'https://nestos.org.cn/NestOS-release/prod/streams/2403-LTS/builds/24.03-LTS.20240904.0/x86_64/nestos-24.03-LTS.20240904.0-qemu.x86_64.qcow2' },
-      { name: 'NestOS For Container-24.03-LTS openStack版本下载', path: 'https://nestos.org.cn/NestOS-release/prod/streams/2403-LTS/builds/24.03-LTS.20240904.0/x86_64/nestos-24.03-LTS.20240904.0-openstack.x86_64.qcow2' },
-    ],
-    armList: [
-      { name: 'NestOS 双模式-24.03-LTS ISO下载', path: 'https://nestos.org.cn/nestos20240904/nestos-for-all/aarch64/NestOS-24.03-LTS.20240904.0.aarch64.iso' },
-      { name: 'NestOS For Virt-24.03-LTS ISO下载', path: 'https://nestos.org.cn/nestos20240904/nestos-for-virt/aarch64/NestOS-For-Virt-24.03-LTS.20240904.0.aarch64.iso' },
-      { name: 'NestOS For Container-24.03-LTS ISO下载', path: 'https://nestos.org.cn/NestOS-release/prod/streams/2403-LTS/builds/24.03-LTS.20240904.0/aarch64/nestos-24.03-LTS.20240904.0-live.aarch64.iso' },
-      { name: 'NestOS For Container-24.03-LTS QCOW2下载', path: 'https://nestos.org.cn/NestOS-release/prod/streams/2403-LTS/builds/24.03-LTS.20240904.0/aarch64/nestos-24.03-LTS.20240904.0-qemu.aarch64.qcow2' },
-      { name: 'NestOS For Container-24.03-LTS openStack版本下载', path: 'https://nestos.org.cn/NestOS-release/prod/streams/2403-LTS/builds/24.03-LTS.20240904.0/aarch64/nestos-24.03-LTS.20240904.0-openstack.aarch64.qcow2' },
-    ],
-  },
-  {
-    dateTitle: '【22.03-LTS-SP4】',
-    x86List: [
-      { name: 'NestOS 双模式-22.03-LTS-SP4 ISO下载', path: 'https://nestos.org.cn/nestos20240628/nestos-for-all/x86_64/NestOS-22.03-LTS-SP4.20240628.0.x86_64.iso' },
-      { name: 'NestOS For Virt-22.03-LTS-SP4 ISO下载', path: 'https://nestos.org.cn/nestos20240628/nestos-for-virt/x86_64/NestOS-For-Virt-22.03-LTS-SP4.20240628.0.x86_64.iso' },
-      { name: 'NestOS For Container-22.03-LTS-SP4 ISO下载', path: 'https://nestos.org.cn/nestos20240628/nestos-for-container/x86_64/NestOS-For-Container-22.03-LTS-SP4.20240628.0-live.x86_64.iso' },
-      { name: 'NestOS For Container-22.03-LTS-SP4 QCOW2下载', path: 'https://nestos.org.cn/nestos20240628/nestos-for-container/x86_64/NestOS-For-Container-22.03-LTS-SP4.20240628.0-qemu.x86_64.qcow2' },
-      { name: 'NestOS For Container-22.03-LTS-SP4 openStack版本下载', path: 'https://nestos.org.cn/nestos20231231/nestos-for-container/x86_64/NestOS-For-Container-22.03-LTS-SP3.20240110.0-openstack.x86_64.qcow2' },
-    ],
-    armList: [
-      { name: 'NestOS 双模式-22.03-LTS-SP4 ISO下载', path: 'https://nestos.org.cn/nestos20240628/nestos-for-all/aarch64/NestOS-22.03-LTS-SP4.20240628.0.aarch64.iso' },
-      { name: 'NestOS For Virt-22.03-LTS-SP4 ISO下载', path: 'https://nestos.org.cn/nestos20240628/nestos-for-virt/aarch64/NestOS-For-Virt-22.03-LTS-SP4.20240628.0.aarch64.iso' },
-      { name: 'NestOS For Container-22.03-LTS-SP4 ISO下载', path: 'https://nestos.org.cn/nestos20240628/nestos-for-container/aarch64/NestOS-For-Container-22.03-LTS-SP4.20240628.0-live.aarch64.iso' },
-      { name: 'NestOS For Container-22.03-LTS-SP4 QCOW2下载', path: 'https://nestos.org.cn/nestos20240628/nestos-for-container/aarch64/NestOS-For-Container-22.03-LTS-SP4.20240628.0-qemu.aarch64.qcow2' },
-      { name: 'NestOS For Container-22.03-LTS-SP4 openStack版本下载', path: 'https://nestos.org.cn/nestos20240628/nestos-for-container/aarch64/NestOS-For-Container-22.03-LTS-SP4.20240628.0-openstack.aarch64.qcow2' },
-    ],
-  },
-  {
-    dateTitle: '【22.03-LTS-SP3】',
-    x86List: [
-      { name: 'NestOS 双模式-22.03-LTS-SP3 ISO下载', path: 'https://nestos.org.cn/nestos20231231/nestos-for-all/x86_64/NestOS-22.03-LTS-SP3.20240110.0.x86_64.iso' },
-      { name: 'NestOS For Virt-22.03-LTS-SP3 ISO下载', path: 'https://nestos.org.cn/nestos20231231/nestos-for-virt/x86_64/NestOS-For-Virt-22.03-LTS-SP3.20240110.0.x86_64.iso' },
-      { name: 'NestOS For Container-22.03-LTS-SP3 ISO下载', path: 'https://nestos.org.cn/nestos20231231/nestos-for-container/x86_64/NestOS-For-Container-22.03-LTS-SP3.20240110.0-live.x86_64.iso' },
-      { name: 'NestOS For Container-22.03-LTS-SP3 QCOW2下载', path: 'https://nestos.org.cn/nestos20231231/nestos-for-container/x86_64/NestOS-For-Container-22.03-LTS-SP3.20240110.0-qemu.x86_64.qcow2' },
-      { name: 'NestOS For Container-22.03-LTS-SP3 openStack版本下载', path: 'https://nestos.org.cn/nestos20231231/nestos-for-container/x86_64/NestOS-For-Container-22.03-LTS-SP3.20240110.0-openstack.x86_64.qcow2' },
-    ],
-    armList: [
-      { name: 'NestOS 双模式-22.03-LTS-SP3 ISO下载', path: 'https://nestos.org.cn/nestos20231231/nestos-for-all/aarch64/NestOS-22.03-LTS-SP3.20240110.0.aarch64.iso' },
-      { name: 'NestOS For Virt-22.03-LTS-SP3 ISO下载', path: 'https://nestos.org.cn/nestos20231231/nestos-for-virt/aarch64/NestOS-For-Virt-22.03-LTS-SP3.20240110.0.aarch64.iso' },
-      { name: 'NestOS For Container-22.03-LTS-SP3 ISO下载', path: 'https://nestos.org.cn/nestos20231231/nestos-for-container/aarch64/NestOS-For-Container-22.03-LTS-SP3.20240110.0-live.aarch64.iso' },
-      { name: 'NestOS For Container-22.03-LTS-SP3 QCOW2下载', path: 'https://nestos.org.cn/nestos20231231/nestos-for-container/aarch64/NestOS-For-Container-22.03-LTS-SP3.20240110.0-qemu.aarch64.qcow2' },
-      { name: 'NestOS For Container-22.03-LTS-SP3 openStack版本下载', path: 'https://nestos.org.cn/nestos20231231/nestos-for-container/aarch64/NestOS-For-Container-22.03-LTS-SP3.20240110.0-openstack.aarch64.qcow2' },
-    ],
-  },
-  {
-    dateTitle: '【22.03-LTS-SP2.20230928】',
-    x86List: [
-      { name: 'NestOS 双模式-22.03-LTS-SP2.20230928 ISO下载', path: 'https://nestos.org.cn/nestos20230928/nestos-for-all/x86_64/NestOS-22.03-LTS-SP2.20230928.0.x86_64.iso' },
-      { name: 'NestOS For Container-22.03-LTS-SP2.20230928 QCOW2下载', path: 'https://nestos.org.cn/nestos20230928/nestos-for-container/x86_64/NestOS-For-Container-22.03-LTS-SP2.20230928.0-qemu.x86_64.qcow2' },
-      { name: 'NestOS For Container-22.03-LTS-SP2.20230928 openStack版本下载', path: 'https://nestos.org.cn/nestos20230928/nestos-for-container/x86_64/NestOS-For-Container-22.03-LTS-SP2.20230928.0-openstack.x86_64.qcow2' },
-    ],
-    armList: [
-      { name: 'NestOS 双模式-22.03-LTS-SP2.20230928 ISO下载', path: 'https://nestos.org.cn/nestos20230928/nestos-for-all/aarch64/NestOS-22.03-LTS-SP2.20230928.0.aarch64.iso' },
-      { name: 'NestOS For Container-22.03-LTS-SP2.20230928 QCOW2下载', path: 'https://nestos.org.cn/nestos20230928/nestos-for-container/aarch64/NestOS-For-Container-22.03-LTS-SP2.20230928.0-qemu.aarch64.qcow2' },
-      { name: 'NestOS For Container-22.03-LTS-SP2.20230928 openStack版本下载', path: 'https://nestos.org.cn/nestos20230928/nestos-for-container/aarch64/NestOS-For-Container-22.03-LTS-SP2.20230928.0-openstack.aarch64.qcow2' },
-    ],
-  },
-  {
-    dateTitle: '【22.03-LTS-SP2】',
-    x86List: [
-      { name: 'NestOS-22.03-LTS-SP2 ISO下载', path: 'https://nestos.org.cn/nestos20230630/x86_64/nestos-22.03-LTS-SP2.20230704.0-live.x86_64.iso' },
-      { name: 'NestOS-22.03-LTS-SP2 QCOW2下载', path: 'https://nestos.org.cn/nestos20230630/x86_64/nestos-22.03-LTS-SP2.20230704.0-qemu.x86_64.qcow2' },
-      { name: 'NestOS-22.03-LTS-SP2 openStack版本下载', path: 'https://nestos.org.cn/nestos20230630/x86_64/nestos-22.03-LTS-SP2.20230704.0-openstack.x86_64.qcow2' },
-    ],
-    armList: [
-      { name: 'NestOS-22.03-LTS-SP2 ISO下载', path: 'https://nestos.org.cn/nestos20230630/aarch64/nestos-22.03-LTS-SP2.20230704.0-live.aarch64.iso' },
-      { name: 'NestOS-22.03-LTS-SP2 QCOW2下载', path: 'https://nestos.org.cn/nestos20230630/aarch64/nestos-22.03-LTS-SP2.20230704.0-qemu.aarch64.qcow2' },
-      { name: 'NestOS-22.03-LTS-SP2 openStack版本下载', path: 'https://nestos.org.cn/nestos20230630/aarch64/nestos-22.03-LTS-SP2.20230704.0-openstack.aarch64.qcow2' },
-    ],
-  },
-  {
-    dateTitle: '【23.03】',
-    x86List: [
-      { name: 'NestOS-23.03 ISO下载', path: 'https://nestos.org.cn/nestos20230330/x86_64/nestos-23.03.20230403.0-live.x86_64.iso' },
-      { name: 'NestOS-23.03 QCOW2下载', path: 'https://nestos.org.cn/nestos20230330/x86_64/nestos-23.03.20230403.0-qemu.x86_64.qcow2' },
-    ],
-    armList: [
-      { name: 'NestOS-23.03 ISO下载', path: 'https://nestos.org.cn/nestos20230330/aarch64/nestos-23.03.20230403.0-live.aarch64.iso' },
-      { name: 'NestOS-23.03 QCOW2下载', path: 'https://nestos.org.cn/nestos20230330/aarch64/nestos-23.03.20230403.0-qemu.aarch64.qcow2' },
-    ],
-  },
-  {
-    dateTitle: '【22.03-LTS-SP1】',
-    x86List: [
-      { name: 'NestOS-22.03-LTS-SP1 ISO下载', path: 'https://nestos.org.cn/nestos20221230/x86_64/nestos-22.03-LTS-SP1.20221229.0-live.x86_64.iso' },
-      { name: 'NestOS-22.03-LTS-SP1 QCOW2下载', path: 'https://nestos.org.cn/nestos20221230/x86_64/nestos-22.03-LTS-SP1.20221229.0-qemu.x86_64.qcow2' },
-    ],
-    armList: [
-      { name: 'NestOS-22.03-LTS-SP1 ISO下载', path: 'https://nestos.org.cn/nestos20221230/aarch64/nestos-22.03-LTS-SP1.20221229.0-live.aarch64.iso' },
-      { name: 'NestOS-22.03-LTS-SP1 QCOW2下载', path: 'https://nestos.org.cn/nestos20221230/aarch64/nestos-22.03-LTS-SP1.20221229.0-qemu.aarch64.qcow2' },
-    ],
-  },
-  {
-    dateTitle: '【22.09】',
-    x86List: [
-      { name: 'NestOS-22.09 ISO下载', path: 'https://nestos.org.cn/nestos20220930/x86_64/nestos-22.09.20220928.0-live.x86_64.iso' },
-      { name: 'NestOS-22.09 QCOW2下载', path: 'https://nestos.org.cn/nestos20220930/x86_64/nestos-22.09.20220928.0-qemu.x86_64.qcow2' },
-    ],
-    armList: [
-      { name: 'NestOS-22.09 ISO下载', path: 'https://nestos.org.cn/nestos20220930/aarch64/nestos-22.09.20220928.0-live.aarch64.iso' },
-      { name: 'NestOS-22.09 QCOW2下载', path: 'https://nestos.org.cn/nestos20220930/aarch64/nestos-22.09.20220928.0-qemu.aarch64.qcow2' },
-    ],
-  },
-  {
-    dateTitle: '【22.03-LTS】',
-    x86List: [
-      { name: 'NestOS-22.03 ISO下载', path: 'https://nestos.org.cn/nestos20220330/x86_64/nestos-22.03.20220329.dev.0-live.x86_64.iso' },
-      { name: 'NestOS-22.03 QCOW2下载', path: 'https://nestos.org.cn/nestos20220330/x86_64/nestos-22.03.20220329.dev.0-qemu.x86_64.qcow2' },
-    ],
-    armList: [
-      { name: 'NestOS-22.03 ISO下载', path: 'https://nestos.org.cn/nestos20220330/aarch64/nestos-22.03.20220329.dev.0-live.aarch64.iso' },
-      { name: 'NestOS-22.03 QCOW2下载', path: 'https://nestos.org.cn/nestos20220330/aarch64/nestos-22.03.20220329.dev.0-qemu.aarch64.qcow2' },
-    ],
-  },
-];
+const mirrorVersions = computed(() => nestosContent.zh.mirror_versions);
 
 // Per-row selected package index (reactive array for v-model compatibility)
-const selectedIdx = reactive<number[]>(mirrorVersions.map(() => 0));
+const selectedIdx = reactive<number[]>(mirrorVersions.value.map(() => 0));
 
 // Reset selections when arch changes
 watch(activeArch, () => {
-  mirrorVersions.forEach((_, i) => {
+  mirrorVersions.value.forEach((_, i) => {
     selectedIdx[i] = 0;
   });
 });
 
 const getList = (v: VersionGroup) =>
-  activeArch.value === 'x86' ? v.x86List : v.armList;
+  activeArch.value === 'x86' ? v.x86_list : v.arm_list;
 
 const tableColumns = computed(() => [
   { label: t('nestos.mirrorPackage'), key: 'version', style: { width: '30%' } },
@@ -172,15 +48,11 @@ const tableColumns = computed(() => [
 ]);
 
 // Table rows: one per version group (static — mirrorVersions never changes)
-const tableData = mirrorVersions.map((v, i) => ({ vIdx: i, version: v.dateTitle }));
+const tableData = mirrorVersions.value.map((v, i) => ({ vIdx: i, version: v.date_title }));
 
-const docLinks = [
-  { titleKey: 'nestos.nestosDoc', href: 'https://nestos.org.cn/' },
-];
+const docLinks = computed(() => nestosContent.zh.doc_links);
 
-const otherLinks = [
-  { titleKey: 'nestos.ignitionFile', href: 'https://nestos.org.cn/nestos-ign/config.ign' },
-];
+const otherLinks = computed(() => nestosContent.zh.other_links);
 </script>
 
 <template>
@@ -250,7 +122,7 @@ const otherLinks = [
             :key="i"
             class="link-item"
           >
-            <p class="link-title">{{ t(item.titleKey) }}</p>
+            <p class="link-title">{{ t(item.title_key) }}</p>
             <OLink
               :href="item.href"
               target="_blank" rel="noopener noreferrer"
@@ -273,7 +145,7 @@ const otherLinks = [
             :key="i"
             class="link-item"
           >
-            <p class="link-title">{{ t(item.titleKey) }}</p>
+            <p class="link-title">{{ t(item.title_key) }}</p>
             <OLink
               :href="item.href"
               target="_blank" rel="noopener noreferrer"

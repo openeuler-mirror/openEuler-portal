@@ -1,0 +1,300 @@
+# 迁移门户页数据 / Migration portal page data
+#
+# 板块按页面从上到下视觉顺序排列。
+# 图片就近存放在 ./images/，zh/en 共用图不加后缀，差异化图保留原文件名指示，主题变体保留 _light/_dark 后缀。
+# SVG 作为 <img> 消费时不带 ?raw；PNG 背景图不带 ?raw。
+
+# advantage: 我们的优势板块
+#   title: 板块标题
+#   description: 板块描述
+#   card_top_left: 左侧卡片（原系统 EOM）
+#     url: 卡片图片
+#     title_01: 标题1
+#     title_02: 标题2
+#     description: 描述
+#   transition_right: 右向过渡箭头图片
+#   transition_down: 下向过渡箭头图片
+#   card_top_right: 右侧卡片（openEuler）
+#     url: 卡片图片
+#     title_01: 标题1
+#     title_02: 标题2
+#     description: 描述
+#   benefit: 优势列表（按主题拆分亮色/暗色）
+#     light: 亮色主题卡片列表
+#       icon: 图标
+#       title: 标题
+#       link: 链接
+#     dark: 暗色主题卡片列表
+#       icon: 图标
+#       title: 标题
+#       link: 链接
+advantage:
+  title: 我们的优势
+  description: openEuler 助力企业简单、平稳、高效进行操作系统迁移。
+  card_top_left:
+    url: ./images/portal-advantage-left.png
+    title_01: 原操作系统EOM
+    title_02: 数字化改造
+    description: ''
+  transition_right: ./images/portal-advantage-transition-1.png
+  transition_down: ./images/portal-advantage-transition-2.png
+  card_top_right:
+    url: ./images/portal-advantage-right.png
+    title_01: openEuler
+    title_02: ''
+    description: "面向数字基础设施的开源操作系统\n聚焦内核能力，释放多样性算力，引领操作系统创新\n创新架构，全栈优化，打造全场景协同的数字基础设施操作系统"
+  benefit:
+    light:
+      - icon: ./images/portal-advantage-icon-1.png
+        title: 端到端的迁移方案
+        link: /migration/guidance/
+      - icon: ./images/portal-advantage-icon-2.png
+        title: 简单好用的迁移工具
+        link: /migration/download/
+      - icon: ./images/portal-advantage-icon-3.png
+        title: 支持到位，快速响应
+        link: /migration/contact/
+      - icon: ./images/portal-advantage-icon-4.png
+        title: 政企迁移案例实践
+        link: /migration/user-cases/
+    dark:
+      - icon: ./images/portal-advantage-icon-dark-1.svg
+        title: 端到端的迁移方案
+        link: /migration/guidance/
+      - icon: ./images/portal-advantage-icon-dark-2.svg
+        title: 简单好用的迁移工具
+        link: /migration/download/
+      - icon: ./images/portal-advantage-icon-dark-3.svg
+        title: 支持到位，快速响应
+        link: /migration/contact/
+      - icon: ./images/portal-advantage-icon-dark-4.svg
+        title: 政企迁移案例实践
+        link: /migration/user-cases/
+
+# download: 快速下载板块
+#   title: 板块标题
+#   description: 板块描述
+#   left: 下载工具信息
+#     img_light: 亮色主题工具图片
+#     img_dark: 暗色主题工具图片
+#     name: 工具名称
+#     version: 版本号
+#   btns: 按钮列表
+#     name: 按钮名称
+#     link: 按钮链接（可选，与 soft_links 二选一）
+#     soft_links: 下拉链接列表（可选）
+#       name: 链接名称
+#       link: 链接地址
+#   bg_url: 背景图片
+download:
+  title: 快速下载
+  description: x2openEuler工具是一款将源操作系统升级为目标操作系统的搬迁工具套件
+  left:
+    img_light: ./images/portal-download-1.png
+    img_dark: ./images/portal-download-dark-1.png
+    name: x2openEuler
+    version: 3.0.0-20250104
+  btns:
+    - name: 软件下载
+      soft_links:
+        - name: 'x86_64 '
+          link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/x86_64/Packages/x2openEuler-core-3.0.0-latest.x86_64.rpm'
+        - name: 'aarch64 '
+          link: 'https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/aarch64/Packages/x2openEuler-core-3.0.0-latest.aarch64.rpm'
+    - name: 特性说明
+      link: /zh/migration/download/characteristic-description-3.0.0/
+    - name: 补丁说明
+      link: /zh/migration/download/patch_description-3.0.0/
+    - name: 使用指南
+      soft_links:
+        - name: 'Linux迁移 '
+          link: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html'
+        - name: 'Windows迁移 '
+          link: 'https://repo.oepkgs.net/openeuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/aarch64/Packages/x2openEuler-dotNet-migration-guidance.docx'
+    - name: 视频实操
+      link: 'https://www.bilibili.com/video/BV1yR4y1b76k/?spm_id_from=333.999.0.0&vd_source=0aa547ea87e7a7505cf544eacc2236ac'
+  bg_url: ./images/portal-download-bg-dark.png
+
+# instruction: 轻松上手板块
+#   title: 板块标题
+#   description: 板块描述
+#   list: 步骤列表
+#     title: 步骤标题
+#     content: 步骤内容（多行用 \n 分隔）
+#     sogan: 步骤标语
+#   bg: 背景图片配置（亮色/暗色 + PC/移动端）
+#     url_1_light / url_2_light: PC 端亮色背景
+#     url_mo_1_light / url_mo_2_light / url_mo_3_light: 移动端亮色背景
+#     url_1_dark / url_2_dark: PC 端暗色背景
+#     url_mo_1_dark / url_mo_2_dark / url_mo_3_dark: 移动端暗色背景
+instruction:
+  title: 轻松上手
+  description: 提供用户迁移旅程中的准备、实施、测试上线等各环节的方法及工具，方便开发者快速完成迁移
+  list:
+    - title: 了解
+      content: "迁移背景\n迁移概述\nopenEuler迁移方案"
+      sogan: 六步法端到端迁移无忧
+    - title: 迁移准备
+      content: "成立保障组织\n迁移分析\n方案设计\n迁移适配"
+      sogan: 工具助力，化繁为简
+    - title: 迁移实施
+      content: "原地升级\n适配升级"
+      sogan: 一键迁移，高效可靠
+    - title: 测试与上线
+      content: "业务监控\n业务巡检\n安全漏洞更新"
+      sogan: 安全放心，智能运维
+  bg:
+    url_1_light: ./images/portal-instruction-bg-1.png
+    url_2_light: ./images/portal-instruction-bg-2.png
+    url_mo_1_light: ./images/portal-instruction-bg-mo-1.png
+    url_mo_2_light: ./images/portal-instruction-bg-mo-2.png
+    url_mo_3_light: ./images/portal-instruction-bg-mo-3.png
+    url_1_dark: ./images/portal-instruction-bg-dark-1.png
+    url_2_dark: ./images/portal-instruction-bg-dark-2.png
+    url_mo_1_dark: ./images/portal-instruction-bg-mo-dark-1.png
+    url_mo_2_dark: ./images/portal-instruction-bg-mo-dark-2.png
+    url_mo_3_dark: ./images/portal-instruction-bg-mo-dark-3.png
+
+# path: 迁移路径板块
+#   title: 板块标题
+#   description: 板块描述
+#   img_light: 亮色主题路径图（zh 差异化，文件名无后缀）
+#   img_dark: 暗色主题路径图（zh/en 共用）
+#   img_mo: 移动端路径
+#     top: 上半部分
+#       title: 标题
+#       description: 描述
+#       img: 图片
+#     bottom: 下半部分
+#       title: 标题
+#       description: 描述
+#       img: 图片
+path:
+  title: 迁移路径
+  description: ''
+  img_light: ./images/portal-path-content.png
+  img_dark: ./images/portal-path-content-dark.png
+  img_mo:
+    top:
+      title: 原地升级（1h）
+      description: 在原有的系统上一键升级
+      img: ./images/portal-path-mo-top.png
+    bottom:
+      title: 适配迁移（4h）
+      description: "自动安装操作系统和同步配置\n安装应用"
+      img: ./images/portal-path-mo-bottom.png
+
+# case: 政企案例板块
+#   title: 板块标题
+#   description: 板块描述
+#   list: 案例列表
+#     name: 案例名称
+#     description: 案例描述
+#     link: 案例链接
+#   btn: 按钮
+#     text: 按钮文案
+#     link: 按钮链接
+case:
+  title: 政企案例
+  description: ''
+  list:
+    - name: 浙江移动
+      description: 浙江移动完成了openEuler的大规模迁移部署
+      link: /zh/showcase/provider/003p49ce-8355-d114154aa417/
+    - name: 天翼云
+      description: 天翼云全场景业务无缝迁移至基于openEuler的自研操作系统CTyunOS
+      link: /zh/showcase/provider/tianyiyun0330/
+  btn:
+    text: 了解详情
+    link: /migration/user-cases/
+
+# guide: 移植指南板块
+#   title: 板块标题
+#   description: 板块描述
+#   list: 指南列表
+#     label: 指南标题
+#     link: 指南链接
+#   btn: 按钮
+#     text: 按钮文案
+#     link: 按钮链接
+guide:
+  title: 移植指南
+  description: ''
+  list:
+    - label: MySQL 5.7.21 移植指南
+      link: /zh/blog/randy1568/MySQL 5-7-21-migrate-guide.html
+    - label: Apache 2.4.39 移植指南
+      link: /zh/blog/randy1568/Apache 2-4-39-porting-guide.html
+    - label: Nginx 1.14.2 移植指南
+      link: /zh/blog/randy1568/Nginx 1-14-2-porting-guide.html
+  btn:
+    text: 查看更多
+    link: /migration/transplantation-cases/
+
+# help: 帮助咨询板块
+#   title: 板块标题
+#   description: 板块描述
+#   tips: 提示文案列表
+#     text_left: 左侧文案
+#     link_text: 链接文案
+#     text_right: 右侧文案
+#     link: 链接
+#   offical_qr: 官方公众号二维码
+#     img: 二维码图片
+#     text: 公众号名称
+#   assistant_qr: 小助手二维码
+#     img: 二维码图片
+#     text: 小助手名称
+help:
+  title: 帮助咨询
+  description: ''
+  tips:
+    - text_left: 如有疑问可前往
+      link_text: FAQ
+      text_right: 查找对应解答
+      link: /zh/migration/faq/
+    - text_left: 也可扫描二维码，我们会有专人为您解答
+      link_text: ''
+      text_right: ''
+      link: ''
+    - text_left: openEuler公众号进入迁移专区，点击"加群"，进入技术交流群
+      link_text: ''
+      text_right: ''
+      link: ''
+    - text_left: openEuler小助手，备注"迁移"，进入技术交流群
+      link_text: ''
+      text_right: ''
+      link: ''
+  offical_qr:
+    img: ./images/portal-help-official.png
+    text: openEuler公众号
+  assistant_qr:
+    img: ./images/portal-help-assistant.png
+    text: openEuler小助手
+
+# toc: 迁移专区侧边导航
+#   label: 节点显示文案
+#   link: 节点链接路径段
+#   is_leaf: 是否为叶子节点（可选）
+toc:
+  - label: 迁移专区
+    link: migration
+  - label: 背景
+    link: background
+  - label: 迁移优势
+    link: advantage
+  - label: 迁移方案
+    link: guidance
+  - label: 下载
+    link: download
+    is_leaf: true
+  - label: 最佳实践
+    link: user-cases
+  - label: 移植案例
+    link: transplantation-cases
+  - label: 贡献攻略
+    link: contribution
+  - label: FAQ
+    link: faq
+  - label: 联系我们
+    link: contact

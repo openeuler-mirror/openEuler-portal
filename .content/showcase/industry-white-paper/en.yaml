@@ -1,0 +1,10 @@
+# Industry white paper list
+#
+#   banner: Card background image path (public asset URL, not import)
+#   path: PDF download link
+#   summary: White paper summary
+# Top-level is an array.
+
+- banner: /category/showcase/case-detail-bg.jpg
+  path: /whitepaper/en/openEuler-based OSs in Finance.pdf
+  summary: openEuler-based OSs in Finance

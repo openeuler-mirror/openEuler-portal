@@ -5,9 +5,9 @@ export interface CityItemT {
   name: string;
   position?: string;
   technology?: string[];
-  homePage?: string;
+  home_page?: string;
   avatar: string;
-  avatarDark?: string;
+  avatar_dark?: string;
   contribution?: string;
   email?: string;
 }

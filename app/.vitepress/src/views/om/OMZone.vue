@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { oaReport } from '@opendesign-plus/plugins/analytics';
 import BannerLevel2 from '@/components/BannerLevel2.vue';
 import AppContent from '@/components/AppContent.vue';
@@ -7,112 +8,15 @@ import banner from '@/assets/banner/banner-community.png';
 import illustration from '@/assets/category/om/ill.png';
 import infoIll from '@/assets/category/om/info-ill.png';
 import OSMindIll from '@/assets/category/om/OSMind-ill.png';
-import accountsQR from '@/assets/category/om/accounts-QR.png';
-import helperQR from '@/assets/category/om/helper-QR.png';
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
+import omContent from '#content/om';
 
-const helpContents = [
-  '如有疑问可扫描二维码，我们会有专人为您解答',
-  'openEuler公众号进入运维专区，点击“加群”，进入技术交流群',
-  'openEuler小助手，备注“运维”，进入技术交流群',
-];
-
-const qrCodes = [
-  { value: accountsQR, label: 'openEuler公众号' },
-  { value: helperQR, label: 'openEuler小助手' },
-];
-
-const OMSet = [
-  {
-    title: '系统运维',
-    height: 122,
-    cardList: [
-      {
-        title: '日常维护',
-        width: 248,
-        items: [
-          '告警管理',
-          '补丁升级',
-          '系统巡检',
-          '安全扫描',
-          '日志监控',
-          '应急恢复',
-        ],
-      },
-      {
-        title: '系统管理',
-        width: 248,
-        items: [
-          '部署迁移',
-          '镜像管理',
-          '热补丁',
-          '备份恢复',
-          '预警整改',
-          '配置溯源',
-        ],
-      },
-      {
-        title: '系统优化',
-        width: 268,
-        items: ['系统调优', '业务调优', '网络调优'],
-      },
-      {
-        title: '自动化',
-        width: 268,
-        items: ['运维编排', '自动部署', '自动恢复'],
-      },
-    ],
-  },
-  {
-    title: '故障处理',
-    height: 98,
-    cardList: [
-      {
-        title: '工具',
-        width: 628,
-        items: [
-          '日志收集',
-          '远程操作',
-          '故障分析',
-          '故障诊断',
-          '巡检修复',
-          '安全加固',
-          '告警修复',
-          '异常检测',
-        ],
-      },
-      {
-        title: '数据',
-        width: 428,
-        items: ['监控大屏', '数据报表', '智能探针', '架构感知'],
-      },
-    ],
-  },
-  {
-    title: '运维支撑',
-    height: 98,
-    cardList: [
-      {
-        title: '标准规范',
-        width: 548,
-        items: [
-          '系统巡检标准',
-          '运维流程规范',
-          '升级流程规范',
-          '安全加固标准',
-          '故障处理规范',
-          '应急恢复流程',
-        ],
-      },
-      {
-        title: '维护管理',
-        width: 316,
-        items: ['权限管理', '版本管理', '配置管理', '变更管理'],
-      },
-      { title: '资产管理', width: 180, items: ['主机管理', '知识管理'] },
-    ],
-  },
-];
+const helpContents = computed(() => omContent.zh.help_contents);
+const qrCodes = computed(() => omContent.zh.qr_codes);
+const OMSet = computed(() => omContent.zh.om_set);
+const featuresDownloadUrl = omContent.zh.features_download_url;
+const guideDownloadUrl = omContent.zh.guide_download_url;
+const toolsUrl = omContent.zh.tools_url;
 
 const oMSetTitleStyle = (height: number) => {
   return {
@@ -130,74 +34,6 @@ const downloadByUrl = (url: string) => {
   window.URL.revokeObjectURL(url);
   document.body.removeChild(a);
   reportDownload(url);
-};
-
-const featuresDownloadUrl =
-  'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/OSMind%20%E5%85%B3%E9%94%AE%E7%89%B9%E6%80%A7%E4%B8%8E%E4%BB%B7%E5%80%BC.pdf';
-const guideDownloadUrl =
-  'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/OSMind-1.0.0%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.docx';
-
-const toolsUrl = {
-  base: [
-    {
-      name: 'ITServiceTools-1.0.0.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools-1.0.0.zip',
-    },
-    {
-      name: 'ITServiceTools_1.0.0_Asset.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_Asset.zip',
-    },
-    {
-      name: 'ITServiceTools_1.0.0_PythonDeps_openEuler24.03LTS-x86_64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_PythonDeps_openEuler24.03LTS-x86_64.zip',
-    },
-    {
-      name: 'ITServiceTools_1.0.0_PythonDeps_openEuler24.03LTS-aarch64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_PythonDeps_openEuler24.03LTS-aarch64.zip',
-    },
-    {
-      name: 'ITServiceTools_1.0.0_PythonDeps_openEuler22.03LTS-x86_64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_PythonDeps_openEuler22.03LTS-x86_64.zip',
-    },
-    {
-      name: 'ITServiceTools_1.0.0_PythonDeps_openEuler22.03LTS-aarch64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_PythonDeps_openEuler22.03LTS-aarch64.zip',
-    },
-  ],
-  feature: [
-    {
-      name: 'ITServiceTools_1.0.0_Nebula_Any-x86_64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_Nebula_Any-x86_64.zip',
-    },
-    {
-      name: 'ITServiceTools_1.0.0_Nebula_Any-aarch64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_Nebula_Any-aarch64.zip',
-    },
-    {
-      name: 'ITServiceTools_1.0.0_ThirdParty_openEuler24.03LTS-x86_64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_ThirdParty_openEuler24.03LTS-x86_64.zip',
-    },
-    {
-      name: 'ITServiceTools_1.0.0_ThirdParty_openEuler24.03LTS-aarch64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_ThirdParty_openEuler24.03LTS-aarch64.zip',
-    },
-    {
-      name: 'ITServiceTools_1.0.0_ThirdParty_openEuler22.03LTS-x86_64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_ThirdParty_openEuler22.03LTS-x86_64.zip',
-    },
-    {
-      name: 'ITServiceTools_1.0.0_ThirdParty_openEuler22.03LTS-aarch64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_ThirdParty_openEuler22.03LTS-aarch64.zip',
-    },
-    {
-      name: 'ITServiceTools_1.0.0_ThirdParty_openEuler20.03LTS-x86_64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_ThirdParty_openEuler20.03LTS-x86_64.zip',
-    },
-    {
-      name: 'ITServiceTools_1.0.0_ThirdParty_openEuler20.03LTS-aarch64.zip',
-      url: 'https://obs-transfer.obs.cn-north-4.myhuaweicloud.com/openeuler/obsi-openeuler-msx/ITServiceTools_1.0.0_ThirdParty_openEuler20.03LTS-aarch64.zip',
-    },
-  ],
 };
 
 const reportDownload = (url: string) => {
@@ -233,7 +69,7 @@ const reportDownload = (url: string) => {
               {{ item.title }}
             </p>
             <om-card
-              v-for="card in item.cardList"
+              v-for="card in item.card_list"
               :key="card.title"
               :title="card.title"
               :items="card.items"

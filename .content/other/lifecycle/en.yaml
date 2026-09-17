@@ -1,0 +1,39 @@
+# Lifecycle page data
+#
+# Sections are ordered top-to-bottom by visual position on the page.
+# Images live in ./images/. Shared zh/en images have no suffix; differentiated
+# images keep -zh/-en suffix. Markdown content uses | block scalar (preserves
+# newlines), rendered to HTML by the component via markdown-it.
+
+# banner: Page top banner background (shared zh/en)
+banner: ./images/banner.jpg
+
+# overall: Version lifecycle overview markdown content
+overall: |
+  # 1、openEuler Community Version Lifecycle Management (Overall)
+
+  Community releases are named based on the release year and month. For example, openEuler 20.09 was released in September 2020.
+
+  Community releases include Long Term Support (LTS) and innovation releases.
+
+  - **LTS releases (effective from August 2025):** Released every 4 years with 4 years of community support. The latest openEuler 24.03 LTS was released in June 2024 (kernel 6.6). New LTS releases are launched in March of even-numbered years, followed by SP updates in December of even-numbered years, and June (optional) and December of odd-numbered years.
+  - **Innovation releases (effective from August 2025):** Released in September every year with 6 months of community support."
+
+# img1: Image after overview (en-differentiated, -en suffix)
+img1: ./images/img-en1.jpg
+
+# lts: LTS version lifecycle markdown content
+lts: |
+  # 2、openEuler Community Version Lifecycle Management (LTS+SP)
+
+  #### Lifecycle management (effective from August 2025):
+
+  1. **The full lifecycle of an LTS release** is 6 years (4 years of full support and 2 years of maintenance support). Prior to the end of this lifecycle, **a joint maintenance team may be assembled** to request an optional 2-year extension. The end of the lifecycle of any release will be notified by email and public announcement 3 months in advance.
+  2. In principle, the lifecycle for service pack (SP) updates within an LTS release is 9 months for minor SPs (released in June, optional) or 24 months for major SPs (released in December). Major SPs are recommended for **large-scale use**.
+  3. By default, the lifecycle of an initial LTS release (SP0) **follows that of a major SP**, but could end half a year to 1 year in advance based on a review of its usage in the community and community rules. SP7, as the final SP for an LTS release, concludes with the full lifecycle of the LTS release.
+  4. Full support includes fixes for CVEs and bugs, support for new hardware, and some new features with backward compatibility within the LTS release. Maintenance or extended support is limited to fixes for critical or high-severity CVEs and bugs."
+
+  *The scheme has been reported to the Technical Committee and the Release SIG and publicly announced in the community mailing list.
+
+# img2: Image after LTS (en-differentiated, -en suffix)
+img2: ./images/img-en2.jpg

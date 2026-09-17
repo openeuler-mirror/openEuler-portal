@@ -1,0 +1,24 @@
+# FAQ page data / FAQ 页面数据
+#
+# faq_title: Sidebar title (shared by all FAQ sub-pages)
+# page_content: In-page anchor title
+# toc: Sidebar TOC (6 category links, shared by all FAQ sub-pages)
+#   label: Category label
+#   link: Category link (empty string for the current page /en/faq/, others are sub-page path segments)
+
+faq_title: openEuler FAQs
+page_content: Contents
+
+toc:
+  - label: General
+    link: ''
+  - label: System Management
+    link: system-management
+  - label: Migration
+    link: migration
+  - label: Cloud Native
+    link: cloud-native
+  - label: Virtualization
+    link: virtualization
+  - label: Application Development
+    link: application-development

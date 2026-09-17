@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useData } from 'vitepress';
-import seoConfig from '@/data/common/seo';
+import commonContent from '#content/common';
 import { useRouter } from 'vitepress';
 
-import downloadInfoData from '@/data/migration/migration-download';
+import downloadInfoData from '#content/migration/download';
 import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 import IconDownload from '~icons/app/icon-download.svg';
 
@@ -32,7 +32,7 @@ function handleClick(item: LinkItem) {
 </script>
 
 <template>
-  <SeoBox :seo-data="seoConfig[lang]?.migrationDownload" />
+  <SeoBox :seo-data="commonContent[lang]?.migration_download" />
   <div class="migration-download">
     <div class="migration-download-content">
       <div>
@@ -43,7 +43,7 @@ function handleClick(item: LinkItem) {
         <p class="download-desc">{{ downloadInfo.description }}</p>
 
         <OCard
-          v-for="item in downloadInfo.versionList"
+          v-for="item in downloadInfo.version_list"
           :key="item.version"
           shadow="hover"
         >
@@ -62,18 +62,18 @@ function handleClick(item: LinkItem) {
             <div class="card-box-right">
               <div class="card-btn">
                 <OButton
-                  v-for="buttons in item.sourceLinks"
+                  v-for="buttons in item.source_links"
                   :key="buttons"
                   animation
                   size="mini"
                   class="home-banner-btn"
-                  :class="buttons.softLinks?.length ? 'hover' : ''"
+                  :class="buttons.soft_links?.length ? 'hover' : ''"
                   @click="buttons.link && handleClick(buttons)"
                 >
                   {{ buttons.name }}
-                  <ul v-if="buttons.softLinks?.length">
+                  <ul v-if="buttons.soft_links?.length">
                     <li
-                      v-for="buttonItem in buttons.softLinks"
+                      v-for="buttonItem in buttons.soft_links"
                       :key="buttonItem.link"
                       @click="handleClick(buttonItem)"
                     >
@@ -84,7 +84,7 @@ function handleClick(item: LinkItem) {
                     ><OIcon>
                       <component
                         :is="
-                          buttons.softLinks?.length
+                          buttons.soft_links?.length
                             ? IconDownload
                             : IconArrowRight
                         "

@@ -1,9 +1,11 @@
 <script lang="ts" setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 import { OLink } from '@opensig/opendesign';
 
 import AppSection from '~@/components/AppSection.vue';
 import { useLocale } from '~@/composables/useLocale';
+
+import nestosContent from '#content/nestos';
 
 const { t } = useLocale();
 
@@ -11,45 +13,14 @@ const chartRef = ref<HTMLDivElement | null>(null);
 let chartInstance: any = null;
 let mounted = false;
 
-const xList = ['100*create', '100*start', '100*stop', '100*rm'];
-const yList = [
-  {
-    name: 'Podman3.4.4(NestOS)',
-    type: 'line',
-    data: [3436, 5496, 2516, 2971],
-  },
-  {
-    name: 'Podman3.4.4(CentOS8)',
-    type: 'line',
-    lineStyle: { type: 'dotted' },
-    data: [6761, 10130, 2532, 3141],
-  },
-  {
-    name: 'iSulad2.1.2(NestOS)',
-    type: 'line',
-    data: [858, 1885, 457, 501],
-  },
-  {
-    name: 'iSulad2.1.2(CentOS8)',
-    type: 'line',
-    lineStyle: { type: 'dotted' },
-    data: [882, 2123, 497, 566],
-  },
-  {
-    name: 'Docker18.09(NestOS)',
-    type: 'line',
-    data: [1375, 7397, 1052, 1116],
-  },
-  {
-    name: 'Docker18.09(CentOS8)',
-    type: 'line',
-    lineStyle: { type: 'dotted' },
-    data: [2919, 18400, 465, 6838],
-  },
-];
-
-const comparisionUrl =
-  'https://atomgit.com/openeuler/NestOS/blob/master/docs/zh/usr_manual/%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94%E6%B5%8B%E8%AF%95.md';
+const xList = computed(() => nestosContent.zh.performance_x_list);
+const yList = computed(() =>
+  nestosContent.zh.performance_y_list.map((item) => {
+    const { line_style, ...rest } = item;
+    return line_style ? { ...rest, lineStyle: line_style } : rest;
+  })
+);
+const comparisionUrl = computed(() => nestosContent.zh.performance_comparison_url);
 
 const handleResize = () => {
   chartInstance?.resize();
@@ -92,7 +63,7 @@ onMounted(() => {
         textStyle: { fontSize: 12, color: labelColor },
       },
       xAxis: {
-        data: xList,
+        data: xList.value,
         axisLine: { lineStyle: { color: borderColor } },
         axisLabel: { color: labelColor },
       },
@@ -102,7 +73,7 @@ onMounted(() => {
         splitLine: { lineStyle: { color: borderColor, type: 'dashed' } },
         axisLabel: { color: labelColor },
       },
-      series: yList,
+      series: yList.value,
       color: ['#a00000', '#FF0087', '#13663a', '#49C066', '#1450B8', '#37A2FF'],
     });
 

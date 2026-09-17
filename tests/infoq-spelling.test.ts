@@ -1,9 +1,14 @@
 import { expect, describe, it } from 'vitest';
-import { friendshipLinks } from '../app/.vitepress/src-new/data/footer/index.ts';
+import yaml from 'js-yaml';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const ROOT = resolve(__dirname, '..');
+
+const friendshipLinks = {
+  zh: yaml.load(readFileSync(resolve(ROOT, '.content/footer/zh.yaml'), 'utf8')).friendship_links,
+  en: yaml.load(readFileSync(resolve(ROOT, '.content/footer/en.yaml'), 'utf8')).friendship_links,
+};
 
 describe('InfoQ 拼写修正 — 页脚友情链接 zh locale', () => {
   const infoqZh = friendshipLinks.zh.find((item) => item.link.includes('infoq.cn'));

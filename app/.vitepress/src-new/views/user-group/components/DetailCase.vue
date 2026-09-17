@@ -3,8 +3,11 @@ import { PropType } from 'vue';
 import { OCard, OButton } from '@opensig/opendesign';
 import { useI18n } from 'vue-i18n';
 import AppSection from '~@/components/AppSection.vue';
-import { casesZh } from '~@/data/home/case';
-import { linkData } from '~@/data/user-group';
+import homeContent from '#content/home';
+import { createSvgIcon } from '~@/composables/createSvgIcon';
+import userGroupDetailContent from '#content/community/user-group/detail';
+
+const linkData = userGroupDetailContent.zh.link;
 import { useScreen } from '~@/composables/useScreen';
 import type { ShowCaseT } from '~@/@types/type-user-group';
 
@@ -22,7 +25,8 @@ defineProps({
 const { t } = useI18n();
 
 const cardIcon = (type: string) => {
-  return casesZh.find((item) => item.label === type)?.icon;
+  const icon = homeContent.zh.case.find((item) => item.label === type)?.icon;
+  return icon ? createSvgIcon(icon) : undefined;
 };
 </script>
 
@@ -58,7 +62,7 @@ const cardIcon = (type: string) => {
           color="primary"
           :size="lePadV ? 'small' : 'large'"
           class="button"
-          :href="linkData.provideCase"
+          :href="linkData.provide_case"
         >
           {{ t('usergroup.provideCase') }}
         </OButton>

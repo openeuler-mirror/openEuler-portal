@@ -1,0 +1,23 @@
+# Mailing List page data / 邮件列表页数据
+#
+# subscription_process: Subscription process steps (4 steps, left-to-right visual order)
+#   title: Step title
+#   detail: Step description (contains HTML <a> links, rendered via v-dompurify-html)
+#   img: Step image (PNG, <img>/OFigure consumption, no ?raw)
+
+subscription_process:
+  - title: 'Select Your SIG'
+    detail: 'Select the mailing list to be subscribed to on the Mailing Lists page.'
+    img: './images/step1.png'
+
+  - title: 'Enter Details'
+    detail: 'Enter the e-mail address and name (optional), and click Subscribe.'
+    img: './images/step2.png'
+
+  - title: 'Review & Confirm'
+    detail: 'Your mailbox will receive an e-mail from the mailing list, asking you to confirm that you have subscribed to the mailing list. Click the confirmation link to confirm the subscription.'
+    img: './images/step3.png'
+
+  - title: "You're Subscribed!"
+    detail: 'Your mailbox receives a welcome e-mail from the mailing list, indicating that you have subscribed to the mailing list successfully.'
+    img: './images/step4.png'

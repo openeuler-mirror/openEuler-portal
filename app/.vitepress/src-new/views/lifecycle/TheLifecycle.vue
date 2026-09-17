@@ -7,16 +7,7 @@ import Markdown from 'markdown-it';
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import AppSection from '~@/components/AppSection.vue';
 
-import banner from '~@/assets/category/lifecycle/banner.jpg'
-import imgZh1 from '~@/assets/category/lifecycle/img-zh1.jpg'
-import imgZh2 from '~@/assets/category/lifecycle/img-zh2.jpg'
-import imgEn1 from '~@/assets/category/lifecycle/img-en1.jpg'
-import imgEn2 from '~@/assets/category/lifecycle/img-en2.jpg'
-
-import overall from '~@/data/lifecycle/overall.md?raw';
-import lts from '~@/data/lifecycle/lts.md?raw';
-import overallEn from '~@/data/lifecycle/overall-en.md?raw';
-import ltsEn from '~@/data/lifecycle/lts-en.md?raw';
+import lifecycleContent from '#content/other/lifecycle';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -37,22 +28,16 @@ const md = new Markdown({
 </script>
 
 <template>
-  <BannerLevel2 v-if="!lePadV" class="lifecycle-banner" :title="t('lifecycle.title')" :background-image="banner" />
+  <BannerLevel2 v-if="!lePadV" class="lifecycle-banner" :title="t('lifecycle.title')" :background-image="lifecycleContent[locale].banner" />
   <div v-else class="mo-banner">
     <p class="mo-title">{{ t('lifecycle.title') }}</p>
   </div>
   <AppSection>
-    <div v-if="locale === 'zh'" class="lifecycle-markdown">
-      <div v-dompurify-html="md.render(overall)" class="markdown-new"></div>
-      <OFigure :src="imgZh1" :class="{'figure-dark': isDark}"></OFigure>
-      <div v-dompurify-html="md.render(lts)" class="markdown-new markdown-lts"></div>
-      <OFigure :src="imgZh2" :class="{'figure-dark': isDark}"></OFigure>
-    </div>
-    <div v-else class="lifecycle-markdown">
-      <div v-dompurify-html="md.render(overallEn)" class="markdown-new"></div>
-      <OFigure :src="imgEn1" :class="{'figure-dark': isDark}"></OFigure>
-      <div v-dompurify-html="md.render(ltsEn)" class="markdown-new markdown-lts"></div>
-      <OFigure :src="imgEn2" :class="{'figure-dark': isDark}"></OFigure>
+    <div class="lifecycle-markdown">
+      <div v-dompurify-html="md.render(lifecycleContent[locale].overall)" class="markdown-new"></div>
+      <OFigure :src="lifecycleContent[locale].img1" :class="{'figure-dark': isDark}"></OFigure>
+      <div v-dompurify-html="md.render(lifecycleContent[locale].lts)" class="markdown-new markdown-lts"></div>
+      <OFigure :src="lifecycleContent[locale].img2" :class="{'figure-dark': isDark}"></OFigure>
     </div>
   </AppSection>
 </template>

@@ -4,7 +4,7 @@ import { OBreadcrumb, OBreadcrumbItem, ODivider } from '@opensig/opendesign';
 
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
-import { hardWareInfo } from '~@/data/compatibility';
+import compatibilityContent from '#content/compatibility/hardware';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -15,6 +15,8 @@ const { lePadV } = useScreen();
 
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
+
+const hardWareInfo = computed(() => compatibilityContent[locale.value].hardware_info);
 </script>
 
 <template>
@@ -26,10 +28,10 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
       <OBreadcrumbItem>{{ t('compatibility.desc2') }}</OBreadcrumbItem>
     </OBreadcrumb>
     <div class="info-content">
-      <div v-for="item in hardWareInfo[locale]" :key="item.title" class="item-content">
+      <div v-for="item in hardWareInfo" :key="item.title" class="item-content">
         <p class="title">{{ item.title }}</p>
         <template v-if="item.desc">
-          <p v-for="text in item.desc" v-dompurify-html="text" class="text"></p>
+          <p v-for="(text, i) in item.desc" :key="i" v-dompurify-html="text" class="text"></p>
         </template>
         <template v-if="item.list">
           <div v-for="(val, v) in item.list" :key="v" class="item-list">
@@ -42,9 +44,9 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
                 <p class="tips">{{ val.tips }}</p>
                 <div class="table" :class="{'table-dark': isDark}">
                   <div class="table-head">
-                    <span v-for="col in val.columns" class="table-col">{{ col }}</span>
+                    <span v-for="(col, i) in val.columns" :key="i" class="table-col">{{ col }}</span>
                   </div>
-                  <div v-for="row in val.data" class="table-row">
+                  <div v-for="(row, i) in val.data" :key="i" class="table-row">
                     <span class="table-col">{{ row.content }}</span>
                     <span v-dompurify-html="row.info" class="table-col"></span>
                   </div>

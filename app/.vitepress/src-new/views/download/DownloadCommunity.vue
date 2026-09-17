@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { ref, computed, onMounted, watch } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 
 import { OTab, OTabPane } from '@opensig/opendesign';
 import AppSection from '~@/components/AppSection.vue';
 
 import communityVersionData from '~@/data/download/download';
-import { fileTree, mirrorList } from '~@/data/download/download-new';
+import downloadContent from '#content/download';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useDownload } from '~@/stores/download';
@@ -24,14 +24,11 @@ const emits = defineEmits<{
 
 const { locale, t } = useLocale();
 
+const fileTree = downloadContent.new.fileTree;
+const mirrorList = downloadContent.new.mirrorList;
+
 const activeTab = ref('latest');
-// TODO:从 导航配置取数据
-const shownNameList: string[] = [
-  'openEuler-24.03-LTS-SP4',
-  'openEuler Embedded 26.03',
-  'openEuler-24.03-LTS-SP3',
-  'openEuler-24.03-LTS-SP1',
-];
+const shownNameList = computed(() => downloadContent[locale.value].community_versions);
 
 // 获取版版本数据
 
@@ -97,7 +94,7 @@ const getVersionLocale = (version: string) => {
   });
 };
 
-shownNameList.forEach((version: string) => {
+shownNameList.value.forEach((version: string) => {
   getVersionLocale(version);
 });
 
@@ -124,7 +121,7 @@ onMounted(() => {
   if (decodeURIComponent(getUrlParam('archive'))) {
     activeTab.value = 'archive';
   }
-  shownNameList.forEach((version: string) => {
+  shownNameList.value.forEach((version: string) => {
     scenario.value = '';
     if (decodeURIComponent(hash) === version.replaceAll('-', ' ')) {
       scenario.value = decodeURIComponent(getUrlParam('scenario'));

@@ -1,0 +1,25 @@
+# 社区顾问专家列表 / Community advisory experts
+# zh 专属（en 无对应页面，未创建 en.yaml）
+#   avator: 头像图片
+#   name: 姓名
+#   detail: 职务描述数组
+# 顶层为数组。
+
+- avator: ./images/e1.png
+  name: 霍太稳
+  detail:
+    - 极客邦科技创始人兼CEO
+- avator: ./images/e2.png
+  name: 陆首群
+  detail:
+    - 中国开源软件联盟名誉主席
+    - 原国务院信息办常务副主任
+- avator: ./images/e3.png
+  name: 倪光南
+  detail:
+    - 中国工程院院士
+- avator: ./images/e4.png
+  name: 周明辉
+  detail:
+    - 北京大学计算机系教授
+    - 北大博雅特聘教授

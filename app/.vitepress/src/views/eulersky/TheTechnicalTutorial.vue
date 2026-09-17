@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import { useRouter, useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 
-import TULTORIAL_LIST from '@/data/euler-sky/tultorial';
+import TULTORIAL_LIST from '#content/community/program/technical-tutorial';
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 import AppContent from '@/components/AppContent.vue';
 

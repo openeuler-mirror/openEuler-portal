@@ -1,0 +1,23 @@
+# 邮件列表页数据 / Mailing List page data
+#
+# subscription_process: 订阅流程步骤列表（4 步，按页面从左到右视觉顺序）
+#   title: 步骤标题
+#   detail: 步骤描述（含 HTML <a> 链接，用 v-dompurify-html 渲染）
+#   img: 步骤图片（PNG，<img>/OFigure 消费，不带 ?raw）
+
+subscription_process:
+  - title: '选择订阅的SIG组'
+    detail: '在邮件列表页面选择要订阅的邮件列表'
+    img: './images/step1.png'
+
+  - title: '填写信息'
+    detail: '填入邮件地址和名字，名字可选，点击订阅'
+    img: './images/step2.png'
+
+  - title: '确认订阅邮件'
+    detail: '您的邮箱将收到一封来自邮件列表的电子邮件，要求您确认订阅了邮件列表，点击确认链接确认订阅'
+    img: './images/step3.png'
+
+  - title: '成功订阅'
+    detail: '您的邮箱收到来自一封来自邮件列表的欢迎邮件，即成功订阅该邮件列表。如需退订，请参考 <a href="/zh/blog/liuqi/2021-10-14-unsubscribe-mailing-list.html" target="_blank" rel="noopener noreferrer" class="underline-link">此操作</a>'
+    img: './images/step4.png'

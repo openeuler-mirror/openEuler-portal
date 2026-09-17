@@ -1,6 +1,6 @@
-import police from '~@/assets/category/footer/police.png';
-
 // 隐私链接
+// 注意：friendshipLinks、filingData 已提取到 .content/footer/ yaml，
+// linksData（原 linksData2）和 quickNav 因依赖 import.meta.env 环境变量保留在此文件中。
 export const linksData = {
   zh: [
     {
@@ -120,6 +120,10 @@ export const quickNav = {
           title: '联系我们',
           href: '/zh/contact-us/',
         },
+        // {
+        //   title: '反馈问题',
+        //   link: '',
+        // },
       ],
     },
     {
@@ -211,6 +215,10 @@ export const quickNav = {
           title: 'Commercial Releases',
           href: '/en/download/commercial-release/',
         },
+        // {
+        //   title: '软件中心',
+        //   link: `${import.meta.env.VITE_SERVICE_SOFTWARE_URL}/en`,
+        // },
       ],
     },
     {
@@ -228,6 +236,10 @@ export const quickNav = {
           title: 'Contact Us',
           href: '/en/contact-us/',
         },
+        // {
+        //   title: '反馈问题',
+        //   link: '',
+        // },
       ],
     },
     {
@@ -265,92 +277,4 @@ export const quickNav = {
       ],
     },
   ],
-};
-
-export const friendshipLinks = {
-  zh: [
-    {
-      href: 'https://portal.mulanos.cn/',
-      title: '木兰开源社区',
-    },
-    {
-      href: 'https://www.hikunpeng.com/zh/',
-      title: '鲲鹏社区',
-    },
-    {
-      href: 'https://pcl.ac.cn/',
-      title: '鹏城实验室',
-    },
-    {
-      href: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian',
-      title: 'InfoQ',
-    },
-    {
-      href: 'https://kaiyuanshe.cn/',
-      title: '开源社',
-    },
-    {
-      href: 'http://www.vulab.com.cn/',
-      title: '中科微澜',
-    },
-    {
-      href: 'https://www.authing.cn/',
-      title: 'Authing',
-    },
-    {
-      href: 'https://www.opengauss.org/zh/',
-      title: 'openGauss',
-    },
-    {
-      href: 'https://www.mindspore.cn/',
-      title: '昇思MindSpore',
-    },
-    {
-      href: 'https://www.openubmc.cn/',
-      title: 'openUBMC',
-    },
-    {
-      href: 'https://www.openfuyao.cn/',
-      title: 'openFuyao',
-    },
-    {
-      href: 'http://www.ebaina.com/',
-      title: 'Ebaina',
-    },
-  ],
-  en: [
-    {
-      href: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian',
-      title: 'InfoQ',
-    },
-    {
-      href: 'https://www.authing.cn/',
-      title: 'Authing',
-    },
-    {
-      href: 'https://www.opengauss.org/en/',
-      title: 'openGauss',
-    },
-    {
-      href: 'https://www.mindspore.cn/en/',
-      title: 'MindSpore',
-    },
-    {
-      href: 'https://www.openubmc.cn/en/',
-      title: 'openUBMC',
-    },
-    {
-      href: 'https://www.openfuyao.cn/en/',
-      title: 'openFuyao',
-    },
-    {
-      href: 'http://www.ebaina.com/',
-      title: 'Ebaina',
-    },
-  ],
-};
-
-export const filingData = {
-  link: 'https://beian.miit.gov.cn/#/Integrated/index',
-  icon: police,
 };

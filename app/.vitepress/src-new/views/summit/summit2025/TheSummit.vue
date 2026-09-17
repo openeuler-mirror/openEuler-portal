@@ -14,16 +14,27 @@ import SummitGuest from './components/SummitGuest.vue';
 import SummitPartner from './components/SummitPartner.vue';
 import SummitPrevious from './components/SummitPrevious.vue';
 
-import data_zh from './data/data_zh';
-import data_en from './data/data_en';
+import summitContent from '#content/interaction/summit-list/summit2025';
 
 import { useLocale } from '~@/composables/useLocale';
 
 const { locale } = useLocale();
 
-const summitData = computed(() => {
-  return locale.value === 'zh' ? data_zh : data_en;
-});
+// YAML 字段名为 snake_case，子组件期望 camelCase，递归转换
+function snakeToCamel(obj: unknown): unknown {
+  if (Array.isArray(obj)) return obj.map(snakeToCamel);
+  if (obj && typeof obj === 'object') {
+    const result: Record<string, unknown> = {};
+    for (const key of Object.keys(obj)) {
+      const camelKey = key.replace(/_([a-z])/g, (_, c: string) => c.toUpperCase());
+      result[camelKey] = snakeToCamel((obj as Record<string, unknown>)[key]);
+    }
+    return result;
+  }
+  return obj;
+}
+
+const summitData = computed(() => snakeToCamel(summitContent[locale.value]) as typeof summitContent[typeof locale.value]);
 
 // 埋点统计投放流量
 function collectAdvertisedData() {

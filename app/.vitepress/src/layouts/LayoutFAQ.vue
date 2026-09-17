@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { useData, useRouter } from 'vitepress';
 import { ref, computed } from 'vue';
-import { useI18n } from '@/i18n';
 
 import { useCommon } from '@/stores/common';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
-import tocInfoData from '@/data/faq/faq-toc';
+import faqContent from '#content/faq';
 
 import DocAnchor from '@/components/NewDocAnchor.vue';
 
@@ -18,16 +17,14 @@ const commonStore = useCommon();
 
 const router = useRouter();
 
-const i18n = useI18n();
-
 // 构建时页面会携带 .html 需排除构建时的.html 否则迁移首页高亮异常
 const activeId = computed(() => {
   const routeList = router.route.path.split('/');
   return routeList[3] && !routeList[3].includes('.html') ? routeList[3] : '';
 });
 
-const tocInfo = computed(() => {
-  return tocInfoData[lang.value as 'zh' | 'en'];
+const faqInfo = computed(() => {
+  return faqContent[lang.value as 'zh' | 'en'];
 });
 
 const screenWidth = useWindowResize();
@@ -55,10 +52,10 @@ const IconMenuShow = computed(() => {
     <!-- PC侧边导航栏 -->
     <div v-if="screenWidth > 1100" class="left-toc">
       <div class="faq-sidebar-toc">
-        <h2 class="faq-title">{{ i18n.faq.faqTitle }}</h2>
+        <h2 class="faq-title">{{ faqInfo.faq_title }}</h2>
         <div class="toc-box">
           <a
-            v-for="item in tocInfo"
+            v-for="item in faqInfo.toc"
             :key="item.label"
             class="toc-item"
             :class="[{ active: item.link === activeId }]"
@@ -73,7 +70,7 @@ const IconMenuShow = computed(() => {
     <DocAnchor
       v-if="frontmatter.anchor"
       :class-name="'h3'"
-      :anchor-title="i18n.faq.pageContent"
+      :anchor-title="faqInfo.page_content"
     />
     <ClientOnly>
       <ODrawer
@@ -84,12 +81,12 @@ const IconMenuShow = computed(() => {
       >
         <div class="faq-sidebar-toc mobile-sidebar">
           <h2 class="faq-title">
-            <span>{{ i18n.faq.faqTitle }}</span>
+            <span>{{ faqInfo.faq_title }}</span>
             <OIcon @click="toggleMenu(false)"><IconCancel /></OIcon>
           </h2>
           <div class="toc-box">
             <a
-              v-for="item in tocInfo"
+              v-for="item in faqInfo.toc"
               :key="item.label"
               class="toc-item"
               :class="[{ active: item.link === activeId }]"

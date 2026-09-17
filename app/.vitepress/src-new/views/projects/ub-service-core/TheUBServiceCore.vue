@@ -21,11 +21,18 @@ import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
 import type { LocaleT } from '~@/@types/type-locale';
 
-import { ubEntranceList, ubServiceCoreUrl } from '~@/data/project';
+import ubContent from '#content/projects/ub-service-core';
+import { createSvgIcon } from '~@/composables/createSvgIcon';
 
 const { locale, t } = useLocale();
 const { lePadV } = useScreen();
 const router = useRouter();
+
+const ubEntranceList = {
+  zh: ubContent.zh.entrance_list,
+  en: ubContent.en.entrance_list,
+};
+const ubServiceCoreUrl = ubContent.zh.whitepaper;
 
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
@@ -92,7 +99,7 @@ const viewWhitepaper = (lang: LocaleT) => {
       <OCol v-for="(item, i) in ubEntranceList[locale]" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 33.33%'">
         <div class="item-info">
           <div class="info-title">
-            <OIcon class="item-icon"><component :is="item.icon" /></OIcon>
+            <OIcon class="item-icon"><component :is="createSvgIcon(item.icon)" /></OIcon>
             <p class="content-title">{{ item.title }}</p>
           </div>
           <div class="info-content">

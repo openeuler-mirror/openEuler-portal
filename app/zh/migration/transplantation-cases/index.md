@@ -14,12 +14,12 @@ category: migration
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import TheMigrationCase from "@/views/migration/TheMigrationCase.vue";
-import seoConfig from '@/data/common/seo';
+import commonContent from '#content/common';
 
 const { lang } = useData();
 </script>
 
-<SeoBox :seo-data="seoConfig[lang]?.migrationCase" />
+<SeoBox :seo-data="commonContent[lang]?.migration_case" />
 <p class="migration-transplantation-desc">
   操作系统迁移时，软件也需要同步适配移植，openEuler提下这些典型软件移植指南供参考。如果您也想贡献移植案例参考<a
     href="/zh/migration/contribution/"

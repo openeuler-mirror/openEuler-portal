@@ -29,11 +29,14 @@ onMounted(() => {
 
 <template>
   <div class="minisite-banner">
-    <div class="banner-bg"></div>
+    <div
+      class="banner-bg"
+      :style="{ backgroundImage: `url(${lePadV ? bannerData.bg_mb : bannerData.bg})` }"
+    ></div>
     <div v-if="!lePadV" class="banner-content">
       <ContentWrapper data-aos="fade-up">
-        <OFigure :src="bannerData.textImg" class="text-img" />
-        <OButton v-if="bannerData.href" class="banner-btn" variant="solid" color="primary" size="large" :href="bannerData.href" target="_blank" rel="noopener noreferrer">
+        <OFigure :src="bannerData.text_img" class="text-img" />
+        <OButton v-if="bannerData.href" class="banner-btn" variant="solid" color="primary" size="large" :href="bannerData.href" target="_blank">
           {{ bannerData.btn }}
           <template #suffix>
             <OIcon><IconOutLink /></OIcon>
@@ -41,7 +44,7 @@ onMounted(() => {
         </OButton>
       </ContentWrapper>
     </div>
-    <OButton v-if="lePadV && bannerData.href" class="banner-btn" variant="solid" color="primary" size="medium" :href="bannerData.href" target="_blank" rel="noopener noreferrer">
+    <OButton v-if="lePadV && bannerData.href" class="banner-btn" variant="solid" color="primary" size="medium" :href="bannerData.href" target="_blank">
       {{ bannerData.btn }}
       <template #suffix>
         <OIcon><IconOutLink /></OIcon>
@@ -58,7 +61,6 @@ onMounted(() => {
   .banner-bg {
     height: 100%;
     margin: 0 auto;
-    background-image: url('../img//banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -107,10 +109,7 @@ onMounted(() => {
   .minisite-banner {
     height: 300px;
     .banner-bg {
-      background-image: url('../img/banner-mb.jpg'), url('../img/mb.jpg');;
-      background-repeat: no-repeat, no-repeat;
-      background-size: auto 100%,cover, cover;
-      background-position: center, center;
+      background-size: auto 100%;
     }
     .o-btn {
       position: absolute;

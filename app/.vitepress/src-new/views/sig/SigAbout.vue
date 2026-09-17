@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue';
 
-import { aboutSig, applicationProcess } from '~@/data/sig';
+import sigListContent from '#content/sig/sig-list';
+import { createSvgIcon } from '~@/composables/createSvgIcon';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 
@@ -13,21 +14,17 @@ import processImg from '~@/assets/category/sig/process.png';
 
 import sigProcessDark from '~icons/sig/sig-process-dark.svg';
 
-import { useCommon } from '@/stores/common';
-
 const { locale } = useLocale();
 const { lePadV } = useScreen();
-const commonStore = useCommon();
 
 const activeStep = ref(0);
 const activeStepMb = ref([0]);
 
-const isDark = computed(() => {
-  return commonStore.theme === 'dark';
-});
+const aboutSig = computed(() => sigListContent[locale.value].about_sig);
+const applicationProcess = computed(() => sigListContent[locale.value].application_process);
 
 const processDetail = computed(() => {
-  return applicationProcess[activeStep.value].detail[locale.value];
+  return applicationProcess.value[activeStep.value].detail;
 });
 </script>
 <template>
@@ -35,21 +32,21 @@ const processDetail = computed(() => {
     <div class="sig-about-card-box">
       <template v-for="(card, idx) in aboutSig" :key="idx">
         <OCard
-          v-if="card.path[locale]"
+          v-if="card.path"
           cursor="pointer"
           class="sig-about-card"
           hoverable
-          :title="card.title[locale]"
-          :detail="card.subtitle[locale]"
+          :title="card.title"
+          :detail="card.subtitle"
           :title-max-row="2"
           :detail-max-row="2"
           :detail-row="lePadV ? 1 : 2"
-          :href="card.path[locale]"
+          :href="card.path"
           v-analytics="{
             properties: {
               level1: $t('sig.sigCenter'),
               level2: $t('sig.aboutSig'),
-              target: card.title[locale]
+              target: card.title
             },
             service: 'sig',
           }"
@@ -57,17 +54,17 @@ const processDetail = computed(() => {
             properties: {
               level1: $t('sig.sigCenter'),
               level2: $t('sig.aboutSig'),
-              target: card.title[locale]
+              target: card.title
             },
             service: 'sig',
           }"
         >
           <template #title>
             <OIcon class="icon">
-              <component :is="isDark ? card.iconDark : card.icon"></component>
+              <component :is="createSvgIcon(card.icon)" />
             </OIcon>
             <div class="title">
-              {{ card.title[locale] }}
+              {{ card.title }}
             </div>
           </template>
           <img :src="card.backgroud" alt="" />
@@ -90,7 +87,7 @@ const processDetail = computed(() => {
         <div class="process-box">
           <template
             v-for="(step, index) in applicationProcess"
-            :key="step.process[locale]"
+            :key="step.process"
           >
             <div
               @click="activeStep = index"
@@ -104,19 +101,19 @@ const processDetail = computed(() => {
                   level1: $t('sig.sigCenter'),
                   level2: $t('sig.aboutSig'),
                   level3: $t('sig.applicationProcess'),
-                  target: step.process.zh,
+                  target: step.process,
                 },
                 service: 'sig',
               }"
             >
               <OIcon class="icon">
-                <component :is="step.icon"></component>
+                <component :is="createSvgIcon(step.icon)" />
               </OIcon>
               <div class="step-info">
                 <div class="num">
                   {{ (index + 1).toString().padStart(2, '0') }}
                 </div>
-                <div class="process">{{ step.process[locale] }}</div>
+                <div class="process">{{ step.process }}</div>
               </div>
             </div>
             <img
@@ -138,7 +135,7 @@ const processDetail = computed(() => {
         >
           <OCollapseItem
             v-for="(step, index) in applicationProcess"
-            :key="step.process[locale]"
+            :key="step.process"
             :value="index"
           >
             <template #title>
@@ -148,17 +145,17 @@ const processDetail = computed(() => {
                   level1: $t('sig.sigCenter'),
                   level2: $t('sig.aboutSig'),
                   level3: $t('sig.applicationProcess'),
-                  target: step.process[locale],
+                  target: step.process,
                 },
                 service: 'sig',
               }">
                 <div class="num">
                   {{ (index + 1).toString().padStart(2, '0') }}
                 </div>
-                {{ step.process[locale] }}
+                {{ step.process }}
               </div>
             </template>
-            {{ step.detail[locale] }}
+            {{ step.detail }}
           </OCollapseItem>
         </OCollapse>
       </div>

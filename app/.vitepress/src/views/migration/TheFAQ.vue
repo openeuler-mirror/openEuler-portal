@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useData } from 'vitepress';
-import faqInfoData from '@/data/migration/migration-faq';
+import faqInfoData from '#content/migration/faq';
 
 const { lang } = useData();
 
@@ -40,9 +40,9 @@ const faqInfo = computed(() => {
       <div class="answer">
         <div class="answer-text">
           <span v-for="it in item.answers" :key="it.text">
-            {{ !it.isLink ? it.text : '' }}
+            {{ !it.is_link ? it.text : '' }}
             <a
-              v-if="it.isLink"
+              v-if="it.is_link"
               :href="it.link"
               target="_blank"
               rel="noopener noreferrer"

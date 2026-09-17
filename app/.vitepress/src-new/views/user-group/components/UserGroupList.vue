@@ -1,12 +1,15 @@
 <script lang="ts" setup>
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useData } from 'vitepress';
 import { OCard } from '@opensig/opendesign';
 import AppSection from '~@/components/AppSection.vue';
-import cityData from '~@/data/user-group/city/';
+import userGroupContent from '#content/community/user-group';
 
 const { t } = useI18n();
 const { lang } = useData();
+
+const cityData = computed(() => userGroupContent.zh.cities);
 </script>
 
 <template>

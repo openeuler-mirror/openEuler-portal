@@ -1,0 +1,143 @@
+# 导航语言过滤配置 / Navigation language filter config
+#
+# 每个 header nav 链接需配置该项，控制该导航在不同语言下是否显示。
+#   name: 导航路径标识（支持一级路径或 name/** 通配子路径）
+#   lang: 允许显示的语言列表
+# 顶层为数组。
+
+- name: download
+  lang: [zh, en, ru]
+- name: lifecycle
+  lang: [zh, en, ru]
+- name: mirror
+  lang: [zh, en, ru]
+- name: docs
+  lang: [zh, en, ru]
+- name: showcase
+  lang: [zh, en, ru]
+- name: mooc
+  lang: [zh, en]
+- name: internship
+  lang: [zh]
+- name: news
+  lang: [zh, en, ru]
+- name: blog
+  lang: [zh, en, ru]
+- name: live
+  lang: [zh]
+- name: salon
+  lang: [zh]
+- name: summit
+  lang: [zh]
+- name: wiki/**
+  lang: [zh, en]
+- name: contribution
+  lang: [zh, en]
+- name: conduct
+  lang: [zh, en, ru]
+- name: mailing-list
+  lang: [zh, en]
+- name: certification-services
+  lang: [en, ru]
+- name: statistics
+  lang: [zh, en]
+- name: sig-list
+  lang: [zh, en, ru]
+- name: sig-guidance
+  lang: [zh, en, ru]
+- name: role-description
+  lang: [zh, en, ru]
+- name: sig-detail
+  lang: [zh, en, ru]
+- name: meeting-guide
+  lang: [zh]
+- name: atune
+  lang: [zh, en, ru]
+- name: bishengjdk
+  lang: [zh, en, ru]
+- name: isula
+  lang: [zh, en, ru]
+- name: secGear
+  lang: [zh, en, ru]
+- name: stratovirt
+  lang: [zh, en, ru]
+- name: vulnerability-reporting
+  lang: [zh, en, ru]
+- name: security-bulletins
+  lang: [zh, en, ru]
+- name: cve
+  lang: [zh, en, ru]
+- name: bug-bulletins
+  lang: [zh, en]
+- name: compatibility
+  lang: [zh, en, ru]
+- name: migration
+  lang: [zh, en]
+- name: brand
+  lang: [zh, en, ru]
+- name: privacy
+  lang: [zh, en, ru]
+- name: legal
+  lang: [zh, en, ru]
+- name: approve/**
+  lang: [zh]
+- name: search
+  lang: [zh, en, ru]
+- name: charter/**
+  lang: [zh]
+- name: vote
+  lang: [zh]
+- name: meeting-system
+  lang: [zh]
+- name: ai-coding-assistants
+  lang: [zh, en]
+- name: member
+  lang: [zh, en]
+- name: organization
+  lang: [zh, en]
+- name: honor
+  lang: [zh]
+- name: meetup-form
+  lang: [zh]
+- name: specification
+  lang: [zh, en]
+- name: technical-white-paper
+  lang: [zh, en]
+- name: white-paper
+  lang: [zh]
+- name: market-report
+  lang: [zh]
+- name: event-list/**
+  lang: [zh, en]
+- name: program/**
+  lang: [zh, en]
+- name: user-group/**
+  lang: [zh]
+- name: om
+  lang: [zh]
+- name: monthly-bulletins
+  lang: [zh, en]
+- name: approve-step
+  lang: [zh]
+- name: live-list
+  lang: [zh]
+- name: certificate-center
+  lang: [zh, en]
+- name: universities
+  lang: [zh]
+- name: summit2023
+  lang: [zh, en]
+- name: sig-gathering-2024
+  lang: [zh, en]
+- name: summit2024
+  lang: [zh, en]
+- name: summit2025
+  lang: [zh, en]
+- name: summit-list/**
+  lang: [zh]
+- name: talent-assessment
+  lang: [zh]
+- name: nestos
+  lang: [zh]
+- name: meeting
+  lang: [zh]

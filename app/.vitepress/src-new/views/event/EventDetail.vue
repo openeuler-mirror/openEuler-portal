@@ -13,9 +13,9 @@ import { useData } from 'vitepress';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
 import activityContent from '#content/activity';
+import eventListContent from '#content/interaction/event-list';
 import { foldI18n } from '~@/shared/content';
 import { slugifyEvent } from '~@/shared/event-slug';
-import { EVENT_STATUS } from '~@/data/event/filters';
 
 import banner from '~@/assets/category/event/list/banner.png';
 import bannerDark from '~@/assets/category/event/list/banner-dark.png';
@@ -34,7 +34,10 @@ const { params } = useData();
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
 
-const EventState = new Map(EVENT_STATUS.map((s) => [s.value, { value: s.value, label: { zh: s.label_zh, en: s.label_en } }]));
+const EventState = new Map(eventListContent.zh.event_status.map((s) => [
+  s.value,
+  { value: s.value, label: { zh: s.label, en: eventListContent.en.event_status.find((e) => e.value === s.value)?.label ?? s.label } },
+]));
 
 const eventSlug = computed(() => (params.value?.event as string) || '');
 

@@ -14,13 +14,13 @@ anchor: true
 
 <script setup lang="ts">
   import { useData } from 'vitepress';
-  import seoConfig from '@/data/common/seo';
+  import commonContent from '#content/common';
   import IconBook from '~icons/app/icon-book.svg';
 
   const { lang } = useData();
 </script>
 
-<SeoBox :seo-data="seoConfig[lang]?.migrationBackground" />
+<SeoBox :seo-data="commonContent[lang]?.migration_background" />
 
 <div class='guidance' >
 

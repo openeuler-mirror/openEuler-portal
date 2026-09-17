@@ -10,9 +10,8 @@ import { useScreen } from '~@/composables/useScreen';
 import {
   linksData,
   quickNav,
-  friendshipLinks,
-  filingData,
 } from '~@/data/footer';
+import footerContent from '#content/footer';
 
 import LogoFooter from '~@/assets/category/footer/footer-logo2.png';
 import LogoAtom from '~@/assets/category/footer/atom-logo.png';
@@ -26,6 +25,12 @@ import CodeImgZgz from '~@/assets/category/footer/code-zgz.jpg';
 const { t } = useLocale();
 const { lePadV } = useScreen();
 const { lang } = useData();
+
+const friendshipLinks = {
+  zh: footerContent.zh.friendship_links,
+  en: footerContent.en.friendship_links,
+};
+const filingData = footerContent.zh.filing;
 
 const info = computed(() => {
   return {

@@ -4,7 +4,7 @@ import { useData } from 'vitepress';
 import { useI18n } from '@/i18n';
 import AOS from 'aos';
 
-import oevpList from '@/data/euler-sky/oevp';
+import oevpList from '#content/community/program/join-oEVP';
 
 import { useCommon } from '@/stores/common';
 

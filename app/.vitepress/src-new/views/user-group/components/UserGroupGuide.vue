@@ -1,9 +1,12 @@
 <script lang="ts" setup>
+import { computed } from 'vue';
 import AppSection from '~@/components/AppSection.vue';
-import { guideData } from '~@/data/user-group';
+import userGroupContent from '#content/community/user-group';
 
 import IconMail from '~icons/user-group/mail.svg';
 import IconWechat from '~icons/user-group/wechat.svg';
+
+const guideData = computed(() => userGroupContent.zh.guide);
 </script>
 
 <template>

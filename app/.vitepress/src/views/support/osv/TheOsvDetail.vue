@@ -8,7 +8,7 @@ import { getOsvOne } from '@/api/api-security';
 
 import AppContent from '@/components/AppContent.vue';
 
-import templatData from '@/data/osv';
+import templatData from '#content/approve/approve-info';
 import { OsvListT } from '@/shared/@types/type-support';
 
 const i18n = useI18n();

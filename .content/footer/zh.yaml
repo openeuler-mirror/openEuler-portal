@@ -1,0 +1,42 @@
+# 页脚数据 / Footer data
+#
+# friendship_links: 友情链接
+#   href: 链接地址
+#   title: 站点名称
+#
+# filing: 备案信息
+#   link: 备案链接
+#   icon: 备案图标
+#
+# 注意：linksData 和 quickNav 因依赖 import.meta.env 环境变量，未提取到 yaml，
+# 仍保留在 src-new/data/footer/index.ts 中。
+
+friendship_links:
+  - href: 'https://portal.mulanos.cn/'
+    title: '木兰开源社区'
+  - href: 'https://www.hikunpeng.com/zh/'
+    title: '鲲鹏社区'
+  - href: 'https://pcl.ac.cn/'
+    title: '鹏城实验室'
+  - href: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian'
+    title: 'InfoQ'
+  - href: 'https://kaiyuanshe.cn/'
+    title: '开源社'
+  - href: 'http://www.vulab.com.cn/'
+    title: '中科微澜'
+  - href: 'https://www.authing.cn/'
+    title: 'Authing'
+  - href: 'https://www.opengauss.org/zh/'
+    title: 'openGauss'
+  - href: 'https://www.mindspore.cn/'
+    title: '昇思MindSpore'
+  - href: 'https://www.openubmc.cn/'
+    title: 'openUBMC'
+  - href: 'https://www.openfuyao.cn/'
+    title: 'openFuyao'
+  - href: 'http://www.ebaina.com/'
+    title: 'Ebaina'
+
+filing:
+  link: 'https://beian.miit.gov.cn/#/Integrated/index'
+  icon: ./images/police.png

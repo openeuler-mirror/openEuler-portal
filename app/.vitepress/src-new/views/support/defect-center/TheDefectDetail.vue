@@ -20,7 +20,9 @@ import type { PackageInfoT, HotPatchT } from '@/shared/@types/type-support';
 
 import IconDownload from '~icons/app-new/icon-download.svg';
 
-import { securityNoticeNos } from '~@/data/safety-bulletin';
+import safetyContent from '#content/security/safety-bulletin';
+
+const securityNoticeNos = safetyContent.zh.security_notice_nos;
 
 import { changeTimeStamp } from '~@/utils/common';
 

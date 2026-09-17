@@ -4,7 +4,6 @@ import { useRouter } from 'vitepress';
 import { useData } from 'vitepress';
 
 import { useI18n } from '@/i18n';
-import type { TabsPaneContext } from 'element-plus';
 
 const i18n = useI18n();
 const { lang } = useData();

@@ -1,0 +1,248 @@
+# OEVP 专家列表 / OEVP expert list
+#
+#   avator: 头像图片
+#   name: 姓名
+#   company: 公司
+#   labels: 专业领域标签数组
+#   base: 所在地
+# 顶层为数组。zh/en 共用头像图（不加后缀）。
+
+- avator: ./images/gaopei.png
+  name: 高培
+  company: 软通动力信息技术（集团）股份有限公司
+  labels:
+    - 云计算
+  base: 成都
+- avator: ./images/houjian.png
+  name: 侯建
+  company: 麒麟软件有限公司
+  labels:
+    - 服务器操作系统
+    - 云计算
+    - 分布式存储
+    - 高可用
+  base: 北京
+- avator: ./images/huangweixu.png
+  name: 黄伟旭
+  company: 华为技术有限公司
+  labels:
+    - 云计算
+    - AI
+  base: 深圳
+- avator: ./images/huangzhaowei.png
+  name: 黄兆伟
+  company: 超聚变数字技术股份有限公司
+  labels:
+    - 操作系统
+    - 云计算
+    - AI
+  base: 深圳
+- avator: ./images/wangjianming.png
+  name: 王建民
+  company: 中国科学院软件研究所
+  labels:
+    - 数据安全
+    - 操作系统
+    - 云原生
+  base: 新加坡
+- avator: ./images/liupeng.png
+  name: 刘鹏
+  company: 华为技术有限公司
+  labels:
+    - 云服务
+    - 数据存储
+    - 机密计算
+  base: 成都
+- avator: ./images/liuwenqing.png
+  name: 刘文清
+  company: 湖南麒麟信安科技股份有限公司
+  labels:
+    - 操作系统
+    - 开源安全
+  base: 长沙
+- avator: ./images/lvcpngqing.png
+  name: 吕从庆
+  company: 统信软件技术有限公司
+  labels:
+    - 操作系统
+  base: 北京
+- avator: ./images/majun.png
+  name: 马骏
+  company: 软通动力信息技术（集团）股份有限公司
+  labels:
+    - 操作系统
+    - 云计算
+    - 数据通信
+  base: 杭州
+- avator: ./images/wangjun.png
+  name: 王军
+  company: 软通动力信息技术（集团）股份有限公司
+  labels:
+    - 操作系统
+    - 企业信息化&数字化咨询
+  base: 西安
+- avator: './images/weijiangang .png'
+  name: 魏建刚
+  company: 江苏润和软件股份有限公司
+  labels:
+    - 操作系统
+    - 虚拟化
+    - 云计算
+    - AI
+  base: 南京
+- avator: ./images/zhangshengju.png
+  name: 张胜举
+  company: 中国移动云能力中心
+  labels:
+    - 操作系统
+    - 云计算
+    - 虚拟化
+  base: 苏州
+- avator: ./images/kanglifeng.png
+  name: 康丽锋
+  company: 统信软件技术有限公司
+  labels:
+    - 操作系统
+    - 云计算
+    - 数据通信
+  base: 北京
+- avator: ./images/shiyong.png
+  name: 石勇
+  company: 湖南麒麟信安科技股份有限公司
+  labels:
+    - 操作系统
+    - 可信计算
+    - 嵌入式
+  base: 长沙
+- avator: ./images/caizhiwen.png
+  name: 蔡志旻
+  company: 江苏润和软件股份有限公司
+  labels:
+    - 操作系统
+    - 云计算
+    - 编译器
+  base: 南京
+- avator: ./images/zhongxin.png
+  name: 钟忻
+  company: 联通数字科技有限公司
+  labels:
+    - 操作系统
+    - 云存储
+  base: 北京
+- avator: ./images/zhuchen.png
+  name: 朱晨
+  company: 麒麟软件有限公司
+  labels:
+    - 操作系统
+    - 开源技术
+    - 大数据
+    - 云计算
+  base: 上海
+- avator: ./images/liangbing.png
+  name: 梁冰
+  company: 华为技术有限公司
+  labels:
+    - 品牌
+    - 市场营销
+  base: 北京
+- avator: ./images/caozhi.png
+  name: 曹志
+  company: 华为技术有限公司
+  labels:
+    - 云服务开发
+    - K8S和容器服务
+    - 网络安全
+  base: 成都
+- avator: ./images/lina.png
+  name: 丽娜
+  company: 江苏润和软件股份有限公司
+  labels:
+    - 嵌入式软件
+  base: 南京
+- avator: ./images/zhujianzhong.png
+  name: 朱建忠
+  company: 统信软件技术有限公司
+  labels:
+    - 操作系统
+    - 云计算
+    - 操作系统技术标准制定
+  base: 上海
+- avator: ./images/zhenzhengyu.png
+  name: 郑振宇
+  company: 华为技术有限公司
+  labels:
+    - 容器
+    - 云计算
+    - 云原生
+    - AI
+  base: 西安
+- avator: ./images/biannaimeng.png
+  name: 卞乃猛
+  company: 江苏润和软件股份有限公司
+  labels:
+    - 开源合规
+    - 虚拟化
+    - 嵌入式
+  base: 南京
+- avator: ./images/gaokun.png
+  name: 高琨
+  company: 华为技术有限公司
+  labels:
+    - 开源治理
+    - 开源安全
+    - 开源合规
+  base: 深圳
+- avator: ./images/xieliuhua.png
+  name: 谢留华
+  company: 超聚变数字技术股份有限公司
+  labels:
+    - Linux服务器操作系统
+    - 生态构建
+  base: 北京
+- avator: ./images/chenqide.png
+  name: 陈棋德
+  company: 麒麟软件有限公司
+  labels:
+    - Linux
+  base: 北京
+- avator: ./images/wangyouhai.png
+  name: 王友海
+  company: 统信软件技术有限公司
+  labels:
+    - 品牌
+    - 市场营销
+  base: 北京
+- avator: ./images/lichaoran.png
+  name: 李超然
+  company: 华为技术有限公司
+  labels:
+    - 云原生
+    - 虚拟化
+    - 容器镜像
+    - 软件包
+  base: 成都
+- avator: ./images/wangxiyuan.png
+  name: 王玺源
+  company: 华为技术有限公司
+  labels:
+    - 云计算
+    - AI
+    - 软件包
+  base: 西安
+- avator: ./images/jiangyikun.png
+  name: 姜逸坤
+  company: 华为技术有限公司
+  labels:
+    - 大数据
+    - 云计算
+    - 云原生
+    - 容器镜像
+  base: 西安
+- avator: ./images/renyuxin.png
+  name: 任玉鑫
+  company: 华为技术有限公司
+  labels:
+    - 操作系统
+    - 网络系统
+    - 系统安全
+  base: 北京

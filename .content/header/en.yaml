@@ -1,0 +1,24 @@
+# Header data
+# Not locale-specific (zh/en share the same data).
+#
+# ar_list: Arabic route paths (used to check if current route supports AR language switch)
+# ar_url: Arabic site URL
+
+ar_list:
+  - /interaction/news-list
+  - /interaction/blog-list
+  - /monthly-bulletins
+  - /download
+  - /download/commercial-release
+  - /community/organization
+  - /community/member
+  - /showcase
+  - /other/brand
+  - /security/security-bulletins
+  - /community/mailing-list
+  - /other/privacy
+  - /personal-data-collection-overview
+  - /data-sharing-with-third-parties
+  - /other/cookies
+
+ar_url: 'https://ar.openeuler.org'

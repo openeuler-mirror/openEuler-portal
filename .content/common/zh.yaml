@@ -1,0 +1,133 @@
+# SEO 关键词配置 / SEO keywords config
+#
+# zh 专属（en 无对应数据，未创建 en.yaml）。
+# 每个页面 key 对应一个关键词数组，每项含:
+#   level: 关键词层级（1/2/3）
+#   key_words: 关键词文本
+# 消费方通过 commonContent[lang]?.<page_key> 取值，en 页面自动得到 undefined。
+
+home:
+  - level: 1
+    key_words: openEuler
+  - level: 2
+    key_words: 开源Linux系统
+  - level: 2
+    key_words: linux开源社区
+  - level: 3
+    key_words: 开源社区
+  - level: 3
+    key_words: Linux迁移
+  - level: 3
+    key_words: openEuler社区
+
+download:
+  - level: 1
+    key_words: openEuler下载
+  - level: 2
+    key_words: openEuler镜像下载
+  - level: 2
+    key_words: openEuler镜像
+  - level: 3
+    key_words: 开源Linux系统
+  - level: 3
+    key_words: Linux系统
+  - level: 3
+    key_words: Linux
+
+mirror_list:
+  - level: 1
+    key_words: openEuler镜像
+  - level: 2
+    key_words: 开源Linux系统
+  - level: 2
+    key_words: Linux系统
+  - level: 3
+    key_words: 服务器安装linux系统
+  - level: 3
+    key_words: linux服务器操作系统
+  - level: 3
+    key_words: 开源服务器操作系统
+
+blog_list:
+  - level: 1
+    key_words: openEuler
+  - level: 2
+    key_words: openEuler博客
+  - level: 2
+    key_words: openEuler社区
+  - level: 3
+    key_words: 开发者博客
+  - level: 3
+    key_words: 开发者文档
+  - level: 3
+    key_words: 迁移指南
+
+migration_background:
+  - level: 1
+    key_words: openEuler迁移背景
+  - level: 2
+    key_words: 开源服务器操作系统
+  - level: 2
+    key_words: Centos系统迁移
+  - level: 3
+    key_words: 服务器系统迁移
+  - level: 3
+    key_words: Linux迁移
+  - level: 3
+    key_words: 服务器安装linux系统
+
+migration_advantage:
+  - level: 1
+    key_words: 服务器系统迁移
+  - level: 2
+    key_words: 搬迁
+  - level: 2
+    key_words: 系统迁移
+  - level: 3
+    key_words: 迁移工具
+  - level: 3
+    key_words: 操作系统
+  - level: 3
+    key_words: Linux迁移
+
+migration_guidance:
+  - level: 1
+    key_words: CentOS迁移工具
+  - level: 2
+    key_words: 操作系统迁移
+  - level: 2
+    key_words: 操作系统替换
+  - level: 3
+    key_words: 服务器系统迁移软件
+  - level: 3
+    key_words: 服务器系统迁移工具
+  - level: 3
+    key_words: Centos系统迁移
+
+migration_download:
+  - level: 1
+    key_words: openEuler迁移
+  - level: 2
+    key_words: Linux迁移
+  - level: 2
+    key_words: Linux服务器迁移
+  - level: 3
+    key_words: 系统迁移工具
+  - level: 3
+    key_words: 服务器迁移方案
+  - level: 3
+    key_words: CentOS迁移
+
+migration_case:
+  - level: 1
+    key_words: openEuler移植案例
+  - level: 2
+    key_words: Linux迁移
+  - level: 2
+    key_words: mysql移植方案
+  - level: 3
+    key_words: apache移植方案
+  - level: 3
+    key_words: nginx移植方案
+  - level: 3
+    key_words: mysql数据迁移工具
