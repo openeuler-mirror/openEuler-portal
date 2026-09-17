@@ -69,7 +69,7 @@ const isLiverShow = ref(0);
       <p v-for="item in summitData.detail" :key="item">{{ item }}</p>
     </div>
     <div class="live">
-      <h3 class="title-bar">{{ summitData.live.title }}</h3>
+      <h2 class="title-bar">{{ summitData.live.title }}</h2>
       <ClientOnly>
         <SummitLive
           v-if="isLiverShow === 0"
@@ -80,7 +80,7 @@ const isLiverShow = ref(0);
       </ClientOnly>
     </div>
     <div class="agenda" :class="{ 'min-height': showIndex === 1 }">
-      <h3>会议日程</h3>
+      <h2>会议日程</h2>
       <div class="date">
         <div
           class="date-item"
@@ -128,16 +128,16 @@ const isLiverShow = ref(0);
       </div>
     </div>
     <div class="guest">
-      <h3 class="guest-title">{{ summitData.guest.title }}</h3>
+      <h2 class="guest-title">{{ summitData.guest.title }}</h2>
 
-      <h4>{{ summitData.guest.guestListMain.title }}</h4>
+      <h3>{{ summitData.guest.guestListMain.title }}</h3>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListMain.guestList"
         shape="circle"
         :web-columns-num="4"
         :mobile-columns-num="2"
       />
-      <h3>{{ summitData.guest.guestListKv.title }}</h3>
+      <h2>{{ summitData.guest.guestListKv.title }}</h2>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListKv.guestList"
         shape="circle"
@@ -148,7 +148,7 @@ const isLiverShow = ref(0);
     <SummitPartner />
     <div class="previous" data-aos="fade-up">
       <div class="previous-title">
-        <h3>{{ summitData.previous.title }}</h3>
+        <h2>{{ summitData.previous.title }}</h2>
         <img :src="liveImg" alt="live" />
       </div>
       <div class="link-box">
@@ -204,7 +204,7 @@ const isLiverShow = ref(0);
   @media (max-width: 767px) {
     margin-top: var(--e-spacing-h2);
   }
-  h3 {
+  h2 {
     text-align: center;
     font-size: var(--e-font-size-h3);
     line-height: var(--e-line-height-h3);
@@ -215,7 +215,7 @@ const isLiverShow = ref(0);
       line-height: var(--e-line-height-h8);
     }
   }
-  h4 {
+  h3 {
     margin-top: 20px;
     font-size: var(--e-font-size-h5);
     line-height: var(--e-line-height-h5);
@@ -240,7 +240,7 @@ const isLiverShow = ref(0);
   @media (max-width: 767px) {
     margin-top: var(--e-spacing-h2);
   }
-  h3 {
+  h2 {
     text-align: center;
     font-size: var(--e-font-size-h3);
     line-height: var(--e-line-height-h3);
@@ -368,7 +368,7 @@ const isLiverShow = ref(0);
   }
   .previous-title {
     display: flex;
-    h3 {
+    h2 {
       font-size: 26px;
       line-height: 30px;
       color: var(--e-color-text1);

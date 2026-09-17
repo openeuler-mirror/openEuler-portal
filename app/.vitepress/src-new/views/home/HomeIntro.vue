@@ -77,11 +77,11 @@ useInViewDuration(
       <div v-if="!lePadV" class="intro-pc">
         <div class="intro-card-pc">
           <div class="intro-content-pc">
-            <div
+            <ul
               class="intro-list-pc"
               :class="[locale !== 'zh' ? 'intro-list-pc-en' : '']"
             >
-              <div
+              <li
                 v-for="(item, index) in introData"
                 :key="item.title"
                 class="intro-list-item"
@@ -115,8 +115,8 @@ useInViewDuration(
                   :src="theme === 'light' ? line : lineDark"
                   alt=""
                 />
-              </div>
-            </div>
+              </li>
+            </ul>
             <div class="intro-img-pc">
               <img :src="imgSrc" alt="openEuler" />
             </div>

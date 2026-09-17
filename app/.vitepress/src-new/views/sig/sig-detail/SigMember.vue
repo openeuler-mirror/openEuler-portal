@@ -112,8 +112,8 @@ watch(
       <div v-if="maintainerList?.length" class="sig-member-title">
         {{ t('sig.sigMaintainer', { num: maintainerList?.length }) }}
       </div>
-      <div class="member-list" :class="{'member-list-all': isAllMaintainer || maintainerList?.length < 12, 'member-list-dark': isDark}">
-        <div v-for="member in maintainerData" class="member-info">
+      <ul class="member-list" :class="{'member-list-all': isAllMaintainer || maintainerList?.length < 12, 'member-list-dark': isDark}">
+        <li v-for="member in maintainerData" class="member-info">
           <div class="member-info-left" :class="{'member-info-id': !member.name}">
             <WordAvatar
               :name="member?.gitee_id"
@@ -157,8 +157,8 @@ watch(
               </OIcon>
             </a>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
       <div v-if="!lePadV && maintainerList?.length > 11" class="more-btn">
         <div
           class="view-all"
@@ -171,8 +171,8 @@ watch(
       <div v-if="(committerList?.length && isAllMaintainerData) || (committerList?.length && !lePadV)" class="sig-member-title sig-committer-title">
         {{ t('sig.sigCommitter', { num: committerList?.length }) }}
       </div>
-      <div v-if="isAllMaintainerData || !lePadV" class="member-list" :class="{'member-list-all': isAllCommitter || committerList?.length < 12, 'member-list-dark': isDark}">
-        <div v-for="member in committerData" class="member-info">
+      <ul v-if="isAllMaintainerData || !lePadV" class="member-list" :class="{'member-list-all': isAllCommitter || committerList?.length < 12, 'member-list-dark': isDark}">
+        <li v-for="member in committerData" class="member-info">
           <div class="member-info-left" :class="{'member-info-id': !member.name}">
             <WordAvatar
               :name="member?.user_login"
@@ -216,8 +216,8 @@ watch(
               </OIcon>
             </a>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
       <div v-if="!lePadV && committerList?.length > 11" class="more-btn">
         <div
           class="view-all"

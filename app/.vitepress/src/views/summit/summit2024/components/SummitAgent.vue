@@ -204,8 +204,8 @@ watch(
 // title 为 default 默认不显示，default时默认只有一条数据
 </script>
 <template>
-  <div v-if="dateList?.length" class="section">
-    <h3>{{ props.data.title }}</h3>
+  <section v-if="dateList?.length" class="section">
+    <h2>{{ props.data.title }}</h2>
     <div class="agenda">
       <!--  日期列表  -->
       <div class="date">
@@ -320,7 +320,7 @@ watch(
         ></AgendaTable>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss">

@@ -36,9 +36,9 @@ function handleClick(item: LinkItem) {
   <div class="migration-download">
     <div class="migration-download-content">
       <div>
-        <h2 :id="downloadInfo.name" style="margin-top: 0">
+        <h1 :id="downloadInfo.name" style="margin-top: 0">
           {{ downloadInfo.name }}
-        </h2>
+        </h1>
 
         <p class="download-desc">{{ downloadInfo.description }}</p>
 

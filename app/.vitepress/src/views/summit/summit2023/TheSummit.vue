@@ -138,9 +138,9 @@ onMounted(() => {
       >
     </div>
     <div id="live" class="live">
-      <h3 class="title-bar">
+      <h2 class="title-bar">
         {{ lang === 'zh' ? summitData.live.title : summitData.live.titleEn }}
-      </h3>
+      </h2>
       <div>
         <template v-if="lang === 'zh'">
           <OTabs v-model="isLiverShown" class="schedule-tabs">
@@ -191,9 +191,9 @@ onMounted(() => {
       </div>
     </div>
     <div class="agenda">
-      <h3>
+      <h2>
         {{ summitData.agenda.title }}
-      </h3>
+      </h2>
       <div class="date">
         <div
           v-for="(item, index) in dateList"
@@ -250,68 +250,68 @@ onMounted(() => {
       </div>
     </div>
     <div class="guest">
-      <h3 class="guest-title">
+      <h2 class="guest-title">
         {{ lang === 'zh' ? summitData.guest.title : summitData.guest.titleEn }}
-      </h3>
-      <h4>
+      </h2>
+      <h3>
         {{
           lang === 'zh'
             ? summitData.guest.guestListOperational.title
             : summitData.guest.guestListOperational.titleEn
         }}
-      </h4>
+      </h3>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListOperational.guestList"
         shape="circle"
         :web-columns-num="4"
         :mobile-columns-num="2"
       />
-      <h4>
+      <h3>
         {{
           lang === 'zh'
             ? summitData.guest.guestListMain.title
             : summitData.guest.guestListMain.titleEn
         }}
-      </h4>
+      </h3>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListMain.guestList"
         shape="circle"
         :web-columns-num="4"
         :mobile-columns-num="2"
       />
-      <h4>
+      <h3>
         {{
           lang === 'zh'
             ? summitData.guest.guestListEducation.title
             : summitData.guest.guestListEducation.titleEn
         }}
-      </h4>
+      </h3>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListEducation.guestList"
         shape="circle"
         :web-columns-num="4"
         :mobile-columns-num="2"
       />
-      <h4>
+      <h3>
         {{
           lang === 'zh'
             ? summitData.guest.guestListProducer.title
             : summitData.guest.guestListProducer.titleEn
         }}
-      </h4>
+      </h3>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListProducer.guestList"
         shape="circle"
         :web-columns-num="4"
         :mobile-columns-num="2"
       />
-      <h4>
+      <h3>
         {{
           lang === 'zh'
             ? summitData.guest.guestListTechnology.title
             : summitData.guest.guestListTechnology.titleEn
         }}
-      </h4>
+      </h3>
       <SummitGuests
         :lecturer-list="summitData.guest.guestListTechnology.guestList"
         shape="circle"
@@ -322,7 +322,7 @@ onMounted(() => {
     <SummitPartner />
     <div v-if="lang === 'zh'" class="previous">
       <div class="previous-title">
-        <h3>{{ summitData.previous.title }}</h3>
+        <h2>{{ summitData.previous.title }}</h2>
         <img :src="liveImg" alt="live" />
       </div>
       <div class="link-box">
@@ -592,7 +592,7 @@ onMounted(() => {
   @media (max-width: 767px) {
     margin-top: var(--e-spacing-h2);
   }
-  h3 {
+  h2 {
     text-align: center;
     font-size: var(--e-font-size-h3);
     line-height: var(--e-line-height-h3);
@@ -735,7 +735,7 @@ onMounted(() => {
   @media (max-width: 767px) {
     margin-top: var(--e-spacing-h2);
   }
-  h3 {
+  h2 {
     text-align: center;
     font-size: var(--e-font-size-h3);
     line-height: var(--e-line-height-h3);
@@ -746,7 +746,7 @@ onMounted(() => {
       line-height: var(--e-line-height-h8);
     }
   }
-  h4 {
+  h3 {
     margin-top: 20px;
     font-size: var(--e-font-size-h5);
     line-height: var(--e-line-height-h5);
@@ -854,7 +854,7 @@ onMounted(() => {
   }
   .previous-title {
     display: flex;
-    h3 {
+    h2 {
       font-size: 26px;
       line-height: 30px;
       color: var(--e-color-text1);

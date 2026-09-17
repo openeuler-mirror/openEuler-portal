@@ -155,7 +155,9 @@ watch(
     </ClientOnly>
   </template>
   <ClientOnly v-else>
-    <Content />
+    <main class="standalone-main">
+      <Content />
+    </main>
   </ClientOnly>
 </template>
 
@@ -194,6 +196,10 @@ main {
     @media (max-width: 1100px) {
       overflow: visible;
     }
+  }
+  &.standalone-main {
+    min-height: 100vh;
+    padding-top: 0;
   }
 }
 .is-docs {

@@ -68,7 +68,7 @@ const notice = computed(() => i18n.value.about.ORGANIZATION_NOTICE);
         :key="group.title"
         class="council-item"
       >
-        <h4>{{ group.title }}</h4>
+        <h3>{{ group.title }}</h3>
         <OrganizationGuests
           :lecturer-list="group.members"
           shape="circle"
@@ -214,7 +214,7 @@ const notice = computed(() => i18n.value.about.ORGANIZATION_NOTICE);
       & + .council-item {
         margin-top: var(--e-spacing-h2);
       }
-      h4 {
+      h3 {
         font-size: var(--e-font-size-h7);
         line-height: var(--e-line-height-h7);
         color: var(--e-color-text1);

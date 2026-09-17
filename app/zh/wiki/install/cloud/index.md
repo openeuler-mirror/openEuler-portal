@@ -2,6 +2,7 @@
 title: 安装指引
 category: wiki
 ---
+<h1 class="visually-hidden">安装指引</h1>
 
 ##  在AWS获取openEuler镜像
 

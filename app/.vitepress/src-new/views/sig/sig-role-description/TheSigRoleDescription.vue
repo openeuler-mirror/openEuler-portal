@@ -234,8 +234,8 @@ const reportSectionLinkClick = (
             <div class="desc">{{ item.desc }}</div>
           </div>
 
-          <div class="point-list">
-            <div
+          <ul class="point-list">
+            <li
               v-for="(subItem, subIndex) in item.points"
               :key="subIndex"
               class="point-list-item"
@@ -244,9 +244,9 @@ const reportSectionLinkClick = (
                 <IconRight />
               </OIcon>
               <span v-dompurify-html="subItem"></span>
-            </div>
-            <div v-if="item?.notice">{{ item.notice }}</div>
-          </div>
+            </li>
+            <li v-if="item?.notice">{{ item.notice }}</li>
+          </ul>
         </div>
       </div>
     </AppSection>

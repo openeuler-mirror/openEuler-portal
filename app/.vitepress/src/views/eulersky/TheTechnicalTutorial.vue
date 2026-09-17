@@ -33,7 +33,7 @@ function goDetail(path: string) {
         :link1="technicalTutorialI18n.BREAD1_URL"
       />
       <OContainer class="tultorial-container" :level-index="1">
-        <h3>{{ technicalTutorialI18n.BREAD2 }}</h3>
+        <h1>{{ technicalTutorialI18n.BREAD2 }}</h1>
         <p class="tultorial-container-introduction">
           {{ technicalTutorialI18n.TULTORIAL_CARD_INTRODUCTION }}
           <a
@@ -66,7 +66,7 @@ function goDetail(path: string) {
   .tultorial-container {
     margin-top: 40px;
     padding: 40px;
-    h3 {
+    h1 {
       color: var(--e-color-text1);
       line-height: var(--e-line-height-h5);
       font-size: var(--e-font-size-h5);
@@ -80,7 +80,7 @@ function goDetail(path: string) {
     @media screen and (max-width: 768px) {
       margin-top: 24px;
       padding: 16px;
-      h3 {
+      h1 {
         font-size: var(--e-font-size-h8);
         line-height: var(--e-line-height-h7);
       }

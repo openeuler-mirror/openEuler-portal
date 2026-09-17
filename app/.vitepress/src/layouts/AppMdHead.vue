@@ -20,7 +20,7 @@ const resolveDate = (date: any) => {
 
 <template>
   <div class="markdown-body-title">
-    <h2 class="page-title">{{ frontmatter.title }}</h2>
+    <h1 v-if="frontmatter.title" class="page-title">{{ frontmatter.title }}</h1>
     <div v-if="frontmatter.author" class="info">
       <template v-if="Array.isArray(frontmatter.author)">
         <span v-for="item in frontmatter.author" :key="item" class="author"

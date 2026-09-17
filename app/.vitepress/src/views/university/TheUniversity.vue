@@ -195,7 +195,7 @@ onMounted(() => {
               <div v-if="false" class="item-logo">
                 <img :src="item.logo" alt="" />
               </div>
-              <h4 class="item-name">{{ item.name }}</h4>
+              <h3 class="item-name">{{ item.name }}</h3>
               <div class="item-detail">{{ item.detail }}</div>
             </div>
             <div class="item-footer">
@@ -242,7 +242,7 @@ onMounted(() => {
             <div v-if="false" class="list2-item-logo">
               <img :src="item.logo" alt="" />
             </div>
-            <h4 class="list2-item-name">{{ item.name }}</h4>
+            <h3 class="list2-item-name">{{ item.name }}</h3>
           </OCard>
           <OCard class="list2-university-more">
             {{ universityData.university_contribution.more }}

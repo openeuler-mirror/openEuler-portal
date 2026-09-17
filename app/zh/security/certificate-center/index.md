@@ -19,14 +19,12 @@ const isDark = computed(() => {
 });
 </script>
 
-<ClientOnly>
-  <BannerLevel2
-    :background-image="banner"
-    background-text="SUPPORT"
-    title="证书中心"
-    :illustration="illustration"
+<BannerLevel2
+  :background-image="banner"
+  background-text="SUPPORT"
+  title="证书中心"
+  :illustration="illustration"
 />
-</ClientOnly>
 
 <div class='markdown'>
 

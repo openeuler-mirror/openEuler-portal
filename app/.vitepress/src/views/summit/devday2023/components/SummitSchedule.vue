@@ -27,7 +27,7 @@ const otherTabType = ref(0);
 
 <template>
   <div class="schedule">
-    <h4>{{ agendaData.lable }}</h4>
+    <h3 v-if="agendaData.lable">{{ agendaData.lable }}</h3>
     <span
       v-if="agendaData.lable.includes('TC开放工作会议')"
       class="go-etherpad"
@@ -74,9 +74,9 @@ const otherTabType = ref(0);
         :key="itemList.id"
         class="content"
       >
-        <h4 v-if="itemList.title" class="other-title">
+        <h3 v-if="itemList.title" class="other-title">
           {{ itemList.title }}
-        </h4>
+        </h3>
         <div class="content-list">
           <div
             v-for="subItem in itemList.content"
@@ -160,7 +160,7 @@ const otherTabType = ref(0);
 }
 .schedule {
   margin-top: 20px;
-  h4 {
+  h3 {
     margin-top: 32px;
     text-align: center;
     font-size: 20px;

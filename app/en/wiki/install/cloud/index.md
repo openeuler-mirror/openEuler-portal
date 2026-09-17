@@ -2,6 +2,7 @@
 title: Installation Guide
 category: wiki
 ---
+<h1 class="visually-hidden">Installation Guide</h1>
 
 ## Obtaining the openEuler Image on AWS
 

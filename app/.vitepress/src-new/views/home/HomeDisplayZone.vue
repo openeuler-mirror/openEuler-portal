@@ -31,9 +31,9 @@ const displayZoneData = computed(() => homeContent[locale.value].display_zone);
         />
       </div>
       <div class="display-zone-text">
-        <h4 class="display-zone-title">
+        <p class="display-zone-title">
           {{ item.title }}
-        </h4>
+        </p>
         <p class="display-zone-description">{{ item.description }}</p>
       </div>
     </a>

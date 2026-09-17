@@ -27,15 +27,15 @@ onMounted(() => {
 
 <template>
   <div class="partner">
-    <h3 class="partner-title">
+    <h2 class="partner-title">
       {{ lang === 'zh' ? partnerData.title : partnerData.titleEn }}
-    </h3>
+    </h2>
     <div
       v-for="item in partnerData.partnerList"
       :key="item.subTitle"
       class="partner-item"
     >
-      <h4>{{ lang === 'zh' ? item.subTitle : item.subTitleEn }}</h4>
+      <h3>{{ lang === 'zh' ? item.subTitle : item.subTitleEn }}</h3>
 
       <div class="picture-panel" data-aos="fade-zoom-in" :class="item?.class">
         <a
@@ -119,7 +119,7 @@ onMounted(() => {
   @media screen and (max-width: 768px) {
     margin-top: var(--e-spacing-h4);
   }
-  h3 {
+  h2 {
     text-align: center;
     font-size: var(--e-font-size-h3);
     line-height: var(--e-line-height-h3);
@@ -144,7 +144,7 @@ onMounted(() => {
         grid-template-columns: repeat(2, minmax(82px, 1fr));
       }
     }
-    h4 {
+    h3 {
       font-size: var(--e-font-size-h5);
       line-height: var(--e-line-height-h5);
       color: var(--e-color-text1);

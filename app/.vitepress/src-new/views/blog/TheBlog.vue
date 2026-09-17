@@ -290,11 +290,11 @@ const gap = computed(() => {
           </OInput>
           <div v-if="showTimePanel" class="search-data">
             <OScroller v-if="selectData[0].displayOptions.length" showType="always" size="small">
-              <template v-for="it in selectData[0].displayOptions" :key="it.key">
-                <div @click="clickTimeItem(it.key)" class="panel-item" :class="{'panel-item-active': it.key === timeValue}">
+              <ul>
+                <li v-for="it in selectData[0].displayOptions" :key="it.key" @click="clickTimeItem(it.key)" class="panel-item" :class="{'panel-item-active': it.key === timeValue}">
                   {{ it.key }}
-                </div>
-              </template>
+                </li>
+              </ul>
             </OScroller>
             <p class="no-item-result" v-else>{{ t('blog.noResult') }}</p>
           </div>
@@ -318,11 +318,11 @@ const gap = computed(() => {
           </OInput>
           <div v-if="showAuthorPanel" class="search-data">
             <OScroller v-if="selectData[1].displayOptions.length" showType="always" size="small">
-              <template v-for="it in selectData[1].displayOptions" :key="it.key">
-                <div @click="clickAuthorItem(it.key)" class="panel-item" :class="{'panel-item-active': it.key === authorValue}">
+              <ul>
+                <li v-for="it in selectData[1].displayOptions" :key="it.key" @click="clickAuthorItem(it.key)" class="panel-item" :class="{'panel-item-active': it.key === authorValue}">
                   {{ it.key }}
-                </div>
-              </template>
+                </li>
+              </ul>
             </OScroller>
             <p class="no-item-result" v-else>{{ t('blog.noResult') }}</p>
           </div>
@@ -346,11 +346,11 @@ const gap = computed(() => {
           </OInput>
           <div v-if="showTagPanel" class="search-data">
             <OScroller v-if="selectData[2].displayOptions.length" showType="always" size="small">
-              <template v-for="it in selectData[2].displayOptions" :key="it.key">
-                <div @click="clickTagItem(it.key)" class="panel-item" :class="{'panel-item-active': it.key === tagValue}">
+              <ul>
+                <li v-for="it in selectData[2].displayOptions" :key="it.key" @click="clickTagItem(it.key)" class="panel-item" :class="{'panel-item-active': it.key === tagValue}">
                   {{ it.key }}
-                </div>
-              </template>
+                </li>
+              </ul>
             </OScroller>
             <p class="no-item-result" v-else>{{ t('blog.noResult') }}</p>
           </div>

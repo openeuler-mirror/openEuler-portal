@@ -24,7 +24,7 @@ anchor: true
 
 <div class='guidance' >
 
-<h2 id='Migration-Overview' style="margin-top:0;">Migration Overview</h2>
+<h1 id='Migration-Overview' style="margin-top:0;">Migration Overview</h1>
 
 openEuler provides an efficient, reliable solution for users and enterprises to streamline their OS migrations. Here, you can perform migration with subsequent analysis, design a migration plan, adapt software before migration, and conduct testing and service rollout. The x2openEuler tool is an openEuler offering used for migration assessment and in-place upgrades.
 

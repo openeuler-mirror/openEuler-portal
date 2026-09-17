@@ -3,6 +3,7 @@ title: 特性说明
 titleTemplate: openEuler社区官网
 category: migration
 ---
+<h1 class="visually-hidden">特性说明</h1>
 
 ## 3.0.0-20250104 版本特性说明
 

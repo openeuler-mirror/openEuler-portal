@@ -25,7 +25,7 @@ defineProps({
 <template>
   <div class="sig-detail-info-card">
     <div class="sig-name-box">
-      <span class="sig-name">{{ sigName }}</span>
+      <h1 class="sig-name">{{ sigName }}</h1>
       <ODivider v-if="!lePadV" direction="v" />
       <OLink
         color="primary"

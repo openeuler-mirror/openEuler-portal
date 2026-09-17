@@ -20,9 +20,9 @@ const talentDemand = computed(() => talentAssessmentContent.zh.talent_demand);
     <OCard v-for="companyData in talentDemand" :key="companyData.company" class="talent-demand-card">
       <img class="card-img" :src="theme === 'light' ? companyData.logo_light : companyData.logo_dark" alt="" />
       <div class="card-info">
-        <h4 class="company">{{ companyData.company }}</h4>
+        <h3 class="company">{{ companyData.company }}</h3>
         <p class="company-introduce">{{ companyData.intro }}</p>
-        <h5 class="post-title">{{ $t('talent.post') }}</h5>
+        <h4 class="post-title">{{ $t('talent.post') }}</h4>
         <div class="post-list">
           <div
             class="post"

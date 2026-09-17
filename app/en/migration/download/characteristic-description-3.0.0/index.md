@@ -3,6 +3,7 @@ title: Feature Description
 titleTemplate: openEuler official website
 category: migration
 ---
+<h1 class="visually-hidden">Feature Description</h1>
 
 
 ## 3.0.0-1230 Features

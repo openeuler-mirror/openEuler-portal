@@ -28,7 +28,7 @@ function goDetail(link: string) {
         class="case-card"
       >
         <div class="card-content-text">
-          <h4>{{ item.title }}</h4>
+          <h2>{{ item.title }}</h2>
           <p class="detail">
             {{ item.summary }}
           </p>
@@ -74,7 +74,7 @@ function goDetail(link: string) {
       padding: 16px 16px 14px 12px;
     }
     .card-content-text {
-      h4 {
+      h2 {
         margin: 0;
         font-weight: 700;
         color: #ffffff;

@@ -20,7 +20,7 @@ const { lang } = useData();
 
 <SeoBox :seo-data="commonContent[lang]?.migration_background" />
 
-<h2 id='background' style="margin-top:0;">Background</h2>
+<h1 id='background' style="margin-top:0;">Background</h1>
 
 As the EOM for the original OS approaches, migrating to a new OS becomes imperative to ensure service continuity and security. Digital transformation now requires OSs must adapt to new architectures and scenarios, requiring systematic migration solutions and tools to ensure seamless migration. Enterprises must adopt future-oriented strategies. Comprehensive support, reliability, and stability are needed for sustainable development and product innovation. openEuler provides an efficient and reliable platform on which to migrate and port your systems.
 
