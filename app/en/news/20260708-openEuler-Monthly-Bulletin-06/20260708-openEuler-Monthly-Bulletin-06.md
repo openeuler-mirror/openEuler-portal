@@ -4,7 +4,7 @@ date: '2026-07-08'
 category: news
 tags:
   - openEuler
-  - Monthly Bulletin
+  - Newsletter
 banner: 'img/banners/20260708-openEuler-Monthly-Bulletin-06.png'
 author: 'openEuler'
 summary: 'openEuler Monthly Bulletin – June 2026'
