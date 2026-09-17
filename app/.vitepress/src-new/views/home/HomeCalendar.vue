@@ -219,6 +219,7 @@ const cancel = () => {
       v-if="shownIcon"
       class="cube-2"
       :src="commonStore.theme === 'light' ? cubeTow : cubeTowDark"
+      alt=""
     />
     <ODialog
       v-model:visible="bindVisible"

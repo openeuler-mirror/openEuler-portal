@@ -54,7 +54,7 @@ const reportDownload = (url: string) => {
   <AppContent>
     <OCard>
       <el-row class="card-item" justify="space-between">
-        <img class="desc-ill-img" :src="infoIll" />
+        <img class="desc-ill-img" :src="infoIll" alt="" />
         <p class="om-desc">
           随着openEuler操作系统的逐渐普及和市场需求的不断增长，越来越多的人与组织开始使用这款开源、安全、稳定的操作系统。然而，随着使用数量的不断攀升，openEuler系统也面临着越来越多的挑战，如系统稳定性、安全性、兼容性等问题。为了确保openEuler系统能够长期稳定运行，用户希望有系统性的运维方案与工具。针对用户对于运维的核心诉求，openEuler开源社区及伙伴构建了一系列专、精的运维组件，以及各种统一运维工具，协助用户更好地使用openEuler操作系统。
         </p>
@@ -84,7 +84,7 @@ const reportDownload = (url: string) => {
     <OCard class="osmind-card">
       <el-row class="card-item" justify="space-between">
         <el-row class="osmind-box" justify="space-between">
-          <img class="osmind-img" :src="OSMindIll" />
+          <img class="osmind-img" :src="OSMindIll" alt="" />
           <div class="osmind-info-box">
             <p class="osmind-title">OSMind</p>
             <p class="osmind-desc">OSMind是一款openEuler运维管理工具套件</p>
@@ -157,7 +157,7 @@ const reportDownload = (url: string) => {
             :key="value"
             class="qr-code-box"
           >
-            <img class="qr-code" :src="value" />
+            <img class="qr-code" :src="value" alt="" />
             <p class="qr-code-label">{{ label }}</p>
           </div>
         </el-row>

@@ -36,7 +36,7 @@ const isSelfDomain = (url: string) => {
 
 <template>
   <div class="banner-markdown">
-    <img :src="props.data[0]?.src" class="banner-bg" />
+    <img :src="props.data[0]?.src" class="banner-bg" alt="" />
     <div class="wrap">
       <div
         class="banner-text"

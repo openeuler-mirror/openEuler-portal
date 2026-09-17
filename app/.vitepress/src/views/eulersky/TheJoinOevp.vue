@@ -69,7 +69,7 @@ onMounted(() => {
               class="card-item"
               data-aos="fade-up"
             >
-              <img class="avator" :src="item.avator" />
+              <img class="avator" :src="item.avator" :alt="item.name" />
               <span class="name">{{ item.name }}</span>
               <span class="company">{{ item.company }}</span>
               <div class="label-list">

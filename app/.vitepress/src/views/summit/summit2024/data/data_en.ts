@@ -10,6 +10,7 @@ export default {
     btn: '',
     pcTextImgLight: textLight,
     pcTextImgDark: textDark,
+    textImgAlt: 'Operating System Conference & openEuler Summit 2024, November 15-16, ZhongGuanCun International Innovation Center, Beijing, China',
     link: {
       pc: 'https://openatomcon.openatom.cn/registration/?activityNo=HD20241010150325',
       mo: 'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20241010150325',

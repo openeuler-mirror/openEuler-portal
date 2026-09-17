@@ -61,6 +61,7 @@ const viewBtn = (url: string) => {
         <img
           :src="isLight ? bannerData.pcTextImgLight : bannerData.pcTextImgDark"
           class="text-img"
+          :alt="bannerData.textImgAlt"
         />
         <div v-if="bannerData.btn" data-aos="fade-up" class="action">
           <ClientOnly>

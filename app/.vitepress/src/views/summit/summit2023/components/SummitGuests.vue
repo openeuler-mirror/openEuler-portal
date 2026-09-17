@@ -66,7 +66,7 @@ onMounted(() => {
                 : 'lecturer-list-item-circle'
             "
           >
-            <img :src="item.img" />
+            <img :src="item.img" :alt="item.name" />
           </div>
         </slot>
         <slot name="name">
@@ -95,7 +95,7 @@ onMounted(() => {
                 : 'lecturer-list-item-circle'
             "
           >
-            <img :src="item.img" />
+            <img :src="item.img" :alt="item.nameEn" />
           </div>
         </slot>
         <slot name="name">

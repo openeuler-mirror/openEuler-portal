@@ -44,7 +44,7 @@ onMounted(() => {
 
 <template>
   <div class="banner-level3" :style="rootStyle">
-    <img :src="props.backgroundImage" class="banner-bg" />
+    <img :src="props.backgroundImage" class="banner-bg" alt="" />
     <div class="wrap">
       <div
         class="banner-text"

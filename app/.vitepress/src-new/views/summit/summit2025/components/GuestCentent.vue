@@ -69,7 +69,7 @@ onMounted(() => {
       <div data-aos="fade-zoom-in" class="lecturer-list-item">
         <slot name="img">
           <div :class="`lecturer-list-item-${shape}`">
-            <img :src="item.img" />
+            <img :src="item.img" :alt="item.name || item.NAME" />
           </div>
         </slot>
         <slot name="name">

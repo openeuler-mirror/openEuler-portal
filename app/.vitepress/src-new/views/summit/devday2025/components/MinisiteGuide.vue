@@ -28,7 +28,7 @@ const guideImage = computed(() => {
   <div class="guide">
     <div class="title-img">
       <p class="title-text">{{ guideData.title }}</p>
-      <img :src="isDark ? guideData.titleImDark : guideData.titleImg" />
+      <img :src="isDark ? guideData.titleImDark : guideData.titleImg" alt="" />
     </div>
     <img
       class="guide-image"

@@ -28,7 +28,7 @@ const emptyImage = computed(() => {
   >
     <template #image>
       <slot name="image">
-        <img class="empty-image" alt="empty" :src="emptyImage" />
+        <img class="empty-image" alt="" :src="emptyImage" />
       </slot>
     </template>
   </OResult>

@@ -23,7 +23,7 @@ const commonStore = useCommon();
       <p class="item-title">{{ item.title }}</p>
       <div class="logo-list">
         <div v-for="(logo, i) in item.logos" :key="i" class="item-logo">
-          <img :src="logo[commonStore.theme]" />
+          <img :src="logo[commonStore.theme]" :alt="logo.name || ''" />
         </div>
       </div>
     </div>

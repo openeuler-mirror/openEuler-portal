@@ -50,7 +50,7 @@ onMounted(() => {
 
 <template>
   <div class="banner-level2" :style="rootStyle">
-    <img :src="props.backgroundImage" class="banner-bg" />
+    <img :src="props.backgroundImage" class="banner-bg" alt="" />
     <div class="wrap">
       <div
         class="banner-text"
@@ -73,7 +73,7 @@ onMounted(() => {
         data-aos-once="true"
         data-aos-duration="800"
       >
-        <img :src="illustration" />
+        <img :src="illustration" alt="" />
       </div>
     </div>
   </div>

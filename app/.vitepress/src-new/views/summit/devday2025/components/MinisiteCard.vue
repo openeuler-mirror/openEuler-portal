@@ -26,7 +26,7 @@ const isDark = computed(() => {
   <div class="topic">
     <div class="title-img">
       <p class="title-text">{{ topicData.title }}</p>
-      <img :src="isDark ? topicData.titleImDark : topicData.titleImg" />
+      <img :src="isDark ? topicData.titleImDark : topicData.titleImg" alt="" />
     </div>
     <p class="topic-desc">{{ topicData.desc }}</p>
     <ul class="list">

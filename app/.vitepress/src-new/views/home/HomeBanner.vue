@@ -110,6 +110,7 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
                 v-if="!isPhone && info.attach"
                 :src="info.attach"
                 class="banner-attach"
+                alt=""
               />
 
               <!-- 标题 -->

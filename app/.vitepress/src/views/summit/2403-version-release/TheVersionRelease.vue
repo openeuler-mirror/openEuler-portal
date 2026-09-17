@@ -77,7 +77,7 @@ const isDark = computed(() => {
       </div>
 
       <div class="date">
-        <img :src="isDark ? meetDateDark : meetDate" />
+        <img :src="isDark ? meetDateDark : meetDate" alt="6月6日" />
       </div>
 
       <div class="agenda-main">

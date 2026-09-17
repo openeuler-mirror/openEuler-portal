@@ -111,6 +111,7 @@ const onClickLink = (e: MouseEvent) => {
             :src="data.iconUrl || defaultImg"
             class="icon"
             :class="{ 'default-img': !data.iconUrl }"
+            alt=""
           />
         </div>
       </div>

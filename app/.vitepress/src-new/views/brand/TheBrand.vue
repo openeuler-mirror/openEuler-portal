@@ -97,7 +97,7 @@ const gap = computed(() => {
           </div>
           <div class="item-text">
             <span class="label">{{ t('brand.logo') }}</span>
-            <img :src="isDark ? content.logo_dark : content.logo" />
+            <img :src="isDark ? content.logo_dark : content.logo" alt="openEuler Logo" />
           </div>
         </div>
       </OCol>

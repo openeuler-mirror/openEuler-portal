@@ -101,7 +101,7 @@ const notice = computed(() => i18n.value.about.ORGANIZATION_NOTICE);
             class="gitee"
             target="_blank"
             rel="noopener noreferrer"
-            ><img :src="IconGit"
+            ><img :src="IconGit" alt="Gitee"
           /></a>
         </p>
       </li>

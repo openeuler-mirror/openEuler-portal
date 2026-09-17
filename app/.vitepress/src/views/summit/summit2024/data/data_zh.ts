@@ -9,6 +9,7 @@ export default {
     btn: '观看回放',
     pcTextImgLight: textLight,
     pcTextImgDark: textDark,
+    textImgAlt: '操作系统大会&openEuler Summit 2024，11月15日-16日，中国·北京·中关村国际创新中心',
     link: '/zh/interaction/summit-list/summit2024/#agenda',
     list: [
       {

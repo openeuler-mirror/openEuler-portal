@@ -22,7 +22,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
     <div class="migration-path-content">
       <OCard>
         <div class="content-pc">
-          <img :src="portalInfo.path.img_light" />
+          <img :src="portalInfo.path.img_light" :alt="portalInfo.path.title" />
         </div>
         <div class="content-mobile">
           <div class="content-mobile-item">
@@ -35,7 +35,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
             >
               {{ portalInfo.path.img_mo.top.description }}
             </div>
-            <img :src="portalInfo.path.img_mo.top.img" />
+            <img :src="portalInfo.path.img_mo.top.img" alt="" />
           </div>
           <div class="content-mobile-item" :style="{ 'margin-top': '24px' }">
             <p>{{ portalInfo.path.img_mo.bottom.title }}</p>
@@ -47,7 +47,7 @@ const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
             >
               {{ portalInfo.path.img_mo.bottom.description }}
             </div>
-            <img :src="portalInfo.path.img_mo.bottom.img" />
+            <img :src="portalInfo.path.img_mo.bottom.img" alt="" />
           </div>
         </div>
       </OCard>

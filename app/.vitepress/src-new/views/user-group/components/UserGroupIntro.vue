@@ -28,7 +28,7 @@ const introData = computed(() => userGroupContent.zh.intro);
           backgroundImage: `url(${intro.background})`,
         }"
       >
-        <img :src="intro.logo" class="logo" />
+        <img :src="intro.logo" class="logo" alt="" />
         <div class="role-content">
           <div v-for="title in intro.title" :key="title.name" class="role">
             <p class="role-name">{{ title.name }}</p>

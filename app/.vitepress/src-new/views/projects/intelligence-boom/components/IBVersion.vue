@@ -48,7 +48,7 @@ const versionInfo = computed(() => {
   >
     <div class="version-body feature-content">
       <div class="version-picture">
-        <img :src="versionInfo.picture" />
+        <img :src="versionInfo.picture" :alt="versionInfo.name" />
           <OButton
             class="version-btn"
             animation

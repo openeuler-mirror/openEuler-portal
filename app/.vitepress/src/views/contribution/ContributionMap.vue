@@ -28,17 +28,19 @@ const goLink = (url: string, isBlank: boolean) => {
 <template>
   <div class="content-map">
     <div :class="lang === 'zh' ? 'content-map-img' : 'content-map-img-en'">
-      <img v-show="!isDark" :src="contributionConfig.background_img_light" />
-      <img v-show="isDark" :src="contributionConfig.background_img_dark" />
+      <img v-show="!isDark" :src="contributionConfig.background_img_light" :alt="i18n.contribution.LOOK_MAP" />
+      <img v-show="isDark" :src="contributionConfig.background_img_dark" :alt="i18n.contribution.LOOK_MAP" />
       <img
         v-show="!isDark && lang === 'en'"
         :src="contributionConfig.background_img_h5_light"
         class="map-mo-en"
+        :alt="i18n.contribution.LOOK_MAP"
       />
       <img
         v-show="isDark && lang === 'en'"
         :src="contributionConfig.background_img_h5_dark"
         class="map-mo-en"
+        :alt="i18n.contribution.LOOK_MAP"
       />
       <!-- 定位的空标签 -->
 
@@ -59,8 +61,8 @@ const goLink = (url: string, isBlank: boolean) => {
       class="content-map-mobile-img"
       :class="lang === 'zh' ? '' : 'content-map-mobile-img-en'"
     >
-      <img v-show="!isDark" :src="contributionConfig.background_img_h5_light" />
-      <img v-show="isDark" :src="contributionConfig.background_img_h5_dark" />
+      <img v-show="!isDark" :src="contributionConfig.background_img_h5_light" :alt="i18n.contribution.LOOK_MAP" />
+      <img v-show="isDark" :src="contributionConfig.background_img_h5_dark" :alt="i18n.contribution.LOOK_MAP" />
       <div
         v-for="(item, index) in contributionConfig.link_list"
         :key="index"

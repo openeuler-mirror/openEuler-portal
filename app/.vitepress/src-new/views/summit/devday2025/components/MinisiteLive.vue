@@ -83,7 +83,7 @@ onUnmounted(() => {
   <div class="live-room">
     <div class="title-img">
       <p class="title-text">{{ liveData.title }}</p>
-      <img :src="isDark ? liveData.titleImDark : liveData.titleImg" />
+      <img :src="isDark ? liveData.titleImDark : liveData.titleImg" alt="" />
     </div>
     <iframe
       ref="livePage"
