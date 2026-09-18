@@ -19,9 +19,10 @@ openEuler 技术白皮书页（`/zh/showcase/technical-white-paper/`、`/en/show
 
 ## 设计原则
 
-- **按文件拆分 locale**：双语数据已拆分到 `zh.yaml` / `en.yaml`，字段名用基线名（`path`、`summary`）
-- **en 是 zh 子集**：en 15 项，zh 20 项；SP4 en PDF 待提供（原 TS 中为 TODO 注释，yaml 中直接省略）
+- **按文件拆分 locale**：双语数据已拆分到 `zh.yaml` / `en.yaml`，字段名用基线名（`path`、`htmlPage`、`summary`）
+- **en 16 项，zh 20 项**：SP4 en PDF 已由 PR !3233 提供（含 htmlPage 待后续补充）
 - **path 含 URL 编码**：LTS 版本的 path 使用 `%20` 编码空格（如 `openEuler%2024.03%20LTS%20SP4`），非 LTS 版本直接用空格
+- **htmlPage 可选**：仅 zh 前 5 项（SP4/SP3/25.09/SP2/25.03）有静态化 HTML 预览页，有则点击打开预览（"阅读白皮书"），无则下载 PDF；en 暂无
 - **不存布局参数**：分页、卡片样式保留在组件中
 
 ## 消费方式
@@ -43,4 +44,5 @@ const technicalData = computed(
 | 字段 | 必填 | 说明 |
 |------|------|------|
 | `path` | 是 | PDF 文件路径（相对站点根目录，部分含 `%20` URL 编码） |
+| `htmlPage` | 否 | 静态化 HTML 预览页路径（有则点击打开 HTML 预览，无则下载 PDF） |
 | `summary` | 是 | 白皮书标题文案 |

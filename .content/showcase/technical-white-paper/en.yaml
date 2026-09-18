@@ -3,9 +3,9 @@
 # white_paper: Technical white paper list (sorted by version desc)
 #   path: PDF file path (relative to site root, some contain %20 URL encoding)
 #   summary: White paper title
-#
-# Note: SP4 en PDF is not yet available (TODO in original TS source), so it is omitted here.
 white_paper:
+  - path: '/whitepaper/en/openEuler 24.03 LTS SP4 Technical White Paper.pdf'
+    summary: 'openEuler 24.03 LTS SP4 Technical White Paper'
   - path: '/whitepaper/en/openEuler 24.03 LTS SP3 Technical White Paper.pdf'
     summary: 'openEuler 24.03 LTS SP3 Technical White Paper'
   - path: '/whitepaper/en/openEuler 25.09 Technical White Paper.pdf'

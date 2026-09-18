@@ -72,10 +72,6 @@ donor_levels:
   - id: Silver-Donors
     donor_title: 白银捐赠人
     logo_list:
-      - img_light: ./images/aosiwei_light.png
-        img_dark: ./images/aosiwei_dark.png
-        alt: 奥思维科技
-        no_icon: true
       - img_light: ./images/AMD_light.png
         img_dark: ./images/AMD_dark.png
         alt: AMD

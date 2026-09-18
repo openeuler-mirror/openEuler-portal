@@ -29,7 +29,7 @@ version_info:
   first:
     name: '首版本：烩面'
     desc: '构建推理+智能体的开源解决方案，一键部署，开箱即用'
-    url: 'https://gitcode.com/openeuler/llm_solution/blob/master/doc/Release Notes/Version 1.0_Hui Noodle.md'
+    url: 'https://atomgit.com/openeuler/llm_solution/blob/master/doc/Release Notes/Version 1.0_Hui Noodle.md'
     picture: ./images/first_version.png
     feature:
       - title: 全功能

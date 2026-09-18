@@ -1,14 +1,24 @@
 import { expect, describe, it, vi, beforeEach, afterEach } from 'vitest';
 import { ref, computed } from 'vue';
 import dayjs from 'dayjs';
-import { publisher } from '../app/.vitepress/src-new/data/home/publisher';
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const PROJECT_ROOT = process.cwd();
 
 interface PublisherT {
-  logo: { light: string; dark: string };
+  logo_light: string;
+  logo_dark: string;
   href: string;
-  href_en?: string;
   validity?: { start?: string; end?: string };
 }
+
+const publisher: PublisherT[] = (
+  yaml.load(
+    fs.readFileSync(path.join(PROJECT_ROOT, '.content/home/zh.yaml'), 'utf8')
+  ) as { publisher: PublisherT[] }
+).publisher;
 
 const isActive = (validity: PublisherT['validity'], current: number): boolean => {
   if (!validity) return true;
@@ -26,10 +36,9 @@ function createHomePartnerState() {
   );
 
   const mapFunc = (p: PublisherT) => ({
-    logo: p.logo.light,
-    logoDark: p.logo.dark,
+    logo: p.logo_light,
+    logoDark: p.logo_dark,
     href: p.href,
-    hrefEn: p.href_en,
   });
 
   const publisherRows = computed(() => {
@@ -154,8 +163,8 @@ describe('publisher 数据 — kaihong 时效配置（设计 §3 publisher.ts）
 
   it('kaihong logo 含 light/dark 双主题（数据未被时效改动破坏）', () => {
     const kaihong = publisher.find((p: PublisherT) => p.href === 'https://www.kaihong.com/') as PublisherT;
-    expect(kaihong.logo.light).toBeTruthy();
-    expect(kaihong.logo.dark).toBeTruthy();
+    expect(kaihong.logo_light).toBeTruthy();
+    expect(kaihong.logo_dark).toBeTruthy();
   });
 });
 
@@ -238,8 +247,8 @@ describe('publisherRows — 分行与空行过滤（设计 §4 边界 / §3 Home
 
   it('仅 2 项可见 → floor(2/3)=0，前两行空被过滤，仅 1 行', () => {
     const fakeList: PublisherT[] = [
-      { logo: { light: 'a', dark: 'a' }, href: 'https://a' },
-      { logo: { light: 'b', dark: 'b' }, href: 'https://b' },
+      { logo_light: 'a', logo_dark: 'a', href: 'https://a' },
+      { logo_light: 'b', logo_dark: 'b', href: 'https://b' },
     ];
     const size = Math.floor(fakeList.length / 3);
     const rows = [fakeList.slice(0, size), fakeList.slice(size, size * 2), fakeList.slice(size * 2)]
@@ -250,7 +259,7 @@ describe('publisherRows — 分行与空行过滤（设计 §4 边界 / §3 Home
   });
 
   it('仅 1 项可见 → 仅 1 行（避免空 OLogoSwiperItems 轨道）', () => {
-    const fakeList: PublisherT[] = [{ logo: { light: 'a', dark: 'a' }, href: 'https://a' }];
+    const fakeList: PublisherT[] = [{ logo_light: 'a', logo_dark: 'a', href: 'https://a' }];
     const size = Math.floor(fakeList.length / 3);
     const rows = [fakeList.slice(0, size), fakeList.slice(size, size * 2), fakeList.slice(size * 2)]
       .filter((row) => row.length);
