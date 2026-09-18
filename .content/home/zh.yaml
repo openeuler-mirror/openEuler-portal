@@ -20,11 +20,11 @@ display_zone:
     icon_dark: ./images/security_dark.svg
     description: 查看安全公告等安全问题
     link: /zh/security/security-bulletins/
-  - title: 迁移专区
-    icon_light: ./images/migration_light.svg
-    icon_dark: ./images/migration_dark.svg
-    description: 教你替换操作系统成openEuler
-    link: /zh/migration/
+  - title: SkillHub
+    icon_light: ./images/skillhub.svg
+    icon_dark: ./images/skillhub_dark.svg
+    description: 探索、评估、贡献openEuler技能
+    link: https://skillhub.openeuler.org
   - title: 活动专区
     icon_light: ./images/event_light.svg
     icon_dark: ./images/event_dark.svg
@@ -196,6 +196,8 @@ publisher:
   - logo_light: ./images/kaihong_light.png
     logo_dark: ./images/kaihong_dark.png
     href: https://www.kaihong.com/
+    validity:
+      end: '2027-05-23'
   - logo_light: ./images/langchaoyun_light.png
     logo_dark: ./images/langchaoyun_dark.png
     href: https://cloud.inspur.com/

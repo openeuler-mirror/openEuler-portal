@@ -1,7 +1,11 @@
 declare module '#content/showcase/technical-white-paper' {
   // white_paper: 技术白皮书
+  //   path: PDF 文件路径
+  //   htmlPage: 静态化 HTML 预览页路径（可选，有则打开预览，无则下载 PDF）
+  //   summary: 白皮书标题
   interface TechnicalWhitePaperItemT {
     path: string;
+    htmlPage?: string;
     summary: string;
   }
 

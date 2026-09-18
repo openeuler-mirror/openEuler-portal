@@ -84,6 +84,7 @@ declare module '#content/home' {
     logo_light: string;
     logo_dark: string;
     href: string;
+    validity?: { start?: string; end?: string };
   }
 
   interface HomeContentT {
