@@ -72,11 +72,11 @@ const footerOption = computed(() => {
 // 公众号、小助手
 const qrcode = [
   {
-    img: CodeImgXzs,
+    img: CodeImgZgz,
     label: t('footer.qrCode'),
   },
   {
-    img: CodeImgZgz,
+    img: CodeImgXzs,
     label: t('footer.qrAssistant'),
   },
 ];
