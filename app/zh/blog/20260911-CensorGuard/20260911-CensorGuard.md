@@ -263,7 +263,6 @@ CensorGuard 的回答，是把这些维度收进内核里的一次查表：**事
 - **开发 & 维护 SIG**：sig-DevStation
 
 欢迎添加下方 openEuler 小助手，由小助手邀请你加入 DevStation 交流群。
-![](./bc61f632-6eb3-4127-876f-a407c21d5b68.png)
 
 ![alt text](image/7.png)
 
