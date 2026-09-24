@@ -237,7 +237,7 @@ export default {
               description:
                 'Learn the community essentials in 10 minutes, build and grow quickly.',
               tag: TAG_TYPE.HOT,
-              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP4/server/quickstart/quick_start.html`,
+              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP4/getting_start/quick_start.html`,
             },
             {
               label: 'Installation Guide',
