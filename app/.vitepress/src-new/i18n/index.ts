@@ -6,7 +6,6 @@ import { useData } from 'vitepress';
 import response from './response';
 import cookie from './cookie';
 import header from './header';
-import footer from './footer';
 import common from './common';
 import search from './search';
 // 业务
@@ -78,7 +77,6 @@ const messages = {
     response: response.zh,
     cookie: cookie.zh,
     header: header.zh,
-    footer: footer.zh,
     common: common.zh,
     search: search.zh,
 
@@ -115,7 +113,6 @@ const messages = {
     response: response.en,
     cookie: cookie.en,
     header: header.en,
-    footer: footer.en,
     common: common.en,
     search: search.en,
 

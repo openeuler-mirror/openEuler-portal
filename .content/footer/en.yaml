@@ -1,32 +1,144 @@
 # Footer data
 #
-# friendship_links: Friendly community links
-#   href: Link URL
-#   title: Site name
+# Structure aligned with OFooter props (@opendesign-plus/components):
+# info / friendshipLink / footerLogo / qrcode are pure static data, passed to
+# OFooter as-is; quickNav / footerOption / footer_bg_img contain variables
+# (__ENV:VITE_XXX__ env placeholders, {year} year, screen-width switch) and go
+# through one replacement round in the component.
 #
-# filing: Filing information
-#   link: Filing link
-#   icon: Filing icon
+# info: OpenAtom Foundation introduction (footer top)
+#   title: Introduction text
+#   logo: Foundation logo
+#   href: Foundation link
 #
-# Note: linksData and quickNav are NOT extracted to yaml due to
-# import.meta.env dependencies. They remain in src-new/data/footer/index.ts.
+# quickNav: Footer navigation (grouped by column, left to right)
+#   title: Column title
+#   children: Nav items (title: name / href: link, supports __ENV:VITE_XXX__ placeholders)
+#
+# qrcode: QR codes on the right (empty array on the English site, not displayed)
+#   img: QR code image
+#   label: QR code name
+#
+# friendshipLink: Friendly community links
+#   title: Section title
+#   children: Link list (href: link URL / title: site name)
+#
+# footerLogo: openEuler brand and contact
+#   logo: openEuler logo
+#   email: Contact email
+#
+# footerOption: Footer statement area
+#   children: Statement links (title: name / href: link, supports __ENV:VITE_XXX__ placeholders)
+#   licenseText: License prefix text
+#   licenseInfo: License name
+#   copyright: Copyright text ({year} is a year placeholder, replaced at runtime)
+#   beianInfo1/beianInfo2: Filing texts
+#   beianLink: Filing link
+#   policeIcon: Filing icon
+#
+# footer_bg_img: Footer background images (pc/mb picked by screen width in component)
+#   pc: PC background
+#   mb: Mobile background
 
-friendship_links:
-  - href: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian'
-    title: 'InfoQ'
-  - href: 'https://www.authing.cn/'
-    title: 'Authing'
-  - href: 'https://www.opengauss.org/en/'
-    title: 'openGauss'
-  - href: 'https://www.mindspore.cn/en/'
-    title: 'MindSpore'
-  - href: 'https://www.openubmc.cn/en/'
-    title: 'openUBMC'
-  - href: 'https://www.openfuyao.cn/en/'
-    title: 'openFuyao'
-  - href: 'http://www.ebaina.com/'
-    title: 'Ebaina'
+info:
+  title: 'openEuler, an open source OS incubated by the OpenAtom Foundation for digital infrastructure in server, cloud, edge, embedded scenarios, across Arm, x86, RISC-V, LoongArch, PowerPC, and SW-64 architectures.'
+  logo: ./images/atom-logo.png
+  href: 'https://openatom.cn'
 
-filing:
-  link: 'https://beian.miit.gov.cn/#/Integrated/index'
-  icon: ./images/police.png
+quickNav:
+  - title: About openEuler
+    children:
+      - title: Members
+        href: /en/community/member/
+      - title: Governance
+        href: /en/community/organization/
+      - title: Code of Conduct
+        href: /en/community/conduct/
+      - title: Statistics
+        href: __ENV:VITE_SERVICE_DATASTAT_URL__/en/overview
+  - title: News & Blogs
+    children:
+      - title: News
+        href: /en/interaction/news-list/
+      - title: Blogs
+        href: /en/interaction/blog-list/
+      - title: White Papers
+        href: /en/showcase/technical-white-paper/
+  - title: Access
+    children:
+      - title: openEuler Is Everywhere
+        href: /en/download/#get-openeuler
+      - title: Latest Community Releases
+        href: /en/download/
+      - title: Commercial Releases
+        href: /en/download/commercial-release/
+  - title: Services & Resources
+    children:
+      - title: Documentation
+        href: __ENV:VITE_SERVICE_DOCS_URL__/en/
+      - title: FAQ
+        href: __ENV:VITE_MAIN_DOMAIN_URL__/en/faq/
+      - title: Contact Us
+        href: /en/contact-us/
+  - title: Communicate
+    children:
+      - title: Mailing Lists
+        href: /en/community/mailing-list/
+      - title: Activities
+        href: /en/interaction/event-list/
+      - title: Forum
+        href: __ENV:VITE_SERVICE_FORUM_URL__
+  - title: Contribute
+    children:
+      - title: SIGs
+        href: /en/sig/sig-list/
+      - title: Contribution Guide
+        href: /en/community/contribution/
+      - title: Training
+        href: /en/learn/mooc/
+
+qrcode: []
+
+friendshipLink:
+  title: Related Links
+  children:
+    - href: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian'
+      title: InfoQ
+    - href: 'https://www.authing.cn/'
+      title: Authing
+    - href: 'https://www.opengauss.org/en/'
+      title: openGauss
+    - href: 'https://www.mindspore.cn/en/'
+      title: MindSpore
+    - href: 'https://www.openubmc.cn/en/'
+      title: openUBMC
+    - href: 'https://www.openfuyao.cn/en/'
+      title: openFuyao
+    - href: 'http://www.ebaina.com/'
+      title: Ebaina
+
+footerLogo:
+  logo: ./images/footer-logo2.png
+  email: contact@openeuler.io
+
+footerOption:
+  children:
+    - title: Trademark
+      href: __ENV:VITE_MAIN_DOMAIN_URL__/en/other/brand/
+    - title: Privacy Statement
+      href: __ENV:VITE_MAIN_DOMAIN_URL__/en/other/privacy/
+    - title: Legal Notice
+      href: __ENV:VITE_MAIN_DOMAIN_URL__/en/other/legal/
+    - title: About Cookies
+      href: __ENV:VITE_MAIN_DOMAIN_URL__/en/other/cookies/
+  licenseText: Licensed under
+  licenseInfo: the MulanPSL2
+  copyright: 'Copyright © {year} openEuler. All rights reserved.'
+  beianInfo1: J. ICP B. No. 2020036654-1
+  beianInfo2: J.G.W.A.B. No. 11030102011597
+  beianLink: 'https://beian.miit.gov.cn/#/Integrated/index'
+  policeIcon: ./images/police.png
+
+footer_bg_img:
+  pc: ./images/footer-bg.png
+  mb: ./images/footer-bg-mo.png

@@ -151,3 +151,6 @@ app/.vitepress/dist
 .opencode/
 .aider/
 .cursor/
+
+# generated shared data (scripts/gen-footer.cjs)
+app/.vitepress/public/footer/
