@@ -14,7 +14,7 @@ summary: AgentCensor不改动 Agent 本身，也不依赖它的自我约束，�
 
 把生产环境的钥匙交给 Agent 的时候，我们其实没给它配套的工程约束。人类工程师写代码有 Git、Code Review、CI、回滚；轮到 Agent 干活，往往只剩下一句「请你小心一点」。
 
-OpenAtom openEuler（简称 “openEuler” 或“开源欧拉”）项目 [AgentCensor](https://gitcode.com/openeuler/YuShi) 要补的就是这一段：不改动 Agent 本身，也不依赖它的自我约束，而是在它与运行环境之间加一层可管控的执行面——每一次写入都要先经过隔离、留痕与判定，再决定要不要真正落地。
+OpenAtom openEuler（简称 “openEuler” 或“开源欧拉”）项目 [AgentCensor](https://gitcode.com/openeuler/AgentCensor) 要补的就是这一段：不改动 Agent 本身，也不依赖它的自我约束，而是在它与运行环境之间加一层可管控的执行面——每一次写入都要先经过隔离、留痕与判定，再决定要不要真正落地。
 
 ![alt text](1.png)
 
@@ -146,7 +146,7 @@ AgentCensor 想补上的，就是这一段。
 
 如果你也在做 Agent 基础设施，或者正在被 Agent 的破坏力困扰，欢迎大家来和我们聊聊，也欢饮大家分享使用心得、反馈问题或贡献代码。
 
-* 代码仓：<https://gitcode.com/openeuler/YuShi>
+* 代码仓：<https://gitcode.com/openeuler/AgentCensor>
 * 开发&维护Sig：sig-DevStaion
 
 欢迎添加下方openEuler小助手，让小助手邀请你进DevStaion交流群
