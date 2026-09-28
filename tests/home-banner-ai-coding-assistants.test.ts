@@ -235,8 +235,10 @@ describe('banner.yaml 整体数据完整性（设计 §3 / §5 测试策略）',
     }
   });
 
-  it('所有 banner 条目均包含 title_zh 和 title_en（locale 限定条目可省略另一语言）', () => {
+  it('所有 banner 条目均包含 title_zh 和 title_en（locale 限定条目可省略另一语言；attach 装饰型条目例外）', () => {
+    // 设计 §4：国庆条目为纯背景+attach 装饰型（attach.png 即艺术文字），无 title 文本字段
     for (const item of banners) {
+      if (item.attach) continue;
       const locales = item.locale ? item.locale.split(',') : ['zh', 'en'];
       if (locales.includes('zh')) {
         expect(item.title_zh, 'zh 可见条目应包含 title_zh').toBeDefined();
@@ -247,8 +249,10 @@ describe('banner.yaml 整体数据完整性（设计 §3 / §5 测试策略）',
     }
   });
 
-  it('所有 banner 条目均包含 href_zh 和 href_en（locale 限定条目可省略另一语言）', () => {
+  it('所有 banner 条目均包含 href_zh 和 href_en（locale 限定条目可省略另一语言；attach 装饰型条目例外）', () => {
+    // 设计 §4：国庆条目为纯背景+attach 装饰型，无 href 跳转
     for (const item of banners) {
+      if (item.attach) continue;
       const locales = item.locale ? item.locale.split(',') : ['zh', 'en'];
       if (locales.includes('zh')) {
         expect(item.href_zh, 'zh 可见条目应包含 href_zh').toBeDefined();
