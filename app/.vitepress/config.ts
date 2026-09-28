@@ -187,15 +187,17 @@ const config: UserConfig = {
   appearance: false, // enable dynamic scripts for dark mode
   titleTemplate: false, //  vitepress supports pageTitileTemplate since 1.0.0
   transformPageData(pageData) {
-    const filePath = pageData.filePath;
+    // 动态路由页（如 [event].md）的 filePath 仍是模板路径（含 [event]），
+    // 只有 relativePath 是参数替换后的真实页面路径，与 .geo 目录键一致。
+    const pagePath = pageData.relativePath;
     let lookupKey: string;
-    if (filePath.endsWith('index.md')) {
-      lookupKey = encodeURI(filePath.slice(0, -9));
+    if (pagePath.endsWith('index.md')) {
+      lookupKey = encodeURI(pagePath.slice(0, -9));
     } else {
-      lookupKey = encodeURI(filePath.slice(0, -3));
+      lookupKey = encodeURI(pagePath.slice(0, -3));
     }
-    if (isNews.test(filePath)) {
-      setNewsGeo(pageData, filePath, lookupKey, currentHostname);
+    if (isNews.test(pagePath)) {
+      setNewsGeo(pageData, pagePath, lookupKey, currentHostname);
     } else {
       setJSONLD(pageData, lookupKey);
       setTdk(pageData, lookupKey);
