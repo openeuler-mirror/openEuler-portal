@@ -16,6 +16,14 @@
 #   locale          可见语言 zh / en / zh,en（可选，默认 zh,en）
 #   title_size      标题字号 large | small（可选，默认 large）
 
+- bg_pc: ./images/national-day/pc.png
+  bg_pad: ./images/national-day/pad.png
+  bg_mb: ./images/national-day/mb.png
+  attach: ./images/national-day/attach.png
+  bg_theme: light
+  locale: zh
+  custom_class: banner-national-day
+
 - bg_pc: ./images/call-for-submissions/pc.jpg
   bg_pad: ./images/call-for-submissions/pad.jpg
   bg_mb: ./images/call-for-submissions/mb.jpg

@@ -89,7 +89,7 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
         v-for="(info, index) in bannerInfo"
         :key="index"
         class="banner-item"
-        :class="`banner-item${index}`"
+        :class="[`banner-item${index}`, info.custom_class]"
       >
         <OFigure
           class="banner-bg"
@@ -155,7 +155,7 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
         v-for="(info, index) in bannerInfo"
         :key="index"
         class="banner-item"
-        :class="`banner-item${index}`"
+        :class="[`banner-item${index}`, info.custom_class]"
       >
         <ContentWrapper class="banner-wrapper">
           <OFigure
@@ -352,5 +352,18 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 
 // 定制修改item4
 .banner-item4 {
+}
+
+// 国庆主题 Banner（custom_class 解耦索引）
+.banner-national-day {
+  .banner-attach {
+    height: 40%;
+    object-fit: contain;
+  }
+  @include respond('pad') {
+    .banner-attach {
+      height: 30%;
+    }
+  }
 }
 </style>
