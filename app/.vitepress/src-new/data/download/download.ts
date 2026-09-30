@@ -6,6 +6,24 @@ export default {
   zh: {
     COMMUNITY_LIST: [
       {
+        NAME: 'openEuler 26.09',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/26.09/',
+        DESC: '2026年9月30日，发布openEuler 26.09，基于6.6+ 6.18的双内核创新版本，面向AI等场景基于6.6内核持续提供更多新特性和功能扩展，包括Agent可观测、SkillHub、上下文管理、KV Cache协同加速、模型加载优化等，同时基于6.18内核增强DevStation智能开发者桌面能力，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+        RELEASE_DESC_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/26.09/server/releasenotes/introduction.html`,
+        INSTALL_GUIDENCE_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/26.09/server/installation_upgrade/installation/installation_preparations.html`,
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '/whitepaper/openEuler 26.09 技术白皮书.pdf',
+        LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+        WEBSITE_SELECT: '/zh/mirror/select/?version=26.09',
+        PUBLISH_DATE: '2026/09',
+        LTS: false,
+        VERSION: '26.09',
+        PLANNED_EOL: '2027/03',
+      },
+      {
         NAME: 'openEuler 24.03 LTS SP4',
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP4/',
         DESC: '2026年6月30日，发布openEuler 24.03 LTS SP4，基于6.6内核的24.03-LTS版本增强扩展版本（参见版本生命周期），面向服务器、云、AI场景，持续提供更多新特性和功能扩展，包括内核优化、灵衢超节点可靠性&易用性、NPU算力切分、推理服务快恢、E2B沙箱、智能诊断&调优&运维、编译器、机密虚机等，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
@@ -487,6 +505,24 @@ export default {
   },
   en: {
     COMMUNITY_LIST: [
+      {
+        NAME: 'openEuler 26.09',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/26.09/',
+        DESC: 'openEuler 26.09 is an innovative dual-kernel release based on Linux 6.6+ and 6.18 kernels. It delivers new AI capabilities, including agent observability, SkillHub, context management, KV cache acceleration, and optimized model loading, while enhancing the intelligent development experience of DevStation.',
+        RELEASE_DESC_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/26.09/server/releasenotes/introduction.html`,
+        INSTALL_GUIDENCE_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/26.09/server/installation_upgrade/installation/installation_preparations.html`,
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        LIFE_CYCLE_URL: '/en/other/lifecycle/',
+        WEBSITE_SELECT: '/en/mirror/select/?version=26.09',
+        WHITE_PAPER: '',
+        PUBLISH_DATE: '2026/09',
+        LTS: false,
+        VERSION: '26.09',
+        PLANNED_EOL: '2027/03',
+      },
       {
         NAME: 'openEuler 24.03 LTS SP4',
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP4/',

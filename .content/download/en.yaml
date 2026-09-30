@@ -6,10 +6,10 @@
 
 # community_versions: Version names displayed in the "Community Releases" tab (zh/en identical)
 community_versions:
+  - openEuler-26.09
   - openEuler-24.03-LTS-SP4
   - openEuler Embedded 26.03
   - openEuler-24.03-LTS-SP3
-  - openEuler-24.03-LTS-SP1
 
 # get_os: Get openEuler configurations (cloud/container/Windows/MacOS/virtualization/raspberry pi)
 #   id: Anchor ID

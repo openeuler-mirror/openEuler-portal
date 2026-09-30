@@ -7,10 +7,10 @@
 # community_versions: 首页"社区版本"tab 展示的版本名称列表（控制 COMMUNITY_LIST 中哪些版本显示）
 #   版本名称字符串（zh/en 相同）
 community_versions:
+  - openEuler-26.09
   - openEuler-24.03-LTS-SP4
   - openEuler Embedded 26.03
   - openEuler-24.03-LTS-SP3
-  - openEuler-24.03-LTS-SP1
 
 # get_os: 获取操作系统配置（6 种方式：公有云/容器/Windows/MacOS/虚拟化/树莓派）
 #   id: 锚点 ID

@@ -5,6 +5,9 @@
 #   htmlPage: 静态化 HTML 预览页路径（可选，有则点击打开 HTML 预览，无则下载 PDF）
 #   summary: 白皮书标题
 white_paper:
+  - path: '/whitepaper/openEuler%2026.09%20技术白皮书.pdf'
+    htmlPage: '/zh/whitepaper/openEuler-26.09-Technical-White-Paper'
+    summary: 'openEuler 26.09 白皮书'
   - path: '/whitepaper/openEuler%2024.03%20LTS%20SP4%20技术白皮书.pdf'
     htmlPage: '/zh/whitepaper/openEuler-24.03-LTS-SP4-Technical-White-Paper'
     summary: 'openEuler 24.03 LTS SP4 白皮书'
