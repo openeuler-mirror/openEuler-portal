@@ -148,6 +148,16 @@
       location_zh: 中国 上海
       location_en: Shanghai, China
       month: 8
+    - name_zh: openEuler on RISC-V Meetup 北京站
+      name_en: openEuler on RISC-V Meetup - Beijing
+      location_zh: 中国 北京
+      location_en: Beijing, China
+      month: 9
+    - name_zh: openEuler Meetup 成都站
+      name_en: openEuler Embedded Meetup - Chengdu
+      location_zh: 中国 成都
+      location_en: Chengdu, China
+      month: 9
 
 - id: college
   title_zh: 赛事 & 高校
