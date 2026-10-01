@@ -23,10 +23,17 @@ export default {
           label: 'Get openEuler',
           children: [
             {
+              label: 'openEuler 26.09',
+              description:
+                'Discover a new dual-kernel experience for AI and intelligent development.',
+              tag: TAG_TYPE.NEW,
+              href: '/en/download/#openEuler 26.09',
+            },
+            {
               label: 'openEuler 24.03 LTS SP4',
               description:
                 'Enhance server, cloud, and AI workloads with upgraded reliability, inference, O&M, and security.',
-              tag: TAG_TYPE.NEW,
+              tag: null,
               href: '/en/download/#openEuler 24.03 LTS SP4',
             },
             {
@@ -35,13 +42,6 @@ export default {
                 'Explore the UnifiedBus SuperPoD architecture on openEuler.',
               tag: null,
               URL: '/en/download/#openEuler 24.03 LTS SP3',
-            },
-            {
-              label: 'openEuler 24.03 LTS SP1',
-              description:
-                'Enhanced 24.03 LTS SP1 on kernel 6.6. Better experience for users and devs.',
-              tag: null,
-              href: '/en/download/#openEuler 24.03 LTS SP1',
             },
             {
               label: 'More',
@@ -95,16 +95,16 @@ export default {
           isBlank: true,
         },
         {
+          label: 'openEuler 26.09 Installation Guide',
+          href: `${
+            import.meta.env.VITE_SERVICE_DOCS_URL
+          }/en/docs/26.09/server/installation_upgrade/installation/installation_preparations.html`,
+        },
+        {
           label: 'openEuler 24.03 LTS SP4 Installation Guide',
           href: `${
             import.meta.env.VITE_SERVICE_DOCS_URL
           }/en/docs/24.03_LTS_SP4/server/installation_upgrade/installation/installation_preparations.html`,
-        },
-        {
-          label: 'openEuler 25.09 Installation Guide',
-          href: `${
-            import.meta.env.VITE_SERVICE_DOCS_URL
-          }/en/docs/25.09/server/installation_upgrade/installation/installation_preparations.html`,
         },
         {
           label: 'Technical White Papers',
@@ -237,13 +237,13 @@ export default {
               description:
                 'Learn the community essentials in 10 minutes, build and grow quickly.',
               tag: TAG_TYPE.HOT,
-              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP4/getting_start/quick_start.html`,
+              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/26.09/getting_start/quick_start.html`,
             },
             {
               label: 'Installation Guide',
               description:
                 'Step-by-step instructions for installing openEuler.',
-              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP3/server/installation_upgrade/installation/installation_preparations.html`,
+              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/26.09/server/installation_upgrade/installation/installation_preparations.html`,
             },
             {
               label: 'Frequently Asked Questions',

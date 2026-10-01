@@ -25,10 +25,17 @@ export default {
           label: '获取openEuler',
           children: [
             {
+              label: 'openEuler 26.09',
+              description:
+                'openEuler 26.09是基于6.6+ 6.18的双内核创新版本，面向AI等场景基于6.6内核持续提供更多新特性和功能扩展，包括Agent可观测、SkillHub、上下文管理、KV Cache协同加速、模型加载优化等，同时基于6.18内核增强DevStation智能开发者桌面能力，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+              tag: TAG_TYPE.NEW,
+              href: '/zh/download/#openEuler 26.09',
+            },
+            {
               label: 'openEuler 24.03 LTS SP4',
               description:
                 'openEuler 24.03 LTS SP4是基于6.6内核的24.03-LTS版本增强扩展版本，面向服务器、云、AI场景，持续提供更多新特性和功能扩展，包括内核优化、灵衢超节点可靠性&易用性、NPU算力切分、推理服务快恢、E2B沙箱、智能诊断&调优&运维、编译器、机密虚机等，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
-              tag: TAG_TYPE.NEW,
+              tag: null,
               href: '/zh/download/#openEuler 24.03 LTS SP4',
             },
             {
@@ -37,13 +44,6 @@ export default {
                 'openEuler首个支持超节点的版本正式发布。新版本openEuler 24.03 LTS SP3是基于6.6内核的24.03-LTS版本增强扩展版本，面向服务器、云、AI场景，持续提供更多新特性和功能扩展，包括内核优化、异构协同推理、智能诊断、机密虚机、编译器、RISC-V架构优化、智能开发者桌面、安全加固、灵衢超节点、身份认证、虚拟化等，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
               tag: null,
               href: '/zh/download/#openEuler 24.03 LTS SP3',
-            },
-            {
-              label: 'openEuler 24.03 LTS SP1',
-              description:
-                '基于6.6内核的24.03 LTS版本增强扩展版本，面向服务器、云、边缘计算和嵌入式场景，持续提供更多新特性和功能扩展，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
-              tag: null,
-              href: '/zh/download/#openEuler 24.03 LTS SP1',
             },
             {
               label: '其他获取方式',
@@ -101,16 +101,16 @@ export default {
           isBlank: true,
         },
         {
+          label: '26.09安装指南',
+          href: `${
+            import.meta.env.VITE_SERVICE_DOCS_URL
+          }/zh/docs/26.09/server/installation_upgrade/installation/installation_preparations.html`,
+        },
+        {
           label: '24.03 LTS SP4安装指南',
           href: `${
             import.meta.env.VITE_SERVICE_DOCS_URL
           }/zh/docs/24.03_LTS_SP4/server/installation_upgrade/installation/installation_preparations.html`,
-        },
-        {
-          label: '25.09安装指南',
-          href: `${
-            import.meta.env.VITE_SERVICE_DOCS_URL
-          }/zh/docs/25.09/server/installation_upgrade/installation/installation_preparations.html`,
         },
         {
           label: '技术白皮书',
@@ -283,12 +283,12 @@ export default {
               label: '新手入门',
               description: '10分钟玩转社区，快速构建与成长',
               tag: TAG_TYPE.HOT,
-              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP4/getting_start/quick_start.html`,
+              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/26.09/getting_start/quick_start.html`,
             },
             {
               label: '安装指南',
               description: '指导用户顺利完成 openEuler 操作系统安装',
-              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP3/server/installation_upgrade/installation/installation_preparations.html`,
+              href: `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/26.09/server/installation_upgrade/installation/installation_preparations.html`,
             },
             {
               label: '常见问题',

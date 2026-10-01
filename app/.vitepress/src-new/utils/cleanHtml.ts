@@ -297,7 +297,8 @@ export function parseHtml(text: string): { body: string; styleTag: string; toc: 
       .replace(/\s*font-family\s*:\s*([^;]+);?\s*/gi, (fm, val: string) =>
         SYMBOL_FONT_RE.test(val) ? fm : ' '
       )
-      .replace(/\bbody\b/g, '.viewer-body');
+      .replace(/\bbody\b/g, '.viewer-body')
+      .replace(/\ba:(link|visited|active|hover|focus)\b/gi, '.viewer-body a:$1');
     styleParts.push(css);
   }
   // .MsoHeading7/.MsoHeading8 是 Word 的标题 7/8 样式（h1-h6 之后的标题级别），
