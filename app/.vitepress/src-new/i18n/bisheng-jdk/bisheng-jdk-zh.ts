@@ -51,10 +51,4 @@ export default {
   downloadTitle: '下载',
   downloadDesc: '毕昇JDK软件包',
   downloadLink: '毕昇JDK软件包',
-
-  // 友情链接
-  linksTitle: '友情链接',
-  linkBishengJdk: '毕昇JDK（鲲鹏社区）',
-  linkBishengCompiler: '毕昇编译器（鲲鹏社区）',
-  linkGcc: 'GCC for openEuler（鲲鹏社区）',
 };
