@@ -52,10 +52,4 @@ export default {
   downloadTitle: 'Download',
   downloadDesc: 'BiSheng JDK Software',
   downloadLink: 'BiSheng JDK Software',
-
-  // Links
-  linksTitle: 'Links',
-  linkBishengJdk: 'BiSheng JDK (Kunpeng Community)',
-  linkBishengCompiler: 'BiSheng Compiler (Kunpeng Community)',
-  linkGcc: 'GCC for openEuler (Kunpeng Community)',
 };

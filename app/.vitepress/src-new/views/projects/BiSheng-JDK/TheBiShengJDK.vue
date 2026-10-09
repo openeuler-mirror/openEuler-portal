@@ -6,7 +6,6 @@ import BiShengIntro from './components/BiShengIntro.vue';
 import BiShengQuickLinks from './components/BiShengQuickLinks.vue';
 import BiShengArchitecture from './components/BiShengArchitecture.vue';
 import BiShengLearn from './components/BiShengLearn.vue';
-import BiShengLinks from './components/BiShengLinks.vue';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -109,7 +108,6 @@ const feedbackLinks = [
   <BiShengQuickLinks />
   <BiShengArchitecture />
   <BiShengLearn />
-  <BiShengLinks />
 </template>
 
 <style scoped lang="scss">

@@ -41,7 +41,7 @@ const learnItems = [
     links: [
       {
         textKey: 'bishengJdk.downloadLink',
-        href: 'https://www.hikunpeng.com/zh/developer/devkit/compiler/jdk',
+        href: 'https://www.hikunpeng.com/developer/devkit/downloadNew',
       },
     ],
   },
