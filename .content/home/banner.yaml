@@ -26,14 +26,6 @@
   href_zh: /zh/download/#openEuler%2026.09
   is_blank: true
 
-- bg_pc: ./images/national-day/pc.png
-  bg_pad: ./images/national-day/pad.png
-  bg_mb: ./images/national-day/mb.png
-  attach: ./images/national-day/attach.png
-  bg_theme: light
-  locale: zh
-  custom_class: banner-national-day
-
 - bg_pc: ./images/call-for-submissions/pc.jpg
   bg_pad: ./images/call-for-submissions/pad.jpg
   bg_mb: ./images/call-for-submissions/mb.jpg

@@ -354,16 +354,4 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 .banner-item4 {
 }
 
-// 国庆主题 Banner（custom_class 解耦索引）
-.banner-national-day {
-  .banner-attach {
-    height: 40%;
-    object-fit: contain;
-  }
-  @include respond('pad') {
-    .banner-attach {
-      height: 30%;
-    }
-  }
-}
 </style>

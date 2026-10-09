@@ -40,8 +40,7 @@ describe('banner.yaml — 新增"有奖征稿"轮播条目（设计 §3）', () 
     expect(entry.bg_pc).toContain('call-for-submissions');
   });
 
-  it('"有奖征稿"条目位于 zh 第二位（国庆主题 banner 插入首位后索引下移，设计 §4 索引漂移）', () => {
-    expect(banners[0].bg_pc).toContain('national-day');
+  it('条目位于 raw 数组第二位（删国庆条目后，设计 §4 索引漂移）', () => {
     expect(banners[1].bg_pc).toContain('call-for-submissions');
   });
 
