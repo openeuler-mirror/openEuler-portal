@@ -1,0 +1,81 @@
+# openEuler Summit 2026 页面数据 / Summit 2026 page data
+#
+# 顶层板块（按页面从上到下顺序）：
+#   banner     顶部 banner（PC / pad / 移动端背景图、文字图、报名按钮，移动端整屏报名热区）
+#   introduce  大会简介
+#   callfor    Call for 征集卡片（Speakers / Talks）
+#   previous   精彩回顾
+# 图片路径相对本 yaml 文件（./images/...），由构建插件重写为带 hash 的 URL。
+# 主题变体（亮色/暗色）拆为 light/dark 两个字段。
+
+# banner: 顶部 banner（背景图 + 文字图 + 报名按钮）
+# <=840px 直接使用移动端 banner：背景图自带文案，不渲染文字图与按钮，整个 banner 为报名热区
+# 文字图 >840px（pad 横屏 / PC）共用一份（透明底 PNG），显示尺寸由组件按断点控制
+banner:
+  bg_pc:
+    light: ./images/banner-pc-light.jpg
+    dark: ./images/banner-pc-dark.jpg
+  bg_pad:
+    light: ./images/banner-pad-light.jpg
+    dark: ./images/banner-pad-dark.jpg
+  bg_mb:
+    light: ./images/banner-mb-light.jpg
+    dark: ./images/banner-mb-dark.jpg
+  text_img:
+    light: ./images/textImg-light.png
+    dark: ./images/textImg-dark.png
+  text_img_alt: Agentic Infra 操作系统大会 & openEuler Summit 2026，11月13日-14日，中国·北京中关村国际创新中心
+  # 报名入口（>840px 为按钮，<=840px 为整屏热区并使用移动端报名链接 button_link_mb）
+  button_text: 立即报名
+  button_link: https://openatomcon.openatom.cn/registration/?code=3Ytx&activityNo=HD20261010110123
+  button_link_mb: https://openatomcon.openatom.cn/registration_mobile/?code=3Ytx&activityNo=HD20261010110123
+
+# introduce: 大会简介（描述、亮点列表、口号）
+introduce:
+  desc:
+    - Agentic AI时代加速到来，算力基础设施正经历深刻变革，操作系统迎来全新的发展范式。历经七载深耕，作为中国领先的开源操作系统，openEuler已广泛部署在互联网及国计民生等千行万业，率先发布超节点OS，持续引领数智化创新。面向Agentic AI时代，openEuler将立足打造Agentic Infra坚实底座，携手产业伙伴共赴下一代操作系统的演进之路。
+    - 为此，我们诚挚地邀请您出席将于2026年11月13日-14日在北京中关村国际创新中心举办的 <strong>Agentic Infra 操作系统大会 &amp; openEuler Summit 2026</strong>。本次大会以"智启未来，引领 Agentic Infra 创新"为主题，集中展示 openEuler 在超节点 OS 与 Agentic Infra 领域的最新突破，与产业界一起凝聚共识，共同探索 AI 规模化落地所必需的高效、安全底座。
+  tips: 我们诚挚地邀请您莅临大会现场，在这里您将可以：
+  list:
+    - 见证 openEuler 在超节点 OS 上的最新成果发布与 Agentic Infra 的关键技术突破
+    - 见证全球伙伴重磅AI产品与方案发布，洞悉操作系统在AI时代的关键角色
+    - 参与30+场主题演讲与圆桌论坛，与全球专家、开发者共话Agentic Infra前沿观点与落地实践
+    - 走进1000㎡沉浸式交流区，体验最新Agentic AI技术创新并动手实践，感受伙伴AI联创成果的全景演绎
+  slogan:
+    - 志合者，不以山海为远。我们期待与您相聚北京，共话Agentic AI时代的技术演进之道，携手谱写Agentic Infra的创新篇章！
+
+# callfor: Call for 征集卡片（>840px 两列横排均分；601-840px 两列网格；<=600px 单列纵排且限宽 400px 居中）
+# bg: 卡片背景图（各端共用一份）
+# link: 卡片跳转链接（新窗口打开）
+callfor:
+  bg:
+    light: ./images/card-light.jpg
+    dark: ./images/card-dark.jpg
+  list:
+    - title: SPEAKERS 征集
+      sub: Agentic Infra 操作系统大会 2026
+      link: 'https://shimo.im/forms/zdkydZQ8gLIpV7q6/fill'
+    - title: TALKS 征集
+      sub: openEuler Summit 2026
+      link: 'https://sessionize.com/openeuler-summit-2026/'
+
+# previous: 精彩回顾（历届活动链接）
+previous:
+  title: 精彩回顾
+  list:
+    - name: openEuler Developer Day 2026
+      link: /zh/interaction/summit-list/devday2026/
+    - name: 操作系统大会 & openEuler Summit 2025
+      link: /zh/interaction/summit-list/summit2025/
+    - name: openEuler Developer Day 2025
+      link: /zh/interaction/summit-list/devday2025/
+    - name: openEuler Summit 2024
+      link: /zh/interaction/summit-list/summit2024/
+    - name: openEuler SIG Gathering 2024
+      link: /zh/interaction/summit-list/sig-gathering-2024/
+    - name: openEuler Summit 2023
+      link: /zh/interaction/summit-list/summit2023/
+    - name: openEuler Developer Day 2023
+      link: /zh/interaction/summit-list/devday2023/
+    - name: openEuler Summit 2022
+      link: /zh/interaction/summit-list/summit2022/

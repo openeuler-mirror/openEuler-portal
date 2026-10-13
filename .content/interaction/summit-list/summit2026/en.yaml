@@ -1,0 +1,74 @@
+# openEuler Summit 2026 page data
+#
+# Top-level sections (top to bottom on the page):
+#   banner     Top banner (PC / pad / mobile background, text image, registration button, full-banner hotspot on mobile)
+#   introduce  Conference intro
+#   callfor    Call for cards (Speakers / Talks)
+#   previous   Past events
+# Image paths are relative to this yaml (./images/...) and rewritten to hashed URLs by the build plugin.
+# Theme variants (light/dark) are split into light/dark fields.
+
+# banner: Top banner (background + text image + registration button)
+# At or below 840px the mobile banner is used directly: background image has built-in text, no text image or button, the whole banner is the registration hotspot
+# The text image is shared above 840px (pad-h / PC, transparent PNG); display size is controlled by the component per breakpoint
+banner:
+  bg_pc:
+    light: ./images/banner-pc-light.jpg
+    dark: ./images/banner-pc-dark.jpg
+  bg_pad:
+    light: ./images/banner-pad-light.jpg
+    dark: ./images/banner-pad-dark.jpg
+  bg_mb:
+    light: ./images/banner-mb-light.jpg
+    dark: ./images/banner-mb-dark.jpg
+  text_img:
+    light: ./images/textImg-light.png
+    dark: ./images/textImg-dark.png
+  text_img_alt: Agentic Infra OS Conference & openEuler Summit 2026, November 13-14, Zhongguancun International Innovation Center, Beijing, China
+  # Registration entry (button above 840px; full-banner hotspot at or below 840px using button_link_mb)
+  button_text: Register Now
+  button_link: https://openatomcon.openatom.cn/registration/?code=3Ytx&activityNo=HD20261010110123
+  button_link_mb: https://openatomcon.openatom.cn/registration_mobile/?code=3Ytx&activityNo=HD20261010110123
+
+# introduce: Conference intro (description, highlights, slogan)
+introduce:
+  desc:
+    - As the era of agentic AI accelerates, computing infrastructure is undergoing profound transformation, giving rise to a new paradigm for operating systems. Over seven years, openEuler has grown into a leading open-source OS in China, deployed across the critical industries and public services. It pioneered the SuperPoD OS and continues to drive innovation in digital intelligence. For the agentic AI era, openEuler is committed to building a solid foundation for agentic infra, and advancing with industry partners toward the next-generation OS.
+    - We invite you to the <strong>Agentic Infra OS Conference &amp; openEuler Summit 2026</strong>, held on November 13–14, 2026 at the ZGC International Innovation Center, Beijing, China. Under the theme “Building Agentic Infra from the OS Up”, the event will unveil openEuler's latest breakthroughs in SuperPoD OS and agentic infra. It aims to align the industry around the need for an efficient and secure foundation to support the large-scale deployment of AI.
+  # 值以冒号结尾，必须加引号（YAML 限制）
+  tips: 'At the event, you will:'
+  list:
+    - Witness openEuler's latest SuperPoD OS releases and key technological breakthroughs in agentic infra
+    - Discover flagship AI products and solutions from global partners, and gain insights into the critical role of the OS in the AI era
+    - Attend 30+ keynotes and panel discussions with global experts and developers on agentic infra trends and best practices
+    - Explore a 1,000 m² immersive experience zone with hands-on agentic AI demos and partners' AI co-innovation showcases
+  slogan:
+    - A shared vision brings us together, across mountains and seas. We look forward to seeing you in Beijing, as we chart the next chapter of agentic AI together.
+
+# callfor: Call for cards (two cards side by side above 840px; 2-column grid from 601px to 840px; single column at or below 600px, cards capped at 400px and centered)
+# bg: Card background image (one copy shared across breakpoints)
+# link: Card link (opens in a new tab)
+callfor:
+  bg:
+    light: ./images/card-light.jpg
+    dark: ./images/card-dark.jpg
+  list:
+    - title: CALL FOR SPEAKERS
+      sub: Agentic Infra OS Conference 2026
+      link: '#'
+    - title: CALL FOR TALKS
+      sub: openEuler Summit 2026
+      link: '#'
+
+# previous: Past events (links to previous summits)
+previous:
+  title: Past Events
+  list:
+    - name: Operating System Conference & openEuler Summit 2025
+      link: /en/interaction/summit-list/summit2025/
+    - name: openEuler Summit 2024
+      link: /en/interaction/summit-list/summit2024/
+    - name: openEuler SIG Gathering 2024
+      link: /en/interaction/summit-list/sig-gathering-2024/
+    - name: openEuler Summit 2023
+      link: /en/interaction/summit-list/summit2023/

@@ -13,8 +13,32 @@
 #   href_zh/en      中英文跳转链接
 #   is_blank        是否新窗口打开（可选）
 #   attach          附加装饰图（可选）
+#   custom_class    定制样式类名（可选，作用于轮播项，样式定义在 HomeBanner.vue）
 #   locale          可见语言 zh / en / zh,en（可选，默认 zh,en）
 #   title_size      标题字号 large | small（可选，默认 large）
+
+- bg_pc: ./images/summit/pc.jpg
+  bg_pad: ./images/summit/pad.jpg
+  bg_mb: ./images/summit/mb.jpg
+  bg_theme: light
+  attach: ./images/summit/text.png
+  custom_class: summit
+  btn_zh: 查看详情
+  btn_en: View More
+  href_zh: /zh/interaction/summit-list/summit2026/
+  href_en: /en/interaction/summit-list/summit2026/
+  is_blank: true
+
+- bg_pc: ./images/contribution-star/pc.jpg
+  bg_pad: ./images/contribution-star/pad.jpg
+  bg_mb: ./images/contribution-star/mb.jpg
+  bg_theme: light
+  locale: zh
+  attach: ./images/contribution-star/text.png
+  custom_class: contribution-star
+  btn_zh: 查看详情
+  href_zh: https://mp.weixin.qq.com/s/kaTAG3IAxgHCu4RMFhfDiA
+  is_blank: true
 
 - bg_pc: ./images/release/pc.jpg
   bg_pad: ./images/release/pad.jpg

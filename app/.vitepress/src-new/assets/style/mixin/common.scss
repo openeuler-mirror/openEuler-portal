@@ -1,5 +1,21 @@
 @use "@opensig/opendesign/es/_styles/mixin.scss" as *;
 
+// ≤360px 小屏手机档（phone_s）：OpenDesign 断点表之外的补充档位
+// 用法与 respond 一致：@include respond-phone-s { ... }
+@mixin respond-phone-s {
+  @media (max-width: 360px) {
+    @content;
+  }
+}
+
+// ≤450px 中屏手机档（phone_m）：OpenDesign 断点表之外的补充档位
+// 用法与 respond 一致：@include respond-phone-m { ... }
+@mixin respond-phone-m {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+
 @mixin in-dark {
   [data-o-theme='e.dark'] {
     @content;
