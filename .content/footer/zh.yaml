@@ -1,42 +1,160 @@
 # 页脚数据 / Footer data
 #
-# friendship_links: 友情链接
-#   href: 链接地址
-#   title: 站点名称
+# 结构与 OFooter props（@opendesign-plus/components）对齐：
+# info / friendshipLink / footerLogo / qrcode 为纯静态数据，组件导入后直接传给 OFooter；
+# quickNav / footerOption / footer_bg_img 含变量（__ENV:VITE_XXX__ 环境变量占位符、{year} 年份、屏宽切换），组件内做一轮替换后传用。
 #
-# filing: 备案信息
-#   link: 备案链接
-#   icon: 备案图标
+# info: 开放原子基金会介绍（页脚顶部）
+#   title: 介绍文案
+#   logo: 基金会 logo
+#   href: 基金会链接
 #
-# 注意：linksData 和 quickNav 因依赖 import.meta.env 环境变量，未提取到 yaml，
-# 仍保留在 src-new/data/footer/index.ts 中。
+# quickNav: 底部导航（按列分组，从左到右）
+#   title: 列标题
+#   children: 导航项（title: 名称 / href: 链接，支持 __ENV:VITE_XXX__ 占位符）
+#
+# qrcode: 右侧二维码（英文站为空数组，不展示）
+#   img: 二维码图片
+#   label: 二维码名称
+#
+# friendshipLink: 友情链接
+#   title: 板块标题
+#   children: 链接列表（href: 链接地址 / title: 站点名称）
+#
+# footerLogo: openEuler 标识与联系方式
+#   logo: openEuler logo
+#   email: 联系邮箱
+#
+# footerOption: 底部声明区
+#   children: 声明链接（title: 名称 / href: 链接，支持 __ENV:VITE_XXX__ 占位符）
+#   license_text → licenseText: 许可证前缀文案
+#   license_info → licenseInfo: 许可证名称
+#   copyright: 版权文案（{year} 为年份占位符，运行时替换）
+#   beian_info_1/beian_info_2 → beianInfo1/beianInfo2: 备案文案
+#   beian_link → beianLink: 备案链接
+#   police_icon → policeIcon: 备案图标
+#
+# footer_bg_img: 页脚背景图（组件按屏宽取 pc/mb）
+#   pc: PC 背景图
+#   mb: 移动端背景图
 
-friendship_links:
-  - href: 'https://portal.mulanos.cn/'
-    title: '木兰开源社区'
-  - href: 'https://www.hikunpeng.com/zh/'
-    title: '鲲鹏社区'
-  - href: 'https://pcl.ac.cn/'
-    title: '鹏城实验室'
-  - href: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian'
-    title: 'InfoQ'
-  - href: 'https://kaiyuanshe.cn/'
-    title: '开源社'
-  - href: 'http://www.vulab.com.cn/'
-    title: '中科微澜'
-  - href: 'https://www.authing.cn/'
-    title: 'Authing'
-  - href: 'https://www.opengauss.org/zh/'
-    title: 'openGauss'
-  - href: 'https://www.mindspore.cn/'
-    title: '昇思MindSpore'
-  - href: 'https://www.openubmc.cn/'
-    title: 'openUBMC'
-  - href: 'https://www.openfuyao.cn/'
-    title: 'openFuyao'
-  - href: 'http://www.ebaina.com/'
-    title: 'Ebaina'
+info:
+  title: 'openEuler是由开放原子开源基金会孵化的全场景开源操作系统项目，面向数字基础设施四大核心场景（服务器、云计算、边缘计算、嵌入式），全面支持ARM、x86、RISC-V、LoongArch、PowerPC、SW-64等多样性计算架构'
+  logo: ./images/atom-logo.png
+  href: 'https://openatom.cn'
 
-filing:
-  link: 'https://beian.miit.gov.cn/#/Integrated/index'
-  icon: ./images/police.png
+quickNav:
+  - title: 关于openEuler
+    children:
+      - title: 成员单位
+        href: /zh/community/member/
+      - title: 组织架构
+        href: /zh/community/organization/
+      - title: 社区章程
+        href: /zh/community/charter/
+      - title: 贡献看板
+        href: __ENV:VITE_SERVICE_DATASTAT_URL__/zh/overview
+      - title: 社区介绍
+        href: '/whitepaper/openEuler%20%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E4%BB%8B%E7%BB%8D.pdf'
+  - title: 新闻与资讯
+    children:
+      - title: 新闻
+        href: /zh/interaction/news-list/
+      - title: 博客
+        href: /zh/interaction/blog-list/
+      - title: 白皮书
+        href: /zh/showcase/technical-white-paper/
+  - title: 获取与下载
+    children:
+      - title: 获取openEuler操作系统
+        href: /zh/download/#get-openeuler
+      - title: 最新社区发行版
+        href: /zh/download/
+      - title: 商业发行版
+        href: /zh/download/commercial-release/
+      - title: 软件中心
+        href: __ENV:VITE_SERVICE_SOFTWARE_URL__/zh
+  - title: 支持与服务
+    children:
+      - title: 文档
+        href: __ENV:VITE_SERVICE_DOCS_URL__/zh/
+      - title: FAQ
+        href: __ENV:VITE_MAIN_DOMAIN_URL__/zh/faq/
+      - title: 联系我们
+        href: /zh/contact-us/
+  - title: 互动与交流
+    children:
+      - title: 邮件列表
+        href: /zh/community/mailing-list/
+      - title: 活动
+        href: /zh/interaction/event-list/
+      - title: 论坛
+        href: __ENV:VITE_SERVICE_FORUM_URL__
+  - title: 贡献与成长
+    children:
+      - title: SIG中心
+        href: /zh/sig/sig-list/
+      - title: 贡献攻略
+        href: /zh/community/contribution/
+      - title: 课程中心
+        href: /zh/learn/mooc/
+
+qrcode:
+  - img: ./images/code-zgz.jpg
+    label: WeChat Subscription
+  - img: ./images/code-xzs.png
+    label: WeChat Assistant
+
+friendshipLink:
+  title: 友情链接
+  children:
+    - href: 'https://portal.mulanos.cn/'
+      title: 木兰开源社区
+    - href: 'https://www.hikunpeng.com/zh/'
+      title: 鲲鹏社区
+    - href: 'https://pcl.ac.cn/'
+      title: 鹏城实验室
+    - href: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian'
+      title: InfoQ
+    - href: 'https://kaiyuanshe.cn/'
+      title: 开源社
+    - href: 'http://www.vulab.com.cn/'
+      title: 中科微澜
+    - href: 'https://www.authing.cn/'
+      title: Authing
+    - href: 'https://www.opengauss.org/zh/'
+      title: openGauss
+    - href: 'https://www.mindspore.cn/'
+      title: 昇思MindSpore
+    - href: 'https://www.openubmc.cn/'
+      title: openUBMC
+    - href: 'https://www.openfuyao.cn/'
+      title: openFuyao
+    - href: 'http://www.ebaina.com/'
+      title: Ebaina
+
+footerLogo:
+  logo: ./images/footer-logo2.png
+  email: contact@openeuler.io
+
+footerOption:
+  children:
+    - title: 品牌
+      href: __ENV:VITE_MAIN_DOMAIN_URL__/zh/other/brand/
+    - title: 隐私声明
+      href: __ENV:VITE_MAIN_DOMAIN_URL__/zh/other/privacy/
+    - title: 法律声明
+      href: __ENV:VITE_MAIN_DOMAIN_URL__/zh/other/legal/
+    - title: 关于cookies
+      href: __ENV:VITE_MAIN_DOMAIN_URL__/zh/other/cookies/
+  licenseText: 遵循
+  licenseInfo: 木兰宽松许可证第2版（MulanPSL2）
+  copyright: '版权所有 © {year} openEuler 保留一切权利'
+  beianInfo1: 京ICP备2020036654号-1
+  beianInfo2: 京公网安备 11030102011597 号
+  beianLink: 'https://beian.miit.gov.cn/#/Integrated/index'
+  policeIcon: ./images/police.png
+
+footer_bg_img:
+  pc: ./images/footer-bg.png
+  mb: ./images/footer-bg-mo.png

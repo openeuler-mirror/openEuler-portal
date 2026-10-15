@@ -1,20 +1,11 @@
 declare module '#content/footer' {
-  // friendship_links: 友情链接
-  interface FriendshipLinkItemT {
-    href: string;
-    title: string;
-  }
+  import type { FooterT } from '@opendesign-plus/components';
 
-  // filing: 备案信息
-  interface FilingT {
-    link: string;
-    icon: string;
-  }
-
-  interface FooterContentT {
-    friendship_links: FriendshipLinkItemT[];
-    filing: FilingT;
-  }
+  // 结构对齐 OFooter props，纯静态板块导入后直接传用；
+  // footerBgImg 拆为 footer_bg_img.pc/mb 供屏宽切换，simple 为组件内部开关不进数据
+  type FooterContentT = Omit<FooterT, 'footerBgImg' | 'simple'> & {
+    footer_bg_img: { pc: string; mb: string };
+  };
 
   const data: {
     zh: FooterContentT;

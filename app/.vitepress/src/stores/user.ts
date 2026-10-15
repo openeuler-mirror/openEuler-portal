@@ -1,4 +1,3 @@
-import { oa } from '@/shared/analytics';
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 import { useLoginStore, LOGIN_STATUS } from '@opendesign-plus/composables';

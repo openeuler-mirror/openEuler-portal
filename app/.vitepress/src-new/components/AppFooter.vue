@@ -4,94 +4,68 @@ import { useData } from 'vitepress';
 
 import { OFooter } from '@opendesign-plus/components';
 
-import { useLocale } from '~@/composables/useLocale';
+import footerContent from '#content/footer';
 import { useScreen } from '~@/composables/useScreen';
 
-import {
-  linksData,
-  quickNav,
-} from '~@/data/footer';
-import footerContent from '#content/footer';
-
-import LogoFooter from '~@/assets/category/footer/footer-logo2.png';
-import LogoAtom from '~@/assets/category/footer/atom-logo.png';
-import footerImg from '~@/assets/category/footer/footer-bg.png';
-import footerImgMb from '~@/assets/category/footer/footer-bg-mo.png';
-
-// 公众号、小助手
-import CodeImgXzs from '~@/assets/category/footer/code-xzs.png';
-import CodeImgZgz from '~@/assets/category/footer/code-zgz.jpg';
-
-const { t } = useLocale();
 const { lePadV } = useScreen();
 const { lang } = useData();
 
-const friendshipLinks = {
-  zh: footerContent.zh.friendship_links,
-  en: footerContent.en.friendship_links,
-};
-const filingData = footerContent.zh.filing;
+const content = computed(() => footerContent[lang.value as 'zh' | 'en']);
 
-const info = computed(() => {
-  return {
-    title: t('footer.atomText'),
-    logo: LogoAtom,
-    href: 'https://openatom.cn',
+// yaml 中 __ENV:VITE_XXX__ 占位符对应的环境变量（值由 Vite 构建时注入，dev/prod 域名不同）
+const ENV_MAP: Record<string, string> = {
+  VITE_MAIN_DOMAIN_URL: import.meta.env.VITE_MAIN_DOMAIN_URL,
+  VITE_SERVICE_DATASTAT_URL: import.meta.env.VITE_SERVICE_DATASTAT_URL,
+  VITE_SERVICE_SOFTWARE_URL: import.meta.env.VITE_SERVICE_SOFTWARE_URL,
+  VITE_SERVICE_DOCS_URL: import.meta.env.VITE_SERVICE_DOCS_URL,
+  VITE_SERVICE_FORUM_URL: import.meta.env.VITE_SERVICE_FORUM_URL,
+};
+
+const resolveEnv = (url: string) =>
+  url.replace(/__ENV:([A-Z0-9_]+)__/g, (_, key: string) => ENV_MAP[key] ?? '');
+
+// 仅处理含变量的板块：quickNav.children.href 替换 __ENV:VITE_XXX__ 占位符
+const quickNav = computed(() =>
+  content.value.quickNav.map((group) => ({
+    ...group,
+    children: group.children.map((item) => ({
+      ...item,
+      href: resolveEnv(item.href),
+    })),
+  }))
+);
+
+// footerOption.children.href 替换 __ENV:VITE_XXX__、copyright 替换 {year}，其余字段原样透传
+const footerOption = computed(() => ({
+  ...content.value.footerOption,
+  copyright: content.value.footerOption.copyright.replace(
+    '{year}',
+    String(new Date().getFullYear())
+  ),
+  children: content.value.footerOption.children.map((item) => ({
+    ...item,
+    href: resolveEnv(item.href),
+  })),
+}));
+
+const footerBg = computed(() => {
+  if (lePadV.value) {
+    return content.value.footer_bg_img.mb;
   }
+  return content.value.footer_bg_img.pc;
 });
-
-const quickData = computed(() => {
-  return quickNav[lang.value];
-});
-
-const friendshipData = computed(() => {
-  return {
-    title: t('footer.friendshipLink'),
-    children: friendshipLinks[lang.value]
-  };
-});
-
-const footerLogo = {
-  logo: LogoFooter,
-  email: 'contact@openeuler.io',
-};
-
-const footerOption = computed(() => {
-  return {
-    children: linksData[lang.value],
-    licenseText: t('footer.license_1'),
-    licenseInfo: t('footer.license_2'),
-    copyright: t('footer.copyRight', { year: new Date().getFullYear() }),
-    beianInfo1: t('footer.filingText1'),
-    beianInfo2: t('footer.filingText2'),
-    beianLink: filingData.link,
-    policeIcon: filingData.icon,
-  };
-});
-
-// 公众号、小助手
-const qrcode = [
-  {
-    img: CodeImgZgz,
-    label: t('footer.qrCode'),
-  },
-  {
-    img: CodeImgXzs,
-    label: t('footer.qrAssistant'),
-  },
-];
 </script>
 
 <template>
   <footer id="tour_footer" class="footer">
     <OFooter
-      :info="info"
-      :quick-nav="quickData"
-      :friendship-link="friendshipData"
-      :footer-logo="footerLogo"
+      :info="content.info"
+      :quick-nav="quickNav"
+      :friendship-link="content.friendshipLink"
+      :footer-logo="content.footerLogo"
       :footer-option="footerOption"
-      :qrcode="lang === 'en' ? {} : qrcode"
-      :footer-bg-img="lePadV ? footerImgMb : footerImg"
+      :qrcode="content.qrcode"
+      :footer-bg-img="footerBg"
     />
   </footer>
 </template>
