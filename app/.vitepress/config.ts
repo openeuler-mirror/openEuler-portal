@@ -13,6 +13,9 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
+// showcase 案例详情页（showcase/{industry}/... 至少两段）：title 直接取 frontmatter，
+// 避免 .geo/tdks 中按公司名生成的重复标题；栏目首页(hub)与白皮书/报告列表页保留其精修 tdk 标题。
+const isShowcase = /^(?:zh|en)\/showcase\/[^/]+\/.+$/;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const geoDir = path.resolve(__dirname, '../../.geo')
 const currentHostname = readEnvVar('VITE_MAIN_DOMAIN_URL') || 'https://www.openeuler.org';
@@ -53,7 +56,8 @@ const setTdk = (pageData: PageData, pagePath: string) => {
   if (description) {
     pageData.description = description;
   }
-  if (title) {
+  // showcase 页面的 title 直接取 frontmatter.title，不使用 .geo/tdks 中按公司名生成的重复标题
+  if (title && !isShowcase.test(pagePath)) {
     pageData.title = title;
   }
   if (canonical) {
