@@ -19,6 +19,7 @@ declare module '#content/home' {
     is_blank?: boolean;
     attach?: string;
     locale?: string;
+    custom_class?: string;
     pad_offset?: string;
     light?: Record<string, unknown>;
     dark?: Record<string, unknown>;

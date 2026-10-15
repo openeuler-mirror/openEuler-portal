@@ -152,6 +152,7 @@ const config: UserConfig = {
         },
         '^(zh|en)/mirror/list/?$': { priority: 0.8 },
         '^(zh|en)/interaction/summit-list/summit2025/?$': { priority: 0.8 },
+        '^(zh|en)/interaction/summit-list/summit2026/?$': { priority: 0.8 },
         '^(zh|en)/wiki/about/quick-start/?$': { priority: 0.7 },
       }
     ),

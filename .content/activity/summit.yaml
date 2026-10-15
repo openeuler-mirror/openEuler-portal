@@ -8,6 +8,15 @@
 #   address_zh/en 地址（可选）
 #   format        offline | online | hybrid（可选）
 
+- id: summit2026
+  title_zh: Agentic Infra 操作系统大会 & openEuler Summit 2026
+  title_en: Agentic Infra OS Conference & openEuler Summit 2026
+  start_date: '2026-11-13'
+  end_date: '2026-11-14'
+  address_zh: 北京中关村国际创新中心
+  address_en: Beijing Zhongguancun International Innovation Center
+  format: hybrid
+
 - id: summit2025
   title_zh: openEuler Summit 2025
   title_en: openEuler Summit 2025

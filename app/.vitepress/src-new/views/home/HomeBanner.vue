@@ -354,4 +354,26 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 .banner-item4 {
 }
 
+// attach 文字图定制：征集贡献之星 / Summit 2026 大会（不依赖轮播 index）
+.contribution-star {
+  .banner-attach {
+    height: 160px;
+    width: auto;
+
+    @include respond('pad') {
+      height: 110px;
+    }
+  }
+}
+
+.summit {
+  .banner-attach {
+    height: 220px;
+    width: auto;
+
+    @include respond('pad') {
+      height: 150px;
+    }
+  }
+}
 </style>

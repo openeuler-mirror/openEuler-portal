@@ -133,6 +133,8 @@
   lang: [zh, en]
 - name: summit2025
   lang: [zh, en]
+- name: summit2026
+  lang: [zh, en]
 - name: summit-list/**
   lang: [zh]
 - name: talent-assessment

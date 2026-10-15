@@ -59,6 +59,64 @@ declare module '#content/interaction/summit-list/devday2026' {
   export default data;
 }
 
+declare module '#content/interaction/summit-list/summit2026' {
+  // banner: 顶部 banner（背景图 PC / pad / 移动端 + 文字图 + 报名入口，含亮暗双主题）
+  // 移动端（<=600px）背景图自带文案：不渲染文字图与按钮，整个 banner 为报名热区
+  interface Summit2026ThemeImgT {
+    light: string;
+    dark: string;
+  }
+  interface Summit2026BannerT {
+    bg_pc: Summit2026ThemeImgT;
+    bg_pad: Summit2026ThemeImgT;
+    bg_mb: Summit2026ThemeImgT;
+    text_img: Summit2026ThemeImgT;
+    text_img_alt: string;
+    button_text: string;
+    button_link: string;
+    button_link_mb: string;
+  }
+
+  // introduce: 大会简介
+  interface Summit2026IntroduceT {
+    desc: string[];
+    tips: string;
+    list: string[];
+    slogan: string[];
+  }
+
+  // callfor: Call for 征集卡片（背景图各端共用一份）
+  interface Summit2026CallForItemT {
+    title: string;
+    sub: string;
+    link: string;
+  }
+  interface Summit2026CallForT {
+    bg: Summit2026ThemeImgT;
+    list: Summit2026CallForItemT[];
+  }
+
+  // previous: 精彩回顾
+  interface Summit2026PreviousItemT {
+    name: string;
+    link: string;
+  }
+  interface Summit2026PreviousT {
+    title: string;
+    list: Summit2026PreviousItemT[];
+  }
+
+  interface Summit2026ContentT {
+    banner: Summit2026BannerT;
+    introduce: Summit2026IntroduceT;
+    callfor: Summit2026CallForT;
+    previous: Summit2026PreviousT;
+  }
+
+  const data: { zh: Summit2026ContentT; en: Summit2026ContentT };
+  export default data;
+}
+
 declare module '#content/interaction/summit-list/summit2025' {
   // banner: 顶部 banner
   interface Summit2025BannerT {

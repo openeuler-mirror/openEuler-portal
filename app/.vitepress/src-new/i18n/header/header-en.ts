@@ -2,6 +2,8 @@ import { markRaw } from 'vue';
 
 import Summit from '~@/assets/category/header/summit.jpg';
 import SummitDark from '~@/assets/category/header/summit-dark.jpg';
+import Summit2026 from '~@/assets/category/header/summit2026.jpg';
+import Summit2026Dark from '~@/assets/category/header/summit2026-dark.jpg';
 
 import IconOutLink from '~icons/app/icon-out-link.svg';
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
@@ -472,9 +474,19 @@ export default {
       ],
       shortcut: [
         {
+          label: 'Agentic Infra OS Conference & openEuler Summit 2026',
+          picture: Summit2026,
+          pictureDark: Summit2026Dark,
+          description:
+            'A shared vision brings us together, across mountains and seas. We look forward to seeing you in Beijing, as we chart the next chapter of agentic AI together.',
+          remark: 'November 13-14, 2026 | Beijing',
+          type: 'PICTURE',
+          href: '/en/interaction/summit-list/summit2026/',
+        },
+        {
           label: 'Operating System Confenrence & openEuler Summit 2025',
           picture: Summit,
-          picturePark: SummitDark,
+          pictureDark: SummitDark,
           description:
             'As AI transitions from exploration to real-world implementation, operating systems are crucial for unleashing massive AI computing power. Celebrating six years of open source excellence, openEuler has achieved holistic growth in business, technology, and its ecosystem. It now powers a diverse range of scenarios—from servers and cloud-native to edge computing and embedded systems—serving users across the globe and driving foundational software innovation.',
           remark: 'November 14-15, 2025 | Beijing',

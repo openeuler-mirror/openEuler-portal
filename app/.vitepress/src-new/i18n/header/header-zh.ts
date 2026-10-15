@@ -1,7 +1,7 @@
 import { markRaw } from 'vue';
 
-import Summit from '~@/assets/category/header/summit.jpg';
-import SummitDark from '~@/assets/category/header/summit-dark.jpg';
+import Summit2026 from '~@/assets/category/header/summit2026.jpg';
+import Summit2026Dark from '~@/assets/category/header/summit2026-dark.jpg';
 
 import Odd from '~@/assets/category/header/odd.jpg';
 
@@ -601,6 +601,16 @@ export default {
       ],
       shortcut: [
         {
+          label: '操作系统大会 & openEuler Summit 2026',
+          picture: Summit2026,
+          pictureDark: Summit2026Dark,
+          description:
+            '志合者，不以山海为远。 我们期待与您相聚北京，共话Agentic AI时代的技术演进之道，携手谱写Agentic Infra的创新篇章！',
+          remark: '时间：2026/11/13 - 2026/11/14 | 北京',
+          type: 'PICTURE',
+          href: '/zh/interaction/summit-list/summit2026/',
+        },
+        {
           label: 'openEuler Developer Day 2026',
           picture: Odd,
           description:
@@ -608,16 +618,6 @@ export default {
           remark: '时间：2026/04/25 | 长沙',
           type: 'PICTURE',
           href: '/zh/interaction/summit-list/devday2026/',
-        },
-        {
-          label: '操作系统大会 & openEuler Summit 2025',
-          picture: Summit,
-          picturePark: SummitDark,
-          description:
-            '随着AI技术从技术探索迈向场景深耕，操作系统作为AI核心生产力的使能平台，承担着释放大规模AI算力的重要责任。openEuler 开源六年，在商业、技术及生态上全面发展，覆盖服务器、云原生、边缘计算和嵌入式等全场景，服务全球多个国家和地区，在关键行业实现规模化应用，引领基础软件根技术持续创新。',
-          remark: '时间：2025/11/14 - 2025/11/15 | 北京',
-          type: 'PICTURE',
-          href: '/zh/interaction/summit-list/summit2025/',
         },
       ],
     },

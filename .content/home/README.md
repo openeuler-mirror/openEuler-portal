@@ -34,6 +34,7 @@ openEuler 首页（`/zh/`、`/en/`）的静态配置数据源。数据目录 `.c
 | `href_zh` / `href_en` | 是 | 跳转链接 |
 | `is_blank` | 可选 | 是否新窗口打开 |
 | `attach` | 可选 | 附加装饰图 |
+| `custom_class` | 可选 | 定制样式类名，作用于轮播项（样式定义在 `HomeBanner.vue`），避免依赖轮播 index |
 | `locale` | 可选 | 可见语言 `zh` / `en` / `zh,en`（默认 `zh,en`） |
 | `light` / `dark` | 可选 | 主题变体覆盖字段 |
 

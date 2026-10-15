@@ -33,7 +33,7 @@ import {
   OPlusConfigProvider,
 } from '@opendesign-plus/components';
 import { useCookieStore } from '~@/stores/common';
-import { tryLogin } from '@opendesign-plus/composables';
+import { tryLogin, useTheme } from '@opendesign-plus/composables';
 import { queryPermission } from './api/api-login';
 import { useUserInfoStore } from './stores/user';
 
@@ -44,6 +44,10 @@ const router = useRouter();
 const elLocale = computed(() => {
   return lang.value === 'zh' ? zhCn : en;
 });
+
+// 站点主题：透传给 OPlusConfigProvider，组件库内部（如 header shortcut 的 pictureDark）依赖 inject 的主题值
+const { theme: opTheme } = useTheme();
+const currentTheme = computed(() => (opTheme?.value as 'light' | 'dark') ?? 'light');
 
 const compMapping: {
   [name: string]: Component;
@@ -129,7 +133,7 @@ watch(
 
 <template>
   <template v-if="!isReport && !isStandalone">
-    <OPlusConfigProvider :locale="lang">
+    <OPlusConfigProvider :locale="lang" :theme="currentTheme">
       <AppHeader />
       <el-config-provider :locale="elLocale">
         <main :class="frontmatter.class ? frontmatter.class : ''">
@@ -140,7 +144,7 @@ watch(
         </main>
       </el-config-provider>
     </OPlusConfigProvider>
-    <OPlusConfigProvider :locale="lang">
+    <OPlusConfigProvider :locale="lang" :theme="currentTheme">
       <OCookieNotice
         ref="cookieRef"
         v-model:visible="cookieStore.isNoticeVisible"
