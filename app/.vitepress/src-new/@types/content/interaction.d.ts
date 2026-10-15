@@ -61,7 +61,7 @@ declare module '#content/interaction/summit-list/devday2026' {
 
 declare module '#content/interaction/summit-list/summit2026' {
   // banner: 顶部 banner（背景图 PC / pad / 移动端 + 文字图 + 报名入口，含亮暗双主题）
-  // 移动端（<=600px）背景图自带文案：不渲染文字图与按钮，整个 banner 为报名热区
+  // 移动端（<=840px）背景图与文字图分离：渲染移动端文字图与报名按钮，仅按钮可跳转
   interface Summit2026ThemeImgT {
     light: string;
     dark: string;
@@ -71,6 +71,7 @@ declare module '#content/interaction/summit-list/summit2026' {
     bg_pad: Summit2026ThemeImgT;
     bg_mb: Summit2026ThemeImgT;
     text_img: Summit2026ThemeImgT;
+    text_img_mb: Summit2026ThemeImgT;
     text_img_alt: string;
     button_text: string;
     button_link: string;

@@ -42,15 +42,22 @@ const bg = computed(() => {
   return bgMap[size.value]?.[theme.value] ?? '';
 });
 
-// 文字图 >840px（pad 横屏 / PC）共用一份；<=840px 不渲染 banner-content，直接使用自带文案的移动端背景图
+// 文字图 >840px（pad 横屏 / PC）共用一份；<=840px 使用移动端专用文字图
 const textImg = computed(() => {
   const data = props.bannerData as Record<string, Record<string, string>> | null;
   if (!data) return '';
   return data.textImg?.[theme.value] ?? '';
 });
 
-// 报名链接：minisite 区分 PC / 移动端报名页，≤840px（整屏报名热区）使用移动端链接
-// 链接为空时 PC 端 OButton 渲染为 <button>、移动端热区渲染为无 href 的 <a>，均不发生跳转
+// 移动端文字图（<=840px，透明底 PNG，与背景图分离渲染）
+const textImgMb = computed(() => {
+  const data = props.bannerData as Record<string, Record<string, string>> | null;
+  if (!data) return '';
+  return data.textImgMb?.[theme.value] ?? '';
+});
+
+// 报名链接：minisite 区分 PC / 移动端报名页，≤840px 使用移动端链接
+// 链接为空时 OButton 渲染为 <button>，不发生跳转
 const buttonLink = computed(() => {
   const data = props.bannerData as Record<string, string> | null;
   if (!data) return undefined;
@@ -86,15 +93,21 @@ onMounted(() => {
         </OButton>
       </ContentWrapper>
     </div>
-    <!-- <=840px：直接使用移动端 banner（背景图自带文案），整个 banner 为报名热区 -->
-    <a
-      v-if="lePadV"
-      class="banner-hotspot"
-      :href="buttonLink"
-      target="_blank"
-      rel="noopener noreferrer"
-      :aria-label="bannerData.textImgAlt"
-    ></a>
+    <!-- <=840px：移动端 banner，背景图与文字图分离，文字图与报名按钮贴底排布（距底 12px），仅按钮可跳转 -->
+    <div v-if="lePadV" class="banner-content-mb">
+      <img class="text-img-mb" :src="textImgMb" :alt="bannerData.textImgAlt" />
+      <OButton
+        class="banner-btn"
+        variant="solid"
+        color="primary"
+        size="medium"
+        :href="buttonLink"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ bannerData.buttonText }}
+      </OButton>
+    </div>
   </div>
 </template>
 
@@ -131,29 +144,33 @@ onMounted(() => {
       max-width: 100%;
 
       @include respond('<=pad') {
-        height: 104px;
+        height: 160px;
       }
     }
   }
 
   .banner-btn {
-    margin-top: 24px;
+    margin-top: 12px;
   }
 }
 
-// <=840px：直接使用移动端 banner（背景图自带文案），不渲染文字图与按钮，整个 banner 为报名热区
+// <=840px：移动端 banner，背景图与文字图分离，文字图与报名按钮贴底排布（距底 12px），仅按钮可跳转
 @include respond('<=pad_v') {
   .summit-banner {
     height: 300px;
 
-    .banner-hotspot {
+    .banner-content-mb {
       position: absolute;
       inset: 0;
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 12px;
 
-      &:focus-visible {
-        outline: 2px solid var(--o-color-primary1);
-        outline-offset: -2px;
+      .text-img-mb {
+        display: block;
+        height: 120px;
       }
     }
   }

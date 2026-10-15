@@ -439,7 +439,7 @@ export default {
               label: 'Events',
               description:
                 'Meet openEuler and connect with the community at every key event.',
-              href: '/en/interaction/summit-list/summit2025/',
+              href: '/en/interaction/summit-list/summit2026/',
             },
             {
               label: 'Call for X Program',

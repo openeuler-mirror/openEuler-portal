@@ -1,0 +1,85 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Agentic Infra Operating System Conference & openEuler Summit 2026",
+    "alternateName": "openEuler Summit 2026",
+    "url": "https://www.openeuler.org/en/interaction/summit-list/summit2026",
+    "description": "Join the Agentic Infra OS Conference & openEuler Summit 2026 at the Zhongguancun International Innovation Center, Beijing on November 13–14, 2026. Themed \"Building Agentic Infra from the OS Up\", the event unveils openEuler's latest breakthroughs in SuperPoD OS and agentic infra, featuring flagship AI product launches from global partners, 30+ keynotes and panel discussions, and a 1,000 m² immersive experience zone for large-scale AI deployment.",
+    "startDate": "2026-11-13",
+    "endDate": "2026-11-14",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Zhongguancun International Innovation Center",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Beijing",
+        "addressCountry": "CN"
+      }
+    },
+    "inLanguage": "en",
+    "organizer": {
+      "@type": "Organization",
+      "name": "OpenAtom Foundation",
+      "url": "https://www.openeuler.org"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Agentic Infra"
+      },
+      {
+        "@type": "Thing",
+        "name": "SuperPoD OS"
+      },
+      {
+        "@type": "Thing",
+        "name": "open source operating system"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Agentic Infra OS Conference & openEuler Summit 2026 | openEuler",
+    "description": "Join the Agentic Infra Operating System Conference & openEuler Summit 2026 in Beijing, Nov 13–14. Themed \"Igniting the Future, Leading Agentic Infra Innovation\", explore openEuler's latest breakthroughs in super-node OS and Agentic Infra, and build a more efficient and secure foundation for AI applications.",
+    "url": "https://www.openeuler.org/en/interaction/summit-list/summit2026",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler",
+      "url": "https://www.openeuler.org"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.openeuler.org/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Interaction",
+          "item": "https://www.openeuler.org/en/interaction/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Summit List",
+          "item": "https://www.openeuler.org/en/interaction/summit-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Agentic Infra OS Conference & openEuler Summit 2026",
+          "item": "https://www.openeuler.org/en/interaction/summit-list/summit2026"
+        }
+      ]
+    }
+  }
+]

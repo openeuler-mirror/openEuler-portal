@@ -569,7 +569,7 @@ export default {
             {
               label: '峰会',
               description: '查看openEuler年度大会详情',
-              href: '/zh/interaction/summit-list/devday2026/',
+              href: '/zh/interaction/summit-list/summit2026/',
             },
             {
               label: 'openEuler Call for X计划',

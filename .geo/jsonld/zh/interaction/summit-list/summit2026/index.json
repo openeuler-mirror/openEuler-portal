@@ -1,0 +1,85 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Agentic Infra操作系统大会 & openEuler Summit 2026",
+    "alternateName": "Agentic Infra OS Conference & openEuler Summit 2026",
+    "url": "https://www.openeuler.org/zh/interaction/summit-list/summit2026",
+    "description": "Agentic Infra操作系统大会 & openEuler Summit 2026 将于2026年11月13-14日在北京中关村国际创新中心举办。大会以\"智启未来，引领Agentic Infra创新\"为主题，集中展示openEuler在超节点OS与Agentic Infra领域的最新突破，汇聚全球伙伴重磅AI产品与方案发布、30+场主题演讲与圆桌论坛以及1000㎡沉浸式交流区，共同探索AI规模化落地所需的高效、安全底座。",
+    "startDate": "2026-11-13",
+    "endDate": "2026-11-14",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "北京中关村国际创新中心",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "北京",
+        "addressCountry": "CN"
+      }
+    },
+    "inLanguage": "zh-CN",
+    "organizer": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.org"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Agentic Infra"
+      },
+      {
+        "@type": "Thing",
+        "name": "超节点OS"
+      },
+      {
+        "@type": "Thing",
+        "name": "开源操作系统"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Agentic Infra操作系统大会 & openEuler Summit 2026：智启未来峰会 | openEuler社区",
+    "description": "Agentic Infra操作系统大会 & openEuler Summit 2026 将于2026年11月13-14日在北京中关村国际创新中心举办。大会以\"智启未来，引领Agentic Infra创新\"为主题，展示openEuler在超节点OS与Agentic Infra领域的最新突破，共同探索AI应用落地更高效、更安全的坚实底座。",
+    "url": "https://www.openeuler.org/zh/interaction/summit-list/summit2026",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.org"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "openEuler社区",
+          "item": "https://www.openeuler.org/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "互动交流",
+          "item": "https://www.openeuler.org/zh/interaction/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "峰会列表",
+          "item": "https://www.openeuler.org/zh/interaction/summit-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Agentic Infra操作系统大会 & openEuler Summit 2026",
+          "item": "https://www.openeuler.org/zh/interaction/summit-list/summit2026"
+        }
+      ]
+    }
+  }
+]
