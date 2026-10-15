@@ -1,7 +1,7 @@
 # openEuler Summit 2026 页面数据 / Summit 2026 page data
 #
 # 顶层板块（按页面从上到下顺序）：
-#   banner     顶部 banner（PC / pad / 移动端背景图、文字图、报名按钮，移动端整屏报名热区）
+#   banner     顶部 banner（PC / pad / 移动端背景图、文字图、报名按钮）
 #   introduce  大会简介
 #   callfor    Call for 征集卡片（Speakers / Talks）
 #   previous   精彩回顾
@@ -9,8 +9,8 @@
 # 主题变体（亮色/暗色）拆为 light/dark 两个字段。
 
 # banner: 顶部 banner（背景图 + 文字图 + 报名按钮）
-# <=840px 直接使用移动端 banner：背景图自带文案，不渲染文字图与按钮，整个 banner 为报名热区
-# 文字图 >840px（pad 横屏 / PC）共用一份（透明底 PNG），显示尺寸由组件按断点控制
+# <=840px 使用移动端 banner：背景图与文字图分离，文字图与报名按钮贴底排布（距底 12px），仅按钮可跳转
+# 文字图 >840px（pad 横屏 / PC）共用一份（透明底 PNG），显示尺寸由组件按断点控制；<=840px 使用移动端专用文字图
 banner:
   bg_pc:
     light: ./images/banner-pc-light.jpg
@@ -24,8 +24,11 @@ banner:
   text_img:
     light: ./images/textImg-light.png
     dark: ./images/textImg-dark.png
+  text_img_mb:
+    light: ./images/textImg-mb-light.png
+    dark: ./images/textImg-mb-dark.png
   text_img_alt: Agentic Infra 操作系统大会 & openEuler Summit 2026，11月13日-14日，中国·北京中关村国际创新中心
-  # 报名入口（>840px 为按钮，<=840px 为整屏热区并使用移动端报名链接 button_link_mb）
+  # 报名入口（按钮，<=840px 使用移动端报名链接 button_link_mb）
   button_text: 立即报名
   button_link: https://openatomcon.openatom.cn/registration/?code=3Ytx&activityNo=HD20261010110123
   button_link_mb: https://openatomcon.openatom.cn/registration_mobile/?code=3Ytx&activityNo=HD20261010110123

@@ -16,6 +16,8 @@
 #   custom_class    定制样式类名（可选，作用于轮播项，样式定义在 HomeBanner.vue）
 #   locale          可见语言 zh / en / zh,en（可选，默认 zh,en）
 #   title_size      标题字号 large | small（可选，默认 large）
+#   light/dark      主题变体块（可选）：亮色/暗色主题下覆盖任意基线字段（bg_pc/bg_mb/attach/bg_theme 等）；
+#                   暗色下未定义 dark 块的轮播项回退基线字段，并对背景图加 img-in-dark 压暗滤镜
 
 - bg_pc: ./images/summit/pc.jpg
   bg_pad: ./images/summit/pad.jpg
@@ -28,6 +30,13 @@
   href_zh: /zh/interaction/summit-list/summit2026/
   href_en: /en/interaction/summit-list/summit2026/
   is_blank: true
+  # 暗色主题整套资源：三端背景 + 文字图切换，指示器配色按深色背景适配
+  dark:
+    bg_pc: ./images/summit/pc-dark.jpg
+    bg_pad: ./images/summit/pad-dark.jpg
+    bg_mb: ./images/summit/mb-dark.jpg
+    bg_theme: dark
+    attach: ./images/summit/text-dark.png
 
 - bg_pc: ./images/contribution-star/pc.jpg
   bg_pad: ./images/contribution-star/pad.jpg
