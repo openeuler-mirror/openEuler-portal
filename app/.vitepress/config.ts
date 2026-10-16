@@ -140,23 +140,33 @@ const config: UserConfig = {
     hostname: currentHostname,
     transformItems: sitemapItemTransformer(
       items => {
+        let lastmodeTimeStamp = {} as Record<string, number>;
         try {
-          const lastmodeTimeStamp = JSON.parse(readFileSync(path.resolve(geoDir, 'last-modified.json'), 'utf-8')) as Record<string, number>;
-          for (const item of items) {
-            item.priority = 0.5;
-            const eventSlug = item.url.match(eventDetailUrl)?.[1];
-            const eventStartTs = eventSlug ? eventListLastmod.get(eventSlug) : undefined;
-            if (eventStartTs) {
-              item.lastmod = eventStartTs;
-              continue;
-            }
-            const key = item.url.endsWith('.html') ? item.url.replace('.html', '.md') : (item.url.endsWith('/') ? `${item.url}index.md` : `${item.url}/index.md`);
-            const generatedItem = lastmodeTimeStamp[key];
+          lastmodeTimeStamp = JSON.parse(readFileSync(path.resolve(geoDir, 'last-modified.json'), 'utf-8')) as Record<string, number>;
+        } catch (e) {
+          console.error('[sitemap] 读取 last-modified.json 失败，lastmod 将回退为当前时间', e);
+        }
+        const now = Date.now();
+        for (const item of items) {
+          item.priority = 0.5;
+          const eventSlug = item.url.match(eventDetailUrl)?.[1];
+          const eventStartTs = eventSlug ? eventListLastmod.get(eventSlug) : undefined;
+          if (eventStartTs) {
+            item.lastmod = eventStartTs;
+          } else {
+            const base = item.url.replace(/\.html$/, '').replace(/\/+$/, '');
+            const generatedItem = lastmodeTimeStamp[`${base}/index.md`] || lastmodeTimeStamp[`${base}.md`];
             if (generatedItem) {
               Object.assign(item, generatedItem);
             }
+            if (!item.lastmod) {
+              item.lastmod = now;
+            }
           }
-        } catch {}
+          if (!item.changefreq || item.changefreq === 'never') {
+            item.changefreq = 'weekly';
+          }
+        }
         return items;
       },
       {
