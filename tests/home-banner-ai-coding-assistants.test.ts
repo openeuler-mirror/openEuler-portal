@@ -235,10 +235,13 @@ describe('banner.yaml 整体数据完整性（设计 §3 / §5 测试策略）',
     }
   });
 
-  it('所有 banner 条目均包含 title_zh 和 title_en（locale 限定条目可省略另一语言；attach 装饰型条目例外）', () => {
+  it('所有 banner 条目均包含 title_zh 和 title_en（locale 限定条目可省略另一语言；attach 装饰型 / 烘焙型条目例外）', () => {
     // 设计 §4：国庆条目为纯背景+attach 装饰型（attach.png 即艺术文字），无 title 文本字段
+    // 设计（business-practice）：标题烘焙进 bg 背景图本身，无 title_zh / attach（对齐 summit 系列无 title 先例）
     for (const item of banners) {
       if (item.attach) continue;
+      // 烘焙型：标题已烘焙进 bg_pc/pad/mb，无 title 文本字段（business-practice 先例）
+      if (!item.title_zh && !item.title_en) continue;
       const locales = item.locale ? item.locale.split(',') : ['zh', 'en'];
       if (locales.includes('zh')) {
         expect(item.title_zh, 'zh 可见条目应包含 title_zh').toBeDefined();

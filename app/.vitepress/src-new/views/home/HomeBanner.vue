@@ -314,36 +314,13 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
 <style lang="scss" scoped>
 // 定制修改item1
 .banner-item0 {
-  .banner-attach {
-    height: 120px;
-
-    @include respond('pad') {
-      height: 80px;
-    }
-  }
 }
 
 .banner-item1 {
-  .banner-attach {
-    height: 156px;
-
-    @include respond('pad') {
-      height: 120px;
-    }
-  }
 }
 
 // 定制修改item2
 .banner-item2 {
-  .banner-content {
-    width: 100%;
-    justify-content: center;
-  }
-  .banner-attach {
-    height: 38%;
-    margin-top: -60px;
-    object-fit: contain;
-  }
 }
 
 // 定制修改item3
@@ -374,6 +351,16 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
     @include respond('pad') {
       height: 150px;
     }
+  }
+}
+
+.xinhuo {
+  .banner-title--large {
+    @include display3;
+  }
+
+  .banner-subtitle {
+    @include text1;
   }
 }
 </style>
