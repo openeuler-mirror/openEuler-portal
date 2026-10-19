@@ -13,6 +13,7 @@
 #   href_zh/en      中英文跳转链接
 #   is_blank        是否新窗口打开（可选）
 #   attach          附加装饰图（可选）
+#   alt_zh/en       背景图 alt 文案（可选）：轮播项无 title/subtitle 时必填，取图片内展示的文字；有文案时 alt 置空
 #   custom_class    定制样式类名（可选，作用于轮播项，样式定义在 HomeBanner.vue）
 #   locale          可见语言 zh / en / zh,en（可选，默认 zh,en）
 #   title_size      标题字号 large | small（可选，默认 large）
@@ -25,6 +26,8 @@
   bg_theme: light
   attach: ./images/summit/text.png
   custom_class: summit
+  alt_zh: "智启未来 引领 Agentic Infra 创新——Agentic Infra 操作系统大会 & openEuler Summit 2026，11月13日-14日，中国·北京中关村国际创新中心"
+  alt_en: "Building Agentic Infra from the OS Up — Agentic Infra OS Conference & openEuler Summit 2026, November 13-14, 2026, Beijing, China"
   btn_zh: 查看详情
   btn_en: View More
   href_zh: /zh/interaction/summit-list/summit2026/
@@ -45,6 +48,7 @@
   locale: zh
   attach: ./images/contribution-star/text.png
   custom_class: contribution-star
+  alt_zh: "2026 年度 openEuler 社区贡献之星评选启动！申报截止：10月26日（周一）24:00"
   btn_zh: 查看详情
   href_zh: https://mp.weixin.qq.com/s/kaTAG3IAxgHCu4RMFhfDiA
   is_blank: true

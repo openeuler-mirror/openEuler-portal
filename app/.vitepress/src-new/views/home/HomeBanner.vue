@@ -71,6 +71,14 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
     window.open(href);
   }
 };
+
+// 有 title/subtitle 文案时背景图为装饰性，alt 置空；否则取图片内展示的文字（banner.yaml 的 alt_zh/alt_en）
+const getBannerAlt = (info: Record<string, unknown>) => {
+  if (info.title || info.subtitle) {
+    return '';
+  }
+  return typeof info.alt === 'string' ? info.alt : '';
+};
 </script>
 
 <template>
@@ -94,6 +102,7 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
         <OFigure
           class="banner-bg"
           :src="info.bg"
+          :alt="getBannerAlt(info)"
           :class="{
             'with-sticky-bg': info.withStickyBg,
             'in-dark': !isLight,
@@ -161,6 +170,7 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
           <OFigure
             class="banner-bg"
             :src="info.bg"
+            :alt="getBannerAlt(info)"
             @click="onClick(info.href)"
           />
         </ContentWrapper>
