@@ -4,4 +4,4 @@ Allow: /
 
 Disallow: /*//
 LLM-Policy: https://www.openeuler.org/llms.txt
-Sitemap:https://www.openeuler.org/sitemap.xml
+Sitemap: https://www.openeuler.org/sitemap.xml
